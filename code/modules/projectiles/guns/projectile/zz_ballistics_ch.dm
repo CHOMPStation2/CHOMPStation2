@@ -74,6 +74,7 @@
 /obj/item/weapon/gun/projectile/automatic/serdy/Initialize()
 	. = ..()
 	update_transform()
+	update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/serdy/update_transform()
 	. = ..()
@@ -119,7 +120,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
-	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 295
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
@@ -138,7 +139,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
-	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 680
 	is_long = FALSE
 	fire_sound = "sound/weapons/serdy/ak74.ogg"
@@ -156,7 +157,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
-	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 715
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
@@ -175,11 +176,87 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
-	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 700
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 70
 	fire_sound = "sound/weapons/serdy/ak74.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/ak74
+	name = "AK-74"
+	desc = "The tried and true, old fashioned chatterbox. Ivan's favorite. Best used while at least somewhat inebriated. Chambered in 5.45x39mm."
+	caliber = "5.45mm"
+	magazine_type = /obj/item/ammo_magazine/ak74
+	allowed_magazines = list(/obj/item/ammo_magazine/ak74)
+	icon_state = "ak74"
+	projectile_type = /obj/item/projectile/bullet/rifle/a545
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	muzzle_velocity = 880
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/ak74/update_icon()
+	. = ..()
+	if(ammo_magazine)
+		icon_state = istype(ammo_magazine,/obj/item/ammo_magazine/ak74/plum) ? "[initial(icon_state)]plum" : "[initial(icon_state)]"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/ak74/variantu
+	name = "AKS-74U"
+	desc = "A shorter version of the classic AK-74, the AKS-74U. The same reliability of the AK platform, in a smaller package. Chambered in 5.45x39mm."
+	icon_state = "aks74u"
+	w_class = ITEMSIZE_LARGE
+	one_handed_penalty = 25
+	muzzle_velocity = 790
+
+/obj/item/weapon/gun/projectile/automatic/serdy/ak74/variantun
+	name = "AKS-74UN"
+	desc = "A shorter version of the classic AK-74, the AKS-74UN. The same reliability of the AK platform, in a smaller package. Now with a classic triangle side folder. Chambered in 5.45x39mm."
+	icon_state = "aks74un"
+	one_handed_penalty = 35
+	muzzle_velocity = 790
+
+/obj/item/weapon/gun/projectile/automatic/serdy/ak74/variantm
+	name = "AK-74M"
+	desc = "A modernized AK-74, lightweight, with very nice plum furniture. Perfect for the modern ICCG soldier, or Pan-slav PMC. Chambered in 5.45x39mm."
+	one_handed_penalty = 40
+	icon_state = "ak74m"
+	magazine_type = /obj/item/ammo_magazine/ak74/plum
+
+// These are more of AK Pattern rifles than AK Variants.
+
+/obj/item/weapon/gun/projectile/automatic/serdy/hunter
+	name = "SOK-94"
+	desc = "Otherwise known as a Vepr Super. An AK pattern rifle, based on the beefier RPK chassis, to handle larger caliber rounds. Like an SVD but cooler. Chambered in 7.62x54mmR."
+	caliber = "7.62x54mmR"
+	magazine_type = /obj/item/ammo_magazine/m762svd
+	allowed_magazines = list(/obj/item/ammo_magazine/m762svd)
+	icon_state = "hunter"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x54
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	muzzle_velocity = 810
+	w_class = ITEMSIZE_HUGE
+	action_button_name = "Use Scope"
+	accuracy = -30
+	scoped_accuracy = 50
+	one_handed_penalty = 70
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/hunter/ui_action_click()
+	scope()
+
+/obj/item/weapon/gun/projectile/automatic/serdy/hunter/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
 
 // AR Variants
 
@@ -237,6 +314,21 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 40
 
+/obj/item/weapon/gun/projectile/automatic/serdy/ar10
+	name = "AR-10"
+	desc = "A semi-auto replica of an original AR-10. The precursor to the M16 and the M4 that everyone loves. Chambered in 7.62x51mm."
+	caliber = "7.62mm"
+	magazine_type = /obj/item/ammo_magazine/ar10
+	allowed_magazines = list(/obj/item/ammo_magazine/ar10)
+	icon_state = "ar10"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	muzzle_velocity = 820
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 60
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
 //Other rifles
 
 /obj/item/weapon/gun/projectile/automatic/serdy/m41ab //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
@@ -272,6 +364,69 @@
 	muzzle_velocity = 840
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+
+/obj/item/weapon/gun/projectile/automatic/serdy/t12 //This gun is pretty overpowered. Leaving it as an admin spawn.
+	name = "T-12"
+	desc = "The standard issue rifle of both the SGC and the USDF nowadays, alongside the newer versions of the M41A/2. A caseless version of the classic G36E. Some folk call it the lego gun because of how light it is, even when loaded. Chambered in 10x24mm Caseless."
+	caliber = "10x24mm caseless"
+	magazine_type = /obj/item/ammo_magazine/m41
+	allowed_magazines = list(/obj/item/ammo_magazine/m41)
+	icon_state="t12"
+	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	muzzle_velocity = 840
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 50
+
+/obj/item/weapon/gun/projectile/automatic/serdy/fal
+	name = "FAL"
+	desc = "The right arm of the free galaxy. Chambered in 7.62x51mm."
+	caliber = "5.56x45mm"
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/fal
+	allowed_magazines = list(/obj/item/ammo_magazine/fal)
+	icon_state = "fal"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	muzzle_velocity = 840
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 40
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec
+	name = "RDB-S"
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Chambered in 5.56x45mm."
+	caliber = "5.56x45mm"
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m16
+	allowed_magazines = list(/obj/item/ammo_magazine/m16)
+	icon_state = "keltecG"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	muzzle_velocity = 950
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 40
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec/black
+	icon_state = "keltecB"
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is black. Chambered in 5.56x45mm."
+
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec/blue
+	icon_state = "keltecN"
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is Sif-blue. Chambered in 5.56x45mm."
+
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec/white
+	icon_state = "keltecW"
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is snow white. Chambered in 5.56x45mm."
+
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec/tan
+	icon_state = "keltecD"
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is coyote tan. Chambered in 5.56x45mm."
 
 /obj/item/weapon/gun/projectile/automatic/serdy/sks 	//Reminder to myself to make sure this works and also to make sure that people are able to empty the internal mag
 	name = "SKS"
@@ -488,6 +643,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/serdy/plamya/mk2
 	name = "WKHM 'Plamya' Mk. 2"
+	icon_state = "plamya"
 	desc = "An old school assault rifle. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. The gold standard, with a rosewood thumbhole stock, a full length barrel, and an improved heatshield. The most mass produced firearm in WKHM's lineup. This one bears the 'WKHM Adamant' arkship's production stamp. Chambered in 9x39mm."
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -497,6 +653,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/serdy/plamya/mk3
 	name = "WKHM 'Plamya' Mk. 3"
+	icon_state = "plamyab"
 	desc = "An old school assault rifle with a modern twist. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. This is a newer variant, with a fully synthetic stock, and a shorter barrel. The serial number and production stamp has been sanded off. Chambered in 9x39mm."
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -504,7 +661,7 @@
 	)
 	muzzle_velocity = 290
 
-//Auto-shotgun, closer to the rifles than anything else though.
+//shotguns
 
 /obj/item/weapon/gun/projectile/automatic/serdy/strela
 	name = "WKHM 'Strela'"
@@ -522,6 +679,29 @@
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
+	muzzle_velocity = 470
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 50
+
+/obj/item/weapon/gun/projectile/automatic/serdy/spas35
+	name = "Spas-35"
+	desc = "A complex pump shotgun, modelled after the classic Spas-12. Upgraded with durable parts to fix the flaws of the classic. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge." 
+	caliber = "12g"
+	icon_state = "spas12"
+	ammo__type = /obj/item/ammo_casing/a12g/pellet
+	projectile_type = /obj/item/projectile/bullet/shotgun
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=3,    burst_accuracy=list(0,-5), dispersion=list(0.0, 0.2)),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	max_shells = 7
+	bolt_name = "bolt"
+	bolt_release = null //No bolt release on spas-12
+	load_method = SINGLE_CASING | SPEEDLOADER
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_MANUAL_LOCK
+	misc_loading_flags = INTERNAL_MAG_SEPARATE
+	var/semiauto_mode = TRUE
 	muzzle_velocity = 470
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
@@ -559,7 +739,22 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 400
 	is_long = FALSE
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+
+/obj/item/weapon/gun/projectile/automatic/serdy/pitchgun
+	name = "Pitch-gun"
+	desc = "A home-made submachine gun, affectionately called by those who use it, the 'Pitch-gun.' It's light, it shoots fast, and it's chambered in .44 magnum. The classy killer, or the rim-world tank crewman's weapon of choice. Mind the recoil."
+	caliber = ".44"
+	magazine_type = /obj/item/ammo_magazine/pitchmag
+	allowed_magazines = list(/obj/item/ammo_magazine/pitchmag)
+	icon_state="pitchgun"
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	muzzle_velocity = 400
+	is_long = FALSE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/vityaz
 	name = "WKHM 'Vityaz'"
@@ -603,9 +798,182 @@
 	one_handed_penalty = 90
 	fire_sound = "sound/weapons/serdy/molniyab.ogg"
 
+/obj/item/weapon/gun/projectile/automatic/serdy/pkm
+	name = "PKM"
+	desc = "A traditional russian machinegun. A classic Pan-slav weapon. Chambered in 7.62x54mmR."
+	caliber = "7.62x54mmR"
+	magazine_type = /obj/item/ammo_magazine/pkm
+	allowed_magazines = list(/obj/item/ammo_magazine/pkm)
+	icon_state = "pkm"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x54
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = OPEN_BOLT
+	muzzle_velocity = 825
+	one_handed_penalty = 90
+	fire_sound = "sound/weapons/serdy/molniyab.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/rpd
+	name = "RPDM"
+	desc = "An unusual LMG that shares similarities with both the AK and the PKM. Perfect for storming the Reichstag. Chambered in 7.62x39mm."
+	caliber = "7.62x39mm"
+	magazine_type = /obj/item/ammo_magazine/rpd
+	allowed_magazines = list(/obj/item/ammo_magazine/rpd)
+	icon_state = "rpd"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = OPEN_BOLT
+	muzzle_velocity = 735
+	one_handed_penalty = 90
+	fire_sound = "sound/weapons/serdy/molniyab.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/rpk //RPK is the imposter of the LMGs, not a true LMG! Close enough to be in this section, though.
+	name = "RPK"
+	desc = "The AK's bigger brother, and the PKM's little brother. More of an LSW than an LMG. Chambered in 7.62x39mm."
+	caliber = "7.62x39mm"
+	magazine_type = /obj/item/ammo_magazine/akm/drum
+	allowed_magazines = list(/obj/item/ammo_magazine/akm) //Yes it is intercompatible with AK magazines.
+	icon_state = "rpk47"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	muzzle_velocity = 745
+	one_handed_penalty = 90
+	fire_sound = "sound/weapons/serdy/molniyab.ogg"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/rpk/update_icon()
+	. = ..()
+	if(ammo_magazine)
+		icon_state = istype(ammo_magazine,/obj/item/ammo_magazine/akm/drum) ? "[initial(icon_state)]drum" : "[initial(icon_state)]"
+
+/obj/item/weapon/gun/projectile/automatic/serdy/kord //ADMINSPAWN ONLY. This gun is-- absurd. BE CAREFUL. IT WILL HURT MICROS.
+	name = "Kord 6P50"
+	desc = "This is what Ivan uses when he sees lots of things he doesn't like. This thing belongs on a mount, but some madlad took it off. Capable of causing great harm to anything infront of it, and you, if you're too small. Chambered in 12.7x108mm."
+	caliber = "12.7x108mm"
+	magazine_type = /obj/item/ammo_magazine/kord
+	allowed_magazines = list(/obj/item/ammo_magazine/kord)
+	icon_state = "kord"
+	projectile_type = /obj/item/projectile/bullet/rifle/a127x108
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = OPEN_BOLT
+	muzzle_velocity = 860
+	one_handed_penalty = 90
+
+/obj/item/weapon/gun/projectile/automatic/serdy/kord/afteratt(atom/A, mob/living/user, adjacent, params)
+	if(user.size_multiplier <= 0.5) //They're 50% or lower. If they fire this gun, they're gonna get obliterated.
+		to_chat(user,"<span class='warning'>You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea...</span>")
+		if(do_after(user, 5 SECONDS)) //Give them a chance to take it back.
+			. = ..() //RIP
+
+/obj/item/weapon/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, var/pointblank=0, var/reflex=0)
+	. = ..()
+	var/unhappy_factor = 1.3333333*(user.size_multiplier - 0.5) //Unhappy factor based on size. Below 50% is a really bad day, and above 125% is fine, everything inbetween is varying.
+	if(unhappy_factor >= 1) //They're fine
+		return
+	
+	if(unhappy_factor <= 0) //RIP them
+		var/is_human = FALSE
+		var/mob/living/carbon/human/H = user
+		if(istype(H))
+			is_human = TRUE
+		var/deafening = FALSE
+		if(user.get_ear_protection() < 2 && is_human)
+			deafening = TRUE
+		if(user.eyecheck() < 1)
+			user.flash_eyes() //Flashbang effect
+
+		user.visible_message(/*What other people experience*/"<span class='notice'>[user] manages to pull the trigger on the [src], causing a large bang and a big flash before [src] recoils backwards, crashing violently into [user] and causing them to go flying!</span>", \
+		/*What you experience*/ "<span class='warning'>As you pull the trigger, you suddenly see a flash of bright white light and a loud bang which immediately triggers ringing in your ears. Before you can even react, you feel the giant gun crashing into you and propelling you backwards, and then everything goes black!</span>")
+		if(user.organs && user.organs.len) //You are going to break a lot of bones.
+			user.apply_damage(15, BRUTE, BP_L_ARM)
+			user.apply_damage(15, BRUTE, BP_R_ARM)
+			user.apply_damage(7, BRUTE, BP_L_HAND)
+			user.apply_damage(8, BRUTE, BP_R_HAND)
+			user.apply_damage(25, BRUTE, BP_TORSO)
+			//70 damage total
+			for(var/def_zone in list(BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_CHEST))
+				var/obj/item/organ/external/hit_organ = user.get_organ(def_zone)
+				if(hit_organ)
+					hit_organ.fracture() //Bone crunching noises intensifies
+		else
+			user.apply_damage(80, BRUTE)
+		user.drop_item() //Yea you're not holding onto it for long
+
+		if(deafening) //Very loud, ears go ouch. Should not make you permanently deaf, though.
+			H.ear_damage += 60
+			H.ear_deaf += 80
+
+		user.apply_damage(150, HALLOSS) //That hurt a lot.
+		user.AdjustSleeping(50) //Knocked out
+		var/recoil_dir = turn(user.dir,180)
+		var/turf/target_turf = get_step(get_step(user,recoil_dir),recoil_dir)
+		user.throw_at(target_turf,3,3) //Yeet
+	else //They're not gonna have a fun time, but they'll be fine. For between 50% and 125% size
+		var/damage_factor = (1 - unhappy_factor) //Unhappy factor is 0 at max unhappiness. Damage_factor is 1 at max unhappiness.
+		var/prob_to_drop = (33 + damage_facotor*66) //100% if just above 50%, 33% if just below 125%
+		var/damage_taken = 5 + 10 * factor //15 damage if just above 50%, 5 if just below 125%
+		var/message_on_fire = "<span class='notice'>As you pull the trigger, you feel the gun painfully slam into your shoulder, leaving a painful bruise!"
+		var/in_left_hand = TRUE
+		if(user.r_hand == src)
+			in_left_hand = FALSE
+		var/damaged_body_part = in_left_hand ? pick(list(BP_L_ARM,BP_TORSO)) : pick(list(BP_R_ARM,BP_TORSO)) //50/50 whether your arm holding the gun gets damaged, or your chest.
+		user.apply_damage(damage_taken,BRUTE,damaged_body_part) //Bruise
+		user.apply_damage(damage_taken * 3,HALLOSS) //Ouchie juice
+		if(prob(prob_to_drop))
+			message_on_fire += " The force causes you to stumble backwards, dropping the gun and falling to the ground."
+			user.drop_item()
+			user.apply_effect(25,WEAKEN)
+
+
+
+
 //Pistols
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ssp4
+/obj/item/weapon/gun/projectile/automatic/serdy/ssp4_silenced
+	name = "WKHM SSP4-S"
+	desc = "A unique, high end service pistol carried by W-K security personnel in the outer rim, and various law enforcement agencies across the galaxy. Features a hidden ejector port, and an integral laser sight. Surprisingly reliable despite its unorthodox design. This one is unmarked and is suppressed. Due to the minimal amount of moving parts, this gun is almost completely silent when used with subsonic ammunition. Chambered in 10mm."
+	caliber = "10mm"
+	magazine_type = /obj/item/ammo_magazine/ssp4
+	allowed_magazines = list(/obj/item/ammo_magazine/ssp4)
+	projectile_type = /obj/item/projectile/bullet/a10mm
+	load_method = MAGAZINE
+	bolt_name="slide"
+	bolt_release = "slide release"
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
+	muzzle_velocity = 405
+	is_long = FALSE
+	silenced = 1
+	icon_state = "ssp4s"
+	move_delay = 0
+
+/obj/item/weapon/gun/projectile/serdy_pistols
+	icon = 'icons/obj/gun_ch.dmi'
+	bolt_name="slide"
+	bolt_release = "slide release"
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
+	load_method = MAGAZINE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+
+/obj/item/weapon/gun/projectile/serdy_pistols/ssp4
 	name = "WKHM SSP4"
 	desc = "A unique, high end service pistol carried by W-K security personnel in the outer rim, and various law enforcement agencies across the galaxy. Features a hidden ejector port, and an integral laser sight. Surprisingly reliable despite its unorthodox design. This one bears the 'WKHM Obsidian' arkship's production stamp. Chambered in 10mm."
 	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
@@ -614,26 +982,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/ssp4)
 	icon_state = "ssp4"
 	projectile_type = /obj/item/projectile/bullet/a10mm
-	load_method = MAGAZINE
-	bolt_name="slide"
-	bolt_release = "slide release"
-	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 405
-	is_long = FALSE
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
-
-/obj/item/weapon/gun/projectile/automatic/serdy/ssp4/silenced
-	name = "WKHM SSP4-S"
-	desc = "A unique, high end service pistol carried by W-K security personnel in the outer rim, and various law enforcement agencies across the galaxy. Features a hidden ejector port, and an integral laser sight. Surprisingly reliable despite its unorthodox design. This one is unmarked and is suppressed. Due to the minimal amount of moving parts, this gun is almost completely silent when used with subsonic ammunition. Chambered in 10mm."
-	silenced = 1
-	icon_state = "ssp4s"
-
-/obj/item/weapon/gun/projectile/serdy_pistols
-	icon = 'icons/obj/gun_ch.dmi'
-	bolt_name="slide"
-	bolt_release = "slide release"
-	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	load_method = MAGAZINE
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/serdy_pistols/makarov
@@ -1017,8 +1366,118 @@
 /obj/item/weapon/gun/projectile/shotgun/pump/combat
 	icon = 'icons/obj/64x32guns_ch.dmi'
 
+/obj/item/weapon/gun/projectile/shotgun/pump/shorty
+	name = "sawn-off pump shotgun"
+	desc = "A professionally cut down pump-action shotgun, with a checkered pistol grip, and a 6 round tube. Come with me if you want to live. Chambered in 12 gauge."
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "shorty"
+	pump_animation = "shorty-pump"
+
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel
+	desc = "A classic, external hammer double barrel shotgun. This one has Sif-blue furniture. Chambered in 12 gauge."
+	var/sawn_off = FALSE
+	var/shotgun_variant = "N"
 	manual_chamber = FALSE
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "dshotgunN"
+	icon_expected_height = 32
+	icon_expected_width = 64
+	var/is_picked_up = FALSE
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+	. = ..()
+	var/obj/item/projectile/bullet/P = projectile
+	if(!istype(P))
+		return
+	if(sawn_off)
+		P.submunition_spread_max = 100 //More spread when sawn off
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+	if(istype(A, /obj/item/weapon/surgical/circular_saw) || istype(A, /obj/item/weapon/melee/energy) || istype(A, /obj/item/weapon/pickaxe/plasmacutter))
+		if(sawn_off) //Don't do anything if we were already sawed off.
+			return
+		to_chat(user, "<span class='notice'>You begin to shorten the barrel of \the [src].</span>")
+		if(loaded.len)
+			var/burstsetting = burst
+			burst = 2
+			user.visible_message("<span class='danger'>The shotgun goes off!</span>", "<span class='danger'>The shotgun goes off in your face!</span>")
+			Fire_userless(user)
+			burst = burstsetting
+			return
+		if(do_after(user, 30))	//SHIT IS STEALTHY EYYYYY
+			icon_state = "sawnshotgun"
+			item_state = "sawnshotgun"
+			
+			desc = "Omar's coming!"
+			to_chat(user, "<span class='warning'>You shorten the barrel of \the [src]!</span>")
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/proc/saw_off()
+	sawn_off = TRUE
+	w_class = ITEMSIZE_NORMAL
+	force = 5
+	slot_flags &= ~SLOT_BACK	//you can't sling it on your back
+	slot_flags |= (SLOT_BELT|SLOT_HOLSTER) //but you can wear it on your belt (poorly concealed under a trenchcoat, ideally) - or in a holster, why not.
+	name = "sawn-off shotgun"
+	desc += " The barrel seems to be crudely sawn in half."
+	icon = 'icons/obj/gun_ch.dmi'
+	icon_state = "sawnshotgun[shotgun_variant]" 
+	icon_expected_width = 32
+	update_icon()
+	update_transform()
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/Initialize()
+	. = ..()
+	update_transform()
+	update_icon()
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/update_transform()
+	. = ..()
+	if(!sawn_off)
+		if(is_picked_up)
+			transform = transform.Turn(-45)
+		transform = transform.Translate(-16,0)
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/equipped()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/pickup()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/dropped()
+	. = ..()
+	is_picked_up = FALSE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/rosewood
+	desc = "A classic, external hammer double barrel shotgun. This one has pristine rosewood furniture. Chambered in 12 gauge."
+	icon_state = "dshotgunR"
+	shotgun_variant = "R"
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/black
+	desc = "A classic, external hammer double barrel shotgun. This one has lame polymer black furniture. Chambered in 12 gauge."
+	icon_state = "dShotgunB"
+	shotgun_variant = "B"
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/oak
+	desc = "A classic, external hammer double barrel shotgun. This one has classic oak furniture. Chambered in 12 gauge."
+	icon_state = "dshotgunW"
+	shotgun_variant = "W"
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/rosewood_weathered
+	desc = "A classic, external hammer double barrel shotgun. This one has weathered rosewood furniture. Chambered in 12 gauge."
+	icon_state = "dshotgunPR"
+	shotgun_variant = "PR"
+
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/rosewood_weathered
+	desc = "A classic, external hammer double barrel shotgun. This one has weathered oak furniture. Chambered in 12 gauge."
+	icon_state = "dshotgunPW"
+	shotgun_variant = "PW"
 
 //shotgun_vr.dm
 /obj/item/weapon/gun/projectile/shotgun/pump/USDF
