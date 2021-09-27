@@ -70,6 +70,7 @@
 /obj/structure/simple_door/attack_hand(mob/user as mob)
 	return TryToSwitchState(user)
 
+/* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
 /obj/structure/simple_door/AltClick(mob/user as mob)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
@@ -83,6 +84,7 @@
 		src.add_fingerprint(user)
 		playsound(src, knock_sound, 50, 0, 3)
 	return
+*/
 
 /obj/structure/simple_door/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /obj/effect/beam))
