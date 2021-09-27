@@ -83,16 +83,9 @@
 
 	return ..()
 
-<<<<<<< HEAD
 /**
  * This can take either a single preference datum or a list of preferences, and will return true if *all* preferences in the arguments are enabled.
  */ 
-||||||| parent of 0f04ef8b32... Merge pull request #11624 from Rykka-Stormheart/shep-dev-belch-pref
-=======
-/**
- * This can take either a single preference datum or a list of preferences, and will return true if *all* preferences in the arguments are enabled.
- */
->>>>>>> 0f04ef8b32... Merge pull request #11624 from Rykka-Stormheart/shep-dev-belch-pref
 /client/proc/is_preference_enabled(var/preference)
 	if(!islist(preference))
 		preference = list(preference)
