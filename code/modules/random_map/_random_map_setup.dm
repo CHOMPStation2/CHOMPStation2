@@ -3,37 +3,17 @@
 	-This controls the amount of sand turf it will create in the caves, I assume it controls the amount of minerals and undeground minerals aswell
 */
 
-<<<<<<< HEAD
-#define MIN_SURFACE_COUNT 75
-#define MIN_RARE_COUNT 50
-#define MIN_DEEP_COUNT 25
-#define RESOURCE_HIGH_MAX 3
-#define RESOURCE_HIGH_MIN 2
-#define RESOURCE_MID_MAX 2
-#define RESOURCE_MID_MIN 0.5
-#define RESOURCE_LOW_MAX 0.5
-#define RESOURCE_LOW_MIN 0
-||||||| parent of 569e369789... Merge pull request #11614 from VOREStation/upstream-merge-8299
-#define MIN_SURFACE_COUNT 500
-#define MIN_RARE_COUNT 200
-#define MIN_DEEP_COUNT 100
-#define RESOURCE_HIGH_MAX 4
-#define RESOURCE_HIGH_MIN 2
-#define RESOURCE_MID_MAX 3
-#define RESOURCE_MID_MIN 1
-#define RESOURCE_LOW_MAX 1
-#define RESOURCE_LOW_MIN 0
-=======
-#define MIN_SURFACE_COUNT 500
-#define MIN_RARE_COUNT    200
-#define MIN_DEEP_COUNT    100
-#define RESOURCE_HIGH_MAX   4
+// CHOMPedit: Resource defines
+#define MIN_SURFACE_COUNT   75
+#define MIN_RARE_COUNT      50
+#define MIN_DEEP_COUNT      25
+#define RESOURCE_HIGH_MAX   3
 #define RESOURCE_HIGH_MIN   2
-#define RESOURCE_MID_MAX    3
-#define RESOURCE_MID_MIN    1
-#define RESOURCE_LOW_MAX    1
+#define RESOURCE_MID_MAX    2
+#define RESOURCE_MID_MIN    0.5
+#define RESOURCE_LOW_MAX    0.5
 #define RESOURCE_LOW_MIN    0
->>>>>>> 569e369789... Merge pull request #11614 from VOREStation/upstream-merge-8299
+// CHOMPedit end
 
 #define FLOOR_CHAR          0
 #define WALL_CHAR           1
