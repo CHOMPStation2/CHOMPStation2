@@ -103,6 +103,7 @@
 		//CHOMPEdit begin - resetting pull ability after phasing back in
 		can_pull_size = initial(can_pull_size)
 		can_pull_mobs = initial(can_pull_mobs)
+		hovering = initial(hovering)
 		//CHOMPEdit end
 		update_icon()
 
@@ -153,6 +154,7 @@
 
 		can_pull_size = 0
 		can_pull_mobs = MOB_PULL_NONE
+		hovering = TRUE
 		//CHOMPEdit end
 
 		for(var/obj/belly/B as anything in vore_organs)
