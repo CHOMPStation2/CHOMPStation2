@@ -425,60 +425,6 @@
 	display_name = "sweater, grey"
 	path = /obj/item/clothing/under/rank/psych/turtleneck/sweater
 
-<<<<<<< HEAD
-/datum/gear/uniform/brandsuit/aether
-	display_name = "jumpsuit, aether"
-	path = /obj/item/clothing/under/aether
-
-/datum/gear/uniform/brandsuit/focal
-	display_name = "jumpsuit, focal"
-	path = /obj/item/clothing/under/focal
-
-/datum/gear/uniform/mbill
-	display_name = "outfit, major bill's"
-	path = /obj/item/clothing/under/mbill
-
-/datum/gear/uniform/pcrc
-	display_name = "uniform, PCRC (Security)"
-	path = /obj/item/clothing/under/pcrc
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-/datum/gear/uniform/brandsuit/grayson
-	display_name = "outfit, grayson"
-	path = /obj/item/clothing/under/grayson
-
-/datum/gear/uniform/brandsuit/wardt
-	display_name = "jumpsuit, ward-takahashi"
-	path = /obj/item/clothing/under/wardt
-
-||||||| parent of 0085a5bd10... Adds more clothing from Polaris and various sources (#11546)
-/datum/gear/uniform/brandsuit/aether
-	display_name = "jumpsuit, aether"
-	path = /obj/item/clothing/under/aether
-
-/datum/gear/uniform/brandsuit/focal
-	display_name = "jumpsuit, focal"
-	path = /obj/item/clothing/under/focal
-
-/datum/gear/uniform/mbill
-	display_name = "outfit, major bill's"
-	path = /obj/item/clothing/under/mbill
-
-/datum/gear/uniform/pcrc
-	display_name = "uniform, PCRC (Security)"
-	path = /obj/item/clothing/under/pcrc
-	allowed_roles = list("Security Officer","Head of Security","Warden")
-
-/datum/gear/uniform/brandsuit/grayson
-	display_name = "outfit, grayson"
-	path = /obj/item/clothing/under/grayson
-
-/datum/gear/uniform/brandsuit/wardt
-	display_name = "jumpsuit, ward-takahashi"
-	path = /obj/item/clothing/under/wardt
-
-=======
->>>>>>> 0085a5bd10... Adds more clothing from Polaris and various sources (#11546)
 /datum/gear/uniform/frontier
 	display_name = "outfit, frontier"
 	path = 	/obj/item/clothing/under/frontier
