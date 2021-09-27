@@ -617,11 +617,6 @@
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
 	path = /obj/item/clothing/suit/storage/cmddressjacket
-<<<<<<< HEAD
-	allowed_roles = list("Site Manager", "Head of Personnel", "Command Secretary")
-||||||| parent of 0085a5bd10... Adds more clothing from Polaris and various sources (#11546)
-	allowed_roles = list("Site Manager", "Head of Personnel", "Command Secretary")
-=======
 	allowed_roles = list("Site Manager", "Head of Personnel", "Command Secretary")
 
 /datum/gear/suit/miscellaneous/kimono
@@ -658,4 +653,3 @@
 	"Earth kimono" = /obj/item/clothing/suit/kimono/earth
 	)
 	gear_tweaks += new/datum/gear_tweak/path(kimonos)
->>>>>>> 0085a5bd10... Adds more clothing from Polaris and various sources (#11546)
