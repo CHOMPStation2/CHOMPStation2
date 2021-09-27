@@ -1,4 +1,4 @@
-/Tweaked existing vendors
+//Tweaked existing vendors
 /obj/machinery/vending/hydroseeds/New()
 	products += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3)
 	..()
