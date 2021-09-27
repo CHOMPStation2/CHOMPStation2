@@ -107,13 +107,13 @@
 /datum/effect/effect/system/teleport_greyscale
 	var/color = "#FFFFFF"
 
-	set_up(cl, loca)
-		if(istype(loca, /turf/))
-			location = loca
-		else
-			location = get_turf(loca)
-		color = cl
+/datum/effect/effect/system/teleport_greyscale/set_up(cl, loca)
+	if(istype(loca, /turf/))
+		location = loca
+	else
+		location = get_turf(loca)
+	color = cl
 
-	start()
-		var/obj/effect/effect/teleport_greyscale/tele = new /obj/effect/effect/teleport_greyscale(src.location)
-		tele.color = color
+/datum/effect/effect/system/teleport_greyscale/start()
+	var/obj/effect/effect/teleport_greyscale/tele = new /obj/effect/effect/teleport_greyscale(src.location)
+	tele.color = color
