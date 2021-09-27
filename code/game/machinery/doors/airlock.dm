@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //VOREStation Edit - Redone a lot of airlock things:
 /*
 - Specific department maintenance doors
