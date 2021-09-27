@@ -43,7 +43,7 @@ var/global/list/emotes_by_key
 	var/conscious = TRUE                                // Do we need to be awake to emote this?
 	var/emote_range = 0                                 // If >0, restricts emote visibility to viewers within range.
 	
-	var/sound_preferences = list(/datum/client_preference/emote_noises)
+	var/sound_preferences = list(/datum/client_preference/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
 
 /decl/emote/Initialize()
 	. = ..()
