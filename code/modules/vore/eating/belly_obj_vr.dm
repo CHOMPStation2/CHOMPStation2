@@ -298,6 +298,8 @@
 /obj/belly/proc/vore_fx(mob/living/L)
 	if(!istype(L))
 		return
+	if(!L.client)
+		return
 	if(!L.show_vore_fx)
 		L.clear_fullscreen("belly")
 		return
