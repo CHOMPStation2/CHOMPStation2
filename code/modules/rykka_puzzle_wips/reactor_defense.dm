@@ -49,6 +49,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/wave_length = 90 SECONDS					// How long are our waves?
 	var/wave_complete = null						// When is the wave complete? This is set in start_wave()
 	// var/area_defense = FALSE						// Are we using area defense as well as object defense? (IE, you must stay inside /area/ during the waves.) Currently nonfunctional, will re-evaluate after core functions complete.
+	// var/persistent_health = FALSE				// Are we NOT resetting the reactor's health between waves? FALSE is 'default' behavior - on each wave conclusion or reset/start, set health to max. TRUE keeps health the same between waves and warmups. Currently nonfunctional and commented out as TBD.
+	// var/insane_difficuly = FALSE					// If TRUE, then once the reactor's health hits 0, you FULLY restart back on wave 1, irregardless of if you were on wave 7/8. Basically super hardmode. Combine with persistent_health to make your players fucking cry.
 	var/verification_required = TRUE				// Are users required to verify by hitting a button or typing in a phrase? (This is an AFK/cheese anti-measure, DO NOT DISABLE without a counter in place.)
 	var/verification_time = 90 SECONDS				// How long are we allowing users to have during the verification step?
 	var/verification_dangerous = FALSE				// Do spawners continue to run during verification?
@@ -64,6 +66,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/level_3_keys = list("wolf, left, right")	// Level 3 difficulty typed keys. Keep these medium-length. "Wolf's Paw, Eager Snout, Wild Dog"
 	var/level_4_keys = list("wolf, left, right")	// Level 4 difficulty typed keys. Keep these longer-med-length. "Wolf's Paw Strike, Eager-footed wolf, Wild Dog's Hunting Call."
 	var/level_5_keys = list("wolf, left, right")	// Level 5 difficulty typed keys. Keep these full-length phrases. "Midsummers Hammer strikes hard on the eve, The wolf's scent permeates the air, Howls pierce the full-moonlit night", etc
+	var/warmup_lighting = "#916508"					// What color do we set our lights during warmup sequence? This is fed into set_lights in start_warmup()
+	var/wave_lighting = "#913a08"					// What color do we set our lights during active waves (reactor is assumed engaged, treat this like emergency/test lighting). This is fed into set_lights in start_wave()
 	
 	
 	/* 	== TGUI Variables. == */
@@ -304,7 +308,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	data["verificationcompletePercent"] = ((world.time - timeout_min) / (timeout_max - timeout_min))
 	return data
 
-/obj/machinery/power/damaged_reactor/tgui_act(action) // Someone hit a button or wants to do things~
+/obj/machinery/power/damaged_reactor/tgui_act(action, params) // Someone hit a button or wants to do things~
 	if(..())
 		return 1
 		
@@ -318,20 +322,21 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 			state = WARMUP
 			to_world("<span class='danger'><big>DEBUG: WARMUP STARTED.</big></span>")
 	if(action == "submit_verification" && state == VERIFYING)
-		/* if(chosen_phrase == entered["string"]) // Commenting out this, I'm not sure how to feed data IN from TGUI to match the player-input string against the chosen_phrase
+		/* if(chosen_phrase == params["verif_entry"]) // Commenting out this, I'm not sure how to feed data IN from TGUI to match the player-input string against the chosen_phrase
 			verification_successful = TRUE
 			chosen_phrase = null // Reset our chosen_phrase - we'll re-decide it next time we call choose_phrase()
 		else
 			*/
+		to_world("VERIFICATION SUBMITTED") // Placeholder until the above code is uncommented, you can't have an empty IF statement.
 
 //////////////////////////////////////////////////////////////////
 /*		=====		TGUI Menu Stuff Ends Here		=====		*/
 //////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*	//		=====									-----Damage Handling Code-----																=====		//
- *	//		=====		We have to handle damage and health ourselves instead of relying on a parent to do so. 									=====		//
- *	//		=====		The following code handles health, taking damage, mobs inflicting damage, and any other damage-related scenarios. 		=====		//
+/*		//		=====									-----Damage Handling Code-----															=====		//
+ *		//		=====		We have to handle damage and health ourselves instead of relying on a parent to do so.								=====		//
+ *		//		=====		The following code handles health, taking damage, mobs inflicting damage, and any other damage-related scenarios.	=====		//
  *////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/machinery/power/damaged_reactor/take_damage(var/damage = 0, var/sound_effect = 1)
@@ -507,7 +512,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 	to_world("Wave started!")
 	
-	set_lights("#913a08") // Set our mood lighting!
+	set_lights(wave_lighting) // Set our mood lighting! This is pulled from the reactor's wave_lighting var!
 	
 	start_spawning() // Send in the troops!
 	
@@ -557,7 +562,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 	to_world("Warmup started!")
 	
-	set_lights("#916508") // Set our mood lighting!
+	set_lights(warmup_lighting) // Set our mood lighting!
 	
 	if(warmup_dangerous) // Are our warmups intended to be dangerous? Setup on the reactor itself.
 		setup_spawner(current_wave, mobs_per_warmup_spawner) // We use current_wave for the list of mobs, and the total number of spawns allowed PER spawner to whatever mobs_per_warmup_spawner has. Warmups are not scot-free!
