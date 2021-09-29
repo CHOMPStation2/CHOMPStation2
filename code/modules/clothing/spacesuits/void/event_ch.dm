@@ -29,12 +29,12 @@
 
 /obj/item/clothing/head/helmet/space/void/refurb/marine/sleeping_slug
 	name = "sleeping slug marine's voidsuit helmet"
-	desc = "A refurbished early contact era voidsuit helmet of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. The visor has a bad habit of fogging up and collecting condensation, but it beats sucking hard vacuum. The blue markings indicate this as the marine/guard variant. \"ITV TALON\" has been stamped onto the sides of the helmet."
+	desc = "A refurbished early contact era voidsuit helmet of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. The visor has a bad habit of fogging up and collecting condensation, but it beats sucking hard vacuum. The blue markings indicate this as the marine/guard variant. \"ITV Sleeping Slug\" has been stamped onto the sides of the helmet."
 	camera_networks = list(NETWORK_SLEEPING_SLUG_HELMETS)
 
 /obj/item/clothing/suit/space/void/refurb/marine/sleeping_slug
 	name = "sleeping slug marine's voidsuit"
-	desc = "A refurbished early contact era voidsuit of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. Many old-timer marines swear by these old things, even if new powered hardsuits have more features and better armor. The blue markings indicate this as the marine/guard variant, with \"ITV TALON\" stamped under the shield design."
+	desc = "A refurbished early contact era voidsuit of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. Many old-timer marines swear by these old things, even if new powered hardsuits have more features and better armor. The blue markings indicate this as the marine/guard variant, with \"ITV Sleeping Slug\" stamped under the shield design."
 
 /obj/item/clothing/head/helmet/space/void/refurb/officer/sleeping_slug
 	name = "sleeping slug officer's voidsuit helmet"
@@ -42,7 +42,7 @@
 
 /obj/item/clothing/suit/space/void/refurb/officer/sleeping_slug
 	name = "sleeping slug officer's voidsuit"
-	desc = "A refurbished early contact era voidsuit of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. Many old-timer spacers swear by these old things, even if new powered hardsuits have more features and better armor. This variant appears to be an officer's, and has the best protection of all the old models. \"ITV TALON\" is stamped across the left side of the breastplate in faded faux-gold."
+	desc = "A refurbished early contact era voidsuit of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. Many old-timer spacers swear by these old things, even if new powered hardsuits have more features and better armor. This variant appears to be an officer's, and has the best protection of all the old models. \"ITV Sleeping Slug\" is stamped across the left side of the breastplate in faded faux-gold."
 
 /obj/item/clothing/head/helmet/space/void/refurb/pilot/sleeping_slug
 	name = "sleeping slug pilot voidsuit bubble helmet"
@@ -68,9 +68,9 @@
 
 /obj/item/clothing/head/helmet/space/void/refurb/mercenary/sleeping_slug
 	name = "sleeping slug mercenary's voidsuit helmet"
-	desc = "A refurbished early contact era voidsuit helmet of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. The visor has a bad habit of fogging up and collecting condensation, but it beats sucking hard vacuum. The red markings indicate this as the mercenary variant. \"ITV TALON\" is stamped across the back of the helmet."
+	desc = "A refurbished early contact era voidsuit helmet of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. The visor has a bad habit of fogging up and collecting condensation, but it beats sucking hard vacuum. The red markings indicate this as the mercenary variant. \"ITV Sleeping Slug\" is stamped across the back of the helmet."
 	camera_networks = list(NETWORK_SLEEPING_SLUG_HELMETS)
 
 /obj/item/clothing/suit/space/void/refurb/mercenary/sleeping_slug
 	name = "sleeping slug mercenary's voidsuit"
-	desc = "A refurbished early contact era voidsuit of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. Many old-timer mercs swear by these old things, even if new powered hardsuits have more features and better armor. The red markings indicate this as the mercenary variant. \"ITV TALON\" has been stamped onto each pauldron and the right side of the breastplate."
+	desc = "A refurbished early contact era voidsuit of human design. These things aren't especially good against modern weapons but they're sturdy, incredibly easy to come by, and there are lots of spare parts for repairs. Many old-timer mercs swear by these old things, even if new powered hardsuits have more features and better armor. The red markings indicate this as the mercenary variant. \"ITV Sleeping Slug\" has been stamped onto each pauldron and the right side of the breastplate."

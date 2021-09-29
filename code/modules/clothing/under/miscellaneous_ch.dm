@@ -9,7 +9,7 @@
 /obj/item/clothing/under/sexybunny_white/sexybunny_black
 	icon_state = "sexybunny_black"
 
-//////////////////////TALON JUMPSUITS//////////////////////
+//////////////////////SLEEPING SLUG JUMPSUITS//////////////////////
 
 /obj/item/clothing/under/rank/sleeping_slug/basic
 	name = "Sleeping Slug jumpsuit"

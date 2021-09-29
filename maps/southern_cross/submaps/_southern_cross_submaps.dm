@@ -31,8 +31,8 @@
 */
 
 /datum/map_template/sc_lateload/offmap/sleeping_slug
-	name = "Offmap Ship - Sleeing Slug"
-	desc = "Offmap spawn ship, the Sleeing Slug."
+	name = "Offmap Ship - Sleeping Slug"
+	desc = "Offmap spawn ship, the Sleeping Slug."
 	mappath = 'maps/offmap_ch/sleepingslug/sleepingslug.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/sleeping_slug
 

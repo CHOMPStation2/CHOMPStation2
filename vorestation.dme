@@ -902,6 +902,7 @@
 #include "code\game\machinery\suit_cycler_datums.dm"
 #include "code\game\machinery\suit_cycler_datums_ch.dm"
 #include "code\game\machinery\suit_storage_unit.dm"
+#include "code\game\machinery\suit_storage_unit_ch.dm"
 #include "code\game\machinery\suit_storage_unit_vr.dm"
 #include "code\game\machinery\suit_storage_unit_yw.dm"
 #include "code\game\machinery\supply_display.dm"
