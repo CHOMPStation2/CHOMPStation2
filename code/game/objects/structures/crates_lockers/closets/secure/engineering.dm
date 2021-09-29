@@ -116,14 +116,8 @@
 		/obj/item/taperoll/atmos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos,
 		/obj/item/clothing/shoes/boots/winter/atmos,
-<<<<<<< HEAD
-		/obj/item/weapon/tank/emergency/oxygen/engi) //removed RPD from lockers. Now starts on desk in map. YW edit
-||||||| parent of e667e86813... Merge pull request #11631 from KillianKirilenko/kk-misc
-		/obj/item/weapon/tank/emergency/oxygen/engi)
-=======
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/weapon/storage/belt/utility) //VOREStation Add
->>>>>>> e667e86813... Merge pull request #11631 from KillianKirilenko/kk-misc
 
 /obj/structure/closet/secure_closet/atmos_personal/Initialize()
 	if(prob(50))
