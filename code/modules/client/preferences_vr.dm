@@ -39,8 +39,7 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TDigestNoise") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
-//CHOMPEdit: belching
+	
 /client/verb/toggle_belch_noises()
 	set name = "Audible belching"
 	set category = "Preferences"
@@ -55,8 +54,6 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TBelchNoise")
-//CHOMPEdit End
-
 
 /client/verb/toggle_emote_noises()
 	set name = "Emote Noises"
