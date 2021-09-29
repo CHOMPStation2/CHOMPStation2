@@ -84,10 +84,12 @@
 		RestrainedClickOn(A)
 		return 1
 
-	if(in_throw_mode && (isturf(A) || isturf(A.loc)) && throw_item(A))
-		trigger_aiming(TARGET_CAN_CLICK)
+	if(in_throw_mode)
+		if(isturf(A) || isturf(A.loc))
+			throw_item(A)
+			trigger_aiming(TARGET_CAN_CLICK)
+			return 1
 		throw_mode_off()
-		return TRUE
 
 	var/obj/item/W = get_active_hand()
 
@@ -284,7 +286,7 @@
 	if(T && user.TurfAdjacent(T))
 		user.ToggleTurfTab(T)
 	return 1
-
+	
 /mob/proc/ToggleTurfTab(var/turf/T)
 	if(listed_turf == T)
 		listed_turf = null
