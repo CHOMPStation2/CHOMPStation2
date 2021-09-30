@@ -7,6 +7,7 @@
 	S["language"]			>> pref.alternate_languages
 	S["language_prefixes"]	>> pref.language_prefixes
 	//CHOMPEdit Begin
+	S["species"]			>> pref.species
 	S["pos_traits"]		>> pref.pos_traits
 	var/morelang = 0
 	for(var/trait in pref.pos_traits)
