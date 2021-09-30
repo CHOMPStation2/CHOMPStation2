@@ -33,7 +33,7 @@
 		// Sanitize illegal languages
 		for(var/language in pref.alternate_languages)
 			var/datum/language/L = GLOB.all_languages[language]
-			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && pref.client && !is_lang_whitelisted(pref.client, L))) //CHOMPEdit: Testing before tossing upstream.
+			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && pref.client && !is_lang_whitelisted(pref.client, L)))
 				pref.alternate_languages -= language
 
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
