@@ -7,6 +7,7 @@
 	S["language"]			>> pref.alternate_languages
 	S["language_prefixes"]	>> pref.language_prefixes
 	//CHOMPEdit Begin
+	S["species"]			>> pref.species
 	S["pos_traits"]		>> pref.pos_traits
 	var/morelang = 0
 	for(var/trait in pref.pos_traits)
@@ -32,7 +33,7 @@
 		// Sanitize illegal languages
 		for(var/language in pref.alternate_languages)
 			var/datum/language/L = GLOB.all_languages[language]
-			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && !is_lang_whitelisted(pref.client, L)))
+			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && pref.client && !is_lang_whitelisted(pref.client, L)))
 				pref.alternate_languages -= language
 
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
