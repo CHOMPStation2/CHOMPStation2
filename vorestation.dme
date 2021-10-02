@@ -3950,6 +3950,7 @@
 #include "code\modules\reagents\machinery\dispenser\cartridge_presets_ch.dm"
 #include "code\modules\reagents\machinery\dispenser\cartridge_presets_vr.dm"
 #include "code\modules\reagents\machinery\dispenser\cartridge_spawn.dm"
+#include "code\modules\reagents\machinery\dispenser\chem_synthesizer_ch.dm"
 #include "code\modules\reagents\machinery\dispenser\dispenser2.dm"
 #include "code\modules\reagents\machinery\dispenser\dispenser2_energy.dm"
 #include "code\modules\reagents\machinery\dispenser\dispenser_presets.dm"
