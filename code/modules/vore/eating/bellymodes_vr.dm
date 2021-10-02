@@ -267,7 +267,9 @@
 /obj/belly/proc/handle_digestion_death(mob/living/M)
 	var/digest_alert_owner = pick(digest_messages_owner)
 	var/digest_alert_prey = pick(digest_messages_prey)
-	var/compensation = M.getOxyLoss() //How much of the prey's damage was caused by passive crit oxyloss to compensate the lost nutrition.
+	var/compensation = M.maxHealth / 5 //Dead body bonus.
+	if(ishuman(M))
+		compensation += M.getOxyLoss() //How much of the prey's damage was caused by passive crit oxyloss to compensate the lost nutrition.
 
 	var/living_count = 0
 	for(var/mob/living/L in contents)
@@ -295,22 +297,19 @@
 	digestion_death(M)
 	if(!ishuman(owner))
 		owner.update_icons()
-	if(compensation == 0) //Slightly sloppy way at making sure certain mobs don't give ZERO nutrition (fish and so on)
-		compensation = 21 //This reads as 20*4.5 due to the calculations afterward, making the backup nutrition value 94.5 per mob. Not op compared to regular prey.
-	if(compensation > 0)
-		if(isrobot(owner))
-			var/mob/living/silicon/robot/R = owner
-			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
-				R.cell.charge += 15*compensation
-				GenerateBellyReagents_digested()
-			else
-				R.cell.charge += 25*compensation*(nutrition_percent / 100) //CHOMPedit end
+	if(isrobot(owner))
+		var/mob/living/silicon/robot/R = owner
+		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
+			R.cell.charge += (nutrition_percent / 100) * compensation * 15
+			GenerateBellyReagents_digested()
 		else
-			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-				owner.adjust_nutrition((nutrition_percent / 100)*3.0*compensation)
-				GenerateBellyReagents_digested()
-			else
-				owner.adjust_nutrition((nutrition_percent / 100)*4.5*compensation) //CHOMPedit end
+			R.cell.charge += (nutrition_percent / 100) * compensation * 25
+	else
+		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3)
+			GenerateBellyReagents_digested()
+		else
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
