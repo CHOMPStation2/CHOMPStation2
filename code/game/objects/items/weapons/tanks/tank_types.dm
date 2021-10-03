@@ -210,7 +210,7 @@
 
 /obj/item/weapon/tank/nitrogen/Initialize()
 	. = ..()
-	src.air_contents.adjust_gas("nitrogen", (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
+	src.air_contents.adjust_gas("nitrogen", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
 /obj/item/weapon/tank/nitrogen/examine(mob/user)
 	. = ..()
