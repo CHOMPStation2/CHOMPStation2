@@ -372,3 +372,14 @@
 	cost = 10
 	allow_duplicates = FALSE
 
+/datum/map_template/surface/mountains/normal/rat_den // CHOMPStation Add
+	name = "Rat Den"
+	desc = "A den full of hungry, voracious rats, that don't seem to take kindly to your presence..."
+	mappath = 'maps/submaps/surface_submaps/mountains/rat_den_ch.dmm'
+	cost = 20
+	
+/datum/map_template/surface/mountains/normal/oregrub_den // CHOMPStation Add
+	name = "Oregrub Den"
+	desc = "A den full of hungry, voracious oregrubs, that don't seem to take kindly to your presence..."
+	mappath = 'maps/submaps/surface_submaps/mountains/oregrub_deposit_ch.dmm'
+	cost = 20
