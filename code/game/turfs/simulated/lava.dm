@@ -16,6 +16,7 @@
 	can_dirty = FALSE
 	initial_flooring = /decl/flooring/lava // Defining this in case someone DOES step on lava and survive. Somehow.
 	flags = TURF_ACID_IMMUNE
+	var/datum/looping_sound/lava/soundloop
 
 /turf/simulated/floor/lava/outdoors
 	outdoors = OUTDOORS_YES
@@ -26,7 +27,15 @@
 		name = "magma"
 	update_icon()
 	update_light()
+	soundloop = new(list(src), FALSE)
+	soundloop.start()
 	return ..()
+	
+/turf/simulated/floor/lava/Destroy()
+	soundloop.stop()
+	QDEL_NULL(soundloop)
+	
+	. = ..()
 
 /turf/simulated/floor/lava/make_outdoors()
 	..()

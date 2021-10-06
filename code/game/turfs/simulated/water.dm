@@ -18,6 +18,7 @@
 	var/depth = 1 // Higher numbers indicates deeper water.
 
 	var/reagent_type = "water"
+	var/datum/looping_sound/water/soundloop
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()
@@ -25,6 +26,14 @@
 	footstep_sounds = F?.footstep_sounds
 	update_icon()
 	handle_fish()
+	soundloop = new(list(src), FALSE)
+	soundloop.start()
+	
+/turf/simulated/floor/water/Destroy()
+	soundloop.stop()
+	QDEL_NULL(soundloop)
+	
+	. = ..()
 
 /turf/simulated/floor/water/update_icon()
 	..() // To get the edges.

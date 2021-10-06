@@ -1,5 +1,6 @@
 /datum/looping_sound/weather
 	pref_check = /datum/client_preference/weather_sounds
+	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
 
 /datum/looping_sound/weather/outside_blizzard
 	mid_sounds = list(
@@ -71,28 +72,40 @@
 /datum/looping_sound/weather/wind/gentle/indoors
 	volume = 5
 
+// CHOMPEdit Start: Replace Rain sounds with something not-garbage.
 /datum/looping_sound/weather/rain
 	mid_sounds = list(
-		'sound/effects/weather/acidrain_mid.ogg' = 1
+		'sound/effects/weather/rain/rain_new_1.ogg' = 1,
+		'sound/effects/weather/rain/rain_new_2.ogg' = 1
 		)
-	mid_length = 15 SECONDS
-	start_sound = 'sound/effects/weather/acidrain_start.ogg'
-	start_length = 13 SECONDS
-	end_sound = 'sound/effects/weather/acidrain_end.ogg'
-	volume = 20
+	mid_length = 3 SECONDS
+	start_sound = 'sound/effects/weather/rain/start_rain.ogg'
+	start_length = 3 SECONDS
+	end_sound = 'sound/effects/weather/rain/end_rain.ogg'
+	volume = 50
 
-/datum/looping_sound/weather/rain/heavy
-	volume = 40
-
+// CHOMPEdit End: Replace Rain sounds with something not-garbage.
 /datum/looping_sound/weather/rain/indoors
+	volume = 20
+	
+// CHOMPEdit Start: Proper storm sounds!
+/datum/looping_sound/weather/storm
 	mid_sounds = list(
-		'sound/effects/weather/indoorrain_mid.ogg' = 1
+		'sound/effects/weather/storm/storm_loop.ogg' = 1
 		)
-	mid_length = 15 SECONDS
-	start_sound = 'sound/effects/weather/indoorrain_start.ogg'
-	start_length = 13 SECONDS
-	end_sound = 'sound/effects/weather/indoorrain_end.ogg'
-	volume = 20 //Sound is already quieter in file
+	mid_length = 3 SECONDS
+	start_sound = list(
+		'sound/effects/weather/storm/storm_start1.ogg' = 1,
+		'sound/effects/weather/storm/storm_start2.ogg' = 1
+		)
+	start_length = 4 SECONDS
+	end_sound = list(
+		'sound/effects/weather/storm/storm_end1.ogg' = 1,
+		'sound/effects/weather/storm/storm_end2.ogg' = 1
+		)
+	volume = 60
 
-/datum/looping_sound/weather/rain/indoors/heavy
-	volume = 40
+// CHOMPEdit End: Proper storm sounds!
+
+/datum/looping_sound/weather/storm/indoors
+	volume = 20
