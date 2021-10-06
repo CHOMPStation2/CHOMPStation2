@@ -599,6 +599,7 @@
 #include "code\game\antagonist\station\traitor.dm"
 #include "code\game\area\ai_monitored.dm"
 #include "code\game\area\areas.dm"
+#include "code\game\area\areas_ch.dm"
 #include "code\game\area\areas_vr.dm"
 #include "code\game\area\asteroid_areas.dm"
 #include "code\game\area\Away Mission areas.dm"
