@@ -2,64 +2,65 @@
 	pref_check = /datum/client_preference/weather_sounds
 	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
 
+// CHOMPEdit: Blanket replace all wind with this, for now, in lieue of a snowstorm-specific wind
 /datum/looping_sound/weather/outside_blizzard
+	start_sound = 'sound/effects/weather/wind/wind_start.ogg'
+	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/snowstorm/outside/active_mid1.ogg' = 1,
-		'sound/effects/weather/snowstorm/outside/active_mid1.ogg' = 1,
-		'sound/effects/weather/snowstorm/outside/active_mid1.ogg' = 1
+		'sound/effects/weather/wind/wind_loop1.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 8 SECONDS
-	start_sound = 'sound/effects/weather/snowstorm/outside/active_start.ogg'
-	start_length = 13 SECONDS
-	end_sound = 'sound/effects/weather/snowstorm/outside/active_end.ogg'
-	volume = 40
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
+	volume = 85 // Louder because we want to communicate to players that this is a heavy blizzard
 
 /datum/looping_sound/weather/inside_blizzard
+	start_sound = 'sound/effects/weather/wind/wind_start.ogg'
+	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/snowstorm/inside/active_mid1.ogg' = 1,
-		'sound/effects/weather/snowstorm/inside/active_mid2.ogg' = 1,
-		'sound/effects/weather/snowstorm/inside/active_mid3.ogg' = 1
+		'sound/effects/weather/wind/wind_loop1.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 8 SECONDS
-	start_sound = 'sound/effects/weather/snowstorm/inside/active_start.ogg'
-	start_length = 13 SECONDS
-	end_sound = 'sound/effects/weather/snowstorm/inside/active_end.ogg'
-	volume = 20
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
+	volume = 25 // Should naturally be very quiet - wind isn't usually audible inside a structure unless you're right by the door. - bit louder because blizzard
 
 /datum/looping_sound/weather/outside_snow
+	start_sound = 'sound/effects/weather/wind/wind_start.ogg'
+	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/snowstorm/outside/weak_mid1.ogg' = 1,
-		'sound/effects/weather/snowstorm/outside/weak_mid2.ogg' = 1,
-		'sound/effects/weather/snowstorm/outside/weak_mid3.ogg' = 1
+		'sound/effects/weather/wind/wind_loop1.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 8 SECONDS
-	start_sound = 'sound/effects/weather/snowstorm/outside/weak_start.ogg'
-	start_length = 13 SECONDS
-	end_sound = 'sound/effects/weather/snowstorm/outside/weak_end.ogg'
-	volume = 20
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
+	volume = 65
 
 /datum/looping_sound/weather/inside_snow
+	start_sound = 'sound/effects/weather/wind/wind_start.ogg'
+	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/snowstorm/inside/weak_mid1.ogg' = 1,
-		'sound/effects/weather/snowstorm/inside/weak_mid2.ogg' = 1,
-		'sound/effects/weather/snowstorm/inside/weak_mid3.ogg' = 1
+		'sound/effects/weather/wind/wind_loop1.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 8 SECONDS
-	start_sound = 'sound/effects/weather/snowstorm/inside/weak_start.ogg'
-	start_length = 13 SECONDS
-	end_sound = 'sound/effects/weather/snowstorm/inside/weak_end.ogg'
-	volume = 10
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
+	volume = 15 // Should naturally be very quiet - wind isn't usually audible inside a structure unless you're right by the door.
 
 /datum/looping_sound/weather/wind
+	start_sound = 'sound/effects/weather/wind/wind_start.ogg'
+	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/wind/wind_2_1.ogg' = 1,
-		'sound/effects/weather/wind/wind_2_2.ogg' = 1,
-		'sound/effects/weather/wind/wind_3_1.ogg' = 1,
-		'sound/effects/weather/wind/wind_4_1.ogg' = 1,
-		'sound/effects/weather/wind/wind_4_2.ogg' = 1,
-		'sound/effects/weather/wind/wind_5_1.ogg' = 1
+		'sound/effects/weather/wind/wind_loop1.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
+		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 10 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 45
 
 // Don't have special sounds so we just make it quieter indoors.
