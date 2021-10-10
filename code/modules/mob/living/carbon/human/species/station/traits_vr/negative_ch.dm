@@ -15,7 +15,7 @@
 /datum/trait/negative/less_blood
 	name = "Low blood volume"
 	desc = "You have 33.3% less blood volume compared to most species, making you more prone to blood loss issues."
-	cost = -3
+	cost = -2
 	var_changes = list("blood_volume" = 375)
 	excludes = list(/datum/trait/negative/less_blood_extreme,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
@@ -23,7 +23,7 @@
 /datum/trait/negative/less_blood_extreme
 	name = "Extremely low blood volume"
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
-	cost = -5
+	cost = -3
 	var_changes = list("blood_volume" = 224)
 	excludes = list(/datum/trait/negative/less_blood,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
