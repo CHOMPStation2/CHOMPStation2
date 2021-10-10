@@ -359,6 +359,15 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/rifle/a50bmg/ap
 	armor_penetration = 50
 
+/obj/item/projectile/bullet/rifle/a127x108 //Bigass fuckoff LMG round, bigger than 50 BMG
+	fire_sound = 'sound/weapons/serdy/strela.ogg'
+	damage = 60
+	diam = 13
+	grains = 855
+	velocity = 820
+	penetrating = 2
+	armor_penetration=30
+
 //NOTE: Ammo casings and magazines used to be in this part of the file. They have been moved to respective files in the projectiles/ammunition folder.
 
 //Various "We're not dealing with this shit because of how bad it is" (Some of these may be implemented into the new system with later updates)
