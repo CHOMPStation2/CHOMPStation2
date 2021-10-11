@@ -236,10 +236,20 @@
 	containername = "Zaddat Shroud crate"
 	access = access_mining
 
+//ChompEdit Start
 /datum/supply_pack/voidsuits/unathi_bs_yw
 	name = "Unathi breacher chassis"
-	contains = list(/obj/item/weapon/rig/breacher) //YW Edit
-	cost = 350
+	contains = list(/obj/item/weapon/rig/breacher) 
+	cost = 200  //Crap breacher suit, shouldn't be as expensive.
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Unathi breacher chassis crate"
 	access = access_armory
+
+/datum/supply_pack/voidsuits/unathi_bs_yw
+	name = "Unathi breacher chassis"
+	contains = list(/obj/item/weapon/rig/breacher/fancy)
+	cost = 400  //Better, costs more.
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Unathi breacher chassis crate"
+	access = access_armory
+//ChompEdit End
