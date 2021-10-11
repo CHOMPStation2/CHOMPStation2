@@ -14,8 +14,7 @@
 	slowdown = 3  //This is too much, reducing from 6 to 3.  May edit again in the future.
 	offline_slowdown = 5
 	vision_restriction = 0  //This is dumb as hell and should be 0 if we want the suit to be even vaguely useful.
-	offline_vision_restriction = 0  //This is also dumb as hell.
-	siemens_coefficient = 0.75
+	offline_vision_restriction = 2 //This actually serves as a good weakness for them, making them vulnerable to Ion weapons.
 	chest_type = /obj/item/clothing/suit/space/rig/breacher
 	helm_type = /obj/item/clothing/head/helmet/space/rig/breacher
 	boot_type = /obj/item/clothing/shoes/magboots/rig/breacher
