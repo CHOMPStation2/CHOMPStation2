@@ -237,7 +237,7 @@
 	access = access_mining
 
 //ChompEdit Start
-/datum/supply_pack/voidsuits/unathi_bs_yw
+/datum/supply_pack/voidsuits/unathi_bs_NT
 	name = "Unathi breacher chassis"
 	contains = list(/obj/item/weapon/rig/breacher) 
 	cost = 200  //Crap breacher suit, shouldn't be as expensive.
@@ -245,7 +245,7 @@
 	containername = "Unathi breacher chassis crate"
 	access = access_armory
 
-/datum/supply_pack/voidsuits/unathi_bs_yw
+/datum/supply_pack/voidsuits/unathi_bs_Auth
 	name = "Unathi breacher chassis"
 	contains = list(/obj/item/weapon/rig/breacher/fancy)
 	cost = 400  //Better, costs more.
