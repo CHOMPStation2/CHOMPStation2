@@ -115,7 +115,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 //Deluxe explorer suit
-	/obj/item/clothing/suit/armor/pcarrier/explorer/deluxe
+/obj/item/clothing/suit/armor/pcarrier/explorer/deluxe
 	name = "modular explorer suit"
 	desc = "A modification of the explorer suit with a modular armor system. Requires you to insert armor plates."
 

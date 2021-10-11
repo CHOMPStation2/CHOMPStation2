@@ -10,7 +10,7 @@
 	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
 
 
-mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
+/mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(vore_footstep_volume_cooldown++ >= 5) //updating the 'dominating' belly, the one that has most liquid and is loudest.
 		choose_vorefootstep()
 		vore_footstep_volume_cooldown = 0
@@ -53,15 +53,15 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	for (var/belly in vore_organs)
 		var/obj/belly/B = belly
 
-		if(0 <= B.reagents.total_volume && B.reagents.total_volume <= 20 && B.liquid_fullness1_messages)
+		if(0 <= B.reagents.total_volume && B.reagents.total_volume <= 20 && B.show_fullness_messages)
 			message += B.get_reagent_examine_msg1()
-		if(20 < B.reagents.total_volume && B.reagents.total_volume <= 40 && B.liquid_fullness2_messages)
+		if(20 < B.reagents.total_volume && B.reagents.total_volume <= 40 && B.show_fullness_messages)
 			message += B.get_reagent_examine_msg2()
-		if(40 < B.reagents.total_volume && B.reagents.total_volume <= 60 && B.liquid_fullness3_messages)
+		if(40 < B.reagents.total_volume && B.reagents.total_volume <= 60 && B.show_fullness_messages)
 			message += B.get_reagent_examine_msg3()
-		if(60 < B.reagents.total_volume && B.reagents.total_volume <= 80 && B.liquid_fullness4_messages)
+		if(60 < B.reagents.total_volume && B.reagents.total_volume <= 80 && B.show_fullness_messages)
 			message += B.get_reagent_examine_msg4()
-		if(80 < B.reagents.total_volume && B.reagents.total_volume <= 100 && B.liquid_fullness5_messages)
+		if(80 < B.reagents.total_volume && B.reagents.total_volume <= 100 && B.show_fullness_messages)
 			message += B.get_reagent_examine_msg5()
 
 	return message
@@ -229,7 +229,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 		T = input("Choose whose belly to rub") as null| mob in view(1,src)
 		if(!T)
 			return FALSE
-	if(!T in view(1,src))
+	if(!(T in view(1,src)))
 		return FALSE
 	if(T.vore_selected)
 		var/obj/belly/B = T.vore_selected

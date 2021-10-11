@@ -110,7 +110,7 @@
 	spawn_positions = 4
 	supervisors = "the Head of Security"
 	selection_color = "#601C1C"
-	economic_modifier = 4
+	economic_modifier = 5	//CHOMPstation edit - "Offduty officers make more than working, and this brings it in line with the rest of the jobs in sec barring HOS"
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 3

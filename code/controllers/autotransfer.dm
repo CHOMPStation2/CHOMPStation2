@@ -18,7 +18,7 @@ var/datum/controller/transfer_controller/transfer_controller
 	currenttick = currenttick + 1
 	//VOREStation Edit START
 	if (round_duration_in_ds >= shift_last_vote - 2 MINUTES)
-		shift_last_vote = 999999999999 //Setting to a stupidly high number since it'll be not used again.
+		shift_last_vote = 1000000000000 //Setting to a stupidly high number since it'll be not used again.
 		to_world("<b>Warning: This upcoming round-extend vote will be your last chance to vote for shift extension. Wrap up your scenes in the next 60 minutes if the round is extended.</b>") //CHOMPStation Edit
 	if (round_duration_in_ds >= shift_hard_end - 1 MINUTE)
 		init_shift_change(null, 1)

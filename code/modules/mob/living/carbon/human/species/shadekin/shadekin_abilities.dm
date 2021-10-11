@@ -67,6 +67,13 @@
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
 
+	//CHOMPEdit begin - restricting areas where you can phase shift
+	var/area/A = T.loc
+	if(A?.limit_shadekin_phasing)
+		to_chat(src, "<span class='warning'>You can't use that here!</span>")
+		return FALSE
+	//CHOMPEdit end
+
 	if(!(ability_flags & AB_PHASE_SHIFTED))
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
@@ -100,6 +107,11 @@
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		force_max_speed = initial(force_max_speed)
+		//CHOMPEdit begin - resetting pull ability after phasing back in
+		can_pull_size = initial(can_pull_size)
+		can_pull_mobs = initial(can_pull_mobs)
+		hovering = initial(hovering)
+		//CHOMPEdit end
 		update_icon()
 
 		//Cosmetics mostly
@@ -138,6 +150,19 @@
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		name = "Something"
+
+		//CHOMPEdit begin - Unequipping slots when phasing in, and preventing pulling stuff while phased.
+		if(l_hand)
+			unEquip(l_hand)
+		if(r_hand)
+			unEquip(r_hand)
+		if(back)
+			unEquip(back)
+
+		can_pull_size = 0
+		can_pull_mobs = MOB_PULL_NONE
+		hovering = TRUE
+		//CHOMPEdit end
 
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = FALSE

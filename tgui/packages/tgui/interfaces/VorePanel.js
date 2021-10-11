@@ -322,17 +322,14 @@ const VoreSelectedBelly = (props, context) => {
     liq_reagent_addons,
     show_liq_fullness,
     liq_messages,
-    liq_msg_toggle1,
-    liq_msg_toggle2,
-    liq_msg_toggle3,
-    liq_msg_toggle4,
-    liq_msg_toggle5,
     liq_msg1,
     liq_msg2,
     liq_msg3,
     liq_msg4,
     liq_msg5,
     vorespawn_blacklist,
+    autotransfer_enabled,
+    autotransfer,
   } = belly;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
@@ -432,20 +429,35 @@ const VoreSelectedBelly = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "ema" })}
               content="Examine Message (with absorbed victims)" />
             <Button
-              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_digest" })}
-              content="Idle Messages (Digest)" />
-            <Button
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_hold" })}
               content="Idle Messages (Hold)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_digest" })}
+              content="Idle Messages (Digest)" />
             <Button
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_absorb" })}
               content="Idle Messages (Absorb)" />
             <Button
-              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_heal" })}
-              content="Idle Messages (Heal)" />
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_unabsorb" })}
+              content="Idle Messages (Unabsorb)" />
             <Button
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_drain" })}
               content="Idle Messages (Drain)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_heal" })}
+              content="Idle Messages (Heal)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_steal" })}
+              content="Idle Messages (Size Steal)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_shrink" })}
+              content="Idle Messages (Shrink)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_grow" })}
+              content="Idle Messages (Grow)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_egg" })}
+              content="Idle Messages (Encase In Egg)" />
             <Button
               color="red"
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "reset" })}
@@ -646,8 +658,36 @@ const VoreSelectedBelly = (props, context) => {
                   content={interacts.digestchance + "%"}
                   onClick={() => act("set_attribute", { attribute: "b_digestchance" })} />
               </LabeledList.Item>
+              <LabeledList.Divider />
             </LabeledList>
           ) : "These options only display while interactions are turned on."}
+          <Section title="Auto-Transfer Options" buttons={
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_autotransfer_enabled" })}
+              icon={autotransfer_enabled ? "toggle-on" : "toggle-off"}
+              selected={autotransfer_enabled}
+              content={autotransfer_enabled ? "Auto-Transfer Enabled" : "Auto-Transfer Disabled"} />
+          }>
+            {autotransfer_enabled ? (
+              <LabeledList>
+                <LabeledList.Item label="Auto-Transfer Chance">
+                  <Button
+                    content={autotransfer.autotransferchance + "%"}
+                    onClick={() => act("set_attribute", { attribute: "b_autotransferchance" })} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Auto-Transfer Time">
+                  <Button
+                    content={autotransfer.autotransferwait / 10 + "s"}
+                    onClick={() => act("set_attribute", { attribute: "b_autotransferwait" })} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Auto-Transfer Location">
+                  <Button
+                    content={autotransfer.autotransferlocation ? autotransfer.autotransferlocation : "Disabled"}
+                    onClick={() => act("set_attribute", { attribute: "b_autotransferlocation" })} />
+                </LabeledList.Item>
+              </LabeledList>
+            ) : "These options only display while Auto-Transfer is enabled."}
+          </Section>
         </Section>
       ) || tabIndex === 4 && (
         <Fragment>
@@ -793,50 +833,25 @@ const VoreSelectedBelly = (props, context) => {
             <LabeledList>
               <LabeledList.Item label="0 to 20%">
                 <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle1" })}
-                  icon={liq_messages.liq_msg_toggle1? "toggle-on" : "toggle-off"}
-                  selected={liq_messages.liq_msg_toggle1}
-                  content={liq_messages.liq_msg_toggle1 ? "On" : "Off"} />
-                <Button
                   onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg1" })}
                   content="Examine Message (0 to 20%)" />
               </LabeledList.Item>
               <LabeledList.Item label="20 to 40%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle2" })}
-                  icon={liq_messages.liq_msg_toggle2? "toggle-on" : "toggle-off"}
-                  selected={liq_messages.liq_msg_toggle2}
-                  content={liq_messages.liq_msg_toggle2 ? "On" : "Off"} />
                 <Button
                   onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg2" })}
                   content="Examine Message (20 to 40%)" />
               </LabeledList.Item>
               <LabeledList.Item label="40 to 60%">
                 <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle3" })}
-                  icon={liq_messages.liq_msg_toggle3? "toggle-on" : "toggle-off"}
-                  selected={liq_messages.liq_msg_toggle3}
-                  content={liq_messages.liq_msg_toggle3 ? "On" : "Off"} />
-                <Button
                   onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg3" })}
                   content="Examine Message (40 to 60%)" />
               </LabeledList.Item>
               <LabeledList.Item label="60 to 80%">
                 <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle4" })}
-                  icon={liq_messages.liq_msg_toggle4? "toggle-on" : "toggle-off"}
-                  selected={liq_messages.liq_msg_toggle4}
-                  content={liq_messages.liq_msg_toggle4 ? "On" : "Off"} />
-                <Button
                   onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg4" })}
                   content="Examine Message (60 to 80%)" />
               </LabeledList.Item>
               <LabeledList.Item label="80 to 100%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle5" })}
-                  icon={liq_messages.liq_msg_toggle5? "toggle-on" : "toggle-off"}
-                  selected={liq_messages.liq_msg_toggle5}
-                  content={liq_messages.liq_msg_toggle5 ? "On" : "Off"} />
                 <Button
                   onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg5" })}
                   content="Examine Message (80 to 100%)" />

@@ -1,7 +1,8 @@
 // You probably don't want to tick this file yet.
 
 #if !defined(USING_MAP_DATUM)
-
+	
+	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that changes.
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
 	#include "southern_cross_elevator.dm"
@@ -18,24 +19,27 @@
 	#include "shuttles/ert.dm"
 
 	#include "loadout/loadout_accessories.dm"
-	#include "loadout/loadout_suit.dm"
-	#include "loadout/loadout_uniform.dm"
+	// #include "loadout/loadout_suit.dm"
+	// #include "loadout/loadout_uniform.dm"
 
 	#include "datums/supplypacks/munitions.dm"
-	#include "items/encryptionkey_sc.dm"
-	#include "items/headset_sc.dm"
-	#include "items/clothing/sc_suit.dm"
-	#include "items/clothing/sc_under.dm"
-	#include "items/clothing/sc_accessory.dm"
+	
+	// #include "items/encryptionkey_sc.dm"
+	// #include "items/headset_sc.dm"
+	// #include "items/clothing/sc_suit.dm"
+	// #include "items/clothing/sc_under.dm"
+	// #include "items/clothing/sc_accessory.dm"
 	#include "job/outfits.dm"
-	#include "structures/closets/engineering.dm"
-	#include "structures/closets/medical.dm"
-	#include "structures/closets/misc.dm"
-	#include "structures/closets/research.dm"
-	#include "structures/closets/security.dm"
+	// #include "structures/closets/engineering.dm"
+	// #include "structures/closets/medical.dm"
+	// #include "structures/closets/misc.dm"
+	// #include "structures/closets/research.dm"
+	// #include "structures/closets/security.dm"
 	#include "turfs/outdoors.dm"
 	#include "overmap/sectors.dm"
 	#include "events/wildlife_encounter.dm"
+	
+	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
 
 	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.
 	#include "southern_cross-1.dmm" //Deck 1
@@ -49,7 +53,7 @@
 	#include "southern_cross-9.dmm" //Transit
 	#include "southern_cross-10.dmm" //Sif wilds
 	//CHOMPStation Edit End
-	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
+//	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
 	#include "submaps/_southern_cross_submaps.dm"
 

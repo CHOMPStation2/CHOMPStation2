@@ -75,11 +75,11 @@
 
 /obj/machinery/power/quantumpad/update_icon()
 	. = ..()
-	
+
 	cut_overlays()
 	if(panel_open)
 		add_overlay("qpad-panel")
-	
+
 	if(inoperable() || panel_open || !powernet)
 		icon_state = "[initial(icon_state)]-o"
 	else if (!linked_pad)
@@ -95,7 +95,7 @@
 			disconnect_from_network()
 		connect_to_network()
 		if(powernet != original_powernet)
-			update_icon()		
+			update_icon()
 
 /obj/machinery/power/quantumpad/attack_hand(mob/user)
 	. = ..()
@@ -136,10 +136,12 @@
 	src.add_fingerprint(user)
 	doteleport(user)
 
+/*CHOMP Remove. Teleport code changed slightly making this obsolete
 /obj/machinery/power/quantumpad/proc/sparks()
 	var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 	sparks.set_up(5, 1, get_turf(src))
 	sparks.start()
+*/
 
 /obj/machinery/power/quantumpad/attack_ghost(mob/observer/dead/ghost)
 	. = ..()
@@ -186,15 +188,16 @@
 
 		teleporting = 0
 		last_teleport = world.time
-
+		/* CHOMP remove
 		sparks()
 		linked_pad.sparks()
+		*/
 
 		flick("qpad-beam-out", src)
-		playsound(src, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
+		//playsound(src, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
 		flick("qpad-beam-in", linked_pad)
-		playsound(linked_pad, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
-		
+		//playsound(linked_pad, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
+
 		transport_objects(get_turf(linked_pad))
 
 /obj/machinery/power/quantumpad/proc/initMappedLink()
@@ -210,7 +213,7 @@
 	// Well, I guess you can do it!
 	if(!A?.requires_power)
 		return TRUE
-	
+
 	// Otherwise we'll need a powernet
 	var/power_to_use = 10000 / power_efficiency
 	if(draw_power(power_to_use) != power_to_use)
@@ -231,13 +234,13 @@
 					continue
 			else if(!isobserver(ROI))
 				continue
-		do_teleport(ROI, destination, local = FALSE)
+		do_teleport(ROI, destination, local = FALSE, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg') //CHOMP Edit
 
 /obj/machinery/power/quantumpad/proc/can_traverse_gateway()
 	// Well, if there's no gateway map we're definitely not on it
 	if(!GLOB.gateway_away)
 		return TRUE
-	
+
 	// Traverse!
 	if(GLOB.gateway_away.calibrated)
 		return TRUE
@@ -245,7 +248,7 @@
 	var/list/gateway_zs = GetConnectedZlevels(GLOB.gateway_away.z)
 	if(z in gateway_zs)
 		return FALSE // It's not calibrated and we're in a connected z
-	
+
 	return TRUE
 
 /obj/machinery/power/quantumpad/proc/gateway_scatter(mob/user)
@@ -258,7 +261,7 @@
 		to_chat(user, "<span class='warning'>Power is not sufficient to complete a teleport. Teleport aborted.</span>")
 		return
 
-	sparks()
+	//sparks()
 	to_chat(user, "<span class='warning'>You feel yourself pulled in different directions, before ending up not far from where you started.</span>")
 	flick("qpad-beam-out", src)
 	transport_objects(get_turf(dest))

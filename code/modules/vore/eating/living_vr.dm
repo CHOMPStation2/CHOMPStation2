@@ -281,11 +281,13 @@
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
-		vore_organs.Cut()
+		QDEL_LIST(vore_organs)
+		bellies_loaded = FALSE //CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 			if(!full_vorgans) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 				break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
+			bellies_loaded = TRUE //CHOMPedit
 
 	return TRUE
 
@@ -893,6 +895,7 @@
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
+	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")
 	return
@@ -982,7 +985,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-		INVOKE_ASYNC(owner.vorePanel, .proc/tgui_interact, user)
+		INVOKE_ASYNC(owner, /mob/living/proc/insidePanel, owner) //CHOMPEdit
 
 /**
  * Screen object for vore panel

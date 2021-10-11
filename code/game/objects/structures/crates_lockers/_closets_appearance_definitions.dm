@@ -14,6 +14,15 @@
 	var/decal_icon = 'icons/obj/closets/decals/closet.dmi'
 	var/can_lock = FALSE
 
+	/// Length of time (ds) to animate the door transform
+	var/door_anim_time = 2.0
+	/// Amount to 'squish' the full width of the door by
+	var/door_anim_squish = 0.30
+	/// Virtual angle at which the door is opened to (136 by default, so not a full 180)
+	var/door_anim_angle = 136
+	/// Offset for the door hinge location from centerline
+	var/door_hinge = -6.5
+
 /decl/closet_appearance/New()
 	// Build our colour and decal lists.
 	if(LAZYLEN(extra_decals))
@@ -42,7 +51,7 @@
 	open_icon.Blend(icon(base_icon, "open"), ICON_OVERLAY)
 	open_icon.Blend(color, BLEND_ADD)
 	open_icon.Blend(icon(base_icon, "interior"), ICON_OVERLAY)
-	
+
 	door_back_icon = icon(base_icon, "door_back")
 	door_back_icon.Blend(color, BLEND_ADD)
 
@@ -65,7 +74,7 @@
 			this_decal_icon.Blend(decals[thing], BLEND_ADD)
 			closed_emagged_icon.Blend(this_decal_icon, ICON_OVERLAY)
 			door_front_icon.Blend(this_decal_icon, ICON_OVERLAY)
-	
+
 	door_front_icon.AddAlphaMask(icon(base_icon, "door_front")) // Remove pesky 'more than just door' decals
 
 	closed_locked_icon =   icon(closed_emagged_icon)
@@ -613,6 +622,13 @@
 		"vertical_stripe_simple" = COLOR_OFF_WHITE,
 	)
 
+/decl/closet_appearance/oxygen/fire/atmos
+	color = COLOR_YELLOW_GRAY
+	extra_decals = list(
+		"extinguisher" = COLOR_TEAL,
+		"vertical_stripe_simple" = COLOR_TEAL,
+	)
+
 /decl/closet_appearance/alien
 	color = COLOR_PURPLE
 
@@ -725,6 +741,7 @@
 	base_icon =  'icons/obj/closets/bases/crate.dmi'
 	decal_icon = 'icons/obj/closets/decals/crate.dmi'
 	color = COLOR_GRAY40
+	door_anim_time = 0
 
 /decl/closet_appearance/crate/plastic
 	color = COLOR_GRAY80
@@ -1237,6 +1254,7 @@
 	decal_icon = 'icons/obj/closets/decals/large_crate.dmi'
 	decals = null
 	extra_decals = null
+	door_anim_time = 0
 
 /decl/closet_appearance/large_crate/critter
 	color = COLOR_BEIGE
@@ -1349,6 +1367,7 @@
 	color = WOOD_COLOR_RICH
 	decals = null
 	extra_decals = null
+	door_anim_time = 0
 
 /decl/closet_appearance/cabinet/secure
 	can_lock = TRUE
@@ -1361,6 +1380,7 @@
 		"vent"
 	)
 	extra_decals = null
+	door_anim_time = 0
 
 /decl/closet_appearance/wall/emergency
 	color = COLOR_LIGHT_CYAN
@@ -1402,6 +1422,7 @@
 		"vent"
 	)
 	extra_decals = null
+	door_anim_time = 0
 
 /decl/closet_appearance/wall_double/kitchen
 	decals = null
@@ -1431,6 +1452,7 @@
 	decal_icon = 'icons/obj/closets/decals/cart.dmi'
 	decals = null
 	extra_decals = null
+	door_anim_time = 0
 
 /decl/closet_appearance/cart/trash
 	color = COLOR_BOTTLE_GREEN

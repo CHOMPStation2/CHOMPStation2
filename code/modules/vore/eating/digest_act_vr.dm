@@ -9,6 +9,8 @@
 			var/obj/item/device/pda/P = src
 			if(P.id)
 				P.id = null
+		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
+			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
 			if(istype(O, /obj/item/weapon/storage/internal)) //Dump contents from dummy pockets.
 				for(var/obj/item/SO in O)
@@ -29,18 +31,42 @@
 		if(!touchable_amount) //CHOMPEdit Start
 			touchable_amount = 1
 		g_damage = 0.25 * (B.digest_brute + B.digest_burn) / touchable_amount
-	if(g_damage <= 0)
-		return FALSE //CHOMPEdit End
-
-	if(digest_stage > 0)
+		if(g_damage <= 0)
+			return FALSE
 		if(g_damage > digest_stage)
 			g_damage = digest_stage
-		digest_stage -= g_damage
+			digest_stage = 0 //Don't bother with further math for 1 hit kills.
+		if(digest_stage > 0)
+			if(g_damage > digest_stage)
+				g_damage = digest_stage
+			digest_stage -= g_damage
+			d_mult = round(1 / w_class * digest_stage, 0.25)
+			if(d_mult < d_mult_old)
+				d_mult_old = d_mult
+				var/d_stage_name
+				switch(d_mult)
+					if(0.75)
+						d_stage_name = "blemished"
+					if(0.5)
+						d_stage_name = "disfigured"
+					if(0.25)
+						d_stage_name = "deteriorating"
+					if(0)
+						d_stage_name = "ruined"
+				if(d_stage_name)
+					if(!cleanname)
+						cleanname = name
+					cleanname = "[d_stage_name] [initial(cleanname)]"
+					decontaminate()
+					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
+					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
 	if(digest_stage <= 0)
 		if(istype(src, /obj/item/device/pda))
 			var/obj/item/device/pda/P = src
 			if(P.id)
 				P.id = null
+		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
+			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
 			if(istype(O,/obj/item/weapon/storage/internal)) //Dump contents from dummy pockets.
 				for(var/obj/item/SO in O)
@@ -50,8 +76,6 @@
 			else if(item_storage)
 				O.forceMove(item_storage)
 		qdel(src)
-	if(g_damage > w_class)
-		return w_class
 	return g_damage
 
 /////////////
@@ -135,3 +159,6 @@
 // Gradual damage measurement
 /obj/item
 	var/digest_stage = null
+	var/d_mult_old = 1 //CHOMPEdit: digest stage descriptions
+	var/d_mult = 1 //CHOMPEdit: digest stage descriptions
+	var/d_stage_overlay //CHOMPEdit: digest stage effects

@@ -6,6 +6,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/synth/confirm,
 	/decl/emote/audible/synth/deny,
 	/decl/emote/audible/synth/scary,
+	/decl/emote/audible/synth/dwoop,
 	/decl/emote/visible/nod,
 	/decl/emote/visible/shake,
 	/decl/emote/visible/shiver,
@@ -95,6 +96,7 @@ var/list/_human_default_emotes = list(
 	//VOREStation Add
 	/decl/emote/audible/awoo,
 	/decl/emote/audible/awoo2,
+	/decl/emote/audible/belch,
 	/decl/emote/audible/growl,
 	/decl/emote/audible/woof,
 	/decl/emote/audible/woof2,
@@ -127,13 +129,16 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/squish,
 	/decl/emote/audible/spiderchitter,
 	/decl/emote/audible/spiderpurr,
-	
+	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
-	
+
 	/decl/emote/helper/vwag,
-	/decl/emote/helper/vflap
+	/decl/emote/helper/vflap,
 	//VOREStation Add End
+	//CHOMPedit Add Start
+	/decl/emote/audible/prbt
+	//CHOMPedit Add End
 )
 
 	//VOREStation Add Start
@@ -224,6 +229,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/visible/flip,
 	/decl/emote/audible/awoo,
 	/decl/emote/audible/awoo2,
+	/decl/emote/audible/belch,
 	/decl/emote/audible/growl,
 	/decl/emote/audible/woof,
 	/decl/emote/audible/woof2,
@@ -256,8 +262,12 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/squish,
 	/decl/emote/audible/spiderchitter,
 	/decl/emote/audible/spiderpurr,
+	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
-	/decl/emote/visible/blep
+	/decl/emote/visible/blep,
+	//CHOMPEdit Add Start
+	/decl/emote/audible/prbt
+	//CHOMPEdit Add End
 	)
 	//VOREStation Add End
 

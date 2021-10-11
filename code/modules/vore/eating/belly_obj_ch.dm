@@ -39,9 +39,6 @@
 	var/liquid_fullness4_messages = FALSE
 	var/liquid_fullness5_messages = FALSE
 	var/vorespawn_blacklist = FALSE
-	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
-	var/autotransferwait = 10 				// Time between trying to transfer.
-	var/autotransferlocation				// Place to send them
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"
@@ -151,21 +148,21 @@
 			generated_reagents = list("milk" = 1)
 			reagent_name = "milk"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
 			reagent_name = "cream"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
 			generated_reagents = list("honey" = 1)
 			reagent_name = "honey"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 10
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
@@ -289,20 +286,6 @@
 			fullness5_messages = raw_list
 
 	return
-
-/obj/belly/proc/check_autotransfer(var/prey, var/autotransferlocation)
-	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
-		if(prob(autotransferchance))
-			var/obj/belly/dest_belly
-			for(var/obj/belly/B in owner.vore_organs)
-				if(B.name == autotransferlocation)
-					dest_belly = B
-					break
-			if(dest_belly)
-				transfer_contents(prey, dest_belly)
-		else
-			// Didn't transfer, so wait before retrying
-			addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, prey, autotransferlocation), autotransferwait)
 
 /////////////////////////// Process Cycle Lite /////////////////////////// CHOMP PCL
 /obj/belly/proc/quick_cycle() //For manual belly cycling without straining the bellies subsystem.

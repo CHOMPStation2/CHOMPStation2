@@ -968,10 +968,10 @@
 		//CHOMPEdit Begin
 		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
 			nutrition_reduction *= 5
-			resize(min(size_multiplier+0.004,RESIZE_HUGE))
+			resize(min(size_multiplier+0.004,RESIZE_HUGE), animate = FALSE)
 		if(nutrition < 200 && species.shrinks && size_multiplier > RESIZE_TINY)
 			nutrition_reduction *= 0.3
-			resize(max(size_multiplier-0.004,RESIZE_TINY))
+			resize(max(size_multiplier-0.004,RESIZE_TINY), animate = FALSE)
 		//CHOMPEdit End
 		adjust_nutrition(-nutrition_reduction)
 

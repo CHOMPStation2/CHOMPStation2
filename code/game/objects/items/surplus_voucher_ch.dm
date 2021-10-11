@@ -37,7 +37,7 @@
 					prob(5);/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
 					prob(3);/obj/item/weapon/storage/box/snappops,
 					prob(2);/obj/item/clothing/under/syndicate/tacticool,
-					prob(3);/obj/item/clothing/head/cowboy_hat/small,
+					prob(3);/obj/item/clothing/head/cowboy/small,
 					prob(3);/obj/item/toy/sword,
 					prob(3);/obj/item/toy/cultsword,
 					prob(1);/obj/structure/plushie/ian)

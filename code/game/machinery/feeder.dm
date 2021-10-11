@@ -67,8 +67,7 @@
 	if(default_deconstruction_screwdriver(user, W))
 		if(do_after(user, 15))
 			to_chat(user, "You deconstruct the feeder.")
-			var/obj/item/stack/material/plastic/A = new /obj/item/stack/material/plastic(src.loc)
-			A.amount = 4
+			new /obj/item/stack/material/plastic(src.loc, 4)
 			if(beaker)
 				beaker.loc = get_turf(src)
 				beaker = null

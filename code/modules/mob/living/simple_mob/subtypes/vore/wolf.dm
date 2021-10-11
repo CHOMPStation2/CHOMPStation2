@@ -3,7 +3,7 @@
 	desc = "Some sort of wolf, a descendent or otherwise of regular Earth canidae. They look almost exactly like their \
 	Earth counterparts, except for the fact that their fur is a uniform grey. Some do show signs of unique coloration, and they \
 	love to nip and bite at things, as well as sniffing around. They seem to mark their territory by way of scent-marking/urinating on things."
-	value = CATALOGUER_REWARD_MEDIUM
+	value = CATALOGUER_REWARD_EASY
 
 /mob/living/simple_mob/animal/wolf
 	name = "grey wolf"
@@ -28,11 +28,24 @@
 	minbodytemp = 200
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	catalogue_data = list(/datum/category_item/catalogue/fauna/wolf)
 
 // Activate Noms!
 /mob/living/simple_mob/animal/wolf
 	vore_active = 1
 	vore_icons = SA_ICON_LIVING
+	
+/mob/living/simple_mob/animal/wolf/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
+	if(!voremob_loaded)
+		return
+	. = ..()
+	
+	var/obj/belly/B = vore_selected
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 
 // Space edition, stronger and bitier
 /mob/living/simple_mob/animal/wolf/space

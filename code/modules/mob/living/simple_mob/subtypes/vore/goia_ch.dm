@@ -30,41 +30,27 @@
 
 /mob/living/simple_mob/otie/zorgoia/New()
 	..()
-	switch(rand(19))
-		if(0)	//"special" goia, warning, it eats ass - Jack
-			tt_desc = "Zorgoyuh slinkus assetus"
-			icon_state = "zorgoia_kiriga"
-			icon_living = "zorgoia_kiriga"
-			icon_dead = "zorgoia_kiriga-dead"
-			faction = "zorgoia"
-			maxHealth = 200
-			health = 200
-			meat_amount = 10 //He a thicc
-
-			say_list_type = /datum/say_list/zorgoia/kiriga
-			vore_pounce_chance = 50	//I said he would eat ass
-		else
-			switch(rand(9))
-				if(0)
-					color = "#1a00ff"
-				if(1)
-					color = "#6c5bff"
-				if(2)
-					color = "#ff00fe"
-				if(3)
-					color = "#ff0000"
-				if(4)
-					color = "#00d3ff"
-				if(5)
-					color = "#00ff7c"
-				if(6)
-					color = "#00ff35"
-				if(7)
-					color = "#e1ff00"
-				if(8)
-					color = "#ff9f00"
-				if(9)
-					color = "#393939"
+	switch(rand(9))
+		if(0)
+			color = "#1a00ff"
+		if(1)
+			color = "#6c5bff"
+		if(2)
+			color = "#ff00fe"
+		if(3)
+			color = "#ff0000"
+		if(4)
+			color = "#00d3ff"
+		if(5)
+			color = "#00ff7c"
+		if(6)
+			color = "#00ff35"
+		if(7)
+			color = "#e1ff00"
+		if(8)
+			color = "#ff9f00"
+		if(9)
+			color = "#393939"
 
 /mob/living/simple_mob/otie/zorgoia/feral //gets the pet2tame feature. starts out hostile tho so get gamblin'
 	name = "agressive zorgoia"
@@ -86,32 +72,9 @@
 	faction = "neutral"
 	tamed = 1
 
-/mob/living/simple_mob/otie/zorgoia/kiriga //Warning, he will eat ass - Jack
-	tt_desc = "Zorgoyuh slinkus assetus"
-	icon_state = "zorgoia_kiriga"
-	icon_living = "zorgoia_kiriga"
-	icon_dead = "zorgoia_kiriga-dead"
-	maxHealth = 200
-	health = 200
-	meat_amount = 10 //He a thicc
-
-	say_list_type = /datum/say_list/zorgoia/kiriga
-	vore_pounce_chance = 50	//I said he would eat ass
-
-/mob/living/simple_mob/otie/zorgoia/kiriga/New()
-	..()
-	color = null //To ensure he remains proper goia
-
 /datum/say_list/zorgoia
 	speak = list("Prurr.", "Murrr.")
 	emote_hear = list("chuffs", "murrs", "churls", "hisses", "lets out a cougar like scream", "yawns")
 	emote_see = list("licks their maw", "stretches", "yawns", "noodles")
 	say_maybe_target = list("weh?")
 	say_got_target = list("Rurrr!", "ROAR!", "RAH!")
-
-/datum/say_list/zorgoia/kiriga	//He sure likes ass
-	speak = list("Prurr.", "Murrr.", "I eat ass.", "I eat ass.", "I eat ass.")
-	emote_hear = list("chuffs", "murrs", "churls", "hisses", "lets out a cougar like scream", "yawns")
-	emote_see = list("licks their maw", "stretches", "yawns", "noodles around", "slinkies down nearby stairs")
-	say_maybe_target = list("weh?")
-	say_got_target = list("Rurrr!", "ROAR!", "RAH!", "WEH!", "AAA!", "A")

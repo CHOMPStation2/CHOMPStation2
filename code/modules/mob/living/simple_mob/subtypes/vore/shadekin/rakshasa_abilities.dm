@@ -276,7 +276,7 @@
 	cost = 0
 	shift_mode = SHIFTED_OR_NOT
 	ab_sound = 'sound/effects/stealthoff.ogg'
-obj/effect/rakshasa_ability/flicker/do_ability()
+/obj/effect/rakshasa_ability/flicker/do_ability()
 	if(!..())
 		return
 	my_kin.rakshasa_flicker()

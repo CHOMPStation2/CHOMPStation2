@@ -6,6 +6,9 @@
 #define LOCK_SLAPPABLE 16
 #define CHAMBER_ON_RELOAD 32
 
+#define INTERNAL_MAG_SEPARATE 1
+#define IS_PUMP_SHOTGUN 2
+
 #define BOLT_NOEVENT 0
 #define BOLT_CLOSED 1
 #define BOLT_OPENED 2
@@ -22,6 +25,7 @@
 	var/manual_chamber = TRUE
 	var/only_open_load = FALSE
 	var/auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK | LOCK_SLAPPABLE
+	var/misc_loading_flags = 0
 	var/bolt_name = "bolt"
 	var/bolt_open = FALSE
 	var/bolt_locked = FALSE
@@ -318,7 +322,7 @@
 		var/obj/item/ammo_casing/C = A
 		if(caliber != C.caliber)
 			return
-		if(!(load_method & SINGLE_CASING))
+		if(!(load_method & SINGLE_CASING) || (misc_loading_flags & INTERNAL_MAG_SEPARATE)) //INTERNAL_MAG_SEPARATE is pretty much exclusively for the SPAS-12
 			if(manual_chamber)
 				if(!CHECK_BITFIELD(auto_loading_type,OPEN_BOLT))
 					if(!chambered)
@@ -424,7 +428,7 @@
 			else if(CHECK_BITFIELD(auto_loading_type,CLOSED_BOLT) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a closed bolt gun! You need to close the bolt before firing it!</span>")
 				return 0
-			else if(bolt_open)
+			else if((!auto_loading_type) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a manual action gun, the bolt or chamber must be closed before firing it!</span>")
 				return 0
 			else

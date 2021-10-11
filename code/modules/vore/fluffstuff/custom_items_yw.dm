@@ -533,7 +533,7 @@
 // **************
 // DameonOwen
 // **************
-
+/*CHOMP Remove this causes runtimes
 /obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
 	name = "a mysterious cookie"
 	desc = "DAS A BIG COOKIE!!!"
@@ -548,7 +548,8 @@
 		M.resize(3)
 		M.drop_from_inventory(src)
 		qdel(src)
-
+//CHOMP Remove end
+*/
 
 // **************
 // NESgamer190

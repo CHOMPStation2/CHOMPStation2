@@ -147,6 +147,6 @@
 	name = "VR Suit" //The name of the suit when examined
 	desc = "An ancient suit used by studio companies long ago to make their virtual reality bones work better." //The description of the suit when examined
 	sensor_mode = 3 //Sensor mode which means that by default when someone spawns they will have tracking sensors on
-	icon = 'icons/obj/clothing/uniforms_ch.dmi' //The icon of the suit when shown in the player's HUD
-	icon_override = 'icons/mob/uniform_ch.dmi' //The icon of the suit worn by the character's sprite
+	icon = 'icons/inventory/uniform/item_ch.dmi' //The icon of the suit when shown in the player's HUD
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //The icon of the suit worn by the character's sprite
 	icon_state = "vrsuit" //The name of the suit within the .dmi file

@@ -106,24 +106,26 @@
 	cost = -1
 	var_changes = list("pain_mod" = 1.25)
 
+//CHOMPEdit Begin
 /datum/trait/negative/pain_intolerance_advanced
 	name = "High Pain Intolerance"
-	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
+	desc = "You are highly sensitive to all sources of pain, and experience 100% more pain."
 	cost = -2
-	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit
+	var_changes = list("pain_mod" = 2) //most things should down you in 1 or 2 hits
+//CHOMPEdit end
 //YW ADDITIONS END
 
 /datum/trait/negative/conductive
 	name = "Conductive"
-	desc = "Increases your susceptibility to electric shocks by 25%"
-	cost = -2 //CHOMPEdit
-	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
+	desc = "Increases your susceptibility to electric shocks by 75%"
+	cost = -1 //CHOMPEdit What the fuck this is not worth 2 points.
+	var_changes = list("siemens_coefficient" = 1.75) //This makes you a lot weaker to tasers.
 
-/datum/trait/negative/conductive_plus
+/*/datum/trait/negative/conductive_plus //CHOMP Removal No we are not giving people a free 3 points with this trait.
 	name = "Conductive, Major"
 	desc = "Increases your susceptibility to electric shocks by 100%"
 	cost = -3 //CHOMPEdit
-	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
+	var_changes = list("siemens_coefficient" = 2.0)*/ //This makes you extremely weak to tasers.
 
 /datum/trait/negative/haemophilia
 	name = "Haemophilia - Organics only"
@@ -146,7 +148,7 @@
 /datum/trait/negative/lightweight
 	name = "Lightweight"
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping. Think of it like a bowling ball versus a pin. (STOP TAKING THIS AS SECURITY! We're MRP, so expect to lose your junk immediately, especially in events. - Love, Admins)" //CHOMP Edit btw
-	cost = -2
+	cost = -1 //CHOMPEdit Another source of free points. Being on the ground for a few seconds is not worth 2 points.
 	var_changes = list("lightweight" = 1)
 
 // YW Addition

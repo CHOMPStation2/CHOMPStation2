@@ -46,7 +46,15 @@
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
-	var/item_mode_serial = TRUE				// Serial/parallel item digestion mode. Affect one item at a time or all of them with damage divided between contents. CHOMPEdit
+
+	// Generally just used by AI
+	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
+	var/autotransferwait = 10 				// Time between trying to transfer.
+	var/autotransferlocation				// Place to send them
+	var/autotransfer_enabled = FALSE		// Player toggle
+	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
+	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
+	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -54,7 +62,7 @@
 	//Digest mode addon flags
 	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS)
 	//Item related modes
-	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST)
+	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
 
 	//List of slots that stripping handles strips
 	var/tmp/static/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
@@ -197,36 +205,15 @@
 		"fullness3_messages",
 		"fullness4_messages",
 		"fullness5_messages",
-		"vorespawn_blacklist",     //CHOMP end of variables from CHOMP
+		"vorespawn_blacklist",
+		"autotransferchance",
+		"autotransferwait",
+		"autotransferlocation",
+		"autotransfer_enabled",
+		"autotransfer_min_amount",
+		"autotransfer_max_amount", //CHOMP end of variables from CHOMP
 		"egg_type"
 		)
-
-/*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
-		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
-		"reagentbellymode",
-		"liquid_fullness1_messages",
-		"liquid_fullness2_messages",
-		"liquid_fullness3_messages",
-		"liquid_fullness4_messages",
-		"liquid_fullness5_messages",
-		"reagent_name",
-		"reagent_chosen",
-		"reagentid",
-		"reagentcolor",
-		"gen_cost",
-		"gen_amount",
-		"gen_time",
-		"gen_time_display",
-		"reagent_transfer_verb",
-		"custom_max_volume",
-		"generated_reagents",
-		"vorefootsteps_sounds",
-		"fullness1_messages",
-		"fullness2_messages",
-		"fullness3_messages",
-		"fullness4_messages",
-		"fullness5_messages"	//CHOMP end of variables from CHOMP
-*/
 
 /obj/belly/Initialize()
 	. = ..()
@@ -249,6 +236,7 @@
 
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
+	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 
@@ -269,6 +257,7 @@
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
+		M.updateVRPanel()
 		if(desc)
 			to_chat(M, "<span class='notice'><B>[desc]</B></span>")
 		var/taste
@@ -278,11 +267,11 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-	//CHOMPStation edit start
-	if(!owner.client)	//Intended for simple mobs
-		if(autotransferlocation != null && autotransferchance > 0)
-			addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
-	//CHOMPStation edit end
+
+	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
+	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
+		addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
+	*/
 
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
@@ -295,9 +284,22 @@
 				L.toggle_hud_vis()
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
+	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
+		var/obj/item/I = thing
+		if(I.gurgled)
+			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
+			I.add_overlay(gurgled_overlays[I.gurgled_color])
+		if(I.d_mult < 1)
+			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
+			temp.filters += filter(type = "alpha", icon = icon(I.icon, I.icon_state))
+			I.d_stage_overlay = temp
+			for(var/count in I.d_mult to 1 step 0.25)
+				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
 /obj/belly/proc/vore_fx(mob/living/L)
 	if(!istype(L))
+		return
+	if(!L.client)
 		return
 	if(!L.show_vore_fx)
 		L.clear_fullscreen("belly")
@@ -481,7 +483,7 @@
 // This is useful in customization boxes and such. The delimiter right now is \n\n so
 // in message boxes, this looks nice and is easily delimited.
 /obj/belly/proc/get_messages(type, delim = "\n\n")
-	ASSERT(type == "smo" || type == "smi" || type == "dmo" || type == "dmp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain")
+	ASSERT(type == "smo" || type == "smi" || type == "dmo" || type == "dmp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")
 
 	var/list/raw_messages
 	switch(type)
@@ -507,7 +509,16 @@
 			raw_messages = emote_lists[DM_HEAL]
 		if("im_drain")
 			raw_messages = emote_lists[DM_DRAIN]
-
+		if("im_steal")
+			raw_messages = emote_lists[DM_SIZE_STEAL]
+		if("im_egg")
+			raw_messages = emote_lists[DM_EGG]
+		if("im_shrink")
+			raw_messages = emote_lists[DM_SHRINK]
+		if("im_grow")
+			raw_messages = emote_lists[DM_GROW]
+		if("im_unabsorb")
+			raw_messages = emote_lists[DM_UNABSORB]
 	var/messages = null
 	if(raw_messages)
 		messages = raw_messages.Join(delim)
@@ -517,7 +528,7 @@
 // replacement strings and linebreaks as delimiters (two \n\n by default).
 // They also sanitize the messages.
 /obj/belly/proc/set_messages(raw_text, type, delim = "\n\n")
-	ASSERT(type == "smo" || type == "smi" || type == "dmo" || type == "dmp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain")
+	ASSERT(type == "smo" || type == "smi" || type == "dmo" || type == "dmp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")
 
 	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
@@ -525,10 +536,10 @@
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
 
 	for(var/i = 1, i <= raw_list.len, i++)
-		if((length(raw_list[i]) > 160 || length(raw_list[i]) < 10) && !(type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain")) //160 is fudged value due to htmlencoding increasing the size
+		if((length(raw_list[i]) > 160 || length(raw_list[i]) < 10) && !(type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")) //160 is fudged value due to htmlencoding increasing the size
 			raw_list.Cut(i,i)
 			log_debug("[owner] tried to set [lowertext(name)] with >121 or <10 char message")
-		else if((type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain") && (length(raw_list[i]) > 510 || length(raw_list[i]) < 10))
+		else if((type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") && (length(raw_list[i]) > 510 || length(raw_list[i]) < 10))
 			raw_list.Cut(i,i)
 			log_debug("[owner] tried to set [lowertext(name)] idle message with >501 or <10 char message")
 		else
@@ -561,6 +572,16 @@
 			emote_lists[DM_HEAL] = raw_list
 		if("im_drain")
 			emote_lists[DM_DRAIN] = raw_list
+		if("im_steal")
+			emote_lists[DM_SIZE_STEAL] = raw_list
+		if("im_egg")
+			emote_lists[DM_EGG] = raw_list
+		if("im_shrink")
+			emote_lists[DM_SHRINK] = raw_list
+		if("im_grow")
+			emote_lists[DM_GROW] = raw_list
+		if("im_unabsorb")
+			emote_lists[DM_UNABSORB] = raw_list
 
 	return
 
@@ -845,6 +866,24 @@
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
 
+//Autotransfer callback
+/obj/belly/proc/check_autotransfer(var/atom/movable/prey, var/autotransferlocation)
+	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
+		if(prob(autotransferchance))
+			var/obj/belly/dest_belly
+			for(var/obj/belly/B in owner.vore_organs)
+				if(B.name == autotransferlocation)
+					dest_belly = B
+					break
+			if(dest_belly)
+				if(autotransfer_min_amount > 1) //CHOMPEdit start
+					autotransfer_queue += prey
+				else
+					transfer_contents(prey, dest_belly)
+		else
+			// Didn't transfer, so wait before retrying
+			prey.belly_cycles = 0 //CHOMPEdit end
+
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
 /obj/belly/proc/copy(mob/new_owner)
@@ -902,7 +941,13 @@
 	dupe.gen_time_display = gen_time_display
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
-	dupe.vorespawn_blacklist = vorespawn_blacklist	//CHOMP end of variables from CHOMP
+	dupe.vorespawn_blacklist = vorespawn_blacklist
+	dupe.autotransferchance = autotransferchance
+	dupe.autotransferwait = autotransferwait
+	dupe.autotransferlocation = autotransferlocation
+	dupe.autotransfer_enabled = autotransfer_enabled
+	dupe.autotransfer_min_amount = autotransfer_min_amount
+	dupe.autotransfer_max_amount = autotransfer_max_amount //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

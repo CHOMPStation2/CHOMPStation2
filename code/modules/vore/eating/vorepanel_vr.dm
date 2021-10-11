@@ -42,6 +42,7 @@
 	var/mob/living/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/living/new_host)
 	if(istype(new_host))
@@ -63,6 +64,7 @@
 		give_client_previews(user.client) //CHOMPEdit
 		ui = new(user, src, "VorePanel", "Vore Panel")
 		ui.open()
+		ui.set_autoupdate(FALSE)
 
 // This looks weird, but all tgui_host is used for is state checking
 // So this allows us to use the self_state just fine.
@@ -83,7 +85,11 @@
 		key = "[target.type]"
 	else if(ismob(target))
 		var/mob/M = target
-		key = "\ref[target][M.real_name]"
+		if(istype(M,/mob/living/simple_mob)) //CHOMPedit: not generating unique icons for every simplemob(number)
+			var/mob/living/simple_mob/S = M
+			key = "[S.icon_living]"
+		else
+			key = "\ref[target][M.real_name]"
 	if(nom_icons[key])
 		. = nom_icons[key]
 	else
@@ -127,8 +133,11 @@
 				"ref" = "\ref[O]",
 				"outside" = FALSE,
 			)
-			if(show_pictures)
-				info["icon"] = cached_nom_icon(O)
+			if(show_pictures) //CHOMPedit: disables icon mode
+				if(inside_belly.contents.len <= max_icon_content)
+					info["icon"] = cached_nom_icon(O)
+				else
+					show_pictures = !show_pictures
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -205,6 +214,13 @@
 			selected_list["interacts"]["absorbchance"] = selected.absorbchance
 			selected_list["interacts"]["digestchance"] = selected.digestchance
 
+		selected_list["autotransfer_enabled"] = selected.autotransfer_enabled
+		selected_list["autotransfer"] = list()
+		if(selected.autotransfer_enabled)
+			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
+			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
+			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
 
@@ -217,8 +233,11 @@
 				"ref" = "\ref[O]",
 				"outside" = TRUE,
 			)
-			if(show_pictures)
-				info["icon"] = cached_nom_icon(O)
+			if(show_pictures) //CHOMPedit: disables icon mode
+				if(selected.contents.len <= max_icon_content)
+					info["icon"] = cached_nom_icon(O)
+				else
+					show_pictures = !show_pictures
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -240,7 +259,9 @@
 			selected_list["liq_interacts"]["liq_reagent_addons"] = list()
 			for(var/flag_name in selected.reagent_mode_flag_list)
 				if(selected.reagent_mode_flags & selected.reagent_mode_flag_list[flag_name])
-					selected_list["liq_interacts"]["liq_reagent_addons"].Add(flag_name)
+					var/list/selected_list_member = selected_list["liq_interacts"]["liq_reagent_addons"]
+					ASSERT(islist(selected_list_member))
+					selected_list_member.Add(flag_name)
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -720,6 +741,7 @@
 				return FALSE
 
 			host.vore_selected.digest_mode = new_mode
+			host.vore_selected.updateVRPanels()
 			. = TRUE
 		if("b_addons")
 			var/list/menu_list = host.vore_selected.mode_flag_list.Copy()
@@ -832,6 +854,31 @@
 					var/new_message = input(user,"These are sent to prey every minute when you are on Drain mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Drain)",host.vore_selected.get_messages("im_drain")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"im_drain")
+
+				if("im_steal")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Size Steal mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Size Steal)",host.vore_selected.get_messages("im_steal")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_steal")
+
+				if("im_egg")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Encase In Egg mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Encase In Egg)",host.vore_selected.get_messages("im_egg")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_egg")
+
+				if("im_shrink")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Shrink mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Shrink)",host.vore_selected.get_messages("im_shrink")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_shrink")
+
+				if("im_grow")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Grow mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Grow)",host.vore_selected.get_messages("im_grow")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_grow")
+
+				if("im_unabsorb")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Unabsorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Unabsorb)",host.vore_selected.get_messages("im_unabsorb")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_unabsorb")
 
 				if("reset")
 					var/confirm = tgui_alert(user,"This will delete any custom messages. Are you sure?","Confirmation",list("Cancel","DELETE"))
@@ -996,7 +1043,6 @@
 			. = TRUE
 		if("b_transferlocation")
 			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] to lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
-
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice == "None - Remove")
@@ -1014,6 +1060,28 @@
 			if(!isnull(digest_chance_input))
 				host.vore_selected.digestchance = sanitize_integer(digest_chance_input, 0, 100, initial(host.vore_selected.digestchance))
 			. = TRUE
+		if("b_autotransferchance") //CHOMPedit Start
+			var/autotransferchance_input = input(user, "Set belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Auto-Transfer Chance") as num|null
+			if(!isnull(autotransferchance_input))
+				host.vore_selected.autotransferchance = sanitize_integer(autotransferchance_input, 0, 100, initial(host.vore_selected.autotransferchance))
+			. = TRUE
+		if("b_autotransferwait")
+			var/autotransferwait_input = input(user, "Set minimum number of seconds for auto-transfer wait delay.", "Auto-Transfer Time") as num|null //CHOMPEdit: Wiggle room for rougher time resolution in process cycles.
+			if(!isnull(autotransferwait_input))
+				host.vore_selected.autotransferwait = sanitize_integer(autotransferwait_input*10, 10, 18000, initial(host.vore_selected.autotransferwait))
+			. = TRUE
+		if("b_autotransferlocation")
+			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice == "None - Remove")
+				host.vore_selected.autotransferlocation = null
+			else
+				host.vore_selected.autotransferlocation = choice.name
+			. = TRUE
+		if("b_autotransfer_enabled")
+			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
+			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
 			update_preview_icon()	//CHOMPEdit Begin

@@ -96,3 +96,16 @@
 /datum/gear/uniform/vrsuit //Pathname of this particular item in the menu.
 	display_name = "vr suit" //The name of the suit as shown in the loadout menu
 	path = /obj/item/clothing/under/vrsuit //Pathname of the suit which is found in custom_clothes_ch.dm
+
+// Cargo shorts. The full-of-pockets kind, not the department 
+/datum/gear/uniform/cshorts
+	display_name = "cargo shorts"
+	path = /obj/item/clothing/under/shorts/cshorts/khaki
+
+/datum/gear/uniform/cshorts/New()
+	..()
+	var/list/cargo_shorts = list(
+		"Olive cargo shorts" = /obj/item/clothing/under/shorts/cshorts/olive,
+		"Khaki cargo shorts" = /obj/item/clothing/under/shorts/cshorts/khaki
+	)
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cargo_shorts))

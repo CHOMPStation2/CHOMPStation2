@@ -39,6 +39,7 @@
 	charge_cost = 300
 	projectile_type = /obj/item/projectile/energy/phase/light
 	one_handed_penalty = 0
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/energy/locked/phasegun/pistol/unlocked
 	desc = "The RayZar EW15 Apollo is an energy handgun, specifically designed for self-defense against aggressive wildlife."
@@ -69,7 +70,7 @@
 	accuracy = 15
 	one_handed_penalty = 30
 
-obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked
+/obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked
 	desc = "The RayZar EW31 Orion is a specialist energy weapon, intended for use against hostile wildlife."
 	req_access = newlist() //for toggling safety
 	locked = 0

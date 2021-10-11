@@ -29,19 +29,17 @@
     flags_inv = HIDEGLOVES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER|HIDESHOES
     species_restricted = null //Species restricted since all it cares about is a taur half
 
-/obj/item/clothing/suit/space/rig/fluff/sheri
-	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-		item_state = icon_state
-		pixel_x = -16
-		update_icon()
-		return 1
+/obj/item/clothing/suit/space/rig/fluff/sheri/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+	item_state = icon_state
+	pixel_x = -16
+	update_icon()
+	return 1
 
-/obj/item/clothing/suit/space/rig/fluff/sheri
-    make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
-        var/image/result = ..()
-        result.pixel_x = -16
-        result.layer = BODY_LAYER + 15
-        return result
+/obj/item/clothing/suit/space/rig/fluff/sheri/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,var/icon/clip_mask = null)
+	var/image/result = ..()
+	result.pixel_x = -16
+	result.layer = BODY_LAYER + 15
+	return result
 
 /obj/item/clothing/head/helmet/space/rig/hazmat/fluff/sheri
     icon = 'icons/vore/rig_yw/rigs_head.dmi'
