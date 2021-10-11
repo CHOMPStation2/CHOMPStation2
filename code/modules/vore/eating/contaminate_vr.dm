@@ -18,6 +18,7 @@ var/list/gurgled_overlays = list(
 
 /obj/item
 	var/gurgled = FALSE
+	var/oldname //CHOMPEdit
 	var/cleanname
 	var/cleandesc
 	var/gurgled_color
