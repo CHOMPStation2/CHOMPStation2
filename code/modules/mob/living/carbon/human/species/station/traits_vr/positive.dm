@@ -6,6 +6,16 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
+	
+//ChompEdit
+
+/datum/trait/positive/speed_fast_minor
+	name = "Haste, minor"
+	desc = "Allows you to move a little bit faster on average than baseline."
+	cost = 2
+	var_changes = list("slowdown" = -0.25)
+
+//ChompEdit End
 
 /datum/trait/positive/hardy
 	name = "Hardy"
@@ -13,11 +23,22 @@
 	cost = 1
 	var_changes = list("item_slowdown_mod" = 0.5)
 
+//ChompEdit
 /datum/trait/positive/hardy_plus
 	name = "Hardy, Major"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor)
+
+/datum/trait/positive/hardy_extreme
+	name = "Hardy, Extreme"
+	desc = "Allows you to carry heavy equipment with no slowdown at all."
+	cost = 3
+	var_changes = list("item_slowdown_mod" = 0.0)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor)
+	
+//ChompEdit End
 
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
