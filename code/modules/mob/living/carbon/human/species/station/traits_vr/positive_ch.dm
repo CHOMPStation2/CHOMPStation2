@@ -98,7 +98,7 @@
 /datum/trait/positive/big_mouth
 	name = "Big mouth"
 	desc = "It takes half as many bites to finish food as it does for most people."
-	cost = 1
+	cost = 0  //This doesn't deserve a cost.
 	var_changes = list("bite_mod" = 2)
 
 /datum/trait/positive/grappling_expert
@@ -110,7 +110,7 @@
 /datum/trait/positive/big_mouth_extreme
 	name = "Giant mouth"
 	desc = "It takes a quarter as many bites to finish food as it does for most people."
-	cost = 2
+	cost = 0  //This also doesn't deserve a cost.
 	var_changes = list("bite_mod" = 4)
 
 /datum/trait/positive/absorbent
