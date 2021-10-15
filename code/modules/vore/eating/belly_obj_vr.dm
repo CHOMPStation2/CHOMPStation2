@@ -397,6 +397,8 @@
 		owner.update_icons()
 
 	//Print notifications/sound if necessary
+	if(istype(M, /mob/observer))
+		silent = TRUE
 	if(!silent)
 		owner.visible_message("<font color='green'><b>[owner] expels [M] from their [lowertext(name)]!</b></font>")
 		var/soundfile
