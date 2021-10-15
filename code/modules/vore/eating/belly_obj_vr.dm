@@ -237,6 +237,8 @@
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
+	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 
@@ -630,7 +632,9 @@
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
-	M.ghostize() // Make sure they're out, so we can copy attack logs and such.
+	var/mob/observer/G = M.ghostize() //CHOMPEdit start. Make sure they're out, so we can copy attack logs and such.
+	if(G)
+		G.forceMove(src) //CHOMPEdit end.
 	qdel(M)
 
 // Handle a mob being absorbed
