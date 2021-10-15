@@ -54,9 +54,9 @@
 					if(0)
 						d_stage_name = "ruined"
 				if(d_stage_name)
-					if(!cleanname)
-						cleanname = name
-					cleanname = "[d_stage_name] [initial(cleanname)]"
+					if(!oldname)
+						oldname = cleanname ? cleanname : name
+					cleanname = "[d_stage_name] [oldname]"
 					decontaminate()
 					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
 					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
