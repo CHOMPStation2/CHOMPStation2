@@ -1244,10 +1244,10 @@
 
 /// TGUI Stuff
 
-/obj/machinery/computer/arcade/clawmachine/tgui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/tgui_state/state = GLOB.tgui_default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+/obj/machinery/computer/arcade/clawmachine/tgui_interact(mob/user, datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/tgui_state/state = GLOB.tgui_default_state)
+	ui = SStgui.try_update_ui(user, src, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "ClawMachine", name, 300, 400, master_ui, state)
+		ui = new(user, src, "ClawMachine", name, 300, 400, master_ui, state)
 		ui.autoupdate = TRUE
 		ui.open()
 
