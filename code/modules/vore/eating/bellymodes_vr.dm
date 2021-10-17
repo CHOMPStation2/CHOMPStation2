@@ -45,6 +45,8 @@
 
 /////////////////////////// Exit Early ////////////////////////////
 	var/list/touchable_atoms = contents - items_preserved
+	for(var/mob/observer/G in touchable_atoms) //CHOMPEdit: don't bother trying to process ghosts.
+		touchable_atoms -= G
 	if(!length(touchable_atoms))
 		return
 
