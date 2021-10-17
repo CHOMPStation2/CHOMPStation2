@@ -59,7 +59,7 @@
 
 	vore_active = TRUE
 	vore_capacity = 1
-	vore_pounce_chance = 45
+	vore_pounce_chance = 65 // CHOMPEdit: Higher pounce chance to omf.
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 	var/life_since_foodscan = 0
