@@ -2711,7 +2711,7 @@
 	//ex: "Phalanx One-Niner", "Sledgehammer Actual" (CO/VIP), "Kodiak Seven-Four", "Tomahawk Two-Zero"
 	//probably a more elegant (read: fancier) way to do the second part but fuck it, this works just fine
 
-/datum/lore/organization/tsc/altevian_hegemony
+/datum/lore/organization/gov/altevian_hegemony
 	name = "The Altevian Hegemony" 
 	short_name = "Altevian Hegemony "
 	acronym = "AH"
@@ -2748,7 +2748,9 @@
 			"Cluster",
 			"Ratling",
 			"Archaeologist",
-			"Beaker"
+			"Beaker",
+			"Petal",
+			"Gantry"
 			)
 	destination_names = list(
 			"the AH-CV Migrant flagship",
@@ -2761,5 +2763,6 @@
 			"the AH-CV Kitsap",
 			"the AH-CV Diamondback",
 			"one of our colony-ships",
-			"one of our production fleets"
+			"one of our production fleets",
+			"a trade fleet",
 			)
