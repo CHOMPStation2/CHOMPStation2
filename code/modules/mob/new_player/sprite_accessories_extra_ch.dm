@@ -142,6 +142,67 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
 
+	guilmonhead
+		name = "Guilmon head"
+		icon_state = "guilmon_head"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	guilmonchest
+		name = "Guilmon Chest"
+		icon_state = "guilmon_chest"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO)
+
+	guilmonchestmarking
+		name = "Guilmon Chest Markings"
+		icon_state = "guilmon_marking"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO)
+
+	guilmonarms
+		name = "Guilmon arms"
+		icon_state = "guilmon"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND)
+
+	guilmonRLeg
+		name = "Guilmon Right leg"
+		icon_state = "guilmon"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_R_LEG)
+
+	guilmonLleg
+		name = "Guilmon Left leg"
+		icon_state = "guilmon"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG)
+
+	guilmondigiRleg1
+		name = "Guilmon digigrade right leg 1"
+		icon_state = "guilmon_digitigrade_1"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_R_LEG)
+
+	guilmondigiLleg1
+		name = "Guilmon digigrade left leg 1"
+		icon_state = "guilmon_digitigrade_1"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG)
+
+	guilmondigiRleg2
+		name = "Guilmon digigrade right leg 2"
+		icon_state = "guilmon_digitigrade_2"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_R_LEG)
+
+	guilmondigiLleg2
+		name = "Guilmon digigrade left leg 2"
+		icon_state = "guilmon_digitigrade_2"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG)
+
+
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
 	desc = ""
