@@ -62,3 +62,4 @@
 	icon_state = "Guilmon_Horns"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	
