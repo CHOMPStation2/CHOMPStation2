@@ -3064,17 +3064,9 @@
 /datum/reagent/ethanol/cuba_libre
 	name = "Cuba Libre"
 	id = "cubalibre"
-<<<<<<< HEAD
-	description = "Rum, mixed with cola. Viva la revolucion."
-	taste_description = "cola"
-	nutriment_factor = 1.5 //CHOMPStation addition
-||||||| parent of 7ef4a5b686... Merge pull request #11541 from VOREStation/upstream-merge-8249
-	description = "Rum, mixed with cola. Viva la revolucion."
-	taste_description = "cola"
-=======
 	description = "Rum, mixed with cola and a splash of lime. Viva la revolucion."
 	taste_description = "cola with lime"
->>>>>>> 7ef4a5b686... Merge pull request #11541 from VOREStation/upstream-merge-8249
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#3E1B00"
 	strength = 30
 
