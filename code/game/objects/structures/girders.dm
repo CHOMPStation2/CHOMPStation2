@@ -1,4 +1,5 @@
 /obj/structure/girder
+	name = "girder"
 	icon_state = "girder"
 	anchored = TRUE
 	density = TRUE
@@ -418,4 +419,3 @@
 
 /obj/structure/girder/eris
 	wall_type = /turf/simulated/wall/eris
-	
