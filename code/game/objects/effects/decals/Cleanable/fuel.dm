@@ -38,7 +38,7 @@
 	for(var/d in cardinal)
 		var/turf/simulated/target = get_step(src,d)
 		var/turf/simulated/origin = get_turf(src)
-		if(origin.CanPass(null, target, 0, 0) && target.CanPass(null, origin, 0, 0))
+		if(origin.CanPass(src, target, 0, 0) && target.CanPass(src, origin, 0, 0))
 			var/obj/effect/decal/cleanable/liquid_fuel/other_fuel = locate() in target
 			if(other_fuel)
 				other_fuel.amount += amount*0.25
