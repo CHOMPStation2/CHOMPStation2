@@ -161,7 +161,7 @@
 	icon_state = "clusterbang_segment"
 
 /obj/random/grenade/item_to_spawn()
-	return pick(	prob(15);/obj/item/weapon/grenade/concussion,
+	return pick(prob(15);/obj/item/weapon/grenade/concussion,
 			prob(5);/obj/item/weapon/grenade/empgrenade,
 			prob(15);/obj/item/weapon/grenade/empgrenade/low_yield,
 			prob(5);/obj/item/weapon/grenade/chem_grenade/metalfoam,
@@ -186,7 +186,7 @@
 	icon_state = "clusterbang_segment"
 
 /obj/random/grenade/less_lethal/item_to_spawn()
-	return pick(	prob(20);/obj/item/weapon/grenade/concussion,
+	return pick(prob(20);/obj/item/weapon/grenade/concussion,
 			prob(15);/obj/item/weapon/grenade/empgrenade/low_yield,
 			prob(15);/obj/item/weapon/grenade/chem_grenade/metalfoam,
 			prob(20);/obj/item/weapon/grenade/chem_grenade/teargas,
@@ -203,7 +203,7 @@
 	icon_state = "clusterbang_segment"
 
 /obj/random/grenade/box/item_to_spawn()
-	return pick(	prob(20);/obj/item/weapon/storage/box/flashbangs,
+	return pick(prob(20);/obj/item/weapon/storage/box/flashbangs,
 			prob(10);/obj/item/weapon/storage/box/emps,
 			prob(20);/obj/item/weapon/storage/box/empslite,
 			prob(15);/obj/item/weapon/storage/box/smokes,
