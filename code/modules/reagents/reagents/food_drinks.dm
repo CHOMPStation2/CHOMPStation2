@@ -3185,59 +3185,29 @@
 	glass_desc = "Damn, the bartender even stirred it, not shook it."
 
 	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and vermouth(fruit)
-
+  
 /datum/reagent/ethanol/cuba_libre
 	name = "Cuba Libre"
 	id = "cubalibre"
-<<<<<<< HEAD
-	description = "Rum, mixed with cola. Viva la revolucion."
-||||||| parent of 147dddcf38... Merge pull request #11579 from VOREStation/upstream-merge-8283
 	description = "Rum, mixed with cola and a splash of lime. Viva la revolucion."
 	taste_description = "cola with lime"
-	color = "#3E1B00"
-	strength = 30
-
-	glass_name = "Cuba Libre"
-	glass_desc = "A classic mix of rum, cola, and lime."
-
-/datum/reagent/ethanol/rum_and_cola
-	name = "Rum and Cola"
-	id = "rumandcola"
-	description = "A classic mix of sugar with more sugar."
-=======
-	description = "Rum, mixed with cola and a splash of lime. Viva la revolucion."
-	taste_description = "cola with lime"
-	color = "#3E1B00"
-	strength = 30
-
-	glass_name = "Cuba Libre"
-	glass_desc = "A classic mix of rum, cola, and lime."
-	allergen_type = ALLERGEN_STIMULANT //Cola
-
-/datum/reagent/ethanol/rum_and_cola
-	name = "Rum and Cola"
-	id = "rumandcola"
-	description = "A classic mix of sugar with more sugar."
-	taste_description = "cola"
-	color = "#3E1B00"
-	strength = 30
-
-	glass_name = "Cuba Libre"
-	glass_desc = "A classic mix of rum, cola, and lime."
-
-/datum/reagent/ethanol/rum_and_cola
-	name = "Rum and Cola"
-	id = "rumandcola"
-	description = "A classic mix of sugar with more sugar."
->>>>>>> 147dddcf38... Merge pull request #11579 from VOREStation/upstream-merge-8283
-	taste_description = "cola"
 	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#3E1B00"
 	strength = 30
 
 	glass_name = "Cuba Libre"
+	glass_desc = "A classic mix of rum, cola, and lime."
+
+/datum/reagent/ethanol/rum_and_cola
+	name = "Rum and Cola"
+	id = "rumandcola"
+	description = "A classic mix of sugar with more sugar."
+	taste_description = "cola"
+	color = "#3E1B00"
+	strength = 30
+
+	glass_name = "rum and cola"
 	glass_desc = "A classic mix of rum and cola."
-	allergen_type = ALLERGEN_STIMULANT // Cola
 
 /datum/reagent/ethanol/demonsblood
 	name = "Demons Blood"
