@@ -6346,7 +6346,7 @@
 	desc = "Space squid tentacles, Carefully removed (from the squid) then dried into strips of delicious rubbery goodness!"
 	trash = /obj/item/trash/squid
 	filling_color = "#c0a9d7"
-	center_of_mass = list("x"=15, "y"=9)
+	center_of_mass = list ("x"=15, "y"=9)
 	nutriment_desc = list("fish" = 1, "salt" = 1)
 	nutriment_amt = 2
 	bitesize = 1
@@ -6362,7 +6362,7 @@
 	desc = "Fried bread cubes. Popular in Terran territories."
 	trash = /obj/item/trash/croutons
 	filling_color = "#c6b17f"
-	center_of_mass = list("x"=15, "y"=9)
+	center_of_mass = list ("x"=15, "y"=9)
 	nutriment_desc = list("bread" = 1, "salt" = 1)
 	nutriment_amt = 3
 	bitesize = 1
@@ -6374,7 +6374,7 @@
 	desc = "Pig fat. Salted. Just as good as it sounds."
 	trash = /obj/item/trash/salo
 	filling_color = "#e0bcbc"
-	center_of_mass = list("x"=15, "y"=9)
+	center_of_mass = list ("x"=15, "y"=9)
 	nutriment_desc = list("fat" = 1, "salt" = 1)
 	nutriment_amt = 2
 	bitesize = 2
@@ -6390,7 +6390,7 @@
 	desc = "Dried salted beer snack fish."
 	trash = /obj/item/trash/driedfish
 	filling_color = "#c8a5bb"
-	center_of_mass = list("x"=15, "y"=9)
+	center_of_mass = list ("x"=15, "y"=9)
 	nutriment_desc = list("fish" = 1, "salt" = 1)
 	nutriment_amt = 2
 	bitesize = 1
@@ -6697,7 +6697,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/old
 	name = "master old-food"
 	desc = "they're all inedible and potentially dangerous items"
-	center_of_mass = list("x"=15,"y"=12)
+	center_of_mass = list ("x"=15, "y"=9)
 	nutriment_desc = list("rot" = 5, "mold" = 5)
 	nutriment_amt = 10
 	bitesize = 3
