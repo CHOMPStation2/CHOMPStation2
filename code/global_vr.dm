@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /hook/startup/proc/modules_vr()
 	robot_module_types += "Medihound"
 	robot_module_types += "K9"
@@ -18,6 +19,24 @@ var/list/shell_module_types = list(
 )
 */
 
+||||||| parent of 79f1a263e4... Merge pull request #11083 from Heroman3003/modwl
+/hook/startup/proc/modules_vr()
+	robot_module_types += "Medihound"
+	robot_module_types += "K9"
+	robot_module_types += "Janihound"
+	robot_module_types += "Sci-borg"
+	robot_module_types += "Pupdozer"
+	robot_module_types += "Service-Hound"
+	robot_module_types += "BoozeHound"
+	robot_module_types += "KMine"
+	return 1
+
+var/list/shell_module_types = list(
+	"Standard", "Service", "Clerical", "Service-Hound"
+)
+
+=======
+>>>>>>> 79f1a263e4... Merge pull request #11083 from Heroman3003/modwl
 var/list/awayabductors = list() // List of scatter landmarks for Abductors in Gateways
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
 var/list/eventabductors = list() // List of scatter landmarks for VOREStation abductor portals
