@@ -71,12 +71,8 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-<<<<<<< HEAD
-	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CH Addition Unity
-||||||| parent of 79f1a263e4... Merge pull request #11083 from Heroman3003/modwl
-=======
+	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
->>>>>>> 79f1a263e4... Merge pull request #11083 from Heroman3003/modwl
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
