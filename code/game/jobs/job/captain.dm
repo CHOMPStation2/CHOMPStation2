@@ -34,20 +34,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
 	alt_titles = list("Overseer"= /datum/alt_title/overseer,"Colony Director"= /datum/alt_title/colonydirector) //CHOMPEdit
 
-<<<<<<< HEAD
-//YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
-||||||| parent of b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
-/*
-=======
 
 /*
->>>>>>> b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(src)
-//YW UNCOMMENTING END
-
+*/
 
 /datum/job/captain/get_access()
 	return get_all_station_access().Copy()
