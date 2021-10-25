@@ -76,8 +76,19 @@ var/const/access_explorer = 43
 	supervisors = "the explorer leader and the head of personnel"
 	selection_color = "#515151"
 	economic_modifier = 4
+<<<<<<< HEAD
 	access = list(access_explorer)
 	minimal_access = list(access_explorer)
+||||||| parent of b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
+	access = list(access_explorer, access_research)
+	minimal_access = list(access_explorer, access_research)
+
+=======
+	access = list(access_explorer, access_research)
+	minimal_access = list(access_explorer, access_research)
+	banned_job_species = list(SPECIES_ZADDAT)
+
+>>>>>>> b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 /*
 	alt_titles = list(
@@ -98,4 +109,15 @@ var/const/access_explorer = 43
 	economic_modifier = 4
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist, access_explorer)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_explorer)
+<<<<<<< HEAD
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
+||||||| parent of b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
+
+	outfit_type = /decl/hierarchy/outfit/job/medical/sar
+	job_description = "A Search and Rescue operative recovers individuals who are injured or dead on the surface of Sif."
+=======
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+
+	outfit_type = /decl/hierarchy/outfit/job/medical/sar
+	job_description = "A Search and Rescue operative recovers individuals who are injured or dead on the surface of Sif."
+>>>>>>> b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253

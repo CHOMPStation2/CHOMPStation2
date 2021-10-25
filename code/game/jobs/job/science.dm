@@ -27,7 +27,10 @@
 
 	minimum_character_age = 25
 	minimal_player_age = 14
+	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
+	ideal_age_by_species = list(SPECIES_UNATHI = 140, "mechanical" = 20, SPECIES_HUMAN_VATBORN = 20)
+	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital")
 
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
 	job_description = "The Research Director manages and maintains the Research department. They are required to ensure the safety of the entire crew, \
@@ -35,6 +38,7 @@
 						might originate from Research. The Research Director often has at least passing knowledge of most of the Research department, but \
 						are encouraged to allow their staff to perform their own duties."
 	alt_titles = list("Research Supervisor" = /datum/alt_title/research_supervisor)
+
 
 // Research Director Alt Titles
 /datum/alt_title/research_supervisor
@@ -56,6 +60,8 @@
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+	banned_job_species = list("digital")
 
 	minimal_player_age = 3
 
@@ -99,8 +105,16 @@
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics)
 	minimal_access = list(access_research, access_xenobiology, access_hydroponics, access_tox_storage)
+	banned_job_species = list("digital")
 
+<<<<<<< HEAD
 	minimal_player_age = 3
+||||||| parent of b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
+	minimal_player_age = 14
+=======
+	minimal_player_age = 14
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+>>>>>>> b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
 
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
 	job_description = "A Xenobiologist studies esoteric lifeforms, usually in the relative safety of their lab. They attempt to find ways to benefit \
@@ -131,7 +145,15 @@ VR edit end*/
 	economic_modifier = 5
 	access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+<<<<<<< HEAD
 	minimal_player_age = 3
+||||||| parent of b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
+	minimal_player_age = 7
+=======
+	minimal_player_age = 7
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+	banned_job_species = list("digital")
+>>>>>>> b9ba661b8b... Merge pull request #11603 from VOREStation/upstream-merge-8253
 
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
 	job_description = "A Roboticist maintains and repairs the station's synthetics, including crew with prosthetic limbs. \
