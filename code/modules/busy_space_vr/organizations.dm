@@ -896,7 +896,7 @@
 	org_type = "corporate"
 	slogans = list(
 			"Xion Manufacturing - We have what you need.",
-			"Xion Manufacturing - The #1 choice of the SolCom Engineer's Union for 150 years.",
+			"Xion Manufacturing - The #1 choice of the SolGov Engineer's Union for 150 years.", // CHOMPedit
 			"Xion Manufacturing - Our products are as bulletproof as our contracts."
 			)
 	ship_prefixes = list("XMV" = "a general operations", "XTV" = "a hauling", "XFV" = "a bulk transport", "XIV" = "a resupply")
@@ -1148,7 +1148,7 @@
 	slogans = list(
 			"Aether A&R - We're Absolutely Breathtaking.",
 			"Aether A&R - You Can Breathe Easy With Us!",
-			"Aether A&R - The SolCom's #1 Environmental Systems Provider."
+			"Aether A&R - The SolGov's #1 Environmental Systems Provider." // CHOMPedit
 			)
 	ship_prefixes = list("AARV" = "a general operations", "AARE" = "a resource extraction", "AARG" = "a gas transport", "AART" = "a transport")
 	//weather systems/patterns
@@ -1397,7 +1397,7 @@
 	org_type = "corporate"
 	slogans = list(
 			"Wulf Aeronautics. We build it - you fly it.",
-			"Wulf Aeronautics, the Commonwealth's favorite shipwrights.",
+			// "Wulf Aeronautics, the Commonwealth's favorite shipwrights.", // CHOMPedit
 			"Wulf Aeronautics, building tomorrow's ships today."
 			)
 	ship_prefixes = list("WATV" = "a transport", "WARV" = "a repair", "WAV" = "a general operations")
