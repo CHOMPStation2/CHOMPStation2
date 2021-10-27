@@ -155,13 +155,6 @@
 		if(alien == IS_SLIME || alien == IS_CHIMERA) //slimes and chimera can get nutrition from injected nutriment and protein
 			M.adjust_nutrition(alt_nutriment_factor * removed)
 
-<<<<<<< HEAD
-
-||||||| parent of 72a0e86484... Merge pull request #11705 from GhostActual/brainfood
-
-
-=======
->>>>>>> 72a0e86484... Merge pull request #11705 from GhostActual/brainfood
 /datum/reagent/nutriment/magicdust/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	playsound(M, 'sound/items/hooh.ogg', 50, 1, -1)
