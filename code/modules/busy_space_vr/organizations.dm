@@ -896,7 +896,7 @@
 	org_type = "corporate"
 	slogans = list(
 			"Xion Manufacturing - We have what you need.",
-			"Xion Manufacturing - The #1 choice of the SolGov Engineer's Union for 150 years.", // CHOMPedit
+			// "Xion Manufacturing - The #1 choice of the SolGov Engineer's Union for 150 years.", // CHOMPedit, year mismatch
 			"Xion Manufacturing - Our products are as bulletproof as our contracts."
 			)
 	ship_prefixes = list("XMV" = "a general operations", "XTV" = "a hauling", "XFV" = "a bulk transport", "XIV" = "a resupply")
