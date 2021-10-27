@@ -299,6 +299,7 @@
 	digestion_death(M)
 	if(!ishuman(owner))
 		owner.update_icons()
+<<<<<<< HEAD
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
@@ -312,6 +313,22 @@
 			GenerateBellyReagents_digested()
 		else
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
+||||||| parent of b5317d31e4... Merge pull request #11644 from Verkister/patch-88
+	if(compensation == 0) //Slightly sloppy way at making sure certain mobs don't give ZERO nutrition (fish and so on)
+		compensation = 21 //This reads as 20*4.5 due to the calculations afterward, making the backup nutrition value 94.5 per mob. Not op compared to regular prey.
+	if(compensation > 0)
+		if(isrobot(owner))
+			var/mob/living/silicon/robot/R = owner
+			R.cell.charge += 25*compensation*(nutrition_percent / 100)
+		else
+			owner.adjust_nutrition((nutrition_percent / 100)*4.5*compensation)
+=======
+	if(isrobot(owner))
+		var/mob/living/silicon/robot/R = owner
+		R.cell.charge += (nutrition_percent / 100) * compensation * 25
+	else
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5)
+>>>>>>> b5317d31e4... Merge pull request #11644 from Verkister/patch-88
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
