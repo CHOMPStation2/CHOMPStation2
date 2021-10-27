@@ -302,6 +302,14 @@ const VoreSelectedBelly = (props, context) => {
     <VoreSelectedBellyStyles belly={belly} />
   );
 
+  tabs[5] = (
+    <VoreSelectedBellyLiquidOptions belly={belly} />
+  );
+
+  tabs[6] = (
+    <VoreSelectedBellyLiquidMessages belly={belly} />
+  );
+
   return (
     <Fragment>
       <Tabs>
@@ -320,12 +328,21 @@ const VoreSelectedBelly = (props, context) => {
         <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
           Belly Styles
         </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
+          Liquid Options
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
+          Liquid Messages
+        </Tabs.Tab>
       </Tabs>
       {tabs[tabIndex] || "Error"}
     </Fragment>
   );
 };
 
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
 const VoreSelectedBellyControls = (props, context) => {
   const { act } = useBackend(context);
 
@@ -409,35 +426,20 @@ const VoreSelectedBellyControls = (props, context) => {
           onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "ema" })}
           content="Examine Message (with absorbed victims)" />
         <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_hold" })}
-          content="Idle Messages (Hold)" />
-        <Button
           onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_digest" })}
           content="Idle Messages (Digest)" />
+        <Button
+          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_hold" })}
+          content="Idle Messages (Hold)" />
         <Button
           onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_absorb" })}
           content="Idle Messages (Absorb)" />
         <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_unabsorb" })}
-          content="Idle Messages (Unabsorb)" />
-        <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_drain" })}
-          content="Idle Messages (Drain)" />
-        <Button
           onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_heal" })}
           content="Idle Messages (Heal)" />
         <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_steal" })}
-          content="Idle Messages (Size Steal)" />
-        <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_shrink" })}
-          content="Idle Messages (Shrink)" />
-        <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_grow" })}
-          content="Idle Messages (Grow)" />
-        <Button
-          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_egg" })}
-          content="Idle Messages (Encase In Egg)" />
+          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_drain" })}
+          content="Idle Messages (Drain)" />
         <Button
           color="red"
           onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "reset" })}
@@ -447,6 +449,9 @@ const VoreSelectedBellyControls = (props, context) => {
   );
 };
 
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
 const VoreSelectedBellyOptions = (props, context) => {
   const { act } = useBackend(context);
 
@@ -471,97 +476,12 @@ const VoreSelectedBellyOptions = (props, context) => {
     contaminate_flavor,
     contaminate_color,
     egg_type,
-<<<<<<< HEAD
-    escapable,
-    interacts,
-    contents,
-    belly_fullscreen,
-    belly_fullscreen_color,
-    mapRef,
-    possible_fullscreens,
-    disable_hud,
-    show_liq,
-    liq_interacts,
-    liq_reagent_gen,
-    liq_reagent_type,
-    liq_reagent_name,
-    liq_reagent_transfer_verb,
-    liq_reagent_nutri_rate,
-    liq_reagent_capacity,
-    liq_sloshing,
-    liq_reagent_addons,
-    show_liq_fullness,
-    liq_messages,
-    liq_msg1,
-    liq_msg2,
-    liq_msg3,
-    liq_msg4,
-    liq_msg5,
     vorespawn_blacklist,
-    autotransfer_enabled,
-    autotransfer,
-||||||| parent of 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
-    escapable,
-    interacts,
-    contents,
-    belly_fullscreen,
-    possible_fullscreens,
-    disable_hud,
-=======
->>>>>>> 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
   } = belly;
 
   return (
-<<<<<<< HEAD
-    <Fragment>
-      <Tabs>
-        <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
-          Controls
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
-          Options
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
-          Contents ({contents.length})
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 3} onClick={() => setTabIndex(3)}>
-          Interactions
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
-          Belly Styles
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
-          Liquid Options
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
-          Liquid Messages
-        </Tabs.Tab>
-      </Tabs>
-      {tabIndex === 0 && (
-||||||| parent of 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
-    <Fragment>
-      <Tabs>
-        <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
-          Controls
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
-          Options
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
-          Contents ({contents.length})
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 3} onClick={() => setTabIndex(3)}>
-          Interactions
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
-          Belly Styles
-        </Tabs.Tab>
-      </Tabs>
-      {tabIndex === 0 && (
-=======
     <Flex wrap="wrap">
       <Flex.Item basis="49%" grow={1}>
->>>>>>> 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
         <LabeledList>
           <LabeledList.Item label="Digest Brute Damage">
             <Button
@@ -677,6 +597,13 @@ const VoreSelectedBellyOptions = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
               content={shrink_grow_size * 100 + "%"} />
           </LabeledList.Item>
+          <LabeledList.Item label="Vore Spawn Blacklist">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
+              icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
+              selected={vorespawn_blacklist}
+              content={vorespawn_blacklist ? "Yes" : "No"} />
+          </LabeledList.Item>
           <LabeledList.Item label="Idle Emotes">
             <Button
               onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
@@ -690,637 +617,6 @@ const VoreSelectedBellyOptions = (props, context) => {
               content={emote_time + " seconds"} />
           </LabeledList.Item>
         </LabeledList>
-<<<<<<< HEAD
-      ) || tabIndex === 1 && (
-        <Flex wrap="wrap">
-          <Flex.Item basis="49%" grow={1}>
-            <LabeledList>
-              <LabeledList.Item label="Digest Brute Damage">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_brute_dmg" })}
-                  content={digest_brute} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Digest Burn Damage">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_burn_dmg" })}
-                  content={digest_burn} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Digest Suffocation Damage">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_oxy_dmg" })}
-                  content={digest_oxy} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Nutritional Gain">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_nutritionpercent" })}
-                  content={nutrition_percent + "%"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Contaminates">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_contaminates" })}
-                  icon={contaminates ? "toggle-on" : "toggle-off"}
-                  selected={contaminates}
-                  content={contaminates ? "Yes" : "No"} />
-              </LabeledList.Item>
-              {contaminates && (
-                <Fragment>
-                  <LabeledList.Item label="Contamination Flavor">
-                    <Button
-                      onClick={() => act("set_attribute", { attribute: "b_contamination_flavor" })}
-                      icon="pen"
-                      content={contaminate_flavor} />
-                  </LabeledList.Item>
-                  <LabeledList.Item label="Contamination Color">
-                    <Button
-                      onClick={() => act("set_attribute", { attribute: "b_contamination_color" })}
-                      icon="pen"
-                      content={capitalize(contaminate_color)} />
-                  </LabeledList.Item>
-                </Fragment>
-              ) || null}
-              <LabeledList.Item label="Can Taste">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_tastes" })}
-                  icon={can_taste ? "toggle-on" : "toggle-off"}
-                  selected={can_taste}
-                  content={can_taste ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Egg Type">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_egg_type" })}
-                  icon="pen"
-                  content={capitalize(egg_type)} />
-              </LabeledList.Item>
-            </LabeledList>
-          </Flex.Item>
-          <Flex.Item basis="49%" grow={1}>
-            <LabeledList>
-              <LabeledList.Item label="Fleshy Belly">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_wetness" })}
-                  icon={is_wet ? "toggle-on" : "toggle-off"}
-                  selected={is_wet}
-                  content={is_wet ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Internal Loop">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_wetloop" })}
-                  icon={wet_loop ? "toggle-on" : "toggle-off"}
-                  selected={wet_loop}
-                  content={wet_loop ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Use Fancy Sounds">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_fancy_sound" })}
-                  icon={fancy ? "toggle-on" : "toggle-off"}
-                  selected={fancy}
-                  content={fancy ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Vore Sound">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_sound" })}
-                  content={sound} />
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_soundtest" })}
-                  icon="volume-up" />
-              </LabeledList.Item>
-              <LabeledList.Item label="Release Sound">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_release" })}
-                  content={release_sound} />
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_releasesoundtest" })}
-                  icon="volume-up" />
-              </LabeledList.Item>
-              <LabeledList.Item label="Required Examine Size">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_bulge_size" })}
-                  content={bulge_size * 100 + "%"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Display Absorbed Examines">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_display_absorbed_examine" })}
-                  icon={display_absorbed_examine ? "toggle-on" : "toggle-off"}
-                  selected={display_absorbed_examine}
-                  content={display_absorbed_examine ? "True" : "False"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Shrink/Grow Size">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
-                  content={shrink_grow_size * 100 + "%"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Vore Spawn Blacklist">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
-                  icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
-                  selected={vorespawn_blacklist}
-                  content={vorespawn_blacklist ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Idle Emotes">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
-                  icon={emote_active ? "toggle-on" : "toggle-off"}
-                  selected={emote_active}
-                  content={emote_active ? "Active" : "Inactive"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Idle Emote Delay">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
-                  content={emote_time + " seconds"} />
-              </LabeledList.Item>
-            </LabeledList>
-          </Flex.Item>
-          <Flex.Item basis="100%" mt={1}>
-            <Button.Confirm
-              fluid
-              icon="exclamation-triangle"
-              confirmIcon="trash"
-              color="red"
-              content="Delete Belly"
-              confirmContent="This is irreversable!"
-              onClick={() => act("set_attribute", { attribute: "b_del" })} />
-          </Flex.Item>
-        </Flex>
-      ) || tabIndex === 2 && (
-        <VoreContentsPanel outside contents={contents} />
-      ) || tabIndex === 3 && (
-        <Section title="Belly Interactions" buttons={
-          <Button
-            onClick={() => act("set_attribute", { attribute: "b_escapable" })}
-            icon={escapable ? "toggle-on" : "toggle-off"}
-            selected={escapable}
-            content={escapable ? "Interactions On" : "Interactions Off"} />
-        }>
-          {escapable ? (
-            <LabeledList>
-              <LabeledList.Item label="Escape Chance">
-                <Button
-                  content={interacts.escapechance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_escapechance" })} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Escape Time">
-                <Button
-                  content={interacts.escapetime / 10 + "s"}
-                  onClick={() => act("set_attribute", { attribute: "b_escapetime" })} />
-              </LabeledList.Item>
-              <LabeledList.Divider />
-              <LabeledList.Item label="Transfer Chance">
-                <Button
-                  content={interacts.transferchance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_transferchance" })} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Transfer Location">
-                <Button
-                  content={interacts.transferlocation ? interacts.transferlocation : "Disabled"}
-                  onClick={() => act("set_attribute", { attribute: "b_transferlocation" })} />
-              </LabeledList.Item>
-              <LabeledList.Divider />
-              <LabeledList.Item label="Absorb Chance">
-                <Button
-                  content={interacts.absorbchance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_absorbchance" })} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Digest Chance">
-                <Button
-                  content={interacts.digestchance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_digestchance" })} />
-              </LabeledList.Item>
-              <LabeledList.Divider />
-            </LabeledList>
-          ) : "These options only display while interactions are turned on."}
-          <Section title="Auto-Transfer Options" buttons={
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_autotransfer_enabled" })}
-              icon={autotransfer_enabled ? "toggle-on" : "toggle-off"}
-              selected={autotransfer_enabled}
-              content={autotransfer_enabled ? "Auto-Transfer Enabled" : "Auto-Transfer Disabled"} />
-          }>
-            {autotransfer_enabled ? (
-              <LabeledList>
-                <LabeledList.Item label="Auto-Transfer Chance">
-                  <Button
-                    content={autotransfer.autotransferchance + "%"}
-                    onClick={() => act("set_attribute", { attribute: "b_autotransferchance" })} />
-                </LabeledList.Item>
-                <LabeledList.Item label="Auto-Transfer Time">
-                  <Button
-                    content={autotransfer.autotransferwait / 10 + "s"}
-                    onClick={() => act("set_attribute", { attribute: "b_autotransferwait" })} />
-                </LabeledList.Item>
-                <LabeledList.Item label="Auto-Transfer Location">
-                  <Button
-                    content={autotransfer.autotransferlocation ? autotransfer.autotransferlocation : "Disabled"}
-                    onClick={() => act("set_attribute", { attribute: "b_autotransferlocation" })} />
-                </LabeledList.Item>
-              </LabeledList>
-            ) : "These options only display while Auto-Transfer is enabled."}
-          </Section>
-        </Section>
-      ) || tabIndex === 4 && (
-        <Fragment>
-          <Section title="Belly Fullscreens Preview and Coloring">
-            <Flex direction="row">
-              <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
-              <Button
-                icon="eye-dropper"
-                onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
-                Select Color
-              </Button>
-            </Flex>
-            <ByondUi
-              style={{
-                width: '200px',
-                height: '200px',
-              }}
-              params={{
-                id: mapRef,
-                type: 'map',
-              }} />
-          </Section>
-          <Section height="260px" style={{ overflow: "auto" }}>
-            <Section title="Vore FX">
-              <LabeledList>
-                <LabeledList.Item label="Disable Prey HUD">
-                  <Button
-                    onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-                    icon={disable_hud ? "toggle-on" : "toggle-off"}
-                    selected={disable_hud}
-                    content={disable_hud ? "Yes" : "No"} />
-                </LabeledList.Item>
-              </LabeledList>
-            </Section>
-            <Section title="Belly Fullscreens Styles">
-              Belly styles:
-              <Button
-                fluid
-                selected={belly_fullscreen === "" || belly_fullscreen === null}
-                onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
-                Disabled
-              </Button>
-              {Object.keys(possible_fullscreens).map(key => (
-                <Button
-                  key={key}
-                  width="256px"
-                  height="256px"
-                  selected={key === belly_fullscreen}
-                  onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-                  <Box
-                    className={classes([
-                      'vore240x240',
-                      key,
-                    ])}
-                    style={{
-                      transform: 'translate(0%, 4%)',
-                    }} />
-                </Button>
-              ))}
-            </Section>
-          </Section>
-        </Fragment>
-      ) || tabIndex === 5 && (
-        <Section title="Liquid Options" buttons={
-          <Button
-            onClick={() => act("liq_set_attribute", { liq_attribute: "b_show_liq" })}
-            icon={show_liq ? "toggle-on" : "toggle-off"}
-            selected={show_liq}
-            tooltipPosition="left"
-            tooltip={"These are the settings for liquid bellies, every belly has a liquid storage."}
-            content={show_liq ? "Liquids On" : "Liquids Off"} />
-        }>
-          {show_liq ? (
-            <LabeledList>
-              <LabeledList.Item label="Generate Liquids">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_gen" })}
-                  icon={liq_interacts.liq_reagent_gen? "toggle-on" : "toggle-off"}
-                  selected={liq_interacts.liq_reagent_gen}
-                  content={liq_interacts.liq_reagent_gen ? "On" : "Off"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Liquid Type">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_type" })}
-                  icon="pen"
-                  content={liq_interacts.liq_reagent_type} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Liquid Name">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_name" })}
-                  content={liq_interacts.liq_reagent_name} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Transfer Verb">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_transfer_verb" })}
-                  content={liq_interacts.liq_reagent_transfer_verb} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Generation Time">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_nutri_rate" })}
-                  icon="clock"
-                  content={((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 + " Hours"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Liquid Capacity">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_capacity" })}
-                  content={liq_interacts.liq_reagent_capacity} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Slosh Sounds">
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_sloshing" })}
-                  icon={liq_interacts.liq_sloshing? "toggle-on" : "toggle-off"}
-                  selected={liq_interacts.liq_sloshing}
-                  content={liq_interacts.liq_sloshing ? "On" : "Off"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Liquid Addons">
-                {liq_interacts.liq_reagent_addons.length && liq_interacts.liq_reagent_addons.join(", ") || "None"}
-                <Button
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_addons" })}
-                  ml={1}
-                  icon="plus" />
-              </LabeledList.Item>
-              <LabeledList.Item label="Purge Liquids">
-                <Button
-                  color="red"
-                  onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_purge" })}
-                  content={"Purge Liquids"} />
-              </LabeledList.Item>
-            </LabeledList>
-          ) : "These options only display while liquid settings are turned on."}
-        </Section>
-      ) || tabIndex === 6 && (
-        <Section title="Liquid Messages" buttons={
-          <Button
-            onClick={() => act("liq_set_messages", { liq_messages: "b_show_liq_fullness" })}
-            icon={show_liq_fullness ? "toggle-on" : "toggle-off"}
-            selected={show_liq_fullness}
-            tooltipPosition="left"
-            tooltip={"These are the settings for belly visibility when involving liquids fullness."}
-            content={show_liq_fullness ? "Messages On" : "Messages Off"} />
-        }>
-          {show_liq_fullness ? (
-            <LabeledList>
-              <LabeledList.Item label="0 to 20%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg1" })}
-                  content="Examine Message (0 to 20%)" />
-              </LabeledList.Item>
-              <LabeledList.Item label="20 to 40%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg2" })}
-                  content="Examine Message (20 to 40%)" />
-              </LabeledList.Item>
-              <LabeledList.Item label="40 to 60%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg3" })}
-                  content="Examine Message (40 to 60%)" />
-              </LabeledList.Item>
-              <LabeledList.Item label="60 to 80%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg4" })}
-                  content="Examine Message (60 to 80%)" />
-              </LabeledList.Item>
-              <LabeledList.Item label="80 to 100%">
-                <Button
-                  onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg5" })}
-                  content="Examine Message (80 to 100%)" />
-              </LabeledList.Item>
-            </LabeledList>
-          ) : "These options only display while liquid examination settings are turned on."}
-        </Section>
-      ) || "Error"}
-    </Fragment>
-||||||| parent of 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
-      ) || tabIndex === 1 && (
-        <Flex wrap="wrap">
-          <Flex.Item basis="49%" grow={1}>
-            <LabeledList>
-              <LabeledList.Item label="Digest Brute Damage">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_brute_dmg" })}
-                  content={digest_brute} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Digest Burn Damage">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_burn_dmg" })}
-                  content={digest_burn} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Digest Suffocation Damage">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_oxy_dmg" })}
-                  content={digest_oxy} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Nutritional Gain">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_nutritionpercent" })}
-                  content={nutrition_percent + "%"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Contaminates">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_contaminates" })}
-                  icon={contaminates ? "toggle-on" : "toggle-off"}
-                  selected={contaminates}
-                  content={contaminates ? "Yes" : "No"} />
-              </LabeledList.Item>
-              {contaminates && (
-                <Fragment>
-                  <LabeledList.Item label="Contamination Flavor">
-                    <Button
-                      onClick={() => act("set_attribute", { attribute: "b_contamination_flavor" })}
-                      icon="pen"
-                      content={contaminate_flavor} />
-                  </LabeledList.Item>
-                  <LabeledList.Item label="Contamination Color">
-                    <Button
-                      onClick={() => act("set_attribute", { attribute: "b_contamination_color" })}
-                      icon="pen"
-                      content={capitalize(contaminate_color)} />
-                  </LabeledList.Item>
-                </Fragment>
-              ) || null}
-              <LabeledList.Item label="Can Taste">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_tastes" })}
-                  icon={can_taste ? "toggle-on" : "toggle-off"}
-                  selected={can_taste}
-                  content={can_taste ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Egg Type">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_egg_type" })}
-                  icon="pen"
-                  content={capitalize(egg_type)} />
-              </LabeledList.Item>
-            </LabeledList>
-          </Flex.Item>
-          <Flex.Item basis="49%" grow={1}>
-            <LabeledList>
-              <LabeledList.Item label="Fleshy Belly">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_wetness" })}
-                  icon={is_wet ? "toggle-on" : "toggle-off"}
-                  selected={is_wet}
-                  content={is_wet ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Internal Loop">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_wetloop" })}
-                  icon={wet_loop ? "toggle-on" : "toggle-off"}
-                  selected={wet_loop}
-                  content={wet_loop ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Use Fancy Sounds">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_fancy_sound" })}
-                  icon={fancy ? "toggle-on" : "toggle-off"}
-                  selected={fancy}
-                  content={fancy ? "Yes" : "No"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Vore Sound">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_sound" })}
-                  content={sound} />
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_soundtest" })}
-                  icon="volume-up" />
-              </LabeledList.Item>
-              <LabeledList.Item label="Release Sound">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_release" })}
-                  content={release_sound} />
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_releasesoundtest" })}
-                  icon="volume-up" />
-              </LabeledList.Item>
-              <LabeledList.Item label="Required Examine Size">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_bulge_size" })}
-                  content={bulge_size * 100 + "%"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Display Absorbed Examines">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_display_absorbed_examine" })}
-                  icon={display_absorbed_examine ? "toggle-on" : "toggle-off"}
-                  selected={display_absorbed_examine}
-                  content={display_absorbed_examine ? "True" : "False"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Shrink/Grow Size">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
-                  content={shrink_grow_size * 100 + "%"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Idle Emotes">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
-                  icon={emote_active ? "toggle-on" : "toggle-off"}
-                  selected={emote_active}
-                  content={emote_active ? "Active" : "Inactive"} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Idle Emote Delay">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
-                  content={emote_time + " seconds"} />
-              </LabeledList.Item>
-            </LabeledList>
-          </Flex.Item>
-          <Flex.Item basis="100%" mt={1}>
-            <Button.Confirm
-              fluid
-              icon="exclamation-triangle"
-              confirmIcon="trash"
-              color="red"
-              content="Delete Belly"
-              confirmContent="This is irreversable!"
-              onClick={() => act("set_attribute", { attribute: "b_del" })} />
-          </Flex.Item>
-        </Flex>
-      ) || tabIndex === 2 && (
-        <VoreContentsPanel outside contents={contents} />
-      ) || tabIndex === 3 && (
-        <Section title="Belly Interactions" buttons={
-          <Button
-            onClick={() => act("set_attribute", { attribute: "b_escapable" })}
-            icon={escapable ? "toggle-on" : "toggle-off"}
-            selected={escapable}
-            content={escapable ? "Interactions On" : "Interactions Off"} />
-        }>
-          {escapable ? (
-            <LabeledList>
-              <LabeledList.Item label="Escape Chance">
-                <Button
-                  content={interacts.escapechance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_escapechance" })} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Escape Time">
-                <Button
-                  content={interacts.escapetime / 10 + "s"}
-                  onClick={() => act("set_attribute", { attribute: "b_escapetime" })} />
-              </LabeledList.Item>
-              <LabeledList.Divider />
-              <LabeledList.Item label="Transfer Chance">
-                <Button
-                  content={interacts.transferchance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_transferchance" })} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Transfer Location">
-                <Button
-                  content={interacts.transferlocation ? interacts.transferlocation : "Disabled"}
-                  onClick={() => act("set_attribute", { attribute: "b_transferlocation" })} />
-              </LabeledList.Item>
-              <LabeledList.Divider />
-              <LabeledList.Item label="Absorb Chance">
-                <Button
-                  content={interacts.absorbchance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_absorbchance" })} />
-              </LabeledList.Item>
-              <LabeledList.Item label="Digest Chance">
-                <Button
-                  content={interacts.digestchance + "%"}
-                  onClick={() => act("set_attribute", { attribute: "b_digestchance" })} />
-              </LabeledList.Item>
-            </LabeledList>
-          ) : "These options only display while interactions are turned on."}
-        </Section>
-      ) || tabIndex === 4 && (
-        <Fragment>
-          <Section title="Vore FX">
-            <LabeledList>
-              <LabeledList.Item label="Disable Prey HUD">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-                  icon={disable_hud ? "toggle-on" : "toggle-off"}
-                  selected={disable_hud}
-                  content={disable_hud ? "Yes" : "No"} />
-              </LabeledList.Item>
-            </LabeledList>
-          </Section>
-          <Section title="Belly Fullscreens">
-            <Button
-              fluid
-              selected={belly_fullscreen === "" || belly_fullscreen === null}
-              onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
-              Disabled
-            </Button>
-            {Object.keys(possible_fullscreens).map(key => (
-              <Button
-                key={key}
-                width="256px"
-                height="256px"
-                selected={key === belly_fullscreen}
-                onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-                <Box
-                  className={classes([
-                    'vore240x240',
-                    key,
-                  ])}
-                  style={{
-                    transform: 'translate(0%, 4%)',
-                  }} />
-              </Button>
-            ))}
-          </Section>
-        </Fragment>
-      ) || "Error"}
-    </Fragment>
-=======
       </Flex.Item>
       <Flex.Item basis="100%" mt={1}>
         <Button.Confirm
@@ -1333,7 +629,374 @@ const VoreSelectedBellyOptions = (props, context) => {
           onClick={() => act("set_attribute", { attribute: "b_del" })} />
       </Flex.Item>
     </Flex>
->>>>>>> 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
+  );
+};
+
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyInteractions = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    escapable,
+    interacts,
+    vorespawn_blacklist,
+    autotransfer_enabled,
+    autotransfer,
+  } = belly;
+
+  return (
+    <Section title="Belly Interactions" buttons={
+      <Button
+        onClick={() => act("set_attribute", { attribute: "b_escapable" })}
+        icon={escapable ? "toggle-on" : "toggle-off"}
+        selected={escapable}
+        content={escapable ? "Interactions On" : "Interactions Off"} />
+    }>
+      {escapable ? (
+        <LabeledList>
+          <LabeledList.Item label="Escape Chance">
+            <Button
+              content={interacts.escapechance + "%"}
+              onClick={() => act("set_attribute", { attribute: "b_escapechance" })} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Escape Time">
+            <Button
+              content={interacts.escapetime / 10 + "s"}
+              onClick={() => act("set_attribute", { attribute: "b_escapetime" })} />
+          </LabeledList.Item>
+          <LabeledList.Divider />
+          <LabeledList.Item label="Transfer Chance">
+            <Button
+              content={interacts.transferchance + "%"}
+              onClick={() => act("set_attribute", { attribute: "b_transferchance" })} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Transfer Location">
+            <Button
+              content={interacts.transferlocation ? interacts.transferlocation : "Disabled"}
+              onClick={() => act("set_attribute", { attribute: "b_transferlocation" })} />
+          </LabeledList.Item>
+          <LabeledList.Divider />
+          <LabeledList.Item label="Absorb Chance">
+            <Button
+              content={interacts.absorbchance + "%"}
+              onClick={() => act("set_attribute", { attribute: "b_absorbchance" })} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digest Chance">
+            <Button
+              content={interacts.digestchance + "%"}
+              onClick={() => act("set_attribute", { attribute: "b_digestchance" })} />
+          </LabeledList.Item>
+          <LabeledList.Divider />
+        </LabeledList>
+      ) : "These options only display while interactions are turned on."}
+      <Section title="Auto-Transfer Options" buttons={
+        <Button
+          onClick={() => act("set_attribute", { attribute: "b_autotransfer_enabled" })}
+          icon={autotransfer_enabled ? "toggle-on" : "toggle-off"}
+          selected={autotransfer_enabled}
+          content={autotransfer_enabled ? "Auto-Transfer Enabled" : "Auto-Transfer Disabled"} />
+      }>
+        {autotransfer_enabled ? (
+          <LabeledList>
+            <LabeledList.Item label="Auto-Transfer Chance">
+              <Button
+                content={autotransfer.autotransferchance + "%"}
+                onClick={() => act("set_attribute", { attribute: "b_autotransferchance" })} />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Time">
+              <Button
+                content={autotransfer.autotransferwait / 10 + "s"}
+                onClick={() => act("set_attribute", { attribute: "b_autotransferwait" })} />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Location">
+              <Button
+                content={autotransfer.autotransferlocation ? autotransfer.autotransferlocation : "Disabled"}
+                onClick={() => act("set_attribute", { attribute: "b_autotransferlocation" })} />
+            </LabeledList.Item>
+          </LabeledList>
+        ) : "These options only display while Auto-Transfer is enabled."}
+      </Section>
+    </Section>
+  );
+};
+
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyStyles = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    belly_fullscreen,
+    belly_fullscreen_color,
+    mapRef,
+    possible_fullscreens,
+    disable_hud,
+  } = belly;
+
+  return (
+    <Fragment>
+      <Section title="Belly Fullscreens Preview and Coloring">
+        <Flex direction="row">
+          <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
+          <Button
+            icon="eye-dropper"
+            onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
+            Select Color
+          </Button>
+        </Flex>
+        <ByondUi
+          style={{
+            width: '200px',
+            height: '200px',
+          }}
+          params={{
+            id: mapRef,
+            type: 'map',
+          }} />
+      </Section>
+      <Section height="260px" style={{ overflow: "auto" }}>
+        <Section title="Vore FX">
+          <LabeledList>
+            <LabeledList.Item label="Disable Prey HUD">
+              <Button
+                onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
+                icon={disable_hud ? "toggle-on" : "toggle-off"}
+                selected={disable_hud}
+                content={disable_hud ? "Yes" : "No"} />
+            </LabeledList.Item>
+          </LabeledList>
+        </Section>
+        <Section title="Belly Fullscreens Styles">
+          Belly styles:
+          <Button
+            fluid
+            selected={belly_fullscreen === "" || belly_fullscreen === null}
+            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+            Disabled
+          </Button>
+          {Object.keys(possible_fullscreens).map(key => (
+            <Button
+              key={key}
+              width="256px"
+              height="256px"
+              selected={key === belly_fullscreen}
+              onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
+              <Box
+                className={classes([
+                  'vore240x240',
+                  key,
+                ])}
+                style={{
+                  transform: 'translate(0%, 4%)',
+                }} />
+            </Button>
+          ))}
+        </Section>
+      </Section>
+    </Fragment>
+  );
+};
+
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyLiquidOptions = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    show_liq,
+    liq_interacts,
+    liq_reagent_gen,
+    liq_reagent_type,
+    liq_reagent_name,
+    liq_reagent_transfer_verb,
+    liq_reagent_nutri_rate,
+    liq_reagent_capacity,
+    liq_sloshing,
+    liq_reagent_addons,
+    show_liq_fullness,
+    liq_messages,
+    liq_msg1,
+    liq_msg2,
+    liq_msg3,
+    liq_msg4,
+    liq_msg5,
+  } = belly;
+
+  return (
+    <Section title="Liquid Options" buttons={
+      <Button
+        onClick={() => act("liq_set_attribute", { liq_attribute: "b_show_liq" })}
+        icon={show_liq ? "toggle-on" : "toggle-off"}
+        selected={show_liq}
+        tooltipPosition="left"
+        tooltip={"These are the settings for liquid bellies, every belly has a liquid storage."}
+        content={show_liq ? "Liquids On" : "Liquids Off"} />
+    }>
+      {show_liq ? (
+        <LabeledList>
+          <LabeledList.Item label="Generate Liquids">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_gen" })}
+              icon={liq_interacts.liq_reagent_gen? "toggle-on" : "toggle-off"}
+              selected={liq_interacts.liq_reagent_gen}
+              content={liq_interacts.liq_reagent_gen ? "On" : "Off"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Type">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_type" })}
+              icon="pen"
+              content={liq_interacts.liq_reagent_type} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Name">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_name" })}
+              content={liq_interacts.liq_reagent_name} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Transfer Verb">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_transfer_verb" })}
+              content={liq_interacts.liq_reagent_transfer_verb} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Generation Time">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_nutri_rate" })}
+              icon="clock"
+              content={((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 + " Hours"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Capacity">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_capacity" })}
+              content={liq_interacts.liq_reagent_capacity} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Slosh Sounds">
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_sloshing" })}
+              icon={liq_interacts.liq_sloshing? "toggle-on" : "toggle-off"}
+              selected={liq_interacts.liq_sloshing}
+              content={liq_interacts.liq_sloshing ? "On" : "Off"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Addons">
+            {liq_interacts.liq_reagent_addons.length && liq_interacts.liq_reagent_addons.join(", ") || "None"}
+            <Button
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_addons" })}
+              ml={1}
+              icon="plus" />
+          </LabeledList.Item>
+          <LabeledList.Item label="Purge Liquids">
+            <Button
+              color="red"
+              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_purge" })}
+              content={"Purge Liquids"} />
+          </LabeledList.Item>
+        </LabeledList>
+      ) : "These options only display while liquid settings are turned on."}
+    </Section>
+  );
+};
+
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyLiquidMessages = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    liq_interacts,
+    liq_reagent_gen,
+    liq_reagent_type,
+    liq_reagent_name,
+    liq_reagent_transfer_verb,
+    liq_reagent_nutri_rate,
+    liq_reagent_capacity,
+    liq_sloshing,
+    liq_reagent_addons,
+    show_liq_fullness,
+    liq_messages,
+    liq_msg_toggle1,
+    liq_msg_toggle2,
+    liq_msg_toggle3,
+    liq_msg_toggle4,
+    liq_msg_toggle5,
+    liq_msg1,
+    liq_msg2,
+    liq_msg3,
+    liq_msg4,
+    liq_msg5,
+  } = belly;
+
+  return (
+    <Section title="Liquid Messages" buttons={
+      <Button
+        onClick={() => act("liq_set_messages", { liq_messages: "b_show_liq_fullness" })}
+        icon={show_liq_fullness ? "toggle-on" : "toggle-off"}
+        selected={show_liq_fullness}
+        tooltipPosition="left"
+        tooltip={"These are the settings for belly visibility when involving liquids fullness."}
+        content={show_liq_fullness ? "Messages On" : "Messages Off"} />
+    }>
+      {show_liq_fullness ? (
+        <LabeledList>
+          <LabeledList.Item label="0 to 20%">
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle1" })}
+              icon={liq_messages.liq_msg_toggle1? "toggle-on" : "toggle-off"}
+              selected={liq_messages.liq_msg_toggle1}
+              content={liq_messages.liq_msg_toggle1 ? "On" : "Off"} />
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg1" })}
+              content="Examine Message (0 to 20%)" />
+          </LabeledList.Item>
+          <LabeledList.Item label="20 to 40%">
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle2" })}
+              icon={liq_messages.liq_msg_toggle2? "toggle-on" : "toggle-off"}
+              selected={liq_messages.liq_msg_toggle2}
+              content={liq_messages.liq_msg_toggle2 ? "On" : "Off"} />
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg2" })}
+              content="Examine Message (20 to 40%)" />
+          </LabeledList.Item>
+          <LabeledList.Item label="40 to 60%">
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle3" })}
+              icon={liq_messages.liq_msg_toggle3? "toggle-on" : "toggle-off"}
+              selected={liq_messages.liq_msg_toggle3}
+              content={liq_messages.liq_msg_toggle3 ? "On" : "Off"} />
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg3" })}
+              content="Examine Message (40 to 60%)" />
+          </LabeledList.Item>
+          <LabeledList.Item label="60 to 80%">
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle4" })}
+              icon={liq_messages.liq_msg_toggle4? "toggle-on" : "toggle-off"}
+              selected={liq_messages.liq_msg_toggle4}
+              content={liq_messages.liq_msg_toggle4 ? "On" : "Off"} />
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg4" })}
+              content="Examine Message (60 to 80%)" />
+          </LabeledList.Item>
+          <LabeledList.Item label="80 to 100%">
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle5" })}
+              icon={liq_messages.liq_msg_toggle5? "toggle-on" : "toggle-off"}
+              selected={liq_messages.liq_msg_toggle5}
+              content={liq_messages.liq_msg_toggle5 ? "On" : "Off"} />
+            <Button
+              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg5" })}
+              content="Examine Message (80 to 100%)" />
+          </LabeledList.Item>
+        </LabeledList>
+      ) : "These options only display while liquid examination settings are turned on."}
+    </Section>
   );
 };
 
@@ -1411,115 +1074,6 @@ const VoreContentsPanel = (props, context) => {
   );
 };
 
-const VoreSelectedBellyInteractions = (props, context) => {
-  const { act } = useBackend(context);
-
-  const { belly } = props;
-  const {
-    escapable,
-    interacts,
-  } = belly;
-
-  return (
-    <Section title="Belly Interactions" buttons={
-      <Button
-        onClick={() => act("set_attribute", { attribute: "b_escapable" })}
-        icon={escapable ? "toggle-on" : "toggle-off"}
-        selected={escapable}
-        content={escapable ? "Interactions On" : "Interactions Off"} />
-    }>
-      {escapable ? (
-        <LabeledList>
-          <LabeledList.Item label="Escape Chance">
-            <Button
-              content={interacts.escapechance + "%"}
-              onClick={() => act("set_attribute", { attribute: "b_escapechance" })} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Escape Time">
-            <Button
-              content={interacts.escapetime / 10 + "s"}
-              onClick={() => act("set_attribute", { attribute: "b_escapetime" })} />
-          </LabeledList.Item>
-          <LabeledList.Divider />
-          <LabeledList.Item label="Transfer Chance">
-            <Button
-              content={interacts.transferchance + "%"}
-              onClick={() => act("set_attribute", { attribute: "b_transferchance" })} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Transfer Location">
-            <Button
-              content={interacts.transferlocation ? interacts.transferlocation : "Disabled"}
-              onClick={() => act("set_attribute", { attribute: "b_transferlocation" })} />
-          </LabeledList.Item>
-          <LabeledList.Divider />
-          <LabeledList.Item label="Absorb Chance">
-            <Button
-              content={interacts.absorbchance + "%"}
-              onClick={() => act("set_attribute", { attribute: "b_absorbchance" })} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Digest Chance">
-            <Button
-              content={interacts.digestchance + "%"}
-              onClick={() => act("set_attribute", { attribute: "b_digestchance" })} />
-          </LabeledList.Item>
-        </LabeledList>
-      ) : "These options only display while interactions are turned on."}
-    </Section>
-  );
-};
-
-const VoreSelectedBellyStyles = (props, context) => {
-  const { act } = useBackend(context);
-
-  const { belly } = props;
-  const {
-    belly_fullscreen,
-    possible_fullscreens,
-    disable_hud,
-  } = belly;
-
-  return (
-    <Fragment>
-      <Section title="Vore FX">
-        <LabeledList>
-          <LabeledList.Item label="Disable Prey HUD">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-              icon={disable_hud ? "toggle-on" : "toggle-off"}
-              selected={disable_hud}
-              content={disable_hud ? "Yes" : "No"} />
-          </LabeledList.Item>
-        </LabeledList>
-      </Section>
-      <Section title="Belly Fullscreens">
-        <Button
-          fluid
-          selected={belly_fullscreen === "" || belly_fullscreen === null}
-          onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
-          Disabled
-        </Button>
-        {Object.keys(possible_fullscreens).map(key => (
-          <Button
-            key={key}
-            width="256px"
-            height="256px"
-            selected={key === belly_fullscreen}
-            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-            <Box
-              className={classes([
-                'vore240x240',
-                key,
-              ])}
-              style={{
-                transform: 'translate(0%, 4%)',
-              }} />
-          </Button>
-        ))}
-      </Section>
-    </Fragment>
-  );
-};
-
 const VoreUserPreferences = (props, context) => {
   const { act, data } = useBackend(context);
 
@@ -1549,13 +1103,8 @@ const VoreUserPreferences = (props, context) => {
     show_pictures,
   } = data;
 
-<<<<<<< HEAD
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
-  return tabIndex===4 ? null : (
-||||||| parent of 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
-  return (
-=======
   const preferences = {
     digestion: {
       action: "toggle_digest",
@@ -1664,6 +1213,19 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous Pred Disabled",
       },
     },
+    spawnbelly: {
+      action: "toggle_latejoin_vore",
+      test: latejoin_vore,
+      tooltip: {
+        main: "Toggle late join vore spawnpoint.",
+        enable: "Click here to turn on vorish spawnpoint.",
+        disable: "Click here to turn off vorish spawnpoint.",
+      },
+      content: {
+        enabled: "Vore Spawn Enabled",
+        disabled: "Vore Spawn Disabled",
+      },
+    },
     noisy: {
       action: "toggle_noisy",
       test: noisy,
@@ -1675,6 +1237,19 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: "Hunger Noises Enabled",
         disabled: "Hunger Noises Disabled",
+      },
+    },
+    noisy_full: {
+      action: "toggle_noisy_full",
+      test: noisy_full,
+      tooltip: {
+        main: "Toggle belching while full.",
+        enable: "Click here to turn on belching while full.",
+        disable: "Click here to turn off belching while full.",
+      },
+      content: {
+        enabled: "Belching Enabled",
+        disabled: "Belching Disabled",
       },
     },
     resize: {
@@ -1764,10 +1339,35 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous TF Disabled",
       },
     },
+    liquid_receive: {
+      action: "toggle_liq_rec",
+      test: liq_rec,
+      tooltip: {
+        main: "This button is for allowing or preventing others from giving you liquids from their vore organs.",
+        enable: "Click here to allow receiving liquids.",
+        disable: "Click here to prevent receiving liquids.",
+      },
+      content: {
+        enabled: "Receiving Liquids Allowed",
+        disabled: "Do Not Allow Receiving Liquids",
+      },
+    },
+    liquid_give: {
+      action: "toggle_liq_giv",
+      test: liq_giv,
+      tooltip: {
+        main: "This button is for allowing or preventing others from taking liquids from your vore organs.",
+        enable: "Click here to allow taking liquids.",
+        disable: "Click here to prevent taking liquids.",
+      },
+      content: {
+        enabled: "Taking Liquids Allowed",
+        disabled: "Do Not Allow Taking Liquids",
+      },
+    },
   };
 
-  return (
->>>>>>> 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
+  return tabIndex===4 ? null : (
     <Section title="Preferences" buttons={
       <Button icon="eye" selected={show_pictures} onClick={() => act("show_pictures")}>
         Contents Preference: {show_pictures ? "Show Pictures" : "Show List"}
@@ -1799,78 +1399,16 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
-<<<<<<< HEAD
-          <Button
-            onClick={() => act("toggle_latejoin_vore")}
-            icon={latejoin_vore ? "toggle-on" : "toggle-off"}
-            selected={latejoin_vore}
-            fluid
-            tooltip={"Toggle late join vore spawnpoint. "
-            + (latejoin_vore
-              ? "Click here to turn off vorish spawnpoint."
-              : "Click here to turn on vorish spawnpoint.")}
-            content={latejoin_vore ? "Vore Spawn Enabled" : "Vore Spawn Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_noisy")}
-            icon={noisy ? "toggle-on" : "toggle-off"}
-            selected={noisy}
-            fluid
-            tooltip={"Toggle audible hunger noises. "
-            + (noisy
-              ? "Click here to turn off hunger noises."
-              : "Click here to turn on hunger noises.")}
-            content={noisy ? "Hunger Noises Enabled" : "Hunger Noises Disabled"} />
-||||||| parent of 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
-          <Button
-            onClick={() => act("toggle_noisy")}
-            icon={noisy ? "toggle-on" : "toggle-off"}
-            selected={noisy}
-            fluid
-            tooltip={"Toggle audible hunger noises. "
-            + (noisy
-              ? "Click here to turn off hunger noises."
-              : "Click here to turn on hunger noises.")}
-            content={noisy ? "Hunger Noises Enabled" : "Hunger Noises Disabled"} />
-=======
           <VoreUserPreferenceItem spec={preferences.noisy} />
->>>>>>> 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
         </Flex.Item>
         <Flex.Item basis="32%">
-<<<<<<< HEAD
-          <Button
-            onClick={() => act("toggle_noisy_full")}
-            icon={noisy_full ? "toggle-on" : "toggle-off"}
-            selected={noisy_full}
-            fluid
-            tooltip={"Toggle belching while full. "
-            + (noisy_full
-              ? "Click here to turn off belching when full."
-              : "Click here to turn on belching when full.")}
-            content={noisy_full ? "Belching Enabled" : "Belching Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.noisy_full} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_resize")}
-            icon={resizable ? "toggle-on" : "toggle-off"}
-            selected={resizable}
-            fluid
-            tooltip={"This button is to toggle your ability to be resized by others. "
-            + (resizable ? "Click here to prevent being resized." : "Click here to allow being resized.")}
-            content={resizable ? "Resizing Allowed" : "No Resizing"} />
-||||||| parent of 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
-          <Button
-            onClick={() => act("toggle_resize")}
-            icon={resizable ? "toggle-on" : "toggle-off"}
-            selected={resizable}
-            fluid
-            tooltip={"This button is to toggle your ability to be resized by others. "
-            + (resizable ? "Click here to prevent being resized." : "Click here to allow being resized.")}
-            content={resizable ? "Resizing Allowed" : "No Resizing"} />
-=======
           <VoreUserPreferenceItem spec={preferences.resize} />
->>>>>>> 31547d736e... Merge pull request #11684 from TheGreatKitsune/master
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
@@ -1902,26 +1440,10 @@ const VoreUserPreferences = (props, context) => {
             onClick={() => act("setsmell")} />
         </Flex.Item>
         <Flex.Item basis="49%">
-          <Button
-            onClick={() => act("toggle_liq_rec")}
-            icon={liq_rec ? "toggle-on" : "toggle-off"}
-            selected={liq_rec}
-            fluid
-            tooltipPosition="top"
-            tooltip={"This button is for allowing or preventing others from giving you liquids from their vore organs."
-            + (liq_rec ? " Click here to prevent receiving liquids." : " Click here to allow receiving liquids.")}
-            content={liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"} />
+          <VoreUserPreferenceItem spec={preferences.liquid_receive} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="49%">
-          <Button
-            onClick={() => act("toggle_liq_giv")}
-            icon={liq_giv ? "toggle-on" : "toggle-off"}
-            selected={liq_giv}
-            fluid
-            tooltipPosition="top"
-            tooltip={"This button is for allowing or preventing others from taking liquids from your vore organs."
-            + (liq_giv ? " Click here to prevent taking liquids." : " Click here to allow taking liquids.")}
-            content={liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"} />
+          <VoreUserPreferenceItem spec={preferences.liquid_give} tooltipPosition="top" />
         </Flex.Item>
       </Flex>
       <Section>
