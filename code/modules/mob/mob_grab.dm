@@ -178,9 +178,22 @@
 		//TFF 8/1/20 CHOMPStation Addition Start - Re-add sitting on one's head.
 		if(BP_HEAD)
 			if(force_down)
+<<<<<<< HEAD
 				if(announce)
 					assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s head!</span>")
 		//CHOMPStation Addition End
+||||||| parent of 957bc91e5d... Merge pull request #11707 from Hatterhat/violence
+				if(announce)
+					assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s face!</span>")
+		//VOREStation Edit End
+
+=======
+				if(user.a_intent == I_HELP)
+					if(announce)
+						assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s face!</span>")
+		//VOREStation Edit End
+
+>>>>>>> 957bc91e5d... Merge pull request #11707 from Hatterhat/violence
 /obj/item/weapon/grab/attack_self()
 	return s_click(hud)
 
