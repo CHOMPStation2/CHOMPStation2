@@ -420,54 +420,6 @@
 /obj/item/borg/upgrade/modkit/damage/modify_projectile(obj/item/projectile/kinetic/K)
 	K.damage += modifier
 
-
-<<<<<<< HEAD
- //Cooldown - CHOMPstation re-addition start
-/obj/item/borg/upgrade/modkit/cooldown
-	name = "cooldown decrease"
-	desc = "Decreases the cooldown of a kinetic accelerator."
-	modifier = 2.5
-
-/obj/item/borg/upgrade/modkit/cooldown/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
-	. = ..()
-	if(.)
-		KA.fire_delay -= modifier
-
-/obj/item/borg/upgrade/modkit/cooldown/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
-	KA.fire_delay += modifier
-	..()
-
-//Cooldown - CHOMPstation re-addition end
-/obj/item/borg/upgrade/modkit/efficiency
-	name = "energy efficiency"
-	desc = "Decreases the energy use of a kinetic accelerator."
-	modifier = 20
-
-/obj/item/borg/upgrade/modkit/efficiency/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
-||||||| parent of 226802ff73... Merge pull request #11701 from Hatterhat/tg-ka
-// //Cooldown
-// /obj/item/borg/upgrade/modkit/cooldown
-// 	name = "cooldown decrease"
-// 	desc = "Decreases the cooldown of a kinetic accelerator."
-// 	modifier = 2.5
-
-// /obj/item/borg/upgrade/modkit/cooldown/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
-// 	. = ..()
-// 	if(.)
-// 		KA.overheat_time -= modifier
-
-// /obj/item/borg/upgrade/modkit/cooldown/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
-// 	KA.overheat_time += modifier
-// 	..()
-
-//Cooldown
-/obj/item/borg/upgrade/modkit/efficiency
-	name = "energy efficiency"
-	desc = "Decreases the energy use of a kinetic accelerator."
-	modifier = 20
-
-/obj/item/borg/upgrade/modkit/efficiency/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
-=======
 //Cooldown
 /obj/item/borg/upgrade/modkit/cooldown
 	name = "cooldown decrease"
@@ -477,7 +429,6 @@
 	var/decreased
 
 /obj/item/borg/upgrade/modkit/cooldown/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
->>>>>>> 226802ff73... Merge pull request #11701 from Hatterhat/tg-ka
 	. = ..()
 	if(.)
 		var/old = KA.overheat_time
