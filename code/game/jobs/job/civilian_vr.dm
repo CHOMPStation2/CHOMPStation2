@@ -221,7 +221,7 @@
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
-						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur) //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
+						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
 						"Artist" = /datum/alt_title/artist)
 
 // Entertainer Alt Titles
