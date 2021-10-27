@@ -27,6 +27,7 @@
 	charge = 0
 	update_icon()
 
+<<<<<<< HEAD
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
@@ -69,6 +70,12 @@
 	update_icon()
 //CHOMP Add end
 
+||||||| parent of 226802ff73... Merge pull request #11701 from Hatterhat/tg-ka
+=======
+/obj/item/weapon/cell/device/weapon/empproof
+	emp_proof = TRUE
+
+>>>>>>> 226802ff73... Merge pull request #11701 from Hatterhat/tg-ka
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
