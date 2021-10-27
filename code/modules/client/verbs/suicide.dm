@@ -92,12 +92,6 @@
 			M.show_message("<span class='notice'>[src] flashes a message across its screen, \"Wiping core files. Please acquire a new personality to continue using pAI device functions.\"</span>", 3, "<span class='notice'>[src] bleeps electronically.</span>", 2)
 		death(0)
 	else
-<<<<<<< HEAD
 		to_chat(src, "Aborting suicide attempt.")
 
 */
-||||||| parent of 44eb5dd30b... Merge pull request #11608 from VOREStation/upstream-merge-8304
-		to_chat(src, "Aborting suicide attempt.")
-=======
-		to_chat(src, "Aborting suicide attempt.")
->>>>>>> 44eb5dd30b... Merge pull request #11608 from VOREStation/upstream-merge-8304
