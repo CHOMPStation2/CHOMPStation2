@@ -831,7 +831,12 @@
 #include "code\game\machinery\ai_slipper.dm"
 #include "code\game\machinery\air_alarm.dm"
 #include "code\game\machinery\airconditioner_vr.dm"
+<<<<<<< HEAD
 #include "code\game\machinery\airconditioner_yw.dm"
+||||||| parent of 3b5fb11bd1... Merge pull request #11663 from KillianKirilenko/kk-arfg
+=======
+#include "code\game\machinery\atm_ret_field.dm"
+>>>>>>> 3b5fb11bd1... Merge pull request #11663 from KillianKirilenko/kk-arfg
 #include "code\game\machinery\atmo_control.dm"
 #include "code\game\machinery\autolathe.dm"
 #include "code\game\machinery\Beacon.dm"
