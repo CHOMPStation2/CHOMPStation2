@@ -219,29 +219,9 @@ var/list/all_maps = list()
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.
 /datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
-<<<<<<< HEAD
-	//Overmap behavior
-	if(use_overmap)
-		//Get what sector we're in
-		var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
-		if(!istype(O))
-			//Not in a sector, just the passed zlevel
-			return list(srcz)
-
-||||||| parent of 263eae03f9... Merge pull request #11639 from VOREStation/upstream-merge-8279
-	//Overmap behavior
-	if(use_overmap)
-		//Get what sector we're in
-		var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
-		if(!istype(O))
-			//Anything in multiz then (or just themselves)
-			return GetConnectedZlevels(srcz)
-
-=======
 	//Get what sector we're in
 	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 	if(istype(O))
->>>>>>> 263eae03f9... Merge pull request #11639 from VOREStation/upstream-merge-8279
 		//Just the sector we're in
 		if(om_range == -1)
 			return O.map_z.Copy()
