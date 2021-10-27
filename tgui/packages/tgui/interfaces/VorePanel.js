@@ -340,9 +340,6 @@ const VoreSelectedBelly = (props, context) => {
   );
 };
 
-/**
- * Subtemplate of VoreSelectedBelly
- */
 const VoreSelectedBellyControls = (props, context) => {
   const { act } = useBackend(context);
 
@@ -449,9 +446,6 @@ const VoreSelectedBellyControls = (props, context) => {
   );
 };
 
-/**
- * Subtemplate of VoreSelectedBelly
- */
 const VoreSelectedBellyOptions = (props, context) => {
   const { act } = useBackend(context);
 
@@ -632,9 +626,80 @@ const VoreSelectedBellyOptions = (props, context) => {
   );
 };
 
-/**
- * Subtemplate of VoreSelectedBelly
- */
+const VoreContentsPanel = (props, context) => {
+  const { act, data } = useBackend(context);
+  const {
+    show_pictures,
+  } = data;
+  const {
+    contents,
+    belly,
+    outside = false,
+  } = props;
+
+  return (
+    <Fragment>
+      {outside && (
+        <Button
+          textAlign="center"
+          fluid
+          mb={1}
+          onClick={() => act("pick_from_outside", { "pickall": true })}>
+          All
+        </Button>
+      ) || null}
+      {show_pictures && (
+        <Flex wrap="wrap" justify="center" align="center">
+          {contents.map(thing => (
+            <Flex.Item key={thing.name} basis="33%">
+              <Button
+                width="64px"
+                color={thing.absorbed ? "purple" : stats[thing.stat]}
+                style={{
+                  'vertical-align': 'middle',
+                  'margin-right': '5px',
+                  'border-radius': '20px',
+                }}
+                onClick={() => act(thing.outside ? "pick_from_outside" : "pick_from_inside", {
+                  "pick": thing.ref,
+                  "belly": belly,
+                })}>
+                <img
+                  src={"data:image/jpeg;base64, " + thing.icon}
+                  width="64px"
+                  height="64px"
+                  style={{
+                    '-ms-interpolation-mode': 'nearest-neighbor',
+                    'margin-left': '-5px',
+                  }} />
+              </Button>
+              {thing.name}
+            </Flex.Item>
+          ))}
+        </Flex>
+      ) || (
+        <LabeledList>
+          {contents.map(thing => (
+            <LabeledList.Item key={thing.ref} label={thing.name}>
+              <Button
+                fluid
+                mt={-1}
+                mb={-1}
+                color={thing.absorbed ? "purple" : stats[thing.stat]}
+                onClick={() => act(thing.outside ? "pick_from_outside" : "pick_from_inside", {
+                  "pick": thing.ref,
+                  "belly": belly,
+                })}>
+                Interact
+              </Button>
+            </LabeledList.Item>
+          ))}
+        </LabeledList>
+      )}
+    </Fragment>
+  );
+};
+
 const VoreSelectedBellyInteractions = (props, context) => {
   const { act } = useBackend(context);
 
@@ -723,9 +788,6 @@ const VoreSelectedBellyInteractions = (props, context) => {
   );
 };
 
-/**
- * Subtemplate of VoreSelectedBelly
- */
 const VoreSelectedBellyStyles = (props, context) => {
   const { act } = useBackend(context);
 
@@ -802,9 +864,6 @@ const VoreSelectedBellyStyles = (props, context) => {
   );
 };
 
-/**
- * Subtemplate of VoreSelectedBelly
- */
 const VoreSelectedBellyLiquidOptions = (props, context) => {
   const { act } = useBackend(context);
 
@@ -901,9 +960,6 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
   );
 };
 
-/**
- * Subtemplate of VoreSelectedBelly
- */
 const VoreSelectedBellyLiquidMessages = (props, context) => {
   const { act } = useBackend(context);
 
@@ -1000,79 +1056,6 @@ const VoreSelectedBellyLiquidMessages = (props, context) => {
   );
 };
 
-const VoreContentsPanel = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    show_pictures,
-  } = data;
-  const {
-    contents,
-    belly,
-    outside = false,
-  } = props;
-
-  return (
-    <Fragment>
-      {outside && (
-        <Button
-          textAlign="center"
-          fluid
-          mb={1}
-          onClick={() => act("pick_from_outside", { "pickall": true })}>
-          All
-        </Button>
-      ) || null}
-      {show_pictures && (
-        <Flex wrap="wrap" justify="center" align="center">
-          {contents.map(thing => (
-            <Flex.Item key={thing.name} basis="33%">
-              <Button
-                width="64px"
-                color={thing.absorbed ? "purple" : stats[thing.stat]}
-                style={{
-                  'vertical-align': 'middle',
-                  'margin-right': '5px',
-                  'border-radius': '20px',
-                }}
-                onClick={() => act(thing.outside ? "pick_from_outside" : "pick_from_inside", {
-                  "pick": thing.ref,
-                  "belly": belly,
-                })}>
-                <img
-                  src={"data:image/jpeg;base64, " + thing.icon}
-                  width="64px"
-                  height="64px"
-                  style={{
-                    '-ms-interpolation-mode': 'nearest-neighbor',
-                    'margin-left': '-5px',
-                  }} />
-              </Button>
-              {thing.name}
-            </Flex.Item>
-          ))}
-        </Flex>
-      ) || (
-        <LabeledList>
-          {contents.map(thing => (
-            <LabeledList.Item key={thing.ref} label={thing.name}>
-              <Button
-                fluid
-                mt={-1}
-                mb={-1}
-                color={thing.absorbed ? "purple" : stats[thing.stat]}
-                onClick={() => act(thing.outside ? "pick_from_outside" : "pick_from_inside", {
-                  "pick": thing.ref,
-                  "belly": belly,
-                })}>
-                Interact
-              </Button>
-            </LabeledList.Item>
-          ))}
-        </LabeledList>
-      )}
-    </Fragment>
-  );
-};
 
 const VoreUserPreferences = (props, context) => {
   const { act, data } = useBackend(context);
