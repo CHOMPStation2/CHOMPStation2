@@ -300,12 +300,8 @@
 	desc = "A special mechanical module made to store, sort, and apply standard machine parts."
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "RPED"
-<<<<<<< HEAD
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi') //YW add - RPED sprite
-||||||| parent of a027154001... Merge pull request #11665 from Hatterhat/brrrrped
-=======
 	item_state = "RPED"
->>>>>>> a027154001... Merge pull request #11665 from Hatterhat/brrrrped
 	w_class = ITEMSIZE_HUGE
 	can_hold = list(/obj/item/weapon/stock_parts)
 	storage_slots = 50
@@ -334,26 +330,9 @@
 
 /obj/item/weapon/storage/part_replacer/adv
 	name = "advanced rapid part exchange device"
-<<<<<<< HEAD
-	desc = "A special mechanical module made to store, sort, and apply standard machine parts.  This one has a greatly upgraded storage capacity."
-	icon_state = "RPED"
-	w_class = ITEMSIZE_HUGE
-	//YAWN Changes
-	can_hold = list(
-	/obj/item/weapon/cell,
-	/obj/item/weapon/stock_parts,
-	/obj/item/weapon/reagent_containers/glass/beaker)
-	//End of YAWN Changes
-||||||| parent of a027154001... Merge pull request #11665 from Hatterhat/brrrrped
-	desc = "A special mechanical module made to store, sort, and apply standard machine parts.  This one has a greatly upgraded storage capacity."
-	icon_state = "RPED"
-	w_class = ITEMSIZE_HUGE
-	can_hold = list(/obj/item/weapon/stock_parts)
-=======
 	desc = "A special mechanical module made to store, sort, and apply standard machine parts. This one has a greatly upgraded storage capacity, \
 	and the ability to hold beakers."
 	can_hold = list(/obj/item/weapon/stock_parts, /obj/item/weapon/reagent_containers/glass/beaker)
->>>>>>> a027154001... Merge pull request #11665 from Hatterhat/brrrrped
 	storage_slots = 200
 	max_storage_space = 400
 
