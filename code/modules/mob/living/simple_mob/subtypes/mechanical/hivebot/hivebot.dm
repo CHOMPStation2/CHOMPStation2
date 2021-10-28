@@ -54,13 +54,7 @@
 	pointblank = TRUE
 	conserve_ammo = TRUE
 	firing_lanes = TRUE
-<<<<<<< HEAD
-	can_flee = FALSE // Fearless dumb machines.
-||||||| parent of e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
-	can_flee = FALSE // Fearless dumb machines.
-=======
 	can_flee = FALSE // Fearless dumb machines.
 
 /decl/mob_organ_names/hivebot
 	hit_zones = list("central chassis", "positioning servo", "head", "sensor suite", "manipulator arm", "shoulder weapon mount", "weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")
->>>>>>> e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
