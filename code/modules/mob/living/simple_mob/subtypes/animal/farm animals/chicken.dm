@@ -161,16 +161,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	speak = list("Cherp.","Cherp?","Chirrup.","Cheep!")
 	emote_hear = list("cheeps")
 	emote_see = list("pecks at the ground","flaps its tiny wings")
-<<<<<<< HEAD
-
-//YW Addition
-/mob/living/simple_mob/animal/passive/chicken/clucky
-	name = "Commander Clucky"
-	real_name = "Commander Clucky"
-	desc = "It's Commander Clucky!"
-||||||| parent of e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
-=======
 
 /decl/mob_organ_names/chicken
 	hit_zones = list("head", "body", "left wing", "right wing", "left leg", "right leg", "tendies")
->>>>>>> e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
