@@ -155,13 +155,7 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation
 	name = "anti-personnel artillery hivebot"
 	desc = "A large robot capable of delivering fragmentation shells to rip apart their fleshy enemies."
-<<<<<<< HEAD
-	projectiletype = /obj/item/projectile/arc/fragmentation
-||||||| parent of e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
-	projectiletype = /obj/item/projectile/arc/fragmentation
-=======
 	projectiletype = /obj/item/projectile/arc/fragmentation
 
 /decl/mob_organ_names/hivebotsiege
 	hit_zones = list("central chassis", "armor plating", "reinforced positioning servo", "head", "sensor suite", "manipulator arm", "heavy weapons mount", "advanced weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")
->>>>>>> e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
