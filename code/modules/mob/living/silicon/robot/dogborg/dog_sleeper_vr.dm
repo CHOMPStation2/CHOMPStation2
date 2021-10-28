@@ -612,7 +612,6 @@
 						for(var/tech in tech_item.origin_tech)
 							files.UpdateTech(tech, tech_item.origin_tech[tech])
 							synced = FALSE
-						drain(-50 * digested)
 					if(volume)
 						water.add_charge(volume)
 					if(recycles && T.matter)
