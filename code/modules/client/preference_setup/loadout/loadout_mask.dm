@@ -30,32 +30,6 @@
 /datum/gear/mask/plaguedoctor2
 	display_name = "golden plague doctor's mask"
 	path = /obj/item/clothing/mask/gas/plaguedoctor/gold
-<<<<<<< HEAD
-	cost = 3 ///Because it functions as a gas mask, and therefore has a mechanical advantage.
-||||||| parent of 23daa38dfa... Merge pull request #11716 from GhostActual/straw_accessories
-	cost = 3 ///Because it functions as a gas mask, and therefore has a mechanical advantage.
-
-/datum/gear/mask/papermask
-	display_name = "paper mask"
-	path = /obj/item/clothing/mask/paper
-
-/datum/gear/mask/emotionalmask
-	display_name = "emotional mask"
-	path = /obj/item/clothing/mask/emotions
-
-/datum/gear/mask/gaiter
-	display_name = "neck gaiter selection"
-	path = /obj/item/clothing/mask/gaiter
-	cost = 1
-
-/datum/gear/mask/gaiter/New()
-	..()
-	var/list/gaiters = list()
-	for(var/gaiter in typesof(/obj/item/clothing/mask/gaiter))
-		var/obj/item/clothing/mask/gaiter_type = gaiter
-		gaiters[initial(gaiter_type.name)] = gaiter_type
-	gear_tweaks += new/datum/gear_tweak/path(sortTim(gaiters, /proc/cmp_text_asc))
-=======
 	cost = 3 ///Because it functions as a gas mask, and therefore has a mechanical advantage.
 
 /datum/gear/mask/mouthwheat
@@ -82,4 +56,3 @@
 		var/obj/item/clothing/mask/gaiter_type = gaiter
 		gaiters[initial(gaiter_type.name)] = gaiter_type
 	gear_tweaks += new/datum/gear_tweak/path(sortTim(gaiters, /proc/cmp_text_asc))
->>>>>>> 23daa38dfa... Merge pull request #11716 from GhostActual/straw_accessories
