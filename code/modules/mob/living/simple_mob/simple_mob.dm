@@ -178,18 +178,14 @@
 	if(has_eye_glow)
 		add_eyes()
 
-<<<<<<< HEAD
 	if(!IsAdvancedToolUser())	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
 		verbs |= /mob/living/simple_mob/proc/animal_nom
 		verbs |= /mob/living/proc/shred_limb
 		verbs |= /mob/living/simple_mob/proc/nutrition_heal
 
-||||||| parent of e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
-=======
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
 
->>>>>>> e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
 	return ..()
 
 /mob/living/simple_mob/Destroy()
