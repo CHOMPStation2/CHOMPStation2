@@ -81,13 +81,7 @@
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
 	set category = "Abilities"
 
-<<<<<<< HEAD
-	add_modifier(/datum/modifier/berserk, 30 SECONDS)
-||||||| parent of e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
-	add_modifier(/datum/modifier/berserk, 30 SECONDS)
-=======
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)
 
 /decl/mob_organ_names/savik
 	hit_zones = list("head", "torso", "left foreleg", "right foreleg", "left hind leg", "right hind leg", "right bone plate", "left bone plate", "tail", "left claw", "right claw")
->>>>>>> e5346a3920... Merge pull request #11675 from VOREStation/upstream-merge-8250
