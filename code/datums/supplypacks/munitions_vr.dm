@@ -17,4 +17,50 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "phaser handbow crate"
+<<<<<<< HEAD
 	access = access_explorer
+||||||| parent of 2e86baaf9a... Merge pull request #11727 from KillianKirilenko/kk-cargo
+	access = access_explorer
+=======
+	access = access_explorer
+
+/datum/supply_pack/munitions/ofd_charge_emp
+	name = "OFD Charge - EMP"
+	contains = list(
+			/obj/structure/ship_munition/disperser_charge/emp
+			)
+	cost = 35
+	containertype = /obj/structure/closet/crate/large/secure/heph
+	containername = "EMP disperser charge crate"
+	access = access_security
+
+/datum/supply_pack/munitions/ofd_charge_explosive
+	name = "OFD Charge - Explosive"
+	contains = list(
+			/obj/structure/ship_munition/disperser_charge/explosive
+			)
+	cost = 35
+	containertype = /obj/structure/closet/crate/large/secure/heph
+	containername = "Explosive disperser charge crate"
+	access = access_security
+
+/datum/supply_pack/munitions/ofd_charge_incendiary
+	name = "OFD Charge - Incendiary"
+	contains = list(
+			/obj/structure/ship_munition/disperser_charge/fire
+			)
+	cost = 35
+	containertype = /obj/structure/closet/crate/large/secure/heph
+	containername = "Incendiary disperser charge crate"
+	access = access_security
+
+/datum/supply_pack/munitions/ofd_charge_mining
+	name = "OFD Charge - Mining"
+	contains = list(
+			/obj/structure/ship_munition/disperser_charge/mining
+			)
+	cost = 35
+	containertype = /obj/structure/closet/crate/large/secure/heph
+	containername = "Mining disperser charge crate"
+	access = access_security
+>>>>>>> 2e86baaf9a... Merge pull request #11727 from KillianKirilenko/kk-cargo
