@@ -364,6 +364,7 @@ var/global/list/latejoin_tram   = list()
 
 	return ..(user)
 
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
 	req_one_access = list(access_explorer,access_armory)
@@ -375,6 +376,20 @@ var/global/list/latejoin_tram   = list()
 	for(var/i = 1 to 2)
 		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
 
+||||||| parent of 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+/obj/structure/closet/secure_closet/guncabinet/excursion
+	name = "expedition weaponry cabinet"
+	req_one_access = list(access_explorer,access_armory)
+
+/obj/structure/closet/secure_closet/guncabinet/excursion/New()
+	..()
+	for(var/i = 1 to 2)
+		new /obj/item/weapon/gun/energy/locked/frontier(src)
+	for(var/i = 1 to 2)
+		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
+
+=======
+>>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
 // Used at centcomm for the elevator
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram
