@@ -110,18 +110,12 @@
 	icon_colour = "#0099cc" // Cyan-ish
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_BIO = 2)
 	stack_type = /obj/item/stack/material/log/sif
-<<<<<<< HEAD
-	
-||||||| parent of b4ce0442cd... Merge pull request #11722 from KillianKirilenko/kk-misc
-
-=======
 
 /datum/material/wood/log/hard
 	name = MAT_HARDLOG
 	icon_colour = "#6f432a"
 	stack_type = /obj/item/stack/material/log/hard
 
->>>>>>> b4ce0442cd... Merge pull request #11722 from KillianKirilenko/kk-misc
 //VOREStation Addition Start
 /datum/material/wood/stick
 	name = "wooden stick"
