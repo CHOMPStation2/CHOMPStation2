@@ -17,11 +17,6 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "phaser handbow crate"
-<<<<<<< HEAD
-	access = access_explorer
-||||||| parent of 2e86baaf9a... Merge pull request #11727 from KillianKirilenko/kk-cargo
-	access = access_explorer
-=======
 	access = access_explorer
 
 /datum/supply_pack/munitions/ofd_charge_emp
@@ -63,4 +58,3 @@
 	containertype = /obj/structure/closet/crate/large/secure/heph
 	containername = "Mining disperser charge crate"
 	access = access_security
->>>>>>> 2e86baaf9a... Merge pull request #11727 from KillianKirilenko/kk-cargo
