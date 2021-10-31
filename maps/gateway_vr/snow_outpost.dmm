@@ -2637,24 +2637,8 @@
 /area/space)
 "Tb" = (
 /obj/structure/flora/ausbushes/grassybush,
-<<<<<<< HEAD
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/space)
-||||||| parent of 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
-/turf/simulated/floor/snow/snow2,
-/area/awaymission/snow_outpost/dark)
-"Uy" = (
-/obj/effect/overmap/visitable/sector/tether_gateway/snowoutpost,
-/turf/simulated/mineral/ignore_mapgen,
-/area/awaymission/snow_outpost/dark)
-=======
-/turf/simulated/floor/snow/snow2,
-/area/awaymission/snow_outpost/dark)
-"Uy" = (
-/obj/effect/overmap/visitable/sector/common_gateway/snowoutpost,
-/turf/simulated/mineral/ignore_mapgen,
-/area/awaymission/snow_outpost/dark)
->>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
 "Vk" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/space)
