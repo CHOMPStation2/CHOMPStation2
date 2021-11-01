@@ -413,6 +413,10 @@
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
+"aV" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portaft)
 "aW" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -1243,6 +1247,7 @@
 /obj/effect/landmark{
 	name = "morphspawn"
 	},
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portaft)
 "cW" = (
@@ -4519,6 +4524,7 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/briefingroom)
 "kE" = (
@@ -10325,6 +10331,9 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/recharger{
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "xL" = (
@@ -11967,6 +11976,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
 /area/engineering/storage)
 "BB" = (
@@ -16095,6 +16105,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/paint_palette,
+/obj/item/paint_palette,
+/obj/item/paint_brush,
+/obj/item/paint_brush,
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "KD" = (
@@ -18091,6 +18105,9 @@
 /obj/structure/table/woodentable,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/recharger{
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
@@ -20951,6 +20968,7 @@
 	req_one_access = list(19);
 	stripe_color = "#f7d35c"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/briefingroom)
 "VG" = (
@@ -22332,6 +22350,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/eris/dark/cargo,
+/area/crew_quarters/recreation_area)
+"YO" = (
+/obj/structure/table/gamblingtable,
+/obj/machinery/recharger{
+	pixel_y = 5
+	},
+/turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "YP" = (
 /obj/structure/disposalpipe/junction{
@@ -29908,7 +29933,7 @@ kg
 RZ
 dC
 cV
-iz
+aV
 qC
 zv
 Xm
@@ -32716,7 +32741,7 @@ JL
 nt
 BS
 Dl
-UX
+YO
 BK
 Fw
 vS
