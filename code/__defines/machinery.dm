@@ -66,10 +66,18 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_PRISON "Prison"
 #define NETWORK_SECURITY "Security"
 #define NETWORK_INTERROGATION "Interrogation"
+<<<<<<< HEAD
 #define NETWORK_TELECOM "Tcomms"
 #define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
 #define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
 #define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
+||||||| parent of 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
+#define NETWORK_TELECOM "Tcomms"
+=======
+#define NETWORK_TELECOM "Telecomms"
+#define NETWORK_EXPLORATION "Exploration"
+#define NETWORK_XENOBIO "Xenobiology"
+>>>>>>> 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
 #define NETWORK_THUNDER "Entertainment"		//VOREStation Edit: broader definition
 #define NETWORK_COMMUNICATORS "Communicators"
 #define NETWORK_ALARM_ATMOS "Atmosphere Alarms"
