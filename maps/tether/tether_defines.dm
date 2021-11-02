@@ -24,10 +24,7 @@
 
 //Camera networks
 #define NETWORK_TETHER "Tether"
-#define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
 #define NETWORK_OUTSIDE "Outside"
-#define NETWORK_EXPLORATION "Exploration"
-#define NETWORK_XENOBIO "Xenobiology"
 
 /datum/map/tether/New()
 	..()
@@ -239,7 +236,7 @@
 [i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
 [b]Notice[/b]: NanoTrasen Base, authorized personnel only"}
 	base = 1
-	
+
 	icon = 'icons/obj/overmap_vr.dmi'
 	icon_state = "virgo3b"
 
@@ -301,7 +298,7 @@
 /obj/effect/overmap/visitable/sector/virgo3b/generate_skybox(zlevel)
 	var/static/image/bigone = image(icon = 'icons/skybox/virgo3b.dmi', icon_state = "large")
 	var/static/image/smallone = image(icon = 'icons/skybox/virgo3b.dmi', icon_state = "small")
-	
+
 	if(zlevel == Z_LEVEL_TRANSIT)
 		return bigone
 	else
