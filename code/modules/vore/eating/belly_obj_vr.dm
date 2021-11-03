@@ -292,6 +292,8 @@
 			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
 			I.add_overlay(gurgled_overlays[I.gurgled_color])
 		if(I.d_mult < 1)
+			if(I.d_stage_overlay)
+				I.cut_overlay(I.d_stage_overlay)
 			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
 			temp.filters += filter(type = "alpha", icon = icon(I.icon, I.icon_state))
 			I.d_stage_overlay = temp
