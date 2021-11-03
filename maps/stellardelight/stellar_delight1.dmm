@@ -2232,6 +2232,18 @@
 /obj/machinery/mineral/equipment_vendor/survey,
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/explobriefing)
+"eL" = (
+/obj/structure/mirror{
+	pixel_y = 38
+	},
+/obj/structure/sink{
+	pixel_y = 20
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/toilet)
 "eM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -2760,6 +2772,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
+"fU" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/angled/open{
+	dir = 2;
+	id = "securitylockdown"
+	},
+/obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/tiled/dark,
+/area/security/lobby)
 "fV" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark,
@@ -5031,6 +5055,11 @@
 "kM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/closet/emcloset,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck1/starboard)
 "kN" = (
@@ -5842,6 +5871,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/aft)
+"ms" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/port)
 "mt" = (
 /obj/structure/cable/green{
 	color = "#42038a";
@@ -9924,9 +9965,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "vh" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck1/starboard)
 "vi" = (
@@ -15339,8 +15383,8 @@
 	},
 /obj/structure/disposalpipe/sortjunction{
 	dir = 4;
-	name = "Bar";
-	sortType = "Bar"
+	name = "Security";
+	sortType = "Security"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/portcent)
@@ -18671,7 +18715,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/junction,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -19095,6 +19138,13 @@
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
 /area/stellardelight/deck1/oreprocessing)
+"Pt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/port)
 "Pu" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/exploration)
@@ -19780,7 +19830,7 @@
 	door_color = "#2e2e2e";
 	fill_color = "#2e2e2e";
 	name = "Chapel Office";
-	req_access = list(26);
+	req_access = list(22);
 	stripe_color = "#deaf43"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -20951,6 +21001,16 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck1/starboard)
+"Tw" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	plane = -34
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/stellardelight/deck1/port)
 "Tx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -21797,9 +21857,11 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/prison/cell_block)
 "Vf" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = 24
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/wall{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck1/starboard)
@@ -21999,6 +22061,9 @@
 /area/stellardelight/deck1/dorms/dorm7)
 "Vw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck1/port)
 "Vx" = (
@@ -22567,6 +22632,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet,
 /area/stellardelight/deck1/dorms/dorm5)
+"WF" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/port)
 "WG" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -31926,8 +32006,14 @@ SG
 IY
 XP
 IY
+<<<<<<< HEAD
 lQ
 ob
+||||||| parent of 2bf0e4da8e... Merge pull request #11756 from Very-Soft/misctweaks
+up
+=======
+eL
+>>>>>>> 2bf0e4da8e... Merge pull request #11756 from Very-Soft/misctweaks
 SX
 it
 zP
@@ -32475,7 +32561,7 @@ Nh
 BU
 qo
 uA
-HW
+Tw
 IA
 Hi
 Dq
@@ -32759,7 +32845,7 @@ Ou
 ls
 ew
 AG
-CZ
+ms
 CZ
 CZ
 hk
@@ -32900,8 +32986,8 @@ hL
 rb
 hL
 YT
-Rk
-YT
+WF
+Pt
 SL
 YT
 Je
@@ -34023,7 +34109,13 @@ GT
 ya
 mu
 NN
+<<<<<<< HEAD
 jy
+||||||| parent of 2bf0e4da8e... Merge pull request #11756 from Very-Soft/misctweaks
+gR
+=======
+fU
+>>>>>>> 2bf0e4da8e... Merge pull request #11756 from Very-Soft/misctweaks
 mO
 Ha
 df
