@@ -1407,6 +1407,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
+"fP" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portaft)
 "fS" = (
 /turf/simulated/wall/bay/steel,
 /area/crew_quarters/heads/hop)
@@ -3191,6 +3195,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/open,
 /area/stellardelight/deck2/starboard)
+"mT" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardcent)
 "mU" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/eris/dark/cargo,
@@ -6418,6 +6426,12 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/heads/hop)
+"yP" = (
+/obj/structure/sign/warning/falling{
+	pixel_x = 32
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
 "yR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -6781,6 +6795,9 @@
 /area/maintenance/stellardelight/deck3/aftstarroom)
 "zW" = (
 /obj/structure/lattice,
+/obj/structure/sign/warning/falling{
+	pixel_y = 32
+	},
 /turf/simulated/open,
 /area/stellardelight/deck2/fore)
 "zX" = (
@@ -7999,6 +8016,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
+"Eu" = (
+/turf/simulated/wall/bay/r_wall/blue,
+/area/stellardelight/deck2/port)
 "Ev" = (
 /obj/structure/cable/blue{
 	icon_state = "1-4"
@@ -8091,6 +8111,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/angled{
+	cell_type = /obj/item/weapon/cell/super;
 	dir = 1;
 	name = "night shift APC";
 	nightshift_setting = 2
@@ -8752,6 +8773,12 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/aftstarroom)
+"Hq" = (
+/obj/structure/sign/warning/falling{
+	pixel_y = 32
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "Hs" = (
 /turf/simulated/wall/bay/orange,
 /area/crew_quarters/heads/chief)
@@ -9772,6 +9799,12 @@
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck3/aft)
+"Lf" = (
+/obj/structure/sign/warning/falling{
+	pixel_x = -32
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
 "Lh" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/blue{
@@ -11056,6 +11089,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/stellardelight/deck3/foreportrooma)
+"Ps" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/forestarroomb)
 "Px" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -12783,6 +12820,12 @@
 /obj/machinery/computer/ship/helm/adv,
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/shuttle/sdboat/fore)
+"Wl" = (
+/obj/structure/sign/warning/falling{
+	pixel_x = -32
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/port)
 "Wn" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 4
@@ -20846,7 +20889,7 @@ dE
 dE
 dE
 dE
-dE
+fP
 HY
 ed
 Bm
@@ -21274,7 +21317,7 @@ oW
 oW
 QF
 oW
-oW
+Wl
 CS
 Ii
 Qu
@@ -21558,7 +21601,7 @@ oW
 oW
 ZS
 oW
-oW
+Eu
 NI
 IO
 Ii
@@ -22105,7 +22148,7 @@ QF
 oW
 dT
 hY
-oW
+Wl
 oW
 QF
 oW
@@ -23498,7 +23541,7 @@ qp
 Vm
 qp
 Qp
-qF
+Hq
 bn
 tV
 rc
@@ -25227,7 +25270,7 @@ aJ
 ow
 ZC
 ow
-ow
+yP
 Ks
 RG
 ow
@@ -25495,7 +25538,7 @@ Yj
 Yj
 Ef
 FE
-FE
+Ps
 eE
 dx
 ch
@@ -25515,7 +25558,7 @@ Io
 QP
 xH
 OG
-xH
+mT
 Yx
 me
 ow
@@ -25810,7 +25853,7 @@ ow
 OE
 ow
 ow
-ow
+Lf
 CH
 ow
 ow
@@ -26101,7 +26144,7 @@ ow
 ow
 ow
 ZC
-ow
+yP
 ow
 ZM
 ow

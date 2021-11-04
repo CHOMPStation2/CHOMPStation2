@@ -1071,6 +1071,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/item/weapon/material/ashtray/glass,
 /turf/simulated/floor/carpet/bcarpet,
 /area/stellardelight/deck1/starboard)
 "cm" = (
@@ -5536,8 +5537,12 @@
 	dir = 4;
 	door_color = "#333333";
 	name = "Exploration Equipment Room";
+<<<<<<< HEAD
 	req_access = null;
 	req_one_access = list(19,43,67);
+=======
+	req_one_access = list(19,43,66);
+>>>>>>> 129220cdd0... Merge pull request #11766 from VOREStation/master
 	stripe_color = "#5a19a8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -6139,7 +6144,11 @@
 	dir = 8;
 	door_color = "#333333";
 	name = "Exploration";
+<<<<<<< HEAD
 	req_one_access = list(19,43,67);
+=======
+	req_one_access = list(19,43,66);
+>>>>>>> 129220cdd0... Merge pull request #11766 from VOREStation/master
 	stripe_color = "#5a19a8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -11705,6 +11714,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploration)
+"zi" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck1/portcent)
 "zj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -17128,6 +17141,17 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/security/lobby)
+"Lf" = (
+/obj/structure/cable/green{
+	color = "#42038a";
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/space_heater,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck1/starboardaft)
 "Lg" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/chapel/chapel_morgue)
@@ -22337,6 +22361,7 @@
 	dir = 4
 	},
 /obj/random/coin/sometimes,
+/obj/item/weapon/material/ashtray/glass,
 /turf/simulated/floor/carpet/bcarpet,
 /area/stellardelight/deck1/port)
 "Wg" = (
@@ -23022,7 +23047,11 @@
 	dir = 4;
 	door_color = "#ffffff";
 	name = "maintenance access";
+<<<<<<< HEAD
 	req_one_access = list(19,43,67);
+=======
+	req_one_access = list(19,43,66);
+>>>>>>> 129220cdd0... Merge pull request #11766 from VOREStation/master
 	stripe_color = "#5a19a8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -32053,7 +32082,7 @@ gY
 gY
 km
 QB
-gY
+zi
 gY
 HY
 GN
@@ -36757,7 +36786,7 @@ Dv
 il
 OR
 CY
-Dv
+Lf
 Qz
 Dv
 Dv
