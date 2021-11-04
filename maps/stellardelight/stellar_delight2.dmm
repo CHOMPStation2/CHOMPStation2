@@ -786,6 +786,7 @@
 	dir = 6
 	},
 /obj/machinery/alarm/angled,
+/obj/machinery/space_heater,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
 "bR" = (
@@ -11659,15 +11660,14 @@
 /obj/machinery/computer/skills{
 	pixel_y = 7
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "captaindoor";
-	name = "Door Remote";
-	pixel_x = -15;
-	pixel_y = 2
-	},
 /obj/structure/table/darkglass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/machinery/button/remote/airlock{
+	id = "captaindoor";
+	pixel_x = -15;
+	pixel_y = 2
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/crew_quarters/captain)
@@ -12123,6 +12123,16 @@
 	},
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/stellardelight/deck2/triage)
+"BV" = (
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	id = "bar";
+	layer = 3.3;
+	name = "Bar Shutters"
+	},
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/lino,
+/area/crew_quarters/bar)
 "BW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/external/glass{
@@ -13722,6 +13732,7 @@
 /obj/machinery/light/floortube{
 	pixel_y = -6
 	},
+/obj/item/weapon/material/ashtray/glass,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "Fx" = (
@@ -16636,6 +16647,7 @@
 	pixel_x = 2;
 	pixel_y = 7
 	},
+/obj/item/weapon/material/ashtray/glass,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "LQ" = (
@@ -33415,7 +33427,7 @@ Gn
 zw
 fi
 dw
-On
+BV
 py
 fp
 mn
