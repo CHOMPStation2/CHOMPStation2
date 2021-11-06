@@ -37,7 +37,7 @@
 /datum/gear/uniform/job_khi/eng
 	display_name = "ge uniform, eng" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/eng
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer")
 
 /datum/gear/uniform/job_khi/sci
 	display_name = "ge uniform, sci" //CHOMPedit: changed to GE suit
@@ -67,7 +67,7 @@
 /datum/gear/suit/job_fed/eng
 	display_name = "fed uniform, eng"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer")
 
 // Trekie things
 //TOS
@@ -82,12 +82,18 @@
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
 
 /datum/gear/uniform/job_trek/eng/tos
+<<<<<<< HEAD
 	display_name = "TOS uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
 	
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
+=======
+	display_name = "TOS uniform, eng/sec"
+	path = /obj/item/clothing/under/rank/trek/engsec
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer","Warden","Detective","Security Officer","Head of Security")
+>>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 
 //TNG
 /datum/gear/uniform/job_trek/cmd/tng
@@ -101,11 +107,17 @@
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
 
 /datum/gear/uniform/job_trek/eng/tng
+<<<<<<< HEAD
 	display_name = "TNG uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/next //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
 	
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
+=======
+	display_name = "TNG uniform, eng/sec"
+	path = /obj/item/clothing/under/rank/trek/engsec/next
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer","Warden","Detective","Security Officer","Head of Security")
+>>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 
 //VOY
 /datum/gear/uniform/job_trek/cmd/voy
@@ -119,12 +131,18 @@
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
 
 /datum/gear/uniform/job_trek/eng/voy
+<<<<<<< HEAD
 	display_name = "VOY uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/voy //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
 	
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
+=======
+	display_name = "VOY uniform, eng/sec"
+	path = /obj/item/clothing/under/rank/trek/engsec/voy
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer","Warden","Detective","Security Officer","Head of Security")
+>>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 
 //DS9
 
@@ -134,7 +152,11 @@
 	allowed_roles = list("Head of Security","Site Manager","Head of Personnel","Chief Engineer","Research Director",
 						"Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist",
 						"Scientist","Roboticist","Xenobiologist","Xenobotanist","Atmospheric Technician",
+<<<<<<< HEAD
 						"Station Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+=======
+						"Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic")
+>>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 
 
 /datum/gear/uniform/job_trek/cmd/ds9
@@ -148,9 +170,15 @@
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
 
 /datum/gear/uniform/job_trek/eng/ds9
+<<<<<<< HEAD
 	display_name = "DS9 uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/ds9 //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
+=======
+	display_name = "DS9 uniform, eng/sec"
+	path = /obj/item/clothing/under/rank/trek/engsec/ds9
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer","Warden","Detective","Security Officer","Head of Security")
+>>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
@@ -166,12 +194,18 @@
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
 
 /datum/gear/uniform/job_trek/eng/ent
+<<<<<<< HEAD
 	display_name = "ENT uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/ent //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
 	
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 	
+=======
+	display_name = "ENT uniform, eng/sec"
+	path = /obj/item/clothing/under/rank/trek/engsec/ent
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer","Warden","Detective","Security Officer","Head of Security")
+>>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 /*
 Swimsuits
 */
