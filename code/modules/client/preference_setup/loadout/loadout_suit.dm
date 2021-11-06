@@ -424,7 +424,7 @@
 /datum/gear/suit/wintercoat/engineering
 	display_name = "winter coat, engineering"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/engineering
-	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Station Engineer")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
 
 /datum/gear/suit/wintercoat/engineering/atmos
 	display_name = "winter coat, atmospherics"
@@ -598,8 +598,13 @@
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
+<<<<<<< HEAD
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Station Engineer")
+=======
+	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
+>>>>>>> 50b89b3801... Merge pull request #11788 from VOREStation/master
 
 /datum/gear/suit/snowsuit/cargo
 	display_name = "snowsuit, supply"
