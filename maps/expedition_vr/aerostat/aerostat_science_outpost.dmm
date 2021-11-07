@@ -3260,6 +3260,9 @@
 /area/offmap/aerostat/inside/arm/se)
 "kN" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/powercontrol)
 "kO" = (
@@ -3836,6 +3839,14 @@
 /obj/machinery/power/solar,
 /turf/simulated/floor/plating/virgo2,
 /area/offmap/aerostat/solars)
+"na" = (
+/obj/machinery/light/small,
+/obj/machinery/power/quantumpad/scioutpost,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/bluegrid,
+/area/offmap/aerostat/inside/powercontrol)
 "nb" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -8220,6 +8231,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/airlock/south)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "FA" = (
 /obj/structure/bed/chair/comfy/black{
@@ -8230,6 +8242,8 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/southchamb)
+=======
+>>>>>>> e786788698... Merge pull request #11789 from Very-Soft/paperupdate
 "FD" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/cable{
@@ -8237,7 +8251,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> e786788698... Merge pull request #11789 from Very-Soft/paperupdate
 "FF" = (
 /obj/machinery/camera/network/research_outpost,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -9371,7 +9388,10 @@
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e786788698... Merge pull request #11789 from Very-Soft/paperupdate
 "JX" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9381,11 +9401,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
+<<<<<<< HEAD
 "JY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> e786788698... Merge pull request #11789 from Very-Soft/paperupdate
 "JZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13169,6 +13192,9 @@
 "ZN" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
@@ -23255,10 +23281,10 @@ cP
 dK
 dM
 dN
-Mj
+aQ
 kN
-Ym
-MC
+Ff
+FD
 VG
 VG
 VG
@@ -23397,7 +23423,7 @@ dh
 dL
 dL
 dO
-aR
+na
 GB
 Ym
 ZN
@@ -23550,7 +23576,7 @@ EQ
 yk
 GB
 zE
-Ym
+xl
 Ym
 Ym
 Ym
@@ -23692,7 +23718,7 @@ TB
 GB
 GB
 xl
-Ym
+xl
 Ym
 Ym
 Ym
@@ -23835,7 +23861,11 @@ eE
 Ym
 BF
 <<<<<<< HEAD
+<<<<<<< HEAD
 Ff
+=======
+JX
+>>>>>>> e786788698... Merge pull request #11789 from Very-Soft/paperupdate
 Ff
 Ff
 =======
