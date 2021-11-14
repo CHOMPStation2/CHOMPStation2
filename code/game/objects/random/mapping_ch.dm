@@ -66,6 +66,6 @@
 	desc = "I forcibly call make_indoors on every turf on this z-level. Useful for admin late loading maps to fix lighting!"
 
 /obj/effect/map_helper/make_indoors/LateInitialize()
-	for(var/turf/T in Z_TURFS(z))
+	for(var/turf/simulated/T in Z_TURFS(z))
 		T.make_indoors()
 	qdel(src)
