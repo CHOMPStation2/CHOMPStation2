@@ -40,7 +40,7 @@
 /obj/effect/map_helper/no_tele/LateInitialize()
 	/* Wait this doesn't work. Why did I write this.
 	Until I can figure out a way to get all areas in a z-level I'm just gonna let block_tele handle it instead.
-	
+
 	for(var/area/A in world)
 		if(A.z) //find some way to filter by z-level here, which is stupid since areas can exist in multiple z-levels at once
 			A.flags += BLUE_SHIELDED
@@ -59,4 +59,13 @@
 		A.flags += BLUE_SHIELDED
 		for(var/turf/T in A.contents)
 			T.block_tele = 1
+	qdel(src)
+
+/obj/effect/map_helper/make_indoors
+	name = "z-wide indoors maker"
+	desc = "I forcibly call make_indoors on every turf on this z-level. Useful for admin late loading maps to fix lighting!"
+
+/obj/effect/map_helper/make_indoors/LateInitialize()
+	for(var/turf/T in Z_TURFS(z))
+		T.make_indoors()
 	qdel(src)
