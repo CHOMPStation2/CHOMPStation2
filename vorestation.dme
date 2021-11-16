@@ -3135,9 +3135,12 @@
 #include "code\modules\mob\living\simple_mob\subtypes\animal\vox.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\catslug.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\jellyfish.dm"
+<<<<<<< HEAD
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\skeleton.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\space_mouse.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\spacewhale.dm"
+=======
+>>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\spookyghost.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\startreader.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\alien animals\teppi.dm"

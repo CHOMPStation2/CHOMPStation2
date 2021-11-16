@@ -689,8 +689,12 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 			amount_grown -= rand(100,250)
 	if(not_hungy)
 		do_breeding()
+<<<<<<< HEAD
 		do_healing()
 	if(prob(0.5))
+=======
+	if(!client && prob(0.5))
+>>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 		teppi_sound()
 
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/do_healing()

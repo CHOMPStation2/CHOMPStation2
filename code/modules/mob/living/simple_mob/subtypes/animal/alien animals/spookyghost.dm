@@ -71,10 +71,17 @@
 		"rad" = 100
 		)
 
+<<<<<<< HEAD
 	loot_list = list(/obj/item/weapon/ore/diamond = 100)
 
 	speak_emote = list("rumbles")
 
+=======
+	speak_emote = list("rumbles")
+
+	loot_list = list(/obj/item/weapon/ore/diamond)
+
+>>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 	vore_active = 0
 
 	projectiletype = /mob/living/simple_mob/vore/alienanimals/spooky_ghost

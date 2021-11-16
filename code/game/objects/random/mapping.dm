@@ -1455,7 +1455,11 @@
 /obj/random/turf/lava/item_to_spawn()
 	return pick(prob(5);/turf/simulated/floor/lava,
 				prob(3);/turf/simulated/floor/outdoors/rocks/caves,
+<<<<<<< HEAD
 				prob(1);/turf/simulated/mineral/ignore_mapgen/cave)
+=======
+				prob(1);/turf/simulated/mineral)
+>>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 
 //VOREStation Add Start - Underdark stuff that would be cool if existed if the underdark doesn't.
 
@@ -1645,4 +1649,8 @@
 				prob(2);list(/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer/rigged),
 				prob(1);list(/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill),
 				)
+<<<<<<< HEAD
 //VOREStation Add End
+=======
+//VOREStation Add End
+>>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
