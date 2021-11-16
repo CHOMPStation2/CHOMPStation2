@@ -17616,7 +17616,12 @@
 	dir = 4;
 	door_color = "#a88860";
 	name = "Mining Shuttle";
+<<<<<<< HEAD
 	req_access = list(31);
+=======
+	req_access = null;
+	req_one_access = list(31,5);
+>>>>>>> 154d2d68fc... Merge pull request #11836 from Very-Soft/miningshuttle
 	stripe_color = "#69461a"
 	},
 /obj/structure/cable/yellow{
