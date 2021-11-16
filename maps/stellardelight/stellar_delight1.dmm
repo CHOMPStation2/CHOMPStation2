@@ -674,6 +674,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated/dark,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor,
 /area/stellardelight/deck1/port)
 "bx" = (
@@ -1344,6 +1347,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/starboard)
@@ -4703,6 +4709,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/stellardelight/deck1/pathfinder)
+"jT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/aft)
 "jV" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -7108,6 +7123,9 @@
 	dir = 8
 	},
 /obj/effect/catwalk_plated/dark,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor,
 /area/stellardelight/deck1/starboard)
 "ph" = (
@@ -10706,6 +10724,9 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/fore)
 "xa" = (
@@ -14068,6 +14089,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/port)
@@ -20973,6 +20997,9 @@
 	},
 /obj/structure/closet/crate/bin{
 	anchored = 1
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploration)
@@ -33222,7 +33249,7 @@ MK
 qR
 CG
 iS
-KX
+jT
 dl
 QK
 pV
