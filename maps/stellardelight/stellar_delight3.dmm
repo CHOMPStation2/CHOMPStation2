@@ -167,6 +167,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck3/aft)
+"ba" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "bb" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -6205,6 +6212,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/stellardelight/deck3/commandhall)
 "yc" = (
@@ -9073,6 +9083,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
+"ID" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "IG" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -9946,6 +9965,9 @@
 	dir = 4;
 	pixel_x = 27
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck3/starboarddock)
 "LR" = (
@@ -10122,6 +10144,15 @@
 /obj/random/maintenance,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardfore)
+"Mv" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "Mw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -10320,6 +10351,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck3/cryo)
+"Nd" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/port)
 "Ne" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -10954,6 +10994,15 @@
 "OX" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portcent)
+"OY" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
 "Pa" = (
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -12453,6 +12502,9 @@
 /obj/structure/closet/emergsuit_wall{
 	dir = 8;
 	pixel_x = -27
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck3/portdock)
@@ -21263,7 +21315,7 @@ CS
 oW
 oW
 oW
-QF
+Nd
 oW
 oW
 oW
@@ -22094,7 +22146,7 @@ Cp
 qF
 qF
 qF
-Cb
+Mv
 qF
 qF
 qF
@@ -23072,7 +23124,7 @@ qp
 NF
 qp
 Qp
-Hf
+ba
 Ie
 tV
 cb
@@ -25209,7 +25261,7 @@ qF
 qF
 qF
 qF
-KF
+ID
 qF
 qF
 qF
@@ -26100,8 +26152,13 @@ ow
 ow
 ow
 ow
+<<<<<<< HEAD
 ZC
 ow
+=======
+OY
+yP
+>>>>>>> 5c58ec16f3... Merge pull request #11843 from VOREStation/master
 ow
 ZM
 ow
