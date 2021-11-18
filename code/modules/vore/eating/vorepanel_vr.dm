@@ -379,7 +379,11 @@
 			return set_attr(usr, params)
 
 		if("saveprefs")
+<<<<<<< HEAD
 			if(host.real_name != host.client.prefs.real_name || !ishuman(host) && !issilicon(host))
+=======
+			if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
+>>>>>>> f3851e19a3... Merge pull request #11820 from Verkister/patch-98
 				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
