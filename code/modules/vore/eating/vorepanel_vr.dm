@@ -220,6 +220,8 @@
 			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
 			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
 			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
+			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
@@ -1078,6 +1080,16 @@
 				host.vore_selected.autotransferlocation = null
 			else
 				host.vore_selected.autotransferlocation = choice.name
+			. = TRUE
+		if("b_autotransfer_min_amount")
+			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
+			if(!isnull(autotransfer_min_amount_input))
+				host.vore_selected.autotransfer_min_amount = sanitize_integer(autotransfer_min_amount_input, 0, 100, initial(host.vore_selected.autotransfer_min_amount))
+			. = TRUE
+		if("b_autotransfer_max_amount")
+			var/autotransfer_max_amount_input = input(user, "Set the maximum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Max Amount") as num|null
+			if(!isnull(autotransfer_max_amount_input))
+				host.vore_selected.autotransfer_max_amount = sanitize_integer(autotransfer_max_amount_input, 0, 100, initial(host.vore_selected.autotransfer_max_amount))
 			. = TRUE
 		if("b_autotransfer_enabled")
 			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
