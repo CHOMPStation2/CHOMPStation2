@@ -674,6 +674,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated/dark,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor,
 /area/stellardelight/deck1/port)
 "bx" = (
@@ -1345,6 +1349,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/starboard)
 "cV" = (
@@ -2079,6 +2087,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck1/researchserver)
+"et" = (
+/obj/effect/landmark{
+	name = "droppod_landing"
+	},
+/turf/space,
+/area/space)
 "eu" = (
 /obj/structure/cable/green{
 	color = "#42038a";
@@ -4703,6 +4717,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/stellardelight/deck1/pathfinder)
+<<<<<<< HEAD
+=======
+"jT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/aft)
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 "jV" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -6854,6 +6878,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
 "oC" = (
@@ -7108,6 +7133,10 @@
 	dir = 8
 	},
 /obj/effect/catwalk_plated/dark,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor,
 /area/stellardelight/deck1/starboard)
 "ph" = (
@@ -8731,6 +8760,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "sC" = (
@@ -10386,6 +10416,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/carpet/bcarpet,
 /area/stellardelight/deck1/starboard)
 "wo" = (
@@ -10706,6 +10737,10 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/fore)
 "xa" = (
@@ -11772,6 +11807,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/black,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "zq" = (
@@ -12830,6 +12866,7 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/fore)
 "BB" = (
@@ -12929,6 +12966,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploration)
 "BI" = (
@@ -14069,6 +14107,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/port)
 "Eq" = (
@@ -16321,6 +16363,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "Jd" = (
@@ -19693,6 +19736,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm/angled,
 /obj/effect/floor_decal/milspec/color/black,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "QQ" = (
@@ -20974,6 +21018,10 @@
 /obj/structure/closet/crate/bin{
 	anchored = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploration)
 "TB" = (
@@ -21569,6 +21617,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/reinforced,
 /area/stellardelight/deck1/shuttlebay)
 "UK" = (
@@ -21922,6 +21971,7 @@
 /obj/item/weapon/book/manual/supermatter_engine,
 /obj/item/weapon/book/manual/tesla_engine,
 /obj/item/weapon/book/manual/virology,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/wood,
 /area/library)
 "Vq" = (
@@ -22656,6 +22706,7 @@
 /obj/item/weapon/tank/jetpack/carbondioxide,
 /obj/item/weapon/tank/jetpack/carbondioxide,
 /obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/white/gray_platform,
 /area/gateway)
 "WU" = (
@@ -23757,6 +23808,12 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/bluegrid,
 /area/assembly/robotics)
+"Zd" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/space,
+/area/space)
 "Ze" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -27258,7 +27315,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -27798,7 +27855,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -27980,7 +28037,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -28045,7 +28102,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -28422,7 +28479,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -28779,7 +28836,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -29450,7 +29507,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -30550,7 +30607,7 @@ RF
 RF
 uq
 uq
-uq
+et
 uq
 uq
 uq
@@ -31974,7 +32031,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -32147,7 +32204,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -34419,7 +34476,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -37508,7 +37565,7 @@ EG
 RF
 uq
 uq
-uq
+et
 uq
 uq
 uq
@@ -37971,7 +38028,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -38080,7 +38137,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -38716,7 +38773,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -39128,7 +39185,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -39436,7 +39493,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -39909,7 +39966,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -40306,7 +40363,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq
@@ -41322,7 +41379,7 @@ uq
 uq
 uq
 uq
-uq
+Zd
 uq
 uq
 uq

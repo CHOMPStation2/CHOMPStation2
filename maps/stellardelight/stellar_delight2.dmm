@@ -2292,6 +2292,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "fp" = (
@@ -2441,6 +2442,7 @@
 "fL" = (
 /obj/machinery/computer/arcade/battle,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "fN" = (
@@ -2966,6 +2968,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "gS" = (
@@ -5317,6 +5320,10 @@
 	},
 /obj/machinery/vending/loadout/loadout_misc,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "me" = (
@@ -5332,6 +5339,10 @@
 "mg" = (
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/port)
 "mh" = (
@@ -5571,6 +5582,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/wood,
 /area/stellardelight/deck2/briefingroom)
 "mI" = (
@@ -5661,6 +5673,9 @@
 "mS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/effect/landmark{
+	name = "verminstart"
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
@@ -6044,6 +6059,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "nR" = (
@@ -7047,6 +7063,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/closet/secure_closet/engineering_personal,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/locker_room)
 "qe" = (
@@ -7178,6 +7195,7 @@
 /obj/machinery/newscaster{
 	pixel_y = 28
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "qt" = (
@@ -7788,6 +7806,10 @@
 	dir = 4;
 	pixel_x = 24
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "rF" = (
@@ -8963,6 +8985,10 @@
 "us" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/recharge_station,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
 "ut" = (
@@ -9552,6 +9578,14 @@
 /area/medical/chemistry)
 "vP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/vermin,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "vQ" = (
@@ -9799,6 +9833,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
 "wy" = (
@@ -12474,6 +12509,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-8"
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
 "CN" = (
@@ -12751,7 +12787,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/item/device/communicator,
+=======
+/obj/structure/undies_wardrobe,
+/obj/effect/landmark/vermin,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "Dv" = (
@@ -14040,6 +14081,7 @@
 /obj/effect/floor_decal/milspec/color/silver/corner{
 	dir = 8
 	},
+/obj/effect/landmark/vines,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "Gb" = (
@@ -14547,6 +14589,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
 "Hf" = (
@@ -15070,6 +15113,11 @@
 	},
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
+=======
+/obj/machinery/firealarm/angled,
+/obj/effect/landmark/vermin,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftstarboard)
 "Il" = (
@@ -15113,6 +15161,7 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/item/device/retail_scanner/command,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "Ip" = (
@@ -16095,6 +16144,14 @@
 /obj/machinery/light{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/item/paint_palette,
+/obj/item/paint_palette,
+/obj/item/paint_brush,
+/obj/item/paint_brush,
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "KD" = (
@@ -16286,6 +16343,7 @@
 /obj/machinery/camera/network/medbay{
 	dir = 8
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/chemistry)
 "La" = (
@@ -17645,6 +17703,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/stellardelight/deck2/barbackroom)
+"Oh" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/space,
+/area/space)
 "Oi" = (
 /obj/machinery/firealarm/angled,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17827,6 +17891,9 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/effect/landmark{
+	name = "verminstart"
+	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
 "OB" = (
@@ -17930,6 +17997,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
 "OQ" = (
@@ -18184,6 +18255,12 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
+"Pp" = (
+/obj/effect/landmark{
+	name = "droppod_landing"
+	},
+/turf/space,
+/area/space)
 "Pq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 9
@@ -19932,6 +20009,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/cmostore)
 "Tn" = (
@@ -21585,6 +21663,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 4
 	},
+/obj/effect/landmark/vines,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "Xf" = (
@@ -22380,6 +22459,7 @@
 "YW" = (
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
 "YX" = (
@@ -25508,7 +25588,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -25913,7 +25993,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -26313,7 +26393,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -26534,7 +26614,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -27483,7 +27563,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -28455,7 +28535,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Pp
 Jh
 Jh
 Jh
@@ -28566,7 +28646,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -30249,7 +30329,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -31545,7 +31625,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -32800,7 +32880,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -34670,7 +34750,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -36069,7 +36149,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -36564,7 +36644,7 @@ bw
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -36977,7 +37057,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Pp
 Jh
 Jh
 Jh
@@ -37055,7 +37135,7 @@ NL
 NL
 Jh
 Jh
-Jh
+Pp
 Jh
 Jh
 Jh
@@ -37377,7 +37457,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -37968,7 +38048,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -39133,6 +39213,7 @@ Jh
 Jh
 Jh
 Jh
+Oh
 Jh
 Jh
 Jh
@@ -39177,8 +39258,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
-Jh
+Oh
 Jh
 Jh
 Jh
@@ -39863,7 +39943,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Oh
 Jh
 Jh
 Jh

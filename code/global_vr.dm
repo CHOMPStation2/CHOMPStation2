@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+var/list/vinestart			= list()
+var/list/verminstart		= list()
+
+>>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 var/list/awayabductors = list() // List of scatter landmarks for Abductors in Gateways
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
 var/list/eventabductors = list() // List of scatter landmarks for VOREStation abductor portals
