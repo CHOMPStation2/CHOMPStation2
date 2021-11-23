@@ -100,8 +100,13 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
+<<<<<<< HEAD
 	containername = "Solgov medical hardsuit crate"
 	access = access_medical
+=======
+	containername = "Commonwealth engineering hardsuit crate"
+	access = access_engine
+>>>>>>> ea36f8366e... Merge pull request #11910 from PastelPrinceDan/cratefix
 
 // CHOMPStation EDIT End
 
