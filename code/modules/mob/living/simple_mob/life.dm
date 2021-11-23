@@ -54,7 +54,11 @@
 			healths.icon_state = "health7"
 
 	//Updates the nutrition while we're here
+<<<<<<< HEAD
 	var/food_per = (nutrition / 500) * 100 //VOREStation Edit: Bandaid hardcode number to avoid misleading percentage based hunger alerts with our 6k cap.
+=======
+	var/food_per = (nutrition / max_nutrition) * 100
+>>>>>>> a4f6cea907... Merge pull request #11872 from VOREStation/upstream-merge-8345
 	switch(food_per)
 		if(90 to INFINITY)
 			clear_alert("nutrition")
