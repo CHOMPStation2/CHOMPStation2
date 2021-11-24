@@ -237,6 +237,7 @@
 	P.latejoin_vore = src.latejoin_vore
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
+	P.autotransferable = src.autotransferable
 
 
 	var/list/serialized = list()
@@ -278,6 +279,7 @@
 	latejoin_vore = P.latejoin_vore
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
+	autotransferable = P.autotransferable
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
@@ -883,6 +885,7 @@
 	dispvoreprefs += "<b>Digestable:</b> [digestable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Devourable:</b> [devourable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Feedable:</b> [feeding ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Autotransferable:</b> [autotransferable ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Absorption Permission:</b> [absorbable ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "Enabled" : "Disabled"]<br>"
