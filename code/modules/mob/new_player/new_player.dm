@@ -487,8 +487,6 @@
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
 		for(var/obj/belly/B in character.vore_organs)
-			message_admins("[B.name] is a voregan")
-			message_admins("[gut]")
 			if(B.name == gut)
 				gut_to_enter = B
 		var/datum/effect/effect/system/teleport_greyscale/tele = new /datum/effect/effect/system/teleport_greyscale()
