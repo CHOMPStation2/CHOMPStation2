@@ -655,13 +655,14 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
+	var/mob/living/prey_to_nomph
 
 	var/datum/job/J = SSjob.get_job(rank)
 	fail_deadly = J?.offmap_spawn
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.spawnpoint)
-		if(C.prefs.spawnpoint == "Vore Belly")
+		if(C.prefs.spawnpoint == "Vorespawn - Prey")
 			var/list/preds = list()
 			var/list/pred_names = list() //This is cringe
 			for(var/client/V in GLOB.clients)
@@ -699,11 +700,11 @@ var/global/datum/controller/occupations/job_master
 				message_admins("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 
 				var/confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
-				var/message = sanitizeSafe(input(pred,"Do you want to leave them a message?")as text|null)
-				if(message)
-					to_chat(C, "<span class='notice'>[pred] message : [message]</span>")
 				if(confirm != "Yes")
 					to_chat(C, "<span class='warning'>[pred] has declined your spawn request.</span>")
+					var/message = sanitizeSafe(input(pred,"Do you want to leave them a message?")as text|null)
+					if(message)
+						to_chat(C, "<span class='notice'>[pred] message : [message]</span>")
 					return
 				if(!vore_spawn_gut || QDELETED(vore_spawn_gut))
 					to_chat(C, "<span class='warning'>Somehow, the belly you were trying to enter no longer exists.</span>")
@@ -726,6 +727,60 @@ var/global/datum/controller/occupations/job_master
 				to_chat(C, "<span class='warning'>No predators were available to accept you.</span>")
 				return
 			spawnpos = spawntypes[C.prefs.spawnpoint]
+		if(C.prefs.spawnpoint == "Vorespawn - Pred") //Same as above, but in reverse!
+			var/list/preys = list()
+			var/list/prey_names = list() //This is still cringe
+			for(var/client/V in GLOB.clients)
+				if(!isliving(V.mob))
+					continue
+				var/mob/living/M = V.mob
+				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTES))
+					continue
+				if(!M.latejoin_prey)
+					continue
+				if(!(M.z in using_map.vorespawn_levels))
+					continue
+				preys += M
+				prey_names += M.real_name
+			if(preys.len)
+				var/prey_name = input(C, "Choose a Prey to spawn nom.", "Prey Spawnpoint") as null|anything in prey_names
+				if(!prey_name)
+					return
+				var/index = prey_names.Find(prey_name)
+				var/mob/living/prey = preys[index]
+				var/list/available_bellies = list()
+
+				var/datum/vore_preferences/P = C.prefs_vr
+				for(var/Y in P.belly_prefs)
+					available_bellies += Y["name"]
+				vore_spawn_gut = input(C, "Choose your Belly.", "Belly Spawnpoint") as null|anything in available_bellies
+				if(!vore_spawn_gut)
+					return
+				to_chat(C, "<b><span class='warning'>[prey] has received your spawn request. Please wait.</span></b>")
+				log_admin("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
+				message_admins("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
+
+				var/confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+				if(confirm != "Yes")
+					to_chat(C, "<span class='warning'>[prey] has declined your spawn request.</span>")
+					var/message = sanitizeSafe(input(prey,"Do you want to leave them a message?")as text|null)
+					if(message)
+						to_chat(C, "<span class='notice'>[prey] message : [message]</span>")
+					return
+				if(prey.stat == UNCONSCIOUS || prey.stat == DEAD)
+					to_chat(C, "<span class='warning'>[prey] is not conscious.</span>")
+					to_chat(prey, "<span class='warning'>You must be conscious to accept.</span>")
+					return
+				if(!(prey.z in using_map.vorespawn_levels))
+					to_chat(C, "<span class='warning'>[prey] is no longer in station grounds.</span>")
+					to_chat(prey, "<span class='warning'>You must be within station grounds to accept.</span>")
+					return
+				log_admin("[key_name(C)] has pred spawned onto [key_name(prey)]")
+				message_admins("[key_name(C)] has pred spawned onto [key_name(prey)]")
+				prey_to_nomph = prey
+			else
+				to_chat(C, "<span class='warning'>No prey were available to accept you.</span>")
+				return
 		else
 			if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
 				if(fail_deadly)
@@ -738,9 +793,11 @@ var/global/datum/controller/occupations/job_master
 				spawnpos = spawntypes[C.prefs.spawnpoint]
 
 	//We will return a list key'd by "turf" and "msg"
-	. = list("turf","msg", "voreny")
+	. = list("turf","msg", "voreny", "prey")
 	if(vore_spawn_gut)
 		.["voreny"] = vore_spawn_gut
+	if(prey_to_nomph)
+		.["prey"] = prey_to_nomph	//We pass this on later to reverse the vorespawn in new_player.dm
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
@@ -753,7 +810,7 @@ var/global/datum/controller/occupations/job_master
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
-			.["msg"] = "will arrive at the station shortly"	
+			.["msg"] = "will arrive at the station shortly"
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)

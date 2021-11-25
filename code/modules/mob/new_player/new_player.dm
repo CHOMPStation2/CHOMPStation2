@@ -482,8 +482,24 @@
 		data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
 	var/gut = join_props["voreny"]
-	if(gut)
-		character.forceMove(gut)
+	var/mob/living/prey = join_props["prey"]
+	if(prey)
+		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
+		var/obj/belly/gut_to_enter
+		for(var/obj/belly/B in character.vore_organs)
+			message_admins("[B.name] is a voregan")
+			message_admins("[gut]")
+			if(B.name == gut)
+				gut_to_enter = B
+		var/datum/effect/effect/system/teleport_greyscale/tele = new /datum/effect/effect/system/teleport_greyscale()
+		tele.set_up("#00FFFF", get_turf(prey))
+		tele.start()
+		character.forceMove(get_turf(prey))
+		prey.forceMove(gut_to_enter)
+	else
+		if(gut)
+			character.forceMove(gut)
+
 
 	qdel(src) // Delete new_player mob
 
