@@ -302,6 +302,7 @@
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full //Belching while full
 		//CHOMPedit end
 	)
@@ -541,6 +542,12 @@
 			host.give_reagents = !host.give_reagents
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.give_reagents = host.give_reagents
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_autotransferable")
+			host.autotransferable = !host.autotransferable
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.autotransferable = host.autotransferable
 			unsaved_changes = TRUE
 			return TRUE
 		//Belch code

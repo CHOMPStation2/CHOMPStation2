@@ -64,6 +64,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/give_reagents = FALSE
 	var/latejoin_vore = FALSE
 	var/latejoin_prey = FALSE
+	var/autotransferable = TRUE
   //CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -160,6 +161,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	latejoin_prey = json_from_file["latejoin_prey"]
 	receive_reagents = json_from_file["receive_reagents"]
 	give_reagents = json_from_file["give_reagents"]
+	autotransferable = json_from_file["autotransferable"]
 
 
 	//Quick sanitize
@@ -203,6 +205,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
 		give_reagents = FALSE
+	if(isnull(autotransferable))
+		autotransferable = TRUE
 
 	return TRUE
 
@@ -234,6 +238,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
+			"autotransferable"		= autotransferable
 		)
 
 	//List to JSON

@@ -25,10 +25,16 @@
 					break
 			if(dest_belly)
 				for(var/atom/movable/M in autotransfer_queue)
+					if(!M.autotransferable)
+						autotransfer_queue -= M
+						continue
 					transfer_contents(M, dest_belly)
 				autotransfer_queue.Cut()
 		var/tally = 0
 		for(var/atom/movable/M in autotransferables)
+			if(!M.autotransferable)
+				autotransferables -= M
+				continue
 			if(isliving(M))
 				var/mob/living/L = M
 				if(L.absorbed)
@@ -152,7 +158,7 @@
 				formatted_message = replacetext(formatted_message, "%countprey", living_count)
 				formatted_message = replacetext(formatted_message, "%count", contents.len)
 				to_chat(M, "<span class='notice'>[formatted_message]</span>")
-	
+
 	if(to_update)
 		updateVRPanels()
 

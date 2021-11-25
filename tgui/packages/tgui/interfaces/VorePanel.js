@@ -1106,6 +1106,7 @@ const VoreUserPreferences = (props, context) => {
     noisy_full,
     liq_rec,
     liq_giv,
+    autotransferable,
   } = data.prefs;
 
   const {
@@ -1387,6 +1388,19 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Do Not Allow Taking Liquids",
       },
     },
+    autotransferable: {
+      action: "toggle_autotransferable",
+      test: autotransferable,
+      tooltip: {
+        main: "This button is for allowing or preventing belly auto-transfer mechanics from moving you.",
+        enable: "Click here to allow autotransfer.",
+        disable: "Click here to prevent autotransfer.",
+      },
+      content: {
+        enabled: "Auto-Transfer Allowed",
+        disabled: "Do Not Allow Auto-Transfer",
+      },
+    },
   };
 
   return tabIndex===4 ? null : (
@@ -1449,6 +1463,9 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
         <Flex.Item basis="49%">
           <Button
