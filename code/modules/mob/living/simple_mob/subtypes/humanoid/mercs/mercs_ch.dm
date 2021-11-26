@@ -158,7 +158,7 @@
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun		// Buckshot
 	projectilesound = 'sound/weapons/Gunshot_shotgun.ogg'
 	loot_list = list(/obj/item/weapon/gun/projectile/automatic/as24 = 100)
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/surpressor
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/suppressor
 
 //Machine Gun Merc
 /mob/living/simple_mob/humanoid/merc/ranged/space/heavy
@@ -171,7 +171,7 @@
 	projectiletype = /obj/item/projectile/bullet/rifle/a545
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 	loot_list = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 100)
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/surpressor
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/suppressor
 
 //Tommy-Las Merc
 /mob/living/simple_mob/humanoid/merc/ranged/space/tommylas
@@ -185,7 +185,7 @@
 	projectiletype = /obj/item/projectile/beam/weaklaser
 	projectilesound = 'sound/weapons/Laser.ogg'
 	loot_list = list(/obj/item/weapon/gun/energy/tommylaser = 100)
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/surpressor
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/suppressor
 
 /mob/living/simple_mob/humanoid/merc/ranged/space/fal
 	name = "mercenary commando"
@@ -200,7 +200,7 @@
 // suppressors are just assholes and are intended to be a piss poor experience for everyone on both sides
 /datum/category_item/catalogue/fauna/mercenary/human/space/suppressor
 	name = "Mercenaries - Suppressor"
-	desc = "Just because the Phoron Wars are over, it doesn't mean that covert \
+	desc = "Just because the Phoron Wars are over, it doesn't 		mean that covert \
 	actions and corporate espionage ended too. When you encounter mercs with \
 	the latest gear and the best training, you can bet your bottom Thaler that \
 	they've got a Corporate sponsor backing them up."
