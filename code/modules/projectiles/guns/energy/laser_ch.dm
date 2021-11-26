@@ -80,3 +80,32 @@
 	matter = list("metal" = 350, "glass" = 50)
 	preserve_item = 1
 	origin_tech = list(TECH_POWER = 6)
+
+/obj/item/weapon/gun/energy/tommylaser
+	name = "M-2421 'Tommy-Laser'"
+	desc = "A automatic laser weapon resembling a Tommy-Gun. Designed by Cybersun Industries to be a man portable supressive fire laser weapon."
+	icon_state = "tommylas"
+	item_state = "tommylas"
+	w_class = ITEMSIZE_LARGE
+	slot_flags = SLOT_BACK
+	charge_cost = 60 // 40 shots, lay down the firepower
+	projectile_type = /obj/item/projectile/beam/weaklaser
+	cell_type = /obj/item/weapon/cell/device/weapon
+	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 5, TECH_ILLEGAL = 3)
+
+	firemodes = list(
+		list(mode_name="single shot", burst = 1, fire_delay=4, move_delay=null, burst_accuracy = null, dispersion = null),
+		list(mode_name="three shot bursts", burst=3, fire_delay=10 , move_delay=4,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
+		list(mode_name="short bursts",	burst=5, fire_delay=10 ,move_delay=6, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
+		)
+
+/obj/item/weapon/gun/energy/zip
+	name = "Zip-Las"
+	desc = "A homemade (and somehow safe) laser gun designed around shooting single powerful laser beam draining the cell entirely. Better not miss and better have spare cells."
+	icon_state = "ziplas"
+	item_state = "ziplas"
+	w_class = ITEMSIZE_SMALL
+	slot_flags = SLOT_BELT|SLOT_BACK
+	charge_cost = 1500 //You got 1 shot...
+	projectile_type = /obj/item/projectile/beam/heavylaser //But it hurts a lot
+	cell_type = /obj/item/weapon/cell/device/weapon
