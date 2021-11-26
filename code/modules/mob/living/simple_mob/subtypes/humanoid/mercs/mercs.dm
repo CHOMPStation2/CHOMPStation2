@@ -99,9 +99,6 @@
 /datum/ai_holder/simple_mob/merc/ranged/sniper/max_range(atom/movable/AM)
 	return holder.ICheckRangedAttack(AM) ? 14 : 1
 
-/datum/ai_holder/simple_mob/merc/ranged/surpressor	//CHOMPAdd
-	conserve_ammo = FALSE //For Surpressive Fire Mercs like the Heavy and Tommy-Las
-
 ////////////////////////////////
 //			Melee
 ////////////////////////////////

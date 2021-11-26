@@ -1,6 +1,7 @@
 /obj/item/weapon/gun/projectile/automatic/fal
 	name = "FN-FAL"
 	desc = "A 20th century Assault Rifle originally designed by Fabrique National. Famous for its use by mercs in grinding proxy wars in backwater nations. This reproduction was probably made for similar purposes."
+	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "fal"
 	item_state = "fal"
 	w_class = ITEMSIZE_LARGE
