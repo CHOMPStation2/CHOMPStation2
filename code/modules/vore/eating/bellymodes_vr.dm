@@ -25,15 +25,13 @@
 					break
 			if(dest_belly)
 				for(var/atom/movable/M in autotransfer_queue)
-					if(!M.autotransferable)
-						autotransfer_queue -= M
+					if(!M || !M.autotransferable)
 						continue
 					transfer_contents(M, dest_belly)
 				autotransfer_queue.Cut()
 		var/tally = 0
 		for(var/atom/movable/M in autotransferables)
-			if(!M.autotransferable)
-				autotransferables -= M
+			if(!M || !M.autotransferable)
 				continue
 			if(isliving(M))
 				var/mob/living/L = M
