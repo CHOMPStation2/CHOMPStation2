@@ -1098,6 +1098,7 @@ const VoreUserPreferences = (props, context) => {
     can_be_drop_prey,
     can_be_drop_pred,
     latejoin_vore,
+    latejoin_prey,
     allow_spontaneous_tf,
     step_mechanics_active,
     pickup_mechanics_active,
@@ -1231,8 +1232,21 @@ const VoreUserPreferences = (props, context) => {
         disable: "Click here to turn off vorish spawnpoint.",
       },
       content: {
-        enabled: "Vore Spawn Enabled",
-        disabled: "Vore Spawn Disabled",
+        enabled: "Vore Spawn Pred Enabled",
+        disabled: "Vore Spawn Pred Disabled",
+      },
+    },
+    spawnprey: {
+      action: "toggle_latejoin_prey",
+      test: latejoin_prey,
+      tooltip: {
+        main: "Toggle late join preds spawning on you.",
+        enable: "Click here to turn on preds spawning around you.",
+        disable: "Click here to turn off preds spawning around you.",
+      },
+      content: {
+        enabled: "Vore Spawn Prey Enabled",
+        disabled: "Vore Spawn Prey Disabled",
       },
     },
     noisy: {
@@ -1422,6 +1436,9 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.spawnprey} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy} />

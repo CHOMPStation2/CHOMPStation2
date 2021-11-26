@@ -294,6 +294,7 @@
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
+		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
@@ -438,6 +439,12 @@
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.latejoin_vore = host.latejoin_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_latejoin_prey")
+			host.latejoin_prey = !host.latejoin_prey
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.latejoin_prey = host.latejoin_prey
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_allow_spontaneous_tf")

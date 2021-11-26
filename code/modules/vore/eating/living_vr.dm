@@ -35,7 +35,8 @@
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
-	var/noisy_full = FALSE				//CHOMPEdit: Enables belching when a mob has overeaten
+	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
+	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
 	var/bellies_loaded = FALSE			//CHOMPedit: On-demand belly loading
 
 //
@@ -233,6 +234,7 @@
 
 	//CHOMP stuff
 	P.latejoin_vore = src.latejoin_vore
+	P.latejoin_prey = src.latejoin_prey
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
 	P.autotransferable = src.autotransferable
@@ -275,6 +277,7 @@
 
 	//CHOMP stuff
 	latejoin_vore = P.latejoin_vore
+	latejoin_prey = P.latejoin_prey
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
 	autotransferable = P.autotransferable
@@ -900,6 +903,7 @@
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
+	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
