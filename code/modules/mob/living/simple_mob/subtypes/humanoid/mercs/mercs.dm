@@ -7,13 +7,13 @@
 	name = "mercenary"
 	tt_desc = "E Homo sapiens"
 	desc = "A tough looking individual armed with only a knife." //CHOMPEdit
-	movement_cooldown = 2	//CHOMPEdit
 	icon_state = "syndicate"
 	icon_living = "syndicate"
 	icon_dead = "syndicate_dead"
 	icon_gib = "syndicate_gib"
 
 	faction = "syndicate"
+	movement_cooldown = 4
 
 	status_flags = 0
 
