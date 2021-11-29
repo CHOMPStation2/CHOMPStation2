@@ -221,7 +221,8 @@
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
-						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur) //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
+						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
+						"Artist" = /datum/alt_title/artist)
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
@@ -259,3 +260,7 @@
 /datum/alt_title/tragedian
 	title = "Tragedian"
 	title_blurb = "A Tragedian will focus on making people think about life and world around them! Life is a tragedy, and who's better to convey its emotions than you?"
+
+/datum/alt_title/artist
+	title = "Artist"
+	title_blurb = "An Artist's calling is to create beautiful arts! Whatever form may they take, create and have people astonished with your creativity."

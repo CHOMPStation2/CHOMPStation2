@@ -99,12 +99,12 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 			PN = null
 
 		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
-		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount <= 1) //it's reading from the moth_amount global list to determine if it can evolve.
+		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount <= 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
 			anchored = 0
 			PN = attached.powernet
 			release_vore_contents()
 			prey_excludes.Cut()
-			moth_amount++
+			moth_amount = moth_amount + 1
 			death_star()
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
@@ -174,6 +174,11 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Through either grave error, overwhelming willingness, or some other factor, you find yourself lodged halfway past the solargrub's mandibles. While it had initially hissed and chittered in glee at the prospect of a new meal, it is clearly more versed in suckling on power cables; inch by inch, bit by bit, it undulates forth to slowly, noisily gulp you down its short esophagus... and right into its extra-cramped, surprisingly hot stomach. As the rest of you spills out into the plush-walled chamber, the grub's soft body bulges outwards here and there with your compressed figure. Before long, a thick slime oozes out from the surrounding stomach walls; only time will tell how effective it is on something solid like you..."
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#baca24" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 
 	B.emote_lists[DM_HOLD] = list(
 		"The air trapped within the solargrub is hot, humid, and tinged with ozone, but otherwise mercifully harmless to you aside from being heavy on the lungs.",

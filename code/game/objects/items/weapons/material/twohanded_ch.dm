@@ -88,7 +88,7 @@
 			G.dust()
 			return
 		else
-			G.stun_effect_act(10 , 50,def_zone = BP_TORSO, src)
+			G.stun_effect_act(10 , 50, BP_TORSO, src)
 			G.take_organ_damage(10)
 			G.Paralyse(20)
 			playsound(src.loc, "sparks", 50, 1)

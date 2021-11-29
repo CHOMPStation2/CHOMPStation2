@@ -7,7 +7,7 @@
 	desc = "It's a hat, it flails."
 	body_parts_covered = 0
 
-/obj/item/clothing/head/wiggler/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer)
+/obj/item/clothing/head/wiggler/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer,var/icon/clip_mask = null)
 	var/image/so_far = ..()
 	so_far.pixel_y += 16
 	so_far.pixel_x += 0

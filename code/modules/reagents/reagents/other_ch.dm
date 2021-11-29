@@ -95,21 +95,21 @@
 	description = "Just looking at this makes you feel odd. Whether or not this would be good to consume is likely a gamble."
 	color = "#463667"
 	data = list("count"=1)
-	on_mob_life(var/mob/living/M as mob)
-		if(!M) M = holder.my_atom
-		if(data)
-			switch(data["count"])
-				if(1 to 30)
-					if(prob(9)) M.visible_emote("blushes")
-					if(prob(9)) to_chat(M, "<span class='warning'>You feel so needy..</span>")
-				if (30 to INFINITY)
-					if(prob(3)) M.visible_emote("blushes")
-					if(prob(5)) M.audible_emote("moans out lewdly!")
-					if(prob(9)) to_chat(M, "<span class='warning'>You can't help but want to touch yourself then and now!</span>")
-			data["count"]++
-		holder.remove_reagent(src.id, 0.2)
-		//..()
-		return
+/datum/reagent/phenethylamine/on_mob_life(var/mob/living/M as mob)
+	if(!M) M = holder.my_atom
+	if(data)
+		switch(data["count"])
+			if(1 to 30)
+				if(prob(9)) M.visible_emote("blushes")
+				if(prob(9)) to_chat(M, "<span class='warning'>You feel so needy..</span>")
+			if (30 to INFINITY)
+				if(prob(3)) M.visible_emote("blushes")
+				if(prob(5)) M.audible_emote("moans out lewdly!")
+				if(prob(9)) to_chat(M, "<span class='warning'>You can't help but want to touch yourself then and now!</span>")
+		data["count"]++
+	holder.remove_reagent(src.id, 0.2)
+	//..()
+	return
 
 /datum/reagent/benzilate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)

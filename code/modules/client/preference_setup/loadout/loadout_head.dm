@@ -127,7 +127,7 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/head/cap/mbill
-	display_name = "cap, bill"
+	display_name = "cap, major bill's"
 	path = /obj/item/clothing/head/soft/mbill
 
 /datum/gear/head/cap/sol
@@ -426,6 +426,14 @@
 	display_name = "black and gold headdress"
 	path = /obj/item/clothing/head/blackngoldheaddress
 
+/datum/gear/head/plaguedoctor
+	display_name = "plague doctor's hat"
+	path = /obj/item/clothing/head/plaguedoctorhat
+
 /datum/gear/head/plaguedoctor2
 	display_name = "golden plague doctor's hat"
 	path = /obj/item/clothing/head/plaguedoctorhat/gold
+
+/datum/gear/head/wheat
+	display_name = "straw hat"
+	path = /obj/item/clothing/head/wheat

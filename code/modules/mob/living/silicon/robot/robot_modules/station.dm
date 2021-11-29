@@ -9,7 +9,12 @@ var/global/list/robot_modules = list(
 	"Security" 		= /obj/item/weapon/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
 	"Engineering"	= /obj/item/weapon/robot_module/robot/engineering/general,
-	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor
+	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor,
+	"Gravekeeper"	= /obj/item/weapon/robot_module/robot/gravekeeper,
+	"Lost"			= /obj/item/weapon/robot_module/robot/lost,
+	"Protector" 	= /obj/item/weapon/robot_module/robot/syndicate/protector,
+	"Mechanist" 	= /obj/item/weapon/robot_module/robot/syndicate/mechanist,
+	"Combat Medic"	= /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	)
 
 /obj/item/weapon/robot_module
@@ -198,7 +203,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2standard",
 					"Pyralis" = "Glitterfly-Standard",
 					"Miss M" = "miss-standard", // YW change, Added Miss M
-					"Decapod" = "decapod-Standard"
+					"Decapod" = "decapod-Standard",
+					"Pneuma" = "pneuma-Standard",
+					"Tower" = "drider-Standard"
 					)
 
 
@@ -236,7 +243,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Surgeon",
 					"Miss M" = "miss-medical", // YW change, Added Miss M
-					"Decapod" = "decapod-Surgeon"
+					"Decapod" = "decapod-Surgeon",
+					"Pneuma" = "pneuma-Surgeon",
+					"Tower" = "drider-Surgeon"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -314,7 +323,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Crisis",
 					"Miss M" = "miss-medical", // YW change, Added Miss M
-					"Decapod" = "decapod-Crisis"
+					"Decapod" = "decapod-Crisis",
+					"Pneuma" = "pneuma-Crisis",
+					"Tower" = "drider-Crisis"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -392,7 +403,9 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
-					"Decapod" = "decapod-Engineering"
+					"Decapod" = "decapod-Engineering",
+					"Pneuma" = "pneuma-Engineering",
+					"Tower" = "drider-Engineering"
 					)
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
@@ -508,7 +521,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2security",
 					"Pyralis" = "Glitterfly-Security",
 					"Miss M" = "miss-security", // YW change, Added Miss M
-					"Decapod" = "decapod-Security"
+					"Decapod" = "decapod-Security",
+					"Pneuma" = "pneuma-Security",
+					"Tower" = "drider-Security"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -555,7 +570,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2janitor",
 					"Pyralis" = "Glitterfly-Janitor",
 					"Miss M" = "miss-janitor", // YW change, Added Miss M
-					"Decapod" = "decapod-Janitor"
+					"Decapod" = "decapod-Janitor",
+					"Pneuma" = "pneuma-Janitor",
+					"Tower" = "drider-Janitor"
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -619,7 +636,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Service",
 					"Miss M" = "miss-service", // YW change, Added Miss M
-					"Decapod" = "decapod-Service"
+					"Decapod" = "decapod-Service",
+					"Pneuma" = "pneuma-Service",
+					"Tower" = "drider-Service"
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -674,7 +693,9 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-blu",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Clerical",
-					"Decapod" = "decapod-Clerical"
+					"Decapod" = "decapod-Clerical",
+					"Pneuma" = "pneuma-Clerical",
+					"Tower" = "drider-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -714,7 +735,9 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2miner",
 					"Pyralis" = "Glitterfly-Miner",
 					"Miss M" = "miss-miner", // YW change, Added Miss M
-					"Decapod" = "decapod-Miner"
+					"Decapod" = "decapod-Miner",
+					"Pneuma" = "pneuma-Miner",
+					"Tower" = "drider-Miner"
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
@@ -745,7 +768,9 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sci",
 					"Usagi-II" = "tall2peace",
 					"Pyralis" = "Glitterfly-Research",
-					"Decapod" = "decapod-Research"
+					"Decapod" = "decapod-Research",
+					"Pneuma" = "pneuma-Research",
+					"Tower" = "drider-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()

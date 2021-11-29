@@ -64,6 +64,7 @@
 		give_client_previews(user.client) //CHOMPEdit
 		ui = new(user, src, "VorePanel", "Vore Panel")
 		ui.open()
+		ui.set_autoupdate(FALSE)
 
 // This looks weird, but all tgui_host is used for is state checking
 // So this allows us to use the self_state just fine.
@@ -219,6 +220,8 @@
 			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
 			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
 			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
+			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
@@ -258,7 +261,9 @@
 			selected_list["liq_interacts"]["liq_reagent_addons"] = list()
 			for(var/flag_name in selected.reagent_mode_flag_list)
 				if(selected.reagent_mode_flags & selected.reagent_mode_flag_list[flag_name])
-					selected_list["liq_interacts"]["liq_reagent_addons"].Add(flag_name)
+					var/list/selected_list_member = selected_list["liq_interacts"]["liq_reagent_addons"]
+					ASSERT(islist(selected_list_member))
+					selected_list_member.Add(flag_name)
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -289,6 +294,7 @@
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
+		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
@@ -296,6 +302,7 @@
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full //Belching while full
 		//CHOMPedit end
 	)
@@ -372,7 +379,7 @@
 			return set_attr(usr, params)
 
 		if("saveprefs")
-			if(!ishuman(host) && !issilicon(host))
+			if(host.real_name != host.client.prefs.real_name || !ishuman(host) && !issilicon(host))
 				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
@@ -432,6 +439,12 @@
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.latejoin_vore = host.latejoin_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_latejoin_prey")
+			host.latejoin_prey = !host.latejoin_prey
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.latejoin_prey = host.latejoin_prey
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_allow_spontaneous_tf")
@@ -529,6 +542,12 @@
 			host.give_reagents = !host.give_reagents
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.give_reagents = host.give_reagents
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_autotransferable")
+			host.autotransferable = !host.autotransferable
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.autotransferable = host.autotransferable
 			unsaved_changes = TRUE
 			return TRUE
 		//Belch code
@@ -738,6 +757,7 @@
 				return FALSE
 
 			host.vore_selected.digest_mode = new_mode
+			host.vore_selected.updateVRPanels()
 			. = TRUE
 		if("b_addons")
 			var/list/menu_list = host.vore_selected.mode_flag_list.Copy()
@@ -1074,6 +1094,16 @@
 				host.vore_selected.autotransferlocation = null
 			else
 				host.vore_selected.autotransferlocation = choice.name
+			. = TRUE
+		if("b_autotransfer_min_amount")
+			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
+			if(!isnull(autotransfer_min_amount_input))
+				host.vore_selected.autotransfer_min_amount = sanitize_integer(autotransfer_min_amount_input, 0, 100, initial(host.vore_selected.autotransfer_min_amount))
+			. = TRUE
+		if("b_autotransfer_max_amount")
+			var/autotransfer_max_amount_input = input(user, "Set the maximum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Max Amount") as num|null
+			if(!isnull(autotransfer_max_amount_input))
+				host.vore_selected.autotransfer_max_amount = sanitize_integer(autotransfer_max_amount_input, 0, 100, initial(host.vore_selected.autotransfer_max_amount))
 			. = TRUE
 		if("b_autotransfer_enabled")
 			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled

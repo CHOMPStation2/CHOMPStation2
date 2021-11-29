@@ -4,20 +4,44 @@
 /datum/trait/positive/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
-	cost = 3
+	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
+	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
+	
+//ChompEdit
+
+/datum/trait/positive/speed_fast_minor
+	name = "Haste, minor"
+	desc = "Allows you to move a little bit faster on average than baseline."
+	cost = 2
+	var_changes = list("slowdown" = -0.25)
+	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
+
+//ChompEdit End
 
 /datum/trait/positive/hardy
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
 	cost = 1
 	var_changes = list("item_slowdown_mod" = 0.5)
+	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
 
+//ChompEdit
 /datum/trait/positive/hardy_plus
 	name = "Hardy, Major"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy)
+
+/datum/trait/positive/hardy_extreme
+	name = "Hardy, Extreme"
+	desc = "Allows you to carry heavy equipment with no slowdown at all."
+	cost = 3
+	var_changes = list("item_slowdown_mod" = 0.0)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
+	
+//ChompEdit End
 
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
@@ -160,7 +184,7 @@
 /datum/trait/positive/traceur
 	name = "Traceur"
 	desc = "You're capable of parkour and can *flip over low objects (most of the time)."
-	cost = 2
+	cost = 1 //CHOMPEdit this is not worth 2 points
 	var_changes = list("agility" = 90)
 
 // YW Addition
@@ -194,7 +218,8 @@
 /datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
-	cost = 2
+	category = 0 //CHOMPEdit making weaver a neutral trait instead
+	cost = 0 //Also not worth 2 points, wtf, this is literally just fluff
 	var_changes = list("is_weaver" = 1)
 
 /datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)

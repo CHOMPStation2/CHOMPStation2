@@ -126,6 +126,19 @@
 	if(usr.stat)
 		return
 
+	// CHOMPEdit begin
+	if(iscarbon(usr))
+		var/mob/living/carbon/C = usr
+		if(C.handcuffed)
+			to_chat(C, "<span class='warning'>You cannot remove accessories while handcuffed!</span>")
+			return
+		else if(istype(C, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = C
+			if(H.ability_flags & 0x1)
+				to_chat(H, "<span class='warning'>You cannot remove accessories while phase shifted!</span>")
+				return
+	//CHOMPEdit end
+
 	var/obj/item/clothing/accessory/A
 	var/accessory_amount = LAZYLEN(accessories)
 	if(accessory_amount)

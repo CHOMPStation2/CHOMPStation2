@@ -52,6 +52,9 @@
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
 	var/autotransfer_enabled = FALSE		// Player toggle
+	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
+	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
+	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -206,7 +209,9 @@
 		"autotransferchance",
 		"autotransferwait",
 		"autotransferlocation",
-		"autotransfer_enabled", //CHOMP end of variables from CHOMP
+		"autotransfer_enabled",
+		"autotransfer_min_amount",
+		"autotransfer_max_amount", //CHOMP end of variables from CHOMP
 		"egg_type"
 		)
 
@@ -232,6 +237,8 @@
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
+	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 
@@ -252,6 +259,7 @@
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
+		M.updateVRPanel()
 		if(desc)
 			to_chat(M, "<span class='notice'><B>[desc]</B></span>")
 		var/taste
@@ -284,6 +292,8 @@
 			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
 			I.add_overlay(gurgled_overlays[I.gurgled_color])
 		if(I.d_mult < 1)
+			if(I.d_stage_overlay)
+				I.cut_overlay(I.d_stage_overlay)
 			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
 			temp.filters += filter(type = "alpha", icon = icon(I.icon, I.icon_state))
 			I.d_stage_overlay = temp
@@ -292,6 +302,8 @@
 
 /obj/belly/proc/vore_fx(mob/living/L)
 	if(!istype(L))
+		return
+	if(!L.client)
 		return
 	if(!L.show_vore_fx)
 		L.clear_fullscreen("belly")
@@ -387,6 +399,8 @@
 		owner.update_icons()
 
 	//Print notifications/sound if necessary
+	if(istype(M, /mob/observer)) //CHOMPEdit
+		silent = TRUE
 	if(!silent)
 		owner.visible_message("<font color='green'><b>[owner] expels [M] from their [lowertext(name)]!</b></font>")
 		var/soundfile
@@ -622,7 +636,9 @@
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
-	M.ghostize() // Make sure they're out, so we can copy attack logs and such.
+	var/mob/observer/G = M.ghostize() //CHOMPEdit start. Make sure they're out, so we can copy attack logs and such.
+	if(G)
+		G.forceMove(src) //CHOMPEdit end.
 	qdel(M)
 
 // Handle a mob being absorbed
@@ -868,11 +884,13 @@
 					dest_belly = B
 					break
 			if(dest_belly)
-				transfer_contents(prey, dest_belly)
+				if(autotransfer_min_amount > 1) //CHOMPEdit start
+					autotransfer_queue += prey
+				else
+					transfer_contents(prey, dest_belly)
 		else
 			// Didn't transfer, so wait before retrying
-			// I feel like there's a way to make this timer looping using the normal looping thing, but pass in the ID and cancel it if we aren't looping again
-			prey.belly_cycles = 0 //CHOMPEdit: reset cycle count
+			prey.belly_cycles = 0 //CHOMPEdit end
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
@@ -935,7 +953,9 @@
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation
-	dupe.autotransfer_enabled = autotransfer_enabled //CHOMP end of variables from CHOMP
+	dupe.autotransfer_enabled = autotransfer_enabled
+	dupe.autotransfer_min_amount = autotransfer_min_amount
+	dupe.autotransfer_max_amount = autotransfer_max_amount //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

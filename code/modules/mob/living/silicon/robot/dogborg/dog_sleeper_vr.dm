@@ -612,7 +612,6 @@
 						for(var/tech in tech_item.origin_tech)
 							files.UpdateTech(tech, tech_item.origin_tech[tech])
 							synced = FALSE
-						drain(-50 * digested)
 					if(volume)
 						water.add_charge(volume)
 					if(recycles && T.matter)
@@ -630,8 +629,7 @@
 									plastic.add_charge(total_material)
 								if(material == "wood")
 									wood.add_charge(total_material)
-					else
-						drain(-50 * digested)
+					drain(-50 * digested)
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
 				drain(-100)
@@ -712,7 +710,7 @@
 	icon_state = "sleeperc"
 	injection_chems = list("glucose","inaprovaline","tricordrazine")
 	max_item_count = 1
-	
+
 /obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
@@ -729,7 +727,7 @@
 	desc = "A mounted drunk tank unit with fuel processor."
 	icon_state = "brewer"
 	injection_chems = null
-	
+
 /obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
 	if(patient && patient.reagents)
 		if(chem in injection_chems + "inaprovaline")

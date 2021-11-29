@@ -63,6 +63,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
 	var/latejoin_vore = FALSE
+	var/latejoin_prey = FALSE
+	var/autotransferable = TRUE
   //CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -156,8 +158,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 
 	//CHOMP stuff
 	latejoin_vore = json_from_file["latejoin_vore"]
+	latejoin_prey = json_from_file["latejoin_prey"]
 	receive_reagents = json_from_file["receive_reagents"]
 	give_reagents = json_from_file["give_reagents"]
+	autotransferable = json_from_file["autotransferable"]
 
 
 	//Quick sanitize
@@ -195,10 +199,14 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	//CHOMP stuff
 	if(isnull(latejoin_vore))
 		latejoin_vore = FALSE
+	if(isnull(latejoin_prey))
+		latejoin_prey = FALSE
 	if(isnull(receive_reagents))
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
 		give_reagents = FALSE
+	if(isnull(autotransferable))
+		autotransferable = TRUE
 
 	return TRUE
 
@@ -223,12 +231,14 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
 			"latejoin_vore"			= latejoin_vore, //CHOMPedit
+			"latejoin_prey"			= latejoin_prey,
 			"allow_spontaneous_tf"	= allow_spontaneous_tf,
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
+			"autotransferable"		= autotransferable
 		)
 
 	//List to JSON

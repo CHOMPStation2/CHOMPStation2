@@ -583,7 +583,7 @@
 		/obj/item/weapon/reagent_containers/food/snacks/muffin = 30,
 		/obj/item/weapon/reagent_containers/food/snacks/berrymuffin = 30,
 		/obj/item/weapon/reagent_containers/food/snacks/cherrypie = 30,
-		/obj/item/weapon/reagent_containers/food/snacks/cookie = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/sugarcookie = 30,
 		/obj/item/weapon/reagent_containers/food/snacks/croissant = 30,
 		/obj/item/weapon/reagent_containers/food/snacks/pie = 30,
 		/obj/item/weapon/reagent_containers/food/snacks/poppypretzel = 30,

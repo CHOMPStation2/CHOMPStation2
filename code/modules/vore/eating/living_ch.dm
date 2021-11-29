@@ -10,7 +10,7 @@
 	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
 
 
-mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
+/mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(vore_footstep_volume_cooldown++ >= 5) //updating the 'dominating' belly, the one that has most liquid and is loudest.
 		choose_vorefootstep()
 		vore_footstep_volume_cooldown = 0
@@ -229,7 +229,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 		T = input("Choose whose belly to rub") as null| mob in view(1,src)
 		if(!T)
 			return FALSE
-	if(!T in view(1,src))
+	if(!(T in view(1,src)))
 		return FALSE
 	if(T.vore_selected)
 		var/obj/belly/B = T.vore_selected

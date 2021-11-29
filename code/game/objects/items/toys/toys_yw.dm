@@ -12,17 +12,17 @@
 		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
-	rename_plushie()
-		set name = "Name Plushie"
-		set category = "Object"
-		set desc = "Give your plushie a cute name!"
-		var/mob/M = usr
-		if(!M.mind)
-			return 0
+/obj/item/toy/plushie/teshari/strix/rename_plushie()
+	set name = "Name Plushie"
+	set category = "Object"
+	set desc = "Give your plushie a cute name!"
+	var/mob/M = usr
+	if(!M.mind)
+		return 0
 
-		if(src && !M.stat && in_range(M,src))
-			to_chat(M, "You cannot rename Strix Hades! You hug him anyway.")
-			return 1
+	if(src && !M.stat && in_range(M,src))
+		to_chat(M, "You cannot rename Strix Hades! You hug him anyway.")
+		return 1
 
 /obj/item/toy/plushie/teshari/eili
 	name = "Eili"
@@ -39,17 +39,17 @@
 		slot_head_str = 'icons/vore/custom_onmob_yw.dmi')
 
 
-	rename_plushie()
-		set name = "Name Plushie"
-		set category = "Object"
-		set desc = "Give your plushie a cute name!"
-		var/mob/M = usr
-		if(!M.mind)
-			return 0
+/obj/item/toy/plushie/teshari/eili/rename_plushie()
+	set name = "Name Plushie"
+	set category = "Object"
+	set desc = "Give your plushie a cute name!"
+	var/mob/M = usr
+	if(!M.mind)
+		return 0
 
-		if(src && !M.stat && in_range(M,src))
-			to_chat(M, "You cannot rename Eili! You hug her anyway.")
-			return 1
+	if(src && !M.stat && in_range(M,src))
+		to_chat(M, "You cannot rename Eili! You hug her anyway.")
+		return 1
 
 /obj/item/toy/plushie/teshari/_yw
 	name = "lifelike teshari plush"

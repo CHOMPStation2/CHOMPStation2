@@ -23,7 +23,10 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	economic_modifier = 20
 
 	minimum_character_age = 25
+	min_age_by_species = list(SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 70 // Old geezer captains ftw
+	ideal_age_by_species = list(SPECIES_HUMAN_VATBORN = 55) /// Vatborn live shorter, no other race eligible for captain besides human/skrell 
+	banned_job_species = list(SPECIES_UNATHI, SPECIES_TAJ, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "mechanical", "digital")
 
 	outfit_type = /decl/hierarchy/outfit/job/captain
 	job_description = "The Site Manager manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
@@ -31,13 +34,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
 	alt_titles = list("Overseer"= /datum/alt_title/overseer,"Colony Director"= /datum/alt_title/colonydirector) //CHOMPEdit
 
-//YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
+
+/*
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(src)
-//YW UNCOMMENTING END
-
+*/
 
 /datum/job/captain/get_access()
 	return get_all_station_access().Copy()
@@ -68,7 +71,10 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	economic_modifier = 10
 
 	minimum_character_age = 25
+	min_age_by_species = list(SPECIES_UNATHI = 70, SPECIES_TESHARI = 20, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
+	ideal_age_by_species = list(SPECIES_UNATHI = 140, SPECIES_TESHARI = 27, "mechanical" = 20, SPECIES_HUMAN_VATBORN = 20)
+	banned_job_species = list(SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital", SPECIES_DIONA)
 
 	outfit_type = /decl/hierarchy/outfit/job/hop
 	job_description = "The Head of Personnel manages the Service department and most other civilians. They also \

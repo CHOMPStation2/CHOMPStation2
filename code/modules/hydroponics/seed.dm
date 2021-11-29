@@ -685,7 +685,8 @@
 
 					if(isnull(gene_chem[i])) gene_chem[i] = 0
 
-					if(chems[rid].len < i) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
+					var/list/chems_rid = chems[rid]
+					if(istype(chems_rid) && (chems_rid.len < i)) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
 						continue
 
 					if(chems[rid][i])

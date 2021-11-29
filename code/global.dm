@@ -138,11 +138,25 @@ var/custom_event_msg = null
 var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
 
 
-// Used by robots and robot preferences.
+// Used by robots and robot preferences for regular modules.
 var/list/robot_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
-	"Research"
+	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
+	"Service-Hound", "BoozeHound", "KMine"
+	, "UnityHound" // CHOMPEdit -- Adds the UnityHound drone to the list.
+)
+// List of modules added during code red
+var/list/emergency_module_types = list(
+	"Combat", "ERT"
+)
+// List of modules available to AI shells
+var/list/shell_module_types = list(
+	"Standard", "Service", "Clerical", "Service-Hound", "BoozeHound"
+)
+// List of whitelisted modules
+var/list/whitelisted_module_types = list(
+	"Lost", "Stray"
 )
 
 // Some scary sounds.

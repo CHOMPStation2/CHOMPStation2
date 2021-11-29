@@ -7,12 +7,13 @@
 	S["language"]			>> pref.alternate_languages
 	S["language_prefixes"]	>> pref.language_prefixes
 	//CHOMPEdit Begin
+	S["species"]			>> pref.species
 	S["pos_traits"]		>> pref.pos_traits
 	var/morelang = 0
 	for(var/trait in pref.pos_traits)
 		if(trait==/datum/trait/positive/linguist)
 			morelang = 1
-			pref.num_languages = morelang * 12
+	pref.num_languages = morelang * 12
 	//CHOMPEdit End
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
@@ -32,7 +33,8 @@
 		// Sanitize illegal languages
 		for(var/language in pref.alternate_languages)
 			var/datum/language/L = GLOB.all_languages[language]
-			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && !is_lang_whitelisted(pref.client, L)))
+			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && pref.client && !is_lang_whitelisted(pref.client, L)))
+				testing("LANGSANI: Removed [L?.name || "lang not found"] from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] because it failed allowed checks")
 				pref.alternate_languages -= language
 
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)

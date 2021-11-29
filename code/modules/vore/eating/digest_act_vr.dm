@@ -54,7 +54,9 @@
 					if(0)
 						d_stage_name = "ruined"
 				if(d_stage_name)
-					cleanname = "[d_stage_name] [initial(name)]"
+					if(!oldname)
+						oldname = cleanname ? cleanname : name
+					cleanname = "[d_stage_name] [oldname]"
 					decontaminate()
 					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
 					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
@@ -136,8 +138,7 @@
 /obj/item/organ/digest_act(atom/movable/item_storage = null)
 	if((. = ..()))
 		if(isbelly(item_storage))
-			var/obj/belly/B = item_storage
-			. += 2 * (B.digest_brute + B.digest_burn + (B.digest_oxy)/2)
+			. *= 3
 		else
 			. += 30 //Organs give a little more
 

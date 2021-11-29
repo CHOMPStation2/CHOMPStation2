@@ -16,12 +16,33 @@
 
 	//CHOMPEdit: Autotransfer count moved here.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
-		for(var/atom/movable/M in contents)
+		var/list/autotransferables = contents - autotransfer_queue
+		if(LAZYLEN(autotransfer_queue) >= autotransfer_min_amount)
+			var/obj/belly/dest_belly
+			for(var/obj/belly/B in owner.vore_organs)
+				if(B.name == autotransferlocation)
+					dest_belly = B
+					break
+			if(dest_belly)
+				for(var/atom/movable/M in autotransfer_queue)
+					if(!M.autotransferable)
+						autotransfer_queue -= M
+						continue
+					transfer_contents(M, dest_belly)
+				autotransfer_queue.Cut()
+		var/tally = 0
+		for(var/atom/movable/M in autotransferables)
+			if(!M.autotransferable)
+				autotransferables -= M
+				continue
 			if(isliving(M))
 				var/mob/living/L = M
 				if(L.absorbed)
 					continue
+			tally++
 			M.belly_cycles++
+			if(autotransfer_max_amount > 0 && tally > autotransfer_max_amount)
+				continue
 			if(M.belly_cycles >= autotransferwait / 60)
 				check_autotransfer(M, autotransferlocation)
 
@@ -30,6 +51,8 @@
 
 /////////////////////////// Exit Early ////////////////////////////
 	var/list/touchable_atoms = contents - items_preserved
+	for(var/mob/observer/G in touchable_atoms) //CHOMPEdit: don't bother trying to process ghosts.
+		touchable_atoms -= G
 	if(!length(touchable_atoms))
 		return
 
@@ -75,10 +98,9 @@
 				SEND_SOUND(M, prey_digest)
 		play_sound = pred_digest
 
-	if(to_update)
-		updateVRPanels()
-
 	if(!LAZYLEN(touchable_mobs))
+		if(to_update)
+			updateVRPanels()
 		if(play_sound)
 			for(var/mob/M in hearers(VORE_SOUND_RANGE, get_turf(owner))) //so we don't fill the whole room with the sound effect
 				if(!M.is_preference_enabled(/datum/client_preference/digestion_noises))
@@ -136,6 +158,9 @@
 				formatted_message = replacetext(formatted_message, "%countprey", living_count)
 				formatted_message = replacetext(formatted_message, "%count", contents.len)
 				to_chat(M, "<span class='notice'>[formatted_message]</span>")
+
+	if(to_update)
+		updateVRPanels()
 
 
 /obj/belly/proc/handle_touchable_atoms(list/touchable_atoms)
@@ -250,7 +275,9 @@
 /obj/belly/proc/handle_digestion_death(mob/living/M)
 	var/digest_alert_owner = pick(digest_messages_owner)
 	var/digest_alert_prey = pick(digest_messages_prey)
-	var/compensation = M.getOxyLoss() //How much of the prey's damage was caused by passive crit oxyloss to compensate the lost nutrition.
+	var/compensation = M.maxHealth / 5 //Dead body bonus.
+	if(ishuman(M))
+		compensation += M.getOxyLoss() //How much of the prey's damage was caused by passive crit oxyloss to compensate the lost nutrition.
 
 	var/living_count = 0
 	for(var/mob/living/L in contents)
@@ -278,22 +305,19 @@
 	digestion_death(M)
 	if(!ishuman(owner))
 		owner.update_icons()
-	if(compensation == 0) //Slightly sloppy way at making sure certain mobs don't give ZERO nutrition (fish and so on)
-		compensation = 21 //This reads as 20*4.5 due to the calculations afterward, making the backup nutrition value 94.5 per mob. Not op compared to regular prey.
-	if(compensation > 0)
-		if(isrobot(owner))
-			var/mob/living/silicon/robot/R = owner
-			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
-				R.cell.charge += 15*compensation
-				GenerateBellyReagents_digested()
-			else
-				R.cell.charge += 25*compensation*(nutrition_percent / 100) //CHOMPedit end
+	if(isrobot(owner))
+		var/mob/living/silicon/robot/R = owner
+		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
+			R.cell.charge += (nutrition_percent / 100) * compensation * 15
+			GenerateBellyReagents_digested()
 		else
-			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-				owner.adjust_nutrition((nutrition_percent / 100)*3.0*compensation)
-				GenerateBellyReagents_digested()
-			else
-				owner.adjust_nutrition((nutrition_percent / 100)*4.5*compensation) //CHOMPedit end
+			R.cell.charge += (nutrition_percent / 100) * compensation * 25
+	else
+		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3)
+			GenerateBellyReagents_digested()
+		else
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)

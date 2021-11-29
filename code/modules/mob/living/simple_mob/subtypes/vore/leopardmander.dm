@@ -138,7 +138,9 @@
 	verbs |= /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
-	. = ..()
+	if(!voremob_loaded) //CHOMP add to fix runtime
+		return //CHOMP Add
+	.=..() //CHOMP Add
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The exotic leopardmander tosses its head back with you firmly clasped in its jaws, and in a few swift moments it finishes swallowing you down into its hot, brightly glowing gut. Your weight makes absolutely no impact on its form, the doughy walls giving way beneath you, with their unnatural softness. The thick, humid air is tinged with an oddly pleasant smell, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder, smothering you in thick hot gutflesh~ You can only really sort of see outside that thick-walled gut."
