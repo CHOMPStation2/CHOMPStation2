@@ -16,6 +16,13 @@ funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
+<<<<<<< HEAD
+=======
+huenererschrecker - Xenochimera
+hunterbirk - Protean
+hunterbirk - Xenochimera
+idcaboutaname - Protean
+>>>>>>> e34b892a92... Merge pull request #11930 from barrabobabo/patch-1
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
@@ -60,3 +67,7 @@ xioen - Xenochimera
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
+<<<<<<< HEAD
+=======
+zeracyfr - Xenochimera
+>>>>>>> e34b892a92... Merge pull request #11930 from barrabobabo/patch-1
