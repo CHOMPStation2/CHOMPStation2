@@ -1408,4 +1408,8 @@ End CHOMP Removal*/
 	drop_sound = null
 	pickup_sound = null
 	origin_tech = null
+<<<<<<< HEAD
 	matter = null
+=======
+	matter = null
+>>>>>>> 6b5f2032a1... Merge pull request #11931 from Heroman3003/amaryll
