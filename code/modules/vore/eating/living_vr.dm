@@ -35,7 +35,8 @@
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
-	var/noisy_full = FALSE				//CHOMPEdit: Enables belching when a mob has overeaten
+	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
+	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
 	var/bellies_loaded = FALSE			//CHOMPedit: On-demand belly loading
 
 //
@@ -147,9 +148,7 @@
 		if(is_vore_predator(src))
 			for(var/mob/living/M in H.contents)
 				if(attacker.eat_held_mob(attacker, M, src))
-					if(H.held_mob == M)
-						H.held_mob = null
-			return TRUE //return TRUE to exit upper procs
+					return TRUE //return TRUE to exit upper procs
 		else
 			log_debug("[attacker] attempted to feed [H.contents] to [src] ([type]) but it failed.")
 
@@ -235,8 +234,10 @@
 
 	//CHOMP stuff
 	P.latejoin_vore = src.latejoin_vore
+	P.latejoin_prey = src.latejoin_prey
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
+	P.autotransferable = src.autotransferable
 
 
 	var/list/serialized = list()
@@ -276,8 +277,10 @@
 
 	//CHOMP stuff
 	latejoin_vore = P.latejoin_vore
+	latejoin_prey = P.latejoin_prey
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
+	autotransferable = P.autotransferable
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
@@ -545,7 +548,16 @@
 	user.visible_message(success_msg)
 
 	// Actually shove prey into the belly.
-	belly.nom_mob(prey, user)
+	if(istype(prey.loc, /obj/item/weapon/holder))
+		var/obj/item/weapon/holder/H = prey.loc
+		for(var/mob/living/M in H.contents)
+			belly.nom_mob(M, user)
+			if(M.loc == H) // In case nom_mob failed somehow.
+				M.forceMove(get_turf(src))
+		H.held_mob = null
+		qdel(H)
+	else
+		belly.nom_mob(prey, user)
 	if(!ishuman(user))
 		user.update_icons()
 
@@ -883,6 +895,7 @@
 	dispvoreprefs += "<b>Digestable:</b> [digestable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Devourable:</b> [devourable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Feedable:</b> [feeding ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Autotransferable:</b> [autotransferable ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Absorption Permission:</b> [absorbable ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "Enabled" : "Disabled"]<br>"
@@ -890,6 +903,7 @@
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
+	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
