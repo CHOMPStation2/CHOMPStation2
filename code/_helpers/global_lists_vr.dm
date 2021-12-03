@@ -231,6 +231,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/wallet,
 				/obj/item/weapon/storage/vore_egg,
 				/obj/item/weapon/bikehorn/tinytether,
+<<<<<<< HEAD
 				/obj/item/weapon/material/kitchen, //chompstation addition start
 				/obj/item/weapon/storage/mre,
 				/obj/item/weapon/storage/mrebag,
@@ -254,6 +255,9 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/clipboard,
 				/obj/item/weapon/coin,
 				/obj/item/clothing/ears //chompstation addition end
+=======
+				/obj/item/capture_crystal
+>>>>>>> 60011ecd0b... Merge pull request #11928 from Very-Soft/whalesandcrystals
 				)
 
 var/global/list/contamination_flavors = list(
