@@ -1097,8 +1097,12 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
+<<<<<<< HEAD
     latejoin_vore,
     latejoin_prey,
+=======
+    allow_inbelly_spawning,
+>>>>>>> bff5db7dcb... Merge pull request #11943 from Heroman3003/inbelly_spawning
     allow_spontaneous_tf,
     step_mechanics_active,
     pickup_mechanics_active,
@@ -1223,6 +1227,7 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous Pred Disabled",
       },
     },
+<<<<<<< HEAD
     spawnbelly: {
       action: "toggle_latejoin_vore",
       test: latejoin_vore,
@@ -1247,6 +1252,20 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: "Vore Spawn Prey Enabled",
         disabled: "Vore Spawn Prey Disabled",
+=======
+    inbelly_spawning: {
+      action: "toggle_allow_inbelly_spawning",
+      test: allow_inbelly_spawning,
+      tooltip: {
+        main: "This toggle is ghosts being able to spawn in one of your bellies."
+			+ " You will have to confirm again when they attempt to.",
+        enable: "Click here to allow prey to spawn in you.",
+        disable: "Click here to prevent prey from spawning in you.",
+      },
+      content: {
+        enabled: "Inbelly Spawning Allowed",
+        disabled: "Inbelly Spawning Forbidden",
+>>>>>>> bff5db7dcb... Merge pull request #11943 from Heroman3003/inbelly_spawning
       },
     },
     noisy: {
@@ -1435,6 +1454,7 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
+<<<<<<< HEAD
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%">
@@ -1448,33 +1468,46 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.resize} />
+=======
+          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.noisy} />
+>>>>>>> bff5db7dcb... Merge pull request #11943 from Heroman3003/inbelly_spawning
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.resize} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.vore_fx} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.remains} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.pickuppref} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
+<<<<<<< HEAD
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
         <Flex.Item basis="49%">
+=======
+        <Flex.Item basis="32%" grow={1}>
+>>>>>>> bff5db7dcb... Merge pull request #11943 from Heroman3003/inbelly_spawning
           <Button
             fluid
             content="Set Taste"
             icon="grin-tongue"
             onClick={() => act("setflavor")} />
         </Flex.Item>
-        <Flex.Item basis="49%" grow={1}>
+        <Flex.Item basis="32%">
           <Button
             fluid
             content="Set Smell"
