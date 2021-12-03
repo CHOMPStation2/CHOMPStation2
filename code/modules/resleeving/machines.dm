@@ -592,8 +592,9 @@
 	//Re-supply a NIF if one was backed up with them.
 	if(MR.nif_path)
 		var/obj/item/device/nif/nif = new MR.nif_path(occupant,null,MR.nif_savedata)
-		for(var/path in MR.nif_software)
-			new path(nif)
+		spawn(0)			//Delay to not install software before NIF is fully installed
+			for(var/path in MR.nif_software)
+				new path(nif)
 		nif.durability = MR.nif_durability //Restore backed up durability after restoring the softs.
 
 	// If it was a custom sleeve (not owned by anyone), update namification sequences
@@ -615,6 +616,20 @@
 
 	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
+<<<<<<< HEAD
+=======
+
+	// Vore deaths get a fake modifier labeled as such
+	if(!occupant.mind)
+		log_debug("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
+
+	if(occupant.mind?.vore_death)
+		occupant.add_modifier(/datum/modifier/faux_resleeving_sickness, sickness_duration)
+		occupant.mind.vore_death = FALSE
+	// Normal ones get a normal modifier to nerf charging into combat
+	else
+		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
+>>>>>>> 19b662e943... Merge pull request #11939 from Heroman3003/nmensayfix
 
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
