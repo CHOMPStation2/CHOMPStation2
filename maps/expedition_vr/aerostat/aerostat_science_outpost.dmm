@@ -3591,6 +3591,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
@@ -3598,6 +3599,15 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+=======
+	},
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/toxins)
+"mj" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/research,
@@ -3613,6 +3623,7 @@
 	dir = 10
 	},
 /obj/machinery/meter,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 "mm" = (
@@ -3624,6 +3635,19 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
+=======
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/toxins)
+"mm" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/table/reinforced,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/ears/earmuffs,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /area/offmap/aerostat/inside/firingrange)
 "mn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -3753,6 +3777,7 @@
 	dir = 4;
 	pixel_x = 32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/miscstorage)
 "mI" = (
@@ -3774,6 +3799,29 @@
 /obj/machinery/light{
 	dir = 1
 	},
+=======
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/miscstorage)
+"mI" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/stack/nanopaste,
+/obj/item/device/flashlight/lamp{
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/xenoarch)
+"mJ" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/portable_atmospherics/powered/pump,
+/turf/simulated/floor/plating,
+/area/offmap/aerostat/inside/toxins)
+"mL" = (
+/obj/machinery/light{
+	dir = 1
+	},
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3840,6 +3888,15 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+<<<<<<< HEAD
+=======
+/turf/simulated/floor/bluegrid,
+/area/offmap/aerostat/inside/powercontrol)
+"nb" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /obj/machinery/power/apc{
 	dir = 4;
 	pixel_x = 28
@@ -5634,10 +5691,17 @@
 "uF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+<<<<<<< HEAD
 	},
 /obj/machinery/camera/network/research_outpost{
 	dir = 8
 	},
+=======
+	},
+/obj/machinery/camera/network/research_outpost{
+	dir = 8
+	},
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
@@ -5647,6 +5711,7 @@
 /obj/structure/table/rack,
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
 "uK" = (
@@ -5655,6 +5720,16 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
+=======
+/turf/simulated/floor/tiled,
+/area/offmap/aerostat/inside/drillstorage)
+"uK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/mining/drill,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled,
+/area/offmap/aerostat/inside/drillstorage)
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 "uN" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techfloor,
@@ -5869,6 +5944,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/firingrange)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "vR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
@@ -5877,6 +5953,8 @@
 /turf/simulated/floor,
 /area/offmap/aerostat/inside/toxins)
 =======
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 "vQ" = (
 /obj/item/modular_computer/console/preset/research{
 	dir = 8
@@ -5893,6 +5971,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/xenoarch)
+<<<<<<< HEAD
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 "vT" = (
 /obj/structure/cable/heavyduty{
@@ -7804,8 +7885,12 @@
 	icon_state = "1-2"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/poster{
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 =======
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
@@ -8220,7 +8305,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/airlock/south)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 "FA" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -8600,12 +8688,21 @@
 	layer = 3.3;
 	pixel_y = -28
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
 "GX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
+=======
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/xenoarch)
+"GX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /area/offmap/aerostat/inside/toxins)
 "Ha" = (
 /obj/structure/window/reinforced{
@@ -9169,6 +9266,7 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/virology)
@@ -9179,6 +9277,18 @@
 /obj/machinery/door/airlock/maintenance/rnd{
 	req_one_access = null
 	},
+=======
+	},
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/virology)
+"Ji" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/rust,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_one_access = null
+	},
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/arm/se)
 "Jn" = (
@@ -9385,6 +9495,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
+<<<<<<< HEAD
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 "JZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9728,6 +9841,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/zorrenoffice)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "LI" = (
 /obj/structure/closet/firecloset,
 /obj/structure/sign/poster{
@@ -9735,6 +9849,8 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 =======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 "LK" = (
@@ -10407,12 +10523,21 @@
 /obj/item/device/gps{
 	pixel_x = -5;
 	pixel_y = 5
+<<<<<<< HEAD
 	},
 /obj/item/device/gps{
 	pixel_x = -2;
 	pixel_y = 2
 	},
 /obj/item/device/gps{
+=======
+	},
+/obj/item/device/gps{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/device/gps{
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 	pixel_x = 1;
 	pixel_y = -1
 	},
@@ -11944,9 +12069,26 @@
 /area/offmap/aerostat/inside/arm/ne)
 "UW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/turf/simulated/wall,
+/area/offmap/aerostat/inside/telesci)
+"UZ" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+<<<<<<< HEAD
+/obj/machinery/light{
+	dir = 8
+	},
+=======
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/telesci)
 "UZ" = (
@@ -11959,6 +12101,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/northchamb)
 "Va" = (
@@ -11981,6 +12124,7 @@
 /area/offmap/aerostat/inside/xenoarch)
 "Vd" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -11988,10 +12132,15 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 =======
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 /area/offmap/aerostat/inside/toxins)
 "Ve" = (
@@ -21244,9 +21393,15 @@ qU
 qU
 io
 <<<<<<< HEAD
+<<<<<<< HEAD
 vR
 jM
 un
+=======
+qC
+WQ
+Eb
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 =======
 qC
 WQ
@@ -23416,17 +23571,23 @@ Zs
 Ya
 KI
 <<<<<<< HEAD
+<<<<<<< HEAD
 HN
 eW
 QX
 eW
 eW
 =======
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 xH
 iQ
 sy
 er
 FA
+<<<<<<< HEAD
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 gP
 FA
@@ -23695,7 +23856,10 @@ xl
 Ym
 Ym
 Ym
+<<<<<<< HEAD
 Ym
+=======
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 wl
 Ym
 Ym
@@ -23835,9 +23999,15 @@ eE
 Ym
 BF
 <<<<<<< HEAD
+<<<<<<< HEAD
 Ff
 Ff
 Ff
+=======
+JX
+Ui
+sK
+>>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
 =======
 JX
 Ui
