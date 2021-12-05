@@ -316,22 +316,11 @@
 	name = "painting frame"
 	desc = "The perfect showcase for your favorite deathtrap memories."
 	icon = 'icons/obj/decals.dmi'
-	//custom_materials = list(/datum/material/wood = 2000)
-	//flags_1 = NONE
+	refund_amt = 5
+	refund_type = /obj/item/stack/material/wood
 	icon_state = "frame-empty"
-
-/obj/item/frame/painting/try_build(turf/on_wall, mob/user as mob)
-	if(get_dist(on_wall, user) > 1)
-		return
-	var/ndir = get_dir(on_wall, user)
-	if (!(ndir in cardinal))
-		return
-	if(!istype(on_wall, /turf/simulated/wall))
-		to_chat(user, "<span class='warning'>Frame cannot be placed on this spot.</span>")
-		return
-	new /obj/structure/sign/painting(get_turf(user), ndir, TRUE)
-	qdel(src)
-
+	build_machine_type = /obj/structure/sign/painting
+	
 /obj/structure/sign/painting
 	name = "Painting"
 	desc = "Art or \"Art\"? You decide."
