@@ -75,9 +75,6 @@
 					qdel(O)
 			else if(item_storage)
 				O.forceMove(item_storage)
-<<<<<<< HEAD
-		qdel(src)
-=======
 		if(istype(src,/obj/item/stack))
 			var/obj/item/stack/S = src
 			if(S.get_amount() <= 1)
@@ -89,7 +86,6 @@
 			qdel(src)
 	if(g_damage > w_class)
 		return w_class
->>>>>>> 04c4c68140... Merge pull request #11918 from Verkister/patch-102
 	return g_damage
 
 /////////////
