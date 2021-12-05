@@ -616,9 +616,8 @@
 
 	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
-<<<<<<< HEAD
-=======
 
+/* // CHOMPstation removal
 	// Vore deaths get a fake modifier labeled as such
 	if(!occupant.mind)
 		log_debug("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
@@ -629,7 +628,7 @@
 	// Normal ones get a normal modifier to nerf charging into combat
 	else
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
->>>>>>> 19b662e943... Merge pull request #11939 from Heroman3003/nmensayfix
+*/ // CHOMPedit end
 
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
