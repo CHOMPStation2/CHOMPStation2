@@ -34,12 +34,7 @@
 
 	if(self_grab)
 		if(src.incapacitated()) return
-		else
-			qdel(H) //this deletes the empty holder if it doesnt work
-			to_chat(usr,"<span class='notice'>You can't fit inside \the [S]!</span>")
-			return 0
 	else
-
 		if(grabber.incapacitated()) return
 
 	var/obj/item/weapon/holder/H = new holder_type(get_turf(src), src)
