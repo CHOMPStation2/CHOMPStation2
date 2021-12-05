@@ -736,8 +736,14 @@
 		else if (istype(I,/obj/item/clothing/accessory/collar))
 			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
-<<<<<<< HEAD
-		//kcin2000 1/29/21 - lets you eat the news digitally and adds a text for the paper news
+		else if(iscapturecrystal(I))
+			var/obj/item/capture_crystal/C = I
+			if(C.bound_mob && (C.bound_mob in C.contents))
+				if(isbelly(C.loc))
+					var/obj/belly/B = C.loc
+					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
+					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
+		// CHOMPedit begin
 		else if(istype(I,/obj/item/device/starcaster_news))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
 		else if(istype(I,/obj/item/weapon/newspaper))
@@ -746,15 +752,8 @@
 		else if (istype(I,/obj/item/weapon/cell))
 			visible_message("<span class='warning'>[src] sates their electric appeite with a [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
-=======
-		else if(iscapturecrystal(I))
-			var/obj/item/capture_crystal/C = I
-			if(C.bound_mob && (C.bound_mob in C.contents))
-				if(isbelly(C.loc))
-					var/obj/belly/B = C.loc
-					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
-					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
->>>>>>> 60011ecd0b... Merge pull request #11928 from Very-Soft/whalesandcrystals
+		//CHOMPedit end
+
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return
