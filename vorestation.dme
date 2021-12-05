@@ -3999,12 +3999,7 @@
 #include "code\modules\resleeving\infomorph_software.dm"
 #include "code\modules\resleeving\machine_subtypes.dm"
 #include "code\modules\resleeving\machines.dm"
-<<<<<<< HEAD
 #include "code\modules\resleeving\machines_ch.dm"
-#include "code\modules\resleeving\machines_vr.dm"
-=======
-#include "code\modules\resleeving\resleeving_sickness.dm"
->>>>>>> 19b662e943... Merge pull request #11939 from Heroman3003/nmensayfix
 #include "code\modules\resleeving\sleevecard.dm"
 #include "code\modules\rogueminer_vr\asteroid.dm"
 #include "code\modules\rogueminer_vr\controller.dm"
