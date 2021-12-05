@@ -748,7 +748,6 @@
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
 		else if(istype(I,/obj/item/weapon/newspaper))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of garbage, oh wait its just the news.</span>")
-		//kcin2001 1/29/21 - Adding some special synth trash eat
 		else if (istype(I,/obj/item/weapon/cell))
 			visible_message("<span class='warning'>[src] sates their electric appeite with a [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
