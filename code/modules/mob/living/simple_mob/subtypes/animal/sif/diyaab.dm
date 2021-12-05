@@ -28,14 +28,10 @@
 
 	maxHealth = 25
 	health = 25
-<<<<<<< HEAD
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-=======
 
 	meat_amount = 2
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
->>>>>>> c07a9e00a0... Merge pull request #11912 from Heroman3003/simpler-butchering
 	movement_cooldown = 0
 
 	melee_damage_lower = 2
