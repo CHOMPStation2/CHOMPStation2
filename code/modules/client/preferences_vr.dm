@@ -4,11 +4,8 @@
 	var/directory_erptag = "Unset"	//ditto, but for non-vore scenes
 	var/directory_ad = ""		//Advertisement stuff to show in character directory.
 	var/sensorpref = 5			//Set character's suit sensor level
-<<<<<<< HEAD
-=======
 	var/capture_crystal = 1	//Whether or not someone is able to be caught with capture crystals
 
->>>>>>> 60011ecd0b... Merge pull request #11928 from Very-Soft/whalesandcrystals
 	var/job_talon_high = 0
 	var/job_talon_med = 0
 	var/job_talon_low = 0
