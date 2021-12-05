@@ -51,12 +51,8 @@
 	default_pixel_x = -16
 	old_x = -16
 	old_y = 0
-<<<<<<< HEAD
-	
-=======
 	meat_amount = 15
 
->>>>>>> c07a9e00a0... Merge pull request #11912 from Heroman3003/simpler-butchering
 	egg_type = /obj/effect/spider/eggcluster/royal
 
 /mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
