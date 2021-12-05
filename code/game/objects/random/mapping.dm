@@ -1455,4 +1455,4 @@
 /obj/random/turf/lava/item_to_spawn()
 	return pick(prob(5);/turf/simulated/floor/lava,
 				prob(3);/turf/simulated/floor/outdoors/rocks/caves,
-				prob(1);/turf/simulated/mineral)
+				prob(1);/turf/simulated/mineral/ignore_mapgen/cave)
