@@ -368,6 +368,10 @@
 	name = "Main Control/Monitoring Room"
 	icon_state = "bridge"
 
+/area/awaymission/snowfield/command/observatory_path
+	name = "Observation Hallway"
+	icon_state = "entry_4"
+
 /area/awaymission/snowfield/command/observatory
 	name = "Observation Room"
 	icon_state = "research"
