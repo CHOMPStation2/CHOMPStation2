@@ -1418,6 +1418,7 @@
 #include "code\game\objects\items\weapons\id cards\CH_ids.dm"
 #include "code\game\objects\items\weapons\id cards\id_stacks.dm"
 #include "code\game\objects\items\weapons\id cards\id_stacks_vr.dm"
+#include "code\game\objects\items\weapons\id cards\snowfield_ids.dm"
 #include "code\game\objects\items\weapons\id cards\station_ids.dm"
 #include "code\game\objects\items\weapons\id cards\station_ids_vr.dm"
 #include "code\game\objects\items\weapons\id cards\syndicate_ids.dm"
