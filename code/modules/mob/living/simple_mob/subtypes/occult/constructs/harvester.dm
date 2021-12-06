@@ -10,8 +10,8 @@
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "harvester"
 	icon_living = "harvester"
-	maxHealth = 150
-	health = 150
+	maxHealth = 100	//CHOMPEdit
+	health = 100	//CHOMPEdit
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	attack_sharp = TRUE

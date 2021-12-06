@@ -460,7 +460,7 @@
 	pointed at you."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/merc/voxpirate/suppressor
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor
 	name = "vox suppressor"
 	desc = "Come on, feel the noise!"
 	icon_state = "voxsuppressor"
@@ -492,7 +492,7 @@
 	If you are unable to negotiate, expect to face their entire crew head on."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/merc/voxpirate/captain
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/captain
 	name = "vox pirate captain"
 	desc = "Walkings the plank, dustlung! Yayaya."
 	icon_state = "voxcaptain"

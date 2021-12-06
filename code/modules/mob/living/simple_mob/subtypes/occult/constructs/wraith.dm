@@ -7,7 +7,7 @@
 	real_name = "Wraith"
 	construct_type = "wraith"
 	desc = "A wicked bladed shell contraption piloted by a bound spirit."
-	icon = 'icons/mob/mob.dmi'
+	//icon = 'icons/mob/mob.dmi'	//CHOMPRemove
 	icon_state = "floating"
 	icon_living = "floating"
 	maxHealth = 200

@@ -66,3 +66,36 @@
 	say_threaten = list("Hoy, private property, fuck off.", "You're acting mighty bold for a bullet sponge.", "First and last warning; find somewhere else to be.", "I wouldn't do that if I were you.", "Back off or your field medic's getting a bonus.")
 	say_stand_down = list("Damn it, I was hoping you'd push your luck.", "What, that's it? Pussy.", "And don't come back.", "Good call. Don't do it again.", "Harrumph.", "That'll teach 'ya.")
 	say_escalate = list("Oh, I'm gonna enjoy this.", "I'm going to enjoy making you regret that.", "Last mistake you'll make.")
+
+
+//Synth Horror Saylist
+
+/datum/say_list/cyber_horror
+	speak = list("H@!#$$P M@!$#",
+				 "GHAA!@@#",
+				 "KR@!!N",
+				 "K!@@##L!@@ %!@#E",
+				 "G@#!$ H@!#%",
+				 "H!@%%@ @!E")
+	emote_hear = list("emits", "groans", "wails", "pleads")
+	emote_see = list ("stares unblinkingly.", "jitters and twitches.", "emits a synthetic scream.", "rapidly twitches.", "convulses.", "twitches uncontrollably.", "goes stock still.")
+	say_threaten = list ("FR@#DOM","EN@ T#I$-$","N0$ M^> B@!#")
+	say_got_target = list("I *#@ Y@%","!E@#$P","F#RR @I","D0@#$ ##OK %","IT $##TS")
+
+
+// This one's pretty dumb, but pirates are dumb anyways.
+/datum/say_list/pirate
+	speak = list("Yarr!",
+				"Yohoho and a bottle of rum...",
+				"Getting tried of hardtack.",
+				"What do you do with a drunken sailor...",
+				"One day We'll get that big score.",
+				"They ain't catching this pirate no-sir-ree")
+
+	say_understood = list("Alright, matey.")
+	say_cannot = list("No, matey.")
+	say_maybe_target = list("Eh?", "Who goes there?")
+	say_got_target = list("Yarrrr!", "Just drop your loot and run")
+	say_threaten = list("You best leave, this booty is mine.", "No plank to walk on, just walk away.")
+	say_stand_down = list("Good.", "That's right run you lilly livers.")
+	say_escalate = list("Yarr! The booty is mine!", "Going to gut you landlubber.")
