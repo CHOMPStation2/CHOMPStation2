@@ -84,7 +84,10 @@
 	prob_fall = 25 //Chance goes down by this much each time it spawns one (not defining and prob_spawn 100 means they spawn as soon as one dies)
 	//guard = 40 //They'll stay within this range (not defining this disables them staying nearby and they will wander the map (and through step teleports))
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/passive/snake
+		/mob/living/simple_mob/vore/fennec = 300,
+		/mob/living/simple_mob/animal/passive/snake/python = 100,
+		/mob/living/simple_mob/vore/alienanimals/teppi = 10,
+		/mob/living/simple_mob/vore/alienanimals/teppi/baby = 1
 	)
 
 /obj/tether_away_spawner/beach_outside_friendly

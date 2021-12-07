@@ -129,11 +129,30 @@ var/list/holder_mob_icon_cache = list()
 	item_state = held.icon_state
 
 /obj/item/weapon/holder/mouse
+	name = "mouse"
+	desc = "It's a small rodent."
+	item_state = "mouse_gray"
+	slot_flags = SLOT_EARS | SLOT_HEAD | SLOT_ID
+	origin_tech = list(TECH_BIO = 2)
 	w_class = ITEMSIZE_TINY
 
-/obj/item/weapon/holder/pai/Initialize(mapload, mob/held)
-	. = ..()
-	item_state = held.icon_state
+/obj/item/weapon/holder/mouse/white
+	item_state = "mouse_white"
+
+/obj/item/weapon/holder/mouse/gray
+	item_state = "mouse_gray"
+
+/obj/item/weapon/holder/mouse/brown
+	item_state = "mouse_brown"
+
+/obj/item/weapon/holder/mouse/black
+	item_state = "mouse_black"
+
+/obj/item/weapon/holder/mouse/operative
+	item_state = "mouse_operative"
+
+/obj/item/weapon/holder/mouse/rat
+	item_state = "mouse_rat"
 
 /obj/item/weapon/holder/possum
 	origin_tech = list(TECH_BIO = 2)
@@ -268,8 +287,6 @@ var/list/holder_mob_icon_cache = list()
 /mob/living/MouseDrop(var/atom/over_object)
 	var/mob/living/carbon/human/H = over_object
 	if(holder_type && issmall(src) && istype(H) && !H.lying && Adjacent(H) && (src.a_intent == I_HELP && H.a_intent == I_HELP)) //VOREStation Edit
-		if(istype(src, /mob/living/simple_mob/animal/passive/mouse)) //vorestation edit
-			return ..() //vorestation edit
 		if(!issmall(H) || !istype(src, /mob/living/carbon/human))
 			get_scooped(H, (usr == src))
 		return

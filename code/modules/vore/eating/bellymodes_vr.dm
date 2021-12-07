@@ -25,26 +25,24 @@
 					break
 			if(dest_belly)
 				for(var/atom/movable/M in autotransfer_queue)
-					if(!M.autotransferable)
-						autotransfer_queue -= M
+					if(!M || !M.autotransferable)
 						continue
 					transfer_contents(M, dest_belly)
 				autotransfer_queue.Cut()
 		var/tally = 0
 		for(var/atom/movable/M in autotransferables)
-			if(!M.autotransferable)
-				autotransferables -= M
+			if(!M || !M.autotransferable)
 				continue
 			if(isliving(M))
 				var/mob/living/L = M
 				if(L.absorbed)
 					continue
-			tally++
 			M.belly_cycles++
-			if(autotransfer_max_amount > 0 && tally > autotransfer_max_amount)
-				continue
 			if(M.belly_cycles >= autotransferwait / 60)
 				check_autotransfer(M, autotransferlocation)
+				tally++
+			if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount)
+				break
 
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?

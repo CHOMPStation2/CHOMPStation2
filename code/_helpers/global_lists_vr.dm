@@ -231,6 +231,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/wallet,
 				/obj/item/weapon/storage/vore_egg,
 				/obj/item/weapon/bikehorn/tinytether,
+				/obj/item/capture_crystal,
 				/obj/item/weapon/material/kitchen, //chompstation addition start
 				/obj/item/weapon/storage/mre,
 				/obj/item/weapon/storage/mrebag,

@@ -34,6 +34,7 @@
 		"Eyes"    = list(/obj/item/organ/internal/eyes,   20),
 		"Liver"   = list(/obj/item/organ/internal/liver,  20),
 		"Spleen"  = list(/obj/item/organ/internal/spleen, 20),
+		"Stomach"  = list(/obj/item/organ/internal/stomach, 20),
 		"Arm, Left"   = list(/obj/item/organ/external/arm,  40),
 		"Arm, Right"   = list(/obj/item/organ/external/arm/right,  40),
 		"Leg, Left"   = list(/obj/item/organ/external/leg,  40),

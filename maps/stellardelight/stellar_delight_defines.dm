@@ -4,6 +4,7 @@
 #define Z_LEVEL_SHIP_HIGH					3
 #define Z_LEVEL_CENTCOM						4
 #define Z_LEVEL_MISC						5
+<<<<<<< HEAD
 #define Z_LEVEL_BEACH						6
 #define Z_LEVEL_BEACH_CAVE					7
 #define Z_LEVEL_AEROSTAT					8
@@ -13,6 +14,19 @@
 #define Z_LEVEL_OVERMAP						12
 #define Z_LEVEL_OFFMAP1						13
 #define Z_LEVEL_GATEWAY						14
+=======
+#define Z_LEVEL_SPACE_ROCKS					6
+#define Z_LEVEL_BEACH						7
+#define Z_LEVEL_BEACH_CAVE					8
+#define Z_LEVEL_AEROSTAT					9
+#define Z_LEVEL_AEROSTAT_SURFACE			10
+#define Z_LEVEL_DEBRISFIELD					11
+#define Z_LEVEL_FUELDEPOT					12
+#define Z_LEVEL_OVERMAP						13
+#define Z_LEVEL_OFFMAP1						14
+#define Z_LEVEL_GATEWAY						15
+#define Z_LEVEL_OM_ADVENTURE				16
+>>>>>>> 60011ecd0b... Merge pull request #11928 from Very-Soft/whalesandcrystals
 
 //Camera networks
 #define NETWORK_HALLS "Halls"
@@ -134,7 +148,7 @@
 		list("Offmap Ship - Talon V2")
 		)
 
-	lateload_single_pick = list(
+	lateload_overmap = list(
 		list("Carp Farm"),
 		list("Snow Field"),
 		list("Listening Post"),
@@ -143,6 +157,10 @@
 		list("Arynthi Lake Underground B","Arynthi Lake B"),
 		list("Eggnog Town Underground","Eggnog Town"),
 		list("Wild West")
+		)
+
+	lateload_overmap = list(
+		list("Grass Cave")
 		)
 
 	ai_shell_restricted = TRUE
@@ -164,7 +182,7 @@
 	mining_station_z =		list(Z_LEVEL_SPACE_LOW)
 	mining_outpost_z =		list(Z_LEVEL_SURFACE_MINE)
 */
-	lateload_single_pick = null //Nothing right now.
+	lateload_gateway = null //Nothing right now.
 
 	planet_datums_to_make = list(/datum/planet/virgo3b,
 								/datum/planet/virgo4)
