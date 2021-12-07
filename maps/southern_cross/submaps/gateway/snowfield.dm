@@ -589,7 +589,8 @@
 	Emotional Support (And my life changer):</B> BlackMajor, Salty S<BR><BR><B>Supporters in the most troubled times</B>: \
 	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR><B>Helpers on the map work:\
 	</B> BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR><B>\
-	Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
+	<B>Map recovery helper (Curse you github, almost deleting the project):</B> BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
+	<B>Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
 
 /obj/item/weapon/paper/awaygate/snowfield/diary
 	desc = "A part of a ripped paper, likely from the book."
