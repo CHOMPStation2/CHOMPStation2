@@ -46,6 +46,11 @@
 	return results
 
 /obj/machinery/door/airlock/get_description_interaction()
+<<<<<<< HEAD
+=======
+	description_info = "To ring an airlock's doorbell, hold Alt and click on the airlock with the Left Mouse Button on Green/Help intent.  Doing the same on Harm intent will instead hammer on the airlock." //vorestation edit
+	
+>>>>>>> 7110e22129... Merge pull request #11979 from R3dtail/patch-4
 	var/list/results = list()
 
 	if(can_remove_electronics())
