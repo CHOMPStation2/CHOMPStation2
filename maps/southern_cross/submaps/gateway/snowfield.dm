@@ -3,8 +3,6 @@
 /area/awaymission/snowfield
 	icon_state = "blank"
 	base_turf = /turf/simulated/floor/outdoors/dirt
-	ambience = list('sound/ambience/ambispace.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg',\
-	'sound/music/traitor.ogg')
 
 /area/awaymission/snowfield/cavern
 	icon_state = "blue"
