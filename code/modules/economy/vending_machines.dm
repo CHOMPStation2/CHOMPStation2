@@ -1236,6 +1236,7 @@
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5, //VoreStation edit, pre-fulp labcoat.
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/alt = 5,
@@ -1255,6 +1256,7 @@
 		/obj/item/clothing/under/rank/chemist/skirt = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/chemist = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old/chem = 5, //VoreStation edit, pre-fulp labcoat.
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/chemist = 5,
 		/obj/item/weapon/storage/backpack/chemistry = 5,
 		/obj/item/weapon/storage/backpack/satchel/chem = 5,
@@ -1291,7 +1293,13 @@
 		/obj/item/clothing/under/rank/virologist/skirt = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/virologist = 5,
+<<<<<<< HEAD
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro = 5,
+=======
+		/obj/item/clothing/suit/storage/toggle/labcoat/old/vir = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/head/beret/medical/viro = 5,
+>>>>>>> cfbe9e8e4e... Merge pull request #11990 from Runa-Dacino/OldSchool-Labcoats
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/weapon/storage/backpack/virology = 5,
 		/obj/item/weapon/storage/backpack/satchel/vir = 5
@@ -1310,6 +1318,7 @@
 		/obj/item/clothing/under/rank/scientist/skirt = 5,
 		/obj/item/clothing/under/rank/scientist/turtleneck = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5, //VoreStation edit, pre-fulp labcoat.
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/shoes/slippers = 5,
