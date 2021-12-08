@@ -20,6 +20,7 @@
 /area/awaymission/snowfield/checkpoint
 	name = "Checkpoint"
 	icon_state = "checkpoint1"
+	requires_power = 0
 
 /area/awaymission/snowfield/solarshack
 	name = "Solarshack"
@@ -141,10 +142,12 @@
 /area/awaymission/snowfield/security/armory
 	name = "Armory"
 	icon_state = "armory"
+	requires_power = 0
 
 /area/awaymission/snowfield/security/heavy_armory
 	name = "Heavy Armory"
 	icon_state = "riot_control"
+	requires_power = 0
 
 /area/awaymission/snowfield/security/hallway2
 	name = "Security South Hallway"
@@ -340,7 +343,6 @@
 
 /area/awaymission/snowfield/dorms/dorm13
 	name = "Room 13"
-	requires_power = 0
 
 /area/awaymission/snowfield/dorms/dorm14
 	name = "Room 14"
@@ -354,6 +356,7 @@
 /area/awaymission/snowfield/dorms/panicroom
 	name = "Panic Room"
 	icon_state = "purple"
+	requires_power = 0
 
 //commandroom
 
