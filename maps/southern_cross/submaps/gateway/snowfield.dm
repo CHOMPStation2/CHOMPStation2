@@ -538,26 +538,25 @@
 	TO <B>ALL CLASS 1, 2, 3 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
 	Directives : <B>Evacuation preparation from Facility. <BR>All related personnel, EXCLUDING 3M personnel \
 	must head to Chelyabinsk until 2100, April 10 and await for further directives.<BR>Base MUST \
-	maintain necessary items only.\
-	</B><BR><BR>Further directives and details shall be guided by <B>Class 4 or above personnel.</B>"
+	maintain necessary items only. </B><BR><BR>Further directives and details shall be guided by <B>Class 4 \
+	or above personnel.</B>"
 
 /obj/item/weapon/paper/awaygate/snowfield/evacuation_order2
 	name = "Mid Command Order Directives"
 	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
 	TO <B>ALL CLASS 4 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
 	Directives : <B>Evacuation preparation from Facility. <BR>All class 1,2,3 personnel must head to \
-	Chelyabinsk and empty the facility, EXCLUDING Medical team. (3M)<BR>Base MUST maintain necessary items only\
-	\to operate the 'Tunguska' and supply the crews who remains to operate. Activation time will be at \
-	0300, April 11, 1979.</B><BR><BR>Further directives and details shall be guided by <B>Class 6 personnel.</B>"
+	Chelyabinsk and empty the facility, EXCLUDING Medical team. (3M)<BR>Base MUST maintain necessary items only \
+	to operate 'Tunguska' and supplies for the crews who remains. 'Tunguska' Activation time at 0300, April 11, \
+	1979.</B><BR><BR>Further directives and details shall be guided by <B>Class 6 or above personnel.</B>"
 
 /obj/item/weapon/paper/awaygate/snowfield/evacuation_order3
 	name = "High Command Order Directives"
 	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
 	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
 	Directives : <B>Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
-	Chelyabinsk and empty the facility, excluding Medical team, guided by Class 4 personnel. \
-	<BR>All Class 5, 6 must check the stabiity of 'Tunguska' before the operation. Activation time will be at \
-	0300, April 11, 1979."
+	Chelyabinsk and empty the facility, excluding Class 3M, guided by Class 4 personnel. <BR>All Class 5, 6 must \
+	check the stabiity of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979."
 
 /obj/item/weapon/paper/awaygate/snowfield/activation_order
 	name = "High Command Order Directives"
@@ -574,8 +573,10 @@
 	record... <BR>(00:14) Twenty one-Fourty.<BR>(00:17) Three months of interrogation is finally coming up with \
 	a progress.<BR>(00:20) The lizard finally speaks, telling us the key points of the blueprint.<BR>(00:25) \
 	There are missing important componant followed by the blueprint,<BR>(00:32) however, we may manage to get enough \
-	from the asteroid back from 1908.<BR>(00:39) Exactly what the research team needs, whatever they said.\
-	<BR>(00:43) Yemelyan Fedoro, out."
+	from the asteroid back from 1908.<BR>(00:39) Exactly what the research team needs, whatever they say. Something \
+	they won't be able to get in their lifetime, what they say. (00:52) Vlad is just using the lizard as their \
+	Punching bag, now. (00:59) Gosh, their screams are worser than my grandma. Who would know an overgrown lizard \
+	would sound like that..<BR>(01:07) Best to finish up, now. We can get more informations from'em. Yemelyan Fedoro, out."
 
 /obj/item/weapon/paper/awaygate/snowfield/note // Little easter egg for appreciation.
 	desc = "A gift card with a heart on the cover. Hey, there's a scribble on its back..."
