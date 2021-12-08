@@ -124,6 +124,41 @@
 				user.forceMove(pick(trange(24,user)))
 			else
 				user.forceMove(ToTurf)
+<<<<<<< HEAD
+=======
+				var/vore_happened = FALSE
+				if(can_dropnom && living_user.can_be_drop_pred)
+					var/obj/belly/belly_dest
+					if(living_user.vore_selected)
+						belly_dest = living_user.vore_selected
+					else if(living_user.vore_organs.len)
+						belly_dest = pick(living_user.vore_organs)
+					if(belly_dest)
+						for(var/mob/living/prey in ToTurf)
+							if(prey == user)	//You can't eat yourself, silly!
+								continue
+							if(prey.can_be_drop_prey)
+								prey.forceMove(belly_dest)
+								vore_happened = TRUE
+								to_chat(prey, "<span class='danger'>[living_user] materializes around you, as you end up in their [belly_dest]!</span>")
+								to_chat(living_user, "<span class='notice'>You materialize around [prey] as they end up in your [belly_dest]!</span>")
+				if(can_dropnom && !vore_happened && living_user.can_be_drop_prey)
+					var/mob/living/pred
+					for(var/mob/living/potential_pred in ToTurf)
+						if(potential_pred.can_be_drop_pred)
+							pred = potential_pred
+					if(pred)
+						var/obj/belly/belly_dest
+						if(pred.vore_selected)
+							belly_dest = pred.vore_selected
+						else if(pred.vore_organs.len)
+							belly_dest = pick(pred.vore_organs)
+						if(belly_dest)
+							living_user.forceMove(belly_dest)
+							to_chat(pred, "<span class='notice'>[living_user] materializes inside you as they end up in your [belly_dest]!</span>")
+							to_chat(living_user, "<span class='danger'>You materialize inside [pred] as you end up in their [belly_dest]!</span>")
+
+>>>>>>> 21f62265ec... Merge pull request #11991 from Very-Soft/noselfvoar
 	else
 		for(var/obj/O in FromTurf)
 			if(O.anchored) continue
