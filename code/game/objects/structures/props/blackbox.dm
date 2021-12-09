@@ -258,31 +258,33 @@
 	desc = {"
 		<BR>
 		<B>SYSTEM ACTIVATED. BEGINNING LOG.</B><BR>
-		ACTIVATION TIME : <B>03:00. APRIL 10. WEDNESDAY. 1979.</B><BR><BR>
+		ACTIVATION TIME : <B>03:00. APRIL 10. WEDNESDAY. 1979.</B><BR><BR><BR>
 		<B>AWAITING LOGIN.</B><BR>
-		<B>RANK 6R ACCESS</B> IDENTIFIED. Awaiting rank 6S input within 5 seconds.<BR>
-		<B>RANK 6S ACCESS</B> IDENTIFIED. Authorization time : 2.74 seconds. Awaiting rank 7 input within 5 seconds.<BR>
-		<B>RANK 7 ACCSS</B> IDENTIFIED. Authorization time : 1.89 seconds. Contacting to High command.<BR>
-		<B>HIGH COMMAND RESPOND RECIEVED.</B> Authorization time : 31.67 seconds.<BR>
-		<B>OPERATION TUNGUSKA INITIATED.</B> ACTIVATION TIME : <B>03:01. APRIL 10. WEDNESDAY. 1979.</B><BR><BR><BR>
-		<B>INITIATING SYSTEM DIAGNOSIS</B>
+		<U><B>RANK 6R ACCESS</B> IDENTIFIED.</U><B> Awaiting rank 6S input within 5 seconds.</B><BR>
+		<U><B>RANK 6S ACCESS</B> IDENTIFIED.</U> Authorization time : 2.74 seconds. <B>Awaiting rank 7 input within 5 seconds.</B><BR>
+		<U><B>RANK 7 ACCSS</B> IDENTIFIED.</U> Authorization time : 1.89 seconds. <B>Contacting to High command.</B><BR>
+		<U><B>HIGH COMMAND RESPOND RECIEVED.</U></B> Authorization time : 31.67 seconds.<BR><BR>
+		<U><B>OPERATION TUNGUSKA INITIATED.</U></B><BR>
+		ACTIVATION TIME : <B>03:01. APRIL 10. WEDNESDAY. 1979.</B><BR><BR><BR>
+		<U><B>INITIATING SYSTEM DIAGNOSIS</U></B><BR>
 		<B>TUNGUSKA SUPERMATTER INTEGRITY :</B> NORMAL<BR>
 		<B>TUNGUSKA POWER LEVEL :</B> NORMAL<BR>
 		<B>TUNGUSKA BACKUP POWER LEVEL :</B> NORMAL<BR>
 		<B>TUNGUSKA COOLANT LEVEL :</B> NORMAL<BR><BR>
-		<B>TUNGUSTA ACTIVATED.</B><BR><BR>
+		<U><B>TUNGUSTA ACTIVATED.</U></B><BR><BR>
 		<B>BLAST DOOR SOFTWARE CONNECTION :</B> NORMAL<BR>
 		<B>GATEWAY POWER LEVEL :</B> NORMAL<BR>
 		<B>GATEWAY CONNECTION :</B> NORMAL<BR>
 		<B>GATEWAY COORDINATION :</B> FAILED<BR>
 		<B>INITIATING COORDINATION RECAL1B&@T...</B><BR>
-		SYSTEM ERROR.<BR>
-		<B>SYSTEM TOTAL FAILURE.</B><BR><BR>
+		<B>SYSTEM ERROR.</B><BR>
+		<U><B>SYSTEM TOTAL FAILURE.</U></B><BR><BR>
 		<B>AUTOMATED SHUTDOWN ON TUNGUSKA.</B><BR>
 		RESTARTING. . . . . <B>FAILED.</B><BR>
 		RESTARTING. . . . . <B>FAILED.</B><BR>
 		RESTARTING. . . . . <B>FA!LED.</B><BR>
-		RE$TART1^. . . . . .<BR><BR><BR>
+		RE$TART1^. . . . .<BR><BR><BR><BR>
+		U^a+h0. . . G@+eway %ct!va*ed . . . . .<BR><BR>
 		Unkn0wn m3$sag3 1nc0m!n9. . . . . .<BR><BR>
 		- - L1!0? H3-lo Th!s working?<BR>
 		Ah. Lovely.<BR>
@@ -296,5 +298,8 @@
 		Who am I to decide?... Well. Some may know, but likely not, especially on current time... When this is getting recorded.<BR>
 		Nochkuk shall be the name, if you are overly curious about. Not that it really matters, however.<BR>
 		Ah, speech has gone too much and time is precious. Time to let my servants to have their fun, now.<BR>
-		They hunger for blood.<BR>
+		They hungEr f0r 61o0d.<BR><BR><BR>
+		<B>M&1N P0#ER $HU+TING DOWN. . . . .</B><BR>
+		<B>%AV!NG RECORD . . . . . SAVED.</B><BR>
+		<B>SWITCHING MODE TO : <U>ENERGY-SAVING MODE.</U></B>
 	"}
