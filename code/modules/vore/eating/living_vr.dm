@@ -271,10 +271,7 @@
 	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
-<<<<<<< HEAD
-=======
-	allow_inbelly_spawning = P.allow_inbelly_spawning
->>>>>>> f229c2a7ce... Merge pull request #11981 from Heroman3003/predfix
+//	allow_inbelly_spawning = P.allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
 	allow_spontaneous_tf = P.allow_spontaneous_tf
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
