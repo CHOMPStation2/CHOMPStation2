@@ -1,9 +1,6 @@
   
 /obj/effect/landmark
 	var/abductor = 0
-<<<<<<< HEAD
-	
-=======
 
 /obj/effect/landmark/vines
 	name = "vinestart"
@@ -11,7 +8,6 @@
 /obj/effect/landmark/vermin
 	name = "verminstart"
 
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /obj/effect/landmark/late_antag
 	name = "Antag Latespawn"
 	var/antag_id
