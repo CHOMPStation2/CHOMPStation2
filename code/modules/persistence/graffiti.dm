@@ -40,11 +40,7 @@
 
 /obj/effect/decal/writing/examine(mob/user)
 	. = ..()
-<<<<<<< HEAD
-	to_chat(user,  "It reads \"[message]\".")
-=======
 	. += "\n It reads \"[message]\"."
->>>>>>> c04b817bbe... Merge pull request #11809 from Hatterhat/patch-3
 
 /obj/effect/decal/writing/attackby(var/obj/item/thing, var/mob/user)
 	if(istype(thing, /obj/item/weapon/weldingtool))
