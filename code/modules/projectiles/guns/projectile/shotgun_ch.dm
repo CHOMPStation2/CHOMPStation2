@@ -26,6 +26,6 @@
 	icon_state = "shotpistol"
 	accuracy = 40
 
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn/alt/holy // A Special Skin for the sawn off,makes it look like the sawn off from Blood.
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn/alt/holy
 	ammo_type = /obj/item/ammo_casing/a12g/silver
 	holy = 1

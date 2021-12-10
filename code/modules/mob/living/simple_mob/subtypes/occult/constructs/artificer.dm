@@ -7,7 +7,7 @@
 	real_name = "Artificer"
 	construct_type = "artificer"
 	desc = "A bulbous construct dedicated to building and maintaining temples to their otherworldly lords."
-	icon = 'icons/mob/mob.dmi'
+	//icon = 'icons/mob/mob.dmi'	//CHOMPEdit
 	icon_state = "artificer"
 	icon_living = "artificer"
 	maxHealth = 100	//CHOMPEdit - Adjusting values since they have AI now

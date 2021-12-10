@@ -3,7 +3,7 @@
 	real_name = "mouse"
 	desc = "It's a small militarized rodent."
 	tt_desc = "E Mus musculus"
-	icon = 'icons/mob/animal.dmi'
+	icon = 'icons/mob/animal_ch.dmi'
 	icon_state = "mouse_gray"
 	item_state = "mouse_gray"
 	icon_living = "mouse_gray"
@@ -362,7 +362,7 @@
 	name = "\improper Whisker Tank"
 	desc = "A shockingly functional, miniaturized tank. Its inventor is unknown, but widely reviled."
 	catalogue_data = list(/datum/category_item/catalogue/technology/mouse_tank)
-	icon = 'icons/mecha/micro.dmi'
+	icon = 'icons/mecha/animal_ch.dmi'
 	icon_state = "whisker"
 	wreckage = /obj/structure/loot_pile/mecha/mouse_tank
 	faction = "mouse_army"
