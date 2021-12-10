@@ -6,10 +6,6 @@ export NODE_VERSION=12
 # Byond Major
 export BYOND_MAJOR=514
 # Byond Minor
-<<<<<<< HEAD
 export BYOND_MINOR=1571
-=======
-export BYOND_MINOR=1569
->>>>>>> bf19d5ec49... Merge pull request #11758 from VOREStation/master
 # Macro Count
 export MACRO_COUNT=4
