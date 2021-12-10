@@ -4,11 +4,7 @@
 	var/hostile = FALSE						// Do we try to hurt others?
 	var/retaliate = FALSE					// Attacks whatever struck it first. Mobs will still attack back if this is false but hostile is true.
 	var/mauling = FALSE						// Attacks unconscious mobs
-<<<<<<< HEAD
-	var/unconscious_vore = TRUE			//VOREStation Add - allows a mob to go for unconcious targets IF their vore prefs align
-=======
 	var/unconscious_vore = FALSE			//VOREStation Add - allows a mob to go for unconcious targets IF their vore prefs align
->>>>>>> 213da73af0... Merge pull request #11816 from Very-Soft/sleepyvore
 	var/handle_corpse = FALSE				// Allows AI to acknowledge corpses (e.g. nurse spiders)
 
 	var/atom/movable/target = null			// The thing (mob or object) we're trying to kill.
