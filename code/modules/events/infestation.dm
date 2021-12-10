@@ -13,20 +13,15 @@
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
+#define VERM_SPIDERS 2
 
 /datum/event/infestation
 	announceWhen = 10
 	endWhen = 11
+	var/location
 	var/locstring
 	var/vermin
 	var/vermstring
-	var/list/spawned_vermin = list()
-	var/spawn_types
-	var/num_groups
-	var/prep_size_min
-	var/prep_size_max
-	var/vermin_cap = 40
-	var/list/spawn_locations = list()
 
 /datum/event/infestation/start()
 //CHOMP Edit changed for Southern Cross areas
@@ -105,28 +100,16 @@
 			turfs.Remove(T)
 			num--
 
-/datum/event/infestation/tick()
-	if(activeFor % 5 != 0)
-		return // Only process every 10 seconds.
-	if(count_spawned_vermin() < vermin_cap)
-		spawn_vermin(rand(4,10), prep_size_min, prep_size_max)
+			if(vermin == VERM_SPIDERS)
+				var/obj/effect/spider/spiderling/S = new(T)
+				S.amount_grown = -1
+			else
+				var/spawn_type = pick(spawn_types)
+				new spawn_type(T)
 
-/datum/event/infestation/proc/spawn_vermin(var/num_groups, var/group_size_min, var/group_size_max)
-	if(spawn_locations.len) // Okay we've got landmarks, lets use those!
-		shuffle_inplace(spawn_locations)
-		num_groups = min(num_groups, spawn_locations.len)
-		for (var/i = 1, i <= num_groups, i++)
-			var/group_size = rand(group_size_min, group_size_max)
-			for (var/j = 0, j < group_size, j++)
-				spawn_one_vermin(spawn_locations[i])
-		return
 
-// Spawn a single vermin at given location.
-/datum/event/infestation/proc/spawn_one_vermin(var/loc)
-	var/mob/living/simple_mob/animal/M = new spawn_types(loc)
-	GLOB.destroyed_event.register(M, src, .proc/on_vermin_destruction)
-	spawned_vermin.Add(M)
-	return M
+/datum/event/infestation/announce()
+	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
 
 #undef LOC_KITCHEN
 #undef LOC_ATMOS
@@ -141,4 +124,4 @@
 
 #undef VERM_MICE
 #undef VERM_LIZARDS
-#undef VERM_SPIDERS //CHOMP Add
+#undef VERM_SPIDERS
