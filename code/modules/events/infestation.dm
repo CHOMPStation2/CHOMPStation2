@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //CHOMP Edit changed for Southern Cross areas
 #define LOC_KITCHEN 0
 #define LOC_ATMOS 1
@@ -12,8 +11,6 @@
 #define LOC_VAULT 9
 
 
-=======
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
 
@@ -108,25 +105,6 @@
 			var/turf/simulated/floor/T = pick(turfs)
 			turfs.Remove(T)
 			num--
-=======
-	vermin = rand(0,1)
-	switch(vermin)
-		if(VERM_MICE)
-			spawn_types = /mob/living/simple_mob/animal/passive/mouse/gray
-			prep_size_min = 1
-			prep_size_max = 4
-			vermstring = "mice"
-		if(VERM_LIZARDS)
-			spawn_types = /mob/living/simple_mob/animal/passive/lizard
-			prep_size_min = 1
-			prep_size_max = 3
-			vermstring = "lizards"
-	// Check if any landmarks exist!
-	for(var/obj/effect/landmark/C in landmarks_list)
-		if(C.name == "verminstart")
-			spawn_locations.Add(C.loc)
-
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 
 /datum/event/infestation/tick()
 	if(activeFor % 5 != 0)
@@ -162,24 +140,7 @@
 #undef LOC_HANGAR2
 #undef LOC_HANGAR3
 #undef LOC_VAULT
-=======
-// Counts living vermin spawned by this event.
-/datum/event/infestation/proc/count_spawned_vermin()
-	. = 0
-	for(var/mob/living/simple_mob/animal/M as anything in spawned_vermin)
-		if(!QDELETED(M) && M.stat != DEAD)
-			. += 1
-
-// If vermin is kill, remove it from the list.
-/datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
-	spawned_vermin -= M
-	GLOB.destroyed_event.unregister(M, src, .proc/on_vermin_destruction)
-
-
-
-/datum/event/infestation/announce()
-	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding all over the facility. Clear them out, before this starts to affect productivity.", "Vermin infestation")
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 
 #undef VERM_MICE
 #undef VERM_LIZARDS
+#undef VERM_SPIDERS //CHOMP Add
