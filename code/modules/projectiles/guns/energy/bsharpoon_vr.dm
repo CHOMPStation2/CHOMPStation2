@@ -124,8 +124,6 @@
 				user.forceMove(pick(trange(24,user)))
 			else
 				user.forceMove(ToTurf)
-<<<<<<< HEAD
-=======
 				var/vore_happened = FALSE
 				if(can_dropnom && living_user.can_be_drop_pred)
 					var/obj/belly/belly_dest
@@ -158,7 +156,6 @@
 							to_chat(pred, "<span class='notice'>[living_user] materializes inside you as they end up in your [belly_dest]!</span>")
 							to_chat(living_user, "<span class='danger'>You materialize inside [pred] as you end up in their [belly_dest]!</span>")
 
->>>>>>> 21f62265ec... Merge pull request #11991 from Very-Soft/noselfvoar
 	else
 		for(var/obj/O in FromTurf)
 			if(O.anchored) continue
