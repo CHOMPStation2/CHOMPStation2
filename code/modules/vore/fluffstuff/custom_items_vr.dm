@@ -1398,7 +1398,6 @@ End CHOMP Removal*/
 	new /obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette(hold)
 	new /obj/item/weapon/reagent_containers/glass/bottle/poppy(hold)
 
-
 //Hunterbirk - Amaryll
 //This is a 'technical item' which basically is meant to represent rippiing things up with bare claws.
 /obj/item/weapon/surgical/scalpel/amaryll_claws
@@ -1417,4 +1416,4 @@ End CHOMP Removal*/
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "stamp-midhorror"
 	stamptext = "This paper has been certified by The Council of Mid Horror"
-
+  

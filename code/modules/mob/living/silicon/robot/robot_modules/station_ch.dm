@@ -20,3 +20,6 @@
 	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen(src)
+	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
+	src.modules += new /obj/item/weapon/reagent_containers/dropper(src)

@@ -43,6 +43,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	movement_cooldown = 8
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_amount = 6
 
 	response_help = "pokes"
 	response_disarm = "pushes"
