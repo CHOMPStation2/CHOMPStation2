@@ -10,13 +10,8 @@
 	During this time, starlight will be bright but gentle, shifting between quiet green and blue colors. \
 	Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space. \
 	You will have approximately two minutes before the ions begin to reach the hull. \
-<<<<<<< HEAD
 	We hope you enjoy the lights.", "Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
 	
-=======
-	We hope you enjoy the lights.", "Nanotrasen Meteorology Division", new_sound = 'sound/AI/aurora.ogg') //VOREStation Edit
-
->>>>>>> 33c0506b7e... Merge pull request #11824 from Heroman3003/facility-type
 /datum/event/aurora_caelus/start()
 	affecting_z -= global.using_map.sealed_levels // Space levels only please!
 	for(var/mob/M in player_list)
