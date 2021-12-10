@@ -54,11 +54,8 @@
 								  "Nurse Giant Spider" = /mob/living/simple_mob/animal/giant_spider/nurse/eggless,
 								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless,
 								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
-<<<<<<< HEAD
-								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred	//CHOMPStation add.
-=======
+								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,	//CHOMPStation add.
 								  "Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug
->>>>>>> 48eec061ec... Merge pull request #11815 from Very-Soft/catslugmaintpred
 								  )
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
