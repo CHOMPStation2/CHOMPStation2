@@ -116,7 +116,6 @@
 
 /datum/event_container/major/New()
 	available_events = list(
-<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",		/datum/event/nothing,			900),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",		/datum/event/atmos_leak, 		5,		list(ASSIGNMENT_ENGINEER = 35), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",		/datum/event/blob, 				-100,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ENGINEER = 5), 1),
