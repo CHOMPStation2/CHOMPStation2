@@ -29,7 +29,6 @@
 	var/list/spawn_locations = list()
 
 /datum/event/infestation/start()
-<<<<<<< HEAD
 //CHOMP Edit changed for Southern Cross areas
 	location = rand(0,9)
 	var/list/turf/simulated/floor/turfs = list()
@@ -129,7 +128,6 @@
 	spawned_vermin.Add(M)
 	return M
 
-<<<<<<< HEAD
 #undef LOC_KITCHEN
 #undef LOC_ATMOS
 #undef LOC_CHAPEL
