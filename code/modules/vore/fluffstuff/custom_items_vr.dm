@@ -1347,9 +1347,6 @@
 		
 End CHOMP Removal*/
 
-<<<<<<< HEAD
-	
-=======
 // Astra - // Astra
 /obj/item/weapon/material/knife/ritual/fluff/astra
 	name = "Polished Ritual Knife"
@@ -1421,4 +1418,3 @@ End CHOMP Removal*/
 	icon_state = "stamp-midhorror"
 	stamptext = "This paper has been certified by The Council of Mid Horror"
 
->>>>>>> a036cd6a3e... Merge pull request #11935 from faaaay/jade-stamp
