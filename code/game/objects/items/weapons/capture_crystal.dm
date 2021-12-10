@@ -112,8 +112,6 @@
 		AI.set_follow(M)
 		to_chat(M, "<span class='notice'>\The [src] chimes~ \The [bound_mob] started following following [AI.leader].</span>")
 
-<<<<<<< HEAD
-=======
 //Don't really want people 'haha funny' capturing and releasing one another willy nilly. So! If you wanna release someone, you gotta destroy the thingy.
 //(Which is consistent with how it works with digestion anyway.)
 /obj/item/capture_crystal/verb/destroy_crystal()
@@ -176,7 +174,6 @@
 	else
 		to_chat(U, "<span class='notice'>You decided against it.</span>")
 
->>>>>>> e36f028f66... Merge pull request #11960 from Very-Soft/anotherballtweak
 /obj/item/capture_crystal/update_icon()
 	. = ..()
 	if(spawn_mob_type)
