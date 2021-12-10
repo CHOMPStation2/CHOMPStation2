@@ -1538,8 +1538,6 @@
 	)
 	req_log_access = access_hop
 	has_logs = 1
-<<<<<<< HEAD
-=======
 
 /obj/machinery/vending/wardrobe/mimedrobe
 	name = "mime wardrobe vendor"
@@ -1587,4 +1585,3 @@
 	)
 	req_log_access = access_hop
 	has_logs = 1
->>>>>>> 5bbe05dde3... Merge pull request #11817 from PastelPrinceDan/mimenclown
