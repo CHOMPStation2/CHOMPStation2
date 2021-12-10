@@ -273,10 +273,7 @@
 		else if(environment == KA_ENVIRO_TYPE_OFFSITE)
 			if(!offsite_environment_check(get_turf(src)))
 				name = "nullified [name]"
-<<<<<<< HEAD
 				nodamage = TRUE
-=======
->>>>>>> 39c4edb9cb... Merge pull request #11808 from Hatterhat/a-miner-upgrade
 				damage = 0
 				pressure_decrease_active = TRUE
 	return ..()
@@ -296,10 +293,7 @@
 		else if(environment == KA_ENVIRO_TYPE_OFFSITE)
 			if(!offsite_environment_check(get_turf(src)))
 				name = "nullified [name]"
-<<<<<<< HEAD
 				nodamage = TRUE
-=======
->>>>>>> 39c4edb9cb... Merge pull request #11808 from Hatterhat/a-miner-upgrade
 				damage = 0
 				pressure_decrease_active = TRUE
 	return ..()
@@ -331,10 +325,7 @@
 		else if(environment == KA_ENVIRO_TYPE_OFFSITE)
 			if(!offsite_environment_check(get_turf(src)))
 				name = "nullified [name]"
-<<<<<<< HEAD
 				nodamage = TRUE
-=======
->>>>>>> 39c4edb9cb... Merge pull request #11808 from Hatterhat/a-miner-upgrade
 				damage = 0
 				pressure_decrease_active = TRUE
 	var/turf/target_turf = get_turf(target)
@@ -662,17 +653,11 @@
 	name = "offsite pressure modulator"
 	desc = "A non-standard modification kit that increases the damage a kinetic accelerator does in pressurized environments, \
 	in exchange for nullifying any projected forces while on or in an associated facility."
-<<<<<<< HEAD
 	denied_type = /obj/item/borg/upgrade/modkit/heater
 	maximum_of_type = 1
 	cost = 35
 
 /obj/item/borg/upgrade/modkit/offsite/modify_projectile(obj/item/projectile/kinetic/K)
-=======
-	cost = 35
-
-/obj/item/borg/upgrade/modkit/indoors/offsite/modify_projectile(obj/item/projectile/kinetic/K)
->>>>>>> 39c4edb9cb... Merge pull request #11808 from Hatterhat/a-miner-upgrade
 	K.environment = KA_ENVIRO_TYPE_OFFSITE
 
 // Atmospheric
