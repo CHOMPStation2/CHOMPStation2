@@ -216,11 +216,6 @@
 
 	// Otherwise we'll need a powernet
 	var/power_to_use = 10000 / power_efficiency
-<<<<<<< HEAD
-=======
-	if(boosted)
-		power_to_use *= 5
->>>>>>> f3777fde2a... Merge pull request #11852 from Hatterhat/accelerator-pass-3
 	if(draw_power(power_to_use) != power_to_use)
 		return FALSE
 	return TRUE
