@@ -108,8 +108,3 @@ Talon winter coat
 /datum/gear/suit/wintercoat/talon
 	display_name = "winter coat, Talon"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cfbe9e8e4e... Merge pull request #11990 from Runa-Dacino/OldSchool-Labcoats
