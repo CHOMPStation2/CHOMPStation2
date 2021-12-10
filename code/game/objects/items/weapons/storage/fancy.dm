@@ -68,11 +68,7 @@
 	item_state = "candlebox5"
 	throwforce = 2
 	slot_flags = SLOT_BELT
-<<<<<<< HEAD
-	max_storage_space = ITEMSIZE_COST_TINY * 5	//CHOMPEdit
-=======
 	max_storage_space = ITEMSIZE_COST_TINY * 5
->>>>>>> 7ed7f7dfad... Merge pull request #11878 from GhostActual/Fix-for-#5643
 	can_hold = list(/obj/item/weapon/flame/candle)
 	starts_with = list(/obj/item/weapon/flame/candle = 5)
 
@@ -85,11 +81,7 @@
 	item_state = "whitecandlebox5"
 	throwforce = 2
 	slot_flags = SLOT_BELT
-<<<<<<< HEAD
-	max_storage_space = ITEMSIZE_COST_TINY * 5	//CHOMPEdit
-=======
 	max_storage_space = ITEMSIZE_COST_TINY * 5
->>>>>>> 7ed7f7dfad... Merge pull request #11878 from GhostActual/Fix-for-#5643
 	can_hold = list(/obj/item/weapon/flame/candle)
 	starts_with = list(/obj/item/weapon/flame/candle/white = 5)
 
@@ -102,11 +94,7 @@
 	item_state = "blackcandlebox5"
 	throwforce = 2
 	slot_flags = SLOT_BELT
-<<<<<<< HEAD
-	max_storage_space = ITEMSIZE_COST_TINY * 5	//CHOMPEdit
-=======
 	max_storage_space = ITEMSIZE_COST_TINY * 5
->>>>>>> 7ed7f7dfad... Merge pull request #11878 from GhostActual/Fix-for-#5643
 	can_hold = list(/obj/item/weapon/flame/candle)
 	starts_with = list(/obj/item/weapon/flame/candle/black = 5)
 
