@@ -50,11 +50,8 @@
 	battery_lock = 1
 
 	var/decl/plantgene/gene = null
-<<<<<<< HEAD
 	recoil_mode = 0 //CHOMP Addition
-=======
 	var/obj/item/weapon/stock_parts/micro_laser/emitter
->>>>>>> dead3acae1... Merge pull request #11841 from FartMaster69420/somatoray
 
 	firemodes = list(
 		list(mode_name="induce mutations", projectile_type=/obj/item/projectile/energy/floramut, modifystate="floramut"),
