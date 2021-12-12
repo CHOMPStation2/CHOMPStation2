@@ -549,6 +549,42 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
+"bm" = (
+/obj/structure/sign/directions/science{
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions{
+	desc = "A direction sign, pointing out the way to Exploration.";
+	name = "\improper Exploration Department";
+	pixel_x = 32;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/security{
+	pixel_x = 32;
+	pixel_y = 12
+	},
+/obj/structure/sign/directions/stairs_down{
+	pixel_x = 32;
+	pixel_y = 18
+	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/aftport)
+"bn" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "32-1"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/triage)
 "bo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 9
@@ -582,6 +618,33 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
+"br" = (
+/obj/structure/sign/directions/science{
+	pixel_x = -32
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions{
+	desc = "A direction sign, pointing out the way to Exploration.";
+	name = "\improper Exploration Department";
+	pixel_x = -32;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/security{
+	pixel_x = -32;
+	pixel_y = 12
+	},
+/obj/structure/sign/directions/stairs_down{
+	pixel_x = -32;
+	pixel_y = 18
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/aftstarboard)
 "bs" = (
 /obj/structure/table/standard,
 /obj/item/device/healthanalyzer,
@@ -1976,9 +2039,6 @@
 /area/stellardelight/deck2/aftport)
 "eE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portsolars)
 "eF" = (
@@ -2813,6 +2873,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
+"gA" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/fore)
 "gB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2857,10 +2923,10 @@
 /area/engineering/storage)
 "gF" = (
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-2"
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
@@ -3031,9 +3097,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/alarm/angled{
 	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
@@ -3996,12 +4059,14 @@
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "jz" = (
-/obj/machinery/firealarm/angled,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
+	},
+/obj/machinery/station_map{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftstarboard)
@@ -4931,6 +4996,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
 "lu" = (
@@ -5306,6 +5375,16 @@
 	},
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
+"mb" = (
+/obj/effect/floor_decal/milspec/color/blue/half{
+	dir = 4
+	},
+/obj/machinery/station_map{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "md" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/effect/floor_decal/steeldecal/steel_decals9,
@@ -5320,10 +5399,9 @@
 	},
 /obj/machinery/vending/loadout/loadout_misc,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-<<<<<<< HEAD
-=======
-/obj/effect/landmark/vines,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "me" = (
@@ -5339,10 +5417,6 @@
 "mg" = (
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-<<<<<<< HEAD
-=======
-/obj/effect/landmark/vines,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/port)
 "mh" = (
@@ -5366,13 +5440,14 @@
 /area/stellardelight/deck2/port)
 "mj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
 /obj/machinery/power/apc/angled{
+	cell_type = /obj/item/weapon/cell/super;
 	dir = 4;
 	name = "night shift APC";
 	nightshift_setting = 2
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
@@ -5632,6 +5707,10 @@
 /obj/effect/floor_decal/milspec/color/silver/corner{
 	dir = 4
 	},
+/obj/machinery/station_map{
+	dir = 8;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "mO" = (
@@ -5885,6 +5964,10 @@
 	},
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftport)
@@ -6559,6 +6642,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
 	},
+/obj/machinery/station_map{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "pb" = (
@@ -6666,9 +6752,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portsolars)
@@ -7019,11 +7102,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck2/o2production)
 "pZ" = (
-/obj/machinery/firealarm/angled{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
+	},
+/obj/machinery/station_map{
+	dir = 8;
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
@@ -7086,6 +7170,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
 "qi" = (
@@ -7475,6 +7562,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portsolars)
 "qZ" = (
@@ -7806,10 +7896,6 @@
 	dir = 4;
 	pixel_x = 24
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/landmark/vines,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "rF" = (
@@ -8571,9 +8657,6 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
 "ty" = (
@@ -8584,6 +8667,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
 "tz" = (
@@ -8985,10 +9069,6 @@
 "us" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/recharge_station,
-<<<<<<< HEAD
-=======
-/obj/effect/landmark/vines,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
 "ut" = (
@@ -9578,14 +9658,6 @@
 /area/medical/chemistry)
 "vP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-<<<<<<< HEAD
-=======
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/obj/effect/landmark/vermin,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "vQ" = (
@@ -10236,6 +10308,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftport)
@@ -11116,12 +11192,13 @@
 	dir = 4
 	},
 /obj/machinery/power/apc/angled{
+	cell_type = /obj/item/weapon/cell/super;
 	dir = 8;
 	name = "night shift APC";
 	nightshift_setting = 2
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portsolars)
@@ -12004,6 +12081,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+"BA" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/fore)
 "BB" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -12405,6 +12488,9 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
 "CA" = (
@@ -12787,12 +12873,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-<<<<<<< HEAD
-/obj/item/device/communicator,
-=======
-/obj/structure/undies_wardrobe,
-/obj/effect/landmark/vermin,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "Dv" = (
@@ -12864,6 +12944,15 @@
 "DB" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/atmos)
+"DC" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/machinery/firealarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
 "DD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm/freezer{
@@ -12987,9 +13076,13 @@
 /turf/simulated/floor/tiled/freezer/cold,
 /area/crew_quarters/kitchen)
 "DQ" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 1;
+	name = "Atmospherics";
+	sortType = "Atmospherics"
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftport)
 "DR" = (
@@ -14445,6 +14538,7 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portsolars)
 "GP" = (
@@ -14828,6 +14922,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
 	},
+/obj/machinery/station_map{
+	dir = 4;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftport)
 "HH" = (
@@ -15113,11 +15211,6 @@
 	},
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-<<<<<<< HEAD
-=======
-/obj/machinery/firealarm/angled,
-/obj/effect/landmark/vermin,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftstarboard)
 "Il" = (
@@ -15236,6 +15329,16 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
+"Iv" = (
+/obj/effect/floor_decal/milspec/color/blue/half{
+	dir = 8
+	},
+/obj/machinery/station_map{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
 "Iw" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -16144,14 +16247,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
-/obj/item/paint_palette,
-/obj/item/paint_palette,
-/obj/item/paint_brush,
-/obj/item/paint_brush,
-/obj/effect/landmark/vines,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "KD" = (
@@ -17111,7 +17206,9 @@
 /area/crew_quarters/bar)
 "MM" = (
 /obj/structure/table/standard,
-/obj/machinery/recharger,
+/obj/machinery/recharger{
+	pixel_y = 5
+	},
 /obj/machinery/light/floortube{
 	pixel_y = -4
 	},
@@ -17800,6 +17897,7 @@
 /area/medical/surgery2)
 "Oq" = (
 /obj/machinery/power/apc/angled{
+	cell_type = /obj/item/weapon/cell/super;
 	dir = 8
 	},
 /obj/structure/cable/cyan{
@@ -17997,10 +18095,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/landmark/vines,
->>>>>>> a838e48dbf... Merge pull request #11848 from Enzo-Leon/events-comedy
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
 "OQ" = (
@@ -18050,6 +18144,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
@@ -21413,6 +21511,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/engineering/atmos/monitoring)
 "WB" = (
@@ -21723,9 +21824,6 @@
 /obj/machinery/alarm/angled{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portsolars)
 "Xo" = (
@@ -21757,9 +21855,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
 "Xs" = (
@@ -30030,8 +30125,8 @@ UG
 cv
 cv
 cv
-ZG
-Jh
+CP
+SO
 Jh
 Jh
 Jh
@@ -30172,8 +30267,8 @@ Zt
 qM
 Vm
 mq
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -30314,6 +30409,7 @@ LG
 AV
 Vm
 Vm
+Wb
 ZG
 Jh
 Jh
@@ -30330,7 +30426,6 @@ Jh
 Jh
 Jh
 Oh
-Jh
 Jh
 Jh
 Jh
@@ -30456,8 +30551,8 @@ yg
 AV
 cv
 cv
-ZG
-Jh
+Ds
+kL
 Jh
 Jh
 Jh
@@ -30740,8 +30835,8 @@ MP
 PB
 cv
 cv
-ZG
-Jh
+CP
+SO
 Jh
 Jh
 Jh
@@ -30882,8 +30977,8 @@ ay
 wm
 Vm
 mq
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -31024,8 +31119,8 @@ DR
 AV
 Vm
 Vm
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -31166,8 +31261,8 @@ eg
 tk
 cv
 cv
-ZG
-Jh
+Ds
+kL
 Jh
 Jh
 Jh
@@ -31542,7 +31637,7 @@ VP
 bA
 bA
 bA
-bA
+mb
 bA
 BP
 wF
@@ -31954,7 +32049,6 @@ nt
 Rq
 Rq
 lQ
-Rq
 Jq
 Xi
 kF
@@ -33658,7 +33752,6 @@ nt
 Rq
 Rq
 lY
-Rq
 Jq
 IK
 kF
@@ -34098,7 +34191,7 @@ Ru
 nL
 WL
 WL
-iu
+Iv
 iu
 ec
 YX
@@ -34360,7 +34453,7 @@ Zr
 Zr
 vj
 pZ
-Zr
+DC
 Zr
 OV
 Zr
@@ -34574,8 +34667,8 @@ uo
 BN
 nq
 nq
-ZG
-Jh
+CP
+SO
 Jh
 Jh
 Jh
@@ -34716,8 +34809,8 @@ cF
 Jk
 VJ
 Dw
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -34858,8 +34951,8 @@ Nt
 Lw
 VJ
 VJ
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -35000,8 +35093,8 @@ lk
 Lw
 nq
 nq
-ZG
-Jh
+Ds
+kL
 Jh
 Jh
 Jh
@@ -35284,8 +35377,8 @@ jA
 Lw
 nq
 nq
-ZG
-Jh
+CP
+SO
 Jh
 Jh
 Jh
@@ -35426,8 +35519,8 @@ lX
 yA
 VJ
 Dw
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -35568,8 +35661,8 @@ nO
 nq
 VJ
 VJ
+Wb
 ZG
-Jh
 Jh
 Jh
 Jh
@@ -35710,8 +35803,8 @@ SG
 rT
 rT
 rT
-ZG
-Jh
+Ds
+kL
 Jh
 Jh
 Jh
