@@ -47,11 +47,7 @@
 	minbodytemp = 0
 	maxbodytemp = 900
 
-<<<<<<< HEAD
 	loot_list = list(/obj/random/underdark/uncertain = 25)
-=======
-	loot_list = list(/obj/random/underdark/uncertain)
->>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 
 	armor = list(
 			"melee" = 100,
@@ -114,13 +110,9 @@
 	violent_breakthrough = TRUE
 
 /mob/living/simple_mob/vore/alienanimals/startreader/apply_melee_effects(var/atom/A)
-<<<<<<< HEAD
 	if(weakened) //Don't stun people while they're already stunned! That's SILLY!
 		return
 	if(prob(15))
-=======
-	if(prob(25))
->>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 		var/mob/living/L = A
 		if(isliving(A))
 			visible_message("<span class='danger'>\The [src] trips \the [L]!</span>!")
