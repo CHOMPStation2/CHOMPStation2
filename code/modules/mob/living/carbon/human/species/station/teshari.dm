@@ -60,6 +60,7 @@
 	gluttonous = 1
 	blood_volume = 400
 	hunger_factor = 0.2
+	soft_landing = TRUE
 
 	ambiguous_genders = TRUE
 
