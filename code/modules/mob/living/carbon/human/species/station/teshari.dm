@@ -146,7 +146,7 @@
 		/datum/mob_descriptor/build = -3
 	)
 
-	var/static/list/flight_bodyparts = list(
+/*	var/static/list/flight_bodyparts = list(
 		BP_L_ARM,
 		BP_R_ARM,
 		BP_L_HAND,
@@ -155,7 +155,7 @@
 	var/static/list/flight_suit_blacklisted_types = list(
 		/obj/item/clothing/suit/space,
 		/obj/item/clothing/suit/straight_jacket
-	)
+	)*/
 
 	default_emotes = list(
 		/decl/emote/audible/teshsqueak,
@@ -217,4 +217,4 @@
 		H.Stun(1)
 		playsound(H, "rustle", 25, 1)
 	return TRUE
-*/ //CHOMPedit end
+*/ //CHOMPedit end. CHOMPEdit IIC: looks like upstream disabled it too because they made it a trait instead.
