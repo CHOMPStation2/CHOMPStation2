@@ -8,11 +8,7 @@
 		R.add_language(LANGUAGE_ENOCHIAN,		1)
 		R.add_language(LANGUAGE_SLAVIC,			1)
 		R.add_language(LANGUAGE_DRUDAKAR, 		1)
-<<<<<<< HEAD
-		R.add_language(LANGUAGE_SQUEAKISH,		1) //CHOMPedit
-=======
 		R.add_language(LANGUAGE_TAVAN,			1)
->>>>>>> 3f701c8c8a... Merge pull request #11821 from Enzo-Leon/altevian-001
 		return 1
 	else
 		return 0
