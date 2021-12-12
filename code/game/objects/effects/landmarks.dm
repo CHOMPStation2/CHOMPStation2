@@ -83,6 +83,12 @@
 			endgame_exits += loc
 			delete_me = 1
 			return
+		//VOREStation Add Start
+		if("vinestart")
+			vinestart += loc
+			delete_me = 1
+			return
+		//VORE Station Add End
 
 	landmarks_list += src
 	return 1

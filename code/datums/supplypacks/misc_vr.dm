@@ -100,8 +100,8 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Solgov medical hardsuit crate"
-	access = access_medical
+	containername = "Solgov engineering hardsuit crate"
+	access = access_engine
 
 // CHOMPStation EDIT End
 

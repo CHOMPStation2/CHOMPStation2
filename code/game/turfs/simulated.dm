@@ -124,7 +124,7 @@
 
 				bloodDNA = null
 
-		if(src.wet || (dirtslip && (dirt > 50 || outdoors)))	//CHOMPEdit
+		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))	//CHOMPEdit
 
 			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
 				return
@@ -139,6 +139,8 @@
 					floor_type = "dirty"
 				else if(outdoors)
 					floor_type = "uneven"
+				if(src.wet == 0 && M.m_intent == "walk")
+					return
 			//CHOMPEdit End
 			switch(src.wet)
 				if(2) // Lube

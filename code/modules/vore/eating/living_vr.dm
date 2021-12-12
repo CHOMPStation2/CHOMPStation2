@@ -457,6 +457,14 @@
 		var/obj/effect/overlay/aiholo/holo = loc
 		holo.drop_prey() //Easiest way
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
+	
+	//You're in a capture crystal! ((It's not vore but close enough!))
+	else if(iscapturecrystal(loc))
+		var/obj/item/capture_crystal/crystal = loc
+		crystal.unleash()
+		crystal.bound_mob = null
+		crystal.bound_mob = capture_crystal = 0
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
 
 	//Don't appear to be in a vore situation
 	else
@@ -670,7 +678,11 @@
 			if(S.holding)
 				to_chat(src, "<span class='warning'>There's something inside!</span>")
 				return
-
+		if(iscapturecrystal(I))
+			var/obj/item/capture_crystal/C = I
+			if(!C.bound_mob.devourable)
+				to_chat(src, "<span class='warning'>That doesn't seem like a good idea. (\The [C.bound_mob]'s prefs don't allow it.)</span>")
+				return
 		drop_item()
 		I.forceMove(vore_selected)
 		updateVRPanel()
@@ -724,15 +736,23 @@
 		else if (istype(I,/obj/item/clothing/accessory/collar))
 			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
-		//kcin2000 1/29/21 - lets you eat the news digitally and adds a text for the paper news
+		else if(iscapturecrystal(I))
+			var/obj/item/capture_crystal/C = I
+			if(C.bound_mob && (C.bound_mob in C.contents))
+				if(isbelly(C.loc))
+					var/obj/belly/B = C.loc
+					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
+					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
+		// CHOMPedit begin
 		else if(istype(I,/obj/item/device/starcaster_news))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
 		else if(istype(I,/obj/item/weapon/newspaper))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of garbage, oh wait its just the news.</span>")
-		//kcin2001 1/29/21 - Adding some special synth trash eat
 		else if (istype(I,/obj/item/weapon/cell))
 			visible_message("<span class='warning'>[src] sates their electric appeite with a [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
+		//CHOMPedit end
+
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return

@@ -102,7 +102,7 @@
 			scancount = 0
 			scanned = list()
 			scannables = list(/obj/machinery/deployable/barrier,/obj/machinery/flasher/portable,/obj/item/weapon/storage/box/flashbangs,/obj/item/device/taperecorder,
-			/mob/living/simple_mob/animal/passive/snake/noodle,/obj/item/weapon/gun/energy/taser,/obj/item/weapon/gun/energy/stunrevolver,/obj/item/weapon/reagent_containers/spray/pepper,
+			/mob/living/simple_mob/animal/passive/snake/python/noodle,/obj/item/weapon/gun/energy/taser,/obj/item/weapon/gun/energy/stunrevolver,/obj/item/weapon/reagent_containers/spray/pepper,
 			/obj/item/weapon/storage/box/handcuffs,/obj/item/clothing/glasses/sunglasses/sechud/aviator,/obj/machinery/computer/secure_data,/obj/machinery/computer/security,
 			/obj/item/weapon/storage/briefcase/crimekit,/obj/machinery/microscope,/obj/machinery/dnaforensics,/obj/machinery/flasher,/obj/structure/closet/secure_closet/brig,
 			/obj/structure/closet/secure_closet/warden,/obj/machinery/vending/security,/obj/structure/closet/secure_closet/hos2,/obj/structure/closet/secure_closet/hos,

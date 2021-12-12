@@ -28,7 +28,10 @@
 
 	maxHealth = 25
 	health = 25
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
+
+	meat_amount = 2
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+
 	movement_cooldown = 0
 
 	melee_damage_lower = 2

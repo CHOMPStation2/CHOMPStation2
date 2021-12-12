@@ -30,6 +30,13 @@
 	if(environment.temperature > HEATMODE_TEMP - 30)
 		. = TRUE
 
+/proc/offsite_environment_check(turf/simulated/T)
+	. = TRUE
+	if(!istype(T))
+		return
+	if(T.z in using_map.station_levels)
+		. = FALSE
+
 /obj/item/weapon/gun/energy/kinetic_accelerator
 	name = "proto-kinetic accelerator"
 	desc = "A self recharging, ranged mining tool that does increased damage in low pressure."
@@ -184,7 +191,7 @@
 /obj/item/weapon/gun/energy/kinetic_accelerator/proc/empty()
 	if(power_supply)
 		power_supply.use(power_supply.charge)
-	update_icon()
+		update_icon()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/proc/attempt_reload(recharge_time)
 	if(!power_supply)
@@ -216,11 +223,12 @@
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/update_icon()
 	cut_overlays()
-	if(overheat || (power_supply.charge == 0))
+	if(overheat || !power_supply || (power_supply.charge == 0))
 		add_overlay(emptystate)
 
 #define KA_ENVIRO_TYPE_COLD 0
 #define KA_ENVIRO_TYPE_HOT 1
+#define KA_ENVIRO_TYPE_OFFSITE 2
 
 //Projectiles
 /obj/item/projectile/kinetic
@@ -262,6 +270,12 @@
 				name = "weakened [name]"
 				damage = damage * pressure_decrease
 				pressure_decrease_active = TRUE
+		else if(environment == KA_ENVIRO_TYPE_OFFSITE)
+			if(!offsite_environment_check(get_turf(src)))
+				name = "nullified [name]"
+				nodamage = TRUE
+				damage = 0
+				pressure_decrease_active = TRUE
 	return ..()
 
 /obj/item/projectile/kinetic/attack_mob(mob/living/target_mob, distance, miss_modifier)
@@ -275,6 +289,12 @@
 			if(!virgotwo_environment_check(get_turf(src)))
 				name = "weakened [name]"
 				damage = damage * pressure_decrease
+				pressure_decrease_active = TRUE
+		else if(environment == KA_ENVIRO_TYPE_OFFSITE)
+			if(!offsite_environment_check(get_turf(src)))
+				name = "nullified [name]"
+				nodamage = TRUE
+				damage = 0
 				pressure_decrease_active = TRUE
 	return ..()
 
@@ -301,6 +321,12 @@
 			if(!virgotwo_environment_check(get_turf(src)))
 				name = "weakened [name]"
 				damage = damage * pressure_decrease
+				pressure_decrease_active = TRUE
+		else if(environment == KA_ENVIRO_TYPE_OFFSITE)
+			if(!offsite_environment_check(get_turf(src)))
+				name = "nullified [name]"
+				nodamage = TRUE
+				damage = 0
 				pressure_decrease_active = TRUE
 	var/turf/target_turf = get_turf(target)
 	if(!target_turf)
@@ -391,8 +417,8 @@
 	if(forcemove)
 		forceMove(get_turf(KA))
 
+//use this one to modify the projectile itself
 /obj/item/borg/upgrade/modkit/proc/modify_projectile(obj/item/projectile/kinetic/K)
-
 //use this one for effects you want to trigger before any damage is done at all and before damage is decreased by pressure
 /obj/item/borg/upgrade/modkit/proc/projectile_prehit(obj/item/projectile/kinetic/K, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 //use this one for effects you want to trigger before mods that do damage
@@ -419,6 +445,7 @@
 
 /obj/item/borg/upgrade/modkit/damage/modify_projectile(obj/item/projectile/kinetic/K)
 	K.damage += modifier
+
 
 //Cooldown
 /obj/item/borg/upgrade/modkit/cooldown
@@ -522,7 +549,7 @@
 //Tendril-unique modules
 /obj/item/borg/upgrade/modkit/cooldown/repeater
 	name = "rapid repeater"
-	desc = "Quarters the kinetic accelerator's cooldown on striking a living target, but greatly increases the base cooldown."
+	desc = "Quarters the kinetic accelerator's cooldown on striking a living or mineral target, but greatly increases the base cooldown."
 	denied_type = /obj/item/borg/upgrade/modkit/cooldown/repeater
 	modifier = -14 //Makes the cooldown 3 seconds(with no cooldown mods) if you miss. Don't miss.
 	cost = 50
@@ -547,7 +574,6 @@
 	modifier = 2.5 //Not a very effective method of healing.
 	cost = 20
 	var/static/list/damage_heal_order = list(BRUTE, BURN, OXY)
-
 /obj/item/borg/upgrade/modkit/lifesteal/projectile_prehit(obj/item/projectile/kinetic/K, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(isliving(target) && isliving(K.firer))
 		var/mob/living/L = target
@@ -582,7 +608,6 @@
 	cost = 30
 	var/maximum_bounty = 25
 	var/list/bounties_reaped = list()
-
 /obj/item/borg/upgrade/modkit/bounty/projectile_prehit(obj/item/projectile/kinetic/K, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(isliving(target))
 		var/mob/living/L = target
@@ -593,7 +618,6 @@
 				SM.reward_target = null
 				qdel(SM)
 		L.apply_status_effect(STATUS_EFFECT_SYPHONMARK, src)
-
 /obj/item/borg/upgrade/modkit/bounty/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(isliving(target))
 		var/mob/living/L = target
@@ -603,7 +627,6 @@
 				kill_modifier *= K.pressure_decrease
 			var/armor = L.run_armor_check(K.def_zone, K.flag, null, null, K.armour_penetration)
 			L.apply_damage(bounties_reaped[L.type]*kill_modifier, K.damage_type, K.def_zone, armor)
-
 /obj/item/borg/upgrade/modkit/bounty/proc/get_kill(mob/living/L)
 	var/bonus_mod = 1
 	if(ismegafauna(L)) //megafauna reward
@@ -616,7 +639,7 @@
 
 //Indoors
 /obj/item/borg/upgrade/modkit/indoors
-	name = "decrease pressure penalty"
+	name = "hacked pressure modulator"
 	desc = "A remarkably illegal modification kit that increases the damage a kinetic accelerator does in pressurized environments."
 	modifier = 2
 	denied_type = /obj/item/borg/upgrade/modkit/indoors
@@ -626,14 +649,25 @@
 /obj/item/borg/upgrade/modkit/indoors/modify_projectile(obj/item/projectile/kinetic/K)
 	K.pressure_decrease *= modifier
 
+/obj/item/borg/upgrade/modkit/offsite
+	name = "offsite pressure modulator"
+	desc = "A non-standard modification kit that increases the damage a kinetic accelerator does in pressurized environments, \
+	in exchange for nullifying any projected forces while on or in an associated facility."
+	denied_type = /obj/item/borg/upgrade/modkit/heater
+	maximum_of_type = 1
+	cost = 35
+
+/obj/item/borg/upgrade/modkit/offsite/modify_projectile(obj/item/projectile/kinetic/K)
+	K.environment = KA_ENVIRO_TYPE_OFFSITE
+
 // Atmospheric
 /obj/item/borg/upgrade/modkit/heater
 	name = "temperature modulator"
 	desc = "A remarkably unusual modification kit that makes kinetic accelerators more usable in hot, overpressurized environments, \
 	in exchange for making them weak elsewhere, like the cold or in space."
-	denied_type = /obj/item/borg/upgrade/modkit/indoors
+	denied_type = /obj/item/borg/upgrade/modkit/offsite
 	maximum_of_type = 1
-	cost = 30
+	cost = 10
 
 /obj/item/borg/upgrade/modkit/heater/modify_projectile(obj/item/projectile/kinetic/K)
 	K.environment = KA_ENVIRO_TYPE_HOT
@@ -646,12 +680,10 @@
 	desc = "Allows creatures normally incapable of firing guns to operate the weapon when installed."
 	cost = 20
 	denied_type = /obj/item/borg/upgrade/modkit/trigger_guard
-
 /obj/item/borg/upgrade/modkit/trigger_guard/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
 	. = ..()
 	if(.)
 		KA.trigger_guard = TRIGGER_GUARD_ALLOW_ALL
-
 /obj/item/borg/upgrade/modkit/trigger_guard/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	KA.trigger_guard = TRIGGER_GUARD_NORMAL
 	..()
