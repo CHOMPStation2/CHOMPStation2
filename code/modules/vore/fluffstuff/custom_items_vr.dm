@@ -1409,3 +1409,11 @@ End CHOMP Removal*/
 	pickup_sound = null
 	origin_tech = null
 	matter = null
+
+//Coolcrow420 - Jade Davis
+/obj/item/weapon/stamp/fluff/jade_horror
+	name = "Council of Mid Horror rubber stamp"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "stamp-midhorror"
+	stamptext = "This paper has been certified by The Council of Mid Horror"
+  

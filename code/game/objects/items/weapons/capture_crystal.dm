@@ -65,6 +65,7 @@
 			if(!AI.hostile)
 				AI.set_stance(STANCE_IDLE)
 			to_chat(M, span("notice", "\The [bound_mob] is now [AI.hostile ? "hostile" : "passive"]."))
+			log_admin("[key_name_admin(M)] set [bound_mob] to [AI.hostile].")
 	else if(bound_mob.client)
 		var/transmit_msg
 		transmit_msg = sanitizeSafe(input(usr, "What is your command?", "Command", null)  as text, MAX_NAME_LEN)
@@ -73,6 +74,7 @@
 			return
 		to_chat(bound_mob, "<span class='notice'>\The [owner] commands, '[transmit_msg]'</span>")
 		to_chat(M, "<span class='notice'>Your command has been transmitted, '[transmit_msg]'</span>")
+		log_admin("[key_name_admin(M)] sent the command, '[transmit_msg]' to [bound_mob].")
 	else
 		to_chat(M, "<span class='notice'>\The [src] emits an unpleasant tone... \The [bound_mob] is unresponsive.</span>")
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
@@ -365,6 +367,7 @@
 		else if(!isanimal(M))						//So it's not player controlled, but it's also not a simplemob?
 			to_chat(user, "<span class='warning'>This creature is not suitable for capture.</span>")
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
+			return
 		var/mob/living/simple_mob/S = M
 		if(!S.ai_holder)						//We don't really want to capture simplemobs that don't have an AI
 			to_chat(user, "<span class='warning'>This creature is not suitable for capture.</span>")
