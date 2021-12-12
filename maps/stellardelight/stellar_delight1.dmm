@@ -16074,17 +16074,13 @@
 	dir = 4;
 	door_color = "#525252";
 	name = "Exploration Shuttle";
-<<<<<<< HEAD
-	req_one_access = list(19,43,67);
-=======
-	req_one_access = list(19,43,67,66,5);
->>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
+
 	stripe_color = "#408f3b"
 	},
 /obj/structure/cable/green{
 	color = "#42038a";
 	icon_state = "4-8"
-	},
+
 /obj/machinery/atmospheric_field_generator/perma,
 /obj/machinery/door/firedoor/glass/talon,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -17717,6 +17713,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+
+
 /obj/machinery/atmospheric_field_generator/perma,
 /obj/machinery/door/firedoor/glass/talon,
 /turf/simulated/floor/tiled/steel_ridged,

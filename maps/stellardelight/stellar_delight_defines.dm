@@ -333,6 +333,8 @@
 	z = Z_LEVEL_SPACE_ROCKS
 	name = "V3b Asteroid Field"
 	base_turf = /turf/space
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
+
 
 
 /datum/map_template/ship_lateload/overmap
