@@ -1189,7 +1189,7 @@
 
 //Throwing stuff
 /mob/proc/throw_item(atom/target)
-	return FALSE
+	return
 
 /mob/proc/will_show_tooltip()
 	if(alpha <= EFFECTIVE_INVIS)
