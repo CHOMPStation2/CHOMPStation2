@@ -559,7 +559,7 @@
 	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
 	Directives : <B>Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
 	Chelyabinsk and empty the facility, excluding Class 3M, guided by Class 4 personnel. <BR>All Class 5, 6 must \
-	check the stabiity of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979."
+	check the stabiity of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.</B>"
 
 /obj/item/weapon/paper/awaygate/snowfield/activation_order
 	name = "High Command Order Directives"
@@ -589,8 +589,8 @@
 	was sitting at out of nowhere.<BR>Let there be a celebration to you, finding this tiny paper. But leaving this empty \
 	will be awkward, so, some few honorable mentions shall be here.<BR><BR><B>Maker of the Map:</B> H.K <BR><BR><B>Huge \
 	Emotional Support (And my life changer):</B> BlackMajor, Salty S<BR><BR><B>Supporters in the most troubled times</B>: \
-	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR><B>Helpers on the map work:\
-	</B> BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR><B>\
+	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR><B>Helpers on the map work:</B> \
+	BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR><B>\
 	<B>Map recovery helper (Curse you github, almost deleting the project):</B> BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
 	<B>Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
 
