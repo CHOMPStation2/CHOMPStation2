@@ -598,13 +598,8 @@
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
-<<<<<<< HEAD
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
-	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Station Engineer")
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/engineering
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
->>>>>>> 0502970c3f... Merge pull request #11752 from Heroman3003/jobstuff2
 
 /datum/gear/suit/snowsuit/cargo
 	display_name = "snowsuit, supply"
