@@ -5402,6 +5402,9 @@
 	},
 /obj/machinery/vending/loadout/loadout_misc,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "me" = (
@@ -5417,6 +5420,9 @@
 "mg" = (
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/port)
 "mh" = (
@@ -7889,6 +7895,9 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "rF" = (
@@ -9062,6 +9071,9 @@
 "us" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/recharge_station,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
 "ut" = (
@@ -10220,6 +10232,15 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+>>>>>>> 7ff0acbf5e... Merge pull request #11842 from Enzo-Leon/comedy-vines
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "xo" = (
@@ -16237,6 +16258,16 @@
 /obj/machinery/light{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/item/paint_palette,
+/obj/item/paint_palette,
+/obj/item/paint_brush,
+/obj/item/paint_brush,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+>>>>>>> 7ff0acbf5e... Merge pull request #11842 from Enzo-Leon/comedy-vines
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "KD" = (
@@ -18074,6 +18105,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
