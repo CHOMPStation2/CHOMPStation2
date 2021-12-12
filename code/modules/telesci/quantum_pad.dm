@@ -258,7 +258,7 @@
 						continue
 				else
 					continue
-			else if(!isobserver(ROI))
+			else if(!isobserver(ROI) && !isEye(ROI))
 				continue
 		do_teleport(ROI, destination, local = FALSE, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg') //CHOMP Edit
 
