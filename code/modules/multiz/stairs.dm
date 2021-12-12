@@ -206,9 +206,6 @@
 		if(L.grabbed_by.len) // Same as pulledby, whoever's holding you will keep you from going down stairs.
 			return
 
-		if(L.has_buckled_mobs())
-			return
-
 		if(L.buckled)
 			L.buckled.forceMove(get_turf(top))
 
@@ -395,7 +392,7 @@
 
 /obj/structure/stairs/top/Uncrossed(var/atom/movable/AM)
 	// Going down stairs from the topstair piece
-	if(AM.dir == turn(dir, 180) && check_integrity())
+	if(AM.dir == turn(dir, 180) && isturf(AM.loc) && check_integrity())
 		use_stairs_instant(AM)
 		return
 
@@ -458,9 +455,6 @@
 		var/mob/living/L = AM
 
 		if(L.grabbed_by.len) // Same as pulledby, whoever's holding you will keep you from going down stairs.
-			return
-
-		if(L.has_buckled_mobs())
 			return
 
 		if(L.buckled)
