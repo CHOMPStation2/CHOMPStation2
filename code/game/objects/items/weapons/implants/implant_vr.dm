@@ -35,7 +35,7 @@
 		source.add_language(LANGUAGE_CANILUNZT)
 		source.add_language(LANGUAGE_SLAVIC)
 		source.add_language(LANGUAGE_SOL_COMMON) //In case they're giving a xenomorph an implant or something.
-		source.add_language(LANGUAGE_SQUEAKISH) //CHOMPedit
+		source.add_language(LANGUAGE_TAVAN) 
 
 /obj/item/weapon/implant/vrlanguage/post_implant(mob/source)
 	source.mind.store_memory("A implant can be activated by using the smile emote, <B>say *smile</B> to attempt to activate.", 0, 0)
