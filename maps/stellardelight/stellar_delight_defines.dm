@@ -4,20 +4,6 @@
 #define Z_LEVEL_SHIP_HIGH					3
 #define Z_LEVEL_CENTCOM						4
 #define Z_LEVEL_MISC						5
-<<<<<<< HEAD
-<<<<<<< HEAD
-#define Z_LEVEL_BEACH						6
-#define Z_LEVEL_BEACH_CAVE					7
-#define Z_LEVEL_AEROSTAT					8
-#define Z_LEVEL_AEROSTAT_SURFACE			9
-#define Z_LEVEL_DEBRISFIELD					10
-#define Z_LEVEL_FUELDEPOT					11
-#define Z_LEVEL_OVERMAP						12
-#define Z_LEVEL_OFFMAP1						13
-#define Z_LEVEL_GATEWAY						14
-=======
-=======
->>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 #define Z_LEVEL_SPACE_ROCKS					6
 #define Z_LEVEL_BEACH						7
 #define Z_LEVEL_BEACH_CAVE					8
@@ -28,11 +14,7 @@
 #define Z_LEVEL_OVERMAP						13
 #define Z_LEVEL_OFFMAP1						14
 #define Z_LEVEL_GATEWAY						15
-<<<<<<< HEAD
 #define Z_LEVEL_OM_ADVENTURE				16
->>>>>>> 60011ecd0b... Merge pull request #11928 from Very-Soft/whalesandcrystals
-=======
->>>>>>> b8bd9f130c... Merge pull request #11834 from Very-Soft/QOLwow
 
 //Camera networks
 #define NETWORK_HALLS "Halls"
