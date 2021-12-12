@@ -44,6 +44,12 @@ sepulchre - Vox
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
+<<<<<<< HEAD
+=======
+skylarks - Black-Eyed Shadekin
+spirit1299 - Black-Eyed Shadekin
+stackerrobot - Protean
+>>>>>>> d60c5af995... Merge pull request #12007 from Novacat/nova-basicfixes
 storesund97 - Protean
 sharplight - Protean
 tastypred - Black-Eyed Shadekin
