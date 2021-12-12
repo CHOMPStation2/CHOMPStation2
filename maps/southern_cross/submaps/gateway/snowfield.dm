@@ -590,7 +590,7 @@
 	will be awkward, so, some few honorable mentions shall be here.<BR><BR><B>Maker of the Map:</B> H.K <BR><BR><B>Huge \
 	Emotional Support (And my life changer):</B> BlackMajor, Salty S<BR><BR><B>Supporters in the most troubled times</B>: \
 	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR><B>Helpers on the map work:</B> \
-	BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR><B>\
+	BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR>\
 	<B>Map recovery helper (Curse you github, almost deleting the project):</B> BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
 	<B>Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
 
