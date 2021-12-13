@@ -160,8 +160,7 @@
 	base_attack_cooldown = 10
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged
-
-	var/ruptured = FALSE
+	var/ruptured = 0
 
 /mob/living/simple_mob/animal/space/mouse_army/pyro/death()
 	visible_message("<span class='critical'>\The [src]'s tank groans!</span>")
@@ -176,10 +175,9 @@
 			sleep(1)
 
 	spawn(rand (1,5))
-		if(src && !ruptured)
+		if(!ruptured)
 			visible_message("<span class='critical'>\The [src]'s tank ruptures!</span>")
 			ruptured = 1
-			qdel(src)
 			adjust_fire_stacks(2)
 			IgniteMob()
 	return ..()
@@ -224,7 +222,7 @@
 
 /mob/living/simple_mob/animal/space/mouse_army/ammo/death()
 	visible_message("<span class='critical'>\The [src]'s body begins to rupture!</span>")
-	var/delay = rand(1, 3)
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	spawn(0)
 		// Flash black and red as a warning.
 		for(var/i = 1 to delay)
@@ -238,7 +236,7 @@
 		if(src && !exploded)
 			visible_message("<span class='critical'>\The [src]'s body detonates!</span>")
 			exploded = 1
-			explosion(src.loc, 0, 0, 2, 4)
+			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 			qdel(src)
 	return ..()
 
@@ -271,14 +269,13 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
 
-	var/cloaked_alpha = 45			// Lower = Harder to see.
-	var/cloaked_bonus_damage = 20	// This is added on top of the normal melee damage.
-	var/cloaked_weaken_amount = 3	// How long to stun for.
-	var/cloak_cooldown = 10 SECONDS	// Amount of time needed to re-cloak after losing it.
-	var/last_uncloak = 0			// world.time
+	var/cloaked_alpha = 45
+	var/cloaked_bonus_damage = 20
+	var/cloaked_weaken_amount = 3
+	var/cloak_cooldown = 10 SECONDS
+	var/last_uncloak = 0
 
 
-// Check if cloaking if possible.
 /mob/living/simple_mob/animal/space/mouse_army/stealth/proc/can_cloak()
 	if(stat)
 		return FALSE
@@ -287,8 +284,13 @@
 
 	return TRUE
 
+/mob/living/simple_mob/animal/space/mouse_army/stealth/uncloak()
+	last_uncloak = world.time
+	if(!cloaked)
+		return
+	animate(src, alpha = initial(alpha), time = 1 SECOND)
+	cloaked = FALSE
 
-// Called by things that break cloaks, like Technomancer wards.
 /mob/living/simple_mob/animal/space/mouse_army/stealth/break_cloak()
 	uncloak()
 
@@ -296,20 +298,15 @@
 /mob/living/simple_mob/animal/space/mouse_army/stealth/is_cloaked()
 	return cloaked
 
-
-// Cloaks the spider automatically, if possible.
 /mob/living/simple_mob/animal/space/mouse_army/stealth/handle_special()
 	if(!cloaked && can_cloak())
 		cloak()
 
-
-// Applies bonus base damage if cloaked.
 /mob/living/simple_mob/animal/space/mouse_army/stealth/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(cloaked)
 		return damage_amount + cloaked_bonus_damage
 	return ..()
 
-// Applies stun, then uncloaks.
 /mob/living/simple_mob/animal/space/mouse_army/stealth/apply_melee_effects(atom/A)
 	if(cloaked)
 		if(isliving(A))
@@ -318,9 +315,8 @@
 			to_chat(L, span("danger", "\The [src] ambushes you!"))
 			playsound(L, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
-	..() // For the poison.
+	..()
 
-// Force uncloaking if attacked.
 /mob/living/simple_mob/animal/space/mouse_army/stealth/bullet_act(obj/item/projectile/P)
 	. = ..()
 	break_cloak()
@@ -417,7 +413,7 @@
 				"rad" = 100
 				)
 
-	projectiletype = /obj/item/projectile/bullet/incendiary/flamethrower/large
+	projectiletype = /obj/item/projectile/bullet/incendiary/dragonflame
 
 	movement_cooldown = 3
 	base_attack_cooldown = 15

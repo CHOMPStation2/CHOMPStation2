@@ -364,6 +364,7 @@
 	desc = "An oily pirate mechanist. Thankfully he has but an old laser to defend himself with."
 	icon_state = "bosun"
 	icon_living = "bosun"
+	movement_cooldown = 3
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/blood_hunter // This is for use in the Pirate Ripley Mecha
 
 	loot_list = list(/obj/item/weapon/gun/energy/retro = 100, /obj/item/clothing/head/welding = 100, /obj/item/clothing/suit/pirate = 100)
@@ -432,8 +433,7 @@
 
 	reload_time = 10 SECONDS // I mean its a belt of pistols not exactly easy to reload. Especially with how much damage the barage does.
 	needs_reload = TRUE
-	reload_max = 4  // More than capable to shredding explo's shield especially when backed up by a few mates.
-
+	reload_max = 4
 	projectiletype = /obj/item/projectile/beam/heavylaser
 	projectilesound = 'sound/weapons/weaponsounds_laserstrong.ogg'
 	base_attack_cooldown = 5
@@ -458,3 +458,45 @@
 	shield_regen_amount = 10
 	size_x = 1
 	size_y = 1
+
+
+
+/mob/living/simple_mob/mechanical/mecha/ripley/pirate
+	name = "Hull Ripper"
+	desc = "A Ripley modified by pirates. Sports additional riveted armor plating and a jury rigged machine gun in addition to its hull piercing drill."
+	catalogue_data = list(/datum/category_item/catalogue/technology/ripley)
+	icon = 'icons/mob/animal_ch.dmi'
+	icon_state = "pirate"
+	faction = "pirate"
+	wreckage = /obj/structure/loot_pile/mecha/ripley/pirate
+
+	maxHealth = 250
+	heat_resist = 1
+	armor = list(
+				"melee"		= 30,
+				"bullet"	= 40,
+				"laser"		= 50,
+				"energy"	= 5,
+				"bomb"		= 50,
+				"bio"		= 100,
+				"rad"		= 100
+				)
+
+	projectiletype = /obj/item/projectile/bullet/pistol
+	base_attack_cooldown = 0.5 SECONDS
+	needs_reload = TRUE
+	reload_max = 30
+	reload_time = 3
+
+/mob/living/simple_mob/mechanical/mecha/ripley/pirate/manned
+	pilot_type = /mob/living/simple_mob/humanoid/pirate/mate/ranged/bosun
+
+/mob/living/simple_mob/mechanical/mecha/ripley/pirate/last_stand_merc	//Special version used as a quasi boss fight
+	name = "Xeno Ripper"
+	desc = "A Ripley modified by a desperate merc. It sports additional riveted armor plating splattered with dried xeno blood and a jury rigged machine gun in addition to its drill.\
+			A repair drone flits around the intimidating mech."
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive
+	maxHealth = 170				//Less Health
+	has_repair_droid = TRUE		//But has repair drone
+	pilot_type = /mob/living/simple_mob/humanoid/possessed/merc/feral	//Possessed rig suit piloting a mech. Tremble in fear
+	movement_shake_radius = 5

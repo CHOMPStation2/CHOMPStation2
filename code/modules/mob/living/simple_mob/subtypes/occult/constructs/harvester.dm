@@ -7,7 +7,7 @@
 	real_name = "Harvester"
 	construct_type = "harvester"
 	desc = "A tendril-laden construct piloted by a chained mind."
-	icon = 'icons/mob/mob.dmi'
+	//icon = 'icons/mob/mob.dmi' CHOMPEdit
 	icon_state = "harvester"
 	icon_living = "harvester"
 	maxHealth = 100	//CHOMPEdit

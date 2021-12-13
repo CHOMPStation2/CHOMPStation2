@@ -99,3 +99,18 @@
 	say_threaten = list("You best leave, this booty is mine.", "No plank to walk on, just walk away.")
 	say_stand_down = list("Good.", "That's right run you lilly livers.")
 	say_escalate = list("Yarr! The booty is mine!", "Going to gut you landlubber.")
+
+
+/datum/say_list/possessed
+	speak = list("Where am I?",
+				"Why am I here?",
+				"Where did everyone go?")
+
+	emote_hear = list("lets out a mournful cry.", "can be heard sobbing.", "groans out in pain.")
+	emote_see = list("kneels down for a moment, picking something up before casting it away.","stands as still as a statue.", "looks to be doing some kind of work.")
+
+	say_maybe_target = list("Is there someone there?", "Who's there?")
+	say_got_target = list("You! You help people!", "Can you help me?", "I'm lost!")
+	say_threaten = list("Help me!", "Please help!", "Hey, who turned out the lights?", "Allonsy!", "Geronimo!")
+	say_stand_down = list("Please. Anyone. Help!", "Where is everyone?", "Where am I?")
+	say_escalate = list("Help!", "I'm sorry!", "I can't stop!", "I don't want to do this!", "I don't want to go!")

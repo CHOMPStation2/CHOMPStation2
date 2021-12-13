@@ -28,7 +28,7 @@
 	response_help = "pokes"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	attacktext = list ("wildly strikes", "swings", "batters")
+	attacktext = list ("wildly struck", "lunged against", "battered")
 	attack_sound = 'sound/weapons/punch3.ogg'
 
 	var/emp_damage = 0
@@ -59,7 +59,7 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 10
-	attacktext = "splatters on"
+	attacktext = "splattered on"
 	attack_sound = 'sound/effects/slime_squish.ogg'
 
  // Do y'like brain damage?
@@ -196,18 +196,12 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
 
- // Lower = Harder to see.
 	var/cloaked_alpha = 30
- // This is added on top of the normal melee damage.
 	var/cloaked_bonus_damage = 30
- // How long to stun for.
 	var/cloaked_weaken_amount = 3
- // Amount of time needed to re-cloak after losing it.
 	var/cloak_cooldown = 10 SECONDS
- // world.time
 	var/last_uncloak = 0
 
-// Check if cloaking if possible.
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/proc/can_cloak()
 	if(stat)
 		return FALSE
@@ -216,8 +210,13 @@
 
 	return TRUE
 
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran/uncloak()
+	last_uncloak = world.time
+	if(!cloaked)
+		return
+	animate(src, alpha = initial(alpha), time = 1 SECOND)
+	cloaked = FALSE
 
-// Called by things that break cloaks, like Technomancer wards.
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/break_cloak()
 	uncloak()
 
@@ -225,20 +224,15 @@
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/is_cloaked()
 	return cloaked
 
-
-// Cloaks the tajaran automatically, if possible.
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/handle_special()
 	if(!cloaked && can_cloak())
 		cloak()
 
-
-// Applies bonus base damage if cloaked.
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(cloaked)
 		return damage_amount + cloaked_bonus_damage
 	return ..()
 
-// Applies stun, then uncloaks.
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/apply_melee_effects(atom/A)
 	if(cloaked)
 		if(isliving(A))
@@ -247,9 +241,8 @@
 			to_chat(L, span("danger", "\The [src] tears into you!"))
 			playsound(L, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
-	..() // For the poison.
+	..()
 
-// Force uncloaking if attacked.
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/bullet_act(obj/item/projectile/P)
 	. = ..()
 	break_cloak()
