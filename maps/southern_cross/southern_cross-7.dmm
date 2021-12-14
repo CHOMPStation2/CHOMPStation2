@@ -65,7 +65,7 @@
 "bU" = (/obj/structure/window/phoronreinforced,/turf/simulated/floor/tiled/airless,/area/wreck/ufoship)
 "bV" = (/obj/item/device/flashlight/flare,/turf/simulated/floor/tiled/airless,/area/wreck/ufoship)
 "bW" = (/obj/item/stack/material/wood,/obj/item/stack/material/wood,/obj/structure/ore_box,/obj/item/weapon/ore/iron,/obj/item/weapon/ore/iron,/obj/item/weapon/ore/iron,/turf/simulated/floor/airless,/area/wreck/ufoship)
-"bY" = (/obj/item/clothing/head/helmet/space/deathsquad,/obj/structure/table/rack,/obj/effect/decal/cleanable/molten_item,/turf/simulated/floor/tiled/airless,/area/wreck/ufoship)
+"bY" = (/obj/structure/table/rack,/obj/effect/decal/cleanable/molten_item,/turf/simulated/floor/tiled/airless,/area/wreck/ufoship)
 "bZ" = (/obj/machinery/compressor{dir = 4},/obj/structure/window/phoronreinforced,/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced{dir = 1},/turf/simulated/floor/reinforced/phoron,/area/wreck/ufoship)
 "cb" = (/obj/item/device/gps,/turf/simulated/floor/tiled/airless,/area/wreck/ufoship)
 "cc" = (/obj/structure/ore_box,/turf/simulated/floor/airless,/area/wreck/ufoship)
