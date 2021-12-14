@@ -423,3 +423,9 @@
 	icon_state = "bigspots"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/ch/teshari_large_eyes_het
+	name = "Teshari large eyes (Heterochromia)"
+	icon_state = "teshlarge_eyes_het"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
