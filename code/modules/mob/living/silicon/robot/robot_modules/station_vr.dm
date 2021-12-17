@@ -36,7 +36,8 @@
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
 					LANGUAGE_ENOCHIAN	= 1,
-					LANGUAGE_SQUEAKISH	= 1 //CHOMPedit
+					LANGUAGE_DRUDAKAR	= 1,
+					LANGUAGE_TAVAN		= 1
 					)
 
 /obj/item/weapon/robot_module/robot/chound
@@ -58,7 +59,7 @@
 					LANGUAGE_DAEMON		= 1,
 					LANGUAGE_ENOCHIAN	= 1,
 					LANGUAGE_DRUDAKAR	= 1,
-					LANGUAGE_SQUEAKISH	= 1 //CHOMPedit
+					LANGUAGE_TAVAN		= 1
 					)
 
 /hook/startup/proc/robot_modules_vr()

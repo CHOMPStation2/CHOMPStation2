@@ -165,6 +165,7 @@
 	// Used for if the mob can drop limbs. Overrides the icon cache key, so it doesn't keep remaking the icon needlessly.
 	var/limb_icon_key
 	var/understands_common = TRUE 		//VOREStation Edit - Makes it so that simplemobs can understand galcomm without being able to speak it.
+	var/heal_countdown = 5				//VOREStation Edit - A cooldown ticker for passive healing
 
 /mob/living/simple_mob/Initialize()
 	verbs -= /mob/verb/observe
@@ -181,7 +182,7 @@
 	if(!IsAdvancedToolUser())	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
 		verbs |= /mob/living/simple_mob/proc/animal_nom
 		verbs |= /mob/living/proc/shred_limb
-		verbs |= /mob/living/simple_mob/proc/nutrition_heal
+	verbs |= /mob/living/simple_mob/proc/nutrition_heal //CHOMPSTATION edit
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
