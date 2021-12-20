@@ -1,24 +1,6 @@
 /datum/trait/positive
 	category = 1
 
-/datum/trait/positive/speed_fast
-	name = "Haste"
-	desc = "Allows you to move faster on average than baseline."
-	cost = 4 //CHOMPEdit
-	var_changes = list("slowdown" = -0.5)
-	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
-	
-//ChompEdit
-
-/datum/trait/positive/speed_fast_minor
-	name = "Haste, minor"
-	desc = "Allows you to move a little bit faster on average than baseline."
-	cost = 2
-	var_changes = list("slowdown" = -0.25)
-	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
-
-//ChompEdit End
-
 /datum/trait/positive/hardy
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
@@ -40,7 +22,7 @@
 	cost = 3
 	var_changes = list("item_slowdown_mod" = 0.0)
 	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
-	
+
 //ChompEdit End
 
 /datum/trait/positive/endurance_high
@@ -76,7 +58,7 @@
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
-*/ 
+*/
 /datum/trait/positive/melee_attack
 	name = "Sharp Melee"
 	desc = "Provides sharp melee attacks that do slightly more damage."
@@ -120,7 +102,7 @@
 	cost = 2 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
-	
+
 //YW ADDITIONS START
 /datum/trait/positive/improved_biocompat
 	name = "Improved Biocompatibility"
@@ -209,7 +191,7 @@
 	name="Perceptive Hearing"
 	desc = "You can hear slight vibrations in the air very easily, if you focus."
 	cost = 1
-	
+
 /datum/trait/positive/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
