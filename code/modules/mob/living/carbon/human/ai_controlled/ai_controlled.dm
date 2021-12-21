@@ -3,6 +3,8 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
+	a_intent = I_HURT
+
 	var/generate_species = SPECIES_HUMAN
 	var/generate_dead = FALSE
 
@@ -138,6 +140,6 @@
 	to_wear_r_hand = null
 
 /mob/living/carbon/human/ai_controlled/replicant/Initialize()
-	..()
+	. = ..()
 	name = species.get_random_name(gender)
 	add_modifier(/datum/modifier/homeothermic, 0, null)

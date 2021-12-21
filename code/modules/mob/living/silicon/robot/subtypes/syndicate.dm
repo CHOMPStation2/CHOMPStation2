@@ -12,7 +12,7 @@
 	aiCamera = new/obj/item/device/camera/siliconcam/robot_camera(src)
 
 	mmi = new /obj/item/device/mmi/digital/robot(src) // Explicitly a drone.
-	overlays.Cut()
+	cut_overlays()
 	init_id()
 
 	updatename("Syndicate")
@@ -25,7 +25,7 @@
 	radio.keyslot = new /obj/item/device/encryptionkey/syndicate(radio)
 	radio.recalculateChannels()
 
-	playsound(loc, 'sound/mecha/nominalsyndi.ogg', 75, 0)
+	playsound(src, 'sound/mecha/nominalsyndi.ogg', 75, 0)
 
 /mob/living/silicon/robot/syndicate/protector/init()
 	..()

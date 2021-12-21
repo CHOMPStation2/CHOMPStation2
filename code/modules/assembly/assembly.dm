@@ -4,10 +4,12 @@
 	icon = 'icons/obj/assemblies/new_assemblies.dmi'
 	icon_state = ""
 	w_class = ITEMSIZE_SMALL
-	matter = list(DEFAULT_WALL_MATERIAL = 100)
+	matter = list(MAT_STEEL = 100)
 	throwforce = 2
 	throw_speed = 3
 	throw_range = 10
+	drop_sound = 'sound/items/drop/component.ogg'
+	pickup_sound =  'sound/items/pickup/component.ogg'
 	origin_tech = list(TECH_MAGNET = 1)
 
 	var/secured = 1
@@ -80,25 +82,27 @@
 	return PROCESS_KILL
 
 /obj/item/device/assembly/examine(mob/user)
-	..(user)
+	. = ..()
 	if((in_range(src, user) || loc == user))
 		if(secured)
-			to_chat(user, "\The [src] is ready!")
+			. += "\The [src] is ready!"
 		else
-			to_chat(user, "\The [src] can be attached!")
-	return
-
+			. += "\The [src] can be attached!"
 
 /obj/item/device/assembly/attack_self(mob/user as mob)
-	if(!user)	return 0
+	if(!user)
+		return 0
 	user.set_machine(src)
-	interact(user)
+	tgui_interact(user)
 	return 1
 
-/obj/item/device/assembly/interact(mob/user as mob)
-	return //HTML MENU FOR WIRES GOES HERE
+/obj/item/device/assembly/tgui_state(mob/user)
+	return GLOB.tgui_deep_inventory_state
 
-/obj/item/device/assembly/nano_host()
-    if(istype(loc, /obj/item/device/assembly_holder))
-        return loc.nano_host()
-    return ..()
+/obj/item/device/assembly/tgui_interact(mob/user, datum/tgui/ui)
+	return // tgui goes here
+
+/obj/item/device/assembly/tgui_host()
+	if(istype(loc, /obj/item/device/assembly_holder))
+		return loc.tgui_host()
+	return ..()

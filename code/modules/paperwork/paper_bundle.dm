@@ -13,6 +13,7 @@
 	pressure_resistance = 1
 	attack_verb = list("bapped")
 	drop_sound = 'sound/items/drop/paper.ogg'
+	pickup_sound = 'sound/items/pickup/paper.ogg'
 	var/page = 1    // current page
 	var/list/pages = list()  // Ordered list of pages as they are to be displayed. Can be different order than src.contents.
 
@@ -96,11 +97,11 @@
 				to_chat(user, "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>")
 
 /obj/item/weapon/paper_bundle/examine(mob/user)
-	if(..(user, 1))
-		src.show_content(user)
+	. = ..()
+	if(Adjacent(user))
+		show_content(user)
 	else
-		to_chat(user, "<span class='notice'>It is too far away.</span>")
-	return
+		. += "<span class='notice'>It is too far away.</span>"
 
 /obj/item/weapon/paper_bundle/proc/show_content(mob/user as mob)
 	var/dat
@@ -154,13 +155,13 @@
 				insert_sheet_at(usr, page+1, in_hand)
 			else if(page != pages.len)
 				page++
-				playsound(src.loc, "pageturn", 50, 1)
+				playsound(src, "pageturn", 50, 1)
 		if(href_list["prev_page"])
 			if(in_hand && (istype(in_hand, /obj/item/weapon/paper) || istype(in_hand, /obj/item/weapon/photo)))
 				insert_sheet_at(usr, page, in_hand)
 			else if(page > 1)
 				page--
-				playsound(src.loc, "pageturn", 50, 1)
+				playsound(src, "pageturn", 50, 1)
 		if(href_list["remove"])
 			var/obj/item/weapon/W = pages[page]
 			usr.put_in_hands(W)
@@ -216,7 +217,7 @@
 /obj/item/weapon/paper_bundle/update_icon()
 	var/obj/item/weapon/paper/P = pages[1]
 	icon_state = P.icon_state
-	overlays = P.overlays
+	copy_overlays(P)
 	underlays = 0
 	var/i = 0
 	var/photo
@@ -234,12 +235,12 @@
 			var/obj/item/weapon/photo/Ph = O
 			img = Ph.tiny
 			photo = 1
-			overlays += img
+			add_overlay(img)
 	if(i>1)
 		desc =  "[i] papers clipped to each other."
 	else
 		desc = "A single sheet of paper."
 	if(photo)
 		desc += "\nThere is a photo attached to it."
-	overlays += image('icons/obj/bureaucracy.dmi', "clip")
+	add_overlay(image('icons/obj/bureaucracy.dmi', "clip"))
 	return

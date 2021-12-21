@@ -1,8 +1,3 @@
-//used for pref.alternate_option
-#define GET_RANDOM_JOB 0
-#define BE_ASSISTANT 1
-#define RETURN_TO_LOBBY 2
-
 /datum/category_item/player_setup_item/occupation
 	name = "Occupation"
 	sort_order = 1
@@ -18,6 +13,11 @@
 	S["job_engsec_high"]	>> pref.job_engsec_high
 	S["job_engsec_med"]		>> pref.job_engsec_med
 	S["job_engsec_low"]		>> pref.job_engsec_low
+	//VOREStation Add
+	S["job_talon_low"]		>> pref.job_talon_low
+	S["job_talon_med"]		>> pref.job_talon_med
+	S["job_talon_high"]		>> pref.job_talon_high
+	//VOREStation Add End
 	S["player_alt_titles"]	>> pref.player_alt_titles
 
 /datum/category_item/player_setup_item/occupation/save_character(var/savefile/S)
@@ -31,6 +31,11 @@
 	S["job_engsec_high"]	<< pref.job_engsec_high
 	S["job_engsec_med"]		<< pref.job_engsec_med
 	S["job_engsec_low"]		<< pref.job_engsec_low
+	//VOREStation Add
+	S["job_talon_low"]		<< pref.job_talon_low
+	S["job_talon_med"]		<< pref.job_talon_med
+	S["job_talon_high"]		<< pref.job_talon_high
+	//VOREStation Add End
 	S["player_alt_titles"]	<< pref.player_alt_titles
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
@@ -44,6 +49,11 @@
 	pref.job_engsec_high	= sanitize_integer(pref.job_engsec_high, 0, 65535, initial(pref.job_engsec_high))
 	pref.job_engsec_med 	= sanitize_integer(pref.job_engsec_med, 0, 65535, initial(pref.job_engsec_med))
 	pref.job_engsec_low 	= sanitize_integer(pref.job_engsec_low, 0, 65535, initial(pref.job_engsec_low))
+	//VOREStation Add
+	pref.job_talon_high		= sanitize_integer(pref.job_talon_high, 0, 65535, initial(pref.job_talon_high))
+	pref.job_talon_med 		= sanitize_integer(pref.job_talon_med, 0, 65535, initial(pref.job_talon_med))
+	pref.job_talon_low 		= sanitize_integer(pref.job_talon_low, 0, 65535, initial(pref.job_talon_low))
+	//VOREStation Add End
 	if(!(pref.player_alt_titles)) pref.player_alt_titles = new()
 
 	if(!job_master)
@@ -54,13 +64,14 @@
 		if(alt_title && !(alt_title in job.alt_titles))
 			pref.player_alt_titles -= job.title
 
-/datum/category_item/player_setup_item/occupation/content(mob/user, limit = 20, list/splitJobs = list())
+/datum/category_item/player_setup_item/occupation/content(mob/user, limit = 25, list/splitJobs = list())
 	if(!job_master)
 		return
 
 	. = list()
 	. += "<tt><center>"
 	. += "<b>Choose occupation chances</b><br>Unavailable occupations are crossed out.<br>"
+	. += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='?src=\ref[src];level=' + level + ';set_job=' + encodeURIComponent(rank); return false; }</script>"
 	. += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%' valign='top'>" // Table within a table for alignment, also allows you to easily add more columns.
 	. += "<table width='100%' cellpadding='1' cellspacing='0'>"
 	var/index = -1
@@ -132,8 +143,20 @@
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td></a><td> \[IN [(available_in_days)] DAYS]</td></tr>"
 			continue
-		if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
-			. += "<del>[rank]</del></td></a><td> \[MINIMUM CHARACTER AGE: [job.minimum_character_age]]</td></tr>"
+		//VOREStation Add
+		if(!job.player_has_enough_playtime(user.client))
+			var/available_in_hours = job.available_in_playhours(user.client)
+			. += "<del>[rank]</del></td></a><td> \[IN [round(available_in_hours, 0.1)] DEPTHOURS]</td></tr>"
+			continue
+		if(!is_job_whitelisted(user,rank))
+			. += "<del>[rank]</del></td></a><td><b> \[WHITELIST ONLY]</b></td></tr>"
+			continue
+		//VOREStation Add End
+		if(job.is_species_banned(user.client.prefs.species, user.client.prefs.organ_data["brain"]) == TRUE)
+			. += "<del>[rank]</del></td></a><td> \[THIS RACE/BRAIN TYPE CANNOT TAKE THIS ROLE.\]</td></tr>"
+			continue
+		if((job.minimum_character_age || job.min_age_by_species) && user.client && (user.client.prefs.age < job.get_min_age(user.client.prefs.species, user.client.prefs.organ_data["brain"])))
+			. += "<del>[rank]</del></td></a><td> \[MINIMUM CHARACTER AGE FOR SELECTED RACE/BRAIN TYPE: [job.get_min_age(user.client.prefs.species, user.client.prefs.organ_data["brain"])]\]</td></tr>"
 			continue
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></a></td><td></td></tr>"
@@ -145,7 +168,32 @@
 
 		. += "</td><td width='40%'>"
 
-		. += "<a href='?src=\ref[src];set_job=[rank]'>"
+		var/prefLevelLabel = "ERROR"
+		var/prefLevelColor = "pink"
+		var/prefUpperLevel = -1 // level to assign on left click
+		var/prefLowerLevel = -1 // level to assign on right click
+		if(pref.GetJobDepartment(job, 1) & job.flag)
+			prefLevelLabel = "High"
+			prefLevelColor = "55cc55"
+			prefUpperLevel = 4
+			prefLowerLevel = 2
+		else if(pref.GetJobDepartment(job, 2) & job.flag)
+			prefLevelLabel = "Medium"
+			prefLevelColor = "eecc22"
+			prefUpperLevel = 1
+			prefLowerLevel = 3
+		else if(pref.GetJobDepartment(job, 3) & job.flag)
+			prefLevelLabel = "Low"
+			prefLevelColor = "cc5555"
+			prefUpperLevel = 2
+			prefLowerLevel = 4
+		else
+			prefLevelLabel = "NEVER"
+			prefLevelColor = "black"
+			prefUpperLevel = 3
+			prefLowerLevel = 1
+
+		. += "<a href='?src=\ref[src];set_job=[rank];level=[prefUpperLevel]' oncontextmenu='javascript:return setJobPrefRedirect([prefLowerLevel], \"[rank]\");'>"
 
 		if(job.type == /datum/job/assistant)//Assistant is special
 			if(pref.job_civilian_low & ASSISTANT)
@@ -157,14 +205,7 @@
 			. += "</a></td></tr>"
 			continue
 
-		if(pref.GetJobDepartment(job, 1) & job.flag)
-			. += " <font color=55cc55>\[High]</font>"
-		else if(pref.GetJobDepartment(job, 2) & job.flag)
-			. += " <font color=eecc22>\[Medium]</font>"
-		else if(pref.GetJobDepartment(job, 3) & job.flag)
-			. += " <font color=cc5555>\[Low]</font>"
-		else
-			. += " <font color=black>\[NEVER]</font>"
+		. += " <font color=[prefLevelColor]>\[[prefLevelLabel]]</font>"
 		if(LAZYLEN(job.alt_titles))
 			. += "</a></td></tr><tr bgcolor='[lastJob.selection_color]'><td width='60%' align='center'>&nbsp</td><td><a href='?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
 		. += "</a></td></tr>"
@@ -199,14 +240,14 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = input("Choose a title for [job.title].", "Choose Title", pref.GetPlayerAltTitle(job)) as anything in choices|null
+			var/choice = tgui_input_list(usr, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job))
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
 
 	else if(href_list["set_job"])
-		if(SetJob(user, href_list["set_job"])) return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
-
+		if(SetJob(user, href_list["set_job"], text2num(href_list["level"])))
+			return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
 
 	else if(href_list["job_info"])
 		var/rank = href_list["job_info"]
@@ -255,7 +296,7 @@
 	if(job.title != new_title)
 		pref.player_alt_titles[job.title] = new_title
 
-/datum/category_item/player_setup_item/occupation/proc/SetJob(mob/user, role)
+/datum/category_item/player_setup_item/occupation/proc/SetJob(mob/user, role, level)
 	var/datum/job/job = job_master.GetJob(role)
 	if(!job)
 		return 0
@@ -267,64 +308,76 @@
 			pref.job_civilian_low |= job.flag
 		return 1
 
-	if(pref.GetJobDepartment(job, 1) & job.flag)
-		SetJobDepartment(job, 1)
-	else if(pref.GetJobDepartment(job, 2) & job.flag)
-		SetJobDepartment(job, 2)
-	else if(pref.GetJobDepartment(job, 3) & job.flag)
-		SetJobDepartment(job, 3)
-	else//job = Never
-		SetJobDepartment(job, 4)
-
+	SetJobDepartment(job, level)
 	return 1
 
+/datum/category_item/player_setup_item/occupation/proc/reset_jobhigh()
+	pref.job_civilian_med |= pref.job_civilian_high
+	pref.job_medsci_med |= pref.job_medsci_high
+	pref.job_engsec_med |= pref.job_engsec_high
+	pref.job_talon_med |= pref.job_talon_high //VOREStation Add
+	pref.job_civilian_high = 0
+	pref.job_medsci_high = 0
+	pref.job_engsec_high = 0
+	pref.job_talon_high = 0 //VOREStation Add
+
+// Level is equal to the desired new level of the job. So for a value of 4, we want to disable the job.
 /datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
-	if(!job || !level)	return 0
-	switch(level)
-		if(1)//Only one of these should ever be active at once so clear them all here
-			pref.job_civilian_high = 0
-			pref.job_medsci_high = 0
-			pref.job_engsec_high = 0
-			return 1
-		if(2)//Set current highs to med, then reset them
-			pref.job_civilian_med |= pref.job_civilian_high
-			pref.job_medsci_med |= pref.job_medsci_high
-			pref.job_engsec_med |= pref.job_engsec_high
-			pref.job_civilian_high = 0
-			pref.job_medsci_high = 0
-			pref.job_engsec_high = 0
+	if(!job || !level)
+		return 0
 
 	switch(job.department_flag)
 		if(CIVILIAN)
+			pref.job_civilian_low &= ~job.flag
+			pref.job_civilian_med &= ~job.flag
+			pref.job_civilian_high &= ~job.flag
 			switch(level)
-				if(2)
+				if(1)
+					reset_jobhigh()
 					pref.job_civilian_high = job.flag
-					pref.job_civilian_med &= ~job.flag
-				if(3)
+				if(2)
 					pref.job_civilian_med |= job.flag
-					pref.job_civilian_low &= ~job.flag
-				else
+				if(3)
 					pref.job_civilian_low |= job.flag
 		if(MEDSCI)
+			pref.job_medsci_low &= ~job.flag
+			pref.job_medsci_med &= ~job.flag
+			pref.job_medsci_high &= ~job.flag
 			switch(level)
-				if(2)
+				if(1)
+					reset_jobhigh()
 					pref.job_medsci_high = job.flag
-					pref.job_medsci_med &= ~job.flag
-				if(3)
+				if(2)
 					pref.job_medsci_med |= job.flag
-					pref.job_medsci_low &= ~job.flag
-				else
+				if(3)
 					pref.job_medsci_low |= job.flag
 		if(ENGSEC)
+			pref.job_engsec_low &= ~job.flag
+			pref.job_engsec_med &= ~job.flag
+			pref.job_engsec_high &= ~job.flag
 			switch(level)
-				if(2)
+				if(1)
+					reset_jobhigh()
 					pref.job_engsec_high = job.flag
-					pref.job_engsec_med &= ~job.flag
-				if(3)
+				if(2)
 					pref.job_engsec_med |= job.flag
-					pref.job_engsec_low &= ~job.flag
-				else
+				if(3)
 					pref.job_engsec_low |= job.flag
+		/*/VOREStation Add //YW COMMENT OUT
+		if(TALON)
+			pref.job_talon_low &= ~job.flag
+			pref.job_talon_med &= ~job.flag
+			pref.job_talon_high &= ~job.flag
+			switch(level)
+				if(1)
+					reset_jobhigh()
+					pref.job_talon_high = job.flag
+				if(2)
+					pref.job_talon_med |= job.flag
+				if(3)
+					pref.job_talon_low |= job.flag
+		VOREStation Add End*/
+
 	return 1
 
 /datum/category_item/player_setup_item/occupation/proc/ResetJobs()
@@ -339,6 +392,12 @@
 	pref.job_engsec_high = 0
 	pref.job_engsec_med = 0
 	pref.job_engsec_low = 0
+
+	//VOREStation Add
+	pref.job_talon_high = 0
+	pref.job_talon_med = 0
+	pref.job_talon_low = 0
+	//VOREStation Add End
 
 	pref.player_alt_titles.Cut()
 

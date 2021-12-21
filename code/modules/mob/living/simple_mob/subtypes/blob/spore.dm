@@ -24,6 +24,8 @@
 	attack_sound = 'sound/effects/slime_squish.ogg'
 	say_list_type = /datum/say_list/spore
 
+	organ_names = /decl/mob_organ_names/spore
+
 	var/mob/living/carbon/human/infested = null // The human this thing is totally not making into a zombie.
 	var/can_infest = FALSE
 	var/is_infesting = FALSE
@@ -75,6 +77,10 @@
 		color = overmind.blob_type.complementary_color
 		glow_color = color
 		glow_toggle = TRUE
+	else if(blob_type)
+		color = blob_type.complementary_color
+		glow_color = color
+		glow_toggle = TRUE
 	else
 		color = null
 		glow_color = null
@@ -83,12 +89,10 @@
 	if(is_infesting)
 		icon = infested.icon
 		copy_overlays(infested)
-	//	overlays = infested.overlays
 		var/mutable_appearance/blob_head_overlay = mutable_appearance('icons/mob/blob.dmi', "blob_head")
 		if(overmind)
 			blob_head_overlay.color = overmind.blob_type.complementary_color
 		color = initial(color)//looks better.
-	//	overlays += blob_head_overlay
 		add_overlay(blob_head_overlay, TRUE)
 
 /mob/living/simple_mob/blob/spore/handle_special()
@@ -101,6 +105,9 @@
 				continue
 			infest(H)
 			break
+
+	if(overmind)
+		overmind.blob_type.on_spore_lifetick(src)
 
 	if(factory && z != factory.z) // This is to prevent spores getting lost in space and making the factory useless.
 		qdel(src)
@@ -146,3 +153,6 @@
 	if(helpers)
 		to_chat(src, span("notice", "Your attack is assisted by [helpers] other spore\s."))
 	return damage_to_do
+
+/decl/mob_organ_names/spore
+	hit_zones = list("sporangium", "stolon", "sporangiophore")

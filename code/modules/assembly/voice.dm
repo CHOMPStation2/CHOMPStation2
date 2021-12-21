@@ -3,11 +3,12 @@
 	desc = "A small electronic device able to record a voice sample, and send a signal when that sample is repeated."
 	icon_state = "voice"
 	origin_tech = list(TECH_MAGNET = 1)
-	matter = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 50, "waste" = 10)
+	matter = list(MAT_STEEL = 500, MAT_GLASS = 50)
 	var/listening = 0
 	var/recorded	//the activation message
 
-/obj/item/device/assembly/voice/hear_talk(mob/living/M as mob, msg)
+/obj/item/device/assembly/voice/hear_talk(mob/M, list/message_pieces, verb)
+	var/msg = multilingual_to_message(message_pieces)
 	if(listening)
 		recorded = msg
 		listening = 0

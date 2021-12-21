@@ -2710,3 +2710,59 @@
 
 	//ex: "Phalanx One-Niner", "Sledgehammer Actual" (CO/VIP), "Kodiak Seven-Four", "Tomahawk Two-Zero"
 	//probably a more elegant (read: fancier) way to do the second part but fuck it, this works just fine
+
+/datum/lore/organization/gov/altevian_hegemony
+	name = "The Altevian Hegemony" 
+	short_name = "Altevian Hegemony "
+	acronym = "AH"
+	desc = "The Altevians are a space-faring race of rodents that resemble Earth-like rats. They do not have a place they call home in terms of a planet, and instead have massive multiple-kilometer-long colony-ships that are constantly on the move and typically keep operations outside of known populated systems to not eat the resources from others. Their primary focus is trade and slavage operations and can be expected to be seen around both densely populated and empty systems for their work."
+	history = ""
+	work = "salvage and trade operators"
+	headquarters = "AH-CV Migrant"
+	motto = ""
+
+	ship_prefixes = list("AH-DV" = "a diplomatic", "AH-EV" = "an exploration", "AH-FV" = "a fueling", "AH-FV" = "a cargo", "AH-SV" = "a research", "AH-TV" = "a colony-transporter", "AH-RV" = "an emergency response", "AH-RV" = "a response", "AH-MV" = "a medical")
+	// Diona names
+	ship_names = list(
+			"Platinum",
+			"Warson",
+			"Mane",
+			"Holland",
+			"Arauz",
+			"Diamond",
+			"Gold",
+			"Steam",
+			"Boiler",
+			"Slip",
+			"Lavender",
+			"Wheel",
+			"Stuntson",
+			"Desto",
+			"Palos",
+			"Matterson",
+			"Mill",
+			"Smoke",
+			"Squeakson",
+			"Rabion",
+			"Strikedown",
+			"Cluster",
+			"Ratling",
+			"Archaeologist",
+			"Beaker",
+			"Petal",
+			"Gantry"
+			)
+	destination_names = list(
+			"the AH-CV Migrant flagship",
+			"one of our research colony-ships",
+			"the AH-CV Lotus",
+			"the AH-CV Anvil",
+			"the AH-CV Generations",
+			"the AH-CV Galley",
+			"the AH-CV Prosperity",
+			"the AH-CV Kitsap",
+			"the AH-CV Diamondback",
+			"one of our colony-ships",
+			"one of our production fleets",
+			"a trade fleet",
+			)

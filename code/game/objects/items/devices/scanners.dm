@@ -21,7 +21,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 5
 	throw_range = 10
-	matter = list(DEFAULT_WALL_MATERIAL = 200)
+	matter = list(MAT_STEEL = 200)
 	origin_tech = list(TECH_MAGNET = 1, TECH_BIO = 1)
 	var/mode = 1;
 	var/advscan = 0
@@ -133,13 +133,12 @@ HALOGEN COUNTER	- Radcount on mobs
 			var/unknown = 0
 			var/reagentdata[0]
 			var/unknownreagents[0]
-			for(var/A in C.reagents.reagent_list)
-				var/datum/reagent/R = A
+			for(var/datum/reagent/R as anything in C.reagents.reagent_list)
 				if(R.scannable)
-					reagentdata["[R.id]"] = "<span class='notice'>\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name]</span><br>"
+					reagentdata["[R.id]"] = "<span class='notice'>\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - <span class='danger'>Overdose</span>" : ""]</span><br>"
 				else
 					unknown++
-					unknownreagents["[R.id]"] = "<span class='notice'>\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name]</span><br>"
+					unknownreagents["[R.id]"] = "<span class='notice'>\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - <span class='danger'>Overdose</span>" : ""]</span><br>"
 			if(reagentdata.len)
 				dat += "<span class='notice'>Beneficial reagents detected in subject's blood:</span><br>"
 				for(var/d in reagentdata)
@@ -155,15 +154,14 @@ HALOGEN COUNTER	- Radcount on mobs
 			var/unknown = 0
 			var/stomachreagentdata[0]
 			var/stomachunknownreagents[0]
-			for(var/B in C.ingested.reagent_list)
-				var/datum/reagent/T = B
-				if(T.scannable)
-					stomachreagentdata["[T.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
+			for(var/datum/reagent/R as anything in C.ingested.reagent_list)
+				if(R.scannable)
+					stomachreagentdata["[R.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - <span class='danger'>Overdose</span>" : ""]</span><br>"
 					if (advscan == 0 || showadvscan == 0)
-						dat += "<span class='notice'>[T.name] found in subject's stomach.</span><br>"
+						dat += "<span class='notice'>[R.name] found in subject's stomach.</span><br>"
 				else
 					++unknown
-					stomachunknownreagents["[T.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
+					stomachunknownreagents["[R.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - <span class='danger'>Overdose</span>" : ""]</span><br>"
 			if(advscan >= 1 && showadvscan == 1)
 				dat += "<span class='notice'>Beneficial reagents detected in subject's stomach:</span><br>"
 				for(var/d in stomachreagentdata)
@@ -179,15 +177,14 @@ HALOGEN COUNTER	- Radcount on mobs
 			var/unknown = 0
 			var/touchreagentdata[0]
 			var/touchunknownreagents[0]
-			for(var/B in C.touching.reagent_list)
-				var/datum/reagent/T = B
-				if(T.scannable)
-					touchreagentdata["[T.id]"] = "<span class='notice'>\t[round(C.touching.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
+			for(var/datum/reagent/R as anything in C.touching.reagent_list)
+				if(R.scannable)
+					touchreagentdata["[R.id]"] = "<span class='notice'>\t[round(C.touching.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.can_overdose_touch && R.volume > R.overdose) ? " - <span class='danger'>Overdose</span>" : ""]</span><br>"
 					if (advscan == 0 || showadvscan == 0)
-						dat += "<span class='notice'>[T.name] found in subject's dermis.</span><br>"
+						dat += "<span class='notice'>[R.name] found in subject's dermis.</span><br>"
 				else
 					++unknown
-					touchunknownreagents["[T.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(T.id), 1)]u [T.name]</span><br>"
+					touchunknownreagents["[R.id]"] = "<span class='notice'>\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.can_overdose_touch && R.volume > R.overdose) ? " - <span class='danger'>Overdose</span>" : ""]</span><br>"
 			if(advscan >= 1 && showadvscan == 1)
 				dat += "<span class='notice'>Beneficial reagents detected in subject's dermis:</span><br>"
 				for(var/d in touchreagentdata)
@@ -272,9 +269,11 @@ HALOGEN COUNTER	- Radcount on mobs
 			var/blood_volume = H.vessel.get_reagent_amount("blood")
 			var/blood_percent =  round((blood_volume / H.species.blood_volume)*100)
 			var/blood_type = H.dna.b_type
-			if(blood_percent <= BLOOD_VOLUME_BAD)
+			if(blood_volume <= H.species.blood_volume*H.species.blood_level_danger)
 				dat += "<span class='danger'><i>Warning: Blood Level CRITICAL: [blood_percent]% [blood_volume]cl. Type: [blood_type]</i></span><br>"
-			else if(blood_percent <= BLOOD_VOLUME_SAFE)
+			else if(blood_volume <= H.species.blood_volume*H.species.blood_level_warning)
+				dat += "<span class='danger'><i>Warning: Blood Level VERY LOW: [blood_percent]% [blood_volume]cl. Type: [blood_type]</i></span><br>"
+			else if(blood_volume <= H.species.blood_volume*H.species.blood_level_safe)
 				dat += "<span class='danger'>Warning: Blood Level LOW: [blood_percent]% [blood_volume]cl. Type: [blood_type]</span><br>"
 			else
 				dat += "<span class='notice'>Blood Level Normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]</span><br>"
@@ -335,7 +334,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	throw_speed = 4
 	throw_range = 20
 
-	matter = list(DEFAULT_WALL_MATERIAL = 30,"glass" = 20)
+	matter = list(MAT_STEEL = 30,MAT_GLASS = 20)
 
 	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
 
@@ -373,7 +372,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	throw_speed = 4
 	throw_range = 20
 
-	matter = list(DEFAULT_WALL_MATERIAL = 30,"glass" = 20)
+	matter = list(MAT_STEEL = 30,MAT_GLASS = 20)
 
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	var/details = 0
@@ -433,7 +432,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	throwforce = 5
 	throw_speed = 4
 	throw_range = 20
-	matter = list(DEFAULT_WALL_MATERIAL = 30,"glass" = 20)
+	matter = list(MAT_STEEL = 30,MAT_GLASS = 20)
 
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	var/details = 0
@@ -479,7 +478,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
-	matter = list(DEFAULT_WALL_MATERIAL = 30,"glass" = 20)
+	matter = list(MAT_STEEL = 30,MAT_GLASS = 20)
 
 /obj/item/device/slime_scanner/attack(mob/living/M as mob, mob/living/user as mob)
 	if(!istype(M, /mob/living/simple_mob/slime/xenobio))
@@ -492,7 +491,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	for(var/potential_color in S.slime_mutation)
 		var/mob/living/simple_mob/slime/xenobio/slime = potential_color
 		mutations.Add(initial(slime.slime_color))
-	user.show_message("Potental to mutate into [english_list(mutations)] colors.<br>Extract potential: [S.cores]<br>Nutrition: [S.nutrition]/[S.get_max_nutrition()]")
+	user.show_message("Potental to mutate into [english_list(mutations)] colors.<br>Extract potential: [S.cores]<br>Nutrition: [S.nutrition]/[S.max_nutrition]")
 
 	if (S.nutrition < S.get_starve_nutrition())
 		user.show_message("<span class='alert'>Warning: Subject is starving!</span>")

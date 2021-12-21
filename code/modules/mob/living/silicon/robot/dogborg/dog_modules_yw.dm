@@ -25,6 +25,7 @@
 		return
 	return
 
+/* Not needed anymore because we have removed boozeborg from the _vr file that Yawn wanted to put it in and restored the _ch file we had for this found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm.
 /mob/living/silicon/robot/proc/reskin_booze()
 	set name = "Change Drink Color"
 	set category = "Robot Commands"
@@ -45,6 +46,7 @@
 		icontype = options[choice]
 		var/active_sound = 'sound/effects/bubbles.ogg'
 		playsound(src.loc, "[active_sound]", 100, 0, 4)
-		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		to_chat(M, "Your Tank now displays [choice]. Drink up and enjoy!")
 		updateicon()
 		return 1
+*/

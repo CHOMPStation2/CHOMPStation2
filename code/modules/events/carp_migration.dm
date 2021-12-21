@@ -6,6 +6,9 @@
 	var/list/spawned_carp = list()
 
 /datum/event/carp_migration/setup()
+	if(prob(50))
+		kill()
+		return
 	announceWhen = rand(30, 60) // 1 to 2 minutes
 	endWhen += severity * 25
 	carp_cap = 2 + 3 ** severity // No more than this many at once regardless of waves. (5, 11, 29)
@@ -26,7 +29,7 @@
 	if(activeFor % 5 != 0)
 		return // Only process every 10 seconds.
 	if(count_spawned_carps() < carp_cap)
-		spawn_fish(rand(1, severity * 2) - 1, severity, severity * 2)
+		spawn_fish(rand(3, 3 + severity * 2) - 1, 1, severity + 2)
 
 /datum/event/carp_migration/proc/spawn_fish(var/num_groups, var/group_size_min, var/group_size_max, var/dir)
 	if(isnull(dir))
@@ -40,12 +43,10 @@
 	if(spawn_locations.len) // Okay we've got landmarks, lets use those!
 		shuffle_inplace(spawn_locations)
 		num_groups = min(num_groups, spawn_locations.len)
-		var/i = 1
-		while (i <= num_groups)
+		for (var/i = 1, i <= num_groups, i++)
 			var/group_size = rand(group_size_min, group_size_max)
 			for (var/j = 0, j < group_size, j++)
 				spawn_one_carp(spawn_locations[i])
-			i++
 		return
 
 	// Okay we did *not* have any landmarks, so lets do our best!
@@ -78,8 +79,7 @@
 // Counts living carp spawned by this event.
 /datum/event/carp_migration/proc/count_spawned_carps()
 	. = 0
-	for(var/I in spawned_carp)
-		var/mob/living/simple_mob/animal/M = I
+	for(var/mob/living/simple_mob/animal/M as anything in spawned_carp)
 		if(!QDELETED(M) && M.stat != DEAD)
 			. += 1
 

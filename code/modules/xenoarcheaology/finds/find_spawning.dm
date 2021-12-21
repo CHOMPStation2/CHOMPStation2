@@ -22,7 +22,7 @@
 
 	if(prob(40))
 		material_descriptor = pick("rusted ","dusty ","archaic ","fragile ", "damaged", "pristine")
-	source_material = pick("cordite","quadrinium",DEFAULT_WALL_MATERIAL,"titanium","aluminium","ferritic-alloy","plasteel","duranium")
+	source_material = pick("cordite","quadrinium","steel","titanium","aluminium","ferritic-alloy","plasteel","duranium")
 
 	var/talkative = 0
 	if(prob(5))
@@ -295,7 +295,7 @@
 			if(spawn_type)
 				var/obj/item/weapon/gun/energy/new_gun = new spawn_type(src.loc)
 				new_item = new_gun
-				new_item.icon_state = "egun[rand(1,6)]"
+				new_item.icon_state = "egun[rand(1,18)]" //CHOMPStation Edit: We now reference our own DMI which has 18 unique guns.
 				new_gun.desc = "This is an antique energy weapon, you're not sure if it will fire or not."
 
 				//5% chance to explode when first fired
@@ -317,7 +317,7 @@
 			//revolver
 			var/obj/item/weapon/gun/projectile/new_gun = new /obj/item/weapon/gun/projectile/revolver(src.loc)
 			new_item = new_gun
-			new_item.icon_state = "gun[rand(1,4)]"
+			new_item.icon_state = "gun[rand(1,7)]"
 			new_item.icon = 'icons/obj/xenoarchaeology.dmi'
 
 			//33% chance to be able to reload the gun with human ammunition
@@ -477,7 +477,7 @@
 			var/new_boat_mat = pickweight(list(
 				MAT_WOOD = 100,
 				MAT_SIFWOOD = 200,
-				DEFAULT_WALL_MATERIAL = 60,
+				MAT_STEEL = 60,
 				MAT_URANIUM = 14,
 				MAT_MARBLE = 16,
 				MAT_GOLD = 20,
@@ -551,7 +551,9 @@
 			var/obj/item/weapon/reagent_containers/syringe/S = new_item
 
 			S.volume = 30
-			S.reagents.maximum_volume = 30
+			//If S hasn't initialized yet, S.reagents will be null.
+			//However, in that case Initialize will set the maximum volume to the volume for us, so we don't need to do anything.
+			S.reagents?.maximum_volume = 30
 
 			item_type = new_item.name
 
@@ -581,7 +583,7 @@
 
 	if(istype(new_item, /obj/item/weapon/material))
 		var/new_item_mat = pickweight(list(
-			DEFAULT_WALL_MATERIAL = 80,
+			MAT_STEEL = 80,
 			MAT_WOOD = 20,
 			MAT_SIFWOOD = 40,
 			MAT_URANIUM = 14,
@@ -610,7 +612,7 @@
 
 	var/decorations = ""
 	if(apply_material_decorations)
-		source_material = pick("cordite","quadrinium",DEFAULT_WALL_MATERIAL,"titanium","aluminium","ferritic-alloy","plasteel","duranium")
+		source_material = pick("cordite","quadrinium","steel","titanium","aluminium","ferritic-alloy","plasteel","duranium")
 
 		if(istype(new_item, /obj/item/weapon/material))
 			var/obj/item/weapon/material/MW = new_item
@@ -674,8 +676,9 @@
 
 		if(talkative)
 			new_item.talking_atom = new(new_item)
-			LAZYSET(new_item.origin_tech, TECH_ARCANE, 1)
-			LAZYSET(new_item.origin_tech, TECH_PRECURSOR, 1)
+			LAZYINITLIST(new_item.origin_tech)
+			new_item.origin_tech[TECH_ARCANE] += 1
+			new_item.origin_tech[TECH_PRECURSOR] += 1
 
 		var/turf/simulated/mineral/T = get_turf(new_item)
 		if(istype(T))
@@ -685,5 +688,6 @@
 
 	else if(talkative)
 		src.talking_atom = new(src)
-		LAZYSET(new_item.origin_tech, TECH_ARCANE, 1)
-		LAZYSET(new_item.origin_tech, TECH_PRECURSOR, 1)
+		LAZYINITLIST(origin_tech)
+		origin_tech[TECH_ARCANE] += 1
+		origin_tech[TECH_PRECURSOR] += 1

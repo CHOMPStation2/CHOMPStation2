@@ -17,17 +17,17 @@
 	files = new /datum/research/techonly(src) //Setup the research data holder.
 
 /obj/item/weapon/portable_destructive_analyzer/attack_self(user as mob)
-	var/response = alert(user, 	"Analyzing the item inside will *DESTROY* the item for good.\n\
+	var/response = tgui_alert(user, 	"Analyzing the item inside will *DESTROY* the item for good.\n\
 							Syncing to the research server will send the data that is stored inside to research.\n\
 							Ejecting will place the loaded item onto the floor.",
-							"What would you like to do?", "Analyze", "Sync", "Eject")
+							"What would you like to do?", list("Analyze", "Sync", "Eject"))
 	if(response == "Analyze")
 		if(loaded_item)
-			var/confirm = alert(user, "This will destroy the item inside forever.  Are you sure?","Confirm Analyze","Yes","No")
+			var/confirm = tgui_alert(user, "This will destroy the item inside forever. Are you sure?","Confirm Analyze",list("Yes","No"))
 			if(confirm == "Yes" && !QDELETED(loaded_item)) //This is pretty copypasta-y
 				to_chat(user, "You activate the analyzer's microlaser, analyzing \the [loaded_item] and breaking it down.")
 				flick("portable_analyzer_scan", src)
-				playsound(src.loc, 'sound/items/Welder2.ogg', 50, 1)
+				playsound(src, 'sound/items/Welder2.ogg', 50, 1)
 				for(var/T in loaded_item.origin_tech)
 					files.UpdateTech(T, loaded_item.origin_tech[T])
 					to_chat(user, "\The [loaded_item] had level [loaded_item.origin_tech[T]] in [CallTechName(T)].")
@@ -63,10 +63,10 @@
 			files.RefreshResearch()
 		if(success)
 			to_chat(user, "You connect to the research server, push your data upstream to it, then pull the resulting merged data from the master branch.")
-			playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 1)
+			playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
 		else
 			to_chat(user, "Reserch server ping response timed out.  Unable to connect.  Please contact the system administrator.")
-			playsound(src.loc, 'sound/machines/buzz-two.ogg', 50, 1)
+			playsound(src, 'sound/machines/buzz-two.ogg', 50, 1)
 	if(response == "Eject")
 		if(loaded_item)
 			loaded_item.loc = get_turf(src)
@@ -131,7 +131,7 @@
 	var/dummy_card_type = /obj/item/weapon/card/id/science/roboticist/dummy_cyborg
 
 /obj/item/weapon/card/robot/Initialize()
-	..()
+	. = ..()
 	dummy_card = new dummy_card_type(src)
 
 /obj/item/weapon/card/robot/Destroy()
@@ -149,7 +149,7 @@
 	access = list(access_robotics)
 
 /obj/item/weapon/card/id/syndicate/dummy_cyborg/Initialize()
-	..()
+	. = ..()
 	access |= access_robotics
 
 //A harvest item for serviceborgs.
@@ -171,7 +171,7 @@
 		else if(T.dead) //It's probably dead otherwise.
 			T.remove_dead(user)
 	else
-		to_chat(user, "Harvesting \a [target] is not the purpose of this tool.  The [src] is for plants being grown.")
+		to_chat(user, "Harvesting \a [target] is not the purpose of this tool. [src] is for plants being grown.")
 
 // A special tray for the service droid. Allow droid to pick up and drop items as if they were using the tray normally
 // Click on table to unload, click on item to load. Otherwise works identically to a tray.
@@ -211,7 +211,7 @@
 
 				I.loc = src
 				carrying.Add(I)
-				overlays += image("icon" = I.icon, "icon_state" = I.icon_state, "layer" = 30 + I.layer)
+				add_overlay(image("icon" = I.icon, "icon_state" = I.icon_state, "layer" = 30 + I.layer))
 				addedSomething = 1
 		if ( addedSomething )
 			user.visible_message("<font color='blue'>[user] loads some items onto their service tray.</font>")
@@ -273,15 +273,16 @@
 
 /obj/item/weapon/pen/robopen/attack_self(mob/user as mob)
 
-	var/choice = input("Would you like to change colour or mode?") as null|anything in list("Colour","Mode")
-	if(!choice) return
+	var/choice = tgui_alert(usr, "Would you like to change colour or mode?", "Change What?", list("Colour","Mode","Cancel"))
+	if(!choice || choice == "Cancel")
+		return
 
-	playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+	playsound(src, 'sound/effects/pop.ogg', 50, 0)
 
 	switch(choice)
 
 		if("Colour")
-			var/newcolour = input("Which colour would you like to use?") as null|anything in list("black","blue","red","green","yellow")
+			var/newcolour = tgui_input_list(usr, "Which colour would you like to use?", "Color Choice", list("black","blue","red","green","yellow"))
 			if(newcolour) colour = newcolour
 
 		if("Mode")
@@ -296,7 +297,7 @@
 // Copied over from paper's rename verb
 // see code\modules\paperwork\paper.dm line 62
 
-/obj/item/weapon/pen/robopen/proc/RenamePaper(mob/user as mob,obj/paper as obj)
+/obj/item/weapon/pen/robopen/proc/RenamePaper(mob/user, obj/item/weapon/paper/paper)
 	if ( !user || !paper )
 		return
 	var/n_name = sanitizeSafe(input(user, "What would you like to label the paper?", "Paper Labelling", null)  as text, 32)
@@ -306,6 +307,7 @@
 	//n_name = copytext(n_name, 1, 32)
 	if(( get_dist(user,paper) <= 1  && user.stat == 0))
 		paper.name = "paper[(n_name ? text("- '[n_name]'") : null)]"
+		paper.last_modified_ckey = user.ckey
 	add_fingerprint(user)
 	return
 
@@ -399,7 +401,7 @@
 	set category = "Object"
 	set src in range(0)
 
-	var/N = input("How much damage should the shield absorb?") in list("5","10","25","50","75","100")
+	var/N = tgui_input_list(usr, "How much damage should the shield absorb?", "Shield Level", list("5","10","25","50","75","100"))
 	if (N)
 		shield_level = text2num(N)/100
 
@@ -430,10 +432,9 @@
 	max_doors = 5
 
 /obj/item/weapon/inflatable_dispenser/examine(var/mob/user)
-	if(!..(user))
-		return
-	to_chat(user, "It has [stored_walls] wall segment\s and [stored_doors] door segment\s stored.")
-	to_chat(user, "It is set to deploy [mode ? "doors" : "walls"]")
+	. = ..()
+	. += "It has [stored_walls] wall segment\s and [stored_doors] door segment\s stored."
+	. += "It is set to deploy [mode ? "doors" : "walls"]"
 
 /obj/item/weapon/inflatable_dispenser/attack_self()
 	mode = !mode
@@ -487,7 +488,7 @@
 				return
 			stored_doors++
 			qdel(A)
-		playsound(loc, 'sound/machines/hiss.ogg', 75, 1)
+		playsound(src, 'sound/machines/hiss.ogg', 75, 1)
 		visible_message("\The [user] deflates \the [A] with \the [src]!")
 		return
 	if(istype(A, /obj/item/inflatable))

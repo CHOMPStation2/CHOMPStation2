@@ -6,7 +6,7 @@
 /mob/living/silicon/ai/var/stored_locations[0]
 
 /proc/InvalidPlayerTurf(turf/T as turf)
-	return !(T && T.z in using_map.player_levels)
+	return !(T?.z in using_map.player_levels)
 
 /mob/living/silicon/ai/proc/get_camera_list()
 	if(src.stat == 2)
@@ -152,11 +152,11 @@
 	cameraFollow = null
 
 /mob/living/silicon/ai/proc/ai_actual_track(mob/living/target as mob)
-	if(!istype(target))	return
+	if(!istype(target))	return FALSE
 	var/mob/living/silicon/ai/U = usr
 
 	if(target == U.cameraFollow)
-		return
+		return TRUE
 
 	if(U.cameraFollow)
 		U.ai_cancel_tracking()
@@ -184,6 +184,8 @@
 				view_core()
 				return
 			sleep(10)
+
+	return TRUE
 
 /obj/machinery/camera/attack_ai(var/mob/living/silicon/ai/user as mob)
 	if (!istype(user))
@@ -213,7 +215,7 @@
 	return L
 
 
-mob/living/proc/near_camera()
+/mob/living/proc/near_camera()
 	if (!isturf(loc))
 		return 0
 	else if(!cameranet.checkVis(src))
@@ -261,16 +263,16 @@ mob/living/proc/near_camera()
 		if(T && (T.z in using_map.station_levels) && hassensorlevel(src, SUIT_SENSOR_TRACKING))
 			return TRACKING_POSSIBLE
 
-mob/living/proc/tracking_initiated()
+/mob/living/proc/tracking_initiated()
 
-mob/living/silicon/robot/tracking_initiated()
+/mob/living/silicon/robot/tracking_initiated()
 	tracking_entities++
 	if(tracking_entities == 1 && has_zeroth_law())
 		to_chat(src, "<span class='warning'>Internal camera is currently being accessed.</span>")
 
-mob/living/proc/tracking_cancelled()
+/mob/living/proc/tracking_cancelled()
 
-mob/living/silicon/robot/tracking_initiated()
+/mob/living/silicon/robot/tracking_initiated()
 	tracking_entities--
 	if(!tracking_entities && has_zeroth_law())
 		to_chat(src, "<span class='notice'>Internal camera is no longer being accessed.</span>")

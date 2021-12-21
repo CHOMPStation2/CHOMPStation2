@@ -39,7 +39,7 @@
 	icon_state = "detective"
 	item_state = "gun"
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
 	w_class = ITEMSIZE_NORMAL
 	throwforce = 5
 	throw_speed = 4
@@ -50,7 +50,9 @@
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
 	drop_sound = 'sound/items/drop/gun.ogg'
+	pickup_sound = 'sound/items/pickup/gun.ogg'
 
+	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -155,11 +157,11 @@
 		var/mob/living/M = loc
 		if(istype(M))
 			if(M.can_wield_item(src) && src.is_held_twohanded(M))
-				item_state_slots[slot_l_hand_str] = wielded_item_state
-				item_state_slots[slot_r_hand_str] = wielded_item_state
+				LAZYSET(item_state_slots, slot_l_hand_str, wielded_item_state)
+				LAZYSET(item_state_slots, slot_r_hand_str, wielded_item_state)
 			else
-				item_state_slots[slot_l_hand_str] = initial(item_state)
-				item_state_slots[slot_r_hand_str] = initial(item_state)
+				LAZYSET(item_state_slots, slot_l_hand_str, initial(item_state))
+				LAZYSET(item_state_slots, slot_r_hand_str, initial(item_state))
 	..()
 
 
@@ -245,7 +247,7 @@
 			to_chat(user, "<span class='notice'>You ready \the [src]!  Click and drag the target around to shoot.</span>")
 		else//Otherwise just make a new one
 			auto_target = new/obj/screen/auto_target(get_turf(A), src)
-			visible_message("<span class='danger'>\[user] readies the [src]!</span>")
+			visible_message("<span class='danger'>\The [user] readies the [src]!</span>")
 			playsound(src, 'sound/weapons/TargetOn.ogg', 50, 1)
 			to_chat(user, "<span class='notice'>You ready \the [src]!  Click and drag the target around to shoot.</span>")
 			return
@@ -434,6 +436,21 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
+		
+	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
+	if(recoil_mode && iscarbon(user))
+		var/mob/living/carbon/nerd = user
+		var/mysize = nerd.size_multiplier
+		if(recoil_mode > 0)
+			if(mysize <= 0.51)
+				nerd.Weaken(1*recoil_mode)
+				if(!istype(src,/obj/item/weapon/gun/energy))
+					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
+					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+				else
+					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+				
+	//YAWNEDIT: Knockdown code end
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)
@@ -528,7 +545,7 @@
 		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
 	else
 		src.visible_message("*click click*")
-	playsound(src.loc, 'sound/weapons/empty.ogg', 100, 1)
+	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 
 // Called when the user is about to fire.
 // Moved from handle_post_fire() because if using a laser, the message for when someone got shot would show up before the firing message.
@@ -678,9 +695,9 @@
 		return
 
 	if(silenced)
-		playsound(user, shot_sound, 10, 1)
+		playsound(src, shot_sound, 10, 1)
 	else
-		playsound(user, shot_sound, 50, 1)
+		playsound(src, shot_sound, 50, 1)
 
 //Suicide handling.
 /obj/item/weapon/gun/var/mouthshoot = 0 //To stop people from suiciding twice... >.>
@@ -708,7 +725,7 @@
 		in_chamber.on_hit(M)
 		if(in_chamber.damage_type != HALLOSS && !in_chamber.nodamage)
 			log_and_message_admins("[key_name(user)] commited suicide using \a [src]")
-			user.apply_damage(in_chamber.damage*2.5, in_chamber.damage_type, "head", used_weapon = "Point blank shot in the mouth with \a [in_chamber]", sharp=1)
+			user.apply_damage(in_chamber.damage*2.5, in_chamber.damage_type, "head", used_weapon = "Point blank shot in the mouth with \a [in_chamber]", sharp = TRUE)
 			user.death()
 		else if(in_chamber.damage_type == HALLOSS)
 			to_chat(user, "<span class = 'notice'>Ow...</span>")
@@ -745,7 +762,7 @@
 	. = ..()
 	if(firemodes.len > 1)
 		var/datum/firemode/current_mode = firemodes[sel_mode]
-		to_chat(user, "The fire selector is set to [current_mode.name].")
+		. += "The fire selector is set to [current_mode.name]."
 
 /obj/item/weapon/gun/proc/switch_firemodes(mob/user)
 	if(firemodes.len <= 1)

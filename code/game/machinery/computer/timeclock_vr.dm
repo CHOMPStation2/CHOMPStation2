@@ -16,6 +16,7 @@
 	density = FALSE
 	circuit = /obj/item/weapon/circuitboard/timeclock
 	clicksound = null
+	var/channel = "Common" //Radio channel to announce on
 
 	var/obj/item/weapon/card/id/card // Inserted Id card
 	var/obj/item/device/radio/intercom/announce	// Integreated announcer
@@ -54,7 +55,7 @@
 		if(!card && user.unEquip(I))
 			I.forceMove(src)
 			card = I
-			SSnanoui.update_uis(src)
+			SStgui.update_uis(src)
 			update_icon()
 		else if(card)
 			to_chat(user, "<span class='warning'>There is already ID card inside.</span>")
@@ -65,23 +66,33 @@
 	if(..())
 		return
 	user.set_machine(src)
-	ui_interact(user)
+	tgui_interact(user)
 
-/obj/machinery/computer/timeclock/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
-	user.set_machine(src)
+/obj/machinery/computer/timeclock/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "TimeClock", name)
+		ui.open()
 
-	var/list/data = list()
+/obj/machinery/computer/timeclock/tgui_data(mob/user)
+	var/list/data = ..()
+
 	// Okay, data for showing the user's OWN PTO stuff
 	if(user.client)
 		data["department_hours"] = SANITIZE_LIST(user.client.department_hours)
 	data["user_name"] = "[user]"
 
 	// Data about the card that we put into it.
+	data["card"] = null
+	data["assignment"] = null
+	data["job_datum"] = null
+	data["allow_change_job"] = null
+	data["job_choices"] = null
 	if(card)
 		data["card"] = "[card]"
 		data["assignment"] = card.assignment
 		var/datum/job/job = job_master.GetJob(card.rank)
-		if (job)
+		if(job)
 			data["job_datum"] = list(
 				"title" = job.title,
 				"departments" = english_list(job.departments),
@@ -95,46 +106,42 @@
 			if(job && job.timeoff_factor < 0) // Currently are Off Duty, so gotta lookup what on-duty jobs are open
 				data["job_choices"] = getOpenOnDutyJobs(user, job.pto_type)
 
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, "timeclock_vr.tmpl", capitalize(src.name), 500, 520)
-		ui.set_initial_data(data)
-		ui.open()
+	return data
 
-/obj/machinery/computer/timeclock/Topic(href, href_list)
+/obj/machinery/computer/timeclock/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
-		return 1
-	usr.set_machine(src)
-	src.add_fingerprint(usr)
+		return TRUE
 
-	if (href_list["id"])
-		if(card)
-			usr.put_in_hands(card)
-			card = null
-		else
-			var/obj/item/I = usr.get_active_hand()
-			if (istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
-				I.forceMove(src)
-				card = I
-		update_icon()
-		return 1
-	if(href_list["switch-to-onduty-rank"])
-		if(checkFace())
-			if(checkCardCooldown())
-				makeOnDuty(href_list["switch-to-onduty-rank"], href_list["switch-to-onduty-assignment"])
+	add_fingerprint(usr)
+
+	switch(action)
+		if("id")
+			if(card)
 				usr.put_in_hands(card)
 				card = null
-		update_icon()
-		return 1
-	if(href_list["switch-to-offduty"])
-		if(checkFace())
-			if(checkCardCooldown())
-				makeOffDuty()
-				usr.put_in_hands(card)
-				card = null
-		update_icon()
-		return 1
-	return 1 // Return 1 to update UI
+			else
+				var/obj/item/I = usr.get_active_hand()
+				if (istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
+					I.forceMove(src)
+					card = I
+			update_icon()
+			return TRUE
+		if("switch-to-onduty-rank")
+			if(checkFace())
+				if(checkCardCooldown())
+					makeOnDuty(params["switch-to-onduty-rank"], params["switch-to-onduty-assignment"])
+					usr.put_in_hands(card)
+					card = null
+			update_icon()
+			return TRUE
+		if("switch-to-offduty")
+			if(checkFace())
+				if(checkCardCooldown())
+					makeOffDuty()
+					usr.put_in_hands(card)
+					card = null
+			update_icon()
+			return TRUE
 
 /obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(var/mob/user, var/department)
 	var/list/available_jobs = list()
@@ -153,6 +160,7 @@
 		   && !job.whitelist_only \
 		   && !jobban_isbanned(user,job.title) \
 		   && job.player_old_enough(user.client) \
+		   && job.player_has_enough_playtime(user.client) \
 		   && job.pto_type == department \
 		   && !job.disallow_jobhop \
 		   && job.timeoff_factor > 0
@@ -169,14 +177,14 @@
 		card.rank = newjob.title
 		card.assignment = newassignment
 		card.name = text("[card.registered_name]'s ID Card ([card.assignment])")
-		data_core.manifest_modify(card.registered_name, card.assignment)
+		data_core.manifest_modify(card.registered_name, card.assignment, card.rank)
 		card.last_job_switch = world.time
 		callHook("reassign_employee", list(card))
 		newjob.current_positions++
 		var/mob/living/carbon/human/H = usr
 		H.mind.assigned_role = card.rank
 		H.mind.role_alt_title = card.assignment
-		announce.autosay("[card.registered_name] has moved On-Duty as [card.assignment].", "Employee Oversight")
+		announce.autosay("[card.registered_name] has moved On-Duty as [card.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
 /obj/machinery/computer/timeclock/proc/makeOffDuty()
@@ -195,21 +203,22 @@
 		card.rank = ptojob.title
 		card.assignment = ptojob.title
 		card.name = text("[card.registered_name]'s ID Card ([card.assignment])")
-		data_core.manifest_modify(card.registered_name, card.assignment)
+		data_core.manifest_modify(card.registered_name, card.assignment, card.rank)
 		card.last_job_switch = world.time
 		callHook("reassign_employee", list(card))
 		var/mob/living/carbon/human/H = usr
 		H.mind.assigned_role = ptojob.title
 		H.mind.role_alt_title = ptojob.title
 		foundjob.current_positions--
-		announce.autosay("[card.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight")
+		announce.autosay("[card.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
 /obj/machinery/computer/timeclock/proc/checkCardCooldown()
 	if(!card)
 		return FALSE
-	if((world.time - card.last_job_switch) < 15 MINUTES)
-		to_chat(usr, "You need to wait at least 15 minutes after last duty switch.")
+	var/time_left = 10 MINUTES - (world.time - card.last_job_switch)
+	if(time_left > 0)
+		to_chat(usr, "You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch.")
 		return FALSE
 	return TRUE
 

@@ -3,10 +3,12 @@
 
 /datum/proc/nano_container()
 	return src
-
+	
+/* //CHOMPedit: I guess we have nanoUI again? Upstream doesnt.
 /datum/proc/CanUseTopic(var/mob/user, var/datum/topic_state/state)
 	var/src_object = nano_host()
 	return state.can_use_topic(src_object, user)
+*/
 
 /datum/topic_state/proc/href_list(var/mob/user)
 	return list()

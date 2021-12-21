@@ -1,6 +1,7 @@
 // Rod for railguns. Slightly less nasty than the sniper round.
 /obj/item/projectile/bullet/magnetic
 	name = "rod"
+	icon = 'icons/obj/projectiles.dmi' //Ywedit, uses default icon path not _yw
 	icon_state = "rod"
 	fire_sound = 'sound/weapons/railgun.ogg'
 	damage = 65
@@ -20,6 +21,13 @@
 	icon_state = "flechette"
 	fire_sound = 'sound/weapons/rapidslice.ogg'
 	damage = 20
+	armor_penetration = 100
+
+/obj/item/projectile/bullet/magnetic/flechette/small
+	name = "small flechette"
+	icon_state = "flechette"
+	fire_sound = 'sound/weapons/rapidslice.ogg'
+	damage = 12
 	armor_penetration = 100
 
 /obj/item/projectile/bullet/magnetic/flechette/hunting
@@ -137,7 +145,7 @@
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null) //You cannot touch the supermatter without disentigrating. Assumedly, this is true for condensed rods of it flying at relativistic speeds.
 	if(istype(target,/turf/simulated/wall) || istype(target,/mob/living))
 		target.visible_message("<span class='danger'>The [src] burns a perfect hole through \the [target] with a blinding flash!</span>")
-		playsound(target.loc, 'sound/effects/teleport.ogg', 40, 0)
+		playsound(target, 'sound/effects/teleport.ogg', 40, 0)
 	return ..(target, blocked, def_zone)
 
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter/check_penetrate()
@@ -154,6 +162,13 @@
 	irradiate = 20
 	range = 6
 
+/obj/item/projectile/bullet/magnetic/bore/Initialize(loc, range_mod) // i'm gonna be real honest i dunno how this works but it does
+	. = ..()
+	range += range_mod
+
+/obj/item/projectile/bullet/magnetic/bore/get_structure_damage()
+	return damage * 3 //made for boring holes
+
 /obj/item/projectile/bullet/magnetic/bore/Bump(atom/A, forced=0)
 	if(istype(A, /turf/simulated/mineral))
 		var/turf/simulated/mineral/MI = A
@@ -163,7 +178,6 @@
 		return 0
 	else if(istype(A, /turf/simulated/wall) || istype(A, /turf/simulated/shuttle/wall))	// Cause a loud, but relatively minor explosion on the wall it hits.
 		explosion(A, -1, -1, 1, 3)
-		qdel(src)
-		return 1
+		return ..()
 	else
 		..()

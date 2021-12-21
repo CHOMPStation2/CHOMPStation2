@@ -1,12 +1,14 @@
 /datum/category_item/catalogue/fauna/solarmoth		//TODO: VIRGO_LORE_WRITING_WIP
 	name = "Solarmoth"
 	desc = "An adult variation of a solargrub, these winged critters are very deadly. They seem to heat up everything nearby, \
-	turning ordinary rooms into infernos, and causing malfunctions across the station. Approach with caution."
+	turning ordinary rooms into infernos, and causing malfunctions across the station. They are so hot that laser weaponry is like throwing an ice cube at them. \
+	Bullets will melt in the face of them and only cause minor damage from the melted matter. \
+	Melee seems to be thier weakness as long as the user has appropriate heat protection or if you're quick enough to respond before needing protection. Approach with caution."
 	value = CATALOGUER_REWARD_MEDIUM
 
 /mob/living/simple_mob/vore/solarmoth
 	name = "solarmoth"
-	desc = "A majestic sparkling solarmoth. Also a slight engineering hazard."
+	desc = "A majestic sparkling solarmoth. Also a slight engineering hazard known to heat rooms equal to temperatures of a white dwarf."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/solarmoth)
 	icon = 'icons/mob/solarmoth.dmi' //all of these are placeholders
 	icon_state = "solarmoth"
@@ -15,19 +17,19 @@
 
 	var/mycolour = COLOR_BLUE //Variable Lighting colours
 	var/original_temp = null //Value to remember temp
-	var/set_temperature = T0C + 10000	//Sets the target point of 10k degrees celsius
-	var/heating_power = 100000		//This controls the strength at which it heats the environment.
+	var/set_temperature = T0C + 450	//Sets the target point of 450 degrees celsius
+	var/heating_power = 100000	//This controls the strength at which it heats the environment. // The number seems ridiculous but this is actually pretty reasonable - Lunar
 	var/emp_heavy = 2
 	var/emp_med = 4
 	var/emp_light = 7
 	var/emp_long = 10
 
 	faction = "grubs"
-	maxHealth = 400 // Tanky fuckers.
-	health = 400 // Tanky fuckers.
+	maxHealth = 200 // Tanky fuckers.
+	health = 200 // Tanky fuckers.
 
-	melee_damage_lower = 1
-	melee_damage_upper = 5
+	melee_damage_lower = 5
+	melee_damage_upper = 10
 
 	movement_cooldown = 5
 
@@ -57,18 +59,18 @@
 	minbodytemp = 0
 	heat_damage_per_tick = 0 //Even if the atmos stuff doesn't work, at least it won't take any damage.
 
-	armor = list(			
-				"melee" = 0,
-				"bullet" = 90,
-				"laser" = 100,
-				"energy" = 100,
-				"bomb" = 100,
+	armor = list(
+				"melee" = -50,
+				"bullet" = 0,
+				"laser" = 50,
+				"energy" = 50,
+				"bomb" = 25,
 				"bio" = 100,
 				"rad" = 100)
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
-	
+
 /mob/living/simple_mob/vore/solarmoth/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
@@ -104,17 +106,17 @@
 		if(heat_transfer > 0 && env.temperature < T0C + 200)	//This should start heating the room at a moderate pace up to 200 degrees celsius.
 			heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater
 			removed.add_thermal_energy(heat_transfer)
-			
-		else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 10,000 degrees celsius. So this thing will start cooking crazy hot between the temperatures of 200C and 10,000C.
-			heating_power = original_temp*100 //Changed to work variable -shark //FLAME ON! This will make the moth heat up the room at an incredible rate.
+
+		else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 450 degrees celsius. Heating rate should increase between 200 and 450 C.
+			heating_power = original_temp*100
 			heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater. Except it's hot, so yeah.
 			removed.add_thermal_energy(heat_transfer)
-			
+
 		else
 			return
 
 		env.merge(removed)
-		
+
 
 
 	//Since I'm changing hyper mode to be variable we need to store old power
@@ -130,11 +132,10 @@
 /mob/living/simple_mob/vore/solarmoth/death()
 	explode()
 	..()
-	
+
 /mob/living/simple_mob/vore/solarmoth/gib() //This baby will explode no matter what you do to it.
 	explode()
 	..()
-	
 
 
 /mob/living/simple_mob/vore/solarmoth/handle_light()
@@ -155,9 +156,7 @@
 /mob/living/simple_mob/vore/solarmoth/lunarmoth
 	name = "lunarmoth"
 	desc = "A majestic sparkling lunarmoth. Also a slight engineering hazard."
-	
 	var/nospampls = 0
-	
 	cold_damage_per_tick = 0
 	//ATMOS
 	set_temperature = T0C - 10000
@@ -170,7 +169,7 @@
 	if(prob(25))
 		for(var/obj/machinery/light/light in range(5, src))
 			if(prob(50))
-				light.broken() 
+				light.broken()
 	if(prob(10))
 		for(var/obj/structure/window/window in range(5, src))
 			if(prob(50))
@@ -181,7 +180,7 @@
 				visible_message("<span class='danger'>Emergency Shutter malfunction!</span>")
 				door.blocked = 0
 				door.open(1)
-	
+
 	spawn(100)
 		nospampls = 0
 
@@ -189,4 +188,5 @@
 	..()
 	if(!nospampls)
 		chilltheglass() //shatter and broken calls for glass and lights. Also some special thing.
-	
+
+

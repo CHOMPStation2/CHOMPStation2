@@ -1,4 +1,3 @@
-
 /mob/living/Login()
 	..()
 	//Mind updates
@@ -12,5 +11,22 @@
 	if(ai_holder && !ai_holder.autopilot)
 		ai_holder.go_sleep()
 		to_chat(src,"<span class='notice'>Mob AI disabled while you are controlling the mob.</span>")
+
+	AddComponent(/datum/component/character_setup)
+	
+	// Vore stuff
+	verbs |= /mob/living/proc/escapeOOC
+	verbs |= /mob/living/proc/lick
+	verbs |= /mob/living/proc/smell
+	verbs |= /mob/living/proc/switch_scaling
+	
+	if(!no_vore)
+		verbs |= /mob/living/proc/vorebelly_printout
+		if(!vorePanel)
+			AddComponent(/datum/component/vore_panel)
+			
+	verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 
 	return .

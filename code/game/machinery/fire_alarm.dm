@@ -5,21 +5,23 @@ FIRE ALARM
 	name = "fire alarm"
 	desc = "<i>\"Pull this in case of emergency\"</i>. Thus, keep pulling it forever."
 	icon = 'icons/obj/monitors.dmi'
-	icon_state = "fire0"
-	plane = TURF_PLANE
-	layer = ABOVE_TURF_LAYER
+	icon_state = "fire"
+	layer = ABOVE_WINDOW_LAYER
+	blocks_emissive = FALSE
+	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	var/detecting = 1.0
 	var/working = 1.0
 	var/time = 10.0
 	var/timing = 0.0
 	var/lockdownbyai = 0
-	anchored = 1.0
+	anchored = TRUE
+	unacidable = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
 	var/last_process = 0
-	panel_open = 0
+	panel_open = FALSE
 	var/seclevel
 	circuit = /obj/item/weapon/circuitboard/firealarm
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
@@ -27,10 +29,31 @@ FIRE ALARM
 /obj/machinery/firealarm/alarms_hidden
 	alarms_hidden = TRUE
 
+/obj/machinery/firealarm/angled
+	icon = 'icons/obj/wall_machines_angled.dmi'
+
+/obj/machinery/firealarm/angled/hidden
+	alarms_hidden = TRUE
+
+/obj/machinery/firealarm/angled/offset_alarm()
+	pixel_x = (dir & 3) ? 0 : (dir == 4 ? 20 : -20)
+	pixel_y = (dir & 3) ? (dir == 1 ? -18 : 21) : 0
+
+/obj/machinery/firealarm/examine()
+	. = ..()
+	. += "Current security level: [seclevel]"
+
 /obj/machinery/firealarm/Initialize()
 	. = ..()
+	if(!pixel_x && !pixel_y)
+		offset_alarm()
+
 	if(z in using_map.contact_levels)
 		set_security_level(security_level ? get_security_level() : "green")
+
+/obj/machinery/firealarm/proc/offset_alarm()
+	pixel_x = (dir & 3) ? 0 : (dir == 4 ? 26 : -26)
+	pixel_y = (dir & 3) ? (dir == 1 ? -26 : 26) : 0
 
 /obj/machinery/firealarm/update_icon()
 	cut_overlays()
@@ -42,24 +65,38 @@ FIRE ALARM
 	if(stat & BROKEN)
 		icon_state = "firex"
 		set_light(0)
+		return
 	else if(stat & NOPOWER)
 		icon_state = "firep"
 		set_light(0)
+		return
+
+	var/fire_state
+
+	. = list()
+	icon_state = "fire"
+	if(!detecting)
+		fire_state = "fire1"
+		set_light(l_range = 4, l_power = 0.9, l_color = "#ff0000")
 	else
-		if(!detecting)
-			icon_state = "fire1"
-			set_light(l_range = 4, l_power = 0.9, l_color = "#ff0000")
-		else
-			icon_state = "fire0"
-			switch(seclevel)
-				if("green")	set_light(l_range = 2, l_power = 0.25, l_color = "#00ff00")
-				if("yellow")	set_light(l_range = 2, l_power = 0.25, l_color = "#ffff00")
-				if("violet")	set_light(l_range = 2, l_power = 0.25, l_color = "#9933ff")
-				if("orange")	set_light(l_range = 2, l_power = 0.25, l_color = "#ff9900")
-				if("blue")	set_light(l_range = 2, l_power = 0.25, l_color = "#1024A9")
-				if("red")	set_light(l_range = 4, l_power = 0.9, l_color = "#ff0000")
-				if("delta")	set_light(l_range = 4, l_power = 0.9, l_color = "#FF6633")
-		add_overlay("overlay_[seclevel]")
+		fire_state = "fire0"
+		switch(seclevel)
+			if("green")	set_light(l_range = 2, l_power = 0.25, l_color = "#00ff00")
+			if("yellow")	set_light(l_range = 2, l_power = 0.25, l_color = "#ffff00")
+			if("violet")	set_light(l_range = 2, l_power = 0.25, l_color = "#9933ff")
+			if("orange")	set_light(l_range = 2, l_power = 0.25, l_color = "#ff9900")
+			if("blue")	set_light(l_range = 2, l_power = 0.25, l_color = "#1024A9")
+			if("red")	set_light(l_range = 4, l_power = 0.9, l_color = "#ff0000")
+			if("delta")	set_light(l_range = 4, l_power = 0.9, l_color = "#FF6633")
+	
+	. += mutable_appearance(icon, fire_state)
+	. += emissive_appearance(icon, fire_state)
+	
+	if(seclevel)
+		. += mutable_appearance(icon, "overlay_[seclevel]")
+		. += emissive_appearance(icon, "overlay_[seclevel]")
+	
+	add_overlay(.)
 
 /obj/machinery/firealarm/fire_act(datum/gas_mixture/air, temperature, volume)
 	if(detecting)
@@ -127,89 +164,33 @@ FIRE ALARM
 	if(user.stat || stat & (NOPOWER | BROKEN))
 		return
 
-	user.set_machine(src)
-	var/area/A = src.loc
-	var/d1
-	var/d2
-	if(istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon))
-		A = A.loc
-
-		if(A.fire)
-			d1 = text("<A href='?src=\ref[];reset=1'>Reset - Lockdown</A>", src)
-		else
-			d1 = text("<A href='?src=\ref[];alarm=1'>Alarm - Lockdown</A>", src)
-		if(timing)
-			d2 = text("<A href='?src=\ref[];time=0'>Stop Time Lock</A>", src)
-		else
-			d2 = text("<A href='?src=\ref[];time=1'>Initiate Time Lock</A>", src)
-		var/second = round(time) % 60
-		var/minute = (round(time) - second) / 60
-		var/dat = "<HTML><HEAD></HEAD><BODY><TT><B>Fire alarm</B> [d1]\n<HR>The current alert level is: <b>[get_security_level()]</b><br><br>\nTimer System: [d2]<BR>\nTime Left: [(minute ? "[minute]:" : null)][second] <A href='?src=\ref[src];tp=-30'>-</A> <A href='?src=\ref[src];tp=-1'>-</A> <A href='?src=\ref[src];tp=1'>+</A> <A href='?src=\ref[src];tp=30'>+</A>\n</TT></BODY></HTML>"
-		user << browse(dat, "window=firealarm")
-		onclose(user, "firealarm")
+	add_fingerprint(user)
+	var/area/A = get_area(src)
+	if(A.fire)
+		reset(user)
 	else
-		A = A.loc
-		if(A.fire)
-			d1 = text("<A href='?src=\ref[];reset=1'>[]</A>", src, stars("Reset - Lockdown"))
-		else
-			d1 = text("<A href='?src=\ref[];alarm=1'>[]</A>", src, stars("Alarm - Lockdown"))
-		if(timing)
-			d2 = text("<A href='?src=\ref[];time=0'>[]</A>", src, stars("Stop Time Lock"))
-		else
-			d2 = text("<A href='?src=\ref[];time=1'>[]</A>", src, stars("Initiate Time Lock"))
-		var/second = round(time) % 60
-		var/minute = (round(time) - second) / 60
-		var/dat = "<HTML><HEAD></HEAD><BODY><TT><B>[stars("Fire alarm")]</B> [d1]\n<HR><b>The current alert level is: [stars(get_security_level())]</b><br><br>\nTimer System: [d2]<BR>\nTime Left: [(minute ? text("[]:", minute) : null)][second] <A href='?src=\ref[src];tp=-30'>-</A> <A href='?src=\ref[src];tp=-1'>-</A> <A href='?src=\ref[src];tp=1'>+</A> <A href='?src=\ref[src];tp=30'>+</A>\n</TT></BODY></HTML>"
-		user << browse(dat, "window=firealarm")
-		onclose(user, "firealarm")
-	return
+		alarm(0, user)
 
-/obj/machinery/firealarm/Topic(href, href_list)
-	..()
-	if(usr.stat || stat & (BROKEN | NOPOWER))
-		return
-
-	if((usr.contents.Find(src) || ((get_dist(src, usr) <= 1) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
-		usr.set_machine(src)
-		if(href_list["reset"])
-			reset()
-		else if(href_list["alarm"])
-			alarm()
-		else if(href_list["time"])
-			timing = text2num(href_list["time"])
-			last_process = world.timeofday
-			START_PROCESSING(SSobj, src)
-		else if(href_list["tp"])
-			var/tp = text2num(href_list["tp"])
-			time += tp
-			time = min(max(round(time), 0), 120)
-
-		updateUsrDialog()
-
-		add_fingerprint(usr)
-	else
-		usr << browse(null, "window=firealarm")
-		return
-	return
-
-/obj/machinery/firealarm/proc/reset()
+/obj/machinery/firealarm/proc/reset(mob/user)
 	if(!(working))
 		return
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.clearAlarm(src.loc, FA)
 	update_icon()
-	return
+	if(user)
+		log_game("[user] reset a fire alarm at [COORD(src)]")
 
-/obj/machinery/firealarm/proc/alarm(var/duration = 0)
+/obj/machinery/firealarm/proc/alarm(var/duration = 0, mob/user)
 	if(!(working))
 		return
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
 	update_icon()
-	playsound(src.loc, 'sound/machines/airalarm.ogg', 25, 0, 4)
-	return
+	playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
+	if(user)
+		log_game("[user] triggered a fire alarm at [COORD(src)]")
 
 /obj/machinery/firealarm/proc/set_security_level(var/newlevel)
 	if(seclevel != newlevel)
@@ -226,7 +207,7 @@ Just a object used in constructing fire alarms
 	icon_state = "door_electronics"
 	desc = "A circuit. It has a label on it, it says \"Can handle heat levels up to 40 degrees celsius!\""
 	w_class = ITEMSIZE_SMALL
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 */
 /obj/machinery/partyalarm
 	name = "\improper PARTY BUTTON"
@@ -238,7 +219,7 @@ Just a object used in constructing fire alarms
 	var/time = 10.0
 	var/timing = 0.0
 	var/lockdownbyai = 0
-	anchored = 1.0
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6

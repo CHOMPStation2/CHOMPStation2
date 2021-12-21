@@ -1,7 +1,6 @@
 /*
  * Crowbar
  */
-
 /obj/item/weapon/tool/crowbar
 	name = "crowbar"
 	desc = "Used to remove floors and to pry open doors."
@@ -14,20 +13,23 @@
 	item_state = "crowbar"
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_ENGINEERING = 1)
-	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	matter = list(MAT_STEEL = 50)
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
 	usesound = 'sound/items/crowbar.ogg'
-	drop_sound = 'sound/items/drop/sword.ogg'
+	drop_sound = 'sound/items/drop/crowbar.ogg'
+	pickup_sound = 'sound/items/pickup/crowbar.ogg'
 	toolspeed = 1
-
-/obj/item/weapon/tool/crowbar/is_crowbar()
-	return TRUE
+	tool_qualities = list(TOOL_CROWBAR)
 
 /obj/item/weapon/tool/crowbar/red
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "red_crowbar"
 	item_state = "crowbar_red"
 
+/obj/item/weapon/tool/crowbar/old
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "old_crowbar"
+	item_state = "crowbar"
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_crowbar
 	name = "Precursor Alpha Object - Hard Light Pry Tool"
@@ -62,14 +64,6 @@
 	origin_tech = list(TECH_COMBAT = 4, TECH_ENGINEERING = 3)
 	reach = 2
 
-/obj/item/weapon/tool/crowbar/hybrid/is_crowbar()
-	if(prob(10))
-		var/turf/T = get_turf(src)
-		SSradiation.radiate(get_turf(src), 5)
-		T.visible_message("<span class='alien'>\The [src] shudders!</span>")
-		return FALSE
-	return TRUE
-
 /obj/item/weapon/tool/crowbar/cyborg
 	name = "hydraulic crowbar"
 	desc = "A hydraulic prying tool, compact but powerful. Designed to replace crowbars in industrial synthetics."
@@ -102,7 +96,7 @@
 	return ..()
 
 /obj/item/weapon/tool/crowbar/power/attack_self(mob/user)
-	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
+	playsound(src, 'sound/items/change_jaws.ogg', 50, 1)
 	user.drop_item(src)
 	counterpart.forceMove(get_turf(src))
 	src.forceMove(counterpart)

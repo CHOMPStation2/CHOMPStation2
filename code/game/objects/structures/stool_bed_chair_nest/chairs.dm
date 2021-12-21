@@ -22,7 +22,7 @@
 			return
 		user.drop_item()
 		var/obj/structure/bed/chair/e_chair/E = new (src.loc, material.name)
-		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+		playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 		E.set_dir(dir)
 		E.part = SK
 		SK.loc = E
@@ -63,8 +63,7 @@
 	..()
 	update_layer()
 	if(has_buckled_mobs())
-		for(var/A in buckled_mobs)
-			var/mob/living/L = A
+		for(var/mob/living/L as anything in buckled_mobs)
 			L.set_dir(dir)
 
 /obj/structure/bed/chair/verb/rotate_clockwise()
@@ -83,10 +82,15 @@
 
 /obj/structure/bed/chair/shuttle
 	name = "chair"
-	desc = "You sit in this. Either by will or force."
 	icon_state = "shuttlechair"
-	color = null
 	base_icon = "shuttlechair"
+	color = null
+	applies_material_colour = 0
+
+/obj/structure/bed/chair/shuttle_padded
+	icon_state = "shuttlechair2"
+	base_icon = "shuttlechair2"
+	color = null
 	applies_material_colour = 0
 
 // Leaving this in for the sake of compilation.
@@ -129,7 +133,7 @@
 	..(newloc,"steel","orange")
 
 /obj/structure/bed/chair/office
-	anchored = 0
+	anchored = FALSE
 	buckle_movable = 1
 
 /obj/structure/bed/chair/office/update_icon()
@@ -140,22 +144,23 @@
 		return
 	..()
 
-/obj/structure/bed/chair/office/Move()
-	..()
+/obj/structure/bed/chair/office/Moved(atom/old_loc, direction, forced = FALSE)
+	. = ..()
+	
 	playsound(src, 'sound/effects/roll.ogg', 100, 1)
-	if(has_buckled_mobs())
-		for(var/A in buckled_mobs)
-			var/mob/living/occupant = A
-			occupant.buckled = null
-			occupant.Move(src.loc)
-			occupant.buckled = src
-			if (occupant && (src.loc != occupant.loc))
-				if (propelled)
-					for (var/mob/O in src.loc)
-						if (O != occupant)
-							Bump(O)
-				else
-					unbuckle_mob()
+
+/obj/structure/bed/chair/office/handle_buckled_mob_movement(atom/new_loc, direction, movetime)
+	for(var/mob/living/occupant as anything in buckled_mobs)
+		occupant.buckled = null
+		occupant.Move(loc, direction, movetime)
+		occupant.buckled = src
+		if (occupant && (loc != occupant.loc))
+			if (propelled)
+				for (var/mob/O in src.loc)
+					if (O != occupant)
+						Bump(O)
+			else
+				unbuckle_mob()
 
 /obj/structure/bed/chair/office/Bump(atom/A)
 	..()
@@ -173,7 +178,7 @@
 			occupant.apply_effect(6, WEAKEN, blocked)
 			occupant.apply_effect(6, STUTTER, blocked)
 			occupant.apply_damage(10, BRUTE, def_zone, blocked, soaked)
-			playsound(src.loc, 'sound/weapons/punch1.ogg', 50, 1, -1)
+			playsound(src, 'sound/weapons/punch1.ogg', 50, 1, -1)
 			if(istype(A, /mob/living))
 				var/mob/living/victim = A
 				def_zone = ran_zone()
@@ -221,16 +226,25 @@
 	icon_state = "sofamiddle"
 	applies_material_colour = 1
 	var/sofa_material = "carpet"
+	var/corner_piece = FALSE
 
 /obj/structure/bed/chair/sofa/update_icon()
 	if(applies_material_colour && sofa_material)
-		var/material/color_material = get_material_by_name(sofa_material)
+		var/datum/material/color_material = get_material_by_name(sofa_material)
 		color = color_material.icon_colour
 
 		if(sofa_material == "carpet")
 			name = "red [initial(name)]"
 		else
 			name = "[sofa_material] [initial(name)]"
+
+/obj/structure/bed/chair/sofa/update_layer()
+	// Corner east/west should be on top of mobs, any other state's north should be.
+	if((corner_piece && ((dir & EAST) || (dir & WEST))) || (!corner_piece && (dir & NORTH)))
+		plane = MOB_PLANE
+		layer = MOB_LAYER + 0.1
+	else
+		reset_plane_and_layer()
 
 /obj/structure/bed/chair/sofa/left
 	icon_state = "sofaend_left"
@@ -243,6 +257,81 @@
 /obj/structure/bed/chair/sofa/corner
 	icon_state = "sofacorner"
 	base_icon = "sofacorner"
+	corner_piece = TRUE
+
+// Wooden nonsofa - no corners
+/obj/structure/bed/chair/sofa/pew
+	name = "pew bench"
+	desc = "If they want you to go to church, why do they make these so uncomfortable?"
+	base_icon = "pewmiddle"
+	icon_state = "pewmiddle"
+	applies_material_colour = FALSE
+
+/obj/structure/bed/chair/sofa/pew/left
+	icon_state = "pewend_left"
+	base_icon = "pewend_left"
+
+/obj/structure/bed/chair/sofa/pew/right
+	icon_state = "pewend_right"
+	base_icon = "pewend_right"
+
+// Metal benches from Skyrat
+/obj/structure/bed/chair/sofa/bench
+	name = "metal bench"
+	desc = "Almost as comfortable as waiting at a bus station for hours on end."
+	base_icon = "benchmiddle"
+	icon_state = "benchmiddle"
+	applies_material_colour = FALSE
+	color = null
+	var/padding_color = "#CC0000"
+
+/obj/structure/bed/chair/sofa/bench/Initialize()
+	. = ..()
+	var/mutable_appearance/MA
+	// If we're north-facing, metal goes above mob, padding overlay goes below mob.
+	if((dir & NORTH) && !corner_piece)
+		plane = MOB_PLANE
+		layer = ABOVE_MOB_LAYER
+		MA = mutable_appearance(icon, icon_state = "o[icon_state]", layer = BELOW_MOB_LAYER, plane = MOB_PLANE, appearance_flags = KEEP_APART|RESET_COLOR)
+	// Else just normal plane and layer for everything, which will be below mobs.
+	else
+		MA = mutable_appearance(icon, icon_state = "o[icon_state]", appearance_flags = KEEP_APART|RESET_COLOR)
+	MA.color = padding_color
+	add_overlay(MA)
+
+/obj/structure/bed/chair/sofa/bench/left
+	icon_state = "bench_left"
+	base_icon = "bench_left"
+
+/obj/structure/bed/chair/sofa/bench/right
+	icon_state = "bench_right"
+	base_icon = "bench_right"
+
+/obj/structure/bed/chair/sofa/bench/corner
+	icon_state = "benchcorner"
+	base_icon = "benchcorner"
+	//corner_piece = TRUE // These sprites work fine without the parent doing layer shenanigans
+
+// Corporate sofa - one color fits all
+/obj/structure/bed/chair/sofa/corp
+	name = "black leather sofa"
+	desc = "How corporate!"
+	base_icon = "corp_sofamiddle"
+	icon_state = "corp_sofamiddle"
+	applies_material_colour = FALSE
+
+/obj/structure/bed/chair/sofa/corp/left
+	icon_state = "corp_sofaend_left"
+	base_icon = "corp_sofaend_left"
+
+/obj/structure/bed/chair/sofa/corp/right
+	icon_state = "corp_sofaend_right"
+	base_icon = "corp_sofaend_right"
+
+/obj/structure/bed/chair/sofa/corp/corner
+	icon_state = "corp_sofacorner"
+	base_icon = "corp_sofacorner"
+	corner_piece = TRUE
 
 //color variations
 

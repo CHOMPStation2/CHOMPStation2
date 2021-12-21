@@ -73,14 +73,46 @@
 	access = access_rd
 
 /datum/supply_pack/misc/ce_rig
-	name = "advanced voidsuit (empty)"
+	name = "advanced hardsuit (empty)"
 	contains = list(
 			/obj/item/weapon/rig/ce = 1
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "advanced voidsuit crate"
+	containername = "advanced hardsuit crate"
 	access = access_ce
+
+// CHOMPStation EDIT Start: Change Commonwealth to Solgov
+/datum/supply_pack/misc/solgov_medical_rig
+	name = "solgov medical hardsuit (loaded)"
+	contains = list(
+			/obj/item/weapon/rig/baymed = 1
+			)
+	cost = 250
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "Solgov medical hardsuit crate"
+	access = access_medical
+
+/datum/supply_pack/misc/solgov_engineering_rig
+	name = "solgov engineering hardsuit (loaded)"
+	contains = list(
+			/obj/item/weapon/rig/bayeng = 1
+			)
+	cost = 250
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "Solgov engineering hardsuit crate"
+	access = access_engine
+
+// CHOMPStation EDIT End
+
+/datum/supply_pack/misc/zero_rig
+	name = "null hardsuit (jets)"
+	contains = list(
+			/obj/item/weapon/rig/zero = 1
+			)
+	cost = 75
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "null hardsuit crate"
 
 /datum/supply_pack/misc/jetpack
 	name = "jetpack (empty)"
@@ -96,3 +128,36 @@
 				  access_explorer,
 				  access_pilot)
 	one_access = TRUE
+
+/datum/supply_pack/randomised/misc/explorer_shield
+	name = "Explorer shield"
+	num_contained = 2
+	contains = list(
+			/obj/item/weapon/shield/riot/explorer,
+			/obj/item/weapon/shield/riot/explorer/purple
+			)
+	cost = 75
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "exploration shield crate"
+	access = list(access_explorer,
+				  access_eva,
+				  access_pilot)
+	one_access = TRUE
+
+/datum/supply_pack/misc/music_players
+	name = "music players (3)"
+	contains = list(
+		/obj/item/device/walkpod = 3
+	)
+	cost = 150
+	containertype = /obj/structure/closet/crate
+	containername = "portable music players crate"
+
+/datum/supply_pack/misc/juke_remotes
+	name = "jukebox remote speakers (2)"
+	contains = list(
+		/obj/item/device/juke_remote = 2
+	)
+	cost = 300
+	containertype = /obj/structure/closet/crate
+	containername = "cordless jukebox speakers crate"

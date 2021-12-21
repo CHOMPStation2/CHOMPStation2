@@ -1,20 +1,23 @@
 /obj/item/clothing/accessory
 	name = "tie"
 	desc = "A neosilk clip-on tie."
-	icon = 'icons/obj/clothing/ties.dmi'
+	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "bluetie"
 	item_state_slots = list(slot_r_hand_str = "", slot_l_hand_str = "")
+	appearance_flags = RESET_COLOR	// Stops has_suit's color from being multiplied onto the accessory
 	slot_flags = SLOT_TIE
 	w_class = ITEMSIZE_SMALL
 	var/slot = ACCESSORY_SLOT_DECOR
-	var/obj/item/clothing/has_suit = null		//the suit the tie may be attached to
-	var/image/inv_overlay = null	//overlay used when attached to clothing.
+	var/obj/item/clothing/has_suit = null		// The suit the tie may be attached to
+	var/image/inv_overlay = null				// Overlay used when attached to clothing.
 	var/image/mob_overlay = null
 	var/overlay_state = null
 	var/concealed_holster = 0
-	var/mob/living/carbon/human/wearer = null //To check if the wearer changes, so species spritesheets change properly.
-	var/list/on_rolled = list()	//used when jumpsuit sleevels are rolled ("rolled" entry) or it's rolled down ("down"). Set to "none" to hide in those states.
-	sprite_sheets = list(SPECIES_TESHARI = 'icons/mob/species/seromi/ties.dmi') //Teshari can into webbing, too!
+	var/mob/living/carbon/human/wearer = null 	// To check if the wearer changes, so species spritesheets change properly.
+	var/list/on_rolled = list()					// Used when jumpsuit sleevels are rolled ("rolled" entry) or it's rolled down ("down"). Set to "none" to hide in those states.
+	sprite_sheets = list(SPECIES_TESHARI = 'icons/inventory/accessory/mob_teshari.dmi') //Teshari can into webbing, too!
+	drop_sound = 'sound/items/drop/accessory.ogg'
+	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 /obj/item/clothing/accessory/Destroy()
 	on_removed()
@@ -24,16 +27,19 @@
 	if(!inv_overlay)
 		var/tmp_icon_state = "[overlay_state? "[overlay_state]" : "[icon_state]"]"
 		if(icon_override)
-			if("[tmp_icon_state]_tie" in icon_states(icon_override))
+			if("[tmp_icon_state]_tie" in cached_icon_states(icon_override))
 				tmp_icon_state = "[tmp_icon_state]_tie"
 			inv_overlay = image(icon = icon_override, icon_state = tmp_icon_state, dir = SOUTH)
 		else
 			inv_overlay = image(icon = INV_ACCESSORIES_DEF_ICON, icon_state = tmp_icon_state, dir = SOUTH)
+
+		inv_overlay.color = src.color
+		inv_overlay.appearance_flags = appearance_flags	// Stops has_suit's color from being multiplied onto the accessory
 	return inv_overlay
 
 /obj/item/clothing/accessory/proc/get_mob_overlay()
 	if(!istype(loc,/obj/item/clothing/))	//don't need special handling if it's worn as normal item.
-		return ..()
+		return
 	var/tmp_icon_state = "[overlay_state? "[overlay_state]" : "[icon_state]"]"
 	if(ishuman(has_suit.loc))
 		wearer = has_suit.loc
@@ -48,10 +54,10 @@
 			tmp_icon_state = on_rolled["rolled"]
 
 	if(icon_override)
-		if("[tmp_icon_state]_mob" in icon_states(icon_override))
+		if("[tmp_icon_state]_mob" in cached_icon_states(icon_override))
 			tmp_icon_state = "[tmp_icon_state]_mob"
 		mob_overlay = image("icon" = icon_override, "icon_state" = "[tmp_icon_state]")
-	else if(wearer && sprite_sheets[wearer.species.get_bodytype(wearer)]) //Teshari can finally into webbing, too!
+	else if(wearer && LAZYACCESS(sprite_sheets, wearer.species.get_bodytype(wearer))) //Teshari can finally into webbing, too!
 		mob_overlay = image("icon" = sprite_sheets[wearer.species.get_bodytype(wearer)], "icon_state" = "[tmp_icon_state]")
 	else
 		mob_overlay = image("icon" = INV_ACCESSORIES_DEF_ICON, "icon_state" = "[tmp_icon_state]")
@@ -65,6 +71,7 @@
 	else
 		mob_overlay.color = src.color
 
+	mob_overlay.appearance_flags = appearance_flags	// Stops has_suit's color from being multiplied onto the accessory
 	return mob_overlay
 
 //when user attached an accessory to S
@@ -72,8 +79,8 @@
 	if(!istype(S))
 		return
 	has_suit = S
-	loc = has_suit
-	has_suit.overlays += get_inv_overlay()
+	src.forceMove(S)
+	has_suit.add_overlay(get_inv_overlay())
 
 	if(user)
 		to_chat(user, "<span class='notice'>You attach \the [src] to \the [has_suit].</span>")
@@ -82,7 +89,7 @@
 /obj/item/clothing/accessory/proc/on_removed(var/mob/user)
 	if(!has_suit)
 		return
-	has_suit.overlays -= get_inv_overlay()
+	has_suit.cut_overlay(get_inv_overlay())
 	has_suit = null
 	if(user)
 		usr.put_in_hands(src)
@@ -237,6 +244,8 @@
 	desc = "A bronze medal."
 	icon_state = "bronze"
 	slot = ACCESSORY_SLOT_MEDAL
+	drop_sound = 'sound/items/drop/accessory.ogg'
+	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
@@ -345,12 +354,18 @@
 	name = "striped blue scarf"
 	icon_state = "stripedbluescarf"
 
+/obj/item/clothing/accessory/scarf/teshari/neckscarf
+	name = "small neckscarf"
+	desc = "a neckscarf that is too small for a human's neck"
+	icon_state = "tesh_neckscarf"
+	species_restricted = list(SPECIES_TESHARI)
+
 //bracelets
 
 /obj/item/clothing/accessory/bracelet
 	name = "bracelet"
 	desc = "A simple silver bracelet with a clasp."
-	icon = 'icons/obj/clothing/ties.dmi'
+	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "bracelet"
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_TIE
@@ -369,7 +384,7 @@
 	if(!M.mind)
 		return 0
 
-	var/input = sanitizeSafe(input("Who do you want to dedicate the bracelet to?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(input(usr, "Who do you want to dedicate the bracelet to?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		desc = "A beautiful friendship bracelet in all the colors of the rainbow. It's dedicated to [input]."
@@ -383,7 +398,7 @@
 /obj/item/clothing/accessory/bracelet/material/New(var/newloc, var/new_material)
 	..(newloc)
 	if(!new_material)
-		new_material = DEFAULT_WALL_MATERIAL
+		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
 	if(!istype(material))
 		qdel(src)
@@ -441,3 +456,72 @@
 	desc = "A plain, unadorned sash."
 	icon_state = "sash"
 	slot = ACCESSORY_SLOT_OVER
+
+//Gaiter scarves
+/obj/item/clothing/accessory/gaiter
+	name = "red neck gaiter"
+	desc = "A slightly worn neck gaiter, it's loose enough to be worn comfortably like a scarf. Commonly used by outdoorsmen and mercenaries, both to keep warm and keep debris away from the face."
+	icon_state = "gaiter_red"
+	slot_flags = SLOT_MASK | SLOT_TIE
+	body_parts_covered = FACE
+	w_class = ITEMSIZE_SMALL
+	slot = ACCESSORY_SLOT_INSIGNIA // snowflakey, i know, shut up
+	item_flags = FLEXIBLEMATERIAL
+	var/breath_masked = FALSE
+	var/obj/item/clothing/mask/breath/breathmask
+	action_button_name = "Pull On Gaiter"
+
+/obj/item/clothing/accessory/gaiter/update_clothing_icon()
+	. = ..()
+	if(ismob(src.loc))
+		var/mob/M = src.loc
+		M.update_inv_wear_mask()
+
+/obj/item/clothing/accessory/gaiter/attackby(obj/item/I, mob/user)
+	if(istype(I, /obj/item/clothing/mask/breath))
+		to_chat(user, SPAN_NOTICE("You tuck [I] behind [src]."))
+		breathmask = I
+		breath_masked = TRUE
+		user.drop_from_inventory(I, drop_location())
+		I.forceMove(src)
+		item_flags &= ~FLEXIBLEMATERIAL
+	. = ..()
+
+/obj/item/clothing/accessory/gaiter/AltClick(mob/user)
+	. = ..()
+	if(breath_masked && breathmask)
+		to_chat(user, SPAN_NOTICE("You pull [breathmask] out from behind [src], and it drops to your feet."))
+		breathmask.forceMove(drop_location())
+		breathmask = null
+		breath_masked = FALSE
+		item_flags &= ~AIRTIGHT
+		item_flags |= FLEXIBLEMATERIAL
+
+/obj/item/clothing/accessory/gaiter/attack_self(mob/user)
+	var/gaiterstring = "You pull [src] "
+	if(src.icon_state == initial(icon_state))
+		src.icon_state = "[icon_state]_up"
+		gaiterstring += "up over your nose[breath_masked ? " and secure the mask tucked underneath." : "."]"
+		if(breath_masked)
+			item_flags |= AIRTIGHT
+	else
+		src.icon_state = initial(icon_state)
+		gaiterstring += "down around your neck[breath_masked ? " and dislodge the mask tucked underneath." : "."]"
+		body_parts_covered &= ~FACE
+		if(breath_masked)
+			item_flags &= ~AIRTIGHT
+	to_chat(user, SPAN_NOTICE(gaiterstring))
+	qdel(mob_overlay) // we're gonna need to refresh these
+	update_clothing_icon()	//so our mob-overlays update
+
+/obj/item/clothing/accessory/gaiter/tan
+	name = "tan neck gaiter"
+	icon_state = "gaiter_tan"
+
+/obj/item/clothing/accessory/gaiter/gray
+	name = "gray neck gaiter"
+	icon_state = "gaiter_gray"
+
+/obj/item/clothing/accessory/gaiter/green
+	name = "green neck gaiter"
+	icon_state = "gaiter_green"

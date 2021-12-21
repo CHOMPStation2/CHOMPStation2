@@ -2,11 +2,8 @@
  * Holds procs designed to change one type of value, into another.
  * Contains:
  *			hex2num & num2hex
- *			text2list & list2text
  *			file2list
  *			angle2dir
- *			angle2text
- *			worldtime2text
  */
 
 // Returns an integer given a hexadecimal number string as input.
@@ -96,6 +93,19 @@
 		if ("SOUTHEAST") return 6
 		if ("SOUTHWEST") return 10
 
+// Turns a direction into text showing all bits set
+/proc/dirs2text(direction)
+	if(!direction)
+		return ""
+	var/list/dirs = list()
+	if(direction & NORTH) dirs += "NORTH"
+	if(direction & SOUTH) dirs += "SOUTH"
+	if(direction & EAST) dirs += "EAST"
+	if(direction & WEST) dirs += "WEST"
+	if(direction & UP) dirs += "UP"
+	if(direction & DOWN) dirs += "DOWN"
+	return dirs.Join(" ")
+
 // Converts an angle (degrees) into an ss13 direction
 /proc/angle2dir(var/degree)
 	degree = (degree + 22.5) % 365 // 22.5 = 45 / 2
@@ -119,10 +129,6 @@
 		if (SOUTHEAST) return 135
 		if (NORTHWEST) return 315
 		if (SOUTHWEST) return 225
-
-// Returns the angle in english
-/proc/angle2text(var/degree)
-	return dir2text(angle2dir(degree))
 
 // Converts a blend_mode constant to one acceptable to icon.Blend()
 /proc/blendMode2iconMode(blend_mode)
@@ -281,3 +287,32 @@
 		return strtype
 	return copytext(strtype, delim_pos)
 
+/proc/type2parent(child)
+	var/string_type = "[child]"
+	var/last_slash = findlasttext(string_type, "/")
+	if(last_slash == 1)
+		switch(child)
+			if(/datum)
+				return null
+			if(/obj || /mob)
+				return /atom/movable
+			if(/area || /turf)
+				return /atom
+			else
+				return /datum
+
+	return text2path(copytext(string_type, 1, last_slash))
+
+//checks if a file exists and contains text
+//returns text as a string if these conditions are met
+/proc/safe_file2text(filename, error_on_invalid_return = TRUE)
+	try
+		if(fexists(filename))
+			. = file2text(filename)
+			if(!. && error_on_invalid_return)
+				error("File empty ([filename])")
+		else if(error_on_invalid_return)
+			error("File not found ([filename])")
+	catch(var/exception/E)
+		if(error_on_invalid_return)
+			error("Exception when loading file as string: [E]")

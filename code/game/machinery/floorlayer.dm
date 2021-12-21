@@ -2,7 +2,7 @@
 	name = "automatic floor layer"
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "pipe_d"
-	density = 1
+	density = TRUE
 	var/turf/old_turf
 	var/on = 0
 	var/obj/item/stack/tile/T
@@ -12,8 +12,8 @@
 	T = new/obj/item/stack/tile/floor(src)
 	..()
 
-/obj/machinery/floorlayer/Move(new_turf,M_Dir)
-	..()
+/obj/machinery/floorlayer/Moved(atom/old_loc, direction, forced = FALSE)
+	. = ..()
 
 	if(on)
 		if(mode["dismantle"])
@@ -26,7 +26,7 @@
 			CollectTiles(old_turf)
 
 
-	old_turf = new_turf
+	old_turf = loc
 
 /obj/machinery/floorlayer/attack_hand(mob/user as mob)
 	on=!on
@@ -35,7 +35,7 @@
 
 /obj/machinery/floorlayer/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if(W.is_wrench())
-		var/m = input("Choose work mode", "Mode") as null|anything in mode
+		var/m = tgui_input_list(usr, "Choose work mode", "Mode", mode)
 		mode[m] = !mode[m]
 		var/O = mode[m]
 		user.visible_message("<span class='notice'>[usr] has set \the [src] [m] mode [!O?"off":"on"].</span>", "<span class='notice'>You set \the [src] [m] mode [!O?"off":"on"].</span>")
@@ -51,7 +51,7 @@
 		if(!length(contents))
 			to_chat(user, "<span class='notice'>\The [src] is empty.</span>")
 		else
-			var/obj/item/stack/tile/E = input("Choose remove tile type.", "Tiles") as null|anything in contents
+			var/obj/item/stack/tile/E = tgui_input_list(usr, "Choose remove tile type.", "Tiles", contents)
 			if(E)
 				to_chat(user, "<span class='notice'>You remove the [E] from \the [src].</span>")
 				E.loc = src.loc
@@ -59,17 +59,16 @@
 		return
 
 	if(W.is_screwdriver())
-		T = input("Choose tile type.", "Tiles") as null|anything in contents
+		T = tgui_input_list(usr, "Choose tile type.", "Tiles", contents)
 		return
 	..()
 
 /obj/machinery/floorlayer/examine(mob/user)
-	..()
+	. = ..()
 	var/dismantle = mode["dismantle"]
 	var/laying = mode["laying"]
 	var/collect = mode["collect"]
-	var/message = "<span class='notice'>\The [src] [!T ? "don't " : ""]has [!T ? "" : "[T.get_amount()] [T] "]tile\s, dismantle is [dismantle ? "on" : "off"], laying is [laying ? "on" : "off"], collect is [collect ? "on" : "off"].</span>"
-	to_chat(user,message)
+	. += "<span class='notice'>[src] [!T ? "don't " : ""]has [!T ? "" : "[T.get_amount()] [T] "]tile\s, dismantle is [dismantle ? "on" : "off"], laying is [laying ? "on" : "off"], collect is [collect ? "on" : "off"].</span>"
 
 /obj/machinery/floorlayer/proc/reset()
 	on=0

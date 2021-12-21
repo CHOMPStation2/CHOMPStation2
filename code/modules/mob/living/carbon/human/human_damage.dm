@@ -1,6 +1,6 @@
 //Updates the mob's health from organs and mob damage variables
 /mob/living/carbon/human/updatehealth()
-	var/huskmodifier = 1.5 // With 1.5, you need 250 burn instead of 200 to husk a human.
+	var/huskmodifier = 2.5 //VOREStation Edit // With 1.5, you need 250 burn instead of 200 to husk a human.
 
 	if(status_flags & GODMODE)
 		health = getMaxHealth()
@@ -289,6 +289,20 @@
 	else
 		..()
 
+/mob/living/carbon/human/adjustHalLoss(var/amount)
+	if(species.flags & NO_PAIN)
+		halloss = 0
+	else
+		if(amount > 0)	//only multiply it by the mod if it's positive, or else it takes longer to fade too!
+			amount = amount*species.pain_mod
+		..(amount)
+
+/mob/living/carbon/human/setHalLoss(var/amount)
+	if(species.flags & NO_PAIN)
+		halloss = 0
+	else
+		..()
+
 /mob/living/carbon/human/getToxLoss()
 	if(species.flags & NO_POISON)
 		toxloss = 0
@@ -344,7 +358,7 @@ In most cases it makes more sense to use apply_damage() instead! And make sure t
 //Damages ONE external organ, organ gets randomly selected from damagable ones.
 //It automatically updates damage overlays if necesary
 //It automatically updates health status
-/mob/living/carbon/human/take_organ_damage(var/brute, var/burn, var/sharp = 0, var/edge = 0)
+/mob/living/carbon/human/take_organ_damage(var/brute, var/burn, var/sharp = FALSE, var/edge = FALSE)
 	var/list/obj/item/organ/external/parts = get_damageable_organs()
 	if(!parts.len)	return
 	var/obj/item/organ/external/picked = pick(parts)
@@ -377,7 +391,7 @@ In most cases it makes more sense to use apply_damage() instead! And make sure t
 	if(update)	UpdateDamageIcon()
 
 // damage MANY external organs, in random order
-/mob/living/carbon/human/take_overall_damage(var/brute, var/burn, var/sharp = 0, var/edge = 0, var/used_weapon = null)
+/mob/living/carbon/human/take_overall_damage(var/brute, var/burn, var/sharp = FALSE, var/edge = FALSE, var/used_weapon = null)
 	if(status_flags & GODMODE)	return	//godmode
 	var/list/obj/item/organ/external/parts = get_damageable_organs()
 	var/update = 0
@@ -425,15 +439,16 @@ This function restores all organs.
 		return 0
 	return
 
-
+/*
 /mob/living/carbon/human/proc/get_organ(var/zone)
 	if(!zone)
 		zone = BP_TORSO
 	else if (zone in list( O_EYES, O_MOUTH ))
 		zone = BP_HEAD
 	return organs_by_name[zone]
+*/
 
-/mob/living/carbon/human/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/soaked = 0, var/sharp = 0, var/edge = 0, var/obj/used_weapon = null)
+/mob/living/carbon/human/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/soaked = 0, var/sharp = FALSE, var/edge = FALSE, var/obj/used_weapon = null)
 	if(Debug2)
 		to_world_log("## DEBUG: human/apply_damage() was called on [src], with [damage] damage, an armor value of [blocked], and a soak value of [soaked].")
 
@@ -477,6 +492,7 @@ This function restores all organs.
 	switch(damagetype)
 		if(BRUTE)
 			damageoverlaytemp = 20
+			if(nif && nif.flag_check(NIF_C_BRUTEARMOR,NIF_FLAGS_COMBAT)){damage *= 0.7}
 			damage = damage*species.brute_mod
 
 			for(var/datum/modifier/M in modifiers)
@@ -489,6 +505,7 @@ This function restores all organs.
 				UpdateDamageIcon()
 		if(BURN)
 			damageoverlaytemp = 20
+			if(nif && nif.flag_check(NIF_C_BURNARMOR,NIF_FLAGS_COMBAT)){damage *= 0.7}
 			damage = damage*species.burn_mod
 
 			for(var/datum/modifier/M in modifiers)

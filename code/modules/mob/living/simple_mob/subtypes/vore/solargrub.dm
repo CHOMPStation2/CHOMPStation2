@@ -43,6 +43,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	movement_cooldown = 8
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_amount = 6
 
 	response_help = "pokes"
 	response_disarm = "pushes"
@@ -77,12 +78,12 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		if(attached)
 			set_AI_busy(TRUE)
 			if(prob(2))
-				src.visible_message("<span class='notice'>\The [src] begins to sink power from the net.</span>")
+				src.visible_message("<b>\The [src]</b> begins to sink power from the net.")
 			if(prob(5))
 				var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 				sparks.set_up(5, 0, get_turf(src))
 				sparks.start()
-			anchored = 1
+			anchored = TRUE
 			PN = attached.powernet
 			PN.draw_power(powerdraw) // previous value 150000 // CHOMPEDIT Start, Rykka waz here. *pawstamp*
 			charge = charge + (powerdraw/1000) //This adds raw powerdraw to charge(Charge is in Ks as in 1 = 1000) // CHOMPEDIT End, Rykka waz here. *pawstamp*
@@ -95,22 +96,27 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 						var/drain_val = min(apc_drain_rate, cur_charge)
 						A.cell.use(drain_val * CELLRATE)
 		else if(!attached && anchored)
-			anchored = 0
+			anchored = FALSE
 			PN = null
 
 		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
-		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount <= 1) //it's reading from the moth_amount global list to determine if it can evolve.
+		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount <= 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
 			anchored = 0
 			PN = attached.powernet
 			release_vore_contents()
 			prey_excludes.Cut()
-			moth_amount++
+			moth_amount = moth_amount + 1
 			death_star()
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
 	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
+
+/*
+//Commenting this bit out. It's unncecessary, especially since we only use one form.
 	var/chosen_form = pickweight(adult_forms)
 	new chosen_form(get_turf(src))
+*/
+	new adult_forms(get_turf(src)) //Added this line to spawn the only form because the above is commented out.
 	qdel(src)
 // CHOMPEDIT End, Rykka waz here. *pawstamp*
 
@@ -148,7 +154,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/solargrub/death()
-	src.anchored = 0
+	src.anchored = FALSE
 	set_light(0)
 	..()
 
@@ -163,10 +169,17 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		return 1
 
 /mob/living/simple_mob/vore/solargrub/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Through either grave error, overwhelming willingness, or some other factor, you find yourself lodged halfway past the solargrub's mandibles. While it had initially hissed and chittered in glee at the prospect of a new meal, it is clearly more versed in suckling on power cables; inch by inch, bit by bit, it undulates forth to slowly, noisily gulp you down its short esophagus... and right into its extra-cramped, surprisingly hot stomach. As the rest of you spills out into the plush-walled chamber, the grub's soft body bulges outwards here and there with your compressed figure. Before long, a thick slime oozes out from the surrounding stomach walls; only time will tell how effective it is on something solid like you..."
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#baca24" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 
 	B.emote_lists[DM_HOLD] = list(
 		"The air trapped within the solargrub is hot, humid, and tinged with ozone, but otherwise mercifully harmless to you aside from being heavy on the lungs.",
@@ -185,6 +198,6 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		"The deceptively severe heat trapped within the solargrub works in tandem with its inner muscles and your tingling, prickling stomach juice bath to weaken you!")
 
 /datum/ai_holder/simple_mob/retaliate/solargrub/react_to_attack(atom/movable/attacker)
-	holder.anchored = 0
+	holder.anchored = FALSE
 	holder.set_AI_busy(FALSE)
 	..()

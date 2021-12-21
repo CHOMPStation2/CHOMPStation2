@@ -25,6 +25,7 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 2, TECH_DATA = 3, TECH_MAGNET = 3)
 	force = 0
+	slot_flags = SLOT_BELT
 	var/points_stored = 0 // Amount of 'exploration points' this device holds.
 	var/scan_range = 3 // How many tiles away it can scan. Changing this also changes the box size.
 	var/credit_sharing_range = 14 // If another person is within this radius, they will also be credited with a successful scan.
@@ -77,8 +78,7 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 
 	if(isturf(target) && (!target.can_catalogue()))
 		var/turf/T = target
-		for(var/a in T) // If we can't scan the turf, see if we can scan anything on it, to help with aiming.
-			var/atom/A = a
+		for(var/atom/A as anything in T) // If we can't scan the turf, see if we can scan anything on it, to help with aiming.
 			if(A.can_catalogue())
 				target = A
 				break
@@ -110,25 +110,25 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 		box_segments = draw_box(target, scan_range, user.client)
 		color_box(box_segments, "#00FF00", scan_delay)
 
-	playsound(src.loc, 'sound/machines/beep.ogg', 50)
+	playsound(src, 'sound/machines/beep.ogg', 50)
 
 	// The delay, and test for if the scan succeeds or not.
 	var/scan_start_time = world.time
 	if(do_after(user, scan_delay, target, ignore_movement = TRUE, max_distance = scan_range))
 		if(target.can_catalogue(user))
 			to_chat(user, span("notice", "You successfully scan \the [target] with \the [src]."))
-			playsound(src.loc, 'sound/machines/ping.ogg', 50)
+			playsound(src, 'sound/machines/ping.ogg', 50)
 			catalogue_object(target, user)
 		else
 			// In case someone else scans it first, or it died, etc.
 			to_chat(user, span("warning", "\The [target] is no longer valid to scan with \the [src]."))
-			playsound(src.loc, 'sound/machines/buzz-two.ogg', 50)
+			playsound(src, 'sound/machines/buzz-two.ogg', 50)
 
 		partial_scanned = null
 		partial_scan_time = 0
 	else
 		to_chat(user, span("warning", "You failed to finish scanning \the [target] with \the [src]."))
-		playsound(src.loc, 'sound/machines/buzz-two.ogg', 50)
+		playsound(src, 'sound/machines/buzz-two.ogg', 50)
 		color_box(box_segments, "#FF0000", 3)
 		partial_scanned = weakref(target)
 		partial_scan_time += world.time - scan_start_time // This is added to the existing value so two partial scans will add up correctly.
@@ -148,8 +148,7 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 	// Figure out who may have helped out.
 	var/list/contributers = list()
 	var/list/contributer_names = list()
-	for(var/thing in player_list)
-		var/mob/living/L = thing
+	for(var/mob/living/L as anything in player_list)
 		if(L == user)
 			continue
 		if(!istype(L))
@@ -168,8 +167,7 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 			if(istype(I))
 				var/list/discoveries = I.discover(user, list(user.name) + contributer_names) // If one discovery leads to another, the list returned will have all of them.
 				if(LAZYLEN(discoveries))
-					for(var/D in discoveries)
-						var/datum/category_item/catalogue/data = D
+					for(var/datum/category_item/catalogue/data as anything in discoveries)
 						points_gained += data.value
 
 	// Give out points.
@@ -203,27 +201,24 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 
 	busy = TRUE
 	update_icon()
-	playsound(src.loc, 'sound/machines/beep.ogg', 50)
+	playsound(src, 'sound/machines/beep.ogg', 50)
 
 	// First, get everything able to be scanned.
 	var/list/scannable_atoms = list()
-	for(var/a in view(world.view, user))
-		var/atom/A = a
+	for(var/atom/A as anything in view(world.view, user))
 		if(A.can_catalogue()) // Not passing the user is intentional, so they don't get spammed.
 			scannable_atoms += A
 
 	// Highlight things able to be scanned.
 	var/filter = filter(type = "outline", size = 1, color = "#00FF00")
-	for(var/a in scannable_atoms)
-		var/atom/A = a
+	for(var/atom/A as anything in scannable_atoms)
 		A.filters += filter
 	to_chat(user, span("notice", "\The [src] is highlighting scannable objects in green, if any exist."))
 
 	sleep(2 SECONDS)
 
 	// Remove the highlights.
-	for(var/a in scannable_atoms)
-		var/atom/A = a
+	for(var/atom/A as anything in scannable_atoms)
 		if(QDELETED(A))
 			continue
 		A.filters -= filter
@@ -231,9 +226,9 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 	busy = FALSE
 	update_icon()
 	if(scannable_atoms.len)
-		playsound(src.loc, 'sound/machines/ping.ogg', 50)
+		playsound(src, 'sound/machines/ping.ogg', 50)
 	else
-		playsound(src.loc, 'sound/machines/buzz-two.ogg', 50)
+		playsound(src, 'sound/machines/buzz-two.ogg', 50)
 	to_chat(user, span("notice", "\The [src] found [scannable_atoms.len] object\s that can be scanned."))
 
 
@@ -270,14 +265,12 @@ GLOBAL_LIST_EMPTY(all_cataloguers)
 
 	else
 		dat += "<hr>"
-		for(var/G in GLOB.catalogue_data.categories)
-			var/datum/category_group/group = G
+		for(var/datum/category_group/group as anything in GLOB.catalogue_data.categories)
 			var/list/group_dat = list()
 			var/show_group = FALSE
 
 			group_dat += "<b>[group.name]</b>"
-			for(var/I in group.items)
-				var/datum/category_item/catalogue/item = I
+			for(var/datum/category_item/catalogue/item as anything in group.items)
 				if(item.visible || debug)
 					group_dat += "<a href='?src=\ref[src];show_data=\ref[item]'>[item.name]</a>"
 					show_group = TRUE

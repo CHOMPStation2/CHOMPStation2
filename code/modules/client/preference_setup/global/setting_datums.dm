@@ -5,8 +5,7 @@ var/list/_client_preferences_by_type
 /proc/get_client_preferences()
 	if(!_client_preferences)
 		_client_preferences = list()
-		for(var/ct in subtypesof(/datum/client_preference))
-			var/datum/client_preference/client_type = ct
+		for(var/datum/client_preference/client_type as anything in subtypesof(/datum/client_preference))
 			if(initial(client_type.description))
 				_client_preferences += new client_type()
 	return _client_preferences
@@ -21,16 +20,14 @@ var/list/_client_preferences_by_type
 /proc/get_client_preference_by_key(var/preference)
 	if(!_client_preferences_by_key)
 		_client_preferences_by_key = list()
-		for(var/ct in get_client_preferences())
-			var/datum/client_preference/client_pref = ct
+		for(var/datum/client_preference/client_pref as anything in get_client_preferences())
 			_client_preferences_by_key[client_pref.key] = client_pref
 	return _client_preferences_by_key[preference]
 
 /proc/get_client_preference_by_type(var/preference)
 	if(!_client_preferences_by_type)
 		_client_preferences_by_type = list()
-		for(var/ct in get_client_preferences())
-			var/datum/client_preference/client_pref = ct
+		for(var/datum/client_preference/client_pref as anything in get_client_preferences())
 			_client_preferences_by_type[client_pref.type] = client_pref
 	return _client_preferences_by_type[preference]
 
@@ -98,12 +95,25 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
+	
+/datum/client_preference/belch_noises // Belching noises - pref toggle for 'em
+	description = "Burping"
+	key = "BELCH_NOISES"
+	enabled_description = "Noisy"
+	disabled_description = "Silent"
+	enabled_by_default = FALSE //CHOMPedit
 
 /datum/client_preference/emote_noises
 	description = "Emote Noises" //MERP
 	key = "EMOTE_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
+/datum/client_preference/whisubtle_vis
+	description = "Whi/Subtles Ghost Visible"
+	key = "WHISUBTLE_VIS"
+	enabled_description = "Visible"
+	disabled_description = "Hidden"
+	enabled_by_default = FALSE
 //VOREStation Add End
 /datum/client_preference/weather_sounds
 	description ="Weather sounds"
@@ -147,6 +157,25 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
+/datum/client_preference/old_door_sounds
+	description ="Old Door Sounds"
+	key = "SOUND_OLDDOORS"
+	enabled_description = "Old"
+	disabled_description = "New"
+	enabled_by_default = FALSE
+
+/datum/client_preference/department_door_sounds
+	description ="Department-Specific Door Sounds"
+	key = "SOUND_DEPARTMENTDOORS"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
+
+/datum/client_preference/pickup_sounds
+	description = "Picked Up Item Sounds"
+	key = "SOUND_PICKED"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
+
 /datum/client_preference/drop_sounds
 	description = "Dropped Item Sounds"
 	key = "SOUND_DROPPED"
@@ -156,6 +185,12 @@ var/list/_client_preferences_by_type
 /datum/client_preference/mob_tooltips
 	description ="Mob tooltips"
 	key = "MOB_TOOLTIPS"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/inv_tooltips
+	description ="Inventory tooltips"
+	key = "INV_TOOLTIPS"
 	enabled_description = "Show"
 	disabled_description = "Hide"
 
@@ -176,7 +211,7 @@ var/list/_client_preferences_by_type
 	key = "HUD_HOTKEYS"
 	enabled_description = "Enabled"
 	disabled_description = "Disabled"
-	enabled_by_default = FALSE // Backwards compatibility
+	enabled_by_default = TRUE // Backwards compatibility //CHOMP Edit: It's 2020, use your WASD keys by default. Flipped to True.
 
 /datum/client_preference/show_typing_indicator
 	description ="Typing indicator"
@@ -247,6 +282,63 @@ var/list/_client_preferences_by_type
 /datum/client_preference/instrument_toggle
 	description ="Hear In-game Instruments"
 	key = "SOUND_INSTRUMENT"
+
+/datum/client_preference/vchat_enable
+	description = "Enable/Disable VChat"
+	key = "VCHAT_ENABLE"
+	enabled_description =  "Enabled"
+	disabled_description = "Disabled"
+
+/datum/client_preference/status_indicators
+	description = "Status Indicators"
+	key = "SHOW_STATUS"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/radio_sounds
+	description = "Radio Sounds"
+	key = "RADIO_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/runechat_mob
+	description = "Runechat (Mobs)"
+	key = "RUNECHAT_MOB"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/runechat_obj
+	description = "Runechat (Objs)"
+	key = "RUNECHAT_OBJ"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/runechat_border
+	description = "Runechat Message Border"
+	key = "RUNECHAT_BORDER"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+	enabled_by_default = TRUE
+
+/datum/client_preference/runechat_long_messages
+	description = "Runechat Message Length"
+	key = "RUNECHAT_LONG"
+	enabled_description = "Long"
+	disabled_description = "Short"
+	enabled_by_default = FALSE
+
+/datum/client_preference/status_indicators/toggled(mob/preference_mob, enabled)
+	. = ..()
+	if(preference_mob && preference_mob.plane_holder)
+		var/datum/plane_holder/PH = preference_mob.plane_holder
+		PH.set_vis(VIS_STATUS, enabled)
+
+/datum/client_preference/show_lore_news
+	description = "Lore News Popup"
+	key = "NEWS_POPUP"
+	enabled_by_default = TRUE
+	enabled_description = "Popup New On Login"
+	disabled_description = "Do Nothing"
 
 /********************
 * Staff Preferences *

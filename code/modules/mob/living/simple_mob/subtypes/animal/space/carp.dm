@@ -51,7 +51,9 @@
 	attack_sound = 'sound/weapons/bite.ogg'
 	attacktext = list("bitten")
 
-	meat_amount = 1
+	organ_names = /decl/mob_organ_names/fish
+
+	meat_amount = 5
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
@@ -87,8 +89,10 @@
 
 	pixel_x = -16
 	default_pixel_x = -16
+	icon_expected_width = 64
+	icon_expected_height = 32
 
-	meat_amount = 3
+	meat_amount = 7
 
 
 /mob/living/simple_mob/animal/space/carp/large/huge
@@ -108,8 +112,10 @@
 
 	pixel_y = -16
 	default_pixel_y = -16
+	icon_expected_width = 64
+	icon_expected_height = 64
 
-	meat_amount = 10
+	meat_amount = 15
 
 
 /mob/living/simple_mob/animal/space/carp/holographic

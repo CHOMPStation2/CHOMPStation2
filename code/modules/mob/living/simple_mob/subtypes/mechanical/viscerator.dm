@@ -40,10 +40,12 @@
 	melee_damage_lower = 4 // Approx 8 DPS.
 	melee_damage_upper = 4
 	base_attack_cooldown = 5 // Two attacks a second or so.
-	attack_sharp = 1
+	attack_sharp = TRUE
 	attack_edge = 1
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	attacktext = list("cut", "sliced")
+
+	organ_names = /decl/mob_organ_names/viscerator
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
@@ -87,3 +89,12 @@
 		if(istype(L, /mob/living/simple_mob/mechanical/ward/monitor/crew))	// Also ignore friendly monitor wards
 			return TRUE
 		return L.assess_perp(src, FALSE, FALSE, TRUE, FALSE) <= 3
+
+// Variant that has high armor pen. Slightly slower attack speed and movement. Meant to be dispersed in groups with other ones
+/mob/living/simple_mob/mechanical/viscerator/piercing
+	attack_armor_pen = 20
+	base_attack_cooldown = 10 // One attack a second or so.
+	movement_cooldown = 0.5
+
+/decl/mob_organ_names/viscerator
+	hit_zones = list("chassis", "rotor blades", "sensor array")

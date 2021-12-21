@@ -4,7 +4,7 @@
 	name = "lantern"
 	icon_state = "lantern"
 	desc = "A mining lantern."
-	brightness_on = 6			// luminosity when on
+	light_range = 6			// luminosity when on
 	light_color = "FF9933" // A slight yellow/orange color.
 
 /*****************************Pickaxe********************************/
@@ -19,13 +19,14 @@
 	icon_state = "pickaxe"
 	item_state = "jackhammer"
 	w_class = ITEMSIZE_LARGE
-	matter = list(DEFAULT_WALL_MATERIAL = 3750)
+	matter = list(MAT_STEEL = 3750)
 	var/digspeed = 40 //moving the delay to an item var so R&D can make improved picks. --NEO
+	var/sand_dig = FALSE // does this thing dig sand?
 	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
 	var/drill_sound = "pickaxe"
 	var/drill_verb = "drilling"
-	sharp = 1
+	sharp = TRUE
 
 	var/excavation_amount = 200
 	var/destroy_artefacts = FALSE // some mining tools will destroy artefacts completely while avoiding side-effects.
@@ -43,6 +44,7 @@
 	icon_state = "handdrill"
 	item_state = "jackhammer"
 	digspeed = 30
+	sand_dig = TRUE
 	origin_tech = list(TECH_MATERIAL = 2, TECH_POWER = 3, TECH_ENGINEERING = 2)
 	desc = "Yours is the drill that will pierce through the rock walls."
 	drill_verb = "drilling"
@@ -76,8 +78,8 @@
 	desc = "A rock cutter that uses bursts of hot plasma. You could use it to cut limbs off of xenos! Or, you know, mine stuff."
 	drill_verb = "cutting"
 	drill_sound = 'sound/items/Welder.ogg'
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 
 /obj/item/weapon/pickaxe/diamond
 	name = "diamond pickaxe"
@@ -93,6 +95,7 @@
 	icon_state = "diamonddrill"
 	item_state = "jackhammer"
 	digspeed = 5 //Digs through walls, girders, and can dig up sand
+	sand_dig = TRUE
 	origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 4, TECH_ENGINEERING = 5)
 	desc = "Yours is the drill that will pierce the heavens!"
 	drill_verb = "drilling"
@@ -102,6 +105,7 @@
 	icon_state = "jackhammer"
 	item_state = "jackhammer"
 	digspeed = 15
+	sand_dig = TRUE
 	desc = "Cracks rocks with sonic blasts. This one seems like an improved design."
 	drill_verb = "hammering"
 
@@ -118,10 +122,11 @@
 	item_state = "shovel"
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
-	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	matter = list(MAT_STEEL = 50)
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
-	sharp = 0
-	edge = 1
+	sharp = FALSE
+	edge = TRUE
+	var/digspeed = 40
 
 /obj/item/weapon/shovel/spade
 	name = "spade"
@@ -131,6 +136,19 @@
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
+	
+/obj/item/weapon/shovel/wood
+	name = "wooden shovel"
+	desc = "An improvised tool for digging and moving dirt."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "woodshovel"
+	slot_flags = SLOT_BELT
+	item_state = "woodshovel"
+	w_class = ITEMSIZE_NORMAL
+	matter = list(MAT_WOOD = 50)
+	sharp = 0
+	edge = 1
+
 
 
 /**********************Mining car (Crate like thing, not the rail car)**************************/
@@ -138,11 +156,8 @@
 /obj/structure/closet/crate/miningcar
 	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
 	name = "Mining car (not for rails)"
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "miningcar"
-	density = 1
-	icon_opened = "miningcaropen"
-	icon_closed = "miningcar"
+	icon = 'icons/obj/closets/miningcar.dmi'
+	density = TRUE
 
 // Flags.
 
@@ -156,9 +171,10 @@
 	var/upright = 0
 	var/base_state
 
-/obj/item/stack/flag/New()
-	..()
+/obj/item/stack/flag/Initialize()
+	. = ..()
 	base_state = icon_state
+	update_icon()
 
 /obj/item/stack/flag/blue
 	name = "blue flags"
@@ -190,7 +206,7 @@
 	if(upright)
 		upright = 0
 		icon_state = base_state
-		anchored = 0
+		anchored = FALSE
 		src.visible_message("<b>[user]</b> knocks down [src].")
 	else
 		..()
@@ -211,7 +227,7 @@
 	var/obj/item/stack/flag/newflag = new src.type(T)
 	newflag.amount = 1
 	newflag.upright = 1
-	newflag.anchored = 1
+	newflag.anchored = TRUE
 	newflag.name = newflag.singular_name
 	newflag.icon_state = "[newflag.base_state]_open"
 	newflag.visible_message("<b>[user]</b> plants [newflag] firmly in the ground.")

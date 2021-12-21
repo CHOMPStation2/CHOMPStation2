@@ -34,6 +34,11 @@
 	return
 
 /obj/structure/closet/crate/medical/blood
-	icon_state = "blood"
-	icon_opened = "bloodopen"
-	icon_closed = "blood"
+	closet_appearance = /decl/closet_appearance/cart/biohazard/alt
+
+/obj/structure/closet/crate/fennec
+	name = "fennec treats crate"
+	desc = "A colorful crate filled with specialties catering to fennecs."
+	icon = 'icons/obj/closets/bases/fencrate_vr.dmi'
+	closet_appearance = /decl/closet_appearance/crate/fennec
+	points_per_crate = 0

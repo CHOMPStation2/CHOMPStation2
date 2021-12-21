@@ -11,26 +11,26 @@
 
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/labcoat/fluff/eioni_1/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 
 /obj/item/clothing/under/fluff/eioni_2
@@ -51,26 +51,26 @@
 	/////////////////////////////TODO//////////////////////
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/hoodie/fluff/redax_1/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/under/fluff/redax_2
 	name = "Alarming outfit"
@@ -172,26 +172,26 @@
 
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/mask/fluff/lucerna_1 //Doesn't work for some reason
 	name =	"Mysterious mask"
@@ -709,48 +709,43 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "aurora_glasses"
  	icon_override = 'icons/vore/custom_onmob_yw.dmi'
- 	override = 1
  	item_state = "aurora_glasses"
 
  //Strix Hades
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
  	name = "Colony Director Coat"
  	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cd"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_cd"
 
-/obj/item/clothing/under/seromi/undercoat/fluff/strix
+/obj/item/clothing/under/teshari/undercoat/fluff/strix
 	name = "Colony Director Undercoat"
 	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cd"
-	override = 1
 	item_state = "tesh_uniform_cd"
 	sprite_sheets = list(
 					SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/strix_cco
  	name = "Central Command Cloak"
  	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cco"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_cco"
 
-/obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+/obj/item/clothing/under/teshari/undercoat/fluff/strix_cco
 	name = "Central Command Undercoat"
 	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cco"
-	override = 1
 	item_state = "tesh_uniform_cco"
 	sprite_sheets = list(
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
@@ -858,36 +853,35 @@
 	body_parts_covered = UPPER_TORSO
 	var/hoodup = 1
 
-	verb/toggle()
-		set name = "Toggle Hood"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/fluff/ivy/verb/toggle()
+	set name = "Toggle Hood"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(hoodup)
-			if(0)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				hoodup = 1
-				usr << "You take off the hood."
-			if(1)
-				icon_state = "[initial(icon_state)]_up"
-				item_state = "[initial(item_state)]_up"
-				hoodup= 0
-				usr << "You put on the hood."
-		usr.update_inv_wear_suit()
+	switch(hoodup)
+		if(0)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			hoodup = 1
+			usr << "You take off the hood."
+		if(1)
+			icon_state = "[initial(icon_state)]_up"
+			item_state = "[initial(item_state)]_up"
+			hoodup= 0
+			usr << "You put on the hood."
+	usr.update_inv_wear_suit()
 
 //Kita
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/kita
  	name = "Magical Cloak"
  	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_kita"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_kita"
 
 // ********
@@ -1025,7 +1019,6 @@
 	icon_state = "jiao_glasses"
 	off_state = "jiao_glasses_off"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
 	item_state = "jiao_glasses"
 	species_restricted = list("Akula")
 
@@ -1151,13 +1144,12 @@
 
 //Saroth
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/Saroth
  	name = "Research Director cloak"
  	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_saroth"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_saroth"
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
@@ -1167,7 +1159,6 @@
     icon_state = "jaree_cloak"
     icon_override = 'icons/vore/custom_onmob_yw.dmi'
     item_state = "jaree_cloak"
-    override = 1
 
 /obj/item/clothing/head/ushanka/alt/fluff/Jaree
     name = "ushanka"
@@ -1246,7 +1237,6 @@
 	icon_state = "noel_glasses"
 	off_state = "noel_glasses_off"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
 	item_state = "noel_glasses"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
@@ -1256,7 +1246,6 @@
     icon_state = "noel_hoodie"
     // "noel_hoodie_open" will be the open state
     icon_override = 'icons/vore/custom_onmob_yw.dmi'
-    //override = 1 //What is this? VS does not have this
     item_state = null
 
 /obj/item/clothing/ears/earings/fluff/noel_earings
@@ -1321,21 +1310,19 @@
 	icon_state = "kentauri_uniform"
 	item_state = "kentauri_uniform"
 
-/obj/item/clothing/suit/armor/vest/harpsong
-	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-		if(..())
-			if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
-				return ..()
-			else
-				to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
-				return 0
+/obj/item/clothing/suit/armor/vest/harpsong/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+	if(..())
+		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
+			return ..()
+		else
+			to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
+			return 0
 
-/obj/item/clothing/suit/armor/vest/harpsong
-    make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
-        var/image/result = ..()
-        result.pixel_x = -16
-        result.layer = BODY_LAYER + 15
-        return result
+/obj/item/clothing/suit/armor/vest/harpsong/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0, var/icon/clip_mask = null)
+	var/image/result = ..()
+	result.pixel_x = -16
+	result.layer = BODY_LAYER + 15
+	return result
 
 // *****
 // SASOperative
@@ -1607,7 +1594,7 @@
 /obj/item/weapon/storage/backpack/fluff/kaith
 	name = "Light duffle bag"
 	desc = "A compact duffle bag, meant for long hikes."
-	icon = 'icons/obj/clothing/backpack.dmi'
+	icon = 'icons/inventory/back/item.dmi'
 	icon_state = "duffle"
 
 
@@ -1661,3 +1648,80 @@
 	icon_override = 'icons/vore/custom_items_vr.dmi'
 	item_state = "khlife_overlay"
 	overlay_state = "khlife_overlay"
+
+// ******
+// KBraid
+// ******
+/obj/item/clothing/glasses/fluff/avigoggles_yw
+	name = "aviation goggles"
+	desc = "You're such a goggle head!"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "avigoggles_i"
+	item_state = "avigoggles"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	action_button_name = "Flip Aviation Goggles"
+	item_flags = AIRTIGHT
+	var/up = 0
+
+/obj/item/clothing/glasses/fluff/avigoggles_yw/attack_self()
+	toggle()
+
+/obj/item/clothing/glasses/fluff/avigoggles_yw/verb/toggle()
+	set category = "Object"
+	set name = "Adjust aviation goggles"
+	set src in usr
+
+	if(usr.canmove && !usr.stat && !usr.restrained())
+		if(src.up)
+			src.up = !src.up
+			flags_inv |= HIDEEYES
+			body_parts_covered |= EYES
+			item_state = initial(item_state)
+			to_chat(usr, "You flip \the [src] down to protect your eyes.")
+		else
+			src.up = !src.up
+			flags_inv &= ~HIDEEYES
+			body_parts_covered &= ~EYES
+			item_state = "[initial(item_state)]_up"
+			to_chat(usr, "You push \the [src] up out of your face.")
+		update_clothing_icon()
+		usr.update_action_buttons()
+
+/obj/item/clothing/glasses/fluff/avigoggles_yw/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+	if(body_type == SPECIES_TESHARI)
+		if(!inhands)
+			return 'icons/vore/custom_clothes_yw_special.dmi'
+	else
+		return ..()
+
+/obj/item/clothing/suit/storage/hooded/fluff/kbraid
+	name = "Braid's outfit"
+	desc = "The uniform of an Avali named Braid"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kbraid_outfit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kbraid_outfit_s"
+	body_parts_covered = UPPER_TORSO|ARMS|FEET
+	hoodtype = /obj/item/clothing/head/hood/kbraid_hood
+	action_button_name = "Toggle Headphones"
+
+/obj/item/clothing/head/hood/kbraid_hood
+	name = "Earphones"
+	desc = "A set of Avali earphones."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kbraid_head"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kbraid_head_s"
+	ear_protection = 1
+
+// ********
+// Whiteout
+// ********
+/obj/item/clothing/under/harness_white
+	name = "white gear harness"
+	desc = "How... minimalist."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "gear_harness_white"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "gear_harness_white"
+	body_parts_covered = 0

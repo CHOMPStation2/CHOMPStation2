@@ -79,7 +79,7 @@
 /mob/living/silicon/stun_effect_act(var/stun_amount, var/agony_amount)
 	return	//immune
 
-/mob/living/silicon/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 0.0)
+/mob/living/silicon/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 0.0, var/def_zone = null, var/stun = 1)
 	if(shock_damage > 0)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, loc)
@@ -113,27 +113,9 @@
 	updatehealth()
 	return 2
 
-/mob/living/silicon/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0)
+/mob/living/silicon/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0, var/check_protection = 1)
 	return 0//The only effect that can hit them atm is flashes and they still directly edit so this works for now
-/*
-	if(!effect || (blocked >= 2))	return 0
-	switch(effecttype)
-		if(STUN)
-			stunned = max(stunned,(effect/(blocked+1)))
-		if(WEAKEN)
-			weakened = max(weakened,(effect/(blocked+1)))
-		if(PARALYZE)
-			paralysis = max(paralysis,(effect/(blocked+1)))
-		if(IRRADIATE)
-			radiation += min((effect - (effect*getarmor(null, "rad"))), 0)//Rads auto check armor
-		if(STUTTER)
-			stuttering = max(stuttering,(effect/(blocked+1)))
-		if(EYE_BLUR)
-			eye_blurry = max(eye_blurry,(effect/(blocked+1)))
-		if(DROWSY)
-			drowsyness = max(drowsyness,(effect/(blocked+1)))
-	updatehealth()
-	return 1*/
+
 
 /proc/islinked(var/mob/living/silicon/robot/bot, var/mob/living/silicon/ai/ai)
 	if(!istype(bot) || !istype(ai))
@@ -171,6 +153,7 @@
 		show_malf_ai()
 	..()
 
+/* VOREStation Removal
 // this function displays the stations manifest in a separate window
 /mob/living/silicon/proc/show_station_manifest()
 	var/dat = "<div align='center'>"
@@ -182,9 +165,10 @@
 	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
 	popup.set_content(dat)
 	popup.open()
+*/
 
 //can't inject synths
-/mob/living/silicon/can_inject(var/mob/user, var/error_msg)
+/mob/living/silicon/can_inject(var/mob/user, var/error_msg, var/target_zone, var/ignore_thickness = FALSE)
 	if(error_msg)
 		to_chat(user, "<span class='alert'>The armoured plating is too tough.</span>")
 	return 0
@@ -193,10 +177,17 @@
 //Silicon mob language procs
 
 /mob/living/silicon/can_speak(datum/language/speaking)
-	return universal_speak || (speaking in src.speech_synthesizer_langs) || (speaking.name == "Noise")	//need speech synthesizer support to vocalize a language
+	if(universal_speak)
+		return TRUE
+	//need speech synthesizer support to vocalize a language
+	if(speaking in speech_synthesizer_langs)
+		return TRUE
+	if(speaking && speaking.flags & INNATE)
+		return TRUE
+	return FALSE
 
 /mob/living/silicon/add_language(var/language, var/can_speak=1)
-	var/var/datum/language/added_language = GLOB.all_languages[language]
+	var/datum/language/added_language = GLOB.all_languages[language]
 	if(!added_language)
 		return
 
@@ -206,22 +197,18 @@
 		return 1
 
 /mob/living/silicon/remove_language(var/rem_language)
-	var/var/datum/language/removed_language = GLOB.all_languages[rem_language]
+	var/datum/language/removed_language = GLOB.all_languages[rem_language]
 	if(!removed_language)
 		return
 
 	..(rem_language)
 	speech_synthesizer_langs -= removed_language
 
-/mob/living/silicon/check_languages()
-	set name = "Check Known Languages"
-	set category = "IC"
-	set src = usr
-
-	var/dat = "<b><font size = 5>Known Languages</font></b><br/><br/>"
+/mob/living/silicon/check_lang_data()
+	. = ""
 
 	if(default_language)
-		dat += "Current default language: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/><br/>"
+		. += "Current default language: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br><br>"
 
 	for(var/datum/language/L in languages)
 		if(!(L.flags & NONGLOBAL))
@@ -232,13 +219,10 @@
 				default_str = " - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>set default</a>"
 
 			var/synth = (L in speech_synthesizer_langs)
-			dat += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br/>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br/>[L.desc]<br/><br/>"
-
-	src << browse(dat, "window=checklanguage")
-	return
+			. += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
 
 /mob/living/silicon/proc/toggle_sensor_mode()
-	var/sensor_type = input("Please select sensor type.", "Sensor Integration", null) in list("Security","Medical","Disable")
+	var/sensor_type = tgui_input_list(usr, "Please select sensor type.", "Sensor Integration", list("Security","Medical","Disable"))
 	switch(sensor_type)
 		if ("Security")
 			if(plane_holder)
@@ -305,6 +289,15 @@
 	if(!blinded)
 		flash_eyes()
 
+	for(var/datum/modifier/M in modifiers)
+		if(!isnull(M.explosion_modifier))
+			severity = CLAMP(severity + M.explosion_modifier, 1, 4)
+
+	severity = round(severity)
+
+	if(severity > 3)
+		return
+
 	switch(severity)
 		if(1.0)
 			if (stat != 2)
@@ -326,6 +319,8 @@
 	if(!next_alarm_notice)
 		next_alarm_notice = world.time + SecondsToTicks(10)
 	if(alarm.hidden)
+		return
+	if(alarm.origin && !(get_z(alarm.origin) in using_map.get_map_levels(get_z(src), TRUE, om_range = DEFAULT_OVERMAP_RANGE)))
 		return
 
 	var/list/alarms = queued_alarms[alarm_handler]
@@ -399,7 +394,7 @@
 	return
 
 /mob/living/silicon/reset_view()
-	..()
+	. = ..()
 	if(cameraFollow)
 		cameraFollow = null
 
@@ -424,3 +419,6 @@
 
 /mob/living/silicon/has_vision()
 	return 0 //NOT REAL EYES
+
+/mob/living/silicon/can_feed()
+	return FALSE

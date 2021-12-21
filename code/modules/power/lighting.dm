@@ -24,7 +24,7 @@ var/global/list/light_type_cache = list()
 	desc = "A light fixture under construction."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "tube-construct-stage1"
-	anchored = 1
+	anchored = TRUE
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
 	var/stage = 1
@@ -56,23 +56,22 @@ var/global/list/light_type_cache = list()
 			icon_state = "tube-empty"
 
 /obj/machinery/light_construct/examine(mob/user)
-	if(!..(user, 2))
-		return
-
-	switch(src.stage)
-		if(1)
-			to_chat(user, "It's an empty frame.")
-		if(2)
-			to_chat(user, "It's wired.")
-		if(3)
-			to_chat(user, "The casing is closed.")
-	if(cell_connectors)
-		if(cell)
-			to_chat(user, "You see [cell] inside the casing.")
+	. = ..()
+	if(get_dist(user, src) <= 2)
+		switch(stage)
+			if(1)
+				. += "It's an empty frame."
+			if(2)
+				. += "It's wired."
+			if(3)
+				. += "The casing is closed."
+		if(cell_connectors)
+			if(cell)
+				. += "You see [cell] inside the casing."
+			else
+				. += "The casing has no power cell for backup power."
 		else
-			to_chat(user, "The casing has no power cell for backup power.")
-	else
-		to_chat(user, "<span class='danger'>This casing doesn't support power cells for backup power.</span>")
+			. += "<span class='danger'>This casing doesn't support power cells for backup power.</span>"
 
 /obj/machinery/light_construct/attack_hand(mob/user)
 	. = ..()
@@ -113,7 +112,7 @@ var/global/list/light_type_cache = list()
 			new /obj/item/stack/material/steel( get_turf(src.loc), sheets_refunded )
 			user.visible_message("[user.name] deconstructs [src].", \
 				"You deconstruct [src].", "You hear a noise.")
-			playsound(src.loc, 'sound/items/Deconstruct.ogg', 75, 1)
+			playsound(src, 'sound/items/Deconstruct.ogg', 75, 1)
 			qdel(src)
 		if (src.stage == 2)
 			to_chat(usr, "You have to remove the wires first.")
@@ -130,7 +129,7 @@ var/global/list/light_type_cache = list()
 		new /obj/item/stack/cable_coil(get_turf(src.loc), 1, "red")
 		user.visible_message("[user.name] removes the wiring from [src].", \
 			"You remove the wiring from [src].", "You hear a noise.")
-		playsound(src.loc, W.usesound, 50, 1)
+		playsound(src, W.usesound, 50, 1)
 		return
 
 	if(istype(W, /obj/item/stack/cable_coil))
@@ -167,7 +166,7 @@ var/global/list/light_type_cache = list()
 	desc = "A small light fixture under construction."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "bulb-construct-stage1"
-	anchored = 1
+	anchored = TRUE
 	stage = 1
 	fixture_type = /obj/machinery/light/small
 	sheets_refunded = 1
@@ -186,7 +185,7 @@ var/global/list/light_type_cache = list()
 	desc = "A floor light fixture under construction."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flamp-construct-stage1"
-	anchored = 0
+	anchored = FALSE
 	plane = OBJ_PLANE
 	layer = OBJ_LAYER
 	stage = 1
@@ -209,7 +208,7 @@ var/global/list/light_type_cache = list()
 	var/base_state = "tube"		// base description and icon_state
 	icon_state = "tube1"
 	desc = "A lighting fixture."
-	anchored = 1
+	anchored = TRUE
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
 	use_power = USE_POWER_ACTIVE
@@ -246,8 +245,17 @@ var/global/list/light_type_cache = list()
 	var/bulb_emergency_pow_mul = 0.75	// the multiplier for determining the light's power in emergency mode
 	var/bulb_emergency_pow_min = 0.5	// the minimum value for the light's power in emergency mode
 
+	var/nightshift_enabled = FALSE
+	var/nightshift_allowed = TRUE
+	var/brightness_range_ns
+	var/brightness_power_ns
+	var/brightness_color_ns
+
 /obj/machinery/light/flicker
 	auto_flicker = TRUE
+
+/obj/machinery/light/no_nightshift
+	nightshift_allowed = FALSE
 
 // the smaller bulb light fixture
 
@@ -275,13 +283,13 @@ var/global/list/light_type_cache = list()
 	plane = OBJ_PLANE
 	layer = OBJ_LAYER
 	desc = "A floor lamp."
-	light_type = /obj/item/weapon/light/bulb
+	light_type = /obj/item/weapon/light/bulb/large
 	construct_type = /obj/machinery/light_construct/flamp
 	shows_alerts = FALSE	//VOREStation Edit
 	var/lamp_shade = 1
 
-/obj/machinery/light/flamp/New(atom/newloc, obj/machinery/light_construct/construct = null)
-	..(newloc, construct)
+/obj/machinery/light/flamp/Initialize(mapload, obj/machinery/light_construct/construct = null)
+	. = ..()
 	if(construct)
 		start_with_cell = FALSE
 		lamp_shade = 0
@@ -305,19 +313,22 @@ var/global/list/light_type_cache = list()
 	light_type = /obj/item/weapon/light/tube/large
 	shows_alerts = FALSE	//VOREStation Edit
 
+//YW ADDITION START
+/obj/machinery/light/spot/no_nightshift
+	nightshift_allowed = FALSE
+//YW ADDITION END
+
 /obj/machinery/light/spot/flicker
 	auto_flicker = TRUE
 
 //VOREStation Add - Shadeless!
-/obj/machinery/light/flamp/noshade/New()
+/obj/machinery/light/flamp/noshade
 	lamp_shade = 0
-	update(0)
-	..()
 //VOREStation Add End
 
 // create a new lighting fixture
-/obj/machinery/light/New(atom/newloc, obj/machinery/light_construct/construct = null)
-	..(newloc)
+/obj/machinery/light/Initialize(mapload, obj/machinery/light_construct/construct = null)
+	. =..()
 
 	if(start_with_cell && !no_emergency)
 		cell = new/obj/item/weapon/cell/emergency_light(src)
@@ -388,25 +399,33 @@ var/global/list/light_type_cache = list()
 		..()
 //VOREStation Edit Start
 /obj/machinery/light/proc/set_alert_atmos()
-	if(shows_alerts)
-		current_alert = "atmos"
-		brightness_color = "#6D6DFC"
-		if(on)
-			update()
+	if(!shows_alerts)
+		return
+	current_alert = "atmos"
+	brightness_color = "#6D6DFC"
+	update()
 
 /obj/machinery/light/proc/set_alert_fire()
-	if(shows_alerts)
-		current_alert = "fire"
-		brightness_color = "#FF3030"
-		if(on)
-			update()
+	if(!shows_alerts)
+		return
+	current_alert = "fire"
+	brightness_color = "#FF3030"
+	update()
 
 /obj/machinery/light/proc/reset_alert()
-	if(shows_alerts)
-		current_alert = null
-		brightness_color = initial(brightness_color) || "" // Workaround for BYOND stupidity. Can't set it to null or it won't clear.
-		if(on)
-			update()
+	if(!shows_alerts)
+		return
+
+	current_alert = null
+	var/obj/item/weapon/light/L = get_light_type_instance(light_type)
+	
+	if(L)
+		update_from_bulb(L)
+	else
+		brightness_color = nightshift_enabled ? initial(brightness_color_ns) : initial(brightness_color)
+	
+	update()
+
 //VOREstation Edit End
 // update lighting
 /obj/machinery/light/proc/update(var/trigger = 1)
@@ -415,12 +434,15 @@ var/global/list/light_type_cache = list()
 	if(!on)
 		needsound = TRUE // Play sound next time we turn on
 	else if(needsound)
-		playsound(src.loc, 'sound/effects/lighton.ogg', 65, 1)
+		playsound(src, 'sound/effects/lighton.ogg', 65, 1)
 		needsound = FALSE // Don't play sound again until we've been turned off
 	//VOREStation Edit End
 
 	if(on)
-		if(light_range != brightness_range || light_power != brightness_power || light_color != brightness_color)
+		var/correct_range = nightshift_enabled ? brightness_range_ns : brightness_range
+		var/correct_power = nightshift_enabled ? brightness_power_ns : brightness_power
+		var/correct_color = nightshift_enabled ? brightness_color_ns : brightness_color
+		if(light_range != correct_range || light_power != correct_power || light_color != correct_color)
 			if(!auto_flicker)
 				switchcount++
 			if(rigged)
@@ -438,9 +460,11 @@ var/global/list/light_type_cache = list()
 					set_light(0)
 			else
 				update_use_power(USE_POWER_ACTIVE)
-				set_light(brightness_range, brightness_power, brightness_color)
+				set_light(correct_range, correct_power, correct_color)
+		if(cell?.charge < cell?.maxcharge)
+			START_PROCESSING(SSobj, src)
 	else if(has_emergency_power(LIGHT_EMERGENCY_POWER_USE) && !turned_off())
-		use_power = 1
+		update_use_power(USE_POWER_IDLE)
 		emergency_mode = TRUE
 		START_PROCESSING(SSobj, src)
 	else
@@ -448,8 +472,15 @@ var/global/list/light_type_cache = list()
 		set_light(0)
 		update_icon()
 
-	active_power_usage = ((light_range * light_power) * LIGHTING_POWER_FACTOR)
+	update_active_power_usage((light_range * light_power) * LIGHTING_POWER_FACTOR)
 
+/obj/machinery/light/proc/nightshift_mode(var/state)
+	if(!nightshift_allowed)
+		return
+
+	if(state != nightshift_enabled)
+		nightshift_enabled = state
+		update(FALSE)
 
 /obj/machinery/light/attack_generic(var/mob/user, var/damage)
 	if(!damage)
@@ -488,18 +519,19 @@ var/global/list/light_type_cache = list()
 
 // examine verb
 /obj/machinery/light/examine(mob/user)
+	. = ..()
 	var/fitting = get_fitting_name()
 	switch(status)
 		if(LIGHT_OK)
-			to_chat(user, "[desc] It is turned [on? "on" : "off"].")
+			. += "It is turned [on? "on" : "off"]."
 		if(LIGHT_EMPTY)
-			to_chat(user, "[desc] The [fitting] has been removed.")
+			. += "The [fitting] has been removed."
 		if(LIGHT_BURNED)
-			to_chat(user, "[desc] The [fitting] is burnt out.")
+			. += "The [fitting] is burnt out."
 		if(LIGHT_BROKEN)
-			to_chat(user, "[desc] The [fitting] has been smashed.")
+			. += "The [fitting] has been smashed."
 	if(cell)
-		to_chat(user, "Its backup power charge meter reads [round((cell.charge / cell.maxcharge) * 100, 0.1)]%.")
+		. += "Its backup power charge meter reads [round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
 
 
 /obj/machinery/light/proc/get_fitting_name()
@@ -510,9 +542,14 @@ var/global/list/light_type_cache = list()
 	status = L.status
 	switchcount = L.switchcount
 	rigged = L.rigged
+
 	brightness_range = L.brightness_range
 	brightness_power = L.brightness_power
 	brightness_color = L.brightness_color
+
+	brightness_range_ns = L.nightshift_range
+	brightness_power_ns = L.nightshift_power
+	brightness_color_ns = L.nightshift_color
 
 // attack with item - insert light (if right type), otherwise try to break the light
 
@@ -676,6 +713,8 @@ var/global/list/light_type_cache = list()
 				if(status != LIGHT_OK) break
 				on = !on
 				update(0)
+				if(!on) // Only play when the light turns off.
+					playsound(src, 'sound/effects/light_flicker.ogg', 50, 1)
 				sleep(rand(5, 15))
 			on = (status == LIGHT_OK)
 			update(0)
@@ -776,7 +815,7 @@ var/global/list/light_type_cache = list()
 
 	if(!skip_sound_and_sparks)
 		if(status == LIGHT_OK || status == LIGHT_BURNED)
-			playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
+			playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
 		if(on)
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(3, 1, src)
@@ -819,11 +858,11 @@ var/global/list/light_type_cache = list()
 	if(has_power())
 		emergency_mode = FALSE
 		update(FALSE)
-		if(cell.charge == cell.maxcharge)
+		if(!cell.give(LIGHT_EMERGENCY_POWER_USE*2)) // Recharge and stop if no more was able to be added
 			return PROCESS_KILL
-		cell.charge = min(cell.maxcharge, cell.charge + LIGHT_EMERGENCY_POWER_USE*2) //Recharge emergency power automatically while not using it
 	if(emergency_mode && !use_emergency_power(LIGHT_EMERGENCY_POWER_USE))
 		update(FALSE) //Disables emergency mode and sets the color to normal
+		return PROCESS_KILL // Drop out if we're out of cell power. These are often in POIs and there's no point in recharging.
 
 	if(auto_flicker && !flickering)
 		if(check_for_player_proximity(src, radius = 12, ignore_ghosts = FALSE, ignore_afk = TRUE))
@@ -863,16 +902,36 @@ var/global/list/light_type_cache = list()
 	force = 2
 	throwforce = 5
 	w_class = ITEMSIZE_TINY
-	var/status = 0		// LIGHT_OK, LIGHT_BURNED or LIGHT_BROKEN
+	matter = list(MAT_STEEL = 60)
+	
+	///LIGHT_OK, LIGHT_BURNED or LIGHT_BROKEN
+	var/status = LIGHT_OK
+	///Base icon_state name to append suffixes for status
 	var/base_state
-	var/switchcount = 0	// number of times switched
-	matter = list(DEFAULT_WALL_MATERIAL = 60)
-	var/rigged = 0		// true if rigged to explode
+	///Number of times switched on/off
+	var/switchcount = 0
+	///Is this light set to explode
+	var/rigged = 0
+	///The chance (prob()) that this light will be broken at roundstart
 	var/broken_chance = 2
 
-	var/brightness_range = 2 //how much light it gives off
+	///The raidus in turfs this light will reach. It will be at it's most dim this many turfs away.
+	/// This is also used in power draw calculation for machinery/lights.
+	var/brightness_range = 8
+	///The light will fall off over more/less range based on this. The formula is complicated.
 	var/brightness_power = 1
+	///The color of the light emitted.
 	var/brightness_color = LIGHT_COLOR_INCANDESCENT_TUBE
+
+	///Replaces brightness_range during nightshifts.
+	var/nightshift_range = 8
+	///Replaces brightness_power during nightshifts.
+	var/nightshift_power = 0.45
+	///Replaces brightness_color during nightshifts.
+	var/nightshift_color = LIGHT_COLOR_NIGHTSHIFT
+	
+	drop_sound = 'sound/items/drop/glass.ogg'
+	pickup_sound = 'sound/items/pickup/glass.ogg'
 
 /obj/item/weapon/light/tube
 	name = "light tube"
@@ -880,15 +939,18 @@ var/global/list/light_type_cache = list()
 	icon_state = "ltube"
 	base_state = "ltube"
 	item_state = "c_tube"
-	matter = list("glass" = 100)
-	brightness_range = 10	// luminosity when on, also used in power calculation //VOREStation Edit
-	brightness_power = 6
+	matter = list(MAT_GLASS = 100)
+	brightness_range = 7
+	brightness_power = 2
 
 /obj/item/weapon/light/tube/large
 	w_class = ITEMSIZE_SMALL
 	name = "large light tube"
 	brightness_range = 15
-	brightness_power = 9
+	brightness_power = 4
+
+	nightshift_range = 10
+	nightshift_power = 1.5
 
 /obj/item/weapon/light/bulb
 	name = "light bulb"
@@ -896,10 +958,22 @@ var/global/list/light_type_cache = list()
 	icon_state = "lbulb"
 	base_state = "lbulb"
 	item_state = "contvapour"
-	matter = list("glass" = 100)
+	matter = list(MAT_GLASS = 100)
 	brightness_range = 5
-	brightness_power = 4
+	brightness_power = 1
 	brightness_color = LIGHT_COLOR_INCANDESCENT_BULB
+
+	nightshift_range = 3
+	nightshift_power = 0.5
+
+// For 'floor lamps' in outdoor use and such
+/obj/item/weapon/light/bulb/large
+	name = "large light bulb"
+	brightness_range = 7
+	brightness_power = 1.5
+	
+	nightshift_range = 4
+	nightshift_power = 0.75
 
 /obj/item/weapon/light/throw_impact(atom/hit_atom)
 	..()
@@ -916,7 +990,7 @@ var/global/list/light_type_cache = list()
 	icon_state = "fbulb"
 	base_state = "fbulb"
 	item_state = "egg4"
-	matter = list("glass" = 100)
+	matter = list(MAT_GLASS = 100)
 
 // update the icon state and description of the light
 /obj/item/weapon/light/update_icon()
@@ -986,8 +1060,8 @@ var/global/list/light_type_cache = list()
 		src.visible_message("<font color='red'>[name] shatters.</font>","<font color='red'> You hear a small glass object shatter.</font>")
 		status = LIGHT_BROKEN
 		force = 5
-		sharp = 1
-		playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
+		sharp = TRUE
+		playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
 		update_icon()
 
 //Lamp Shade

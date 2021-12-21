@@ -6,8 +6,8 @@
 	icon = 'icons/obj/machines/algae_vr.dmi'
 	icon_state = "algae-off"
 	circuit = /obj/item/weapon/circuitboard/algae_farm
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	power_channel = EQUIP
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 100		// Minimal lights to keep algae alive
@@ -44,10 +44,10 @@
 	// TODO - Make these in actual icon states so its not silly like this
 	var/image/I = image(icon = icon, icon_state = "algae-pipe-overlay", dir = dir)
 	I.color = PIPE_COLOR_BLUE
-	overlays += I
+	add_overlay(I)
 	I = image(icon = icon, icon_state = "algae-pipe-overlay", dir = reverse_dir[dir])
 	I.color = PIPE_COLOR_BLACK
-	overlays += I
+	add_overlay(I)
 
 /obj/machinery/atmospherics/binary/algae_farm/Destroy()
 	. = ..()
@@ -140,7 +140,7 @@
 /obj/machinery/atmospherics/binary/algae_farm/attack_hand(mob/user)
 	if(..())
 		return 1
-	ui_interact(user)
+	tgui_interact(user)
 
 /obj/machinery/atmospherics/binary/algae_farm/RefreshParts()
 	..()
@@ -165,7 +165,13 @@
 
 	moles_per_tick = initial(moles_per_tick) + (manip_rating**2 - 1)
 
-/obj/machinery/atmospherics/binary/algae_farm/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/nano_ui/master_ui = null, var/datum/topic_state/state = default_state)
+/obj/machinery/atmospherics/binary/algae_farm/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "AlgaeFarm", name)
+		ui.open()
+
+/obj/machinery/atmospherics/binary/algae_farm/tgui_data(mob/user)
 	var/data[0]
 	data["panelOpen"] = panel_open
 
@@ -198,56 +204,41 @@
 			"percent" = air2.total_moles ? round((air2.gas[output_gas] / air2.total_moles) * 100) : 0,
 			"moles" = round(air2.gas[output_gas], 0.01))
 
-	// update the ui if it exists, returns null if no ui is passed/found
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, "algae_farm_vr.tmpl", "Algae Farm Control Panel", 500, 600)
-		ui.set_initial_data(data)
-		ui.set_auto_update(TRUE)
-		ui.open()
+	return data
 
-/obj/machinery/atmospherics/binary/algae_farm/Topic(href, href_list)
+/obj/machinery/atmospherics/binary/algae_farm/tgui_act(action, params)
 	if(..())
-		return 1
-	usr.set_machine(src)
+		return TRUE
 	add_fingerprint(usr)
 
-	// Queue management can be done even while busy
-	if(href_list["activate"])
-		update_use_power(USE_POWER_ACTIVE)
-		update_icon()
-		updateUsrDialog()
-		return
+	switch(action)
+		if("toggle")
+			if(use_power == USE_POWER_IDLE)
+				update_use_power(USE_POWER_ACTIVE)
+			else
+				update_use_power(USE_POWER_IDLE)
+			update_icon()
+			. = TRUE
 
-	if(href_list["deactivate"])
-		update_use_power(USE_POWER_IDLE)
-		update_icon()
-		updateUsrDialog()
-		return
-
-	if(href_list["ejectMaterial"])
-		var/matName = href_list["ejectMaterial"]
-		if(!(matName in stored_material))
-			return
-		eject_materials(matName, 0)
-		updateUsrDialog()
-		return
-
+		if("ejectMaterial")
+			var/matName = params["mat"]
+			if(!(matName in stored_material))
+				return
+			eject_materials(matName, 0)
+			. = TRUE
 
 // TODO - These should be replaced with materials datum.
 
 // 0 amount = 0 means ejecting a full stack; -1 means eject everything
 /obj/machinery/atmospherics/binary/algae_farm/proc/eject_materials(var/material_name, var/amount)
 	var/recursive = amount == -1 ? 1 : 0
-	var/material/matdata = get_material_by_name(material_name)
+	var/datum/material/matdata = get_material_by_name(material_name)
 	var/stack_type = matdata.stack_type
 	var/obj/item/stack/material/S = new stack_type(loc)
 	if(amount <= 0)
 		amount = S.max_amount
 	var/ejected = min(round(stored_material[material_name] / S.perunit), amount)
-	S.amount = min(ejected, amount)
-	if(S.amount <= 0)
-		qdel(S)
+	if(!S.set_amount(min(ejected, amount)))
 		return
 	stored_material[material_name] -= ejected * S.perunit
 	if(recursive && stored_material[material_name] >= S.perunit)
@@ -263,7 +254,7 @@
 	var/max_res_amount = storage_capacity[S.material.name]
 	if(stored_material[S.material.name] + S.perunit <= max_res_amount)
 		var/count = 0
-		while(stored_material[S.material.name] + S.perunit <= max_res_amount && S.amount >= 1)
+		while(stored_material[S.material.name] + S.perunit <= max_res_amount && S.get_amount() >= 1)
 			stored_material[S.material.name] += S.perunit
 			S.use(1)
 			count++
@@ -273,7 +264,7 @@
 		to_chat(user, "<span class='warning'>\The [src] cannot hold more [S.name].</span>")
 	return 1
 
-/material/algae
+/datum/material/algae
 	name = MAT_ALGAE
 	stack_type = /obj/item/stack/material/algae
 	icon_colour = "#557722"

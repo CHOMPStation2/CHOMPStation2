@@ -1,21 +1,9 @@
-/hook/startup/proc/modules_vr()
-	robot_module_types += "Medihound"
-	robot_module_types += "K9"
-	robot_module_types += "Janihound"
-	robot_module_types += "Sci-borg"
-	robot_module_types += "Pupdozer"
-	robot_module_types += "Servicehound" //YW changes
-	robot_module_types += "BoozeHound" //YW changes
-	return 1
+var/list/vinestart			= list()
+var/list/verminstart		= list()
 
-var/list/shell_module_types = list(
-	"Standard", "Engineering", "Surgeon",  "Crisis",
-	"Miner", "Janitor", "Service", "Clerical",
-	"Medihound", "Janihound",
-	"Servicehound" //YW changes
-)
-
+var/list/awayabductors = list() // List of scatter landmarks for Abductors in Gateways
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
+var/list/eventabductors = list() // List of scatter landmarks for VOREStation abductor portals
 
 var/global/list/acceptable_fruit_types= list(
 											"ambrosia",
@@ -32,6 +20,7 @@ var/global/list/acceptable_fruit_types= list(
 											"durian",
 											"eggplant",
 											"grapes",
+											"grass", // CH changes
 											"greengrapes",
 											"harebells",
 											"lavender",
@@ -44,14 +33,17 @@ var/global/list/acceptable_fruit_types= list(
 											"poppies",
 											"potato",
 											"pumpkin",
+											"reishi", // CH changes
 											"rice",
 											"rose",
 											"rhubarb",
+											"shand", // CH changes
 											"soybean",
 											"spineapple",
 											"sugarcane",
 											"sunflowers",
 											"tomato",
+											"towercap", // CH changes
 											"vanilla",
 											"watermelon",
 											"wheat",

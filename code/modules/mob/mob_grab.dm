@@ -34,6 +34,7 @@
 	abstract = 1
 	item_state = "nothing"
 	w_class = ITEMSIZE_HUGE
+	destroy_on_drop = TRUE	//VOREStation Edit
 
 
 /obj/item/weapon/grab/New(mob/user, mob/victim)
@@ -174,12 +175,13 @@
 				assailant.visible_message("<span class='warning'>[assailant] covers [affecting]'s eyes!</span>")
 			if(affecting.eye_blind < 3)
 				affecting.Blind(3)
-		//TFF 8/1/20 CHOMPStation Addition Start - Re-add sitting on one's head.
 		if(BP_HEAD)
 			if(force_down)
-				if(announce)
-					assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s head!</span>")
-		//CHOMPStation Addition End
+				if(user.a_intent == I_HELP)
+					if(announce)
+						assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s face!</span>")
+		//VOREStation Edit End
+
 /obj/item/weapon/grab/attack_self()
 	return s_click(hud)
 
@@ -238,8 +240,6 @@
 		return
 	if(state == GRAB_UPGRADING)
 		return
-	if(!assailant.canClick())
-		return
 	if(world.time < (last_action + UPGRADE_COOLDOWN))
 		return
 	if(!assailant.canmove || assailant.lying)
@@ -262,6 +262,7 @@
 		state = GRAB_AGGRESSIVE
 		icon_state = "grabbed1"
 		hud.icon_state = "reinforce1"
+		add_attack_logs(assailant, affecting, "Aggressively grabbed", FALSE) // Not important enough to notify admins, but still helpful.
 	else if(state < GRAB_NECK)
 		if(isslime(affecting))
 			to_chat(assailant, "<span class='notice'>You squeeze [affecting], but nothing interesting happens.</span>")
@@ -386,8 +387,19 @@
 
 	//It's easier to break out of a grab by a smaller mob
 	break_strength += max(size_difference(affecting, assailant), 0)
+	//CHOMPEdit Begin
+	var/prob_mult = 1
+	var/mob/living/carbon/human/grabbee = affecting
+	var/mob/living/carbon/human/grabber = assailant
+	if(istype(grabbee))
+		prob_mult /= grabbee.species.grab_resist_divisor_self
+		break_strength += grabbee.species.grab_power_self
+	if(istype(grabber))
+		prob_mult /= grabber.species.grab_resist_divisor_victims
+		break_strength += grabber.species.grab_power_victims
 
-	var/break_chance = break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)]
+	var/break_chance = CLAMP(prob_mult*break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)],0,100)
+	//CHOMPEdit End
 	if(prob(break_chance))
 		if(state == GRAB_KILL)
 			reset_kill_state()

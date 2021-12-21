@@ -13,7 +13,8 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "gift1"
 	item_state = "gift1"
-	drop_sound = 'sound/items/drop/box.ogg'
+	drop_sound = 'sound/items/drop/cardboardbox.ogg'
+	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
 /obj/item/weapon/a_gift/New()
 	..()
@@ -27,7 +28,7 @@
 
 /obj/item/weapon/gift/attack_self(mob/user as mob)
 	user.drop_item()
-	playsound(src.loc, 'sound/items/package_unwrap.ogg', 50,1)
+	playsound(src, 'sound/items/package_unwrap.ogg', 50,1)
 	if(src.gift)
 		user.put_in_active_hand(gift)
 		src.gift.add_fingerprint(user)
@@ -76,7 +77,7 @@
 		/obj/item/weapon/lipstick/random,
 		/obj/item/weapon/grenade/smokebomb,
 		/obj/item/weapon/corncob,
-		/obj/item/weapon/contraband/poster,
+		/obj/item/poster/custom,
 		/obj/item/weapon/book/manual/barman_recipes,
 		/obj/item/weapon/book/manual/chef_recipes,
 		/obj/item/weapon/bikehorn,
@@ -87,23 +88,23 @@
 		/obj/item/toy/crossbow,
 		/obj/item/weapon/gun/projectile/revolver/capgun,
 		/obj/item/toy/katana,
-		/obj/item/toy/prize/deathripley,
-		/obj/item/toy/prize/durand,
-		/obj/item/toy/prize/fireripley,
-		/obj/item/toy/prize/gygax,
-		/obj/item/toy/prize/honk,
-		/obj/item/toy/prize/marauder,
-		/obj/item/toy/prize/mauler,
-		/obj/item/toy/prize/odysseus,
-		/obj/item/toy/prize/phazon,
-		/obj/item/toy/prize/ripley,
-		/obj/item/toy/prize/seraph,
+		/obj/item/toy/mecha/deathripley,
+		/obj/item/toy/mecha/durand,
+		/obj/item/toy/mecha/fireripley,
+		/obj/item/toy/mecha/gygax,
+		/obj/item/toy/mecha/honk,
+		/obj/item/toy/mecha/marauder,
+		/obj/item/toy/mecha/mauler,
+		/obj/item/toy/mecha/odysseus,
+		/obj/item/toy/mecha/phazon,
+		/obj/item/toy/mecha/ripley,
+		/obj/item/toy/mecha/seraph,
 		/obj/item/toy/spinningtoy,
 		/obj/item/toy/sword,
 		/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
 		/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
 		/obj/item/device/paicard,
-		/obj/item/device/instrument/violin,
+		/obj/item/instrument/violin,
 		/obj/item/weapon/storage/belt/utility/full,
 		/obj/item/clothing/accessory/tie/horrible)
 
@@ -125,6 +126,8 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "wrap_paper"
 	var/amount = 20.0
+	drop_sound = 'sound/items/drop/wrapper.ogg'
+	pickup_sound = 'sound/items/pickup/wrapper.ogg'
 
 /obj/item/weapon/wrapping_paper/attackby(obj/item/weapon/W as obj, mob/living/user as mob)
 	..()
@@ -164,8 +167,9 @@
 
 
 /obj/item/weapon/wrapping_paper/examine(mob/user)
-	if(..(user, 1))
-		to_chat(user, "There is about [src.amount] square units of paper left!")
+	. = ..()
+	if(Adjacent(user))
+		. += "There is about [src.amount] square units of paper left!"
 
 /obj/item/weapon/wrapping_paper/attack(mob/target as mob, mob/user as mob)
 	if (!istype(target, /mob/living/carbon/human)) return

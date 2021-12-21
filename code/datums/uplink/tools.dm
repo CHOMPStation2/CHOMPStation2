@@ -53,6 +53,12 @@
 	name = "Black Ammunition Duffle Bag"
 	path = /obj/item/weapon/storage/backpack/dufflebag/syndie/ammo
 
+/datum/uplink_item/item/tools/shield_diffuser
+	name = "Handheld Shield Diffuser"
+	desc = "A small device used to disrupt energy barriers, and allow passage through them."
+	item_cost = 16
+	path = /obj/item/weapon/shield_diffuser
+
 /datum/uplink_item/item/tools/space_suit
 	name = "Space Suit"
 	item_cost = 15
@@ -85,6 +91,12 @@
 	path = /obj/item/device/radio_jammer
 	desc = "A device which is capable of disrupting subspace communications, preventing the use of headsets, PDAs, and communicators within \
 	a radius of seven meters.  It runs off weapon cells, which can be replaced as needed.  One cell will last for approximately ten minutes."
+
+/datum/uplink_item/item/tools/wall_elecrtifier
+	name = "Wall Electrifier"
+	item_cost = 10
+	path = /obj/item/weapon/cell/spike
+	desc = "A modified powercell which will electrify walls and reinforced floors in a 3x3 tile range around it. Always active."
 
 /datum/uplink_item/item/tools/emag
 	name = "Cryptographic Sequencer"

@@ -12,7 +12,6 @@
 
 /obj/item/weapon/circuitboard/security/New()
 	..()
-	network = using_map.station_networks
 
 /obj/item/weapon/circuitboard/security/tv
 	name = T_BOARD("security camera monitor - television")
@@ -37,7 +36,7 @@
 	name = T_BOARD("entertainment camera monitor")
 	build_path = /obj/machinery/computer/security/telescreen/entertainment
 	board_type = new /datum/frame/frame_types/display
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
 /obj/item/weapon/circuitboard/security/telescreen/entertainment/New()
 	..()
@@ -45,7 +44,7 @@
 
 /obj/item/weapon/circuitboard/security/construct(var/obj/machinery/computer/security/C)
 	if (..(C))
-		C.network = network.Copy()
+		C.set_network(network.Copy())
 
 /obj/item/weapon/circuitboard/security/deconstruct(var/obj/machinery/computer/security/C)
 	if (..(C))

@@ -1,4 +1,4 @@
-proc/random_hair_style(gender, species = SPECIES_HUMAN)
+/proc/random_hair_style(gender, species = SPECIES_HUMAN)
 	var/h_style = "Bald"
 
 	var/list/valid_hairstyles = list()
@@ -17,7 +17,7 @@ proc/random_hair_style(gender, species = SPECIES_HUMAN)
 
 	return h_style
 
-proc/random_facial_hair_style(gender, species = SPECIES_HUMAN)
+/proc/random_facial_hair_style(gender, species = SPECIES_HUMAN)
 	var/f_style = "Shaved"
 
 	var/list/valid_facialhairstyles = list()
@@ -37,14 +37,14 @@ proc/random_facial_hair_style(gender, species = SPECIES_HUMAN)
 
 		return f_style
 
-proc/sanitize_name(name, species = SPECIES_HUMAN, robot = 0)
+/proc/sanitize_name(name, species = SPECIES_HUMAN, robot = 0)
 	var/datum/species/current_species
 	if(species)
 		current_species = GLOB.all_species[species]
 
 	return current_species ? current_species.sanitize_name(name, robot) : sanitizeName(name, MAX_NAME_LEN, robot)
 
-proc/random_name(gender, species = SPECIES_HUMAN)
+/proc/random_name(gender, species = SPECIES_HUMAN)
 
 	var/datum/species/current_species
 	if(species)
@@ -58,7 +58,7 @@ proc/random_name(gender, species = SPECIES_HUMAN)
 	else
 		return current_species.get_random_name(gender)
 
-proc/random_skin_tone()
+/proc/random_skin_tone()
 	switch(pick(60;"caucasian", 15;"afroamerican", 10;"african", 10;"latino", 5;"albino"))
 		if("caucasian")		. = -10
 		if("afroamerican")	. = -115
@@ -68,7 +68,7 @@ proc/random_skin_tone()
 		else				. = rand(-185,34)
 	return min(max( .+rand(-25, 25), -185),34)
 
-proc/skintone2racedescription(tone)
+/proc/skintone2racedescription(tone)
 	switch (tone)
 		if(30 to INFINITY)		return "albino"
 		if(20 to 30)			return "pale"
@@ -80,7 +80,7 @@ proc/skintone2racedescription(tone)
 		if(-INFINITY to -65)	return "black"
 		else					return "unknown"
 
-proc/age2agedescription(age)
+/proc/age2agedescription(age)
 	switch(age)
 		if(0 to 1)			return "infant"
 		if(1 to 3)			return "toddler"
@@ -94,7 +94,7 @@ proc/age2agedescription(age)
 		else				return "unknown"
 
 /proc/RoundHealth(health)
-	var/list/icon_states = icon_states(ingame_hud_med)
+	var/list/icon_states = cached_icon_states(ingame_hud_med)
 	for(var/icon_state in icon_states)
 		if(health >= text2num(icon_state))
 			return icon_state
@@ -110,7 +110,7 @@ Proc for attack log creation, because really why not
 6 is additional information, anything that needs to be added
 */
 
-/proc/add_attack_logs(mob/user, mob/target, what_done, var/admin_notify = TRUE)
+/proc/add_attack_logs(mob/user, mob/target, what_done, var/admin_notify = TRUE, var/use_async = TRUE) //CHOMPEdit
 	if(islist(target)) //Multi-victim adding
 		var/list/targets = target
 		for(var/mob/M in targets)
@@ -120,10 +120,23 @@ Proc for attack log creation, because really why not
 	var/user_str = key_name(user)
 	var/target_str = key_name(target)
 
-	if(ismob(user))
-		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attacked [target_str]: [what_done]</font>")
+	if(ismob(user)) //CHOMPEdit Begin
+		if(SSdbcore.Connect())
+			user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attacked [target_str]: [what_done]</font>")
+			var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>"))
+			query_insert.Execute(async=use_async)
+			qdel(query_insert)
+		//if(SSdbcore.Connect())
+		//	rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>")))
 	if(ismob(target))
-		target.attack_log += text("\[[time_stamp()]\] <font color='orange'>Attacked by [user_str]: [what_done]</font>")
+		if(SSdbcore.Connect())
+			target.attack_log += text("\[[time_stamp()]\] <font color='orange'>Attacked by [user_str]: [what_done]</font>")
+			var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>"))
+			query_insert.Execute(async=use_async)
+			qdel(query_insert)
+		//if(SSdbcore.Connect())
+		//	rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>")))
+	//CHOMPEdit End
 	log_attack(user_str,target_str,what_done)
 	if(admin_notify)
 		msg_admin_attack("[key_name_admin(user)] vs [target_str]: [what_done]")
@@ -142,9 +155,17 @@ Proc for attack log creation, because really why not
 	else
 		return pick("chest", "groin")
 
-/proc/do_mob(mob/user , mob/target, time = 30, target_zone = 0, uninterruptible = FALSE, progress = TRUE, ignore_movement = FALSE)
+/proc/do_mob(mob/user , mob/target, time = 30, target_zone = 0, uninterruptible = FALSE, progress = TRUE, ignore_movement = FALSE, exclusive = FALSE)
 	if(!user || !target)
-		return 0
+		return FALSE
+	if(!time)
+		return TRUE //Done!
+	if(user.status_flags & DOING_TASK)
+		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		return FALSE //Performing an exclusive do_after or do_mob already
+	if(target?.flags & IS_BUSY)
+		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
+		return FALSE
 	var/user_loc = user.loc
 	var/target_loc = target.loc
 
@@ -155,6 +176,12 @@ Proc for attack log creation, because really why not
 
 	var/endtime = world.time+time
 	var/starttime = world.time
+
+	if(exclusive & TASK_USER_EXCLUSIVE)
+		user.status_flags |= DOING_TASK
+	if(target && exclusive & TASK_TARGET_EXCLUSIVE)
+		target.flags |= IS_BUSY
+
 	. = TRUE
 	while (world.time < endtime)
 		stoplag(1)
@@ -186,14 +213,26 @@ Proc for attack log creation, because really why not
 			. = FALSE
 			break
 
+	if(exclusive & TASK_USER_EXCLUSIVE)
+		user.status_flags &= ~DOING_TASK
+	if(exclusive & TASK_TARGET_EXCLUSIVE)
+		target?.status_flags &= ~IS_BUSY
+
 	if (progbar)
 		qdel(progbar)
 
-/proc/do_after(mob/user, delay, atom/target = null, needhand = TRUE, progress = TRUE, incapacitation_flags = INCAPACITATION_DEFAULT, ignore_movement = FALSE, max_distance = null)
+/proc/do_after(mob/user, delay, atom/target = null, needhand = TRUE, progress = TRUE, incapacitation_flags = INCAPACITATION_DEFAULT, ignore_movement = FALSE, max_distance = null, exclusive = FALSE)
 	if(!user)
-		return 0
+		return FALSE
 	if(!delay)
-		return 1 //Okay. Done.
+		return TRUE //Okay. Done.
+	if(user.status_flags & DOING_TASK)
+		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		return FALSE //Performing an exclusive do_after or do_mob already
+	if(target?.flags & IS_BUSY)
+		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
+		return FALSE
+		
 	var/atom/target_loc = null
 	if(target)
 		target_loc = target.loc
@@ -214,7 +253,14 @@ Proc for attack log creation, because really why not
 
 	var/endtime = world.time + delay
 	var/starttime = world.time
-	. = 1
+
+	if(exclusive & TASK_USER_EXCLUSIVE)
+		user.status_flags |= DOING_TASK
+	
+	if(target && (exclusive & TASK_TARGET_EXCLUSIVE))
+		target.flags |= IS_BUSY
+
+	. = TRUE
 	while (world.time < endtime)
 		stoplag(1)
 		if(progress)
@@ -249,6 +295,11 @@ Proc for attack log creation, because really why not
 		if(max_distance && target && get_dist(user, target) > max_distance)
 			. = FALSE
 			break
+
+	if(exclusive & TASK_USER_EXCLUSIVE)
+		user.status_flags &= ~DOING_TASK
+	if(target && (exclusive & TASK_TARGET_EXCLUSIVE))
+		target.flags &= ~IS_BUSY
 
 	if(progbar)
 		qdel(progbar)

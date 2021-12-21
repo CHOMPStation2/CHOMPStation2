@@ -95,8 +95,6 @@
 #define ATMOSTANK_PHORON        25000
 #define ATMOSTANK_NITROUSOXIDE  10000 // N2O doesn't have a real useful use, i guess it's on station just to allow refilling of sec's riot control canisters?
 
-// Used for quickly making certain things allow airflow or not.
-// More complicated, conditional airflow should override CanZASPass().
-#define ATMOS_PASS_YES		1
-#define ATMOS_PASS_NO		0
-#define ATMOS_PASS_DENSITY	-1 // Just checks density.
+// Used in various things like tanks and oxygen pumps.
+#define TANK_MAX_RELEASE_PRESSURE (3*ONE_ATMOSPHERE)
+#define TANK_DEFAULT_RELEASE_PRESSURE ONE_ATMOSPHERE

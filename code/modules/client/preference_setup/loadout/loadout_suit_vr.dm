@@ -1,14 +1,5 @@
-/datum/gear/suit/wintercoat/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
-
-/datum/gear/suit/wintercoat/science
-	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist", "Explorer", "Pathfinder")
-
 /datum/gear/suit/snowsuit/medical
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
-
-/datum/gear/suit/snowsuit/science
-	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist", "Explorer", "Pathfinder")
 
 /datum/gear/suit/labcoat_colorable
 	display_name = "labcoat, colorable"
@@ -16,7 +7,31 @@
 
 /datum/gear/suit/labcoat_colorable/New()
 	..()
-	gear_tweaks = list(gear_tweak_free_color_choice)
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/suit/labcoat_old
+	display_name = "labcoat, old-school"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/old
+
+/datum/gear/suit/labcoat_cmo_old
+	display_name = "labcoat, CMO, oldschool"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/old/cmo
+	allowed_roles = list("Chief Medical Officer")
+
+/datum/gear/suit/roles/labcoat_old
+	display_name = "labcoat selection, department, oldschool"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/old/tox
+	cost = 2
+
+
+/datum/gear/suit/roles/labcoat_old/New()
+	..()
+	var/list/labcoats = list(
+	"Oldschool Scientist's Labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/old/tox,
+	"Oldschool Virologist's Labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/old/vir,
+	"Oldschool Chemist's Labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/old/chem
+	)
+	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
 /datum/gear/suit/jacket_modular
 	display_name = "jacket, modular"
@@ -38,3 +53,58 @@
 	display_name = "Colorful poncho"
 	description = "A mexican looking poncho. It look like it fits wolf taurs as well."
 	path = /obj/item/clothing/suit/poncho
+
+//Detective alternative
+/datum/gear/suit/detective_alt
+	display_name = "sleek modern coat selection, detective"
+	path = /obj/item/clothing/suit/storage/det_trench/alt
+	allowed_roles = list("Head of Security", "Detective")
+
+/datum/gear/suit/detective_alt/New()
+	..()
+	var/list/coats = list(
+		"Modern coat (tan)" = /obj/item/clothing/suit/storage/det_trench/alt,
+		"Modern coat (long, tan)" = /obj/item/clothing/suit/storage/det_trench/alt2,
+		"Modern coat (black)" = /obj/item/clothing/suit/storage/det_trench/alt/black,
+		"Modern coat (long, black)" = /obj/item/clothing/suit/storage/det_trench/alt2/black
+	)
+	gear_tweaks += new/datum/gear_tweak/path(coats)
+
+//Emergency Responder jackets for Parameds & EMTs, but also general Medical Staff
+/datum/gear/suit/roles/medical/ems_jacket
+	display_name = "first responder jacket"
+	path = /obj/item/clothing/suit/storage/toggle/fr_jacket
+	allowed_roles = list("Chief Medical Officer","Paramedic","Medical Doctor","Field Medic")
+
+//imo-superior 'martian' style jacket with the star-of-life design
+/datum/gear/suit/roles/medical/ems_jacket/alt
+	display_name = "first responder jacket, alt."
+	path = /obj/item/clothing/suit/storage/toggle/fr_jacket/ems
+
+//paramedic vest
+/datum/gear/suit/roles/medical/paramedic_vest
+	display_name = "paramedic vest"
+	path = /obj/item/clothing/suit/storage/toggle/paramedic
+	allowed_roles = list("Chief Medical Officer","Paramedic","Medical Doctor","Field Medic")
+
+//greek thing
+/datum/gear/suit/chiton
+	display_name = "chiton"
+	path = /obj/item/clothing/suit/chiton
+
+
+//oversized t-shirt
+/datum/gear/suit/oversize
+	display_name = "oversized t-shirt (colorable)"
+	path = /obj/item/clothing/suit/oversize
+
+/datum/gear/suit/oversize/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/*
+Talon winter coat
+*/
+/datum/gear/suit/wintercoat/talon
+	display_name = "winter coat, Talon"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon

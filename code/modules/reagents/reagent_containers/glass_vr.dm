@@ -48,3 +48,19 @@
 /obj/item/weapon/reagent_containers/glass/beaker/vial/hyronalin
 	name = "vial (hyronalin)"
 	prefill = list("hyronalin" = 30)
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/amorphorovir
+	name = "vial (amorphorovir)"
+	prefill = list("amorphorovir" = 1)
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/supermatter
+	name = "vial (supermatter)"
+	desc = "A glass vial containing the extremely dangerous results of grinding a shard of supermatter down to a fine powder."
+	prefill = list("supermatter" = 5)
+
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup
+	name = "measuring cup"
+	desc = "A measuring cup."
+	icon = 'icons/obj/chemical_vr.dmi'
+	icon_state = "measure_cup"
+	item_state = "measure_cup"

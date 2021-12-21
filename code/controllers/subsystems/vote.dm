@@ -13,6 +13,7 @@ SUBSYSTEM_DEF(vote)
 	var/duration
 	var/mode
 	var/question
+	var/gamemode_vote_called = FALSE // Have we had a gamemode vote this round?  Only auto-call if we haven't
 	var/list/choices = list()
 	var/list/gamemode_names = list()
 	var/list/voted = list()
@@ -34,8 +35,7 @@ SUBSYSTEM_DEF(vote)
 	// Before doing the vote, see if anyone is playing.
 	// If not, just do the transfer.
 	var/players_are_in_round = FALSE
-	for(var/a in player_list) // Mobs with clients attached.
-		var/mob/living/L = a
+	for(var/mob/living/L as anything in player_list) // Mobs with clients attached.
 		if(!istype(L)) // Exclude ghosts and other weird things.
 			continue
 		if(L.stat == DEAD) // Dead mobs aren't playing.
@@ -71,13 +71,24 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/get_result() // Get the highest number of votes
 	var/greatest_votes = 0
 	var/total_votes = 0
-
-	for(var/option in choices)
-		var/votes = choices[option]
-		total_votes += votes
-		if(votes > greatest_votes)
-			greatest_votes = votes
-
+	//CHOMPEdit Begin
+	if(mode == VOTE_CREW_TRANSFER)
+		var/transfer_votes = choices["Initiate Crew Transfer"]
+		var/extend_votes = choices["Extend the Shift"]
+		total_votes = extend_votes + transfer_votes
+		if(transfer_votes / total_votes > 0.7)
+			greatest_votes = transfer_votes
+			. = list("Initiate Crew Transfer")
+		else 
+			greatest_votes = extend_votes
+			. = list("Extend the Shift")
+	else
+		for(var/option in choices)
+			var/votes = choices[option]
+			total_votes += votes
+			if(votes > greatest_votes)
+				greatest_votes = votes
+	//CHOMPEdit End
 	if(!config.vote_no_default && choices.len) // Default-vote for everyone who didn't vote
 		var/non_voters = (GLOB.clients.len - total_votes)
 		if(non_voters > 0)
@@ -106,12 +117,14 @@ SUBSYSTEM_DEF(vote)
 				choices["Initiate Crew Transfer"] = round(choices["Initiate Crew Transfer"] * factor)
 				to_world("<font color='purple'>Crew Transfer Factor: [factor]</font>")
 				greatest_votes = max(choices["Initiate Crew Transfer"], choices["Extend the Shift"]) //VOREStation Edit
-
-	. = list() // Get all options with that many votes and return them in a list
-	if(greatest_votes)
-		for(var/option in choices)
-			if(choices[option] == greatest_votes)
-				. += option
+	//CHOMPEdit Begin
+	if(!(mode == VOTE_CREW_TRANSFER))
+		. = list() // Get all options with that many votes and return them in a list
+		if(greatest_votes)
+			for(var/option in choices)
+				if(choices[option] == greatest_votes)
+					. += option
+	//CHOMPEdit End
 
 /datum/controller/subsystem/vote/proc/announce_result()
 	var/list/winners = get_result()
@@ -254,9 +267,10 @@ SUBSYSTEM_DEF(vote)
 
 		to_world("<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period / 10] seconds to vote.</font>")
 		if(vote_type == VOTE_CREW_TRANSFER || vote_type == VOTE_GAMEMODE || vote_type == VOTE_CUSTOM)
-			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3)
+			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3) //CHOMPStation Edit TFF 10/5/20 - revert to old soundtrack contrary to YW
 
 		if(mode == VOTE_GAMEMODE && round_progressing)
+			gamemode_vote_called = TRUE
 			round_progressing = 0
 			to_world("<font color='red'><b>Round start has been delayed.</b></font>")
 
@@ -350,7 +364,8 @@ SUBSYSTEM_DEF(vote)
 
 		if("cancel")
 			if(usr.client.holder)
-				reset()
+				if("Yes" == tgui_alert(usr, "You are about to cancel this vote. Are you sure?", "Cancel Vote", list("No", "Yes")))
+					reset()
 		if("toggle_restart")
 			if(usr.client.holder)
 				config.allow_vote_restart = !config.allow_vote_restart

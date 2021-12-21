@@ -52,18 +52,17 @@
 				var/amount = rand(2,6)
 				var/quantity = rand(10,50)
 				var/list/possible_spawns = list()
-				for(var/bar_type in typesof(/obj/item/stack/material) - /obj/item/stack/material - /obj/item/stack/material/animalhide - typesof(/obj/item/stack/material/cyborg))
+				for(var/bar_type in typesof(/obj/item/stack/material) - /obj/item/stack/material - /obj/item/stack/animalhide - typesof(/obj/item/stack/material/cyborg))
 					possible_spawns += bar_type
 
 				var/bar_type = pick(possible_spawns)
 				for(var/i=0,i<amount,i++)
-					var/obj/item/stack/material/M = new bar_type(C)
-					M.amount = quantity
+					new bar_type(C, quantity)
 			else
 				//credits
 				var/amount = rand(2,6)
 				var/list/possible_spawns = list()
-				for(var/cash_type in typesof(/obj/item/weapon/spacecash) - /obj/item/weapon/spacecash)
+				for(var/cash_type in subtypesof(/obj/item/weapon/spacecash))
 					possible_spawns += cash_type
 
 				var/cash_type = pick(possible_spawns)
@@ -78,8 +77,6 @@
 				new /obj/effect/decal/remains/xeno(src.loc)
 		if("clothes")
 			var/obj/structure/closet/C = new(src.loc)
-			C.icon_state = "blue"
-			C.icon_closed = "blue"
 			if(prob(33))
 				new /obj/item/clothing/under/color/rainbow(C)
 				new /obj/item/clothing/shoes/rainbow(C)
@@ -270,7 +267,7 @@
 			/obj/item/weapon/reagent_containers/food/drinks/dry_ramen, \
 			/obj/item/weapon/reagent_containers/food/snacks/candiedapple, \
 			/obj/item/weapon/reagent_containers/food/snacks/chocolatebar, \
-			/obj/item/weapon/reagent_containers/food/snacks/cookie, \
+			/obj/item/weapon/reagent_containers/food/snacks/cookiesnack, \
 			/obj/item/weapon/reagent_containers/food/snacks/meatball, \
 			/obj/item/weapon/reagent_containers/food/snacks/plump_pie, \
 			/obj/item/weapon/reagent_containers/food/snacks/liquidfood)
@@ -285,7 +282,7 @@
 					for(var/i=0,i<num,i++)
 						new /mob/living/simple_mob/animal/space/carp(C)
 				else // Just a costume.
-					new /obj/item/clothing/suit/storage/hooded/carp_costume(C)
+					new /obj/item/clothing/suit/storage/hooded/costume/carp(C)
 			else if(prob(50))
 				if(live_cargo) // Something else very much alive and angry.
 					var/spawn_type = pick(/mob/living/simple_mob/animal/space/alien, /mob/living/simple_mob/animal/space/alien/drone, /mob/living/simple_mob/animal/space/alien/sentinel)
@@ -354,7 +351,7 @@
 /**********************************/
 
 /obj/structure/symbol
-	anchored = 1
+	anchored = TRUE
 	layer = 3.5
 	name = "strange symbol"
 	icon = 'icons/obj/decals_vr.dmi'
@@ -398,3 +395,8 @@
 /obj/structure/symbol/sa
 	desc = "It looks like a right triangle with a dot to the side. It reminds you of a wooden strut between a wall and ceiling."
 	icon_state = "sa"
+
+/obj/structure/symbol/maint
+	name = "maintenance panel"
+	desc = "This sign suggests that the wall it's attached to can be opened somehow."
+	icon_state = "maintenance_panel"

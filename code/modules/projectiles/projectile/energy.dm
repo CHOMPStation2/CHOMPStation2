@@ -101,6 +101,19 @@
 
 	combustion = FALSE
 
+/obj/item/projectile/energy/excavate
+	name = "kinetic blast"
+	icon_state = "kinetic_blast"
+	fire_sound = 'sound/weapons/pulse3.ogg'
+	damage_type = BRUTE
+	damage = 30
+	armor_penetration = 60
+	excavation_amount = 200
+	check_armour = "melee"
+
+	vacuum_traversal = 0
+	combustion = FALSE
+
 /obj/item/projectile/energy/dart
 	name = "dart"
 	icon_state = "toxin"
@@ -131,17 +144,21 @@
 	agony = 10
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid
+	hitsound_wall = 'sound/weapons/effects/alien_spit_wall.ogg'
+	hitsound = 'sound/weapons/effects/alien_spit_wall.ogg'
 
 	combustion = FALSE
 
 /obj/item/projectile/energy/neurotoxin
 	name = "neurotoxic spit"
 	icon_state = "neurotoxin"
-	damage = 5
+	damage = 0
 	damage_type = BIOACID
-	agony = 80
+	agony = 60 //CHOMPedit lowered agony damage
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid-based
+	hitsound_wall = 'sound/weapons/effects/alien_spit_wall.ogg'
+	hitsound = 'sound/weapons/effects/alien_spit_wall.ogg'
 
 	combustion = FALSE
 
@@ -182,7 +199,7 @@
 /obj/item/projectile/energy/plasmastun/proc/bang(var/mob/living/carbon/M)
 
 	to_chat(M, "<span class='danger'>You hear a loud roar.</span>")
-	playsound(M.loc, 'sound/effects/bang.ogg', 50, 1)
+	playsound(src, 'sound/effects/bang.ogg', 50, 1)
 	var/ear_safety = 0
 	ear_safety = M.get_ear_protection()
 	if(ear_safety == 1)
@@ -229,7 +246,7 @@
 	range = 6
 	damage = 5
 	SA_bonus_damage = 45	// 50 total on animals
-	SA_vulnerability = SA_ANIMAL
+	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID) //CHOMP Edit expand this list
 
 /obj/item/projectile/energy/phase/light
 	range = 4

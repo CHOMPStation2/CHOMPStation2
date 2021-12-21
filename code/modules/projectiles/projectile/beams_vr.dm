@@ -42,6 +42,14 @@
 	tracer_type = /obj/effect/projectile/tracer/laser_blue
 	impact_type = /obj/effect/projectile/impact/laser_blue
 
+/obj/item/projectile/beam/weaklaser/blue
+	icon_state = "bluelaser"
+	light_color = "#0066FF"
+
+	muzzle_type = /obj/effect/projectile/muzzle/laser_blue
+	tracer_type = /obj/effect/projectile/tracer/laser_blue
+	impact_type = /obj/effect/projectile/impact/laser_blue
+
 /obj/item/projectile/beam/medigun
 	name = "healing beam"
 	icon_state = "healbeam"
@@ -66,7 +74,7 @@
 			pulse.icon = 'icons/effects/effects.dmi'
 			pulse.icon_state = "heal"
 			pulse.name = "heal"
-			pulse.anchored = 1
+			pulse.anchored = TRUE
 			spawn(20)
 				qdel(pulse)
 			to_chat(target, "<span class='notice'>As the beam strikes you, your injuries close up!</span>")

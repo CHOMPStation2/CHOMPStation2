@@ -4,12 +4,14 @@
 	icon_state = "mecha_scatter"
 	equip_cooldown = 20
 	projectile = /obj/item/projectile/bullet/pellet/shotgun/flak
-	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
+	fire_sound = 'sound/weapons/LBX10.ogg'
 	fire_volume = 80
 	projectiles = 40
 	projectiles_per_shot = 4
 	deviation = 0.7
 	projectile_energy_cost = 25
+
+	step_delay = 0.5
 
 	origin_tech = list(TECH_MATERIAL = 3, TECH_COMBAT = 4)
 

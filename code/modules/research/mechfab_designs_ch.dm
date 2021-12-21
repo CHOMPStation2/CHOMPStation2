@@ -1,13 +1,13 @@
 /datum/design/item/mecha/phoron_bore
 	name = "PB-23 \"Phobos\" Phoron Bore"
-	category = "Exosuit Equipment"
+	category = list("Exosuit Equipment")
 	id ="mech_phoron_bore"
 	req_tech = list(TECH_POWER = 5, TECH_PHORON = 5, TECH_MATERIAL = 5)
 	materials = list(MAT_PLASTEEL = 4000, "phoron" = 10000, "silver" = 2000)
 	build_path =/obj/item/mecha_parts/mecha_equipment/weapon/phoron_bore
 
 /datum/design/item/mechfab/scarab
-	category = "Scarab"
+	category = list("Scarab")
 
 /datum/design/item/mechfab/scarab/chassis
 	name = "Scarab Chassis"

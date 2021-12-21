@@ -4,7 +4,8 @@
 	var/hostile = FALSE						// Do we try to hurt others?
 	var/retaliate = FALSE					// Attacks whatever struck it first. Mobs will still attack back if this is false but hostile is true.
 	var/mauling = FALSE						// Attacks unconscious mobs
-	var/handle_corpse = FALSE					// Allows AI to acknowledge corpses (e.g. nurse spiders)
+	var/unconscious_vore = FALSE			//VOREStation Add - allows a mob to go for unconcious targets IF their vore prefs align
+	var/handle_corpse = FALSE				// Allows AI to acknowledge corpses (e.g. nurse spiders)
 
 	var/atom/movable/target = null			// The thing (mob or object) we're trying to kill.
 	var/atom/movable/preferred_target = null// If set, and if given the chance, we will always prefer to target this over other options.
@@ -12,7 +13,7 @@
 
 	var/vision_range = 7					// How far the targeting system will look for things to kill. Note that values higher than 7 are 'offscreen' and might be unsporting.
 	var/respect_alpha = TRUE				// If true, mobs with a sufficently low alpha will be treated as invisible.
-	var/alpha_vision_threshold = 127		// Targets with an alpha less or equal to this will be considered invisible. Requires above var to be true.
+	var/alpha_vision_threshold = FAKE_INVIS_ALPHA_THRESHOLD	// Targets with an alpha less or equal to this will be considered invisible. Requires above var to be true.
 
 	var/lose_target_time = 0				// world.time when a target was lost.
 	var/lose_target_timeout = 5 SECONDS		// How long until a mob 'times out' and stops trying to find the mob that disappeared.
@@ -25,10 +26,10 @@
 
 // Step 1, find out what we can see.
 /datum/ai_holder/proc/list_targets()
-	. = hearers(vision_range, holder) - holder // Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
-	. -= dview_mob // Not the dview mob either, nerd.
+	. = ohearers(vision_range, holder)
+	. -= dview_mob // Not the dview mob!
 
-	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
+	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/structure/blob))
 
 	for(var/HM in typecache_filter_list(range(vision_range, holder), hostile_machines))
 		if(can_see(holder, HM, vision_range))
@@ -43,13 +44,8 @@
 	if(!has_targets_list)
 		possible_targets = list_targets()
 	for(var/possible_target in possible_targets)
-		var/atom/A = possible_target
-		if(found(A)) // In case people want to override this.
-			. = list(A)
-			break
-		if(can_attack(A)) // Can we attack it?
-			. += A
-			continue
+		if(can_attack(possible_target)) // Can we attack it?
+			. += possible_target
 
 	var/new_target = pick_target(.)
 	give_target(new_target)
@@ -57,7 +53,7 @@
 
 // Step 3, pick among the possible, attackable targets.
 /datum/ai_holder/proc/pick_target(list/targets)
-	if(target != null) // If we already have a target, but are told to pick again, calculate the lowest distance between all possible, and pick from the lowest distance targets.
+	if(target) // If we already have a target, but are told to pick again, calculate the lowest distance between all possible, and pick from the lowest distance targets.
 		targets = target_filter_distance(targets)
 	else
 		targets = target_filter_closest(targets)
@@ -65,7 +61,7 @@
 		return
 
 	var/chosen_target
-	if(preferred_target && preferred_target in targets)
+	if(preferred_target && (preferred_target in targets))
 		chosen_target = preferred_target
 	else
 		chosen_target = pick(targets)
@@ -74,8 +70,12 @@
 // Step 4, give us our selected target.
 /datum/ai_holder/proc/give_target(new_target, urgent = FALSE)
 	ai_log("give_target() : Given '[new_target]', urgent=[urgent].", AI_LOG_TRACE)
-	target = new_target
 	
+	if(target)
+		remove_target()
+	
+	target = new_target
+
 	if(target != null)
 		lose_target_time = 0
 		track_target_position()
@@ -88,39 +88,35 @@
 
 // Filters return one or more 'preferred' targets.
 
-// This one is for closest targets.
+// This one is for targets closer than our current one.
 /datum/ai_holder/proc/target_filter_distance(list/targets)
+	var/target_dist = get_dist(holder, target)
+	var/list/better_targets = list()
 	for(var/possible_target in targets)
 		var/atom/A = possible_target
-		var/target_dist = get_dist(holder, target)
 		var/possible_target_distance = get_dist(holder, A)
-		if(target_dist < possible_target_distance)
-			targets -= A
-	return targets
+		if(possible_target_distance < target_dist)
+			better_targets += A
+	return better_targets
 
+// Returns the closest target and anything tied with it for distance
 /datum/ai_holder/proc/target_filter_closest(list/targets)
-	var/lowest_distance = -1
-	var/list/sorted_targets = list()
+	var/lowest_distance = 1e6 //fakely far
+	var/list/closest_targets = list()
 	for(var/possible_target in targets)
 		var/atom/A = possible_target
 		var/current_distance = get_dist(holder, A)
-		if(lowest_distance == -1)
+		if(current_distance < lowest_distance)
+			closest_targets.Cut()
 			lowest_distance = current_distance
-			sorted_targets += A
-		else if(current_distance < lowest_distance)
-			targets.Cut()
-			lowest_distance = current_distance
-			sorted_targets += A
+			closest_targets += A
 		else if(current_distance == lowest_distance)
-			sorted_targets += A
-	return sorted_targets
+			closest_targets += A
+	return closest_targets
 
 /datum/ai_holder/proc/can_attack(atom/movable/the_target, var/vision_required = TRUE)
 	if(!can_see_target(the_target) && vision_required)
 		return FALSE
-
-	if(istype(the_target, /mob/zshadow))
-		return FALSE // no
 
 	if(isliving(the_target))
 		var/mob/living/L = the_target
@@ -133,6 +129,14 @@
 			if(L.stat == UNCONSCIOUS)	// Do we have mauling? Yes? Then maul people who are sleeping but not SSD
 				if(mauling)
 					return TRUE
+				//VOREStation Add Start
+				else if(unconscious_vore && L.allowmobvore)
+					var/mob/living/simple_mob/vore/eater = holder
+					if(eater.will_eat(L))
+						return TRUE
+					else
+						return FALSE
+				//VOREStation Add End
 				else
 					return FALSE
 		if(holder.IIsAlly(L))
@@ -155,13 +159,13 @@
 			return FALSE // Turrets won't get hurt if they're still in their cover.
 		return TRUE
 
+	if(istype(the_target, /obj/structure/blob)) // Blob mobs are always blob faction, but the blob can anger other things.
+		var/obj/structure/blob/Blob = the_target
+		if(holder.faction == Blob.faction)
+			return FALSE
+
 	return TRUE
 //	return FALSE
-
-// Override this for special targeting criteria.
-// If it returns true, the mob will always select it as the target.
-/datum/ai_holder/proc/found(atom/movable/the_target)
-	return FALSE
 
 // 'Soft' loss of target. They may still exist, we still have some info about them maybe.
 /datum/ai_holder/proc/lose_target()
@@ -171,30 +175,26 @@
 		target = null
 		lose_target_time = world.time
 
-	give_up_movement()
-
-	if(target_last_seen_turf && intelligence_level >= AI_SMART)
+	if(target_last_seen_turf && intelligence_level >= AI_NORMAL)
 		ai_log("lose_target() : Going into 'engage unseen enemy' mode.", AI_LOG_INFO)
-		engage_unseen_enemy()
-		return TRUE //We're still working on it
+		return engage_unseen_enemy() //We're still working on it
 	else
 		ai_log("lose_target() : Can't chase target, so giving up.", AI_LOG_INFO)
 		remove_target()
 		return find_target() //Returns if we found anything else to do
-
-	return FALSE //Nothing new to do
 
 // 'Hard' loss of target. Clean things up and return to idle.
 /datum/ai_holder/proc/remove_target()
 	ai_log("remove_target() : Entering.", AI_LOG_TRACE)
 	if(target)
 		target = null
-	
+
 	lose_target_time = 0
 	give_up_movement()
 	lose_target_position()
 	set_stance(STANCE_IDLE)
-	
+	return TRUE
+
 // Check if target is visible to us.
 /datum/ai_holder/proc/can_see_target(atom/movable/the_target, view_range = vision_range)
 	ai_log("can_see_target() : Entering.", AI_LOG_TRACE)
@@ -228,17 +228,17 @@
 		lose_target_position()
 
 	if(last_turf_display && target_last_seen_turf)
-		target_last_seen_turf.overlays -= last_turf_overlay
+		target_last_seen_turf.cut_overlay(last_turf_overlay)
 
 	target_last_seen_turf = get_turf(target)
 
 	if(last_turf_display)
-		target_last_seen_turf.overlays += last_turf_overlay
+		target_last_seen_turf.add_overlay(last_turf_overlay)
 
 // Resets the last known position to null.
 /datum/ai_holder/proc/lose_target_position()
 	if(last_turf_display && target_last_seen_turf)
-		target_last_seen_turf.overlays -= last_turf_overlay
+		target_last_seen_turf.cut_overlay(last_turf_overlay)
 	ai_log("lose_target_position() : Last position is being reset.", AI_LOG_INFO)
 	target_last_seen_turf = null
 
@@ -263,6 +263,10 @@
 			on_attacked(attacker) // So we attack immediately and not threaten.
 			return give_target(attacker) // Also handles setting the appropiate stance.
 
+	if(holder.resting)	// I can't kill someone while I'm laying down!
+		ai_log("react_to_attack() : AI is resting. Getting up.", AI_LOG_TRACE)
+		holder.lay_down()
+
 	if(stance == STANCE_SLEEP) // If we're asleep, try waking up if someone's wailing on us.
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
 		go_wake()
@@ -274,7 +278,7 @@
 // Sets a few vars so mobs that threaten will react faster to an attacker or someone who attacked them before.
 /datum/ai_holder/proc/on_attacked(atom/movable/AM)
 	last_conflict_time = world.time
-	add_attacker(AM)		
+	add_attacker(AM)
 
 // Checks to see if an atom attacked us lately
 /datum/ai_holder/proc/check_attacker(var/atom/movable/A)
@@ -287,7 +291,7 @@
 // Forgive this attacker
 /datum/ai_holder/proc/remove_attacker(var/atom/movable/A)
 	attackers -= A.name
-			
+
 // Causes targeting to prefer targeting the taunter if possible.
 // This generally occurs if more than one option is within striking distance, including the taunter.
 // Otherwise the default filter will prefer the closest target.

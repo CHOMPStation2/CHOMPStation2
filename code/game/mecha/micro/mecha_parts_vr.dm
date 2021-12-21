@@ -1,5 +1,5 @@
 //new micro parts define
-
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /obj/item/mecha_parts/micro
 	name = "mecha part"
 	icon = 'icons/mecha/mech_construct_vr.dmi'
@@ -7,26 +7,27 @@
 	w_class = ITEMSIZE_NORMAL
 
 
-/obj/item/mecha_parts/micro/chassis/
+/obj/item/mecha_parts/micro/chassis
 	name="Mecha Chassis"
 	icon_state = "backbone"
 	var/datum/construction/construct
 
-	attackby(obj/item/W as obj, mob/user as mob)
-		if(!construct || !construct.action(W, user))
-			..()
-		return
+/obj/item/mecha_parts/micro/chassis/attackby(obj/item/W as obj, mob/user as mob)
+	if(!construct || !construct.action(W, user))
+		..()
+	return
 
-	attack_hand()
-		return
+/obj/item/mecha_parts/micro/chassis/attack_hand()
+	return
+
 //Gopher
 /obj/item/mecha_parts/micro/chassis/gopher
 	name = "Gopher Chassis"
 	icon_state = "gopher-chassis"
 
-	New()
-		..()
-		construct = new /datum/construction/mecha/gopher_chassis(src)
+/obj/item/mecha_parts/micro/chassis/gopher/New()
+	..()
+	construct = new /datum/construction/mecha/gopher_chassis(src)
 
 /obj/item/mecha_parts/micro/part/gopher_torso
 	name="Gopher Torso"
@@ -62,9 +63,10 @@
 /obj/item/mecha_parts/micro/chassis/polecat
 	name = "Polecat Chassis"
 	icon_state = "polecat-chassis"
-	New()
-		..()
-		construct = new /datum/construction/mecha/polecat_chassis(src)
+
+/obj/item/mecha_parts/micro/chassis/polecat/New()
+	..()
+	construct = new /datum/construction/mecha/polecat_chassis(src)
 
 /obj/item/mecha_parts/micro/part/polecat_torso
 	name="Polecat Torso"
@@ -100,9 +102,10 @@
 /obj/item/mecha_parts/micro/chassis/weasel
 	name = "Weasel Chassis"
 	icon_state = "weasel-chassis"
-	New()
-		..()
-		construct = new /datum/construction/mecha/weasel_chassis(src)
+
+/obj/item/mecha_parts/micro/chassis/weasel/New()
+	..()
+	construct = new /datum/construction/mecha/weasel_chassis(src)
 
 /obj/item/mecha_parts/micro/part/weasel_torso
 	name="Weasel Torso"
@@ -124,7 +127,7 @@
 	icon_state = "weasel-arm-right"
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
-/*/obj/item/mecha_parts/micro/part/weasel_left_leg
+/obj/item/mecha_parts/micro/part/weasel_left_leg
 	name="Weasel Left Leg"
 	icon_state = "weasel-leg-left"
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
@@ -132,9 +135,9 @@
 /obj/item/mecha_parts/micro/part/weasel_right_leg
 	name="Weasel Right Leg"
 	icon_state = "weasel-leg-right"
-	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)*/
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
 /obj/item/mecha_parts/micro/part/weasel_tri_leg
 	name="Weasel Legs"
 	icon_state = "weasel-leg-all"
-	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3) */

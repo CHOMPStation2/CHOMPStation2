@@ -9,6 +9,8 @@
 	energy_drain = OMNI_SHIELD_DRAIN
 	range = 0
 
+	step_delay = 0.2
+
 	var/obj/item/shield_projector/shields = null
 	var/shield_type = /obj/item/shield_projector/rectangle/mecha
 
@@ -37,14 +39,15 @@
 		shields.update_shield_positions()
 
 /obj/item/mecha_parts/mecha_equipment/omni_shield/proc/toggle_shield()
-	..()
 	if(shields)
 		shields.set_on(!shields.active)
 		if(shields.active)
-			set_ready_state(0)
+			set_ready_state(FALSE)
+			step_delay = 4
 			log_message("Activated.")
 		else
-			set_ready_state(1)
+			set_ready_state(TRUE)
+			step_delay = initial(step_delay)
 			log_message("Deactivated.")
 
 /obj/item/mecha_parts/mecha_equipment/omni_shield/Topic(href, href_list)
@@ -75,6 +78,14 @@
 	. = ..()
 	my_mech = loc
 	GLOB.moved_event.register(my_mech, src, /obj/item/shield_projector/proc/update_shield_positions)
+	update_shift(my_mech)
+
+/obj/item/shield_projector/rectangle/mecha/proc/update_shift(atom/movable/mech)
+	var/icon/my_icon = icon(mech.icon) //holy heck
+	var/x_dif = (my_icon.Width() - world.icon_size) / 2
+	shift_x = round(x_dif, 1)
+	var/y_dif = (my_icon.Height() - world.icon_size) / 2
+	shift_y = round(y_dif, 1)
 
 /obj/item/shield_projector/rectangle/mecha/Destroy()
 	GLOB.moved_event.unregister(my_mech, src, /obj/item/shield_projector/proc/update_shield_positions)

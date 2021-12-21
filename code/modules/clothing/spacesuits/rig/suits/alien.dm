@@ -2,18 +2,27 @@
  *	UNATHI
  */
 
-/obj/item/weapon/rig/breacher
+//ChompEdit begins
+
+/obj/item/weapon/rig/breacher  
 	name = "\improper NT breacher chassis control module"
-	desc = "A cheap NT knock-off of an Unathi battle-rig. Looks like a fish, moves like a fish, steers like a cow."
+	desc = "A cheap NT knock-off of an Unathi battle-rig. Uses softer, but lighter, armour plating, producing a still-useful suit"
 	suit_type = "\improper NT breacher"
 	icon_state = "breacher_rig_cheap"
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 50)
 	emp_protection = -20
-	slowdown = 6
-	offline_slowdown = 10
-	vision_restriction = 1
-	offline_vision_restriction = 2
+	slowdown = 3  //This is too much, reducing from 6 to 3.  May edit again in the future.
+	offline_slowdown = 5
+	vision_restriction = 0  //This is dumb as hell and should be 0 if we want the suit to be even vaguely useful.
+	offline_vision_restriction = 2 //This actually serves as a good weakness for them, making them vulnerable to Ion weapons.
 	siemens_coefficient = 0.75
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/device/flashlight,
+		/obj/item/weapon/tank,
+		/obj/item/device/suit_cooling_unit,
+		/obj/item/weapon/storage
+		)
 	chest_type = /obj/item/clothing/suit/space/rig/breacher
 	helm_type = /obj/item/clothing/head/helmet/space/rig/breacher
 	boot_type = /obj/item/clothing/shoes/magboots/rig/breacher
@@ -26,6 +35,8 @@
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 80) //Takes TEN TIMES as much damage to stop someone in a breacher. In exchange, it's slow.
 	vision_restriction = 0
 	siemens_coefficient = 0.2
+	slowdown = 6
+	offline_slowdown = 10
 
 /obj/item/clothing/head/helmet/space/rig/breacher
 	species_restricted = list(SPECIES_UNATHI)
@@ -36,6 +47,8 @@
 
 /obj/item/clothing/shoes/magboots/rig/breacher
 	species_restricted = list(SPECIES_UNATHI)
+
+//ChompEdit Ends
 
 /*
  *	VOX
@@ -50,8 +63,14 @@
 	flags = PHORONGUARD
 	item_flags = THICKMATERIAL
 	siemens_coefficient = 0.2
-	offline_slowdown = 5
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit)
+	offline_slowdown = 2.5
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/device/flashlight,
+		/obj/item/weapon/tank,
+		/obj/item/device/suit_cooling_unit,
+		/obj/item/weapon/storage
+		)
 
 	air_type = /obj/item/weapon/tank/vox
 
@@ -68,7 +87,7 @@
 	name = "talons"
 	species_restricted = list(SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_VOX = 'icons/mob/species/vox/shoes.dmi'
+		SPECIES_VOX = 'icons/inventory/feet/mob_vox.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/vox
@@ -78,7 +97,7 @@
 	siemens_coefficient = 0
 	species_restricted = list(SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_VOX = 'icons/mob/species/vox/gloves.dmi'
+		SPECIES_VOX = 'icons/inventory/hands/mob_vox.dmi'
 		)
 
 /obj/item/weapon/rig/vox/carapace

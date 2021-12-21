@@ -2,7 +2,7 @@
 /obj/item/weapon/cell/device
 	name = "device power cell"
 	desc = "A small power cell designed to power handheld devices."
-	icon_state = "dcell"
+	icon_state = "m_st"
 	item_state = "egg6"
 	w_class = ITEMSIZE_SMALL
 	force = 0
@@ -10,14 +10,14 @@
 	throw_range = 7
 	maxcharge = 480
 	charge_amount = 5
-	matter = list("metal" = 350, "glass" = 50)
+	matter = list(MAT_STEEL = 350, MAT_GLASS = 50)
 	preserve_item = 1
 
-//Yawn changes
+//Yawn Changes
 /obj/item/weapon/cell/device/weapon //Aka adv
-	name = "advanced device power cell"
+	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "acell"
+	icon_state = "m_sup"
 	maxcharge = 2400
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
@@ -30,7 +30,7 @@
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "uscell"
+	icon_state = "m_hy" //CHOMP Add
 	maxcharge = 3600
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
@@ -43,21 +43,39 @@
 /obj/item/weapon/cell/device/hyper
 	name = "hyper device power cell"
 	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
-	icon_state = "wcell"
+	icon_state = "meb_m_st" //CHOMP Add
 	maxcharge = 4800
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
-
+	
 /obj/item/weapon/cell/device/hyper/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
 //End of Yawn changes
+	
+//CHOMP Add begin
+/obj/item/weapon/cell/device/giga //CHOMP Add: Why not? Lets add a new one. Lets put the new sprites to use.
+	name = "giga device power cell"
+	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
+	icon_state = "meb_m_hi" 
+	maxcharge = 6000
+	charge_amount = 20
+	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
+
+/obj/item/weapon/cell/device/giga/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+//CHOMP Add end
+
+/obj/item/weapon/cell/device/weapon/empproof
+	emp_proof = TRUE
 
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
-//	icon_state = "wcell" //TODO: Different sprite
+	icon_state = "meb_m_nu"
 	self_recharge = TRUE
 	charge_amount = 120
 	charge_delay = 75

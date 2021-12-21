@@ -8,16 +8,19 @@
 	var/stabilization_enabled = TRUE //If our anti-space-drift is on
 	var/ground_capable = FALSE //If we can fly over normal turfs and not just space
 
-	icon = 'icons/mecha/fighters64x64.dmi'
-	
+	icon = 'icons/mecha/fighters64x64.dmi' //See ATTRIBUTIONS.md for details on license
+
 	icon_state = ""
 	initial_icon = ""
-	
+
+	dir_in = null //Don't reset direction when empty
+
 	step_in = 2 //Fast
+	step_energy_drain = 0 //These should use fuel instead of energy
 
 	health = 400
 	maxhealth = 400
-	
+
 	infra_luminosity = 6
 
 	opacity = FALSE
@@ -36,6 +39,14 @@
 	max_universal_equip = 1
 	max_special_equip = 1
 
+	starting_components = list(
+		/obj/item/mecha_parts/component/hull/lightweight,
+		/obj/item/mecha_parts/component/actuator,
+		/obj/item/mecha_parts/component/armor,
+		/obj/item/mecha_parts/component/gas,
+		/obj/item/mecha_parts/component/electrical
+		)
+
 /obj/mecha/combat/fighter/Initialize()
 	. = ..()
 	ion_trail = new /datum/effect/effect/system/ion_trail_follow()
@@ -49,6 +60,77 @@
 /obj/mecha/combat/fighter/go_out()
 	. = ..()
 	consider_gravity()
+
+//We don't get lost quite as easy.
+/obj/mecha/combat/fighter/touch_map_edge()
+	//No overmap enabled or no driver to choose
+	if(!using_map.use_overmap || !occupant || !can_ztravel())
+		return ..()
+
+	var/obj/effect/overmap/visitable/our_ship = get_overmap_sector(z)
+
+	//We're not on the overmap
+	if(!our_ship)
+		return ..()
+
+	//Stored for safety checking after user input
+	var/this_x = x
+	var/this_y = y
+	var/this_z = z
+	var/this_occupant = occupant
+
+	var/what_edge
+
+	var/new_x
+	var/new_y
+	var/new_z
+
+	if(x <= TRANSITIONEDGE)
+		what_edge = WEST
+		new_x = world.maxx - TRANSITIONEDGE - 2
+		new_y = rand(TRANSITIONEDGE + 2, world.maxy - TRANSITIONEDGE - 2)
+
+	else if (x >= (world.maxx - TRANSITIONEDGE + 1))
+		what_edge = EAST
+		new_x = TRANSITIONEDGE + 1
+		new_y = rand(TRANSITIONEDGE + 2, world.maxy - TRANSITIONEDGE - 2)
+
+	else if (y <= TRANSITIONEDGE)
+		what_edge = SOUTH
+		new_y = world.maxy - TRANSITIONEDGE -2
+		new_x = rand(TRANSITIONEDGE + 2, world.maxx - TRANSITIONEDGE - 2)
+
+	else if (y >= (world.maxy - TRANSITIONEDGE + 1))
+		what_edge = NORTH
+		new_y = TRANSITIONEDGE + 1
+		new_x = rand(TRANSITIONEDGE + 2, world.maxx - TRANSITIONEDGE - 2)
+
+	var/list/choices = list()
+	for(var/obj/effect/overmap/visitable/V in range(1, our_ship))
+		choices[V.name] = V
+
+	var/choice = tgui_input_list(usr, "Choose an overmap destination:", "Destination", choices)
+	if(!choice)
+		var/backwards = turn(what_edge, 180)
+		forceMove(get_step(src,backwards)) //Move them back a step, then.
+		set_dir(backwards)
+		return
+	else
+		var/obj/effect/overmap/visitable/V = choices[choice]
+		if(occupant != this_occupant || this_x != x || this_y != y || this_z != z || get_dist(V,our_ship) > 1) //Sanity after user input
+			to_chat(occupant, "<span class='warning'>You or they appear to have moved!</span>")
+			return
+		var/list/levels = V.get_space_zlevels()
+		if(!levels.len)
+			to_chat(occupant, "<span class='warning'>You don't appear to be able to get there from here!</span>")
+			return
+		new_z = pick(levels)
+	var/turf/destination = locate(new_x, new_y, new_z)
+	if(!destination || destination.density)
+		to_chat(occupant, "<span class='warning'>You don't appear to be able to get there from here! Is it blocked?</span>")
+		return
+	else
+		forceMove(destination)
 
 //Modified phazon code
 /obj/mecha/combat/fighter/Topic(href, href_list)
@@ -93,11 +175,11 @@
 	else if(moved && gravity && !ground_capable)
 		occupant_message("Collision alert! Vehicle not rated for use in gravity!")
 		take_damage(NOGRAV_FIGHTER_DAMAGE, "brute")
-		playsound(loc, 'sound/effects/grillehit.ogg', 50, 1)
+		playsound(src, 'sound/effects/grillehit.ogg', 50, 1)
 
 /obj/mecha/combat/fighter/handle_equipment_movement()
 	. = ..()
-	consider_gravity(TRUE)	
+	consider_gravity(TRUE)
 
 /obj/mecha/combat/fighter/proc/start_hover()
 	if(!ion_trail.on) //We'll just use this to store if we're floating or not
@@ -125,7 +207,7 @@
 
 	var/list/things = orange(1, src)
 
-	if(locate(/obj/structure/grille in things) || locate(/obj/structure/lattice in things) || locate(/turf/simulated in things) || locate(/turf/unsimulated in things))
+	if(locate(/obj/structure/grille) in things || locate(/obj/structure/lattice) in things || locate(/turf/simulated) in things || locate(/turf/unsimulated) in things)
 		return 1
 	else
 		return 0
@@ -136,16 +218,6 @@
 		who << sound('sound/mecha/fighter_entered_bad.ogg',volume=50)
 	else
 		who << sound('sound/mecha/fighter_entered.ogg',volume=50)
-
-////////////// Equipment //////////////
-
-// For 64x64 fighters
-/obj/item/mecha_parts/mecha_equipment/omni_shield/fighter64
-	shield_type = /obj/item/shield_projector/rectangle/mecha/fighter64
-/obj/item/shield_projector/rectangle/mecha/fighter64
-	shift_x = 16
-	shift_y = 16
-
 
 ////////////// Gunpod //////////////
 
@@ -162,7 +234,7 @@
 	step_in = 3 //Slightly slower than others
 
 	ground_capable = TRUE
-	
+
 	// Paint colors! Null if not set.
 	var/stripe1_color
 	var/stripe2_color
@@ -198,9 +270,9 @@
 
 /obj/mecha/combat/fighter/gunpod/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/device/multitool) && state == 1)
-		var/new_paint_location = input("Please select a target zone.", "Paint Zone", null) as null|anything in list("Fore Stripe", "Aft Stripe", "CANCEL")
+		var/new_paint_location = tgui_input_list(usr, "Please select a target zone.", "Paint Zone", list("Fore Stripe", "Aft Stripe", "CANCEL"))
 		if(new_paint_location && new_paint_location != "CANCEL")
-			var/new_paint_color = input("Please select a paint color.", "Paint Color", null) as color|null
+			var/new_paint_color = input(usr, "Please select a paint color.", "Paint Color", null) as color|null
 			if(new_paint_color)
 				switch(new_paint_location)
 					if("Fore Stripe")
@@ -245,7 +317,7 @@
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
 	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/omni_shield/fighter64
+	ME = new /obj/item/mecha_parts/mecha_equipment/omni_shield
 	ME.attach(src)
 
 /obj/effect/decal/mecha_wreckage/baron

@@ -2,7 +2,7 @@
 /datum/gear/gloves
 	display_name = "gloves, black"
 	path = /obj/item/clothing/gloves/black
-	cost = 2
+	cost = 1
 	slot = slot_gloves
 	sort_category = "Gloves and Handwear"
 
@@ -29,10 +29,12 @@
 /datum/gear/gloves/latex
 	display_name = "gloves, latex"
 	path = /obj/item/clothing/gloves/sterile/latex
+	cost = 2
 
 /datum/gear/gloves/nitrile
 	display_name = "gloves, nitrile"
 	path = /obj/item/clothing/gloves/sterile/nitrile
+	cost = 2
 
 /datum/gear/gloves/orange
 	display_name = "gloves, orange"
@@ -60,7 +62,7 @@
 
 /datum/gear/gloves/evening/New()
 	..()
-	gear_tweaks = list(gear_tweak_free_color_choice)
+	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/gloves/duty
 	display_name = "gloves, work"
@@ -90,14 +92,17 @@
 	ringtype["engagement ring"] = /obj/item/clothing/gloves/ring/engagement
 	ringtype["signet ring"] = /obj/item/clothing/gloves/ring/seal/signet
 	ringtype["masonic ring"] = /obj/item/clothing/gloves/ring/seal/mason
-	ringtype["ring, steel"] = /obj/item/clothing/gloves/ring/material/steel
-	ringtype["ring, iron"] = /obj/item/clothing/gloves/ring/material/iron
-	ringtype["ring, silver"] = /obj/item/clothing/gloves/ring/material/silver
-	ringtype["ring, gold"] = /obj/item/clothing/gloves/ring/material/gold
-	ringtype["ring, platinum"] = /obj/item/clothing/gloves/ring/material/platinum
 	ringtype["ring, glass"] = /obj/item/clothing/gloves/ring/material/glass
 	ringtype["ring, wood"] = /obj/item/clothing/gloves/ring/material/wood
 	ringtype["ring, plastic"] = /obj/item/clothing/gloves/ring/material/plastic
+	ringtype["ring, iron"] = /obj/item/clothing/gloves/ring/material/iron
+	ringtype["ring, bronze"] = /obj/item/clothing/gloves/ring/material/bronze
+	ringtype["ring, steel"] = /obj/item/clothing/gloves/ring/material/steel
+	ringtype["ring, copper"] = /obj/item/clothing/gloves/ring/material/copper
+	ringtype["ring, silver"] = /obj/item/clothing/gloves/ring/material/silver
+	ringtype["ring, gold"] = /obj/item/clothing/gloves/ring/material/gold
+	ringtype["ring, platinum"] = /obj/item/clothing/gloves/ring/material/platinum
+
 	gear_tweaks += new/datum/gear_tweak/path(ringtype)
 
 /datum/gear/gloves/circuitry

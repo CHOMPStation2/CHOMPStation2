@@ -15,7 +15,7 @@
 		to_chat(usr, "Your module is not installed in a hardsuit.")
 		return
 
-	module.holder.ui_interact(usr, nano_state = contained_state)
+	module.holder.tgui_interact(usr, custom_state = GLOB.tgui_contained_state)
 
 /obj/item/rig_module/ai_container
 
@@ -35,7 +35,7 @@
 	interface_desc = "A socket that supports a range of artificial intelligence systems."
 
 	var/mob/integrated_ai // Direct reference to the actual mob held in the suit.
-	var/obj/item/ai_card  // Reference to the MMI, posibrain, intellicard or pAI card previously holding the AI.
+	var/obj/item/device/aicard/ai_card  // Reference to the MMI, posibrain, intellicard or pAI card previously holding the AI.
 	var/obj/item/ai_verbs/verb_holder
 
 /obj/item/rig_module/ai_container/process()
@@ -134,7 +134,7 @@
 	if(!target)
 		if(ai_card)
 			if(istype(ai_card,/obj/item/device/aicard))
-				ai_card.ui_interact(H, state = deep_inventory_state)
+				ai_card.tgui_interact(H, custom_state = GLOB.tgui_deep_inventory_state)
 			else
 				eject_ai(H)
 		update_verb_holder()

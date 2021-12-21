@@ -1,4 +1,5 @@
 // Provides remote access to a controller (since they must be unique).
+// TGUITODO: Actually make these weird things work... well, as much as possible.
 /obj/machinery/dummy_airlock_controller
 	name = "airlock control terminal"
 	icon = 'icons/obj/airlock_machines.dmi'
@@ -6,7 +7,6 @@
 	layer = ABOVE_OBJ_LAYER
 	var/id_tag
 
-	var/datum/topic_state/remote/remote_state
 	var/obj/machinery/embedded_controller/radio/airlock/master_controller
 
 /obj/machinery/dummy_airlock_controller/process()
@@ -24,15 +24,10 @@
 				break
 	if(!master_controller)
 		qdel(src)
-	else
-		remote_state = new /datum/topic_state/remote(src, master_controller)
 
 /obj/machinery/dummy_airlock_controller/Destroy()
 	if(master_controller)
 		master_controller.dummy_terminals -= src
-	if(remote_state)
-		qdel(remote_state)
-		remote_state = null
 	return ..()
 
 /obj/machinery/dummy_airlock_controller/interface_interact(var/mob/user)

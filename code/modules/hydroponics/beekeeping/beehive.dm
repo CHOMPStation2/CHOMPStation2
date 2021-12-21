@@ -2,8 +2,8 @@
 	name = "beehive"
 	icon = 'icons/obj/beekeeping.dmi'
 	icon_state = "beehive"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 
 	var/closed = 0
 	var/bee_count = 0 // Percent
@@ -13,27 +13,27 @@
 	var/maxFrames = 5
 
 /obj/machinery/beehive/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	icon_state = "beehive"
 	if(closed)
-		overlays += "lid"
+		add_overlay("lid")
 	if(frames)
-		overlays += "empty[frames]"
+		add_overlay("empty[frames]")
 	if(honeycombs >= 100)
-		overlays += "full[round(honeycombs / 100)]"
+		add_overlay("full[round(honeycombs / 100)]")
 	if(!smoked)
 		switch(bee_count)
 			if(1 to 40)
-				overlays += "bees1"
+				add_overlay("bees1")
 			if(41 to 80)
-				overlays += "bees2"
+				add_overlay("bees2")
 			if(81 to 100)
-				overlays += "bees3"
+				add_overlay("bees3")
 
 /obj/machinery/beehive/examine(var/mob/user)
-	..()
+	. = ..()
 	if(!closed)
-		to_chat(user, "The lid is open.")
+		. += "The lid is open."
 
 /obj/machinery/beehive/attackby(var/obj/item/I, var/mob/user)
 	if(I.is_crowbar())
@@ -43,7 +43,7 @@
 		return
 	else if(I.is_wrench())
 		anchored = !anchored
-		playsound(loc, I.usesound, 50, 1)
+		playsound(src, I.usesound, 50, 1)
 		user.visible_message("<span class='notice'>[user] [anchored ? "wrenches" : "unwrenches"] \the [src].</span>", "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
 		return
 	else if(istype(I, /obj/item/bee_smoker))
@@ -158,7 +158,7 @@
 /obj/machinery/honey_extractor
 	name = "honey extractor"
 	desc = "A machine used to turn honeycombs on the frame into honey and wax."
-	icon = 'icons/obj/virology.dmi'
+	icon = 'icons/obj/virology_vr.dmi' //VOREStation Edit
 	icon_state = "centrifuge"
 
 	var/processing = 0
@@ -217,7 +217,7 @@
 
 /obj/item/honey_frame/filled/New()
 	..()
-	overlays += "honeycomb"
+	add_overlay("honeycomb")
 
 /obj/item/beehive_assembly
 	name = "beehive assembly"
@@ -244,11 +244,11 @@
 	pass_color = TRUE
 	strict_color_stacking = TRUE
 
-/obj/item/stack/material/wax/New()
-	..()
+/obj/item/stack/material/wax/Initialize()
+	. = ..()
 	recipes = wax_recipes
 
-/material/wax
+/datum/material/wax
 	name = "wax"
 	stack_type = /obj/item/stack/material/wax
 	icon_colour = "#fff343"
@@ -269,18 +269,18 @@ var/global/list/datum/stack_recipe/wax_recipes = list( \
 
 /obj/item/bee_pack/New()
 	..()
-	overlays += "beepack-full"
+	add_overlay("beepack-full")
 
 /obj/item/bee_pack/proc/empty()
 	full = 0
 	name = "empty bee pack"
 	desc = "A stasis pack for moving bees. It's empty."
-	overlays.Cut()
-	overlays += "beepack-empty"
+	cut_overlays()
+	add_overlay("beepack-empty")
 
 /obj/item/bee_pack/proc/fill()
 	full = initial(full)
 	name = initial(name)
 	desc = initial(desc)
-	overlays.Cut()
-	overlays += "beepack-full"
+	cut_overlays()
+	add_overlay("beepack-full")

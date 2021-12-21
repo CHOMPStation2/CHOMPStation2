@@ -33,7 +33,7 @@
 		/obj/item/seeds/riceseed = 3,
 		/obj/item/seeds/rose = 3,
 		/obj/item/seeds/soyaseed = 3,
-		/obj/item/seeds/spineapple = 3,
+		/obj/item/seeds/pineapple = 3,
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
@@ -46,9 +46,11 @@
 		/obj/item/seeds/watermelonseed = 3,
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
+		/obj/item/seeds/wurmwoad = 3,
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3)
 
+//CHOMPedit: adds pitcherseed
 /obj/machinery/seed_storage/xenobotany
 	name = "Xenobotany seed storage"
 	scanner = list("stats", "produce", "soil", "temperature", "light")
@@ -91,7 +93,7 @@
 		/obj/item/seeds/riceseed = 3,
 		/obj/item/seeds/rose = 3,
 		/obj/item/seeds/soyaseed = 3,
-		/obj/item/seeds/spineapple = 3,
+		/obj/item/seeds/pineapple = 3,
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
@@ -104,6 +106,8 @@
 		/obj/item/seeds/watermelonseed = 3,
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
+		/obj/item/seeds/wurmwoad = 3,
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3,
-		/obj/item/seeds/lustflower = 2)
+		/obj/item/seeds/lustflower = 2,
+		/obj/item/seeds/pitcherseed = 3)

@@ -1,5 +1,3 @@
-#define DOCK_ATTEMPT_TIMEOUT 200	//how long in ticks we wait before assuming the docking controller is broken or blown up.
-
 // Subtype of shuttle that handles docking with docking controllers
 // Consists of code pulled down from the old /datum/shuttle and up from /datum/shuttle/ferry
 // Note: Since all known shuttles extend this type, this really could just be built into /datum/shuttle
@@ -9,11 +7,11 @@
 	var/last_dock_attempt_time = 0
 
 	var/docking_controller_tag = null // ID of the controller on the shuttle (If multiple, this is the default one)
-	var/datum/computer/file/embedded_program/docking/shuttle_docking_controller // Controller on the shuttle (the one in use)
+	var/datum/embedded_program/docking/shuttle_docking_controller // Controller on the shuttle (the one in use)
 	var/docking_codes
 
 	var/tmp/obj/effect/shuttle_landmark/next_location  //This is only used internally.
-	var/datum/computer/file/embedded_program/docking/active_docking_controller // Controller we are docked with (or trying to)
+	var/datum/embedded_program/docking/active_docking_controller // Controller we are docked with (or trying to)
 
 	var/obj/effect/shuttle_landmark/landmark_transition  //This variable is type-abused initially: specify the landmark_tag, not the actual landmark.
 	var/move_time = 240		//the time spent in the transition area
@@ -30,7 +28,7 @@
 	if(active_docking_controller)
 		set_docking_codes(active_docking_controller.docking_codes)
 	else if(global.using_map.use_overmap)
-		var/obj/effect/overmap/visitable/location = map_sectors["[current_location.z]"]
+		var/obj/effect/overmap/visitable/location = get_overmap_sector(get_z(current_location))
 		if(location && location.docking_codes)
 			set_docking_codes(location.docking_codes)
 	dock()
@@ -65,7 +63,7 @@
 		current_dock_target = docking_controller_tag
 	shuttle_docking_controller = SSshuttles.docking_registry[current_dock_target]
 	if(current_dock_target && !shuttle_docking_controller)
-		to_world("<span class='danger'>warning: shuttle [src] can't find its controller with tag [current_dock_target]!</span>")
+		log_shuttle("<span class='danger'>warning: shuttle [src] can't find its controller with tag [current_dock_target]!</span>") // No toggle because this is an error message that needs to be seen
 /*
 	Docking stuff
 */

@@ -1,0 +1,97 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - master
+
+env:
+  BASENAME: "vorestation"
+
+jobs:
+  file_tests:
+    name: Run Linters
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ensure +x on CI directory
+        run: |
+          chmod -R +x ./tools/ci
+      - name: Install Tools
+        run: |
+          bash tools/ci/install_build_deps.sh
+      - name: Run Tests
+        run: |
+          tools/ci/validate_files.sh
+          tools/ci/build_tgui.sh
+
+#  dreamchecker:
+#    name: DreamChecker
+#    runs-on: ubuntu-20.04
+#    steps:
+#      - uses: actions/checkout@v2
+#
+#      - name: Cache SpacemanDMM
+#        uses: actions/cache@v2
+#        with:
+#          path: ~/SpacemanDMM
+#          key: ${{ runner.os }}-dreamchecker-${{ hashFiles('dependencies.sh')}}
+#          restore-keys: ${{ runner.os }}-dreamchecker
+#      
+#      - name: Install Dependencies
+#        run: |
+#          tools/ci/install_spaceman_dmm.sh dreamchecker
+#          
+#      - name: Run Linter
+#        id: linter
+#        run: |
+#          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
+#          
+#      - name: Annotate Linter
+#        uses: yogstation13/DreamAnnotate@v1
+#        if: always()
+#        with: 
+#          outputFile: output-annotations.txt
+
+  unit_tests:
+    name: Integration Tests
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ensure +x on CI directory
+        run: |
+          chmod -R +x ./tools/ci
+      - name: Setup Cache
+        uses: actions/cache@v2
+        with:
+          path: $HOME/BYOND
+          key: ${{ runner.os }}-byond
+      - name: Install RUST_G Dependencies
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt update || true
+          sudo apt install zlib1g-dev:i386 libssl-dev:i386
+          ldd librust_g.so
+      - name: Unit Tests
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
+        env:
+          TEST_DEFINE: "UNIT_TEST"
+          TEST_FILE: "code/_unit_tests.dm"
+          RUN: "1"
+      - name: Compile POIs (no run)
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
+        env:
+          TEST_DEFINE: "MAP_TEST"
+          TEST_FILE: "code/_map_tests.dm"
+          RUN: "0"
+      - name: Compile away missions (no run)
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
+        env:
+          TEST_DEFINE: "AWAY_MISSION_TEST"
+          TEST_FILE: "code/_away_mission_tests.dm"
+          RUN: "0"

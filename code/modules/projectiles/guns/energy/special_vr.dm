@@ -1,12 +1,14 @@
 /obj/item/weapon/gun/energy/ionrifle/pistol
 	projectile_type = /obj/item/projectile/ion/pistol // still packs a punch but no AoE
+	w_class = ITEMSIZE_NORMAL //CHOMP Edit.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/energy/ionrifle/weak
 	projectile_type = /obj/item/projectile/ion/small
 
-/obj/item/weapon/gun/energy/medigun //Adminspawn/ERT etc
+/obj/item/weapon/gun/energy/medigun //Adminspawn/ERT etc // CH edit - Changes ML3M  to NERD
 	name = "directed restoration system"
-	desc = "The BL-3 'Phoenix' is an adaptation on the ML-3 'Medbeam' design that channels the power of the beam into a single healing laser. It is highly energy-inefficient, but its medical power cannot be denied."
+	desc = "The BL-3 'Phoenix' is an adaptation on the NERD 'Medbeam' design that channels the power of the beam into a single healing laser. It is highly energy-inefficient, but its medical power cannot be denied."
 	force = 5
 	icon_state = "medbeam"
 	item_state = "medbeam"

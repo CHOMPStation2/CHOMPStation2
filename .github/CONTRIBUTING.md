@@ -36,12 +36,13 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 
 Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start.
 
-* If it is something like a bugfix that Yawn-Wider or VoreStation or Polaris would want (the codebases we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
-* Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation) (https://github.com/\-Wider/YWPolarisVore). All PRs with edits to stock .DMI files might be rejected.
+* If it is something like a bugfix that VoreStation or Polaris would want (the codebases we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
+* Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation). All PRs with edits to stock .DMI files might be rejected.
 * When changing any code in any stock Polaris .DM file, you must mark your changes:
     * For single-line changes: //CHOMPEdit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
     * For multi-line additions: //CHOMPEdit - "Explanation" and then at the bottom of your changes, //CHOMPEdit End
     * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* CHOMP Removal - "Reason"
+* If it is something like a bugfix that Polaris would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
 * Any new files should have "_ch" at the end. For example, "life_ch.dm". Just make them in the same location as the file they are related to.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details.
@@ -60,9 +61,9 @@ Then in our `handle_grabs_ch()` proc, if we want to avoid performing the stock g
 
 ### Pull Requests
 
-* Your submission must pass Travis CI checking. The checks are important, prevent many common mistakes, and even experienced coders get caught by it sometimes. If you think there is a bug in Travis, open an issue. (One known Travis issue is comments in the middle of multi-line lists, just don't do it)
-* Your PR should not have an excessive number of commits unless it is a large project or includes many separate remote commits (such as a pull from Polaris). If you need to keep tweaking your PR to pass Travis or to satisfy a maintainer's requests and are making many commits, you should squash them in the end and update your PR accordingly so these commits don't clog up the history.
-* You can create a WIP PR, and if so, please mark it with [WIP] in the title so it can be labeled appropriately. These can't sit forever, though.
+* Your submission must pass CI checking. The checks are important, prevent many common mistakes, and even experienced coders get caught by it sometimes. If you think there is a bug in CI, open an issue. (One known CI issue is comments in the middle of multi-line lists, just don't do it)
+* Your PR should not have an excessive number of commits unless it is a large project or includes many separate remote commits (such as a pull from Polaris). If you need to keep tweaking your PR to pass CI or to satisfy a maintainer's requests and are making many commits, you should squash them in the end and update your PR accordingly so these commits don't clog up the history.
+* You can create a WIP PR, and if so, please mark it with [WIP] in the title **and make it a draft pr** so it can be labeled appropriately. These can't sit forever, though.
 * If your pull request has many no-conflict merge commits ('merge from master' into your PR branch), it cannot be merged. Squash and make a new PR/forcepush to your PR branch.
 
 ### Git Commit Messages

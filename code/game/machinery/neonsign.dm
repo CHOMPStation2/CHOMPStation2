@@ -4,11 +4,12 @@
 	desc = "Small wall-mounted electronic sign"
 	icon = 'icons/obj/neonsigns.dmi'
 	icon_state = "sign_off"
+	layer = ABOVE_WINDOW_LAYER
 	plane = MOB_PLANE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 4
-	anchored = 1
+	anchored = TRUE
 	var/lit = 0
 	var/id = null
 	var/on_icon = "sign_on"

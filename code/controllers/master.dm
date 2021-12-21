@@ -50,8 +50,6 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	var/current_runlevel	//for scheduling different subsystems for different stages of the round
 
-	var/dbg_is_running_subsystem = FALSE  // TEMPORARY DEBUGGING - true only while we are actually waiting on a subsystem
-
 	var/static/restart_clear = 0
 	var/static/restart_timeout = 0
 	var/static/restart_count = 0
@@ -134,11 +132,13 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 		LAZYINITLIST(BadBoy.failure_strikes)
 		switch(++BadBoy.failure_strikes[BadBoy.type])
 			if(2)
-				msg = "The [BadBoy.name] subsystem was the last to fire for 2 controller restarts. It will be recovered now and disabled if it happens again."
+				msg = "MC Notice: The [BadBoy.name] subsystem was the last to fire for 2 controller restarts. It will be recovered now and disabled if it happens again."
 				FireHim = TRUE
+				BadBoy.fail()
 			if(3)
-				msg = "The [BadBoy.name] subsystem seems to be destabilizing the MC and will be offlined."
+				msg = "MC Notice: The [BadBoy.name] subsystem seems to be destabilizing the MC and will be offlined."
 				BadBoy.flags |= SS_NO_FIRE
+				BadBoy.critfail()
 		if(msg)
 			log_game(msg)
 			message_admins("<span class='boldannounce'>[msg]</span>")
@@ -152,22 +152,25 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 		current_runlevel = Master.current_runlevel
 		StartProcessing(10)
 	else
-		to_chat(world, "<span class='boldannounce'>The Master Controller is having some issues, we will need to re-initialize EVERYTHING</span>")
+		to_world("<span class='boldannounce'>The Master Controller is having some issues, we will need to re-initialize EVERYTHING</span>")
 		Initialize(20, TRUE)
 
 
 // Please don't stuff random bullshit here,
 // 	Make a subsystem, give it the SS_NO_FIRE flag, and do your work in it's Initialize()
-/datum/controller/master/Initialize(delay, init_sss)
+/datum/controller/master/Initialize(delay, init_sss, tgs_prime)
 	set waitfor = 0
 
 	if(delay)
 		sleep(delay)
 
+	if(tgs_prime)
+		world.TgsInitializationComplete()
+
 	if(init_sss)
 		init_subtypes(/datum/controller/subsystem, subsystems)
 
-	to_chat(world, "<span class='boldannounce'>Initializing subsystems...</span>")
+	to_chat(world, "<span class='boldannounce'>MC: Initializing subsystems...</span>")
 
 	// Sort subsystems by init_order, so they initialize in the correct order.
 	sortTim(subsystems, /proc/cmp_subsystem_init)
@@ -183,14 +186,17 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	current_ticklimit = TICK_LIMIT_RUNNING
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
-	var/msg = "Initializations complete within [time] second[time == 1 ? "" : "s"]!"
+	var/msg = "MC: Initializations complete within [time] second[time == 1 ? "" : "s"]!"
 	to_chat(world, "<span class='boldannounce'>[msg]</span>")
 	log_world(msg)
 
-	SERVER_TOOLS_CHAT_BROADCAST("Server Initialization completed!")
+
+	send2chat("Server Initialization completed! - Took [time] second[time == 1 ? "" : "s"].", "bot announce")
 
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
+
+	GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever
 
 	// Sort subsystems by display setting for easy access.
 	sortTim(subsystems, /proc/cmp_subsystem_display)
@@ -223,15 +229,17 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if (rtn > 0 || processing < 0)
 		return //this was suppose to happen.
 	//loop ended, restart the mc
-	log_game("MC crashed or runtimed, restarting")
-	message_admins("MC crashed or runtimed, restarting")
-	log_world("MC crashed or runtimed, restarting")
+	log_and_message_admins("MC Notice: MC crashed or runtimed, self-restarting (\ref[src])")
 	var/rtn2 = Recreate_MC()
-	if (rtn2 <= 0)
-		log_game("Failed to recreate MC (Error code: [rtn2]), it's up to the failsafe now")
-		message_admins("Failed to recreate MC (Error code: [rtn2]), it's up to the failsafe now")
-		log_world("Failed to recreate MC (Error code: [rtn2]), it's up to the failsafe now")
-		Failsafe.defcon = 2
+	switch(rtn2)
+		if(-1)
+			log_and_message_admins("MC Warning: Failed to self-recreate MC (Return code: [rtn2]), it's up to the failsafe now (\ref[src])")
+			Failsafe.defcon = 2
+		if(0)
+			log_and_message_admins("MC Warning: Too soon for MC self-restart (Return code: [rtn2]), going to let failsafe handle it (\ref[src])")
+			Failsafe.defcon = 2
+		if(1)
+			log_and_message_admins("MC Notice: MC self-recreated, old MC departing (Return code: [rtn2]) (\ref[src])")
 
 // Main loop.
 /datum/controller/master/proc/Loop()
@@ -243,8 +251,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	var/list/tickersubsystems = list()
 	var/list/runlevel_sorted_subsystems = list(list())	//ensure we always have at least one runlevel
 	var/timer = world.time
-	for (var/thing in subsystems)
-		var/datum/controller/subsystem/SS = thing
+	for (var/datum/controller/subsystem/SS as anything in subsystems)
 		if (SS.flags & SS_NO_FIRE)
 			continue
 		SS.queued_time = 0
@@ -331,8 +338,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 				cached_runlevel = checking_runlevel
 				current_runlevel_subsystems = runlevel_sorted_subsystems[cached_runlevel]
 				var/stagger = world.time
-				for(var/I in current_runlevel_subsystems)
-					var/datum/controller/subsystem/SS = I
+				for(var/datum/controller/subsystem/SS as anything in current_runlevel_subsystems)
 					if(SS.next_fire <= world.time)
 						stagger += world.tick_lag * rand(1, 5)
 						SS.next_fire = stagger
@@ -478,11 +484,9 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 			queue_node.state = SS_RUNNING
 
-			dbg_is_running_subsystem = TRUE // TEMPORARY DEBUGGING
 			tick_usage = TICK_USAGE
 			var/state = queue_node.ignite(queue_node_paused)
 			tick_usage = TICK_USAGE - tick_usage
-			dbg_is_running_subsystem = FALSE // TEMPORARY DEBUGGING
 
 			if (state == SS_RUNNING)
 				state = SS_IDLE
@@ -547,8 +551,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	for(var/I in runlevel_SS)
 		subsystemstocheck |= I
 
-	for (var/thing in subsystemstocheck)
-		var/datum/controller/subsystem/SS = thing
+	for (var/datum/controller/subsystem/SS as anything in subsystemstocheck)
 		if (!SS || !istype(SS))
 			//list(SS) is so if a list makes it in the subsystem list, we remove the list, not the contents
 			subsystems -= list(SS)
@@ -595,8 +598,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	//disallow more than one map to load at once, multithreading it will just cause race conditions
 	while(map_loading)
 		stoplag()
-	for(var/S in subsystems)
-		var/datum/controller/subsystem/SS = S
+	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StartLoadingMap()
 
 	map_loading = TRUE
@@ -605,6 +607,5 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if(!quiet)
 		admin_notice("<span class='danger'>Map is finished.  Unlocking.</span>", R_DEBUG)
 	map_loading = FALSE
-	for(var/S in subsystems)
-		var/datum/controller/subsystem/SS = S
+	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StopLoadingMap()

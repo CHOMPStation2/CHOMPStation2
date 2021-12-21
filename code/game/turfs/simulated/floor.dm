@@ -30,10 +30,9 @@
 
 	thermal_conductivity = 0.040
 	heat_capacity = 10000
-	var/lava = 0
 
 /turf/simulated/floor/is_plating()
-	return !flooring
+	return (!flooring || flooring.is_plating)
 
 /turf/simulated/floor/Initialize(mapload, floortype)
 	. = ..()
@@ -41,6 +40,7 @@
 		floortype = initial_flooring
 	if(floortype)
 		set_flooring(get_flooring_data(floortype), TRUE)
+		. = INITIALIZE_HINT_LATELOAD // We'll update our icons after everyone is ready
 	else
 		vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
 		footstep_sounds = base_footstep_sounds
@@ -49,25 +49,33 @@
 			dirt += rand(50,100)
 			update_dirt() //5% chance to start with dirt on a floor tile- give the janitor something to do
 
+/turf/simulated/floor/LateInitialize()
+	. = ..()
+	update_icon(1)
+
 /turf/simulated/floor/proc/swap_decals()
 	var/current_decals = decals
 	decals = old_decals
 	old_decals = current_decals
 
 /turf/simulated/floor/proc/set_flooring(var/decl/flooring/newflooring, var/initializing)
-	make_plating(defer_icon_update = 1)
-	if(!flooring && !initializing) // Plating -> Flooring
+	//make_plating(defer_icon_update = 1)
+	if(is_plating() && !initializing) // Plating -> Flooring
 		swap_decals()
 	flooring = newflooring
 	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
 	footstep_sounds = newflooring.footstep_sounds
-	update_icon(1)
+	if(!initializing)
+		update_icon(1)
 	levelupdate()
 
 //This proc will set floor_type to null and the update_icon() proc will then change the icon_state of the turf
 //This proc auto corrects the grass tiles' siding.
 /turf/simulated/floor/proc/make_plating(var/place_product, var/defer_icon_update)
 	cut_overlays()
+
+	for(var/obj/effect/decal/writing/W in src)
+		qdel(W)
 
 	name = base_name
 	desc = base_desc
@@ -76,11 +84,15 @@
 	vorefootstep_sounds = base_vorefootstep_sounds	 //CHOMPstation edit
 	footstep_sounds = base_footstep_sounds
 
-	if(flooring) // Flooring -> Plating
+	if(!is_plating()) // Flooring -> Plating
 		swap_decals()
 		if(flooring.build_type && place_product)
 			new flooring.build_type(src)
-		flooring = null
+		var/newtype = flooring.get_plating_type()
+		if(newtype) // Has a custom plating type to become
+			set_flooring(get_flooring_data(newtype))
+		else
+			flooring = null
 
 	set_light(0)
 	broken = null
@@ -92,8 +104,12 @@
 		update_icon(1)
 
 /turf/simulated/floor/levelupdate()
+	var/floored_over = !is_plating()
 	for(var/obj/O in src)
-		O.hide(O.hides_under_flooring() && src.flooring)
+		O.hide(O.hides_under_flooring() && floored_over)
+
+/turf/simulated/floor/can_engrave()
+	return (!flooring || flooring.can_engrave)
 
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
@@ -141,7 +157,7 @@
 			var/turf/simulated/wall/T = get_turf(src) // Ref to the wall we just built.
 			// Apparently set_material(...) for walls requires refs to the material singletons and not strings.
 			// This is different from how other material objects with their own set_material(...) do it, but whatever.
-			var/material/M = name_to_material[the_rcd.material_to_use]
+			var/datum/material/M = name_to_material[the_rcd.material_to_use]
 			T.set_material(M, the_rcd.make_rwalls ? M : null, M)
 			T.add_hiddenprint(user)
 			return TRUE
@@ -162,3 +178,10 @@
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
 			ChangeTurf(get_base_turf_by_area(src), preserve_outdoors = TRUE)
 			return TRUE
+
+/turf/simulated/floor/AltClick(mob/user)
+	if(isliving(user))
+		var/mob/living/livingUser = user
+		if(try_graffiti(livingUser, livingUser.get_active_hand()))
+			return
+	. = ..() 

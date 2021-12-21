@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/projectile/colt
 	var/unique_reskin
 	name = ".45 pistol"
-	desc = "A cheap Martian knock-off of a Colt M1911. Uses .45 rounds."
+	desc = "A typical modern handgun produced for law enforcement. Uses .45 rounds."
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
@@ -9,6 +9,7 @@
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/colt/update_icon()
 	if(ammo_magazine)
@@ -23,7 +24,7 @@
 			icon_state = "[initial(icon_state)]-e"
 
 /obj/item/weapon/gun/projectile/colt/detective
-	desc = "A Martian recreation of a Colt M1911. Uses .45 rounds."
+	desc = "A standard law enforcement issue pistol. Uses .45 rounds."
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 
 /obj/item/weapon/gun/projectile/colt/detective/verb/rename_gun()
@@ -38,7 +39,7 @@
 		to_chat(M, "<span class='notice'>You don't feel cool enough to name this gun, chump.</span>")
 		return 0
 
-	var/input = sanitizeSafe(input("What do you want to name the gun?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(input(usr, "What do you want to name the gun?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = input
@@ -54,14 +55,14 @@
 	var/list/options = list()
 	options["NT Mk. 58"] = "secguncomp"
 	options["NT Mk. 58 Custom"] = "secgundark"
-	options["Colt M1911"] = "colt"
-	options["FiveSeven"] = "fnseven"
-	options["USP"] = "usp"
-	options["H&K VP"] = "VP78"
-	options["P08 Luger"] = "p08"
-	options["P08 Luger, Brown"] = "p08b"
-	options["Glock 37"] = "enforcer_black"
-	var/choice = input(M,"Choose your sprite!","Resprite Gun") in options
+	options["MarsTech P11 Spur"] = "colt"
+	options["MarsTech P59 Massif"] = "fnseven"
+	options["ProTek YC9"] = "usp"
+	options["ProTek Minx"] = "VP78"
+	options["Jindal T15 Chooha"] = "p08"
+	options["Jindal KP-45W"] = "p08b"
+	options["PCA-11 Tenzu"] = "enforcer_black"
+	var/choice = tgui_input_list(M,"Choose your sprite!","Resprite Gun", options)
 	if(src && choice && !M.stat && in_range(M,src))
 		icon_state = options[choice]
 		unique_reskin = options[choice]
@@ -78,7 +79,8 @@
 
 /obj/item/weapon/gun/projectile/sec
 	name = ".45 pistol"
-	desc = "The NT Mk58 is a cheap, ubiquitous sidearm, produced by a NanoTrasen subsidiary. Found pretty much everywhere humans are. Uses .45 rounds."
+	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. Found pretty much everywhere humans are. Uses .45 rounds."
+	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
 	icon_state = "secguncomp"
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
@@ -86,6 +88,7 @@
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/sec/update_icon()
 	..()
@@ -97,9 +100,10 @@
 /obj/item/weapon/gun/projectile/sec/flash
 	name = ".45 signal pistol"
 	magazine_type = /obj/item/ammo_magazine/m45/flash
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/sec/wood
-	desc = "The NT Mk58 is a cheap, ubiquitous sidearm, produced by a NanoTrasen subsidiary. This one has a sweet wooden grip. Uses .45 rounds."
+	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. This one has a sweet wooden grip. Uses .45 rounds."
 	name = "custom .45 Pistol"
 	icon_state = "secgundark"
 
@@ -118,6 +122,7 @@
 	caliber = ".45"
 	silenced = 1
 	fire_delay = 1
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	recoil = 0
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	load_method = MAGAZINE
@@ -125,9 +130,15 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 
+/obj/item/weapon/gun/projectile/silenced/empty
+	magazine_type = null
+
 /obj/item/weapon/gun/projectile/deagle
-	name = "desert eagle"
-	desc = "The perfect handgun for shooters with a need to hit targets through a wall and behind a fridge in your neighbor's house. Uses .44 rounds."
+	name = "hand cannon"
+	desc = "The PCA-55 Rarkajar perfect handgun for shooters with a need to hit targets through a wall and behind a fridge in your neighbor's house. Uses .44 rounds."
+	description_fluff = "Pearlshield Consolidated Armories are far from the most cutting edge firearm manufacturer, but the Tajaran’s long tradition of war is rivaled only by humanity, \
+	and the introduction of human technology to the Tajaran arms market has resulted in something of a revolution in finding new ways to kill each other at long distances with bullets. \
+	Usually made with mass-production in mind, PCA weapons combine an eye for design with a great desire to make people dead."
 	icon_state = "deagle"
 	item_state = "deagle"
 	force = 14.0
@@ -145,12 +156,12 @@
 		icon_state = "[initial(icon_state)]-e"
 
 /obj/item/weapon/gun/projectile/deagle/gold
-	desc = "A gold plated gun folded over a million times by superior martian gunsmiths. Uses .44 rounds."
+	desc = "A gold plated gun folded over a million times by superior Tajaran gunsmiths. Uses .44 rounds."
 	icon_state = "deagleg"
 	item_state = "deagleg"
 
 /obj/item/weapon/gun/projectile/deagle/camo
-	desc = "A Deagle brand Deagle for operators operating operationally. Uses .44 rounds."
+	desc = "An off-brand non-Deagle for operators not operating operationally. Uses .44 rounds."
 	icon_state = "deaglecamo"
 	item_state = "deagleg"
 
@@ -168,6 +179,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m75)
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/gyropistol/update_icon()
 	..()
@@ -189,6 +201,7 @@
 	magazine_type = /obj/item/ammo_magazine/m9mm/compact
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm/compact)
 	projectile_type = /obj/item/projectile/bullet/pistol
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/pistol/flash
 	name = "compact signal pistol"
@@ -284,8 +297,12 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/luger
-	name = "\improper P08 Luger"
-	desc = "Not some cheap scheisse Martian knockoff! This Luger is an authentic reproduction by RauMauser. Accuracy, easy handling, and its signature appearance make it popular among historic gun collectors. Uses 9mm rounds."
+	name = "\improper Jindal T15 Chooha"
+	desc = "Almost seventy percent guaranteed not to be a cheap rimworld knockoff! Accuracy, easy handling, and its distinctive appearance make it popular among gun collectors. Uses 9mm rounds."
+	description_fluff = "While Jindal’s rugged, affordable weapons intended for the colonial sector are a major export of Tau Ceti, \
+	the Jindal Arms company is perhaps best known for its liberal sale of production licenses to just about any fledgling rimworld venture who asks, and has cash to spare. \
+	While Jindal’s 'authentic' Binma-built weapons are renowned for their reliability, the same cannot be said for the hundreds of low-grade (But technically legal) \
+	copies circulating the squalid habitats and smoke-filled junk ships of the frontier."
 	icon_state = "p08"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
 	caliber = "9mm"
@@ -302,17 +319,21 @@
 		icon_state = "[initial(icon_state)]-e"
 
 /obj/item/weapon/gun/projectile/luger/brown
+	name = "\improper Jindal KP-45W"
+	description_fluff = "While wholly owned by Hephaestus Industries, the Jindal Arms brand does not appear prominently in most company catalogues \
+	(Perhaps owing to its less than prestigious image), instead being sold almost exclusively through retailers and advertising platforms targeting the 'independent roughneck' demographic."
 	icon_state = "p08b"
 
 /obj/item/weapon/gun/projectile/p92x
 	name = "9mm pistol"
-	desc = "A widespread sidearm called the P92X which is used by military, police, and security forces across the galaxy. Uses 9mm rounds."
+	desc = "A widespread MarsTech sidearm called the P92X which is used by military, police, and security forces across the galaxy. Uses 9mm rounds."
 	icon_state = "p92x"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
 	caliber = "9mm"
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm) // Can accept illegal large capacity magazines, or compact magazines.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/p92x/update_icon()
 	..()

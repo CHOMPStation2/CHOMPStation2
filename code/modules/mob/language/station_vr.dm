@@ -22,7 +22,7 @@
 	desc = "The dominant language of the Sergal homeworld, Vilous. It consists of aggressive low-pitched hissing and throaty growling."
 	speech_verb = "snarls"
 	colour = "sergal"
-	key = "t"
+	key = "T"
 	syllables = list ("grr", "gah", "woof", "arf", "arra", "rah", "wor", "sarg")
 
 /datum/language/vulpkanin
@@ -101,7 +101,7 @@
 	colour = "changeling"
 	key = "M"
 	machine_understands = FALSE
-	flags = WHITELISTED | HIVEMIND
+	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
 /datum/language/slavic
 	name = LANGUAGE_SLAVIC
@@ -119,13 +119,63 @@
 		"ver", "stv", "pro", "ski"
 	)
 
+/datum/language/clownish
+	name = LANGUAGE_CLOWNISH
+	desc = "A special elective language course for those studying at the Clown Planet Institute."
+	speech_verb = "honks"
+	ask_verb = "seins"
+	exclaim_verb = "crenks"
+	whisper_verb = "squeaks"
+	colour = "#F785F2" // Pink for the clown.
+	key = "<"
+	flags = WHITELISTED | CLOWN
+	syllables = list(
+		"honk", "knock", "salt", "slip", "lube", "banana", "flower", "pie", "did you hear", "🅱️", "haha", "bully", "going up",
+	)
+
+/datum/language/drudakar
+	name = LANGUAGE_DRUDAKAR
+	desc = "The native language of the D'Rudak'Ar, a loosely tied together community of dragons and demi-dragons based in the Diul system. Features include many hard consonants and rolling 'r's."
+	speech_verb = "gaos"
+	ask_verb = "gaos"
+	exclaim_verb = "GAOS"
+	whisper_verb = "gaos"
+	colour = "drudakar"
+	key = "K"
+	syllables = list(
+		"gok", "rha", "rou", "gao", "do", "ra", "bo", "lah", "draz", "khi", "zah", "lah", "ora", "ille",
+		"ghlas", "ghlai", "tyur", "vah", "bao", "raag", "drag", "zhi", "dahl", "tiyr", "vahl", "nyem",
+		"roar", "hyaa", "ma", "ha", "ya", "shi", "yo", "go"
+	)
+
+/datum/language/spacer
+	name = LANGUAGE_SPACER
+	desc = "A rough pidgin-language comprised of Tradeband, Gutter, and Sol Common used by various space-born communities unique to Humanity."
+	key = "J"
+	syllables = list(
+		"ada", "zir", "bian", "ach", "usk", "ado", "ich", "cuan", "iga", "qing", "le", "que", "ki", "qaf", "dei", "eta"
+	)
+	colour = "spacer"
+	machine_understands = TRUE
+
+/datum/language/tavan
+	name = LANGUAGE_TAVAN
+	desc = "A language native to the Altevians, it has been adopted by other rodent faring species over time."
+	key = "E"
+	speech_verb = "squeaks"
+	whisper_verb = "squiks"
+	exclaim_verb = "squeaks loudly"
+	syllables = list ("sque", "uik", "squeak", "squee", "eak", "eek", "uek", "squik",
+			"squeek", "sq", "squee", "ee", "ek", "ak", "ueak", "squea")
+	colour = "tavan" 
+
 /datum/language/unathi
 	flags = 0
 /datum/language/tajaran
 	flags = 0
 /datum/language/skrell
 	flags = 0
-/datum/language/seromi
+/datum/language/teshari
 	flags = 0
 /datum/language/zaddat
 	flags = 0
@@ -133,6 +183,8 @@
 	flags = 0
 /datum/language/gutter
 	machine_understands = FALSE
+	desc = "A dialect of Tradeband not uncommon amongst traders in the Free Trade Union. The language is often difficult to translate due to changing frequently and being highly colloquial."
+	partial_understanding = list(LANGUAGE_TRADEBAND = 30, LANGUAGE_SOL_COMMON = 10)
 /datum/language/human/monkey
 	flags = RESTRICTED
 /datum/language/skrell/monkey

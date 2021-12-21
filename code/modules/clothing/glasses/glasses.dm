@@ -13,7 +13,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses
 	name = "glasses"
-	icon = 'icons/obj/clothing/glasses.dmi'
+	icon = 'icons/inventory/eyes/item.dmi'
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_EYES
 	plane_slots = list(slot_glasses)
@@ -28,12 +28,11 @@ BLIND     // can't see anything
 	var/obj/screen/overlay = null
 	var/list/away_planes //Holder for disabled planes
 	drop_sound = 'sound/items/drop/accessory.ogg'
+	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 	sprite_sheets = list(
-		"Teshari" = 'icons/mob/species/seromi/eyes.dmi',
-		"Vox" = 'icons/mob/species/vox/eyes.dmi',
-		"Sergal" = 'icons/mob/species/sergal/eyes_yw.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
+		SPECIES_TESHARI = 'icons/inventory/eyes/mob_teshari.dmi',
+		SPECIES_VOX = 'icons/inventory/eyes/mob_vox.dmi'
 		)
 
 /obj/item/clothing/glasses/update_clothing_icon()
@@ -41,28 +40,49 @@ BLIND     // can't see anything
 		var/mob/M = src.loc
 		M.update_inv_glasses()
 
+/obj/item/clothing/glasses/proc/can_toggle(mob/living/user)
+	if(!toggleable)
+		return FALSE
+
+	// Prevent people from just turning their goggles back on.
+	if(!active && (vision_flags & (SEE_TURFS|SEE_OBJS)))
+		var/area/A = get_area(src)
+		if(A.no_spoilers)
+			return FALSE
+
+	return TRUE
+
+/obj/item/clothing/glasses/proc/toggle_active(mob/living/user)
+	if(active)
+		active = FALSE
+		icon_state = off_state
+		user.update_inv_glasses()
+		flash_protection = FLASH_PROTECTION_NONE
+		tint = TINT_NONE
+		away_planes = enables_planes
+		enables_planes = null
+
+	else
+		active = TRUE
+		icon_state = initial(icon_state)
+		user.update_inv_glasses()
+		flash_protection = initial(flash_protection)
+		tint = initial(tint)
+		enables_planes = away_planes
+		away_planes = null
+	user.update_action_buttons()
+	user.recalculate_vis()
+
 /obj/item/clothing/glasses/attack_self(mob/user)
 	if(toggleable)
-		if(active)
-			active = 0
-			icon_state = off_state
-			user.update_inv_glasses()
-			flash_protection = FLASH_PROTECTION_NONE
-			tint = TINT_NONE
-			away_planes = enables_planes
-			enables_planes = null
-			to_chat(usr, "You deactivate the optical matrix on the [src].")
+		if(!can_toggle(user))
+			to_chat(user, span("warning", "You don't seem to be able to toggle \the [src] here."))
 		else
-			active = 1
-			icon_state = initial(icon_state)
-			user.update_inv_glasses()
-			flash_protection = initial(flash_protection)
-			tint = initial(tint)
-			enables_planes = away_planes
-			away_planes = null
-			to_chat(usr, "You activate the optical matrix on the [src].")
-		user.update_action_buttons()
-		user.recalculate_vis()
+			toggle_active(user)
+			if(active)
+				to_chat(user, span("notice", "You activate the optical matrix on the [src]."))
+			else
+				to_chat(user, span("notice", "You deactivate the optical matrix on the [src]."))
 	..()
 
 /obj/item/clothing/glasses/meson
@@ -163,8 +183,33 @@ BLIND     // can't see anything
 	body_parts_covered = 0
 	var/eye = null
 	drop_sound = 'sound/items/drop/gloves.ogg'
+	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
 /obj/item/clothing/glasses/eyepatch/verb/switcheye()
+	set name = "Switch Eyepatch"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	eye = !eye
+	if(eye)
+		icon_state = "[icon_state]_1"
+	else
+		icon_state = initial(icon_state)
+	update_clothing_icon()
+
+/obj/item/clothing/glasses/eyepatchwhite
+	name = "eyepatch"
+	desc = "A simple eyepatch made of a strip of cloth tied around the head."
+	icon_state = "eyepatch_white"
+	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
+	body_parts_covered = 0
+	var/eye = null
+	drop_sound = 'sound/items/drop/gloves.ogg'
+	pickup_sound = 'sound/items/pickup/gloves.ogg'
+
+/obj/item/clothing/glasses/eyepatchwhite/verb/switcheye()
 	set name = "Switch Eyepatch"
 	set category = "Object"
 	set src in usr
@@ -247,6 +292,12 @@ BLIND     // can't see anything
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 	body_parts_covered = 0
 
+/obj/item/clothing/glasses/artist
+	name = "4-D Glasses"
+	desc = "You can see in every dimension, and get four times the amount of headache!"
+	icon_state = "artist"
+	item_state = "artist_glasses"
+
 /obj/item/clothing/glasses/gglasses
 	name = "green glasses"
 	desc = "Forest green glasses, like the kind you'd wear when hatching a nasty scheme."
@@ -297,7 +348,7 @@ BLIND     // can't see anything
 	icon_state = "welding-g"
 	item_state_slots = list(slot_r_hand_str = "welding-g", slot_l_hand_str = "welding-g")
 	action_button_name = "Flip Welding Goggles"
-	matter = list(DEFAULT_WALL_MATERIAL = 1500, "glass" = 1000)
+	matter = list(MAT_STEEL = 1500, MAT_GLASS = 1000)
 	item_flags = AIRTIGHT
 	var/up = 0
 	flash_protection = FLASH_PROTECTION_MAJOR
@@ -345,6 +396,19 @@ BLIND     // can't see anything
 	flash_protection = FLASH_PROTECTION_MAJOR
 	tint = BLIND
 	drop_sound = 'sound/items/drop/gloves.ogg'
+	pickup_sound = 'sound/items/pickup/gloves.ogg'
+
+/obj/item/clothing/glasses/sunglasses/blindfold/whiteblindfold
+	name = "white blindfold"
+	desc = "A white blindfold that covers the eyes, preventing sight."
+	icon_state = "blindfoldwhite"
+
+/obj/item/clothing/glasses/sunglasses/thinblindfold
+	name = "thin white blindfold"
+	desc = "A thin blindfold to help protect sensitive eyes while still allowing some sight"
+	icon_state = "blindfoldwhite"
+	flash_protection = FLASH_PROTECTION_MODERATE //not as thick, only offers some protection
+	tint = TINT_HEAVY
 
 /obj/item/clothing/glasses/sunglasses/blindfold/tape
 	name = "length of tape"
@@ -442,19 +506,19 @@ BLIND     // can't see anything
 	enables_planes = list(VIS_FULLBRIGHT, VIS_CLOAKED)
 	flash_protection = FLASH_PROTECTION_REDUCED
 
-	emp_act(severity)
-		if(istype(src.loc, /mob/living/carbon/human))
-			var/mob/living/carbon/human/M = src.loc
-			to_chat(M, "<font color='red'>The Optical Thermal Scanner overloads and blinds you!</font>")
-			if(M.glasses == src)
-				M.Blind(3)
-				M.eye_blurry = 5
-				// Don't cure being nearsighted
-				if(!(M.disabilities & NEARSIGHTED))
-					M.disabilities |= NEARSIGHTED
-					spawn(100)
-						M.disabilities &= ~NEARSIGHTED
-		..()
+/obj/item/clothing/glasses/thermal/emp_act(severity)
+	if(istype(src.loc, /mob/living/carbon/human))
+		var/mob/living/carbon/human/M = src.loc
+		to_chat(M, "<font color='red'>The Optical Thermal Scanner overloads and blinds you!</font>")
+		if(M.glasses == src)
+			M.Blind(3)
+			M.eye_blurry = 5
+			// Don't cure being nearsighted
+			if(!(M.disabilities & NEARSIGHTED))
+				M.disabilities |= NEARSIGHTED
+				spawn(100)
+					M.disabilities &= ~NEARSIGHTED
+	..()
 
 /obj/item/clothing/glasses/thermal/New()
 	..()
@@ -497,3 +561,39 @@ BLIND     // can't see anything
 	desc = "A set of implantable lenses designed to augment your vision"
 	icon_state = "thermalimplants"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
+
+/obj/item/clothing/glasses/aerogelgoggles
+	name = "orange goggles"
+	desc = "Teshari designed lightweight goggles."
+	icon_state = "orange-g"
+	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
+	action_button_name = "Adjust Orange Goggles"
+	var/up = 0
+	item_flags = AIRTIGHT
+	body_parts_covered = EYES
+	species_restricted = list(SPECIES_TESHARI)
+
+/obj/item/clothing/glasses/aerogelgoggles/attack_self()
+	toggle()
+
+/obj/item/clothing/glasses/aerogelgoggles/verb/toggle()
+	set category = "Object"
+	set name = "Adjust Orange Goggles"
+	set src in usr
+
+	if(usr.canmove && !usr.stat && !usr.restrained())
+		if(src.up)
+			src.up = !src.up
+			flags_inv |= HIDEEYES
+			body_parts_covered |= EYES
+			icon_state = initial(icon_state)
+			to_chat(usr, "You flip \the [src] down to protect your eyes.")
+		else
+			src.up = !src.up
+			flags_inv &= ~HIDEEYES
+			body_parts_covered &= ~EYES
+			icon_state = "[initial(icon_state)]up"
+			to_chat(usr, "You push \the [src] up from in front of your eyes.")
+		update_clothing_icon()
+		usr.update_action_buttons()
+

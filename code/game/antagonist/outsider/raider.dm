@@ -70,6 +70,7 @@ var/datum/antagonist/raider/raiders
 		/obj/item/weapon/gun/energy/mindflayer,
 		/obj/item/weapon/gun/energy/toxgun,
 		/obj/item/weapon/gun/energy/stunrevolver,
+		/obj/item/weapon/gun/energy/stunrevolver/vintage,
 		/obj/item/weapon/gun/energy/ionrifle,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/gun/energy/crossbow/largecrossbow,
@@ -196,7 +197,7 @@ var/datum/antagonist/raider/raiders
 		return 0
 
 	for(var/datum/mind/player in current_antagonists)
-		if(!player.current || get_area(player.current) != locate(/area/skipjack_station/start))
+		if(!player.current || get_area(player.current) != locate(/area/shuttle/skipjack)) // CHOMPEdit: Changed locate to work with new condensed shuttles
 			return 0
 	return 1
 

@@ -9,6 +9,8 @@
 	var/deflect_coeff = 1.15
 	var/damage_coeff = 0.8
 
+	step_delay = 1
+
 	equip_type = EQUIP_HULL
 
 /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster/handle_projectile_contact(var/obj/item/projectile/Proj, var/inc_damage)
@@ -23,7 +25,7 @@
 		inc_damage = 0
 	else
 		inc_damage *= src.damage_coeff
-	set_ready_state(0)
+	set_ready_state(FALSE)
 	chassis.use_power(energy_drain)
 	spawn()
 		do_after_cooldown()
@@ -39,7 +41,7 @@
 		inc_damage = 0
 	else if(istype(A, /obj))
 		inc_damage *= damage_coeff
-	set_ready_state(0)
+	set_ready_state(FALSE)
 	chassis.use_power(energy_drain)
 	spawn()
 		do_after_cooldown()
@@ -81,7 +83,7 @@
 		chassis.take_damage(round(Proj.damage*src.damage_coeff),Proj.check_armour)
 		chassis.check_for_internal_damage(list(MECHA_INT_FIRE,MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 		Proj.on_hit(chassis)
-	set_ready_state(0)
+	set_ready_state(FALSE)
 	chassis.use_power(energy_drain)
 	do_after_cooldown()
 	return
@@ -101,7 +103,7 @@
 		if(O.throwforce)
 			chassis.take_damage(round(O.throwforce*damage_coeff))
 			chassis.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
-	set_ready_state(0)
+	set_ready_state(FALSE)
 	chassis.use_power(energy_drain)
 	do_after_cooldown()
 	return

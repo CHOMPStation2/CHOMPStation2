@@ -28,8 +28,8 @@
 /area/submap/virgo2/SnowR1
 	name = "POI - SnowR1"
 
-/area/submap/virgo2/BoomBase
-	name = "POI - Boom1"
+///area/submap/virgo2/BoomBase //removed due to issues with it turning into space
+	//name = "POI - Boom1"
 
 /area/submap/virgo2/Blackshuttledown
 	name = "POI - BSD"

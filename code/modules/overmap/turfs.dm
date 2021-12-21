@@ -1,7 +1,7 @@
 //Dimension of overmap (squares 4 lyfe)
 var/global/list/map_sectors = list()
 
-/area/overmap/
+/area/overmap
 	name = "System Map"
 	icon_state = "start"
 	requires_power = 0
@@ -10,16 +10,20 @@ var/global/list/map_sectors = list()
 /turf/unsimulated/map
 	icon = 'icons/turf/space.dmi'
 	icon_state = "map"
-	initialized = FALSE // TODO - Fix unsimulated turf initialization so this override is not necessary!
+	alpha = 200
 
 /turf/unsimulated/map/edge
 	opacity = 1
-	density = 1
+	density = TRUE
+	alpha = 255
 	var/map_is_to_my
 	var/turf/unsimulated/map/edge/wrap_buddy
 
 /turf/unsimulated/map/edge/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/turf/unsimulated/map/edge/LateInitialize()
 	//This could be done by using the using_map.overmap_size much faster, HOWEVER, doing it programatically to 'find'
 	//  the edges this way allows for 'sub overmaps' elsewhere and whatnot.
 	for(var/side in alldirs) //The order of this list is relevant: It should definitely break on finding a cardinal FIRST.
@@ -73,6 +77,7 @@ var/global/list/map_sectors = list()
 		if(x == global.using_map.overmap_size)
 			I.pixel_x = 5*i + 2
 		add_overlay(I)
+	AddElement(/datum/element/turf_z_transparency)
 
 /turf/unsimulated/map/Entered(var/atom/movable/O, var/atom/oldloc)
 	..()
@@ -89,7 +94,7 @@ var/list/moving_levels = list()
 //Proc to 'move' stars in spess
 //yes it looks ugly, but it should only fire when state actually change.
 //null direction stops movement
-proc/toggle_move_stars(zlevel, direction)
+/proc/toggle_move_stars(zlevel, direction)
 	if(!zlevel)
 		return
 

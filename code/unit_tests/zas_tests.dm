@@ -61,6 +61,7 @@
 		test_result["result"] = 1
 		test_result["msg"] = "Checked [GM_checked.len] zones"
 	else
+		test_result["result"] = 1 // VOREStation Add - Why MUST we map in every area?
 		test_result["msg"] = "No zones checked."
 
 	return test_result
@@ -79,11 +80,11 @@
 
 /datum/unit_test/zas_area_test/supply_centcomm
 	name = "ZAS: Supply Shuttle"
-	area_path = /area/supply //yw edit: path changed
+	area_path = /area/shuttle/supply //yw edit: path changed
 
 /datum/unit_test/zas_area_test/emergency_shuttle
 	name = "ZAS: Emergency Shuttle"
-	area_path = /area/shuttle/escape
+	area_path = /area/shuttle/escape/centcom	//CHOMPStation Edit TFF 23/4/20 - Fix Travis
 
 /datum/unit_test/zas_area_test/ai_chamber
 	name = "ZAS: AI Chamber"

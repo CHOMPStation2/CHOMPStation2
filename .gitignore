@@ -8,10 +8,21 @@ vchat.db*
 *.dmb
 *.lk
 *.backup
+*.before
 *.pyc
+*.pid
+data
 data/
 cfg/
 
+#Visual studio stuff
+*.vscode/*
+!/.vscode/launch.json
+!/.vscode/extensions.json
+!/.vscode/settings.json
+!/.vscode/tasks.json
+
+ch-merge-upstream-pull-request.sh
 code/game/gamemodes/technomancer/spells/projectile/overload.dm
 code/game/gamemodes/technomancer/spells/projectile/overload.dm
 code/modules/client/preference_setup/loadout/loadout_xeno.dm
@@ -37,3 +48,5 @@ temp.dmi
 /maps/yw/backup
 
 icons/mecha/mecha_ch.dmi
+
+.vscode/settings.json

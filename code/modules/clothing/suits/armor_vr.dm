@@ -17,15 +17,15 @@
 	desc = "An armored vest that protects against some damage. It appears to be created for a wolf-taur."
 	species_restricted = null //Species restricted since all it cares about is a taur half
 	icon = 'icons/mob/taursuits_wolf_vr.dmi'
-	icon_state = "heavy_wolf_armor"
+	icon_state = "wolf_item"
 	item_state = "heavy_wolf_armor"
-	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-		if(..())
-			if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/wolf))
-				return ..()
-			else
-				to_chat(H,"<span class='warning'>You need to have a wolf-taur half to wear this.</span>")
-				return 0
+/obj/item/clothing/suit/armor/vest/wolftaur/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+	if(..())
+		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/wolf))
+			return ..()
+		else
+			to_chat(H,"<span class='warning'>You need to have a wolf-taur half to wear this.</span>")
+			return 0
 
 // HoS armor improved by Vorestation to be slightly better than normal security stuff.
 /obj/item/clothing/suit/storage/vest/hoscoat
@@ -34,46 +34,108 @@
 /obj/item/clothing/suit/storage/vest/hos
 	armor = list(melee = 50, bullet = 40, laser = 40, energy = 25, bomb = 25, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/storage/vest/hoscoat/jensen
-	name = "armored trenchcoat"
-	desc = "A trenchcoat augmented with a special alloy for some protection and style."
-	icon_state = "hostrench"
-	flags_inv = HIDEHOLSTER
-
 // Override Polaris's "confederate" naming convention. I hate it.
 /obj/item/clothing/suit/storage/vest/solgov
-	name = "\improper Solar Central Government armored vest"
-	desc = "A synthetic armor vest. This one is marked with the crest of the Solar Central Government."
+	name = "\improper Solar Central Government" //YW EDIT: SolGov
+	desc = "A synthetic armor vest. This one is marked with the crest of the Society of Universal CartographersSolar Central Government." //YW EDIT: Terran Commonwealth to Solar Central Government
 
 /obj/item/clothing/suit/storage/vest/solgov/heavy
-	name = "\improper Solar Central Government heavy armored vest"
-	desc = "A synthetic armor vest with SECURITY printed in distinctive blue lettering on the chest. This one has added webbing and ballistic plates." // USDF does peacekeeping, not these guys.
+	name = "\improper Solar Central Government heavy armored vest" //YW EDIT: SolGov
+	desc = "A synthetic armor vest with SECURITY printed in distinctive blue lettering on the chest. This one has added webbing and ballistic plates." //YW EDIT Old comment: USDF does peacekeeping, not these guys.
 
 /obj/item/clothing/suit/storage/vest/solgov/security
 	name = "master at arms heavy armored vest"
 	desc = "A synthetic armor vest with MASTER AT ARMS printed in silver lettering on the chest. This one has added webbing and ballistic plates."
 
 /obj/item/clothing/suit/storage/vest/solgov/command
-	name = "command heavy armored vest"
-	desc = "A synthetic armor vest with Solar Central Government printed in detailed gold lettering on the chest. This one has added webbing and ballistic plates."
+	name = "commander heavy armored vest"
+	desc = "A synthetic armor vest with Solar Central Government printed in detailed gold lettering on the chest. This one has added webbing and ballistic plates." //YW EDIT: SolGov
 
 /obj/item/clothing/suit/armor/combat/USDF
 	name = "marine body armor"
-	desc = "When I joined the Corps, we didn't have any fancy-schmanzy armor. We had sticks! Two sticks, and a rock for the whole platoon–and we had to <i>share</i> the rock!"
+	desc = "When I joined the Corps, we didn't have any fancy-schmanzy armor. We had sticks! Two sticks, and a rock for the whole platoon-and we had to <i>share</i> the rock!"
 	icon_state = "unsc_armor"
-	icon = 'icons/obj/clothing/suits_vr.dmi'
-	icon_override = 'icons/mob/suit_vr.dmi'
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	icon_override = 'icons/inventory/suit/mob_vr.dmi'
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO // ToDo: Break up the armor into smaller bits.
 
 /obj/item/clothing/suit/armor/combat/imperial
 	name = "imperial soldier armor"
 	desc = "Made out of an especially light metal, it lets you conquer in style."
 	icon_state = "ge_armor"
-	icon = 'icons/obj/clothing/suits_vr.dmi'
-	icon_override = 'icons/mob/suit_vr.dmi'
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	icon_override = 'icons/inventory/suit/mob_vr.dmi'
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/suit/armor/combat/imperial/centurion
 	name = "imperial centurion armor"
 	desc = "Not all heroes wear capes, but it'd be cooler if they did."
 	icon_state = "ge_armorcent"
+
+/obj/item/clothing/suit/storage/vest/wardencoat/alt2
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	icon_override = 'icons/inventory/suit/mob_vr.dmi'
+
+/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	icon_override = 'icons/inventory/suit/mob_vr.dmi'
+
+// Armor Versions Here
+/obj/item/clothing/suit/armor/combat/crusader
+	name = "crusader armor"
+	desc = "ye olde knight, risen again."
+	icon_state = "crusader"
+	icon = 'icons/obj/clothing/knights_vr.dmi'
+	icon_override = 'icons/obj/clothing/knights_vr.dmi'
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	armor = list(melee = 80, bullet = 50, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 2
+
+/obj/item/clothing/suit/armor/combat/crusader/bedevere
+	name = "bedevere's armor"
+	desc = "ye olde knight, risen again."
+	icon_state = "bedevere"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+// Costume Versions Here
+/obj/item/clothing/suit/armor/combat/crusader_costume
+	name = "crusader costume armor"
+	desc = "ye olde knight, risen again."
+	icon_state = "crusader"
+	icon = 'icons/obj/clothing/knights_vr.dmi'
+	icon_override = 'icons/obj/clothing/knights_vr.dmi'
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 1
+
+/obj/item/clothing/suit/armor/combat/crusader_costume/bedevere
+	name = "bedevere's costume armor"
+	desc = "ye olde knight, risen again."
+	icon_state = "bedevere"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+//Deluxe explorer suit
+/obj/item/clothing/suit/armor/pcarrier/explorer/deluxe
+	name = "modular explorer suit"
+	desc = "A modification of the explorer suit with a modular armor system. Requires you to insert armor plates."
+
+// 'Crusader' armor
+/obj/item/clothing/suit/armor/crusader
+	name = "crusader armor"
+	desc = "God will protect those who defend his faith."
+	
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0)
+
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
+	icon_state = "crusader_suit"
+
+/obj/item/clothing/head/helmet/crusader
+	name = "crusader helmet"
+	desc = "God will protect those who defend his faith."
+	
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0)
+
+	icon = 'icons/inventory/head/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
+	icon_state = "crusader_head"

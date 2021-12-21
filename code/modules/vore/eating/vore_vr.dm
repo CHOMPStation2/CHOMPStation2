@@ -45,21 +45,31 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	//Actual preferences
 	var/digestable = TRUE
 	var/devourable = TRUE
+	var/absorbable = TRUE
 	var/feeding = TRUE
-	var/absorbable = TRUE	//TFF 14/12/19 - choose whether allowing absorbing
-	var/digest_leave_remains = FALSE
-	var/allowmobvore = TRUE
-	var/list/belly_prefs = list()
-	var/vore_taste = "nothing in particular"
-	var/permit_healbelly = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
+	var/allow_spontaneous_tf = FALSE
+	var/digest_leave_remains = FALSE
+	var/allowmobvore = TRUE
+	var/permit_healbelly = TRUE
 
+	var/resizable = TRUE
+	var/show_vore_fx = TRUE
+	var/step_mechanics_pref = FALSE
+	var/pickup_pref = TRUE
 
-	//CHOMP reagent belly
+	//CHOMP stuff
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
+	var/latejoin_vore = FALSE
+	var/latejoin_prey = FALSE
+	var/autotransferable = TRUE
+  //CHOMP stuff end
 
+	var/list/belly_prefs = list()
+	var/vore_taste = "nothing in particular"
+	var/vore_smell = "nothing in particular"
 
 	//Mechanically required
 	var/path
@@ -78,6 +88,11 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //
 /proc/is_vore_predator(mob/living/O)
 	if(istype(O,/mob/living))
+		if(istype(O,/mob/living/simple_mob)) //CHOMPEdit: On-demand belly loading.
+			var/mob/living/simple_mob/SM = O
+			if(SM.vore_active && !SM.voremob_loaded)
+				SM.voremob_loaded = TRUE
+				SM.init_vore()
 		if(O.vore_organs.len > 0)
 			return TRUE
 
@@ -124,20 +139,29 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 
 	digestable = json_from_file["digestable"]
 	devourable = json_from_file["devourable"]
+	resizable = json_from_file["resizable"]
 	feeding = json_from_file["feeding"]
-	absorbable = json_from_file["absorbable"]	//TFF 14/12/19 - choose whether allowing absorbing
+	absorbable = json_from_file["absorbable"]
 	digest_leave_remains = json_from_file["digest_leave_remains"]
 	allowmobvore = json_from_file["allowmobvore"]
 	vore_taste = json_from_file["vore_taste"]
+	vore_smell = json_from_file["vore_smell"]
 	permit_healbelly = json_from_file["permit_healbelly"]
+	show_vore_fx = json_from_file["show_vore_fx"]
 	can_be_drop_prey = json_from_file["can_be_drop_prey"]
 	can_be_drop_pred = json_from_file["can_be_drop_pred"]
+	allow_spontaneous_tf = json_from_file["allow_spontaneous_tf"]
+	step_mechanics_pref = json_from_file["step_mechanics_pref"]
+	pickup_pref = json_from_file["pickup_pref"]
 	belly_prefs = json_from_file["belly_prefs"]
 
 
-	//CHOMP reagent belly
+	//CHOMP stuff
+	latejoin_vore = json_from_file["latejoin_vore"]
+	latejoin_prey = json_from_file["latejoin_prey"]
 	receive_reagents = json_from_file["receive_reagents"]
 	give_reagents = json_from_file["give_reagents"]
+	autotransferable = json_from_file["autotransferable"]
 
 
 	//Quick sanitize
@@ -145,6 +169,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		digestable = TRUE
 	if(isnull(devourable))
 		devourable = TRUE
+	if(isnull(resizable))
+		resizable = TRUE
 	if(isnull(feeding))
 		feeding = TRUE
 	if(isnull(absorbable))
@@ -155,18 +181,32 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		allowmobvore = TRUE
 	if(isnull(permit_healbelly))
 		permit_healbelly = TRUE
+	if(isnull(show_vore_fx))
+		show_vore_fx = TRUE
 	if(isnull(can_be_drop_prey))
 		can_be_drop_prey = FALSE
 	if(isnull(can_be_drop_pred))
 		can_be_drop_pred = FALSE
+	if(isnull(allow_spontaneous_tf))
+		allow_spontaneous_tf = FALSE
+	if(isnull(step_mechanics_pref))
+		step_mechanics_pref = TRUE
+	if(isnull(pickup_pref))
+		pickup_pref = TRUE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
 
-	//CHOMP reagent belly
+	//CHOMP stuff
+	if(isnull(latejoin_vore))
+		latejoin_vore = FALSE
+	if(isnull(latejoin_prey))
+		latejoin_prey = FALSE
 	if(isnull(receive_reagents))
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
 		give_reagents = FALSE
+	if(isnull(autotransferable))
+		autotransferable = TRUE
 
 	return TRUE
 
@@ -179,17 +219,26 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"version"				= version,
 			"digestable"			= digestable,
 			"devourable"			= devourable,
+			"resizable"				= resizable,
 			"absorbable"			= absorbable,
 			"feeding"				= feeding,
 			"digest_leave_remains"	= digest_leave_remains,
 			"allowmobvore"			= allowmobvore,
 			"vore_taste"			= vore_taste,
+			"vore_smell"			= vore_smell,
 			"permit_healbelly"		= permit_healbelly,
+			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
+			"latejoin_vore"			= latejoin_vore, //CHOMPedit
+			"latejoin_prey"			= latejoin_prey,
+			"allow_spontaneous_tf"	= allow_spontaneous_tf,
+			"step_mechanics_pref"	= step_mechanics_pref,
+			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
+			"autotransferable"		= autotransferable
 		)
 
 	//List to JSON
@@ -199,9 +248,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		return FALSE
 
 	//Write it out
-	if(fexists(path))
-		fdel(path) //Byond only supports APPENDING to files, not replacing.
-	text2file(json_to_file, path)
+	rustg_file_write(json_to_file, path)
+
 	if(!fexists(path))
 		log_debug("Saving: [path] failed file write")
 		return FALSE

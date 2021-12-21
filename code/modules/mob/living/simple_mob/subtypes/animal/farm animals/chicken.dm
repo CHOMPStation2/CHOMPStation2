@@ -20,12 +20,14 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	response_harm   = "kicks"
 	attacktext = list("pecked")
 
+	organ_names = /decl/mob_organ_names/chicken
+
 	has_langs = list("Bird")
 
 	say_list_type = /datum/say_list/chicken
 
-	meat_amount = 2
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_amount = 4
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
 
 	var/eggsleft = 0
 	var/body_color
@@ -125,7 +127,7 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	say_list_type = /datum/say_list/chick
 
 	meat_amount = 1
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
 
 	var/amount_grown = 0
 
@@ -141,7 +143,12 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	if(!stat)
 		amount_grown += rand(1,2)
 		if(amount_grown >= 100)
-			new /mob/living/simple_mob/animal/passive/chicken(src.loc)
+		//VOREStation Edit Begin
+			var/mob/living/simple_mob/animal/passive/chicken/C = new (src.loc)
+			C.ghostjoin = 1
+			C.ghostjoin_icon()
+			active_ghost_pods |= C
+		//VOREStation Edit End
 			qdel(src)
 
 // Say Lists
@@ -155,8 +162,5 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	emote_hear = list("cheeps")
 	emote_see = list("pecks at the ground","flaps its tiny wings")
 
-//YW Addition
-/mob/living/simple_mob/animal/passive/chicken/clucky
-	name = "Commander Clucky"
-	real_name = "Commander Clucky"
-	desc = "It's Commander Clucky!"
+/decl/mob_organ_names/chicken
+	hit_zones = list("head", "body", "left wing", "right wing", "left leg", "right leg", "tendies")

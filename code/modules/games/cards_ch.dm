@@ -6,7 +6,6 @@
 /obj/item/weapon/deck/casino
 	w_class = ITEMSIZE_SMALL
 	icon = 'icons/obj/playing_cards_ch.dmi'
-	list/cards = list()
 	cooldown = 0 // to prevent spam shuffle
 
 /obj/item/weapon/deck/holder/casino //WIP In future do a cool holder

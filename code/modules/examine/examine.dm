@@ -5,7 +5,7 @@
 	This means that this file can be unchecked, along with the other examine files, and can be removed entirely with no effort.
 */
 
-#define EXAMINE_PANEL_PADDING "        "
+#define EXAMINE_PANEL_PADDING "               "
 
 /atom/
 	var/description_info = null //Helpful blue text.
@@ -56,7 +56,7 @@
 	description_holders["interactions"] = A.get_description_interaction()
 
 	description_holders["name"] = "[A.name]"
-	description_holders["icon"] = "\icon[A]"
+	description_holders["icon"] = "\icon[A.examine_icon()]"
 	description_holders["desc"] = A.desc
 
 /mob/Stat()
@@ -76,10 +76,24 @@
 			stat(null,"<font color='#8A0808'><b>[description_holders["antag"]]</b></font>") //Red, malicious antag-related text
 
 //override examinate verb to update description holders when things are examined
-/mob/examinate(atom/A as mob|obj|turf in view())
-	if(..())
+//mob verbs are faster than object verbs. See http://www.byond.com/forum/?post=1326139&page=2#comment8198716 for why this isn't atom/verb/examine()
+/mob/verb/examinate(atom/A as mob|obj|turf in _validate_atom(A))
+	set name = "Examine"
+	set category = "IC"
+
+	if((is_blind(src) || usr.stat) && !isobserver(src))
+		to_chat(src, "<span class='notice'>Something is there but you can't see it.</span>")
 		return 1
 
+	//Could be gone by the time they finally pick something
+	if(!A)
+		return 1
+
+	face_atom(A)
+	var/list/results = A.examine(src)
+	if(!results || !results.len)
+		results = list("You were unable to examine that. Tell a developer!")
+	to_chat(src, jointext(results, "<br>"))
 	update_examine_panel(A)
 
 /mob/proc/update_examine_panel(var/atom/A)

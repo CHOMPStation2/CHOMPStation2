@@ -28,9 +28,9 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	icon = 'icons/480x480.dmi'
 	icon_state = "25percent"
 
-	New()
-		src.pixel_x = -224
-		src.pixel_y = -224
+/obj/effect/debugging/camera_range/New()
+	src.pixel_x = -224
+	src.pixel_y = -224
 
 /obj/effect/debugging/marker
 	icon = 'icons/turf/areas.dmi'
@@ -43,8 +43,6 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	set category = "Mapping"
 	set name = "-None of these are for ingame use!!"
 
-	..()
-
 /client/proc/camera_view()
 	set category = "Mapping"
 	set name = "Camera Range Display"
@@ -56,7 +54,7 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 
 
 
-	for(var/obj/effect/debugging/camera_range/C in all_debugging_effects)
+	for(var/obj/effect/debugging/camera_range/C in GLOB.all_debugging_effects)
 		qdel(C)
 
 	if(camera_range_display_status)
@@ -71,7 +69,7 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	set name = "Camera Report"
 
 	if(!master_controller)
-		alert(usr,"Master_controller not found.","Sec Camera Report")
+		tgui_alert_async(usr,"Master_controller not found.","Sec Camera Report")
 		return 0
 
 	var/list/obj/machinery/camera/CL = list()
@@ -96,7 +94,7 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 			if(!(locate(/obj/structure/grille,T)))
 				var/window_check = 0
 				for(var/obj/structure/window/W in T)
-					if (W.dir == turn(C1.dir,180) || W.dir in list(5,6,9,10) )
+					if (W.dir == turn(C1.dir,180) || (W.dir in list(5,6,9,10)) )
 						window_check = 1
 						break
 				if(!window_check)
@@ -115,7 +113,7 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	else
 		intercom_range_display_status = 1
 
-	for(var/obj/effect/debugging/marker/M in all_debugging_effects)
+	for(var/obj/effect/debugging/marker/M in GLOB.all_debugging_effects)
 		qdel(M)
 
 	if(intercom_range_display_status)
@@ -164,7 +162,6 @@ var/list/debug_verbs = list (
         ,/datum/admins/proc/setup_supermatter
 		,/client/proc/atmos_toggle_debug
 		,/client/proc/spawn_tanktransferbomb
-		,/client/proc/debug_process_scheduler // VOREStation Edit - Nice
 		,/client/proc/take_picture
 	)
 
@@ -276,19 +273,19 @@ var/list/debug_verbs = list (
 	set category = "ZAS"
 	set name = "Reboot ZAS"
 
-	if(alert("This will destroy and remake all zone geometry on the whole map.","Reboot ZAS","Reboot ZAS","Nevermind") == "Reboot ZAS")
+	if(tgui_alert(usr, "This will destroy and remake all zone geometry on the whole map.","Reboot ZAS",list("Reboot ZAS","Nevermind")) == "Reboot ZAS")
 		SSair.RebootZAS()
 
 /client/proc/count_objects_on_z_level()
 	set category = "Mapping"
 	set name = "Count Objects On Level"
-	var/level = input("Which z-level?","Level?") as text
+	var/level = input(usr, "Which z-level?","Level?") as text
 	if(!level) return
 	var/num_level = text2num(level)
 	if(!num_level) return
 	if(!isnum(num_level)) return
 
-	var/type_text = input("Which type path?","Path?") as text
+	var/type_text = input(usr, "Which type path?","Path?") as text
 	if(!type_text) return
 	var/type_path = text2path(type_text)
 	if(!type_path) return
@@ -326,7 +323,7 @@ var/list/debug_verbs = list (
 	set category = "Mapping"
 	set name = "Count Objects All"
 
-	var/type_text = input("Which type path?","") as text
+	var/type_text = input(usr, "Which type path?","") as text
 	if(!type_text) return
 	var/type_path = text2path(type_text)
 	if(!type_path) return

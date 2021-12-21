@@ -3,42 +3,31 @@
 /obj/item/bodybag
 	name = "body bag"
 	desc = "A folded bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
+	icon = 'icons/obj/closets/bodybag.dmi'
 	icon_state = "bodybag_folded"
 	w_class = ITEMSIZE_SMALL
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 
 /obj/item/weapon/storage/box/bodybags
 	name = "body bags"
 	desc = "This box contains body bags."
 	icon_state = "bodybags"
-	New()
-		..()
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-
+	starts_with = list(/obj/item/bodybag = 7)
 
 /obj/structure/closet/body_bag
 	name = "body bag"
 	desc = "A plastic bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
-	icon_state = "bodybag_closed"
-	icon_closed = "bodybag_closed"
-	icon_opened = "bodybag_open"
+	icon = 'icons/obj/closets/bodybag.dmi'
+	closet_appearance = null
 	open_sound = 'sound/items/zip.ogg'
 	close_sound = 'sound/items/zip.ogg'
 	var/item_path = /obj/item/bodybag
-	density = 0
+	density = FALSE
 	storage_capacity = (MOB_MEDIUM * 2) - 1
 	var/contains_body = 0
 
@@ -46,21 +35,18 @@
 /obj/item/bodybag/large
 	name = "mass grave body bag"
 	desc = "A large folded bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
-	icon_state = "bluebodybag_folded"
+	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/large/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 /obj/structure/closet/body_bag/large
 	name = "mass grave body bag"
 	desc = "A massive body bag that holds as much as it does due to bluespace lining on its zipper. Shockingly compact for its storage."
-	icon_state = "bluebodybag_closed"
-	icon_closed = "bluebodybag_closed"
-	icon_opened = "bluebodybag_open"
+	icon = 'icons/obj/closets/bodybag_large.dmi'
 	storage_capacity = (MOB_MEDIUM * 12) - 1 //Holds 12 bodys
 	item_path = /obj/item/bodybag/large
 //End of Yawn add
@@ -76,7 +62,7 @@
 		if (t)
 			src.name = "body bag - "
 			src.name += t
-			src.overlays += image(src.icon, "bodybag_label")
+			add_overlay("bodybag_label")
 		else
 			src.name = "body bag"
 	//..() //Doesn't need to run the parent. Since when can fucking bodybags be welded shut? -Agouri
@@ -84,7 +70,7 @@
 	else if(W.is_wirecutter())
 		to_chat(user, "You cut the tag off the bodybag")
 		src.name = "body bag"
-		src.overlays.Cut()
+		cut_overlays()
 		return
 
 /obj/structure/closet/body_bag/store_mobs(var/stored_units)
@@ -93,7 +79,7 @@
 
 /obj/structure/closet/body_bag/close()
 	if(..())
-		density = 0
+		density = FALSE
 		return 1
 	return 0
 
@@ -128,19 +114,22 @@
 
 /obj/structure/closet/body_bag/update_icon()
 	if(opened)
-		icon_state = icon_opened
+		icon_state = "open"
 	else
-		if(contains_body > 0)
-			icon_state = "bodybag_closed1"
-		else
-			icon_state = icon_closed
+		icon_state = "closed_unlocked"
+
+	cut_overlays()
+	/* Ours don't have toetags
+	if(has_label)
+		add_overlay("bodybag_label")
+	*/
 
 
 /obj/item/bodybag/cryobag
 	name = "stasis bag"
 	desc = "A non-reusable plastic bag designed to slow down bodily functions such as circulation and breathing, \
 	especially useful if short on time or in a hostile enviroment."
-	icon = 'icons/obj/cryobag.dmi'
+	icon = 'icons/obj/closets/cryobag.dmi'
 	icon_state = "bodybag_folded"
 	item_state = "bodybag_cryo_folded"
 	origin_tech = list(TECH_BIO = 4)
@@ -158,7 +147,7 @@
 	name = "stasis bag"
 	desc = "A non-reusable plastic bag designed to slow down bodily functions such as circulation and breathing, \
 	especially useful if short on time or in a hostile enviroment."
-	icon = 'icons/obj/cryobag.dmi'
+	icon = 'icons/obj/closets/cryobag.dmi'
 	item_path = /obj/item/bodybag/cryobag
 	store_misc = 0
 	store_items = 0
@@ -177,15 +166,27 @@
 	QDEL_NULL(tank)
 	return ..()
 
+/obj/structure/closet/body_bag/cryobag/attack_hand(mob/living/user)
+	if(used)
+		var/confirm = tgui_alert(user, "Are you sure you want to open \the [src]? \The [src] will expire upon opening it.", "Confirm Opening", list("No", "Yes"))
+		if(confirm == "Yes")
+			..() // Will call `toggle()` and open the bag.
+	else
+		..()
+
 /obj/structure/closet/body_bag/cryobag/open()
 	. = ..()
 	if(used)
-		var/obj/item/O = new/obj/item(src.loc)
-		O.name = "used [name]"
-		O.icon = src.icon
-		O.icon_state = "bodybag_used"
-		O.desc = "Pretty useless now..."
+		new /obj/item/usedcryobag(loc)
 		qdel(src)
+
+/obj/structure/closet/body_bag/cryobag/update_icon()
+	..()
+	cut_overlays()
+	var/image/I = image(icon, "indicator[opened]")
+	I.appearance_flags = RESET_COLOR
+	I.color = COLOR_LIME
+	add_overlay(I)
 
 /obj/structure/closet/body_bag/cryobag/MouseDrop(over_object, src_location, over_location)
 	. = ..()
@@ -233,13 +234,13 @@
 		syringe.reagents.trans_to_mob(H, 30, CHEM_BLOOD)
 
 /obj/structure/closet/body_bag/cryobag/examine(mob/user)
-	..()
+	. = ..()
 	if(Adjacent(user)) //The bag's rather thick and opaque from a distance.
-		to_chat(user, "<span class='info'>You peer into \the [src].</span>")
+		. += "<span class='info'>You peer into \the [src].</span>"
 		if(syringe)
-			to_chat(user, "<span class='info'>It has a syringe added to it.</span>")
+			. += "<span class='info'>It has a syringe added to it.</span>"
 		for(var/mob/living/L in contents)
-			L.examine(user)
+			. += L.examine(user)
 
 /obj/structure/closet/body_bag/cryobag/attackby(obj/item/W, mob/user)
 	if(opened)
@@ -274,3 +275,9 @@
 
 		else
 			..()
+
+/obj/item/usedcryobag
+	name = "used stasis bag"
+	desc = "Pretty useless now.."
+	icon_state = "bodybag_used"
+	icon = 'icons/obj/closets/cryobag.dmi'

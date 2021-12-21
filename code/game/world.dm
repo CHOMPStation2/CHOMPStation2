@@ -1,5 +1,7 @@
-#define RECOMMENDED_VERSION 501
+#define RECOMMENDED_VERSION 513
 /world/New()
+	world_startup_time = world.timeofday
+	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")
 	//logs
 	//VOREStation Edit Start
@@ -15,6 +17,9 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
+	TgsNew()
+	VgsNew() // VOREStation Edit - VGS
+
 	config.post_load()
 
 	if(config && config.server_name != null && config.server_suffix && world.port > 0)
@@ -25,7 +30,7 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
+	GLOB.timezoneOffset = get_timezone_offset()
 
 	callHook("startup")
 	init_vchat()
@@ -42,9 +47,6 @@
 	log_unit_test("If you did not intend to enable this please check code/__defines/unit_testing.dm")
 #endif
 
-	// Set up roundstart seed list.
-	plant_controller = new()
-
 	// This is kinda important. Set up details of what the hell things are made of.
 	populate_material_list()
 
@@ -57,15 +59,8 @@
 	// Create robolimbs for chargen.
 	populate_robolimb_list()
 
-	//Must be done now, otherwise ZAS zones and lighting overlays need to be recreated.
-	//createRandomZlevel()	//VOREStation Removal: Deprecated
-
-	processScheduler = new
 	master_controller = new /datum/controller/game_controller()
-
-	processScheduler.deferSetupFor(/datum/controller/process/ticker)
-	processScheduler.setup()
-	Master.Initialize(10, FALSE)
+	Master.Initialize(10, FALSE, TRUE) // VOREStation Edit
 
 	spawn(1)
 		master_controller.setup()
@@ -85,6 +80,8 @@ var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
+	TGS_TOPIC
+	VGS_TOPIC // VOREStation Edit - VGS
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
@@ -106,6 +103,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		s["version"] = game_version
 		s["mode"] = master_mode
 		s["respawn"] = config.abandon_allowed
+		s["persistance"] = config.persistence_disabled
 		s["enter"] = config.enter_allowed
 		s["vote"] = config.allow_vote_mode
 		s["ai"] = config.allow_ai
@@ -115,8 +113,10 @@ var/world_topic_spam_protect_time = world.timeofday
 		s["players"] = 0
 		s["stationtime"] = stationtime2text()
 		s["roundduration"] = roundduration2text()
+		s["map"] = strip_improper(using_map.full_name) //Done to remove the non-UTF-8 text macros 
 
-		if(input["status"] == "2")
+		if(input["status"] == "2") // Shiny new hip status.
+			var/active = 0
 			var/list/players = list()
 			var/list/admins = list()
 
@@ -126,15 +126,18 @@ var/world_topic_spam_protect_time = world.timeofday
 						continue
 					admins[C.key] = C.holder.rank
 				players += C.key
+				if(istype(C.mob, /mob/living))
+					active++
 
 			s["players"] = players.len
 			s["playerlist"] = list2params(players)
+			s["active_players"] = active
 			var/list/adm = get_admin_counts()
 			var/list/presentmins = adm["present"]
 			var/list/afkmins = adm["afk"]
 			s["admins"] = presentmins.len + afkmins.len //equivalent to the info gotten from adminwho
 			s["adminlist"] = list2params(admins)
-		else
+		else // Legacy.
 			var/n = 0
 			var/admins = 0
 
@@ -171,31 +174,57 @@ var/world_topic_spam_protect_time = world.timeofday
 			var/real_rank = make_list_rank(t.fields["real_rank"])
 
 			var/department = 0
+			var/active = 0	//CHOMPStation Edit Begin
+			for(var/mob/M in player_list)
+				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+					active = 1
+					break
+			var/isactive = active ? "Active" : "Inactive"
 			for(var/k in set_names)
 				if(real_rank in set_names[k])
 					if(!positions[k])
 						positions[k] = list()
-					positions[k][name] = rank
+					positions[k][name] = list(rank,isactive)
 					department = 1
 			if(!department)
 				if(!positions["misc"])
 					positions["misc"] = list()
-				positions["misc"][name] = rank
+				positions["misc"][name] = list(rank,isactive)
+
+		for(var/datum/data/record/t in data_core.hidden_general)
+			var/name = t.fields["name"]
+			var/rank = t.fields["rank"]
+			var/real_rank = make_list_rank(t.fields["real_rank"])
+
+			var/active = 0	//CHOMPStation Edit Begin
+			for(var/mob/M in player_list)
+				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+					active = 1
+					break
+			var/isactive = active ? "Active" : "Inactive"
+
+			var/datum/job/J = SSjob.get_job(real_rank)
+			if(J?.offmap_spawn)
+				if(!positions["off"])
+					positions["off"] = list()
+				positions["off"][name] = list(rank,isactive)
 
 		// Synthetics don't have actual records, so we will pull them from here.
 		for(var/mob/living/silicon/ai/ai in mob_list)
+			var/isactive = (ai.client && ai.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
 			if(!positions["bot"])
 				positions["bot"] = list()
-			positions["bot"][ai.name] = "Artificial Intelligence"
+			positions["bot"][ai.name] = list("Artificial Intelligence",isactive)
 		for(var/mob/living/silicon/robot/robot in mob_list)
 			// No combat/syndicate cyborgs, no drones, and no AI shells.
+			var/isactive = (robot.client && robot.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
 			if(robot.shell)
 				continue
-			if(robot.module && robot.module.hide_on_manifest)
+			if(robot.module && robot.module.hide_on_manifest())
 				continue
 			if(!positions["bot"])
 				positions["bot"] = list()
-			positions["bot"][robot.name] = "[robot.modtype] [robot.braintype]"
+			positions["bot"][robot.name] = list("[robot.modtype] [robot.braintype]",isactive) //CHOMPEdit end
 
 		for(var/k in positions)
 			positions[k] = list2params(positions[k]) // converts positions["heads"] = list("Bob"="Captain", "Bill"="CMO") into positions["heads"] = "Bob=Captain&Bill=CMO"
@@ -203,8 +232,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		return list2params(positions)
 
 	else if(T == "revision")
-		if(revdata.revision)
-			return list2params(list(branch = revdata.branch, date = revdata.date, revision = revdata.revision))
+		if(GLOB.revdata.revision)
+			return list2params(list(branch = GLOB.revdata.branch, date = GLOB.revdata.date, revision = GLOB.revdata.revision))
 		else
 			return "unknown"
 
@@ -215,7 +244,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -302,7 +331,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -333,7 +362,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		to_chat(C,message)
 
 
-		for(var/client/A in admins)
+		for(var/client/A in GLOB.admins)
 			if(A != C)
 				to_chat(A,amessage)
 
@@ -352,7 +381,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -366,7 +395,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -396,12 +425,12 @@ var/world_topic_spam_protect_time = world.timeofday
 		else
 			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
 	else
-		processScheduler.stop()
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
 			if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 				C << link("byond://[config.server]")
 
+	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
 	..()
 
@@ -514,6 +543,10 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	features += config.abandon_allowed ? "respawn" : "no respawn"
 
+	features += config.persistence_disabled ? "persistence disabled" : "persistence enabled"
+	
+	features += config.persistence_ignore_mapload ? "persistence mapload disabled" : "persistence mapload enabled"
+
 	if (config && config.allow_vote_mode)
 		features += "vote"
 
@@ -548,14 +581,30 @@ var/failed_old_db_connections = 0
 /hook/startup/proc/connectDB()
 	if(!config.sql_enabled)
 		to_world_log("SQL connection disabled in config.")
-	else if(!setup_database_connection())
-		to_world_log("Your server failed to establish a connection with the feedback database.")
-	else
+	else if(establish_db_connection())//CHOMPEdit Begin
 		to_world_log("Feedback database connection established.")
+		var/DBQuery/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
+		var/num_tries = 0
+		while(!query_truncate.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_dialog")
+		qdel(query_truncate)
+		var/DBQuery/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
+		num_tries = 0
+		while(!query_truncate2.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
+		qdel(query_truncate2)
+	else 
+		to_world_log("Feedback database connection failed.")
+	//CHOMPEdit End
 	return 1
 
-proc/setup_database_connection()
-
+/*/proc/setup_database_connection() CHOMPEdit TGSQL
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
@@ -572,34 +621,38 @@ proc/setup_database_connection()
 	. = dbcon.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
+		//CHOMPEdit Begin
+		var/DBQuery/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
+		var/num_tries = 0
+		while(!query_truncate.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_dialog")
+		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
 		to_world_log(dbcon.ErrorMsg())
 
-	return .
+	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-proc/establish_db_connection()
-	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon || !dbcon.IsConnected())
-		return setup_database_connection()
-	else
-		return 1
+/proc/establish_db_connection() //CHOMPEdit TGSQL
+	return SSdbcore.Connect()
 
 
 /hook/startup/proc/connectOldDB()
 	if(!config.sql_enabled)
 		to_world_log("SQL connection disabled in config.")
-	else if(!setup_old_database_connection())
-		to_world_log("Your server failed to establish a connection with the SQL database.")
-	else
+	else if(establish_old_db_connection()) //CHOMPEdit Begin
 		to_world_log("SQL database connection established.")
+	else
+		to_world_log("SQL database connection failed")
+	//CHOMPEdit End
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-proc/setup_old_database_connection()
+/*/proc/setup_old_database_connection() //CHOMPStation TGSQL
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -621,25 +674,52 @@ proc/setup_old_database_connection()
 		failed_old_db_connections++		//If it failed, increase the failed connections counter.
 		to_world_log(dbcon.ErrorMsg())
 
-	return .
+	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-proc/establish_old_db_connection()
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
+/proc/establish_old_db_connection()
+	return SSdbcore.Connect()
 
-	if(!dbcon_old || !dbcon_old.IsConnected())
-		return setup_old_database_connection()
+/* CHOMPedit
+// Cleans up DB connections and recreates them
+/proc/reset_database_connections()
+	var/list/results = list("-- Resetting DB connections --")
+	failed_db_connections = 0
+
+	if(dbcon?.IsConnected())
+		dbcon.Disconnect()
+		results += "dbcon was connected and asked to disconnect"
 	else
-		return 1
+		results += "dbcon was not connected"
+
+	if(dbcon_old?.IsConnected())
+		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
+	
+	if(!config.sql_enabled)
+		results += "stopping because config.sql_enabled = false"
+	else
+		. = setup_database_connection()
+		if(.)
+			results += "SUCCESS: set up a connection successfully with setup_database_connection()"
+		else
+			results += "FAIL: failed to connect to the database with setup_database_connection()"
+		
+	results += "-- DB Reset End --"
+	to_world_log(results.Join("\n"))
+*/
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()
 	if(!istype(GLOB.players_by_zlevel, /list))
 		GLOB.players_by_zlevel = new /list(world.maxz, 0)
+		GLOB.living_players_by_zlevel = new /list(world.maxz, 0)
+	
 	while(GLOB.players_by_zlevel.len < world.maxz)
 		GLOB.players_by_zlevel.len++
 		GLOB.players_by_zlevel[GLOB.players_by_zlevel.len] = list()
+		
+		GLOB.living_players_by_zlevel.len++
+		GLOB.living_players_by_zlevel[GLOB.living_players_by_zlevel.len] = list()
 
 // Call this to make a new blank z-level, don't modify maxz directly.
 /world/proc/increment_max_z()
@@ -658,17 +738,42 @@ proc/establish_old_db_connection()
 
 // Called whenver world.tick_lag or world.fps are changed.
 /world/proc/on_tickrate_change()
-	SStimer?.reset_buckets() 
+	SStimer?.reset_buckets()
 
 #undef FAILED_DB_CONNECTION_CUTOFF
-/world/New()
-	SERVER_TOOLS_ON_NEW
-	return ..()
 
-/world/Reboot(var/reason)
-	SERVER_TOOLS_ON_REBOOT
-	return ..(reason)
+/proc/get_world_url()
+	. = "byond://"
+	if(config.serverurl)
+		. += config.serverurl
+	else if(config.server)
+		. += config.server
+	else
+		. += "[world.address]:[world.port]"
 
-/world/Topic(T, addr, master, key)
-	SERVER_TOOLS_ON_TOPIC
-	return ..(T, addr, master, key)
+var/global/game_id = null
+
+/hook/startup/proc/generate_gameid()
+	if(game_id != null)
+		return
+	game_id = ""
+
+	var/list/c = list(
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
+		"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 
+		"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+		)
+	var/l = c.len
+
+	var/t = world.timeofday
+	for(var/_ = 1 to 4)
+		game_id = "[c[(t % l) + 1]][game_id]"
+		t = round(t / l)
+	game_id = "-[game_id]"
+	t = round(world.realtime / (10 * 60 * 60 * 24))
+	for(var/_ = 1 to 3)
+		game_id = "[c[(t % l) + 1]][game_id]"
+		t = round(t / l)
+	return 1

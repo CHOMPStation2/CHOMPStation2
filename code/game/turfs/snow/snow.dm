@@ -1,5 +1,5 @@
 /turf/snow
-    name = "Heavy snow"
+    name = "snow"
 
     dynamic_lighting = 0
     icon = 'icons/turf/snow_new.dmi'
@@ -10,8 +10,6 @@
 
     temperature = TN60C
     var/list/crossed_dirs = list()
-/* Disabled by RF. Currently broke for the new map, and I'd rather it not be used for new map launch. Something to fix later.
-#define FOOTSTEP_SPRITE_AMT 2
 
 /turf/snow/Entered(atom/A)
     if(ismob(A))
@@ -32,7 +30,7 @@
 
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
-*/
+
 /turf/snow/snow2
 	name = "snow"
 	icon = 'icons/turf/snow.dmi'

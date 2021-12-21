@@ -316,7 +316,7 @@
 	name = "Saroth's box"
 	desc = "A kit containing Saroth's equipment."
 	has_items = list(
-	/obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth)
+	/obj/item/clothing/suit/storage/teshari/cloak/fluff/Saroth)
 
 // ********
 // Benl8561

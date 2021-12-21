@@ -4,6 +4,7 @@
 	var/list/restricted_jobs =     list()   // Jobs that cannot be this antagonist (depending on config)
 	var/list/protected_jobs =      list()   // As above.
 	var/list/roundstart_restricted =      list()	//Jobs that can be this antag, but not at roundstart
+	var/avoid_silicons = FALSE				// If we won't hand this antag role to silicons (AI, borg, etc)
 
 	// Strings.
 	var/welcome_text = "Cry havoc and let slip the dogs of war!"
@@ -178,7 +179,7 @@
 
 /datum/antagonist/proc/draft_antagonist(var/datum/mind/player)
 	//Check if the player can join in this antag role, or if the player has already been given an antag role.
-	if(!can_become_antag(player) || player.assigned_role in roundstart_restricted)
+	if(!can_become_antag(player) || (player.assigned_role in roundstart_restricted))
 		log_debug("[player.key] was selected for [role_text] by lottery, but is not allowed to be that role.")
 		return 0
 	if(player.special_role)

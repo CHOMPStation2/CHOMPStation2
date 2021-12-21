@@ -18,6 +18,7 @@
 
 /atom/Click(var/location, var/control, var/params) // This is their reaction to being clicked on (standard proc)
 	if(src)
+		SEND_SIGNAL(src, COMSIG_CLICK, location, control, params, usr)
 		usr.ClickOn(src, params)
 
 /atom/DblClick(var/location, var/control, var/params)
@@ -38,18 +39,21 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 /mob/proc/ClickOn(var/atom/A, var/params)
-	if(world.time <= next_click) // Hard check, before anything else, to avoid crashing
+	if(!checkClickCooldown()) // Hard check, before anything else, to avoid crashing
 		return
 
-	next_click = world.time + 1
+	setClickCooldown(1)
 
-	if(client.buildmode)
+	if(client && client.buildmode)
 		build_click(src, client.buildmode, params, A)
 		return
 
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
+		return 1
+	if(modifiers["shift"] && modifiers["middle"])
+		ShiftMiddleClickOn(A)
 		return 1
 	if(modifiers["middle"])
 		MiddleClickOn(A)
@@ -68,9 +72,6 @@
 		return
 
 	face_atom(A) // change direction to face what you clicked on
-
-	if(!canClick()) // in the year 2000...
-		return
 
 	if(istype(loc, /obj/mecha))
 		if(!locate(/turf) in list(A, A.loc)) // Prevents inventory from being drilled
@@ -156,12 +157,12 @@
 	return 1
 
 /mob/proc/setClickCooldown(var/timeout)
-	next_move = max(world.time + timeout, next_move)
+	next_click = max(world.time + timeout, next_click)
 
-/mob/proc/canClick()
-	if(config.no_click_cooldown || next_move <= world.time)
-		return 1
-	return 0
+/mob/proc/checkClickCooldown()
+	if(next_click > world.time && !config.no_click_cooldown)
+		return FALSE
+	return TRUE
 
 // Default behavior: ignore double clicks, the second click that makes the doubleclick call already calls for a normal click
 /mob/proc/DblClickOn(var/atom/A, var/params)
@@ -234,6 +235,15 @@
 */
 
 /*
+	Shift middle click
+	Used for pointing.
+*/
+
+/mob/proc/ShiftMiddleClickOn(atom/A)
+	pointed(A)
+	return
+
+/*
 	Shift click
 	For most mobs, examine.
 	This is overridden in ai.dm
@@ -260,6 +270,9 @@
 	if(Adjacent(user))
 		user.start_pulling(src)
 
+/turf/CtrlClick(var/mob/user)
+	user.stop_pulling()
+
 /*
 	Alt click
 	Unused except for AI
@@ -271,12 +284,15 @@
 /atom/proc/AltClick(var/mob/user)
 	var/turf/T = get_turf(src)
 	if(T && user.TurfAdjacent(T))
-		if(user.listed_turf == T)
-			user.listed_turf = null
-		else
-			user.listed_turf = T
-			user.client.statpanel = "Turf"
+		user.ToggleTurfTab(T)
 	return 1
+	
+/mob/proc/ToggleTurfTab(var/turf/T)
+	if(listed_turf == T)
+		listed_turf = null
+	else
+		listed_turf = T
+		client.statpanel = "Turf"
 
 /mob/proc/TurfAdjacent(var/turf/T)
 	return T.AdjacentQuick(src)
@@ -308,7 +324,7 @@
 	var/obj/item/projectile/beam/LE = new (T)
 	LE.icon = 'icons/effects/genetics.dmi'
 	LE.icon_state = "eyelasers"
-	playsound(usr.loc, 'sound/weapons/taser2.ogg', 75, 1)
+	playsound(src, 'sound/weapons/taser2.ogg', 75, 1)
 	LE.firer = src
 	LE.preparePixelProjectile(A, src, params)
 	LE.fire()
@@ -339,19 +355,13 @@
 		facedir(direction)
 
 /obj/screen/click_catcher
+	name = "" // Empty string names don't show up in context menu clicks
 	icon = 'icons/mob/screen_gen.dmi'
 	icon_state = "click_catcher"
 	plane = CLICKCATCHER_PLANE
+	layer = LAYER_HUD_UNDER
 	mouse_opacity = 2
-	screen_loc = "CENTER-7,CENTER-7"
-
-/obj/screen/click_catcher/proc/MakeGreed()
-	. = list()
-	for(var/i = 0, i<15, i++)
-		for(var/j = 0, j<15, j++)
-			var/obj/screen/click_catcher/CC = new()
-			CC.screen_loc = "NORTH-[i],EAST-[j]"
-			. += CC
+	screen_loc = "SOUTHWEST to NORTHEAST"
 
 /obj/screen/click_catcher/Click(location, control, params)
 	var/list/modifiers = params2list(params)
@@ -359,7 +369,11 @@
 		var/mob/living/carbon/C = usr
 		C.swap_hand()
 	else
-		var/turf/T = screen_loc2turf(screen_loc, get_turf(usr))
+		var/list/P = params2list(params)
+		var/turf/T = screen_loc2turf(P["screen-loc"], get_turf(usr))
 		if(T)
+			if(modifiers["shift"])
+				usr.face_atom(T)
+				return 1
 			T.Click(location, control, params)
-	. = 1
+	return 1

@@ -13,7 +13,7 @@
 				2=Network Access
 	*/
 
-	anchored = 1.0
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 4
@@ -28,10 +28,10 @@
 	return attack_hand(user)
 
 /obj/machinery/button/remote/emag_act(var/remaining_charges, var/mob/user)
-	if(req_access.len || req_one_access.len)
-		req_access = list()
-		req_one_access = list()
-		playsound(src.loc, "sparks", 100, 1)
+	if(LAZYLEN(req_access) || LAZYLEN(req_one_access))
+		LAZYCLEARLIST(req_access)
+		LAZYCLEARLIST(req_one_access)
+		playsound(src, "sparks", 100, 1)
 		return 1
 
 /obj/machinery/button/remote/attack_hand(mob/user as mob)

@@ -90,7 +90,7 @@
 	path = /obj/item/weapon/gun/projectile/p92x/large
 
 /datum/uplink_item/item/visible_weapons/lemat
-	name = "LeMat"
+	name = "Mako Revolver"
 	item_cost = 60
 	path = /obj/item/weapon/gun/projectile/revolver/lemat
 
@@ -103,7 +103,7 @@
 	name = "Anti-Materiel Rifle (14.5mm)"
 	item_cost = DEFAULT_TELECRYSTAL_AMOUNT
 	path = /obj/item/weapon/gun/projectile/heavysniper
-	antag_roles = list("mercenary")
+	antag_roles = list("mercenary", "ert") //VOREStation Edit
 
 /datum/uplink_item/item/visible_weapons/heavysnipertraitor
 	name = "Anti-Materiel Rifle (14.5mm)"
@@ -145,9 +145,9 @@
 	path = /obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever
 
 /datum/uplink_item/item/visible_weapons/egun
-	name = "Energy Gun"
+	name = "Compact Energy Gun"
 	item_cost = 30
-	path = /obj/item/weapon/gun/energy/gun
+	path = /obj/item/weapon/gun/energy/gun/compact
 
 /datum/uplink_item/item/visible_weapons/lasercannon
 	name = "Laser Cannon"

@@ -88,6 +88,8 @@
 	if(!parent)
 		..()
 	else
+		if(leaking)
+			parent.mingle_with_turf(loc, volume)
 		var/datum/gas_mixture/pipe_air = return_air()
 		if(istype(loc, /turf/simulated/))
 			var/environment_temperature = 0
@@ -102,9 +104,7 @@
 			parent.radiate_heat_to_space(surface, 1)
 
 		if(has_buckled_mobs())
-			for(var/M in buckled_mobs)
-				var/mob/living/L = M
-
+			for(var/mob/living/L as anything in buckled_mobs)
 				var/hc = pipe_air.heat_capacity()
 				var/avg_temp = (pipe_air.temperature * hc + L.bodytemperature * 3500) / (hc + 3500)
 				pipe_air.temperature = avg_temp

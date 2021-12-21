@@ -1,12 +1,7 @@
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's attire"
-	icon_state = "hossecure1"
-	icon_closed = "hossecure"
-	icon_locked = "hossecure1"
-	icon_opened = "hossecureopen"
-	icon_broken = "hossecurebroken"
-	icon_off = "hossecureoff"
 	req_access = list(access_hos)
+	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -15,6 +10,7 @@
 		/obj/item/clothing/suit/storage/vest/hos,
 		/obj/item/clothing/under/rank/head_of_security/jensen,
 		/obj/item/clothing/under/rank/head_of_security/corp,
+		/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt,
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
 		/obj/item/clothing/head/helmet/dermal,
@@ -25,17 +21,13 @@
 		/obj/item/clothing/accessory/holster/waist,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
 		/obj/item/clothing/mask/gas/half)
 
 /obj/structure/closet/secure_closet/hos2
 	name = "head of security's gear"
-	icon_state = "hossecure1"
-	icon_closed = "hossecure"
-	icon_locked = "hossecure1"
-	icon_opened = "hossecureopen"
-	icon_broken = "hossecurebroken"
-	icon_off = "hossecureoff"
 	req_access = list(access_hos)
+	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -62,14 +54,8 @@
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
 	name = "NanoTrasen security officer's locker"
-	icon = 'icons/obj/closet_vr.dmi'
-	icon_state = "secC1"
-	icon_closed = "secC"
-	icon_locked = "secC1"
-	icon_opened = "secCopen"
-	icon_broken = "secCbroken"
-	icon_off = "seCcoff"
 	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/security
 	storage_capacity = 3.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -109,20 +95,15 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_commander
 	name = "NanoTrasen commander's locker"
-	icon = 'icons/obj/closet_vr.dmi'
-	icon_state = "secC1"
-	icon_closed = "secC"
-	icon_locked = "secC1"
-	icon_opened = "secCopen"
-	icon_broken = "secCbroken"
-	icon_off = "seCcoff"
 	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/commander
 	storage_capacity = 3.5 * MOB_MEDIUM
 
 	starts_with = list(
 		/obj/item/clothing/head/helmet/HoS,
 		/obj/item/clothing/suit/storage/vest/hos,
 		/obj/item/clothing/under/rank/head_of_security/jensen,
+		/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt,
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
 		/obj/item/clothing/head/helmet/dermal,
@@ -163,20 +144,15 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_warden
 	name = "NanoTrasen warden's locker"
-	icon = 'icons/obj/closet_vr.dmi'
-	icon_state = "secC1"
-	icon_closed = "secC"
-	icon_locked = "secC1"
-	icon_opened = "secCopen"
-	icon_broken = "secCbroken"
-	icon_off = "seCcoff"
 	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/warden
 	storage_capacity = 3.5 * MOB_MEDIUM
 
 	starts_with = list(
 		/obj/item/clothing/suit/storage/vest/warden,
 		/obj/item/clothing/under/nanotrasen/security/warden,
 		/obj/item/clothing/suit/storage/vest/wardencoat/alt,
+		/obj/item/clothing/suit/storage/vest/wardencoat/alt2,
 		/obj/item/clothing/head/helmet/warden,
 		/obj/item/weapon/cartridge/security,
 		/obj/item/device/radio/headset/headset_sec,
@@ -206,3 +182,19 @@
 	if(prob(75))
 		new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
 	return ..()
+
+/obj/structure/closet/secure_closet/captains
+	starts_with = list(
+		/obj/item/weapon/storage/backpack/dufflebag/captain,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/suit/storage/vest,
+		/obj/item/weapon/cartridge/captain,
+		/obj/item/weapon/storage/lockbox/medal,
+		/obj/item/device/radio/headset/heads/captain,
+		/obj/item/device/radio/headset/heads/captain/alt,
+		/obj/item/weapon/gun/energy/gun,
+		/obj/item/weapon/melee/telebaton,
+		/obj/item/device/flash,
+		/obj/item/weapon/storage/box/ids,
+		/obj/item/weapon/melee/rapier,
+		/obj/item/clothing/accessory/holster/machete/rapier)

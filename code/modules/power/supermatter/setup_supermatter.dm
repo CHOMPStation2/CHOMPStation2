@@ -20,7 +20,7 @@
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/response = input(usr, "Are you sure? This will start up the engine with selected gas as coolant.", "Engine setup") as null|anything in list("N2", "CO2", "PH", "Abort")
+	var/response = tgui_input_list(usr, "Are you sure? This will start up the engine with selected gas as coolant.", "Engine setup", list("N2", "CO2", "PH", "Abort"))
 	if(!response || response == "Abort")
 		return
 
@@ -32,7 +32,7 @@
 
 	// CONFIGURATION PHASE
 	// Coolant canisters, set types according to response.
-	for(var/obj/effect/engine_setup/coolant_canister/C in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/coolant_canister/C in GLOB.all_engine_setup_markers)
 		switch(response)
 			if("N2")
 				C.canister_type = /obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/
@@ -44,7 +44,7 @@
 				C.canister_type = /obj/machinery/portable_atmospherics/canister/phoron/engine_setup/
 				continue
 
-	for(var/obj/effect/engine_setup/core/C in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/core/C in GLOB.all_engine_setup_markers)
 		switch(response)
 			if("N2")
 				C.energy_setting = ENERGY_NITROGEN
@@ -56,12 +56,12 @@
 				C.energy_setting = ENERGY_PHORON
 				continue
 
-	for(var/obj/effect/engine_setup/atmo_filter/F in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/atmo_filter/F in GLOB.all_engine_setup_markers)
 		F.coolant = response
 
 	var/list/delayed_objects = list()
 	// SETUP PHASE
-	for(var/obj/effect/engine_setup/S in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/S in GLOB.all_engine_setup_markers)
 		var/result = S.activate(0)
 		switch(result)
 			if(SETUP_OK)
@@ -103,8 +103,8 @@
 	name = "Engine Setup Marker"
 	desc = "You shouldn't see this."
 	invisibility = 101
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	icon = 'icons/mob/screen1.dmi'
 	icon_state = "x3"
 

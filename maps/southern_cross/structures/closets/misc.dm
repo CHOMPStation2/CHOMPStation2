@@ -28,8 +28,8 @@
 	req_one_access = list(access_explorer,access_brig)
 
 	starts_with = list(
-		/obj/item/weapon/gun/energy/phasegun = 2,
-		/obj/item/weapon/gun/energy/phasegun/pistol,
+		/obj/item/weapon/gun/energy/locked/phasegun = 2,
+		/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 		/obj/item/weapon/cell/device/weapon = 2,
 		/obj/item/clothing/accessory/permit/gun/planetside)
 
@@ -41,6 +41,8 @@
 
 	starts_with = list(
 		/obj/item/clothing/under/explorer,
+		/obj/item/clothing/suit/armor/pcarrier/explorer/light,
+		/obj/item/clothing/head/helmet/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
 		/obj/item/clothing/mask/gas/explorer,
 		/obj/item/clothing/shoes/boots/winter/explorer,
@@ -61,12 +63,10 @@
 		starts_with += /obj/item/weapon/storage/backpack
 	else
 		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
-	/* VOREStation Removal - Always give both
 	if(prob(75))
 		starts_with += /obj/item/weapon/material/knife/tacknife/survival
 	else
 		starts_with += /obj/item/weapon/material/knife/machete
-	*/ //VOREStation Removal End
 	return ..()
 
 //SAR Lockers
@@ -74,13 +74,8 @@
 /obj/structure/closet/secure_closet/sar
 	name = "search and rescue locker"
 	desc = "Supplies for a wilderness first responder."
-	icon_state = "medical1"
-	icon_closed = "medical"
-	icon_locked = "medical1"
-	icon_opened = "medicalopen"
-	icon_broken = "medicalbroken"
-	icon_off = "medicaloff"
 	req_access = list(access_medical_equip)
+	closet_appearance = /decl/closet_appearance/secure_closet/medical
 
 	starts_with = list(
 		/obj/item/weapon/storage/backpack/dufflebag/emt,

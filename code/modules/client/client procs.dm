@@ -34,16 +34,21 @@
 
 	#endif
 
+	// asset_cache
+	var/asset_cache_job
 	if(href_list["asset_cache_confirm_arrival"])
-		var/job = text2num(href_list["asset_cache_confirm_arrival"])
-		completed_asset_jobs += job
-		return
+		asset_cache_job = asset_cache_confirm_arrival(href_list["asset_cache_confirm_arrival"])
+		if (!asset_cache_job)
+			return
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
 		to_world_log("Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
-		//del(usr)
+		return
+
+	// Tgui Topic middleware
+	if(!tgui_Topic(href_list))
 		return
 
 	//Admin PM
@@ -65,9 +70,56 @@
 		send2adminirc(href_list["irc_msg"])
 		return
 
+	//VOREStation Add
+	if(href_list["discord_reg"])
+		var/their_id = html_decode(href_list["discord_reg"])
+		var/sane = FALSE
+		for(var/list/L as anything in GLOB.pending_discord_registrations)
+			if(!islist(L))
+				GLOB.pending_discord_registrations -= L
+				continue
+			if(L["ckey"] == ckey && L["id"] == their_id)
+				GLOB.pending_discord_registrations -= list(L)
+				var/time = L["time"]
+				if((world.realtime - time) > 10 MINUTES)
+					to_chat(src, "<span class='warning'>Sorry, that link has expired. Please request another on Discord.</span>")
+					return
+				sane = TRUE
+				break
+		
+		if(!sane)
+			to_chat(src, "<span class='warning'>Sorry, that link doesn't appear to be valid. Please try again.</span>")
+			return
+
+		var/sql_discord = sql_sanitize_text(their_id)
+		var/sql_ckey = sql_sanitize_text(ckey)
+		var/DBQuery/query = SSdbcore.NewQuery("UPDATE erro_player SET discord_id = :t_discord_id WHERE ckey = :t_ckey", list("t_discord_id" = sql_discord, "t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+		if(query.Execute())
+			to_chat(src, "<span class='notice'>Registration complete! Thank you for taking the time to register your Discord ID.</span>")
+			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]") //YW EDIT
+			admin_chat_message(message = "[ckey] has registered their Discord ID. Their Discord is: <@[their_id]>", color = "#4eff22") //YW EDIT
+			notes_add(ckey, "Discord ID: [their_id]")
+			world.VgsAddMemberRole(their_id)
+			qdel(query) //CHOMPEdit TGSQL
+		else
+			to_chat(src, "<span class='warning'>There was an error registering your Discord ID in the database. Contact an administrator.</span>")
+			log_and_message_admins("[ckey] failed to register their Discord ID. Their Discord snowflake ID is: [their_id]. Is the database connected?")
+			qdel(query) //CHOMPEdit TGSQL
+		return
+	//VOREStation Add End
+
 	//Logs all hrefs
 	if(config && config.log_hrefs && href_logfile)
 		WRITE_LOG(href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
+
+	//byond bug ID:2256651
+	if (asset_cache_job && (asset_cache_job in completed_asset_jobs))
+		to_chat(src, "<span class='danger'>An error has been detected in how your client is receiving resources. Attempting to correct.... (If you keep seeing these messages you might want to close byond and reconnect)</span>")
+		src << browse("...", "window=asset_cache_browser")
+		return
+	if (href_list["asset_cache_preload_data"])
+		asset_cache_preload_data(href_list["asset_cache_preload_data"])
+		return
 
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
@@ -109,7 +161,7 @@
 		return null
 
 	if(!config.guests_allowed && IsGuestKey(key))
-		alert(src,"This server doesn't allow guest accounts to play. Please go to http://www.byond.com/ and register for a key.","Guest","OK")
+		alert(src,"This server doesn't allow guest accounts to play. Please go to http://www.byond.com/ and register for a key.","Guest") // Not tgui_alert
 		del(src)
 		return
 
@@ -130,7 +182,7 @@
 	//Admin Authorisation
 	holder = admin_datums[ckey]
 	if(holder)
-		admins += src
+		GLOB.admins += src
 		holder.owner = src
 
 	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
@@ -140,9 +192,14 @@
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
+	prefs.client = src // Only relevant if we reloaded it from the global list, otherwise prefs/New sets it
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
+
+	connection_time = world.time
+	connection_realtime = world.realtime
+	connection_timeofday = world.timeofday
 
 	if(custom_event_msg && custom_event_msg != "")
 		to_chat(src, "<h1 class='alert'>Custom Event</h1>")
@@ -171,7 +228,6 @@
 
 	if(!void)
 		void = new()
-		void.MakeGreed()
 	screen += void
 
 	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
@@ -191,7 +247,7 @@
 			log_and_message_admins("PARANOIA: [key_name(src)] has a very new BYOND account ([account_age] days).")
 			alert = TRUE
 		if(alert)
-			for(var/client/X in admins)
+			for(var/client/X in GLOB.admins)
 				if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 					X << 'sound/voice/bcriminal.ogg'
 				window_flash(X)
@@ -203,7 +259,7 @@
 /client/Del()
 	if(holder)
 		holder.owner = null
-		admins -= src
+		GLOB.admins -= src
 	GLOB.ahelp_tickets.ClientLogout(src)
 	GLOB.directory -= ckey
 	GLOB.clients -= src
@@ -219,18 +275,22 @@
 
 /proc/get_player_age(key)
 	establish_db_connection()
-	if(!dbcon.IsConnected())
+	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		return null
 
 	var/sql_ckey = sql_sanitize_text(ckey(key))
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	query.Execute()
-
+	//CHOMPEdit Begin
 	if(query.NextRow())
-		return text2num(query.item[1])
+		var/outp = text2num(query.item[1])
+		qdel(query)
+		return outp
 	else
+		qdel(query)
 		return -1
+	//CHOMPEdit End
 
 
 /client/proc/log_client_to_db()
@@ -239,12 +299,12 @@
 		return
 
 	establish_db_connection()
-	if(!dbcon.IsConnected())
+	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		return
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	query.Execute()
 	var/sql_id = 0
 	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if their is a record.
@@ -252,27 +312,28 @@
 		sql_id = query.item[1]
 		player_age = text2num(query.item[2])
 		break
-
+	qdel(query) //CHOMPEdit TGSQL
 	account_join_date = sanitizeSQL(findJoinDate())
-	if(account_join_date && dbcon.IsConnected())
-		var/DBQuery/query_datediff = dbcon.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')")
+	if(account_join_date && SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+		var/DBQuery/query_datediff = SSdbcore.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')") //CHOMPEdit TGSQL
 		if(query_datediff.Execute() && query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
+		qdel(query_datediff) //CHOMPEdit TGSQL
 
-	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
+	var/DBQuery/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'") //CHOMPEdit TGSQL
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
 		related_accounts_ip += "[query_ip.item[1]], "
 		break
-
-	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
+	qdel(query_ip) //CHOMPEdit TGSQL
+	var/DBQuery/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'") //CHOMPEdit TGSQL
 	query_cid.Execute()
 	related_accounts_cid = ""
 	while(query_cid.NextRow())
 		related_accounts_cid += "[query_cid.item[1]], "
 		break
-
+	qdel(query_cid) //CHOMPEdit TGSQL
 	//Just the standard check to see if it's actually a number
 	if(sql_id)
 		if(istext(sql_id))
@@ -288,13 +349,14 @@
 	var/sql_computerid = sql_sanitize_text(src.computer_id)
 	var/sql_admin_rank = sql_sanitize_text(admin_rank)
 
+	// If you're about to disconnect the player, you have to use to_chat_immediate otherwise they won't get the message (SSchat will queue it)
+
 	//Panic bunker code
 	if (isnum(player_age) && player_age == 0) //first connection
 		if (config.panic_bunker && !holder && !deadmin_holder)
 			log_adminwarn("Failed Login: [key] - New account attempting to connect during panic bunker")
 			message_admins("<span class='adminnotice'>Failed Login: [key] - New account attempting to connect during panic bunker</span>")
-			to_chat(src, "Sorry but the server is currently not accepting connections from never before seen players.")
-			qdel(src)
+			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
 			return 0
 
 	// IP Reputation Check
@@ -311,40 +373,43 @@
 
 				//Take action if required
 				if(config.ipr_block_bad_ips && config.ipr_allow_existing) //We allow players of an age, but you don't meet it
-					to_chat(src, "Sorry, we only allow VPN/Proxy/Tor usage for players who have spent at least [config.ipr_minimum_age] days on the server. If you are unable to use the internet without your VPN/Proxy/Tor, please contact an admin out-of-game to let them know so we can accommodate this.")
-					qdel(src)
+					disconnect_with_message("Sorry, we only allow VPN/Proxy/Tor usage for players who have spent at least [config.ipr_minimum_age] days on the server. If you are unable to use the internet without your VPN/Proxy/Tor, please contact an admin out-of-game to let them know so we can accommodate this.")
 					return 0
 				else if(config.ipr_block_bad_ips) //We don't allow players of any particular age
-					to_chat(src, "Sorry, we do not accept connections from users via VPN/Proxy/Tor connections.")
-					qdel(src)
+					disconnect_with_message("Sorry, we do not accept connections from users via VPN/Proxy/Tor connections. If you believe this is in error, contact an admin out-of-game.")
 					return 0
 		else
 			log_admin("Couldn't perform IP check on [key] with [address]")
 
 	// VOREStation Edit Start - Department Hours
-	if(config.time_off)
-		var/DBQuery/query_hours = dbcon.NewQuery("SELECT department, hours FROM vr_player_hours WHERE ckey = '[sql_ckey]'")
-		query_hours.Execute()
+	var/DBQuery/query_hours = SSdbcore.NewQuery("SELECT department, hours, total_hours FROM vr_player_hours WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+	if(query_hours.Execute())
 		while(query_hours.NextRow())
-			LAZYINITLIST(department_hours)
 			department_hours[query_hours.item[1]] = text2num(query_hours.item[2])
+			play_hours[query_hours.item[1]] = text2num(query_hours.item[3])
+	else
+		var/error_message = query_hours.ErrorMsg() // Need this out here since the spawn below will split the stack and who knows what'll happen by the time it runs
+		log_debug("Error loading play hours for [ckey]: [error_message]")
+		tgui_alert_async(src, "The query to load your existing playtime failed. Screenshot this, give the screenshot to a developer, and reconnect, otherwise you may lose any recorded play hours (which may limit access to jobs). ERROR: [error_message]", "PROBLEMS!!")
 	// VOREStation Edit End - Department Hours
-
+	qdel(query_hours) //CHOMPEdit TGSQL
 	if(sql_id)
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
-		var/DBQuery/query_update = dbcon.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]")
+		var/DBQuery/query_update = SSdbcore.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]") //CHOMPEdit TGSQL
 		query_update.Execute()
+		qdel(query_update) //CHOMPEdit TGSQL
 	else
 		//New player!! Need to insert all the stuff
-		var/DBQuery/query_insert = dbcon.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, '[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')")
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, :t_ckey, Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 		query_insert.Execute()
+		qdel(query_insert) //CHOMPEdit TGSQL
 
 	//Logging player access
 	var/serverip = "[world.internet_address]:[world.port]"
-	var/DBQuery/query_accesslog = dbcon.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]','[sql_ckey]','[sql_ip]','[sql_computerid]');")
+	var/DBQuery/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]',:t_ckey,'[sql_ip]','[sql_computerid]');", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	query_accesslog.Execute()
+	qdel(query_accesslog) //CHOMPEdit TGSQL
 
-#undef TOPIC_SPAM_DELAY
 #undef UPLOAD_LIMIT
 #undef MIN_CLIENT_VERSION
 
@@ -361,38 +426,30 @@
 	else
 		. = ..()
 
-
-// Byond seemingly calls stat, each tick.
-// Calling things each tick can get expensive real quick.
-// So we slow this down a little.
-// See: http://www.byond.com/docs/ref/info.html#/client/proc/Stat
-/client/Stat()
-	. = ..()
-	if (holder)
-		sleep(1)
-	else
-		stoplag(5)
-
 /client/proc/last_activity_seconds()
 	return inactivity / 10
 
 //send resources to the client. It's here in its own proc so we can move it around easiliy if need be
 /client/proc/send_resources()
 	spawn (10) //removing this spawn causes all clients to not get verbs.
-		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		getFilesSlow(src, SSassets.preload, register_asset = FALSE)
 
-mob/proc/MayRespawn()
+		//load info on what assets the client has
+		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
+
+		//Precache the client with all other assets slowly, so as to not block other browse() calls
+		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
+
+/mob/proc/MayRespawn()
 	return 0
 
-client/proc/MayRespawn()
+/client/proc/MayRespawn()
 	if(mob)
 		return mob.MayRespawn()
 
 	// Something went wrong, client is usually kicked or transfered to a new mob at this point
 	return 0
 
-client/verb/character_setup()
+/client/verb/character_setup()
 	set name = "Character Setup"
 	set category = "Preferences"
 	if(prefs)
@@ -422,20 +479,22 @@ client/verb/character_setup()
 
 	//Timing
 	if(src.chatOutputLoadedAt > (world.time - 10 SECONDS))
-		alert(src, "You can only try to reload VChat every 10 seconds at most.")
+		tgui_alert_async(src, "You can only try to reload VChat every 10 seconds at most.")
 		return
-	
+
+	// YW EDIT: disabled until we can fix the lag: verbs -= /client/proc/vchat_export_log
+
 	//Log, disable
 	log_debug("[key_name(src)] reloaded VChat.")
 	winset(src, null, "outputwindow.htmloutput.is-visible=false;outputwindow.oldoutput.is-visible=false;outputwindow.chatloadlabel.is-visible=true")
-	
+
 	//The hard way
 	qdel_null(src.chatOutput)
 	chatOutput = new /datum/chatOutput(src) //veechat
 	chatOutput.send_resources()
 	spawn()
 		chatOutput.start()
-	
+
 
 //This is for getipintel.net.
 //You're welcome to replace this proc with your own that does your own cool stuff.
@@ -496,3 +555,21 @@ client/verb/character_setup()
 	else
 		ip_reputation = score
 		return TRUE
+
+/client/proc/disconnect_with_message(var/message = "You have been intentionally disconnected by the server.<br>This may be for security or administrative reasons.")
+	message = "<head><title>You Have Been Disconnected</title></head><body><hr><center><b>[message]</b></center><hr><br>If you feel this is in error, you can contact an administrator out-of-game (for example, on Discord).</body>"
+	window_flash(src)
+	src << browse(message,"window=dropmessage;size=480x360;can_close=1")
+	qdel(src)
+
+/// Keydown event in a tgui window this client has open. Has keycode passed to it.
+/client/verb/TguiKeyDown(keycode as text)
+	set name = "TguiKeyDown"
+	set hidden = TRUE
+	return // stub
+
+/// Keyup event in a tgui window this client has open. Has keycode passed to it.
+/client/verb/TguiKeyUp(keycode as text) // Doesn't seem to currently fire?
+	set name = "TguiKeyUp"
+	set hidden = TRUE
+	return // stub

@@ -83,14 +83,14 @@
 
 //Strix Hades
 /datum/gear/fluff/strix_coat
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
 	display_name = "Colony Director Coat"
 	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_under
-	path = /obj/item/clothing/under/seromi/undercoat/fluff/strix
+	path = /obj/item/clothing/under/teshari/undercoat/fluff/strix
 	display_name = "Colony Director Undercoat"
 	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	ckeywhitelist = list("blackangelsace")
@@ -111,14 +111,14 @@
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_coat_cco
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix_cco
 	display_name = "Central Command Coat"
 	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_under_cco
-	path = /obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+	path = /obj/item/clothing/under/teshari/undercoat/fluff/strix_cco
 	display_name = "Central Command Undercoat"
 	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	ckeywhitelist = list("blackangelsace")
@@ -235,7 +235,7 @@
 
 //Kita
 /datum/gear/fluff/kita_under
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/kita
 	display_name = "Magical Cloak"
 	description = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
 	ckeywhitelist = list("championfire")
@@ -251,7 +251,7 @@
 	character_name = list("Coda Vanistok")
 
 //  D CKEYS
-
+/*CHOMP Remove this WILL cause issues if downstreams or whatever somehow have this and custom_items_yw.dm enabled, because on chomp main this file is not enabled but I commented it out in custom_items_yw.dm.
 //dameonowen
 //Dameon Owen
 /datum/gear/fluff/dameon_1
@@ -260,6 +260,8 @@
 	description = "DAS A BIG COOKIE!!!"
 	ckeywhitelist = list("dameonowen")
 	character_name = list("Dameon Owen", "Amber Owen")
+*/
+//CHOMP Remove end 
 
 //dawidoe
 //Melissa Krutz
@@ -284,7 +286,20 @@
 	ckeywhitelist = list("dawidoe")
 	character_name = list("Melissa Krutz")
 	allowed_roles = list("Security Officer")
-
+//Dopiotl
+//Jeanne Petite
+/datum/gear/fluff/jeans_chocolates
+	path = /obj/item/weapon/storage/secure/briefcase/fluff/jeans
+	display_name = "ChocoBox"
+	description = "M-M-M-M-MONEY SHOT"
+	ckeywhitelist = list("dopiotl")
+	character_name = list("Jeanne Petite")
+/datum/gear/fluff/jeans_eiliplush
+	path = /obj/item/toy/plushie/teshari/eili
+	display_name = "Eili Plushi"
+	description = "My Favorite Pupil"
+	ckeywhitelist = list("dopiotl","kbraid")
+	character_name = list("Jeanne Petite","Eili","Braid")
 //dwaggy90
 //Saur Darastrix
 /datum/gear/fluff/saur_rig
@@ -312,7 +327,7 @@
 //dushka
 //Saroth
 /datum/gear/fluff/Saroth_cloak
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/Saroth
 	display_name = "Research Director cloak"
 	description = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
 	ckeywhitelist = list("dushka")
@@ -620,7 +635,21 @@
 //  J CKEYS
 
 //  K CKEYS
-
+//kbraid
+//Eili
+/datum/gear/fluff/kbraidgoggles
+	path = /obj/item/clothing/glasses/fluff/avigoggles_yw
+	display_name = "K'braid Aviation Goggles"
+	description = "You're such a goggle head!"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
+//Braid
+/datum/gear/fluff/kbraidoutfit
+	path = /obj/item/clothing/suit/storage/hooded/fluff/kbraid
+	display_name = "Braid uniform"
+	description = "The uniform of an Avali named Braid"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Braid")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 //  L CKEYS
 
 //lawst

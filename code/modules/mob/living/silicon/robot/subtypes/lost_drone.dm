@@ -13,7 +13,7 @@
 
 	mmi = new /obj/item/device/mmi/digital/robot(src) // Explicitly a drone.
 	module = new /obj/item/weapon/robot_module/robot/lost(src)
-	overlays.Cut()
+	cut_overlays()
 	init_id()
 
 	updatename("Lost")
@@ -21,7 +21,7 @@
 	if(!cell)
 		cell = new /obj/item/weapon/cell/high(src) // 15k cell, as recharging stations are a lot more rare on the Surface.
 
-	playsound(loc, 'sound/mecha/nominalsyndi.ogg', 75, 0)
+	playsound(src, 'sound/mecha/nominalsyndi.ogg', 75, 0)
 
 /mob/living/silicon/robot/lost/speech_bubble_appearance()
 	return "synthetic_evil"

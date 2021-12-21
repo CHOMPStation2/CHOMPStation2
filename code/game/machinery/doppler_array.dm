@@ -1,9 +1,9 @@
 var/list/doppler_arrays = list()
 
 /obj/machinery/doppler_array
-	anchored = 1
+	anchored = TRUE
 	name = "tachyon-doppler array"
-	density = 1
+	density = TRUE
 	desc = "A highly precise directional sensor array which measures the release of quants from decaying tachyons. The doppler shifting of the mirror-image formed by these quants can reveal the size, location and temporal affects of energetic disturbances within a large radius ahead of the array."
 	dir = NORTH
 
@@ -45,10 +45,7 @@ var/list/doppler_arrays = list()
 
 /obj/machinery/doppler_array/power_change()
 	..()
-	if(stat & BROKEN)
-		icon_state = "[initial(icon_state)]-broken"
+	if(!(stat & NOPOWER))
+		icon_state = initial(icon_state)
 	else
-		if(!(stat & NOPOWER))
-			icon_state = initial(icon_state)
-		else
-			icon_state = "[initial(icon_state)]-off"
+		icon_state = "[initial(icon_state)]_off"

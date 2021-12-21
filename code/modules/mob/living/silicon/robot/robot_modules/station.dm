@@ -9,8 +9,12 @@ var/global/list/robot_modules = list(
 	"Security" 		= /obj/item/weapon/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
 	"Engineering"	= /obj/item/weapon/robot_module/robot/engineering/general,
-//	"Construction"	= /obj/item/weapon/robot_module/robot/engineering/construction,
-	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor
+	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor,
+	"Gravekeeper"	= /obj/item/weapon/robot_module/robot/gravekeeper,
+	"Lost"			= /obj/item/weapon/robot_module/robot/lost,
+	"Protector" 	= /obj/item/weapon/robot_module/robot/syndicate/protector,
+	"Mechanist" 	= /obj/item/weapon/robot_module/robot/syndicate/mechanist,
+	"Combat Medic"	= /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	)
 
 /obj/item/weapon/robot_module
@@ -19,7 +23,7 @@ var/global/list/robot_modules = list(
 	icon_state = "std_module"
 	w_class = ITEMSIZE_NO_CONTAINER
 	item_state = "std_mod"
-	var/hide_on_manifest = 0
+	var/hide_on_manifest = FALSE
 	var/channels = list()
 	var/networks = list()
 	var/languages = list(LANGUAGE_SOL_COMMON = 1, LANGUAGE_TRADEBAND = 1, LANGUAGE_UNATHI = 0, LANGUAGE_SIIK = 0, LANGUAGE_AKHANI = 0, LANGUAGE_SKRELLIAN = 0, LANGUAGE_GUTTER = 0, LANGUAGE_SCHECHI = 0, LANGUAGE_SIGN = 0, LANGUAGE_TERMINUS = 1, LANGUAGE_ZADDAT = 0)
@@ -38,11 +42,14 @@ var/global/list/robot_modules = list(
 	var/list/original_languages = list()
 	var/list/added_networks = list()
 
+/obj/item/weapon/robot_module/proc/hide_on_manifest()
+	. = hide_on_manifest
+
 /obj/item/weapon/robot_module/New(var/mob/living/silicon/robot/R)
 	..()
 	R.module = src
 	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
-	
+
 	add_camera_networks(R)
 	add_languages(R)
 	add_subsystems(R)
@@ -60,7 +67,7 @@ var/global/list/robot_modules = list(
 	R.choose_icon(R.module_sprites.len + 1, R.module_sprites)
 
 	for(var/obj/item/I in modules)
-		I.canremove = 0
+		I.canremove = FALSE
 
 /obj/item/weapon/robot_module/proc/Reset(var/mob/living/silicon/robot/R)
 	remove_camera_networks(R)
@@ -194,7 +201,11 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-standard",
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
-					"Pyralis" = "Glitterfly-Standard"
+					"Pyralis" = "Glitterfly-Standard",
+					"Miss M" = "miss-standard", // YW change, Added Miss M
+					"Decapod" = "decapod-Standard",
+					"Pneuma" = "pneuma-Standard",
+					"Tower" = "drider-Standard"
 					)
 
 
@@ -230,7 +241,11 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-med",
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Surgeon"
+					"Pyralis" = "Glitterfly-Surgeon",
+					"Miss M" = "miss-medical", // YW change, Added Miss M
+					"Decapod" = "decapod-Surgeon",
+					"Pneuma" = "pneuma-Surgeon",
+					"Tower" = "drider-Surgeon"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -253,6 +268,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/device/sleevemate(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen(src) //chompstation addition
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
@@ -305,7 +321,11 @@ var/global/list/robot_modules = list(
 					"Drone - Chemistry" = "drone-chemistry",
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Crisis"
+					"Pyralis" = "Glitterfly-Crisis",
+					"Miss M" = "miss-medical", // YW change, Added Miss M
+					"Decapod" = "decapod-Crisis",
+					"Pneuma" = "pneuma-Crisis",
+					"Tower" = "drider-Crisis"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -383,56 +403,10 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
-					"Servitor" = "servitor" //YW Addition to add new Servitor Sprite
+					"Decapod" = "decapod-Engineering",
+					"Pneuma" = "pneuma-Engineering",
+					"Tower" = "drider-Engineering"
 					)
-
-/obj/item/weapon/robot_module/robot/engineering/construction
-	name = "construction robot module"
-	no_slip = 1
-
-/* Merged back into engineering (Hell, it's about time.)
-
-/obj/item/weapon/robot_module/robot/engineering/construction/New()
-	..()
-	src.modules += new /obj/item/borg/sight/meson(src)
-	src.modules += new /obj/item/weapon/rcd/borg(src)
-	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
-	src.modules += new /obj/item/weapon/pickaxe/plasmacutter(src)
-	src.modules += new /obj/item/device/pipe_painter(src)
-	src.modules += new /obj/item/device/floor_painter(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
-	src.modules += new /obj/item/device/geiger(src)
-	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW Addition
-
-	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
-	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel()
-	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
-	synths += metal
-	synths += plasteel
-	synths += glass
-
-	var/obj/item/stack/material/cyborg/steel/M = new (src)
-	M.synths = list(metal)
-	src.modules += M
-
-	var/obj/item/stack/rods/cyborg/R = new /obj/item/stack/rods/cyborg(src)
-	R.synths = list(metal)
-	src.modules += R
-
-	var/obj/item/stack/tile/floor/cyborg/F = new /obj/item/stack/tile/floor/cyborg(src)
-	F.synths = list(metal)
-	src.modules += F
-
-	var/obj/item/stack/material/cyborg/plasteel/S = new (src)
-	S.synths = list(plasteel)
-	src.modules += S
-
-	var/obj/item/stack/material/cyborg/glass/reinforced/RG = new (src)
-	RG.synths = list(metal, glass)
-	src.modules += RG
-*/
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
 	..()
@@ -545,7 +519,11 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-sec",
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
-					"Pyralis" = "Glitterfly-Security"
+					"Pyralis" = "Glitterfly-Security",
+					"Miss M" = "miss-security", // YW change, Added Miss M
+					"Decapod" = "decapod-Security",
+					"Pneuma" = "pneuma-Security",
+					"Tower" = "drider-Security"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -590,7 +568,11 @@ var/global/list/robot_modules = list(
 					"Mop Gear Rex" = "mopgearrex",
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
-					"Pyralis" = "Glitterfly-Janitor"
+					"Pyralis" = "Glitterfly-Janitor",
+					"Miss M" = "miss-janitor", // YW change, Added Miss M
+					"Decapod" = "decapod-Janitor",
+					"Pneuma" = "pneuma-Janitor",
+					"Tower" = "drider-Janitor"
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -652,7 +634,11 @@ var/global/list/robot_modules = list(
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Service"
+					"Pyralis" = "Glitterfly-Service",
+					"Miss M" = "miss-service", // YW change, Added Miss M
+					"Decapod" = "decapod-Service",
+					"Pneuma" = "pneuma-Service",
+					"Tower" = "drider-Service"
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -706,7 +692,10 @@ var/global/list/robot_modules = list(
 					"Default" = "Service2",
 					"Drone" = "drone-blu",
 					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Clerical"
+					"Pyralis" = "Glitterfly-Clerical",
+					"Decapod" = "decapod-Clerical",
+					"Pneuma" = "pneuma-Clerical",
+					"Tower" = "drider-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -744,7 +733,11 @@ var/global/list/robot_modules = list(
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
-					"Pyralis" = "Glitterfly-Miner"
+					"Pyralis" = "Glitterfly-Miner",
+					"Miss M" = "miss-miner", // YW change, Added Miss M
+					"Decapod" = "decapod-Miner",
+					"Pneuma" = "pneuma-Miner",
+					"Tower" = "drider-Miner"
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
@@ -774,7 +767,10 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-science",
 					"Insekt" = "insekt-Sci",
 					"Usagi-II" = "tall2peace",
-					"Pyralis" = "Glitterfly-Research"
+					"Pyralis" = "Glitterfly-Research",
+					"Decapod" = "decapod-Research",
+					"Pneuma" = "pneuma-Research",
+					"Tower" = "drider-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
@@ -800,6 +796,10 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/shockpaddles/robot/jumper(src)
 	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)
+	src.modules += new /obj/item/device/xenoarch_multi_tool(src)
+	src.modules += new /obj/item/weapon/pickaxe/excavationdrill(src)
+	//src.modules += new /obj/item/device/cataloguer(src) //VOREStation Removal
+
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/nanite = new /datum/matter_synth/nanite(10000)
@@ -831,11 +831,12 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/security/combat
 	name = "combat robot module"
-	hide_on_manifest = 1
+	hide_on_manifest = TRUE
 	sprites = list(
 					"Haruka" = "marinaCB",
 					"Combat Android" = "droid-combat",
-					"Insekt" = "insekt-Combat"
+					"Insekt" = "insekt-Combat",
+					"Decapod" = "decapod-Combat"
 					)
 
 /obj/item/weapon/robot_module/robot/security/combat/New()
@@ -853,7 +854,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/drone
 	name = "drone module"
-	hide_on_manifest = 1
+	hide_on_manifest = TRUE
 	no_slip = 1
 	networks = list(NETWORK_ENGINEERING)
 
@@ -865,6 +866,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/crowbar/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
+	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/weapon/gripper(src)
@@ -936,7 +938,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/drone/construction
 	name = "construction drone module"
-	hide_on_manifest = 1
+	hide_on_manifest = TRUE
 	channels = list("Engineering" = 1)
 	languages = list()
 

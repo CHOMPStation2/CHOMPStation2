@@ -9,7 +9,7 @@
 	var/burning = FALSE
 	var/next_fuel_consumption = 0 // world.time of when next item in fuel list gets eatten to sustain the fire.
 	var/grill = FALSE
-	var/material/material
+	var/datum/material/material
 	var/set_temperature = T0C + 30	//K
 	var/heating_power = 80000
 
@@ -47,7 +47,7 @@
 /obj/structure/bonfire/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/stack/rods) && !can_buckle && !grill)
 		var/obj/item/stack/rods/R = W
-		var/choice = input(user, "What would you like to construct?", "Bonfire") as null|anything in list("Stake","Grill")
+		var/choice = tgui_input_list(user, "What would you like to construct?", "Bonfire", list("Stake","Grill"))
 		switch(choice)
 			if("Stake")
 				R.use(1)
@@ -143,13 +143,13 @@
 		return FALSE
 
 	if(istype(consumed_fuel, /obj/item/stack/material/log))
-		next_fuel_consumption = world.time + 2 MINUTES
+		next_fuel_consumption = world.time + 6 MINUTES	//VOREStation Edit
 		qdel(consumed_fuel)
 		update_icon()
 		return TRUE
 
 	else if(istype(consumed_fuel, /obj/item/stack/material/wood)) // One log makes two planks of wood.
-		next_fuel_consumption = world.time + 1 MINUTE
+		next_fuel_consumption = world.time + 3 MINUTE	//VOREStation Edit
 		qdel(consumed_fuel)
 		update_icon()
 		return TRUE
@@ -170,7 +170,7 @@
 		burning = FALSE
 		update_icon()
 		STOP_PROCESSING(SSobj, src)
-		visible_message("<span class='notice'>\The [src] stops burning.</span>")
+		visible_message("<b>\The [src]</b> stops burning.")
 
 /obj/structure/bonfire/proc/ignite()
 	if(!burning && get_fuel_amount())
@@ -190,11 +190,12 @@
 			O.fire_act(null, 1000, 500)
 		else if(isliving(A) && get_fuel_amount() > 4)
 			var/mob/living/L = A
-			L.adjust_fire_stacks(get_fuel_amount() / 4)
-			L.IgniteMob()
+			if(!(L.is_incorporeal()))
+				L.adjust_fire_stacks(get_fuel_amount() / 4)
+				L.IgniteMob()
 
 /obj/structure/bonfire/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(burning)
 		var/state
 		switch(get_fuel_amount())
@@ -204,14 +205,14 @@
 				state = "bonfire_hot"
 		var/image/I = image(icon, state)
 		I.appearance_flags = RESET_COLOR
-		overlays += I
+		add_overlay(I)
 
 		if(has_buckled_mobs() && get_fuel_amount() >= 5)
 			I = image(icon, "bonfire_intense")
 			I.pixel_y = 13
 			I.layer = MOB_LAYER + 0.1
 			I.appearance_flags = RESET_COLOR
-			overlays += I
+			add_overlay(I)
 
 		var/light_strength = max(get_fuel_amount() / 2, 2)
 		set_light(light_strength, light_strength, "#FF9933")
@@ -221,7 +222,7 @@
 	if(grill)
 		var/image/grille_image = image(icon, "bonfire_grill")
 		grille_image.appearance_flags = RESET_COLOR
-		overlays += grille_image
+		add_overlay(grille_image)
 
 
 /obj/structure/bonfire/process()
@@ -250,6 +251,16 @@
 
 						removed.add_thermal_energy(heat_transfer)
 
+				for(var/mob/living/L in view(3, src))
+					L.add_modifier(/datum/modifier/endothermic, 10 SECONDS, null, TRUE)
+
+				for(var/obj/item/stack/wetleather/WL in view(2, src))
+					if(WL.wetness >= 0)
+						WL.dry()
+						continue
+
+					WL.wetness = max(0, WL.wetness - rand(1, 4))
+
 				env.merge(removed)
 
 /obj/structure/bonfire/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
@@ -269,7 +280,7 @@
 /obj/structure/fireplace //more like a space heater than a bonfire. A cozier alternative to both.
 	name = "fireplace"
 	desc = "The sound of the crackling hearth reminds you of home."
-	icon = 'icons/obj/structures.dmi'
+	icon = 'icons/obj/fireplace.dmi'
 	icon_state = "fireplace"
 	density = TRUE
 	anchored = TRUE
@@ -330,13 +341,13 @@
 		return FALSE
 
 	if(istype(consumed_fuel, /obj/item/stack/material/log))
-		next_fuel_consumption = world.time + 2 MINUTES
+		next_fuel_consumption = world.time + 6 MINUTES	//VOREStation Edit
 		qdel(consumed_fuel)
 		update_icon()
 		return TRUE
 
 	else if(istype(consumed_fuel, /obj/item/stack/material/wood)) // One log makes two planks of wood.
-		next_fuel_consumption = world.time + 1 MINUTE
+		next_fuel_consumption = world.time + 3 MINUTES	//VOREStation Edit
 		qdel(consumed_fuel)
 		update_icon()
 		return TRUE
@@ -353,7 +364,7 @@
 		burning = FALSE
 		update_icon()
 		STOP_PROCESSING(SSobj, src)
-		visible_message("<span class='notice'>\The [src] stops burning.</span>")
+		visible_message("<b>\The [src]</b> stops burning.")
 
 /obj/structure/fireplace/proc/ignite()
 	if(!burning && get_fuel_amount())
@@ -373,19 +384,24 @@
 			O.fire_act(null, 1000, 500)
 
 /obj/structure/fireplace/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(burning)
 		var/state
 		switch(get_fuel_amount())
-			if(0 to 3.5)
-				state = "fireplace_warm"
-			if(3.6 to 6.5)
-				state = "fireplace_hot"
-			if(6.6 to 10)
-				state = "fireplace_intense" //don't need to throw a corpse inside to make it burn hotter.
-		var/image/I = image(icon, state)
-		I.appearance_flags = RESET_COLOR
-		overlays += I
+			if(0 to 1)
+				state = "[icon_state]_fire0"
+			if(2 to 4)
+				state = "[icon_state]_fire1"
+			if(4 to 6)
+				state = "[icon_state]_fire2"
+			if(6 to 8)
+				state = "[icon_state]_fire3"
+			if(8 to 10)
+				state = "[icon_state]_fire4"
+		add_overlay(mutable_appearance(icon, state))
+		add_overlay(emissive_appearance(icon, state))
+		add_overlay(mutable_appearance(icon, "[icon_state]_glow"))
+		add_overlay(emissive_appearance(icon, "[icon_state]_glow"))
 
 		var/light_strength = max(get_fuel_amount() / 2, 2)
 		set_light(light_strength, light_strength, "#FF9933")
@@ -424,3 +440,20 @@
 /obj/structure/fireplace/water_act(amount)
 	if(prob(amount * 10))
 		extinguish()
+
+
+/obj/structure/fireplace/barrel
+	name = "barrel fire pit"
+	desc = "Seems like this barrel might make an ideal fire pit."
+	icon_state = "barrelfire"
+	density = TRUE
+	anchored = FALSE
+
+/obj/structure/fireplace/barrel/update_icon()
+	if(burning)
+		icon_state = "[initial(icon_state)]1"
+		var/light_strength = max(get_fuel_amount() / 2, 2)
+		set_light(light_strength, light_strength, "#FF9933")
+	else
+		icon_state = initial(icon_state)
+		set_light(0)

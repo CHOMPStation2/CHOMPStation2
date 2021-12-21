@@ -69,6 +69,21 @@
 		else if(status == 3) //Digital organ
 			I.digitize()
 
+	//Give breathing equipment if needed
+	if(current_project.breath_type != "oxygen")
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
+		var/obj/item/weapon/tank/tankpath
+		if(current_project.breath_type == "phoron")
+			tankpath = /obj/item/weapon/tank/vox
+		else
+			tankpath = text2path("/obj/item/weapon/tank/" + current_project.breath_type)
+
+		if(tankpath)
+			H.equip_to_slot_or_del(new tankpath(H), slot_back)
+			H.internal = H.back
+			if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
+				H.internals.icon_state = "internal1"
+
 	occupant = H
 
 	//Set the name or generate one
@@ -152,9 +167,9 @@
 			use_power(7500) //This might need tweaking.
 			return
 
-		else if(((occupant.health >= heal_level) || (occupant.health == occupant.maxHealth)) && (!eject_wait))
-			playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
-			audible_message("\The [src] signals that the growing process is complete.")
+		else if(((occupant.health == occupant.maxHealth)) && (!eject_wait))
+			playsound(src, 'sound/machines/ding.ogg', 50, 1)
+			audible_message("\The [src] signals that the growing process is complete.", runemessage = "ding")
 			connected_message("Growing Process Complete.")
 			locked = 0
 			go_out()
@@ -168,6 +183,11 @@
 
 	return
 
+/obj/machinery/clonepod/transhuman/get_completion()
+	if(occupant)
+		return 100 * ((occupant.health + abs(config.health_threshold_dead)) / (occupant.maxHealth + abs(config.health_threshold_dead)))
+	return 0
+
 //Synthetic version
 /obj/machinery/transhuman/synthprinter
 	name = "SynthFab 3000"
@@ -177,10 +197,10 @@
 	icon = 'icons/obj/machines/synthpod.dmi'
 	icon_state = "pod_0"
 	circuit = /obj/item/weapon/circuitboard/transhuman_synthprinter
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 
-	var/list/stored_material =  list(DEFAULT_WALL_MATERIAL = 30000, "glass" = 30000)
+	var/list/stored_material =  list(MAT_STEEL = 30000, MAT_GLASS = 30000)
 	var/connected      //What console it's done up with
 	var/busy = 0       //Busy cloning
 	var/body_cost = 15000  //Cost of a cloned body (metal and glass ea.)
@@ -241,7 +261,7 @@
 	if(!istype(BR) || busy)
 		return 0
 
-	if(stored_material[DEFAULT_WALL_MATERIAL] < body_cost || stored_material["glass"] < body_cost)
+	if(stored_material[MAT_STEEL] < body_cost || stored_material["glass"] < body_cost)
 		return 0
 
 	current_project = BR
@@ -336,7 +356,7 @@
 	H.loc = get_turf(src)
 
 	//Machine specific stuff at the end
-	stored_material[DEFAULT_WALL_MATERIAL] -= body_cost
+	stored_material[MAT_STEEL] -= body_cost
 	stored_material["glass"] -= body_cost
 	busy = 0
 	update_icon()
@@ -369,14 +389,14 @@
 
 	var/obj/item/stack/material/S = W
 	if(!(S.material.name in stored_material))
-		to_chat(user, "<span class='warning'>\the [src] doesn't accept [S.material]!</span>")
+		to_chat(user, "<span class='warning'>\The [src] doesn't accept [S.material]!</span>")
 		return
 
 	var/amnt = S.perunit
 	if(stored_material[S.material.name] + amnt <= max_res_amount)
-		if(S && S.amount >= 1)
+		if(S && S.get_amount() >= 1)
 			var/count = 0
-			while(stored_material[S.material.name] + amnt <= max_res_amount && S.amount >= 1)
+			while(stored_material[S.material.name] + amnt <= max_res_amount && S.get_amount() >= 1)
 				stored_material[S.material.name] += amnt
 				S.use(1)
 				count++
@@ -404,9 +424,9 @@
 	icon = 'icons/obj/machines/implantchair.dmi'
 	icon_state = "implantchair"
 	circuit = /obj/item/weapon/circuitboard/transhuman_resleever
-	density = 1
+	density = TRUE
 	opacity = 0
-	anchored = 1
+	anchored = TRUE
 	var/blur_amount
 	var/confuse_amount
 
@@ -439,28 +459,41 @@
 	blur_amount = (48 - manip_rating * 8)
 
 /obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
-	user.set_machine(src)
-	var/health_text = ""
-	var/mind_text = ""
-	if(src.occupant)
-		if(src.occupant.stat >= DEAD)
-			health_text = "<FONT color=red>DEAD</FONT>"
-		else if(src.occupant.health < 0)
-			health_text = "<FONT color=red>[round(src.occupant.health,0.1)]</FONT>"
-		else
-			health_text = "[round(src.occupant.health,0.1)]"
+	tgui_interact(user)
 
-		if(src.occupant.mind)
-			mind_text = "Mind present: [occupant.mind.name]"
-		else
-			mind_text = "Mind absent."
+/obj/machinery/transhuman/resleever/tgui_interact(mob/user, datum/tgui/ui = null)
+	if(stat & (NOPOWER|BROKEN))
+		return
 
-	var/dat ="<B>Resleever Status</B><BR>"
-	dat +="<B>Current occupant:</B> [src.occupant ? "<BR>Name: [src.occupant]<BR>Health: [health_text]<BR>" : "<FONT color=red>None</FONT>"]<BR>"
-	dat +="<B>Mind status:</B> [mind_text]<BR>"
-	user.set_machine(src)
-	user << browse(dat, "window=resleever")
-	onclose(user, "resleever")
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "ResleevingPod", "Resleever")
+		ui.open()
+
+/obj/machinery/transhuman/resleever/tgui_data(mob/user)
+	var/list/data = list()
+
+	data["occupied"] = !!occupant
+	if(occupant)
+		data["name"] = occupant.name
+		data["health"] = occupant.health
+		data["maxHealth"] = occupant.maxHealth
+		data["stat"] = occupant.stat
+		data["mindStatus"] = !!occupant.mind
+		data["mindName"] = occupant.mind?.name
+/* CHOMP Edit: Get rid of resleeving sickness stuff
+		if(occupant.has_modifier_of_type(/datum/modifier/resleeving_sickness) || occupant.has_modifier_of_type(/datum/modifier/faux_resleeving_sickness))
+			data["resleeveSick"] = TRUE
+		else
+			data["resleeveSick"] = FALSE
+
+		if(occupant.confused || occupant.eye_blurry)
+			data["initialSick"] = TRUE
+		else
+			data["initialSick"] = FALSE
+*/
+//End chomp edit
+	return data
 
 /obj/machinery/transhuman/resleever/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
@@ -474,10 +507,6 @@
 		var/obj/item/weapon/grab/G = W
 		if(!ismob(G.affecting))
 			return
-		for(var/mob/living/carbon/slime/M in range(1, G.affecting))
-			if(M.Victim == G.affecting)
-				to_chat(usr, "[G.affecting:name] will not fit into the [src.name] because they have a slime latched onto their head.")
-				return
 		var/mob/M = G.affecting
 		if(put_mob(M))
 			qdel(G)
@@ -525,13 +554,13 @@
 
 	add_fingerprint(user)
 
-/obj/machinery/transhuman/resleever/proc/putmind(var/datum/transhuman/mind_record/MR, mode = 1, var/mob/living/carbon/human/override = null)
+/obj/machinery/transhuman/resleever/proc/putmind(var/datum/transhuman/mind_record/MR, mode = 1, var/mob/living/carbon/human/override = null, var/db_key)
 	if((!occupant || !istype(occupant) || occupant.stat >= DEAD) && mode == 1)
 		return 0
 
 	if(mode == 2 && sleevecards) //Card sleeving
 		var/obj/item/device/sleevecard/card = new /obj/item/device/sleevecard(get_turf(src))
-		card.sleeveInto(MR)
+		card.sleeveInto(MR, db_key = db_key)
 		sleevecards--
 		return 1
 
@@ -563,8 +592,9 @@
 	//Re-supply a NIF if one was backed up with them.
 	if(MR.nif_path)
 		var/obj/item/device/nif/nif = new MR.nif_path(occupant,null,MR.nif_savedata)
-		for(var/path in MR.nif_software)
-			new path(nif)
+		spawn(0)			//Delay to not install software before NIF is fully installed
+			for(var/path in MR.nif_software)
+				new path(nif)
 		nif.durability = MR.nif_durability //Restore backed up durability after restoring the softs.
 
 	// If it was a custom sleeve (not owned by anyone), update namification sequences
@@ -593,6 +623,7 @@
 	if(original_occupant)
 		occupant = original_occupant
 
+	playsound(src, 'sound/machines/medbayscanner1.ogg', 100, 1) // Play our sound at the end of the mind injection!
 	return 1
 
 /obj/machinery/transhuman/resleever/proc/go_out(var/mob/M)

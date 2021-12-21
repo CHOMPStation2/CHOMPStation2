@@ -3,8 +3,11 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "fuel"
 	plane = DIRTY_PLANE
-	anchored = 1
+	layer = DIRTY_LAYER
+	anchored = TRUE
 	var/amount = 1
+	generic_filth = TRUE
+	persistent = FALSE
 
 /obj/effect/decal/cleanable/liquid_fuel/New(turf/newLoc,amt=1,nologs=1)
 	if(!nologs)
@@ -35,7 +38,7 @@
 	for(var/d in cardinal)
 		var/turf/simulated/target = get_step(src,d)
 		var/turf/simulated/origin = get_turf(src)
-		if(origin.CanPass(null, target, 0, 0) && target.CanPass(null, origin, 0, 0))
+		if(origin.CanPass(src, target, 0, 0) && target.CanPass(src, origin, 0, 0))
 			var/obj/effect/decal/cleanable/liquid_fuel/other_fuel = locate() in target
 			if(other_fuel)
 				other_fuel.amount += amount*0.25
@@ -48,7 +51,7 @@
 
 /obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel
 	icon_state = "mustard"
-	anchored = 0
+	anchored = FALSE
 
 /obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel/New(newLoc, amt = 1, d = 0)
 	set_dir(d) //Setting this direction means you won't get torched by your own flamethrower.

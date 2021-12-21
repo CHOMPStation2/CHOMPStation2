@@ -1,12 +1,7 @@
 /obj/structure/closet/secure_closet/cargotech
 	name = "cargo technician's locker"
 	req_access = list(access_cargo)
-	icon_state = "securecargo1"
-	icon_closed = "securecargo"
-	icon_locked = "securecargo1"
-	icon_opened = "securecargoopen"
-	icon_broken = "securecargobroken"
-	icon_off = "securecargooff"
+	closet_appearance = /decl/closet_appearance/secure_closet/cargo
 
 	starts_with = list(
 		/obj/item/clothing/under/rank/cargotech,
@@ -34,12 +29,7 @@
 /obj/structure/closet/secure_closet/quartermaster
 	name = "quartermaster's locker"
 	req_access = list(access_qm)
-	icon_state = "secureqm1"
-	icon_closed = "secureqm"
-	icon_locked = "secureqm1"
-	icon_opened = "secureqmopen"
-	icon_broken = "secureqmbroken"
-	icon_off = "secureqmoff"
+	closet_appearance = /decl/closet_appearance/secure_closet/cargo/qm
 
 	starts_with = list(
 		/obj/item/clothing/under/rank/cargo,
@@ -47,16 +37,17 @@
 		/obj/item/clothing/under/rank/cargo/jeans,
 		/obj/item/clothing/under/rank/cargo/jeans/female,
 		/obj/item/clothing/shoes/brown,
-		/obj/item/device/radio/headset/headset_cargo,
-		/obj/item/device/radio/headset/headset_cargo/alt,
+		/obj/item/device/radio/headset/headset_qm, //VOREStation Edit,
+		/obj/item/device/radio/headset/headset_qm/alt, //VOREStation Edit,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/gloves/fingerless,
-		/obj/item/clothing/suit/fire/firefighter,
 		/obj/item/weapon/tank/emergency/oxygen,
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/clothing/head/soft,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/cargo,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/cargo/qm,
+		/obj/item/clothing/head/beret/qm,
 		/obj/item/clothing/shoes/boots/winter/supply)
 
 /obj/structure/closet/secure_closet/quartermaster/Initialize()
@@ -70,13 +61,8 @@
 
 /obj/structure/closet/secure_closet/miner
 	name = "miner's equipment"
-	icon_state = "miningsec1"
-	icon_closed = "miningsec"
-	icon_locked = "miningsec1"
-	icon_opened = "miningsecopen"
-	icon_broken = "miningsecbroken"
-	icon_off = "miningsecoff"
 	req_access = list(access_mining)
+	closet_appearance = /decl/closet_appearance/secure_closet/mining
 
 	starts_with = list(
 		/obj/item/device/radio/headset/headset_mine,
@@ -104,9 +90,8 @@
 
 /obj/structure/closet/lumber
 	name = "Lumberjack's equipment"
-	icon_state = "mining"
-	icon_closed = "mining"
-	icon_opened = "miningopen"
+	desc = "It's a storage unit for Lumberjack equpiment, though it seems the lock is broken."
+	closet_appearance = /decl/closet_appearance/secure_closet/lumber
 
 	starts_with = list(
 		/obj/item/device/radio/headset/headset_mine,

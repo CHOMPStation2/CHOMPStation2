@@ -8,7 +8,8 @@
 	var/under_state = "rock"
 	edge_blending_priority = -1
 	movement_cost = 4
-	outdoors = TRUE
+	outdoors = OUTDOORS_YES
+	flags = TURF_ACID_IMMUNE
 
 	layer = WATER_FLOOR_LAYER
 
@@ -20,6 +21,8 @@
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()
+	var/decl/flooring/F = get_flooring_data(/decl/flooring/water)
+	footstep_sounds = F?.footstep_sounds
 	update_icon()
 	handle_fish()
 
@@ -29,8 +32,6 @@
 	icon_state = under_state // This isn't set at compile time in order for it to show as water in the map editor.
 	var/image/water_sprite = image(icon = 'icons/turf/outdoors.dmi', icon_state = water_state, layer = WATER_LAYER)
 	add_overlay(water_sprite)
-
-	update_icon_edge()
 
 /turf/simulated/floor/water/get_edge_icon_state()
 	return "water_shallow"
@@ -45,7 +46,7 @@
 	else if(istype(O, /obj/item/weapon/mop))
 		O.reagents.add_reagent(reagent_type, 5)
 		to_chat(user, "<span class='notice'>You wet \the [O] in \the [src].</span>")
-		playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
+		playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		return 1
 
 	else return ..()
@@ -106,12 +107,12 @@
 	name = "pool"
 	desc = "Don't worry, it's not closed."
 	under_state = "pool"
-	outdoors = FALSE
+	outdoors = OUTDOORS_NO
 
 /turf/simulated/floor/water/deep/pool
 	name = "deep pool"
 	desc = "Don't worry, it's not closed."
-	outdoors = FALSE
+	outdoors = OUTDOORS_NO
 
 /mob/living/proc/can_breathe_water()
 	return FALSE
@@ -145,6 +146,18 @@
 	inflict_water_damage(20 * amount) // Only things vulnerable to water will actually be harmed (slimes/prommies).
 
 var/list/shoreline_icon_cache = list()
+
+/turf/simulated/floor/water/beach
+	name = "beach shoreline"
+	desc = "The waves look calm and inviting."
+	icon_state = "beach"
+	depth = 0
+
+/turf/simulated/floor/water/beach/update_icon()
+	return
+
+/turf/simulated/floor/water/beach/corner
+	icon_state = "beachcorner"
 
 /turf/simulated/floor/water/shoreline
 	name = "shoreline"
@@ -181,9 +194,9 @@ var/list/shoreline_icon_cache = list()
 
 /turf/simulated/floor/water/contaminated
 	desc = "This water smells pretty acrid."
-	var poisonlevel = 10
+	var/poisonlevel = 10
 
-turf/simulated/floor/water/contaminated/Entered(atom/movable/AM, atom/oldloc)
+/turf/simulated/floor/water/contaminated/Entered(atom/movable/AM, atom/oldloc)
 	..()
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM

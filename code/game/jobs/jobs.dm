@@ -11,7 +11,8 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
-var/const/BLUESHIELD		=(1<<13) //YW addition
+var/const/CLOWN				=(1<<13) //VOREStation Add
+var/const/MIME				=(1<<14) //VOREStation Add
 var/const/INTERN			=(1<<15) //VOREStation Add
 
 var/const/MEDSCI			=(1<<1)
@@ -27,6 +28,11 @@ var/const/PSYCHIATRIST		=(1<<7)
 var/const/ROBOTICIST		=(1<<8)
 var/const/XENOBIOLOGIST		=(1<<9)
 var/const/PARAMEDIC			=(1<<10)
+var/const/PATHFINDER 		=(1<<11) //VOREStation Add
+var/const/EXPLORER 			=(1<<12) //VOREStation Add
+var/const/SAR 				=(1<<13) //VOREStation Add
+var/const/XENOBOTANIST		=(1<<14) //VOREStation Add
+var/const/PILOT 			=(1<<15) //CHOMPStation EDIT
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -43,15 +49,14 @@ var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
-var/const/CLOWN				=(1<<13) //VOREStation Add
-var/const/MIME				=(1<<14) //VOREStation Add
+var/const/ENTERTAINER		=(1<<13) //VOREStation Add
 
 var/list/assistant_occupations = list(
 )
 
 
 var/list/command_positions = list(
-	"Colony Director",
+	"Site Manager",
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
@@ -75,8 +80,7 @@ var/list/medical_positions = list(
 	"Geneticist",
 	"Psychiatrist",
 	"Chemist",
-	"Paramedic",
-	"Field Medic" //ywedit
+	"Paramedic"
 )
 
 
@@ -105,8 +109,7 @@ var/list/civilian_positions = list(
 	"Lawyer",
 	"Chaplain",
 	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
-	"Intern", //VOREStation Edit - Intern
-	"Pilot" //YWedit
+	"Intern" //VOREStation Edit - Intern
 )
 
 
@@ -120,9 +123,9 @@ var/list/security_positions = list(
 
 var/list/planet_positions = list(
 	"Pathfinder", // VOREStation Edit - Added Pathfinder
-	"Explorer"
-	//YWmoved to civilian"Pilot",
-	//YWmoved to medical"Field Medic"  // VOREStation Edit - Field Medic
+	"Explorer",
+	"Pilot",
+	"Field Medic" // VOREStation Edit - Field Medic
 )
 
 
@@ -133,7 +136,7 @@ var/list/nonhuman_positions = list(
 )
 
 var/list/whitelisted_positions = list(
-	"Colony Director",
+	"Site Manager",
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
@@ -141,9 +144,7 @@ var/list/whitelisted_positions = list(
 	"Chief Medical Officer",
 	"Command Secretary",
 	"Warden",
-	"AI",
-	"Cyborg",
-	"pAI"
+	"AI"
 )
 
 

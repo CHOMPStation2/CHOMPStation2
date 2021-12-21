@@ -39,10 +39,10 @@
 	..()
 	update_icon()
 
-/obj/item/weapon/oldtwohanded/mob_can_equip(M as mob, slot)
+/obj/item/weapon/oldtwohanded/mob_can_equip(M as mob, slot, disable_warning = FALSE)
 	//Cannot equip wielded items.
 	if(wielded)
-		M << "<span class='warning'>Unwield the [initial(name)] first!</span>"
+		to_chat(M, "<span class='warning'>Unwield the [initial(name)] first!</span>")
 		return 0
 
 	return ..()
@@ -102,11 +102,11 @@
 	icon_state = "offhand"
 	name = "offhand"
 
-	unwield()
-		qdel(src)
+/obj/item/weapon/oldtwohanded/offhand/unwield()
+	qdel(src)
 
-	wield()
-		qdel(src)
+/obj/item/weapon/oldtwohanded/offhand/wield()
+	qdel(src)
 
 /obj/item/weapon/oldtwohanded/offhand/update_icon()
 	return

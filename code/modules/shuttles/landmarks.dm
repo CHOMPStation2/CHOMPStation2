@@ -3,16 +3,16 @@
 	name = "Nav Point"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "energynet"
-	anchored = 1
-	unacidable = 1
-	simulated = 0
+	anchored = TRUE
+	unacidable = TRUE
+	simulated = FALSE
 	invisibility = 101
 	flags = SLANDMARK_FLAG_AUTOSET // We generally want to use current area/turf as base.
 
 	//ID of the landmark
 	var/landmark_tag
 	//ID of the controller on the dock side (intialize to id_tag, becomes reference)
-	var/datum/computer/file/embedded_program/docking/docking_controller
+	var/datum/embedded_program/docking/docking_controller
 	//Map of shuttle names to ID of controller used for this landmark for shuttles with multiple ones.
 	var/list/special_dock_targets
 
@@ -43,8 +43,6 @@
 			base_turf = T.type
 	else
 		base_area = locate(base_area || world.area)
-
-	name = (name + " ([x],[y])")
 	SSshuttles.register_landmark(landmark_tag, src)
 
 /obj/effect/shuttle_landmark/LateInitialize()
@@ -55,14 +53,14 @@
 	if(!istype(docking_controller))
 		log_error("Could not find docking controller for shuttle waypoint '[name]', docking tag was '[docking_tag]'.")
 	if(using_map.use_overmap)
-		var/obj/effect/overmap/visitable/location = map_sectors["[z]"]
+		var/obj/effect/overmap/visitable/location = get_overmap_sector(z)
 		if(location && location.docking_codes)
 			docking_controller.docking_codes = location.docking_codes
 
 /obj/effect/shuttle_landmark/forceMove()
-	var/obj/effect/overmap/visitable/map_origin = map_sectors["[z]"]
+	var/obj/effect/overmap/visitable/map_origin = get_overmap_sector(z)
 	. = ..()
-	var/obj/effect/overmap/visitable/map_destination = map_sectors["[z]"]
+	var/obj/effect/overmap/visitable/map_destination = get_overmap_sector(z)
 	if(map_origin != map_destination)
 		if(map_origin)
 			map_origin.remove_landmark(src, shuttle_restricted)
@@ -124,14 +122,16 @@
 	name = "Navpoint"
 	landmark_tag = "navpoint"
 	flags = SLANDMARK_FLAG_AUTOSET
+	var/original_name = null // Save our mapped-in name so we can rebuild our name when moving sectors.
 
 /obj/effect/shuttle_landmark/automatic/Initialize()
+	original_name = name
 	landmark_tag += "-[x]-[y]-[z]-[random_id("landmarks",1,9999)]"
 	return ..()
 
 /obj/effect/shuttle_landmark/automatic/sector_set(var/obj/effect/overmap/visitable/O)
 	..()
-	name = ("[O.name] - [initial(name)] ([x],[y])")
+	name = ("[O.name] - [original_name] ([x],[y])")
 
 //Subtype that calls explosion on init to clear space for shuttles
 /obj/effect/shuttle_landmark/automatic/clearing
@@ -142,7 +142,7 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/shuttle_landmark/automatic/clearing/LateInitialize()
-	..()
+	. = ..()
 	for(var/turf/T in range(radius, src))
 		if(T.density)
 			T.ChangeTurf(get_base_turf_by_area(T))
@@ -180,7 +180,7 @@
 		return
 
 	active = 1
-	anchored = 1
+	anchored = TRUE
 
 	var/obj/effect/shuttle_landmark/automatic/mark = new(T)
 	mark.name = ("Beacon signal ([T.x],[T.y])")

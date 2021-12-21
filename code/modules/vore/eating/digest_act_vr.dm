@@ -3,8 +3,14 @@
 //return non-negative integer: Amount of nutrition/charge gained (scaled to nutrition, other end can multiply for charge scale).
 
 // Ye default implementation.
-/obj/item/proc/digest_act(atom/movable/item_storage = null)
+/obj/item/proc/digest_act(atom/movable/item_storage = null, touchable_amount) //CHOMPEdit
 	if(istype(item_storage, /obj/item/device/dogborg/sleeper))
+		if(istype(src, /obj/item/device/pda))
+			var/obj/item/device/pda/P = src
+			if(P.id)
+				P.id = null
+		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
+			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
 			if(istype(O, /obj/item/weapon/storage/internal)) //Dump contents from dummy pockets.
 				for(var/obj/item/SO in O)
@@ -22,13 +28,45 @@
 
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
-		g_damage = 0.25 * (B.digest_brute + B.digest_burn)
-
-	if(digest_stage > 0)
+		if(!touchable_amount) //CHOMPEdit Start
+			touchable_amount = 1
+		g_damage = 0.25 * (B.digest_brute + B.digest_burn) / touchable_amount
+		if(g_damage <= 0)
+			return FALSE
 		if(g_damage > digest_stage)
 			g_damage = digest_stage
-		digest_stage -= g_damage
-	else
+			digest_stage = 0 //Don't bother with further math for 1 hit kills.
+		if(digest_stage > 0)
+			if(g_damage > digest_stage)
+				g_damage = digest_stage
+			digest_stage -= g_damage
+			d_mult = round(1 / w_class * digest_stage, 0.25)
+			if(d_mult < d_mult_old)
+				d_mult_old = d_mult
+				var/d_stage_name
+				switch(d_mult)
+					if(0.75)
+						d_stage_name = "blemished"
+					if(0.5)
+						d_stage_name = "disfigured"
+					if(0.25)
+						d_stage_name = "deteriorating"
+					if(0)
+						d_stage_name = "ruined"
+				if(d_stage_name)
+					if(!oldname)
+						oldname = cleanname ? cleanname : name
+					cleanname = "[d_stage_name] [oldname]"
+					decontaminate()
+					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
+					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
+	if(digest_stage <= 0)
+		if(istype(src, /obj/item/device/pda))
+			var/obj/item/device/pda/P = src
+			if(P.id)
+				P.id = null
+		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
+			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
 			if(istype(O,/obj/item/weapon/storage/internal)) //Dump contents from dummy pockets.
 				for(var/obj/item/SO in O)
@@ -37,15 +75,23 @@
 					qdel(O)
 			else if(item_storage)
 				O.forceMove(item_storage)
-		qdel(src)
+		if(istype(src,/obj/item/stack))
+			var/obj/item/stack/S = src
+			if(S.get_amount() <= 1)
+				qdel(src)
+			else
+				S.use(1)
+				digest_stage = w_class
+		else
+			qdel(src)
+	if(g_damage > w_class)
+		return w_class
 	return g_damage
 
 /////////////
 // Some indigestible stuff
 /////////////
 /obj/item/weapon/hand_tele/digest_act(var/atom/movable/item_storage = null)
-	return FALSE
-/obj/item/weapon/card/id/gold/captain/spare/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
 /obj/item/device/aicard/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
@@ -67,23 +113,15 @@
 /////////////
 // Some special treatment
 /////////////
-//PDAs need to lose their ID to not take it with them, so we can get a digested ID
-/obj/item/device/pda/digest_act(atom/movable/item_storage = null)
-	if(id)
-		if(istype(item_storage, /obj/item/device/dogborg/sleeper) || (!isnull(digest_stage) && digest_stage <= 0))
-			id = null
-	. = ..()
-
-/obj/item/weapon/card/id
-	var/lost_access = list()
 
 /obj/item/weapon/card/id/digest_act(atom/movable/item_storage = null)
-	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic, but the access codes need to be reprogrammed at the HoP office."
-	icon = 'icons/obj/card_vr.dmi'
-	icon_state = "[initial(icon_state)]_digested"
-	if(!(LAZYLEN(lost_access)) && LAZYLEN(access))
-		lost_access = access	//Do not forget what access we lose
-	access = list()			// Then lose it
+	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic."
+	if(!sprite_stack || !istype(sprite_stack) || !(sprite_stack.len))
+		icon = 'icons/obj/card_vr.dmi'
+		icon_state = "[initial(icon_state)]_digested"
+	else
+		sprite_stack += "digested"
+	update_icon()
 	return FALSE
 
 /obj/item/weapon/reagent_containers/food/digest_act(atom/movable/item_storage = null)
@@ -91,7 +129,7 @@
 		var/obj/belly/B = item_storage
 		if(ishuman(B.owner))
 			var/mob/living/carbon/human/H = B.owner
-			reagents.trans_to_holder(H.ingested, (reagents.total_volume * 0.3), 1, 0)
+			reagents.trans_to_holder(H.ingested, (reagents.total_volume * 0.5), 1, 0)
 		else if(isrobot(B.owner))
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 150
@@ -110,8 +148,7 @@
 /obj/item/organ/digest_act(atom/movable/item_storage = null)
 	if((. = ..()))
 		if(isbelly(item_storage))
-			var/obj/belly/B = item_storage
-			. += 2 * (B.digest_brute + B.digest_burn)
+			. *= 3
 		else
 			. += 30 //Organs give a little more
 
@@ -128,6 +165,13 @@
 	//Replace this with a VORE setting so all types of posibrains can/can't be digested on a whim
 	return FALSE
 
+/obj/item/organ/internal/nano/digest_act(atom/movable/item_storage = null)
+	//Make proteans recoverable too
+	return FALSE
+
 // Gradual damage measurement
 /obj/item
 	var/digest_stage = null
+	var/d_mult_old = 1 //CHOMPEdit: digest stage descriptions
+	var/d_mult = 1 //CHOMPEdit: digest stage descriptions
+	var/d_stage_overlay //CHOMPEdit: digest stage effects

@@ -1,4 +1,4 @@
-#define waypoint_sector(waypoint) map_sectors["[waypoint.z]"]
+#define waypoint_sector(waypoint) get_overmap_sector(get_z(waypoint))
 
 /datum/shuttle/autodock/overmap
 	warmup_time = 10
@@ -42,7 +42,7 @@
 	if(moving_status == SHUTTLE_INTRANSIT)
 		return FALSE //already going somewhere, current_location may be an intransit location instead of in a sector
 	var/our_sector = waypoint_sector(current_location)
-	if(!our_sector && myship?.landmark && next_location == myship.landmark)
+	if(myship?.landmark && next_location == myship.landmark)
 		return TRUE //We're not on the overmap yet (admin spawned probably), and we're trying to hook up with our openspace sector
 	return get_dist(our_sector, waypoint_sector(next_location)) <= range
 
@@ -126,17 +126,27 @@
 	desc = "The fuel input port of the shuttle. Holds one fuel tank. Use a crowbar to open and close it."
 	icon = 'icons/turf/shuttle_parts.dmi'
 	icon_state = "fuel_port"
-	density = 0
-	anchored = 1
+	density = FALSE
+	anchored = TRUE
 	var/icon_closed = "fuel_port"
 	var/icon_empty = "fuel_port_empty"
 	var/icon_full = "fuel_port_full"
 	var/opened = 0
 	var/parent_shuttle
+	var/base_tank = /obj/item/weapon/tank/phoron
 
 /obj/structure/fuel_port/Initialize()
 	. = ..()
-	new /obj/item/weapon/tank/phoron(src)
+	if(base_tank)
+		new base_tank(src)
+
+/obj/structure/fuel_port/heavy
+	base_tank = /obj/item/weapon/tank/phoron/pressurized
+
+/obj/structure/fuel_port/empty
+	base_tank = null	//oops, no gas!
+	opened = 1	//shows open so you can diagnose 'oops, no gas' easily
+	icon_state = "fuel_port_empty"	//set the default state just to be safe
 
 /obj/structure/fuel_port/attack_hand(mob/user as mob)
 	if(!opened)
@@ -160,11 +170,11 @@
 	if(W.is_crowbar())
 		if(opened)
 			to_chat(user, "<spawn class='notice'>You tightly shut \the [src] door.")
-			playsound(src.loc, 'sound/effects/locker_close.ogg', 25, 0, -3)
+			playsound(src, 'sound/effects/locker_close.ogg', 25, 0, -3)
 			opened = 0
 		else
 			to_chat(user, "<spawn class='notice'>You open up \the [src] door.")
-			playsound(src.loc, 'sound/effects/locker_open.ogg', 15, 1, -3)
+			playsound(src, 'sound/effects/locker_open.ogg', 15, 1, -3)
 			opened = 1
 	else if(istype(W,/obj/item/weapon/tank))
 		if(!opened)

@@ -1,25 +1,25 @@
 var/list/infomorph_emotions = list(
-		"Happy" =              "pai-happy",
-		"Cat" =                "pai-cat",
-		"Extremely Happy" =    "pai-extremely-happy",
-		"Face" =               "pai-face",
-		"Laugh" =              "pai-laugh",
-		"Off" =                "pai-off",
-		"Sad" =                "pai-sad",
-		"Angry" =              "pai-angry",
-		"What" =               "pai-what",
-		"Neutral" =            "pai-neutral",
-		"Silly" =              "pai-silly",
-		"Nose" =               "pai-nose",
-		"Smirk" =              "pai-smirk",
-		"Exclamation Points" = "pai-exclamation",
-		"Question Mark" =      "pai-question"
+		"Happy" = 1,
+		"Cat" = 2,
+		"Extremely Happy" = 3,
+		"Face" = 4,
+		"Laugh" = 5,
+		"Off" = 6,
+		"Sad" = 7,
+		"Angry" = 8,
+		"What" = 9,
+		"Neutral" = 10,
+		"Silly" = 11,
+		"Nose" = 12,
+		"Smirk" = 13,
+		"Exclamation Points" = 14,
+		"Question Mark" = 15
 	)
 
 /mob/living/silicon/infomorph
 	name = "sleevecard" //Has the same name as the card for consistency, but this is the MOB in the card.
-	icon = 'icons/mob/pai.dmi'
-	icon_state = "repairbot"
+	icon = 'icons/mob/pai_vr.dmi' //Changed to the virgo icon, giving more sprite options.
+	icon_state = "pai-repairbot"
 
 	emote_type = 2		// pAIs emotes are heard, not seen, so they can be seen through a container (eg. person)
 	pass_flags = 1
@@ -39,13 +39,31 @@ var/list/infomorph_emotions = list(
 	var/obj/item/device/sleevecard/card	// The card we inhabit
 	var/obj/item/device/radio/sleevecard/radio		// Our primary radio
 	var/obj/item/device/universal_translator/translator
-
+	// This was ripped from PAI code, this is to fix the broken sprites for sleevecards and to give sleevecards the same options as PAIs for chassis
 	var/chassis = null   // A record of your chosen chassis.
 	var/global/list/possible_chassis = list(
-		"Spiderbot" = "repairbot",
-		"RoboCat" = "cat",
-		"MechaMouse" = "mouse",
-		"CyberMonkey" = "monkey"
+		"Drone" = "pai-repairbot",
+		"Cat" = "pai-cat",
+		"Mouse" = "pai-mouse",
+		"Monkey" = "pai-monkey",
+		"Corgi" = "pai-borgi",
+		"Fox" = "pai-fox",
+		"Parrot" = "pai-parrot",
+		"Rabbit" = "pai-rabbit",
+		//VOREStation Addition Start
+		"Bear" = "pai-bear",
+		"Fennec" = "pai-fen",
+		"Type Zero" = "pai-typezero",
+		"Raccoon" = "pai-raccoon",
+		"Raptor" = "pai-raptor",
+		"Corgi" = "pai-corgi",
+		"Bat" = "pai-bat",
+		"Butterfly" = "pai-butterfly",
+		"Hawk" = "pai-hawk",
+		"Duffel" = "pai-duffel",
+		"Rat" = "rat",
+		"Panther" = "panther"
+		//VOREStation Addition End
 		)
 
 	var/global/list/possible_say_verbs = list(
@@ -53,11 +71,14 @@ var/list/infomorph_emotions = list(
 		"Natural" = list("says","yells","asks"),
 		"Beep" = list("beeps","beeps loudly","boops"),
 		"Chirp" = list("chirps","chirrups","cheeps"),
-		"Feline" = list("purrs","yowls","meows")
+		"Feline" = list("purrs","yowls","meows"),
+		"Canine" = list("yaps","barks","woofs"),
+		"Rodent" = list("squeaks", "SQUEAKS", "sqiks")	//VOREStation Edit
 		)
 
 	var/obj/item/weapon/pai_cable/cable		// The cable we produce and use when door or camera jacking
 	var/silence_time			// Timestamp when we were silenced (normally via EMP burst), set to null after silence has faded
+	var/db_key
 
 // Various software-specific vars
 
@@ -83,7 +104,7 @@ var/list/infomorph_emotions = list(
 	var/datum/data/record/securityActive1		// Could probably just combine all these into one
 	var/datum/data/record/securityActive2
 
-/mob/living/silicon/infomorph/New(var/obj/item/device/sleevecard/SC, var/name = "Unknown")
+/mob/living/silicon/infomorph/New(var/obj/item/device/sleevecard/SC, var/name = "Unknown", var/db_key)
 	ASSERT(SC)
 	name = "[initial(name)] ([name])"
 	src.forceMove(SC)
@@ -94,6 +115,8 @@ var/list/infomorph_emotions = list(
 	if(!card.radio)
 		card.radio = new (card)
 	radio = card.radio
+
+	src.db_key = db_key
 
 	//Default languages without universal translator software
 	add_language(LANGUAGE_EAL, 1)
@@ -112,7 +135,10 @@ var/list/infomorph_emotions = list(
 		pda.ownjob = "Sleevecard"
 		pda.owner = text("[]", src)
 		pda.name = pda.owner + " (" + pda.ownjob + ")"
-		pda.toff = 1
+
+		var/datum/data/pda/app/messenger/M = pda.find_program(/datum/data/pda/app/messenger)
+		if(M)
+			M.toff = TRUE
 
 	..()
 
@@ -144,9 +170,9 @@ var/list/infomorph_emotions = list(
 		return 0
 	..()
 
-/mob/living/silicon/infomorph/default_can_use_topic(var/src_object)
+/mob/living/silicon/infomorph/default_can_use_tgui_topic(var/src_object)
 	if(src_object in src)
-		return shared_nano_interaction()
+		return shared_tgui_interaction()
 
 /////////// DAMAGES
 /mob/living/silicon/infomorph/emp_act(severity)
@@ -187,7 +213,7 @@ var/list/infomorph_emotions = list(
 	medicalActive1 = null
 	medicalActive2 = null
 	medical_cannotfind = 0
-	SSnanoui.update_uis(src)
+	SStgui.update_uis(src)
 	to_chat(usr, "<span class='notice'>You reset your record-viewing software.</span>")
 
 /*
@@ -311,7 +337,7 @@ var/list/infomorph_emotions = list(
 	set category = "Card Commands"
 	set name = "Choose Chassis"
 
-	var/choice = input(usr,"What would you like to use for your mobile chassis icon? This decision can only be made once.") as null|anything in possible_chassis
+	var/choice = tgui_input_list(usr,"What would you like to use for your mobile chassis icon? This decision can only be made once.", "Chassis Choice", possible_chassis)
 	if(!choice) return
 
 	icon_state = possible_chassis[choice]
@@ -321,7 +347,7 @@ var/list/infomorph_emotions = list(
 	set category = "Card Commands"
 	set name = "Choose Speech Verbs"
 
-	var/choice = input(usr,"What theme would you like to use for your speech verbs? This decision can only be made once.") as null|anything in possible_say_verbs
+	var/choice = tgui_input_list(usr,"What theme would you like to use for your speech verbs? This decision can only be made once.", "Verb Choice", possible_say_verbs)
 	if(!choice) return
 
 	var/list/sayverbs = possible_say_verbs[choice]
@@ -361,7 +387,7 @@ var/list/infomorph_emotions = list(
 	var/obj/item/weapon/card/id/ID = W.GetID()
 	if(ID)
 		if (idaccessible == 1)
-			switch(alert(user, "Do you wish to add access to [src] or remove access from [src]?",,"Add Access","Remove Access", "Cancel"))
+			switch(tgui_alert(user, "Do you wish to add access to [src] or remove access from [src]?","Modify Access",list("Add Access","Remove Access","Cancel")))
 				if("Add Access")
 					idcard.access |= ID.access
 					to_chat(user, "<span class='notice'>You add the access from the [W] to [src].</span>")
@@ -396,16 +422,13 @@ var/list/infomorph_emotions = list(
 	set desc = "Wipe yourself from your hardware. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
 
 	// Make sure people don't kill themselves accidentally
-	if(alert("WARNING: This will immediately remove you from the round, and remove your mind backups from storage, similar to cryo. Are you entirely sure you want to do this?",
-					"Suspend Self", "No", "No", "Yes") != "Yes")
+	if(tgui_alert(usr, "WARNING: This will immediately remove you from the round, and remove your mind backups from storage, similar to cryo. Are you entirely sure you want to do this?", "Suspend Self", list("No", "Yes")) != "Yes")
 		return
 
 	close_up()
 
 	//Resleeving 'cryo'
-	if(mind && (mind.name in SStranscore.backed_up))
-		var/datum/transhuman/mind_record/MR = SStranscore.backed_up[mind.name]
-		SStranscore.stop_backup(MR)
+	SStranscore.leave_round(src)
 
 	card.removePersonality()
 	clear_client()
@@ -417,15 +440,15 @@ var/list/infomorph_emotions = list(
 	desc = "Modify the settings on your integrated radio."
 
 	if(radio)
-		radio.ui_interact(src,"main",null,1,conscious_state)
+		radio.tgui_interact(src)
 	else
 		to_chat(src, "<span class='warning'>You don't have a radio!</span>")
 
-/mob/living/silicon/infomorph/say(var/msg)
+/mob/living/silicon/infomorph/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	if(silence_time)
 		to_chat(src, "<font color=green>Communication circuits remain uninitialized.</font>")
 	else
-		..(msg)
+		..(message)
 
 /mob/living/silicon/infomorph/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
 	switch(message_mode)
@@ -444,7 +467,7 @@ var/global/list/infomorph_software_by_key = list()
 var/global/list/default_infomorph_software = list()
 /hook/startup/proc/populate_infomorph_software_list()
 	var/r = 1 // I would use ., but it'd sacrifice runtime detection
-	for(var/type in typesof(/datum/infomorph_software) - /datum/infomorph_software)
+	for(var/type in subtypesof(/datum/infomorph_software))
 		var/datum/infomorph_software/P = new type()
 		if(infomorph_software_by_key[P.id])
 			var/datum/infomorph_software/O = infomorph_software_by_key[P.id]
@@ -460,114 +483,99 @@ var/global/list/default_infomorph_software = list()
 	set category = "Card Commands"
 	set name = "Software Interface"
 
-	ui_interact(src)
+	tgui_interact(src)
 
-/mob/living/silicon/infomorph/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1, key_state = self_state)
-	if(user != src)
-		if(ui) ui.set_status(STATUS_CLOSE, 0)
-		return
+/mob/living/silicon/infomorph/tgui_state(mob/user)
+	return GLOB.tgui_self_state
 
-	if(ui_key != "main")
-		var/datum/infomorph_software/S = software[ui_key]
-		if(S && !S.toggle)
-			S.on_ui_interact(src, ui, force_open)
-		else
-			if(ui) ui.set_status(STATUS_CLOSE, 0)
-		return
+/mob/living/silicon/infomorph/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "pAIInterface", "Card Software Interface")
+		ui.open()
 
-	var/data[0]
+/mob/living/silicon/infomorph/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
+	var/list/data = ..()
 
 	// Software we have bought
-	var/bought_software[0]
+	var/list/bought_software = list()
 	// Software we have not bought
-	var/not_bought_software[0]
+	var/list/not_bought_software = list()
 
 	for(var/key in infomorph_software_by_key)
 		var/datum/infomorph_software/S = infomorph_software_by_key[key]
-		var/software_data[0]
+		var/list/software_data = list()
 		software_data["name"] = S.name
 		software_data["id"] = S.id
 		if(key in software)
 			software_data["on"] = S.is_active(src)
-			bought_software[++bought_software.len] = software_data
+			bought_software.Add(list(software_data))
 		else
 			software_data["ram"] = S.ram_cost
-			not_bought_software[++not_bought_software.len] = software_data
+			not_bought_software.Add(list(software_data))
 
 	data["bought"] = bought_software
 	data["not_bought"] = not_bought_software
 	data["available_ram"] = ram
 
 	// Emotions
-	var/emotions[0]
+	var/list/emotions = list()
 	for(var/name in infomorph_emotions)
-		var/emote[0]
+		var/list/emote = list()
 		emote["name"] = name
 		emote["id"] = infomorph_emotions[name]
-		emotions[++emotions.len] = emote
+		emotions.Add(list(emote))
 
 	data["emotions"] = emotions
 	data["current_emotion"] = card.current_emotion
 
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open, key_state)
-	if (!ui)
-		ui = new(user, src, ui_key, "pai_interface.tmpl", "Card Software Interface", 450, 600, state = key_state)
-		ui.set_initial_data(data)
-		ui.open()
-		ui.set_auto_update(1)
+	return data
 
-/mob/living/silicon/infomorph/Topic(href, href_list)
-	. = ..()
-	if(.) return
+/mob/living/silicon/infomorph/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+	if(..())
+		return TRUE
 
-	if(href_list["software"])
-		var/soft = href_list["software"]
-		var/datum/infomorph_software/S = software[soft]
-		if(S.toggle)
-			S.toggle(src)
-		else
-			ui_interact(src, ui_key = soft)
-		return 1
+	switch(action)
+		if("software")
+			var/soft = params["software"]
+			var/datum/infomorph_software/S = software[soft]
+			if(S.toggle)
+				S.toggle(src)
+			else
+				S.tgui_interact(src, parent_ui = ui)
+			return TRUE
 
-	else if(href_list["stopic"])
-		var/soft = href_list["stopic"]
-		var/datum/infomorph_software/S = software[soft]
-		if(S)
-			return S.Topic(href, href_list)
+		if("purchase")
+			var/soft = params["purchase"]
+			var/datum/infomorph_software/S = infomorph_software_by_key[soft]
+			if(S && (ram >= S.ram_cost))
+				ram -= S.ram_cost
+				software[S.id] = S
+			return TRUE
 
-	else if(href_list["purchase"])
-		var/soft = href_list["purchase"]
-		var/datum/infomorph_software/S = infomorph_software_by_key[soft]
-		if(S && (ram >= S.ram_cost))
-			ram -= S.ram_cost
-			software[S.id] = S
-		return 1
-
-	else if(href_list["image"])
-		var/img = href_list["image"]
-		if(img)
-			card.setEmotion(img)
-		return 1
+		if("image")
+			var/img = text2num(params["image"])
+			if(img)
+				card.setEmotion(img)
+			return TRUE
 
 /mob/living/silicon/infomorph/examine(mob/user)
-	..(user, infix = ", personal AI")
+	. = ..(user, infix = ", personal AI")
 
-	var/msg = ""
 	switch(src.stat)
 		if(CONSCIOUS)
-			if(!src.client)	msg += "\nIt appears to be in stand-by mode." //afk
-		if(UNCONSCIOUS)		msg += "\n<span class='warning'>It doesn't seem to be responding.</span>"
-		if(DEAD)			msg += "\n<span class='deadsay'>It looks completely unsalvageable.</span>"
-	msg += "\n*---------*"
+			if(!src.client)	. += "It appears to be in stand-by mode." //afk
+		if(UNCONSCIOUS)		. += "<span class='warning'>It doesn't seem to be responding.</span>"
+		if(DEAD)			. += "<span class='deadsay'>It looks completely unsalvageable.</span>"
+	. += "*---------*"
 
-	if(print_flavor_text()) msg += "\n[print_flavor_text()]\n"
+	if(print_flavor_text())
+		. += "[print_flavor_text()]"
 
 	if (pose)
 		if( findtext(pose,".",length(pose)) == 0 && findtext(pose,"!",length(pose)) == 0 && findtext(pose,"?",length(pose)) == 0 )
 			pose = addtext(pose,".") //Makes sure all emotes end with a period.
-		msg += "\nIt is [pose]"
-
-	to_chat(user,msg)
+		. += "It is [pose]"
 
 /mob/living/silicon/infomorph/Life()
 	//We're dead or EMP'd or something.
@@ -600,7 +608,7 @@ var/global/list/default_infomorph_software = list()
 
 	//Only every so often
 	if(air_master.current_cycle%30 == 1)
-		SStranscore.m_backup(mind)
+		SStranscore.m_backup(mind, database_key = db_key)
 
 	if(health <= 0)
 		death(null,"gives one shrill beep before falling lifeless.")

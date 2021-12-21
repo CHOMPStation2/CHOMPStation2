@@ -3,7 +3,7 @@ var/datum/map/using_map = new USING_MAP_DATUM
 var/list/all_maps = list()
 
 /hook/startup/proc/initialise_map_list()
-	for(var/type in typesof(/datum/map) - /datum/map)
+	for(var/type in subtypesof(/datum/map))
 		var/datum/map/M
 		if(type == using_map.type)
 			M = using_map
@@ -22,21 +22,31 @@ var/list/all_maps = list()
 	var/full_name = "Unnamed Map"
 	var/path
 
-	var/list/zlevels = list()
 	var/zlevel_datum_type			// If populated, all subtypes of this type will be instantiated and used to populate the *_levels lists.
-
-	var/list/station_levels = list() // Z-levels the station exists on
-	var/list/admin_levels = list()   // Z-levels for admin functionality (Centcom, shuttle transit, etc)
-	var/list/contact_levels = list() // Z-levels that can be contacted from the station, for eg announcements
-	var/list/player_levels = list()  // Z-levels a character can typically reach
-	var/list/sealed_levels = list()  // Z-levels that don't allow random transit at edge
-	var/list/xenoarch_exempt_levels = list()	//Z-levels exempt from xenoarch finds and digsites spawning.
-	var/list/empty_levels = null     // Empty Z-levels that may be used for various things (currently used by bluespace jump)
-
-	var/list/map_levels              // Z-levels available to various consoles, such as the crew monitor (when that gets coded in). Defaults to station_levels if unset.
 	var/list/base_turf_by_z = list() // Custom base turf by Z-level. Defaults to world.turf for unlisted Z-levels
 
+	// Automatically populated lists made static for faster lookups
+	var/static/list/zlevels = list()
+	var/static/list/station_levels = list() // Z-levels the station exists on
+	var/static/list/admin_levels = list()   // Z-levels for admin functionality (Centcom, shuttle transit, etc)
+	var/static/list/contact_levels = list() // Z-levels that can be contacted from the station, for eg announcements
+	var/static/list/player_levels = list()  // Z-levels a character can typically reach
+	var/static/list/sealed_levels = list()  // Z-levels that don't allow random transit at edge
+	var/static/list/xenoarch_exempt_levels = list()	//Z-levels exempt from xenoarch finds and digsites spawning.
+	var/static/list/persist_levels = list() // Z-levels where SSpersistence should persist between rounds. Defaults to station_levels if unset.
+	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
+	var/static/list/hidden_levels = list() // Z-levels who's contents are hidden, but not forbidden (gateways)
+	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
+	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
+	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
+	// End Static Lists
+
+	// Z-levels available to various consoles, such as the crew monitor. Defaults to station_levels if unset.
+	var/list/map_levels
+
+	// E-mail TLDs to use for NTnet modular computer e-mail addresses
 	var/list/usable_email_tlds = list("freemail.nt")
+
 	//This list contains the z-level numbers which can be accessed via space travel and the percentile chances to get there.
 	var/list/accessible_z_levels = list()
 
@@ -44,7 +54,8 @@ var/list/all_maps = list()
 	var/list/lateload_z_levels = list()
 
 	//Similar to above, but only pick ONE to load, useful for random away missions and whatnot
-	var/list/lateload_single_pick = list()
+	var/list/lateload_gateway = list()
+	var/list/lateload_overmap = list() //VOREStation Add - The same thing as gateway, but not
 
 	var/list/allowed_jobs = list() //Job datums to use.
 	                               //Works a lot better so if we get to a point where three-ish maps are used
@@ -62,26 +73,29 @@ var/list/all_maps = list()
 	var/ai_shell_restricted = FALSE			//VOREStation Addition - are there z-levels restricted?
 	var/ai_shell_allowed_levels = list()	//VOREStation Addition - which z-levels ARE we allowed to visit?
 
-	//VOREStation Addition Start - belter stuff
+	//VOREStation Addition Start
 	var/list/belter_docked_z = list()
 	var/list/belter_transit_z = list()
 	var/list/belter_belt_z = list()
-	//VOREStation Addition End - belter stuff
+	var/list/mining_station_z = list()
+	var/list/mining_outpost_z = list()
+	//VOREStation Addition End
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
 	var/dock_name     = "THE PirateBay"
+	var/dock_type     = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
 	var/boss_name     = "Captain Roger"
 	var/boss_short    = "Cap'"
 	var/company_name  = "BadMan"
 	var/company_short = "BM"
 	var/starsys_name  = "Dull Star"
-	var/shuttle_name  = "NAS |Faraday|" // YW ADDITION: default name included
 
 	var/shuttle_docked_message
 	var/shuttle_leaving_dock
 	var/shuttle_called_message
 	var/shuttle_recall_message
+	var/shuttle_name  = "NAS |Faraday|" // YW EDIT: default name 'NAS |Hawking|'
 	var/emergency_shuttle_docked_message
 	var/emergency_shuttle_leaving_dock
 	var/emergency_shuttle_called_message
@@ -116,7 +130,7 @@ var/list/all_maps = list()
 
 	var/id_hud_icons = 'icons/mob/hud.dmi' // Used by the ID HUD (primarily sechud) overlay.
 
-	// Some maps include areas for that map only and don't exist when not compiled, so Travis needs this to learn of new areas that are specific to a map.
+	// Some maps include areas for that map only and don't exist when not compiled, so CI needs this to learn of new areas that are specific to a map.
 	var/list/unit_test_exempt_areas = list()
 	var/list/unit_test_exempt_from_atmos = list()
 	var/list/unit_test_exempt_from_apc = list()
@@ -129,14 +143,52 @@ var/list/all_maps = list()
 	if(zlevel_datum_type)
 		for(var/type in subtypesof(zlevel_datum_type))
 			new type(src)
-	if(!map_levels)
+	if(!map_levels?.len)
 		map_levels = station_levels.Copy()
+	if(!mappable_levels?.len)
+		mappable_levels = station_levels.Copy()
+	if(!persist_levels?.len)
+		persist_levels = station_levels.Copy()
+	if(!mappable_levels?.len)
+		mappable_levels = station_levels.Copy()
 	if(!allowed_jobs || !allowed_jobs.len)
 		allowed_jobs = subtypesof(/datum/job)
 	if(default_skybox) //Type was specified
 		default_skybox = new default_skybox()
 	else
 		default_skybox = new()
+
+// Gets the current time on a current zlevel, and returns a time datum
+/datum/map/proc/get_zlevel_time(var/z)
+	if(!z)
+		z = 1
+	var/datum/planet/P = z <= SSplanets.z_to_planet.len ? SSplanets.z_to_planet[z] : null
+	// We found a planet tied to that zlevel, give them the time
+	if(P?.current_time)
+		return P.current_time
+
+	// We have to invent a time
+	else
+		var/datum/time/T = new (station_time_in_ds)
+		return T
+
+// Returns a boolean for if it's night or not on a particular zlevel
+/datum/map/proc/get_night(var/z)
+	if(!z)
+		z = 1
+	var/datum/time/now = get_zlevel_time(z)
+	var/percent = now.seconds_stored / now.seconds_in_day //practically all of these are in DS
+
+	// First quarter, last quarter
+	if(percent < 0.25 || percent > 0.75)
+		return TRUE
+	// Second quarter, third quarter
+	else
+		return FALSE
+
+// Boolean for if we should use SSnightshift night hours
+/datum/map/proc/get_nightshift()
+	return get_night(1) //Defaults to z1, customize however you want on your own maps
 
 /datum/map/proc/setup_map()
 	return
@@ -157,25 +209,47 @@ var/list/all_maps = list()
 	return text2num(pickweight(candidates))
 
 /datum/map/proc/get_empty_zlevel()
-	if(empty_levels == null)
+	if(!empty_levels.len)
 		world.increment_max_z()
-		empty_levels = list(world.maxz)
-	return pick(empty_levels)
+		empty_levels += world.maxz
+	return pick_n_take(empty_levels)
 
-// Get the list of zlevels that a computer on srcz can see maps of (for power/crew monitor, cameras, etc)
-// The long_range parameter expands the coverage.  Default is to return map_levels for long range otherwise just srcz.
-// zLevels outside station_levels will return an empty list.
-/datum/map/proc/get_map_levels(var/srcz, var/long_range = TRUE)
-	if (long_range && (srcz in map_levels))
-		return map_levels
-	else if (srcz in station_levels)
-		return list(srcz)
+/datum/map/proc/cache_empty_zlevel(var/z)
+	empty_levels |= z
+
+// Get a list of 'nearby' or 'connected' zlevels.
+// You should at least return a list with the given z if nothing else.
+/datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
+	//Get what sector we're in
+	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
+	if(istype(O))
+		//Just the sector we're in
+		if(om_range == -1)
+			return O.map_z.Copy()
+
+		//Otherwise every sector we're on top of
+		var/list/connections = list()
+		var/turf/T = get_turf(O)
+		var/turfrange = long_range ? max(0, om_range) : om_range
+		for(var/obj/effect/overmap/visitable/V in range(turfrange, T))
+			connections += V.map_z // Adding list to list adds contents
+		return connections
+
+	//Traditional behavior, if not in an overmap sector
 	else
-		return list()
+		//If long range, and they're at least in contact levels, return contact levels.
+		if (long_range && (srcz in contact_levels))
+			return contact_levels.Copy()
+		//If in station levels, return station levels
+		else if (srcz in station_levels)
+			return station_levels.Copy()
+		//Just give them back their zlevel
+		else
+			return list(srcz)
 
 /datum/map/proc/get_zlevel_name(var/index)
 	var/datum/map_z_level/Z = zlevels["[index]"]
-	return Z.name
+	return Z?.name
 
 // Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
 // This list needs to be purged but people insist on adding more cruft to the radio.
@@ -197,10 +271,9 @@ var/list/all_maps = list()
 	)
 
 /datum/map/proc/get_skybox_datum(z)
-	if(map_levels["[z]"])
-		var/datum/map_z_level/picked = map_levels["[z]"]
-		if(picked.custom_skybox)
-			return picked.custom_skybox
+	var/datum/map_z_level/picked = zlevels["[z]"]
+	if(picked?.custom_skybox)
+		return picked.custom_skybox
 
 	return default_skybox
 
@@ -234,6 +307,8 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_PLAYER) map.player_levels += z
 	if(flags & MAP_LEVEL_SEALED) map.sealed_levels += z
 	if(flags & MAP_LEVEL_XENOARCH_EXEMPT) map.xenoarch_exempt_levels += z
+	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z //CHOMPedit: I stg stop forgetting CHOMPedit comments
+	if(flags & MAP_LEVEL_PERSIST) map.persist_levels += z
 	if(flags & MAP_LEVEL_EMPTY)
 		if(!map.empty_levels) map.empty_levels = list()
 		map.empty_levels += z
@@ -244,11 +319,13 @@ var/list/all_maps = list()
 		map.base_turf_by_z["[z]"] = base_turf
 	if(transit_chance)
 		map.accessible_z_levels["[z]"] = transit_chance
+	if(flags & MAP_LEVEL_MAPPABLE)
+		map.mappable_levels |= z
 	// Holomaps
 	// Auto-center the map if needed (Guess based on maxx/maxy)
 	if (holomap_offset_x < 0)
 		holomap_offset_x = ((HOLOMAP_ICON_SIZE - world.maxx) / 2)
-	if (holomap_offset_x < 0)
+	if (holomap_offset_y < 0)
 		holomap_offset_y = ((HOLOMAP_ICON_SIZE - world.maxy) / 2)
 	// Assign them to the map lists
 	LIST_NUMERIC_SET(map.holomap_offset_x, z, holomap_offset_x)
@@ -259,9 +336,12 @@ var/list/all_maps = list()
 		custom_skybox = new custom_skybox()
 
 /datum/map_z_level/Destroy(var/force)
-	crash_with("Attempt to delete a map_z_level instance [log_info_line(src)]")
+	stack_trace("Attempt to delete a map_z_level instance [log_info_line(src)]")
 	if(!force)
 		return QDEL_HINT_LETMELIVE // No.
 	if (using_map.zlevels["[z]"] == src)
 		using_map.zlevels -= "[z]"
 	return ..()
+
+/datum/map/proc/get_map_info()
+	return "No map information available"

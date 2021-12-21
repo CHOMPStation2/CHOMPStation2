@@ -12,17 +12,13 @@
 // Power
 //
 
-// This will have this machine have its area eat this much power next tick, and not afterwards. Do not use for continued power draw.
-/obj/machinery/proc/use_power_oneoff(var/amount, var/chan = -1)
-	return use_power(amount, chan)
-
 // Change one of the power consumption vars
 /obj/machinery/proc/change_power_consumption(new_power_consumption, use_power_mode = USE_POWER_IDLE)
 	switch(use_power_mode)
 		if(USE_POWER_IDLE)
-			idle_power_usage = new_power_consumption
+			update_idle_power_usage(new_power_consumption)
 		if(USE_POWER_ACTIVE)
-			active_power_usage = new_power_consumption
+			update_active_power_usage(new_power_consumption)
 	// No need to do anything else in our power scheme.
 
 // Defining directly here to avoid conflicts with existing set_broken procs in our codebase that behave differently.
@@ -58,22 +54,8 @@
 //
 // Topic
 //
-
-/obj/machinery/computer/ship/proc/DefaultTopicState()
-	return global.default_state
-
-/obj/machinery/computer/ship/Topic(var/href, var/href_list = list(), var/datum/topic_state/state)
-	if((. = ..()))
-		return
-	state = state || DefaultTopicState() || global.default_state
-	if(CanUseTopic(usr, state, href_list) == STATUS_INTERACTIVE)
-		CouldUseTopic(usr)
-		return OnTopic(usr, href_list, state)
-	CouldNotUseTopic(usr)
-	return TRUE
-
-/obj/machinery/computer/ship/proc/OnTopic(var/mob/user, var/href_list, var/datum/topic_state/state)
-	return TOPIC_NOACTION
+/obj/machinery/computer/ship/tgui_state()
+	return GLOB.tgui_default_state
 
 //
 // Interaction
@@ -84,21 +66,24 @@
 // If you perform direct interactions in here, you are responsible for ensuring that full interactivity checks have been made (i.e CanInteract).
 // The checks leading in to here only guarantee that the user should be able to view a UI.
 /obj/machinery/computer/ship/proc/interface_interact(var/mob/user)
-	ui_interact(user)
+	tgui_interact(user)
 	return TRUE
 
 /obj/machinery/computer/ship/attack_ai(mob/user)
-	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+	if(tgui_status(user, tgui_state()) > STATUS_CLOSE)
 		return interface_interact(user)
 
 // After a recent rework this should mostly be safe.
 /obj/machinery/computer/ship/attack_ghost(mob/user)
 	interface_interact(user)
 
-// If you don't call parent in this proc, you must make all appropriate checks yourself. 
+// If you don't call parent in this proc, you must make all appropriate checks yourself.
 // If you do, you must respect the return value.
 /obj/machinery/computer/ship/attack_hand(mob/user)
 	if((. = ..()))
 		return
-	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+	if(!allowed(user))
+		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		return TRUE
+	if(tgui_status(user, tgui_state()) > STATUS_CLOSE)
 		return interface_interact(user)

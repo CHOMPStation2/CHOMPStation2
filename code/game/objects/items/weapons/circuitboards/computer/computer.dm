@@ -21,8 +21,8 @@
 	name = T_BOARD("medical records console")
 	build_path = /obj/machinery/computer/med_data
 
-/obj/item/weapon/circuitboard/med_data/laptop
-	name = T_BOARD("medical records laptop")
+/obj/item/weapon/circuitboard/med_data/pcu
+	name = T_BOARD("medical records PCU")
 	build_path = /obj/machinery/computer/med_data/laptop
 
 /obj/item/weapon/circuitboard/scan_consolenew
@@ -52,8 +52,8 @@
 	name = T_BOARD("security records console")
 	build_path = /obj/machinery/computer/secure_data
 
-/obj/item/weapon/circuitboard/skills
-	name = T_BOARD("employment records console")
+/obj/item/weapon/circuitboard/skills/pcu
+	name = T_BOARD("employment records PCU")
 	build_path = /obj/machinery/computer/skills
 
 /obj/item/weapon/circuitboard/stationalert_engineering
@@ -99,6 +99,11 @@
 /obj/item/weapon/circuitboard/arcade/orion_trail
 	name = T_BOARD("orion trail arcade machine")
 	build_path = /obj/machinery/computer/arcade/orion_trail
+	origin_tech = list(TECH_DATA = 1)
+
+/obj/item/weapon/circuitboard/arcade/clawmachine
+	name = T_BOARD("grab-a-gift arcade machine")
+	build_path = /obj/machinery/computer/arcade/clawmachine
 	origin_tech = list(TECH_DATA = 1)
 
 /obj/item/weapon/circuitboard/turbine_control
@@ -176,6 +181,30 @@
 	name = T_BOARD("AI integrity restorer")
 	build_path = /obj/machinery/computer/aifixer
 	origin_tech = list(TECH_DATA = 3, TECH_BIO = 2)
+
+
+/obj/item/weapon/circuitboard/helm
+	name = T_BOARD("helm control console")
+	build_path = /obj/machinery/computer/ship/helm
+
+/obj/item/weapon/circuitboard/engine
+	name = T_BOARD("engine control console")
+	build_path = /obj/machinery/computer/ship/engines
+
+/obj/item/weapon/circuitboard/nav
+	name = T_BOARD("navigation console")
+	build_path = /obj/machinery/computer/ship/navigation
+
+/obj/item/weapon/circuitboard/nav/tele
+	name = T_BOARD("navigation telescreen")
+	build_path = /obj/machinery/computer/ship/navigation/telescreen
+
+/obj/item/weapon/circuitboard/sensors
+	name = T_BOARD("sensors console")
+	build_path = /obj/machinery/computer/ship/sensors
+
+
+
 
 /obj/item/weapon/circuitboard/area_atmos
 	name = T_BOARD("area air control console")

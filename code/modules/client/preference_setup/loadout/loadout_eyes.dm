@@ -5,6 +5,36 @@
 	slot = slot_glasses
 	sort_category = "Glasses and Eyewear"
 
+/datum/gear/eyes/eyepatchwhite
+	display_name = "eyepatch (recolorable)"
+	path = /obj/item/clothing/glasses/eyepatchwhite
+	slot = slot_glasses
+	sort_category = "Glasses and Eyewear"
+
+/datum/gear/eyes/eyepatchwhite/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/eyes/blindfold
+	display_name = "blindfold"
+	path = /obj/item/clothing/glasses/sunglasses/blindfold
+
+/datum/gear/eyes/whiteblindfold //I may have lost my sight, but at least these folks can see my RAINBOW BLINDFOLD
+	display_name = "blindfold, white (recolorable)"
+	path = /obj/item/clothing/glasses/sunglasses/blindfold/whiteblindfold
+
+/datum/gear/eyes/whiteblindfold/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/eyes/thinblindfold
+	display_name = "blindfold, thin white (recolorable)"
+	path = /obj/item/clothing/glasses/sunglasses/thinblindfold
+
+/datum/gear/eyes/thinblindfold/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
 /datum/gear/eyes/glasses
 	display_name = "Glasses, prescription"
 	path = /obj/item/clothing/glasses/regular
@@ -36,7 +66,7 @@
 /datum/gear/eyes/security
 	display_name = "Security HUD (Security)"
 	path = /obj/item/clothing/glasses/hud/security
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/eyes/security/prescriptionsec
 	display_name = "Security HUD, prescription (Security)"
@@ -74,7 +104,7 @@
 /datum/gear/eyes/meson
 	display_name = "Optical Meson Scanners (Engineering, Science, Mining)"
 	path = /obj/item/clothing/glasses/meson
-	allowed_roles = list("Station Engineer","Chief Engineer","Atmospheric Technician", "Scientist", "Research Director", "Shaft Miner")
+	allowed_roles = list("Engineer","Chief Engineer","Atmospheric Technician", "Scientist", "Research Director", "Shaft Miner")
 
 /datum/gear/eyes/meson/prescription
 	display_name = "Optical Meson Scanners, prescription (Engineering, Science, Mining)"
@@ -108,7 +138,7 @@
 /datum/gear/eyes/sun
 	display_name = "Sunglasses (Security/Command)"
 	path = /obj/item/clothing/glasses/sunglasses
-	allowed_roles = list("Security Officer","Head of Security","Warden","Colony Director","Head of Personnel","Quartermaster","Internal Affairs Agent","Detective","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Site Manager","Head of Personnel","Quartermaster","Internal Affairs Agent","Detective", "Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/eyes/sun/shades
 	display_name = "Sunglasses, fat (Security/Command)"

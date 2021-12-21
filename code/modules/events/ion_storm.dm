@@ -2,6 +2,7 @@
 
 /datum/event/ionstorm
 	has_skybox_image = TRUE
+	announceWhen = -1 // Never (setup may override)
 	var/botEmagChance = 0 //VOREStation Edit
 	var/cloud_hueshift
 	var/list/players = list()
@@ -17,10 +18,13 @@
 
 /datum/event/ionstorm/setup()
 	endWhen = rand(500, 1500)
+	if(prob(50))
+		announceWhen = endWhen + rand(250, 400)
 
-// Interestingly enough, announce() actually *DOES* this event for some reason.
 /datum/event/ionstorm/announce()
-//		command_alert("The station has entered an ion storm.  Monitor all electronic equipment for malfunctions", "Anomaly Alert")
+	command_announcement.Announce("It has come to our attention that \the [location_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
+
+/datum/event/ionstorm/start()
 	for (var/mob/living/carbon/human/player in player_list)
 		if(	!player.mind || player_is_antag(player.mind, only_offstation_roles = 1) || player.client.inactivity > MinutesToTicks(10))
 			continue
@@ -67,11 +71,6 @@
 			if(prob(botEmagChance))
 				bot.emag_act(1)
 
-/datum/event/ionstorm/end()
-	..()
-	if(prob(50))
-		spawn(rand(5000,8000))
-			command_announcement.Announce("It has come to our attention that \the [location_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
 
 // Overmap version
 /datum/event/ionstorm/overmap/announce()
@@ -99,7 +98,7 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 			//var/dowhat = pick("STOP THIS", "SUPPORT THIS", "CONSTANTLY INFORM THE CREW OF THIS", "IGNORE THIS", "FEAR THIS")
 			var/aimust = pick("LIE", "RHYME", "RESPOND TO EVERY QUESTION WITH A QUESTION", "BE POLITE", "CLOWN", "BE HAPPY", "SPEAK IN SEXUAL INNUENDOS", "TALK LIKE A PIRATE", "QUESTION AUTHORITY", "SHOUT", "BE DISTRACTED", "HEY LISTEN", "MUMBLE", "SPEAK IN HAIKU")
 			var/define = pick("ABSENCE OF CYBORG HUGS", "LACK OF BEATINGS", "UNBOLTED AIRLOCKS", "BOLTED AIRLOCKS", "IMPROPERLY WORDED SENTENCES", "POOR SENTENCE STRUCTURE", "BRIG TIME", "NOT REPLACING EVERY SECOND WORD WITH HONK", "HONKING", "PRESENCE OF LIGHTS", "LACK OF BEER", "WEARING CLOTHING", "NOT SAYING HELLO WHEN YOU SPEAK", "ANSWERING REQUESTS NOT EXPRESSED IN IAMBIC PENTAMETER", "A SMALL ISLAND OFF THE COAST OF PORTUGAL", "ANSWERING REQUESTS THAT WERE MADE WHILE CLOTHED")
-			var/target = pick("a traitor", "a mercenary", "a changeling", "a wizard", "the head of a revolution", "Soviet spy", "a good person", "a dwarf", "an elf", "a fairy princess", "the colony director", "Beepsky", "God", "a pirate", "a gryphon", "a chryssalid")
+			var/target = pick("a traitor", "a mercenary", "a changeling", "a wizard", "the head of a revolution", "Soviet spy", "a good person", "a dwarf", "an elf", "a fairy princess", "the site manager", "Beepsky", "God", "a pirate", "a gryphon", "a chryssalid")
 			var/require = pick("ADDITIONAL PYLONS", "MORE VESPENE GAS", "MORE MINERALS", "THE ULTIMATE CUP OF COFFEE", "HIGH YIELD EXPLOSIVES", "THE CLOWN", "THE VACUUM OF SPACE", "IMMORTALITY", "SAINTHOOD", "ART", "VEGETABLES", "FAT PEOPLE", "MORE LAWS", "MORE DAKKA", "HERESY", "CORPSES", "TRAITORS", "MONKEYS", "AN ARCADE", "PLENTY OF GOLD", "FIVE TEENAGERS WITH ATTITUDE")
 			var/allergy = pick("cotton", "uniforms", "acid", "oxygen", "human contact", "cyborg contact", "medicine", "floors")
 			var/allergysev = pick("deathly", "mildly", "severely", "contagiously")
@@ -134,9 +133,9 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 					M.add_ion_law("HUMANS NEED TO EAT [what2pref] [what2] TO SURVIVE")
 				if(5)
 					to_chat(M, "<br>")
-					to_chat(M, "<font color='red'>THE COLONY DIRECTOR, HOP AND HOS ARE [who2]...LAWS UPDATED</font>")
+					to_chat(M, "<font color='red'>THE SITE MANAGER, HOP AND HOS ARE [who2]...LAWS UPDATED</font>")
 					to_chat(M, "<br>")
-					M.add_ion_law("THE COLONY DIRECTOR, HOP AND HOS ARE [who2]")
+					M.add_ion_law("THE SITE MANAGER, HOP AND HOS ARE [who2]")
 				if(6)
 					to_chat(M, "<br>")
 					to_chat(M, "<font color='red'>THE STATION IS BUILT FOR [who2]...LAWS UPDATED</font>")
@@ -200,14 +199,14 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 
 	spawn(0)
 		to_world("Started processing APCs")
-		for (var/obj/machinery/power/apc/APC in machines)
+		for (var/obj/machinery/power/apc/APC in GLOB.apcs)
 			if(APC.z in station_levels)
 				APC.ion_act()
 				apcnum++
 		to_world("Finished processing APCs. Processed: [apcnum]")
 	spawn(0)
 		to_world("Started processing SMES")
-		for (var/obj/machinery/power/smes/SMES in machines)
+		for (var/obj/machinery/power/smes/SMES in GLOB.smeses)
 			if(SMES.z in station_levels)
 				SMES.ion_act()
 				smesnum++

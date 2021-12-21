@@ -13,9 +13,15 @@
 
 #define isitem(D)		istype(D, /obj/item)
 
+#define isradio(A) istype(A, /obj/item/device/radio)
+
 #define isairlock(A)	istype(A, /obj/machinery/door/airlock)
 
 #define isorgan(A)		istype(A, /obj/item/organ/external)
+
+#define isstorage(A)	istype(A, /obj/item/weapon/storage)
+
+#define ismecha(A)      istype(A, /obj/mecha)
 
 //---------------
 //#define isarea(D)		istype(D, /area)	//Built in
@@ -34,6 +40,7 @@
 #define iscorgi(A)		istype(A, /mob/living/simple_mob/animal/passive/dog/corgi)
 #define isslime(A)		istype(A, /mob/living/simple_mob/slime)
 #define isxeno(A)		istype(A, /mob/living/simple_mob/animal/space/alien)
+#define ismetroid(A)	istype(A, /mob/living/simple_mob/metroid) //CHOMP Addition
 
 #define iscarbon(A)		istype(A, /mob/living/carbon)
 #define isalien(A)		istype(A, /mob/living/carbon/alien)
@@ -52,3 +59,8 @@
 //---------------
 //#define isturf(D)		istype(D, /turf)	//Built in
 #define isopenspace(A)	istype(A, /turf/simulated/open)
+#define isspace(A)		istype(A, /turf/space)
+#define ismineralturf(A) istype(A, /turf/simulated/mineral)
+
+#define istaurtail(A)	istype(A, /datum/sprite_accessory/tail/taur)
+#define islongtail(A)	istype(A, /datum/sprite_accessory/tail/longtail)

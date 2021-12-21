@@ -58,7 +58,7 @@
 	icon = 'icons/turf/shuttle_parts.dmi'
 	icon_state = "nozzle"
 	opacity = 1
-	density = 1
+	density = TRUE
 	can_atmos_pass = ATMOS_PASS_NO
 	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_FUEL
 
@@ -86,8 +86,7 @@
 	controller = new(src)
 	update_nearby_tiles(need_rebuild=1)
 
-	for(var/ship in SSshuttles.ships)
-		var/obj/effect/overmap/visitable/ship/S = ship
+	for(var/obj/effect/overmap/visitable/ship/S as anything in SSshuttles.ships)
 		if(S.check_ownership(src))
 			S.engines |= controller
 			if(dir != S.fore_dir)
@@ -103,18 +102,17 @@
 	. = list()
 	.+= "Location: [get_area(src)]."
 	if(stat & NOPOWER)
-		.+= "<span class='average'>Insufficient power to operate.</span>"
+		.+= list(list("Insufficient power to operate.", "bad"))
 	if(!check_fuel())
-		.+= "<span class='average'>Insufficient fuel for a burn.</span>"
+		.+= list(list("Insufficient fuel for a burn.", "bad"))
 	if(stat & BROKEN)
-		.+= "<span class='average'>Inoperable engine configuration.</span>"
+		.+= list(list("Inoperable engine configuration.", "bad"))
 	if(blockage)
-		.+= "<span class='average'>Obstruction of airflow detected.</span>"
+		.+= list(list("Obstruction of airflow detected.", "bad"))
 
 	.+= "Propellant total mass: [round(air_contents.get_mass(),0.01)] kg."
 	.+= "Propellant used per burn: [round(air_contents.get_mass() * volume_per_burn * thrust_limit / air_contents.volume,0.01)] kg."
 	.+= "Propellant pressure: [round(air_contents.return_pressure()/1000,0.1)] MPa."
-	. = jointext(.,"<br>")
 
 /obj/machinery/atmospherics/unary/engine/power_change()
 	. = ..()
@@ -150,8 +148,8 @@
 /obj/machinery/atmospherics/unary/engine/proc/burn()
 	if(!is_on())
 		return 0
-	if(!check_fuel() || (0 < use_power_oneoff(charge_per_burn)) || check_blockage())
-		audible_message(src,"<span class='warning'>[src] coughs once and goes silent!</span>")
+	if(!check_fuel() || (use_power_oneoff(charge_per_burn) < charge_per_burn) || check_blockage())
+		audible_message(src,"<span class='warning'>[src] coughs once and goes silent!</span>", runemessage = "sputtercough")
 		update_use_power(USE_POWER_OFF)
 		return 0
 
@@ -159,7 +157,7 @@
 	if(!removed)
 		return 0
 	. = calculate_thrust(removed)
-	playsound(loc, 'sound/machines/thruster.ogg', 100 * thrust_limit, 0, world.view * 4, 0.1)
+	playsound(src, 'sound/machines/thruster.ogg', 100 * thrust_limit, 0, world.view * 4, 0.1)
 	if(network)
 		network.update = 1
 
@@ -189,7 +187,7 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke"
 	light_color = "#ed9200"
-	anchored = 1
+	anchored = TRUE
 
 /obj/effect/engine_exhaust/New(var/turf/nloc, var/ndir, var/flame)
 	..(nloc)

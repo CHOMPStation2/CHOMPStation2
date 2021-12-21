@@ -1,9 +1,11 @@
+#define FUSION_ROD_SHEET_AMT 15
 /obj/machinery/fusion_fuel_compressor
+	var/blitzprogress = 0	//CHOMPEdit
 	name = "fuel compressor"
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "fuel_compressor1"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 
 	circuit = /obj/item/weapon/circuitboard/fusion_fuel_compressor
 
@@ -21,18 +23,18 @@
 		if(thing.reagents.reagent_list.len > 1)
 			to_chat(user, "<span class='warning'>The contents of \the [thing] are impure and cannot be used as fuel.</span>")
 			return 1
-		if(thing.reagents.total_volume < 50)
-			to_chat(user, "<span class='warning'>You need at least fifty units of material to form a fuel rod.</span>")
+		if(thing.reagents.total_volume < 300)
+			to_chat(user, "<span class='warning'>You need at least three hundred units of material to form a fuel rod.</span>")
 			return 1
 		var/datum/reagent/R = thing.reagents.reagent_list[1]
-		visible_message("<span class='notice'>\The [src] compresses the contents of \the [thing] into a new fuel assembly.</span>")
+		visible_message("<b>\The [src]</b> compresses the contents of \the [thing] into a new fuel assembly.")
 		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), R.id, R.color)
 		thing.reagents.remove_reagent(R.id, R.volume)
 		user.put_in_hands(F)
 
 	else if(istype(thing, /obj/machinery/power/supermatter))
 		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), "supermatter")
-		visible_message("<span class='notice'>\The [src] compresses \the [thing] into a new fuel assembly.</span>")
+		visible_message("<b>\The [src]</b> compresses \the [thing] into a new fuel assembly.")
 		qdel(thing)
 		user.put_in_hands(F)
 		return 1
@@ -46,22 +48,56 @@
 		return
 	if(default_part_replacement(user, thing))
 		return
-
+//CHOMPEdit Begin
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
-		var/material/mat = M.get_material()
-		if(!mat.is_fusion_fuel)
-			to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
-			return
-		if(M.get_amount() < 25)
-			to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
-			return
-		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
-		visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
-		M.use(25)
-		user.put_in_hands(F)
+		var/datum/material/mat = M.get_material()
+		if(!blitzprogress)
+			if(!mat.is_fusion_fuel)
+				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
+				return
+			if(M.get_amount() < FUSION_ROD_SHEET_AMT)
+				if(mat.name=="supermatter")
+					visible_message("<span class='notice'>\The [user] places the [mat.use_name] into the compressor.</span>")
+					M.use(1)
+					blitzprogress = 1
+					verbs |= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+					return
+				to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
+				return
+			var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
+			visible_message("<b>\The [src]</b> compresses \the [thing] into a new fuel assembly.")
+			M.use(FUSION_ROD_SHEET_AMT)
+			user.put_in_hands(F)
+		else
+			if(mat.name=="phoron")
+				if(M.get_amount() < 25)
+					to_chat(user, "<span class='warning'>You need at least 25 phoron sheets to make a blitz rod!</span>")
+					return
+				var/obj/item/weapon/fuel_assembly/blitz/unshielded/F = new(get_turf(src))
+				visible_message("<span class='notice'>\The [src] compresses the supermatter and phoron into a new blitz rod! It looks unstable, maybe you should be careful with it.</span>")
+				M.use(25)
+				user.put_in_hands(F)
+				blitzprogress = 0
+				verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+			else
+				to_chat(user, "<span class='warning'>A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!</span>")
+				return
 
 	else if(do_special_fuel_compression(thing, user))
 		return
 
 	return ..()
+
+/obj/machinery/fusion_fuel_compressor/verb/eject_sheet()
+	set name = "Eject Supermatter Sheet"
+	set category = "Object"
+	set src in view(1)
+
+	var/obj/item/stack/material/supermatter/S = new (get_turf(src))
+	usr.put_in_hands(S)
+	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+	blitzprogress = 0
+//CHOMPEdit End
+
+#undef FUSION_ROD_SHEET_AMT

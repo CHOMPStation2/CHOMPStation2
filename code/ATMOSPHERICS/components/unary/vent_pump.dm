@@ -19,6 +19,7 @@
 	power_rating = 30000			//7500 W ~ 10 HP //VOREStation Edit - 30000 W
 
 	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY //connects to regular and supply pipes
+	blocks_emissive = FALSE
 
 	var/area/initial_loc
 	level = 1
@@ -47,11 +48,16 @@
 	var/radio_filter_out
 	var/radio_filter_in
 
-	var/datum/looping_sound/air_pump/soundloop //Yawn Edit
+	var/datum/looping_sound/air_pump/soundloop
 
 /obj/machinery/atmospherics/unary/vent_pump/on
 	use_power = USE_POWER_IDLE
 	icon_state = "map_vent_out"
+
+/obj/machinery/atmospherics/unary/vent_pump/aux
+	icon_state = "map_vent_aux"
+	icon_connect_type = "-aux"
+	connect_types = CONNECT_TYPE_AUX //connects to aux pipes
 
 /obj/machinery/atmospherics/unary/vent_pump/siphon
 	pump_direction = 0
@@ -72,7 +78,7 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/Initialize()
 	. = ..()
-	soundloop = new(list(src), FALSE) //Yawn Edit
+	soundloop = new(list(src), FALSE)
 
 /obj/machinery/atmospherics/unary/vent_pump/New()
 	..()
@@ -80,7 +86,7 @@
 
 	icon = null
 	initial_loc = get_area(loc)
-	area_uid = initial_loc.uid
+	area_uid = "\ref[initial_loc]"
 	if (!id_tag)
 		assign_uid()
 		id_tag = num2text(uid)
@@ -90,13 +96,18 @@
 	if(initial_loc)
 		initial_loc.air_vent_info -= id_tag
 		initial_loc.air_vent_names -= id_tag
-	QDEL_NULL(soundloop) //Yawn Edit
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/atmospherics/unary/vent_pump/high_volume
 	name = "Large Air Vent"
 	power_channel = EQUIP
 	power_rating = 45000	//15 kW ~ 20 HP //VOREStation Edit - 45000
+
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux
+	icon_state = "map_vent_aux"
+	icon_connect_type = "-aux"
+	connect_types = CONNECT_TYPE_AUX //connects to aux pipes
 
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/New()
 	..()
@@ -131,7 +142,7 @@
 	if(!check_icon_cache())
 		return
 
-	overlays.Cut()
+	cut_overlays()
 
 	var/vent_icon = "vent"
 
@@ -149,7 +160,7 @@
 	else
 		vent_icon += "[pump_direction ? "out" : "in"]"
 
-	overlays += icon_manager.get_atmos_icon("device", , , vent_icon)
+	add_overlay(icon_manager.get_atmos_icon("device", , , vent_icon))
 
 /obj/machinery/atmospherics/unary/vent_pump/update_underlays()
 	if(..())
@@ -171,15 +182,15 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/proc/can_pump()
 	if(stat & (NOPOWER|BROKEN))
-		soundloop.stop() //Yawn Edit
+		soundloop.stop()
 		return 0
 	if(!use_power)
-		soundloop.stop() //Yawn Edit
+		soundloop.stop() 
 		return 0
 	if(welded)
-		soundloop.stop() //Yawn Edit
+		soundloop.stop()
 		return 0
-	soundloop.start() //Yawn Edit
+	soundloop.start()
 	return 1
 
 /obj/machinery/atmospherics/unary/vent_pump/process()
@@ -253,7 +264,7 @@
 		return 0
 
 	var/datum/signal/signal = new
-	signal.transmission_method = 1 //radio signal
+	signal.transmission_method = TRANSMISSION_RADIO //radio signal
 	signal.source = src
 
 	signal.data = list(
@@ -332,37 +343,25 @@
 		if (signal.data["set_internal_pressure"] == "default")
 			internal_pressure_bound = internal_pressure_bound_default
 		else
-			internal_pressure_bound = between(
-				0,
-				text2num(signal.data["set_internal_pressure"]),
-				ONE_ATMOSPHERE*50
-			)
+			internal_pressure_bound = between(0,text2num(signal.data["set_internal_pressure"]),ONE_ATMOSPHERE*50)
 
 	if(signal.data["set_external_pressure"] != null)
 		if (signal.data["set_external_pressure"] == "default")
 			external_pressure_bound = external_pressure_bound_default
 		else
-			external_pressure_bound = between(
-				0,
-				text2num(signal.data["set_external_pressure"]),
-				ONE_ATMOSPHERE*50
-			)
+			external_pressure_bound = between(0,text2num(signal.data["set_external_pressure"]),ONE_ATMOSPHERE*50)
 
 	if(signal.data["adjust_internal_pressure"] != null)
-		internal_pressure_bound = between(
-			0,
-			internal_pressure_bound + text2num(signal.data["adjust_internal_pressure"]),
-			ONE_ATMOSPHERE*50
-		)
+		internal_pressure_bound = between(0,internal_pressure_bound + text2num(signal.data["adjust_internal_pressure"]),ONE_ATMOSPHERE*50)
 
 	if(signal.data["adjust_external_pressure"] != null)
+		external_pressure_bound = between(0,external_pressure_bound + text2num(signal.data["adjust_external_pressure"]),ONE_ATMOSPHERE*50)
 
+	if("reset_external_pressure" in signal.data)
+		external_pressure_bound = ONE_ATMOSPHERE
 
-		external_pressure_bound = between(
-			0,
-			external_pressure_bound + text2num(signal.data["adjust_external_pressure"]),
-			ONE_ATMOSPHERE*50
-		)
+	if("reset_internal_pressure" in signal.data)
+		internal_pressure_bound = 0
 
 	if(signal.data["init"] != null)
 		name = signal.data["init"]
@@ -386,9 +385,9 @@
 			to_chat(user, "<span class='notice'>Now welding the vent.</span>")
 			if(do_after(user, 20 * WT.toolspeed))
 				if(!src || !WT.isOn()) return
-				playsound(src.loc, WT.usesound, 50, 1)
+				playsound(src, WT.usesound, 50, 1)
 				if(!welded)
-					user.visible_message("<span class='notice'>\The [user] welds the vent shut.</span>", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
+					user.visible_message("<b>\The [user]</b> welds the vent shut.", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
 					welded = 1
 					update_icon()
 				else
@@ -404,12 +403,13 @@
 		..()
 
 /obj/machinery/atmospherics/unary/vent_pump/examine(mob/user)
-	if(..(user, 1))
-		to_chat(user, "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W")
+	. = ..()
+	if(Adjacent(user))
+		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
-		to_chat(user, "You are too far away to read the gauge.")
+		. += "You are too far away to read the gauge."
 	if(welded)
-		to_chat(user, "It seems welded shut.")
+		. += "It seems welded shut."
 
 /obj/machinery/atmospherics/unary/vent_pump/power_change()
 	var/old_stat = stat
@@ -435,7 +435,7 @@
 	to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<span class='notice'>\The [user] unfastens \the [src].</span>", \
+			"<b>\The [user]</b> unfastens \the [src].", \
 			"<span class='notice'>You have unfastened \the [src].</span>", \
 			"You hear a ratchet.")
 		deconstruct()

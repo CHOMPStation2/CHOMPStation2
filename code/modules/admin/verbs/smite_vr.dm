@@ -8,9 +8,9 @@
 	if(!istype(target))
 		return
 
-	var/list/smite_types = list(SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_REDSPACE_ABDUCT)
+	var/list/smite_types = list(SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE)
 
-	var/smite_choice = input("Select the type of SMITE for [target]","SMITE Type Choice") as null|anything in smite_types
+	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)
 		return
 
@@ -34,7 +34,7 @@
 			if(!Ts)
 				return //Didn't find shadekin spawn turf
 
-			var/mob/living/simple_mob/shadekin/red/ai/shadekin = new(Ts)
+			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
 			shadekin.init_vore()
@@ -50,7 +50,7 @@
 					shadekin.death()
 
 		if(SMITE_SHADEKIN_NOMF)
-			var/list/kin_types = list(
+			var/static/list/kin_types = list(
 				"Red Eyes (Dark)" =	/mob/living/simple_mob/shadekin/red/dark,
 				"Red Eyes (Light)" = /mob/living/simple_mob/shadekin/red/white,
 				"Red Eyes (Brown)" = /mob/living/simple_mob/shadekin/red/brown,
@@ -70,14 +70,14 @@
 				"Orange Eyes (Light)" = /mob/living/simple_mob/shadekin/orange/white,
 				"Orange Eyes (Brown)" = /mob/living/simple_mob/shadekin/orange/brown,
 				"Rivyr (Unique)" = /mob/living/simple_mob/shadekin/blue/rivyr)
-			var/kin_type = input("Select the type of shadekin for [target] nomf","Shadekin Type Choice") as null|anything in kin_types
+			var/kin_type = tgui_input_list(usr, "Select the type of shadekin for [target] nomf","Shadekin Type Choice", kin_types)
 			if(!kin_type || !target)
 				return
 
 
 			kin_type = kin_types[kin_type]
 
-			var/myself = alert("Control the shadekin yourself or delete pred and prey after?","Control Shadekin?","Control","Cancel","Delete")
+			var/myself = tgui_alert(usr, "Control the shadekin yourself or delete pred and prey after?","Control Shadekin?",list("Control","Cancel","Delete"))
 			if(myself == "Cancel" || !target)
 				return
 
@@ -104,7 +104,7 @@
 			sleep(1 SECOND)
 			shadekin.dir = SOUTH
 			sleep(1 SECOND)
-			shadekin.audible_message("<b>[shadekin]</b> belches loudly!")
+			shadekin.audible_message("<b>[shadekin]</b> belches loudly!", runemessage = "URRRRRP")
 			sleep(2 SECONDS)
 			shadekin.phase_shift()
 			target.transforming = FALSE //Undo cheap hack
@@ -121,6 +121,12 @@
 
 		if(SMITE_REDSPACE_ABDUCT)
 			redspace_abduction(target, src)
+
+		if(SMITE_AUTOSAVE)
+			fake_autosave(target, src)
+
+		if(SMITE_AUTOSAVE_WIDE)
+			fake_autosave(target, src, TRUE)
 
 		else
 			return //Injection? Don't print any messages.
@@ -211,3 +217,46 @@ var/redspace_abduction_z
 	to_chat(user,"<span class='notice'>The mob has been moved. ([admin_jump_link(target,usr.client.holder)])</span>")
 
 	target.transforming = FALSE
+
+/proc/fake_autosave(var/mob/living/target, var/client/user, var/wide)
+	if(!istype(target) || !target.client)
+		to_chat(user, "<span class='warning'>Skipping [target] because they are not a /mob/living or have no client.</span>")
+		return
+
+	if(wide)
+		for(var/mob/living/L in orange(user.view, user.mob))
+			fake_autosave(L, user)
+		return
+
+	target.setMoveCooldown(10 SECONDS)
+
+	to_chat(target, "<span class='notice' style='font: small-caps bold large monospace!important'>Autosaving your progress, please wait...</span>")
+	target << 'sound/effects/ding.ogg'
+	
+	var/static/list/bad_tips = list(
+		"Did you know that black shoes protect you from electrocution while hacking?",
+		"Did you know that airlocks always have a wire that disables ID checks?",
+		"You can always find at least 3 pairs of glowing purple gloves in maint!",
+		"Phoron is not toxic if you've had a soda within 30 seconds of exposure!",
+		"Space Mountain Wind makes you immune to damage from space for 30 seconds!",
+		"A mask and air tank are all you need to be safe in space!",
+		"When exploring maintenance, wearing no shoes makes you move faster!",
+		"Did you know that the bartender's shotgun is loaded with harmless ammo?",
+		"Did you know that the tesla and singulo only need containment for 5 minutes?")
+
+	var/tip = pick(bad_tips)
+	to_chat(target, "<span class='notice' style='font: small-caps bold large monospace!important'>Tip of the day:</span><br><span class='notice'>[tip]</span>")
+
+	var/obj/screen/loader = new(target)
+	loader.name = "Autosaving..."
+	loader.desc = "A disc icon that represents your game autosaving. Please wait."
+	loader.icon = 'icons/obj/discs_vr.dmi'
+	loader.icon_state = "quicksave"
+	loader.screen_loc = "NORTH-1, EAST-1"
+	target.client.screen += loader
+
+	spawn(10 SECONDS)
+		if(target)
+			to_chat(target, "<span class='notice' style='font: small-caps bold large monospace!important'>Autosave complete!</span>")
+			if(target.client)
+				target.client.screen -= loader

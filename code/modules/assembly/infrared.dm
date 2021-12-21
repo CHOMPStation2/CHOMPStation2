@@ -5,7 +5,7 @@
 	desc = "Emits a visible or invisible beam and is triggered when the beam is interrupted."
 	icon_state = "infrared"
 	origin_tech = list(TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 1000, "glass" = 500, "waste" = 100)
+	matter = list(MAT_STEEL = 1000, MAT_GLASS = 500)
 
 	wires = WIRE_PULSE
 
@@ -65,11 +65,11 @@
 	for(var/i = 1 to limit)
 		var/obj/effect/beam/i_beam/I = new /obj/effect/beam/i_beam(current_spot)
 		I.master = src
-		I.density = 1
+		I.density = TRUE
 		I.set_dir(dir)
 		if(!step(I, I.dir)) //Try to take a step in that direction
 			return //Couldn't, oh well, we hit a wall or something. Beam should qdel itself in it's Bump().
-		I.density = 0
+		I.density = FALSE
 		i_beams |= I
 		I.visible = visible
 
@@ -79,8 +79,11 @@
 
 /obj/item/device/assembly/infra/Move()
 	var/t = dir
-	..()
+	. = ..()
 	set_dir(t)
+
+/obj/item/device/assembly/infra/Moved(atom/old_loc, direction, forced = FALSE)
+	. = ..()
 	QDEL_LIST_NULL(i_beams)
 
 /obj/item/device/assembly/infra/holder_movement()
@@ -97,41 +100,37 @@
 	if(!holder)
 		visible_message("[bicon(src)] *beep* *beep*")
 
-/obj/item/device/assembly/infra/interact(mob/user as mob)//TODO: change this this to the wire control panel
+/obj/item/device/assembly/infra/tgui_interact(mob/user, datum/tgui/ui)
 	if(!secured)
-		return
-	user.set_machine(src)
-	var/dat = text("<TT><B>Infrared Laser</B>\n<B>Status</B>: []<BR>\n<B>Visibility</B>: []<BR>\n</TT>", (on ? text("<A href='?src=\ref[];state=0'>On</A>", src) : text("<A href='?src=\ref[];state=1'>Off</A>", src)), (src.visible ? text("<A href='?src=\ref[];visible=0'>Visible</A>", src) : text("<A href='?src=\ref[];visible=1'>Invisible</A>", src)))
-	dat += "<BR><BR><A href='?src=\ref[src];refresh=1'>Refresh</A>"
-	dat += "<BR><BR><A href='?src=\ref[src];close=1'>Close</A>"
-	user << browse(dat, "window=infra")
-	onclose(user, "infra")
+		to_chat(user, "<span class='warning'>[src] is unsecured!</span>")
+		return FALSE
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "AssemblyInfrared", name)
+		ui.open()
 
-/obj/item/device/assembly/infra/Topic(href, href_list, state = deep_inventory_state)
+/obj/item/device/assembly/infra/tgui_data(mob/user)
+	var/list/data = ..()
+
+	data["on"] = on
+	data["visible"] = visible
+
+	return data
+
+/obj/item/device/assembly/infra/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
-		return 1
-	
-	if(!usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
-		usr << browse(null, "window=infra")
-		onclose(usr, "infra")
-		return
+		return TRUE
 
-	if(href_list["state"])
-		toggle_state()
-
-	if(href_list["visible"])
-		visible = !(visible)
-		for(var/ibeam in i_beams)
-			var/obj/effect/beam/i_beam/I = ibeam
-			I.visible = visible
-			CHECK_TICK
-
-	if(href_list["close"])
-		usr << browse(null, "window=infra")
-		return
-
-	if(usr)
-		attack_self(usr)
+	switch(action)
+		if("state")
+			toggle_state()
+			return TRUE
+		if("visible")
+			visible = !visible
+			for(var/obj/effect/beam/i_beam/I as anything in i_beams)
+				I.visible = visible
+				CHECK_TICK
+			return TRUE
 
 /obj/item/device/assembly/infra/verb/rotate_clockwise()
 	set name = "Rotate Infrared Laser Clockwise"
@@ -148,7 +147,7 @@
 	icon_state = "ibeam"
 	var/obj/item/device/assembly/infra/master = null
 	var/visible = 0
-	anchored = 1
+	anchored = TRUE
 
 /obj/effect/beam/i_beam/Initialize()
 	. = ..()

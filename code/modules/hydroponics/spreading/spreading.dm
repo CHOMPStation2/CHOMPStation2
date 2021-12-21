@@ -3,16 +3,16 @@
 
 /proc/spacevine_infestation(var/potency_min=70, var/potency_max=100, var/maturation_min=5, var/maturation_max=15)
 	spawn() //to stop the secrets panel hanging
-		var/list/turf/simulated/floor/turfs = list() //list of all the empty floor turfs in the hallway areas
+		var/list/turf/simulated/floor/turfs = list() //list of all the empty floor turfs in the hallway areas //CHOMPedit start: keeping old method over upstream's landmark method
 		for(var/areapath in typesof(/area/hallway))
 			var/area/A = locate(areapath)
 			for(var/turf/simulated/floor/F in A.contents)
-				if(turf_clear(F))
+				if(!F.check_density())
 					turfs += F
 
 		if(turfs.len) //Pick a turf to spawn at if we can
-			var/turf/simulated/floor/T = pick(turfs)
-			var/datum/seed/seed = plant_controller.create_random_seed(1)
+			var/turf/simulated/floor/T = pick(turfs) //CHOMPedit end
+			var/datum/seed/seed = SSplants.create_random_seed(1)
 			seed.set_trait(TRAIT_SPREAD,2)             // So it will function properly as vines.
 			seed.set_trait(TRAIT_POTENCY,rand(potency_min, potency_max)) // 70-100 potency will help guarantee a wide spread and powerful effects.
 			seed.set_trait(TRAIT_MATURATION,rand(maturation_min, maturation_max))
@@ -29,9 +29,9 @@
 		message_admins("<span class='notice'>Event: Spacevines failed to find a viable turf.</span>")
 
 /obj/effect/dead_plant
-	anchored = 1
+	anchored = TRUE
 	opacity = 0
-	density = 0
+	density = FALSE
 	color = DEAD_PLANT_COLOUR
 
 /obj/effect/dead_plant/attack_hand()
@@ -45,10 +45,10 @@
 
 /obj/effect/plant
 	name = "plant"
-	anchored = 1
-	can_buckle = 1
+	anchored = TRUE
+	can_buckle = TRUE
 	opacity = 0
-	density = 0
+	density = FALSE
 	icon = 'icons/obj/hydroponics_growing.dmi'
 	icon_state = "bush4-1"
 	pass_flags = PASSTABLE
@@ -72,10 +72,12 @@
 	var/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/plant
 
 /obj/effect/plant/Destroy()
-	if(plant_controller)
-		plant_controller.remove_plant(src)
+	neighbors.Cut()
+	if(seed.get_trait(TRAIT_SPREAD)==2)
+		unsense_proximity(callback = /atom/proc/HasProximity, center = get_turf(src))
+	SSplants.remove_plant(src)
 	for(var/obj/effect/plant/neighbor in range(1,src))
-		plant_controller.add_plant(neighbor)
+		SSplants.add_plant(neighbor)
 	return ..()
 
 /obj/effect/plant/single
@@ -89,15 +91,15 @@
 	else
 		parent = newparent
 
-	if(!plant_controller)
+	if(!SSplants)
 		sleep(250) // ugly hack, should mean roundstart plants are fine. TODO initialize perhaps?
-	if(!plant_controller)
+	if(!SSplants)
 		to_world("<span class='danger'>Plant controller does not exist and [src] requires it. Aborting.</span>")
 		qdel(src)
 		return
 
 	if(!istype(newseed))
-		newseed = plant_controller.seeds[DEFAULT_SEED]
+		newseed = SSplants.seeds[DEFAULT_SEED]
 	seed = newseed
 	if(!seed)
 		qdel(src)
@@ -106,6 +108,7 @@
 	name = seed.display_name
 	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
 	if(seed.get_trait(TRAIT_SPREAD)==2)
+		sense_proximity(callback = /atom/proc/HasProximity) // Grabby
 		max_growth = VINE_GROWTH_STAGES
 		growth_threshold = max_health/VINE_GROWTH_STAGES
 		icon = 'icons/obj/hydroponics_vines.dmi'
@@ -133,7 +136,7 @@
 /obj/effect/plant/proc/finish_spreading()
 	set_dir(calc_dir())
 	update_icon()
-	plant_controller.add_plant(src)
+	SSplants.add_plant(src)
 	//Some plants eat through plating.
 	if(islist(seed.chems) && !isnull(seed.chems["pacid"]))
 		var/turf/T = get_turf(src)
@@ -194,10 +197,10 @@
 		plane = ABOVE_PLANE
 		set_opacity(1)
 		if(!isnull(seed.chems["woodpulp"]))
-			density = 1
+			density = TRUE
 	else
 		reset_plane_and_layer()
-		density = 0
+		density = FALSE
 
 /obj/effect/plant/proc/calc_dir()
 	set background = 1
@@ -238,7 +241,7 @@
 /obj/effect/plant/attackby(var/obj/item/weapon/W, var/mob/user)
 
 	user.setClickCooldown(user.get_attack_speed(W))
-	plant_controller.add_plant(src)
+	SSplants.add_plant(src)
 
 	if(W.is_wirecutter() || istype(W, /obj/item/weapon/surgical/scalpel))
 		if(sampled)

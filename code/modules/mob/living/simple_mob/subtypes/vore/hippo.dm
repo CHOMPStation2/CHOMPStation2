@@ -38,7 +38,7 @@
 	pixel_x = -16
 	pixel_y = 0
 
-	meat_amount = 10 //Infinite meat!
+	meat_amount = 15 //Infinite meat!
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
 	max_buckled_mobs = 1 //Yeehaw
@@ -72,7 +72,7 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 0
+	movement_cooldown = 3
 
 /mob/living/simple_mob/vore/hippo/MouseDrop_T(mob/living/M, mob/living/user)
 	return

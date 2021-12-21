@@ -49,8 +49,8 @@
 			H.cl = M.client
 
 /obj/effect/bmode//Cleaning up the tree a bit
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	layer = LAYER_HUD_BASE
 	plane = PLANE_PLAYER_HUD
 	dir = NORTH
@@ -66,120 +66,121 @@
 /obj/effect/bmode/builddir
 	icon_state = "build"
 	screen_loc = "NORTH,WEST"
-	Click()
-		switch(dir)
-			if(NORTH)
-				set_dir(EAST)
-			if(EAST)
-				set_dir(SOUTH)
-			if(SOUTH)
-				set_dir(WEST)
-			if(WEST)
-				set_dir(NORTHWEST)
-			if(NORTHWEST)
-				set_dir(NORTH)
-		return 1
+
+/obj/effect/bmode/builddir/Click()
+	switch(dir)
+		if(NORTH)
+			set_dir(EAST)
+		if(EAST)
+			set_dir(SOUTH)
+		if(SOUTH)
+			set_dir(WEST)
+		if(WEST)
+			set_dir(NORTHWEST)
+		if(NORTHWEST)
+			set_dir(NORTH)
+	return 1
 
 /obj/effect/bmode/buildhelp
 	icon = 'icons/misc/buildmode.dmi'
 	icon_state = "buildhelp"
 	screen_loc = "NORTH,WEST+1"
-	Click()
-		switch(master.cl.buildmode)
 
-			if(BUILDMODE_BASIC)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button        = Construct / Upgrade</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button       = Deconstruct / Delete / Downgrade</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button + ctrl = R-Window</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button + alt  = Airlock</span>")
-				to_chat(usr, "")
-				to_chat(usr, "<span class='notice'>Use the button in the upper left corner to</span>")
-				to_chat(usr, "<span class='notice'>change the direction of built objects.</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_ADVANCED)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on buildmode button = Set object type</span>")
-				to_chat(usr, "<span class='notice'>Middle Mouse Button on buildmode button= On/Off object type saying</span>")
-				to_chat(usr, "<span class='notice'>Middle Mouse Button on turf/obj        = Capture object type</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf/obj          = Place objects</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button                     = Delete objects</span>")
-				to_chat(usr, "<span class='notice'>Mouse Button + ctrl                    = Copy object type</span>")
-				to_chat(usr, "")
-				to_chat(usr, "<span class='notice'>Use the button in the upper left corner to</span>")
-				to_chat(usr, "<span class='notice'>change the direction of built objects.</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_EDIT)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on buildmode button = Select var(type) & value</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf/obj/mob      = Set var(type) & value</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on turf/obj/mob     = Reset var's value</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_THROW)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf/obj/mob      = Select</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on turf/obj/mob     = Throw</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_ROOM)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf              = Select as point A</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on turf             = Select as point B</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on buildmode button = Change floor/wall type</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_LADDER)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf              = Set as upper ladder loc</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on turf             = Set as lower ladder loc</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_CONTENTS)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf/obj/mob      = Select</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on turf/obj/mob     = Move into selection</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_LIGHTS)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on turf/obj/mob      = Make it glow</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on turf/obj/mob     = Reset glowing</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on buildmode button = Change glow properties</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-			
-			if(BUILDMODE_AI)
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button drag box             = Select only mobs in box</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button drag box + shift     = Select additional mobs in area</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on non-mob           = Deselect all mobs</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button on AI mob            = Select/Deselect mob</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button + alt on AI mob      = Toggle hostility on mob</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button + shift on AI mob    = Toggle AI (also resets)</span>")
-				to_chat(usr, "<span class='notice'>Left Mouse Button + ctrl on AI mob 	  = Copy mob faction</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button + ctrl on any mob   = Paste mob faction copied with Left Mouse Button + shift</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on enemy mob        = Command selected mobs to attack mob</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on allied mob       = Command selected mobs to follow mob</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button + shift on any mob  = Command selected mobs to follow mob regardless of faction</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button on tile             = Command selected mobs to move to tile (will cancel if enemies are seen)</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button + shift on tile     = Command selected mobs to reposition to tile (will not be inturrupted by enemies)</span>")
-				to_chat(usr, "<span class='notice'>Right Mouse Button + alt on obj/turfs  = Command selected mobs to attack obj/turf</span>")
-				to_chat(usr, "<span class='notice'>***********************************************************</span>")
-		return 1
+/obj/effect/bmode/buildhelp/Click()
+	switch(master.cl.buildmode)
+
+		if(BUILDMODE_BASIC)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button        = Construct / Upgrade<br>\
+							Right Mouse Button       = Deconstruct / Delete / Downgrade<br>\
+							Left Mouse Button + ctrl = R-Window<br>\
+							Left Mouse Button + alt  = Airlock<br><br>\
+							Use the button in the upper left corner to<br>\
+							change the direction of built objects.<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_ADVANCED)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Right Mouse Button on buildmode button = Set object type<br>\
+							Middle Mouse Button on buildmode button= On/Off object type saying<br>\
+							Middle Mouse Button on turf/obj        = Capture object type<br>\
+							Left Mouse Button on turf/obj          = Place objects<br>\
+							Right Mouse Button                     = Delete objects<br>\
+							Mouse Button + ctrl                    = Copy object type<br><br>\
+							Use the button in the upper left corner to<br>\
+							change the direction of built objects.<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_EDIT)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Right Mouse Button on buildmode button = Select var(type) & value<br>\
+							Left Mouse Button on turf/obj/mob      = Set var(type) & value<br>\
+							Right Mouse Button on turf/obj/mob     = Reset var's value<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_THROW)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button on turf/obj/mob      = Select<br>\
+							Right Mouse Button on turf/obj/mob     = Throw<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_ROOM)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button on turf              = Select as point A<br>\
+							Right Mouse Button on turf             = Select as point B<br>\
+							Right Mouse Button on buildmode button = Change floor/wall type<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_LADDER)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button on turf              = Set as upper ladder loc<br>\
+							Right Mouse Button on turf             = Set as lower ladder loc<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_CONTENTS)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button on turf/obj/mob      = Select<br>\
+							Right Mouse Button on turf/obj/mob     = Move into selection<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_LIGHTS)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button on turf/obj/mob      = Make it glow<br>\
+							Right Mouse Button on turf/obj/mob     = Reset glowing<br>\
+							Right Mouse Button on buildmode button = Change glow properties<br>\
+							***********************************************************</span>")
+
+		if(BUILDMODE_AI)
+			to_chat(usr, "<span class='notice'>***********************************************************<br>\
+							Left Mouse Button drag box             = Select only mobs in box<br>\
+							Left Mouse Button drag box + shift     = Select additional mobs in area<br>\
+							Left Mouse Button on non-mob           = Deselect all mobs<br>\
+							Left Mouse Button on AI mob            = Select/Deselect mob<br>\
+							Left Mouse Button + alt on AI mob      = Toggle hostility on mob<br>\
+							Left Mouse Button + shift on AI mob    = Toggle AI (also resets)<br>\
+							Left Mouse Button + ctrl on AI mob 	  = Copy mob faction<br>\
+							Right Mouse Button + ctrl on any mob   = Paste mob faction copied with Left Mouse Button + shift<br>\
+							Right Mouse Button on enemy mob        = Command selected mobs to attack mob<br>\
+							Right Mouse Button on allied mob       = Command selected mobs to follow mob<br>\
+							Right Mouse Button + shift on any mob  = Command selected mobs to follow mob regardless of faction<br>\
+							Note: The following also reset the mob's home position:<br>\
+							Right Mouse Button on tile             = Command selected mobs to move to tile (will cancel if enemies are seen)<br>\
+							Right Mouse Button + shift on tile     = Command selected mobs to reposition to tile (will not be inturrupted by enemies)<br>\
+							Right Mouse Button + alt on obj/turfs  = Command selected mobs to attack obj/turf<br>\
+							***********************************************************</span>")
+	return 1
 
 /obj/effect/bmode/buildquit
 	icon_state = "buildquit"
 	screen_loc = "NORTH,WEST+3"
 
-	Click()
-		togglebuildmode(master.cl.mob)
-		return 1
+/obj/effect/bmode/buildquit/Click()
+	togglebuildmode(master.cl.mob)
+	return 1
 
 /obj/effect/bmode/buildholder
-	density = 0
-	anchored = 1
+	density = FALSE
+	anchored = TRUE
 	var/client/cl = null
 	var/obj/effect/bmode/builddir/builddir = null
 	var/obj/effect/bmode/buildhelp/buildhelp = null
@@ -259,7 +260,7 @@
 				master.buildmode.varholder = input(usr,"Enter variable name:" ,"Name", "name")
 				if(master.buildmode.varholder in locked && !check_rights(R_DEBUG,0))
 					return 1
-				var/thetype = input(usr,"Select variable type:" ,"Type") in list("text","number","mob-reference","obj-reference","turf-reference")
+				var/thetype = tgui_input_list(usr,"Select variable type:", "Type", list("text","number","mob-reference","obj-reference","turf-reference"))
 				if(!thetype) return 1
 				switch(thetype)
 					if("text")
@@ -267,33 +268,33 @@
 					if("number")
 						master.buildmode.valueholder = input(usr,"Enter variable value:" ,"Value", 123) as num
 					if("mob-reference")
-						master.buildmode.valueholder = input(usr,"Enter variable value:" ,"Value") as mob in mob_list
+						master.buildmode.valueholder = tgui_input_list(usr,"Enter variable value:", "Value", mob_list)
 					if("obj-reference")
-						master.buildmode.valueholder = input(usr,"Enter variable value:" ,"Value") as obj in world
+						master.buildmode.valueholder = tgui_input_list(usr,"Enter variable value:", "Value", world)
 					if("turf-reference")
-						master.buildmode.valueholder = input(usr,"Enter variable value:" ,"Value") as turf in world
-			
+						master.buildmode.valueholder = tgui_input_list(usr,"Enter variable value:", "Value", world)
+
 			if(BUILDMODE_ROOM)
-				var/choice = alert("Would you like to change the floor or wall holders?","Room Builder", "Floor", "Wall")
+				var/choice = tgui_alert(usr, "Would you like to change the floor or wall holders?","Room Builder", list("Floor", "Wall"))
 				switch(choice)
 					if("Floor")
 						floor_holder = get_path_from_partial_text(/turf/simulated/floor/plating)
 					if("Wall")
 						wall_holder = get_path_from_partial_text(/turf/simulated/wall)
-			
+
 			if(BUILDMODE_LIGHTS)
-				var/choice = alert("Change the new light range, power, or color?", "Light Maker", "Range", "Power", "Color")
+				var/choice = tgui_alert(usr, "Change the new light range, power, or color?", "Light Maker", list("Range", "Power", "Color"))
 				switch(choice)
 					if("Range")
-						var/input = input("New light range.","Light Maker",3) as null|num
+						var/input = input(usr, "New light range.","Light Maker",3) as null|num
 						if(input)
 							new_light_range = input
 					if("Power")
-						var/input = input("New light power.","Light Maker",3) as null|num
+						var/input = input(usr, "New light power.","Light Maker",3) as null|num
 						if(input)
 							new_light_intensity = input
 					if("Color")
-						var/input = input("New light color.","Light Maker",3) as null|color
+						var/input = input(usr, "New light color.","Light Maker",3) as null|color
 						if(input)
 							new_light_color = input
 	return 1
@@ -357,7 +358,7 @@
 					if(NORTHWEST)
 						var/obj/structure/window/reinforced/WIN = new/obj/structure/window/reinforced(get_turf(object))
 						WIN.set_dir(NORTHWEST)
-		
+
 		if(BUILDMODE_ADVANCED)
 			if(pa.Find("left") && !pa.Find("ctrl"))
 				if(ispath(holder.buildmode.objholder,/turf))
@@ -399,7 +400,7 @@
 				if(holder.throw_atom)
 					holder.throw_atom.throw_at(object, 10, 1)
 					log_admin("[key_name(usr)] threw [holder.throw_atom] at [object]")
-		
+
 		if(BUILDMODE_ROOM)
 			if(pa.Find("left"))
 				holder.buildmode.coordA = get_turf(object)
@@ -419,7 +420,7 @@
 					)
 				holder.buildmode.coordA = null
 				holder.buildmode.coordB = null
-		
+
 		if(BUILDMODE_LADDER)
 			if(pa.Find("left"))
 				holder.buildmode.coordA = get_turf(object)
@@ -439,7 +440,7 @@
 				B.update_icon()
 				holder.buildmode.coordA = null
 				holder.buildmode.coordB = null
-		
+
 		if(BUILDMODE_CONTENTS)
 			if(pa.Find("left"))
 				if(istype(object, /atom))
@@ -448,7 +449,7 @@
 				if(holder.throw_atom && istype(object, /atom/movable))
 					object.forceMove(holder.throw_atom)
 					log_admin("[key_name(usr)] moved [object] into [holder.throw_atom].")
-		
+
 		if(BUILDMODE_LIGHTS)
 			if(pa.Find("left"))
 				if(object)
@@ -456,7 +457,7 @@
 			if(pa.Find("right"))
 				if(object)
 					object.set_light(0, 0, "#FFFFFF")
-		
+
 		if(BUILDMODE_AI)
 			if(pa.Find("left"))
 				if(isliving(object))
@@ -509,7 +510,7 @@
 				else //Not living
 					for(var/mob/living/unit in holder.selected_mobs)
 						holder.deselect_AI_mob(user.client, unit)
-						
+
 
 			if(pa.Find("right"))
 				// Paste faction
@@ -571,6 +572,7 @@
 					var/told = 0
 					for(var/mob/living/unit in holder.selected_mobs)
 						var/datum/ai_holder/AI = unit.ai_holder
+						AI.home_turf = T
 						if(unit.get_AI_stance() == STANCE_SLEEP)
 							unit.forceMove(T)
 							forced++
@@ -594,7 +596,7 @@
 
 	switch(buildmode)
 		if(BUILDMODE_AI)
-			
+
 			//Holding shift prevents the deselection of existing
 			if(!pa.Find("shift"))
 				for(var/mob/living/unit in holder.selected_mobs)
@@ -610,7 +612,7 @@
 			var/hi_x = max(c1.x,c2.x)
 			var/hi_y = max(c1.y,c2.y)
 			var/z = c1.z //Eh
-			
+
 			var/i = 0
 			for(var/mob/living/L in living_mob_list)
 				if(L.z != z || L.client)
@@ -623,7 +625,7 @@
 			return
 
 /obj/effect/bmode/buildmode/proc/get_path_from_partial_text(default_path)
-	var/desired_path = input("Enter full or partial typepath.","Typepath","[default_path]")
+	var/desired_path = input(usr, "Enter full or partial typepath.","Typepath","[default_path]")
 
 	var/list/types = typesof(/atom)
 	var/list/matches = list()
@@ -633,7 +635,7 @@
 			matches += path
 
 	if(matches.len==0)
-		alert("No results found.  Sorry.")
+		tgui_alert_async(usr, "No results found.  Sorry.")
 		return
 
 	var/result = null
@@ -641,7 +643,7 @@
 	if(matches.len==1)
 		result = matches[1]
 	else
-		result = input("Select an atom type", "Spawn Atom", matches[1]) as null|anything in matches
+		result = tgui_input_list(usr, "Select an atom type", "Spawn Atom", matches)
 		if(!objholder)
 			result = default_path
 	return result

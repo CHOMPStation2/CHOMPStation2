@@ -16,25 +16,16 @@
 	item_cost = 20
 
 /datum/uplink_item/abstract/announcements/fake_centcom/extra_args(var/mob/user)
-	var/title = sanitize(input("Enter your announcement title.", "Announcement Title") as null|text)
+	var/title = sanitize(input(usr, "Enter your announcement title.", "Announcement Title") as null|text)
 	if(!title)
 		return
-	var/message = sanitize(input("Enter your announcement message.", "Announcement Title") as null|text)
+	var/message = sanitize(input(usr, "Enter your announcement message.", "Announcement Title") as null|text)
 	if(!message)
 		return
 	return list("title" = title, "message" = message)
 
 /datum/uplink_item/abstract/announcements/fake_centcom/get_goods(var/obj/item/device/uplink/U, var/loc, var/mob/user, var/list/args)
-	for (var/obj/machinery/computer/communications/C in machines)
-		if(! (C.stat & (BROKEN|NOPOWER) ) )
-			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper( C.loc )
-			P.name = "'[command_name()] Update.'"
-			P.info = replacetext(args["message"], "\n", "<br/>")
-			P.update_space(P.info)
-			P.update_icon()
-			C.messagetitle.Add(args["title"])
-			C.messagetext.Add(P.info)
-
+	post_comm_message(args["title"], replacetext(args["message"], "\n", "<br/>"))
 	command_announcement.Announce(args["message"], args["title"])
 	return 1
 

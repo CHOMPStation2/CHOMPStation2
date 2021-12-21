@@ -5,6 +5,7 @@
 
 	icon_state = "panther"
 	icon_living = "panther"
+	icon_rest = "panther-rest"
 	icon_dead = "panther-dead"
 	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
@@ -14,6 +15,9 @@
 	health = 200
 	movement_cooldown = 4
 	see_in_dark = 8
+
+	meat_amount = 8
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
 	melee_damage_lower = 5
 	melee_damage_upper = 15
@@ -51,13 +55,15 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 0
+	movement_cooldown = 3
 
 /mob/living/simple_mob/vore/aggressive/panther/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
 /mob/living/simple_mob/vore/aggressive/panther/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "All it takes is a few more rasps of the panther's rough, barbed tongue to shovel the rest of you down its tightly rippling gullet... and with a final couple ravenous swallows, you spill out into the predatory feline's stomach! Right away, that gut's muscular walls knead and contract around you, forcing you into a curled-up ball as the panther's noisy purring rumbles into you from every direction."

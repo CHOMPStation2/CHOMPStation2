@@ -53,8 +53,7 @@
 /datum/gear/plushie/New()
 	..()
 	var/list/plushies = list()
-	for(var/plushie in subtypesof(/obj/item/toy/plushie/) - /obj/item/toy/plushie/therapy)
-		var/obj/item/toy/plushie/plushie_type = plushie
+	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - /obj/item/toy/plushie/therapy)
 		plushies[initial(plushie_type.name)] = plushie_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))
 
@@ -66,8 +65,7 @@
 /datum/gear/figure/New()
 	..()
 	var/list/figures = list()
-	for(var/figure in typesof(/obj/item/toy/figure/) - /obj/item/toy/figure)
-		var/obj/item/toy/figure/figure_type = figure
+	for(var/obj/item/toy/figure/figure_type as anything in subtypesof(/obj/item/toy/figure))
 		figures[initial(figure_type.name)] = figure_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(figures))
 
@@ -76,17 +74,18 @@
 	description = "Choose from a number of toys."
 	path = /obj/item/toy/
 
+/* VOREStation removal
 /datum/gear/toy/New()
 	..()
 	var/toytype = list()
 	toytype["Blink toy"] = /obj/item/toy/blink
 	toytype["Gravitational singularity"] = /obj/item/toy/spinningtoy
-	toytype["Water flower"] = /obj/item/toy/waterflower
+	toytype["Water flower"] = /obj/item/weapon/reagent_containers/spray/waterflower
 	toytype["Bosun's whistle"] = /obj/item/toy/bosunwhistle
 	toytype["Magic 8 Ball"] = /obj/item/toy/eight_ball
 	toytype["Magic Conch shell"] = /obj/item/toy/eight_ball/conch
 	gear_tweaks += new/datum/gear_tweak/path(toytype)
-
+*/
 
 /datum/gear/flask
 	display_name = "flask"
@@ -126,7 +125,7 @@
 
 /datum/gear/towel/New()
 	..()
-	gear_tweaks = list(gear_tweak_free_color_choice)
+	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/cahwhite
 	display_name = "Cards Against The Galaxy (white deck)"

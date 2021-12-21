@@ -20,6 +20,7 @@
 	var/const/ROOM_ERR_SPACE = -1
 	var/const/ROOM_ERR_TOOLARGE = -2
 
+	var/list/SPACE_OUTSIDE_TYPES = list() //YWEdit.
 	var/static/list/SPACE_AREA_TYPES = list(
 		/area/space,
 		/area/mine
@@ -88,7 +89,10 @@
 	var/curAreaType = get_area_type()
 	switch (curAreaType)
 		if (AREA_SPACE)
-			text += "<p>According the blueprints, you are now in <b>outer space</b>.  Hold your breath.</p>"
+			if(!istype(A, /area/space))//YWEdit Start.
+				text += "<p>According the blueprints, you are now in <b>\"[A.name]\"</b>.</p>"
+			else
+				text += "<p>According the blueprints, you are now in <b>outer space</b>.  Hold your breath.</p>" //YWEdit End.
 		if (AREA_STATION)
 			text += "<p>According the blueprints, you are now in <b>\"[A.name]\"</b>.</p>"
 		if (AREA_SPECIAL)
@@ -116,6 +120,9 @@
 	return A
 
 /obj/item/blueprints/proc/get_area_type(var/area/A = get_area())
+	for(var/type in SPACE_OUTSIDE_TYPES) //YWEDIT Start.
+		if(istype(A, type))
+			return AREA_SPACE //YWEDIT End.
 	for(var/type in SPACE_AREA_TYPES)
 		if(istype(A, type))
 			return AREA_SPACE
@@ -141,7 +148,7 @@
 				to_chat(usr, "<span class='warning'>Error! Please notify administration!</span>")
 				return
 	var/list/turf/turfs = res
-	var/str = sanitizeSafe(input("New area name:","Blueprint Editing", ""), MAX_NAME_LEN)
+	var/str = sanitizeSafe(input(usr, "New area name:","Blueprint Editing", ""), MAX_NAME_LEN)
 	if(!str || !length(str)) //cancel
 		return
 	if(length(str) > 50)
@@ -194,15 +201,13 @@
 	return
 
 /obj/item/blueprints/proc/move_turfs_to_area(var/list/turf/turfs, var/area/A)
-	A.contents.Add(turfs)
-		//oldarea.contents.Remove(usr.loc) // not needed
-		//T.loc = A //error: cannot change constant value
-
+	for(var/T in turfs)
+		ChangeArea(T, A)
 
 /obj/item/blueprints/proc/edit_area()
 	var/area/A = get_area()
 	var/prevname = "[A.name]"
-	var/str = sanitizeSafe(input("New area name:","Blueprint Editing", prevname), MAX_NAME_LEN)
+	var/str = sanitizeSafe(input(usr, "New area name:","Blueprint Editing", prevname), MAX_NAME_LEN)
 	if(!str || !length(str) || str==prevname) //cancel
 		return
 	if(length(str) > 50)

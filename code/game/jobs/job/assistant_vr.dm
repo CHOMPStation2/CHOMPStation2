@@ -16,10 +16,9 @@
 	access = list()			//See /datum/job/intern/get_access()
 	minimal_access = list()	//See /datum/job/intern/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/assistant/intern
-	alt_titles = list("Intern" = /datum/alt_title/intern,
-					  "Apprentice Engineer" = /datum/alt_title/intern_eng,
+	alt_titles = list("Apprentice Engineer" = /datum/alt_title/intern_eng,
 					  "Medical Intern" = /datum/alt_title/intern_med,
-					  "Lab Assistant" = /datum/alt_title/intern_sci,
+					  "Lab Assistant" = /datum/alt_title/intern_sci, //CHOMPEdit
 					  "Security Cadet" = /datum/alt_title/intern_sec,
 					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
 					  "Server" = /datum/alt_title/server)
@@ -27,13 +26,10 @@
 						another job. Though they are part of the crew, they have no real authority."
 	timeoff_factor = 0 // Interns, noh
 
-/datum/alt_title/intern
-	title = "Intern"
-
 /datum/alt_title/intern_eng
 	title = "Apprentice Engineer"
 	title_blurb = "An Apprentice Engineer attempts to provide whatever the Engineering department needs. They are not proper Engineers, and are \
-					often in training to become an Engineer. A Technical Assistant has no real authority."
+					often in training to become an Engineer. An Apprentice Engineer has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/engineer
 
 /datum/alt_title/intern_med
@@ -43,9 +39,9 @@
 	title_outfit = /decl/hierarchy/outfit/job/assistant/medic
 
 /datum/alt_title/intern_sci
-	title = "Lab Assistant"
+	title = "Lab Assistant" //CHOMPEdit
 	title_blurb = "A Lab Assistant attempts to provide whatever the Research department needs. They are not proper Scientists, and are \
-					often in training to become a Scientist. A Lab Assistant has no real authority."
+					often in training to become a Scientist. A Lab Assistant has no real authority."		     //CHOMPEdit
 	title_outfit = /decl/hierarchy/outfit/job/assistant/scientist
 
 /datum/alt_title/intern_sec
@@ -65,11 +61,6 @@
 	title_blurb = "A Server helps out kitchen and diner staff with various tasks, primarily food delivery. A Server has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/service/server
 
-
-//////////////////////////////////
-//		Visitor
-//////////////////////////////////
-
 /datum/job/intern/New()
 	..()
 	if(config)
@@ -82,11 +73,17 @@
 	else
 		return list()
 
+
+//////////////////////////////////
+//		Visitor
+//////////////////////////////////
+
 /datum/job/assistant		// Visitor
 	title = USELESS_JOB
 	supervisors = "nobody! You don't work here"
 	job_description = "A Visitor is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
+	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)
 
 /datum/job/assistant/New()
 	..()
@@ -96,3 +93,9 @@
 
 /datum/job/assistant/get_access()
 	return list()
+
+/datum/alt_title/guest
+	title = "Guest"
+
+/datum/alt_title/traveler
+	title = "Traveler"

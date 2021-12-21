@@ -108,7 +108,7 @@
 		if(Choices.len == 1)
 			target_choice = Choices[1]
 		else
-			target_choice = input("Choose augment location:") in Choices
+			target_choice = tgui_input_list(usr, "Choose augment location:", "Choose Location", Choices)
 
 	else
 		return FALSE
@@ -169,6 +169,10 @@
 	organ_to_implant = /obj/item/organ/internal/augment/armmounted/hand/sword
 	organ_display_name = "weapon augment"
 
+/obj/item/weapon/implant/organ/limbaugment/wrist/blade
+	organ_to_implant = /obj/item/organ/internal/augment/armmounted/hand/blade
+	organ_display_name = "weapon augment"
+
 // Fore-arm
 /obj/item/weapon/implant/organ/limbaugment/laser
 	organ_to_implant = /obj/item/organ/internal/augment/armmounted
@@ -184,6 +188,10 @@
 
 /obj/item/weapon/implant/organ/limbaugment/upperarm/surge
 	organ_to_implant = /obj/item/organ/internal/augment/armmounted/shoulder/surge
+
+/obj/item/weapon/implant/organ/limbaugment/upperarm/blade
+	organ_to_implant = /obj/item/organ/internal/augment/armmounted/shoulder/blade
+	organ_display_name = "weapon augment"
 
 /*
  * Others

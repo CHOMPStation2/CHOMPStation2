@@ -3,8 +3,16 @@
 	icon_keyboard = "teleport_key"
 	icon_screen = "teleport"
 	light_color = "#77fff8"
+	circuit = /obj/item/weapon/circuitboard/sensors
 	extra_view = 4
 	var/obj/machinery/shipsensors/sensors
+
+// fancy sprite
+/obj/machinery/computer/ship/sensors/adv
+	icon_keyboard = null
+	icon_state = "adv_sensors"
+	icon_screen = "adv_sensors_screen"
+	light_color = "#05A6A8"
 
 /obj/machinery/computer/ship/sensors/attempt_hook_up(obj/effect/overmap/visitable/ship/sector)
 	if(!(. = ..()))
@@ -19,14 +27,29 @@
 			sensors = S
 			break
 
-/obj/machinery/computer/ship/sensors/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+/obj/machinery/computer/ship/sensors/tgui_interact(mob/user, datum/tgui/ui)
 	if(!linked)
 		display_reconnect_dialog(user, "sensors")
 		return
 
-	var/data[0]
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "OvermapShipSensors", "[linked.name] Sensors Control") // 420, 530
+		ui.open()
+
+/obj/machinery/computer/ship/sensors/tgui_data(mob/user)
+	var/list/data = list()
 
 	data["viewing"] = viewing_overmap(user)
+	data["on"] = 0
+	data["range"] = "N/A"
+	data["health"] = 0
+	data["max_health"] = 0
+	data["heat"] = 0
+	data["critical_heat"] = 0
+	data["status"] = "MISSING"
+	data["contacts"] = list()
+
 	if(sensors)
 		data["on"] = sensors.use_power
 		data["range"] = sensors.range
@@ -43,7 +66,7 @@
 		else
 			data["status"] = "OK"
 		var/list/contacts = list()
-		for(var/obj/effect/overmap/O in view(7,linked))
+		for(var/obj/effect/overmap/O in range(7,linked))
 			if(linked == O)
 				continue
 			if(!O.scannable)
@@ -52,54 +75,49 @@
 			if(bearing < 0)
 				bearing += 360
 			contacts.Add(list(list("name"=O.name, "ref"="\ref[O]", "bearing"=bearing)))
-		if(contacts.len)
-			data["contacts"] = contacts
-	else
-		data["status"] = "MISSING"
-		data["range"] = "N/A"
-		data["on"] = 0
+		data["contacts"] = contacts
 
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, "shipsensors.tmpl", "[linked.name] Sensors Control", 420, 530, src)
-		ui.set_initial_data(data)
-		ui.open()
-		ui.set_auto_update(1)
+	return data
 
-/obj/machinery/computer/ship/sensors/OnTopic(var/mob/user, var/list/href_list, state)
+/obj/machinery/computer/ship/sensors/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
-		return TOPIC_HANDLED
+		return TRUE
 
-	if (!linked)
-		return TOPIC_NOACTION
+	if(!linked)
+		return FALSE
 
-	if (href_list["viewing"])
-		if(user && !isAI(user))
-			viewing_overmap(user) ? unlook(user) : look(user)
-		return TOPIC_REFRESH
+	switch(action)
+		if("viewing")
+			if(usr && !isAI(usr))
+				viewing_overmap(usr) ? unlook(usr) : look(usr)
+			. = TRUE
 
-	if (href_list["link"])
-		find_sensors()
-		return TOPIC_REFRESH
+		if("link")
+			find_sensors()
+			. = TRUE
+
+		if("scan")
+			var/obj/effect/overmap/O = locate(params["scan"])
+			if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
+				new/obj/item/weapon/paper/(get_turf(src), O.get_scan_data(usr), "paper (Sensor Scan - [O])")
+				playsound(src, "sound/machines/printer.ogg", 30, 1)
+			. = TRUE
 
 	if(sensors)
-		if (href_list["range"])
-			var/nrange = input("Set new sensors range", "Sensor range", sensors.range) as num|null
-			if(!CanInteract(user,state))
-				return TOPIC_NOACTION
-			if (nrange)
-				sensors.set_range(CLAMP(nrange, 1, world.view))
-			return TOPIC_REFRESH
-		if (href_list["toggle"])
-			sensors.toggle()
-			return TOPIC_REFRESH
+		switch(action)
+			if("range")
+				var/nrange = input(usr, "Set new sensors range", "Sensor range", sensors.range) as num|null
+				if(tgui_status(usr, state) != STATUS_INTERACTIVE)
+					return FALSE
+				if(nrange)
+					sensors.set_range(CLAMP(nrange, 1, world.view))
+				. = TRUE
+			if("toggle_sensor")
+				sensors.toggle()
+				. = TRUE
 
-	if (href_list["scan"])
-		var/obj/effect/overmap/O = locate(href_list["scan"])
-		if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
-			playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
-			new/obj/item/weapon/paper/(get_turf(src), O.get_scan_data(user), "paper (Sensor Scan - [O])")
-		return TOPIC_HANDLED
+	if(. && !issilicon(usr))
+		playsound(src, "terminal_type", 50, 1)
 
 /obj/machinery/computer/ship/sensors/process()
 	..()
@@ -107,7 +125,7 @@
 		return
 	if(sensors && sensors.use_power && sensors.powered())
 		var/sensor_range = round(sensors.range*1.5) + 1
-		linked.set_light(sensor_range + 0.5, 4)
+		linked.set_light(sensor_range + 0.5)
 	else
 		linked.set_light(0)
 
@@ -116,7 +134,7 @@
 	desc = "Long range gravity scanner with various other sensors, used to detect irregularities in surrounding space. Can only run in vacuum to protect delicate quantum BS elements." //VOREStation Edit
 	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
 	icon_state = "sensors"
-	anchored = 1
+	anchored = TRUE
 	var/max_health = 200
 	var/health = 200
 	var/critical_heat = 50 // sparks and takes damage when active & above this heat
@@ -164,13 +182,13 @@
 /obj/machinery/shipsensors/examine(mob/user)
 	. = ..()
 	if(health <= 0)
-		to_chat(user, "\The [src] is wrecked.")
+		. += "<span class='danger'>It is wrecked.</span>"
 	else if(health < max_health * 0.25)
-		to_chat(user, "<span class='danger'>\The [src] looks like it's about to break!</span>")
+		. += "<span class='danger'>It looks like it's about to break!</span>"
 	else if(health < max_health * 0.5)
-		to_chat(user, "<span class='danger'>\The [src] looks seriously damaged!</span>")
+		. += "<span class='danger'>It looks seriously damaged!</span>"
 	else if(health < max_health * 0.75)
-		to_chat(user, "\The [src] shows signs of damage!")
+		. += "It shows signs of damage!"
 
 /obj/machinery/shipsensors/bullet_act(var/obj/item/projectile/Proj)
 	take_damage(Proj.get_structure_damage())

@@ -11,20 +11,23 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Colony Director"
+	supervisors = "the Site Manager"
 	selection_color = "#026865"
 	req_admin_notify = 1
 	economic_modifier = 10
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 
 	minimum_character_age = 25
+	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
 	minimal_player_age = 10
 	ideal_character_age = 50
+	ideal_age_by_species = list(SPECIES_UNATHI = 140, "mechanical" = 20, SPECIES_HUMAN_VATBORN = 20)
+	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital")
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
 	job_description = "The CMO manages the Medical department and is a position requiring experience and skill; their goal is to ensure that their \
@@ -57,6 +60,8 @@
 					"Emergency Physician" = /datum/alt_title/emergency_physician,
 					"Nurse" = /datum/alt_title/nurse,
 					"Virologist" = /datum/alt_title/virologist)
+
+	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
 
 //Medical Doctor Alt Titles
 /datum/alt_title/surgeon
@@ -103,6 +108,7 @@
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
 	minimal_access = list(access_medical, access_medical_equip, access_chemistry)
 	minimal_player_age = 3
+	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/chemist
 	job_description = "A Chemist produces and maintains a stock of basic to advanced chemicals for medical and occasionally research use. \
@@ -114,7 +120,6 @@
 	title = "Pharmacist"
 	title_blurb = "A Pharmacist focuses on the chemical needs of the Medical Department, and often offers to fill crew prescriptions at their discretion."
 
-/* I'm commenting out Geneticist so you can't actually see it in the job menu, given that you can't play as one - Jon.
 //////////////////////////////////
 //			Geneticist
 //////////////////////////////////
@@ -124,8 +129,8 @@
 	departments = list(DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the Chief Medical Officer and Research Director"
 	selection_color = "#013D3B"
 	economic_modifier = 7
@@ -135,7 +140,6 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
 	job_description = "A Geneticist operates genetic manipulation equipment to repair any genetic defects encountered in crew, from cloning or radiation as examples. \
 						When required, geneticists have the skills to clone, and are the superior choice when available for doing so."
-*/
 
 //////////////////////////////////
 //			Psychiatrist
@@ -157,6 +161,7 @@
 	job_description = "A Psychiatrist provides mental health services to crew members in need. They may also be called upon to determine whatever \
 					ails the mentally unwell, frequently under Security supervision. They understand the effects of various psychoactive drugs."
 	alt_titles = list("Psychologist" = /datum/alt_title/psychologist)
+	banned_job_species = list(SPECIES_PROMETHEAN, SPECIES_DIONA)
 
 //Psychiatrist Alt Titles
 /datum/alt_title/psychologist
@@ -178,13 +183,16 @@
 	spawn_positions = 2
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013D3B"
-	economic_modifier = 4
+	economic_modifier = 5	//CHOMPstation edit - "Makes Parameds make as much as offduty medical."
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
 	job_description = "A Paramedic is primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their own. \
 						They may also be called upon to keep patients stable when Medical is busy or understaffed."
 	alt_titles = list("Emergency Medical Technician" = /datum/alt_title/emt)
+	banned_job_species = list(SPECIES_DIONA)
+
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 
 // Paramedic Alt Titles
 /datum/alt_title/emt

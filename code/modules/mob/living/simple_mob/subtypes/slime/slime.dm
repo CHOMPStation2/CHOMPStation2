@@ -1,5 +1,21 @@
-// The top-level slime defines. Xenobio slimes and feral slimes will inherit from this.
+var/list/_slime_default_emotes = list(
+	/decl/emote/audible/moan,
+	/decl/emote/visible/twitch,
+	/decl/emote/visible/sway,
+	/decl/emote/visible/shiver,
+	/decl/emote/visible/bounce,
+	/decl/emote/visible/jiggle,
+	/decl/emote/visible/lightup,
+	/decl/emote/visible/vibrate,
+	/decl/emote/slime,
+	/decl/emote/slime/pout,
+	/decl/emote/slime/sad,
+	/decl/emote/slime/angry,
+	/decl/emote/slime/frown,
+	/decl/emote/slime/smile
+)
 
+// The top-level slime defines. Xenobio slimes and feral slimes will inherit from this.
 /mob/living/simple_mob/slime
 	name = "slime"
 	desc = "It's a slime."
@@ -23,6 +39,8 @@
 	mob_class = MOB_CLASS_SLIME
 
 	response_help = "pets"
+
+	organ_names = /decl/mob_organ_names/slime
 
 	// Atmos stuff.
 	minbodytemp = T0C-30
@@ -63,6 +81,9 @@
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
 	can_enter_vent_with = list(/obj/item/clothing/head)
+
+/mob/living/simple_mob/slime/get_available_emotes()
+	return global._slime_default_emotes
 
 /datum/say_list/slime
 	speak = list("Blorp...", "Blop...")
@@ -117,7 +138,7 @@
 	// Hat simulator.
 	if(hat)
 		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
-		var/image/I = image('icons/mob/head.dmi', src, hat_state)
+		var/image/I = image('icons/inventory/head/mob.dmi', src, hat_state)
 		I.pixel_y = -7 // Slimes are small.
 		I.appearance_flags = RESET_COLOR
 		add_overlay(I)
@@ -221,5 +242,8 @@
 	return "slime"
 
 /mob/living/simple_mob/slime/proc/squish()
-	playsound(src.loc, 'sound/effects/slime_squish.ogg', 50, 0)
+	playsound(src, 'sound/effects/slime_squish.ogg', 50, 0)
 	visible_message("<b>\The [src]</b> squishes!")
+
+/decl/mob_organ_names/slime
+	hit_zones = list("cytoplasmic membrane")

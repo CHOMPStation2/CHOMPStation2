@@ -8,6 +8,7 @@
 	flags = NOCONDUCT
 	slot_flags = SLOT_HOLSTER
 	drop_sound = 'sound/items/drop/herb.ogg'
+	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 	var/plantname
 	var/datum/seed/seed
@@ -16,10 +17,10 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/Initialize(var/mapload, var/planttype)
 	. = ..()
-	
+
 	if(!dried_type)
 		dried_type = type
-	
+
 	pixel_x = rand(-5.0, 5)
 	pixel_y = rand(-5.0, 5)
 
@@ -30,7 +31,7 @@
 		log_debug("Plantname not provided and and [src] requires it at [x],[y],[z]")
 		return INITIALIZE_HINT_QDEL
 
-	seed = plant_controller.seeds[plantname]
+	seed = SSplants.seeds[plantname]
 
 	if(!seed)
 		log_debug("Plant name '[plantname]' does not exist and [src] requires it at [x],[y],[z]")
@@ -62,18 +63,11 @@
 			force = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/proc/update_desc()
-
 	if(!seed)
 		return
-	if(!plant_controller)
-		sleep(250) // ugly hack, should mean roundstart plants are fine.
-	if(!plant_controller)
-		to_world("<span class='danger'>Plant controller does not exist and [src] requires it. Aborting.</span>")
-		qdel(src)
-		return
 
-	if(plant_controller.product_descs["[seed.uid]"])
-		desc = plant_controller.product_descs["[seed.uid]"]
+	if(SSplants.product_descs["[seed.uid]"])
+		desc = SSplants.product_descs["[seed.uid]"]
 	else
 		var/list/descriptors = list()
 		if(reagents.has_reagent("sugar") || reagents.has_reagent("cherryjelly") || reagents.has_reagent("honey") || reagents.has_reagent("berryjuice"))
@@ -125,28 +119,28 @@
 			desc += " mushroom"
 		else
 			desc += " fruit"
-		plant_controller.product_descs["[seed.uid]"] = desc
+		SSplants.product_descs["[seed.uid]"] = desc
 	desc += ". Delicious! Probably."
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/update_icon()
-	if(!seed || !plant_controller || !plant_controller.plant_icon_cache)
+	if(!seed || !SSplants || !SSplants.plant_icon_cache)
 		return
-	overlays.Cut()
+	cut_overlays()
 	var/image/plant_icon
 	var/icon_key = "fruit-[seed.get_trait(TRAIT_PRODUCT_ICON)]-[seed.get_trait(TRAIT_PRODUCT_COLOUR)]-[seed.get_trait(TRAIT_PLANT_COLOUR)]"
-	if(plant_controller.plant_icon_cache[icon_key])
-		plant_icon = plant_controller.plant_icon_cache[icon_key]
+	if(SSplants.plant_icon_cache[icon_key])
+		plant_icon = SSplants.plant_icon_cache[icon_key]
 	else
 		plant_icon = image('icons/obj/hydroponics_products.dmi',"blank")
 		var/image/fruit_base = image('icons/obj/hydroponics_products.dmi',"[seed.get_trait(TRAIT_PRODUCT_ICON)]-product")
 		fruit_base.color = "[seed.get_trait(TRAIT_PRODUCT_COLOUR)]"
-		plant_icon.overlays |= fruit_base
-		if("[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf" in icon_states('icons/obj/hydroponics_products.dmi'))
+		plant_icon.add_overlay(fruit_base)
+		if("[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf" in cached_icon_states('icons/obj/hydroponics_products.dmi'))
 			var/image/fruit_leaves = image('icons/obj/hydroponics_products.dmi',"[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf")
 			fruit_leaves.color = "[seed.get_trait(TRAIT_PLANT_COLOUR)]"
-			plant_icon.overlays |= fruit_leaves
-		plant_controller.plant_icon_cache[icon_key] = plant_icon
-	overlays |= plant_icon
+			plant_icon.add_overlay(fruit_leaves)
+		SSplants.plant_icon_cache[icon_key] = plant_icon
+	add_overlay(plant_icon)
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/Crossed(var/mob/living/M)
 	if(M.is_incorporeal())
@@ -164,7 +158,7 @@
 
 			M.stop_pulling()
 			to_chat(M, "<span class='notice'>You slipped on the [name]!</span>")
-			playsound(src.loc, 'sound/misc/slip.ogg', 50, 1, -3)
+			playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 			M.Stun(8)
 			M.Weaken(5)
 			seed.thrown_at(src,M)
@@ -200,19 +194,19 @@
 			else if(seed.chems)
 				if(W.sharp && W.edge && !isnull(seed.chems["woodpulp"]))
 					user.show_message("<span class='notice'>You make planks out of \the [src]!</span>", 1)
-					playsound(loc, 'sound/effects/woodcutting.ogg', 50, 1)
+					playsound(src, 'sound/effects/woodcutting.ogg', 50, 1)
 					var/flesh_colour = seed.get_trait(TRAIT_FLESH_COLOUR)
 					if(!flesh_colour) flesh_colour = seed.get_trait(TRAIT_PRODUCT_COLOUR)
 					for(var/i=0,i<2,i++)
 						var/obj/item/stack/material/wood/NG = new (user.loc)
 						if(flesh_colour) NG.color = flesh_colour
 						for (var/obj/item/stack/material/wood/G in user.loc)
-							if(G==NG)
+							if(G == NG)
 								continue
-							if(G.amount>=G.max_amount)
+							if(G.get_amount() >= G.max_amount)
 								continue
 							G.attackby(NG, user)
-						to_chat(user, "You add the newly-formed wood to the stack. It now contains [NG.amount] planks.")
+						to_chat(user, "You add the newly-formed wood to the stack. It now contains [NG.get_amount()] planks.")
 					qdel(src)
 					return
 				else if(!isnull(seed.chems["potato"]))
@@ -225,6 +219,11 @@
 					new /obj/item/weapon/reagent_containers/food/snacks/carrotfries(get_turf(src))
 					qdel(src)
 					return
+				else if(!isnull(seed.chems["pineapplejuice"]))
+					to_chat(user, "You slice \the [src] into rings.")
+					new /obj/item/weapon/reagent_containers/food/snacks/pineapple_ring(get_turf(src))
+					qdel(src)
+					return
 				else if(!isnull(seed.chems["soymilk"]))
 					to_chat(user, "You roughly chop up \the [src].")
 					new /obj/item/weapon/reagent_containers/food/snacks/soydope(get_turf(src))
@@ -234,7 +233,7 @@
 					to_chat(user, "You slice up \the [src].")
 					var/slices = rand(3,5)
 					var/reagents_to_transfer = round(reagents.total_volume/slices)
-					for(var/i=i;i<=slices;i++)
+					for(var/i=1; i<=slices; i++)
 						var/obj/item/weapon/reagent_containers/food/snacks/fruit_slice/F = new(get_turf(src),seed)
 						if(reagents_to_transfer) reagents.trans_to_obj(F,reagents_to_transfer)
 					qdel(src)
@@ -281,12 +280,12 @@
 			var/obj/item/stack/tile/grass/G = new (user.loc)
 			if(flesh_colour) G.color = flesh_colour
 			for (var/obj/item/stack/tile/grass/NG in user.loc)
-				if(G==NG)
+				if(G == NG)
 					continue
-				if(NG.amount>=NG.max_amount)
+				if(NG.get_amount() >= NG.max_amount)
 					continue
 				NG.attackby(G, user)
-			to_chat(user, "You add the newly-formed grass to the stack. It now contains [G.amount] tiles.")
+			to_chat(user, "You add the newly-formed grass to the stack. It now contains [G.get_amount()] tiles.")
 		qdel(src)
 		return
 
@@ -355,6 +354,7 @@ var/list/fruit_icon_cache = list()
 	name = "[S.seed_name] slice"
 	desc = "A slice of \a [S.seed_name]. Tasty, probably."
 	drop_sound = 'sound/items/drop/herb.ogg'
+	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 	var/rind_colour = S.get_trait(TRAIT_PRODUCT_COLOUR)
 	var/flesh_colour = S.get_trait(TRAIT_FLESH_COLOUR)
@@ -363,9 +363,9 @@ var/list/fruit_icon_cache = list()
 		var/image/I = image(icon,"fruit_rind")
 		I.color = rind_colour
 		fruit_icon_cache["rind-[rind_colour]"] = I
-	overlays |= fruit_icon_cache["rind-[rind_colour]"]
+	add_overlay(fruit_icon_cache["rind-[rind_colour]"])
 	if(!fruit_icon_cache["slice-[rind_colour]"])
 		var/image/I = image(icon,"fruit_slice")
 		I.color = flesh_colour
 		fruit_icon_cache["slice-[rind_colour]"] = I
-	overlays |= fruit_icon_cache["slice-[rind_colour]"]
+	add_overlay(fruit_icon_cache["slice-[rind_colour]"])

@@ -4,14 +4,14 @@ These are the default click code call sequences used when clicking on stuff with
 
 Atoms:
 
-mob/ClickOn() calls the item's resolve_attackby() proc.
+/mob/ClickOn() calls the item's resolve_attackby() proc.
 item/resolve_attackby() calls the target atom's attackby() proc.
 
 Mobs:
 
-mob/living/attackby() after checking for surgery, calls the item's attack() proc.
+/mob/living/attackby() after checking for surgery, calls the item's attack() proc.
 item/attack() generates attack logs, sets click cooldown and calls the mob's attacked_with_item() proc. If you override this, consider whether you need to set a click cooldown, play attack animations, and generate logs yourself.
-mob/attacked_with_item() should then do mob-type specific stuff (like determining hit/miss, handling shields, etc) and then possibly call the item's apply_hit_effect() proc to actually apply the effects of being hit.
+/mob/attacked_with_item() should then do mob-type specific stuff (like determining hit/miss, handling shields, etc) and then possibly call the item's apply_hit_effect() proc to actually apply the effects of being hit.
 
 Item Hit Effects:
 
@@ -21,6 +21,8 @@ avoid code duplication. This includes items that may sometimes act as a standard
 
 // Called when the item is in the active hand, and clicked; alternately, there is an 'activate held object' verb or you can hit pagedown.
 /obj/item/proc/attack_self(mob/user)
+	if(SEND_SIGNAL(src, COMSIG_ITEM_ATTACK_SELF, user) & COMPONENT_NO_INTERACT)
+		return
 	return
 
 // Called at the start of resolve_attackby(), before the actual attack.
@@ -35,11 +37,9 @@ avoid code duplication. This includes items that may sometimes act as a standard
 
 // No comment
 /atom/proc/attackby(obj/item/W, mob/user, var/attack_modifier, var/click_parameters)
-	return
-
-/atom/movable/attackby(obj/item/W, mob/user, var/attack_modifier, var/click_parameters)
-	if(!(W.flags & NOBLUDGEON))
-		visible_message("<span class='danger'>[src] has been hit by [user] with [W].</span>")
+	if(SEND_SIGNAL(src, COMSIG_PARENT_ATTACKBY, W, user, click_parameters) & COMPONENT_NO_AFTERATTACK)
+		return TRUE
+	return FALSE
 
 /mob/living/attackby(obj/item/I, mob/user, var/attack_modifier, var/click_parameters)
 	if(!ismob(user))
@@ -98,7 +98,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 /obj/item/proc/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone, var/attack_modifier)
 	user.break_cloak()
 	if(hitsound)
-		playsound(loc, hitsound, 50, 1, -1)
+		playsound(src, hitsound, 50, 1, -1)
 
 	var/power = force
 	for(var/datum/modifier/M in user.modifiers)

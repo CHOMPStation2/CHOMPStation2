@@ -119,6 +119,8 @@
 	max_duration = 100
 
 /datum/surgery_step/cavity/place_item/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+	if(!istype(tool))
+		return 0
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(istype(user,/mob/living/silicon/robot))
@@ -206,6 +208,8 @@
 			user.visible_message("<span class='notice'>[user] takes something out of incision on [target]'s [affected.name] with \the [tool]!</span>", \
 			"<span class='notice'>You take [obj] out of incision on [target]'s [affected.name]s with \the [tool]!</span>" )
 			affected.implants -= obj
+			if(!target.has_embedded_objects())
+				target.clear_alert("embeddedobject")
 
 			BITSET(target.hud_updateflag, IMPLOYAL_HUD)
 
@@ -241,6 +245,6 @@
 		if (prob(fail_prob))
 			var/obj/item/weapon/implant/imp = affected.implants[1]
 			user.visible_message("<span class='danger'> Something beeps inside [target]'s [affected.name]!</span>")
-			playsound(imp.loc, 'sound/items/countdown.ogg', 75, 1, -3)
+			playsound(imp, 'sound/items/countdown.ogg', 75, 1, -3)
 			spawn(25)
 				imp.activate()

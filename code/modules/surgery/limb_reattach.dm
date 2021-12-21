@@ -28,6 +28,8 @@
 	max_duration = 70
 
 /datum/surgery_step/limb/attach/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+	if(!istype(tool))
+		return 0
 	var/obj/item/organ/external/E = tool
 	var/obj/item/organ/external/P = target.organs_by_name[E.parent_organ]
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -57,6 +59,13 @@
 	"<span class='notice'>You have attached [target]'s [E.name] to the [E.amputation_point].</span>")
 	user.drop_from_inventory(E)
 	E.replaced(target)
+
+	// Modular bodyparts (like prosthetics) do not need to be reconnected.
+	if(E.get_modular_limb_category() != MODULAR_BODYPART_INVALID)
+		E.status &= ~ORGAN_CUT_AWAY
+		for(var/obj/item/organ/external/child in E.children)
+			child.status &= ~ORGAN_CUT_AWAY
+
 	target.update_icons_body(FALSE)
 	target.updatehealth()
 	target.UpdateDamageIcon()
@@ -65,7 +74,7 @@
 	var/obj/item/organ/external/E = tool
 	user.visible_message("<span class='warning'> [user]'s hand slips, damaging [target]'s [E.amputation_point]!</span>", \
 	"<span class='warning'> Your hand slips, damaging [target]'s [E.amputation_point]!</span>")
-	target.apply_damage(10, BRUTE, null, sharp=1)
+	target.apply_damage(10, BRUTE, null, sharp = TRUE)
 
 ///////////////////////////////////////////////////////////////
 // Limb Connection Surgery
@@ -104,7 +113,7 @@
 	var/obj/item/organ/external/E = tool
 	user.visible_message("<span class='warning'> [user]'s hand slips, damaging [target]'s [E.amputation_point]!</span>", \
 	"<span class='warning'> Your hand slips, damaging [target]'s [E.amputation_point]!</span>")
-	target.apply_damage(10, BRUTE, null, sharp=1)
+	target.apply_damage(10, BRUTE, null, sharp = TRUE)
 
 ///////////////////////////////////////////////////////////////
 // Robolimb Attachment Surgery
@@ -117,7 +126,7 @@
 	max_duration = 100
 
 /datum/surgery_step/limb/mechanize/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if(..())
+	if(..() && istype(tool))
 		var/obj/item/robot_parts/p = tool
 		if (p.part)
 			if (!(target_zone in p.part))
@@ -155,4 +164,4 @@
 /datum/surgery_step/limb/mechanize/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("<span class='warning'> [user]'s hand slips, damaging [target]'s flesh!</span>", \
 	"<span class='warning'> Your hand slips, damaging [target]'s flesh!</span>")
-	target.apply_damage(10, BRUTE, null, sharp=1)
+	target.apply_damage(10, BRUTE, null, sharp = TRUE)

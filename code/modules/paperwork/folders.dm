@@ -1,11 +1,12 @@
 /obj/item/weapon/folder
 	name = "folder"
 	desc = "A folder."
-	icon = 'icons/obj/bureaucracy_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/bureaucracy.dmi' //CHOMPEdit: Continues using new folder sprite, contrary to YW
 	icon_state = "folder"
 	w_class = ITEMSIZE_SMALL
 	pressure_resistance = 2
 	drop_sound = 'sound/items/drop/paper.ogg'
+	pickup_sound = 'sound/items/pickup/paper.ogg'
 
 /obj/item/weapon/folder/blue
 	desc = "A blue folder."
@@ -24,7 +25,7 @@
 	icon_state = "folder_white"
 
 /obj/item/weapon/folder/blue_captain
-	desc = "A blue folder with Colony Director markings."
+	desc = "A blue folder with Site Manager markings."
 	icon_state = "folder_captain"
 
 /obj/item/weapon/folder/blue_hop
@@ -56,9 +57,9 @@
 	icon_state = "folder_hos"
 
 /obj/item/weapon/folder/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(contents.len)
-		overlays += "folder_paper"
+		add_overlay("folder_paper")
 	return
 
 /obj/item/weapon/folder/attackby(obj/item/weapon/W as obj, mob/user as mob)

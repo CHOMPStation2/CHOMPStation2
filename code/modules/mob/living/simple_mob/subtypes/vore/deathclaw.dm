@@ -1,18 +1,33 @@
-/datum/category_item/catalogue/fauna/deathclaw		//TODO: VIRGO_LORE_WRITING_WIP
+/datum/category_item/catalogue/fauna/deathclaw
 	name = "Creature - Deathclaw"
-	desc = "A massive beast, tall as three standard-size humans, with massive, terrifying claws, \
-	and dark, black fangs. It's entire body is yellowish, like sand, and it's skin is leathery and tough. \
-	It seems to have adapted to the harsh desert environment on Virgo 4, and makes it's home inside the caves."
+	desc = "Classification: Trioceros dominus\
+	<br><br>\
+	Originally the deathclaw was a top secret genetics project that was run by ancestral zorren. \
+	While it is not immediately evident in their body structure, these creatures bare a \
+	subtle genetic connection to Zorren, however, this connection is marred by the other genes that \
+	have been grafted onto the DNA strucutre of the Deathclaw. The creatures are known to attack humans \
+	and other animals regularly to protect their territory or to hunt for food. It is speculated that \
+	they escaped roughly around the time as whatever calamity befell the zorren many centuries ago \
+	as sighting of these beasts in the wild began around that time according to recovered zorren texts. \
+	<br>\
+	Deathclaws are a large, carnivorous, bipedal reptile species, designed for maximum lethality. \
+	Deathclaws are made even more dangerous by their reproductive instincts. deathclaws are an oviparous species, \
+	female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male.\
+	<br>\
+	These creatures are considered an invasive species, and thus hunters are encouraged to hunt them \
+	although they are cautioned when doing so due to the danger that the creature poses." //CHOMPedit
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vore/aggressive/deathclaw
 	name = "deathclaw"
 	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart!"
+	tt_desc = "Trioceros dominus"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/deathclaw)
 
 	icon_dead = "deathclaw-dead"
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
-	icon = 'icons/mob/vore64x64.dmi'
+	icon = 'icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
 	vis_height = 64
 
 	attacktext = list("mauled")
@@ -25,6 +40,9 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 30
+
+	meat_amount = 8
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
 	old_x = -16
 	old_y = 0
@@ -56,13 +74,15 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 0
+	movement_cooldown = 3
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The giant mutant of a lizard finishes stuffing you into its jaws and down its ravenously clenching gullet with a worrying ease and efficiency. An assortment of slick, slimy noises assault your senses for a few gulp-filled moments... before you spill out into the apex predator's swelteringly hot stomach, its walls already possessively grinding into your body."

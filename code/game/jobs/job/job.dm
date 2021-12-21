@@ -22,13 +22,19 @@
 	var/department_accounts = null        // Which department accounts should people with this position be given the pin for?
 	var/assignable = TRUE                 // Should it show up on things like the ID computer?
 	var/minimum_character_age = 0
+	var/list/min_age_by_species = null
 	var/ideal_character_age = 30
+	var/list/ideal_age_by_species = null
+	var/list/banned_job_species = null
 	var/has_headset = TRUE                //Do people with this job need to be given headsets and told how to use them?  E.g. Cyborgs don't.
 
 	var/account_allowed = 1				  // Does this job type come with a station account?
 	var/economic_modifier = 2			  // With how much does this job modify the initial account amount?
 
 	var/outfit_type						  // What outfit datum does this job use in its default title?
+
+	var/offmap_spawn = FALSE			  // Do we require weird and special spawning and datacore handling?
+	var/mob_type = JOB_CARBON 		      // Bitflags representing mob type this job spawns
 
 	// Description of the job's role and minimum responsibilities.
 	var/job_description = "This Job doesn't have a description! Please report it!"
@@ -67,7 +73,7 @@
 
 	//give them an account in the station database
 	var/money_amount = (rand(15,40) + rand(15,40)) * income * economic_modifier * ECO_MODIFIER //VOREStation Edit - Smoothed peaks, ECO_MODIFIER rather than per-species ones.
-	var/datum/money_account/M = create_account(H.real_name, money_amount, null)
+	var/datum/money_account/M = create_account(H.real_name, money_amount, null, offmap_spawn)
 	if(H.mind)
 		var/remembered_info = ""
 		remembered_info += "<b>Your account number is:</b> #[M.account_number]<br>"
@@ -156,3 +162,24 @@
 		var/obj/O = mannequin.back
 		mannequin.drop_from_inventory(O)
 		qdel(O)
+
+///Assigns minimum age by race & brain type. Code says Positronic = mechanical and Drone = digital because nothing can be simple.
+///Will first check based on brain type, then based on species.
+/datum/job/proc/get_min_age(species_name, brain_type)
+	return minimum_character_age // VOREStation Edit - Minimum character age by rules is 18, return default which is standard for all species
+    //return (brain_type && LAZYACCESS(min_age_by_species, brain_type)) || LAZYACCESS(min_age_by_species, species_name) || minimum_character_age //VOREStation Removal
+
+/datum/job/proc/get_ideal_age(species_name, brain_type)
+	return ideal_character_age // VOREStation Edit - Minimum character age by rules is 18, return default which is standard for all species
+	//return (brain_type && LAZYACCESS(ideal_age_by_species, brain_type)) || LAZYACCESS(ideal_age_by_species, brain_type) || ideal_character_age //VOREStation Removal
+
+/datum/job/proc/is_species_banned(species_name, brain_type)
+	return FALSE // VOREStation Edit - Any species can be any job.
+	/* VOREStation Removal
+	if(banned_job_species == null)
+		return
+	if(species_name in banned_job_species)
+		return TRUE
+	if(brain_type in banned_job_species)
+		return TRUE
+	*/

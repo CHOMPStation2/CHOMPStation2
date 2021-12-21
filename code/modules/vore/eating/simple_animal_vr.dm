@@ -3,6 +3,12 @@
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
 	var/list/prey_excludes = list()		//For excluding people from being eaten.
 
+/mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
+	if(vore_active && !voremob_loaded)
+		voremob_loaded = TRUE
+		init_vore()
+	..()
+
 //
 // Simple nom proc for if you get ckey'd into a simple_mob mob! Avoids grabs.
 //
@@ -11,17 +17,29 @@
 	set category = "IC"
 	set desc = "Since you can't grab, you get a verb!"
 
+	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+		voremob_loaded = TRUE
+		init_vore()
 	if(stat != CONSCIOUS)
 		return
 	// Verbs are horrifying. They don't call overrides. So we're stuck with this.
 	if(istype(src, /mob/living/simple_mob/animal/passive/mouse) && !T.ckey)
 		// Mice can't eat logged out players!
 		return
-	if(client && IsAdvancedToolUser())
+	/*if(client && IsAdvancedToolUser()) //CHOMPedit: Mob QOL, not everything can be grabbed and nobody wants wiseguy gotchas for trying.
 		to_chat(src, "<span class='warning'>Put your hands to good use instead!</span>")
 		return
+	*/
 	feed_grabbed_to_self(src,T)
 	update_icon()
+
+//CHOMPedit: On-demand belly loading.
+/mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
+	if(vore_active && !voremob_loaded && pred == src) //Only init your own bellies.
+		voremob_loaded = TRUE
+		init_vore()
+		belly = vore_selected
+	..()
 
 //
 // Simple proc for animals to have their digestion toggled on/off externally
@@ -39,16 +57,19 @@
 	if(!vore_selected)
 		to_chat(user, "<span class='warning'>[src] isn't planning on eating anything much less digesting it.</span>")
 		return
+/*ChompStation edit: This prevented some flexibility with mob vore and the returned message was highly unprofessional.
+
 	if(ai_holder.retaliate || (ai_holder.hostile && faction != user.faction))
 		to_chat(user, "<span class='warning'>This predator isn't friendly, and doesn't give a shit about your opinions of it digesting you.</span>")
 		return
+*/
 	if(vore_selected.digest_mode == DM_HOLD)
-		var/confirm = alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", "Enable", "Cancel")
+		var/confirm = tgui_alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", list("Enable", "Cancel"))
 		if(confirm == "Enable")
 			vore_selected.digest_mode = DM_DIGEST
 			addtimer(VARSET_CALLBACK(vore_selected, digest_mode, vore_default_mode), 20 MINUTES)
 	else
-		var/confirm = alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", "Disable", "Cancel")
+		var/confirm = tgui_alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", list("Disable", "Cancel"))
 		if(confirm == "Disable")
 			vore_selected.digest_mode = DM_HOLD
 
@@ -89,6 +110,9 @@
 				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.
 					prey_excludes += L
 					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
+	else if(istype(O, /obj/item/device/healthanalyzer))
+		var/healthpercent = health/maxHealth*100
+		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")
 	else
 		..()
 
@@ -97,3 +121,43 @@
 		var/mob/living/L = target.resolve()
 		if(L)
 			LAZYREMOVE(prey_excludes, L)
+
+/mob/living/simple_mob/proc/nutrition_heal()
+	set name = "Nutrition Heal"
+	set category = "Abilities"
+	set desc = "Slowly regenerate health using nutrition."
+
+	if(nutrition < 10)
+		to_chat(src, "<span class='warning'>You are too hungry to regenerate health.</span>")
+		return
+	var/heal_amount = input(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.") as num|null
+	if(!heal_amount)
+		return
+	heal_amount = CLAMP(heal_amount, 1, maxHealth - health)
+	heal_amount = CLAMP(heal_amount, 1, nutrition / 10)
+	if(do_after (src, 10 * heal_amount))
+		nutrition -= 10 * heal_amount
+		if(heal_amount < getBruteLoss())
+			adjustBruteLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getBruteLoss()
+		adjustBruteLoss(-getBruteLoss())
+		if(heal_amount < getFireLoss())
+			adjustFireLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getFireLoss()
+		adjustFireLoss(-getFireLoss())
+		if(heal_amount < getOxyLoss())
+			adjustOxyLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getOxyLoss()
+		adjustOxyLoss(-getOxyLoss())
+		if(heal_amount < getToxLoss())
+			adjustToxLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getToxLoss()
+		adjustToxLoss(-getToxLoss())
+		if(heal_amount < getCloneLoss())
+			adjustCloneLoss(-heal_amount)
+			return
+		adjustCloneLoss(-getCloneLoss())

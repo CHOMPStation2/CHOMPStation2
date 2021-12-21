@@ -22,7 +22,7 @@
 	say_list_type = /datum/say_list/goat
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
-	meat_amount = 4
+	meat_amount = 6
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
 	var/datum/reagents/udder = null
@@ -54,8 +54,8 @@
 				var/step = get_step_to(src, food, 0)
 				Move(step)
 
-/mob/living/simple_mob/animal/goat/Move()
-	..()
+/mob/living/simple_mob/animal/goat/Moved(atom/old_loc, direction, forced = FALSE)
+	. = ..()
 	if(!stat)
 		for(var/obj/effect/plant/SV in loc)
 			SV.die_off(1)

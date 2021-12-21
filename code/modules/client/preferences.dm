@@ -2,7 +2,7 @@
 
 var/list/preferences_datums = list()
 
-datum/preferences
+/datum/preferences
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
@@ -23,8 +23,14 @@ datum/preferences
 	var/UI_style_alpha = 255
 	var/tooltipstyle = "Midnight"		//Style for popup tooltips
 	var/client_fps = 0
+	var/ambience_freq = 5				// How often we're playing repeating ambience to a client.
+	var/ambience_chance = 35			// What's the % chance we'll play ambience (in conjunction with the above frequency)
+
+	var/tgui_fancy = TRUE
+	var/tgui_lock = FALSE
 
 	//character preferences
+	var/num_languages = 0				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
@@ -37,11 +43,15 @@ datum/preferences
 	var/r_hair = 0						//Hair color
 	var/g_hair = 0						//Hair color
 	var/b_hair = 0						//Hair color
+	var/grad_style = "none"				//Gradient style
+	var/r_grad = 0						//Gradient color
+	var/g_grad = 0						//Gradient color
+	var/b_grad = 0						//Gradient color
 	var/f_style = "Shaved"				//Face hair type
 	var/r_facial = 0					//Face hair color
 	var/g_facial = 0					//Face hair color
 	var/b_facial = 0					//Face hair color
-	var/s_tone = 0						//Skin tone
+	var/s_tone = -75						//Skin tone
 	var/r_skin = 238					//Skin color // Vorestation edit, so color multi sprites can aren't BLACK AS THE VOID by default.
 	var/g_skin = 206					//Skin color // Vorestation edit, so color multi sprites can aren't BLACK AS THE VOID by default.
 	var/b_skin = 179					//Skin color // Vorestation edit, so color multi sprites can aren't BLACK AS THE VOID by default.
@@ -71,7 +81,15 @@ datum/preferences
 	var/antag_vis = "Hidden"			//How visible antag association is to others.
 
 		//Mob preview
-	var/icon/preview_icon = null
+	var/list/char_render_holders		//Should only be a key-value list of north/south/east/west = obj/screen.
+	var/static/list/preview_screen_locs = list(
+		"1" = "character_preview_map:2,7",
+		"2" = "character_preview_map:2,5",
+		"4"  = "character_preview_map:2,3",
+		"8"  = "character_preview_map:2,1",
+		"BG" = "character_preview_map:1,1 to 3,8",
+		"PMH" = "character_preview_map:2,7"
+	)
 
 		//Jobs, uses bitflags
 	var/job_civilian_high = 0
@@ -133,6 +151,22 @@ datum/preferences
 	var/datum/browser/panel
 
 	var/lastnews // Hash of last seen lobby news content.
+	var/lastlorenews //ID of last seen lore news article.
+
+	var/examine_text_mode = 0 // Just examine text, include usage (description_info), switch to examine panel.
+	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
+
+	var/list/volume_channels = list()
+	
+	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
+	var/selecting_slots = FALSE
+
+//CHOMPEdit Begin
+/datum/preferences/proc/numlanguage()
+	var/datum/species/S = GLOB.all_species[species]
+	var/num = max(num_languages, S.num_alternate_languages)
+	return (num == 0) ? 3 : num //Don't return 0
+//CHOMPEdit End
 
 /datum/preferences/New(client/C)
 	player_setup = new(src)
@@ -150,8 +184,12 @@ datum/preferences
 		if(!IsGuestKey(C.key))
 			load_path(C.ckey)
 			if(load_preferences())
-				if(load_character())
-					return
+				load_character()
+
+
+/datum/preferences/Destroy()
+	. = ..()
+	QDEL_LIST_ASSOC_VAL(char_render_holders)
 
 /datum/preferences/proc/ZeroSkills(var/forced = 0)
 	for(var/V in SKILLS) for(var/datum/skill/S in SKILLS[V])
@@ -210,8 +248,11 @@ datum/preferences
 
 	if(!get_mob_by_key(client_ckey))
 		to_chat(user, "<span class='danger'>No mob exists for the given client!</span>")
-		close_load_dialog(user)
 		return
+
+	if(!char_render_holders)
+		update_preview_icon()
+	show_character_previews()
 
 	var/dat = "<html><body><center>"
 
@@ -233,9 +274,57 @@ datum/preferences
 
 	dat += "</html></body>"
 	//user << browse(dat, "window=preferences;size=635x736")
-	var/datum/browser/popup = new(user, "Character Setup","Character Setup", 800, 800, src)
+	winshow(user, "preferences_window", TRUE)
+	var/datum/browser/popup = new(user, "preferences_browser", "Character Setup", 800, 800)
 	popup.set_content(dat)
-	popup.open()
+	popup.open(FALSE) // Skip registring onclose on the browser pane
+	onclose(user, "preferences_window", src) // We want to register on the window itself
+
+/datum/preferences/proc/update_character_previews(mutable_appearance/MA)
+	if(!client)
+		return
+
+	var/obj/screen/setup_preview/pm_helper/PMH = LAZYACCESS(char_render_holders, "PMH")
+	if(!PMH)
+		PMH = new
+		LAZYSET(char_render_holders, "PMH", PMH)
+		client.screen |= PMH
+	PMH.screen_loc = preview_screen_locs["PMH"]
+
+	var/obj/screen/setup_preview/bg/BG = LAZYACCESS(char_render_holders, "BG")
+	if(!BG)
+		BG = new
+		BG.plane = TURF_PLANE
+		BG.icon = 'icons/effects/setup_backgrounds_vr.dmi'
+		BG.pref = src
+		LAZYSET(char_render_holders, "BG", BG)
+		client.screen |= BG
+	BG.icon_state = bgstate
+	BG.screen_loc = preview_screen_locs["BG"]
+
+	for(var/D in global.cardinal)
+		var/obj/screen/setup_preview/O = LAZYACCESS(char_render_holders, "[D]")
+		if(!O)
+			O = new
+			O.pref = src
+			LAZYSET(char_render_holders, "[D]", O)
+			client.screen |= O
+		O.appearance = MA
+		O.dir = D
+		O.screen_loc = preview_screen_locs["[D]"]
+
+/datum/preferences/proc/show_character_previews()
+	if(!client || !char_render_holders)
+		return
+	for(var/render_holder in char_render_holders)
+		client.screen |= char_render_holders[render_holder]
+
+/datum/preferences/proc/clear_character_previews()
+	for(var/index in char_render_holders)
+		var/obj/screen/S = char_render_holders[index]
+		client?.screen -= S
+		qdel(S)
+	char_render_holders = null
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(!user)	return
@@ -267,13 +356,10 @@ datum/preferences
 		if(!IsGuestKey(usr.key))
 			open_load_dialog(usr)
 			return 1
-	else if(href_list["changeslot"])
-		load_character(text2num(href_list["changeslot"]))
-		attempt_vr(client.prefs_vr,"load_vore","") //VOREStation Edit
-		sanitize_preferences()
-		close_load_dialog(usr)
 	else if(href_list["resetslot"])
-		if("No" == alert("This will reset the current slot. Continue?", "Reset current slot?", "No", "Yes"))
+		if("No" == tgui_alert(usr, "This will reset the current slot. Continue?", "Reset current slot?", list("No", "Yes")))
+			return 0
+		if("No" == tgui_alert(usr, "Are you completely sure that you want to reset this character slot?", "Reset current slot?", list("No", "Yes")))
 			return 0
 		load_character(SAVE_RESET)
 		sanitize_preferences()
@@ -281,10 +367,10 @@ datum/preferences
 		if(!IsGuestKey(usr.key))
 			open_copy_dialog(usr)
 			return 1
-	else if(href_list["overwrite"])
-		overwrite_character(text2num(href_list["overwrite"]))
-		sanitize_preferences()
-		close_load_dialog(usr)
+	else if(href_list["close"])
+		// User closed preferences window, cleanup anything we need to.
+		clear_character_previews()
+		return 1
 	else
 		return 0
 
@@ -319,51 +405,80 @@ datum/preferences
 			character.descriptors[entry] = body_descriptors[entry]
 
 /datum/preferences/proc/open_load_dialog(mob/user)
-	var/dat = "<body>"
-	dat += "<tt><center>"
-
+	if(selecting_slots)
+		to_chat(user, "<span class='warning'>You already have a slot selection dialog open!</span>")
+		return
 	var/savefile/S = new /savefile(path)
-	if(S)
-		dat += "<b>Select a character slot to load</b><hr>"
-		var/name
-		for(var/i=1, i<= config.character_slots, i++)
-			S.cd = "/character[i]"
-			S["real_name"] >> name
-			if(!name)	name = "Character[i]"
-			if(i==default_slot)
-				name = "<b>[name]</b>"
-			dat += "<a href='?src=\ref[src];changeslot=[i]'>[name]</a><br>"
+	if(!S)
+		error("Somehow missing savefile path?! [path]")
+		return
 
-	dat += "<hr>"
-	dat += "</center></tt>"
-	//user << browse(dat, "window=saves;size=300x390")
-	panel = new(user, "Character Slots", "Character Slots", 300, 390, src)
-	panel.set_content(dat)
-	panel.open()
+	var/name
+	var/nickname //vorestation edit - This set appends nicknames to the save slot
+	var/list/charlist = list()
+	for(var/i=1, i<= config.character_slots, i++)
+		S.cd = "/character[i]"
+		S["real_name"] >> name
+		S["nickname"] >> nickname //vorestation edit
+		if(!name)
+			name = "[i] - \[Unused Slot\]"
+		else if(i == default_slot)
+			name = "►[i] - [name]"
+		else
+			name = "[i] - [name]"
+		charlist["[name][nickname ? " ([nickname])" : ""]"] = i
 
-/datum/preferences/proc/close_load_dialog(mob/user)
-	//user << browse(null, "window=saves")
-	panel.close()
+	selecting_slots = TRUE
+	var/choice = tgui_input_list(user, "Select a character to load:", "Load Slot", charlist)
+	selecting_slots = FALSE
+	if(!choice)
+		return
+	
+	var/slotnum = charlist[choice]
+	if(!slotnum)
+		error("Player picked [choice] slot to load, but that wasn't one we sent.")
+		return
+	
+	load_character(slotnum)
+	attempt_vr(user.client?.prefs_vr,"load_vore","") //VOREStation Edit
+	sanitize_preferences()
+	ShowChoices(user)
 
 /datum/preferences/proc/open_copy_dialog(mob/user)
-	var/dat = "<body>"
-	dat += "<tt><center>"
-
+	if(selecting_slots)
+		to_chat(user, "<span class='warning'>You already have a slot selection dialog open!</span>")
+		return
 	var/savefile/S = new /savefile(path)
-	if(S)
-		dat += "<b>Select a character slot to overwrite</b><br>"
-		dat += "<b>You will then need to save to confirm</b><hr>"
-		var/name
-		for(var/i=1, i<= config.character_slots, i++)
-			S.cd = "/character[i]"
-			S["real_name"] >> name
-			if(!name)	name = "Character[i]"
-			if(i==default_slot)
-				name = "<b>[name]</b>"
-			dat += "<a href='?src=\ref[src];overwrite=[i]'>[name]</a><br>"
+	if(!S)
+		error("Somehow missing savefile path?! [path]")
+		return
 
-	dat += "<hr>"
-	dat += "</center></tt>"
-	panel = new(user, "Character Slots", "Character Slots", 300, 390, src)
-	panel.set_content(dat)
-	panel.open()
+	var/name
+	var/nickname //vorestation edit - This set appends nicknames to the save slot
+	var/list/charlist = list()
+	for(var/i=1, i<= config.character_slots, i++)
+		S.cd = "/character[i]"
+		S["real_name"] >> name
+		S["nickname"] >> nickname //vorestation edit
+		if(!name)
+			name = "[i] - \[Unused Slot\]"
+		if(i == default_slot)
+			name = "►[i] - [name]"
+		else
+			name = "[i] - [name]"
+		charlist["[name][nickname ? " ([nickname])" : ""]"] = i
+
+	selecting_slots = TRUE
+	var/choice = tgui_input_list(user, "Select a character to COPY TO:", "Copy Slot", charlist)
+	selecting_slots = FALSE
+	if(!choice)
+		return
+	
+	var/slotnum = charlist[choice]
+	if(!slotnum)
+		error("Player picked [choice] slot to copy to, but that wasn't one we sent.")
+		return
+	
+	overwrite_character(slotnum)
+	sanitize_preferences()
+	ShowChoices(user)

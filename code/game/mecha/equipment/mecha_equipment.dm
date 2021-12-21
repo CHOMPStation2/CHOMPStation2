@@ -17,32 +17,35 @@
 	origin_tech = list(TECH_MATERIAL = 2)
 	description_info = "Some equipment may gain new abilities or advantages if equipped to certain types of Exosuits."
 	var/equip_cooldown = 0
-	var/equip_ready = 1
+	var/equip_ready = TRUE
 	var/energy_drain = 0
 	var/obj/mecha/chassis = null
 	var/range = MELEE //bitflags
-	var/salvageable = 1
+	/// Bitflag. Used by exosuit fabricator to assign sub-categories based on which exosuits can equip this.
+	var/mech_flags = NONE
+	var/salvageable = TRUE
 	var/required_type = /obj/mecha //may be either a type or a list of allowed types
 	var/equip_type = null //mechaequip2
 	var/allow_duplicate = FALSE
 	var/ready_sound = 'sound/mecha/mech_reload_default.ogg' //Sound to play once the fire delay passed.
 	var/enable_special = FALSE	// Will the tool do its special?
 
+	var/step_delay = 0	// Does the component slow/speed up the suit?
+
 /obj/item/mecha_parts/mecha_equipment/proc/do_after_cooldown(target=1)
 	sleep(equip_cooldown)
-	set_ready_state(1)
+	set_ready_state(TRUE)
 	if(ready_sound) //Kind of like the kinetic accelerator.
-		playsound(loc, ready_sound, 50, 1, -1)
+		playsound(src, ready_sound, 50, 1, -1)
 	if(target && chassis)
 		return 1
 	return 0
 
 /obj/item/mecha_parts/mecha_equipment/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>\The [src] will fill [equip_type?"a [equip_type]":"any"] slot.</span>")
+	. = ..()
+	. += "<span class='notice'>[src] will fill [equip_type?"a [equip_type]":"any"] slot.</span>"
 
-/obj/item/mecha_parts/mecha_equipment/New()
-	..()
+/obj/item/mecha_parts/mecha_equipment/proc/add_equip_overlay(obj/mecha/M as obj)
 	return
 
 /obj/item/mecha_parts/mecha_equipment/proc/update_chassis_page()
@@ -74,12 +77,14 @@
 				chassis.special_equipment -= src
 				listclearnulls(chassis.special_equipment)
 			//VOREStation Addition begin: MICROMECHS
+			//CHOMPedit commented micromech stuff, because fuck this trash
+			/*
 			if(equip_type == EQUIP_MICRO_UTILITY)
 				chassis.micro_utility_equipment -= src
 				listclearnulls(chassis.micro_utility_equipment)
 			if(equip_type == EQUIP_MICRO_WEAPON)
 				chassis.micro_weapon_equipment -= src
-				listclearnulls(chassis.micro_weapon_equipment)
+				listclearnulls(chassis.micro_weapon_equipment) */
 			//VOREStation Addition end: MICROMECHS
 		chassis.universal_equipment -= src
 		chassis.equipment -= src
@@ -164,10 +169,12 @@
 	if(equip_type == EQUIP_SPECIAL && M.special_equipment.len < M.max_special_equip)
 		return 1
 	//VOREStation Addition begin: MICROMECHS
+	//CHOMPedit commented micromech stuff, because fuck this trash
+	/*
 	if(equip_type == EQUIP_MICRO_UTILITY && M.micro_utility_equipment.len < M.max_micro_utility_equip)
 		return 1
 	if(equip_type == EQUIP_MICRO_WEAPON && M.micro_weapon_equipment.len < M.max_micro_weapon_equip)
-		return 1
+		return 1 */
 	//VOREStation Addition end: MICROMECHS
 	if(equip_type != EQUIP_SPECIAL && M.universal_equipment.len < M.max_universal_equip) //The exosuit needs to be military grade to actually have a universal slot capable of accepting a true weapon.
 		if(equip_type == EQUIP_WEAPON && !istype(M, /obj/mecha/combat))
@@ -198,12 +205,14 @@
 		M.special_equipment += src
 		has_equipped = 1
 	//VOREStation Addition begin: MICROMECHS
+	//CHOMPedit commented micromech stuff, because fuck this trash
+	/*
 	if(equip_type == EQUIP_MICRO_UTILITY && M.micro_utility_equipment.len < M.max_micro_utility_equip && !has_equipped)
 		M.micro_utility_equipment += src
 		has_equipped = 1
 	if(equip_type == EQUIP_MICRO_WEAPON && M.micro_weapon_equipment.len < M.max_micro_weapon_equip && !has_equipped)
 		M.micro_weapon_equipment += src
-		has_equipped = 1
+		has_equipped = 1 */
 	//VOREStation Addition end: MICROMECHS
 	if(equip_type != EQUIP_SPECIAL && M.universal_equipment.len < M.max_universal_equip && !has_equipped)
 		M.universal_equipment += src
@@ -220,33 +229,41 @@
 	src.update_chassis_page()
 	return
 
+/obj/item/mecha_parts/mecha_equipment/Destroy()
+	detach()
+	return ..()
+
 /obj/item/mecha_parts/mecha_equipment/proc/detach(atom/moveto=null)
+	if(!chassis)
+		return
 	moveto = moveto || get_turf(chassis)
-	if(src.Move(moveto))
-		chassis.equipment -= src
-		chassis.universal_equipment -= src
-		if(equip_type)
-			switch(equip_type)
-				if(EQUIP_HULL)
-					chassis.hull_equipment -= src
-				if(EQUIP_WEAPON)
-					chassis.weapon_equipment -= src
-				if(EQUIP_UTILITY)
-					chassis.utility_equipment -= src
-				if(EQUIP_SPECIAL)
-					chassis.special_equipment -= src
-				//VOREStation Addition begin: MICROMECHS
-				if(EQUIP_MICRO_UTILITY)//CHOMPstation edit - This was improperly named bugging detaching on my equipment fix.
-					chassis.micro_utility_equipment -= src
-				if(EQUIP_MICRO_WEAPON)
-					chassis.micro_weapon_equipment -= src
-				//VOREStation Addition end: MICROMECHS
-		if(chassis.selected == src)
-			chassis.selected = null
-		update_chassis_page()
-		chassis.log_message("[src] removed from equipment.")
-		chassis = null
-		set_ready_state(1)
+	forceMove(moveto)
+	chassis.equipment -= src
+	chassis.universal_equipment -= src
+	if(equip_type)
+		switch(equip_type)
+			if(EQUIP_HULL)
+				chassis.hull_equipment -= src
+			if(EQUIP_WEAPON)
+				chassis.weapon_equipment -= src
+			if(EQUIP_UTILITY)
+				chassis.utility_equipment -= src
+			if(EQUIP_SPECIAL)
+				chassis.special_equipment -= src
+			//VOREStation Addition begin: MICROMECHS
+			//CHOMPedit commented micromech stuff, because fuck this trash
+			/*
+			if(EQUIP_MICRO_UTILITY)//CHOMPstation edit - This was improperly named bugging detaching on my equipment fix.
+				chassis.micro_utility_equipment -= src
+			if(EQUIP_MICRO_WEAPON)
+				chassis.micro_weapon_equipment -= src */
+			//VOREStation Addition end: MICROMECHS
+	if(chassis.selected == src)
+		chassis.selected = null
+	update_chassis_page()
+	chassis.log_message("[src] removed from equipment.")
+	chassis = null
+	set_ready_state(TRUE)
 	enable_special = FALSE
 	return
 
@@ -273,3 +290,6 @@
 
 /obj/item/mecha_parts/mecha_equipment/proc/MoveAction() //Allows mech equipment to do an action upon the mech moving
 	return
+
+/obj/item/mecha_parts/mecha_equipment/proc/get_step_delay() // Equipment returns its slowdown or speedboost.
+	return step_delay

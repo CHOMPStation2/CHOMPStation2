@@ -72,7 +72,7 @@
 /datum/shuttle_destination/New(var/new_master)
 	my_landmark = SSshuttles.get_landmark(my_landmark)
 	if(!my_landmark)
-		log_debug("Web shuttle destination '[name]' could not find its landmark '[my_landmark]'.")
+		log_debug("Web shuttle destination '[name]' could not find its landmark '[my_landmark]'.") // Important error message
 	master = new_master
 
 /datum/shuttle_destination/Destroy()
@@ -193,7 +193,7 @@
 
 /datum/shuttle_web_master/proc/build_destinations()
 	// First, instantiate all the destination subtypes relevant to this datum.
-	var/list/destination_types = typesof(destination_class) - destination_class
+	var/list/destination_types = subtypesof(destination_class)
 	for(var/new_type in destination_types)
 		var/datum/shuttle_destination/D = new_type
 		if(initial(D.skip_me))
@@ -220,6 +220,7 @@
 		return current_destination.routes.Copy()
 
 /datum/shuttle_web_master/proc/get_current_destination()
+	RETURN_TYPE(/datum/shuttle_destination)
 	return current_destination
 
 /datum/shuttle_web_master/proc/get_destination_by_type(var/type_to_get)

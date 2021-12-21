@@ -65,7 +65,7 @@
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 2
-	spawn_positions = 1
+	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
 	access = list(access_hydroponics, access_bar, access_kitchen)
@@ -99,6 +99,7 @@
 	economic_modifier = 5
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station)
 	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station)
+	banned_job_species = list("digital", SPECIES_PROMETHEAN)
 
 	ideal_character_age = 40
 
@@ -205,6 +206,7 @@
 // Librarian Alt Titles
 /datum/alt_title/journalist
 	title = "Journalist"
+	title_outfit = /decl/hierarchy/outfit/job/librarian/journalist
 	title_blurb = "The Journalist uses the Library as a base of operations, from which they can report the news and goings-on on the station with their camera."
 
 /datum/alt_title/writer
@@ -230,6 +232,7 @@
 	access = list(access_lawyer, access_sec_doors, access_maint_tunnels, access_heads)
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
 	minimal_player_age = 7
+	banned_job_species = list(SPECIES_PROMETHEAN, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_ZADDAT, "digital")
 
 	outfit_type = /decl/hierarchy/outfit/job/internal_affairs_agent
 	job_description = "An Internal Affairs Agent makes sure that the crew is following Standard Operating Procedure. They also \

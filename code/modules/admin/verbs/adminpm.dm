@@ -31,7 +31,9 @@
 				targets["[T.mob.real_name](as [T.mob.name]) - [T]"] = T
 		else
 			targets["(No Mob) - [T]"] = T
-	var/target = input(src,"To whom shall we send a message?","Admin PM",null) as null|anything in sortList(targets)
+	var/target = tgui_input_list(src,"To whom shall we send a message?","Admin PM", sortList(targets))
+	if(!target) //Admin canceled
+		return
 	cmd_admin_pm(targets[target],null)
 	feedback_add_details("admin_verb","Admin PM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -200,12 +202,12 @@
 
 	if(irc)
 		log_admin("PM: [key_name(src)]->IRC: [rawmsg]")
-		for(var/client/X in admins)
+		for(var/client/X in GLOB.admins)
 			to_chat(X, "<span class='pm notice'><B>PM: [key_name(src, X, 0)]-&gt;IRC:</B> [keywordparsedmsg]</span>")
 	else
 		log_admin("PM: [key_name(src)]->[key_name(recipient)]: [rawmsg]")
 		//we don't use message_admins here because the sender/receiver might get it too
-		for(var/client/X in admins)
+		for(var/client/X in GLOB.admins)
 			if(X.key!=key && X.key!=recipient.key)	//check client/X is an admin and isn't the sender or recipient
 				to_chat(X, "<span class='pm notice'><B>PM: [key_name(src, X, 0)]-&gt;[key_name(recipient, X, 0)]:</B> [keywordparsedmsg]</span>" )
 
@@ -262,7 +264,7 @@
 
 	admin_ticket_log(C, "<span class='pm notice'>PM From [irc_tagged]: [msg]</span>")
 
-	window_flash(C, ignorepref = TRUE)
+	window_flash(C)
 	//always play non-admin recipients the adminhelp sound
 	C << 'sound/effects/adminhelp.ogg'
 

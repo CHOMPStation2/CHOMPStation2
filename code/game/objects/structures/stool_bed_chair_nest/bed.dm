@@ -13,12 +13,12 @@
 	icon = 'icons/obj/furniture.dmi'
 	icon_state = "bed"
 	pressure_resistance = 15
-	anchored = 1
-	can_buckle = 1
+	anchored = TRUE
+	can_buckle = TRUE
 	buckle_dir = SOUTH
 	buckle_lying = 1
-	var/material/material
-	var/material/padding_material
+	var/datum/material/material
+	var/datum/material/padding_material
 	var/base_icon = "bed"
 	var/applies_material_colour = 1
 
@@ -26,7 +26,7 @@
 	..(newloc)
 	color = null
 	if(!new_material)
-		new_material = DEFAULT_WALL_MATERIAL
+		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
 	if(!istype(material))
 		qdel(src)
@@ -128,8 +128,15 @@
 			to_chat(user, "\The [src] has no padding to remove.")
 			return
 		to_chat(user, "You remove the padding from \the [src].")
-		playsound(src.loc, W.usesound, 100, 1)
+		playsound(src, W.usesound, 100, 1)
 		remove_padding()
+
+	else if(istype(W, /obj/item/weapon/disk) || (istype(W, /obj/item/toy/plushie)))
+		user.drop_from_inventory(W, get_turf(src))
+		W.pixel_x = 10 //make sure they reach the pillow
+		W.pixel_y = -6
+		if(istype(W, /obj/item/weapon/disk))
+			user.visible_message("<span class='notice'>[src] sleeps soundly. Sleep tight, disky.</span>")
 
 	else if(istype(W, /obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = W
@@ -201,8 +208,8 @@
 	desc = "A portable bed-on-wheels made for transporting medical patients."
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "rollerbed"
-	anchored = 0
-	surgery_odds = 75
+	anchored = FALSE
+	surgery_odds = 50 //VOREStation Edit
 	var/bedtype = /obj/structure/bed/roller
 	var/rollertype = /obj/item/roller
 
@@ -240,6 +247,8 @@
 	w_class = ITEMSIZE_LARGE
 	var/rollertype = /obj/item/roller
 	var/bedtype = /obj/structure/bed/roller
+	drop_sound = 'sound/items/drop/axe.ogg'
+	pickup_sound = 'sound/items/pickup/axe.ogg'
 
 /obj/item/roller/attack_self(mob/user)
 	var/obj/structure/bed/roller/R = new bedtype(user.loc)
@@ -290,26 +299,21 @@
 	held = null
 
 
-/obj/structure/bed/roller/Move()
-	..()
-	playsound(src, 'sound/effects/roll.ogg', 100, 1)
-	if(has_buckled_mobs())
-		for(var/A in buckled_mobs)
-			var/mob/living/L = A
+/obj/structure/bed/roller/Moved(atom/old_loc, direction, forced = FALSE)
+	. = ..()
 
-			if(L.buckled == src)
-				L.loc = src.loc
+	playsound(src, 'sound/effects/roll.ogg', 100, 1)
 
 /obj/structure/bed/roller/post_buckle_mob(mob/living/M as mob)
 	if(M.buckled == src)
 		M.pixel_y = 6
 		M.old_y = 6
-		density = 1
+		density = TRUE
 		icon_state = "[initial(icon_state)]_up"
 	else
 		M.pixel_y = 0
 		M.old_y = 0
-		density = 0
+		density = FALSE
 		icon_state = "[initial(icon_state)]"
 	update_icon()
 	return ..()

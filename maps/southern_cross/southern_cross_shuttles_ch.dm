@@ -1,26 +1,4 @@
 
-//Casino
-/datum/shuttle/autodock/ferry/casino
-	name = "Casino"
-	location = FERRY_LOCATION_OFFSITE
-	warmup_time = 10
-	shuttle_area = /area/shuttle/casino/ship
-	landmark_offsite = "casino_offsite"
-	landmark_station = "casino_station"
-	docking_controller_tag = "casino_shuttle"
-
-/obj/effect/shuttle_landmark/southern_cross/casino_offsite
-	name = "Casino Ship"
-	landmark_tag = "casino_offsite"
-	docking_controller = "casino_shuttle_bay"
-	base_area = /area/space
-	base_turf = /turf/space
-
-/obj/effect/shuttle_landmark/southern_cross/casino_station
-	name = "Casino Station"
-	landmark_tag = "casino_station"
-	docking_controller = "casino_shuttle_dock_airlock"
-
 //Exploration carrier
 /obj/machinery/computer/shuttle_control/exploration
 	name = "Exploration Sling Control Console"

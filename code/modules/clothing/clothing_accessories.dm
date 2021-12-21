@@ -9,8 +9,7 @@
 
 	//Find all consumed slots
 	var/consumed_slots = 0
-	for(var/thing in accessories)
-		var/obj/item/clothing/accessory/AC = thing
+	for(var/obj/item/clothing/accessory/AC as anything in accessories)
 		consumed_slots |= AC.slot
 
 	//Mask to just consumed restricted
@@ -67,10 +66,9 @@
 		src.add_fingerprint(usr)
 
 /obj/item/clothing/examine(var/mob/user)
-	..(user)
+	. = ..(user)
 	if(LAZYLEN(accessories))
-		for(var/obj/item/clothing/accessory/A in accessories)
-			to_chat(user, "\A [A] is attached to it.")
+		. += "It has the following attached: [counting_english_list(accessories)]"
 
 /**
  *  Attach accessory A to src
@@ -128,13 +126,26 @@
 	if(usr.stat)
 		return
 
+	// CHOMPEdit begin
+	if(iscarbon(usr))
+		var/mob/living/carbon/C = usr
+		if(C.handcuffed)
+			to_chat(C, "<span class='warning'>You cannot remove accessories while handcuffed!</span>")
+			return
+		else if(istype(C, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = C
+			if(H.ability_flags & 0x1)
+				to_chat(H, "<span class='warning'>You cannot remove accessories while phase shifted!</span>")
+				return
+	//CHOMPEdit end
+
 	var/obj/item/clothing/accessory/A
 	var/accessory_amount = LAZYLEN(accessories)
 	if(accessory_amount)
 		if(accessory_amount == 1)
 			A = accessories[1] // If there's only one accessory, just remove it without any additional prompts.
 		else
-			A = input("Select an accessory to remove from \the [src]") as null|anything in accessories
+			A = tgui_input_list(usr, "Select an accessory to remove from \the [src]", "Accessory Choice", accessories)
 
 	if(A)
 		remove_accessory(usr,A)

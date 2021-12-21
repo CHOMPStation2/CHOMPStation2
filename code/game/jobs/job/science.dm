@@ -11,7 +11,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Colony Director"
+	supervisors = "the Site Manager"
 	selection_color = "#AD6BAD"
 	req_admin_notify = 1
 	economic_modifier = 15
@@ -27,7 +27,10 @@
 
 	minimum_character_age = 25
 	minimal_player_age = 14
+	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
+	ideal_age_by_species = list(SPECIES_UNATHI = 140, "mechanical" = 20, SPECIES_HUMAN_VATBORN = 20)
+	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital")
 
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
 	job_description = "The Research Director manages and maintains the Research department. They are required to ensure the safety of the entire crew, \
@@ -36,10 +39,11 @@
 						are encouraged to allow their staff to perform their own duties."
 	alt_titles = list("Research Supervisor" = /datum/alt_title/research_supervisor)
 
+
 // Research Director Alt Titles
 /datum/alt_title/research_supervisor
 	title = "Research Supervisor"
-	
+
 //////////////////////////////////
 //			Scientist
 //////////////////////////////////
@@ -56,6 +60,8 @@
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+	banned_job_species = list("digital")
 
 	minimal_player_age = 3
 
@@ -99,19 +105,23 @@
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics)
 	minimal_access = list(access_research, access_xenobiology, access_hydroponics, access_tox_storage)
+	banned_job_species = list("digital")
 
-	minimal_player_age = 3
+	minimal_player_age = 14
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
 	job_description = "A Xenobiologist studies esoteric lifeforms, usually in the relative safety of their lab. They attempt to find ways to benefit \
 						from the byproducts of these lifeforms, and their main subject at present is the Giant Slime."
+/*VR edit start
 	alt_titles = list("Xenobotanist" = /datum/alt_title/xenobot)
 
-// Xenibiologist Alt Titles
+ Xenibiologist Alt Titles
 /datum/alt_title/xenobot
 	title = "Xenobotanist"
 	title_blurb = "A Xenobotanist grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
 					is both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+VR edit end*/
 
 //////////////////////////////////
 //			Roboticist
@@ -129,7 +139,9 @@
 	economic_modifier = 5
 	access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	minimal_player_age = 3
+	minimal_player_age = 7
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+	banned_job_species = list("digital")
 
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
 	job_description = "A Roboticist maintains and repairs the station's synthetics, including crew with prosthetic limbs. \

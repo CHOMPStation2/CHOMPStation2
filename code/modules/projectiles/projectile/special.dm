@@ -41,8 +41,8 @@
 	icon_state= "bolter"
 	damage = 50
 	check_armour = "bullet"
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 
 /obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
 	explosion(target, -1, 0, 2)
@@ -87,7 +87,12 @@
 
 		new_temperature = round(new_temperature * temp_factor)
 		L.bodytemperature = new_temperature
-
+	//VOREStation Add Start - The last metroid has escaped from captivity, the galaxy is no longer safe.
+		if(istype(L, /mob/living/simple_mob/vore/alienanimals/space_jellyfish) && target_temperature <= T0C)
+			var/mob/living/simple_mob/vore/alienanimals/space_jellyfish/J = L
+			J.adjustFireLoss(75)
+			J.movement_cooldown *= 2
+	//VOREStation Add End
 	return 1
 
 /obj/item/projectile/temp/hot
@@ -116,7 +121,7 @@
 		if(A)
 
 			A.ex_act(2)
-			playsound(src.loc, 'sound/effects/meteorimpact.ogg', 40, 1)
+			playsound(src, 'sound/effects/meteorimpact.ogg', 40, 1)
 
 			for(var/mob/M in range(10, src))
 				if(!M.stat && !istype(M, /mob/living/silicon/ai))\
@@ -138,7 +143,7 @@
 	light_power = 0.5
 	light_color = "#33CC00"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/monochrome_laser
-
+	var/lasermod = 0
 	combustion = FALSE
 
 /obj/item/projectile/energy/floramut/on_hit(var/atom/target, var/blocked = 0)
@@ -195,13 +200,14 @@
 	light_power = 0.5
 	light_color = "#FFFFFF"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/monochrome_laser
+	var/lasermod = 0
 
 /obj/item/projectile/energy/florayield/on_hit(var/atom/target, var/blocked = 0)
-	var/mob/M = target
+	var/mob/living/M = target
 	if(ishuman(target)) //These rays make plantmen fat.
 		var/mob/living/carbon/human/H = M
 		if((H.species.flags & IS_PLANT) && (M.nutrition < 500))
-			M.nutrition += 30
+			M.adjust_nutrition(30)
 	else if (istype(target, /mob/living/carbon/))
 		M.show_message("<font color='blue'>The radiation beam dissipates harmlessly through your body.</font>")
 	else
@@ -277,9 +283,9 @@
 	light_power = 3
 	light_color = "#3300ff"
 
-	muzzle_type = /obj/effect/projectile/tungsten/muzzle
-	tracer_type = /obj/effect/projectile/tungsten/tracer
-	impact_type = /obj/effect/projectile/tungsten/impact
+	muzzle_type = /obj/effect/projectile/muzzle/tungsten
+	tracer_type = /obj/effect/projectile/tracer/tungsten
+	impact_type = /obj/effect/projectile/impact/tungsten
 
 /obj/item/projectile/beam/tungsten/on_hit(var/atom/target, var/blocked = 0)
 	if(isliving(target))

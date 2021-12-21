@@ -99,7 +99,8 @@ What Borgs are available is sadly handled in the above file in the proc
 	src.emag.name = "Mickey Finn's Special Brew"
 
 	R.can_buckle = 1
-	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_colors_ch.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_colors_ch.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

@@ -2,22 +2,26 @@
 	name = "laser rifle"
 	desc = "A Hephaestus Industries G40E rifle, designed to kill with concentrated energy blasts.  This variant has the ability to \
 	switch between standard fire and a more efficent but weaker 'suppressive' fire."
+	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by armed forces across human space."
 	icon_state = "laser"
 	item_state = "laser"
 	wielded_item_state = "laser-wielded"
 	fire_delay = 8
 	slot_flags = SLOT_BELT|SLOT_BACK
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	force = 10
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/midlaser
-//	one_handed_penalty = 30
+	one_handed_penalty = 30
 
 	firemodes = list(
 		list(mode_name="normal", fire_delay=8, projectile_type=/obj/item/projectile/beam/midlaser, charge_cost = 240),
 		list(mode_name="suppressive", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 60),
 		)
+
+/obj/item/weapon/gun/energy/laser/empty
+	cell_type = null
 
 /obj/item/weapon/gun/energy/laser/mounted
 	self_recharge = 1
@@ -25,9 +29,16 @@
 	one_handed_penalty = 0 // Not sure if two-handing gets checked for mounted weapons, but better safe than sorry.
 
 /obj/item/weapon/gun/energy/laser/mounted/augment
+	name = "arm-laser"
+	desc = "A cruel malformation of a Hephaestus Industries G40E rifle, designed to kill with concentrated energy blasts, all while being stowable in the arm. This variant has the ability to \
+	switch between standard fire and a more efficent but weaker 'suppressive' fire."
 	use_external_power = FALSE
 	use_organic_power = TRUE
+	wielded_item_state = null
+	item_state = "augment_laser"
 	canremove = FALSE
+	one_handed_penalty = 5
+	battery_lock = 1
 
 /obj/item/weapon/gun/energy/laser/practice
 	name = "practice laser carbine"
@@ -42,11 +53,22 @@
 		list(mode_name="suppressive", projectile_type=/obj/item/projectile/beam/practice, charge_cost = 12),
 		)
 
+//Functionally identical, but slightly higher tech due to rarer.
+/obj/item/weapon/gun/energy/laser/sleek
+	name = "\improper LR1 Shishi"
+	desc = "A Bishamonten Company LR1 Shishi rifle, a rare early 23rd century futurist design with a nonetheless timeless ability to kill."
+	description_fluff = "Bisamonten was arms company that operated from roughly 2150-2280 - the height of the first extrasolar colonisation boom - before filing for bankruptcy and selling off its assets to various companies that would go on to become today’s TSCs. \
+	Focused on sleek ‘futurist’ designs which have largely fallen out of fashion but remain popular with collectors and people hoping to make some quick thalers from replica weapons. \
+	Their weapons tended to be form over function - despite their flashy looks, most were completely unremarkable one way or another as weapons and used very standard firing mechanisms."
+	icon_state = "lrifle"
+	item_state = "lrifle"
+	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 3)
+
 /obj/item/weapon/gun/energy/retro
 	name = "retro laser"
 	icon_state = "retro"
 	item_state = "retro"
-	desc = "An older model of the basic lasergun. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
+	desc = "A 23rd century model of the basic lasergun. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	projectile_type = /obj/item/projectile/beam
@@ -81,12 +103,12 @@
 	unlikely.\
 	<br><br>\
 	An interesting note about this weapon, when compared to contemporary energy weapons, is \
-	that this gun appears to be inferior to modern laser weapons. The beam fired has less \
-	of an ability to harm, and the power consumption appears to be higher than average for \
-	a human-made energy side-arm. One possible explaination is that the creators of this \
+	that this gun appears to be only slightly superior to modern laser weapons. The beam fired has \
+	roughly the same ability to harm, yet the power consumption is higher than average \
+	for a human-made energy side-arm. One possible explaination is that the creators of this \
 	weapon, in their later years, had less of a need to optimize their capability for war, \
-	and instead focused on other endeavors. Another explaination is that vast age of the weapon \
-	may have caused it to degrade, yet still remain functional at a reduced capability."
+	and instead focused on other endeavors. Another explanation is that the vast age of the weapon \
+	may have caused it to degrade, yet still remain functional at a reduced capability." //CHOMPedit changed description to be accurate with new projectile
 	value = CATALOGUER_REWARD_MEDIUM
 
 /obj/item/weapon/gun/energy/alien
@@ -95,23 +117,29 @@
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
-	fire_delay = 10 // Handguns should be inferior to two-handed weapons. Even alien ones I suppose.
-	charge_cost = 480 // Five shots.
+	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
+	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
 
-	projectile_type = /obj/item/projectile/beam/cyan
+	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien // Self charges.
 	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
+	battery_lock = 1 //CHOMPedit adds battery lock.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
 /obj/item/weapon/gun/energy/captain
 	name = "antique laser gun"
 	icon_state = "caplaser"
 	item_state = "caplaser"
-	desc = "A rare weapon, handcrafted by a now defunct specialty manufacturer on Luna for a small fortune. It's certainly aged well."
+	desc = "A rare weapon, produced by the Lunar Arms Company around 2105 - one of humanity's first wholly extra-terrestrial weapon designs. It's certainly aged well."
+	description_fluff = "The Lunar Arms Company was founded to provide home-grown arms to the Selene Federation from 2101-2108 during the Second Cold War, the conflict that sparked the \
+	formation of the SCG. The LAC produced the first weapons wholly designed and produced outside of Earth. Post-war, the company relocated and rebranded as MarsTech, which survives \
+	to this day as a major subsidiary of Hephaestus Industries."
 	force = 5
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
+	unacidable = TRUE
 	projectile_type = /obj/item/projectile/beam
 	origin_tech = null
 	fire_delay = 10		//Old pistol
@@ -125,15 +153,16 @@
 	flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
 	icon_state = "lasercannon"
 	item_state = null
+	wielded_item_state = "mhdhowitzer-wielded" //Placeholder
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	slot_flags = SLOT_BELT|SLOT_BACK
 	projectile_type = /obj/item/projectile/beam/heavylaser/cannon
 	battery_lock = 1
 	fire_delay = 20
-	w_class = ITEMSIZE_LARGE
-//	one_handed_penalty = 90 // The thing's heavy and huge.
+	w_class = ITEMSIZE_HUGE //CHOMP Edit. Lol a cannon used to be just large size? Are you kidding me? A CANNON.
+	one_handed_penalty = 90 // The thing's heavy and huge.
 	accuracy = 45
-	charge_cost = 600
+	charge_cost = 400 //CHOMP Edit. Let's give this thing some more shots, seeing as it needs to be recharged at a charger.
 
 /obj/item/weapon/gun/energy/lasercannon/mounted
 	name = "mounted laser cannon"
@@ -155,27 +184,31 @@
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 	projectile_type = /obj/item/projectile/beam/xray
 	charge_cost = 200
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 /obj/item/weapon/gun/energy/sniperrifle
 	name = "marksman energy rifle"
 	desc = "The HI DMR 9E is an older design of Hephaestus Industries. A designated marksman rifle capable of shooting powerful \
 	ionized beams, this is a weapon to kill from a distance."
+	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by armed forces across human space."
 	icon_state = "sniper"
 	item_state = "sniper"
-	item_state_slots = list(slot_r_hand_str = "z8carbine", slot_l_hand_str = "z8carbine") //placeholder
+	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
+	wielded_item_state = "lsniper-wielded"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
 	action_button_name = "Use Scope"
-	battery_lock = 1
-	charge_cost = 600
-	fire_delay = 35
+	//Begin CHOMPstation Edit for making this thing not trash
+	//battery_lock = 0
+	charge_cost = 360 
+	fire_delay = 40
 	force = 10
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
-	accuracy = -45 //shooting at the hip
-	scoped_accuracy = 0
-//	requires_two_hands = 1
-//	one_handed_penalty = 60 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
+	accuracy = -30 //shooting at the hip
+	scoped_accuracy = 100
+	one_handed_penalty = 60 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
+	//End CHOMP Edit.
 
 /obj/item/weapon/gun/energy/sniperrifle/ui_action_click()
 	scope()
@@ -191,7 +224,8 @@
 	name = "antique mono-rifle"
 	desc = "An old laser rifle. This one can only fire once before requiring recharging."
 	description_fluff = "Modeled after ancient hunting rifles, this rifle was dubbed the 'Rainy Day Special' by some, due to its use as some barmens' fight-stopper of choice. One shot is all it takes, or so they say."
-	icon_state = "eshotgun"
+	icon = 'icons/obj/energygun.dmi'
+	icon_state = "mono"
 	item_state = "shotgun"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_POWER = 3)
 	projectile_type = /obj/item/projectile/beam/sniper
@@ -200,9 +234,10 @@
 	charge_cost = 1300
 	fire_delay = 20
 	force = 8
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	accuracy = 10
 	scoped_accuracy = 15
+	charge_meter = FALSE
 	var/scope_multiplier = 1.5
 
 /obj/item/weapon/gun/energy/monorifle/ui_action_click()
@@ -218,8 +253,8 @@
 /obj/item/weapon/gun/energy/monorifle/combat
 	name = "combat mono-rifle"
 	desc = "A modernized version of the mono-rifle. This one can fire twice before requiring recharging."
-	description_fluff = "A modern design produced by a company once working from Saint Columbia, based on the antique mono-rifle 'Rainy Day Special' design."
-	icon_state = "ecshotgun"
+	description_fluff = "A modern design produced by a small company operating out of Saint Columbia, based on the antique mono-rifle 'Rainy Day Special' design."
+	icon_state = "cmono"
 	item_state = "cshotgun"
 	charge_cost = 1000
 	force = 12
@@ -233,7 +268,7 @@
 	item_state = "laser"
 	desc = "Standard issue weapon of the Imperial Guard"
 	origin_tech = list(TECH_COMBAT = 1, TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/lasertag/blue
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge
 	battery_lock = 1
@@ -272,3 +307,5 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 1, TECH_MATERIAL = 4)
 
 	projectile_type = /obj/item/projectile/scatter/laser
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit because you can still holster it despite it not fitting in a backpack.

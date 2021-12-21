@@ -63,3 +63,57 @@
 			spawn(confetti.time_to_live*0.75+rand(10,30))
 				if (confetti) qdel(confetti)
 				src.total_confetti--
+
+/////////////////////////////////////////////
+// Snow fall
+// Permanent mood snow
+/////////////////////////////////////////////
+
+/obj/effect/effect/snow
+	name = "light snowfall"
+	icon = 'icons/effects/weather.dmi'
+	icon_state = "snowfall_light"
+
+	layer = 4.2
+	opacity = 0
+	anchored = 0.0
+	mouse_opacity = 0
+
+/obj/effect/effect/snow/medium
+	name = "medium snowfall"
+	icon_state = "snowfall_med"
+
+/obj/effect/effect/snow/heavy
+	name = "heavy snowfall"
+	icon_state = "snowfall_heavy"
+
+////////////////////////////////////////////
+// A fancier teleport, used in hyper pads
+////////////////////////////////////////////
+
+/obj/effect/effect/teleport_greyscale
+	name = "teleportation"
+	icon = 'icons/effects/effects_ch.dmi'
+	icon_state = "teleport_greyscale"
+	anchored = 1
+	mouse_opacity = 0
+	plane = MOB_PLANE
+	layer = ABOVE_MOB_LAYER
+
+/obj/effect/effect/teleport_greyscale/Initialize()
+	. = ..()
+	QDEL_IN(src, 2 SECONDS)
+
+/datum/effect/effect/system/teleport_greyscale
+	var/color = "#FFFFFF"
+
+/datum/effect/effect/system/teleport_greyscale/set_up(cl, loca)
+	if(istype(loca, /turf/))
+		location = loca
+	else
+		location = get_turf(loca)
+	color = cl
+
+/datum/effect/effect/system/teleport_greyscale/start()
+	var/obj/effect/effect/teleport_greyscale/tele = new /obj/effect/effect/teleport_greyscale(src.location)
+	tele.color = color

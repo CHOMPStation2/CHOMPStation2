@@ -21,6 +21,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	icon_state = "randompile"
 	density = FALSE
 	anchored = TRUE
+	unacidable = TRUE
 
 	var/list/icon_states_to_use = list() // List of icon states the pile can choose from on initialization. If empty or null, it will stay the initial icon_state.
 
@@ -39,6 +40,10 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	var/list/common_loot = list()	// Common is generally less-than-useful junk and filler, at least for maint loot piles.
 	var/list/uncommon_loot = list()	// Uncommon is actually maybe some useful items, usually the reason someone bothers looking inside.
 	var/list/rare_loot = list()		// Rare is really powerful, or at least unique items.
+
+/obj/structure/loot_pile/attack_ai(var/mob/user)
+	if(isrobot(user) && Adjacent(user))
+		return attack_hand(user)
 
 /obj/structure/loot_pile/attack_hand(mob/user)
 	//Human mob
@@ -152,8 +157,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/clothing/shoes/galoshes,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/shoes/laceup,
-		/obj/item/clothing/shoes/black,
-		/obj/item/clothing/shoes/leather,
+		/obj/item/clothing/shoes/laceup/grey,
+		/obj/item/clothing/shoes/laceup/brown,
 		/obj/item/clothing/gloves/botanic_leather,
 		/obj/item/clothing/gloves/sterile/latex,
 		/obj/item/clothing/gloves/white,
@@ -188,8 +193,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/weapon/spacecash/c10,
 		/obj/item/weapon/spacecash/c20,
 		/obj/item/weapon/camera_assembly,
-		/obj/item/weapon/caution,
-		/obj/item/weapon/caution/cone,
+		/obj/item/clothing/suit/caution,
+		/obj/item/clothing/head/cone,
 		/obj/item/weapon/card/emag_broken,
 		/obj/item/device/camera,
 		/obj/item/device/pda,
@@ -223,8 +228,10 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/trash/candle,
 		/obj/item/trash/candy,
 		/obj/item/trash/candy/proteinbar,
+		/obj/item/trash/candy/gums,
 		/obj/item/trash/cheesie,
 		/obj/item/trash/chips,
+		/obj/item/trash/chips/bbq,
 		/obj/item/trash/liquidfood,
 		/obj/item/trash/pistachios,
 		/obj/item/trash/plate,
@@ -235,20 +242,20 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/trash/sosjerky,
 		/obj/item/trash/syndi_cakes,
 		/obj/item/trash/tastybread,
+		/obj/item/trash/coffee,
 		/obj/item/trash/tray,
 		/obj/item/trash/unajerky,
 		/obj/item/trash/waffles,
 		/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
 		/obj/item/weapon/reagent_containers/food/snacks/mysterysoup,
-		/obj/item/weapon/reagent_containers/food/snacks/hotdog/old,
+		/obj/item/weapon/reagent_containers/food/snacks/old/hotdog,
 		/obj/item/pizzabox/old,
 		/obj/item/ammo_casing/spent,
 		/obj/item/stack/rods{amount = 5},
 		/obj/item/stack/material/steel{amount = 5},
 		/obj/item/stack/material/cardboard{amount = 5},
-		/obj/item/weapon/contraband/poster,
-		/obj/item/weapon/material/wirerod,
-		/obj/item/weapon/contraband/poster,
+		/obj/item/poster,
+		/obj/item/poster/custom,
 		/obj/item/weapon/newspaper,
 		/obj/item/weapon/paper/crumpled,
 		/obj/item/weapon/paper/crumpled/bloody
@@ -351,8 +358,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/weapon/circuitboard/atmos_alert,
 		/obj/item/weapon/circuitboard/airalarm,
 		/obj/item/weapon/circuitboard/fax,
-		/obj/item/weapon/circuitboard/ghettosmes,
 		/obj/item/weapon/circuitboard/jukebox,
+		/obj/item/weapon/circuitboard/batteryrack,
 		/obj/item/weapon/circuitboard/message_monitor,
 		/obj/item/weapon/circuitboard/rcon_console,
 		/obj/item/weapon/smes_coil,
@@ -369,6 +376,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/weapon/tool/wrench,
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/tool/wirecutters,
+		/obj/item/weapon/mining_scanner/advanced,
 		/obj/item/device/multitool,
 		/obj/item/mecha_parts/mecha_equipment/generator,
 		/obj/item/mecha_parts/mecha_equipment/tool/cable_layer,

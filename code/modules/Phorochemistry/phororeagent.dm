@@ -573,7 +573,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/oculusosone/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(M.client)
 		if(M.client.view == 7)
-			if(ishuman(M))
+			if(ishuman(M) && !(alien == IS_SLIME))
 				//check for mechanical eyes
 				var/mob/living/carbon/human/H = M
 				var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
@@ -590,6 +590,11 @@ var/induromol_code = rand(1, 50)
 		if(ishuman(M))
 			//check for mechanical eyes
 			var/mob/living/carbon/human/H = M
+			if(H.get_species() == SPECIES_PROMETHEAN)
+				if(M.client)
+					M.client.view = 7
+					to_chat(M, "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>")
+				return ..()
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(eyes.status & ORGAN_ROBOT)
 				return ..()

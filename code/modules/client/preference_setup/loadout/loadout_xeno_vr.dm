@@ -1,6 +1,13 @@
-/datum/gear/shoes/footwraps/New()					//Give color pick option for footwraps
-	..()
-	gear_tweaks = list(gear_tweak_free_color_choice)
+// Upstream things
+/////
+
+/datum/gear/suit/dept/cloak/research
+	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist")
+
+/datum/gear/uniform/dept/undercoat/research
+	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist")
+
+/////
 
 /datum/gear/uniform/voxcasual
 	display_name = "casual wear (Vox)"

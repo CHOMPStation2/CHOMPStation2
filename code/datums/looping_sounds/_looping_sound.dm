@@ -28,6 +28,8 @@
 	var/volume = 100
 	var/max_loops
 	var/direct
+	var/vary
+	var/extra_range
 	var/opacity_check
 	var/pref_check
 
@@ -78,7 +80,7 @@
 	var/list/atoms_cache = output_atoms
 	var/sound/S = sound(soundfile)
 	if(direct)
-		S.channel = open_sound_channel()
+		S.channel = SSsounds.random_available_channel()
 		S.volume = volume
 	for(var/i in 1 to atoms_cache.len)
 		var/atom/thing = atoms_cache[i]
@@ -89,7 +91,7 @@
 					continue
 			SEND_SOUND(thing, S)
 		else
-			playsound(thing, S, volume, ignore_walls = !opacity_check, preference = pref_check)
+			playsound(thing, S, volume, vary, extra_range, ignore_walls = !opacity_check, preference = pref_check)
 
 /datum/looping_sound/proc/get_sound(starttime, _mid_sounds)
 	if(!_mid_sounds)

@@ -4,9 +4,9 @@
 	icon_state = "glass_empty"
 	amount_per_transfer_from_this = 5
 	volume = 30
-	unacidable = 1 //glass
+	unacidable = TRUE //glass
 	center_of_mass = list("x"=16, "y"=10)
-	matter = list("glass" = 500)
+	matter = list(MAT_GLASS = 500)
 	icon = 'icons/obj/drinks.dmi'
 
 /obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint
@@ -18,13 +18,11 @@
 /obj/item/weapon/reagent_containers/food/drinks/metaglass/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
-		
-		//CHOMPedit start of dynamic sprite source - Jack
-		if(R.glass_icon_source == null)
-			icon = initial(icon)
+
+		if(R.glass_icon_file)
+			icon = R.glass_icon_file
 		else
-			icon = R.glass_icon_source
-		//CHOMPedit end of dynamic sprite source - Jack
+			icon = initial(icon)
 
 		if(R.glass_icon_state)
 			icon_state = R.glass_icon_state
@@ -68,6 +66,7 @@ Drinks Data
 */
 
 /datum/reagent
+	var/glass_icon_file = null
 	var/glass_icon_state = null
 	var/glass_center_of_mass = null
 	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
@@ -373,6 +372,10 @@ Drinks Data
 /datum/reagent/ethanol/martini
 	glass_icon_state = "martiniglass"
 	glass_center_of_mass = list("x"=17, "y"=8)
+
+/datum/reagent/ethanol/rum_and_cola
+	glass_icon_state = "rumcolaglass"
+	glass_center_of_mass = list("x"=16, "y"=8)
 
 /datum/reagent/ethanol/cuba_libre
 	glass_icon_state = "cubalibreglass"

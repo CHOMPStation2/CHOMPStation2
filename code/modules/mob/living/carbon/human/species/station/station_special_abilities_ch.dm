@@ -170,3 +170,28 @@ var/eggs = 0
 
 	return
 */
+
+/mob/living/proc/insect_sting()
+	set name = "Insect Sting"
+	set desc = "Sting a target and inject a small amount of toxin"
+	set category = "Abilities"
+
+	if(last_special > world.time)
+		return
+
+	var/list/victims = list()
+	for(var/mob/living/carbon/C in oview(1))
+		victims += C
+	var/mob/living/carbon/T = input(src, "Who will we sting?") as null|anything in victims
+
+	if(!T)
+		return
+	if(T.isSynthetic())
+		to_chat(src, "<span class='notice'>We are unable to pierce the outer shell of [T].</span>")
+		return
+
+	to_chat(src, "<span class='notice'>You jab your stinger into [T].</span>")
+	to_chat(T, "<span class='danger'>You feel a stabbing pain as you are stung!</span>")
+	src.visible_message("<font color='red'>[src] sinks their stinger into [T]!</font>")
+	T.bloodstr.add_reagent("condensedcapsaicin_v",3)
+	last_special = world.time + 50 // Many little jabs instead of one big one

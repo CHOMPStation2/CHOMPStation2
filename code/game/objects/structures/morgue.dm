@@ -16,10 +16,11 @@
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "morgue1"
 	dir = EAST
-	density = 1
+	density = TRUE
 	var/obj/structure/m_tray/connected = null
 	var/list/occupants = list()
-	anchored = 1.0
+	anchored = TRUE
+	unacidable = TRUE
 
 /obj/structure/morgue/Destroy()
 	if(connected)
@@ -95,13 +96,13 @@
 	for(var/atom/movable/A as mob|obj in src.connected.loc)
 		if (!( A.anchored ))
 			A.forceMove(src)
-	playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+	playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 	qdel(src.connected)
 	src.connected = null
 
 
 /obj/structure/morgue/proc/open()
-	playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+	playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 	src.connected = new /obj/structure/m_tray( src.loc )
 	step(src.connected, src.dir)
 	src.connected.layer = OBJ_LAYER
@@ -147,10 +148,10 @@
 	desc = "Apply corpse before closing."
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "morguet"
-	density = 1
+	density = TRUE
 	plane = TURF_PLANE
 	var/obj/structure/morgue/connected = null
-	anchored = 1
+	anchored = TRUE
 	throwpass = 1
 
 /obj/structure/m_tray/Destroy()
@@ -225,11 +226,11 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 		for(var/atom/movable/A as mob|obj in src.connected.loc)
 			if (!( A.anchored ))
 				A.forceMove(src)
-		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+		playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 		//src.connected = null
 		qdel(src.connected)
 	else if (src.locked == 0)
-		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+		playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 		src.connected = new /obj/structure/m_tray/c_tray( src.loc )
 		step(src.connected, dir) //Vorestation Edit
 		src.connected.layer = OBJ_LAYER
@@ -319,7 +320,7 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 		sleep(30)
 		cremating = 0
 		locked = 0
-		playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
+		playsound(src, 'sound/machines/ding.ogg', 50, 1)
 	return
 
 
@@ -344,7 +345,7 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 	if(..())
 		return
 	if(src.allowed(user))
-		for (var/obj/structure/morgue/crematorium/C in all_crematoriums)
+		for (var/obj/structure/morgue/crematorium/C in GLOB.all_crematoriums)
 			if (C.id == id)
 				if (!C.cremating)
 					C.cremate(user)

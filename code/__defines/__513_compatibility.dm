@@ -1,6 +1,6 @@
 #if DM_VERSION < 513
 
-#define ismovableatom(A) (istype(A, /atom/movable))
+#define ismovable(A) (istype(A, /atom/movable))
 
 #define islist(L) (istype(L, /list))
 
@@ -14,11 +14,11 @@
 
 #define arctan(x) (arcsin(x/sqrt(1+x*x)))
 
+#define between(x, y, z) max(min(y, z), x)
+
 //////////////////////////////////////////////////
 
 #else
-
-#define ismovableatom(A) ismovable(A)
 
 #define CLAMP01(x) clamp(x, 0, 1)
 
@@ -27,5 +27,7 @@
 #define TAN(x) tan(x)
 
 #define ATAN2(x, y) arctan(x, y)
+
+#define between(x, y, z) clamp(y, x, z)
 
 #endif

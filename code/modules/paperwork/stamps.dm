@@ -1,7 +1,7 @@
 /obj/item/weapon/stamp
 	name = "rubber stamp"
 	desc = "A rubber stamp for stamping important documents."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/bureaucracy_yw.dmi' //YWedit reverts to use old stamp icons
 	icon_state = "stamp-qm"
 	item_state = "stamp"
 	throwforce = 0
@@ -9,12 +9,15 @@
 	slot_flags = SLOT_HOLSTER
 	throw_speed = 7
 	throw_range = 15
-	matter = list(DEFAULT_WALL_MATERIAL = 60)
+	matter = list(MAT_STEEL = 60)
 	pressure_resistance = 2
 	attack_verb = list("stamped")
+	drop_sound = 'sound/items/drop/device.ogg'
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	var/stamptext = null
 
 /obj/item/weapon/stamp/captain
-	name = "colony director's rubber stamp"
+	name = "site manager's rubber stamp"
 	icon_state = "stamp-cap"
 
 /obj/item/weapon/stamp/hop
@@ -44,6 +47,7 @@
 /obj/item/weapon/stamp/denied
 	name = "\improper DENIED rubber stamp"
 	icon_state = "stamp-deny"
+	attack_verb = list("DENIED")
 
 /obj/item/weapon/stamp/clown
 	name = "clown's rubber stamp"
@@ -83,9 +87,9 @@
 
 	var/list/show_stamps = list("EXIT" = null) + sortList(stamps) // the list that will be shown to the user to pick from
 
-	var/input_stamp = input(user, "Choose a stamp to disguise as.", "Choose a stamp.") in show_stamps
+	var/input_stamp = tgui_input_list(user, "Choose a stamp to disguise as:", "Stamp Choice", show_stamps)
 
-	if(user && src in user.contents)
+	if(user && (src in user.contents)) // Er, how necessary is this in attack_self?
 
 		var/obj/item/weapon/stamp/chosen_stamp = stamps[capitalize(input_stamp)]
 

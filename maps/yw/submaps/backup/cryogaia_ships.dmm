@@ -305,14 +305,14 @@
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "aU" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "aV" = (
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "aW" = (
@@ -616,7 +616,7 @@
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "bS" = (
-/obj/machinery/pros_fabricator{
+/obj/machinery/mecha_part_fabricator/pros{
 	req_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,

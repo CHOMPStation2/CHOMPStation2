@@ -64,13 +64,13 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 /proc/load_admins()
 	//clear the datums references
 	admin_datums.Cut()
-	for(var/client/C in admins)
+	for(var/client/C in GLOB.admins)
 		C.remove_admin_verbs()
 		C.holder = null
-	admins.Cut()
-
+	GLOB.admins.Cut()
+	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
+	
 	if(config.admin_legacy_system)
-		load_admin_ranks()
 		//Clear profile access
 		for(var/A in world.GetConfig("admin"))
 			world.SetConfig("APP/admin", A, null)
@@ -112,14 +112,14 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		//The current admin system uses SQL
 
 		establish_db_connection()
-		if(!dbcon.IsConnected())
+		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			error("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			log_misc("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			config.admin_legacy_system = 1
 			load_admins()
 			return
 
-		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin")
+		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin") //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -135,6 +135,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 
 			//find the client for a ckey if they are connected and associate them with the new admin datum
 			D.associate(GLOB.directory[ckey])
+		qdel(query) //CHOMPEdit TGSQL
 		if(!admin_datums)
 			error("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
 			log_misc("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")

@@ -8,6 +8,7 @@
 	var/list/can_hold //VOREStation Add
 	var/holster_in = 'sound/items/holsterin.ogg'
 	var/holster_out = 'sound/items/holsterout.ogg'
+	w_class = ITEMSIZE_NORMAL
 
 /obj/item/clothing/accessory/holster/proc/holster(var/obj/item/I, var/mob/living/user)
 	if(holstered && istype(user))
@@ -25,7 +26,7 @@
 		return
 
 	if(holster_in)
-		playsound(get_turf(src), holster_in, 50)
+		playsound(src, holster_in, 50)
 
 	if(istype(user))
 		user.stop_aiming(no_message=1)
@@ -48,6 +49,18 @@
 	if(istype(user.get_active_hand(),/obj) && istype(user.get_inactive_hand(),/obj))
 		to_chat(user, "<span class='warning'>You need an empty hand to draw \the [holstered]!</span>")
 	else
+		// CHOMPEdit begin
+		if(iscarbon(user))
+			var/mob/living/carbon/C = user
+			if(C.handcuffed)
+				to_chat(C, "<span class='warning'>You cannot draw \the [holstered] while handcuffed!</span>")
+				return
+			else if(istype(C, /mob/living/carbon/human))
+				var/mob/living/carbon/human/H = C
+				if(H.ability_flags & 0x1)
+					to_chat(H, "<span class='warning'>You cannot draw \the [holstered] while phase shifted!</span>")
+					return
+		//CHOMPEdit end
 		var/sound_vol = 25
 		if(user.a_intent == I_HURT)
 			sound_vol = 50
@@ -62,7 +75,7 @@
 				)
 
 		if(holster_out)
-			playsound(get_turf(src), holster_out, sound_vol)
+			playsound(src, holster_out, sound_vol)
 
 		user.put_in_hands(holstered)
 		holstered.add_fingerprint(user)
@@ -71,7 +84,7 @@
 
 //YW change start
 /obj/item/clothing/accessory/holster/attack_hand(mob/user as mob)
-	if (user.a_intent == I_HURT && has_suit && (slot & ACCESSORY_SLOT_HOLSTER ))	//if we are part of a suit and are using harm intent
+	if (user.a_intent == I_HURT && has_suit && (slot & SLOT_HOLSTER ))	//if we are part of a suit and are using harm intent
 		if (holstered)
 			unholster(user)
 		return
@@ -88,11 +101,11 @@
 	..()
 
 /obj/item/clothing/accessory/holster/examine(mob/user)
-	..(user)
-	if (holstered)
-		to_chat(user, "A [holstered] is holstered here.")
+	. = ..(user)
+	if(holstered)
+		. += "A [holstered] is holstered here."
 	else
-		to_chat(user, "It is empty.")
+		. += "It is empty."
 
 /obj/item/clothing/accessory/holster/on_attached(obj/item/clothing/under/S, mob/user as mob)
 	..()

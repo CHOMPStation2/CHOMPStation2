@@ -25,6 +25,7 @@
 	name = "laser"
 	icon_state = "laser"
 	damage = 0
+	excavation_amount = 0
 	damage_type = BURN
 	check_armour = "laser"
 	eyeblur = 2
@@ -41,7 +42,7 @@
 	damage = 30
 	armor_penetration = 10
 
-
+	
 /obj/item/projectile/beam/midlaser
 	damage = 40
 	armor_penetration = 10
@@ -92,7 +93,7 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	fire_sound = 'sound/weapons/eluger.ogg'
-	damage = 10
+	damage = 12 //CHOMPedit
 	armor_penetration = 90
 	irradiate = 20
 	light_color = "#00CC33"
@@ -144,6 +145,7 @@
 /obj/item/projectile/beam/lasertag
 	name = "lasertag beam"
 	damage = 0
+	excavation_amount = 0
 	eyeblur = 0
 	no_attack_log = 1
 	damage_type = BURN
@@ -261,3 +263,20 @@
 	agony = 15
 	eyeblur = 2
 	hitsound = 'sound/weapons/zapbang.ogg'
+
+/obj/item/projectile/beam/shock/weak
+	damage = 5
+	agony = 10
+
+/obj/item/projectile/beam/precursor //CHOMPedit added Precursor beam
+	name = "precursor beam"
+	icon_state = "alien beam"
+	fire_sound = 'sound/weapons/MediumLaser.ogg'
+	light_color = "#FF0099"
+
+	muzzle_type = /obj/effect/projectile/muzzle/precursor
+	tracer_type = /obj/effect/projectile/tracer/precursor
+	impact_type = /obj/effect/projectile/impact/precursor
+
+	damage = 48
+	armor_penetration = 10

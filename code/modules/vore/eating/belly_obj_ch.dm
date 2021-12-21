@@ -1,4 +1,4 @@
-//CHOMP vore additions, currently only consists of reagent stuff - Jack
+//CHOMP vore additions.
 
 /obj/belly
 	//CHOMP - liquid bellies
@@ -12,16 +12,21 @@
 		"Draining Liquids" = DM_FLAG_REAGENTSDRAIN
 		)
 
+	var/belly_fullscreen_color = "#823232"
+
+	var/show_liquids = FALSE //Moved from vorepanel_ch to be a belly var
+	var/show_fullness_messages = FALSE //Moved from vorepanel_ch to be a belly var
+
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
 	var/reagent_name = "water" 						//What is shown when reagents are removed, doesn't need to be an actual reagent
 	var/reagentid = "water"							//Selected reagent's id, for use in puddle system currently
 	var/reagentcolor = "#0064C877"					//Selected reagent's color, for use in puddle system currently
-	var/gen_cost = 0.1 								//amount of nutrient taken from the host everytime nutrition is used to make reagents
-	var/gen_amount = 0.1							//Does not actually influence amount produced, but is used as a way to tell the system how much total reagent it has to take into account when filling a belly
+	var/gen_cost = 1 								//amount of nutrient taken from the host everytime nutrition is used to make reagents
+	var/gen_amount = 1							//Does not actually influence amount produced, but is used as a way to tell the system how much total reagent it has to take into account when filling a belly
 
 	var/gen_interval = 0							//Interval in seconds for generating fluids, once it reaches the value of gen_time one cycle of reagents generation will occur
-	var/gen_time = 3								//Time it takes in seconds to produce one cycle of reagents, technically add 1 second to it for the tick where the fluid is produced
+	var/gen_time = 5								//Time it takes in seconds to produce one cycle of reagents, technically add 1 second to it for the tick where the fluid is produced
 	var/gen_time_display = "1 hour"					//The displayed time it takes from a belly to go from 0 to 100
 	var/custom_max_volume = 100						//Variable for people to limit amount of liquid they can receive/produce in a belly
 	var/digest_nutri_gain = 0						//variable to store temporary nutrition gain from digestion and allow a seperate proc to ease up on the wall of code
@@ -33,6 +38,7 @@
 	var/liquid_fullness3_messages = FALSE
 	var/liquid_fullness4_messages = FALSE
 	var/liquid_fullness5_messages = FALSE
+	var/vorespawn_blacklist = FALSE
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"
@@ -73,7 +79,7 @@
 ///////////////////// NUTRITION REAGENT PRODUCTION /////////////////
 
 /obj/belly/proc/HandleBellyReagents()
-	if(reagentbellymode == TRUE && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume)
+	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume) //Removed if(reagentbellymode == TRUE) since that's less optimized
 		if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
 			GenerateBellyReagents()
 			gen_interval = 0
@@ -132,38 +138,38 @@
 /obj/belly/proc/ReagentSwitch()
 	switch(reagent_chosen)
 		if("Water")
-			generated_reagents = list("water" = 0.1)
+			generated_reagents = list("water" = 1)
 			reagent_name = "water"
-			gen_amount = 0.1
-			gen_cost = 0.1
+			gen_amount = 1
+			gen_cost = 1
 			reagentid = "water"
 			reagentcolor = "#0064C877"
 		if("Milk")
-			generated_reagents = list("milk" = 0.1)
+			generated_reagents = list("milk" = 1)
 			reagent_name = "milk"
-			gen_amount = 0.1
-			gen_cost = 0.15
+			gen_amount = 1
+			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
-			generated_reagents = list("cream" = 0.1)
+			generated_reagents = list("cream" = 1)
 			reagent_name = "cream"
-			gen_amount = 0.1
-			gen_cost = 0.15
+			gen_amount = 1
+			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
-			generated_reagents = list("honey" = 0.1)
+			generated_reagents = list("honey" = 1)
 			reagent_name = "honey"
-			gen_amount = 0.1
-			gen_cost = 0.15
+			gen_amount = 1
+			gen_cost = 10
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
-			generated_reagents = list("cherryjelly" = 0.1)
+			generated_reagents = list("cherryjelly" = 1)
 			reagent_name = "cherry jelly"
-			gen_amount = 0.1
-			gen_cost = 0.15
+			gen_amount = 1
+			gen_cost = 10
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
 
@@ -242,7 +248,7 @@
 		if("full5")
 			raw_messages = fullness5_messages
 
-	var/messages = list2text(raw_messages,delim)
+	var/messages = raw_messages.Join(delim)
 	return messages
 
 // The next function sets the messages on the belly, from human-readable var
@@ -251,7 +257,7 @@
 /obj/belly/proc/set_reagent_messages(var/raw_text, var/type, var/delim = "\n\n")
 	ASSERT(type == "full1" || type == "full2" || type == "full3" || type == "full4" || type == "full5")
 
-	var/list/raw_list = text2list(html_encode(raw_text),delim)
+	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
 		raw_list.Cut(11)
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
@@ -280,3 +286,50 @@
 			fullness5_messages = raw_list
 
 	return
+
+/////////////////////////// Process Cycle Lite /////////////////////////// CHOMP PCL
+/obj/belly/proc/quick_cycle() //For manual belly cycling without straining the bellies subsystem.
+	HandleBellyReagents()	//CHOMP reagent belly stuff.
+	// VERY early exit
+	if(!contents.len)
+		return
+
+	var/to_update = FALSE //Did anything update worthy happen?
+
+/////////////////////////// Exit Early //////////////////////////// CHOMP PCL
+	var/list/touchable_atoms = contents - items_preserved
+	if(!length(touchable_atoms))
+		return
+
+	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
+	if(!DM)
+		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
+		return FALSE
+	if(DM.handle_atoms(src, touchable_atoms))
+		updateVRPanels()
+		return
+
+	var/list/touchable_mobs = null
+
+	var/list/hta_returns = handle_touchable_atoms(touchable_atoms)
+	if(islist(hta_returns))
+		if(hta_returns["touchable_mobs"])
+			touchable_mobs = hta_returns["touchable_mobs"]
+		if(hta_returns["to_update"])
+			to_update = hta_returns["to_update"]
+
+	if(!LAZYLEN(touchable_mobs))
+		return
+
+///////////////////// Time to actually process mobs ///////////////////// CHOMP PCL
+	for(var/target in touchable_mobs)
+		var/mob/living/L = target
+		if(!istype(L))
+			continue
+		var/list/returns = DM.process_mob(src, target)
+		if(istype(returns) && returns["to_update"])
+			to_update = TRUE
+
+	if(to_update)
+		updateVRPanels()
+/////////////////////////// CHOMP PCL END ///////////////////////////

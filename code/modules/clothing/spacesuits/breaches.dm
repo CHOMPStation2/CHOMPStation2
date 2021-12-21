@@ -181,7 +181,7 @@ var/global/list/breach_burn_descriptors = list(
 	if(istype(W,/obj/item/stack/material))
 		var/repair_power = 0
 		switch(W.get_material_name())
-			if(DEFAULT_WALL_MATERIAL)
+			if(MAT_STEEL)
 				repair_power = 2
 			if("plastic")
 				repair_power = 1
@@ -224,7 +224,7 @@ var/global/list/breach_burn_descriptors = list(
 	..()
 
 /obj/item/clothing/suit/space/examine(mob/user)
-	..(user)
-	if(can_breach && breaches && breaches.len)
+	. = ..()
+	if(can_breach && breaches?.len)
 		for(var/datum/breach/B in breaches)
-			to_chat(user, "<font color='red'><B>It has \a [B.descriptor].</B></font>")
+			. += "<font color='red'><B>It has \a [B.descriptor].</B></font>"

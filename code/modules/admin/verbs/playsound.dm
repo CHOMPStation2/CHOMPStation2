@@ -10,7 +10,7 @@ var/list/sounds_cache = list()
 
 	sounds_cache += S
 
-	if(alert("Do you ready?\nSong: [S]\nNow you can also play this sound using \"Play Server Sound\".", "Confirmation request" ,"Play", "Cancel") == "Cancel")
+	if(tgui_alert(usr, "Do you ready?\nSong: [S]\nNow you can also play this sound using \"Play Server Sound\".", "Confirmation request", list("Play","Cancel")) == "Cancel")
 		return
 
 	log_admin("[key_name(src)] played sound [S]")
@@ -28,7 +28,7 @@ var/list/sounds_cache = list()
 
 	log_admin("[key_name(src)] played a local sound [S]")
 	message_admins("[key_name_admin(src)] played a local sound [S]", 1)
-	playsound(get_turf(src.mob), S, 50, 0, 0)
+	playsound(src.mob, S, 50, 0, 0)
 	feedback_add_details("admin_verb","PLS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
@@ -41,7 +41,7 @@ var/list/sounds_cache = list()
 	sounds += "--CANCEL--"
 	sounds += sounds_cache
 
-	var/melody = input("Select a sound from the server to play", "Server sound list", "--CANCEL--") in sounds
+	var/melody = tgui_input_list(usr, "Select a sound from the server to play", "Server sound list", sounds, "--CANCEL--")
 
 	if(melody == "--CANCEL--")	return
 
@@ -76,7 +76,7 @@ var/list/sounds_cache = list()
 				M << 'bananaphone.ogg'
 
 
-client/proc/space_asshole()
+/client/proc/space_asshole()
 	set category = "Fun"
 	set name = "Space Asshole"
 
@@ -87,7 +87,7 @@ client/proc/space_asshole()
 				M << 'sound/music/space_asshole.ogg'
 
 
-client/proc/honk_theme()
+/client/proc/honk_theme()
 	set category = "Fun"
 	set name = "Honk"
 

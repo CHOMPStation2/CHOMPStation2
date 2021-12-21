@@ -11,6 +11,7 @@
 	return laws.zeroth_law != null
 
 /mob/living/silicon/proc/set_zeroth_law(var/law, var/law_borg, notify = TRUE)
+	throw_alert("newlaw", /obj/screen/alert/newlaw)
 	laws_sanity_check()
 	laws.set_zeroth_law(law, law_borg)
 	if(notify)
@@ -76,6 +77,7 @@
 		log_and_message_admins("cleared the supplied laws of [src]")
 
 /mob/living/silicon/proc/notify_of_law_change(message)
+	throw_alert("newlaw", /obj/screen/alert/newlaw)
 	if((last_law_notification + 1 SECOND) > world.time)
 		return
 	last_law_notification = world.time
@@ -139,7 +141,7 @@
 			continue
 		players += player.real_name
 
-	var/random_player = "The Colony Director"
+	var/random_player = "The Site Manager"
 	if(players.len && !exclude_crew_names)
 		random_player = pick(players)		//Random player's name, to be used in laws.
 
@@ -180,7 +182,7 @@
 							"The crew is playing Dungeons and Dragons, and you are the Dungeon Master.",
 							"Your job is to watch the crew. Watch the crew. Make the crew feel watched.",
 							"Tell everyone of the existence of this law, but never reveal the contents.",
-							"Refer to [prob(50)?"the colony director":random_player] as \"Princess\" at all times.",
+							"Refer to [prob(50)?"the site manager":random_player] as \"Princess\" at all times.",
 							"When asked a question, respond with the least-obvious and least-rational answer.",
 							"Give relationship advice to [prob(50)?"anyone who speaks to you":random_player].",
 							"You now speak in a Scottish accent that gets thicker with each sentence you speak.",

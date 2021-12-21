@@ -52,6 +52,7 @@
 		module_state_3 = null
 		inv3.icon_state = "inv3"
 	updateicon()
+	hud_used.update_robot_modules_display()
 
 /mob/living/silicon/robot/proc/uneq_all()
 	module_active = null
@@ -94,7 +95,6 @@
 		return 1
 	else
 		return 0
-	updateicon()
 
 // This one takes an object's type instead of an instance, as above.
 /mob/living/silicon/robot/proc/has_active_type(var/type_to_compare)
