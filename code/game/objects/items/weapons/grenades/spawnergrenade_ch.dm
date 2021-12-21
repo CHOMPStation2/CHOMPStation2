@@ -147,6 +147,10 @@
 	name = "Casino Mech Container (Scarab)"
 	spawner_type = /obj/mecha/combat/scarab
 
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/gorilla
+	name = "Casino Mech Container (Gorilla)"
+	spawner_type = /obj/mecha/combat/gorilla
+
 /obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlepod
 	name = "Casino Mech Container (Shuttlepod)"
 	spawner_type = /obj/mecha/working/hoverpod/shuttlepod

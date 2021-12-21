@@ -690,7 +690,7 @@
 			playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
 
 		user << "<span class='info'>You insert [I] into [src].</span>"
-		spawn_money(round(I:worth/2.5), src.loc)
+		spawn_money(round(I:worth*2.5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
 
@@ -793,9 +793,9 @@
 			if(user.client.ckey in lottery_tickets_ckeys)
 				to_chat(user, "<span class='warning'>The scanner beeps in an upset manner, you already have a ticket!</span>")
 				return
-
-			var/obj/item/weapon/spacecasinocash/C = W
-			insert_chip(C, user)
+			else
+				var/obj/item/weapon/spacecasinocash/C = W
+				insert_chip(C, user)
 
 /obj/machinery/wheel_of_fortune/proc/insert_chip(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user)
 	if (busy)
@@ -934,6 +934,9 @@
 				var/confirm = tgui_alert(usr, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
 				if(confirm == "Yes")
 					to_chat(user, "<span class='warning'>You are now a prize!</span>")
+				if(confirm == "No")
+					to_chat(user, "<span class='warning'>The SPASM beeps in a sad manner at your impolite decline..</span>")
+					return
 				if(safety_ckey in slaves_ckeys_list)
 					to_chat(user, "<span class='warning'>The SPASM beeps in an upset manner, you already have a collar!</span>")
 					return
@@ -1277,9 +1280,11 @@
 /datum/lore/codex/page/casinomanual_miscellaneous/add_content()
 	name = "Prizes: Miscellaneous"
 	keywords += list("Prizes", "Miscellaneous")
-	data = "Toys and misc - ALL THESE ARE 50<br><br>\
+	data = "Toys and misc - Everything that isn't instruments are 50, instruments are 100 with few excecptions!<br><br>\
 		Toy sword <br>Water flower <br>Stick horse <br>Replica katana <br>Magic conch <br>Magic 8-ball <br>Foam sword <br>Foam crossbow (with 5 bolts) <br>Bosun's whistle <br>Golden cup\
-		<br>Havana cigar case <br>Casino wallet (to keep after shift) <br>Casino card deck (to keep after shift) <br>Casino Sentient Prize Collar (to keep after shift)"
+		<br>Havana cigar case <br>Casino wallet (to keep after shift) <br>Casino card deck (to keep after shift) <br>Casino Sentient Prize Collar (to keep after shift)<br>\
+		Accordion<br>Banjo<br>Musical Bikehorn<br>Electric Guitar<br>Glockenspiel<br>Guitar<br>Harmonica<br>Keytar<br>Musical Moth (Illegal in multiple systems for obvious reasons.. You monster..)<br>\
+		Synthethic Piano<br>Recorder<br>Saxophone<br>Haunted Saxophone 200<br>Trombone<br>Haunted Trombone 200<br>Trumpet<br>Haunted Trumpet 200<br>Violin<br>Golden Fiddle 250<br>Xylophone"
 
 /datum/lore/codex/page/casinomanual_drinks/add_content()
 	name = "Prizes: Drinks"
@@ -1294,22 +1299,55 @@
 		<br>Horse 300 <br>Otie 500 <br>Chonker Otie 500 <br>Zorgoia 500"
 
 /datum/lore/codex/page/casinomanual_mechs/add_content()
-	name = "Prizes: Mechs"
-	keywords += list("Prizes", "Mechs")
-	data = "Mining Ripley 1000 <br>Firefighter Ripley 750 <br>Serenity 1500	<br>Odysseus 1250 <br>Phazon Scuttlebug 2000 <br>Phazon Janus 3500 <br>Scarab 500 <br>Shuttlepod 250 <br>Shuttlecraft 500"
+	name = "Prizes: Mechs and Rigs"
+	keywords += list("Prizes", "Mechs", "Rigs")
+	data = "Mining Ripley 1000 <br>\
+		Mech: Firefighter Ripley 750 <br>\
+		Mech: Serenity 1500	<br>\
+		Mech: Odysseus 1250 <br>\
+		Mech: Phazon Scuttlebug 2000 <br>\
+		Mech: Phazon Janus 2500 <br>\
+		Mech: Scarab 500 <br>\
+		Mech: Shuttlepod 250 <br>\
+		Mech: Shuttlecraft 500<br>\
+		Rig: Solgov engineering hardsuit control module 500 <br>\
+		Rig: Solgov medical hardsuit control module 500 <br>\
+		Rig: Advanced voidsuit control module 500 <br>\
+		Rig: Pursuit hardsuit control module 750 <br>\
+		Rig: Combat hardsuit control module 750 <br>\
+		Rig: ERT-J suit control module (Elite Janitor NT approved) 250 <br>\
+		Rig: Augmented tie (Elite Paper-Pusher NT approved) 250 <br>\
+		Rig: Industrial suit control module 300 <br>\
+		Rig: Rescue suit control module 300"
 
 /datum/lore/codex/page/casinomanual_implants/add_content()
-	name = "Prizes: Implants"
-	keywords += list("Prizes", "Implants")
+	name = "Prizes: Implants and Genemods"
+	keywords += list("Prizes", "Implants", "Genemods")
 	data = "Implanter 100 (A basic empty implanter, you are going to need this to implant yourself with cyberntic augments)<br>\
 		Implant: Tazer 1000 (A cybernetic implant that allows one to spawn a personal defense taser)<br>\
 		Implant: Medkit 500 (A cybernetic implant that allows you to spawn all the tools needed for surgery)<br>\
 		Implant: Shades 750 (A cybernetic implant that will spawn protective thermoshades upon your eyes, AR included!)<br>\
 		Implant: Sprinter 1500 (A cybernetic implant that will give you that extra kick of energy to run faster!)<br>\
 		Implant: Toolkit 500 (A cybernetic implant that allows you to spawn all the tools needed for engineering)<br>\
-		Implant: Language 1000 (A cybernetic implant that allows you to understand almost all languages)<br>\
+		Implant: Language 500 (A cybernetic implant that allows you to understand almost all languages)<br>\
 		Implant: Analyzer 500 (A cybernetic implant that allows one to spawn a Portable Resonant Analyzer for any science needs)<br>\
-		Implant: Size Control 500 (A cybernetic implant that allows one to change the size of others via specific voice commands)"
+		Implant: Size Control 500 (A cybernetic implant that allows one to change the size of others via specific voice commands)<br>\
+		Implant: Adrenalin 500 (Subjects injected with implant can activate a massive injection of adrenalin)<br>\
+		Implant: Armblade 1000 (Nanite fabricator capeable of making a large blade on arm)<br>\
+		Implant: Wrist dartgun 1000 (Nanite fabricator capeable of making a dart gun on arm)<br>\
+		Implant: Freedom 500 (Use this to escape from those evil Red Shirts.)<br>\
+		Implant: Handblade 1000 (Nanite fabricator capeable of making a small blade on wrist)<br>\
+		Implant: Armlaser 1000 (Nanite fabricator capeable of making a laser on arm)<br>\
+		Implant: Loyalty 500 (Makes you loyal or such.)<br>\
+		Implant: Arm restraining bolt 1000 (Nanite fabricator capeable of making a restraining bolt gun on arm)<br>\
+		Implant: Surge 500 (A muscle overclocker, for when you need to punch extra hard!)<br>\
+		Implant: Sword arm 1000 (Nanite fabricator capeable of making a large sword attached to arm)<br>\
+		Genemod: No breath:  1000 (No need to breath)<br>\
+		Genemod: Regenerate:  1000 (Regeration conveniently packaged in a syringe)<br>\
+		Genemod: Remote view:  1000 (See further than ever before!)<br>\
+		Genemod: Sprinter:  1000 (You run faster)<br>\
+		Genemod: Telepathy:  1000 (Mysterious telepathic powers are within your grasp!)<br>\
+		Genemod: X-ray:  1000 (A genetic shoot that allows for view through matter)"
 
 /datum/lore/codex/page/casinomanual_sentientprizes/add_content()
 	name = "Sentient Prizes"

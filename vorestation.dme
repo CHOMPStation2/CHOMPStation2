@@ -1275,6 +1275,7 @@
 #include "code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "code\game\objects\items\devices\radio\encryptionkey_vr.dm"
 #include "code\game\objects\items\devices\radio\headset.dm"
+#include "code\game\objects\items\devices\radio\headset_ch.dm"
 #include "code\game\objects\items\devices\radio\headset_vr.dm"
 #include "code\game\objects\items\devices\radio\intercom.dm"
 #include "code\game\objects\items\devices\radio\jammer.dm"

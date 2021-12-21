@@ -4,33 +4,29 @@
 
 /obj/item/weapon/a_gift/advanced
 	name = "present"
-	desc = "A gift! What could be inside?!"
+	desc = "Its a Christmas present! It has a tag on it that says: 'Chomp staff thank you all for the year that has passed and wish you a merry Christmas and a happy new year. May the new year be good and well for you with many achievements and happy times!'"
 	icon = 'icons/obj/items_ch.dmi'
-	icon_state = "gift1_g"
-	item_state = "gift1_g"
+	icon_state = "chomp_present"
+	item_state = "chomp_present"
 	var/chaos = "I can do anything!"
 
 /obj/item/weapon/a_gift/advanced/New()
 	..()
 	pixel_x = rand(-10,10)
 	pixel_y = rand(-10,10)
-
-	/* DISABLED FOR NOW: STRONG TOYS IN REWARDS OF POOL - Jack
 	chaos = rand(1, 100)
 	if(chaos == 1)
-		icon_state = "gift_chaos"
+		icon_state = "chomp_present_chaos"
 		chaos = TRUE
+		name = "chaotic present"
+		desc = "The casino dev messed up and gave you the wrong present! This one pulses with potential for good or evil!"
 	else
-		icon_state = "gift[pick("1", "2", "3")]_[pick("g", "r", "b", "y", "p")]"
 		chaos = FALSE
-	*/
 
-	icon_state = "gift[pick("1", "2", "3")]_[pick("g", "r", "b", "y", "p")]"
 	item_state = icon_state
-	chaos = FALSE
 	return
 
-/obj/item/weapon/a_gift/advanced/attack_self(mob/M as mob) //WIP - add more items to list! - Jack
+/obj/item/weapon/a_gift/advanced/attack_self(mob/M as mob) //WIP - ALWAYS add more items to list! - Jack
 	var/gift_type_advanced = pick(
 		/obj/item/device/binoculars/spyglass,
 		/obj/item/device/bodysnatcher,
@@ -105,10 +101,75 @@
 		/obj/item/weapon/grenade/spawnergrenade/casino/otie,
 		/obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby,
 		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia,
-		/obj/item/weapon/lego)
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax,
+		/obj/item/weapon/lego,
+		/obj/item/weapon/dnainjector/nobreath,
+		/obj/item/weapon/dnainjector/regenerate,
+		/obj/item/weapon/dnainjector/remoteview,
+		/obj/item/weapon/dnainjector/runfast,
+		/obj/item/weapon/dnainjector/telemut,
+		/obj/item/weapon/dnainjector/xraymut,
+		/obj/item/instrument/accordion,
+		/obj/item/instrument/banjo,
+		/obj/item/instrument/bikehorn,
+		/obj/item/instrument/eguitar,
+		/obj/item/instrument/glockenspiel,
+		/obj/item/instrument/guitar,
+		/obj/item/instrument/harmonica,
+		/obj/item/instrument/keytar,
+		/obj/item/instrument/musicalmoth,
+		/obj/item/instrument/piano_synth,
+		/obj/item/instrument/recorder,
+		/obj/item/instrument/saxophone,
+		/obj/item/instrument/saxophone/spectral,
+		/obj/item/instrument/trombone,
+		/obj/item/instrument/trombone/spectral,
+		/obj/item/instrument/trumpet,
+		/obj/item/instrument/trumpet/spectral,
+		/obj/item/instrument/violin,
+		/obj/item/instrument/violin/golden,
+		/obj/item/instrument/xylophone,
+		/obj/item/weapon/implantcase/adrenalin,
+		/obj/item/weapon/implantcase/analyzer,
+		/obj/item/weapon/implantcase/armblade,
+		/obj/item/weapon/implantcase/dart,
+		/obj/item/weapon/implantcase/freedom,
+		/obj/item/weapon/implantcase/handblade,
+		/obj/item/weapon/implantcase/language/eal,
+		/obj/item/weapon/implantcase/laser,
+		/obj/item/weapon/implantcase/loyalty,
+		/obj/item/weapon/implantcase/medkit,
+		/obj/item/weapon/implantcase/restrainingbolt,
+		/obj/item/weapon/implantcase/shades,
+		/obj/item/weapon/implantcase/sprinter,
+		/obj/item/weapon/implantcase/surge,
+		/obj/item/weapon/implantcase/sword,
+		/obj/item/weapon/implantcase/taser,
+		/obj/item/weapon/implantcase/toolkit,
+		/obj/item/weapon/implantcase/vrlanguage,
+		/obj/item/weapon/implanter/sizecontrol,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/mining,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/firefighter,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/serenity,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/Odysseus,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/scree,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/janus,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/scarab,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlepod,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlecraft,
+		/obj/item/weapon/rig/bayeng,
+		/obj/item/weapon/rig/baymed,
+		/obj/item/weapon/rig/ce,
+		/obj/item/weapon/rig/ch/pursuit,
+		/obj/item/weapon/rig/combat,
+		/obj/item/weapon/rig/ert/janitor,
+		/obj/item/weapon/rig/industrial,
+		/obj/item/weapon/rig/internalaffairs,
+		/obj/item/weapon/rig/medical)
 
 	var/gift_type_chaos = pick(
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/gorilla,
+		/obj/item/weapon/dnainjector/hulkmut,
 		/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake,
 		/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer,
 		/obj/item/weapon/spellbook,

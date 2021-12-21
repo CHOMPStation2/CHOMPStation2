@@ -1,6 +1,8 @@
 /obj/item/weapon/card/id/casino
 	name = "casino id"
 	desc = "An ID card for an employee of the golden goose casino."
+	icon = 'icons/obj/card_ch.dmi'
+	base_icon = 'icons/obj/card_ch.dmi'
 	icon_state = "ch_casino"
 	item_state = "gold_id"
 
