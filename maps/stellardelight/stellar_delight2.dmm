@@ -840,6 +840,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+"bO" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/sign/christmas/wreath,
+/mob/living/simple_mob/otie/red/chubby/cocoa,
+/turf/simulated/floor/tiled/eris/steel/brown_platform,
+/area/crew_quarters/bar)
 "bP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -851,6 +860,17 @@
 /obj/machinery/alarm/angled,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
+"bQ" = (
+/obj/structure/closet/secure_closet/quartermaster,
+/obj/item/weapon/storage/backpack/dufflebag,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/firealarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
 "bR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
@@ -883,12 +903,22 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/storage)
 "bU" = (
+<<<<<<< HEAD
 /mob/living/simple_mob/vore/alienanimals/teppi/baby,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
+=======
+/obj/structure/filingcabinet,
+/obj/machinery/light,
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+>>>>>>> 8c547bb850e... Merge pull request #12014 from Heroman3003/qm-office-fix
 "bV" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/book/manual/bar_guide,
@@ -6719,6 +6749,7 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardaft)
+<<<<<<< HEAD
 "pi" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -6727,6 +6758,8 @@
 /mob/living/simple_mob/otie/red/chubby/cocoa,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
+=======
+>>>>>>> 8c547bb850e... Merge pull request #12014 from Heroman3003/qm-office-fix
 "pj" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -7985,11 +8018,6 @@
 "rT" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/storage/tech)
-"rU" = (
-/obj/structure/filingcabinet,
-/obj/machinery/light,
-/turf/simulated/floor/wood,
-/area/quartermaster/qm)
 "rV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -8723,14 +8751,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/storage)
-"tG" = (
-/obj/structure/closet/secure_closet/quartermaster,
-/obj/item/weapon/storage/backpack/dufflebag,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/quartermaster/qm)
 "tI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -33159,7 +33179,7 @@ Jh
 Jh
 Wb
 HQ
-pi
+bO
 YU
 lU
 as
@@ -33660,7 +33680,7 @@ ed
 du
 dJ
 mE
-tG
+bQ
 YY
 ce
 BO
@@ -34085,7 +34105,7 @@ xo
 NO
 cH
 kY
-rU
+bU
 YY
 Sf
 TK
