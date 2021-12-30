@@ -38,5 +38,3 @@ SUBSYSTEM_DEF(time_track)
 	last_tick_realtime = current_realtime
 	last_tick_byond_time = current_byondtime
 	last_tick_tickcount = current_tickcount
-	if(current_realtime >= 386000 && current_realtime < 387000) //CHOMPEdit
-		to_world("<b>Automated router restart warning! Connection will be temporarily lost in a moment. Recommended to save any unfinished posts and avoid time-sensitive situations until router is back online.</b>") //CHOMPEdit
