@@ -162,7 +162,9 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	vore_default_item_mode = IM_DIGEST
 
 /mob/living/simple_mob/vore/alienanimals/teppi/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPEdit
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The heat of the roiling flesh around you bakes into you immediately as you’re cast into the gloom of a Teppi’s primary gastric chamber. The undulations are practically smothering, clinging to you and grinding you all over as the Teppi continues about its day. The walls are heavy against you, so it’s really difficult to move at all, while the heart of this creature pulses rhythmically somewhere nearby, and you can feel the throb of its pulse in the doughy squish pressing up against you. Your figure sinks a ways into the flesh as it presses in, wrapping limbs up between countless slick folds and kneading waves. It’s not long before you’re positively soaked in a thin layer of slime as you’re rocked and squeezed and jostled in the stomach of your captor."
@@ -616,7 +618,8 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 				if(prob(25))
 					M.visible_message("<span class='notice'>\The [src] rumbles happily at \the [M]</span>","<span class='notice'>\The [src] rumbles happily at you!</span>")
 					playsound(src, 'sound/voice/teppi/rumble.ogg', 75, 1)
-				vore_selected.digest_mode = DM_DRAIN //People outside can help calm the tumby if you squirm too much
+				if(vore_selected) //CHOMPEdit
+					vore_selected.digest_mode = DM_DRAIN //People outside can help calm the tumby if you squirm too much
 			else if(prob(25))
 				M.visible_message("<span class='notice'>\The [src] rumbles happily at \the [M]</span>","<span class='notice'>\The [src] rumbles happily at you!</span>")
 				playsound(src, 'sound/voice/teppi/cute_rumble.ogg', 75, 1)
@@ -784,6 +787,9 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		vore_selected.digest_burn = 0.05
 
 /mob/living/simple_mob/vore/alienanimals/teppi/animal_nom(mob/living/T in living_mobs(1))
+	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+		voremob_loaded = TRUE
+		init_vore()
 	if(client)
 		return ..()
 	var/current_affinity = affinity[T.real_name]
