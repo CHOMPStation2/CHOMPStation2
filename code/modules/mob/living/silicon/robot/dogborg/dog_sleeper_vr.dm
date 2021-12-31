@@ -741,6 +741,14 @@
 				drain(100) //-100 charge per injection
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
+
+/obj/item/device/dogborg/sleeper/compactor/honkborg
+	name = "Jiggles Von Hungertron"
+	desc = "You've heard of Giggles Von Honkerton for the back, now get ready for Jiggles Von Hungertron for the front."
+	icon = 'icons/mob/dogborg_ch.dmi'
+	icon_state = "clowngut"
+	recycles = FALSE
+
 //CHOMP Addition end
 
 /obj/item/device/dogborg/sleeper/K9/ert

@@ -7,6 +7,8 @@
 	item_state = "confetti_cannon"
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 2)
+	throw_distance = 7
+	release_force = 5
 	var/obj/item/weapon/grenade/confetti/party_ball/chambered = null
 
 	var/confetti_charge = 0
@@ -55,3 +57,41 @@
 	desc = "For those times when you absolutely need colored paper everywhere, EVERYWHERE."
 	confetti_charge = 100
 	max_confetti = 100
+
+/obj/item/weapon/gun/launcher/confetti_cannon/honkborg
+	name = "Party Cannon"
+	desc = "Confetti, pies, banana peels, chaos!"
+
+/obj/item/weapon/gun/launcher/confetti_cannon/honkborg/pump(mob/M as mob)
+	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	if(!chambered)
+		var/choice = tgui_alert(usr, "Load the Party Canon with?", "Change What?", list("Confetti","Banana Peel","Cream Pie"))
+		if(!choice)
+			return
+		playsound(src, 'sound/effects/pop.ogg', 50, 0)
+		switch(choice)
+			if("Confetti")
+				chambered = new /obj/item/weapon/grenade/confetti/party_ball
+				to_chat(usr, "<font color='blue'>Confetti loaded.</font>")
+				if(istype(usr,/mob/living/silicon/robot))
+					var/mob/living/silicon/robot/R = usr
+					R.cell.charge -= 200
+			if("Banana Peel")
+				chambered = new /obj/item/weapon/bananapeel
+				to_chat(usr, "<font color='blue'>Banana peel loaded.</font>")
+				if(istype(usr,/mob/living/silicon/robot))
+					var/mob/living/silicon/robot/R = usr
+					R.cell.charge -= 200
+			if("Cream Pie")
+				chambered = new /obj/item/weapon/reagent_containers/food/snacks/pie
+				to_chat(usr, "<font color='blue'>Banana cream pie loaded.</font>")
+				if(istype(usr,/mob/living/silicon/robot))
+					var/mob/living/silicon/robot/R = usr
+					R.cell.charge -= 200
+	else
+		to_chat(usr, "<font color='red'>The [src] is already loaded!</font>")
+
+/obj/item/weapon/gun/launcher/confetti_cannon/honkborg/consume_next_projectile()
+	if(istype(chambered,/obj/item/weapon/grenade/confetti/party_ball))
+		chambered.activate(null)
+	return chambered
