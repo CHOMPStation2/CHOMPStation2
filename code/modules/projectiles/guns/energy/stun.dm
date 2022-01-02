@@ -20,8 +20,8 @@
 
 /obj/item/weapon/gun/energy/taser/mounted/cyborg
 	name = "taser gun"
-	charge_cost = 400
-	recharge_time = 7 //Time it takes for shots to recharge (in ticks)
+	charge_cost = 160  //Chompedit: Reduced from 400 to 160 to match VR's, which we also use.
+	recharge_time = 5 //ChompEdit: reduced from 7 to 5, Time it takes for shots to recharge (in ticks)  
 
 /obj/item/weapon/gun/energy/taser/mounted/cyborg/swarm
 	name = "disabler"
