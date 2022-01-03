@@ -133,7 +133,7 @@
 			return result
 		// VOREStation Edit Start - GetChatCommands command
 		if(DMAPI5_TOPIC_COMMAND_GET_CHAT_COMMANDS)
-			var/topic_response = list(DMAPI5_BRIDGE_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands())
+			var/topic_response = list(DMAPI5_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands())
 			return json_encode(topic_response)
 		// VOREStation Edit - End
 		if(DMAPI5_TOPIC_COMMAND_EVENT_NOTIFICATION)
