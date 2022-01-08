@@ -19,7 +19,19 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+liache - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Xenochimera
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+marcobarko - Protean
+>>>>>>> 02047881a02... Merge pull request #12037 from PastelPrinceDan/nyanites
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
@@ -28,6 +40,11 @@ nerdass - Protean
 ontejbjoav - Diona
 oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
+<<<<<<< HEAD
+=======
+pastelprincedan - Black-Eyed Shadekin
+pastelprincedan - Protean
+>>>>>>> 02047881a02... Merge pull request #12037 from PastelPrinceDan/nyanites
 pearlprophet - Protean
 phoenixx0 - Vox
 rapidvalj - Vox
@@ -58,5 +75,6 @@ wickedtemp - Shadekin Empathy
 xioen - Diona
 xioen - Xenochimera
 xonkon - Protean
+yeehawguvnah - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
