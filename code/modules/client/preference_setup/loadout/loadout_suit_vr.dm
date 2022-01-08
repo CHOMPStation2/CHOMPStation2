@@ -108,3 +108,12 @@ Talon winter coat
 /datum/gear/suit/wintercoat/talon
 	display_name = "winter coat, Talon"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon
+<<<<<<< HEAD
+=======
+
+
+/datum/gear/suit/armor/combat/crusader_explo
+	display_name = "knight, explo"
+	path = /obj/item/clothing/suit/armor/combat/crusader_explo
+	allowed_roles = list("Explorer","Field Medic","Pathfinder")
+>>>>>>> 62a6177d876... Merge pull request #12044 from TheDavestDave/dnd-explo-amour
