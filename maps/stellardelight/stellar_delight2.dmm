@@ -840,6 +840,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
+=======
+"bO" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/mob/living/simple_mob/otie/red/chubby/cocoa,
+/turf/simulated/floor/tiled/eris/steel/brown_platform,
+/area/crew_quarters/bar)
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 "bP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -2500,9 +2511,12 @@
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "fL" = (
-/obj/machinery/computer/arcade/battle,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/landmark/vermin,
+<<<<<<< HEAD
+=======
+/obj/machinery/slot_machine,
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "fN" = (
@@ -12759,12 +12773,19 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "De" = (
+<<<<<<< HEAD
 /obj/structure/flora/pottedplant/decorative,
+=======
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = -24
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/flora/pottedplant/decorative,
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "Df" = (
@@ -13058,12 +13079,19 @@
 /turf/simulated/floor/glass/reinforced,
 /area/stellardelight/deck2/fore)
 "DO" = (
+<<<<<<< HEAD
 /obj/structure/flora/pottedplant/decorative,
+=======
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = 24
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/flora/pottedplant/decorative,
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "DP" = (
@@ -17028,7 +17056,11 @@
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
 "Mp" = (
+<<<<<<< HEAD
 /obj/machinery/computer/arcade/orion_trail,
+=======
+/obj/machinery/computer/arcade/battle,
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "Mq" = (
@@ -19816,7 +19848,11 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/maintenance/stellardelight/deck2/portfore)
 "SF" = (
+<<<<<<< HEAD
 /obj/machinery/computer/arcade/battle,
+=======
+/obj/machinery/slot_machine,
+>>>>>>> d05e20a6778... Merge pull request #12049 from Very-Soft/itnotcrummus
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "SG" = (
@@ -33600,7 +33636,7 @@ HO
 nt
 XP
 mt
-mt
+SF
 mt
 mt
 lO
