@@ -19816,7 +19816,11 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/maintenance/stellardelight/deck2/portfore)
 "SF" = (
+<<<<<<< HEAD
 /obj/machinery/computer/arcade/battle,
+=======
+/obj/machinery/computer/arcade/clawmachine,
+>>>>>>> 220ee311dbf... Merge pull request #12051 from Very-Soft/theresanextramachineuwu
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "SG" = (
