@@ -161,8 +161,6 @@
 	cost = 300
 	containertype = /obj/structure/closet/crate
 	containername = "cordless jukebox speakers crate"
-<<<<<<< HEAD
-=======
 
 /datum/supply_pack/misc/sword
 	name = "sword"
@@ -174,4 +172,3 @@
 				  access_security,)
 
 	one_access = TRUE
->>>>>>> 3773f565937... Merge pull request #12042 from TheDavestDave/sword-crate
