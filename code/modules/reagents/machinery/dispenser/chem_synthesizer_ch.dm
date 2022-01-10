@@ -21,6 +21,7 @@
 // Add an eject catalyst bottle button.
 // Make sure recipes can only be removed when the machine is idle. Adding should be fine.
 // May need yet another list which is just strings which match recipe ID's. 
+// For user recipes, make clicking on the recipe give a prompt with "add to queue," "export recipe," and "delete recipe."
 
 /obj/machinery/chemical_synthesizer
 	name = "chemical synthesizer"
@@ -37,7 +38,7 @@
 	panel_open = TRUE
 
 	var/busy = FALSE
-	var/expert_mode = FALSE // Toggle between click-step input and comma-delineated text input for creating recipes.
+	var/production_mode = FALSE // Toggle between click-step input and comma-delineated text input for creating recipes.
 	var/use_catalyst = TRUE // Determines whether or not the catalyst will be added to reagents while processing a recipe.
 	var/delay_modifier = 3 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
 	var/obj/item/weapon/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
@@ -202,7 +203,7 @@
 				. = 1
 		if(.)
 			SStgui.update_uis(src)
-/*
+
 /obj/machinery/chemical_synthesizer/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -210,7 +211,40 @@
 		ui.open()
 
 /obj/machinery/chemical_synthesizer/tgui_data(mob/user)
-	var/data[0]
+	var/list/data = list()
+
+	data["busy"] = busy
+	data["production_mode"] = production_mode
+	data["panel_open"] = panel_open
+	data["use_catalyst"] = use_catalyst
+
+	// Queue and recipe lists might not be formatted correctly here. Delete this once you've confirmed. 
+	data["queue"] = queue
+	data["recipes"] = recipes
+
+
+
+	// Read data from the reaction vessel.
+	var/list/vessel_reagents_list = list()
+	data["rxn_vessel"] = vessel_reagents_list
+	for(var/datum/reagent/R in src.reagents.reagent_list)
+		vessel_reagents_list[++vessel_reagents_list.len] = list("name" = R.name, "volume" = R.volume, "description" = R.description, "id" = R.id)
+
+	// Read data from the catalyst, if present.
+	data["catalyst"] = catalyst ? 1 : 0
+	if(catalyst)
+		var/list/catalyst_reagents_list = list()
+		data["catalyst_reagents"] = catalyst_reagents_list
+		for(var/datum/reagent/R in catalyst.reagents.reagent_list)
+			catalyst_reagents_list[++catalyst_reagents_list.len] = list("name" = R.name, "volume" = R.volume, "description" = R.description, "id" = R.id)
+
+	var/chemicals[0]
+	for(var/label in cartridges)
+		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
+		chemicals.Add(list(list("title" = label, "id" = label, "amount" = C.reagents.total_volume))) // list in a list because Byond merges the first list
+	data["chemicals"] = chemicals
+
+	return data
 
 /obj/machinery/chemical_synthesizer/tgui_act(action, params)
 	if(..())
@@ -222,7 +256,7 @@
 
 
 	add_fingerprint(usr)
-*/
+
 /obj/machinery/chemical_synthesizer/attack_ghost(mob/user)
 	if(stat & (BROKEN|NOPOWER))
 		return
