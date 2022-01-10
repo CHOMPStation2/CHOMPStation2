@@ -644,6 +644,13 @@ const VoreSelectedBellyOptions = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
               content={shrink_grow_size * 100 + "%"} />
           </LabeledList.Item>
+          <LabeledList.Item label="Vore Spawn Blacklist">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
+              icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
+              selected={vorespawn_blacklist}
+              content={vorespawn_blacklist ? "Yes" : "No"} />
+          </LabeledList.Item>
           <LabeledList.Item label="Egg Type">
             <Button
               onClick={() => act("set_attribute", { attribute: "b_egg_type" })}
@@ -709,45 +716,6 @@ const VoreSelectedBellySounds = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_releasesoundtest" })}
               icon="volume-up" />
           </LabeledList.Item>
-<<<<<<< HEAD
-          <LabeledList.Item label="Required Examine Size">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_bulge_size" })}
-              content={bulge_size * 100 + "%"} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Display Absorbed Examines">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_display_absorbed_examine" })}
-              icon={display_absorbed_examine ? "toggle-on" : "toggle-off"}
-              selected={display_absorbed_examine}
-              content={display_absorbed_examine ? "True" : "False"} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Shrink/Grow Size">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
-              content={shrink_grow_size * 100 + "%"} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Vore Spawn Blacklist">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
-              icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
-              selected={vorespawn_blacklist}
-              content={vorespawn_blacklist ? "Yes" : "No"} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Idle Emotes">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
-              icon={emote_active ? "toggle-on" : "toggle-off"}
-              selected={emote_active}
-              content={emote_active ? "Active" : "Inactive"} />
-          </LabeledList.Item>
-          <LabeledList.Item label="Idle Emote Delay">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
-              content={emote_time + " seconds"} />
-          </LabeledList.Item>
-=======
->>>>>>> b19948a0832... Merge pull request #12021 from Heroman3003/more-absorb-vore
         </LabeledList>
       </Flex.Item>
     </Flex>
