@@ -310,11 +310,11 @@ const VoreSelectedBelly = (props, context) => {
     <VoreContentsPanel outside contents={contents} />
   );
 
-  tabs[5] = (
+  tabs[7] = (
     <VoreSelectedBellyLiquidOptions belly={belly} />
   );
 
-  tabs[6] = (
+  tabs[8] = (
     <VoreSelectedBellyLiquidMessages belly={belly} />
   );
 
@@ -342,10 +342,10 @@ const VoreSelectedBelly = (props, context) => {
         <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
           Contents ({contents.length})
         </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
+        <Tabs.Tab selected={tabIndex === 7} onClick={() => setTabIndex(5)}>
           Liquid Options
         </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
+        <Tabs.Tab selected={tabIndex === 8} onClick={() => setTabIndex(6)}>
           Liquid Messages
         </Tabs.Tab>
       </Tabs>
@@ -1529,7 +1529,7 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnprey} />
         </Flex.Item>
         <Flex.Item basis="32%">
@@ -1559,14 +1559,14 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
-        <Flex.Item basis="49%">
+        <Flex.Item basis="32%">
           <Button
             fluid
             content="Set Taste"
             icon="grin-tongue"
             onClick={() => act("setflavor")} />
         </Flex.Item>
-        <Flex.Item basis="49%" grow={1}>
+        <Flex.Item basis="32%" grow={1}>
           <Button
             fluid
             content="Set Smell"
