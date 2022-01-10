@@ -1207,7 +1207,6 @@
 	for(var/I in examine_messages)
 		dupe.examine_messages += I
 
-<<<<<<< HEAD
 
 	// CHOMP reagent belly
 	//generated_reagents - strings
@@ -1245,11 +1244,7 @@
 	for(var/I in fullness5_messages)
 		dupe.fullness5_messages += I
 
-
-	//examine_messages - strings
-=======
 	//examine_messages_absorbed - strings
->>>>>>> b19948a0832... Merge pull request #12021 from Heroman3003/more-absorb-vore
 	dupe.examine_messages_absorbed.Cut()
 	for(var/I in examine_messages_absorbed)
 		dupe.examine_messages_absorbed += I
