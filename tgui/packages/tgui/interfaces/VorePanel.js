@@ -342,10 +342,10 @@ const VoreSelectedBelly = (props, context) => {
         <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
           Contents ({contents.length})
         </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 7} onClick={() => setTabIndex(5)}>
+        <Tabs.Tab selected={tabIndex === 7} onClick={() => setTabIndex(7)}>
           Liquid Options
         </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 8} onClick={() => setTabIndex(6)}>
+        <Tabs.Tab selected={tabIndex === 8} onClick={() => setTabIndex(8)}>
           Liquid Messages
         </Tabs.Tab>
       </Tabs>
