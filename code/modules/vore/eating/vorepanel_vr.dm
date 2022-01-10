@@ -112,11 +112,17 @@
 		var/obj/belly/inside_belly = hostloc
 		var/mob/living/pred = inside_belly.owner
 
+		var/inside_desc = "No description."
+		if(host.absorbed && inside_belly.absorbed_desc)
+			inside_desc = inside_belly.absorbed_desc
+		else if(inside_belly.desc)
+			inside_desc = inside_belly.desc
+
 		inside = list(
 			"absorbed" = host.absorbed,
 			"belly_name" = inside_belly.name,
 			"belly_mode" = inside_belly.digest_mode,
-			"desc" = inside_belly.desc || "No description.",
+			"desc" = inside_desc,
 			"pred" = pred,
 			"ref" = "\ref[inside_belly]",
 		)
@@ -169,6 +175,7 @@
 			"item_mode" = selected.item_digest_mode,
 			"verb" = selected.vore_verb,
 			"desc" = selected.desc,
+			"absorbed_desc" = selected.absorbed_desc,
 			"fancy" = selected.fancy_vore,
 			"sound" = selected.vore_sound,
 			"release_sound" = selected.release_sound,
@@ -814,9 +821,19 @@
 					return FALSE
 				host.vore_selected.desc = new_desc
 				. = TRUE
+		if("b_absorbed_desc")
+			var/new_desc = html_encode(input(usr,"Belly Description for absorbed prey ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.absorbed_desc) as message|null)
+
+			if(new_desc)
+				new_desc = readd_quotes(new_desc)
+				if(length(new_desc) > BELLIES_DESC_MAX)
+					tgui_alert_async(usr, "Entered belly desc too long. [BELLIES_DESC_MAX] character limit.","Error")
+					return FALSE
+				host.vore_selected.absorbed_desc = new_desc
+				. = TRUE
 		if("b_msgs")
 			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (500 for idle messages), max 10 messages per topic.","Really, don't.") // Should remain tgui_alert() (blocking)
-			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly (will not work for absorbed examine). '%countprey' will be replaced with the number of living prey in your belly (or absorbed prey for absorbed examine)."
+			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
 					var/new_message = input(user,"These are sent to prey when they expire. Write them in 2nd person ('you feel X'). Avoid using %prey in this type."+help,"Digest Message (to prey)",host.vore_selected.get_messages("dmp")) as message
@@ -828,6 +845,26 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"dmo")
 
+				if("amp")
+					var/new_message = input(user,"These are sent to prey when their absorption finishes. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to prey)",host.vore_selected.get_messages("amp")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"amp")
+
+				if("amo")
+					var/new_message = input(user,"These are sent to you when prey's absorption finishes. Write them in 2nd person ('you feel X'). Avoid using %pred in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to you)",host.vore_selected.get_messages("amo")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"amo")
+
+				if("uamp")
+					var/new_message = input(user,"These are sent to prey when their unnabsorption finishes. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to prey)",host.vore_selected.get_messages("uamp")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"uamp")
+
+				if("uamo")
+					var/new_message = input(user,"These are sent to you when prey's unabsorption finishes. Write them in 2nd person ('you feel X'). Avoid using %pred in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to you)",host.vore_selected.get_messages("uamo")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"uamo")
+
 				if("smo")
 					var/new_message = input(user,"These are sent to those nearby when prey struggles. Write them in 3rd person ('X's Y bulges')."+help,"Struggle Message (outside)",host.vore_selected.get_messages("smo")) as message
 					if(new_message)
@@ -838,13 +875,23 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"smi")
 
+				if("asmo")
+					var/new_message = input(user,"These are sent to those nearby when absorbed prey struggles. Write them in 3rd person ('X's Y bulges'). %count will not work for this type, and %countprey will only count absorbed victims."+help,"Struggle Message (outside)",host.vore_selected.get_messages("asmo")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"asmo")
+
+				if("asmi")
+					var/new_message = input(user,"These are sent to absorbed prey when they struggle. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Struggle Message (inside)",host.vore_selected.get_messages("asmi")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"asmi")
+
 				if("em")
 					var/new_message = input(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"em")
 
 				if("ema")
-					var/new_message = input(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger')."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema")) as message
+					var/new_message = input(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger'). %count will not work for this type, and %countprey will only count absorbed victims."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"ema")
 
@@ -857,6 +904,11 @@
 					var/new_message = input(user,"These are sent to prey every minute when you are on Hold mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Hold)",host.vore_selected.get_messages("im_hold")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"im_hold")
+
+				if("im_holdabsorbed")
+					var/new_message = input(user,"These are sent to prey every minute when you are absorbed. Write them in 2nd person ('%pred's %belly squishes down on you.') %count will not work for this type, and %countprey will only count absorbed victims."+help,"Idle Message (Hold Absorbed)",host.vore_selected.get_messages("im_holdabsorbed")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_holdabsorbed")
 
 				if("im_absorb")
 					var/new_message = input(user,"These are sent to prey every minute when you are on Absorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Absorb)",host.vore_selected.get_messages("im_absorb")) as message
@@ -903,8 +955,14 @@
 					if(confirm == "DELETE")
 						host.vore_selected.digest_messages_prey = initial(host.vore_selected.digest_messages_prey)
 						host.vore_selected.digest_messages_owner = initial(host.vore_selected.digest_messages_owner)
+						host.vore_selected.absorb_messages_prey = initial(host.vore_selected.absorb_messages_prey)
+						host.vore_selected.absorb_messages_owner = initial(host.vore_selected.absorb_messages_owner)
+						host.vore_selected.unabsorb_messages_prey = initial(host.vore_selected.unabsorb_messages_prey)
+						host.vore_selected.unabsorb_messages_owner = initial(host.vore_selected.unabsorb_messages_owner)
 						host.vore_selected.struggle_messages_outside = initial(host.vore_selected.struggle_messages_outside)
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
+						host.vore_selected.absorbed_struggle_messages_outside = initial(host.vore_selected.absorbed_struggle_messages_outside)
+						host.vore_selected.absorbed_struggle_messages_inside = initial(host.vore_selected.absorbed_struggle_messages_inside)
 						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
 						host.vore_selected.examine_messages_absorbed = initial(host.vore_selected.examine_messages_absorbed)
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
@@ -1191,7 +1249,7 @@
 				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid options.</span>")
 			else
 				host.vore_selected.show_liquids = 0
-				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] elected.name)] no longer has liquid options.</span>")
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid options.</span>")
 			. = TRUE
 		if("b_liq_reagent_gen")
 			if(!host.vore_selected.reagentbellymode) //liquid container adjustments and interactions.
