@@ -1249,7 +1249,7 @@
 				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid options.</span>")
 			else
 				host.vore_selected.show_liquids = 0
-				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] elected.name)] no longer has liquid options.</span>")
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid options.</span>")
 			. = TRUE
 		if("b_liq_reagent_gen")
 			if(!host.vore_selected.reagentbellymode) //liquid container adjustments and interactions.
