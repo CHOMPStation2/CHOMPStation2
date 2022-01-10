@@ -728,47 +728,71 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const { belly } = props;
   const {
     belly_fullscreen,
+    belly_fullscreen_color,
+    mapRef,
     possible_fullscreens,
     disable_hud,
   } = belly;
 
   return (
     <Fragment>
-      <Section title="Vore FX">
-        <LabeledList>
-          <LabeledList.Item label="Disable Prey HUD">
-            <Button
-              onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-              icon={disable_hud ? "toggle-on" : "toggle-off"}
-              selected={disable_hud}
-              content={disable_hud ? "Yes" : "No"} />
-          </LabeledList.Item>
-        </LabeledList>
-      </Section>
-      <Section title="Belly Fullscreens">
-        <Button
-          fluid
-          selected={belly_fullscreen === "" || belly_fullscreen === null}
-          onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
-          Disabled
-        </Button>
-        {Object.keys(possible_fullscreens).map(key => (
+      <Section title="Belly Fullscreens Preview and Coloring">
+        <Flex direction="row">
+          <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
           <Button
-            key={key}
-            width="256px"
-            height="256px"
-            selected={key === belly_fullscreen}
-            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-            <Box
-              className={classes([
-                'vore240x240',
-                key,
-              ])}
-              style={{
-                transform: 'translate(0%, 4%)',
-              }} />
+            icon="eye-dropper"
+            onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
+            Select Color
           </Button>
-        ))}
+        </Flex>
+        <ByondUi
+          style={{
+            width: '200px',
+            height: '200px',
+          }}
+          params={{
+            id: mapRef,
+            type: 'map',
+          }} />
+      </Section>
+      <Section height="260px" style={{ overflow: "auto" }}>
+        <Section title="Vore FX">
+          <LabeledList>
+            <LabeledList.Item label="Disable Prey HUD">
+              <Button
+                onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
+                icon={disable_hud ? "toggle-on" : "toggle-off"}
+                selected={disable_hud}
+                content={disable_hud ? "Yes" : "No"} />
+            </LabeledList.Item>
+          </LabeledList>
+        </Section>
+        <Section title="Belly Fullscreens Styles">
+          Belly styles:
+          <Button
+            fluid
+            selected={belly_fullscreen === "" || belly_fullscreen === null}
+            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+            Disabled
+          </Button>
+          {Object.keys(possible_fullscreens).map(key => (
+            <Button
+              key={key}
+              width="256px"
+              height="256px"
+              selected={key === belly_fullscreen}
+              onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
+              <Box
+                className={classes([
+                  'vore240x240',
+                  key,
+                ])}
+                style={{
+                  transform: 'translate(0%, 4%)',
+                }} />
+            </Button>
+          ))}
+        </Section>
       </Section>
     </Fragment>
   );
@@ -886,75 +910,6 @@ const VoreSelectedBellyInteractions = (props, context) => {
 const VoreContentsPanel = (props, context) => {
   const { act, data } = useBackend(context);
   const {
-<<<<<<< HEAD
-    belly_fullscreen,
-    belly_fullscreen_color,
-    mapRef,
-    possible_fullscreens,
-    disable_hud,
-  } = belly;
-
-  return (
-    <Fragment>
-      <Section title="Belly Fullscreens Preview and Coloring">
-        <Flex direction="row">
-          <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
-          <Button
-            icon="eye-dropper"
-            onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
-            Select Color
-          </Button>
-        </Flex>
-        <ByondUi
-          style={{
-            width: '200px',
-            height: '200px',
-          }}
-          params={{
-            id: mapRef,
-            type: 'map',
-          }} />
-      </Section>
-      <Section height="260px" style={{ overflow: "auto" }}>
-        <Section title="Vore FX">
-          <LabeledList>
-            <LabeledList.Item label="Disable Prey HUD">
-              <Button
-                onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-                icon={disable_hud ? "toggle-on" : "toggle-off"}
-                selected={disable_hud}
-                content={disable_hud ? "Yes" : "No"} />
-            </LabeledList.Item>
-          </LabeledList>
-        </Section>
-        <Section title="Belly Fullscreens Styles">
-          Belly styles:
-          <Button
-            fluid
-            selected={belly_fullscreen === "" || belly_fullscreen === null}
-            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
-            Disabled
-          </Button>
-          {Object.keys(possible_fullscreens).map(key => (
-            <Button
-              key={key}
-              width="256px"
-              height="256px"
-              selected={key === belly_fullscreen}
-              onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-              <Box
-                className={classes([
-                  'vore240x240',
-                  key,
-                ])}
-                style={{
-                  transform: 'translate(0%, 4%)',
-                }} />
-            </Button>
-          ))}
-        </Section>
-      </Section>
-=======
     show_pictures,
   } = data;
   const {
@@ -1022,7 +977,6 @@ const VoreContentsPanel = (props, context) => {
           ))}
         </LabeledList>
       )}
->>>>>>> b19948a0832... Merge pull request #12021 from Heroman3003/more-absorb-vore
     </Fragment>
   );
 };
