@@ -110,9 +110,6 @@
 	H.internal = locate(/obj/item/weapon/tank) in H.contents
 	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
 		H.internals.icon_state = "internal1"
-<<<<<<< HEAD
-=======
 
 /datum/species/vox/get_perfect_belly_air_type()
 	return /datum/gas_mixture/belly_air/vox
->>>>>>> 6a2b3120c45... Merge pull request #12047 from Heroman3003/bellybreath
