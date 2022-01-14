@@ -949,6 +949,27 @@
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/stellardelight/deck2/briefingroom)
+"cc" = (
+/obj/machinery/power/smes/buildable{
+	charge = 2e+006;
+	input_attempt = 1;
+	input_level = 200000;
+	name = "Engine";
+	output_level = 250000;
+	RCon_tag = "Engine - Core"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+"cd" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
 "ce" = (
 /obj/machinery/vending/wardrobe/cargodrobe,
 /obj/machinery/status_display/supply_display{
@@ -1032,6 +1053,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+"cp" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/power/thermoregulator,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
 "cq" = (
 /obj/machinery/air_sensor{
 	frequency = 1438;
@@ -1365,6 +1393,7 @@
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/locker_room)
 "db" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -1376,6 +1405,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
+=======
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper{
+	info = "For those who didn't know yet, the big blue box in here is a 'grid checker' which will shut off the power if a dangerous power spike erupts into the powernet, shutting everything down protects everything from electrical damage, however the outages can be disruptive to ship operations, so it is designed to restore power after a somewhat significant delay, up to fifteen minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
+	name = "grid checker info"
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box/lights/mixed,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+>>>>>>> 8a889618e7b... Merge pull request #12063 from Heroman3003/smes-and-paper
 "dc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/structure/cable/white{
@@ -1405,6 +1448,14 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardfore)
+"df" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable,
+/obj/machinery/power/grid_checker,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
 "dg" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -1457,6 +1508,10 @@
 	},
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
+"dl" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
 "dm" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -5114,13 +5169,6 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
-"lE" = (
-/obj/machinery/floodlight,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/engineering/storage)
 "lF" = (
 /obj/effect/landmark{
 	name = "lightsout"
@@ -5137,10 +5185,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/recreation_area)
-"lH" = (
-/obj/machinery/power/thermoregulator,
-/turf/simulated/floor/plating,
-/area/engineering/storage)
 "lI" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/window/westleft{
@@ -8803,14 +8847,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/stellardelight/substation/engineering)
-"tS" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/structure/cable,
-/obj/machinery/power/grid_checker,
-/turf/simulated/floor/plating,
-/area/engineering/storage)
 "tT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12075,12 +12111,15 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
+<<<<<<< HEAD
 "By" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 8a889618e7b... Merge pull request #12063 from Heroman3003/smes-and-paper
 "BA" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -13020,6 +13059,7 @@
 	},
 /turf/simulated/floor,
 /area/medical/cryo)
+<<<<<<< HEAD
 "DK" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Engine - Core";
@@ -13033,6 +13073,8 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 8a889618e7b... Merge pull request #12063 from Heroman3003/smes-and-paper
 "DL" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/recreation_area)
@@ -35921,8 +35963,8 @@ cm
 pe
 Yr
 Hx
-lH
-DK
+db
+cc
 HT
 qV
 Se
@@ -36063,7 +36105,7 @@ zT
 cm
 Yr
 AK
-tS
+df
 iG
 HT
 It
@@ -36488,8 +36530,8 @@ Wb
 tK
 tK
 Li
-By
-oR
+cd
+dl
 oR
 gV
 IP
@@ -36630,7 +36672,7 @@ Jh
 Jh
 tK
 sy
-lE
+cp
 px
 px
 Jb
