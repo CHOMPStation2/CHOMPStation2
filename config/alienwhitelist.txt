@@ -6,7 +6,11 @@ arandomalien - Xenochimera
 arokha - Protean
 aruis - Diona
 aruis - Xenochimera
+<<<<<<< HEAD
 amarewolf - Xenochimera
+=======
+auraribbon - Black-Eyed Shadekin
+>>>>>>> 7fc62cfa719... Merge pull request #12069 from liache/patch-2
 azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
@@ -19,7 +23,18 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+lillianfyre - Xenochimera
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Xenochimera
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+marcobarko - Protean
+>>>>>>> 7fc62cfa719... Merge pull request #12069 from liache/patch-2
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
