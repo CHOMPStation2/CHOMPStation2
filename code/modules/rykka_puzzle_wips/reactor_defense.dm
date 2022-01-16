@@ -41,8 +41,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/list/waves = list(1)						// Total amount of waves we'll have, and what mob lists we'll use PER wave. Add more entries to the list to increase the # of waves.
 													// The # (for instance, 1) NEEDS to match with the # of lists in wave_mobs. For instance, if list(1,2,3), we need to have wave_mobs with 3 list(/mob/blah) in it. Ask for help if you're not sure. 
 	var/current_wave = 0							// The wave we're on currently. (Needed if # of waves is > 1). We start at 0 to allow ticking up and counting correctly.
-	var/mobs_per_wave_spawner = 6					// How many mobs we want EACH individual wave spawner to be able to spawn at maximum during ACTIVE waves. Default is 6.
-	var/mobs_per_warmup_spawner = 4					// How many mobs we want EACH individual wave spawner to be able to spawn at maximum during WARMUP sequences. Default is 4.
+	var/mobs_per_wave_spawner = 4					// How many mobs we want EACH individual wave spawner to be able to spawn at maximum during ACTIVE waves. Default is 4.
+	var/mobs_per_warmup_spawner = 2					// How many mobs we want EACH individual wave spawner to be able to spawn at maximum during WARMUP sequences. Default is 2.
 	var/warmup = TRUE								// Does the reactor require a "warmup"/prep time before the waves start?
 	var/warmup_time = 30 SECONDS					// How long is our warmup period?
 	var/warmup_complete = null						// When is warmup complete? This is set in start_warmup()
@@ -150,35 +150,43 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 /obj/machinery/power/damaged_reactor/process() // This runs every 2 seconds/MC tick of the SSobj subsystem. I think. DON'T ADD STUFF DIRECTLY INTO PROCESS, USE THE PROCS.
 	switch(state) // Switch chooses one of the following IF statements based on parameters fed to it. Only one.
 		if(IDLE) // No need to do anything while we're idle/waiting for interaction. 
+			to_world("Processing is idle!") // Debug Announce so we can log steps.
 			return
 
 		if(WARMUP) // All of the warmup stuff is handled by procs. Go down to PROCS section to modify this behavior.
 			if(!warmup_complete)
 				start_warmup()
+				to_world("Processing started warmup!") // Debug Announce so we can log steps.
 				return // We return so that the second if isn't checked before warmup_complete is set - if this is removed, warmup_complete will be null/0 when the second if is run, returning true and running complete_warmup()
 			if(world.time >= warmup_complete)
 				complete_warmup()
+				to_world("Processing finished warmup!") // Debug Announce so we can log steps.
 				return
 			warmup()
 		
 		if(ENGAGED) // All of the wave stuff is handled by procs. Go down to PROCS section to modify this behavior.
 			if(!wave_complete)
 				start_wave()
+				to_world("Processing started wave!") // Debug Announce so we can log steps.
 				return // We return so that the second if isn't checked before wave_complete is set - if this is removed, wave_complete will be null/0 when the second if is run, returning true and running end_wave()
 			if(world.time >= wave_complete)
 				end_wave()
+				to_world("Processing finished wave!") // Debug Announce so we can log steps.
 				return
 			defense_mode()
 			
 		if(VERIFYING) // All of the verification stuff is handled by procs. Go down to PROCS section to modify this behavior.
 			if(!verification_timeout)
 				start_verification()
+				to_world("Processing started verification!") // Debug Announce so we can log steps.
 				return // We return so that the second if isn't checked immediately before verification_timeout is set.
 			if(world.time >= verification_timeout && !(verification_successful)) // Did we run out of time?
 				rollback_wave()
+				to_world("Processing rolled back the wave!") // Debug Announce so we can log steps.
 				return
 			else if(verification_successful)
 				complete_verification()
+				to_world("Processing successfully finished verification!") // Debug Announce so we can log steps.
 				return
 			verifying()
 		
@@ -511,34 +519,37 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 														// We fetch the current mobs-per-spawner count for simultaneous spawns to counter if warmup_dangerous is enabled, because our spawners will have (potentially) a different number set by the call from that proc.
 	
 	to_world("Wave started!")
+	to_world("We are at [current_wave] waves")
 	
 	set_lights(wave_lighting) // Set our mood lighting! This is pulled from the reactor's wave_lighting var!
 	
 	start_spawning() // Send in the troops!
 	
 /obj/machinery/power/damaged_reactor/proc/end_wave()
-	if(verification_required && state == ENGAGED) // If we're required to verify, and we just concluded a wave (to prevent failure_state sending us here somehow), progress to verification and let that handle ending the gamemode if it's over x amount.
+	if(verification_required && state == ENGAGED) // If we're required to verify, and we just concluded a wave (to prevent failure_state sending us here somehow), progress to verification and let /process/ handle starting verif + ending the gamemode if it's over x amount.
 		current_screen = VERIFYING
 		state = VERIFYING
 		active_defense = FALSE
-	else if(state == ENGAGED) // Else, if we don't require verifying, and just concluded a wave, then we can end the mode if we're over our waves list, or reset the reactor back to idle before the next wave if continous_defense is false.
+	else if(!verification_required && state == ENGAGED) // Else, if we don't require verifying, and just concluded a wave, then we can end the mode if we're over our waves list, or reset the reactor back to idle before the next wave if continous_defense is false.
 		if(current_wave >= waves.len) // If we're over or at our list length (IE we completed 2 waves and our list has 2 waves, we've won.)
 			success_state()
 		else if(continuous_defense) // Are we continuing waves without giving explorers a break?
 			if(warmup) // Go to warmup phase.
 				state = WARMUP
 				active_defense = FALSE
-			else // Else, we're going to reset everything and then call start_wave() to allow it to setup stuff again.
-				state = ENGAGED
+			else // Else, we're going to reset everything, put us on idle, then engaged to allow processing to setup stuff again.
+				state = IDLE // Set us back to idle for a brief moment while we reset things
 				reset_lights() // Restoring lights to defaults!
 				stop_spawning() // We're done, stop sending mobs at us!
 				wave_complete = null // Reset our wave complete time
-				start_wave() // Finally, we're going to start a new wave.
+				to_world("Wave ended!") // Debug announce, comment out later
+				state = ENGAGED // Now we're back to engaged
 				return // Don't execute the code underneath us.
 		else // If we're not continuing waves, then we need to reset.
 			state = IDLE
 			active_defense = FALSE
-	else // Somehow, we're not actually finishing up with a wave, but this got called somehow. Don't give a flying fuck about anything else, send us back to IDLE if we're not over our list length.
+			stop_spawning() // We're done, stop sending mobs at us!
+	else // Somehow, we're not actually finishing up with a wave, but this got called anyways. Don't give a flying fuck about anything else, send us back to IDLE if we're not over our list length.
 		log_runtime(EXCEPTION("Reactor ["[reactor_id]"] at [x],[y],[z] ([get_area(src)]) had end_wave() called while not actively in a wave!"))
 		if(current_wave >= waves.len) // If we're over or at our list length (IE we completed 2 waves and our list has 2 waves, we've won.)
 			success_state()
@@ -546,13 +557,11 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 			state = IDLE
 			active_defense = FALSE
 	
-	to_world("Wave ended!")
+	to_world("Wave ended outside a return!") // Debug announce, comment out later
 	
 	wave_complete = null
 		
 	reset_lights() // Restoring lights to defaults!
-	
-	stop_spawning() // We're done, stop sending mobs at us!
 
 /obj/machinery/power/damaged_reactor/proc/warmup() // Do these things EVERY tick of SSProcess - if you need it to run once, put it in an if statement, or put it in the start/complete procs.
 	check_clearance() // Check if we're clear and we have space around us.
@@ -663,8 +672,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		if(light.status != LIGHT_OK) // We're going to skip any broken, burned, or destroyed/unuseable lights.
 			continue
 		
-		light.brightness_color = color // Setting the lights to bright yellow.
-		light.brightness_power = 100 // Very high-powered lights.
+		light.brightness_color = color // Setting the lights to the color fed in.
+		// light.brightness_power = 100 // Very high-powered lights. - Disabling this for now as it appears to be literally burning out the lights. Oops.
 		light.on = 1 // Turn the lights on.
 		light.update()
 		
@@ -678,7 +687,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	for(var/obj/machinery/light/light in area) // We're going to reset the lights now.
 		light.brightness_color = initial(light.brightness_color) || "" // Set them to their original color.
 		light.on = initial(light.on) // Reset lights to where they were before (on or off)
-		light.brightness_power = initial(light.brightness_power) // Reset lights to what they were before.
+		// light.brightness_power = initial(light.brightness_power) // Reset lights to what they were before. - Disabling this for now as it appears to be literally burning out the lights. Oops.
 		light.update()
 		
 /obj/machinery/power/damaged_reactor/proc/reset_reactor(var/wave_amount, var/warmup_enabled = TRUE) // Called to reset our reactor to initial state, and re-add us to object processing. Primarily intended for the training reactor, or for admins/GM's to be able to reset the reactor easily for events.
@@ -697,8 +706,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 	stop_spawning() // Just in case we're somehow still active, turn our spawners off.
 	
-	setup_spawner(1, 6) // We're going to call this to set our wave mob list back to where it should be, as well as setting the spawner back to it's default "6" mobs. We hardcode 1 because if you tell a list to return to 0, you've effectively said "look at 0 for our wave" and it won't find anything. 1 is the first entry in a list.
-						// We also hardcode the number of spawned mobs to 6, because it'll be overriden by start_warmup() or start_wave() calls, and if for some reason, it isn't, this prevents a null exception here.
+	setup_spawner(1, 3) // We're going to call this to set our wave mob list back to where it should be, as well as setting the spawner back to it's default "6" mobs. We hardcode 1 because if you tell a list to return to 0, you've effectively said "look at 0 for our wave" and it won't find anything. 1 is the first entry in a list.
+						// We also hardcode the number of spawned mobs to 3, because it'll be overriden by start_warmup() or start_wave() calls, and if for some reason, it isn't, this prevents a null exception here.
 	
 	START_PROCESSING(SSobj, src) // We're immediately going to flip over to processing. This comes LAST so all variables can safely be reset first.
 	
