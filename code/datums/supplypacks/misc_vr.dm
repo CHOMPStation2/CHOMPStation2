@@ -172,7 +172,4 @@
 				  access_security,)
 
 	one_access = TRUE
-<<<<<<< HEAD
-=======
 	containername = "sword crate"
->>>>>>> ab136823327... Merge pull request #12055 from TheDavestDave/sword-crate-fix
