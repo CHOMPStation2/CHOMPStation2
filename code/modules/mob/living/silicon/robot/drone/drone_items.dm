@@ -124,8 +124,7 @@
 		/obj/item/weapon/disposable_teleporter/slime,
 		/obj/item/slimepotion,
 		/obj/item/slime_extract,
-		/obj/item/weapon/reagent_containers/food/snacks/monkeycube,
-		/obj/item/device/assembly/signaler
+		/obj/item/weapon/reagent_containers/food/snacks/monkeycube
 		)
 
 /obj/item/weapon/gripper/circuit
