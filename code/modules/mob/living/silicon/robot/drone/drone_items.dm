@@ -125,11 +125,7 @@
 		/obj/item/slimepotion,
 		/obj/item/slime_extract,
 		/obj/item/weapon/reagent_containers/food/snacks/monkeycube,
-		/obj/item/device/assembly/signaler,   //Chompedit start - Adding toxins capability
-		/obj/item/device/assembly/timer,
-		/obj/item/device/transfer_valve,
-		/obj/item/weapon/tank/phoron,
-		/obj/item/weapon/tank/oxygen   //Chompedit end
+		/obj/item/device/assembly/signaler
 		)
 
 /obj/item/weapon/gripper/circuit
