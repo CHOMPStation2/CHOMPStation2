@@ -1164,7 +1164,8 @@
 	product_ads = "Dress your best! It's what big D would want.;Overwear for all occasions!;Big D has what you need if what you need is some form of jacket!;Need a new hoodie? Bid D has you covered.;Big D says you need a new suit!;Big D smiles when he sees you in one of his coats!"
 	icon_state = "suit"
 	vend_delay = 16
-	products = list(/obj/item/clothing/suit/storage/apron = 5,
+	products = list(/obj/item/clothing/suit/storage/toggle/labcoat/old = 100,
+					/obj/item/clothing/suit/storage/apron = 5,
 					/obj/item/clothing/suit/storage/flannel/aqua = 5,
 					/obj/item/clothing/suit/storage/toggle/bomber = 5,
 					/obj/item/clothing/suit/storage/bomber/alt = 5,
@@ -1348,8 +1349,8 @@
 	product_ads = "Don't let your art be stifled!;Remember, practice makes perfect!;Break a leg!;Don't make me get the cane!;Thespian's Delight entering stage right!;Costumes for your acting needs!"
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "theater"
-	products = list(/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
-					/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
+	products = list(/obj/item/clothing/suit/storage/hooded/costume/carp = 3,
+					/obj/item/clothing/suit/storage/hooded/costume/carp = 3,
 					/obj/item/clothing/suit/chickensuit = 3,
 					/obj/item/clothing/head/chicken = 3,
 					/obj/item/clothing/head/helmet/gladiator = 3,
@@ -1413,8 +1414,8 @@
 					/obj/item/clothing/gloves/combat/knight_costume/brown = 3,
 					/obj/item/clothing/shoes/knight_costume = 3,
 					/obj/item/clothing/shoes/knight_costume/black = 3)
-	prices = list(/obj/item/clothing/suit/storage/hooded/carp_costume = 200,
-					/obj/item/clothing/suit/storage/hooded/carp_costume = 200,
+	prices = list(/obj/item/clothing/suit/storage/hooded/costume/carp = 200,
+					/obj/item/clothing/suit/storage/hooded/costume/carp = 200,
 					/obj/item/clothing/suit/chickensuit = 200,
 					/obj/item/clothing/head/chicken = 200,
 					/obj/item/clothing/head/helmet/gladiator = 300,
@@ -1511,8 +1512,8 @@
 					/obj/item/clothing/under/color/yellow = 5,
 					/obj/item/clothing/shoes/black = 5,
 					/obj/item/clothing/shoes/white = 5,
-					/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
-					/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
+					/obj/item/clothing/suit/storage/hooded/costume/carp = 3,
+					/obj/item/clothing/suit/storage/hooded/costume/carp = 3,
 					/obj/item/clothing/suit/chickensuit = 3,
 					/obj/item/clothing/head/chicken = 3,
 					/obj/item/clothing/head/helmet/gladiator = 3,
@@ -2259,8 +2260,8 @@
 	product_ads = "Don't let your art be stifled!;Remember, practice makes perfect!;Break a leg!;Don't make me get the cane!;Thespian's Delight entering stage right!;Costumes for your acting needs!"
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "theater"
-	products = list(/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
-					/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
+	products = list(/obj/item/clothing/suit/storage/hooded/costume/carp = 3,
+					/obj/item/clothing/suit/storage/hooded/costume/carp = 3,
 					/obj/item/clothing/suit/chickensuit = 3,
 					/obj/item/clothing/head/chicken = 3,
 					/obj/item/clothing/head/helmet/gladiator = 3,
@@ -2786,7 +2787,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/chicken = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/corgi = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/meat/crab = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/fox = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/human = 10,
@@ -3242,7 +3243,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/chicken = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/corgi = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/meat/crab = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/fox = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/meat/human = 10,

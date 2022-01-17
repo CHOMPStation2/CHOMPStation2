@@ -54,7 +54,8 @@ var/list/all_maps = list()
 	var/list/lateload_z_levels = list()
 
 	//Similar to above, but only pick ONE to load, useful for random away missions and whatnot
-	var/list/lateload_single_pick = list()
+	var/list/lateload_gateway = list()
+	var/list/lateload_overmap = list() //VOREStation Add - The same thing as gateway, but not
 
 	var/list/allowed_jobs = list() //Job datums to use.
 	                               //Works a lot better so if we get to a point where three-ish maps are used
@@ -219,14 +220,9 @@ var/list/all_maps = list()
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.
 /datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
-	//Overmap behavior
-	if(use_overmap)
-		//Get what sector we're in
-		var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
-		if(!istype(O))
-			//Not in a sector, just the passed zlevel
-			return list(srcz)
-
+	//Get what sector we're in
+	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
+	if(istype(O))
 		//Just the sector we're in
 		if(om_range == -1)
 			return O.map_z.Copy()
@@ -239,7 +235,7 @@ var/list/all_maps = list()
 			connections += V.map_z // Adding list to list adds contents
 		return connections
 
-	//Traditional behavior
+	//Traditional behavior, if not in an overmap sector
 	else
 		//If long range, and they're at least in contact levels, return contact levels.
 		if (long_range && (srcz in contact_levels))

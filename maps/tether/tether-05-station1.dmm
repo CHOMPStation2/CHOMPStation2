@@ -3202,7 +3202,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
@@ -5637,7 +5637,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
@@ -7929,7 +7929,7 @@
 	icon_state = "comfychair_preview"
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
@@ -8390,7 +8390,7 @@
 	icon_state = "comfychair_preview"
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
@@ -8965,7 +8965,7 @@
 	icon_state = "comfychair_preview"
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
@@ -8975,7 +8975,7 @@
 	icon_state = "comfychair_preview"
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
@@ -9922,10 +9922,6 @@
 "azc" = (
 /turf/simulated/wall,
 /area/quartermaster/office)
-"aze" = (
-/mob/living/simple_mob/animal/passive/opossum/poppy,
-/turf/simulated/floor/tiled/monotile,
-/area/engineering/workshop)
 "azk" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13310,7 +13306,7 @@
 "aSB" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
@@ -13917,7 +13913,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Station Engineer"
+	name = "Engineer"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
@@ -35062,6 +35058,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/item/device/bluespaceradio/tether_prelinked,
 /turf/simulated/floor/tiled,
 /area/tether/exploration/pathfinder_office)
 "uZb" = (
@@ -44184,7 +44181,7 @@ atB
 asl
 asU
 atS
-aze
+asU
 asU
 asU
 aNb

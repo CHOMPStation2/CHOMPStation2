@@ -60,6 +60,7 @@
 	var/list/part_sets = list(
 								"Cyborg",
 								"Ripley",
+								"Scarab", //CHOMPedit adds Scarab Light Combat Mech to TGui fabricator.
 								"Odysseus",
 								"Gygax",
 								"Durand",

@@ -109,12 +109,12 @@
 			)
 
 	//CHOMPStation Addition End
-	lateload_single_pick = list(
+	lateload_gateway = list(
 		list("Carp Farm"),
 		list("Snow Field")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
-	lateload_single_pick = null
+	lateload_gateway = null
 
 
 

@@ -85,13 +85,24 @@
 		/obj/item/stack/cable_coil/random_belt
 	)
 
-/obj/item/weapon/storage/belt/utility/atmostech
+/obj/item/weapon/storage/belt/utility/full/multitool
 	starts_with = list(
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/tool/wrench,
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/wirecutters,
+		/obj/item/stack/cable_coil/random_belt,
+		/obj/item/device/multitool
+	)
+
+/obj/item/weapon/storage/belt/utility/atmostech
+	starts_with = list(
+		/obj/item/weapon/tool/screwdriver,
+		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/weldingtool,
+		/obj/item/weapon/tool/crowbar,
+		/obj/item/weapon/tool/wirecutters
 	)
 
 /obj/item/weapon/storage/belt/utility/chief
@@ -147,7 +158,13 @@
 		/obj/item/stack/nanopaste,
 		/obj/item/weapon/cell, //this is a bigger belt, might as well make it hold bigger cells too
 		/obj/item/weapon/pipe_dispenser, //bigger belt for bigger tools
-		/obj/item/weapon/rcd //see above
+		/obj/item/weapon/rcd, //see above
+		/obj/item/device/quantum_pad_booster,
+		/obj/item/weapon/inducer,
+		/obj/item/stack/material/steel,
+		/obj/item/stack/material/glass,
+		/obj/item/device/lightreplacer,
+		/obj/item/weapon/pickaxe/plasmacutter 
 	)
 
 

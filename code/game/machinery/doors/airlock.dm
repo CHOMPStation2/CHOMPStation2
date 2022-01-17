@@ -982,6 +982,7 @@ About the new airlock wires panel:
 
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
 /obj/machinery/door/airlock/AltClick(mob/user as mob)
+		 
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
 		return

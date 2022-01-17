@@ -498,6 +498,60 @@
 	glass_icon_state = "cogchamp"
 	glass_icon_file = 'icons/obj/drinks_ch.dmi'
 
+//Arachnid slammer states - Jack
+
+/datum/reagent/ethanol/arachnidslammer
+	name = "Arachnid Slammer"
+	id = "arachnidslammer"
+	description = "An adventurous mix of a cheap, powerful ale with an equally cheap, powerful energy drink and combat drugs. The result should have been undrikable, and yet it sure does put a spring in your step."
+	taste_description = "hearty barley ale, almost illegal energy drink, combat stimulants, and the urge to go mine and wrestle a spider"
+	color = "#594219"
+	strength = 30
+	nutriment_factor = 1
+
+	glass_name = "arachnid slammer"
+	glass_desc = "A freezing pint of delicious Araching Slammer, it foams constantly with the air crisp around it."
+	allergen_type = ALLERGEN_GRAINS //Barley is grain
+
+/datum/reagent/ethanol/arachnidslammer/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	.=..()
+	M.reagents.add_reagent("infusedarachnidslammer", removed * 5)
+/datum/reagent/ethanol/arachnidslammer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	.=..()
+	M.reagents.add_reagent("infusedarachnidslammer", removed * 5)
+
+/datum/reagent/infusedarachnidslammer
+	name = "Infused Arachnid Slammer"
+	id = "infusedarachnidslammer"
+	description = "When Arachnid Slammer is metabolized you get a concortion of chemicals that breaks down slower. While the alcohol is burned off, the new compounds seems dormant, like they're waiting for some malicious toxin.."
+	taste_description = "flat watered down Arachnid Slammer and a brewing tempest"
+	reagent_state = LIQUID
+	color = "#8040FF"
+	scannable = 1
+	metabolism = REM
+	ingest_met = REM
+
+	glass_name = "infused arachnid slammer"
+	glass_desc = "A pint of metabolized Arachnid Slammer. Even if its flat it still somehow foams and sparkles as well as bubbles more actively when spiders are nearby."
+
+/datum/reagent/infusedarachnidslammer/enragedarachnidslammer
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	description = "The best term to scientifically describe this concortion is that the compounds of the Arachnid Slammer are going into a raging frenzy from spider toxin. Its now functioning like a form of potent chemical-based white blood cells that aims to break down harmful compounds and repair the body."
+	taste_description = "cold burning liquid rage and the urge to destroy any spider you see"
+
+	glass_name = "enraged arachnid slammer"
+	glass_desc = "A pint of Enraged Arachnid Slammer. It bubbles and sparkles fiercly as if it was in a berserking state!"
+
+/datum/reagent/infusedarachnidslammer/enragedarachnidslammer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective = 1 * M.species.chem_strength_heal
+
+	M.adjustOxyLoss(-1.5 * removed * chem_effective)
+	M.adjustToxLoss(-1.5 * removed * chem_effective)
+	M.heal_organ_damage(1.5 * removed, 1.5 * removed * chem_effective)
+	M.add_chemical_effect(CE_PAINKILLER, 80 * chem_effective)
+	M.add_chemical_effect(CE_SPEEDBOOST, 0)
+
 ////////////////////////////////////////////////
 /////////FOODSTUFF/////////////////////////////
 //////////////////////////////////////////////

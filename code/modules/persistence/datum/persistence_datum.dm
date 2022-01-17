@@ -71,7 +71,7 @@
 				return
 
 		var/_z = token["z"]
-		if(_z in using_map.station_levels)
+		if(_z in using_map.persist_levels)
 			. = GetValidTurf(locate(token["x"], token["y"], _z), token)
 			if(.)
 				CreateEntryInstance(., token)
@@ -82,7 +82,7 @@
 	if(GetEntryAge(entry) >= entries_expire_at)
 		return FALSE
 	var/turf/T = get_turf(entry)
-	if(!T || !(T.z in using_map.station_levels) )
+	if(!T || !(T.z in using_map.persist_levels) )
 		return FALSE
 	var/area/A = get_area(T)
 	if(!A || (A.flags & AREA_FLAG_IS_NOT_PERSISTENT))

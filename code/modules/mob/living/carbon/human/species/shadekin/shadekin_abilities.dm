@@ -122,6 +122,7 @@
 		sleep(5) //The duration of the TP animation
 		canmove = original_canmove
 		alpha = initial(alpha)
+		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
 
 		//Potential phase-in vore
 		if(can_be_drop_pred) //Toggleable in vore panel
@@ -170,6 +171,7 @@
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new /obj/effect/temp_visual/shadekin/phase_out(src.loc)
 		phaseanim.dir = dir
 		alpha = 0
+		add_modifier(/datum/modifier/shadekin_phase_vision)
 		sleep(5)
 		invisibility = INVISIBILITY_LEVEL_TWO
 		see_invisible = INVISIBILITY_LEVEL_TWO
@@ -181,6 +183,10 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
+
+/datum/modifier/shadekin_phase_vision
+	name = "Shadekin Phase Vision"
+	vision_flags = SEE_THRU
 
 //////////////////////////
 ///  REGENERATE OTHER  ///

@@ -64,7 +64,7 @@ GLOBAL_DATUM(vgs, /datum/tgs_api)
 		server_port = config.vgs_server_port
 	access_identifier = config.vgs_access_identifier
 
-	var/list/bridge_response = Bridge(DMAPI5_BRIDGE_COMMAND_STARTUP, list(DMAPI5_BRIDGE_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands()))
+	var/list/bridge_response = Bridge(DMAPI5_BRIDGE_COMMAND_STARTUP, list(DMAPI5_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands())) //CHOMPEdit TGS update
 	if(!istype(bridge_response))
 		TGS_ERROR_LOG("Failed initial bridge request!")
 		return FALSE
