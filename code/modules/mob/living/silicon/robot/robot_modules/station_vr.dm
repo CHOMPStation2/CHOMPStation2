@@ -520,8 +520,8 @@
 	src.modules += new /obj/item/weapon/card/robot(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
-	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)
-	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)
+	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)  //Chompedit this was missing for some strange reason.
+	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)  //Chompedit This also.
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -824,7 +824,7 @@
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
 	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
 
