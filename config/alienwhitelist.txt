@@ -50,6 +50,13 @@ tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 tastypred - Protean
 timidvi - Diona
+<<<<<<< HEAD
+=======
+trifireblade - Protean
+trikonei - Protean
+umbraferros - Protean
+umbrenos - Black-Eyed Shadekin
+>>>>>>> e3e0a06aae5... Merge pull request #12089 from liache/patch-3
 varonis - Xenochimera
 verkister - Xenochimera
 vitoras - Protean
