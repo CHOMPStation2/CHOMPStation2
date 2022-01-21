@@ -39,13 +39,24 @@ rykkastormheart - Xenochimera
 rubyflamewing - Protean
 radiantaurora - Protean
 ryumi - Protean
+<<<<<<< HEAD
+=======
+ryumi - Xenochimera
+satinisle - Black-Eyed Shadekin
+scoutisafolflol - Xenochimera
+>>>>>>> de23781d17e... Merge pull request #12098 from TankTheBirb/patch-1
 seiga - Vox
 sepulchre - Vox
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
 storesund97 - Protean
+<<<<<<< HEAD
 sharplight - Protean
+=======
+syzygyrior - Black-Eyed Shadekin
+tankthebirb - Black-Eyed Shadekin
+>>>>>>> de23781d17e... Merge pull request #12098 from TankTheBirb/patch-1
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 tastypred - Protean
