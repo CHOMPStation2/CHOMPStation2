@@ -173,3 +173,7 @@
 
 	one_access = TRUE
 	containername = "sword crate"
+<<<<<<< HEAD
+=======
+	containertype = /obj/structure/closet/crate/secure/gear
+>>>>>>> b084c69bd3c... Merge pull request #12086 from TheDavestDave/sword-3
