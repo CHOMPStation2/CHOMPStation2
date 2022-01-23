@@ -34,7 +34,12 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",			/datum/event/nothing,			400),
 		// Bluescreens APCs, but they still work
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",		/datum/event/apc_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20)),
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",/datum/event/brand_intelligence,20, 	list(ASSIGNMENT_JANITOR = 25),	1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",/datum/event/brand_intelligence, 0, 	list(ASSIGNMENT_ENGINEER = 10),	1),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20)),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Canister Leak",		/datum/event/canister_leak,		10, 	list(ASSIGNMENT_ENGINEER = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Space Dust",		/datum/event/dust,	 			0, 		list(ASSIGNMENT_ENGINEER = 20), 0, 0, 50),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Economic News",		/datum/event/economic_event,	300),
@@ -42,15 +47,25 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lost Carp",			/datum/event/carp_migration, 	0, 		list(ASSIGNMENT_SECURITY = 40), 1),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Hacker",		/datum/event/money_hacker, 		0, 		list(ASSIGNMENT_ANY = 4), 1, 10, 25),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Lotto",		/datum/event/money_lotto, 		0, 		list(ASSIGNMENT_ANY = 1), 1, 5, 15),
+<<<<<<< HEAD
 		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mundane News", 		/datum/event/mundane_news, 		300),
+=======
+		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mundane News", 	/datum/event/mundane_news, 		300),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "PDA Spam",			/datum/event/pda_spam, 			0, 		list(ASSIGNMENT_ANY = 4), 1, 25, 50),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Shipping Error",	/datum/event/shipping_error	, 	30, 	list(ASSIGNMENT_ANY = 2), 0),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Trivial News",		/datum/event/trivial_news, 		400),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lore News",			/datum/event/lore_news, 		400),
 		// Spawns mice, lizards, or dud spiderlings
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",/datum/event/infestation, 		100,	list(ASSIGNMENT_JANITOR = 100), 1),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",/datum/event/infestation, 		50,		list(ASSIGNMENT_JANITOR = 25), 1),
 		// Rot only weakens walls, not destroy them
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50), 1),
 //CHOMPedit: Disabling until fixed		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,		2,		list(), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,		2,		list(), 1),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,		2,		list(), 1), //YW EDIT
@@ -73,6 +88,7 @@
 		// Just disables comms for a short while.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Communication Blackout",	/datum/event/communications_blackout,	500,	list(ASSIGNMENT_AI = 150, ASSIGNMENT_SECURITY = 120), 1),
 		// Just blows out a few lights
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			250,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_JANITOR = 150), 1),
 		//Escaped slime event itself needs to be rejiggered because of the mob refactor.
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			-40,	list(ASSIGNMENT_SCIENTIST = 30, ASSIGNMENT_SECURITY = 20)),
@@ -81,6 +97,13 @@
 		// Temporary power failure, but mitigatead by subgrids
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(ASSIGNMENT_SCIENTIST = 10, ASSIGNMENT_ENGINEER = 25), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			-20,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_ENGINEER = 40), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			70,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_JANITOR = 150), 1),
+		// This one is just too fun.
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Failure",			/datum/event/gravity,	 				75,		list(ASSIGNMENT_ENGINEER = 60), 1),
+		// Temporary power failure, but mitigatead by subgrids
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(ASSIGNMENT_ENGINEER = 25), 1),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 		// Pure RP fun, no mechanical effects.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					0,		list(ASSIGNMENT_AI = 80, ASSIGNMENT_CYBORG = 50, ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENTIST = 5)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Predator",		/datum/event/maintenance_predator,		75,		list(ASSIGNMENT_SECURITY = 25, ASSIGNMENT_SCIENTIST = 10), 1),
@@ -92,11 +115,26 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Radiation Storm",			/datum/event/radiation_storm, 			50,		list(ASSIGNMENT_MEDICAL = 50), 1), //YW EDIT, Readded
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				-30,	list(ASSIGNMENT_SECURITY = 25, ASSIGNMENT_HOS = 35, ASSIGNMENT_WARDEN = 35)),
 		// Radiation, but only in space.
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				20,		list(ASSIGNMENT_ENGINEER = 40, ASSIGNMENT_SECURITY = 20), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		-20,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 20, ASSIGNMENT_WARDEN = 20), 0),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		0,		list(ASSIGNMENT_MEDICAL = 100), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_SCIENCE = 100), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				0,		list(ASSIGNMENT_SECURITY = 20), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				30,		list(ASSIGNMENT_ENGINEER = 40, ASSIGNMENT_SECURITY = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					0,		list(ASSIGNMENT_ENGINEER = 20), 1, 0, 50),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		0,		list(ASSIGNMENT_ENGINEER = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_ENGINEER = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		0,		list(ASSIGNMENT_SECURITY = 30), 1),
+		//Evil grubs that drain station power slightly
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			0,		list(ASSIGNMENT_SECURITY = 10, ASSIGNMENT_ENGINEER = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Pod Drop",			/datum/event/drone_pod_drop,			10,		list(ASSIGNMENT_SCIENTIST = 40), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn",				/datum/event/morph_spawn,				75,		list(ASSIGNMENT_ANY = 5), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Predator",		/datum/event/maintenance_predator,		100,	list(ASSIGNMENT_ANY = 5), 0),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		0,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 15, ASSIGNMENT_MEDICAL = 3), 1),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				30,		list(ASSIGNMENT_ENGINEER = 20)),
@@ -116,12 +154,20 @@
 
 /datum/event_container/major/New()
 	available_events = list(
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",		/datum/event/nothing,			900),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",		/datum/event/atmos_leak, 		5,		list(ASSIGNMENT_ENGINEER = 35), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",		/datum/event/blob, 				-100,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ENGINEER = 5), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",	/datum/event/carp_migration,	-110,	list(ASSIGNMENT_SECURITY = 50, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,0,	list(ASSIGNMENT_ANY = 5),		0),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Pod Drop",			/datum/event/drone_pod_drop,			10,		list(ASSIGNMENT_SCIENTIST = 40), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",				/datum/event/nothing,				3600),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",			/datum/event/atmos_leak, 			20,		list(ASSIGNMENT_ENGINEER = 25), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",			/datum/event/spacevine, 			10,		list(ASSIGNMENT_ENGINEER = 7, ASSIGNMENT_GARDENER = 2), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",		/datum/event/carp_migration,		10,		list(ASSIGNMENT_SECURITY = 5), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,	0,	list(ASSIGNMENT_ANY = 5), 1),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jellyfish Migration",	/datum/event/jellyfish_migration,	5,	list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",		/datum/event/meteor_wave,		-110,		list(ASSIGNMENT_ENGINEER = 50),	1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Metroid Infestation",			/datum/event/metroid_infestation,			-105,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_SCIENCE = 20, ASSIGNMENT_HOS = 15, ASSIGNMENT_WARDEN = 15), 0),
@@ -129,10 +175,17 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1),
 	)
 	add_disabled_events(list(
+<<<<<<< HEAD
 		//Needs Xenobio containment breach fixed
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Xenobiology Breach",	/datum/event/prison_break/xenobiology,	-10,	list(ASSIGNMENT_SCIENCE = 30, ASSIGNMENT_ENGINEER = 20), 1),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Strike",	/datum/event/meteor_strike,		10,		list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Supply Demand",		/datum/event/supply_demand,		0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Strike",		/datum/event/meteor_strike,			10,		list(ASSIGNMENT_ENGINEER = 15), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",				/datum/event/blob, 					10,		list(ASSIGNMENT_ENGINEER = 60), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",			/datum/event/meteor_wave,			30,		list(ASSIGNMENT_ENGINEER = 15),	1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Supply Demand",		/datum/event/supply_demand,			0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
+>>>>>>> ab958ae12b0... Merge pull request #12109 from Enzo-Leon/ebents-002
 	))
 
 #undef ASSIGNMENT_ANY
