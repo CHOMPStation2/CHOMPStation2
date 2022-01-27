@@ -127,7 +127,7 @@
 		SPECIES_ZORREN_HIGH 		= 'icons/mob/species/fox/suit_ch.dmi',
 		SPECIES_FENNEC			= 'icons/mob/species/vulpkanin/suit_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/suit_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/species/teshari/head_ch.dmi',
+		SPECIES_TESHARI 		= 'icons/inventory/suit/mob_ch_teshari.dmi',
 		SPECIES_VASILISSAN		= 'icons/mob/species/skrell/suit_ch.dmi',
 		SPECIES_VOX			= 'icons/mob/species/vox/suit_ch.dmi'
 		)
