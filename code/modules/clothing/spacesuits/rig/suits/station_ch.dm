@@ -23,9 +23,10 @@
 //A second security suit. Comes with a grenade launcher that only accepts flashbangs and adds a new sprinter and flash modules.
 /obj/item/weapon/rig/ch/pursuit
 	name = "pursuit hardsuit control module"
+	icon = 'icons/obj/rig_modules_ch.dmi'
+	icon_state = "pursuit_rig"
 	suit_type = "pursuit hardsuit"
 	desc = "A Security hardsuit designed for chasing down the grey tide."
-	icon_state = "pursuit_rig"
 	armor = list(melee = 60, bullet = 40, laser = 40, energy = 25, bomb = 50, bio = 100, rad = 30)
 	slowdown = 1
 	offline_slowdown = 3
@@ -45,7 +46,7 @@
 	req_access = list(access_hos)
 	req_one_access = list()
 
-/obj/item/weapon/rig/pursuit/equipped
+/obj/item/weapon/rig/ch/pursuit/equipped
 
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,
@@ -125,7 +126,7 @@
 		SPECIES_ZORREN_HIGH 		= 'icons/mob/species/fox/suit_ch.dmi',
 		SPECIES_FENNEC			= 'icons/mob/species/vulpkanin/suit_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/suit_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/inventory/suit/mob_ch_teshari.dmi',
+		SPECIES_TESHARI 		= 'icons/mob/species/teshari/head_ch.dmi',
 		SPECIES_VASILISSAN		= 'icons/mob/species/skrell/suit_ch.dmi',
 		SPECIES_VOX			= 'icons/mob/species/vox/suit_ch.dmi'
 		)
