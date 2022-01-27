@@ -1,6 +1,7 @@
 //Hardsuits
 /obj/item/weapon/rig/ch //Some blank bs
 	desc = "This is a dev item and should not be spawned."
+	default_mob_icon = 'icons/mob/rig_back_ch.dmi'
 	chest_type = /obj/item/clothing/suit/space/rig/ch
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/ch
