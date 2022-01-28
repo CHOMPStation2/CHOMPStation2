@@ -2484,6 +2484,9 @@
 	dir = 1
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research)
 "fq" = (
@@ -2681,6 +2684,8 @@
 	color = "#42038a";
 	icon_state = "0-2"
 	},
+/obj/item/clothing/suit/bio_suit/scientist,
+/obj/item/clothing/head/bio_hood/scientist,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology)
 "fN" = (
@@ -6487,6 +6492,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/department/medbay{
 	pixel_x = -32
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/aft)
@@ -17384,6 +17392,9 @@
 /obj/machinery/firealarm/angled{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/exam_room)
 "Ls" = (
@@ -18182,6 +18193,9 @@
 	},
 /obj/structure/closet/crate/bin{
 	anchored = 1
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck1/resleeving)
@@ -19540,6 +19554,12 @@
 /obj/machinery/alarm/angled,
 /turf/simulated/floor/carpet/purcarpet,
 /area/stellardelight/deck1/dorms/dorm3)
+"Qf" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/port)
 "Qg" = (
 /obj/structure/table/steel,
 /obj/item/device/flashlight/lamp,
@@ -32671,7 +32691,7 @@ Hi
 Dq
 aN
 hp
-YT
+Qf
 YS
 rg
 rg
