@@ -226,6 +226,10 @@
 /datum/species/vulpkanin
 	name = SPECIES_VULPKANIN
 	name_plural = "Vulpkanin"
+	blurb = "Vulpkanin are a species of sapient canine bipeds, who are the descendants of a lost colony during the waning days of a Precursor species, \
+	from which their distant cousins, the Zorren, also originate from. Independent and iconoclast, they have abandoned the ideals of their forefathers \
+	largely and prefer to look outwards as explorers and scientists to forge their own identity. They speak a guttural language known as 'Canilunzt' \
+	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 	icobase = 'icons/mob/human_races/r_vulpkanin.dmi'
 	deform = 'icons/mob/human_races/r_vulpkanin.dmi'
 //	path = /mob/living/carbon/human/vulpkanin
@@ -243,6 +247,7 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
 
+<<<<<<< HEAD
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
 
@@ -254,6 +259,9 @@
 
 //CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Vulpkanin"
+=======
+	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
+>>>>>>> f2a301858a2... Merge pull request #12100 from Heroman3003/vulplore
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
