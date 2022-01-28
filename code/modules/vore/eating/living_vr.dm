@@ -589,6 +589,10 @@
 	var/air_type = /datum/gas_mixture/belly_air
 	if(istype(lifeform))	// If this doesn't succeed, then 'lifeform' is actually a bag or capture crystal with someone inside
 		air_type = lifeform.get_perfect_belly_air_type()		// Without any overrides/changes, its gonna be /datum/gas_mixture/belly_air
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 0a96f4419b6... Merge pull request #12094 from TheGreatKitsune/air-breathing-fix
 	var/air = new air_type(1000)
 	return air
 
