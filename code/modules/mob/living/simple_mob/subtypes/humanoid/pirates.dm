@@ -1,3 +1,4 @@
+/* CHOMPEdit - Overridden basically everything in pirates_ch.dm
 /mob/living/simple_mob/humanoid/pirate
 	name = "Pirate"
 	desc = "Does what he wants cause a pirate is free."
@@ -38,3 +39,5 @@
 	loot_list = list(/obj/item/weapon/gun/energy/laser = 100)
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate/ranged
+
+*/
