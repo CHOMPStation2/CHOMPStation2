@@ -35,11 +35,7 @@
 	max_n2 = 0
 	minbodytemp = 0
 	maxbodytemp = 900
-<<<<<<< HEAD
-	movement_cooldown = 2 //CHOMP Edit
-=======
 	movement_cooldown = 2
->>>>>>> 60a8cde032c... Merge pull request #12079 from Heroman3003/blobuff1
 
 	var/mob/living/carbon/human/humanform
 	var/obj/item/organ/internal/nano/refactory/refactory
