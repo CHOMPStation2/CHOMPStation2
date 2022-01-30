@@ -39,7 +39,7 @@
 /datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
 	if(config.nodebot_enabled)
 		ManifestToHtml()
-		return "Manifest temporarily indefinitely probably broken"
+		return "http://manifest.chompstation13.net/"
 	else
 		var/outp = "Crew Manifest:"
 		var/list/total = list()

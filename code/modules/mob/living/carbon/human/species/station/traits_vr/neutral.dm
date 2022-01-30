@@ -6,6 +6,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.2, "hunger_factor" = 0.2, "metabolism" = 0.06) // +20% rate and 4x hunger (Teshari level)
 	excludes = list(/datum/trait/neutral/metabolism_down, /datum/trait/neutral/metabolism_apex)
+	custom_only = FALSE // CHOMPEdit
 
 /datum/trait/neutral/metabolism_down
 	name = "Metabolism, Slow"
@@ -13,6 +14,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 0.8, "hunger_factor" = 0.04, "metabolism" = 0.0012) // -20% of default.
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_apex)
+	custom_only = FALSE // CHOMPEdit
 
 /datum/trait/neutral/metabolism_apex
 	name = "Metabolism, Apex"
@@ -20,6 +22,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_down)
+	custom_only = FALSE // CHOMPEdit
 
 /datum/trait/neutral/coldadapt
 	name = "Temp. Adapted, Cold"
@@ -173,6 +176,10 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("has_glowing_eyes" = 1)
+
+/datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/toggle_eye_glow
 
 /datum/trait/neutral/glowing_body
 	name = "Glowing Body"
