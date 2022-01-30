@@ -55,6 +55,7 @@
 /datum/alt_title/exploration_manager
 	title = "Exploration Manager"
 
+<<<<<<< HEAD
 
 /datum/job/pilot
 	title = "Pilot"
@@ -86,6 +87,8 @@
 	title = "Helmsman"
 
 
+=======
+>>>>>>> acefa8827f3... Merge pull request #12130 from Heroman3003/pilot-civ
 /datum/job/explorer
 	title = "Explorer"
 	flag = EXPLORER
