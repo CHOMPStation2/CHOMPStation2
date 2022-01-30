@@ -26,8 +26,8 @@
 	one_handed_penalty = 0
 
 /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg
-	charge_cost = 200
-	recharge_time = 5
+	charge_cost = 200  //ChompEdit  Reduced from 480 to 200
+	recharge_time = 5  //ChompEdit  Reduced from 7 to 5
 
 /obj/item/weapon/gun/energy/locked/phasegun/pistol
 	name = "phase pistol"
