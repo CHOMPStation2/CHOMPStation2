@@ -2503,6 +2503,10 @@
 /obj/machinery/computer/arcade/battle,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/landmark/vermin,
+<<<<<<< HEAD
+=======
+/obj/machinery/station_slot_machine,
+>>>>>>> f1df2a0b315... Merge pull request #12134 from Very-Soft/slot
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "fN" = (
