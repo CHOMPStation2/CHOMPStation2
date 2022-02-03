@@ -167,6 +167,7 @@
 			/mob/living/simple_mob/animal/giant_spider/ion)
 
 /obj/effect/spider/spiderling/New(var/location, var/atom/parent)
+	..()
 	pixel_x = rand(6,-6)
 	pixel_y = rand(6,-6)
 	START_PROCESSING(SSobj, src)
@@ -174,11 +175,10 @@
 	if(prob(50))
 		amount_grown = 1
 	get_light_and_color(parent)
-	..()
 
 /obj/effect/spider/spiderling/Destroy()
-	STOP_PROCESSING(SSobj, src)
 	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+	STOP_PROCESSING(SSobj, src)
 	return ..()
 
 /obj/effect/spider/spiderling/Bump(atom/user)
