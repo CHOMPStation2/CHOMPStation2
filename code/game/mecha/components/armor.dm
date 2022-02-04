@@ -216,6 +216,11 @@
 /obj/item/mecha_parts/component/armor/alien
 	name = "strange mecha plating"
 	step_delay = 2
+	//Chompedit start  This armour is dogshit and needs this to improve it.
+	damage_minimum = 12
+	minimum_penetration = 15
+	//Chompedit end
+	
 	damage_absorption = list(
 		"brute"=0.7,
 		"fire"=0.7,
