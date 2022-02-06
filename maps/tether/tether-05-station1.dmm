@@ -5592,8 +5592,15 @@
 	req_access = list();
 	req_one_access = list(11,67)
 	},
+<<<<<<< HEAD
 /obj/structure/bed/chair/shuttle{
 	dir = 4
+=======
+/obj/machinery/door/firedoor/glass/hidden/shuttle,
+/obj/machinery/door/blast/shuttle/open{
+	id = "medivac blast";
+	name = "Shuttle Blast Doors"
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /obj/structure/cable,
 /turf/simulated/floor/tiled/eris/white,
@@ -14286,6 +14293,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
+<<<<<<< HEAD
+=======
+"beU" = (
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "beY" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
@@ -14771,6 +14788,19 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tether/exploration/pilot_office)
+<<<<<<< HEAD
+=======
+"btm" = (
+/obj/machinery/atmospherics/unary/engine/fancy_shuttle{
+	dir = 1
+	},
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "btr" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -16152,6 +16182,19 @@
 	},
 /turf/space,
 /area/space)
+<<<<<<< HEAD
+=======
+"cmX" = (
+/obj/machinery/atmospherics/unary/engine/fancy_shuttle{
+	dir = 1
+	},
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "cnB" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17651,6 +17694,33 @@
 	},
 /turf/simulated/floor,
 /area/tether/exploration)
+<<<<<<< HEAD
+=======
+"dCt" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/tether/station/dock_two)
+"dDk" = (
+/obj/effect/fancy_shuttle/secbus{
+	dir = 1;
+	fancy_shuttle_tag = "secbus"
+	},
+/obj/effect/fancy_shuttle_floor_preview/secbus{
+	dir = 1
+	},
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "dDo" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -18289,6 +18359,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
+<<<<<<< HEAD
+=======
+"ewT" = (
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "exi" = (
 /obj/item/device/radio/intercom{
 	dir = 8;
@@ -18766,11 +18846,18 @@
 	name = "Shuttle Blast Doors";
 	opacity = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating/eris/under,
 /area/shuttle/medivac/general)
 "eUE" = (
 /obj/machinery/shipsensors{
 	dir = 4
+=======
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/airless,
@@ -20018,6 +20105,16 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor,
 /area/maintenance/station/eng_lower)
+<<<<<<< HEAD
+=======
+"gio" = (
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "gjd" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -23942,6 +24039,21 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
+<<<<<<< HEAD
+=======
+"jJE" = (
+/obj/structure/window/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/firedoor/glass/hidden/shuttle,
+/obj/machinery/door/blast/shuttle/open{
+	id = "medivac blast";
+	name = "Shuttle Blast Doors"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/medivac/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "jJU" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -24849,8 +24961,21 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/mining_outpost/shuttle)
 "kyb" = (
+<<<<<<< HEAD
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/cockpit)
+=======
+/obj/structure/window/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/obj/machinery/door/firedoor/glass/hidden/shuttle,
+/obj/machinery/door/blast/shuttle/open{
+	id = "securiship blast";
+	name = "Shuttle Blast Doors"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/securiship/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "kyd" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -25110,9 +25235,16 @@
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "kKY" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
 	dir = 8
+=======
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /obj/effect/map_helper/airlock/atmos/pump_out_external,
 /turf/simulated/floor/airless,
@@ -27846,6 +27978,16 @@
 /obj/machinery/computer/timeclock/premade/south,
 /turf/simulated/floor/tiled,
 /area/storage/tools)
+<<<<<<< HEAD
+=======
+"mRq" = (
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/securiship/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "mRU" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
@@ -28472,12 +28614,20 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
 	icon_state = "space";
 	layer = 4;
 	name = "EXTERNAL AIRLOCK"
+=======
+/obj/effect/map_helper/airlock/atmos/pump_out_external,
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /turf/simulated/floor/plating,
 /area/tether/station/dock_two)
@@ -28567,6 +28717,33 @@
 /obj/effect/floor_decal/corner/brown/bordercorner2,
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock/gear)
+<<<<<<< HEAD
+=======
+"nAr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/securiship/engines)
+"nAx" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "nAA" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/tcomfoyer{
@@ -30118,10 +30295,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_one)
+<<<<<<< HEAD
 "pqB" = (
 /obj/structure/cable/green{
 	dir = 1;
 	icon_state = "1-2"
+=======
+"psE" = (
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/shuttle/securiship/engines)
@@ -31698,6 +31883,20 @@
 /area/tether/outpost/solars_outside{
 	name = "\improper Telecomms Solar Field"
 	})
+<<<<<<< HEAD
+=======
+"riB" = (
+/obj/structure/window/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+	},
+/obj/machinery/door/firedoor/glass/hidden/shuttle,
+/obj/machinery/door/blast/shuttle/open{
+	id = "medivac blast";
+	name = "Shuttle Blast Doors"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/medivac/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "riO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -32386,9 +32585,22 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "rXo" = (
+<<<<<<< HEAD
 /obj/structure/sign/redcross,
 /turf/simulated/wall/rshull,
 /area/shuttle/medivac/engines)
+=======
+/obj/structure/window/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/obj/machinery/door/firedoor/glass/hidden/shuttle,
+/obj/machinery/door/blast/shuttle/open{
+	id = "securiship blast";
+	name = "Shuttle Blast Doors"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/securiship/cockpit)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "rXp" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "packageSort1"
@@ -32516,6 +32728,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
+<<<<<<< HEAD
+=======
+"sbe" = (
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "scu" = (
 /turf/simulated/wall/r_wall,
 /area/tether/exploration/crew)
@@ -33178,6 +33400,23 @@
 /area/tcommsat/entrance{
 	name = "\improper Telecomms Entrance"
 	})
+<<<<<<< HEAD
+=======
+"sUt" = (
+/obj/effect/fancy_shuttle/medbus{
+	dir = 1;
+	fancy_shuttle_tag = "medbus"
+	},
+/obj/effect/fancy_shuttle_floor_preview/medbus{
+	dir = 1
+	},
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "sUY" = (
 /turf/simulated/floor/reinforced,
 /area/tether/exploration)
@@ -33615,6 +33854,16 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/cargo)
+<<<<<<< HEAD
+=======
+"tqu" = (
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/securiship/general)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "trn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -34293,8 +34542,15 @@
 /turf/simulated/wall,
 /area/storage/tools)
 "ujC" = (
+<<<<<<< HEAD
 /obj/structure/cable{
 	icon_state = "4-8"
+=======
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -34444,8 +34700,16 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "uqU" = (
+<<<<<<< HEAD
 /obj/machinery/computer/ship/sensors{
 	dir = 8
+=======
+/obj/machinery/shipsensors/fancy_shuttle,
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/eris/steel/cyancorner,
@@ -35530,6 +35794,22 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_two)
+<<<<<<< HEAD
+=======
+"vFi" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "medivac_docker_pump_out_external"
+	},
+/obj/effect/map_helper/airlock/atmos/pump_out_external,
+/turf/simulated/wall/fancy_shuttle/low{
+	fancy_shuttle_tag = "medbus";
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> de1f9190b8b... Merge pull request #12143 from Very-Soft/returntotether
 "vFn" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
