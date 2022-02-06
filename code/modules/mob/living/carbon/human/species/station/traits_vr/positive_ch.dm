@@ -76,16 +76,15 @@
 	excludes = list(/datum/trait/positive/more_blood,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
-/datum/trait/positive/heavyweight_combat
-	name = "Combat Heavyweight"
+/datum/trait/positive/heavyweight
+	name = "Heavyweight"
 	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you."
 	cost = 2
+	var_changes = list("stun_mod" = 0.75, "weaken_mod" = 0.75) // Stuns are 75% as effective - a stun of 3 seconds will be 2 seconds after rounding. Set to 0.75 to make a 3 second stun 2 seconds.(Weaken is used alongside stun to prevent aiming.)
 
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.mob_size = MOB_LARGE
-	H.stun_mod = 0.5 // Stuns are 1/3 as effective - a stun of 3 seconds will be 1 second after rounding. Set to 0.75 to make a 3 second stun 2 seconds.
-	H.weaken_mod = 0.5 // Stuns are 1/3 as effective - a stun of 3 seconds will be 1 second after rounding. (Weaken is used alongside stun to prevent aiming.)
 
 /datum/trait/positive/table_passer
 	name = "Table passer"

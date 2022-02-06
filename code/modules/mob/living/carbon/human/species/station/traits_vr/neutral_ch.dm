@@ -55,9 +55,9 @@
 	var_changes = list("bite_mod" = 4)
 	custom_only = FALSE
 	
-/datum/trait/neutral/heavyweight
-	name = "Heavyweight"
-	desc = "You are harder to move out of the way due to your sturdiness or frame, and neither players nor mobs can trade places with you."
+/datum/trait/neutral/stubborn
+	name = "Stubborn"
+	desc = "You are harder to move out of the way due to your sturdiness, frame, or just sheer stubbornness, and neither players nor mobs can trade places with you or bump you out of the way."
 	cost = 0
 	custom_only = FALSE
 	
