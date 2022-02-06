@@ -109,6 +109,9 @@
 	var/chemOD_mod =		1						// Damage modifier for overdose; higher = more damage from ODs
 	var/alcohol_mod =		1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
 	var/pain_mod =			1						// Multiplier to pain effects; 0.5 = half, 0 = no effect (equal to NO_PAIN, really), 2 = double, etc.
+	var/stun_mod =			1						// Multiplier to stun effects; 0.5 = half, - = no effect (immune), 2 = double, etc.
+	var/weaken_mod =		1						// Multiplier to weakness effects; 0.5 = half, - = no effect (immune), 2 = double, etc.
+													// Stuns + Weakens will be rounded to the nearest whole #. If you set 0.5 mod, on a base stun of 3, the return will be 1.5, which rounds to 1. Be careful.
 	var/spice_mod =			1						// Multiplier to spice/capsaicin/frostoil effects; 0.5 = half, 0 = no effect (immunity), 2 = double, etc.
 	var/trauma_mod = 		1						// Affects traumatic shock (how fast pain crit happens). 0 = no effect (immunity to pain crit), 2 = double etc.Overriden by "can_feel_pain" var
 	// set below is EMP interactivity for nonsynth carbons
