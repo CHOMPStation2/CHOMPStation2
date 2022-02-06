@@ -147,6 +147,16 @@ var/list/whitelisted_positions = list(
 	"AI"
 )
 
+<<<<<<< HEAD
+=======
+var/const/TALCAP			=(1<<0)
+var/const/TALPIL			=(1<<1)
+var/const/TALDOC			=(1<<2)
+var/const/TALSEC			=(1<<3)
+var/const/TALENG			=(1<<4)
+var/const/TALMIN			=(1<<5)
+//VOREStation Add End
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 
 /proc/guest_jobbans(var/job)
 	return ((job in whitelisted_positions))

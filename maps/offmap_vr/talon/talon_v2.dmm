@@ -241,6 +241,7 @@
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/med_room)
 "ax" = (
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/talon_engineer,
 /obj/item/device/radio/off{
 	channels = list("Talon" = 1)
@@ -248,6 +249,13 @@
 /obj/item/weapon/storage/box/nifsofts_engineering,
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/eng_room)
+=======
+/obj/machinery/camera/network/talon{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "ay" = (
 /obj/machinery/disposal/wall{
 	dir = 4
@@ -1166,12 +1174,31 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/wing_starboard)
+<<<<<<< HEAD
 "dh" = (
 /obj/structure/ore_box,
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/refining)
 "di" = (
+=======
+"de" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+"df" = (
+/obj/effect/landmark/start{
+	name = "Talon Miner"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"di" = (
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+"dj" = (
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/machinery/door/firedoor/glass/talon,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -2188,6 +2215,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
 	id_tag = "talon_port";
@@ -2202,6 +2230,16 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+=======
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/fore)
+"gd" = (
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"ge" = (
+/obj/machinery/vending/coffee{
+	dir = 1
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2598,8 +2636,16 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "hp" = (
 /obj/machinery/atmospherics/binary/algae_farm/filled{
 	dir = 1
@@ -2844,6 +2890,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 6
 	},
+<<<<<<< HEAD
 /obj/structure/handrail,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -2857,6 +2904,23 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+=======
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"iq" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"ir" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/wing_port)
+"is" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
@@ -2878,6 +2942,20 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"ix" = (
+/obj/structure/table/woodentable,
+/obj/machinery/recharger,
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+"iy" = (
+/obj/structure/catwalk,
+/obj/structure/trash_pile,
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/aft_port)
 "iz" = (
@@ -3210,11 +3288,22 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/refining)
 "jY" = (
+<<<<<<< HEAD
 /obj/structure/table/steel,
 /obj/item/weapon/storage/bag/ore,
 /obj/item/weapon/pickaxe/drill,
+=======
+/obj/structure/closet/crate,
+/obj/structure/railing/grey,
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/refining)
+"jZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
 "kc" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -3707,13 +3796,24 @@
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/fore_starboard)
 "lA" = (
+<<<<<<< HEAD
 /obj/machinery/light/small,
 /obj/structure/railing/grey{
 	dir = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 4
+=======
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/refining)
 "lB" = (
@@ -4030,7 +4130,47 @@
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
+<<<<<<< HEAD
 	icon_state = "4-8"
+=======
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_starboard)
+"mH" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
+"mI" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_port)
+"mL" = (
+/obj/machinery/mineral/unloading_machine,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+"mN" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"mO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/segment{
@@ -4466,6 +4606,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/talonboat)
+<<<<<<< HEAD
 "om" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -4475,6 +4616,40 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+=======
+"od" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"oh" = (
+/obj/item/weapon/storage/dicecup/loaded{
+	pixel_x = 7;
+	pixel_y = 11
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/table/marble,
+/obj/item/weapon/deck/cards{
+	pixel_x = 3
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/bar)
+"ok" = (
+/obj/structure/bed/pod,
+/obj/item/weapon/bedsheet/brown,
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+"ol" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Talon Guard"
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4516,6 +4691,11 @@
 "or" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/refining)
@@ -5112,11 +5292,20 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+=======
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/ofd_ops)
+"qA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/wall/shull,
+/area/talon_v2/crew_quarters/mine_room)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "qC" = (
 /obj/machinery/door/firedoor/glass/talon,
 /obj/machinery/door/airlock/maintenance/engi{
@@ -5180,7 +5369,38 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
+=======
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"qO" = (
+/obj/machinery/cryopod/robot/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway)
+"qP" = (
+/obj/effect/landmark/talon,
+/obj/structure/handrail,
+/obj/machinery/computer/cryopod{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway)
+"qQ" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 4
+	},
+/obj/machinery/mineral/input,
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/warning/moving_parts{
+	pixel_y = -31
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/refining)
+"qU" = (
+/obj/effect/floor_decal/industrial/warning{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -6073,6 +6293,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/ore_box,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/refining)
 "tK" = (
@@ -6565,6 +6786,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/refining)
 "vy" = (
@@ -7004,6 +7230,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/talonboat)
+<<<<<<< HEAD
 "wZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -7017,6 +7244,28 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+=======
+"wY" = (
+/obj/machinery/light_switch{
+	pixel_x = -5;
+	pixel_y = 26
+	},
+/obj/machinery/button/remote/airlock{
+	id = "talon_minerdoor";
+	name = "Door Bolts";
+	pixel_x = 5;
+	pixel_y = 28;
+	specialfunctions = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"xa" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/engineering/star_store)
@@ -7550,9 +7799,20 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway)
 "yU" = (
+<<<<<<< HEAD
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/engineer,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+=======
+/obj/machinery/suit_cycler/vintage/tminer,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"yV" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	locked = 0
+	},
+/obj/machinery/camera/network/talon{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 1
 	},
 /obj/machinery/firealarm{
@@ -7601,6 +7861,16 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/table/rack/steel,
+/obj/item/weapon/shovel,
+/obj/item/weapon/mining_scanner,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+"zd" = (
+/obj/structure/fitness/weightlifter,
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/machinery/camera/network/talon{
 	dir = 4
 	},
@@ -7925,7 +8195,32 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/maintenance/wing_port)
+<<<<<<< HEAD
 "Av" = (
+=======
+"Ax" = (
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/closet/secure_closet/personal/cabinet{
+	locked = 0
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Az" = (
+/obj/structure/table/rack/steel,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/secure_storage)
+"AB" = (
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/structure/catwalk,
 /obj/machinery/light/small{
 	dir = 8
@@ -8057,6 +8352,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/talonboat)
+<<<<<<< HEAD
 "AO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8110,6 +8406,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+=======
+"AY" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "talonrefinery"
+	},
+/obj/machinery/mineral/output,
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/maintenance/wing_starboard)
 "AV" = (
@@ -43094,6 +43398,7 @@ aa
 	d2 = 8;
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -43105,6 +43410,27 @@ aa
 "zJ" = (
 /obj/machinery/vending/tool{
 	req_log_access = 301
+=======
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"BY" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/carpet/blucarpet,
+/area/talon_v2/crew_quarters/cap_room)
+"BZ" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Cb" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/engineering/star_store)
@@ -43669,11 +43995,24 @@ aa
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/multiple/corp_crate/talon_cargo,
 /turf/simulated/floor/tiled/techfloor,
+<<<<<<< HEAD
 /area/talon_v2/maintenance/wing_starboard)
 "BH" = (
+=======
+/area/talon_v2/bridge)
+"Ec" = (
+/obj/machinery/door/airlock/maintenance/cargo{
+	id_tag = talon_minerdoor;
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/crew_quarters/mine_room)
+"Ee" = (
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -43683,6 +44022,45 @@ aa
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/crew_quarters/restrooms)
 "BJ" = (
+=======
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+"Ef" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/gun/energy/gun/burst,
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/obj/item/weapon/cell/device/weapon,
+/obj/item/clothing/accessory/holster/waist,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/armory)
+"Ei" = (
+/obj/machinery/door/airlock/mining{
+	id_tag = talon_minerdoor;
+	name = "Miner's Cabin";
+	req_one_access = list(301)
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/crew_quarters/mine_room)
+"Ej" = (
+/obj/structure/table/rack/steel,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"Ek" = (
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 4;
@@ -43704,6 +44082,34 @@ aa
 	d2 = 8;
 	icon_state = "2-8"
 	},
+<<<<<<< HEAD
+=======
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway/fore)
+"Er" = (
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"Eu" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/talon_miner,
+/obj/item/weapon/storage/box/nifsofts_mining,
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1)
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Ev" = (
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux,
+/obj/structure/handrail,
+/obj/effect/floor_decal/industrial/warning/corner,
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -45195,6 +45601,7 @@ aa
 /obj/structure/sink{
 	pixel_y = 22
 	},
+<<<<<<< HEAD
 /obj/structure/medical_stand/anesthetic,
 /turf/simulated/floor/tiled/white,
 /area/talon_v2/medical)
@@ -45209,6 +45616,20 @@ aa
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+=======
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+"Iu" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -45236,6 +45657,7 @@ aa
 /obj/machinery/light/small{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/anomaly_storage)
 "GV" = (
@@ -45244,6 +45666,16 @@ aa
 	pixel_y = -22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
+=======
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"IB" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/crew_quarters/mine_room)
+"IC" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 1
 	},
 /obj/structure/railing/grey{
@@ -45354,9 +45786,25 @@ aa
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/talon_v2/engineering/port)
 "Ho" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+=======
+/area/talon_v2/central_hallway/fore)
+"IY" = (
+/obj/structure/sign/warning/moving_parts{
+	pixel_y = -32
+	},
+/obj/machinery/disposal/wall{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Jd" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -45477,6 +45925,7 @@ aa
 	pixel_y = -6;
 	req_one_access = list(301)
 	},
+<<<<<<< HEAD
 /obj/structure/girder,
 /obj/structure/railing/grey{
 	dir = 4
@@ -45498,6 +45947,33 @@ aa
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"JK" = (
+/obj/structure/table/woodentable,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/miner,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+"JL" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/ofd_ops)
+"JM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/turf/simulated/wall/rshull,
+/area/talon_v2/engineering/starboard)
+"JN" = (
+/obj/structure/catwalk,
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"JO" = (
+/obj/machinery/computer/ship/sensors{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 4
 	},
 /obj/effect/catwalk_plated/dark,
@@ -45735,8 +46211,26 @@ aa
 /obj/machinery/camera/network/talon{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/safe/floor{
 	name = "smuggling compartment"
+=======
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"Kw" = (
+/obj/machinery/alarm/talon{
+	pixel_y = 28
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Kx" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 5;
+	pixel_y = 24
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/talon_v2/crew_quarters/cap_room)
@@ -46358,10 +46852,23 @@ aa
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+<<<<<<< HEAD
 /obj/structure/closet/crate,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"LT" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/gen_store)
 "Ks" = (
@@ -46464,11 +46971,25 @@ aa
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/closet/walllocker/medical/east,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/firstaid/o2,
 /obj/item/weapon/extinguisher/mini,
 /obj/effect/floor_decal/industrial/warning/corner{
+=======
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/bridge)
+"Mk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/wall/shull,
+/area/talon_v2/crew_quarters/mine_room)
+"Ml" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/vending/medical_talon{
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -47783,6 +48304,23 @@ aa
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/wall/rshull,
 /area/talon_v2/engineering/port)
+<<<<<<< HEAD
+=======
+"PA" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/refining)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "PB" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -48488,9 +49026,31 @@ aa
 /turf/simulated/wall/shull,
 /area/talon_v2/medical)
 "RV" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+=======
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"RY" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"RZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -48953,6 +49513,7 @@ aa
 	name = "north bump";
 	pixel_y = 28
 	},
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
@@ -48960,6 +49521,18 @@ aa
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
+=======
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"TH" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/wall/shull,
+/area/talon_v2/crew_quarters/mine_room)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "TJ" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -48970,9 +49543,18 @@ aa
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/aft_starboard)
 "TL" = (
+<<<<<<< HEAD
 /obj/machinery/alarm/talon{
 	dir = 8;
 	pixel_x = 22
+=======
+/obj/machinery/suit_cycler/vintage/tpilot,
+/obj/machinery/button/remote/airlock{
+	id = "talon_minerdoor";
+	name = "Door Bolts";
+	pixel_y = 28;
+	specialfunctions = 4
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/blue,
@@ -49108,6 +49690,12 @@ aa
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/maintenance/wing_starboard)
 "Um" = (
+<<<<<<< HEAD
+=======
+/obj/machinery/camera/network/talon{
+	dir = 4
+	},
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/machinery/mineral/mint,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/refining)
@@ -49731,9 +50319,28 @@ aa
 	d2 = 8;
 	icon_state = "2-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/talon_v2/central_hallway)
 "Wu" = (
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"WB" = (
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -50225,7 +50832,39 @@ aa
 	name = "Cargo Loading Hatch"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
+<<<<<<< HEAD
 /area/talon_v2/maintenance/wing_port)
+=======
+/area/talon_v2/maintenance/aft_port)
+"Yh" = (
+/obj/machinery/suit_cycler/vintage/tcaptain,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/cap_room)
+"Yj" = (
+/obj/structure/catwalk,
+/obj/structure/closet/walllocker_double/west,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/stack/cable_coil/green,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"Yk" = (
+/turf/simulated/floor/reinforced,
+/area/talon_v2/ofd_ops)
+"Ym" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table/rack/steel,
+/obj/item/weapon/storage/bag/ore,
+/obj/item/weapon/pickaxe/drill,
+/obj/item/stack/marker_beacon/thirty,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "Yo" = (
 /obj/structure/closet/emergsuit_wall{
 	dir = 4;
@@ -50234,8 +50873,22 @@ aa
 /turf/simulated/floor/tiled/white,
 /area/talon_v2/medical)
 "Yp" = (
+<<<<<<< HEAD
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+=======
+/obj/structure/bed/chair/bay/chair{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+"Yq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	},
 /obj/machinery/disposal/wall{
 	dir = 8
@@ -50656,6 +51309,7 @@ aa
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "ZA" = (
+<<<<<<< HEAD
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -50664,6 +51318,13 @@ aa
 	id = "talonrefinery"
 	},
 /obj/machinery/mineral/output,
+=======
+/obj/machinery/mineral/input,
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "talonrefinery"
+	},
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/refining)
 "ZB" = (
@@ -61978,11 +62639,19 @@ It
 jY
 jY
 Um
+<<<<<<< HEAD
 WJ
 ms
 Ax
 yU
 wx
+=======
+TH
+Ax
+Eu
+yU
+IB
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 Wz
 fb
 iN
@@ -62117,6 +62786,7 @@ LU
 LU
 vx
 or
+<<<<<<< HEAD
 VS
 VS
 lA
@@ -62125,6 +62795,16 @@ uk
 MO
 BZ
 FB
+=======
+or
+PA
+lA
+Ei
+RY
+jZ
+BZ
+IB
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 hk
 fb
 Ll
@@ -62260,6 +62940,7 @@ XR
 gR
 Yc
 VS
+<<<<<<< HEAD
 OI
 qQ
 WJ
@@ -62268,6 +62949,16 @@ gd
 IY
 IY
 IY
+=======
+de
+qQ
+qA
+wY
+gd
+IY
+Mk
+LR
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 Jf
 Tg
 wZ
@@ -62371,6 +63062,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 hP
 EU
 EU
@@ -62413,14 +63105,69 @@ nD
 fb
 pv
 cM
+=======
+aa
+aa
+aa
+aa
+Ue
+Sg
+Sg
+rx
+rx
+jr
+Sk
+rc
+Sk
+Sk
+uh
+Sk
+Sk
+MG
+RQ
+rG
+Fn
+NZ
+Na
+BU
+RQ
+tX
+lv
+fW
+PK
+tJ
+VS
+YL
+mL
+IB
+Kw
+df
+iq
+IB
+nD
+et
+pv
+pv
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 tM
 fb
 uQ
 fi
+<<<<<<< HEAD
 fi
 vE
 Tb
 Pf
+=======
+mg
+fb
+Tb
+aL
+aL
+oE
+iH
+tS
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 in
 in
 in
@@ -62430,17 +63177,30 @@ in
 in
 in
 in
+<<<<<<< HEAD
 uv
+=======
+lY
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 in
 in
 in
 in
+<<<<<<< HEAD
 Mf
 fh
 Dq
 fs
 KT
 fS
+=======
+KT
+fS
+Dq
+Km
+yz
+Fa
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 XP
 XP
 aa
@@ -62461,10 +63221,13 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
 aa
+=======
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 "}
 (83,1,1) = {"
 aa
@@ -62543,6 +63306,7 @@ VS
 XR
 Hg
 tJ
+<<<<<<< HEAD
 kZ
 mP
 AY
@@ -62551,6 +63315,20 @@ JK
 Yp
 ax
 kn
+=======
+VS
+YL
+AY
+IB
+JK
+Yp
+ax
+IB
+zA
+pS
+Xh
+qM
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 WJ
 fb
 Xh
@@ -62688,7 +63466,15 @@ Ly
 kc
 Ly
 ZA
+<<<<<<< HEAD
 fW
+=======
+IB
+ix
+di
+ok
+IB
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 DD
 DD
 DD
@@ -62826,6 +63612,7 @@ HG
 lv
 ac
 Ry
+<<<<<<< HEAD
 fW
 fW
 fW
@@ -62835,6 +63622,17 @@ dJ
 cg
 IJ
 Av
+=======
+TJ
+Vx
+Yx
+Fr
+IB
+IB
+Ec
+IB
+IB
+>>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 vc
 mm
 Dq
