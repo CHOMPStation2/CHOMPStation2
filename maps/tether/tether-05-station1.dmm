@@ -29991,6 +29991,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
+<<<<<<< HEAD
 "pjb" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	req_one_access = list(1,67)
@@ -30002,6 +30003,28 @@
 	},
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/shuttle/securiship/engines)
+=======
+"pjJ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 9
+	},
+/obj/machinery/item_bank{
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/station/atrium)
+>>>>>>> 6c62ed238a8... Merge pull request #12157 from Very-Soft/tether_itembanks
 "plm" = (
 /obj/machinery/camera/network/exploration{
 	dir = 1
@@ -48336,11 +48359,19 @@ dPx
 rjV
 kts
 vYJ
+<<<<<<< HEAD
 vYJ
 nlw
 hLF
 eSw
 qTm
+=======
+pjJ
+aba
+abm
+abO
+abT
+>>>>>>> 6c62ed238a8... Merge pull request #12157 from Very-Soft/tether_itembanks
 gMR
 wra
 xNk
