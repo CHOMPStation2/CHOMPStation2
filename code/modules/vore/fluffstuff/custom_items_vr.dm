@@ -1416,9 +1416,6 @@ End CHOMP Removal*/
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "stamp-midhorror"
 	stamptext = "This paper has been certified by The Council of Mid Horror"
-<<<<<<< HEAD
-  
-=======
 
 //thedavestdave Lucky
 ///I know this is pretty bodgey but if it stupid and it works it isn't stupid
@@ -1440,5 +1437,3 @@ End CHOMP Removal*/
     from_suit = /obj/item/clothing/suit/storage/hooded/explorer
     to_suit = /obj/item/clothing/suit/storage/hooded/explorer/lucky
 
-
->>>>>>> 32a7be9e566... Merge pull request #12149 from TheDavestDave/whitelist-update
