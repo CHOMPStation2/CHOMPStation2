@@ -26343,7 +26343,32 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
+<<<<<<< HEAD
 	icon_state = "4-8"
+=======
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/table/standard,
+/obj/item/weapon/tank/phoron,
+/obj/random/tool,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/obj/structure/fuel_port{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/engines)
+"lEm" = (
+/obj/structure/bed/chair/bay/chair{
+	dir = 1
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+>>>>>>> 42bfcde0a7a... Merge pull request #12172 from Very-Soft/shutluwu
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
