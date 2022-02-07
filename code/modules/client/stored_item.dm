@@ -217,4 +217,3 @@
 	persist_storable = FALSE
 /obj/item/weapon/gun/energy/sizegun/abductor
 	persist_storable = FALSE
-

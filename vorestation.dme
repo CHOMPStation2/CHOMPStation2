@@ -1966,6 +1966,7 @@
 #include "code\modules\client\preferences_vr.dm"
 #include "code\modules\client\preferences_yw.dm"
 #include "code\modules\client\spam_prevention.dm"
+#include "code\modules\client\stored_item.dm"
 #include "code\modules\client\ui_style.dm"
 #include "code\modules\client\preference_setup\_defines.dm"
 #include "code\modules\client\preference_setup\preference_setup.dm"
