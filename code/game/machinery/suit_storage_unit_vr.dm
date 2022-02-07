@@ -53,12 +53,9 @@
 	model_text = "Talon captain"
 	req_access = list(access_talon)
 	departments = list(/datum/suit_cycler_choice/department/talon/officer)
-<<<<<<< HEAD
-=======
 
 /obj/machinery/suit_cycler/vintage/tminer
 	name = "Talon miner suit cycler"
 	model_text = "Talon miner"
 	req_access = list(access_talon)
 	departments = list(/datum/suit_cycler_choice/department/talon/miner)
->>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
