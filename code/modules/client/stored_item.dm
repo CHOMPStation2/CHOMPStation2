@@ -199,7 +199,7 @@
 	persist_storable = FALSE
 /obj/item/weapon/hand_tele
 	persist_storable = FALSE
-/obj/item/weapon/paper/dockingcodes
+/obj/item/weapon/paper
 	persist_storable = FALSE
 /obj/item/weapon/backup_implanter
 	persist_storable = FALSE
@@ -216,4 +216,28 @@
 /obj/item/weapon/gun/energy/sizegun/admin
 	persist_storable = FALSE
 /obj/item/weapon/gun/energy/sizegun/abductor
+<<<<<<< HEAD
 	persist_storable = FALSE
+=======
+	persist_storable = FALSE
+/obj/item/stack
+	persist_storable = FALSE
+/obj/item/weapon/book
+	persist_storable = FALSE
+/obj/item/weapon/melee/cursedblade
+	persist_storable = FALSE
+/obj/item/device/paicard
+	persist_storable = FALSE
+/obj/item/organ
+	persist_storable = FALSE
+/obj/item/device/soulstone
+	persist_storable = FALSE
+/obj/item/device/aicard
+	persist_storable = FALSE
+/obj/item/device/mmi
+	persist_storable = FALSE
+/obj/item/seeds
+	persist_storable = FALSE
+/obj/item/weapon/reagent_containers/food/snacks/grown
+	persist_storable = FALSE
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
