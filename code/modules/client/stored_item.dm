@@ -228,4 +228,3 @@
 	persist_storable = FALSE
 /obj/item/stack
 	persist_storable = FALSE
-
