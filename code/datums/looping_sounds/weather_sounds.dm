@@ -11,7 +11,7 @@
 		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
 		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 85 // Louder because we want to communicate to players that this is a heavy blizzard
 
@@ -23,7 +23,7 @@
 		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
 		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 25 // Should naturally be very quiet - wind isn't usually audible inside a structure unless you're right by the door. - bit louder because blizzard
 
@@ -35,7 +35,7 @@
 		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
 		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 65
 
@@ -47,7 +47,7 @@
 		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
 		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 15 // Should naturally be very quiet - wind isn't usually audible inside a structure unless you're right by the door.
 
@@ -59,7 +59,7 @@
 		'sound/effects/weather/wind/wind_loop2.ogg' = 1,
 		'sound/effects/weather/wind/wind_loop3.ogg' = 1
 		)
-	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is ten seconds, so this will make it sound like intermittent wind.
+	mid_length = 4 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 45
 
