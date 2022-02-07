@@ -58,19 +58,11 @@
 
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown (Eng, Sec, Med, Exploration, Miner)"
-<<<<<<< HEAD
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
 
 /datum/gear/accessory/black_vest
 	display_name = "webbing, black (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
-
-/datum/gear/accessory/black_vest
-	display_name = "webbing, black (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
->>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
 
 /datum/gear/accessory/white_vest
 	display_name = "webbing, white (Medical)"
@@ -78,19 +70,11 @@
 
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "drop pouches, brown (Eng, Sec, Med, Exploration, Miner)"
-<<<<<<< HEAD
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "drop pouches, black (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
-
-/datum/gear/accessory/black_drop_pouches
-	display_name = "drop pouches, black (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
->>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white (Medical)"
@@ -99,11 +83,6 @@
 /datum/gear/accessory/bluespace
 	display_name = "bluespace badge (Eng, Sec, Med, Exploration, Miner)"
 	path = /obj/item/clothing/accessory/storage/bluespace
-<<<<<<< HEAD
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
-=======
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
->>>>>>> 982372b1a12... Merge pull request #12164 from PastelPrinceDan/talonmining
 	cost = 2
 
 /datum/gear/accessory/webbing
