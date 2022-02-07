@@ -61,6 +61,6 @@
 	cost = 0
 	custom_only = FALSE
 	
-/datum/trait/neutral/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/stubborn/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.mob_bump_flag = HEAVY
