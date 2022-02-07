@@ -577,21 +577,23 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/repair_droid
 
 /* These are way too OP to be buildable
+*/ //CHOMPEdit  upstream whines too much.
 /datum/design/item/mecha/combat_shield
 	name = "linear combat shield"
 	desc = "Linear shield projector. Deploys a large, familiar, and rectangular shield in one direction at a time."
 	id = "mech_shield_droid"
-	req_tech = list(TECH_PHORON = 3, TECH_MAGNET = 6, TECH_ILLEGAL = 4)
-	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_GLASS = 3750)
+	req_tech = list(TECH_PHORON = 5, TECH_MAGNET = 7, TECH_ILLEGAL = 5)  //Chompedit bumped up a little
+	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_VERDANTIUM = 2000, MAT_GLASS = 3750)  //Chompedit  Also bumped up a little
 	build_path = /obj/item/mecha_parts/mecha_equipment/combat_shield
 
 /datum/design/item/mecha/omni_shield
 	name = "Omni Shield"
 	desc = "Integral shield projector. Can only protect the exosuit, but has no weak angles."
 	id = "mech_shield_omni"
-	req_tech = list(TECH_PHORON = 3, TECH_MAGNET = 6, TECH_ILLEGAL = 4)
-	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_GLASS = 3750)
+	req_tech = list(TECH_PHORON = 5, TECH_MAGNET = 7, TECH_ILLEGAL = 5)  //Chompedit bumped up a little
+	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_VERDANTIUM = 2000, MAT_GLASS = 3750)  //Chompedit  Also bumped up a little
 	build_path = /obj/item/mecha_parts/mecha_equipment/omni_shield
+/*  //CHOMPEdit closing comment.
 */
 
 /datum/design/item/mecha/crisis_drone
