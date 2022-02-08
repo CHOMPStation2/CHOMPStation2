@@ -198,7 +198,7 @@ var/list/sacrificed = list()
 	if(cultists.len >= 9)
 		if(!narsie_cometh)//so we don't initiate Hell more than one time.
 			to_world("<font size='15' color='red'><b>THE VEIL HAS BEEN SHATTERED!</b></font>")
-			world << sound('sound/effects/weather/wind/wind_5_1.ogg')
+			world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
 
 			SetUniversalState(/datum/universal_state/hell)
 			narsie_cometh = 1
