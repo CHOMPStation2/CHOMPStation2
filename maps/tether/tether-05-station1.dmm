@@ -16670,7 +16670,7 @@
 	},
 /obj/machinery/door/airlock/angled_tgmc{
 	dir = 4;
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
@@ -16684,7 +16684,7 @@
 /area/quartermaster/belterdock)
 "cIa" = (
 /obj/machinery/door/airlock/angled_tgmc/dropship2_pilot{
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
@@ -16739,7 +16739,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/angled_tgmc/dropship2_pilot{
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
@@ -17789,7 +17789,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/angled_tgmc{
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
@@ -18431,7 +18431,7 @@
 "eBg" = (
 /obj/machinery/door/airlock/angled_tgmc{
 	dir = 4;
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
@@ -18477,7 +18477,7 @@
 	},
 /obj/machinery/door/airlock/angled_tgmc{
 	dir = 4;
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
@@ -28177,7 +28177,7 @@
 	fancy_shuttle_tag = "explo"
 	},
 /obj/machinery/door/airlock/angled_tgmc{
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
@@ -32581,7 +32581,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/angled_tgmc{
-	req_one_access = list(67)
+	req_one_access = list(19,43,67)
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
