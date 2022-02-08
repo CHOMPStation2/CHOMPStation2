@@ -28,7 +28,7 @@
 /datum/trait/negative/endurance_low
 	name = "Low Endurance"
 	desc = "Reduces your maximum total hitpoints to 75."
-	cost = -2
+	cost = -4  //Chompedit makes you a lot squishier, should not be only 2 points.  (based on the brute and burn vulnerability costs)
 	var_changes = list("total_health" = 75)
 
 /datum/trait/negative/endurance_low/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -38,7 +38,7 @@
 /datum/trait/negative/endurance_very_low
 	name = "Low Endurance, Major"
 	desc = "Reduces your maximum total hitpoints to 50."
-	cost = -3 //Teshari HP. This makes the person a lot more suseptable to getting stunned, killed, etc.
+	cost = -8 //Teshari HP. This makes the person a lot more suseptable to getting stunned, killed, etc.  //Chompedit: Has no business being only 3 points, while others that function similarly but are nowhere near as crippling are 3 as well.
 	var_changes = list("total_health" = 50)
 
 /datum/trait/negative/endurance_very_low/apply(var/datum/species/S,var/mob/living/carbon/human/H)

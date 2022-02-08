@@ -7,7 +7,6 @@
 	Using an object on the gripper will interact with the item inside it, if it exists, instead."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "gripper"
-
 	flags = NOBLUDGEON
 
 	//Has a list of items that it can hold.
@@ -99,6 +98,7 @@
 		/obj/item/weapon/storage/pill_bottle,
 		/obj/item/weapon/reagent_containers/pill,
 		/obj/item/weapon/reagent_containers/blood,
+		/obj/item/device/nif,       //Chompedit Add Nif handling
 		/obj/item/stack/material/phoron
 		)
 
@@ -125,7 +125,6 @@
 		/obj/item/slimepotion,
 		/obj/item/slime_extract,
 		/obj/item/weapon/reagent_containers/food/snacks/monkeycube
-
 		)
 
 /obj/item/weapon/gripper/circuit

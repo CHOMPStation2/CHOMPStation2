@@ -16,17 +16,17 @@ This saves us from having to call add_fingerprint() any time something is put in
 		if(!I)
 			to_chat(H, "<span class='notice'>You are not holding anything to equip.</span>")
 			return
-		
+
 		var/moved = FALSE
-		
+
 		// Try an equipment slot
 		if(H.equip_to_appropriate_slot(I))
 			moved = TRUE
-		
+
 		// No? Try a storage item.
 		else if(H.equip_to_storage(I, TRUE))
 			moved = TRUE
-		
+
 		// No?! Well, give up.
 		if(!moved)
 			to_chat(H, "<span class='warning'>You are unable to equip that.</span>")
@@ -173,7 +173,8 @@ This saves us from having to call add_fingerprint() any time something is put in
 			if(I.flags_inv & (BLOCKHAIR|BLOCKHEADHAIR))
 				update_hair(0)	//rebuild hair
 				update_inv_ears(0)
-		if(internal)
+		// If this is how the internals are connected, disable them
+		if(internal && !(head?.item_flags & AIRTIGHT))
 			if(internals)
 				internals.icon_state = "internal0"
 			internal = null
@@ -243,6 +244,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 		if(slot_back)
 			src.back = W
 			W.equipped(src, slot)
+			worn_clothing += back
 			update_inv_back()
 		if(slot_wear_mask)
 			src.wear_mask = W
@@ -250,6 +252,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 				update_hair()	//rebuild hair
 				update_inv_ears()
 			W.equipped(src, slot)
+			worn_clothing += wear_mask
 			update_inv_wear_mask()
 		if(slot_handcuffed)
 			src.handcuffed = W
@@ -269,6 +272,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 		if(slot_belt)
 			src.belt = W
 			W.equipped(src, slot)
+			worn_clothing += belt
 			update_inv_belt()
 		if(slot_wear_id)
 			src.wear_id = W
@@ -313,18 +317,22 @@ This saves us from having to call add_fingerprint() any time something is put in
 			if(istype(W,/obj/item/clothing/head/kitty))
 				W.update_icon(src)
 			W.equipped(src, slot)
+			worn_clothing += head
 			update_inv_head()
 		if(slot_shoes)
 			src.shoes = W
 			W.equipped(src, slot)
+			worn_clothing += shoes
 			update_inv_shoes()
 		if(slot_wear_suit)
 			src.wear_suit = W
 			W.equipped(src, slot)
+			worn_clothing += wear_suit
 			update_inv_wear_suit()
 		if(slot_w_uniform)
 			src.w_uniform = W
 			W.equipped(src, slot)
+			worn_clothing += w_uniform
 			update_inv_w_uniform()
 		if(slot_l_store)
 			src.l_store = W

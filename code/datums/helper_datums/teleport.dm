@@ -1,5 +1,5 @@
 //wrapper
-/proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE) //VOREStation Edit
+/proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
 	new /datum/teleport/instant/science(arglist(args))
 	return
 
@@ -13,19 +13,21 @@
 	var/soundout //soundfile to play after teleportation
 	var/force_teleport = 1 //if false, teleport will use Move() proc (dense objects will prevent teleportation)
 	var/local = TRUE //VOREStation Add - If false, can teleport from/to any z-level
+	var/bohsafe = FALSE //CHOMP Add - if true, can teleport safely with a BoH
 
 
-/datum/teleport/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE) //VOREStation Edit
+/datum/teleport/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
 	..()
 	if(!initTeleport(arglist(args)))
 		return 0
 	return 1
 
-/datum/teleport/proc/initTeleport(ateleatom,adestination,aprecision,afteleport,aeffectin,aeffectout,asoundin,asoundout,local) //VOREStation Edit
+/datum/teleport/proc/initTeleport(ateleatom,adestination,aprecision,afteleport,aeffectin,aeffectout,asoundin,asoundout,local,bohsafe) //CHOMPStation Edit
 	if(!setTeleatom(ateleatom))
 		return 0
 	if(!setDestination(adestination))
 		return 0
+	src.bohsafe = bohsafe
 	if(!setPrecision(aprecision))
 		return 0
 	setEffects(aeffectin,aeffectout)
@@ -133,7 +135,7 @@
 
 /datum/teleport/instant //teleports when datum is created
 
-/datum/teleport/instant/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null)
+/datum/teleport/instant/New(ateleatom, adestination, aprecision=0, afteleport=1, bohsafe=0, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null) //CHOMP edit
 	if(..())
 		teleport()
 	return
@@ -143,14 +145,20 @@
 	if(!aeffectin || !aeffectout)
 		var/datum/effect/effect/system/spark_spread/aeffect = new
 		aeffect.set_up(5, 1, teleatom)
+		//CHOMP add start
+		var/datum/effect/effect/system/spark_spread/aeffect2 = new
+		aeffect2.set_up(5, 1, teleatom)		//This  looks stupid, but it doesn't work unless I do
+		//CHOMP add end
 		effectin = effectin || aeffect
-		effectout = effectout || aeffect
+		effectout = effectout || aeffect2 //CHOMP edit
 		return 1
 	else
 		return ..()
 
 /datum/teleport/instant/science/setPrecision(aprecision)
 	..()
+	if(bohsafe)
+		return 1
 	if(istype(teleatom, /obj/item/weapon/storage/backpack/holding))
 		precision = rand(1,100)
 

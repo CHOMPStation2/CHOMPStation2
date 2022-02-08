@@ -1074,13 +1074,6 @@
 	add_fingerprint(user)
 	return
 
-/obj/item/weapon/melee/fluffstuff/suicide_act(mob/user)
-	var/tempgender = "[user.gender == MALE ? "he's" : user.gender == FEMALE ? "she's" : "they are"]"
-	if(active)
-		user.visible_message(pick("<span class='danger'>\The [user] is slitting \his stomach open with \the [src]! It looks like [tempgender] trying to commit seppuku.</span>",\
-			"<span class='danger'>\The [user] is falling on \the [src]! It looks like [tempgender] trying to commit suicide.</span>"))
-		return (BRUTELOSS|FIRELOSS)
-
 /obj/item/weapon/melee/fluffstuff/wolfgirlsword
 	name = "Wolfgirl Sword Replica"
 	desc = "A replica of a large, scimitar-like sword with a dull edge. Ceremonial... until it isn't."
@@ -1354,4 +1347,93 @@
 		
 End CHOMP Removal*/
 
-	
+// Astra - // Astra
+/obj/item/weapon/material/knife/ritual/fluff/astra
+	name = "Polished Ritual Knife"
+	desc = "A well kept strange ritual knife, There is a small tag with the name 'Astra Ether' on it. They are probably looking for this."
+	icon = 'icons/obj/wizard.dmi'
+	icon_state = "render"
+
+//AlFalah - Charlotte Graves
+/obj/item/weapon/storage/fancy/fluff/charlotte
+	name = "inconspicuous cigarette case"
+	desc = "A SkyTron 3000 cigarette case with no additional functions. The buttons and CRT monitor are completely for show and have no functions. Seriously. "
+	icon_state = "charlotte"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	storage_slots = 7
+	can_hold = list(/obj/item/clothing/mask/smokable/cigarette, /obj/item/weapon/flame/lighter, /obj/item/trash/cigbutt)
+	icon_type = "charlotte"
+	//brand = "\improper Professional 120"
+	w_class = ITEMSIZE_TINY
+	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 7)
+
+//Ashling - Antoinette deKaultieste
+/obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette
+	name = "sawtooth ritual knife"
+	desc = "A mostly decorative knife made from thin ceramic and toothed with large black fangs. Printed on the flat is an eight-armed cross, like an asterisk with an extra stroke, ringed by a calligraphy-style crescent."
+	attack_verb = list("mauled", "bit", "sawed", "butchered")
+	dulled = 1
+	default_material = "glass"
+
+
+//Ashling - Antoinette deKaultieste
+/obj/item/clothing/accessory/storage/ritualharness/fluff/antoinette
+	name = "silk knife loops"
+	desc = "A clip-on pair of pouched loops made from surprisingly sturdy silk. Made for holding knives and small vials in a pinch."
+	icon_state = "unathiharness1"
+	slots = 2
+
+/obj/item/weapon/reagent_containers/glass/bottle/poppy
+	name = "poppy flour bottle"
+	desc = "A small bottle of finely ground poppyseed and mixed dried berries."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "bottle3"
+	prefill = list("bicaridine" = 30, "nutriment" = 30)
+
+/obj/item/clothing/accessory/storage/ritualharness/fluff/antoinette/Initialize()
+	. = ..()
+	hold.max_storage_space = ITEMSIZE_COST_SMALL * 2
+	hold.can_hold = list(/obj/item/weapon/material/knife, /obj/item/weapon/reagent_containers/glass/bottle)
+
+	new /obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette(hold)
+	new /obj/item/weapon/reagent_containers/glass/bottle/poppy(hold)
+
+//Hunterbirk - Amaryll
+//This is a 'technical item' which basically is meant to represent rippiing things up with bare claws.
+/obj/item/weapon/surgical/scalpel/amaryll_claws
+	name = "Amaryll's Claws"
+	desc = "This doesn't quite look like what it really is."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "claws"
+	drop_sound = null
+	pickup_sound = null
+	origin_tech = null
+	matter = null
+
+//Coolcrow420 - Jade Davis
+/obj/item/weapon/stamp/fluff/jade_horror
+	name = "Council of Mid Horror rubber stamp"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "stamp-midhorror"
+	stamptext = "This paper has been certified by The Council of Mid Horror"
+
+//thedavestdave Lucky
+///I know this is pretty bodgey but if it stupid and it works it isn't stupid
+/obj/item/clothing/suit/storage/hooded/explorer/lucky
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "luck"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "luck"
+	name = "Lucky's armor"
+	desc = "A chain mail suit with a badly drawn one eared cat on the front."
+
+
+/obj/item/device/modkit_conversion/crusader_luck
+    skip_content_check = TRUE
+    name = "Lucky's armor"
+    desc = "A chain mail suit with a badly drawn one eared cat on the front."
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "modkit"
+    from_suit = /obj/item/clothing/suit/storage/hooded/explorer
+    to_suit = /obj/item/clothing/suit/storage/hooded/explorer/lucky
+

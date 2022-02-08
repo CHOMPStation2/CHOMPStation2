@@ -95,6 +95,9 @@
 /turf/simulated/wall/wood/Initialize(mapload)
 	. = ..(mapload,  MAT_WOOD)
 
+/turf/simulated/wall/hardwood/Initialize(mapload)
+	. = ..(mapload,  MAT_HARDWOOD)
+
 /turf/simulated/wall/sifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD)
 

@@ -57,7 +57,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/cornoil = 5,
+					/obj/item/weapon/reagent_containers/food/condiment/cookingoil = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps = 5,
@@ -91,6 +91,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/milk = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cream = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cola = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/decaf_cola = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/dr_gibb = 5,
@@ -139,6 +140,7 @@
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/decaf = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/tea = 25,
+					/obj/item/weapon/reagent_containers/food/drinks/decaf_tea = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/h_chocolate = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/greentea = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/chaitea = 15)
@@ -146,6 +148,7 @@
 	prices = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 2,
 					/obj/item/weapon/reagent_containers/food/drinks/decaf = 3,
 					/obj/item/weapon/reagent_containers/food/drinks/tea = 2,
+					/obj/item/weapon/reagent_containers/food/drinks/decaf_tea = 2,
 					/obj/item/weapon/reagent_containers/food/drinks/h_chocolate = 2,
 					/obj/item/weapon/reagent_containers/food/drinks/greentea = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/chaitea = 5) // VOREStation Edit - Lowers Coffee/Hot Chocolate/Tea Prices from 3 -> 2.
@@ -233,10 +236,12 @@
 	product_slogans = "Robust Softdrinks: More robust than a toolbox to the head!"
 	product_ads = "Refreshing!;Hope you're thirsty!;Over 1 million drinks sold!;Thirsty? Why not cola?;Please, have a drink!;Drink up!;The best drinks in the galaxy."
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 10,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/starkist = 10,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/starkistdecaf = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/space_up = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea = 10,
@@ -247,10 +252,12 @@
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 6)
 	prices = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 1,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola = 2,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind = 1,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb = 1,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet = 1,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/starkist = 1,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/starkistdecaf = 1,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 2,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/space_up = 1,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea = 1,
@@ -446,6 +453,9 @@
 	has_logs = 1
 	can_rotate = 0
 
+/obj/machinery/vending/wallmed1/public
+	products = list(/obj/item/stack/medical/bruise_pack = 8,/obj/item/stack/medical/ointment = 8,/obj/item/weapon/reagent_containers/hypospray/autoinjector = 16,/obj/item/device/healthanalyzer = 4)
+
 /obj/machinery/vending/security
 	name = "SecTech"
 	desc = "A security equipment vendor."
@@ -577,7 +587,7 @@
 	icon_state = "dinnerware"
 	products = list(
 	/obj/item/weapon/reagent_containers/food/condiment/yeast = 5,
-	/obj/item/weapon/reagent_containers/food/condiment/cornoil = 5,
+	/obj/item/weapon/reagent_containers/food/condiment/cookingoil = 5,
 	/obj/item/weapon/tray = 8,
 	/obj/item/weapon/material/kitchen/utensil/fork = 6,
 	/obj/item/weapon/material/knife/plastic = 6,
@@ -693,7 +703,8 @@
 					/obj/item/weapon/weldingtool = 8,
 					/obj/item/clothing/head/welding = 8,
 					/obj/item/weapon/light/tube = 10,
-					/obj/item/clothing/suit/fire = 4,
+					/obj/item/clothing/head/hardhat/firefighter = 4,
+					/obj/item/clothing/suit/fire/firefighter = 4,
 					/obj/item/weapon/stock_parts/scanning_module = 5,
 					/obj/item/weapon/stock_parts/micro_laser = 5,
 					/obj/item/weapon/stock_parts/matter_bin = 5,
@@ -1153,6 +1164,7 @@
 		/obj/item/clothing/head/that = 5,
 		/obj/item/clothing/head/flatcap = 5,
 		/obj/item/clothing/shoes/brown = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/bar = 5,
 		/obj/item/clothing/accessory/permit/gun/bar = 1
 	)
 	req_log_access = access_hop
@@ -1190,6 +1202,7 @@
 	products = list(
 		/obj/item/clothing/under/rank/chef = 5,
 		/obj/item/clothing/shoes/black = 5,
+		/obj/item/clothing/shoes/cookflop = 2,
 		/obj/item/clothing/suit/storage/apron/white = 5,
 		/obj/item/clothing/suit/chef = 5,
 		/obj/item/clothing/suit/chef/classic = 5,
@@ -1223,9 +1236,12 @@
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5, //VoreStation edit, pre-fulp labcoat.
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical = 5,
-		/obj/item/clothing/shoes/boots/winter/medical = 5
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/alt = 5,
+		/obj/item/clothing/shoes/boots/winter/medical = 5,
+		/obj/item/clothing/head/beret/medical = 5
 	)
 	req_log_access = access_hop
 	has_logs = 1
@@ -1241,6 +1257,9 @@
 		/obj/item/clothing/under/rank/chemist/skirt = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/chemist = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old/chem = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/chemist = 5,
+		/obj/item/clothing/head/beret/medical/chem = 5,
 		/obj/item/weapon/storage/backpack/chemistry = 5,
 		/obj/item/weapon/storage/backpack/satchel/chem = 5,
 		/obj/item/weapon/storage/bag/chemistry = 5
@@ -1276,6 +1295,9 @@
 		/obj/item/clothing/under/rank/virologist/skirt = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/virologist = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old/vir = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/head/beret/medical/viro = 5,
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/weapon/storage/backpack/virology = 5,
 		/obj/item/weapon/storage/backpack/satchel/vir = 5
@@ -1294,11 +1316,13 @@
 		/obj/item/clothing/under/rank/scientist/skirt = 5,
 		/obj/item/clothing/under/rank/scientist/turtleneck = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5, //VoreStation edit, pre-fulp labcoat.
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/shoes/slippers = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/science = 5,
 		/obj/item/clothing/shoes/boots/winter/science = 5,
+		/obj/item/clothing/head/beret/science = 5,
 		/obj/item/weapon/storage/backpack/toxins = 5,
 		/obj/item/weapon/storage/backpack/satchel/tox = 5
 	)
@@ -1313,11 +1337,16 @@
 	req_access = list(access_robotics)
 	products = list(
 		/obj/item/clothing/under/rank/roboticist = 5,
-		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/roboticist = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/science/robotics = 5,
+		/obj/item/clothing/head/beret/science/robotics = 5,
 		/obj/item/clothing/shoes/black = 5,
 		/obj/item/clothing/gloves/black = 5,
 		/obj/item/weapon/storage/backpack/toxins = 5,
 		/obj/item/weapon/storage/backpack/satchel/tox = 5
+	)
+	contraband = list(
+		/obj/item/clothing/suit/storage/hooded/techpriest = 2
 	)
 	req_log_access = access_hop
 	has_logs = 1
@@ -1342,7 +1371,9 @@
 		/obj/item/weapon/storage/fancy/whitecandle_box = 5,
 		/obj/item/weapon/storage/fancy/blackcandle_box = 5,
 		/obj/item/godfig = 5,
-		/obj/item/weapon/deck/tarot = 5
+		/obj/item/weapon/deck/tarot = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/ratvar = 1,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/narsie = 1
 	)
 	req_log_access = access_hop
 	has_logs = 1
@@ -1452,6 +1483,7 @@
 		/obj/item/device/radio/headset/headset_service = 5,
 		/obj/item/clothing/under/rank/janitor = 5,
 		/obj/item/clothing/under/dress/maid/janitor = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/janitor = 5,
 		/obj/item/clothing/gloves/black = 5,
 		/obj/item/weapon/storage/belt/janitor = 5,
 		/obj/item/clothing/shoes/galoshes = 5,
@@ -1512,6 +1544,53 @@
 		/obj/item/clothing/suit/storage/det_trench/grey = 5,
 		/obj/item/clothing/suit/storage/forensics/blue = 5,
 		/obj/item/clothing/suit/storage/forensics/red = 5
+	)
+	req_log_access = access_hop
+	has_logs = 1
+
+/obj/machinery/vending/wardrobe/mimedrobe
+	name = "mime wardrobe vendor"
+	desc = "All the things you need to perform your job! Why didn't you already have them?"
+	product_slogans = "..."
+	icon_state = "mimedrobe"
+	req_access = list(access_mime)
+	products = list(
+		/obj/item/clothing/under/mime = 1,
+		/obj/item/clothing/under/sexymime = 1,
+		/obj/item/clothing/under/sexymime/dress = 1,
+		/obj/item/clothing/mask/gas/mime = 1,
+		/obj/item/clothing/mask/gas/sexymime = 1,
+		/obj/item/clothing/head/soft/mime = 1,
+		/obj/item/clothing/head/collectable/beret = 1,
+		/obj/item/clothing/suit/suspenders = 1,
+		/obj/item/clothing/shoes/mime = 1
+		)
+	req_log_access = access_hop
+	has_logs = 1
+
+/obj/machinery/vending/wardrobe/clowndrobe
+	name = "clown wardrobe vendor"
+	desc = "All the things you need to perform your job! Why didn't you already have them?"
+	product_slogans = "Honk!"
+	icon_state = "clowndrobe"
+	req_access = list(access_clown)
+	products = list(
+		/obj/item/clothing/under/rank/clown = 1,
+		/obj/item/clothing/under/sexyclown = 1,
+		/obj/item/clothing/under/clown/green = 1,
+		/obj/item/clothing/under/clown/purple = 1,
+		/obj/item/clothing/under/clown/yellow = 1,
+		/obj/item/clothing/under/clown/orange = 1,
+		/obj/item/clothing/under/clown/blue = 1,
+		/obj/item/clothing/mask/gas/clown_hat = 1,
+		/obj/item/clothing/mask/gas/sexyclown = 1,
+		/obj/item/clothing/mask/emotions = 1,
+		/obj/item/clothing/shoes/clown_shoes = 1,
+		/obj/item/weapon/reagent_containers/food/snacks/pie = 5,
+		/obj/item/weapon/bananapeel = 5
+		)
+	contraband = list(
+		/obj/item/clothing/under/clown/rainbow = 1
 	)
 	req_log_access = access_hop
 	has_logs = 1

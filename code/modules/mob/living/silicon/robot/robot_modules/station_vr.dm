@@ -13,7 +13,7 @@
 					LANGUAGE_ECUREUILIAN= 0,
 					LANGUAGE_DAEMON		= 0,
 					LANGUAGE_ENOCHIAN	= 0,
-					LANGUAGE_DRUDAKAR	= 0
+					LANGUAGE_DRUDAKAR	= 0 //CHOMPedit
 					)
 	var/vr_sprites = list()
 	var/pto_type = null
@@ -35,7 +35,9 @@
 					LANGUAGE_CANILUNZT	= 1,
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
-					LANGUAGE_ENOCHIAN	= 1
+					LANGUAGE_ENOCHIAN	= 1,
+					LANGUAGE_DRUDAKAR	= 1,
+					LANGUAGE_TAVAN		= 1
 					)
 
 /obj/item/weapon/robot_module/robot/chound
@@ -56,7 +58,8 @@
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
 					LANGUAGE_ENOCHIAN	= 1,
-					LANGUAGE_DRUDAKAR	= 1
+					LANGUAGE_DRUDAKAR	= 1,
+					LANGUAGE_TAVAN		= 1
 					)
 
 /hook/startup/proc/robot_modules_vr()
@@ -69,7 +72,9 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CH Addition Unity
+	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
+	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
+	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -93,7 +98,8 @@
 	vr_sprites = list(
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
-						"ZOOM-BA" = "zoomba-medical"
+						"ZOOM-BA" = "zoomba-medical",
+						"Feminine Humanoid" = "uptall-medical"
 					 )
 
 /obj/item/weapon/robot_module/robot/medical/crisis
@@ -102,7 +108,8 @@
 						"Handy" = "handy-med",
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
-						"ZOOM-BA" = "zoomba-crisis"
+						"ZOOM-BA" = "zoomba-crisis",
+						"Feminine Humanoid" = "uptall-crisis"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/butler
@@ -112,7 +119,8 @@
 						"Handy - Hydro" = "handy-hydro",
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
-						"ZOOM-BA" = "zoomba-service"
+						"ZOOM-BA" = "zoomba-service",
+						"Feminine Humanoid" = "uptall-service"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/general
@@ -121,7 +129,8 @@
 						"Handy" = "handy-clerk",
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
-						"ZOOM-BA" = "zoomba-clerical"
+						"ZOOM-BA" = "zoomba-clerical",
+						"Feminine Humanoid" = "uptall-service"
 					 )
 
 /obj/item/weapon/robot_module/robot/janitor
@@ -130,7 +139,8 @@
 						"Handy" = "handy-janitor",
 						"Acheron" = "mechoid-Janitor",
 						"Shellguard Noble" = "Noble-CLN",
-						"ZOOM-BA" = "zoomba-janitor"
+						"ZOOM-BA" = "zoomba-janitor",
+						"Feminine Humanoid" = "uptall-janitor"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/general
@@ -139,7 +149,8 @@
 						"Handy" = "handy-sec",
 						"Acheron" = "mechoid-Security",
 						"Shellguard Noble" = "Noble-SEC",
-						"ZOOM-BA" = "zoomba-security"
+						"ZOOM-BA" = "zoomba-security",
+						"Feminine Humanoid" = "uptall-security"
 					 )
 
 /obj/item/weapon/robot_module/robot/miner
@@ -148,7 +159,8 @@
 						"Handy" = "handy-miner",
 						"Acheron" = "mechoid-Miner",
 						"Shellguard Noble" = "Noble-DIG",
-						"ZOOM-BA" = "zoomba-miner"
+						"ZOOM-BA" = "zoomba-miner",
+						"Feminine Humanoid" = "uptall-miner"
 					 )
 
 /obj/item/weapon/robot_module/robot/standard
@@ -157,14 +169,17 @@
 						"Handy" = "handy-standard",
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
-						"ZOOM-BA" = "zoomba-standard"
+						"ZOOM-BA" = "zoomba-standard",
+						"Feminine Humanoid" = "uptall-standard",
+						"Feminine Humanoid, Variant 2" = "uptall-standard2"
 					 )
 /obj/item/weapon/robot_module/robot/engineering/general
 	pto_type = PTO_ENGINEERING
 	vr_sprites = list(
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
-						"ZOOM-BA" = "zoomba-engineering"
+						"ZOOM-BA" = "zoomba-engineering",
+						"Feminine Humanoid" = "uptall-engineering"
 					 )
 
 /obj/item/weapon/robot_module/robot/research
@@ -172,14 +187,16 @@
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research",
-						"XI-GUS" = "spiderscience"
+						"XI-GUS" = "spiderscience",
+						"Feminine Humanoid" = "uptall-science"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/combat
 	pto_type = PTO_SECURITY
 	vr_sprites = list(
 						"Acheron" = "mechoid-Combat",
-						"ZOOM-BA" = "zoomba-combat"
+						"ZOOM-BA" = "zoomba-combat",
+						"Feminine Humanoid" = "uptall-security"
 					 )
 
 /obj/item/weapon/robot_module/robot/knine
@@ -358,13 +375,13 @@
 	can_be_pushed = 0
 	sprites = list(
 					"Standard" = "ert",
+					"Classic" = "ertold",
 					"Borgi" = "borgi"
 					)
 
 /obj/item/weapon/robot_module/robot/ert/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src)
-	src.modules += new /obj/item/weapon/dogborg/jaws/big(src)
-	src.modules += new /obj/item/weapon/melee/baton/robot(src)
+	src.modules += new /obj/item/weapon/dogborg/jaws/ert(src)
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
@@ -382,11 +399,12 @@
 	T.water = water
 	src.modules += T
 
-	var/obj/item/device/dogborg/sleeper/K9/B = new /obj/item/device/dogborg/sleeper/K9(src)
+	var/obj/item/device/dogborg/sleeper/K9/B = new /obj/item/device/dogborg/sleeper/K9/ert(src)
 	B.water = water
 	src.modules += B
 
-	R.icon 		 = 'icons/mob/64x64robot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_ert_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_ert_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -517,6 +535,8 @@
 	src.modules += new /obj/item/weapon/card/robot(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
+	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)  //Chompedit this was missing for some strange reason.
+	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)  //Chompedit This also.
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -819,6 +839,7 @@
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
 	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
 

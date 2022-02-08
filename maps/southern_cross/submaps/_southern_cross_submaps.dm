@@ -47,6 +47,7 @@
 // Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
 
 //////////////////////////////////////////////////////////////////////////////////////
+
 // Gateway submaps go here
 /datum/map_template/sc_lateload/gateway
 	name = "Gateway Submap"
@@ -71,6 +72,19 @@
 	desc = "Asteroid base surrounded by carp"
 	mappath = 'gateway/carpfarm.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+
+//Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
+#include "../../expedition_vr/space/_fueldepot.dm"
+/datum/map_template/sc_lateload/away_fueldepot
+	name = "Fuel Depot - Z1 Space"
+	desc = "An unmanned fuel depot floating in space."
+	mappath = 'maps/expedition_vr/space/fueldepot.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/away_fueldepot
+
+/datum/map_z_level/sc_lateload/away_fueldepot
+	name = "Away Mission - Fuel Depot"
+	z = Z_LEVEL_FUELDEPOT
 
 
 //////////////////////////////////////////////////////////////////////////////////////

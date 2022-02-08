@@ -188,7 +188,121 @@
 	result = "hachi"
 	required_reagents = list("burbon" = 2, "sake" = 1, "lemonjuice" = 1, "mushroom" = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
 	result_amount = 5
-  
+
+/decl/chemical_reaction/instant/drinks/narsour
+	name = "Nar'sour"
+	id = "narsour"
+	result = "narsour"
+	required_reagents = list("blood" = 1, "lemonjuice" = 1, "demonsblood" = 1)
+	mix_message = "The mixture develops a sinister glow."
+	reaction_sound = 'sound/effects/singlebeat.ogg'
+
+/decl/chemical_reaction/instant/drinks/cogchamp
+	name = "CogChamp"
+	id = "cogchamp"
+	result = "cogchamp"
+	required_reagents = list("cognac" = 1, "fuel" = 1, "screwdrivercocktail" = 1)
+	mix_message = "You hear faint sounds of gears turning as the mixture gives off virulent plumes of steam."
+	reaction_sound = 'sound/machines/clockcult/steam_whoosh.ogg'
+	result_amount = 3
+
+//thirteen loko possible to make now, so easier to make arachnid slammer - Jack
+
+/decl/chemical_reaction/instant/drinks/thirteenloko
+	name = "Thirteen Loko"
+	id = "thirteenloko"
+	result = "thirteenloko"
+	required_reagents = list("beer" = 1, "tequilla" = 1, "coffee" = 1)
+	result_amount = 3
+
+//Arachnid slammer reactions - Jack
+
+/decl/chemical_reaction/instant/drinks/arachnidslammer
+	name = "Arachnid Slammer"
+	id = "arachnidslammer"
+	result = "arachnidslammer"
+	required_reagents = list("ale" = 1, "thirteenloko" = 1, "hyperzine" = 1)
+	mix_message = "The concortion of ale, energy drink and stimulants starts to heavily foam and fizzle, even sparkle a little."
+	result_amount = 3
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	result = "enragedarachnidslammer"
+	required_reagents = list("infusedarachnidslammer" = 1, "spidertoxin" = 1)
+	mix_message = "The dormant Arachnid Slammer bubbles and fizzles loudly as it gets enraged by the spider toxin and breaks it down!"
+	result_amount = 5
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer1
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "cyanide" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer2
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "chloralhydrate" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer3
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "stimm" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer4
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "cryotoxin" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer5
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "cryptobiolin" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer6
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "stoxin" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer7
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "condensedcapsaicin_v" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer8
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "phoron" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer9
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "thermite_v" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
+/decl/chemical_reaction/instant/drinks/enragedarachnidslammer10
+	name = "Enraged Arachnid Slammer"
+	id = "enragedarachnidslammer"
+	required_reagents = list("enragedarachnidslammer" = 1, "serotrotium_v" = 1)
+	result = "enragedarachnidslammer"
+	result_amount = 0.1
+
 //YW drinks
 /decl/chemical_reaction/instant/drinks/lovepotion_yw
 	name = "Strawberry Love Potion"

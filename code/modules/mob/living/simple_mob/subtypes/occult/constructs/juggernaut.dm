@@ -10,8 +10,8 @@
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "behemoth"
 	icon_living = "behemoth"
-	maxHealth = 300
-	health = 300
+	maxHealth = 200	//CHOMPEdit
+	health = 200	//CHOMPEdit
 	response_harm   = "harmlessly punches"
 	harm_intent_damage = 0
 	melee_damage_lower = 30
@@ -19,6 +19,7 @@
 	attack_armor_pen = 60 //Being punched by a living, floating statue.
 	attacktext = list("smashed their armoured gauntlet into")
 	friendly = list("pats")
+	organ_names = /decl/mob_organ_names/juggernaut
 	mob_size = MOB_HUGE
 
 
@@ -97,8 +98,8 @@
 	name = "Behemoth"
 	real_name = "Behemoth"
 	desc = "The pinnacle of occult technology, Behemoths are nothing shy of both an Immovable Object, and Unstoppable Force."
-	maxHealth = 750
-	health = 750
+	maxHealth = 600	//CHOMPEdit
+	health = 600	//CHOMPEdit
 	speak_emote = list("rumbles")
 	melee_damage_lower = 50
 	melee_damage_upper = 50
@@ -142,3 +143,6 @@
 		return -1 // complete projectile permutation
 
 	return (..(P))
+
+/decl/mob_organ_names/juggernaut
+	hit_zones = list("body", "left pauldron", "right pauldron", "left arm", "right arm", "eye", "head", "crystaline spike")

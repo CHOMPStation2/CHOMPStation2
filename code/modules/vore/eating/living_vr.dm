@@ -35,7 +35,8 @@
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
-	var/noisy_full = FALSE				//CHOMPEdit: Enables belching when a mob has overeaten
+	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
+	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
 	var/bellies_loaded = FALSE			//CHOMPedit: On-demand belly loading
 
 //
@@ -147,9 +148,7 @@
 		if(is_vore_predator(src))
 			for(var/mob/living/M in H.contents)
 				if(attacker.eat_held_mob(attacker, M, src))
-					if(H.held_mob == M)
-						H.held_mob = null
-			return TRUE //return TRUE to exit upper procs
+					return TRUE //return TRUE to exit upper procs
 		else
 			log_debug("[attacker] attempted to feed [H.contents] to [src] ([type]) but it failed.")
 
@@ -235,8 +234,10 @@
 
 	//CHOMP stuff
 	P.latejoin_vore = src.latejoin_vore
+	P.latejoin_prey = src.latejoin_prey
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
+	P.autotransferable = src.autotransferable
 
 
 	var/list/serialized = list()
@@ -270,22 +271,27 @@
 	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
+//	allow_inbelly_spawning = P.allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
 	allow_spontaneous_tf = P.allow_spontaneous_tf
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
 
 	//CHOMP stuff
 	latejoin_vore = P.latejoin_vore
+	latejoin_prey = P.latejoin_prey
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
+	autotransferable = P.autotransferable
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
-		vore_organs.Cut()
+		QDEL_LIST(vore_organs)
+		bellies_loaded = FALSE //CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 			if(!full_vorgans) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 				break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
+			bellies_loaded = TRUE //CHOMPedit
 
 	return TRUE
 
@@ -453,6 +459,14 @@
 		holo.drop_prey() //Easiest way
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
 
+	//You're in a capture crystal! ((It's not vore but close enough!))
+	else if(iscapturecrystal(loc))
+		var/obj/item/capture_crystal/crystal = loc
+		crystal.unleash()
+		crystal.bound_mob = null
+		crystal.bound_mob = capture_crystal = 0
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
+
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
@@ -543,7 +557,16 @@
 	user.visible_message(success_msg)
 
 	// Actually shove prey into the belly.
-	belly.nom_mob(prey, user)
+	if(istype(prey.loc, /obj/item/weapon/holder))
+		var/obj/item/weapon/holder/H = prey.loc
+		for(var/mob/living/M in H.contents)
+			belly.nom_mob(M, user)
+			if(M.loc == H) // In case nom_mob failed somehow.
+				M.forceMove(get_turf(src))
+		H.held_mob = null
+		qdel(H)
+	else
+		belly.nom_mob(prey, user)
 	if(!ishuman(user))
 		user.update_icons()
 
@@ -561,10 +584,21 @@
 /obj/belly/return_air()
 	return return_air_for_internal_lifeform()
 
-/obj/belly/return_air_for_internal_lifeform()
+/obj/belly/return_air_for_internal_lifeform(var/mob/living/lifeform)
 	//Free air until someone wants to code processing it for reals from predbreaths
-	var/datum/gas_mixture/belly_air/air = new(1000)
+	var/air_type = /datum/gas_mixture/belly_air
+	if(istype(lifeform))	// If this doesn't succeed, then 'lifeform' is actually a bag or capture crystal with someone inside
+		air_type = lifeform.get_perfect_belly_air_type()		// Without any overrides/changes, its gonna be /datum/gas_mixture/belly_air
+	var/air = new air_type(1000)
 	return air
+
+/mob/living/proc/get_perfect_belly_air_type()
+	return /datum/gas_mixture/belly_air
+
+/mob/living/carbon/human/get_perfect_belly_air_type()
+	if(species)
+		return species.get_perfect_belly_air_type()
+	return ..()
 
 // This is about 0.896m^3 of atmosphere
 /datum/gas_mixture/belly_air
@@ -577,6 +611,27 @@
     gas = list(
         "oxygen" = 21,
         "nitrogen" = 79)
+
+/datum/gas_mixture/belly_air/vox
+    volume = 2500
+    temperature = 293.150
+    total_moles = 104
+
+/datum/gas_mixture/belly_air/vox/New()
+    . = ..()
+    gas = list(
+        "nitrogen" = 100) // Chomp edit
+
+/datum/gas_mixture/belly_air/zaddat
+    volume = 2500
+    temperature = 293.150
+    total_moles = 300
+
+/datum/gas_mixture/belly_air/zaddat/New()
+    . = ..()
+    gas = list(
+        "oxygen" = 100)
+
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
 	var/belly = user.vore_selected
@@ -656,7 +711,11 @@
 			if(S.holding)
 				to_chat(src, "<span class='warning'>There's something inside!</span>")
 				return
-
+		if(iscapturecrystal(I))
+			var/obj/item/capture_crystal/C = I
+			if(!C.bound_mob.devourable)
+				to_chat(src, "<span class='warning'>That doesn't seem like a good idea. (\The [C.bound_mob]'s prefs don't allow it.)</span>")
+				return
 		drop_item()
 		I.forceMove(vore_selected)
 		updateVRPanel()
@@ -710,15 +769,23 @@
 		else if (istype(I,/obj/item/clothing/accessory/collar))
 			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
-		//kcin2000 1/29/21 - lets you eat the news digitally and adds a text for the paper news
+		else if(iscapturecrystal(I))
+			var/obj/item/capture_crystal/C = I
+			if(C.bound_mob && (C.bound_mob in C.contents))
+				if(isbelly(C.loc))
+					var/obj/belly/B = C.loc
+					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
+					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
+		// CHOMPedit begin
 		else if(istype(I,/obj/item/device/starcaster_news))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
 		else if(istype(I,/obj/item/weapon/newspaper))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of garbage, oh wait its just the news.</span>")
-		//kcin2001 1/29/21 - Adding some special synth trash eat
 		else if (istype(I,/obj/item/weapon/cell))
 			visible_message("<span class='warning'>[src] sates their electric appeite with a [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
+		//CHOMPedit end
+
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return
@@ -881,6 +948,7 @@
 	dispvoreprefs += "<b>Digestable:</b> [digestable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Devourable:</b> [devourable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Feedable:</b> [feeding ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Autotransferable:</b> [autotransferable ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Absorption Permission:</b> [absorbable ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "Enabled" : "Disabled"]<br>"
@@ -888,11 +956,13 @@
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
+	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
+	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")
 	return
@@ -912,6 +982,7 @@
 			var/obj/belly/B = belly
 			to_chat(src, "<span class='notice'><b>Belly name:</b> [B.name]</span>")
 			to_chat(src, "<span class='notice'><b>Belly desc:</b> [B.desc]</span>")
+			to_chat(src, "<span class='notice'><b>Belly absorbed desc:</b> [B.absorbed_desc]</span>")
 			to_chat(src, "<span class='notice'><b>Vore verb:</b> [B.vore_verb]</span>")
 			to_chat(src, "<span class='notice'><b>Struggle messages (outside):</b></span>")
 			for(var/msg in B.struggle_messages_outside)
@@ -919,11 +990,29 @@
 			to_chat(src, "<span class='notice'><b>Struggle messages (inside):</b></span>")
 			for(var/msg in B.struggle_messages_inside)
 				to_chat(src, "<span class='notice'>[msg]</span>")
+			to_chat(src, "<span class='notice'><b>Absorbed struggle messages (outside):</b></span>")
+			for(var/msg in B.absorbed_struggle_messages_outside)
+				to_chat(src, "<span class='notice'>[msg]</span>")
+			to_chat(src, "<span class='notice'><b>Absorbed struggle messages (inside):</b></span>")
+			for(var/msg in B.absorbed_struggle_messages_inside)
+				to_chat(src, "<span class='notice'>[msg]</span>")
 			to_chat(src, "<span class='notice'><b>Digest messages (owner):</b></span>")
 			for(var/msg in B.digest_messages_owner)
 				to_chat(src, "<span class='notice'>[msg]</span>")
 			to_chat(src, "<span class='notice'><b>Digest messages (prey):</b></span>")
 			for(var/msg in B.digest_messages_prey)
+				to_chat(src, "<span class='notice'>[msg]</span>")
+			to_chat(src, "<span class='notice'><b>Absorb messages:</b></span>")
+			for(var/msg in B.absorb_messages_owner)
+				to_chat(src, "<span class='notice'>[msg]</span>")
+			to_chat(src, "<span class='notice'><b>Absorb messages (prey):</b></span>")
+			for(var/msg in B.absorb_messages_prey)
+				to_chat(src, "<span class='notice'>[msg]</span>")
+			to_chat(src, "<span class='notice'><b>Unabsorb messages:</b></span>")
+			for(var/msg in B.unabsorb_messages_owner)
+				to_chat(src, "<span class='notice'>[msg]</span>")
+			to_chat(src, "<span class='notice'><b>Unabsorb messages (prey):</b></span>")
+			for(var/msg in B.unabsorb_messages_prey)
 				to_chat(src, "<span class='notice'>[msg]</span>")
 			to_chat(src, "<span class='notice'><b>Examine messages:</b></span>")
 			for(var/msg in B.examine_messages)
@@ -982,7 +1071,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-		INVOKE_ASYNC(owner.vorePanel, .proc/tgui_interact, user)
+		INVOKE_ASYNC(owner, /mob/living/proc/insidePanel, owner) //CHOMPEdit
 
 /**
  * Screen object for vore panel

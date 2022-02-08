@@ -45,6 +45,9 @@
 	attacktext = list("ravaged")
 	friendly = list("nuzzles", "licks", "noses softly at", "noseboops", "headbumps against", "leans on", "nibbles affectionately on")
 
+	meat_amount = 6
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+
 	old_x = -16
 	old_y = 0
 	default_pixel_x = -16
@@ -59,7 +62,7 @@
 
 	vore_active = TRUE
 	vore_capacity = 1
-	vore_pounce_chance = 45
+	vore_pounce_chance = 65 // CHOMPEdit: Higher pounce chance to omf.
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 	var/life_since_foodscan = 0
@@ -74,6 +77,11 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "In a cruel game of cat-and-mouse gone horribly wrong, you struggle to breathe clearly as the giant rat holds your head in its jaws, the rest of its bulk pinning you to the ground. Slimy slurps and its own muffled squeaking fill your senses as it simultaneously tosses its head while backing up. Quickly, ravenously consuming you, bit by bit, packing you down its gullet no matter how you struggle. Passing by its excited heartbeat, your thoroughly slickened head pushes out into its awaiting stomach, a dark and humid hammock eager to accept the rest of you. Soon, those too-warm, plush walls clench and squeeze around you with undeniable need! A need for mere filling, or, perhaps, a proper meal?"
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 
 	B.emote_lists[DM_HOLD] = list(
 		"As time passes, the massive rat’s stomach slowly churns and squeezes down around you, packing you into an easier to carry bundle amidst that oddly soothing massage.",

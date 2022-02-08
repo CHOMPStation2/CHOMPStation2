@@ -68,9 +68,9 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		C.remove_admin_verbs()
 		C.holder = null
 	GLOB.admins.Cut()
-
+	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
+	
 	if(config.admin_legacy_system)
-		load_admin_ranks()
 		//Clear profile access
 		for(var/A in world.GetConfig("admin"))
 			world.SetConfig("APP/admin", A, null)

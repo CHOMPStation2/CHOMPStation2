@@ -1,6 +1,7 @@
-#define RECOMMENDED_VERSION 501
+#define RECOMMENDED_VERSION 513
 /world/New()
 	world_startup_time = world.timeofday
+	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")
 	//logs
 	//VOREStation Edit Start
@@ -604,7 +605,6 @@ var/failed_old_db_connections = 0
 	return 1
 
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
-
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
@@ -677,8 +677,36 @@ var/failed_old_db_connections = 0
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-proc/establish_old_db_connection()
+/proc/establish_old_db_connection()
 	return SSdbcore.Connect()
+
+/* CHOMPedit
+// Cleans up DB connections and recreates them
+/proc/reset_database_connections()
+	var/list/results = list("-- Resetting DB connections --")
+	failed_db_connections = 0
+
+	if(dbcon?.IsConnected())
+		dbcon.Disconnect()
+		results += "dbcon was connected and asked to disconnect"
+	else
+		results += "dbcon was not connected"
+
+	if(dbcon_old?.IsConnected())
+		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
+	
+	if(!config.sql_enabled)
+		results += "stopping because config.sql_enabled = false"
+	else
+		. = setup_database_connection()
+		if(.)
+			results += "SUCCESS: set up a connection successfully with setup_database_connection()"
+		else
+			results += "FAIL: failed to connect to the database with setup_database_connection()"
+		
+	results += "-- DB Reset End --"
+	to_world_log(results.Join("\n"))
+*/
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()

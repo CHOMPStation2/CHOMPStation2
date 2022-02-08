@@ -67,6 +67,13 @@
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
 
+	//CHOMPEdit begin - restricting areas where you can phase shift
+	var/area/A = T.loc
+	if(A?.limit_shadekin_phasing)
+		to_chat(src, "<span class='warning'>You can't use that here!</span>")
+		return FALSE
+	//CHOMPEdit end
+
 	if(!(ability_flags & AB_PHASE_SHIFTED))
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
@@ -100,6 +107,11 @@
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		force_max_speed = initial(force_max_speed)
+		//CHOMPEdit begin - resetting pull ability after phasing back in
+		can_pull_size = initial(can_pull_size)
+		can_pull_mobs = initial(can_pull_mobs)
+		hovering = initial(hovering)
+		//CHOMPEdit end
 		update_icon()
 
 		//Cosmetics mostly
@@ -110,6 +122,7 @@
 		sleep(5) //The duration of the TP animation
 		canmove = original_canmove
 		alpha = initial(alpha)
+		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
 
 		//Potential phase-in vore
 		if(can_be_drop_pred) //Toggleable in vore panel
@@ -139,12 +152,26 @@
 		custom_emote(1,"phases out!")
 		name = "Something"
 
+		//CHOMPEdit begin - Unequipping slots when phasing in, and preventing pulling stuff while phased.
+		if(l_hand)
+			unEquip(l_hand)
+		if(r_hand)
+			unEquip(r_hand)
+		if(back)
+			unEquip(back)
+
+		can_pull_size = 0
+		can_pull_mobs = MOB_PULL_NONE
+		hovering = TRUE
+		//CHOMPEdit end
+
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = FALSE
 
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new /obj/effect/temp_visual/shadekin/phase_out(src.loc)
 		phaseanim.dir = dir
 		alpha = 0
+		add_modifier(/datum/modifier/shadekin_phase_vision)
 		sleep(5)
 		invisibility = INVISIBILITY_LEVEL_TWO
 		see_invisible = INVISIBILITY_LEVEL_TWO
@@ -156,6 +183,10 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
+
+/datum/modifier/shadekin_phase_vision
+	name = "Shadekin Phase Vision"
+	vision_flags = SEE_THRU
 
 //////////////////////////
 ///  REGENERATE OTHER  ///

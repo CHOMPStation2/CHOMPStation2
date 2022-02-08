@@ -6,6 +6,7 @@
 	layer = 2.9
 	density = TRUE
 	anchored = TRUE
+	unacidable = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 	active_power_usage = 2000
@@ -323,7 +324,6 @@
 					dat += {"<B>[capitalize(O)]:</B> [N] [items_measures[O]]<BR>"}
 				else
 					dat += {"<B>[capitalize(O)]:</B> [N] [items_measures_p[O]]<BR>"}
-
 		for (var/datum/reagent/R in reagents.reagent_list)
 			var/display_name = R.name
 			if (R.id == "capsaicin")
@@ -331,7 +331,6 @@
 			if (R.id == "frostoil")
 				display_name = "Coldsauce"
 			dat += {"<B>[display_name]:</B> [R.volume] unit\s<BR>"}
-
 		if (items_counts.len==0 && reagents.reagent_list.len==0)
 			dat = {"<B>The microwave is empty</B><BR>"}
 		else
@@ -340,7 +339,6 @@
 <A href='?src=\ref[src];action=cook'>Turn on!<BR>\
 <A href='?src=\ref[src];action=dispose'>Eject ingredients!<BR>\
 "}
-
 	user << browse("<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[dat]</TT>", "window=microwave")
 	onclose(user, "microwave")
 	return
@@ -509,7 +507,7 @@
 	src.visible_message("<span class='warning'>The microwave gets covered in muck!</span>")
 	src.dirty = 100 // Make it dirty so it can't be used util cleaned
 	src.flags = null //So you can't add condiments
-	src.icon_state = "mwbloody" // Make it look dirty too
+	src.icon_state = "mwbloody0" // Make it look dirty too
 	src.operating = 0 // Turn it off again aferwards
 	SStgui.update_uis(src)
 	soundloop.stop()

@@ -125,6 +125,7 @@
 	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
 	battery_lock = 1 //CHOMPedit adds battery lock.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
 /obj/item/weapon/gun/energy/captain
@@ -138,6 +139,7 @@
 	force = 5
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
+	unacidable = TRUE
 	projectile_type = /obj/item/projectile/beam
 	origin_tech = null
 	fire_delay = 10		//Old pistol

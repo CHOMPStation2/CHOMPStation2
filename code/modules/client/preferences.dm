@@ -151,6 +151,7 @@ var/list/preferences_datums = list()
 	var/datum/browser/panel
 
 	var/lastnews // Hash of last seen lobby news content.
+	var/lastlorenews //ID of last seen lore news article.
 
 	var/examine_text_mode = 0 // Just examine text, include usage (description_info), switch to examine panel.
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
@@ -163,7 +164,8 @@ var/list/preferences_datums = list()
 //CHOMPEdit Begin
 /datum/preferences/proc/numlanguage()
 	var/datum/species/S = GLOB.all_species[species]
-	return num_languages ? num_languages : S.num_alternate_languages
+	var/num = max(num_languages, S.num_alternate_languages)
+	return (num == 0) ? 3 : num //Don't return 0
 //CHOMPEdit End
 
 /datum/preferences/New(client/C)

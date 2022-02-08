@@ -685,7 +685,8 @@
 
 					if(isnull(gene_chem[i])) gene_chem[i] = 0
 
-					if(chems[rid].len < i) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
+					var/list/chems_rid = chems[rid]
+					if(istype(chems_rid) && (chems_rid.len < i)) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
 						continue
 
 					if(chems[rid][i])
@@ -740,9 +741,9 @@
 		if(GENE_BIOCHEMISTRY)
 			P.values["[TRAIT_CHEMS]"] =        chems
 			P.values["[TRAIT_EXUDE_GASSES]"] = exude_gasses
-			traits_to_copy = list(TRAIT_POTENCY, TRAIT_SPORING, TRAIT_BENEFICIAL_REAG, TRAIT_MUTAGENIC_REAG, TRAIT_TOXIC_REAG)
+			traits_to_copy = list(TRAIT_POTENCY, TRAIT_BENEFICIAL_REAG, TRAIT_MUTAGENIC_REAG, TRAIT_TOXIC_REAG)
 		if(GENE_OUTPUT)
-			traits_to_copy = list(TRAIT_PRODUCES_POWER,TRAIT_BIOLUM)
+			traits_to_copy = list(TRAIT_PRODUCES_POWER,TRAIT_BIOLUM,TRAIT_SPORING)
 		if(GENE_ATMOSPHERE)
 			traits_to_copy = list(TRAIT_HEAT_TOLERANCE,TRAIT_LOWKPA_TOLERANCE,TRAIT_HIGHKPA_TOLERANCE)
 		if(GENE_HARDINESS)

@@ -27,6 +27,12 @@
 			simulated = TRUE
 		//	delete_me = 1
 			return
+		//VOREStation Add end
+		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list. 
+			latejoin += src
+			simulated = TRUE
+			return
+		//VOREStation Add end
 		if("JoinLateGateway")
 			latejoin_gateway += loc
 			delete_me = 1
@@ -83,6 +89,12 @@
 			endgame_exits += loc
 			delete_me = 1
 			return
+		//VOREStation Add Start
+		if("vinestart")
+			vinestart += loc
+			delete_me = 1
+			return
+		//VORE Station Add End
 
 	landmarks_list += src
 	return 1
@@ -167,14 +179,14 @@
 	qdel(src)
 
 /obj/effect/landmark/costume/madscientist/New()
-	new /obj/item/clothing/under/gimmick/rank/captain/suit(src.loc)
+	new /obj/item/clothing/under/suit_jacket/green(src.loc)
 	new /obj/item/clothing/head/flatcap(src.loc)
 	new /obj/item/clothing/suit/storage/toggle/labcoat/mad(src.loc)
 	new /obj/item/clothing/glasses/gglasses(src.loc)
 	delete_me = 1
 
 /obj/effect/landmark/costume/elpresidente/New()
-	new /obj/item/clothing/under/gimmick/rank/captain/suit(src.loc)
+	new /obj/item/clothing/under/suit_jacket/green(src.loc)
 	new /obj/item/clothing/head/flatcap(src.loc)
 	new /obj/item/clothing/mask/smokable/cigarette/cigar/havana(src.loc)
 	new /obj/item/clothing/shoes/boots/jackboots(src.loc)

@@ -7,7 +7,11 @@
 	turfs = latejoin_gatewaystation
 
 /datum/spawnpoint/vore
-	display_name = "Vore Belly"
+	display_name = "Vorespawn - Prey"
+	msg = "has arrived on the station"
+
+/datum/spawnpoint/vore/pred
+	display_name = "Vorespawn - Pred"
 	msg = "has arrived on the station"
 
 /datum/spawnpoint/vore/New()

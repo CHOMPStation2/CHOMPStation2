@@ -6,6 +6,8 @@
 
 /obj/item/ammo_magazine/m762svd	//You are now being converted to 7.62x54mmR :3
 	name = "\improper SVD magazine (7.62x54mmR)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "svd"
 	caliber = "7.62x54mmR"
 	ammo_type = /obj/item/ammo_casing/a762x54
 
@@ -62,10 +64,21 @@
 	name = "mp5 magazine(9x19mm rubber)"
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 
+/obj/item/ammo_magazine/pitchmag
+	name = "pitchgun magazine(.44 magnum standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "pitchmag"
+	max_ammo = 30
+	mag_type = MAGAZINE
+	caliber = ".44"
+	matter = list(DEFAULT_WALL_MATERIAL = 800)
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/a44
+
 /obj/item/ammo_magazine/asval
 	name = "AS-Val magazine(9x39mm standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
-	icon_state = "sts35"
+	icon_state = "asval"
 	max_ammo = 20
 	mag_type = MAGAZINE
 	caliber = "9x39mm"
@@ -98,6 +111,30 @@
 	name = "AKM magazine (7.62x39mm hollow-point)"
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
 	ammo_type = /obj/item/ammo_casing/a762x39/hp
+
+/obj/item/ammo_magazine/ak74
+	name = "AK74 magazine (5.45mm standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "545bake"
+	max_ammo = 30
+	mag_type = MAGAZINE
+	caliber = "5.45mm"
+	matter = list(DEFAULT_WALL_MATERIAL = 1400)
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/a545
+
+/obj/item/ammo_magazine/ak74/ap
+	name = "AK74 magazine (5.45mm armor-piercing)"
+	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	ammo_type = /obj/item/ammo_casing/a545/ap
+
+/obj/item/ammo_magazine/ak74/hp
+	name = "AK74 magazine (5.45mm hollow-point)"
+	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	ammo_type = /obj/item/ammo_casing/a545/hp
+
+/obj/item/ammo_magazine/ak74/plum
+	icon_state = "545plum"
 
 /obj/item/ammo_magazine/m16
 	name = "M16 magazine (5.56x45mm standard)"
@@ -132,7 +169,7 @@
 	icon_state = "m41mag"
 	max_ammo = 40
 	mag_type = MAGAZINE
-	caliber = "5.56x45mm"
+	caliber = "10x24mm"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a10x24
@@ -179,6 +216,38 @@
 /obj/item/ammo_magazine/type901/ap
 	name = "Type-901 magazine(7.62x51mm armor-piercing)"
 	matter = list(DEFAULT_WALL_MATERIAL = 3000)
+	ammo_type = /obj/item/ammo_casing/a762/ap
+
+/obj/item/ammo_magazine/ar10
+	name = "AR-10 magazine(7.62x51mm standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	caliber = "7.62mm"
+	icon_state = "m41mag" //This just looks the closest IMO
+	max_ammo = 20
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	ammo_type = /obj/item/ammo_casing/a762
+
+/obj/item/ammo_magazine/ar10/ap
+	name = "AR-10 magazine(7.62x51mm armor-piercing)"
+	matter = list(DEFAULT_WALL_MATERIAL = 2400)
+	ammo_type = /obj/item/ammo_casing/a762/ap
+
+/obj/item/ammo_magazine/fal
+	name = "FAL magazine(7.62x51mm standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	caliber = "7.62mm"
+	icon_state = "m41mag" //This just looks the closest IMO
+	max_ammo = 20
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	ammo_type = /obj/item/ammo_casing/a762
+
+/obj/item/ammo_magazine/fal/ap
+	name = "FAL magazine(7.62x51mm armor-piercing)"
+	matter = list(DEFAULT_WALL_MATERIAL = 2400)
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/awp
@@ -270,6 +339,65 @@
 	name = "Molniya magazine box(7.62x51mm armor-piercing)"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 	ammo_type = /obj/item/ammo_casing/a762/ap
+
+/obj/item/ammo_magazine/kord
+	name = "Kord magazine box(12.7x108mm standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	caliber = "12.7x108mm"
+	icon_state = "kordmag"
+	max_ammo = 100
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 20000)
+	ammo_type = /obj/item/ammo_casing/a127x108
+
+/obj/item/ammo_magazine/pkm
+	name = "PKM magazine box(7.62x54mmR standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	caliber = "7.62x54mmR"
+	icon_state = "molniyamag"
+	max_ammo = 100
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 8000)
+	ammo_type = /obj/item/ammo_casing/a762x54
+
+/obj/item/ammo_magazine/pkm/ap
+	name = "PKM magazine box(7.62x54mmR armor-piercing)"
+	matter = list(DEFAULT_WALL_MATERIAL = 10000)
+	ammo_type = /obj/item/ammo_casing/a762x54/ap
+
+/obj/item/ammo_magazine/rpd
+	name = "RPD Drum magazine(7.62x39mm standard)" //Lil side note. These mags don't work with the AK, because the rounds inside are actually on a belt, but they might still fit inside an AK and just break it? Couldn't find any more details on what happens if you try.
+	icon = 'icons/obj/ammo_ch.dmi'
+	caliber = "7.62x39mm"
+	icon_state = "rpdmag"
+	max_ammo = 100
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 8000)
+	ammo_type = /obj/item/ammo_casing/a762x39
+
+/obj/item/ammo_magazine/rpd/ap
+	name = "PKM magazine box(7.62x39mm armor-piercing)"
+	matter = list(DEFAULT_WALL_MATERIAL = 10000)
+	ammo_type = /obj/item/ammo_casing/a762x39/ap
+
+/obj/item/ammo_magazine/akm/drum
+	name = "RPK Drum magazine(7.62x39mm standard)" //These ARE interchangeable with AK magazines in the same caliber
+	icon = 'icons/obj/ammo_ch.dmi'
+	caliber = "7.62x39mm"
+	icon_state = "rpdmag"
+	max_ammo = 75
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 6000)
+	ammo_type = /obj/item/ammo_casing/a762x39
+
+/obj/item/ammo_magazine/akm/drum/ap
+	name = "PKM magazine box(7.62x39mm armor-piercing)"
+	matter = list(DEFAULT_WALL_MATERIAL = 7500)
+	ammo_type = /obj/item/ammo_casing/a762x39/ap
 
 /obj/item/ammo_magazine/ssp4
 	name = "SSP4 magazine(10mm standard)"

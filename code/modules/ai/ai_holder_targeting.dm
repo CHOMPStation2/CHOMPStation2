@@ -4,7 +4,8 @@
 	var/hostile = FALSE						// Do we try to hurt others?
 	var/retaliate = FALSE					// Attacks whatever struck it first. Mobs will still attack back if this is false but hostile is true.
 	var/mauling = FALSE						// Attacks unconscious mobs
-	var/handle_corpse = FALSE					// Allows AI to acknowledge corpses (e.g. nurse spiders)
+	var/unconscious_vore = FALSE			//VOREStation Add - allows a mob to go for unconcious targets IF their vore prefs align
+	var/handle_corpse = FALSE				// Allows AI to acknowledge corpses (e.g. nurse spiders)
 
 	var/atom/movable/target = null			// The thing (mob or object) we're trying to kill.
 	var/atom/movable/preferred_target = null// If set, and if given the chance, we will always prefer to target this over other options.
@@ -128,6 +129,14 @@
 			if(L.stat == UNCONSCIOUS)	// Do we have mauling? Yes? Then maul people who are sleeping but not SSD
 				if(mauling)
 					return TRUE
+				//VOREStation Add Start
+				else if(unconscious_vore && L.allowmobvore)
+					var/mob/living/simple_mob/vore/eater = holder
+					if(eater.will_eat(L))
+						return TRUE
+					else
+						return FALSE
+				//VOREStation Add End
 				else
 					return FALSE
 		if(holder.IIsAlly(L))
@@ -253,6 +262,10 @@
 			ai_log("react_to_attack() : Was attacked by [attacker]. Can retaliate, waited 3 seconds.", AI_LOG_INFO)
 			on_attacked(attacker) // So we attack immediately and not threaten.
 			return give_target(attacker) // Also handles setting the appropiate stance.
+
+	if(holder.resting)	// I can't kill someone while I'm laying down!
+		ai_log("react_to_attack() : AI is resting. Getting up.", AI_LOG_TRACE)
+		holder.lay_down()
 
 	if(stance == STANCE_SLEEP) // If we're asleep, try waking up if someone's wailing on us.
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)

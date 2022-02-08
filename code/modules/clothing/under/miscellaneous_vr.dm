@@ -102,7 +102,7 @@
 		if(new_size != H.size_multiplier)
 			if(!original_size)
 				original_size = H.size_multiplier
-			H.resize(new_size/100, ignore_prefs = TRUE) // Ignores prefs because you can only resize yourself
+			H.resize(new_size/100, uncapped = H.has_large_resize_bounds(), ignore_prefs = TRUE) // Ignores prefs because you can only resize yourself
 			H.visible_message("<span class='warning'>The space around [H] distorts as they change size!</span>","<span class='notice'>The space around you distorts as you change size!</span>")
 		else //They chose their current size.
 			return
@@ -119,20 +119,21 @@
 /obj/item/clothing/under/ert
 	armor = list(melee = 5, bullet = 10, laser = 10, energy = 5, bomb = 5, bio = 0, rad = 0)
 
-/obj/item/clothing/under/dress/qipao
-	name = "qipao"
+/obj/item/clothing/under/qipao
+	name = "black qipao"
 	desc = "A type of feminine body-hugging dress with distinctive Chinese features of Manchu origin."
 	icon = 'icons/inventory/uniform/item_vr.dmi'
 	icon_override = 'icons/inventory/uniform/mob_vr.dmi'
 	icon_state = "qipao"
 	item_state = "qipao"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
-/obj/item/clothing/under/dress/qipao/white
+/obj/item/clothing/under/qipao/white
 	name = "white qipao"
 	icon_state = "qipao_white"
 	item_state = "qipao_white"
 
-/obj/item/clothing/under/dress/qipao/red
+/obj/item/clothing/under/qipao/red
 	name = "red qipao"
 	icon_state = "qipao_red"
 	item_state = "qipao_red"
@@ -141,7 +142,9 @@
 	name = "pizza delivery uniform"
 	desc = "A dedicated outfit for pizza delivery people, one of most dangerous occupations around these parts. Can be rolled up for extra show of skin."
 	icon = 'icons/inventory/uniform/item_vr.dmi'
+	icon_override = 'icons/inventory/uniform/mob_vr.dmi'
 	rolled_down_icon = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
+	rolled_down_icon_override = FALSE
 	icon_state = "pizzadelivery"
 	item_state = "pizzadelivery"
 	rolled_down = 0
@@ -157,6 +160,8 @@
 	icon_state = "talon_basic"
 	item_state = "talon_basic"
 	rolled_sleeves = 0
+	rolled_down_icon_override = FALSE
+	rolled_sleeves_icon_override = FALSE
 
 /obj/item/clothing/under/rank/talon/proper
 	name = "Talon proper jumpsuit"
@@ -167,6 +172,8 @@
 	icon_state = "talon_jumpsuit"
 	item_state = "talon_jumpsuit"
 	rolled_sleeves = 0
+	rolled_down_icon_override = FALSE
+	rolled_sleeves_icon_override = FALSE
 
 /obj/item/clothing/under/rank/talon/security
 	name = "Talon security jumpsuit"
@@ -177,6 +184,8 @@
 	icon_state = "talon_security"
 	item_state = "talon_security"
 	rolled_sleeves = 0
+	rolled_down_icon_override = FALSE
+	rolled_sleeves_icon_override = FALSE
 
 /obj/item/clothing/under/rank/talon/pilot
 	name = "Talon pilot jumpsuit"
@@ -187,6 +196,8 @@
 	icon_state = "talon_pilot"
 	item_state = "talon_pilot"
 	rolled_sleeves = 0
+	rolled_down_icon_override = FALSE
+	rolled_sleeves_icon_override = FALSE
 
 /obj/item/clothing/under/rank/talon/command
 	name = "Talon command jumpsuit"
@@ -197,6 +208,8 @@
 	icon_state = "talon_captain"
 	item_state = "talon_captain"
 	rolled_sleeves = 0
+	rolled_down_icon_override = FALSE
+	rolled_sleeves_icon_override = FALSE
 
 // Excelsior uniforms
 /obj/item/clothing/under/excelsior
@@ -225,3 +238,14 @@
 	icon_state = "summerdress3"
 /obj/item/clothing/under/summerdress/blue
 	icon_state = "summerdress2"
+
+/obj/item/clothing/under/dress/dress_cap/femformal // formal in the loosest sense. because it's going to be taken off. or something. funnier in my head i swear 
+	name = "site manager's feminine formalwear"
+	desc = "Essentially a skimpy...dress? Leotard? Whatever it is, it has the coloration and markings suitable for a site manager or rough equivalent."
+	icon = 'icons/inventory/uniform/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/uniform/mob_vr.dmi'
+	icon_state = "lewdcap"
+	item_state = "lewdcap"
+	rolled_sleeves = -1
+	rolled_down = -1
+	body_parts_covered = UPPER_TORSO // frankly this thing's a fucking embarassment

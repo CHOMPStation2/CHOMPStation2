@@ -394,9 +394,9 @@
 
 	var/amnt = S.perunit
 	if(stored_material[S.material.name] + amnt <= max_res_amount)
-		if(S && S.amount >= 1)
+		if(S && S.get_amount() >= 1)
 			var/count = 0
-			while(stored_material[S.material.name] + amnt <= max_res_amount && S.amount >= 1)
+			while(stored_material[S.material.name] + amnt <= max_res_amount && S.get_amount() >= 1)
 				stored_material[S.material.name] += amnt
 				S.use(1)
 				count++
@@ -592,8 +592,9 @@
 	//Re-supply a NIF if one was backed up with them.
 	if(MR.nif_path)
 		var/obj/item/device/nif/nif = new MR.nif_path(occupant,null,MR.nif_savedata)
-		for(var/path in MR.nif_software)
-			new path(nif)
+		spawn(0)			//Delay to not install software before NIF is fully installed
+			for(var/path in MR.nif_software)
+				new path(nif)
 		nif.durability = MR.nif_durability //Restore backed up durability after restoring the softs.
 
 	// If it was a custom sleeve (not owned by anyone), update namification sequences

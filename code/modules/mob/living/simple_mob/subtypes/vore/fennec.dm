@@ -39,6 +39,9 @@
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
 
+	meat_amount = 2
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/fox
+
 	harm_intent_damage = 5
 	melee_damage_lower = 1
 	melee_damage_upper = 3
@@ -55,6 +58,20 @@
 	vore_pounce_chance = 40
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
+	
+/mob/living/simple_mob/vore/fennec/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
+	if(!voremob_loaded)
+		return
+	. = ..()
+	
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "Warm, slick, and wet. You're somewhere hot, tight, and very cramped, unless you happen to somehow be smaller than the fennec you're in! It's hard to see, as rippling pink walls clench and smother over your form. If you don't want to be here, a newspaper from a friend ought to get you out. ...right?"
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 
 /datum/say_list/fennec
 	speak = list("SKREEEE!","Chrp?","Ararrrararr.")
@@ -71,7 +88,7 @@
 /mob/living/simple_mob/vore/fennec/huge
 	icon = 'icons/mob/vore100x100.dmi'
 	icon_rest = null
-	
+
 	// LORG
 	maxHealth = 500
 	health = 500
@@ -87,7 +104,7 @@
 	old_x = -32
 	pixel_x = -32
 	default_pixel_x = -32
-	
+
 	// If you're immune to digestion, they can't digest you anyway!
 	vore_ignores_undigestable = TRUE
 	vore_default_mode = DM_DIGEST
@@ -105,7 +122,7 @@
 
 	response_help = "pats the paw of"
 	response_disarm = "somehow shoves aside"
-	
+
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
 	var/image/bigshadow
 	var/autodoom = TRUE
@@ -157,4 +174,3 @@
 		else
 			return ..()
 	return ..()
-	

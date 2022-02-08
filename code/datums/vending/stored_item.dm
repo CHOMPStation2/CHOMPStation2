@@ -42,6 +42,11 @@
 	var/atom/movable/product = instances[instances.len]	// Remove the last added product
 	instances -= product
 	product.forceMove(product_location)
+	//VOREStation Addition Start
+	if(istype(product, /obj))
+		var/obj/item = product
+		item.persist_storable = FALSE
+	//VOREStation Addition End
 	return product
 
 /datum/stored_item/proc/add_product(var/atom/movable/product)
@@ -70,7 +75,7 @@
 	if(.)
 		var/obj/item/stack/S = product
 		if(istype(S))
-			amount += S.amount
+			amount += S.get_amount()
 
 /datum/stored_item/stack/get_product(var/product_location, var/count)
 	if(!LAZYLEN(instances))
@@ -91,6 +96,8 @@
 		for(var/obj/item/stack/T as anything in instances)
 			if(count <= 0)
 				break
+			if(T.get_amount() <= count)
+				instances -=T
 			count -= T.transfer_to(S, count)
 
 	S.forceMove(product_location)

@@ -12,35 +12,35 @@
 	var/mob/living/capsuleowner = null //taken from Capsule Code
 	var/sizetouse = 0.25
 
-	pickup(mob/user)
-		if(!capsuleowner)
-			capsuleowner = user
+/obj/item/device/buttonofnormal/pickup(mob/user)
+	if(!capsuleowner)
+		capsuleowner = user
 
-	attack_self(mob/user)
+/obj/item/device/buttonofnormal/attack_self(mob/user)
+	if(colorindex)
+		nonrandom()
+	sleep(10)
+	capsuleowner.resize(sizetouse)
+	sizetouse = rand(25,200)/100 //randmization occurs after press
+
+/obj/item/device/buttonofnormal/throw_impact(atom/A, speed, mob/user)
+	..()
+	if(isliving(A))
 		if(colorindex)
 			nonrandom()
-		sleep(10)
-		capsuleowner.resize(sizetouse)
+		sleep(5)
+		var/mob/living/capsulehit = A
+		capsulehit.resize(sizetouse)
 		sizetouse = rand(25,200)/100 //randmization occurs after press
 
-	throw_impact(atom/A, speed, mob/user)
-		..()
-		if(isliving(A))
-			if(colorindex)
-				nonrandom()
-			sleep(5)
-			var/mob/living/capsulehit = A
-			capsulehit.resize(sizetouse)
-			sizetouse = rand(25,200)/100 //randmization occurs after press
-
-	attackby(obj/item/W, mob/user)
-		if(istype(W, /obj/item/weapon/pen))
-			colorindex = (colorindex + 1) % 6
-			icon_state = "mobcap[colorindex]"
-			update_icon()
-		if(istype(W, /obj/item/weapon/card/id))
-			capsuleowner = null
-		..()
+/obj/item/device/buttonofnormal/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/weapon/pen))
+		colorindex = (colorindex + 1) % 6
+		icon_state = "mobcap[colorindex]"
+		update_icon()
+	if(istype(W, /obj/item/weapon/card/id))
+		capsuleowner = null
+	..()
 
 /obj/item/device/buttonofnormal/proc/nonrandom() //Secret ball randmoizer rig code
 	switch(colorindex)
@@ -64,42 +64,42 @@
 	var/colorindex = 1
 
 	var/list/winitems = list(
-				/obj/item/weapon/reagent_containers/food/snacks/cookie,
+				/obj/item/weapon/reagent_containers/food/snacks/sugarcookie,
 				/obj/item/weapon/spacecasinocash,
 				/obj/item/weapon/reagent_containers/syringe/drugs,
 	)
 
-	attackby(obj/item/W, mob/user)
-		if(istype(W, /obj/item/weapon/pen))
-			colorindex += 1
-			if(colorindex >= 6)
-				colorindex = 0
-			icon_state = "mobcap[colorindex]"
-			update_icon()
-		..()
+/obj/item/device/daredevice/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/weapon/pen))
+		colorindex += 1
+		if(colorindex >= 6)
+			colorindex = 0
+		icon_state = "mobcap[colorindex]"
+		update_icon()
+	..()
 
-	attack_self(mob/user)
-		var/mob/living/capsuleowner = user
-		playsound(src, 'sound/effects/splat.ogg', 30, 1)
-		var/item = pick(winitems)
-		sleep(100)
-		switch(luckynumber7)
-			if(1)	capsuleowner.resize(RESIZE_TINY) //Loss Shrinking!
-			if(2)	capsuleowner.apply_damage(5, BRUTE) //Loss Damaging!
-			if(3)	capsuleowner.Weaken(5) //Loss Knee spaghetti!
-			if(4)	capsuleowner.hallucination += 66 //loss woah, dude.
-			if(5)	new	item(capsuleowner.loc) //Win!
-			if(7)
-				new	/obj/item/weapon/material/butterfly/switchblade(capsuleowner.loc)
-				capsuleowner.apply_damage(10, BRUTE) //Loss Damaging! WIN KNIVE!
-			if(9)
-				new	/obj/item/weapon/gun/energy/sizegun/not_advanced(capsuleowner.loc)
-				qdel(src)
-			if(777)	new	/obj/item/weapon/spacecash/c1000(capsuleowner.loc) //for rigging
-			else luckynumber7 = (rand(0,10))
-		luckynumber7 = rand(0,10)
-		sleep(100)
-		playsound(src.loc, 'sound/machines/slotmachine.ogg', 25, 1)
+/obj/item/device/daredevice/attack_self(mob/user)
+	var/mob/living/capsuleowner = user
+	playsound(src, 'sound/effects/splat.ogg', 30, 1)
+	var/item = pick(winitems)
+	sleep(100)
+	switch(luckynumber7)
+		if(1)	capsuleowner.resize(RESIZE_TINY) //Loss Shrinking!
+		if(2)	capsuleowner.apply_damage(5, BRUTE) //Loss Damaging!
+		if(3)	capsuleowner.Weaken(5) //Loss Knee spaghetti!
+		if(4)	capsuleowner.hallucination += 66 //loss woah, dude.
+		if(5)	new	item(capsuleowner.loc) //Win!
+		if(7)
+			new	/obj/item/weapon/material/butterfly/switchblade(capsuleowner.loc)
+			capsuleowner.apply_damage(10, BRUTE) //Loss Damaging! WIN KNIVE!
+		if(9)
+			new	/obj/item/weapon/gun/energy/sizegun/not_advanced(capsuleowner.loc)
+			qdel(src)
+		if(777)	new	/obj/item/weapon/spacecash/c1000(capsuleowner.loc) //for rigging
+		else luckynumber7 = (rand(0,10))
+	luckynumber7 = rand(0,10)
+	sleep(100)
+	playsound(src.loc, 'sound/machines/slotmachine.ogg', 25, 1)
 
 //items literally just made for the above item spawner
 
@@ -132,18 +132,18 @@
 					"#0F0F0F",
 					)
 
-	on_hit(var/atom/target)
-		light_color = pick(chaos_colors)
-		var/chaos = rand(25,200)
-		var/mob/living/M = target
-		if(ishuman(target))
-			var/mob/living/carbon/human/H = M
-			H.resize(chaos/100)
-			H.show_message("<font color='#6F6FE2'> The beam fires into your body, changing your size!</font>")
-			H.updateicon()
-		else if (istype(target, /mob/living/))
-			var/mob/living/H = M
-			H.resize(chaos/100)
-			H.updateicon()
-		else
-			return 1
+/obj/item/projectile/beam/sizelaser/chaos/on_hit(var/atom/target)
+	light_color = pick(chaos_colors)
+	var/chaos = rand(25,200)
+	var/mob/living/M = target
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = M
+		H.resize(chaos/100)
+		H.show_message("<font color='#6F6FE2'> The beam fires into your body, changing your size!</font>")
+		H.updateicon()
+	else if (istype(target, /mob/living/))
+		var/mob/living/H = M
+		H.resize(chaos/100)
+		H.updateicon()
+	else
+		return 1

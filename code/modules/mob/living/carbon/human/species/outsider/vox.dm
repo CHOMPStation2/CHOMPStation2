@@ -44,7 +44,7 @@
 
 	gluttonous = 1
 
-	breath_type = "phoron"
+	breath_type = "nitrogen" //CHOMPedit
 	poison_type = "oxygen"
 	siemens_coefficient = 0.2
 
@@ -102,11 +102,14 @@
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 	if(H.backbag == 1)
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/vox(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_back) //CHOMPedit
 		H.internal = H.back
 	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/vox(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_r_hand) //CHOMPedit
 		H.internal = H.r_hand
 	H.internal = locate(/obj/item/weapon/tank) in H.contents
 	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
 		H.internals.icon_state = "internal1"
+
+/datum/species/vox/get_perfect_belly_air_type()
+	return /datum/gas_mixture/belly_air/vox

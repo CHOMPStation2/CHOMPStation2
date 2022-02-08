@@ -26,7 +26,6 @@
 	closet_appearance = null
 	open_sound = 'sound/items/zip.ogg'
 	close_sound = 'sound/items/zip.ogg'
-	door_anim_time = 0 //Unsupported
 	var/item_path = /obj/item/bodybag
 	density = FALSE
 	storage_capacity = (MOB_MEDIUM * 2) - 1
@@ -39,10 +38,10 @@
 	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/large/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 /obj/structure/closet/body_bag/large
 	name = "mass grave body bag"

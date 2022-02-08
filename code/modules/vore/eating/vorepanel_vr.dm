@@ -42,6 +42,7 @@
 	var/mob/living/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/living/new_host)
 	if(istype(new_host))
@@ -63,6 +64,7 @@
 		give_client_previews(user.client) //CHOMPEdit
 		ui = new(user, src, "VorePanel", "Vore Panel")
 		ui.open()
+		ui.set_autoupdate(FALSE)
 
 // This looks weird, but all tgui_host is used for is state checking
 // So this allows us to use the self_state just fine.
@@ -83,7 +85,11 @@
 		key = "[target.type]"
 	else if(ismob(target))
 		var/mob/M = target
-		key = "\ref[target][M.real_name]"
+		if(istype(M,/mob/living/simple_mob)) //CHOMPedit: not generating unique icons for every simplemob(number)
+			var/mob/living/simple_mob/S = M
+			key = "[S.icon_living]"
+		else
+			key = "\ref[target][M.real_name]"
 	if(nom_icons[key])
 		. = nom_icons[key]
 	else
@@ -106,11 +112,17 @@
 		var/obj/belly/inside_belly = hostloc
 		var/mob/living/pred = inside_belly.owner
 
+		var/inside_desc = "No description."
+		if(host.absorbed && inside_belly.absorbed_desc)
+			inside_desc = inside_belly.absorbed_desc
+		else if(inside_belly.desc)
+			inside_desc = inside_belly.desc
+
 		inside = list(
 			"absorbed" = host.absorbed,
 			"belly_name" = inside_belly.name,
 			"belly_mode" = inside_belly.digest_mode,
-			"desc" = inside_belly.desc || "No description.",
+			"desc" = inside_desc,
 			"pred" = pred,
 			"ref" = "\ref[inside_belly]",
 		)
@@ -127,8 +139,11 @@
 				"ref" = "\ref[O]",
 				"outside" = FALSE,
 			)
-			if(show_pictures)
-				info["icon"] = cached_nom_icon(O)
+			if(show_pictures) //CHOMPedit: disables icon mode
+				if(inside_belly.contents.len <= max_icon_content)
+					info["icon"] = cached_nom_icon(O)
+				else
+					show_pictures = !show_pictures
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -160,6 +175,7 @@
 			"item_mode" = selected.item_digest_mode,
 			"verb" = selected.vore_verb,
 			"desc" = selected.desc,
+			"absorbed_desc" = selected.absorbed_desc,
 			"fancy" = selected.fancy_vore,
 			"sound" = selected.vore_sound,
 			"release_sound" = selected.release_sound,
@@ -202,8 +218,19 @@
 			selected_list["interacts"]["escapetime"] = selected.escapetime
 			selected_list["interacts"]["transferchance"] = selected.transferchance
 			selected_list["interacts"]["transferlocation"] = selected.transferlocation
+			selected_list["interacts"]["transferchance_secondary"] = selected.transferchance_secondary
+			selected_list["interacts"]["transferlocation_secondary"] = selected.transferlocation_secondary
 			selected_list["interacts"]["absorbchance"] = selected.absorbchance
 			selected_list["interacts"]["digestchance"] = selected.digestchance
+
+		selected_list["autotransfer_enabled"] = selected.autotransfer_enabled
+		selected_list["autotransfer"] = list()
+		if(selected.autotransfer_enabled)
+			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
+			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
+			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
+			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
@@ -217,8 +244,11 @@
 				"ref" = "\ref[O]",
 				"outside" = TRUE,
 			)
-			if(show_pictures)
-				info["icon"] = cached_nom_icon(O)
+			if(show_pictures) //CHOMPedit: disables icon mode
+				if(selected.contents.len <= max_icon_content)
+					info["icon"] = cached_nom_icon(O)
+				else
+					show_pictures = !show_pictures
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -240,7 +270,9 @@
 			selected_list["liq_interacts"]["liq_reagent_addons"] = list()
 			for(var/flag_name in selected.reagent_mode_flag_list)
 				if(selected.reagent_mode_flags & selected.reagent_mode_flag_list[flag_name])
-					selected_list["liq_interacts"]["liq_reagent_addons"].Add(flag_name)
+					var/list/selected_list_member = selected_list["liq_interacts"]["liq_reagent_addons"]
+					ASSERT(islist(selected_list_member))
+					selected_list_member.Add(flag_name)
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -271,6 +303,7 @@
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
+		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
@@ -278,6 +311,7 @@
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full //Belching while full
 		//CHOMPedit end
 	)
@@ -354,7 +388,7 @@
 			return set_attr(usr, params)
 
 		if("saveprefs")
-			if(!ishuman(host) && !issilicon(host))
+			if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
 				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
@@ -414,6 +448,12 @@
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.latejoin_vore = host.latejoin_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_latejoin_prey")
+			host.latejoin_prey = !host.latejoin_prey
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.latejoin_prey = host.latejoin_prey
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_allow_spontaneous_tf")
@@ -511,6 +551,12 @@
 			host.give_reagents = !host.give_reagents
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.give_reagents = host.give_reagents
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_autotransferable")
+			host.autotransferable = !host.autotransferable
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.autotransferable = host.autotransferable
 			unsaved_changes = TRUE
 			return TRUE
 		//Belch code
@@ -720,6 +766,7 @@
 				return FALSE
 
 			host.vore_selected.digest_mode = new_mode
+			host.vore_selected.updateVRPanels()
 			. = TRUE
 		if("b_addons")
 			var/list/menu_list = host.vore_selected.mode_flag_list.Copy()
@@ -774,9 +821,19 @@
 					return FALSE
 				host.vore_selected.desc = new_desc
 				. = TRUE
+		if("b_absorbed_desc")
+			var/new_desc = html_encode(input(usr,"Belly Description for absorbed prey ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.absorbed_desc) as message|null)
+
+			if(new_desc)
+				new_desc = readd_quotes(new_desc)
+				if(length(new_desc) > BELLIES_DESC_MAX)
+					tgui_alert_async(usr, "Entered belly desc too long. [BELLIES_DESC_MAX] character limit.","Error")
+					return FALSE
+				host.vore_selected.absorbed_desc = new_desc
+				. = TRUE
 		if("b_msgs")
 			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (500 for idle messages), max 10 messages per topic.","Really, don't.") // Should remain tgui_alert() (blocking)
-			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly (will not work for absorbed examine). '%countprey' will be replaced with the number of living prey in your belly (or absorbed prey for absorbed examine)."
+			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
 					var/new_message = input(user,"These are sent to prey when they expire. Write them in 2nd person ('you feel X'). Avoid using %prey in this type."+help,"Digest Message (to prey)",host.vore_selected.get_messages("dmp")) as message
@@ -788,6 +845,26 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"dmo")
 
+				if("amp")
+					var/new_message = input(user,"These are sent to prey when their absorption finishes. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to prey)",host.vore_selected.get_messages("amp")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"amp")
+
+				if("amo")
+					var/new_message = input(user,"These are sent to you when prey's absorption finishes. Write them in 2nd person ('you feel X'). Avoid using %pred in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to you)",host.vore_selected.get_messages("amo")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"amo")
+
+				if("uamp")
+					var/new_message = input(user,"These are sent to prey when their unnabsorption finishes. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to prey)",host.vore_selected.get_messages("uamp")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"uamp")
+
+				if("uamo")
+					var/new_message = input(user,"These are sent to you when prey's unabsorption finishes. Write them in 2nd person ('you feel X'). Avoid using %pred in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Digest Message (to you)",host.vore_selected.get_messages("uamo")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"uamo")
+
 				if("smo")
 					var/new_message = input(user,"These are sent to those nearby when prey struggles. Write them in 3rd person ('X's Y bulges')."+help,"Struggle Message (outside)",host.vore_selected.get_messages("smo")) as message
 					if(new_message)
@@ -798,13 +875,23 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"smi")
 
+				if("asmo")
+					var/new_message = input(user,"These are sent to those nearby when absorbed prey struggles. Write them in 3rd person ('X's Y bulges'). %count will not work for this type, and %countprey will only count absorbed victims."+help,"Struggle Message (outside)",host.vore_selected.get_messages("asmo")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"asmo")
+
+				if("asmi")
+					var/new_message = input(user,"These are sent to absorbed prey when they struggle. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Struggle Message (inside)",host.vore_selected.get_messages("asmi")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"asmi")
+
 				if("em")
 					var/new_message = input(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"em")
 
 				if("ema")
-					var/new_message = input(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger')."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema")) as message
+					var/new_message = input(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger'). %count will not work for this type, and %countprey will only count absorbed victims."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"ema")
 
@@ -817,6 +904,11 @@
 					var/new_message = input(user,"These are sent to prey every minute when you are on Hold mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Hold)",host.vore_selected.get_messages("im_hold")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"im_hold")
+
+				if("im_holdabsorbed")
+					var/new_message = input(user,"These are sent to prey every minute when you are absorbed. Write them in 2nd person ('%pred's %belly squishes down on you.') %count will not work for this type, and %countprey will only count absorbed victims."+help,"Idle Message (Hold Absorbed)",host.vore_selected.get_messages("im_holdabsorbed")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_holdabsorbed")
 
 				if("im_absorb")
 					var/new_message = input(user,"These are sent to prey every minute when you are on Absorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Absorb)",host.vore_selected.get_messages("im_absorb")) as message
@@ -833,13 +925,44 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"im_drain")
 
+				if("im_steal")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Size Steal mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Size Steal)",host.vore_selected.get_messages("im_steal")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_steal")
+
+				if("im_egg")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Encase In Egg mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Encase In Egg)",host.vore_selected.get_messages("im_egg")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_egg")
+
+				if("im_shrink")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Shrink mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Shrink)",host.vore_selected.get_messages("im_shrink")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_shrink")
+
+				if("im_grow")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Grow mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Grow)",host.vore_selected.get_messages("im_grow")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_grow")
+
+				if("im_unabsorb")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Unabsorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Unabsorb)",host.vore_selected.get_messages("im_unabsorb")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_unabsorb")
+
 				if("reset")
 					var/confirm = tgui_alert(user,"This will delete any custom messages. Are you sure?","Confirmation",list("Cancel","DELETE"))
 					if(confirm == "DELETE")
 						host.vore_selected.digest_messages_prey = initial(host.vore_selected.digest_messages_prey)
 						host.vore_selected.digest_messages_owner = initial(host.vore_selected.digest_messages_owner)
+						host.vore_selected.absorb_messages_prey = initial(host.vore_selected.absorb_messages_prey)
+						host.vore_selected.absorb_messages_owner = initial(host.vore_selected.absorb_messages_owner)
+						host.vore_selected.unabsorb_messages_prey = initial(host.vore_selected.unabsorb_messages_prey)
+						host.vore_selected.unabsorb_messages_owner = initial(host.vore_selected.unabsorb_messages_owner)
 						host.vore_selected.struggle_messages_outside = initial(host.vore_selected.struggle_messages_outside)
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
+						host.vore_selected.absorbed_struggle_messages_outside = initial(host.vore_selected.absorbed_struggle_messages_outside)
+						host.vore_selected.absorbed_struggle_messages_inside = initial(host.vore_selected.absorbed_struggle_messages_inside)
 						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
 						host.vore_selected.examine_messages_absorbed = initial(host.vore_selected.examine_messages_absorbed)
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
@@ -996,13 +1119,27 @@
 			. = TRUE
 		if("b_transferlocation")
 			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] to lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
-
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice == "None - Remove")
 				host.vore_selected.transferlocation = null
 			else
 				host.vore_selected.transferlocation = choice.name
+			. = TRUE
+		if("b_transferchance_secondary")
+			var/transfer_secondary_chance_input = input(user, "Set secondary belly transfer chance on resist (as %). You must also set the location for this to have any effect.", "Prey Escape Time") as num|null
+			if(!isnull(transfer_secondary_chance_input))
+				host.vore_selected.transferchance_secondary = sanitize_integer(transfer_secondary_chance_input, 0, 100, initial(host.vore_selected.transferchance_secondary))
+			. = TRUE
+		if("b_transferlocation_secondary")
+			var/obj/belly/choice_secondary = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] to alternately lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+
+			if(!choice_secondary) //They cancelled, no changes
+				return FALSE
+			else if(choice_secondary == "None - Remove")
+				host.vore_selected.transferlocation_secondary = null
+			else
+				host.vore_selected.transferlocation_secondary = choice_secondary.name
 			. = TRUE
 		if("b_absorbchance")
 			var/absorb_chance_input = input(user, "Set belly absorb mode chance on resist (as %)", "Prey Absorb Chance") as num|null
@@ -1014,6 +1151,38 @@
 			if(!isnull(digest_chance_input))
 				host.vore_selected.digestchance = sanitize_integer(digest_chance_input, 0, 100, initial(host.vore_selected.digestchance))
 			. = TRUE
+		if("b_autotransferchance") //CHOMPedit Start
+			var/autotransferchance_input = input(user, "Set belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Auto-Transfer Chance") as num|null
+			if(!isnull(autotransferchance_input))
+				host.vore_selected.autotransferchance = sanitize_integer(autotransferchance_input, 0, 100, initial(host.vore_selected.autotransferchance))
+			. = TRUE
+		if("b_autotransferwait")
+			var/autotransferwait_input = input(user, "Set minimum number of seconds for auto-transfer wait delay.", "Auto-Transfer Time") as num|null //CHOMPEdit: Wiggle room for rougher time resolution in process cycles.
+			if(!isnull(autotransferwait_input))
+				host.vore_selected.autotransferwait = sanitize_integer(autotransferwait_input*10, 10, 18000, initial(host.vore_selected.autotransferwait))
+			. = TRUE
+		if("b_autotransferlocation")
+			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice == "None - Remove")
+				host.vore_selected.autotransferlocation = null
+			else
+				host.vore_selected.autotransferlocation = choice.name
+			. = TRUE
+		if("b_autotransfer_min_amount")
+			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
+			if(!isnull(autotransfer_min_amount_input))
+				host.vore_selected.autotransfer_min_amount = sanitize_integer(autotransfer_min_amount_input, 0, 100, initial(host.vore_selected.autotransfer_min_amount))
+			. = TRUE
+		if("b_autotransfer_max_amount")
+			var/autotransfer_max_amount_input = input(user, "Set the maximum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Max Amount") as num|null
+			if(!isnull(autotransfer_max_amount_input))
+				host.vore_selected.autotransfer_max_amount = sanitize_integer(autotransfer_max_amount_input, 0, 100, initial(host.vore_selected.autotransfer_max_amount))
+			. = TRUE
+		if("b_autotransfer_enabled")
+			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
+			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
 			update_preview_icon()	//CHOMPEdit Begin
@@ -1039,6 +1208,10 @@
 				if(B.transferlocation == host.vore_selected)
 					dest_for = B.name
 					failure_msg += "This is the destiantion for at least '[dest_for]' belly transfers. Remove it as the destination from any bellies before deleting it. "
+					break
+				if(B.transferlocation_secondary == host.vore_selected)
+					dest_for = B.name
+					failure_msg += "This is the destiantion for at least '[dest_for]' secondary belly transfers. Remove it as the destination from any bellies before deleting it. "
 					break
 
 			if(host.vore_selected.contents.len)
@@ -1076,7 +1249,7 @@
 				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid options.</span>")
 			else
 				host.vore_selected.show_liquids = 0
-				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] elected.name)] no longer has liquid options.</span>")
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid options.</span>")
 			. = TRUE
 		if("b_liq_reagent_gen")
 			if(!host.vore_selected.reagentbellymode) //liquid container adjustments and interactions.

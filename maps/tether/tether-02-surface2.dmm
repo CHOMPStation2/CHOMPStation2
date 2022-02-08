@@ -2779,6 +2779,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/security/detective)
 "aei" = (
@@ -7959,6 +7960,7 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/red/bordercorner,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "amn" = (
@@ -8775,6 +8777,7 @@
 /obj/structure/table/glass,
 /obj/item/weapon/deck/cards,
 /obj/structure/table/glass,
+/obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "anG" = (
@@ -10306,7 +10309,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/mob/living/simple_mob/animal/passive/snake/noodle,
+/mob/living/simple_mob/animal/passive/snake/python/noodle,
 /turf/simulated/floor/grass,
 /area/chapel/main)
 "aqi" = (
@@ -14952,6 +14955,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 5
 	},
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/asmaint2)
 "ayB" = (
@@ -16543,6 +16549,9 @@
 	dir = 4
 	},
 /obj/machinery/light/small,
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
 "aCg" = (
@@ -19695,6 +19704,9 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
 /turf/simulated/floor,
 /area/maintenance/lower/rnd)
 "aIk" = (
@@ -21425,6 +21437,7 @@
 "aLM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
 "aLN" = (
@@ -33118,6 +33131,22 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+<<<<<<< HEAD
+=======
+"dnD" = (
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/uppersouthstairwell)
+"dzE" = (
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "dAB" = (
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -33451,6 +33480,13 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/fish_farm)
+"grX" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/atmos)
 "gsU" = (
 /obj/structure/table/rack,
 /obj/random/maintenance/engineering,
@@ -33630,6 +33666,34 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
+<<<<<<< HEAD
+=======
+"iLF" = (
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/south)
+"jcd" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/east_stairs_two)
+"jiy" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/bridge/meeting_room)
+"jlG" = (
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/centralhall)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "jtj" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/readingrooms)
@@ -34012,12 +34076,38 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 "lOO" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/grass,
 /area/chapel/main)
 =======
+=======
+"lvb" = (
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/rnd)
+"lJc" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "lMw" = (
 /obj/item/device/radio/intercom/locked/ai_private{
 	dir = 4;
@@ -34029,6 +34119,10 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/grass,
 /area/chapel/main)
+"lUN" = (
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/public_garden_two)
 "lZx" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/readingrooms)
@@ -34136,6 +34230,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload_foyer)
+"mNT" = (
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/asmaint2)
 "mNZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -34146,7 +34246,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
+=======
+"mQc" = (
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/atmos)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "mUP" = (
 /obj/structure/bed/padded,
 /obj/effect/floor_decal/techfloor,
@@ -34173,6 +34282,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload_foyer)
+"ncG" = (
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/wood,
+/area/bridge/meeting_room)
 "ndB" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -34379,7 +34492,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/bluegrid,
 /area/ai)
+<<<<<<< HEAD
 >>>>>>> 926c35deb7... Merge pull request #10416 from Enzo-Leon/mapfix-02
+=======
+"pny" = (
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/asmaint2)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "pqb" = (
 /obj/structure/sink/puddle,
 /turf/simulated/floor/beach/sand/desert,
@@ -34548,11 +34670,23 @@
 /area/maintenance/lower/bar)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c9bc676ff0... Merge pull request #9472 from Very-Soft/littlefix
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 =======
 ||||||| parent of 926c35deb7... Merge pull request #10416 from Enzo-Leon/mapfix-02
 =======
+=======
+"qGR" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/obj/effect/landmark{
+	name = "maint_pred"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/south)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "qKR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -34582,6 +34716,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
+"rjM" = (
+/obj/effect/landmark/vines,
+/turf/simulated/floor/beach/sand/desert,
+/area/tether/surfacebase/fish_farm)
 "rlN" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -34624,7 +34762,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_cyborg_station)
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
+=======
+"rAv" = (
+/obj/machinery/vending/wardrobe/chapdrobe,
+/turf/simulated/floor/lino,
+/area/chapel/office)
+"rBf" = (
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 "rJc" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/landmark/start{
@@ -35060,6 +35209,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+"tZD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
 "tZV" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -39833,6 +39989,38 @@ adt
 adt
 adt
 adt
+<<<<<<< HEAD
+=======
+aHm
+aHm
+aHm
+aHE
+aHE
+aIJ
+mNT
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+aHE
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 adt
 adt
 adt
@@ -39867,6 +40055,91 @@ aab
 aab
 aab
 aab
+<<<<<<< HEAD
+=======
+abn
+abn
+abn
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+akX
+akX
+aoi
+apt
+aqz
+lUN
+ars
+atI
+akX
+akX
+aPv
+aPD
+aRf
+ajV
+ajV
+azs
+axO
+bCs
+grL
+azs
+azs
+azs
+azs
+azs
+azs
+azs
+azs
+aHm
+aHm
+aHm
+aHm
+aqp
+aYD
+arg
+aJz
+arm
+arm
+arm
+arm
+arm
+ask
+aOb
+aOb
+arm
+aQt
+arm
+ats
+atw
+arm
+aOb
+arm
+arm
+arm
+aQt
+ayA
+aHE
+adt
+adt
+adt
+adt
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 aab
 aab
 aab
@@ -40746,6 +41019,7 @@ aab
 aab
 aab
 aab
+<<<<<<< HEAD
 aab
 aab
 aab
@@ -41608,10 +41882,13 @@ aab
 abn
 abn
 abn
+=======
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 abn
 abn
 abn
 abn
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -41747,6 +42024,8 @@ aab
 aab
 aab
 abn
+=======
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 abn
 abn
 abn
@@ -41754,6 +42033,7 @@ abn
 abn
 abn
 abn
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -41778,10 +42058,79 @@ ajV
 adt
 adt
 adt
+=======
+acm
+acm
+acm
+acm
+acm
+acm
+acm
+ahd
+ahR
+aiY
+ajW
+alb
+ald
+agr
+aok
+apy
+aqF
+arx
+asz
+atK
+aum
+aqF
+avS
+ajV
+awY
+axQ
+axR
+ayw
+azq
+azq
+azq
+aBd
+aBd
+aCq
+aDm
+aDm
+aEB
+aEB
+aEB
+axR
+awY
+aGy
+aql
+aIi
+aIN
+aJh
+aJB
+aKb
+aKN
+aLv
+aMi
+aMR
+aNt
+aMR
+aOU
+aKb
+aQw
+aQw
+pny
+aQw
+aRj
+aHE
+aUW
+aHE
+aHE
+aHE
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 adt
 adt
 adt
 adt
+<<<<<<< HEAD
 azs
 azq
 aAw
@@ -41819,15 +42168,23 @@ aJf
 ayj
 ayG
 aHE
+=======
+adt
+adt
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 adt
 adt
 adt
 adt
+<<<<<<< HEAD
 aab
 aab
 aab
 aab
 aab
+=======
+abn
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 aab
 aab
 aab
@@ -41836,6 +42193,7 @@ aab
 aab
 aab
 bdS
+<<<<<<< HEAD
 bek
 bek
 bfq
@@ -41998,6 +42356,28 @@ bek
 bek
 bek
 bmk
+=======
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+bdS
+blQ
+blQ
+blQ
+bdS
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 bdS
 aab
 aab
@@ -42495,7 +42875,7 @@ azq
 azq
 azq
 ayw
-axR
+rjM
 axR
 axR
 axR
@@ -43642,7 +44022,7 @@ aGw
 aGw
 aqZ
 arf
-aEc
+lvb
 aJJ
 aKh
 aKU
@@ -44656,7 +45036,7 @@ aRm
 aPJ
 aYd
 aWH
-aQw
+pny
 aXx
 aXx
 aXx
@@ -44914,7 +45294,7 @@ aEa
 avD
 aFh
 aFl
-aEc
+lvb
 aGy
 aGy
 aGy
@@ -44955,7 +45335,7 @@ baz
 aHn
 aHI
 baz
-aIg
+grX
 baU
 baU
 baz
@@ -45676,7 +46056,7 @@ baU
 beQ
 aKK
 baz
-baU
+mQc
 baU
 biS
 bjr
@@ -47233,7 +47613,7 @@ baz
 aIM
 baU
 baU
-baU
+mQc
 baz
 bfR
 bgx
@@ -47758,7 +48138,7 @@ aGH
 aHb
 aHs
 aHM
-aGF
+ncG
 aIU
 aGE
 aAG
@@ -48360,7 +48740,7 @@ aLY
 bbm
 bbM
 aZr
-aZr
+iLF
 aLY
 adt
 adt
@@ -49586,7 +49966,7 @@ asV
 awj
 avD
 axF
-ayc
+tZD
 ayd
 azg
 ayh
@@ -49610,7 +49990,7 @@ ayd
 ayd
 aKA
 ayd
-ayd
+rBf
 aMG
 avD
 asm
@@ -49852,7 +50232,7 @@ aex
 afj
 agh
 aaU
-aam
+jlG
 aiP
 akq
 alS
@@ -50348,7 +50728,7 @@ aLX
 aPx
 aPx
 aLY
-aRC
+qGR
 bcM
 atW
 aUc
@@ -50887,7 +51267,7 @@ aks
 akF
 akJ
 akJ
-akJ
+dnD
 akJ
 alY
 amJ
@@ -51408,7 +51788,7 @@ aLY
 aLY
 aZr
 aZr
-aZr
+iLF
 baO
 bax
 <<<<<<< HEAD

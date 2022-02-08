@@ -142,8 +142,7 @@
 				holder.icon_state = "scarab_wire2"
 			else
 				user.visible_message("[user] removes the wiring from [holder].", "You remove the wiring from [holder].")
-				var/obj/item/stack/cable_coil/coil = new /obj/item/stack/cable_coil(get_turf(holder))
-				coil.amount = 4
+				new /obj/item/stack/cable_coil(get_turf(holder), 4)
 				holder.icon_state = "scarab_chassis_complete"
 		if(16)
 			if(diff==FORWARD)
@@ -238,8 +237,7 @@
 				holder.icon_state = "scarab_chip5"
 			else
 				user.visible_message("[user] pries internal armor layer from [holder].", "You prie internal armor layer from [holder].")
-				var/obj/item/stack/material/steel/MS = new /obj/item/stack/material/steel(get_turf(holder))
-				MS.amount = 5
+				new /obj/item/stack/material/steel(get_turf(holder), 5)
 				holder.icon_state = "scarab_chip5"
 		if(4)
 			if(diff==FORWARD)
@@ -261,8 +259,7 @@
 				holder.icon_state = "scarab_weld2"
 			else
 				user.visible_message("[user] pries the external armor layer from [holder].", "You pry external armor layer from [holder].")
-				var/obj/item/stack/material/plasteel/MS = new /obj/item/stack/material/plasteel(get_turf(holder))
-				MS.amount = 5
+				new /obj/item/stack/material/plasteel(get_turf(holder), 5)
 				holder.icon_state = "scarab_weld1"
 		if(1)
 			if(diff==FORWARD)

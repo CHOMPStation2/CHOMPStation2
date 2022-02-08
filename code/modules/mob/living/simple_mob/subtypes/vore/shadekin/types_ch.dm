@@ -58,8 +58,8 @@
 	You struggle to stay awake while floating helplessly in the goo."
 	player_msg = "You are Rakshasa. You are not to directly harm crew, only consume. You never speak a language."
 	energy_adminbuse = TRUE
-	maxHealth = 999999999999
-	health = 999999999999
+	maxHealth = 1000000000000
+	health = 1000000000000
 	eye_state = "BLUE EYES"
 	eye_icon_state = "e_rakshasa"
 

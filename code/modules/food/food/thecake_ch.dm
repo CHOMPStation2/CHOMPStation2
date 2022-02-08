@@ -112,7 +112,6 @@
 	result = /obj/item/weapon/thecake_layer/five
 
 /obj/structure/thecake/proc/HasSliceMissing()
-	..()
 	if(slices < maxslices)
 		if(interval >= regentime)
 			interval = 0
@@ -400,7 +399,6 @@
 	layer_stage = 8
 
 /obj/structure/chaoscake/proc/HasSliceMissing()
-	..()
 	if(slices < maxslices)
 		if(interval >= regentime)
 			interval = 0

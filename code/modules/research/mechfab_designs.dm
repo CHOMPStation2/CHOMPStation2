@@ -577,21 +577,23 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/repair_droid
 
 /* These are way too OP to be buildable
+*/ //CHOMPEdit  upstream whines too much.
 /datum/design/item/mecha/combat_shield
 	name = "linear combat shield"
 	desc = "Linear shield projector. Deploys a large, familiar, and rectangular shield in one direction at a time."
 	id = "mech_shield_droid"
-	req_tech = list(TECH_PHORON = 3, TECH_MAGNET = 6, TECH_ILLEGAL = 4)
-	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_GLASS = 3750)
+	req_tech = list(TECH_PHORON = 5, TECH_MAGNET = 7, TECH_ILLEGAL = 5)  //Chompedit bumped up a little
+	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_VERDANTIUM = 2000, MAT_GLASS = 3750)  //Chompedit  Also bumped up a little
 	build_path = /obj/item/mecha_parts/mecha_equipment/combat_shield
 
 /datum/design/item/mecha/omni_shield
 	name = "Omni Shield"
 	desc = "Integral shield projector. Can only protect the exosuit, but has no weak angles."
 	id = "mech_shield_omni"
-	req_tech = list(TECH_PHORON = 3, TECH_MAGNET = 6, TECH_ILLEGAL = 4)
-	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_GLASS = 3750)
+	req_tech = list(TECH_PHORON = 5, TECH_MAGNET = 7, TECH_ILLEGAL = 5)  //Chompedit bumped up a little
+	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 3000, MAT_PHORON = 5000, MAT_VERDANTIUM = 2000, MAT_GLASS = 3750)  //Chompedit  Also bumped up a little
 	build_path = /obj/item/mecha_parts/mecha_equipment/omni_shield
+/*  //CHOMPEdit closing comment.
 */
 
 /datum/design/item/mecha/crisis_drone
@@ -767,6 +769,22 @@
 	req_tech = list( TECH_POWER = 5, TECH_MATERIAL = 4, TECH_ENGINEERING = 4)
 	materials = list(MAT_STEEL = 10000, MAT_SILVER = 1000, MAT_GOLD = 1000)
 	build_path = /obj/item/mecha_parts/mecha_equipment/speedboost
+
+/datum/design/item/mecha/auxstorage
+	name = "Auxillary Exosuit Storage Bay"
+	desc = "An auxillary storage compartment, for attaching to exosuits."
+	id = "mech_storage"
+	req_tech = list(TECH_MATERIAL = 4)
+	materials = list(MAT_STEEL = 10000)
+	build_path = /obj/item/mecha_parts/mecha_equipment/storage
+
+/datum/design/item/mecha/bsauxstorage
+	name = "Auxillary Exosuit Storage Wormhole"
+	desc = "An auxillary storage wormhole, for attaching to exosuits."
+	id = "mech_storage_bs"
+	req_tech = list(TECH_MATERIAL = 4)
+	materials = list(MAT_PLASTEEL = 10000, MAT_GRAPHITE = 8000, MAT_OSMIUM = 6000, MAT_PHORON = 6000, MAT_SILVER = 4000, MAT_GOLD = 4000)
+	build_path = /obj/item/mecha_parts/mecha_equipment/storage/bluespace
 
 /datum/design/item/synthetic_flash
 	name = "Synthetic Flash"
@@ -1047,6 +1065,30 @@
 	req_tech = list(TECH_MATERIAL = 7, TECH_ENGINEERING = 5, TECH_MAGNET = 5, TECH_POWER = 6, TECH_ILLEGAL = 3, TECH_BLUESPACE = 4, TECH_ARCANE = 2, TECH_PRECURSOR = 3)
 	materials = list(MAT_DURASTEEL = 5000, MAT_GRAPHITE = 3000, MAT_MORPHIUM = 1500, MAT_OSMIUM = 1500, MAT_PHORON = 1750, MAT_VERDANTIUM = 3000, MAT_SUPERMATTER = 2000)
 	build_path = /obj/item/rig_module/teleporter
+
+/datum/design/item/mechfab/rigsuit/radshield
+	name = "hardsuit radiation absorption device"
+	desc = "A miniaturized radiation absorption array, for use in hardsuits and providing full radiation protection."
+	id = "rig_component_radshield"
+	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 3, TECH_MAGNET = 4, TECH_POWER = 3, TECH_BLUESPACE = 4)
+	materials = list(MAT_STEEL = 8000, MAT_GRAPHITE = 3000, MAT_OSMIUM = 1500, MAT_PHORON = 2250, MAT_SILVER = 1500, MAT_GOLD = 1500)
+	build_path = /obj/item/rig_module/rad_shield
+
+/datum/design/item/mechfab/rigsuit/radshield_adv
+	name = "hardsuit advanced radiation absorption device"
+	desc = "An optimized, miniaturized radiation absorption array, for use in hardsuits and providing full radiation protection. Reduced power draw."
+	id = "rig_component_radshield_adv"
+	req_tech = list(TECH_MATERIAL = 7, TECH_ENGINEERING = 5, TECH_MAGNET = 5, TECH_POWER = 6, TECH_BLUESPACE = 4)
+	materials = list(MAT_PLASTEEL = 8000, MAT_GRAPHITE = 4000, MAT_OSMIUM = 2000, MAT_PHORON = 3250, MAT_SILVER = 2250, MAT_GOLD = 2250)
+	build_path = /obj/item/rig_module/rad_shield/advanced
+
+/datum/design/item/mechfab/rigsuit/atmosshield
+	name = "hardsuit atmospheric protection enhancement suite"
+	desc = "An advanced atmospheric protection suite, providing protection against both pressure and heat. At the cost of concerningly high power draw."
+	id = "rig_component_atmosshield"
+	req_tech = list(TECH_MATERIAL = 7, TECH_ENGINEERING = 5, TECH_MAGNET = 5, TECH_POWER = 6, TECH_BLUESPACE = 4)
+	materials = list(MAT_PLASTEEL = 8000, MAT_DURASTEEL = 4000, MAT_GRAPHITE = 8000, MAT_OSMIUM = 6000, MAT_PHORON = 6000, MAT_SILVER = 4000, MAT_GOLD = 4000)
+	build_path = /obj/item/rig_module/atmos_shield
 
 /datum/design/item/mechfab/uav/basic
 	name = "UAV - Recon Skimmer"

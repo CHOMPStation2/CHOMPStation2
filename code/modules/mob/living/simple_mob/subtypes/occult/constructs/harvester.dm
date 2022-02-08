@@ -7,16 +7,17 @@
 	real_name = "Harvester"
 	construct_type = "harvester"
 	desc = "A tendril-laden construct piloted by a chained mind."
-	icon = 'icons/mob/mob.dmi'
+	//icon = 'icons/mob/mob.dmi' CHOMPEdit
 	icon_state = "harvester"
 	icon_living = "harvester"
-	maxHealth = 150
-	health = 150
+	maxHealth = 100	//CHOMPEdit
+	health = 100	//CHOMPEdit
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	attack_sharp = TRUE
 	attacktext = list("violently stabbed")
 	friendly = list("caresses")
+	organ_names = /decl/mob_organ_names/harvester
 	movement_cooldown = 0
 
 	//	environment_smash = 1	// Whatever this gets renamed to, Harvesters need to break things
@@ -38,3 +39,6 @@
 			/spell/targeted/construct_advanced/agonizing_sphere,
 			/spell/rune_write
 		)
+
+/decl/mob_organ_names/harvester
+	hit_zones = list("cephalothorax", "eye", "carapace", "energy crystal", "mandible")

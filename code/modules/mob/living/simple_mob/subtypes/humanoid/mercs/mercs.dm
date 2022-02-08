@@ -5,8 +5,8 @@
 // Probably shouldn't use this directly, there are a bunch of sub-classes that are more complete.
 /mob/living/simple_mob/humanoid/merc
 	name = "mercenary"
-	desc = "A tough looking heavily-armed individual."
 	tt_desc = "E Homo sapiens"
+	desc = "A tough looking individual armed with only a knife." //CHOMPEdit
 	icon_state = "syndicate"
 	icon_living = "syndicate"
 	icon_dead = "syndicate_dead"
@@ -24,8 +24,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 15		//Tac Knife damage
 	melee_damage_upper = 15
-	attack_armor_pen = 20
-	attack_sharp = TRUE
+	attack_sharp = 1	//CHOMPEdit
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 100, rad = 100)	// Same armor values as the vest they drop, plus simple mob immunities
@@ -38,6 +37,7 @@
 
 	// Grenade special attack vars
 	var/grenade_type = /obj/item/weapon/grenade/concussion
+	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
@@ -71,7 +71,8 @@
 	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
-		G.attack_self(src)
+		G.det_time = grenade_timer	//CHOMPEdit
+		G.activate(src)	//CHOMPEdit
 		special_attack_charges = max(special_attack_charges-1, 0)
 
 	set_AI_busy(FALSE)
@@ -112,7 +113,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	attack_armor_pen = 50
-	attack_sharp = TRUE
+	attack_sharp = 1	//CHOMPEdit
 	attack_edge = 1
 	attacktext = list("slashed")
 
@@ -304,6 +305,10 @@
 
 /mob/living/simple_mob/humanoid/merc/ranged/sniper/shoot_target(atom/A)
 	set waitfor = FALSE
+
+	if(!istype(A) || QDELETED(A))
+		return
+
 	setClickCooldown(get_attack_speed())
 
 	face_atom(A)

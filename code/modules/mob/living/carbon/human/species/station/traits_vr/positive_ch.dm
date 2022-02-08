@@ -51,19 +51,19 @@
 /datum/trait/positive/rad_resistance
 	name = "Radiation Resistance"
 	desc = "You are generally more resistant to radiation, and it dissipates faster from your body."
-	cost = 2
+	cost = 1
 	var_changes = list("radiation_mod" = 0.65, "rad_removal_mod" = 3.5, "rad_levels" = list("safe" = 20, "danger_1" = 75, "danger_2" = 100, "danger_3" = 200))
 
 /datum/trait/positive/rad_resistance_extreme
 	name = "Extreme Radiation Resistance"
 	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
-	cost = 4
+	cost = 2
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 40, "danger_1" = 100, "danger_2" = 150, "danger_3" = 250))
 
 /datum/trait/positive/more_blood
 	name = "High blood volume"
 	desc = "You have much 50% more blood than most other people"
-	cost = 3
+	cost = 2
 	var_changes = list("blood_volume" = 840)
 	excludes = list(/datum/trait/positive/more_blood_extreme,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
@@ -71,7 +71,7 @@
 /datum/trait/positive/more_blood_extreme
 	name = "Very high blood volume"
 	desc = "You have much 150% more blood than most other people"
-	cost = 6
+	cost = 4
 	var_changes = list("blood_volume" = 1400)
 	excludes = list(/datum/trait/positive/more_blood,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
@@ -98,25 +98,25 @@
 /datum/trait/positive/big_mouth
 	name = "Big mouth"
 	desc = "It takes half as many bites to finish food as it does for most people."
-	cost = 1
+	cost = 0  //This doesn't deserve a cost.
 	var_changes = list("bite_mod" = 2)
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling expert"
 	desc = "Your grabs are much harder to escape from, and you are better at escaping from other's grabs!"
 	cost = 3
-	var_changes = list("grab_resist_divisor_victims" = 3, "grab_resist_divisor_self" = 0.5, "grab_power_victims" = -1, "grab_power_self" = 1)
+	var_changes = list("grab_resist_divisor_victims" = 1.5, "grab_resist_divisor_self" = 0.5, "grab_power_victims" = -1, "grab_power_self" = 1)
 
 /datum/trait/positive/big_mouth_extreme
 	name = "Giant mouth"
 	desc = "It takes a quarter as many bites to finish food as it does for most people."
-	cost = 3
+	cost = 0  //This also doesn't deserve a cost.
 	var_changes = list("bite_mod" = 4)
 
 /datum/trait/positive/absorbent
 	name = "Absorbent"
 	desc = "You are able to clean messes just by walking over them, and gain nutrition from doing so!"
-	cost = 2
+	cost = 1
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/slipperydirt)
 

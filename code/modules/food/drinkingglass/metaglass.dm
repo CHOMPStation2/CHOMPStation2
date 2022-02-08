@@ -373,6 +373,10 @@ Drinks Data
 	glass_icon_state = "martiniglass"
 	glass_center_of_mass = list("x"=17, "y"=8)
 
+/datum/reagent/ethanol/rum_and_cola
+	glass_icon_state = "rumcolaglass"
+	glass_center_of_mass = list("x"=16, "y"=8)
+
 /datum/reagent/ethanol/cuba_libre
 	glass_icon_state = "cubalibreglass"
 	glass_center_of_mass = list("x"=16, "y"=8)

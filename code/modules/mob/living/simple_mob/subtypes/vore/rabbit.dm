@@ -32,6 +32,9 @@
 	say_list_type = /datum/say_list/rabbit
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
+	meat_amount = 3
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+
 	// Vore vars
 	vore_active = 1
 	vore_bump_emote	= "playfully lunges at"
@@ -87,6 +90,35 @@
 		var/pounce_chance = CanPounceTarget(user)
 		if(pounce_chance)
 			PounceTarget(user, pounce_chance)
+			
+// CHOMPEdit start: More voremob bellies!
+/mob/living/simple_mob/vore/rabbit/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "With a sudden pounce, the rabbit begins swallowing you down with ease! A pink maw and surprisingly unintimidating teeth give way to the thing's pink, tight throat, until you're crammed down inside it's gut! Unless you happen to be drastically smaller than it, the inside of this thing's gut is incredibly cramped, as the fleshy pink walls undulate over your form. It's clearly still able to move with you inside somehow, despite the tiny size of the thing, as gastric sounds flood your ears. You've been bested by a RABBIT of all things!"
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#b15aac" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
+	
+	/* // Commented out as unfortunately I suck at writing rabbit guts, given I'm mostly a canine and such pred. :p
+	B.emote_lists[DM_HOLD] = list(
+		"",
+		"",
+		"")
+		
+	B.emote_lists[DM_DIGEST] = list(
+		"",
+		"",
+		"")
+	*/
+
+// CHOMPEdit end: More voremob bellies!
 
 /datum/say_list/rabbit
 	speak = list("chrrrs.")

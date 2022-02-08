@@ -32,6 +32,7 @@ var/const/PATHFINDER 		=(1<<11) //VOREStation Add
 var/const/EXPLORER 			=(1<<12) //VOREStation Add
 var/const/SAR 				=(1<<13) //VOREStation Add
 var/const/XENOBOTANIST		=(1<<14) //VOREStation Add
+var/const/PILOT 			=(1<<15) //CHOMPStation EDIT
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -48,8 +49,20 @@ var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
-var/const/PILOT 			=(1<<13) //VOREStation Add
-var/const/ENTERTAINER		=(1<<14) //VOREStation Add
+var/const/ENTERTAINER		=(1<<13) //VOREStation Add
+
+/* // CHOMPedit: Comment out Talon positions, we don't have that here.
+//VOREStation Add
+var/const/TALON				=(1<<3)
+
+var/const/TALCAP			=(1<<0)
+var/const/TALPIL			=(1<<1)
+var/const/TALDOC			=(1<<2)
+var/const/TALSEC			=(1<<3)
+var/const/TALENG			=(1<<4)
+var/const/TALMIN			=(1<<5)
+//VOREStation Add End
+*/
 
 var/list/assistant_occupations = list(
 )
@@ -146,7 +159,6 @@ var/list/whitelisted_positions = list(
 	"Warden",
 	"AI"
 )
-
 
 /proc/guest_jobbans(var/job)
 	return ((job in whitelisted_positions))

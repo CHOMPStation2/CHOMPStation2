@@ -6,6 +6,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.2, "hunger_factor" = 0.2, "metabolism" = 0.06) // +20% rate and 4x hunger (Teshari level)
 	excludes = list(/datum/trait/neutral/metabolism_down, /datum/trait/neutral/metabolism_apex)
+	custom_only = FALSE // CHOMPEdit
 
 /datum/trait/neutral/metabolism_down
 	name = "Metabolism, Slow"
@@ -13,6 +14,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 0.8, "hunger_factor" = 0.04, "metabolism" = 0.0012) // -20% of default.
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_apex)
+	custom_only = FALSE // CHOMPEdit
 
 /datum/trait/neutral/metabolism_apex
 	name = "Metabolism, Apex"
@@ -20,6 +22,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_down)
+	custom_only = FALSE // CHOMPEdit
 
 /datum/trait/neutral/coldadapt
 	name = "Temp. Adapted, Cold"
@@ -174,6 +177,10 @@
 	custom_only = FALSE
 	var_changes = list("has_glowing_eyes" = 1)
 
+/datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/toggle_eye_glow
+
 /datum/trait/neutral/glowing_body
 	name = "Glowing Body"
 	desc = "Your body glows about as much as a PDA light! Settable color and toggle in Abilities tab ingame."
@@ -263,10 +270,17 @@
 
 /datum/trait/neutral/allergen_reduced_effect
 	name = "Reduced Allergen Reaction"
-	desc = "This trait halves the lethality of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to nonlethal reactions or special reactions (such as unathi drowsiness from sugars)."
+	desc = "This trait drastically reduces the lethality of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to nonlethal reactions or special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 0.6)
+	var_changes = list("allergen_damage_severity" = 1.2)
+
+/datum/trait/neutral/allergen_increased_effect
+	name = "Increased Allergen Reaction"
+	desc = "This trait drastically increases the lethality of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to nonlethal reactions or special reactions (such as unathi drowsiness from sugars)."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("allergen_damage_severity" = 7.2)
 
 // Spicy Food Traits, from negative to positive.
 /datum/trait/neutral/spice_intolerance_extreme

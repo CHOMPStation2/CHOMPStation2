@@ -14,7 +14,6 @@
 	health = 200
 	say_list_type = /datum/say_list/protean_blob
 
-	// ai_inactive = TRUE //Always off //VORESTATION AI TEMPORARY REMOVAL
 	show_stat_health = FALSE //We will do it ourselves
 
 	response_help = "pets the" //CHOMP Edit
@@ -36,7 +35,7 @@
 	max_n2 = 0
 	minbodytemp = 0
 	maxbodytemp = 900
-	movement_cooldown = 2 //CHOMP Edit
+	movement_cooldown = 2
 
 	var/mob/living/carbon/human/humanform
 	var/obj/item/organ/internal/nano/refactory/refactory
@@ -95,7 +94,7 @@
 
 /mob/living/simple_mob/protean_blob/get_available_emotes()
 	return global._robot_default_emotes
-	
+
 /mob/living/simple_mob/protean_blob/init_vore()
 	return //Don't make a random belly, don't waste your time
 
@@ -477,7 +476,7 @@ var/global/list/disallowed_protean_accessories = list(
 	if(istype(loc, /obj/item/weapon/rig/protean))
 		var/obj/item/weapon/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
-		prig.ui_interact(src, nano_state = interactive_state)
+		prig.ui_interact(src, interactive_state)
 	else
 		to_chat(src, "You are not in RIG form.")
 //CHOMP Add end

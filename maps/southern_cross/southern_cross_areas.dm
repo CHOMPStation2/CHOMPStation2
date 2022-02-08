@@ -129,6 +129,7 @@
 	always_unpowered = TRUE
 
 /area/surface/cave
+	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg', 'sound/music/LRRMenu.ogg', 'sound/music/LRRTrack3.ogg', 'sound/ambience/cave/AmbCaveDebriA.ogg', 'sound/ambience/cave/AmbCaveDebriB.ogg', 'sound/ambience/cave/AmbCaveDebriC.ogg', 'sound/ambience/cave/AmbCaveDebriD.ogg')
 
 // The bottom half that connects to the outpost and is safer.
 /area/surface/cave/explored/normal
@@ -1249,6 +1250,10 @@ z
 
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/maintenance/thirddeck/dormsatmos
+	name = "Third Deck Dorm's Atmospherics"
 	icon_state = "asmaint"
 
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new First Aid station.

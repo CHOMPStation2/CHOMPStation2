@@ -344,8 +344,10 @@
 			to_chat(user, "<span class='notice'>The [src] have already been clipped!</span>")
 			update_icon()
 			return
+
 		playsound(src, W.usesound, 50, 1)
 		user.visible_message("<font color='red'>[user] cuts the fingertips off of the [src].</font>","<font color='red'>You cut the fingertips off of the [src].</font>")
+
 		clipped = 1
 		name = "modified [name]"
 		desc = "[desc]<br>They have had the fingertips cut off of them."
@@ -626,6 +628,14 @@
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
 
+	//CHOMPEdit begin
+	if(istype(usr, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = usr
+		if(H.ability_flags & 0x1)
+			to_chat(usr, "<span class='warning'>You cannot do that while phase shifted.</span>")
+			return
+	//CHOMPEdit end
+
 	holding.forceMove(get_turf(usr))
 
 	if(usr.put_in_hands(holding))
@@ -764,7 +774,7 @@
 	// means that if a taur puts on an already taurized suit without a taur sprite
 	// for their taur type, but the previous taur type had a sprite, it stays
 	// taurized and they end up with that taur style which is funny
-	else 
+	else
 		taurized = FALSE
 
 	if(!taurized)
@@ -816,7 +826,9 @@
 		*/
 	var/displays_id = 1
 	var/rolled_down = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	var/rolled_down_icon_override = TRUE
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	var/rolled_sleeves_icon_override = TRUE									
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/uniform/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/uniform/mob_vox.dmi'
@@ -878,7 +890,7 @@
 		H = src.loc
 
 	var/icon/under_icon
-	if(icon_override)
+	if(icon_override && rolled_down_icon_override)
 		under_icon = icon_override
 	else if(H && LAZYACCESS(sprite_sheets, H.species.get_bodytype(H)))
 		under_icon = sprite_sheets[H.species.get_bodytype(H)]
@@ -901,7 +913,7 @@
 		H = src.loc
 
 	var/icon/under_icon
-	if(icon_override)
+	if(icon_override && rolled_sleeves_icon_override)
 		under_icon = icon_override
 	else if(H && LAZYACCESS(sprite_sheets, H.species.get_bodytype(H)))
 		under_icon = sprite_sheets[H.species.get_bodytype(H)]
@@ -1046,3 +1058,10 @@
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
 	..()
+	
+//Vorestation edit - eject mobs from clothing before deletion
+/obj/item/clothing/Destroy()
+	for(var/mob/living/M in contents)
+		M.forceMove(get_turf(src))
+	return ..()
+//Vorestation edit end 

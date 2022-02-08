@@ -14,8 +14,10 @@
 	web_master_type = /datum/shuttle_web_master/shuttle1
 	autopilot = TRUE
 	can_autopilot = TRUE
-	autopilot_delay = 60
-	autopilot_first_delay = 150 // Five minutes at roundstart. Two minutes otherwise.
+	autopilot_delay = 30
+	autopilot_first_delay = 150 // Five minutes at roundstart. One minute otherwise.
+
+	flight_time_modifier = 0.25 // Speeding up Southern Cross auto shuttles because they're too slow.
 
 /datum/shuttle_web_master/shuttle1
 	destination_class = /datum/shuttle_destination/shuttle1
@@ -56,8 +58,10 @@
 	web_master_type = /datum/shuttle_web_master/shuttle2
 	autopilot = TRUE
 	can_autopilot = TRUE
-	autopilot_delay = 60
-	autopilot_first_delay = 270 // Nine minutes at roundstart. Two minutes otherwise. This should leave when the first shuttle departs the outpost.
+	autopilot_delay = 30
+	autopilot_first_delay = 210 // Seven minutes at roundstart. One minute otherwise. This should leave when the first shuttle departs the outpost.
+
+	flight_time_modifier = 0.25 // Speeding up Southern Cross auto shuttles because they're too slow.
 
 /datum/shuttle_web_master/shuttle2
 	destination_class = /datum/shuttle_destination/shuttle2

@@ -97,4 +97,4 @@
 #undef LOC_HANGAR3
 
 #undef VERM_RATS
-#undef VERM_LIZARDS
+#undef VERM_LIZARDMEN
