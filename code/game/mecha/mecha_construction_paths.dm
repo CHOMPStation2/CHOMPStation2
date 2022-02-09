@@ -1609,13 +1609,13 @@
 					//6
 					list("key"=/obj/item/stack/material/steel,
 							"backkey"=IS_SCREWDRIVER,
-							"desc"="Hand teleporter is secured"),
+							"desc"="Translocator is secured"),
 					//7
 					list("key"=IS_SCREWDRIVER,
 							"backkey"=IS_CROWBAR,
-							"desc"="Hand teleporter is installed"),
+							"desc"="Translocator is installed"),
 					//8
-					list("key"=/obj/item/weapon/hand_tele,
+					list("key"=/obj/item/device/perfect_tele,
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="SMES coil is secured"),
 					//9
