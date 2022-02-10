@@ -45,7 +45,8 @@
 							F.forceMove(src)
 			spawn(refill_cooldown)
 				for(var/atom/movable/F in bowl_contents)
-					F.forceMove(exit_landmark)
+					if(F.loc == src)
+						F.forceMove(exit_landmark)
 				bowl_contents.Cut()
 				refilling = FALSE
 			return
