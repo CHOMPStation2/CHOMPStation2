@@ -14,7 +14,7 @@
 		exit_landmark = locate(/obj/effect/landmark/teleplumb_exit)
 		exit_container = locate(/obj/structure/biowaste_tank)
 		if(exit_container)
-			exit_landmark = exit_container
+			exit_landmark = exit_container //Override landmark if container is available.
 		if(teleplumbed && exit_landmark)
 			desc = "The BS-500, a bluespace rift-rotation-based waste disposal unit for small matter. This one seems remarkably clean."
 	return ..()
@@ -25,6 +25,9 @@
 		for(var/obj/item/I in loc.contents)
 			if(istype(I) && !I.anchored)
 				bowl_contents += I
+		for(var/mob/living/L in loc.contents)
+			if(L.resting || L.lying && L.size_multiplier <= 0.75 && !L.buckled)
+				bowl_contents += L
 		if(bowl_contents.len)
 			refilling = TRUE
 			user.visible_message("<span class='notice'>[user] flushes the toilet.</span>", "<span class='notice'>You flush the toilet.</span>")
@@ -32,15 +35,16 @@
 			playsound(src, 'sound/effects/bubbles.ogg', 50, 1)
 			playsound(src, 'sound/mecha/powerup.ogg', 30, 1)
 			var/bowl_conga = 0
-			for(var/obj/item/F in bowl_contents)
+			for(var/atom/movable/F in bowl_contents)
 				if(bowl_conga < 150)
 					bowl_conga += 2
 				spawn(3 + bowl_conga)
 					F.SpinAnimation(5,3)
 					spawn(15)
-						F.forceMove(src)
+						if(F.loc == loc)
+							F.forceMove(src)
 			spawn(refill_cooldown)
-				for(var/obj/item/F in bowl_contents)
+				for(var/atom/movable/F in bowl_contents)
 					F.forceMove(exit_landmark)
 				bowl_contents.Cut()
 				refilling = FALSE
