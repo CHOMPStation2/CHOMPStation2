@@ -78,12 +78,13 @@
 
 /datum/trait/positive/heavyweight
 	name = "Heavyweight"
-	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, it's much more difficult to move you."
+	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you."
 	cost = 2
+	var_changes = list("stun_mod" = 0.75, "weaken_mod" = 0.75) // Stuns are 75% as effective - a stun of 3 seconds will be 2 seconds after rounding. Set to 0.75 to make a 3 second stun 2 seconds.(Weaken is used alongside stun to prevent aiming.)
 
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.mob_bump_flag = HEAVY
+	H.mob_size = MOB_LARGE
 
 /datum/trait/positive/table_passer
 	name = "Table passer"
@@ -94,24 +95,11 @@
 	..()
 	H.pass_flags = PASSTABLE
 
-
-/datum/trait/positive/big_mouth
-	name = "Big mouth"
-	desc = "It takes half as many bites to finish food as it does for most people."
-	cost = 0  //This doesn't deserve a cost.
-	var_changes = list("bite_mod" = 2)
-
 /datum/trait/positive/grappling_expert
 	name = "Grappling expert"
 	desc = "Your grabs are much harder to escape from, and you are better at escaping from other's grabs!"
 	cost = 3
 	var_changes = list("grab_resist_divisor_victims" = 1.5, "grab_resist_divisor_self" = 0.5, "grab_power_victims" = -1, "grab_power_self" = 1)
-
-/datum/trait/positive/big_mouth_extreme
-	name = "Giant mouth"
-	desc = "It takes a quarter as many bites to finish food as it does for most people."
-	cost = 0  //This also doesn't deserve a cost.
-	var_changes = list("bite_mod" = 4)
 
 /datum/trait/positive/absorbent
 	name = "Absorbent"

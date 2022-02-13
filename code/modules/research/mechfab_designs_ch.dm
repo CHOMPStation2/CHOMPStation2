@@ -96,16 +96,17 @@
 	build_path = /obj/item/mecha_parts/part/phazon_right_arm
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 15000, MAT_PHORON = 2000, MAT_GOLD = 2000, MAT_VERDANTIUM = 500)
+
 /datum/design/item/mechfab/phazon/left_leg
-	name = "Phazon Left Legs"
-	id = "phazon_left_legs"
+	name = "Phazon Left Leg"
+	id = "phazon_left_leg"
 	build_path = /obj/item/mecha_parts/part/phazon_left_leg
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 15000, MAT_PHORON = 2000, MAT_GOLD = 2000, MAT_VERDANTIUM = 500)
 
 /datum/design/item/mechfab/phazon/right_leg
-	name = "Phazon Right Legs"
-	id = "phazon_right_legs"
+	name = "Phazon Right Leg"
+	id = "phazon_right_leg"
 	build_path = /obj/item/mecha_parts/part/phazon_right_leg
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 15000, MAT_PHORON = 2000, MAT_GOLD = 2000, MAT_VERDANTIUM = 500)
