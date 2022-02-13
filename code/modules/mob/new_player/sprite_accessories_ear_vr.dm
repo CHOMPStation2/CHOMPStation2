@@ -798,8 +798,6 @@
 	extra_overlay = "jackalope-antlers"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-<<<<<<< HEAD
-=======
 
 /datum/sprite_accessory/ears/kittyr
 	name = "kitty right only, colorable"
@@ -818,4 +816,3 @@
 	extra_overlay = "bunny-tall-inner"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
->>>>>>> 657bedb35d6... Merge pull request #12200 from Heroman3003/bradny
