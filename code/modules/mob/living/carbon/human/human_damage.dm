@@ -302,6 +302,32 @@
 		halloss = 0
 	else
 		..()
+		
+/mob/living/carbon/human/Stun(var/amount)
+	if(amount > 0)	//only multiply it by the mod if it's positive, or else it takes longer to fade too!
+		amount = amount*species.stun_mod
+	..(amount)
+
+/mob/living/carbon/human/SetStunned(var/amount)
+	..()
+	
+/mob/living/carbon/human/AdjustStunned(var/amount)
+	if(amount > 0) // Only multiply it if positive.
+		amount = amount*species.stun_mod
+	..(amount)
+	
+/mob/living/carbon/human/Weaken(var/amount)
+	if(amount > 0)	//only multiply it by the mod if it's positive, or else it takes longer to fade too!
+		amount = amount*species.weaken_mod
+	..(amount)
+
+/mob/living/carbon/human/SetWeakened(var/amount)
+	..()
+	
+/mob/living/carbon/human/AdjustWeakened(var/amount)
+	if(amount > 0) // Only multiply it if positive.
+		amount = amount*species.weaken_mod
+	..(amount)
 
 /mob/living/carbon/human/getToxLoss()
 	if(species.flags & NO_POISON)

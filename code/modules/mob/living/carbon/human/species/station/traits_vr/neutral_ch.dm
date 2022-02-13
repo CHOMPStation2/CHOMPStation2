@@ -40,3 +40,27 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 2, "hunger_factor" = 1.6, "metabolism" = 0.012)	//2x metabolism speed, 32x hunger speed
 	custom_only = FALSE
+
+/datum/trait/neutral/big_mouth
+	name = "Big mouth"
+	desc = "It takes half as many bites to finish food as it does for most people."
+	cost = 0
+	var_changes = list("bite_mod" = 2)
+	custom_only = FALSE
+	
+/datum/trait/neutral/big_mouth_extreme
+	name = "Giant mouth"
+	desc = "It takes a quarter as many bites to finish food as it does for most people."
+	cost = 0
+	var_changes = list("bite_mod" = 4)
+	custom_only = FALSE
+	
+/datum/trait/neutral/stubborn
+	name = "Stubborn"
+	desc = "You are harder to move out of the way due to your sturdiness, frame, or just sheer stubbornness, and neither players nor mobs can trade places with you or bump you out of the way."
+	cost = 0
+	custom_only = FALSE
+	
+/datum/trait/neutral/stubborn/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.mob_bump_flag = HEAVY
