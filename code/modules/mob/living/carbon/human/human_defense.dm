@@ -422,7 +422,6 @@ emp_act
 				return
 
 		if(!zone)
-			message_admins("WE FOUND THE BITCH")
 			visible_message("<b>\The [O]</b> misses [src] narrowly!")
 			return
 
