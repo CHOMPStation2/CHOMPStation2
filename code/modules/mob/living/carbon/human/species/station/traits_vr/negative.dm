@@ -103,14 +103,14 @@
 /datum/trait/negative/pain_intolerance_basic
 	name = "Pain Intolerant"
 	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources." 
-	cost = -1
-	var_changes = list("pain_mod" = 1.25)
+	cost = -2
+	var_changes = list("pain_mod" = 1.2) // CHOMPEdit: Makes this exact opposite of Pain Tolerance Basic.
 
 /datum/trait/negative/pain_intolerance_advanced
 	name = "High Pain Intolerance"
 	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
-	cost = -2
-	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit
+	cost = -3
+	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit. CHOMPEdit: This really should cost more if it's this bad.
 //YW ADDITIONS END
 
 /datum/trait/negative/conductive
