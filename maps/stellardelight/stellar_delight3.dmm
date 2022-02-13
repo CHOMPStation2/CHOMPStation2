@@ -13227,6 +13227,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/weapon/folder/white_cmo,
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/crew_quarters/heads/cmo)
 "VG" = (
@@ -13680,6 +13681,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/weapon/folder/white_rd,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/heads/hor)
 "Xo" = (
