@@ -268,6 +268,7 @@
 			ai_holder.react_to_attack(Proj.firer)
 		return
 	else
+		..()
 
 
 
