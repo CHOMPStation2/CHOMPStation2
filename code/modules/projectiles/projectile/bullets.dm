@@ -16,7 +16,7 @@
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 
 /obj/item/projectile/bullet/on_hit(var/atom/target, var/blocked = 0)
-	//if (..(target, blocked))
+	..(target, blocked)
 		//var/mob/living/L = target
 		//shake_camera(L, 3, 2) CHOMPEDIT - "Muh realism". The screenshake is obnoxious for gameplay. TODO: Replace with blood splatter indicator.
 
