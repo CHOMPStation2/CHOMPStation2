@@ -260,8 +260,6 @@
 	req_log_access = access_cmo
 	has_logs = 1
 
-<<<<<<< HEAD
-=======
 //Airlock antitox vendor
 /obj/machinery/vending/wallmed_airlock
 	name = "Airlock NanoMed"
@@ -328,7 +326,6 @@
 					/obj/item/weapon/reagent_containers/glass/beaker = 4,/obj/item/weapon/storage/bag/plants = 5)
 	premium = list(/obj/item/weapon/reagent_containers/glass/bottle/ammonia = 10,/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 5)
 
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 /obj/machinery/vending/abductor
 	name = "Abduct-U"
 	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects."
@@ -352,13 +349,9 @@
 					/obj/item/device/perfect_tele/alien = 1
 					)
 	vend_delay = 15
-<<<<<<< HEAD
-	
-=======
 
 // Loadout Vending Machines Start
 
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 /obj/machinery/vending/loadout
 	name = "Fingers and Toes"
 	desc = "A special vendor for gloves and shoes!"
@@ -813,10 +806,7 @@
 					/obj/item/clothing/under/dress/maid = 5,
 					/obj/item/clothing/under/dress/maid/sexy = 5,
 					/obj/item/clothing/under/dress/maid/janitor = 5,
-<<<<<<< HEAD
 					/obj/item/clothing/under/harness = 5, //CHOMP Edit: Added gear harness,
-=======
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 					/obj/item/clothing/under/moderncoat = 5,
 					/obj/item/clothing/under/permit = 5,
 					/obj/item/clothing/under/oldwoman = 5,
@@ -1104,7 +1094,6 @@
 	premium = list(/obj/item/clothing/under/color/rainbow = 1)
 	contraband = list(/obj/item/clothing/under/rank/clown = 1)
 
-<<<<<<< HEAD
 //////////////////START OF CHIPS CO. VENDORS//////////////////
 
 /obj/machinery/vending/loadout/gadget
@@ -1198,8 +1187,6 @@
 
 //////////////////END OF CHIPS CO. VENDORS//////////////////
 
-=======
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 /obj/machinery/vending/loadout/loadout_misc
 	name = "Bits and Bobs"
 	desc = "A special vendor for things and also stuff!"
@@ -1236,12 +1223,7 @@
 	product_ads = "Dress your best! It's what big D would want.;Overwear for all occasions!;Big D has what you need if what you need is some form of jacket!;Need a new hoodie? Bid D has you covered.;Big D says you need a new suit!;Big D smiles when he sees you in one of his coats!"
 	icon_state = "suit"
 	vend_delay = 16
-<<<<<<< HEAD
-	products = list(/obj/item/clothing/suit/storage/toggle/labcoat/old = 100,
-					/obj/item/clothing/suit/storage/apron = 5,
-=======
 	products = list(/obj/item/clothing/suit/storage/apron = 5,
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 					/obj/item/clothing/suit/storage/flannel/aqua = 5,
 					/obj/item/clothing/suit/storage/toggle/bomber = 5,
 					/obj/item/clothing/suit/storage/bomber/alt = 5,
@@ -1284,10 +1266,7 @@
 					/obj/item/clothing/suit/storage/toggle/labcoat/pink = 5,
 					/obj/item/clothing/suit/storage/toggle/labcoat/red = 5,
 					/obj/item/clothing/suit/storage/toggle/labcoat/yellow = 5,
-<<<<<<< HEAD
-=======
 					/obj/item/clothing/suit/storage/toggle/labcoat/old = 5,
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 					/obj/item/clothing/suit/leathercoat = 5,
 					/obj/item/clothing/suit/storage/toggle/leather_jacket = 5,
 					/obj/item/clothing/suit/storage/leather_jacket_alt = 5,
@@ -1312,10 +1291,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-<<<<<<< HEAD
-=======
 					/obj/item/clothing/suit/storage/snowsuit = 5,
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
