@@ -245,11 +245,8 @@
 /obj/item/seeds
 	persist_storable = FALSE
 /obj/item/weapon/reagent_containers/food/snacks/grown
-<<<<<<< HEAD
-=======
 	persist_storable = FALSE
 /obj/item/weapon/stock_parts
 	persist_storable = FALSE
 /obj/item/weapon/rcd
->>>>>>> 5d069ea2141... Merge pull request #12225 from Very-Soft/notthese
 	persist_storable = FALSE
