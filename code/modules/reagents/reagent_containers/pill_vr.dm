@@ -147,9 +147,7 @@
 	. = ..()
 	reagents.add_reagent("sleevingcure", 1)
 	color = reagents.get_color()
-<<<<<<< HEAD
 */ //CHOMPStation removal end
-=======
 
 /obj/item/weapon/reagent_containers/pill/airlock
 	name = "\'Airlock\' Pill"
@@ -160,4 +158,3 @@
 	..()
 	reagents.add_reagent("anti_toxin", 15)
 	reagents.add_reagent("paracetamol", 5)
->>>>>>> b5e1cef4480... Merge pull request #12235 from Heroman3003/refill_cartridges
