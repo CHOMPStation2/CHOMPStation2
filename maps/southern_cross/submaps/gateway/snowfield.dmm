@@ -11830,8 +11830,7 @@
 	req_one_access = list(1,11)
 	},
 /obj/machinery/door/blast/regular{
-	id = "Biohazard";
-	name = "Biohazard Shutter"
+	id = "snowfieldenglockdown"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
@@ -19239,10 +19238,9 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "Biohazard";
+	id = "snowfieldenglockdown";
 	name = "Engine Room Lockdown";
 	pixel_x = 5;
-	req_access = null;
 	req_one_access = list(1,10)
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -24464,15 +24462,14 @@
 	name = "Engine Room";
 	req_one_access = list(1,11)
 	},
-/obj/machinery/door/blast/regular{
-	id = "Biohazard";
-	name = "Biohazard Shutter"
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/door/blast/regular{
+	id = "snowfieldenglockdown"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/engineering/engine)
@@ -26016,8 +26013,7 @@
 	req_one_access = list(1,10)
 	},
 /obj/machinery/door/blast/regular{
-	id = "Biohazard";
-	name = "Biohazard Shutter"
+	id = "snowfieldenglockdown"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/monitor_room)
@@ -26696,7 +26692,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/space,
+/turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/patients)
 "xge" = (
 /obj/machinery/gateway{
