@@ -250,6 +250,8 @@
 		<B>SPEAKER FOUR, \"MAX\":</B> Predicted to be Maxwell Ulysses Sarevic, zorren, known smuggler, and wanted in the Elysian Colonies for liberation of slaves and, quote, \'harshing my vibe, and being a, like, <U>total lamer</U>, dude\', unquote. 99% confidence.
 	"}
 
+//CHOMPADD start - Snowfield blackbox. Could move this to snowfield_ch.dm tbh.
+
 /obj/structure/prop/blackbox/snowfield_base
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/snowfield_base)
 
@@ -303,3 +305,5 @@
 		<B>%AV!NG RECORD . . . . . SAVED.</B><BR>
 		<B>SWITCHING MODE TO : <U>ENERGY-SAVING MODE.</U></B>
 	"}
+
+//CHOMPADD end

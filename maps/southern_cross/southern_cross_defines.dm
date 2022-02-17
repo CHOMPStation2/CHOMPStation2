@@ -110,7 +110,6 @@
 
 	//CHOMPStation Addition End
 	lateload_gateway = list(
-		list("Carp Farm"),
 		list("Snow Field")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
