@@ -7748,7 +7748,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/testroom)
 "gPa" = (
-/obj/machinery/gateway/centeraway,
+/obj/machinery/gateway/centeraway{
+	calibrated = 0
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
