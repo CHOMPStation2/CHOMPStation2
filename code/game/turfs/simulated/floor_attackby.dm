@@ -6,7 +6,7 @@
 	if(isliving(user) && istype(C, /obj/item/weapon)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
 		var/mob/living/L = user
 		if(L.a_intent != I_HELP)
-			if(L.a_intent == I_DISARM)
+			if(L.a_intent == I_GRAB)
 				try_graffiti(L, C) // back by unpopular demand
 				return
 			attack_tile(C, L) // Be on help intent if you want to decon something.
