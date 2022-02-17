@@ -3,18 +3,14 @@
 	if(!C || !user)
 		return 0
 
-	if(isliving(user) && istype(C, /obj/item/weapon))
+	if(isliving(user) && istype(C, /obj/item/weapon)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
 		var/mob/living/L = user
 		if(L.a_intent != I_HELP)
+			if(L.a_intent == I_DISARM)
+				try_graffiti(L, C) // back by unpopular demand
+				return
 			attack_tile(C, L) // Be on help intent if you want to decon something.
-			return
-
-	if(!(C.has_tool_quality(TOOL_SCREWDRIVER) && flooring && (flooring.flags & TURF_REMOVE_SCREWDRIVER)))
-		if(isliving(user))
-			var/mob/living/L = user
-			if(L.a_intent == I_HELP)
-				if(try_graffiti(L, C)) // back by unpopular demand
-					return
+			return	//CHOMPEDIT END
 
 	// Multi-z roof building
 	if(istype(C, /obj/item/stack/tile/roofing))
@@ -72,7 +68,7 @@
 		else if(istype(C, /obj/item/stack/tile))
 			try_replace_tile(C, user)
 			return
-	
+
 	// Floor is plating (or no flooring)
 	else
 		// Placing wires on plating
@@ -134,7 +130,7 @@
 						return
 					if(!can_remove_plating(user))
 						return
-					
+
 					user.visible_message("<span class='warning'>[user] begins cutting through [src].</span>", "<span class='warning'>You begin cutting through [src].</span>")
 					// This is slow because it's a potentially hostile action to just cut through places into space in the middle of the bar and such
 					// Presumably also the structural floor is thick?
