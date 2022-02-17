@@ -351,6 +351,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/heads/hor)
+"by" = (
+/turf/simulated/wall/bay/r_wall/steel,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "bB" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1403,7 +1406,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "fg" = (
 /obj/structure/handrail{
 	dir = 1
@@ -2098,7 +2101,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "ii" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/command)
@@ -2162,7 +2165,7 @@
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "iw" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2299,7 +2302,7 @@
 "iS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "iV" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -2867,7 +2870,7 @@
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "lh" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/hatch{
@@ -3041,7 +3044,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "lH" = (
 /obj/machinery/telecomms/server/presets/service/sd,
 /turf/simulated/floor/tiled/dark{
@@ -3358,7 +3361,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "mM" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -3634,7 +3637,7 @@
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "nF" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -4591,7 +4594,7 @@
 "qS" = (
 /obj/machinery/light/small,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "qU" = (
 /obj/machinery/light{
 	dir = 4
@@ -4627,8 +4630,11 @@
 	dir = 5
 	},
 /obj/structure/reagent_dispensers/fueltank,
+/obj/machinery/alarm/angled{
+	dir = 4
+	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "qZ" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/power/apc/angled{
@@ -5202,7 +5208,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "tn" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -5463,6 +5469,12 @@
 "uq" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/stellardelight/deck3/starboarddock)
+"ur" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/bay/r_wall/steel,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "us" = (
 /obj/machinery/light{
 	dir = 4
@@ -5656,7 +5668,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "uZ" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -5775,7 +5787,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "vA" = (
 /obj/machinery/power/apc/angled{
 	dir = 1;
@@ -6031,7 +6043,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "wy" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -7163,7 +7175,7 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "At" = (
 /obj/structure/table/glass,
 /obj/item/device/flashlight/lamp/green,
@@ -7255,6 +7267,10 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardcent)
+"AK" = (
+/obj/random/trash_pile,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "AP" = (
 /obj/machinery/power/apc/angled{
 	dir = 4
@@ -7297,7 +7313,7 @@
 	stripe_color = "#454545"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "AU" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -7410,7 +7426,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Bj" = (
 /obj/machinery/message_server,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7599,7 +7615,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "BH" = (
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
@@ -7943,6 +7959,12 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/starboard)
+"CK" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/steel,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "CO" = (
 /obj/effect/overmap/visitable/ship/stellar_delight,
 /turf/space,
@@ -8067,7 +8089,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Dn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -8465,7 +8487,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "EU" = (
 /obj/structure/cable/blue{
 	icon_state = "2-8"
@@ -8762,7 +8784,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Ge" = (
 /obj/structure/table/standard,
 /obj/item/weapon/aiModule/nanotrasen,
@@ -8857,7 +8879,7 @@
 	dir = 10
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Gv" = (
 /obj/structure/sign/deck3{
 	pixel_x = -32
@@ -9189,7 +9211,7 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "HH" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -10006,7 +10028,7 @@
 "Kt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Kv" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -10055,7 +10077,7 @@
 /obj/random/mre,
 /obj/random/mre,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "KD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -10064,7 +10086,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "KF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -10096,6 +10118,9 @@
 "KI" = (
 /turf/simulated/floor/wood,
 /area/stellardelight/deck3/readingroom)
+"KJ" = (
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "KL" = (
 /obj/machinery/power/apc/angled{
 	dir = 8
@@ -10184,7 +10209,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Le" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/flora/pottedplant/minitree,
@@ -10276,7 +10301,7 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Lz" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -10434,7 +10459,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Mc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -10594,7 +10619,7 @@
 	},
 /obj/random/trash_pile,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "MC" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -10742,7 +10767,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "MX" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -10806,7 +10831,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Nf" = (
 /obj/machinery/light{
 	dir = 4
@@ -12063,7 +12088,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Ru" = (
 /obj/machinery/holoplant,
 /obj/machinery/camera/network/command{
@@ -12320,6 +12345,12 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/foreportrooma)
+"Sw" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portaft)
 "Sz" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -12940,7 +12971,7 @@
 "UQ" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "UR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -13402,7 +13433,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/stellardelight/deck3/portaft)
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Ws" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -21581,7 +21612,7 @@ dE
 dE
 dE
 dE
-dE
+Sw
 dE
 dE
 dE
@@ -26535,8 +26566,8 @@ Hh
 eb
 tC
 Rq
-dE
-Yg
+KJ
+by
 Pa
 wR
 Yy
@@ -26677,8 +26708,8 @@ ON
 Xd
 Ja
 Ly
-dE
-Yg
+KJ
+by
 ow
 Pa
 ow
@@ -26820,26 +26851,26 @@ LR
 me
 tk
 qS
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+by
+by
+by
+by
+by
+by
+by
+by
+by
+by
 Bg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+by
+by
+by
+by
+by
+by
+by
 ff
-Yg
+by
 aA
 nr
 lT
@@ -26978,7 +27009,7 @@ iS
 Kz
 Dk
 qY
-JW
+AK
 Ld
 KD
 vy
@@ -27101,18 +27132,18 @@ NL
 NL
 qy
 NL
-Yg
-dE
-dE
+by
+KJ
+KJ
 le
 ww
 ww
 MB
 Kt
 iv
-dE
+KJ
 UQ
-dE
+KJ
 HF
 nD
 BG
@@ -27243,29 +27274,29 @@ NL
 NL
 we
 NL
-Yg
-Yg
-Yg
-Yg
-ki
-ki
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-vq
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-ki
-ki
-Yg
+by
+by
+by
+by
+CK
+CK
+by
+by
+by
+by
+by
+by
+ur
+by
+by
+by
+by
+by
+by
+by
+CK
+CK
+by
 hQ
 lq
 lq
