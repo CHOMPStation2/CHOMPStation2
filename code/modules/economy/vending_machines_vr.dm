@@ -23,6 +23,8 @@
 					/obj/item/clothing/glasses/omnihud/med = 4, /obj/item/device/glasses_kit = 1,  /obj/item/weapon/storage/quickdraw/syringe_case = 4)
 	..()
 
+// Food Machines (for event/away maps)
+
 //I want this not just as part of the zoo. ;v
 /obj/machinery/vending/food
 	name = "Food-O-Mat"
@@ -234,20 +236,7 @@
 	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/tofurkey = 10)
 	vend_delay = 10
 
-//End of food event machines
-
-/* For later, then
-/obj/machinery/vending/weapon_machine
-	name = "Frozen Star Guns&Ammo"
-	desc = "A self-defense equipment vending machine. When you need to take care of that clown."
-	product_slogans = "The best defense is good offense!;Buy for your whole family today!;Nobody can outsmart bullet!;God created man - Frozen Star made them EQUAL!;Nobody can outsmart bullet!;Stupidity can be cured! By LEAD.;Dead kids can't bully your children!"
-	product_ads = "Stunning!;Take justice in your own hands!;LEADearship!"
-	icon = 'icons/obj/vending_vr.dmi'
-	icon_state = "weapon"
-	products = list(/obj/item/device/flash = 6,/obj/item/weapon/reagent_containers/spray/pepper = 6, /obj/item/weapon/gun/projectile/olivaw = 5, /obj/item/weapon/gun/projectile/giskard = 5, /obj/item/ammo_magazine/mg/cl32/rubber = 20)
-	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/syndicake = 6)
-	prices = list(/obj/item/device/flash = 600,/obj/item/weapon/reagent_containers/spray/pepper = 800,  /obj/item/weapon/gun/projectile/olivaw = 1600, /obj/item/weapon/gun/projectile/giskard = 1200, /obj/item/ammo_magazine/mg/cl32/rubber = 200)
-*/
+// Food Machines (for event/away maps)
 
 /obj/machinery/vending/fitness/New()
 	products += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 8)
@@ -270,6 +259,72 @@
 	contraband = list(/obj/item/weapon/reagent_containers/glass/bottle/stoxin = 2)
 	req_log_access = access_cmo
 	has_logs = 1
+
+//Airlock antitox vendor
+/obj/machinery/vending/wallmed_airlock
+	name = "Airlock NanoMed"
+	desc = "Wall-mounted Medical Equipment dispenser. This limited-use version dispenses antitoxins with mild painkillers for surface EVAs."
+	icon_state = "wallmed"
+	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
+	products = list(/obj/item/weapon/reagent_containers/pill/airlock = 20)
+	contraband = list(/obj/item/weapon/reagent_containers/pill/tox = 2)
+	req_log_access = access_cmo
+	has_logs = 1
+
+/obj/machinery/seed_storage/brig
+	name = "Prisoners' food seed storage"
+	starting_seeds = list(
+		/obj/item/seeds/appleseed = 3,
+		/obj/item/seeds/bananaseed = 3,
+		/obj/item/seeds/berryseed = 3,
+		/obj/item/seeds/cabbageseed = 3,
+		/obj/item/seeds/carrotseed = 3,
+		/obj/item/seeds/celery = 3,
+		/obj/item/seeds/chantermycelium = 3,
+		/obj/item/seeds/cherryseed = 3,
+		/obj/item/seeds/chiliseed = 3,
+		/obj/item/seeds/cocoapodseed = 3,
+		/obj/item/seeds/cornseed = 3,
+		/obj/item/seeds/durian = 3,
+		/obj/item/seeds/eggplantseed = 3,
+		/obj/item/seeds/grapeseed = 3,
+		/obj/item/seeds/grassseed = 3,
+		/obj/item/seeds/replicapod = 3,
+		/obj/item/seeds/lavenderseed = 3,
+		/obj/item/seeds/lemonseed = 3,
+		/obj/item/seeds/lettuce = 3,
+		/obj/item/seeds/limeseed = 3,
+		/obj/item/seeds/mtearseed = 2,
+		/obj/item/seeds/orangeseed = 3,
+		/obj/item/seeds/onionseed = 3,
+		/obj/item/seeds/peanutseed = 3,
+		/obj/item/seeds/plumpmycelium = 3,
+		/obj/item/seeds/poppyseed = 3,
+		/obj/item/seeds/potatoseed = 3,
+		/obj/item/seeds/pumpkinseed = 3,
+		/obj/item/seeds/rhubarb = 3,
+		/obj/item/seeds/riceseed = 3,
+		/obj/item/seeds/rose = 3,
+		/obj/item/seeds/soyaseed = 3,
+		/obj/item/seeds/pineapple = 3,
+		/obj/item/seeds/sugarcaneseed = 3,
+		/obj/item/seeds/sunflowerseed = 3,
+		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/tobaccoseed = 3,
+		/obj/item/seeds/tomatoseed = 3,
+		/obj/item/seeds/towermycelium = 3,
+		/obj/item/seeds/vanilla = 3,
+		/obj/item/seeds/watermelonseed = 3,
+		/obj/item/seeds/wheatseed = 3,
+		/obj/item/seeds/whitebeetseed = 3,
+		/obj/item/seeds/wabback = 2)
+
+/obj/machinery/vending/hydronutrients/brig
+	name = "Brig NutriMax"
+	desc = "A plant nutrients vendor. Seems some items aren't included."
+	products = list(/obj/item/weapon/reagent_containers/glass/bottle/eznutrient = 6,/obj/item/weapon/reagent_containers/glass/bottle/left4zed = 4,/obj/item/weapon/reagent_containers/glass/bottle/robustharvest = 3,/obj/item/weapon/plantspray/pests = 20,
+					/obj/item/weapon/reagent_containers/glass/beaker = 4,/obj/item/weapon/storage/bag/plants = 5)
+	premium = list(/obj/item/weapon/reagent_containers/glass/bottle/ammonia = 10,/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 5)
 
 /obj/machinery/vending/abductor
 	name = "Abduct-U"
@@ -294,7 +349,9 @@
 					/obj/item/device/perfect_tele/alien = 1
 					)
 	vend_delay = 15
-	
+
+// Loadout Vending Machines Start
+
 /obj/machinery/vending/loadout
 	name = "Fingers and Toes"
 	desc = "A special vendor for gloves and shoes!"
@@ -1166,8 +1223,7 @@
 	product_ads = "Dress your best! It's what big D would want.;Overwear for all occasions!;Big D has what you need if what you need is some form of jacket!;Need a new hoodie? Bid D has you covered.;Big D says you need a new suit!;Big D smiles when he sees you in one of his coats!"
 	icon_state = "suit"
 	vend_delay = 16
-	products = list(/obj/item/clothing/suit/storage/toggle/labcoat/old = 100,
-					/obj/item/clothing/suit/storage/apron = 5,
+	products = list(/obj/item/clothing/suit/storage/apron = 5,
 					/obj/item/clothing/suit/storage/flannel/aqua = 5,
 					/obj/item/clothing/suit/storage/toggle/bomber = 5,
 					/obj/item/clothing/suit/storage/bomber/alt = 5,
@@ -1210,6 +1266,7 @@
 					/obj/item/clothing/suit/storage/toggle/labcoat/pink = 5,
 					/obj/item/clothing/suit/storage/toggle/labcoat/red = 5,
 					/obj/item/clothing/suit/storage/toggle/labcoat/yellow = 5,
+					/obj/item/clothing/suit/storage/toggle/labcoat/old = 5,
 					/obj/item/clothing/suit/leathercoat = 5,
 					/obj/item/clothing/suit/storage/toggle/leather_jacket = 5,
 					/obj/item/clothing/suit/storage/leather_jacket_alt = 5,
@@ -1234,6 +1291,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
+					/obj/item/clothing/suit/storage/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -1297,6 +1355,7 @@
 					/obj/item/clothing/suit/storage/toggle/labcoat/pink = 100,
 					/obj/item/clothing/suit/storage/toggle/labcoat/red = 100,
 					/obj/item/clothing/suit/storage/toggle/labcoat/yellow = 100,
+					/obj/item/clothing/suit/storage/toggle/labcoat/old = 100,
 					/obj/item/clothing/suit/leathercoat = 100,
 					/obj/item/clothing/suit/storage/toggle/leather_jacket = 100,
 					/obj/item/clothing/suit/storage/leather_jacket_alt = 100,
@@ -1489,6 +1548,67 @@
 	contraband = list(/obj/item/clothing/head/syndicatefake = 1,
 					/obj/item/clothing/suit/syndicatefake = 1)
 
+/obj/machinery/vending/loadout/gadget
+	name = "Chips Co."
+	desc = "A special vendor for devices and gadgets."
+	product_ads = "You can't RESIST our great deals!;Feeling disconnected? We have a gadget for you!;You know you have the capacity to buy our capacitors!;FILL THAT HOLE IN YOUR HEART WITH OUR PLASTIC DISTRACTIONS!!!;Devices for everyone! Chips Co.!;ROBUST INVENTORY, GREAT PRICES! ;DON'T FORGET THE oyPAD 13s PRO! ON SALE NOW, ONLY ONE THOUSAND THALERS!"
+	icon_state = "gadgets"
+	vend_delay = 11
+	products = list(/obj/item/clothing/suit/circuitry = 1,
+					/obj/item/clothing/head/circuitry = 1,
+					/obj/item/clothing/shoes/circuitry = 1,
+					/obj/item/clothing/gloves/circuitry = 1,
+					/obj/item/clothing/under/circuitry = 1,
+					/obj/item/clothing/glasses/circuitry = 1,
+					/obj/item/clothing/ears/circuitry = 1,
+					/obj/item/device/text_to_speech = 5,
+					/obj/item/device/paicard = 5,
+					/obj/item/device/communicator = 10,
+					/obj/item/device/communicator/watch = 10,
+					/obj/item/device/radio = 10,
+					/obj/item/device/camera = 5,
+					/obj/item/device/taperecorder = 5,
+					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
+					/obj/item/device/pda = 10,
+					/obj/item/device/radio/headset = 10,
+					/obj/item/device/flashlight = 5,
+					/obj/item/device/laser_pointer = 3,
+					/obj/item/clothing/glasses/omnihud = 10,
+					/obj/item/device/walkpod = 5,
+					/obj/item/device/juke_remote = 1,
+					/obj/item/instrument/piano_synth/headphones = 2, // You're making a subsystem do work, I don't want it TOO busy
+					/obj/item/instrument/piano_synth/headphones/spacepods = 2,
+					/obj/item/clothing/gloves/bluespace = 5)
+	prices = list(/obj/item/clothing/suit/circuitry = 100,
+					/obj/item/clothing/head/circuitry = 100,
+					/obj/item/clothing/shoes/circuitry = 100,
+					/obj/item/clothing/gloves/circuitry = 100,
+					/obj/item/clothing/under/circuitry = 100,
+					/obj/item/clothing/glasses/circuitry = 100,
+					/obj/item/clothing/ears/circuitry = 100,
+					/obj/item/device/text_to_speech = 300,
+					/obj/item/device/paicard = 100,
+					/obj/item/device/communicator = 100,
+					/obj/item/device/communicator/watch = 100,
+					/obj/item/device/radio = 100,
+					/obj/item/device/camera = 100,
+					/obj/item/device/taperecorder = 100,
+					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 1000,
+					/obj/item/device/pda = 50,
+					/obj/item/device/radio/headset = 50,
+					/obj/item/device/flashlight = 100,
+					/obj/item/device/laser_pointer = 200,
+					/obj/item/clothing/glasses/omnihud = 100,
+					/obj/item/device/walkpod = 300,
+					/obj/item/device/juke_remote = 1000,
+					/obj/item/instrument/piano_synth/headphones = 200,
+					/obj/item/instrument/piano_synth/headphones/spacepods = 600,
+					/obj/item/clothing/gloves/bluespace = 500)
+	premium = list(/obj/item/device/perfect_tele/one_beacon = 1)
+	contraband = list(/obj/item/weapon/disk/nifsoft/compliance = 1)
+
+// Loadout Vending Machines End
+
 /obj/machinery/vending/entertainer
 	name = "Thespian's Delight"
 	desc = "Sometimes nerds need costumes!"
@@ -1580,6 +1700,7 @@
 					/obj/item/clothing/shoes/knight_costume = 3,
 					/obj/item/clothing/shoes/knight_costume/black = 3)
 
+// Event Loadout Vending Machines Start
 
 /obj/machinery/vending/event //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//
 	name = "Fingers and Toes"
@@ -2256,6 +2377,36 @@
 					/obj/item/clothing/suit/space/rig/military = 5
 					)
 
+/obj/machinery/vending/event/gadget //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//
+	name = "Chips Co."
+	desc = "A special vendor for devices and gadgets."
+	product_ads = "You can't RESIST our great deals!;Feeling disconnected? We have a gadget for you!;You know you have the capacity to buy our capacitors!;FILL THAT HOLE IN YOUR HEART WITH OUR PLASTIC DISTRACTIONS!!!;Devices for everyone! Chips Co.!;ROBUST INVENTORY, GREAT PRICES! ;DON'T FORGET THE oyPAD 13s PRO! ON SALE NOW, ONLY ONE THOUSAND THALERS!"
+	icon_state = "gadgets"
+	vend_delay = 11
+	products = list(/obj/item/clothing/suit/circuitry = 1,
+					/obj/item/clothing/head/circuitry = 1,
+					/obj/item/clothing/shoes/circuitry = 1,
+					/obj/item/clothing/gloves/circuitry = 1,
+					/obj/item/clothing/under/circuitry = 1,
+					/obj/item/clothing/glasses/circuitry = 1,
+					/obj/item/clothing/ears/circuitry = 1,
+					/obj/item/device/text_to_speech = 5,
+					/obj/item/device/paicard = 5,
+					/obj/item/device/communicator = 10,
+					/obj/item/device/communicator/watch = 10,
+					/obj/item/device/radio = 10,
+					/obj/item/device/camera = 5,
+					/obj/item/device/taperecorder = 5,
+					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
+					/obj/item/device/pda = 10,
+					/obj/item/device/radio/headset = 10,
+					/obj/item/device/flashlight = 5,
+					/obj/item/device/laser_pointer = 3,
+					/obj/item/clothing/glasses/omnihud = 10,
+					/obj/item/device/perfect_tele/one_beacon = 1,
+					/obj/item/weapon/disk/nifsoft/compliance = 1,
+					/obj/item/device/perfect_tele/alien = 10)
+
 /obj/machinery/vending/event/costume //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//
 	name = "Thespian's Delight"
 	desc = "Sometimes nerds need costumes!"
@@ -2336,6 +2487,9 @@
 					/obj/item/clothing/suit/syndicatefake = 1
 					)
 
+// Event Loadout Vending Machines End
+
+// Event Food Vending Machines Start
 
 /obj/machinery/vending/event/food //FOR FACILITATING/OUTFITTING EVENTS, DO NOT PUT THESE ON THE MAP//
 	name = "Dog Food"
@@ -3277,6 +3431,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat = 10)
 	vend_delay = 15
 
+// Event Food Vending Machines End
+
 /obj/machinery/vending/emergencyfood
 	name = "Food Cube Dispenser"
 	desc = "An ominous machine dispensing food cubes. It will keep you fed, but at what cost?"
@@ -3292,6 +3448,8 @@
 	contraband = list(/obj/item/weapon/storage/box/wings/tray = 20)
 
 /obj/machinery/vending/cola/soft
+	name = "Soft Robustdrinks"
+	desc = "A different vendor brand for soft drinks, taking off very successfully with its unique imagery and equal stock."
 	icon = 'icons/obj/vending_vr.dmi'
 	icon_state = "Cola_Machine"
 
