@@ -9,8 +9,9 @@
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_SURFACE_CASINO			10	//CHOMPedit - KSC = So there is weather on the casino.
-#define Z_LEVEL_GATEWAY					11  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
+#define Z_LEVEL_SURFACE_SKYLANDS		10
+#define Z_LEVEL_SURFACE_CASINO			11	//CHOMPedit - KSC = So there is weather on the casino.
+#define Z_LEVEL_GATEWAY					12  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
 //#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
 //Skip 13 and 14 for overmap stuff, I think???
 #define Z_LEVEL_FUELDEPOT				15
@@ -225,6 +226,12 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
+/datum/map_z_level/southern_cross/surface_skylands
+	z = Z_LEVEL_SURFACE_SKYLANDS
+	name = "Floating Islands"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
+	base_turf = /turf/simulated/open
+
 //CHOMPedit - KSC = So Christmas Casino has weather.
 /datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
@@ -284,6 +291,7 @@
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD,
+		Z_LEVEL_SURFACE_SKYLANDS,
 		Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino.
 	)
 

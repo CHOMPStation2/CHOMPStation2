@@ -52,6 +52,7 @@
 	#include "southern_cross-8.dmm" //Centcom
 	#include "southern_cross-9.dmm" //Transit
 	#include "southern_cross-10.dmm" //Sif wilds
+	#include "southern_cross-12.dmm" //Sif Skylands
 	//CHOMPStation Edit End
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 

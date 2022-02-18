@@ -98,6 +98,15 @@
 	name = "Mountains"
 	icon_state = "darkred"
 
+/area/surface/outside/wilderness/skylands
+	name = "Floating Islands"
+	icon_state = "blue"
+
+/area/surface/outside/wilderness/skylands/empty
+	name = "Sky"
+	icon_state = "red"
+	luminosity = 1
+
 /area/surface/outside/path/wilderness
 
 // Water
