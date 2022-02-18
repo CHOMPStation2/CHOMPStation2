@@ -266,8 +266,6 @@
 		else
 			M.visible_message("The petting was interrupted!!!", runemessage = "The petting was interrupted")
 	return
-<<<<<<< HEAD
-=======
 
 /mob/living/simple_mob/vore/woof/hostile/aweful
 	maxHealth = 100
@@ -317,4 +315,3 @@
 
 	projectiletype = /obj/item/projectile/awoo_missile
 	projectilesound = 'sound/voice/long_awoo.ogg'
->>>>>>> 2e3393fca55... Merge pull request #12260 from Very-Soft/misctweaks
