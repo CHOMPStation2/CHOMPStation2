@@ -21836,6 +21836,25 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
+"thE" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "empty west bump";
+	pixel_x = -24;
+	start_charge = 0
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/awaymission/snowfield/medical/hallway)
 "thY" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -41344,7 +41363,7 @@ oVH
 uGz
 iHU
 uGz
-uGz
+thE
 bUl
 hsO
 hjS

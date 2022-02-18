@@ -559,7 +559,7 @@
 	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
 	Directives : <B>Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
 	Chelyabinsk and empty the facility, excluding Class 3M, guided by Class 4 personnel. <BR>All Class 5, 6 must \
-	check the stabiity of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.</B>"
+	check the stability of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.</B>"
 
 /obj/item/weapon/paper/awaygate/snowfield/activation_order
 	name = "High Command Order Directives"
