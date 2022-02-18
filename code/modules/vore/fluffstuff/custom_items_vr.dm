@@ -1437,8 +1437,6 @@ End CHOMP Removal*/
     from_suit = /obj/item/clothing/suit/storage/hooded/explorer
     to_suit = /obj/item/clothing/suit/storage/hooded/explorer/lucky
 
-<<<<<<< HEAD
-=======
 //RevolverEloise - Revolver Eloise
 /obj/item/weapon/sword/fluff/revolver
 	name = "Catnip"
@@ -1450,4 +1448,3 @@ End CHOMP Removal*/
 	force = 1
 	sharp = TRUE
 	edge = TRUE
->>>>>>> 522b931dd87... Merge pull request #12244 from PastelPrinceDan/revfluff
