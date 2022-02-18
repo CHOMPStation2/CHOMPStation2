@@ -1,4 +1,4 @@
-// These metroids have the mechanics xenobiologists care about, such as reproduction, mutating into new colors, and being able to submit through fear.
+//Some basic metroid specific mechanics. Lifted from slime code, but gutted all the xenobio taming stuff. Feel free to add it back in, but I recommend making a new specific subset of tamable metroids and leaving the others as wild or soemthing. 
 
 /mob/living/simple_mob/metroid/juvenile
 	desc = "This metroid should not be spawned. Yell at your local dev or event manager."
