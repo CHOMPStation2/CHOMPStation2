@@ -1,3 +1,25 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+=======
+auraribbon - clown
+awkwarddryad - mime
+akram - clown
+amshaegaar - mime
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+joey4298 - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+siennaathens - clown
+pastelprincedan - mime
+pastelprincedan - clown
+>>>>>>> 9935ebf4cf7... Merge pull request #12269 from liache/patch-4
