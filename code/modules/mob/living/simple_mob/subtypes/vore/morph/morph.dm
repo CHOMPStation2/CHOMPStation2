@@ -149,7 +149,10 @@
 	icon_state = initial(icon_state)
 
 	alpha = initial(alpha)
-	color = initial(color)
+	if(chosen_color)
+		color = chosen_color
+	else
+		color = initial(color)
 	plane = initial(plane)
 	layer = initial(layer)
 
