@@ -428,6 +428,11 @@
 
 	//You're in a belly!
 	if(isbelly(loc))
+		//You've been taken over by a morph
+		if(istype(src, /mob/living/simple_mob/vore/hostile/morph/dominated_prey))
+			var/mob/living/simple_mob/vore/hostile/morph/dominated_prey/s = src
+			s.undo_prey_takeover(TRUE)
+			return
 		var/obj/belly/B = loc
 		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
 		if(confirm != "Okay" || loc != B)
@@ -468,7 +473,6 @@
 		crystal.bound_mob = null
 		crystal.bound_mob = capture_crystal = 0
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
-
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
