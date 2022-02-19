@@ -3750,7 +3750,11 @@
 #include "code\modules\projectiles\gun.dm"
 #include "code\modules\projectiles\gun_ch.dm"
 #include "code\modules\projectiles\projectile.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\projectile_ch.dm"
+=======
+#include "code\modules\projectiles\ammunition\ammo_boxes.dm"
+>>>>>>> 1432ca2b223... Merge pull request #12253 from GhostActual/Donk-Co.-Toys
 #include "code\modules\projectiles\ammunition\magazines.dm"
 #include "code\modules\projectiles\ammunition\magazines_vr.dm"
 #include "code\modules\projectiles\ammunition\magazines_yw.dm"
@@ -3771,7 +3775,11 @@
 #include "code\modules\projectiles\guns\magic.dm"
 #include "code\modules\projectiles\guns\modular_guns.dm"
 #include "code\modules\projectiles\guns\projectile.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\guns\projectile_ch.dm"
+=======
+#include "code\modules\projectiles\guns\toy.dm"
+>>>>>>> 1432ca2b223... Merge pull request #12253 from GhostActual/Donk-Co.-Toys
 #include "code\modules\projectiles\guns\vox.dm"
 #include "code\modules\projectiles\guns\energy\bsharpoon_vr.dm"
 #include "code\modules\projectiles\guns\energy\crestrose_vr.dm"
