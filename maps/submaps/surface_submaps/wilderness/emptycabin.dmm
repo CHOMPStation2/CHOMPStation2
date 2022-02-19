@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "a" = (/turf/template_noop,/area/template_noop)
 "b" = (/obj/effect/decal/cleanable/filth,/obj/item/weapon/bone/arm,/obj/item/weapon/bone/skull/unathi,/turf/simulated/floor/wood/sif,/area/submap/EmptyCabin)
 "c" = (/obj/structure/curtain/black,/obj/structure/simple_door/sifwood,/turf/simulated/floor/wood/sif,/area/submap/EmptyCabin)
