@@ -13,7 +13,7 @@
 	var/mutation_chance = 30 // CHOMPedit Odds of spawning as a new color when reproducing.  Can be modified by certain xenobio products.  Carried across generations of slimes.
 	var/list/slime_mutation = list(
 		/mob/living/simple_mob/slime/xenobio/orange,
-		/mob/living/simple_mob/slime/xenobio/metal,
+//		/mob/living/simple_mob/slime/xenobio/metal,  //Chompedit, Removes metal slimes from the basic grey slimes' evolution options.
 		/mob/living/simple_mob/slime/xenobio/blue,
 		/mob/living/simple_mob/slime/xenobio/purple
 	)
