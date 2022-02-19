@@ -169,6 +169,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "aq" = (
@@ -214,6 +218,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
+=======
+"av" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/mob/living/simple_mob/animal/goat{
+	name = "Ted"
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/crew_quarters/kitchen)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "aw" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -261,6 +275,12 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/engine_eva)
+<<<<<<< HEAD
+=======
+"aA" = (
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/fore)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "aB" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -316,6 +336,12 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "aG" = (
@@ -326,6 +352,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
+<<<<<<< HEAD
+=======
+"aH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/mob/living/simple_mob/vore/alienanimals/teppi/baby,
+/turf/simulated/floor/grass,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "aI" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -342,6 +378,17 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
+<<<<<<< HEAD
+=======
+"aJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/mob/living/simple_mob/animal/passive/cow,
+/turf/simulated/floor/grass,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "aK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -377,6 +424,14 @@
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/engine_eva)
+<<<<<<< HEAD
+=======
+"aP" = (
+/obj/structure/disposalpipe/segment,
+/mob/living/simple_mob/vore/alienanimals/teppi/baby,
+/turf/simulated/floor/grass,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "aQ" = (
 /obj/structure/grille,
 /turf/simulated/floor/airless,
@@ -413,6 +468,16 @@
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
+<<<<<<< HEAD
+=======
+"aU" = (
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/aftport)
+"aV" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portaft)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "aW" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -452,6 +517,25 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
+<<<<<<< HEAD
+=======
+"ba" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bb" = (
 /obj/machinery/light/floortube{
 	dir = 4;
@@ -616,6 +700,10 @@
 /obj/effect/floor_decal/milspec/color/green/half{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "br" = (
@@ -666,6 +754,10 @@
 /obj/effect/floor_decal/milspec/color/green/half{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "bu" = (
@@ -683,6 +775,12 @@
 	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
+<<<<<<< HEAD
+=======
+"bv" = (
+/turf/simulated/floor/tiled/monotile,
+/area/stellardelight/deck2/aftstarboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bw" = (
 /obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
@@ -759,6 +857,18 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/wall/bay/r_wall/orange,
 /area/engineering/atmos/storage)
+<<<<<<< HEAD
+=======
+"bG" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-8"
+	},
+/obj/structure/sign/department/miner_dock{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/storage)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bH" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -825,6 +935,23 @@
 	},
 /turf/simulated/floor,
 /area/stellardelight/deck2/central)
+<<<<<<< HEAD
+=======
+"bM" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/opossum/poppy,
+/turf/simulated/floor/tiled/eris/dark/gray_platform,
+/area/engineering/workshop)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bN" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -840,6 +967,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
+=======
+"bO" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/mob/living/simple_mob/otie/red/chubby/cocoa,
+/turf/simulated/floor/tiled/eris/steel/brown_platform,
+/area/crew_quarters/bar)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -849,8 +987,25 @@
 	dir = 6
 	},
 /obj/machinery/alarm/angled,
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
+=======
+/obj/machinery/space_heater,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portfore)
+"bQ" = (
+/obj/structure/closet/secure_closet/quartermaster,
+/obj/item/weapon/storage/backpack/dufflebag,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/firealarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
@@ -883,12 +1038,22 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/storage)
 "bU" = (
+<<<<<<< HEAD
 /mob/living/simple_mob/vore/alienanimals/teppi/baby,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
+=======
+/obj/structure/filingcabinet,
+/obj/machinery/light,
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "bV" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/book/manual/bar_guide,
@@ -949,6 +1114,30 @@
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/stellardelight/deck2/briefingroom)
+<<<<<<< HEAD
+=======
+"cc" = (
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Engine - Core";
+	charge = 2e+006;
+	input_attempt = 1;
+	input_level = 200000;
+	name = "Engine";
+	output_level = 250000
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+"cd" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "ce" = (
 /obj/machinery/vending/wardrobe/cargodrobe,
 /obj/machinery/status_display/supply_display{
@@ -1032,6 +1221,16 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
+=======
+"cp" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/power/thermoregulator,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "cq" = (
 /obj/machinery/air_sensor{
 	frequency = 1438;
@@ -1202,7 +1401,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "cL" = (
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
@@ -1282,6 +1485,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/cmostore)
+<<<<<<< HEAD
+=======
+"cS" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "cT" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -1306,6 +1516,10 @@
 /obj/effect/landmark{
 	name = "morphspawn"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/reagent_dispensers/fueltank,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portaft)
 "cW" = (
@@ -1365,6 +1579,7 @@
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/locker_room)
 "db" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -1376,6 +1591,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
+=======
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper{
+	info = "For those who didn't know yet, the big blue box in here is a 'grid checker' which will shut off the power if a dangerous power spike erupts into the powernet, shutting everything down protects everything from electrical damage, however the outages can be disruptive to ship operations, so it is designed to restore power after a somewhat significant delay, up to fifteen minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
+	name = "grid checker info"
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box/lights/mixed,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "dc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/structure/cable/white{
@@ -1405,6 +1634,17 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardfore)
+<<<<<<< HEAD
+=======
+"df" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable,
+/obj/machinery/power/grid_checker,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "dg" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -1457,6 +1697,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
+<<<<<<< HEAD
+=======
+"dl" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/engineering/storage)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "dm" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -1466,6 +1713,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
+<<<<<<< HEAD
+=======
+"dn" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/machinery/disposal/wall,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "do" = (
 /turf/simulated/wall/bay/brown,
 /area/quartermaster/storage)
@@ -1479,9 +1737,12 @@
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "dq" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -1552,6 +1813,12 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "dz" = (
@@ -2246,6 +2513,10 @@
 	dir = 1;
 	req_one_access = list(35,28)
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "fb" = (
@@ -2408,6 +2679,12 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "fw" = (
@@ -2484,6 +2761,12 @@
 /obj/effect/floor_decal/milspec/color/white/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "fJ" = (
@@ -2500,9 +2783,15 @@
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "fL" = (
+<<<<<<< HEAD
 /obj/machinery/computer/arcade/battle,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/landmark/vermin,
+=======
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark/vermin,
+/obj/machinery/station_slot_machine,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "fN" = (
@@ -2647,6 +2936,7 @@
 /obj/machinery/smartfridge/sheets/persistent_lossy,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
+<<<<<<< HEAD
 "gc" = (
 /mob/living/simple_mob/animal/passive/cow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2654,6 +2944,8 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "gd" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2931,12 +3223,26 @@
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
 "gG" = (
+<<<<<<< HEAD
 /obj/structure/sign/poster{
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/color/green/half{
 	dir = 8
 	},
+=======
+/obj/effect/floor_decal/milspec/color/green/half{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -24;
+	plane = -34
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "gH" = (
@@ -2989,9 +3295,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/storage)
 "gN" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
@@ -3128,11 +3437,30 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/storage)
+<<<<<<< HEAD
+=======
+"hf" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/bay/r_wall/green,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "hg" = (
 /obj/structure/shuttle/window,
 /obj/structure/grille,
 /turf/simulated/floor,
 /area/stellardelight/deck2/portescape)
+<<<<<<< HEAD
+=======
+"hh" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/monotile,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "hi" = (
 /obj/structure/closet/walllocker_double/medical/north,
 /obj/item/weapon/storage/box/body_record_disk,
@@ -3300,6 +3628,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
+<<<<<<< HEAD
+=======
+"hH" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "hI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 6
@@ -3400,6 +3743,7 @@
 /obj/effect/floor_decal/milspec/cargo,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
+<<<<<<< HEAD
 "hT" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -3409,6 +3753,8 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/triage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "hU" = (
 /obj/structure/disposalpipe/tagger/partial{
 	dir = 8;
@@ -3701,6 +4047,10 @@
 	cur_coils = 4;
 	input_attempt = 1;
 	input_level = 500000;
+<<<<<<< HEAD
+=======
+	name = "Main";
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	output_level = 1e+006
 	},
 /turf/simulated/floor/plating,
@@ -4186,7 +4536,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "jO" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -4587,6 +4941,10 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/door/firedoor/glass,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/briefingroom)
 "kE" = (
@@ -4947,7 +5305,11 @@
 	},
 /obj/item/device/radio/beacon,
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "lo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -5114,6 +5476,7 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
+<<<<<<< HEAD
 "lE" = (
 /obj/machinery/floodlight,
 /obj/machinery/light/small{
@@ -5121,6 +5484,8 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "lF" = (
 /obj/effect/landmark{
 	name = "lightsout"
@@ -5137,10 +5502,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/recreation_area)
+<<<<<<< HEAD
 "lH" = (
 /obj/machinery/power/thermoregulator,
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "lI" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/window/westleft{
@@ -5251,6 +5619,12 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/light{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/cmostore)
 "lS" = (
@@ -5399,9 +5773,13 @@
 	},
 /obj/machinery/vending/loadout/loadout_misc,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
 /obj/effect/landmark{
 	name = "vinestart"
 	},
+=======
+/obj/effect/landmark/vines,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "me" = (
@@ -5417,6 +5795,10 @@
 "mg" = (
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/port)
 "mh" = (
@@ -5473,6 +5855,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "mn" = (
@@ -5549,6 +5935,7 @@
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
+<<<<<<< HEAD
 "my" = (
 /mob/living/simple_mob/animal/goat{
 	name = "Ted"
@@ -5556,6 +5943,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/crew_quarters/kitchen)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "mz" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/milspec/color/green/half{
@@ -6719,6 +7108,7 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardaft)
+<<<<<<< HEAD
 "pi" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -6727,6 +7117,8 @@
 /mob/living/simple_mob/otie/red/chubby/cocoa,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "pj" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -7134,7 +7526,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "qd" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -7606,6 +8002,12 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "rd" = (
@@ -7720,6 +8122,10 @@
 /area/engineering/engineering_monitoring)
 "rr" = (
 /obj/structure/closet/walllocker_double/south{
+<<<<<<< HEAD
+=======
+	color = "#8da4a6";
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	pixel_x = -5
 	},
 /obj/item/weapon/storage/box/donkpockets{
@@ -7847,6 +8253,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
+<<<<<<< HEAD
 "rA" = (
 /mob/living/simple_mob/animal/passive/opossum/poppy,
 /obj/structure/cable/orange{
@@ -7861,6 +8268,8 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/engineering/workshop)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "rB" = (
 /obj/structure/particle_accelerator/particle_emitter/right{
 	dir = 4
@@ -7896,6 +8305,10 @@
 	dir = 4;
 	pixel_x = 24
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "rF" = (
@@ -7964,6 +8377,13 @@
 /obj/item/device/retail_scanner/civilian,
 /turf/simulated/floor/tiled,
 /area/hydroponics)
+<<<<<<< HEAD
+=======
+"rP" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/grass,
+/area/hydroponics)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "rQ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -7985,11 +8405,14 @@
 "rT" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/storage/tech)
+<<<<<<< HEAD
 "rU" = (
 /obj/structure/filingcabinet,
 /obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/quartermaster/qm)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "rV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -8117,9 +8540,12 @@
 /area/stellardelight/deck2/fore)
 "sk" = (
 /obj/machinery/door/firedoor/glass,
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/angled_bay/standard/glass{
@@ -8685,7 +9111,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "tB" = (
 /obj/machinery/firealarm/angled,
 /obj/structure/frame,
@@ -8723,6 +9153,7 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/storage)
+<<<<<<< HEAD
 "tG" = (
 /obj/structure/closet/secure_closet/quartermaster,
 /obj/item/weapon/storage/backpack/dufflebag,
@@ -8731,6 +9162,8 @@
 	},
 /turf/simulated/floor/wood,
 /area/quartermaster/qm)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "tI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -8803,6 +9236,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/stellardelight/substation/engineering)
+<<<<<<< HEAD
 "tS" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -8811,6 +9245,8 @@
 /obj/machinery/power/grid_checker,
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "tT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8927,6 +9363,10 @@
 /obj/effect/floor_decal/milspec/color/green/half{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "ug" = (
@@ -9069,6 +9509,10 @@
 "us" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/recharge_station,
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/vines,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
 "ut" = (
@@ -9453,7 +9897,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/closet/walllocker_double/north,
+=======
+/obj/structure/closet/walllocker_double/north{
+	color = "#8da4a6"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/item/weapon/circuitboard/tesla_coil,
 /obj/item/weapon/circuitboard/tesla_coil,
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
@@ -9491,6 +9941,12 @@
 /obj/machinery/door/airlock/angled_bay/hatch/engineering{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/starboard)
 "vq" = (
@@ -9606,6 +10062,12 @@
 /area/medical/cmostore)
 "vH" = (
 /obj/effect/floor_decal/milspec/color/white/corner,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "vI" = (
@@ -9658,6 +10120,14 @@
 /area/medical/chemistry)
 "vP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/vermin,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "vQ" = (
@@ -9674,6 +10144,12 @@
 "vR" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "vS" = (
@@ -9682,9 +10158,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
+<<<<<<< HEAD
 "vT" = (
 /turf/simulated/open,
 /area/maintenance/stellardelight/deck2/starboardaft)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "vU" = (
 /obj/machinery/alarm/angled{
 	dir = 4
@@ -9758,6 +10237,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "wd" = (
@@ -9820,6 +10306,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "wm" = (
@@ -9989,9 +10481,12 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "wH" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
@@ -10066,6 +10561,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "wR" = (
@@ -10182,6 +10681,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
+=======
+"xh" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "xi" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	name = "N2O Filter";
@@ -10228,6 +10740,15 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "xo" = (
@@ -10352,7 +10873,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "xD" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 4
@@ -10373,9 +10898,12 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/recreation_area)
 "xG" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -10436,6 +10964,12 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/machinery/recharger{
+	pixel_y = 5
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "xL" = (
@@ -10547,6 +11081,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "xY" = (
@@ -11048,6 +11588,10 @@
 /area/engineering/engine_room)
 "zb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "zc" = (
@@ -11060,6 +11604,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/light{
+	dir = 1
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
 "zd" = (
@@ -11361,6 +11911,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "zT" = (
@@ -11683,6 +12240,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
 "AJ" = (
 /obj/structure/sign/directions/science{
 	pixel_x = 32
@@ -11707,6 +12265,8 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/aftport)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "AK" = (
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Master Grid";
@@ -11771,16 +12331,27 @@
 /obj/machinery/computer/skills{
 	pixel_y = 7
 	},
+<<<<<<< HEAD
 /obj/machinery/button/remote/blast_door{
 	id = "captaindoor";
 	name = "Door Remote";
 	pixel_x = -15;
 	pixel_y = 2
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/structure/table/darkglass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/button/remote/airlock{
+	id = "captaindoor";
+	pixel_x = -15;
+	pixel_y = 2
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/carpet/blucarpet,
 /area/crew_quarters/captain)
 "AP" = (
@@ -12075,12 +12646,15 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
+<<<<<<< HEAD
 "By" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "BA" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -12167,7 +12741,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "BM" = (
 /obj/structure/table/standard,
 /obj/item/weapon/folder/yellow,
@@ -12241,6 +12819,19 @@
 	},
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/stellardelight/deck2/triage)
+<<<<<<< HEAD
+=======
+"BV" = (
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	id = "bar";
+	layer = 3.3;
+	name = "Bar Shutters"
+	},
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/lino,
+/area/crew_quarters/bar)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "BW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/external/glass{
@@ -12288,7 +12879,10 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment,
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -12298,6 +12892,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/junction,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
 "Cd" = (
@@ -12598,6 +13196,7 @@
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
+<<<<<<< HEAD
 "CN" = (
 /obj/structure/sign/directions/science{
 	pixel_x = -32
@@ -12622,6 +13221,8 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/aftstarboard)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "CO" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -12759,12 +13360,19 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "De" = (
+<<<<<<< HEAD
 /obj/structure/flora/pottedplant/decorative,
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = -24
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/flora/pottedplant/decorative,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "Df" = (
@@ -12832,6 +13440,10 @@
 "Dq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "Dr" = (
@@ -12857,7 +13469,10 @@
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
 "Du" = (
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/personal,
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/effect/floor_decal/industrial/outline,
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
@@ -12869,10 +13484,18 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/item/clothing/shoes/black,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+=======
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/undies_wardrobe,
+/obj/effect/landmark/vermin,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "Dv" = (
@@ -13020,6 +13643,7 @@
 	},
 /turf/simulated/floor,
 /area/medical/cryo)
+<<<<<<< HEAD
 "DK" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Engine - Core";
@@ -13033,6 +13657,8 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "DL" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/recreation_area)
@@ -13058,12 +13684,19 @@
 /turf/simulated/floor/glass/reinforced,
 /area/stellardelight/deck2/fore)
 "DO" = (
+<<<<<<< HEAD
 /obj/structure/flora/pottedplant/decorative,
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = 24
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/flora/pottedplant/decorative,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "DP" = (
@@ -13186,10 +13819,13 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
+<<<<<<< HEAD
 "Eb" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Ec" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
@@ -13413,6 +14049,10 @@
 	pixel_x = -6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "EC" = (
@@ -13797,6 +14437,10 @@
 	pixel_x = 6
 	},
 /obj/structure/closet/walllocker_double/north{
+<<<<<<< HEAD
+=======
+	color = "#8da4a6";
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	dir = 4;
 	pixel_x = 32;
 	pixel_y = 0
@@ -13856,6 +14500,10 @@
 /obj/machinery/light/floortube{
 	pixel_y = -6
 	},
+<<<<<<< HEAD
+=======
+/obj/item/weapon/material/ashtray/glass,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "Fx" = (
@@ -14053,6 +14701,12 @@
 "FP" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
 "FQ" = (
@@ -14734,7 +15388,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Hk" = (
 /obj/machinery/camera/network/halls{
 	dir = 4
@@ -15100,6 +15758,12 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "Id" = (
@@ -15214,6 +15878,11 @@
 	},
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
+=======
+/obj/machinery/firealarm/angled,
+/obj/effect/landmark/vermin,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftstarboard)
 "Il" = (
@@ -15310,6 +15979,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "It" = (
@@ -15493,10 +16166,13 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
+<<<<<<< HEAD
 "IP" = (
 /obj/machinery/shield_gen/external,
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "IQ" = (
 /obj/structure/table/glass,
 /obj/machinery/door/window/southright{
@@ -15823,6 +16499,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
+<<<<<<< HEAD
+=======
+"JG" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "JH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
@@ -15839,6 +16525,10 @@
 /area/maintenance/stellardelight/deck2/portfore)
 "JI" = (
 /obj/effect/floor_decal/milspec/color/green/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "JJ" = (
@@ -15941,6 +16631,19 @@
 /obj/effect/landmark/start/chemist,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/chemistry)
+<<<<<<< HEAD
+=======
+"JW" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "JX" = (
 /obj/machinery/shield_gen,
 /turf/simulated/floor/plating,
@@ -16250,6 +16953,14 @@
 /obj/machinery/light{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/item/paint_palette,
+/obj/item/paint_palette,
+/obj/item/paint_brush,
+/obj/item/paint_brush,
+/obj/effect/landmark/vines,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "KD" = (
@@ -16363,9 +17074,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
 "KR" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -16719,6 +17433,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "LI" = (
@@ -16792,6 +17512,10 @@
 	pixel_x = 2;
 	pixel_y = 7
 	},
+<<<<<<< HEAD
+=======
+/obj/item/weapon/material/ashtray/glass,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "LQ" = (
@@ -17028,10 +17752,21 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
 "Mp" = (
 /obj/machinery/computer/arcade/orion_trail,
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
+"Mp" = (
+/obj/machinery/computer/arcade/battle,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "Mq" = (
@@ -17053,6 +17788,25 @@
 /obj/structure/low_wall/bay/reinforced/orange,
 /turf/simulated/floor,
 /area/engineering/storage)
+<<<<<<< HEAD
+=======
+"Ms" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Mt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -17266,7 +18020,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "MS" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -17371,6 +18129,16 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
+<<<<<<< HEAD
+=======
+"Nd" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Ne" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
@@ -17531,6 +18299,7 @@
 /area/maintenance/stellardelight/deck2/starboardsolars)
 "Nw" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -17539,6 +18308,28 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
+=======
+/obj/machinery/atmospherics/pipe/zpipe/up/supply,
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/sortjunction{
+	dir = 8;
+	name = "Kitchen/Botany";
+	sortType = "Kitchen/Botany"
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portfore)
+"Nx" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Ny" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -18089,6 +18880,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
 "OP" = (
+<<<<<<< HEAD
 /obj/machinery/power/apc/angled{
 	dir = 8
 	},
@@ -18098,6 +18890,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+=======
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/landmark/vines,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
 "OQ" = (
@@ -18264,6 +19062,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/recharger{
+	pixel_y = 5
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "Pf" = (
@@ -18381,13 +19185,28 @@
 	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/reception)
+<<<<<<< HEAD
+=======
+"Ps" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/machinery/disposal/wall,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Pt" = (
 /obj/machinery/alarm/angled,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Pu" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -18721,6 +19540,12 @@
 	pixel_x = -32;
 	pixel_y = -32
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "Qe" = (
@@ -18737,7 +19562,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Qg" = (
 /obj/structure/cable/orange{
 	icon_state = "1-8"
@@ -19566,9 +20395,12 @@
 	},
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/engine_room)
+<<<<<<< HEAD
 "RZ" = (
 /turf/simulated/open,
 /area/maintenance/stellardelight/deck2/portaft)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Sb" = (
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/engineering/engine_room)
@@ -19719,9 +20551,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck2/fuelstorage)
 "Sv" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -19819,7 +20654,11 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/maintenance/stellardelight/deck2/portfore)
 "SF" = (
+<<<<<<< HEAD
 /obj/machinery/computer/arcade/battle,
+=======
+/obj/machinery/computer/arcade/clawmachine,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
 "SG" = (
@@ -19977,6 +20816,12 @@
 /area/engineering/locker_room)
 "SX" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
 "SY" = (
@@ -20279,6 +21124,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "TJ" = (
@@ -20289,7 +21141,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "TK" = (
 /obj/structure/closet/secure_closet/cargotech,
 /obj/item/weapon/stamp/cargo,
@@ -20413,7 +21269,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Ub" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -20529,9 +21389,12 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
@@ -20635,6 +21498,10 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
 "Uz" = (
@@ -20656,6 +21523,12 @@
 	name = "lightsout"
 	},
 /obj/machinery/hologram/holopad,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "UB" = (
@@ -20958,7 +21831,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/quartermaster/storage)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Vl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -20988,10 +21865,13 @@
 "Vm" = (
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/fuelstorage)
+<<<<<<< HEAD
 "Vn" = (
 /mob/living/simple_mob/vore/alienanimals/teppi/baby,
 /turf/simulated/floor/grass,
 /area/hydroponics)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Vo" = (
 /turf/simulated/wall/bay/r_wall/orange,
 /area/engineering/workshop)
@@ -21130,6 +22010,10 @@
 	req_one_access = list(19);
 	stripe_color = "#f7d35c"
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/door/firedoor/glass,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/briefingroom)
 "VG" = (
@@ -21290,6 +22174,12 @@
 /area/stellardelight/deck2/fore)
 "VZ" = (
 /obj/effect/floor_decal/milspec/color/white/half,
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/central)
 "Wa" = (
@@ -21486,6 +22376,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "Wz" = (
@@ -22471,6 +23365,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "YK" = (
@@ -22483,6 +23381,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/sign/poster{
+	dir = 8
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "YL" = (
@@ -22510,6 +23414,16 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
+<<<<<<< HEAD
+=======
+"YO" = (
+/obj/structure/table/gamblingtable,
+/obj/machinery/recharger{
+	pixel_y = 5
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "YP" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8
@@ -22680,6 +23594,12 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/light{
+	dir = 8
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/cmostore)
 "Zj" = (
@@ -22718,6 +23638,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+<<<<<<< HEAD
 "Zn" = (
 /obj/structure/cable/yellow{
 	icon_state = "32-8"
@@ -22727,6 +23648,8 @@
 	},
 /turf/simulated/open,
 /area/quartermaster/storage)
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Zo" = (
 /obj/machinery/light{
 	dir = 8
@@ -22845,6 +23768,12 @@
 /obj/item/roller{
 	pixel_y = 16
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/light{
+	dir = 8
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
 "ZE" = (
@@ -22863,7 +23792,11 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/stellardelight/deck2/aftstarboard)
+=======
+/area/stellardelight/deck2/aftport)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "ZG" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -30083,10 +31016,17 @@ um
 iz
 sn
 kg
+<<<<<<< HEAD
 RZ
 dC
 cV
 iz
+=======
+iz
+dC
+cV
+aV
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 qC
 zv
 Xm
@@ -30475,7 +31415,11 @@ Gi
 wL
 ch
 DD
+<<<<<<< HEAD
 my
+=======
+av
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 AC
 DP
 BF
@@ -30633,7 +31577,11 @@ sA
 iZ
 ii
 WN
+<<<<<<< HEAD
 bU
+=======
+aH
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 LS
 Jp
 KK
@@ -30775,10 +31723,17 @@ EA
 wP
 JI
 fa
+<<<<<<< HEAD
 gc
 Vn
 dP
 KK
+=======
+aJ
+aP
+rP
+hf
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Nw
 Iw
 KL
@@ -30908,8 +31863,13 @@ uf
 bt
 Dq
 Is
+<<<<<<< HEAD
 iY
 iY
+=======
+hh
+hH
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 iY
 Yw
 iZ
@@ -30932,8 +31892,13 @@ Rp
 Ws
 Bw
 Bw
+<<<<<<< HEAD
 Ec
 wF
+=======
+dn
+Ms
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Mo
 xp
 xp
@@ -31661,7 +32626,11 @@ Hr
 Hr
 Oi
 bY
+<<<<<<< HEAD
 Ef
+=======
+aU
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 kt
 wY
 Ip
@@ -31803,7 +32772,11 @@ Hr
 Hr
 Gx
 DA
+<<<<<<< HEAD
 AJ
+=======
+bm
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Ef
 wY
 dL
@@ -31910,7 +32883,11 @@ nt
 Rq
 Rq
 Rq
+<<<<<<< HEAD
 Rq
+=======
+aA
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Jq
 Xi
 RT
@@ -31956,7 +32933,11 @@ ei
 Bt
 eB
 do
+<<<<<<< HEAD
 Zn
+=======
+bG
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Lm
 YP
 do
@@ -32052,6 +33033,10 @@ nt
 Rq
 Rq
 lQ
+<<<<<<< HEAD
+=======
+gA
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Jq
 Xi
 kF
@@ -32520,8 +33505,13 @@ XY
 pg
 QP
 jN
+<<<<<<< HEAD
 db
 Eb
+=======
+ci
+eB
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 OP
 TS
 XN
@@ -32662,8 +33652,13 @@ XY
 pg
 QP
 tA
+<<<<<<< HEAD
 db
 Eb
+=======
+ci
+eB
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 dq
 zj
 We
@@ -32804,8 +33799,13 @@ XY
 pg
 QP
 TJ
+<<<<<<< HEAD
 db
 Eb
+=======
+ci
+eB
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 dq
 zj
 GE
@@ -32893,7 +33893,11 @@ JL
 nt
 BS
 Dl
+<<<<<<< HEAD
 UX
+=======
+YO
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 BK
 Fw
 vS
@@ -32938,7 +33942,11 @@ vi
 Ze
 Ay
 qZ
+<<<<<<< HEAD
 hT
+=======
+bn
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 bf
 Vb
 Zv
@@ -33162,7 +34170,11 @@ Jh
 Jh
 Wb
 HQ
+<<<<<<< HEAD
 pi
+=======
+bO
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 YU
 lU
 as
@@ -33230,8 +34242,13 @@ Kf
 AG
 QP
 Pt
+<<<<<<< HEAD
 db
 Eb
+=======
+ci
+eB
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 rv
 zj
 DV
@@ -33372,8 +34389,13 @@ kO
 yE
 QP
 jN
+<<<<<<< HEAD
 db
 Eb
+=======
+ci
+eB
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 gq
 HZ
 Nj
@@ -33592,7 +34614,11 @@ Gn
 zw
 fi
 dw
+<<<<<<< HEAD
 On
+=======
+BV
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 py
 fp
 mn
@@ -33656,14 +34682,23 @@ zL
 PY
 Ex
 ZF
+<<<<<<< HEAD
 Jn
 zh
+=======
+ci
+eB
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 cX
 ed
 du
 dJ
 mE
+<<<<<<< HEAD
 tG
+=======
+bQ
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 YY
 ce
 BO
@@ -33755,6 +34790,10 @@ nt
 Rq
 Rq
 lY
+<<<<<<< HEAD
+=======
+BA
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Jq
 IK
 kF
@@ -33896,7 +34935,11 @@ nt
 Rq
 Rq
 Rq
+<<<<<<< HEAD
 Rq
+=======
+aA
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Jq
 IK
 RT
@@ -34073,7 +35116,11 @@ nd
 nd
 uz
 Bg
+<<<<<<< HEAD
 CN
+=======
+br
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 fJ
 yW
 NW
@@ -34088,7 +35135,11 @@ xo
 NO
 cH
 kY
+<<<<<<< HEAD
 rU
+=======
+bU
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 YY
 Sf
 TK
@@ -34215,7 +35266,11 @@ nd
 nd
 jz
 Ml
+<<<<<<< HEAD
 fJ
+=======
+bv
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 en
 yW
 ab
@@ -34340,7 +35395,11 @@ CC
 CC
 CC
 YX
+<<<<<<< HEAD
 Ka
+=======
+JG
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 sq
 Or
 Ft
@@ -34482,7 +35541,11 @@ Mk
 Mk
 uq
 YX
+<<<<<<< HEAD
 Ka
+=======
+JG
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 sq
 Ln
 ck
@@ -34624,7 +35687,11 @@ Hd
 Hd
 Xd
 YX
+<<<<<<< HEAD
 Ka
+=======
+JG
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 sq
 BR
 Ft
@@ -34766,7 +35833,11 @@ EX
 Hd
 IY
 YX
+<<<<<<< HEAD
 Ka
+=======
+JG
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Xa
 KY
 jc
@@ -34797,7 +35868,11 @@ To
 tB
 Eg
 qH
+<<<<<<< HEAD
 rA
+=======
+bM
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Fd
 jY
 hs
@@ -34906,8 +35981,13 @@ Zk
 SM
 Hd
 Hd
+<<<<<<< HEAD
 Xd
 YX
+=======
+Ps
+ba
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 dy
 Xa
 Xa
@@ -35051,7 +36131,11 @@ YW
 rh
 xX
 Qd
+<<<<<<< HEAD
 CW
+=======
+Nx
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 CW
 CW
 CW
@@ -35193,6 +36277,7 @@ KU
 Xd
 UA
 wb
+<<<<<<< HEAD
 wb
 wb
 wb
@@ -35202,6 +36287,17 @@ CC
 CC
 CC
 CC
+=======
+JW
+Nd
+Nd
+mm
+cS
+cS
+cS
+cS
+cS
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 TI
 Co
 Co
@@ -35335,7 +36431,11 @@ us
 aL
 zS
 Wy
+<<<<<<< HEAD
 Mk
+=======
+xh
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Mk
 Mk
 fs
@@ -35761,7 +36861,11 @@ jB
 pJ
 Xp
 Za
+<<<<<<< HEAD
 vT
+=======
+pJ
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Jf
 zW
 qa
@@ -35924,8 +37028,13 @@ cm
 pe
 Yr
 Hx
+<<<<<<< HEAD
 lH
 DK
+=======
+db
+cc
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 HT
 qV
 Se
@@ -36066,7 +37175,11 @@ zT
 cm
 Yr
 AK
+<<<<<<< HEAD
 tS
+=======
+df
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 iG
 HT
 It
@@ -36491,11 +37604,19 @@ Wb
 tK
 tK
 Li
+<<<<<<< HEAD
 By
 oR
 oR
 gV
 IP
+=======
+cd
+dl
+oR
+gV
+oR
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 qr
 Vf
 Vf
@@ -36633,7 +37754,11 @@ Jh
 Jh
 tK
 sy
+<<<<<<< HEAD
 lE
+=======
+cp
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 px
 px
 Jb

@@ -1897,7 +1897,11 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/shuttle_landmark/shuttle_initializer/ccboat,
 /obj/effect/overmap/visitable/ship/landable/ccboat,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/dark/danger,
+=======
+/turf/simulated/floor/airless,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/shuttle/ccboat)
 "gj" = (
 /obj/machinery/vending/cola{
@@ -2099,7 +2103,11 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/dark/danger,
+=======
+/turf/simulated/floor/airless,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/shuttle/ccboat)
 "gP" = (
 /obj/structure/table/rack,
@@ -5573,7 +5581,11 @@
 	id_tag = null
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/dark/danger,
+=======
+/turf/simulated/floor/airless,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/shuttle/ccboat)
 "wx" = (
 /obj/structure/bed/chair/shuttle{
@@ -6550,7 +6562,11 @@
 	id_tag = "ccboat";
 	pixel_y = 29
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/dark/danger,
+=======
+/turf/simulated/floor/airless,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/shuttle/ccboat)
 "Cn" = (
 /turf/unsimulated/wall,
@@ -26842,12 +26858,21 @@ bl
 An
 An
 An
+<<<<<<< HEAD
 An
 bl
 bl
 An
 An
 An
+=======
+bl
+Vz
+Wb
+bl
+An
+An
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 WR
 bp
 bp
@@ -26986,9 +27011,15 @@ Am
 Am
 Am
 Am
+<<<<<<< HEAD
 UO
 Am
 Am
+=======
+Am
+Am
+UO
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Am
 Wl
 Xx

@@ -833,7 +833,10 @@
 #include "code\game\machinery\ai_slipper.dm"
 #include "code\game\machinery\air_alarm.dm"
 #include "code\game\machinery\airconditioner_vr.dm"
+<<<<<<< HEAD
 #include "code\game\machinery\airconditioner_yw.dm"
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "code\game\machinery\atm_ret_field.dm"
 #include "code\game\machinery\atmo_control.dm"
 #include "code\game\machinery\autolathe.dm"
@@ -1682,7 +1685,10 @@
 #include "code\game\turfs\turf_flick_animations.dm"
 #include "code\game\turfs\unsimulated.dm"
 #include "code\game\turfs\weird_turfs_vr.dm"
+<<<<<<< HEAD
 #include "code\game\turfs\flooring\floor_yw.dm"
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "code\game\turfs\flooring\flooring.dm"
 #include "code\game\turfs\flooring\flooring_ch.dm"
 #include "code\game\turfs\flooring\flooring_decals.dm"
@@ -3750,7 +3756,11 @@
 #include "code\modules\projectiles\gun.dm"
 #include "code\modules\projectiles\gun_ch.dm"
 #include "code\modules\projectiles\projectile.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\projectile_ch.dm"
+=======
+#include "code\modules\projectiles\ammunition\ammo_boxes.dm"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "code\modules\projectiles\ammunition\magazines.dm"
 #include "code\modules\projectiles\ammunition\magazines_vr.dm"
 #include "code\modules\projectiles\ammunition\magazines_yw.dm"
@@ -3771,7 +3781,11 @@
 #include "code\modules\projectiles\guns\magic.dm"
 #include "code\modules\projectiles\guns\modular_guns.dm"
 #include "code\modules\projectiles\guns\projectile.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\guns\projectile_ch.dm"
+=======
+#include "code\modules\projectiles\guns\toy.dm"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "code\modules\projectiles\guns\vox.dm"
 #include "code\modules\projectiles\guns\energy\bsharpoon_vr.dm"
 #include "code\modules\projectiles\guns\energy\crestrose_vr.dm"
@@ -4033,7 +4047,11 @@
 #include "code\modules\resleeving\infomorph_software.dm"
 #include "code\modules\resleeving\machine_subtypes.dm"
 #include "code\modules\resleeving\machines.dm"
+<<<<<<< HEAD
 #include "code\modules\resleeving\machines_ch.dm"
+=======
+#include "code\modules\resleeving\resleeving_sickness.dm"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "code\modules\resleeving\sleevecard.dm"
 #include "code\modules\rogueminer_vr\asteroid.dm"
 #include "code\modules\rogueminer_vr\controller.dm"
@@ -4260,6 +4278,7 @@
 #include "code\modules\vore\eating\bellymodes_vr.dm"
 #include "code\modules\vore\eating\contaminate_vr.dm"
 #include "code\modules\vore\eating\digest_act_vr.dm"
+#include "code\modules\vore\eating\inbelly_spawn.dm"
 #include "code\modules\vore\eating\leave_remains_vr.dm"
 #include "code\modules\vore\eating\living_ch.dm"
 #include "code\modules\vore\eating\living_vr.dm"
@@ -4409,6 +4428,8 @@
 #include "code\ZAS\Zone.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
+#include "maps\expedition_vr\beach\submaps\mountains.dm"
+#include "maps\expedition_vr\beach\submaps\mountains_areas.dm"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
@@ -4419,12 +4440,16 @@
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\overmap\shuttles.dm"
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
 #include "maps\southern_cross\structures\closets\misc.dm"
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
+=======
+#include "maps\stellardelight\stellar_delight.dm"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\engine_submaps\engine.dm"
 #include "maps\submaps\engine_submaps\engine_areas.dm"
@@ -4432,11 +4457,14 @@
 #include "maps\submaps\space_submaps\space.dm"
 #include "maps\submaps\space_submaps\space_areas.dm"
 #include "maps\submaps\space_submaps\debrisfield\debrisfield.dm"
+<<<<<<< HEAD
 #include "maps\submaps\surface_submaps\mountains\mountains.dm"
 #include "maps\submaps\surface_submaps\mountains\mountains_areas.dm"
 #include "maps\submaps\surface_submaps\mountains\mountains_areas_vr.dm"
 #include "maps\submaps\surface_submaps\plains\plains.dm"
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"

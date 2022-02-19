@@ -616,6 +616,20 @@
 
 	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
+<<<<<<< HEAD
+=======
+
+	// Vore deaths get a fake modifier labeled as such
+	if(!occupant.mind)
+		log_debug("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
+
+	if(occupant.mind?.vore_death)
+		occupant.add_modifier(/datum/modifier/faux_resleeving_sickness, sickness_duration)
+		occupant.mind.vore_death = FALSE
+	// Normal ones get a normal modifier to nerf charging into combat
+	else
+		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)

@@ -786,6 +786,7 @@
 		formatted_abs_desc = replacetext(formatted_abs_desc, "%prey", M) //replace with whatever mob entered into this belly
 		to_chat(M, "<span class='notice'><B>[formatted_abs_desc]</B></span>")
 
+<<<<<<< HEAD
 	//Update owner
 	owner.updateVRPanel()
 	if(isanimal(owner))
@@ -820,11 +821,50 @@
 	if(desc)
 		to_chat(M, "<span class='notice'><B>[desc]</B></span>")
 
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	//Update owner
 	owner.updateVRPanel()
 	if(isanimal(owner))
 		owner.update_icon()
 
+<<<<<<< HEAD
+=======
+// Handle a mob being unabsorbed
+/obj/belly/proc/unabsorb_living(mob/living/M)
+	var/unabsorb_alert_owner = pick(unabsorb_messages_owner)
+	var/unabsorb_alert_prey = pick(unabsorb_messages_prey)
+
+	var/absorbed_count = 0
+	for(var/mob/living/L in contents)
+		if(L.absorbed)
+			absorbed_count++
+
+	//Replace placeholder vars
+	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%pred", owner)
+	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%prey", M)
+	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%belly", lowertext(name))
+	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%countprey", absorbed_count)
+
+	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%pred", owner)
+	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%prey", M)
+	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%belly", lowertext(name))
+	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%countprey", absorbed_count)
+
+	M.absorbed = FALSE
+	handle_absorb_langs(M, owner)
+	to_chat(M, "<span class='notice'>[unabsorb_alert_prey]</span>")
+	to_chat(owner, "<span class='notice'>[unabsorb_alert_owner]</span>")
+
+	if(desc)
+		to_chat(M, "<span class='notice'><B>[desc]</B></span>")
+
+	//Update owner
+	owner.updateVRPanel()
+	if(isanimal(owner))
+		owner.update_icon()
+
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /////////////////////////////////////////////////////////////////////////
 /obj/belly/proc/handle_absorb_langs(var/mob/living/prey, var/mob/living/pred)
 	for(var/mob/living/p in pred.temp_language_sources)		//Let's look at the pred's sources
@@ -1267,6 +1307,7 @@
 	for(var/I in examine_messages)
 		dupe.examine_messages += I
 
+<<<<<<< HEAD
 
 	// CHOMP reagent belly
 	//generated_reagents - strings
@@ -1304,6 +1345,8 @@
 	for(var/I in fullness5_messages)
 		dupe.fullness5_messages += I
 
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	//examine_messages_absorbed - strings
 	dupe.examine_messages_absorbed.Cut()
 	for(var/I in examine_messages_absorbed)

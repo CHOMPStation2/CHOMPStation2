@@ -67,9 +67,12 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_SECURITY "Security"
 #define NETWORK_INTERROGATION "Interrogation"
 #define NETWORK_TELECOM "Telecomms"
+<<<<<<< HEAD
 #define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
 #define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
 #define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"
 #define NETWORK_THUNDER "Entertainment"		//VOREStation Edit: broader definition

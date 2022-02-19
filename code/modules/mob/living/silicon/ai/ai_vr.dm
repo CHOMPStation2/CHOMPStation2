@@ -18,4 +18,8 @@
 	add_language(LANGUAGE_DAEMON,		1)
 	add_language(LANGUAGE_ENOCHIAN,		1)
 	add_language(LANGUAGE_DRUDAKAR,		1)
+<<<<<<< HEAD
 	add_language(LANGUAGE_TAVAN,		1)
+=======
+	add_language(LANGUAGE_TAVAN,		1)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

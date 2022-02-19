@@ -216,4 +216,8 @@
 	if(!T)
 		return
 	if(T.get_lumcount() >= 0.5)
+<<<<<<< HEAD
 		adjustBruteLoss(1)
+=======
+		adjustBruteLoss(1)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

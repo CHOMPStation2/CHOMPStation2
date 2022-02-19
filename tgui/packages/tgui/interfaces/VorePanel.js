@@ -308,6 +308,7 @@ const VoreSelectedBelly = (props, context) => {
 
   tabs[6] = (
     <VoreContentsPanel outside contents={contents} />
+<<<<<<< HEAD
   );
 
   tabs[7] = (
@@ -316,6 +317,8 @@ const VoreSelectedBelly = (props, context) => {
 
   tabs[8] = (
     <VoreSelectedBellyLiquidMessages belly={belly} />
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
   );
 
   return (
@@ -341,12 +344,15 @@ const VoreSelectedBelly = (props, context) => {
         </Tabs.Tab>
         <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
           Contents ({contents.length})
+<<<<<<< HEAD
         </Tabs.Tab>
         <Tabs.Tab selected={tabIndex === 7} onClick={() => setTabIndex(7)}>
           Liquid Options
         </Tabs.Tab>
         <Tabs.Tab selected={tabIndex === 8} onClick={() => setTabIndex(8)}>
           Liquid Messages
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
         </Tabs.Tab>
       </Tabs>
       {tabs[tabIndex] || "Error"}
@@ -643,6 +649,7 @@ const VoreSelectedBellyOptions = (props, context) => {
             <Button
               onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
               content={shrink_grow_size * 100 + "%"} />
+<<<<<<< HEAD
           </LabeledList.Item>
           <LabeledList.Item label="Vore Spawn Blacklist">
             <Button
@@ -650,6 +657,8 @@ const VoreSelectedBellyOptions = (props, context) => {
               icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
               selected={vorespawn_blacklist}
               content={vorespawn_blacklist ? "Yes" : "No"} />
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
           </LabeledList.Item>
           <LabeledList.Item label="Egg Type">
             <Button
@@ -728,14 +737,18 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const { belly } = props;
   const {
     belly_fullscreen,
+<<<<<<< HEAD
     belly_fullscreen_color,
     mapRef,
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
     possible_fullscreens,
     disable_hud,
   } = belly;
 
   return (
     <Fragment>
+<<<<<<< HEAD
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
           <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
@@ -844,6 +857,91 @@ const VoreSelectedBellyInteractions = (props, context) => {
           <LabeledList.Divider />
           <LabeledList.Item label="Secondary Transfer Chance">
             <Button
+=======
+      <Section title="Vore FX">
+        <LabeledList>
+          <LabeledList.Item label="Disable Prey HUD">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
+              icon={disable_hud ? "toggle-on" : "toggle-off"}
+              selected={disable_hud}
+              content={disable_hud ? "Yes" : "No"} />
+          </LabeledList.Item>
+        </LabeledList>
+      </Section>
+      <Section title="Belly Fullscreens">
+        <Button
+          fluid
+          selected={belly_fullscreen === "" || belly_fullscreen === null}
+          onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+          Disabled
+        </Button>
+        {Object.keys(possible_fullscreens).map(key => (
+          <Button
+            key={key}
+            width="256px"
+            height="256px"
+            selected={key === belly_fullscreen}
+            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
+            <Box
+              className={classes([
+                'vore240x240',
+                key,
+              ])}
+              style={{
+                transform: 'translate(0%, 4%)',
+              }} />
+          </Button>
+        ))}
+      </Section>
+    </Fragment>
+  );
+};
+
+const VoreSelectedBellyInteractions = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    escapable,
+    interacts,
+  } = belly;
+
+  return (
+    <Section title="Belly Interactions" buttons={
+      <Button
+        onClick={() => act("set_attribute", { attribute: "b_escapable" })}
+        icon={escapable ? "toggle-on" : "toggle-off"}
+        selected={escapable}
+        content={escapable ? "Interactions On" : "Interactions Off"} />
+    }>
+      {escapable ? (
+        <LabeledList>
+          <LabeledList.Item label="Escape Chance">
+            <Button
+              content={interacts.escapechance + "%"}
+              onClick={() => act("set_attribute", { attribute: "b_escapechance" })} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Escape Time">
+            <Button
+              content={interacts.escapetime / 10 + "s"}
+              onClick={() => act("set_attribute", { attribute: "b_escapetime" })} />
+          </LabeledList.Item>
+          <LabeledList.Divider />
+          <LabeledList.Item label="Transfer Chance">
+            <Button
+              content={interacts.transferchance + "%"}
+              onClick={() => act("set_attribute", { attribute: "b_transferchance" })} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Transfer Location">
+            <Button
+              content={interacts.transferlocation ? interacts.transferlocation : "Disabled"}
+              onClick={() => act("set_attribute", { attribute: "b_transferlocation" })} />
+          </LabeledList.Item>
+          <LabeledList.Divider />
+          <LabeledList.Item label="Secondary Transfer Chance">
+            <Button
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
               content={interacts.transferchance_secondary + "%"}
               onClick={() => act("set_attribute", { attribute: "b_transferchance_secondary" })} />
           </LabeledList.Item>
@@ -866,6 +964,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
           <LabeledList.Divider />
         </LabeledList>
       ) : "These options only display while interactions are turned on."}
+<<<<<<< HEAD
       <Section title="Auto-Transfer Options" buttons={
         <Button
           onClick={() => act("set_attribute", { attribute: "b_autotransfer_enabled" })}
@@ -903,6 +1002,8 @@ const VoreSelectedBellyInteractions = (props, context) => {
           </LabeledList>
         ) : "These options only display while Auto-Transfer is enabled."}
       </Section>
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
     </Section>
   );
 };
@@ -981,6 +1082,7 @@ const VoreContentsPanel = (props, context) => {
   );
 };
 
+<<<<<<< HEAD
 const VoreSelectedBellyLiquidOptions = (props, context) => {
   const { act } = useBackend(context);
 
@@ -1174,6 +1276,8 @@ const VoreSelectedBellyLiquidMessages = (props, context) => {
 };
 
 
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 const VoreUserPreferences = (props, context) => {
   const { act, data } = useBackend(context);
 
@@ -1189,8 +1293,12 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
+<<<<<<< HEAD
     latejoin_vore,
     latejoin_prey,
+=======
+    allow_inbelly_spawning,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
     allow_spontaneous_tf,
     step_mechanics_active,
     pickup_mechanics_active,
@@ -1315,6 +1423,7 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous Pred Disabled",
       },
     },
+<<<<<<< HEAD
     spawnbelly: {
       action: "toggle_latejoin_vore",
       test: latejoin_vore,
@@ -1339,6 +1448,20 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: "Vore Spawn Prey Enabled",
         disabled: "Vore Spawn Prey Disabled",
+=======
+    inbelly_spawning: {
+      action: "toggle_allow_inbelly_spawning",
+      test: allow_inbelly_spawning,
+      tooltip: {
+        main: "This toggle is ghosts being able to spawn in one of your bellies."
+			+ " You will have to confirm again when they attempt to.",
+        enable: "Click here to allow prey to spawn in you.",
+        disable: "Click here to prevent prey from spawning in you.",
+      },
+      content: {
+        enabled: "Inbelly Spawning Allowed",
+        disabled: "Inbelly Spawning Forbidden",
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
       },
     },
     noisy: {
@@ -1527,6 +1650,7 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
+<<<<<<< HEAD
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
@@ -1540,33 +1664,50 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.resize} />
+=======
+          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.noisy} />
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.resize} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.vore_fx} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.remains} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.pickuppref} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
+<<<<<<< HEAD
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
         <Flex.Item basis="32%">
+=======
+        <Flex.Item basis="32%" grow={1}>
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
           <Button
             fluid
             content="Set Taste"
             icon="grin-tongue"
             onClick={() => act("setflavor")} />
         </Flex.Item>
+<<<<<<< HEAD
         <Flex.Item basis="32%" grow={1}>
+=======
+        <Flex.Item basis="32%">
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
           <Button
             fluid
             content="Set Smell"

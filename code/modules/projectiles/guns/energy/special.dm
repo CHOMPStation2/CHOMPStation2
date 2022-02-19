@@ -50,7 +50,10 @@
 	battery_lock = 1
 
 	var/decl/plantgene/gene = null
+<<<<<<< HEAD
 	recoil_mode = 0 //CHOMP Addition
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	var/obj/item/weapon/stock_parts/micro_laser/emitter
 
 	firemodes = list(

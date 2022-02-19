@@ -3,7 +3,11 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
+<<<<<<< HEAD
 /turf/simulated/mineral,
+=======
+/turf/simulated/mineral/cave,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/submap/cave/swordcave)
 "c" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,

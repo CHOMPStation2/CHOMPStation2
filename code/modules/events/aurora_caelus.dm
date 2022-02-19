@@ -5,13 +5,18 @@
 	endWhen = 126
 
 /datum/event/aurora_caelus/announce()
-	command_announcement.Announce("[station_name()]: A harmless cloud of ions is approaching your station, and will exhaust their energy battering the hull. \
+	command_announcement.Announce("[station_name()]: A harmless cloud of ions is approaching your [using_map.facility_type], and will exhaust their energy battering the hull. \
 	Nanotrasen has approved a short break for all employees to relax and observe this very rare event. \
 	During this time, starlight will be bright but gentle, shifting between quiet green and blue colors. \
 	Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space. \
 	You will have approximately two minutes before the ions begin to reach the hull. \
+<<<<<<< HEAD
 	We hope you enjoy the lights.", "Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
 	
+=======
+	We hope you enjoy the lights.", "Nanotrasen Meteorology Division", new_sound = 'sound/AI/aurora.ogg') //VOREStation Edit
+
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /datum/event/aurora_caelus/start()
 	affecting_z -= global.using_map.sealed_levels // Space levels only please!
 	for(var/mob/M in player_list)
@@ -31,6 +36,6 @@ Please return to your workplace and continue work as normal. \
 Have a pleasant shift, [station_name()], and thank you for watching with us.",
 "Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
 	..()
-	
+
 /datum/event/aurora_caelus/overmap/announce()
 	return

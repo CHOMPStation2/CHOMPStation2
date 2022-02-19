@@ -55,6 +55,7 @@
 /datum/alt_title/exploration_manager
 	title = "Exploration Manager"
 
+<<<<<<< HEAD
 
 /datum/job/pilot
 	title = "Pilot"
@@ -86,6 +87,8 @@
 	title = "Helmsman"
 
 
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /datum/job/explorer
 	title = "Explorer"
 	flag = EXPLORER

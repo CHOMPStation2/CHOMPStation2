@@ -14215,6 +14215,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 6
 	},
+/obj/machinery/item_bank{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
 "axj" = (
@@ -31823,7 +31827,14 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_one)
 "biK" = (
-/obj/structure/barricade/cutout/mime,
+/obj/structure/table/alien/blue{
+	desc = "Is this imported?";
+	name = "obscure table"
+	},
+/obj/item/toy/figure/mime,
+/obj/item/weapon/pen/crayon/marker/mime,
+/obj/item/weapon/pen/crayon/mime,
+/obj/item/weapon/cartridge/mime,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "bqI" = (
@@ -32279,7 +32290,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "cKo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -33065,29 +33079,8 @@
 /turf/simulated/floor,
 /area/tether/surfacebase/security/gasstorage)
 "fFb" = (
-/obj/machinery/fitness/punching_bag/clown,
+/obj/machinery/vending/wardrobe/clowndrobe,
 /turf/simulated/floor/plating,
-/area/tether/surfacebase/funny/clownoffice)
-"fFT" = (
-/obj/item/clothing/mask/gas/sexyclown,
-/obj/item/toy/figure/clown,
-/obj/item/clothing/under/sexyclown,
-/obj/item/clothing/shoes/clown_shoes,
-/obj/item/weapon/bedsheet/clown,
-/obj/item/weapon/cartridge/clown,
-/obj/item/weapon/stamp/clown,
-/obj/item/weapon/storage/backpack/clown,
-/obj/item/weapon/bananapeel,
-/obj/item/weapon/reagent_containers/food/snacks/pie,
-/obj/item/weapon/pen/crayon/marker/rainbow,
-/obj/item/weapon/pen/crayon/rainbow,
-/obj/item/clothing/mask/emotions,
-/obj/structure/closet/secure_closet{
-	desc = "Where the Clown keeps their hooliganisms.";
-	name = "funny locker";
-	req_one_access = list(136)
-	},
-/turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "fKm" = (
 /obj/random/junk,
@@ -33527,7 +33520,7 @@
 "gWO" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/rust,
-/obj/item/toy/crossbow,
+/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
 "gYx" = (
@@ -34108,7 +34101,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/tether/surfacebase/security/brig/bathroom)
 "iWa" = (
-/obj/structure/bed/chair/bar_stool,
+/obj/machinery/vending/wardrobe/mimedrobe,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "iWx" = (
@@ -34224,7 +34217,14 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+<<<<<<< HEAD
 /obj/item/device/flashlight/lamp/green,
+=======
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/obj/item/device/flashlight/lamp/clown,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "jrh" = (
@@ -35060,6 +35060,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
+/obj/item/toy/figure/clown,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "lDW" = (
@@ -36164,6 +36165,14 @@
 	},
 /obj/item/clothing/mask/smokable/pipe/cobpipe,
 /obj/item/weapon/flame/lighter/zippo/ironic,
+<<<<<<< HEAD
+=======
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/obj/item/weapon/reagent_containers/food/snacks/pie,
+/obj/effect/floor_decal/rust,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/clownoffice)
 "okO" = (
@@ -36382,6 +36391,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/item/weapon/pen/crayon/marker/rainbow,
+/obj/item/weapon/pen/crayon/rainbow,
+/obj/item/weapon/stamp/clown,
+/obj/item/weapon/cartridge/clown,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "oPH" = (
@@ -36497,7 +36513,10 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/brig)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "ppS" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled,
@@ -36591,7 +36610,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "pMd" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/grass,
@@ -36697,8 +36719,8 @@
 /area/maintenance/lower/trash_pit)
 "qhs" = (
 /obj/structure/table/rack,
-/obj/item/toy/crossbow,
 /obj/item/weapon/coin/silver,
+/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
 "qjE" = (
@@ -38352,20 +38374,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/mining_eva)
 "vCn" = (
-/obj/item/weapon/pen/crayon/mime,
-/obj/item/weapon/pen/crayon/marker/mime,
-/obj/item/weapon/cartridge/mime,
-/obj/item/weapon/bedsheet/mime,
-/obj/item/toy/figure/mime,
-/obj/item/clothing/under/sexymime,
-/obj/item/clothing/shoes/mime,
-/obj/item/clothing/mask/gas/sexymime,
-/obj/item/clothing/head/soft/mime,
-/obj/structure/closet/secure_closet{
-	desc = "...";
-	name = "silent storage";
-	req_one_access = list(138)
-	},
+/obj/structure/barricade/cutout/mime,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "vDb" = (
@@ -50052,7 +50061,7 @@ agM
 aCJ
 aCJ
 aCJ
-aCJ
+rCj
 aCJ
 aCJ
 agM
@@ -61868,6 +61877,129 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aff
+auo
+adG
+ayf
+aff
+oto
+aAI
+jOI
+afy
+azT
+aAa
+uVK
+ojM
+cUB
+wOK
+ylH
+rxD
+bbj
+agT
+ahr
+ajR
+alu
+anr
+fDO
+abM
+abJ
+abJ
+abO
+abS
+arC
+apF
+aah
+ash
+asy
+asV
+atw
+atV
+auz
+auR
+avz
+awh
+awQ
+axx
+auR
+azk
+kBW
+tNJ
+agM
+aCS
+aCO
+aDY
+aEL
+aFA
+aEL
+aEL
+aEL
+aDu
+aIt
+aJn
+aJV
+aDu
+aLj
+aLU
+aMF
+aNr
+aNS
+aOs
+aON
+aPh
+aPK
+aQk
+aQN
+aRq
+aPK
+aSs
+aSY
+aTF
+aSo
+afZ
+bcT
+aVf
+aVB
+aVf
+cKo
+aUP
+aWY
+aUm
+bcE
+aUP
+bcL
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 aad
 aad
 aad
@@ -61941,6 +62073,7 @@ baU
 baU
 aah
 aah
+<<<<<<< HEAD
 auD
 aud
 aud
@@ -62033,6 +62166,124 @@ auD
 aad
 aad
 aad
+=======
+aah
+aah
+aah
+aah
+aah
+aah
+aeE
+aeE
+aeE
+afm
+afm
+axb
+afm
+afm
+aeE
+aeE
+azV
+azV
+azV
+aAb
+aAD
+uVK
+bbj
+bbj
+bbj
+bbj
+bbj
+ahg
+ahz
+ajZ
+alD
+anL
+fgm
+ruj
+lry
+lry
+lry
+aql
+arl
+apF
+aah
+ash
+ash
+ash
+ash
+ash
+ash
+auR
+auR
+auR
+auR
+auR
+ayn
+azd
+jAo
+vDb
+aAR
+agM
+aCO
+aDZ
+aEM
+aFB
+aFS
+aEM
+aHm
+aDu
+fOk
+aJo
+aDu
+aKJ
+aLj
+aLV
+aME
+aNs
+aNS
+aOt
+aOM
+aPi
+aPK
+aQl
+aQM
+aRr
+aPK
+aSt
+aSX
+aTG
+aSo
+arm
+bcT
+aVf
+aUs
+aUu
+iee
+aVP
+aWZ
+bcj
+bcF
+gzO
+bcM
+aUm
+aUm
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 aad
 aad
 aad

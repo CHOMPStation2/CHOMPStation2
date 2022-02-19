@@ -34,7 +34,11 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/submap/crashedcontainmentshuttle)
 "ai" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/submap/crashedcontainmentshuttle)
 "aj" = (
 /obj/item/weapon/material/shard,

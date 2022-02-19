@@ -173,4 +173,8 @@
 		icon_living = "startreader"
 		SetStunned(0)
 
+<<<<<<< HEAD
 	update_icon()
+=======
+	update_icon()
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

@@ -163,4 +163,8 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	emote_see = list("pecks at the ground","flaps its tiny wings")
 
 /decl/mob_organ_names/chicken
+<<<<<<< HEAD
 	hit_zones = list("head", "body", "left wing", "right wing", "left leg", "right leg", "tendies")
+=======
+	hit_zones = list("head", "body", "left wing", "right wing", "left leg", "right leg", "tendies")
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

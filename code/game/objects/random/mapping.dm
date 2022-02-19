@@ -109,7 +109,11 @@
 /obj/random/vendordrink/item_to_spawn() //Not including coffee as it's more specific in usage.
 	return pick (/obj/machinery/vending/cola,
 				/obj/machinery/vending/cola/soft,
+<<<<<<< HEAD
 				/obj/machinery/vending/bepis,	
+=======
+				/obj/machinery/vending/bepis,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 				/obj/machinery/vending/sovietsoda,
 				/obj/machinery/vending/radren)
 //VOREStation Edit End
@@ -1645,4 +1649,8 @@
 				prob(2);list(/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer/rigged),
 				prob(1);list(/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill),
 				)
+<<<<<<< HEAD
 //VOREStation Add End
+=======
+//VOREStation Add End
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

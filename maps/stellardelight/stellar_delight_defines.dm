@@ -56,6 +56,10 @@
 
 	station_name  = "NRV Stellar Delight"
 	station_short = "Stellar Delight"
+<<<<<<< HEAD
+=======
+	facility_type = "ship"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	dock_name     = "Virgo-3B Colony"
 	dock_type     = "surface"
 	boss_name     = "Central Command"
@@ -68,7 +72,11 @@
 	shuttle_leaving_dock = "The shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
 	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The shuttle will arrive shortly. Those departing should proceed to deck three, aft within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
+<<<<<<< HEAD
 	shuttle_name = "Evacuation Shuttle"
+=======
+	shuttle_name = "Crew Transport"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at deck three, aft in approximately %ETA%."
@@ -333,8 +341,11 @@
 	base_turf = /turf/space
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /datum/map_template/ship_lateload/overmap
 	name = "Overmap"
 	desc = "Overmap lives here :3"

@@ -277,6 +277,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
 	req_one_access = list(access_explorer,access_armory)
@@ -313,6 +314,8 @@
 
 =======
 >>>>>>> 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 //Tether-unique network cameras
 /obj/machinery/camera/network/tether
 	network = list(NETWORK_TETHER)

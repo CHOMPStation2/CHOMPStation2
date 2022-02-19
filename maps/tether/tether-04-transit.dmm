@@ -125,11 +125,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "k" = (
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "cC" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/wood,

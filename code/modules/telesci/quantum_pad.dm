@@ -314,4 +314,8 @@
 	force = 9
 	sharp = TRUE
 	item_state = "analyzer"
+<<<<<<< HEAD
 	icon_state = "hacktool"
+=======
+	icon_state = "hacktool"
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

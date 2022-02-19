@@ -598,7 +598,11 @@
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
+<<<<<<< HEAD
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
+=======
+	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
 
 /datum/gear/suit/snowsuit/cargo

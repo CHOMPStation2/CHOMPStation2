@@ -38,6 +38,7 @@
 					LANGUAGE_ENOCHIAN	= 1,
 					LANGUAGE_DRUDAKAR	= 1,
 					LANGUAGE_TAVAN		= 1
+<<<<<<< HEAD
 					)
 
 /obj/item/weapon/robot_module/robot/chound
@@ -60,6 +61,8 @@
 					LANGUAGE_ENOCHIAN	= 1,
 					LANGUAGE_DRUDAKAR	= 1,
 					LANGUAGE_TAVAN		= 1
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 					)
 
 /hook/startup/proc/robot_modules_vr()

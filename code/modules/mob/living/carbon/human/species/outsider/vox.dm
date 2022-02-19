@@ -112,4 +112,8 @@
 		H.internals.icon_state = "internal1"
 
 /datum/species/vox/get_perfect_belly_air_type()
+<<<<<<< HEAD
 	return /datum/gas_mixture/belly_air/vox
+=======
+	return /datum/gas_mixture/belly_air/vox
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

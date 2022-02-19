@@ -754,6 +754,16 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/bnnuy2
+	name = "Bnnuy Ears 2"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "bnnuy2"
+	extra_overlay = "bnnuy-inner"
+	extra_overlay2 = "bnnuy-tips2"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/sandfox
 	name = "Sandfox Ears"
 	desc = ""
@@ -815,4 +825,8 @@
 	icon_state = "bunny-tall"
 	extra_overlay = "bunny-tall-inner"
 	do_colouration = 1
+<<<<<<< HEAD
 	color_blend_mode = ICON_MULTIPLY
+=======
+	color_blend_mode = ICON_MULTIPLY
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

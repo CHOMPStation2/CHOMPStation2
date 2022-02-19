@@ -529,4 +529,31 @@
 /obj/item/clothing/head/wheat
 	name = "straw hat"
 	desc = "It's a hat made from synthetic straw. Brought to you by \"Country Girls LLC.\" the choice brand for the galaxy's working class."
+<<<<<<< HEAD
 	icon_state = "wheat"
+=======
+	icon_state = "wheat"
+
+//Ruin Marine (Doom Marine)
+/obj/item/clothing/head/marine
+	name = "marine helmet"
+	desc = "A marine helmet prop from the popular game 'Ruin'."
+	icon_state = "marine"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
+	body_parts_covered = HEAD|FACE|EYES
+
+//Laser Tag Helmets
+/obj/item/clothing/head/bluetag
+	name = "blue laser tag helmet"
+	desc = "Blue Pride, Station Wide."
+	icon_state = "bluetag"
+	flags_inv = HIDEEARS|BLOCKHEADHAIR
+	body_parts_covered = HEAD|EYES
+
+/obj/item/clothing/head/redtag
+	name = "red laser tag helmet"
+	desc = "Reputed to go faster."
+	icon_state = "redtag"
+	flags_inv = HIDEEARS|BLOCKHEADHAIR
+	body_parts_covered = HEAD|EYES
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

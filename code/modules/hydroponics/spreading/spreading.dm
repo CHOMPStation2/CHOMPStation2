@@ -3,6 +3,7 @@
 
 /proc/spacevine_infestation(var/potency_min=70, var/potency_max=100, var/maturation_min=5, var/maturation_max=15)
 	spawn() //to stop the secrets panel hanging
+<<<<<<< HEAD
 		var/list/turf/simulated/floor/turfs = list() //list of all the empty floor turfs in the hallway areas //CHOMPedit start: keeping old method over upstream's landmark method
 		for(var/areapath in typesof(/area/hallway))
 			var/area/A = locate(areapath)
@@ -12,6 +13,10 @@
 
 		if(turfs.len) //Pick a turf to spawn at if we can
 			var/turf/simulated/floor/T = pick(turfs) //CHOMPedit end
+=======
+		if(vinestart.len) //Pick a turf to spawn at if we can
+			var/turf/simulated/floor/T = pick(vinestart)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 			var/datum/seed/seed = SSplants.create_random_seed(1)
 			seed.set_trait(TRAIT_SPREAD,2)             // So it will function properly as vines.
 			seed.set_trait(TRAIT_POTENCY,rand(potency_min, potency_max)) // 70-100 potency will help guarantee a wide spread and powerful effects.

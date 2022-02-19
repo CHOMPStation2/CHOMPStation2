@@ -231,6 +231,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/wallet,
 				/obj/item/weapon/storage/vore_egg,
 				/obj/item/weapon/bikehorn/tinytether,
+<<<<<<< HEAD
 				/obj/item/capture_crystal,
 				/obj/item/weapon/material/kitchen, //chompstation addition start
 				/obj/item/weapon/storage/mre,
@@ -255,6 +256,9 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/clipboard,
 				/obj/item/weapon/coin,
 				/obj/item/clothing/ears //chompstation addition end
+=======
+				/obj/item/capture_crystal
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 				)
 
 var/global/list/contamination_flavors = list(

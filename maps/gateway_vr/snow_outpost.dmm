@@ -2637,8 +2637,17 @@
 /area/space)
 "Tb" = (
 /obj/structure/flora/ausbushes/grassybush,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/space)
+=======
+/turf/simulated/floor/snow/snow2,
+/area/awaymission/snow_outpost/dark)
+"Uy" = (
+/obj/effect/overmap/visitable/sector/common_gateway/snowoutpost,
+/turf/simulated/mineral/ignore_mapgen,
+/area/awaymission/snow_outpost/dark)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "Vk" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/space)

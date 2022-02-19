@@ -57,4 +57,8 @@
 	cost = 35
 	containertype = /obj/structure/closet/crate/large/secure/heph
 	containername = "Mining disperser charge crate"
+<<<<<<< HEAD
 	access = access_security
+=======
+	access = access_security
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

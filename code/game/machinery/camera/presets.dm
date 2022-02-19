@@ -115,6 +115,12 @@ var/global/list/engineering_networks = list(
 /obj/machinery/camera/network/research/xenobio
 	network = list(NETWORK_RESEARCH, NETWORK_XENOBIO)
 
+/obj/machinery/camera/network/exploration
+	network = list(NETWORK_EXPLORATION)
+
+/obj/machinery/camera/network/research/xenobio
+	network = list(NETWORK_RESEARCH, NETWORK_XENOBIO)
+
 /obj/machinery/camera/network/thunder
 	network = list(NETWORK_THUNDER)
 	invuln = 1

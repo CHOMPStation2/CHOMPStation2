@@ -57,4 +57,8 @@
 	can_flee = FALSE // Fearless dumb machines.
 
 /decl/mob_organ_names/hivebot
+<<<<<<< HEAD
 	hit_zones = list("central chassis", "positioning servo", "head", "sensor suite", "manipulator arm", "shoulder weapon mount", "weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")
+=======
+	hit_zones = list("central chassis", "positioning servo", "head", "sensor suite", "manipulator arm", "shoulder weapon mount", "weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

@@ -158,4 +158,8 @@
 	projectiletype = /obj/item/projectile/arc/fragmentation
 
 /decl/mob_organ_names/hivebotsiege
+<<<<<<< HEAD
 	hit_zones = list("central chassis", "armor plating", "reinforced positioning servo", "head", "sensor suite", "manipulator arm", "heavy weapons mount", "advanced weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")
+=======
+	hit_zones = list("central chassis", "armor plating", "reinforced positioning servo", "head", "sensor suite", "manipulator arm", "heavy weapons mount", "advanced weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

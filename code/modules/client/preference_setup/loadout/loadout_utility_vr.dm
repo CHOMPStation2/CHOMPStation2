@@ -75,8 +75,16 @@
 	path = /obj/item/clothing/gloves/bluespace
 	cost = 5
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /datum/gear/utility/satchel_strapless
 	display_name = "satchel strapless"
 	path = /obj/item/weapon/storage/backpack/satchel/strapless
 	slot = slot_back
+<<<<<<< HEAD
 	cost = 1
+=======
+	cost = 1
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

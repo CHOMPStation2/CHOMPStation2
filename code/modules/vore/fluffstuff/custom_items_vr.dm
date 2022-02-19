@@ -1398,6 +1398,10 @@ End CHOMP Removal*/
 	new /obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette(hold)
 	new /obj/item/weapon/reagent_containers/glass/bottle/poppy(hold)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 //Hunterbirk - Amaryll
 //This is a 'technical item' which basically is meant to represent rippiing things up with bare claws.
 /obj/item/weapon/surgical/scalpel/amaryll_claws
@@ -1447,4 +1451,8 @@ End CHOMP Removal*/
 	item_state = "revclaymoremob"
 	force = 1
 	sharp = TRUE
+<<<<<<< HEAD
 	edge = TRUE
+=======
+	edge = TRUE
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

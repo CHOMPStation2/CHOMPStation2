@@ -135,6 +135,10 @@ GLOBAL_LIST_INIT(disposal_pipe_recipes, list(
 	if (dirtype == PIPE_TRIN_M)
 		icon_state_m = "[icon_state]m"
 	paintable = !ispath(path, /obj/machinery/atmospherics/pipe/simple/heat_exchanging) && ispath(path, /obj/machinery/atmospherics/pipe) && !(ispath(path, /obj/machinery/atmospherics/pipe/vent))	// VOREStation Add
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 
 //
 // Subtype for meters

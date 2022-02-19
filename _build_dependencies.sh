@@ -6,6 +6,10 @@ export NODE_VERSION=12
 # Byond Major
 export BYOND_MAJOR=514
 # Byond Minor
+<<<<<<< HEAD
 export BYOND_MINOR=1571
+=======
+export BYOND_MINOR=1569
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 # Macro Count
 export MACRO_COUNT=4

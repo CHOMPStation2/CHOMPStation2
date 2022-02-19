@@ -268,7 +268,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/table/wooden_reinforced,
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/plating/virgo2,
 /area/offmap/aerostat/solars)
 "aN" = (
@@ -2578,6 +2581,12 @@
 	tag_north = 2;
 	tag_west = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/camera/network/research_outpost{
+	dir = 8
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 "hX" = (
@@ -2817,7 +2826,11 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/air/airlock,
+=======
+/obj/machinery/portable_atmospherics/canister/air,
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
 "jf" = (
@@ -3260,6 +3273,12 @@
 /area/offmap/aerostat/inside/arm/se)
 "kN" = (
 /obj/machinery/door/firedoor/glass,
+<<<<<<< HEAD
+=======
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/powercontrol)
 "kO" = (
@@ -3452,7 +3471,12 @@
 	icon_state = "4-8"
 	},
 /obj/structure/sign/poster{
+<<<<<<< HEAD
 	dir = 1
+=======
+	dir = 1;
+	pixel_y = 32
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/westhall)
@@ -3836,6 +3860,17 @@
 /obj/machinery/power/solar,
 /turf/simulated/floor/plating/virgo2,
 /area/offmap/aerostat/solars)
+<<<<<<< HEAD
+=======
+"na" = (
+/obj/machinery/light/small,
+/obj/machinery/power/quantumpad/scioutpost,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/bluegrid,
+/area/offmap/aerostat/inside/powercontrol)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "nb" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -5869,6 +5904,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/firingrange)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "vR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
@@ -5877,6 +5913,8 @@
 /turf/simulated/floor,
 /area/offmap/aerostat/inside/toxins)
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "vQ" = (
 /obj/item/modular_computer/console/preset/research{
 	dir = 8
@@ -5893,7 +5931,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/xenoarch)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "vT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -7804,11 +7845,15 @@
 	icon_state = "1-2"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/poster{
 =======
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -8220,7 +8265,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/airlock/south)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "FA" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -8237,7 +8285,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "FF" = (
 /obj/machinery/camera/network/research_outpost,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -8410,7 +8461,12 @@
 	dir = 4
 	},
 /obj/structure/sign/poster{
+<<<<<<< HEAD
 	dir = 1
+=======
+	dir = 1;
+	pixel_y = 32
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/easthall)
@@ -9371,7 +9427,10 @@
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "JX" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9385,7 +9444,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "JZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9565,7 +9627,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
 	name = "Virology Isolation Room";
+<<<<<<< HEAD
 	req_access = list (39)
+=======
+	req_access = list(39);
+	req_one_access = null
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/virology)
@@ -9728,6 +9795,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/zorrenoffice)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "LI" = (
 /obj/structure/closet/firecloset,
 /obj/structure/sign/poster{
@@ -9737,6 +9805,8 @@
 /area/offmap/aerostat/inside/xenoarch)
 =======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 "LK" = (
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/offmap/aerostat/inside/arm/ne)
@@ -11240,7 +11310,12 @@
 /area/offmap/aerostat/inside/xenoarch)
 "RU" = (
 /obj/structure/sign/poster{
+<<<<<<< HEAD
 	dir = 8
+=======
+	dir = 8;
+	pixel_x = -32
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -11981,6 +12056,7 @@
 /area/offmap/aerostat/inside/xenoarch)
 "Vd" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -11988,11 +12064,16 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /area/offmap/aerostat/inside/toxins)
 "Ve" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -13170,6 +13251,12 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
 "ZO" = (
@@ -21244,6 +21331,7 @@ qU
 qU
 io
 <<<<<<< HEAD
+<<<<<<< HEAD
 vR
 jM
 un
@@ -21252,6 +21340,11 @@ qC
 WQ
 Eb
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+qC
+WQ
+Eb
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Dh
 Gt
 TF
@@ -23255,10 +23348,17 @@ cP
 dK
 dM
 dN
+<<<<<<< HEAD
 Mj
 kN
 Ym
 MC
+=======
+aQ
+kN
+Ff
+FD
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 VG
 VG
 VG
@@ -23397,7 +23497,11 @@ dh
 dL
 dL
 dO
+<<<<<<< HEAD
 aR
+=======
+na
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 GB
 Ym
 ZN
@@ -23416,18 +23520,24 @@ Zs
 Ya
 KI
 <<<<<<< HEAD
+<<<<<<< HEAD
 HN
 eW
 QX
 eW
 eW
 =======
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 xH
 iQ
 sy
 er
 FA
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 gP
 FA
 Vr
@@ -23550,7 +23660,11 @@ EQ
 yk
 GB
 zE
+<<<<<<< HEAD
 Ym
+=======
+xl
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Ym
 Ym
 Ym
@@ -23692,7 +23806,11 @@ TB
 GB
 GB
 xl
+<<<<<<< HEAD
 Ym
+=======
+xl
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 Ym
 Ym
 Ym
@@ -23835,6 +23953,7 @@ eE
 Ym
 BF
 <<<<<<< HEAD
+<<<<<<< HEAD
 Ff
 Ff
 Ff
@@ -23843,6 +23962,11 @@ JX
 Ui
 sK
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+JX
+Ui
+sK
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 sK
 Fs
 AN

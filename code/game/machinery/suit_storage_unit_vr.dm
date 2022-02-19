@@ -58,4 +58,8 @@
 	name = "Talon miner suit cycler"
 	model_text = "Talon miner"
 	req_access = list(access_talon)
+<<<<<<< HEAD
 	departments = list(/datum/suit_cycler_choice/department/talon/miner)
+=======
+	departments = list(/datum/suit_cycler_choice/department/talon/miner)
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix

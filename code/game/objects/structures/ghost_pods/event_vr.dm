@@ -54,7 +54,10 @@
 								  "Nurse Giant Spider" = /mob/living/simple_mob/animal/giant_spider/nurse/eggless,
 								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless,
 								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
+<<<<<<< HEAD
 								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,	//CHOMPStation add.
+=======
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
 								  "Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug
 								  )
 

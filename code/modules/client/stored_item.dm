@@ -249,4 +249,8 @@
 /obj/item/weapon/stock_parts
 	persist_storable = FALSE
 /obj/item/weapon/rcd
+<<<<<<< HEAD
 	persist_storable = FALSE
+=======
+	persist_storable = FALSE
+>>>>>>> 0563c28c59b... Merge branch 'master' into 7914-fix
