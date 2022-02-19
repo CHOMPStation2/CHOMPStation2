@@ -60,8 +60,6 @@
 	name = "knight gauntlets"
 	icon_state = "brown"
 	item_state = "brown"
-<<<<<<< HEAD
-=======
 	
 /obj/item/clothing/gloves/heavy_engineer
 	desc = "Elbow-length insulated gloves, with added reinforcement. They'll keep your fingers and forearms just that little bit safer from things that might try to melt, mangle, or burn them. A tag on the inside of each glove reads \'PROPERTY OF ENGINEERING, RETURN IF FOUND\'."
@@ -83,4 +81,3 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
->>>>>>> 9b8bc2c486a... Merge pull request #12233 from KillianKirilenko/kk-fluff
