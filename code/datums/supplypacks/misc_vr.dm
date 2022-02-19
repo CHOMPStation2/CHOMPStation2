@@ -160,21 +160,4 @@
 	)
 	cost = 300
 	containertype = /obj/structure/closet/crate
-<<<<<<< HEAD
 	containername = "cordless jukebox speakers crate"
-
-/datum/supply_pack/misc/sword
-	name = "sword"
-	contains = list(
-	/obj/item/weapon/material/sword =2
-	)
-	cost =100
-	access = list(access_explorer,
-				  access_security,)
-
-	one_access = TRUE
-	containername = "sword crate"
-	containertype = /obj/structure/closet/crate/secure/gear
-=======
-	containername = "cordless jukebox speakers crate"
->>>>>>> 7a653038c17... Merge pull request #12267 from PastelPrinceDan/swordcrate
