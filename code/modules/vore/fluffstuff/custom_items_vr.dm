@@ -1448,3 +1448,16 @@ End CHOMP Removal*/
 	force = 1
 	sharp = TRUE
 	edge = TRUE
+<<<<<<< HEAD
+=======
+
+//PastelPrinceDan - Kiyoshi/Masumi Maki
+/obj/item/toy/plushie/fluff/slimeowshi
+	name = "Slime-Cat Research Director plushie"
+	desc = "An adorable stuffed toy that resembles a slime. It's pink, and has little cat ears, as well as a tail! Atop its head is a small beret with a Research Director's insignia."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "kimeowshi"
+	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
+	gender = PLURAL // this seems like a good idea but probably prone to changing. todo: ask dan
+	// the only reason this thought is relevant because the base slimeplush has its gender set to female
+>>>>>>> fc7a67073bd... Merge pull request #12288 from Hatterhat/slimeiyoshi-plush
