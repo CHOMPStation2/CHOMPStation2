@@ -387,12 +387,23 @@
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/medical/centralhall)
 "aaH" = (
+<<<<<<< HEAD
 /obj/machinery/vending/coffee{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/medical/centralhall)
+=======
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/rnd/staircase/secondfloor)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "aaI" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -10385,6 +10396,12 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
+"aqt" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/staircase/secondfloor)
 "aqu" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -23590,19 +23607,7 @@
 	},
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
-"aPG" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/open,
-/area/rnd/staircase/secondfloor)
 "aPH" = (
-/turf/simulated/open,
-/area/rnd/staircase/secondfloor)
-"aPI" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
 "aPJ" = (
@@ -33132,7 +33137,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "dnD" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/white,
@@ -33667,7 +33675,10 @@
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "iLF" = (
 /obj/effect/landmark{
 	name = "maint_pred"
@@ -33693,7 +33704,10 @@
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
+<<<<<<< HEAD
 >>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "jtj" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/readingrooms)
@@ -34077,6 +34091,7 @@
 /area/tether/surfacebase/medical/breakroom)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 "lOO" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -34084,6 +34099,8 @@
 /area/chapel/main)
 =======
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "lvb" = (
 /obj/effect/landmark{
 	name = "maint_pred"
@@ -34247,15 +34264,21 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "mQc" = (
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
+<<<<<<< HEAD
 >>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "mUP" = (
 /obj/structure/bed/padded,
 /obj/effect/floor_decal/techfloor,
@@ -34493,15 +34516,21 @@
 /turf/simulated/floor/bluegrid,
 /area/ai)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 926c35deb7... Merge pull request #10416 from Enzo-Leon/mapfix-02
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "pny" = (
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
+<<<<<<< HEAD
 >>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "pqb" = (
 /obj/structure/sink/puddle,
 /turf/simulated/floor/beach/sand/desert,
@@ -34671,12 +34700,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c9bc676ff0... Merge pull request #9472 from Very-Soft/littlefix
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 =======
 ||||||| parent of 926c35deb7... Merge pull request #10416 from Enzo-Leon/mapfix-02
 =======
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qGR" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -34686,7 +34718,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+<<<<<<< HEAD
 >>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qKR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -34773,7 +34808,10 @@
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
+<<<<<<< HEAD
 >>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "rJc" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/landmark/start{
@@ -41020,6 +41058,101 @@ aab
 aab
 aab
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+acm
+acm
+acm
+acm
+acm
+acm
+acm
+ahd
+ahR
+aiY
+ajW
+alb
+ald
+agr
+aok
+apy
+aqF
+arx
+asz
+atK
+aum
+aqF
+avS
+ajV
+awY
+axQ
+axR
+ayw
+azq
+azq
+azq
+aBd
+aBd
+aCq
+aDm
+aDm
+aEB
+aEB
+aEB
+axR
+awY
+aGy
+aql
+aIi
+aIN
+aJh
+aJB
+aKb
+aKN
+aLv
+aMi
+aMR
+aNt
+aMR
+aOU
+aKb
+aQw
+aQw
+pny
+aQw
+aRj
+aHE
+aUW
+aHE
+aHE
+aHE
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+abn
+aab
+aab
+aab
+aab
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aab
 aab
 aab
@@ -43606,7 +43739,7 @@ aMW
 aNv
 aOj
 aOZ
-aPG
+aaH
 aPH
 aPH
 aRM
@@ -43748,7 +43881,7 @@ aMX
 aNv
 aOk
 aOY
-aPH
+aOY
 aPH
 aPH
 aRM
@@ -43890,7 +44023,7 @@ aIP
 aIP
 aOl
 aPa
-aPI
+aqt
 aPH
 aPH
 aRM
@@ -51789,6 +51922,7 @@ aLY
 aZr
 aZr
 iLF
+<<<<<<< HEAD
 baO
 bax
 <<<<<<< HEAD
@@ -51797,6 +51931,8 @@ bax
 bdg
 baO
 baO
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 baO
 baO
 baO

@@ -461,8 +461,13 @@
 		var/old = KA.overheat_time
 		KA.overheat_time = max(0, KA.overheat_time - modifier)
 		decreased = old - KA.overheat_time
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/cooldown/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	KA.overheat_time += decreased
 	..()
@@ -574,6 +579,10 @@
 	modifier = 2.5 //Not a very effective method of healing.
 	cost = 20
 	var/static/list/damage_heal_order = list(BRUTE, BURN, OXY)
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/lifesteal/projectile_prehit(obj/item/projectile/kinetic/K, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(isliving(target) && isliving(K.firer))
 		var/mob/living/L = target
@@ -608,6 +617,10 @@
 	cost = 30
 	var/maximum_bounty = 25
 	var/list/bounties_reaped = list()
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/bounty/projectile_prehit(obj/item/projectile/kinetic/K, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(isliving(target))
 		var/mob/living/L = target
@@ -618,6 +631,10 @@
 				SM.reward_target = null
 				qdel(SM)
 		L.apply_status_effect(STATUS_EFFECT_SYPHONMARK, src)
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/bounty/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(isliving(target))
 		var/mob/living/L = target
@@ -627,6 +644,10 @@
 				kill_modifier *= K.pressure_decrease
 			var/armor = L.run_armor_check(K.def_zone, K.flag, null, null, K.armour_penetration)
 			L.apply_damage(bounties_reaped[L.type]*kill_modifier, K.damage_type, K.def_zone, armor)
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/bounty/proc/get_kill(mob/living/L)
 	var/bonus_mod = 1
 	if(ismegafauna(L)) //megafauna reward
@@ -680,10 +701,18 @@
 	desc = "Allows creatures normally incapable of firing guns to operate the weapon when installed."
 	cost = 20
 	denied_type = /obj/item/borg/upgrade/modkit/trigger_guard
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/trigger_guard/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
 	. = ..()
 	if(.)
 		KA.trigger_guard = TRIGGER_GUARD_ALLOW_ALL
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/borg/upgrade/modkit/trigger_guard/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	KA.trigger_guard = TRIGGER_GUARD_NORMAL
 	..()

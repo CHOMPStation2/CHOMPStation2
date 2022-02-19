@@ -125,11 +125,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "k" = (
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "cC" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/wood,

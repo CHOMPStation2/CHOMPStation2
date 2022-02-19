@@ -18,4 +18,8 @@
 	add_language(LANGUAGE_DAEMON,		1)
 	add_language(LANGUAGE_ENOCHIAN,		1)
 	add_language(LANGUAGE_DRUDAKAR,		1)
+<<<<<<< HEAD
 	add_language(LANGUAGE_TAVAN,		1)
+=======
+	add_language(LANGUAGE_TAVAN,		1)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

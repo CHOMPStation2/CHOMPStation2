@@ -395,7 +395,11 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate
 	containername = "Knights Gear Crate"
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/supply_pack/costumes/christmas
 	name = "Christmas costume pack"
 	contains = list(
@@ -412,4 +416,8 @@
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate
+<<<<<<< HEAD
 	containername = "Christmas costume pack" 
+=======
+	containername = "Christmas costume pack"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

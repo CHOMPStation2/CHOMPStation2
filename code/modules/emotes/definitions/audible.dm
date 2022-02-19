@@ -228,13 +228,20 @@
 	emote_message_3p_target = "trills at TARGET."
 	emote_sound = 'sound/voice/teshtrill.ogg' // Copyright CC BY-NC 3.0 Arnaud Coutancier (freesound.org) for the source audio.
 
+<<<<<<< HEAD
 //CHOMPEdit Add Start
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /decl/emote/audible/prbt
 	key = "prbt"
 	emote_message_1p = "You prbt."
 	emote_message_3p = "prbts."
 	emote_message_1p_target = "You prbt at TARGET."
 	emote_message_3p_target = "prbts at TARGET."
+<<<<<<< HEAD
 	emote_sound = 'sound/voice/prbt.ogg'
 
 //CHOMPEdit Add End
+=======
+	emote_sound = 'sound/voice/prbt.ogg'
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

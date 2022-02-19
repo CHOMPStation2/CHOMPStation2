@@ -167,8 +167,12 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+<<<<<<< HEAD
 
 /* //CHOMPedit: disabling for now
+=======
+/*
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
@@ -218,4 +222,8 @@
 		H.Stun(1)
 		playsound(H, "rustle", 25, 1)
 	return TRUE
+<<<<<<< HEAD
 */ //CHOMPedit end. CHOMPEdit IIC: looks like upstream disabled it too because they made it a trait instead.
+=======
+*/
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

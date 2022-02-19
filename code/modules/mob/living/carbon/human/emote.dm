@@ -135,6 +135,10 @@ var/list/_human_default_emotes = list(
 
 	/decl/emote/helper/vwag,
 	/decl/emote/helper/vflap,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/prbt
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	//VOREStation Add End
 	//CHOMPedit Add Start
 	/decl/emote/audible/prbt
@@ -265,9 +269,13 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
+<<<<<<< HEAD
 	//CHOMPEdit Add Start
 	/decl/emote/audible/prbt
 	//CHOMPEdit Add End
+=======
+	/decl/emote/audible/prbt
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	)
 	//VOREStation Add End
 

@@ -173,4 +173,8 @@
 		icon_living = "startreader"
 		SetStunned(0)
 
+<<<<<<< HEAD
 	update_icon()
+=======
+	update_icon()
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

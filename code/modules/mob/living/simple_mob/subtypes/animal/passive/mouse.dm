@@ -177,9 +177,15 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
+<<<<<<< HEAD
 	
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
+=======
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 //The names Cheese... Agent Cheese
 /mob/living/simple_mob/animal/passive/mouse/operative/agent_cheese
 	name = "Agent Cheese"

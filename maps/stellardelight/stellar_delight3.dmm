@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/effect/landmark{
@@ -351,6 +354,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/heads/hor)
+<<<<<<< HEAD
+=======
+"by" = (
+/turf/simulated/wall/bay/r_wall/steel,
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "bB" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1403,7 +1412,11 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "fg" = (
 /obj/structure/handrail{
 	dir = 1
@@ -2098,7 +2111,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "ii" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/command)
@@ -2162,7 +2179,11 @@
 	dir = 9
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "iw" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2299,7 +2320,11 @@
 "iS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "iV" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -2867,7 +2892,11 @@
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "lh" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/hatch{
@@ -3041,7 +3070,11 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "lH" = (
 /obj/machinery/telecomms/server/presets/service/sd,
 /turf/simulated/floor/tiled/dark{
@@ -3358,7 +3391,11 @@
 	dir = 8
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "mM" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -3634,7 +3671,11 @@
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "nF" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -4591,7 +4632,11 @@
 "qS" = (
 /obj/machinery/light/small,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qU" = (
 /obj/machinery/light{
 	dir = 4
@@ -4627,8 +4672,16 @@
 	dir = 5
 	},
 /obj/structure/reagent_dispensers/fueltank,
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/obj/machinery/alarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qZ" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/power/apc/angled{
@@ -5202,7 +5255,11 @@
 	dir = 4
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "tn" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -5463,6 +5520,15 @@
 "uq" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/stellardelight/deck3/starboarddock)
+<<<<<<< HEAD
+=======
+"ur" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/bay/r_wall/steel,
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "us" = (
 /obj/machinery/light{
 	dir = 4
@@ -5656,7 +5722,11 @@
 	dir = 8
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "uZ" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -5775,7 +5845,11 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "vA" = (
 /obj/machinery/power/apc/angled{
 	dir = 1;
@@ -6031,7 +6105,11 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "wy" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -7163,7 +7241,11 @@
 	dir = 5
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "At" = (
 /obj/structure/table/glass,
 /obj/item/device/flashlight/lamp/green,
@@ -7255,6 +7337,13 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardcent)
+<<<<<<< HEAD
+=======
+"AK" = (
+/obj/random/trash_pile,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "AP" = (
 /obj/machinery/power/apc/angled{
 	dir = 4
@@ -7297,7 +7386,11 @@
 	stripe_color = "#454545"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "AU" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -7410,7 +7503,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Bj" = (
 /obj/machinery/message_server,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7599,7 +7696,11 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "BH" = (
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
@@ -7943,6 +8044,15 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/starboard)
+<<<<<<< HEAD
+=======
+"CK" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/steel,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "CO" = (
 /obj/effect/overmap/visitable/ship/stellar_delight,
 /turf/space,
@@ -8067,7 +8177,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Dn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -8465,7 +8579,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "EU" = (
 /obj/structure/cable/blue{
 	icon_state = "2-8"
@@ -8762,7 +8880,11 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Ge" = (
 /obj/structure/table/standard,
 /obj/item/weapon/aiModule/nanotrasen,
@@ -8857,7 +8979,11 @@
 	dir = 10
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Gv" = (
 /obj/structure/sign/deck3{
 	pixel_x = -32
@@ -9189,7 +9315,11 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "HH" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -10006,7 +10136,11 @@
 "Kt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Kv" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -10055,7 +10189,11 @@
 /obj/random/mre,
 /obj/random/mre,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "KD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -10064,7 +10202,11 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "KF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -10096,6 +10238,12 @@
 "KI" = (
 /turf/simulated/floor/wood,
 /area/stellardelight/deck3/readingroom)
+<<<<<<< HEAD
+=======
+"KJ" = (
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "KL" = (
 /obj/machinery/power/apc/angled{
 	dir = 8
@@ -10184,7 +10332,11 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Le" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/flora/pottedplant/minitree,
@@ -10276,7 +10428,11 @@
 	dir = 5
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Lz" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -10434,7 +10590,11 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Mc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -10594,7 +10754,11 @@
 	},
 /obj/random/trash_pile,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "MC" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -10742,7 +10906,11 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "MX" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -10806,7 +10974,11 @@
 	dir = 4
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Nf" = (
 /obj/machinery/light{
 	dir = 4
@@ -12063,7 +12235,11 @@
 	dir = 8
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Ru" = (
 /obj/machinery/holoplant,
 /obj/machinery/camera/network/command{
@@ -12320,6 +12496,15 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/foreportrooma)
+<<<<<<< HEAD
+=======
+"Sw" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Sz" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -12940,7 +13125,11 @@
 "UQ" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "UR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -13227,6 +13416,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/item/weapon/folder/white_cmo,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/crew_quarters/heads/cmo)
 "VG" = (
@@ -13402,7 +13595,11 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+<<<<<<< HEAD
 /area/maintenance/stellardelight/deck3/portaft)
+=======
+/area/maintenance/stellardelight/deck3/starboardaft)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Ws" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -13680,6 +13877,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/item/weapon/folder/white_rd,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/heads/hor)
 "Xo" = (
@@ -21581,7 +21782,11 @@ dE
 dE
 dE
 dE
+<<<<<<< HEAD
 dE
+=======
+Sw
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 dE
 dE
 dE
@@ -26535,8 +26740,13 @@ Hh
 eb
 tC
 Rq
+<<<<<<< HEAD
 dE
 Yg
+=======
+KJ
+by
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Pa
 wR
 Yy
@@ -26677,8 +26887,13 @@ ON
 Xd
 Ja
 Ly
+<<<<<<< HEAD
 dE
 Yg
+=======
+KJ
+by
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 ow
 Pa
 ow
@@ -26820,6 +27035,7 @@ LR
 me
 tk
 qS
+<<<<<<< HEAD
 Yg
 Yg
 Yg
@@ -26840,6 +27056,28 @@ Yg
 Yg
 ff
 Yg
+=======
+by
+by
+by
+by
+by
+by
+by
+by
+by
+by
+Bg
+by
+by
+by
+by
+by
+by
+by
+ff
+by
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aA
 nr
 lT
@@ -26978,7 +27216,11 @@ iS
 Kz
 Dk
 qY
+<<<<<<< HEAD
 JW
+=======
+AK
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Ld
 KD
 vy
@@ -27101,18 +27343,30 @@ NL
 NL
 qy
 NL
+<<<<<<< HEAD
 Yg
 dE
 dE
+=======
+by
+KJ
+KJ
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 le
 ww
 ww
 MB
 Kt
 iv
+<<<<<<< HEAD
 dE
 UQ
 dE
+=======
+KJ
+UQ
+KJ
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 HF
 nD
 BG
@@ -27243,6 +27497,7 @@ NL
 NL
 we
 NL
+<<<<<<< HEAD
 Yg
 Yg
 Yg
@@ -27266,6 +27521,31 @@ Yg
 ki
 ki
 Yg
+=======
+by
+by
+by
+by
+CK
+CK
+by
+by
+by
+by
+by
+by
+ur
+by
+by
+by
+by
+by
+by
+by
+CK
+CK
+by
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 hQ
 lq
 lq
@@ -34275,4 +34555,7 @@ Jh
 Jh
 Jh
 "}
+<<<<<<< HEAD
 >>>>>>> 8d2bffb1e0e... Merge pull request #12155 from Very-Soft/item_bank
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

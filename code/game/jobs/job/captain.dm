@@ -35,6 +35,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	alt_titles = list("Overseer"= /datum/alt_title/overseer,"Colony Director"= /datum/alt_title/colonydirector) //CHOMPEdit
 
 
+
 /*
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()

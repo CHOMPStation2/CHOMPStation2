@@ -4,9 +4,26 @@
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
 <<<<<<< HEAD
+<<<<<<< HEAD
 //#include "tether_misc.dmm" //YW Addition, forces map to be compiled
 /*/datum/map_template/tether_lateload/tether_misc //YW Edit, commented out this lateload
 ||||||| parent of 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+
+/datum/map_template/tether_lateload/tether_centcom
+	name = "Tether - Centcom"
+	desc = "Central Command lives here!"
+	mappath = 'tether_centcom.dmm'
+
+	associated_map_datum = /datum/map_z_level/tether_lateload/centcom
+
+/datum/map_z_level/tether_lateload/centcom
+	z = Z_LEVEL_CENTCOM
+	name = "Centcom"
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/map_template/tether_lateload/tether_misc
 =======
 
@@ -57,7 +74,9 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_UNDERDARK, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_UNDERDARK, 64, 64)         // Create the mining ore distribution map.
 
-
+#include "../../submaps/surface_submaps/plains/plains_vr.dm"
+#include "../../submaps/surface_submaps/plains/plains_areas.dm"
+#include "../../submaps/surface_submaps/plains/plains_turfs.dm"
 /datum/map_template/tether_lateload/tether_plains
 	name = "Tether - Plains"
 	desc = "The Virgo 3B away mission."
@@ -159,6 +178,7 @@
 	z = Z_LEVEL_ROGUEMINE_2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 #if AWAY_MISSION_TEST
@@ -659,6 +679,8 @@
 
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for Tether lateload maps
 /datum/map_template/tether_lateload
@@ -724,6 +746,7 @@
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_aerostat
+<<<<<<< HEAD
 
 /datum/map_z_level/tether_lateload/away_aerostat
 	name = "Away Mission - Aerostat"
@@ -785,8 +808,31 @@
 	base_turf = /turf/space
 	z = Z_LEVEL_OFFMAP1
 =======
+=======
+
+/datum/map_z_level/tether_lateload/away_aerostat
+	name = "Away Mission - Aerostat"
+	z = Z_LEVEL_AEROSTAT
+	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
+
+/datum/map_template/tether_lateload/away_aerostat_surface
+	name = "Remmi Aerostat - Z2 Surface"
+	desc = "The surface from the Virgo 2 Aerostat."
+	mappath = 'maps/expedition_vr/aerostat/surface.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/away_aerostat_surface
+
+/datum/map_template/tether_lateload/away_aerostat_surface/on_map_loaded(z)
+	. = ..()
+	seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 120, /area/offmap/aerostat/surface/unexplored, /datum/map_template/virgo2)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_AEROSTAT_SURFACE, world.maxx - 4, world.maxy - 4)
+	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/map_z_level/tether_lateload/away_aerostat_surface
 	name = "Away Mission - Aerostat Surface"
 	z = Z_LEVEL_AEROSTAT_SURFACE
 	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
+<<<<<<< HEAD
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

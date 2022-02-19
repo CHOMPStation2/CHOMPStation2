@@ -584,12 +584,6 @@
 	ckeywhitelist = list("luminescentring")
 	character_name = list("Briana Moore")
 
-/datum/gear/fluff/entchtut_medal
-	path = /obj/item/clothing/accessory/medal/conduct
-	display_name = "Entchtut's Conduct Medal"
-	ckeywhitelist = list("littlebigkid2000")
-	character_name = list("Entchtut Cenein")
-
 //  M CKEYS
 /datum/gear/fluff/phi_box
 	path = /obj/item/weapon/storage/box/fluff/phi
@@ -760,6 +754,15 @@
 	ckeywhitelist = list("pastelprincedan")
 	character_name = list("Kiyoshi Maki", "Masumi Maki")
 
+<<<<<<< HEAD
+=======
+/datum/gear/fluff/entchtut_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Entchtut's Conduct Medal"
+	ckeywhitelist = list("positronicjune")
+	character_name = list("Entchtut Cenein")
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/gear/fluff/mechanic_overalls
 	path = /obj/item/clothing/under/fluff/mechanic_overalls
 	display_name = "mechanic overalls"
@@ -872,6 +875,20 @@
 	slot = slot_head
 	ckeywhitelist = list("scree")
 	character_name = list("Scree")
+
+/datum/gear/fluff/avida_dress
+	path = /obj/item/clothing/under/skirt/outfit/fluff/avida
+	display_name = "Avida's Dress"
+	slot = slot_w_uniform
+	ckeywhitelist = list("scree")
+	character_name = list("Avida")
+
+/datum/gear/fluff/avida_hat
+	path = /obj/item/clothing/head/fluff/avida
+	display_name = "Avida's Hat"
+	slot = slot_head
+	ckeywhitelist = list("scree")
+	character_name = list("Avida")
 
 /datum/gear/fluff/alfonso_sunglasses
 	path = /obj/item/clothing/glasses/sunglasses/fluff/alfonso
@@ -1018,6 +1035,11 @@
 	character_name = list("Konor Foxe")
 
 //  U CKEYS
+/datum/gear/fluff/brad_jordans
+	path = /obj/item/clothing/shoes/fluff/airjordans
+	display_name = "Bradley's Air Jordans"
+	ckeywhitelist = list("unclefruitvevo")
+	character_name = list("Bradley Khatibi")
 
 //  V CKEYS
 /datum/gear/fluff/cameron_glasses

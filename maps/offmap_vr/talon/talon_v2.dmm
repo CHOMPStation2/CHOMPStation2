@@ -2940,6 +2940,19 @@
 	id_tag = "talon_port_fore";
 	pixel_y = -30;
 	req_one_access = list(301)
+<<<<<<< HEAD
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/fore_port)
+"iK" = (
+/obj/structure/catwalk,
+=======
 	},
 /obj/structure/handrail{
 	dir = 1
@@ -3002,10 +3015,33 @@
 /area/talon_v2/central_hallway/fore)
 "iP" = (
 /obj/machinery/door/firedoor/glass/talon,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+<<<<<<< HEAD
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"iL" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/fore_port)
+"iM" = (
+/obj/machinery/power/pointdefense{
+	id_tag = "talon_pd"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+=======
 	},
 /obj/machinery/door/airlock/glass_security{
 	name = "O.F.D. Ops";
@@ -3049,11 +3085,58 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/central_hallway/fore)
 "iU" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"iN" = (
+/obj/structure/table/woodentable,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/engineer,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/eng_room)
+"iO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/machinery/camera/network/talon{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway/fore)
+"iP" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass_security{
+	name = "O.F.D. Ops";
+	req_one_access = list(301)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/ofd_ops)
+"iQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 5
+	},
+=======
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -3103,11 +3186,164 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/obj/machinery/holoposter{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway/fore)
+"iR" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"iS" = (
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/engineering/star_store)
+"jr" = (
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
+"ju" = (
+/obj/effect/floor_decal/emblem/talon_big{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway/fore)
+<<<<<<< HEAD
+"iU" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"jg" = (
+/obj/effect/floor_decal/emblem/talon_big{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway/fore)
+"jh" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/railing/grey,
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"jj" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"jk" = (
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+=======
+"jv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway/fore)
+"jx" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"jy" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+<<<<<<< HEAD
+/obj/machinery/airlock_sensor{
+	pixel_y = 24;
+	req_one_access = list(301)
+	},
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_port)
+"jn" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+=======
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "talon_cargo_port";
+	name = "Cargo Loading Hatch"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_port)
+"jC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"jF" = (
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/cap_room)
+"jG" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/blue{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"jJ" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+"jM" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -3193,6 +3429,15 @@
 /obj/machinery/camera/network/talon{
 	dir = 8
 	},
+=======
+/turf/simulated/floor/plating,
+/area/talon_v2/hangar)
+"jN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/machinery/camera/network/talon{
+	dir = 8
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/central_hallway/fore)
 "jO" = (
@@ -3362,12 +3607,55 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+<<<<<<< HEAD
 	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/plating,
+/area/shuttle/talonboat)
+"kw" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/bar)
+"kx" = (
+=======
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+<<<<<<< HEAD
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"kz" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
+/turf/simulated/floor/plating,
+=======
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/shuttle/talonboat)
@@ -3405,6 +3693,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
 /turf/simulated/floor/plating,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /area/talon_v2/engineering/port)
 "kC" = (
 /obj/structure/bed/chair/bay/shuttle{
@@ -3983,6 +4272,7 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+<<<<<<< HEAD
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -3997,6 +4287,22 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+=======
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"mr" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/eng_room)
 "mu" = (
@@ -4166,6 +4472,7 @@
 "ne" = (
 /obj/structure/closet/secure_closet/personal/cabinet{
 	locked = 0
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/sec_room)
@@ -4182,6 +4489,24 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
+=======
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/sec_room)
+"ng" = (
+/obj/structure/closet/secure_closet/talon_guard,
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1)
+	},
+/obj/item/weapon/storage/box/nifsofts_security,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/sec_room)
+"nh" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/railing/grey,
 /obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
 /turf/simulated/floor/plating,
@@ -4585,6 +4910,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+<<<<<<< HEAD
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -4618,6 +4944,102 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"oE" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/portable_atmospherics/canister/empty/phoron,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"oF" = (
+/obj/structure/table/standard,
+/obj/machinery/alarm/talon{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/crew_quarters/restrooms)
+"oN" = (
+/obj/machinery/alarm/talon{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/structure/table/standard,
+/obj/machinery/photocopier/faxmachine/talon,
+=======
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/hangar)
+"oB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/catwalk,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/workroom)
+"oO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/workroom)
+"oS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"oV" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+=======
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/aft_port)
 "oE" = (
@@ -4682,6 +5104,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/weapon/paper/talon_doctor,
 /turf/simulated/floor/carpet,
 /area/talon_v2/crew_quarters/med_room)
@@ -4727,11 +5150,19 @@
 "pc" = (
 /obj/machinery/power/pointdefense{
 	id_tag = "talon_pd"
+<<<<<<< HEAD
 	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
+=======
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
@@ -5033,6 +5464,22 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"pZ" = (
+/obj/structure/closet/crate/engineering,
+/obj/fiftyspawner/cardboard,
+/obj/fiftyspawner/floor,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/wood,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/atmospherics)
 "pZ" = (
@@ -5393,6 +5840,7 @@
 /obj/structure/closet/emergsuit_wall{
 	dir = 1;
 	pixel_y = -32
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway/star)
@@ -5433,6 +5881,48 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+=======
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"ri" = (
+/obj/structure/table/standard,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/brig)
+"rj" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/brig)
+"rk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/hangar)
+"rl" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/starboard)
@@ -6199,6 +6689,7 @@
 "tB" = (
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_x = 26
+<<<<<<< HEAD
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -6206,6 +6697,15 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+=======
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/catwalk,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6248,6 +6748,7 @@
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/medical,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/carpet,
 /area/talon_v2/crew_quarters/med_room)
@@ -6327,6 +6828,87 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+=======
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/med_room)
+"tM" = (
+/obj/structure/table/woodentable,
+/obj/machinery/camera/network/talon{
+	dir = 8
+	},
+/obj/machinery/recharger,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"tQ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"tS" = (
+/obj/structure/railing/grey,
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/portable_atmospherics/canister/empty/phoron,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"tU" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"tX" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"tZ" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock{
+	name = "Restrooms & Charger"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/crew_quarters/restrooms)
+"ub" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/crew_quarters/restrooms)
+"uc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/crew_quarters/restrooms)
+"uf" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -6834,6 +7416,7 @@
 "vL" = (
 /obj/machinery/power/pointdefense{
 	id_tag = "talon_pd"
+<<<<<<< HEAD
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -6849,6 +7432,23 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+=======
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"vO" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -7521,6 +8121,7 @@
 /obj/machinery/chemical_dispenser/full,
 /obj/machinery/light{
 	dir = 4
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/tiled/white,
 /area/talon_v2/medical)
@@ -7532,6 +8133,19 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+=======
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"yl" = (
+/obj/structure/sign/warning/airlock{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/handrail{
+	dir = 8
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/maintenance/wing_port)
 "ym" = (
@@ -7709,6 +8323,7 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+<<<<<<< HEAD
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -7785,6 +8400,84 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+=======
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"yM" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"yN" = (
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/camera/network/talon,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/engineering/star_store)
+"yO" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/workroom)
+"yR" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/structure/closet/walllocker/medical/north,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/workroom)
+"yS" = (
+/turf/simulated/wall/shull{
+	can_open = 1
+	},
+/area/talon_v2/engineering/port_store)
+"yU" = (
+/obj/machinery/suit_cycler/vintage/tminer,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"yV" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	locked = 0
+	},
+/obj/machinery/camera/network/talon{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/pilot_room)
+"yW" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/structure/railing/grey,
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"yY" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/secure_storage)
 "yZ" = (
@@ -7795,12 +8488,21 @@
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
+<<<<<<< HEAD
 	},
 /obj/machinery/power/apc/talon{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 28
 	},
+=======
+	},
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/table/rack/steel,
 /obj/item/weapon/shovel,
 /obj/item/weapon/mining_scanner,
@@ -8124,6 +8826,18 @@
 "As" = (
 /obj/machinery/light/small{
 	dir = 8
+<<<<<<< HEAD
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/closet/walllocker_double/hydrant/west,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Au" = (
+=======
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8181,13 +8895,35 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/aft_starboard)
+<<<<<<< HEAD
+"Av" = (
+/obj/effect/floor_decal/emblem/talon,
+/turf/simulated/wall/rshull,
+/area/talon_v2/maintenance/wing_port)
+"Aw" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/talon_v2/maintenance/wing_port)
+"Ax" = (
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+=======
 "AD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -8257,6 +8993,152 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+<<<<<<< HEAD
+/obj/structure/closet/secure_closet/personal/cabinet{
+	locked = 0
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Az" = (
+/obj/structure/table/rack/steel,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/secure_storage)
+"AB" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"AD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"AE" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/gen_store)
+"AH" = (
+/obj/machinery/atmospherics/portables_connector/aux,
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_port)
+"AI" = (
+/obj/machinery/power/apc/talon{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+=======
+/obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/central_hallway/fore)
+"AQ" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/secure_storage)
+"AS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/bridge)
+"AT" = (
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"AU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/wing_starboard)
+"AV" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/door/blast/regular/open{
+	id = "talon_boat_west"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/gen_store)
+"AJ" = (
+/obj/machinery/alarm/talon{
+	dir = 1;
+<<<<<<< HEAD
+	pixel_y = -25
+	},
+/obj/structure/reagent_dispensers/foam,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/gen_store)
+"AL" = (
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"AN" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/head/beret/talon,
+/obj/item/clothing/head/beret/talon,
+/obj/item/clothing/head/beret/talon,
+/obj/item/clothing/head/beret/talon,
+/obj/item/clothing/suit/storage/hooded/wintercoat/talon,
+/obj/item/clothing/suit/storage/hooded/wintercoat/talon,
+/obj/item/clothing/suit/storage/hooded/wintercoat/talon,
+/obj/item/clothing/suit/storage/hooded/wintercoat/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/secure_storage)
+"AO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -8290,8 +9172,52 @@
 	},
 /obj/machinery/power/terminal{
 	dir = 4
+=======
+	id = "talon_boat_west";
+	pixel_y = -28;
+	req_one_access = list(301)
 	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"AY" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "talonrefinery"
+	},
+/obj/machinery/mineral/output,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+"AZ" = (
+/obj/machinery/telecomms/allinone/talon{
+	id = "talon_aio";
+	network = "Talon"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/engineering)
+"Ba" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/oxygen,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/secure_storage)
+"Bb" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/junction/yjunction,
 /turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"Bc" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/railing/grey,
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
+/turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/talon_v2/engineering)
 "AU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
@@ -8383,6 +9309,39 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/techfloor,
+=======
+/area/talon_v2/engineering/port)
+"Bd" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/chair,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway)
+"Be" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/talon_v2/ofd_ops)
+"Bf" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+"Bi" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/space/void/refurb/talon,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techfloor,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /area/talon_v2/secure_storage)
 "Bj" = (
 /obj/machinery/light/small{
@@ -8452,6 +9411,47 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
+<<<<<<< HEAD
+/area/talon_v2/maintenance/wing_port)
+"Bw" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/workroom)
+"By" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/structure/flora/pottedplant/orientaltree,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/bar)
+"Bz" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"BC" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/alarm/talon{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/obj/structure/railing/grey,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"BD" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Talon Atmospherics Maintenance Access";
+	req_one_access = list(301)
+=======
 /area/talon_v2/maintenance/wing_port)
 "Bw" = (
 /turf/simulated/wall/shull,
@@ -8497,6 +9497,17 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"BH" = (
+/obj/structure/closet/wardrobe/black{
+	starts_with = list(/obj/item/clothing/under/color/black = 4, /obj/item/clothing/accessory/storage/black_vest = 4, /obj/item/clothing/accessory/storage/black_drop_pouches = 4, /obj/item/clothing/gloves/black = 4, /obj/item/clothing/head/soft/black = 4, /obj/item/clothing/mask/balaclava = 4, /obj/item/clothing/mask/bandana = 4, /obj/item/clothing/mask/gas/commando = 4, /obj/item/weapon/storage/backpack/messenger/black = 4, /obj/item/weapon/storage/backpack/dufflebag = 4, /obj/item/clothing/shoes/black = 4, /obj/item/clothing/shoes/boots/duty = 4)
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/atmospherics)
@@ -8520,6 +9531,24 @@
 	dir = 1;
 	pixel_y = -32
 	},
+=======
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/crew_quarters/restrooms)
+"BI" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"BK" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/hangar)
 "BO" = (
@@ -8759,9 +9788,62 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+<<<<<<< HEAD
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"CK" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/catwalk,
+/obj/structure/closet/walllocker_double/west,
+/obj/item/weapon/cell/apc,
+/obj/item/weapon/cell/apc,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1)
+	},
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/head/radiation,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+<<<<<<< HEAD
+/area/talon_v2/engineering)
+"CM" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/engineering/star_store)
+"CN" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/noticeboard{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/fore)
+"CO" = (
+/obj/structure/disposalpipe/segment,
+=======
 /area/talon_v2/maintenance/aft_port)
 "CK" = (
 /obj/structure/cable/green{
@@ -8788,11 +9870,14 @@
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering)
 "CM" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -8815,6 +9900,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway)
 "CP" = (
@@ -9017,6 +10103,7 @@
 	dir = 9
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/atmospherics)
 "DN" = (
@@ -9052,6 +10139,43 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
+=======
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"DN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"DP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"DR" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /area/talon_v2/engineering/atmospherics)
 "DU" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -9252,6 +10376,9 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
+<<<<<<< HEAD
+	},
+=======
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -9280,6 +10407,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 2;
@@ -9289,6 +10417,36 @@
 	opacity = 0
 	},
 /obj/machinery/door/firedoor/glass/talon,
+<<<<<<< HEAD
+/turf/simulated/floor/plating,
+/area/talon_v2/brig)
+"EB" = (
+/obj/effect/shuttle_landmark/premade/talon_v2_wing_port,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"ED" = (
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 1;
+	req_access = list(301)
+	},
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 2;
+	req_access = list(301)
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "talon_brig2";
+	name = "Cell Shutters";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor/glass/talon,
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -9606,6 +10764,29 @@
 /obj/machinery/power/apc/talon{
 	name = "south bump";
 	pixel_y = -24
+<<<<<<< HEAD
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"Fy" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/voidcraft{
+	name = "Cabin Access";
+	req_one_access = list(301)
+=======
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9648,6 +10829,29 @@
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/talonboat)
+"Fz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/structure/railing{
+	dir = 1
+	},
+<<<<<<< HEAD
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/ship_munition/disperser_charge/emp,
+/turf/simulated/floor/reinforced,
+/area/talon_v2/ofd_ops)
+"FB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -9670,6 +10874,26 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"FC" = (
+/obj/machinery/drone_fabricator/talon,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"FG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"FK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
@@ -9851,6 +11075,7 @@
 	},
 /obj/machinery/light{
 	dir = 8
+<<<<<<< HEAD
 	},
 /obj/machinery/holoposter{
 	dir = 8;
@@ -9870,6 +11095,27 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+=======
+	},
+/obj/machinery/holoposter{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"Gm" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/plating,
 /area/talon_v2/central_hallway/port)
 "Gn" = (
@@ -10086,6 +11332,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/atmospherics)
 "GY" = (
@@ -10226,11 +11473,76 @@
 	dir = 1
 	},
 /obj/structure/handrail,
+=======
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"GY" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"GZ" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table/rack/steel,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"Ha" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Hb" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Hc" = (
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/disposal/wall,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/engineering)
+"Hf" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Hg" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "talonrefinery"
+	},
+/obj/structure/plasticflaps,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/refining)
+"Hh" = (
+/obj/structure/table/woodentable,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/item/weapon/paper/talon_guard,
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/sec_room)
+"Hj" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
@@ -10306,11 +11618,198 @@
 "HA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/hangar)
+"Hn" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/talon,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"Hq" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/closet/emergsuit_wall{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/crew_quarters/restrooms)
+"Hr" = (
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/airlock_sensor{
+	pixel_y = 24;
+	req_one_access = list(301)
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"Ht" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/talon_v2/ofd_ops)
+"Hu" = (
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "talon_boat";
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 1
+	},
+/obj/structure/handrail,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/secure_storage)
+"HD" = (
+/obj/structure/disposaloutlet{
+	dir = 8
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"Hv" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"Hw" = (
+/obj/machinery/computer/ship/navigation,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "talon_bridge_shields";
+	name = "bridge blast shields";
+	pixel_y = 16
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/bridge)
+"Hx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+<<<<<<< HEAD
+"HE" = (
+/obj/machinery/alarm/talon{
+	dir = 8;
+	pixel_x = 22
+	},
+=======
+"Hy" = (
+/obj/structure/handrail,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/survival/north,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"Hz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/hangar)
+"HA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+/turf/simulated/floor/carpet/blucarpet,
+/area/talon_v2/crew_quarters/cap_room)
+"HF" = (
+/obj/machinery/power/apc/talon{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -28
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+=======
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/secure_storage)
 "HD" = (
@@ -10344,6 +11843,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/crew_quarters/restrooms)
 "HG" = (
@@ -10487,6 +11987,22 @@
 /obj/machinery/alarm/talon{
 	dir = 1;
 	pixel_y = -25
+<<<<<<< HEAD
+	},
+/obj/structure/table/rack/steel,
+/obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/device/spaceflare,
+/obj/machinery/camera/network/talon{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/armory)
+"HW" = (
+/obj/machinery/door/firedoor/glass/talon,
+=======
 	},
 /obj/structure/table/rack/steel,
 /obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary{
@@ -10624,12 +12140,42 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Engine Crawlway Access";
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"HX" = (
+/obj/machinery/vending/blood{
+	req_access = list(301);
+	req_log_access = 301
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"HY" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+"HZ" = (
+/turf/simulated/wall/tgmc/window/rwall,
+/area/shuttle/talonpod)
+"Ia" = (
+=======
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway/star)
 "Il" = (
@@ -10707,11 +12253,24 @@
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
 "Is" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+=======
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -11121,6 +12680,890 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+<<<<<<< HEAD
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Id" = (
+/obj/structure/catwalk,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+=======
+/obj/machinery/computer/shuttle_control/explore/talonboat{
+	dir = 4;
+	name = "boat remote control console"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway)
+"JI" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/restrooms)
+"JJ" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"JK" = (
+/obj/structure/table/woodentable,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/miner,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/mine_room)
+"JL" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/ofd_ops)
+"JM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/turf/simulated/wall/rshull,
+/area/talon_v2/engineering/starboard)
+"JN" = (
+/obj/structure/catwalk,
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"JO" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/bridge)
+"JQ" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_port)
+"Ie" = (
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+<<<<<<< HEAD
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
+"If" = (
+/obj/structure/hull_corner/long_horiz{
+	dir = 10
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"Ig" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/mineral/input,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/refining)
+"Ih" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+=======
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"JR" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/alarm/talon{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"JU" = (
+/obj/machinery/atmospherics/binary/pump/high_power/on,
+/obj/structure/railing/grey{
+	dir = 8
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+"JV" = (
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Ij" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+<<<<<<< HEAD
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Il" = (
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+"JZ" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+"Im" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"In" = (
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/fore)
+"Ke" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/bridge)
+"Ip" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/weapon/stool/baystool/padded{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/bar)
+"Iq" = (
+/obj/machinery/camera/network/talon{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"Ir" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"Is" = (
+=======
+/obj/machinery/holoposter{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"Kf" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	name = "Cargo Bay";
+	req_one_access = list(301)
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"Kg" = (
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/cap_room)
+"Kk" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/fore_port)
+"Km" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 8
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/aft_starboard)
+"Kn" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"Ko" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+<<<<<<< HEAD
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"It" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/refining)
+"Iu" = (
+/obj/structure/catwalk,
+=======
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"Kp" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"Ks" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/hangar)
+"Kv" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
+"Iv" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+=======
+/obj/machinery/alarm/talon{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"Kw" = (
+/obj/machinery/alarm/talon{
+	pixel_y = 28
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Ix" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/donut,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/alarm/talon{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/brig)
+"Iz" = (
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"IA" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"IB" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/crew_quarters/mine_room)
+"IC" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"ID" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"IF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 10
+	},
+/obj/structure/handrail,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/fore_starboard)
+"IJ" = (
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Kx" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 5;
+	pixel_y = 24
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1);
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/armory)
+"Kz" = (
+/obj/machinery/holoposter{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/fore)
+"KB" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/maintenance/fore_port)
+"KC" = (
+/obj/structure/closet/walllocker_double/hydrant/west,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/secure_storage)
+"KE" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"IK" = (
+/turf/simulated/wall/rshull,
+/area/talon_v2/engineering/generators)
+"IL" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"IM" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"IN" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/hangar)
+"IO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"IP" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/maintenance/aft_port)
+"IS" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_research{
+	name = "Anomaly Storage";
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/anomaly_storage)
+"IU" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+"IW" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/talon_v2/central_hallway/fore)
+"IY" = (
+/obj/structure/sign/warning/moving_parts{
+	pixel_y = -32
+	},
+/obj/machinery/disposal/wall{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/mine_room)
+"Jd" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+"Je" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Jf" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"Ji" = (
+/obj/effect/shuttle_landmark/premade/talon_v2_wing_star,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"Jk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/fore)
+"Jl" = (
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 5
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 1;
+	id_tag = "talon_starboard_aft";
+	pixel_y = -30;
+	req_one_access = list(301)
+	},
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	pixel_x = -28;
+	req_one_access = list(301)
+	},
+/obj/machinery/light/small,
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/aft_starboard)
+"Jm" = (
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
+=======
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"KH" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"KI" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"KJ" = (
+/obj/structure/table/bench/wooden,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/cap_room)
+"KM" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port_store)
+"KN" = (
+/obj/structure/table/steel,
+/obj/item/weapon/pickaxe/drill,
+/obj/machinery/button/remote/blast_door{
+	id = "talon_boat_cockpit";
+	pixel_x = 6;
+	pixel_y = 28
+	},
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1)
+	},
+<<<<<<< HEAD
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 1;
+	id_tag = "talon_port";
+	pixel_y = -30;
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_port)
+"Jp" = (
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_port)
+"Jr" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_port)
+"Jt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"Ju" = (
+/obj/machinery/camera/network/talon{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"Jv" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Jw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/engineeringatmos{
+	name = "Talon Atmospherics";
+	req_one_access = list(301)
+	},
+/obj/structure/sign/warning/nosmoking_1{
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/engineering/atmospherics)
+"Jy" = (
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 9
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 1;
+	id_tag = "talon_port_aft";
+	pixel_y = -30;
+	req_one_access = list(301)
+	},
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	pixel_x = 28;
+	req_one_access = list(301)
+	},
+/obj/machinery/light/small,
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/aft_port)
+"Jz" = (
+=======
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "talonboat_docker";
+	pixel_x = -6;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/talonboat)
+"KO" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"JA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "talon_boat_cockpit"
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/shuttle/talonboat)
+"JB" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"JC" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11226,11 +13669,58 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+=======
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"KQ" = (
+/obj/structure/railing/grey,
+/obj/effect/floor_decal/emblem/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/bridge)
+"KS" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"KT" = (
+/obj/machinery/atmospherics/portables_connector/aux,
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"KU" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/engineering/port_store)
+"KX" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	name = "Hangar Bay";
+	req_one_access = list(301)
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/hangar)
+"KY" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"KZ" = (
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 6
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -11304,6 +13794,35 @@
 "Ko" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+=======
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	pixel_x = -28;
+	req_one_access = list(301)
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"Lc" = (
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"Le" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Lg" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -11314,7 +13833,12 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
+<<<<<<< HEAD
 /area/talon_v2/central_hallway/port)
 "Kp" = (
 /obj/machinery/chem_master,
@@ -11342,11 +13866,68 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+=======
+/area/talon_v2/central_hallway/star)
+"Li" = (
+/obj/structure/flora/pottedplant/minitree,
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/central_hallway)
+"Lj" = (
+/obj/structure/sign/directions/cargo/refinery{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Lk" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"Ll" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/item/weapon/paper/talon_power,
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/eng_room)
+"Ln" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Lo" = (
+/obj/machinery/holoposter{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Lr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	},
 /obj/machinery/alarm/talon{
 	dir = 1;
 	pixel_y = -25
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -11457,10 +14038,50 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "KO" = (
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/hangar)
+"Ls" = (
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/pointdefense{
+	id_tag = "talon_pd"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"Lu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/engineering/star_store)
+"Lv" = (
+/obj/structure/cable/yellow,
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/generators)
+"Lw" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Starboard Eng. Storage";
+	req_one_access = list(301)
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+<<<<<<< HEAD
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -11538,10 +14159,23 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway/star)
 "Lg" = (
+=======
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"Lx" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/glass{
+	name = "Workroom"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+<<<<<<< HEAD
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11598,11 +14232,23 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+=======
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/workroom)
+"Ly" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -11773,6 +14419,116 @@
 	pixel_y = 26
 	},
 /obj/structure/disposalpipe/segment{
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/hydrant/north,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"Lz" = (
+/obj/machinery/power/apc/talon{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"LA" = (
+/obj/machinery/alarm/talon{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"LB" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/star)
+"LH" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+<<<<<<< HEAD
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+=======
+/obj/machinery/door/blast/regular/open{
+	dir = 2;
+	id = "talon_bridge_shields"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/bridge)
+"LC" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/fore)
+"LD" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/directions/medical{
+	dir = 4;
+	pixel_x = 32;
+	pixel_y = -3
+	},
+/obj/structure/sign/directions/engineering{
+	pixel_x = 32;
+	pixel_y = 3
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway)
+"LF" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -11786,6 +14542,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/door/blast/regular/open{
 	id = "talon_windows"
 	},
@@ -11804,6 +14561,7 @@
 "LJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+<<<<<<< HEAD
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -11820,6 +14578,24 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+=======
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/generators)
@@ -11877,6 +14653,26 @@
 	pixel_x = -11;
 	pixel_y = 24;
 	req_one_access = list(301)
+<<<<<<< HEAD
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"LR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/alarm/talon{
+	pixel_y = 28
+=======
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -11914,6 +14710,56 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/segment{
+<<<<<<< HEAD
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"LT" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/gen_store)
+"LU" = (
+=======
+	dir = 4
+	},
+/obj/structure/sign/department/medbay{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/central_hallway/star)
+"LV" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 8
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"LX" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
@@ -12043,6 +14889,103 @@
 "Mp" = (
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(301)
+=======
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"LY" = (
+/obj/effect/map_helper/airlock/atmos/pump_out_external,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/cee,
+/obj/structure/handrail,
+/turf/simulated/floor/reinforced,
+/area/shuttle/talonboat)
+"Mb" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/closet/walllocker/medical/west,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1)
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Mc" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/talon,
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"Mf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Mg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Mh" = (
+/obj/machinery/camera/network/talon{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Mi" = (
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/whetstone,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/armory)
+"Mj" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/bridge)
+"Mk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/wall/shull,
+/area/talon_v2/crew_quarters/mine_room)
+"Ml" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/vending/medical_talon{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"Mm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_starboard)
+"Mo" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Mp" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -12075,9 +15018,45 @@
 	dir = 4;
 	id = "talon_cargo_star";
 	name = "Cargo Loading Hatch"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+<<<<<<< HEAD
+"Mr" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"Ms" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"Mt" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/talon_v2/engineering/port)
+"Mu" = (
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "talon_cargo_star";
+	name = "Cargo Loading Hatch"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/maintenance/wing_starboard)
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "Mv" = (
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
@@ -12090,6 +15069,7 @@
 /obj/machinery/door/firedoor/glass/talon,
 /obj/machinery/door/airlock/glass{
 	name = "Cantina"
+<<<<<<< HEAD
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -12116,6 +15096,147 @@
 /obj/machinery/door/blast/regular/open{
 	id = "talon_windows"
 	},
+/obj/machinery/door/firedoor/glass/talon,
+=======
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/plating,
+/area/talon_v2/crew_quarters/cap_room)
+"MB" = (
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 1;
+	id_tag = "talon_starboard";
+	pixel_y = -30;
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+"MD" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/starboard)
+"ME" = (
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+<<<<<<< HEAD
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/talonboat)
+"MF" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"MG" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock{
+	id_tag = "talon_restroom2";
+	name = "Unisex Restroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+=======
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/crew_quarters/bar)
+"Mz" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	dir = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "talon_windows"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/restrooms)
+"ML" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_starboard)
+"MO" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"MP" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"MU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_port)
+"MV" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/sign/warning/nosmoking_1{
+	pixel_x = 26
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/engineering{
+	name = "Talon Starboard Engines";
+	req_one_access = list(301)
+=======
 /obj/machinery/door/firedoor/glass/talon,
 /obj/structure/cable/green{
 	d1 = 4;
@@ -12210,6 +15331,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/railing/grey{
 	dir = 1
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	},
 /obj/random/multiple/corp_crate/talon_cargo,
 /turf/simulated/floor/tiled/techfloor,
@@ -12220,13 +15342,24 @@
 /obj/machinery/door/firedoor/glass/talon,
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
+/area/talon_v2/engineering/starboard)
+"MW" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/bridge)
+"MZ" = (
+=======
 /area/talon_v2/maintenance/aft_port)
 "MV" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
 /obj/machinery/door/firedoor/glass/talon,
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_x = 26
@@ -12249,6 +15382,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
@@ -12462,6 +15596,7 @@
 /obj/structure/closet/walllocker_double/south,
 /obj/structure/handrail{
 	dir = 1
+<<<<<<< HEAD
 	},
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
@@ -12485,6 +15620,31 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+=======
+	},
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonboat)
+"NH" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"NI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/talonpod)
+"NK" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
@@ -12756,6 +15916,92 @@
 /area/talon_v2/engineering/port)
 "OF" = (
 /obj/structure/catwalk,
+<<<<<<< HEAD
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/aft_starboard)
+"OH" = (
+/obj/machinery/atmospherics/portables_connector/aux{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/wing_port)
+"OJ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
+	dir = 6
+	},
+/obj/structure/closet/emergsuit_wall{
+	pixel_y = 32
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"OK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/closet/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/gen_store)
+"OL" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"OM" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock{
+	id_tag = "talon_charger";
+	name = "Cyborg Recharging Station"
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/restrooms)
+"ON" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/wing_port)
+"OP" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/armory)
+"OQ" = (
+/turf/simulated/wall/shull,
+/area/talon_v2/gen_store)
+"OR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/central_hallway/port)
+"OS" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"OT" = (
+=======
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -13004,11 +16250,283 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/maintenance/wing_port)
 "Pm" = (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"OW" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"OX" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/structure/table/woodentable,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/bar)
+"OY" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/bar)
+"OZ" = (
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/maintenance/wing_port)
+"Pb" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small,
+/obj/structure/closet/emergsuit_wall{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
+"Pd" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"Pe" = (
+/obj/machinery/camera/network/talon{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/cap_room)
+"Pf" = (
+/obj/structure/sign/warning/nosmoking_1{
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"Pg" = (
+/obj/machinery/power/apc/talon/hyper{
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/meditation)
+"Po" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/hangar)
+"Pq" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"Pr" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/meditation)
+"Ps" = (
+/obj/structure/sink{
+	pixel_y = 22
+	},
+/obj/structure/medical_stand/anesthetic,
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"Pt" = (
+/obj/structure/bookcase/manuals/xenoarchaeology,
+/obj/structure/closet/emergsuit_wall{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/meditation)
+"Pv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 5
+	},
+/obj/structure/closet/emergsuit_wall{
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	dir = 1;
+	pixel_y = 24
+	},
+<<<<<<< HEAD
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/shuttle_landmark/shuttle_initializer/talonpod,
+/obj/effect/overmap/visitable/ship/landable/talon_pod,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/talonpod)
+"Ph" = (
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/talon_v2/maintenance/wing_port)
+"Pi" = (
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/engineering{
+	name = "Talon Port Engines";
+	req_one_access = list(301)
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"Pj" = (
+/obj/structure/sink{
+	pixel_y = 22
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "talon_charger";
+	name = "Door Bolts";
+	pixel_y = -28;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/crew_quarters/restrooms)
+"Pk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/power/apc/talon/hyper{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/generators)
+"Pl" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"Pm" = (
+=======
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/wing_starboard)
+"Px" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"Py" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/port)
+"PA" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/refining)
+"PB" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 5;
+	pixel_y = 24
+	},
+/obj/item/weapon/storage/backpack/dufflebag/talon,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/armory)
+"PC" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 5;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/armory)
+"PD" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/power/smes/buildable/offmap_spawn{
+	RCon_tag = "Talon Port SMES"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -13074,11 +16592,29 @@
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port)
 "PA" = (
+=======
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering)
+"PF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/department/eng{
+	pixel_y = -32
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -13136,6 +16672,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway)
 "PH" = (
@@ -13232,6 +16770,7 @@
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+<<<<<<< HEAD
 	},
 /obj/machinery/power/apc/talon{
 	dir = 1;
@@ -13263,6 +16802,39 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
+=======
+	},
+/obj/machinery/power/apc/talon{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/anomaly_storage)
+"Qc" = (
+/obj/structure/table/steel,
+/obj/item/device/measuring_tape,
+/obj/item/weapon/tool/wrench,
+/obj/item/weapon/storage/excavation,
+/obj/item/stack/flag/yellow,
+/obj/item/weapon/pickaxe,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/anomaly_storage)
+"Qe" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/shull,
+/area/talon_v2/ofd_ops)
+"Qf" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/starboard)
@@ -13598,6 +17170,7 @@
 "Rf" = (
 /obj/structure/hull_corner/long_vert{
 	dir = 5
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -13629,6 +17202,55 @@
 	},
 /obj/structure/railing/grey{
 	dir = 1
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Rk" = (
+/obj/effect/shuttle_landmark/premade/talon_v2_near_aft_star,
+/turf/space,
+/area/space)
+<<<<<<< HEAD
+"Rn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/catwalk,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+=======
+"Rg" = (
+/obj/structure/bed/chair/bay/chair{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/eng_room)
+"Ri" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/catwalk,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+<<<<<<< HEAD
+=======
+/area/talon_v2/maintenance/aft_starboard)
+"Rj" = (
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/atmospherics)
@@ -13645,6 +17267,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /area/talon_v2/engineering/starboard)
 "Rp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13813,6 +17436,7 @@
 	tag_north = 3;
 	tag_south = 2;
 	tag_west = 1
+<<<<<<< HEAD
 	},
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
@@ -13831,6 +17455,26 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+=======
+	},
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"RV" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/random/multiple/corp_crate/talon_cargo,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"RY" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/mine_room)
@@ -13941,6 +17585,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+<<<<<<< HEAD
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13998,6 +17643,65 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+=======
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/cap_room)
+"St" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/item/weapon/paper/talon_pilot,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/pilot_room)
+"Su" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"Sv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/talonboat)
+"Sx" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/meditation)
+"Sy" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/talon_v2/engineering/starboard)
+"Sz" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/sec_room)
 "SC" = (
@@ -14011,6 +17715,7 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+<<<<<<< HEAD
 	},
 /obj/machinery/door/window/brigdoor/northleft{
 	req_access = list();
@@ -14037,6 +17742,34 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+=======
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	req_access = list();
+	req_one_access = list(301)
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/maintenance/wing_port)
+"SE" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/atmospherics)
+"SG" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/maintenance/wing_starboard)
 "SJ" = (
@@ -14245,6 +17978,7 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/star_store)
@@ -14264,6 +17998,27 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+=======
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
+"Tl" = (
+/turf/simulated/wall/shull{
+	can_open = 1
+	},
+/area/talon_v2/engineering/atmospherics)
+"Tm" = (
+/obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/talon_v2/maintenance/aft_starboard)
+"To" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/ofd_ops)
@@ -14274,6 +18029,7 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/gen_store)
@@ -14286,6 +18042,20 @@
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_x = 26
 	},
+=======
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/talon_v2/gen_store)
+"Tr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/bed/chair/bay/chair,
+/turf/simulated/floor/carpet,
+/area/talon_v2/crew_quarters/sec_room)
+"Ts" = (
+/obj/structure/sign/warning/nosmoking_1{
+	pixel_x = 26
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
@@ -14657,6 +18427,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+<<<<<<< HEAD
 	},
 /obj/structure/closet/autolok_wall{
 	pixel_y = 32
@@ -14678,6 +18449,29 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+=======
+	},
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/talonboat)
+"UA" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/talon_v2/anomaly_storage)
+"UB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techmaint,
 /area/talon_v2/central_hallway)
 "UC" = (
@@ -14838,6 +18632,7 @@
 "Vh" = (
 /obj/machinery/disposal/wall{
 	dir = 4
+<<<<<<< HEAD
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -14868,6 +18663,38 @@
 /obj/machinery/camera/network/talon{
 	dir = 1
 	},
+=======
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/meditation)
+"Vi" = (
+/obj/structure/bed/chair/bay/chair,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/meditation)
+"Vj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/talonboat)
+"Vl" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/talon{
+	dir = 1
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/vehiclecage/quadbike,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/maintenance/wing_port)
@@ -15261,6 +19088,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+<<<<<<< HEAD
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15281,6 +19109,52 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+=======
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/med_room)
+"Wz" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/wood,
+/area/talon_v2/crew_quarters/eng_room)
+"WB" = (
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+<<<<<<< HEAD
+/turf/simulated/floor/tiled/white,
+/area/talon_v2/medical)
+"WC" = (
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(301)
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+=======
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
@@ -15312,6 +19186,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor{
 	pixel_y = 24;
@@ -15409,6 +19284,12 @@
 /area/talon_v2/crew_quarters/meditation)
 "WT" = (
 /obj/machinery/vending/nifsoft_shop,
+<<<<<<< HEAD
+=======
+/obj/machinery/item_bank{
+	pixel_y = 28
+	},
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/central_hallway/fore)
 "WU" = (
@@ -20909,6 +24790,10 @@ XP
 Pd
 hq
 TR
+<<<<<<< HEAD
+aa
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -20969,6 +24854,8 @@ aa
 aa
 aa
 aa
+"}
+(33,1,1) = {"
 aa
 "}
 (33,1,1) = {"
@@ -21035,7 +24922,10 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
+=======
 aa
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Pd
 hq
 TR
@@ -21398,11 +25288,18 @@ aa
 aa
 "}
 (36,1,1) = {"
+<<<<<<< HEAD
+=======
+aa
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -22960,6 +26857,16 @@ aa
 aa
 "}
 (47,1,1) = {"
+<<<<<<< HEAD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -23014,6 +26921,8 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
+=======
 aa
 aa
 aa
@@ -23021,6 +26930,7 @@ aa
 aa
 aa
 aa
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 lT
 Re
 Re
@@ -24717,8 +28627,13 @@ Re
 kX
 Re
 mI
+<<<<<<< HEAD
 XQ
 XQ
+=======
+XQ
+XQ
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 ZW
 db
 qk
@@ -24843,8 +28758,13 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 XP
 XP
+=======
+XP
+XP
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 tc
 fX
 uY
@@ -26544,10 +30464,17 @@ WL
 hs
 bZ
 dK
+<<<<<<< HEAD
 fo
 fo
 fo
 fo
+=======
+fo
+fo
+fo
+fo
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 My
 hs
 QU
@@ -27688,8 +31615,13 @@ XP
 wG
 QU
 Ff
+<<<<<<< HEAD
 HZ
 HZ
+=======
+HZ
+HZ
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Ff
 QE
 sI
@@ -27908,10 +31840,13 @@ xa
 Jl
 Dq
 Tm
+<<<<<<< HEAD
+=======
 aa
 aa
 aa
 aa
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -27980,6 +31915,13 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
+aa
+aa
+aa
+aa
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Ue
 Sg
 Sg
@@ -28072,6 +32014,13 @@ aa
 aa
 "}
 (83,1,1) = {"
+<<<<<<< HEAD
+=======
+aa
+aa
+aa
+aa
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -28119,10 +32068,13 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
 aa
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Bm
 Sg
 Sg
@@ -28307,8 +32259,13 @@ Oz
 UM
 mq
 Au
+<<<<<<< HEAD
 rL
 rL
+=======
+rL
+rL
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 rL
 rL
 bM
@@ -28730,7 +32687,10 @@ Dq
 Dq
 aa
 uu
+<<<<<<< HEAD
 aa
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -28799,6 +32759,30 @@ aa
 aa
 aa
 aa
+"}
+(88,1,1) = {"
+aa
+aa
+aa
+aa
+<<<<<<< HEAD
+=======
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aa
 aa
 aa
@@ -28834,8 +32818,14 @@ aa
 aa
 aa
 aa
-aa
-aa
+<<<<<<< HEAD
+iM
+ZY
+ZY
+uz
+uz
+uz
+=======
 aa
 aa
 iM
@@ -28844,6 +32834,7 @@ ZY
 uz
 uz
 uz
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 Iu
 we
 RQ

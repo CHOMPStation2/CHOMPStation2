@@ -101,7 +101,10 @@ var/list/_client_preferences_by_type
 	key = "BELCH_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
+<<<<<<< HEAD
 	enabled_by_default = FALSE //CHOMPedit
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /datum/client_preference/emote_noises
 	description = "Emote Noises" //MERP

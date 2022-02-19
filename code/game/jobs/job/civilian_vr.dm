@@ -196,6 +196,38 @@
 	title = "Monk"
 
 
+//////////////////////////////////
+//		      	Pilot
+//////////////////////////////////
+
+/datum/job/pilot
+	title = "Pilot"
+	flag = PILOT
+	departments = list(DEPARTMENT_CIVILIAN)
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 5
+	spawn_positions = 5
+	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
+	economic_modifier = 5
+	minimal_player_age = 3
+	pto_type = PTO_CIVILIAN
+	access = list(access_pilot)
+	minimal_access = list(access_pilot)
+	outfit_type = /decl/hierarchy/outfit/job/pilot
+	job_description = "A Pilot flies the various shuttles in the Virgo-Erigone System."
+	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator, "Helmsman" = /datum/alt_title/helmsman)
+
+/datum/alt_title/co_pilot
+	title = "Co-Pilot"
+	title_blurb = "A Co-Pilot is there primarily to assist main pilot as well as learn from them"
+
+/datum/alt_title/navigator
+	title = "Navigator"
+
+/datum/alt_title/helmsman
+	title = "Helmsman"
 
 //////////////////////////////////
 //			Entertainer
@@ -220,8 +252,11 @@
 	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand,
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
+<<<<<<< HEAD
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
 						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 						"Artist" = /datum/alt_title/artist)
 
 // Entertainer Alt Titles
@@ -263,4 +298,8 @@
 
 /datum/alt_title/artist
 	title = "Artist"
+<<<<<<< HEAD
 	title_blurb = "An Artist's calling is to create beautiful arts! Whatever form may they take, create and have people astonished with your creativity."
+=======
+	title_blurb = "An Artist's calling is to create beautiful arts! Whatever form may they take, create and have people astonished with your creativity."
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

@@ -44,6 +44,7 @@ Any code submissions that do not meet our coding standards are likely to be reje
     * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* CHOMP Removal - "Reason"
 * If it is something like a bugfix that Polaris would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
+<<<<<<< HEAD
 * Any new files should have "_ch" at the end. For example, "life_ch.dm". Just make them in the same location as the file they are related to.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
@@ -58,6 +59,9 @@ As an example of something you can do with `attempt_ch()` in a single line, the 
 `if(attempt_ch(src,"handle_grabs_ch",list(src,attacker))) return`
 
 Then in our `handle_grabs_ch()` proc, if we want to avoid performing the stock game actions and have handled the vore stuff ourselves, we return true, and the original proc returns since attempt_ch returns true.
+=======
+* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 ### Pull Requests
 
@@ -80,4 +84,8 @@ Commits with a git authorship date prior to `1420675200 +0000` (2015/01/08 00:00
 All commits whose authorship dates are not prior to `1420675200 +0000` are assumed to be licensed under AGPL v3, if you wish to license under GPL v3 please make this clear in the commit message and any added files.
 
 [Mapmerge2 Readme]: ../tools/mapmerge2/mapmerge tool readme.md
+<<<<<<< HEAD
 [StrongDMM]: ../tools/StrongDMM/README.md
+=======
+[StrongDMM]: ../tools/StrongDMM/README.md
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

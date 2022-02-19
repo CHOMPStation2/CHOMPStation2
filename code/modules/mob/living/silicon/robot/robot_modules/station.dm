@@ -202,7 +202,10 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
 					"Pyralis" = "Glitterfly-Standard",
+<<<<<<< HEAD
 					"Miss M" = "miss-standard", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Standard",
 					"Pneuma" = "pneuma-Standard",
 					"Tower" = "drider-Standard"
@@ -242,7 +245,10 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Surgeon",
+<<<<<<< HEAD
 					"Miss M" = "miss-medical", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Surgeon",
 					"Pneuma" = "pneuma-Surgeon",
 					"Tower" = "drider-Surgeon"
@@ -322,7 +328,10 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Crisis",
+<<<<<<< HEAD
 					"Miss M" = "miss-medical", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Crisis",
 					"Pneuma" = "pneuma-Crisis",
 					"Tower" = "drider-Crisis"
@@ -520,7 +529,10 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
 					"Pyralis" = "Glitterfly-Security",
+<<<<<<< HEAD
 					"Miss M" = "miss-security", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Security",
 					"Pneuma" = "pneuma-Security",
 					"Tower" = "drider-Security"
@@ -569,7 +581,10 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
 					"Pyralis" = "Glitterfly-Janitor",
+<<<<<<< HEAD
 					"Miss M" = "miss-janitor", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Janitor",
 					"Pneuma" = "pneuma-Janitor",
 					"Tower" = "drider-Janitor"
@@ -635,7 +650,10 @@ var/global/list/robot_modules = list(
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Service",
+<<<<<<< HEAD
 					"Miss M" = "miss-service", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Service",
 					"Pneuma" = "pneuma-Service",
 					"Tower" = "drider-Service"
@@ -734,7 +752,10 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
 					"Pyralis" = "Glitterfly-Miner",
+<<<<<<< HEAD
 					"Miss M" = "miss-miner", // YW change, Added Miss M
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					"Decapod" = "decapod-Miner",
 					"Pneuma" = "pneuma-Miner",
 					"Tower" = "drider-Miner"

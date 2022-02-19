@@ -58,4 +58,8 @@
 	name = "Talon miner suit cycler"
 	model_text = "Talon miner"
 	req_access = list(access_talon)
+<<<<<<< HEAD
 	departments = list(/datum/suit_cycler_choice/department/talon/miner)
+=======
+	departments = list(/datum/suit_cycler_choice/department/talon/miner)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

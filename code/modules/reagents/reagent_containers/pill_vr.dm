@@ -147,7 +147,10 @@
 	. = ..()
 	reagents.add_reagent("sleevingcure", 1)
 	color = reagents.get_color()
+<<<<<<< HEAD
 */ //CHOMPStation removal end
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /obj/item/weapon/reagent_containers/pill/airlock
 	name = "\'Airlock\' Pill"
@@ -157,4 +160,8 @@
 /obj/item/weapon/reagent_containers/pill/airlock/New()
 	..()
 	reagents.add_reagent("anti_toxin", 15)
+<<<<<<< HEAD
 	reagents.add_reagent("paracetamol", 5)
+=======
+	reagents.add_reagent("paracetamol", 5)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

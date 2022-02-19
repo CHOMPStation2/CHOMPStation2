@@ -50,7 +50,11 @@
 
 	add_attack_logs(grabber, H.held_mob, "Scooped up", FALSE) // Not important enough to notify admins, but still helpful.
 	return H
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /mob/living/simple_mob/animal/passive/mouse/white/apple
 	name = "Apple"
 	desc = "Dainty, well groomed and cared for, her eyes glitter with untold knowledge..."
@@ -61,7 +65,10 @@
 	// Change my name back, don't want to be named Apple (666)
 	name = initial(name)
 	desc = initial(desc)
+<<<<<<< HEAD
 	
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /obj/item/weapon/holder/mouse/attack_self(mob/living/carbon/user)
 	user.setClickCooldown(user.get_attack_speed())
@@ -69,3 +76,7 @@
 		if(isanimal(L))
 			var/mob/living/simple_mob/S = L
 			user.visible_message("<span class='notice'>[user] [S.response_help] \the [S].</span>")
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

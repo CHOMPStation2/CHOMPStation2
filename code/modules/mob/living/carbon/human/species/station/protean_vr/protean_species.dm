@@ -139,9 +139,13 @@
 	H.synth_color = TRUE
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
+<<<<<<< HEAD
 	..() //CHOMP Edit this calls the parent function which should spawn the survival box.
 	var/obj/item/stack/material/steel/metal_stack = new()
 	metal_stack.set_amount(5) //CHOMP Edit
+=======
+	var/obj/item/stack/material/steel/metal_stack = new(null, 3)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
@@ -161,9 +165,12 @@
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = 25
+<<<<<<< HEAD
 
 		var/obj/item/weapon/rig/protean/prig = new /obj/item/weapon/rig/protean(H)
 		prig.myprotean = H
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	return ..() //Wut
@@ -183,7 +190,11 @@
 		H.ckey = H.temporary_form.ckey
 		QDEL_NULL(H.temporary_form)
 
+<<<<<<< HEAD
 	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 5 or 10 minutes before respawning, to represent the time it would take to ship a new-you to the station, depending on how you died.</span>")
+=======
+	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 	spawn(1)
 		if(H)

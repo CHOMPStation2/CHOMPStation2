@@ -108,7 +108,11 @@
 
 /obj/item/clothing/head/dress/army/command
 	name = "marine officer's dress wheel cover"
+<<<<<<< HEAD
 	desc = "A white dress uniform cover with an USDF Marine crest and gold stripe." //YW EDIT: TCG to USDF
+=======
+	desc = "A white dress uniform cover with an TCG Marine crest and gold stripe."
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /*
  * Berets
@@ -252,7 +256,11 @@
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
 	name = "fifth fleet beret"
+<<<<<<< HEAD
 	desc = "An USDF Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
+=======
+	desc = "An TCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /*
  * Ushanka
@@ -272,7 +280,11 @@
 
 /obj/item/clothing/head/ushanka/solgov/marine/green
 	name = "green marine fur hat"
+<<<<<<< HEAD
 	desc = "An USDF Marine synthfur-lined hat for operating in cold environments." //YW EDIT: TCG to USDF
+=======
+	desc = "An TCG Marine synthfur-lined hat for operating in cold environments."
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /*
  * Terran

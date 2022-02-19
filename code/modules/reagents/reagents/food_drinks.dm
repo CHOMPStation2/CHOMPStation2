@@ -1765,6 +1765,21 @@
 
 	glass_name = "Brown Star"
 	glass_desc = "It's not what it sounds like..."
+<<<<<<< HEAD
+=======
+	allergen_type = ALLERGEN_FRUIT | ALLERGEN_STIMULANT //Made with orangejuice and cola
+
+/datum/reagent/drink/soda/brownstar_decaf //For decaf starkist
+	name = "Decaf Brown Star"
+	id = "brownstar_decaf"
+	description = "It's not what it sounds like..."
+	taste_description = "orange and cola soda"
+	color = "#9F3400"
+	adj_temp = -2
+
+	glass_name = "Brown Star"
+	glass_desc = "It's not what it sounds like..."
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /datum/reagent/drink/milkshake
 	name = "Milkshake"
@@ -3204,7 +3219,22 @@
 	id = "cubalibre"
 	description = "Rum, mixed with cola and a splash of lime. Viva la revolucion."
 	taste_description = "cola with lime"
+<<<<<<< HEAD
 	nutriment_factor = 1.5 //CHOMPStation addition
+=======
+	color = "#3E1B00"
+	strength = 30
+
+	glass_name = "Cuba Libre"
+	glass_desc = "A classic mix of rum, cola, and lime."
+	allergen_type = ALLERGEN_STIMULANT //Cola
+
+/datum/reagent/ethanol/rum_and_cola
+	name = "Rum and Cola"
+	id = "rumandcola"
+	description = "A classic mix of sugar with more sugar."
+	taste_description = "cola"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	color = "#3E1B00"
 	strength = 30
 
@@ -3221,6 +3251,7 @@
 
 	glass_name = "rum and cola"
 	glass_desc = "A classic mix of rum and cola."
+	allergen_type = ALLERGEN_STIMULANT // Cola
 
 /datum/reagent/ethanol/demonsblood
 	name = "Demons Blood"

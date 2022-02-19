@@ -144,7 +144,10 @@ var/list/robot_module_types = list(
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
 	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
 	"Service-Hound", "BoozeHound", "KMine"
+<<<<<<< HEAD
 	, "UnityHound", "Honk-Hound" // CHOMPEdit -- Adds the UnityHound drone to the list.
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 )
 // List of modules added during code red
 var/list/emergency_module_types = list(

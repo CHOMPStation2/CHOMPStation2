@@ -314,4 +314,8 @@
 	force = 9
 	sharp = TRUE
 	item_state = "analyzer"
+<<<<<<< HEAD
 	icon_state = "hacktool"
+=======
+	icon_state = "hacktool"
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

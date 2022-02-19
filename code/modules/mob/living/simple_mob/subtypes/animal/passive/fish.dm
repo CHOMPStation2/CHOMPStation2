@@ -325,4 +325,8 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat/sif/murkfish
 
 /decl/mob_organ_names/fish
+<<<<<<< HEAD
 	hit_zones = list("head", "body", "dorsal fin", "left pectoral fin", "right pectoral fin", "tail fin")
+=======
+	hit_zones = list("head", "body", "dorsal fin", "left pectoral fin", "right pectoral fin", "tail fin")
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

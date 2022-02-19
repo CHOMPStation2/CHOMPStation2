@@ -319,6 +319,7 @@
 		owner.update_icons()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
+<<<<<<< HEAD
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
 			R.cell.charge += (nutrition_percent / 100) * compensation * 15
 			GenerateBellyReagents_digested()
@@ -330,6 +331,11 @@
 			GenerateBellyReagents_digested()
 		else
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
+=======
+		R.cell.charge += (nutrition_percent / 100) * compensation * 25
+	else
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)

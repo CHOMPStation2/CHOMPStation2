@@ -81,7 +81,7 @@
 /obj/machinery/organ_printer/Initialize()
 	. = ..()
 	default_apply_parts()
-	
+
 /obj/machinery/organ_printer/examine(var/mob/user)
 	. = ..()
 	var/biomass = get_biomass_volume()

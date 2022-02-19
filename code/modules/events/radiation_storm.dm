@@ -16,7 +16,11 @@
 
 /datum/event/radiation_storm/tick()
 	if(activeFor == enterBelt)
+<<<<<<< HEAD
 		command_announcement.Announce("The station has entered the radiation belt. Please remain in a sheltered area until we have passed the radiation belt.", "Anomaly Alert") //CHOMPEdit: Restored original message
+=======
+		command_announcement.Announce("The [using_map.facility_type] has entered the radiation belt. Please remain in a sheltered area until we have passed the radiation belt.", "Anomaly Alert")
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 		radiate()
 
 	if(activeFor >= enterBelt && activeFor <= leaveBelt)
@@ -27,7 +31,11 @@
 		radiate()
 
 	else if(activeFor == leaveBelt)
+<<<<<<< HEAD
 		command_announcement.Announce("The station has passed the radiation belt. Please allow for up to one minute while radiation levels dissipate, and report to medbay if you experience any unusual symptoms. Maintenance will lose all access again shortly.", "Anomaly Alert") //CHOMPEdit: Restored original message
+=======
+		command_announcement.Announce("The [using_map.facility_type] has passed the radiation belt. Please allow for up to one minute while radiation levels dissipate, and report to medbay if you experience any unusual symptoms. Maintenance will lose all access again shortly.", "Anomaly Alert")
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/event/radiation_storm/proc/radiate()
 	var/radiation_level = rand(15, 35)
 	for(var/z in using_map.station_levels)

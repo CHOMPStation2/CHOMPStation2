@@ -186,6 +186,7 @@ VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
 	name = "Away Mission - Aerostat Surface (E)"
 	icon_state = "explored"
 	dynamic_lighting = FALSE
+<<<<<<< HEAD
 
 /area/offmap/aerostat/surface/shuttleconsole
 	name = "Away Mission - Aerostat Surface Console"
@@ -193,6 +194,15 @@ VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
 	dynamic_lighting = FALSE
 	requires_power = FALSE
 
+=======
+
+/area/offmap/aerostat/surface/shuttleconsole
+	name = "Away Mission - Aerostat Surface Console"
+	icon_state = "explored"
+	dynamic_lighting = FALSE
+	requires_power = FALSE
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /area/offmap/aerostat/surface/unexplored
 	name = "Away Mission - Aerostat Surface (UE)"
 	icon_state = "unexplored"

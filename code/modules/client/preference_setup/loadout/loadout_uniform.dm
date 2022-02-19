@@ -769,4 +769,8 @@
 /datum/gear/uniform/brandsuit/kaleidoscope
 	display_name = "outfit, kaleidoscope (Science)"
 	path = 	/obj/item/clothing/under/corp/kaleidoscope
+<<<<<<< HEAD
 	allowed_roles = list("Research Director","Scientist","Xenobiologist")
+=======
+	allowed_roles = list("Research Director","Scientist","Xenobiologist")
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

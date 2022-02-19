@@ -598,7 +598,11 @@
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
+<<<<<<< HEAD
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
+=======
+	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
 
 /datum/gear/suit/snowsuit/cargo
@@ -652,4 +656,8 @@
 	"Pink kimono" = /obj/item/clothing/suit/kimono/pink,
 	"Earth kimono" = /obj/item/clothing/suit/kimono/earth
 	)
+<<<<<<< HEAD
 	gear_tweaks += new/datum/gear_tweak/path(kimonos)
+=======
+	gear_tweaks += new/datum/gear_tweak/path(kimonos)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

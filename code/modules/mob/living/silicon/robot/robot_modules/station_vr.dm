@@ -38,6 +38,7 @@
 					LANGUAGE_ENOCHIAN	= 1,
 					LANGUAGE_DRUDAKAR	= 1,
 					LANGUAGE_TAVAN		= 1
+<<<<<<< HEAD
 					)
 
 /obj/item/weapon/robot_module/robot/chound
@@ -60,6 +61,8 @@
 					LANGUAGE_ENOCHIAN	= 1,
 					LANGUAGE_DRUDAKAR	= 1,
 					LANGUAGE_TAVAN		= 1
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					)
 
 /hook/startup/proc/robot_modules_vr()
@@ -72,8 +75,11 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
+<<<<<<< HEAD
 	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
 	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
 	return 1
 

@@ -357,6 +357,18 @@
 	icon_state = "coatchristmasg"
 	hoodtype = /obj/item/clothing/head/hood/winter/christmasgreen
 
+/obj/item/clothing/suit/storage/hooded/wintercoat/christmasred
+	name = "red christmas winter coat"
+	desc = "A festive red Christmas coat! Smells like Candy Cane!"
+	icon_state = "coatchristmasr"
+	hoodtype = /obj/item/clothing/head/hood/winter/christmasred
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/christmasgreen
+	name = "green christmas winter coat"
+	desc = "A festive green Christmas coat! Smells like Candy Cane!"
+	icon_state = "coatchristmasg"
+	hoodtype = /obj/item/clothing/head/hood/winter/christmasgreen
+
 // winter coats end here
 
 /obj/item/clothing/suit/storage/hooded/explorer

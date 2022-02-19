@@ -269,11 +269,43 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 <br>\
 <i>Harry Townes</i>"}
 
+/obj/item/weapon/paper/talon_cannon
+	name = "ITV Talon OFD Console"
+	info = {"to whoever's got the itchiest trigger finger,<br>\
+as a reward for recent good performance, the lads upstairs have seen fit to have our ship retrofitted with an Obstruction Field Disperser. This fancy bit of hardware can be used to, well, 'disperse' 'obstructions'. asteroids or carp shoals in the way? no problem! load her up and fire! range is pretty short though.<br>\
+<br>\
+they haven't issued very much ammo for it, so if you want more you'll have to trade with those nanotrasen boys and girls. use the blue ones for ion storms and electrical clouds, and the red ones for asteroids and carp. calibration and aiming the thing is a bit of a pain but you'll figure it out. pre-calibrate then mess with the numbers until accuracy hits 100%.<br>\
+<br>\
+aside from that, only thing you really need to keep in mind is that it'll explode pretty spectacularly if you try to fire it whilst it's cooling down *or* if the hatch is closed. hatch is rigged to the bridge shutter controls.<br>\
+<br>\
+oh, and it's not a weapon. don't try to shoot other ships with it or anything, it won't work.<br>\
+<br>\
+<i>Harry Townes</i>"}
+
+/obj/item/weapon/paper/talon_escape_pod
+	name = "ITV Talon Escape Pod"
+	info = {"to whoever's stuck bailing out,<br>\
+after some extensive retrofits to comply with starfaring vessel regulations, our lovely little ship has been outfitted with a proper escape pod, which you are now standing in if you are reading this paper! congratulations!<br>\
+<br>\
+in the untimely event that you actually need to use it and survive long enough to, here's what you need to know;<br>\
+1. the thrusters don't have enough power to really fly around in space very much.<br>\
+2. you probably don't have very much air either.<br>\
+3. on the plus side, plenty of seats and supplies.<br>\
+4. remember to hit the emergency distress signal button.<br>\
+5. you have no sensors, so I hope you wrote down or remember what's around.<br>\
+<br>\
+if you have to punch out, do it whilst the ship is in open space. the pod has <b><u>nothing</u></b> to stop space debris ventilating it! it is rated for reentry though, so if you can bail over a planet it should be able to take you down to a safe landing spot. from there, use the emergency supplies and try to hold out until rescue comes.<br>\
+<br>\
+personally I recommend using the ship's boat if you need to evacuate, but if you're stuck with the pod then... good luck!<br>\
+<br>\
+<i>Harry Townes</i>"}
+
 //Prevents remote control of drones
 /obj/machinery/drone_fabricator/talon
 	name = "somewhat glitchy drone fabricator"
 	desc = "Obtained from a derelict, it seems to work sometimes, not work sometimes, and work TOO good sometimes. Didn't come with a control console either..."
 	drone_type = /mob/living/silicon/robot/drone/talon
+	fabricator_tag = "Talon"
 
 /mob/living/silicon/robot/drone/talon
 	foreign_droid = TRUE
@@ -666,7 +698,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 /obj/effect/shuttle_landmark/premade/talon_v2_wing_star
 	name = "ITV Talon (Starboard Wingtip)"
 	landmark_tag = "talon_v2_wing_star"
-	
+
 /obj/random/multiple/corp_crate/talon_cargo
 	name = "random corporate crate (talon)"
 	desc = "A random corporate crate with thematic contents. No weapons, no SAARE cashbox, 50% chance to not appear."

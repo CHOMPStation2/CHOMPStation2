@@ -216,4 +216,8 @@
 	if(!T)
 		return
 	if(T.get_lumcount() >= 0.5)
+<<<<<<< HEAD
 		adjustBruteLoss(1)
+=======
+		adjustBruteLoss(1)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

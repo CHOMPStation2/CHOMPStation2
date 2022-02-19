@@ -57,4 +57,8 @@
 	cost = 35
 	containertype = /obj/structure/closet/crate/large/secure/heph
 	containername = "Mining disperser charge crate"
+<<<<<<< HEAD
 	access = access_security
+=======
+	access = access_security
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

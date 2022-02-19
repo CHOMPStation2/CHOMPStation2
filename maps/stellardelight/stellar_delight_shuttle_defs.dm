@@ -114,7 +114,11 @@
 /obj/effect/overmap/visitable/ship/landable/sd_boat
 	name = "NTV Starstuff"
 	desc = "A small shuttle from the NRV Stellar Delight."
+<<<<<<< HEAD
 	vessel_mass = 1000
+=======
+	vessel_mass = 2500
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Starstuff"
 	known = TRUE
@@ -131,9 +135,15 @@
 /datum/shuttle/autodock/overmap/sdboat
 	name = "Starstuff"
 	current_location = "port_shuttlepad"
+<<<<<<< HEAD
 	docking_controller_tag = "sd_bittyshuttle"
 	shuttle_area = list(/area/shuttle/sdboat/fore,/area/shuttle/sdboat/aft)
 	fuel_consumption = 2
+=======
+	docking_controller_tag = "sdboat_docker"
+	shuttle_area = list(/area/shuttle/sdboat/fore,/area/shuttle/sdboat/aft)
+	fuel_consumption = 1
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	defer_initialisation = TRUE
 
 /area/shuttle/sdboat/fore

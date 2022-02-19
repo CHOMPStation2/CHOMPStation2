@@ -310,6 +310,7 @@ const VoreSelectedBelly = (props, context) => {
     <VoreContentsPanel outside contents={contents} />
   );
 
+<<<<<<< HEAD
   tabs[7] = (
     <VoreSelectedBellyLiquidOptions belly={belly} />
   );
@@ -318,6 +319,8 @@ const VoreSelectedBelly = (props, context) => {
     <VoreSelectedBellyLiquidMessages belly={belly} />
   );
 
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
   return (
     <Fragment>
       <Tabs>
@@ -342,12 +345,15 @@ const VoreSelectedBelly = (props, context) => {
         <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
           Contents ({contents.length})
         </Tabs.Tab>
+<<<<<<< HEAD
         <Tabs.Tab selected={tabIndex === 7} onClick={() => setTabIndex(7)}>
           Liquid Options
         </Tabs.Tab>
         <Tabs.Tab selected={tabIndex === 8} onClick={() => setTabIndex(8)}>
           Liquid Messages
         </Tabs.Tab>
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
       </Tabs>
       {tabs[tabIndex] || "Error"}
     </Fragment>
@@ -554,7 +560,10 @@ const VoreSelectedBellyOptions = (props, context) => {
     contaminate_flavor,
     contaminate_color,
     egg_type,
+<<<<<<< HEAD
     vorespawn_blacklist,
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
   } = belly;
 
   return (
@@ -592,6 +601,7 @@ const VoreSelectedBellyOptions = (props, context) => {
             </Fragment>
           ) || null}
           <LabeledList.Item label="Nutritional Gain">
+<<<<<<< HEAD
             <Button
               onClick={() => act("set_attribute", { attribute: "b_nutritionpercent" })}
               content={nutrition_percent + "%"} />
@@ -793,6 +803,178 @@ const VoreSelectedBellyVisuals = (props, context) => {
             </Button>
           ))}
         </Section>
+=======
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_nutritionpercent" })}
+              content={nutrition_percent + "%"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Required Examine Size">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_bulge_size" })}
+              content={bulge_size * 100 + "%"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Display Absorbed Examines">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_display_absorbed_examine" })}
+              icon={display_absorbed_examine ? "toggle-on" : "toggle-off"}
+              selected={display_absorbed_examine}
+              content={display_absorbed_examine ? "True" : "False"} />
+          </LabeledList.Item>
+        </LabeledList>
+      </Flex.Item>
+      <Flex.Item basis="49%" grow={1}>
+        <LabeledList>
+          <LabeledList.Item label="Idle Emotes">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
+              icon={emote_active ? "toggle-on" : "toggle-off"}
+              selected={emote_active}
+              content={emote_active ? "Active" : "Inactive"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Idle Emote Delay">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
+              content={emote_time + " seconds"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digest Brute Damage">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_brute_dmg" })}
+              content={digest_brute} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digest Burn Damage">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_burn_dmg" })}
+              content={digest_burn} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digest Suffocation Damage">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_oxy_dmg" })}
+              content={digest_oxy} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Shrink/Grow Size">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
+              content={shrink_grow_size * 100 + "%"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Egg Type">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_egg_type" })}
+              icon="pen"
+              content={capitalize(egg_type)} />
+          </LabeledList.Item>
+        </LabeledList>
+      </Flex.Item>
+    </Flex>
+  );
+};
+
+const VoreSelectedBellySounds = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    is_wet,
+    wet_loop,
+    fancy,
+    sound,
+    release_sound,
+  } = belly;
+
+  return (
+    <Flex wrap="wrap">
+      <Flex.Item basis="49%" grow={1}>
+        <LabeledList>
+          <LabeledList.Item label="Fleshy Belly">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_wetness" })}
+              icon={is_wet ? "toggle-on" : "toggle-off"}
+              selected={is_wet}
+              content={is_wet ? "Yes" : "No"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Internal Loop">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_wetloop" })}
+              icon={wet_loop ? "toggle-on" : "toggle-off"}
+              selected={wet_loop}
+              content={wet_loop ? "Yes" : "No"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Use Fancy Sounds">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_fancy_sound" })}
+              icon={fancy ? "toggle-on" : "toggle-off"}
+              selected={fancy}
+              content={fancy ? "Yes" : "No"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Vore Sound">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_sound" })}
+              content={sound} />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_soundtest" })}
+              icon="volume-up" />
+          </LabeledList.Item>
+          <LabeledList.Item label="Release Sound">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_release" })}
+              content={release_sound} />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_releasesoundtest" })}
+              icon="volume-up" />
+          </LabeledList.Item>
+        </LabeledList>
+      </Flex.Item>
+    </Flex>
+  );
+};
+
+const VoreSelectedBellyVisuals = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    belly_fullscreen,
+    possible_fullscreens,
+    disable_hud,
+  } = belly;
+
+  return (
+    <Fragment>
+      <Section title="Vore FX">
+        <LabeledList>
+          <LabeledList.Item label="Disable Prey HUD">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
+              icon={disable_hud ? "toggle-on" : "toggle-off"}
+              selected={disable_hud}
+              content={disable_hud ? "Yes" : "No"} />
+          </LabeledList.Item>
+        </LabeledList>
+      </Section>
+      <Section title="Belly Fullscreens">
+        <Button
+          fluid
+          selected={belly_fullscreen === "" || belly_fullscreen === null}
+          onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+          Disabled
+        </Button>
+        {Object.keys(possible_fullscreens).map(key => (
+          <Button
+            key={key}
+            width="256px"
+            height="256px"
+            selected={key === belly_fullscreen}
+            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
+            <Box
+              className={classes([
+                'vore240x240',
+                key,
+              ])}
+              style={{
+                transform: 'translate(0%, 4%)',
+              }} />
+          </Button>
+        ))}
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
       </Section>
     </Fragment>
   );
@@ -805,9 +987,12 @@ const VoreSelectedBellyInteractions = (props, context) => {
   const {
     escapable,
     interacts,
+<<<<<<< HEAD
     vorespawn_blacklist,
     autotransfer_enabled,
     autotransfer,
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
   } = belly;
 
   return (
@@ -866,6 +1051,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
           <LabeledList.Divider />
         </LabeledList>
       ) : "These options only display while interactions are turned on."}
+<<<<<<< HEAD
       <Section title="Auto-Transfer Options" buttons={
         <Button
           onClick={() => act("set_attribute", { attribute: "b_autotransfer_enabled" })}
@@ -903,6 +1089,8 @@ const VoreSelectedBellyInteractions = (props, context) => {
           </LabeledList>
         ) : "These options only display while Auto-Transfer is enabled."}
       </Section>
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
     </Section>
   );
 };
@@ -1189,8 +1377,12 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
+<<<<<<< HEAD
     latejoin_vore,
     latejoin_prey,
+=======
+    allow_inbelly_spawning,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
     allow_spontaneous_tf,
     step_mechanics_active,
     pickup_mechanics_active,
@@ -1205,8 +1397,11 @@ const VoreUserPreferences = (props, context) => {
     show_pictures,
   } = data;
 
+<<<<<<< HEAD
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
   const preferences = {
     digestion: {
       action: "toggle_digest",
@@ -1315,6 +1510,7 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous Pred Disabled",
       },
     },
+<<<<<<< HEAD
     spawnbelly: {
       action: "toggle_latejoin_vore",
       test: latejoin_vore,
@@ -1339,6 +1535,20 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: "Vore Spawn Prey Enabled",
         disabled: "Vore Spawn Prey Disabled",
+=======
+    inbelly_spawning: {
+      action: "toggle_allow_inbelly_spawning",
+      test: allow_inbelly_spawning,
+      tooltip: {
+        main: "This toggle is ghosts being able to spawn in one of your bellies."
+			+ " You will have to confirm again when they attempt to.",
+        enable: "Click here to allow prey to spawn in you.",
+        disable: "Click here to prevent prey from spawning in you.",
+      },
+      content: {
+        enabled: "Inbelly Spawning Allowed",
+        disabled: "Inbelly Spawning Forbidden",
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
       },
     },
     noisy: {
@@ -1354,6 +1564,7 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Hunger Noises Disabled",
       },
     },
+<<<<<<< HEAD
     noisy_full: {
       action: "toggle_noisy_full",
       test: noisy_full,
@@ -1367,6 +1578,8 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Belching Disabled",
       },
     },
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
     resize: {
       action: "toggle_resize",
       test: resizable,
@@ -1454,6 +1667,7 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous TF Disabled",
       },
     },
+<<<<<<< HEAD
     liquid_receive: {
       action: "toggle_liq_rec",
       test: liq_rec,
@@ -1496,6 +1710,11 @@ const VoreUserPreferences = (props, context) => {
   };
 
   return tabIndex===4 ? null : (
+=======
+  };
+
+  return (
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
     <Section title="Preferences" buttons={
       <Button icon="eye" selected={show_pictures} onClick={() => act("show_pictures")}>
         Contents Preference: {show_pictures ? "Show Pictures" : "Show List"}
@@ -1527,6 +1746,7 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
+<<<<<<< HEAD
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
@@ -1560,13 +1780,43 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
         <Flex.Item basis="32%">
+=======
+          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.noisy} />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.resize} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.vore_fx} tooltipPosition="top" />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.remains} tooltipPosition="top" />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.pickuppref} tooltipPosition="top" />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
           <Button
             fluid
             content="Set Taste"
             icon="grin-tongue"
             onClick={() => act("setflavor")} />
         </Flex.Item>
+<<<<<<< HEAD
         <Flex.Item basis="32%" grow={1}>
+=======
+        <Flex.Item basis="32%">
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
           <Button
             fluid
             content="Set Smell"

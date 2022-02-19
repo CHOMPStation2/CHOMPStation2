@@ -271,6 +271,7 @@
 		//CHOMPedit Add
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
 			to_chat(src, "<font color='red'>Crisis mode active. Combat module available.</font>")
+<<<<<<< HEAD
 			modules+="Combat"
 			modules+="ERT"
 			//CHOMPedit end
@@ -278,6 +279,8 @@
 		modules.Add(robot_module_types)
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
 			to_chat(src, "<font color='red'>Crisis mode active. Combat module available.</font>")
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 			modules += emergency_module_types
 		for(var/module_name in whitelisted_module_types)
 			if(is_borg_whitelisted(src, module_name))
@@ -288,6 +291,8 @@
 	if(module)
 		return
 	if(!(modtype in robot_modules))
+		return
+	if(!is_borg_whitelisted(src, modtype))
 		return
 
 	var/module_type = robot_modules[modtype]

@@ -542,4 +542,8 @@
 	taste_description = "fatty, mushy meat and cheap tomato sauce"
 	color = "#a6898d"
 
+<<<<<<< HEAD
 ////////////////END BrainzSnax Reagents////////////////
+=======
+////////////////END BrainzSnax Reagents////////////////
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

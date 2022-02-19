@@ -30,6 +30,14 @@
 	do_colouration = 1
 	extra_overlay = "shadekin-round-inner"
 
+/datum/sprite_accessory/ears/shadekin/round
+	name = "Shadekin Ears Round, colorable"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "shadekin-round"
+	do_colouration = 1
+	extra_overlay = "shadekin-round-inner"
+
 // Ears avaliable to anyone
 
 /datum/sprite_accessory/ears/taj_ears
@@ -754,6 +762,19 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
+=======
+/datum/sprite_accessory/ears/bnnuy2
+	name = "Bnnuy Ears 2"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "bnnuy2"
+	extra_overlay = "bnnuy-inner"
+	extra_overlay2 = "bnnuy-tips2"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /datum/sprite_accessory/ears/sandfox
 	name = "Sandfox Ears"
 	desc = ""
@@ -815,4 +836,8 @@
 	icon_state = "bunny-tall"
 	extra_overlay = "bunny-tall-inner"
 	do_colouration = 1
+<<<<<<< HEAD
 	color_blend_mode = ICON_MULTIPLY
+=======
+	color_blend_mode = ICON_MULTIPLY
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222

@@ -14215,6 +14215,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 6
 	},
+/obj/machinery/item_bank{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
 "axj" = (
@@ -31823,7 +31827,14 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_one)
 "biK" = (
-/obj/structure/barricade/cutout/mime,
+/obj/structure/table/alien/blue{
+	desc = "Is this imported?";
+	name = "obscure table"
+	},
+/obj/item/toy/figure/mime,
+/obj/item/weapon/pen/crayon/marker/mime,
+/obj/item/weapon/pen/crayon/mime,
+/obj/item/weapon/cartridge/mime,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "bqI" = (
@@ -32178,7 +32189,20 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lowerhall)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 18fa28a431... Merge pull request #11698 from GhostActual/toolz
+=======
+"ctE" = (
+/obj/structure/table/rack,
+/obj/item/weapon/tank/emergency,
+/obj/item/weapon/tank/emergency,
+/obj/item/weapon/tank/emergency,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/maintenance/lowmedbaymaint)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "cwS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -32279,7 +32303,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "cKo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -33065,9 +33092,10 @@
 /turf/simulated/floor,
 /area/tether/surfacebase/security/gasstorage)
 "fFb" = (
-/obj/machinery/fitness/punching_bag/clown,
+/obj/machinery/vending/wardrobe/clowndrobe,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/clownoffice)
+<<<<<<< HEAD
 "fFT" = (
 /obj/item/clothing/mask/gas/sexyclown,
 /obj/item/toy/figure/clown,
@@ -33089,6 +33117,8 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "fKm" = (
 /obj/random/junk,
 /obj/random/maintenance/cargo,
@@ -33527,7 +33557,7 @@
 "gWO" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/rust,
-/obj/item/toy/crossbow,
+/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
 "gYx" = (
@@ -34108,7 +34138,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/tether/surfacebase/security/brig/bathroom)
 "iWa" = (
-/obj/structure/bed/chair/bar_stool,
+/obj/machinery/vending/wardrobe/mimedrobe,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "iWx" = (
@@ -34224,7 +34254,14 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+<<<<<<< HEAD
 /obj/item/device/flashlight/lamp/green,
+=======
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/obj/item/device/flashlight/lamp/clown,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "jrh" = (
@@ -35060,6 +35097,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
+/obj/item/toy/figure/clown,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "lDW" = (
@@ -35088,10 +35126,13 @@
 "lEA" = (
 /turf/simulated/wall,
 /area/maintenance/engineering/atmos/airlock/gas)
+<<<<<<< HEAD
 =======
 "lEA" = (
 /turf/simulated/wall,
 /area/maintenance/engineering/atmos/airlock/gas)
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "lEB" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -35100,7 +35141,10 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/lowmedbaymaint)
+<<<<<<< HEAD
 >>>>>>> 18fa28a431... Merge pull request #11698 from GhostActual/toolz
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "lIj" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
@@ -36164,6 +36208,14 @@
 	},
 /obj/item/clothing/mask/smokable/pipe/cobpipe,
 /obj/item/weapon/flame/lighter/zippo/ironic,
+<<<<<<< HEAD
+=======
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/obj/item/weapon/reagent_containers/food/snacks/pie,
+/obj/effect/floor_decal/rust,
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/clownoffice)
 "okO" = (
@@ -36382,6 +36434,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/item/weapon/pen/crayon/marker/rainbow,
+/obj/item/weapon/pen/crayon/rainbow,
+/obj/item/weapon/stamp/clown,
+/obj/item/weapon/cartridge/clown,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "oPH" = (
@@ -36497,7 +36556,10 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/brig)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "ppS" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/tiled,
@@ -36591,7 +36653,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "pMd" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/grass,
@@ -36697,8 +36762,8 @@
 /area/maintenance/lower/trash_pit)
 "qhs" = (
 /obj/structure/table/rack,
-/obj/item/toy/crossbow,
 /obj/item/weapon/coin/silver,
+/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
 "qjE" = (
@@ -36763,7 +36828,28 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/lowerhall)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 18fa28a431... Merge pull request #11698 from GhostActual/toolz
+=======
+"qtC" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/lowernorthhall)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qtU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 5
@@ -36842,6 +36928,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/clownoffice)
+<<<<<<< HEAD
 =======
 /area/maintenance/substation/surfaceservicesubstation)
 "qEW" = (
@@ -36852,6 +36939,8 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/clownoffice)
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qJe" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance/cargo,
@@ -36862,7 +36951,10 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/lowmedbaymaint)
+<<<<<<< HEAD
 >>>>>>> 18fa28a431... Merge pull request #11698 from GhostActual/toolz
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "qJl" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
@@ -37522,7 +37614,17 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 18fa28a431... Merge pull request #11698 from GhostActual/toolz
+=======
+"sGh" = (
+/obj/structure/table/rack/shelf,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/cargo,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/maintenance/lowmedbaymaint)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "sHK" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -38352,20 +38454,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/mining_eva)
 "vCn" = (
-/obj/item/weapon/pen/crayon/mime,
-/obj/item/weapon/pen/crayon/marker/mime,
-/obj/item/weapon/cartridge/mime,
-/obj/item/weapon/bedsheet/mime,
-/obj/item/toy/figure/mime,
-/obj/item/clothing/under/sexymime,
-/obj/item/clothing/shoes/mime,
-/obj/item/clothing/mask/gas/sexymime,
-/obj/item/clothing/head/soft/mime,
-/obj/structure/closet/secure_closet{
-	desc = "...";
-	name = "silent storage";
-	req_one_access = list(138)
-	},
+/obj/structure/barricade/cutout/mime,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "vDb" = (
@@ -38511,8 +38600,23 @@
 /turf/simulated/wall,
 /area/maintenance/substation/surfaceservicesubstation)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 ||||||| parent of 18fa28a431... Merge pull request #11698 from GhostActual/toolz
+=======
+"wjd" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 28
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/maintenance/lowmedbaymaint)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 "wjo" = (
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/blast/regular{
@@ -43003,6 +43107,28 @@ aah
 aah
 aah
 aah
+<<<<<<< HEAD
+=======
+ajL
+akV
+bde
+ajT
+ajY
+akb
+akh
+akk
+akq
+akw
+akE
+bdG
+akW
+cCx
+aly
+alN
+amf
+amA
+ajS
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aah
 aah
 aah
@@ -46302,6 +46428,99 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+pCj
+wjq
+wjq
+tdh
+lQu
+dPC
+tdh
+qmc
+ofW
+qoK
+uzs
+kEs
+hMu
+iKy
+anp
+aeW
+aml
+afT
+ppS
+afT
+agJ
+anj
+anu
+anC
+adh
+adO
+ahl
+bcn
+axS
+bcl
+azb
+apW
+apW
+apW
+bbX
+aiC
+alt
+alv
+alv
+apu
+bcq
+avT
+avT
+axe
+avT
+avT
+avT
+avT
+aBJ
+aAw
+aDi
+aDQ
+aEt
+aFj
+aDi
+aah
+aah
+aBO
+aIa
+aIG
+aJF
+aJF
+aJF
+aJF
+aJF
+aJF
+aJF
+aJF
+aJF
+aIh
+aPp
+aPl
+aQt
+aQU
+aRz
+ajn
+aSA
+aTg
+aOR
+aTW
+aUB
+ajf
+ajg
+ajh
+aVU
+aVU
+aWO
+fVv
+aTW
+aTW
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aad
 aad
 aad
@@ -47614,8 +47833,158 @@ aAI
 aAI
 aef
 aeS
+<<<<<<< HEAD
 afO
 aBB
+=======
+afM
+aBz
+aef
+acg
+abT
+aeB
+afd
+adp
+tEo
+ndH
+agH
+bbe
+ahB
+bcS
+ahX
+aiZ
+afc
+ahX
+aah
+agM
+ahc
+agM
+aah
+aah
+aah
+apu
+asL
+apu
+ahc
+agM
+bcp
+atL
+atL
+atL
+atj
+ayc
+ayG
+dCc
+aAR
+aBQ
+aAL
+aBQ
+aBQ
+aAU
+aFl
+aFN
+ohi
+ohi
+loc
+aec
+aIT
+aJL
+aKu
+aJI
+aJI
+aMq
+aMZ
+aNI
+aJI
+aJI
+aJI
+aPz
+aNE
+aQA
+aMY
+aOB
+aRH
+aSL
+aTn
+aTR
+aTR
+aIh
+aUV
+aTZ
+aVn
+abz
+aWB
+aWS
+aWB
+aXC
+aWS
+aWS
+aWA
+aXk
+aJE
+aLw
+aZX
+bas
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aaa
+"}
+(80,1,1) = {"
+aqR
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aAD
+aAD
+aAD
+aAD
+sGh
+qJe
+jkI
+aef
+aeZ
+afN
+aBA
+aCr
+aCr
+aCr
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aCr
 aDa
 aDU
@@ -47939,15 +48308,15 @@ aaf
 aaf
 aaf
 aAD
+tcK
 aAI
-aAI
-aAI
-aAI
-aAI
-aAI
-aef
-aeS
-afO
+aAD
+rtV
+ctE
+lEB
+ucq
+qtC
+dvU
 aBC
 aCr
 aDb
@@ -48145,12 +48514,12 @@ aag
 aaf
 aaf
 aAD
-aAI
-aAI
-aAI
-aAI
-aAI
-aAI
+eJc
+udU
+aAD
+syt
+dNE
+wjd
 aef
 afi
 afQ
@@ -49865,6 +50234,125 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+aan
+abj
+acm
+acU
+adA
+aan
+aBn
+lbu
+axL
+adc
+adS
+aeU
+afs
+aeD
+aCg
+mGH
+aDH
+adx
+aEX
+aFv
+aGw
+aGV
+aHU
+aJT
+tRA
+igw
+bbf
+ago
+anY
+aok
+aok
+aok
+aok
+aok
+aok
+aok
+aok
+ase
+aok
+aok
+aok
+sEz
+aut
+aut
+avn
+avW
+awJ
+avW
+kgk
+mSz
+qhq
+oib
+agM
+aCJ
+aCJ
+aCJ
+rCj
+aCJ
+aCJ
+agM
+agM
+agM
+aIm
+aJf
+aJQ
+aKC
+aLg
+aLM
+aLM
+aLM
+aLg
+aOk
+aOk
+aOk
+aOj
+aQc
+aQc
+aQc
+aQb
+aSj
+aSj
+aSj
+aSi
+aUc
+aUc
+aUc
+aVr
+aUc
+aUc
+aUc
+aUb
+aXt
+aXO
+aYh
+aHE
+aIj
+aZo
+aZC
+aZC
+aVp
+aWu
+aZQ
+baS
+baU
+baU
+aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aad
 aad
 aad
@@ -61868,6 +62356,129 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aff
+auo
+adG
+ayf
+aff
+oto
+aAI
+jOI
+afy
+azT
+aAa
+uVK
+ojM
+cUB
+wOK
+ylH
+rxD
+bbj
+agT
+ahr
+ajR
+alu
+anr
+fDO
+abM
+abJ
+abJ
+abO
+abS
+arC
+apF
+aah
+ash
+asy
+asV
+atw
+atV
+auz
+auR
+avz
+awh
+awQ
+axx
+auR
+azk
+kBW
+tNJ
+agM
+aCS
+aCO
+aDY
+aEL
+aFA
+aEL
+aEL
+aEL
+aDu
+aIt
+aJn
+aJV
+aDu
+aLj
+aLU
+aMF
+aNr
+aNS
+aOs
+aON
+aPh
+aPK
+aQk
+aQN
+aRq
+aPK
+aSs
+aSY
+aTF
+aSo
+afZ
+bcT
+aVf
+aVB
+aVf
+cKo
+aUP
+aWY
+aUm
+bcE
+aUP
+bcL
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aad
 aad
 aad
@@ -61941,6 +62552,7 @@ baU
 baU
 aah
 aah
+<<<<<<< HEAD
 auD
 aud
 aud
@@ -62033,6 +62645,124 @@ auD
 aad
 aad
 aad
+=======
+aah
+aah
+aah
+aah
+aah
+aah
+aeE
+aeE
+aeE
+afm
+afm
+axb
+afm
+afm
+aeE
+aeE
+azV
+azV
+azV
+aAb
+aAD
+uVK
+bbj
+bbj
+bbj
+bbj
+bbj
+ahg
+ahz
+ajZ
+alD
+anL
+fgm
+ruj
+lry
+lry
+lry
+aql
+arl
+apF
+aah
+ash
+ash
+ash
+ash
+ash
+ash
+auR
+auR
+auR
+auR
+auR
+ayn
+azd
+jAo
+vDb
+aAR
+agM
+aCO
+aDZ
+aEM
+aFB
+aFS
+aEM
+aHm
+aDu
+fOk
+aJo
+aDu
+aKJ
+aLj
+aLV
+aME
+aNs
+aNS
+aOt
+aOM
+aPi
+aPK
+aQl
+aQM
+aRr
+aPK
+aSt
+aSX
+aTG
+aSo
+arm
+bcT
+aVf
+aUs
+aUu
+iee
+aVP
+aWZ
+bcj
+bcF
+gzO
+bcM
+aUm
+aUm
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 aad
 aad
 aad

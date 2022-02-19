@@ -85,7 +85,11 @@
 
 /**
  * This can take either a single preference datum or a list of preferences, and will return true if *all* preferences in the arguments are enabled.
+<<<<<<< HEAD
  */ 
+=======
+ */
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /client/proc/is_preference_enabled(var/preference)
 	if(!islist(preference))
 		preference = list(preference)

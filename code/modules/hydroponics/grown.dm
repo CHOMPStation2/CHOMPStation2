@@ -207,6 +207,15 @@
 								continue
 							G.attackby(NG, user)
 						to_chat(user, "You add the newly-formed wood to the stack. It now contains [NG.get_amount()] planks.")
+<<<<<<< HEAD
+=======
+					qdel(src)
+					return
+				
+				if(seed.kitchen_tag == "sunflower")
+					new /obj/item/weapon/reagent_containers/food/snacks/rawsunflower(get_turf(src))
+					to_chat(user, SPAN_NOTICE("You remove the seeds from the flower, slightly damaging them."))
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					qdel(src)
 					return
 				else if(!isnull(seed.chems["potato"]))
@@ -281,6 +290,7 @@
 			if(flesh_colour) G.color = flesh_colour
 			for (var/obj/item/stack/tile/grass/NG in user.loc)
 				if(G == NG)
+<<<<<<< HEAD
 					continue
 				if(NG.get_amount() >= NG.max_amount)
 					continue
@@ -295,10 +305,29 @@
 			var/obj/item/stack/tile/carpet/G = new (user.loc)
 			for (var/obj/item/stack/tile/carpet/NG in user.loc)
 				if(G == NG)
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 					continue
 				if(NG.get_amount() >= NG.max_amount)
 					continue
 				NG.attackby(G, user)
+<<<<<<< HEAD
+=======
+			to_chat(user, "You add the newly-formed grass to the stack. It now contains [G.get_amount()] tiles.")
+		qdel(src)
+		return
+
+	if(seed.kitchen_tag == "carpet")
+		user.show_message("<span class='notice'>You shape some carpet squares out of \the [src] fibers!</span>", 1)
+		for(var/i=0,i<2,i++)
+			var/obj/item/stack/tile/carpet/G = new (user.loc)
+			for (var/obj/item/stack/tile/carpet/NG in user.loc)
+				if(G == NG)
+					continue
+				if(NG.get_amount() >= NG.max_amount)
+					continue
+				NG.attackby(G, user)
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 			to_chat(user, "You add the newly-formed carpet to the stack. It now contains [G.get_amount()] tiles.")
 		qdel(src)
 		return

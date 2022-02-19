@@ -27,6 +27,7 @@
 	charge = 0
 	update_icon()
 
+<<<<<<< HEAD
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
@@ -69,6 +70,8 @@
 	update_icon()
 //CHOMP Add end
 
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/item/weapon/cell/device/weapon/empproof
 	emp_proof = TRUE
 

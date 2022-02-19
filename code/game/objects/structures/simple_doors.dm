@@ -70,7 +70,10 @@
 /obj/structure/simple_door/attack_hand(mob/user as mob)
 	return TryToSwitchState(user)
 
+<<<<<<< HEAD
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 /obj/structure/simple_door/AltClick(mob/user as mob)
 	. = ..()
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -85,7 +88,10 @@
 		src.add_fingerprint(user)
 		playsound(src, knock_sound, 50, 0, 3)
 	return
+<<<<<<< HEAD
 */
+=======
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 
 /obj/structure/simple_door/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /obj/effect/beam))

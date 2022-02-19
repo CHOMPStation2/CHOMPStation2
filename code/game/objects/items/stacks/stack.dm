@@ -282,6 +282,7 @@
 	if(new_amount < 0 || new_amount % 1)
 		stack_trace("Tried to set a bad stack amount: [new_amount]")
 		return 0
+<<<<<<< HEAD
 
 	// Clean up the new amount
 	new_amount = max(round(new_amount), 0)
@@ -292,6 +293,18 @@
 
 	amount = new_amount
 
+=======
+	
+	// Clean up the new amount
+	new_amount = max(round(new_amount), 0)
+	
+	// Can exceed max if you really want
+	if(new_amount > max_amount && !no_limits)
+		new_amount = max_amount
+	
+	amount = new_amount
+	
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	// Can set it to 0 without qdel if you really want
 	if(amount == 0 && !no_limits)
 		qdel(src)
@@ -316,6 +329,10 @@
 
 	if (isnull(tamount))
 		tamount = src.get_amount()
+	
+	if(tamount < 0 || tamount % 1)
+		stack_trace("Tried to transfer a bad stack amount: [tamount]")
+		return 0
 
 	if(tamount < 0 || tamount % 1)
 		stack_trace("Tried to transfer a bad stack amount: [tamount]")
@@ -343,7 +360,11 @@
 	if(tamount < 0 || tamount % 1)
 		stack_trace("Tried to split a bad stack amount: [tamount]")
 		return null
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
 	var/transfer = max(min(tamount, src.amount, initial(max_amount)), 0)
 
 	var/orig_amount = src.amount

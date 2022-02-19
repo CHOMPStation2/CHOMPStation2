@@ -184,4 +184,8 @@
 		var/mob/living/livingUser = user
 		if(try_graffiti(livingUser, livingUser.get_active_hand()))
 			return
+<<<<<<< HEAD
 	. = ..() 
+=======
+	. = ..()
+>>>>>>> ae267030ebd... Merge branch 'master' into upstream-merge-8222
