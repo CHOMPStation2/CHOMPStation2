@@ -631,13 +631,14 @@
 	M.adjustToxLoss(2 * removed)
 	M.adjustCloneLoss(2 * removed)
 
-/datum/reagent/fishbait
+/datum/reagent/nutriment/fishbait
 	name = "Fish Bait"
 	id = "fishbait"
 	description = "A natural slurry that particularily appeals to fish."
-	taste_description = "earthy"
+	taste_description = "slimy dirt"
 	reagent_state = LIQUID
 	color = "#62764E"
+<<<<<<< HEAD
 
 //YW Edit Start
 /datum/reagent/nutriment/paper //Paper is made from cellulose. You can eat it. It doesn't fill you up very much at all.
@@ -649,3 +650,6 @@
 	color = "e6e6e6" //not quite white
 	nutriment_factor = 2 // 5 times worse than nutriment
 //YW Edit End
+=======
+	nutriment_factor = 15
+>>>>>>> 3b23b6a4969... Merge pull request #12286 from Heroman3003/branch
