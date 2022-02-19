@@ -1,1010 +1,1017 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aE" = (
 /turf/simulated/wall/solidrock,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "bj" = (
 /turf/simulated/mineral/sif,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "bu" = (
 /obj/structure/flora/grass/green,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "bw" = (
 /obj/structure/flora/grass/both,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "bx" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "bZ" = (
 /turf/simulated/floor/outdoors/ice,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "cg" = (
 /obj/structure/flora/tree/pine,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "dd" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/ice,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "dg" = (
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "do" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/log1,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "dI" = (
 /obj/structure/outcrop,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "dS" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "dT" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "dX" = (
 /turf/simulated/floor/outdoors/rocks,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "et" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "fa" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "fq" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "fW" = (
 /obj/structure/flora/ausbushes,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "gk" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "gn" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "gH" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "hy" = (
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "hz" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "hA" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "hB" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "hP" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "hU" = (
 /obj/structure/flora/grass/brown,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ih" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "iP" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "jc" = (
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "jh" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "jj" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/log1,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "jq" = (
 /obj/structure/flora/bboulder2,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "js" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "jA" = (
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "jH" = (
 /obj/structure/flora/ausbushes/genericbush,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "kc" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "km" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "kn" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "kG" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "kN" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "le" = (
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "lo" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "lK" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "lW" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "me" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ml" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "mt" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "mu" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "mv" = (
 /obj/structure/flora/lily1,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "my" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/bboulder2,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "mI" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "mL" = (
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "mV" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "nf" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ns" = (
 /obj/structure/flora/lily1,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ny" = (
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "nC" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "nE" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "nF" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "nX" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "nY" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "od" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "oe" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "oq" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ou" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "oM" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "oT" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "pa" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "pr" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "pu" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "pM" = (
 /obj/structure/outcrop,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "pO" = (
 /obj/structure/flora/smallbould,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "qf" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/lily1,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "qn" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "qF" = (
 /obj/structure/flora/ausbushes,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "qJ" = (
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ra" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "rw" = (
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "rx" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "rH" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "rM" = (
 /obj/structure/flora/ausbushes/reedbush,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "rY" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "sc" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "sf" = (
 /obj/structure/flora/tree/bigtree,
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "sT" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "sW" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/grass/brown,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tb" = (
 /obj/structure/flora/log1,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tj" = (
 /obj/structure/flora/ausbushes/reedbush,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tp" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tv" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tB" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tJ" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tL" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tR" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tT" = (
 /obj/structure/flora/bboulder2,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "tZ" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "up" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ux" = (
 /obj/effect/landmark/map_data{
 	height = 2
 	},
 /turf/simulated/wall/solidrock,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "uX" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "vd" = (
 /obj/structure/flora/bboulder1,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "vk" = (
 /obj/structure/flora/lily3,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "vp" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "wz" = (
 /obj/structure/flora/log1,
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "wO" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "wY" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "xj" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "xl" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "xG" = (
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "xV" = (
 /obj/structure/flora/log1,
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "xY" = (
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ye" = (
 /obj/effect/catwalk_plated,
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/open,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "yn" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "yu" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "yB" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "yD" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "yG" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "yK" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "zs" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "zx" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/bboulder2,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "zM" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Ah" = (
 /obj/structure/flora/lily2,
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Aj" = (
 /obj/structure/flora/ausbushes/reedbush,
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Bi" = (
 /obj/structure/flora/ausbushes/palebush,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "BC" = (
 /obj/structure/flora/lily3,
 /obj/structure/flora/log2,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "BM" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Cp" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Cz" = (
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "CL" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Dy" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
+"DD" = (
+/turf/simulated/open,
+/area/surface/outside/wilderness/skylands)
 "DE" = (
 /obj/structure/flora/tree/winter1,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "DN" = (
 /obj/structure/flora/log1,
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "DY" = (
 /obj/structure/flora/ausbushes,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "EF" = (
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "EJ" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "EK" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/ice,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Fs" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Fx" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "FD" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "FK" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "FO" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "FP" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "FS" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Gp" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "GD" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/palebush,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "GK" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Hb" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Hm" = (
 /obj/structure/flora/tree/palm,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Hn" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Hr" = (
 /obj/structure/flora/tree/palm,
 /obj/effect/overlay/coconut,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "HJ" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "HP" = (
 /obj/structure/outcrop,
 /turf/simulated/floor/outdoors/rocks,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Ip" = (
 /obj/structure/flora/log1,
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Is" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ID" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "IH" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "JP" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Kf" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Kk" = (
 /obj/effect/catwalk_plated,
 /turf/simulated/open,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Kr" = (
 /obj/structure/outcrop,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Kv" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "KA" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "KS" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "La" = (
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Lq" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "LB" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "LC" = (
 /obj/structure/flora/bboulder1,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "LP" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/bboulder2,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "LT" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Me" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "MB" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "MF" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "MM" = (
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "MQ" = (
 /obj/structure/outcrop,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "MZ" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/log2,
 /turf/simulated/floor/water,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "NH" = (
 /obj/structure/flora/bush,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Of" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Ol" = (
 /obj/structure/flora/bush,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "On" = (
 /obj/structure/flora/tree/dead,
 /turf/simulated/floor/outdoors/rocks,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Ow" = (
 /obj/structure/flora/grass/both,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "ON" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "OO" = (
 /obj/structure/flora/tree/palm,
 /obj/effect/overlay/coconut,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "OW" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Pd" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Pm" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Pt" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "PV" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Qc" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "QJ" = (
 /obj/structure/outcrop,
 /turf/simulated/floor/outdoors/mud,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "QQ" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "QY" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/tree/palm,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Rm" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
+"Rn" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/wilderness/skylands/empty)
 "RG" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "RJ" = (
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "RW" = (
 /obj/structure/flora/log1,
 /obj/structure/flora/bboulder1{
 	pixel_x = -10
 	},
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "RZ" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Sb" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Sr" = (
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "SO" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Th" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "To" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Tz" = (
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "TD" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "TG" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "TH" = (
 /obj/structure/flora/grass/both,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "TO" = (
 /turf/simulated/mineral,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Uo" = (
 /obj/structure/flora/grass/brown,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Uv" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/bboulder1,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Vb" = (
 /obj/structure/flora/log2,
 /obj/structure/flora/grass/green,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Vi" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Vl" = (
 /obj/structure/flora/log2,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Vp" = (
 /obj/structure/flora/tree/winter,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "VE" = (
 /obj/structure/flora/tree/dead,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "VT" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Wn" = (
 /obj/structure/flora/tree/winter1,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "WB" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "WF" = (
 /obj/structure/flora/ausbushes,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "WI" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "WJ" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "WO" = (
 /turf/simulated/open,
-/area/space)
+/area/surface/outside/wilderness/skylands/empty)
 "WQ" = (
 /obj/structure/flora/log2,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "WX" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Xo" = (
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/ice,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Xw" = (
 /obj/structure/flora/bboulder2,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Xx" = (
 /obj/structure/flora/log1,
 /turf/simulated/mineral/floor/light,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "XF" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/grass/green,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "XK" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Yb" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "Ys" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/grass/brown,
 /turf/simulated/mineral/floor,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "YA" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "YK" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 "YL" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/tree/winter,
 /turf/simulated/floor/outdoors/snow,
-/area/space)
+/area/surface/outside/wilderness/skylands)
 
 (1,1,1) = {"
 aE
@@ -17974,8 +17981,8 @@ WO
 WO
 WO
 WO
-WO
-WO
+La
+La
 La
 GK
 La
@@ -28349,7 +28356,7 @@ WO
 WO
 WO
 ye
-WO
+DD
 bj
 bj
 aE
@@ -28607,7 +28614,7 @@ WO
 WO
 WO
 ye
-WO
+DD
 bj
 bj
 aE
@@ -36540,7 +36547,7 @@ TO
 TO
 LT
 WO
-WO
+DD
 hy
 xY
 WJ
@@ -44500,7 +44507,7 @@ TO
 WO
 WO
 WO
-yD
+Rn
 Gp
 xY
 hy
