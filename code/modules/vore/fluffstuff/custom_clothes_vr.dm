@@ -2420,10 +2420,7 @@ Departamental Swimsuits, for general use
 				H.update_inv_wear_suit()
 	else
 		RemoveHood_evelyn()
-<<<<<<< HEAD
-End CHOMP Removal*/
-=======
-
+		
 //Uncle_Fruit_VEVO - Bradley Khatibi
 /obj/item/clothing/shoes/fluff/airjordans
     name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
@@ -2431,4 +2428,5 @@ End CHOMP Removal*/
     icon_state = "airjordans"
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
->>>>>>> 34fd6460ac6... Merge pull request #12274 from Heroman3003/brad-drip
+
+End CHOMP Removal*/
