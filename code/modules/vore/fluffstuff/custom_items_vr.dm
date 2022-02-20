@@ -1448,8 +1448,6 @@ End CHOMP Removal*/
 	force = 1
 	sharp = TRUE
 	edge = TRUE
-<<<<<<< HEAD
-=======
 
 //PastelPrinceDan - Kiyoshi/Masumi Maki
 /obj/item/toy/plushie/fluff/slimeowshi
@@ -1460,4 +1458,3 @@ End CHOMP Removal*/
 	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
 	gender = PLURAL // this seems like a good idea but probably prone to changing. todo: ask dan
 	// the only reason this thought is relevant because the base slimeplush has its gender set to female
->>>>>>> fc7a67073bd... Merge pull request #12288 from Hatterhat/slimeiyoshi-plush
