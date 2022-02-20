@@ -806,11 +806,27 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
 "aLO" = (
-/obj/effect/floor_decal/borderfloor,
-/mob/living/simple_mob/construct/juggernaut,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/command/gateway)
+/obj/effect/landmark/corpse/security{
+	corpseback = /obj/item/weapon/storage/backpack/satchel/military;
+	corpsebelt = /obj/item/weapon/storage/belt/security/tactical;
+	corpseglasses = /obj/item/clothing/glasses/night;
+	corpsegloves = /obj/item/clothing/gloves/tactical;
+	corpsehelmet = /obj/item/clothing/head/helmet/combat;
+	corpseidaccess = "Syndicate";
+	corpseidjob = "N/A";
+	corpsemask = /obj/item/clothing/mask/balaclava;
+	corpsepocket1 = /obj/item/device/binoculars;
+	corpsepocket2 = /obj/item/device/camerabug/spy;
+	corpseradio = /obj/item/device/radio/headset;
+	corpseshoes = /obj/item/clothing/shoes/boots/combat;
+	corpsesuit = /obj/item/clothing/suit/armor/pcarrier/bulletproof/full;
+	corpseuniform = /obj/item/clothing/under/tactical;
+	gender = "male";
+	mobname = "Colt Finnlay";
+	name = "Colt Finnlay"
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/awaymission/snowfield/outside)
 "aMa" = (
 /obj/structure/coatrack,
 /turf/simulated/floor/wood,
@@ -2327,7 +2343,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
-/mob/living/simple_mob/animal/giant_spider/electric,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
@@ -8385,15 +8400,13 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/dorms/dorm5)
 "hoT" = (
-/obj/effect/floor_decal/borderfloorblack{
+/obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/grey/border{
-	dir = 1
-	},
+/obj/effect/floor_decal/steeldecal/steel_decals5,
 /mob/living/simple_mob/animal/giant_spider/lurker,
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/hallway/northhallway)
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/engineering/monitor_room)
 "hpq" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/lightgrey{
@@ -9193,6 +9206,7 @@
 	dir = 4
 	},
 /obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/electric,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
 "ibJ" = (
@@ -9936,8 +9950,17 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "iIk" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
 /mob/living/simple_mob/animal/giant_spider/lurker,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "iIm" = (
 /mob/living/simple_mob/animal/giant_spider/webslinger,
@@ -10344,9 +10367,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/storage_room)
 "jaj" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/grey/border,
+/obj/machinery/light,
 /mob/living/simple_mob/animal/giant_spider/lurker,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/snowfield/security/security_lockerroom)
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/northhallway)
 "jaS" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -13180,10 +13206,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/service/kitchen)
 "lpJ" = (
-/mob/living/simple_mob/construct/juggernaut,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/cult,
-/area/awaymission/snowfield/command/gateway)
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/grey/border,
+/mob/living/simple_mob/animal/giant_spider/electric,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/northhallway)
 "lpQ" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/table/marble,
@@ -15100,7 +15127,6 @@
 /turf/simulated/mineral/floor/cave,
 /area/awaymission/snowfield/hallway/commandhallway)
 "nab" = (
-/mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/engineering/monitor_room)
 "naj" = (
@@ -17426,11 +17452,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/dorms/dorm14)
 "pfo" = (
-/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/frost,
-/turf/simulated/floor/tiled/steel,
-/area/awaymission/snowfield/security/lobby)
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/tiled/dark,
+/area/awaymission/snowfield/security/security_lockerroom)
 "pfs" = (
 /obj/item/weapon/ore/glass,
 /turf/simulated/floor/outdoors/rocks/caves,
@@ -18150,6 +18175,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/floodlight,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "pHZ" = (
@@ -20150,7 +20176,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/mob/living/simple_mob/construct/harvester/greater,
+/mob/living/simple_mob/construct/harvester,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/hallway/commandhallway)
 "rrm" = (
@@ -20960,7 +20986,7 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/commandarmory)
 "ssD" = (
-/mob/living/simple_mob/construct/juggernaut,
+/mob/living/simple_mob/construct/juggernaut/behemoth,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "stC" = (
@@ -23890,28 +23916,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/security/security_cell_hallway)
 "vaM" = (
-/obj/structure/flora/grass/brown,
-/obj/effect/landmark/corpse/security{
-	corpseback = /obj/item/weapon/storage/backpack/satchel/military;
-	corpsebelt = /obj/item/weapon/storage/belt/security/tactical;
-	corpseglasses = /obj/item/clothing/glasses/night;
-	corpsegloves = /obj/item/clothing/gloves/tactical;
-	corpsehelmet = /obj/item/clothing/head/helmet/combat;
-	corpseidaccess = "Syndicate";
-	corpseidjob = "N/A";
-	corpsemask = /obj/item/clothing/mask/balaclava;
-	corpsepocket1 = /obj/item/device/binoculars;
-	corpsepocket2 = /obj/item/device/camerabug/spy;
-	corpseradio = /obj/item/device/radio/headset;
-	corpseshoes = /obj/item/clothing/shoes/boots/combat;
-	corpsesuit = /obj/item/clothing/suit/armor/pcarrier/bulletproof/full;
-	corpseuniform = /obj/item/clothing/under/tactical;
-	gender = "male";
-	mobname = "Colt Finnlay";
-	name = "Colt Finnlay"
-	},
-/turf/simulated/floor/outdoors/snow/sif/planetuse,
-/area/awaymission/snowfield/outside)
+/obj/effect/floor_decal/borderfloor,
+/obj/machinery/light/flicker,
+/mob/living/simple_mob/construct/juggernaut,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/command/gateway)
 "vaV" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/window/reinforced,
@@ -25802,11 +25811,6 @@
 	},
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/sub_chamber)
-"wHX" = (
-/mob/living/simple_mob/animal/giant_spider/tunneler/fast,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/snowfield/security/security_lockerroom)
 "wIq" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -26652,7 +26656,6 @@
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/webslinger,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
 "xgX" = (
@@ -27150,22 +27153,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/gateway)
-"xxa" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/mob/living/simple_mob/animal/giant_spider/broodling,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel,
-/area/awaymission/snowfield/security/hallway)
 "xxj" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -32855,7 +32842,7 @@ tzg
 tzg
 hMS
 qne
-iIk
+uOb
 ned
 fGh
 qOP
@@ -33140,7 +33127,7 @@ pun
 imC
 pun
 pun
-pun
+aLO
 pun
 lEI
 pun
@@ -33227,7 +33214,7 @@ uEZ
 tzg
 tzg
 tzg
-hoT
+hMS
 qne
 uOb
 ned
@@ -33327,7 +33314,7 @@ pun
 imC
 pun
 pun
-vaM
+bUb
 aVA
 pun
 imC
@@ -33417,7 +33404,7 @@ tzg
 iLw
 qne
 uOb
-ylN
+jaj
 fGh
 cTX
 fYo
@@ -34349,7 +34336,7 @@ chX
 chX
 wxc
 mIX
-iLw
+iIk
 qne
 uOb
 ylN
@@ -35464,7 +35451,7 @@ iHK
 eyC
 xtE
 aBn
-lcA
+hoT
 mZF
 dQr
 cyf
@@ -36412,7 +36399,7 @@ tSF
 ned
 kXK
 sxD
-oYY
+pfo
 hnK
 cQm
 dWX
@@ -36790,7 +36777,7 @@ oYY
 oYY
 oYY
 ptM
-wHX
+oYY
 oYY
 fBx
 uyC
@@ -36973,7 +36960,7 @@ tVV
 ned
 kXK
 rcZ
-jaj
+xgf
 xgf
 ibG
 xkM
@@ -38851,7 +38838,7 @@ nBW
 nBW
 nBW
 nBW
-xxa
+ekh
 pEd
 qBl
 qBl
@@ -39588,7 +39575,7 @@ eWn
 hMS
 qne
 uOb
-ned
+lpJ
 hez
 dTU
 kvB
@@ -42216,7 +42203,7 @@ qmj
 vgM
 hMO
 mpk
-pfo
+ijI
 kGz
 azx
 ppX
@@ -49362,7 +49349,7 @@ hBm
 eoL
 srQ
 srQ
-gCH
+vaM
 iRf
 iRf
 bfk
@@ -49923,7 +49910,7 @@ ibJ
 ewH
 pIi
 knS
-lpJ
+srQ
 iRf
 iRf
 iRf
@@ -52165,7 +52152,7 @@ tHV
 srQ
 ehC
 tHV
-ssD
+tHV
 ltZ
 loh
 iRf
@@ -52352,9 +52339,9 @@ tgp
 iPW
 iRf
 cMA
-tHV
+ssD
 srQ
-aLO
+igK
 iRf
 iRf
 bfk
@@ -52726,7 +52713,7 @@ srQ
 tHV
 iRf
 snB
-lpJ
+srQ
 srQ
 tHV
 iRf
