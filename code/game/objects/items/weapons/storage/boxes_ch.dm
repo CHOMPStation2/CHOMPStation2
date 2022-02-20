@@ -8,11 +8,11 @@
 	name = "foam crossbow"
 	starts_with = list(
 	/obj/item/toy/crossbow,
-	/obj/item/toy/ammo/crossbow,
-	/obj/item/toy/ammo/crossbow,
-	/obj/item/toy/ammo/crossbow,
-	/obj/item/toy/ammo/crossbow,
-	/obj/item/toy/ammo/crossbow
+	/obj/item/ammo_casing/afoam_dart,
+	/obj/item/ammo_casing/afoam_dart,
+	/obj/item/ammo_casing/afoam_dart,
+	/obj/item/ammo_casing/afoam_dart,
+	/obj/item/ammo_casing/afoam_dart
 	)
 
 /obj/item/weapon/storage/box/casino/costume_whitebunny
