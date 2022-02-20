@@ -638,7 +638,7 @@
 	taste_description = "slimy dirt"
 	reagent_state = LIQUID
 	color = "#62764E"
-<<<<<<< HEAD
+	nutriment_factor = 15
 
 //YW Edit Start
 /datum/reagent/nutriment/paper //Paper is made from cellulose. You can eat it. It doesn't fill you up very much at all.
@@ -650,6 +650,3 @@
 	color = "e6e6e6" //not quite white
 	nutriment_factor = 2 // 5 times worse than nutriment
 //YW Edit End
-=======
-	nutriment_factor = 15
->>>>>>> 3b23b6a4969... Merge pull request #12286 from Heroman3003/branch
