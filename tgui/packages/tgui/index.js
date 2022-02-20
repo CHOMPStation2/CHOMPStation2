@@ -16,6 +16,7 @@ import './styles/themes/paper.scss';
 import './styles/themes/pda-retro.scss';
 import './styles/themes/retro.scss';
 import './styles/themes/syndicate.scss';
+import './styles/themes/terminal.scss';
 import './styles/themes/wizard.scss';
 import './styles/themes/abstract.scss';
 
