@@ -11,15 +11,15 @@
 // DONE Create procs to actually perform the reagent transfer/etc. for a synthesis, reading the stored synthesis steps. 
 // Implement a step-mode where the player manually clicks on each step and an expert mode where players input a comma-delineated list. 
 // DONE Add process() code which makes the machine actually work. Perhaps tie a boolean and single start proc into process().
-// Give the machine queue-behavior which allows players to queue up multiple recipes, even when the machine is busy. Reference protolathe code.
-// Give the machine a way to stop a synthesis and purge/bottle the reaction vessel. 
+// DONE Give the machine queue-behavior which allows players to queue up multiple recipes, even when the machine is busy. Reference protolathe code.
+// DONE Give the machine a way to stop a synthesis and purge/bottle the reaction vessel. 
 // Perhaps use recipes as a "ID" "num" "ID" "num" list to avoid using multiple lists.
-// Panel open button.
+// DONE Panel open button.
 // DONE Code for power usage.
 // Update_icon() overrides.
 // Underlay code for the reaction vessel.
-// Add an eject catalyst bottle button.
-// Make sure recipes can only be removed when the machine is idle. Adding should be fine.
+// DONE Add an eject catalyst bottle button.
+// DONE Make sure recipes can only be removed when the machine is idle. Adding should be fine.
 // May need yet another list which is just strings which match recipe ID's. 
 // For user recipes, make clicking on the recipe give a prompt with "add to queue," "export recipe," and "delete recipe."
 
@@ -207,7 +207,7 @@
 /obj/machinery/chemical_synthesizer/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ChemSynthesizer", ui_title)
+		ui = new(user, src, "ChemSynthesizer", name)
 		ui.open()
 
 /obj/machinery/chemical_synthesizer/tgui_data(mob/user)
@@ -252,8 +252,64 @@
 
 	. = TRUE
 	switch(action)
-
-
+		if("start_queue")
+			// Start up the queue.
+			if(!busy)
+				start_queue()
+		if("rem_queue")
+			// Remove a single entry from the queue. 
+			var/index = text2num(params["q_index"])
+			if(!isnum(index) || !ISINTEGER(index) || !istype(queue) || (index<1 || index>length(queue)))
+				return
+			queue -= queue[index]
+		if("clear_queue")
+			// Remove all entries from the queue except the currently processing recipe. 
+			queue = list()
+		if("eject_catalyst")
+			// Removes the catalyst bottle from the machine. 
+			if(!busy && catalyst)
+				catalyst.forceMove(get_turf(src))
+				catalyst = null
+		if("toggle_catalyst")
+			// Decides if the machine uses the catalyst. 
+			if(!busy)
+				use_catalyst = !use_catalyst
+		if("emergency_stop")
+			// Stops everything if that's desirable for some reason. 
+			if(busy)
+				stall()
+		if("bottle_product")
+			// Bottles the reaction mixture if stalled.
+			if(!busy)
+				bottle_product()
+		if("panel_toggle")
+			// Opens/closes the panel.
+			if(!busy)
+				panel_open = !panel_open
+		if("add_recipe")
+			// Allows the user to add a recipe. Kinda vital for this machine to do anything useful.
+			if(recipes.len >= SYNTHESIZER_MAX_RECIPES)
+				to_chat(usr, "<span class='warning'>Maximum recipes exceeded!</span>")
+				return
+			if(!production_mode)
+				babystep_recipe(usr)
+			else
+				import_recipe(usr)
+		if("rem_recipe")
+			// Allows the user to remove recipes while the machine is idle. 
+			if(!busy)
+				var/index = params["rm_index"]
+				if(index in recipes)
+					recipes -= recipes[index]
+		if("add_queue")
+			// Adds recipes to the queue. 
+			if(queue.len >= SYNTHESIZER_MAX_QUEUE)
+				to_chat(usr, "<span class='warning'>Synthesizer queue full!</span>")
+				return
+			var/index = params["qa_index"]
+			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe. 
+			if(index in recipes)
+				queue[queue.len + 1] = index
 
 	add_fingerprint(usr)
 
@@ -269,6 +325,14 @@
 	if(stat & (BROKEN|NOPOWER))
 		return
 	tgui_interact(user)
+
+// This proc is lets users create recipes step-by-step and exports a comma delineated list to chat. It's intended to teach how to use the machine.
+/obj/machinery/chemical_synthesizer/proc/babystep_recipe(mob/user)
+	return
+
+// This proc allows users to copy-paste a comma delineated list to create a recipe.
+/obj/machinery/chemical_synthesizer/proc/import_recipe(mob/user)
+	return
 
 // This proc handles adding the catalyst starting the synthesizer's queue. 
 /obj/machinery/chemical_synthesizer/proc/start_queue(mob/user)
@@ -377,6 +441,9 @@
 	if(stat & (BROKEN|NOPOWER))
 		stall()
 		return
+
+	if(!r_id)
+		r_id = "[reagents.get_master_reagent_name()]"
 
 	while(reagents.total_volume)
 		var/obj/item/weapon/reagent_containers/glass/bottle/B = new(src.loc)
