@@ -7,6 +7,7 @@ var/list/grass_types = list(
 	icon_state = "grass0"
 	edge_blending_priority = 4
 	initial_flooring = /decl/flooring/grass/outdoors // VOREStation Edit
+	can_dig = TRUE
 	turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
@@ -40,10 +41,10 @@ var/list/grass_types = list(
 	initial_flooring = /decl/flooring/grass/sif
 	edge_blending_priority = 2
 	grass_chance = 5
-	var/tree_chance = 0.7
+	var/tree_chance = 0.7 //CHOMPedit
 
 
-	animal_chance = 0.25
+	animal_chance = 0.25 //CHOMPedit
 
 	animal_types = list(
 		/mob/living/simple_mob/animal/sif/diyaab = 7,
