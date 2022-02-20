@@ -226,7 +226,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/gateway/eggnogtown/hotsprings)
 "kS" = (
-/obj/structure/bed/chair/sofa/black/right,
+/obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/plating/eris/under{
 	temperature = 258.15
 	},
@@ -283,7 +283,7 @@
 	},
 /area/gateway/eggnogtown/underground)
 "nh" = (
-/obj/structure/bed/chair/sofa/black/corner,
+/obj/structure/bed/chair/sofa/corner/black,
 /turf/simulated/floor/plating/eris/under{
 	temperature = 258.15
 	},
@@ -517,7 +517,7 @@
 	},
 /area/gateway/eggnogtown/vibeout)
 "Aw" = (
-/obj/structure/bed/chair/sofa/black/corner{
+/obj/structure/bed/chair/sofa/corner/black{
 	dir = 8
 	},
 /turf/simulated/floor/plating/eris/under{
@@ -868,7 +868,7 @@
 	},
 /area/gateway/eggnogtown/hotsprings)
 "ZR" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
 /turf/simulated/floor/plating/eris/under{

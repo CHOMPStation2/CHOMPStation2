@@ -1061,7 +1061,7 @@
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
 "cR" = (
-/obj/structure/bed/chair/sofa/purp/left,
+/obj/structure/bed/chair/sofa/left/purp,
 /obj/structure/sign/painting/public{
 	pixel_y = 30
 	},
@@ -1697,7 +1697,7 @@
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/firingrange)
 "eE" = (
-/obj/structure/bed/chair/sofa/purp/right,
+/obj/structure/bed/chair/sofa/right/purp,
 /obj/structure/sign/painting/public{
 	pixel_y = 30
 	},
@@ -1753,7 +1753,7 @@
 /obj/machinery/camera/network/research_outpost{
 	dir = 4
 	},
-/obj/structure/bed/chair/sofa/purp/left{
+/obj/structure/bed/chair/sofa/left/purp{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1797,7 +1797,7 @@
 /obj/structure/sign/painting/public{
 	pixel_x = -30
 	},
-/obj/structure/bed/chair/sofa/purp/right{
+/obj/structure/bed/chair/sofa/right/purp{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3188,7 +3188,7 @@
 /obj/machinery/camera/network/research_outpost{
 	dir = 8
 	},
-/obj/structure/bed/chair/sofa/purp/right{
+/obj/structure/bed/chair/sofa/right/purp{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
@@ -4648,7 +4648,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/bed/chair/sofa/purp/left{
+/obj/structure/bed/chair/sofa/left/purp{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
