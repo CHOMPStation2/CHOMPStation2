@@ -41,17 +41,11 @@ var/list/grass_types = list(
 	initial_flooring = /decl/flooring/grass/sif
 	edge_blending_priority = 2
 	grass_chance = 5
-<<<<<<< HEAD
-	var/tree_chance = 0.7
+	var/tree_chance = 0.7 //CHOMPedit
 
 
-	animal_chance = 0.25
+	animal_chance = 0.25 //CHOMPedit
 
-=======
-	var/tree_chance = 2
-/*
-	animal_chance = 0.5
->>>>>>> 3b23b6a4969... Merge pull request #12286 from Heroman3003/branch
 	animal_types = list(
 		/mob/living/simple_mob/animal/sif/diyaab = 7,
 		/mob/living/simple_mob/animal/sif/glitterfly = 2,
@@ -106,7 +100,6 @@ var/list/grass_types = list(
 		/obj/structure/flora/sif/eyes = 5,
 		/obj/structure/flora/sif/tendrils = 30
 		)
-<<<<<<< HEAD
 
 //CHOMPedit: animal spawning for sif rocks. This probably doesn't belong in grass.dm but it's where there other Sif spawns are, sue me.
 /turf/simulated/floor/outdoors/rocks/sif
@@ -123,5 +116,3 @@ var/list/grass_types = list(
 
 	. = ..()
 //CHOMPedit end
-=======
->>>>>>> 3b23b6a4969... Merge pull request #12286 from Heroman3003/branch
