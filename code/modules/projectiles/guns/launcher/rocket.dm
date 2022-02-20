@@ -38,8 +38,4 @@
 		rockets -= I
 		return new I.projectile_type(src)
 	return null
-
-/obj/item/weapon/gun/launcher/rocket/handle_post_fire(mob/user, atom/target)
-	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].")
-	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	..()
