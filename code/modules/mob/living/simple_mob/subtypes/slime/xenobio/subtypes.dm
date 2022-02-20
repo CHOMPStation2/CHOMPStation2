@@ -67,7 +67,7 @@
 
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/dark_blue,
-			/mob/living/simple_mob/slime/xenobio/silver,
+			/mob/living/simple_mob/slime/xenobio/pink, //Chompedit
 			/mob/living/simple_mob/slime/xenobio/pink,
 			/mob/living/simple_mob/slime/xenobio
 		)
@@ -145,7 +145,7 @@
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/bluespace,
 			/mob/living/simple_mob/slime/xenobio/bluespace,
-			/mob/living/simple_mob/slime/xenobio/metal,
+			/mob/living/simple_mob/slime/xenobio/amber,  //Chompedit removes metal slimes, changes this to Amber
 			/mob/living/simple_mob/slime/xenobio/orange
 		)
 
@@ -433,13 +433,14 @@
 	player_msg = "You <b>passively provide nutrition</b> to nearby entities."
 
 	slime_mutation = list(
-		/mob/living/simple_mob/slime/xenobio/silver,
-		/mob/living/simple_mob/slime/xenobio/silver,
+		/mob/living/simple_mob/slime/xenobio/yellow, //Chompedit 
+		/mob/living/simple_mob/slime/xenobio/yellow, //Chompedit
 		/mob/living/simple_mob/slime/xenobio/amber,
 		/mob/living/simple_mob/slime/xenobio/amber
 	)
 
 /* VOREStation Edit. We've had enough server crashes.
+*/ //Chompedit Removing Virgo's commenting out.  Stupidity of players is not a good reason to remove code.
 /mob/living/simple_mob/slime/xenobio/amber/handle_special()
 	if(stat != DEAD)
 		feed_aura()
@@ -457,6 +458,7 @@
 			if(H.isSynthetic())
 				continue
 			H.nutrition = between(0, H.nutrition + rand(15, 25), 800)
+*/  //Chompedit second removal.
 */
 
 /mob/living/simple_mob/slime/xenobio/cerulean
@@ -782,5 +784,18 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
 
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick/Initialize()
+	pacify() // So the physical mob also gets made harmless.
+	return ..()
+
+// A pacified pink slime for either spawning or putting in a casino reward or capture crystal.
+/mob/living/simple_mob/slime/xenobio/pink/sana
+	name = "Sana"
+	desc = "A pink slime that seems to be oddly friendly, and doesn't seem interested in eating your face like the rest of them."
+	rainbow_core_candidate = FALSE
+	// Doing pacify() in initialize() won't actually pacify the AI due to the ai_holder not existing due to parent initialize() not being called yet.
+	// Instead lets just give them an ai_holder that does that for us.
+	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
+
+/mob/living/simple_mob/slime/xenobio/pink/sana/Initialize()
 	pacify() // So the physical mob also gets made harmless.
 	return ..()
