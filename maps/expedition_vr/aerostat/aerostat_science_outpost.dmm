@@ -2578,6 +2578,9 @@
 	tag_north = 2;
 	tag_west = 1
 	},
+/obj/machinery/camera/network/research_outpost{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 "hX" = (
@@ -3260,6 +3263,9 @@
 /area/offmap/aerostat/inside/arm/se)
 "kN" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/powercontrol)
 "kO" = (
@@ -3836,6 +3842,14 @@
 /obj/machinery/power/solar,
 /turf/simulated/floor/plating/virgo2,
 /area/offmap/aerostat/solars)
+"na" = (
+/obj/machinery/light/small,
+/obj/machinery/power/quantumpad/scioutpost,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/bluegrid,
+/area/offmap/aerostat/inside/powercontrol)
 "nb" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -4597,10 +4611,17 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+<<<<<<< HEAD
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+=======
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
@@ -5634,10 +5655,17 @@
 "uF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+<<<<<<< HEAD
 	},
 /obj/machinery/camera/network/research_outpost{
 	dir = 8
 	},
+=======
+	},
+/obj/machinery/camera/network/research_outpost{
+	dir = 8
+	},
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
@@ -5869,6 +5897,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/firingrange)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "vR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
@@ -5889,11 +5918,28 @@
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
 "vR" = (
+=======
+"vQ" = (
+/obj/item/modular_computer/console/preset/research{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/white,
+/area/offmap/aerostat/inside/xenoarch)
+"vR" = (
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/xenoarch)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 "vT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -7804,11 +7850,15 @@
 	icon_state = "1-2"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/poster{
 =======
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -8220,7 +8270,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/airlock/south)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 "FA" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -8237,7 +8290,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 "FF" = (
 /obj/machinery/camera/network/research_outpost,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -9371,7 +9427,10 @@
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 "JX" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9385,7 +9444,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/xenoarch)
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 "JZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9565,7 +9627,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
 	name = "Virology Isolation Room";
+<<<<<<< HEAD
 	req_access = list (39)
+=======
+	req_access = list(39);
+	req_one_access = null
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/virology)
@@ -9728,6 +9795,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offmap/aerostat/inside/zorrenoffice)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "LI" = (
 /obj/structure/closet/firecloset,
 /obj/structure/sign/poster{
@@ -9737,6 +9805,8 @@
 /area/offmap/aerostat/inside/xenoarch)
 =======
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 "LK" = (
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/offmap/aerostat/inside/arm/ne)
@@ -11981,6 +12051,7 @@
 /area/offmap/aerostat/inside/xenoarch)
 "Vd" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -11988,11 +12059,16 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 =======
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/offmap/aerostat/inside/toxins)
 "Ve" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -12676,6 +12752,7 @@
 "XV" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
+<<<<<<< HEAD
 	},
 /turf/simulated/floor/glass/reinforced{
 	color = "#eacd7c"
@@ -12686,6 +12763,18 @@
 	dir = 8;
 	pixel_x = -6
 	},
+=======
+	},
+/turf/simulated/floor/glass/reinforced{
+	color = "#eacd7c"
+	},
+/area/offmap/aerostat/glassgetsitsownarea)
+"XW" = (
+/obj/machinery/light/floortube{
+	dir = 8;
+	pixel_x = -6
+	},
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 "XX" = (
@@ -13169,6 +13258,9 @@
 "ZN" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offmap/aerostat/inside/lobby)
@@ -21244,6 +21336,7 @@ qU
 qU
 io
 <<<<<<< HEAD
+<<<<<<< HEAD
 vR
 jM
 un
@@ -21252,6 +21345,11 @@ qC
 WQ
 Eb
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+qC
+WQ
+Eb
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 Dh
 Gt
 TF
@@ -23255,10 +23353,10 @@ cP
 dK
 dM
 dN
-Mj
+aQ
 kN
-Ym
-MC
+Ff
+FD
 VG
 VG
 VG
@@ -23397,7 +23495,7 @@ dh
 dL
 dL
 dO
-aR
+na
 GB
 Ym
 ZN
@@ -23416,18 +23514,24 @@ Zs
 Ya
 KI
 <<<<<<< HEAD
+<<<<<<< HEAD
 HN
 eW
 QX
 eW
 eW
 =======
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 xH
 iQ
 sy
 er
 FA
+<<<<<<< HEAD
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 gP
 FA
 Vr
@@ -23550,7 +23654,7 @@ EQ
 yk
 GB
 zE
-Ym
+xl
 Ym
 Ym
 Ym
@@ -23692,10 +23796,14 @@ TB
 GB
 GB
 xl
+xl
 Ym
 Ym
 Ym
+<<<<<<< HEAD
 Ym
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 wl
 Ym
 Ym
@@ -23835,6 +23943,7 @@ eE
 Ym
 BF
 <<<<<<< HEAD
+<<<<<<< HEAD
 Ff
 Ff
 Ff
@@ -23843,6 +23952,11 @@ JX
 Ui
 sK
 >>>>>>> e4a5e6c0e3... Merge pull request #11941 from PastelPrinceDan/aerostat
+=======
+JX
+Ui
+sK
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 sK
 Fs
 AN

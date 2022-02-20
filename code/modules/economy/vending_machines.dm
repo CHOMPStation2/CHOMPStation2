@@ -1634,4 +1634,8 @@
 		/obj/item/clothing/under/clown/rainbow = 1
 	)
 	req_log_access = access_hop
+<<<<<<< HEAD
 	has_logs = 1
+=======
+	has_logs = 1
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

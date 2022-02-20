@@ -249,4 +249,8 @@
 /obj/item/weapon/stock_parts
 	persist_storable = FALSE
 /obj/item/weapon/rcd
+<<<<<<< HEAD
 	persist_storable = FALSE
+=======
+	persist_storable = FALSE
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

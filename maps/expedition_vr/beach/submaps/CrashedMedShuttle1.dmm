@@ -3,11 +3,19 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/submap/CrashedMedShuttle)
 "ab" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/CrashedMedShuttle)
 "ac" = (
 /obj/structure/lattice,
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/CrashedMedShuttle)
+"ac" = (
+/obj/structure/lattice,
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "ad" = (
 /obj/effect/spider/stickyweb,
@@ -40,7 +48,11 @@
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/lattice,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "aj" = (
 /obj/machinery/light/small{
@@ -73,7 +85,11 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/loot_pile/surface/bones,
 /obj/structure/lattice,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "ao" = (
 /obj/item/weapon/circuitboard/broken,
@@ -141,7 +157,11 @@
 "aB" = (
 /obj/structure/lattice,
 /obj/item/stack/rods,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "aC" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -200,11 +220,19 @@
 /area/submap/CrashedMedShuttle)
 "aM" = (
 /obj/item/weapon/material/shard,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/CrashedMedShuttle)
 "aN" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/CrashedMedShuttle)
+"aN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "aO" = (
 /obj/item/weapon/material/shard{
@@ -229,7 +257,11 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/loot_pile/surface/bones,
 /obj/structure/lattice,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "aT" = (
 /obj/machinery/light,
@@ -247,11 +279,19 @@
 /area/submap/CrashedMedShuttle)
 "aV" = (
 /obj/effect/spider/stickyweb,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/CrashedMedShuttle)
 "aW" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/CrashedMedShuttle)
+"aW" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "aX" = (
 /obj/machinery/computer,
@@ -277,17 +317,29 @@
 /obj/item/weapon/material/shard{
 	icon_state = "medium"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/CrashedMedShuttle)
 "bd" = (
 /obj/item/stack/rods,
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/CrashedMedShuttle)
+"bd" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "be" = (
 /obj/effect/spider/stickyweb,
 /obj/structure/girder/displaced,
 /obj/structure/lattice,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "bf" = (
 /obj/machinery/light{
@@ -301,21 +353,33 @@
 /obj/structure/lattice,
 /obj/item/device/gps/internal/poi,
 /obj/structure/flora/tree/sif,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "bg" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/lattice,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "bh" = (
 /obj/structure/grille/broken,
 /obj/item/weapon/material/shard{
 	icon_state = "medium"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "bi" = (
 /obj/effect/decal/mecha_wreckage/odysseus,
@@ -331,12 +395,20 @@
 	icon_state = "beartrap1"
 	},
 /obj/random/trash,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "bk" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/lattice,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/rocks,
+=======
+/turf/simulated/floor/outdoors/rocks/caves,
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /area/submap/CrashedMedShuttle)
 "bl" = (
 /obj/effect/spider/stickyweb,

@@ -130,7 +130,11 @@
 /turf/simulated/wall/attackby(var/obj/item/weapon/W, var/mob/user)
 
 	user.setClickCooldown(user.get_attack_speed(W))
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	if(!construction_stage && user.a_intent == I_HELP)
 		if(try_graffiti(user,W))
 			return

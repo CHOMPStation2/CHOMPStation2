@@ -1005,7 +1005,6 @@
 #include "code\game\machinery\pipe\pipe_dispenser.dm"
 #include "code\game\machinery\pipe\pipe_recipes.dm"
 #include "code\game\machinery\pipe\pipelayer.dm"
-#include "code\game\machinery\reagents\pump.dm"
 #include "code\game\machinery\telecomms\broadcaster.dm"
 #include "code\game\machinery\telecomms\broadcaster_ch.dm"
 #include "code\game\machinery\telecomms\logbrowser.dm"
@@ -1682,7 +1681,10 @@
 #include "code\game\turfs\turf_flick_animations.dm"
 #include "code\game\turfs\unsimulated.dm"
 #include "code\game\turfs\weird_turfs_vr.dm"
+<<<<<<< HEAD
 #include "code\game\turfs\flooring\floor_yw.dm"
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 #include "code\game\turfs\flooring\flooring.dm"
 #include "code\game\turfs\flooring\flooring_ch.dm"
 #include "code\game\turfs\flooring\flooring_decals.dm"
@@ -2518,6 +2520,7 @@
 #include "code\modules\hydroponics\grown.dm"
 #include "code\modules\hydroponics\grown_inedible.dm"
 #include "code\modules\hydroponics\grown_predefined.dm"
+#include "code\modules\hydroponics\grown_sif.dm"
 #include "code\modules\hydroponics\seed.dm"
 #include "code\modules\hydroponics\seed_datums_ch.dm"
 #include "code\modules\hydroponics\seed_datums_vr.dm"
@@ -3750,7 +3753,10 @@
 #include "code\modules\projectiles\gun.dm"
 #include "code\modules\projectiles\gun_ch.dm"
 #include "code\modules\projectiles\projectile.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\projectile_ch.dm"
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 #include "code\modules\projectiles\ammunition\ammo_boxes.dm"
 #include "code\modules\projectiles\ammunition\magazines.dm"
 #include "code\modules\projectiles\ammunition\magazines_vr.dm"
@@ -3772,7 +3778,10 @@
 #include "code\modules\projectiles\guns\magic.dm"
 #include "code\modules\projectiles\guns\modular_guns.dm"
 #include "code\modules\projectiles\guns\projectile.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\guns\projectile_ch.dm"
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 #include "code\modules\projectiles\guns\toy.dm"
 #include "code\modules\projectiles\guns\vox.dm"
 #include "code\modules\projectiles\guns\energy\bsharpoon_vr.dm"
@@ -3906,6 +3915,7 @@
 #include "code\modules\reagents\machinery\chemalyzer.dm"
 #include "code\modules\reagents\machinery\distillery.dm"
 #include "code\modules\reagents\machinery\grinder.dm"
+#include "code\modules\reagents\machinery\pump.dm"
 #include "code\modules\reagents\machinery\dispenser\_defines.dm"
 #include "code\modules\reagents\machinery\dispenser\cartridge.dm"
 #include "code\modules\reagents\machinery\dispenser\cartridge_presets.dm"
@@ -4035,7 +4045,11 @@
 #include "code\modules\resleeving\infomorph_software.dm"
 #include "code\modules\resleeving\machine_subtypes.dm"
 #include "code\modules\resleeving\machines.dm"
+<<<<<<< HEAD
 #include "code\modules\resleeving\machines_ch.dm"
+=======
+#include "code\modules\resleeving\resleeving_sickness.dm"
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 #include "code\modules\resleeving\sleevecard.dm"
 #include "code\modules\rogueminer_vr\asteroid.dm"
 #include "code\modules\rogueminer_vr\controller.dm"
@@ -4262,6 +4276,7 @@
 #include "code\modules\vore\eating\bellymodes_vr.dm"
 #include "code\modules\vore\eating\contaminate_vr.dm"
 #include "code\modules\vore\eating\digest_act_vr.dm"
+#include "code\modules\vore\eating\inbelly_spawn.dm"
 #include "code\modules\vore\eating\leave_remains_vr.dm"
 #include "code\modules\vore\eating\living_ch.dm"
 #include "code\modules\vore\eating\living_vr.dm"
@@ -4412,6 +4427,8 @@
 #include "code\ZAS\Zone.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
+#include "maps\expedition_vr\beach\submaps\mountains.dm"
+#include "maps\expedition_vr\beach\submaps\mountains_areas.dm"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
@@ -4435,11 +4452,14 @@
 #include "maps\submaps\space_submaps\space.dm"
 #include "maps\submaps\space_submaps\space_areas.dm"
 #include "maps\submaps\space_submaps\debrisfield\debrisfield.dm"
+<<<<<<< HEAD
 #include "maps\submaps\surface_submaps\mountains\mountains.dm"
 #include "maps\submaps\surface_submaps\mountains\mountains_areas.dm"
 #include "maps\submaps\surface_submaps\mountains\mountains_areas_vr.dm"
 #include "maps\submaps\surface_submaps\plains\plains.dm"
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"

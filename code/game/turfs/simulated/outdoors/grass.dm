@@ -7,6 +7,7 @@ var/list/grass_types = list(
 	icon_state = "grass0"
 	edge_blending_priority = 4
 	initial_flooring = /decl/flooring/grass/outdoors // VOREStation Edit
+	can_dig = TRUE
 	turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
@@ -40,11 +41,17 @@ var/list/grass_types = list(
 	initial_flooring = /decl/flooring/grass/sif
 	edge_blending_priority = 2
 	grass_chance = 5
+<<<<<<< HEAD
 	var/tree_chance = 0.7
 
 
 	animal_chance = 0.25
 
+=======
+	var/tree_chance = 2
+/*
+	animal_chance = 0.5
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	animal_types = list(
 		/mob/living/simple_mob/animal/sif/diyaab = 7,
 		/mob/living/simple_mob/animal/sif/glitterfly = 2,
@@ -99,6 +106,7 @@ var/list/grass_types = list(
 		/obj/structure/flora/sif/eyes = 5,
 		/obj/structure/flora/sif/tendrils = 30
 		)
+<<<<<<< HEAD
 
 //CHOMPedit: animal spawning for sif rocks. This probably doesn't belong in grass.dm but it's where there other Sif spawns are, sue me.
 /turf/simulated/floor/outdoors/rocks/sif
@@ -115,3 +123,5 @@ var/list/grass_types = list(
 
 	. = ..()
 //CHOMPedit end
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

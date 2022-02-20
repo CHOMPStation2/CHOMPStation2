@@ -809,6 +809,25 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
+=======
+/datum/sprite_accessory/ears/rabbit_swept
+	name = "Rabbit Ears (swept back)"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "rabbit-swept"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/antlers_large
+	name = "Antlers (large)"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "antlers_large"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /datum/sprite_accessory/ears/kittyr
 	name = "kitty right only, colorable"
 	icon = 'icons/mob/vore/ears_uneven.dmi'
@@ -825,4 +844,8 @@
 	icon_state = "bunny-tall"
 	extra_overlay = "bunny-tall-inner"
 	do_colouration = 1
+<<<<<<< HEAD
 	color_blend_mode = ICON_MULTIPLY
+=======
+	color_blend_mode = ICON_MULTIPLY
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

@@ -58,6 +58,7 @@
 	reagents.remove_reagent("triglyceride", INFINITY)
 	//Chicken is low fat. Less total calories than other meats
 
+<<<<<<< HEAD
 /obj/item/weapon/reagent_containers/food/snacks/carpmeat
 	name = "fillet"
 	desc = "A fillet of carp meat"
@@ -89,6 +90,8 @@
 	toxin_type = "neurotoxic_protein"
 	toxin_amount = 1
 
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /obj/item/weapon/reagent_containers/food/snacks/crabmeat
 	name = "crustacean legs"
 	desc = "... Coffee? Is that you?"

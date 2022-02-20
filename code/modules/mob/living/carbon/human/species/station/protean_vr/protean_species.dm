@@ -161,9 +161,12 @@
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = 25
+<<<<<<< HEAD
 
 		var/obj/item/weapon/rig/protean/prig = new /obj/item/weapon/rig/protean(H)
 		prig.myprotean = H
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	return ..() //Wut
@@ -183,7 +186,11 @@
 		H.ckey = H.temporary_form.ckey
 		QDEL_NULL(H.temporary_form)
 
+<<<<<<< HEAD
 	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 5 or 10 minutes before respawning, to represent the time it would take to ship a new-you to the station, depending on how you died.</span>")
+=======
+	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 
 	spawn(1)
 		if(H)

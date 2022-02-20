@@ -55,6 +55,7 @@
 /datum/alt_title/exploration_manager
 	title = "Exploration Manager"
 
+<<<<<<< HEAD
 
 /datum/job/pilot
 	title = "Pilot"
@@ -86,6 +87,8 @@
 	title = "Helmsman"
 
 
+=======
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /datum/job/explorer
 	title = "Explorer"
 	flag = EXPLORER

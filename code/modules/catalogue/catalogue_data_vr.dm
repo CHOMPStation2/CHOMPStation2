@@ -58,11 +58,19 @@
 
 /datum/category_item/catalogue/fauna/vulpkanin
 	name = "Sapients - Vulpkanin"
+<<<<<<< HEAD
 	desc = "The vulpkanin are the remnants of an ancient precursor race, residing on a planet called \
 	“Altam”. Vulpkanin diverged from the precursors due to heavy isolation after the fall, \
 	presumably due to being a freshly found colony. A lack of material support regressed their technology \
 	to pre-industrial standards until being found again by humanity. At this point \
 	they have formed an early spacefaring society and smoothly entered the galacic stage. \
+=======
+	desc = "The Vulpkanin are the remnants of an ancient precursor which resided in the Coreward Periphery \
+	3000 to 4000 years ago, residing on a planet called “Altam”. Vulpkanin diverged from the precursors due \
+	to heavy isolation after the fall, presumably due to being a freshly found colony. A lack of material support \
+	regressed their technology to pre-industrial standards, from which they had to recover from in long and hard years. At the point \
+	of discovery by human explorers, they have formed an early interplanetary society and accession into the Diaspora went over relatively smoothly. \
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	Vulpkanin are the closest successor to the precursors, genetically, although genelocked devices still do not \
 	recognize them due to genetic drift." //CHOMpedit
 	value = CATALOGUER_REWARD_TRIVIAL

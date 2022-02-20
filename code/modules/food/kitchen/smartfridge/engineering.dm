@@ -20,6 +20,8 @@
 		
 	count = min(count, amount)
 
+	count = min(count, amount)
+
 	while(count > 0)
 		var/obj/item/stack/S = I.get_product(get_turf(src), count)
 		count -= S.get_amount()

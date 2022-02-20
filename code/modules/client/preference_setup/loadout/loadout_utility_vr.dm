@@ -75,8 +75,16 @@
 	path = /obj/item/clothing/gloves/bluespace
 	cost = 5
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /datum/gear/utility/satchel_strapless
 	display_name = "satchel strapless"
 	path = /obj/item/weapon/storage/backpack/satchel/strapless
 	slot = slot_back
+<<<<<<< HEAD
 	cost = 1
+=======
+	cost = 1
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

@@ -2326,6 +2326,7 @@ Departamental Swimsuits, for general use
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "mechacoat"
 
+<<<<<<< HEAD
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	item_state = "mechacoat_mob"
 	hoodtype = /obj/item/clothing/head/hood/winter/fluff/mechanic
@@ -2337,6 +2338,19 @@ Departamental Swimsuits, for general use
 	icon_state = "mechahood"
 
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+=======
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	item_state = "mechacoat_mob"
+	hoodtype = /obj/item/clothing/head/hood/winter/fluff/mechanic
+
+/obj/item/clothing/head/hood/winter/fluff/mechanic
+	name = "mechanic winter hood"
+	desc = "A blue and yellow winter coat's hood."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "mechahood"
+
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	item_state = "mechahood_mob"
 
 /obj/item/clothing/suit/storage/hooded/wintercoat/fluff/mechanic/ui_action_click()
@@ -2433,13 +2447,21 @@ Departamental Swimsuits, for general use
 				H.update_inv_wear_suit()
 	else
 		RemoveHood_evelyn()
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 //Uncle_Fruit_VEVO - Bradley Khatibi
 /obj/item/clothing/shoes/fluff/airjordans
     name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
     desc = "Appearing in a classic Jordan Brand colorway, the Air Jordan 1 Mid 'Black Gym Red' released in May 2021. Built with leather, the shoe's upper sports a white base, contrasted by black on the overlays and highlighted by Gym Red on the padded collar, 'Wings' logo and Swoosh branding. A breathable nylon tongue and perforated toe box support the fit, while underfoot, a standard rubber cupsole with Air in the heel anchors the build."
     icon_state = "airjordans"
     icon = 'icons/vore/custom_clothes_vr.dmi'
+<<<<<<< HEAD
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 End CHOMP Removal*/
+=======
+    icon_override = 'icons/vore/custom_onmob_vr.dmi'
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

@@ -598,7 +598,11 @@
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
+<<<<<<< HEAD
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
+=======
+	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
 
 /datum/gear/suit/snowsuit/cargo

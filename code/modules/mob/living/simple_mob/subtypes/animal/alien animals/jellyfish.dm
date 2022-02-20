@@ -168,4 +168,8 @@ GLOBAL_VAR_INIT(jellyfish_count, 0)
 /obj/item/weapon/reagent_containers/food/snacks/jellyfishcore/Initialize()
 	nutriment_amt += inherited_nutriment
 	. = ..()
+<<<<<<< HEAD
 	reagents.add_reagent("nutriment", nutriment_amt, nutriment_desc)
+=======
+	reagents.add_reagent("nutriment", nutriment_amt, nutriment_desc)
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

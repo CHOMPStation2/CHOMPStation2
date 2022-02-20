@@ -100,10 +100,15 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
+<<<<<<< HEAD
 	containername = "Solgov engineering hardsuit crate"
 	access = access_engine
 
 // CHOMPStation EDIT End
+=======
+	containername = "Commonwealth engineering hardsuit crate"
+	access = access_engine
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 
 /datum/supply_pack/misc/zero_rig
 	name = "null hardsuit (jets)"
@@ -160,4 +165,8 @@
 	)
 	cost = 300
 	containertype = /obj/structure/closet/crate
+<<<<<<< HEAD
 	containername = "cordless jukebox speakers crate"
+=======
+	containername = "cordless jukebox speakers crate"
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

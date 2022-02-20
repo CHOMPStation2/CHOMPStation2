@@ -104,4 +104,8 @@
 		L.capture_crystal = prefs.capture_crystal
 	SScharacter_setup.queue_preferences_save(prefs)
 
+<<<<<<< HEAD
 	feedback_add_details("admin_verb","TCaptureCrystal") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+=======
+	feedback_add_details("admin_verb","TCaptureCrystal") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

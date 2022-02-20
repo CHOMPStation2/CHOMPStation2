@@ -1003,4 +1003,8 @@
 	icon_state = "marine"
 	body_parts_covered = FEET|LOWER_TORSO|UPPER_TORSO|LEGS
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
+<<<<<<< HEAD
 	item_state_slots = list(slot_r_hand_str = "green_labcoat", slot_l_hand_str = "green_labcoat")
+=======
+	item_state_slots = list(slot_r_hand_str = "green_labcoat", slot_l_hand_str = "green_labcoat")
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341

@@ -6,6 +6,7 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 	density = TRUE
+<<<<<<< HEAD
 	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
 //YW add start
@@ -16,22 +17,26 @@ var/list/mining_overlay_cache = list()
 	icon_state = "Icerock"
 //YW add end
 
+=======
+	
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /turf/simulated/mineral //wall piece
 	name = "rock"
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock"
-	var/rock_side_icon_state = "rock_side"
-	var/sand_icon_state = "asteroid"
-	var/rock_icon_state = "rock"
-	var/random_icon = 0
 	oxygen = 0
 	nitrogen = 0
 	opacity = 1
 	density = TRUE
 	blocks_air = 1
 	temperature = T0C
-
 	can_dirty = FALSE
+
+	var/floor_name = "sand"
+	var/rock_side_icon_state = "rock_side"
+	var/sand_icon_state = "asteroid"
+	var/rock_icon_state = "rock"
+	var/random_icon = 0
 
 	var/ore/mineral
 	var/sand_dug
@@ -73,6 +78,10 @@ var/list/mining_overlay_cache = list()
 	)
 
 	has_resources = 1
+
+/turf/simulated/mineral/ChangeTurf(turf/N, tell_universe, force_lighting_update, preserve_outdoors)
+	clear_ore_effects()
+	. = ..()
 
 // Alternative rock wall sprites.
 /turf/simulated/mineral/light
@@ -118,6 +127,14 @@ var/list/mining_overlay_cache = list()
 	blocks_air = 0
 	can_build_into_floor = TRUE
 
+/turf/simulated/mineral/floor/mud
+	icon_state = "mud"
+	sand_icon_state = "mud"
+
+/turf/simulated/mineral/floor/dirt
+	icon_state = "dirt"
+	sand_icon_state = "dirt"
+
 //Alternative sand floor sprite.
 /turf/simulated/mineral/floor/light
 	icon_state = "sand-light"
@@ -149,6 +166,7 @@ var/list/mining_overlay_cache = list()
 	opacity = 0
 	blocks_air = 0
 	can_build_into_floor = TRUE
+	clear_ore_effects()
 	update_general()
 
 /turf/simulated/mineral/proc/make_wall()
@@ -232,7 +250,7 @@ var/list/mining_overlay_cache = list()
 
 	//We are a sand floor
 	else
-		name = "sand"
+		name = floor_name
 		icon = 'icons/turf/flooring/asteroid.dmi'
 		icon_state = sand_icon_state
 

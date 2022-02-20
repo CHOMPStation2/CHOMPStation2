@@ -584,12 +584,6 @@
 	ckeywhitelist = list("luminescentring")
 	character_name = list("Briana Moore")
 
-/datum/gear/fluff/entchtut_medal
-	path = /obj/item/clothing/accessory/medal/conduct
-	display_name = "Entchtut's Conduct Medal"
-	ckeywhitelist = list("littlebigkid2000")
-	character_name = list("Entchtut Cenein")
-
 //  M CKEYS
 /datum/gear/fluff/phi_box
 	path = /obj/item/weapon/storage/box/fluff/phi
@@ -760,6 +754,15 @@
 	ckeywhitelist = list("pastelprincedan")
 	character_name = list("Kiyoshi Maki", "Masumi Maki")
 
+<<<<<<< HEAD
+=======
+/datum/gear/fluff/entchtut_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Entchtut's Conduct Medal"
+	ckeywhitelist = list("positronicjune")
+	character_name = list("Entchtut Cenein")
+
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 /datum/gear/fluff/mechanic_overalls
 	path = /obj/item/clothing/under/fluff/mechanic_overalls
 	display_name = "mechanic overalls"
@@ -771,6 +774,15 @@
 	display_name = "mechanic winter coat"
 	ckeywhitelist = list("pastelprincedan", "hatterhat")
 	character_name = list("Masumi Maki", "Harold Robinson")
+<<<<<<< HEAD
+=======
+
+/datum/gear/fluff/slimecat_rd_plush
+	path = /obj/item/toy/plushie/fluff/slimeowshi
+	display_name = "slimecat RD plushie"
+	ckeywhitelist = list("pastelprincedan")
+	character_name = list("Kiyoshi Maki", "Masumi Maki")
+>>>>>>> 1af55da1c74... Merge branch 'master' into upstream-merge-8341
 
 //  Q CKEYS
 
