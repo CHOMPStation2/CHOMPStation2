@@ -11967,6 +11967,7 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/public/toolstroage2)
 "knP" = (
+/obj/structure/flora/tree/pine,
 /obj/item/weapon/paper/awaygate/snowfield/note,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
@@ -42663,7 +42664,7 @@ pun
 pun
 pun
 pun
-knP
+pun
 nin
 pun
 pun
@@ -42860,7 +42861,7 @@ pun
 pun
 pun
 pun
-nin
+knP
 pun
 pun
 pun
