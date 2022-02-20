@@ -77,6 +77,12 @@
 /obj/structure/flora/tree/pine,
 /turf/simulated/floor/outdoors/snow,
 /area/surface/outside/wilderness/skylands)
+"fI" = (
+/obj/structure/flora/grass/green,
+/turf/simulated/mineral/floor{
+	outdoors = 1
+	},
+/area/surface/outside/wilderness/skylands)
 "fT" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/mineral/floor{
@@ -505,6 +511,13 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/wilderness/skylands)
+"wx" = (
+/obj/structure/flora/log2,
+/obj/structure/flora/rocks1,
+/turf/simulated/mineral/floor{
+	outdoors = 1
+	},
+/area/surface/outside/wilderness/skylands)
 "wz" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/reedbush,
@@ -597,6 +610,12 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/effect/zone_divider,
 /turf/simulated/floor/water,
+/area/surface/outside/wilderness/skylands)
+"zE" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/turf/simulated/mineral/floor{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "zM" = (
 /obj/structure/flora/ausbushes/leafybush,
@@ -1014,6 +1033,12 @@
 /area/surface/outside/wilderness/skylands)
 "SO" = (
 /obj/structure/flora/tree/winter,
+/turf/simulated/mineral/floor{
+	outdoors = 1
+	},
+/area/surface/outside/wilderness/skylands)
+"Te" = (
+/obj/structure/flora/log1,
 /turf/simulated/mineral/floor{
 	outdoors = 1
 	},
@@ -20909,7 +20934,7 @@ TO
 TO
 TO
 TO
-WJ
+vp
 WJ
 WJ
 WJ
@@ -22957,7 +22982,7 @@ WJ
 La
 WJ
 WJ
-WJ
+vp
 TO
 TO
 TO
@@ -24518,7 +24543,7 @@ TO
 Cz
 Cz
 Cz
-WJ
+vp
 xY
 xY
 WO
@@ -25812,7 +25837,7 @@ TO
 qJ
 Cz
 Cz
-WJ
+vp
 ih
 Sr
 WO
@@ -35618,7 +35643,7 @@ WJ
 WJ
 xY
 xY
-xY
+js
 TO
 TO
 TO
@@ -36130,10 +36155,10 @@ WJ
 WJ
 WJ
 xY
-xY
-xY
+js
+CL
 xV
-xY
+Vi
 TO
 TO
 TO
@@ -36388,7 +36413,7 @@ WJ
 WJ
 xY
 WJ
-xV
+yn
 xV
 TO
 TO
@@ -37160,7 +37185,7 @@ TO
 WJ
 WJ
 xY
-xV
+yn
 DD
 DD
 DD
@@ -38706,12 +38731,12 @@ TO
 TO
 WJ
 WJ
-WJ
+hz
 xY
-xY
+iP
 DD
 DD
-xY
+js
 TO
 TO
 TO
@@ -38965,10 +38990,10 @@ TO
 Cz
 WJ
 WJ
-xY
+rj
 WJ
 WJ
-WJ
+hz
 WJ
 TO
 TO
@@ -39735,9 +39760,9 @@ TO
 qJ
 Cz
 Cz
-Cz
+Te
 WJ
-Cz
+zE
 WJ
 WJ
 WJ
@@ -39985,7 +40010,7 @@ TO
 TO
 TO
 TO
-Cz
+HP
 Cz
 qJ
 qJ
@@ -40248,9 +40273,9 @@ qJ
 qJ
 qJ
 qJ
+Rn
 qJ
-qJ
-qJ
+RZ
 Cz
 Cz
 WJ
@@ -40513,7 +40538,7 @@ Cz
 Cz
 WJ
 WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -40766,7 +40791,7 @@ qJ
 qJ
 qJ
 qJ
-Cz
+HP
 Cz
 WJ
 WJ
@@ -41017,8 +41042,8 @@ qJ
 qJ
 qJ
 qJ
-qJ
-qJ
+wx
+Cz
 qJ
 qJ
 qJ
@@ -41527,7 +41552,7 @@ TO
 TO
 TO
 Cz
-Cz
+pa
 qJ
 qJ
 qJ
@@ -41535,15 +41560,15 @@ qJ
 qJ
 qJ
 qJ
-Cz
+pa
 TO
 TO
 TO
 TO
 TO
+hz
 WJ
-WJ
-WJ
+Sr
 WJ
 WJ
 TO
@@ -41788,7 +41813,7 @@ Cz
 qJ
 qJ
 qJ
-qJ
+Cz
 qJ
 Cz
 TO
@@ -41801,7 +41826,7 @@ TO
 TO
 WJ
 WJ
-WJ
+Sr
 WJ
 WJ
 TO
@@ -42048,7 +42073,7 @@ qJ
 qJ
 qJ
 qJ
-Cz
+pa
 TO
 TO
 TO
@@ -42305,7 +42330,7 @@ qJ
 qJ
 qJ
 Cz
-Cz
+HP
 TO
 TO
 TO
@@ -42561,9 +42586,9 @@ Cz
 qJ
 Cz
 Cz
-Cz
+Uv
 qJ
-Cz
+dI
 TO
 TO
 TO
@@ -42824,7 +42849,7 @@ qJ
 qJ
 qJ
 qJ
-Cz
+HP
 TO
 TO
 TO
@@ -42833,7 +42858,7 @@ WJ
 WJ
 WJ
 WJ
-WJ
+hz
 WJ
 TO
 TO
@@ -43072,7 +43097,7 @@ TO
 TO
 TO
 TO
-Cz
+pa
 Cz
 Cz
 Cz
@@ -43081,8 +43106,8 @@ Cz
 WJ
 Cz
 WJ
-WJ
-WJ
+Sr
+Sr
 WJ
 WJ
 WJ
@@ -43328,22 +43353,22 @@ TO
 TO
 TO
 TO
-WJ
+hz
 qJ
 Cz
 Cz
 qJ
 Cz
 WJ
+Sr
 WJ
 WJ
 WJ
 WJ
 WJ
-WJ
-WJ
-WJ
-WJ
+Sr
+Sr
+Sr
 WJ
 WJ
 WJ
@@ -43589,6 +43614,8 @@ TO
 Cz
 Cz
 Cz
+Sr
+Sr
 WJ
 WJ
 WJ
@@ -43601,9 +43628,7 @@ WJ
 WJ
 WJ
 WJ
-WJ
-WJ
-WJ
+hz
 TO
 TO
 TO
@@ -43851,7 +43876,7 @@ Cz
 WJ
 WJ
 WJ
-WJ
+hz
 WJ
 WJ
 WJ
@@ -44107,13 +44132,13 @@ WJ
 WJ
 WJ
 WJ
+Sr
+Sr
 WJ
 WJ
 WJ
 WJ
-WJ
-WJ
-WJ
+hz
 WJ
 TO
 TO
@@ -44359,14 +44384,14 @@ TO
 TO
 TO
 TO
-WJ
+dX
 Cz
 WJ
 WJ
 WJ
+Sr
 WJ
-WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -44622,7 +44647,7 @@ WJ
 WJ
 WJ
 WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -44878,9 +44903,9 @@ WJ
 Cz
 WJ
 WJ
+Sr
 WJ
-WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -45136,7 +45161,7 @@ WJ
 WJ
 WJ
 WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -46421,11 +46446,11 @@ TO
 TO
 TO
 TO
+hz
 WJ
 WJ
 WJ
-WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -47456,8 +47481,8 @@ TO
 WJ
 WJ
 WJ
-WJ
-WJ
+Sr
+Sr
 WJ
 WJ
 TO
@@ -47714,8 +47739,8 @@ TO
 WJ
 WJ
 WJ
-WJ
-WJ
+Sr
+Sr
 WJ
 WJ
 TO
@@ -48487,7 +48512,7 @@ TO
 TO
 WJ
 WJ
-WJ
+Sr
 WJ
 WJ
 WJ
@@ -48745,7 +48770,7 @@ TO
 TO
 TO
 WJ
-WJ
+Sr
 WJ
 WJ
 TO
@@ -49521,7 +49546,7 @@ TO
 WJ
 WJ
 WJ
-WJ
+hz
 TO
 TO
 TO
@@ -49776,10 +49801,10 @@ TO
 TO
 TO
 TO
+Sr
 WJ
 WJ
-WJ
-WJ
+Cz
 TO
 TO
 TO
@@ -50035,8 +50060,8 @@ TO
 TO
 TO
 WJ
-WJ
-WJ
+Cz
+Cz
 WJ
 TO
 TO
@@ -50293,8 +50318,8 @@ TO
 TO
 TO
 WJ
-WJ
-WJ
+Cz
+pa
 WJ
 TO
 TO
@@ -50551,8 +50576,8 @@ Wb
 Wb
 Wb
 yf
-pl
-pl
+yf
+yf
 pl
 Wb
 Wb
@@ -50808,11 +50833,11 @@ TO
 TO
 TO
 La
+fI
+WJ
+WJ
 Cz
-WJ
-WJ
-WJ
-WJ
+Cz
 TO
 TO
 TO
@@ -51066,11 +51091,11 @@ TO
 TO
 TO
 Sr
+fa
 La
-WJ
-WJ
-WJ
-WJ
+La
+fq
+Cz
 TO
 TO
 TO
@@ -51325,10 +51350,10 @@ TO
 TO
 La
 La
-WJ
-WJ
-WJ
-WJ
+La
+La
+Sr
+Cz
 TO
 TO
 TO
@@ -51583,10 +51608,10 @@ TO
 La
 La
 WO
+La
+La
 WJ
-WJ
-WJ
-WJ
+La
 TO
 TO
 TO
@@ -51842,9 +51867,9 @@ Ol
 WO
 WO
 WO
-WJ
-WJ
-WJ
+La
+La
+La
 TO
 TO
 TO
@@ -52102,7 +52127,7 @@ WO
 WO
 WO
 WO
-WJ
+La
 TO
 TO
 TO
