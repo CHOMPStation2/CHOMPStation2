@@ -104,9 +104,10 @@
 		)
 
 
-	// Framework for porting Tether's lateload Z-Level system
+	// Framework for porting Tether's lateload Z-Level system //Stock lateload maps
 	lateload_z_levels = list(
-			list("Fuel Depot - Z1 Space") //Stock lateload maps
+			list("Fuel Depot - Z1 Space"),
+			list("Kara Aerostat - Z1 Aerostat")
 			)
 
 	//CHOMPStation Addition End

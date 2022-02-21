@@ -21,19 +21,13 @@
 [i]Class[/i]: Installation
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: CONDEMNED! NO ENTRY! -Vir System Authority"}
-	icon_state = "object"
-	base = 1
-	in_space = 0
-	unknown_state = "station"
-	known = TRUE
-	start_x =  14
-	start_y =  14
 	initial_generic_waypoints = list("aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast")
+	icon_state = "object"
+	unknown_state = "object"
+	known = TRUE
+	start_x =  11
+	start_y =  11
 //	extra_z_levels = list(Z_LEVEL_AEROSTAT_2) //SOON
-
-/obj/effect/overmap/visitable/sector/aerostat/Initialize()
-	. = ..()
-	docking_codes = null
 
 
 // -- Areas -- //
@@ -121,8 +115,8 @@
 // -- Turfs -- //
 
 //Atmosphere properties //CHOMP Comment: I guess this Kara planetary information should go here. Kara is a gas giant, it ain't gonna be getting very many other maps.
-#define KARA_ONE_ATMOSPHERE	312.1 //kPa
-#define KARA_AVG_TEMP			612 //kelvin
+#define KARA_ONE_ATMOSPHERE	101.5 //kPa
+#define KARA_AVG_TEMP			150 //kelvin
 
 #define KARA_PER_N2		0.10 //percent
 #define KARA_PER_O2		0.03
@@ -143,7 +137,7 @@
 #define KARA_TURF_CREATE(x)	x/kara/nitrogen=KARA_MOL_N2;x/kara/oxygen=KARA_MOL_O2;x/kara/carbon_dioxide=KARA_MOL_CO2;x/kara/phoron=KARA_MOL_PHORON;x/kara/temperature=KARA_AVG_TEMP;x/kara/color="#eacd7c"
 
 /turf/unsimulated/floor/sky/kara_sky
-	name = "virgo 2 atmosphere"
+	name = "kara atmosphere"
 	desc = "Be careful where you step!"
 	color = "#eacd7c"
 	KARA_SET_ATMOS
@@ -208,9 +202,9 @@ KARA_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
 	name = "Away Mission - Aerostat Surface (UE)"
 	icon_state = "unexplored"
 	dynamic_lighting = FALSE
-*/
+
 KARA_TURF_CREATE(/turf/simulated/floor/hull)
-/*
+
 /area/offmap/aerostat/surface/outpost
 	requires_power = TRUE
 	dynamic_lighting = TRUE

@@ -7,10 +7,10 @@
 [i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
 [i]Habitability[/i]: Low (High Temperature, Toxic Atmosphere). Habitats in orbit.
 [b]Notice[/b]: NT security is currently restricting free flights to Northern Star. Strict adherence to regular scheduling or express approval from management are the only ways in."}
-	map_z = list(Z_LEVEL_AEROSTAT)
+//	map_z = (Z_LEVEL_AEROSTAT)
 	in_space = 0
-	start_x  = 14
-	start_y  = 14
+	start_x  = 11
+	start_y  = 10
 	skybox_offset_x = 128
 	skybox_offset_y = 128
 	surface_color = "#AD9100"
@@ -18,6 +18,7 @@
 	water_color = "#AD9100"
 	ice_color = "#AD9100"
 	icon_state = "chlorine"
+	known = TRUE
 
 /obj/effect/overmap/visitable/planet/kara/Initialize()
 	atmosphere = new(CELL_VOLUME)
@@ -25,13 +26,3 @@
 	atmosphere.adjust_gas_temp("nitrogen", MOLES_N2STANDARD, 273)
 
 	. = ..()
-
-/obj/effect/overmap/visitable/planet/kara/Initialize()
-	. = ..()
-	docking_codes = null
-
-/obj/effect/overmap/visitable/planet/kara/get_skybox_representation()
-	var/image/tmp = ..()
-	tmp.pixel_x = skybox_offset_x
-	tmp.pixel_y = skybox_offset_y
-	return tmp

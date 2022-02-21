@@ -4,7 +4,7 @@
 /datum/map_template/sc_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
-	mappath = 'maps/expedition_vr/space/fueldepot.dmm' //This is where it is in our file system. This is a Virgo thing we have used.
+	mappath = 'maps/southern_cross/overmap/space/fueldepot.dmm' //This is where it is in our file system.
 	associated_map_datum = /datum/map_z_level/sc_lateload/away_fueldepot
 
 /datum/map_z_level/sc_lateload/away_fueldepot
@@ -21,11 +21,10 @@
 [i]Class[/i]: Installation (Space)
 [i]Transponder[/i]: Transmitting (CIV), V.S.A.
 [b]Notice[/b]: This facility classified for public use for the purpose of refueling and recharging starships"}
-	icon_state = "fueldepot"
 	initial_generic_waypoints = list("fueldepot_east","fueldepot_west","fueldepot_north","fueldepot_south")
+	icon_state = "fueldepot_g"
 	unknown_state = "station"
 	known = TRUE
-	icon_state = "fueldepot_g"
 	start_x  = 10
 	start_y  = 11
 
