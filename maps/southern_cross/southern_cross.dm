@@ -36,7 +36,6 @@
 	// #include "structures/closets/research.dm"
 	// #include "structures/closets/security.dm"
 	#include "turfs/outdoors.dm"
-	#include "overmap/sectors.dm"
 	#include "events/wildlife_encounter.dm"
 
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
@@ -55,7 +54,20 @@
 	//CHOMPStation Edit End
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
-	#include "submaps/_southern_cross_submaps.dm"
+	#include "submaps/_southern_cross_submaps.dm" //This contains gateway stuff
+
+
+//PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets
+	//SIF - Planet
+	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
+	//KARA - Planet
+	#include "overmap/planets/kara/kara.dm" //And this is the sector for Kara. I have decided to better organize future planets and maps for them
+	#include "overmap/planets/kara/aerostat/aerostat.dm" //This is an installation for Kara.
+	//SPACE - Anything random in space
+	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.
+
+
+
 
 	#define USING_MAP_DATUM /datum/map/southern_cross
 

@@ -14,6 +14,7 @@
 //#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
 //Skip 13 and 14 for overmap stuff, I think???
 #define Z_LEVEL_FUELDEPOT				15
+#define Z_LEVEL_AEROSTAT				16
 
 /datum/map/southern_cross
 	name = "Southern Cross"
