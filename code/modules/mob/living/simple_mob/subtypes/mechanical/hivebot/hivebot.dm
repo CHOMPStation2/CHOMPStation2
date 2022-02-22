@@ -23,7 +23,19 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/hivebot
 	say_list_type = /datum/say_list/hivebot
-
+	
+	//CHOMP Addition hivebot immunity to atmos effects. Because, well, it's a bot.
+	minbodytemp = 0
+	min_oxy = 0
+	max_oxy = 0
+	min_tox = 0
+	max_tox = 0
+	min_co2 = 0
+	max_co2 = 0
+	min_n2 = 0
+	max_n2 = 0
+	unsuitable_atoms_damage = 0
+	//CHOMP Addition end
 
 /mob/living/simple_mob/mechanical/hivebot/death()
 	..()
