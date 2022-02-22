@@ -13,6 +13,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+	maxbodytemp = 900 //CHOMP Addition
 
 	taser_kill = FALSE
 	poison_resist = 1.0

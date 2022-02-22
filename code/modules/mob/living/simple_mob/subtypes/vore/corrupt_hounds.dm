@@ -53,7 +53,7 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
-	minbodytemp = 150
+	minbodytemp = 0 //CHOMP Edit
 	maxbodytemp = 900
 
 	say_list_type = /datum/say_list/corrupthound
