@@ -11,6 +11,18 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+=======
+bricker98 - Black-Eyed Shadekin
+camanis - Protean
+cgr - Protean
+chaosdoomsday - Black-Eyed Shadekin
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+comradenitro - Protean
+coolcrow420 - Black-Eyed Shadekin
+>>>>>>> d351bd9c6c4... Merge pull request #12318 from Detective-Google/patch-1
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
