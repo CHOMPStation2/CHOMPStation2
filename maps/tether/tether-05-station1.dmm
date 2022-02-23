@@ -1788,7 +1788,6 @@
 	master_tag = "server_access_airlock";
 	name = "interior access button";
 	pixel_x = -28;
-	pixel_y = 0;
 	req_one_access = list(61)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2035,7 +2034,6 @@
 	frequency = 1381;
 	master_tag = "server_access_airlock";
 	name = "exterior access button";
-	pixel_x = 0;
 	pixel_y = 26;
 	req_one_access = list(61)
 	},
@@ -21543,6 +21541,12 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
+"hsf" = (
+/obj/machinery/shipsensors/fancy_shuttle,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/cockpit)
 "hsq" = (
 /obj/structure/catwalk,
 /obj/random/junk,
@@ -55288,6 +55292,7 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -55309,6 +55314,24 @@ aaa
 aaa
 aaa
 aaa
+=======
+hsf
+osM
+scB
+sJw
+osM
+tMt
+ybT
+kok
+eSM
+gvx
+kTK
+kKj
+lCR
+dYK
+cbU
+psE
+>>>>>>> 51281e3921b... Merge pull request #12311 from Very-Soft/tethermaptweaks
 aaa
 aaa
 aaa
