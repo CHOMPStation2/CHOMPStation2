@@ -136,7 +136,9 @@
 /area/surface/outside/wilderness/skylands)
 "iu" = (
 /obj/effect/zone_divider,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "iP" = (
 /obj/structure/flora/ausbushes/grassybush,
@@ -990,6 +992,11 @@
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/wilderness/skylands)
+"Rh" = (
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
+/area/surface/outside/wilderness/skylands)
 "Rm" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/outdoors/dirt,
@@ -997,11 +1004,15 @@
 "Rn" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "RG" = (
 /obj/structure/flora/grass/brown,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "RJ" = (
 /obj/structure/flora/rocks2,
@@ -1011,15 +1022,21 @@
 "RW" = (
 /obj/structure/flora/log2,
 /obj/structure/flora/grass/green,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "RZ" = (
 /obj/structure/flora/rocks2,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "Sb" = (
 /obj/structure/flora/log2,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "So" = (
 /obj/structure/flora/tree/bigtree,
@@ -1049,7 +1066,9 @@
 /area/surface/outside/wilderness/skylands)
 "To" = (
 /obj/structure/flora/tree/dead,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "Tz" = (
 /obj/structure/flora/ausbushes/stalkybush,
@@ -1102,7 +1121,9 @@
 /area/surface/outside/wilderness/skylands)
 "Vl" = (
 /obj/structure/flora/log1,
-/turf/simulated/mineral/floor/light,
+/turf/simulated/mineral/floor/light{
+	outdoors = 1
+	},
 /area/surface/outside/wilderness/skylands)
 "Vp" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -20419,7 +20440,7 @@ TO
 TO
 TO
 TO
-qJ
+Rh
 Cz
 Cz
 Cz
@@ -22478,7 +22499,7 @@ TO
 TO
 TO
 TO
-qJ
+Rh
 WJ
 WJ
 La
@@ -24277,8 +24298,8 @@ TO
 TO
 TO
 TO
-qJ
-qJ
+Rh
+Rh
 Cz
 Cz
 Cz
@@ -25575,7 +25596,7 @@ TO
 TO
 TO
 TO
-qJ
+Rh
 WJ
 WJ
 WJ
@@ -25834,7 +25855,7 @@ TO
 TO
 TO
 TO
-qJ
+Rh
 Cz
 Cz
 vp
@@ -31074,7 +31095,7 @@ WO
 WO
 WO
 WO
-qJ
+Rh
 RZ
 WO
 WO
@@ -31084,7 +31105,7 @@ WO
 WO
 jM
 WO
-qJ
+Rh
 pa
 TO
 TO
@@ -31331,9 +31352,9 @@ WO
 WO
 WO
 WO
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
 La
 WO
 WO
@@ -31345,10 +31366,10 @@ WO
 WO
 La
 La
-qJ
+Rh
 TO
 Cz
-qJ
+Rh
 La
 WO
 WO
@@ -31588,9 +31609,9 @@ WO
 WO
 WO
 WO
-qJ
+Rh
 Rn
-qJ
+Rh
 Cz
 RG
 La
@@ -31604,7 +31625,7 @@ WO
 WO
 WO
 La
-qJ
+Rh
 YL
 La
 WO
@@ -31846,12 +31867,12 @@ TO
 WO
 WO
 WO
-qJ
-qJ
+Rh
+Rh
 Cz
 Sb
-qJ
-qJ
+Rh
+Rh
 La
 La
 WO
@@ -32104,8 +32125,8 @@ TO
 WO
 WO
 WO
-qJ
-qJ
+Rh
+Rh
 RW
 SO
 Cz
@@ -32362,9 +32383,9 @@ TO
 WO
 WO
 WO
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
 Cz
 La
 TG
@@ -32620,9 +32641,9 @@ TO
 WO
 WO
 WO
-qJ
+Rh
 RG
-qJ
+Rh
 To
 La
 WO
@@ -32881,8 +32902,8 @@ WO
 WO
 La
 La
-qJ
-qJ
+Rh
+Rh
 WO
 WO
 WO
@@ -33923,7 +33944,7 @@ TO
 Wb
 TO
 TO
-qJ
+Rh
 Cz
 Ys
 TO
@@ -34444,7 +34465,7 @@ TO
 TO
 TO
 az
-qJ
+Rh
 La
 WO
 WO
@@ -34960,7 +34981,7 @@ TO
 TO
 TO
 Cz
-qJ
+Rh
 La
 WO
 WO
@@ -35994,7 +36015,7 @@ TO
 TO
 TO
 TO
-qJ
+Rh
 WO
 WO
 WO
@@ -36755,8 +36776,8 @@ TO
 TO
 WJ
 Cz
-qJ
-qJ
+Rh
+Rh
 Vl
 iu
 WX
@@ -37014,10 +37035,10 @@ TO
 Cz
 pa
 Cz
-qJ
-qJ
+Rh
+Rh
 iu
-qJ
+Rh
 Cz
 TO
 TO
@@ -37272,11 +37293,11 @@ TO
 TO
 Cz
 RG
-qJ
+Rh
 WO
 jM
-qJ
-qJ
+Rh
+Rh
 TO
 TO
 TO
@@ -39757,7 +39778,7 @@ TO
 TO
 TO
 TO
-qJ
+Rh
 Cz
 Cz
 Te
@@ -40012,11 +40033,11 @@ TO
 TO
 HP
 Cz
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
 Cz
 Cz
 WJ
@@ -40267,14 +40288,14 @@ TO
 TO
 TO
 Cz
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
 Rn
-qJ
+Rh
 RZ
 Cz
 Cz
@@ -40522,18 +40543,18 @@ TO
 TO
 TO
 TO
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
 Cz
-qJ
-qJ
+Rh
+Rh
 Cz
 Cz
 WJ
@@ -40779,18 +40800,18 @@ TO
 TO
 TO
 TO
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
 HP
 Cz
 WJ
@@ -41037,18 +41058,18 @@ TO
 TO
 TO
 TO
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
 wx
 Cz
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
 TO
 Cz
 WJ
@@ -41294,17 +41315,17 @@ TO
 TO
 TO
 TO
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
+Rh
 TO
 TO
 TO
@@ -41553,11 +41574,11 @@ TO
 TO
 Cz
 pa
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
 qJ
 qJ
 pa
@@ -41810,11 +41831,11 @@ TO
 TO
 TO
 Cz
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
 Cz
-qJ
+Rh
 Cz
 TO
 TO
@@ -42068,11 +42089,11 @@ TO
 TO
 TO
 Cz
-qJ
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
+Rh
 pa
 TO
 TO
@@ -42325,10 +42346,10 @@ TO
 TO
 TO
 TO
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
 Cz
 HP
 TO
@@ -42583,11 +42604,11 @@ TO
 TO
 TO
 Cz
-qJ
+Rh
 Cz
 Cz
 Uv
-qJ
+Rh
 dI
 TO
 TO
@@ -42843,12 +42864,12 @@ TO
 Cz
 Cz
 Cz
-qJ
+Rh
 Cz
-qJ
-qJ
-qJ
-qJ
+Rh
+Rh
+Rh
+Rh
 HP
 TO
 TO
@@ -43354,10 +43375,10 @@ TO
 TO
 TO
 hz
-qJ
+Rh
 Cz
 Cz
-qJ
+Rh
 Cz
 WJ
 Sr
@@ -43614,7 +43635,7 @@ TO
 Cz
 Cz
 Cz
-Sr
+WJ
 Sr
 WJ
 WJ
@@ -50356,15 +50377,15 @@ TO
 TO
 TO
 TO
-qJ
-qJ
+Rh
+Rh
 WO
 WO
 WO
 WO
 WO
 WO
-qJ
+Rh
 TO
 TO
 TO

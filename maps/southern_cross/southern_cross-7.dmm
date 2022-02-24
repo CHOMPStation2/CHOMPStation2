@@ -4918,8 +4918,8 @@
 	desc = "It's missing an eye and seems ravenous.";
 	name = "Tiny"
 	},
-/turf/space,
-/area/space)
+/turf/simulated/floor/plating,
+/area/maintenance/expoutpost/outerportmaint)
 "qU" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6431,14 +6431,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/prep/recovery)
-"ub" = (
-/mob/living/simple_mob/animal/sif/glitterfly{
-	desc = "A large, shiny butterfly! The explorer who caught it refused to change the name after learning it was not a moth.";
-	makes_dirt = 0;
-	name = "Lomp"
-	},
-/turf/space,
-/area/space)
 "uc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
@@ -10668,6 +10660,11 @@
 /area/maintenance/expoutpost/outerportmaint)
 "CR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/mob/living/simple_mob/animal/sif/glitterfly{
+	desc = "A large, shiny butterfly! The explorer who caught it refused to change the name after learning it was not a moth.";
+	makes_dirt = 0;
+	name = "Lomp"
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/pathfinder)
 "CT" = (
@@ -25150,7 +25147,7 @@ aa
 aa
 aa
 aa
-qT
+aa
 aa
 aa
 aa
@@ -27736,7 +27733,7 @@ aa
 aa
 aa
 aa
-ub
+aa
 aa
 aa
 aa
@@ -34144,7 +34141,7 @@ gT
 WG
 WG
 WG
-WG
+qT
 Cc
 WG
 ji
