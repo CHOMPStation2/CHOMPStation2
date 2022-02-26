@@ -1197,7 +1197,7 @@
 /area/tether/surfacebase/medical/patient_b)
 "abH" = (
 /obj/machinery/camera/network/medbay,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/centralstairwell)
 "abI" = (
 /obj/structure/catwalk,
@@ -4424,7 +4424,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/centralstairwell)
 "agQ" = (
 /obj/structure/disposalpipe/segment{
@@ -12412,16 +12412,13 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "atQ" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/public_garden_two)
+"atR" = (
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
-/area/tether/surfacebase/security/middlehall)
-"atR" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/security/middlehall)
 "atS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23592,19 +23589,31 @@
 /area/rnd/staircase/secondfloor)
 "aPG" = (
 /obj/structure/railing{
+<<<<<<< HEAD
 	dir = 1
 	},
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
+=======
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/security/middlehall)
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 "aPH" = (
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
 "aPI" = (
+<<<<<<< HEAD
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
+=======
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/north_staires_two)
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 "aPJ" = (
 /turf/simulated/wall,
 /area/rnd/breakroom)
@@ -23652,6 +23661,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"aPQ" = (
+/turf/simulated/floor/plating,
+/area/rnd/staircase/secondfloor)
+"aPR" = (
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aPS" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -23920,6 +23935,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"aQC" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"aQD" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aQE" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -24780,6 +24807,7 @@
 /turf/simulated/floor,
 /area/maintenance/lower/south)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "aSr" = (
 /obj/machinery/door/airlock{
@@ -24789,6 +24817,11 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
+=======
+"aSr" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/east_stairs_two)
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 "aSs" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -38077,7 +38110,26 @@ aab
 aab
 aab
 aab
+<<<<<<< HEAD
 aab
+=======
+aeG
+aeG
+aeG
+aeG
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+aac
+arl
+asq
+arl
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 aab
 aab
 aab
@@ -39806,6 +39858,21 @@ adt
 adt
 adt
 adt
+<<<<<<< HEAD
+=======
+akY
+amd
+ang
+aog
+apr
+atQ
+aqx
+asu
+atG
+ars
+avj
+akX
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 adt
 adt
 adt
@@ -43712,7 +43779,7 @@ apE
 ahn
 arB
 arB
-atQ
+atR
 aus
 avo
 avT
@@ -43748,8 +43815,13 @@ aMX
 aNv
 aOk
 aOY
+<<<<<<< HEAD
 aPH
 aPH
+=======
+aOY
+aPQ
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 aPH
 aRM
 atA
@@ -43854,7 +43926,7 @@ apF
 ahn
 arB
 arB
-atR
+aPG
 aut
 avp
 avT
@@ -43890,8 +43962,13 @@ aIP
 aIP
 aOl
 aPa
+<<<<<<< HEAD
 aPI
 aPH
+=======
+aqt
+aPQ
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 aPH
 aRM
 atz
@@ -46138,7 +46215,7 @@ ayW
 azz
 azz
 azz
-azz
+aPI
 aBM
 aCz
 ayW
@@ -46172,7 +46249,7 @@ aUv
 aRZ
 aVW
 aWP
-aXB
+aPR
 aXB
 aYK
 aXB
@@ -46280,7 +46357,7 @@ ayW
 azz
 azz
 aAD
-azz
+aPI
 aBN
 aCA
 ayW
@@ -46314,7 +46391,7 @@ aUw
 aRZ
 aVW
 aWP
-aXC
+aQC
 aXC
 aXB
 aXB
@@ -46488,7 +46565,7 @@ baz
 bjs
 bjs
 bjs
-bjs
+baU
 baU
 baW
 baW
@@ -46630,7 +46707,7 @@ baz
 bjs
 bjs
 bjs
-bjs
+baU
 baU
 baW
 baW
@@ -48018,7 +48095,7 @@ aUG
 aSd
 aWg
 aXb
-aXJ
+aQD
 aXJ
 aXB
 aXB
@@ -48160,7 +48237,7 @@ awe
 aSd
 aWg
 aXb
-aXB
+aPR
 aXB
 aXB
 aXB
@@ -49154,7 +49231,7 @@ adt
 aNo
 aWm
 aWm
-aWm
+aSr
 aYv
 aYV
 aZs
@@ -49296,7 +49373,7 @@ aNo
 aNo
 aWm
 aWm
-aWm
+aSr
 aYw
 aYW
 aZt
