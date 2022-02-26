@@ -9931,6 +9931,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portfore)
 "Ki" = (
@@ -10218,6 +10222,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/computer)
+"Li" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "Lm" = (
 /obj/item/device/paicard,
 /obj/structure/table/glass,
@@ -27101,9 +27112,15 @@ NL
 NL
 qy
 NL
+<<<<<<< HEAD
 Yg
 dE
 dE
+=======
+by
+Li
+KJ
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 le
 ww
 ww
