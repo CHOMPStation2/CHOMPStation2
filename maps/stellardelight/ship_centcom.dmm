@@ -522,6 +522,18 @@
 /obj/structure/closet/walllocker/medical/east,
 /turf/simulated/floor/tiled,
 /area/centcom/terminal/tramfluff)
+<<<<<<< HEAD
+=======
+"bF" = (
+/turf/simulated/floor/reinforced,
+/area/shuttle/centcom/ccbay)
+"bG" = (
+/obj/trader/general{
+	move_trader = 1
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/centcom/ccbay)
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 "bJ" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/box/pillbottles,
@@ -28602,7 +28614,7 @@ bS
 fR
 bY
 lM
-Bx
+bG
 Bx
 Bx
 Bx

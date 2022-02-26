@@ -33779,6 +33779,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
+"jSc" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/southhall)
 "jUQ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -34455,9 +34462,19 @@
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 =======
+=======
+"opK" = (
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/rnd)
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 "oXH" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -45716,7 +45733,7 @@ avD
 aBJ
 aCw
 avD
-aEc
+opK
 aED
 aFi
 aFT
@@ -52251,7 +52268,7 @@ bkq
 bkG
 bgU
 blk
-blG
+jSc
 blT
 bmb
 aab
