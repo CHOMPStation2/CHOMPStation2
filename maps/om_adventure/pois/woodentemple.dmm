@@ -136,6 +136,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
+<<<<<<< HEAD
+=======
+"W" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/wood,
+/area/om_adventure/poi/woodentemple)
+"X" = (
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/wood,
+/area/om_adventure/poi/woodentemple)
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 "Z" = (
 /turf/simulated/wall/hardwood,
 /area/om_adventure/poi/woodentemple)
@@ -220,7 +237,7 @@ C
 j
 d
 A
-d
+X
 m
 N
 Q
