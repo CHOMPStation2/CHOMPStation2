@@ -1,5 +1,6 @@
 "aa" = (/turf/simulated/wall/virgo2,/area/sc_away/aerostat)
 "ab" = (/obj/structure/cable/heavyduty{icon_state = "2-8"},/obj/effect/decal/cleanable/cobweb2,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
+"ac" = (/obj/effect/overmap/visitable/sector/aerostat,/turf/unsimulated/floor/sky/kara_sky,/area/sc_away/aerostat)
 "ad" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/techfloor/kara,/area/sc_away/aerostat/inside)
 "ae" = (/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/effect/floor_decal/industrial/warning/dust{dir = 9},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/solars)
 "af" = (/obj/structure/cable/yellow{d2 = 8; icon_state = "0-8"},/obj/effect/floor_decal/industrial/warning/dust{dir = 1},/obj/machinery/power/solar,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/solars)
@@ -66,6 +67,7 @@
 "bo" = (/obj/structure/grille,/obj/structure/grille,/obj/structure/window/reinforced/full,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
 "bp" = (/obj/effect/floor_decal/industrial/warning/dust/corner{dir = 4},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
 "bq" = (/obj/effect/floor_decal/industrial/warning/dust{dir = 1},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
+"br" = (/obj/effect/overmap/visitable/planet/kara,/turf/unsimulated/floor/sky/kara_sky,/area/sc_away/aerostat)
 "bs" = (/obj/effect/floor_decal/industrial/warning/dust/corner{dir = 1},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
 "bt" = (/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/solars)
 "bu" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/industrial/warning/dust{dir = 4},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/solars)
@@ -229,7 +231,6 @@
 "ON" = (/obj/structure/railing{dir = 1; icon_state = "railing0"},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat)
 "Qe" = (/obj/structure/table/standard,/obj/effect/decal/cleanable/cobweb2,/obj/random/contraband,/turf/simulated/floor/tiled/techfloor/kara,/area/sc_away/aerostat/inside)
 "QE" = (/obj/structure/salvageable/machine,/turf/simulated/floor/tiled/techfloor/kara,/area/sc_away/aerostat/inside)
-"Tq" = (/obj/effect/overmap/visitable/planet/kara,/turf/unsimulated/floor/sky/kara_sky,/area/sc_away/aerostat)
 "TR" = (/obj/structure/salvageable/computer,/turf/simulated/floor/tiled/techfloor/kara,/area/sc_away/aerostat/inside)
 "UC" = (/obj/structure/table/standard,/obj/random/powercell,/obj/random/toolbox,/turf/simulated/floor/tiled/techfloor/kara,/area/sc_away/aerostat/inside)
 "VR" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
@@ -308,8 +309,8 @@ cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaw
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaabvbKbKbKbKbebebebebebvbJbBbKbKbQbRbRbRbRbRbSbCbjbjbjbjbebebebebebebjbjbjbjbCbQbRbRbRbRbRbSbWbKbBbJbvbebebebebebebebebebvaaawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaabvbKanbKanbKanbKanbebebvbJbBbKbKbLbKbKxAbKbXbPbvbYbYbYbvbvbvbvbvbvbvbvbYbYbYbvbLbKbKbXbXbKbPbKbKbBtZbvbebebebebebebebebebebvaaawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaabvbvbvbvbvbvbvbvbvbvbvbCbvbJbBbKbJbLaFbNbMbOaIbPbvbYbYbYbvaJaKMjaMaOaPbvbYbYbYbvbLaFbNbMbOaIbPGsbKbBbJbvbCbvbvbvbvbvbvbvbvbvbvbvaaawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
-cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcvawcccccccwcwcwcwcXcwcwcwbebKbKbvbvcdbvbvbvbvbvbvbvbvbvbvbvbvbvbvaLaQbZcPdhaLbvbvbvbvbvbvbvbvbvbvbvbvbvbvcdbvbvbKcncOcwcwcwdYcwcwdWdPebccccawbhawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
-cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcYcYcYcwcwcwcwdacwcwcwcgbKbKbKbKchciciciciciciciciciciciciciciaNdndKdKdLaNcicicicicicicicicicicicicicicmbKbKbKbKcOcwcwcwcwcwcwdXdPeccYcYawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
+cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcvawcccccccwcwcwcwcXcwcwcwbebKbKbvbvcdbvbvbvbvbvbvbvbvbvbvbvbvbvbvaLaQbZcPdhaLbvbvbvbvbvbvbvbvbvbvbvbvbvbvcdbvbvbKcncOcwcwcwdYcwcwdWdPebccccawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
+cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcYcYcYcwcwcwcwdacwcwcwcgbKbKbKbKchciciciciciciciciciciciciciciaNdndKdKdLaNcicicicicicicicicicicicicicicmbKbKbKbKcOcwcwcwcwcwcwdXdPeccYcYawbhawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaabvbvbvbvbvbvbvbvbvbvbKbKbKbKbKcocicicicicicicicicpcicicicpaNdndMdMdLaNcpcicicicpcicicicicicicicicqbKbKbKbKdVbvbvbvbvbvbvbvbvbvbvaaawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaabvbebebebebebebebvbvbCbvbvbvcdbvbvbvbvbvbvbvbvbvbvbvbvbvaLdNdOdNdOaLbvbvbvbvbvbvbvbvbvbvbvbvbvcdbvbvbvbCbvbvLybebebebebeJbbvaaawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaabvbebebebeaobebKbKadanbvbJbBatcrazbNbMbOaAcLbvcQbxbYbvHlaRaLMjaRaLbveEbxcRbvcMaCbNbMbOaAbPGsbBQebvbebebeaobebebebebebebvaaawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
@@ -377,6 +378,6 @@ cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaw
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
-cZTqawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
+cZacbrawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZ
 "}

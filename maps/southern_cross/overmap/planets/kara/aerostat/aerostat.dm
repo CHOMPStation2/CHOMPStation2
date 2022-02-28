@@ -24,9 +24,12 @@
 	initial_generic_waypoints = list("aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast")
 	icon_state = "object"
 	unknown_state = "object"
-	known = TRUE
-	start_x =  11
-	start_y =  11
+	known = FALSE
+	in_space = 0
+	start_x =  14
+	start_y =  14
+
+
 //	extra_z_levels = list(Z_LEVEL_AEROSTAT_2) //SOON
 
 
@@ -58,11 +61,11 @@
 // -- Landmarks -- //
 
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_west
-	name = "Aerostat - West Dock"
+	name = "Aerostat - West Dock (Baby Mammoth, Stargazer,Needle, Ursula)"
 	landmark_tag = "aerostat_west"
 
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_east
-	name = "Aerostat - East Dock"
+	name = "Aerostat - East Dock (Echidna)"
 	landmark_tag = "aerostat_east"
 
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_south
@@ -70,11 +73,11 @@
 	landmark_tag = "aerostat_south"
 
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_northwest
-	name = "Aerostat - Northwest Dock"
+	name = "Aerostat - Northwest Dock (Baby Mammoth, Stargazer,Needle, Ursula)"
 	landmark_tag = "aerostat_northwest"
 
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_northeast
-	name = "Aerostat - Northeast Dock"
+	name = "Aerostat - Northeast Dock (Echidna)"
 	landmark_tag = "aerostat_northeast"
 
 
@@ -83,7 +86,6 @@
 /obj/sc_away_spawner/aerostat_inside //This spawner BS is proceeded by some BS in _southern_cross_submaps.dm
 	name = "Aerostat Indoors Spawner"
 	faction = "aerostat_inside"
-	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 50
 	//guard = 20
@@ -143,7 +145,7 @@
 	KARA_SET_ATMOS
 
 /turf/unsimulated/floor/sky/kara_sky/Initialize()
-	skyfall_levels = list(z+1) //I think this needs to be changed? It should just be instadeath because gas giant.
+//	skyfall_levels = list(z+1) //I think this needs to be changed or even removed. It should just be instadeath because gas giant.
 	. = ..()
 
 /turf/simulated/shuttle/wall/voidcraft/green/kara
