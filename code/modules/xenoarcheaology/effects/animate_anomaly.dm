@@ -41,7 +41,7 @@
 
 /datum/artifact_effect/animate_anomaly/DoEffectAura()
 	var/obj/O = master.holder
-	find_target())
+	find_target()
 
 	if(!target || !istype(O))
 		return
