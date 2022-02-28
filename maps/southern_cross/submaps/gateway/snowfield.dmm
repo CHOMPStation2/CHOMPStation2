@@ -2463,8 +2463,9 @@
 /area/awaymission/snowfield/outside)
 "ckB" = (
 /obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/broken,
 /area/awaymission/snowfield/checkpointunpowered)
@@ -9241,7 +9242,6 @@
 	id = "snowfield tool storage lockdown";
 	opacity = 0
 	},
-/obj/structure/simple_door/cult,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/public/toolstroage2)
@@ -9282,7 +9282,8 @@
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 10, "energy" = 20, "bomb" = 45, "bio" = 5, "rad" = 20);
+	armorsoak = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 5, "bio" = 0, "rad" = 0);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9963,7 +9964,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "iIm" = (
-/mob/living/simple_mob/animal/giant_spider/webslinger,
+/mob/living/simple_mob/animal/giant_spider/ion,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/northhallway)
 "iIA" = (
@@ -13039,11 +13040,16 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/centerhallway)
 "ljs" = (
-/obj/machinery/door/airlock/glass_security{
-	locked = 1
+/obj/structure/cable/heavyduty{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/wood,
-/area/awaymission/snowfield/checkpointunpowered)
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/awaymission/snowfield/outside)
 "ljz" = (
 /obj/structure/table/glass,
 /obj/machinery/reagentgrinder,
@@ -15572,14 +15578,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/service/publicstaff)
 "nsL" = (
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/engorge{
 	faction = "cult";
 	health = 350;
 	size_multiplier = 1.25
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/cult,
-/area/awaymission/snowfield/command/gateway)
+/area/awaymission/snowfield/command/bridge)
 "ntD" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/wood,
@@ -16041,7 +16047,9 @@
 /turf/simulated/gore,
 /area/awaymission/snowfield/command/gateway)
 "nOk" = (
-/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/airlock/highsecurity{
+	req_one_access = list(1,4)
+	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -18022,8 +18030,9 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "pAp" = (
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/broken,
 /area/awaymission/snowfield/checkpointunpowered)
@@ -21023,11 +21032,6 @@
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/service/fridge)
-"swe" = (
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/awaymission/snowfield/hallway/commandhallway_substation)
 "swJ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 8
@@ -22490,7 +22494,7 @@
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
 	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
@@ -37662,7 +37666,7 @@ pun
 pun
 pun
 pun
-vDF
+pun
 pun
 vDF
 vDF
@@ -37849,7 +37853,7 @@ spQ
 spQ
 ltg
 pun
-vDF
+pun
 pun
 vDF
 vDF
@@ -38036,8 +38040,8 @@ hfQ
 pfj
 obZ
 kTf
-vDF
-vDF
+pun
+pun
 vDF
 vDF
 vDF
@@ -38781,9 +38785,9 @@ pun
 icW
 pun
 pun
-qOv
-lro
-kTf
+pun
+sSb
+pun
 pun
 pun
 vDF
@@ -38968,9 +38972,9 @@ bUb
 pun
 pun
 pun
-qOv
-lro
-kTf
+pun
+ljs
+pun
 pun
 pun
 vDF
@@ -44667,7 +44671,7 @@ nid
 brj
 hYr
 dlm
-iXK
+nsL
 aXd
 jdO
 aXd
@@ -46714,7 +46718,7 @@ cZe
 qep
 bWz
 bWz
-swe
+bWz
 bWz
 bWz
 mUV
@@ -49417,7 +49421,7 @@ qYo
 pun
 vnP
 vnP
-ljs
+ycX
 vnP
 vnP
 vnP
@@ -52523,7 +52527,7 @@ srQ
 xge
 gPa
 oOF
-nsL
+srQ
 tHV
 iRf
 srQ
