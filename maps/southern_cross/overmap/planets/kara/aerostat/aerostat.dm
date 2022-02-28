@@ -144,9 +144,28 @@
 	color = "#eacd7c"
 	KARA_SET_ATMOS
 
-/turf/unsimulated/floor/sky/kara_sky/Initialize()
-//	skyfall_levels = list(z+1) //I think this needs to be changed or even removed. It should just be instadeath because gas giant.
+/turf/unsimulated/floor/sky/kara_sky/Entered(atom/movable/AM, atom/oldloc)
 	. = ..()
+	if(!does_skyfall)
+		return //We don't do that
+	if(isobserver(AM))
+		return //Don't ghostport, very annoying
+	if(AM.throwing)
+		return //Being thrown over, not fallen yet
+	if(!(AM.can_fall()))
+		return // Phased shifted kin should not fall
+	if(istype(AM, /obj/item/projectile))
+		return // pewpew should not fall out of the sky. pew.
+	if(istype(AM, /obj/effect/projectile))
+		return // ...neither should the effects be falling
+
+	var/mob/living/L
+	if(isliving(AM))
+		L = AM
+		if(L.is_floating)
+			return //Flyers/nograv can ignore it
+
+	qdel(AM)
 
 /turf/simulated/shuttle/wall/voidcraft/green/kara
 	KARA_SET_ATMOS
