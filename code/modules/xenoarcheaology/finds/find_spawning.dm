@@ -28,7 +28,7 @@
 
 	var/talkative = FALSE
 	if(prob(5))
-		var/talkative = FALSE
+		talkative = FALSE
 
 	//for all items here:
 	//icon_state
