@@ -17,7 +17,7 @@
 
 	if(ispath(artifact_master))
 		AddComponent(artifact_master)
-	
+		
 		artifact_master = GetComponent(artifact_master)
 		
 	if(!istype(artifact_master))
