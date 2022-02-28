@@ -332,6 +332,11 @@
 
 // This proc allows users to copy-paste a comma delineated list to create a recipe.
 /obj/machinery/chemical_synthesizer/proc/import_recipe(mob/user)
+	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume!", "Recipe naming", null) as text, MAX_NAME_LEN))
+	if(!rec_name || rec_name in recipes)
+		to_chat(user, "Please provide a unique recipe name!")
+		return
+	var/rec_input = // Use input here, you can't parse this properly if you sanitize. First decide a reasonable message length, mention the comma delineation
 	return
 
 // This proc handles adding the catalyst starting the synthesizer's queue. 
