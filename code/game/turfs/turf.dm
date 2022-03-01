@@ -316,7 +316,7 @@
 
 /turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
 
-	if(!tool.sharp || !can_engrave())
+	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
 
 	if(jobban_isbanned(vandal, "Graffiti"))
