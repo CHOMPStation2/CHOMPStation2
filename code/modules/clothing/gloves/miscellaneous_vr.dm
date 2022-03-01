@@ -81,11 +81,8 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
-<<<<<<< HEAD
-=======
 
 /obj/item/clothing/gloves/black/bloodletter
 	desc = "A pair of ordinary looking black gloves. On closer examination, they seem somewhat well-made, with an almost metallic sheen to them."
 	description_fluff = "A prohibited concealed weapon, the Melee Grip Reinforcement system is the product of the military applications of nanotechnology. The striking face of the glove hardens in response to impact, producing monofilament blades from the knuckles to greatly enhance the wearer's close-combat lethality."
 	special_attack_type = /datum/unarmed_attack/hardclaws
->>>>>>> 0a41e6fed8f... Merge pull request #12330 from Screemonster/YoushouldtryfightingforwhatyoubelieveinsometimeJack
