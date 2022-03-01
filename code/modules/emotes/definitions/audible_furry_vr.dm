@@ -140,9 +140,6 @@
 /decl/emote/audible/squeaky
     key = "squeaky"
     emote_message_3p = "squeaks."
-<<<<<<< HEAD
-    emote_sound = 'sound/items/drop/plushie.ogg'
-=======
     emote_sound = 'sound/items/drop/plushie.ogg'
 
 /decl/emote/audible/gyoh
@@ -182,4 +179,3 @@
     else
         emote_sound = pick(smolsound)
     . = ..()
->>>>>>> c45c332549f... Merge pull request #12354 from Very-Soft/itstimetogyoh
