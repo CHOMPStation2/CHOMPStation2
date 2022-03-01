@@ -624,11 +624,8 @@
 	//src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/rms(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)  //CHOMPedit: add RCD
-=======
 	src.modules += new /obj/item/weapon/pipe_dispenser(src)
->>>>>>> 330b39f7bd7... Merge pull request #12340 from FartMaster69420/borg-modules
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 
