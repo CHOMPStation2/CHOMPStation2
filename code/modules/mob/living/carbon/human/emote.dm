@@ -132,9 +132,14 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
-
 	/decl/emote/helper/vwag,
 	/decl/emote/helper/vflap,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/prbt,
+	/decl/emote/audible/gyoh,
+	/decl/emote/audible/rumble
+>>>>>>> 125c2c3ce14... Merge pull request #12351 from Very-Soft/itstimetogyoh
 	//VOREStation Add End
 	//CHOMPedit Add Start
 	/decl/emote/audible/prbt
@@ -265,9 +270,15 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
+<<<<<<< HEAD
 	//CHOMPEdit Add Start
 	/decl/emote/audible/prbt
 	//CHOMPEdit Add End
+=======
+	/decl/emote/audible/prbt,
+	/decl/emote/audible/gyoh,
+	/decl/emote/audible/rumble
+>>>>>>> 125c2c3ce14... Merge pull request #12351 from Very-Soft/itstimetogyoh
 	)
 	//VOREStation Add End
 
