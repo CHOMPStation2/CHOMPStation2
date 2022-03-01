@@ -30,11 +30,12 @@
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
 	var/list/footstep_sounds = null
-	var/list/vorefootstep_sounds = null		//CHOMPstation edit
+	var/list/vorefootstep_sounds = null	//CHOMPstation edit
 
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.
 	var/can_build_into_floor = FALSE // Used for things like RCDs (and maybe lattices/floor tiles in the future), to see if a floor should replace it.
 	var/list/dangerous_objects // List of 'dangerous' objs that the turf holds that can cause something bad to happen when stepped on, used for AI mobs.
+	var/tmp/changing_turf
 
 /turf/Initialize(mapload)
 	. = ..()
@@ -59,9 +60,14 @@
 		Be.multiz_turf_new(src, UP)
 
 /turf/Destroy()
-	. = QDEL_HINT_IWILLGC
+	if (!changing_turf)
+		stack_trace("Improper turf qdel. Do not qdel turfs directly.")
+	changing_turf = FALSE
 	cleanbot_reserved_turfs -= src
+	if(connections)
+		connections.erase_all()
 	..()
+	return QDEL_HINT_IWILLGC
 
 /turf/ex_act(severity)
 	return 0
@@ -311,7 +317,7 @@
 
 /turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
 
-	if(!tool || !tool.sharp || !can_engrave())
+	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
 
 	if(jobban_isbanned(vandal, "Graffiti"))
