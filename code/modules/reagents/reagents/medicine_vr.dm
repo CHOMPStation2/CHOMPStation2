@@ -93,9 +93,7 @@
 /datum/reagent/sleevingcure/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.remove_a_modifier_of_type(/datum/modifier/resleeving_sickness)
 	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
-<<<<<<< HEAD
 */ //CHOMPStation removal end
-=======
 
 /datum/reagent/nutridax
 	name = "Nutridax"
@@ -133,4 +131,3 @@
 				R.remove_self(removed * 20)
 			if(istype(R, /datum/reagent/drink))
 				R.remove_self(removed * 30)
->>>>>>> 8d7c4d9c944... Merge pull request #12350 from KillianKirilenko/kk-allergens
