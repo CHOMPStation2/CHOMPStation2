@@ -655,7 +655,6 @@
 	color = "#62764E"
 	nutriment_factor = 15
 
-<<<<<<< HEAD
 //YW Edit Start
 /datum/reagent/nutriment/paper //Paper is made from cellulose. You can eat it. It doesn't fill you up very much at all.
 	name = "Paper"
@@ -666,7 +665,7 @@
 	color = "e6e6e6" //not quite white
 	nutriment_factor = 2 // 5 times worse than nutriment
 //YW Edit End
-=======
+
 /datum/reagent/carpet
 	name = "Liquid Carpet"
 	id = "liquidcarpet"
@@ -730,4 +729,3 @@
 	reagent_state = LIQUID
 	color = "#f16e16"
 	taste_description = "extremely overengineered carpet" 
->>>>>>> 45539d1538c... Merge pull request #12322 from TheObserver-sys/carpetsynthesis
