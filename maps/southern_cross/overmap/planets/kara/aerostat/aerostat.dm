@@ -143,11 +143,10 @@
 	desc = "Be careful where you step!"
 	color = "#eacd7c"
 	KARA_SET_ATMOS
+	does_skyfall = FALSE
 
 /turf/unsimulated/floor/sky/kara_sky/Entered(atom/movable/AM, atom/oldloc)
 	. = ..()
-	if(!does_skyfall)
-		return //We don't do that
 	if(isobserver(AM))
 		return //Don't ghostport, very annoying
 	if(AM.throwing)
