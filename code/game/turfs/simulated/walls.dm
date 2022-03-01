@@ -45,8 +45,7 @@
 
 /turf/simulated/wall/Destroy()
 	STOP_PROCESSING(SSturfs, src)
-	dismantle_wall(null,null,1)
-	..()
+	return ..()
 
 /turf/simulated/wall/examine_icon()
 	return icon(icon=initial(icon), icon_state=initial(icon_state))
@@ -333,10 +332,3 @@
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 		return TRUE
 	return FALSE
-
-/turf/simulated/wall/AltClick(mob/user)
-	if(isliving(user))
-		var/mob/living/livingUser = user
-		if(try_graffiti(livingUser, livingUser.get_active_hand()))
-			return
-	. = ..() 

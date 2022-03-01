@@ -101,7 +101,6 @@ Also includes Life and New
 		stasis += hit.stasisforce
 	..()
 
-/mob/living/simple_mob/xeno/Destroy()
-	traitdat.Destroy()	//Let's clean up after ourselves.
-	traitdat = null
+/mob/living/simple_animal/xeno/Destroy()
+	QDEL_NULL(traitdat)
 	..()
