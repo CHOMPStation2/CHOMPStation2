@@ -61,7 +61,7 @@
 
 /turf/Destroy()
 	if (!changing_turf)
-		crash_with("Improper turf qdel. Do not qdel turfs directly.")
+		stack_trace("Improper turf qdel. Do not qdel turfs directly.")
 	changing_turf = FALSE
 	cleanbot_reserved_turfs -= src
 	if(connections)
