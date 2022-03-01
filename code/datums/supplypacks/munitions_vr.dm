@@ -58,8 +58,6 @@
 	containertype = /obj/structure/closet/crate/large/secure/heph
 	containername = "Mining disperser charge crate"
 	access = access_security
-<<<<<<< HEAD
-=======
 
 /datum/supply_pack/munitions/longsword
 	name = "Weapons - Melee -Longsword (Steel)"
@@ -70,4 +68,3 @@
 	containertype = /obj/structure/closet/crate/secure
 	containername = "longsword"
 	access = access_armory
->>>>>>> 339b501b102... Merge pull request #12321 from TheDavestDave/saber
