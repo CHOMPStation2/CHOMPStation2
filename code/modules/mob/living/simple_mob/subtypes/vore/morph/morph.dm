@@ -149,7 +149,7 @@
 	morphed = FALSE
 
 	if(!silent)
-		visible_message("<span class='warning'>[src] suddenly collapses in on itself, dissolving into a pile of green flesh!</span>")
+		visible_message("<span class='warning'>[src] suddenly collapses in on itself, dissolving into a pile of flesh!</span>")
 
 	form = null
 	name = initial(name)
@@ -189,7 +189,7 @@
 
 /mob/living/simple_mob/vore/hostile/morph/death(gibbed)
 	if(morphed)
-		visible_message("<span class='warning'>[src] twists and dissolves into a pile of green flesh!</span>")
+		visible_message("<span class='warning'>[src] twists and dissolves into a pile of flesh!</span>")
 		restore(TRUE)
 	..()
 
@@ -323,6 +323,9 @@
 		parent_morph = parent
 		prey_body = prey
 		prey_body.forceMove(get_turf(parent_morph))
+		prey_body.muffled = FALSE
+		prey_body.absorbed = FALSE
+		absorbed = TRUE
 		ckey = prey_ckey
 		prey_body.ckey = parent_morph.original_ckey
 		parent_morph.forceMove(src)

@@ -1788,7 +1788,6 @@
 	master_tag = "server_access_airlock";
 	name = "interior access button";
 	pixel_x = -28;
-	pixel_y = 0;
 	req_one_access = list(61)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2035,13 +2034,37 @@
 	frequency = 1381;
 	master_tag = "server_access_airlock";
 	name = "exterior access button";
-	pixel_x = 0;
 	pixel_y = 26;
 	req_one_access = list(61)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/chamber)
+<<<<<<< HEAD
 >>>>>>> 82938b4671b... Merge pull request #12192 from Heroman3003/accesses-and-buttons
+=======
+"adO" = (
+/obj/structure/table/glass,
+/obj/item/weapon/backup_implanter{
+	pixel_y = 9
+	},
+/obj/item/weapon/backup_implanter{
+	pixel_y = 2
+	},
+/obj/item/weapon/backup_implanter{
+	pixel_y = -5
+	},
+/obj/item/weapon/backup_implanter{
+	pixel_y = -12
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/station/dock_two)
+>>>>>>> 2b91289349e... Merge pull request #12326 from Heroman3003/tetherfix2
 "adQ" = (
 /obj/machinery/computer/power_monitor{
 	dir = 4;
@@ -21543,6 +21566,12 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
+"hsf" = (
+/obj/machinery/shipsensors/fancy_shuttle,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/cockpit)
 "hsq" = (
 /obj/structure/catwalk,
 /obj/random/junk,
@@ -32423,29 +32452,6 @@
 /obj/machinery/status_display/supply_display,
 /turf/simulated/wall,
 /area/quartermaster/office)
-"rIz" = (
-/obj/structure/table/glass,
-/obj/item/weapon/backup_implanter{
-	pixel_y = 9
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = 2
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -5
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -12
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/tether/station/dock_two)
 "rIA" = (
 /obj/machinery/door/airlock/glass_external,
 /obj/structure/cable/green{
@@ -50656,7 +50662,7 @@ wbf
 btr
 fQr
 fLT
-rIz
+adO
 nRk
 odT
 fLT
@@ -55288,6 +55294,7 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -55309,6 +55316,24 @@ aaa
 aaa
 aaa
 aaa
+=======
+hsf
+osM
+scB
+sJw
+osM
+tMt
+ybT
+kok
+eSM
+gvx
+kTK
+kKj
+lCR
+dYK
+cbU
+psE
+>>>>>>> 51281e3921b... Merge pull request #12311 from Very-Soft/tethermaptweaks
 aaa
 aaa
 aaa
