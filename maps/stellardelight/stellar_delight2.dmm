@@ -1326,7 +1326,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
@@ -15957,7 +15957,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
@@ -17387,7 +17387,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 4;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
