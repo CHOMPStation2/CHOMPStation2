@@ -15,6 +15,7 @@
 //#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
 //Skip 13 and 14 for overmap stuff, I think???
 #define Z_LEVEL_FUELDEPOT				15
+#define Z_LEVEL_AEROSTAT				16
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -104,9 +105,10 @@
 		)
 
 
-	// Framework for porting Tether's lateload Z-Level system
+	// Framework for porting Tether's lateload Z-Level system //Stock lateload maps
 	lateload_z_levels = list(
-			list("Fuel Depot - Z1 Space") //Stock lateload maps
+			list("Fuel Depot - Z1 Space"),
+			list("Kara Aerostat - Z1 Aerostat")
 			)
 
 	//CHOMPStation Addition End
