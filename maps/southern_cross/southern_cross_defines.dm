@@ -14,9 +14,9 @@
 #define Z_LEVEL_GATEWAY					12  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
 //#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
 //Skip 13 and 14 for overmap stuff, I think???
-#define Z_LEVEL_FUELDEPOT				15
-#define Z_LEVEL_AEROSTAT				16
-#define Z_LEVEL_NS_MINE					17
+#define Z_LEVEL_FUELDEPOT				13
+#define Z_LEVEL_AEROSTAT				14
+#define Z_LEVEL_NS_MINE					15
 
 /datum/map/southern_cross
 	name = "Southern Cross"
