@@ -16,6 +16,7 @@
 //Skip 13 and 14 for overmap stuff, I think???
 #define Z_LEVEL_FUELDEPOT				15
 #define Z_LEVEL_AEROSTAT				16
+#define Z_LEVEL_NS_MINE					17
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -108,7 +109,8 @@
 	// Framework for porting Tether's lateload Z-Level system //Stock lateload maps
 	lateload_z_levels = list(
 			list("Fuel Depot - Z1 Space"),
-			list("Kara Aerostat - Z1 Aerostat")
+			list("Kara Aerostat - Z1 Aerostat"),
+			list("Kara - Z1 Northern Star")
 			)
 
 	//CHOMPStation Addition End

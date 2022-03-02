@@ -63,6 +63,7 @@
 	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
 	//KARA - Planet
 	#include "overmap/planets/kara/kara.dm" //And this is the sector for Kara. I have decided to better organize future planets and maps for them
+	#include "overmap/planets/kara/northern_star/northern_star.dm" //This is the actual map info that we're using for kara
 	#include "overmap/planets/kara/aerostat/aerostat.dm" //This is an installation for Kara.
 	//SPACE - Anything random in space
 	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.
