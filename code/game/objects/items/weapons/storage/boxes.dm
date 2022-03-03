@@ -142,6 +142,7 @@
 		/obj/item/weapon/dnainjector/m2h = 3
 	)
 
+<<<<<<< HEAD
 /obj/item/weapon/storage/box/blanks
 	name = "box of blank shells"
 	desc = "It has a picture of a gun and several warning symbols on the front."
@@ -262,6 +263,8 @@
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	starts_with = list(/obj/item/ammo_casing/a145/highvel = 7)
 
+=======
+>>>>>>> 27b451a2c81... Merge pull request #12353 from GhostActual/Ammo_Boxes
 /obj/item/weapon/storage/box/flashbangs
 	name = "box of flashbangs (WARNING)"
 	desc = "<B>WARNING: These devices are extremely dangerous and can cause blindness or deafness in repeated use.</B>"
