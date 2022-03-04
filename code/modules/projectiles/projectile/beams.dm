@@ -304,7 +304,6 @@
 	damage = 5
 	agony = 10
 
-<<<<<<< HEAD
 /obj/item/projectile/beam/precursor //CHOMPedit added Precursor beam
 	name = "precursor beam"
 	icon_state = "alien beam"
@@ -317,7 +316,6 @@
 
 	damage = 48
 	armor_penetration = 10
-=======
 /obj/item/projectile/beam/eluger
 	name = "laser beam"
 	icon_state = "xray"
@@ -411,4 +409,3 @@
 			M.adjustToxLoss(-5)
 			M.adjustOxyLoss(-5)
 	return 1
->>>>>>> 27b451a2c81... Merge pull request #12353 from GhostActual/Ammo_Boxes
