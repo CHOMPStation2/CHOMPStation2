@@ -3755,11 +3755,7 @@
 #include "code\modules\projectiles\projectile_ch.dm"
 #include "code\modules\projectiles\ammunition\ammo_boxes.dm"
 #include "code\modules\projectiles\ammunition\magazines.dm"
-<<<<<<< HEAD
-#include "code\modules\projectiles\ammunition\magazines_vr.dm"
 #include "code\modules\projectiles\ammunition\magazines_yw.dm"
-=======
->>>>>>> 27b451a2c81... Merge pull request #12353 from GhostActual/Ammo_Boxes
 #include "code\modules\projectiles\ammunition\magnetic.dm"
 #include "code\modules\projectiles\ammunition\rounds.dm"
 #include "code\modules\projectiles\ammunition\rounds_ch.dm"
@@ -3855,24 +3851,14 @@
 #include "code\modules\projectiles\guns\projectile\sniper\collapsible_sniper.dm"
 #include "code\modules\projectiles\projectile\arc.dm"
 #include "code\modules\projectiles\projectile\beams.dm"
-<<<<<<< HEAD
 #include "code\modules\projectiles\projectile\beams_ch.dm"
-#include "code\modules\projectiles\projectile\beams_vr.dm"
 #include "code\modules\projectiles\projectile\blob.dm"
 #include "code\modules\projectiles\projectile\bullets.dm"
 #include "code\modules\projectiles\projectile\bullets_ch.dm"
-#include "code\modules\projectiles\projectile\bullets_vr.dm"
 #include "code\modules\projectiles\projectile\change.dm"
 #include "code\modules\projectiles\projectile\energy.dm"
 #include "code\modules\projectiles\projectile\energy_ch.dm"
-#include "code\modules\projectiles\projectile\energy_vr.dm"
 #include "code\modules\projectiles\projectile\energy_yw.dm"
-=======
-#include "code\modules\projectiles\projectile\blob.dm"
-#include "code\modules\projectiles\projectile\bullets.dm"
-#include "code\modules\projectiles\projectile\change.dm"
-#include "code\modules\projectiles\projectile\energy.dm"
->>>>>>> 27b451a2c81... Merge pull request #12353 from GhostActual/Ammo_Boxes
 #include "code\modules\projectiles\projectile\explosive.dm"
 #include "code\modules\projectiles\projectile\force.dm"
 #include "code\modules\projectiles\projectile\hook.dm"
