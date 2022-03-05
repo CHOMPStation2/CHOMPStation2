@@ -6516,8 +6516,8 @@
 /area/holodeck/source_meetinghall)
 "hIM" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/stunshells/large,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -10156,10 +10156,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunammo,
-/obj/item/weapon/storage/box/shotgunammo,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -11905,12 +11905,12 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/transport1/centcom)
 "odr" = (
-/obj/item/weapon/storage/box/flashshells,
-/obj/item/weapon/storage/box/flashshells,
-/obj/item/weapon/storage/box/stunshells,
-/obj/item/weapon/storage/box/stunshells,
-/obj/item/weapon/storage/box/beanbags,
-/obj/item/weapon/storage/box/beanbags,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /obj/structure/window/reinforced,
 /obj/structure/table/rack,
 /obj/structure/window/reinforced{
