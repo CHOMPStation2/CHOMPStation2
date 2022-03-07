@@ -186,9 +186,13 @@ var/list/event_last_fired = list()
 	active_with_role["AI"] = 0
 	active_with_role["Cyborg"] = 0
 	active_with_role["Janitor"] = 0
+<<<<<<< HEAD
 	active_with_role["Gardener"] = 0
 	active_with_role["HOS"] = 0
 	active_with_role["Warden"] = 0
+=======
+	active_with_role["Botanist"] = 0
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 
 	for(var/mob/M in player_list)
 		if(!M.mind || !M.client || M.client.is_afk(10 MINUTES)) // longer than 10 minutes AFK counts them as inactive
@@ -229,6 +233,7 @@ var/list/event_last_fired = list()
 		if(M.mind.assigned_role == "Janitor")
 			active_with_role["Janitor"]++
 
+<<<<<<< HEAD
 		if(M.mind.assigned_role == "Gardener")
 			active_with_role["Gardener"]++
 			
@@ -237,5 +242,9 @@ var/list/event_last_fired = list()
 			
 		if(M.mind.assigned_role == "Warden")
 			active_with_role["Warden"]++
+=======
+		if(M.mind.assigned_role == "Botanist")
+			active_with_role["Botanist"]++
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 
 	return active_with_role

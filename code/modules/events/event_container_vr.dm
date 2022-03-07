@@ -2,7 +2,7 @@
 #define ASSIGNMENT_AI "AI"
 #define ASSIGNMENT_CYBORG "Cyborg"
 #define ASSIGNMENT_ENGINEER "Engineer"
-#define ASSIGNMENT_GARDENER "Gardener"
+#define ASSIGNMENT_GARDENER "Botanist"
 #define ASSIGNMENT_JANITOR "Janitor"
 #define ASSIGNMENT_MEDICAL "Medical"
 #define ASSIGNMENT_SCIENTIST "Scientist"
@@ -33,6 +33,7 @@
 		// Severity level, event name, even type, base weight, role weights, one shot, min weight, max weight. Last two only used if set and non-zero
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",			/datum/event/nothing,			400),
 		// Bluescreens APCs, but they still work
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",		/datum/event/apc_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",/datum/event/brand_intelligence,20, 	list(ASSIGNMENT_JANITOR = 25),	1),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Canister Leak",		/datum/event/canister_leak,		10, 	list(ASSIGNMENT_ENGINEER = 20)),
@@ -40,6 +41,15 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Economic News",		/datum/event/economic_event,	300),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Electrified Door",	/datum/event/electrified_door,	-5, 	list(ASSIGNMENT_MEDICAL = 5, ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_AI = 10)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lost Carp",			/datum/event/carp_migration, 	0, 		list(ASSIGNMENT_SECURITY = 40), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",		/datum/event/apc_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",/datum/event/brand_intelligence, 0, 	list(ASSIGNMENT_ENGINEER = 10),	1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Canister Leak",		/datum/event/canister_leak,		10, 	list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Space Dust",		/datum/event/dust,	 			0, 		list(ASSIGNMENT_ENGINEER = 20), 0, 0, 50, min_jobs = list(ASSIGNMENT_ENGINEER = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Economic News",		/datum/event/economic_event,	300),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lost Carp",			/datum/event/carp_migration, 	0, 		list(ASSIGNMENT_SECURITY = 10), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Hacker",		/datum/event/money_hacker, 		0, 		list(ASSIGNMENT_ANY = 4), 1, 10, 25),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Lotto",		/datum/event/money_lotto, 		0, 		list(ASSIGNMENT_ANY = 1), 1, 5, 15),
 		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mundane News", 		/datum/event/mundane_news, 		300),
@@ -49,8 +59,13 @@
 		// Spawns mice, lizards, or dud spiderlings
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",/datum/event/infestation, 		100,	list(ASSIGNMENT_JANITOR = 100), 1),
 		// Rot only weakens walls, not destroy them
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50), 1),
 //CHOMPedit: Disabling until fixed		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,		2,		list(), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30), 1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,		2,		list(), 1),
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,		2,		list(), 1), //YW EDIT
@@ -67,11 +82,16 @@
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Nothing",					/datum/event/nothing,					1600),
 		// Leaks gas into an unoccupied room.
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Appendicitis", 			/datum/event/spontaneous_appendicitis, 	-30,		list(ASSIGNMENT_MEDICAL = 30), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Atmos Leak",				/datum/event/atmos_leak, 				30,		list(ASSIGNMENT_ENGINEER = 25), 1),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20)),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Atmos Leak",				/datum/event/atmos_leak, 				30,		list(ASSIGNMENT_ENGINEER = 25), 1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Carp School",				/datum/event/carp_migration,			0, 		list(ASSIGNMENT_SECURITY = 30), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 		// Just disables comms for a short while.
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Communication Blackout",	/datum/event/communications_blackout,	500,	list(ASSIGNMENT_AI = 150, ASSIGNMENT_SECURITY = 120), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Communication Blackout",	/datum/event/communications_blackout,	500,	list(ASSIGNMENT_AI = 100, ASSIGNMENT_SECURITY = 50), 1),
 		// Just blows out a few lights
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			250,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_JANITOR = 150), 1),
 		//Escaped slime event itself needs to be rejiggered because of the mob refactor.
@@ -79,6 +99,7 @@
 		// This one is just too fun.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Failure",			/datum/event/gravity,	 				75,		list(ASSIGNMENT_ENGINEER = 60), 1),
 		// Temporary power failure, but mitigatead by subgrids
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(ASSIGNMENT_SCIENTIST = 10, ASSIGNMENT_ENGINEER = 25), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			-20,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_ENGINEER = 40), 1),
 		// Pure RP fun, no mechanical effects.
@@ -88,16 +109,36 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn",				/datum/event/morph_spawn,				75,		list(ASSIGNMENT_ANY = 5), 0),
 		//New CHOMPStation event. Mice and lizards grow into rats and lizardmen respectively.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Mutants",					/datum/event/mutants,					20,		list(ASSIGNMENT_ANY = 15, ASSIGNMENT_SECURITY = 25), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(ASSIGNMENT_ENGINEER = 25), 1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		// Pure RP fun, no mechanical effects.
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					0,		list(ASSIGNMENT_AI = 80, ASSIGNMENT_CYBORG = 50, ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENTIST = 5), min_jobs = list(ASSIGNMENT_AI = 1)),
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 		// Opens doors in brig.  So just RP fun
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Prison Break",				/datum/event/prison_break,				-10,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_ENGINEER = 20), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Radiation Storm",			/datum/event/radiation_storm, 			50,		list(ASSIGNMENT_MEDICAL = 50), 1), //YW EDIT, Readded
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				-30,	list(ASSIGNMENT_SECURITY = 25, ASSIGNMENT_HOS = 35, ASSIGNMENT_WARDEN = 35)),
 		// Radiation, but only in space.
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				20,		list(ASSIGNMENT_ENGINEER = 40, ASSIGNMENT_SECURITY = 20), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		-20,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 20, ASSIGNMENT_WARDEN = 20), 0),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		0,		list(ASSIGNMENT_MEDICAL = 100), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_SCIENCE = 100), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				0,		list(ASSIGNMENT_SECURITY = 20), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				30,		list(ASSIGNMENT_ENGINEER = 40, ASSIGNMENT_SECURITY = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					0,		list(ASSIGNMENT_ENGINEER = 20), 1, 0, 50, min_jobs = list(ASSIGNMENT_ENGINEER = 3)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		0,		list(ASSIGNMENT_ENGINEER = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_ENGINEER = 30), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		0,		list(ASSIGNMENT_SECURITY = 30), 1, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
+		//Evil grubs that drain station power slightly
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			0,		list(ASSIGNMENT_SECURITY = 10, ASSIGNMENT_ENGINEER = 30), 1, min_jobs = list(ASSIGNMENT_SECURITY = 1, ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Pod Drop",			/datum/event/drone_pod_drop,			25,		list(ASSIGNMENT_SCIENTIST = 40), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn",				/datum/event/morph_spawn,				75,		list(ASSIGNMENT_ANY = 5), 0),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Predator",		/datum/event/maintenance_predator,		100,	list(ASSIGNMENT_ANY = 5), 0),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		0,		list(ASSIGNMENT_SECURITY = 15, ASSIGNMENT_MEDICAL = 3), 1, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				30,		list(ASSIGNMENT_ENGINEER = 20)),
@@ -116,6 +157,7 @@
 
 /datum/event_container/major/New()
 	available_events = list(
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",		/datum/event/nothing,			900),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",		/datum/event/atmos_leak, 		5,		list(ASSIGNMENT_ENGINEER = 35), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",		/datum/event/blob, 				-100,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ENGINEER = 5), 1),
@@ -127,6 +169,14 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Metroid Infestation",			/datum/event/metroid_infestation,			-105,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_SCIENCE = 20, ASSIGNMENT_HOS = 15, ASSIGNMENT_WARDEN = 15), 0),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",		/datum/event/spacevine, 		20,		list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",				/datum/event/nothing,				3600),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",			/datum/event/atmos_leak, 			20,		list(ASSIGNMENT_ENGINEER = 25), 1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",			/datum/event/spacevine, 			10,		list(ASSIGNMENT_ENGINEER = 7, ASSIGNMENT_GARDENER = 2), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",		/datum/event/carp_migration,		10,		list(ASSIGNMENT_SECURITY = 5), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,	0,	list(ASSIGNMENT_ANY = 5), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jellyfish Migration",	/datum/event/jellyfish_migration,	5,	list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
+>>>>>>> 298774524c4... Merge pull request #12368 from Heroman3003/event-min-jobs
 	)
 	add_disabled_events(list(
 		//Needs Xenobio containment breach fixed
