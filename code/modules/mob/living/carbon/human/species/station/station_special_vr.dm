@@ -226,7 +226,7 @@
 		H.shock_stage = max(H.shock_stage-(feral/20), 0)
 
 		//Handle light/dark areas
-		var/turf/T = get_turf(H)
+		// var/turf/T = get_turf(H) // CHOMPEdit: Moved up to before the in-belly/dark combined check, should still safely reach here just fine.
 		if(!T)
 			update_xenochimera_hud(H, danger, feral_state)
 			return //Nullspace
