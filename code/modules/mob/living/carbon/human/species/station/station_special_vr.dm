@@ -206,8 +206,9 @@
 		else
 			feral = max(0,--feral)
 		
-		// Being in a belly decreases stress further. :9	
-		if(feral && isbelly(H.loc))
+		// Being in a belly or in the darkness decreases stress further. :9
+		var/turf/T = get_turf(H)
+		if(feral && (isbelly(H.loc) || T.get_lumcount() <= 0.1))
 			feral = max(0,--feral)
 
 		//Set our real mob's var to our temp var
