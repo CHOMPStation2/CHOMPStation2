@@ -40,7 +40,7 @@
 		 											),
 	"Snowfield" 		= new/datum/holodeck_program(/area/holodeck/source_snowfield,
 													list(
-														'sound/effects/weather/snow/snowstorm_loop.ogg'
+														'sound/effects/weather/snowstorm/snowstorm_loop.ogg'
 												 		)
 		 											),
 	"Space" 			= new/datum/holodeck_program(/area/holodeck/source_space,

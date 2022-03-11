@@ -4,17 +4,17 @@
 
 // CHOMPEdit: Blanket replace all wind with this, for now, in lieue of a snowstorm-specific wind
 /datum/looping_sound/weather/outside_blizzard
-	start_sound = 'sound/effects/weather/snow/snowstorm_start.ogg'
+	start_sound = 'sound/effects/weather/snowstorm/snowstorm_start.ogg'
 	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/snow/snowstorm_loop.ogg' = 1
+		'sound/effects/weather/snowstorm/snowstorm_loop.ogg' = 1
 		)
 	mid_length = 8 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
 	volume = 85 // Louder because we want to communicate to players that this is a heavy blizzard
 
 /datum/looping_sound/weather/inside_blizzard
-	start_sound = 'sound/effects/weather/snow/snowstorm_start.ogg'
+	start_sound = 'sound/effects/weather/snowstorm/snowstorm_start.ogg'
 	start_length = 4 SECONDS
 	mid_sounds = list(
 		'sound/effects/weather/snowstorm/snowstorm_interior_loop.ogg' = 1
@@ -24,17 +24,17 @@
 	volume = 25 // Should naturally be very quiet - wind isn't usually audible inside a structure unless you're right by the door. - bit louder because blizzard
 
 /datum/looping_sound/weather/outside_snow
-	start_sound = 'sound/effects/weather/snow/snowstorm_start.ogg'
+	start_sound = 'sound/effects/weather/snowstorm/snowstorm_start.ogg'
 	start_length = 4 SECONDS
 	mid_sounds = list(
-		'sound/effects/weather/snow/snowstorm_loop.ogg' = 1
+		'sound/effects/weather/snowstorm/snowstorm_loop.ogg' = 1
 		)
 	mid_length = 8 SECONDS // The lengths for the files vary, but the longest is four seconds, so this will make it sound like intermittent wind.
 	end_sound = 'sound/effects/weather/wind/wind_end.ogg'
-	volume = 65
+	volume = 45
 
 /datum/looping_sound/weather/inside_snow
-	start_sound = 'sound/effects/weather/snow/snowstorm_start.ogg'
+	start_sound = 'sound/effects/weather/snowstorm/snowstorm_start.ogg'
 	start_length = 4 SECONDS
 	mid_sounds = list(
 		'sound/effects/weather/snowstorm/snowstorm_interior_loop.ogg' = 1
