@@ -829,39 +829,8 @@
 		owner.update_icon()
 
 /////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
-/obj/belly/proc/handle_absorb_langs(var/mob/living/prey, var/mob/living/pred)
-	for(var/mob/living/p in pred.temp_language_sources)		//Let's look at the pred's sources
-		if (!p.absorbed)
-			for(var/L in pred.temp_languages)
-				if(L in p.languages)
-					pred.languages -= L
-					pred.temp_languages -= L
-					pred.temp_language_sources -= p
-		else
-			for(var/L in p.languages)
-				if(L in pred.languages)
-					continue
-				pred.languages += L
-				pred.temp_languages += L
-
-	for(var/mob/living/P in prey.temp_language_sources)		//Let's look at the prey's sources
-		if (!prey.absorbed)
-			for(var/L in prey.temp_languages)
-				if(L in P.languages)
-					prey.languages -= L
-					prey.temp_languages -= L
-					prey.temp_language_sources -= P
-		else
-			for(var/L in P.languages)
-				if(L in prey.languages)
-					continue
-				prey.languages += L
-				prey.temp_languages += L
-=======
 /obj/belly/proc/handle_absorb_langs()
 	owner.absorb_langs()
->>>>>>> db38d34278... Merge pull request #12412 from Very-Soft/specialabsorb
 				
 ////////////////////////////////////////////////////////////////////////
 
