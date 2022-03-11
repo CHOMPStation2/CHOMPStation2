@@ -32,16 +32,15 @@
 	"Beach" 			= new/datum/holodeck_program(/area/holodeck/source_beach),
 	"Desert" 			= new/datum/holodeck_program(/area/holodeck/source_desert,
 													list(
-														'sound/effects/weather/wind/wind_loop1.ogg',
-											 			'sound/effects/weather/wind/wind_loop2.ogg',
-											 			'sound/effects/weather/wind/wind_loop3.ogg'
+														'sound/ambience/desert/desertnight1.ogg',
+											 			'sound/ambience/desert/desertnight2.ogg',
+											 			'sound/ambience/desert/desertnight3.ogg',
+														'sound/ambience/desert/desertnight4.ogg'
 												 		)
 		 											),
 	"Snowfield" 		= new/datum/holodeck_program(/area/holodeck/source_snowfield,
 													list(
-														'sound/effects/weather/wind/wind_loop1.ogg',
-											 			'sound/effects/weather/wind/wind_loop2.ogg',
-											 			'sound/effects/weather/wind/wind_loop3.ogg'
+														'sound/effects/weather/snow/snowstorm_loop.ogg'
 												 		)
 		 											),
 	"Space" 			= new/datum/holodeck_program(/area/holodeck/source_space,
