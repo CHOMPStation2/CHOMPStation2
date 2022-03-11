@@ -2289,6 +2289,7 @@
 #include "code\modules\emotes\definitions\audible.dm"
 #include "code\modules\emotes\definitions\audible_belch.dm"
 #include "code\modules\emotes\definitions\audible_cough.dm"
+#include "code\modules\emotes\definitions\audible_furry_ch.dm"
 #include "code\modules\emotes\definitions\audible_furry_vr.dm"
 #include "code\modules\emotes\definitions\audible_scream.dm"
 #include "code\modules\emotes\definitions\audible_scream_ch.dm"
