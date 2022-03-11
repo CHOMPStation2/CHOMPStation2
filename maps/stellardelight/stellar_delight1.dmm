@@ -18202,6 +18202,11 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck1/shower)
+"Na" = (
+/obj/item/weapon/storage/box/nifsofts_mining,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/steel/cargo,
+/area/stellardelight/deck1/miningequipment)
 "Nb" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/angled{
@@ -33428,7 +33433,7 @@ dl
 QK
 pV
 xf
-qV
+Na
 MG
 vC
 vi
