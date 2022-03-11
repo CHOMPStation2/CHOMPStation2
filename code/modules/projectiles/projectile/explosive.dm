@@ -12,9 +12,9 @@
 
 /obj/item/projectile/bullet/srmrocket/on_hit(atom/target, blocked=0)
 	if(!isliving(target)) //if the target isn't alive, so is a wall or something
-		explosion(target, 0, 0, 1, 2, 4)
+		explosion(target, 0, 1, 2, 4)
 	else
-		explosion(target, 0, 0, 2, 2, 4)
+		explosion(target, 0, 2, 2, 4)
 
 	return 1
 
