@@ -859,7 +859,7 @@
 				/obj/item/weapon/reagent_containers/food/snacks/donut/plain,
 				/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-				/obj/item/weapon/reagent_containers/food/snacks/cookiesnack)
+				/obj/item/weapon/reagent_containers/food/snacks/cookie)
 
 /obj/random/mre/dessert/vegan
 	name = "random vegan MRE dessert"

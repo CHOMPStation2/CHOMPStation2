@@ -205,6 +205,11 @@
 			feral++
 		else
 			feral = max(0,--feral)
+		
+		// Being in a belly or in the darkness decreases stress further. :9
+		var/turf/T = get_turf(H)
+		if(feral && (isbelly(H.loc) || T.get_lumcount() <= 0.1))
+			feral = max(0,--feral)
 
 		//Set our real mob's var to our temp var
 		H.feral = feral
@@ -221,7 +226,7 @@
 		H.shock_stage = max(H.shock_stage-(feral/20), 0)
 
 		//Handle light/dark areas
-		var/turf/T = get_turf(H)
+		// var/turf/T = get_turf(H) // CHOMPEdit: Moved up to before the in-belly/dark combined check, should still safely reach here just fine.
 		if(!T)
 			update_xenochimera_hud(H, danger, feral_state)
 			return //Nullspace
@@ -233,8 +238,8 @@
 			//This is basically the 'lite' version of the below block.
 			var/list/nearby = H.living_mobs(world.view)
 
-			//Not in the dark and out in the open.
-			if(!darkish && isturf(H.loc))
+			//Not in the dark, or a belly, and out in the open.
+			if(!darkish && isturf(H.loc) && !isbelly(H.loc)) // CHOMPEdit: added specific check for if in belly
 
 				//Always handle feral if nobody's around and not in the dark.
 				if(!nearby.len)
@@ -248,8 +253,8 @@
 			update_xenochimera_hud(H, danger, feral_state)
 			return
 
-		// In the darkness or "hidden". No need for custom scene-protection checks as it's just an occational infomessage.
-		if(darkish || !isturf(H.loc))
+		// In the darkness, "hidden", or in a belly. No need for custom scene-protection checks as it's just an occational infomessage.
+		if(darkish || !isturf(H.loc) || isbelly(H.loc)) // CHOMPEdit: added specific check for if in belly
 			// If hurt, tell 'em to heal up
 			if (shock)
 				to_chat(H,"<span class='info'>This place seems safe, secure, hidden, a place to lick your wounds and recover...</span>")
