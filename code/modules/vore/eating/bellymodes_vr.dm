@@ -205,7 +205,7 @@
 			var/mob/living/L = A
 			touchable_mobs += L
 
-			if(L.absorbed)
+			if(L.absorbed && !issilicon(L))
 				L.Weaken(5)
 
 			// Fullscreen overlays
@@ -312,6 +312,12 @@
 	to_chat(owner, "<span class='notice'>[digest_alert_owner]</span>")
 	to_chat(M, "<span class='notice'>[digest_alert_prey]</span>")
 
+<<<<<<< HEAD
+=======
+	if(M.ckey)
+		GLOB.prey_digested_roundstat++
+
+>>>>>>> 0d50491322... Merge pull request #12416 from FartMaster69420/borg-grab-ez
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
