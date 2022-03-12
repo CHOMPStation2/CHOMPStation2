@@ -846,18 +846,13 @@
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
-	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
-	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
-=======
 	// New Emag gear for the minebots!
 	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
 	// No reason for these, upgrade modules replace them.
 	//src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
 	//src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
->>>>>>> 2427db9b84... Merge pull request #12420 from FartMaster69420/borg-upgrades
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
