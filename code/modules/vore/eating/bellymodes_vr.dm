@@ -205,7 +205,7 @@
 			var/mob/living/L = A
 			touchable_mobs += L
 
-			if(L.absorbed)
+			if(L.absorbed && !issilicon(L))
 				L.Weaken(5)
 
 			// Fullscreen overlays
@@ -318,7 +318,7 @@
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
-	
+    
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
