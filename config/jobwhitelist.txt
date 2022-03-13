@@ -1,3 +1,27 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+=======
+akram - clown
+amshaegaar - mime
+auraribbon - clown
+awkwarddryad - mime
+CGR - mime
+chargae - mime
+h0lysquirr3l - clown
+joey4298 - mime
+pastelprincedan - mime
+pastelprincedan - clown
+radishfriend - clown
+seiga - mime
+sgtryder - mime
+siennaathens - clown
+silvertalismen - clown
+suicidalpickles - mime
+tinybear16 - clown
+tygertac - clown
+verkister - clown
+whiskyrose - clown
+yecrowbarman - mime
+>>>>>>> 9e18aaaac0... Merge pull request #12438 from Very-Soft/whitelisttime
