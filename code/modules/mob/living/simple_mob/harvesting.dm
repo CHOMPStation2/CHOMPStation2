@@ -18,10 +18,10 @@
 /mob/living/simple_mob/examine(mob/user)
 	. = ..()
 	if(stat != DEAD && user && harvest_tool && (get_dist(user, src) <= 3))
-		. += "<span class='notice'>\The [src] can be [harvest_verb] with a [initial(harvest_tool.name)] every [harvest_cooldown / 600] minutes.</span>"
+		. += "<span class='notice'>\The [src] can be [harvest_verb] with a [initial(harvest_tool.name)] every [harvest_cooldown / 600] minutes.</span>" //CHOMPEdit Please do math better
 		var/time_to_harvest = (harvest_recent + harvest_cooldown) - world.time
 		if(time_to_harvest > 0)
-			. += "<span class='notice'>It can be [harvest_verb] in [(time_to_harvest)] second(s).</span>"
+			. += "<span class='notice'>It can be [harvest_verb] in [(time_to_harvest)] second(s).</span>" //CHOMPEdit This is as good as I can get for now, I intend to make it better later
 		else
 			. += "<span class='notice'>It can be [harvest_verb] now.</span>"
 
