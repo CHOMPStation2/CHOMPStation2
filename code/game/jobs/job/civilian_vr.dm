@@ -196,8 +196,7 @@
 	title = "Monk"
 
 
-<<<<<<< HEAD
-=======
+/*CHOMP Remove Start: because we have our own in maps/southern_cross/southern_cross_jobs.dm
 //////////////////////////////////
 //		      	Pilot
 //////////////////////////////////
@@ -230,7 +229,7 @@
 
 /datum/alt_title/helmsman
 	title = "Helmsman"
->>>>>>> 8c115109e5... Merge pull request #12434 from BonniePandora/Sky-King
+*/ //CHOMP Remove end
 
 //////////////////////////////////
 //			Entertainer
