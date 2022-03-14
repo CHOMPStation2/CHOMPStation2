@@ -3989,7 +3989,7 @@
 "cJn" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled,/area/rnd/storage)
 "cJL" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled,/area/rnd/storage)
 "cKg" = (/obj/machinery/seed_extractor,/turf/simulated/floor/tiled/hydro,/area/hydroponics)
-"cKs" = (/obj/structure/disposaloutlet{dir = 1},/obj/structure/disposalpipe/trunk,/obj/structure/plasticflaps/mining,/turf/simulated/floor/plating,/area/quartermaster/warehouse)
+"cKs" = (/obj/machinery/disposal/deliveryChute{dir = 1},/obj/structure/disposalpipe/trunk,/obj/structure/plasticflaps/mining,/turf/simulated/floor/plating,/area/quartermaster/warehouse)
 "cKu" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled,/area/rnd/storage)
 "cLh" = (/obj/structure/table/woodentable,/obj/machinery/recharger,/turf/simulated/floor/wood,/area/library)
 "cMi" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/effect/floor_decal/steeldecal/steel_decals4,/turf/simulated/floor/tiled,/area/rnd/storage)
