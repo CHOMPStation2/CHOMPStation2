@@ -294,7 +294,7 @@
 "aiC" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 4},/obj/machinery/door/firedoor/glass,/obj/machinery/door/blast/regular{density = 0; icon_state = "pdoor0"; id = "EngineWasteViewport1"; name = "Engine Waste Viewport Shutter"; opacity = 0},/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor,/area/engineering/engine_waste)
 "aiD" = (/obj/machinery/atmospherics/pipe/manifold4w/visible/black,/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor,/area/engineering/engine_waste)
 "aiE" = (/obj/machinery/atmospherics/unary/heat_exchanger{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/floor,/area/engineering/engine_waste)
-"aiF" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 10},/obj/machinery/meter,/turf/simulated/floor,/area/engineering/engine_waste)
+"aiF" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 10},/obj/machinery/meter{frequency = 1443; id = "wloop_atm_meter"},/turf/simulated/floor,/area/engineering/engine_waste)
 "aiG" = (/obj/machinery/atmospherics/pipe/simple/visible/cyan,/obj/item/device/radio/intercom{dir = 4; name = "Station Intercom (General)"; pixel_x = 21},/obj/machinery/meter,/turf/simulated/floor,/area/engineering/engine_waste)
 "aiH" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/structure/disposalpipe/sortjunction{dir = 4; name = "Engineering"; sortType = "Engineering"},/obj/effect/floor_decal/steeldecal/steel_decals4{dir = 8},/obj/effect/floor_decal/steeldecal/steel_decals4{dir = 5},/turf/simulated/floor/tiled,/area/engineering/hallway/engineer_hallway)
 "aiI" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled,/area/engineering/hallway/engineer_hallway)
