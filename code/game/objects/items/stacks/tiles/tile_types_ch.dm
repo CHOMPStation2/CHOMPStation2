@@ -1,6 +1,8 @@
 // Procs to allow tiles to have material variables, consider unifying this on stack parent?
 // Uncertain if any of these procs can result in unforseen issues with tile objects, if there are bugs with tiles check if any of these procs are the cause
 
+//^Does the bug this comment refers to even exist anymore. idk.
+
 /obj/item/stack/tile/New()
 	..()
 
@@ -11,7 +13,7 @@
 		qdel(src)
 		return 0
 
-	recipes = material.get_recipes()
+	//recipes = material.get_recipes()	No.
 	stacktype = material.stack_type
 	if(islist(material.stack_origin_tech))
 		origin_tech = material.stack_origin_tech.Copy()
@@ -22,7 +24,7 @@
 	if(!material.conductive)
 		flags |= NOCONDUCT
 
-	matter = material.get_matter()
+	//matter = material.get_matter()	Bad.
 	return 1
 
 
