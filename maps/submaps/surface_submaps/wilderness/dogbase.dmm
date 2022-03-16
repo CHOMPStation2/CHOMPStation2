@@ -33,7 +33,7 @@
 "lr" = (/obj/effect/floor_decal/industrial/danger{dir = 1},/turf/simulated/floor,/area/submap/DogBase)
 "lN" = (/obj/machinery/porta_turret/poi{faction = "syndicate"},/turf/simulated/floor,/area/submap/DogBase)
 "lX" = (/obj/effect/floor_decal/borderfloor,/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
-"ng" = (/mob/living/bot/cleanbot{faction = "malf_drone"},/obj/effect/floor_decal/corner/purple/diagonal,/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
+"ng" = (/mob/living/bot/cleanbot{faction = "syndicate"},/obj/effect/floor_decal/corner/purple/diagonal,/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
 "np" = (/obj/structure/table/woodentable,/obj/item/weapon/gun/projectile/pistol,/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
 "oW" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt,/area/template_noop)
 "pR" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/obj/effect/floor_decal/borderfloor{dir = 9},/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
