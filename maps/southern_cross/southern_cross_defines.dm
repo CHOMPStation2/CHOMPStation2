@@ -1,5 +1,12 @@
 // To be filled out when more progress on the new map occurs.
-
+//MATCH THE DEFINE NUMBER WITH THE ACTUAL Z-LEVEL THAT YOU SEE IN THE GAME
+/*
+those Z_LEVEL_WHATEVER defines need to line up with what's in game, they don't decide what levels they go on
+the order of zlevels is determined only by the order they're loaded in, there's no other way
+so those just need to be updated every time someone rearranges the level load order
+but they don't actually change anything about the load order
+*/
+//TO DO: Reorganize all #include for z-levels into one file
 #define Z_LEVEL_STATION_ONE				1
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
@@ -10,12 +17,13 @@
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
 #define Z_LEVEL_SURFACE_SKYLANDS		10
-#define Z_LEVEL_SURFACE_CASINO			11	//CHOMPedit - KSC = So there is weather on the casino.
-#define Z_LEVEL_GATEWAY					12  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
-//#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
-//Skip 13 and 14 for overmap stuff, I think???
-#define Z_LEVEL_FUELDEPOT				15
-#define Z_LEVEL_AEROSTAT				16
+#define Z_LEVEL_FUELDEPOT				11
+#define Z_LEVEL_AEROSTAT				12
+#define Z_LEVEL_GATEWAY					13 
+
+//#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
+//#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
+
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -235,12 +243,12 @@
 	base_turf = /turf/simulated/open
 
 //CHOMPedit - KSC = So Christmas Casino has weather.
-/datum/map_z_level/southern_cross/surface_casino
+/*/datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
 	name = "Casino"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
-
+*/
 /datum/map_z_level/southern_cross/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
@@ -293,9 +301,9 @@
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD,
-		Z_LEVEL_SURFACE_SKYLANDS,
-		Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino.
+		Z_LEVEL_SURFACE_SKYLANDS
 	)
+//Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
