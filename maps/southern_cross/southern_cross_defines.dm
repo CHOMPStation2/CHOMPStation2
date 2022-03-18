@@ -243,12 +243,12 @@ but they don't actually change anything about the load order
 	base_turf = /turf/simulated/open
 
 //CHOMPedit - KSC = So Christmas Casino has weather.
-/datum/map_z_level/southern_cross/surface_casino
+/*/datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
 	name = "Casino"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
-
+*/
 /datum/map_z_level/southern_cross/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
