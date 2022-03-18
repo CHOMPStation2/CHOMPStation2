@@ -191,7 +191,7 @@ but they don't actually change anything about the load order
 	z = Z_LEVEL_STATION_ONE
 	name = "Deck 1"
 	base_turf = /turf/space
-	transit_chance = 10
+	transit_chance = 15
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
 
@@ -199,7 +199,7 @@ but they don't actually change anything about the load order
 	z = Z_LEVEL_STATION_TWO
 	name = "Deck 2"
 	base_turf = /turf/simulated/open
-	transit_chance = 10
+	transit_chance = 15
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
@@ -207,7 +207,7 @@ but they don't actually change anything about the load order
 	z = Z_LEVEL_STATION_THREE
 	name = "Deck 3"
 	base_turf = /turf/simulated/open
-	transit_chance = 10
+	transit_chance = 15
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
@@ -253,7 +253,7 @@ but they don't actually change anything about the load order
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
-	transit_chance = 10
+	transit_chance = 15
 
 /datum/map_z_level/southern_cross/centcom
 	z = Z_LEVEL_CENTCOM
