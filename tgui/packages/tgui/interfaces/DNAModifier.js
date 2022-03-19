@@ -327,7 +327,11 @@ const DNAModifierMainRadiationEmitter = (props, context) => {
         icon="radiation"
         content="Pulse Radiation"
         tooltip="Mutates a random block of either the occupant's UI or SE."
+<<<<<<< HEAD
         tooltipPosition="top-end"
+=======
+        tooltipPosition="top"
+>>>>>>> da1bd80a5c... Merge pull request #12447 from FartMaster69420/dnamod-fix
         mt="0.5rem"
         onClick={() => act('pulseRadiation')}
       />
