@@ -49,8 +49,6 @@
 	build_path = /obj/item/device/depth_scanner
 	sort_string = "FBAAA"
 
-<<<<<<< HEAD
-=======
 /datum/design/item/weapon/mining/upgradeAOE
 	name = "Mining Explosion Upgrade"
 	desc = "An area of effect upgrade for the Proto-Kinetic Accelerator."
@@ -59,4 +57,3 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 5000, MAT_SILVER = 500, MAT_GOLD = 500, MAT_URANIUM = 2000, MAT_PHORON = 2000)
 	build_path = /obj/item/borg/upgrade/modkit/aoe/turfs
 	sort_string = "FAAF"
->>>>>>> fbc44e712e... Merge pull request #12440 from FartMaster69420/PKA-AOE
