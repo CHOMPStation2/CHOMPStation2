@@ -40,19 +40,19 @@
 
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
 
-	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.
-	#include "southern_cross-1.dmm" //Deck 1
-	#include "southern_cross-2.dmm" //Deck 2
-	#include "southern_cross-3.dmm" //Deck 3
-//	#include "southern_cross-4.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.7
-	#include "southern_cross-5.dmm" //Sif outpost
-	#include "southern_cross-6.dmm" //Sif mine
-	#include "southern_cross-7.dmm" //Carrier
-	#include "southern_cross-8.dmm" //Centcom
-	#include "southern_cross-9.dmm" //Transit
-	#include "southern_cross-10.dmm" //Sif wilds
-	#include "southern_cross-12.dmm" //Sif Skylands
-	//CHOMPStation Edit End
+	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
+		#include "southern_cross-1.dmm" //Deck 1 z1
+		#include "southern_cross-2.dmm" //Deck 2 z2
+		#include "southern_cross-3.dmm" //Deck 3 z2
+//		#include "southern_cross-4.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.7
+		#include "southern_cross-5.dmm" //Sif outpost z4
+		#include "southern_cross-6.dmm" //Sif mine z5
+		#include "southern_cross-7.dmm" //Carrier z6
+		#include "southern_cross-8.dmm" //Centcom z7
+		#include "southern_cross-9.dmm" //Transit z8
+		#include "southern_cross-10.dmm" //Sif wilds z9
+		#include "southern_cross-12.dmm" //Skylands z10
+	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
 	#include "submaps/_southern_cross_submaps.dm" //This contains gateway stuff
@@ -63,6 +63,7 @@
 	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
 	//KARA - Planet
 	#include "overmap/planets/kara/kara.dm" //And this is the sector for Kara. I have decided to better organize future planets and maps for them
+	#include "overmap/planets/kara/northern_star/northern_star.dm" //This is the actual map info that we're using for kara
 	#include "overmap/planets/kara/aerostat/aerostat.dm" //This is an installation for Kara.
 	//SPACE - Anything random in space
 	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.

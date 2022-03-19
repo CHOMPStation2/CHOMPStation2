@@ -21,13 +21,15 @@
 [i]Class[/i]: Installation
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: CONDEMNED! NO ENTRY! -Vir System Authority"}
+	map_z = list(Z_LEVEL_AEROSTAT)
 	initial_generic_waypoints = list("aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast")
 	icon_state = "object"
 	unknown_state = "object"
 	known = FALSE
 	in_space = 0
 	start_x =  14
-	start_y =  14
+	start_y =  15
+
 
 
 //	extra_z_levels = list(Z_LEVEL_AEROSTAT_2) //SOON

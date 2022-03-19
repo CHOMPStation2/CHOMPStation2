@@ -67,7 +67,6 @@
 "bo" = (/obj/structure/grille,/obj/structure/grille,/obj/structure/window/reinforced/full,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
 "bp" = (/obj/effect/floor_decal/industrial/warning/dust/corner{dir = 4},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
 "bq" = (/obj/effect/floor_decal/industrial/warning/dust{dir = 1},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
-"br" = (/obj/effect/overmap/visitable/planet/kara,/turf/unsimulated/floor/sky/kara_sky,/area/sc_away/aerostat)
 "bs" = (/obj/effect/floor_decal/industrial/warning/dust/corner{dir = 1},/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/inside)
 "bt" = (/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/solars)
 "bu" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/industrial/warning/dust{dir = 4},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/kara,/area/sc_away/aerostat/solars)
@@ -378,6 +377,6 @@ cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawaw
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
-cZacbrawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
+cZacawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawawcZ
 cZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZcZ
 "}
