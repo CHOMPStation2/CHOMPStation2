@@ -7,9 +7,10 @@
 [i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
 [i]Habitability[/i]: Low (High Temperature, Toxic Atmosphere). Habitats in orbit.
 [b]Notice[/b]: NT security is currently restricting free flights to Northern Star."}
-	map_z = (Z_LEVEL_AEROSTAT) //This is just so that I can get the skybox background in. I have Kara and aerostat objects on the aerostat map which is highly unusual, but necessary.
-//	extra_z_levels = list(Z_LEVEL_AEROSTAT)
-	in_space = 0
+	map_z = list(Z_LEVEL_NS_MINE) //Using the northern star mine as the map. Located in /maps/southern_cross/overmap/planets/kara/northern_star/
+	extra_z_levels = list(Z_LEVEL_NS_MINE)
+	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock") //northern_star.dm landmarks
+	in_space = 1
 	start_x  = 14
 	start_y  = 14
 	skybox_offset_x = 128
@@ -19,13 +20,11 @@
 	water_color = "#AD9100"
 	ice_color = "#AD9100"
 	icon_state = "chlorine"
-	known = TRUE
+	known = 1
 
-/*
 /obj/effect/overmap/visitable/planet/kara/Initialize()
-	atmosphere = new(CELL_VOLUME)
-	atmosphere.adjust_gas_temp("oxygen", MOLES_O2STANDARD, 273)
-	atmosphere.adjust_gas_temp("nitrogen", MOLES_N2STANDARD, 273)
-
 	. = ..()
-*/
+	docking_codes = null
+
+/obj/effect/overmap/visitable/planet/kara/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
+	return list(Z_LEVEL_NS_MINE)
