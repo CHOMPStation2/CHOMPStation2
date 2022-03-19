@@ -93,3 +93,10 @@
 /obj/effect/shuttle_landmark/premade/northern_star/ns_mine_echidna_dock
 	name = "Northern Star Mine - Echidna Dock"
 	landmark_tag = "northern_star_mine_echidna_dock"
+
+
+// -- Turfs -- //
+/turf/simulated/mineral/floor/ignore_mapgen/airless
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
