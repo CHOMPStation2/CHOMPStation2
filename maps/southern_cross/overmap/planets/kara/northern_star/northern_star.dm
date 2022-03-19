@@ -1,3 +1,4 @@
+#define AWAY_MISSION_TEST 1
 // -- Datums -- //
 
 /datum/map_template/sc_lateload/northern_star
