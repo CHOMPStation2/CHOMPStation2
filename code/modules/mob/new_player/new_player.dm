@@ -475,7 +475,12 @@
 
 	ticker.mode.latespawn(character)
 
-	if(J.mob_type & JOB_SILICON)
+	//CHOMPEdit Begin - non-crew join don't get a message
+	if(rank == "Non crew")
+		if(!(J.mob_type & JOB_SILICON))
+			ticker.minds += character.mind
+	//CHOMPEdit End
+	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)

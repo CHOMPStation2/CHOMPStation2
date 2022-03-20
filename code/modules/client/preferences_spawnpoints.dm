@@ -40,6 +40,7 @@ var/list/spawntypes = list()
 /datum/spawnpoint/arrivals
 	display_name = "Arrivals Shuttle"
 	msg = "will arrive to the station shortly by shuttle"
+	disallow_job = list("Non crew") //CHOMPEdit add
 
 /datum/spawnpoint/arrivals/New()
 	..()
@@ -65,6 +66,7 @@ var/list/spawntypes = list()
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
 	allowed_mob_types = JOB_CARBON
+	disallow_job = list("Non crew") //CHOMPEdit add
 
 /datum/spawnpoint/cryo/New()
 	..()
@@ -74,6 +76,7 @@ var/list/spawntypes = list()
 	display_name = "Cyborg Storage"
 	msg = "has been activated from storage"
 	allowed_mob_types = JOB_SILICON
+	disallow_job = list("Non crew") //CHOMPEdit add
 
 /datum/spawnpoint/cyborg/New()
 	..()
@@ -100,6 +103,7 @@ var/global/list/latejoin_tram   = list()
 /datum/spawnpoint/tram
 	display_name = "Tram Station"
 	msg = "will arrive to the station shortly by shuttle"
+	disallow_job = list("Non crew") //CHOMPEdit add
 
 /datum/spawnpoint/tram/New()
 	..()
