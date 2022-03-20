@@ -242,9 +242,15 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,
+<<<<<<< HEAD
 		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
 		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
 		/obj/item/weapon/gun/energy/stunrevolver/vintage,
+=======
+		/obj/item/clothing/gloves/black,
+		///obj/item/gunbox, // VOREStation Removal
+		/obj/item/gunbox/stun,
+>>>>>>> e45c901f7c... Merge pull request #12443 from GhostActual/detective_guns
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
