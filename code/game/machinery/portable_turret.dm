@@ -675,6 +675,7 @@
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
+	/* CHOMPEdit Start
 	var/list/seenturfs = list()
 	for(var/turf/T in oview(world.view, src))
 		seenturfs += T
@@ -684,11 +685,11 @@
 			continue
 		if(get_turf(M) in seenturfs)
 			assess_and_assign(M, targets, secondarytargets)
+	This was dumb.*/
 
-	/* This was dumb. Why do this and then check line of sight later?
-	for(var/mob/M in mobs_in_xray_view(world.view, src))
+	for(var/mob/M in oview(world.view, src))
 		assess_and_assign(M, targets, secondarytargets)
-	*/
+	//CHOMPEdit End
 
 	if(!tryToShootAt(targets))
 		if(!tryToShootAt(secondarytargets)) // if no valid targets, go for secondary targets
