@@ -74,12 +74,3 @@
 	display_name = "bluespace bracelet"
 	path = /obj/item/clothing/gloves/bluespace
 	cost = 5
-<<<<<<< HEAD
-
-/datum/gear/utility/satchel_strapless
-	display_name = "satchel strapless"
-	path = /obj/item/weapon/storage/backpack/satchel/strapless
-	slot = slot_back
-	cost = 1
-=======
->>>>>>> a23bb91159... Merge pull request #12466 from BonniePandora/Strap-on,-more-like-strap-off
