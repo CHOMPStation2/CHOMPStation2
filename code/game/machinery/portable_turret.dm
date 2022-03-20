@@ -687,7 +687,7 @@
 			assess_and_assign(M, targets, secondarytargets)
 	This was dumb.*/
 
-	for(var/mob/M in mobs_in_xray_view(world.view, src))
+	for(var/mob/M in oview(world.view, src))
 		assess_and_assign(M, targets, secondarytargets)
 	//CHOMPEdit End
 
