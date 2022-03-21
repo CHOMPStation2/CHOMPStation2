@@ -307,8 +307,6 @@
 	"Grey Vest" = /obj/item/clothing/accessory/cowboy_vest/grey
 	)
 	gear_tweaks += new/datum/gear_tweak/path(cowboy_vests)
-<<<<<<< HEAD
-=======
 
 /datum/gear/accessory/pride
 	display_name = "pride pin selection"
@@ -321,4 +319,3 @@
 		var/obj/item/clothing/accessory/pridepin_type = pridepin
 		pridepins[initial(pridepin_type.name)] = pridepin_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(pridepins))
->>>>>>> e1f20bae13... Merge pull request #12500 from GhostActual/pride_pins
