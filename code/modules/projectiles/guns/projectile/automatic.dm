@@ -290,14 +290,25 @@
 		return
 	..()
 
+/*
+ * Automatic Shotgun
+ */
 /obj/item/weapon/gun/projectile/automatic/as24
 	name = "automatic shotgun"
-	desc = "The AS-24 is a rugged looking automatic shotgun produced exclusively for the SCG Fleet by Hephaestus Industries. For very obvious reasons, it's illegal to own in many juristictions. Uses 12g rounds."
-	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by professional armed forces across human space."
+	desc = "The AS-24 is a rugged looking automatic shotgun produced exclusively for the SCG Fleet by Hephaestus \
+	Industries. For very obvious reasons, it's illegal to own in many juristictions. Uses 12g rounds."
+	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' \
+	branding for its military-grade equipment used by professional armed forces across human space."
 	icon_state = "ashot"
+<<<<<<< HEAD
 	item_state = null
 	wielded_item_state = "woodarifle-wielded" //Placeholder
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	item_state = "ashot"
+	wielded_item_state = "ashot-wielded"
+	w_class = ITEMSIZE_LARGE
+>>>>>>> e6662604ec... Merge pull request #12499 from GhostActual/shotguns-galore
 	force = 10
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
@@ -312,7 +323,6 @@
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
 		list(mode_name="3-round bursts", burst=3, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.0, 0.6, 0.6))
-//		list(mode_name="6-round bursts", burst=6, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30, -30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 1.2)),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/as24/update_icon()
