@@ -21,7 +21,13 @@
 					  "Lab Assistant" = /datum/alt_title/intern_sci, //CHOMPEdit
 					  "Security Cadet" = /datum/alt_title/intern_sec,
 					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
+<<<<<<< HEAD
 					  "Server" = /datum/alt_title/server)
+=======
+					  "Jr. Explorer" = /datum/alt_title/intern_exp,
+					  "Server" = /datum/alt_title/server,
+					  "Assistant" = /datum/alt_title/assistant)
+>>>>>>> 51f1481f60... Merge pull request #12502 from Very-Soft/assistant
 	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
 						another job. Though they are part of the crew, they have no real authority."
 	timeoff_factor = 0 // Interns, noh
@@ -59,6 +65,11 @@
 /datum/alt_title/server
 	title = "Server"
 	title_blurb = "A Server helps out kitchen and diner staff with various tasks, primarily food delivery. A Server has no real authority."
+	title_outfit = /decl/hierarchy/outfit/job/service/server
+
+/datum/alt_title/assistant
+	title = "Assistant"
+	title_blurb = "An assistant helps out wherever they might be needed. They have no authority, but can volunteer to help if help is needed."
 	title_outfit = /decl/hierarchy/outfit/job/service/server
 
 /datum/job/intern/New()
