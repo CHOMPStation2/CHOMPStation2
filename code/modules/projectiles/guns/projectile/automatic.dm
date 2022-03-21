@@ -300,15 +300,9 @@
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' \
 	branding for its military-grade equipment used by professional armed forces across human space."
 	icon_state = "ashot"
-<<<<<<< HEAD
-	item_state = null
-	wielded_item_state = "woodarifle-wielded" //Placeholder
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
-=======
 	item_state = "ashot"
 	wielded_item_state = "ashot-wielded"
-	w_class = ITEMSIZE_LARGE
->>>>>>> e6662604ec... Merge pull request #12499 from GhostActual/shotguns-galore
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
