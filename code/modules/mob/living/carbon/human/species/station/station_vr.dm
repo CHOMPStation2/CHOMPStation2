@@ -226,6 +226,11 @@
 /datum/species/vulpkanin
 	name = SPECIES_VULPKANIN
 	name_plural = "Vulpkanin"
+	blurb = "Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
+	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
+	culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominates their lifestyles \
+	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
+	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent." //CHOMPedit
 	icobase = 'icons/mob/human_races/r_vulpkanin.dmi'
 	deform = 'icons/mob/human_races/r_vulpkanin.dmi'
 //	path = /mob/living/carbon/human/vulpkanin
@@ -246,14 +251,8 @@
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
 
-	blurb = "Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
-	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
-	culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominates their lifestyles \
-	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
-	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
-
 //CHOMPStation Removal
-//	wikilink="https://www.yawn.ocry.com/Vulpkanin"
+//	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 

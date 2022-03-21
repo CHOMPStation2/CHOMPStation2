@@ -67,6 +67,7 @@
 	id = "cookingoilpeanut"
 	result = "cookingoil"
 	required_reagents = list("peanutoil" = 10)
+	inhibitors = list("sugar" = 1, "sodiumchloride" = 1)
 	catalysts = list("enzyme" = 5)
 	result_amount = 10
 
@@ -125,6 +126,7 @@
 	id = "meatball"
 	result = null
 	required_reagents = list("protein" = 3, "flour" = 5)
+	catalysts = list("enzyme" = 5)
 	result_amount = 3
 
 /decl/chemical_reaction/instant/food/meatball/on_reaction(var/datum/reagents/holder, var/created_volume)

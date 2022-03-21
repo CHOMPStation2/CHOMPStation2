@@ -395,7 +395,8 @@
 					/obj/item/stack/medical/advanced/bruise_pack = 6,
 					/obj/item/stack/medical/advanced/ointment = 6,
 					/obj/item/stack/medical/splint = 4,
-					/obj/item/weapon/storage/pill_bottle/carbon = 2)
+					/obj/item/weapon/storage/pill_bottle/carbon = 2,
+					/obj/item/clothing/mask/chewable/candy/lolli = 15)
 	contraband = list(/obj/item/weapon/reagent_containers/pill/tox = 3,
 					/obj/item/weapon/reagent_containers/pill/stox = 4,
 					/obj/item/weapon/reagent_containers/pill/antitox = 6)
@@ -633,7 +634,7 @@
 					/obj/item/device/flashlight/glowstick/yellow = 3)
 	contraband = list(/obj/item/weapon/weldingtool/hugetank = 2,
 					/obj/item/clothing/gloves/fyellow = 2)
-	premium = list(/obj/item/clothing/gloves/yellow = 1)
+	premium = list(/obj/item/clothing/gloves/heavy_engineer = 1) //VOREStation Edit - yellow gloves are common in engineering, let's make "premium" actually mean something
 	req_log_access = access_ce
 	has_logs = 1
 
@@ -847,13 +848,15 @@
 					/obj/item/weapon/storage/box/wormcan/sickly = 10,
 					/obj/item/weapon/material/fishing_net = 2,
 					/obj/item/glass_jar/fish = 4,
-					/obj/item/stack/cable_coil/random = 6)
+					/obj/item/stack/cable_coil/random = 6,
+					/obj/item/clothing/head/fishing = 5)
 	prices = list(/obj/item/weapon/material/fishing_rod/modern/cheap = 50,
 					/obj/item/weapon/storage/box/wormcan = 12,
 					/obj/item/weapon/storage/box/wormcan/sickly = 6,
 					/obj/item/weapon/material/fishing_net = 40,
 					/obj/item/glass_jar/fish = 10,
-					/obj/item/stack/cable_coil/random = 4)
+					/obj/item/stack/cable_coil/random = 4,
+					/obj/item/clothing/head/fishing = 15)
 	premium = list(/obj/item/weapon/storage/box/wormcan/deluxe = 1)
 	contraband = list(/obj/item/weapon/storage/box/wormcan/deluxe = 1)
 
@@ -1143,6 +1146,46 @@
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
 	vending_sound = "machines/vending/vending_cans.ogg"
 
+///////////////////////Donk-Soft!///////////////////////////////////////
+
+/obj/machinery/vending/donksoft
+	name = "Donk-Soft!"
+	desc = "A toy vendor owned by Donk-Soft, a NanoTrasen sub-company."
+	description_fluff = "Donk-Soft is a sub-company owned by NanoTrasen that distribute replica weapons that shoot squishy foam darts. \
+	They've been a staple of personal entertainment for decades but their buisness has only just moved to the fringes of the galaxy."
+	icon_state = "donksoft"
+	product_slogans = "Get your cool toys today!;Quality toy weapons for cheap prices!"
+	product_ads = "Express your inner child today!;Who needs responsibilities when you have toy weapons?;Make your next murder FUN!"
+	products = list(/obj/item/ammo_magazine/ammo_box/foam = 20,
+					/obj/item/weapon/storage/belt/dbandolier = 5,
+					/obj/item/ammo_magazine/mfoam_dart/pistol = 10,
+					/obj/item/ammo_magazine/mfoam_dart/smg = 10,
+					/obj/item/weapon/gun/projectile/shotgun/pump/toy = 5,
+					/obj/item/weapon/gun/projectile/revolver/toy/sawnoff = 5,
+					/obj/item/weapon/gun/projectile/pistol/toy = 5,
+					/obj/item/weapon/gun/projectile/pistol/toy/n99 = 5,
+					/obj/item/weapon/gun/projectile/shotgun/pump/toy/levergun = 5,
+					/obj/item/weapon/gun/projectile/revolver/toy = 5,
+					/obj/item/weapon/gun/projectile/revolver/toy/big_iron = 5,
+					/obj/item/weapon/gun/projectile/revolver/toy/crossbow = 5,
+					/obj/item/weapon/gun/projectile/automatic/toy = 5
+					)
+	contraband = list()
+	prices = list(/obj/item/ammo_magazine/ammo_box/foam = 50,
+					/obj/item/weapon/storage/belt/dbandolier = 100,
+					/obj/item/ammo_magazine/mfoam_dart/pistol = 25,
+					/obj/item/ammo_magazine/mfoam_dart/smg  = 25,
+					/obj/item/weapon/gun/projectile/shotgun/pump/toy = 250,
+					/obj/item/weapon/gun/projectile/revolver/toy/sawnoff = 150,
+					/obj/item/weapon/gun/projectile/pistol/toy = 100,
+					/obj/item/weapon/gun/projectile/pistol/toy/n99 = 175,
+					/obj/item/weapon/gun/projectile/shotgun/pump/toy/levergun = 250,
+					/obj/item/weapon/gun/projectile/revolver/toy = 100,
+					/obj/item/weapon/gun/projectile/revolver/toy/big_iron = 175,
+					/obj/item/weapon/gun/projectile/revolver/toy/crossbow = 75,
+					/obj/item/weapon/gun/projectile/automatic/toy = 300)
+	vending_sound = "machines/vending/vending_cans.ogg"
+
 /*
  * Department/job vendors to sit in place of lockers taking up space
  */
@@ -1188,7 +1231,10 @@
 		/obj/item/clothing/mask/bandana/red = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security = 5,
 		/obj/item/clothing/accessory/armband = 5,
-		/obj/item/clothing/accessory/holster/waist = 5
+		/obj/item/clothing/accessory/holster/armpit = 2,	//VOREStation edit - gives some variety of available holsters for those who forgot to bring their own
+		/obj/item/clothing/accessory/holster/waist = 2,	//VOREStation edit - But also reduces the number per type, so there's 8 overall rather than like, 20
+		/obj/item/clothing/accessory/holster/hip = 2,	//VOREStation edit
+		/obj/item/clothing/accessory/holster/leg = 2	//VOREStation edit
 	)
 	req_log_access = access_hop
 	has_logs = 1

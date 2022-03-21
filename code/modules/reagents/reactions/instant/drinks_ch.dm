@@ -303,6 +303,15 @@
 	result = "enragedarachnidslammer"
 	result_amount = 0.1
 
+/decl/chemical_reaction/instant/drinks/pilk
+	name = "Pilk"
+	id = "pilk"
+	result = "pilk"
+	required_reagents = list("milk" = 1, "cola" = 1)
+	result_amount = 2
+
+
+
 //YW drinks
 /decl/chemical_reaction/instant/drinks/lovepotion_yw
 	name = "Strawberry Love Potion"

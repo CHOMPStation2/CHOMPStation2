@@ -140,7 +140,8 @@ var/list/_slime_default_emotes = list(
 		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
 		var/image/I = image('icons/inventory/head/mob.dmi', src, hat_state)
 		I.pixel_y = -7 // Slimes are small.
-		I.appearance_flags = RESET_COLOR
+		I.appearance_flags = RESET_COLOR | KEEP_APART
+		I.blend_mode = BLEND_OVERLAY
 		add_overlay(I)
 
 // Controls the 'mood' overlay. Overrided in subtypes for specific behaviour.
@@ -161,6 +162,10 @@ var/list/_slime_default_emotes = list(
 		if(S.slime_color == src.slime_color)
 			return TRUE
 		else
+			return FALSE
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		if(istype(H.species, /datum/species/monkey))	// Monke always food
 			return FALSE
 	// The other stuff was already checked in parent proc, and the . variable will implicitly return the correct value.
 

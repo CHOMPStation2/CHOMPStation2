@@ -745,7 +745,7 @@
 				/obj/item/toy/snappop,
 				/obj/item/toy/sword,
 				/obj/item/toy/balloon,
-				/obj/item/toy/crossbow,
+				/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 				/obj/item/toy/blink,
 				/obj/item/weapon/reagent_containers/spray/waterflower,
 				/obj/item/toy/eight_ball,
@@ -859,7 +859,7 @@
 				/obj/item/weapon/reagent_containers/food/snacks/donut/plain,
 				/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-				/obj/item/weapon/reagent_containers/food/snacks/cookiesnack)
+				/obj/item/weapon/reagent_containers/food/snacks/cookie)
 
 /obj/random/mre/dessert/vegan
 	name = "random vegan MRE dessert"

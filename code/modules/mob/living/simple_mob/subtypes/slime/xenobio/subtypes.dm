@@ -417,6 +417,8 @@
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
 			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 
 
 /mob/living/simple_mob/slime/xenobio/amber
@@ -563,7 +565,7 @@
 
 /datum/modifier/aura/slime_heal
 	name = "slime mending"
-	desc = "You feel somewhat gooy."
+	desc = "You feel somewhat gooey."
 	mob_overlay_state = "pink_sparkles"
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 2
@@ -605,6 +607,7 @@
 		)
 
 /mob/living/simple_mob/slime/xenobio/gold/slimebatoned(mob/living/user, amount)
+	adjust_discipline(round(amount/2))
 	power_charge = between(0, power_charge + amount, 10)
 
 /mob/living/simple_mob/slime/xenobio/gold/get_description_interaction() // So it doesn't say to use a baton on them.

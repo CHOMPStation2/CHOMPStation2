@@ -1326,7 +1326,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
@@ -13399,12 +13399,12 @@
 /area/storage/primary)
 "Ez" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/beanbags,
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel,
 /obj/item/weapon/paper{
 	info = "This permit signifies that the Bartender is permitted to posess this firearm in the bar, and ONLY the bar. Failure to adhere to this permit will result in confiscation of the weapon and possibly arrest.";
 	name = "Shotgun permit"
 	},
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /turf/simulated/floor/wood,
 /area/stellardelight/deck2/barbackroom)
 "EA" = (
@@ -13801,7 +13801,7 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/obj/item/weapon/paper/dockingcodes,
+/obj/item/weapon/paper/dockingcodes/sd,
 /obj/item/device/radio,
 /obj/item/device/radio,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
@@ -13907,6 +13907,9 @@
 	dir = 4
 	},
 /obj/machinery/vending/nifsoft_shop,
+/obj/machinery/item_bank{
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "FB" = (
@@ -15954,7 +15957,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
@@ -17384,7 +17387,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 4;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,

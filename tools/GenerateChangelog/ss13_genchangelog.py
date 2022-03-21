@@ -25,6 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+'''//CHOMP Edit: I am tired of this thing not working. I am just removing it.
+
 from __future__ import print_function
 import yaml, os, glob, sys, re, time, argparse
 from datetime import datetime, date
@@ -213,3 +215,4 @@ if len(del_after):
 
 if errors:
     sys.exit(1)
+'''

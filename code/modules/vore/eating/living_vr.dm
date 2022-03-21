@@ -11,6 +11,9 @@
 	var/obj/belly/vore_selected			// Default to no vore capability.
 	var/list/vore_organs = list()		// List of vore containers inside a mob
 	var/absorbed = FALSE				// If a mob is absorbed into another
+	var/list/temp_language_sources = list()	//VOREStation Addition - Absorbs add languages to the pred
+	var/list/temp_languages = list()		//VOREStation Addition - Absorbs add languages to the pred
+	var/prey_controlled = FALSE			//VOREStation Addition
 	var/weight = 137					// Weight for mobs for weightgain system
 	var/weight_gain = 1 				// How fast you gain weight
 	var/weight_loss = 0.5 				// How fast you lose weight
@@ -426,13 +429,18 @@
 
 	//You're in a belly!
 	if(isbelly(loc))
+		//You've been taken over by a morph
+		if(istype(src, /mob/living/simple_mob/vore/hostile/morph/dominated_prey))
+			var/mob/living/simple_mob/vore/hostile/morph/dominated_prey/s = src
+			s.undo_prey_takeover(TRUE)
+			return
 		var/obj/belly/B = loc
 		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
 		if(confirm != "Okay" || loc != B)
 			return
 		//Actual escaping
-		absorbed = 0	//Make sure we're not absorbed
-		muffled = 0		//Removes Muffling
+		absorbed = FALSE	//Make sure we're not absorbed
+		muffled = FALSE		//Removes Muffling
 		forceMove(get_turf(src)) //Just move me up to the turf, let's not cascade through bellies, there's been a problem, let's just leave.
 		for(var/mob/living/simple_mob/SA in range(10))
 			SA.prey_excludes[src] = world.time
@@ -466,7 +474,6 @@
 		crystal.bound_mob = null
 		crystal.bound_mob = capture_crystal = 0
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
-
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
@@ -928,12 +935,15 @@
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
-	if(showvoreprefs)
-		. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
+	if(ooc_notes)
+		. += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>"
+	. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
 
 /mob/living/Topic(href, href_list)	//Can't find any instances of Topic() being overridden by /mob/living in polaris' base code, even though /mob/living/carbon/human's Topic() has a ..() call
 	if(href_list["vore_prefs"])
 		display_voreprefs(usr)
+	if(href_list["ooc_notes"])
+		src.Examine_OOC()
 	return ..()
 
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument

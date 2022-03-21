@@ -105,11 +105,16 @@
 	return
 
 
-/obj/item/weapon/paper/Initialize(mapload)
-	. = ..()
+/obj/item/weapon/paper/Initialize(mapload, var/text, var/title)
+    . = ..()
 
-	if(mapload) // Jank, but we do this to prevent maploaded papers from somehow stacking across rounds if re-added to the board by a player.
-		was_maploaded = TRUE
+    if(istext(title))
+        name = title
+    if(istext(text))
+        info = text
+
+    if(mapload) // Jank, but we do this to prevent maploaded papers from somehow stacking across rounds if re-added to the board by a player.
+        was_maploaded = TRUE
 
 /obj/item/weapon/paper/New(var/newloc, var/text, var/title)
 	..()
@@ -159,7 +164,7 @@
 		. += "<span class='notice'>You have to go closer if you want to read it.</span>"
 
 /obj/item/weapon/paper/proc/show_content(var/mob/user, var/forceshow=0)
-	if(!(istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon)) && !forceshow)
+	if(!(istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon) || user.universal_understand) && !forceshow)
 		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[stars(info)][stamps]</BODY></HTML>", "window=[name]")
 		onclose(user, "[name]")
 	else
@@ -341,6 +346,7 @@
 	t = replacetext(t, "\[/u\]", "</U>")
 	t = replacetext(t, "\[time\]", "[stationtime2text()]")
 	t = replacetext(t, "\[date\]", "[stationdate2text()]")
+	t = replacetext(t, "\[station\]", "[station_name()]")
 	t = replacetext(t, "\[large\]", "<font size=\"4\">")
 	t = replacetext(t, "\[/large\]", "</font>")
 	if(findtext(t, "\[sign\]"))

@@ -19,6 +19,7 @@
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
+	var/last_breath_sound				// Feels weird doing this, but allows us to store the value across proc calls per-mob.
 
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
 	if(!dna)
@@ -334,11 +335,6 @@
 	if(href_list["item"])
 		log_runtime(EXCEPTION("Warning: human/Topic was called with item [href_list["item"]], but the item Topic is deprecated!"))
 		// handle_strip(href_list["item"],usr)
-
-	// VOREStation Start
-	if(href_list["ooc_notes"])
-		src.Examine_OOC()
-	// VOREStation End
 
 	if (href_list["criminal"])
 		if(hasHUD(usr,"security"))

@@ -10,6 +10,7 @@
 #define MAP_LEVEL_VORESPAWN		0x100	//CHOMPedit Z-levels players are allowed to late join to via vorish means. Usually non-dangerous locations.
 #define MAP_LEVEL_PERSIST       0x200   // Z-levels where SSpersistence should persist between rounds //CHOMPedit bumped to 0x200 because vorespawn, hopefully this doesn't break things
 #define MAP_LEVEL_MAPPABLE       0x400   // Z-levels where mapping units will work fully //CHOMPedit bumped to 0x400, somethingsomething don't break
+#define MAP_LEVEL_BELOW_BLOCKED   0x800   // Z-levels in multiz with level below not meant to be 'normally' accessible //CHOMPedit bumped to 0x800, please god do not break
 
 // Misc map defines.
 #define SUBMAP_MAP_EDGE_PAD 8 // Automatically created submaps are forbidden from being this close to the main map's edge.	//VOREStation Edit

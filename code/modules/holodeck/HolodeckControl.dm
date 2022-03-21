@@ -213,11 +213,10 @@
 		if(!(get_turf(item) in linkedholodeck))
 			derez(item, 0)
 
-	if (!safety_disabled)
-		for(var/mob/living/simple_mob/animal/space/carp/holodeck/C in holographic_mobs)
-			if (get_area(C.loc) != linkedholodeck)
-				holographic_mobs -= C
-				C.derez()
+	for(var/mob/living/simple_mob/animal/space/carp/holodeck/C in holographic_mobs) //CHOMPEdit
+		if (get_area(C.loc) != linkedholodeck)
+			holographic_mobs -= C
+			C.derez()
 
 	if(!..())
 		return
@@ -316,6 +315,9 @@
 
 	for(var/obj/effect/decal/cleanable/blood/B in linkedholodeck)
 		qdel(B)
+
+	for(var/obj/effect/landmark/L in linkedholodeck)
+		qdel(L)
 
 	holographic_objs = A.copy_contents_to(linkedholodeck , 1)
 	for(var/obj/holo_obj in holographic_objs)

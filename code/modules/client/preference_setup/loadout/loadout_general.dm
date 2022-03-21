@@ -53,7 +53,11 @@
 /datum/gear/plushie/New()
 	..()
 	var/list/plushies = list()
-	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - /obj/item/toy/plushie/therapy)
+	var/list/blacklisted_types = list()
+	// look if theres a better way to do this im all ears
+	blacklisted_types += subtypesof(/obj/item/toy/plushie/therapy)
+	blacklisted_types += subtypesof(/obj/item/toy/plushie/fluff)
+	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - blacklisted_types)
 		plushies[initial(plushie_type.name)] = plushie_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))
 
@@ -136,3 +140,12 @@
 	display_name = "Cards Against The Galaxy (black deck)"
 	path = /obj/item/weapon/deck/cah/black
 	description = "The ever-popular Cards Against The Galaxy word game. Warning: may include traces of broken fourth wall. This is the black deck."
+
+/datum/gear/wizoff
+	display_name = "WizOff"
+	path = /obj/item/weapon/deck/wizoff
+
+/datum/gear/wizoffguide
+	display_name = "WizOff Guide"
+	path = /obj/item/weapon/book/manual/wizzoffguide
+	description = "The guide to playing the ever popular card game: Wiz-Off!"

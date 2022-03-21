@@ -214,6 +214,7 @@
 	networks = list(NETWORK_SECURITY)
 	pto_type = PTO_SECURITY
 	can_be_pushed = 0
+	supported_upgrades = list(/obj/item/borg/upgrade/tasercooler)
 
 /obj/item/weapon/robot_module/robot/knine/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src) //You need cuffs to be a proper sec borg!
@@ -518,6 +519,7 @@
 	channels = list("Science" = 1)
 	pto_type = PTO_SCIENCE
 	can_be_pushed = 0
+	supported_upgrades = list(/obj/item/borg/upgrade/advrped)
 
 /obj/item/weapon/robot_module/robot/science/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
@@ -533,8 +535,12 @@
 	src.modules += new /obj/item/weapon/storage/part_replacer(src)
 	src.modules += new /obj/item/device/robotanalyzer(src)
 	src.modules += new /obj/item/weapon/card/robot(src)
+	//Added a circuit gripper
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
+	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)  //Chompedit this was missing for some strange reason.
+	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)  //Chompedit This also.
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -616,10 +622,12 @@
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/weapon/gripper(src)
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
-	src.modules += new /obj/item/device/pipe_painter(src)
+	// The RPD does the exact same thing, this just take space.
+	//src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/rms(src)
 	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)  //CHOMPedit: add RCD
+	src.modules += new /obj/item/weapon/pipe_dispenser(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 
@@ -826,6 +834,7 @@
 	channels = list("Supply" = 1)
 	pto_type = PTO_CARGO
 	can_be_pushed = 0
+	supported_upgrades = list(/obj/item/borg/upgrade/pka, /obj/item/borg/upgrade/diamonddrill)
 
 /obj/item/weapon/robot_module/robot/kmine/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/borg/sight/material(src)
@@ -837,8 +846,13 @@
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
-	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
+	// New Emag gear for the minebots!
+	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
+
+	// No reason for these, upgrade modules replace them.
+	//src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
+	//src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"

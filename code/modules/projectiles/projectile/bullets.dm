@@ -16,9 +16,9 @@
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 
 /obj/item/projectile/bullet/on_hit(var/atom/target, var/blocked = 0)
-	if (..(target, blocked))
-		var/mob/living/L = target
-		shake_camera(L, 3, 2)
+	..(target, blocked)
+		//var/mob/living/L = target
+		//shake_camera(L, 3, 2) CHOMPEDIT - "Muh realism". The screenshake is obnoxious for gameplay. TODO: Replace with blood splatter indicator.
 
 /obj/item/projectile/bullet/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier)
 	if(penetrating > 0 && damage > 20 && prob(damage))
@@ -322,6 +322,94 @@
 	embed_chance = 0
 	sharp = FALSE
 
-/obj/item/projectile/bullet/blank/cap/process()
+/* BB Rounds */
+/obj/item/projectile/bullet/bb // Generic single BB
+	name = "BB"
+	damage = 0
+	agony = 0
+	embed_chance = 0
+	sharp = FALSE
+	silenced = TRUE
+
+/obj/item/projectile/bullet/pellet/shotgun/bb // Shotgun
+	name = "BB"
+	damage = 0
+	agony = 0
+	embed_chance = 0
+	sharp = FALSE
+	pellets = 6
+	range_step = 1
+	spread_step = 10
+	silenced = TRUE
+
+/* toy projectiles */
+/obj/item/projectile/bullet/cap
+	name = "cap"
+	desc = "SNAP!"
+	damage = 0 // It's a damn toy.
+	embed_chance = 0
+	nodamage = TRUE
+	sharp = FALSE
+	damage_type = HALLOSS
+	impact_effect_type = null
+	fire_sound = 'sound/effects/snap.ogg'
+	combustion = FALSE
+
+/obj/item/projectile/bullet/cap/process()
 	loc = null
 	qdel(src)
+
+/obj/item/projectile/bullet/foam_dart
+	name = "foam dart"
+	desc = "I hope you're wearing eye protection."
+	damage = 0 // It's a damn toy.
+	embed_chance = 0
+	nodamage = TRUE
+	sharp = FALSE
+	damage_type = HALLOSS
+	impact_effect_type = null
+	fire_sound = 'sound/items/syringeproj.ogg'
+	combustion = FALSE
+	icon = 'icons/obj/gun_toy.dmi'
+	icon_state = "foamdart_proj"
+	range = 15
+
+/obj/item/projectile/bullet/foam_dart/on_impact(var/atom/A)
+	. = ..()
+	var/turf/T = get_turf(loc)
+	if(istype(T))
+		new /obj/item/ammo_casing/afoam_dart(get_turf(loc))
+
+/obj/item/projectile/bullet/foam_dart/on_range(var/atom/A)
+	. = ..()
+	var/turf/T = get_turf(loc)
+	if(istype(T))
+		new /obj/item/ammo_casing/afoam_dart(get_turf(loc))
+
+/obj/item/projectile/bullet/foam_dart_riot
+	name = "riot foam dart"
+	desc = "Whose smart idea was it to use toys as crowd control? Ages 18 and up."
+	damage = 0 // It's a damn toy.
+	embed_chance = 0
+	agony = 50 // The riot part of the riot dart
+	nodamage = TRUE
+	sharp = FALSE
+	damage_type = HALLOSS
+	impact_effect_type = null
+	fire_sound = 'sound/items/syringeproj.ogg'
+	combustion = FALSE
+	icon = 'icons/obj/gun_toy.dmi'
+	icon_state = "foamdart_riot_proj"
+	range = 15
+
+/obj/item/projectile/bullet/foam_dart_riot/on_impact(var/atom/A)
+	. = ..()
+	var/turf/T = get_turf(loc)
+	if(istype(T))
+		new /obj/item/ammo_casing/afoam_dart/riot(get_turf(loc))
+
+/obj/item/projectile/bullet/foam_dart_riot/on_range(var/atom/A)
+	. = ..()
+	var/turf/T = get_turf(loc)
+	if(istype(T))
+		new /obj/item/ammo_casing/afoam_dart/riot(get_turf(loc))

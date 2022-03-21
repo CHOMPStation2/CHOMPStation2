@@ -124,10 +124,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
+<<<<<<< HEAD
 "k" = (
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
+=======
+"cC" = (
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"cH" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 4
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 	},
 /obj/structure/flora/pottedplant/unusual,
 /turf/simulated/floor/wood,
@@ -802,6 +815,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"zr" = (
+/obj/effect/landmark/vines,
 /turf/simulated/floor/wood,
 /area/tether/midpoint)
 "zG" = (
@@ -21640,6 +21657,7 @@ kz
 kz
 kz
 kz
+<<<<<<< HEAD
 kz
 kz
 NJ
@@ -21660,6 +21678,28 @@ Qc
 zP
 kz
 kz
+=======
+Et
+zi
+pK
+zr
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+Or
+pK
+pK
+zi
+Et
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 kz
 kz
 kz
@@ -23486,8 +23526,24 @@ kz
 kz
 kz
 Et
+<<<<<<< HEAD
 Wf
 Wf
+=======
+Pz
+Or
+cC
+pK
+pK
+Tz
+It
+tB
+tB
+tB
+tB
+tn
+sR
+>>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
 pK
 pK
 VB

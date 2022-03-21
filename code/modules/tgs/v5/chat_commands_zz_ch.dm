@@ -39,7 +39,7 @@
 /datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
 	if(config.nodebot_enabled)
 		ManifestToHtml()
-		return "Manifest temporarily indefinitely probably broken"
+		return "http://manifest.chompstation13.net/"
 	else
 		var/outp = "Crew Manifest:"
 		var/list/total = list()
@@ -108,3 +108,11 @@
 		return "I’m sorry Dave, I’m afraid I can’t do that"
 	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
 	return "FAX: ```[strip_html_properly(faxmsg)]```"
+
+/datum/tgs_chat_command/vore
+	name = "vore"
+	help_text = "vore"
+	admin_only = FALSE
+	
+/datum/tgs_chat_command/vore/Run(datum/tgs_chat_user/sender, params)
+	return "vore"

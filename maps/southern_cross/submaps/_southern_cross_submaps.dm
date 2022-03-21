@@ -59,7 +59,7 @@
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
-#include "gateway/snowfield.dm"
+#include "gateway/snowfield_ch.dm"	//CHOMPEDIT - Use the good one instead
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"

@@ -132,13 +132,15 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
-
 	/decl/emote/helper/vwag,
 	/decl/emote/helper/vflap,
+	/decl/emote/audible/prbt,
+	/decl/emote/audible/gyoh,
+	/decl/emote/audible/rumble,
 	//VOREStation Add End
-	//CHOMPedit Add Start
-	/decl/emote/audible/prbt
-	//CHOMPedit Add End
+	//CHOMPStation Add Start
+	/decl/emote/audible/coyawoo
+	//CHOMPStation End Start
 )
 
 	//VOREStation Add Start
@@ -265,9 +267,9 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
-	//CHOMPEdit Add Start
-	/decl/emote/audible/prbt
-	//CHOMPEdit Add End
+	/decl/emote/audible/prbt,
+	/decl/emote/audible/gyoh,
+	/decl/emote/audible/rumble
 	)
 	//VOREStation Add End
 

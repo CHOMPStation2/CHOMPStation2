@@ -12,7 +12,7 @@
 		/obj/item/clothing/under/rank/chief_engineer/skirt,
 		/obj/item/clothing/head/hardhat/white,
 		/obj/item/clothing/head/welding,
-		/obj/item/clothing/gloves/yellow,
+		/obj/item/clothing/gloves/heavy_engineer,	//VOREStation Edit: chief gets the good shit
 		/obj/item/clothing/shoes/brown,
 		/obj/item/weapon/cartridge/ce,
 		/obj/item/device/radio/headset/heads/ce,
@@ -112,14 +112,14 @@
 		///obj/item/clamp,	//VOREStation Removal: without leaks those are pointless,
 		/obj/item/device/radio/headset/headset_eng,
 		/obj/item/device/radio/headset/headset_eng/alt,
-		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/suit/storage/hazardvest/atmos,	//VOREStation edit. Eng locker gets regular haz-vest, atmos gets the themed one of their own
 		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/cartridge/atmos,
 		/obj/item/taperoll/atmos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos,
 		/obj/item/clothing/shoes/boots/winter/atmos,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
-		/obj/item/weapon/storage/belt/utility) //VOREStation Add
+		/obj/item/weapon/storage/belt/utility/atmostech) //VOREStation edit. They don't get a toolbox to fill it from, so why not give a spare one that's full already? 
 
 /obj/structure/closet/secure_closet/atmos_personal/Initialize()
 	if(prob(50))

@@ -53,6 +53,18 @@ var/const/ENTERTAINER		=(1<<13) //VOREStation Add
 
 var/const/OTHER				=(1<<10) //CHOMPStation Add
 var/const/NONCREW			=(1<<0) //CHOMPStation Add
+/* // CHOMPedit: Comment out Talon positions, we don't have that here.
+//VOREStation Add
+var/const/TALON				=(1<<3)
+
+var/const/TALCAP			=(1<<0)
+var/const/TALPIL			=(1<<1)
+var/const/TALDOC			=(1<<2)
+var/const/TALSEC			=(1<<3)
+var/const/TALENG			=(1<<4)
+var/const/TALMIN			=(1<<5)
+//VOREStation Add End
+*/
 
 var/list/assistant_occupations = list(
 )
@@ -145,11 +157,9 @@ var/list/whitelisted_positions = list(
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Command Secretary",
 	"Warden",
 	"AI"
-)
-
+) //CHOMPEdit: Removed Command Secretary from whitelisted jobs.
 
 /proc/guest_jobbans(var/job)
 	return ((job in whitelisted_positions))

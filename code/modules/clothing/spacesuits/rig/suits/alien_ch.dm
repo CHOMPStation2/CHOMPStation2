@@ -5,6 +5,7 @@
 	name = "nanosuit control cluster"
 	suit_type = "nanomachine"
 	icon = 'icons/obj/rig_modules_ch.dmi'
+	default_mob_icon = 'icons/mob/rig_back_ch.dmi'
 	icon_state = "nanomachine_rig"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 90)
 	siemens_coefficient= 0.5

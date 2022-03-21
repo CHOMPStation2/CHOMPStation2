@@ -61,8 +61,8 @@ var/const/access_explorer = 43
 	supervisors = "the head of personnel"
 	selection_color = "#515151"
 	economic_modifier = 4
-	access = list(access_pilot, access_cargo, access_mining, access_mining_station)
-	minimal_access = list(access_pilot, access_cargo, access_mining, access_mining_station)
+	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_cargo, access_mining, access_mining_station)
+	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_cargo, access_mining, access_mining_station)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 
 /datum/job/explorer

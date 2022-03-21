@@ -442,7 +442,7 @@
 		var/mob/living/carbon/nerd = user
 		var/mysize = nerd.size_multiplier
 		if(recoil_mode > 0)
-			if(mysize <= 0.51)
+			if(mysize <= 0.70)
 				nerd.Weaken(1*recoil_mode)
 				if(!istype(src,/obj/item/weapon/gun/energy))
 					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
@@ -480,7 +480,7 @@
 			P.dispersion = disp
 
 			P.shot_from = src.name
-			P.silenced = silenced
+			P.silenced |= silenced // A silent bullet (e.g., BBs) can be fired quietly from any gun.
 
 			P.old_style_target(target)
 			P.fire()
