@@ -3,7 +3,6 @@
  */
 /obj/item/weapon/gun/projectile/shotgun/pump
 	name = "shotgun"
-<<<<<<< HEAD
 //	desc = "The mass-produced MarsTech Meteor 29 shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds." //CHOMP Disable
 	desc = "I used the shotgun. You know why? Cause the shotgun doesn't miss, and unlike the shitty hybrid taser it stops \
 	a criminal in their tracks in two hits. Bang, bang, and they're fucking done. I use four shots just to make damn sure. \
@@ -13,12 +12,8 @@
 	with the disabler shots, which take half a clip just to bring someone down, or with the tazer bolts which are slow as balls, \
 	impossible to aim and do about next to jack shit, fuck all. The shotgun is the superior law enforcement weapon. Because it stops crime. \
 	And it stops crime by reducing the number of criminals roaming the fucking halls." //CHOMP Add
-	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
-=======
-	desc = "The mass-produced MarsTech Meteor 29 shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, \
 	MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
->>>>>>> e6662604ec... Merge pull request #12499 from GhostActual/shotguns-galore
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	max_shells = 4
