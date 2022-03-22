@@ -1,112 +1,112 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/template_noop,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ab" = (
 /obj/structure/railing,
 /turf/template_noop,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ac" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/template_noop,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ad" = (
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ae" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/template_noop,
-/area/template_noop)
+/area/submap/explorerhouse)
 "af" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ag" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ah" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ai" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aj" = (
 /obj/structure/target_stake,
 /turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ak" = (
 /obj/item/target,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "al" = (
 /obj/item/target/syndicate,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "am" = (
 /turf/simulated/wall/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "an" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ao" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ap" = (
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aq" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ar" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife,
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "as" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/template_noop)
+/area/submap/explorerhouse)
 "at" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/purity,
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "au" = (
 /obj/structure/toilet,
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "av" = (
 /obj/structure/table/marble,
 /obj/random/drinkbottle,
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aw" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ax" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /obj/item/weapon/coin/phoron,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ay" = (
 /obj/item/clothing/head/bearpelt{
 	pixel_y = 6
@@ -114,13 +114,13 @@
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "az" = (
 /obj/item/weapon/material/harpoon,
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aA" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
@@ -128,11 +128,11 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aB" = (
 /obj/structure/sink{
-	icon_state = "sink";
 	dir = 8;
+	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -142,30 +142,30 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aC" = (
 /obj/item/weapon/towel,
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aE" = (
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aF" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aG" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aH" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aI" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8;
@@ -176,58 +176,57 @@
 	},
 /obj/random/soap,
 /turf/simulated/floor/tiled/freezer,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aJ" = (
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aK" = (
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aL" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aM" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/fancy/candle_box,
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aN" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/device/binoculars/spyglass,
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aO" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aP" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aQ" = (
 /obj/structure/table/rack,
 /obj/item/device/gps/explorer,
-/obj/item/device/radio/headset/explorer,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aR" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aS" = (
 /turf/simulated/floor/carpet/sblucarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aT" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aU" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/explorer,
@@ -235,60 +234,64 @@
 /obj/item/weapon/cell/device,
 /obj/item/weapon/cell/device,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aV" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aW" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aX" = (
 /obj/structure/coatrack,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aY" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/explorer,
 /obj/item/clothing/mask/gas/explorer,
 /obj/item/weapon/material/knife/tacknife/survival,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "aZ" = (
 /obj/item/clothing/shoes/boots/winter/explorer,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 "ba" = (
 /obj/structure/table/woodentable,
 /obj/random/action_figure,
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "bb" = (
 /obj/item/weapon/bedsheet/hopdouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/template_noop)
+/area/submap/explorerhouse)
 "bc" = (
 /obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "bd" = (
 /obj/structure/loot_pile/maint/junk,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/template_noop)
+/area/submap/explorerhouse)
 "be" = (
 /obj/structure/sign/kiddieplaque{
 	desc = "To anyone reading this, you'll note that I'm not home right now, and unfortunately due to reassignment, I won't be for a very long time. Exploring somewhere really far and dangerous now. You can stay if you want, but please try to keep my home in good condition.";
 	name = "read me visitors"
 	},
 /turf/simulated/wall/wood,
-/area/template_noop)
-"zt" = (
+/area/submap/explorerhouse)
+"bf" = (
+/obj/structure/bonfire/sifwood,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/explorerhouse)
+"GN" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/wood,
-/area/template_noop)
+/area/submap/explorerhouse)
 
 (1,1,1) = {"
 aa
@@ -412,7 +415,7 @@ as
 ax
 ap
 ap
-zt
+GN
 ap
 ap
 ap
@@ -558,7 +561,7 @@ ag
 ab
 ad
 ah
-ag
+bf
 ah
 ad
 am

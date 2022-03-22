@@ -4,10 +4,10 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "c" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "d" = (
 /obj/structure/ore_box,
 /obj/item/weapon/ore/coal,
@@ -18,7 +18,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "e" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/extinguisher,
@@ -27,13 +27,13 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "f" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "g" = (
 /obj/item/weapon/ore/coal,
 /obj/item/weapon/ore/coal,
@@ -46,12 +46,12 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "h" = (
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "i" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/lipstick,
@@ -60,7 +60,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "j" = (
 /obj/structure/table/steel,
 /obj/item/weapon/beartrap,
@@ -68,7 +68,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "k" = (
 /obj/vehicle/train/trolley,
 /obj/random/firstaid,
@@ -79,7 +79,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "l" = (
 /obj/structure/closet/crate,
 /obj/item/device/nif,
@@ -88,7 +88,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "m" = (
 /obj/structure/table/steel,
 /obj/item/weapon/paper{
@@ -98,7 +98,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "n" = (
 /obj/vehicle/train/trolley,
 /obj/random/multiple/voidsuit,
@@ -107,7 +107,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "o" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/cell/device/weapon,
@@ -118,28 +118,28 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "p" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/storage/box/shotgunammo,
-/obj/item/weapon/storage/box/practiceshells,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b12g/practice,
 /obj/item/weapon/grenade/spawnergrenade/manhacks/station,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "u" = (
 /mob/living/simple_mob/humanoid/merc/ranged/virgo,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 "P" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/Thiefc)
+/area/submap/thiefcave)
 
 (1,1,1) = {"
 a

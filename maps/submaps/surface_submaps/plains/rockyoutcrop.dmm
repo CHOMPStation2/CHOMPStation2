@@ -4,18 +4,12 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/snow5)
+/area/submap/rockyoutcrop)
 "c" = (
-/turf/simulated/floor/outdoors/snow,
-/area/submap/snow5)
+/turf/simulated/mineral/ignore_mapgen,
+/area/submap/rockyoutcrop)
 
 (1,1,1) = {"
-a
-a
-a
-a
-a
-a
 a
 a
 a
@@ -30,13 +24,7 @@ a
 (2,1,1) = {"
 a
 b
-b
-b
-b
-b
-b
-b
-b
+c
 b
 b
 b
@@ -55,12 +43,6 @@ b
 b
 b
 b
-b
-b
-b
-b
-b
-b
 a
 "}
 (4,1,1) = {"
@@ -69,16 +51,10 @@ c
 c
 c
 c
-c
 b
 b
 b
 b
-b
-b
-b
-b
-c
 a
 "}
 (5,1,1) = {"
@@ -87,16 +63,10 @@ c
 c
 c
 c
-c
-c
-c
 b
 b
 b
-c
-c
-c
-c
+b
 a
 "}
 (6,1,1) = {"
@@ -105,16 +75,10 @@ c
 c
 c
 c
-c
-c
-c
-c
-c
-c
-c
-c
-c
-c
+b
+b
+b
+b
 a
 "}
 (7,1,1) = {"
@@ -122,16 +86,10 @@ a
 c
 c
 c
-c
-c
-c
-c
-c
-c
-c
-c
-c
-c
+b
+b
+b
+b
 b
 a
 "}
@@ -139,36 +97,24 @@ a
 a
 c
 c
-c
-c
-c
-c
-c
-c
-c
-c
-c
-c
+b
+b
+b
+b
 b
 b
 a
 "}
 (9,1,1) = {"
 a
-b
-c
-c
-c
-c
-c
-c
-c
-c
 c
 c
 b
 b
 b
+b
+b
+c
 a
 "}
 (10,1,1) = {"
@@ -176,17 +122,11 @@ a
 b
 b
 b
-c
-c
 b
 c
 c
 c
-b
-b
-b
-b
-b
+c
 a
 "}
 (11,1,1) = {"
@@ -195,8 +135,50 @@ b
 b
 b
 b
+c
+c
+c
+c
+a
+"}
+(12,1,1) = {"
+a
 b
 b
+b
+b
+b
+b
+c
+c
+a
+"}
+(13,1,1) = {"
+a
+b
+b
+b
+b
+b
+b
+b
+c
+a
+"}
+(14,1,1) = {"
+a
+b
+b
+b
+b
+b
+b
+b
+c
+a
+"}
+(15,1,1) = {"
+a
 b
 b
 b
@@ -207,13 +189,55 @@ b
 b
 a
 "}
-(12,1,1) = {"
+(16,1,1) = {"
 a
+b
+b
+b
+b
+b
+b
+b
+b
 a
+"}
+(17,1,1) = {"
 a
+b
+b
+c
+c
+c
+b
+b
+b
 a
+"}
+(18,1,1) = {"
 a
+c
+c
+c
+c
+c
+c
+c
+b
 a
+"}
+(19,1,1) = {"
+a
+b
+b
+c
+c
+c
+c
+b
+b
+a
+"}
+(20,1,1) = {"
 a
 a
 a

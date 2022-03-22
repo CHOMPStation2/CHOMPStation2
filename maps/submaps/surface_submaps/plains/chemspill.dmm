@@ -7,39 +7,39 @@
 /area/template_noop)
 "e" = (
 /turf/simulated/floor/outdoors/snow,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "f" = (
 /obj/effect/decal/remains/deer,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "g" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "h" = (
 /turf/simulated/floor/outdoors/mud,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "i" = (
 /turf/simulated/floor/water/contaminated,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "j" = (
 /obj/structure/prop/poicanister,
 /turf/simulated/floor/water/contaminated,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "k" = (
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/water/contaminated,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "l" = (
 /turf/simulated/floor/outdoors/rocks,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "m" = (
 /obj/effect/decal/remains/ribcage,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 "n" = (
 /obj/effect/decal/remains/lizard,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/ChemSpill1)
+/area/submap/chemspill)
 
 (1,1,1) = {"
 a

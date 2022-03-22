@@ -4,41 +4,41 @@
 /area/template_noop)
 "b" = (
 /turf/simulated/wall/log_sif,
-/area/submap/camp1)
+/area/submap/camp)
 "c" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/submap/camp1)
+/area/submap/camp)
 "d" = (
 /obj/structure/bed/padded,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 "e" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 "f" = (
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 "g" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 "h" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 "i" = (
 /obj/structure/table/rack,
 /obj/item/weapon/gun/launcher/crossbow,
@@ -48,7 +48,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 "j" = (
 /obj/item/stack/material/log/sif{
 	amount = 25
@@ -58,10 +58,10 @@
 "k" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp1)
+/area/submap/camp)
 "l" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp1)
+/area/submap/camp)
 "m" = (
 /obj/item/weapon/material/knife/machete/hatchet,
 /turf/template_noop,
@@ -69,13 +69,17 @@
 "n" = (
 /obj/item/weapon/flame/lighter,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp1)
+/area/submap/camp)
+"o" = (
+/obj/structure/bonfire/sifwood,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/camp)
 "y" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp1)
+/area/submap/camp)
 
 (1,1,1) = {"
 a
@@ -133,7 +137,7 @@ h
 f
 h
 l
-l
+o
 l
 l
 "}

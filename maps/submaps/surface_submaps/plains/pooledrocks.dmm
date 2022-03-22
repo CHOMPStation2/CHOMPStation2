@@ -4,55 +4,55 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "c" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "d" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "e" = (
 /obj/structure/table/woodentable,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "f" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/material/knife,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "g" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "h" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/gun/energy/retro{
 	cell_type = /obj/item/weapon/cell/device/weapon/empty
 	},
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "i" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "j" = (
 /turf/simulated/floor/outdoors/rocks,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "k" = (
 /obj/structure/flora/ausbushes,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "l" = (
 /turf/simulated/floor/water,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "m" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/template_noop,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 "n" = (
 /turf/simulated/floor/water/deep,
-/area/submap/PooledR)
+/area/submap/pooledrocks)
 
 (1,1,1) = {"
 a

@@ -4,19 +4,15 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/pascalb)
+/area/submap/snow1)
 "c" = (
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/pascalb)
-"d" = (
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/pascalb)
-"e" = (
-/obj/item/poi/pascalb,
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/pascalb)
+/turf/simulated/floor/outdoors/snow,
+/area/submap/snow1)
 
 (1,1,1) = {"
+a
+a
+a
 a
 a
 a
@@ -28,35 +24,47 @@ a
 (2,1,1) = {"
 a
 b
+b
+b
+b
 c
 c
-c
+b
 b
 a
 "}
 (3,1,1) = {"
 a
 b
+b
 c
-d
 c
 c
+c
+c
+b
 a
 "}
 (4,1,1) = {"
 a
+b
 c
-d
-e
-d
 c
+c
+c
+c
+c
+b
 a
 "}
 (5,1,1) = {"
 a
-b
 c
-d
+c
+c
+c
+c
+c
 c
 b
 a
@@ -68,9 +76,51 @@ c
 c
 c
 c
+c
+c
+b
 a
 "}
 (7,1,1) = {"
+a
+c
+c
+c
+c
+c
+c
+c
+b
+a
+"}
+(8,1,1) = {"
+a
+b
+c
+c
+c
+c
+b
+b
+b
+a
+"}
+(9,1,1) = {"
+a
+b
+b
+b
+c
+b
+b
+b
+b
+a
+"}
+(10,1,1) = {"
+a
+a
+a
 a
 a
 a
