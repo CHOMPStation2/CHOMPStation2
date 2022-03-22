@@ -1,19 +1,21 @@
 #define SYNTHESIZER_MAX_CARTRIDGES 40
 #define SYNTHESIZER_MAX_RECIPES 20
 #define SYNTHESIZER_MAX_QUEUE 40
+#define RECIPE_MAX_STRING 160
+#define RECIPE_MAX_STEPS 16
 
 // Recipes are stored as a list which alternates between chemical id's and volumes to add.
 
 // TODO: 
 // Design UI 
-// TGUI procs
-// Create procs to take synthesis steps as an input and stores as a 1 click synthesis button. Needs name, expected output volume. 
+// DONE TGUI procs
+// DONE Create procs to take synthesis steps as an input and stores as a 1 click synthesis button. Needs name, expected output volume. 
 // DONE Create procs to actually perform the reagent transfer/etc. for a synthesis, reading the stored synthesis steps. 
-// Implement a step-mode where the player manually clicks on each step and an expert mode where players input a comma-delineated list. 
+// DONE Implement a step-mode where the player manually clicks on each step and an expert mode where players input a comma-delineated list. 
 // DONE Add process() code which makes the machine actually work. Perhaps tie a boolean and single start proc into process().
 // DONE Give the machine queue-behavior which allows players to queue up multiple recipes, even when the machine is busy. Reference protolathe code.
 // DONE Give the machine a way to stop a synthesis and purge/bottle the reaction vessel. 
-// Perhaps use recipes as a "ID" "num" "ID" "num" list to avoid using multiple lists.
+// DONE Perhaps use recipes as a "ID" "num" "ID" "num" list to avoid using multiple lists.
 // DONE Panel open button.
 // DONE Code for power usage.
 // Update_icon() overrides.
@@ -328,16 +330,72 @@
 
 // This proc is lets users create recipes step-by-step and exports a comma delineated list to chat. It's intended to teach how to use the machine.
 /obj/machinery/chemical_synthesizer/proc/babystep_recipe(mob/user)
-	return
-
-// This proc allows users to copy-paste a comma delineated list to create a recipe.
-/obj/machinery/chemical_synthesizer/proc/import_recipe(mob/user)
-	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume!", "Recipe naming", null) as text, MAX_NAME_LEN))
-	if(!rec_name || rec_name in recipes)
+	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
+	if(!rec_name || (rec_name in recipes)) // Code requires each recipe to have a unique name.
 		to_chat(user, "Please provide a unique recipe name!")
 		return
-	var/rec_input = // Use input here, you can't parse this properly if you sanitize. First decide a reasonable message length, mention the comma delineation
+
+	var/steps = 2 * CLAMP(round(input(user, "How many steps does your recipe contain (16 max)?", "Steps", null)), 0, RECIPE_MAX_STEPS) // Round to get a whole integer, clamp to ensure proper range.
+	var/new_rec = list() // This holds the actual recipe.
+	for(var/i = 1, i < steps, i += 2) // For the user, 1 step is both text and volume. For list arithmetic, that's 2 steps. 
+		var/label = tgui_input_list(user, "Which chemical would you like to use?", "Chemical Synthesizer", cartridges)
+		if(!label) 
+			to_chat(user, "Please select a chemical!")
+			return 
+		new_rec[i] = label // Add the reagent ID.
+		var/amount = CLAMP(round(input(user, "How much of the chemical would you like to add?", "Volume", null)), 0, src.reagents.maximum_volume)
+		if(!amount)
+			to_chat(user, "Please select a volume!")
+			return
+		new_rec[i+1] = amount // Add the amount of reagent.
+
+	recipes[rec_name] = new_rec 
+	SStgui.update_uis(src)
+	export_recipe(user, rec_name) // Now export the recipe to the user's chatbox formatted for import_recipe().
 	return
+
+// This proc allows users to copy-paste a comma delineated list to create a recipe. The recipe will cause a stall() if formatted incorrectly.
+/obj/machinery/chemical_synthesizer/proc/import_recipe(mob/user)
+	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
+	if(!rec_name || (rec_name in recipes)) // Code requires each recipe to have a unique name.
+		to_chat(user, "Please provide a unique recipe name!")
+		return
+
+	var/rec_input = input(user, "Input your recipe as 'Chem1,Vol1,Chem2,Vol2,...'", "Import recipe", null)
+	if(!rec_input || (length(rec_input) > RECIPE_MAX_STRING) || !findtext(rec_input, ",")) // The smallest possible recipe will contain 1 comma. 
+		to_chat(user, "Invalid input or recipe max length exceeded!")
+		return
+
+	rec_input = trim(rec_input) // Sanitize. 
+	var/new_rec = list() // This holds the actual recipe.
+	var/vol = FALSE // This tracks if the next step is a chemical name or a volume. 
+	var/index = findtext(rec_input, ",") // This tracks the delineation index in the user-provided string. Should never be null at this point.
+	var/i = 1 // This tracks the index for new_rec, the actual list which gets added to recipes[rec_name]. 
+	while(index) // Alternates between text strings and numbers. When false, the rest of rec_input is the final step.
+		new_rec[i] = copytext(rec_input, 1, index)
+		if(vol)
+			new_rec[i] = text2num(new_rec[i]) // If it's a volume step, convert to a number.
+			vol = FALSE
+		else
+			vol = TRUE
+		i++
+		rec_input = copytext(rec_input, index + 1) // Trim previous substrings from rec_input. 
+		index = findtext(rec_input, ",")
+
+	if(rec_input) // The remainder of rec_input should be the final volume step of the recipe. The if() is a sanity check. 
+		new_rec[i] = text2num(rec_input)
+
+	recipes[rec_name] = new_rec // Finally, add the recipe to the recipes list. 
+	SStgui.update_uis(src)
+	return
+
+// This proc exports stored recipes to the user's chatbox formatted as a comma delineated list for use with import_recpe()
+/obj/machinery/chemical_synthesizer/proc/export_recipe(mob/user, rec_name)
+	var/list/export = recipes[rec_name]
+	if(!export)
+		return
+	var/display_txt = export.Join(",") // This converts the entire list into a CSV string. 
+	to_chat(user, "[display_txt]")
 
 // This proc handles adding the catalyst starting the synthesizer's queue. 
 /obj/machinery/chemical_synthesizer/proc/start_queue(mob/user)
@@ -489,3 +547,5 @@
 #undef SYNTHESIZER_MAX_CARTRIDGES
 #undef SYNTHESIZER_MAX_RECIPES
 #undef SYNTHESIZER_MAX_QUEUE
+#undef RECIPE_MAX_STRING
+#undef RECIPE_MAX_STEPS
