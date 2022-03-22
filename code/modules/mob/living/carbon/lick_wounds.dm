@@ -8,7 +8,7 @@
 		return
 	//YW edit. Added the distance check to here. this allows the ability to lick ones own wounds. although this also means that all living/carbon/M appear on the list if used.
 	if (get_dist(src,M) >= 2)
-		src << "<span class='warning'>You need to be closer to do that.</span>"
+		to_chat(src, "<span class='warning'>You need to be closer to do that.</span>") // CHOMPEdit - don't use src << unless you have to.
 		return
 
 	if ( ! (istype(src, /mob/living/carbon/human) || \
@@ -53,7 +53,7 @@
 		if(affecting.brute_dam > 20 || affecting.burn_dam > 20)
 			to_chat(src, "<span class='warning'>The wounds on [M]'s [affecting.name] are too severe to treat with just licking.</span>")
 			return
-           
+			
 		else
 			visible_message("<b>\The [src]</b> starts licking the wounds on [M]'s [affecting.name] clean.", \
 					             "<span class='notice'>You start licking the wounds on [M]'s [affecting.name] clean.</span>" )
