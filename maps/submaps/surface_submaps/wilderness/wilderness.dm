@@ -44,7 +44,7 @@
 #include "rocky4.dmm"
 #include "rockybase.dmm"
 #include "shack1.dmm"
-#include "shelter1.dmm"
+#include "Shelter.dmm"
 #include "smol1.dmm"
 #include "snowrock1.dmm"
 #include "spider1.dmm"
@@ -342,7 +342,7 @@
 /datum/map_template/surface/wilderness/normal/shelter1
 	name = "Shelter 1"
 	desc = "The remains of a resourceful, but prideful explorer."
-	mappath = 'maps/submaps/surface_submaps/wilderness/shelter.dmm'
+	mappath = 'maps/submaps/surface_submaps/wilderness/Shelter.dmm'
 	cost = 10
 
 /datum/map_template/surface/wilderness/normal/smol1
