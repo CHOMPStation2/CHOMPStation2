@@ -2,26 +2,31 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
-"b" = (
-/turf/simulated/mineral/ignore_mapgen/sif,
-/area/submap/FrostflyNest)
 "c" = (
 /obj/structure/boulder,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "d" = (
 /turf/simulated/wall/solidrock,
 /area/submap/FrostflyNest)
 "e" = (
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "f" = (
 /obj/structure/outcrop/diamond,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "g" = (
 /obj/random/humanoidremains,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "h" = (
 /obj/structure/prop/nest{
@@ -30,64 +35,74 @@
 	name = "frostfly den";
 	spawn_delay = 300
 	},
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "i" = (
 /obj/random/medical/lite,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "j" = (
 /obj/random/humanoidremains,
 /obj/random/gun/random,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "k" = (
 /obj/random/medical/pillbottle,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 "l" = (
 /obj/random/gun/random,
-/turf/simulated/mineral/floor/sif,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/FrostflyNest)
 
 (1,1,1) = {"
 a
 a
-b
-b
-b
-b
+d
+d
+d
+d
 c
-b
-b
+d
+d
 a
 "}
 (2,1,1) = {"
 a
-b
-b
+d
+d
 d
 d
 d
 e
 d
-b
-b
+d
+d
 "}
 (3,1,1) = {"
-b
-b
+d
+d
 d
 d
 f
 k
 e
 d
-b
-b
+d
+d
 "}
 (4,1,1) = {"
-b
+d
 d
 d
 h
@@ -96,10 +111,10 @@ e
 f
 d
 d
-b
+d
 "}
 (5,1,1) = {"
-b
+d
 d
 f
 i
@@ -108,7 +123,7 @@ e
 e
 g
 d
-b
+d
 "}
 (6,1,1) = {"
 c
@@ -120,10 +135,10 @@ g
 f
 d
 d
-b
+d
 "}
 (7,1,1) = {"
-b
+d
 d
 d
 i
@@ -131,41 +146,41 @@ e
 e
 l
 d
-b
-b
+d
+d
 "}
 (8,1,1) = {"
-b
-b
+d
+d
 d
 d
 f
 d
 d
 d
-b
+d
 a
 "}
 (9,1,1) = {"
 a
-b
-b
 d
 d
 d
-b
-b
-b
+d
+d
+d
+d
+d
 a
 "}
 (10,1,1) = {"
 a
 a
-b
-b
-b
-b
-b
+d
+d
+d
+d
+d
 a
 a
 a
