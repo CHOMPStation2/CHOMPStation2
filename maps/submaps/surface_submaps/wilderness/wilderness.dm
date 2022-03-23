@@ -9,7 +9,7 @@
 #include "caveS.dmm"
 #include "chapel.dmm"
 #include "chasm.dmm"
-#include "Cragzone1"
+#include "Cragzone1.dmm"
 #include "deathden.dmm"
 #include "decoupledengine.dmm"
 #include "demonpool.dmm"
