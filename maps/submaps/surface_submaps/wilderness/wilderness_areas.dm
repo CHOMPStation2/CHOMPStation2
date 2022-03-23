@@ -87,6 +87,7 @@
 /area/submap/FrostflyNest
 	name = "POI - Frostfly Nest"
 	ambience = AMBIENCE_SIF
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/sif
 
 /area/submap/FrostOasis
 	name = "POI - Frost Oasis"
