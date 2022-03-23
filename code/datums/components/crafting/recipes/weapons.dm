@@ -56,3 +56,15 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+<<<<<<< HEAD
+=======
+
+/datum/crafting_recipe/scopedrifle
+	name = "Bolt scope to bolt-action (cannot be removed)"
+	result = /obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped
+	reqs = list(list(/obj/item/device/binoculars/scope = 1), 
+		list(/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 1))
+	time = 180
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+>>>>>>> 990fb0399e... Merge pull request #12511 from BonniePandora/Unfucks-crafting
