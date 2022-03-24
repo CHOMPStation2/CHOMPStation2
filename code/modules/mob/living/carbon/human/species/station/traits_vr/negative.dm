@@ -82,9 +82,9 @@
 	var_changes = list("burn_mod" = 1.5)
 
 //YW ADDITIONS START
-/datum/trait/negative/reduced_biocompat
-	name = "Reduced Biocompatibility"
-	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records!"
+/datum/trait/negative/reduced_biocompat_minor // CHOMPEdit: Changed name of trait + desc.
+	name = "Reduced Biocompatibility, Minor"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 80% as effective on you!"
 	cost = -1
 	var_changes = list("chem_strength_heal" = 0.8)
 
