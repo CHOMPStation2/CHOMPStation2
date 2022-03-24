@@ -45,7 +45,7 @@
 
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
-	desc = "Increases your maximum total hitpoints to 125"
+	desc = "Increases your maximum total hitpoints to 125. You require 250 damage in total to die, compared to 200 normally. You will still go into crit after losing 125 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
 	cost = 2
 	var_changes = list("total_health" = 125)
 
@@ -55,13 +55,13 @@
 
 /datum/trait/positive/nonconductive
 	name = "Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 25% amount." //CHOMP Edit
+	desc = "Decreases your susceptibility to electric shocks by 25%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 2 //This effects tasers!
 	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
 
 /datum/trait/positive/nonconductive_plus
 	name = "Non-Conductive, Major"
-	desc = "Decreases your susceptibility to electric shocks by a 50% amount." //CHOMP Edit
+	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
@@ -128,8 +128,8 @@
 	cost = 2
 	var_changes = list("chem_strength_heal" = 1.2)
 
-/datum/trait/positive/pain_tolerance_advanced
-	name = "High Pain Tolerance"
+/datum/trait/positive/pain_tolerance // CHOMPEdit: There is no "basic" pain tolerance, so I'm reducing this to regular pain tolerance.
+	name = "Increased Pain Tolerance"
 	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
 	cost = 2
 	var_changes = list("pain_mod" = 0.8)
@@ -173,9 +173,8 @@
 	cost = 1 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
-//CHOMPStation Removal Start
-/*
 
+// CHOMPEdit: This has been removed for two years, since Jan 2020, pending "review". Uncommenting as per tankiness increase PR.
 /datum/trait/positive/antiseptic_saliva
 	name = "Antiseptic Saliva"
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
@@ -184,8 +183,7 @@
 /datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
-*/
-//CHOMPStation Removal End
+
 
 /datum/trait/positive/traceur
 	name = "Traceur"

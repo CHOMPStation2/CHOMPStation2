@@ -376,3 +376,13 @@
 	if(ms != "")
 		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
+
+/datum/trait/negative/endurance_glass // Glass Cannon
+	name = "Glass Endurance"
+	desc = "Your body is very fragile. Reduces your maximum hitpoints to 25. Beware sneezes. You require only 50 damage in total to die, compared to 200 normally. You will go into crit after losing 25 HP, compared to crit at 100 HP."
+	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
+	var_changes = list("total_health" = 25)
+	
+/datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)

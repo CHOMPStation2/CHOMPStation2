@@ -110,19 +110,21 @@
 
 /datum/trait/positive/endurance_high
 	cost = 3
-	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
+	excludes = list(/datum/trait/positive/endurance_very_high) // CHOMPEdit: Increased Endurance.
+	// excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
+	// Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
 
 /datum/trait/positive/brute_resist
-	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
+	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/brute_resist_plus) // Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
 
 /datum/trait/positive/minor_brute_resist
-	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
+	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/brute_resist_plus) // Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
 
 /datum/trait/positive/burn_resist
-	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
+	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist_plus) // Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
 
 /datum/trait/positive/minor_burn_resist
-	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
+	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/burn_resist_plus) // Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
 
 /datum/trait/positive/absorbent/handle_environment_special(var/mob/living/carbon/human/H)
 	var/turf/T = get_turf(H)
@@ -249,3 +251,47 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/insect_sting
 	
+// TANKINESS LETS GOOOOOOOOO
+/datum/trait/positive/burn_resist_plus // Equivalent to Burn Weakness Major, cannot be taken at the same time.
+	name = "Major Burn Resist"
+	desc = "Adds 40% resistance to burn damage sources."
+	cost = 3 // Exact Opposite of Burn Weakness Major, except Weakness Major is 50% incoming, this is -40% incoming.
+	var_changes = list("burn_mod" = 0.6)
+	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/minor_burn_resist)
+	
+/datum/trait/positive/brute_resist_plus // Equivalent to Brute Weakness Major, cannot be taken at the same time.
+	name = "Major Brute Resist"
+	desc = "Adds 40% resistance to brute damage sources."
+	cost = 3 // Exact Opposite of Brute Weakness Major, except Weakness Major is 50% incoming, this is -40% incoming.
+	var_changes = list("brute_mod" = 0.6)
+	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist)
+	
+/datum/trait/positive/endurance_very_high
+	name = "Very High Endurance"
+	desc = "Increases your maximum total hitpoints to 150. You require 300 damage in total to die, compared to 200 normally. You will still go into crit after losing 150 HP, compared to crit at 100 HP."
+	cost = 4 // This should cost a LOT, because your total health becomes 300 to be fully dead, rather than 200 normally, or 250 for High Endurance. HE costs 2, double it here. (It could safely be bumped up to 6, imo, but start at 4.)
+	var_changes = list("total_health" = 150)
+	excludes = list(/datum/trait/positive/endurance_high)
+
+/datum/trait/positive/endurance_very_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
+
+/*
+/datum/trait/positive/endurance_extremely_high
+	name = "Extremely High Endurance"
+	desc = "Increases your maximum total hitpoints to 175"
+	cost = 6 // This should cost a LOT, because your total health becomes 350 to be fully dead, rather than 200 normally, or 250 for High Endurance. HE costs 2, this costs 3x it.
+	var_changes = list("total_health" = 175)
+
+/datum/trait/positive/endurance_extremely_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
+*/
+// Commenting this one out, but leaving in for balance discussion purposes.
+
+/datum/trait/positive/pain_tolerance_advanced // High Pain Intolerance is 50% incoming pain, but this is 40% reduced incoming pain.
+	name = "Increased Pain Tolerance"
+	desc = "You are noticeably more resistant to pain than most, and experience 40% less pain from all sources."
+	cost = 3 // Equivalent to High Pain Intolerance, but less pain resisted for balance reasons.
+	var_changes = list("pain_mod" = 0.6)
