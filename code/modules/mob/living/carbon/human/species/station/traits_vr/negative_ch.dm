@@ -394,7 +394,7 @@
 	var_changes = list("chem_strength_heal" = 0.6)
 	
 /datum/trait/negative/reduced_biocompat_extreme
-	name = "Reduced Biocompatibility"
+	name = "Reduced Biocompatibility, Major"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 30% as effective on you!"
 	cost = -8
 	var_changes = list("chem_strength_heal" = 0.3)
