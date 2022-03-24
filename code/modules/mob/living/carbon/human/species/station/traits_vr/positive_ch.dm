@@ -269,7 +269,7 @@
 /datum/trait/positive/endurance_very_high
 	name = "Very High Endurance"
 	desc = "Increases your maximum total hitpoints to 150. You require 300 damage in total to die, compared to 200 normally. You will still go into crit after losing 150 HP, compared to crit at 100 HP."
-	cost = 4 // This should cost a LOT, because your total health becomes 300 to be fully dead, rather than 200 normally, or 250 for High Endurance. HE costs 2, double it here. (It could safely be bumped up to 6, imo, but start at 4.)
+	cost = 6 // This should cost a LOT, because your total health becomes 300 to be fully dead, rather than 200 normally, or 250 for High Endurance. HE costs 2, double it here.
 	var_changes = list("total_health" = 150)
 	excludes = list(/datum/trait/positive/endurance_high)
 
@@ -277,18 +277,16 @@
 	..(S,H)
 	H.setMaxHealth(S.total_health)
 
-/*
+
 /datum/trait/positive/endurance_extremely_high
 	name = "Extremely High Endurance"
 	desc = "Increases your maximum total hitpoints to 175"
-	cost = 6 // This should cost a LOT, because your total health becomes 350 to be fully dead, rather than 200 normally, or 250 for High Endurance. HE costs 2, this costs 3x it.
+	cost = 9 // This should cost a LOT, because your total health becomes 350 to be fully dead, rather than 200 normally, or 250 for High Endurance. HE costs 2, this costs 3x it.
 	var_changes = list("total_health" = 175)
 
 /datum/trait/positive/endurance_extremely_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.setMaxHealth(S.total_health)
-*/
-// Commenting this one out, but leaving in for balance discussion purposes.
 
 /datum/trait/positive/pain_tolerance_advanced // High Pain Intolerance is 50% incoming pain, but this is 40% reduced incoming pain.
 	name = "Increased Pain Tolerance"

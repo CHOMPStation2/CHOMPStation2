@@ -5,7 +5,7 @@
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
-	var_changes = list("slowdown" = -0.5)
+	var_changes = list("slowdown" = -0.45)
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
 	
 //ChompEdit
@@ -46,7 +46,7 @@
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
 	desc = "Increases your maximum total hitpoints to 125. You require 250 damage in total to die, compared to 200 normally. You will still go into crit after losing 125 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
-	cost = 2
+	cost = 3 // CHOMPEdit
 	var_changes = list("total_health" = 125)
 
 /datum/trait/positive/endurance_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
