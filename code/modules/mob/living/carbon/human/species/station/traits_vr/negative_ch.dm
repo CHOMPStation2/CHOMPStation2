@@ -35,7 +35,7 @@
 	var_changes = list("grab_resist_divisor_victims" = 0.5, "grab_resist_divisor_self" = 3, "grab_power_victims" = 1, "grab_power_self" = -1)
 
 /datum/trait/negative/extreme_slowdown
-	name = "Extreme slowdown"
+	name = "Slowdown, Extreme"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
 	var_changes = list("slowdown" = 4.0)
