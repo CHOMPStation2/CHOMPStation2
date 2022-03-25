@@ -1375,7 +1375,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel
 	desc = "A classic, external hammer double barrel shotgun. This one has Sif-blue furniture. Chambered in 12 gauge."
-	var/sawn_off = FALSE
+	sawn_off = FALSE
 	var/shotgun_variant = "N"
 	manual_chamber = FALSE
 	icon = 'icons/obj/64x32guns_ch.dmi'
