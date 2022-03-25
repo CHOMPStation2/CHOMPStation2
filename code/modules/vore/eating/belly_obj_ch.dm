@@ -80,7 +80,7 @@
 
 /obj/belly/proc/HandleBellyReagents()
 	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume) //Removed if(reagentbellymode == TRUE) since that's less optimized
-		if(owner.nutrition || cell.charge) >= gen_cost && gen_interval >= gen_time)
+		if((owner.nutrition || cell.charge) >= gen_cost && gen_interval >= gen_time)
 			GenerateBellyReagents()
 			gen_interval = 0
 		else
