@@ -192,6 +192,6 @@
 	coffeemugs["tall black coffee mug"] = /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/black
 	coffeemugs["tall metal coffee mug"] = /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/metal
 	coffeemugs["tall rainbow coffee mug"] = /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/rainbow
-	coffeemugs["Talon coffee mug"] = /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon
+	//coffeemugs["Talon coffee mug"] = /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon //CHOMPedit
 	gear_tweaks += new /datum/gear_tweak/path(coffeemugs)
 	gear_tweaks += new /datum/gear_tweak/reagents(lunchables_drink_reagents())
