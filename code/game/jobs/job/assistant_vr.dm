@@ -58,6 +58,12 @@
 					often in training to become a Cargo Technician. A Jr. Cargo Tech has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
 
+/datum/alt_title/intern_exp
+	title = "Jr. Explorer"
+	title_blurb = "A Jr. Explorer attempts to provide whatever the Exploration department needs. They are not proper Explorers, and are \
+					often in training to become an Explorer. A Jr. Explorer has no real authority."
+	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
+
 /datum/alt_title/server
 	title = "Server"
 	title_blurb = "A Server helps out kitchen and diner staff with various tasks, primarily food delivery. A Server has no real authority."
