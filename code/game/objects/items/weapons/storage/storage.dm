@@ -871,8 +871,6 @@
 		usr.ClickOn(I)
 	return 1
 
-<<<<<<< HEAD
-=======
 // Allows micros to drag themselves into storage items
 /obj/item/weapon/storage/MouseDrop_T(mob/living/target, mob/living/user)
 	if(!istype(user)) return // If the user passed in isn't a living mob, exit
@@ -901,4 +899,3 @@
 	src.handle_item_insertion(H, 1)
 	to_chat(user, "<span class='notice'>You climb into \the [src].</span>")
 	return ..()
->>>>>>> 05f10ff0d5... Merge pull request #12519 from Fracshun/micro-storage
