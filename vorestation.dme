@@ -4029,6 +4029,7 @@
 #include "code\modules\research\designs\circuits\circuits_vr.dm"
 #include "code\modules\research\designs\circuits\circuits_yw.dm"
 #include "code\modules\research\designs\circuits\disks.dm"
+#include "code\modules\resleeving\autoresleever.dm"
 #include "code\modules\resleeving\circuitboards.dm"
 #include "code\modules\resleeving\computers.dm"
 #include "code\modules\resleeving\designer.dm"
