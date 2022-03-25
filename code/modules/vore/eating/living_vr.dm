@@ -20,6 +20,7 @@
 	var/vore_egg_type = "egg" 			// Default egg type.
 	var/feral = 0 						// How feral the mob is, if at all. Does nothing for non xenochimera at the moment.
 	var/revive_ready = REVIVING_READY	// Only used for creatures that have the xenochimera regen ability, so far.
+	var/revive_finished = 0				// CHOMPEdit: Only used for xenochimera regen, allows us to find out when the regen will finish.
 	var/metabolism = 0.0015
 	var/vore_taste = null				// What the character tastes like
 	var/vore_smell = null				// What the character smells like
@@ -41,6 +42,14 @@
 	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
 	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
 	var/bellies_loaded = FALSE			//CHOMPedit: On-demand belly loading
+	var/regen_sounds = list(
+		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
+		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
+		'sound/effects/mob_effects/xenochimera/regen_3.ogg',
+		'sound/effects/mob_effects/xenochimera/regen_4.ogg',
+		'sound/effects/mob_effects/xenochimera/regen_5.ogg'
+	)
+	// CHOMPEdit: Regen Sounds
 
 //
 // Hook for generic creation of stuff on new creatures
