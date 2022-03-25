@@ -32,7 +32,7 @@
 "p" = (
 /obj/structure/barricade,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/mineral/floor/ignore_mapgen,
 /area/template_noop)
 "u" = (
 /obj/structure/barricade,
