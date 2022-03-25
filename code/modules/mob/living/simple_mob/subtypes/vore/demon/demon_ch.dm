@@ -1,6 +1,6 @@
 /mob/living/simple_mob/vore/demon
 	name = "Rift Walker"
-	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
+	desc = "A large bipedal creature, its body has a mixture of dark fur and scales. Marks on the creature's body pulse slowly with red light."
 
 	icon_state = "boxfox"
 	icon_living = "boxfox"
