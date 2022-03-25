@@ -29,6 +29,7 @@
 		/mob/living/proc/flying_toggle,
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
+		// CHOMPEdit: Lick Wounds Verb
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
@@ -54,7 +55,7 @@
 	//primitive_form = "Farwa"
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken.
-	flags = NO_SCAN | NO_INFECT // | NO_DEFIB // Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is. CHOMPEdit: Leaving NO_DEFIB there for the future.
+	flags = NO_SCAN | NO_INFECT // | NO_DEFIB // Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is. CHOMPEdit: Leaving NO_DEFIB there for the future. // CHOMPEdit: Adds flags
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -87,10 +88,11 @@
 		H.weakened = 5
 		H.canmove = 0
 		H.does_not_breathe = TRUE
-		var/regen_sounds = H.regen_sounds
+		var/regen_sounds = H.regen_sounds // CHOMPEdit Start: Regen sounds/etc
 		if(prob(2)) // 2% chance of playing squelchy noise while reviving, which is run roughly every 2 seconds/tick while regenerating.
 			playsound(H, pick(regen_sounds), 30)
 			H.visible_message("<span class='danger'><p><font size=4>[H.name]'s motionless form shudders grotesquely, rippling unnaturally.</font></p></span>")
+		// CHOMPEdit End
 
 	//Cold/pressure effects when not regenerating
 	else
