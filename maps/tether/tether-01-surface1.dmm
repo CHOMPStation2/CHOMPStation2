@@ -30993,9 +30993,24 @@
 /turf/simulated/floor,
 /area/maintenance/substation/SurfMedsubstation)
 "bbZ" = (
+<<<<<<< HEAD
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
+=======
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/structure/disposaloutlet,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/autoresleeving)
+>>>>>>> b9176987f9... Merge pull request #12533 from Very-Soft/autoresleever
 "bca" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
@@ -33928,12 +33943,18 @@
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 "iee" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
+=======
+"idk" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 6
+>>>>>>> b9176987f9... Merge pull request #12533 from Very-Soft/autoresleever
 	},
 /obj/effect/floor_decal/corner/grey/border{
 	dir = 1
@@ -33947,8 +33968,19 @@
 	name = "janky wirecutters";
 	toolspeed = 2
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
+=======
+/obj/machinery/alarm{
+	alarm_id = "pen_nine";
+	breach_detection = 0;
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/autoresleeving)
+>>>>>>> b9176987f9... Merge pull request #12533 from Very-Soft/autoresleever
 "iee" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -35888,6 +35920,20 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/weaponsrange)
+<<<<<<< HEAD
+=======
+"nzU" = (
+/obj/machinery/door/airlock/medical{
+	id_tag = null;
+	name = "Auto Resleeving";
+	req_access = list(5)
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/autoresleeving)
+"nAK" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/engineering/atmos/airlock/gas)
+>>>>>>> b9176987f9... Merge pull request #12533 from Very-Soft/autoresleever
 "nBm" = (
 /obj/structure/railing{
 	dir = 4
@@ -60894,6 +60940,7 @@ aad
 aad
 aad
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 257f18b7ed... Virology Revamp (#11384)
 aah
 aah
@@ -60938,6 +60985,43 @@ wRb
 fkx
 vCn
 lry
+=======
+aar
+aaO
+abV
+acF
+abL
+aek
+afb
+atO
+awz
+aeU
+uIU
+uIU
+nzU
+uIU
+axP
+qBa
+ksK
+oKn
+oKn
+oKn
+ylH
+oMC
+guO
+aaU
+rNu
+mnN
+oeB
+ahx
+ahx
+ahx
+ahx
+ahx
+apF
+apF
+aqP
+>>>>>>> b9176987f9... Merge pull request #12533 from Very-Soft/autoresleever
 apF
 apF
 apF
