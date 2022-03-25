@@ -1031,5 +1031,4 @@
 			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green,
 			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green/dark,
 			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/rainbow,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon)
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal) //CHOMPedit: deleted talon mug
