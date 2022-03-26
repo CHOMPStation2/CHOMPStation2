@@ -154,8 +154,13 @@
 
 			if(M.slip("the [floor_type] floor", slip_stun))
 				for(var/i = 1 to slip_dist)
+<<<<<<< HEAD
 					if(M.slip_vore_in_progress)	//CHOMPEdit
 						break					//CHOMPEdit
+=======
+					if(isbelly(M.loc))	//VOREEdit, Stop the slip if we're in a belly. Inspired by a chompedit, cleaned it up with isbelly instead of a variable since the var was resetting too fast.
+						return
+>>>>>>> 1dad102bf4... Merge pull request #12539 from FartMaster69420/slip-nom
 					step(M, M.dir)
 					sleep(1)
 			else
