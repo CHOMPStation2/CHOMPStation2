@@ -50,7 +50,6 @@
 	damage = 30
 	armor_penetration = 10
 
-
 /obj/item/projectile/beam/midlaser
 	damage = 40
 	armor_penetration = 10
