@@ -538,21 +538,13 @@
 		return FALSE
 	// Slipnoms from chompstation downstream, credit to cadyn for the original PR.
 	// Prepare messages
-<<<<<<< HEAD
-	//CHOMPEdit begin
-=======
->>>>>>> 1dad102bf4... Merge pull request #12539 from FartMaster69420/slip-nom
 	if(prey.is_slipping)
 		attempt_msg = "<span class='warning'>It seems like [prey] is about to slide into [pred]'s [lowertext(belly.name)]!</span>"
 		success_msg = "<span class='warning'>[prey] suddenly slides into [pred]'s [lowertext(belly.name)]!</span>"
 	else if(pred.is_slipping)
 		attempt_msg = "<span class='warning'>It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.name)] as [pred] comes sliding over!</span>"
 		success_msg = "<span class='warning'>[prey] suddenly slips inside of [pred]'s [lowertext(belly.name)] as [pred] slides into them!</span>"
-<<<<<<< HEAD
-	else if(user == pred) //CHOMPEdit End //Feeding someone to yourself
-=======
 	else if(user == pred) //Feeding someone to yourself
->>>>>>> 1dad102bf4... Merge pull request #12539 from FartMaster69420/slip-nom
 		attempt_msg = "<span class='warning'>[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 		success_msg = "<span class='warning'>[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 	else //Feeding someone to another person
