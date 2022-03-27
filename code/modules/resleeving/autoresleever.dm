@@ -76,19 +76,34 @@
 
 	var/client/ghost_client = ghost.client
 	
+<<<<<<< HEAD
 	// CHOMPEdit Start: Add checks for Whitelist + Resleeving
 	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost somehow ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal joins.
 		to_chat(ghost, "<span class='warning'>You are not whitelisted to spawn as this species!</span>")
 		return
 	
+=======
+	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
+		to_chat(ghost, "<span class='warning'>You are not whitelisted to spawn as this species!</span>")
+		return
+	
+	/* // Comments out NO_SCAN restriction, as per headmin/maintainer request.
+>>>>>>> 87e9349c8f... Merge pull request #12550 from Rykka-Stormheart/shep-dev-auto-resleeving-sanity
 	var/datum/species/chosen_species
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 		
+<<<<<<< HEAD
 	if(chosen_species.flags && NO_SCAN)
 		to_chat(ghost, "<span class='warning'>This species cannot be resleeved!</span>")
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
+=======
+	if(chosen_species.flags && NO_SCAN) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
+		to_chat(ghost, "<span class='warning'>This species cannot be resleeved!</span>")
+		return
+	*/
+>>>>>>> 87e9349c8f... Merge pull request #12550 from Rykka-Stormheart/shep-dev-auto-resleeving-sanity
 	
 	//Name matching is ugly but mind doesn't persist to look at.
 	var/charjob
