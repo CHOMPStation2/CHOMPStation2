@@ -80,14 +80,26 @@
 
 /obj/belly/proc/HandleBellyReagents()
 	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume) //Removed if(reagentbellymode == TRUE) since that's less optimized
-		if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
-			GenerateBellyReagents()
-			gen_interval = 0
+		if(isrobot(owner))
+			var/mob/living/silicon/robot/R = owner
+			if(R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
+				GenerateBellyReagents()
+				gen_interval = 0
+			else
+				gen_interval++
 		else
-			gen_interval++
+			if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
+				GenerateBellyReagents()
+				gen_interval = 0
+			else
+				gen_interval++
 
 /obj/belly/proc/GenerateBellyReagents()
-	owner.nutrition -= gen_cost
+	if(isrobot(owner))
+		var/mob/living/silicon/robot/R = owner
+		R.cell.charge -= gen_cost*10
+	else
+		owner.nutrition -= gen_cost
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
 
