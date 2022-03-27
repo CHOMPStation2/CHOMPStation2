@@ -10,14 +10,10 @@
 	var/power_charge = 0 // Disarm attacks can shock someone if high/lucky enough.
 	var/mob/living/victim = null // the person the slime is currently feeding on
 	var/rainbow_core_candidate = TRUE // If false, rainbow cores cannot make this type randomly.
-<<<<<<< HEAD
 	var/mutation_chance = 30 // CHOMPedit Odds of spawning as a new color when reproducing.  Can be modified by certain xenobio products.  Carried across generations of slimes.
-=======
-	var/mutation_chance = 25 // Odds of spawning as a new color when reproducing.  Can be modified by certain xenobio products.  Carried across generations of slimes.
 	var/split_amount = 4 // Amount of children we will normally have. Half of that for dead adult slimes. Is NOT carried across generations.
 	var/untamable = FALSE //Makes slime untamable via discipline.
 	var/untamable_inheirit = FALSE //Makes slime inheirit its untamability.
->>>>>>> ed28fbac1a... Merge pull request #12552 from Heroman3003/xenobio-rework
 	var/list/slime_mutation = list(
 		/mob/living/simple_mob/slime/xenobio/orange,
 		/mob/living/simple_mob/slime/xenobio/metal,
