@@ -12,7 +12,6 @@
 
 	. = ..()
 
-/* CHOMPEdit - Removed because we don't use resleeving sickness.
 //Surprisingly this is only called for humans, but whatever!
 /hook/death/proc/digestion_check(var/mob/living/carbon/human/H, var/gibbed)
 	//Not in a belly? Well, too bad!
@@ -31,7 +30,6 @@
 
 	//Hooks need to return true otherwise they're considered having failed
 	return TRUE
-*/
 
 //For making sure that if a mob is able to be joined by ghosts, that ghosts can't join it if it dies
 /mob/living/simple_mob/death()

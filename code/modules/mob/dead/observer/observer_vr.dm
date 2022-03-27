@@ -84,7 +84,7 @@
 			to_chat(src, "<span class='notice'>New notification has been sent.</span>")
 	else
 		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
-/*
+// CHOMPEdit: Revert Removal
 /mob/observer/dead/verb/backup_delay()
 	set category = "Ghost"
 	set name = "Cancel Transcore Notification"
@@ -103,7 +103,7 @@
 			to_chat(src, "<span class='notice'>Overdue mind backup notification delayed successfully.</span>")
 	else
 		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
-*/
+
 /mob/observer/dead/verb/findghostpod() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
 	set category = "Ghost"
 	set name = "Find Ghost Pod"

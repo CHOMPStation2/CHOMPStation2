@@ -8,7 +8,7 @@
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
 	var/default_job = USELESS_JOB		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
-	var/vore_respawn = 15 MINUTES		//The time to wait if you died from vore
+	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore // CHOMPEdit: Faster respawn for vorni so ghosts don't go bug medical.
 	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
@@ -70,6 +70,20 @@
 		return
 
 	var/client/ghost_client = ghost.client
+	
+	// CHOMPEdit Start: Add checks for Whitelist + Resleeving
+	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost somehow ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal joins.
+		to_chat(ghost, "<span class='warning'>You are not whitelisted to spawn as this species!</span>")
+		return
+	
+	var/datum/species/chosen_species
+	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
+		chosen_species = GLOB.all_species[ghost_client.prefs.species]
+		
+	if(chosen_species.flags && NO_SCAN)
+		to_chat(ghost, "<span class='warning'>This species cannot be resleeved!</span>")
+		return
+	// CHOMPEdit End: Add checks for Whitelist + Resleeving
 	
 	//Name matching is ugly but mind doesn't persist to look at.
 	var/charjob
