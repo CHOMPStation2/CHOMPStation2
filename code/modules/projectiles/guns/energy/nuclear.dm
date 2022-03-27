@@ -50,12 +50,8 @@
 	icon_state = "energystun"
 	item_state = null //so the human update icon uses the icon_state instead.
 	force = 8
-<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE		//Probably gonna make it a rifle sooner or later //CHOMP Edit, and so I did.
 	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit. Let's make it so that if it doesn't fit in a backpack, it doesn't fit in a holster either.
-=======
-	w_class = ITEMSIZE_LARGE
->>>>>>> cce944d043... Merge pull request #12522 from GhostActual/Firearms1
 	fire_delay = 6
 
 	projectile_type = /obj/item/projectile/beam/stun/weak
