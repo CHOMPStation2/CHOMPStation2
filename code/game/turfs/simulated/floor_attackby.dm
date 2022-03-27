@@ -10,7 +10,20 @@
 				try_graffiti(L, C) // back by unpopular demand
 				return
 			attack_tile(C, L) // Be on help intent if you want to decon something.
+<<<<<<< HEAD
 			return	//CHOMPEDIT END
+=======
+			return
+/*
+//By god, no I do NOT want to engrave when trying to cut wires, can't get this working with non-help intent either else you just swipe the tools over the floors.
+	if(!(C.has_tool_quality(TOOL_SCREWDRIVER) && flooring && (flooring.flags & TURF_REMOVE_SCREWDRIVER)))
+		if(isliving(user))
+			var/mob/living/L = user
+			if(L.a_intent == I_HELP)
+				if(try_graffiti(L, C)) // back by unpopular demand
+					return
+*/
+>>>>>>> 8182a57fea... Merge pull request #12545 from BonniePandora/unfucks-engraving
 
 	// Multi-z roof building
 	if(istype(C, /obj/item/stack/tile/roofing))
