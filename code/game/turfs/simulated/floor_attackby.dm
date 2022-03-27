@@ -12,14 +12,6 @@
 			attack_tile(C, L) // Be on help intent if you want to decon something.
 			return	//CHOMPEDIT END
 
-//Bla bla bla there was a virgo rant here
-	if(!(C.has_tool_quality(TOOL_SCREWDRIVER) && flooring && (flooring.flags & TURF_REMOVE_SCREWDRIVER)))
-		if(isliving(user))
-			var/mob/living/L = user
-			if(L.a_intent == I_HELP)
-				if(try_graffiti(L, C)) // back by unpopular demand
-					return
-
 	// Multi-z roof building
 	if(istype(C, /obj/item/stack/tile/roofing))
 		var/expended_tile = FALSE // To track the case. If a ceiling is built in a multiz zlevel, it also necessarily roofs it against weather
