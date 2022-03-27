@@ -1,4 +1,4 @@
-//CHOMP vore additions, currently only consists of reagent stuff - Jack
+//CHOMP vore additions.
 
 /obj/belly
 	//CHOMP - liquid bellies
@@ -80,14 +80,26 @@
 
 /obj/belly/proc/HandleBellyReagents()
 	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume) //Removed if(reagentbellymode == TRUE) since that's less optimized
-		if((owner.nutrition || cell.charge) >= gen_cost && gen_interval >= gen_time)
-			GenerateBellyReagents()
-			gen_interval = 0
+		if(isrobot(owner))
+			var/mob/living/silicon/robot/R = owner
+			if(R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
+				GenerateBellyReagents()
+				gen_interval = 0
+			else
+				gen_interval++
 		else
-			gen_interval++
+			if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
+				GenerateBellyReagents()
+				gen_interval = 0
+			else
+				gen_interval++
 
 /obj/belly/proc/GenerateBellyReagents()
-	(owner.nutrition || cell.charge) -= gen_cost
+	if(isrobot(owner))
+		var/mob/living/silicon/robot/R = owner
+		R.cell.charge -= gen_cost*10
+	else
+		owner.nutrition -= gen_cost
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
 
@@ -148,21 +160,21 @@
 			generated_reagents = list("milk" = 1)
 			reagent_name = "milk"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
 			reagent_name = "cream"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
 			generated_reagents = list("honey" = 1)
 			reagent_name = "honey"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 10
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
@@ -248,7 +260,7 @@
 		if("full5")
 			raw_messages = fullness5_messages
 
-	var/messages = list2text(raw_messages,delim)
+	var/messages = raw_messages.Join(delim)
 	return messages
 
 // The next function sets the messages on the belly, from human-readable var
@@ -257,7 +269,7 @@
 /obj/belly/proc/set_reagent_messages(var/raw_text, var/type, var/delim = "\n\n")
 	ASSERT(type == "full1" || type == "full2" || type == "full3" || type == "full4" || type == "full5")
 
-	var/list/raw_list = text2list(html_encode(raw_text),delim)
+	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
 		raw_list.Cut(11)
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
@@ -286,3 +298,50 @@
 			fullness5_messages = raw_list
 
 	return
+
+/////////////////////////// Process Cycle Lite /////////////////////////// CHOMP PCL
+/obj/belly/proc/quick_cycle() //For manual belly cycling without straining the bellies subsystem.
+	HandleBellyReagents()	//CHOMP reagent belly stuff.
+	// VERY early exit
+	if(!contents.len)
+		return
+
+	var/to_update = FALSE //Did anything update worthy happen?
+
+/////////////////////////// Exit Early //////////////////////////// CHOMP PCL
+	var/list/touchable_atoms = contents - items_preserved
+	if(!length(touchable_atoms))
+		return
+
+	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
+	if(!DM)
+		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
+		return FALSE
+	if(DM.handle_atoms(src, touchable_atoms))
+		updateVRPanels()
+		return
+
+	var/list/touchable_mobs = null
+
+	var/list/hta_returns = handle_touchable_atoms(touchable_atoms)
+	if(islist(hta_returns))
+		if(hta_returns["touchable_mobs"])
+			touchable_mobs = hta_returns["touchable_mobs"]
+		if(hta_returns["to_update"])
+			to_update = hta_returns["to_update"]
+
+	if(!LAZYLEN(touchable_mobs))
+		return
+
+///////////////////// Time to actually process mobs ///////////////////// CHOMP PCL
+	for(var/target in touchable_mobs)
+		var/mob/living/L = target
+		if(!istype(L))
+			continue
+		var/list/returns = DM.process_mob(src, target)
+		if(istype(returns) && returns["to_update"])
+			to_update = TRUE
+
+	if(to_update)
+		updateVRPanels()
+/////////////////////////// CHOMP PCL END ///////////////////////////
