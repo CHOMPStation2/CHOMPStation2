@@ -605,6 +605,7 @@
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/lamia/update_icon()
 	cut_overlays()
