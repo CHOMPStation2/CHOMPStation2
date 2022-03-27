@@ -137,6 +137,14 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/prbt,
 	/decl/emote/audible/gyoh,
 	/decl/emote/audible/rumble,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/coyawoo,
+	/decl/emote/audible/coyawoo2,
+	/decl/emote/audible/coyawoo3,
+	/decl/emote/audible/coyawoo4,
+	/decl/emote/audible/coyawoo5
+>>>>>>> f87655dfed... Merge pull request #12559 from Rykka-Stormheart/shep-dev-coyawoo
 	//VOREStation Add End
 	//CHOMPStation Add Start
 	/decl/emote/audible/coyawoo
