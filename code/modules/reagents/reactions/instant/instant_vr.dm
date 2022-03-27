@@ -204,9 +204,15 @@
 	required_reagents = list("plantcolony" = 5, "virusfood" = 5)
 	result_amount = 60
 
+///////////////////////////////////////////////////////////////////////////////////
+/// Upstream Adjustments
+/decl/chemical_reaction/instant/biomass
+	result_amount = 6	// Roughly 120u per phoron sheet
+
 ///////////////////////////////
-//SLIME CORES BELOW HERE///////
+//SLIME-RELATED BELOW HERE///////
 ///////////////////////////////
+<<<<<<< HEAD
 /decl/chemical_reaction/instant/slime_food
 	name = "Slime Bork"
 	id = "m_tele2"
@@ -343,11 +349,14 @@
 		target_tile.assume_gas("phoron", 25, 1400)
 		spawn (0) target_tile.hotspot_expose(700, 400)
 
+=======
+>>>>>>> ed28fbac1a... Merge pull request #12552 from Heroman3003/xenobio-rework
 /decl/chemical_reaction/instant/slimeify
 	name = "Advanced Mutation Toxin"
 	id = "advmutationtoxin2"
 	result = "advmutationtoxin"
 	required_reagents = list("phoron" = 15, "slimejelly" = 15, "mutationtoxin" = 15) //In case a xenobiologist wants to become a fully fledged slime person.
+<<<<<<< HEAD
 	result_amount = 1
 
 /decl/chemical_reaction/instant/slimeheal //A slime healing mixture. Why not.
@@ -443,3 +452,6 @@
 
 /decl/chemical_reaction/instant/biomass
 	result_amount = 6	// Roughly 120u per phoron sheet
+=======
+	result_amount = 1
+>>>>>>> ed28fbac1a... Merge pull request #12552 from Heroman3003/xenobio-rework
