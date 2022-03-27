@@ -108,3 +108,6 @@
 
 /area/crew_quarters/sleep/vistor_room_12
 	limit_mob_size = FALSE
+
+/area/medical/cryo/autoresleeve
+	name = "\improper Medical Autoresleeving"

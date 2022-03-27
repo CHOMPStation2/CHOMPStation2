@@ -10556,6 +10556,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
+"aIg" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/vending/loadout/overwear,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "aIj" = (
 /obj/structure/closet/secure_closet/engineering_chief,
 /obj/machinery/alarm{
@@ -43893,6 +43902,9 @@
 /obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
+"dqr" = (
+/turf/simulated/wall/r_wall,
+/area/medical/cryo/autoresleeve)
 "dqF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -51478,8 +51490,7 @@
 	dir = 8
 	},
 /obj/machinery/cryopod{
-	dir = 1;
-	time_till_despawn = 60
+	dir = 1
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -52654,8 +52665,7 @@
 /area/rnd/misc_lab)
 "ihl" = (
 /obj/machinery/cryopod{
-	dir = 2;
-	time_till_despawn = 60
+	dir = 2
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -54650,6 +54660,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"jnL" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/medical{
+	name = "Autoresleeving Bay";
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/white,
+/area/hallway/secondary/seconddeck/research_medical)
 "jnX" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -54717,6 +54742,17 @@
 /obj/item/clothing/glasses/meson,
 /turf/simulated/floor,
 /area/engineering/engine_waste)
+"jqu" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "jqw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/ai_status_display{
@@ -56030,8 +56066,7 @@
 /area/assembly/robotics)
 "jZO" = (
 /obj/machinery/cryopod{
-	dir = 1;
-	time_till_despawn = 60
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -60312,6 +60347,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter)
+"mFk" = (
+/obj/machinery/vending/loadout,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "mFN" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -63113,8 +63152,13 @@
 /obj/structure/table/glass,
 /obj/item/weapon/folder/white,
 /obj/item/weapon/pen,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
-/area/hallway/secondary/seconddeck/research_medical)
+/area/medical/cryo/autoresleeve)
 "onb" = (
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 9
@@ -63136,10 +63180,14 @@
 /area/crew_quarters/seconddeck/gym)
 "ond" = (
 /obj/structure/table/glass,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
 /turf/simulated/floor/tiled/white,
-/area/hallway/secondary/seconddeck/research_medical)
+/area/medical/cryo/autoresleeve)
 "ooC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/cable/yellow{
@@ -63150,9 +63198,9 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "ooQ" = (
-/obj/random/obstruction,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
+/obj/machinery/vending/loadout/uniform,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "ooT" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/secondary/seconddeck/research_medical)
@@ -64547,15 +64595,18 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "pfJ" = (
-/obj/item/stack/tile/floor/white,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Autoresleeving Bay";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "pfT" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/hallway/secondary/seconddeck/research_medical)
+/area/medical/cryo/autoresleeve)
 "pfY" = (
 /obj/structure/table/standard,
 /obj/item/weapon/soap/nanotrasen,
@@ -64644,6 +64695,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"pix" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/obj/machinery/newscaster{
+	pixel_x = -36
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "piE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -65613,8 +65680,11 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D2)
 "pMv" = (
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "pMy" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -65675,16 +65745,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cryo)
 "pNa" = (
-/obj/structure/closet,
-/obj/item/device/flashlight,
-/obj/effect/decal/cleanable/cobweb2,
-/obj/item/weapon/storage/backpack/satchel/vir,
-/obj/item/weapon/storage/backpack/virology,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "pNf" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave{
@@ -67399,6 +67464,12 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"qQJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "qQL" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -67746,6 +67817,9 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
+"rev" = (
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "reH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -68993,19 +69067,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
 "rRk" = (
-/obj/item/frame/light,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
-"rRD" = (
-/obj/structure/closet/crate/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/medical,
-/obj/random/medical/lite,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/vending/loadout/loadout_misc,
 /turf/simulated/floor/tiled/white,
-/area/hallway/secondary/seconddeck/research_medical)
+/area/medical/cryo/autoresleeve)
+"rRD" = (
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/super{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "rSd" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/machinery/light{
@@ -69779,6 +69858,19 @@
 "sql" = (
 /turf/unsimulated/mask,
 /area/hallway/primary/seconddeck/starboard)
+"sqI" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "sqJ" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/disposalpipe/segment,
@@ -71345,6 +71437,13 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/seconddeck/research_medical)
 "toM" = (
@@ -72216,6 +72315,12 @@
 "tTx" = (
 /turf/space,
 /area/shuttle/arrival/station)
+"tUA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "tVa" = (
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Port Hallway 4";
@@ -72906,6 +73011,10 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/cargo)
+"uoF" = (
+/obj/machinery/vending/loadout/gadget,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "uoP" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -73103,6 +73212,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medsci and Autoresleeving";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/seconddeck/research_medical)
 "uwy" = (
@@ -73278,17 +73391,18 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/seconddeck/research_medical)
 "uAF" = (
@@ -74208,6 +74322,10 @@
 /obj/item/weapon/book/codex/lore/robutt,
 /turf/simulated/floor/wood,
 /area/library)
+"vhy" = (
+/obj/machinery/vending/loadout/accessory,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "vhB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -75203,6 +75321,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"vLw" = (
+/obj/machinery/vending/loadout/clothing,
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "vMl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 6
@@ -75830,8 +75952,7 @@
 	dir = 8
 	},
 /obj/machinery/cryopod{
-	dir = 2;
-	time_till_despawn = 60
+	dir = 2
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -77685,6 +77806,12 @@
 /obj/structure/curtain/open/shower/medical,
 /turf/simulated/floor/tiled/freezer,
 /area/medical/medical_restroom)
+"xpf" = (
+/obj/machinery/transhuman/autoresleever{
+	ghost_spawns = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cryo/autoresleeve)
 "xpv" = (
 /obj/machinery/conveyor{
 	id = "recycler"
@@ -129413,12 +129540,12 @@ kux
 lju
 mmq
 cXZ
-olj
+xpf
 pfJ
-pfJ
-pfJ
-pfJ
-ooQ
+sqI
+jqu
+pix
+jnL
 tos
 uAD
 vJq
@@ -129674,9 +129801,9 @@ cXZ
 omu
 pfT
 pMv
-pfJ
-pMv
-ooT
+tUA
+aIg
+dqr
 toU
 uAZ
 vJS
@@ -129930,9 +130057,9 @@ liq
 mnf
 cXZ
 ond
-olj
-olj
+rev
 pMv
+tUA
 rRk
 opM
 opM
@@ -130188,9 +130315,9 @@ ljU
 ljU
 cXZ
 ooQ
-ooQ
+rev
 pNa
-pMv
+qQJ
 rRD
 opM
 tpH
@@ -130445,11 +130572,11 @@ eTf
 ecy
 cXZ
 cXZ
-ooT
-ooQ
-ooQ
-ooQ
-ooQ
+dqr
+uoF
+vLw
+vhy
+mFk
 opM
 ttq
 uEc
