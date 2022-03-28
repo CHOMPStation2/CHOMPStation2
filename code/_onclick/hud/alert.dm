@@ -471,7 +471,11 @@ so as to remain in compliance with the most up-to-date laws."
 		return
 	if(master)
 		return usr.client.Click(master, location, control, params)
+<<<<<<< HEAD
 	..() // CHOMPStation Edit: Pass through to click_vr
+=======
+	..() // VOREStation Edit: Pass through to click_vr
+>>>>>>> 084441d48b... Merge pull request #12558 from Rykka-Stormheart/shep-dev-xenochimera-qol
 
 /obj/screen/alert/Destroy()
 	..()

@@ -24,7 +24,10 @@
 	name = "Low Power"
 	desc = "Your battery is very low! Low power mode makes all movements slower."
 	
+<<<<<<< HEAD
 // CHOMPEdit Start
+=======
+>>>>>>> 084441d48b... Merge pull request #12558 from Rykka-Stormheart/shep-dev-xenochimera-qol
 /obj/screen/alert/xenochimera/reconstitution
 	name = "Reconstructing Form"
 	desc = "You're still rebuilding your body! Click the alert to find out how long you have left."
@@ -51,5 +54,8 @@
 	if(istype(H) && istype(H.species, /datum/species/xenochimera)) // If you're somehow able to click this while not a chimera, this should prevent weird runtimes. Will need changing if regeneration is ever opened to non-chimera using the same alert.
 		if(H.revive_ready == REVIVING_DONE) // Sanity check.
 			H.hatch() // Hatch.
+<<<<<<< HEAD
 // CHOMPEdit Finish
+=======
+>>>>>>> 084441d48b... Merge pull request #12558 from Rykka-Stormheart/shep-dev-xenochimera-qol
 */
