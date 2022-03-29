@@ -35,7 +35,7 @@
 	var_changes = list("grab_resist_divisor_victims" = 0.5, "grab_resist_divisor_self" = 3, "grab_power_victims" = 1, "grab_power_self" = -1)
 
 /datum/trait/negative/extreme_slowdown
-	name = "Extreme slowdown"
+	name = "Slowdown, Extreme"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
 	var_changes = list("slowdown" = 4.0)
@@ -376,3 +376,25 @@
 	if(ms != "")
 		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
+
+/datum/trait/negative/endurance_glass // Glass Cannon
+	name = "Glass Endurance"
+	desc = "Your body is very fragile. Reduces your maximum hitpoints to 25. Beware sneezes. You require only 50 damage in total to die, compared to 200 normally. You will go into crit after losing 25 HP, compared to crit at 100 HP."
+	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
+	var_changes = list("total_health" = 25)
+	
+/datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
+	
+/datum/trait/negative/reduced_biocompat
+	name = "Reduced Biocompatibility"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 60% as effective on you!"
+	cost = -4
+	var_changes = list("chem_strength_heal" = 0.6)
+	
+/datum/trait/negative/reduced_biocompat_extreme
+	name = "Reduced Biocompatibility, Major"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 30% as effective on you!"
+	cost = -8
+	var_changes = list("chem_strength_heal" = 0.3)
