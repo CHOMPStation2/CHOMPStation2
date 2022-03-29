@@ -1849,14 +1849,12 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
 "bGI" = (
-/obj/machinery/door/airlock/security{
-	locked = 1
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/airlock/security,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -18388,12 +18386,6 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	id = snowfield sec front blast;
-	name = "Emergency Front Desk Lockdown";
-	pixel_y = -10;
-	req_access = list(1)
-	},
-/obj/machinery/button/remote/blast_door{
 	id = "snowfield sec front blast";
 	name = "Emergency Front Desk Lockdown";
 	pixel_y = -10;
@@ -24662,10 +24654,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/monitorroom)
-"vGd" = (
-/obj/machinery/power/tracker,
-/turf/simulated/floor,
-/area/awaymission/snowfield/outside)
 "vGq" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -46254,7 +46242,7 @@ qYo
 pun
 pun
 pun
-vGd
+xPt
 noR
 fdE
 noR
