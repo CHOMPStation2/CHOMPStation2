@@ -577,8 +577,8 @@
 	a progress.<BR>(00:20) The lizard finally speaks, telling us the key points of the blueprint.<BR>(00:25) \
 	There are missing important componant followed by the blueprint,<BR>(00:32) however, we may manage to get enough \
 	from the asteroid back from 1908.<BR>(00:39) Exactly what the research team needs, whatever they say. Something \
-	they won't be able to get in their lifetime, what they say. (00:52) Vlad is just using the lizard as their \
-	Punching bag, now. (00:59) Gosh, their screams are worser than my grandma. Who would know an overgrown lizard \
+	they won't be able to get in their lifetime, what they say.<BR>(00:52) Vlad is just using the lizard as their \
+	Punching bag, now. <BR>(00:59) Gosh, their screams are worser than my grandma. Who would know an overgrown lizard \
 	would sound like that..<BR>(01:07) Best to finish up, now. We can get more informations from'em. Yemelyan Fedoro, out."
 
 /obj/item/weapon/paper/awaygate/snowfield/note // Little easter egg for appreciation.
