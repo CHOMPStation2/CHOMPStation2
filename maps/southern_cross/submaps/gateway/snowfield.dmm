@@ -312,7 +312,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
 "amD" = (
-/obj/structure/bed/chair/sofa/brown/right,
+/obj/structure/bed/chair/oldsofa/right,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
 "amU" = (
@@ -1922,9 +1922,11 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snowfield/security/detective)
 "bKK" = (
-/obj/item/weapon/storage/box/shotgunshells/large,
 /obj/item/trash/material/metal,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/commandarmory)
 "bKO" = (
@@ -2353,7 +2355,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/secure_tech_storage)
 "cgH" = (
-/obj/structure/bed/chair/sofa/brown{
+/obj/structure/bed/chair/oldsofa{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -2439,12 +2441,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
 "cju" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/lurker,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/hallway/northhallway)
+/mob/living/simple_mob/vore/rabbit/white,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/awaymission/snowfield/outside)
 "cjJ" = (
-/obj/structure/bed/chair/sofa/brown/left,
+/obj/structure/bed/chair/oldsofa/left,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
 "ckr" = (
@@ -3426,7 +3427,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/clothing/head/cueball,
 /obj/item/clothing/suit/chickensuit,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
@@ -3958,18 +3958,6 @@
 "dzU" = (
 /obj/structure/window/reinforced,
 /obj/structure/table/rack,
-/obj/item/weapon/storage/box/sniperammo{
-	starts_with = list(/obj/item/ammo_casing/a145 = 14)
-	},
-/obj/item/weapon/storage/box/sniperammo{
-	starts_with = list(/obj/item/ammo_casing/a145 = 14)
-	},
-/obj/item/weapon/storage/box/sniperammo{
-	starts_with = list(/obj/item/ammo_casing/a145 = 14)
-	},
-/obj/item/weapon/storage/box/sniperammo{
-	starts_with = list(/obj/item/ammo_casing/a145 = 14)
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -3977,6 +3965,12 @@
 /obj/item/weapon/gun/projectile/heavysniper{
 	scoped_accuracy = 125
 	},
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145/highvel,
+/obj/item/ammo_magazine/ammo_box/b145/highvel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "dAf" = (
@@ -5627,9 +5621,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
 "eVa" = (
-/mob/living/simple_mob/animal/giant_spider/thermic,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/chemistry)
+/mob/living/simple_mob/vore/sheep,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/awaymission/snowfield/outside)
 "eVy" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -5691,18 +5685,18 @@
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Ammo"
 	},
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/scattershot/large,
-/obj/item/weapon/storage/box/scattershot/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/beanbags/large,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/armory)
 "eYO" = (
@@ -6264,6 +6258,7 @@
 	req_one_access = list(1)
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/monitorroom)
 "fAZ" = (
@@ -7024,6 +7019,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm16)
+"giF" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/grey/border,
+/mob/living/simple_mob/animal/giant_spider,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/northhallway)
 "giO" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -7151,6 +7152,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/nurse/hat,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "goW" = (
@@ -7668,8 +7670,7 @@
 "gLt" = (
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Code Green Armory";
-	req_access = list(2);
-	req_one_access = null
+	req_access = null
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/armory)
@@ -8466,15 +8467,15 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/command/bsa)
 "hru" = (
-/obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/mob/living/simple_mob/animal/giant_spider,
+/obj/structure/catwalk,
+/mob/living/simple_mob/animal/giant_spider/thermic,
 /turf/simulated/floor,
-/area/awaymission/snowfield/hallway/northhallway)
+/area/awaymission/snowfield/medical/hallway)
 "hrB" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -10593,7 +10594,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/mob/living/simple_mob/animal/giant_spider/lurker,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
@@ -11072,10 +11072,16 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
 "jCV" = (
-/obj/item/weapon/storage/box/shotgunshells/large,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/command/commandarmory)
+/mob/living/simple_mob/animal/giant_spider/thermic,
+/turf/simulated/floor,
+/area/awaymission/snowfield/engineering/hallway)
 "jDt" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
@@ -11122,10 +11128,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/monitorroom)
 "jEa" = (
-/obj/structure/bed/chair/sofa/brown,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/chair/oldsofa,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
 "jEJ" = (
@@ -11537,7 +11543,6 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/frost,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/awaymission/snowfield/medical/front_desk)
@@ -11632,7 +11637,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/awaymission/snowfield/outside)
 "jZM" = (
-/obj/structure/bed/chair/sofa/brown/right{
+/obj/structure/bed/chair/oldsofa/right{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -11944,7 +11949,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bsa)
 "kmE" = (
-/mob/living/simple_mob/animal/giant_spider,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -13341,7 +13345,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/commandarmory)
 "lve" = (
-/obj/structure/bed/chair/sofa/brown,
+/obj/structure/bed/chair/oldsofa,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
 "lvw" = (
@@ -13768,7 +13772,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
-/mob/living/simple_mob/faithless,
+/mob/living/simple_mob/faithless/cult,
 /turf/simulated/floor,
 /area/awaymission/snowfield/public/toolstroage2)
 "lLY" = (
@@ -15889,7 +15893,7 @@
 "nDV" = (
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Code Blue Armory";
-	req_access = list(2)
+	req_access = null
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/armory)
@@ -19165,10 +19169,10 @@
 	description_fluff = "Designed to suppress the prison riot, KS-23 has been developed in 1970s in Soviet Russia. Crude, but compact, it is easy to carry around while in patrol, and useful in close combat.";
 	name = "KS-23"
 	},
-/obj/item/weapon/storage/box/shotgunshells,
 /obj/structure/closet/secure_closet/guncabinet{
 	opened = 1
 	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/sub_chamber)
 "qtB" = (
@@ -19408,6 +19412,15 @@
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
+"qGm" = (
+/obj/structure/catwalk,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/item/clothing/head/cueball,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/security/security_cell)
 "qHd" = (
 /obj/machinery/door/airlock/medical{
 	health = 130;
@@ -20095,7 +20108,7 @@
 	dir = 8
 	},
 /obj/effect/decal/remains/human,
-/mob/living/simple_mob/faithless,
+/mob/living/simple_mob/faithless/cult,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "rmy" = (
@@ -20157,9 +20170,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/mob/living/simple_mob/faithless,
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/faithless/cult,
 /turf/simulated/floor,
 /area/awaymission/snowfield/public/toolstroage2)
 "rqq" = (
@@ -20482,11 +20495,11 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
 "rNT" = (
-/obj/structure/bed/chair/sofa/brown{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/bed/chair/oldsofa{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpoint)
@@ -21504,7 +21517,7 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
 "sSl" = (
-/obj/structure/bed/chair/sofa/brown/left{
+/obj/structure/bed/chair/oldsofa/left{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -22472,22 +22485,12 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
-	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
-	name = "tactical armored jumpsuit";
-	slowdown = 0.5
-	},
-/obj/item/clothing/under/tactical{
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
-	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
-	name = "tactical armored jumpsuit";
-	slowdown = 0.5
-	},
-/obj/item/clothing/under/tactical{
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
 	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
@@ -22500,10 +22503,20 @@
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/under/tactical{
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
+	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
+	name = "tactical armored jumpsuit";
+	slowdown = 0.5
+	},
+/obj/item/clothing/under/tactical{
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
+	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
+	name = "tactical armored jumpsuit";
+	slowdown = 0.5
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "tPt" = (
@@ -23549,6 +23562,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "uIQ" = (
@@ -34718,7 +34732,7 @@ mIX
 hMS
 qne
 uOb
-ned
+giF
 ife
 uEo
 imu
@@ -35603,7 +35617,7 @@ qYo
 pun
 mtE
 pun
-pun
+cju
 bUb
 pun
 pun
@@ -36761,7 +36775,7 @@ nAG
 nAG
 nAG
 dhV
-uWu
+jCV
 nAG
 oDz
 uWu
@@ -36960,7 +36974,7 @@ oUE
 hmq
 iFj
 rlj
-hru
+qne
 tVV
 ned
 kXK
@@ -37709,7 +37723,7 @@ bhz
 eip
 hMS
 mTL
-cju
+tSF
 inM
 qTW
 qTW
@@ -40494,7 +40508,7 @@ xkV
 sTG
 fVU
 dHR
-eVa
+kOt
 dHR
 ljz
 oUL
@@ -41241,7 +41255,7 @@ rLd
 uGz
 oVH
 iHU
-uGz
+hru
 xiw
 oVH
 uGz
@@ -43159,7 +43173,7 @@ cRx
 gYN
 ocr
 beX
-amu
+qGm
 die
 amu
 jez
@@ -43280,7 +43294,7 @@ pun
 pun
 pun
 pun
-pun
+cju
 pun
 pun
 pun
@@ -44922,7 +44936,7 @@ pun
 pun
 pun
 pun
-pun
+cju
 pun
 pun
 pun
@@ -46173,7 +46187,7 @@ wNv
 mUV
 eNV
 gox
-jCV
+hPR
 bKK
 ovn
 mll
@@ -47771,7 +47785,7 @@ bUb
 bUb
 pun
 pun
-pun
+cju
 pun
 bUb
 pun
@@ -47936,7 +47950,7 @@ pun
 pun
 pun
 pun
-pun
+eVa
 pun
 pun
 pun
@@ -48354,7 +48368,7 @@ pun
 pun
 pun
 pun
-pun
+cju
 pun
 pun
 pun
@@ -49782,7 +49796,7 @@ bUb
 gaS
 pun
 pun
-pun
+cju
 pun
 pun
 pun
@@ -51535,7 +51549,7 @@ pun
 pun
 pun
 pun
-pun
+cju
 pun
 pun
 pun
@@ -52833,7 +52847,7 @@ pun
 pun
 pun
 pun
-pun
+cju
 pun
 pun
 pun
@@ -53032,7 +53046,7 @@ pun
 pun
 pun
 pun
-pun
+eVa
 pun
 pun
 pun
@@ -53776,7 +53790,7 @@ pun
 pun
 nin
 pun
-pun
+cju
 pun
 xyE
 pun
