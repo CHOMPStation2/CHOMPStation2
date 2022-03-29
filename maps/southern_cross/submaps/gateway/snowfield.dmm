@@ -22639,7 +22639,7 @@
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control-switch for Surgery.";
-	id = "Surgery";
+	id = "Operating Theatre";
 	name = "Surgery";
 	pixel_y = -23;
 	req_one_access = list(1,45)
@@ -26919,7 +26919,7 @@
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control-switch for Surgery.";
-	id = "Surgery";
+	id = "Operating Theatre";
 	name = "Surgery";
 	pixel_x = 23;
 	req_one_access = list(1,45)
