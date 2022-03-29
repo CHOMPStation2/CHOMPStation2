@@ -78,13 +78,14 @@
 
 /datum/trait/positive/heavyweight
 	name = "Heavyweight"
-	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you."
+	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you, and neither players nor mobs can trade places with you or bump you out of the way."
 	cost = 2
 	var_changes = list("stun_mod" = 0.75, "weaken_mod" = 0.75) // Stuns are 75% as effective - a stun of 3 seconds will be 2 seconds after rounding. Set to 0.75 to make a 3 second stun 2 seconds.(Weaken is used alongside stun to prevent aiming.)
 
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.mob_size = MOB_LARGE
+	H.mob_bump_flag = HEAVY
 
 /datum/trait/positive/table_passer
 	name = "Table passer"
