@@ -5049,11 +5049,16 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/solarshack)
 "equ" = (
-/mob/living/simple_mob/animal/giant_spider/nurse/hat,
-/obj/effect/spider/stickyweb,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/broodling,
 /turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/front_desk)
+/area/awaymission/snowfield/medical/hallway)
 "eqY" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -7150,7 +7155,6 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/nurse/hat,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "goW" = (
@@ -10955,6 +10959,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/commandhallway)
+"jyl" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/broodling,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/front_desk)
 "jyn" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -15463,7 +15472,6 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/mob/living/simple_mob/animal/giant_spider/nurse/hat,
 /obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/neutral,
@@ -18597,8 +18605,8 @@
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
 "qbC" = (
-/mob/living/simple_mob/animal/giant_spider/nurse/hat,
-/obj/effect/spider/stickyweb,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/tunneler,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "qbM" = (
@@ -26886,6 +26894,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/mob/living/simple_mob/animal/giant_spider/broodling,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "xmc" = (
@@ -44237,7 +44246,7 @@ vDF
 dpf
 oti
 roD
-qbC
+uVW
 nNu
 igZ
 dpf
@@ -44496,12 +44505,12 @@ dpf
 wWN
 roD
 nNu
-nNu
+qbC
 xJj
 dpf
 fbH
 eyq
-rrQ
+jyl
 kMc
 rrQ
 bMi
@@ -44759,7 +44768,7 @@ hyD
 dpf
 uDy
 jWk
-equ
+kMc
 jgV
 jgV
 mIf
@@ -46557,7 +46566,7 @@ lGw
 lGw
 aRJ
 non
-lGw
+equ
 nZx
 dux
 ldT
