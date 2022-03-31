@@ -387,6 +387,12 @@
 	..(S,H)
 	H.setMaxHealth(S.total_health)
 	
+/datum/trait/negative/reduced_biocompat_minor
+	name = "Reduced Biocompatibility, Minor"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 80% as effective on you!"
+	cost = -1
+	var_changes = list("chem_strength_heal" = 0.8)
+	
 /datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 60% as effective on you!"
@@ -398,3 +404,46 @@
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 30% as effective on you!"
 	cost = -8
 	var_changes = list("chem_strength_heal" = 0.3)
+
+// Rykkanote: Relocated these here as we're no longer a YW downstream.
+/datum/trait/negative/light_sensitivity
+	name = "Photosensitivity"
+	desc = "You have trouble dealing with sudden flashes of light, taking some time for you to recover. The effects of flashes from cameras and security equipment leaves you stunned for some time. 50% increased stun duration from flashes."
+	cost = -1
+	var_changes = list("flash_mod" = 1.5)
+
+/datum/trait/negative/light_sensitivity_plus
+	name = "Photosensitivity, Major"
+	desc = "You have trouble dealing with sudden flashes of light, taking quite a long time for you to be able to recover. The effects of flashes from cameras and security equipment leave you stunned for some time. 100% (2x) stun duration from flashes."
+	cost = -2
+	var_changes = list("flash_mod" = 2.0)
+
+
+/datum/trait/negative/haemophilia_plus
+	name = "Haemophilia, Major"
+	desc = "Some say that when it rains, it pours.  Unfortunately, this is also true for yourself if you get cut. You bleed much faster than average, at 3x the normal rate." // CHOMPEdit: More Trait Feedback for players.
+	cost = -3
+	can_take = ORGANICS
+
+/datum/trait/negative/haemophilia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.add_modifier(/datum/modifier/trait/haemophilia)
+	
+/datum/trait/negative/pain_intolerance_basic
+	name = "Pain Intolerance"
+	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources." 
+	cost = -2
+	var_changes = list("pain_mod" = 1.2) // CHOMPEdit: Makes this exact opposite of Pain Tolerance Basic.
+
+/datum/trait/negative/pain_intolerance_advanced
+	name = "Pain Intolerance, Major"
+	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
+	cost = -3
+	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit. CHOMPEdit: This really should cost more if it's this bad.
+	
+
+/datum/trait/negative/sensitive_biochem
+	name = "Sensitive Biochemistry"
+	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well. Toxin damages and knockout drugs are 25% stronger on you."
+	cost = -1
+	var_changes = list("chem_strength_tox" = 1.25)
