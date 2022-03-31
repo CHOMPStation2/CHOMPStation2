@@ -260,7 +260,7 @@
 /datum/trait/negative/lonely
 	name = "Minor loneliness vulnerability"
 	desc = "You're very prone to loneliness! Being alone for extended periods of time causes adverse effects. Most mobs will cure this loneliness as long as they aren't hostile."
-	cost = -2
+	cost = -1
 	var/warning_cap = 400
 	var/only_people = FALSE
 	var/hallucination_cap = 25
@@ -271,7 +271,7 @@
 /datum/trait/negative/lonely/major
 	name = "Major loneliness vulnerability"
 	desc = "You're extremely prone to loneliness! Being alone for extended periods of time causes adverse effects. Most mobs won't be enough to cure this loneliness, you need other social beings."
-	cost = -5
+	cost = -3
 	warning_cap = 300
 	hallucination_cap = 50
 	escalation_speed = 1.3
