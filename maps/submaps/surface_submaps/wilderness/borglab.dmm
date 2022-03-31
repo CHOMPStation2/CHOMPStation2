@@ -9,7 +9,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "ad" = (
 /obj/effect/floor_decal/sign/c,
@@ -51,7 +53,9 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "bL" = (
 /turf/simulated/floor/outdoors/dirt{
@@ -105,13 +109,17 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "dT" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "ej" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -157,7 +165,9 @@
 /obj/machinery/light/small/emergency/flicker{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15
+	},
 /area/submap/BorgLab)
 "gf" = (
 /obj/structure/table/standard,
@@ -184,7 +194,9 @@
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "gS" = (
 /obj/effect/floor_decal/rust/mono_rusted3,
@@ -214,7 +226,9 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "hW" = (
 /obj/machinery/door/airlock/maintenance/common,
@@ -259,7 +273,9 @@
 "jf" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "jz" = (
 /obj/machinery/light/small/emergency/flicker{
@@ -313,7 +329,9 @@
 /obj/machinery/light/small/emergency/flicker{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "lU" = (
 /obj/machinery/chem_master,
@@ -370,7 +388,9 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "mE" = (
 /obj/effect/floor_decal/techfloor/orange,
@@ -396,13 +416,17 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "nk" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "ny" = (
 /obj/structure/curtain/open/shower,
@@ -457,7 +481,9 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "qa" = (
 /obj/structure/table/standard,
@@ -466,7 +492,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/BorgLab)
 "qW" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "ra" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -493,14 +521,18 @@
 	pixel_x = -24
 	},
 /obj/random/junk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "sr" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "sK" = (
 /obj/structure/closet/crate/secure/loot,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "ta" = (
 /obj/structure/bed/padded,
@@ -510,7 +542,9 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "th" = (
 /obj/effect/floor_decal/rust,
@@ -527,7 +561,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/color_rustedfull,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "tx" = (
 /turf/simulated/floor/reinforced,
@@ -535,7 +571,9 @@
 "ty" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "tX" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -543,7 +581,9 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "ub" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -561,7 +601,9 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "uQ" = (
 /obj/effect/gibspawner/human,
@@ -589,7 +631,9 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "xh" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound,
@@ -598,7 +642,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/gibspawner/human,
 /obj/random/trash,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "xk" = (
 /obj/structure/sign/warning/caution,
@@ -638,7 +684,9 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "yz" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -660,7 +708,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "yR" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -696,7 +746,9 @@
 /area/submap/BorgLab)
 "Bl" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Bq" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound,
@@ -716,7 +768,9 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "CA" = (
 /obj/effect/floor_decal/rust,
@@ -727,7 +781,9 @@
 "CS" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/gibspawner/robot,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "CX" = (
 /obj/structure/table/standard,
@@ -791,12 +847,16 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/research,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Gy" = (
 /obj/random/maintenance/research,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Gz" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi{
@@ -809,7 +869,9 @@
 /area/submap/BorgLab)
 "GA" = (
 /obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "GC" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -866,14 +928,18 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Jp" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Jr" = (
 /obj/effect/landmark/loot_spawn/low,
@@ -905,7 +971,9 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "KX" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound,
@@ -935,7 +1003,9 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Lz" = (
 /obj/structure/table/standard,
@@ -960,11 +1030,15 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "LC" = (
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "MT" = (
 /obj/machinery/space_heater,
@@ -981,7 +1055,9 @@
 /area/submap/BorgLab)
 "Nj" = (
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Nq" = (
 /obj/effect/floor_decal/rust,
@@ -1039,7 +1115,9 @@
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Oq" = (
 /obj/effect/floor_decal/rust,
@@ -1048,7 +1126,9 @@
 	amount = 10
 	},
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Oz" = (
 /obj/item/weapon/pickaxe/plasmacutter,
@@ -1063,14 +1143,18 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "OH" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "OW" = (
 /obj/structure/table/standard,
@@ -1091,7 +1175,9 @@
 "Pk" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "PW" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1108,7 +1194,9 @@
 	dir = 8
 	},
 /obj/effect/map_effect/interval/sound_emitter/energy_gunfight,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15
+	},
 /area/submap/BorgLab)
 "Qg" = (
 /turf/simulated/mineral/ignore_mapgen,
@@ -1125,7 +1213,9 @@
 /obj/effect/floor_decal/industrial/warning,
 /mob/living/simple_mob/vore/aggressive/corrupthound,
 /obj/machinery/light/small/emergency/flicker,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "QW" = (
 /obj/structure/closet/l3closet/general,
@@ -1155,7 +1245,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "RP" = (
 /turf/simulated/floor/outdoors/dirt,
@@ -1202,7 +1294,9 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Tt" = (
 /mob/living/simple_mob/mechanical/combat_drone/lesser{
@@ -1226,12 +1320,16 @@
 "TN" = (
 /obj/structure/closet/l3closet/virology,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "TU" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "TW" = (
 /obj/effect/gibspawner/human,
@@ -1281,7 +1379,9 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "UW" = (
 /obj/structure/window/reinforced{
@@ -1299,7 +1399,9 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Vc" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1328,7 +1430,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/item/frame/apc,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "VU" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1337,7 +1441,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Wh" = (
 /obj/effect/landmark/loot_spawn/low,
@@ -1351,7 +1457,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/broken_gun/laser_retro,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "WQ" = (
 /turf/simulated/wall/r_wall,
@@ -1374,7 +1482,9 @@
 "Yk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Yy" = (
 /obj/structure/table/steel,
@@ -1384,7 +1494,9 @@
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "YD" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -1394,13 +1506,17 @@
 	layer = 3.3;
 	name = "Containment Door"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "YZ" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Za" = (
 /obj/effect/floor_decal/rust,
@@ -1408,11 +1524,15 @@
 /area/submap/BorgLab)
 "Zc" = (
 /obj/structure/railing,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15
+	},
 /area/submap/BorgLab)
 "Zn" = (
 /obj/item/device/measuring_tape,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Zq" = (
 /obj/machinery/door/window/brigdoor/westright{
@@ -1425,11 +1545,15 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Zt" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 293.15
+	},
 /area/submap/BorgLab)
 "Zy" = (
 /obj/effect/floor_decal/rust,
