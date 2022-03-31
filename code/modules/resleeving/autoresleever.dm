@@ -76,11 +76,11 @@
 
 	var/client/ghost_client = ghost.client
 	
-	// CHOMPEdit Start: Add checks for Whitelist + Resleeving
-	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost somehow ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal joins.
+	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
 		to_chat(ghost, "<span class='warning'>You are not whitelisted to spawn as this species!</span>")
 		return
 	
+	// CHOMPedit start
 	var/datum/species/chosen_species
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
