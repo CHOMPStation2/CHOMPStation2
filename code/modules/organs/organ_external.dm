@@ -9,7 +9,7 @@
 
 /obj/item/organ/external
 	name = "external"
-	min_broken_damage = 30
+	min_broken_damage = 60 // CHOMPEdit: Flat doubling of all min_broken_damage
 	max_damage = 0
 	dir = SOUTH
 	organ_tag = "limb"

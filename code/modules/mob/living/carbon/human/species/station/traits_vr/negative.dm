@@ -27,7 +27,7 @@
 
 /datum/trait/negative/endurance_low
 	name = "Low Endurance"
-	desc = "Reduces your maximum total hitpoints to 75."
+	desc = "Reduces your maximum total hitpoints to 75.  You require only 150 damage in total to die, compared to 200 normally. You will go into crit after losing 75 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
 	cost = -4  //Chompedit makes you a lot squishier, should not be only 2 points.  (based on the brute and burn vulnerability costs)
 	var_changes = list("total_health" = 75)
 
@@ -37,7 +37,7 @@
 
 /datum/trait/negative/endurance_very_low
 	name = "Low Endurance, Major"
-	desc = "Reduces your maximum total hitpoints to 50."
+	desc = "Reduces your maximum total hitpoints to 50.  You require only 100 damage in total to die, compared to 200 normally. You will go into crit after losing 50 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
 	cost = -8 //Teshari HP. This makes the person a lot more suseptable to getting stunned, killed, etc.  //Chompedit: Has no business being only 3 points, while others that function similarly but are nowhere near as crippling are 3 as well.
 	var_changes = list("total_health" = 50)
 
@@ -82,9 +82,9 @@
 	var_changes = list("burn_mod" = 1.5)
 
 //YW ADDITIONS START
-/datum/trait/negative/reduced_biocompat
-	name = "Reduced Biocompatibility"
-	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records!"
+/datum/trait/negative/reduced_biocompat_minor // CHOMPEdit: Changed name of trait + desc.
+	name = "Reduced Biocompatibility, Minor"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 80% as effective on you!"
 	cost = -1
 	var_changes = list("chem_strength_heal" = 0.8)
 
