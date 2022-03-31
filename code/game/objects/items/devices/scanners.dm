@@ -289,7 +289,7 @@ HALOGEN COUNTER	- Radcount on mobs
 				dat+= "<span class='danger'>WARNING: Defib will cause extreme pain and set subject feral. Sedation recommended prior to defibrillation.</span>"
 			else // If they bop them and they're not dead or reviving, give 'em a little notice.
 				dat += "<span class='notice'>Subject is a Xenochimera. Treat accordingly.</span>"
-		// CHOMPEdit End
+		// VOREStation Edit End
 	user.show_message(dat, 1)
 
 /obj/item/device/healthanalyzer/verb/toggle_mode()

@@ -55,7 +55,7 @@
 	//primitive_form = "Farwa"
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken.
-	flags = NO_SCAN | NO_INFECT // | NO_DEFIB // Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is. CHOMPEdit: Leaving NO_DEFIB there for the future. // CHOMPEdit: Adds flags
+	flags = NO_SCAN | NO_INFECT // | NO_DEFIB // Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is. Leaving NO_DEFIB there for the future/in case reversion to old 'chimera no-defib.
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -88,11 +88,10 @@
 		H.weakened = 5
 		H.canmove = 0
 		H.does_not_breathe = TRUE
-		var/regen_sounds = H.regen_sounds // CHOMPEdit Start: Regen sounds/etc
+		var/regen_sounds = H.regen_sounds
 		if(prob(2)) // 2% chance of playing squelchy noise while reviving, which is run roughly every 2 seconds/tick while regenerating.
 			playsound(H, pick(regen_sounds), 30)
 			H.visible_message("<span class='danger'><p><font size=4>[H.name]'s motionless form shudders grotesquely, rippling unnaturally.</font></p></span>")
-		// CHOMPEdit End
 
 	//Cold/pressure effects when not regenerating
 	else
@@ -212,8 +211,8 @@
 			feral++
 		else
 			feral = max(0,--feral)
-		
-		// Being in a belly or in the darkness decreases stress further. :9
+			
+		// Being in a belly or in the darkness decreases stress further. Helps mechanically reward players for staying in darkness + RP'ing appropriately. :9
 		var/turf/T = get_turf(H)
 		if(feral && (isbelly(H.loc) || T.get_lumcount() <= 0.1))
 			feral = max(0,--feral)
@@ -233,7 +232,7 @@
 		H.shock_stage = max(H.shock_stage-(feral/20), 0)
 
 		//Handle light/dark areas
-		// var/turf/T = get_turf(H) // CHOMPEdit: Moved up to before the in-belly/dark combined check, should still safely reach here just fine.
+		// var/turf/T = get_turf(H) // Moved up to before the in-belly/dark combined check, should still safely reach here just fine.
 		if(!T)
 			update_xenochimera_hud(H, danger, feral_state)
 			return //Nullspace
@@ -246,7 +245,7 @@
 			var/list/nearby = H.living_mobs(world.view)
 
 			//Not in the dark, or a belly, and out in the open.
-			if(!darkish && isturf(H.loc) && !isbelly(H.loc)) // CHOMPEdit: added specific check for if in belly
+			if(!darkish && isturf(H.loc) && !isbelly(H.loc)) // Added specific check for if in belly
 
 				//Always handle feral if nobody's around and not in the dark.
 				if(!nearby.len)
@@ -260,8 +259,8 @@
 			update_xenochimera_hud(H, danger, feral_state)
 			return
 
-		// In the darkness, "hidden", or in a belly. No need for custom scene-protection checks as it's just an occational infomessage.
-		if(darkish || !isturf(H.loc) || isbelly(H.loc)) // CHOMPEdit: added specific check for if in belly
+		// In the darkness, or "hidden", or in a belly. No need for custom scene-protection checks as it's just an occational infomessage.
+		if(darkish || !isturf(H.loc) || isbelly(H.loc)) // Specific check for if in belly. !isturf should do this, but JUST in case.
 			// If hurt, tell 'em to heal up
 			if (shock)
 				to_chat(H,"<span class='info'>This place seems safe, secure, hidden, a place to lick your wounds and recover...</span>")
