@@ -9,11 +9,15 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/AMine1)
 "d" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/AMine1)
 "e" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/AMine1)
 "f" = (
 /turf/simulated/wall,
@@ -176,7 +180,9 @@
 /area/submap/cave/AMine1)
 "K" = (
 /obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/AMine1)
 "L" = (
 /obj/machinery/light{
@@ -203,7 +209,9 @@
 	dir = 4;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/AMine1)
 "P" = (
 /obj/structure/table/standard,
