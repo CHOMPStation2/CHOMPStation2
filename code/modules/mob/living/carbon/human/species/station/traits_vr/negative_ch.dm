@@ -13,7 +13,7 @@
 	excludes = list(/datum/trait/positive/absorbent)
 
 /datum/trait/negative/less_blood
-	name = "Low blood volume"
+	name = "Low Blood Volume"
 	desc = "You have 33.3% less blood volume compared to most species, making you more prone to blood loss issues."
 	cost = -3
 	var_changes = list("blood_volume" = 375)
@@ -21,7 +21,7 @@
 	can_take = ORGANICS
 
 /datum/trait/negative/less_blood_extreme
-	name = "Extremely low blood volume"
+	name = "Low Blood Volume, Extreme"
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
 	cost = -5
 	var_changes = list("blood_volume" = 224)
@@ -47,7 +47,7 @@
 	var_changes = list("waking_speed" = 0.25)
 
 /datum/trait/negative/low_blood_sugar
-	name = "Low blood sugar"
+	name = "Low Blood Sugar"
 	desc = "If you let your nutrition get too low, you will start to experience adverse affects including hallucinations, unconsciousness, and weakness"
 	cost = -1
 	special_env = TRUE

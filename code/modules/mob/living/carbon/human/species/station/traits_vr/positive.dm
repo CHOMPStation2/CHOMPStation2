@@ -78,19 +78,19 @@
 	var_changes = list("darksight" = 6)  //CHOMP Edit
 */ 
 /datum/trait/positive/melee_attack
-	name = "Sharp Melee"
+	name = "Special Attack: Sharp Melee" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp))
 
 /datum/trait/positive/melee_attack_fangs
-	name = "Sharp Melee & Numbing Fangs"
+	name = "Special Attack: Sharp Melee & Numbing Fangs" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage, along with fangs that makes the person bit unable to feel their body or pain."
 	cost = 2
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/fangs
-	name = "Numbing Fangs"
+	name = "Special Attack: Numbing Fangs" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides fangs that makes the person bit unable to feel their body or pain."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
@@ -129,7 +129,7 @@
 	var_changes = list("chem_strength_heal" = 1.2)
 
 /datum/trait/positive/pain_tolerance // CHOMPEdit: There is no "basic" pain tolerance, so I'm reducing this to regular pain tolerance.
-	name = "Increased Pain Tolerance"
+	name = "Pain Tolerance" // CHOMPEdit: Renamed for clarity
 	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
 	cost = 2
 	var_changes = list("pain_mod" = 0.8)
