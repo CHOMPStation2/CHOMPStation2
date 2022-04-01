@@ -6,3 +6,4 @@
 	view = "15x15"
 	cache_lifespan = 7
 	fps = 20 // If this isnt hard-defined, anything relying on this variable before world load will cry a lot
+	tick_lag = 0.5 // CHOMPEdit
