@@ -1,3 +1,4 @@
+#define MAX_AMMO_HUD_POSSIBLE 4 // Cap the amount of HUDs at 4.
 /*
 	The global hud:
 	Uses the same visual objects for all players.
@@ -191,6 +192,9 @@ var/list/global_huds = list(
 	var/icon/ui_style
 	var/ui_color
 	var/ui_alpha
+	
+	// TGMC Ammo HUD Port
+	var/list/obj/screen/ammo_hud_list = list()
 
 	var/list/minihuds = list()
 
@@ -220,6 +224,7 @@ var/list/global_huds = list(
 	other_important = null
 	hotkeybuttons = null
 //	item_action_list = null // ?
+	QDEL_LIST(ammo_hud_list)
 	mymob = null
 
 /datum/hud/proc/hidden_inventory_update()
