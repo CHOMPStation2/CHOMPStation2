@@ -425,7 +425,7 @@
 	cost = -3
 	can_take = ORGANICS
 
-/datum/trait/negative/haemophilia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/haemophilia_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 	
