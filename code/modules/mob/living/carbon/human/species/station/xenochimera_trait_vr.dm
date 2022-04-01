@@ -62,7 +62,11 @@
 	category = 0
 	custom_only = FALSE
 	
+<<<<<<< HEAD
 // CHOMPEdits Start - Adding Xenochimera traits. TODO - Port these to VORE.
+=======
+/* // Commented out in lieu of finding a better solution.
+>>>>>>> 29ad6e8c73... Merge pull request #12573 from Rykka-Stormheart/shep-dev-xenochimera-hiss
 /datum/trait/neutral/coldadapt/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
@@ -73,7 +77,11 @@
 	can_take = ORGANICS // (Not sure if this is needed for Xenochimera-specific sub-version.)
 	custom_only = FALSE
 	excludes = list(/datum/trait/neutral/hotadapt, /datum/trait/neutral/hotadapt/xenochimera)
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 29ad6e8c73... Merge pull request #12573 from Rykka-Stormheart/shep-dev-xenochimera-hiss
 /datum/trait/neutral/hotadapt/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
@@ -84,7 +92,12 @@
 	can_take = ORGANICS // negates the need for suit coolers entirely for synths, so no. (Not sure if this is needed for Xenochimera-specific sub-version.)
 	custom_only = FALSE
 	excludes = list(/datum/trait/neutral/coldadapt, /datum/trait/neutral/coldadapt/xenochimera)
+<<<<<<< HEAD
 	
+=======
+*/
+
+>>>>>>> 29ad6e8c73... Merge pull request #12573 from Rykka-Stormheart/shep-dev-xenochimera-hiss
 /datum/trait/neutral/autohiss_unathi/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
@@ -100,7 +113,11 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
+<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
+=======
+	excludes = list(/datum/trait/neutral/autohiss_tajaran)
+>>>>>>> 29ad6e8c73... Merge pull request #12573 from Rykka-Stormheart/shep-dev-xenochimera-hiss
 
 /datum/trait/neutral/autohiss_tajaran/xenochimera
 	sort = TRAIT_SORT_SPECIES
@@ -114,6 +131,7 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
+<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_vassilian/xenochimera
@@ -134,3 +152,6 @@
 	),
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+=======
+	excludes = list(/datum/trait/neutral/autohiss_unathi)
+>>>>>>> 29ad6e8c73... Merge pull request #12573 from Rykka-Stormheart/shep-dev-xenochimera-hiss
