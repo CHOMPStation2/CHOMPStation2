@@ -32,11 +32,16 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	var/min = 0
 
 	switch(sun_position)
+<<<<<<< HEAD:code/modules/planet/virgo4_vr
 		if(0 to 0.30) // Night
 			low_brightness = 0.1
+=======
+		if(0 to 0.45) // Night
+			low_brightness = 0.3
+>>>>>>> 72fbb37dbd... Merge pull request #12595 from Very-Soft/gbtweaks:code/modules/planet/virgo3c_vr.dm
 			low_color = "#000066"
 
-			high_brightness = 0.2
+			high_brightness = 0.4
 			high_color = "#66004D"
 			min = 0
 
@@ -509,6 +514,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	if(T.outdoors)
 		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
 
+<<<<<<< HEAD:code/modules/planet/virgo4_vr
 /turf/unsimulated/wall/planetary/normal/virgo4
 	name = "deep ocean"
 	alpha = 0
@@ -520,3 +526,81 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	input_level = input_level_max
 	output_level = output_level_max
 	input_attempt = TRUE
+=======
+/turf/unsimulated/wall/planetary/virgo3c
+	name = "impassable rock"
+	desc = "It's quite impassable"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "rock-dark"
+	alpha = 0xFF
+	VIRGO3C_SET_ATMOS
+
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/side)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/slab)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/water)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/reinforced)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/glass/reinforced)
+VIRGO3C_TURF_CREATE(/turf/simulated/open)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/dark)
+VIRGO3C_TURF_CREATE(/turf/simulated/mineral)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor)
+
+/turf/simulated/mineral/cave/virgo3c
+	VIRGO3C_SET_ATMOS
+	outdoors = 0
+
+/turf/simulated/mineral/floor/virgo3c
+	VIRGO3C_SET_ATMOS
+	outdoors = 0
+
+/turf/simulated/mineral/floor/ignore_mapgen/virgo3c
+	VIRGO3C_SET_ATMOS
+	outdoors = 0
+
+/turf/simulated/floor/outdoors/grass/virgo3c
+	VIRGO3C_SET_ATMOS
+
+	grass_types = list(
+		/obj/structure/flora/ausbushes/sparsegrass = 50,
+		/obj/structure/flora/ausbushes/fullgrass = 50,
+		/obj/structure/flora/ausbushes/brflowers = 1,
+		/obj/structure/flora/ausbushes/ppflowers = 1,
+		/obj/structure/flora/ausbushes/ywflowers = 1
+		)
+
+/turf/simulated/floor/outdoors/grass/forest/virgo3c
+	VIRGO3C_SET_ATMOS
+	var/tree_chance = 5
+
+	var/animal_chance = 0.5
+	var/animal_types = list(
+		/mob/living/simple_mob/vore/alienanimals/teppi = 5,
+		/mob/living/simple_mob/vore/redpanda = 20,
+		/mob/living/simple_mob/vore/redpanda/fae = 1,
+		/mob/living/simple_mob/vore/sheep = 10,
+		/mob/living/simple_mob/vore/rabbit/black = 10,
+		/mob/living/simple_mob/vore/rabbit/white = 10,
+		/mob/living/simple_mob/vore/rabbit/brown = 10,
+		/mob/living/simple_mob/vore/leopardmander = 1,
+		/mob/living/simple_mob/vore/horse/big = 5,
+		/mob/living/simple_mob/vore/bigdragon/friendly = 0.5,
+		/mob/living/simple_mob/vore/alienanimals/dustjumper = 10
+		)
+	
+
+/turf/simulated/floor/outdoors/grass/forest/virgo3c/Initialize()
+	if(tree_chance && prob(tree_chance) && !check_density())
+		new /obj/structure/flora/tree/bigtree(src)
+
+	if(animal_chance && prob(animal_chance) && !check_density())
+		var/animal_type = pickweight(animal_types)
+		new animal_type(src)
+
+	. = ..()
+
+//VIRGO3C_SET_ATMOS()
+>>>>>>> 72fbb37dbd... Merge pull request #12595 from Very-Soft/gbtweaks:code/modules/planet/virgo3c_vr.dm
