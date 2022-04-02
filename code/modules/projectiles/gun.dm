@@ -442,7 +442,7 @@
 		var/mob/living/carbon/nerd = user
 		var/mysize = nerd.size_multiplier
 		if(recoil_mode > 0)
-			if(mysize <= 0.70)
+			if(mysize <= 0.60)
 				nerd.Weaken(1*recoil_mode)
 				if(!istype(src,/obj/item/weapon/gun/energy))
 					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
