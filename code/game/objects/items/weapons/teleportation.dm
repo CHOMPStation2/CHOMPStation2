@@ -177,5 +177,6 @@ Frequency:
 	var/obj/effect/portal/P = new /obj/effect/portal( get_turf(src) )
 	P.target = T
 	P.creator = src
+	P.failchance = 0 //CHOMPEdit : funny 5% chance to be spaced and die makes the hand tele kinda useless.
 	src.add_fingerprint(user)
 	return
