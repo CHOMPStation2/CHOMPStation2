@@ -289,8 +289,8 @@
 	icon_state = "reg"
 	circuit = /obj/item/weapon/circuitboard/machine/reg_d
 	irradiate = FALSE
-	power_gen = 0	//It's big but it gets adjusted based on what you put into it!!!
-	var/default_power_gen = 1000000
+	power_gen = 0	
+	var/default_power_gen = 1000000	//It's big but it gets adjusted based on what you put into it!!!
 	var/part_mult = 0
 	var/nutrition_drain = 1
 	pixel_x = -32
@@ -300,14 +300,9 @@
 	interact_offline = TRUE
 	density = FALSE
 
-<<<<<<< HEAD
-/obj/machinery/power/rtg/d_type_reg/Initialize()
-=======
 /obj/machinery/power/rtg/reg/Initialize()
 	pixel_x = -32
->>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 	. = ..()
-	pixel_x = -32
 	
 /obj/machinery/power/rtg/reg/Destroy()
 	. = ..()
@@ -327,24 +322,16 @@
 		n += SP.rating
 	part_mult = n	
 
-<<<<<<< HEAD
-/obj/machinery/power/rtg/d_type_reg/attackby(obj/item/I, mob/user, params)
-=======
 /obj/machinery/power/rtg/reg/attackby(obj/item/I, mob/user, params)
 	pixel_x = -32
->>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 	if(default_deconstruction_screwdriver(user, I))
 		return
 	else if(default_deconstruction_crowbar(user, I))
 		return
 	return ..()
 
-<<<<<<< HEAD
-/obj/machinery/power/rtg/d_type_reg/update_icon()
-=======
 /obj/machinery/power/rtg/reg/update_icon()
 	pixel_x = -32
->>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 	if(panel_open)
 		icon_state = "reg-o"
 	else if(buckled_mobs && buckled_mobs.len > 0)
