@@ -1,6 +1,30 @@
 /*
  * Shotgun
  */
+// TGMC Ammo HUD Insertion
+/obj/item/weapon/gun/projectile/shotgun/has_ammo_counter()
+	return TRUE
+
+/obj/item/weapon/gun/projectile/shotgun/get_ammo_type()
+	if(load_method == MAGAZINE)
+		if(!ammo_magazine)
+		
+	else if(load_method == SINGLE_CASING|SPEEDLOADER && loaded.len)
+		
+	else
+		return list("unknown", "unknown")
+
+/obj/item/weapon/gun/projectile/shotgun/get_ammo_count()
+	if(load_method == MAGAZINE)
+		if(!ammo_magazine)
+			return chambered ? 1 : 0
+		else
+			return chambered ? (ammo_magazine.stored_ammo + 1) : ammo_magazine.stored_ammo
+	else if(load_method == SINGLE_CASING|SPEEDLOADER)
+		if(chambered)
+	else
+		
+
 /obj/item/weapon/gun/projectile/shotgun/pump
 	name = "shotgun"
 //	desc = "The mass-produced MarsTech Meteor 29 shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds." //CHOMP Disable

@@ -92,6 +92,9 @@
 
 			power_supply.give(rechargeamt) //... to recharge 1/5th the battery
 			update_icon()
+			var/mob/living/M = loc // CHOMPEdit: TGMC Ammo HUD
+			if(istype(M)) // CHOMPEdit: TGMC Ammo HUD
+				M?.hud_used.update_ammo_hud(M, src) // CHOMPEdit: TGMC Ammo HUD
 		else
 			charge_tick = 0
 	return 1
@@ -132,6 +135,7 @@
 					playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 					update_icon()
 					update_held_icon()
+					user.hud_used.update_ammo_hud(user, src) // CHOMPEdit: TGMC Ammo HUD
 		else
 			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
 	return
@@ -148,6 +152,7 @@
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		update_icon()
 		update_held_icon()
+		user.hud_used.update_ammo_hud(user, src) // CHOMPEdit: TGMC Ammo HUD
 	else
 		to_chat(user, "<span class='notice'>[src] does not have a power cell.</span>")
 
@@ -235,3 +240,20 @@
 	results += ..()
 
 	return results
+
+// CHOMPEDIT: TGMC AMMO HUD PORT Start
+/obj/item/weapon/gun/energy/has_ammo_counter()
+	return TRUE
+
+/obj/item/weapon/gun/energy/get_ammo_type()
+	if(!projectile_type)
+		return list("unknown", "unknown")
+	else
+		var/obj/item/projectile/P = projectile_type
+		return list(initial(P.hud_state), initial(P.hud_state_empty))
+
+/obj/item/weapon/gun/energy/get_ammo_count()
+	if(!power_supply)
+		return 0
+	else
+		return FLOOR(power_supply.charge / max(charge_cost, 1), 1)

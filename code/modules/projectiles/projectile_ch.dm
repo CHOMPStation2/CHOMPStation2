@@ -1,6 +1,8 @@
 /obj/item/projectile
 /// If this projectile is holy. Silver bullets, etc. Currently no effects.
 	var/holy = 0
+	var/hud_state = "unknown" // TGMC Ammo HUD Port
+	var/hud_state_empty = "unknown" // TGMC Ammo HUD Port
 
 /obj/item/projectile/bullet/pellet/shotgun/silver
 	name = "shrapnel"

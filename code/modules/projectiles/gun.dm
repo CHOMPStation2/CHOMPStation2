@@ -451,6 +451,9 @@
 					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
 				
 	//YAWNEDIT: Knockdown code end
+	
+	// CHOMPEdit: TGMC Ammo HUD insertion:
+	user.hud_used.update_ammo_hud(user, src)
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)
@@ -543,6 +546,7 @@
 /obj/item/weapon/gun/proc/handle_click_empty(mob/user)
 	if (user)
 		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
+		user.hud_used.update_ammo_hud(user, src)
 	else
 		src.visible_message("*click click*")
 	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
@@ -774,6 +778,7 @@
 	var/datum/firemode/new_mode = firemodes[sel_mode]
 	new_mode.apply_to(src)
 	to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
+	user.hud_used.update_ammo_hud(user, src) // CHOMPEdit: TGMC Ammo HUD
 
 	return new_mode
 

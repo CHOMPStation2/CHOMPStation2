@@ -20,6 +20,9 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	tracer_type = /obj/effect/projectile/tracer/laser
 	impact_type = /obj/effect/projectile/impact/laser
+	
+	hud_state = "laser"
+	hud_state_empty = "battery_empty"
 
 /obj/item/projectile/beam/practice
 	name = "laser"
@@ -229,6 +232,8 @@
 	muzzle_type = /obj/effect/projectile/muzzle/stun
 	tracer_type = /obj/effect/projectile/tracer/stun
 	impact_type = /obj/effect/projectile/impact/stun
+	
+	hud_state = "taser" // TGMC Ammo HUD port
 
 /obj/item/projectile/beam/stun/weak
 	name = "weak stun beam"

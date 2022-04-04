@@ -70,30 +70,38 @@
 /obj/item/projectile/bullet/pistol // 9mm pistols and most SMGs. Sacrifice power for capacity.
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	damage = 20
+	hud_state = "pistol"  // CHOMPEdit: Putting these here for easier upstream porting.
+	hud_state_empty = "pistol_empty"  // CHOMPEdit: Putting these here for easier upstream porting.
 
 /obj/item/projectile/bullet/pistol/ap
 	damage = 15
 	armor_penetration = 30
+	hud_state = "pistol_light_ap"  // CHOMPEdit: Putting these here for easier upstream porting.
 
 /obj/item/projectile/bullet/pistol/hp
 	damage = 25
 	armor_penetration = -50
+	hud_state = "pistol_ap"  // CHOMPEdit: Putting these here for easier upstream porting.
 
 /obj/item/projectile/bullet/pistol/medium // .45 (and maybe .40 if it ever gets added) caliber security pistols. Balance between capacity and power.
 	fire_sound = 'sound/weapons/gunshot3.ogg' // Snappier sound.
 	damage = 25
+	hud_state = "pistol"  // CHOMPEdit: Putting these here for easier upstream porting.
 
 /obj/item/projectile/bullet/pistol/medium/ap
 	damage = 20
 	armor_penetration = 15
+	hud_state = "pistol_light_ap"  // CHOMPEdit: Putting these here for easier upstream porting.
 
 /obj/item/projectile/bullet/pistol/medium/hp
 	damage = 30
 	armor_penetration = -50
+	hud_state = "pistol_ap"  // CHOMPEdit: Putting these here for easier upstream porting.
 
 /obj/item/projectile/bullet/pistol/strong // .357 and .44 caliber stuff. High power pistols like the Mateba or Desert Eagle. Sacrifice capacity for power.
 	fire_sound = 'sound/weapons/gunshot4.ogg'
 	damage = 60
+	hud_state = "pistol_heavy"
 
 /obj/item/projectile/bullet/pistol/rubber/strong // "Rubber" bullets for high power pistols.
 	fire_sound = 'sound/weapons/gunshot3.ogg' // Rubber shots have less powder, but these still have more punch than normal rubber shot.

@@ -38,13 +38,17 @@
 	var/warned = FALSE
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
 
-/obj/screen/ammo/proc/add_hud(var/mob/living/user)
+/obj/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
+	
 	if(!user?.client)
 		return
+		
+	// var/obj/item/weapon/gun/G = user.get_active_hand()
+	
+	if(!G)
+		CRASH("/obj/screen/ammo/proc/add_hud() has been called from [src] without the required param of G")
 
-	var/obj/item/weapon/gun/G = user.get_active_hand()
-
-	if(!G || !G.has_ammo_counter() || !G.hud_enabled)
+	if(!G.has_ammo_counter())
 		return
 
 	user.client.screen += src
@@ -52,13 +56,13 @@
 /obj/screen/ammo/proc/remove_hud(var/mob/living/user)
 	user?.client?.screen -= src
 
-/obj/screen/ammo/proc/update_hud(var/mob/living/user)
+/obj/screen/ammo/proc/update_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
 	if(!user?.client?.screen.Find(src))
 		return
 
-	var/obj/item/weapon/gun/G = user.get_active_hand()
+	// var/obj/item/weapon/gun/G = user.get_active_hand()
 
-	if(!G || !istype(G) || !G.has_ammo_counter() || !G.hud_enabled || !G.get_ammo_type() || isnull(G.get_ammo_count()))
+	if(!G || !istype(G) || !G.has_ammo_counter() || !G.get_ammo_type() || isnull(G.get_ammo_count()))
 		remove_hud()
 		return
 
