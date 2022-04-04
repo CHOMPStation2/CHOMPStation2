@@ -331,8 +331,6 @@
 		var/obj/item/clothing/accessory/pridepin_type = pridepin
 		pridepins[initial(pridepin_type.name)] = pridepin_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(pridepins))
-<<<<<<< HEAD
-=======
 
 /datum/gear/accessory/badge
 	display_name = "sheriff badge (Security)"
@@ -351,4 +349,3 @@
 /datum/gear/accessory/pressbadge
 	display_name = "freelance press pass"
 	path = /obj/item/clothing/accessory/badge/press/independent
->>>>>>> 5d24d5b2c3... Merge pull request #12631 from GhostActual/aurora-port-1
