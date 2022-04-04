@@ -484,33 +484,24 @@
 				</style>
 				</head>
 				<body>
-
 				Technical Order (TO) 1-33-34-2 <br>
 				 <h1>Operator's Manual - Rotary Electric Generator, D-Type</h1><br><br>
-
 				 Supporting Data: <br>
 				 - TO 1-33-34-4-1    Illustrated Parts Breakdown - Rotary Electric Generator, D-Type <br>
 				 - TO 1-33-34-6        Inspection Work Cards - Rotary Electric Generator, D-Type <br><br>
-
 				 Support Equipment: <br>
 				 - Torque Wrench, 100-80,000 inch-pounds <br>
 				 - Composite Tool Kit, Standard <br>
 				 - Multitool with Lead Kit, Wire Kit <br> <br>
-
 				 Required Supplies: <br>
 				 - stainless steel, 10,000cm3 <br>
 				 - lubrication, petrolatum, 6000ml <br>
 				 - electrical wiring, 5m <br>
 				 - component set, capacitors (any grade) <br>
 				 - circuitry board, REG <br> <br> 
-
-
  				<h1>SETUP AND OPERATING PROCEDURES</h1> <br> <br>
-
  				Setup: <br> <br>
-
            			 CAUTION: Do not remove too much air from the work space or personnel may be exposed to hypoxia or similar effects. <br> <br>
-
     				1. Prepare setup area. Remove machinery, debris, foreign objects, people, and extra air. <br> <br>
     
     				2. Lay out preliminary electrical wiring. <br>
@@ -534,9 +525,7 @@
     
     				9. Wait for assembly to finish inflating, and the unit is ready for service. <br> <br>
     
-
  				Operating Procedures: <br> <br>
-
     				    NOTE: Operation of REG-D type generators requires significant physical effort. Ensure users are provided adequare nutrition and hydration throughout the working period. <br> <br>
         
     					1. Designate the individual who will be operating the REG-D. <br> <br>
@@ -552,8 +541,6 @@
     					5. Continue to run on the REG-D track body until sufficient energy is stored in systems or Operator is no longer able or willing to continue. <br> <br>
     
 					    6. To end a session, carefully lower forward running speed until the track body comes to a complete stop, then disembark the REG-D. <br> <br>
-
-
 					 REFER TO TO 1-33-34-6 FOR MAINTENANCE AND INSPECTION PROCEDURES
  				</body>
 			</html>
