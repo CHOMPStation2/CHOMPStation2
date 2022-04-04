@@ -56,19 +56,19 @@
 /obj/item/weapon/book/manual/cook_guide/New()
 	..()
 	dat = {"
-
 		<html>
+                <html>
                 <head>
                 <style>
-                h1 {font-size: 23px; margin: 15px 0px 5px; text-align: center;}
+  		h1 {font-size: 23px; margin: 15px 0px 5px; text-align: center;}
                 h2 {font-size: 20px; margin: 15px 0px 5px;}
                 h3 {font-size: 18px; margin: 15px 0px 5px;}
-				h4 {font-size: 14px; margin: 15px 0px 5px;}
-				h5 {font-size: 10px; margin: 15px 0px 5px; text-align: center;}
+		h4 {font-size: 14px; margin: 15px 0px 5px;}
+		h5 {font-size: 10px; margin: 15px 0px 5px; text-align: center;}
                 li {margin: 2px 0px 2px 15px;}
                 ul {margin: 5px; padding: 0px;}
                 ol {margin: 5px; padding: 0px 15px;}
-                body {font-size: 13px; font-family: arial;}
+                body {font-size: 13px; font-family: Garamond;}
                 </style>
                 </head>
                 <body>
@@ -345,7 +345,7 @@
 
 /obj/item/weapon/book/manual/rotary_electric_generator
 	name = "Rotary Electric Generator Manual"
-	icon_state ="bookParticleAccelerator"
+	icon_state ="rulebook"
 	item_state = "book15"
 	author = "Engineering Encyclopedia"
 	title = "Rotary Electric Generator Manual"
