@@ -175,8 +175,8 @@ Frequency:
 	for(var/mob/O in hearers(user, null))
 		O.show_message("<span class='notice'>Locked In.</span>", 2)
 	var/obj/effect/portal/P = new /obj/effect/portal( get_turf(src) )
-	P.failchance = 0 //CHOMPEdit : we make our own failchance
-	P.target = handle_fail(T) //CHOMPEdit
+	P.target = T
 	P.creator = src
+	P.failchance = 0 //CHOMPEdit : funny 5% chance to be spaced and die makes the hand tele kinda useless.
 	src.add_fingerprint(user)
 	return

@@ -1362,7 +1362,6 @@
 #include "code\game\objects\items\weapons\tape.dm"
 #include "code\game\objects\items\weapons\taskmanager_ch.dm"
 #include "code\game\objects\items\weapons\teleportation.dm"
-#include "code\game\objects\items\weapons\teleportation_ch.dm"
 #include "code\game\objects\items\weapons\towels.dm"
 #include "code\game\objects\items\weapons\traps.dm"
 #include "code\game\objects\items\weapons\traps_vr.dm"
