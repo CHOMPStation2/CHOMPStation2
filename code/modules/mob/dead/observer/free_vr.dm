@@ -2,7 +2,7 @@ var/global/list/prevent_respawns = list()
 
 /hook/death/proc/quit_notify(mob/dead)
 	if(ishuman(dead))
-		to_chat(dead,"<span class='notice'>You're dead! If you died as a result of vore, and no longer have a body (due to digestion), use the Auto Resleever! One can be found by using the verb in the Ghost tab. If you died to other means, wait for rescue or use the 'Notify Transcore' verb in the Ghost tab if you have a valid backup implant. If it's been 30 minutes and you're still dead, use the Auto Resleever! If you don't intend to continue playing this round as this character, please use the <b>Quit This Round</b> verb in the OOC tab to free your job slot.</span>")
+		to_chat(dead,"<span class='notice'>You're dead! If you don't intend to continue playing this round as this character, please use the <b>Quit This Round</b> verb in the OOC tab to free your job slot. Otherwise, you can use the <b>Notify Transcore</b> verb to let medical know you need resleeving, or <b>Find Auto Resleever</b> verb to be taken to an auto resleever, which you can click on to be resleeved automatically after a time.</span>")
 
 	return TRUE
 
