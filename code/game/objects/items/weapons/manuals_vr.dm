@@ -341,9 +341,6 @@
 		<h2>Part 3: Closing Remarks</h2>
 		<p>This all may seem daunting at a glance; so many recipes to learn, and a "lot" to keep in mind. But really it's not - tending the Bar is mostly about going with the flow of things and providing a good times, and drinks just provide liquid courage to make a good time easier. Take a deep breath if you ever feel overwhelmed, and handle one order at a time. You can do it! Don't feel the need to know every recipe, just learn your favorites and go from there; the rest is here or online if someone asks for it! If somebody asks you to give them anything without a specific request, don't panic: evalulate their likes and tolerance level, and try your best to give them something nice!</p>
                 </body>
-<<<<<<< HEAD
-            </html> "}
-=======
             </html> "}
 
 /obj/item/weapon/book/manual/rotary_electric_generator
@@ -442,4 +439,3 @@
  				</body>
 			</html>
 			"}
->>>>>>> 54bc8efb66... Merge pull request #12630 from Very-Soft/gbtweaks
