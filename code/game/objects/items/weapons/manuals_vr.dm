@@ -9,12 +9,16 @@
 /obj/item/weapon/book/manual/standard_operating_procedure/New()
 	..()
 	dat = {"
+
 		<html><head>
 		</head>
+
 		<body>
 		<iframe width='100%' height='97%' src="[config.wikiurl]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
+
 		</html>
+
 		"}
 
 /obj/item/weapon/book/manual/command_guide
@@ -28,12 +32,16 @@
 /obj/item/weapon/book/manual/command_guide/New()
 	..()
 	dat = {"
+
 		<html><head>
 		</head>
+
 		<body>
 		<iframe width='100%' height='97%' src="[config.wikiurl]Chain_of_Command&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
+
 		</html>
+
 		"}
 
 //accurate as of 2/17/21 Extra credit to document editting and proofreading editing to Luna
@@ -207,6 +215,7 @@
 		2 parts Whiskey, 1 part Space Cola
 		<h3>Binman Bliss:</h3>
 		1 part Sake, 1 part Tequila
+
 		<h1>High Alcohol</h1>
 		<h3>Elysium Facepunch:</h3>
 		1 part Kahlua, 1 part Lemon Juice
@@ -246,6 +255,7 @@
 		3 Margarita, 2 Mountain Wind, 1 Emeraldine Melon Liquor
 		<h3>Mudslide:</h3>
 		1 Black Russian, 1 Irish Cream
+
 		<h1>Very High Alcohol (Serve sparingly unless a patron proves they can handle a lot)</h1>
 		<h3>Anti-Freeze:</h3>
 		1 part Cream, 1 part Ice, 1 parts Vodka <b>(Feels cold but actually warms. Allergy Warning: Do not serve to Teshari or Promethians, or other heat vulnerable species, they will die if you do, if unsure do not serve)</b>
@@ -272,6 +282,7 @@
 		<h6>Good Luck figuring out the order and ratio :)</h6>
 		<h3>Fire Punch:</h3>
 		1 part Sugar, 2 part Rum <b>(Technically the strongest thing you can make, but it metabolizes slowish so it's slightly less dangerous than some others)</b>
+
 		<h1>Non Alcoholic Drinks</h1>
 		<h3>Appleade:</h3>
 		1 part Apple Juice, 1 part Sugar, 1 part Soda Water
@@ -306,6 +317,7 @@
 		<h3>Sweet Tea:</h3>
 		2 parts Ice Tea, 1 part Sugar
 		<p><b>Note:</b> There are many more drinks you can mix, these are just ones using resources you will almost always have available, the Extranet has good websites to check found here: https://wiki.vore-station.net/Guide_to_Food_and_Drink ass well as here: https://vore-station.net/infodump/recipes_drinks.html
+
 		<h1>Part 1: The Basics</h1>
 		<p>First and foremost, making drinks is about understanding measurements. Drinks are measured in units a pint is 60 units, a half pint 30, and ratios of those units can create certain drinks.</p>
 		<p>The ratios of these drinks are denoted in "Parts". For example, Grog is 1 part rum and 1 part water mixed in a container that holds liquid. This means 1 unit of Rum and 1 unit of Water can make Grog, as can 30 units of Rum and 30 units of Water. Ratios aren't picky, if you have 5 units of Rum and 10 of Water in a glass, it will turn as much as possible into Grog, and the rest will remain as water (In this case, 10 units of Grog and 5 units of Water will be in the glass). When mixing drinks, you may accidentally have extra of an ingredient such as in the previous example, but this can easily be rectified by placing the drink in one of the Dispensers, and using the interface at the bottom to remove however many units you put extra, so don't worry about sloppiness as long as you clean up your mistakes!</p>
@@ -353,24 +365,33 @@
 				</style>
 				</head>
 				<body>
+
 				Technical Order (TO) 1-33-34-2 <br>
 				 <h1>Operator's Manual - Rotary Electric Generator, D-Type</h1><br><br>
+
 				 Supporting Data: <br>
 				 - TO 1-33-34-4-1    Illustrated Parts Breakdown - Rotary Electric Generator, D-Type <br>
 				 - TO 1-33-34-6        Inspection Work Cards - Rotary Electric Generator, D-Type <br><br>
+
 				 Support Equipment: <br>
 				 - Torque Wrench, 100-80,000 inch-pounds <br>
 				 - Composite Tool Kit, Standard <br>
 				 - Multitool with Lead Kit, Wire Kit <br> <br>
+
 				 Required Supplies: <br>
 				 - stainless steel, 10,000cm3 <br>
 				 - lubrication, petrolatum, 6000ml <br>
 				 - electrical wiring, 5m <br>
 				 - component set, capacitors (any grade) <br>
 				 - circuitry board, REG <br> <br> 
+
+
  				<h1>SETUP AND OPERATING PROCEDURES</h1> <br> <br>
+
  				Setup: <br> <br>
+
 					 CAUTION: Do not remove too much air from the work space or personnel may be exposed to hypoxia or similar effects. <br> <br>
+
 					1. Prepare setup area. Remove machinery, debris, foreign objects, people, and extra air. <br> <br>
 	
 					2. Lay out preliminary electrical wiring. <br>
@@ -394,7 +415,9 @@
 	
 					9. Wait for assembly to finish inflating, and the unit is ready for service. <br> <br>
 	
+
  				Operating Procedures: <br> <br>
+
 						NOTE: Operation of REG-D type generators requires significant physical effort. Ensure users are provided adequare nutrition and hydration throughout the working period. <br> <br>
 		
 						1. Designate the individual who will be operating the REG-D. <br> <br>
@@ -402,6 +425,7 @@
 						2. Provide a safety briefing regarding nutritional preparedness and physical ability.  <br> <br>
 	
 							NOTE: Stretching is highly recommended before and after any operation session. <br> <br>
+
 						3. Operator shall board the REG-D track body and ensure there are no unsecured objects on the path. <br> <br>
 	
 						4. Once ready, Operator may begin running at own pace. Do not sprint. Maintain an even pace and proper running form for optimal energy generation. <br> <br>
@@ -409,6 +433,8 @@
 						5. Continue to run on the REG-D track body until sufficient energy is stored in systems or Operator is no longer able or willing to continue. <br> <br>
 	
 						6. To end a session, carefully lower forward running speed until the track body comes to a complete stop, then disembark the REG-D. <br> <br>
+
+
 					 REFER TO TO 1-33-34-6 FOR MAINTENANCE AND INSPECTION PROCEDURES
  				</body>
 			</html>
