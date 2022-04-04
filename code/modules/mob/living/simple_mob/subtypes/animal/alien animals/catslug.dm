@@ -1,8 +1,8 @@
-//No relation to slugcat :)
+/No relation to slugcat :)
 
 /datum/category_item/catalogue/fauna/catslug
 	name = "Alien Wildlife - Catslug"
-	desc = "The catslug is an omnivorous terrestrial creature.\
+	desc = "The Catslug is an omnivorous terrestrial creature.\
 	Exhibiting properties of both a cat and a slug (hence its name)\
 	it moves somewhat awkwardly. However, the unique qualities of\
 	its body make it exceedingly flexible and smooth, allowing it to\
@@ -388,9 +388,6 @@
 
 /obj/item/weapon/holder/catslug/spaceslug
 	item_state = "spaceslug"
-<<<<<<< HEAD
-	
-=======
 
 //Engineer catslug
 /datum/category_item/catalogue/fauna/catslug/engislug
@@ -832,4 +829,3 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color/light_yellow
 	color = COLOR_WHEAT
->>>>>>> e189858af2... Merge pull request #12622 from Heroman3003/suslug
