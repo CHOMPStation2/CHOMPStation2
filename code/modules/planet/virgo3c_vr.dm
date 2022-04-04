@@ -1,21 +1,42 @@
-var/datum/planet/virgo4/planet_virgo4 = null
+#define VIRGO3C_ONE_ATMOSPHERE	92.5 //kPa
+#define VIRGO3C_AVG_TEMP	288.15 //kelvin
 
-/datum/time/virgo4
-	seconds_in_day = 24 HOURS
+#define VIRGO3C_PER_N2			0.78 //percent
+#define VIRGO3C_PER_O2			0.21
+#define VIRGO3C_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
+#define VIRGO3C_PER_CO2		0.01
+#define VIRGO3C_PER_PHORON		0.00
 
-/datum/planet/virgo4
-	name = "Virgo-4"
-	desc = "Zorren homeworld. Mostly dry and desolate, but ocean and fresh water are present, with scattered vegitation." //rewrite me
-	current_time = new /datum/time/virgo4()
-//	expected_z_levels = list(1) // This is defined elsewhere.
-	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/virgo4
+//Math only beyond this point
+#define VIRGO3C_MOL_PER_TURF	(VIRGO3C_ONE_ATMOSPHERE*CELL_VOLUME/(VIRGO3C_AVG_TEMP*R_IDEAL_GAS_EQUATION))
+#define VIRGO3C_MOL_N2			(VIRGO3C_MOL_PER_TURF * VIRGO3C_PER_N2)
+#define VIRGO3C_MOL_O2			(VIRGO3C_MOL_PER_TURF * VIRGO3C_PER_O2)
+#define VIRGO3C_MOL_N2O			(VIRGO3C_MOL_PER_TURF * VIRGO3C_PER_N2O)
+#define VIRGO3C_MOL_CO2			(VIRGO3C_MOL_PER_TURF * VIRGO3C_PER_CO2)
+#define VIRGO3C_MOL_PHORON		(VIRGO3C_MOL_PER_TURF * VIRGO3C_PER_PHORON)
 
-/datum/planet/virgo4/New()
+//Turfmakers
+#define VIRGO3C_SET_ATMOS	nitrogen=VIRGO3C_MOL_N2;oxygen=VIRGO3C_MOL_O2;carbon_dioxide=VIRGO3C_MOL_CO2;phoron=VIRGO3C_MOL_PHORON;temperature=VIRGO3C_AVG_TEMP
+#define VIRGO3C_TURF_CREATE(x)	x/virgo3c/nitrogen=VIRGO3C_MOL_N2;x/virgo3c/oxygen=VIRGO3C_MOL_O2;x/virgo3c/carbon_dioxide=VIRGO3C_MOL_CO2;x/virgo3c/phoron=VIRGO3C_MOL_PHORON;x/virgo3c/temperature=VIRGO3C_AVG_TEMP;x/virgo3c/outdoors=TRUE;x/virgo3c/update_graphic(list/graphic_add = null, list/graphic_remove = null) return 0
+#define VIRGO3C_TURF_CREATE_UN(x)	x/virgo3c/nitrogen=VIRGO3C_MOL_N2;x/virgo3c/oxygen=VIRGO3C_MOL_O2;x/virgo3c/carbon_dioxide=VIRGO3C_MOL_CO2;x/virgo3c/phoron=VIRGO3C_MOL_PHORON;x/virgo3c/temperature=VIRGO3C_AVG_TEMP
+
+var/datum/planet/virgo3c/planet_virgo3c = null
+
+/datum/time/virgo3c
+	seconds_in_day = 6 HOURS
+
+/datum/planet/virgo3c
+	name = "Virgo-3c"
+	desc = "A habitable moon of the gas giant Virgo 3. The volcanic activity of this moon keeps its atmosphere warm enough for life to flourish."
+	current_time = new /datum/time/virgo3c()
+	planetary_wall_type = /turf/unsimulated/wall/planetary/virgo3c
+
+/datum/planet/virgo3c/New()
 	..()
-	planet_virgo4 = src
-	weather_holder = new /datum/weather_holder/virgo4(src)
+	planet_virgo3c = src
+	weather_holder = new /datum/weather_holder/virgo3c(src)
 
-/datum/planet/virgo4/update_sun()
+/datum/planet/virgo3c/update_sun()
 	..()
 	var/datum/time/time = current_time
 	var/length_of_day = time.seconds_in_day / 10 / 60 / 60
@@ -32,15 +53,15 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	var/min = 0
 
 	switch(sun_position)
-		if(0 to 0.20) // Night
-			low_brightness = 0.3
+		if(0 to 0.45) // Night
+			low_brightness = 0.1
 			low_color = "#000066"
 
-			high_brightness = 0.5
+			high_brightness = 0.2
 			high_color = "#66004D"
 			min = 0
 
-		if(0.20 to 0.30) // Twilight
+		if(0.45 to 0.50) // Twilight
 			low_brightness = 0.5
 			low_color = "#66004D"
 
@@ -48,7 +69,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 			high_color = "#CC3300"
 			min = 0.40
 
-		if(0.30 to 0.40) // Sunrise/set
+		if(0.50 to 0.55) // Sunrise/set
 			low_brightness = 0.9
 			low_color = "#CC3300"
 
@@ -56,7 +77,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 			high_color = "#FF9933"
 			min = 0.50
 
-		if(0.40 to 1.00) // Noon
+		if(0.55 to 1.00) // Noon
 			low_brightness = 3.0
 			low_color = "#DDDDDD"
 
@@ -95,38 +116,42 @@ var/datum/planet/virgo4/planet_virgo4 = null
 		update_sun_deferred(new_brightness, new_color)
 
 
-/datum/weather_holder/virgo4
+/datum/weather_holder/virgo3c
 	temperature = T0C
 	allowed_weather_types = list(
-		WEATHER_CLEAR		= new /datum/weather/virgo4/clear(),
-		WEATHER_OVERCAST	= new /datum/weather/virgo4/overcast(),
-		WEATHER_LIGHT_SNOW	= new /datum/weather/virgo4/light_snow(),
-		WEATHER_SNOW		= new /datum/weather/virgo4/snow(),
-		WEATHER_BLIZZARD	= new /datum/weather/virgo4/blizzard(),
-		WEATHER_RAIN		= new /datum/weather/virgo4/rain(),
-		WEATHER_STORM		= new /datum/weather/virgo4/storm(),
-		WEATHER_HAIL		= new /datum/weather/virgo4/hail(),
-		WEATHER_BLOOD_MOON	= new /datum/weather/virgo4/blood_moon(),
-		WEATHER_EMBERFALL	= new /datum/weather/virgo4/emberfall(),
-		WEATHER_ASH_STORM	= new /datum/weather/virgo4/ash_storm(),
-		WEATHER_FALLOUT		= new /datum/weather/virgo4/fallout()
+		WEATHER_CLEAR		= new /datum/weather/virgo3c/clear(),
+		WEATHER_OVERCAST	= new /datum/weather/virgo3c/overcast(),
+		WEATHER_LIGHT_SNOW	= new /datum/weather/virgo3c/light_snow(),
+		WEATHER_SNOW		= new /datum/weather/virgo3c/snow(),
+		WEATHER_BLIZZARD	= new /datum/weather/virgo3c/blizzard(),
+		WEATHER_RAIN		= new /datum/weather/virgo3c/rain(),
+		WEATHER_STORM		= new /datum/weather/virgo3c/storm(),
+		WEATHER_HAIL		= new /datum/weather/virgo3c/hail(),
+		WEATHER_BLOOD_MOON	= new /datum/weather/virgo3c/blood_moon(),
+		WEATHER_EMBERFALL	= new /datum/weather/virgo3c/emberfall(),
+		WEATHER_ASH_STORM	= new /datum/weather/virgo3c/ash_storm(),
+		WEATHER_FALLOUT		= new /datum/weather/virgo3c/fallout()
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 50,
 		WEATHER_OVERCAST	= 10,
-		WEATHER_RAIN		= 1
+		WEATHER_RAIN		= 1,
+		WEATHER_LIGHT_SNOW  = 1
 		)
 
-/datum/weather/virgo4
-	name = "virgo4"
-	temp_high = 303.15 // 30c
-	temp_low = 298.15  // 25c
+/datum/weather/virgo3c
+	name = "virgo3c"
+	temp_high = 283.15 // 10c
+	temp_low = 273.15  // 0c
 
-/datum/weather/virgo4/clear
+/datum/weather/virgo3c/clear
 	name = "clear"
 	transition_chances = list(
 		WEATHER_CLEAR = 60,
-		WEATHER_OVERCAST = 20)
+		WEATHER_OVERCAST = 20,
+		WEATHER_LIGHT_SNOW = 1,
+		WEATHER_BLOODMOON = 1,
+		WEATHER_EMBERFALL = 0.5)
 	transition_messages = list(
 		"The sky clears up.",
 		"The sky is visible.",
@@ -135,15 +160,16 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	sky_visible = TRUE
 	observed_message = "The sky is clear."
 
-/datum/weather/virgo4/overcast
+/datum/weather/virgo3c/overcast
 	name = "overcast"
-	temp_high = 293.15 // 20c
-	temp_low = 	288.15 // 15c
+	temp_high = 283.15 // 10c
+	temp_low = 273.15  // 0c
 	light_modifier = 0.8
 	transition_chances = list(
 		WEATHER_CLEAR = 25,
 		WEATHER_OVERCAST = 50,
-		WEATHER_RAIN = 5
+		WEATHER_RAIN = 5,
+		WEATHER_LIGHT_SNOW = 5
 		)
 	observed_message = "It is overcast, all you can see are clouds."
 	transition_messages = list(
@@ -152,14 +178,17 @@ var/datum/planet/virgo4/planet_virgo4 = null
 		"It's very cloudy."
 		)
 
-/datum/weather/virgo4/light_snow
+/datum/weather/virgo3c/light_snow
 	name = "light snow"
 	icon_state = "snowfall_light"
 	temp_high = 268.15 // -5c
 	temp_low = 	263.15 // -10c
 	light_modifier = 0.7
 	transition_chances = list(
-		WEATHER_LIGHT_SNOW = 100
+		WEATHER_LIGHT_SNOW = 75,
+		WEATHER_OVERCAST = 25,
+		WEATHER_SNOW = 10,
+		WEATHER_RAIN = 5
 		)
 	observed_message = "It is snowing lightly."
 	transition_messages = list(
@@ -167,7 +196,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 		"It begins to snow lightly.",
 		)
 
-/datum/weather/virgo4/snow
+/datum/weather/virgo3c/snow
 	name = "moderate snow"
 	icon_state = "snowfall_med"
 	temp_high = 268.15 // -5c
@@ -177,7 +206,9 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	light_modifier = 0.5
 	flight_failure_modifier = 5
 	transition_chances = list(
-		WEATHER_LIGHT_SNOW = 100
+		WEATHER_SNOW = 75,
+		WEATHER_LIGHT_SNOW = 25,
+		WEATHER_BLIZZARD = 5
 		)
 	observed_message = "It is snowing."
 	transition_messages = list(
@@ -187,19 +218,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
-/*
-/datum/weather/virgo4/snow/process_effects()
-	..()
-	for(var/turf/simulated/floor/outdoors/snow/S as anything in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
-		if(S.z in holder.our_planet.expected_z_levels)
-			for(var/dir_checked in cardinal)
-				var/turf/simulated/floor/T = get_step(S, dir_checked)
-				if(istype(T))
-					if(istype(T, /turf/simulated/floor/outdoors) && prob(33))
-						T.chill()
-*/
-
-/datum/weather/virgo4/blizzard
+/datum/weather/virgo3c/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
 	temp_high = 268.15 // -5c
@@ -209,7 +228,8 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	light_modifier = 0.3
 	flight_failure_modifier = 10
 	transition_chances = list(
-		WEATHER_BLIZZARD = 100
+		WEATHER_BLIZZARD = 50,
+		WEATHER_SNOW = 50
 		)
 	observed_message = "A blizzard blows snow everywhere."
 	transition_messages = list(
@@ -219,23 +239,11 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 
-/*
-/datum/weather/virgo4/blizzard/process_effects()
-	..()
-	for(var/turf/simulated/floor/outdoors/snow/S as anything in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
-		if(S.z in holder.our_planet.expected_z_levels)
-			for(var/dir_checked in cardinal)
-				var/turf/simulated/floor/T = get_step(S, dir_checked)
-				if(istype(T))
-					if(istype(T, /turf/simulated/floor/outdoors) && prob(50))
-						T.chill()
-*/
-
-/datum/weather/virgo4/rain
+/datum/weather/virgo3c/rain
 	name = "rain"
 	icon_state = "rain"
-	temp_high = 288.15 // 15c
-	temp_low = 	283.15 // 10c
+	temp_high = 283.15 // 10c
+	temp_low = 273.15  // 0c
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
@@ -243,14 +251,16 @@ var/datum/planet/virgo4/planet_virgo4 = null
 
 	transition_chances = list(
 		WEATHER_OVERCAST = 25,
-		WEATHER_RAIN = 50
+		WEATHER_RAIN = 50,
+		WEATHER_STORM = 10,
+		WEATHER_LIGHT_SNOW = 5
 		)
 	observed_message = "It is raining."
 	transition_messages = list(
 		"The sky is dark, and rain falls down upon you."
 	)
 
-/datum/weather/virgo4/rain/process_effects()
+/datum/weather/virgo3c/rain/process_effects()
 	..()
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -272,9 +282,11 @@ var/datum/planet/virgo4/planet_virgo4 = null
 			if(show_message)
 				to_chat(L, effect_message)
 
-/datum/weather/virgo4/storm
+/datum/weather/virgo3c/storm
 	name = "storm"
 	icon_state = "storm"
+	temp_high = 283.15 // 10c
+	temp_low = 273.15  // 0c
 	wind_high = 4
 	wind_low = 2
 	light_modifier = 0.3
@@ -293,10 +305,13 @@ var/datum/planet/virgo4/planet_virgo4 = null
 
 
 	transition_chances = list(
-		WEATHER_STORM = 100
+		WEATHER_STORM = 50,
+		WEATHER_RAIN = 50,
+		WEATHER_BLIZZARD = 5,
+		WEATHER_HAIL = 5
 		)
 
-/datum/weather/virgo4/storm/process_effects()
+/datum/weather/virgo3c/storm/process_effects()
 	..()
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -323,16 +338,18 @@ var/datum/planet/virgo4/planet_virgo4 = null
 
 // This gets called to do lightning periodically.
 // There is a seperate function to do the actual lightning strike, so that badmins can play with it.
-/datum/weather/virgo4/storm/proc/handle_lightning()
+/datum/weather/virgo3c/storm/proc/handle_lightning()
 	if(world.time < next_lightning_strike)
 		return // It's too soon to strike again.
 	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
 	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
 	lightning_strike(T)
 
-/datum/weather/virgo4/hail
+/datum/weather/virgo3c/hail
 	name = "hail"
 	icon_state = "hail"
+	temp_high = 268.15 // -5c
+	temp_low = 	263.15 // -10c
 	light_modifier = 0.3
 	flight_failure_modifier = 15
 	timer_low_bound = 2
@@ -340,7 +357,8 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	effect_message = "<span class='warning'>The hail smacks into you!</span>"
 
 	transition_chances = list(
-		WEATHER_HAIL = 100
+		WEATHER_HAIL = 25,
+		WEATHER_RAIN = 75
 		)
 	observed_message = "Ice is falling from the sky."
 	transition_messages = list(
@@ -349,7 +367,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 		"An intense chill is felt, and chunks of ice start to fall from the sky, towards you."
 	)
 
-/datum/weather/virgo4/hail/process_effects()
+/datum/weather/virgo3c/hail/process_effects()
 	..()
 	for(var/mob/living/carbon/H as anything in human_mob_list)
 		if(H.z in holder.our_planet.expected_z_levels)
@@ -384,15 +402,16 @@ var/datum/planet/virgo4/planet_virgo4 = null
 			if(show_message)
 				to_chat(H, effect_message)
 
-/datum/weather/virgo4/blood_moon
+/datum/weather/virgo3c/blood_moon
 	name = "blood moon"
 	light_modifier = 0.5
 	light_color = "#FF0000"
-	temp_high = 293.15	// 20c
-	temp_low = 283.15	// 10c
+	temp_high = 283.15 // 10c
+	temp_low = 273.15  // 0c
 	flight_failure_modifier = 25
 	transition_chances = list(
-		WEATHER_BLOODMOON = 100
+		WEATHER_BLOODMOON = 75,
+		WEATHER_CLEAR = 25
 		)
 	observed_message = "Everything is red. Something really ominous is going on."
 	transition_messages = list(
@@ -402,7 +421,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
 // Ash and embers fall forever, such as from a volcano or something.
-/datum/weather/virgo4/emberfall
+/datum/weather/virgo3c/emberfall
 	name = "emberfall"
 	icon_state = "ashfall_light"
 	light_modifier = 0.7
@@ -411,28 +430,29 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	temp_low = 283.15	// 10c
 	flight_failure_modifier = 20
 	transition_chances = list(
-		WEATHER_EMBERFALL = 100
+		WEATHER_ASH_STORM = 100
 		)
 	observed_message = "Soot, ash, and embers float down from above."
 	transition_messages = list(
-		"Gentle embers waft down around you like grotesque snow."
+		"Gentle embers waft down around you like black snow. A wall of dark, glowing ash approaches in the distance..."
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
 // Like the above but a lot more harmful.
-/datum/weather/virgo4/ash_storm
+/datum/weather/virgo3c/ash_storm
 	name = "ash storm"
 	icon_state = "ashfall_heavy"
 	light_modifier = 0.1
 	light_color = "#FF0000"
-	temp_high = 323.15	// 50c
-	temp_low = 313.15	// 40c
+	temp_high = 313.15	// 40c
+	temp_low = 303.15	// 30c
 	wind_high = 6
 	wind_low = 3
 	flight_failure_modifier = 50
 	transition_chances = list(
-		WEATHER_ASH_STORM = 100
+		WEATHER_ASH_STORM = 5,
+		WEATHER_CLEAR = 95
 		)
 	observed_message = "All that can be seen is black smoldering ash."
 	transition_messages = list(
@@ -442,19 +462,21 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 
-/datum/weather/virgo4/ash_storm/process_effects()
+/datum/weather/virgo3c/ash_storm/process_effects()
 	..()
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to burn them with ash.
+			else if (isanimal(L))
+				continue    //Don't murder the wildlife, they live here it's fine
 
-			L.inflict_heat_damage(rand(1, 3))
-
+			L.inflict_heat_damage(1)
+			to_chat(L, "<span class='warning'>Smoldering ash singes you!</span>")
 
 // Totally radical.
-/datum/weather/virgo4/fallout
+/datum/weather/virgo3c/fallout
 	name = "fallout"
 	icon_state = "fallout"
 	light_modifier = 0.7
@@ -478,7 +500,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	var/fallout_rad_low = RAD_LEVEL_HIGH
 	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
 
-/datum/weather/virgo4/fallout/process_effects()
+/datum/weather/virgo3c/fallout/process_effects()
 	..()
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -491,7 +513,7 @@ var/datum/planet/virgo4/planet_virgo4 = null
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
-/datum/weather/virgo4/fallout/proc/irradiate_nearby_turf(mob/living/L)
+/datum/weather/virgo3c/fallout/proc/irradiate_nearby_turf(mob/living/L)
 	if(!istype(L))
 		return
 	var/list/turfs = RANGE_TURFS(world.view, L)
@@ -501,14 +523,68 @@ var/datum/planet/virgo4/planet_virgo4 = null
 	if(T.is_outdoors())
 		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
 
-/turf/unsimulated/wall/planetary/normal/virgo4
-	name = "deep ocean"
-	alpha = 0
+/turf/unsimulated/wall/planetary/virgo3c
+	name = "impassable rock"
+	desc = "It's quite impassable"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "rock-dark"
+	alpha = 0xFF
+	VIRGO3C_SET_ATMOS
 
-/obj/machinery/power/smes/buildable/offmap_spawn/empty/New()
-	..(1)
-	charge = 0
-	RCon = TRUE
-	input_level = input_level_max
-	output_level = output_level_max
-	input_attempt = TRUE
+VIRGO3C_TURF_CREATE(/turf/simulated/mineral/cave)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/side)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/slab)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/water)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/reinforced)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/glass/reinforced)
+VIRGO3C_TURF_CREATE(/turf/simulated/open)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/dark)
+VIRGO3C_TURF_CREATE(/turf/simulated/mineral)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor)
+
+/turf/simulated/floor/outdoors/grass/virgo3c
+	VIRGO3C_SET_ATMOS
+
+	grass_types = list(
+		/obj/structure/flora/ausbushes/sparsegrass = 50,
+		/obj/structure/flora/ausbushes/fullgrass = 50,
+		/obj/structure/flora/ausbushes/brflowers = 1,
+		/obj/structure/flora/ausbushes/ppflowers = 1,
+		/obj/structure/flora/ausbushes/ywflowers = 1
+		)
+
+/turf/simulated/floor/outdoors/grass/forest/virgo3c
+	VIRGO3C_SET_ATMOS
+	var/tree_chance = 5
+
+	var/animal_chance = 0.5
+	var/animal_types = list(
+		/mob/living/simple_mob/vore/alienanimals/teppi = 5,
+		/mob/living/simple_mob/vore/redpanda = 20,
+		/mob/living/simple_mob/vore/redpanda/fae = 1,
+		/mob/living/simple_mob/vore/sheep = 10,
+		/mob/living/simple_mob/vore/rabbit/black = 10,
+		/mob/living/simple_mob/vore/rabbit/white = 10,
+		/mob/living/simple_mob/vore/rabbit/brown = 10,
+		/mob/living/simple_mob/vore/leopardmander = 1,
+		/mob/living/simple_mob/vore/horse/big = 5,
+		/mob/living/simple_mob/vore/bigdragon/friendly = 0.5,
+		/mob/living/simple_mob/vore/alienanimals/dustjumper = 10
+		)
+	
+
+/turf/simulated/floor/outdoors/grass/forest/virgo3c/Initialize()
+	if(tree_chance && prob(tree_chance) && !check_density())
+		new /obj/structure/flora/tree/bigtree(src)
+
+	if(animal_chance && prob(animal_chance) && !check_density())
+		var/animal_type = pickweight(animal_types)
+		new animal_type(src)
+
+	. = ..()
+
+//VIRGO3C_SET_ATMOS()
