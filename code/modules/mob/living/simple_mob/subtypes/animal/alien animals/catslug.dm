@@ -2,7 +2,7 @@
 
 /datum/category_item/catalogue/fauna/catslug
 	name = "Alien Wildlife - Catslug"
-	desc = "The catslug is an omnivorous terrestrial creature.\
+	desc = "The Catslug is an omnivorous terrestrial creature.\
 	Exhibiting properties of both a cat and a slug (hence its name)\
 	it moves somewhat awkwardly. However, the unique qualities of\
 	its body make it exceedingly flexible and smooth, allowing it to\
@@ -16,7 +16,7 @@
 /mob/living/simple_mob/vore/alienanimals/catslug
 	name = "catslug"
 	desc = "A noodley bodied creature with thin arms and legs, and gloomy dark eyes."
-	tt_desc = "Mollusca Feline" 	
+	tt_desc = "Mollusca Feline"
 	icon_state = "catslug"
 	icon_living = "catslug"
 	icon_dead = "catslug_dead"
@@ -48,7 +48,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/catslug
 	say_list_type = /datum/say_list/catslug
 	player_msg = "You have escaped the foul weather, into this much more pleasant place. You are an intelligent creature capable of more than most think. You can pick up and use many things, and even carry some of them with you into the vents, which you can use to move around quickly. You're quiet and capable, you speak with your hands and your deeds! <br>- - - - -<br> <span class='notice'>Keep in mind, your goal should generally be to survive. You're expected to follow the same rules as everyone else, so don't go self antagging without permission from the staff team, but you are able and capable of defending yourself from those who would attack you for no reason.</span>"
-	
+
 	has_langs = list("Sign Language")
 
 	var/picked_color = FALSE
@@ -160,9 +160,9 @@
 		if(user != src)
 			to_chat(user, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
 	playsound(src, 'sound/items/eatfood.ogg', 75, 1)
-	
+
 /mob/living/simple_mob/vore/alienanimals/catslug/attack_hand(mob/living/carbon/human/M as mob)
-	
+
 	if(stat == DEAD)
 		return ..()
 	if(M.a_intent != I_HELP)
@@ -211,7 +211,7 @@
 	else
 		return ..()
 
-/mob/living/simple_mob/vore/alienanimals/catslug/Login()	//If someone plays as us let's just be a passive mob in case accidents happen if the player D/Cs	
+/mob/living/simple_mob/vore/alienanimals/catslug/Login()	//If someone plays as us let's just be a passive mob in case accidents happen if the player D/Cs
 	. = ..()
 	ai_holder.hostile = FALSE
 	ai_holder.wander = FALSE
@@ -227,6 +227,7 @@
 	if(newcolor)
 		color = newcolor
 	picked_color = TRUE
+	update_icon()
 
 /datum/ai_holder/simple_mob/melee/evasive/catslug/proc/consider_awakening()
 	if(holder.resting)
@@ -240,7 +241,7 @@
 		holder.lay_down()
 		go_sleep()
 		addtimer(CALLBACK(src, .proc/consider_awakening), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
-	else 
+	else
 		return ..()
 
 
@@ -317,24 +318,15 @@
 	icon_living = "spaceslug"
 	icon_rest = "spaceslug_rest"
 	icon_dead = "spaceslug_dead"
-<<<<<<< HEAD
-	digestable = 0
-	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/spaceslug)
-	holder_type = /obj/item/weapon/holder/catslug/spaceslug
-	makes_dirt = 0
-	say_list_type = /datum/say_list/catslug/spaceslug
-	
-=======
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/spaceslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/spaceslug
 	say_list_type = /datum/say_list/catslug/custom/spaceslug
 
->>>>>>> ae401ce408... Merge pull request #12637 from BonniePandora/Catslug-tidying-and-mob-ID
 	minbodytemp = 0				// Shamelessly stolen temp & atmos tolerances from the space cat.
-	maxbodytemp = 900			
-	heat_damage_per_tick = 3	
+	maxbodytemp = 900
+	heat_damage_per_tick = 3
 	cold_damage_per_tick = 2
-	
+
 	min_oxy = 0
 	max_oxy = 0
 	min_tox = 0
@@ -343,31 +335,14 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
-	
+
 	player_msg = "You are an intelligent creature capable of more than most think, clad in a spacesuit that protects you from the ravages of vacuum and hostile atmospheres alike. You can pick up and use many things, and even carry some of them with you into the vents, which you can use to move around quickly. You're quiet and capable, you speak with your hands and your deeds! <br>- - - - -<br> <span class='notice'>Keep in mind, your goal should generally be to survive. You're expected to follow the same rules as everyone else, so don't go self antagging without permission from the staff team, but you are able and capable of defending yourself from those who would attack you for no reason.</span>"
-<<<<<<< HEAD
-	
-	has_langs = list("Sign Language")
-
-/datum/say_list/catslug/spaceslug
-	speak = list("Have any porl?", "What is that?", "What kind of ship is that?", "What are you doing?", "How did you get here?", "Don't take off your helmet.", "SPAAAAAACE!", "WAOW!", "Nice weather we're having, isn't it?")
-
-/mob/living/simple_mob/vore/alienanimals/catslug/spaceslug/Initialize()
-	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide		
-	verbs -= /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color	//I don't even want to imagine what the colour change proc would do to their sprite, not to mention ghosts would need to be forced into the catslug so this is more just a safety net than anything
-
-/mob/living/simple_mob/vore/alienanimals/catslug/spaceslug/attack_hand(mob/living/carbon/human/M as mob)
-	
-=======
 
 /datum/say_list/catslug/custom/spaceslug
 	speak = list("Have any porl?", "What is that?", "What kind of ship is that?", "What are you doing?", "How did you get here?", "Don't take off your helmet.", "SPAAAAAACE!", "WAOW!", "Nice weather we're having, isn't it?")
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/attack_hand(mob/living/carbon/human/M as mob)
 
->>>>>>> ae401ce408... Merge pull request #12637 from BonniePandora/Catslug-tidying-and-mob-ID
 	if(stat == DEAD)
 		return ..()
 	if(M.a_intent != I_HELP)
@@ -418,9 +393,6 @@
 
 /obj/item/weapon/holder/catslug/custom/spaceslug
 	item_state = "spaceslug"
-<<<<<<< HEAD
-	
-=======
 
 //Engineer catslug
 /datum/category_item/catalogue/fauna/catslug/custom/engislug
@@ -822,4 +794,3 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color/light_yellow
 	color = COLOR_WHEAT
->>>>>>> ae401ce408... Merge pull request #12637 from BonniePandora/Catslug-tidying-and-mob-ID
