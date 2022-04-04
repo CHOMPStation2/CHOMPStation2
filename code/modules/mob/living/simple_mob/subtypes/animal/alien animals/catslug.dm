@@ -1,4 +1,4 @@
-/No relation to slugcat :)
+//No relation to slugcat :)
 
 /datum/category_item/catalogue/fauna/catslug
 	name = "Alien Wildlife - Catslug"
