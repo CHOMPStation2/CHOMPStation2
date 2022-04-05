@@ -237,3 +237,14 @@
 	'sound/ambience/engineering/engineering3.ogg',\
 	'sound/ambience/atmospherics/atmospherics1.ogg'\
 	)
+
+// CHOMPEdit: New Planet Ambience
+#define AMBIENCE_THOR list(\
+	'sound/ambience/thor/jungle_night_loop1.ogg',\
+	'sound/ambience/thor/jungle_night_loop2.ogg',\
+	'sound/ambience/thor/jungle_night_loop3.ogg',\
+	'sound/ambience/thor/jungle_night_loop4.ogg',\
+	'sound/ambience/thor/birds_stinger1.ogg',\
+	'sound/ambience/thor/birds_stinger2.ogg',\
+	'sound/ambience/thor/birds_stinger3.ogg'\
+)
