@@ -58,7 +58,7 @@
 	icon_state = "southeast"
 
 /area/surface/outside
-	ambience = AMBIENCE_THOR
+	ambience = AMBIENCE_SIF
 	always_unpowered = TRUE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	outdoors = OUTDOORS_YES
