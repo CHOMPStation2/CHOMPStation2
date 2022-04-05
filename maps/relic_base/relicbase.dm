@@ -11,6 +11,7 @@
 	#include "relicbase_presets.dm"
 	#include "relicbase_shuttles.dm"
 	#include "relicbase_shuttles_ch.dm"
+	#include "relicbase_things.dm"
 	#include "shuttles/crew_shuttles.dm"
 	#include "shuttles/crew_shuttles_ch.dm"
 	#include "shuttles/heist.dm"
