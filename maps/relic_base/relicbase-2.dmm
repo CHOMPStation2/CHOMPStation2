@@ -7097,6 +7097,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/sauna)
 "egj" = (
@@ -10582,6 +10585,9 @@
 /obj/structure/sign/directions/science{
 	dir = 4;
 	pixel_y = 32
+	},
+/obj/structure/railing/grey{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
@@ -16364,6 +16370,21 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/rnd/research)
+"iTr" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "sauna_tint2"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "sauna_tint2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna)
 "iTC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -21008,6 +21029,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/machinery/firealarm{
+	pixel_x = 32;
+	pixel_y = 24
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "lAg" = (
@@ -22705,6 +22730,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
+"mDn" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "mDq" = (
 /obj/structure/table/glass,
 /obj/random/soap,
@@ -28309,6 +28348,14 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"pyQ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "pyU" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/surgery,
@@ -28894,6 +28941,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_restroom)
+"pQm" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "pQq" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -28980,10 +29035,6 @@
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/dorms/dorm_1)
-"pRz" = (
-/obj/machinery/vending/snack,
-/turf/simulated/floor/outdoors/dirt,
-/area/surface/outpost/civilian/sauna)
 "pRH" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/effect/floor_decal/borderfloorblack{
@@ -37465,6 +37516,25 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
+"uDk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "uDs" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -43262,7 +43332,7 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "xNe" = (
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/snack,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/civilian/sauna)
 "xNU" = (
@@ -64388,7 +64458,7 @@ rdW
 qOK
 eaU
 vyh
-pRz
+hZu
 hZu
 hZu
 jAQ
@@ -64575,8 +64645,8 @@ rdW
 qOK
 dfR
 vyh
-wic
-hZu
+gUa
+pQm
 vUn
 wjF
 ajZ
@@ -64762,8 +64832,8 @@ exR
 eBU
 kkZ
 vyh
-hZu
-hZu
+gUa
+pQm
 vUn
 hmL
 mzN
@@ -65316,7 +65386,7 @@ mce
 mce
 mce
 lXo
-fpx
+mDn
 efz
 keA
 aGw
@@ -65502,9 +65572,9 @@ rLe
 rLe
 fgv
 yci
-tBM
-hZu
-qIi
+uDk
+qZX
+iTr
 lAd
 eaU
 oDs
@@ -65690,7 +65760,7 @@ rLe
 dzZ
 fgp
 tBM
-hZu
+pyQ
 okY
 czx
 czx
@@ -72407,7 +72477,7 @@ rLe
 mCZ
 rLe
 lvr
-rLe
+mCZ
 rLe
 rLe
 rLe

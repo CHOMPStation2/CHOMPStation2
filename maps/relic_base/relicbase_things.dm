@@ -8,3 +8,4 @@
 /obj/machinery/door/blast/gate/thin
 	open_sound = 'sound/machines/door/gateopen.ogg'
 	close_sound = 'sound/machines/door/gateclose.ogg'
+	

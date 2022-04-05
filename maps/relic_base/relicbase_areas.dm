@@ -548,6 +548,9 @@
 
 /area/surface/outpost/civilian/sauna
 	name = "\improper Sauna"
+	
+/area/surface/outpost/civilian/sauna/cryosauna
+	name = "\improper Cryosauna"
 
 /area/surface/outpost/civilian/emergency_storage
 	flags = RAD_SHIELDED

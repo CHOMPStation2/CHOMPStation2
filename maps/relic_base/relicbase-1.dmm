@@ -13,8 +13,7 @@
 	vore_pounce_maxhealth = 150
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -44,8 +43,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -66,8 +64,7 @@
 	vore_pounce_maxhealth = 150
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -80,8 +77,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -106,8 +102,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -129,8 +124,7 @@
 	vore_pounce_maxhealth = 150
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -186,15 +180,8 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "aam" = (
-/obj/effect/floor_decal/rust,
-/mob/living/simple_mob/otie/red{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
-	faction = "corrupt"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/turf/simulated/floor/snow/snow2/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "aan" = (
 /obj/random/junk,
 /obj/random/trash,
@@ -214,8 +201,7 @@
 "aao" = (
 /mob/living/simple_mob/vore/demonAI/wendigo,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -346,7 +332,6 @@
 "aay" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 50;
 	vore_default_contamination_color = "black";
 	vore_default_contamination_flavor = "acrid";
@@ -389,9 +374,7 @@
 	})
 "aaD" = (
 /obj/random/trash,
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground
-	},
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound,
 /turf/simulated/floor/outdoors/mud{
 	outdoors = -1
 	},
@@ -424,6 +407,17 @@
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"abH" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "sauna_tint2"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "sauna_tint2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "aeW" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -700,8 +694,7 @@
 "awy" = (
 /obj/structure/girder/displaced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -737,8 +730,7 @@
 "ayX" = (
 /obj/structure/girder/displaced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -796,8 +788,7 @@
 /obj/random/trash_pile,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -889,6 +880,15 @@
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"aMQ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/catwalk,
+/obj/structure/fence/door,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "aMZ" = (
 /obj/structure/barricade,
 /obj/effect/floor_decal/rust,
@@ -900,8 +900,7 @@
 "aNp" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1004,6 +1003,13 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"baR" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/black,
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "baZ" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/part_rusted3,
@@ -1132,8 +1138,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1222,8 +1227,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1237,6 +1241,17 @@
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"bwX" = (
+/obj/effect/floor_decal/rust,
+/obj/random/trash,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/warning{
+	name = "\improper CAUTION - EXTREME COLD";
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "bxc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -1346,8 +1361,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/m762/empty,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1381,8 +1395,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1457,8 +1470,7 @@
 /obj/item/weapon/gun/projectile/pirate,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1473,8 +1485,7 @@
 "bOv" = (
 /obj/random/fishing_junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1540,8 +1551,7 @@
 "bVB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1744,8 +1754,7 @@
 "cdM" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1792,8 +1801,7 @@
 /obj/random/contraband,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1839,6 +1847,12 @@
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"cjU" = (
+/obj/machinery/atmospherics/unary/heater/cryosauna{
+	dir = 8
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "clX" = (
 /obj/structure/mob_spawner/mouse_nest,
 /turf/simulated/floor/plating,
@@ -1902,7 +1916,6 @@
 "csM" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 80;
 	vore_stomach_flavor = "You have ended up in the medihound sleeper of this corrupted machine. This place would be comfortable, if it weren't for the ominous gurgles and the thick, red, numbing liquid that pools over your body as soon as you settle into the rubbery stomach. The heated and cramped surroundings oozing potent fluids all over your form, eager to do nothing less than breaking you apart to fuel its aimless wanders for the next few days... hours... minutes? Oh dear...";
 	vore_stomach_name = "medihound sleeper"
@@ -1914,8 +1927,7 @@
 "ctH" = (
 /obj/structure/girder/displaced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1931,8 +1943,7 @@
 	})
 "cwZ" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1941,8 +1952,7 @@
 /obj/random/trash,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1977,17 +1987,14 @@
 "cBz" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/closet/crate,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "cCN" = (
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2173,8 +2180,7 @@
 "cPp" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2342,8 +2348,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2399,8 +2404,7 @@
 "dbJ" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2430,7 +2434,6 @@
 "ddT" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 80;
 	vore_stomach_flavor = "You have ended up in the medihound sleeper of this corrupted machine. This place would be comfortable, if it weren't for the ominous gurgles and the thick, red, numbing liquid that pools over your body as soon as you settle into the rubbery stomach. The heated and cramped surroundings oozing potent fluids all over your form, eager to do nothing less than breaking you apart to fuel its aimless wanders for the next few days... hours... minutes? Oh dear...";
 	vore_stomach_name = "medihound sleeper"
@@ -2484,8 +2487,7 @@
 /obj/structure/catwalk,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2583,7 +2585,6 @@
 "doR" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 50;
 	vore_default_contamination_color = "black";
 	vore_default_contamination_flavor = "acrid";
@@ -2592,9 +2593,7 @@
 	vore_pounce_successrate = 60
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -2640,8 +2639,7 @@
 "dss" = (
 /obj/structure/girder/displaced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2660,8 +2658,7 @@
 /obj/random/trash,
 /obj/random/maintenance,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2700,9 +2697,7 @@
 "dvB" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground
-	},
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2732,8 +2727,7 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2752,8 +2746,7 @@
 /obj/item/weapon/digestion_remains,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2771,6 +2764,14 @@
 /obj/item/weapon/cell/device/weapon,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"dzQ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "dBn" = (
@@ -2852,8 +2853,7 @@
 	icon_state = "claw2"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2876,8 +2876,7 @@
 	})
 "dNf" = (
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9;
-	icon_state = "spline_fancy"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/dockhallway{
@@ -2996,8 +2995,7 @@
 /obj/item/weapon/digestion_remains/skull,
 /obj/item/weapon/digestion_remains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3016,8 +3014,7 @@
 "dVF" = (
 /obj/random/powercell,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3142,8 +3139,7 @@
 "edW" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3154,9 +3150,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -3170,8 +3164,7 @@
 "ehx" = (
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3182,8 +3175,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3199,12 +3191,16 @@
 "emj" = (
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"enC" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "eof" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/button/remote/blast_door{
@@ -3260,8 +3256,7 @@
 /obj/random/junk,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3354,8 +3349,7 @@
 /obj/item/weapon/digestion_remains/skull/tajaran,
 /obj/item/weapon/digestion_remains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3363,8 +3357,7 @@
 "exi" = (
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3374,8 +3367,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3448,8 +3440,7 @@
 "eCB" = (
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3478,6 +3469,13 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"eDr" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "eDE" = (
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/cargo,
@@ -3518,8 +3516,7 @@
 "eFY" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3670,8 +3667,7 @@
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3700,8 +3696,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3737,8 +3732,7 @@
 /obj/random/tool,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3779,8 +3773,7 @@
 /obj/random/junk,
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3833,11 +3826,12 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "fbU" = (
-/obj/random/trash_pile,
-/obj/effect/decal/cleanable/cobweb,
+/obj/structure/flora/ausbushes/grassybush{
+	opacity = 1
+	},
+/obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3920,9 +3914,7 @@
 "fkj" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground
-	},
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -3960,6 +3952,12 @@
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"fmf" = (
+/obj/structure/bed/chair/sofa/corner/black{
+	dir = 8
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "fmM" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -4047,17 +4045,14 @@
 /obj/effect/floor_decal/rust,
 /obj/random/material,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "fsS" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4153,11 +4148,10 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "fyO" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/blood/oil{
-	icon_state = "mgibbl2"
+/obj/structure/fence/door,
+/turf/simulated/floor/outdoors/rocks/caves{
+	outdoors = -1
 	},
-/turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -4172,9 +4166,7 @@
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/extinguisher,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -4336,8 +4328,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4495,6 +4486,9 @@
 /area/rnd/mixing{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"fYa" = (
+/turf/simulated/wall,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "gaH" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -4592,9 +4586,7 @@
 	})
 "ggc" = (
 /obj/effect/floor_decal/rust,
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground
-	},
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4615,16 +4607,14 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "gjO" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4633,8 +4623,7 @@
 /obj/random/trash,
 /obj/random/tool,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4663,16 +4652,14 @@
 "glS" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "gnT" = (
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 10;
-	icon_state = "spline_fancy"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/dockhallway{
@@ -4689,8 +4676,7 @@
 "gpL" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4789,8 +4775,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4798,8 +4783,7 @@
 "gxE" = (
 /obj/machinery/crystal,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4927,8 +4911,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5007,8 +4990,7 @@
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5016,8 +4998,7 @@
 "gNJ" = (
 /obj/random/mouseremains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5083,6 +5064,9 @@
 /area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"gSJ" = (
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "gTm" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced{
@@ -5112,8 +5096,7 @@
 "gUE" = (
 /obj/item/ammo_magazine/m762/empty,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5121,8 +5104,7 @@
 "gVn" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5144,8 +5126,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5247,8 +5228,7 @@
 "hjc" = (
 /obj/random/mouseremains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5266,8 +5246,7 @@
 /obj/effect/floor_decal/asteroid,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5297,9 +5276,7 @@
 	pixel_x = -32
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -5319,8 +5296,7 @@
 "hnR" = (
 /obj/random/cigarettes,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5344,8 +5320,7 @@
 "hro" = (
 /obj/random/powercell,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5378,9 +5353,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -5406,6 +5379,13 @@
 /obj/random/cigarettes,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"htY" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "huh" = (
@@ -5561,8 +5541,7 @@
 /obj/random/obstruction,
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5573,8 +5552,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5727,8 +5705,7 @@
 "hId" = (
 /obj/structure/salvageable/machine_os,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5783,6 +5760,17 @@
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"hKy" = (
+/obj/structure/catwalk,
+/obj/machinery/button/remote/blast_door{
+	id = "maintgate11";
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "hKC" = (
 /obj/structure/girder/displaced,
 /turf/simulated/floor/outdoors/mud{
@@ -5794,8 +5782,7 @@
 "hLS" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5813,6 +5800,19 @@
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"hRO" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/readylight{
+	light_color = "#7F0000"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "hSG" = (
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance,
@@ -5957,8 +5957,7 @@
 "ieH" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5979,6 +5978,11 @@
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"iih" = (
+/obj/structure/railing/grey,
+/obj/structure/stairs/spawner/west,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "ikL" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
 /turf/simulated/floor/reinforced/airless,
@@ -5992,8 +5996,7 @@
 	icon_state = "rifle-casing-spent"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6007,8 +6010,7 @@
 "imX" = (
 /obj/structure/barricade,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6077,8 +6079,7 @@
 /obj/random/trash,
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6095,8 +6096,7 @@
 /obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6162,8 +6162,7 @@
 "iHw" = (
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6197,7 +6196,6 @@
 "iIv" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 50;
 	vore_default_contamination_color = "black";
 	vore_default_contamination_flavor = "acrid";
@@ -6206,8 +6204,7 @@
 	vore_pounce_successrate = 60
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6246,8 +6243,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6272,8 +6268,7 @@
 /obj/random/handgun/sec,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6289,8 +6284,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6362,8 +6356,7 @@
 "iUW" = (
 /obj/machinery/crystal/ice,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6437,8 +6430,7 @@
 	})
 "jaE" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6483,8 +6475,7 @@
 "jbA" = (
 /obj/random/maintenance,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6579,8 +6570,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6602,18 +6592,27 @@
 "jkr" = (
 /obj/random/cutout,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"jlg" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "jls" = (
 /obj/random/obstruction,
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6650,8 +6649,7 @@
 	icon_state = "mfloor5"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6766,6 +6764,16 @@
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"jtA" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "juY" = (
 /obj/machinery/light/small/readylight{
 	dir = 8;
@@ -6773,8 +6781,7 @@
 	},
 /obj/random/tool,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6799,13 +6806,10 @@
 	})
 "jxr" = (
 /obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "jxx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -6862,8 +6866,7 @@
 	},
 /obj/item/weapon/gun/projectile/revolver/detective,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -6953,12 +6956,17 @@
 "jIm" = (
 /obj/random/tool,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"jJx" = (
+/obj/structure/bed/chair/sofa/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "jJY" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -6972,8 +6980,7 @@
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7044,8 +7051,7 @@
 /obj/random/contraband,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7103,14 +7109,19 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "jRc" = (
-/obj/random/outcrop,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
 	},
-/area/maintenance/firstdeck{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	pressure_checks = 0;
+	pressure_checks_default = 0;
+	use_power = 1
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "jSk" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -7128,17 +7139,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "jTk" = (
 /obj/random/powercell,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7177,6 +7185,24 @@
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"jUS" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "jWs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -7415,8 +7441,7 @@
 /obj/item/weapon/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7453,9 +7478,7 @@
 	name = "\improper WARNING - WILD ANIMALS";
 	pixel_y = 32
 	},
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -7498,8 +7521,7 @@
 /obj/random/powercell,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7509,8 +7531,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7611,9 +7632,7 @@
 	})
 "ksh" = (
 /obj/effect/floor_decal/rust,
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground
-	},
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7911,8 +7930,7 @@
 /obj/random/maintenance,
 /obj/random/powercell,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7937,8 +7955,7 @@
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7984,6 +8001,24 @@
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"kSK" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/machinery/firealarm{
+	pixel_x = 32;
+	pixel_y = 24
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "kUf" = (
 /obj/machinery/light/small/readylight{
 	dir = 8;
@@ -8012,6 +8047,15 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"kVc" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/readylight{
+	dir = 4;
+	light_color = "#AF2A2A"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "kVk" = (
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/beartrap/hunting{
@@ -8077,13 +8121,11 @@
 	})
 "ldS" = (
 /obj/effect/floor_decal/rust,
-/obj/random/trash,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/readylight,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "lea" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /obj/machinery/meter,
@@ -8112,8 +8154,7 @@
 /obj/random/maintenance,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8298,9 +8339,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -8327,8 +8366,7 @@
 /obj/random/mre,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8339,8 +8377,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8360,8 +8397,7 @@
 	pixel_x = -3
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8507,8 +8543,7 @@
 /obj/structure/barricade,
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8594,8 +8629,7 @@
 	icon_state = "rifle-casing-spent"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8627,8 +8661,7 @@
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8660,8 +8693,7 @@
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8676,8 +8708,7 @@
 "lOx" = (
 /obj/random/maintenance,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -8745,18 +8776,16 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "lUp" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/warning{
 	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
 	name = "\improper WARNING - WILD ANIMALS";
-	pixel_x = -32
+	pixel_y = 32
 	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "lWK" = (
 /obj/random/junk,
 /obj/random/trash,
@@ -8815,6 +8844,19 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/security/tactical{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"lZu" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/catwalk,
+/obj/machinery/door/blast/gate{
+	color = "#352209";
+	id = "maintgate11";
+	name = "old gate"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "mau" = (
@@ -9027,8 +9069,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9069,7 +9110,6 @@
 	})
 "mtE" = (
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 50;
 	vore_default_contamination_color = "black";
 	vore_default_contamination_flavor = "acrid";
@@ -9078,8 +9118,7 @@
 	vore_pounce_successrate = 60
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9108,8 +9147,7 @@
 "mud" = (
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9210,8 +9248,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9281,8 +9318,7 @@
 /obj/random/obstruction,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9371,8 +9407,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9393,8 +9428,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9521,8 +9555,7 @@
 /obj/random/contraband,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9543,8 +9576,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9567,29 +9599,30 @@
 "nfw" = (
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "ngT" = (
-/obj/effect/floor_decal/rust,
-/obj/random/tool,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "sauna_tint2"
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "sauna_tint2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "nho" = (
 /obj/machinery/light/small/readylight{
 	dir = 8;
 	light_color = "#AF2A2A"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9635,6 +9668,14 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"npD" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/glass{
+	name = "Sauna"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "npN" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -9749,8 +9790,7 @@
 	},
 /obj/item/ammo_magazine/m762,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9806,6 +9846,16 @@
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"nxG" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/structure/fence/door{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "nzG" = (
 /obj/structure/closet/radiation,
 /obj/structure/window/reinforced{
@@ -9829,8 +9879,7 @@
 "nDz" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9858,8 +9907,7 @@
 /obj/random/junk,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9876,8 +9924,7 @@
 /obj/random/junk,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9894,8 +9941,7 @@
 	})
 "nGL" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9954,8 +10000,7 @@
 /obj/random/trash,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9980,8 +10025,7 @@
 "nKb" = (
 /obj/item/ammo_magazine/m762/empty,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10013,9 +10057,7 @@
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
 /obj/random/tetheraid,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -10043,13 +10085,14 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "nNJ" = (
-/obj/random/trash_pile,
-/turf/simulated/floor/outdoors/mud{
-	outdoors = -1
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
-/area/maintenance/firstdeck{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "nNZ" = (
 /obj/item/ammo_casing/spent{
 	desc = "A 7.62 FMJ bullet casing.";
@@ -10059,8 +10102,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10250,9 +10292,7 @@
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -10308,8 +10348,7 @@
 "oha" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10444,8 +10483,7 @@
 /obj/structure/catwalk,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10498,8 +10536,7 @@
 /obj/random/maintenance,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10514,8 +10551,7 @@
 "osi" = (
 /obj/machinery/crystal,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10567,8 +10603,7 @@
 /obj/structure/catwalk,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10700,8 +10735,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/clothing/head/ushanka,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10738,8 +10772,7 @@
 "oHF" = (
 /obj/structure/mob_spawner/mouse_nest,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10754,8 +10787,7 @@
 "oIv" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -10846,8 +10878,7 @@
 "oMs" = (
 /obj/structure/salvageable/data,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11089,8 +11120,7 @@
 "oXQ" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11331,6 +11361,16 @@
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"pjT" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_y = -32
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "pkv" = (
 /obj/machinery/light/floortube{
 	dir = 4
@@ -11345,8 +11385,7 @@
 	opacity = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11381,9 +11420,7 @@
 	anchored = 1;
 	deployed = 1
 	},
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -11407,8 +11444,7 @@
 /obj/structure/catwalk,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11506,16 +11542,14 @@
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "pyL" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11565,8 +11599,7 @@
 "pCF" = (
 /obj/random/mouseremains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11584,8 +11617,7 @@
 "pEO" = (
 /obj/structure/barricade,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11593,8 +11625,7 @@
 "pER" = (
 /obj/random/unidentified_medicine/old_medicine,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11667,8 +11698,7 @@
 	},
 /obj/item/ammo_magazine/m762/empty,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -11868,15 +11898,15 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "qbE" = (
-/obj/effect/floor_decal/rust,
-/obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/structure/catwalk,
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "qbZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -12006,6 +12036,12 @@
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"qkM" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/wall,
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "qkZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -12101,8 +12137,7 @@
 "qqB" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12183,8 +12218,7 @@
 /obj/random/obstruction,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12239,8 +12273,7 @@
 "qAl" = (
 /obj/random/material,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12305,12 +12338,20 @@
 	icon_state = "mfloor7"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"qIl" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "qIH" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash_pile,
@@ -12321,6 +12362,15 @@
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"qJn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "qKi" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access = null
@@ -12362,8 +12412,7 @@
 /obj/machinery/crystal,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12374,8 +12423,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12392,8 +12440,7 @@
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12533,8 +12580,7 @@
 "qZr" = (
 /obj/random/tech_supply,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12626,8 +12672,7 @@
 "riA" = (
 /obj/structure/mopbucket,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12635,8 +12680,7 @@
 "riN" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12645,8 +12689,7 @@
 /obj/random/contraband,
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12675,6 +12718,29 @@
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"rjL" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/drinks/coffee{
+	pixel_x = -5;
+	pixel_y = -6
+	},
+/obj/item/weapon/reagent_containers/food/drinks/coffee{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/weapon/reagent_containers/food/drinks/coffee{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/weapon/reagent_containers/food/drinks/coffee{
+	pixel_x = 5;
+	pixel_y = -6
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "rlb" = (
 /turf/simulated/mineral/cave,
 /area/maintenance/firstdeck/centralstarboard{
@@ -12713,8 +12779,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12765,8 +12830,7 @@
 /obj/item/clothing/accessory/collar/holo/indigestible,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12794,6 +12858,10 @@
 /area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"rsi" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "rsC" = (
 /obj/effect/floor_decal/rust,
 /obj/random/fishing_junk,
@@ -12811,8 +12879,7 @@
 "rtz" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12828,8 +12895,7 @@
 	light_color = "#AF2A2A"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12839,8 +12905,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12880,8 +12945,7 @@
 "rzU" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -12932,17 +12996,14 @@
 /obj/effect/floor_decal/rust,
 /obj/random/trash_pile,
 /obj/random/contraband,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "rCn" = (
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13011,6 +13072,19 @@
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"rHW" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/sign/warning{
+	name = "\improper CAUTION - EXTREME COLD";
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "rHZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -13024,14 +13098,21 @@
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"rKi" = (
+/obj/random/outcrop,
+/turf/simulated/floor/outdoors/rocks/caves{
+	outdoors = -1
+	},
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "rKT" = (
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13039,8 +13120,7 @@
 "rMC" = (
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13107,9 +13187,7 @@
 "rQR" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -13139,8 +13217,7 @@
 "rSh" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13198,8 +13275,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13261,9 +13337,7 @@
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
 /obj/random/cigarettes,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -13346,8 +13420,7 @@
 	icon_state = "mfloor6"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13377,6 +13450,15 @@
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"sjl" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 5
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "sls" = (
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
@@ -13392,6 +13474,12 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"som" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "soR" = (
 /obj/structure/handrail{
 	dir = 4
@@ -13454,8 +13542,7 @@
 "stt" = (
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13606,8 +13693,7 @@
 "sAm" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13662,6 +13748,19 @@
 /obj/item/ammo_magazine/m762/empty,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"sEz" = (
+/obj/machinery/door/blast/gate{
+	color = "#352209";
+	id = "maintgate11";
+	name = "old gate"
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "sFi" = (
@@ -13799,8 +13898,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13850,23 +13948,31 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "sME" = (
-/obj/effect/floor_decal/rust,
-/obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/button/windowtint{
+	id = "sauna_tint2";
+	pixel_x = 6;
+	pixel_y = 22
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "sNW" = (
 /obj/machinery/light/small/readylight{
 	dir = 1;
 	light_color = "#AF2A2A"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13891,8 +13997,7 @@
 "sPY" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13943,8 +14048,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14006,15 +14110,20 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "sWC" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/button/windowtint{
+	id = "sauna_tint2";
+	pixel_x = 6;
+	pixel_y = 22
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "sWN" = (
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/cargo,
@@ -14060,6 +14169,10 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"taD" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "tbz" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/sign/warning{
@@ -14075,9 +14188,7 @@
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
 /obj/random/trash_pile,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -14116,8 +14227,7 @@
 "tfw" = (
 /obj/item/ammo_magazine/ammo_box/b10mm,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14182,8 +14292,7 @@
 /obj/structure/catwalk,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14214,8 +14323,7 @@
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14318,8 +14426,7 @@
 "ttc" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14447,8 +14554,7 @@
 	light_color = "#AF2A2A"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14465,8 +14571,7 @@
 	will_patrol = 0
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14474,8 +14579,7 @@
 "tCu" = (
 /obj/machinery/crystal,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14630,8 +14734,7 @@
 "tKK" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14986,8 +15089,7 @@
 "umd" = (
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15093,8 +15195,7 @@
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15163,8 +15264,7 @@
 /obj/random/powercell,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15264,8 +15364,7 @@
 "uEg" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15331,8 +15430,7 @@
 	icon_state = "claw2"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15398,8 +15496,7 @@
 /obj/random/trash,
 /obj/random/powercell,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15458,8 +15555,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15550,9 +15646,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -15601,9 +15695,7 @@
 /obj/random/trash,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -15644,8 +15736,7 @@
 "vjg" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15666,21 +15757,24 @@
 "vkg" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "vkD" = (
 /obj/effect/floor_decal/rust,
-/obj/random/trash_pile,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/readylight{
+	dir = 8;
+	light_color = "#AF2A2A"
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "vlk" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
@@ -15696,8 +15790,7 @@
 /obj/random/maintenance,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15841,8 +15934,7 @@
 /obj/random/humanoidremains,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15908,8 +16000,7 @@
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15917,8 +16008,7 @@
 "vCJ" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16011,6 +16101,18 @@
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"vHY" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_y = -32
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "vIa" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -16022,7 +16124,6 @@
 "vIk" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 80;
 	vore_stomach_flavor = "You have ended up in the medihound sleeper of this corrupted machine. This place would be comfortable, if it weren't for the ominous gurgles and the thick, red, numbing liquid that pools over your body as soon as you settle into the rubbery stomach. The heated and cramped surroundings oozing potent fluids all over your form, eager to do nothing less than breaking you apart to fuel its aimless wanders for the next few days... hours... minutes? Oh dear...";
 	vore_stomach_name = "medihound sleeper"
@@ -16112,8 +16213,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16129,22 +16229,26 @@
 "vPY" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "vQk" = (
 /obj/effect/floor_decal/rust,
-/obj/random/trash,
-/obj/random/junk,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/readylight{
+	dir = 8;
+	light_color = "#AF2A2A"
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "vQm" = (
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/plating,
@@ -16164,8 +16268,7 @@
 /obj/random/powercell,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16191,8 +16294,7 @@
 "vVV" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16200,8 +16302,7 @@
 "vWu" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16271,16 +16372,14 @@
 "waY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "weV" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16291,8 +16390,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16300,8 +16398,7 @@
 "wfM" = (
 /obj/structure/bonfire/permanent,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16362,8 +16459,7 @@
 "wjg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16594,11 +16690,25 @@
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"wxI" = (
+/obj/structure/catwalk,
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/readylight{
+	light_color = "#7F0000"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "wxL" = (
 /obj/random/maintenance/medical,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16612,6 +16722,12 @@
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"wxX" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "wyH" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -16628,6 +16744,17 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"wzN" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "wAa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -16639,8 +16766,7 @@
 "wAp" = (
 /obj/item/weapon/digestion_remains/skull/unknown/anthro,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16691,8 +16817,7 @@
 "wCg" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16837,8 +16962,7 @@
 "wOd" = (
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16868,8 +16992,7 @@
 "wRh" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16910,8 +17033,7 @@
 "wRV" = (
 /obj/item/weapon/digestion_remains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16923,6 +17045,16 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"wSA" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/readylight{
+	dir = 4;
+	light_color = "#AF2A2A"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "wSL" = (
@@ -16962,7 +17094,6 @@
 "wVW" = (
 /obj/random/trash,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	vore_bump_chance = 50;
 	vore_default_contamination_color = "black";
 	vore_default_contamination_flavor = "acrid";
@@ -16977,14 +17108,17 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "wWm" = (
-/obj/effect/floor_decal/rust,
-/obj/random/junk,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "sauna_tint2"
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "sauna_tint2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "wWz" = (
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -17034,8 +17168,7 @@
 /obj/random/obstruction,
 /obj/structure/barricade,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17073,8 +17206,7 @@
 /obj/random/humanoidremains,
 /obj/item/weapon/gun/projectile/pirate,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17089,8 +17221,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17158,12 +17289,17 @@
 "xgY" = (
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/digestion_remains/skull/unknown/anthro,
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"xhn" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "xhD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -17183,9 +17319,7 @@
 /mob/living/simple_mob/vore/aggressive/panther/thor{
 	faction = "corrupt"
 	},
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -17208,8 +17342,7 @@
 "xlm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17351,11 +17484,16 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"xri" = (
+/obj/structure/bed/chair/sofa/black{
+	dir = 1
+	},
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "xsn" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17392,8 +17530,7 @@
 /obj/random/junk,
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17483,18 +17620,16 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "xBZ" = (
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating{
-	outdoors = -1
+/obj/structure/closet/secure_closet/personal,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
+/turf/simulated/floor/wood/cryosauna,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "xCk" = (
 /obj/random/maintenance,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17557,8 +17692,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/random/humanoidremains,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17596,8 +17730,7 @@
 "xLE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17682,8 +17815,7 @@
 "xOH" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17725,9 +17857,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating{
-	outdoors = -1
-	},
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -17879,8 +18009,7 @@
 /obj/random/trash,
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17888,8 +18017,7 @@
 "xVV" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17909,7 +18037,6 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -24
 	},
@@ -18074,8 +18201,7 @@
 "ydl" = (
 /obj/item/weapon/digestion_remains/skull/unknown/anthro,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -18085,8 +18211,7 @@
 	faction = "corrupt"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -18129,8 +18254,7 @@
 	})
 "yhL" = (
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -18172,8 +18296,7 @@
 "ykj" = (
 /obj/random/obstruction,
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -18201,8 +18324,7 @@
 	light_color = "#AF2A2A"
 	},
 /turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1;
-	temperature = 293.15
+	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -24099,8 +24221,8 @@ iOQ
 iOQ
 vWy
 pfU
-jxr
-jxr
+pXT
+pXT
 vWy
 iOQ
 iOQ
@@ -24271,7 +24393,7 @@ pfU
 pfU
 pfU
 iOQ
-lUp
+ggv
 lpF
 xPW
 iOQ
@@ -24286,8 +24408,8 @@ iDT
 pfU
 pfU
 djg
-sWC
-sME
+xSY
+wtS
 vWy
 pfU
 pfU
@@ -24646,7 +24768,7 @@ pfU
 pfU
 iOQ
 uXE
-jxr
+pXT
 iOQ
 iOQ
 pfU
@@ -24659,8 +24781,8 @@ jaE
 jaE
 xCt
 jaE
-jxr
-sWC
+pXT
+xSY
 djg
 pfU
 pfU
@@ -25020,7 +25142,7 @@ pfU
 pfU
 pfU
 pfU
-jxr
+pXT
 hmq
 pfU
 pfU
@@ -25207,8 +25329,8 @@ pfU
 pfU
 pfU
 pfU
-xBZ
-jxr
+lll
+pXT
 pfU
 pfU
 pfU
@@ -25395,8 +25517,8 @@ pfU
 pfU
 pfU
 pfU
-jxr
-xBZ
+pXT
+lll
 pfU
 pfU
 pfU
@@ -25582,8 +25704,8 @@ pfU
 pfU
 pfU
 pfU
-jxr
-jxr
+pXT
+pXT
 pfU
 pfU
 pfU
@@ -25769,9 +25891,9 @@ pfU
 pfU
 pfU
 pfU
-xBZ
-jxr
-xBZ
+lll
+pXT
+lll
 pfU
 pfU
 pfU
@@ -25956,7 +26078,7 @@ pfU
 pfU
 pfU
 pfU
-ngT
+auq
 fse
 pqd
 pfU
@@ -26144,8 +26266,8 @@ pfU
 pfU
 pfU
 cBz
-jxr
-xBZ
+pXT
+lll
 pfU
 pfU
 pfU
@@ -26331,8 +26453,8 @@ pfU
 pfU
 pfU
 pfU
-jxr
-jxr
+pXT
+pXT
 pfU
 pfU
 pfU
@@ -26518,7 +26640,7 @@ pfU
 pfU
 pfU
 pfU
-vkD
+djg
 doR
 rQR
 pfU
@@ -26705,10 +26827,10 @@ pfU
 pfU
 pfU
 pfU
-vkD
-qbE
-jxr
-vkD
+djg
+kay
+pXT
+djg
 pfU
 pfU
 pfU
@@ -26893,9 +27015,9 @@ pfU
 pfU
 pfU
 pfU
-wWm
-qbE
-vkD
+iIo
+kay
+djg
 pfU
 pfU
 pfU
@@ -27080,9 +27202,9 @@ pfU
 pfU
 pfU
 pfU
-vkD
+djg
 vcm
-xBZ
+lll
 pfU
 pfU
 pfU
@@ -27269,7 +27391,7 @@ pfU
 pfU
 rBY
 sbI
-jxr
+pXT
 pfU
 pfU
 pfU
@@ -27456,8 +27578,8 @@ pfU
 pfU
 pfU
 tca
-qbE
-xBZ
+kay
+lll
 pfU
 pfU
 pfU
@@ -27643,7 +27765,7 @@ pfU
 pfU
 pfU
 pfU
-vQk
+drY
 fzo
 pfU
 pfU
@@ -27831,8 +27953,8 @@ pfU
 pfU
 pfU
 tca
-qbE
-sME
+kay
+wtS
 pfU
 pfU
 wKv
@@ -28019,8 +28141,8 @@ pfU
 pfU
 pfU
 nLT
-jxr
-vkD
+pXT
+djg
 pfU
 pfU
 lll
@@ -28205,9 +28327,9 @@ pfU
 pfU
 pfU
 pfU
-vkD
+djg
 vcm
-xBZ
+lll
 pfU
 pfU
 pfU
@@ -28394,7 +28516,7 @@ pfU
 pfU
 pfU
 xgY
-jxr
+pXT
 pfU
 pfU
 pfU
@@ -28580,8 +28702,8 @@ uRb
 uRb
 uRb
 pfU
-ldS
-qbE
+bdl
+kay
 pfU
 pfU
 pfU
@@ -31030,7 +31152,7 @@ vXc
 vXc
 vXc
 vXc
-jRc
+rKi
 wjg
 wjg
 jTk
@@ -33091,7 +33213,7 @@ erP
 erP
 wjg
 pkO
-jRc
+rKi
 vXc
 vXc
 vXc
@@ -35330,7 +35452,7 @@ pbk
 wMv
 vXc
 pyL
-jRc
+rKi
 pyL
 pyL
 pyL
@@ -35892,7 +36014,7 @@ wMv
 vXc
 pyL
 pyL
-jRc
+rKi
 pyL
 pyL
 vXc
@@ -37384,11 +37506,11 @@ wMv
 vXc
 vXc
 vXc
-nNJ
-cTv
 vXc
-pyL
-vmQ
+vXc
+htY
+htY
+wSA
 kBJ
 cIC
 vXc
@@ -37571,14 +37693,14 @@ tFp
 vXc
 vXc
 cTv
-cTv
-cTv
-bjv
-bjv
 vXc
-vXc
-vXc
-vXc
+wMv
+nxG
+nxG
+wMv
+fYa
+fYa
+fYa
 vXc
 vXc
 vXc
@@ -37756,16 +37878,16 @@ rWu
 ggc
 wMv
 vXc
-vXc
-cTv
-cTv
-stt
-lOx
-pyL
-vXc
-vXc
-vXc
-vXc
+jxr
+jxr
+jxr
+vQk
+jxr
+jxr
+vQk
+jxr
+jxr
+fYa
 vXc
 vXc
 vXc
@@ -37943,16 +38065,16 @@ kie
 rBL
 wMv
 vXc
-vXc
-cTv
-cTv
-pyL
-pyL
-vXc
-vXc
-vXc
-vXc
-vXc
+jxr
+fYa
+fYa
+wWm
+wWm
+wWm
+fYa
+fYa
+eDr
+fYa
 vXc
 vXc
 vXc
@@ -38127,19 +38249,19 @@ wMv
 vDp
 wMv
 wMv
-bjv
+fbU
 wMv
 vXc
-vXc
-vXc
-lOx
-pyL
-pyL
-vXc
-vXc
-vXc
-vXc
-vXc
+ldS
+fYa
+sME
+xBZ
+rjL
+rsi
+wzN
+fYa
+jxr
+fYa
 vXc
 vXc
 vXc
@@ -38314,20 +38436,20 @@ vXc
 erP
 vXc
 vXc
-bjv
+fbU
 vXc
 vXc
-vXc
-vXc
-pyL
-pyL
+jxr
+ngT
+aam
+aam
 jRc
-vXc
-vXc
-vXc
-vXc
-vXc
-vXc
+sjl
+jJx
+abH
+jxr
+fYa
+fYa
 vXc
 vXc
 vXc
@@ -38502,19 +38624,19 @@ erP
 vXc
 vXc
 pyL
-vXc
-vXc
-vXc
-vXc
-vmQ
-lOx
-pyL
-vXc
-vXc
-vXc
-vXc
-vXc
-vXc
+qqB
+wMv
+lUp
+ngT
+aam
+aam
+aam
+qJn
+xri
+abH
+qIl
+jxr
+fYa
 vXc
 vXc
 vXc
@@ -38690,18 +38812,18 @@ vXc
 vXc
 pyL
 pyL
-pyL
-vXc
-vXc
+fyO
+jxr
+ngT
 aam
-qgE
-pyL
-vXc
-vXc
-vXc
-vXc
-vXc
-vXc
+aam
+aam
+qJn
+xri
+abH
+iih
+jtA
+fYa
 vXc
 vXc
 vXc
@@ -38877,18 +38999,18 @@ vXc
 vXc
 vXc
 vXc
-pyL
-pyL
-vXc
-vXc
-vmQ
-bjv
-vXc
-vXc
-vXc
-vXc
-vXc
-vXc
+wMv
+lUp
+ngT
+aam
+aam
+jUS
+baR
+fmf
+abH
+taD
+hRO
+fYa
 vXc
 vXc
 vXc
@@ -39065,17 +39187,17 @@ vXc
 vXc
 vXc
 vXc
-qqB
-vXc
-vXc
-vXc
-vmQ
-vmQ
-vXc
-vXc
-vXc
-vXc
-vXc
+ldS
+fYa
+sWC
+xhn
+som
+cjU
+jlg
+fYa
+jxr
+jxr
+fYa
 vXc
 vXc
 vXc
@@ -39252,18 +39374,18 @@ vXc
 vXc
 vXc
 vXc
-qqB
-qqB
-vXc
-vXc
-xeq
-sfo
-vmQ
-kBJ
-vXc
-vXc
-vXc
-vXc
+jxr
+fYa
+fYa
+fYa
+npD
+fYa
+fYa
+fYa
+eDr
+fYa
+fYa
+fYa
 kBJ
 kBJ
 kBJ
@@ -39439,18 +39561,18 @@ vmQ
 vXc
 vXc
 vXc
-vXc
-qqB
-vXc
-vXc
-vXc
-qgE
-rBL
-kBJ
-kBJ
-fbU
-pyL
-wjg
+jxr
+nNJ
+vkD
+rHW
+jxr
+bwX
+jxr
+enC
+ldS
+fYa
+vHY
+qkM
 wjg
 usH
 wjg
@@ -39626,18 +39748,18 @@ ahI
 yef
 vXc
 vXc
-vXc
-qqB
-vXc
-vXc
-fyO
-vmQ
-sfo
-vmQ
-erP
-erP
-erP
-erP
+fYa
+qbE
+fYa
+kSK
+kBJ
+hKy
+wxI
+kBJ
+wxX
+wxX
+wxX
+aMQ
 qqB
 pyL
 pyL
@@ -39813,18 +39935,18 @@ cet
 bXA
 pVe
 vXc
-vXc
-kie
-lif
-vmQ
-vmQ
+fYa
+fYa
+fYa
+fYa
 kBJ
-erP
-erP
-vmQ
-vmQ
-vXc
-vXc
+sEz
+lZu
+kBJ
+kVc
+enC
+pjT
+wMv
 vXc
 vXc
 vXc
@@ -40004,13 +40126,13 @@ wHB
 ahI
 mss
 bXA
-ahI
-erP
-erP
-xeq
-vXc
-vXc
-vXc
+kBJ
+hKy
+wxI
+kBJ
+gSJ
+fYa
+fYa
 vXc
 vXc
 vXc
@@ -40192,8 +40314,8 @@ yef
 sQl
 sTZ
 sfo
-vXc
-vXc
+dzQ
+dzQ
 vXc
 vXc
 vXc
@@ -40378,9 +40500,9 @@ yef
 pVe
 yef
 vmQ
-vXc
-vXc
-vXc
+vmQ
+htY
+dzQ
 vXc
 vXc
 vXc
@@ -40562,11 +40684,11 @@ vXc
 bXA
 erP
 yef
+vmQ
 vXc
-vXc
-vXc
-vXc
-vXc
+vmQ
+vmQ
+vmQ
 vXc
 vXc
 vXc
@@ -40749,9 +40871,9 @@ vXc
 vmQ
 cet
 yef
-vXc
-vXc
-vXc
+vmQ
+vmQ
+vmQ
 vXc
 vXc
 vXc
@@ -40937,7 +41059,7 @@ vXc
 qgE
 erP
 vmQ
-vXc
+vmQ
 vXc
 vXc
 vXc
