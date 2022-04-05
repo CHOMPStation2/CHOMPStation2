@@ -378,16 +378,12 @@
 	name = "Dormitories"
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	icon_state = "grawhisqu"
-	flags = RAD_SHIELDED | BLUE_SHIELDED
 	ambience = AMBIENCE_GENERIC
-<<<<<<< HEAD
-=======
 	flags = RAD_SHIELDED| BLUE_SHIELDED |AREA_FLAG_IS_NOT_PERSISTENT
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	forbid_events = TRUE
->>>>>>> 332b24a121... Merge pull request #12643 from Very-Soft/gbtweaks
 /area/groundbase/dorms/bathroom
 	name = "Dormitory Bathroom"
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
