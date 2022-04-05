@@ -643,6 +643,9 @@ z
 /area/engineering/auxiliary_engineering
 	name = "\improper Auxiliary Engineering Station"
 	sound_env = SMALL_ENCLOSED
+/area/engineering/external_lights
+	name = "\improper External Lighting"
+	sound_env = SMALL_ENCLOSED
 /*
 //KSC - CHOMPStation Edit 1/19/21 - Moving this to the second-deck
 /area/crew_quarters/firstdeck/gym
