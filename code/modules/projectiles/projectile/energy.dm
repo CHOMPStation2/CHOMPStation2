@@ -8,7 +8,8 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 	hitsound = 'sound/weapons/zapbang.ogg'
-	hud_state = "monkey"
+	hud_state = "plasma"
+	hud_state = "battery_empty"
 
 	var/flash_strength = 10
 

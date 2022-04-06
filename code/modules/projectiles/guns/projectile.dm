@@ -281,21 +281,27 @@
 			var/obj/item/ammo_casing/A = chambered
 			var/obj/item/projectile/P = A.projectile_type
 			return list(initial(P.hud_state), initial(P.hud_state_empty))
-		else if(ammo_magazine && ammo_magazine.stored_ammo) // Are we loaded, have a mag, and have ammo in the mag?
+		else if(ammo_magazine && ammo_magazine.stored_ammo.len) // Are we loaded, have a mag, and have ammo in the mag?
 			var/obj/item/ammo_casing/A = ammo_magazine.stored_ammo[1]
 			var/obj/item/projectile/P = A.projectile_type
 			return list(initial(P.hud_state), initial(P.hud_state_empty))
+		else if(!ammo_magazine && !chambered && src.projectile_type) // Else, we're entirely empty, and have no mag/nothing loaded in the gun, and nothing in the chamber. Return the DEFAULT projectile_type on the gun, if set.
+			var/obj/item/projectile/P = src.projectile_type
+			return list(initial(P.hud_state), initial(P.hud_state_empty))
 		else
 			return list("unknown", "unknown") // Safety, this shouldn't happen, but just in case
-	else if(load_method == SINGLE_CASING|SPEEDLOADER)
-		if(chambered) // Do we have an ammo casing loaded in the chamber?
+	else if(load_method == (SINGLE_CASING | SPEEDLOADER))
+		if(chambered) // Do we have an ammo casing loaded in the chamber? All casings still have a projectile_type var.
 			var/obj/item/ammo_casing/A = chambered
 			var/obj/item/projectile/P = A.projectile_type
-			return list(initial(P.hud_state), initial(P.hud_state_empty)) // Return the casing's ammo hud state
+			return list(initial(P.hud_state), initial(P.hud_state_empty)) // Return the casing's projectile_type ammo hud state
 		else if(!chambered && loaded.len) // Else, is the gun loaded, but no ammo casings in chamber currently?
 			var/obj/item/ammo_casing/A = loaded[1]
 			var/obj/item/projectile/P = A.projectile_type
-			return list(initial(P.hud_state), initial(P.hud_state_empty)) // Return the ammunition in mag's hud_state
+			return list(initial(P.hud_state), initial(P.hud_state_empty)) // Return the ammunition loaded in the gun's hud_state
+		else if(!chambered && !loaded.len && src.projectile_type) // Else, we're entirely empty, and have no mag/nothing loaded in the gun, and nothing in the chamber. Return the DEFAULT projectile_type on the gun, if set.
+			var/obj/item/projectile/P = src.projectile_type
+			return list(initial(P.hud_state), initial(P.hud_state_empty))
 		else
 			return list("unknown", "unknown") // Safety, this shouldn't happen, but just in case
 	else
@@ -303,18 +309,22 @@
 
 /obj/item/weapon/gun/projectile/get_ammo_count()
 	if(load_method == MAGAZINE)
-		if(!ammo_magazine) // No magazine? Return if we have a round chambered or not. BB is the var for the round inside the casing.
+		if(!ammo_magazine && chambered) // No magazine, and we have a casing chambered? Return if we have a round chambered or not. BB is the var for the round inside the casing.
 			return chambered.BB ? 1 : 0
-		else if(ammo_magazine) // If we have a magazine loaded, check if chambered and return either the magazine + chambered or the loaded amount
+		else if(ammo_magazine && chambered) // If we have a magazine loaded, check if chambered and return either the magazine + chambered or the loaded amount
 			return chambered.BB ? (ammo_magazine.stored_ammo.len + 1) : ammo_magazine.stored_ammo.len
+		else if(!chambered && ammo_magazine) // If we have a magazine loaded, but nothing chambered, return the magazine amount, if it exists.
+			return ammo_magazine.stored_ammo.len
 		else // Completely unloaded or code failure.
 			return 0
-	else if(load_method == SINGLE_CASING|SPEEDLOADER)
-		if(chambered.BB && !loaded.len) // Chambered and has a round in the casing, but nothing in the magazine/internal ammo. BB is the var for the round inside the casing.
-			return chambered.BB ? 1: 0
-		else if(chambered.BB && loaded.len) // Chambered casing + round + has ammo. BB is the var for the round inside the casing.
+	else if(load_method == SINGLE_CASING | SPEEDLOADER)
+		if(chambered && chambered.BB && !loaded.len) // Chambered and has a round in the casing, but nothing in the magazine/internal ammo. BB is the var for the round inside the casing.
+			return chambered.BB ? 1 : 0
+		else if(chambered && chambered.BB && loaded.len) // Chambered casing + round + has ammo. BB is the var for the round inside the casing.
 			return loaded.len + (chambered.BB ? 1 : 0)
-		else if(loaded.len) // Has ammo, no round chambered (but might have a casing still in the breech). BB is the var for the round inside the casing.
+		else if(chambered && !chambered.BB && loaded.len) // Has ammo, no round chambered (but might have a casing still in the breech). BB is the var for the round inside the casing.
+			return loaded.len
+		else if(!chambered && loaded.len) // Has ammo, not chambered, or doesn't use the chambered var
 			return loaded.len
 		else // Completely unloaded, nothing in chamber or ammo, or code failed???
 			return 0
