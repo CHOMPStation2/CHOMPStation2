@@ -43,7 +43,6 @@
 	light_color = "#F18F12"
 	light_range = 2
 	light_power = 0.5
-	hud_state = "laser_heat"
 
 /obj/effect/projectile/tracer/phaser/heavy
 	icon_state = "phaser_heavy_tracer"
@@ -61,7 +60,6 @@
 	light_color = "#F18F12"
 	light_range = 2
 	light_power = 0.5
-	hud_state = "laser_heat"
 
 /obj/effect/projectile/muzzle/phaser/heavy
 	icon_state = "phaser_heavy_muzzle"
@@ -79,7 +77,6 @@
 	light_color = "#F18F12"
 	light_range = 2
 	light_power = 0.5
-	hud_state = "laser_heat"
 
 /obj/effect/projectile/impact/phaser/heavy
 	icon_state = "phaser_heavy_impact"

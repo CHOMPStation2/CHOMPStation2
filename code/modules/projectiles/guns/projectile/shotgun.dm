@@ -52,14 +52,14 @@
 		else
 			chambered.loc = get_turf(src) // Eject casing
 		chambered = null
-		user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD Port
+		M.hud_used.update_ammo_hud(M, src) // TGMC Ammo HUD Port
 
 	// Load next shell
 	if(loaded.len)
 		var/obj/item/ammo_casing/AC = loaded[1] // Load next casing.
 		loaded -= AC // Remove casing from loaded list.
 		chambered = AC
-		user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD Port
+		M.hud_used.update_ammo_hud(M, src) // TGMC Ammo HUD Port
 
 	if(pump_animation) // This affects all bolt action and shotguns.
 		flick("[pump_animation]", src) // This plays any pumping
