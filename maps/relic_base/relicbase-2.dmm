@@ -2622,8 +2622,17 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "bRn" = (
@@ -3579,8 +3588,32 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "cpk" = (
-/obj/structure/closet/crate,
-/obj/random/maintenance/research,
+/obj/structure/closet/crate/wooden{
+	desc = "A crate made from wood and lined with straw. Cheapest form of storage. Has a label on it, that reads 'DO NOT REMOVE' and 'KEEP AWAY FROM FLAMMABLES'";
+	name = "Spare Ammo"
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/minoutpost/base)
 "cpv" = (
@@ -8556,12 +8589,21 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = -32
 	},
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "eSQ" = (
@@ -12381,8 +12423,17 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "gUO" = (
@@ -13777,8 +13828,17 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "hEJ" = (
@@ -28482,8 +28542,17 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "qcV" = (
@@ -29924,13 +29993,22 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24;
 	pixel_y = 8
 	},
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "qSr" = (

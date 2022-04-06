@@ -554,7 +554,7 @@
 	ambience = AMBIENCE_ENGINEERING
 
 /area/surface/outpost/civilian/fishing
-	name = "\improper Civilian Outpost Fishing Supplies"
+	name = "\improper Private Cabin"
 	icon_state = "storage"
 
 /area/surface/outpost/civilian/pool
