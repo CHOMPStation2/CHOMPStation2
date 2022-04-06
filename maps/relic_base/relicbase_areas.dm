@@ -88,11 +88,15 @@
 /area/surface/outside/wilderness/normal
 	name = "Wilderness"
 	icon_state = "yellow"
-
+/area/surface/outside/wilderness/seaside
+	name = "Shorelines"
+	icon_state = "darkred"
 /area/surface/outside/wilderness/deep
 	name = "Deep Wilderness"
 	icon_state = "red"
-
+/area/surface/outside/wilderness/islands
+	name = "Unexplored Island"
+	icon_state = "green"
 // So POIs don't get embedded in rock.
 /area/surface/outside/wilderness/mountains
 	name = "Mountains"
@@ -101,14 +105,25 @@
 /area/surface/outside/path/wilderness
 
 // Water
+
 /area/surface/outside/ocean
 	name = "Sea"
 	icon_state = "bluenew"
-
+/area/surface/outside/ocean/chesapeake
+	name = "Chesapeake Sea"
+	icon_state = "bluenew"
+/area/surface/outside/ocean/greenway
+	name = "Greenway Basin"
+	icon_state = "bluenew"
 /area/surface/outside/river
 	name = "River"
 	icon_state = "bluenew"
-
+/area/surface/outside/river/raritan
+	name = "Raritan River"
+	icon_state = "bluenew"
+/area/surface/outside/river/sesquehanna
+	name = "Sesquehanna River"
+	icon_state = "bluenew"
 /area/surface/cave
 	flags = RAD_SHIELDED
 	always_unpowered = TRUE

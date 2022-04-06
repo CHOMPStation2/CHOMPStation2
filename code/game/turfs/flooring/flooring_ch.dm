@@ -21,3 +21,9 @@
 /turf/simulated/floor/boxing/gym
 	name = "gym mat"
 	icon_state = "gym_mat"
+
+/turf/simulated/mineral/floor/cave
+	name = "dark sand"
+	desc = "Ashy, grey-black sand. Usually indicative of volcanic activity."
+	icon = 'icons/turf/thor_ch.dmi'
+	icon_state = null
