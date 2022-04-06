@@ -49,6 +49,7 @@
 /obj/item/ammo_casing/a762x54
 	desc = "A standard 7.62x54mmR round"
 	caliber = "7.62x54mmR"
+	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762x54
 	matter = list(DEFAULT_WALL_MATERIAL = 160)
 
@@ -59,6 +60,7 @@
 /obj/item/ammo_casing/a338
 	desc = "A standard .338 Lapua round"
 	caliber = ".338"
+	icon_state = "lcasing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a338
 
 /obj/item/ammo_casing/a338/ap
@@ -68,6 +70,7 @@
 /obj/item/ammo_casing/a50bmg
 	desc = "A standard .50 BMG round"
 	caliber = ".50 BMG"
+	icon_state = "lcasing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a50bmg
 
 /obj/item/ammo_casing/a50bmg/ap
@@ -77,11 +80,13 @@
 /obj/item/ammo_casing/a127x108
 	desc = "A standard 12.7x108mm round"
 	caliber = "12.7x108mm"
+	icon_state = "lcasing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a127x108
 
 /obj/item/ammo_casing/a9x39
 	desc = "A standard 9x39mm round"
 	caliber = "9x39mm"
+	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
 
 /obj/item/ammo_casing/a9x39/ap
@@ -91,6 +96,7 @@
 /obj/item/ammo_casing/a762x39
 	desc = "A standard 7.62x39mm round"
 	caliber = "7.62x39mm"
+	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
 
 /obj/item/ammo_casing/a762x39/ap
@@ -104,6 +110,7 @@
 /obj/item/ammo_casing/a556
 	desc = "A standard 5.56x45mm round"
 	caliber = "5.56x45mm"
+	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 
 /obj/item/ammo_casing/a556/ap
@@ -116,4 +123,6 @@
 
 /obj/item/ammo_casing/a10x24
 	desc = "A standard 10x24mm caseless round"
+	icon_state = "rifle-casing"
+	caseless = 1
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
