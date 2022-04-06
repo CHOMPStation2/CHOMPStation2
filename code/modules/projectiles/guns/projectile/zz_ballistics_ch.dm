@@ -388,7 +388,7 @@
 /obj/item/weapon/gun/projectile/automatic/serdy/fal
 	name = "FN-FAL"
 	desc = "The right arm of the free galaxy. Chambered in 7.62x51mm."
-	caliber = "7.62x51mm"
+	caliber = "7.62mm"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/fal
@@ -899,6 +899,8 @@
 	muzzle_velocity = 860
 	one_handed_penalty = 90
 
+//commented this out because it seems to be breaking the Kord -- Ocelot
+/*
 /obj/item/weapon/gun/projectile/automatic/serdy/kord/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(user.size_multiplier <= 0.5) //They're 50% or lower. If they fire this gun, they're gonna get obliterated.
 		to_chat(user,"<span class='warning'>You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea...</span>")
@@ -963,9 +965,7 @@
 			message_on_fire += "<span class='notice'> The force causes you to stumble backwards, dropping the gun and falling to the ground.</span>"
 			user.drop_item()
 			user.apply_effect(25,WEAKEN)
-
-
-
+*/
 
 //Pistols
 
