@@ -174,6 +174,17 @@
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a10x24
 
+/obj/item/ammo_magazine/t12
+	name = "T-12 magazine (10x24mm standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "t12"
+	max_ammo = 40
+	mag_type = MAGAZINE
+	caliber = "10x24mm"
+	matter = list(DEFAULT_WALL_MATERIAL = 10000)
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/a10x24
+
 /obj/item/ammo_magazine/clip/sks
 	name = "Ammo clip(7.62x39mm standard)"
 	icon_state = "gclip"
@@ -222,7 +233,7 @@
 	name = "AR-10 magazine(7.62x51mm standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
-	icon_state = "m41mag" //This just looks the closest IMO
+	icon_state = "t12"
 	max_ammo = 20
 	mag_type = MAGAZINE
 	multiple_sprites = 1
@@ -238,7 +249,7 @@
 	name = "FAL magazine(7.62x51mm standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
-	icon_state = "m41mag" //This just looks the closest IMO
+	icon_state = "t12"
 	max_ammo = 20
 	mag_type = MAGAZINE
 	multiple_sprites = 1
@@ -435,3 +446,54 @@
 /obj/item/ammo_magazine/m9mm/vp70/hp
 	name = "VP70 magazine (18x 9x19mm hollow-point)"
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
+
+/obj/item/ammo_magazine/tp23s
+	name = "TP-23 TS magazine (.44 magnum standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "45mag"
+	max_ammo = 12
+	mag_type = MAGAZINE
+	caliber = ".44"
+	matter = list(DEFAULT_WALL_MATERIAL = 800)
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/a44
+
+/obj/item/ammo_magazine/tp23s/rubber
+	name = "TP-23 TS magazine (.44 magnum less-lethal)"
+	ammo_type = /obj/item/ammo_casing/a44/rubber
+
+/obj/item/ammo_magazine/tp23s/highpower
+	name = "TP-23 TS magazine (.44 magnum +P)"
+	desc = "This will probably void your warranty... If you have one."
+	ammo_type = /obj/item/ammo_casing/a44/rifle
+
+/obj/item/ammo_magazine/tp23
+	name = "TP-23 magazine (.45 ACP)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "45mag"
+	max_ammo = 12
+	mag_type = MAGAZINE
+	caliber = ".45"
+	matter = list(DEFAULT_WALL_MATERIAL = 800)
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/a45
+
+/obj/item/ammo_magazine/tp23/rubber
+	name = "TP-23 magazine (.45 ACP rubber)"
+	ammo_type = /obj/item/ammo_casing/a45/rubber
+
+/obj/item/ammo_magazine/tp23/flash
+	name = "TP-23 magazine (.45 ACP flash)"
+	ammo_type = /obj/item/ammo_casing/a45/flash
+
+/obj/item/ammo_magazine/tp23/hp
+	name = "TP-23 magazine (.45 ACP hollow-point)"
+	ammo_type = /obj/item/ammo_casing/a45/hp
+
+/obj/item/ammo_magazine/tp23/ap
+	name = "TP-23 magazine (.45 ACP armor piercing)"
+	ammo_type = /obj/item/ammo_casing/a45/ap
+
+/obj/item/ammo_magazine/tp23/emp
+	name = "TP-23 magazine (.45 ACP low-yield EMP)"
+	ammo_type = /obj/item/ammo_casing/a45/emp

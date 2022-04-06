@@ -201,3 +201,65 @@
 	name = "VP70 magazine (18x 9x19mm hollow-point)"
 	path = /obj/item/ammo_magazine/m9mm/vp70/hp
 	hidden = 1
+
+/datum/category_item/autolathe/arms/tp23_44
+	name = "TP-23 TS magazine (.44 magnum standard)"
+	path = /obj/item/ammo_magazine/tp23s
+	hidden = 1
+
+/datum/category_item/autolathe/arms/tp23_44_rubber
+	name = "TP-23 TS magazine (.44 magnum less-lethal)"
+	path = /obj/item/ammo_magazine/tp23s/rubber
+
+/datum/category_item/autolathe/arms/tp23_45
+	name = "TP-23 magazine (.45 ACP standard)"
+	path = /obj/item/ammo_magazine/tp23
+	hidden = 1
+
+/datum/category_item/autolathe/arms/tp23_45_ap
+	name = "TP-23 magazine (.45 ACP armor-piercing)"
+	path = /obj/item/ammo_magazine/tp23/ap
+	hidden = 1
+
+/datum/category_item/autolathe/arms/tp23_45_hp
+	name = "TP-23 magazine (.45 ACP hollow-point)"
+	path = /obj/item/ammo_magazine/tp23/hp
+	hidden = 1
+
+/datum/category_item/autolathe/arms/tp23_45_emp
+	name = "TP-23 magazine (.45 ACP low-yield EMP)"
+	path = /obj/item/ammo_magazine/tp23/emp
+	hidden = 1
+
+/datum/category_item/autolathe/arms/tp23_45_flash
+	name = "TP-23 magazine (.45 ACP flash)"
+	path = /obj/item/ammo_magazine/tp23/flash
+
+/datum/category_item/autolathe/arms/tp23_45_rubber
+	name = "TP-23 magazine (.45 ACP rubber)"
+	path = /obj/item/ammo_magazine/tp23/rubber
+
+/datum/category_item/autolathe/arms/ar10_762x51
+	name = "AR-10 magazine(7.62x51mm standard)"
+	path = /obj/item/ammo_magazine/ar10
+	hidden = 1
+
+/datum/category_item/autolathe/arms/fal_762x51
+	name = "FAL magazine(7.62x51mm standard)"
+	path = /obj/item/ammo_magazine/fal
+	hidden = 1
+
+/datum/category_item/autolathe/arms/smg_pitch
+	name = "pitchgun magazine(.44 magnum standard)"
+	path = /obj/item/ammo_magazine/pitchmag
+	hidden = 1
+
+/datum/category_item/autolathe/arms/rpdm_762x39
+	name = "RPDM Drum magazine(7.62x39mm standard)"
+	path = /obj/item/ammo_magazine/rpd
+	hidden = 1
+
+/datum/category_item/autolathe/arms/rpk_762x39
+	name = "RPK Drum magazine(7.62x39mm standard)"
+	path = /obj/item/ammo_magazine/akm/drum
+	hidden = 1
