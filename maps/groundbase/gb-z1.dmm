@@ -2471,18 +2471,6 @@
 "gv" = (
 /turf/simulated/wall/r_wall,
 /area/groundbase/security/hos)
-"gw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/virgo3c{
-	edge_blending_priority = -1;
-	outdoors = 0
-	},
-/area/groundbase/level1/nw)
 "gx" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -14820,9 +14808,7 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
 "LK" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c{
-	outdoors = 0
-	},
+/turf/simulated/floor/outdoors/grass/forest/virgo3c/notrees,
 /area/groundbase/level1/eastspur)
 "LL" = (
 /obj/machinery/door/firedoor,
@@ -27951,7 +27937,7 @@ FF
 FF
 MO
 FF
-gw
+My
 MO
 FF
 MO
@@ -28093,7 +28079,7 @@ MO
 MO
 MO
 MO
-gw
+My
 MO
 MO
 MO
@@ -28650,7 +28636,7 @@ MO
 MO
 MO
 MO
-Rn
+WB
 QR
 WB
 MO
@@ -28934,7 +28920,7 @@ tG
 tG
 tG
 tG
-tG
+WL
 ZR
 tG
 tG
@@ -29076,7 +29062,7 @@ UX
 UX
 UX
 tG
-tG
+WL
 ZR
 tG
 tG
@@ -29218,7 +29204,7 @@ UX
 tG
 tG
 UX
-tG
+WL
 ZR
 tG
 tG
@@ -29360,7 +29346,7 @@ tG
 tG
 UX
 UX
-tG
+WL
 ZR
 tG
 tG
@@ -29515,7 +29501,7 @@ tG
 MB
 dh
 MB
-UX
+tG
 tG
 tG
 MO
@@ -29657,7 +29643,7 @@ ng
 Dg
 Iy
 tG
-UX
+tG
 tG
 tG
 Eb
@@ -29787,7 +29773,7 @@ tG
 tG
 tG
 WL
-WL
+tG
 tG
 tG
 tG
@@ -29798,7 +29784,7 @@ GK
 hW
 tG
 tG
-UX
+tG
 UX
 UX
 UX
@@ -29929,7 +29915,7 @@ UX
 UX
 UX
 dL
-dL
+UX
 UX
 UX
 UX
@@ -29939,7 +29925,7 @@ tG
 tG
 hW
 tG
-UX
+tG
 UX
 UX
 UX
@@ -30071,7 +30057,7 @@ UX
 UX
 UX
 WL
-dL
+UX
 UX
 tG
 tG
@@ -30083,8 +30069,8 @@ hW
 GK
 tG
 tG
-UX
-UX
+tG
+tG
 Eb
 Eb
 Eb
@@ -30213,7 +30199,7 @@ tG
 UX
 tG
 WL
-WL
+tG
 tG
 tG
 tG
@@ -30355,7 +30341,7 @@ tG
 tG
 tG
 WL
-WL
+tG
 qE
 qE
 qE
@@ -35905,9 +35891,9 @@ Ah
 MK
 Ah
 MK
-Ah
+LK
 sF
-Ah
+LK
 Ah
 Ah
 MK
@@ -36047,9 +36033,9 @@ Ah
 Ah
 Ah
 Ah
-Ah
 LK
-Ah
+LK
+LK
 Ah
 Ah
 Ah
@@ -36189,9 +36175,9 @@ Ah
 Ah
 Ah
 Ah
-Ah
 LK
-Ah
+LK
+LK
 Ah
 Ah
 Ah
@@ -36331,9 +36317,9 @@ Ah
 Ah
 MK
 MK
-Ah
 LK
-Ah
+LK
+LK
 Ah
 Ah
 Ah
@@ -36473,9 +36459,9 @@ MK
 MK
 MK
 Ah
-Ah
 LK
-Ah
+LK
+LK
 Ah
 MK
 MK
@@ -36617,7 +36603,7 @@ MK
 MK
 MK
 sF
-Ah
+LK
 Ah
 MK
 MK

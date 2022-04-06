@@ -13661,6 +13661,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"OI" = (
+/turf/simulated/floor/virgo3c{
+	edge_blending_priority = -1
+	},
+/area/groundbase/level2/nw)
 "OJ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -26254,7 +26259,7 @@ VR
 VR
 VR
 VR
-VR
+OI
 bY
 bY
 bY
@@ -26396,10 +26401,10 @@ VR
 VR
 VR
 VR
-VR
-VR
-VR
-VR
+OI
+OI
+OI
+OI
 bY
 bY
 bY
@@ -26538,13 +26543,13 @@ VR
 VR
 VR
 VR
-VR
-VR
-VR
-VR
-VR
-VR
-VR
+OI
+OI
+OI
+OI
+OI
+OI
+OI
 bY
 bY
 bY
