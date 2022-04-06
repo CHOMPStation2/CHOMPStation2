@@ -57,7 +57,14 @@ var/list/ventcrawl_machinery = list(
 	//Ability master easy test for allowed (cheaper than istype)
 	if(carried_item == ability_master)
 		return 1
+<<<<<<< HEAD
 
+=======
+	if(isanimal(src))
+		var/mob/living/simple_mob/S = src
+		if(carried_item == S.mobcard)	//VOREStation Edit
+			return 1	//VOREStation Edit
+>>>>>>> 487d7b0c9a... Merge pull request #12665 from Very-Soft/ventcrawls
 	//Try to find it in our allowed list (istype includes subtypes)
 	var/listed = FALSE
 	for(var/test_type in can_enter_vent_with)
