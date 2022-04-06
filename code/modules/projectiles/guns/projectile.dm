@@ -98,6 +98,10 @@
 
 	if(handle_casings != HOLD_CASINGS)
 		chambered = null
+	
+	var/mob/living/M = loc // CHOMPEdit: TGMC Ammo HUD 
+	if(istype(M)) // CHOMPEdit: TGMC Ammo HUD 
+		M?.hud_used.update_ammo_hud(M, src)
 
 
 //Attempts to load A into src, depending on the type of thing being loaded and the load_method
@@ -117,6 +121,7 @@
 				AM.loc = src
 				ammo_magazine = AM
 				user.visible_message("[user] inserts [AM] into [src].", "<span class='notice'>You insert [AM] into [src].</span>")
+				user.hud_used.update_ammo_hud(user, src)
 				playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 			if(SPEEDLOADER)
 				if(loaded.len >= max_shells)
@@ -131,8 +136,10 @@
 						loaded += C
 						AM.stored_ammo -= C //should probably go inside an ammo_magazine proc, but I guess less proc calls this way...
 						count++
+						user.hud_used.update_ammo_hud(user, src) 
 				if(count)
 					user.visible_message("[user] reloads [src].", "<span class='notice'>You load [count] round\s into [src].</span>")
+					user.hud_used.update_ammo_hud(user, src) 
 					playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		AM.update_icon()
 	else if(istype(A, /obj/item/ammo_casing))
@@ -168,6 +175,7 @@
 			sleep(1 SECOND)
 
 	update_icon()
+	user.hud_used.update_ammo_hud(user, src) 
 
 //attempts to unload src. If allow_dump is set to 0, the speedloader unloading method will be disabled
 /obj/item/weapon/gun/projectile/proc/unload_ammo(mob/user, var/allow_dump=1)
@@ -177,6 +185,7 @@
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		ammo_magazine.update_icon()
 		ammo_magazine = null
+		user.hud_used.update_ammo_hud(user, src) 
 	else if(loaded.len)
 		//presumably, if it can be speed-loaded, it can be speed-unloaded.
 		if(allow_dump && (load_method & SPEEDLOADER))
@@ -195,6 +204,7 @@
 			user.put_in_hands(C)
 			user.visible_message("[user] removes \a [C] from [src].", "<span class='notice'>You remove \a [C] from [src].</span>")
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
+		user.hud_used.update_ammo_hud(user, src) 
 	else
 		to_chat(user, "<span class='warning'>[src] is empty.</span>")
 	update_icon()
@@ -256,3 +266,53 @@
 
 	unload_ammo(usr)
 */
+
+// TGMC Ammo HUD Insertion
+/obj/item/weapon/gun/projectile/has_ammo_counter()
+	return TRUE
+
+/obj/item/weapon/gun/projectile/get_ammo_type()
+	if(load_method == MAGAZINE)
+		if(chambered) // Do we have a round chambered
+			var/obj/item/ammo_casing/A = chambered
+			var/obj/item/projectile/P = A.projectile_type
+			return list(initial(P.hud_state), initial(P.hud_state_empty))
+		else if(loaded.len && ammo_magazine && ammo_magazine.stored_ammo) // Are we loaded, have a mag, and have ammo in the mag?
+			var/obj/item/ammo_casing/A = ammo_magazine.stored_ammo[1]
+			var/obj/item/projectile/P = A.projectile_type
+			return list(initial(P.hud_state), initial(P.hud_state_empty))
+		else
+			return list("unknown", "unknown") // Safety, this shouldn't happen, but just in case
+	else if(load_method == SINGLE_CASING|SPEEDLOADER)
+		if(chambered) // Do we have a round loaded in the chamber?
+			var/obj/item/ammo_casing/A = chambered
+			var/obj/item/projectile/P = A.projectile_type
+			return list(initial(P.hud_state), initial(P.hud_state_empty)) // Return the casing's ammo hud state
+		else if(!chambered && loaded.len) // Else, is the gun loaded, but no rounds in chamber currently?
+			var/obj/item/ammo_casing/A = loaded[1]
+			var/obj/item/projectile/P = A.projectile_type
+			return list(initial(P.hud_state), initial(P.hud_state_empty)) // Return the ammunition in mag's hud_state
+		else
+			return list("unknown", "unknown") // Safety, this shouldn't happen, but just in case
+	else
+		return list("unknown", "unknown") // Failsafe if we somehow fail both methods
+
+/obj/item/weapon/gun/projectile/get_ammo_count()
+	if(load_method == MAGAZINE)
+		if(!ammo_magazine) // No magazine? Return if we have a round chambered or not
+			return chambered ? 1 : 0
+		else if(ammo_magazine) // If we have a magazine loaded, check if chambered and return either the magazine + chambered or the loaded amount
+			return chambered ? (ammo_magazine.stored_ammo.len + 1) : ammo_magazine.stored_ammo.len
+		else // Completely unloaded or code failure.
+			return 0
+	else if(load_method == SINGLE_CASING|SPEEDLOADER)
+		if(chambered && !loaded.len) // Chambered, but nothing in the magazine/internal ammo
+			return chambered ? 1: 0
+		else if(chambered && loaded.len) // Chambered + has ammo
+			return loaded.len + (chambered ? 1 : 0)
+		else if(loaded.len) // Has ammo, no round chambered
+			return loaded.len
+		else // Completely unloaded, nothing in chamber or ammo, or code failed???
+			return 0
+	else
+		CRASH("/obj/item/weapon/gun/projectile/get_ammo_count() was called from [src] but did not have a valid load_method set! Load_method set was [load_method].")

@@ -1,29 +1,6 @@
 /*
  * Shotgun
  */
-// TGMC Ammo HUD Insertion
-/obj/item/weapon/gun/projectile/shotgun/has_ammo_counter()
-	return TRUE
-
-/obj/item/weapon/gun/projectile/shotgun/get_ammo_type()
-	if(load_method == MAGAZINE)
-		if(!ammo_magazine)
-		
-	else if(load_method == SINGLE_CASING|SPEEDLOADER && loaded.len)
-		
-	else
-		return list("unknown", "unknown")
-
-/obj/item/weapon/gun/projectile/shotgun/get_ammo_count()
-	if(load_method == MAGAZINE)
-		if(!ammo_magazine)
-			return chambered ? 1 : 0
-		else
-			return chambered ? (ammo_magazine.stored_ammo + 1) : ammo_magazine.stored_ammo
-	else if(load_method == SINGLE_CASING|SPEEDLOADER)
-		if(chambered)
-	else
-		
 
 /obj/item/weapon/gun/projectile/shotgun/pump
 	name = "shotgun"
@@ -75,12 +52,14 @@
 		else
 			chambered.loc = get_turf(src) // Eject casing
 		chambered = null
+		user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD Port
 
 	// Load next shell
 	if(loaded.len)
 		var/obj/item/ammo_casing/AC = loaded[1] // Load next casing.
 		loaded -= AC // Remove casing from loaded list.
 		chambered = AC
+		user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD Port
 
 	if(pump_animation) // This affects all bolt action and shotguns.
 		flick("[pump_animation]", src) // This plays any pumping
@@ -212,6 +191,7 @@
 			burst = 2
 			user.visible_message("<span class='danger'>The shotgun goes off!</span>", "<span class='danger'>The shotgun goes off in your face!</span>")
 			Fire_userless(user)
+			user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD Port
 			burst = burstsetting
 			return
 		if(do_after(user, 30)) // SHIT IS STEALTHY EYYYYY

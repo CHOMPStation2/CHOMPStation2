@@ -32,7 +32,7 @@
 // Begin TGMC Ammo HUD Port
 /obj/screen/ammo
 	name = "ammo"
-	icon = 'icons/mob/ammoHUD.dmi'
+	icon = 'icons/mob/screen_ammo.dmi'
 	icon_state = "ammo"
 	screen_loc = ui_ammo_hud1
 	var/warned = FALSE
@@ -74,7 +74,7 @@
 
 	overlays.Cut()
 
-	var/empty = image('icons/mob/ammoHUD.dmi', src, "[hud_state_empty]")
+	var/empty = image('icons/mob/screen_ammo.dmi', src, "[hud_state_empty]")
 
 	if(rounds == 0)
 		if(warned)
@@ -91,21 +91,21 @@
 				overlays += empty
 	else
 		warned = FALSE
-		overlays += image('icons/mob/ammoHUD.dmi', src, "[hud_state]")
+		overlays += image('icons/mob/screen_ammo.dmi', src, "[hud_state]")
 
 	rounds = num2text(rounds)
 	//Handle the amount of rounds
 	switch(length(rounds))
 		if(1)
-			overlays += image('icons/mob/ammoHUD.dmi', src, "o[rounds[1]]")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "o[rounds[1]]")
 		if(2)
-			overlays += image('icons/mob/ammoHUD.dmi', src, "o[rounds[2]]")
-			overlays += image('icons/mob/ammoHUD.dmi', src, "t[rounds[1]]")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "o[rounds[2]]")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "t[rounds[1]]")
 		if(3)
-			overlays += image('icons/mob/ammoHUD.dmi', src, "o[rounds[3]]")
-			overlays += image('icons/mob/ammoHUD.dmi', src, "t[rounds[2]]")
-			overlays += image('icons/mob/ammoHUD.dmi', src, "h[rounds[1]]")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "o[rounds[3]]")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "t[rounds[2]]")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "h[rounds[1]]")
 		else //"0" is still length 1 so this means it's over 999
-			overlays += image('icons/mob/ammoHUD.dmi', src, "o9")
-			overlays += image('icons/mob/ammoHUD.dmi', src, "t9")
-			overlays += image('icons/mob/ammoHUD.dmi', src, "h9")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "o9")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "t9")
+			overlays += image('icons/mob/screen_ammo.dmi', src, "h9")
