@@ -2,10 +2,12 @@
 	range = 4
 	SA_bonus_damage = 15	// 30 total on animals
 	icon_state = "cbbolt"
+	hud_state = "taser"
 
 /obj/item/projectile/energy/phase/bolt/heavy
 	range = 4
 	SA_bonus_damage = 25	// 20 total on animals
+	hud_state = "taser"
 
 /obj/item/projectile/energy/plasma/vepr
 	name = "plasma bolt"

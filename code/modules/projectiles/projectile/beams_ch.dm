@@ -8,6 +8,7 @@
 	muzzle_type = /obj/effect/projectile/muzzle/phaser
 	tracer_type = /obj/effect/projectile/tracer/phaser
 	impact_type = /obj/effect/projectile/impact/phaser
+	hud_state = "laser_heat"
 
 
 /obj/item/projectile/beam/phaser/light
@@ -20,6 +21,7 @@
 	tracer_type = /obj/effect/projectile/tracer/phaser/light
 	impact_type = /obj/effect/projectile/impact/phaser/light
 
+
 /obj/item/projectile/beam/phaser/heavy
 	SA_bonus_damage = 55
 	icon_state = "phaser_heavy"
@@ -29,9 +31,11 @@
 	tracer_type = /obj/effect/projectile/tracer/phaser/heavy
 	impact_type = /obj/effect/projectile/impact/phaser/heavy
 
+
 /obj/item/projectile/beam/phaser/heavy/cannon
 	damage = 15
 	SA_bonus_damage = 60
+
 
 /obj/effect/projectile/tracer/phaser
 	icon = 'icons/obj/projectiles_ch.dmi'
@@ -39,6 +43,7 @@
 	light_color = "#F18F12"
 	light_range = 2
 	light_power = 0.5
+	hud_state = "laser_heat"
 
 /obj/effect/projectile/tracer/phaser/heavy
 	icon_state = "phaser_heavy_tracer"
@@ -56,6 +61,7 @@
 	light_color = "#F18F12"
 	light_range = 2
 	light_power = 0.5
+	hud_state = "laser_heat"
 
 /obj/effect/projectile/muzzle/phaser/heavy
 	icon_state = "phaser_heavy_muzzle"
@@ -73,6 +79,7 @@
 	light_color = "#F18F12"
 	light_range = 2
 	light_power = 0.5
+	hud_state = "laser_heat"
 
 /obj/effect/projectile/impact/phaser/heavy
 	icon_state = "phaser_heavy_impact"
