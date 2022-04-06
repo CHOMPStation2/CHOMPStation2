@@ -19,6 +19,13 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/wilderness)
+"ew" = (
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 1
+	},
+/obj/effect/map_effect/perma_light/concentrated/incandescent,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
 "gm" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/thor,
@@ -64,6 +71,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outside/path/wilderness)
+"ti" = (
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft,
+/area/surface/outpost/wall/checkpoint)
 "uU" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
@@ -118,13 +131,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/outside/wilderness/deep)
-"yo" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
-	},
-/obj/effect/map_effect/perma_light/concentrated/incandescent,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/wall/checkpoint)
 "zc" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep{
@@ -375,12 +381,6 @@
 /area/surface/outpost/wall/checkpoint)
 "VE" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/surface/outpost/wall/checkpoint)
-"VF" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
-	},
-/turf/simulated/shuttle/wall/voidcraft,
 /area/surface/outpost/wall/checkpoint)
 "VH" = (
 /obj/machinery/door/airlock/voidcraft{
@@ -47194,7 +47194,7 @@ Vt
 VE
 VL
 VL
-VF
+ti
 "}
 (183,1,1) = {"
 Yg
@@ -47451,7 +47451,7 @@ Vu
 VH
 Wb
 Vu
-yo
+ew
 "}
 (184,1,1) = {"
 Yg
@@ -47708,7 +47708,7 @@ Vu
 VL
 Vu
 Vu
-yo
+ew
 "}
 (185,1,1) = {"
 Yg
@@ -47965,7 +47965,7 @@ Vu
 VH
 XG
 Vu
-yo
+ew
 "}
 (186,1,1) = {"
 Yg
@@ -48222,7 +48222,7 @@ VD
 VE
 VL
 VL
-VF
+ti
 "}
 (187,1,1) = {"
 Yg
