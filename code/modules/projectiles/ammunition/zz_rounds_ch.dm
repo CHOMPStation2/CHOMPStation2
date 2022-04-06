@@ -71,17 +71,23 @@
 	desc = "A standard .50 BMG round"
 	caliber = ".50 BMG"
 	icon_state = "lcasing"
-	projectile_type = /obj/item/projectile/bullet/rifle/a50bmg
+	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
 /obj/item/ammo_casing/a50bmg/ap
 	desc = "An armor piercing .50 BMG round"
-	projectile_type = /obj/item/projectile/bullet/rifle/a50bmg/ap
+	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
 /obj/item/ammo_casing/a127x108
 	desc = "A standard 12.7x108mm round"
 	caliber = "12.7x108mm"
 	icon_state = "lcasing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a127x108
+
+/obj/item/ammo_casing/a127x108/hv
+	desc = "A high velocity 12.7x108mm round"
+	caliber = "12.7x108mm"
+	icon_state = "lcasing"
+	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
 /obj/item/ammo_casing/a9x39
 	desc = "A standard 9x39mm round"

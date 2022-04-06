@@ -1095,7 +1095,7 @@
 /obj/item/weapon/gun/projectile/automatic/c20r
 	muzzle_velocity = 285	//Based off UMP-45, since apparently this 10mm smg fires .45 ftw. May be fixed in future updates.
 	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_state = "c20r"
+	icon_state = "c20r-20"
 	icon_expected_height = 32
 	icon_expected_width = 64
 
@@ -1133,7 +1133,7 @@
 /obj/item/weapon/gun/projectile/automatic/wt550
 	muzzle_velocity = 375	//Guestimation
 	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_state = "wt550"
+	icon_state = "wt550-20"
 	icon_expected_height = 32
 	icon_expected_width = 64
 
@@ -1152,7 +1152,7 @@
 /obj/item/weapon/gun/projectile/automatic/z8
 	muzzle_velocity = 750	//Based off HK417 16 in barrel.
 	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_state = "carbine"
+	icon_state = "carbine-10"
 	icon_expected_height = 32
 	icon_expected_width = 64
 
@@ -1169,25 +1169,10 @@
 	transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw
-	bolt_name="charging handle"
+	bolt_name = "charging handle"
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 960 //Prototype PU-21(https://en.wikipedia.org/wiki/IP-2)
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_state = "l6closed100"
-	icon_expected_height = 32
-	icon_expected_width = 64
 
-/obj/item/weapon/gun/projectile/automatic/l6_saw/update_icon()
-	. = ..()
-	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
-
-/obj/item/weapon/gun/projectile/automatic/l6_saw/Initialize()
-	. = ..()
-	update_transform()
-
-/obj/item/weapon/gun/projectile/automatic/l6_saw/update_transform()
-	. = ..()
-	transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/automatic/as24
 	muzzle_velocity = 470 //Temporary, might be changed.
