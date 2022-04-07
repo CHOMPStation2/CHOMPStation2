@@ -832,6 +832,10 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library West";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "ce" = (
@@ -883,6 +887,21 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"cm" = (
+/obj/structure/closet/wardrobe/virology_white,
+/obj/effect/floor_decal/corner_techfloor_grid/full,
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 4
+	},
+/obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/clothing/mask/gas,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Airlock";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/virology)
 "cn" = (
 /obj/structure/sign/warning/lethal_turrets,
 /turf/simulated/wall/r_wall,
@@ -981,13 +1000,13 @@
 /area/ai/ai_upload)
 "cB" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Port 2";
+	c_tag = "AI - Exterior Southwest";
 	dir = 8
 	},
 /turf/simulated/open{
 	outdoors = 1
 	},
-/area/surface/outside/plains/outpost)
+/area/ai/ai_upload)
 "cD" = (
 /obj/structure/cable/cyan{
 	d1 = 2;
@@ -1040,6 +1059,10 @@
 /area/ai/ai_upload)
 "cL" = (
 /obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Upper Catwalk - Civ Rooftop";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint{
@@ -1307,6 +1330,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/storage)
+"dJ" = (
+/obj/machinery/camera/network/command{
+	c_tag = "AI - Exterior Southeast";
+	dir = 4
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/ai/ai_upload)
 "dK" = (
 /obj/structure/table/glass,
 /obj/machinery/light/no_nightshift{
@@ -1378,6 +1410,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"dX" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "dY" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
@@ -1883,6 +1934,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)
+"fc" = (
+/obj/machinery/camera/network/command{
+	c_tag = "AI - Exterior Northeast";
+	dir = 4
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/ai)
 "fd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1905,6 +1965,9 @@
 /obj/structure/marker_beacon{
 	icon_state = "markerburgundy-on";
 	picked_color = "Burgundy"
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - AI Exterior Doors"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)
@@ -2128,6 +2191,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Solitary Confinement 1";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
 "fZ" = (
@@ -2245,6 +2312,10 @@
 /area/surface/outpost/main/dorms/dorm_2)
 "gq" = (
 /obj/structure/bed/chair/comfy/black,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library Northeast";
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "gr" = (
@@ -2395,6 +2466,16 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "gP" = (
@@ -2414,6 +2495,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/storage)
+"gS" = (
+/obj/machinery/camera/network/command{
+	c_tag = "AI - Exterior Northwest";
+	dir = 8
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/ai)
 "gT" = (
 /turf/simulated/floor/reinforced{
 	outdoors = 1
@@ -2722,6 +2812,9 @@
 /area/security/brig)
 "hG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Common Brig Enterance"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/brig)
 "hH" = (
@@ -3020,6 +3113,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Cell Hallway 1";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
 "iz" = (
@@ -3100,6 +3197,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/brig)
+"iE" = (
+/obj/structure/table/rack,
+/obj/item/weapon/circuitboard/telecomms/processor,
+/obj/item/weapon/circuitboard/telecomms/processor,
+/obj/item/weapon/circuitboard/telecomms/receiver,
+/obj/item/weapon/circuitboard/telecomms/server,
+/obj/item/weapon/circuitboard/telecomms/server,
+/obj/item/weapon/circuitboard/telecomms/bus,
+/obj/item/weapon/circuitboard/telecomms/bus,
+/obj/item/weapon/circuitboard/telecomms/broadcaster,
+/obj/item/weapon/circuitboard/telecomms/exonet_node,
+/turf/simulated/floor/tiled,
+/area/tcommsat/entrance)
 "iH" = (
 /obj/machinery/flasher{
 	id = "permentryflash";
@@ -3203,6 +3313,10 @@
 	dir = 2
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Common Brig 2";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "iU" = (
@@ -3237,6 +3351,15 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/security/range)
+"ja" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "jc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3590,6 +3713,11 @@
 /turf/simulated/floor/tiled/red,
 /area/security/prison)
 "kg" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Lounge West";
+	dir = 4;
+	name = "security camera"
+	},
 /turf/simulated/floor/carpet/retro,
 /area/quartermaster/storage)
 "kh" = (
@@ -3762,6 +3890,10 @@
 "kF" = (
 /turf/simulated/wall/r_wall,
 /area/security/main)
+"kG" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled,
+/area/tcommsat/entrance)
 "kI" = (
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_5)
@@ -3827,6 +3959,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
+"kQ" = (
+/obj/machinery/status_display{
+	pixel_x = 30
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay Northeast";
+	dir = 8;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "kS" = (
 /obj/machinery/light/no_nightshift{
 	dir = 8
@@ -3979,6 +4122,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/range)
+"lm" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Warehouse South";
+	dir = 10;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/warehouse)
 "ln" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4199,6 +4352,9 @@
 	faction = "neutral";
 	name = "Cheynne"
 	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Briefing"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/main)
 "lO" = (
@@ -4403,6 +4559,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Brig Cell 1"
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/brig)
 "mo" = (
@@ -4472,6 +4631,10 @@
 /obj/structure/table/steel,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Brig Dormitories";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/prison)
 "mA" = (
@@ -4899,6 +5062,10 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Firing Range";
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/security/range)
 "nR" = (
@@ -5248,6 +5415,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/main)
+"ov" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lounge North";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "ow" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/glasses/hud/security,
@@ -5515,8 +5689,9 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/landing)
 "pb" = (
-/obj/machinery/light/no_nightshift{
-	dir = 4
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Pool Southeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer{
 	outdoors = 1
@@ -5526,18 +5701,6 @@
 /obj/item/clothing/head/utility/army,
 /turf/simulated/floor/tiled/milspec,
 /area/surface/outpost/main/landing)
-"pg" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/quartermaster/storage)
 "ph" = (
 /obj/random/tech_supply,
 /obj/random/trash_pile,
@@ -5781,6 +5944,10 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Cell Hallway 2";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
 "pP" = (
@@ -5835,6 +6002,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
+"pY" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Stairway";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "pZ" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -6157,6 +6331,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
+"qK" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay Southwest";
+	dir = 4;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "qL" = (
 /obj/effect/shuttle_landmark{
 	docking_controller = "hangar_3";
@@ -6710,6 +6898,21 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"sj" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "sk" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint{
@@ -6824,6 +7027,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Common Brig 1";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "sB" = (
@@ -6858,6 +7065,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"sG" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library Central";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/library_conference_room)
 "sI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7194,8 +7408,9 @@
 	},
 /area/surface/outpost/main/landing)
 "tG" = (
-/obj/machinery/light/no_nightshift{
-	dir = 8
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Pool West";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer{
 	outdoors = 1
@@ -7264,6 +7479,15 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/teleporter)
+"tP" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/camera/network/prison{
+	c_tag = "SEC - Brig Cell 2"
+	},
+/turf/simulated/floor/tiled/red,
+/area/security/brig)
 "tQ" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -7379,6 +7603,15 @@
 	outdoors = 1
 	},
 /area/surface/outpost/main/landing/three)
+"uf" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "ug" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -7516,6 +7749,16 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/storage)
+"uD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lounge Southeast";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "uF" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Teleporter Access";
@@ -7590,6 +7833,15 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"uO" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/light/no_nightshift{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer{
+	outdoors = 1
+	},
+/area/surface/outpost/civilian/pool)
 "uP" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/curtain/black{
@@ -7647,6 +7899,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "uV" = (
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Captain's Exit Tunnel";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/sd)
 "uW" = (
@@ -7685,10 +7941,14 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Teleporter Exterior";
+	dir = 1
+	},
 /turf/simulated/open{
 	outdoors = 1
 	},
-/area/surface/outside/plains/outpost)
+/area/bridge)
 "va" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -7718,6 +7978,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Teleporter";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/teleporter)
@@ -7943,6 +8207,19 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/sd)
+"vJ" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/yellow{
+	d2 = 0;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "vK" = (
 /obj/structure/bed/double/padded,
 /obj/machinery/light_switch{
@@ -8079,6 +8356,9 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = -32
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Captain's Office North"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
@@ -8239,6 +8519,9 @@
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 4
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge North"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "wJ" = (
@@ -8345,11 +8628,33 @@
 /area/bridge)
 "wW" = (
 /obj/structure/closet/secure_closet/personal/patient,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Northwest";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "wX" = (
 /obj/structure/table/glass,
 /obj/item/roller,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "wY" = (
@@ -8387,6 +8692,18 @@
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/extinguisher,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xe" = (
@@ -8406,6 +8723,12 @@
 	},
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/structure/table/glass,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xg" = (
@@ -8415,11 +8738,37 @@
 	pixel_x = 5;
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"xh" = (
+/obj/structure/table/standard,
+/obj/item/weapon/stock_parts/micro_laser,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/turf/simulated/floor/tiled,
+/area/tcommsat/entrance)
 "xi" = (
 /obj/machinery/disease2/isolator,
 /obj/machinery/light/no_nightshift{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -8432,6 +8781,15 @@
 /area/crew_quarters/sleep/vistor_room_9)
 "xk" = (
 /obj/machinery/computer/centrifuge,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology North"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xl" = (
@@ -8454,14 +8812,40 @@
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"xo" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay Northwest";
+	dir = 4;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "xr" = (
 /obj/machinery/disease2/diseaseanalyser,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xs" = (
 /obj/machinery/computer/diseasesplicer,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xv" = (
@@ -8471,6 +8855,12 @@
 /obj/structure/reagent_dispensers/virusfood{
 	pixel_x = 30
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xw" = (
@@ -8478,6 +8868,18 @@
 /obj/item/weapon/storage/box/cups,
 /obj/structure/cable/blue{
 	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -8497,12 +8899,34 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xA" = (
 /obj/structure/closet/secure_closet/personal/patient,
 /obj/structure/cable/blue{
 	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Northeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -8638,6 +9062,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/sd)
+"xT" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay East";
+	dir = 8;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "xU" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced,
@@ -8820,6 +9253,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
+"yt" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Warehouse North";
+	dir = 6;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/warehouse)
 "yu" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -8913,6 +9355,12 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "yD" = (
@@ -8929,7 +9377,10 @@
 	name = "Virology Isolation Room";
 	req_access = list(39)
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/virology)
 "yH" = (
 /obj/structure/cable/blue{
@@ -8943,10 +9394,19 @@
 	name = "Virology Isolation Room";
 	req_access = list(39)
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/virology)
 "yL" = (
 /obj/machinery/light/no_nightshift{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -9342,12 +9802,30 @@
 /area/bridge)
 "zP" = (
 /obj/structure/bed/double,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "zQ" = (
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -25
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -9431,6 +9909,18 @@
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/structure/cable/blue{
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -9615,6 +10105,7 @@
 /obj/item/modular_computer/console/preset/command{
 	dir = 8
 	},
+/obj/random_multi/single_item/captains_spare_id,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "AR" = (
@@ -9834,6 +10325,12 @@
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -10248,6 +10745,12 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "Cl" = (
@@ -10262,8 +10765,17 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/borderfloorblack/corner,
+/obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"Cn" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lounge Southwest";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "Cp" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
@@ -10286,10 +10798,20 @@
 	dir = 1;
 	pixel_y = -33
 	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "Ct" = (
 /obj/machinery/light/no_nightshift,
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/green/bordercorner2{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "Cu" = (
@@ -10301,6 +10823,10 @@
 	tag_exterior_door = "virology_airlock_exterior";
 	tag_interior_door = "virology_airlock_interior"
 	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/floor_decal/borderfloorblack/corner2,
+/obj/effect/floor_decal/corner/green/bordercorner2,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "Cw" = (
@@ -10347,10 +10873,18 @@
 	pixel_y = -32;
 	req_access = list(5)
 	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "CC" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Southeast";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -10381,6 +10915,12 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -10681,6 +11221,10 @@
 	},
 /obj/item/weapon/stamp/captain,
 /obj/item/weapon/pen/multi,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Captain's Office South";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "DB" = (
@@ -10794,6 +11338,10 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Southeast";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "DP" = (
@@ -10808,8 +11356,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
+"DQ" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Quartermaster Office";
+	dir = 8;
+	name = "security camera"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
 "DS" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "DT" = (
@@ -10852,6 +11414,13 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"DV" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/light/no_nightshift,
+/turf/simulated/floor/tiled/freezer{
+	outdoors = 1
+	},
+/area/surface/outpost/civilian/pool)
 "DY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11050,6 +11619,16 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro,
 /obj/item/weapon/tank/emergency/oxygen/double,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Southwest";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "Eu" = (
@@ -11058,6 +11637,12 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro,
 /obj/item/weapon/tank/emergency/oxygen/double,
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "Ew" = (
@@ -11336,6 +11921,7 @@
 /obj/effect/landmark/start{
 	name = "Colony Director"
 	},
+/obj/random_multi/single_item/captains_spare_id,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "Fa" = (
@@ -11640,6 +12226,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 4
 	},
+/obj/random_multi/single_item/captains_spare_id,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/heads/sc/sd)
 "FT" = (
@@ -11791,6 +12378,10 @@
 /area/surface/outpost/engineering/storage)
 "Gh" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Captain's Quarters";
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -11955,6 +12546,16 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"GB" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay Southeast";
+	dir = 8;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "GC" = (
 /obj/structure/closet/wardrobe/captain{
 	name = "station director's wardrobe"
@@ -11994,9 +12595,7 @@
 	},
 /obj/item/weapon/gun/projectile/revolver/cappeacekeeper{
 	ammo_type = /obj/item/ammo_casing/a44/rubber;
-	desc = "A Terran Armories TP-44 revolver that has been heavily modified. It has been decorated for personal use by the captain. Uses .44 rounds.";
-	description_fluff = null;
-	name = "decorated peacekeeper"
+	description_fluff = null
 	},
 /obj/item/ammo_magazine/s44/rubber,
 /obj/item/ammo_magazine/s44/rubber,
@@ -12216,6 +12815,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/catwalk,
+/obj/item/weapon/paper{
+	info = "Hey! Most of the base's old wiring was rotted out since htis place has been sitting so long. We're idiots and couldn't figure out how to get the wiring to work good, so we wired the engine output into the grid up here to power tcomms and the monitoring room/gyrotron. If you come up with a better solution, snap some pictures and fax it to us! Thanks. -- Lazy CC engineers";
+	name = "note from a lazy engineer"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "Hf" = (
@@ -12486,6 +13089,9 @@
 	outdoors = 1
 	},
 /area/engineering/engine_room)
+"HT" = (
+/turf/simulated/wall,
+/area/quartermaster/office)
 "HU" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/catwalk,
@@ -12618,6 +13224,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay East";
+	dir = 8;
+	name = "security camera"
+	},
 /turf/simulated/floor/carpet/retro,
 /area/quartermaster/storage)
 "Io" = (
@@ -13092,6 +13703,9 @@
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "JI" = (
@@ -13280,6 +13894,9 @@
 	icon_state = "markerindigo-on";
 	picked_color = "Teal"
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Club North"
+	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
 "Kk" = (
@@ -13439,6 +14056,10 @@
 /obj/structure/cable/green{
 	icon_state = "32-2"
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library Southeast";
+	dir = 8
+	},
 /turf/simulated/open{
 	outdoors = 1
 	},
@@ -13540,9 +14161,7 @@
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
 "KU" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall,
 /area/quartermaster/qm)
 "KV" = (
 /obj/structure/table/alien/blue{
@@ -13571,6 +14190,12 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"KY" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "QMLoad2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "KZ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -13775,6 +14400,13 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_8)
+"LE" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Club East";
+	dir = 8
+	},
+/turf/simulated/floor/carpet/deco,
+/area/surface/outpost/main/bar)
 "LG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/table/alien/blue{
@@ -14095,6 +14727,14 @@
 	outdoors = 1
 	},
 /area/crew_quarters/cafeteria)
+"Mq" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay West";
+	dir = 4;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "Mr" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/blue{
@@ -14124,6 +14764,9 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 10
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
 "Mt" = (
@@ -14138,6 +14781,10 @@
 "Mv" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/bed/chair/sofa/left/black{
+	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lounge West";
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -14217,6 +14864,10 @@
 /area/surface/outpost/main/bar)
 "MH" = (
 /obj/structure/bed/chair/sofa/right/black{
+	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lounge East";
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -14772,6 +15423,10 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 9;
+	name = "Reinforced Window Nugget"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
 "NW" = (
@@ -14954,6 +15609,15 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"Os" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Elevator Upper";
+	dir = 1;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/storage)
 "Ou" = (
 /obj/machinery/telecomms/processor/preset_one,
 /turf/simulated/floor/tiled/dark{
@@ -15110,6 +15774,13 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/outpost/main/dorms/dorm_6)
+"OT" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Club West";
+	dir = 4
+	},
+/turf/simulated/floor/carpet/deco,
+/area/surface/outpost/main/bar)
 "OU" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -15342,11 +16013,6 @@
 	},
 /area/tcommsat/chamber)
 "Px" = (
-/obj/structure/cable/cyan,
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /obj/structure/cable/cyan{
 	d2 = 4;
 	icon_state = "0-4"
@@ -15356,6 +16022,16 @@
 	dir = 4
 	},
 /obj/effect/wingrille_spawn/reinforced,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/tcommsat/chamber)
 "Pz" = (
@@ -15526,6 +16202,17 @@
 	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
+"PS" = (
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Morgue Hallway";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "PT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -15819,9 +16506,7 @@
 	},
 /area/tcommsat/chamber)
 "QF" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall,
 /area/quartermaster/warehouse)
 "QG" = (
 /obj/machinery/telecomms/server/presets/security,
@@ -16037,6 +16722,10 @@
 	d2 = 0;
 	icon_state = "0-2"
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Solars";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/medical/medical_lockerroom)
 "Rj" = (
@@ -16248,6 +16937,13 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/bmarble,
 /area/crew_quarters/sleep/vistor_room_10)
+"RQ" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Breakroom";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "RR" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -16373,8 +17069,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_lockerroom)
 "Sg" = (
-/obj/structure/table/standard,
-/obj/item/device/paicard,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_lockerroom)
@@ -16406,15 +17100,6 @@
 /area/tcommsat/entrance)
 "Sp" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/telecomms/processor,
-/obj/item/weapon/circuitboard/telecomms/processor,
-/obj/item/weapon/circuitboard/telecomms/receiver,
-/obj/item/weapon/circuitboard/telecomms/server,
-/obj/item/weapon/circuitboard/telecomms/server,
-/obj/item/weapon/circuitboard/telecomms/bus,
-/obj/item/weapon/circuitboard/telecomms/bus,
-/obj/item/weapon/circuitboard/telecomms/broadcaster,
-/obj/item/weapon/circuitboard/telecomms/exonet_node,
 /obj/machinery/camera/network/telecom{
 	c_tag = "TCOMMS - Storage"
 	},
@@ -16616,6 +17301,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV -Club South";
+	dir = 1
+	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
 "SK" = (
@@ -16679,6 +17368,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"SS" = (
+/obj/structure/bed/double,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "ST" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -16826,19 +17525,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_lockerroom)
 "Tk" = (
-/obj/structure/table/standard,
-/obj/item/weapon/stock_parts/micro_laser,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/turf/simulated/floor/tiled,
-/area/tcommsat/entrance)
+/obj/machinery/camera/network/command{
+	c_tag = "AI - Exterior North";
+	dir = 1
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/ai)
 "Tl" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -16892,6 +17586,10 @@
 	pixel_x = -32;
 	req_access = list(61);
 	uid = "telecom"
+	},
+/obj/machinery/camera/network/telecom{
+	c_tag = "TCOMMS - Exterior";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -17060,6 +17758,11 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "TO" = (
@@ -17067,6 +17770,14 @@
 /obj/item/weapon/stock_parts/subspace/amplifier,
 /obj/item/weapon/stock_parts/subspace/amplifier,
 /obj/item/weapon/stock_parts/subspace/amplifier,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "TP" = (
@@ -17076,6 +17787,14 @@
 /obj/item/weapon/stock_parts/subspace/sub_filter,
 /obj/item/weapon/stock_parts/subspace/sub_filter,
 /obj/item/weapon/stock_parts/subspace/sub_filter,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "TQ" = (
@@ -17086,6 +17805,11 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
+	},
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
@@ -17304,6 +18028,14 @@
 /obj/item/weapon/stock_parts/subspace/crystal,
 /obj/item/weapon/stock_parts/subspace/crystal,
 /obj/item/weapon/stock_parts/subspace/crystal,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "Uv" = (
@@ -18171,6 +18903,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Morgue"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/morgue)
 "WL" = (
@@ -18537,6 +19272,11 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = -32
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Warehouse Foyer";
+	dir = 1;
+	name = "security camera"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -18991,12 +19731,7 @@
 	},
 /area/surface/outpost/main/dorms/dorm_5)
 "YW" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/wall,
 /area/quartermaster/storage)
 "YX" = (
 /obj/effect/floor_decal/spline/plain{
@@ -19297,14 +20032,12 @@
 /turf/simulated/floor/bmarble,
 /area/crew_quarters/barrestroom)
 "ZN" = (
-/obj/machinery/light/no_nightshift{
-	dir = 4
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow,
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Pool Northeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer{
 	outdoors = 1
@@ -34945,8 +35678,8 @@ OO
 Px
 QJ
 QU
-So
-So
+iE
+xh
 CL
 yF
 yF
@@ -35202,8 +35935,8 @@ OQ
 Pz
 QK
 QU
-Sb
-Sb
+kG
+Tm
 CL
 CL
 CL
@@ -35460,7 +36193,7 @@ PH
 QM
 QU
 Sp
-Tk
+Tm
 TN
 Sb
 Tm
@@ -39082,9 +39815,9 @@ VH
 VH
 VH
 VH
-VH
-VH
-VH
+YW
+YW
+YW
 yF
 yF
 Xu
@@ -39598,7 +40331,7 @@ ZY
 VH
 Gl
 Yq
-VH
+YW
 yF
 yF
 OY
@@ -39840,7 +40573,7 @@ VG
 VC
 VG
 VC
-VC
+lm
 QF
 xD
 xD
@@ -39876,7 +40609,7 @@ Ei
 KM
 tr
 Tq
-KM
+sG
 KM
 KM
 KM
@@ -40112,7 +40845,7 @@ ZY
 VH
 Kb
 EV
-VH
+YW
 Xu
 xD
 xD
@@ -40348,7 +41081,7 @@ Za
 ON
 yF
 QF
-VG
+yt
 Ws
 VG
 XE
@@ -40621,12 +41354,12 @@ VH
 VH
 uC
 uC
-uC
+Os
 VH
 VH
 ln
 hz
-VH
+YW
 Xu
 xD
 xD
@@ -40861,20 +41594,20 @@ xD
 Za
 ON
 yF
-Vb
+HT
 Vb
 Vb
 WS
 WS
 YE
-Vb
-Vb
-VH
+HT
+HT
+YW
 gR
-VH
-VH
-VH
-VH
+YW
+YW
+YW
+YW
 dU
 VE
 VE
@@ -41118,7 +41851,7 @@ xD
 Za
 ON
 yF
-Vb
+HT
 VN
 Wu
 WT
@@ -41126,21 +41859,21 @@ WT
 YH
 Zs
 ZV
-VE
+xo
 VE
 GY
-VH
+YW
 Jg
-VH
-VH
+YW
+YW
 yM
 uC
 Gk
-VH
-VH
+YW
+YW
 rR
 rR
-VH
+YW
 Xu
 xD
 xD
@@ -41375,29 +42108,29 @@ xD
 Za
 ON
 yF
-Vb
+HT
 VQ
 VN
 VN
 VN
 YL
 Zu
-Vb
+HT
 CO
 Ez
 iU
-VH
+YW
 VE
-VE
+Mq
 VE
 VE
 VE
 TY
 VE
-pz
+qK
 Ul
 pz
-VH
+YW
 Xu
 xD
 xD
@@ -41632,18 +42365,18 @@ xD
 Za
 ON
 yF
-Vb
+HT
 VR
 VN
 WU
 XF
 Ww
 Zy
-Vb
+HT
 VE
 tm
 VE
-VH
+YW
 iq
 VE
 iR
@@ -41654,7 +42387,7 @@ VE
 VE
 qn
 sW
-VH
+YW
 rE
 xD
 xD
@@ -41889,14 +42622,14 @@ xD
 Za
 ON
 yF
-Vb
+HT
 VS
 Ww
 WV
 XI
-Vb
+HT
 Zz
-Vb
+HT
 Bk
 aH
 Dl
@@ -42146,7 +42879,7 @@ Bx
 fk
 ON
 yF
-Vb
+HT
 VT
 Wy
 WW
@@ -42155,7 +42888,7 @@ YM
 ZF
 ZW
 fv
-pg
+YW
 rH
 rH
 rH
@@ -42403,7 +43136,7 @@ Dq
 fW
 yF
 yF
-Vb
+HT
 VQ
 VN
 WZ
@@ -42660,12 +43393,12 @@ ON
 yF
 yF
 yF
-Vb
+HT
 VN
 VN
 Xa
 XM
-Vb
+HT
 UC
 Wj
 wY
@@ -44204,7 +44937,7 @@ ON
 KU
 Ve
 Ih
-Ih
+DQ
 Xl
 XY
 jz
@@ -44467,19 +45200,19 @@ CA
 KU
 VE
 dw
-Hu
+kQ
 va
 Lb
 VE
 HI
-VE
+KY
 Jt
 hf
 VE
 my
 Jt
 Hu
-wY
+GB
 UT
 Ya
 yF
@@ -44721,10 +45454,10 @@ yF
 yF
 yF
 yF
-VH
+YW
 gR
 GX
-VH
+YW
 NG
 mw
 ty
@@ -44733,12 +45466,12 @@ VE
 VE
 VE
 YQ
-VH
-VH
-VH
-VH
-VH
-VH
+YW
+YW
+YW
+YW
+YW
+YW
 KA
 Xu
 xD
@@ -44981,7 +45714,7 @@ yF
 Xu
 ZJ
 Vu
-VH
+YW
 eY
 Nb
 oU
@@ -44990,7 +45723,7 @@ VE
 VE
 VE
 VE
-VH
+YW
 yF
 yF
 yF
@@ -45238,16 +45971,16 @@ yF
 Xu
 ZJ
 yq
-VH
-VH
-VH
-VH
-VH
+YW
+YW
+YW
+YW
+YW
+Db
+xT
 Db
 Db
-Db
-Db
-VH
+YW
 yF
 yF
 yF
@@ -45499,12 +46232,12 @@ ON
 yF
 yF
 yF
-VH
+YW
 GQ
 GQ
 GQ
 GQ
-VH
+YW
 yF
 yF
 yF
@@ -48522,7 +49255,7 @@ EG
 EG
 fW
 fW
-VF
+fW
 xD
 ip
 xD
@@ -48570,7 +49303,7 @@ XP
 XP
 IY
 XU
-XU
+Cn
 WE
 yF
 yF
@@ -48779,7 +49512,7 @@ xD
 xD
 ON
 yF
-Xu
+VF
 xD
 ip
 xD
@@ -48816,7 +49549,7 @@ XP
 Ka
 KL
 Ly
-Rb
+OT
 Rb
 SD
 Rb
@@ -49011,7 +49744,7 @@ yF
 yF
 yF
 yF
-yF
+gS
 aa
 aa
 aa
@@ -49582,7 +50315,7 @@ ZJ
 ZJ
 Hp
 XU
-XU
+ov
 XP
 Ki
 KR
@@ -50101,7 +50834,7 @@ XP
 yg
 KV
 LN
-Rb
+LE
 Rb
 Ob
 Rb
@@ -50293,7 +51026,7 @@ yF
 yF
 yF
 yF
-yF
+Tk
 aa
 aa
 ab
@@ -50369,7 +51102,7 @@ XP
 XP
 Ue
 XU
-IZ
+uD
 WE
 yF
 yF
@@ -51581,7 +52314,7 @@ yF
 yF
 yF
 yF
-yF
+fc
 aa
 aa
 aa
@@ -51851,7 +52584,7 @@ aa
 yF
 yF
 yF
-yF
+dJ
 yF
 yF
 dM
@@ -52435,9 +53168,9 @@ Bl
 Vx
 fH
 ZP
-Vx
+uO
 Bl
-Vx
+DV
 ZP
 dK
 Vx
@@ -52695,7 +53428,7 @@ tG
 Pj
 Pj
 Pj
-tG
+Pj
 Pj
 Pj
 Pj
@@ -54746,7 +55479,7 @@ Xo
 WD
 WD
 ZN
-Pj
+Xm
 Pj
 Pj
 Pj
@@ -55260,7 +55993,7 @@ fW
 fW
 qC
 ZP
-lt
+vJ
 lt
 VJ
 VJ
@@ -55984,7 +56717,7 @@ mm
 nq
 oQ
 fn
-mm
+tP
 rK
 oQ
 fn
@@ -58565,10 +59298,10 @@ yF
 vT
 xd
 yD
-yD
+sj
 yB
 Ck
-yD
+uf
 Es
 vT
 xD
@@ -59342,7 +60075,7 @@ Ct
 vT
 Ew
 Fi
-Ew
+cm
 vT
 vT
 vT
@@ -59601,7 +60334,7 @@ Ex
 Fj
 FV
 Go
-yD
+pY
 Ha
 Ha
 vT
@@ -60109,7 +60842,7 @@ xr
 yD
 Ae
 Bm
-zQ
+ja
 vT
 Ey
 xD
@@ -60385,7 +61118,7 @@ xD
 Ns
 Oj
 Oj
-Oj
+RQ
 Ro
 Sa
 Oj
@@ -61392,7 +62125,7 @@ yF
 vT
 xz
 yD
-zQ
+dX
 vT
 yF
 yF
@@ -61418,7 +62151,7 @@ Rt
 Sg
 Ti
 TJ
-Up
+PS
 Up
 Up
 Vn
@@ -61649,7 +62382,7 @@ vo
 vW
 xA
 yL
-zP
+SS
 vT
 yF
 yF
@@ -61672,7 +62405,7 @@ Oq
 Pm
 Pm
 Pm
-Pm
+Oj
 Tj
 TL
 Us
