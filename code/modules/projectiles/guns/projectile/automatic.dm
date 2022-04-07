@@ -351,6 +351,8 @@
 	magazine_type = /obj/item/ammo_magazine/m45uzi
 	allowed_magazines = list(/obj/item/ammo_magazine/m45uzi)
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+	var/is64x32 = TRUE
+	var/is_picked_up = FALSE
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
