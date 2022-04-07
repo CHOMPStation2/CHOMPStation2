@@ -55,8 +55,8 @@
 		if(handle_casings != HOLD_CASINGS)
 			ammo_magazine.stored_ammo -= chambered
 			
-	var/mob/living/M = loc // CHOMPEdit: TGMC Ammo HUD 
-	if(istype(M)) // CHOMPEdit: TGMC Ammo HUD 
+	var/mob/living/M = loc
+	if(istype(M))
 		M?.hud_used.update_ammo_hud(M, src)
 
 	if (chambered)
@@ -103,8 +103,8 @@
 	if(handle_casings != HOLD_CASINGS)
 		chambered = null
 	
-	var/mob/living/M = loc // CHOMPEdit: TGMC Ammo HUD 
-	if(istype(M)) // CHOMPEdit: TGMC Ammo HUD 
+	var/mob/living/M = loc 
+	if(istype(M)) 
 		M?.hud_used.update_ammo_hud(M, src)
 
 
