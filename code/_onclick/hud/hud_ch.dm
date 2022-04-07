@@ -1,5 +1,6 @@
 /**
  * CHOMP-Specific HUD override. This will be backported to Polaris if they want it. 
+ * Comment this out once Polaris has it!
  */
 ///Add an ammo hud to the user informing of the ammo count of G
 /datum/hud/proc/add_ammo_hud(mob/living/user, obj/item/weapon/gun/G)
@@ -14,6 +15,8 @@
 ///Remove the ammo hud related to the gun G from the user
 /datum/hud/proc/remove_ammo_hud(mob/living/user, obj/item/weapon/gun/G)
 	var/obj/screen/ammo/ammo_hud = ammo_hud_list[G]
+	if(isnull(ammo_hud))
+		return
 	ammo_hud.remove_hud(user, G)
 	qdel(ammo_hud)
 	ammo_hud_list -= G

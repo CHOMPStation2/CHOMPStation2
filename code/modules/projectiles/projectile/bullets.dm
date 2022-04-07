@@ -13,6 +13,7 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	var/mob_passthrough_check = 0
 	hud_state = "pistol_lightap"
+	hud_state_empty = "pistol_empty"  // Just in case we somehow have no hud_state_empty defined
 
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 

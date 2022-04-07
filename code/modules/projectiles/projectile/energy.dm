@@ -9,7 +9,7 @@
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 	hitsound = 'sound/weapons/zapbang.ogg'
 	hud_state = "plasma"
-	hud_state = "battery_empty"
+	hud_state_empty = "battery_empty"
 
 	var/flash_strength = 10
 

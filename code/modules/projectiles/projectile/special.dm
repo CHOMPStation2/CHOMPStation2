@@ -10,6 +10,7 @@
 	light_power = 0.5
 	light_color = "#55AAFF"
 	hud_state = "plasma_blast"
+	hud_state_empty = "battery_empty"
 
 	combustion = FALSE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/ion
