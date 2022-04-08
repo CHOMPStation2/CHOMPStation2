@@ -937,7 +937,9 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos)
 "aFO" = (
-/obj/structure/closet/secure_closet/hos2,
+/obj/structure/closet/secure_closet/hos2{
+	starts_with = list(/obj/item/weapon/cartridge/hos,/obj/item/taperoll/police,/obj/item/weapon/shield/riot/tele,/obj/item/weapon/storage/box/holobadge/hos,/obj/item/clothing/accessory/badge/holo/hos,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/tool/crowbar/red,/obj/item/weapon/storage/box/flashbangs,/obj/item/device/flash,/obj/item/weapon/melee/baton/loaded,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/melee/telebaton,/obj/item/clothing/head/beret/sec/corporate/hos,/obj/item/clothing/suit/storage/hooded/wintercoat/security,/obj/item/clothing/shoes/boots/winter/security,/obj/item/device/flashlight/maglight)
+	},
 /obj/item/weapon/cell/device,
 /obj/item/device/holowarrant,
 /obj/item/weapon/rig/ch/pursuit,
@@ -1603,6 +1605,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
+"bgY" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Rear Entrance"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "bhg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -3505,7 +3513,12 @@
 /obj/item/weapon/gun/projectile/colt/detective,
 /obj/item/weapon/gun/projectile/colt/detective,
 /obj/item/weapon/gun/projectile/colt/detective,
-/obj/item/weapon/gun/projectile/p92x/rubber,
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "cln" = (
@@ -11890,6 +11903,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
+"gtK" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "gtL" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -12044,6 +12064,13 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/rnd/research)
+"gwL" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior 3";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "gxh" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/beige/border,
@@ -16235,6 +16262,17 @@
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/research/station)
+"iGK" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior 4";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/surface/outside/plains/outpost{
+	outdoors = -1
+	})
 "iGO" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor/border_only,
@@ -23662,6 +23700,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
+"mQG" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "mQJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -71746,7 +71791,7 @@ rLe
 rLe
 rLe
 rLe
-tgb
+iGK
 bZO
 bZO
 bZO
@@ -74568,7 +74613,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
+gwL
 aKs
 aKs
 aKs
@@ -77909,7 +77954,7 @@ lfc
 lfc
 kGW
 rLe
-rLe
+gtK
 aJX
 aJX
 buA
@@ -80753,7 +80798,7 @@ dVX
 dVX
 dVX
 rLe
-rLe
+mQG
 igA
 iMg
 juH
@@ -90290,7 +90335,7 @@ tOG
 tOG
 tOG
 tOG
-rLe
+bgY
 mCZ
 mCZ
 mCZ

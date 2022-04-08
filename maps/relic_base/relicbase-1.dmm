@@ -828,9 +828,10 @@
 /obj/item/weapon/gun/projectile/automatic/z8,
 /obj/item/weapon/gun/projectile/automatic/p90,
 /obj/item/weapon/gun/projectile/automatic/pdw,
-/obj/item/weapon/gun/projectile/serdy_pistols/ssp4,
 /obj/item/weapon/gun/projectile/serdy_pistols/vp70m,
 /obj/item/weapon/gun/projectile/shotgun/pump/combat,
+/obj/item/weapon/gun/projectile/serdy_pistols/tp23,
+/obj/item/weapon/gun/projectile/serdy_pistols/tp23,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -13744,14 +13745,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"sbG" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Tram Stairwell Lower"
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "sbI" = (
@@ -70598,7 +70591,7 @@ fKk
 aaq
 gBg
 aaq
-sbG
+gTm
 gTm
 gTm
 aaq

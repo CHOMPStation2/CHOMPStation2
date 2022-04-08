@@ -12664,19 +12664,21 @@
 "GE" = (
 /obj/random_multi/single_item/captains_spare_id,
 /obj/structure/closet/secure_closet/captains{
-	name = "station director's locker"
+	name = "station director's locker";
+	starts_with = list(/obj/item/weapon/storage/backpack/dufflebag/captain,/obj/item/clothing/head/helmet,/obj/item/clothing/suit/storage/vest,/obj/item/weapon/cartridge/captain,/obj/item/weapon/storage/lockbox/medal,/obj/item/device/radio/headset/heads/captain,/obj/item/device/radio/headset/heads/captain/alt,/obj/item/weapon/melee/telebaton,/obj/item/device/flash,/obj/item/weapon/storage/box/ids,/obj/item/weapon/melee/rapier,/obj/item/clothing/accessory/holster/machete/rapier)
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/item/weapon/gun/projectile/revolver/cappeacekeeper{
-	ammo_type = /obj/item/ammo_casing/a44/rubber;
-	description_fluff = null
+/obj/item/weapon/gun/projectile/serdy_pistols/tp23s{
+	desc = "A high end service pistol, that outclasses most of its type, due to its slick operation, ease of concealment, and its built in laser/flashlight combo, and its unusual choice of caliber. Spits some pretty nasty fireballs from the muzzle. Most often seen in the holsters of high ranking SGC, or NT officials. This one belongs to the Captain. Chambered in .44 magnum.";
+	magazine_type = /obj/item/ammo_magazine/tp23s/rubber
 	},
-/obj/item/ammo_magazine/s44/rubber,
-/obj/item/ammo_magazine/s44/rubber,
-/obj/item/ammo_magazine/s44/rubber,
-/obj/item/ammo_magazine/s44/rubber,
+/obj/item/ammo_magazine/tp23s/rubber,
+/obj/item/ammo_magazine/tp23s/rubber,
+/obj/item/ammo_magazine/tp23s/rubber,
+/obj/item/ammo_magazine/tp23s/rubber,
+/obj/item/ammo_magazine/tp23s/rubber,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "GF" = (
@@ -18886,11 +18888,6 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
-"WA" = (
-/obj/structure/table/woodentable,
-/obj/structure/table/woodentable,
-/turf/simulated/floor/carpet/oracarpet,
-/area/quartermaster/qm)
 "WB" = (
 /obj/structure/bookcase{
 	name = "bookcase (Non-Fiction)"
@@ -20114,7 +20111,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/bmarble,
@@ -44254,7 +44250,7 @@ ON
 yF
 KU
 VZ
-WA
+WC
 Xf
 XT
 KU
