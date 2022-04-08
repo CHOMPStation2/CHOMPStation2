@@ -86,17 +86,17 @@
 	path = /obj/item/ammo_magazine/akm/rubber
 
 /datum/category_item/autolathe/arms/ak74
-	name = "AK74 magazine (5.45mm standard)
+	name = "AK74 magazine (5.45mm standard)"
 	path = /obj/item/ammo_magazine/ak74
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ak74/plum
-	name = "AK74 'plum' magazine (5.45mm standard)
+	name = "AK74 'plum' magazine (5.45mm standard)"
 	path = /obj/item/ammo_magazine/ak74/plum
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ak74/plum/rubber
-	name = "AK74 'plum' magazine (5.45mm less-lethal)
+	name = "AK74 'plum' magazine (5.45mm less-lethal)"
 	path = /obj/item/ammo_magazine/ak74/plum/rubber
 	hidden = 1
 
@@ -107,7 +107,7 @@
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ak74_rubber
-	name = "AK74 magazine (5.45mm less-lethal)
+	name = "AK74 magazine (5.45mm less-lethal)"
 	path = /obj/item/ammo_magazine/ak74/rubber
 
 /datum/category_item/autolathe/arms/m16_556

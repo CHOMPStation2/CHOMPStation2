@@ -99,6 +99,7 @@
 
 /obj/item/ammo_magazine/asval/rubber
 	name = "AS-Val magazine(9x39mm less-lethal)"
+	icon_state = "asvalrubber"
 	matter = list(DEFAULT_WALL_MATERIAL = 1000)
 	ammo_type = /obj/item/ammo_casing/a9x39/rubber
 
@@ -157,6 +158,7 @@
 
 /obj/item/ammo_magazine/ak74/rubber
 	name = "AK74 magazine (5.45mm less-lethal)"
+	icon_state = "545bakerubber"
 	matter = list(DEFAULT_WALL_MATERIAL = 1200)
 	ammo_type = /obj/item/ammo_casing/a545/rubber
 
@@ -165,6 +167,7 @@
 
 /obj/item/ammo_magazine/ak74/plum/rubber
 	name = "AK74 magazine (5.45mm less-lethal)"
+	icon_state = "545plumrubber"
 	matter = list(DEFAULT_WALL_MATERIAL = 1200)
 	ammo_type = /obj/item/ammo_casing/a545/rubber
 
