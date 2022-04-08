@@ -75,6 +75,12 @@
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a44
 
+/obj/item/ammo_magazine/pitchmag/rubber
+	name = "pitchgun magazine(.44 magnum less-lethal)"
+	icon_state = "pitchrubbermag"
+	matter = list(DEFAULT_WALL_MATERIAL = 700)
+	ammo_type = /obj/item/ammo_casing/a44/rubber
+
 /obj/item/ammo_magazine/asval
 	name = "AS-Val magazine(9x39mm standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
@@ -90,6 +96,11 @@
 	name = "AS-Val magazine(9x39mm armor-piercing)"
 	matter = list(DEFAULT_WALL_MATERIAL = 1200)
 	ammo_type = /obj/item/ammo_casing/a9x39/ap
+
+/obj/item/ammo_magazine/asval/rubber
+	name = "AS-Val magazine(9x39mm less-lethal)"
+	matter = list(DEFAULT_WALL_MATERIAL = 1000)
+	ammo_type = /obj/item/ammo_casing/a9x39/rubber
 
 /obj/item/ammo_magazine/akm
 	name = "AKM magazine (7.62x39mm standard)"
@@ -112,6 +123,17 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
 	ammo_type = /obj/item/ammo_casing/a762x39/hp
 
+/obj/item/ammo_magazine/akm/rubber
+	name = "AKM magazine (7.62x39mm less-lethal)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "762rubbermag"
+	max_ammo = 30
+	mag_type = MAGAZINE
+	caliber = "7.62x39mm"
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/a762x39/rubber
+
 /obj/item/ammo_magazine/ak74
 	name = "AK74 magazine (5.45mm standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
@@ -133,8 +155,18 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 1800)
 	ammo_type = /obj/item/ammo_casing/a545/hp
 
+/obj/item/ammo_magazine/ak74/rubber
+	name = "AK74 magazine (5.45mm less-lethal)"
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	ammo_type = /obj/item/ammo_casing/a545/rubber
+
 /obj/item/ammo_magazine/ak74/plum
 	icon_state = "545plum"
+
+/obj/item/ammo_magazine/ak74/plum/rubber
+	name = "AK74 magazine (5.45mm less-lethal)"
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	ammo_type = /obj/item/ammo_casing/a545/rubber
 
 /obj/item/ammo_magazine/m16
 	name = "M16 magazine (5.56x45mm standard)"
@@ -151,6 +183,13 @@
 	name = "M16 magazine (5.56x45mm armor-piercing)"
 	matter = list(DEFAULT_WALL_MATERIAL = 1700)
 	ammo_type = /obj/item/ammo_casing/a556/ap
+
+/obj/item/ammo_magazine/m16/rubber
+	name = "M16 magazine (5.56x45mm less-lethal)"
+	icon_state = "556rubbermag"
+	matter = list(DEFAULT_WALL_MATERIAL = 1700)
+	ammo_type = /obj/item/ammo_casing/a556/rubber
+
 
 /obj/item/ammo_magazine/m16/hp
 	name = "M16 magazine (5.56x45mm hollow-point)"
@@ -173,6 +212,14 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a10x24
+
+/obj/item/ammo_magazine/m41/rubber
+	name = "M41A magazine (10x24mm standard)"
+	icon = 'icons/obj/ammo_ch.dmi'
+	icon_state = "m41rubbermag"
+	max_ammo = 40
+	matter = list(DEFAULT_WALL_MATERIAL = 7000)
+	ammo_type = /obj/item/ammo_casing/a10x24/rubber
 
 /obj/item/ammo_magazine/t12
 	name = "T-12 magazine (10x24mm standard)"
@@ -320,6 +367,12 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 3000)
 	ammo_type = /obj/item/ammo_casing/a9x39/ap
 
+/obj/item/ammo_magazine/plamya/rubber
+	name = "Plamya drum magazine(9x39mm less-lethal)"
+	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	ammo_type = /obj/item/ammo_casing/a9x39/rubber
+	icon_state = "plamyarubbermag"
+
 /obj/item/ammo_magazine/strela
 	name = "Strela magazine(12 gauge buckshot)"
 	icon = 'icons/obj/ammo_ch.dmi'
@@ -390,7 +443,7 @@
 	ammo_type = /obj/item/ammo_casing/a762x39
 
 /obj/item/ammo_magazine/rpd/ap
-	name = "PKM magazine box(7.62x39mm armor-piercing)"
+	name = "PPD Drum magazine(7.62x39mm armor-piercing)"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 	ammo_type = /obj/item/ammo_casing/a762x39/ap
 
@@ -406,7 +459,7 @@
 	ammo_type = /obj/item/ammo_casing/a762x39
 
 /obj/item/ammo_magazine/akm/drum/ap
-	name = "PKM magazine box(7.62x39mm armor-piercing)"
+	name = "RPK magazine box(7.62x39mm armor-piercing)"
 	matter = list(DEFAULT_WALL_MATERIAL = 7500)
 	ammo_type = /obj/item/ammo_casing/a762x39/ap
 
@@ -421,6 +474,12 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 400)
 	ammo_type = /obj/item/ammo_casing/a10mm
 
+/obj/item/ammo_magazine/ssp4/rubber
+	name = "SSP4 magazine(10mm standard)"
+	ammo_type = /obj/item/ammo_casing/a10mm/rubber
+	icon_state = "10mmrubbermag"
+	matter = list(DEFAULT_WALL_MATERIAL = 300)
+
 /obj/item/ammo_magazine/makarov
 	name = "Makarov magazine(9x18mm Makarov standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
@@ -432,26 +491,41 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 400)
 	ammo_type = /obj/item/ammo_casing/a9x18
 
+/obj/item/ammo_magazine/makarov/rubber
+	name = "Makarov magazine(9x18mm Makarov rubber)"
+	ammo_type = /obj/item/ammo_casing/a9x18/rubber
+	icon_state = "9mmrubbermag"
+
 /obj/item/ammo_magazine/m9mm/vp70
-	name = "VP70 magazine (18x 9x19mm standard)"
+	name = "VP70 magazine (9x19mm standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "9mmmag"
 	ammo_type = /obj/item/ammo_casing/a9mm
 	max_ammo = 18
 
 /obj/item/ammo_magazine/m9mm/vp70/ap
-	name = "VP70 magazine (18x 9x19mm armor-piercing)"
+	name = "VP70 magazine (9x19mm armor-piercing)"
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
 
 /obj/item/ammo_magazine/m9mm/vp70/hp
-	name = "VP70 magazine (18x 9x19mm hollow-point)"
+	name = "VP70 magazine (9x19mm hollow-point)"
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
+
+/obj/item/ammo_magazine/m9mm/vp70/rubber
+	name = "VP70 magazine (9x19mm rubber)"
+	ammo_type = /obj/item/ammo_casing/a9mm/rubber
+	icon_state = "9mmrubbermag"
+
+/obj/item/ammo_magazine/m9mm/vp70/flash
+	name = "VP70 magazine (9x19mm flash)"
+	ammo_type = /obj/item/ammo_casing/a9mm/flash
+	icon_state = "9mmrubbermag"
 
 /obj/item/ammo_magazine/tp23s
 	name = "TP-23 TS magazine (.44 magnum standard)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "45mag"
-	max_ammo = 12
+	max_ammo = 10
 	mag_type = MAGAZINE
 	caliber = ".44"
 	matter = list(DEFAULT_WALL_MATERIAL = 800)
@@ -471,7 +545,7 @@
 	name = "TP-23 magazine (.45 ACP)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "45mag"
-	max_ammo = 12
+	max_ammo = 14
 	mag_type = MAGAZINE
 	caliber = ".45"
 	matter = list(DEFAULT_WALL_MATERIAL = 800)
@@ -497,3 +571,26 @@
 /obj/item/ammo_magazine/tp23/emp
 	name = "TP-23 magazine (.45 ACP low-yield EMP)"
 	ammo_type = /obj/item/ammo_casing/a45/emp
+
+/obj/item/ammo_magazine/s45lc
+	name = "speedloader (.45 LC)"
+	icon = 'icons/obj/ammo.dmi'
+	icon_state = "44"
+	ammo_type = /obj/item/ammo_casing/a45lc
+	matter = list(MAT_STEEL = 1260) //metal costs are very roughly based around 1 .45 casing = 75 metal
+	caliber = ".45 LC"
+	max_ammo = 6
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/s45lc/empty
+	initial_ammo = 0
+
+/obj/item/ammo_magazine/s45lc/rubber
+	name = "speedloader (.45 LC rubber)"
+	icon_state = "R44"
+	ammo_type = /obj/item/ammo_casing/a45lc/rubber
+
+/obj/item/ammo_magazine/s45lc/rifle
+	name = "speedloader (.45 LC +P)"
+	icon_state = "RI44"
+	ammo_type = /obj/item/ammo_casing/a45lc/rifle

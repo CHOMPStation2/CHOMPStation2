@@ -46,16 +46,21 @@
 	caliber = "9x18mm"
 	projectile_type = /obj/item/projectile/bullet/a9x18
 
+/obj/item/ammo_casing/a9x18/rubber
+	desc = "A rubber 9x18mm Makarov round"
+	caliber = "9x18mm"
+	projectile_type = /obj/item/projectile/bullet/a9x18/rubber
+
 /obj/item/ammo_casing/a762x54
 	desc = "A standard 7.62x54mmR round"
 	caliber = "7.62x54mmR"
 	icon_state = "rifle-casing"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x54
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	matter = list(DEFAULT_WALL_MATERIAL = 160)
 
 /obj/item/ammo_casing/a762x54/ap
 	desc = "An armor piercing 7.62x54mmR round"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x54/ap
+	projectile_type = /obj/item/projectile/bullet/rifle/a762/ap
 
 /obj/item/ammo_casing/a338
 	desc = "A standard .338 Lapua round"
@@ -99,6 +104,10 @@
 	desc = "An armor piercing 9x39mm round"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39/ap
 
+/obj/item/ammo_casing/a9x39/rubber
+	desc = "A less-lethal 9x39mm round"
+	projectile_type = /obj/item/projectile/bullet/rifle/a9x39/rubber
+
 /obj/item/ammo_casing/a762x39
 	desc = "A standard 7.62x39mm round"
 	caliber = "7.62x39mm"
@@ -112,6 +121,14 @@
 /obj/item/ammo_casing/a762x39/hp
 	desc = "A hollow point 7.62x39mm round"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762x39/hp
+
+/obj/item/ammo_casing/a762x39/rubber
+	desc = "A less-lethal 7.62x39mm round"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39/rubber
+
+/obj/item/ammo_casing/a545/rubber
+	desc = "A 5.45mm less-lethal bullet casing."
+	projectile_type = /obj/item/projectile/bullet/rifle/a545/rubber
 
 /obj/item/ammo_casing/a556
 	desc = "A standard 5.56x45mm round"
@@ -127,8 +144,33 @@
 	desc = "A hollow point 5.56x45mm round"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556/hp
 
+/obj/item/ammo_casing/a556/rubber
+	desc = "A less-lethal 5.56x45mm round"
+	projectile_type = /obj/item/projectile/bullet/rifle/a556/rubber
+
+
 /obj/item/ammo_casing/a10x24
 	desc = "A standard 10x24mm caseless round"
 	icon_state = "rifle-casing"
 	caseless = 1
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
+
+/obj/item/ammo_casing/a10x24/rubber
+	desc = "A less-lethal 10x24mm caseless round"
+	icon_state = "rifle-casing"
+	caseless = 1
+	projectile_type = /obj/item/projectile/bullet/rifle/a10x24/rubber
+
+/obj/item/ammo_casing/a45lc
+	desc = "A long silver bullet... .45 LC stamped into the base."
+	caliber = ".45 LC"
+	icon_state = "rifle-casing"
+	projectile_type = /obj/item/projectile/bullet/rifle/a45lc
+
+/obj/item/ammo_casing/a45lc/rifle
+	desc = "A long silver bullet... +P, and .45 LC stamped into the base."
+	projectile_type = /obj/item/projectile/bullet/rifle/a45lc/rifle
+
+/obj/item/ammo_casing/a45lc/rubber
+	desc = "A long silver bullet... Has a rubber tip, and .45 LC stamped into the base."
+	projectile_type = /obj/item/projectile/bullet/rifle/a45lc/rubber

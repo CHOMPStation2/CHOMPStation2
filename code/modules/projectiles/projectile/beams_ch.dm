@@ -8,7 +8,7 @@
 	muzzle_type = /obj/effect/projectile/muzzle/phaser
 	tracer_type = /obj/effect/projectile/tracer/phaser
 	impact_type = /obj/effect/projectile/impact/phaser
-	
+
 
 /obj/item/projectile/beam/phaser/light
 	damage = 5
@@ -84,3 +84,8 @@
 	light_range = 1.5
 	light_power = 0.3
 
+/obj/effect/projectile/muzzle/vepr
+	icon_state = "vepr_muzzle"
+	light_color = "#FF6A00"
+	light_range = 3
+	light_power = 1
