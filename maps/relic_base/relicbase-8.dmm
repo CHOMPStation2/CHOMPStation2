@@ -6067,7 +6067,7 @@
 	},
 /area/skipjack_station)
 "hnw" = (
-/turf/unsimulated/floor/maglev,
+/turf/simulated/floor/maglev,
 /area/centcom/terminal)
 "hnI" = (
 /obj/structure/curtain/open/shower,
@@ -14650,7 +14650,7 @@
 /area/centcom/bar)
 "spB" = (
 /obj/effect/blocker,
-/turf/unsimulated/floor/maglev,
+/turf/simulated/floor/maglev,
 /area/centcom/terminal)
 "sqk" = (
 /obj/structure/table/rack,

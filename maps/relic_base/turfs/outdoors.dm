@@ -213,12 +213,6 @@ obj/effect/step_trigger/teleporter/planetary_fall/thor/find_planet()
 
 //placeholder stuff for transit turfs
 
-/turf/unsimulated/floor/maglev
-	name = "maglev track"
-	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
-	icon = 'icons/turf/flooring/maglevs.dmi'
-	icon_state = "maglevup"
-
 /turf/unsimulated/wall/transit
 	icon = 'icons/turf/transit_vr.dmi'
 

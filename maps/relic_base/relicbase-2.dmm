@@ -181,6 +181,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "ahf" = (
@@ -581,10 +586,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving West 2";
+	dir = 8
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/medical/cryo/autoresleeve)
 "arB" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/pink/border,
@@ -837,8 +846,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_6)
 "aBY" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - South of Hangar Pads 2";
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - South of Hangar 1";
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/dirt{
@@ -954,6 +963,11 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "aGg" = (
@@ -1062,6 +1076,15 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/library)
+"aIz" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo North 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/surface/outpost/mining_main)
 "aJo" = (
 /obj/structure/bed/chair/sofa/right/blue,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1079,6 +1102,20 @@
 "aJX" = (
 /turf/simulated/wall/r_wall,
 /area/security/armoury)
+"aKh" = (
+/obj/machinery/light/bigfloorlamp{
+	active_power_usage = 0;
+	light_color = "#FBFFBA";
+	light_on = 1;
+	on = 1;
+	use_power = 0
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo North 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/engineering/external_lights)
 "aKs" = (
 /turf/simulated/wall/r_wall,
 /area/security/security_lockerroom)
@@ -1247,6 +1284,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos)
+"aQI" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 4"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/assembly/chargebay)
 "aQS" = (
 /obj/structure/table/bench/marble,
 /turf/simulated/floor/outdoors/dirt,
@@ -1267,6 +1310,13 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos)
+"aRw" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research West 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/assembly/chargebay)
 "aSu" = (
 /obj/structure/curtain/black{
 	icon_state = "open";
@@ -1451,6 +1501,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
+"aZS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel South 3"
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/chapel/main)
 "baa" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/effect/floor_decal/borderfloorblack{
@@ -1562,6 +1620,11 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 32
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
@@ -1818,10 +1881,14 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 3";
+	dir = 1
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/crew_quarters/heads/sc/hor)
 "bmX" = (
 /obj/structure/flora/pottedplant/mysterious,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2041,6 +2108,9 @@
 /area/maintenance/substation/research)
 "bui" = (
 /obj/structure/filingcabinet,
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos)
 "buA" = (
@@ -2411,6 +2481,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
+"bEC" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - East of Departures Exterior";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/hallway/primary/seconddeck/dockhallway)
 "bEO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2515,6 +2592,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
+"bHR" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel South 2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/chapel/main)
 "bHZ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green,
@@ -2546,6 +2629,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/wood,
+/area/hallway/primary/thirddeck/stationgateway)
+"bIE" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/hallway/primary/thirddeck/stationgateway)
 "bJe" = (
 /obj/structure/cable/green{
@@ -2593,6 +2684,10 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/item/device/radio/intercom/department/security{
+	dir = 8;
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "bKJ" = (
@@ -2617,6 +2712,11 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 32
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
@@ -2659,6 +2759,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
+"bOx" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym South 2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/gym)
 "bOJ" = (
 /obj/machinery/vending/hydronutrients{
 	density = 0;
@@ -2767,6 +2873,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/server)
+"bRC" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo South 1"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/quartermaster/foyer)
 "bSc" = (
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 1
@@ -3156,6 +3268,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/item/device/radio/intercom/department/security{
+	dir = 4;
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/security_lockerroom)
@@ -4383,6 +4499,15 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/engineering/workshop)
+"cCT" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/security/evidence_storage)
 "cDy" = (
 /obj/structure/table/standard,
 /obj/structure/cable/green{
@@ -4555,6 +4680,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/main)
+"cGY" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21;
+	pixel_y = -31
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "cGZ" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 1
@@ -4985,6 +5119,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
 /area/security/warden)
+"cRI" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym South 3"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/gym)
 "cRL" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/table/steel_reinforced,
@@ -5113,6 +5253,11 @@
 /area/security/armoury)
 "cWk" = (
 /obj/structure/filingcabinet,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "cWm" = (
@@ -5237,6 +5382,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
+"cZP" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA West 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/ai_monitored/storage/eva)
 "dag" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -5373,6 +5525,10 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Medbay Hallway West 1";
 	dir = 8
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
@@ -5620,6 +5776,22 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/minoutpost/base)
+"dkV" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering North 3";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/janitor)
+"dlg" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/ai_monitored/storage/eva)
 "dlk" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -5810,6 +5982,11 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 9
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "dqf" = (
@@ -5981,6 +6158,11 @@
 /obj/machinery/light/no_nightshift{
 	dir = 4
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/security_restroom)
 "dwg" = (
@@ -6091,6 +6273,11 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
 "dyZ" = (
@@ -6170,6 +6357,13 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
+"dAU" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior West 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/security/detectives_office)
 "dBb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6294,6 +6488,15 @@
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/surface/outpost/main/landing/one)
+"dEY" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 2";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/medical/medbay_primary_storage)
 "dFn" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -6319,6 +6522,9 @@
 	pixel_y = 32
 	},
 /obj/item/weapon/flag,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen South 1"
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/crew_quarters/bar)
 "dFF" = (
@@ -6393,6 +6599,13 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/tiled/milspec,
 /area/surface/outpost/main/landing/two)
+"dGS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library North 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/library)
 "dGT" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -6431,6 +6644,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/fishing)
+"dIQ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving South 2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/cryo/autoresleeve)
 "dIU" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -6500,6 +6719,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/reception)
+"dKC" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/gym)
 "dKK" = (
 /obj/machinery/photocopier,
 /obj/machinery/firealarm{
@@ -6602,6 +6828,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
+"dNf" = (
+/obj/item/device/radio/intercom/department/medbay{
+	pixel_y = -21
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/medical/medical_lockerroom)
 "dNg" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -6702,7 +6934,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/security/armoury)
 "dOQ" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -6779,6 +7011,12 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/security_lockerroom)
+"dQw" = (
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
+	},
+/turf/simulated/floor/carpet,
+/area/security/detectives_office)
 "dQI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -6827,8 +7065,11 @@
 	dir = 4
 	},
 /obj/item/weapon/flag,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen South 2"
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/crew_quarters/bar)
 "dRy" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -6843,6 +7084,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
 	},
 /turf/simulated/floor/carpet,
 /area/security/warden)
@@ -6911,6 +7155,19 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/fishing)
+"dUs" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Disused Garage West 2";
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/garage)
 "dUV" = (
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -7177,6 +7434,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_7)
+"ebd" = (
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay West 3";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/foyer)
 "ebF" = (
 /obj/effect/floor_decal/milspec/color/white,
 /turf/simulated/floor/tiled/milspec,
@@ -7300,6 +7566,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_7)
+"efZ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen East 4";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/hydroponics)
 "egj" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
@@ -7316,6 +7591,11 @@
 	},
 /obj/effect/floor_decal/corner/yellow/bordercorner2{
 	dir = 9
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
@@ -7390,6 +7670,10 @@
 	},
 /obj/effect/floor_decal/borderfloorblack/corner2,
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "eiL" = (
@@ -7420,6 +7704,9 @@
 /area/ai_monitored/storage/eva)
 "eiY" = (
 /obj/structure/table/standard,
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/security_restroom)
 "eiZ" = (
@@ -7484,6 +7771,28 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/security_restroom)
+"ekO" = (
+/obj/structure/cable/pink{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym North 3";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/gym)
 "eli" = (
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
@@ -7545,6 +7854,19 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/wood,
 /area/library)
+"elK" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/item/device/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/security/evidence_storage)
 "emA" = (
 /obj/structure/closet/wardrobe/red,
 /obj/item/clothing/accessory/badge/holo,
@@ -7592,7 +7914,19 @@
 	c_tag = "CIV - Gym Southwest";
 	dir = 4
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/main/gym)
+"emZ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outpost/main/gym)
 "end" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7741,6 +8075,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/warden)
+"eqp" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior North";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/security/security_restroom)
 "eqz" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -8038,6 +8379,10 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/item/device/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/evidence_storage)
 "evF" = (
@@ -8255,8 +8600,11 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering South 2"
+	},
 /turf/simulated/floor/outdoors/dirt,
-/area/surface/outside/path/plains)
+/area/engineering/foyer)
 "eBJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_mining{
@@ -8706,6 +9054,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"eOh" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel North 4";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/chapel/main)
 "eOK" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -9093,6 +9448,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
+"eVD" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/dark,
+/area/storage/primary)
 "eVE" = (
 /obj/machinery/computer/secure_data,
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -9592,6 +9961,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
+"ffN" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - IAA South 1"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/lawoffice)
 "fgb" = (
 /obj/machinery/door/airlock/glass_mining{
 	id_tag = "cargodoor";
@@ -10260,6 +10635,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/main/landing/one)
+"fys" = (
+/obj/structure/closet/coffin,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel North 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/chapel/office)
 "fyD" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -10284,6 +10667,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
+"fyK" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 2"
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/assembly/chargebay)
 "fzq" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/eastright{
@@ -10323,6 +10714,14 @@
 /obj/structure/sign/nanotrasen,
 /turf/simulated/wall/rplastihull,
 /area/surface/outpost/main/landing/one)
+"fzE" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/security/lobby)
 "fzT" = (
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/hologram/holopad,
@@ -10556,8 +10955,29 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Locker Room"
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_lockerroom)
+"fFX" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Holodeck West 2";
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/holodeck_control)
 "fGs" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -10746,6 +11166,14 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"fMg" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering External Lights South"
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/engineering/external_lights)
 "fMk" = (
 /obj/machinery/mineral/stacking_unit_console,
 /turf/simulated/wall/r_wall,
@@ -10960,8 +11388,19 @@
 /obj/effect/floor_decal/borderfloorblack/corner2,
 /obj/effect/floor_decal/corner/red/bordercorner2,
 /obj/machinery/light/no_nightshift,
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
+"fTa" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - IAA East";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/lawoffice)
 "fTb" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
@@ -11016,6 +11455,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
@@ -11111,6 +11553,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_lockerroom)
+"fWl" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen West 2";
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/crew_quarters/kitchen)
 "fWF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -11128,10 +11584,14 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Apartments Substation West";
+	dir = 8
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/plains/outpost)
+/area/maintenance/substation/civilian)
 "fYj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -11153,6 +11613,10 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 4
+	},
+/obj/item/device/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
@@ -11316,6 +11780,10 @@
 /obj/effect/floor_decal/corner/beige/border,
 /obj/effect/floor_decal/borderfloorblack/corner2,
 /obj/effect/floor_decal/corner/beige/bordercorner2,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/hallway)
 "gam" = (
@@ -11403,8 +11871,11 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo South 1"
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/hallway/secondary/cryostorage_hallway)
 "gcJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/bed/chair/office/dark,
@@ -11420,6 +11891,11 @@
 /obj/machinery/camera/network/command{
 	c_tag = "COM - EVA Central";
 	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
@@ -11556,6 +12032,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
+"ghb" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Command East 2";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/crew_quarters/heads/sc/hop)
 "ghg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -11572,6 +12057,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
+"giJ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay East 3";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/medical/medical_restroom)
 "giN" = (
 /obj/machinery/door/airlock/glass_security{
 	id_tag = "BrigFoyer";
@@ -11909,7 +12401,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/security/armoury)
 "gtL" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -12047,6 +12539,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
+"gwc" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/library)
 "gwl" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/cable{
@@ -12070,7 +12569,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/security/security_lockerroom)
 "gxh" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/beige/border,
@@ -12204,6 +12703,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
+"gBl" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 3"
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/assembly/chargebay)
 "gBo" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -12220,6 +12727,13 @@
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
+"gCb" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/psych)
 "gCB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
@@ -12274,6 +12788,10 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - IAA North 1";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
 	},
@@ -12326,6 +12844,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
+"gEs" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay West 6";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/engineering/external_lights)
 "gEU" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/photo_album{
@@ -12351,6 +12879,11 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -12391,6 +12924,13 @@
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
+"gGq" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym West 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/gym)
 "gGs" = (
 /obj/machinery/light/bigfloorlamp{
 	active_power_usage = 0;
@@ -12465,6 +13005,32 @@
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
+"gJp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
+"gJM" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec South 6"
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/maintenance/substation/security)
 "gJQ" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -12645,6 +13211,15 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
+/area/medical/foyer)
+"gNU" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 7";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/medical/foyer)
 "gNW" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -12997,6 +13572,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/security_processing)
+"gYF" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec East 3";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/security/security_lockerroom)
 "gYQ" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -13094,6 +13676,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
+"haV" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering North 5";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/engineering/engi_restroom)
 "hbc" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
@@ -13420,6 +14009,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
+"hls" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 5";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/medical/medbay_emt_bay)
 "hmu" = (
 /turf/simulated/wall,
 /area/medical/patient_a)
@@ -13771,6 +14367,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
+"hsP" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 9";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/rnd/research)
 "hsW" = (
 /obj/structure/cable/pink{
 	icon_state = "1-2"
@@ -13783,6 +14386,18 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"htb" = (
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - IAA North 2";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/lawoffice)
 "htw" = (
 /obj/item/modular_computer/console/preset/security{
 	dir = 8
@@ -13899,6 +14514,16 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/expoutpost/station)
+"hwi" = (
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo East 1";
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/mining_main/refinery)
 "hwo" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -14933,6 +15558,16 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/main/landing/one)
+"hXm" = (
+/obj/item/device/radio/intercom{
+	broadcasting = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/surface/outside/path/plains)
 "hXo" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -15098,6 +15733,22 @@
 /obj/item/weapon/storage/box/donkpockets,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_8)
+"iaD" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library East 2";
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/library)
 "iaO" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/substation/security)
@@ -15224,6 +15875,15 @@
 	outdoors = 1
 	},
 /area/surface/outpost/civilian/emergency_storage)
+"idG" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Tool Storage East";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/storage/primary)
 "ieh" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -15295,6 +15955,11 @@
 	},
 /obj/machinery/light/no_nightshift{
 	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
@@ -15576,6 +16241,11 @@
 /obj/machinery/firealarm{
 	pixel_y = -32
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_7)
 "iov" = (
@@ -15804,6 +16474,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
+"ivq" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering North 6";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/engineering/foyer)
 "ivu" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -16270,9 +16949,7 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = -1
 	},
-/area/surface/outside/plains/outpost{
-	outdoors = -1
-	})
+/area/security/security_restroom)
 "iGO" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor/border_only,
@@ -16546,6 +17223,28 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
+"iNh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Apartments Substation North";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/maintenance/substation/civilian)
 "iNE" = (
 /obj/item/clothing/under/solgov/pt/army,
 /obj/machinery/light_construct/floortube{
@@ -16572,6 +17271,13 @@
 /obj/structure/sign/warning/server_room,
 /turf/simulated/wall/r_wall,
 /area/server)
+"iOZ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo East 3";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/quartermaster/foyer)
 "iPb" = (
 /obj/structure/prop/rock/small/water,
 /turf/simulated/floor/water,
@@ -16608,6 +17314,11 @@
 /area/maintenance/substation/command)
 "iQt" = (
 /obj/structure/dogbed,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/hop/quarters)
 "iQu" = (
@@ -17105,6 +17816,12 @@
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"jcL" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library South 2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/library)
 "jcZ" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -17121,6 +17838,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
+"jdu" = (
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/surface/outpost/mining_main)
 "jdD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -17433,6 +18155,13 @@
 /obj/item/weapon/flag,
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
+"jrg" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library East 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/library)
 "jrn" = (
 /mob/living/simple_mob/animal/passive/cat/black,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -17468,6 +18197,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/primary/thirddeck/stationgateway)
+"jtY" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering West 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/engineering/atmos)
 "jul" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17698,8 +18434,12 @@
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Command East 3";
+	dir = 4
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/crew_quarters/heads/sc/hop)
 "jBd" = (
 /obj/structure/window/reinforced,
 /obj/structure/closet/walllocker_double{
@@ -17842,6 +18582,12 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
+"jEG" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 5"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/assembly/robotics)
 "jFA" = (
 /turf/simulated/floor/tiled/dark,
 /area/storage/primary)
@@ -18272,6 +19018,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
+"jPU" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/rnd/research)
 "jQf" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/computer/security/telescreen/entertainment,
@@ -18293,10 +19046,40 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/heads/sc/chief)
+"jQs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "jQH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/bcarpet,
 /area/chapel/office)
+"jQQ" = (
+/obj/structure/table/marble,
+/obj/random/drinkbottle,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/bar)
 "jQV" = (
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/outdoors/dirt,
@@ -18413,6 +19196,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/thor/planetuse,
 /area/surface/outside/path/plains)
+"jUb" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/ai_monitored/storage/eva)
 "jUg" = (
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Command Substation Bypass"
@@ -18492,6 +19282,12 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/hop)
+"jUY" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo South 3"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/mining_main)
 "jVj" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -18507,6 +19303,12 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/hop)
+"jVM" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 8"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/server)
 "jVP" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/dirt,
@@ -18607,6 +19409,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
+"jZn" = (
+/obj/machinery/light/bigfloorlamp{
+	active_power_usage = 0;
+	light_color = "#FBFFBA";
+	light_on = 1;
+	on = 1;
+	use_power = 0
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/engineering/external_lights)
 "jZt" = (
 /obj/structure/sign/directions/stairs_down{
 	dir = 9
@@ -18978,10 +19794,14 @@
 	icon_state = "markerburgundy-on";
 	picked_color = "Burgundy"
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - West of Departures Exterior";
+	dir = 8
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/plains/outpost)
+/area/hallway/primary/seconddeck/dockhallway)
 "klm" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/microwave{
@@ -18991,6 +19811,11 @@
 /obj/machinery/light/small,
 /obj/machinery/firealarm{
 	pixel_y = -32
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_10)
@@ -19260,8 +20085,11 @@
 /area/surface/outside/path/plains)
 "krB" = (
 /mob/living/simple_mob/animal/passive/raccoon_ch,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 7"
+	},
 /turf/simulated/floor/outdoors/dirt,
-/area/surface/outside/path/plains)
+/area/rnd/misc_lab)
 "krF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -19569,6 +20397,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/security/lobby)
+"kzH" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel East 2";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/chapel/main)
 "kzR" = (
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
@@ -19818,6 +20655,14 @@
 /obj/machinery/mecha_part_fabricator,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
+"kEX" = (
+/obj/structure/closet/grave/dirthole,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel West";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/chapel/office)
 "kFf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -19831,6 +20676,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
+"kFl" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo East 1";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/hallway/primary/thirddeck/stationgateway)
 "kFB" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -20030,12 +20885,40 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
+"kNj" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/path/plains)
 "kNJ" = (
 /mob/living/simple_mob/animal/passive/armadillo,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/plains)
 "kOR" = (
 /obj/machinery/computer/timeclock/premade/north,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/foyer)
 "kOW" = (
@@ -20387,6 +21270,35 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
+"kXH" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Pathway 4";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/dorms/dorm_10)
+"kXJ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Holodeck West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/holodeck_control)
 "kXN" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/fancy/markers,
@@ -20473,6 +21385,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
+"lbA" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving North 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/cryo/autoresleeve)
 "lbE" = (
 /obj/machinery/light/bigfloorlamp{
 	active_power_usage = 0;
@@ -20516,6 +21435,28 @@
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/engineering/workshop)
+"ldx" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Pathway 1";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/dorms/dorm_9)
 "lej" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
@@ -20666,10 +21607,14 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo East 2";
+	dir = 4
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/plains/outpost)
+/area/maintenance/substation/firstdeck/cargo)
 "lgS" = (
 /turf/simulated/floor/tiled/dark,
 /area/holodeck_control)
@@ -20840,6 +21785,10 @@
 /obj/structure/cable/blue{
 	icon_state = "2-4"
 	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "ljq" = (
@@ -20863,6 +21812,11 @@
 /area/bridge)
 "llj" = (
 /obj/machinery/papershredder,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/hop)
 "lln" = (
@@ -21127,6 +22081,11 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
@@ -21474,6 +22433,28 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/plains)
+"lBs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen North 2";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/crew_quarters/kitchen)
 "lBR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21589,6 +22570,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/primary/thirddeck/stationgateway)
+"lFn" = (
+/obj/structure/flora/ausbushes/grassybush{
+	opacity = 1
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Disused Garage East";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/garage)
+"lFo" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/crew_quarters/bar)
 "lFI" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -21895,6 +22893,10 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "lPm" = (
@@ -21967,6 +22969,13 @@
 /area/surface/outside/plains/outpost{
 	outdoors = -1
 	})
+"lQq" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo East 3";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/mining_main)
 "lQU" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
@@ -22192,6 +23201,14 @@
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"lZv" = (
+/obj/random/trash_pile,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo East 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/quartermaster/delivery)
 "lZA" = (
 /obj/machinery/computer/timeclock/premade/north,
 /obj/structure/closet/wardrobe/grey,
@@ -22208,6 +23225,11 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 32
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
@@ -22236,6 +23258,11 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
 	},
+/obj/item/device/radio/intercom{
+	broadcasting = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/dark,
 /area/storage/primary)
 "mam" = (
@@ -22248,10 +23275,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym North 4";
+	dir = 1
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/gym)
 "mbh" = (
 /obj/structure/flora/pottedplant/orientaltree,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -22295,6 +23326,16 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/hop)
+"mda" = (
+/obj/structure/flora/tree/jungle_small{
+	icon_state = "tree4"
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo West 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/hallway/primary/thirddeck/stationgateway)
 "mdI" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -22349,6 +23390,23 @@
 /obj/structure/closet/wardrobe/suit,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/stationgateway)
+"meT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research East 3";
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/rnd/research_restroom_sc)
 "mfn" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -22484,8 +23542,12 @@
 	name = "\improper SGC Marine Corps plaque";
 	pixel_y = -32
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - South of Hangar 4";
+	dir = 1
+	},
 /turf/simulated/floor/outdoors/dirt,
-/area/surface/outside/path/plains)
+/area/surface/outpost/main/garage)
 "mjH" = (
 /obj/effect/floor_decal/rust/color_rusted{
 	dir = 4;
@@ -22499,6 +23561,11 @@
 	dir = 4;
 	pixel_y = -32;
 	pixel_z = 8
+	},
+/obj/item/device/radio/intercom{
+	broadcasting = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
@@ -22582,8 +23649,8 @@
 	pixel_x = -6;
 	pixel_y = -22
 	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - South of Hangar Pads 1";
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - South of Hangar 2";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty{
@@ -22601,6 +23668,26 @@
 	outdoors = 1
 	},
 /area/surface/outpost/main/garage)
+"mms" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Apartments Substation East";
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/maintenance/substation/civilian)
+"mmt" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel North 3";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/chapel/main)
 "mmx" = (
 /obj/structure/sign/directions/evac{
 	dir = 4;
@@ -22813,8 +23900,12 @@
 	icon_state = "markerburgundy-on";
 	picked_color = "Burgundy"
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - West of Departures Exterior 2";
+	dir = 8
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/hallway/primary/seconddeck/dockhallway)
 "mtT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -22882,6 +23973,15 @@
 	},
 /turf/simulated/floor/carpet,
 /area/library)
+"mvX" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 6";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/medical/reception)
 "mwb" = (
 /obj/machinery/vending/cola{
 	dir = 8
@@ -22895,6 +23995,15 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/engineering/external_lights)
+"mwm" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Command North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/crew_quarters/heads/sc/hop/quarters)
 "mwt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -23115,6 +24224,14 @@
 	outdoors = -1
 	},
 /area/surface/outside/plains/outpost)
+"mDs" = (
+/obj/item/device/radio/intercom{
+	broadcasting = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/hallway/primary/seconddeck/dockhallway)
 "mDJ" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -23287,6 +24404,13 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
+"mFL" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/ai_monitored/storage/eva)
 "mFR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -23500,8 +24624,11 @@
 	dir = 4
 	},
 /obj/structure/flora/pottedplant/orientaltree,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec South 2"
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/security/lobby)
 "mLR" = (
 /obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/tiled/dark,
@@ -23528,8 +24655,11 @@
 	dir = 8
 	},
 /obj/structure/flora/pottedplant/orientaltree,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec South 3"
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/security/lobby)
 "mMt" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -23706,7 +24836,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/maintenance/substation/command)
 "mQJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -23771,6 +24901,17 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/bmarble,
 /area/medical/psych)
+"mRG" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering North";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "mRL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/disposalpipe/segment{
@@ -23893,6 +25034,16 @@
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"mUB" = (
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/path/plains)
 "mUE" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/reinforced,
@@ -23927,6 +25078,20 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"mVF" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - South of Hangar 3";
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	broadcasting = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outpost/main/garage)
 "mWc" = (
 /obj/machinery/computer/timeclock/premade/north,
 /obj/machinery/light{
@@ -24446,6 +25611,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
+"nji" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/chapel/main)
 "nju" = (
 /obj/effect/floor_decal/stairs/dark_stairs,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -24506,6 +25678,12 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/dorms/dorm_5)
+"nmg" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay South 4"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/surgery)
 "nmh" = (
 /obj/structure/sign/directions/evac{
 	dir = 4;
@@ -24623,6 +25801,12 @@
 "npz" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/heads/sc/cmo/quarters)
+"nqs" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo South 2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/quartermaster/delivery)
 "nrv" = (
 /obj/structure/closet,
 /obj/effect/floor_decal/rust/color_rusted{
@@ -24677,6 +25861,11 @@
 /area/surface/outpost/main/garage)
 "nsv" = (
 /obj/structure/bookcase/bookcart,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/carpet,
 /area/library)
 "nsV" = (
@@ -24687,6 +25876,21 @@
 /obj/machinery/mineral/unloading_machine,
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/refinery)
+"ntd" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 9"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/rnd/workshop)
+"ntn" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/maintenance/substation/research)
 "ntu" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical{
@@ -24750,6 +25954,24 @@
 /obj/effect/floor_decal/rust/steel_decals_rusted1,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
+"nug" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay South 5"
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/medical/surgery2)
 "nur" = (
 /obj/machinery/light/bigfloorlamp,
 /obj/machinery/status_display{
@@ -24861,6 +26083,15 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
+"nyZ" = (
+/obj/structure/flora/ausbushes/grassybush{
+	opacity = 1
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay South 3"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/patient_b)
 "nzj" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -25181,8 +26412,12 @@
 	pixel_x = 32;
 	pixel_y = 36
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo West 1";
+	dir = 8
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/hallway/secondary/cryostorage_hallway)
 "nLa" = (
 /obj/effect/floor_decal/emblem/nt2,
 /turf/simulated/floor/tiled/steel_dirty{
@@ -25316,6 +26551,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "nOo" = (
@@ -25379,6 +26618,10 @@
 /area/crew_quarters/heads/sc/cmo/quarters)
 "nPj" = (
 /obj/structure/table/standard,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
 "nPs" = (
@@ -25421,12 +26664,34 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
+"nQq" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel East 1";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/chapel/main)
 "nQA" = (
 /obj/structure/old_roboprinter,
 /obj/effect/floor_decal/rust/color_rusted{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
+"nQK" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Disused Garage West 1";
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
 /area/surface/outpost/main/garage)
 "nQV" = (
 /obj/effect/floor_decal/rust,
@@ -25586,6 +26851,15 @@
 	},
 /turf/simulated/floor/water,
 /area/surface/outside/plains/outpost)
+"nWk" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo North 4";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/surface/outpost/mining_main/refinery)
 "nWX" = (
 /obj/turbolift_map_holder/southern_cross/port,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -25687,6 +26961,20 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/refinery)
+"nYY" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay South 6"
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/medical/psych)
 "oal" = (
 /obj/structure/table/standard,
 /obj/item/weapon/surgical/bioregen,
@@ -25836,6 +27124,22 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass/heavy/randomgen,
 /area/surface/outside/plains/outpost)
+"ohz" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/rust,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving West 1";
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/medical/cryo/autoresleeve)
 "ohU" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -25938,6 +27242,25 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
+"onl" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym North 1";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/gym)
 "onK" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -25974,6 +27297,14 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
+"opW" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 1"
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/rnd/research_foyer)
 "oqK" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -25983,6 +27314,10 @@
 /obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -25997,6 +27332,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/emergency_storage)
+"osm" = (
+/obj/item/device/radio/intercom{
+	broadcasting = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/surface/outside/plains/outpost)
 "osC" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/bmarble,
@@ -26138,6 +27483,23 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
+"oxO" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "oxT" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -26318,6 +27680,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
+"oFB" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/medical_restroom)
 "oFD" = (
 /obj/item/weapon/tool/screwdriver,
 /obj/effect/floor_decal/milspec/color/black,
@@ -26435,6 +27804,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
+"oKG" = (
+/obj/machinery/light/small,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge)
 "oKH" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
@@ -27107,6 +28484,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
+"pas" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Disused Garage South 3"
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/garage)
 "pax" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -27395,10 +28784,13 @@
 /area/surface/outside/plains/outpost)
 "pjq" = (
 /obj/structure/reagent_dispensers/fueltank,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 6"
+	},
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/assembly/robotics)
 "pkd" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
@@ -27561,6 +28953,11 @@
 /obj/machinery/light_switch{
 	pixel_x = 11;
 	pixel_y = 24
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
@@ -27931,11 +29328,24 @@
 "pvB" = (
 /turf/simulated/wall,
 /area/medical/medbay_emt_bay)
+"pvD" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo West 3";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/hallway/primary/thirddeck/stationgateway)
 "pvV" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/medical/medbay_primary_storage)
+"pwi" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research South 10"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/rnd/research)
 "pwo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical{
@@ -28048,6 +29458,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/biostorage)
+"pym" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Tool Storage West";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/storage/primary)
 "pyQ" = (
 /turf/simulated/wall,
 /area/maintenance/substation/civilian)
@@ -28058,6 +29477,28 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/dorms/dorm_2)
+"pzq" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Pathway 2";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/dorms/dorm_8)
 "pzx" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -28082,8 +29523,25 @@
 	req_one_access = list(47);
 	tag_door = "rsr_base_door"
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 8";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research)
+"pzX" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Pathway 3";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outpost/main/dorms/dorm_7)
 "pAh" = (
 /obj/machinery/door/airlock/command{
 	id_tag = "cmoquarters";
@@ -28176,6 +29634,10 @@
 /area/surface/outside/plains/outpost)
 "pDb" = (
 /obj/machinery/iv_drip,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/medical/surgery_storage)
 "pDi" = (
@@ -28231,6 +29693,11 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
@@ -28377,6 +29844,13 @@
 /obj/item/clothing/mask/gas/wwii,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
+"pJG" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen West 3";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/crew_quarters/kitchen)
 "pKl" = (
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment{
@@ -28783,6 +30257,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/hallway)
+"pSB" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering South"
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/engineering/workshop)
 "pSJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/photocopier/faxmachine{
@@ -28815,16 +30297,35 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen West 4";
+	dir = 8
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/crew_quarters/kitchen)
+"pTh" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/cryo/autoresleeve)
 "pTX" = (
 /obj/structure/table/reinforced,
 /obj/item/device/flashlight/lamp,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/lawoffice)
+"pUj" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outside/path/plains)
 "pUl" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
@@ -28865,10 +30366,14 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen East 1";
+	dir = 4
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/crew_quarters/kitchen)
 "pUV" = (
 /obj/structure/cable/heavyduty{
 	d2 = 0;
@@ -29047,6 +30552,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/medbay_emt_bay)
+"pYu" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 3";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/medical/medbay_primary_storage)
 "pYz" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/warning,
@@ -29284,6 +30798,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 10
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
@@ -29598,6 +31116,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "qhr" = (
@@ -29802,6 +31324,13 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/outpost/mining_main)
+"qmq" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo North 3";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/mining_main)
 "qmu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -29866,6 +31395,10 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/heads/sc/cmo)
@@ -30323,6 +31856,11 @@
 /obj/machinery/firealarm{
 	pixel_y = -32
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_9)
 "qEE" = (
@@ -30407,6 +31945,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
+"qHv" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA South"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/ai_monitored/storage/eva)
 "qHA" = (
 /obj/structure/catwalk,
 /obj/structure/extinguisher_cabinet{
@@ -30667,6 +32211,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+"qPa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 4";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/crew_quarters/heads/sc/hor)
 "qPb" = (
 /obj/structure/cable/yellow{
 	dir = 1
@@ -30699,6 +32262,13 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
+"qPm" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering North 4";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/engineering/locker_room)
 "qPL" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -30825,6 +32395,15 @@
 "qSY" = (
 /turf/simulated/wall,
 /area/medical/foyer)
+"qTL" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/crew_quarters/heads/sc/hos)
 "qUg" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
@@ -30883,6 +32462,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
+"qVu" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec South"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/security/detectives_office)
 "qVA" = (
 /obj/structure/table/marble,
 /obj/item/weapon/book/manual/chef_recipes,
@@ -31005,6 +32591,13 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
+"qYW" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Command East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/crew_quarters/heads/sc/hop/quarters)
 "qZm" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/regular{
@@ -31264,6 +32857,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"rek" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - South of Departures Exterior"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/hallway/primary/seconddeck/dockhallway)
 "reM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -31621,6 +33220,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
+"ror" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/ai_monitored/storage/eva)
 "roS" = (
 /obj/structure/showcase/sign/nt,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -31821,6 +33427,10 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 10
 	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "rry" = (
@@ -31856,6 +33466,15 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
+"rsi" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 7";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/rnd/research_foyer)
 "rsw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -31968,6 +33587,11 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Internal Affairs";
 	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
@@ -32258,6 +33882,15 @@
 "rCV" = (
 /turf/simulated/floor/bmarble,
 /area/chapel/main)
+"rDh" = (
+/obj/machinery/camera/network/security{
+	c_tag = "COM - Exterior West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/maintenance/substation/command)
 "rDp" = (
 /obj/machinery/atmospherics/pipe/tank/nitrous_oxide{
 	dir = 8
@@ -32532,6 +34165,12 @@
 "rLe" = (
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"rLt" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving South 1"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/cryo/autoresleeve)
 "rLw" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -32720,6 +34359,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/holodeck_control)
+"rPY" = (
+/obj/random/obstruction,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Disused Garage South 2"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/garage)
 "rQa" = (
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -32780,6 +34426,15 @@
 "rRR" = (
 /turf/simulated/floor,
 /area/surface/outpost/civilian/fishing)
+"rRT" = (
+/obj/structure/flora/tree/jungle_small{
+	icon_state = "tree4"
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec South 5"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/security/security_hallway)
 "rSf" = (
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
@@ -32893,6 +34548,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medbay_emt_bay)
+"rWS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - North of Departures Exterior";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/hallway/primary/seconddeck/dockhallway)
 "rXg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -33270,6 +34932,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_7)
+"sid" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering West 4";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/engineering/hallway/engineer_hallway)
 "sio" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -33285,6 +34956,16 @@
 /obj/effect/step_trigger/teleporter/bridge/north_to_south,
 /turf/simulated/floor/water,
 /area/surface/outside/plains/outpost)
+"sju" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/path/plains)
 "sjx" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -33348,6 +35029,13 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/heads/sc/cmo)
+"skU" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outside/plains/outpost)
 "slp" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin,
@@ -33373,6 +35061,14 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/heads/sc/cmo)
+"slt" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/wood,
+/area/chapel/main)
 "slM" = (
 /obj/effect/floor_decal/borderfloorblack/corner2{
 	dir = 4
@@ -33471,6 +35167,14 @@
 "snH" = (
 /turf/simulated/wall,
 /area/medical/cryo)
+"soa" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/cryo/autoresleeve)
 "sog" = (
 /obj/machinery/light/no_nightshift{
 	dir = 1
@@ -33561,12 +35265,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
+"sqg" = (
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/security/security_lockerroom)
 "sqo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/beige/border,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "sqs" = (
@@ -33578,6 +35292,13 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/outpost/mining_main/refinery)
+"sqE" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay East 5";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/crew_quarters/heads/sc/cmo/quarters)
 "sqF" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -33660,6 +35381,23 @@
 	},
 /turf/simulated/floor,
 /area/surface/outpost/civilian/fishing)
+"stn" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/path/plains)
 "stq" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4;
@@ -33890,6 +35628,15 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/engineering/engi_restroom)
+"szq" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Tool Storage North";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/storage/primary)
 "szz" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/tiled/old_tile/white,
@@ -34101,6 +35848,10 @@
 /obj/effect/floor_decal/corner/beige/border,
 /obj/effect/floor_decal/borderfloorblack/corner2,
 /obj/effect/floor_decal/corner/beige/bordercorner2,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "sEn" = (
@@ -34191,6 +35942,12 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+"sHd" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym South 1"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/gym)
 "sHu" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -34356,6 +36113,11 @@
 /obj/machinery/firealarm{
 	pixel_y = -32
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_8)
 "sNp" = (
@@ -34461,6 +36223,11 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/kitchen)
 "sPE" = (
@@ -34525,6 +36292,25 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/assembly/robotics)
+"sQr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 1";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/rnd/research_restroom_sc)
 "sQu" = (
 /obj/machinery/door/airlock/research{
 	name = "Miscellaneous Reseach Room";
@@ -34900,6 +36686,11 @@
 /obj/machinery/firealarm{
 	pixel_y = 32
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
 "sZL" = (
@@ -35067,6 +36858,17 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/locker_room)
+"tdN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering West 3";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "teM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -35236,6 +37038,15 @@
 /obj/item/weapon/shovel,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/plains)
+"tmx" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay West 2";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/medical/foyer)
 "tmE" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Research Hallway Mid";
@@ -35529,6 +37340,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
+"tuH" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "tve" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -35591,6 +37412,11 @@
 "tvC" = (
 /obj/structure/railing/grey{
 	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research)
@@ -35680,6 +37506,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
+"tvS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay South 1"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/foyer)
 "tvT" = (
 /obj/structure/cable/pink{
 	icon_state = "4-8"
@@ -35723,6 +37555,11 @@
 "txC" = (
 /obj/machinery/appliance/mixer/candy,
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "txG" = (
@@ -36071,6 +37908,11 @@
 /obj/effect/floor_decal/corner/beige/bordercorner2{
 	dir = 5
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
 "tFH" = (
@@ -36096,6 +37938,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/main/landing/one)
+"tGh" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen East 2";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/crew_quarters/kitchen)
 "tGw" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/disposalpipe/segment,
@@ -36153,6 +38002,15 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"tHa" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - EVA North";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/ai_monitored/storage/eva)
 "tHb" = (
 /obj/machinery/computer/timeclock/premade/north,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -36362,6 +38220,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_lockerroom)
+"tMK" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay East 4";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/crew_quarters/heads/sc/cmo)
 "tMO" = (
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall)
@@ -36524,6 +38391,14 @@
 /obj/machinery/computer/security/telescreen/entertainment,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
+"tRN" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel South 1"
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/chapel/main)
 "tSi" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
@@ -36599,6 +38474,29 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/stationgateway)
+"tWE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/bordercorner2{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "tWF" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -36822,6 +38720,11 @@
 /obj/effect/landmark{
 	name = "blobstart"
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engi_restroom)
 "udl" = (
@@ -36933,6 +38836,12 @@
 /obj/machinery/gibber,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21;
+	pixel_y = -31
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
@@ -37104,6 +39013,15 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"ulV" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 5";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/rnd/research)
 "uml" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -37234,6 +39152,13 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/dorms/dorm_3)
+"uqw" = (
+/obj/structure/flora/ausbushes/brflowers,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay South 2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/foyer)
 "uqD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -37282,6 +39207,10 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -37461,6 +39390,18 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
+"uxf" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Apartments Substation South"
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/maintenance/substation/civilian)
 "uxp" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
@@ -37579,6 +39520,10 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 1
 	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "uAy" = (
@@ -37601,6 +39546,11 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Church Crematorium";
 	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/bmarble,
 /area/chapel/office)
@@ -37773,6 +39723,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"uEg" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec South 4"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/security/security_processing)
 "uEO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -38053,6 +40009,10 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_restroom)
 "uJg" = (
@@ -38203,6 +40163,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"uLX" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/gym)
 "uMd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -38275,6 +40242,11 @@
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
@@ -38413,6 +40385,11 @@
 "uRV" = (
 /obj/machinery/light/floortube{
 	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
 /area/chapel/main)
@@ -38713,11 +40690,25 @@
 "uYu" = (
 /obj/machinery/fitness/punching_bag,
 /obj/effect/floor_decal/corner/white/full,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
 "uYv" = (
 /turf/simulated/wall,
 /area/medical/chemistry)
+"uYB" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering External Lights North";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/engineering/external_lights)
 "uYN" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -38745,6 +40736,11 @@
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/foyer)
@@ -39109,6 +41105,11 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/hallway)
 "vhE" = (
@@ -39323,10 +41324,14 @@
 	pixel_x = -32;
 	pixel_y = -19
 	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen East 5";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/crew_quarters/bar)
 "vmW" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/dirt,
@@ -39344,6 +41349,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
+"vnr" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 1";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/medical/medbay_primary_storage)
 "vnJ" = (
 /obj/machinery/atmospherics/unary/heater/sauna{
 	dir = 8;
@@ -39582,6 +41594,11 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
 	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "vrc" = (
@@ -39785,6 +41802,14 @@
 "vuS" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/locker_room)
+"vuW" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "vve" = (
 /obj/effect/landmark/event_spawn/dronepod_landing,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -39872,6 +41897,15 @@
 /obj/structure/closet/coffin,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"vxU" = (
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Exterior West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/security/security_restroom)
 "vyB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -40039,6 +42073,11 @@
 "vDk" = (
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/chapel/office)
@@ -40311,6 +42350,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
+"vJv" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay West 4";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/medical/patient_a)
 "vJH" = (
 /obj/machinery/light/no_nightshift,
 /obj/structure/railing/grey{
@@ -40321,6 +42369,13 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/engineering/foyer)
+"vJP" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/mining_main)
 "vKE" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -40353,11 +42408,40 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"vMt" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library East 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/library)
 "vMZ" = (
 /obj/structure/fans/tiny,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
+"vNa" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen North 1";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/crew_quarters/kitchen)
 "vNb" = (
 /obj/machinery/vending/cola,
 /turf/simulated/floor/outdoors/dirt,
@@ -40440,6 +42524,18 @@
 /obj/structure/cryofeed,
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/cryostorage_hallway)
+"vQX" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/red/border,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/department/security{
+	pixel_y = -23
+	},
+/turf/simulated/floor/tiled/white,
+/area/security/security_processing)
 "vRh" = (
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/quartermaster/delivery)
@@ -40496,6 +42592,12 @@
 	pixel_y = 24
 	},
 /obj/structure/dogbed,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_x = -3;
+	pixel_y = 20
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/bar)
 "vTx" = (
@@ -40522,6 +42624,25 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
+"vTZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 6";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/rnd/lab)
 "vUe" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/borderfloorblack{
@@ -40581,10 +42702,14 @@
 	dir = 6
 	},
 /obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Civ Bar/Kitchen East 3";
+	dir = 4
+	},
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/surface/outside/path/plains)
+/area/hydroponics)
 "vUR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -40790,6 +42915,11 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
@@ -41196,8 +43326,12 @@
 /obj/structure/railing/grey,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/ppflowers,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gateway/Cryo East 3";
+	dir = 4
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/surface/outside/plains/outpost)
+/area/hallway/primary/thirddeck/stationgateway)
 "whw" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -41275,6 +43409,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_restroom)
+"wjS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay West 5";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/maintenance/substation/medical)
 "wkq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -41628,6 +43771,13 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
+"wqY" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Cargo East 2";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/mining_main)
 "wre" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/water/deep,
@@ -41733,6 +43883,29 @@
 	name = "Holodeck Projector Floor"
 	},
 /area/holodeck/alphadeck)
+"wuT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "wvj" = (
 /turf/simulated/wall,
 /area/surface/outpost/main/dorms/dorm_9)
@@ -41783,6 +43956,10 @@
 /obj/structure/bed/chair/sofa/right/blue{
 	dir = 1
 	},
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "wwJ" = (
@@ -41816,6 +43993,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
+"wyC" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Tool Storage South"
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/storage/primary)
 "wyW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -41875,6 +44060,11 @@
 	dir = 8
 	},
 /obj/structure/bed/chair,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
 "wAt" = (
@@ -41911,6 +44101,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
+"wBg" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - IAA West";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/lawoffice)
 "wBu" = (
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
@@ -41932,6 +44129,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_8)
+"wCL" = (
+/obj/structure/closet/coffin,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Chapel South 4"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/chapel/office)
 "wDj" = (
 /turf/simulated/wall,
 /area/surface/outpost/main/dorms/dorm_7)
@@ -42010,6 +44214,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/chemistry)
+"wFG" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Sec East 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy{
+	outdoors = -1
+	},
+/area/security/evidence_storage)
 "wFW" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8
@@ -42121,6 +44334,11 @@
 /obj/machinery/firealarm{
 	pixel_y = 32
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
 "wJl" = (
@@ -42153,6 +44371,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/emergency_storage)
+"wJG" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outside/plains/outpost)
 "wJN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -42228,6 +44454,9 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+/obj/item/device/radio/intercom/department/medbay{
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "wMu" = (
@@ -42284,6 +44513,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
+"wQh" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "wQi" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -42386,6 +44623,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
+"wTJ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Gym West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "wTM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -42787,6 +45031,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"xdA" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Disused Garage South"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/garage)
+"xdS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/cryo/autoresleeve)
 "xex" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -42928,6 +45185,18 @@
 	},
 /turf/simulated/floor,
 /area/crew_quarters/heads/sc/chief)
+"xgQ" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - IAA South 2"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/lawoffice)
+"xhl" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library South 1"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/library)
 "xhv" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/circuitboard/teleporter,
@@ -43042,6 +45311,11 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/foyer)
 "xke" = (
@@ -43105,6 +45379,11 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 32
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
@@ -43491,6 +45770,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
+"xsS" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research West 1";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/rnd/lab)
 "xsT" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -43638,6 +45924,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"xuG" = (
+/obj/structure/flora/ausbushes/grassybush{
+	opacity = 1
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Medbay North 4";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/crew_quarters/heads/sc/cmo/quarters)
 "xvp" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -43885,6 +46181,18 @@
 /obj/item/weapon/deck/cards,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/medical_lockerroom)
+"xyQ" = (
+/obj/structure/flora/ausbushes/grassybush{
+	opacity = 1
+	},
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering West";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/engineering/workshop)
 "xza" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -44680,6 +46988,14 @@
 "xNe" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
+"xND" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/rnd/research_restroom_sc)
 "xOd" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -44806,6 +47122,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/patient_a)
+"xRL" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Library East 3";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/library)
 "xRM" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 1
@@ -44824,6 +47147,10 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -45096,6 +47423,25 @@
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"xWO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Research North 2";
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	outdoors = 1
+	},
+/area/rnd/research_restroom_sc)
 "xWW" = (
 /obj/structure/table/glass,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -45103,6 +47449,15 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/medical_lockerroom)
+"xXu" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Engineering North 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/engineering/hallway/engineer_hallway)
 "xXH" = (
 /obj/structure/stairs/spawner/north,
 /obj/structure/railing/grey{
@@ -45110,6 +47465,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
+"xXM" = (
+/obj/machinery/camera/network/exterior{
+	c_tag = "EXT - Autoresleeving East 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/medical/cryo/autoresleeve)
 "xXY" = (
 /obj/structure/stairs/spawner/north,
 /obj/structure/railing/grey{
@@ -45660,6 +48022,10 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 4
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
@@ -60004,12 +62370,12 @@ rLe
 rLe
 kGW
 kGW
-tgb
+uYB
 pDm
 xex
 xBl
 pDm
-tgb
+fMg
 kGW
 kGW
 rLe
@@ -62566,13 +64932,13 @@ nbF
 nxV
 nxV
 nxV
-nxV
+tdN
 nxV
 qAI
 rzh
 ttz
 rzh
-rLe
+jtY
 piU
 vrv
 tgb
@@ -63070,7 +65436,7 @@ wpz
 wpz
 kGW
 kGW
-kGW
+pym
 kGW
 kGW
 kGW
@@ -63350,7 +65716,7 @@ wmt
 bZI
 mvE
 vlF
-xOA
+xyQ
 xOA
 qAy
 sYa
@@ -63586,11 +65952,11 @@ iTC
 jDk
 knR
 knR
-jDk
+eVD
 lTQ
 itb
 tgb
-ncJ
+mRG
 pCB
 ocT
 oNP
@@ -63653,10 +66019,10 @@ rLe
 rLe
 rLe
 rLe
+jrg
 rLe
 rLe
-rLe
-rLe
+xRL
 rLe
 rLe
 rLe
@@ -63869,17 +66235,17 @@ hDM
 hDM
 ldg
 vtd
-sYa
+pSB
 sYa
 tgb
 kGW
 kGW
+wqY
 rLe
 rLe
 rLe
 rLe
-rLe
-rLe
+lQq
 rLe
 rLe
 rLe
@@ -64396,7 +66762,7 @@ wNP
 wNP
 wNP
 wDK
-rLe
+jUY
 rLe
 rLe
 rLe
@@ -64643,7 +67009,7 @@ vtd
 sYa
 sYa
 sYa
-tgb
+jdu
 wDK
 wNP
 vfY
@@ -64865,7 +67231,7 @@ rLe
 rLe
 rLe
 kGW
-kGW
+szq
 itb
 iWH
 jFA
@@ -64874,7 +67240,7 @@ kXN
 jFA
 lZH
 itb
-tgb
+wyC
 ncJ
 tgb
 tgb
@@ -64884,7 +67250,7 @@ tgb
 tgb
 tgb
 tgb
-tgb
+xXu
 wNG
 bNe
 vzI
@@ -64900,7 +67266,7 @@ vtd
 ybp
 ybp
 ybp
-ttz
+aIz
 wDK
 wNP
 bnf
@@ -64936,7 +67302,7 @@ rLe
 rLe
 rLe
 ybp
-rLe
+dGS
 xZN
 fNd
 byd
@@ -65139,7 +67505,7 @@ tgb
 tgb
 tgb
 tgb
-tgb
+sid
 tgb
 tgb
 fbb
@@ -65172,7 +67538,7 @@ xZf
 xZf
 uPu
 uPu
-uPu
+lZv
 rLe
 rLe
 xZf
@@ -65184,7 +67550,7 @@ ucD
 mCZ
 vXu
 mCZ
-vXu
+kEX
 mCZ
 vXu
 mCZ
@@ -65459,7 +67825,7 @@ pxa
 xZN
 rLe
 rLe
-rLe
+vMt
 rLe
 uPu
 rLe
@@ -65639,7 +68005,7 @@ kGW
 wpz
 lfc
 iXZ
-tgb
+idG
 pFP
 yeV
 kGW
@@ -65695,13 +68061,13 @@ rLe
 rLe
 rLe
 rLe
-vxf
+fys
 xSC
 vmH
 uAQ
 nFU
 xSC
-vxf
+wCL
 rLe
 rLe
 rLe
@@ -65976,7 +68342,7 @@ lSw
 tEk
 tEk
 xZN
-rLe
+jcL
 rLe
 rLe
 rLe
@@ -66204,7 +68570,7 @@ vRh
 vRh
 vRh
 xZf
-rLe
+nqs
 fgv
 rLe
 rLe
@@ -66440,7 +68806,7 @@ iQR
 xLV
 xLV
 ybp
-ybp
+vJP
 wDK
 jAv
 pQy
@@ -66676,7 +69042,7 @@ kGW
 mIL
 ncJ
 nzy
-nzy
+dkV
 oOQ
 pmc
 pNd
@@ -67171,14 +69537,14 @@ rLe
 rLe
 rLe
 rLe
-rLe
+jUb
 uPu
 uPu
 uPu
 rLe
 rLe
 rLe
-rLe
+cZP
 mCZ
 mCZ
 mCZ
@@ -67245,7 +69611,7 @@ xSC
 jOf
 xSC
 wQO
-rLe
+bHR
 rLe
 yeV
 yeV
@@ -67492,7 +69858,7 @@ ius
 rvr
 iJD
 rLe
-rLe
+nji
 wQO
 hDW
 vBp
@@ -67518,7 +69884,7 @@ uos
 eCy
 hwZ
 xZN
-rLe
+xhl
 rLe
 rLe
 rLe
@@ -67680,7 +70046,7 @@ tyG
 rLe
 rLe
 rLe
-rLe
+mFL
 hus
 dpN
 dKL
@@ -67695,7 +70061,7 @@ hus
 hYS
 itO
 hus
-mCZ
+wJG
 pFP
 yeV
 yeV
@@ -68002,7 +70368,7 @@ cwm
 dQI
 hTK
 uVH
-rvr
+bRC
 rvr
 iJD
 uPu
@@ -68022,13 +70388,13 @@ yeV
 yeV
 ybp
 ybp
-ybp
+gwc
 ybp
 ybp
 xke
 mtT
 vEF
-xEG
+iaD
 xEG
 xEG
 auP
@@ -68209,7 +70575,7 @@ hus
 iai
 eeL
 hus
-mCZ
+qHv
 pFP
 yeV
 yeV
@@ -68239,7 +70605,7 @@ kbZ
 pdW
 wNG
 ybp
-ybp
+qmq
 wDK
 eLF
 opF
@@ -68708,7 +71074,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
+tHa
 hus
 dsT
 dMR
@@ -68993,7 +71359,7 @@ ofQ
 jML
 lxk
 ygw
-rLe
+qPm
 vuS
 bXB
 tdH
@@ -69046,7 +71412,7 @@ vBp
 wQO
 apz
 wQO
-yeV
+tRN
 yeV
 ybp
 gkU
@@ -69293,7 +71659,7 @@ oIr
 xZf
 rLe
 wQO
-vBp
+slt
 iza
 lth
 cQC
@@ -69483,6 +71849,7 @@ rLe
 rLe
 rLe
 rLe
+dlg
 rLe
 rLe
 rLe
@@ -69491,8 +71858,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
-ybp
+ror
 ybp
 ybp
 pFP
@@ -70038,7 +72404,7 @@ mqD
 nOI
 uNN
 ybp
-sYa
+nWk
 rOX
 gxA
 rqS
@@ -70276,7 +72642,7 @@ nho
 lxk
 ybp
 ybp
-xke
+haV
 pQZ
 pQZ
 pQZ
@@ -70518,7 +72884,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
+dAU
 rLe
 ivE
 jbS
@@ -70573,10 +72939,10 @@ mXS
 uVH
 yjf
 ybp
-ybp
+iOZ
 rLe
 rLe
-rLe
+mmt
 wQO
 wQO
 xfA
@@ -70814,7 +73180,7 @@ oKl
 qHA
 xYd
 xYd
-xYd
+hwi
 oKl
 xYd
 vwT
@@ -70834,7 +73200,7 @@ ybp
 ybp
 yeV
 yeV
-yeV
+kzH
 cGr
 vUw
 vBp
@@ -70842,7 +73208,7 @@ oCI
 vBp
 vUw
 kAF
-yeV
+nQq
 yeV
 yeV
 yeV
@@ -71052,7 +73418,7 @@ ybp
 ybp
 sPH
 ybp
-yeV
+mUB
 yeV
 uVC
 hXH
@@ -71091,7 +73457,7 @@ yeV
 yeV
 yeV
 rLe
-rLe
+eOh
 wQO
 wQO
 wGB
@@ -71099,7 +73465,7 @@ oCI
 xle
 wQO
 wQO
-yeV
+aZS
 yeV
 yeV
 yeV
@@ -71294,8 +73660,8 @@ iaO
 ixx
 jcZ
 iaO
-ttz
-ttz
+gJM
+osm
 aUl
 aUl
 aUl
@@ -71537,7 +73903,7 @@ rLe
 tgb
 tgb
 tgb
-tgb
+vxU
 tgb
 xOA
 eKf
@@ -71846,7 +74212,7 @@ xYd
 xYd
 pVC
 tRf
-tRf
+gJp
 lgQ
 mCZ
 qNd
@@ -72083,7 +74449,7 @@ yeV
 tqp
 yeV
 yeV
-yeV
+ivq
 iIl
 iIl
 wrT
@@ -72592,11 +74958,11 @@ ygB
 yeV
 psQ
 ybp
-ybp
+pJG
 sAX
 tsb
 udl
-wqX
+fWl
 wqX
 wqX
 wqX
@@ -72818,7 +75184,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
+eqp
 bZO
 ctA
 cLr
@@ -73090,7 +75456,7 @@ gHW
 hmU
 hLi
 uYR
-eiZ
+qVu
 ixW
 wEa
 rLe
@@ -73845,7 +76211,7 @@ rLe
 rLe
 aKs
 aUC
-aUC
+sqg
 aKs
 cba
 cvx
@@ -73887,7 +76253,7 @@ wwo
 fgv
 rLe
 ybp
-ybp
+lFo
 azS
 vFp
 xMt
@@ -73917,7 +76283,7 @@ rLe
 ybp
 ybp
 rLe
-ykh
+kXH
 xkW
 eHt
 sXz
@@ -74116,7 +76482,7 @@ emL
 aKs
 gLv
 hpt
-ggy
+dQw
 uYR
 ygw
 jhs
@@ -74144,7 +76510,7 @@ iRX
 fgv
 eiZ
 eiZ
-aUl
+ide
 swv
 swv
 pss
@@ -74156,11 +76522,11 @@ xke
 yeV
 yeV
 rLe
-rLe
+pvD
 hra
 rLe
 rLe
-hyt
+mda
 rVD
 qfb
 qfb
@@ -74871,7 +77237,7 @@ kYl
 kYl
 rLe
 rLe
-rLe
+gYF
 rLe
 cOJ
 dbK
@@ -74902,7 +77268,7 @@ yeV
 yeV
 yeV
 yeV
-psQ
+vNa
 mpQ
 qPb
 qnH
@@ -75440,7 +77806,7 @@ dRo
 qRl
 yeV
 yeV
-qiD
+aKh
 hJB
 lZA
 hvT
@@ -75483,7 +77849,7 @@ gYQ
 poj
 stb
 tKz
-yfU
+iNh
 pyQ
 gHH
 czx
@@ -75746,7 +78112,7 @@ thh
 wet
 itZ
 pyQ
-xZh
+uxf
 rLe
 rLe
 rLe
@@ -75973,7 +78339,7 @@ uhY
 ltC
 uhY
 sKd
-ykh
+ldx
 wvj
 rqe
 dWW
@@ -76211,7 +78577,7 @@ dFz
 qaW
 yeV
 yeV
-qiD
+jZn
 hJB
 oLV
 pbb
@@ -76410,7 +78776,7 @@ tgb
 tgb
 lfc
 tgb
-tgb
+qTL
 azW
 aFx
 aOY
@@ -76694,14 +79060,14 @@ jKp
 kyu
 kyu
 kyu
-kyu
+fzE
 mzd
 mLR
 yeV
 yeV
 yeV
 yeV
-puU
+lBs
 mpQ
 qVR
 rOC
@@ -76770,7 +79136,7 @@ rLe
 rLe
 yfU
 qKD
-vGi
+mms
 mIB
 hxl
 vGi
@@ -76973,7 +79339,7 @@ eFf
 aYs
 vON
 swv
-qos
+jQQ
 qyr
 daA
 sOc
@@ -77497,12 +79863,12 @@ yeV
 yeV
 yeV
 yeV
-ygB
+kFl
 eiZ
 eiZ
 eiZ
 eiZ
-eiZ
+bIE
 fMa
 aGj
 wry
@@ -77714,7 +80080,7 @@ fUI
 gmJ
 gYq
 hxf
-hRB
+vQX
 eVe
 rLe
 rLe
@@ -78029,7 +80395,7 @@ yeV
 yeV
 yeV
 rLe
-ykh
+pzq
 xAa
 uQL
 nzj
@@ -78487,7 +80853,7 @@ eVe
 hxm
 hxm
 eVe
-rLe
+uEg
 rLe
 rLe
 kFO
@@ -78513,7 +80879,7 @@ qkp
 qkp
 xCr
 yeV
-yeV
+efZ
 pFP
 wba
 yeV
@@ -78526,16 +80892,16 @@ uxs
 uxs
 sHZ
 aus
-mCZ
+kXJ
 rLe
 rLe
 rLe
 rLe
 uHm
 iwY
+stn
 iwY
-iwY
-iwY
+fFX
 vju
 eqz
 lpj
@@ -78760,7 +81126,7 @@ lGH
 lGH
 pUV
 yeV
-lgs
+tGh
 sPE
 tzq
 uqj
@@ -79026,13 +81392,13 @@ vWk
 ygB
 yeV
 yeV
-yeV
+tmx
 pwt
 iGn
 psW
 iGn
 hBf
-ttQ
+ebd
 mub
 yeV
 yeV
@@ -79282,7 +81648,7 @@ yeV
 yeV
 yeV
 yeV
-yeV
+gNU
 qSY
 qSY
 rpx
@@ -79290,7 +81656,7 @@ wql
 hqK
 qSY
 qSY
-xke
+tvS
 yeV
 yeV
 tUR
@@ -79782,7 +82148,7 @@ kGE
 mAH
 mMP
 jZv
-sYa
+hXm
 aUl
 aUl
 pvt
@@ -79823,7 +82189,7 @@ wut
 wut
 wut
 tUR
-dag
+wuT
 rLe
 yeV
 yeV
@@ -80030,7 +82396,7 @@ rLe
 rLe
 kYl
 kYl
-kYl
+rDh
 kYl
 kGE
 lhZ
@@ -80085,7 +82451,7 @@ ppX
 yeV
 yeV
 ppX
-jmp
+pzX
 wDj
 iWl
 qGv
@@ -80271,7 +82637,7 @@ rLe
 rLe
 rLe
 biK
-uBV
+elK
 dcr
 dcr
 dcr
@@ -80283,7 +82649,7 @@ biK
 fZx
 fZx
 dVX
-hyt
+rRT
 rLe
 igA
 igA
@@ -80548,7 +82914,7 @@ juA
 jTd
 kHk
 liT
-lKg
+oKG
 kGE
 mCh
 mNS
@@ -80819,7 +83185,7 @@ mCZ
 mCZ
 pWd
 ttz
-ttz
+mvX
 jXz
 nGF
 nGF
@@ -80885,13 +83251,13 @@ mZv
 rLe
 rLe
 rLe
+wTJ
 rLe
 rLe
 rLe
 rLe
 rLe
-rLe
-rLe
+gGq
 rLe
 rLe
 rLe
@@ -81043,12 +83409,12 @@ kGW
 kGW
 byY
 kGW
+cCT
 kGW
 kGW
 kGW
 kGW
-kGW
-kGW
+wFG
 kGW
 kYl
 dfk
@@ -81089,7 +83455,7 @@ veg
 xps
 wwt
 qSY
-mub
+uqw
 yeV
 xke
 tUR
@@ -81138,7 +83504,7 @@ xUR
 xUR
 xUR
 rLe
-mZv
+ekO
 xUR
 xUR
 xsB
@@ -81151,7 +83517,7 @@ xsB
 xUR
 xUR
 xUR
-rLe
+sHd
 rLe
 rLe
 rLe
@@ -81366,7 +83732,7 @@ wut
 wut
 fOA
 tUR
-pWj
+kNj
 yeV
 yeV
 ygB
@@ -81641,7 +84007,7 @@ xVT
 xVT
 xVT
 xVT
-beg
+onl
 xUR
 iMI
 stM
@@ -81840,7 +84206,7 @@ mSh
 yeV
 yeV
 piU
-mCZ
+hls
 pvB
 pYz
 ray
@@ -81863,7 +84229,7 @@ qSY
 kgp
 hZu
 hZu
-hZu
+vJv
 hZu
 hZu
 hZu
@@ -82080,7 +84446,7 @@ dcJ
 aCQ
 aCQ
 tgb
-kGW
+mwm
 hcb
 hyX
 hUY
@@ -82125,7 +84491,7 @@ nNT
 nNT
 nNT
 tlQ
-fgv
+nyZ
 fgv
 vHT
 hZu
@@ -82353,7 +84719,7 @@ uCw
 apv
 yeV
 yeV
-mCZ
+skU
 mCZ
 pvB
 pYV
@@ -82401,7 +84767,7 @@ yeV
 qiD
 rLe
 rLe
-rLe
+wBg
 uYN
 rLe
 ybp
@@ -82412,7 +84778,7 @@ wpf
 wpf
 ybp
 wpf
-ybp
+dKC
 xUR
 iHN
 stM
@@ -82597,7 +84963,7 @@ lPo
 dfk
 dfk
 rLe
-rLe
+qYW
 rLe
 iQz
 jAs
@@ -82662,7 +85028,7 @@ tyN
 nvj
 vOJ
 hiU
-ybp
+ffN
 vjF
 tmn
 wpf
@@ -82679,7 +85045,7 @@ uIj
 vyU
 kAY
 xUR
-rLe
+cRI
 mEZ
 xsB
 vDA
@@ -82899,7 +85265,7 @@ tlQ
 uPu
 rLe
 fgv
-hZu
+wjS
 uYN
 rHE
 lic
@@ -83122,7 +85488,7 @@ lPT
 miW
 mDJ
 mVm
-yeV
+dEY
 nMZ
 oim
 oRZ
@@ -83633,7 +85999,7 @@ wry
 ybp
 ybp
 qEf
-yeV
+ghb
 yeV
 yeV
 yeV
@@ -83650,7 +86016,7 @@ uwk
 nNX
 wap
 sPL
-sPL
+oxO
 wRh
 mNB
 dGp
@@ -83675,7 +86041,7 @@ hyZ
 vuG
 mjz
 vnO
-uOr
+cGY
 vnJ
 xuB
 vuG
@@ -83690,7 +86056,7 @@ iAR
 xKH
 wZj
 hiU
-ybp
+pUj
 wpf
 tvT
 ybp
@@ -83721,7 +86087,7 @@ xsB
 xUR
 xUR
 xUR
-rLe
+bOx
 yeX
 rLe
 rLe
@@ -83969,13 +86335,13 @@ rLe
 rLe
 rLe
 rLe
+uLX
 rLe
 rLe
 rLe
 rLe
 rLe
-rLe
-rLe
+emZ
 rLe
 rLe
 rLe
@@ -84196,7 +86562,7 @@ sVC
 bzp
 yeV
 yeV
-gDv
+htb
 tyN
 vOJ
 vOJ
@@ -84204,7 +86570,7 @@ tyN
 vOJ
 vOJ
 hiU
-ybp
+xgQ
 vjF
 unl
 grG
@@ -84407,7 +86773,7 @@ lgs
 ygB
 mCZ
 mCZ
-mCZ
+vnr
 nLW
 onU
 oSW
@@ -84457,7 +86823,7 @@ edZ
 rLe
 rLe
 fAd
-ygw
+fTa
 wEa
 ygw
 ybp
@@ -84695,7 +87061,7 @@ jbL
 jqX
 fzV
 jhE
-rLe
+nmg
 rLe
 izC
 jgT
@@ -84707,7 +87073,7 @@ uyo
 vuG
 tEC
 vuG
-yeV
+sju
 yeV
 yeV
 rLe
@@ -85435,7 +87801,7 @@ dwK
 hCq
 ydQ
 tgb
-tgb
+pYu
 nLW
 nLW
 nLW
@@ -85940,7 +88306,7 @@ bzZ
 bzZ
 bkT
 aUl
-rLe
+wQh
 lgs
 lgs
 lgs
@@ -85980,12 +88346,12 @@ aYk
 eGz
 vSW
 bah
-xza
+jQs
 rLe
 rLe
 rLe
 jXF
-yeV
+rsi
 fnL
 fnL
 wES
@@ -85993,7 +88359,7 @@ lFa
 pdz
 fnL
 fnL
-yeV
+opW
 yeV
 yeV
 yeV
@@ -86494,10 +88860,10 @@ kWn
 niV
 baa
 xEk
-xza
+nug
 rLe
 vHT
-rLe
+xsS
 rLe
 qMb
 fnL
@@ -86509,7 +88875,7 @@ cHF
 fnL
 cOh
 rLe
-rLe
+aRw
 yeV
 yeV
 yeV
@@ -86771,7 +89137,7 @@ uIC
 uIC
 uIC
 xfG
-yeV
+fyK
 yeV
 rLe
 rVD
@@ -87543,7 +89909,7 @@ aLM
 rxe
 orh
 xfG
-yeV
+gBl
 xke
 fgv
 rLe
@@ -88036,7 +90402,7 @@ ttz
 qdw
 nYh
 nYh
-ylD
+vTZ
 nFg
 pxu
 qio
@@ -88288,7 +90654,7 @@ iMQ
 iMQ
 meE
 meE
-dOw
+nYY
 dOw
 cjW
 dOw
@@ -88313,7 +90679,7 @@ xfG
 xfG
 xfG
 xfG
-lgs
+aQI
 lgs
 lfc
 ybp
@@ -88518,7 +90884,7 @@ yeV
 yeV
 ybp
 ygw
-fgv
+xuG
 npz
 nPA
 oBn
@@ -88805,7 +91171,7 @@ meE
 hke
 dOw
 cjW
-dOw
+gEs
 kYl
 hZu
 jgT
@@ -89050,7 +91416,7 @@ wZg
 xzg
 xYc
 gDT
-wjn
+dNf
 tLy
 svE
 wKQ
@@ -89281,7 +91647,7 @@ hcM
 tdE
 aUl
 aUl
-hZu
+tuH
 rLe
 wEa
 qEf
@@ -89292,7 +91658,7 @@ tRs
 rLe
 rLe
 rLe
-rLe
+sqE
 peo
 pAz
 pAz
@@ -89341,7 +91707,7 @@ xIP
 xIP
 xIP
 xIP
-lgs
+jEG
 lgs
 eAR
 pak
@@ -89554,7 +91920,7 @@ hra
 hra
 qqh
 rrk
-vRX
+tMK
 qqh
 tOG
 uIR
@@ -89566,7 +91932,7 @@ xYw
 tOG
 mCZ
 mCZ
-rLe
+gCb
 rLe
 rLe
 rLe
@@ -89578,7 +91944,7 @@ mpj
 ylD
 rLe
 hZu
-hZu
+ulV
 lrF
 gCJ
 lrF
@@ -90062,12 +92428,12 @@ sPH
 mFA
 jIj
 jIj
-jIj
+nQK
 jIj
 jIj
 pAU
 jIj
-jIj
+dUs
 jIj
 kPV
 tOG
@@ -90088,7 +92454,7 @@ rRn
 sEF
 qFS
 rRn
-tJc
+qPa
 uCT
 uCT
 uCT
@@ -90100,7 +92466,7 @@ nVG
 iom
 kjS
 lrF
-dfN
+tWE
 vaX
 hXY
 ykC
@@ -90583,14 +92949,14 @@ pCi
 qqt
 rrK
 mGe
-kcZ
+pas
 kPV
-mCZ
+giJ
 tRd
 rLe
 uPu
 uPu
-rLe
+oFB
 rLe
 mCZ
 mCZ
@@ -91106,7 +93472,7 @@ sYL
 sYL
 sYL
 sYL
-sYL
+ohz
 sYL
 qfo
 kqv
@@ -91362,7 +93728,7 @@ mCZ
 mCZ
 rLe
 rLe
-rLe
+lbA
 twC
 twC
 twC
@@ -91371,7 +93737,7 @@ pbk
 twC
 twC
 twC
-rLe
+dIQ
 rLe
 tJc
 uCT
@@ -91611,7 +93977,7 @@ pEM
 qrD
 rtZ
 mGe
-sZh
+rPY
 mCZ
 sZh
 mCZ
@@ -92145,7 +94511,7 @@ twC
 rLe
 rLe
 rLe
-xza
+xWO
 vkr
 vkr
 vkr
@@ -92424,7 +94790,7 @@ hcw
 rjI
 otk
 eXC
-rLe
+jVM
 rLe
 ybp
 ybp
@@ -93153,7 +95519,7 @@ nSm
 qtP
 rwT
 mGe
-rLe
+xdA
 rLe
 rLe
 rLe
@@ -93173,10 +95539,10 @@ twC
 rLe
 rLe
 rLe
-xza
+sQr
 vkr
 loc
-pel
+xND
 cJk
 cMg
 cbt
@@ -93393,7 +95759,7 @@ vlU
 hCa
 aUl
 aUl
-ybp
+pUj
 ybp
 ybp
 kcy
@@ -93424,7 +95790,7 @@ qWe
 ctI
 lAI
 lHV
-lHV
+soa
 oLk
 twC
 rLe
@@ -93675,7 +96041,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
+xdS
 twC
 twC
 twC
@@ -93684,13 +96050,13 @@ cHr
 twC
 twC
 twC
-rLe
+rLt
 rLe
 rLe
 lpx
 gCB
 oas
-oas
+meT
 oas
 oas
 mqG
@@ -93913,7 +96279,7 @@ jaB
 kPX
 yeV
 yeV
-yeV
+mVF
 mGe
 mGe
 mGe
@@ -93933,14 +96299,14 @@ rLe
 rLe
 rLe
 ybp
-xke
+pTh
 ybp
 rLe
 anj
 ybp
 rLe
 xke
-xke
+xXM
 rLe
 rLe
 rLe
@@ -93954,7 +96320,7 @@ rEY
 dox
 dox
 puj
-rnq
+ntn
 wUL
 lrF
 epk
@@ -94175,7 +96541,7 @@ qiD
 ygw
 rLe
 rLe
-fgv
+lFn
 fgv
 iRX
 qxp
@@ -94214,7 +96580,7 @@ rnq
 rnq
 wUL
 lrF
-kvM
+vuW
 dcG
 hIw
 dJK
@@ -94223,7 +96589,7 @@ xQU
 rkF
 dyO
 hIw
-rLe
+ntd
 rLe
 rLe
 ybp
@@ -95507,7 +97873,7 @@ iGq
 xxl
 kTq
 lrF
-rLe
+pwi
 yeX
 rLe
 ybp
@@ -96014,7 +98380,7 @@ aUl
 aUl
 rLe
 rLe
-rLe
+hsP
 lrF
 kTq
 kTq
@@ -96531,7 +98897,7 @@ rLe
 fgv
 rLe
 rLe
-rLe
+jPU
 rLe
 rLe
 rLe
@@ -96996,7 +99362,7 @@ jCC
 klz
 uMN
 kSF
-kSF
+mDs
 klz
 rLe
 rLe
@@ -97247,7 +99613,7 @@ rLe
 rLe
 tyG
 rLe
-rLe
+rWS
 iTg
 jCC
 kmL
@@ -97255,7 +99621,7 @@ kTG
 kTG
 kTG
 kmL
-rLe
+rek
 rLe
 rLe
 rLe
@@ -98022,7 +100388,7 @@ rLe
 rLe
 rLe
 rLe
-rLe
+bEC
 rLe
 rLe
 rLe

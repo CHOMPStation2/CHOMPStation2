@@ -14,6 +14,9 @@
 #define Z_LEVEL_GATEWAY					12
 #define Z_LEVEL_FUELDEPOT				15
 
+// Camera Network Additions
+#define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
+
 /datum/map/relicbase
 	name = "Relic Base"
 	full_name = "NLS Relic Base"
@@ -30,8 +33,8 @@
 
 	zlevel_datum_type = /datum/map_z_level/relicbase
 
-	station_name  = "NLS Relic Base"
-	station_short = "Relic Base"
+	station_name  = "NLS Forbearance"
+	station_short = "Forbearance"
 	dock_name     = "NCS Lambda" // NCC - Nanotrasen Command Colony
 	boss_name     = "Central Command"
 	boss_short    = "Centcom"
@@ -42,13 +45,13 @@
 	overmap_size = 50
 	overmap_event_areas = 44
 
-	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
+	shuttle_docked_message = "The scheduled tram to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Tram has left the colony. Estimate %ETA% until the shuttle docks at %dock_name%."
 	shuttle_called_message = "A crew transfer to %dock_name% has been scheduled. The tram has been called. Those leaving should proceed to the departures tram station in approximately %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	emergency_shuttle_docked_message = "The Emergency Tram has arrived to the Relic Base tram station. You have approximately %ETD% to board the Emergency Tram."
+	emergency_shuttle_docked_message = "The Emergency Tram has arrived to the Forbearance's tram station. You have approximately %ETD% to board the Emergency Tram."
 	emergency_shuttle_leaving_dock = "The Emergency Tram has left the colony. Estimate %ETA% until the tram docks at %dock_name%."
-	emergency_shuttle_called_message = "An emergency evacuation tram has been called. It will arrive at the Relic Base tram station in approximately %ETA%."
+	emergency_shuttle_called_message = "An emergency evacuation tram has been called. It will arrive at the Forbearance tram station in approximately %ETA%."
 	emergency_shuttle_recall_message = "The emergency tram has been recalled."
 
 	// Networks that will show up as options in the camera monitor program
@@ -59,15 +62,10 @@
 							NETWORK_COMMAND,
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
-							NETWORK_ENGINEERING_OUTPOST,
-							NETWORK_FIRST_DECK,
-							NETWORK_SECOND_DECK,
-							NETWORK_THIRD_DECK,
-							NETWORK_MAIN_OUTPOST,
+							NETWORK_EXTERIOR,
 							NETWORK_MEDICAL,
 							NETWORK_MINE,
 							NETWORK_RESEARCH,
-							NETWORK_RESEARCH_OUTPOST,
 							NETWORK_CARRIER,
 							NETWORK_ROBOTS,
 							NETWORK_PRISON,
@@ -146,15 +144,15 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_UNDERMINES), 60, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_UNDERMINES), 60, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(Z_LEVEL_UNDERMINES), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(Z_LEVEL_UNDERMINES), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_SURFACE), 80, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
-	seed_submaps(list(Z_LEVEL_SURFACE_OCEAN), 80, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
+	seed_submaps(list(Z_LEVEL_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
+	seed_submaps(list(Z_LEVEL_SURFACE_OCEAN), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
 
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 60, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 60, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
+	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
@@ -181,14 +179,14 @@
 /datum/map_z_level/relicbase/station/station_one
 	z = Z_LEVEL_UNDERGROUND
 	name = "Underground"
-	base_turf = /turf/space
+	base_turf = /turf/simulated/mineral/floor/cave
 	transit_chance = 10
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/relicbase/station/station_two
 	z = Z_LEVEL_SURFACE
-	name = "Deck 2"
+	name = "Surface"
 	base_turf = /turf/simulated/open
 	transit_chance = 10
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
@@ -196,7 +194,7 @@
 
 /datum/map_z_level/relicbase/station/station_three
 	z = Z_LEVEL_UPPER_FLOORS
-	name = "Deck 3"
+	name = "Upper Levels"
 	base_turf = /turf/simulated/open
 	transit_chance = 10
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
@@ -209,15 +207,17 @@
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 60
 */
+/*
 /datum/map_z_level/relicbase/surface
 	z = Z_LEVEL_SURFACE
 	name = "Plains"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
+*/
 
 /datum/map_z_level/relicbase/surface_mine
 	z = Z_LEVEL_UNDERMINES
-	name = "Mountains"
+	name = "Underground Mines"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
