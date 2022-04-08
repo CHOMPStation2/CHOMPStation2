@@ -2346,6 +2346,15 @@
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"duK" = (
+/turf/unsimulated/wall/cult{
+	desc = "An incredibly durable wall.";
+	icon_state = "rgeneric";
+	name = "elevator shaft wall"
+	},
+/area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "dvB" = (
 /obj/effect/floor_decal/rust,
 /obj/item/ammo_magazine/m762/empty,
@@ -2476,6 +2485,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"dGw" = (
+/turf/unsimulated/wall/cult{
+	desc = "An incredibly durable wall.";
+	icon_state = "rgeneric";
+	name = "elevator shaft wall"
+	},
+/area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "dIp" = (
@@ -3605,6 +3623,23 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"fdu" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Tram Platform North"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/hallway/primary/seconddeck/dockhallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "ffn" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/button/remote/blast_door{
@@ -3955,6 +3990,10 @@
 "fIX" = (
 /obj/effect/floor_decal/rust,
 /obj/random/unidentified_medicine/fresh_medicine,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Abandoned Resleever";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4433,6 +4472,14 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"gsV" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology North"
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "gtk" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small/readylight{
@@ -4623,6 +4670,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"gFQ" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology East";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "gGS" = (
@@ -8603,9 +8659,7 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "mjG" = (
-/turf/simulated/open{
-	outdoors = 1
-	},
+/turf/unsimulated/floor/dark,
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -9136,6 +9190,10 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/cobweb,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Northwest";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9244,6 +9302,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Northeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/xenobiology{
@@ -10029,6 +10091,15 @@
 	outdoors = -1
 	},
 /area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"nUQ" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology West";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "nWj" = (
@@ -11477,6 +11548,15 @@
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"pyQ" = (
+/turf/unsimulated/wall/cult{
+	desc = "An incredibly durable wall.";
+	icon_state = "rgeneric";
+	name = "elevator shaft wall"
+	},
+/area/rnd/storage{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "pBn" = (
 /obj/machinery/button/remote/blast_door{
 	id = "xenobio3station";
@@ -11785,6 +11865,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"pRn" = (
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Arrivals Tram Platform South";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "pRQ" = (
@@ -13581,6 +13673,24 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"rXY" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Tram Platform South";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/hallway/primary/seconddeck/dockhallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "rYx" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
@@ -13634,6 +13744,14 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"sbG" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Tram Stairwell Lower"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "sbI" = (
@@ -13751,6 +13869,10 @@
 	dir = 4
 	},
 /obj/structure/closet/l3closet/general,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Southeast";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -14007,10 +14129,6 @@
 	dir = 9
 	},
 /obj/item/weapon/extinguisher,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenobiology Access";
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -15275,6 +15393,10 @@
 	dir = 1
 	},
 /obj/structure/closet/firecloset/full/double,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Southwest";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -15862,6 +15984,10 @@
 	})
 "uZu" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Science Lower Stairwell";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -17295,9 +17421,7 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "wRV" = (
-/turf/simulated/open{
-	outdoors = 1
-	},
+/turf/unsimulated/floor/dark,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -17953,6 +18077,23 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"xGY" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Arrivals Tram Platform North"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "xHh" = (
@@ -37079,15 +37220,15 @@ pLJ
 ykN
 ykN
 mss
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
+duK
+duK
+duK
+duK
+duK
+duK
+duK
+duK
+duK
 pfU
 pfU
 pfU
@@ -37336,7 +37477,7 @@ pMD
 ykN
 osG
 tRP
-yjd
+duK
 wRV
 wRV
 wRV
@@ -37344,7 +37485,7 @@ wRV
 wRV
 wRV
 wRV
-yjd
+duK
 pfU
 pfU
 pfU
@@ -37593,7 +37734,7 @@ pLJ
 mss
 qqX
 oiD
-yjd
+duK
 wRV
 wRV
 wRV
@@ -37601,7 +37742,7 @@ wRV
 wRV
 wRV
 wRV
-yjd
+duK
 pfU
 pfU
 pfU
@@ -37850,7 +37991,7 @@ yjd
 qct
 lMA
 qHI
-yjd
+duK
 wRV
 wRV
 wRV
@@ -37858,7 +37999,7 @@ wRV
 wRV
 wRV
 wRV
-yjd
+duK
 pfU
 pfU
 pfU
@@ -38107,7 +38248,7 @@ pfU
 pqd
 lMA
 lMA
-yjd
+duK
 wRV
 wRV
 wRV
@@ -38115,7 +38256,7 @@ wRV
 wRV
 wRV
 wRV
-yjd
+duK
 pfU
 pfU
 pfU
@@ -38364,7 +38505,7 @@ pfU
 pLJ
 qrO
 qHI
-yjd
+duK
 wRV
 wRV
 wRV
@@ -38372,7 +38513,7 @@ wRV
 wRV
 wRV
 wRV
-yjd
+duK
 pfU
 pfU
 pfU
@@ -38621,15 +38762,15 @@ pfU
 pqd
 lMA
 lMA
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
-yjd
+duK
+duK
+duK
+duK
+duK
+duK
+duK
+duK
+duK
 pfU
 pfU
 pfU
@@ -63288,7 +63429,7 @@ xUk
 xUk
 xUk
 xUk
-xUk
+nUQ
 xUk
 xUk
 xUk
@@ -64044,7 +64185,7 @@ kPm
 kPm
 rlb
 kES
-unC
+gsV
 unC
 unC
 unC
@@ -64830,7 +64971,7 @@ xUk
 xUk
 xUk
 xUk
-xUk
+gFQ
 xUk
 xUk
 xUk
@@ -67422,12 +67563,12 @@ wxn
 wxn
 wxn
 wxn
-wxn
-kxy
-kxy
-kxy
-kxy
-kxy
+pyQ
+dGw
+dGw
+dGw
+dGw
+dGw
 rlb
 rlb
 rlb
@@ -67679,12 +67820,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
+dGw
 mjG
 mjG
 mjG
 mjG
-kxy
+dGw
 rlb
 rlb
 rlb
@@ -67936,12 +68077,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
+dGw
 mjG
 mjG
 mjG
 mjG
-kxy
+dGw
 rlb
 rlb
 rlb
@@ -68193,12 +68334,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
+dGw
 mjG
 mjG
 mjG
 mjG
-kxy
+dGw
 rlb
 rlb
 rlb
@@ -68450,12 +68591,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
+dGw
 mjG
 mjG
 mjG
 mjG
-kxy
+dGw
 rlb
 rlb
 rlb
@@ -68707,12 +68848,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
+dGw
 mjG
 mjG
 mjG
 mjG
-kxy
+dGw
 rlb
 rlb
 rlb
@@ -68964,12 +69105,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
+dGw
 mjG
 mjG
 mjG
 mjG
-kxy
+dGw
 rlb
 rlb
 rlb
@@ -69221,12 +69362,12 @@ rlb
 rlb
 rlb
 rlb
-kxy
-kxy
-kxy
-kxy
-kxy
-kxy
+dGw
+dGw
+dGw
+dGw
+dGw
+dGw
 rlb
 rlb
 rlb
@@ -69409,7 +69550,7 @@ aal
 aal
 aal
 aan
-bAK
+xGY
 bAK
 bAK
 bAK
@@ -70192,7 +70333,7 @@ bZd
 bZd
 bZd
 err
-bZd
+pRn
 eEV
 bZd
 fpc
@@ -70457,7 +70598,7 @@ fKk
 aaq
 gBg
 aaq
-gTm
+sbG
 gTm
 gTm
 aaq
@@ -71737,19 +71878,19 @@ aaq
 aaq
 aaq
 aaq
-ftO
-ftO
-ftO
-gEP
-ftO
-ftO
-ftO
+fdu
 ftO
 ftO
 gEP
 ftO
 ftO
 ftO
+ftO
+ftO
+gEP
+ftO
+ftO
+rXY
 aaq
 aaq
 aaq

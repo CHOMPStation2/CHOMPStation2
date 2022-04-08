@@ -2220,9 +2220,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 3 Northwest";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -2281,8 +2281,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 3 Northeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -2332,9 +2333,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 4 Northwest";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -2364,8 +2365,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 4 Northeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -5865,6 +5867,16 @@
 /obj/structure/toilet,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_10)
+"pE" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Upper Cargo Bay Exterior 2";
+	dir = 1;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint{
+	outdoors = 1
+	},
+/area/quartermaster/storage)
 "pF" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/paper_bin{
@@ -7065,6 +7077,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"sF" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Helipad East";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "sG" = (
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Library Central";
@@ -7494,9 +7515,9 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 3 Southwest";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -7588,9 +7609,6 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -7598,6 +7616,10 @@
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-8"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 3 Southeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -7618,9 +7640,9 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 4 Southwest";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -7698,11 +7720,12 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/cable/blue{
 	icon_state = "0-8"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 4 Southeast";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
@@ -9093,6 +9116,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
+"xV" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Upper Cargo Bay Exterior 3";
+	dir = 8;
+	name = "security camera"
+	},
+/turf/simulated/floor/tiled/techmaint{
+	outdoors = 1
+	},
+/area/quartermaster/warehouse)
 "xW" = (
 /obj/machinery/light{
 	dir = 1
@@ -10068,6 +10101,15 @@
 /obj/item/clothing/mask/smokable/cigarette/cigar,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
+"AG" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Helipad South";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint{
+	outdoors = 1
+	},
+/area/medical/medical_lockerroom)
 "AI" = (
 /obj/structure/bed/chair/sofa/brown{
 	dir = 8
@@ -10633,16 +10675,30 @@
 	dir = 9
 	},
 /obj/structure/closet/secure_closet/guncabinet/sidearm{
-	anchored = 1
+	anchored = 1;
+	starts_with = null
 	},
-/obj/item/weapon/gun/projectile/serdy_pistols/vp70m,
-/obj/item/weapon/gun/projectile/serdy_pistols/vp70m,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "BX" = (
@@ -10936,7 +10992,7 @@
 /area/engineering/engine_waste)
 "CJ" = (
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost Auxiliary Room";
+	c_tag = "ENG - Reactor TEG Room";
 	dir = 10;
 	name = "Engineering_Outpost";
 	network = list("Engineering")
@@ -11260,16 +11316,27 @@
 	dir = 10
 	},
 /obj/structure/closet/secure_closet/guncabinet/sidearm{
-	anchored = 1
+	anchored = 1;
+	starts_with = null
 	},
-/obj/item/weapon/gun/projectile/serdy_pistols/vp70m,
-/obj/item/weapon/gun/projectile/serdy_pistols/vp70m,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
-/obj/item/ammo_magazine/m9mm/vp70,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
+/obj/item/weapon/gun/projectile/serdy_pistols/glock71{
+	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
+	},
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/ammo_magazine/m9mm/rubber,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "DG" = (
@@ -11821,6 +11888,15 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"EO" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Medbay Helipad North";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "EP" = (
 /obj/structure/closet/crate{
 	name = "Tritium Storage"
@@ -11850,7 +11926,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Fuel Storage";
+	c_tag = "ENG - Reactor Fuel Storage";
 	dir = 6;
 	name = "Engineering_Outpost";
 	network = list("Engineering")
@@ -12697,7 +12773,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Reactor Room East";
+	c_tag = "ENG - Reactor Room East";
 	dir = 4;
 	name = "Reactor_Room";
 	network = list("Engine")
@@ -13687,7 +13763,7 @@
 	id_tag = "Outpost Fusion Core"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Reactor Monitoring";
+	c_tag = "ENG - Reactor Monitoring";
 	name = "Engineering_Outpost";
 	network = list("Engineering")
 	},
@@ -13893,9 +13969,6 @@
 /obj/structure/marker_beacon{
 	icon_state = "markerindigo-on";
 	picked_color = "Teal"
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Club North"
 	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
@@ -17148,6 +17221,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
+"Su" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Upper Cargo Bay Exterior 1";
+	dir = 1;
+	name = "security camera"
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/quartermaster/storage)
 "Sv" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -40054,7 +40142,7 @@ ON
 Xu
 xD
 xD
-xD
+xV
 xD
 xD
 xD
@@ -40321,7 +40409,7 @@ QF
 xD
 xD
 xD
-xD
+pE
 VH
 ZY
 ZY
@@ -45713,7 +45801,7 @@ yF
 yF
 Xu
 ZJ
-Vu
+Su
 YW
 eY
 Nb
@@ -56231,7 +56319,7 @@ xD
 xD
 xD
 xD
-xD
+Lt
 xD
 xD
 xD
@@ -56488,7 +56576,7 @@ xD
 xD
 xD
 xD
-xD
+sF
 xD
 xD
 xD
@@ -59823,6 +59911,7 @@ vT
 Ey
 Ey
 Hq
+EO
 xD
 xD
 xD
@@ -59831,8 +59920,7 @@ xD
 xD
 xD
 xD
-xD
-xD
+AG
 xD
 NQ
 Tg

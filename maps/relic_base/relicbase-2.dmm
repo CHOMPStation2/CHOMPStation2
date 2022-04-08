@@ -225,6 +225,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
+"ahG" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Church Northwest"
+	},
+/turf/simulated/floor/wood,
+/area/chapel/main)
 "ahR" = (
 /obj/structure/cable/blue{
 	icon_state = "2-4"
@@ -509,6 +515,13 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"apv" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - HoP Line"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/crew_quarters/heads/sc/hop)
 "apz" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/tinted{
@@ -823,6 +836,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_6)
+"aBY" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - South of Hangar Pads 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = -1
+	},
+/area/medical/biostorage)
 "aCm" = (
 /obj/machinery/door/airlock/glass{
 	name = "Gym"
@@ -3421,6 +3443,22 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/foyer)
+"ckL" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 2 Northwest";
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/two)
 "ckO" = (
 /obj/structure/boxingrope{
 	density = 0;
@@ -5735,6 +5773,9 @@
 /obj/item/device/gps,
 /obj/item/device/gps,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - EVA North"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
 "dpO" = (
@@ -6450,6 +6491,10 @@
 /obj/machinery/photocopier,
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Church Office";
+	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/chapel/office)
@@ -7172,6 +7217,14 @@
 /obj/random/unidentified_medicine/combat_medicine,
 /turf/simulated/floor/tiled/milspec,
 /area/surface/outpost/main/landing/two)
+"edX" = (
+/obj/structure/railing/grey,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 3";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/dorms/dorm_3)
 "edZ" = (
 /obj/structure/flora/bush,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -7273,6 +7326,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
+"ehU" = (
+/obj/structure/railing/grey,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 4";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/dorms/dorm_4)
 "eie" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -9763,6 +9824,10 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Church Southeast";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/chapel/main)
 "fnx" = (
@@ -10421,6 +10486,22 @@
 /obj/item/weapon/pickaxe,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
+"fFm" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 2 Northeast";
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/two)
 "fFn" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -11320,11 +11401,12 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
 /obj/effect/landmark{
 	name = "blobstart"
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - EVA Central";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
@@ -11572,6 +11654,14 @@
 /obj/item/weapon/storage/box/donkpockets,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_7)
+"gkU" = (
+/obj/structure/railing/grey,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 6";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/dorms/dorm_6)
 "glc" = (
 /obj/machinery/door/window/brigdoor/southright{
 	dir = 1
@@ -13103,6 +13193,16 @@
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
+"hdH" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 8";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/dorms/dorm_8)
 "hej" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water,
@@ -15703,6 +15803,10 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - EVA South";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
 "ivE" = (
@@ -18752,6 +18856,14 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/bmarble,
 /area/surface/outpost/mining_main/refinery)
+"kiJ" = (
+/obj/structure/railing/grey,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/dorms/dorm_2)
 "kiR" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -19687,6 +19799,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_8)
+"kFJ" = (
+/obj/structure/railing/grey,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 5";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/dorms/dorm_5)
 "kFO" = (
 /obj/structure/flora/tree/jungle_small{
 	icon_state = "tree4"
@@ -20567,6 +20687,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
+"lhK" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 1 Northwest";
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/one)
 "lhZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -22408,6 +22544,10 @@
 	pixel_x = -6;
 	pixel_y = -22
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - South of Hangar Pads 1";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
 	},
@@ -24104,6 +24244,18 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/rnd/research)
+"nfJ" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 1 Southeast";
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/one)
 "nfT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -24553,6 +24705,18 @@
 /obj/effect/floor_decal/rust/steel_decals_rusted1,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
+"nur" = (
+/obj/machinery/light/bigfloorlamp,
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = 32
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - EMT Entrance";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/engineering/external_lights)
 "nuK" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -25520,6 +25684,14 @@
 /obj/random/tech_supply,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
+"obx" = (
+/obj/structure/railing/grey,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 1";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outpost/main/dorms/dorm_1)
 "obW" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/blood/oil{
@@ -28251,6 +28423,18 @@
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water,
 /area/surface/outside/plains/outpost)
+"pLS" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 2 Southwest";
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/two)
 "pLV" = (
 /obj/structure/bed/chair/sofa/blue{
 	dir = 1
@@ -31534,6 +31718,16 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/heads/sc/cmo)
+"rqj" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 10";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/dorms/dorm_10)
 "rqG" = (
 /obj/structure/boxingrope{
 	layer = 4.1
@@ -31725,6 +31919,10 @@
 /obj/item/weapon/stamp/denied{
 	pixel_x = 4;
 	pixel_y = -2
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Internal Affairs";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
@@ -32800,6 +32998,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"sbE" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 2 Southeast";
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/two)
 "sch" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -32961,6 +33171,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
+"shb" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 9";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/dorms/dorm_9)
 "she" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -33403,6 +33623,16 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"stJ" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Apartment 7";
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outpost/main/dorms/dorm_7)
 "stM" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -34467,6 +34697,13 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"sVC" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Sauna Entry";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "sVG" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/light/no_nightshift,
@@ -35802,6 +36039,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/primary/thirddeck/stationgateway)
+"tGe" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 1 Southwest";
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/one)
 "tGw" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/disposalpipe/segment,
@@ -37304,6 +37553,10 @@
 /turf/simulated/floor/water/contaminated,
 /area/surface/outpost/civilian/emergency_storage)
 "uAQ" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Church Crematorium";
+	dir = 4
+	},
 /turf/simulated/floor/bmarble,
 /area/chapel/office)
 "uBa" = (
@@ -37925,6 +38178,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"uMN" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Tram Stairwell Upper"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/hallway/primary/seconddeck/dockhallway)
 "uNa" = (
 /obj/structure/closet/radiation,
 /obj/effect/floor_decal/borderfloorblack{
@@ -42411,6 +42670,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/external_lights)
+"xcF" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hangar Pad 1 Northeast";
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/main/landing/one)
 "xcK" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -67431,7 +67706,7 @@ rvr
 rLe
 rLe
 xfA
-vBp
+ahG
 vBp
 vBp
 oCI
@@ -68729,7 +69004,7 @@ wQO
 yeV
 yeV
 ybp
-cLe
+gkU
 wvo
 qsR
 tAX
@@ -70785,7 +71060,7 @@ yeV
 yeV
 ygB
 mCZ
-oJK
+kFJ
 oiE
 mqR
 tFH
@@ -72841,7 +73116,7 @@ yeV
 yeV
 yeV
 mCZ
-iri
+ehU
 xqs
 ttA
 xtu
@@ -73863,7 +74138,7 @@ klm
 xkW
 nRr
 yek
-vAp
+rqj
 jBn
 yeV
 yeV
@@ -74897,7 +75172,7 @@ yeV
 yeV
 yeV
 mCZ
-uqn
+edX
 xrn
 uxd
 tKz
@@ -75919,7 +76194,7 @@ qEB
 wvj
 dRy
 vRB
-iMz
+shb
 rLe
 yeV
 yeV
@@ -76953,7 +77228,7 @@ yeV
 ygB
 yeV
 mCZ
-vmW
+kiJ
 pFY
 vri
 vai
@@ -77975,7 +78250,7 @@ sNo
 xAa
 wCs
 wLd
-vTI
+hdH
 rLe
 yeV
 yeV
@@ -79009,7 +79284,7 @@ yeV
 ygB
 yeV
 pKL
-qdG
+obx
 xZE
 lsQ
 plr
@@ -80031,7 +80306,7 @@ ioo
 wDj
 lqv
 wvX
-jTq
+stJ
 rLe
 yeV
 yeV
@@ -80494,7 +80769,7 @@ nLb
 yeV
 mCZ
 mCZ
-pWd
+nur
 mCZ
 mCZ
 pWd
@@ -82030,7 +82305,7 @@ lme
 lPs
 mfZ
 uCw
-mSS
+apv
 yeV
 yeV
 mCZ
@@ -83872,7 +84147,7 @@ tXP
 skE
 cib
 uOr
-uOr
+sVC
 bzp
 yeV
 yeV
@@ -85860,7 +86135,7 @@ hra
 rLe
 rLe
 ucD
-blD
+lhK
 bAq
 xVX
 xVX
@@ -85875,7 +86150,7 @@ xVX
 xVX
 xVX
 bCk
-hWB
+tGe
 ilH
 rLe
 lgs
@@ -86398,7 +86673,7 @@ lgs
 sYa
 lQk
 ydQ
-sYa
+aBY
 mWk
 noi
 nOo
@@ -88430,7 +88705,7 @@ rLe
 rLe
 rLe
 ucD
-blD
+xcF
 bCk
 xVX
 xVX
@@ -88445,7 +88720,7 @@ xVX
 xVX
 xVX
 bAq
-hWB
+nfJ
 ilH
 rLe
 wEa
@@ -89972,7 +90247,7 @@ rLe
 rLe
 rLe
 ucD
-bnw
+ckL
 bEZ
 bFI
 cqf
@@ -89987,7 +90262,7 @@ bFI
 cqf
 bFL
 bFL
-hXo
+pLS
 ilH
 rLe
 rLe
@@ -92542,7 +92817,7 @@ fgv
 rLe
 rLe
 ucD
-bnw
+fFm
 bHf
 bFI
 bFI
@@ -92557,7 +92832,7 @@ bFI
 bFI
 bFL
 bFL
-hXo
+sbE
 ilH
 rLe
 rLe
@@ -96674,7 +96949,7 @@ rLe
 iTg
 jCC
 klz
-kSF
+uMN
 kSF
 kSF
 klz
