@@ -3214,10 +3214,28 @@
 /turf/simulated/floor/tiled/freezer/cold,
 /area/groundbase/civilian/kitchen/freezer)
 "jx" = (
+<<<<<<< HEAD
 /obj/structure/bed/chair/wood/wings,
 /obj/effect/landmark/start/chaplain,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/chapel/office)
+=======
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "shower door"
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/room2)
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 "jy" = (
 /obj/machinery/gibber,
 /turf/simulated/floor/tiled/freezer/cold,
@@ -4790,6 +4808,7 @@
 /area/groundbase/cargo/office)
 "op" = (
 /obj/machinery/light,
+/obj/machinery/suspension_gen,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/hall)
 "oq" = (
@@ -5281,6 +5300,27 @@
 /obj/machinery/transhuman/synthprinter,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/robotics)
+<<<<<<< HEAD
+=======
+"pT" = (
+/obj/machinery/suspension_gen,
+/turf/simulated/floor/tiled,
+/area/groundbase/science/hall)
+"pU" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Chapel Office";
+	req_access = list(27)
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/groundbase/civilian/chapel)
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 "pV" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -5940,6 +5980,25 @@
 /obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
+<<<<<<< HEAD
+=======
+"rR" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "shower door"
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/room6)
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 "rT" = (
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4
@@ -7015,6 +7074,25 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
+<<<<<<< HEAD
+=======
+"vw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/machinery/alarm{
+	dir = 8
+	},
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "shower door"
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/room8)
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 "vy" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -11022,12 +11100,23 @@
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level2/nw)
 "Ho" = (
+<<<<<<< HEAD
 /obj/machinery/power/apc{
 	dir = 8
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+=======
+/obj/structure/table/woodentable,
+/obj/random/donkpocketbox,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8
+	},
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room5)
 "Hp" = (
@@ -11356,6 +11445,20 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/groundbase/civilian/hydroponics)
+<<<<<<< HEAD
+=======
+"Io" = (
+/obj/structure/table/woodentable,
+/obj/random/donkpocketbox,
+/obj/machinery/power/apc{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/dorms/room5)
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 "Ip" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -11608,8 +11711,14 @@
 /obj/machinery/power/apc{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
+=======
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "shower door"
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room1)
@@ -13661,7 +13770,7 @@
 /turf/simulated/floor/virgo3c{
 	edge_blending_priority = -1
 	},
-/area/groundbase/level2/nw)
+/area/groundbase/level2/northspur)
 "OJ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -22927,7 +23036,7 @@ Ov
 PR
 lw
 Vr
-Vr
+pT
 XX
 XX
 aa

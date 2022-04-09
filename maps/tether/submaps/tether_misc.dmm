@@ -3498,9 +3498,6 @@
 "Az" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
-"Ba" = (
-/turf/simulated/floor/holofloor/reinforced,
-/area/holodeck/the_uwu_zone)
 "Bi" = (
 /obj/structure/table/woodentable/holotable,
 /obj/effect/landmark/costume/madscientist,
@@ -124013,11 +124010,11 @@ bN
 bN
 bN
 bN
-Ba
 bN
 bN
 bN
-Ba
+bN
+bN
 bN
 fZ
 ap
@@ -124439,11 +124436,11 @@ bN
 bN
 bN
 bN
-Ba
 bN
 bN
 bN
-Ba
+bN
+bN
 bN
 fZ
 ap
