@@ -1083,13 +1083,13 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/library)
 "aIz" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Cargo North 1";
-	dir = 1
+/obj/structure/ore_box,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Mining Op Room 2";
+	name = "security camera"
 	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = -1
-	},
+/turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
 "aJo" = (
 /obj/structure/bed/chair/sofa/right/blue,
@@ -2866,17 +2866,15 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 5
 	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/bordercorner2{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "bRn" = (
@@ -3899,34 +3897,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "cpk" = (
-/obj/structure/closet/crate/wooden{
-	desc = "A crate made from wood and lined with straw. Cheapest form of storage. Has a label on it, that reads 'DO NOT REMOVE' and 'KEEP AWAY FROM FLAMMABLES'";
-	name = "Spare Ammo"
-	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/turf/simulated/shuttle/floor/purple,
-/area/shuttle/minoutpost/base)
+/obj/structure/flora/log1,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "cpv" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/structure/table/marble,
@@ -4512,14 +4485,9 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/engineering/workshop)
 "cCT" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Sec East 2";
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
-	},
-/area/security/evidence_storage)
+/obj/structure/flora/smallbould,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "cDy" = (
 /obj/structure/table/standard,
 /obj/structure/cable/green{
@@ -6647,6 +6615,12 @@
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloorblack,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Mining Locker Room";
+	dir = 1;
+	name = "security camera"
+	},
+/obj/effect/floor_decal/corner/beige/border,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "dIb" = (
@@ -8097,12 +8071,9 @@
 /turf/simulated/floor/plating,
 /area/security/warden)
 "eqp" = (
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Exterior North";
-	dir = 1
-	},
+/obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/security/security_restroom)
+/area/surface/outside/plains/outpost)
 "eqz" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -9284,17 +9255,9 @@
 	layer = 4;
 	pixel_y = -32
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 10
 	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "eSQ" = (
@@ -11260,6 +11223,7 @@
 	density = 0;
 	icon_state = "tank10"
 	},
+/obj/structure/flora/bboulder2,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "fOw" = (
@@ -12092,12 +12056,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "giJ" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Medbay East 3";
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/dirt,
-/area/medical/medical_restroom)
+/obj/structure/flora/rocks2,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "giN" = (
 /obj/machinery/door/airlock/glass_security{
 	id_tag = "BrigFoyer";
@@ -12884,16 +12845,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
-"gEs" = (
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Medbay West 6";
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
-	},
-/area/engineering/external_lights)
 "gEU" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/photo_album{
@@ -13443,17 +13394,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 4
 	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "gUO" = (
@@ -14922,17 +14865,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 8
 	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "hEJ" = (
@@ -15011,6 +14946,7 @@
 	tag_door = "car_mining_base_door"
 	},
 /obj/machinery/computer/shuttle_control/mining{
+	ai_control = 1;
 	dir = 1
 	},
 /obj/machinery/light/no_nightshift,
@@ -15824,6 +15760,7 @@
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "ibM" = (
@@ -17878,11 +17815,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
-"jdu" = (
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = -1
-	},
-/area/surface/outpost/mining_main)
 "jdD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -18474,12 +18406,8 @@
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
 	},
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Command East 3";
-	dir = 4
-	},
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/crew_quarters/heads/sc/hop)
+/area/surface/outside/plains/outpost)
 "jBd" = (
 /obj/structure/window/reinforced,
 /obj/structure/closet/walllocker_double{
@@ -21425,9 +21353,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
-"lbA" = (
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/medical/cryo/autoresleeve)
 "lbE" = (
 /obj/machinery/light/bigfloorlamp{
 	active_power_usage = 0;
@@ -24031,15 +23956,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/engineering/external_lights)
-"mwm" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Command North 2";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
-	},
-/area/crew_quarters/heads/sc/hop/quarters)
 "mwt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -24866,13 +24782,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
-"mQG" = (
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Exterior 1";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/maintenance/substation/command)
 "mQJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -25647,13 +25556,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
-"nji" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Chapel North 2";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/chapel/main)
 "nju" = (
 /obj/effect/floor_decal/stairs/dark_stairs,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -25837,12 +25739,6 @@
 "npz" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/heads/sc/cmo/quarters)
-"nqs" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Cargo South 2"
-	},
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/quartermaster/delivery)
 "nrv" = (
 /obj/structure/closet,
 /obj/effect/floor_decal/rust/color_rusted{
@@ -27015,9 +26911,6 @@
 /area/surface/outpost/mining_main/refinery)
 "nYY" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Medbay South 6"
-	},
 /obj/item/device/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -27187,7 +27080,7 @@
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/medical/cryo/autoresleeve)
+/area/surface/outside/plains/outpost)
 "ohU" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -27746,6 +27639,11 @@
 /obj/machinery/mineral/equipment_vendor,
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Mining Op Room 1";
+	dir = 8;
+	name = "security camera"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
@@ -28740,6 +28638,7 @@
 	dir = 8
 	},
 /obj/machinery/computer/shuttle_control/mining{
+	ai_control = 1;
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/purple,
@@ -29512,15 +29411,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/biostorage)
-"pym" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Tool Storage West";
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
-	},
-/area/storage/primary)
 "pyQ" = (
 /turf/simulated/wall,
 /area/maintenance/substation/civilian)
@@ -30311,14 +30201,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/hallway)
-"pSB" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Engineering South"
-	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = -1
-	},
-/area/engineering/workshop)
 "pSJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/photocopier/faxmachine{
@@ -30864,17 +30746,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 9
 	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "qcV" = (
@@ -30900,7 +30774,9 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/obj/machinery/computer/shuttle_control/exploration,
+/obj/machinery/computer/shuttle_control/exploration{
+	ai_control = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research)
 "qdm" = (
@@ -32112,6 +31988,11 @@
 /obj/item/weapon/storage/belt/utility,
 /obj/item/weapon/storage/belt/utility,
 /obj/item/weapon/storage/belt/utility,
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Mining Op Room 3";
+	dir = 1;
+	name = "security camera"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
 "qJn" = (
@@ -32265,25 +32146,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
-"qPa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/catwalk,
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Research North 4";
-	dir = 1
-	},
-/turf/simulated/floor/plating{
-	outdoors = 1
-	},
-/area/crew_quarters/heads/sc/hor)
 "qPb" = (
 /obj/structure/cable/yellow{
 	dir = 1
@@ -32396,17 +32258,9 @@
 	pixel_x = -24;
 	pixel_y = 8
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 8
 	},
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "qSr" = (
@@ -32645,13 +32499,6 @@
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
-"qYW" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Command East 1";
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/crew_quarters/heads/sc/hop/quarters)
 "qZm" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/regular{
@@ -34986,15 +34833,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_7)
-"sid" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Engineering West 4";
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = -1
-	},
-/area/engineering/hallway/engineer_hallway)
 "sio" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -39073,15 +38911,6 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
-"ulV" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Research North 5";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty{
-	outdoors = 1
-	},
-/area/rnd/research)
 "uml" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -39450,18 +39279,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
-"uxf" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Apartments Substation South"
-	},
-/turf/simulated/floor/plating{
-	outdoors = 1
-	},
-/area/maintenance/substation/civilian)
 "uxp" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
@@ -41220,6 +41037,7 @@
 /area/rnd/research)
 "vjf" = (
 /obj/machinery/computer/shuttle_control/research{
+	ai_control = 1;
 	req_one_access = list(47)
 	},
 /obj/machinery/light{
@@ -41845,6 +41663,7 @@
 	dir = 4
 	},
 /obj/machinery/computer/shuttle_control/research{
+	ai_control = 1;
 	dir = 1;
 	req_one_access = list(47)
 	},
@@ -42429,13 +42248,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/engineering/foyer)
-"vJP" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Cargo North 2";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/dirt,
-/area/surface/outpost/mining_main)
 "vKE" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -42684,25 +42496,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
-"vTZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/structure/catwalk,
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Research North 6";
-	dir = 1
-	},
-/turf/simulated/floor/plating{
-	outdoors = 1
-	},
-/area/rnd/lab)
 "vUe" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/borderfloorblack{
@@ -43300,6 +43093,10 @@
 /obj/structure/tank{
 	icon_state = "tank3"
 	},
+/obj/structure/flora/bboulder1{
+	pixel_x = -6;
+	pixel_y = -11
+	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "weE" = (
@@ -43599,10 +43396,6 @@
 	d2 = 0;
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmos South";
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "wns" = (
@@ -43671,6 +43464,10 @@
 /obj/structure/cable/yellow{
 	d2 = 0;
 	icon_state = "1-4"
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Atmos South";
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -44292,15 +44089,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/chemistry)
-"wFG" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Sec East 1";
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
-	},
-/area/security/evidence_storage)
 "wFW" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8
@@ -45373,6 +45161,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "xkd" = (
@@ -46199,6 +45990,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "xxl" = (
@@ -46269,14 +46063,10 @@
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
 	},
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Engineering West";
-	dir = 8
-	},
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = -1
 	},
-/area/engineering/workshop)
+/area/surface/outside/plains/outpost)
 "xza" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -47331,6 +47121,15 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack/corner2{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/bordercorner2{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/mininglockerroom)
 "xTI" = (
@@ -47529,15 +47328,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/medical_lockerroom)
-"xXu" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Engineering North 2";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = -1
-	},
-/area/engineering/hallway/engineer_hallway)
 "xXH" = (
 /obj/structure/stairs/spawner/north,
 /obj/structure/railing/grey{
@@ -65516,7 +65306,7 @@ wpz
 wpz
 kGW
 kGW
-pym
+kYl
 kGW
 kGW
 kGW
@@ -66315,7 +66105,7 @@ hDM
 hDM
 ldg
 vtd
-pSB
+ttz
 sYa
 tgb
 kGW
@@ -67089,13 +66879,13 @@ vtd
 sYa
 sYa
 sYa
-jdu
+ttz
 wDK
 wNP
 vfY
 dkT
 pfI
-cpk
+njH
 vfY
 wNP
 wDK
@@ -67330,7 +67120,7 @@ tgb
 tgb
 tgb
 tgb
-xXu
+ttz
 wNG
 bNe
 vzI
@@ -67346,7 +67136,7 @@ vtd
 ybp
 ybp
 ybp
-aIz
+ttz
 wDK
 wNP
 bnf
@@ -67585,7 +67375,7 @@ tgb
 tgb
 tgb
 tgb
-sid
+ttz
 tgb
 tgb
 fbb
@@ -68374,7 +68164,7 @@ xLV
 ybp
 ybp
 wDK
-rbj
+aIz
 wwL
 wwL
 pZR
@@ -68650,7 +68440,7 @@ vRh
 vRh
 vRh
 xZf
-nqs
+rLe
 fgv
 rLe
 rLe
@@ -68886,7 +68676,7 @@ iQR
 xLV
 xLV
 ybp
-vJP
+ybp
 wDK
 jAv
 pQy
@@ -69938,7 +69728,7 @@ ius
 rvr
 iJD
 rLe
-nji
+rLe
 wQO
 hDW
 vBp
@@ -75264,7 +75054,7 @@ rLe
 rLe
 rLe
 rLe
-eqp
+rLe
 bZO
 ctA
 cLr
@@ -78192,7 +77982,7 @@ thh
 wet
 itZ
 pyQ
-uxf
+xZh
 rLe
 rLe
 rLe
@@ -81563,7 +81353,7 @@ rLe
 swx
 fgv
 rLe
-rLe
+cpk
 rLe
 rLe
 iDi
@@ -81822,7 +81612,7 @@ fOv
 bkg
 tdt
 iSj
-rLe
+cCT
 rLe
 rLe
 fgv
@@ -82079,7 +81869,7 @@ ddM
 bsv
 dGs
 gBt
-rLe
+eqp
 ygw
 rLe
 rLe
@@ -82337,7 +82127,7 @@ xeU
 fLz
 wez
 rLe
-rLe
+giJ
 ygw
 rLe
 fgv
@@ -82592,7 +82382,7 @@ fgv
 fgv
 rLe
 rLe
-rLe
+swx
 ygw
 rLe
 rLe
@@ -83244,7 +83034,7 @@ dVX
 dVX
 dVX
 rLe
-mQG
+rLe
 igA
 iMg
 juH
@@ -83489,12 +83279,12 @@ kGW
 kGW
 byY
 kGW
-cCT
+kYl
 kGW
 kGW
 kGW
 kGW
-wFG
+kYl
 kGW
 kYl
 dfk
@@ -84526,7 +84316,7 @@ dcJ
 aCQ
 aCQ
 tgb
-mwm
+kYl
 hcb
 hyX
 hUY
@@ -85043,7 +84833,7 @@ lPo
 dfk
 dfk
 rLe
-qYW
+rLe
 rLe
 iQz
 jAs
@@ -90482,7 +90272,7 @@ ttz
 qdw
 nYh
 nYh
-vTZ
+ylD
 nFg
 pxu
 qio
@@ -91251,7 +91041,7 @@ meE
 hke
 dOw
 cjW
-gEs
+dOw
 kYl
 hZu
 jgT
@@ -92024,7 +91814,7 @@ mpj
 ylD
 rLe
 hZu
-ulV
+hZu
 lrF
 gCJ
 lrF
@@ -92534,7 +92324,7 @@ rRn
 sEF
 qFS
 rRn
-qPa
+tJc
 uCT
 uCT
 uCT
@@ -93031,7 +92821,7 @@ rrK
 mGe
 pas
 kPV
-giJ
+mCZ
 tRd
 rLe
 uPu
@@ -93808,7 +93598,7 @@ mCZ
 mCZ
 rLe
 rLe
-lbA
+rLe
 twC
 twC
 twC

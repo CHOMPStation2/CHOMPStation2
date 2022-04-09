@@ -22,14 +22,6 @@
 	},
 /turf/simulated/mineral/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
-"af" = (
-/obj/machinery/shuttle_sensor{
-	dir = 5;
-	id_tag = "miningsens_exp";
-	pixel_y = 7
-	},
-/turf/simulated/wall/r_wall,
-/area/surface/cave/explored/normal)
 "ai" = (
 /obj/effect/decal/remains/mummy1{
 	color = "#7F0000";
@@ -39,20 +31,19 @@
 /turf/simulated/mineral/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "am" = (
-/turf/simulated/mineral/floor/cave{
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	icon = 'icons/turf/thor_ch.dmi';
+	icon_state = "basalt0";
 	temperature = 393.15
 	},
 /area/surface/cave/unexplored/deep)
 "as" = (
-/turf/simulated/mineral/floor/cave{
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	icon = 'icons/turf/thor_ch.dmi';
+	icon_state = "basalt0";
 	temperature = 393.15
 	},
 /area/surface/cave/unexplored/normal)
-"aH" = (
-/turf/simulated/mineral/floor/cave{
-	temperature = 393.15
-	},
-/area/surface/cave/explored/normal)
 "aK" = (
 /obj/machinery/conveyor{
 	id = "anolongstorage"
@@ -76,17 +67,16 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology)
 "bC" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology)
+"bD" = (
+/obj/structure/catwalk,
 /obj/machinery/conveyor_switch{
 	id = "anolongstorage";
 	req_access = list(65)
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology)
-"bD" = (
-/obj/machinery/light/small,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology)
 "bG" = (
@@ -98,22 +88,23 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology)
 "bW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external{
-	frequency = "1380";
-	id_tag = "RO_lock_outer";
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "main6_airlock_exterior";
 	locked = 1;
-	name = "Xenoarch Airlock"
+	name = "Main Outpost External"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "RO_lock";
-	name = "exterior access button";
-	pixel_x = 32
+	frequency = 1379;
+	master_tag = "main6_airlock_control";
+	name = "External Access Button";
+	pixel_x = 26
 	},
-/turf/simulated/floor/plating,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/research/xenoarcheology)
 "cv" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -140,45 +131,32 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "RO_pump"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "cD" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 1
-	},
-/obj/machinery/meter,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "cF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "RO_lock";
-	pixel_x = 32;
-	tag_airpump = "RO_pump";
-	tag_chamber_sensor = "RO_sensor";
-	tag_exterior_door = "RO_lock_outer";
-	tag_interior_door = "RO_lock_inner"
+/obj/machinery/light/small{
+	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380;
-	id_tag = "RO_pump"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "cG" = (
 /turf/simulated/wall/r_wall,
@@ -311,37 +289,27 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch Airlock 2";
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "RO_pump"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "eB" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/manifold4w/visible,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "eD" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "RO_sensor";
-	pixel_x = 32
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380;
-	id_tag = "RO_pump"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "eI" = (
 /obj/machinery/conveyor{
@@ -395,13 +363,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/longtermstorage)
-"fF" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "fH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -450,22 +411,24 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
 "fY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external{
-	frequency = "1380";
-	id_tag = "RO_lock_inner";
-	locked = 1;
-	name = "Xenoarch Airlock"
-	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "RO_lock";
-	name = "interior access button";
-	pixel_x = 32
+	frequency = 1379;
+	master_tag = "main6_airlock_control";
+	name = "Internal Access Button";
+	pixel_x = 26;
+	pixel_y = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/floor/plating,
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "main6_airlock_interior";
+	locked = 1;
+	name = "Main Outpost Internal"
+	},
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/research/xenoarcheology)
 "gh" = (
 /obj/structure/extinguisher_cabinet{
@@ -604,16 +567,22 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "hT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "main6_airlock_control";
+	pixel_x = 26;
+	pixel_y = 26;
+	tag_exterior_door = "main6_airlock_exterior";
+	tag_interior_door = "main6_airlock_interior"
+	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "ic" = (
@@ -623,10 +592,10 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "im" = (
 /obj/structure/disposalpipe/segment{
@@ -975,21 +944,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
-"ly" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/shuttle/plating,
-/area/surface/cave/explored/normal)
 "lD" = (
 /obj/item/weapon/storage/excavation,
 /obj/item/weapon/pickaxe,
@@ -1030,14 +984,6 @@
 /obj/machinery/door/window/northleft,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
-"lV" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold4w/visible,
-/obj/machinery/meter,
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "lW" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -1229,15 +1175,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
-"nO" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "oa" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/powered/scrubber/huge,
@@ -1320,10 +1257,10 @@
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
 "oV" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
+/obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
 "oX" = (
 /obj/machinery/sleeper{
@@ -1398,13 +1335,64 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology)
 "pH" = (
-/obj/machinery/shuttle_sensor{
-	dir = 5;
-	id_tag = "miningsens_exp";
-	pixel_y = 7
+/obj/structure/table/rack{
+	dir = 1
 	},
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/mining_main/crew_area)
+/obj/item/weapon/pickaxe{
+	pixel_x = 5
+	},
+/obj/item/weapon/pickaxe{
+	pixel_x = 5
+	},
+/obj/item/weapon/shovel{
+	pixel_x = -5
+	},
+/obj/item/weapon/shovel{
+	pixel_x = -5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/ammo_magazine/m545/hunter,
+/obj/item/ammo_magazine/m545/hunter,
+/obj/item/ammo_magazine/m545/hunter,
+/obj/item/ammo_magazine/m545/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/cave/explored/normal)
 "pK" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/bio_suit/anomaly,
@@ -1597,7 +1585,9 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "rv" = (
-/turf/simulated/mineral/floor/cave{
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	icon = 'icons/turf/thor_ch.dmi';
+	icon_state = "basalt0";
 	temperature = 393.15
 	},
 /area/surface/outpost/mining_main/cave)
@@ -2316,12 +2306,10 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "zl" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1380;
-	id_tag = "mining_pump"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
 "zB" = (
 /obj/structure/sign/greencross{
@@ -2332,7 +2320,6 @@
 /area/surface/outpost/research/xenoarcheology/medical)
 "zE" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/crew_area)
 "zR" = (
@@ -2466,25 +2453,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
-"AU" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	id_tag = "mining_pump"
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "mining_lock";
-	pixel_y = 26;
-	tag_airpump = "mining_pump";
-	tag_chamber_sensor = "mining_sensor";
-	tag_exterior_door = "mining_lock_outer";
-	tag_interior_door = "mining_lock_inner"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "AY" = (
 /obj/machinery/mining/brace,
 /obj/structure/catwalk,
@@ -2626,12 +2594,25 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "Da" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/visible,
-/obj/machinery/meter,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
 "De" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -2899,24 +2880,26 @@
 /turf/simulated/floor/bluegrid,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "FM" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "main5_airlock_exterior";
+	locked = 1;
+	name = "Mining Outpost External"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "mining_lock";
-	name = "exterior access button";
-	pixel_y = -32
+	frequency = 1379;
+	master_tag = "main5_airlock_control";
+	name = "External Access Button";
+	pixel_y = -26
 	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = "1380";
-	id_tag = "mining_lock_outer";
-	locked = 1;
-	name = "Mining Airlock"
+/obj/structure/fans/tiny,
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/mining_main/crew_area)
 "Gf" = (
 /obj/effect/floor_decal/industrial/warning/full,
@@ -2977,29 +2960,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/crew_area)
 "GJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	id_tag = "mining_pump"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
 	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "mining_sensor";
-	pixel_y = 28
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
-"GT" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	id_tag = "mining_pump"
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "mining_sensor";
-	pixel_y = 28
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "GX" = (
 /obj/vehicle/train/engine{
 	dir = 1
@@ -3093,7 +3058,10 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "Hx" = (
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/surface/cave/explored/normal)
 "Hy" = (
 /obj/structure/cable/blue{
@@ -3122,11 +3090,10 @@
 /turf/simulated/floor/bluegrid,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "HQ" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techmaint,
 /area/surface/cave/explored/normal)
 "HU" = (
 /obj/machinery/artifact_scanpad,
@@ -3280,82 +3247,16 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/crew_area)
 "Ja" = (
-/obj/structure/table/rack{
-	dir = 1
-	},
-/obj/item/weapon/pickaxe{
-	pixel_x = 5
-	},
-/obj/item/weapon/pickaxe{
-	pixel_x = 5
-	},
-/obj/item/weapon/shovel{
-	pixel_x = -5
-	},
-/obj/item/weapon/shovel{
-	pixel_x = -5
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
 /obj/machinery/light/small{
 	dir = 1
-	},
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
-	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
-	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/crew_area)
 "Jb" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	id_tag = "mining_pump"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "mining_lock";
-	pixel_y = 26;
-	tag_airpump = "mining_pump";
-	tag_chamber_sensor = "mining_sensor";
-	tag_exterior_door = "mining_lock_outer";
-	tag_interior_door = "mining_lock_inner"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
 "Jf" = (
 /obj/vehicle/train/trolley{
@@ -3580,9 +3481,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/crew_area)
 "LK" = (
@@ -3592,33 +3490,37 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "main5_airlock_control";
+	pixel_x = 26;
+	pixel_y = -26;
+	tag_exterior_door = "main5_airlock_exterior";
+	tag_interior_door = "main5_airlock_interior"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/crew_area)
 "LN" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "main5_airlock_control";
+	name = "Internal Access Button";
+	pixel_x = 5;
+	pixel_y = -26
+	},
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "main5_airlock_interior";
+	locked = 1;
+	name = "Mining Outpost Internal"
+	},
+/obj/structure/fans/tiny,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "mining_lock";
-	name = "interior access button";
-	pixel_y = 26
-	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = "1380";
-	id_tag = "mining_lock_inner";
-	locked = 1;
-	name = "Mining Airlock"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/mining_main/crew_area)
 "Md" = (
 /obj/structure/cable/green{
@@ -3895,6 +3797,7 @@
 	dir = 10
 	},
 /obj/machinery/computer/shuttle_control/mining{
+	ai_control = 1;
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4030,26 +3933,6 @@
 "PQ" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/research/xenoarcheology/emergencystorage)
-"Qh" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "mining_lock";
-	name = "exterior access button";
-	pixel_y = -32
-	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = "1380";
-	id_tag = "mining_lock_outer";
-	locked = 1;
-	name = "Mining Airlock"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "Qj" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -4065,8 +3948,8 @@
 	},
 /area/surface/cave/unexplored/deep)
 "Qn" = (
-/obj/machinery/atmospherics/pipe/manifold/visible,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techmaint,
 /area/surface/cave/explored/normal)
 "Qs" = (
 /obj/structure/cable,
@@ -4438,13 +4321,23 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "VG" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
 "VI" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
@@ -4457,10 +4350,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
-"VT" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "VZ" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_east = 6;
@@ -4496,10 +4385,10 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/analysis)
 "WA" = (
-/obj/machinery/light/small{
+/obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techmaint,
 /area/surface/cave/explored/normal)
 "WF" = (
 /obj/item/weapon/stool/padded,
@@ -4653,14 +4542,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/analysis)
-"YA" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1380;
-	id_tag = "mining_pump"
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/normal)
 "YF" = (
 /obj/machinery/radiocarbon_spectrometer,
 /obj/structure/window/reinforced{
@@ -4702,27 +4583,11 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/emergencystorage)
 "Zn" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	icon = 'icons/turf/thor_ch.dmi';
+	icon_state = "basalt0";
+	temperature = 393.15
 	},
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "mining_lock";
-	name = "interior access button";
-	pixel_y = 26
-	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = "1380";
-	id_tag = "mining_lock_inner";
-	locked = 1;
-	name = "Mining Airlock"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
 /area/surface/cave/explored/normal)
 "Zq" = (
 /obj/structure/ore_box,
@@ -4762,11 +4627,11 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "ZF" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/surface/outpost/mining_main/crew_area)
+/area/surface/cave/explored/normal)
 "ZI" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -26270,11 +26135,11 @@ AS
 AS
 uW
 uW
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -26525,11 +26390,11 @@ uU
 Hx
 HQ
 AS
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -26776,16 +26641,16 @@ uU
 uU
 uU
 Mf
-oV
+Lj
 zE
 re
-VT
+WA
 Qn
 AS
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -27033,15 +26898,15 @@ zj
 zj
 uU
 IQ
-ZF
+Lj
 Oe
 uU
 WA
-fF
+Qn
 AS
-aH
-aH
-aH
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -27293,11 +27158,11 @@ IX
 LJ
 Og
 uU
-Hx
-Hx
+pH
+ZF
 AS
-aH
-aH
+Zn
+Zn
 sc
 sc
 sc
@@ -27553,8 +27418,8 @@ uU
 AS
 AS
 AS
-aH
-aH
+Zn
+Zn
 sc
 sc
 sc
@@ -27803,15 +27668,15 @@ uU
 uU
 uU
 uU
-uU
-LN
 ML
+LN
 uU
-aH
-aH
-aH
-aH
-aH
+uU
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -28314,12 +28179,12 @@ sc
 sc
 uW
 uW
-aH
-aH
+Zn
+Zn
 uU
 GJ
 VG
-zl
+oV
 uU
 rv
 rv
@@ -28576,7 +28441,7 @@ cv
 uU
 ML
 FM
-pH
+uU
 uU
 cv
 cv
@@ -28822,8 +28687,8 @@ sc
 sc
 sc
 sc
-aH
-aH
+Zn
+Zn
 sl
 wE
 wE
@@ -29079,8 +28944,8 @@ sc
 sc
 sc
 sc
-aH
-aH
+Zn
+Zn
 sB
 wE
 wE
@@ -29335,9 +29200,9 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
+Zn
+Zn
+Zn
 sB
 wE
 wE
@@ -29592,9 +29457,9 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
+Zn
+Zn
+Zn
 sl
 wE
 wE
@@ -29849,9 +29714,9 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
+Zn
+Zn
+Zn
 sl
 wE
 wE
@@ -30106,9 +29971,9 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
+Zn
+Zn
+Zn
 se
 ZO
 wF
@@ -30363,24 +30228,24 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -30620,24 +30485,24 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -30877,24 +30742,24 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -31134,22 +30999,22 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -31392,20 +31257,20 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 as
 sc
 sc
@@ -31650,19 +31515,19 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 as
 sc
 sc
@@ -31908,17 +31773,17 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 as
 as
 as
@@ -32165,17 +32030,17 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 as
 as
 as
@@ -32423,15 +32288,15 @@ sc
 sc
 sc
 sc
-as
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 as
@@ -32679,13 +32544,13 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
-aH
+Zn
 sc
 sc
 sc
@@ -32936,9 +32801,9 @@ sc
 sc
 sc
 sc
-as
-as
-as
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -33192,10 +33057,10 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -33448,10 +33313,10 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -33704,10 +33569,10 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -33960,11 +33825,11 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -34217,11 +34082,11 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -34473,10 +34338,10 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -34730,10 +34595,10 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -34987,9 +34852,9 @@ sc
 sc
 sc
 sc
-as
-as
-as
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -35243,10 +35108,10 @@ sc
 sc
 sc
 sc
-as
-as
-as
-as
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -35500,9 +35365,9 @@ sc
 sc
 sc
 sc
-as
-as
-as
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -35757,9 +35622,9 @@ sc
 sc
 sc
 sc
-as
-as
-as
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -36013,10 +35878,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -36269,10 +36134,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -36526,10 +36391,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -36782,11 +36647,11 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -37039,10 +36904,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -37296,10 +37161,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -37552,10 +37417,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -37809,9 +37674,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -38066,9 +37931,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -38322,9 +38187,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -38579,9 +38444,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -38836,8 +38701,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -39092,9 +38957,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -39349,9 +39214,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -39606,10 +39471,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -39862,11 +39727,11 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -40118,12 +39983,12 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -40375,12 +40240,12 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -40632,12 +40497,12 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -40889,12 +40754,12 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -41145,13 +41010,13 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
-am
-am
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -41402,13 +41267,13 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-Ql
-am
-am
-am
+Zn
+Zn
+Zn
+uW
+Zn
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -41659,9 +41524,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Zn
+Zn
+Zn
 Ql
 Ql
 am
@@ -41916,8 +41781,8 @@ Ql
 Ql
 Ql
 am
-am
-am
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -42173,8 +42038,8 @@ Ql
 Ql
 Ql
 am
-am
-am
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -42430,8 +42295,8 @@ Ql
 Ql
 am
 am
-am
-am
+Zn
+Zn
 Ql
 Ql
 Ql
@@ -42687,7 +42552,7 @@ Ql
 Ql
 am
 am
-am
+Zn
 Ql
 Ql
 Ql
@@ -49641,8 +49506,8 @@ sc
 sc
 as
 as
-aH
-aH
+Zn
+Zn
 as
 as
 sc
@@ -49895,14 +49760,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -50151,17 +50016,17 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -50394,7 +50259,7 @@ sc
 as
 as
 as
-aH
+Zn
 sc
 sc
 sc
@@ -50406,20 +50271,20 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -50651,33 +50516,33 @@ sc
 sc
 as
 as
-aH
-aH
-aH
+Zn
+Zn
+Zn
 sc
 sc
 sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -50907,41 +50772,41 @@ sc
 sc
 sc
 as
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -51164,41 +51029,41 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -51423,16 +51288,16 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cw
 cw
 cw
@@ -51681,14 +51546,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cw
 cw
 fJ
@@ -51938,14 +51803,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cy
 cW
 fM
@@ -52194,15 +52059,15 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cw
 dh
 fN
@@ -52451,15 +52316,15 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cw
 dl
 fQ
@@ -52708,15 +52573,15 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cw
 dJ
 fN
@@ -52965,15 +52830,15 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cy
 dL
 fR
@@ -53222,12 +53087,12 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 aK
 aK
 aK
@@ -53480,12 +53345,12 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aU
+Zn
+Zn
+Zn
+Zn
+Zn
+bD
 bC
 bG
 cw
@@ -53737,11 +53602,11 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 aU
 aU
 bJ
@@ -53994,11 +53859,11 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 aW
 aW
 bW
@@ -54251,17 +54116,17 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 aW
-bD
-bG
+aW
+bJ
 cF
 eD
-bG
+bJ
 ic
 kx
 mz
@@ -54508,12 +54373,12 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aU
+Zn
+Zn
+Zn
+Zn
+Zn
+bD
 bC
 bG
 cG
@@ -54765,11 +54630,11 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 aK
 aK
 aK
@@ -55022,14 +54887,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cR
 eS
 gu
@@ -55279,14 +55144,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-AS
 Zn
-ly
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cG
 fa
 gy
@@ -55536,14 +55401,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-AU
-lV
-YA
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cG
 fc
 gL
@@ -55793,14 +55658,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-GT
-nO
-YA
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cR
 fk
 gO
@@ -56050,14 +55915,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-ly
-Qh
-af
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cS
 fo
 gS
@@ -56307,14 +56172,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cS
 fq
 gX
@@ -56564,14 +56429,14 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cS
 fD
 gY
@@ -56823,12 +56688,12 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 cS
 fH
 hi
@@ -57081,11 +56946,11 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 cS
 cS
 ho
@@ -57340,10 +57205,10 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
 cS
 cS
 cS
@@ -57597,25 +57462,25 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -57857,23 +57722,23 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -58116,19 +57981,19 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -58377,15 +58242,15 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
@@ -58637,11 +58502,11 @@ sc
 sc
 sc
 sc
-aH
-aH
-aH
-aH
-aH
+Zn
+Zn
+Zn
+Zn
+Zn
 sc
 sc
 sc
