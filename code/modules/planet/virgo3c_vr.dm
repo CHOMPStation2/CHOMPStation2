@@ -53,15 +53,24 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	var/min = 0
 
 	switch(sun_position)
+<<<<<<< HEAD
 		if(0 to 0.45) // Night
 			low_brightness = 0.1
+=======
+		if(0 to 0.3) // Night
+			low_brightness = 0.3
+>>>>>>> 713823d286... Merge pull request #12690 from Very-Soft/gbtweaks
 			low_color = "#000066"
 
 			high_brightness = 0.2
 			high_color = "#66004D"
 			min = 0
 
+<<<<<<< HEAD
 		if(0.45 to 0.50) // Twilight
+=======
+		if(0.3 to 0.35) // Twilight
+>>>>>>> 713823d286... Merge pull request #12690 from Very-Soft/gbtweaks
 			low_brightness = 0.5
 			low_color = "#66004D"
 
@@ -69,7 +78,11 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 			high_color = "#CC3300"
 			min = 0.40
 
+<<<<<<< HEAD
 		if(0.50 to 0.55) // Sunrise/set
+=======
+		if(0.35 to 0.45) // Sunrise/set
+>>>>>>> 713823d286... Merge pull request #12690 from Very-Soft/gbtweaks
 			low_brightness = 0.9
 			low_color = "#CC3300"
 
@@ -77,7 +90,11 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 			high_color = "#FF9933"
 			min = 0.50
 
+<<<<<<< HEAD
 		if(0.55 to 1.00) // Noon
+=======
+		if(0.45 to 1.00) // Noon
+>>>>>>> 713823d286... Merge pull request #12690 from Very-Soft/gbtweaks
 			low_brightness = 3.0
 			low_color = "#DDDDDD"
 
