@@ -138,6 +138,16 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 95
 	velocity = 319
 
+/obj/item/projectile/bullet/a9x18/rubber
+	armor_penetration = -10
+	grains = 102
+	velocity = 301
+	damage = 10
+	agony = 40
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
+
 /obj/item/projectile/bullet/a10mm
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 10.17
@@ -156,6 +166,16 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 490
 	armor_penetration = -10
 	hollow_point = TRUE
+
+/obj/item/projectile/bullet/a10mm/rubber
+	armor_penetration = -10
+	grains = 142
+	velocity = 301
+	damage = 10
+	agony = 50
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/a380
 	fire_sound = 'sound/weapons/gunshot2.ogg'
@@ -236,6 +256,16 @@ only use the hollow_point and armor_penetration values.*/
 	armor_penetration = -10
 	hollow_point = TRUE
 
+/obj/item/projectile/bullet/rifle/a762/rubber
+	armor_penetration = -10
+	grains = 142
+	velocity = 661
+	damage = 25 //this still hurts like a motherfucker
+	agony = 100
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
+
 /obj/item/projectile/bullet/rifle/a762x39 //7.62x39 Soviet
 	fire_sound = 'sound/weapons/ballistics/a762.ogg'
 	diam = 7.85
@@ -252,6 +282,16 @@ only use the hollow_point and armor_penetration values.*/
 	hollow_point = TRUE
 	armor_penetration = -10
 
+/obj/item/projectile/bullet/rifle/a762x39/rubber
+	armor_penetration = -10
+	grains = 142
+	velocity = 661
+	damage = 15 //this still hurts like a motherfucker
+	agony = 70
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
+
 /obj/item/projectile/bullet/rifle/a545
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
 	diam = 5.6
@@ -262,6 +302,16 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 57
 	velocity = 890
 	armor_penetration = 15
+
+/obj/item/projectile/bullet/rifle/a545/rubber
+	armor_penetration = -10
+	grains = 82
+	velocity = 761
+	damage = 15
+	agony = 60
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a545/hp
 	hollow_point = TRUE
@@ -281,6 +331,16 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/rifle/a556/hp
 	hollow_point = TRUE
 	armor_penetration = -10
+
+/obj/item/projectile/bullet/rifle/a556/rubber
+	armor_penetration = -10
+	grains = 82
+	velocity = 861
+	damage = 15
+	agony = 60
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a145 // 14.5×114mm
 	fire_sound = 'sound/weapons/ballistics/a145.ogg'
@@ -302,7 +362,7 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/rifle/a95 //I hate you. There is no real world analog for 9.5x40mm, I will guestimate from the 9x39mm russian round and give it some bonus for future points or whatever
 	diam = 9.5
 	grains = 310
-	velocity = 365
+	velocity = 365 //cadyn cope above, beware ^^
 
 /obj/item/projectile/bullet/rifle/a9x39 //We also have actual 9x39mm
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
@@ -314,11 +374,30 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 267
 	armor_penetration = 25
 
+/obj/item/projectile/bullet/rifle/a9x39/rubber
+	armor_penetration = -10
+	grains = 282
+	velocity = 161
+	damage = 20
+	agony = 70
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
+
 /obj/item/projectile/bullet/rifle/a10x24
-	fire_sound = 'sound/weapons/ballistics/a762.ogg'
 	grains = 210
 	diam = 10.2
 	velocity = 840
+
+/obj/item/projectile/bullet/rifle/a10x24/rubber
+	armor_penetration = -10
+	grains = 280
+	velocity = 400
+	damage = 20
+	agony = 80
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a762/lmg	//This is actually 7.92x57 ffs
 	diam = 7.92
@@ -367,6 +446,26 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 820
 	penetrating = 2
 	armor_penetration=30
+
+/obj/item/projectile/bullet/rifle/a45lc //yee haw
+	diam = 11.43
+	grains = 250
+	velocity = 600
+
+/obj/item/projectile/bullet/rifle/a45lc/rifle
+	grains = 267
+	velocity = 800
+	armor_penetration = 15
+
+/obj/item/projectile/bullet/rifle/a45lc/rubber
+	armor_penetration = -10
+	grains = 282
+	velocity = 200
+	damage = 20
+	agony = 70
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 //NOTE: Ammo casings and magazines used to be in this part of the file. They have been moved to respective files in the projectiles/ammunition folder.
 
