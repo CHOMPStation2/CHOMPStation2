@@ -113,6 +113,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
+"adA" = (
+/obj/structure/tank{
+	icon_state = "2,0"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
 "adM" = (
 /obj/item/weapon/banner/virgov,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -1724,6 +1730,12 @@
 /obj/random/tech_supply,
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/emergency_storage)
+"bkg" = (
+/obj/structure/tank{
+	icon_state = "tank7"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "bkw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2082,6 +2094,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos)
+"bsv" = (
+/obj/structure/tank{
+	icon_state = "tank8"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "bsI" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5532,6 +5550,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"ddM" = (
+/obj/structure/tank{
+	icon_state = "tank12"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "dea" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/outdoors/dirt{
@@ -6584,6 +6608,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"dGs" = (
+/obj/structure/tank{
+	icon_state = "tank5"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "dGz" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
@@ -11122,6 +11152,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
+"fLz" = (
+/obj/structure/tank{
+	icon_state = "tank6"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "fLD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11228,6 +11264,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/hallway)
+"fOv" = (
+/obj/structure/tank{
+	icon_state = "tank10"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "fOw" = (
 /obj/structure/table/reinforced,
 /obj/structure/cable/green{
@@ -12727,6 +12769,12 @@
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
+"gBt" = (
+/obj/structure/tank{
+	icon_state = "tank2"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "gCb" = (
 /obj/machinery/camera/network/exterior{
 	c_tag = "EXT - Medbay East 1";
@@ -17383,6 +17431,10 @@
 /turf/simulated/open{
 	outdoors = 1
 	},
+/area/surface/outside/plains/outpost)
+"iSj" = (
+/obj/structure/tank,
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "iSn" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -25952,6 +26004,9 @@
 /area/chapel/office)
 "ntX" = (
 /obj/effect/floor_decal/rust/steel_decals_rusted1,
+/obj/structure/tank{
+	icon_state = "0,3"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
 "nug" = (
@@ -26020,9 +26075,8 @@
 /turf/simulated/floor/plating,
 /area/lawoffice)
 "nvO" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/floor_decal/rust/mono_rusted3{
-	color = "#9E3F00"
+/obj/structure/tank{
+	icon_state = "2,3"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
@@ -26051,6 +26105,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
+"nwK" = (
+/obj/structure/tank{
+	icon_state = "tank13"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "nxC" = (
 /obj/structure/shuttle/engine/propulsion,
 /obj/effect/decal/cleanable/blood/oil,
@@ -26813,6 +26873,9 @@
 "nVa" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/part_rusted2,
+/obj/structure/tank{
+	icon_state = "0,2"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
 "nVc" = (
@@ -26828,8 +26891,8 @@
 /obj/effect/floor_decal/rust/part_rusted2{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
+/obj/structure/tank{
+	icon_state = "1,2"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
@@ -26988,8 +27051,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "oan" = (
-/obj/effect/decal/cleanable/blood/oil{
-	icon_state = "mgibbl5"
+/obj/structure/tank{
+	icon_state = "2,2"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
@@ -27261,6 +27324,13 @@
 	outdoors = 1
 	},
 /area/surface/outpost/main/gym)
+"ons" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/tank{
+	icon_state = "2,1"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
 "onK" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -27665,6 +27735,20 @@
 /area/surface/outpost/main/garage)
 "oFl" = (
 /obj/random/cigarettes,
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate;
+	desc = "A very old looking BARC janihound chassis! Evidently, it doesn't seem to be lawed anymore. You should probably leave it alone.";
+	health = 300;
+	maxHealth = 300;
+	name = "BARC-209";
+	size_multiplier = 2;
+	vore_bump_chance = 50;
+	vore_default_contamination_color = "black";
+	vore_default_contamination_flavor = "acrid";
+	vore_escape_chance = 10;
+	vore_ignores_undigestable = 1;
+	vore_pounce_successrate = 60
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
 "oFv" = (
@@ -27786,8 +27870,8 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/dorms/dorm_5)
 "oJL" = (
-/obj/effect/decal/cleanable/blood/oil{
-	icon_state = "mgibbl1"
+/obj/structure/tank{
+	icon_state = "0,1"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
@@ -27813,8 +27897,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "oKH" = (
-/obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 8
+/obj/structure/tank{
+	icon_state = "1,1"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
@@ -28739,30 +28823,18 @@
 /area/surface/outpost/main/garage)
 "phY" = (
 /obj/effect/floor_decal/rust,
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate;
-	desc = "A very old looking BARC janihound chassis! Evidently, it doesn't seem to be lawed anymore. You should probably leave it alone.";
-	health = 300;
-	maxHealth = 300;
-	name = "BARC-209";
-	size_multiplier = 2;
-	vore_bump_chance = 50;
-	vore_default_contamination_color = "black";
-	vore_default_contamination_flavor = "acrid";
-	vore_escape_chance = 10;
-	vore_ignores_undigestable = 1;
-	vore_pounce_successrate = 60
+/obj/structure/tank{
+	icon_state = "0,0"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
 "pig" = (
-/obj/effect/decal/mecha_wreckage/pinnace{
-	anchored = 1
-	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/obj/random/trash_pile,
+/obj/structure/tank{
+	icon_state = "1,0"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/garage)
 "piC" = (
@@ -36832,6 +36904,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/holodeck_control)
+"tdt" = (
+/obj/structure/tank{
+	icon_state = "tank4"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "tdE" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -43236,6 +43314,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
+"wez" = (
+/obj/structure/tank{
+	icon_state = "tank3"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "weE" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -44155,6 +44239,16 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"wDI" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/structure/tank{
+	icon_state = "1,3"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
 "wDK" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/mining_main)
@@ -45079,6 +45173,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/external_lights)
+"xeU" = (
+/obj/structure/tank{
+	icon_state = "tank9"
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/plains/outpost)
 "xeZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -80969,9 +81069,9 @@ rLe
 rLe
 rLe
 rLe
-rLe
-rLe
-rLe
+fgv
+fgv
+fgv
 rLe
 rLe
 xUb
@@ -81224,13 +81324,13 @@ hra
 rLe
 rLe
 rLe
-rLe
-rLe
+fgv
+fgv
 yeX
 uDd
 rLe
-rLe
-rLe
+fgv
+fgv
 rLe
 rLe
 rLe
@@ -81481,14 +81581,14 @@ rLe
 rLe
 rLe
 swx
-rLe
+fgv
 rLe
 rLe
 rLe
 rLe
 iDi
 rLe
-rLe
+fgv
 rLe
 rLe
 tyG
@@ -81737,16 +81837,16 @@ rLe
 hra
 rLe
 rLe
+fgv
+fOv
+bkg
+tdt
+iSj
 rLe
 rLe
 rLe
-rLe
-rLe
-rLe
-rLe
-rLe
-rLe
-rLe
+fgv
+fgv
 rLe
 rLe
 xUb
@@ -81993,17 +82093,17 @@ rLe
 rLe
 rLe
 rLe
-rLe
-rLe
-rLe
-rLe
-rLe
-rLe
+fgv
+yeX
+ddM
+bsv
+dGs
+gBt
 rLe
 ygw
 rLe
 rLe
-rLe
+fgv
 rLe
 rLe
 rLe
@@ -82251,16 +82351,16 @@ fgv
 fgv
 rLe
 fgv
+fgv
+nwK
+xeU
+fLz
+wez
 rLe
-rLe
-yeX
-rLe
-rLe
-yeX
 rLe
 ygw
 rLe
-rLe
+fgv
 ygw
 rLe
 hra
@@ -82508,16 +82608,16 @@ rLe
 fgv
 fgv
 rLe
+fgv
+fgv
 rLe
-rLe
-rLe
-rLe
+swx
 rLe
 ygw
 rLe
 rLe
 rLe
-rLe
+fgv
 rLe
 rLe
 rLe
@@ -82766,7 +82866,7 @@ rLe
 fgv
 rLe
 rLe
-rLe
+fgv
 rLe
 rLe
 rLe
@@ -82774,7 +82874,7 @@ rLe
 rLe
 rLe
 yeX
-rLe
+fgv
 rLe
 rLe
 rLe
@@ -83023,14 +83123,14 @@ eli
 fgv
 fgv
 rLe
-rLe
-rLe
+fgv
+fgv
 rLe
 rLe
 rLe
 ygw
-rLe
-hra
+fgv
+ahD
 rLe
 rLe
 uDd
@@ -83281,12 +83381,12 @@ rLe
 rLe
 rLe
 rLe
-hra
-rLe
+ahD
+fgv
 rLe
 rLe
 yeX
-ygw
+ikc
 rLe
 rLe
 rLe
@@ -83539,10 +83639,10 @@ rLe
 rLe
 rLe
 hra
-rLe
-rLe
-ygw
-rLe
+fgv
+fgv
+ikc
+fgv
 rLe
 rLe
 rLe
@@ -94997,7 +95097,7 @@ yeV
 yeV
 mGy
 mZJ
-nuK
+wDI
 nVz
 oKH
 pig
@@ -95256,8 +95356,8 @@ mGy
 nar
 nvO
 oan
-mYm
-nrP
+ons
+adA
 pIF
 qtw
 rwn

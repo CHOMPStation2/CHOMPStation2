@@ -1915,6 +1915,7 @@
 #include "code\modules\awaymissions\loot.dm"
 #include "code\modules\awaymissions\loot_vr.dm"
 #include "code\modules\awaymissions\pamphlet.dm"
+#include "code\modules\awaymissions\tank_ch.dm"
 #include "code\modules\awaymissions\trigger.dm"
 #include "code\modules\awaymissions\zlevel.dm"
 #include "code\modules\blob\blob.dm"
