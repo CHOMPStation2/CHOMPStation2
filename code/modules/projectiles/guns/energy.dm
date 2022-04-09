@@ -1,7 +1,8 @@
 /obj/item/weapon/gun/energy
 	name = "energy gun"
 	desc = "A basic energy-based gun."
-	icon_state = "energy"
+	icon = 'icons/obj/gun_ch.dmi' // CHOMPEdit: Gun Sprites
+	icon_state = "energystun" // CHOMPEdit: Gun Sprites
 	fire_sound_text = "laser blast"
 
 	var/obj/item/weapon/cell/power_supply //What type of power cell this uses
