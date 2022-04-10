@@ -30,7 +30,7 @@
 	projectile_type = /obj/item/projectile/bullet/cap
 	matter = list(MAT_STEEL = 1000)
 	handle_casings = null
-	recoil = 1 //it's a toy
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /*
  * Shotgun
@@ -52,7 +52,7 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	matter = list(MAT_PLASTIC = 2000)
 	handle_casings = null
-	recoil = null //it's a toy
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /*
  * Pistol
@@ -70,7 +70,7 @@
 	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 1)
 	load_method = MAGAZINE
 	matter = list(MAT_PLASTIC = 1000)
-	recoil = null //it's a toy
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /obj/item/weapon/gun/projectile/pistol/toy/update_icon()
 	if(ammo_magazine)
@@ -215,6 +215,7 @@
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge
 	battery_lock = 1
 	var/required_vest
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /obj/item/weapon/gun/energy/lasertag/special_check(var/mob/living/carbon/human/M)
 	if(ishuman(M))
