@@ -69,7 +69,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/yellow{
-	dir = 4
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/barrestroom)
@@ -1040,14 +1040,12 @@
 	},
 /area/surface/outpost/civilian/pool)
 "cu" = (
-/obj/machinery/camera/network/exterior{
-	c_tag = "EXT - Security Office 8";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint{
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid,
+/turf/simulated/floor/tiled/freezer{
 	outdoors = 1
 	},
-/area/security/main)
+/area/surface/outpost/civilian/pool)
 "cv" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -1370,6 +1368,11 @@
 	dir = 8
 	},
 /obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/dorms/dorm_6)
 "dv" = (
@@ -1509,6 +1512,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"dQ" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_10)
 "dR" = (
 /obj/machinery/light{
 	dir = 1
@@ -1574,6 +1585,14 @@
 "dY" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_10)
 "dZ" = (
@@ -1874,12 +1893,11 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_1)
 "eD" = (
-/obj/structure/railing,
 /obj/machinery/camera/network/exterior{
 	c_tag = "EXT - Security Office 3";
 	dir = 4
 	},
-/turf/simulated/open{
+/turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
 	},
 /area/security/main)
@@ -2436,6 +2454,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_5)
+"gb" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_2)
 "gc" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/landing/three)
@@ -2538,6 +2562,11 @@
 	dir = 8
 	},
 /obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/dorms/dorm_2)
 "gq" = (
@@ -2648,7 +2677,7 @@
 	c_tag = "SEC - Prison Wing Exterior West 1";
 	dir = 8
 	},
-/turf/simulated/open{
+/turf/simulated/floor/tiled/techmaint{
 	outdoors = 1
 	},
 /area/security/brig)
@@ -2664,6 +2693,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/brig)
+"gE" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_6)
 "gF" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -3361,8 +3396,21 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
 /turf/simulated/open,
 /area/crew_quarters/sleep/vistor_room_9)
+"io" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_7)
 "ip" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3757,6 +3805,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/range)
+"je" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_4)
 "jh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -3920,6 +3974,11 @@
 	dir = 8
 	},
 /obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/dorms/dorm_4)
 "jH" = (
@@ -4146,6 +4205,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
+"ki" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_6)
 "kj" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/red,
@@ -4650,6 +4715,14 @@
 "lr" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_9)
 "ls" = (
@@ -4769,19 +4842,13 @@
 	},
 /area/medical/medical_lockerroom)
 "lG" = (
-/obj/structure/railing{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open{
-	outdoors = 1
-	},
-/area/surface/outside/plains/outpost)
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_9)
 "lH" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
@@ -6665,6 +6732,15 @@
 "qf" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
 "qg" = (
@@ -7336,6 +7412,11 @@
 	dir = 8
 	},
 /obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/dorms/dorm_1)
 "rD" = (
@@ -7529,6 +7610,14 @@
 "sb" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_7)
 "sc" = (
@@ -7605,6 +7694,15 @@
 "sl" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
 "sm" = (
@@ -8890,6 +8988,28 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/engineering/engine_waste)
+"vw" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_10)
+"vx" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "vz" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -8925,6 +9045,15 @@
 "vE" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
 "vF" = (
@@ -9280,6 +9409,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 1
 	},
+/obj/item/weapon/storage/firstaid,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "wG" = (
@@ -10025,6 +10155,12 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
+"yk" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_5)
 "yl" = (
 /obj/structure/railing{
 	dir = 8
@@ -10945,6 +11081,11 @@
 	dir = 8
 	},
 /obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/dorms/dorm_5)
 "AB" = (
@@ -11011,6 +11152,7 @@
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - AI Exterior South 2"
 	},
+/obj/structure/railing,
 /turf/simulated/open{
 	outdoors = 1
 	},
@@ -11045,6 +11187,12 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/heads/sc/sd)
+"AN" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_3)
 "AP" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
@@ -11099,6 +11247,7 @@
 /turf/simulated/floor/carpet/blue,
 /area/bridge)
 "AY" = (
+/obj/item/device/radio/beacon,
 /turf/simulated/floor/carpet/blue,
 /area/bridge)
 "AZ" = (
@@ -11143,6 +11292,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"Bd" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_1)
 "Be" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/fancy/vials,
@@ -11631,6 +11786,9 @@
 /obj/item/weapon/gun/projectile/serdy_pistols/glock71{
 	magazine_type = /obj/item/ammo_magazine/m9mm/rubber
 	},
+/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/gun,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "BX" = (
@@ -11910,6 +12068,14 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"CF" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_8)
 "CG" = (
 /obj/machinery/camera/network/exterior{
 	c_tag = "Xenobotany Isolation Rooftop North Exterior Camera";
@@ -12319,6 +12485,9 @@
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
+/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/gun,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "DG" = (
@@ -12505,6 +12674,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"Eb" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_1)
 "Ec" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall{
@@ -12977,6 +13152,12 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
+"EX" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_5)
 "EY" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/photo_album{
@@ -13658,12 +13839,6 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_9)
 "GA" = (
-/obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
-	dir = 8
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 28
 	},
@@ -13727,6 +13902,7 @@
 /obj/item/ammo_magazine/tp23s/rubber,
 /obj/item/ammo_magazine/tp23s/rubber,
 /obj/item/ammo_magazine/tp23s/rubber,
+/obj/item/device/perfect_tele,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "GF" = (
@@ -13844,8 +14020,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/machinery/light/small,
-/obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -13869,10 +14043,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Engine Access";
-	req_one_access = list(11)
-	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "GV" = (
@@ -13965,19 +14136,20 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "Hf" = (
-/obj/structure/sign/electricshock,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
-/area/engineering/engine_room)
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_8)
 "Hg" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance_hatch,
-/obj/machinery/door/firedoor/border_only,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "Hh" = (
@@ -14196,11 +14368,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/catwalk,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 28
-	},
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
@@ -14232,6 +14400,9 @@
 	},
 /obj/structure/railing{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
 	},
 /turf/simulated/open,
 /area/engineering/engine_room)
@@ -14454,6 +14625,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"Ir" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_3)
 "It" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -14519,9 +14696,6 @@
 	},
 /area/surface/outside/plains/outpost)
 "Iz" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold4w/visible/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/scrubbers,
 /obj/structure/cable/cyan{
@@ -14538,15 +14712,14 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "IC" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance_hatch,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "ID" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -15386,6 +15559,12 @@
 "KM" = (
 /turf/simulated/floor/wood,
 /area/library_conference_room)
+"KN" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_4)
 "KP" = (
 /obj/structure/dancepole{
 	pixel_y = 5
@@ -15412,6 +15591,12 @@
 /obj/item/clothing/under/swimsuit/stripper/stripper_pink,
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
+"KS" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_2)
 "KT" = (
 /obj/structure/dancepole{
 	pixel_y = 4
@@ -15574,6 +15759,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"Ln" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_7)
 "Lo" = (
 /obj/structure/cable/blue{
 	d1 = 2;
@@ -15624,6 +15817,15 @@
 "Lr" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
 "Lt" = (
@@ -15730,6 +15932,11 @@
 	},
 /obj/structure/railing{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/simulated/open,
 /area/crew_quarters/sleep/vistor_room_10)
@@ -17257,6 +17464,9 @@
 	pixel_x = -9;
 	pixel_y = 4
 	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
 "Pc" = (
@@ -17294,6 +17504,9 @@
 	pixel_x = 9;
 	pixel_y = 4
 	},
+/obj/structure/cable{
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/bar)
 "Pe" = (
@@ -17326,6 +17539,7 @@
 "Ph" = (
 /obj/structure/table/standard,
 /obj/structure/disposalpipe/segment,
+/obj/item/weapon/storage/firstaid,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_lockerroom)
 "Pi" = (
@@ -17367,6 +17581,14 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/bmarble,
 /area/crew_quarters/sleep/vistor_room_8)
+"Ps" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_9)
 "Pt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -17646,6 +17868,9 @@
 	pixel_x = -9;
 	pixel_y = 4
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
 "PU" = (
@@ -17672,6 +17897,11 @@
 	picked_color = "Teal";
 	pixel_x = 9;
 	pixel_y = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
@@ -17913,6 +18143,14 @@
 "QA" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_8)
 "QB" = (
@@ -20081,6 +20319,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
 /turf/simulated/open,
 /area/crew_quarters/sleep/vistor_room_8)
 "VM" = (
@@ -20251,6 +20494,11 @@
 	dir = 8
 	},
 /obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/surface/outpost/main/dorms/dorm_3)
 "Wj" = (
@@ -20615,6 +20863,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
 /turf/simulated/open,
 /area/crew_quarters/sleep/vistor_room_7)
 "Xd" = (
@@ -20724,6 +20977,15 @@
 "Xs" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
 "Xt" = (
@@ -21127,6 +21389,15 @@
 "Yu" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table/woodentable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
 "Yv" = (
@@ -41155,8 +41426,8 @@ FE
 Gf
 Gy
 GT
-Hf
-sf
+HN
+HN
 IC
 sf
 Xk
@@ -41410,9 +41681,9 @@ Wl
 Wl
 FF
 Wl
-sf
+HN
 GU
-sf
+HN
 HN
 IF
 sf
@@ -45844,8 +46115,8 @@ Jv
 Jv
 wL
 Jv
-Jv
-Jv
+ki
+gE
 PD
 yF
 yF
@@ -47900,8 +48171,8 @@ PC
 PC
 ST
 PC
-PC
-PC
+EX
+yk
 fZ
 yF
 yF
@@ -49423,8 +49694,8 @@ yF
 yF
 yF
 og
-Yh
-Yh
+dQ
+vw
 Yh
 li
 Yh
@@ -49779,13 +50050,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -49956,8 +50227,8 @@ up
 up
 xb
 up
-up
-up
+KN
+je
 vj
 yF
 yF
@@ -50036,13 +50307,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -50293,13 +50564,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -50550,13 +50821,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -50807,13 +51078,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -51064,13 +51335,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -51321,13 +51592,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -51479,8 +51750,8 @@ yF
 yF
 yF
 mW
-wx
-wx
+lG
+Ps
 wx
 Xz
 wx
@@ -51578,13 +51849,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -51835,13 +52106,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -52012,8 +52283,8 @@ jI
 jI
 XB
 jI
-jI
-jI
+Ir
+AN
 oj
 Xu
 xD
@@ -52092,13 +52363,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -52349,13 +52620,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Fl
 YD
 "}
@@ -53208,7 +53479,7 @@ xD
 xD
 xD
 xD
-kL
+kF
 lH
 na
 or
@@ -53459,13 +53730,13 @@ eU
 dM
 VF
 xD
-xD
-xD
-xD
-xD
-xD
-xD
-kL
+fO
+fO
+fO
+fO
+fO
+fO
+kF
 lJ
 nb
 os
@@ -53535,8 +53806,8 @@ yF
 yF
 yF
 tX
-Fs
-Fs
+Hf
+CF
 Fs
 Kd
 Fs
@@ -53716,13 +53987,13 @@ eV
 dM
 Xu
 xD
-xD
-xD
-xD
-xD
-xD
-xD
-kL
+fO
+fO
+fO
+fO
+fO
+fO
+kF
 lL
 nd
 ot
@@ -53972,14 +54243,14 @@ eI
 eW
 dM
 AH
-fs
+xD
+fO
+fO
 xD
 xD
 xD
-xD
-xD
-xD
-kL
+fO
+kF
 lQ
 nd
 ou
@@ -54068,8 +54339,8 @@ Jk
 Jk
 cF
 Jk
-Jk
-Jk
+gb
+KS
 UE
 yF
 yF
@@ -54230,13 +54501,13 @@ eX
 dM
 Xu
 xD
+fO
+fO
 xD
 xD
 xD
-xD
-xD
-xD
-kL
+fO
+kF
 lR
 nd
 ow
@@ -54487,13 +54758,13 @@ dM
 dM
 Xu
 xD
+fO
+fO
 xD
 xD
 xD
-xD
-xD
-xD
-kL
+fO
+kF
 lS
 nd
 ot
@@ -54744,13 +55015,13 @@ yF
 yF
 Xu
 xD
+fO
+fO
 xD
 xD
 xD
-xD
-xD
-xD
-kL
+fO
+kF
 lT
 nd
 ox
@@ -54805,7 +55076,7 @@ Vx
 fH
 ZP
 uO
-Bl
+cu
 DV
 ZP
 dK
@@ -55001,13 +55272,13 @@ yF
 yF
 Xu
 xD
-xD
-xD
-xD
-xD
-xD
-xD
-kM
+fO
+fO
+fO
+fO
+fO
+fO
+kF
 lV
 na
 oz
@@ -55258,12 +55529,12 @@ yF
 yF
 Xu
 xD
-xD
-xD
-xD
-xD
-xD
-cu
+fO
+fO
+fO
+fO
+fO
+kF
 kF
 lW
 ne
@@ -55513,9 +55784,9 @@ yF
 yF
 yF
 yF
-yF
-fW
-qC
+Xu
+xD
+xD
 xD
 xD
 xD
@@ -55591,8 +55862,8 @@ yF
 yF
 yF
 Zf
-vn
-vn
+Ln
+io
 vn
 nM
 vn
@@ -55771,14 +56042,14 @@ yF
 yF
 yF
 yF
-yF
-yF
 fW
 fW
-fW
-fW
-fW
-yF
+qC
+xD
+xD
+xD
+xD
+xD
 eD
 xD
 UX
@@ -56030,13 +56301,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
 Xu
+xD
+xD
+xD
+xD
+xD
+xD
 xD
 fE
 xD
@@ -56124,8 +56395,8 @@ rG
 rG
 Ll
 rG
-rG
-rG
+Eb
+Bd
 Cx
 yF
 yF
@@ -56287,13 +56558,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+Xu
+xD
+xD
+xD
+xD
+xD
+xD
 fn
 oE
 fn
@@ -56544,13 +56815,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
+Xu
+xD
+xD
 gC
-yF
-yF
-yF
+xD
+xD
+xD
 fn
 oF
 fn
@@ -62532,7 +62803,7 @@ EG
 EG
 EG
 EG
-yF
+EG
 yF
 yF
 Xu
@@ -62789,10 +63060,10 @@ xD
 xD
 xD
 xD
+xD
 zb
 yF
 yF
-Xu
 Gp
 Gp
 Gp
@@ -63047,9 +63318,9 @@ xD
 xD
 xD
 xD
+xD
 ON
 yF
-Xu
 Gp
 Gp
 Gp
@@ -63304,9 +63575,9 @@ xD
 xD
 xD
 xD
+xD
 ON
 yF
-Xu
 Gp
 Gp
 Gp
@@ -63561,8 +63832,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 fW
 fW
@@ -63818,8 +64089,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 yF
 yF
@@ -64074,10 +64345,10 @@ HL
 xD
 xD
 xD
-lG
+xD
+vx
 EG
 EG
-yF
 yF
 yF
 yF
@@ -64334,8 +64605,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 yF
 yF
@@ -64591,8 +64862,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 yF
 yF
@@ -64848,8 +65119,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 yF
 yF
@@ -65105,8 +65376,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 yF
 yF
@@ -65362,8 +65633,8 @@ xD
 xD
 xD
 xD
+xD
 ON
-yF
 yF
 yF
 yF
@@ -65619,7 +65890,7 @@ fW
 fW
 fW
 fW
-yF
+fW
 yF
 yF
 yF
@@ -70222,7 +70493,7 @@ yF
 yF
 yF
 yF
-ZU
+Xu
 xD
 xD
 xD
@@ -72021,7 +72292,7 @@ yF
 yF
 yF
 yF
-ZU
+Xu
 xD
 xD
 xD
@@ -72029,7 +72300,7 @@ xD
 xD
 xD
 xD
-YF
+ON
 yF
 yF
 Xu
@@ -72278,15 +72549,15 @@ yF
 yF
 yF
 yF
-yF
-fW
-fW
-fW
-fW
-fW
-fW
-fW
-yF
+Xu
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+ON
 yF
 yF
 Xu
@@ -72536,13 +72807,13 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+fW
+fW
+fW
+fW
+fW
+fW
+fW
 yF
 yF
 yF

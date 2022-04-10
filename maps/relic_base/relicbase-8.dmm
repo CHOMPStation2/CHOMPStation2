@@ -2289,14 +2289,7 @@
 	dir = 8;
 	id = "QMLoad"
 	},
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "supply_shuttle_hatch";
-	locked = 1;
-	name = "Shuttle Hatch";
-	req_access = list(13)
-	},
+/obj/structure/plasticflaps/mining,
 /turf/simulated/shuttle/plating,
 /area/shuttle/supply)
 "bZb" = (
@@ -4731,9 +4724,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/security)
-"fAw" = (
-/turf/simulated/shuttle/wall/hard_corner,
-/area/shuttle/supply)
 "fAS" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/tiled,
@@ -6437,7 +6427,7 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/centcom/evac)
 "hKV" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/shull,
 /area/shuttle/supply)
 "hKW" = (
 /turf/simulated/floor/holofloor/wood,
@@ -11836,7 +11826,7 @@
 /area/centcom/medical)
 "osg" = (
 /obj/structure/window/reinforced,
-/turf/simulated/shuttle/wall/dark/no_join,
+/turf/simulated/wall/shull,
 /area/shuttle/supply)
 "osC" = (
 /obj/structure/bed/chair{
@@ -12304,7 +12294,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/wall/shull,
 /area/shuttle/supply)
 "pmn" = (
 /obj/machinery/computer/shuttle_control/multi/administration{
@@ -12357,14 +12347,7 @@
 	dir = 4;
 	id = "QMLoad2"
 	},
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "supply_shuttle_hatch";
-	locked = 1;
-	name = "Shuttle Hatch";
-	req_access = list(13)
-	},
+/obj/structure/plasticflaps/mining,
 /turf/simulated/shuttle/plating,
 /area/shuttle/supply)
 "pod" = (
@@ -12396,14 +12379,11 @@
 	},
 /area/syndicate_station)
 "ppL" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "supply_shuttle_hatch";
-	locked = 1;
-	name = "Shuttle Hatch";
-	req_access = list(13)
+/obj/machinery/door/airlock/angled_tgmc/personal{
+	dir = 4;
+	name = "Cargo Shuttle"
 	},
+/obj/structure/fans/tiny,
 /turf/simulated/shuttle/floor,
 /area/shuttle/supply)
 "pqj" = (
@@ -43063,11 +43043,11 @@ wvj
 wvj
 hKV
 hKV
+ppL
+ppL
 hKV
-hKV
-hKV
-hKV
-hKV
+ppL
+ppL
 hKV
 hKV
 hKV
@@ -43326,7 +43306,7 @@ tNc
 tNc
 tNc
 pHc
-fAw
+hKV
 hKV
 nfn
 xOR
@@ -44354,7 +44334,7 @@ rnQ
 tNc
 iOe
 ttr
-fAw
+hKV
 hKV
 gDO
 xOR

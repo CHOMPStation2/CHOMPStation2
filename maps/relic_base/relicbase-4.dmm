@@ -1257,10 +1257,8 @@
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
 "oV" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
+/obj/item/weapon/tool/wrench,
+/turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "oX" = (
 /obj/machinery/sleeper{
@@ -1335,64 +1333,17 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology)
 "pH" = (
-/obj/structure/table/rack{
-	dir = 1
+/obj/structure/cable/green,
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
-/obj/item/weapon/pickaxe{
-	pixel_x = 5
+/obj/fiftyspawner/phoron,
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
-/obj/item/weapon/pickaxe{
-	pixel_x = 5
-	},
-/obj/item/weapon/shovel{
-	pixel_x = -5
-	},
-/obj/item/weapon/shovel{
-	pixel_x = -5
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/ammo_magazine/m545/small/hunter,
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
-	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
-	},
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
-	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
-	caliber = "5.45mm";
-	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm."
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main/crew_area)
 "pK" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/bio_suit/anomaly,
@@ -2012,34 +1963,24 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "wz" = (
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
+/obj/structure/cable/green,
 /obj/machinery/power/port_gen/pacman,
-/obj/fiftyspawner/phoron,
-/obj/item/weapon/tool/wrench,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "wA" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "wB" = (
-/obj/structure/cable/green{
-	icon_state = "0-8"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
 	},
-/obj/machinery/power/port_gen/pacman,
-/obj/fiftyspawner/phoron,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/crew_area)
 "wE" = (
 /obj/structure/catwalk,
@@ -2289,7 +2230,9 @@
 /area/surface/outpost/research/xenoarcheology/isolation_b)
 "za" = (
 /obj/machinery/power/smes,
-/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "zd" = (
@@ -2450,6 +2393,11 @@
 "AT" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
@@ -3291,6 +3239,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
+"JL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/cave/explored/normal)
 "JV" = (
 /obj/structure/sign/warning/high_voltage,
 /turf/simulated/wall,
@@ -3458,6 +3412,7 @@
 	req_access = list(13)
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/mining_main/crew_area)
 "KZ" = (
@@ -4627,9 +4582,66 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "ZF" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
+/obj/structure/table/rack{
+	dir = 1
 	},
+/obj/item/weapon/pickaxe{
+	pixel_x = 5
+	},
+/obj/item/weapon/pickaxe{
+	pixel_x = 5
+	},
+/obj/item/weapon/shovel{
+	pixel_x = -5
+	},
+/obj/item/weapon/shovel{
+	pixel_x = -5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm.";
+	magazine_type = /obj/item/ammo_magazine/m545/small
+	},
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm.";
+	magazine_type = /obj/item/ammo_magazine/m545/small
+	},
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec{
+	allowed_magazines = list(/obj/item/ammo_magazine/m545/small);
+	caliber = "5.45mm";
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm.";
+	magazine_type = /obj/item/ammo_magazine/m545/small
+	},
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
+/obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/cave/explored/normal)
 "ZI" = (
@@ -4641,6 +4653,7 @@
 	name = "Research Elevator Hatch";
 	req_access = list(13)
 	},
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/research/xenoarcheology)
 "ZO" = (
@@ -26892,10 +26905,10 @@ uW
 uW
 uW
 uU
-wz
+zj
 za
-zj
-zj
+pH
+wz
 uU
 IQ
 Lj
@@ -27158,8 +27171,8 @@ IX
 LJ
 Og
 uU
-pH
 ZF
+JL
 AS
 Zn
 Zn
@@ -27406,8 +27419,8 @@ sc
 sc
 sc
 uU
-wB
 zj
+oV
 zj
 zj
 uU
@@ -28184,7 +28197,7 @@ Zn
 uU
 GJ
 VG
-oV
+wB
 uU
 rv
 rv

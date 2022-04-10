@@ -1135,6 +1135,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1551,6 +1555,9 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/machinery/vending/nifsoft_shop{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1789,6 +1796,13 @@
 "czL" = (
 /obj/effect/floor_decal/spline/fancy/wood/cee{
 	dir = 4
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/firstdeck/auxdockaft{
@@ -2113,6 +2127,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -2219,6 +2236,9 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
+	},
+/obj/machinery/vending/nifsoft_shop{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/hallway/primary/firstdeck/auxdockaft{
@@ -3931,6 +3951,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -4146,6 +4169,9 @@
 	})
 "fRp" = (
 /obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -4751,6 +4777,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -5380,6 +5410,13 @@
 "hAX" = (
 /obj/effect/floor_decal/spline/fancy/wood/cee{
 	dir = 8
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/dockhallway{
@@ -6429,6 +6466,12 @@
 "jaL" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/dockhallway{
@@ -13455,8 +13498,14 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "rzr" = (
-/turf/simulated/floor/water/deep,
-/area/maintenance/firstdeck/aftstarboard{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "rBj" = (
@@ -17057,29 +17106,8 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "wjm" = (
-/obj/effect/floor_decal/rust,
-/obj/random/junk,
-/obj/effect/decal/cleanable/filth,
-/obj/effect/floor_decal/rust,
-/obj/effect/floor_decal/emblem/aronai{
-	color = "#724120";
-	dir = 9
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"wjC" = (
-/obj/effect/floor_decal/rust,
-/obj/random/trash,
-/obj/effect/decal/cleanable/filth,
-/obj/effect/floor_decal/rust,
-/obj/effect/floor_decal/emblem/aronai{
-	color = "#724120";
-	dir = 5
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralport{
+/turf/simulated/floor/water/deep,
+/area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "wkq" = (
@@ -17327,11 +17355,6 @@
 /obj/random/trash,
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/emblem/aronai{
-	color = "#724120";
-	dir = 10
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17341,12 +17364,7 @@
 /obj/random/trash,
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
-/obj/effect/floor_decal/emblem/aronai{
-	color = "#724120";
-	dir = 6
-	},
 /obj/item/ammo_magazine/m762/empty,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
@@ -18412,16 +18430,6 @@
 	vore_pounce_maxhealth = 150
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/firstdeck{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"xNF" = (
-/obj/item/weapon/gun/projectile/automatic/serdy/memegun,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/clothing/head/ushanka,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -40532,7 +40540,7 @@ nGD
 lll
 uMb
 vwt
-wjm
+kNL
 wAQ
 xde
 xzV
@@ -40789,7 +40797,7 @@ lll
 lll
 yjd
 yjd
-wjC
+xGd
 wBa
 xed
 xAU
@@ -52100,7 +52108,7 @@ uWQ
 vXc
 pyL
 pyL
-xNF
+pyL
 xjA
 pyL
 pyL
@@ -57540,9 +57548,9 @@ wxL
 wxL
 wxL
 kJn
-rzr
 wxL
 wxL
+wjm
 wxL
 wxL
 wxL
@@ -71585,9 +71593,9 @@ fNP
 fNP
 fNP
 fNP
-fNP
-fNP
-fNP
+rzr
+rzr
+rzr
 fNP
 fNP
 fNP
