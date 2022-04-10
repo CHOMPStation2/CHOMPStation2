@@ -22,4 +22,5 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 	hitsound = 'sound/weapons/sear.ogg'
+	hud_state = "laser_overcharge"
 
