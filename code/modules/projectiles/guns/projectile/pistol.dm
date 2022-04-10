@@ -81,7 +81,8 @@
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. Found pretty much everywhere humans are. Uses .45 rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, \
 	MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
-	icon_state = "secgun"
+	icon = 'icons/obj/gun_ch.dmi'
+	icon_state = "secguncomp"
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
@@ -93,9 +94,9 @@
 /obj/item/weapon/gun/projectile/sec/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "secgun"
+		icon_state = "secguncomp"
 	else
-		icon_state = "secgun-e"
+		icon_state = "secguncomp-e"
 
 /obj/item/weapon/gun/projectile/sec/flash
 	magazine_type = /obj/item/ammo_magazine/m45/flash
@@ -104,14 +105,14 @@
 /obj/item/weapon/gun/projectile/sec/wood
 	name = "custom .45 pistol"
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. This one has a sweet wooden grip. Uses .45 rounds."
-	icon_state = "secgunb"
+	icon_state = "secgundark"
 
 /obj/item/weapon/gun/projectile/sec/wood/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "secgunb"
+		icon_state = "secgundark"
 	else
-		icon_state = "secgunb-e"
+		icon_state = "secgundark-e"
 
 /*
  * Silenced Pistol

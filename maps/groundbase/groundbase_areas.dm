@@ -365,6 +365,17 @@
 /area/groundbase/civilian/gameroom
 	name = "Gamatorium"
 	sound_env = SMALL_SOFTFLOOR
+<<<<<<< HEAD
+=======
+/area/groundbase/civilian/mensrestroom
+	name = "Men's Restroom"
+	sound_env = SOUND_ENVIRONMENT_BATHROOM
+	lightswitch = 1
+/area/groundbase/civilian/womensrestroom
+	name = "Women's Restroom"
+	sound_env = SOUND_ENVIRONMENT_BATHROOM
+	lightswitch = 1
+>>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
 
 /area/groundbase/exploration
 	name = "Exploration"
