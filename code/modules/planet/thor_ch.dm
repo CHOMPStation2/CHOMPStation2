@@ -1,6 +1,23 @@
 var/datum/planet/thor/planet_thor = null
 
-//serdy was here, god i fucjking hate trying to understand code
+//serdy was here, god i fucjking hate trying to understand code - dog help. <3
+/* // TBD - We need to shift over to turfmakers.
+// Atmos Stuff
+#define O2THOR 0.201
+#define N2THOR 0.819
+
+#define MOLES_CELLTHOR 114.50978
+
+#define MOLES_O2THOR (MOLES_CELLSIF * O2SIF) // O2 value on Sif(18%)
+#define MOLES_N2THOR (MOLES_CELLSIF * N2SIF) // N2 value on Sif(82%)
+
+#define TEMPERATURE_THOR 293.15 // warm
+#define TEMPERATURE_ALTTHOR 225.15
+//Turfmakers
+#define THOR_SET_ATMOS	nitrogen=THOR_MOL_N2;oxygen=THOR_MOL_O2;carbon_dioxide=THOR_MOL_CO2;phoron=THOR_MOL_PHORON;temperature=THOR_AVG_TEMP
+#define THOR_TURF_CREATE(x)	x/thor/nitrogen=THOR_MOL_N2;x/thor/oxygen=THOR_MOL_O2;x/thor/carbon_dioxide=THOR_MOL_CO2;x/thor/phoron=THOR_MOL_PHORON;x/thor/temperature=THOR_AVG_TEMP;x/thor/outdoors=TRUE;x/thor/update_graphic(list/graphic_add = null, list/graphic_remove = null) return 0
+#define THOR_TURF_CREATE_UN(x)	x/thor/nitrogen=THOR_MOL_N2;x/thor/oxygen=THOR_MOL_O2;x/thor/carbon_dioxide=THOR_MOL_CO2;x/thor/phoron=THOR_MOL_PHORON;x/thor/temperature=THOR_AVG_TEMP
+*/
 
 /datum/planet/thor
 	name = "Thor"
@@ -99,6 +116,22 @@ var/datum/planet/thor/planet_thor = null
 	spawn(1)
 		update_sun_deferred(new_brightness, new_color)
 
+/* // TBD - We need to shift over to turfmakers.
+THOR_TURF_CREATE(/turf/simulated/mineral/cave)
+THOR_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
+THOR_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
+THOR_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk)
+THOR_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/side)
+THOR_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/slab)
+THOR_TURF_CREATE(/turf/simulated/floor/water)
+THOR_TURF_CREATE(/turf/simulated/floor/tiled)
+THOR_TURF_CREATE(/turf/simulated/floor/reinforced)
+THOR_TURF_CREATE(/turf/simulated/floor/glass/reinforced)
+THOR_TURF_CREATE(/turf/simulated/open)
+THOR_TURF_CREATE(/turf/simulated/floor/tiled/dark)
+THOR_TURF_CREATE(/turf/simulated/mineral)
+THOR_TURF_CREATE(/turf/simulated/floor)
+*/
 
 /datum/weather_holder/thor
 	temperature = T0C

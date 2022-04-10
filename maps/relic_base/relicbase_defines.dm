@@ -45,8 +45,8 @@
 	overmap_size = 50
 	overmap_event_areas = 44
 
-	shuttle_docked_message = "The scheduled tram to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Crew Transfer Tram has left the colony. Estimate %ETA% until the shuttle docks at %dock_name%."
+	shuttle_docked_message = "The scheduled tram to the %dock_name% has arrived at departures. It will depart in approximately %ETD%."
+	shuttle_leaving_dock = "The Crew Transfer Tram has left the colony. Estimate %ETA% until the tram arrives at %dock_name%."
 	shuttle_called_message = "A crew transfer to %dock_name% has been scheduled. The tram has been called. Those leaving should proceed to the departures tram station in approximately %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	emergency_shuttle_docked_message = "The Emergency Tram has arrived to the Forbearance's tram station. You have approximately %ETD% to board the Emergency Tram."
@@ -147,8 +147,8 @@
 	seed_submaps(list(Z_LEVEL_UNDERMINES), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
 	seed_submaps(list(Z_LEVEL_UNDERMINES), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
-	seed_submaps(list(Z_LEVEL_SURFACE_OCEAN), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
+	seed_submaps(list(Z_LEVEL_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
+	seed_submaps(list(Z_LEVEL_SURFACE_OCEAN), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
 
 	// Wilderness is next.
 	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)

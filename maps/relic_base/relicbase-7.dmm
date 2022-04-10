@@ -134,7 +134,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/echidna)
 "ax" = (
-/turf/simulated/mineral/floor/ignore_mapgen/vacuum,
+/turf/simulated/mineral/thor/floor/ignore_mapgen/vacuum,
 /area/mine/explored)
 "aD" = (
 /obj/structure/shuttle/engine/heater,
@@ -170,7 +170,7 @@
 /area/shuttle/stargazer)
 "aO" = (
 /obj/item/weapon/ore,
-/turf/simulated/mineral/floor/ignore_mapgen/vacuum,
+/turf/simulated/mineral/thor/floor/ignore_mapgen/vacuum,
 /area/mine/explored)
 "aP" = (
 /obj/structure/sign/nanotrasen,
@@ -188,7 +188,7 @@
 /area/wreck/ufoship)
 "aU" = (
 /obj/effect/floor_decal/asteroid,
-/turf/simulated/mineral/floor/ignore_mapgen/vacuum,
+/turf/simulated/mineral/thor/floor/ignore_mapgen/vacuum,
 /area/mine/explored)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -275,7 +275,7 @@
 "bo" = (
 /obj/effect/floor_decal/asteroid,
 /obj/effect/decal/cleanable/molten_item,
-/turf/simulated/mineral/floor/ignore_mapgen/vacuum,
+/turf/simulated/mineral/thor/floor/ignore_mapgen/vacuum,
 /area/mine/explored)
 "bp" = (
 /turf/simulated/mineral/vacuum,

@@ -4,11 +4,11 @@
 /obj/structure/prop/rock/small,
 /obj/structure/prop/rock/small/alt,
 /obj/structure/flora/rocks1,
-/turf/simulated/mineral/floor/ignore_cavegen,
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "ab" = (
 /obj/structure/simple_door/sandstone,
-/turf/simulated/mineral/floor/ignore_cavegen,
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "ac" = (
 /obj/structure/fans/tiny{
@@ -20,7 +20,7 @@
 	pixel_x = -1;
 	pixel_y = 4
 	},
-/turf/simulated/mineral/floor/ignore_cavegen,
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "ai" = (
 /obj/effect/decal/remains/mummy1{
@@ -28,21 +28,10 @@
 	desc = "He's still hiding.";
 	name = "red man"
 	},
-/turf/simulated/mineral/floor/ignore_cavegen,
-/area/surface/cave/unexplored/deep)
-"am" = (
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "as" = (
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/normal)
 "aK" = (
 /obj/machinery/conveyor{
@@ -859,11 +848,7 @@
 /area/surface/outpost/research/xenoarcheology)
 "ky" = (
 /obj/effect/zone_divider,
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "kz" = (
 /obj/machinery/door/firedoor/glass,
@@ -1556,11 +1541,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "rv" = (
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/outpost/mining_main/cave)
 "rz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -2146,9 +2127,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
-"xI" = (
-/turf/unsimulated/mineral/thor,
-/area/surface/cave/unexplored/deep)
 "xJ" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/gloves/sterile/latex,
@@ -2749,7 +2727,7 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "Eo" = (
-/turf/simulated/mineral/floor/ignore_cavegen,
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/deep)
 "ED" = (
 /obj/structure/cable/blue{
@@ -2831,11 +2809,7 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "Fu" = (
 /obj/effect/zone_divider,
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/unexplored/normal)
 "Fz" = (
 /obj/item/weapon/anobattery{
@@ -4177,9 +4151,7 @@
 	},
 /area/surface/cave/explored/normal)
 "Ug" = (
-/obj/machinery/chemical_dispenser/full{
-	dir = 2
-	},
+/obj/machinery/chemical_dispenser/full,
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
@@ -4585,11 +4557,7 @@
 /area/surface/outpost/research/xenoarcheology/analysis)
 "Zj" = (
 /obj/effect/zone_divider,
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/explored/normal)
 "Zk" = (
 /obj/structure/table/rack,
@@ -4602,11 +4570,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/emergencystorage)
 "Zn" = (
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	icon = 'icons/turf/thor_ch.dmi';
-	icon_state = "basalt0";
-	temperature = 393.15
-	},
+/turf/simulated/mineral/thor/floor/ignore_cavegen,
 /area/surface/cave/explored/normal)
 "Zq" = (
 /obj/structure/ore_box,
@@ -41606,9 +41570,9 @@ Zn
 Zn
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -41857,15 +41821,15 @@ Ql
 Ql
 Ql
 Ql
-am
+Eo
 Zn
 Zn
 Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -42114,16 +42078,16 @@ Ql
 Ql
 Ql
 Ql
-am
+Eo
 Zn
 Zn
 Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -42370,8 +42334,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Zn
 Zn
 Ql
@@ -42379,8 +42343,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -42627,8 +42591,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Zn
 Ql
 Ql
@@ -42636,8 +42600,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -42883,19 +42847,19 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43140,10 +43104,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43151,8 +43115,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43396,11 +43360,11 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43408,9 +43372,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43654,9 +43618,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43665,9 +43629,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43910,10 +43874,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -43923,8 +43887,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44166,11 +44130,11 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44180,9 +44144,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44423,10 +44387,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44438,8 +44402,8 @@ Ql
 Ql
 Ql
 Ql
-am
-am
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44679,11 +44643,11 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44695,9 +44659,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 BH
@@ -44936,10 +44900,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -44952,10 +44916,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 BH
 Ql
@@ -45192,10 +45156,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -45210,9 +45174,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 BH
 Ql
@@ -45449,10 +45413,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -45467,9 +45431,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 BH
 Ql
@@ -45962,10 +45926,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -45982,9 +45946,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 BH
 Ql
 Ql
@@ -46219,10 +46183,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -46239,9 +46203,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 BH
 Ql
 Ql
@@ -46476,9 +46440,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -46496,9 +46460,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 BH
 Ql
 Ql
@@ -46732,10 +46696,10 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
-am
+Eo
+Eo
+Eo
+Eo
 Ql
 Ql
 Ql
@@ -46753,9 +46717,9 @@ Ql
 Ql
 Ql
 Ql
-am
-am
-am
+Eo
+Eo
+Eo
 BH
 Ql
 Ql
@@ -50581,7 +50545,7 @@ Ql
 Ql
 BH
 Ql
-am
+Eo
 as
 as
 sc
@@ -50838,7 +50802,7 @@ Ql
 Ql
 BH
 Ql
-am
+Eo
 as
 as
 sc
@@ -51095,7 +51059,7 @@ Ql
 Ql
 BH
 Ql
-am
+Eo
 as
 sc
 sc
@@ -51351,8 +51315,8 @@ Ql
 Ql
 Ql
 BH
-am
-am
+Eo
+Eo
 as
 sc
 sc
@@ -51608,8 +51572,8 @@ Ql
 Ql
 Ql
 BH
-am
-am
+Eo
+Eo
 as
 sc
 sc
@@ -51865,8 +51829,8 @@ Ql
 Ql
 Ql
 BH
-am
-am
+Eo
+Eo
 as
 sc
 sc
@@ -52122,8 +52086,8 @@ Ql
 Ql
 Ql
 BH
-am
-am
+Eo
+Eo
 as
 sc
 sc
@@ -52379,8 +52343,8 @@ Ql
 Ql
 Ql
 BH
-am
-am
+Eo
+Eo
 as
 sc
 sc
@@ -52636,8 +52600,8 @@ Ql
 Ql
 Ql
 BH
-am
-am
+Eo
+Eo
 as
 sc
 sc
@@ -52893,8 +52857,8 @@ Ql
 Ql
 Ql
 ky
-am
-am
+Eo
+Eo
 sc
 sc
 sc
@@ -53150,8 +53114,8 @@ Ql
 Ql
 Ql
 ky
-am
-am
+Eo
+Eo
 sc
 sc
 sc
@@ -53407,8 +53371,8 @@ Ql
 Ql
 Ql
 ky
-am
-am
+Eo
+Eo
 sc
 sc
 sc
@@ -68477,10 +68441,10 @@ Oc
 Oc
 Oc
 Ql
-xI
-xI
-xI
-xI
+Oc
+Oc
+Oc
+Oc
 Ql
 Ql
 Ql
@@ -68737,7 +68701,7 @@ Ql
 aa
 ab
 ac
-xI
+Oc
 Ql
 Ql
 Ql
@@ -68991,10 +68955,10 @@ Oc
 Oc
 Oc
 Ql
-xI
-xI
+Oc
+Oc
 ai
-xI
+Oc
 Ql
 Ql
 Ql
@@ -69249,9 +69213,9 @@ Oc
 Oc
 Ql
 Ql
-xI
+Oc
 Eo
-xI
+Oc
 Ql
 Ql
 Ql
@@ -69506,9 +69470,9 @@ Oc
 Oc
 Ql
 Ql
-xI
-xI
-xI
+Oc
+Oc
+Oc
 Ql
 Ql
 Ql

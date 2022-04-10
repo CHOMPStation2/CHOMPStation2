@@ -69,3 +69,67 @@
 	
 /turf/simulated/floor/maglev/unpowered/Entered(var/atom/movable/AM, var/atom/old_loc)
 	return // No zappy.
+	
+// Override for relicbase.
+// Base Mineral turf override, for testing.
+/turf/simulated/mineral/thor
+	name = "dark rock"
+	floor_name = "deeprock"
+	sand_icon_state = "basalt"
+	rock_icon_state = "deeprock"
+	sand_icon_path = 'icons/turf/thor_ch.dmi'
+	rock_icon_path = 'icons/turf/thor_ch.dmi'
+	rock_side_icon_state = "deeprock_side"
+	desc = "Dark black basalt. Rich in exotic minerals."
+	icon = 'icons/turf/thor_ch.dmi'
+	icon_state = "deeprock"
+	
+/turf/simulated/mineral/thor/ignore_oregen
+	ignore_oregen = TRUE
+	
+/turf/simulated/mineral/thor/ignore_cavegen
+	ignore_cavegen = TRUE
+	
+/turf/simulated/mineral/thor/ignore_mapgen
+	ignore_mapgen = TRUE
+
+/turf/simulated/mineral/thor/floor
+	name = "basalt"
+	floor_name = "basalt"
+	desc = "Loose, rocky basalt. It crumbles to sand under the slightest bit of force."
+	icon = 'icons/turf/thor_ch.dmi'
+	icon_state = "basalt0"
+	temperature = 393.15
+	
+/turf/simulated/mineral/thor/floor/ignore_oregen
+	ignore_oregen = TRUE
+	
+/turf/simulated/mineral/thor/floor/ignore_cavegen
+	ignore_cavegen = TRUE
+	
+/turf/simulated/mineral/thor/floor/ignore_mapgen
+	ignore_mapgen = TRUE
+
+/turf/simulated/mineral/thor/floor/cave
+	name = "basalt"
+	desc = "Loose, rocky basalt. It crumbles to sand under the slightest bit of force."
+	icon_state = "basalt0"
+	icon = 'icons/turf/thor_ch.dmi'
+
+/turf/simulated/mineral/thor/mines
+	name = "dark rock"
+	desc = "Dark black basalt. Rich in exotic minerals."
+	icon_state = "deeprock"
+	icon = 'icons/turf/thor_ch.dmi'
+
+/turf/unsimulated/mineral/thor/mines
+	name = "impassable dark rock"
+	desc = "Dark black basalt. Packed impossibly tightly, no way to get past this."
+	icon_state = "deeprock-solid"
+	icon = 'icons/turf/thor_ch.dmi'
+	
+/turf/simulated/mineral/thor/floor/ignore_mapgen/cave
+	name = "basalt"
+
+/turf/simulated/mineral/thor/ignore_mapgen/cave
+	name = "dark rock"

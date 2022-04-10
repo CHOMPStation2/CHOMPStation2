@@ -3,31 +3,33 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Primary Load - these are areas that will ALWAYS be in play.
-
-//Temp Removal TFF 15/2/20
 /*
-// Rykka adds Belt Mining
+// TL;DR: _submaps.dm holds the templates. _areas.dm holds the areas. _things.dm holds SUBMAP-SPECIFIC things, such as a knife that only appears in underground-specific POIs.
+#include "mining/_mining_submaps.dm" // These go underground, for mining.
+#include "mining/_mining_areas.dm" // The areas, separated from the actual submaps file.
+// #include "mining/mining_things.dm" // - This is not in use, but other submaps may want their own specific _things folder for, say, mining-specific stuff.
 
-#include "asteroid_belt/_templates.dm"
-#include "asteroid_belt/belt_miner_things.dm"
-/datum/map_template/sc_lateload/sc_belt_miner
-	name = "Mining Asteroid Belt"
-	desc = "Mining, but harder, and in spess."
-	mappath = 'sc_belt_miner.dmm'
+#include "outpost/_outpost_submaps.dm" // These go on the MAIN map, Z2.
+#include "outpost/_outpost_areas.dm" // The areas, separated from the actual submaps file.
+// #include "outpost/_outpost_things.dm" // - This is not in use, but other submaps may want their own specific _things folder for, say, mining-specific stuff.
 
-	associated_map_datum = /datum/map_z_level/sc_lateload/belt_miner
+#include "wilderness/_wilderness_submaps.dm" // These go in wilderness, north of the main outpost.
+#include "wilderness/_wilderness_areas.dm" // The areas, separated from the actual submaps file.
+// #include "wilderness/_wilderness_things.dm" // - This is not in use, but other submaps may want their own specific _things folder for, say, mining-specific stuff.
 
-/datum/map_z_level/sc_lateload/belt_miner
-	name = "Asteroid Belt"
-	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
-	z = Z_LEVEL_BELT
+#include "ocean/_ocean_submaps.dm" // These go on the ocean Z-level, south of main outpost.
+#include "ocean/_ocean_areas.dm" // The areas, separated from the actual submaps file.
+// #include "ocean/_ocean_things.dm" // - This is not in use, but other submaps may want their own specific _things folder for, say, mining-specific stuff.
 
-/datum/map_template/sc_lateload/sc_belt_miner/on_map_loaded(z) // code needed to run ore generation
-	. = ..()
-	seed_submaps(list(Z_LEVEL_BELT), 300, /area/mine/unexplored/belt_miner, /datum/map_template/asteroid_belt) // Give this Z-level 3x normal points for POI generation.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BELT, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
-
+// Inserting this here, but this is where all our submap /area/'s draw from.
+/area/submap/thor
+	name = "Submap Area"
+	icon_state = "submap"
+	flags = RAD_SHIELDED
+	ambience = AMBIENCE_RUINS
+	secret_name = TRUE
+	forbid_events = TRUE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 */
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
@@ -49,40 +51,40 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 // Gateway submaps go here
-/datum/map_template/sc_lateload/gateway
+/datum/map_template/thor_lateload/gateway
 	name = "Gateway Submap"
 	desc = "Please do not use this."
 	mappath = null
 	associated_map_datum = null
 
-/datum/map_z_level/sc_lateload/gateway_destination
+/datum/map_z_level/thor_lateload/gateway_destination
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
 #include "gateway/snowfield.dm"
-/datum/map_template/sc_lateload/gateway/snowfield
+/datum/map_template/thor_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
 	mappath = 'gateway/snowfield.dmm'
-	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
-/datum/map_template/sc_lateload/gateway/carpfarm
+/datum/map_template/thor_lateload/gateway/carpfarm
 	name = "Carp Farm"
 	desc = "Asteroid base surrounded by carp"
 	mappath = 'gateway/carpfarm.dmm'
-	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
 #include "../../expedition_vr/space/_fueldepot.dm"
-/datum/map_template/sc_lateload/away_fueldepot
+/datum/map_template/thor_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
 	mappath = 'maps/expedition_vr/space/fueldepot.dmm'
-	associated_map_datum = /datum/map_z_level/sc_lateload/away_fueldepot
+	associated_map_datum = /datum/map_z_level/thor_lateload/away_fueldepot
 
-/datum/map_z_level/sc_lateload/away_fueldepot
+/datum/map_z_level/thor_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
 
@@ -90,22 +92,22 @@
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
 
-/datum/map_template/sc_lateload
+/datum/map_template/thor_lateload
 	allow_duplicates = FALSE
 	var/associated_map_datum
 
-/datum/map_template/sc_lateload/on_map_loaded(z)
+/datum/map_template/thor_lateload/on_map_loaded(z)
 	if(!associated_map_datum || !ispath(associated_map_datum))
 		log_game("Extra z-level [src] has no associated map datum")
 		return
 
 	new associated_map_datum(using_map, z)
 
-/datum/map_z_level/sc_lateload
+/datum/map_z_level/thor_lateload
 	z = 0
 	flags = MAP_LEVEL_SEALED
 
-/datum/map_z_level/sc_lateload/New(var/datum/map/map, mapZ)
+/datum/map_z_level/thor_lateload/New(var/datum/map/map, mapZ)
 	if(mapZ && !z)
 		z = mapZ
 	return ..(map)

@@ -7,6 +7,7 @@
 	#include "relicbase_defines.dm"
 	#include "relicbase_elevator.dm"
 	#include "relicbase_events.dm"
+	//#include "relicbase_jobs.dm"
 	#include "relicbase_overrides.dm"
 	#include "relicbase_presets.dm"
 	#include "relicbase_shuttles.dm"
@@ -61,6 +62,6 @@
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Southern Cross
+	#warn A map has already been included, ignoring Relic Base
 
 #endif

@@ -61,22 +61,18 @@
 /turf/simulated/mineral/thor
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
 
-/turf/simulated/mineral/ignore_mapgen/thor
+/turf/simulated/mineral/thor/ignore_mapgen/thor
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
 
-/turf/simulated/mineral/floor/sif
+/turf/simulated/mineral/thor/floor/sif
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
 
-/turf/simulated/mineral/floor/ignore_mapgen/thor
+/turf/simulated/mineral/thor/floor/ignore_mapgen/thor
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
 
 /turf/simulated/floor/outdoors/mud/thor/planetuse
 	oxygen		= MOLES_O2SIF
@@ -91,7 +87,6 @@
 /turf/simulated/mineral
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
 
 /turf/simulated/floor/outdoors
 	oxygen		= MOLES_O2SIF
@@ -140,28 +135,28 @@
 
 // Space mineral tiles are now not the default, so they get demoted to subtype status.
 
-/turf/simulated/mineral/vacuum
+/turf/simulated/mineral/thor/vacuum
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB
 
-/turf/simulated/mineral/ignore_mapgen/vacuum
+/turf/simulated/mineral/thor/ignore_mapgen/vacuum
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB
 
-/turf/simulated/mineral/floor/vacuum
+/turf/simulated/mineral/thor/floor/vacuum
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB
 
-/turf/simulated/mineral/floor/ignore_mapgen/vacuum
+/turf/simulated/mineral/thor/floor/ignore_mapgen/vacuum
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB
 
 // Step trigger to fall down to planet Thor
-obj/effect/step_trigger/teleporter/planetary_fall/thor/find_planet()
+/obj/effect/step_trigger/teleporter/planetary_fall/thor/find_planet()
 	planet = planet_thor
 
 //CHOMPedit: Changes to sif/planetuse snow to make it work properly as it does on Polaris, it was broken by YW edits.

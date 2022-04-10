@@ -21,21 +21,4 @@
 /turf/simulated/floor/boxing/gym
 	name = "gym mat"
 	icon_state = "gym_mat"
-
-/turf/simulated/mineral/floor/cave
-	name = "basalt"
-	desc = "Loose, rocky basalt. It crumbles to sand under the slightest bit of force."
-	icon = 'icons/turf/thor_ch.dmi'
-	icon_state = "basalt0"
-
-/turf/simulated/mineral/thor/mines
-	name = "dark rock"
-	desc = "Dark black basalt. Rich in exotic minerals."
-	icon = 'icons/turf/thor_ch.dmi'
-	icon_state = "deeprock"
-
-/turf/unsimulated/mineral/thor/mines
-	name = "impassable dark rock"
-	desc = "Dark black basalt. Packed impossibly tightly, no way to get past this."
-	icon = 'icons/turf/thor_ch.dmi'
-	icon_state = "deeprock-solid"
+	
