@@ -1895,13 +1895,12 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
@@ -11526,8 +11525,9 @@
 	RCon_tag = "Research Substation Bypass"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
-	dir = 8;
+	dir = 1
+	},
+/obj/structure/cable/green{
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -14240,7 +14240,6 @@
 	RCon_tag = "Substation - Dorms"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -21809,6 +21808,9 @@
 "kXs" = (
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Dorms Substation Bypass"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
@@ -37125,7 +37127,7 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/patient_b)
 "sND" = (
 /obj/machinery/firealarm{
@@ -40296,6 +40298,9 @@
 "uta" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "utb" = (
@@ -43145,7 +43150,7 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/patient_a)
 "vAT" = (
 /obj/structure/bed/chair/sofa/left/blue,
@@ -47331,6 +47336,7 @@
 	name = "Chemist"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/bed/chair/office/light,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "xvK" = (
