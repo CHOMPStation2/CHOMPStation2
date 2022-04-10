@@ -456,6 +456,12 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"gH" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/cave/explored/normal)
 "gL" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -3239,12 +3245,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
-"JL" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
 "JV" = (
 /obj/structure/sign/warning/high_voltage,
 /turf/simulated/wall,
@@ -27172,7 +27172,7 @@ LJ
 Og
 uU
 ZF
-JL
+gH
 AS
 Zn
 Zn

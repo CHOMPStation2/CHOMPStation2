@@ -1450,6 +1450,12 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/ai/ai_upload_foyer)
+"dE" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_4)
 "dF" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -2454,12 +2460,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_5)
-"gb" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_2)
 "gc" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/landing/three)
@@ -2693,12 +2693,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/brig)
-"gE" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_6)
 "gF" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -3403,14 +3397,6 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/sleep/vistor_room_9)
-"io" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/vistor_room_7)
 "ip" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3805,12 +3791,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/range)
-"je" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_4)
 "jh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4205,12 +4185,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
-"ki" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_6)
 "kj" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/red,
@@ -4293,6 +4267,14 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_7)
+"kw" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_9)
 "ky" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4349,6 +4331,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/range)
+"kC" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_6)
 "kD" = (
 /obj/structure/catwalk,
 /obj/structure/marker_beacon{
@@ -4802,6 +4790,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/main)
+"lA" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_5)
 "lC" = (
 /obj/machinery/camera/network/exterior{
 	c_tag = "EXT - CIV Lounge South 5"
@@ -5039,6 +5033,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
+"mc" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_3)
 "me" = (
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Virology Exterior North 2";
@@ -6563,6 +6563,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"pI" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_4)
 "pJ" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/storage/box/holowarrants{
@@ -8191,6 +8197,12 @@
 	outdoors = 1
 	},
 /area/surface/outpost/main/landing)
+"tB" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_3)
 "tC" = (
 /obj/machinery/shower{
 	dir = 4;
@@ -8484,6 +8496,12 @@
 	outdoors = 1
 	},
 /area/surface/outpost/main/landing)
+"ul" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_6)
 "um" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -8988,28 +9006,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/engineering/engine_waste)
-"vw" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/vistor_room_10)
-"vx" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open{
-	outdoors = 1
-	},
-/area/surface/outside/plains/outpost)
 "vz" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -9188,6 +9184,12 @@
 "vT" = (
 /turf/simulated/wall/r_wall,
 /area/medical/virology)
+"vU" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_5)
 "vV" = (
 /obj/structure/toilet{
 	dir = 1
@@ -10155,12 +10157,6 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
-"yk" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_5)
 "yl" = (
 /obj/structure/railing{
 	dir = 8
@@ -11067,6 +11063,12 @@
 "Aw" = (
 /turf/simulated/floor/redgrid,
 /area/security/nuke_storage)
+"Ay" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_1)
 "Az" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -11187,12 +11189,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/heads/sc/sd)
-"AN" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_3)
 "AP" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
@@ -11246,6 +11242,20 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/bridge)
+"AX" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "AY" = (
 /obj/item/device/radio/beacon,
 /turf/simulated/floor/carpet/blue,
@@ -11292,12 +11302,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"Bd" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_1)
 "Be" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/fancy/vials,
@@ -11619,6 +11623,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_waste)
+"BI" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_2)
 "BJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
@@ -12068,14 +12078,6 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
-"CF" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/vistor_room_8)
 "CG" = (
 /obj/machinery/camera/network/exterior{
 	c_tag = "Xenobotany Isolation Rooftop North Exterior Camera";
@@ -12674,12 +12676,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"Eb" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_1)
 "Ec" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall{
@@ -13152,12 +13148,6 @@
 	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
-"EX" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_5)
 "EY" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/photo_album{
@@ -14328,6 +14318,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/warehouse)
+"HF" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_1)
 "HG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -14625,12 +14621,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"Ir" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_3)
 "It" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -14649,6 +14639,14 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"Iu" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_7)
 "Iv" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -15559,12 +15557,6 @@
 "KM" = (
 /turf/simulated/floor/wood,
 /area/library_conference_room)
-"KN" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_4)
 "KP" = (
 /obj/structure/dancepole{
 	pixel_y = 5
@@ -15591,12 +15583,6 @@
 /obj/item/clothing/under/swimsuit/stripper/stripper_pink,
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
-"KS" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
-/area/surface/outpost/main/dorms/dorm_2)
 "KT" = (
 /obj/structure/dancepole{
 	pixel_y = 4
@@ -15699,6 +15685,14 @@
 	cached_rad_resistance = 150
 	},
 /area/engineering/engine_monitoring)
+"Lh" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_10)
 "Li" = (
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
@@ -16485,6 +16479,14 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"MT" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/vistor_room_8)
 "MU" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -16612,6 +16614,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/storage)
+"Nh" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/main/dorms/dorm_2)
 "Ni" = (
 /obj/structure/bed/chair/sofa/black{
 	dir = 4
@@ -17581,14 +17589,6 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/bmarble,
 /area/crew_quarters/sleep/vistor_room_8)
-"Ps" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/vistor_room_9)
 "Pt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -46115,8 +46115,8 @@ Jv
 Jv
 wL
 Jv
-ki
-gE
+kC
+ul
 PD
 yF
 yF
@@ -48171,8 +48171,8 @@ PC
 PC
 ST
 PC
-EX
-yk
+vU
+lA
 fZ
 yF
 yF
@@ -49695,7 +49695,7 @@ yF
 yF
 og
 dQ
-vw
+Lh
 Yh
 li
 Yh
@@ -50227,8 +50227,8 @@ up
 up
 xb
 up
-KN
-je
+dE
+pI
 vj
 yF
 yF
@@ -51751,7 +51751,7 @@ yF
 yF
 mW
 lG
-Ps
+kw
 wx
 Xz
 wx
@@ -52283,8 +52283,8 @@ jI
 jI
 XB
 jI
-Ir
-AN
+mc
+tB
 oj
 Xu
 xD
@@ -53807,7 +53807,7 @@ yF
 yF
 tX
 Hf
-CF
+MT
 Fs
 Kd
 Fs
@@ -54339,8 +54339,8 @@ Jk
 Jk
 cF
 Jk
-gb
-KS
+Nh
+BI
 UE
 yF
 yF
@@ -55863,7 +55863,7 @@ yF
 yF
 Zf
 Ln
-io
+Iu
 vn
 nM
 vn
@@ -56395,8 +56395,8 @@ rG
 rG
 Ll
 rG
-Eb
-Bd
+HF
+Ay
 Cx
 yF
 yF
@@ -64346,7 +64346,7 @@ xD
 xD
 xD
 xD
-vx
+AX
 EG
 EG
 yF
