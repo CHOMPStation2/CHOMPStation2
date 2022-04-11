@@ -99,7 +99,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
 	)
 	add_disabled_events(list(
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				30,		list(ASSIGNMENT_ENGINEER = 20)min_jobs = list(ASSIGNMENT_ENGINEER = 3)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				30,		list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Random Antagonist",		/datum/event/random_antag,		 		2.5,	list(ASSIGNMENT_SECURITY = 1), 1, 0, 5),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Carp School",				/datum/event/carp_migration,			-20, 	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 5), 1, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		//Commenting this event out, the pod is not mapped in.
