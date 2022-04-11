@@ -47,7 +47,7 @@
 	#include "relicbase-4.dmm" //Mines
 	#include "relicbase-5.dmm" //Wilderness
 	#include "relicbase-6.dmm" //Ocean/Plains
-	#include "relicbase-7.dmm" //Explo carrier
+	//#include "relicbase-7.dmm" //Explo carrier //shadowrealmed for now -- Ocelot
 	#include "relicbase-8.dmm" //CC
 	#include "relicbase-9.dmm" //Transit
 

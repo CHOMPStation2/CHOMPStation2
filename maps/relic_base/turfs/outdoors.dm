@@ -237,7 +237,7 @@
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
 		)
-	grass_chance = 85
+	grass_chance = 25
 
 	grass_types = list(
 		/obj/structure/flora/ausbushes/sparsegrass,
