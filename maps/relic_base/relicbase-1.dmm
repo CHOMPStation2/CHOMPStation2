@@ -430,6 +430,13 @@
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle,
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle,
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle,
+/obj/item/weapon/gun/projectile/automatic/serdy/sks,
+/obj/item/weapon/gun/projectile/colt/detective,
+/obj/item/weapon/gun/projectile/colt/detective,
+/obj/item/weapon/gun/projectile/colt/detective,
+/obj/item/weapon/gun/projectile/colt/detective,
+/obj/item/weapon/gun/projectile/colt/detective,
+/obj/item/weapon/gun/projectile/colt/detective,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -652,6 +659,57 @@
 /obj/item/ammo_magazine/clip/c762,
 /obj/item/ammo_magazine/clip/c762,
 /obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/clip/sks{
+	icon_state = "enbloc-8"
+	},
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -976,10 +1034,14 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "aUZ" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/zone_divider,
-/turf/simulated/floor/maglev,
-/area/maintenance/firstdeck/centralport{
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "Armoury";
+	name = "Emergency Access"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/techfloor,
+/area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "aVC" = (
@@ -3839,6 +3901,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
+/obj/machinery/station_map{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -7219,6 +7284,10 @@
 	dir = 4;
 	pixel_x = -5
 	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -9359,9 +9428,8 @@
 	})
 "lKa" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
+/obj/machinery/station_map{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/hallway/primary/seconddeck/dockhallway{
@@ -9792,7 +9860,6 @@
 /obj/item/weapon/gun/projectile/serdy_pistols/vp70m,
 /obj/item/weapon/gun/projectile/shotgun/pump/combat,
 /obj/item/weapon/gun/projectile/automatic/p90,
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec,
 /obj/item/weapon/gun/projectile/automatic/serdy/keltec,
 /obj/item/weapon/gun/projectile/automatic/serdy/mp5,
 /obj/item/weapon/gun/projectile/serdy_pistols/tp23,
@@ -10532,10 +10599,8 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "mUU" = (
-/obj/random/powercell,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/maglev,
-/area/maintenance/firstdeck/aftport{
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "mVQ" = (
@@ -13744,11 +13809,10 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "qCn" = (
+/obj/random/powercell,
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/zone_divider,
-/turf/simulated/floor/maglev,
-/area/maintenance/firstdeck/aftport{
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "qCG" = (
@@ -16670,23 +16734,6 @@
 	outdoors = -1
 	},
 /area/maintenance/firstdeck/aftstarboard{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"tNg" = (
-/mob/living/simple_mob/otie/feral/chubby{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
-	attacktext = list("pounced on");
-	faction = "corrupt";
-	melee_damage_lower = 5;
-	melee_damage_upper = 10;
-	melee_miss_chance = 50;
-	vore_bump_chance = 100;
-	vore_pounce_chance = 50;
-	vore_pounce_maxhealth = 150
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/maglev,
-/area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "tNi" = (
@@ -36324,8 +36371,8 @@ twn
 twn
 twn
 lgW
-twn
-nPV
+ycp
+qCn
 twn
 ovx
 twn
@@ -36338,9 +36385,9 @@ twn
 ovx
 twn
 twn
-twn
-aUZ
-kLJ
+ycp
+afy
+jMV
 rVP
 svI
 kLJ
@@ -36359,10 +36406,10 @@ twn
 twn
 nPV
 twn
-twn
-twn
-nPV
-twn
+ycp
+ycp
+qCn
+ycp
 twn
 twn
 twn
@@ -36372,24 +36419,24 @@ vVV
 vVV
 vVV
 vVV
-vVV
-vVV
-mUU
+xJC
+xJC
+kaw
 pay
 vVV
-vVV
-vVV
-vVV
-dss
-vVV
-vVV
+xJC
 vVV
 vVV
 dss
 vVV
-dss
 vVV
-mUU
+vVV
+xJC
+yaJ
+xJC
+yaJ
+vVV
+kaw
 vVV
 yhL
 hoA
@@ -36411,14 +36458,14 @@ dss
 dVF
 dss
 dss
-vVV
-vVV
-vVV
+xJC
+xJC
+xJC
+yaJ
+yaJ
 dss
-dss
-dss
 vVV
-vVV
+xJC
 dss
 vVV
 dss
@@ -36575,8 +36622,8 @@ ycp
 kEx
 ycp
 jMV
-jMV
-ycp
+mUU
+mUU
 ycp
 kxn
 ycp
@@ -37356,6 +37403,9 @@ twn
 twn
 twn
 twn
+ycp
+twn
+ycp
 twn
 twn
 twn
@@ -37364,12 +37414,9 @@ twn
 twn
 twn
 twn
-twn
-twn
-twn
-aUZ
-twn
-twn
+afy
+ycp
+ycp
 twn
 pfU
 twz
@@ -37392,9 +37439,9 @@ lgW
 twn
 kLJ
 twn
-twn
-tNg
-twn
+ycp
+lxi
+ycp
 pxd
 vVV
 dss
@@ -37403,9 +37450,9 @@ dss
 vVV
 jrl
 vVV
-qCn
+bTd
 vVV
-vVV
+xJC
 vVV
 vVV
 bdb
@@ -37415,9 +37462,9 @@ vVV
 vVV
 vVV
 dss
-dss
-dss
-dss
+yaJ
+yaJ
+yaJ
 dss
 yhL
 apE
@@ -37440,13 +37487,13 @@ vVV
 vVV
 pxd
 vVV
+xJC
+dZV
+xJC
 vVV
-dVF
+yaJ
 vVV
-vVV
-dss
-vVV
-dss
+yaJ
 dss
 dss
 ruF
@@ -54015,7 +54062,7 @@ aAm
 aAm
 aAm
 aAm
-avp
+aUZ
 bnq
 brs
 bLW
