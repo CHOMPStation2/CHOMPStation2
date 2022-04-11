@@ -483,11 +483,41 @@
 
 /area/surface/outpost/main/dorms/dorm_10
 	name = "\improper Apartment Ten"
+	
+/area/surface/outpost/main/dorms/dorm_1/upstairs
+	name = "\improper Apartment One Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_2/upstairs
+	name = "\improper Apartment Two Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_3/upstairs
+	name = "\improper Apartment Three Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_4/upstairs
+	name = "\improper Apartment Four Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_5/upstairs
+	name = "\improper Apartment Five Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_6/upstairs
+	name = "\improper Apartment Six Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_7/upstairs
+	name = "\improper Apartment Seven Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_8/upstairs
+	name = "\improper Apartment Eight Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_9/upstairs
+	name = "\improper Apartment Nine Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_10/upstairs
+	name = "\improper Apartment Ten Upper Level"
 
 /area/surface/outpost/main/airlock
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
-	ambience = AMBIENCE_SIF
+	ambience = AMBIENCE_THOR
 
 /area/surface/outpost/main/airlock/left_one
 	name = "\improper Outpost Left Wing Airlock One"

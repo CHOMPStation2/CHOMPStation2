@@ -2176,14 +2176,12 @@
 	},
 /area/lawoffice)
 "btA" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "SUBS- Research";
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -3297,6 +3295,7 @@
 	pixel_x = 32
 	},
 /obj/structure/cable/green{
+	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
@@ -3576,7 +3575,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_10)
 "chJ" = (
 /obj/structure/table/steel_reinforced,
@@ -3891,7 +3892,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_3)
 "cnZ" = (
 /obj/structure/closet/crate{
@@ -4189,10 +4192,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "ctU" = (
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -4202,9 +4201,10 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -5124,7 +5124,9 @@
 "cOh" = (
 /mob/living/simple_mob/animal/passive/cat,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outside/plains/outpost)
 "cOJ" = (
 /obj/structure/stairs/spawner/south,
@@ -5402,8 +5404,8 @@
 "cWt" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
 	},
 /area/surface/outside/plains/outpost)
 "cWM" = (
@@ -5813,6 +5815,7 @@
 	pixel_x = 32
 	},
 /obj/structure/cable/green{
+	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
@@ -8612,7 +8615,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_9)
 "euw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8757,14 +8762,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "ezb" = (
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Research Subgrid";
 	name_tag = "Research Subgrid"
@@ -8777,6 +8774,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -10951,6 +10954,14 @@
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/chapel/office)
+"fyz" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "fyD" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -11630,9 +11641,6 @@
 "fQV" = (
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Research Substation Bypass"
-	},
-/obj/structure/cable/green{
-	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -13607,6 +13615,7 @@
 	pixel_x = -32
 	},
 /obj/structure/cable/green{
+	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -13711,7 +13720,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_5)
 "gOY" = (
 /obj/structure/window/reinforced{
@@ -16664,7 +16675,9 @@
 	dir = 1
 	},
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outside/plains/outpost)
 "imm" = (
 /obj/machinery/light/small{
@@ -16702,7 +16715,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outside/plains/outpost)
 "imZ" = (
 /obj/structure/cable/green{
@@ -17986,7 +18001,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_6)
 "iSB" = (
 /obj/structure/flora/tree/jungle{
@@ -18217,11 +18234,6 @@
 	outdoors = -1
 	})
 "iYv" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
@@ -18230,6 +18242,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
 "iYW" = (
@@ -20302,6 +20317,7 @@
 	pixel_x = 32
 	},
 /obj/structure/cable/green{
+	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
@@ -21533,6 +21549,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_10)
+"kKn" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "kKs" = (
 /obj/machinery/computer/timeclock/premade/north,
 /obj/machinery/vending/nifsoft_shop,
@@ -23882,7 +23904,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_7)
 "lUR" = (
 /obj/machinery/light/no_nightshift,
@@ -27968,14 +27992,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main/refinery)
 "nYY" = (
-/obj/structure/flora/ausbushes/lavendergrass,
 /obj/item/device/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	outdoors = -1
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
 	},
 /area/medical/psych)
 "nZC" = (
@@ -32174,7 +32197,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_8)
 "qeX" = (
 /obj/structure/disposalpipe/segment{
@@ -32853,6 +32878,7 @@
 	pixel_x = -32
 	},
 /obj/structure/cable/green{
+	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -36143,6 +36169,7 @@
 	pixel_x = 32
 	},
 /obj/structure/cable/green{
+	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
@@ -38221,7 +38248,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_4)
 "tfF" = (
 /obj/effect/zone_divider,
@@ -40002,7 +40031,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_2)
 "tYs" = (
 /obj/machinery/seed_extractor,
@@ -43188,6 +43219,7 @@
 	pixel_x = -32
 	},
 /obj/structure/cable/green{
+	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -46125,6 +46157,7 @@
 	pixel_x = -32
 	},
 /obj/structure/cable/green{
+	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -46412,7 +46445,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/closet/firecloset/full,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/tiled/steel_dirty{
+	outdoors = 1
+	},
 /area/surface/outpost/main/dorms/dorm_1)
 "wTR" = (
 /obj/structure/cable/pink{
@@ -49674,16 +49709,14 @@
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Substation - Research"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
-	},
-/obj/machinery/light{
-	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -49851,6 +49884,7 @@
 	pixel_x = 32
 	},
 /obj/structure/cable/green{
+	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
@@ -76101,8 +76135,8 @@ pVC
 tRf
 gJp
 lgQ
-mCZ
-qNd
+hZu
+myw
 uVH
 uVH
 gqI
@@ -86113,7 +86147,7 @@ lvn
 lYH
 uiJ
 qSY
-kgp
+kKn
 hZu
 hZu
 vJv
@@ -90752,7 +90786,7 @@ rLe
 vHT
 xsS
 rLe
-qMb
+myw
 fnL
 xnC
 qsk
@@ -92284,7 +92318,7 @@ pBv
 iWM
 eiI
 xPf
-dOw
+hZu
 ttz
 qdw
 aVR
@@ -92762,7 +92796,7 @@ bBw
 dfu
 xVX
 hWB
-vlU
+fyz
 rLe
 wEa
 ybp
