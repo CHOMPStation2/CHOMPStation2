@@ -3142,12 +3142,12 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
 "bLH" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/device/taperecorder,
 /obj/item/device/taperecorder,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "bLS" = (
@@ -4617,10 +4617,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_processing)
 "cuy" = (
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/exploration)
 "cuH" = (
@@ -11073,7 +11073,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/bar)
 "fdn" = (
-/obj/structure/table/sifwoodentable,
+/obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/plains)
 "fdq" = (
@@ -16556,12 +16556,12 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "hAX" = (
-/obj/structure/table/sifwoodentable,
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "hBf" = (
@@ -16627,7 +16627,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/holodeck_control)
 "hDr" = (
-/obj/structure/table/sifwoodentable,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/machinery/button/windowtint{
@@ -16635,6 +16634,7 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "hDJ" = (
@@ -18195,6 +18195,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
+"ipD" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/ammo_magazine/ammo_box/b545/large/practice,
+/obj/structure/closet/walllocker_double{
+	dir = 4;
+	name = "Practice Ammo";
+	pixel_x = 32
+	},
+/obj/item/ammo_magazine/m545/small/empty,
+/obj/item/ammo_magazine/m545/small/empty,
+/obj/item/ammo_magazine/m545/small/empty,
+/obj/item/ammo_magazine/m545/small/empty,
+/obj/item/ammo_magazine/m545/small/empty,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/surface/outside/path/plains)
 "ipR" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -19327,8 +19342,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/heads/sc/chief)
 "iQW" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/device/universal_translator,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "iRD" = (
@@ -20302,7 +20317,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/heads/sc/chief)
 "jqA" = (
-/obj/structure/table/sifwoodentable,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "jqP" = (
@@ -22188,10 +22203,10 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_10)
 "kln" = (
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
+/obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/exploration)
 "klz" = (
@@ -24472,7 +24487,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/mining_main/refinery)
 "lno" = (
-/obj/structure/table/sifwoodentable,
+/obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/path/plains)
 "lnA" = (
@@ -26681,7 +26696,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/gun/projectile/automatic/z8,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "msl" = (
@@ -27748,8 +27762,8 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
 "mQD" = (
-/obj/structure/table/sifwoodentable,
 /obj/machinery/recharger,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "mQE" = (
@@ -30510,8 +30524,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "ohR" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "ohU" = (
@@ -31047,8 +31061,8 @@
 /area/chapel/main)
 "oCQ" = (
 /obj/effect/zone_divider,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/no_nightshift,
+/obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/exploration)
 "oDm" = (
@@ -34767,7 +34781,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/table/sifwoodentable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "qew" = (
@@ -35702,11 +35715,11 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "qDg" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/weapon/folder/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "qDn" = (
@@ -37925,7 +37938,6 @@
 "rAZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/recharger,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/blue{
@@ -37933,6 +37945,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "rBb" = (
@@ -40006,13 +40019,13 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/emergency_storage)
 "sAI" = (
-/obj/structure/table/sifwoodentable,
 /obj/machinery/photocopier/faxmachine,
 /obj/structure/cable/blue{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "sAX" = (
@@ -40573,8 +40586,8 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/kitchen)
 "sOQ" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/weapon/pen/blue,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "sPg" = (
@@ -51903,7 +51916,6 @@
 	},
 /area/surface/outside/plains/outpost)
 "xyU" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/weapon/paper_bin,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -51917,6 +51929,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "xza" = (
@@ -53823,13 +53836,13 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
 "yiE" = (
-/obj/structure/table/sifwoodentable,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen/blue,
 /obj/item/weapon/pen{
 	pixel_x = 4;
 	pixel_y = 4
 	},
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/exploration)
 "yiJ" = (
@@ -107828,7 +107841,7 @@ oVa
 oVa
 mJD
 wLZ
-lno
+ipD
 ybp
 ybp
 ybp
