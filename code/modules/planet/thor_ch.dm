@@ -71,15 +71,15 @@ var/datum/planet/thor/planet_thor = null
 			min = 0.40
 
 		if(0.30 to 0.40) // Sunrise/set
-			low_brightness = 0.2
+			low_brightness = 0.5
 			low_color = "#19277F"
 
-			high_brightness = 1
+			high_brightness = 2
 			high_color = "#2437B5"
 			min = 0.50
 
 		if(0.40 to 1.00) // Noon
-			low_brightness = 3.0
+			low_brightness = 5.0
 			low_color = "#487EBF"
 
 			high_brightness = 10.0
