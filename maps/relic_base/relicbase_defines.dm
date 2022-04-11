@@ -6,13 +6,12 @@
 #define Z_LEVEL_UNDERMINES				4
 #define Z_LEVEL_SURFACE_WILDS			5
 #define Z_LEVEL_SURFACE_OCEAN			6
-#define Z_LEVEL_CARRIER					7
-#define Z_LEVEL_CENTCOM					8
-#define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_SURFACE_MINE			10
-#define Z_LEVEL_MISC 					11
-#define Z_LEVEL_GATEWAY					12
-#define Z_LEVEL_FUELDEPOT				15
+#define Z_LEVEL_CENTCOM					7
+#define Z_LEVEL_TRANSIT					8
+#define Z_LEVEL_SURFACE_MINE			9
+#define Z_LEVEL_MISC 					10
+#define Z_LEVEL_GATEWAY					11
+#define Z_LEVEL_FUELDEPOT				12
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
