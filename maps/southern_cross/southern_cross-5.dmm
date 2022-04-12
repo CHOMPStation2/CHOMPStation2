@@ -539,6 +539,20 @@
 	dir = 1
 	},
 /area/surface/outside/ocean)
+"bz" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "bA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 1
@@ -770,6 +784,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"cn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "co" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plating,
@@ -889,6 +912,12 @@
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/normal)
+"cJ" = (
+/obj/random/toolbox,
+/obj/random/technology_scanner,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "cK" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1142,6 +1171,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/exploration/containment)
+"dt" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "du" = (
 /obj/machinery/atmospherics/binary/circulator{
 	anchored = 1;
@@ -1274,6 +1307,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"dK" = (
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outpost/main/airlock/right_one)
 "dL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1388,6 +1424,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/refinery)
+"dX" = (
+/obj/structure/table/steel,
+/obj/item/weapon/cell/apc,
+/obj/item/weapon/cell/apc,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "dY" = (
 /obj/machinery/mineral/unloading_machine{
 	icon_state = "unloader-corner"
@@ -1663,6 +1705,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"eB" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -2594,6 +2650,15 @@
 /obj/item/clothing/head/welding,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
+"gm" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "gn" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -2799,6 +2864,11 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/emergencystorage)
+"gK" = (
+/obj/item/clothing/head/hardhat/orange,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "gL" = (
 /obj/machinery/disposal,
 /obj/machinery/light_construct{
@@ -3301,6 +3371,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
+"hD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "hF" = (
 /turf/simulated/wall/r_wall{
 	cached_rad_resistance = 150
@@ -3568,6 +3654,18 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/gateway)
+"im" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "io" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4106,6 +4204,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
+"jl" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/surface/outpost/main/corridor)
 "jm" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -4423,6 +4529,16 @@
 /obj/machinery/mineral/stacking_machine,
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/refinery)
+"jX" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/overlay/snow/floor/edges{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
 "jY" = (
 /obj/machinery/mineral/input,
 /obj/machinery/light/small{
@@ -4835,6 +4951,24 @@
 /obj/machinery/power/port_gen/pacman,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
+"kM" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_lower)
 "kN" = (
 /obj/structure/closet/crate,
 /obj/item/stack/material/phoron{
@@ -4950,6 +5084,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
+"kW" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "civ5_airlock_control";
+	pixel_x = -26;
+	pixel_y = 34;
+	tag_exterior_door = "civ5_airlock_exterior";
+	tag_interior_door = "civ5_airlock_interior"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "kX" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/borderfloor{
@@ -5107,6 +5256,23 @@
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/corridor/right_upper)
+"ln" = (
+/obj/structure/table/rack,
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/shoes/boots/winter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/main/corridor)
 "lo" = (
 /obj/structure/table/steel,
 /obj/item/weapon/tool/crowbar,
@@ -5685,6 +5851,15 @@
 /obj/item/clothing/head/helmet/space/void/mining,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
+"mp" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "mq" = (
 /obj/structure/table/rack,
 /obj/item/weapon/shovel,
@@ -5708,6 +5883,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
+"mr" = (
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
 "ms" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -5744,6 +5922,11 @@
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/mining_main/storage)
+"mx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "my" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -5908,6 +6091,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"mO" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "mP" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -6206,6 +6393,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
+"ni" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "nj" = (
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Right Wing - Airlock Access 3";
@@ -6577,6 +6776,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/tools)
+"nL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "nM" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central1{
 	dir = 1
@@ -6632,6 +6843,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
+"nP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "nQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -7091,6 +7315,35 @@
 "oy" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"oz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
+"oA" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"oB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "oC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7124,6 +7377,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"oG" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/airlock/right_one)
 "oH" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -7381,6 +7640,18 @@
 	cached_rad_resistance = 150
 	},
 /area/surface/outpost/engineering/reactor_smes)
+"oX" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 6
+	},
+/obj/structure/bed/chair/comfy/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "oY" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -7564,6 +7835,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
+"pq" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "pr" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
@@ -8090,6 +8365,10 @@
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
+"qp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "qq" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/borderfloor,
@@ -8344,6 +8623,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
+"qN" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "qO" = (
 /obj/machinery/mineral/equipment_vendor/survey,
 /obj/effect/floor_decal/corner/purple{
@@ -8851,7 +9142,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "rx" = (
 /obj/machinery/access_button{
@@ -9303,6 +9596,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/tools)
+"sj" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "sk" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
@@ -9516,6 +9816,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
+"sD" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "civ5_airlock_control";
+	name = "Internal Access Button";
+	pixel_y = 25
+	},
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "civ5_airlock_interior";
+	locked = 1;
+	name = "Civilian Outpost Internal"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "sE" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -9628,6 +9946,18 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall)
+"sN" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "sP" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -9954,6 +10284,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"tt" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "tu" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -10109,6 +10443,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/engineering/monitoring)
+"tJ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -25
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "tK" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -10249,6 +10595,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
+"tW" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "tX" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -10949,6 +11307,18 @@
 "uY" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/monitoring)
+"uZ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "va" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -11049,6 +11419,9 @@
 "vj" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/gen_room/smes_right)
+"vk" = (
+/turf/simulated/wall/r_wall,
+/area/surface/outside/plains/outpost)
 "vl" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -11810,6 +12183,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
+"wi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "wj" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "ENG_Outpost_airlock_control";
@@ -11906,12 +12294,28 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
 "wr" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
+/area/surface/outpost/main/corridor)
+"ws" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "wt" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -12071,6 +12475,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/emergency_storage/one)
+"wI" = (
+/obj/structure/table,
+/obj/random/tech_supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "wK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -12335,6 +12745,38 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/emergency_storage/one)
+"xn" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "civ1_airlock_control";
+	name = "External Access Button";
+	pixel_x = -26
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "civ1_airlock_control";
+	name = "External Access Button";
+	pixel_x = -26
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "civ1_airlock_control";
+	name = "External Access Button";
+	pixel_x = -26
+	},
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "civ5_airlock_exterior";
+	locked = 1;
+	name = "Civilian Outpost External"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "xo" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -12550,6 +12992,16 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"xE" = (
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "xF" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic{
@@ -13119,6 +13571,11 @@
 "yB" = (
 /turf/simulated/floor/outdoors/snow,
 /area/surface/outside/plains/outpost)
+"yC" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/white/bordercorner,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "yD" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/left_one)
@@ -13309,6 +13766,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
+"yR" = (
+/obj/effect/zone_divider,
+/turf/simulated/wall/r_wall,
+/area/surface/outside/plains/outpost)
 "yS" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
@@ -13742,17 +14203,10 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/turf/simulated/floor/water/deep/pool,
-/area/surface/outpost/civilian/pool)
-"zS" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
+/turf/simulated/floor/water/deep/pool{
+	temperature = 293.15
 	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/main/airlock/landing_south)
+/area/surface/outpost/civilian/pool)
 "zT" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
@@ -13933,19 +14387,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
-"Ad" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
 "Ae" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -14387,6 +14828,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
+"Bb" = (
+/obj/machinery/button/remote/blast_door{
+	id = "garage2";
+	name = "Garage Shutter Control";
+	pixel_x = -27;
+	pixel_y = 1;
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/main/airlock/right_one)
 "Bc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14488,6 +14939,15 @@
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
+"Bm" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Bn" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/table/standard,
@@ -14685,6 +15145,10 @@
 /obj/effect/floor_decal/stairs{
 	dir = 8
 	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/civilian/sauna)
 "BN" = (
@@ -14848,6 +15312,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
+"Cb" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Cc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -15308,6 +15780,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/corridor)
+"Db" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"Dc" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "De" = (
 /obj/machinery/door/airlock/multi_tile/glass,
 /obj/machinery/door/firedoor/multi_tile/glass,
@@ -15659,6 +16141,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
+"DK" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 5
+	},
+/obj/structure/bed/chair/comfy/red,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "DL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -15803,6 +16295,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"DX" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "DY" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -15814,6 +16317,21 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"DZ" = (
+/obj/structure/table/rack,
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/shoes/boots/winter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/main/corridor)
 "Ea" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -16987,6 +17505,15 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"Gp" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Gq" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -17321,6 +17848,12 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"GM" = (
+/obj/machinery/light_construct{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "GN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17477,6 +18010,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
+"GY" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "GZ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -17599,6 +18147,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
+"Hh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "Hi" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
@@ -18328,6 +18882,23 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
+"IF" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "IG" = (
 /obj/structure/table/steel,
 /obj/structure/cable/blue{
@@ -18393,7 +18964,15 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/machinery/vending/coffee{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "IM" = (
@@ -18797,7 +19376,9 @@
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/plains/normal)
 "Jy" = (
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "Jz" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -18887,6 +19468,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
+"JI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "JJ" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -19175,6 +19768,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"Kk" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Kl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -19667,20 +20273,6 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals7{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
@@ -19693,16 +20285,12 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Li" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/blue{
 	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -19710,7 +20298,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
 	},
-/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Lk" = (
@@ -19959,6 +20546,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
+"LE" = (
+/obj/structure/snowman,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "LF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -20141,11 +20732,11 @@
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/main/gen_room)
 "LU" = (
-/obj/effect/overlay/snow/floor,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/effect/overlay/snow/floor/edges,
+/obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/main/gen_room)
 "LV" = (
@@ -20163,24 +20754,18 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "LX" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/right_one)
 "LY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/public{
-	name = "Airlock Access"
-	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "LZ" = (
 /obj/machinery/door/firedoor/border_only,
@@ -20627,6 +21212,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"MC" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "MD" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -25
@@ -20654,12 +21245,6 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "MG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
@@ -20669,21 +21254,19 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "MH" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Left Wing - Central Hall";
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "MI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
@@ -20695,16 +21278,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/corridor)
-"MJ" = (
-/obj/machinery/light{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	frequency = 1441;
-	pixel_x = 22
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -20718,54 +21296,46 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/civilian/sauna)
 "ML" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
 	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"MM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
+"MO" = (
+/obj/machinery/camera/network/main_outpost{
+	c_tag = "ATV Garage 2";
+	dir = 8
 	},
 /obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+	dir = 4;
+	pixel_x = 24
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/right_one)
-"MO" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "MP" = (
-/obj/effect/floor_decal/industrial/warning{
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/table/rack,
-/obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Airlock 1";
-	dir = 8
-	},
-/obj/item/weapon/melee/umbrella{
-	color = "#7c0d0d"
-	},
-/obj/item/weapon/melee/umbrella{
-	color = "#7c0d0d"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/right_one)
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "MQ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -20794,6 +21364,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"MU" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "MV" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
@@ -21075,6 +21649,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
+"Nj" = (
+/obj/effect/overlay/snow/floor,
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
 "Nk" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
@@ -21098,6 +21677,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
+"Nm" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/overlay/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
 "No" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -21247,37 +21833,35 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "Nx" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Ny" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Nz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/public{
-	name = "Airlock Access"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "NA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
 	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/public{
-	name = "Airlock Access"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/steel_grid,
-/area/surface/outpost/main/airlock/landing_south)
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "NB" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -21293,38 +21877,30 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "NE" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
+"NF" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/right_one)
+/area/surface/outpost/main/corridor)
 "NG" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/right_one)
-"NH" = (
-/obj/structure/table/rack,
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/item/clothing/shoes/boots/winter,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/right_one)
 "NI" = (
 /obj/machinery/disposal,
@@ -21385,6 +21961,23 @@
 "NR" = (
 /turf/simulated/wall,
 /area/surface/outpost/main/dorms/dorm_4)
+"NS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -25
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "NT" = (
 /obj/machinery/door/airlock{
 	id_tag = "dorm4";
@@ -21534,145 +22127,120 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "Oe" = (
-/obj/structure/dispenser/oxygen,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
-"Of" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"Og" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"Oh" = (
-/obj/structure/cable/blue{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"Oi" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"Oj" = (
-/obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/water/pool,
-/area/surface/outpost/civilian/pool)
-"Ok" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"Ol" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/structure/table/rack,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/item/weapon/melee/umbrella{
-	color = "#7c0d0d"
-	},
-/obj/item/weapon/melee/umbrella{
-	color = "#7c0d0d"
-	},
-/obj/item/weapon/melee/umbrella{
-	color = "#7c0d0d"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
-"Om" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
 /obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
+"Of" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"Og" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/vehicle/train/engine/quadbike{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
+"Oh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/civilian/fishing)
+"Oi" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"Oj" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
+/area/surface/outpost/civilian/pool)
+"Ok" = (
+/obj/machinery/button/remote/blast_door{
+	id = "garage2";
+	name = "Garage Shutter Control";
+	pixel_y = -24;
+	dir = 1
+	},
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
+"Om" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
+"On" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Oo" = (
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
+"Op" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "Oq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Or" = (
-/obj/structure/table/rack,
-/obj/structure/window/basic{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 4
 	},
-/obj/structure/window/basic,
-/obj/item/clothing/shoes/boots/winter,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/right_one)
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "Os" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
@@ -21918,6 +22486,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"OM" = (
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/main/airlock/right_one)
 "ON" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -21942,63 +22513,52 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "OQ" = (
-/obj/structure/table/rack,
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/shoes/boots/winter,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
-"OR" = (
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"OS" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"OT" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"OU" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"OV" = (
-/obj/structure/table/rack,
-/obj/structure/window/basic{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/window/basic{
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"OR" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/shoes/boots/winter,
-/obj/effect/floor_decal/industrial/warning{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
+"OU" = (
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/flora/pottedplant/decorative,
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
+"OV" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "OW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -22009,75 +22569,50 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security/maa)
 "OX" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/main/airlock/landing_south)
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "OY" = (
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
 "OZ" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
 	},
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main2_airlock_control";
-	pixel_x = -26;
-	pixel_y = -26;
-	tag_exterior_door = "main2_airlock_exterior";
-	tag_interior_door = "main2_airlock_interior"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
+/obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Pa" = (
-/obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
-/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Pb" = (
-/obj/structure/table/reinforced,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
 	},
-/obj/item/weapon/tool/crowbar/red,
-/obj/item/device/flashlight,
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/obj/structure/cable/blue{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/right_one)
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "Pc" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -22244,54 +22779,32 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "Ps" = (
-/obj/structure/table/rack,
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/shoes/boots/winter,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
-"Pt" = (
-/obj/structure/table/rack,
-/obj/structure/window/basic{
+/obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/window/basic,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/shoes/boots/winter,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
-"Pu" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main2_airlock_control";
-	name = "Internal Access Button";
-	pixel_x = -26;
-	pixel_y = -6
-	},
-/obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "main2_airlock_interior";
-	locked = 1;
-	name = "Main Outpost Internal"
-	},
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
+"Pt" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
+"Pu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Pv" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/material/kitchen/utensil/fork/plastic{
@@ -22303,6 +22816,21 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
+"Pw" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass/hidden,
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Px" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -22355,6 +22883,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
+"PC" = (
+/obj/effect/overlay/snow/floor/edges{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
 "PD" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
@@ -22464,51 +22999,44 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "PN" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/effect/floor_decal/industrial/warning{
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/bed/chair/comfy/red{
 	dir = 8
 	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "PO" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "civ_ge_airlock_interior";
+	locked = 1;
+	name = "East Garage Internal"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"PP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/hidden,
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"PP" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
+/area/surface/outpost/main/corridor)
 "PQ" = (
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/table/woodentable,
+/obj/item/weapon/deck/cards,
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
 "PR" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -22522,21 +23050,13 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "PS" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
+/area/surface/outpost/main/corridor)
 "PT" = (
 /obj/machinery/light_construct,
 /obj/structure/table/reinforced,
@@ -22544,51 +23064,55 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/surface/outpost/security/maa)
 "PU" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/machinery/status_display{
+	pixel_y = 32
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
-"PV" = (
-/obj/structure/table/reinforced,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/item/weapon/tool/crowbar/red,
-/obj/item/device/flashlight,
-/obj/machinery/light,
-/obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Landing South Airlock";
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
-/area/surface/outpost/main/airlock/landing_south)
-"PW" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
+/obj/effect/floor_decal/corner/white/border{
 	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
-"PX" = (
-/obj/machinery/light{
-	dir = 1
+"PV" = (
+/obj/machinery/light/small,
+/obj/structure/table/steel,
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
+"PW" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/overlay/snow/floor/edges{
+	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
+"PX" = (
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "garage2";
+	name = "Garage Shutters"
+	},
+/turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "PY" = (
-/obj/effect/floor_decal/industrial/outline/red,
-/turf/simulated/floor/tiled/monotile,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "PZ" = (
 /obj/structure/fence/corner,
@@ -22627,6 +23151,14 @@
 	},
 /turf/simulated/floor/carpet,
 /area/surface/outpost/main/dorms/dorm_6)
+"Qf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "Qg" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -22675,6 +23207,10 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/surface/outpost/main/dorms/dorm_2)
+"Qn" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "Qo" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -22705,63 +23241,67 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Qq" = (
-/obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "main3_airlock_interior";
-	locked = 1;
-	name = "Landing South Internal"
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "Qr" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main3_airlock_control";
-	pixel_x = -5;
-	tag_exterior_door = "main3_airlock_exterior";
-	tag_interior_door = "main3_airlock_interior"
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main3_airlock_control";
-	name = "Internal Access Button";
-	pixel_x = 5
-	},
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/main/airlock/landing_south)
-"Qs" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
+/obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
+"Qs" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "civ_ge_airlock_control";
+	name = "External Access Button";
+	pixel_x = -24;
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "Qt" = (
-/obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Airlock Access 1";
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 9
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Qu" = (
-/obj/item/device/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
 	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"Qv" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Qw" = (
@@ -22925,19 +23465,6 @@
 /obj/random/contraband,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/laundry)
-"QL" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
 "QM" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
@@ -22951,29 +23478,43 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/civilian/sauna)
 "QN" = (
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/machinery/light{
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/monotile,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
+"QP" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "QQ" = (
-/obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "main2_airlock_exterior";
-	locked = 1;
-	name = "Main Outpost External"
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
 	},
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main2_airlock_control";
-	name = "External Access Button";
-	pixel_x = -26
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/structure/cable/blue{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "QR" = (
 /obj/item/modular_computer/console/preset/security,
@@ -22986,12 +23527,20 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
 "QS" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/surface/outpost/main/airlock/right_one)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "QT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23070,31 +23619,45 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/left_two)
-"Rc" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central6,
-/turf/simulated/floor/tiled/monotile,
-/area/surface/outpost/main/airlock/landing_south)
 "Re" = (
-/obj/effect/overlay/snow/floor,
-/obj/machinery/light/small{
-	dir = 1
+/obj/random/toolbox,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
+"Rf" = (
+/obj/random/junk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
-/obj/effect/overlay/snow/floor/edges{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Rg" = (
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/main/airlock/right_one)
-"Rh" = (
-/obj/effect/overlay/snow/floor,
-/obj/machinery/light/small{
+/obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/obj/structure/table/rack,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/machinery/light/small,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/right_one)
+"Rh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Ri" = (
 /obj/structure/fence{
 	dir = 8
@@ -23115,6 +23678,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_6)
+"Rk" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Rl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -23386,19 +23961,6 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/main/airlock/left_two)
-"RI" = (
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 8
-	},
-/obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Landing South Airlock Access";
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/airlock/landing_south)
 "RJ" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/civilian/fishing)
@@ -23624,25 +24186,26 @@
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/main/airlock/left_two)
 "Sj" = (
-/obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "main3_airlock_exterior";
-	locked = 1;
-	name = "Landing South External"
+/obj/machinery/status_display{
+	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Sk" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main3_airlock_control";
-	name = "External Access Button"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Sl" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -23918,19 +24481,39 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/sauna)
-"SG" = (
-/obj/effect/overlay/snow/floor,
-/obj/machinery/light/small{
+"SH" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/main/airlock/landing_south)
-"SH" = (
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/main/airlock/landing_south)
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/main/airlock/right_one)
 "SI" = (
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "SJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -24017,6 +24600,14 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/airlock/left_three)
+"SO" = (
+/obj/random/junk,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "SP" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -24100,6 +24691,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
+"SS" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "ST" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -24411,34 +25007,56 @@
 "Tj" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/civilian/smes)
+"Tk" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -25
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Tl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "Tm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	id = "garage2";
-	name = "Garage Shutters"
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "civ_ge_airlock_exterior";
+	locked = 1;
+	name = "East Garage Internal"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Tn" = (
 /obj/structure/fence,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "To" = (
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "Tp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/camera/network/main_outpost{
-	c_tag = "ATV Garage 2";
-	dir = 8
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Construction Area"
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/door/firedoor/multi_tile/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Tq" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -24701,57 +25319,74 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/emergency_storage/two)
 "TL" = (
-/obj/effect/overlay/snow/floor,
 /obj/machinery/disposal,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/disposalpipe/trunk,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/smes)
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
+"TM" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "TN" = (
-/obj/effect/overlay/snow/floor,
 /obj/machinery/vending/snack,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/smes)
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
 "TO" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/plains)
 "TP" = (
-/obj/effect/overlay/snow/floor,
 /obj/machinery/vending/cola,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/smes)
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
 "TQ" = (
-/obj/effect/overlay/snow/floor,
 /obj/structure/table/bench/steel,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/smes)
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
 "TR" = (
-/obj/effect/overlay/snow/floor,
 /obj/structure/table/bench/steel,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/overlay/snow/floor/edges{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/smes)
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
 "TS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/vehicle/train/engine/quadbike{
-	dir = 2
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/machinery/light/small{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/main/airlock/right_one)
-"TV" = (
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
+/area/surface/outpost/civilian/sauna)
+"TV" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "civ_ge_airlock_control";
+	name = "Internal Access Button";
+	pixel_x = 26;
+	pixel_y = 25
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "civ_ge_airlock_control";
+	pixel_x = 26;
+	pixel_y = 36;
+	tag_exterior_door = "civ_ge_airlock_exterior";
+	tag_interior_door = "civ_ge_airlock_interior"
+	},
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "TW" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
@@ -24774,6 +25409,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
+"TY" = (
+/obj/machinery/light,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "TZ" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/boots/winter,
@@ -24845,6 +25487,11 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
+"Ug" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/white/bordercorner,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "Uh" = (
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -24885,24 +25532,15 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/emergency_storage/two)
 "Um" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/overlay/snow/floor,
-/obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating/sif/planetuse,
-/area/surface/outside/path/plains)
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/corridor)
 "Un" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/plains)
 "Uo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/button/remote/blast_door{
-	id = "garage2";
-	name = "Garage Shutter Control";
-	pixel_x = -6;
-	pixel_y = -22
-	},
+/obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "Up" = (
@@ -24926,11 +25564,14 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
 "Ur" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Us" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
@@ -25087,12 +25728,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/emergency_storage/two)
 "UK" = (
-/obj/machinery/button/remote/blast_door{
-	id = "garage2";
-	name = "Garage Shutter Control";
-	pixel_x = 22
-	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "UL" = (
 /obj/machinery/access_button{
@@ -25214,6 +25850,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/construction_area)
+"UW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "UX" = (
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -25497,6 +26147,18 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/civilian/fishing)
+"VG" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "VH" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
@@ -25514,7 +26176,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/corridor)
 "VJ" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
@@ -25539,31 +26201,34 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "VM" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/machinery/door/firedoor/multi_tile/glass,
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Pool"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "VN" = (
-/obj/effect/overlay/snow/floor,
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/sauna)
-"VO" = (
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outpost/civilian/sauna)
-"VP" = (
-/obj/effect/overlay/snow/floor,
-/obj/machinery/light/small,
-/obj/effect/overlay/snow/floor/edges{
+/obj/structure/closet/athletic_mixed,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CO - Pool 1";
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
+"VO" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
+"VP" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "VQ" = (
 /obj/machinery/door/airlock/glass_external{
 	autoclose = 0;
@@ -25635,20 +26300,13 @@
 /turf/simulated/floor/water,
 /area/surface/outside/river/indalsalven)
 "VX" = (
+/obj/structure/disposalpipe/segment,
 /obj/effect/overlay/snow/floor,
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/obj/effect/overlay/snow/floor/edges{
-	dir = 9
-	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "VY" = (
-/obj/structure/table/glass,
-/turf/simulated/floor/tiled/freezer,
-/area/surface/outpost/civilian/pool)
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/airlock/right_one)
 "VZ" = (
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/freezer,
@@ -25675,22 +26333,10 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/sauna)
 "Wd" = (
-/obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "civ2_airlock_exterior";
-	locked = 1;
-	name = "Civilian Outpost External"
+/obj/machinery/light/small{
+	dir = 4
 	},
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "civ2_airlock_control";
-	name = "External Access Button";
-	pixel_x = 26
-	},
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "We" = (
 /obj/effect/overlay/snow/floor,
@@ -25864,7 +26510,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "Wx" = (
-/obj/item/weapon/stool/padded,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CO - Pool 1";
 	dir = 8
@@ -25872,47 +26517,27 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "Wy" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "Wz" = (
-/obj/item/device/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
+/obj/structure/bed/chair/comfy/red{
+	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "WA" = (
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 10
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 1
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CO - Airlock Access 2"
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/vending/fooddessert,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "WB" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/civilian/sauna)
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "WC" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -26048,10 +26673,10 @@
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "WN" = (
-/obj/structure/closet/athletic_mixed,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/athletic_mixed,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "WO" = (
@@ -26116,26 +26741,29 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "WU" = (
-/obj/effect/floor_decal/industrial/outline/red,
-/turf/simulated/floor/tiled/monotile,
-/area/surface/outpost/civilian/sauna)
-"WV" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled,
-/area/surface/outpost/civilian/sauna)
-"WW" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals5{
+/obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
+"WV" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/machinery/vending/radren,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"WW" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/corridor)
 "WX" = (
 /turf/simulated/floor/water/shoreline{
 	dir = 9
@@ -26236,7 +26864,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "Xj" = (
 /obj/machinery/door/firedoor/border_only,
@@ -26247,46 +26877,48 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/security)
+"Xk" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "Xl" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "Xm" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "Xn" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "Xo" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/machinery/vending/snack,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "Xp" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "civ2_airlock_control";
-	name = "Internal Access Button";
-	pixel_x = 26;
-	pixel_y = 5
+/obj/machinery/door/window/southleft,
+/obj/machinery/light/small{
+	dir = 4
 	},
-/obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "civ2_airlock_interior";
-	locked = 1;
-	name = "Civilian Outpost Internal"
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "Xr" = (
 /turf/simulated/wall/r_wall,
@@ -26338,7 +26970,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "Xy" = (
 /obj/effect/floor_decal/corner/red{
@@ -26613,19 +27247,25 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "XW" = (
 /turf/simulated/wall/solidrock,
 /area/surface/outside/plains/mountains)
 "XX" = (
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "XY" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool{
+	temperature = 293.15
+	},
 /area/surface/outpost/civilian/pool)
 "XZ" = (
 /obj/machinery/power/apc{
@@ -26655,6 +27295,16 @@
 /obj/item/weapon/dice/d20,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
+"Yc" = (
+/obj/structure/table,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/toolbox,
+/obj/machinery/light_construct{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "Yd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26674,9 +27324,6 @@
 /obj/structure/disposalpipe/trunk,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -25
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
@@ -26698,6 +27345,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"Yh" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/right_one)
 "Yi" = (
 /obj/item/clothing/under/bathrobe,
 /obj/item/clothing/under/bathrobe,
@@ -26706,10 +27363,6 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "Yj" = (
@@ -26720,18 +27373,8 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "Yk" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4{
+/obj/structure/bed/chair/sofa/black{
 	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "civ2_airlock_control";
-	pixel_x = 26;
-	pixel_y = 26;
-	tag_exterior_door = "civ2_airlock_exterior";
-	tag_interior_door = "civ2_airlock_interior"
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
@@ -26789,6 +27432,18 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/emergency_storage)
+"Ys" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Yt" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -26798,6 +27453,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/security/maa)
+"Yu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Yv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet,
@@ -26822,6 +27483,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
+"Yz" = (
+/obj/effect/overlay/snow/floor,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
 "YA" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -27144,6 +27812,11 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
+"YU" = (
+/obj/structure/closet/toolcloset,
+/obj/item/device/flashlight/maglight,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/airlock/right_one)
 "YV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -67622,13 +68295,13 @@ Si
 Si
 RG
 ss
-ip
 UX
 UX
-ip
 UX
-ip
-ip
+UX
+UX
+UX
+UX
 qC
 UX
 UX
@@ -67880,7 +68553,7 @@ TO
 TO
 TO
 UX
-ip
+UX
 UX
 UX
 UX
@@ -68138,8 +68811,8 @@ TO
 TO
 TO
 UX
-UX
-UX
+ke
+yf
 UX
 TO
 TO
@@ -68398,7 +69071,7 @@ TO
 UX
 UX
 UX
-TO
+UX
 TO
 TO
 TO
@@ -68655,7 +69328,7 @@ TO
 TO
 TO
 UX
-TO
+UX
 TO
 TO
 TO
@@ -68905,7 +69578,7 @@ UX
 UX
 UX
 UX
-UX
+LE
 UX
 UX
 TO
@@ -68931,7 +69604,7 @@ TO
 UX
 UX
 UX
-UX
+ip
 UX
 Ag
 Am
@@ -69189,7 +69862,7 @@ UX
 UX
 bQ
 UX
-UX
+ip
 UX
 UX
 VW
@@ -69417,7 +70090,7 @@ qA
 UX
 Tg
 UX
-UX
+xw
 UX
 UX
 UX
@@ -69447,7 +70120,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 UX
 UX
 VW
@@ -69674,9 +70347,9 @@ HI
 qC
 UX
 Tg
+xw
 UX
-UX
-UX
+LE
 UX
 UX
 UX
@@ -69705,7 +70378,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 UX
 UX
 VW
@@ -69933,7 +70606,7 @@ LS
 UX
 Tg
 UX
-UX
+xw
 UX
 UX
 UX
@@ -69963,7 +70636,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 bp
 UX
 UX
@@ -70221,7 +70894,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -70479,7 +71152,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -70737,7 +71410,7 @@ RJ
 RJ
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -70994,8 +71667,8 @@ LR
 Rp
 RJ
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -71252,8 +71925,8 @@ ZP
 eg
 Up
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -71487,13 +72160,13 @@ UX
 UX
 UX
 UX
-TO
-TO
-TO
-TO
-TO
-UX
-TO
+NE
+NE
+jX
+Nm
+Nm
+Nm
+NE
 TO
 TO
 VF
@@ -71510,8 +72183,8 @@ ZP
 up
 Up
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -71737,21 +72410,21 @@ As
 As
 As
 zi
-Nx
-Nx
-zS
-zS
-zS
-Nx
+zi
 UX
 UX
 UX
 UX
+Ar
 UX
 UX
-UX
-UX
-TO
+NE
+zi
+zi
+As
+zi
+zi
+NE
 TO
 TO
 VF
@@ -71769,7 +72442,7 @@ xc
 RJ
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -71995,12 +72668,7 @@ Au
 AR
 Bv
 MF
-Ny
-Oe
-OQ
-Ps
-PN
-Nx
+zi
 UX
 UX
 UX
@@ -72008,8 +72676,13 @@ UX
 UX
 UX
 UX
-UX
-TO
+Nj
+zi
+zK
+zk
+zK
+xn
+NE
 TO
 TO
 VE
@@ -72026,8 +72699,8 @@ ZP
 xd
 Up
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -72253,24 +72926,24 @@ Au
 AR
 Bv
 zk
-Ny
-Of
-OR
-OR
-PO
-Nx
-zS
-zS
-zS
-Nx
-SG
+zi
 UX
 UX
+UX
+UX
+UX
+UX
+UX
+NE
+Ay
+zk
+zk
+jl
+zi
+Yz
 TO
 TO
-TO
-TO
-VH
+Oh
 RJ
 Wq
 Wq
@@ -72284,8 +72957,8 @@ rh
 SY
 Up
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -72511,23 +73184,23 @@ zk
 zk
 Ct
 MG
-Nz
-Og
-OS
-OS
-PP
-Qq
-QL
-wr
-Ad
-Sj
-SH
-TO
-TO
-TO
-TO
-TO
-TO
+zi
+rl
+tL
+tL
+tL
+tL
+tL
+rl
+NE
+zi
+zk
+ln
+DZ
+zi
+NE
+PW
+PC
 VI
 VT
 Wr
@@ -72543,7 +73216,7 @@ RJ
 RJ
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -72769,24 +73442,24 @@ Aw
 Aw
 zM
 MH
-Nx
-Oh
-OT
-OR
-PQ
-Qr
-QN
-Rc
-RI
-Sk
-SH
-TO
-TO
-TO
-TO
-TO
-UX
-UX
+zi
+zi
+zi
+As
+As
+As
+As
+As
+zi
+zi
+sD
+zi
+HL
+zi
+zi
+zi
+zi
+zi
 UX
 UX
 WM
@@ -72800,8 +73473,8 @@ RJ
 RJ
 UX
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -73027,24 +73700,24 @@ Av
 Av
 LV
 MI
-NA
-Oi
-OU
-OU
-PS
-Qq
-QL
-wr
-Ad
-Sj
-SH
-TO
-TO
-TO
-TO
-TO
-TO
-UX
+CX
+bz
+IF
+eB
+eB
+eB
+eB
+eB
+Tk
+Pw
+kW
+bz
+eB
+IF
+eB
+NS
+Bm
+HM
 UX
 UX
 VH
@@ -73058,8 +73731,8 @@ UX
 UX
 UX
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -73284,25 +73957,25 @@ JA
 JA
 JA
 zk
-zk
-Ny
-Ok
-OR
-OR
-PU
-Nx
-OX
-OX
-OX
-Nx
-SG
-UX
-UX
-TO
-TO
-TO
-TO
-UX
+Sk
+CY
+Aw
+zM
+Aw
+Aw
+Aw
+Aw
+Aw
+zM
+oz
+Aw
+Aw
+Aw
+zM
+Aw
+Oe
+Rh
+WW
 VX
 VT
 VJ
@@ -73317,7 +73990,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -73542,26 +74215,26 @@ JB
 Kw
 Lg
 LW
-MJ
+zq
 Ny
-Ol
+yC
 OV
-Pt
-PV
+Kk
+TM
 Nx
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-VD
-VJ
+tW
+TM
+uZ
+sN
+TM
+tW
+Nx
+hD
+mp
+UW
+im
+VK
+VK
 VK
 VK
 VK
@@ -73575,7 +74248,7 @@ VK
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -73801,27 +74474,27 @@ AS
 Ax
 Ax
 zi
-Nx
-Nx
-OX
-OX
-OX
-Nx
-UX
-UX
-UX
-UX
-UX
-ke
-UX
-TO
-TO
-TO
-TO
-VH
-VK
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+oB
+PP
+JI
 VK
 WN
+VN
+Xg
 Xg
 XU
 YT
@@ -73833,7 +74506,7 @@ VK
 VK
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -74072,13 +74745,13 @@ UX
 UX
 UX
 UX
-TO
-TO
-TO
-TO
-VH
-VM
+zi
+DS
+UW
+PS
+VK
 VZ
+Wu
 WO
 Wu
 Wu
@@ -74091,7 +74764,7 @@ Ec
 XR
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -74323,20 +74996,20 @@ UX
 UX
 UX
 UX
+ip
+ip
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-VH
-VM
+zi
+zi
+zi
+DR
+UW
+Pu
+VK
 Ws
+Wu
 WP
 Xh
 Xh
@@ -74348,8 +75021,8 @@ SX
 GD
 XR
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -74586,15 +75259,15 @@ UX
 UX
 UX
 UX
-Tj
+zi
 TL
 Um
-Um
-Um
-Um
-VJ
+NF
+QS
+OX
 VK
 VZ
+Wu
 WQ
 Xx
 XV
@@ -74606,8 +75279,8 @@ GA
 VZ
 VK
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -74844,12 +75517,12 @@ UX
 UX
 UX
 UX
-Tj
+zi
 TN
-TO
-TO
-TO
-TO
+mr
+DR
+UW
+VG
 VK
 VK
 Wt
@@ -74864,8 +75537,8 @@ GA
 Wu
 VK
 VK
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -75093,24 +75766,24 @@ UX
 UX
 Tg
 UX
+ip
 UX
 UX
 UX
+ip
+ip
 UX
 UX
 UX
-UX
-UX
-UX
-Tj
+zi
 TP
-TO
-TO
-TO
-TO
+mr
+DU
+Ys
+OR
 VM
-VY
-VZ
+Wu
+Wu
 WQ
 Xi
 Jy
@@ -75122,8 +75795,8 @@ GA
 Wu
 Yl
 XR
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -75351,23 +76024,23 @@ UX
 UX
 Tg
 UX
+ip
+UX
+ip
+ip
+ip
+ip
+ip
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-Tj
+zi
 TQ
-TO
-TO
-TO
-TO
-VM
-VZ
+mr
+DR
+UW
+Yu
+Wu
+Wu
 Wu
 WQ
 Xi
@@ -75380,8 +76053,8 @@ GA
 Wu
 Yl
 XR
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -75609,21 +76282,21 @@ UX
 UX
 Tg
 UX
+ip
+UX
+ip
+ip
 UX
 UX
+ip
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-Tj
+zi
 TR
-TO
-TO
-TO
-TO
+mr
+DR
+UW
+TY
 VK
 Wa
 Wu
@@ -75639,7 +76312,7 @@ HH
 NI
 VK
 UX
-UX
+ip
 YY
 UX
 UX
@@ -75867,23 +76540,23 @@ UX
 UX
 Tg
 UX
+ip
+UX
+ip
+ip
 UX
 UX
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
+zi
+zi
+zi
+DR
+UW
+Yu
 VM
-VZ
+Wu
 Wu
 WQ
 Xi
@@ -75897,7 +76570,7 @@ Wu
 Yl
 XR
 UX
-UX
+ip
 YY
 UX
 UX
@@ -76125,6 +76798,7 @@ UX
 UX
 Tg
 UX
+ip
 UX
 UX
 UX
@@ -76135,14 +76809,13 @@ UX
 UX
 UX
 UX
-UX
-TO
-TO
-TO
-TO
-VM
-VY
-VZ
+zi
+Sj
+UW
+Yu
+Wu
+Wu
+Wu
 WQ
 Xl
 XX
@@ -76155,7 +76828,7 @@ Wu
 Yl
 XR
 UX
-UX
+ip
 YY
 UX
 UX
@@ -76394,10 +77067,10 @@ ip
 UX
 UX
 UX
-TO
-TO
-TO
-TO
+zi
+DR
+UW
+wr
 VK
 VK
 Wv
@@ -76413,7 +77086,7 @@ Wu
 VK
 VK
 UX
-UX
+ip
 YY
 UX
 UX
@@ -76652,13 +77325,13 @@ ip
 UX
 UX
 UX
-UX
-TO
-TO
-TO
-UX
+zi
+qN
+UW
+Rk
 VK
 VZ
+Wu
 WQ
 Xm
 XY
@@ -76671,7 +77344,7 @@ VZ
 VK
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -76900,9 +77573,9 @@ UX
 Tg
 UX
 UX
+ip
 UX
-UX
-UX
+ip
 UX
 UX
 UX
@@ -76910,13 +77583,13 @@ ip
 UX
 UX
 UX
-UX
-TO
-TO
-TO
-UX
-VM
+Ay
+DR
+UW
+Cb
+VK
 Ww
+Wu
 WR
 Xh
 Xh
@@ -76928,8 +77601,8 @@ pQ
 od
 XR
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -77158,9 +77831,9 @@ Tg
 NB
 Tg
 Tg
+ax
 Tg
-Tg
-Tg
+ax
 Tg
 Tg
 ax
@@ -77168,12 +77841,12 @@ Tg
 Tg
 Tg
 Tg
-Un
-Un
-Un
-Un
-Tg
-VM
+Ay
+DU
+Ys
+nL
+VK
+VZ
 Wx
 WS
 Wu
@@ -77187,7 +77860,7 @@ VZ
 XR
 Tg
 Tg
-Tg
+ax
 Ri
 Tg
 Tg
@@ -77416,6 +78089,9 @@ UX
 Tg
 UX
 UX
+ip
+UX
+ip
 UX
 UX
 UX
@@ -77423,14 +78099,11 @@ UX
 UX
 UX
 UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
+zi
+DR
+UW
+Cb
+VK
 VK
 VK
 WT
@@ -77444,8 +78117,8 @@ Yy
 VK
 VK
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -77673,22 +78346,22 @@ UX
 UX
 Tg
 UX
+ip
+ip
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-TO
-UX
+LX
+ND
+ND
+LX
+LX
+LX
+LX
+oB
+PP
+DX
+Wb
 UX
 VK
 VK
@@ -77702,8 +78375,8 @@ VK
 VK
 UX
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -77931,22 +78604,22 @@ UX
 UX
 Tg
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
-UX
+ip
+ip
+ip
+ip
+ip
+Pt
+Om
+wI
+Yc
+wI
+Xk
+LX
+qN
+UW
+Cb
+Wb
 UX
 UX
 UX
@@ -77960,8 +78633,8 @@ UX
 UX
 UX
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -78187,24 +78860,24 @@ UX
 UX
 UX
 UX
-Tg
+yR
 UX
 UX
 UX
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
-UX
-UX
+Pt
+Om
+UK
+To
+qp
+dt
+LX
+WU
+UW
+MP
+Wb
 UX
 UX
 UX
@@ -78218,8 +78891,8 @@ UX
 UX
 UX
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -78452,20 +79125,20 @@ UX
 UX
 UX
 UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
-UX
-UX
-ip
-UX
-UX
-UX
+LX
+To
+Om
+mO
+Rf
+mx
+Tp
+MM
+xE
+Rk
+Wb
+Wb
+Wb
+Wb
 Wb
 Ye
 Zi
@@ -78477,7 +79150,7 @@ Wb
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -78710,21 +79383,21 @@ UX
 UX
 UX
 UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+LX
+pq
+gK
+Om
+SO
+Qf
+Qn
+MU
+ws
+Gp
 Wb
+OU
+Or
+Yk
+TS
 Yf
 Zj
 Mm
@@ -78735,7 +79408,7 @@ Wb
 Wb
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -78968,21 +79641,21 @@ UX
 UX
 UX
 UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
-UX
-UX
-UX
-UX
+LX
+To
+Om
+Om
+Re
+Hh
+LX
+mp
+UW
+Gn
 Wb
+Pb
 Wy
 Wy
-Wb
+PQ
 Yg
 Zk
 Kl
@@ -78992,8 +79665,8 @@ PR
 yb
 xx
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -79226,21 +79899,21 @@ UX
 UX
 UX
 UX
-UX
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-VN
+LX
+YU
+tt
+GM
+cJ
+sj
+LX
+PU
+SI
+SS
 Wb
+NA
 Wz
-WU
-Wb
+Wz
+PN
 Yi
 Zm
 Xu
@@ -79251,7 +79924,7 @@ su
 xx
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -79484,18 +80157,18 @@ LX
 ND
 ND
 LX
-Re
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-VO
-Wc
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+Ur
+QN
+Qr
+Wb
+Xu
 WA
 WV
 Xo
@@ -79508,8 +80181,8 @@ kl
 kl
 Wb
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -79731,33 +80404,33 @@ Hc
 Dj
 Dj
 Dj
-Dj
+kM
 Lh
 LY
 ML
-NE
-Om
+oA
+oA
 OZ
-Pu
-PW
-Qs
+oA
+oA
+oA
 QQ
-Rg
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
+Qv
+OZ
+oA
+oA
+Oi
+tJ
+OZ
+gm
+SI
+UK
 VO
 Wd
-WB
-WW
+Xu
+Xu
 Xp
-Yk
+Xu
 Zp
 Fm
 YP
@@ -79767,7 +80440,7 @@ kl
 Wb
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -79991,26 +80664,26 @@ IV
 xO
 KD
 Li
-LZ
-MO
-NG
-Oq
-Pa
-LZ
-PX
+OQ
 Qt
-QS
-Rg
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-TO
-VP
+Qt
+Qt
+Pa
+Qt
+Qt
+Qt
+wi
+nP
+Pa
+Qt
+Qt
+Qt
+Qt
+Pa
+Qt
+PY
+Ug
+Wb
 Wb
 WC
 WC
@@ -80024,8 +80697,8 @@ DI
 DI
 xx
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -80249,26 +80922,26 @@ IX
 yP
 KE
 Lj
+Nz
+Ug
+cn
+Qq
+Oq
+On
+cn
+cn
+cn
+NG
+GY
+cn
+Of
+TV
+Ug
+Oq
+Of
+UK
+SS
 LX
-MP
-NH
-Or
-Pb
-LX
-PY
-Qu
-LX
-Rh
-TO
-TO
-UX
-TO
-TO
-TO
-TO
-TO
-UX
-UX
 UX
 UX
 UX
@@ -80282,8 +80955,8 @@ Yp
 NW
 xx
 UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -80516,17 +81189,17 @@ LX
 Qa
 Qa
 LX
-UX
-UX
-UX
-UX
-TO
-TO
-TO
-TO
-UX
-UX
-UX
+LX
+LX
+LX
+LX
+PO
+LX
+LX
+ni
+UK
+Db
+LX
 UX
 UX
 UX
@@ -80541,7 +81214,7 @@ Wb
 Wb
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -80777,14 +81450,14 @@ UX
 UX
 UX
 UX
-TO
-TO
-TO
-TO
-TO
-UX
-UX
-UX
+LX
+oG
+SH
+LZ
+QP
+UK
+Qu
+LX
 UX
 UX
 UX
@@ -80799,7 +81472,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -81034,15 +81707,15 @@ UX
 UX
 UX
 UX
-UX
-SI
+ip
+LZ
+VY
 Rg
-Rg
-Rg
-UK
-UX
-UX
-UX
+LX
+DK
+Yh
+oX
+LX
 UX
 UX
 UX
@@ -81057,7 +81730,7 @@ UX
 UX
 UX
 UX
-UX
+ip
 YY
 UX
 UX
@@ -81286,36 +81959,36 @@ MQ
 Tg
 UX
 UX
+ip
+ip
+UX
+UX
+UX
+ip
+ip
+LX
+Tm
+LX
+LX
+LZ
+LZ
+LX
+LX
+UX
+UX
+UX
+UX
+UX
+UX
+UX
+UX
 UX
 UX
 UX
 UX
 UX
 ip
-UX
-LX
-Tm
-Tm
-Tm
-LX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
 YY
 UX
 UX
@@ -81543,6 +82216,28 @@ Mb
 EH
 Tg
 UX
+ip
+UX
+ip
+UX
+UX
+UX
+ip
+ip
+LX
+Qs
+Uo
+Uo
+Dc
+WB
+LX
+UX
+UX
+UX
+UX
+UX
+UX
+UX
 UX
 UX
 UX
@@ -81550,30 +82245,8 @@ UX
 UX
 UX
 ip
-UX
-LX
-To
-To
-Uo
-LX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
 YY
 UX
 UX
@@ -81807,12 +82480,14 @@ UX
 UX
 UX
 UX
-UX
-UX
+ip
+ip
 LX
 To
-TS
 To
+To
+To
+PV
 LX
 UX
 UX
@@ -81826,12 +82501,10 @@ UX
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
+ip
+ip
 YY
 UX
 UX
@@ -82061,16 +82734,18 @@ Tg
 UX
 UX
 UX
+ip
 UX
 UX
 UX
-UX
-UX
-UX
+ip
+ip
 LX
-Tp
 To
-Ur
+To
+To
+To
+dX
 LX
 UX
 UX
@@ -82080,15 +82755,13 @@ UX
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
+ip
+ip
+ip
+ip
+ip
 UX
 YY
 UX
@@ -82319,33 +82992,33 @@ Tg
 UX
 UX
 UX
+ip
+ip
 UX
 UX
-UX
-UX
-UX
+ip
 UX
 LX
+VP
+MC
+MC
+Ok
 LX
-TV
-LX
 LX
 UX
 UX
 UX
 UX
 UX
+ip
+ip
+ip
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
+ip
+ip
+ip
 UX
 UX
 YY
@@ -82580,29 +83253,29 @@ UX
 UX
 UX
 UX
+ip
 UX
 UX
+LX
+Og
+To
+To
+Op
+PX
+Bb
+ip
+ip
+UX
+ip
+ip
+ip
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
+ip
+ip
+ip
 UX
 UX
 UX
@@ -82837,30 +83510,30 @@ UX
 UX
 UX
 UX
-UX
-UX
+ip
+ip
 ip
 UX
+LX
+To
+To
+Og
+Op
+PX
+OM
+ip
+ip
+ip
+ip
+ip
+ip
+ip
+ip
+ip
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
+ip
 UX
 UX
 UX
@@ -83095,25 +83768,25 @@ UX
 UX
 UX
 UX
+ip
+ip
+ip
+UX
+LX
+Og
+Ps
+MO
+Op
+PX
+OM
+ip
 UX
 UX
 UX
 UX
 UX
 UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
 UX
 UX
 UX
@@ -83354,23 +84027,23 @@ UX
 UX
 UX
 UX
+ip
+ip
 UX
+LX
+LX
+LX
+LX
+LX
+LX
+dK
+ke
 UX
 UX
 UX
 ip
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
-UX
+ip
+ip
 UX
 UX
 UX
@@ -83612,9 +84285,9 @@ UX
 UX
 UX
 UX
-UX
-UX
-UX
+ip
+ip
+ip
 ip
 UX
 UX
@@ -84131,7 +84804,7 @@ UX
 UX
 UX
 UX
-UX
+vk
 UX
 UX
 UX
