@@ -8,10 +8,9 @@
 #define Z_LEVEL_SURFACE_OCEAN			6
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
-#define Z_LEVEL_SURFACE_MINE			9
-#define Z_LEVEL_MISC 					10
-#define Z_LEVEL_GATEWAY					11
-#define Z_LEVEL_FUELDEPOT				12
+#define Z_LEVEL_MISC 					9
+#define Z_LEVEL_GATEWAY					10
+#define Z_LEVEL_FUELDEPOT				11
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
@@ -92,9 +91,9 @@
 
 	map_levels = list(
 			Z_LEVEL_UNDERGROUND,
+			Z_LEVEL_SURFACE,
 			Z_LEVEL_UPPER_FLOORS,
 			Z_LEVEL_UNDERMINES,
-			Z_LEVEL_SURFACE,
 			Z_LEVEL_SURFACE_WILDS,
 			Z_LEVEL_SURFACE_OCEAN
 		)

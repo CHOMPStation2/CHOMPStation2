@@ -48,10 +48,12 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 	listening_level = Z_LEVEL_UPPER_FLOORS
 	autolinkers = list("d3_relay")
 
+/*
 /obj/machinery/telecomms/relay/preset/southerncross/cave
 	id = "Cave Relay"
 	listening_level = Z_LEVEL_SURFACE_MINE
 	autolinkers = list("cve_relay")
+*/
 
 /obj/machinery/telecomms/relay/preset/southerncross/cave
 	id = "Cave Relay"

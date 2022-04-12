@@ -6,8 +6,9 @@
 [i]Class[/i]: Colony
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: The Vir government welcomes you to this world."}
-
-	map_z = list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE)
+	
+	// Set map_z to your levels for a planetary base. If you're ever going to split this up/add more Z's to Thor, imitate SC. THESE MUST BE DEFINED FOR SENSORS + SUCH TO WORK.
+	map_z = list(Z_LEVEL_UNDERGROUND, Z_LEVEL_SURFACE, Z_LEVEL_UPPER_FLOORS, Z_LEVEL_SURFACE_WILDS, Z_LEVEL_SURFACE_OCEAN)
 	in_space = 0
 	start_x  = 11
 	start_y  = 11

@@ -8506,8 +8506,7 @@
 /area/surface/outside/plains/outpost)
 "qN" = (
 /obj/effect/landmark/map_data{
-	height = 3;
-	level = 3
+	height = 3
 	},
 /obj/effect/overmap/visitable/planet/Thor,
 /turf/unsimulated/wall/planetary/normal/thor,

@@ -9562,6 +9562,10 @@
 /obj/machinery/vending/nifsoft_shop,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost)
+"esx" = (
+/obj/machinery/smartfridge/produce,
+/turf/simulated/wall,
+/area/hydroponics)
 "esU" = (
 /obj/machinery/door/airlock/engineering{
 	name = "SMES Room";
@@ -40583,6 +40587,9 @@
 "sMo" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/marble,
+/obj/machinery/smartfridge/drinks/showcase{
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "sMu" = (
@@ -85790,7 +85797,7 @@ mpQ
 xCr
 wBu
 fqD
-qkp
+esx
 qkp
 xCr
 swv
