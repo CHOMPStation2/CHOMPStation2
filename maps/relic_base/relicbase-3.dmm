@@ -2979,6 +2979,13 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/ursula)
+"gi" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "gj" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 10
@@ -11232,14 +11239,6 @@
 "wx" = (
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_9/upstairs)
-"wy" = (
-/obj/structure/table/glass,
-/obj/machinery/chemical_dispenser/full{
-	density = 1
-	},
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenoflora)
 "wz" = (
 /obj/machinery/door/airlock/security{
 	name = "Riot Control";
@@ -11379,13 +11378,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
-"wI" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/medical_lockerroom)
 "wJ" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/secure/briefcase,
@@ -11793,6 +11785,15 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"xx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora)
 "xy" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -13716,6 +13717,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_waste)
+"BG" = (
+/obj/machinery/vending/wardrobe/medidrobe,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "BH" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -17337,10 +17342,6 @@
 	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
-"IN" = (
-/obj/machinery/vending/wardrobe/medidrobe,
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/medical_lockerroom)
 "IO" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/catwalk,
@@ -23908,6 +23909,14 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3/upstairs)
+"WA" = (
+/obj/structure/table/glass,
+/obj/machinery/chemical_dispenser/full{
+	density = 1
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora)
 "WB" = (
 /obj/structure/bookcase{
 	name = "bookcase (Non-Fiction)"
@@ -24520,15 +24529,6 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/shuttle/shuttle3/start)
-"XR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenoflora)
 "XS" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -66453,12 +66453,12 @@ wu
 wu
 wu
 Ns
-wI
+gi
 rU
 RQ
 Ro
 Sa
-IN
+BG
 Ns
 wu
 wu
@@ -71105,8 +71105,8 @@ EA
 AP
 yd
 ie
-wy
-XR
+WA
+xx
 AP
 AP
 Ic

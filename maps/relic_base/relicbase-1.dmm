@@ -1327,6 +1327,18 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -27;
+	pixel_y = 4
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -27;
+	pixel_y = -4
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -27;
+	pixel_y = -12
+	},
 /turf/simulated/floor/reinforced,
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -1782,12 +1794,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/firstdeck/aftport{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"bWg" = (
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/tiled/white,
-/area/rnd/research/firstdeck/hallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "bXQ" = (
@@ -5991,6 +5997,12 @@
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"hsl" = (
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/firstdeck/hallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "hsy" = (
 /obj/random/trash,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
@@ -7537,6 +7549,10 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 5
 	},
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = 11
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "jmA" = (
@@ -8621,6 +8637,11 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"kCP" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics)
 "kDI" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/plating,
@@ -13571,6 +13592,14 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -13
+	},
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/watertank,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "qor" = (
@@ -53087,7 +53116,7 @@ onC
 onC
 onC
 onC
-onC
+kCP
 dvZ
 phO
 vXc
@@ -66469,7 +66498,7 @@ uLU
 sGh
 tlD
 tLj
-bWg
+hsl
 vcm
 ktS
 umH
