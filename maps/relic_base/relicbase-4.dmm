@@ -37,28 +37,38 @@
 /obj/machinery/conveyor{
 	id = "anolongstorage"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/research/xenoarcheology)
 "aL" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "aU" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/research/xenoarcheology)
 "aW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/research/xenoarcheology)
 "bC" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/research/xenoarcheology)
 "bD" = (
 /obj/structure/catwalk,
@@ -66,7 +76,9 @@
 	id = "anolongstorage";
 	req_access = list(65)
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/research/xenoarcheology)
 "bG" = (
 /turf/simulated/wall/r_wall,
@@ -99,7 +111,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "cw" = (
 /turf/simulated/wall/r_wall,
@@ -1572,7 +1586,9 @@
 	dir = 1
 	},
 /obj/effect/zone_divider,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "sB" = (
 /obj/structure/table/steel,
@@ -1587,7 +1603,9 @@
 	dir = 1
 	},
 /obj/effect/zone_divider,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "sG" = (
 /obj/effect/zone_divider,
@@ -1771,7 +1789,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "vo" = (
 /obj/structure/bed/chair/office/light,
@@ -1991,7 +2011,9 @@
 /area/surface/outpost/mining_main/crew_area)
 "wE" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "wF" = (
 /obj/structure/cable/green{
@@ -2002,7 +2024,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "wR" = (
 /obj/machinery/computer/crew{
@@ -2388,7 +2412,9 @@
 "AO" = (
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "AQ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -2413,13 +2439,17 @@
 "AY" = (
 /obj/machinery/mining/brace,
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Bh" = (
 /obj/machinery/mining/drill/loaded,
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Bi" = (
 /turf/simulated/wall/r_wall,
@@ -2498,7 +2528,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Cx" = (
 /obj/machinery/door/firedoor/border_only,
@@ -2938,7 +2970,9 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Hb" = (
 /obj/item/device/radio/intercom{
@@ -3231,7 +3265,9 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Jj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -3496,7 +3532,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Mf" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -3511,7 +3549,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Mk" = (
 /obj/machinery/mining/drill/loaded,
@@ -3522,7 +3562,9 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Mm" = (
 /turf/simulated/wall/r_wall,
@@ -3820,7 +3862,9 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Ov" = (
 /obj/machinery/door/firedoor/border_only,
@@ -3841,7 +3885,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/research/xenoarcheology)
 "OQ" = (
 /turf/simulated/floor/plating,
@@ -4273,7 +4319,9 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Vq" = (
 /obj/structure/cable/green{
@@ -4284,7 +4332,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "VC" = (
 /obj/structure/closet/toolcloset,
@@ -4431,14 +4481,18 @@
 /obj/structure/cable/green,
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Xs" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "Xu" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -4575,7 +4629,9 @@
 "Zq" = (
 /obj/structure/ore_box,
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "ZB" = (
 /obj/machinery/recharge_station,
@@ -4691,7 +4747,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid{
+	temperature = 393.15
+	},
 /area/surface/outpost/mining_main/cave)
 "ZU" = (
 /turf/simulated/floor/tiled/techmaint,

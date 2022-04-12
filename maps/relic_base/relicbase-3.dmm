@@ -1009,7 +1009,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/gateway)
 "ce" = (
-/obj/machinery/biogenerator,
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "cf" = (
@@ -2736,10 +2736,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/gateway)
-"fz" = (
-/obj/machinery/vending/wardrobe/medidrobe,
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/medical_lockerroom)
 "fA" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/tiled/dark,
@@ -2937,11 +2933,6 @@
 	},
 /area/surface/outpost/main/landing/three)
 "ge" = (
-/obj/structure/closet/secure_closet/hydroponics{
-	req_access = list(47)
-	},
-/obj/item/device/multitool,
-/obj/item/weapon/gun/energy/floragun,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoflora Starboard";
 	dir = 8
@@ -2952,6 +2943,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "gf" = (
@@ -3134,10 +3126,10 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/gateway)
 "gA" = (
-/obj/machinery/botany/editor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
 	},
+/obj/machinery/chem_master,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "gB" = (
@@ -3945,6 +3937,8 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
+/obj/structure/table/standard,
+/obj/item/device/reagent_scanner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "ii" = (
@@ -9095,6 +9089,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "rR" = (
@@ -10098,9 +10093,8 @@
 	},
 /area/surface/outpost/main/landing/three)
 "uc" = (
-/obj/machinery/chemical_dispenser/full{
-	density = 1
-	},
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "ud" = (
@@ -11238,6 +11232,14 @@
 "wx" = (
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_9/upstairs)
+"wy" = (
+/obj/structure/table/glass,
+/obj/machinery/chemical_dispenser/full{
+	density = 1
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora)
 "wz" = (
 /obj/machinery/door/airlock/security{
 	name = "Riot Control";
@@ -11377,6 +11379,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
+"wI" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "wJ" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/secure/briefcase,
@@ -15174,6 +15183,13 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/hydroponics{
+	req_access = list(47)
+	},
+/obj/item/weapon/gun/energy/floragun,
+/obj/item/device/analyzer/plant_analyzer,
+/obj/item/device/analyzer,
+/obj/item/device/reagent_scanner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "EB" = (
@@ -15887,6 +15903,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "FZ" = (
@@ -16931,6 +16948,9 @@
 /obj/item/weapon/gun/energy/floragun,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/item/device/analyzer/plant_analyzer,
+/obj/item/device/analyzer,
+/obj/item/device/reagent_scanner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "Id" = (
@@ -17317,6 +17337,10 @@
 	},
 /turf/simulated/floor/carpet/deco,
 /area/surface/outpost/main/bar)
+"IN" = (
+/obj/machinery/vending/wardrobe/medidrobe,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "IO" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/catwalk,
@@ -18535,6 +18559,7 @@
 	name = "west bump";
 	pixel_x = -24
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenoflora_isolation)
 "Ly" = (
@@ -23066,13 +23091,6 @@
 	outdoors = 1
 	},
 /area/medical/morgue)
-"Uz" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/medical_lockerroom)
 "UA" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -24049,7 +24067,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "WR" = (
-/obj/machinery/chem_master,
+/obj/machinery/botany/editor,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "WS" = (
@@ -24502,6 +24520,15 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/shuttle/shuttle3/start)
+"XR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora)
 "XS" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -66426,12 +66453,12 @@ wu
 wu
 wu
 Ns
-Uz
+wI
 rU
 RQ
 Ro
 Sa
-fz
+IN
 Ns
 wu
 wu
@@ -71078,8 +71105,8 @@ EA
 AP
 yd
 ie
-AP
-FT
+wy
+XR
 AP
 AP
 Ic

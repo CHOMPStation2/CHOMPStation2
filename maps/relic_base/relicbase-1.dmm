@@ -1784,6 +1784,12 @@
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"bWg" = (
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/firstdeck/hallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "bXQ" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2280,12 +2286,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/firstdeck/aftstarboard{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"cEH" = (
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/tiled/white,
-/area/rnd/research/firstdeck/hallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "cEP" = (
@@ -66469,7 +66469,7 @@ uLU
 sGh
 tlD
 tLj
-cEH
+bWg
 vcm
 ktS
 umH
