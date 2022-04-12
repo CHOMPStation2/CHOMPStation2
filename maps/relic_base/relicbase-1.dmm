@@ -1173,6 +1173,12 @@
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"baP" = (
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/firstdeck/hallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "baR" = (
 /obj/machinery/light/no_nightshift,
 /obj/machinery/firealarm{
@@ -2467,6 +2473,11 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"cRk" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics)
 "cTd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -5997,12 +6008,6 @@
 /area/hallway/primary/seconddeck/dockhallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
-"hsl" = (
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/tiled/white,
-/area/rnd/research/firstdeck/hallway{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
 "hsy" = (
 /obj/random/trash,
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old{
@@ -8637,11 +8642,6 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
-"kCP" = (
-/obj/machinery/portable_atmospherics/hydroponics,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/turf/simulated/floor/tiled/hydro,
-/area/hydroponics)
 "kDI" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/plating,
@@ -53116,7 +53116,7 @@ onC
 onC
 onC
 onC
-kCP
+cRk
 dvZ
 phO
 vXc
@@ -66498,7 +66498,7 @@ uLU
 sGh
 tlD
 tLj
-hsl
+baP
 vcm
 ktS
 umH
