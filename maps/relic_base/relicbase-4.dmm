@@ -450,7 +450,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/area/surface/outpost/mining_main/crew_area)
 "gL" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2397,8 +2397,8 @@
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_b)
 "AS" = (
-/turf/simulated/wall/r_wall,
-/area/surface/cave/explored/normal)
+/turf/simulated/floor/bluegrid,
+/area/surface/outpost/mining_main/crew_area)
 "AT" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3030,7 +3030,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/area/surface/outpost/mining_main/crew_area)
 "Hy" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -3062,7 +3062,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/area/surface/outpost/mining_main/crew_area)
 "HU" = (
 /obj/machinery/artifact_scanpad,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -3925,9 +3925,9 @@
 	},
 /area/surface/cave/unexplored/deep)
 "Qn" = (
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/obj/machinery/telecomms/relay/preset/mining,
+/turf/simulated/floor/bluegrid,
+/area/surface/outpost/mining_main/crew_area)
 "Qs" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman,
@@ -4371,7 +4371,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/area/surface/outpost/mining_main/crew_area)
 "WF" = (
 /obj/item/weapon/stool/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -4671,7 +4671,7 @@
 /obj/item/ammo_magazine/m545/small/hunter,
 /obj/item/ammo_magazine/m545/small/hunter,
 /turf/simulated/floor/tiled/techmaint,
-/area/surface/cave/explored/normal)
+/area/surface/outpost/mining_main/crew_area)
 "ZI" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -26171,12 +26171,12 @@ IE
 Lj
 NY
 uU
-AS
-AS
-AS
-uW
-uW
-Zn
+uU
+uU
+uU
+uU
+uU
+uU
 Zn
 Zn
 Zn
@@ -26430,10 +26430,10 @@ Ob
 uU
 Hx
 HQ
+uU
 AS
-Zn
-Zn
-Zn
+AS
+uU
 Zn
 Zn
 sc
@@ -26686,11 +26686,11 @@ Lj
 zE
 re
 WA
-Qn
+zE
+uU
 AS
-Zn
-Zn
-Zn
+Qn
+uU
 Zn
 sc
 sc
@@ -26943,11 +26943,11 @@ Lj
 Oe
 uU
 WA
-Qn
+zE
+uU
 AS
-Zn
-Zn
-Zn
+AS
+uU
 sc
 sc
 sc
@@ -27201,10 +27201,10 @@ Og
 uU
 ZF
 gH
-AS
-Zn
-Zn
-sc
+uU
+uU
+uU
+uU
 sc
 sc
 sc
@@ -27456,9 +27456,9 @@ Ja
 LK
 Om
 uU
-AS
-AS
-AS
+uU
+uU
+uU
 Zn
 Zn
 sc

@@ -3679,7 +3679,6 @@
 /obj/effect/floor_decal/corner/lime/bordercorner2{
 	dir = 8
 	},
-/obj/machinery/smartfridge/seeds,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "euT" = (
