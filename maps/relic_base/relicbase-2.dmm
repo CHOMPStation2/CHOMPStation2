@@ -2243,6 +2243,9 @@
 /obj/item/device/radio/headset,
 /obj/item/device/radio/headset,
 /obj/item/device/radio/headset,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bnC" = (
@@ -3908,6 +3911,7 @@
 	c_tag = "MED - Medbay Lockers";
 	dir = 4
 	},
+/obj/item/weapon/storage/belt/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "chi" = (
@@ -4213,6 +4217,14 @@
 	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm.";
 	magazine_type = /obj/item/ammo_magazine/m545/small
 	},
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/prep)
 "cnd" = (
@@ -6044,6 +6056,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "cXj" = (
@@ -7822,7 +7837,6 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/gym)
 "dKK" = (
-/obj/machinery/photocopier,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -7830,6 +7844,7 @@
 	c_tag = "CIV - Church Office";
 	dir = 4
 	},
+/obj/machinery/vending/wardrobe/chapdrobe,
 /turf/simulated/floor/carpet/bcarpet,
 /area/chapel/office)
 "dKL" = (
@@ -8153,6 +8168,7 @@
 /obj/item/device/radio/intercom/department/security{
 	pixel_y = -23
 	},
+/obj/machinery/vending/wardrobe/detdrobe,
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
 "dQI" = (
@@ -12796,6 +12812,9 @@
 /obj/random/medical/lite,
 /obj/random/medical/lite,
 /obj/random/medical/lite,
+/obj/machinery/light/no_nightshift{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/security/aid_station)
 "fQG" = (
@@ -13325,6 +13344,9 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -18149,6 +18171,9 @@
 /obj/effect/floor_decal/corner/pink/bordercorner2{
 	dir = 1
 	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "ikR" = (
@@ -20380,6 +20405,7 @@
 	},
 /obj/structure/closet/wardrobe/chemistry_white,
 /obj/item/device/radio/headset/headset_med,
+/obj/item/weapon/storage/belt/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "joZ" = (
@@ -22841,6 +22867,14 @@
 	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm.";
 	magazine_type = /obj/item/ammo_magazine/m545/small
 	},
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/prep)
 "kwe" = (
@@ -26524,6 +26558,7 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
+/obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "mku" = (
@@ -28320,6 +28355,7 @@
 	})
 "mXY" = (
 /obj/structure/window/reinforced/survival_pod{
+	density = 0;
 	dir = 9;
 	name = "Reinforced Window Nugget"
 	},
@@ -30055,6 +30091,10 @@
 	pixel_x = 11;
 	pixel_y = 24
 	},
+/obj/structure/filingcabinet/medical{
+	desc = "A large cabinet with hard copy medical records.";
+	name = "Medical Records"
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
 "nPL" = (
@@ -31511,6 +31551,14 @@
 	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines. Chambered in 5.45x39mm.";
 	magazine_type = /obj/item/ammo_magazine/m545/small
 	},
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
+/obj/item/clothing/suit/armor/pcarrier/green,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/prep)
 "oKl" = (
@@ -32384,6 +32432,9 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "pcr" = (
@@ -32693,7 +32744,6 @@
 /turf/simulated/wall,
 /area/surface/outpost/main/dorms/dorm_1)
 "plM" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
@@ -32703,6 +32753,7 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/machinery/vending/wardrobe/janidrobe,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "plZ" = (
@@ -32844,6 +32895,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gym)
+"poq" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/sleeper)
 "ppk" = (
 /obj/structure/closet/wardrobe/detective,
 /obj/structure/window/reinforced,
@@ -34640,6 +34703,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/dorms/dorm_8)
+"pZz" = (
+/obj/machinery/shieldwallgen{
+	anchored = 1;
+	req_access = list(47)
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/misc_lab)
 "pZF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -34818,6 +34891,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 6
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "qcX" = (
@@ -43603,6 +43677,7 @@
 	pixel_x = 12;
 	pixel_y = -24
 	},
+/obj/machinery/vending/wardrobe/engidrobe,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/engineering/engi_restroom)
 "uaM" = (
@@ -44543,6 +44618,8 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "uAy" = (
@@ -44771,6 +44848,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 5
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "uCT" = (
@@ -45183,6 +45261,9 @@
 /obj/structure/cable/blue{
 	icon_state = "2-8"
 	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_restroom)
 "uJh" = (
@@ -45502,6 +45583,14 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
+"uPv" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/purple/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "uPF" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -46274,6 +46363,7 @@
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
+/obj/structure/filingcabinet/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "veg" = (
@@ -46696,6 +46786,8 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "vnr" = (
@@ -47795,6 +47887,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "vIZ" = (
@@ -48305,7 +48398,6 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
 "vYG" = (
-/obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -48317,13 +48409,16 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/item/device/sleevemate,
 /obj/machinery/light_switch{
 	pixel_x = 11;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-2"
+	},
+/obj/structure/filingcabinet/medical{
+	desc = "A large cabinet with hard copy medical records.";
+	name = "Medical Records"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/reception)
@@ -48348,6 +48443,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/reception)
 "vZq" = (
@@ -48584,6 +48680,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
+"wbM" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
+/obj/structure/filingcabinet/security{
+	name = "Security Records"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/security_processing)
 "wbX" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
@@ -48676,6 +48785,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
+/obj/item/weapon/storage/belt/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "wdh" = (
@@ -48851,6 +48961,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "wgW" = (
@@ -49017,6 +49128,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/filingcabinet/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "wlT" = (
@@ -50270,6 +50382,10 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/foyer)
+"wOV" = (
+/obj/machinery/vending/wardrobe/scidrobe,
+/turf/simulated/floor/tiled/freezer,
+/area/rnd/research_restroom_sc)
 "wPd" = (
 /obj/structure/cable/pink{
 	icon_state = "1-4"
@@ -51432,6 +51548,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
+"xnJ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/sleeper)
 "xnN" = (
 /turf/simulated/open{
 	outdoors = 1
@@ -51963,6 +52087,14 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/button/remote/blast_door{
+	desc = "For when people in the lobby won't fuck off.";
+	id = "chemwindow";
+	name = "Chemistry Shutters";
+	pixel_x = 24;
+	req_access = list(33);
+	req_one_access = list(5)
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "xvM" = (
@@ -52052,6 +52184,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
+/obj/item/weapon/storage/belt/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "xwR" = (
@@ -52143,6 +52276,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/survival_pod{
+	density = 0;
 	dir = 10
 	},
 /turf/simulated/floor/carpet/sblucarpet,
@@ -53304,6 +53438,7 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "xSu" = (
@@ -53320,6 +53455,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 9
 	},
+/obj/item/weapon/storage/belt/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "xSv" = (
@@ -53827,6 +53963,9 @@
 "ybY" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "ycb" = (
@@ -80885,7 +81024,7 @@ bZO
 cKU
 nmg
 dOf
-dNV
+wbM
 bZO
 fhk
 fGV
@@ -93517,7 +93656,7 @@ eZl
 cxB
 bDB
 iNf
-qin
+poq
 tbD
 pLA
 gli
@@ -94031,7 +94170,7 @@ bBG
 hil
 hGg
 xNe
-jbQ
+xnJ
 xKn
 iva
 kZT
@@ -98420,7 +98559,7 @@ usV
 bmL
 cMs
 cpb
-hXY
+uPv
 lrF
 ckj
 uVk
@@ -99966,7 +100105,7 @@ tmE
 ykC
 aUM
 agD
-juL
+pZz
 eJu
 xpz
 jbV
@@ -101497,7 +101636,7 @@ loc
 pel
 pel
 lrN
-pel
+wOV
 ssY
 fQV
 qZD

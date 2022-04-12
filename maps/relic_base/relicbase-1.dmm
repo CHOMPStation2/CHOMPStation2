@@ -2282,6 +2282,12 @@
 /area/maintenance/firstdeck/aftstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"cEH" = (
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/firstdeck/hallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "cEP" = (
 /obj/structure/catwalk,
 /obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked,
@@ -17173,6 +17179,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -17773,6 +17780,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/rust,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -66461,7 +66469,7 @@ uLU
 sGh
 tlD
 tLj
-usH
+cEH
 vcm
 ktS
 umH

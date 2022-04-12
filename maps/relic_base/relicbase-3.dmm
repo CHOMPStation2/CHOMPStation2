@@ -2736,6 +2736,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/gateway)
+"fz" = (
+/obj/machinery/vending/wardrobe/medidrobe,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "fA" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/tiled/dark,
@@ -6394,7 +6398,6 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/barrestroom)
 "mU" = (
-/obj/structure/closet/bombcloset/double,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -6404,6 +6407,7 @@
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - Locker Room"
 	},
+/obj/machinery/vending/wardrobe/secdrobe,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "mV" = (
@@ -10142,6 +10146,10 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ug" = (
@@ -11745,19 +11753,18 @@
 /obj/structure/table/glass,
 /obj/item/weapon/folder/white,
 /obj/item/weapon/hand_labeler,
-/obj/structure/reagent_dispensers/virusfood{
-	pixel_x = 30
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/virusfood{
+	pixel_y = 29
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xw" = (
-/obj/structure/table/standard,
 /obj/item/weapon/storage/box/cups,
 /obj/structure/cable/blue{
 	icon_state = "2-4"
@@ -11774,6 +11781,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner2{
 	dir = 5
 	},
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xy" = (
@@ -12852,6 +12860,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
+/obj/item/weapon/bedsheet/greendouble,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "zQ" = (
@@ -14047,6 +14056,10 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -21768,6 +21781,19 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical,
+/obj/item/weapon/storage/belt/medical,
+/obj/item/weapon/storage/belt/medical,
+/obj/item/weapon/storage/belt/medical,
+/obj/item/weapon/storage/belt/medical,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medical_lockerroom)
 "Sb" = (
@@ -22230,6 +22256,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/item/weapon/bedsheet/greendouble,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ST" = (
@@ -23039,6 +23066,13 @@
 	outdoors = 1
 	},
 /area/medical/morgue)
+"Uz" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/medical_lockerroom)
 "UA" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -25122,6 +25156,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/machinery/vending/wardrobe/cargodrobe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "Zt" = (
@@ -66391,12 +66426,12 @@ wu
 wu
 wu
 Ns
-Oj
+Uz
 rU
 RQ
 Ro
 Sa
-Oj
+fz
 Ns
 wu
 wu
