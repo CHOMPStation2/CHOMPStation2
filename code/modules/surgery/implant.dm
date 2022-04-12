@@ -189,7 +189,7 @@
 /datum/surgery_step/cavity/implant_removal/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 
-	var/find_prob = 0
+	var/time_to_remove = 0 // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 
 	if (affected.implants.len)
 
@@ -198,13 +198,13 @@
 		if(istype(obj,/obj/item/weapon/implant))
 			var/obj/item/weapon/implant/imp = obj
 			if (imp.islegal())
-				find_prob +=60
+				time_to_remove += 10 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 			else
-				find_prob +=40
+				time_to_remove += 20 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 		else
-			find_prob +=50
+			time_to_remove += 10 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer. This else is shrapnel and the like.
 
-		if (prob(find_prob))
+		if(do_after(user, time_to_remove)) // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 			user.visible_message("<span class='notice'>[user] takes something out of incision on [target]'s [affected.name] with \the [tool]!</span>", \
 			"<span class='notice'>You take [obj] out of incision on [target]'s [affected.name]s with \the [tool]!</span>" )
 			affected.implants -= obj
@@ -229,7 +229,7 @@
 					imp.imp_in = null
 					imp.implanted = 0
 				else if(istype(tool,/obj/item/device/nif)){var/obj/item/device/nif/N = tool;N.unimplant(target)} //VOREStation Add - NIF support
-		else
+		else // CHOMPEdit: Shouldn't hit this anymore, but leaving in just-in-case.
 			user.visible_message("<span class='notice'>[user] removes \the [tool] from [target]'s [affected.name].</span>", \
 			"<span class='notice'>There's something inside [target]'s [affected.name], but you just missed it this time.</span>" )
 	else
