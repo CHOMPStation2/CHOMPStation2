@@ -12812,7 +12812,12 @@
 	RCon_tag = "Research Substation Bypass"
 	},
 /obj/structure/cable/green{
+	d2 = 4;
 	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -49954,7 +49959,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
