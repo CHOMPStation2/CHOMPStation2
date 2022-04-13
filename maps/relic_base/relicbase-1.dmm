@@ -833,6 +833,13 @@
 /area/security/tactical{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"aGJ" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/fence/door,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/forestarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "aHz" = (
 /obj/effect/floor_decal/rust,
 /obj/random/obstruction,
@@ -4915,6 +4922,14 @@
 /area/maintenance/firstdeck/foreport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"fVt" = (
+/obj/structure/fence/door,
+/turf/simulated/floor/outdoors/rocks/caves{
+	outdoors = -1
+	},
+/area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "fVY" = (
 /obj/structure/sign/warning{
 	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
@@ -8643,6 +8658,15 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"kDw" = (
+/obj/structure/catwalk,
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/civilian/sauna/cryosauna)
 "kDI" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/plating,
@@ -9611,6 +9635,17 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"lSy" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/door/blast/gate{
+	color = "#352209";
+	id = "maintgate12";
+	name = "old gate"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "lSP" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -10287,6 +10322,17 @@
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"mDQ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/remote/blast_door{
+	id = "maintgate12";
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "mEG" = (
 /obj/random/trash,
 /obj/random/contraband,
@@ -10642,6 +10688,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"mWM" = (
+/obj/structure/fence/door{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/caves{
+	outdoors = -1
+	},
+/area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "mYQ" = (
@@ -11625,14 +11681,12 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "oiv" = (
-/obj/effect/floor_decal/rust,
 /obj/structure/sign/warning{
 	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
 	name = "\improper WARNING - WILD ANIMALS";
 	pixel_x = -32
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/wall/r_wall,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -16103,6 +16157,14 @@
 /area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"tcN" = (
+/obj/structure/fence/door{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/forestarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "tdb" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/rust,
@@ -16134,6 +16196,11 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
@@ -16182,6 +16249,16 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"thW" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/zone_divider,
+/obj/structure/fence/door{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "tih" = (
@@ -16595,6 +16672,16 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/aftport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"tFv" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/button/remote/blast_door{
+	id = "maintgate12";
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/centralport{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "tHJ" = (
@@ -17105,6 +17192,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/sauna/cryosauna)
+"ukp" = (
+/obj/structure/catwalk,
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS";
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "ukR" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
@@ -20818,6 +20917,14 @@
 	outdoors = -1
 	},
 /area/maintenance/firstdeck/centralport{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"yjV" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/fence/door,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "ykj" = (
@@ -39472,8 +39579,8 @@ pfU
 pfU
 pfU
 pfU
-pfU
-mss
+yjd
+mDQ
 oiv
 pfU
 pfU
@@ -39729,9 +39836,9 @@ pfU
 pfU
 pfU
 pfU
-pfU
-lll
-mss
+yjd
+lSy
+yjd
 pfU
 pfU
 pfU
@@ -39986,9 +40093,9 @@ pfU
 pfU
 pfU
 pfU
-pfU
-pfU
-mss
+yjd
+tFv
+yjd
 lll
 pfU
 pfU
@@ -40243,9 +40350,9 @@ pfU
 pfU
 pfU
 pfU
-pfU
-pfU
-mss
+svV
+ukp
+yjd
 mss
 pfU
 pfU
@@ -40500,9 +40607,9 @@ pfU
 pfU
 pfU
 pfU
-pfU
-pfU
-lll
+lMA
+lMA
+lMA
 mss
 lll
 pfU
@@ -45439,7 +45546,7 @@ tWC
 tWC
 tWC
 tWC
-pNK
+thW
 tWC
 tWC
 tWC
@@ -51033,7 +51140,7 @@ vXc
 vXc
 pyL
 vDF
-awl
+vXc
 mFJ
 vXc
 pyL
@@ -51044,7 +51151,7 @@ pyL
 pyL
 pyL
 vXc
-ycA
+vXc
 pPd
 qhs
 awl
@@ -51290,7 +51397,7 @@ vXc
 vXc
 pyL
 vAj
-vAj
+yjV
 vDF
 xWJ
 pyL
@@ -51301,7 +51408,7 @@ ycA
 ycA
 pyL
 pme
-lLw
+fVt
 ycA
 qhI
 vAj
@@ -51558,7 +51665,7 @@ ycA
 bFH
 vDF
 mZG
-xWJ
+vXc
 vXc
 vAj
 vAj
@@ -55686,9 +55793,9 @@ tjC
 ycA
 ycA
 lmS
-vAj
+ycA
 woK
-vAj
+yjV
 lmS
 xhL
 ycA
@@ -55945,7 +56052,7 @@ vXc
 vXc
 vXc
 wJw
-xHh
+vXc
 xlv
 wWM
 urX
@@ -56973,9 +57080,9 @@ ujN
 wxT
 wxT
 ntK
+kDw
 wxT
-wxT
-wxT
+kDw
 wxT
 ujN
 vWD
@@ -57700,11 +57807,11 @@ bot
 bot
 bot
 kPm
-nqu
+mWM
 kPm
 bpK
 kPm
-gtV
+tcN
 kPm
 kPm
 kPm
@@ -60265,7 +60372,7 @@ wvW
 dwG
 nqu
 nqu
-wvW
+aGJ
 wvW
 kPm
 kPm
@@ -60522,7 +60629,7 @@ wvW
 wvW
 wvW
 ezy
-wvW
+kPm
 wvW
 kPm
 kPm
@@ -60779,7 +60886,7 @@ wvW
 bPG
 ezy
 ezy
-wvW
+kPm
 kPm
 kPm
 kPm
