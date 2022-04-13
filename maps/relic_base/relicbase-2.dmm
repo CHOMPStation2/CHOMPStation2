@@ -4631,10 +4631,12 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	icon_state = "1-4"
+	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	icon_state = "0-4"
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -9886,6 +9888,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
 "ezu" = (
@@ -12861,14 +12866,6 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Research Substation Bypass"
 	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
 "fRk" = (
@@ -15802,11 +15799,11 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Dorms"
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Dorms"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
@@ -19383,7 +19380,7 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "6-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -19509,6 +19506,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
 "iOA" = (
@@ -19553,6 +19553,9 @@
 	d1 = 16;
 	d2 = 0;
 	icon_state = "16-0"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -20577,6 +20580,7 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
 	},
+/obj/item/honey_frame/filled,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "jto" = (
@@ -20635,7 +20639,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/command)
 "juH" = (
-/obj/machinery/power/terminal,
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/heavyduty{
 	d2 = 0;
@@ -20650,6 +20653,9 @@
 /obj/structure/cable/heavyduty{
 	d2 = 0;
 	icon_state = "0-4"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -20667,17 +20673,16 @@
 /area/rnd/misc_lab)
 "jvD" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/heavyduty{
-	icon_state = "2-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "6-9"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable/heavyduty{
+	d2 = 0;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -21336,17 +21341,6 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outpost/main/dorms/dorm_4)
 "jNe" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - Cargo Subgrid";
-	name_tag = "Cargo Subgrid"
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
@@ -21361,6 +21355,11 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -21674,11 +21673,8 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "jTP" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Command"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
+/obj/machinery/power/breakerbox/activated{
+	RCon_tag = "Command Substation Bypass"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -21694,11 +21690,14 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/ai_monitored/storage/eva)
 "jUg" = (
-/obj/machinery/power/breakerbox/activated{
-	RCon_tag = "Command Substation Bypass"
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Command"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -21708,9 +21707,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "8-9"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -24007,9 +24003,6 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Dorms Substation Bypass"
 	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "kXw" = (
@@ -25210,14 +25203,19 @@
 	},
 /area/security/lobby)
 "lyJ" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Cargo"
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/cable,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -25259,6 +25257,11 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
@@ -25333,24 +25336,15 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/path/plains)
 "lCN" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "SUBS - Cargo Second Deck";
 	dir = 1
 	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -25479,11 +25473,6 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
 "lGz" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/machinery/alarm{
 	pixel_y = 23
 	},
@@ -26050,6 +26039,11 @@
 	d1 = 16;
 	d2 = 0;
 	icon_state = "16-0"
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -27466,15 +27460,6 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/hop)
 "mEb" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
@@ -27483,10 +27468,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
 	},
-/obj/structure/cable/green,
 /obj/structure/cable{
 	d2 = 0;
 	icon_state = "2-8"
+	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Cargo Subgrid";
+	name_tag = "Cargo Subgrid"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -28257,9 +28255,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
-"mTL" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/assembly/chargebay)
 "mUm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -34845,10 +34840,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/debriefing)
 "pZJ" = (
-/obj/machinery/power/breakerbox/activated{
-	RCon_tag = "Cargo Substation Bypass"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Cargo"
 	},
-/obj/structure/cable{
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	dir = 1;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -35458,13 +35458,13 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Hydroponics";
-	dir = 8
-	},
 /obj/structure/cable/yellow{
 	d2 = 0;
 	icon_state = "1-2"
+	},
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = 12
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -36989,8 +36989,17 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Research"
+	},
 /obj/structure/cable/green{
-	icon_state = "1-2"
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	dir = 1;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -40408,18 +40417,23 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
 	},
 /obj/structure/cable/green{
-	icon_state = "1-2"
+	icon_state = "1-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
 	},
 /obj/structure/cable/green{
-	icon_state = "1-4"
+	d2 = 2;
+	dir = 1;
+	icon_state = "0-2"
+	},
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -40698,13 +40712,13 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/engineering{
-	name = "Cargo Substation";
-	req_one_access = list(50)
-	},
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/door/airlock/engineering{
+	name = "Cargo Substation";
+	req_one_access = list(50)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -43256,21 +43270,27 @@
 /turf/simulated/shuttle/wall/voidcraft,
 /area/surface/outpost/wall)
 "tLt" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
-	},
-/obj/structure/cable/heavyduty{
-	d2 = 4;
-	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/cable/heavyduty{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	d2 = 2;
+	dir = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -45937,6 +45957,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -50203,18 +50226,8 @@
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/weapon/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/weapon/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/regular,
 /obj/item/device/healthanalyzer,
 /obj/item/device/healthanalyzer,
 /obj/item/device/healthanalyzer,
@@ -50240,6 +50253,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "wFW" = (
@@ -53133,9 +53149,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "xKC" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+/obj/machinery/power/breakerbox/activated{
+	RCon_tag = "Cargo Substation Bypass"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/firstdeck/cargo)
@@ -53274,6 +53289,10 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 23
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hydroponics";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -54249,17 +54268,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/foyer)
 "yeM" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Research"
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
@@ -84594,7 +84607,7 @@ pyQ
 thh
 wet
 itZ
-pyQ
+oDs
 xZh
 rLe
 rLe
@@ -84851,7 +84864,7 @@ pyQ
 duM
 kxJ
 bmE
-pyQ
+oDs
 xZh
 rLe
 rLe
@@ -85108,7 +85121,7 @@ pyQ
 duM
 fYP
 kIo
-pyQ
+oDs
 xZh
 rLe
 rLe
@@ -85364,8 +85377,8 @@ hrI
 pWo
 pyQ
 esU
-pyQ
-pyQ
+oDs
+oDs
 xZh
 rLe
 rLe
@@ -95874,7 +95887,7 @@ bhC
 oEs
 pBN
 pOy
-mTL
+rmB
 hXw
 soJ
 xfG

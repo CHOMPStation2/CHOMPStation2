@@ -3702,6 +3702,7 @@
 /obj/effect/floor_decal/corner/lime/bordercorner2{
 	dir = 8
 	},
+/obj/machinery/honey_extractor,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "euT" = (
@@ -11463,23 +11464,8 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "nZT" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/obj/machinery/recharger/wallcharger{
-	pixel_x = -28
-	},
-/obj/item/weapon/extinguisher,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/mob/living/simple_mob/mechanical/corrupt_maint_drone{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
-	faction = "corrupt"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/item/slime_extract/grey,
+/turf/simulated/floor/reinforced,
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -13359,12 +13345,6 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology{
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-	})
-"pYd" = (
-/mob/living/simple_mob/slime/xenobio,
-/turf/simulated/floor/reinforced,
 /area/rnd/xenobiology{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
@@ -64179,7 +64159,7 @@ unC
 iRC
 uLU
 unC
-unC
+iRC
 unC
 uLU
 rlb
@@ -64936,7 +64916,7 @@ mMP
 neD
 rji
 oxp
-nZT
+peQ
 oqM
 rji
 oxp
@@ -68283,16 +68263,16 @@ unC
 unC
 uLU
 unC
-unC
-pYd
-uLU
-unC
-unC
+nZT
 unC
 uLU
 unC
+nZT
 unC
-pYd
+uLU
+unC
+nZT
+unC
 som
 sIh
 toy
@@ -68545,7 +68525,7 @@ unC
 uLU
 unC
 unC
-pYd
+unC
 uLU
 unC
 unC
