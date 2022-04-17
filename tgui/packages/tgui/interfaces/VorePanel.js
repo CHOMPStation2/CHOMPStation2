@@ -1195,10 +1195,16 @@ const VoreUserPreferences = (props, context) => {
     step_mechanics_active,
     pickup_mechanics_active,
     noisy,
+<<<<<<< HEAD
     noisy_full,
     liq_rec,
     liq_giv,
     autotransferable,
+=======
+    drop_vore,
+    stumble_vore,
+    slip_vore,
+>>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
   } = data.prefs;
 
   const {
@@ -1315,9 +1321,57 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous Pred Disabled",
       },
     },
+<<<<<<< HEAD
     spawnbelly: {
       action: "toggle_latejoin_vore",
       test: latejoin_vore,
+=======
+    toggle_drop_vore: {
+      action: "toggle_drop_vore",
+      test: drop_vore,
+      tooltip: {
+        main: "Allows for dropnom spontaneous vore to occur. "
+          + "Note, you still need spontaneous vore pred and/or prey enabled.",
+        enable: "Click here to allow for dropnoms.",
+        disable: "Click here to disable dropnoms.",
+      },
+      content: {
+        enabled: "Drop Noms Enabled",
+        disabled: "Drop Noms Disabled",
+      },
+    },
+    toggle_slip_vore: {
+      action: "toggle_slip_vore",
+      test: slip_vore,
+      tooltip: {
+        main: "Allows for slip related spontaneous vore to occur. "
+          + "Note, you still need spontaneous vore pred and/or prey enabled.",
+        enable: "Click here to allow for slip vore.",
+        disable: "Click here to disable slip vore.",
+      },
+      content: {
+        enabled: "Slip Vore Enabled",
+        disabled: "Slip Vore Disabled",
+      },
+    },
+    toggle_stumble_vore: {
+      action: "toggle_stumble_vore",
+      test: stumble_vore,
+      tooltip: {
+        main: "Allows for stumble related spontaneous vore to occur. "
+          + " Note, you still need spontaneous vore pred and/or prey enabled.",
+        enable: "Click here to allow for stumble vore.",
+        disable: "Click here to disable stumble vore.",
+      },
+      content: {
+        enabled: "Stumble Vore Enabled",
+        disabled: "Stumble Vore Disabled",
+      },
+    },
+    inbelly_spawning: {
+      action: "toggle_allow_inbelly_spawning",
+      test: allow_inbelly_spawning,
+>>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
       tooltip: {
         main: "Toggle late join vore spawnpoint.",
         enable: "Click here to turn on vorish spawnpoint.",
@@ -1527,10 +1581,23 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
+<<<<<<< HEAD
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnprey} />
+=======
+          <VoreUserPreferenceItem spec={preferences.toggle_drop_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.toggle_slip_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
+>>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy} />
