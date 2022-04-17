@@ -3119,6 +3119,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "he" = (
@@ -3360,7 +3364,6 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/portfore)
 "hP" = (
-/obj/structure/closet/secure_closet/personal,
 /obj/effect/floor_decal/industrial/outline,
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
@@ -3372,11 +3375,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
-/obj/item/clothing/shoes/black,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/device/communicator,
+/obj/machinery/disposal/wall/cleaner{
+	dir = 4
+	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/crew_quarters/locker)
 "hQ" = (
@@ -3401,6 +3405,7 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
 "hT" = (
+<<<<<<< HEAD
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -3409,6 +3414,16 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/triage)
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/tagger{
+	dir = 2;
+	name = "package tagger - Resleeving";
+	sort_tag = "Resleeving"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/locker)
+>>>>>>> 76e61a485c... Merge pull request #12764 from Very-Soft/timeforblue
 "hU" = (
 /obj/structure/disposalpipe/tagger/partial{
 	dir = 8;
@@ -4034,6 +4049,14 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
+"jw" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "glass airlock"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/stellardelight/deck2/port)
 "jx" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4155,6 +4178,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
+"jJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
 "jK" = (
 /obj/structure/table/glass,
 /obj/machinery/camera/network/medbay{
@@ -4313,6 +4342,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "ke" = (
@@ -4891,6 +4921,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
@@ -7666,6 +7700,9 @@
 /obj/effect/floor_decal/emblem/stellardelight{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "rk" = (
@@ -7974,6 +8011,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "rR" = (
@@ -8018,6 +8059,9 @@
 	door_color = "#9c9c9c";
 	name = "Laundry";
 	stripe_color = "#89bd66"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/locker)
@@ -9182,6 +9226,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "uF" = (
@@ -9293,6 +9340,10 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/atmos)
+"uT" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
 "uU" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -9870,6 +9921,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "wu" = (
@@ -10010,6 +10062,9 @@
 	},
 /obj/effect/floor_decal/emblem/stellardelight{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
@@ -10177,6 +10232,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "xi" = (
@@ -10498,6 +10554,15 @@
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/stellardelight/deck2/combustionworkshop)
+"xT" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
 "xU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -11326,6 +11391,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+"zP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "zQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
@@ -12530,6 +12607,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -14120,6 +14201,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "FV" = (
@@ -14498,6 +14582,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/emblem/stellardelight/center,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "GJ" = (
@@ -14861,8 +14948,27 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+"Hz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/angled_bay/hatch{
+	name = "maintenance access";
+	stripe_color = "#454545"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/stellardelight/deck2/port)
 "HA" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -15471,6 +15577,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -16978,6 +17087,9 @@
 "Mi" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
@@ -19154,6 +19266,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "QY" = (
@@ -19505,6 +19620,10 @@
 	},
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/stellardelight/deck2/triage)
+"RR" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "RS" = (
 /obj/structure/cable/blue{
 	icon_state = "1-8"
@@ -19947,6 +20066,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "SV" = (
@@ -20782,6 +20902,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+"UR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/wall/bay/r_wall/steel,
+/area/stellardelight/deck2/port)
 "US" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/structure/sign/directions/bar{
@@ -21578,6 +21704,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
 "WI" = (
@@ -21797,6 +21924,9 @@
 "Xi" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
@@ -22555,6 +22685,13 @@
 "YU" = (
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
+"YV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "YW" = (
 /obj/random/vendordrink,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -30924,7 +31061,7 @@ AR
 KK
 bP
 kK
-Rp
+Hz
 gm
 PG
 PG
@@ -31066,7 +31203,7 @@ mS
 KK
 mY
 qy
-Bw
+UR
 Aa
 sg
 sg
@@ -31208,7 +31345,7 @@ jo
 KK
 Bw
 Bw
-Bw
+UR
 pw
 Yk
 Ce
@@ -31350,7 +31487,7 @@ Qe
 nS
 Vw
 eL
-pA
+zP
 VP
 VP
 VP
@@ -31488,11 +31625,11 @@ XO
 XO
 XO
 hd
-sO
-sO
-Vw
-Ve
-Ve
+uT
+uT
+jw
+RR
+YV
 VP
 VP
 VP
@@ -34311,20 +34448,20 @@ iy
 mV
 XC
 rQ
-ZM
-ZM
-ZM
-ZM
-ZM
+xT
+xT
+xT
+xT
+xT
 kd
 SU
-ZM
+xT
 WH
-ZM
-ZM
-ZM
+xT
+xT
+xT
 xg
-ji
+jJ
 lj
 ji
 ji
@@ -34738,7 +34875,7 @@ Rm
 WZ
 CF
 wt
-eM
+hT
 hP
 fl
 ZA
