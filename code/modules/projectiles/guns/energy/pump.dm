@@ -36,7 +36,6 @@
 	if(lockable)
 		locked = !locked
 		to_chat(user, "<span class='warning'>You [locked ? "enable" : "disable"] the safety lock on \the [src]!</span>")
-		return 1
 
 /obj/item/weapon/gun/energy/locked/special_check(mob/user)
 	if(locked)
@@ -72,13 +71,13 @@
 	var/recharging = 0
 	var/phase_power = 75
 
-	projectile_type = /obj/item/projectile/beam/blue
-
-	modifystate = "phaserkill"
+	projectile_type = /obj/item/projectile/beam/phaser
+	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="phaserkill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 100),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 80),
 	)
+	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
 /obj/item/weapon/gun/energy/locked/frontier/unload_ammo(var/mob/user)
 	if(recharging)
@@ -92,7 +91,7 @@
 			break
 		playsound(src,'sound/items/change_drill.ogg',25,1)
 		user.hud_used.update_ammo_hud(user, src)
-		if(power_supply.give(phase_power) < phase_power)
+		if(power_supply.give(phase_power/8) < phase_power/8) //CHOMP Edit: Nerfed charge time of all phasers by adding /8 in a couple spots to this line
 			break
 
 	recharging = 0
@@ -138,10 +137,18 @@
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
 	phase_power = 150
 
+<<<<<<< HEAD:code/modules/projectiles/guns/energy/laser_vr.dm
+	modifystate = "carbinekill"
+	//CHOMP Edit: Changed beam type to new phaser beam type.
+	firemodes = list(
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="carbinekill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 80),
+=======
 	modifystate = "phcarbinekill"
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=8, projectile_type=/obj/item/projectile/beam/blue, modifystate="phcarbinekill", charge_cost = 300),
 		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phcarbinestun", charge_cost = 100),
+>>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022:code/modules/projectiles/guns/energy/pump.dm
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/update_icon()
@@ -152,8 +159,38 @@
 	..()
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/unlocked
+<<<<<<< HEAD:code/modules/projectiles/guns/energy/laser_vr.dm
+	desc = "An ergonomically improved version of the venerable frontier phaser, the carbine is a fairly new weapon, and has only been produced in limited numbers so far. Includes a built-in crank charger for recharging away from civilization."
+	req_access = newlist() //for toggling safety
+	locked = 0
+	lockable = 0
+
+////////////////Expeditionary Holdout Phaser Pistol////////////////
+
+/obj/item/weapon/gun/energy/locked/frontier/holdout
+	name = "holdout frontier phaser"
+	desc = "An minaturized weapon designed for the purpose of expeditionary support to defend themselves on the field. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
+	icon = 'icons/obj/gun_vr.dmi'
+	icon_state = "holdoutkill"
+	item_state = null
+	phase_power = 100
+
+	w_class = ITEMSIZE_SMALL
+	charge_cost = 600
+	modifystate = "holdoutkill"
+	//CHOMP Edit: Changed beam type to new phaser beam type.
+	firemodes = list(
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="holdoutkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="holdoutstun", charge_cost = 120),
+		list(mode_name="stun", fire_delay=12, projectile_type=/obj/item/projectile/beam/stun/med, modifystate="holdoutshock", charge_cost = 300),
+	)
+
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked
+	desc = "An minaturized weapon designed for the purpose of expeditionary support to defend themselves on the field. Includes a built-in crank charger for recharging away from civilization."
+=======
 	desc = "An ergonomically improved version of the venerable frontier phaser, the carbine is a fairly new weapon, and has only been \
 	produced in limited numbers so far. Includes a built-in crank charger for recharging away from civilization."
+>>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022:code/modules/projectiles/guns/energy/pump.dm
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
@@ -183,15 +220,21 @@
 	scoped_accuracy = 40
 	one_handed_penalty = 50 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
 	phase_power = 150 //efficient crank charger
-	fire_sound = null
-	charge_cost = 600
-	fire_delay = 35
+<<<<<<< HEAD:code/modules/projectiles/guns/energy/laser_vr.dm
+	projectile_type = /obj/item/projectile/beam/phaser/heavy //CHOMPEdit
+	modifystate = "riflekill"
+	//CHOMP Edit: Changed beam type to new phaser beam type.
+	firemodes = list(
+		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/phaser/heavy, modifystate="riflekill", charge_cost = 600),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="riflestun", charge_cost = 200),
+=======
 
 	projectile_type = /obj/item/projectile/beam/sniper
 	modifystate = "phrifledmr"
 	firemodes = list(
 		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/sniper, modifystate="phrifledmr", charge_cost = 600),
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, modifystate="phriflekill", charge_cost = 200),
+>>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022:code/modules/projectiles/guns/energy/pump.dm
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/rifle/ui_action_click()
@@ -261,12 +304,12 @@
 	charge_cost = 600
 	modifystate = "handbowkill"
 	firemodes = list(
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bow/heavy, modifystate="handbowkill", charge_cost = 600),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bow, modifystate="handbowstun", charge_cost = 200),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/phase/bolt/heavy, modifystate="handbowkill", charge_cost = 600), //CHOMP Edit
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/phase/bolt, modifystate="handbowstun", charge_cost = 200), //CHOMP Edit
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
-	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization."
+	desc = "An minaturized weapon that fires a bolt of engery. Includes a built-in crank charger for recharging away from civilization."
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
