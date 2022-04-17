@@ -3,16 +3,11 @@
  */
 /obj/item/weapon/gun/energy/gun
 	name = "energy gun"
-<<<<<<< HEAD
-	desc = "Another bestseller of Lawson Arms, the LAEP80 Thor is a versatile energy based pistol, capable of switching between low and high capacity projectile settings. In other words: Stun or Kill."
-	description_fluff = "Lawson Arms is Hephaestus Industries’ main personal-energy-weapon branding, often sold alongside MarsTech projectile weapons to security and law enforcement agencies."
-	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
-=======
 	desc = "Another bestseller of Lawson Arms, the LAEP80 Thor is a versatile energy based pistol, capable of switching between low and high \
 	capacity projectile settings. In other words: Stun or Kill."
 	description_fluff = "Lawson Arms is Hephaestus Industries’ main personal-energy-weapon branding, often sold alongside MarsTech projectile \
 	weapons to security and law enforcement agencies."
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "egunstun"
 	item_state = null //so the human update icon uses the icon_state instead.
 	fire_delay = 8
