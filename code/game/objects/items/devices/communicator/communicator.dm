@@ -347,6 +347,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	icon = 'icons/obj/device.dmi'
 	icon_state = "commwatch"
 	slot_flags = SLOT_GLOVES
+	var/gunshot_residue	//CHOMPEDIT - Fixes a bug where guns cannot be operated while wearing a watch
 
 /obj/item/device/communicator/watch/update_icon()
 	if(video_source)

@@ -4,36 +4,36 @@
 /area/template_noop)
 "ab" = (
 /turf/template_noop,
-/area/submap/Diner)
+/area/submap/diner)
 "ac" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/Diner)
+/area/submap/diner)
 "ad" = (
 /turf/simulated/wall,
-/area/submap/Diner)
+/area/submap/diner)
 "ae" = (
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "af" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ag" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ah" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ai" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/enzyme,
 /obj/item/weapon/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aj" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -41,88 +41,84 @@
 	},
 /obj/item/weapon/material/knife/butch,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ak" = (
 /obj/machinery/vending/cola,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "al" = (
 /obj/machinery/vending/dinnerware,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "am" = (
 /obj/structure/sink/kitchen,
 /turf/simulated/wall,
-/area/submap/Diner)
+/area/submap/diner)
 "an" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
-/area/submap/Diner)
+/area/submap/diner)
 "ao" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
+/obj/structure/bed/chair/wood,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ap" = (
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aq" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ar" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "as" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "at" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "au" = (
 /obj/structure/table/standard,
 /obj/item/weapon/book/manual/chef_recipes,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "av" = (
 /obj/structure/table/standard,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aw" = (
 /obj/machinery/appliance/mixer/cereal,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ax" = (
-/obj/structure/bed/chair/wood,
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "ay" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/storage/fancy/egg_box,
@@ -136,48 +132,48 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /obj/item/weapon/reagent_containers/food/condiment/sugar,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "az" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aA" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
-/area/submap/Diner)
+/area/submap/diner)
 "aB" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
+/area/submap/diner)
 "aC" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aD" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aE" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aF" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aG" = (
 /turf/simulated/floor/tiled,
-/area/submap/Diner)
+/area/submap/diner)
 "aH" = (
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
+/area/submap/diner)
 "aI" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
@@ -188,21 +184,20 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
+/area/submap/diner)
 "aJ" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aL" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -211,7 +206,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/submap/Diner)
+/area/submap/diner)
 "aM" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -220,7 +215,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
+/area/submap/diner)
 "aN" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light/small{
@@ -235,19 +230,19 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
+/area/submap/diner)
 "aO" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aP" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
+/area/submap/diner)
 "aQ" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/weapon/reagent_containers/food/condiment/flour,
@@ -258,71 +253,77 @@
 /obj/item/weapon/reagent_containers/food/condiment/flour,
 /obj/item/weapon/reagent_containers/food/condiment/flour,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
+/area/submap/diner)
 "aR" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/diner)
+"aS" = (
+/obj/structure/table/standard,
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/tiled/white,
+/area/submap/diner)
+"aT" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/coatrack,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"aS" = (
+/area/submap/diner)
+"aU" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"aT" = (
+/area/submap/diner)
+"aV" = (
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
-"aU" = (
-/obj/machinery/gibber,
-/turf/simulated/floor/tiled/freezer,
-/area/submap/Diner)
-"aV" = (
+/area/submap/diner)
+"aW" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"aW" = (
+/area/submap/diner)
+"aX" = (
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"aX" = (
+/area/submap/diner)
+"aZ" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/Diner)
-"aY" = (
+/area/submap/diner)
+"ba" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"aZ" = (
+/area/submap/diner)
+"bb" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"ba" = (
+/area/submap/diner)
+"bc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
-/area/submap/Diner)
-"bb" = (
+/area/submap/diner)
+"bd" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/submap/Diner)
-"bc" = (
+/area/submap/diner)
+"be" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bd" = (
+/area/submap/diner)
+"bf" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled,
+/area/submap/diner)
+"bg" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/storage/fancy/egg_box,
@@ -339,121 +340,129 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"be" = (
+/area/submap/diner)
+"bh" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/bar_coffee,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bf" = (
+/area/submap/diner)
+"bi" = (
 /obj/item/frame/apc,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bg" = (
+/area/submap/diner)
+"bj" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bh" = (
+/area/submap/diner)
+"bk" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bi" = (
+/area/submap/diner)
+"bl" = (
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bk" = (
+/area/submap/diner)
+"bm" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bl" = (
+/area/submap/diner)
+"bn" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/cell/high,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bm" = (
+/area/submap/diner)
+"bo" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bn" = (
+/area/submap/diner)
+"bp" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bo" = (
+/area/submap/diner)
+"bq" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"bp" = (
+/area/submap/diner)
+"br" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/windoor_assembly{
-	icon_state = "l_windoor_assembly01";
 	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bq" = (
+/area/submap/diner)
+"bs" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/lino,
-/area/submap/Diner)
-"br" = (
+/area/submap/diner)
+"bt" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/space_heater,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bs" = (
+/area/submap/diner)
+"bu" = (
 /obj/structure/sink{
-	icon_state = "sink";
 	dir = 8;
 	pixel_x = -12;
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
-"bt" = (
+/area/submap/diner)
+"bv" = (
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
-"bu" = (
+/area/submap/diner)
+"bw" = (
 /obj/structure/toilet,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
-"bv" = (
+/area/submap/diner)
+"bx" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bw" = (
+/area/submap/diner)
+"by" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bx" = (
+/area/submap/diner)
+"bz" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
-"by" = (
+/area/submap/diner)
+"bA" = (
 /obj/structure/mirror{
 	dir = 4;
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
-"bz" = (
+/area/submap/diner)
+"bB" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
-"bA" = (
+/area/submap/diner)
+"bC" = (
 /obj/structure/table/standard,
+/obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Diner)
+/area/submap/diner)
+"gw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/tiled,
+/area/submap/diner)
+"lT" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/tiled/white,
+/area/submap/diner)
 
 (1,1,1) = {"
 aa
@@ -546,14 +555,14 @@ ac
 ac
 ac
 ac
+ab
 ac
 ac
 ac
 ac
 ac
 ac
-ac
-ac
+ab
 ac
 ac
 ac
@@ -567,6 +576,13 @@ aa
 aa
 ac
 ac
+ab
+ac
+ac
+ab
+ac
+ac
+ab
 ac
 ac
 ac
@@ -574,17 +590,10 @@ ac
 ac
 ac
 ac
+ab
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
 ac
 ab
 ab
@@ -593,6 +602,7 @@ aa
 (6,1,1) = {"
 aa
 ab
+ab
 ac
 ac
 ac
@@ -602,8 +612,7 @@ ac
 ac
 ac
 ac
-ac
-ac
+aZ
 ac
 ac
 ac
@@ -627,10 +636,10 @@ ab
 ab
 ab
 ab
-ab
-ac
-ac
-aX
+ad
+ad
+az
+ad
 ab
 ab
 ab
@@ -655,8 +664,8 @@ ae
 ae
 ae
 ad
-ad
-az
+ap
+ap
 ad
 ae
 ae
@@ -678,19 +687,19 @@ ab
 ad
 ad
 af
-ax
-aC
 ao
-af
+aC
+ax
 ad
-aV
+ap
+aW
 ad
-ax
-aC
 ao
-ax
 aC
+ax
 ao
+aC
+ax
 af
 ad
 ad
@@ -705,21 +714,21 @@ ad
 ad
 aq
 af
-ax
-aD
 ao
-af
+aD
+ax
+ad
 ad
 az
 ad
-ax
-aD
 ao
-ax
 aD
+ax
 ao
+aD
+ax
 af
-br
+bt
 ad
 ad
 ab
@@ -736,9 +745,9 @@ af
 af
 af
 af
-aR
+aT
 af
-aY
+ba
 af
 af
 af
@@ -756,9 +765,9 @@ aa
 aa
 ae
 af
-ax
-ar
 ao
+ar
+ax
 af
 af
 af
@@ -783,10 +792,10 @@ aa
 aa
 ae
 af
-ax
-as
 ao
-af
+as
+ax
+lT
 aE
 aE
 aE
@@ -801,8 +810,8 @@ aE
 aE
 af
 af
-bv
-bv
+bx
+bx
 ae
 aa
 "}
@@ -855,8 +864,8 @@ af
 ah
 af
 af
-bw
-bw
+by
+by
 ae
 aa
 "}
@@ -871,15 +880,15 @@ az
 af
 aK
 aP
-aS
-aW
-aZ
-bc
-bd
+aU
+aX
+bb
 be
-ah
+bg
+bh
+aS
 aK
-bp
+br
 af
 af
 af
@@ -909,7 +918,7 @@ ad
 ad
 ad
 ad
-bx
+bz
 ad
 ad
 aa
@@ -928,16 +937,16 @@ aG
 aG
 aG
 aG
-ba
-ba
+bc
+bc
 aG
 aG
 aL
 aG
 ad
-bs
-bt
-by
+bu
+bv
+bA
 ad
 aa
 "}
@@ -954,17 +963,17 @@ ad
 ad
 ad
 ad
-ba
-ba
+bc
+gw
 ad
 ad
 ad
-bo
+bq
 ad
 ad
-bt
-bt
-bz
+bv
+bv
+bB
 ad
 aa
 "}
@@ -979,19 +988,19 @@ ad
 aH
 aM
 aQ
-aT
+aV
 ad
-bb
-ba
+bd
+bc
 ad
-bf
-bk
 bi
-bi
+bm
+bl
+bl
 ad
-bu
-bt
-bA
+bw
+bv
+bC
 ad
 aa
 "}
@@ -1006,15 +1015,15 @@ aB
 aH
 aH
 aH
-aH
 ad
-aG
-ba
 ad
-bg
+aA
+aA
+ad
+bj
+bn
 bl
-bi
-bi
+bl
 ad
 ad
 ad
@@ -1033,15 +1042,15 @@ ad
 aH
 aH
 aH
-aH
 ad
-aA
-aA
+aG
+aG
+aG
 ad
-bh
-bm
-bi
-bq
+bk
+bo
+bl
+bs
 ad
 ad
 ad
@@ -1059,16 +1068,16 @@ ay
 ad
 aI
 aN
-aH
-aU
+aR
 ad
-bb
 aG
+aG
+bf
 ad
-bi
-bn
-bi
-bq
+bl
+bp
+bl
+bs
 ad
 ad
 ad

@@ -67,7 +67,7 @@
 
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/dark_blue,
-			/mob/living/simple_mob/slime/xenobio/pink, //Chompedit
+			/mob/living/simple_mob/slime/xenobio/silver,
 			/mob/living/simple_mob/slime/xenobio/pink,
 			/mob/living/simple_mob/slime/xenobio
 		)
@@ -145,7 +145,7 @@
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/bluespace,
 			/mob/living/simple_mob/slime/xenobio/bluespace,
-			/mob/living/simple_mob/slime/xenobio/amber,  //Chompedit removes metal slimes, changes this to Amber
+			/mob/living/simple_mob/slime/xenobio/metal,
 			/mob/living/simple_mob/slime/xenobio/orange
 		)
 
@@ -417,6 +417,8 @@
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
 			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 
 
 /mob/living/simple_mob/slime/xenobio/amber
@@ -433,22 +435,22 @@
 	player_msg = "You <b>passively provide nutrition</b> to nearby entities."
 
 	slime_mutation = list(
-		/mob/living/simple_mob/slime/xenobio/yellow, //Chompedit 
-		/mob/living/simple_mob/slime/xenobio/yellow, //Chompedit
+		/mob/living/simple_mob/slime/xenobio/silver,
+		/mob/living/simple_mob/slime/xenobio/silver,
 		/mob/living/simple_mob/slime/xenobio/amber,
 		/mob/living/simple_mob/slime/xenobio/amber
 	)
 
-/* VOREStation Edit. We've had enough server crashes.
-*/ //Chompedit Removing Virgo's commenting out.  Stupidity of players is not a good reason to remove code.
 /mob/living/simple_mob/slime/xenobio/amber/handle_special()
 	if(stat != DEAD)
 		feed_aura()
 	..()
 
 /mob/living/simple_mob/slime/xenobio/amber/proc/feed_aura()
-	for(var/mob/living/L in view(2, src))
-		if(L == src) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
+	for(var/mob/living/L in view(1, src))
+		if(L.stat == DEAD || !IIsAlly(L))
+			continue
+		if(L == src || istype(L, /mob/living/simple_mob/slime/xenobio/amber)) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
 			continue
 		if(istype(L, /mob/living/simple_mob/slime/xenobio))
 			var/mob/living/simple_mob/slime/xenobio/X = L
@@ -458,8 +460,6 @@
 			if(H.isSynthetic())
 				continue
 			H.nutrition = between(0, H.nutrition + rand(15, 25), 800)
-*/  //Chompedit second removal.
-*/
 
 /mob/living/simple_mob/slime/xenobio/cerulean
 	desc = "This slime is generally superior in a wide range of attributes, compared to the common slime.  The jack of all trades, but master of none."
@@ -491,6 +491,7 @@
 	slime_color = "red"
 	coretype = /obj/item/slime_extract/red
 	movement_cooldown = 0 // See above.
+	untamable = TRUE // Will enrage if disciplined.
 
 	description_info = "This slime is faster than the others.  Attempting to discipline this slime will always cause it to go rabid and berserk."
 
@@ -501,7 +502,7 @@
 			/mob/living/simple_mob/slime/xenobio/orange
 		)
 
-	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/red // Will enrage if disciplined.
+	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime
 
 
 /mob/living/simple_mob/slime/xenobio/green
@@ -565,7 +566,7 @@
 
 /datum/modifier/aura/slime_heal
 	name = "slime mending"
-	desc = "You feel somewhat gooy."
+	desc = "You feel somewhat gooey."
 	mob_overlay_state = "pink_sparkles"
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 2
@@ -607,6 +608,7 @@
 		)
 
 /mob/living/simple_mob/slime/xenobio/gold/slimebatoned(mob/living/user, amount)
+	adjust_discipline(round(amount/2))
 	power_charge = between(0, power_charge + amount, 10)
 
 /mob/living/simple_mob/slime/xenobio/gold/get_description_interaction() // So it doesn't say to use a baton on them.
@@ -784,18 +786,5 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
 
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick/Initialize()
-	pacify() // So the physical mob also gets made harmless.
-	return ..()
-
-// A pacified pink slime for either spawning or putting in a casino reward or capture crystal.
-/mob/living/simple_mob/slime/xenobio/pink/sana
-	name = "Sana"
-	desc = "A pink slime that seems to be oddly friendly, and doesn't seem interested in eating your face like the rest of them."
-	rainbow_core_candidate = FALSE
-	// Doing pacify() in initialize() won't actually pacify the AI due to the ai_holder not existing due to parent initialize() not being called yet.
-	// Instead lets just give them an ai_holder that does that for us.
-	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
-
-/mob/living/simple_mob/slime/xenobio/pink/sana/Initialize()
 	pacify() // So the physical mob also gets made harmless.
 	return ..()

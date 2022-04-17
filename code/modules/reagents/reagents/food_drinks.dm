@@ -43,7 +43,7 @@
 		return
 	affect_ingest(M, alien, removed)
 	//VOREStation Edits Start
-	if(M.isSynthetic() && M.nutrition < 500)
+	if(M.isSynthetic())
 		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
 	//VOREStation Edits End
 	..()
@@ -60,6 +60,9 @@
 			M.heal_organ_damage(0.5 * removed, 0)
 			M.adjust_nutrition((nutriment_factor * removed) * M.species.organic_food_coeff)
 			M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
+	else
+		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
+
 	//VOREStation Edits Stop
 
 // Aurora Cooking Port Insertion Begin
@@ -71,6 +74,8 @@
 	Generally coatings are intended for deep frying foods
 */
 /datum/reagent/nutriment/coating
+	name = "coating"
+	id = "coating"
 	nutriment_factor = 6 //Less dense than the food itself, but coatings still add extra calories
 	var/messaged = 0
 	var/icon_raw
@@ -169,6 +174,8 @@
 /datum/reagent/nutriment/triglyceride/oil/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
 		return
+
+	..()
 
 	var/hotspot = (locate(/obj/fire) in T)
 	if(hotspot && !istype(T, /turf/space))
@@ -386,6 +393,7 @@
 	allergen_type = ALLERGEN_GRAINS //Flour is made from grain
 
 /datum/reagent/nutriment/flour/touch_turf(var/turf/simulated/T)
+	..()
 	if(!istype(T, /turf/space))
 		new /obj/effect/decal/cleanable/flour(T)
 
@@ -565,6 +573,7 @@
 	glass_desc = "Durian paste. It smells horrific."
 
 /datum/reagent/nutriment/durian/touch_mob(var/mob/M, var/amount)
+	..()
 	if(iscarbon(M) && !M.isSynthetic())
 		var/message = pick("Oh god, it smells disgusting here.", "What is that stench?", "That's an awful odor.")
 		to_chat(M, "<span class='alien'>[message]</span>")
@@ -574,6 +583,7 @@
 	return ..()
 
 /datum/reagent/nutriment/durian/touch_turf(var/turf/T, var/amount)
+	..()
 	if(istype(T))
 		var/obj/effect/decal/cleanable/chemcoating/C = new /obj/effect/decal/cleanable/chemcoating(T)
 		C.reagents.add_reagent(id, amount)

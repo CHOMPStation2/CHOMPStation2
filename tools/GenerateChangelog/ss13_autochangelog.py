@@ -81,7 +81,7 @@ for line in args.pr_body.splitlines():
 		continue
 		
 	# If we hit a /cl, we're no longer reading logs
-	elif line == "/??":
+	elif line == "/🆑":
 		print("Found closing /:cl: tag")
 		incltag = False
 

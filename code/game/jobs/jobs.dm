@@ -155,10 +155,9 @@ var/list/whitelisted_positions = list(
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Command Secretary",
 	"Warden",
 	"AI"
-)
+) //CHOMPEdit: Removed Command Secretary from whitelisted jobs.
 
 /proc/guest_jobbans(var/job)
 	return ((job in whitelisted_positions))

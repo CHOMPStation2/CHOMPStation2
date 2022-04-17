@@ -138,20 +138,20 @@
 		O_LUNGS =    /obj/item/organ/internal/lungs/unathi,
 		O_LIVER =    /obj/item/organ/internal/liver/unathi,
 		O_BRAIN =    /obj/item/organ/internal/brain/unathi,
-		O_EYES =     /obj/item/organ/internal/eyes,
+		O_EYES =     /obj/item/organ/internal/eyes/unathi,
 		O_STOMACH =		/obj/item/organ/internal/stomach/unathi,
 		O_INTESTINE =	/obj/item/organ/internal/intestine/unathi
 		)
 
 
-	heat_discomfort_level = 295
+	heat_discomfort_level = 320 //VOREStation Edit - 46c (higher than normal humans) Don't spam red text if you're slightly warm.
 	heat_discomfort_strings = list(
 		"You feel soothingly warm.",
 		"You feel the heat sink into your bones.",
 		"You feel warm enough to take a nap."
 		)
 
-	cold_discomfort_level = 292
+	cold_discomfort_level = 288.15	//VOREStation Edit - 15c Give a little bit of wiggle room here come on.
 	cold_discomfort_strings = list(
 		"You feel chilly.",
 		"You feel sluggish and cold.",
@@ -256,13 +256,13 @@
 
 	has_organ = list(    //No appendix.
 		O_HEART =    /obj/item/organ/internal/heart/tajaran,
-		O_LUNGS =    /obj/item/organ/internal/lungs,
+		O_LUNGS =    /obj/item/organ/internal/lungs/tajaran,
 		O_VOICE = 		/obj/item/organ/internal/voicebox,
-		O_LIVER =    /obj/item/organ/internal/liver,
+		O_LIVER =    /obj/item/organ/internal/liver/tajaran,
 		O_KIDNEYS =  /obj/item/organ/internal/kidneys,
 		O_BRAIN =    /obj/item/organ/internal/brain,
 		O_EYES =     /obj/item/organ/internal/eyes/tajaran,
-		O_STOMACH =		/obj/item/organ/internal/stomach,
+		O_STOMACH =		/obj/item/organ/internal/stomach/tajaran,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
@@ -365,6 +365,23 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
 
+	has_organ = list(
+		O_HEART =		/obj/item/organ/internal/heart/skrell,
+		O_LUNGS =		/obj/item/organ/internal/lungs/skrell,
+		O_VOICE = 		/obj/item/organ/internal/voicebox/skrell,
+		O_LIVER =		/obj/item/organ/internal/liver/skrell,
+		O_KIDNEYS =		/obj/item/organ/internal/kidneys/skrell,
+		O_BRAIN =		/obj/item/organ/internal/brain/skrell,
+		O_APPENDIX = 	/obj/item/organ/internal/appendix/skrell,
+		O_SPLEEN = 		/obj/item/organ/internal/spleen/skrell,
+		O_EYES =		/obj/item/organ/internal/eyes/skrell,
+		O_STOMACH =		/obj/item/organ/internal/stomach/skrell,
+		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell
+		)
+
+/datum/species/skrell/can_breathe_water()
+	return TRUE
+
 /datum/species/zaddat
 	name = SPECIES_ZADDAT
 	name_plural = "Zaddat"
@@ -449,6 +466,11 @@
 		/datum/mob_descriptor/height = 0,
 		/datum/mob_descriptor/build = -1
 		)
+
+	default_emotes = list(
+		/decl/emote/audible/chirp
+	)
+
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	if(H.wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud

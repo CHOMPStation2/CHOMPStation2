@@ -1367,6 +1367,34 @@ End CHOMP Removal*/
 	w_class = ITEMSIZE_TINY
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 7)
 
+/obj/item/weapon/storage/fancy/fluff/charlotte/New()
+	if(!open_state)
+		open_state = "[initial(icon_state)]0"
+	if(!closed_state)
+		closed_state = "[initial(icon_state)]"
+	..()
+
+/obj/item/weapon/storage/fancy/fluff/charlotte/update_icon()
+	cut_overlays()
+	if(open)
+		icon_state = open_state
+		if(contents.len >= 1)
+			add_overlay("charlottebox[contents.len]")
+	else
+		icon_state = closed_state
+
+/obj/item/weapon/storage/fancy/fluff/charlotte/open(mob/user as mob)
+	if(open)
+		return
+	open = TRUE
+	update_icon()
+	..()
+
+/obj/item/weapon/storage/fancy/fluff/charlotte/close(mob/user as mob)
+	open = FALSE
+	update_icon()
+	..()
+
 //Ashling - Antoinette deKaultieste
 /obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette
 	name = "sawtooth ritual knife"
@@ -1437,3 +1465,24 @@ End CHOMP Removal*/
     from_suit = /obj/item/clothing/suit/storage/hooded/explorer
     to_suit = /obj/item/clothing/suit/storage/hooded/explorer/lucky
 
+//RevolverEloise - Revolver Eloise
+/obj/item/weapon/sword/fluff/revolver
+	name = "Catnip"
+	desc = "A steel claymore with what appears to be a teppi engraved into the hilt and a finely forged metal cuboid for a pommel. The blade is honed and balanced to an unusually high degree and has clearly been meticulously cared for."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "revclaymore"
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+	item_state = "revclaymoremob"
+	force = 1
+	sharp = TRUE
+	edge = TRUE
+
+//PastelPrinceDan - Kiyoshi/Masumi Maki
+/obj/item/toy/plushie/fluff/slimeowshi
+	name = "Slime-Cat Research Director plushie"
+	desc = "An adorable stuffed toy that resembles a slime. It's pink, and has little cat ears, as well as a tail! Atop its head is a small beret with a Research Director's insignia."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "kimeowshi"
+	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
+	gender = PLURAL // this seems like a good idea but probably prone to changing. todo: ask dan
+	// the only reason this thought is relevant because the base slimeplush has its gender set to female

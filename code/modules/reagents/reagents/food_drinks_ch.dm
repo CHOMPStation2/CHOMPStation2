@@ -552,6 +552,19 @@
 	M.add_chemical_effect(CE_PAINKILLER, 80 * chem_effective)
 	M.add_chemical_effect(CE_SPEEDBOOST, 0)
 
+/datum/reagent/drink/pilk
+	name = "Pilk"
+	id = "pilk"
+	description = "A forbidden mixture that dates back to the early days of space civilization, its creation is known to have caused at least one or two massacres."
+	taste_description = "heresy"
+	color = "#4C3100"
+
+	glass_name = "Pilk"
+	glass_desc = "Why would you do this to yourself?"
+
+	cup_name = "glass of Pilk"
+	cup_desc = "A glass of regret."
+
 ////////////////////////////////////////////////
 /////////FOODSTUFF/////////////////////////////
 //////////////////////////////////////////////

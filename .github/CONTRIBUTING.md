@@ -23,7 +23,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 ### Code of Conduct
 
-This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+This project adheres to the Contributor Covenant [code of conduct](code_of_conduct.md).
 By participating, you are expected to uphold this code.
 
 ## How Can I Contribute?
@@ -45,7 +45,7 @@ Any code submissions that do not meet our coding standards are likely to be reje
 * If it is something like a bugfix that Polaris would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
 * Any new files should have "_ch" at the end. For example, "life_ch.dm". Just make them in the same location as the file they are related to.
-* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details.
+* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 The `attempt_ch()` proc has been added for your convienence. It allows a many-line change to become a single-line change in the existing Polaris files, preserving mergeability and allowing better code separation while preventing your new code from causing runtimes that stop the original code from running. If you are wanting to inject new procedures into an existing proc, called `update_atoms()` for example, you would create `update_atoms_ch()` in a nearby `_ch.dm` file, and then call to it from a single line in the original `update_atoms()` with `attempt_ch()`.
 
@@ -79,4 +79,5 @@ Commits with a git authorship date prior to `1420675200 +0000` (2015/01/08 00:00
 
 All commits whose authorship dates are not prior to `1420675200 +0000` are assumed to be licensed under AGPL v3, if you wish to license under GPL v3 please make this clear in the commit message and any added files.
 
-[Mapmerge2 Readme]: ../tools/mapmerge2/readme.md
+[Mapmerge2 Readme]: ../tools/mapmerge2/mapmerge tool readme.md
+[StrongDMM]: ../tools/StrongDMM/README.md

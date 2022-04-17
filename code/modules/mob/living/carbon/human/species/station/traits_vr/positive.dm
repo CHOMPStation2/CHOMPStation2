@@ -8,16 +8,6 @@
 	var_changes = list("slowdown" = -0.5)
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
 	
-//ChompEdit
-
-/datum/trait/positive/speed_fast_minor
-	name = "Haste, minor"
-	desc = "Allows you to move a little bit faster on average than baseline."
-	cost = 2
-	var_changes = list("slowdown" = -0.25)
-	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
-
-//ChompEdit End
 
 /datum/trait/positive/hardy
 	name = "Hardy"
@@ -26,27 +16,18 @@
 	var_changes = list("item_slowdown_mod" = 0.5)
 	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
 
-//ChompEdit
 /datum/trait/positive/hardy_plus
 	name = "Hardy, Major"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy) // CHOMPEdit: Prevents Haste + Hardy being taken together.
 
-/datum/trait/positive/hardy_extreme
-	name = "Hardy, Extreme"
-	desc = "Allows you to carry heavy equipment with no slowdown at all."
-	cost = 3
-	var_changes = list("item_slowdown_mod" = 0.0)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
-	
-//ChompEdit End
 
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
-	desc = "Increases your maximum total hitpoints to 125"
-	cost = 2
+	desc = "Increases your maximum total hitpoints to 125. You require 250 damage in total to die, compared to 200 normally. You will still go into crit after losing 125 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
+	cost = 3 // CHOMPEdit
 	var_changes = list("total_health" = 125)
 
 /datum/trait/positive/endurance_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -55,15 +36,16 @@
 
 /datum/trait/positive/nonconductive
 	name = "Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 25% amount." //CHOMP Edit
+	desc = "Decreases your susceptibility to electric shocks by 25%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 2 //This effects tasers!
 	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
 
 /datum/trait/positive/nonconductive_plus
 	name = "Non-Conductive, Major"
-	desc = "Decreases your susceptibility to electric shocks by a 50% amount." //CHOMP Edit
+	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
+	
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
 	name = "Darksight"
@@ -78,19 +60,19 @@
 	var_changes = list("darksight" = 6)  //CHOMP Edit
 */ 
 /datum/trait/positive/melee_attack
-	name = "Sharp Melee"
+	name = "Special Attack: Sharp Melee" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp))
 
 /datum/trait/positive/melee_attack_fangs
-	name = "Sharp Melee & Numbing Fangs"
+	name = "Special Attack: Sharp Melee & Numbing Fangs" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage, along with fangs that makes the person bit unable to feel their body or pain."
 	cost = 2
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/fangs
-	name = "Numbing Fangs"
+	name = "Special Attack: Numbing Fangs" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides fangs that makes the person bit unable to feel their body or pain."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
@@ -121,20 +103,6 @@
 	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
 	
-//YW ADDITIONS START
-/datum/trait/positive/improved_biocompat
-	name = "Improved Biocompatibility"
-	desc = "Your body is naturally (or artificially) more receptive to healing chemicals without being vulnerable to the 'bad stuff'. You heal more efficiently from most chemicals, with no other drawbacks. Remember to note this down in your medical records!"
-	cost = 2
-	var_changes = list("chem_strength_heal" = 1.2)
-
-/datum/trait/positive/pain_tolerance_advanced
-	name = "High Pain Tolerance"
-	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
-	cost = 2
-	var_changes = list("pain_mod" = 0.8)
-
-//YW ADDITIONS END
 
 
 /datum/trait/positive/photoresistant
@@ -142,14 +110,6 @@
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%" //CHOMP Edit
 	cost = 1
 	var_changes = list("flash_mod" = 0.75) //CHOMP Edit
-
-//YW add
-/datum/trait/positive/photoresistant_plus
-	name = "Major Photoresistance"
-	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 50%"
-	cost = 2
-	var_changes = list("flash_mod" = 0.5)
-//YW end
 
 /datum/trait/positive/winged_flight
 	name = "Winged Flight"
@@ -173,9 +133,8 @@
 	cost = 1 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
-//CHOMPStation Removal Start
-/*
 
+// CHOMPEdit: This has been removed for two years, since Jan 2020, pending "review". Uncommenting as per tankiness increase PR.
 /datum/trait/positive/antiseptic_saliva
 	name = "Antiseptic Saliva"
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
@@ -184,36 +143,12 @@
 /datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
-*/
-//CHOMPStation Removal End
 
 /datum/trait/positive/traceur
 	name = "Traceur"
 	desc = "You're capable of parkour and can *flip over low objects (most of the time)."
 	cost = 1 //CHOMPEdit this is not worth 2 points
 	var_changes = list("agility" = 90)
-
-// YW Addition
-/datum/trait/positive/bloodsucker_plus
-	name = "Evolved Bloodsucker"
-	desc = "Makes you able to gain nutrition by draining blood as well as eating food. To compensate, you get fangs that can be used to drain blood from prey."
-	cost = 1
-	var_changes = list("organic_food_coeff" = 0.5) // Hopefully this works???
-	excludes = list(/datum/trait/neutral/bloodsucker)
-
-/datum/trait/positive/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
-
-/datum/trait/positive/sonar
-	name="Perceptive Hearing"
-	desc = "You can hear slight vibrations in the air very easily, if you focus."
-	cost = 1
-	
-/datum/trait/positive/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
-// YW Addition end
 
 /datum/trait/positive/snowwalker
 	name = "Snow Walker"

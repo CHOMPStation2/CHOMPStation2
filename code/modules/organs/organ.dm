@@ -28,7 +28,7 @@ var/list/organ_cache = list()
 
 	// Damage vars.
 	var/min_bruised_damage = 10			// Damage before considered bruised
-	var/min_broken_damage = 30			// Damage before becoming broken
+	var/min_broken_damage = 60			// Damage before becoming broken CHOMPEdit: Flat doubling of all min_broken_damage
 	var/max_damage						// Damage cap
 	var/can_reject = 1					// Can this organ reject?
 	var/rejecting						// Is this organ already being rejected?
@@ -361,7 +361,7 @@ var/list/organ_cache = list()
 	robotize()
 	robotic = ORGAN_ASSISTED
 	min_bruised_damage = 15
-	min_broken_damage = 35
+	min_broken_damage = 60 // CHOMPEdit: Flat doubling of all min_broken_damage
 	butcherable = FALSE
 
 /obj/item/organ/proc/digitize() //Used to make the circuit-brain. On this level in the event more circuit-organs are added/tweaks are wanted.

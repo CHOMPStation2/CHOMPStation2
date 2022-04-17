@@ -202,13 +202,11 @@
 	var/cloak_cooldown = 10 SECONDS
 	var/last_uncloak = 0
 
-/mob/living/simple_mob/mechanical/cyber_horror/tajaran/proc/can_cloak()
-	if(stat)
-		return FALSE
-	if(last_uncloak + cloak_cooldown > world.time)
-		return FALSE
-
-	return TRUE
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran/cloak()
+	if(cloaked)
+		return
+	animate(src, alpha = cloaked_alpha, time = 1 SECOND)
+	cloaked = TRUE
 
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/uncloak()
 	last_uncloak = world.time
@@ -217,9 +215,16 @@
 	animate(src, alpha = initial(alpha), time = 1 SECOND)
 	cloaked = FALSE
 
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran/proc/can_cloak()
+	if(stat)
+		return FALSE
+	if(last_uncloak + cloak_cooldown > world.time)
+		return FALSE
+
+	return TRUE
+
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/break_cloak()
 	uncloak()
-
 
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/is_cloaked()
 	return cloaked
@@ -266,12 +271,6 @@
 
 	armor = list(melee = -30, bullet = 10, laser = 10, bio = 100, rad = 100)
 
-/obj/item/projectile/arc/blue_energy
-	name = "energy missle"
-	icon_state = "force_missile"
-	damage = 12
-	damage_type = BURN
-
 //Direct Ranged Mob
 /mob/living/simple_mob/mechanical/cyber_horror/corgi
 	name = "Malformed Corgi"
@@ -283,7 +282,7 @@
 
 	base_attack_cooldown = 4
 	projectiletype = /obj/item/projectile/beam/drone
-	projectilesound = 'sound/weapons/laser3.ogg'
+	projectilesound = 'sound/weapons/weaponsounds_laserweak.ogg'
 	movement_sound = 'sound/effects/servostep.ogg'
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/threatening
@@ -336,6 +335,7 @@
 //These are the projectiles mobs use
 /obj/item/projectile/beam/drone
 	damage = 3
+	
 /obj/item/projectile/arc/blue_energy
 	name = "energy missle"
 	icon_state = "force_missile"

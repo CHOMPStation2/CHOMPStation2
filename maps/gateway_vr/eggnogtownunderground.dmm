@@ -1,25 +1,114 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+<<<<<<< HEAD
+=======
+"aa" = (
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 258.15
+	},
+/area/gateway/eggnogtown/underground)
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 "ab" = (
 /turf/simulated/mineral/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/underground)
 "ad" = (
 /turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/underground)
 "ae" = (
 /obj/machinery/light/small,
 /turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/hotspring)
+<<<<<<< HEAD
 "af" = (
+=======
+"ae" = (
+/obj/random/mob/semirandom_mob_spawner/vore/retaliate/b,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 258.15
+	},
+/area/gateway/eggnogtown/underground)
+"af" = (
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
+"ag" = (
+/obj/random/mob/semirandom_mob_spawner/vore/retaliate/c,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 258.15
+	},
+/area/gateway/eggnogtown/underground)
+"ah" = (
+/obj/random/mob/semirandom_mob_spawner/vore/retaliate,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
+"ai" = (
+/obj/random/mob/semirandom_mob_spawner/vore/retaliate/c,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
+"aj" = (
+/obj/random/mob/semirandom_mob_spawner/vore/retaliate/b,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
+"ak" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/hotsprings)
+"al" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/hotsprings)
+"am" = (
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/underground)
@@ -28,14 +117,38 @@
 	dir = 8
 	},
 /turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/underground)
+<<<<<<< HEAD
 "ah" = (
+=======
+"ao" = (
+/obj/random/mob/semirandom_mob_spawner/vore/hostile,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
+"ap" = (
+/obj/random/awayloot,
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
+"aq" = (
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 /obj/machinery/camera/network/civilian{
 	dir = 5
 	},
 /turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/underground)
@@ -44,9 +157,21 @@
 	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/underground)
+<<<<<<< HEAD
+=======
+"as" = (
+/turf/simulated/mineral/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 258.15
+	},
+/area/gateway/eggnogtown/vibeout)
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 "ba" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/chemical_dispenser/bar_alc/full,
@@ -91,7 +216,7 @@
 	check_arrest = 0;
 	check_down = 0;
 	check_records = 0;
-	control_area = /area/submap/admin_upload/lo/pow;
+	control_area = /area/gateway/eggnogtown/houserhomestead/basement;
 	desc = "A firewall prevents AIs from interacting with this device.";
 	lethal_is_configurable = 0;
 	name = "DEATH RAY CONTROL";
@@ -643,6 +768,17 @@
 	temperature = 258.15
 	},
 /area/gateway/eggnogtown/houserhomestead/basement)
+"MG" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/mineral/floor/ignore_cavegen{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 303.15
+	},
+/area/gateway/eggnogtown/underground)
 "Oa" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
@@ -2496,9 +2632,15 @@ gA
 gA
 gA
 gA
+<<<<<<< HEAD
 Da
 Da
 Da
+=======
+af
+af
+MG
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 cb
 cb
 cb
@@ -2506,9 +2648,15 @@ cb
 cb
 cb
 cb
+<<<<<<< HEAD
 Da
 Da
 Da
+=======
+MG
+af
+af
+>>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 gA
 gA
 gA

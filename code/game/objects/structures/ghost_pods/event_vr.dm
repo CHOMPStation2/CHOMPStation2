@@ -70,7 +70,9 @@
 			return
 		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", possible_mobs)
 		if(!choice)
-			randomize = TRUE
+//			randomize = TRUE //CHOMP remove FUCK OFF. When I press cancel I expect to cancel.
+			used = FALSE //CHOMP add 200 IQ
+			busy = FALSE //CHOMP add 201 IQ
 			break
 
 		if(choice)

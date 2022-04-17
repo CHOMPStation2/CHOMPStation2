@@ -133,7 +133,8 @@ var/list/admin_verbs_ban = list(
 var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
-	/client/proc/play_server_sound
+	/client/proc/play_server_sound,
+	/client/proc/play_z_sound
 	)
 
 var/list/admin_verbs_fun = list(
@@ -157,7 +158,8 @@ var/list/admin_verbs_fun = list(
 	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
-	/client/proc/cmd_admin_droppod_deploy
+	/client/proc/cmd_admin_droppod_deploy,
+	/client/proc/adminorbit //VOREStation Add,
 	)
 
 var/list/admin_verbs_spawn = list(

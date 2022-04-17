@@ -149,10 +149,12 @@
 		miss_chance = base_miss_chance[zone]
 	if (zone == "eyes" || zone == "mouth")
 		miss_chance = base_miss_chance["head"]
-	miss_chance = max(miss_chance + miss_chance_mod, 0)
+	// miss_chance = max(miss_chance + miss_chance_mod, 0) CHOMPEDIT - removing baymiss
+	if(prob(miss_chance_mod)) //CHOMPADD - removing baymiss. Checking the miss chance for legacy. This should only be affected by special cases and evasion.
+		return null
 	if(prob(miss_chance))
-		if(prob(70))
-			return null
+		//if(prob(70))
+		//	return null	CHOMPEDIT - removing baymiss
 		return pick(base_miss_chance)
 	return zone
 
@@ -603,7 +605,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 //The base miss chance for the different defence zones
 var/list/global/base_miss_chance = list(
 	"head" = 40,
-	"chest" = 10,
+	"torso" = 10,
 	"groin" = 20,
 	"l_leg" = 20,
 	"r_leg" = 20,
@@ -613,7 +615,7 @@ var/list/global/base_miss_chance = list(
 	"r_hand" = 50,
 	"l_foot" = 50,
 	"r_foot" = 50,
-)
+) //CHOMPEDIT - Changed "chest" to "torso", as chest is a typo. How long has this bug been here?
 
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).
 //Also used to weight the protection value that armour provides for covering that body part when calculating protection from full-body effects.

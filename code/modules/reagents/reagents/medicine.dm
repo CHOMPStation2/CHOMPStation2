@@ -346,6 +346,7 @@
 		M.adjustToxLoss(3 * removed)
 
 /datum/reagent/tricorlidaze/touch_obj(var/obj/O)
+	..()
 	if(istype(O, /obj/item/stack/medical/bruise_pack) && round(volume) >= 5)
 		var/obj/item/stack/medical/bruise_pack/C = O
 		var/packname = C.name
@@ -1281,6 +1282,7 @@
 	M.add_chemical_effect(CE_PAINKILLER, 20 * M.species.chem_strength_pain) // 5 less than paracetamol.
 
 /datum/reagent/spacomycaze/touch_obj(var/obj/O)
+	..()
 	if(istype(O, /obj/item/stack/medical/crude_pack) && round(volume) >= 1)
 		var/obj/item/stack/medical/crude_pack/C = O
 		var/packname = C.name
@@ -1317,10 +1319,12 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/sterilizine/touch_obj(var/obj/O)
+	..()
 	O.germ_level -= min(volume*20, O.germ_level)
 	O.was_bloodied = null
 
 /datum/reagent/sterilizine/touch_turf(var/turf/T)
+	..()
 	T.germ_level -= min(volume*20, T.germ_level)
 	for(var/obj/item/I in T.contents)
 		I.was_bloodied = null
@@ -1334,6 +1338,7 @@
 	//VOREstation edit end	
 
 /datum/reagent/sterilizine/touch_mob(var/mob/living/L, var/amount)
+	..()
 	if(istype(L))
 		if(istype(L, /mob/living/simple_mob/slime))
 			var/mob/living/simple_mob/slime/S = L

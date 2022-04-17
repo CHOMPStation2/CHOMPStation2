@@ -72,7 +72,8 @@
 		/obj/item/device/integrated_electronics/wirer,
 		/obj/item/device/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
 		/obj/item/weapon/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
-		/obj/item/stack/nanopaste //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
+		/obj/item/stack/nanopaste, //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
+		/obj/item/device/geiger //VOREStation edit. Engineers work with rad-slinging stuff sometimes too
 		)
 
 /obj/item/weapon/storage/belt/utility/full
@@ -102,7 +103,9 @@
 		/obj/item/weapon/tool/wrench,
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/wirecutters
+		/obj/item/weapon/tool/wirecutters,
+		/obj/item/device/analyzer, //Vorestation edit. Gives atmos techs a few extra tools fitting their job from the start
+		/obj/item/weapon/extinguisher/mini //Vorestation edit. As above, the mini's much more handy to have rather than lugging a big one around
 	)
 
 /obj/item/weapon/storage/belt/utility/chief
@@ -123,11 +126,11 @@
 	)
 
 /obj/item/weapon/storage/belt/utility/holding
-	name = "tool-belt of holding" 
+	name = "tool-belt of holding"
 	desc = "A belt that uses localized bluespace pockets to hold more items than expected!"
 	icon_state = "utility_holding"
 	storage_slots = 14 //twice the amount as a normal belt
-	max_storage_space = ITEMSIZE_COST_NORMAL * 14 
+	max_storage_space = ITEMSIZE_COST_NORMAL * 14
 	can_hold = list(
 	/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/screwdriver,
@@ -164,7 +167,7 @@
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
 		/obj/item/device/lightreplacer,
-		/obj/item/weapon/pickaxe/plasmacutter 
+		/obj/item/weapon/pickaxe/plasmacutter
 	)
 
 
@@ -207,11 +210,11 @@
 	icon_state = "ems"
 
 /obj/item/weapon/storage/belt/medical/holding
-	name = "medical belt of holding" 
+	name = "medical belt of holding"
 	desc = "A belt that uses localized bluespace pockets to hold more items than expected!"
 	icon_state = "med_holding"
 	storage_slots = 14 //twice the amount as a normal belt
-	max_storage_space = ITEMSIZE_COST_NORMAL * 14 
+	max_storage_space = ITEMSIZE_COST_NORMAL * 14
 
 /obj/item/weapon/storage/belt/security
 	name = "security belt"
@@ -530,3 +533,12 @@
 	desc = "The fancy utility-belt holding the tools, cuffs and gadgets of the Go Go ERT-Rangers. The belt buckle is not real phoron, but it is still surprisingly comfortable to wear."
 	icon = 'icons/obj/clothing/ranger.dmi'
 	icon_state = "ranger_belt"
+
+/obj/item/weapon/storage/belt/dbandolier
+	name = "\improper Donk-Soft bandolier"
+	desc = "A Donk-Soft bandolier! Carry your spare darts anywhere! Ages 8 and up."
+	icon_state = "dbandolier"
+	storage_slots = 8
+	can_hold = list(
+		/obj/item/ammo_casing/afoam_dart
+		)

@@ -84,8 +84,8 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat,
 /obj/item/clothing/shoes/boots/winter,
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
+	dir = 8;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/Lab1)
@@ -125,8 +125,8 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/Lab1)
@@ -205,8 +205,8 @@
 /area/submap/Lab1)
 "I" = (
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
+	dir = 8;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/Lab1)
@@ -221,8 +221,8 @@
 "L" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
+	dir = 8;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/Lab1)

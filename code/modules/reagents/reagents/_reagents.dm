@@ -25,7 +25,7 @@
 
 	var/affects_dead = 0	// Does this chem process inside a corpse?
 	var/affects_robots = 0	// Does this chem process inside a Synth?
-	
+
 	var/allergen_type		// What potential allergens does this contain?
 	var/allergen_factor = 1	// If the potential allergens are mixed and low-volume, they're a bit less dangerous. Needed for drinks because they're a single reagent compared to food which contains multiple seperate reagents.
 
@@ -48,12 +48,15 @@
 
 // This doesn't apply to skin contact - this is for, e.g. extinguishers and sprays. The difference is that reagent is not directly on the mob's skin - it might just be on their clothing.
 /datum/reagent/proc/touch_mob(var/mob/M, var/amount)
+	SEND_SIGNAL(M, COMSIG_REAGENTS_TOUCH, src, amount)
 	return
 
 /datum/reagent/proc/touch_obj(var/obj/O, var/amount) // Acid melting, cleaner cleaning, etc
+	SEND_SIGNAL(O, COMSIG_REAGENTS_TOUCH, src, amount)
 	return
 
 /datum/reagent/proc/touch_turf(var/turf/T, var/amount) // Cleaner cleaning, lube lubbing, etc, all go here
+	SEND_SIGNAL(T, COMSIG_REAGENTS_TOUCH, src, amount)
 	return
 
 /datum/reagent/proc/on_mob_life(var/mob/living/carbon/M, var/alien, var/datum/reagents/metabolism/location) // Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.
@@ -114,23 +117,28 @@
 			else
 				var/obj/item/organ/internal/heart/machine/Pump = H.internal_organs_by_name[O_PUMP]
 				var/obj/item/organ/internal/stomach/machine/Cycler = H.internal_organs_by_name[O_CYCLER]
+				var/obj/item/organ/internal/nano/refactory/Refactory = H.internal_organs_by_name[O_FACT]		//VOREStation Addition: Proteans
 
 				if(active_metab.metabolism_class == CHEM_BLOOD)
 					if(Pump)
 						removed *= 1.1 - Pump.damage / Pump.max_damage
+					else if(Refactory)		//VOREStation Addition: Proteans
+						removed *= 1.1 - Refactory.damage / Refactory.max_damage
 					else
 						removed *= 0.1
 
 				else if(active_metab.metabolism_class == CHEM_INGEST)	// If the pump is damaged, we waste chems from the tank.
 					if(Pump)
 						ingest_abs_mult *= max(0.25, 1 - Pump.damage / Pump.max_damage)
-
+					else if(Refactory)		//VOREStation Addition: Proteans
+						ingest_abs_mult *= max(0.25, 1 - Refactory.damage / Refactory.max_damage)
 					else
 						ingest_abs_mult *= 0.2
 
 					if(Cycler)	// If we're damaged, we empty our tank slower.
 						ingest_rem_mult = max(0.1, 1 - (Cycler.damage / Cycler.max_damage))
-
+					else if(Refactory)		//VOREStation Addition: Proteans
+						ingest_rem_mult = max(0.1, 1 - (Refactory.damage / Refactory.max_damage))
 					else
 						ingest_rem_mult = 0.1
 
@@ -162,9 +170,9 @@
 				affect_touch(M, alien, removed)
 	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH && !can_overdose_touch))
 		overdose(M, alien, removed)
-	if(M.species.allergens & allergen_type)	//uhoh, we can't handle this!	
+	if(M.species.allergens & allergen_type)	//uhoh, we can't handle this!
 		var/damage_severity = M.species.allergen_damage_severity*allergen_factor
-		var/disable_severity = M.species.allergen_disable_severity*allergen_factor	
+		var/disable_severity = M.species.allergen_disable_severity*allergen_factor
 		if(M.species.allergen_reaction & AG_TOX_DMG)
 			M.adjustToxLoss(damage_severity)
 		if(M.species.allergen_reaction & AG_OXY_DMG)

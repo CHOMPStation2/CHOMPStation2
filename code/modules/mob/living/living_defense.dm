@@ -268,15 +268,15 @@
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
-		var/miss_chance = 15
+		/*var/miss_chance = 15
 		if (O.throw_source)
 			var/distance = get_dist(O.throw_source, loc)
 			miss_chance = max(15*(distance-2), 0)
 
 		if (prob(miss_chance))
 			visible_message("<font color='blue'>\The [O] misses [src] narrowly!</font>")
-			return
-
+			return*/
+		//CHOMPEDIT - removing baymiss
 		src.visible_message("<font color='red'>[src] has been hit by [O].</font>")
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")

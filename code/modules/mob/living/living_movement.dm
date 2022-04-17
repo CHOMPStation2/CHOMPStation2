@@ -112,14 +112,14 @@ default behaviour is:
 
 			//VOREstation Edit - End
 			forceMove(tmob.loc)
-			//VOREstation Edit - Begin
+			//CHOMPSTATION Edit - Making macro/micro step mechanics mandatory again for balance, but removing the fetish aspects if pref denied.
+			//There's nothing fetishistic about politely stepping past someone.
 			// In case of micros, we don't swap positions; instead occupying the same square!
-			if(step_mechanics_pref && tmob.step_mechanics_pref)
-				if(handle_micro_bump_helping(tmob))
-					now_pushing = 0
-					return
+			if(handle_micro_bump_helping(tmob))
+				now_pushing = 0
+				return
 			// TODO - Check if we need to do something about the slime.UpdateFeed() we are skipping below.
-			// VOREStation Edit - End
+			// CHOMPSTATION Edit - End
 			tmob.forceMove(oldloc)
 			now_pushing = 0
 			return
@@ -145,10 +145,13 @@ default behaviour is:
 				H.Weaken(5)
 				now_pushing = 0
 				return
+		//CHOMPSTATION edit - bringing back mandatory step mechanics, fetish stuff removed if no prefs
 		// Handle grabbing, stomping, and such of micros!
 		if(step_mechanics_pref && tmob.step_mechanics_pref)
 			if(handle_micro_bump_other(tmob)) return
-		// VOREStation Edit - End
+		else
+			if(handle_micro_bump_other(tmob,1)) return
+		// CHOMPSTATION edit end
 		if(istype(tmob, /mob/living/carbon/human) && (FAT in tmob.mutations))
 			if(prob(40) && !(FAT in src.mutations))
 				to_chat(src, "<span class='danger'>You fail to push [tmob]'s fat ass out of the way.</span>")

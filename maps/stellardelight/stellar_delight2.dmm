@@ -1326,7 +1326,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
@@ -7722,10 +7722,6 @@
 /obj/structure/closet/walllocker_double/south{
 	pixel_x = -5
 	},
-/obj/item/weapon/storage/box/donkpockets{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/structure/table/standard,
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
@@ -7762,6 +7758,7 @@
 	pixel_x = 9;
 	pixel_y = -36
 	},
+/obj/random/donkpocketbox,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
 "rs" = (
@@ -12576,6 +12573,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/item/weapon/toy/desk/stellardelight{
+	pixel_x = -11;
+	pixel_y = -8
+	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/stellardelight/deck2/briefingroom)
 "CL" = (
@@ -13399,12 +13400,12 @@
 /area/storage/primary)
 "Ez" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/beanbags,
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel,
 /obj/item/weapon/paper{
 	info = "This permit signifies that the Bartender is permitted to posess this firearm in the bar, and ONLY the bar. Failure to adhere to this permit will result in confiscation of the weapon and possibly arrest.";
 	name = "Shotgun permit"
 	},
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /turf/simulated/floor/wood,
 /area/stellardelight/deck2/barbackroom)
 "EA" = (
@@ -13801,7 +13802,7 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/obj/item/weapon/paper/dockingcodes,
+/obj/item/weapon/paper/dockingcodes/sd,
 /obj/item/device/radio,
 /obj/item/device/radio,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
@@ -15957,7 +15958,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,
@@ -17387,7 +17388,7 @@
 /obj/machinery/door/blast/angled/open{
 	dir = 4;
 	id = "qmwindows";
-	name = "Privagy Shutters"
+	name = "Privacy Shutters"
 	},
 /obj/structure/low_wall/bay/reinforced/brown,
 /turf/simulated/floor,

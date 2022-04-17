@@ -9,7 +9,6 @@
 	anchored = 1
 	invisibility = 101
 	spawn_types = list(
-		/mob/living/silicon/robot/lost = 2,
 		/mob/living/simple_mob/mechanical/hivebot/swarm = 1,
 		/mob/living/simple_mob/animal/space/carp = 10,
 		/obj/structure/closet/crate/mimic = 2,

@@ -61,6 +61,8 @@
 	return ..()
 
 /obj/item/device/radio/headset/receive_range(freq, level, aiOverride = 0)
+	if(!ishuman(src.loc))				//CHOMP Addition, this IF block.
+		return ..(freq, level)		//CHOMP Addition end
 	if (aiOverride)
 		playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
 		return ..(freq, level)

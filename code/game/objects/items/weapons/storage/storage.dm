@@ -871,3 +871,31 @@
 		usr.ClickOn(I)
 	return 1
 
+// Allows micros to drag themselves into storage items
+/obj/item/weapon/storage/MouseDrop_T(mob/living/target, mob/living/user)
+	if(!istype(user)) return // If the user passed in isn't a living mob, exit
+	if(target != user) return // If the user didn't drag themselves, exit
+	if(user.incapacitated() || user.buckled) return // If user is incapacitated or buckled, exit
+	if(get_holder_of_type(src, /mob/living/carbon/human) == user) return // No jumping into your own equipment
+	if(ishuman(user) && user.get_effective_size() > 0.25) return // Only micro characters
+	if(ismouse(user) && user.get_effective_size() > 1) return // Only normal sized mice or less
+
+	// Create a dummy holder with user's size to test insertion
+	var/obj/item/weapon/holder/D = new/obj/item/weapon/holder
+	if(ismouse(user))
+		D.w_class = ITEMSIZE_TINY // Mouse smol
+	else if(ishuman(user))
+		D.w_class = ITEMSIZE_SMALL // Players small
+	else        // Other creatures not accepted at this time
+		qdel(D) // If there's a better way to check the size of a
+		return  // mob's holder and if it fits, replace this slab
+	if(!src.can_be_inserted(D, 1)) // If the dummy item doesn't fit, exit
+		qdel(D)
+		return
+	qdel(D)
+
+	// Scoop and insert target into storage
+	var/obj/item/weapon/holder/H = new user.holder_type(get_turf(user), user)
+	src.handle_item_insertion(H, 1)
+	to_chat(user, "<span class='notice'>You climb into \the [src].</span>")
+	return ..()

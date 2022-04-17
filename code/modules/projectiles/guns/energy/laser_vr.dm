@@ -80,21 +80,7 @@
 //////////////////// Energy Weapons ////////////////////
 
 // ------------ Energy Luger ------------
-/obj/item/weapon/gun/energy/gun/eluger
-	name = "energy Luger"
-	desc = "The finest sidearm produced by RauMauser. Although its battery cannot be removed, its ergonomic design makes it easy to shoot, allowing for rapid follow-up shots. It also has the ability to toggle between stun and kill."
-	icon = 'icons/obj/gun_vr.dmi'
-	icon_state = "elugerstun100"
-	item_state = "gun"
-	fire_delay = null // Lugers are quite comfortable to shoot, thus allowing for more controlled follow-up shots. Rate of fire similar to a laser carbine.
-	battery_lock = 1 // In exchange for balance, you cannot remove the battery. Also there's no sprite for that and I fucking suck at sprites. -Ace
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2, TECH_ILLEGAL = 2) // Illegal tech cuz Space Nazis
-	modifystate = "elugerstun"
-	fire_sound = 'sound/weapons/Taser.ogg'
-	firemodes = list(
-	list(mode_name="stun", charge_cost=120,projectile_type=/obj/item/projectile/beam/stun, modifystate="elugerstun", fire_sound='sound/weapons/Taser.ogg'),
-	list(mode_name="lethal", charge_cost=240,projectile_type=/obj/item/projectile/beam/eluger, modifystate="elugerkill", fire_sound='sound/weapons/eluger.ogg'),
-	)
+//MOVED TO nuclear.dm
 
 //////////////////// Eris Ported Guns ////////////////////
 //HoP gun
@@ -126,35 +112,6 @@
 /obj/item/weapon/gun/energy/gun/martin/update_icon()
 	cut_overlays()
 	update_mode()
-
-/////////////////////////////////////////////////////
-//////////////////// Custom Ammo ////////////////////
-/////////////////////////////////////////////////////
-//---------------- Beams ----------------
-/obj/item/projectile/beam/eluger
-	name = "laser beam"
-	icon_state = "xray"
-	light_color = "#00FF00"
-	muzzle_type = /obj/effect/projectile/muzzle/xray
-	tracer_type = /obj/effect/projectile/tracer/xray
-	impact_type = /obj/effect/projectile/impact/xray
-
-/obj/item/projectile/beam/imperial
-	name = "laser beam"
-	fire_sound = 'sound/weapons/mandalorian.ogg'
-	icon_state = "darkb"
-	light_color = "#8837A3"
-	muzzle_type = /obj/effect/projectile/muzzle/darkmatter
-	tracer_type = /obj/effect/projectile/tracer/darkmatter
-	impact_type = /obj/effect/projectile/impact/darkmatter
-
-/obj/item/projectile/beam/stun/kin21
-	name = "kinh21 stun beam"
-	icon_state = "omnilaser"
-	light_color = "#0000FF"
-	muzzle_type = /obj/effect/projectile/muzzle/laser_omni
-	tracer_type = /obj/effect/projectile/tracer/laser_omni
-	impact_type = /obj/effect/projectile/impact/laser_omni
 
 //Gun Locking Mechanism
 /obj/item/weapon/gun/energy/locked
@@ -227,11 +184,13 @@
 		if(!do_after(user, 10, src))
 			break
 		playsound(src,'sound/items/change_drill.ogg',25,1)
+		user.hud_used.update_ammo_hud(user, src)
 		if(power_supply.give(phase_power) < phase_power)
 			break
 
 	recharging = 0
 	update_icon()
+	user.hud_used.update_ammo_hud(user, src) // Update one last time once we're finished!
 
 /obj/item/weapon/gun/energy/locked/frontier/update_icon()
 	if(recharging)

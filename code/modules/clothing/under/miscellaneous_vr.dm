@@ -6,8 +6,8 @@
 /obj/item/clothing/under/permit
 	name = "public nudity permit"
 	desc = "This permit entitles the bearer to conduct their duties without a uniform. Normally issued to furred crewmembers or those with nothing to hide."
-	icon = 'icons/obj/card.dmi'
-	icon_state = "guest"
+	icon = 'icons/obj/card_new.dmi'
+	icon_state = "permit-nude"
 	body_parts_covered = 0
 	equip_sound = null
 
@@ -114,6 +114,66 @@
 		H.resize(original_size, ignore_prefs = TRUE)
 		original_size = null
 		H.visible_message("<span class='warning'>The space around [H] distorts as they return to their original size!</span>","<span class='notice'>The space around you distorts as you return to your original size!</span>")
+
+/obj/item/clothing/gloves/bluespace
+	name = "size standardization bracelet"
+	desc = "A somewhat bulky metal bracelet featuring a crystal, glowing blue. The outer side of the bracelet has an elongated case that one might imagine contains electronic components. This bracelet is used to standardize the size of crewmembers who may need a non-permanent size assist."
+	icon = 'icons/inventory/accessory/item_vr.dmi'
+	icon_state = "bs_bracelet"
+	w_class = ITEMSIZE_TINY
+	glove_level = 1
+	var/original_size
+	var/last_activated
+	var/emagged = FALSE
+	var/target_size = 1
+
+/obj/item/clothing/gloves/bluespace/mob_can_equip(mob/M, gloves, disable_warning = 0)
+	. = ..()
+	if(. && ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.resizable)
+			return
+		if(H.size_multiplier != target_size)
+			if(!(world.time - last_activated > 10 SECONDS))
+				to_chat(M, "<span class ='warning'>\The [src] flickers. It seems to be recharging.</span>")
+				return
+			last_activated = world.time
+			original_size = H.size_multiplier
+			H.resize(target_size, uncapped = emagged, ignore_prefs = FALSE)		//In case someone else tries to put it on you.
+			H.visible_message("<span class='warning'>The space around [H] distorts as they change size!</span>","<span class='notice'>The space around you distorts as you change size!</span>")
+			log_admin("Admin [key_name(M)]'s size was altered by a bluespace bracelet.")
+
+/obj/item/clothing/gloves/bluespace/mob_can_unequip(mob/M, gloves, disable_warning = 0)
+	. = ..()
+	if(. && ishuman(M) && original_size)
+		var/mob/living/carbon/human/H = M
+		if(!H.resizable)
+			return
+		last_activated = world.time
+		H.resize(original_size, uncapped = emagged, ignore_prefs = FALSE)
+		original_size = null
+		H.visible_message("<span class='warning'>The space around [H] distorts as they return to their original size!</span>","<span class='notice'>The space around you distorts as you return to your original size!</span>")
+		log_admin("Admin [key_name(M)]'s size was altered by a bluespace bracelet.")
+		to_chat(M, "<span class ='warning'>\The [src] flickers. It is now recharging and will be ready again in thirty seconds.</span>")
+
+/obj/item/clothing/gloves/bluespace/examine(var/mob/user)
+	. = ..()
+	var/cooldowntime = round((10 SECONDS - (world.time - last_activated)) * 0.1)
+	if(Adjacent(user))
+		if(cooldowntime >= 0)
+			. += "<span class='notice'>It appears to be recharging.</span>"
+		if(emagged)
+			. += "<span class='warning'>The crystal is flickering.</span>"
+
+/obj/item/clothing/gloves/bluespace/emag_act(R_charges, var/mob/user, emag_source)
+	. = ..()
+	if(!emagged)
+		emagged = TRUE
+		target_size = (rand(1,300)) /100
+		if(target_size < 0.1)
+			target_size = 0.1
+		user.visible_message("<span class='notice'>\The [user] swipes the [emag_source] over the \the [src].</span>","<span class='notice'>You swipes the [emag_source] over the \the [src].</span>")
+		return 1
 
 //Same as Nanotrasen Security Uniforms
 /obj/item/clothing/under/ert
@@ -239,7 +299,7 @@
 /obj/item/clothing/under/summerdress/blue
 	icon_state = "summerdress2"
 
-/obj/item/clothing/under/dress/dress_cap/femformal // formal in the loosest sense. because it's going to be taken off. or something. funnier in my head i swear 
+/obj/item/clothing/under/dress/dress_cap/femformal // formal in the loosest sense. because it's going to be taken off. or something. funnier in my head i swear
 	name = "site manager's feminine formalwear"
 	desc = "Essentially a skimpy...dress? Leotard? Whatever it is, it has the coloration and markings suitable for a site manager or rough equivalent."
 	icon = 'icons/inventory/uniform/item_vr.dmi'
@@ -249,3 +309,71 @@
 	rolled_sleeves = -1
 	rolled_down = -1
 	body_parts_covered = UPPER_TORSO // frankly this thing's a fucking embarassment
+
+/obj/item/clothing/under/undersuit // undersuits! intended for wearing under hardsuits or for being too lazy to not wear anything other than it
+	name = "undersuit"
+	desc = "A nondescript undersuit, intended for wearing under a voidsuit or other EVA equipment. Breathable, yet sleek."
+	icon = 'icons/inventory/uniform/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/uniform/mob_vr.dmi'
+	rolled_down_icon = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
+	icon_state = "bodysuit"
+	item_state = "bodysuit"
+	rolled_sleeves = -1
+	rolled_down_icon_override = FALSE
+
+/obj/item/clothing/under/undersuit/eva
+	name = "EVA undersuit"
+	desc = "A nondescript undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for EVA usage, but differs little from the standard."
+	icon_state = "bodysuit_eva"
+	item_state = "bodysuit_eva"
+
+/obj/item/clothing/under/undersuit/command
+	name = "command undersuit"
+	desc = "A fancy undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for those in Command, and comes with a swanky gold trim and navy blue inlay."
+	icon_state = "bodysuit_com"
+	item_state = "bodysuit_com"
+
+/obj/item/clothing/under/undersuit/sec
+	name = "security undersuit"
+	desc = "A reinforced undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for those in Security, and has slight protective capabilities against simple melee attacks."
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 0.9
+	icon_state = "bodysuit_sec"
+	item_state = "bodysuit_sec"
+
+/obj/item/clothing/under/undersuit/sec/hos
+	name = "security command undersuit"
+	desc = "A reinforced undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for the Head of Security or equivalent, and has slight protective capabilities against simple melee attacks."
+	icon_state = "bodysuit_seccom"
+	item_state = "bodysuit_seccom"
+
+/obj/item/clothing/under/undersuit/hazard
+	name = "hazard undersuit"
+	desc = "An undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for Engineering crew, and comes with slight radiation absorption capabilities. Not a lot, but it's there."
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10)
+	icon_state = "bodysuit_haz"
+	item_state = "bodysuit_haz"
+
+/obj/item/clothing/under/undersuit/mining
+	name = "mining undersuit"
+	desc = "An undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for Mining crew, and comes with an interestingly colored trim."
+	icon_state = "bodysuit_min"
+	item_state = "bodysuit_min"
+
+/obj/item/clothing/under/undersuit/emt
+	name = "medical technician undersuit"
+	desc = "An undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for Medical response crew, and comes with a distinctive coloring scheme."
+	icon_state = "bodysuit_emt"
+	item_state = "bodysuit_emt"
+
+/obj/item/clothing/under/undersuit/explo
+	name = "exploration undersuit"
+	desc = "An undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for Exploration crew, for hazardous environments."
+	icon_state = "bodysuit_exp"
+	item_state = "bodysuit_exp"
+
+/obj/item/clothing/under/undersuit/centcom
+	name = "Central Command undersuit"
+	desc = "A very descript undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for NanoTrasen Central Command officers, and comes with a swanky gold trim and other fancy markings."
+	icon_state = "bodysuit_cent"
+	item_state = "bodysuit_cent"
