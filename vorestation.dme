@@ -3860,12 +3860,8 @@
 #include "code\modules\projectiles\guns\energy\hooklauncher.dm"
 #include "code\modules\projectiles\guns\energy\kinetic_accelerator_vr.dm"
 #include "code\modules\projectiles\guns\energy\laser.dm"
-<<<<<<< HEAD
 #include "code\modules\projectiles\guns\energy\laser_ch.dm"
-#include "code\modules\projectiles\guns\energy\laser_vr.dm"
 #include "code\modules\projectiles\guns\energy\laser_yw.dm"
-=======
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
 #include "code\modules\projectiles\guns\energy\netgun_vr.dm"
 #include "code\modules\projectiles\guns\energy\netgun_yw.dm"
 #include "code\modules\projectiles\guns\energy\nuclear.dm"
