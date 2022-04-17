@@ -196,13 +196,8 @@
 	icon_expected_width = 64
 	icon_state = "carbine" // This isn't a carbine. :T
 	item_state = "z8carbine"
-<<<<<<< HEAD
-	wielded_item_state = "z8carbine-wielded"
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
-=======
 	wielded_item_state = "z8bulldog-wielded"
-	w_class = ITEMSIZE_LARGE
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "7.62mm"
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
@@ -394,13 +389,9 @@
 	description_fluff = "Budget-grade weapons for the budget-grade consumer! Hephaestus’ low-end brand of cheaply made, low-maintenance personal defense weapons for those who just need a handgun with absolutely no frills. \
 	Early ProTek weapons were notoriously unsafe and unreliable, though more recent designs have improved somewhat - they still aren’t very good. \
 	Though sold for a pittance, the profit margin is too irresistible for Hephaestus to discontinue the brand."
-<<<<<<< HEAD
 	icon = 'icons/obj/64x32guns_ch.dmi'
 	icon_expected_width = 64
 	icon_state = "mini-uzi"
-=======
-	icon_state = "uzi"
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = ".45"
@@ -421,7 +412,6 @@
 	if(ammo_magazine)
 		icon_state = "uzi"
 	else
-<<<<<<< HEAD
 		icon_state = "mini-uzi-empty"
 
 // CHOMPEdit: Uzi tilting
@@ -452,9 +442,6 @@
 			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)
 // CHOMPEdit end: Uzi tilting
-=======
-		icon_state = "uzi-e"
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
 
 /*
  * P90 (H90K)
