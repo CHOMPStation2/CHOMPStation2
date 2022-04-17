@@ -70,12 +70,9 @@
 	item_state = "lrifle"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 3)
 
-<<<<<<< HEAD
-=======
 /*
  * Retro Laser Rifle
  */
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
 /obj/item/weapon/gun/energy/retro
 	name = "retro laser"
 	icon_state = "retro"
@@ -103,13 +100,15 @@
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
-	fire_delay = 10 // Handguns should be inferior to two-handed weapons. Even alien ones I suppose.
-	charge_cost = 480 // Five shots.
+	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
+	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
 
-	projectile_type = /obj/item/projectile/beam/cyan
+	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien // Self charges.
 	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
+	battery_lock = 1 //CHOMPedit adds battery lock.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -139,7 +138,6 @@
 	may have caused it to degrade, yet still remain functional at a reduced capability." //CHOMPedit changed description to be accurate with new projectile
 	value = CATALOGUER_REWARD_MEDIUM
 
-<<<<<<< HEAD
 /obj/item/weapon/gun/energy/alien
 	name = "alien pistol"
 	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
@@ -158,11 +156,9 @@
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
-=======
 /*
  * Antique Laser Gun
  */
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
 /obj/item/weapon/gun/energy/captain
 	name = "antique laser gun"
 	icon_state = "caplaser"
@@ -485,7 +481,6 @@
 	charge_cost = 1200
 	force = 12
 	accuracy = 0
-<<<<<<< HEAD
 	scoped_accuracy = 20
 
 // Laser scattergun, proof of concept.
@@ -501,6 +496,3 @@
 	projectile_type = /obj/item/projectile/scatter/laser
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit because you can still holster it despite it not fitting in a backpack.
-=======
-	scoped_accuracy = 20
->>>>>>> a91e034c03... Merge pull request #12686 from GhostActual/gun-revmap-2022
