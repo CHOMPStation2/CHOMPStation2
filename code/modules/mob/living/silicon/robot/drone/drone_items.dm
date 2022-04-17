@@ -21,11 +21,7 @@
 		/obj/item/weapon/tank,
 		/obj/item/weapon/circuitboard,
 		/obj/item/weapon/smes_coil,
-<<<<<<< HEAD
-		/obj/item/weapon/fuel_assembly //chompstation addition so they can set up rust
-=======
 		/obj/item/weapon/fuel_assembly
->>>>>>> cdb1b8f43d... Merge pull request #12720 from liache/Liache-PatchGrippers
 		)
 
 	var/obj/item/wrapped = null // Item currently being held.
