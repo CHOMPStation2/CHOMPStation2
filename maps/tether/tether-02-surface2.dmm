@@ -1387,6 +1387,16 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
+	external_pressure_bound = 101.3;
+	external_pressure_bound_default = 101.3;
+	pressure_checks = 1;
+	pressure_checks_default = 1
+	},
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/resleeving)
 "abV" = (
@@ -1759,6 +1769,13 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/resleeving)
 "acF" = (
@@ -1771,7 +1788,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/resleeving)
 "acG" = (
@@ -35347,6 +35366,14 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
+<<<<<<< HEAD
+=======
+"uDI" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/wall,
+/area/tether/surfacebase/medical/resleeving)
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 "uFL" = (
 /obj/structure/railing{
 	dir = 1

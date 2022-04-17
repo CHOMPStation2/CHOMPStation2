@@ -1110,6 +1110,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark,
 /area/stellardelight/deck1/resleeving)
 "cq" = (
@@ -6746,6 +6749,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 /turf/simulated/floor/tiled/dark,
 /area/stellardelight/deck1/resleeving)
 "oi" = (
@@ -7970,7 +7980,13 @@
 /turf/simulated/floor/carpet,
 /area/chapel/main)
 "qR" = (
+<<<<<<< HEAD
 /obj/machinery/transhuman/autoresleever,
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 /turf/simulated/floor/tiled/dark,
 /area/stellardelight/deck1/resleeving)
 "qS" = (
@@ -16853,6 +16869,16 @@
 	dir = 1;
 	pixel_y = 24
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/transhuman/autoresleever,
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
+	external_pressure_bound = 101.3;
+	external_pressure_bound_default = 101.3;
+	pressure_checks = 1;
+	pressure_checks_default = 1
+	},
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 /turf/simulated/floor/tiled/dark,
 /area/stellardelight/deck1/resleeving)
 "Kd" = (
@@ -18030,8 +18056,8 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -19473,6 +19499,18 @@
 /area/crew_quarters/toilet)
 "PV" = (
 /obj/machinery/light/small,
+<<<<<<< HEAD
+=======
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+>>>>>>> bff0d96577... Merge pull request #12771 from Very-Soft/wow!
 /turf/simulated/floor/tiled/dark,
 /area/stellardelight/deck1/resleeving)
 "PW" = (
