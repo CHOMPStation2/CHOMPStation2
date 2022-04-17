@@ -27,14 +27,10 @@
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
 		/mob/living/proc/flying_toggle,
-<<<<<<< HEAD
+		/mob/living/proc/flying_vore_toggle,
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb
-=======
-		/mob/living/proc/flying_vore_toggle,
-		/mob/living/proc/start_wings_hovering)		//Xenochimera get all the special verbs since they can't select traits.
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
