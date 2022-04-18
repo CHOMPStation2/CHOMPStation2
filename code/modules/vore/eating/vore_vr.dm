@@ -250,15 +250,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
-<<<<<<< HEAD
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
-			"autotransferable"		= autotransferable
-=======
+			"autotransferable"		= autotransferable,
 			"drop_vore"				= drop_vore,
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
 		)
 
 	//List to JSON
