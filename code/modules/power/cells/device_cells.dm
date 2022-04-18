@@ -13,18 +13,11 @@
 	matter = list(MAT_STEEL = 350, MAT_GLASS = 50)
 	preserve_item = 1
 
-<<<<<<< HEAD
 //Yawn Changes
 /obj/item/weapon/cell/device/weapon //Aka adv
 	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "m_sup"
-=======
-/obj/item/weapon/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
 	icon_state = "weapon_cell"
->>>>>>> 03b55b548a... Merge pull request #12761 from GhostActual/energen_batteries
 	maxcharge = 2400
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
