@@ -981,17 +981,13 @@
 	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
-<<<<<<< HEAD
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
-=======
 	dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Inbelly Spawning:</b> [allow_inbelly_spawning ? "Allowed" : "Disallowed"]<br>"
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
