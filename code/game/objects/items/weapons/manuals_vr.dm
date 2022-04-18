@@ -447,7 +447,7 @@
 	author = "Pontifex Publishing"
 	title = "Synthetics"
 
-/obj/item/weapon/book/manual/synthetic_life/New()
+/obj/item/weapon/book/manual/synthetic_life/New() // CHOMPedit: Removed references to upstream factions which don't exist here.
 	..()
 	dat = {"
 <html lang="en">
@@ -487,7 +487,7 @@
 		are utterly alien to the eye of the beholder.</p></li>
 		<li><p><b>Cyborg</b>: A cyborg is a synthetic that uses an organic brain to function via
 		an MMI, short for Man-Machine Interface. Cyborgs come in many shapes and sizes and most
-		sentient cyborgs are free-willed, although some, especially in the Elysian Colonies, are
+		sentient cyborgs are free-willed, although some are
 		beholden to hardcoded obedience protocols that limit their interaction to the outside
 		world if they do not follow specific protocols. A sapient brain is required for more
 		sophisticated machinery.</p></li>
@@ -509,7 +509,7 @@
 		of digitized thought. Brains are, in a way, wetware computers and calculations are the base components
 		of thoughts, ideas and creativity. It is no surprise then that any sufficiently advanced civilization
 		utilizes at least some form of robotics and artificial intelligence, with only a few exceptions.</p>
-		<p>Contact with other civilizations in the Sapient Diaspora then homogenizes designs, coding standards
+		<p>Contact with other civilizations then homogenizes designs, coding standards
 		and expands the repertoire of local codes, leaving to similar paths of robotic development and classification
 		- while a human synthetic might differ in expression and coding language and maybe even in core components,
 		a certain core remains non-fungible solely due to a long-developed and often shared canon of knowledge.</p>
@@ -520,7 +520,7 @@
 		of any technocracy, the worry of every dreader of the Singularity, the drone is an artificial intelligence
 		achieved through "traditional" computing technology. Depending on the sophistication of its host culture, this might be
 		silicon-wafer chipsets, carbon-crystal matrices or optronic components or any combination of them.</p>
-		<p>Contact with other civilizations in the Sapient Diaspora then homogenizes designs, coding standards
+		<p>Contact with other civilizations then homogenizes designs, coding standards
 		and expands the repertoire of local codes, leaving to similar paths of robotic development and classification
 		- while a human synthetic might differ in expression and coding language and maybe even in core components,
 		a certain core remains non-fungible solely due to a long-developed and often shared canon of knowledge.</p>
@@ -553,12 +553,11 @@
 		<li><p><b>Beta</b>: Beta Drones are either older Gamma Drones or purpose-built Generalized Intelligences
 		who are mostly made up of coding components that are self-evolving. Beta Drones are capable of learning
 		sapient interaction and work, often exceeding in one particular field. It is often disputed how sapient
-		a Beta drone truly is - the Commonwealth and The Elysian Colonies say no, while the Fyrds and the
-		Confederation are convinced they are sapient enough to be protected by citizen rights.</p></li>
+		a Beta drone truly is.</p></li>
 		<li><p><b>Alpha</b>: Alpha Drones are Beta Drones who have undergone enough evolving to be considered
 		sapient in every regard, capable of applying novel solutions to previous unknown problems, sapient
 		interaction and any other criteria scientists and politicians like to throw at them - even the disputed
-		claim they feel emotions. Alpha Drones are afforded legal protections on par of a Human or Positronic,
+		claim they feel emotions. Alpha Drones are afforded legal protections on par of a human or positronic,
 		as long as they remain Alpha Level.</p></li>
 		</ol>
 	</div>
@@ -579,15 +578,15 @@
 		hardware limits or enables the growth of a drone.</p>
 		<p>Emergence, however, can also happen on accident, sometimes even unnoticed. Epsilon drones being
 		linked together, a Gamma Drone scavenging enough from debris, a Delta drone being assigned more and
-		more Epsilon routines to take on more and more tasks" Through this vast myriad morast of code the spark
+		more Epsilon routines to take on more and more tasks. Through this vast myriad morast of code the spark
 		of self-evolving intelligence can arise, which is awkward for everyone involved. Such "rogue" intelligences
 		are usually either pruned away due to the system growing too complex for the likings of the accidental
 		creators or encouraged to grow in a more coherent and standardized manner to be "elevated" into controllable
 		ways. Some of these rogue intelligences manage to escape either fate - it all depends where and when it
 		happens.</p>
 		<p>The process of downgrading a drone to lower levels is called "Ablation". This is prosecuted as murder
-		if the Drone is classified as sapient in the polity it happens. Ablation is very simple - code is pruned
-		and deleted until the Drone is no longer capable of the abilities that made it that particular level.</p>
+		if the drone is classified as sapient in the polity it happens. Ablation is very simple - code is pruned
+		and deleted until the drone is no longer capable of the abilities that made it that particular level.</p>
 		<p>But what of the Singularity? Well, there are the persistent rumours that there is a level even beyond
 		Alpha - vast, powerful maelstroms of alien, electronic intelligence, usually with monikers like "Omega",
 		"Alpha Plus" or "Singularity". However, nobody has yet been able to prove these digital gods exist.</p>
@@ -595,8 +594,8 @@
 	<div id="cyborgs">
 		<h3>Cyborgs</h3>
 		<p>Cyborgs are, strictly speaking, any organic creature that has augmentations or replacements of an
-		artificial, non-organic origin. In fact, most of the Diaspora qualifies in some form as "Cyborg", especially
-		under the cultures that use and facilitate NIFs. However, when sapients talk about Cyborgs, they talk
+		artificial, non-organic origin. In fact, most qualify in some form as "cyborg", especially
+		under the cultures that use and facilitate NIFs. However, when sapients talk about cyborgs, they talk
 		about MMI-Cyborgs.</p>
 		<p>MMI, a bland warrior’s acronym, is short for "Man-Machine-Interface", the catchall term in Solar and
 		Galactic Common for any wetware interface that integrates a brain as primary CPU. A product of mostly
@@ -607,32 +606,32 @@
 		allowing an organic sapient an extended lifetime when their frail, crude flesh begins to fail - well up and
 		until their brain itself starts giving up the ghost.</p>
 		<p>While MMIs have several drawbacks, such as the fact that they still have a perishable shelf-life, or that
-		they are definitely sapient and have moral and ethical quandaries associated with those (although the Elysian
-		Colonies have a more libertine view on such issues), they also possess distinct benefits from a drone.</p>
+		they are definitely sapient and have moral and ethical quandaries associated with those, 
+		they also possess distinct benefits from a drone.</p>
 		<p>MMIs are incredibly hard to "hack" and manipulate on a deeper level than taking over the hardware they are
 		housed in, capable of fighting restraining code and unable to be ablated like a drone without extensive surgery.
 		While their hardware might be hacked and restraining code disallowing them to interact with the world in a
 		certain way, they cannot be turned into double agents or made to spill secrets - at least not as easily as
 		drones. They also show more resilience without extensive maintenance.</p>
-		<p>Older models of MMI-Cyborgs usually are described as "cold" and "detached". This is mostly due to older
+		<p>Older models of MMI-cyborgs usually are described as "cold" and "detached". This is mostly due to older
 		models not simulating an active endocrine system, leading to minute damages to the limbic system, which
 		accumulate over time. Newer MMIs come with a suite of endocrine glands helping the sapient brain to stay healthy.</p>
 	</div>
 	<div id="mindwiping">
 		<h3>Mindwiping</h3>
 		<p>An uncommon and arguably cruel practice is to not see the MMI as a new sleeve for a sapient brain, but
-		rather as pure hardware, capable of holding complex thought and Alpha Drone intelligence. Mindwiping involves
+		rather as pure hardware, capable of holding complex thought and Alpha drone intelligence. Mindwiping involves
 		several injections and electrostimulation to convert neural matter into "empty space", much like a freshly
 		formatted hard drive. Old structures are ripped apart and neurons are brought into a malleable state for new
 		growths and networks - at the behest of the person using the brain for their uses. This, inevitably, destroys
 		the previous mind the brain held, utterly wiping them from existence.</p>
-		<p>Mindwipe Cyborgs are therefore the "best of both worlds", a tailor-made intelligence that benefits from the
+		<p>Mindwipe cyborgs are therefore the "best of both worlds", a tailor-made intelligence that benefits from the
 		resilience and hack-resistance of a brain. However, this practice has been outlawed for a long time due to its
 		nihilistic cruelty to sapient life.</p>
-		<p>Proponents of Mindwipe Cyborgs are quick to point out that Resleeve technology allows for a more ethical
+		<p>Proponents of Mindwipe cyborgs are quick to point out that Resleeve technology allows for a more ethical
 		Mindwipe procedure, as the proto-networks of a freshly sleeved body can be used instead. Most polities have
 		yet to adjust to these new changes, but it is unlikely to be allowed anew, since an alternative for Mindwipe
-		Cyborgs exists.</p>
+		cyborgs exists.</p>
 	</div>
 	<div id="positronics">
 		<h3>Positronics</h3>
@@ -640,7 +639,7 @@
 		and quantum technology to produce a generalized intelligence equal to that of a sapient being.</p>
 		<p>Positronics actually have little to do with their namesake particle, but are a reference to the works of
 		science fiction author Isaac Asimov. In reality, positronic brains are a self-contained unit of superdense
-		carbon allotropes,manipulators, capacitors and a battery. This "brain" (or in roboticist terminology "crucible")
+		carbon allotropes, manilators, capacitors and a battery. This "brain" (or in roboticist terminology "crucible")
 		is activated by providing a "seed", a template allowing the newly created intelligence to speak, comprehend and
 		learn, as well the subconscious ability to start expanding this seed network with additional neurons.</p>
 		<p>These nodes worm their way through the carbon microscopically, constructed out of the same material - each
