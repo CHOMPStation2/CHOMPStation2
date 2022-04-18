@@ -21,7 +21,7 @@
 		/obj/item/weapon/tank,
 		/obj/item/weapon/circuitboard,
 		/obj/item/weapon/smes_coil,
-		/obj/item/weapon/fuel_assembly //chompstation addition so they can set up rust
+		/obj/item/weapon/fuel_assembly
 		)
 
 	var/obj/item/wrapped = null // Item currently being held.

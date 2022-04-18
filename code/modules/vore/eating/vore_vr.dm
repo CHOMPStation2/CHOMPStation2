@@ -54,6 +54,11 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/allowmobvore = TRUE
 	var/permit_healbelly = TRUE
 
+	// These are 'modifier' prefs, do nothing on their own but pair with drop_prey/drop_pred settings.
+	var/drop_vore = FALSE
+	var/stumble_vore = FALSE
+	var/slip_vore = FALSE
+
 	var/resizable = TRUE
 	var/show_vore_fx = TRUE
 	var/step_mechanics_pref = FALSE
@@ -154,6 +159,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	step_mechanics_pref = json_from_file["step_mechanics_pref"]
 	pickup_pref = json_from_file["pickup_pref"]
 	belly_prefs = json_from_file["belly_prefs"]
+	drop_vore = json_from_file["drop_vore"]
+	slip_vore = json_from_file["slip_vore"]
+	stumble_vore = json_from_file["stumble_vore"]
 
 
 	//CHOMP stuff
@@ -195,6 +203,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		pickup_pref = TRUE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
+	if(isnull(drop_vore))
+		drop_vore = FALSE
+	if(isnull(slip_vore))
+		slip_vore = FALSE
+	if(isnull(stumble_vore))
+		stumble_vore = FALSE
 
 	//CHOMP stuff
 	if(isnull(latejoin_vore))
@@ -238,7 +252,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
-			"autotransferable"		= autotransferable
+			"autotransferable"		= autotransferable,
+			"drop_vore"				= drop_vore,
+			"slip_vore"				= slip_vore,
+			"stumble_vore"			= stumble_vore,
 		)
 
 	//List to JSON
