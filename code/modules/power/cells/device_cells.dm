@@ -1,4 +1,6 @@
-//currently only used by energy-type guns, that may change in the future.
+/*
+ * Device
+ */
 /obj/item/weapon/cell/device
 	name = "device power cell"
 	desc = "A small power cell designed to power handheld devices."
@@ -13,10 +15,39 @@
 	matter = list(MAT_STEEL = 350, MAT_GLASS = 50)
 	preserve_item = 1
 
+<<<<<<< HEAD
 //Yawn Changes
 /obj/item/weapon/cell/device/weapon //Aka adv
 	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
 	desc = "A small upgraded power cell designed to power handheld devices."
+=======
+/obj/item/weapon/cell/device/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/*
+ * EMP Proof Device
+ */
+/obj/item/weapon/cell/device/empproof //UNUSED
+	name = "shielded device power cell"
+	desc = "A small power cell designed to power handheld devices. Shielded from EMPs."
+	icon_state = "up_device_cell"
+	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
+	emp_proof = TRUE
+
+/obj/item/weapon/cell/device/empproof/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/*
+ * Weapon
+ */
+/obj/item/weapon/cell/device/weapon
+	name = "weapon power cell"
+	desc = "A small power cell designed to power handheld weaponry."
+>>>>>>> 0955b0c88b... Merge pull request #12790 from GhostActual/energen_batteries
 	icon_state = "weapon_cell"
 	maxcharge = 2400
 	charge_amount = 20
@@ -27,6 +58,7 @@
 	charge = 0
 	update_icon()
 
+<<<<<<< HEAD
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
@@ -69,22 +101,47 @@
 	update_icon()
 //CHOMP Add end
 
+=======
+/*
+ * EMP Proof Weapon
+ */
+>>>>>>> 0955b0c88b... Merge pull request #12790 from GhostActual/energen_batteries
 /obj/item/weapon/cell/device/weapon/empproof
+	name = "shielded weapon power cell"
+	desc = "A small power cell designed to power handheld weaponry. Shielded from EMPs."
+	icon_state = "emp_weapon_cell"
+	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
 	emp_proof = TRUE
 
+/obj/item/weapon/cell/device/weapon/empproof/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/*
+ * Self-charging Weapon
+ */
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
 	icon_state = "sc_weapon_cell"
+	matter = list(MAT_STEEL = 400, MAT_GLASS = 80)
 	self_recharge = TRUE
 	charge_amount = 120
 	charge_delay = 75
 
+/*
+ * Captain's Self-charging Weapon
+ */
 /obj/item/weapon/cell/device/weapon/recharge/captain
+	icon_state = "cap_weapon_cell"
+	matter = list(MAT_STEEL = 400, MAT_GLASS = 100)
 	charge_amount = 160	//Recharges a lot more quickly...
 	charge_delay = 100	//... but it takes a while to get started
 
-
+/*
+ * Alien Void Cell
+ */
 /datum/category_item/catalogue/anomalous/precursor_a/alien_void_cell
 	name = "Precursor Alpha Object - Void Cell"
 	desc = "This is a very enigmatic and small machine. It is able to output a direct electrical current \
