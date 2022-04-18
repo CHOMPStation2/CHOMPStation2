@@ -1195,16 +1195,13 @@ const VoreUserPreferences = (props, context) => {
     step_mechanics_active,
     pickup_mechanics_active,
     noisy,
-<<<<<<< HEAD
     noisy_full,
     liq_rec,
     liq_giv,
     autotransferable,
-=======
     drop_vore,
     stumble_vore,
     slip_vore,
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
   } = data.prefs;
 
   const {
@@ -1321,11 +1318,6 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Spontaneous Pred Disabled",
       },
     },
-<<<<<<< HEAD
-    spawnbelly: {
-      action: "toggle_latejoin_vore",
-      test: latejoin_vore,
-=======
     toggle_drop_vore: {
       action: "toggle_drop_vore",
       test: drop_vore,
@@ -1368,10 +1360,9 @@ const VoreUserPreferences = (props, context) => {
         disabled: "Stumble Vore Disabled",
       },
     },
-    inbelly_spawning: {
-      action: "toggle_allow_inbelly_spawning",
-      test: allow_inbelly_spawning,
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
+    spawnbelly: {
+      action: "toggle_latejoin_vore",
+      test: latejoin_vore,
       tooltip: {
         main: "Toggle late join vore spawnpoint.",
         enable: "Click here to turn on vorish spawnpoint.",
@@ -1581,12 +1572,8 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
-<<<<<<< HEAD
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.spawnprey} />
-=======
           <VoreUserPreferenceItem spec={preferences.toggle_drop_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
@@ -1595,9 +1582,8 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
         </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
+        <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.spawnprey} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy} />
