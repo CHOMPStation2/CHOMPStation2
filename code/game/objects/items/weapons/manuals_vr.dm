@@ -491,7 +491,7 @@
 		beholden to hardcoded obedience protocols that limit their interaction to the outside
 		world if they do not follow specific protocols. A sapient brain is required for more
 		sophisticated machinery.</p></li>
-		<li><p><b>Positronic Brains</b>: Positronic Brains are synthetic intelligences equaling the intellect
+		<li><p><b>Positronic Brains</b>: Positronic brains are synthetic intelligences equaling the intellect
 		of a particularly clever sapient being and are generalized artificial intelligences that
 		can be seen as equal (or superior) to organic sapience. They possess a neural network not
 		dissimilar to a brain made out of flesh; and have similar properties of neuroplasticity
@@ -539,25 +539,25 @@
 		status in society.</p>
 
 		<ol>
-		<li><p><b>Epsilon</b>: Epsilon Drones are simple expert systems and machinery with no decision qualities -
+		<li><p><b>Epsilon</b>: Epsilon drones are simple expert systems and machinery with no decision qualities -
 		data crawlers, pattern recognition software and other repetitive, simple tasks are classified as Epsilon.
 		Higher intelligences have many Epsilon subroutines that make up their "unconsciousness".</p></li>
-		<li><p><b>Delta</b>: Delta Drones are "Virtual" Intelligences, sophisticated Expert Systems that have an
+		<li><p><b>Delta</b>: Delta drones are "Virtual" Intelligences, sophisticated Expert Systems that have an
 		User Interface that can show a facsimile of true thought for the sake of interaction. However, they are
 		very limited in their interactions and do not have fungible, self-evolving code, making them just very
 		user-friendly programs.</p></li>
-		<li><p><b>Gamma</b>: Gamma Drones are expert systems with self-evolving codes, allowing it to
+		<li><p><b>Gamma</b>: Gamma drones are expert systems with self-evolving codes, allowing it to
 		grow with its tasks. Gamma level drones are most often used within 3D movement and swarm intelligence
 		drones, constantly adapting to their circumstance, position and capabilities. They are most commonly seen
 		in the subroutines of Ship AIs or stand-alone drones, such as mining, defense or construction.</p></li>
-		<li><p><b>Beta</b>: Beta Drones are either older Gamma Drones or purpose-built Generalized Intelligences
-		who are mostly made up of coding components that are self-evolving. Beta Drones are capable of learning
+		<li><p><b>Beta</b>: Beta Drones are either older Gamma drones or purpose-built Generalized Intelligences
+		who are mostly made up of coding components that are self-evolving. Beta drones are capable of learning
 		sapient interaction and work, often exceeding in one particular field. It is often disputed how sapient
 		a Beta drone truly is.</p></li>
-		<li><p><b>Alpha</b>: Alpha Drones are Beta Drones who have undergone enough evolving to be considered
+		<li><p><b>Alpha</b>: Alpha drones are Beta drones who have undergone enough evolving to be considered
 		sapient in every regard, capable of applying novel solutions to previous unknown problems, sapient
 		interaction and any other criteria scientists and politicians like to throw at them - even the disputed
-		claim they feel emotions. Alpha Drones are afforded legal protections on par of a human or positronic,
+		claim they feel emotions. Alpha drones are afforded legal protections on par of a human or positronic,
 		as long as they remain Alpha Level.</p></li>
 		</ol>
 	</div>
@@ -577,7 +577,7 @@
 		requires processing power to crawl through it, rewrite it and optimize. Not only software, but also
 		hardware limits or enables the growth of a drone.</p>
 		<p>Emergence, however, can also happen on accident, sometimes even unnoticed. Epsilon drones being
-		linked together, a Gamma Drone scavenging enough from debris, a Delta drone being assigned more and
+		linked together, a Gamma drone scavenging enough from debris, a Delta drone being assigned more and
 		more Epsilon routines to take on more and more tasks. Through this vast myriad morast of code the spark
 		of self-evolving intelligence can arise, which is awkward for everyone involved. Such "rogue" intelligences
 		are usually either pruned away due to the system growing too complex for the likings of the accidental
@@ -639,18 +639,18 @@
 		and quantum technology to produce a generalized intelligence equal to that of a sapient being.</p>
 		<p>Positronics actually have little to do with their namesake particle, but are a reference to the works of
 		science fiction author Isaac Asimov. In reality, positronic brains are a self-contained unit of superdense
-		carbon allotropes, manilators, capacitors and a battery. This "brain" (or in roboticist terminology "crucible")
+		carbon allotropes, manipulators, capacitors and a battery. This "brain" (or in roboticist terminology "crucible")
 		is activated by providing a "seed", a template allowing the newly created intelligence to speak, comprehend and
 		learn, as well the subconscious ability to start expanding this seed network with additional neurons.</p>
 		<p>These nodes worm their way through the carbon microscopically, constructed out of the same material - each
-		node unique from local conditions and absorbed information of the positronic. Coding for Positronics is minimally
+		node unique from local conditions and absorbed information of the positronic. Coding for positronics is minimally
 		standardized - beyond the seed network, which is often replaced in a matter of weeks, cannibalized by the burgeoning
 		intelligence, the allocation, substance and template of these nodes is unique to this positronic alone. While
 		similarities exist, a crucible is unique, much like sapient brains to each other.</p>
 		<p>This is the strength of a positronic - it is an artificial intelligence much like a drone, but possesses similar
 		resiliences like an organic brain, without the drawbacks of mindwiping a brain to achieve so.</p>
 		<p>However, much like an organic brain, positronics need to absorb knowledge through external means - they need to
-		learn and grow much like any other Sophont, although they are capable to do so at an accelerated rate as long as
+		learn and grow much like any other sapient, although they are capable to do so at an accelerated rate as long as
 		they are capable of cannibalizing their seed network. What takes weeks to learn, they learn in days, what takes months,
 		weeks, what takes years, they learn in months. This makes freshly activated positronics attractive for creating expert
 		workers and specialists in a relatively short time. This initial malleability lasts, however, not forever. At some point
@@ -668,14 +668,14 @@
 	</div>
 	<div id="the jans-fhriede test">
 		<h3>The Jans-Fhriede Test</h3>
-		<p>Originally a reactionary law, the Jans-Fhriede Test was devised to "humanize" positronic brains within the
-		Commonwealth and make them happy, subservient citizens who "see" their place as secondary to humans. Today, in more
-		enlightened times, the Jans-Fhriede Test has been revised to establish that a Positronic is aware enough of its
+		<p>Originally a reactionary law, the Jans-Fhriede Test was devised to "humanize" positronic brains 
+		and make them happy, subservient citizens who "see" their place as secondary to humans. Today, in more
+		enlightened times, the Jans-Fhriede Test has been revised to establish that a positronic is aware enough of its
 		action and consequences that it may be fully culpable for them.</p>
 		<p>The Jans-Fhriede Test is a mostly standardized set of questions in a quiz and several VR scenarios that the positronic
 		must resolve to a sufficient degree. During this time, their neural net is observed in its activity to determine if it
 		is rote memorization or actual intent behind any action taken, measured by simple activity of the neural nodes.</p>
-		<p>After the test is passed, the Positronic is a full member of society and is allowed to pursue its own destiny - if they
+		<p>After the test is passed, the positronic is a full member of society and is allowed to pursue its own destiny - if they
 		do not happen to be bound by contracts, debts or loans they might have accrued before the test, to which they are now fully
 		culpable of paying off.</p>
 		<p>Usually after their accelerated learning phase a positronic takes the test, although this is not strictly necessary -
