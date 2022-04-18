@@ -2,7 +2,7 @@
 /obj/item/weapon/cell/device
 	name = "device power cell"
 	desc = "A small power cell designed to power handheld devices."
-	icon_state = "m_st"
+	icon_state = "device_cell"
 	item_state = "egg6"
 	w_class = ITEMSIZE_SMALL
 	force = 0
@@ -17,7 +17,7 @@
 /obj/item/weapon/cell/device/weapon //Aka adv
 	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "m_sup"
+	icon_state = "weapon_cell"
 	maxcharge = 2400
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
@@ -75,7 +75,7 @@
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
-	icon_state = "meb_m_nu"
+	icon_state = "sc_weapon_cell"
 	self_recharge = TRUE
 	charge_amount = 120
 	charge_delay = 75
