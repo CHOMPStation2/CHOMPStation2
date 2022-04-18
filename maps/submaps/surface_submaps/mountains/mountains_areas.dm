@@ -2,6 +2,7 @@
 	name = "Cave Submap Area"
 	icon_state = "submap"
 	ambience = AMBIENCE_RUINS
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/cave
 
 /area/submap/cave/deadBeacon
 	name = "POI - abandoned relay"
@@ -48,27 +49,27 @@
 	name = "POI - Final Resting Place"
 	ambience = AMBIENCE_GHOSTLY
 
-/area/submap/Rockb1
+/area/submap/cave/Rockb1
 	name = "POI - RockyBase1"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/Cavelake
+/area/submap/cave/Cavelake
 	name = "POI - Cavelake"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/CaveTrench
+/area/submap/cave/CaveTrench
 	name = "POI - Cave River"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/CorgiRitual
+/area/submap/cave/CorgiRitual
 	name = "POI - Dark Ritual"
 	ambience = AMBIENCE_UNHOLY
 
-/area/submap/AbandonedTemple
+/area/submap/cave/AbandonedTemple
 	name = "POI - Abandoned Temple"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/CrashedMedShuttle
+/area/submap/cave/CrashedMedShuttle
 	name = "POI - Crashed Med Shuttle"
 	ambience = AMBIENCE_RUINS
 
@@ -123,47 +124,47 @@
 /area/submap/cave/BlastMine1
 	name = "POI - Blast Mine 1"
 
-/area/submap/crashedcontainmentshuttle
+/area/submap/cave/crashedcontainmentshuttle
 	name = "POI - Crashed Containment Shuttle"
 	ambience = AMBIENCE_HIGHSEC
 
-/area/submap/geyser_1
+/area/submap/cave/geyser_1
 	name = "POI - Ore-Rich Geyser"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/geyser_2
+/area/submap/cave/geyser_2
 	name = "POI - Fenced Geyser"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/geyser_3
+/area/submap/cave/geyser_3
 	name = "POI - Magmatic Geyser"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/ore_cliff
+/area/submap/cave/ore_cliff
 	name = "POI - Ore-Topped Cliff"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/deadspy
+/area/submap/cave/deadspy
 	name = "POI - Dead Spy"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/lava_trench
+/area/submap/cave/lava_trench
 	name = "POI - Lava Trench"
 	ambience = AMBIENCE_LAVA
 
-/area/submap/lava_trench/outpost
+/area/submap/cave/lava_trench/outpost
 	name = "POI - Trench Outpost"
 	requires_power = FALSE
 	icon_state = "submap2"
 
-/area/submap/Excavation
+/area/submap/cave/Excavation
 	name = "POI - Excavation Site"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/spatial_anomaly
+/area/submap/cave/spatial_anomaly
 	name = "POI - Spatial Anomaly"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/Speakeasy  //VOREStation add
+/area/submap/cave/Speakeasy  //VOREStation add
 	name = "POI - Speakeasy"
 	requires_power = FALSE

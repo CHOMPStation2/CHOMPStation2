@@ -84,6 +84,8 @@
 		handle_shock()
 
 		handle_pain()
+		
+		handle_allergens()
 
 		handle_medical_side_effects()
 
@@ -574,9 +576,10 @@
 		
 	if(!does_not_breathe && client) // If we breathe, and have an active client, check if we have synthetic lungs.
 		var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
-		if(L.robotic < ORGAN_ROBOT && (istype(get_turf(src), /turf/space))) // Only non-synthetic lungs, please, and only play these while we're in space.
+		var/turf = get_turf(src) 
+		var/mob/living/carbon/human/M = src
+		if(L.robotic < ORGAN_ROBOT && is_below_sound_pressure(turf) && M.internal) // Only non-synthetic lungs, please, and only play these while the pressure is below that which we can hear sounds normally AND we're on internals. 
 			if(!failed_inhale && (world.time >= (last_breath_sound + 7 SECONDS))) // Were we able to inhale successfully? Play inhale.
-				var/mob/living/carbon/human/M = src
 				var/exhale = failed_exhale // Pass through if we passed exhale or not
 				play_inhale(M, exhale)
 				last_breath_sound = world.time
@@ -593,7 +596,7 @@
 				to_chat(src, "<span class='danger'>You feel your face burning and a searing heat in your lungs!</span>")
 
 		if(breath.temperature >= species.heat_discomfort_level)
-		
+
 			if(breath.temperature >= species.breath_heat_level_3)
 				apply_damage(HEAT_GAS_DAMAGE_LEVEL_3, BURN, BP_HEAD, used_weapon = "Excessive Heat")
 				throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MAX)
@@ -654,7 +657,7 @@
 	else // Failsafe
 		suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	
-	M << sound(suit_inhale_sound,0,0,0,100)
+	playsound_local(get_turf(src), suit_inhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
 		addtimer(CALLBACK(src, .proc/play_exhale, M), 5 SECONDS)
 	
@@ -665,7 +668,36 @@
 	else // Failsafe
 		suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
 	
-	M << sound(suit_exhale_sound,0,0,0,100)
+	playsound_local(get_turf(src), suit_exhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
+
+/mob/living/carbon/human/proc/handle_allergens()
+	if(chem_effects[CE_ALLERGEN])
+		//first, multiply the basic species-level value by our allergen effect rating, so consuming multiple seperate allergen typess simultaneously hurts more
+		var/damage_severity = species.allergen_damage_severity * chem_effects[CE_ALLERGEN]
+		var/disable_severity = species.allergen_disable_severity * chem_effects[CE_ALLERGEN]
+		if(species.allergen_reaction & AG_PHYS_DMG)
+			adjustBruteLoss(damage_severity)
+		if(species.allergen_reaction & AG_BURN_DMG)
+			adjustFireLoss(damage_severity)
+		if(species.allergen_reaction & AG_TOX_DMG)
+			adjustToxLoss(damage_severity)
+		if(species.allergen_reaction & AG_OXY_DMG)
+			adjustOxyLoss(damage_severity)
+			if(prob(disable_severity/2))
+				emote(pick("cough","gasp","choke"))
+		if(species.allergen_reaction & AG_EMOTE)
+			if(prob(disable_severity/2))
+				emote(pick("pale","shiver","twitch"))
+		if(species.allergen_reaction & AG_PAIN)
+			adjustHalLoss(disable_severity)
+		if(species.allergen_reaction & AG_WEAKEN)
+			Weaken(disable_severity)
+		if(species.allergen_reaction & AG_BLURRY)
+			eye_blurry = max(eye_blurry, disable_severity)
+		if(species.allergen_reaction & AG_SLEEPY)
+			drowsyness = max(drowsyness, disable_severity)
+		if(species.allergen_reaction & AG_CONFUSE)
+			Confuse(disable_severity/4)
 
 /mob/living/carbon/human/handle_environment(datum/gas_mixture/environment)
 	if(!environment)
@@ -1462,12 +1494,10 @@
 		if(istype(rig) && rig.visor && !looking_elsewhere)
 			if(!rig.helmet || (head && rig.helmet == head))
 				if(rig.visor && rig.visor.vision && rig.visor.active && rig.visor.vision.glasses)
-					glasses_processed = 1
-					process_glasses(rig.visor.vision.glasses)
+					glasses_processed = process_glasses(rig.visor.vision.glasses)
 
 		if(glasses && !glasses_processed && !looking_elsewhere)
-			glasses_processed = 1
-			process_glasses(glasses)
+			glasses_processed = process_glasses(glasses)
 		if(XRAY in mutations)
 			sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
 			see_in_dark = 8
@@ -1476,6 +1506,15 @@
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.vision_flags))
 				sight |= M.vision_flags
+
+		if(!glasses_processed && nif)
+			var/datum/nifsoft/vision_soft
+			for(var/datum/nifsoft/NS in nif.nifsofts)
+				if(NS.vision_exclusive && NS.active)
+					vision_soft = NS
+					break
+			if(vision_soft)
+				glasses_processed = process_nifsoft_vision(vision_soft)		//not really glasses but equitable
 
 		if(!glasses_processed && (species.get_vision_flags(src) > 0))
 			sight |= species.get_vision_flags(src)
@@ -1505,19 +1544,34 @@
 	return 1
 
 /mob/living/carbon/human/proc/process_glasses(var/obj/item/clothing/glasses/G)
+	. = FALSE
 	if(G && G.active)
-		see_in_dark += G.darkness_view
+		if(G.darkness_view)
+			see_in_dark += G.darkness_view
+			. = TRUE
 		if(G.overlay && client)
 			client.screen |= G.overlay
 		if(G.vision_flags)
 			sight |= G.vision_flags
+			. = TRUE
 		if(istype(G,/obj/item/clothing/glasses/night) && !seer)
 			see_invisible = SEE_INVISIBLE_MINIMUM
 
 		if(G.see_invisible >= 0)
 			see_invisible = G.see_invisible
+			. = TRUE
 		else if(!druggy && !seer)
 			see_invisible = see_invisible_default
+
+/mob/living/carbon/human/proc/process_nifsoft_vision(var/datum/nifsoft/NS)
+	. = FALSE
+	if(NS && NS.active)
+		if(NS.darkness_view)
+			see_in_dark += NS.darkness_view
+			. = TRUE
+		if(NS.vision_flags_mob)
+			sight |= NS.vision_flags_mob
+			. = TRUE
 
 /mob/living/carbon/human/handle_random_events()
 	if(inStasisNow())

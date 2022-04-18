@@ -70,7 +70,8 @@
 /area/surface/outpost/wall/checkpoint)
 "lY" = (
 /turf/simulated/floor/wood{
-	outdoors = 1
+	outdoors = 1;
+	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
 "mk" = (
@@ -197,7 +198,8 @@
 /area/surface/outside/wilderness/normal)
 "zc" = (
 /turf/simulated/floor/wood/broken{
-	outdoors = 1
+	outdoors = 1;
+	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
 "ze" = (
@@ -242,13 +244,15 @@
 "Cp" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/wood/broken{
-	outdoors = 1
+	outdoors = 1;
+	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
 "CM" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/wood{
-	outdoors = 1
+	outdoors = 1;
+	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
 "Dg" = (
@@ -41639,10 +41643,10 @@ Si
 Si
 Si
 Si
-yP
-yP
-yP
-yP
+Tx
+Tx
+Tx
+Tx
 Si
 Si
 Si
@@ -41897,10 +41901,10 @@ Si
 Si
 Si
 Si
-yP
-yP
-yP
-yP
+Tx
+Tx
+Tx
+Tx
 Si
 Si
 Si
@@ -42155,10 +42159,10 @@ Si
 Si
 Si
 Si
-yP
-yP
-yP
-yP
+Tx
+Tx
+Tx
+Tx
 Si
 Si
 Si

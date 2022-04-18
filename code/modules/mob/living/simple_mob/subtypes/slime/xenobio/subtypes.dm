@@ -441,15 +441,16 @@
 		/mob/living/simple_mob/slime/xenobio/amber
 	)
 
-/* VOREStation Edit. We've had enough server crashes.
 /mob/living/simple_mob/slime/xenobio/amber/handle_special()
 	if(stat != DEAD)
 		feed_aura()
 	..()
 
 /mob/living/simple_mob/slime/xenobio/amber/proc/feed_aura()
-	for(var/mob/living/L in view(2, src))
-		if(L == src) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
+	for(var/mob/living/L in view(1, src))
+		if(L.stat == DEAD || !IIsAlly(L))
+			continue
+		if(L == src || istype(L, /mob/living/simple_mob/slime/xenobio/amber)) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
 			continue
 		if(istype(L, /mob/living/simple_mob/slime/xenobio))
 			var/mob/living/simple_mob/slime/xenobio/X = L
@@ -459,7 +460,6 @@
 			if(H.isSynthetic())
 				continue
 			H.nutrition = between(0, H.nutrition + rand(15, 25), 800)
-*/
 
 /mob/living/simple_mob/slime/xenobio/cerulean
 	desc = "This slime is generally superior in a wide range of attributes, compared to the common slime.  The jack of all trades, but master of none."
@@ -491,6 +491,7 @@
 	slime_color = "red"
 	coretype = /obj/item/slime_extract/red
 	movement_cooldown = 0 // See above.
+	untamable = TRUE // Will enrage if disciplined.
 
 	description_info = "This slime is faster than the others.  Attempting to discipline this slime will always cause it to go rabid and berserk."
 
@@ -501,7 +502,7 @@
 			/mob/living/simple_mob/slime/xenobio/orange
 		)
 
-	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/red // Will enrage if disciplined.
+	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime
 
 
 /mob/living/simple_mob/slime/xenobio/green

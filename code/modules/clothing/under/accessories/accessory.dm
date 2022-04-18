@@ -157,6 +157,20 @@
 	desc = "A neosilk clip-on tie. This one is disgusting."
 	icon_state = "horribletie"
 
+/obj/item/clothing/accessory/bowtie
+	name = "red bow tie"
+	desc = "Snazzy!"
+	icon_state = "redbowtie"
+	slot = ACCESSORY_SLOT_TIE
+
+/obj/item/clothing/accessory/bowtie/black
+	name = "black bow tie"
+	icon_state = "blackbowtie"
+
+/obj/item/clothing/accessory/bowtie/white
+	name = "white bow tie"
+	icon_state = "whitebowtie"
+
 /obj/item/clothing/accessory/stethoscope
 	name = "stethoscope"
 	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
@@ -525,3 +539,44 @@
 /obj/item/clothing/accessory/gaiter/green
 	name = "green neck gaiter"
 	icon_state = "gaiter_green"
+
+/*
+ * Pride Pins
+ */
+/obj/item/clothing/accessory/pride
+	name = "pride pin"
+	desc = "A pin displaying pride in one's identity."
+	icon_state = "pride"
+	slot = ACCESSORY_SLOT_MEDAL
+
+/obj/item/clothing/accessory/pride/bi
+	name = "bisexual pride pin"
+	icon_state = "pride_bi"
+
+/obj/item/clothing/accessory/pride/trans
+	name = "transgender pride pin"
+	icon_state = "pride_trans"
+
+/obj/item/clothing/accessory/pride/ace
+	name = "asexual pride pin"
+	icon_state = "pride_ace"
+
+/obj/item/clothing/accessory/pride/enby
+	name = "nonbinary pride pin"
+	icon_state = "pride_enby"
+
+/obj/item/clothing/accessory/pride/pan
+	name = "pansexual pride pin"
+	icon_state = "pride_pan"
+
+/obj/item/clothing/accessory/pride/lesbian
+	name = "lesbian pride pin"
+	icon_state = "pride_lesbian"
+
+/obj/item/clothing/accessory/pride/intersex
+	name = "intersex pride pin"
+	icon_state = "pride_intersex"
+
+/obj/item/clothing/accessory/pride/vore
+	name = "vore pride pin"
+	icon_state = "pride_vore"

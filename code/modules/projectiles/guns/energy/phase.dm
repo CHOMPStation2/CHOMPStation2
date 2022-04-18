@@ -5,6 +5,7 @@
 	name = "phase carbine"
 	desc = "The RayZar EW26 Artemis is a downsized energy weapon, specifically designed for use against wildlife. This one has a safety interlock that prevents firing while in proximity to the facility."
 	description_fluff = "RayZar is Ward-Takahashi’s main consumer weapons brand, known for producing and licensing a wide variety of specialist energy weapons of various types and quality primarily for the civilian market."
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "phasecarbine"
 	item_state = "phasecarbine"
 	wielded_item_state = "phasecarbine-wielded"

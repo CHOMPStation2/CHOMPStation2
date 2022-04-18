@@ -1,3 +1,29 @@
+/mob/living/simple_mob
+	//vars for vore_icons toggle control
+	var/vore_icons_toggle = 1 // on by default, as is legacy
+	var/vore_icons_cache = 0 // 0 by default. Going from ON to OFF should store vore_icons val here.
+
+mob/living/simple_mob/verb/toggle_vore_icons()
+
+	set name = "Toggle Vore Sprite"
+	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
+	set category = "Abilities"
+
+	if(!vore_icons && !vore_icons_cache)
+		to_chat(src,"<span class='warning'>This simplemob has no vore sprite.</span>")
+	else if(vore_icons_toggle)
+		vore_icons_cache = vore_icons
+		vore_icons = 0
+		vore_icons_toggle = 0
+		to_chat(src,"<span class='warning'>Vore sprite disabled.</span>")
+	else
+		vore_icons = vore_icons_cache
+		vore_icons_toggle = 1
+		to_chat(src,"<span class='warning'>Vore sprite enabled.</span>")
+
+	update_icon()
+
+
 // a unique named update_transforms override to allow simplemobs going horizontal on lay/stun.
 // This will not make the mob horizontal if the mob has a icon_rest != null
 // To use this, add an override in your simplemob subtype of update_transforms with NO . = ..()

@@ -6,6 +6,7 @@
 	desc = "The NT Mk30 NL is a small gun used for non-lethal takedowns. Produced by NT, it's actually a licensed version of a W-T RayZar design."
 	description_fluff = "RayZar is Ward-Takahashi’s main consumer weapons brand, known for producing and licensing a wide variety of specialist \
 	energy weapons of various types and quality primarily for the civilian market."
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "taser"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	projectile_type = /obj/item/projectile/beam/stun
@@ -44,6 +45,7 @@
 /obj/item/weapon/gun/energy/crossbow
 	name = "mini energy-crossbow"
 	desc = "A weapon favored by many mercenary stealth specialists."
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "crossbow"
 	w_class = ITEMSIZE_SMALL
 	item_state = "crossbow"
@@ -79,6 +81,7 @@
 	desc = "The RayZar MA21 Selkie is a weapon that uses a laser pulse to ionise the local atmosphere, creating a disorienting pulse of plasma and deafening shockwave as the wave expands."
 	description_fluff = "RayZar is Ward-Takahashi’s main consumer weapons brand, known for producing and licensing a wide variety of specialist energy weapons of various types and quality primarily for the civilian market. \
 	Less well known are RayZar's limited-production experimental projects, often in the form of less-lethal weapon solutions."
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "plasma_stun"
 	item_state = "plasma_stun"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_POWER = 3)
@@ -97,6 +100,7 @@
 	often sold alongside MarsTech projectile weapons to security and law enforcement agencies. \
 	The Aktzin's capsule-based stun ammunition is a closely guarded Hephaestus Industries patent, \
 	and the company has been particularly litigious towards any attempted imitators."
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "stunrevolver"
 	item_state = "stunrevolver"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)

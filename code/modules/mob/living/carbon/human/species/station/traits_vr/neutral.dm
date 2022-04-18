@@ -54,7 +54,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -65,28 +65,10 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
-
-// YW addition
-/datum/trait/neutral/autohiss_vassilian
-	name = "Autohiss (Vassilian)"
-	desc = "You buzz your S's, F's, Th's, and R's."
-	cost = 0
-	var_changes = list(
-	autohiss_basic_map = list(
-        "s" = list("sz", "z", "zz"),
-        "f" = list("zk")
-		),
-	autohiss_extra_map = list(
-		"th" = list("zk", "szk"),
-        "r" = list("rk")
-	),
-	autohiss_exempt = list("Vespinae"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
-// YW Addition end
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
 
 /datum/trait/neutral/bloodsucker
-	name = "Bloodsucker, Obligate" //YW edit
+	name = "Bloodsucker, Obligate"
 	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
@@ -273,7 +255,7 @@
 	desc = "This trait drastically reduces the effects of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 2, "allergen_disable_severity" = 3)
+	var_changes = list("allergen_damage_severity" = 1.25, "allergen_disable_severity" = 5)
 	excludes = list(/datum/trait/neutral/allergen_increased_effect)
 
 /datum/trait/neutral/allergen_increased_effect
@@ -281,7 +263,7 @@
 	desc = "This trait drastically increases the effects of allergen reactions, enough that even a small dose can be lethal. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 8, "allergen_disable_severity" = 6)
+	var_changes = list("allergen_damage_severity" = 5, "allergen_disable_severity" = 20)
 	excludes = list(/datum/trait/neutral/allergen_reduced_effect)
 
 // Spicy Food Traits, from negative to positive.

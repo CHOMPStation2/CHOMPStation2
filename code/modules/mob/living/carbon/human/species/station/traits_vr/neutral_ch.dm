@@ -42,25 +42,33 @@
 	custom_only = FALSE
 
 /datum/trait/neutral/big_mouth
-	name = "Big mouth"
+	name = "Mouth, Big"
 	desc = "It takes half as many bites to finish food as it does for most people."
 	cost = 0
 	var_changes = list("bite_mod" = 2)
 	custom_only = FALSE
 	
 /datum/trait/neutral/big_mouth_extreme
-	name = "Giant mouth"
+	name = "Mouth, Giant"
 	desc = "It takes a quarter as many bites to finish food as it does for most people."
 	cost = 0
 	var_changes = list("bite_mod" = 4)
 	custom_only = FALSE
 	
-/datum/trait/neutral/stubborn
-	name = "Stubborn"
-	desc = "You are harder to move out of the way due to your sturdiness, frame, or just sheer stubbornness, and neither players nor mobs can trade places with you or bump you out of the way."
+// CHOMPNote: Moving YW additions here, to sync our files better with VORE in the event of edits.
+/datum/trait/neutral/autohiss_vassilian
+	name = "Autohiss (Vassilian)"
+	desc = "You buzz your S's, F's, Th's, and R's."
 	cost = 0
-	custom_only = FALSE
+	var_changes = list(
+	autohiss_basic_map = list(
+        "s" = list("sz", "z", "zz"),
+        "f" = list("zk")
+		),
+	autohiss_extra_map = list(
+		"th" = list("zk", "szk"),
+        "r" = list("rk")
+	),
+	autohiss_exempt = list("Vespinae"))
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 	
-/datum/trait/neutral/stubborn/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	H.mob_bump_flag = HEAVY

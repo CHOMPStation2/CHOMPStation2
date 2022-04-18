@@ -62,7 +62,7 @@
 	category = 0
 	custom_only = FALSE
 	
-// CHOMPEdits Start - Adding Xenochimera traits. TODO - Port these to VORE.
+/* // Commented out in lieu of finding a better solution.
 /datum/trait/neutral/coldadapt/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
@@ -73,7 +73,7 @@
 	can_take = ORGANICS // (Not sure if this is needed for Xenochimera-specific sub-version.)
 	custom_only = FALSE
 	excludes = list(/datum/trait/neutral/hotadapt, /datum/trait/neutral/hotadapt/xenochimera)
-	
+
 /datum/trait/neutral/hotadapt/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
@@ -84,7 +84,8 @@
 	can_take = ORGANICS // negates the need for suit coolers entirely for synths, so no. (Not sure if this is needed for Xenochimera-specific sub-version.)
 	custom_only = FALSE
 	excludes = list(/datum/trait/neutral/coldadapt, /datum/trait/neutral/coldadapt/xenochimera)
-	
+*/
+
 /datum/trait/neutral/autohiss_unathi/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)

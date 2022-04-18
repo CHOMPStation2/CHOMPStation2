@@ -1,24 +1,26 @@
 /obj/item/organ/external/chest/unathi
 	max_damage = 100
-	min_broken_damage = 40
+	min_broken_damage = 80 // CHOMPEdit: Flat doubling of all min_broken_damage
 	encased = "upper ribplates"
 
 /obj/item/organ/external/groin/unathi
 	max_damage = 100
-	min_broken_damage = 40
+	min_broken_damage = 80 // CHOMPEdit: Flat doubling of all min_broken_damage
 	encased = "lower ribplates"
 
 /obj/item/organ/external/head/unathi
 	max_damage = 75
-	min_broken_damage = 35
+	min_broken_damage = 70 // CHOMPEdit: Flat doubling of all min_broken_damage
 	eye_icon = "eyes_s"
 	force = 5
 	throwforce = 10
 
+/obj/item/organ/internal/eyes/unathi
+	icon_state = "unathi_eyes"
 
 /obj/item/organ/internal/heart/unathi
 	icon_state = "unathi_heart-on"
-	dead_icon = "unath_heart-off"
+	dead_icon = "unathi_heart-off"
 
 /obj/item/organ/internal/lungs/unathi
 	color = "#b3cbc3"

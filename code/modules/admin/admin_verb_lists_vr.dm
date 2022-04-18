@@ -158,7 +158,8 @@ var/list/admin_verbs_fun = list(
 	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
-	/client/proc/cmd_admin_droppod_deploy
+	/client/proc/cmd_admin_droppod_deploy,
+	/client/proc/adminorbit //VOREStation Add,
 	)
 
 var/list/admin_verbs_spawn = list(
@@ -261,7 +262,9 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -395,7 +398,8 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
-	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
+	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+	/datum/admins/proc/quick_nif //CHOMPStation Add,
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -538,7 +542,9 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
-	/client/proc/modify_server_news
+	/client/proc/modify_server_news,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
 
 )
 

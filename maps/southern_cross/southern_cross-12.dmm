@@ -172,7 +172,9 @@
 /area/surface/outside/wilderness/skylands)
 "jM" = (
 /obj/effect/zone_divider,
-/turf/simulated/open,
+/turf/simulated/open{
+	temperature = 243.15
+	},
 /area/surface/outside/wilderness/skylands/empty)
 "jU" = (
 /obj/structure/flora/ausbushes/grassybush,
@@ -567,7 +569,9 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/open{
+	temperature = 243.15
+	},
 /area/surface/outside/wilderness/skylands)
 "yf" = (
 /obj/effect/zone_divider,
@@ -698,7 +702,9 @@
 /turf/simulated/floor/water,
 /area/surface/outside/wilderness/skylands)
 "DD" = (
-/turf/simulated/open,
+/turf/simulated/open{
+	temperature = 243.15
+	},
 /area/surface/outside/wilderness/skylands)
 "DE" = (
 /obj/structure/flora/rocks2,
@@ -843,7 +849,9 @@
 /area/surface/outside/wilderness/skylands)
 "Kk" = (
 /obj/effect/catwalk_plated,
-/turf/simulated/open,
+/turf/simulated/open{
+	temperature = 243.15
+	},
 /area/surface/outside/wilderness/skylands)
 "Kr" = (
 /obj/structure/flora/rocks1,
@@ -1170,7 +1178,9 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/wilderness/skylands)
 "WO" = (
-/turf/simulated/open,
+/turf/simulated/open{
+	temperature = 243.15
+	},
 /area/surface/outside/wilderness/skylands/empty)
 "WQ" = (
 /obj/structure/flora/ausbushes/palebush,
