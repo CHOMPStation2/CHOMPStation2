@@ -317,18 +317,15 @@
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
 		"noisy" = host.noisy,
-<<<<<<< HEAD
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
 		"autotransferable" = host.autotransferable,
-		"noisy_full" = host.noisy_full //Belching while full
+		"noisy_full" = host.noisy_full, //Belching while full
 		//CHOMPedit end
-=======
 		"drop_vore" = host.drop_vore,
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
 	)
 
 	return data
@@ -551,7 +548,6 @@
 			host.noisy = !host.noisy
 			unsaved_changes = TRUE
 			return TRUE
-<<<<<<< HEAD
 		//CHOMPedit start: liquid belly code
 		if("liq_set_attribute")
 			return liq_set_attr(usr, params)
@@ -581,10 +577,6 @@
 			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPedit end
-
-
-
-=======
 		if("toggle_drop_vore")
 			host.drop_vore = !host.drop_vore
 			unsaved_changes = TRUE
@@ -597,7 +589,6 @@
 			host.stumble_vore = !host.stumble_vore
 			unsaved_changes = TRUE
 			return TRUE
->>>>>>> 9c96adff7e... Merge pull request #12738 from FartMaster69420/stumble-vore
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
