@@ -1572,8 +1572,6 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
-        </Flex.Item>
           <VoreUserPreferenceItem spec={preferences.toggle_drop_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
@@ -1581,6 +1579,9 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnprey} />
