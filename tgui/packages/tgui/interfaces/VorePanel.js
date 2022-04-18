@@ -570,7 +570,7 @@ const VoreSelectedBellyOptions = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Item label="Contaminates">
             <Button
-              onClick={() => act("set_attribute", { attribute: "b_contaminate" })}
+              onClick={() => act("set_attribute", { attribute: "b_contaminates" })}
               icon={contaminates ? "toggle-on" : "toggle-off"}
               selected={contaminates}
               content={contaminates ? "Yes" : "No"} />
