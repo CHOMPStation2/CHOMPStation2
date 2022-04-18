@@ -321,8 +321,11 @@
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
 		"autotransferable" = host.autotransferable,
-		"noisy_full" = host.noisy_full //Belching while full
+		"noisy_full" = host.noisy_full, //Belching while full
 		//CHOMPedit end
+		"drop_vore" = host.drop_vore,
+		"slip_vore" = host.slip_vore,
+		"stumble_vore" = host.stumble_vore,
 	)
 
 	return data
@@ -574,9 +577,18 @@
 			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPedit end
-
-
-
+		if("toggle_drop_vore")
+			host.drop_vore = !host.drop_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_slip_vore")
+			host.slip_vore = !host.slip_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_stumble_vore")
+			host.stumble_vore = !host.stumble_vore
+			unsaved_changes = TRUE
+			return TRUE
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
