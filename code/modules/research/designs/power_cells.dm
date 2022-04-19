@@ -70,7 +70,6 @@
 	category = list("Misc")
 	sort_string = "BAABB"
 
-<<<<<<< HEAD
 /datum/design/item/powercell/super_device
 	name = "device, super"
 	id = "super_device"
@@ -99,7 +98,7 @@
 	category = list("Misc")
 	sort_string = "BAABE"
 //End of Yawn add
-=======
+
 /datum/design/item/powercell/mecha/high
 	name = "high-capacity mecha"
 	id = "high_mech_cell"
@@ -117,4 +116,3 @@
 	build_path = /obj/item/weapon/cell/mech/super
 	category = list("Misc")
 	sort_string = "BAACB"
->>>>>>> 0955b0c88b... Merge pull request #12790 from GhostActual/energen_batteries
