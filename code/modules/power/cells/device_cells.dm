@@ -15,12 +15,6 @@
 	matter = list(MAT_STEEL = 350, MAT_GLASS = 50)
 	preserve_item = 1
 
-<<<<<<< HEAD
-//Yawn Changes
-/obj/item/weapon/cell/device/weapon //Aka adv
-	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
-	desc = "A small upgraded power cell designed to power handheld devices."
-=======
 /obj/item/weapon/cell/device/empty/Initialize()
 	. = ..()
 	charge = 0
@@ -47,22 +41,25 @@
 /obj/item/weapon/cell/device/weapon
 	name = "weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry."
->>>>>>> 0955b0c88b... Merge pull request #12790 from GhostActual/energen_batteries
-	icon_state = "weapon_cell"
-	maxcharge = 2400
-	charge_amount = 20
-	origin_tech = list(TECH_POWER = 2)
 
 /obj/item/weapon/cell/device/weapon/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
+	
+//Yawn Changes
+/obj/item/weapon/cell/device/weapon //Aka adv
+	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
+	desc = "A small upgraded power cell designed to power handheld devices."
+	icon_state = "weapon_cell"
+	maxcharge = 2400
+	charge_amount = 20
+	origin_tech = list(TECH_POWER = 2)
 
-<<<<<<< HEAD
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "m_hy" //CHOMP Add
+	icon_state = "sc_weapon_cell" //CHOMP Add
 	maxcharge = 3600
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
@@ -75,7 +72,7 @@
 /obj/item/weapon/cell/device/hyper
 	name = "hyper device power cell"
 	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
-	icon_state = "meb_m_st" //CHOMP Add
+	icon_state = "cap_weapon_cell" //CHOMP Add
 	maxcharge = 4800
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
@@ -90,7 +87,7 @@
 /obj/item/weapon/cell/device/giga //CHOMP Add: Why not? Lets add a new one. Lets put the new sprites to use.
 	name = "giga device power cell"
 	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
-	icon_state = "meb_m_hi" 
+	icon_state = "cap_weapon_cell" 
 	maxcharge = 6000
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
@@ -101,11 +98,9 @@
 	update_icon()
 //CHOMP Add end
 
-=======
 /*
  * EMP Proof Weapon
  */
->>>>>>> 0955b0c88b... Merge pull request #12790 from GhostActual/energen_batteries
 /obj/item/weapon/cell/device/weapon/empproof
 	name = "shielded weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. Shielded from EMPs."
