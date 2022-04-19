@@ -50,6 +50,8 @@
 
 	var/obj/item/device/radio/headset/mob_headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
+	can_be_drop_pred = TRUE				// Mobs are pred by default.
+
 
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
 
