@@ -42,7 +42,7 @@
 			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1), 3)
 
 		else
-			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.")
+			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
 
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
