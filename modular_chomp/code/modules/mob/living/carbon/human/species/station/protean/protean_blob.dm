@@ -16,13 +16,13 @@
 
 	show_stat_health = FALSE //We will do it ourselves
 
-	response_help = "pets the" //CHOMP Edit
-	response_disarm = "gently pushes aside the " //CHOMP Edit
-	response_harm = "hits the" //CHOMP Edit
+	response_help = "pets the"
+	response_disarm = "gently pushes aside the "
+	response_harm = "hits the"
 
 	harm_intent_damage = 3
-	melee_damage_lower = 5 //CHOMP Edit
-	melee_damage_upper = 5 //CHOMP Edit
+	melee_damage_lower = 5
+	melee_damage_upper = 5
 	attacktext = list("slashed")
 
 	min_oxy = 0
@@ -34,7 +34,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	maxbodytemp = 900
+	maxbodytemp = INFINITY
 	movement_cooldown = 2
 
 	var/mob/living/carbon/human/humanform
@@ -176,14 +176,12 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/adjustBruteLoss(var/amount,var/include_robo)
-	amount *= 1.5
 	if(humanform)
 		return humanform.adjustBruteLoss(amount)
 	else
 		return ..()
 
 /mob/living/simple_mob/protean_blob/adjustFireLoss(var/amount,var/include_robo)
-	amount *= 1.5
 	if(humanform)
 		return humanform.adjustFireLoss(amount)
 	else
@@ -323,20 +321,20 @@
 			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
 	else
 		return ..()
-		
+
 /mob/living/simple_mob/protean_blob/attack_hand(mob/living/L) //CHOMP Add this whole block.
 	if(L.get_effective_size() >= (src.get_effective_size() + 0.5) )
 		src.get_scooped(L)
 	else
 		..()
-		
+
 /mob/living/simple_mob/protean_blob/MouseDrop(var/atom/over_object) //CHOMP Add this whole block.
 	if(ishuman(over_object) && usr == src && src.Adjacent(over_object))
 		var/mob/living/carbon/human/H = over_object
 		get_scooped(H, TRUE)
 	else
 		return ..()
-		
+
 /mob/living/simple_mob/protean_blob/MouseEntered(location,control,params)
 	if(resting)
 		return
@@ -449,7 +447,7 @@ var/global/list/disallowed_protean_accessories = list(
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
 		if(istype(I, /obj/item/weapon/holder))
 			root.remove_from_mob(I)
-	
+
 //CHOMP Add start
 /mob/living/simple_mob/protean_blob/proc/rig_transform() //CHOMP Add this whole block.
 	set name = "Modify Form - Hardsuit"

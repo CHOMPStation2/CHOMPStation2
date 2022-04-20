@@ -7,7 +7,7 @@
 						<i>VERY</i> advanced civilizations have the option of 'nanoswarm' bodies. Effectively a single robot body comprised \
 						of millions of tiny nanites working in concert to maintain cohesion."
 	show_ssd =         "totally quiescent"
-	death_message =    "rapidly loses cohesion, dissolving into a cloud of gray dust..."
+	death_message =    "rapidly loses cohesion, retreating into their hardened control module..."
 	knockout_message = "collapses inwards, forming a disordered puddle of gray goo."
 	remains_type = /obj/effect/decal/cleanable/ash
 
@@ -21,35 +21,29 @@
 	health_hud_intensity = 2
 	num_alternate_languages = 3
 	assisted_langs = list(LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	speech_bubble_appearance = "synthetic"
 	color_mult = TRUE
 
 	breath_type = null
 	poison_type = null
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	male_scream_sound = null
+	female_scream_sound = null
 
 	virus_immune =	1
 	blood_volume =	0
 	min_age =		18
 	max_age =		200
-	brute_mod =		0.8
-	burn_mod =		1.5
+	brute_mod =		1
+	burn_mod =		1
 	oxy_mod =		0
-	item_slowdown_mod = 1.33
-
-	cold_level_1 = 280 //Default 260 - Lower is better
-	cold_level_2 = 220 //Default 200
-	cold_level_3 = 130 //Default 120
-
-	heat_level_1 = 320 //Default 360
-	heat_level_2 = 370 //Default 400
-	heat_level_3 = 600 //Default 1000
+	radiation_mod =	0	//Can't be assed with fandangling rad protections while blob formed/suited
+	item_slowdown_mod = 1
 
 	hazard_low_pressure = -1 //Space doesn't bother them
-	hazard_high_pressure = 200 //They can cope with slightly higher pressure
+	hazard_high_pressure = INFINITY //consistency
 
-	//Cold/heat does affect them, but it's done in special ways below
+	//Cold/heat does affect them, but it's done in special ways below - //No it isn't?
 	cold_level_1 = -INFINITY
 	cold_level_2 = -INFINITY
 	cold_level_3 = -INFINITY
@@ -59,7 +53,7 @@
 
 	body_temperature =      290
 
-	siemens_coefficient =   1.5 //Very bad zappy times
+	siemens_coefficient =   1
 	rarity_value =          5
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -324,7 +318,7 @@ CHOMP Removal end*/
 
 /datum/modifier/protean/steel/tick()
 	holder.adjustBruteLoss(-1,include_robo = TRUE) //Modified by species resistances
-	holder.adjustFireLoss(-0.5,include_robo = TRUE) //Modified by species resistances
+	holder.adjustFireLoss(-1,include_robo = TRUE) //Modified by species resistances
 	var/mob/living/carbon/human/H = holder
 	for(var/obj/item/organ/O as anything in H.internal_organs)
 		// Fix internal damage
