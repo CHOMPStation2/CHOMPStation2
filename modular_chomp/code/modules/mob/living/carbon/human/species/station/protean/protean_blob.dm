@@ -3,7 +3,7 @@
 	name = "protean blob"
 	desc = "Some sort of big viscous pool of jelly."
 	tt_desc = "Animated nanogoop"
-	icon = 'icons/mob/species/protean/protean.dmi'
+	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
 	icon_state = "to_puddle"
 	icon_living = "puddle2"
 	icon_rest = "rest"

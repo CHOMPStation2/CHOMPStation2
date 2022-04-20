@@ -9,7 +9,7 @@
 	icon_state = "golden_goose"
 	icon_living = "golden_goose"
 	icon_dead = "golden_goose_dead"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 
 	faction = "neutral" //Mess with this and the goose will eat anyones face, will eat other factions faces, appropiate considering its a hellbird - Jack
 
