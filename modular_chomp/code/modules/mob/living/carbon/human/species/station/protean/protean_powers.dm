@@ -341,9 +341,7 @@
 
 	//Blob form
 	if(temporary_form)
-		if(health < maxHealth*0.5)
-			to_chat(temporary_form,"<span class='warning'>You need to regenerate more nanites first!</span>")
-		else if(temporary_form.stat)
+		if(temporary_form.stat)
 			to_chat(temporary_form,"<span class='warning'>You can only do this while not stunned.</span>")
 		else
 			nano_outofblob(temporary_form)
@@ -351,6 +349,9 @@
 	//Human form
 	else if(stat)
 		to_chat(src,"<span class='warning'>You can only do this while not stunned.</span>")
+		return
+	else if(handcuffed)
+		to_chat(src, "<span class='warning'>You can't do this while handcuffed!</span>")
 		return
 	else
 		nano_intoblob()
@@ -444,7 +445,7 @@ CHOMP Removal end*/
 /obj/effect/protean_ability
 	name = "Activate"
 	desc = ""
-	icon = 'icons/mob/species/protean/protean_powers.dmi'
+	icon = 'modular_chomp/icons/mob/species/protean/protean_powers.dmi'
 	var/ability_name
 	var/to_call
 
@@ -502,7 +503,7 @@ CHOMP Removal end*/
 	icon_state = "metal"
 	to_call = /mob/living/carbon/human/proc/nano_metalnom
 
-/obj/effect/protean_ability/metal_nom
+/obj/effect/protean_ability/hardsuit
 	ability_name = "Hardsuit Transform"
 	desc = "Coalesce your naniteswarm into their control module, allowing others to wear you."
 	icon_state = "rig"

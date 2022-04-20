@@ -21,6 +21,7 @@
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/protean
 	canremove = 0
 	protean = 1
+	offline_vision_restriction = 0
 
 //I doooon't think I can get rig_back.dmi as a _ch file. That is part of /obj/item/weapon/rig/update_icon(var/update_mob_icon).
 
@@ -38,18 +39,22 @@
 	if(P)
 		myprotean = P
 		if(P.back)
-			addtimer(CALLBACK(src, .proc/AssimilateBag, P), 5)
+			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1), 3)
 
 		else
-			to_chat(P, "Couldn't find a backpack to assimilate.")
+			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.")
 	..(newloc)
 
-/obj/item/weapon/rig/protean/proc/AssimilateBag(var/mob/living/carbon/human/P)
-	var/obj/B = P.back
-	P.unEquip(P.back)
+/obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
+	if(spawned)
+		B = P.back
+		P.unEquip(P.back)
 	B.forceMove(src)
 	rig_storage = B
-	to_chat(P, "Your equipped backpack has been integrated into your rigsuit. See the storage module in your rig interface.")
+	rig_storage.max_w_class = ITEMSIZE_LARGE
+	rig_storage.max_storage_space = INVENTORY_STANDARD_SPACE
+	P.drop_item(B)
+	to_chat(P, "<span class='notice'>Your [B] has been integrated into your rigsuit.</span>")
 	P.equip_to_slot_if_possible(src, slot_back)
 
 /obj/item/weapon/rig/protean/attack_hand(mob/user as mob)

@@ -144,6 +144,9 @@
 	var/new_size = input(nagmessage, "Pick a Size") as num|null
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
+		if(temporary_form)	//CHOMPEdit - resizing both our forms
+			var/mob/living/L
+			L.resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		//CHOMPEDIT - I don't need to be informed every time a prommie changes sizes
 
 /*

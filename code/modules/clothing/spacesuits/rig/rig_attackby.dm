@@ -187,6 +187,9 @@
 			var/obj/item/weapon/storage/backpack = rig_storage
 			if(backpack.can_be_inserted(W, 1))
 				backpack.handle_item_insertion(W)
+		else
+			if(istype(W,/obj/item/weapon/storage/backpack))
+				AssimilateBag(user,0,W)
 	..()
 
 

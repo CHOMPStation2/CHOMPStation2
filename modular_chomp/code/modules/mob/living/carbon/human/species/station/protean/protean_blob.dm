@@ -41,15 +41,13 @@
 	var/obj/item/organ/internal/nano/refactory/refactory
 	var/datum/modifier/healing
 
-	var/obj/prev_left_hand
-	var/obj/prev_right_hand
-
 	var/human_brute = 0
 	var/human_burn = 0
 
-	player_msg = "In this form, your health will regenerate as long as you have metal in you." //CHOMP Edit removed ventcrawl
+	player_msg = "In this form, your health will regenerate as long as you have metal in you."
 
-	can_buckle = TRUE //Blobsurfing
+	can_buckle = 1
+	has_hands = 1
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")
@@ -354,10 +352,6 @@ var/global/list/disallowed_protean_accessories = list(
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
 
-	var/panel_was_up = FALSE
-	if(client?.statpanel == "Protean")
-		panel_was_up = TRUE
-
 	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 	remove_micros(src, src) //Living things don't fare well in roblobs.
 	if(buckled)
@@ -375,39 +369,12 @@ var/global/list/disallowed_protean_accessories = list(
 	//Create our new blob
 	var/mob/living/simple_mob/protean_blob/blob = new(creation_spot,src)
 
-	//Drop all our things
-	var/list/things_to_drop = contents.Copy()
-	var/list/things_to_not_drop = list(w_uniform,nif,l_store,r_store,wear_id,l_ear,r_ear) //And whatever else we decide for balancing.
-
-	/* No for now, because insta-pepperspray or flash on unblob
-	if(l_hand && l_hand.w_class <= ITEMSIZE_SMALL) //Hands but only if small or smaller
-		things_to_not_drop += l_hand
-	if(r_hand && r_hand.w_class <= ITEMSIZE_SMALL)
-		things_to_not_drop += r_hand
-	*/
-
-	things_to_drop -= things_to_not_drop //Crunch the lists
-	things_to_drop -= organs //Mah armbs
-	things_to_drop -= internal_organs //Mah sqeedily spooch
-	for(var/obj/item/weapon/rig/protean/O in things_to_drop) //CHOMP Add
-		things_to_drop -= O //CHOMP Add
-
-	for(var/obj/item/I in things_to_drop) //rip hoarders
-		drop_from_inventory(I)
-
-	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
-		var/obj/item/clothing/uniform = w_uniform
-		if(LAZYLEN(uniform.accessories))
-			for(var/obj/item/clothing/accessory/A in uniform.accessories)
-				if(is_type_in_list(A, disallowed_protean_accessories))
-					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
-
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
 
-	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
-	if(r_hand) blob.prev_right_hand = r_hand
+	if(l_hand) drop_from_inventory(l_hand)
+	if(r_hand) drop_from_inventory(r_hand)
 
 	//Put our owner in it (don't transfer var/mind)
 	blob.ckey = ckey
@@ -435,8 +402,7 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.languages = languages.Copy()
 
 	//Flip them to the protean panel
-	if(panel_was_up)
-		client?.statpanel = "Protean"
+	client?.statpanel = "Protean"
 
 	//Return our blob in case someone wants it
 	return blob
@@ -489,10 +455,6 @@ var/global/list/disallowed_protean_accessories = list(
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
 
-	var/panel_was_up = FALSE
-	if(client?.statpanel == "Protean")
-		panel_was_up = TRUE
-
 	if(buckled)
 		buckled.unbuckle_mob()
 	if(LAZYLEN(buckled_mobs))
@@ -505,6 +467,9 @@ var/global/list/disallowed_protean_accessories = list(
 	//Stop healing if we are
 	if(blob.healing)
 		blob.healing.expire()
+
+	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
+	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
 
 	//Play the animation
 	blob.icon_state = "from_puddle"
@@ -535,17 +500,13 @@ var/global/list/disallowed_protean_accessories = list(
 		B.forceMove(src)
 		B.owner = src
 
-	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
-	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
-
 	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
 	//Get rid of friend blob
 	qdel(blob)
 
 	//Flip them to the protean panel
-	if(panel_was_up)
-		client?.statpanel = "Protean"
+	client?.statpanel = "Protean"
 
 	//Return ourselves in case someone wants it
 	return src

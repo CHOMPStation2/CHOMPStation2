@@ -1,5 +1,4 @@
-#define DAM_SCALE_FACTOR 0.01
-#define METAL_PER_TICK 100
+#define METAL_PER_TICK SHEET_MATERIAL_AMOUNT/20
 /datum/species/protean
 	name =             SPECIES_PROTEAN
 	name_plural =      "Proteans"
@@ -336,28 +335,4 @@ CHOMP Removal end*/
 	. = ..()
 	. += validstring
 	. += registring
-
-//CHOMP Add start
-/mob/living/carbon/human/proc/rig_transform()
-	set name = "Modify Form - Hardsuit"
-	set desc = "Allows a protean to solidify its form into one extremely similar to a hardsuit."
-	set category = "Abilities"
-
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
-		src.forceMove(get_turf(prig))
-		prig.forceMove(src)
-		return
-
-	if(isturf(loc))
-		var/obj/item/weapon/rig/protean/prig
-		for(var/obj/item/weapon/rig/protean/O in contents)
-			prig = O
-			break
-		if(prig)
-			prig.forceMove(get_turf(src))
-			src.forceMove(prig)
-			return
-//CHOMP Add end
-#undef DAM_SCALE_FACTOR
 #undef METAL_PER_TICK
