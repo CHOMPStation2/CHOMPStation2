@@ -5,7 +5,7 @@
 	tt_desc = "Dasypus novemcinctus"
 	//faction = "mexico" //They are from Mexico. //Amusing but this prompts aggression from crew-aligned mobs.
 
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "armadillo"
 	item_state = "armadillo_rest"
 	icon_living = "armadillo"
@@ -49,7 +49,7 @@
 
 	var/obj/item/clothing/head/hat = null // The hat the armadillo may be wearing.
 
-//Hat simulator stolen from slime code. 
+//Hat simulator stolen from slime code.
 /mob/living/simple_mob/animal/passive/armadillo/Destroy()
 	if(hat)
 		drop_hat()
