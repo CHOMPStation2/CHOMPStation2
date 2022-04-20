@@ -19,6 +19,8 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/protean
 	chest_type = /obj/item/clothing/suit/space/rig/protean
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/protean
+	canremove = 0
+	protean = 1
 
 //I doooon't think I can get rig_back.dmi as a _ch file. That is part of /obj/item/weapon/rig/update_icon(var/update_mob_icon).
 
@@ -31,6 +33,35 @@
 	if(user == myprotean)
 		return TRUE
 	return ..()
+
+/obj/item/weapon/rig/protean/New(var/newloc, var/mob/living/carbon/human/P)
+	if(P)
+		myprotean = P
+		if(P.back)
+			addtimer(CALLBACK(src, .proc/AssimilateBag, P), 5)
+
+		else
+			to_chat(P, "Couldn't find a backpack to assimilate.")
+	..(newloc)
+
+/obj/item/weapon/rig/protean/proc/AssimilateBag(var/mob/living/carbon/human/P)
+	var/obj/B = P.back
+	P.unEquip(P.back)
+	B.forceMove(src)
+	rig_storage = B
+	to_chat(P, "Your equipped backpack has been integrated into your rigsuit. See the storage module in your rig interface.")
+	P.equip_to_slot_if_possible(src, slot_back)
+
+/obj/item/weapon/rig/protean/attack_hand(mob/user as mob)
+	if (src.loc == user)
+		src.rig_storage.open(user)
+	else
+		..()
+		for(var/mob/M in range(1))
+			if (M.s_active == src)
+				src.rig_storage.close(M)
+	src.add_fingerprint(user)
+	return
 
 /obj/item/clothing/head/helmet/space/rig/protean
 	name = "mass"

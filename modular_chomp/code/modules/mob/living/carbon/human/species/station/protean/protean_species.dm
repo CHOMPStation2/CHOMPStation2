@@ -34,11 +34,8 @@
 	blood_volume =	0
 	min_age =		18
 	max_age =		200
-	brute_mod =		1
-	burn_mod =		1
 	oxy_mod =		0
 	radiation_mod =	0	//Can't be assed with fandangling rad protections while blob formed/suited
-	item_slowdown_mod = 1
 
 	hazard_low_pressure = -1 //Space doesn't bother them
 	hazard_high_pressure = INFINITY //consistency
@@ -53,7 +50,6 @@
 
 	body_temperature =      290
 
-	siemens_coefficient =   1
 	rarity_value =          5
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -96,12 +92,7 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
-		/mob/living/carbon/human/proc/succubus_drain,
-		/mob/living/carbon/human/proc/slime_feed,
-		/mob/living/carbon/human/proc/succubus_drain_finalize,
-		/mob/living/carbon/human/proc/succubus_drain_lethal,
-		/mob/living/proc/eat_trash
-		) //CHOMP Edit - Added succ stuff that promies have too. Also changed nano_set_size to standard set_size so there is no metal cost.
+		) //removed fetish verbs, since non-customs can pick neutral traits now
 
 	var/global/list/abilities = list()
 
@@ -156,8 +147,7 @@
 		else
 			H.nif.durability = 25
 
-		var/obj/item/weapon/rig/protean/prig = new /obj/item/weapon/rig/protean(H)
-		prig.myprotean = H
+		new /obj/item/weapon/rig/protean(H,H)
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	return ..() //Wut
@@ -178,10 +168,6 @@
 		QDEL_NULL(H.temporary_form)
 
 	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 5 or 10 minutes before respawning, to represent the time it would take to ship a new-you to the station, depending on how you died.</span>")
-
-	spawn(1)
-		if(H)
-			H.gib()
 
 /datum/species/protean/handle_environment_special(var/mob/living/carbon/human/H)
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
@@ -333,7 +319,7 @@ CHOMP Removal end*/
 /obj/item/clothing/accessory/permit/nanotech
 	name = "\improper P.A.N. card"
 	desc = "This is a 'Permit for Advanced Nanotechnology' card. It allows the owner to possess and operate advanced nanotechnology on NanoTrasen property. It must be renewed on a monthly basis."
-	icon = 'icons/mob/species/protean/protean.dmi'
+	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
 	icon_state = "permit_pan"
 
 	var/validstring = "VALID THROUGH END OF: "

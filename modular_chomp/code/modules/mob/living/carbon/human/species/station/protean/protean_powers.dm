@@ -90,7 +90,7 @@
 	set desc = "Allows you to regrow limbs and replace organs."
 	set category = "Abilities"
 	set hidden = TRUE
-	
+
 	if(nutrition < 250)
 		to_chat(src, "<span class='warning'>You lack the energy to begin regeneration!</span>")
 		return
@@ -324,7 +324,7 @@
 		visible_message("<span class='notice'>[src] devours some of the [substance] right off the stack!</span>")
 	else
 		to_chat(src,"<span class='notice'>You're completely capped out on [substance]!</span>")
-	
+
 ////
 //  Blob Form
 ////
@@ -338,7 +338,7 @@
 	if(!isturf(to_locate.loc))
 		to_chat(to_locate,"<span class='warning'>You need more space to perform this action!</span>")
 		return
-	
+
 	//Blob form
 	if(temporary_form)
 		if(health < maxHealth*0.5)
@@ -478,13 +478,11 @@ CHOMP Removal end*/
 	icon_state = "blob"
 	to_call = /mob/living/carbon/human/proc/nano_blobform
 
-/*CHOMP removal start - This doesn't do anything at all now. Normal resize proc is being used instead.
-/obj/effect/protean_ability/change_volume //CHOMP Edit 
+/obj/effect/protean_ability/change_volume
 	ability_name = "Change Volume"
-	desc = "Alter your size between 25% and 200%." //CHOMP Edit - Removed talk about requiring metal
+	desc = "Alter your size between 25% and 200%."
 	icon_state = "volume"
-	to_call = /mob/living/carbon/human/proc/nano_set_size
-CHOMP removal end*/
+	to_call = /mob/living/proc/set_size
 
 /obj/effect/protean_ability/reform_limb
 	ability_name = "Ref - Single Limb"
@@ -497,11 +495,17 @@ CHOMP removal end*/
 	desc = "Rebuild your entire body into whatever design you want, assuming you have 10,000 metal."
 	icon_state = "body"
 	to_call = /mob/living/carbon/human/proc/nano_regenerate
-	
+
 /obj/effect/protean_ability/metal_nom
 	ability_name = "Ref - Store Metals"
 	desc = "Store the metal you're holding. Your refactory can only store steel, and all other metals will be converted into nanites ASAP for various effects."
 	icon_state = "metal"
+	to_call = /mob/living/carbon/human/proc/nano_metalnom
+
+/obj/effect/protean_ability/metal_nom
+	ability_name = "Hardsuit Transform"
+	desc = "Coalesce your naniteswarm into their control module, allowing others to wear you."
+	icon_state = "rig"
 	to_call = /mob/living/carbon/human/proc/nano_metalnom
 
 #undef PER_LIMB_STEEL_COST
