@@ -51,3 +51,12 @@
 	for(var/obj/item/weapon/storage/fancy/cigarettes/cigarette_brand as anything in (typesof(/obj/item/weapon/storage/fancy/cigarettes) - typesof(/obj/item/weapon/storage/fancy/cigarettes/killthroat)))
 		cigarettes[initial(cigarette_brand.name)] = cigarette_brand
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigarettes))
+
+/datum/gear/ecig
+	display_name = "ecig"
+	path = /obj/item/clothing/mask/smokable/ecig/simple
+	
+/datum/gear/util-ecig 
+	display_name = "util-ecig"
+	cost = 2
+	path = /obj/item/clothing/mask/smokable/ecig/util
