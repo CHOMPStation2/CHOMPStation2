@@ -296,16 +296,12 @@
 		var/mob/living/simple_mob/protean_blob/P = temporary_form
 		if(S.OurRig) //Do we even have a RIG?
 			if(P.loc == S.OurRig)	//we're inside our own RIG
-				message_admins("WE 1")
 				if(S.OurRig.wearer) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
-					message_admins("WE 2")
 					var/mob/living/carbon/human/victim = S.OurRig.wearer
 					victim.drop_from_inventory(S.OurRig)
 					if(P.can_be_drop_pred && victim.devourable && victim.can_be_drop_prey)
-						message_admins("WE VORE")
 						if(P.vore_selected)
 							perform_the_nom(P,victim,P,P.vore_selected,1)
-				message_admins("WE 3")
 				P.forceMove(get_turf(S.OurRig))
 				S.OurRig.forceMove(src)
 				S.OurRig.myprotean = null
