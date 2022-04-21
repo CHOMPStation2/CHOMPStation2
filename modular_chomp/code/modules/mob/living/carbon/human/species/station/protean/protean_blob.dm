@@ -124,10 +124,7 @@
 
 	//Set the max
 	maxHealth = humanform.getMaxHealth()*2 //HUMANS, and their 'double health', bleh.
-	//Set us to their health, but, human health ignores robolimbs so we do it 'the hard way'
-	human_brute = humanform.getActualBruteLoss()
-	human_burn = humanform.getActualFireLoss()
-	health = maxHealth - humanform.getOxyLoss() - humanform.getToxLoss() - humanform.getCloneLoss() - human_brute - human_burn
+	health = maxHealth - humanform.getOxyLoss() - humanform.getToxLoss() - humanform.getCloneLoss() - humanform.getBruteLoss() - humanform.getFireLoss()
 
 	//Alive, becoming dead
 	if((stat < DEAD) && (health <= 0))
