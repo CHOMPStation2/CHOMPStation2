@@ -125,7 +125,7 @@
 		/obj/item/device/cataloguer/compact/pathfinder,
 		/obj/item/device/mapping_unit)
 
-/obj/structure/closet/secure_closet/pathfinder/Initialize() 
+/obj/structure/closet/secure_closet/pathfinder/Initialize()
 	if(prob(50))
 		starts_with += /obj/item/weapon/storage/backpack/explorer //CHOMPEDIT
 	else
