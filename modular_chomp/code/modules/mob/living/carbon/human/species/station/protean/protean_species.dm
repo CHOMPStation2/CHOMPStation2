@@ -94,7 +94,10 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
-		) //removed fetish verbs, since non-customs can pick neutral traits now
+		/mob/living/proc/flying_toggle,
+		/mob/living/proc/flying_vore_toggle,
+		/mob/living/proc/start_wings_hovering,
+		) //removed fetish verbs, since non-customs can pick neutral traits now. Also added flight, cause shapeshifter can grow wings.
 
 	var/global/list/abilities = list()
 
@@ -126,9 +129,9 @@
 	H.synth_color = TRUE
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
-	..() //CHOMP Edit this calls the parent function which should spawn the survival box.
+	..()
 	var/obj/item/stack/material/steel/metal_stack = new()
-	metal_stack.set_amount(5) //CHOMP Edit
+	metal_stack.set_amount(5)
 
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)

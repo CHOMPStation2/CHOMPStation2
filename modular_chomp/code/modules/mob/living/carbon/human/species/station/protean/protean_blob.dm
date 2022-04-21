@@ -48,6 +48,7 @@
 
 	can_buckle = 1
 	has_hands = 1
+	shock_resist = 1
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")

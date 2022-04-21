@@ -178,7 +178,8 @@
 
 // Electricity
 /mob/living/simple_mob/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null)
-	shock_damage *= siemens_coeff
+	var/zap = min((1-get_shock_protection()), siemens_coeff) //CHOMPEdit - for some reason simple mobs just never properly checked for shock resist? Whatever, take whichever is lower.
+	shock_damage *= zap
 	if(shock_damage < 1)
 		return 0
 
