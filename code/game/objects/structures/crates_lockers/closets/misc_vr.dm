@@ -99,8 +99,8 @@
 	starts_with = list(
 		/obj/item/clothing/under/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
-		/obj/item/clothing/suit/armor/pcarrier/explorer/light,
-		/obj/item/clothing/head/helmet/explorer,
+		/obj/item/clothing/suit/armor/pcarrier/explorer/light, //CHOMPADD
+		/obj/item/clothing/head/helmet/explorer, //CHOMPADD
 		/obj/item/clothing/mask/gas/explorer,
 		/obj/item/weapon/storage/belt/explorer/pathfinder,
 		/obj/item/clothing/shoes/boots/winter/explorer,
@@ -125,13 +125,13 @@
 		/obj/item/device/cataloguer/compact/pathfinder,
 		/obj/item/device/mapping_unit)
 
-/obj/structure/closet/secure_closet/pathfinder/Initialize()
+/obj/structure/closet/secure_closet/pathfinder/Initialize() 
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/explorer
+		starts_with += /obj/item/weapon/storage/backpack/explorer //CHOMPEDIT
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer
+		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPEDIT START
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer
+		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer //CHOMPEDIT STOP
 	return ..()
 
 /*
