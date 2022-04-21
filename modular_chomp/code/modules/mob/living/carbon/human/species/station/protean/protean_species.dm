@@ -51,6 +51,9 @@
 
 	rarity_value =          5
 
+	crit_mod = 4	//Unable to go crit
+	var/obj/item/weapon/rig/protean/OurRig
+
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	has_organ = list(

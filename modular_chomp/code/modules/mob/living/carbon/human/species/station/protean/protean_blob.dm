@@ -61,10 +61,8 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-//		verbs |= /mob/living/proc/ventcrawl //CHOMP Removal
 		verbs |= /mob/living/proc/hide
-		verbs |= /mob/living/simple_mob/protean_blob/proc/rig_transform //CHOMP Addition
-		verbs |= /mob/living/proc/usehardsuit //CHOMP Addition
+		verbs |= /mob/living/proc/usehardsuit
 	else
 		update_icon()
 
@@ -413,25 +411,6 @@ var/global/list/disallowed_protean_accessories = list(
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
 		if(istype(I, /obj/item/weapon/holder))
 			root.remove_from_mob(I)
-
-//CHOMP Add start
-/mob/living/simple_mob/protean_blob/proc/rig_transform() //CHOMP Add this whole block.
-	set name = "Modify Form - Hardsuit"
-	set desc = "Allows a protean blob to solidify its form into one extremely similar to a hardsuit."
-	set category = "Abilities"
-
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
-		src.forceMove(get_turf(prig))
-		qdel(prig)
-		return
-
-	if(isturf(loc))
-		var/obj/item/weapon/rig/protean/prig = new(loc)
-		if(prig)
-			prig.forceMove(get_turf(src))
-			src.forceMove(prig)
-			return
 
 /mob/living/proc/usehardsuit()
 	set name = "Utilize Hardsuit Interface"

@@ -7,7 +7,7 @@
 	set name = "Ref - Single Limb"
 	set desc = "Allows you to replace and reshape your limbs as you see fit."
 	set category = "Abilities"
-	set hidden = TRUE
+	set hidden = 1
 
 	if(stat)
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
@@ -42,7 +42,7 @@
 			qdel(oldlimb)
 
 		var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
-		active_regen = TRUE
+		active_regen = 1
 		if(do_after(blob,5 SECONDS))
 			var/list/limblist = species.has_limbs[choice]
 			var/limbpath = limblist["path"]
@@ -51,7 +51,7 @@
 			new_eo.robotize(synthetic ? synthetic.company : null) //Use the base we started with
 			new_eo.sync_colour_to_human(src)
 			regenerate_icons()
-		active_regen = FALSE
+		active_regen = 0
 		nano_outofblob(blob)
 		return
 
@@ -81,108 +81,11 @@
 	visible_message("<B>[src]</B>'s [choice] loses its shape, then reforms.")
 	update_icons_body()
 
-////
-//  Full Refactor
-////
-/*
 /mob/living/carbon/human/proc/nano_regenerate()
-	set name = "Regenerate"
-	set desc = "Allows you to regrow limbs and replace organs."
-	set category = "Abilities"
-	set hidden = TRUE
-
-	if(nutrition < 250)
-		to_chat(src, "<span class='warning'>You lack the energy to begin regeneration!</span>")
-		return
-
-	if(active_regen)
-		to_chat(src, "<span class='warning'>You are already regenerating!</span>")
-		return
-	else
-		active_regen = TRUE
-		src.visible_message("<B>[src]</B>'s nanites begin to regenerate...")
-
-
-	var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
-	var/delay_length = round(active_regen_delay * species.active_regen_mult)
-	if(do_after(blob, delay_length, null, 0))
-		if(stat != DEAD)
-			adjust_nutrition(-200)
-			species.create_organs(src)
-			var/obj/item/organ/external/torso = organs_by_name[BP_TORSO]
-			torso.robotize() //synthetic wasn't defined here.
-			LAZYCLEARLIST(blood_DNA)
-			LAZYCLEARLIST(feet_blood_DNA)
-			blood_color = null
-			feet_blood_color = null
-			regenerate_icons() //Probably worth it, yeah.
-			to_chat(src, "<span class='notice'>Your regeneration is complete.</span>") //Guarantees the message shows no matter how bad the timing.
-			to_chat(blob, "<span class='notice'>Your regeneration is complete!</span>")
-		else
-			to_chat(src,  "<span class='critical'>Your regeneration has failed.</span>")
-			to_chat(blob, "<span class='critical'>Your regeneration has failed!</span>")
-	else
-		to_chat(src,  "<span class='critical'>Your regeneration is interrupted.</span>")
-		to_chat(blob, "<span class='critical'>Your regeneration is interrupted!</span>")
-	active_regen = FALSE
-	nano_outofblob(blob)
-
-
-
-	var/delay_length = round(active_regen_delay * species.active_regen_mult)
-	if(do_after(src,delay_length))
-		adjust_nutrition(-200)
-
-		for(var/obj/item/organ/I in internal_organs)
-			if(I.robotic >= ORGAN_ROBOT) // No free robofix.
-				continue
-			if(I.damage > 0)
-				I.damage = max(I.damage - 30, 0) //Repair functionally half of a dead internal organ.
-				I.status = 0	// Wipe status, as it's being regenerated from possibly dead.
-				to_chat(src, "<span class='notice'>You feel a soothing sensation within your [I.name]...</span>")
-
-		// Replace completely missing limbs.
-		for(var/limb_type in src.species.has_limbs)
-			var/obj/item/organ/external/E = src.organs_by_name[limb_type]
-
-			if(E && E.disfigured)
-				E.disfigured = 0
-			if(E && (E.is_stump() || (E.status & (ORGAN_DESTROYED|ORGAN_DEAD|ORGAN_MUTATED))))
-				E.removed()
-				qdel(E)
-				E = null
-			if(!E)
-				var/list/organ_data = src.species.has_limbs[limb_type]
-				var/limb_path = organ_data["path"]
-				var/obj/item/organ/O = new limb_path(src)
-				organ_data["descriptor"] = O.name
-				to_chat(src, "<span class='notice'>You feel a slithering sensation as your [O.name] reform.</span>")
-
-				var/agony_to_apply = round(0.66 * O.max_damage) // 66% of the limb's health is converted into pain.
-				src.apply_damage(agony_to_apply, HALLOSS)
-
-		for(var/organtype in species.has_organ) // Replace completely missing internal organs. -After- external ones, so they all should exist.
-			if(!src.internal_organs_by_name[organtype])
-				var/organpath = species.has_organ[organtype]
-				var/obj/item/organ/Int = new organpath(src, TRUE)
-
-				Int.rejuvenate(TRUE)
-
-		handle_organs() // Update everything
-
-		update_icons_body()
-		active_regen = FALSE
-	else
-		to_chat(src, "<span class='critical'>Your regeneration is interrupted!</span>")
-		adjust_nutrition(-75)
-		active_regen = FALSE
-*/
-
-/mob/living/carbon/human/proc/nano_regenerate() //fixed the proc, it used to leave active_regen true.
 	set name = "Ref - Whole Body"
 	set desc = "Allows you to regrow limbs and replace organs, given you have enough materials."
 	set category = "Abilities"
-	set hidden = TRUE
+	set hidden = 1
 
 
 
@@ -233,13 +136,13 @@
 		visible_message("<B>[src]</B>'s form collapses into an amorphous blob of black ichor...")
 
 		var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
-		active_regen = TRUE
+		active_regen = 1
 		if(do_after(blob,5 SECONDS))
 			synthetic = usable_manufacturers[manu_choice]
 			torso.robotize(manu_choice) //Will cascade to all other organs.
 			regenerate_icons()
 			visible_message("<B>[src]</B>'s form reshapes into a new one...")
-		active_regen = FALSE
+		active_regen = 0
 		nano_outofblob(blob)
 		return
 
@@ -251,7 +154,7 @@
 	var/delay_length = round(active_regen_delay * species.active_regen_mult)
 	to_chat(src, "<span class='danger'>Remain still while the process takes place! It will take [delay_length/10] seconds.</span>")
 	visible_message("<B>[src]</B>'s form begins to shift and ripple as if made of oil...")
-	active_regen = TRUE
+	active_regen = 1
 
 	var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
 	if(do_after(blob, delay_length, null, 0))
@@ -278,7 +181,7 @@
 	else
 		to_chat(src,  "<span class='critical'>Your refactoring is interrupted.</span>")
 		to_chat(blob, "<span class='critical'>Your refactoring is interrupted!</span>")
-	active_regen = FALSE
+	active_regen = 0
 	nano_outofblob(blob)
 
 ////
@@ -288,7 +191,7 @@
 	set name = "Ref - Store Metals"
 	set desc = "If you're holding a stack of material, you can consume some and store it for later."
 	set category = "Abilities"
-	set hidden = TRUE
+	set hidden = 1
 
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
@@ -303,9 +206,9 @@
 
 	var/obj/item/stack/material/matstack = held
 	var/substance = matstack.material.name
-	var allowed = FALSE
+	var allowed = 0
 	for(var/material in PROTEAN_EDIBLE_MATERIALS)
-		if(material == substance) allowed = TRUE
+		if(material == substance) allowed = 1
 	if(!allowed)
 		to_chat(src,"<span class='warning'>You can't process [substance]!</span>")
 		return //Only a few things matter, the rest are best not cluttering the lists.
@@ -332,7 +235,7 @@
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
 	set category = "Abilities"
-	set hidden = TRUE
+	set hidden = 1
 
 	var/atom/movable/to_locate = temporary_form || src
 	if(!isturf(to_locate.loc))
@@ -375,13 +278,58 @@
 		regenerate_icons() //Expensive, but we need to recrunch all the icons we're wearing
 
 ////
+//	Rig Transform
+////
+/mob/living/carbon/human/proc/nano_rig_transform()
+	set name = "Modify Form - Hardsuit"
+	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
+	set category = "Abilities"
+	set hidden = 1
+
+	if(!temporary_form)	//If you're human, force you into blob form before rig'ing
+		nano_blobform()
+	spawn(2)
+
+
+	if(istype(src.species, /datum/species/protean))
+		var/datum/species/protean/S = src.species
+		var/mob/living/simple_mob/protean_blob/P = temporary_form
+		if(S.OurRig) //Do we even have a RIG?
+			if(P.loc == S.OurRig)	//we're inside our own RIG
+				message_admins("WE 1")
+				if(S.OurRig.wearer) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
+					message_admins("WE 2")
+					var/mob/living/carbon/human/victim = S.OurRig.wearer
+					victim.drop_from_inventory(S.OurRig)
+					if(P.can_be_drop_pred && victim.devourable && victim.can_be_drop_prey)
+						message_admins("WE VORE")
+						if(P.vore_selected)
+							perform_the_nom(P,victim,P,P.vore_selected,1)
+				message_admins("WE 3")
+				P.forceMove(get_turf(S.OurRig))
+				S.OurRig.forceMove(src)
+				S.OurRig.myprotean = null
+				src.equip_to_slot_if_possible(S.OurRig, slot_back)
+			else	//We're not in our own RIG
+				if(P.stat)
+					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
+				else
+					S.OurRig.myprotean = P
+					src.drop_from_inventory(S.OurRig)
+					P.forceMove(S.OurRig)
+			P.reset_view()
+		else	//Make one if not
+			to_chat(temporary_form, "<span class='warning'>You somehow didn't have a RIG, a new one has been created for you. Try this verb again.</span>")
+			new /obj/item/weapon/rig/protean(src,src)
+
+////
 //  Change size
 ////
 /*CHOMP Removal start - I am replacing this with the OG set size. No more metal requirement.
 /mob/living/carbon/human/proc/nano_set_size()
 	set name = "Adjust Volume"
 	set category = "Abilities"
-	set hidden = TRUE
+	set hidden = 1
 
 	var/mob/living/user = temporary_form || src
 
@@ -409,14 +357,14 @@
 	//Sizing up
 	if(cost > 0)
 		if(refactory.use_stored_material(MAT_STEEL,cost))
-			user.resize(size_factor, ignore_prefs = TRUE)
+			user.resize(size_factor, ignore_prefs = 1)
 		else
 			to_chat(user,"<span class='warning'>That size change would cost [cost] steel, which you don't have.</span>")
 	//Sizing down (or not at all)
 	else if(cost <= 0)
 		cost = abs(cost)
 		var/actually_added = refactory.add_stored_material(MAT_STEEL,cost)
-		user.resize(size_factor, ignore_prefs = TRUE)
+		user.resize(size_factor, ignore_prefs = 1)
 		if(actually_added != cost)
 			to_chat(user,"<span class='warning'>Unfortunately, [cost-actually_added] steel was lost due to lack of storage space.</span>")
 
@@ -470,7 +418,7 @@ CHOMP Removal end*/
 /obj/effect/protean_ability/proc/do_ability(var/mob/living/L)
 	if(istype(L))
 		call(L,to_call)()
-	return FALSE
+	return 0
 
 /// The actual abilities
 /obj/effect/protean_ability/into_blob
@@ -507,6 +455,6 @@ CHOMP Removal end*/
 	ability_name = "Hardsuit Transform"
 	desc = "Coalesce your naniteswarm into their control module, allowing others to wear you."
 	icon_state = "rig"
-	to_call = /mob/living/carbon/human/proc/nano_metalnom
+	to_call = /mob/living/carbon/human/proc/nano_rig_transform
 
 #undef PER_LIMB_STEEL_COST

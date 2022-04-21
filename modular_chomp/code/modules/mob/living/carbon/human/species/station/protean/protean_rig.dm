@@ -30,14 +30,15 @@
 		return
 	forced_move(direction, user, FALSE)
 
-/obj/item/weapon/rig/protean/check_suit_access(mob/living/carbon/human/user)
+/obj/item/weapon/rig/protean/check_suit_access(mob/living/user)
 	if(user == myprotean)
 		return TRUE
 	return ..()
 
 /obj/item/weapon/rig/protean/New(var/newloc, var/mob/living/carbon/human/P)
 	if(P)
-		myprotean = P
+		var/datum/species/protean/S = P.species
+		S.OurRig = src
 		if(P.back)
 			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1), 3)
 
