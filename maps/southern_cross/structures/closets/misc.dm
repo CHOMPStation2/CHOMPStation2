@@ -49,7 +49,7 @@
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
 		/obj/item/device/radio/headset/explorer,
-		/obj/item/device/radio/headset/explorer/alt,
+		/obj/item/device/radio/headset/explorer/alt, //CHOMPADD
 		/obj/item/device/flashlight,
 		/obj/item/device/gps/explorer,
 		/obj/item/weapon/storage/box/flare,
