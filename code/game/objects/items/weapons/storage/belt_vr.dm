@@ -49,6 +49,7 @@
 		/obj/item/device/cataloguer,
 		/obj/item/device/radio,
 		/obj/item/device/mapping_unit,
+		/obj/item/device/binoculars,
 		/obj/item/weapon/kinetic_crusher
 		)
 
