@@ -45,6 +45,7 @@
 		/obj/item/clothing/head/helmet/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
 		/obj/item/clothing/mask/gas/explorer,
+		/obj/item/weapon/storage/belt/explorer,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
 		/obj/item/device/radio/headset/explorer,
@@ -53,8 +54,14 @@
 		/obj/item/weapon/storage/box/flare,
 		/obj/item/device/geiger,
 		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
+		/obj/item/device/radio/headset/explorer,
+		/obj/item/device/radio/headset/explorer/alt,
 		/obj/item/stack/marker_beacon/thirty,
+		/obj/item/weapon/material/knife/tacknife/survival,
+		/obj/item/weapon/material/knife/machete,
+		/obj/item/clothing/accessory/holster/machete,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
 		/obj/item/device/cataloguer
 		)
 
