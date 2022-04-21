@@ -219,7 +219,7 @@
 
 /mob/living/simple_mob/protean_blob/rad_act(severity)
 	if(humanform)
-		return humanform.ex_act(severity)
+		return humanform.rad_act(severity)
 	else
 		return ..()
 
