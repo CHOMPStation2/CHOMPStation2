@@ -58,8 +58,6 @@
 		/obj/item/device/radio/headset/explorer,
 		/obj/item/device/radio/headset/explorer/alt,
 		/obj/item/stack/marker_beacon/thirty,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/material/knife/machete,
 		/obj/item/clothing/accessory/holster/machete,
 		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
 		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
