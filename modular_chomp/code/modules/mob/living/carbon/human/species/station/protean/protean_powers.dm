@@ -306,10 +306,14 @@
 				S.OurRig.forceMove(src)
 				S.OurRig.myprotean = null
 				src.equip_to_slot_if_possible(S.OurRig, slot_back)
+				P.has_hands = 1
 			else	//We're not in our own RIG
 				if(P.stat)
 					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
 				else
+					if(P.l_hand) drop_from_inventory(P.l_hand)
+					if(P.r_hand) drop_from_inventory(P.r_hand)
+					P.has_hands = 0
 					S.OurRig.myprotean = P
 					src.drop_from_inventory(S.OurRig)
 					P.forceMove(S.OurRig)
