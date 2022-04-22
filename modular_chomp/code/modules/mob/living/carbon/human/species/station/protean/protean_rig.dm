@@ -5,15 +5,15 @@
 	name = "nanosuit control cluster"
 	suit_type = "nanomachine"
 	icon = 'icons/obj/rig_modules_ch.dmi'
-	default_mob_icon = 'modular_chomp/icons/mob/rig_back_ch.dmi'
+	default_mob_icon = null	//Actually having a forced sprite for Proteans is ugly af. I'm not gonna make this a toggle
 	icon_state = "nanomachine_rig"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
 	siemens_coefficient= 1
 	slowdown = 0
 	offline_slowdown = 0
 	seal_delay = 1
-	var/mob/living/carbon/human/myprotean
-	initial_modules = list(/obj/item/rig_module/power_sink)
+	var/mob/living/myprotean
+	//initial_modules = list(/obj/item/rig_module/power_sink)	//Commented out unless I end up needing roundstart modules
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/protean //These are important for sprite pointers
 	boot_type = /obj/item/clothing/shoes/magboots/rig/protean
@@ -22,8 +22,7 @@
 	canremove = 0
 	protean = 1
 	offline_vision_restriction = 0
-
-//I doooon't think I can get rig_back.dmi as a _ch file. That is part of /obj/item/weapon/rig/update_icon(var/update_mob_icon).
+	open = 1
 
 /obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
@@ -254,3 +253,90 @@
 		SPECIES_VASILISSAN		= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_VOX				= 'icons/obj/clothing/shoes_ch.dmi'
 		)
+
+//Copy pasted most of this proc from base because I don't feel like rewriting the base proc with a shit load of exceptions
+/obj/item/weapon/rig/protean/attackby(obj/item/W as obj, mob/living/user as mob)
+	if(!istype(user))
+		return 0
+	if(istype(W,/obj/item/weapon/tank)) //Todo, some kind of check for suits without integrated air supplies.
+		if(air_supply)
+			to_chat(user, "\The [src] already has a tank installed.")
+			return
+
+		if(!user.unEquip(W))
+			return
+
+		air_supply = W
+		W.forceMove(src)
+		to_chat(user, "You slot [W] into [src] and tighten the connecting valve.")
+		return
+
+		// Check if this is a hardsuit upgrade or a modification.
+	else if(istype(W,/obj/item/rig_module))
+		if(!installed_modules)
+			installed_modules = list()
+		if(installed_modules.len)
+			for(var/obj/item/rig_module/installed_mod in installed_modules)
+				if(!installed_mod.redundant && istype(installed_mod,W))
+					to_chat(user, "The hardsuit already has a module of that class installed.")
+					return 1
+
+		var/obj/item/rig_module/mod = W
+		to_chat(user, "You begin installing \the [mod] into \the [src].")
+		if(!do_after(user,40))
+			return
+		if(!user || !W)
+			return
+		if(!user.unEquip(mod))
+			return
+		to_chat(user, "You install \the [mod] into \the [src].")
+		installed_modules |= mod
+		mod.forceMove(src)
+		mod.installed(src)
+		update_icon()
+		return 1
+	else if(W.is_wrench())
+		if(!air_supply)
+			to_chat(user, "There is no tank to remove.")
+			return
+
+		if(user.r_hand && user.l_hand)
+			air_supply.forceMove(get_turf(user))
+		else
+			user.put_in_hands(air_supply)
+		to_chat(user, "You detach and remove \the [air_supply].")
+		air_supply = null
+		return
+	else if(W.is_screwdriver())
+		var/list/possible_removals = list()
+		for(var/obj/item/rig_module/module in installed_modules)
+			if(module.permanent)
+				continue
+			possible_removals[module.name] = module
+
+		if(!possible_removals.len)
+			to_chat(user, "There are no installed modules to remove.")
+			return
+
+		var/removal_choice = tgui_input_list(usr, "Which module would you like to remove?", "Removal Choice", possible_removals)
+		if(!removal_choice)
+			return
+
+		var/obj/item/rig_module/removed = possible_removals[removal_choice]
+		to_chat(user, "You detach \the [removed] from \the [src].")
+		removed.forceMove(get_turf(src))
+		removed.removed()
+		installed_modules -= removed
+		update_icon()
+		return
+	for(var/obj/item/rig_module/module in installed_modules)
+		if(module.accepts_item(W,user)) //Item is handled in this proc
+			return
+	if(rig_storage)
+		var/obj/item/weapon/storage/backpack = rig_storage
+		if(backpack.can_be_inserted(W, 1))
+			backpack.handle_item_insertion(W)
+	else
+		if(istype(W,/obj/item/weapon/storage/backpack))
+			AssimilateBag(user,0,W)
+	..()

@@ -42,9 +42,6 @@
 	if(open)
 		// Hacking.
 		if(W.is_wirecutter() || istype(W, /obj/item/device/multitool))
-			if(protean)	//CHOMPEdit - Prot rework
-				to_chat(user, "You can't hack a Protean rig")
-				return
 			if(open)
 				wires.Interact(user)
 			else
@@ -69,10 +66,9 @@
 		else if(istype(W,/obj/item/rig_module))
 			if(istype(src.loc,/mob/living/carbon/human))
 				var/mob/living/carbon/human/H = src.loc
-				if(!protean)	//CHOMPEdit - Prot rework
-					if(H.back == src || H.belt == src)
-						to_chat(user, "<span class='danger'>You can't install a hardsuit module while the suit is being worn.</span>")
-						return 1
+				if(H.back == src || H.belt == src)
+					to_chat(user, "<span class='danger'>You can't install a hardsuit module while the suit is being worn.</span>")
+					return 1
 
 			if(!installed_modules)
 				installed_modules = list()
@@ -140,7 +136,7 @@
 
 				if("cell")
 
-					if(cell && !protean) //CHOMP Edit - addition for living protean hardsuit
+					if(cell)
 						to_chat(user, "You detach \the [cell] from \the [src]'s battery mount.")
 						for(var/obj/item/rig_module/module in installed_modules)
 							module.deactivate()
@@ -182,14 +178,6 @@
 	for(var/obj/item/rig_module/module in installed_modules)
 		if(module.accepts_item(W,user)) //Item is handled in this proc
 			return
-	if(protean)
-		if(rig_storage)
-			var/obj/item/weapon/storage/backpack = rig_storage
-			if(backpack.can_be_inserted(W, 1))
-				backpack.handle_item_insertion(W)
-		else
-			if(istype(W,/obj/item/weapon/storage/backpack))
-				AssimilateBag(user,0,W)
 	..()
 
 
