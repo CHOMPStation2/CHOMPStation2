@@ -323,7 +323,7 @@
 					P.forceMove(S.OurRig)
 			P.reset_view()
 		else	//Make one if not
-			to_chat(temporary_form, "<span class='warning'>You somehow didn't have a RIG, a new one has been created for you. Try this verb again.</span>")
+			to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. A new one has been created for you, contact a coder.</span>")
 			new /obj/item/weapon/rig/protean(src,src)
 
 ////
@@ -374,6 +374,28 @@
 
 	user.visible_message("<span class='notice'>Black mist swirls around [user] as they change size.</span>")
 CHOMP Removal end*/
+
+/mob/living/carbon/human/proc/appearance_switch()
+	set name = "Switch Blob Appearance"
+	set desc = "Allows a protean blob to switch its outwards appearance."
+	set category = "Abilities"
+	set hidden = 1
+	var/datum/species/protean/S = src.species
+	var/mob/M = src
+	if(temporary_form)
+		M = temporary_form
+	var/blobstyle = input(M, "Which blob style would you like?") in list("Red and Blue Stars", "Blue Star", "Plain")
+	switch(blobstyle)
+		if("Red and Blue Stars")
+			S.blob_appearance = "puddle2"
+		if("Blue Star")
+			S.blob_appearance = "puddle1"
+		if("Plain")
+			S.blob_appearance = "puddle0"
+	if(temporary_form)
+		if(blobstyle)
+			temporary_form.icon_living = S.blob_appearance
+			temporary_form.update_icon()
 
 /// /// /// A helper to reuse
 /mob/living/proc/nano_get_refactory(obj/item/organ/internal/nano/refactory/R)
@@ -460,5 +482,11 @@ CHOMP Removal end*/
 	desc = "Coalesce your naniteswarm into their control module, allowing others to wear you."
 	icon_state = "rig"
 	to_call = /mob/living/carbon/human/proc/nano_rig_transform
+
+/obj/effect/protean_ability/appearance_switch
+	ability_name = "Blob Appearance"
+	desc = "Toggle your blob appearance. Also affects your worn appearance."
+	icon_state = "rig"
+	to_call = /mob/living/carbon/human/proc/appearance_switch
 
 #undef PER_LIMB_STEEL_COST

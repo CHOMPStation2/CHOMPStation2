@@ -50,6 +50,7 @@
 	has_hands = 1
 	shock_resist = 1
 	nameset = 1
+	holder_type = /obj/item/weapon/holder/protoblob
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")
@@ -69,8 +70,8 @@
 		update_icon()
 
 /mob/living/simple_mob/protean_blob/Login()
-	. = ..()
-	copy_from_prefs_vr(bellies = FALSE) //Load vore prefs
+	..()
+	plane_holder.set_vis(VIS_AUGMENTED, 1)
 
 /mob/living/simple_mob/protean_blob/Destroy()
 	humanform = null
@@ -103,22 +104,6 @@
 	..()
 	if(humanform)
 		humanform.species.Stat(humanform)
-
-/mob/living/simple_mob/protean_blob/update_icon()
-	if(humanform)
-		//Still have a refactory
-		if(istype(refactory))
-			icon_living = "puddle2"
-
-		//Else missing one
-		else
-			icon_living = "puddle1"
-
-	//Not human-based
-	else
-		icon_living = "puddle0"
-
-	..()
 
 /mob/living/simple_mob/protean_blob/updatehealth()
 	if(!humanform)
@@ -319,13 +304,13 @@
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/attack_hand(mob/living/L) //CHOMP Add this whole block.
+/mob/living/simple_mob/protean_blob/attack_hand(mob/living/L)
 	if(L.get_effective_size() >= (src.get_effective_size() + 0.5) )
 		src.get_scooped(L)
 	else
 		..()
 
-/mob/living/simple_mob/protean_blob/MouseDrop(var/atom/over_object) //CHOMP Add this whole block.
+/mob/living/simple_mob/protean_blob/MouseDrop(var/atom/over_object)
 	if(ishuman(over_object) && usr == src && src.Adjacent(over_object))
 		var/mob/living/carbon/human/H = over_object
 		get_scooped(H, TRUE)
@@ -387,6 +372,9 @@ var/global/list/disallowed_protean_accessories = list(
 	if(R)
 		blob.mob_radio = R
 		R.forceMove(blob)
+	if(wear_id)
+		blob.myid = wear_id
+		wear_id.forceMove(blob)
 
 	//Mail them to nullspace
 	moveToNullspace()
@@ -399,7 +387,7 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.update_icon() //Will remove the collapse anim
 
 	//Transfer vore organs
-	blob.vore_organs = vore_organs
+	blob.vore_organs = vore_organs.Copy()
 	blob.vore_selected = vore_selected
 	for(var/obj/belly/B as anything in vore_organs)
 		B.forceMove(blob)
@@ -409,6 +397,10 @@ var/global/list/disallowed_protean_accessories = list(
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
 	blob.name = real_name
+	var/datum/species/protean/S = src.species
+	blob.icon_living = S.blob_appearance
+	blob.item_state = S.blob_appearance
+	blob.update_icon()
 
 	//Flip them to the protean panel
 	client?.statpanel = "Protean"
@@ -462,8 +454,11 @@ var/global/list/disallowed_protean_accessories = list(
 	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
 
 	if(blob.mob_radio)
-		var/obj/item/device/radio/R = blob.mob_radio
-		R.forceMove(src)
+		blob.mob_radio.forceMove(src)
+		blob.mob_radio = null
+	if(blob.myid)
+		blob.myid.forceMove(src)
+		blob.myid = null
 
 	//Play the animation
 	blob.icon_state = "from_puddle"
@@ -489,7 +484,7 @@ var/global/list/disallowed_protean_accessories = list(
 	temporary_form = null
 
 	//Transfer vore organs
-	vore_organs = blob.vore_organs
+	vore_organs = blob.vore_organs.Copy()
 	vore_selected = blob.vore_selected
 	for(var/obj/belly/B as anything in blob.vore_organs)
 		B.forceMove(src)

@@ -1659,19 +1659,17 @@
 /mob/living/carbon/human/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
-	if(!can_feel_pain()) return
-
-	if(health < (config.health_threshold_softcrit * species.crit_mod))// health 0 makes you immediately collapse //CHOMPEdit
-		shock_stage = max(shock_stage, 61)
-
-	if(traumatic_shock >= 80)
+	//CHOMPEdit - couple of fixes here. Fixes synths being stuck in permenant shock.
+	if(traumatic_shock >= 80 && can_feel_pain())
 		shock_stage += 1
-	else if(health < (config.health_threshold_softcrit * species.crit_mod))	//CHOMPEdit - Why is this here twice, hello? Polaris?
-		shock_stage = max(shock_stage, 61)
 	else
 		shock_stage = min(shock_stage, 160)
 		shock_stage = max(shock_stage-1, 0)
+	if(!can_feel_pain()) return
 
+	if(health < (config.health_threshold_softcrit * species.crit_mod)) //CHOMPEdit - fixes
+		shock_stage = max(shock_stage, 61)
+	//CHOMPEdit end
 	if(stat)
 		return 0
 

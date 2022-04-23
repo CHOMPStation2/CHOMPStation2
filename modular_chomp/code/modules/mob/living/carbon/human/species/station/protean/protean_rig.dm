@@ -39,23 +39,26 @@
 		var/datum/species/protean/S = P.species
 		S.OurRig = src
 		if(P.back)
-			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1), 3)
+			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1, P.back), 3)
 
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
 
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
-	if(spawned)
-		B = P.back
-		P.unEquip(P.back)
-	B.forceMove(src)
-	rig_storage = B
-	rig_storage.max_w_class = ITEMSIZE_LARGE
-	rig_storage.max_storage_space = INVENTORY_STANDARD_SPACE
-	P.drop_item(B)
-	to_chat(P, "<span class='notice'>Your [B] has been integrated into your rigsuit.</span>")
-	P.equip_to_slot_if_possible(src, slot_back)
+	if(istype(B,/obj/item/weapon/storage/backpack))
+		if(spawned)
+			B = P.back
+			P.unEquip(P.back)
+		B.forceMove(src)
+		rig_storage = B
+		rig_storage.max_w_class = ITEMSIZE_LARGE
+		rig_storage.max_storage_space = INVENTORY_STANDARD_SPACE
+		P.drop_item(B)
+		to_chat(P, "<span class='notice'>Your [B] has been integrated into your rigsuit.</span>")
+		P.equip_to_slot_if_possible(src, slot_back)
+	else
+		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
 
 /obj/item/weapon/rig/protean/attack_hand(mob/user as mob)
 	if (src.loc == user)
