@@ -82,14 +82,18 @@
 	update_icons_body()
 
 /mob/living/carbon/human/proc/nano_regenerate()
-	set name = "Ref - Whole Body"
-	set desc = "Allows you to regrow limbs and replace organs, given you have enough materials."
+	set name = "Total Reassembly (wip)"
+	set desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
 	set category = "Abilities"
 	set hidden = 1
+	if(temporary_form)
+		to_chat(temporary_form,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
+	else
+		to_chat(src,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
 
 
 
-	if(stat)
+	/*if(stat)
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
@@ -182,7 +186,7 @@
 		to_chat(src,  "<span class='critical'>Your refactoring is interrupted.</span>")
 		to_chat(blob, "<span class='critical'>Your refactoring is interrupted!</span>")
 	active_regen = 0
-	nano_outofblob(blob)
+	nano_outofblob(blob)*/
 
 ////
 //  Storing metal
@@ -440,8 +444,8 @@ CHOMP Removal end*/
 	to_call = /mob/living/carbon/human/proc/nano_partswap
 
 /obj/effect/protean_ability/reform_body
-	ability_name = "Ref - Whole Body"
-	desc = "Rebuild your entire body into whatever design you want, assuming you have 10,000 metal."
+	ability_name = "Total Reassembly (wip)"
+	desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
 	icon_state = "body"
 	to_call = /mob/living/carbon/human/proc/nano_regenerate
 

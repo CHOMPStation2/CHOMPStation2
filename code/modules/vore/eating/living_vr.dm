@@ -44,7 +44,6 @@
 	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
 	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
 	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
-	var/bellies_loaded = FALSE			//CHOMPedit: On-demand belly loading
 	var/regen_sounds = list(
 		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
@@ -211,12 +210,12 @@
 
 	return TRUE
 
-/mob/living/proc/apply_vore_prefs(var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
+/mob/living/proc/apply_vore_prefs()
 	if(!client || !client.prefs_vr)
 		return FALSE
 	if(!client.prefs_vr.load_vore())
 		return FALSE
-	if(!copy_from_prefs_vr(full_vorgans = full_vorgans)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
+	if(!copy_from_prefs_vr())
 		return FALSE
 
 	return TRUE
@@ -306,12 +305,8 @@
 	if(bellies)
 		release_vore_contents(silent = TRUE)
 		QDEL_LIST(vore_organs)
-		bellies_loaded = FALSE //CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
-			if(!full_vorgans) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
-				break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
-			bellies_loaded = TRUE //CHOMPedit
 
 	return TRUE
 

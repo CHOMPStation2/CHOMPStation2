@@ -374,16 +374,16 @@
 		switch(message_mode)
 			if("intercom")
 				for(var/obj/item/device/radio/intercom/I in view(1, null))
-					I.talk_into(src, message, verb, speaking)
+					I.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += I
 			if("headset")
-				if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
-					mob_radio.talk_into(src,message,null,verb,speaking)
+				if(mob_radio && istype(mob_radio,/obj/item/device/radio))	//CHOMPEdit - Why does it specifically have to be mob_headset? Bad.
+					mob_radio.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += mob_radio
 			else
 				if(message_mode)
 					if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
-						mob_radio.talk_into(src,message, message_mode, verb, speaking)
+						mob_radio.talk_into(src,message,message_mode,verb,speaking)
 						used_radios += mob_radio
 	else
 		..()

@@ -49,6 +49,7 @@
 	can_buckle = 1
 	has_hands = 1
 	shock_resist = 1
+	nameset = 1
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")
@@ -344,8 +345,8 @@ var/global/list/disallowed_protean_accessories = list(
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(loc == /obj/item/weapon/rig/protean) //CHOMP Add
-		return //CHOMP Add
+	if(loc == /obj/item/weapon/rig/protean)
+		return
 	if(!force && !isturf(loc))
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
@@ -378,6 +379,14 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
 	temporary_form = blob
+	var/obj/item/device/radio/R = null
+	if(isradio(l_ear))
+		R = l_ear
+	if(isradio(r_ear))
+		R = r_ear
+	if(R)
+		blob.mob_radio = R
+		R.forceMove(blob)
 
 	//Mail them to nullspace
 	moveToNullspace()
@@ -395,9 +404,11 @@ var/global/list/disallowed_protean_accessories = list(
 	for(var/obj/belly/B as anything in vore_organs)
 		B.forceMove(blob)
 		B.owner = blob
+	vore_organs.Cut()
 
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
+	blob.name = real_name
 
 	//Flip them to the protean panel
 	client?.statpanel = "Protean"
@@ -450,6 +461,10 @@ var/global/list/disallowed_protean_accessories = list(
 	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
 	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
 
+	if(blob.mob_radio)
+		var/obj/item/device/radio/R = blob.mob_radio
+		R.forceMove(src)
+
 	//Play the animation
 	blob.icon_state = "from_puddle"
 
@@ -474,10 +489,12 @@ var/global/list/disallowed_protean_accessories = list(
 	temporary_form = null
 
 	//Transfer vore organs
+	vore_organs = blob.vore_organs
 	vore_selected = blob.vore_selected
 	for(var/obj/belly/B as anything in blob.vore_organs)
 		B.forceMove(src)
 		B.owner = src
+	languages = blob.languages.Copy()
 
 	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
