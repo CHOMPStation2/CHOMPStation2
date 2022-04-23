@@ -69,7 +69,7 @@
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							120),
 		EQUIPMENT("Survey Tools - Mapping Unit",				/obj/item/device/mapping_unit,										150),
 		EQUIPMENT("Survey Tools - Mapping Beacon",				/obj/item/device/holomap_beacon,									25),
-		EQUIPMENT("Survey Tools - Advanced Cataloguer",			/obj/item/device/cataloguer/advanced								300), //CHOMPADD
+		EQUIPMENT("Survey Tools - Advanced Cataloguer",			/obj/item/device/cataloguer/advanced,								300), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											75),
 		EQUIPMENT("Survival Equipment - Glowstick", 			/obj/item/device/flashlight/glowstick,								5),
 		EQUIPMENT("Survival Equipment - Flare", 				/obj/item/device/flashlight/flare,									5),
