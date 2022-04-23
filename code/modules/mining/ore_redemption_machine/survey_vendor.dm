@@ -76,9 +76,9 @@
 		EQUIPMENT("Survival Equipment - Radioisotope Glowstick",		/obj/item/device/flashlight/glowstick/radioisotope,			40),
 		EQUIPMENT("Survival Equipment - Modular Explorer Suit",		/obj/item/clothing/suit/armor/pcarrier/explorer,				200),
 		EQUIPMENT("Survival Equipment - Armored Jumpsuit",		/obj/item/clothing/under/explorer/armored,							200),
-		EQUIPMENT("Survival Equipment - Exploration Plate",		/obj/item/clothing/accessory/armor/armorplate/explorer				50), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Exploration Arm Guards",		/obj/item/clothing/accessory/armor/armguards/explorer		50), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Exploration Leg Guards",		/obj/item/clothing/accessory/armor/legguards/explorer		50), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Plate",		/obj/item/clothing/accessory/armor/armorplate/explorer,			50), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Arm Guards",		/obj/item/clothing/accessory/armor/armguards/explorer,		50), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Leg Guards",		/obj/item/clothing/accessory/armor/legguards/explorer,		50), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/green,						10), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,		25), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Advanced Plate",		/obj/item/clothing/accessory/armor/armorplate/explorer/adv,			400), //CHOMPADD
