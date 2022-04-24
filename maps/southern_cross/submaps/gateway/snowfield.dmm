@@ -13595,8 +13595,8 @@
 "lFf" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
-	id = "snowfield testlab enterance";
-	name = "Lab Front Enterance";
+	id = "snowfield testlab entrance";
+	name = "Lab Front Entrance";
 	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -19558,7 +19558,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
 "qPi" = (
-/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/airlock/highsecurity{
+	req_one_access = list(1, 53)
+	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
