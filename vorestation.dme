@@ -1153,6 +1153,7 @@
 #include "code\game\objects\effects\spiders.dm"
 #include "code\game\objects\effects\spiders_vr.dm"
 #include "code\game\objects\effects\step_triggers.dm"
+#include "code\game\objects\effects\wire_deleter.dm"
 #include "code\game\objects\effects\zone_divider.dm"
 #include "code\game\objects\effects\zz_portals_ch.dm"
 #include "code\game\objects\effects\zz_triggers_ch.dm"
@@ -4466,4 +4467,5 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
+#include "maps\~map_system\maps_vr.dm"
 // END_INCLUDE
