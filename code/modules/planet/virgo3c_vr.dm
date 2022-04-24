@@ -538,6 +538,7 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/side)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk/slab)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/water)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/water/deep)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/reinforced)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/glass/reinforced)
@@ -547,6 +548,10 @@ VIRGO3C_TURF_CREATE(/turf/simulated/mineral)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/wood)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/wood/sif)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/beach/sand)
+VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
+
+
 
 /turf/simulated/floor/outdoors/grass/virgo3c
 	VIRGO3C_SET_ATMOS
