@@ -322,3 +322,84 @@
 	holder.glow_color = initial(holder.glow_color)
 	holder.set_light(0)
 	my_kin = null
+
+
+
+//CHOMPEdit Begin - New ability!
+/datum/power/shadekin/dark_tunneling
+	name = "Dark Tunneling (100) (Once)"
+	desc = "Make a passage to the dark."
+	verbpath = /mob/living/carbon/human/proc/dark_tunneling
+	ability_icon_state = "tech_dispelold"
+
+/mob/living/carbon/human/proc/dark_tunneling()
+	set name = "Dark Tunneling (100) (Once)"
+	set desc = "Make a passage to the dark."
+	set category = "Shadekin"
+
+	var/template_id = "dark_portal"
+	var/datum/map_template/shelter/template
+
+	var/ability_cost = 100
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		return FALSE
+	else if(stat)
+		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		return FALSE
+	else if(shadekin_get_energy() < ability_cost)
+		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		return FALSE
+	else if(ability_flags & AB_PHASE_SHIFTED)
+		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		return FALSE
+	else if(ability_flags & AB_DARK_TUNNEL)
+		to_chat(src, "<span class='warning'>You have already made a tunnel to the Dark!</span>")
+		return FALSE
+
+	if(!template)
+		template = SSmapping.shelter_templates[template_id]
+		if(!template)
+			throw EXCEPTION("Shelter template ([template_id]) not found!")
+			return FALSE
+	
+	var/turf/deploy_location = get_turf(src)
+	var/status = template.check_deploy(deploy_location)
+
+	switch(status)
+		//Not allowed due to /area technical reasons
+		if(SHELTER_DEPLOY_BAD_AREA)
+			src.loc.visible_message("<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
+
+		//Anchored objects or no space
+		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
+			var/width = template.width
+			var/height = template.height
+			src.loc.visible_message("<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
+
+		if(SHELTER_DEPLOY_SHIP_SPACE)
+			src.loc.visible_message("<span class='warning'>\The [src] can only be deployed in space.</span>")
+
+	if(status != SHELTER_DEPLOY_ALLOWED)
+		return FALSE
+	
+	var/turf/T = deploy_location
+	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
+	smoke.attach(T)
+	smoke.set_up(10, 0, T)
+	smoke.start()
+	
+	if(do_after(src, 600)) //60 seconds
+		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
+
+		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")
+		template.annihilate_plants(deploy_location)
+		template.load(deploy_location, centered = TRUE)
+		template.update_lighting(deploy_location)
+		ability_flags &= AB_DARK_TUNNEL
+		shadekin_adjust_energy(-ability_cost)
+		return TRUE
+	else
+		return FALSE
