@@ -1155,6 +1155,7 @@
 #include "code\game\objects\effects\spiders.dm"
 #include "code\game\objects\effects\spiders_vr.dm"
 #include "code\game\objects\effects\step_triggers.dm"
+#include "code\game\objects\effects\wire_deleter.dm"
 #include "code\game\objects\effects\zone_divider.dm"
 #include "code\game\objects\effects\zz_portals_ch.dm"
 #include "code\game\objects\effects\zz_triggers_ch.dm"
@@ -2371,6 +2372,7 @@
 #include "code\modules\events\viral_infection.dm"
 #include "code\modules\events\wallrot.dm"
 #include "code\modules\examine\examine.dm"
+#include "code\modules\examine\examine_vr.dm"
 #include "code\modules\examine\stat_icons.dm"
 #include "code\modules\examine\descriptions\armor.dm"
 #include "code\modules\examine\descriptions\atmospherics.dm"
@@ -4471,4 +4473,5 @@
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_powers.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_rig.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_species.dm"
+#include "maps\~map_system\maps_vr.dm"
 // END_INCLUDE
