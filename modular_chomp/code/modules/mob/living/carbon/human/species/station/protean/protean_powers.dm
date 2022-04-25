@@ -9,29 +9,32 @@
 	set category = "Abilities"
 	set hidden = 1
 
+	var/mob/living/caller = src
+	if(temporary_form)
+		caller = temporary_form
 	if(stat)
-		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
+		to_chat(caller,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
-	if(!isturf(loc))
-		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+	if(!isturf(caller.loc))
+		to_chat(caller,"<span class='warning'>You need more space to perform this action!</span>")
 		return
 
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
 	if(!istype(refactory))
-		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
+		to_chat(caller,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
-	var/choice = tgui_input_list(src,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
+	var/choice = tgui_input_list(caller,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
 	if(!choice)
 		return
 
 	//Organ is missing, needs restoring
 	if(!organs_by_name[choice] || istype(organs_by_name[choice], /obj/item/organ/external/stump)) //allows limb stumps to regenerate like removed limbs.
 		if(refactory.get_stored_material(MAT_STEEL) < PER_LIMB_STEEL_COST)
-			to_chat(src,"<span class='warning'>You're missing that limb, and need to store at least [PER_LIMB_STEEL_COST] steel to regenerate it.</span>")
+			to_chat(caller,"<span class='warning'>You're missing that limb, and need to store at least [PER_LIMB_STEEL_COST] steel to regenerate it.</span>")
 			return
-		var/regen = tgui_alert(src,"That limb is missing, do you want to regenerate it in exchange for [PER_LIMB_STEEL_COST] steel?","Regenerate limb?",list("Yes","No"))
+		var/regen = tgui_alert(caller,"That limb is missing, do you want to regenerate it in exchange for [PER_LIMB_STEEL_COST] steel?","Regenerate limb?",list("Yes","No"))
 		if(regen != "Yes")
 			return
 		if(!refactory.use_stored_material(MAT_STEEL,PER_LIMB_STEEL_COST))
@@ -40,8 +43,11 @@
 			var/obj/item/organ/external/oldlimb = organs_by_name[choice]
 			oldlimb.removed()
 			qdel(oldlimb)
-
-		var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
+		var/mob/living/simple_mob/protean_blob/blob
+		if(!temporary_form)
+			blob = nano_intoblob()
+		else
+			blob = temporary_form
 		active_regen = 1
 		if(do_after(blob,5 SECONDS))
 			var/list/limblist = species.has_limbs[choice]
@@ -52,7 +58,6 @@
 			new_eo.sync_colour_to_human(src)
 			regenerate_icons()
 		active_regen = 0
-		nano_outofblob(blob)
 		return
 
 	//Organ exists, let's reshape it
@@ -68,7 +73,7 @@
 		usable_manufacturers[company] = M
 	if(!usable_manufacturers.len)
 		return
-	var/manu_choice = tgui_input_list(src, "Which manufacturer do you wish to mimic for this limb?", "Manufacturer for [choice]", usable_manufacturers)
+	var/manu_choice = tgui_input_list(caller, "Which manufacturer do you wish to mimic for this limb?", "Manufacturer for [choice]", usable_manufacturers)
 
 	if(!manu_choice)
 		return //Changed mind
@@ -78,7 +83,6 @@
 		return //Lost it meanwhile
 
 	eo.robotize(manu_choice)
-	visible_message("<B>[src]</B>'s [choice] loses its shape, then reforms.")
 	update_icons_body()
 
 /mob/living/carbon/human/proc/nano_regenerate()
@@ -86,8 +90,10 @@
 	set desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
 	set category = "Abilities"
 	set hidden = 1
+	var/mob/living/caller = src
 	if(temporary_form)
-		to_chat(temporary_form,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
+		caller = temporary_form
+		to_chat(caller,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
 	else
 		to_chat(src,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
 
@@ -316,9 +322,10 @@
 				if(P.stat)
 					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
 				else
-					if(P.l_hand) drop_from_inventory(P.l_hand)
-					if(P.r_hand) drop_from_inventory(P.r_hand)
-					P.has_hands = 0
+					if(P.l_hand)
+						drop_from_inventory(P.l_hand)
+					if(P.r_hand)
+						drop_from_inventory(P.r_hand)
 					S.OurRig.myprotean = P
 					src.drop_from_inventory(S.OurRig)
 					P.forceMove(S.OurRig)
@@ -396,7 +403,11 @@ CHOMP Removal end*/
 	if(temporary_form)
 		if(blobstyle)
 			temporary_form.icon_living = S.blob_appearance
+			temporary_form.item_state = S.blob_appearance
 			temporary_form.update_icon()
+			if(istype(temporary_form.loc, /obj/item/weapon/holder/protoblob))
+				var/obj/item/weapon/holder/protoblob/PB = temporary_form.loc
+				PB.item_state = S.blob_appearance
 
 /// /// /// A helper to reuse
 /mob/living/proc/nano_get_refactory(obj/item/organ/internal/nano/refactory/R)

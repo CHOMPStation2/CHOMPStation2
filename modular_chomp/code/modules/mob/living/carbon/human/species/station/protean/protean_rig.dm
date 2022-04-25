@@ -23,6 +23,7 @@
 	protean = 1
 	offline_vision_restriction = 0
 	open = 1
+	cell_type =  /obj/item/weapon/cell/protean
 
 /obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
@@ -33,6 +34,9 @@
 	if(user == myprotean)
 		return TRUE
 	return ..()
+
+/obj/item/weapon/rig/protean/digest_act(atom/movable/item_storage = null)
+	return FALSE
 
 /obj/item/weapon/rig/protean/New(var/newloc, var/mob/living/carbon/human/P)
 	if(P)
@@ -344,3 +348,32 @@
 		if(istype(W,/obj/item/weapon/storage/backpack))
 			AssimilateBag(user,0,W)
 	..()
+
+
+/obj/item/weapon/cell/protean
+	name = "Protean power cell"
+	desc = "Something terrible must have happened if you're managing to see this."
+	maxcharge = 10000
+	charge_amount = 100
+	var/mob/living/carbon/human/charger
+
+/obj/item/weapon/cell/protean/New()
+	charge = maxcharge
+	update_icon()
+	addtimer(CALLBACK(src, .proc/search_for_protean), 60)
+
+/obj/item/weapon/cell/protean/proc/search_for_protean()
+	if(istype(src.loc, /obj/item/weapon/rig/protean))
+		var/obj/item/weapon/rig/protean/prig = src.loc
+		charger = prig.wearer
+	if(charger)
+		START_PROCESSING(SSobj, src)
+
+/obj/item/weapon/cell/protean/process()
+	var/C = charge
+	if(charger)
+		if((world.time >= last_use + charge_delay) && charger.nutrition > 100)
+			give(charge_amount)
+			charger.nutrition -= ((1/200)*(charge - C))	//Take nutrition relative to charge. Change the 1/200 if you want to alter the nutrition to charge ratio
+	else
+		return PROCESS_KILL

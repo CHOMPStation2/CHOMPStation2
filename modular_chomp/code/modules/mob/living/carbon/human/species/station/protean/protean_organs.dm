@@ -193,3 +193,6 @@
 /obj/item/device/mmi/digital/posibrain/nano/transfer_identity()
 	. = ..()
 	icon_state = "posi1"
+
+/obj/item/organ/internal/nano/digest_act(atom/movable/item_storage = null)
+	return FALSE

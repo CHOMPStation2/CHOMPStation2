@@ -24,6 +24,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	attacktext = list("slashed")
+	see_in_dark = 10
 
 	min_oxy = 0
 	max_oxy = 0
@@ -47,6 +48,9 @@
 	player_msg = "In this form, your health will regenerate as long as you have metal in you."
 
 	can_buckle = 1
+	buckle_lying = 1
+	mount_offset_x = 0
+	mount_offset_y = 0
 	has_hands = 1
 	shock_resist = 1
 	nameset = 1
@@ -64,14 +68,73 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/hide
 		verbs |= /mob/living/proc/usehardsuit
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_partswap
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_regenerate
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_blobform
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_rig_transform
+		verbs |= /mob/living/simple_mob/protean_blob/proc/appearance_switch
+		verbs -= /mob/living/simple_mob/proc/nutrition_heal
 	else
 		update_icon()
+	verbs |= /mob/living/proc/hide
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+
+//Hidden verbs for macro hotkeying
+/mob/living/simple_mob/protean_blob/proc/nano_partswap()
+	set name = "Ref - Single Limb"
+	set desc = "Allows you to replace and reshape your limbs as you see fit."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_partswap()
+
+/mob/living/simple_mob/protean_blob/proc/nano_regenerate()
+	set name = "Total Reassembly (wip)"
+	set desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_regenerate()
+
+/mob/living/simple_mob/protean_blob/proc/nano_blobform()
+	set name = "Toggle Blobform"
+	set desc = "Switch between amorphous and humanoid forms."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_blobform()
+
+/mob/living/simple_mob/protean_blob/proc/nano_rig_transform()
+	set name = "Modify Form - Hardsuit"
+	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_rig_transform()
+
+/mob/living/simple_mob/protean_blob/proc/appearance_switch()
+	set name = "Switch Blob Appearance"
+	set desc = "Allows a protean blob to switch its outwards appearance."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.appearance_switch()
 
 /mob/living/simple_mob/protean_blob/Login()
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, 1)
+	plane_holder.set_vis(VIS_CH_HEALTH_VR, 1)
+	plane_holder.set_vis(VIS_CH_ID, 1)
+	plane_holder.set_vis(VIS_CH_STATUS_R, 1)
+	plane_holder.set_vis(VIS_CH_BACKUP, 1)	//Gonna need these so we can see the status of our host. Could probably write it so this only happens when worn, but eeehhh
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob/protean_blob(src)
+
+datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
+	ridden.layer = OBJ_LAYER
+
+/mob/living/simple_mob/protean_blob/MouseDrop_T()
+	return
+
+/mob/living/simple_mob/protean_blob/runechat_y_offset(width, height)
+	return (..()) - (20*size_multiplier)
 
 /mob/living/simple_mob/protean_blob/Destroy()
 	humanform = null
@@ -119,14 +182,11 @@
 	if((stat < DEAD) && (health <= 0))
 		death()
 
+	nutrition = humanform.nutrition
+
 	//Overhealth
 	if(health > getMaxHealth())
 		health = getMaxHealth()
-
-	//Grab any other interesting values
-	confused = humanform.confused
-	radiation = humanform.radiation
-	paralysis = humanform.paralysis
 
 	//Update our hud if we have one
 	if(healths)
@@ -239,13 +299,11 @@
 /mob/living/simple_mob/protean_blob/lay_down()
 	..()
 	if(resting)
-		animate(src,alpha = 40,time = 1 SECOND)
 		mouse_opacity = 0
 		plane = ABOVE_OBJ_PLANE
 	else
 		mouse_opacity = 1
 		icon_state = "wake"
-		animate(src,alpha = 255,time = 1 SECOND)
 		plane = MOB_PLANE
 		sleep(7)
 		update_icon()
@@ -347,6 +405,8 @@ var/global/list/disallowed_protean_accessories = list(
 		pulledby.stop_pulling()
 	stop_pulling()
 
+	var/client/C = client
+
 	//Record where they should go
 	var/atom/creation_spot = drop_location()
 
@@ -397,13 +457,14 @@ var/global/list/disallowed_protean_accessories = list(
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
 	blob.name = real_name
+	blob.voice_name = name
 	var/datum/species/protean/S = src.species
 	blob.icon_living = S.blob_appearance
 	blob.item_state = S.blob_appearance
 	blob.update_icon()
 
 	//Flip them to the protean panel
-	client?.statpanel = "Protean"
+	addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
 
 	//Return our blob in case someone wants it
 	return blob
@@ -445,6 +506,8 @@ var/global/list/disallowed_protean_accessories = list(
 	if(pulledby)
 		pulledby.stop_pulling()
 	stop_pulling()
+
+	var/client/C = blob.client
 
 	//Stop healing if we are
 	if(blob.healing)
@@ -497,7 +560,11 @@ var/global/list/disallowed_protean_accessories = list(
 	qdel(blob)
 
 	//Flip them to the protean panel
-	client?.statpanel = "Protean"
+	addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
 
 	//Return ourselves in case someone wants it
 	return src
+
+/mob/living/carbon/human/proc/nano_set_panel(var/client/C)
+	if(C)
+		C.statpanel = "Protean"
