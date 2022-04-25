@@ -57,6 +57,7 @@
 		P.drop_item(B)
 		to_chat(P, "<span class='notice'>Your [B] has been integrated into your rigsuit.</span>")
 		P.equip_to_slot_if_possible(src, slot_back)
+		src.Moved()
 	else
 		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
 

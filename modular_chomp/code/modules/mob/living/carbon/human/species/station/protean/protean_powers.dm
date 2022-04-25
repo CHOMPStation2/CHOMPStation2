@@ -310,6 +310,7 @@
 				S.OurRig.forceMove(src)
 				S.OurRig.myprotean = null
 				src.equip_to_slot_if_possible(S.OurRig, slot_back)
+				S.OurRig.Moved()
 				P.has_hands = 1
 			else	//We're not in our own RIG
 				if(P.stat)
