@@ -53,7 +53,7 @@
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		)
-	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI)
+	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI)
 
 
 //Yawn Wider Edit.
@@ -66,7 +66,11 @@
 			"th" = list("zk", "szk"),
 			"r" = list("rk")
 		)
+<<<<<<< HEAD
 //YW edit over.
+=======
+	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE)
+>>>>>>> 887dca3183... Merge pull request #12843 from Heroman3003/zaddat-autohiss
 
 /datum/species/proc/handle_autohiss(message, datum/language/lang, mode)
 	if(!autohiss_basic_map)
