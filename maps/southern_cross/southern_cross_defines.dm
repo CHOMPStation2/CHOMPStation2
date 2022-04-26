@@ -20,7 +20,7 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_FUELDEPOT				11
 #define Z_LEVEL_AEROSTAT				12
 #define Z_LEVEL_NS_MINE					13
-#define Z_LEVEL_GATEWAY					14 
+#define Z_LEVEL_GATEWAY					14
 
 //#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
 //#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
@@ -31,7 +31,7 @@ but they don't actually change anything about the load order
 	full_name = "Southern Cross"
 	path = "southern_cross"
 
-	lobby_icon = 'icons/misc/CHOMPSTATION_BG_eggman.gif'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
+	lobby_icon = 'icons/misc/CHOMPSTATION.gif'	//CHOMPStation Edit 4/26/22 - _ch.dmi
 	lobby_screens = list() //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit 25/1/20 TFF - Job icons for off-duty/exploration
 
