@@ -20,10 +20,10 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_FUELDEPOT				11
 #define Z_LEVEL_AEROSTAT				12
 #define Z_LEVEL_NS_MINE					13
-#define Z_LEVEL_GATEWAY					14 
+#define Z_LEVEL_GATEWAY					14
 
-//#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
-//#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
+//#define Z_LEVEL_SURFACE_CASINO			xx	//edit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
+//#define Z_LEVEL_EMPTY_SPACE				xx //edit: Disabling empty space as now the overmap generates empty space on demand.
 
 
 /datum/map/southern_cross
@@ -31,9 +31,9 @@ but they don't actually change anything about the load order
 	full_name = "Southern Cross"
 	path = "southern_cross"
 
-	lobby_icon = 'icons/misc/CHOMPSTATION_BG_eggman.gif'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
-	lobby_screens = list() //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
-	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit 25/1/20 TFF - Job icons for off-duty/exploration
+	lobby_icon = 'icons/misc/CHOMPSTATION.gif'	//Station Edit 4/26/22 - _ch.dmi
+	lobby_screens = list() //Station Edit TFF 24/12/19 - Station image
+	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//Station Edit 25/1/20 TFF - Job icons for off-duty/exploration
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_STATION_ONE,
@@ -85,7 +85,7 @@ but they don't actually change anything about the load order
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
 							NETWORK_TELECOM
-							) //CHOMPedit: add "NETWORK_CARRIER" for exploration outpost cams
+							) //edit: add "NETWORK_CARRIER" for exploration outpost cams
 	// Camera networks that exist, but don't show on regular camera monitors.
 	secondary_networks = list(
 							NETWORK_ERT,
@@ -121,10 +121,10 @@ but they don't actually change anything about the load order
 			list("Kara - Z1 Northern Star")
 			)
 
-	//CHOMPStation Addition End
+	//Station Addition End
 	lateload_gateway = list(
 		list("Snow Field")
-		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
+		) //edit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_gateway = null
 
@@ -158,13 +158,13 @@ but they don't actually change anything about the load order
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)  //CHOMPEdit bumped up from 60 to 80
-	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)  //CHOMPEdit bumped up from 60 to 80
+	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)  //Edit bumped up from 60 to 80
+	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)  //Edit bumped up from 60 to 80
 	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.  //CHOMPEdit bumped up from 80 to 140
+	seed_submaps(list(Z_LEVEL_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.  //Edit bumped up from 80 to 140
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)  //CHOMPEdit bumped up from 60 to 150
-	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //CHOMPEdit bumped up from 60 to 150
+	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)  //Edit bumped up from 60 to 150
+	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //Edit bumped up from 60 to 150
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
@@ -212,7 +212,7 @@ but they don't actually change anything about the load order
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
-/* //CHOMPedit: Disabling empty space map level as overmap generation now generates this as needed.
+/* //edit: Disabling empty space map level as overmap generation now generates this as needed.
 /datum/map_z_level/southern_cross/empty_space
 	z = Z_LEVEL_EMPTY_SPACE
 	name = "Empty"
@@ -243,7 +243,7 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/open
 
-//CHOMPedit - KSC = So Christmas Casino has weather.
+//edit - KSC = So Christmas Casino has weather.
 /*/datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
 	name = "Casino"
@@ -304,7 +304,7 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE_WILD,
 		Z_LEVEL_SURFACE_SKYLANDS
 	)
-//Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
+//Z_LEVEL_SURFACE_CASINO //edit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
@@ -370,7 +370,7 @@ but they don't actually change anything about the load order
 	portal_id = "caves_wilderness-river"
 
 /*
-//CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels
+//Edit this is very much necessary for us otherwise weather sounds play on other levels
 /datum/planet/sif
 	expected_z_levels = list(
 		Z_LEVEL_SURFACE,
