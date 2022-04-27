@@ -128,11 +128,7 @@
 		new /obj/item/stack/rods(get_turf(src))
 		Destroy()
 
-<<<<<<< HEAD
-/obj/structure/catwalk/Crossed(atom/movable/AM as mob|obj)
-=======
 /obj/structure/catwalk/Crossed(atom/movable/AM)
->>>>>>> 41741010cb... Merge pull request #12583 from VOREStation/upstream-merge-8468
 	. = ..()
 	if(isliving(AM) && !AM.is_incorporeal())
 		playsound(src, pick('sound/effects/footstep/catwalk1.ogg', 'sound/effects/footstep/catwalk2.ogg', 'sound/effects/footstep/catwalk3.ogg', 'sound/effects/footstep/catwalk4.ogg', 'sound/effects/footstep/catwalk5.ogg'), 25, 1)
