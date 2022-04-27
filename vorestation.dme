@@ -4310,6 +4310,7 @@
 #include "code\modules\vore\resizing\holder_micro_ch.dm"
 #include "code\modules\vore\resizing\holder_micro_vr.dm"
 #include "code\modules\vore\resizing\resize_vr.dm"
+#include "code\modules\vore\resizing\sizegun_slow_vr.dm"
 #include "code\modules\vore\resizing\sizegun_vr.dm"
 #include "code\modules\vore\smoleworld\smoleworld_vr.dm"
 #include "code\modules\vore\weight\fitness_machines_vr.dm"
@@ -4473,5 +4474,4 @@
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_powers.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_rig.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_species.dm"
-#include "maps\~map_system\maps_vr.dm"
 // END_INCLUDE
