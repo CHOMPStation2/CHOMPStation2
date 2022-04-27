@@ -938,8 +938,6 @@
 	mappath = 'pois/cavething14.dmm'
 	cost = 3
 	allow_duplicates = FALSE
-<<<<<<< HEAD
-=======
 
 /area/submap/groundbase/poi/wildvillage
 	name = "POI - Wilderness Village"
@@ -1062,4 +1060,3 @@
 	name = "wide building 4"
 	mappath = 'southwilds/villagepois/long4.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long4
->>>>>>> b7b3ae73e0... Merge pull request #12838 from Very-Soft/gbwilds
