@@ -5,7 +5,7 @@
 	desc = "A giant, cold-tolerant slug. It seems excessively passive."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/slug)
 	tt_desc = "S Arion hortensis"
-	icon = 'icons/mob/vore_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore_ch.dmi'
 	icon_dead = "slug-dead"
 	icon_living = "slug"
 	icon_state = "slug"

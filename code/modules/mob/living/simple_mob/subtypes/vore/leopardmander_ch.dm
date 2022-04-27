@@ -3,7 +3,7 @@
 	desc = "A huge salamander-like drake. They are best known for their rarity, their voracity, their very potent paralyzing venom, and their healing stomach. This one is white."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/leopardmander)
 	tt_desc = "S Draconis uncia"
-	icon = 'icons/mob/vore128x64_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore128x64_ch.dmi'
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"

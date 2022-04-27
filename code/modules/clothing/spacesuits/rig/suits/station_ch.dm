@@ -1,7 +1,7 @@
 //Hardsuits
 /obj/item/weapon/rig/ch //Some blank bs
 	desc = "This is a dev item and should not be spawned."
-	default_mob_icon = 'icons/mob/rig_back_ch.dmi'
+	default_mob_icon = 'modular_chomp/icons/mob/rig_back_ch.dmi'
 	chest_type = /obj/item/clothing/suit/space/rig/ch
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/ch
@@ -78,21 +78,21 @@
 
 /obj/item/clothing/head/helmet/space/rig/ch
 	sprite_sheets = list(
-		SPECIES_HUMAN			= 'icons/mob/head_ch.dmi',
-		SPECIES_TAJ 			= 'icons/mob/species/tajaran/helmet_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/mob/species/skrell/helmet_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/mob/species/unathi/helmet_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/mob/species/unathi/helmet_ch.dmi',
-		SPECIES_AKULA 			= 'icons/mob/species/akula/helmet_ch.dmi',
-		SPECIES_SERGAL			= 'icons/mob/species/sergal/helmet_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/mob/species/sergal/helmet_ch.dmi',
-		SPECIES_VULPKANIN 		= 'icons/mob/species/vulpkanin/helmet_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/mob/species/fox/helmet_ch.dmi',
-		SPECIES_FENNEC 			= 'icons/mob/species/vulpkanin/helmet_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/helmet_ch.dmi',
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/helmet_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/species/unathi/helmet_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/species/unathi/helmet_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/species/akula/helmet_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/species/sergal/helmet_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/species/sergal/helmet_ch.dmi',
+		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/species/vulpkanin/helmet_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/species/fox/helmet_ch.dmi',
+		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/species/vulpkanin/helmet_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
 		SPECIES_TESHARI 		= 'icons/inventory/head/mob_ch_teshari.dmi',
-		SPECIES_VASILISSAN		= 'icons/mob/species/skrell/helmet_ch.dmi',
-		SPECIES_VOX			= 'icons/mob/species/vox/head_ch.dmi'
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/head_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
@@ -105,31 +105,31 @@
 		SPECIES_SERGAL			= 'icons/obj/clothing/hats_ch.dmi',
 		SPECIES_NEVREAN			= 'icons/obj/clothing/hats_ch.dmi',
 		SPECIES_VULPKANIN 		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/hats_ch.dmi',
 		SPECIES_FENNEC 			= 'icons/obj/clothing/hats_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/obj/clothing/hats_ch.dmi',
 		SPECIES_TESHARI 		= 'icons/obj/clothing/hats_ch.dmi',
 		SPECIES_VASILISSAN		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_VOX			= 'icons/obj/clothing/hats_ch.dmi'
+		SPECIES_VOX				= 'icons/obj/clothing/hats_ch.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/ch
 	sprite_sheets = list(
-		SPECIES_HUMAN			= 'icons/mob/spacesuit_ch.dmi',
-		SPECIES_TAJ 			= 'icons/mob/species/tajaran/suit_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/mob/species/skrell/suit_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/mob/species/unathi/suit_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/mob/species/unathi/suit_ch.dmi',
-		SPECIES_AKULA 			= 'icons/mob/species/akula/suit_ch.dmi',
-		SPECIES_SERGAL			= 'icons/mob/species/sergal/suit_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/mob/species/sergal/suit_ch.dmi',
-		SPECIES_VULPKANIN		= 'icons/mob/species/vulpkanin/suit_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/mob/species/fox/suit_ch.dmi',
-		SPECIES_FENNEC			= 'icons/mob/species/vulpkanin/suit_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/suit_ch.dmi',
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/suit_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/species/skrell/suit_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/species/unathi/suit_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/species/unathi/suit_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/species/akula/suit_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/species/sergal/suit_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/species/sergal/suit_ch.dmi',
+		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/species/vulpkanin/suit_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/species/fox/suit_ch.dmi',
+		SPECIES_FENNEC			= 'modular_chomp/icons/mob/species/vulpkanin/suit_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/species/skrell/suit_ch.dmi',
 		SPECIES_TESHARI 		= 'icons/inventory/suit/mob_ch_teshari.dmi',
-		SPECIES_VASILISSAN		= 'icons/mob/species/skrell/suit_ch.dmi',
-		SPECIES_VOX			= 'icons/mob/species/vox/suit_ch.dmi'
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/species/skrell/suit_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/suit_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
@@ -142,31 +142,31 @@
 		SPECIES_SERGAL			= 'icons/obj/clothing/spacesuits_ch.dmi',
 		SPECIES_NEVREAN			= 'icons/obj/clothing/spacesuits_ch.dmi',
 		SPECIES_VULPKANIN 		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/obj/clothing/spacesuits_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/spacesuits_ch.dmi',
 		SPECIES_FENNEC 			= 'icons/obj/clothing/spacesuits_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/obj/clothing/spacesuits_ch.dmi',
 		SPECIES_TESHARI 		= 'icons/obj/clothing/spacesuits_ch.dmi',
 		SPECIES_VASILISSAN		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_VOX			= 'icons/obj/clothing/spacesuits_ch.dmi'
+		SPECIES_VOX				= 'icons/obj/clothing/spacesuits_ch.dmi'
 		)
 
 /obj/item/clothing/gloves/gauntlets/rig/ch
 	sprite_sheets = list(
-		SPECIES_HUMAN			= 'icons/mob/hands_ch.dmi',
-		SPECIES_TAJ 			= 'icons/mob/hands_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/mob/hands_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/mob/hands_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/mob/hands_ch.dmi',
-		SPECIES_AKULA 			= 'icons/mob/hands_ch.dmi',
-		SPECIES_SERGAL			= 'icons/mob/hands_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/mob/hands_ch.dmi',
-		SPECIES_VULPKANIN		= 'icons/mob/hands_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/mob/hands_ch.dmi',
-		SPECIES_FENNEC			= 'icons/mob/hands_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/mob/hands_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/hands_ch.dmi',
-		SPECIES_VASILISSAN		= 'icons/mob/hands_ch.dmi',
-		SPECIES_VOX			= 'icons/mob/species/vox/gloves_ch.dmi'
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_FENNEC			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/gloves_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
@@ -179,31 +179,31 @@
 		SPECIES_SERGAL			= 'icons/obj/clothing/gloves_ch.dmi',
 		SPECIES_NEVREAN			= 'icons/obj/clothing/gloves_ch.dmi',
 		SPECIES_VULPKANIN 		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/obj/clothing/gloves_ch.dmi',
+		SPECIES_ZORREN_HIGH		= 'icons/obj/clothing/gloves_ch.dmi',
 		SPECIES_FENNEC 			= 'icons/obj/clothing/gloves_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/obj/clothing/gloves_ch.dmi',
 		SPECIES_TESHARI 		= 'icons/obj/clothing/gloves_ch.dmi',
 		SPECIES_VASILISSAN		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_VOX			= 'icons/obj/clothing/gloves_ch.dmi'
+		SPECIES_VOX				= 'icons/obj/clothing/gloves_ch.dmi'
 		)
 
 /obj/item/clothing/shoes/magboots/rig/ch
 	sprite_sheets = list(
-		SPECIES_HUMAN			= 'icons/mob/feet_ch.dmi',
-		SPECIES_TAJ 			= 'icons/mob/feet_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/mob/feet_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/mob/feet_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/mob/feet_ch.dmi',
-		SPECIES_AKULA 			= 'icons/mob/feet_ch.dmi',
-		SPECIES_SERGAL			= 'icons/mob/feet_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/mob/feet_ch.dmi',
-		SPECIES_VULPKANIN		= 'icons/mob/feet_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/mob/feet_ch.dmi',
-		SPECIES_FENNEC			= 'icons/mob/feet_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/mob/feet_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/feet_ch.dmi',
-		SPECIES_VASILISSAN		= 'icons/mob/feet_ch.dmi',
-		SPECIES_VOX			= 'icons/mob/species/vox/shoes_ch.dmi'
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_FENNEC			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
@@ -216,12 +216,12 @@
 		SPECIES_SERGAL			= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_NEVREAN			= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_VULPKANIN 		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_ZORREN_HIGH 		= 'icons/obj/clothing/shoes_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_FENNEC 			= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_TESHARI 		= 'icons/obj/clothing/shoes_ch.dmi',
 		SPECIES_VASILISSAN		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_VOX			= 'icons/obj/clothing/shoes_ch.dmi'
+		SPECIES_VOX				= 'icons/obj/clothing/shoes_ch.dmi'
 		)
 
 
