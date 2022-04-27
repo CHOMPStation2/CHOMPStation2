@@ -90,6 +90,7 @@
 		/mob/living/carbon/human/proc/nano_blobform,
 		/mob/living/carbon/human/proc/nano_rig_transform,
 		/mob/living/carbon/human/proc/appearance_switch,
+		/mob/living/carbon/human/proc/nano_latch,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/nano_change_fitting, //These verbs are displayed normally,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,

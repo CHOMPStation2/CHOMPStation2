@@ -341,10 +341,10 @@
 	set category = "Abilities"
 	set hidden = 1
 	var/datum/species/protean/S = src.species
-	var/mob/M = src
+	var/mob/living/caller = src
 	if(temporary_form)
-		M = temporary_form
-	var/blobstyle = input(M, "Which blob style would you like?") in list("Red and Blue Stars", "Blue Star", "Plain")
+		caller = temporary_form
+	var/blobstyle = input(caller, "Which blob style would you like?") in list("Red and Blue Stars", "Blue Star", "Plain")
 	switch(blobstyle)
 		if("Red and Blue Stars")
 			S.blob_appearance = "puddle2"
@@ -360,6 +360,40 @@
 			if(istype(temporary_form.loc, /obj/item/weapon/holder/protoblob))
 				var/obj/item/weapon/holder/protoblob/PB = temporary_form.loc
 				PB.item_state = S.blob_appearance
+
+/mob/living/carbon/human/proc/nano_latch()
+	set name = "Latch/Unlatch host"
+	set desc = "Allows a protean to forcibly latch or unlatch from a host."
+	set category = "Abilities"
+	set hidden = 1
+	var/mob/living/caller = src
+	var/mob/living/carbon/human/target
+	var/datum/species/protean/S = src.species
+	if(temporary_form)
+		caller = temporary_form
+		if(caller.loc == S.OurRig)
+			target = S.OurRig.wearer
+			if(target)
+				target.drop_from_inventory(S.OurRig)
+			else
+				to_chat(caller, "You aren't being worn, dummy.")
+			return
+	var/obj/held_item = caller.get_active_hand()
+	if(istype(held_item,/obj/item/weapon/grab))
+		var/obj/item/weapon/grab/G = held_item
+		if(istype(G.affecting, target))
+			if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
+				if(do_after(caller, 30, target))
+					if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
+						caller.visible_message("<span class='danger'>[caller] latched onto [target]!</span>", "<span class='danger'>You latch yourself onto [target]!</span>")
+						target.Weaken(3)
+						nano_rig_transform()
+						target.drop_from_inventory(back)
+						target.equip_to_slot_if_possible(S.OurRig, slot_back)
+		else
+			to_chat(caller, "You can only latch onto humanoid mobs!")
+	else
+		to_chat(caller, "You need to be grabbing a humanoid mob aggressively to latch onto them.")
 
 /// /// /// A helper to reuse
 /mob/living/proc/nano_get_refactory(obj/item/organ/internal/nano/refactory/R)
@@ -452,5 +486,11 @@
 	desc = "Toggle your blob appearance. Also affects your worn appearance."
 	icon_state = "rig"
 	to_call = /mob/living/carbon/human/proc/appearance_switch
+
+/obj/effect/protean_ability/latch_host
+	ability_name = "Latch Host"
+	desc = "Forcibly latch or unlatch your RIG from a host mob."
+	icon_state = "rig"
+	to_call = /mob/living/carbon/human/proc/nano_latch
 
 #undef PER_LIMB_STEEL_COST

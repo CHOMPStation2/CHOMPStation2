@@ -74,6 +74,7 @@
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_blobform
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_rig_transform
 		verbs |= /mob/living/simple_mob/protean_blob/proc/appearance_switch
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_latch
 		verbs -= /mob/living/simple_mob/proc/nutrition_heal
 	else
 		update_icon()
@@ -116,6 +117,13 @@
 	set category = "Abilities"
 	set hidden = 1
 	humanform.appearance_switch()
+
+/mob/living/simple_mob/protean_blob/proc/nano_latch()
+	set name = "Latch/Unlatch host"
+	set desc = "Allows a protean to forcibly latch or unlatch from a host."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_latch()
 
 /mob/living/simple_mob/protean_blob/Login()
 	..()
