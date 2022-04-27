@@ -7670,6 +7670,7 @@ lel
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/toolstorage)
 "sQ" = (
