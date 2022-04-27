@@ -323,9 +323,10 @@
 					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
 				else
 					if(P.l_hand)
-						drop_from_inventory(P.l_hand)
+						P.drop_from_inventory(P.l_hand)
 					if(P.r_hand)
-						drop_from_inventory(P.r_hand)
+						P.drop_from_inventory(P.r_hand)
+					P.has_hands = 0
 					S.OurRig.myprotean = P
 					src.drop_from_inventory(S.OurRig)
 					P.forceMove(S.OurRig)
@@ -333,55 +334,6 @@
 		else	//Make one if not
 			to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. A new one has been created for you, contact a coder.</span>")
 			new /obj/item/weapon/rig/protean(src,src)
-
-////
-//  Change size
-////
-/*CHOMP Removal start - I am replacing this with the OG set size. No more metal requirement.
-/mob/living/carbon/human/proc/nano_set_size()
-	set name = "Adjust Volume"
-	set category = "Abilities"
-	set hidden = 1
-
-	var/mob/living/user = temporary_form || src
-
-	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
-	//Missing the organ that does this
-	if(!istype(refactory))
-		to_chat(user,"<span class='warning'>You don't have a working refactory module!</span>")
-		return
-
-	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or between 1 to 600% in dorms area). Up-sizing consumes metal, downsizing returns metal."
-	var/new_size = input(user, nagmessage, "Pick a Size", user.size_multiplier*100) as num|null
-	if(!new_size || !size_range_check(new_size))
-		return
-
-	var/size_factor = new_size/100
-
-	//Will be: -1.75 for 200->25, and 1.75 for 25->200
-	var/sizediff = size_factor - user.size_multiplier
-
-	//Negative if shrinking, positive if growing
-	//Will be (PLSC*2)*-1.75 to 1.75
-	//For 2000 PLSC that's -7000 to 7000
-	var/cost = (PER_LIMB_STEEL_COST*2)*sizediff
-
-	//Sizing up
-	if(cost > 0)
-		if(refactory.use_stored_material(MAT_STEEL,cost))
-			user.resize(size_factor, ignore_prefs = 1)
-		else
-			to_chat(user,"<span class='warning'>That size change would cost [cost] steel, which you don't have.</span>")
-	//Sizing down (or not at all)
-	else if(cost <= 0)
-		cost = abs(cost)
-		var/actually_added = refactory.add_stored_material(MAT_STEEL,cost)
-		user.resize(size_factor, ignore_prefs = 1)
-		if(actually_added != cost)
-			to_chat(user,"<span class='warning'>Unfortunately, [cost-actually_added] steel was lost due to lack of storage space.</span>")
-
-	user.visible_message("<span class='notice'>Black mist swirls around [user] as they change size.</span>")
-CHOMP Removal end*/
 
 /mob/living/carbon/human/proc/appearance_switch()
 	set name = "Switch Blob Appearance"

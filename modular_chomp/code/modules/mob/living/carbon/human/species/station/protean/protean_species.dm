@@ -52,6 +52,9 @@
 
 	rarity_value =          5
 
+	female_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
+	male_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
+
 	crit_mod = 4	//Unable to go crit
 	var/obj/item/weapon/rig/protean/OurRig
 
