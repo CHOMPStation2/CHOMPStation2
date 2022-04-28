@@ -292,7 +292,7 @@ armorsoak = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 
 	icon_state = "legguards_green"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
 
-	/obj/item/clothing/accessory/armor/legguards/explorer/adv //CHOMPADD
+/obj/item/clothing/accessory/armor/legguards/explorer/adv //CHOMPADD
 	name = "explorer leg guards" //CHOMPADD
 	desc = "Advanced leg guards for explorers. Attaches to a plate carrier." //CHOMPADD
 	icon_state = "legguards_green" //CHOMPADD
