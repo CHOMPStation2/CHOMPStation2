@@ -102,7 +102,7 @@
 	desc = "Advanced version of the standared exploration plate. Attaches to a plate carrier." //CHOMPADD
 	icon_state = "armor_light" //CHOMPADD
 	armor = list(melee = 45, bullet = 30, laser = 30, energy = 30, bomb = 35, bio = 75, rad = 35) //CHOMPADD
-armorsoak = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPADD
+	armorsoak = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPADD
 
 /obj/item/clothing/accessory/armor/armorplate/stab
 	name = "mesh armor plate"
