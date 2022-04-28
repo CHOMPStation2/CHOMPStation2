@@ -51,6 +51,9 @@ lel
 /obj/machinery/computer/arcade/battle{
 	dir = 8
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
 "ah" = (
@@ -1140,6 +1143,12 @@ lel
 /obj/effect/landmark/start/medical,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/office)
+"cT" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
 "cU" = (
 /obj/item/weapon/stock_parts/manipulator,
 /obj/item/weapon/stock_parts/matter_bin,
@@ -2070,6 +2079,9 @@ lel
 /obj/machinery/firealarm{
 	dir = 4
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
 "fk" = (
@@ -2800,6 +2812,13 @@ lel
 "gW" = (
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
+"gX" = (
+/obj/structure/table/bench/padded,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
 "gY" = (
 /obj/machinery/telecomms/hub/preset/groundbase,
 /turf/simulated/floor/tiled/dark{
@@ -3070,6 +3089,9 @@ lel
 /turf/simulated/wall,
 /area/groundbase/medical/resleeving)
 "hM" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/autoresleeving)
 "hN" = (
@@ -3449,6 +3471,12 @@ lel
 "iH" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/groundbase/level1/netunnel)
+"iI" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/briefing)
 "iJ" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -3486,6 +3514,15 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/engine)
+"iO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/medical/equipment)
 "iP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6108,6 +6145,10 @@ lel
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/structure/table/reinforced,
+/obj/machinery/photocopier/faxmachine{
+	department = "Engineering"
+	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/lobby)
 "pf" = (
@@ -6833,6 +6874,9 @@ lel
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
 "qY" = (
@@ -7262,6 +7306,15 @@ lel
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/engineering/atmos)
+"rS" = (
+/obj/structure/closet/walllocker_double{
+	pixel_y = 28
+	},
+/obj/random/instrument,
+/obj/random/instrument,
+/obj/item/instrument/guitar,
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
 "rT" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
 	outdoors = 0
@@ -8658,6 +8711,9 @@ lel
 /obj/machinery/alarm{
 	dir = 8
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
 "vp" = (
@@ -8973,6 +9029,9 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/halle)
@@ -13560,6 +13619,12 @@ lel
 /obj/machinery/chemical_dispenser/bar_alc/full,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
+"GS" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/warden)
 "GT" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -13587,6 +13652,12 @@ lel
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/groundbase/security/iaa2)
+"GW" = (
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
 "GX" = (
 /obj/machinery/light{
 	dir = 8
@@ -13714,6 +13785,13 @@ lel
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment,
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
+>>>>>>> 8a68e2bd53... Merge pull request #12856 from Very-Soft/somequicktweaks
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "Hl" = (
@@ -14529,8 +14607,17 @@ lel
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
 /obj/structure/table/reinforced,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/eva)
+"Jl" = (
+/obj/structure/sign/painting/public{
+	pixel_y = -30
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
 "Jm" = (
 /obj/machinery/camera/network/civilian{
 	dir = 1
@@ -15330,6 +15417,7 @@ lel
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/briefing)
 "Le" = (
@@ -15471,6 +15559,9 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/halle)
@@ -17500,6 +17591,15 @@ lel
 	},
 /turf/simulated/floor/bmarble,
 /area/groundbase/engineering/engine)
+"QF" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
 "QG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -17515,6 +17615,8 @@ lel
 /obj/structure/table/reinforced,
 /obj/item/device/sleevemate,
 /obj/item/device/denecrotizer/medical,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/equipment)
 "QI" = (
@@ -18089,6 +18191,12 @@ lel
 	outdoors = 0
 	},
 /area/groundbase/command/ai/foyer)
+"Sd" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/medical/lhallway)
 "Se" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -18415,6 +18523,9 @@ lel
 /obj/structure/table/marble,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
@@ -20375,6 +20486,9 @@ lel
 /area/groundbase/command/tcomms/foyer)
 "XJ" = (
 /obj/structure/closet/secure_closet/engineering_personal,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 "XK" = (
@@ -25123,7 +25237,7 @@ AE
 Hq
 tu
 vV
-ut
+gX
 ut
 yA
 pj
@@ -25256,7 +25370,7 @@ Fi
 FF
 MO
 pj
-ht
+cT
 vV
 AA
 ut
@@ -26024,7 +26138,7 @@ eR
 eR
 AZ
 cv
-AN
+iI
 kh
 jx
 az
@@ -26605,7 +26719,7 @@ JA
 Ea
 TC
 iw
-Pl
+GS
 HW
 uZ
 tw
@@ -26960,7 +27074,7 @@ ce
 ce
 ce
 pj
-ht
+cT
 vV
 AA
 ut
@@ -29380,13 +29494,13 @@ MO
 MO
 MO
 hq
-Yl
+GW
 Me
 Hl
 AH
 Yl
 Yl
-cr
+QF
 hq
 lE
 lE
@@ -29812,7 +29926,7 @@ tb
 Fn
 kC
 Yl
-Yl
+Jl
 hq
 lE
 vw
@@ -29948,7 +30062,7 @@ Ym
 oS
 vL
 hq
-Yl
+rS
 uJ
 oI
 kr
@@ -33932,7 +34046,7 @@ Tn
 QC
 Dx
 QC
-qA
+iO
 DQ
 oi
 ze
@@ -34494,7 +34608,7 @@ Ni
 jz
 qC
 ox
-wA
+Sd
 DQ
 KY
 jw
