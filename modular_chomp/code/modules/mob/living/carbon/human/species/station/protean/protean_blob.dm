@@ -71,6 +71,7 @@
 		verbs |= /mob/living/proc/usehardsuit
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_partswap
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_regenerate
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_metalnom
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_blobform
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_rig_transform
 		verbs |= /mob/living/simple_mob/protean_blob/proc/appearance_switch
@@ -103,6 +104,13 @@
 	set category = "Abilities"
 	set hidden = 1
 	humanform.nano_blobform()
+
+/mob/living/simple_mob/protean_blob/proc/nano_metalnom()
+	set name = "Ref - Store Metals"
+	set desc = "If you're holding a stack of material, you can consume some and store it for later."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_metalnom()
 
 /mob/living/simple_mob/protean_blob/proc/nano_rig_transform()
 	set name = "Modify Form - Hardsuit"
@@ -285,7 +293,7 @@ datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/death(gibbed, deathmessage = "dissolves away, leaving only a few spare parts!")
+/mob/living/simple_mob/protean_blob/death(gibbed, deathmessage = "Coalesces inwards, retreating into their core componants")
 	if(humanform)
 		humanform.death(gibbed, deathmessage)
 	else

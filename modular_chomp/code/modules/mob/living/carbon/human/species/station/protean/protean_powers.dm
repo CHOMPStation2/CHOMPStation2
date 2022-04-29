@@ -203,15 +203,19 @@
 	set category = "Abilities"
 	set hidden = 1
 
+	var/mob/living/caller = src
+	if(temporary_form)
+		caller = temporary_form
+
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
 	if(!istype(refactory))
-		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
+		to_chat(caller,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
 
-	var/held = get_active_hand()
+	var/held = caller.get_active_hand()
 	if(!istype(held,/obj/item/stack/material))
-		to_chat(src,"<span class='warning'>You aren't holding a stack of materials in your active hand...!</span>")
+		to_chat(caller,"<span class='warning'>You aren't holding a stack of materials in your active hand...!</span>")
 		return
 
 	var/obj/item/stack/material/matstack = held
@@ -220,23 +224,23 @@
 	for(var/material in PROTEAN_EDIBLE_MATERIALS)
 		if(material == substance) allowed = 1
 	if(!allowed)
-		to_chat(src,"<span class='warning'>You can't process [substance]!</span>")
-		return //Only a few things matter, the rest are best not cluttering the lists.
+		to_chat(caller,"<span class='warning'>You can't process [substance]!</span>")
+		return
 
-	var/howmuch = input(src,"How much do you want to store? (0-[matstack.get_amount()])","Select amount") as null|num
-	if(!howmuch || matstack != get_active_hand() || howmuch > matstack.get_amount())
+	var/howmuch = input(caller,"How much do you want to store? (0-[matstack.get_amount()])","Select amount") as null|num
+	if(!howmuch || matstack != caller.get_active_hand() || howmuch > matstack.get_amount())
 		return //Quietly fail
 
 	var/actually_added = refactory.add_stored_material(substance,howmuch*matstack.perunit)
 	matstack.use(CEILING((actually_added/matstack.perunit), 1))
 	if(actually_added && actually_added < howmuch)
-		to_chat(src,"<span class='warning'>Your refactory module is now full, so only [actually_added] units were stored.</span>")
-		visible_message("<span class='notice'>[src] nibbles some of the [substance] right off the stack!</span>")
+		to_chat(caller,"<span class='warning'>Your refactory module is now full, so only [actually_added] units were stored.</span>")
+		visible_message("<span class='notice'>[caller] nibbles some of the [substance] right off the stack!</span>")
 	else if(actually_added)
-		to_chat(src,"<span class='notice'>You store [actually_added] units of [substance].</span>")
-		visible_message("<span class='notice'>[src] devours some of the [substance] right off the stack!</span>")
+		to_chat(caller,"<span class='notice'>You store [actually_added] units of [substance].</span>")
+		visible_message("<span class='notice'>[caller] devours some of the [substance] right off the stack!</span>")
 	else
-		to_chat(src,"<span class='notice'>You're completely capped out on [substance]!</span>")
+		to_chat(caller,"<span class='notice'>You're completely capped out on [substance]!</span>")
 
 ////
 //  Blob Form
@@ -375,25 +379,37 @@
 			target = S.OurRig.wearer
 			if(target)
 				target.drop_from_inventory(S.OurRig)
+				to_chat(caller, "<span class='notice'>You detach from your host.</span>")
 			else
-				to_chat(caller, "You aren't being worn, dummy.")
+				to_chat(caller, "<span class='warning'>You aren't being worn, dummy.</span>")
 			return
 	var/obj/held_item = caller.get_active_hand()
 	if(istype(held_item,/obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = held_item
-		if(istype(G.affecting, target))
+		if(istype(G.affecting, /mob/living/carbon/human))
+			target = G.affecting
+			if(istype(target.species, /datum/species/protean))
+				to_chat(caller, "<span class='danger'>You can't latch onto a fellow Protean!</span>")
 			if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
-				if(do_after(caller, 30, target))
+				caller.visible_message("<span class='warning'>[caller] is attempting to latch onto [target]!</span>", "<span class='danger'>You attempt to latch onto [target]!</span>")
+				if(do_after(caller, 50, target))
 					if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
+						target.drop_from_inventory(target.back)
 						caller.visible_message("<span class='danger'>[caller] latched onto [target]!</span>", "<span class='danger'>You latch yourself onto [target]!</span>")
 						target.Weaken(3)
 						nano_rig_transform()
-						target.drop_from_inventory(back)
+						spawn(2)	//Have to give time for the above proc to resolve
+						S.OurRig.forceMove(target)
 						target.equip_to_slot_if_possible(S.OurRig, slot_back)
+						S.OurRig.Moved()
+						spawn(1)	//Same here :(
+						S.OurRig.wearer = target
+			else
+				to_chat(caller, "<span class='warning'>You need a more aggressive grab to do this!</span>")
 		else
-			to_chat(caller, "You can only latch onto humanoid mobs!")
+			to_chat(caller, "<span class='warning'>You can only latch onto humanoid mobs!</span>")
 	else
-		to_chat(caller, "You need to be grabbing a humanoid mob aggressively to latch onto them.")
+		to_chat(caller, "<span class='warning'>You need to be grabbing a humanoid mob aggressively to latch onto them.</span>")
 
 /// /// /// A helper to reuse
 /mob/living/proc/nano_get_refactory(obj/item/organ/internal/nano/refactory/R)
