@@ -314,6 +314,10 @@ datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 
 /mob/living/simple_mob/protean_blob/lay_down()
 	..()
+	var/obj/item/weapon/rig/rig = src.get_rig()
+	if(rig)
+		rig.force_rest(src)
+		return
 	if(resting)
 		mouse_opacity = 0
 		plane = ABOVE_OBJ_PLANE

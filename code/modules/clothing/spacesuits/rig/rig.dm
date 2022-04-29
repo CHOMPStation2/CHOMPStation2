@@ -921,9 +921,13 @@
 		return
 
 //CHOMP Addition - Added this for protean living hardsuit
+	wearer_move_delay = world.time + 2
 	if(ai_moving)
 		if(!ai_can_move_suit(user, check_user_module = 1))
 			return
+		// AIs are a bit slower than regular and ignore move intent.
+		//CHOMPEdit - Moved this to where it's relevant
+		wearer_move_delay = world.time + ai_controlled_move_delay
 
 	//This is sota the goto stop mobs from moving var
 	if(wearer.transforming || !wearer.canmove)
@@ -954,9 +958,6 @@
 	if(wearer.pinned.len)
 		to_chat(src, "<span class='notice'>Your host is pinned to a wall by [wearer.pinned[1]]</span>!")
 		return 0
-
-	// AIs are a bit slower than regular and ignore move intent.
-	wearer_move_delay = world.time + ai_controlled_move_delay
 
 	if(istype(wearer.buckled, /obj/vehicle))
 		//manually set move_delay for vehicles so we don't inherit any mob movement penalties

@@ -349,6 +349,18 @@
 			AssimilateBag(user,0,W)
 	..()
 
+/obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
+	return	//We don't do that here
+
+/obj/item/weapon/rig/protean/emp_act(severity_class)
+	return	//Same here
+
+/obj/item/weapon/rig/protean/cut_suit()
+	return	//nope
+
+/obj/item/weapon/rig/protean/force_rest(var/mob/user)
+	wearer.lay_down()
+	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
 
 /obj/item/weapon/cell/protean
 	name = "Protean power cell"

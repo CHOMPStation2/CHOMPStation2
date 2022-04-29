@@ -318,12 +318,12 @@
 							perform_the_nom(P,victim,P,P.vore_selected,1)
 				P.forceMove(get_turf(S.OurRig))
 				S.OurRig.forceMove(src)
-				S.OurRig.myprotean = null
+				S.OurRig.myprotean = src
 				src.equip_to_slot_if_possible(S.OurRig, slot_back)
 				S.OurRig.Moved()
 				P.has_hands = 1
 			else	//We're not in our own RIG
-				if(P.stat)
+				if(P.stat || P.resting)
 					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
 				else
 					if(P.l_hand)
