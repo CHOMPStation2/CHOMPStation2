@@ -19,16 +19,6 @@
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
 
-	if(!bellies_loaded) //CHOMPedit Start: On-demand belly loading
-		var/datum/vore_preferences/P = client.prefs_vr
-		var/firstbelly = FALSE // First belly loaded on init_vore
-		for(var/entry in P.belly_prefs)
-			if(!firstbelly)
-				firstbelly = TRUE
-				continue
-			list_to_object(entry,src)
-		bellies_loaded = TRUE //CHOMPedit End
-
 	vorePanel.tgui_interact(src)
 
 /mob/living/proc/updateVRPanel() //Panel popup update call from belly events.
@@ -414,7 +404,7 @@
 			var/alert = tgui_alert(usr, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
 			if(alert != "Reload")
 				return FALSE
-			if(!host.apply_vore_prefs(TRUE)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
+			if(!host.apply_vore_prefs())
 				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")

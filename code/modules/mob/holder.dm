@@ -313,6 +313,7 @@ var/list/holder_mob_icon_cache = list()
 	//end YW edit
 
 	var/obj/item/weapon/holder/H = new holder_type(get_turf(src), src)
+	H.sync(src)	//CHOMPEdit - See modular_chomp/code/modules/mob/holder.dm for what this does
 	grabber.put_in_hands(H)
 
 	if(self_grab)

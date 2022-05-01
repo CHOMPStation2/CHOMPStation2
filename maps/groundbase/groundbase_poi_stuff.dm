@@ -938,9 +938,6 @@
 	mappath = 'pois/cavething14.dmm'
 	cost = 3
 	allow_duplicates = FALSE
-<<<<<<< HEAD
-=======
-
 
 /obj/effect/landmark/poi_loader/gb_square
 	name = "Square House Loader"
@@ -959,7 +956,6 @@
 	size_x = 17
 	size_y = 24
 	poi_type = /datum/map_template/groundbase/wildvillage/long
-
 
 /area/submap/groundbase/poi/wildvillage
 	name = "POI - Wilderness Village"
@@ -1082,4 +1078,4 @@
 	name = "wide building 4"
 	mappath = 'southwilds/villagepois/long4.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long4
->>>>>>> 6aa6c45620... Merge pull request #12842 from Heroman3003/poi-guarantee
+

@@ -5,7 +5,7 @@
 	tt_desc = "Dasypus novemcinctus"
 	//faction = "mexico" //They are from Mexico. //Amusing but this prompts aggression from crew-aligned mobs.
 
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "armadillo"
 	item_state = "armadillo_rest"
 	icon_living = "armadillo"
@@ -49,7 +49,7 @@
 
 	var/obj/item/clothing/head/hat = null // The hat the armadillo may be wearing.
 
-//Hat simulator stolen from slime code. 
+//Hat simulator stolen from slime code.
 /mob/living/simple_mob/animal/passive/armadillo/Destroy()
 	if(hat)
 		drop_hat()
@@ -114,7 +114,7 @@
 
 /obj/item/weapon/holder/armadillo
 	origin_tech = list(TECH_BIO = 1)
-	default_worn_icon = 'icons/mob/head_ch.dmi'
+	default_worn_icon = 'modular_chomp/icons/mob/head_ch.dmi'
 	//item_state = "armadillo_rest" //Commented here as a reminder that holders will always set the item_state to icon_rest. You cannot override it like this.
 
 /mob/living/simple_mob/animal/passive/armadillo/torta

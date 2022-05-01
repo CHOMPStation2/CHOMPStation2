@@ -27,7 +27,7 @@
 	icon_dead = "deathclaw-dead"
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
-	icon = 'icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
+	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
 	vis_height = 64
 
 	attacktext = list("mauled")
