@@ -97,13 +97,6 @@
 	icon_state = "armor_light"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
 
-	/obj/item/clothing/accessory/armor/armorplate/explorer/adv //CHOMPADD
-	name = "explorer armor plate" //CHOMPADD
-	desc = "Advanced version of the standared exploration plate. Attaches to a plate carrier." //CHOMPADD
-	icon_state = "armor_light" //CHOMPADD
-	armor = list(melee = 45, bullet = 30, laser = 30, energy = 30, bomb = 35, bio = 75, rad = 35) //CHOMPADD
-	armorsoak = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPADD
-
 /obj/item/clothing/accessory/armor/armorplate/stab
 	name = "mesh armor plate"
 	desc = "A mesh armor plate made of steel-reinforced synthetic fibers, great for dealing with small blades. Attaches to a plate carrier."
@@ -220,12 +213,6 @@
 	desc = "A pair of green arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_green"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
-
-/obj/item/clothing/accessory/armor/armguards/explorer/adv //CHOMPADD
-	name = "explorer arm guards" //CHOMPADD
-	desc = "Advanced arm guards for explorers. Attaches to a plate carrier." //CHOMPADD
-	icon_state = "armguards_green" //CHOMPADD
-	armor = list(melee = 45, bullet = 30, laser = 30, energy = 30, bomb = 35, bio = 75, rad = 35) //CHOMPADD
 	
 /obj/item/clothing/accessory/armor/armguards/merc
 	name = "heavy arm guards"
@@ -291,12 +278,6 @@
 	desc = "A pair of armored leg pads in green. Attaches to a plate carrier."
 	icon_state = "legguards_green"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
-
-/obj/item/clothing/accessory/armor/legguards/explorer/adv //CHOMPADD
-	name = "explorer leg guards" //CHOMPADD
-	desc = "Advanced leg guards for explorers. Attaches to a plate carrier." //CHOMPADD
-	icon_state = "legguards_green" //CHOMPADD
-	armor = list(melee = 45, bullet = 30, laser = 30, energy = 30, bomb = 35, bio = 75, rad = 35) //CHOMPADD
 
 /obj/item/clothing/accessory/armor/legguards/merc
 	name = "heavy leg guards"
