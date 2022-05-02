@@ -1242,6 +1242,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/mob/living/simple_mob/animal/passive/mouse/mining,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/mining_main/uxstorage)
 "dH" = (

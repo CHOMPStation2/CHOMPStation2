@@ -447,6 +447,7 @@
 	dir = 1;
 	name = "Outpost Prep"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck/prep)
 "abt" = (
@@ -841,10 +842,10 @@
 	pixel_y = 32
 	},
 /obj/structure/table,
-/turf/simulated/floor/holofloor/wood,
+/turf/simulated/floor/wood,
 /area/construction/firstdeck)
 "acP" = (
-/turf/simulated/floor/holofloor/wood,
+/turf/simulated/floor/wood,
 /area/construction/firstdeck)
 "acT" = (
 /turf/simulated/floor/plating,
@@ -1779,7 +1780,7 @@
 /obj/machinery/light_construct{
 	dir = 8
 	},
-/turf/simulated/floor/holofloor/wood,
+/turf/simulated/floor/wood,
 /area/construction/firstdeck)
 "agK" = (
 /obj/item/stack/material/steel{
@@ -1789,11 +1790,11 @@
 /area/construction/firstdeck)
 "agL" = (
 /obj/structure/fitness/weightlifter,
-/turf/simulated/floor/holofloor/wood,
+/turf/simulated/floor/wood,
 /area/construction/firstdeck)
 "agM" = (
 /obj/item/weapon/storage/box/cups,
-/turf/simulated/floor/holofloor/wood,
+/turf/simulated/floor/wood,
 /area/construction/firstdeck)
 "agR" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -1864,7 +1865,7 @@
 /area/hallway/primary/firstdeck/port)
 "aho" = (
 /obj/structure/closet/athletic_mixed,
-/turf/simulated/floor/holofloor/wood,
+/turf/simulated/floor/wood,
 /area/construction/firstdeck)
 "ahp" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -8287,6 +8288,11 @@
 	pixel_y = 30;
 	tag_door = "escape_pod_6_berth_hatch"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aQp" = (
@@ -8462,6 +8468,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aRy" = (
@@ -8469,6 +8480,11 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aRz" = (
@@ -8479,11 +8495,26 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aRF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -8538,6 +8569,11 @@
 	pixel_x = -7;
 	pixel_y = -27
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aSi" = (
@@ -8577,6 +8613,11 @@
 	id_tag = null
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aSx" = (
@@ -8638,6 +8679,11 @@
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aTj" = (
@@ -8674,6 +8720,11 @@
 	name = "interior access button";
 	pixel_x = 7;
 	pixel_y = 27
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -10149,6 +10200,11 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "bFo" = (
@@ -10265,6 +10321,11 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -10730,6 +10791,11 @@
 	name = "Escape Pod"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "ciy" = (
@@ -11352,6 +11418,16 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "cVA" = (
@@ -11487,6 +11563,11 @@
 	dir = 10
 	},
 /obj/machinery/light/small,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "dgD" = (
@@ -11649,6 +11730,23 @@
 /obj/effect/floor_decal/corner/pink/bordercorner,
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
+"dtt" = (
+/obj/machinery/shield_diffuser,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Dock External Airlock";
+	req_one_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/firstdeck/auxdockaft)
 "dtQ" = (
 /obj/machinery/light{
 	dir = 8
@@ -11946,6 +12044,11 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "dRD" = (
@@ -14649,6 +14752,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "eAy" = (
@@ -15206,6 +15314,11 @@
 	dir = 6
 	},
 /obj/machinery/light/small,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "fsf" = (
@@ -15790,6 +15903,11 @@
 	pixel_y = 27;
 	req_one_access = list(13)
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
 "gfJ" = (
@@ -16238,6 +16356,11 @@
 	dir = 8
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "gOv" = (
@@ -16547,6 +16670,11 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -16946,6 +17074,11 @@
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -18006,6 +18139,11 @@
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
 "juS" = (
@@ -18170,6 +18308,18 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"jBM" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/auxdockaft)
 "jBW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -18979,6 +19129,11 @@
 	pixel_x = 24
 	},
 /obj/structure/cable,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "kAD" = (
@@ -19339,6 +19494,11 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -20568,6 +20728,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "mIU" = (
@@ -21770,6 +21935,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
+"olL" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled,
+/area/teleporter/firstdeck/prep)
 "oma" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -21823,6 +21992,11 @@
 	id_tag = null
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "opg" = (
@@ -22382,6 +22556,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tcomm/computer)
+"pfi" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Dock Internal Airlock"
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/firstdeck/auxdockaft)
 "pfv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
@@ -23101,6 +23290,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
+"pWX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/auxdockaft)
 "pXo" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -23205,6 +23409,11 @@
 /obj/machinery/hologram/holopad,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
@@ -24915,6 +25124,11 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
 "syr" = (
@@ -25574,6 +25788,11 @@
 	id_tag = null
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "tlt" = (
@@ -25989,6 +26208,11 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "tHL" = (
@@ -26182,6 +26406,11 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "tSI" = (
@@ -26354,6 +26583,11 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -27636,6 +27870,11 @@
 	id_tag = "d1_aux_c_airlock";
 	pixel_x = -27;
 	req_one_access = list(13)
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -55692,12 +55931,12 @@ aFf
 ajn
 aVW
 azG
-ahF
+olL
 abs
 azG
 gnU
 azG
-ahF
+olL
 abs
 azG
 amq
@@ -61160,12 +61399,12 @@ wCH
 aPU
 vYO
 aQH
-nyj
+jBM
 aRz
-aRY
+pfi
 aSw
 tHc
-aSU
+dtt
 aaa
 gqi
 aaa
@@ -65031,7 +65270,7 @@ hCe
 hCe
 hCe
 wMK
-aUw
+pWX
 jtM
 vpX
 gNX
