@@ -3393,7 +3393,7 @@
 /obj/structure/closet/crate,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/cavern)
 "dds" = (
 /obj/effect/floor_decal/industrial/danger{
@@ -6449,10 +6449,6 @@
 "fGh" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/public/publicrestroom)
-"fHU" = (
-/obj/item/weapon/ore/glass,
-/turf/simulated/floor/outdoors/rocks,
-/area/awaymission/snowfield/cavern)
 "fIy" = (
 /obj/item/weapon/stool,
 /obj/item/weapon/paper/awaygate/snowfield/evacuation_order,
@@ -27908,10 +27904,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
-"xPk" = (
-/obj/structure/outcrop/coal,
-/turf/simulated/floor/outdoors/rocks,
-/area/awaymission/snowfield/cavern)
 "xPt" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
@@ -63054,7 +63046,7 @@ xkl
 xkl
 xkl
 xkl
-uKf
+nse
 vDF
 vDF
 vDF
@@ -63312,7 +63304,7 @@ xkl
 xkl
 xkl
 xkl
-qTN
+mEn
 vDF
 vDF
 vDF
@@ -63824,7 +63816,7 @@ vDF
 vDF
 vDF
 qVU
-qTN
+mEn
 xkl
 xkl
 xkl
@@ -64081,16 +64073,16 @@ pun
 vDF
 vDF
 bvd
-qTN
+mEn
 xkl
 cKO
-qTN
+mEn
 xkl
 xkl
 xkl
 xkl
 bFn
-uKf
+nse
 vDF
 vDF
 vDF
@@ -64340,17 +64332,17 @@ pun
 pun
 bvd
 cKO
-qTN
+mEn
 xkl
 xkl
 xkl
 xkl
 xkl
-qTN
+mEn
 xkl
 xkl
 hHj
-uKf
+nse
 vDF
 vDF
 vDF
@@ -64598,8 +64590,8 @@ pun
 pun
 pun
 bvd
-qTN
-qTN
+mEn
+mEn
 xkl
 xkl
 xkl
@@ -64607,8 +64599,8 @@ xkl
 xkl
 xkl
 xkl
-fHU
-qTN
+eAM
+mEn
 vDF
 vDF
 vDF
@@ -64856,7 +64848,7 @@ pun
 pun
 pun
 cKO
-qTN
+mEn
 xkl
 xkl
 dJm
@@ -64866,7 +64858,7 @@ xkl
 xkl
 xkl
 xkl
-qTN
+mEn
 vDF
 vDF
 vDF
@@ -65113,8 +65105,8 @@ pun
 pun
 vDF
 bvd
-qTN
-qTN
+mEn
+mEn
 xkl
 xkl
 xkl
@@ -65125,8 +65117,8 @@ xkl
 xkl
 xkl
 xkl
-qTN
-uKf
+mEn
+nse
 vDF
 vDF
 vDF
@@ -65375,7 +65367,7 @@ xkl
 cKO
 xkl
 xkl
-qTN
+mEn
 xkl
 xkl
 xkl
@@ -65628,8 +65620,8 @@ pun
 vDF
 vDF
 vDF
-uKf
-xPk
+nse
+vjJ
 xkl
 xkl
 xkl
@@ -65892,7 +65884,7 @@ vDF
 vDF
 vDF
 vDF
-uKf
+nse
 xkl
 xkl
 hHj
