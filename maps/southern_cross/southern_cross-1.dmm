@@ -9302,6 +9302,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/auxiliary_engineering)
 "aVK" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 8;
 	target_pressure = 4500
@@ -15979,7 +15980,8 @@
 	dir = 4
 	},
 /obj/item/device/radio/intercom/department/medbay{
-	pixel_y = 26
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod2/station)
@@ -20821,6 +20823,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
 "mOg" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -28464,11 +28469,9 @@
 /turf/simulated/floor,
 /area/maintenance/firstdeck/aftport)
 "wiX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/engineering/auxiliary_engineering)
