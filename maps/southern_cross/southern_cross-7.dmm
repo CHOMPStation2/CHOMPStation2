@@ -1869,6 +1869,10 @@
 	charge = 2e+006;
 	inputting = 1
 	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
 "eH" = (
@@ -5601,6 +5605,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/ursula)
