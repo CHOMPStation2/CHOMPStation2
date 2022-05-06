@@ -12662,13 +12662,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "kNJ" = (
-/obj/structure/cable,
 /obj/structure/cable/heavyduty{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/checkpointunpowered)
@@ -26450,13 +26454,14 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "wSz" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /obj/structure/cable/heavyduty,
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/checkpoint)
