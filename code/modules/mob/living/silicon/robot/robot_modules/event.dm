@@ -75,9 +75,19 @@
 	// For digging and beautifying graves
 	src.modules += new /obj/item/weapon/shovel(src)
 	src.modules += new /obj/item/weapon/gripper/gravekeeper(src)
+	
+	// For honoring the dead.
+	src.modules += new /obj/item/weapon/pen/robopen(src)
+	src.modules += new /obj/item/weapon/form_printer(src)
+	src.modules += new /obj/item/weapon/gripper/paperwork(src)
+	src.modules += new /obj/item/weapon/hand_labeler(src)
+	src.modules += new /obj/item/weapon/stamp(src)
+	src.modules += new /obj/item/weapon/stamp/denied(src)
 
 	// For really persistent looters
 	src.emag = new /obj/item/weapon/gun/energy/retro/mounted(src)
+	src.emag = new /obj/item/weapon/stamp/chameleon(src)
+	src.emag = new /obj/item/weapon/pen/chameleon(src)
 	
 	
 	// Giving it all the construction drone stuff. How else is is supposed to "expand the gravesite" without construction equipment?
