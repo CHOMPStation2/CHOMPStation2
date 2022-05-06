@@ -107,9 +107,9 @@
 	G.synths = list(glass)
 	src.modules += G
 
-	var/obj/item/stack/rods/cyborg/R = new /obj/item/stack/rods/cyborg(src)
-	R.synths = list(metal)
-	src.modules += R
+	var/obj/item/stack/rods/cyborg/rods = new /obj/item/stack/rods/cyborg(src)
+	rods.synths = list(metal)
+	src.modules += rods
 
 	var/obj/item/stack/cable_coil/cyborg/C = new /obj/item/stack/cable_coil/cyborg(src)
 	C.synths = list(wire)
