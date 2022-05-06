@@ -90,8 +90,8 @@
 	synths += metal
 	synths += glass
 	synths += plasteel
-	synths += plastic
 	synths += wood
+	synths += plastic
 	synths += wire
 	
 	var/obj/item/weapon/matter_decompiler/MD = new /obj/item/weapon/matter_decompiler(src)
@@ -107,7 +107,7 @@
 	G.synths = list(glass)
 	src.modules += G
 
-	var/obj/item/stack/rods/cyborg/R = new (src)
+	var/obj/item/stack/rods/cyborg/R = new /obj/item/stack/rods/cyborg(src)
 	R.synths = list(metal)
 	src.modules += R
 
