@@ -47,7 +47,7 @@
 					"Sleek" = "sleek-gravekeeper"
 				)
 
-/obj/item/weapon/robot_module/robot/gravekeeper/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/gravekeeper/
 	..()
 	// For fending off animals and looters
 	src.modules += new /obj/item/weapon/melee/baton/shocker/robot(src)
@@ -106,10 +106,6 @@
 	var/obj/item/stack/material/cyborg/glass/G = new (src)
 	G.synths = list(glass)
 	src.modules += G
-
-	var/obj/item/stack/rods/cyborg/R = new (src)
-	R.synths = list(metal)
-	src.modules += R
 
 	var/obj/item/stack/cable_coil/cyborg/C = new /obj/item/stack/cable_coil/cyborg(src)
 	C.synths = list(wire)
