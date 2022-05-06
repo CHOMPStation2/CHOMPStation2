@@ -83,6 +83,11 @@
 	src.modules += new /obj/item/weapon/hand_labeler(src)
 	src.modules += new /obj/item/weapon/stamp(src)
 	src.modules += new /obj/item/weapon/stamp/denied(src)
+	
+	// Candles!
+	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
+	L.lit = 1
+	src.modules += L
 
 	// For really persistent looters
 	src.emag = new /obj/item/weapon/gun/energy/retro/mounted(src)
