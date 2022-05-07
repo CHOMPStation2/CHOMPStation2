@@ -203,14 +203,36 @@
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
-			"vorespawn_blacklist" = selected.vorespawn_blacklist
-		) //CHOMP Addition: vorespawn blacklist
+			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
+			//CHOMP add: vore sprite options
+			"affects_voresprite" = selected.affects_vore_sprites,
+			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
+			"resist_animation" = selected.resist_triggers_animation,
+			"voresprite_size_factor" = selected.size_factor_for_sprite,
+			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
+			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) > 1 ? TRUE : FALSE,
+			"tail_option_shown" = istype(host, /mob/living/carbon/human),
+			"tail_to_change_to" = selected.tail_to_change_to,
+			"tail_colouration" = selected.tail_colouration,
+			"tail_extra_overlay" = selected.tail_extra_overlay,
+			"tail_extra_overlay2" = selected.tail_extra_overlay2
+			//"marking_to_add" = selected.marking_to_add
+			//CHOMPEdit end
+		)
 
 		var/list/addons = list()
 		for(var/flag_name in selected.mode_flag_list)
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
 				addons.Add(flag_name)
 		selected_list["addons"] = addons
+
+		//CHOMPEdit voresprite flags
+		var/list/vs_flags = list()
+		for(var/flag_name in selected.vore_sprite_flag_list)
+			if(selected.vore_sprite_flags & selected.vore_sprite_flag_list[flag_name])
+				vs_flags.Add(flag_name)
+		selected_list["vore_sprite_flags"] = vs_flags
+		//CHOMPEdit END
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["contaminates"] = selected.contaminates
@@ -1255,6 +1277,59 @@
 			. = TRUE
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
+			. = TRUE
+		if("b_belly_sprite_to_affect") //CHOMP Addition
+			var/belly_choice = tgui_input_list(usr, "Which belly sprite do you want your [lowertext(host.vore_selected.name)] to affect?","Select Region", host.vore_icon_bellies)
+			if(!belly_choice) //They cancelled, no changes
+				return FALSE
+			else
+				host.vore_selected.belly_sprite_to_affect = belly_choice
+			. = TRUE
+		if("b_vore_sprite_flags") //CHOMP Addition
+			var/list/menu_list = host.vore_selected.vore_sprite_flag_list.Copy()
+			var/toggle_vs_flag = tgui_input_list(usr, "Toggle Vore Sprite Modes", "Mode Choice", menu_list)
+			if(!toggle_vs_flag)
+				return FALSE
+			host.vore_selected.vore_sprite_flags ^= host.vore_selected.vore_sprite_flag_list[toggle_vs_flag]
+			. = TRUE
+		if("b_affects_vore_sprites") //CHOMP Addition
+			host.vore_selected.affects_vore_sprites = !host.vore_selected.affects_vore_sprites
+			. = TRUE
+		if("b_count_absorbed_prey_for_sprites") //CHOMP Addition
+			host.vore_selected.count_absorbed_prey_for_sprite = !host.vore_selected.count_absorbed_prey_for_sprite
+			. = TRUE
+		if("b_resist_animation") //CHOMP Addition
+			host.vore_selected.resist_triggers_animation = !host.vore_selected.resist_triggers_animation
+			. = TRUE
+		if("b_size_factor_sprites") //CHOMP Addition
+			var/size_factor_input = input(user, "Set the impact prey's size have on your vore sprite. 1 means no scaling, 0.5 means prey count half as much, 2 means prey count double. (Range from 0.1 - 3)", "Size Factor") as num|null
+			if(!isnull(size_factor_input))
+				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
+			. = TRUE
+		if("b_tail_to_change_to") //CHOMP Addition
+			var/tail_choice = tgui_input_list(usr, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list)
+			if(!tail_choice) //They cancelled, no changes
+				return FALSE
+			else
+				host.vore_selected.tail_to_change_to = tail_choice
+			. = TRUE
+		if("b_tail_color") // CHOMP Addition
+			var/newcolor = input(usr, "Choose tail color.", "", host.vore_selected.tail_colouration) as color|null
+			if(newcolor)
+				host.vore_selected.tail_colouration = newcolor
+			update_preview_icon()
+			. = TRUE
+		if("b_tail_color2") // CHOMP Addition
+			var/newcolor = input(usr, "Choose tail secondary color.", "", host.vore_selected.tail_extra_overlay) as color|null
+			if(newcolor)
+				host.vore_selected.tail_extra_overlay = newcolor
+			update_preview_icon()
+			. = TRUE
+		if("b_tail_color3") // CHOMP Addition
+			var/newcolor = input(usr, "Choose tail tertiary color.", "", host.vore_selected.tail_extra_overlay2) as color|null
+			if(newcolor)
+				host.vore_selected.tail_extra_overlay2 = newcolor
+			update_preview_icon()
 			. = TRUE
 
 	if(.)
