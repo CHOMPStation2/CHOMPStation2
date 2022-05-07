@@ -35,8 +35,8 @@
 /datum/sprite_accessory/tail/taur/ch/naga/alt
 	name = "Naga alt (Taur)"
 	icon_state = "naga_alt_s"
-	suit_sprites = 'icons/mob/taursuits_naga_ch.dmi'
-	
+	suit_sprites = 'modular_chomp/icons/mob/taursuits_naga_ch.dmi'
+
 	msg_owner_help_walk = "You carefully slither around %prey."
 	msg_prey_help_walk = "%owner's huge tail slithers past beside you!"
 
@@ -69,7 +69,7 @@
 	name = "Naga dual-color alt (Taur)"
 	icon_state = "naga_alt_s"
 	extra_overlay = "naga_alt_markings"
-	suit_sprites = 'icons/mob/taursuits_naga_ch.dmi'
+	suit_sprites = 'modular_chomp/icons/mob/taursuits_naga_ch.dmi'
 
 /datum/sprite_accessory/tail/taur/ch/horse/scoli
 	name = "Scolipede (Taur)"

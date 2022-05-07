@@ -10709,14 +10709,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "aBo" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 9
 	},
+/obj/machinery/computer/stockexchange,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "aBp" = (
@@ -30257,6 +30256,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "pbJ" = (
@@ -30675,7 +30675,12 @@
 	name = "\improper Telecomms Entrance"
 	})
 "pGq" = (
-/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "pGr" = (
@@ -33919,7 +33924,6 @@
 	pixel_x = 4;
 	pixel_y = -2
 	},
-/obj/item/weapon/stamp/cargo,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -33932,6 +33936,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner2{
 	dir = 4
 	},
+/obj/item/weapon/stamp/accepted,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "tos" = (
@@ -35217,7 +35222,6 @@
 /turf/simulated/floor,
 /area/maintenance/station/cargo)
 "uMR" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -35227,6 +35231,9 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -35564,6 +35571,10 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "vcG" = (
@@ -48248,9 +48259,9 @@ tos
 ayY
 aBo
 uMR
-gVf
 pGq
-dXC
+aAB
+fMr
 shZ
 azc
 kNs

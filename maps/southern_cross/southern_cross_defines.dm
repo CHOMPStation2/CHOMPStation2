@@ -31,7 +31,7 @@ but they don't actually change anything about the load order
 	full_name = "Southern Cross"
 	path = "southern_cross"
 
-	lobby_icon = 'icons/misc/CHOMPSTATION_BG_eggman.gif'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
+	lobby_icon = 'icons/misc/CHOMPSTATION.gif'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
 	lobby_screens = list() //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit 25/1/20 TFF - Job icons for off-duty/exploration
 

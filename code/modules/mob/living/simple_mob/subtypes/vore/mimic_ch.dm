@@ -1,7 +1,7 @@
 /obj/structure/closet/crate/mimic/airlock
 	name = "Dusty Airlock"
 	desc = "It opens and closes. Though it appears it has been a while since it opened."
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "amimic"
 	mimic_chance = 30
 	anchored = 1 //You will not be able to push back the airlock mimic
@@ -94,7 +94,7 @@
 /obj/structure/closet/crate/mimic/closet
 	name = "old closet"
 	desc = "It's a basic storage unit. It seems awfully rickety."
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "cmimic"
 	mimic_chance = 30
 	mimic_active = TRUE
@@ -193,7 +193,7 @@
 	desc = "The boards here look rather loose."
 	density = 0
 	anchored = 1
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "wmimic"
 	var/mimic_chance = 30
 	var/mimic_active = TRUE

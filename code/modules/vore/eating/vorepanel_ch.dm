@@ -1,12 +1,12 @@
-//CHOMP - liquid bellies //These variables have been moved to belly_obj_ch.dm, keeping comments here for reference 
+//CHOMP - liquid bellies //These variables have been moved to belly_obj_ch.dm, keeping comments here for reference
 /*
 /datum/vore_look
 	var/show_liquids = FALSE
 	var/show_fullness_messages = FALSE
-*/ 
+*/
 
 /obj/screen/belly_fullscreen_preview
-	icon = 'icons/mob/screen_full_vore_ch.dmi'
+	icon = 'modular_chomp/icons/mob/screen_full_vore_ch.dmi'
 	icon_state = ""
 	appearance_flags = 0
 

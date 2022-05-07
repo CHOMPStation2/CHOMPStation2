@@ -13,7 +13,7 @@
 	icon_dead = "chungus-dead"
 	icon_rest = "chungus_rest"
 	faction = "mouse"
-	icon = 'icons/mob/vore64x32_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
 
 	maxHealth = 200
 	health = 200

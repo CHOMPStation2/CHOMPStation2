@@ -92,7 +92,7 @@
 	icon_state = "bald"
 	gender = MALE
 	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //Lets all the races be bald if they want.
-	
+
 /datum/sprite_accessory/hair/ponytail6_fixed
 	name = "Ponytail 6 but fixed"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -390,40 +390,40 @@
 //xeno stuffs
 /datum/sprite_accessory/hair/xeno_head_drone_color
 	name = "Drone dome"
-	icon = 'icons/mob/human_face_ch.dmi' //chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi' //chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi' //chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi' //chompstation edit
 	icon_state = "cxeno_drone"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 // figure this one out for better coloring
 /datum/sprite_accessory/hair/xeno_head_sentinel_color
 	name = "Sentinal dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_sentinel"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_queen_color
 	name = "Queen dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_queen"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_hunter_color
 	name = "Hunter dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_hunter"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_praetorian_color
 	name = "Praetorian dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_praetorian"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER

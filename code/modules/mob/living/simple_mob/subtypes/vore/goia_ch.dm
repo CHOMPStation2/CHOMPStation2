@@ -2,7 +2,7 @@
 	name = "zorgoia"
 	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its refered to as the furry slinky!"
 	tt_desc = "Zorgoyuh slinkus"
-	icon = 'icons/mob/vore64x32_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
 	icon_state = "zorgoia"
 	icon_living = "zorgoia"
 	icon_dead = "zorgoia-dead"

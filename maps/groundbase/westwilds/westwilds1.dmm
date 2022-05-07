@@ -446,9 +446,6 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxins_mixing)
 "eW" = (
@@ -695,9 +692,6 @@
 	output_tag = "burn_out";
 	pressure_setting = 0;
 	sensors = list("burn_sensor" = "Burn Chamber Sensor")
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxins_mixing)
@@ -1906,9 +1900,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
 	},
@@ -1929,19 +1920,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
-"xH" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor,
-/area/groundbase/science/outpost/toxins_mixing)
 "xJ" = (
 /turf/simulated/wall,
 /area/groundbase/science/outpost/toxins_mixing)
@@ -2746,9 +2724,6 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxins_mixing)
 "Ha" = (
@@ -2840,13 +2815,6 @@
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/science/outpost/toxins_mixing)
 "HR" = (
-/obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
 	target_pressure = 200
@@ -3634,9 +3602,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxins_mixing)
 "Rb" = (
@@ -3737,9 +3702,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 1
@@ -4121,9 +4083,6 @@
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
 "Wb" = (
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxins_mixing)
@@ -4366,9 +4325,6 @@
 /turf/simulated/wall,
 /area/groundbase/science/outpost/toxing_gasworks)
 "YU" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -20209,7 +20165,7 @@ xJ
 gF
 fo
 jm
-xH
+Ss
 Ss
 PF
 gF

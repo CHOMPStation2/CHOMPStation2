@@ -2,7 +2,7 @@
 /mob/living/simple_mob/mechanical/cyber_horror
 	name = "Cyber horror"
 	desc = "What was once a man, twisted and warped by machine."
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "cyber_horror"
 	icon_dead = "cyber_horror_dead"
 	icon_gib = "cyber_horror_dead"
@@ -335,7 +335,7 @@
 //These are the projectiles mobs use
 /obj/item/projectile/beam/drone
 	damage = 3
-	
+
 /obj/item/projectile/arc/blue_energy
 	name = "energy missle"
 	icon_state = "force_missile"
