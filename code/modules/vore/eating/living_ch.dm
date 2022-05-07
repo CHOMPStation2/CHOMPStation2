@@ -9,6 +9,32 @@
 
 	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
 
+	// CHOMP vore icons refactor (Now on living)
+	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
+	var/vore_capacity_ex = list("stomach" = 0) //expanded list of capacities
+	var/vore_fullness = 0				// How "full" the belly is (controls icons)
+	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
+	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
+	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+
+	var/list/vore_icon_bellies = list("stomach")
+
+
+// Update fullness based on size & quantity of belly contents
+/mob/living/proc/update_fullness()
+	var/list/new_fullness = list()
+	vore_fullness = 0
+	for(var/belly_class in vore_icon_bellies)
+		new_fullness[belly_class] = 0
+	for(var/obj/belly/B as anything in vore_organs)
+		new_fullness[B.belly_sprite_to_affect] += B.GetFullnessFromBelly()
+	for(var/belly_class in vore_icon_bellies)
+		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
+		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
+		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
+		vore_fullness += new_fullness[belly_class]
+	vore_fullness = min(vore_capacity, vore_fullness)
+
 
 /mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(vore_footstep_volume_cooldown++ >= 5) //updating the 'dominating' belly, the one that has most liquid and is loudest.

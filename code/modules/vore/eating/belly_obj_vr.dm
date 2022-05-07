@@ -240,6 +240,12 @@
 		"fullness4_messages",
 		"fullness5_messages",
 		"vorespawn_blacklist",
+		"vore_sprite_flags",
+		"affects_vore_sprites",
+		"count_absorbed_prey_for_sprite",
+		"resist_triggers_animation",
+		"size_factor_for_sprite",
+		"belly_sprite_to_affect",
 		"autotransferchance",
 		"autotransferwait",
 		"autotransferlocation",
@@ -1182,6 +1188,12 @@
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
 	dupe.vorespawn_blacklist = vorespawn_blacklist
+	dupe.vore_sprite_flags = vore_sprite_flags
+	dupe.affects_vore_sprites = affects_vore_sprites
+	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.resist_triggers_animation = resist_triggers_animation
+	dupe.size_factor_for_sprite = size_factor_for_sprite
+	dupe.belly_sprite_to_affect = belly_sprite_to_affect
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation

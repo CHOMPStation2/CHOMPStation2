@@ -74,6 +74,36 @@
 	"Cherry Jelly"
 	)
 
+	//CHOMP - vore sprites
+	var/vore_sprite_flags = DM_FLAG_VORESPRITE_BELLY
+	var/tmp/static/list/vore_sprite_flag_list= list(
+		"Normal belly sprite" = DM_FLAG_VORESPRITE_BELLY,
+		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
+		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
+		)
+
+	var/affects_vore_sprites = TRUE
+	var/count_absorbed_prey_for_sprite = TRUE
+	var/resist_triggers_animation = TRUE
+	var/size_factor_for_sprite = 1
+	var/belly_sprite_to_affect = "stomach"
+	var/datum/sprite_accessory/tail/tail_to_change_to = FALSE
+	var/tail_colouration = FALSE
+	var/tail_extra_overlay = FALSE
+	var/tail_extra_overlay2 = FALSE
+	//var/marking_to_add = NULL
+	//var/marking_color = NULL
+
+
+/obj/belly/proc/GetFullnessFromBelly()
+	if(!affects_vore_sprites)
+		return 0
+	var/belly_fullness = 0
+	for(var/mob/living/M in src)
+		if(count_absorbed_prey_for_sprite || !M.absorbed)
+			belly_fullness += M.size_multiplier
+	belly_fullness *= size_factor_for_sprite
+	return belly_fullness
 
 
 ///////////////////// NUTRITION REAGENT PRODUCTION /////////////////
