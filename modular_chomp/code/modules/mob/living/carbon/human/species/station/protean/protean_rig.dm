@@ -24,6 +24,7 @@
 	offline_vision_restriction = 0
 	open = 1
 	cell_type =  /obj/item/weapon/cell/protean
+	var/dead = 0
 
 /obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
@@ -340,6 +341,16 @@
 	for(var/obj/item/rig_module/module in installed_modules)
 		if(module.accepts_item(W,user)) //Item is handled in this proc
 			return
+	if(dead)
+		if(istype(W, /obj/item/stack/material/plasteel))
+			var/obj/item/stack/material/plasteel/PL = W
+			if(PL.get_amount() < 5)
+				to_chat(user, "<span class='warning'>You need five sheets of plasteel to reconstruct this Protean.</span>")
+				return
+			if(PL.use(5))
+				to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute now.</span>")
+				make_alive(myprotean)
+				return
 	if(rig_storage)
 		var/obj/item/weapon/storage/backpack = rig_storage
 		if(backpack.can_be_inserted(W, 1))
@@ -348,6 +359,35 @@
 		if(istype(W,/obj/item/weapon/storage/backpack))
 			AssimilateBag(user,0,W)
 	..()
+
+/obj/item/weapon/rig/protean/proc/make_alive(var/mob/living/simple_mob/protean_blob/P)
+	var/mob/living/carbon/human/H
+	var/datum/species/protean/S
+	if(P.humanform)
+		H = P.humanform
+		H.setToxLoss(0)
+		H.setOxyLoss(0)
+		H.setCloneLoss(0)
+		H.setBrainLoss(0)
+		H.SetParalysis(0)
+		H.SetStunned(0)
+		H.SetWeakened(0)
+		H.blinded = 0
+		H.SetBlinded(0)
+		H.eye_blurry = 0
+		H.ear_deaf = 0
+		H.ear_damage = 0
+		H.heal_overall_damage(H.getBruteLoss(), H.getFireLoss(), 1)
+		dead_mob_list.Remove(H)
+		living_mob_list += H
+		H.tod = null
+		H.timeofdeath = 0
+		H.set_stat(CONSCIOUS)
+		if(istype(H.species, /datum/species/protean))
+			S = H.species
+			S.pseudodead = 0
+			dead = 0
+			to_chat(P, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you can act again!</span>")
 
 /obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
 	return	//We don't do that here

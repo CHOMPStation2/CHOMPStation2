@@ -185,6 +185,8 @@ datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 		humanform.species.Stat(humanform)
 
 /mob/living/simple_mob/protean_blob/updatehealth()
+	if(humanform.nano_dead_check(src))
+		return
 	if(!humanform)
 		return ..()
 
@@ -196,7 +198,7 @@ datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 
 	//Alive, becoming dead
 	if((stat < DEAD) && (health <= 0))
-		death()
+		humanform.death()
 
 	nutrition = humanform.nutrition
 
@@ -338,6 +340,7 @@ datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
+/*	Don't need this block anymore since our Prots have hands
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
 	if(refactory && istype(A,/obj/item/stack/material))
 		var/obj/item/stack/material/S = A
@@ -367,6 +370,7 @@ datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 		I.forceMove(vore_selected)
 	else
 		return ..()
+*/
 
 /mob/living/simple_mob/protean_blob/attackby(var/obj/item/O, var/mob/user)
 	if(refactory && istype(O,/obj/item/stack/material))
@@ -408,9 +412,7 @@ var/global/list/disallowed_protean_accessories = list(
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(loc == /obj/item/weapon/rig/protean)
-		return
-	if(!force && !isturf(loc))
+	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
 

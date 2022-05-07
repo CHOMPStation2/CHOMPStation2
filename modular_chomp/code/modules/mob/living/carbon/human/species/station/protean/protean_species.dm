@@ -29,18 +29,19 @@
 	male_scream_sound = null
 	female_scream_sound = null
 
-	virus_immune =	1
-	blood_volume =	0
-	min_age =		18
-	max_age =		200
-	oxy_mod =		0
-	radiation_mod =	0	//Can't be assed with fandangling rad protections while blob formed/suited
+	virus_immune = 1
+	blood_volume = 0
+	min_age = 18
+	max_age = 200
+	oxy_mod = 0
+	radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
 	darksight = 10
+	siemens_coefficient = 2
+	emp_dmg_mod = 1.4
 
 	hazard_low_pressure = -1 //Space doesn't bother them
 	hazard_high_pressure = INFINITY //consistency
 
-	//Cold/heat does affect them, but it's done in special ways below - //No it isn't?
 	cold_level_1 = -INFINITY
 	cold_level_2 = -INFINITY
 	cold_level_3 = -INFINITY
@@ -112,6 +113,8 @@
 
 	var/blob_appearance = "puddle2"
 
+	var/pseudodead = 0
+
 /datum/species/protean/New()
 	..()
 	if(!LAZYLEN(abilities))
@@ -174,14 +177,20 @@
 
 /datum/species/protean/handle_death(var/mob/living/carbon/human/H)
 	if(!H)
-		return // Iono!
-
+		return //No body?
+	var/mob/temp = H
 	if(H.temporary_form)
-		H.forceMove(H.temporary_form.drop_location())
-		H.ckey = H.temporary_form.ckey
-		QDEL_NULL(H.temporary_form)
-
-	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 5 or 10 minutes before respawning, to represent the time it would take to ship a new-you to the station, depending on how you died.</span>")
+		temp = H.temporary_form
+	playsound(temp, 'modular_chomp/sound/voice/borg_deathsound.ogg', 50, 1)
+	temp.visible_message("<b>[temp.name]</b> shudders and retreats inwards, coalescing into a single core componant!")
+	to_chat(temp, "<span class='warning'>You've died as a Protean! While dead, you will be locked to your core RIG control module until you can be repaired. You will need to be fed 5 sheets of plasteel in order to reshape yourself.</span>")
+	if(H.temporary_form)
+		if(!istype(H.temporary_form.loc, /obj/item/weapon/rig/protean))
+			H.nano_rig_transform(1)
+	else
+		H.nano_rig_transform(1)
+	OurRig.dead = 1
+	pseudodead = 1
 
 /datum/species/protean/handle_environment_special(var/mob/living/carbon/human/H)
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
@@ -317,8 +326,9 @@ CHOMP Removal end*/
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
-	holder.adjustBruteLoss(-1,include_robo = TRUE) //Modified by species resistances
-	holder.adjustFireLoss(-1,include_robo = TRUE) //Modified by species resistances
+	holder.adjustBruteLoss(-1,include_robo = TRUE)
+	holder.adjustFireLoss(-1,include_robo = TRUE)
+	holder.adjustToxLoss(-1)
 	var/mob/living/carbon/human/H = holder
 	for(var/obj/item/organ/O as anything in H.internal_organs)
 		// Fix internal damage
@@ -327,7 +337,6 @@ CHOMP Removal end*/
 		// If not damaged, but dead, fix it
 		else if(O.status & ORGAN_DEAD)
 			O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
-
 
 // PAN Card
 /obj/item/clothing/accessory/permit/nanotech

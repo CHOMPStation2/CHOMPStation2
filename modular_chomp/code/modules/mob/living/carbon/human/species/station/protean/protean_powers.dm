@@ -12,6 +12,9 @@
 	var/mob/living/caller = src
 	if(temporary_form)
 		caller = temporary_form
+	if(nano_dead_check(caller))
+		to_chat(caller, "<span class='warning'>You need to be repaired first before you can act!</span>")
+		return
 	if(stat)
 		to_chat(caller,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
@@ -206,6 +209,9 @@
 	var/mob/living/caller = src
 	if(temporary_form)
 		caller = temporary_form
+	if(nano_dead_check(caller))
+		to_chat(caller, "<span class='warning'>You need to be repaired first before you can act!</span>")
+		return
 
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
@@ -245,17 +251,24 @@
 ////
 //  Blob Form
 ////
-/mob/living/carbon/human/proc/nano_blobform()
+/mob/living/carbon/human/proc/nano_blobform(var/forced)
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
 	set category = "Abilities"
 	set hidden = 1
 
+	if(nano_dead_check(src))
+		return
+	if(forced)
+		if(temporary_form)
+			nano_outofblob(temporary_form, forced)
+		else
+			nano_intoblob(forced)
+		return
 	var/atom/movable/to_locate = temporary_form || src
-	if(!isturf(to_locate.loc))
+	if(!isturf(to_locate.loc) && !forced)
 		to_chat(to_locate,"<span class='warning'>You need more space to perform this action!</span>")
 		return
-
 	//Blob form
 	if(temporary_form)
 		if(temporary_form.stat)
@@ -294,16 +307,19 @@
 ////
 //	Rig Transform
 ////
-/mob/living/carbon/human/proc/nano_rig_transform()
+/mob/living/carbon/human/proc/nano_rig_transform(var/forced)
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
 	set category = "Abilities"
 	set hidden = 1
 
-	if(!temporary_form)	//If you're human, force you into blob form before rig'ing
-		nano_blobform()
-	spawn(2)
+	if(nano_dead_check(src))
+		to_chat(temporary_form, "<span class='warning'>You need to be repaired first before you can act!</span>")
+		return
 
+	if(!temporary_form)	//If you're human, force you into blob form before rig'ing
+		nano_blobform(forced)
+	spawn(2)
 
 	if(istype(src.species, /datum/species/protean))
 		var/datum/species/protean/S = src.species
@@ -323,7 +339,7 @@
 				S.OurRig.Moved()
 				P.has_hands = 1
 			else	//We're not in our own RIG
-				if(P.stat || P.resting)
+				if(P.stat || P.resting && !forced)
 					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
 				else
 					if(P.l_hand)
@@ -373,6 +389,8 @@
 	var/mob/living/caller = src
 	var/mob/living/carbon/human/target
 	var/datum/species/protean/S = src.species
+	if(nano_dead_check(src))
+		return
 	if(temporary_form)
 		caller = temporary_form
 		if(caller.loc == S.OurRig)
@@ -427,7 +445,18 @@
 /mob/living/carbon/human/nano_get_refactory()
 	return ..(locate(/obj/item/organ/internal/nano/refactory) in internal_organs)
 
+//I hate this whole bit but I want proteans to be able to "die" and still be "alive" in their blob as a suit
+/mob/living/carbon/human/proc/nano_dead_check(var/mob/living/caller)
+	if(istype(src.species, /datum/species/protean))
+		var/datum/species/protean/S = src.species
+		if(S.pseudodead)
+			return 1
+	return 0
 
+/mob/living/carbon/human/proc/nano_set_dead(var/num)
+	if(istype(src.species, /datum/species/protean))
+		var/datum/species/protean/S = src.species
+		S.pseudodead = num
 
 /// /// /// Ability objects for stat panel
 /obj/effect/protean_ability
