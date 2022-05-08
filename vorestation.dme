@@ -1222,7 +1222,11 @@
 #include "code\game\objects\items\pizza_voucher_vr.dm"
 #include "code\game\objects\items\poi_items.dm"
 #include "code\game\objects\items\robobag.dm"
+<<<<<<< HEAD
 #include "code\game\objects\items\sahoc_ch.dm"
+=======
+#include "code\game\objects\items\selectable_item_vr.dm"
+>>>>>>> e929fba143... Merge pull request #12925 from Heroman3003/selectable-items
 #include "code\game\objects\items\shooting_range.dm"
 #include "code\game\objects\items\surplus_voucher_ch.dm"
 #include "code\game\objects\items\tailoring.dm"
