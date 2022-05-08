@@ -89,12 +89,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define L_HAND_LAYER			27		//Left-hand item
 #define R_HAND_LAYER			28		//Right-hand item
 #define WING_LAYER				29		//Wings or protrusions over the suit.
-#define TAIL_LAYER_ALT			30		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	31		//Effects drawn by modifiers
-#define FIRE_LAYER				32		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			33		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			34		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			34		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+#define VORE_BELLY_LAYER		30		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			31		//CHOMPStation edit - Move this and everything after up if things are added.
+#define TAIL_LAYER_ALT			32		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	33		//Effects drawn by modifiers
+#define FIRE_LAYER				34		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			35		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			36		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			36		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
 
 /mob/living/carbon/human
@@ -374,6 +376,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//tail
 	update_tail_showing()
 	update_wing_showing()
+	update_vore_belly_sprite()
+	update_vore_tail_sprite()
 
 /mob/living/carbon/human/proc/update_skin()
 	if(QDESTROYING(src))

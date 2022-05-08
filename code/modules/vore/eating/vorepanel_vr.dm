@@ -1274,6 +1274,7 @@
 				return FALSE
 			else
 				host.vore_selected.belly_sprite_to_affect = belly_choice
+				host.update_fullness()
 			. = TRUE
 		if("b_vore_sprite_flags") //CHOMP Addition
 			var/list/menu_list = host.vore_selected.vore_sprite_flag_list.Copy()
@@ -1284,9 +1285,11 @@
 			. = TRUE
 		if("b_affects_vore_sprites") //CHOMP Addition
 			host.vore_selected.affects_vore_sprites = !host.vore_selected.affects_vore_sprites
+			host.update_fullness()
 			. = TRUE
 		if("b_count_absorbed_prey_for_sprites") //CHOMP Addition
 			host.vore_selected.count_absorbed_prey_for_sprite = !host.vore_selected.count_absorbed_prey_for_sprite
+			host.update_fullness()
 			. = TRUE
 		if("b_resist_animation") //CHOMP Addition
 			host.vore_selected.resist_triggers_animation = !host.vore_selected.resist_triggers_animation
@@ -1295,6 +1298,7 @@
 			var/size_factor_input = input(user, "Set the impact prey's size have on your vore sprite. 1 means no scaling, 0.5 means prey count half as much, 2 means prey count double. (Range from 0.1 - 3)", "Size Factor") as num|null
 			if(!isnull(size_factor_input))
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
+				host.update_fullness()
 			. = TRUE
 		if("b_tail_to_change_to") //CHOMP Addition
 			var/tail_choice = tgui_input_list(usr, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list)
