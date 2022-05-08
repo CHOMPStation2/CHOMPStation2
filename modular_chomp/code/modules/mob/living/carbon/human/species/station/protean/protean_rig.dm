@@ -377,7 +377,7 @@
 		H.eye_blurry = 0
 		H.ear_deaf = 0
 		H.ear_damage = 0
-		H.heal_overall_damage(H.getBruteLoss(), H.getFireLoss(), 1)
+		H.heal_overall_damage(H.getActualBruteLoss(), H.getActualFireLoss(), 1)
 		dead_mob_list.Remove(H)
 		living_mob_list += H
 		H.tod = null

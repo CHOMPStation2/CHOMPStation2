@@ -621,7 +621,7 @@ var/list/global/base_miss_chance = list(
 //Also used to weight the protection value that armour provides for covering that body part when calculating protection from full-body effects.
 var/list/global/organ_rel_size = list(
 	"head" = 25,
-	"chest" = 70,
+	"torso" = 70,
 	"groin" = 30,
 	"l_leg" = 25,
 	"r_leg" = 25,
@@ -631,7 +631,7 @@ var/list/global/organ_rel_size = list(
 	"r_hand" = 10,
 	"l_foot" = 10,
 	"r_foot" = 10,
-)
+) //CHOMPEDIT - Changed "chest" to "torso", as chest is a typo. How long has this bug been here?
 
 /mob/proc/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
 	return
