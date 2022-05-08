@@ -334,7 +334,7 @@
 /obj/item/weapon/gun/projectile/automatic/serdy/m41ab //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A/2"
 	desc = "The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. This one is a rare, and fairly competent replica of the original by Scarborough Arms, with some minor design improvements over the original. The aluminium chassis is painted steel blue, and it has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock."
-	caliber = "10x24mm caseless"
+	caliber = "10x24mm"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
 	icon_state="m41b"
@@ -352,7 +352,7 @@
 /obj/item/weapon/gun/projectile/automatic/serdy/m41a //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A"
 	desc = "A tried and true original. The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. 'PEACE THROUGH SUPERIOR FIREPOWER' is stamped into the side of the aluminium chassis."
-	caliber = "10x24mm caseless"
+	caliber = "10x24mm"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
 	icon_state="m41a"
@@ -775,7 +775,7 @@
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/automatic/serdy/vityazb
-	name = "WKHM 'Vityaz' B"
+	name = "WKHM 'Vityaz-B'"
 	desc = "A swarm of angry bees. The Plamya's baby brother. With 12 total moving parts, including the trigger mechanism, this gun was built with one purpose. Longevity and reliability. Commonly found in the hands of private security, criminals, and law enforcement alike across many worlds. This one is a B model, made to fire faster, at the expense of reliability. Chambered in 10mm."
 	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "10mm"
@@ -798,7 +798,7 @@
 
 //LMGs
 
-/obj/item/weapon/gun/projectile/automatic/serdy/molniya
+/obj/item/weapon/gun/projectile/automatic/serdy/molniya //this is essentially a space MG42
 	name = "WKHM 'Molniya'"
 	desc = "A light machinegun manufactured by WKHM for various paramilitaries, private security companies, and rimworld governments. Big, heavy, and with a fire rate similar to that of an MG42. Often used in emplacements and on top of armored vehicles, or as a squad support weapon. Nicknamed the 'Pig' or the 'Sawzall', this one has a solid oak stock, and bears the 'WKHM Adamant' arkship's production stamp. If you ever see this gun, there is no doubt shit's about to go down. Chambered in 7.62x51mm."
 	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
@@ -811,8 +811,10 @@
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
@@ -832,6 +834,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 825
@@ -851,6 +854,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 735
@@ -870,6 +874,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 745
@@ -894,6 +899,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
@@ -1038,10 +1044,6 @@
 	caliber = "9mm"
 	magazine_type = /obj/item/ammo_magazine/m9mm/large
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
-	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-20,-40), dispersion=list(0.0, 0.9, 1.8))
-	)
 	projectile_type = /obj/item/projectile/bullet/pistol
 	muzzle_velocity = 375
 	fire_sound = "sound/weapons/serdy/9mmpistol.ogg"
@@ -1055,7 +1057,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/tp23s)
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	muzzle_velocity = 465
-	fire_sound = "sound/weapons/serdy/vityaz.ogg"
+	fire_sound = "sound/weapons/serdy/deagle.ogg"
 
 /obj/item/weapon/gun/projectile/serdy_pistols/tp23
 	name = "TP-23"
@@ -1066,7 +1068,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/tp23)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	muzzle_velocity = 300
-	fire_sound = "sound/weapons/serdy/40pistol.ogg"
+	fire_sound = "sound/weapons/serdy/pistol_service.ogg"
 
 
 /obj/item/weapon/gun/projectile/revolver/nagant
@@ -1076,6 +1078,18 @@
 	icon_state = "nagant"
 	max_shells = 7
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+
+/obj/item/weapon/gun/projectile/revolver/saa
+	name = "Colt Single Action Army"
+	desc = "A Colt Single Action Army. The greatest handgun ever made. Six shots. More than enough to kill anything that moves... Chambered in .45 Long-Colt." //sue me -- Ocelot
+	icon = 'icons/obj/gun_ch.dmi'
+	caliber = ".45 LC"
+	icon_state = "saa"
+	fire_delay = 0 //fastest gun in the west
+	ammo_type = /obj/item/ammo_casing/a45lc
+	max_shells = 6
+	move_delay = 0
+	fire_sound = "sound/weapons/serdy/44mag.ogg"
 
 /obj/item/weapon/gun/projectile/revolver/nagant/skinned
 	name = "nagant revolver"

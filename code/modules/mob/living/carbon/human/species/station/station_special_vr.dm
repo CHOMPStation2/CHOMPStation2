@@ -27,6 +27,7 @@
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
 		/mob/living/proc/flying_toggle,
+		/mob/living/proc/flying_vore_toggle,
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb
@@ -211,7 +212,7 @@
 			feral++
 		else
 			feral = max(0,--feral)
-			
+
 		// Being in a belly or in the darkness decreases stress further. Helps mechanically reward players for staying in darkness + RP'ing appropriately. :9
 		var/turf/T = get_turf(H)
 		if(feral && (isbelly(H.loc) || T.get_lumcount() <= 0.1))
@@ -443,7 +444,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
-	spawn_flags		 = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled forever
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken. ChompEdit;renable 
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"

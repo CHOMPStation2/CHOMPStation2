@@ -62,6 +62,10 @@
 	path = /obj/item/ammo_magazine/asval/ap
 	hidden = 1
 
+/datum/category_item/autolathe/arms/asval_9x39_rubber
+	name = "AS-Val magazine(9x39mm less-lethal)"
+	path = /obj/item/ammo_magazine/asval/rubber
+
 /datum/category_item/autolathe/arms/akm_762x39
 	name = "AKM magazine (7.62x39mm standard)"
 	path = /obj/item/ammo_magazine/akm
@@ -77,6 +81,35 @@
 	path = /obj/item/ammo_magazine/akm/hp
 	hidden = 1
 
+/datum/category_item/autolathe/arms/akm_762x39_rubber
+	name = "AKM magazine (7.62x39mm less-lethal)"
+	path = /obj/item/ammo_magazine/akm/rubber
+
+/datum/category_item/autolathe/arms/ak74
+	name = "AK74 magazine (5.45mm standard)"
+	path = /obj/item/ammo_magazine/ak74
+	hidden = 1
+
+/datum/category_item/autolathe/arms/ak74/plum
+	name = "AK74 'plum' magazine (5.45mm standard)"
+	path = /obj/item/ammo_magazine/ak74/plum
+	hidden = 1
+
+/datum/category_item/autolathe/arms/ak74/plum/rubber
+	name = "AK74 'plum' magazine (5.45mm less-lethal)"
+	path = /obj/item/ammo_magazine/ak74/plum/rubber
+	hidden = 1
+
+
+/datum/category_item/autolathe/arms/ak74_ap
+	name = "AK74 magazine (5.45mm armor-piercing)"
+	path = /obj/item/ammo_magazine/ak74/ap
+	hidden = 1
+
+/datum/category_item/autolathe/arms/ak74_rubber
+	name = "AK74 magazine (5.45mm less-lethal)"
+	path = /obj/item/ammo_magazine/ak74/rubber
+
 /datum/category_item/autolathe/arms/m16_556
 	name = "M16 magazine (5.56x45mm standard)"
 	path = /obj/item/ammo_magazine/m16
@@ -91,6 +124,10 @@
 	name = "M16 magazine (5.56x45mm hollow-point)"
 	path = /obj/item/ammo_magazine/m16/hp
 	hidden = 1
+
+/datum/category_item/autolathe/arms/m16_556_rubber
+	name = "M16 magazine (5.56x45mm less-lethal)"
+	path = /obj/item/ammo_magazine/m16/rubber
 
 /datum/category_item/autolathe/arms/sks_762
 	name = "SKS Clip (10x 7.62x39 standard)"
@@ -157,6 +194,10 @@
 	path = /obj/item/ammo_magazine/plamya/ap
 	hidden = 1
 
+/datum/category_item/autolathe/arms/plamya_9x39_rubber
+	name = "Plamya drum magazine(9x39mm less-lethal)"
+	path = /obj/item/ammo_magazine/plamya/rubber
+
 /datum/category_item/autolathe/arms/strela_12g
 	name = "Strela magazine (12 gauge buckshot)"
 	path = /obj/item/ammo_magazine/strela
@@ -182,10 +223,18 @@
 	path = /obj/item/ammo_magazine/ssp4
 	hidden = 1
 
+/datum/category_item/autolathe/arms/ssp4_10mm/rubber
+	name = "SSP4 magazine (10mm rubber)"
+	path = /obj/item/ammo_magazine/ssp4/rubber
+
 /datum/category_item/autolathe/arms/makarov_9x18
 	name = "Makarov magazine (9x18mm Makarov standard)"
 	path = /obj/item/ammo_magazine/makarov
 	hidden = 1
+
+/datum/category_item/autolathe/arms/makarov_9x18/rubber
+	name = "Makarov magazine (9x18mm Makarov rubber)"
+	path = /obj/item/ammo_magazine/makarov/rubber
 
 /datum/category_item/autolathe/arms/vp70_9mm
 	name = "VP70 magazine (18x 9x19mm standard)"
@@ -201,6 +250,15 @@
 	name = "VP70 magazine (18x 9x19mm hollow-point)"
 	path = /obj/item/ammo_magazine/m9mm/vp70/hp
 	hidden = 1
+
+/datum/category_item/autolathe/arms/vp70_9mm_rubber
+	name = "VP70 magazine (18x 9x19mm rubber)"
+	path = /obj/item/ammo_magazine/m9mm/vp70/rubber
+
+/datum/category_item/autolathe/arms/vp70_9mm_flash
+	name = "VP70 magazine (18x 9x19mm flash)"
+	path = /obj/item/ammo_magazine/m9mm/vp70/flash
+
 
 /datum/category_item/autolathe/arms/tp23_44
 	name = "TP-23 TS magazine (.44 magnum standard)"
@@ -253,6 +311,10 @@
 	name = "pitchgun magazine(.44 magnum standard)"
 	path = /obj/item/ammo_magazine/pitchmag
 	hidden = 1
+
+/datum/category_item/autolathe/arms/smg_pitch/rubber
+	name = "pitchgun magazine(.44 magnum less-lethal)"
+	path = /obj/item/ammo_magazine/pitchmag/rubber
 
 /datum/category_item/autolathe/arms/rpdm_762x39
 	name = "RPDM Drum magazine(7.62x39mm standard)"

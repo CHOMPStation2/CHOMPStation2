@@ -1,5 +1,6 @@
 /obj/item/weapon/gun/energy/temperature
 	name = "temperature gun"
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "freezegun"
 	desc = "A gun that can add or remove heat from entities it hits.  In other words, it can fire 'cold', and 'hot' beams."
 	charge_cost = 240

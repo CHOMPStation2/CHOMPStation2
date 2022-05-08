@@ -1546,6 +1546,7 @@
 	icon_state = "2-4"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/storage/emergency_storage/emergency4)
 ||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
@@ -1592,6 +1593,11 @@
 	name = "\improper Telecomms Entrance"
 	})
 =======
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 76e61a485c... Merge pull request #12764 from Very-Soft/timeforblue
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
 "adk" = (
@@ -1702,6 +1708,7 @@
 	icon_state = "4-8"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/storage/emergency_storage/emergency4)
 "ads" = (
@@ -1750,6 +1757,11 @@
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
 =======
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> 76e61a485c... Merge pull request #12764 from Very-Soft/timeforblue
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
 "adr" = (
@@ -5681,6 +5693,12 @@
 	},
 /obj/structure/sink{
 	pixel_y = 22
+	},
+/obj/machinery/disposal/wall/cleaner{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
@@ -11402,7 +11420,15 @@
 /obj/structure/sink{
 	pixel_y = 22
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+=======
+/obj/structure/disposalpipe/tagger{
+	dir = 4;
+	name = "package tagger - Resleeving";
+	sort_tag = "Resleeving"
+	},
+>>>>>>> 76e61a485c... Merge pull request #12764 from Very-Soft/timeforblue
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
 "aDR" = (
@@ -11805,6 +11831,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -17756,14 +17785,23 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 6
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction,
+>>>>>>> 76e61a485c... Merge pull request #12764 from Very-Soft/timeforblue
 /turf/simulated/floor/tiled,
 /area/hallway/station/atrium)
 "dzT" = (
@@ -30013,6 +30051,10 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
 "oRO" = (
@@ -30700,6 +30742,10 @@
 "pNV" = (
 /obj/machinery/vending/wallmed1/public{
 	pixel_y = 28
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)

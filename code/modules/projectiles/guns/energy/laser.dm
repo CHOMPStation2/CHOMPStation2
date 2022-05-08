@@ -191,6 +191,8 @@
 	desc = "The HI DMR 9E is an older design of Hephaestus Industries. A designated marksman rifle capable of shooting powerful \
 	ionized beams, this is a weapon to kill from a distance."
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by armed forces across human space."
+	icon = 'icons/obj/64x32guns_ch.dmi' // CHOMPEdit: Gun Sprites
+	icon_expected_width = 64 // CHOMPEdit: Gun Sprites
 	icon_state = "sniper"
 	item_state = "sniper"
 	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
