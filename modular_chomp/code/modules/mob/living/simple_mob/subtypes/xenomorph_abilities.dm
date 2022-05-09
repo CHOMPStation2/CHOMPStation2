@@ -5,7 +5,7 @@
 
 	var/list/options = list("Resin Door","Resin Membrane","Nest","Resin Wall","Weed Node")
 	for(var/option in options)
-		LAZYSET(options, option, image('modular_chomp/icons/effects/xenobuild_icons.dmi', option))
+		LAZYSET(options, option, image('modular_chomp/icons/mob/xeno_screen.dmi', option))
 	var/choice = show_radial_menu(src, src, options, radius = 60)
 	if(!choice || QDELETED(src) || src.incapacitated())
 		return FALSE
@@ -52,7 +52,7 @@
 
 /datum/action/innate/xeno_ch
 	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_ALIVE
-	button_icon = 'modular_chomp/icons/effects/xenobuild_icons.dmi'
+	button_icon = 'modular_chomp/icons/mob/xeno_screen.dmi'
 	var/mob/living/simple_mob/xeno_ch/parent_xeno
 
 
@@ -100,9 +100,18 @@
 /datum/action/innate/xeno_ch/xeno_pounce/Activate()
 	parent_xeno.pounce_toggle()
 
-/mob/living/simple_mob/xeno_ch/proc/grantactions()
+/datum/action/innate/xeno_ch/xeno_spin
+	name = "Spin"
+	button_icon_state = "Spin"
+
+/datum/action/innate/xeno_ch/xeno_spin/Activate()
+	parent_xeno.speen()
+
+
+/mob/living/simple_mob/xeno_ch/proc/grantallactions()
 	build_action.Grant(src)
 	neurotox_action.Grant(src)
 	acidspit_action.Grant(src)
 	corrode_action.Grant(src)
 	pounce_action.Grant(src)
+	spin_action.Grant(src)

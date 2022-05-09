@@ -304,3 +304,34 @@
 	visible_message("<span class='alium'><B>[src] vomits globs of vile stuff all over [O]. It begins to sizzle and melt under the bubbling mess of acid!</B></span>")
 
 	return
+
+// spin blatantly stolen from BlackMajor's bigdragon
+/mob/living/simple_mob/proc/speen(var/range = 2)
+	var/list/thrownatoms = list()
+	for(var/mob/living/victim in oview(range, src))
+		thrownatoms += victim
+	src.spin(12,1)
+	for(var/am in thrownatoms)
+		var/atom/movable/AM = am
+		if(AM == src || AM.anchored)
+			continue
+		addtimer(CALLBACK(src, .proc/speen_throw, am), 1)
+	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
+
+//Split repulse into two parts so I can recycle this later
+/mob/living/simple_mob/proc/speen_throw(var/atom/movable/AM, var/gentle = 0, var/damage = 10)
+	var/maxthrow = 7
+	var/atom/throwtarget
+	throwtarget = get_edge_target_turf(src, get_dir(src, get_step_away(AM, src)))
+
+	if (!throwtarget) // default case is north if unset
+		throwtarget = locate(src.x, world.maxy, src.z)
+
+	if(isliving(AM))
+		var/mob/living/M = AM
+		M.Weaken(1.5)
+		if(!gentle)
+			M.adjustBruteLoss(damage)
+		to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
+		playsound(src, get_sfx("punch"), 50, 1)
+	AM.throw_at(throwtarget, maxthrow, 3, src)

@@ -3,13 +3,9 @@
 
 // Base type (Mostly initialises as an ability-less xeno hunter
 /mob/living/simple_mob/xeno_ch
-	name = "xenomorph"
-	desc = "A chitin-covered bipedal creature with an eerie skittery nature."
+	name = "badly spawned xenomorph"
+	desc = "A chitin-covered bipedal creature with an eerie skittery nature. this one was spawned in wrong."
 
-	icon_dead = "alienh_dead"
-	icon_living = "alienh"
-	icon_rest = "alienh_sleep"
-	icon_state = "alienh"
 	icon = 'modular_chomp/icons/mob/xenos_32.dmi'
 	vis_height = 32
 
@@ -50,6 +46,38 @@
 							'sound/voice/hiss5.ogg')
 	has_hands = TRUE
 
+	can_enter_vent_with = list(	/obj/item/weapon/implant,
+								/obj/item/device/radio/borg,
+								/obj/item/weapon/holder,
+								/obj/machinery/camera,
+								/obj/belly,
+								/obj/screen,
+								/atom/movable/emissive_blocker,
+								/obj/item/weapon/material,
+								/obj/item/weapon/melee,
+								/obj/item/stack/,
+								/obj/item/weapon/tool,
+								/obj/item/weapon/reagent_containers/food,
+								/obj/item/weapon/coin,
+								/obj/item/weapon/aliencoin,
+								/obj/item/weapon/ore,
+								/obj/item/weapon/disk/nuclear,
+								/obj/item/toy,
+								/obj/item/weapon/card,
+								/obj/item/device/radio,
+								/obj/item/device/perfect_tele_beacon,
+								/obj/item/weapon/clipboard,
+								/obj/item/weapon/paper,
+								/obj/item/weapon/pen,
+								/obj/item/canvas,
+								/obj/item/paint_palette,
+								/obj/item/paint_brush,
+								/obj/item/device/camera,
+								/obj/item/weapon/photo,
+								/obj/item/device/camera_film,
+								/obj/item/device/taperecorder,
+								/obj/item/device/tape)
+
 	var/xeno_build_time = 5 //time to build a structure
 
 	//HUD
@@ -58,7 +86,7 @@
 	var/datum/action/innate/xeno_ch/xeno_acidspit/acidspit_action = new
 	var/datum/action/innate/xeno_ch/xeno_corrode/corrode_action = new
 	var/datum/action/innate/xeno_ch/xeno_pounce/pounce_action = new
-
+	var/datum/action/innate/xeno_ch/xeno_spin/spin_action = new
 
 /mob/living/simple_mob/xeno_ch/Initialize()
 	..()
@@ -75,8 +103,14 @@
 // Xenomorph hunter subtype
 /mob/living/simple_mob/xeno_ch/hunter
 	name = "xenomorph hunter"
+	desc = "A chitin-covered bipedal creature with an eerie skittery nature."
 
 	movement_cooldown = 1
+
+	icon_dead = "alienh_dead"
+	icon_living = "alienh"
+	icon_rest = "alienh_sleep"
+	icon_state = "alienh"
 
 	icon_state_prepounce = "alienh_pounce"
 	icon_pounce = 'modular_chomp/icons/mob/xenoleap_96.dmi'
@@ -86,38 +120,6 @@
 	icon_pounce_x = -32
 	icon_pounce_y = -32
 
-	can_enter_vent_with = list(		/obj/item/weapon/implant,
-									/obj/item/device/radio/borg,
-									/obj/item/weapon/holder,
-									/obj/machinery/camera,
-									/obj/belly,
-									/obj/screen,
-									/atom/movable/emissive_blocker,
-									/obj/item/weapon/material,
-									/obj/item/weapon/melee,
-									/obj/item/stack/,
-									/obj/item/weapon/tool,
-									/obj/item/weapon/reagent_containers/food,
-									/obj/item/weapon/coin,
-									/obj/item/weapon/aliencoin,
-									/obj/item/weapon/ore,
-									/obj/item/weapon/disk/nuclear,
-									/obj/item/toy,
-									/obj/item/weapon/card,
-									/obj/item/device/radio,
-									/obj/item/device/perfect_tele_beacon,
-									/obj/item/weapon/clipboard,
-									/obj/item/weapon/paper,
-									/obj/item/weapon/pen,
-									/obj/item/canvas,
-									/obj/item/paint_palette,
-									/obj/item/paint_brush,
-									/obj/item/device/camera,
-									/obj/item/weapon/photo,
-									/obj/item/device/camera_film,
-									/obj/item/device/taperecorder,
-									/obj/item/device/tape)
-
 /mob/living/simple_mob/xeno_ch/hunter/Login()
 	. = ..()
 	verbs |= /mob/living/simple_mob/proc/pounce_toggle
@@ -125,6 +127,41 @@
 	verbs |= /mob/living/proc/hide
 	pounce_action.Grant(src)
 
+//Xenomorph Sentinel subtype
+/mob/living/simple_mob/xeno_ch/sentinel
+	name = "xenomorph sentinel"
+	desc = "A chitin-covered bipedal creature with an acrid scent about it."
+
+	movement_cooldown = 1.5
+
+	icon_dead = "aliens_dead"
+	icon_living = "aliens"
+	icon_rest = "aliens_sleep"
+	icon_state = "aliens"
+
+	icon_state_prepounce = "aliens_pounce"
+	icon_pounce = 'modular_chomp/icons/mob/xenoleap_96.dmi'
+	icon_state_pounce = "aliens_leap"
+	icon_overlay_spit = "alienspit"
+	icon_overlay_spit_pounce = "alienspit_leap"
+	icon_pounce_x = -32
+	icon_pounce_y = -32
+
+
+/mob/living/simple_mob/xeno_ch/sentinel/Login()
+	. = ..()
+	verbs |= /mob/living/simple_mob/proc/pounce_toggle
+	verbs |= /mob/living/proc/hide
+	verbs |= /mob/living/simple_mob/proc/neurotoxin
+	verbs |= /mob/living/simple_mob/proc/acidspit
+	verbs |= /mob/living/simple_mob/proc/corrosive_acid
+	pounce_action.Grant(src)
+	neurotox_action.Grant(src)
+	acidspit_action.Grant(src)
+	corrode_action.Grant(src)
+
+
+//Xenomorph queen subtype
 /mob/living/simple_mob/xeno_ch/queen
 	name = "xenomorph queen"
 	desc = "A towering chitin-covered bipedal creature with a rather intimidating aura about them."
@@ -150,9 +187,11 @@
 	verbs |= /mob/living/simple_mob/proc/neurotoxin
 	verbs |= /mob/living/simple_mob/proc/acidspit
 	verbs |= /mob/living/simple_mob/proc/corrosive_acid
+	verbs |= /mob/living/simple_mob/proc/speen
 	neurotox_action.Grant(src)
 	acidspit_action.Grant(src)
 	corrode_action.Grant(src)
+	spin_action.Grant(src)
 
 /mob/living/simple_mob/xeno_ch/queen/maid
 	name = "xenomorph maid queen"
