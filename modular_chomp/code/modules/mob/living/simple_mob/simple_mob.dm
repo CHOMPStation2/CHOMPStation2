@@ -8,7 +8,7 @@
 
 	//spitting projectiles
 	var/spitting = 0
-	var/spit_projectile = null // what out spit projecitle is. Can be anything
+	var/spit_projectile = null // what our spit projectile is. Can be anything
 
 /mob/living/simple_mob/RangedAttack(var/atom/A)
 	if(!isnull(spit_projectile) && spitting)

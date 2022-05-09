@@ -19,9 +19,15 @@
 
 	//spitting
 	var/spit_delay = 20 // maximum spit fire rate
-	var/last_spit = 0
+	var/spit_last = 0
 	var/icon_overlay_spit = null // spit iconstate
 	var/icon_overlay_spit_pounce = null // spit while pouncing
+
+	//speen
+	var/speen_last = 0
+	var/speen_delay = 80 // maximum spin spam
+
+
 
 /mob/living/simple_mob/update_icon()
 	. = ..()
@@ -87,7 +93,7 @@
 			spiticon = icon_overlay_spit_pounce
 
 		if(spiticon)
-			var/image/I = image(icon, icon_overlay_spit)
+			var/image/I = image(icon, spiticon)
 			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 			I.plane = MOB_PLANE
 			I.layer = MOB_LAYER
@@ -220,11 +226,11 @@
 	if(isnull(spit_projectile))
 		return
 
-	if((last_spit + spit_delay) > world.time) //To prevent YATATATATATAT spitting.
+	if((spit_last + spit_delay) > world.time) //To prevent YATATATATATAT spitting.
 		to_chat(src, "<span class='warning'>You have not yet prepared your chemical glands. You must wait before spitting again.</span>")
 		return
 	else
-		last_spit = world.time
+		spit_last = world.time
 
 	if(spitting && incapacitated(INCAPACITATION_DISABLED))
 		to_chat(src, "You cannot spit in your current state.")
@@ -245,13 +251,12 @@
 	set category = "Abilities"
 
 	if(spitting)
-		to_chat(src, "<span class='alium'>You stop preparing to spit.</span>")
+		to_chat(src, "<span class='notice'>You stop preparing to spit.</span>")
 		spitting = 0
 	else
-		last_spit = world.time
 		spitting = 1
 		spit_projectile = /obj/item/projectile/energy/neurotoxin
-		to_chat(src, "<span class='alium'>You prepare to spit neurotoxin.</span>")
+		to_chat(src, "<span class='notice'>You prepare to spit neurotoxin.</span>")
 	update_icon()
 
 /mob/living/simple_mob/proc/acidspit()
@@ -260,13 +265,12 @@
 	set category = "Abilities"
 
 	if(spitting)
-		to_chat(src, "<span class='alium'>You stop preparing to spit.</span>")
+		to_chat(src, "<span class='notice'>You stop preparing to spit.</span>")
 		spitting = 0
 	else
-		last_spit = world.time
 		spitting = 1
 		spit_projectile = /obj/item/projectile/energy/acid
-		to_chat(src, "<span class='alium'>You prepare to spit acid.</span>")
+		to_chat(src, "<span class='notice'>You prepare to spit acid.</span>")
 	update_icon()
 
 /mob/living/simple_mob/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
@@ -275,7 +279,7 @@
 	set category = "Abilities"
 
 	if(!(O in oview(1)))
-		to_chat(src, "<span class='alium'>[O] is too far away.</span>")
+		to_chat(src, "<span class='notice'>[O] is too far away.</span>")
 		return
 
 	// OBJ CHECK
@@ -297,7 +301,7 @@
 			cannot_melt = 1 //Gurgs : Everything that isn't a object, simulated wall, or simulated floor is assumed to be acid immune. Includes weird things like unsimulated floors and space.
 
 	if(cannot_melt)
-		to_chat(src, "<span class='alium'>You cannot dissolve this object.</span>")
+		to_chat(src, "<span class='notice'>You cannot dissolve this object.</span>")
 		return
 
 	new /obj/effect/alien/acid(get_turf(O), O)
@@ -307,6 +311,15 @@
 
 // spin blatantly stolen from BlackMajor's bigdragon
 /mob/living/simple_mob/proc/speen(var/range = 2)
+	set name = "Spin Attack"
+	set desc = "Spins to strike enemies away from you."
+	set category = "Abilities"
+
+	if(world.time < speen_last)
+		to_chat(src, "<span class='warning'>You cannot spin again so soon.</span>")
+		return
+
+	speen_last = world.time + speen_delay
 	var/list/thrownatoms = list()
 	for(var/mob/living/victim in oview(range, src))
 		thrownatoms += victim
@@ -318,7 +331,6 @@
 		addtimer(CALLBACK(src, .proc/speen_throw, am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
-//Split repulse into two parts so I can recycle this later
 /mob/living/simple_mob/proc/speen_throw(var/atom/movable/AM, var/gentle = 0, var/damage = 10)
 	var/maxthrow = 7
 	var/atom/throwtarget
