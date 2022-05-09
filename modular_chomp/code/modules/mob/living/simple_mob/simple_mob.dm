@@ -1,7 +1,19 @@
 /mob/living/simple_mob
+	//speech sounds
+	var/list/speech_sounds = list()
+	var/speech_chance = 75 //mobs can be a bit more emotive than carbon/humans
+
 	//vars for vore_icons toggle control
-	var/vore_icons_toggle = 1 // on by default, as is legacy
-	var/vore_icons_cache = 0 // 0 by default. Going from ON to OFF should store vore_icons val here.
+	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
+
+	//spitting projectiles
+	var/spitting = 0
+	var/spit_projectile = null // what out spit projecitle is. Can be anything
+
+/mob/living/simple_mob/RangedAttack(var/atom/A)
+	if(!isnull(spit_projectile) && spitting)
+		Spit(A)
+	. = ..()
 
 mob/living/simple_mob/verb/toggle_vore_icons()
 
@@ -11,18 +23,24 @@ mob/living/simple_mob/verb/toggle_vore_icons()
 
 	if(!vore_icons && !vore_icons_cache)
 		to_chat(src,"<span class='warning'>This simplemob has no vore sprite.</span>")
-	else if(vore_icons_toggle)
+	else if(isnull(vore_icons_cache))
 		vore_icons_cache = vore_icons
 		vore_icons = 0
-		vore_icons_toggle = 0
 		to_chat(src,"<span class='warning'>Vore sprite disabled.</span>")
 	else
 		vore_icons = vore_icons_cache
-		vore_icons_toggle = 1
+		vore_icons_cache = null
 		to_chat(src,"<span class='warning'>Vore sprite enabled.</span>")
 
 	update_icon()
 
+mob/living/simple_mob/handle_speech_sound()
+	if(speech_sounds && speech_sounds.len && prob(speech_chance))
+		var/list/returns[2]
+		returns[1] = sound(pick(speech_sounds))
+		returns[2] = 50
+		return returns
+	. = ..()
 
 // a unique named update_transforms override to allow simplemobs going horizontal on lay/stun.
 // This will not make the mob horizontal if the mob has a icon_rest != null
@@ -64,4 +82,6 @@ mob/living/simple_mob/verb/toggle_vore_icons()
 
 	// This from original living.dm update_transforms too
 	handle_status_indicators()
+
+
 
