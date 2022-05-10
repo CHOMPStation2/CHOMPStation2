@@ -41,6 +41,7 @@ radiantaurora - Protean
 ryumi - Protean
 seiga - Vox
 sepulchre - Vox
+shirosenshi - Xenochimera
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
