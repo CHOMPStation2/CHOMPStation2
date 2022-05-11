@@ -604,20 +604,6 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 //The base miss chance for the different defence zones
 var/list/global/base_miss_chance = list(
-<<<<<<< HEAD
-	"head" = 40,
-	"torso" = 10,
-	"groin" = 20,
-	"l_leg" = 20,
-	"r_leg" = 20,
-	"l_arm" = 20,
-	"r_arm" = 20,
-	"l_hand" = 50,
-	"r_hand" = 50,
-	"l_foot" = 50,
-	"r_foot" = 50,
-) //CHOMPEDIT - Changed "chest" to "torso", as chest is a typo. How long has this bug been here?
-=======
 	BP_HEAD = 40,
 	BP_TORSO = 10,
 	BP_GROIN = 20,
@@ -630,7 +616,6 @@ var/list/global/base_miss_chance = list(
 	BP_L_FOOT = 50,
 	BP_R_FOOT = 50,
 )
->>>>>>> afd673c6f6... Merge pull request #12934 from KillianKirilenko/kk-hitfixes
 
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).
 //Also used to weight the protection value that armour provides for covering that body part when calculating protection from full-body effects.
