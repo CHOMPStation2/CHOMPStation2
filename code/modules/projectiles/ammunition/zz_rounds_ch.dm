@@ -166,6 +166,7 @@
 	caliber = ".45 LC"
 	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a45lc
+	matter = list(DEFAULT_WALL_MATERIAL = 169)
 
 /obj/item/ammo_casing/a45lc/rifle
 	desc = "A long silver bullet... +P, and .45 LC stamped into the base."
@@ -174,3 +175,4 @@
 /obj/item/ammo_casing/a45lc/rubber
 	desc = "A long silver bullet... Has a rubber tip, and .45 LC stamped into the base."
 	projectile_type = /obj/item/projectile/bullet/rifle/a45lc/rubber
+	
