@@ -11,6 +11,19 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+=======
+bricker98 - Black-Eyed Shadekin
+camanis - Protean
+cgr - Protean
+chaosdoomsday - Black-Eyed Shadekin
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+chloeplayer - Protean
+comradenitro - Protean
+coolcrow420 - Black-Eyed Shadekin
+>>>>>>> 4cae784719... Merge pull request #12954 from ItsSelis/patch-2
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
@@ -19,7 +32,19 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+lillianfyre - Xenochimera
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Xenochimera
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+makkinindorn - Protean
+marcobarko - Protean
+>>>>>>> 4cae784719... Merge pull request #12954 from ItsSelis/patch-2
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
