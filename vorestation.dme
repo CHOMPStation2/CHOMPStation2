@@ -4478,6 +4478,8 @@
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
+#include "modular_chomp\code\modules\datums\supplypacks\medical.dm"
+#include "modular_chomp\code\modules\datums\supplypacks\munitions.dm"
 #include "modular_chomp\code\modules\mob\holder.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\species.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\_protean_defines.dm"
