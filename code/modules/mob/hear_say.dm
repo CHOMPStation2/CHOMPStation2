@@ -27,11 +27,14 @@
 		if(always_stars)
 			piece = stars(piece)
 		else if(!say_understands(speaker, SP.speaking))
-			piece = saypiece_scramble(SP)
-			if(isliving(speaker))
-				var/mob/living/S = speaker
-				if(istype(S.say_list) && length(S.say_list.speak))
-					piece = pick(S.say_list.speak)
+			if(SP.speaking.flags & INAUDIBLE)
+				piece = ""
+			else
+				piece = saypiece_scramble(SP)
+				if(isliving(speaker))
+					var/mob/living/S = speaker
+					if(istype(S.say_list) && length(S.say_list.speak))
+						piece = pick(S.say_list.speak)
 
 		raw_msg += (piece + " ")
 
@@ -226,13 +229,13 @@
 		final_message = "[time][final_message]"
 	to_chat(src, final_message)
 
-/mob/proc/hear_signlang(var/message, var/verb = "gestures", var/datum/language/language, var/mob/speaker = null)
+/mob/proc/hear_signlang(var/message, var/verb = "gestures", var/verb_understood = "gestures", var/datum/language/language, var/mob/speaker = null, var/speech_type = 1)
 	if(!client)
 		return
 
 	if(say_understands(speaker, language))
-		message = "<B>[speaker]</B> [verb], \"[message]\""
-	else
+		message = "<B>[speaker]</B> [verb_understood], \"[message]\""
+	else if(!(language.ignore_adverb))
 		var/adverb
 		var/length = length(message) * pick(0.8, 0.9, 1.0, 1.1, 1.2)	//Adds a little bit of fuzziness
 		switch(length)
@@ -242,8 +245,10 @@
 			if(48 to 90)	adverb = " a lengthy message"
 			else			adverb = " a very lengthy message"
 		message = "<B>[speaker]</B> [verb][adverb]."
+	else
+		message = "<B>[speaker]</B> [verb]."
 
-	show_message(message, type = 1) // Type 1 is visual message
+	show_message(message, type = speech_type) // Type 1 is visual message
 
 /mob/proc/hear_sleep(var/message)
 	var/heard = ""

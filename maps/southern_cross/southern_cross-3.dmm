@@ -2473,7 +2473,8 @@
 "cFp" = (
 /obj/machinery/door/airlock/vault/bolted{
 	name = "AI core";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /obj/machinery/door/blast/regular{
 	id = "AICore";
@@ -3206,7 +3207,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
@@ -3666,7 +3668,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Messaging Server";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_server_room)
@@ -3771,7 +3774,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Synthetic Storage Access";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_cyborg_station)
@@ -10835,7 +10839,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)

@@ -10709,14 +10709,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "aBo" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 9
 	},
+/obj/machinery/computer/stockexchange,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "aBp" = (
@@ -16082,6 +16081,20 @@
 /obj/item/device/multitool,
 /turf/simulated/floor/plating,
 /area/storage/tech)
+<<<<<<< HEAD
+=======
+"cbU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "cbY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -16730,6 +16743,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
+<<<<<<< HEAD
+=======
+"cDU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "cEE" = (
 /turf/simulated/wall/r_wall,
 /area/bridge/secondary/teleporter)
@@ -17561,6 +17588,25 @@
 /obj/random/tool,
 /turf/simulated/floor,
 /area/storage/tech)
+<<<<<<< HEAD
+=======
+"doW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "dqh" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
@@ -18089,6 +18135,29 @@
 /obj/structure/closet/secure_closet/pilot,
 /turf/simulated/floor/tiled,
 /area/tether/exploration/pilot_office)
+<<<<<<< HEAD
+=======
+"dRZ" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/table/standard,
+/obj/item/weapon/tank/phoron,
+/obj/random/medical,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "dSp" = (
 /turf/simulated/wall,
 /area/mine/explored/upper_level)
@@ -18973,6 +19042,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
+<<<<<<< HEAD
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -18981,6 +19051,16 @@
 	id = "medivac blast";
 	name = "Shuttle Blast Doors";
 	opacity = 0
+=======
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/tether/station/dock_two)
+"eVl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 	},
 <<<<<<< HEAD
 /turf/simulated/floor/plating/eris/under,
@@ -21606,10 +21686,12 @@
 /area/maintenance/substation/cargo)
 "hsf" = (
 /obj/machinery/shipsensors/fancy_shuttle,
-/turf/simulated/wall/fancy_shuttle{
-	fancy_shuttle_tag = "secbus"
+/turf/simulated/wall/fancy_shuttle/nondense{
+	fancy_shuttle_tag = "secbus";
+	nitrogen = 0;
+	oxygen = 0
 	},
-/area/shuttle/securiship/cockpit)
+/area/shuttle/securiship/general)
 "hsq" = (
 /obj/structure/catwalk,
 /obj/random/junk,
@@ -24774,6 +24856,22 @@
 	fancy_shuttle_tag = "explo"
 	},
 /area/shuttle/excursion/cargo)
+<<<<<<< HEAD
+=======
+"kiN" = (
+/obj/structure/fuel_port{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "kjA" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -26108,6 +26206,17 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/tether/station/dock_two)
+<<<<<<< HEAD
+=======
+"lof" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "loz" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -27935,7 +28044,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_one)
+<<<<<<< HEAD
 "mIR" = (
+=======
+"mIV" = (
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 /obj/structure/cable/green{
 	dir = 1;
 	icon_state = "1-2"
@@ -27946,8 +28059,16 @@
 	dir = 8;
 	pixel_x = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/techmaint_cargo,
 /area/shuttle/securiship/general)
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "mJd" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -28389,6 +28510,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_two)
+<<<<<<< HEAD
+=======
+"ncN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "ncX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -28881,7 +29014,7 @@
 <<<<<<< HEAD
 =======
 "nAr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
 /turf/simulated/wall/fancy_shuttle/low{
@@ -28891,9 +29024,6 @@
 	},
 /area/shuttle/securiship/engines)
 "nAx" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/light{
 	dir = 8
@@ -28901,6 +29031,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "medbus";
 	name = "medbus"
+	},
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/medivac/engines)
@@ -29696,6 +29829,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /obj/structure/table/rack/shelf,
 /obj/machinery/alarm{
 	breach_detection = 0;
@@ -29704,6 +29838,10 @@
 	pixel_x = 25;
 	rcon_setting = 3;
 	report_danger_level = 0
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor,
 /area/shuttle/securiship/general)
@@ -30257,6 +30395,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "pbJ" = (
@@ -30675,7 +30814,12 @@
 	name = "\improper Telecomms Entrance"
 	})
 "pGq" = (
-/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "pGr" = (
@@ -31080,10 +31224,20 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor,
 /area/maintenance/cargo)
+<<<<<<< HEAD
 "qiQ" = (
 /obj/machinery/atmospherics/portables_connector/fuel{
 	dir = 8;
 	icon_state = "map_connector-fuel"
+=======
+"qiZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -32117,6 +32271,17 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
 /area/storage/emergency_storage/emergency4)
+<<<<<<< HEAD
+=======
+"rkl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "rkH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -32210,6 +32375,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/tether/station/dock_two)
+<<<<<<< HEAD
+=======
+"rqA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "rqP" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
@@ -33505,6 +33684,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/hallway)
+<<<<<<< HEAD
+=======
+"sOn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "sPJ" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/material/plasteel{
@@ -33919,7 +34109,6 @@
 	pixel_x = 4;
 	pixel_y = -2
 	},
-/obj/item/weapon/stamp/cargo,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -33932,6 +34121,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner2{
 	dir = 4
 	},
+/obj/item/weapon/stamp/accepted,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "tos" = (
@@ -34923,6 +35113,20 @@
 "uuz" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/belter)
+<<<<<<< HEAD
+=======
+"uvN" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "uxR" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -35217,7 +35421,6 @@
 /turf/simulated/floor,
 /area/maintenance/station/cargo)
 "uMR" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -35227,6 +35430,9 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -35564,6 +35770,10 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "vcG" = (
@@ -35779,6 +35989,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/docks)
+<<<<<<< HEAD
+=======
+"vtg" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "vtx" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -36311,9 +36534,35 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+<<<<<<< HEAD
 "wbd" = (
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/engines)
+=======
+"vZG" = (
+/obj/machinery/airlock_sensor{
+	pixel_x = -28;
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/general)
+"waj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "medbus"
+	},
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "wbf" = (
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
@@ -36369,6 +36618,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock/gear)
+<<<<<<< HEAD
+=======
+"weP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "medbus";
+	name = "medbus"
+	},
+/obj/machinery/atmospherics/binary/pump/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/medivac/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "whg" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/hologram/holopad,
@@ -36544,6 +36813,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_two)
+<<<<<<< HEAD
+=======
+"wwJ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "secbus"
+	},
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "wwR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -37570,6 +37850,35 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/docks)
+<<<<<<< HEAD
+=======
+"xMQ" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "xMZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -37812,6 +38121,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
+<<<<<<< HEAD
+=======
+"xZE" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	nightshift_setting = 2;
+	pixel_y = 28
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "xZW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37874,6 +38205,33 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_two)
+<<<<<<< HEAD
+=======
+"ybT" = (
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/general)
+"ydq" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/obj/machinery/atmospherics/binary/pump/fuel,
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/engines)
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 "ydT" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
@@ -48248,9 +48606,9 @@ tos
 ayY
 aBo
 uMR
-gVf
 pGq
-dXC
+aAB
+fMr
 shZ
 azc
 kNs
@@ -55341,6 +55699,7 @@ aaa
 aaa
 aaa
 <<<<<<< HEAD
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -55364,6 +55723,9 @@ aaa
 aaa
 =======
 hsf
+=======
+osM
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 osM
 scB
 sJw
@@ -56240,6 +56602,7 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -56251,6 +56614,16 @@ aaa
 aaa
 aaa
 aaa
+=======
+hsf
+tqu
+mRq
+psE
+psE
+psE
+psE
+kKY
+>>>>>>> 4ccd512332... Merge pull request #12923 from KillianKirilenko/kk-shipfixes
 aaa
 aaa
 aaa
