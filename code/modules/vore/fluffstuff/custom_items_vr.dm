@@ -1486,8 +1486,6 @@ End CHOMP Removal*/
 	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
 	gender = PLURAL // this seems like a good idea but probably prone to changing. todo: ask dan
 	// the only reason this thought is relevant because the base slimeplush has its gender set to female
-<<<<<<< HEAD
-=======
 
 //YeCrowbarMan - Lemon Yellow
 /obj/item/toy/plushie/fluff/lemonplush
@@ -1514,4 +1512,3 @@ End CHOMP Removal*/
   nano_printer = new/obj/item/weapon/computer_hardware/nano_printer(src)
   battery_module = new/obj/item/weapon/computer_hardware/battery_module(src)
   battery_module.charge_to_full()
->>>>>>> 679b957ef7... Merge pull request #12958 from TheToaster98/NettieFluff
