@@ -15,6 +15,11 @@ crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
+<<<<<<< HEAD
+=======
+heroman3003 - Xenochimera
+hexadood - Protean
+>>>>>>> 6732b13d2d... Merge pull request #12956 from ItsSelis/patch-3
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
