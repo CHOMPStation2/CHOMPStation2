@@ -98,6 +98,12 @@
 /obj/item/weapon/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
+"ax" = (
+/obj/structure/closet/crate/trashcart{
+	starts_with = list(/obj/item/weapon/stock_parts/capacitor/omni = 5, /obj/item/weapon/stock_parts/manipulator/omni = 5, /obj/item/weapon/stock_parts/matter_bin/omni = 5, /obj/item/weapon/stock_parts/micro_laser/omni = 5, /obj/item/weapon/stock_parts/scanning_module/omni = 5)
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Chapel1)
 "ay" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/wood/sif,
@@ -107,7 +113,7 @@
 	desc = "A vendor using compressed matter cartridges to store large amounts of clothing.";
 	name = "Morgue Wear";
 	product_ads = "...";
-	products = list(/obj/item/clothing/under/color/black = 50,/obj/item/clothing/under/gentlesuit = 50,/obj/item/clothing/under/color/blackjumpskirt = 50,/obj/item/clothing/under/gentlesuit/skirt = 50,/obj/item/clothing/shoes/black = 100,/obj/item/clothing/shoes/dress = 100)
+	products = list(/obj/item/clothing/under/color/black = 50, /obj/item/clothing/under/gentlesuit = 50, /obj/item/clothing/under/color/blackjumpskirt = 50, /obj/item/clothing/under/gentlesuit/skirt = 50, /obj/item/clothing/shoes/black = 100, /obj/item/clothing/shoes/dress = 100)
 	},
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/Chapel1)
@@ -131,7 +137,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5,/obj/item/weapon/stock_parts/capacitor/omni = 1,/obj/item/weapon/stock_parts/micro_laser/omni = 1,/obj/item/stack/material/uranium = 10,/obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
@@ -416,6 +422,30 @@
 /obj/effect/decal/remains/human,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
+"bB" = (
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Chapel1)
+"bC" = (
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Chapel1)
 "cA" = (
 /obj/random/mob/spider{
 	mob_faction = "neutral"
@@ -494,27 +524,13 @@
 	},
 /turf/simulated/wall/log_sif,
 /area/submap/Chapel1)
-"qt" = (
-/obj/effect/floor_decal/rust,
-/obj/structure/cable/cyan{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/plating/sif/planetuse,
-/area/submap/Chapel1)
 "qO" = (
 /obj/structure/cable/cyan{
 	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5,/obj/item/weapon/stock_parts/capacitor/omni = 1,/obj/item/weapon/stock_parts/micro_laser/omni = 1,/obj/item/stack/material/uranium = 10,/obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
@@ -534,7 +550,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5,/obj/item/weapon/stock_parts/capacitor/omni = 1,/obj/item/weapon/stock_parts/micro_laser/omni = 1,/obj/item/stack/material/uranium = 10,/obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
@@ -548,13 +564,6 @@
 /obj/structure/closet/grave,
 /turf/simulated/floor/outdoors/rocks,
 /area/template_noop)
-"tu" = (
-/obj/effect/floor_decal/rust,
-/obj/structure/closet/crate/trashcart{
-	starts_with = list(/obj/item/weapon/stock_parts/capacitor/omni = 5,/obj/item/weapon/stock_parts/manipulator/omni = 5,/obj/item/weapon/stock_parts/matter_bin/omni = 5,/obj/item/weapon/stock_parts/micro_laser/omni = 5,/obj/item/weapon/stock_parts/scanning_module/omni = 5)
-	},
-/turf/simulated/floor/plating/sif/planetuse,
-/area/submap/Chapel1)
 "uK" = (
 /obj/structure/closet/body_bag/large,
 /turf/simulated/floor/wood/sif,
@@ -599,7 +608,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5,/obj/item/weapon/stock_parts/capacitor/omni = 1,/obj/item/weapon/stock_parts/micro_laser/omni = 1,/obj/item/stack/material/uranium = 10,/obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
@@ -619,18 +628,6 @@
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/storage/firstaid,
 /turf/simulated/floor/wood/sif,
-/area/submap/Chapel1)
-"OM" = (
-/obj/effect/floor_decal/rust,
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/Chapel1)
 "OZ" = (
 /obj/structure/cable/cyan{
@@ -687,10 +684,6 @@
 	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/wood/sif/broken,
-/area/submap/Chapel1)
-"UJ" = (
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/Chapel1)
 
 (1,1,1) = {"
@@ -930,7 +923,7 @@ aa
 aa
 aa
 gk
-UJ
+al
 ac
 ac
 ac
@@ -963,7 +956,7 @@ aa
 aa
 ab
 TE
-tu
+ax
 ac
 ac
 av
@@ -1425,7 +1418,7 @@ ab
 aa
 ab
 TE
-qt
+bB
 ac
 ac
 Kb
@@ -1458,7 +1451,7 @@ ab
 aa
 aa
 gk
-OM
+bC
 ac
 ac
 ac
