@@ -82,6 +82,9 @@
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
 	src.modules += new /obj/item/device/multitool(src)
+	src.modules += new /obj/item/weapon/soap/nanotrasen(src)
+	src.modules += new /obj/item/weapon/storage/bag/trash(src)
+	src.modules += new /obj/item/weapon/mop(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/weapon/gripper(src)
@@ -98,8 +101,6 @@
 	L.lit = 1
 	src.modules += L
 	
-	src.emag = new /obj/item/weapon/stamp/chameleon(src)
-	src.emag = new /obj/item/weapon/pen/chameleon(src)
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(50000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(50000)
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel(20000)
