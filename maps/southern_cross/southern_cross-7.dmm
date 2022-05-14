@@ -1262,6 +1262,11 @@
 	landmark_tag = "stargazer_dock";
 	name = "Stargazer Dock"
 	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/stargazer)
 "dj" = (
@@ -1861,7 +1866,12 @@
 	opacity = 1
 	},
 /obj/machinery/power/smes/buildable/power_shuttle{
+	charge = 2e+006;
 	inputting = 1
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
@@ -2008,6 +2018,7 @@
 	dir = 4
 	},
 /obj/machinery/power/smes/buildable/power_shuttle{
+	charge = 2e+006;
 	inputting = 1
 	},
 /obj/structure/cable/green,
@@ -5476,6 +5487,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/ursula)
 "qA" = (
@@ -5608,6 +5624,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/ursula)
 "qS" = (
@@ -5665,6 +5686,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/ursula)
 "qV" = (
@@ -5680,6 +5706,11 @@
 	master_tag = "ursula";
 	name = "interior access button";
 	pixel_y = 26
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
@@ -5697,6 +5728,11 @@
 	tag_interior_door = "ursula_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
 "qX" = (
@@ -5716,6 +5752,11 @@
 	landmark_tag = "ursula_dock";
 	name = "Ursula Dock"
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
 "qY" = (
@@ -5731,6 +5772,11 @@
 	id_tag = "ursula_outer";
 	locked = 1;
 	name = "External Access"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
@@ -5932,6 +5978,11 @@
 	name = "interior access button";
 	pixel_y = -26
 	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/stargazer)
 "rx" = (
@@ -5941,6 +5992,11 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/stargazer)
@@ -5959,6 +6015,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/stargazer)
@@ -7000,7 +7061,7 @@
 	},
 /obj/machinery/door/window/westleft{
 	name = "First-Aid Desk";
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,68)
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/hangerhall)
@@ -7111,7 +7172,7 @@
 /obj/machinery/door/airlock/research{
 	id_tag = "CarrierRecovery";
 	name = "Recovery";
-	req_one_access = list(5,43)
+	req_one_access = list(5,68)
 	},
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -7247,6 +7308,11 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 10
 	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/prep/recovery)
 "uB" = (
@@ -7263,11 +7329,6 @@
 /area/expoutpost/prep/recovery)
 "uC" = (
 /obj/structure/closet/secure_closet/personal/patient,
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	layer = 4;
 	pixel_y = -32
@@ -7281,9 +7342,10 @@
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the medbay foyer.";
+	dir = 8;
 	id = "CarrierRecovery";
 	name = "Recovery Door Control";
-	pixel_x = 36
+	pixel_x = 24
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -7310,6 +7372,12 @@
 	c_tag = "CAR - First Aid 2";
 	dir = 5
 	},
+/obj/machinery/button/remote/airlock{
+	dir = 4;
+	id = "CarrierRecovery2";
+	pixel_x = -24;
+	pixel_y = -1
+	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/hangaroneprep)
 "uE" = (
@@ -7319,7 +7387,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "First-Aid";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,68)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
@@ -7460,6 +7528,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/multi_tile/glass{
+	id_tag = "CarrierRecovery2";
+	req_one_access = list(5,68)
+	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/hangaroneprep)
 "uU" = (
@@ -8600,10 +8672,20 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/baby_mammoth)
 "xc" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/baby_mammoth)
 "xd" = (
@@ -8623,6 +8705,11 @@
 	locked = 1;
 	name = "Internal Access"
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/baby_mammoth)
 "xe" = (
@@ -8630,6 +8717,11 @@
 /obj/machinery/meter,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/baby_mammoth)
@@ -8645,6 +8737,11 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/baby_mammoth)
@@ -8667,6 +8764,11 @@
 	id = "stargazer_blast";
 	layer = 2.5;
 	name = "window blast shield"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/baby_mammoth)
@@ -9197,7 +9299,7 @@
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,17,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangerhall)
@@ -9407,6 +9509,7 @@
 	c_tag = "CAR - Hangar 1 Prep";
 	dir = 1
 	},
+/obj/machinery/cell_charger,
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangaroneprep)
 "yw" = (
@@ -9700,7 +9803,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Briefing Room";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,17,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/debriefing)
@@ -9727,7 +9830,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Briefing Room";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,17,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/debriefing)
@@ -9818,7 +9921,7 @@
 /area/expoutpost/hangartwo)
 "zd" = (
 /obj/machinery/door/airlock/maintenance{
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,17,43,67)
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -9827,7 +9930,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "Teleport Access";
 	req_access = list(17,43);
-	req_one_access = list(17)
+	req_one_access = list(17,43)
 	},
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -11956,7 +12059,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Briefing Room";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,17,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/shuttle)
@@ -14431,6 +14534,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/expoutpost/prep)
+"TD" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/shuttle/stargazer)
 "TF" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/storage/box/cdeathalarm_kit{
@@ -15304,7 +15420,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Expedition Shuttle";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,17,43,67)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -45725,7 +45841,7 @@ pN
 cb
 cj
 cL
-cL
+TD
 cZ
 dc
 de
