@@ -129,7 +129,7 @@
 /mob/living/bot/secbot/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return
-	
+
 	add_fingerprint(usr)
 
 	switch(action)
@@ -380,7 +380,8 @@
 	s.start()
 
 	new /obj/effect/decal/cleanable/blood/oil(Tsec)
-	qdel(src)
+	//qdel(src)
+	return ..()
 
 /mob/living/bot/secbot/proc/target_name(mob/living/T)
 	if(ishuman(T))
