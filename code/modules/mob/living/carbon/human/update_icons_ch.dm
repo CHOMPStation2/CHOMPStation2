@@ -54,15 +54,20 @@
 
 /mob/living/carbon/human/proc/get_vore_belly_image()
 	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
-		var/is_teshari = ((species.name == "Teshari") || (species.base_species && species.base_species == "Teshari"))
-		var/vs_speciesname = is_teshari ? "Tesh" : "Human"
 		var/vs_fullness = vore_fullness_ex["stomach"]
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Bellies.dmi', icon_state = "[vs_speciesname] Belly [vs_fullness] Idle")
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness] idle")
 		vorebelly_s.Blend(rgb(r_skin, g_skin, b_skin), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.overlays += em_block_image_generic(working)
 		return working
 	return null
+
+/mob/living/carbon/human/proc/vore_belly_animation()
+	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
+		var/vs_fullness = vore_fullness_ex["stomach"]
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness]")
+		vorebelly_s.Blend(rgb(r_skin, g_skin, b_skin), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
+		flick(vorebelly_s, overlays_standing[VORE_BELLY_LAYER])
 
 /mob/living/carbon/human/proc/update_vore_tail_sprite()
 	if(QDESTROYING(src))
@@ -78,9 +83,9 @@
 	apply_layer(VORE_TAIL_LAYER)
 
 /mob/living/carbon/human/proc/get_vore_tail_image()
-	if(tail_style && istaurtail(tail_style))
+	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "N-Taur Belly [vs_fullness] Idle")
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness] dle")
 		vorebelly_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16
@@ -88,3 +93,10 @@
 			working.overlays += em_block_image_generic(working)
 		return working
 	return null
+
+/mob/living/carbon/human/proc/vore_tail_animation()
+	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
+		var/vs_fullness = vore_fullness_ex["taur belly"]
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness]")
+		vorebelly_s.Blend(rgb(r_skin, g_skin, b_skin), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
+		flick(vorebelly_s, overlays_standing[VORE_TAIL_LAYER])

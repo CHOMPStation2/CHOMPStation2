@@ -4484,10 +4484,13 @@
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
 #include "modular_chomp\code\modules\mob\holder.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\species.dm"
+#include "modular_chomp\code\modules\mob\living\carbon\human\species\station\station.dm"
+#include "modular_chomp\code\modules\mob\living\carbon\human\species\station\teshari.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\_protean_defines.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_blob.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_organs.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_powers.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_rig.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_species.dm"
+#include "modular_chomp\code\modules\mob\new_player\sprite_accessories_taur_vr.dm"
 // END_INCLUDE
