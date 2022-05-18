@@ -5,7 +5,7 @@
 /obj/item/weapon/cell
 	name = "power cell"
 	desc = "A rechargable electrochemical power cell."
-	icon = 'icons/obj/power_cells.dmi'
+	icon = 'modular_chomp/icons/obj/power_cells.dmi' //CHOMP Edit using modular folders now
 	icon_state = "standard"
 	item_state = "cell"
 	origin_tech = list(TECH_POWER = 1)
