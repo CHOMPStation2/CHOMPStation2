@@ -117,7 +117,7 @@
 	materials = list(MAT_STEEL = 1500, MAT_GLASS = 100, MAT_MORPHIUM = 100, MAT_PHORON = 500, MAT_DURASTEEL = 500, MAT_URANIUM = 200, MAT_VERDANTIUM = 150)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge
 	category = list("Misc")
-	sort_string = "BAABD"
+	sort_string = "BAABE"
 
 /datum/design/item/powercell/super_device
 	name = "device, super"
@@ -126,7 +126,7 @@
 	materials = list(MAT_STEEL = 700, MAT_GLASS = 70, MAT_GOLD = 50, MAT_SILVER = 20)
 	build_path = /obj/item/weapon/cell/device/super
 	category = list("Misc")
-	sort_string = "BAABE"
+	sort_string = "BAABF"
 
 /datum/design/item/powercell/hype_device
 	name = "device, hyper"
@@ -135,7 +135,7 @@
 	materials = list(MAT_STEEL = 1400, MAT_GLASS = 1400, MAT_GOLD = 150, MAT_SILVER = 150)
 	build_path = /obj/item/weapon/cell/device/hyper
 	category = list("Misc")
-	sort_string = "BAABF"
+	sort_string = "BAABG"
 
 /datum/design/item/powercell/giga_device
 	name = "device, giga"
@@ -144,7 +144,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_GLASS = 100, MAT_PHORON = 2000, MAT_METALHYDROGEN = 500, MAT_DURASTEEL = 200, MAT_URANIUM = 200)
 	build_path = /obj/item/weapon/cell/device/giga
 	category = list("Misc")
-	sort_string = "BAAAG"
+	sort_string = "BAAAH"
 
 /datum/design/item/powercell/omni_device
 	name = "device, omni"
