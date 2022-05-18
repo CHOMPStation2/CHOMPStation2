@@ -1,4 +1,3 @@
-//CHOMP Disabled in DME in favor of modular_chomp folder
 /*
  * Crap
  */
@@ -45,7 +44,7 @@
 /obj/item/weapon/cell/high
 	name = "high-capacity power cell"
 	origin_tech = list(TECH_POWER = 2)
-	icon_state = "high"
+	icon_state = "b_hi"
 	maxcharge = 10000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 60)
 
@@ -60,7 +59,7 @@
 /obj/item/weapon/cell/super
 	name = "super-capacity power cell"
 	origin_tech = list(TECH_POWER = 5)
-	icon_state = "super"
+	icon_state = "b_sup"
 	maxcharge = 20000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 70)
 
@@ -75,7 +74,7 @@
 /obj/item/weapon/cell/hyper
 	name = "hyper-capacity power cell"
 	origin_tech = list(TECH_POWER = 6)
-	icon_state = "hyper"
+	icon_state = "b_hy"
 	maxcharge = 30000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
 
@@ -85,11 +84,25 @@
 	update_icon()
 
 /*
+ * Giga
+ */
+/obj/item/weapon/cell/giga
+	name = "giga-capacity power cell made with a dash of precursor technology"
+	origin_tech = list(TECH_POWER = 6, TECH_PRECURSOR = 1)
+	icon_state = "meb_b_hi"
+	maxcharge = 40000
+	matter = list(MAT_STEEL = 1000, MAT_GLASS = 100)
+
+/obj/item/weapon/cell/giga/empty/New()
+	..()
+	charge = 0
+	update_icon()
+/*
  * Mecha
  */
 /obj/item/weapon/cell/mech
 	name = "mecha power cell"
-	icon_state = "mech"
+	icon_state = "exs_s"
 	charge = 15000
 	maxcharge = 15000
 	matter = list(MAT_STEEL = 800, MAT_GLASS = 60)
@@ -97,7 +110,7 @@
 /obj/item/weapon/cell/mech/high
 	name = "high-capacity mecha power cell"
 	origin_tech = list(TECH_POWER = 3)
-	icon_state = "blue"
+	icon_state = "exs_m"
 	charge = 20000
 	maxcharge = 20000
 	matter = list(MAT_STEEL = 800, MAT_GLASS = 80)
@@ -105,7 +118,7 @@
 /obj/item/weapon/cell/mech/super
 	name = "super-capacity mecha power cell"
 	origin_tech = list(TECH_POWER = 6)
-	icon_state = "white"
+	icon_state = "exs_l"
 	charge = 25000
 	maxcharge = 25000
 	matter = list(MAT_STEEL = 800, MAT_GLASS = 100)
@@ -115,7 +128,7 @@
  */
 /obj/item/weapon/cell/infinite
 	name = "infinite-capacity power cell!"
-	icon_state = "infinity"
+	icon_state = "infinite_b"
 	origin_tech =  null
 	maxcharge = 30000 //determines how badly mobs get shocked
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
@@ -132,7 +145,7 @@
 /obj/item/weapon/cell/potato
 	name = "potato battery"
 	desc = "A rechargable starch based power cell."
-	origin_tech = list(TECH_POWER = 1)
+	origin_tech = list(TECH_POWER = 0)
 	icon_state = "potato"
 	charge = 100
 	maxcharge = 300

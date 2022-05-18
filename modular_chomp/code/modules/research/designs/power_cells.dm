@@ -1,4 +1,3 @@
-//CHOMP Disabled in DME in favor of modular_chomp folder
 /datum/design/item/powercell
 	build_type = PROTOLATHE | MECHFAB
 
@@ -16,6 +15,9 @@
 	C.update_icon()
 	return C
 
+/*
+//Big Cells
+*/
 /datum/design/item/powercell/basic
 	name = "basic"
 	id = "basic_cell"
@@ -52,6 +54,26 @@
 	category = list("Misc")
 	sort_string = "BAAAD"
 
+/datum/design/item/powercell/giga
+	name = "giga-capacity"
+	id = "giga_cell"
+	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 5, TECH_PRECURSOR = 1, TECH_PHORON = 4)
+	materials = list(MAT_STEEL = 1000, MAT_GOLD = 300, MAT_SILVER = 300, MAT_GLASS = 100, MAT_PHORON = 1000, MAT_METALHYDROGEN = 250, MAT_DURASTEEL = 100, MAT_URANIUM = 100)
+	build_path = /obj/item/weapon/cell/giga
+	category = list("Misc")
+	sort_string = "BAAAE"
+
+/datum/design/item/powercell/potato
+	name = "potato cell"
+	id = "potato_cell"
+	materials = list(MAT_STEEL = 100, MAT_GLASS = 10)
+	build_path = /obj/item/weapon/cell/potato
+	category = list("Misc")
+	sort_string = "BAAAF"
+
+/*
+//Device Cells
+*/
 /datum/design/item/powercell/device
 	name = "device"
 	build_type = PROTOLATHE
@@ -61,33 +83,68 @@
 	category = list("Misc")
 	sort_string = "BAABA"
 
-//Yawn changes
+/datum/design/item/powercell/device_empproof
+	name = "device, empproof"
+	id = "empproof_device"
+	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2, TECH_PHORON = 1)
+	materials = list(MAT_STEEL = 350, MAT_GLASS = 25, MAT_MORPHIUM = 25, MAT_PHORON = 25)
+	build_path = /obj/item/weapon/cell/device/empproof
+	category = list("Misc")
+	sort_string = "BAABB"
+
 /datum/design/item/powercell/advance_device
 	name = "device, advanced"
-	build_type = PROTOLATHE
 	id = "advance_device"
+	req_tech = list(TECH_POWER = 2, TECH_MATERIAL = 1)
 	materials = list(MAT_STEEL = 700, MAT_GLASS = 50)
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = list("Misc")
-	sort_string = "BAABB"
+	sort_string = "BAABC"
+
+/datum/design/item/powercell/advance_device_empproof
+	name = "device, advanced empproof"
+	id = "empproof_advanced_device"
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_PHORON = 4)
+	materials = list(MAT_STEEL = 700, MAT_GLASS = 50, MAT_MORPHIUM = 50, MAT_PHORON = 50)
+	build_path = /obj/item/weapon/cell/device/weapon/empproof
+	category = list("Misc")
+	sort_string = "BAABD"
+	
+/datum/design/item/powercell/advance_device_recharge
+	name = "device, advanced recharging"
+	id = "recharging_advanced_device"
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_PHORON = 4, TECH_PRECURSOR = 2)
+	materials = list(MAT_STEEL = 1500, MAT_GLASS = 100, MAT_MORPHIUM = 100, MAT_PHORON = 500, MAT_DURASTEEL = 500, MAT_URANIUM = 200, MAT_VERDANTIUM = 150)
+	build_path = /obj/item/weapon/cell/device/weapon/recharge
+	category = list("Misc")
+	sort_string = "BAABE"
 
 /datum/design/item/powercell/super_device
 	name = "device, super"
 	id = "super_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
-	materials = list(MAT_STEEL = 700, MAT_GLASS = 70, "gold" = 50, "silver" = 20)
+	materials = list(MAT_STEEL = 700, MAT_GLASS = 70, MAT_GOLD = 50, MAT_SILVER = 20)
 	build_path = /obj/item/weapon/cell/device/super
 	category = list("Misc")
-	sort_string = "BAABC"
+	sort_string = "BAABF"
 
 /datum/design/item/powercell/hype_device
 	name = "device, hyper"
 	id = "hyper_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
-	materials = list(MAT_STEEL = 1400, MAT_GLASS= 1400, "gold" = 150, "silver" = 150)
+	materials = list(MAT_STEEL = 1400, MAT_GLASS = 1400, MAT_GOLD = 150, MAT_SILVER = 150)
 	build_path = /obj/item/weapon/cell/device/hyper
 	category = list("Misc")
-	sort_string = "BAABD"
+	sort_string = "BAABG"
+
+/datum/design/item/powercell/giga_device
+	name = "device, giga"
+	id = "giga_device"
+	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 6, TECH_PRECURSOR = 1, TECH_PHORON = 4)
+	materials = list(MAT_STEEL = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_GLASS = 100, MAT_PHORON = 2000, MAT_METALHYDROGEN = 500, MAT_DURASTEEL = 200, MAT_URANIUM = 200)
+	build_path = /obj/item/weapon/cell/device/giga
+	category = list("Misc")
+	sort_string = "BAAAH"
 
 /datum/design/item/powercell/omni_device
 	name = "device, omni"
@@ -97,9 +154,11 @@
 	materials = list(MAT_STEEL = 1700, MAT_GLASS = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	category = list("Misc")
-	sort_string = "BAABE"
-//End of Yawn add
+	sort_string = "BAABI"
 
+/*
+//Mecha Cells
+*/
 /datum/design/item/powercell/mecha/high
 	name = "high-capacity mecha"
 	id = "high_mech_cell"
