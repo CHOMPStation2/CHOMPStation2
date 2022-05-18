@@ -88,7 +88,7 @@
 	id = "empproof_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2, TECH_PHORON = 1)
 	materials = list(MAT_STEEL = 350, MAT_GLASS = 25, MAT_MORPHIUM = 25, MAT_PHORON = 25)
-	build_path = /obj/item/weapon/cell/device
+	build_path = /obj/item/weapon/cell/device/empproof
 	category = list("Misc")
 	sort_string = "BAABB"
 
@@ -106,7 +106,16 @@
 	id = "empproof_advanced_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_PHORON = 4)
 	materials = list(MAT_STEEL = 700, MAT_GLASS = 50, MAT_MORPHIUM = 50, MAT_PHORON = 50)
-	build_path = /obj/item/weapon/cell/device
+	build_path = /obj/item/weapon/cell/device/weapon/empproof
+	category = list("Misc")
+	sort_string = "BAABD"
+	
+/datum/design/item/powercell/advance_device_recharge
+	name = "device, advanced recharging"
+	id = "recharging_advanced_device"
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_PHORON = 4, TECH_PRECURSOR = 2)
+	materials = list(MAT_STEEL = 1500, MAT_GLASS = 100, MAT_MORPHIUM = 100, MAT_PHORON = 500, MAT_DURASTEEL = 500, MAT_URANIUM = 200, MAT_VERDANTIUM = 150)
+	build_path = /obj/item/weapon/cell/device/weapon/recharge
 	category = list("Misc")
 	sort_string = "BAABD"
 
@@ -133,7 +142,7 @@
 	id = "giga_device"
 	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 6, TECH_PRECURSOR = 1, TECH_PHORON = 4)
 	materials = list(MAT_STEEL = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_GLASS = 100, MAT_PHORON = 2000, MAT_METALHYDROGEN = 500, MAT_DURASTEEL = 200, MAT_URANIUM = 200)
-	build_path = /obj/item/weapon/cell/giga
+	build_path = /obj/item/weapon/cell/device/giga
 	category = list("Misc")
 	sort_string = "BAAAG"
 
@@ -145,7 +154,7 @@
 	materials = list(MAT_STEEL = 1700, MAT_GLASS = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	category = list("Misc")
-	sort_string = "BAABH"
+	sort_string = "BAABI"
 
 /*
 //Mecha Cells
