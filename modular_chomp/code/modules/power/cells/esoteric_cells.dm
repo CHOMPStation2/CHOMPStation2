@@ -1,4 +1,4 @@
-//CHOMP Disabled in DME in favor of modular_chomp folder
+//I don't know what this is, but whatever it is, I am taking it from virgo code so they stop messing with cells.
 /obj/item/weapon/cell/spike
 	name = "modified power cell"
 	desc = "A modified power cell sitting in a highly conductive chassis."
