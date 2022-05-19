@@ -182,9 +182,12 @@
 	'sound/ambience/foreboding/foreboding2.ogg'\
 	)
 
-// Ambience heard when aboveground on Sif and not in a Point of Interest.
+// Ambience heard when aboveground on Sif and not in a Point of Interest. // CHOMPEdit: Changed to Snowbirds Loops 1-4
 #define AMBIENCE_SIF list(\
-	'sound/ambience/sif/sif1.ogg'\
+	'sound/ambience/snow_and_ice/Snowbirds_loop1.ogg',\
+	'sound/ambience/snow_and_ice/Snowbirds_loop2.ogg',\
+	'sound/ambience/snow_and_ice/Snowbirds_loop3.ogg',\
+	'sound/ambience/snow_and_ice/Snowbirds_loop4.ogg'\
 	)
 
 // If we ever add geothermal PoIs or other places that are really hot, this will do.

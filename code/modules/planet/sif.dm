@@ -333,9 +333,9 @@ var/datum/planet/sif/planet_sif = null
 		"Loud thunder is heard in the distance.",
 		"A bright flash heralds the approach of a storm."
 	)
-	outdoor_sounds_type = /datum/looping_sound/weather/rain/heavy
-	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors/heavy
-
+	outdoor_sounds_type = /datum/looping_sound/weather/storm
+	indoor_sounds_type = /datum/looping_sound/weather/storm/indoors
+	// CHOMPEdit - change weather sounds to proper storm sounds
 
 	transition_chances = list(
 		WEATHER_RAIN = 45,
