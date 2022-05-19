@@ -87,7 +87,7 @@
  * Giga
  */
 /obj/item/weapon/cell/giga
-	name = "giga-capacity power cell made with a dash of precursor technology"
+	name = "giga-capacity power cell"
 	origin_tech = list(TECH_POWER = 6, TECH_PRECURSOR = 1)
 	icon_state = "meb_b_hi"
 	maxcharge = 40000
