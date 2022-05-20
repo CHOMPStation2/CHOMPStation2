@@ -22412,13 +22412,10 @@
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8
 	},
-/obj/structure/plasticflaps{
-	opacity = 1
-	},
 /obj/machinery/navbeacon/delivery/west{
 	location = "Kitchen"
 	},
-/obj/structure/fans/tiny,
+/obj/structure/plasticflaps/mining,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen)
 "bsM" = (
@@ -25645,7 +25642,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/fans/tiny,
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen)
 "bBx" = (
@@ -62036,7 +62035,9 @@
 	name = "Operating Theatre Storage";
 	req_access = list(45)
 	},
-/obj/structure/fans/tiny,
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/surgery_storage)
 "nvX" = (
@@ -64078,7 +64079,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/structure/fans/tiny,
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/kitchen)
 "oBh" = (
