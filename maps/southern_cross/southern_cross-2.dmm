@@ -2610,7 +2610,11 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/computer/general_air_control/fuel_injection,
+/obj/machinery/computer/general_air_control{
+	frequency = 1445;
+	name = "Engine Exhaust Control";
+	sensors = list("engine_exhaust_sensor" = "Engine Exhaust Sensor")
+	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
 "agY" = (
@@ -13659,7 +13663,7 @@
 "aRv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/valve/digital{
-	dir = 8;
+	dir = 4;
 	name = "Hot Loop Waste Gas Ejection Switch"
 	},
 /turf/simulated/floor,
@@ -22408,12 +22412,10 @@
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8
 	},
-/obj/structure/plasticflaps{
-	opacity = 1
-	},
 /obj/machinery/navbeacon/delivery/west{
 	location = "Kitchen"
 	},
+/obj/structure/plasticflaps/mining,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen)
 "bsM" = (
@@ -25640,6 +25642,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen)
 "bBx" = (
@@ -27006,7 +27011,7 @@
 /area/engineering/atmos)
 "bFW" = (
 /obj/structure/kitchenspike,
-/obj/machinery/alarm{
+/obj/machinery/alarm/freezer{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -45079,7 +45084,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "dYT" = (
-/obj/machinery/atmospherics/unary/outlet_injector,
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1445;
+	id = "engine_exhaust_output";
+	name = "Engine Exhaust";
+	power_rating = 30000;
+	use_power = 1;
+	volume_rate = 700
+	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -45090,6 +45102,11 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/air_sensor{
+	frequency = 1445;
+	id_tag = "engine_exhaust_sensor";
+	output = 1
+	},
 /turf/simulated/floor/airless,
 /area/engineering/engine_waste)
 "dZA" = (
@@ -55444,6 +55461,14 @@
 /obj/random/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
+"jBV" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Waste Handling Exterior 1";
+	dir = 1
+	},
+/turf/space,
+/area/space)
 "jCe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -60475,6 +60500,13 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/engineering/engi_restroom)
+"myc" = (
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Waste Handling Exterior 2";
+	dir = 8
+	},
+/turf/space,
+/area/space)
 "myg" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
@@ -62002,6 +62034,9 @@
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre Storage";
 	req_access = list(45)
+	},
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/surgery_storage)
@@ -64044,6 +64079,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/kitchen)
 "oBh" = (
@@ -77832,6 +77870,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -93654,7 +93695,7 @@ aaf
 aaa
 aaa
 aaa
-aaa
+myc
 ahT
 ahT
 ahT
@@ -95716,7 +95757,7 @@ aaa
 aag
 wWX
 aaf
-aaf
+jBV
 aYy
 agZ
 aRv
