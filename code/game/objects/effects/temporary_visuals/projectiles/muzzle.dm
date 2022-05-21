@@ -63,6 +63,7 @@
 	light_color = "#8837A3"
 
 /obj/effect/projectile/muzzle/precursor //CHOMPedit add Precursor muzzle
+	icon = 'icons/obj/projectiles_ch.dmi' // CHOMPEdit: Fix path + replace missing file
 	icon_state = "muzzle_prec"
 	light_range = 2
 	light_power = 0.7
