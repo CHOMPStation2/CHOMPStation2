@@ -1114,8 +1114,12 @@
 	icon_expected_width = 64
 
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
-	. = ..()
-	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
+	..()
+	if(ammo_magazine)
+		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,4)]"
+	else
+		icon_state = "c20r"
+	return
 
 /obj/item/weapon/gun/projectile/automatic/c20r/Initialize()
 	. = ..()
@@ -1171,8 +1175,12 @@
 	icon_expected_width = 64
 
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon()
-	. = ..()
-	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
+	..()
+	if(ammo_magazine)
+		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
+	else
+		icon_state = "carbine-e"
+	return
 
 /obj/item/weapon/gun/projectile/automatic/z8/Initialize()
 	. = ..()
@@ -1201,7 +1209,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/mini_uzi/update_icon()
 	. = ..()
-	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
+	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-empty"
 
 /obj/item/weapon/gun/projectile/automatic/mini_uzi/Initialize()
 	. = ..()
