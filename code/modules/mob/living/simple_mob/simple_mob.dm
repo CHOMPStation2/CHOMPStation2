@@ -307,7 +307,7 @@
 
 //VOREStation Add Start		Makes it so that simplemobs can understand galcomm without being able to speak it.
 /mob/living/simple_mob/say_understands(var/mob/other, var/datum/language/speaking = null)
-	if(understands_common && speaking?.name == LANGUAGE_GALCOM)
+	if(understands_common && (speaking?.name == LANGUAGE_GALCOM || !speaking))
 		return TRUE
 	return ..()
 //Vorestation Add End

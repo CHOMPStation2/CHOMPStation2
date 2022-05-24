@@ -2473,7 +2473,8 @@
 "cFp" = (
 /obj/machinery/door/airlock/vault/bolted{
 	name = "AI core";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /obj/machinery/door/blast/regular{
 	id = "AICore";
@@ -3206,7 +3207,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
@@ -3666,7 +3668,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Messaging Server";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_server_room)
@@ -3771,7 +3774,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Synthetic Storage Access";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_cyborg_station)
@@ -4262,11 +4266,15 @@
 /area/maintenance/thirddeck/foreport)
 "elx" = (
 /obj/structure/closet/secure_closet/hop2,
+/obj/machinery/keycard_auth{
+	pixel_x = -26
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hop/quarters)
 "elz" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/device/gps/command,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hop/quarters)
 "elB" = (
@@ -4392,6 +4400,9 @@
 /area/ai/ai_cyborg_station)
 "eot" = (
 /obj/structure/closet/secure_closet/CMO_wardrobe,
+/obj/machinery/keycard_auth{
+	pixel_x = -26
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
 "epg" = (
@@ -4402,6 +4413,7 @@
 "epw" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/device/gps/medical/cmo,
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
 "epU" = (
@@ -4458,10 +4470,14 @@
 "ery" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/device/gps/science/rd,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
 "ess" = (
 /obj/structure/closet/secure_closet/RD_wardrobe,
+/obj/machinery/keycard_auth{
+	pixel_x = 26
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
 "esF" = (
@@ -8639,10 +8655,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/device/gps/engineering/ce,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/chief/quarters)
 "ihl" = (
 /obj/structure/closet/secure_closet/engineering_chief_wardrobe,
+/obj/machinery/keycard_auth{
+	pixel_x = 26
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/chief/quarters)
 "ihn" = (
@@ -8846,6 +8866,9 @@
 /area/maintenance/solars/aftportsolar)
 "ixE" = (
 /obj/structure/closet/secure_closet/hos_wardrobe,
+/obj/machinery/keycard_auth{
+	pixel_x = -26
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos/quarters)
 "izz" = (
@@ -8858,6 +8881,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/device/gps/security/hos,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos/quarters)
 "iAp" = (
@@ -8885,10 +8909,21 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/device/gps/command{
+	pixel_x = -4
+	},
+/obj/item/device/gps/command{
+	pixel_x = 4
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/bs)
 "iBn" = (
 /obj/structure/closet/lawcloset,
+/obj/machinery/keycard_auth{
+	desc = "This device is used to trigger station functions, which require more than one ID card to authenticate. This one has a small note taped to it. The note reads: I know the secrearies don't have access to these by default, but I am putting it here anyway, on the off chance that one is given the proper clearance and needs to use it. Better safe than sorry. - CE Sivaad Veiter";
+	name = "Oddly Placed Keycard Authentication Device";
+	pixel_x = 26
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/bs)
 "iBE" = (
@@ -10835,7 +10870,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
-	req_access = list(16)
+	req_access = list(16);
+	req_one_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)
@@ -11798,6 +11834,7 @@
 "lUT" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/computer/skills,
+/obj/item/device/gps/command,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "lVh" = (
@@ -15263,6 +15300,17 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/stationgateway)
+"pkH" = (
+/obj/structure/sign/directions/eva{
+	dir = 1;
+	pixel_y = -3
+	},
+/obj/structure/sign/directions/command{
+	dir = 1;
+	pixel_y = 3
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "pkQ" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/cargo,
@@ -16177,6 +16225,17 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/crew_quarters/cafeteria)
+"qjy" = (
+/obj/structure/sign/directions/ladder_down{
+	name = "\improper Down One Deck";
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/eva,
+/obj/structure/sign/directions/security{
+	pixel_y = 6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "qjG" = (
 /obj/machinery/computer/arcade,
 /obj/effect/floor_decal/carpet{
@@ -16850,6 +16909,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"qWu" = (
+/obj/structure/sign/directions/ladder_down{
+	name = "\improper Down One Deck";
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/eva,
+/obj/structure/sign/directions/science{
+	pixel_y = 6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "qXt" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
@@ -20898,6 +20968,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
+"uYx" = (
+/obj/structure/sign/directions/eva{
+	dir = 4;
+	pixel_y = -3
+	},
+/obj/structure/sign/directions/command{
+	dir = 4;
+	pixel_y = 3
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "uYL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -21837,6 +21918,17 @@
 /obj/effect/floor_decal/corner/beige/diagonal,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
+"vJa" = (
+/obj/structure/sign/directions/ladder_down{
+	name = "\improper Down One Deck";
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/eva,
+/obj/structure/sign/directions/medical{
+	pixel_y = 6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "vJc" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -22381,6 +22473,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/aftdoorm)
+"wfs" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -3
+	},
+/obj/structure/sign/directions/command{
+	pixel_y = 3
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "wfR" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -22795,6 +22896,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_10)
+"wvf" = (
+/obj/structure/sign/directions/eva,
+/obj/structure/sign/directions/engineering{
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/ladder_down{
+	name = "\improper Down One Deck";
+	pixel_y = -6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "wvs" = (
 /obj/random/junk,
 /turf/simulated/floor/carpet/purcarpet,
@@ -23524,6 +23636,17 @@
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
 	})
+"xei" = (
+/obj/structure/sign/directions/eva,
+/obj/structure/sign/directions/cargo{
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/ladder_down{
+	name = "\improper Down One Deck";
+	pixel_y = -6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/thirddeck/roof)
 "xes" = (
 /obj/structure/cable/yellow{
 	d2 = 8;
@@ -38246,11 +38369,11 @@ apc
 apc
 apc
 apc
-apc
-apc
-apc
-apc
-apc
+epg
+aqj
+epg
+tHb
+epg
 epg
 epg
 apc
@@ -38504,12 +38627,12 @@ apc
 apc
 apc
 apc
-apc
-apc
-apc
-apc
-apc
 epg
+apc
+apc
+apc
+aqj
+apc
 apc
 apc
 apc
@@ -38762,12 +38885,12 @@ apc
 apc
 apc
 apc
-apc
-apc
-epg
+tHb
 aqj
-epg
-epg
+aqj
+aqj
+aqj
+apc
 apc
 apc
 apc
@@ -39020,16 +39143,16 @@ apc
 apc
 apc
 apc
-epg
+aqj
 apc
 apc
-apc
-aqj
-aqj
-aqj
-aqj
-aqj
-aqj
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
 jhg
 jhg
 jhg
@@ -39278,15 +39401,15 @@ apc
 apc
 apc
 apc
-epg
-apc
-apc
-apc
 aqj
 apc
-apc
-apc
-apc
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
 jhg
 jhg
 jhg
@@ -39536,15 +39659,15 @@ apc
 apc
 apc
 apc
-tHb
-aqj
-aqj
-aqj
 aqj
 apc
-apc
-apc
-apc
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
 jhg
 jhg
 jhg
@@ -39796,7 +39919,7 @@ apc
 apc
 aqj
 apc
-apc
+jhg
 jhg
 jhg
 jhg
@@ -43403,6 +43526,7 @@ jhg
 jhg
 jhg
 apc
+wvf
 jhg
 jhg
 jhg
@@ -43446,8 +43570,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
-jhg
+xei
 apc
 apc
 apc
@@ -50877,7 +51000,7 @@ apc
 apc
 apc
 apc
-jhg
+wfs
 jhg
 jhg
 jhg
@@ -50891,6 +51014,22 @@ jhg
 jhg
 jhg
 bFE
+wfs
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+jhg
+uYx
 jhg
 jhg
 jhg
@@ -50907,23 +51046,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
-jhg
+pkH
 nNW
 jhg
 jhg
@@ -50931,7 +51054,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
+pkH
 vvI
 aqj
 aqj
@@ -52424,7 +52547,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
+qjy
 jhg
 jhg
 jhg
@@ -64812,7 +64935,7 @@ apc
 apc
 apc
 apc
-jhg
+qjy
 jhg
 jhg
 jhg
@@ -65381,7 +65504,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
+vJa
 apc
 apc
 apc
@@ -67908,7 +68031,7 @@ apc
 apc
 apc
 apc
-jhg
+vvI
 jhg
 jhg
 jhg
@@ -68166,7 +68289,7 @@ apc
 apc
 apc
 apc
-jhg
+vvI
 jhg
 jhg
 jhg
@@ -68424,7 +68547,7 @@ apc
 apc
 apc
 apc
-jhg
+vvI
 jhg
 jhg
 jhg
@@ -68682,7 +68805,7 @@ apc
 apc
 apc
 apc
-jhg
+vvI
 jhg
 jhg
 jhg
@@ -68940,7 +69063,7 @@ apc
 apc
 apc
 apc
-jhg
+qWu
 jhg
 jhg
 jhg

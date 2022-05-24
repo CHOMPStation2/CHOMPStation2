@@ -51,6 +51,13 @@
 	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)	
 	result_amount = 12 //More phoron-efficient alternative recipe. 
 
+/decl/chemical_reaction/instant/sorbitol
+	name = "Sorbitol"
+	id = "sorbitol"
+	result = "sorbitol"
+	required_reagents = list("unsorbitol" = 1, "phoron" = 1)
+	result_amount = 2
+
 ///SAP RECIPES//////
 
 /decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.

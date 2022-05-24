@@ -60,19 +60,19 @@
 	var_changes = list("darksight" = 6)  //CHOMP Edit
 */ 
 /datum/trait/positive/melee_attack
-	name = "Special Attack: Sharp Melee" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
+	name = "Special Attack: Sharp Melee" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp))
 
 /datum/trait/positive/melee_attack_fangs
-	name = "Special Attack: Sharp Melee & Numbing Fangs" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
+	name = "Special Attack: Sharp Melee & Numbing Fangs" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage, along with fangs that makes the person bit unable to feel their body or pain."
 	cost = 2
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/fangs
-	name = "Special Attack: Numbing Fangs" // CHOMPEdit: Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
+	name = "Special Attack: Numbing Fangs" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides fangs that makes the person bit unable to feel their body or pain."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
@@ -119,6 +119,7 @@
 /datum/trait/positive/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/flying_toggle
+	H.verbs |= /mob/living/proc/flying_vore_toggle
 	H.verbs |= /mob/living/proc/start_wings_hovering
 
 /datum/trait/positive/soft_landing
@@ -176,3 +177,13 @@
 	desc = "You can breathe under water."
 	cost = 1
 	var_changes = list("water_breather" = 1)
+
+/datum/trait/positive/cocoon_tf
+	name = "Cocoon Spinner"
+	desc = "Allows you to build a cocoon around yourself, using it to transform your body if you desire."
+	cost = 1
+	//custom_only = FALSE
+
+/datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon

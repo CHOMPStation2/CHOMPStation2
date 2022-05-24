@@ -325,3 +325,24 @@
 	name = "RPK Drum magazine(7.62x39mm standard)"
 	path = /obj/item/ammo_magazine/akm/drum
 	hidden = 1
+	
+/datum/category_item/autolathe/arms/s45lc
+	name = "speedloader(.45 LC)"
+	path = /obj/item/ammo_magazine/s45lc
+	hidden = 1
+	
+/datum/category_item/autolathe/arms/s45lc/rubber
+	name = "speedloader(.45 LC Rubber)"
+	path = /obj/item/ammo_magazine/s45lc/rubber
+	hidden = 1
+
+/datum/category_item/autolathe/arms/a45lc/rubber
+	name = ".45 LC Rubber"
+	path = /obj/item/ammo_casing/a45lc/rubber
+	hidden = 1
+
+/datum/category_item/autolathe/arms/a45lc
+	name = ".45 LC"
+	path = /obj/item/ammo_casing/a45lc
+	hidden = 1
+	

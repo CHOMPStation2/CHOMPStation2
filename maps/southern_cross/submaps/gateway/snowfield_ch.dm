@@ -680,4 +680,4 @@
 	desc = "An ID card with a full access through out the base. There's a mark of a red \
 	star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp-dark", "top-blue", "pips-gold", "stripe-gold", "stamp-s", "clip")
-	access = list (1, 3, 20, 30, 47, 61)
+	access = list (1, 2, 3, 4, 5, 10, 11, 20, 26, 28, 30, 33, 45, 47, 53, 56, 61)

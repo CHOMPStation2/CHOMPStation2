@@ -300,6 +300,7 @@
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
+	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //This is kinda important for rescuing people without making it worse for everyone
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
@@ -1029,8 +1030,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon = 'icons/mob/widerobot_ch.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_ch.dmi'
+	R.icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
+	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

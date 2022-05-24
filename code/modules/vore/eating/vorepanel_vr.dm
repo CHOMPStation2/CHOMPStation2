@@ -19,16 +19,6 @@
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
 
-	if(!bellies_loaded) //CHOMPedit Start: On-demand belly loading
-		var/datum/vore_preferences/P = client.prefs_vr
-		var/firstbelly = FALSE // First belly loaded on init_vore
-		for(var/entry in P.belly_prefs)
-			if(!firstbelly)
-				firstbelly = TRUE
-				continue
-			list_to_object(entry,src)
-		bellies_loaded = TRUE //CHOMPedit End
-
 	vorePanel.tgui_interact(src)
 
 /mob/living/proc/updateVRPanel() //Panel popup update call from belly events.
@@ -321,8 +311,11 @@
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
 		"autotransferable" = host.autotransferable,
-		"noisy_full" = host.noisy_full //Belching while full
+		"noisy_full" = host.noisy_full, //Belching while full
 		//CHOMPedit end
+		"drop_vore" = host.drop_vore,
+		"slip_vore" = host.slip_vore,
+		"stumble_vore" = host.stumble_vore,
 	)
 
 	return data
@@ -411,7 +404,7 @@
 			var/alert = tgui_alert(usr, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
 			if(alert != "Reload")
 				return FALSE
-			if(!host.apply_vore_prefs(TRUE)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
+			if(!host.apply_vore_prefs())
 				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
@@ -574,9 +567,18 @@
 			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPedit end
-
-
-
+		if("toggle_drop_vore")
+			host.drop_vore = !host.drop_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_slip_vore")
+			host.slip_vore = !host.slip_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_stumble_vore")
+			host.stumble_vore = !host.stumble_vore
+			unsaved_changes = TRUE
+			return TRUE
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -798,7 +800,7 @@
 			host.vore_selected.item_digest_mode = new_mode
 			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change
 			. = TRUE
-		if("b_contaminates")
+		if("b_contaminates") // CHOMPedit: Reverting upstream's change because why reset save files due to a different server's drama?
 			host.vore_selected.contaminates = !host.vore_selected.contaminates
 			. = TRUE
 		if("b_contamination_flavor")

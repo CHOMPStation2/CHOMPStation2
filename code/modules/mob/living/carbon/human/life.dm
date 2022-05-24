@@ -85,6 +85,8 @@
 
 		handle_pain()
 
+		handle_allergens()
+
 		handle_medical_side_effects()
 
 		handle_heartbeat()
@@ -571,12 +573,12 @@
 	else
 		failed_last_breath = 0
 		adjustOxyLoss(-5)
-		
+
 	if(!does_not_breathe && client) // If we breathe, and have an active client, check if we have synthetic lungs.
 		var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
-		var/turf = get_turf(src) 
+		var/turf = get_turf(src)
 		var/mob/living/carbon/human/M = src
-		if(L.robotic < ORGAN_ROBOT && is_below_sound_pressure(turf) && M.internal) // Only non-synthetic lungs, please, and only play these while the pressure is below that which we can hear sounds normally AND we're on internals. 
+		if(L.robotic < ORGAN_ROBOT && is_below_sound_pressure(turf) && M.internal) // Only non-synthetic lungs, please, and only play these while the pressure is below that which we can hear sounds normally AND we're on internals.
 			if(!failed_inhale && (world.time >= (last_breath_sound + 7 SECONDS))) // Were we able to inhale successfully? Play inhale.
 				var/exhale = failed_exhale // Pass through if we passed exhale or not
 				play_inhale(M, exhale)
@@ -615,11 +617,11 @@
 				apply_damage(COLD_GAS_DAMAGE_LEVEL_3, BURN, BP_HEAD, used_weapon = "Excessive Cold")
 				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MAX)
 			else if(breath.temperature <= species.breath_cold_level_2)
-				apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Cold")
-				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_LOW)
-			else if(breath.temperature <= species.breath_cold_level_1)
 				apply_damage(COLD_GAS_DAMAGE_LEVEL_2, BURN, BP_HEAD, used_weapon = "Excessive Cold")
 				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MODERATE)
+			else if(breath.temperature <= species.breath_cold_level_1)
+				apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Cold")
+				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_LOW)
 			else if(species.get_environment_discomfort(src, ENVIRONMENT_COMFORT_MARKER_COLD))
 				throw_alert("temp", /obj/screen/alert/chilly, COLD_ALERT_SEVERITY_LOW)
 			else
@@ -647,26 +649,55 @@
 
 	breath.update_values()
 	return 1
-	
+
 /mob/living/carbon/human/proc/play_inhale(var/mob/living/M, var/exhale)
 	var/suit_inhale_sound
 	if(species.suit_inhale_sound)
 		suit_inhale_sound = species.suit_inhale_sound
 	else // Failsafe
 		suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
-	
+
 	playsound_local(get_turf(src), suit_inhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
 		addtimer(CALLBACK(src, .proc/play_exhale, M), 5 SECONDS)
-	
+
 /mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
 	var/suit_exhale_sound
 	if(species.suit_exhale_sound)
 		suit_exhale_sound = species.suit_exhale_sound
 	else // Failsafe
 		suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
-	
+
 	playsound_local(get_turf(src), suit_exhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
+
+/mob/living/carbon/human/proc/handle_allergens()
+	if(chem_effects[CE_ALLERGEN])
+		//first, multiply the basic species-level value by our allergen effect rating, so consuming multiple seperate allergen typess simultaneously hurts more
+		var/damage_severity = species.allergen_damage_severity * chem_effects[CE_ALLERGEN]
+		var/disable_severity = species.allergen_disable_severity * chem_effects[CE_ALLERGEN]
+		if(species.allergen_reaction & AG_PHYS_DMG)
+			adjustBruteLoss(damage_severity)
+		if(species.allergen_reaction & AG_BURN_DMG)
+			adjustFireLoss(damage_severity)
+		if(species.allergen_reaction & AG_TOX_DMG)
+			adjustToxLoss(damage_severity)
+		if(species.allergen_reaction & AG_OXY_DMG)
+			adjustOxyLoss(damage_severity)
+			if(prob(disable_severity/2))
+				emote(pick("cough","gasp","choke"))
+		if(species.allergen_reaction & AG_EMOTE)
+			if(prob(disable_severity/2))
+				emote(pick("pale","shiver","twitch"))
+		if(species.allergen_reaction & AG_PAIN)
+			adjustHalLoss(disable_severity)
+		if(species.allergen_reaction & AG_WEAKEN)
+			Weaken(disable_severity)
+		if(species.allergen_reaction & AG_BLURRY)
+			eye_blurry = max(eye_blurry, disable_severity)
+		if(species.allergen_reaction & AG_SLEEPY)
+			drowsyness = max(drowsyness, disable_severity)
+		if(species.allergen_reaction & AG_CONFUSE)
+			Confuse(disable_severity/4)
 
 /mob/living/carbon/human/handle_environment(datum/gas_mixture/environment)
 	if(!environment)
@@ -1069,7 +1100,7 @@
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
-		if((getOxyLoss() > (species.total_health/2)) || (health <= config.health_threshold_crit))
+		if((getOxyLoss() > (species.total_health/2)) || (health <= (config.health_threshold_crit * species.crit_mod)))
 			Paralyse(3)
 
 		if(hallucination)
@@ -1628,19 +1659,17 @@
 /mob/living/carbon/human/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
-	if(!can_feel_pain()) return
-
-	if(health < config.health_threshold_softcrit)// health 0 makes you immediately collapse
-		shock_stage = max(shock_stage, 61)
-
-	if(traumatic_shock >= 80)
+	//CHOMPEdit - couple of fixes here. Fixes synths being stuck in permenant shock.
+	if(traumatic_shock >= 80 && can_feel_pain())
 		shock_stage += 1
-	else if(health < config.health_threshold_softcrit)
-		shock_stage = max(shock_stage, 61)
 	else
 		shock_stage = min(shock_stage, 160)
 		shock_stage = max(shock_stage-1, 0)
+	if(!can_feel_pain()) return
 
+	if(health < (config.health_threshold_softcrit * species.crit_mod)) //CHOMPEdit - fixes
+		shock_stage = max(shock_stage, 61)
+	//CHOMPEdit end
 	if(stat)
 		return 0
 

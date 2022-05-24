@@ -21,8 +21,9 @@
 		/obj/item/weapon/tank,
 		/obj/item/weapon/circuitboard,
 		/obj/item/weapon/smes_coil,
-		/obj/item/weapon/fuel_assembly //chompstation addition so they can set up rust
-		)
+		/obj/item/weapon/fuel_assembly,
+		/obj/item/weapon/ore/bluespace_crystal
+		) // CHOMPEdit - Buffing the gripper to allow bluespace crystal use for telesci building.
 
 	var/obj/item/wrapped = null // Item currently being held.
 

@@ -714,7 +714,7 @@
 /obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
-	icon = 'icons/mob/dogborg_ch.dmi'
+	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
 	icon_state = "sleeperd"
 	injection_chems = null
 	compactor = TRUE
@@ -745,7 +745,7 @@
 /obj/item/device/dogborg/sleeper/compactor/honkborg
 	name = "Jiggles Von Hungertron"
 	desc = "You've heard of Giggles Von Honkerton for the back, now get ready for Jiggles Von Hungertron for the front."
-	icon = 'icons/mob/dogborg_ch.dmi'
+	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
 	icon_state = "clowngut"
 	recycles = FALSE
 

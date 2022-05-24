@@ -6,7 +6,7 @@
 	icon_living = "boxfox"
 	icon_dead = "dead"
 	icon_rest = "boxfox_rest"
-	icon = 'icons/mob/demon_ch.dmi'
+	icon = 'modular_chomp/icons/mob/demon_ch.dmi'
 	vis_height = 47
 
 	faction = "demon"
