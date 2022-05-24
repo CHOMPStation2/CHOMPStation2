@@ -16,7 +16,7 @@
 	var/untamable_inheirit = FALSE //Makes slime inheirit its untamability.
 	var/list/slime_mutation = list(
 		/mob/living/simple_mob/slime/xenobio/orange,
-//		/mob/living/simple_mob/slime/xenobio/metal,  //Chompedit, Removes metal slimes from the basic grey slimes' evolution options.
+		/mob/living/simple_mob/slime/xenobio/metal,
 		/mob/living/simple_mob/slime/xenobio/blue,
 		/mob/living/simple_mob/slime/xenobio/purple
 	)
