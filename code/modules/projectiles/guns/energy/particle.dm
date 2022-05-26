@@ -1,5 +1,6 @@
 /obj/item/weapon/gun/energy/particle //base gun, similar stats to an egun
 	name = "Anti-particle projector pistol"
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "ppistol"
 	item_state = "ppistol"
 	desc = "A Kawashima Material Technology Model 7 anti-particle projector, housed in a rugged casing."
