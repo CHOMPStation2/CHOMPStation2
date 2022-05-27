@@ -3899,5 +3899,25 @@
 "lobby": false,
 "jukebox": true,
 "genre": "Electronic"
+},
+{
+"duration" : 1416,
+"url" : "https://files.catbox.moe/h967s5.mp3",
+"title" : "MEGALOVANIA",
+"artist" : "Toby Fox",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
+},
+{
+"duration" : 1416,
+"url" : "https://files.catbox.moe/yumfgs.mp3",
+"title" : "ASGORE",
+"artist" : "Toby Fox",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
 }
 ]
