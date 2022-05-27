@@ -60,8 +60,6 @@
 	ckeywhitelist = list("aegisoa")
 	character_name = list("Xander Bevin")
 
-<<<<<<< HEAD
-=======
 /datum/gear/fluff/charlotte_medal
     path = /obj/item/clothing/accessory/medal/silver/security
     display_name = "Charlotte's Robust Security Medal"
@@ -98,7 +96,6 @@
 	ckeywhitelist = list("allweek")
 	character_name = list("Fifi The Magnificent")
 
->>>>>>> 0426f96ff8... Merge pull request #12994 from FunnyCatEnjoyer/FunnyCat
 /datum/gear/fluff/lynn_penlight
 	path = /obj/item/device/flashlight/pen/fluff/lynn
 	display_name = "Lynn's Penlight"
