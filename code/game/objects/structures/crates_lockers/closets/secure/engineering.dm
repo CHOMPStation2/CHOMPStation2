@@ -31,14 +31,9 @@
 		///obj/item/clothing/shoes/boots/winter/engineering,	//VOREStation Removal: Locker bloat, grr. As above.
 		/obj/item/clothing/head/beret/engineering/ce,
 		/obj/item/clothing/head/beret/engineering/ce/white,
-<<<<<<< HEAD
-		/obj/item/weapon/tank/emergency/oxygen/engi,
+		/obj/item/weapon/tank/emergency/oxygen/double,	//VOREStation Edit: chief gets the good shit
 		/obj/item/weapon/reagent_containers/spray/windowsealant, //VOREStation Add,
 		/obj/item/weapon/pipe_dispenser) //YW Add
-=======
-		/obj/item/weapon/tank/emergency/oxygen/double,	//VOREStation Edit: chief gets the good shit
-		/obj/item/weapon/reagent_containers/spray/windowsealant) //VOREStation Add
->>>>>>> e66e0e9531... Merge pull request #13000 from BonniePandora/Another-Engi-QoL-patch
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
 	if(prob(50))
