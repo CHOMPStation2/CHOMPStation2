@@ -66,10 +66,6 @@
 			to_chat(user, "<span class='warning'>You must remove the [flooring.descriptor] first.</span>")
 			return
 		else if(istype(C, /obj/item/stack/tile))
-<<<<<<< HEAD
-			try_replace_tile(C, user)
-			return
-=======
 			if(try_replace_tile(C, user))
 				return
 			else if(istype(C, /obj/item/stack/tile/floor)) // While we're at it, let's see if this is a raw patch of natural sand, dirt, or whatever that you're trying to put a plating on.
@@ -86,7 +82,6 @@
 					ChangeTurf(/turf/simulated/floor, preserve_outdoors = TRUE)
 					return
 
->>>>>>> 1c2423edf4... Merge pull request #13002 from foopwo/servingupaplating
 
 	// Floor is plating (or no flooring)
 	else
