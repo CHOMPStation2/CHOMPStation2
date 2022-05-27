@@ -94,10 +94,5 @@
 	
 /datum/gear/schnapsen
 	display_name = "schnapsen playing cards"
-<<<<<<< HEAD
-	description = "French-suit playing cards! Pre-picked for 2-player mode."
-	path = /obj/item/weapon/deck/schnapsen
-=======
 	description = "An ancient Austro-Hungarian suit of cards!"
 	path = /obj/item/weapon/deck/schnapsen
->>>>>>> ce50127b0a... Merge pull request #12997 from Runa-Dacino/schnapsen_fix
