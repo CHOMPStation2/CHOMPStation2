@@ -1447,7 +1447,7 @@ End CHOMP Removal*/
 
 //thedavestdave Lucky
 ///I know this is pretty bodgey but if it stupid and it works it isn't stupid
-/obj/item/clothing/suit/storage/hooded/explorer/lucky
+/obj/item/clothing/suit/armor/combat/crusader_costume/lucky
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "luck"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1455,15 +1455,6 @@ End CHOMP Removal*/
 	name = "Lucky's armor"
 	desc = "A chain mail suit with a badly drawn one eared cat on the front."
 
-
-/obj/item/device/modkit_conversion/crusader_luck
-    skip_content_check = TRUE
-    name = "Lucky's armor"
-    desc = "A chain mail suit with a badly drawn one eared cat on the front."
-    icon = 'icons/vore/custom_items_vr.dmi'
-    icon_state = "modkit"
-    from_suit = /obj/item/clothing/suit/storage/hooded/explorer
-    to_suit = /obj/item/clothing/suit/storage/hooded/explorer/lucky
 
 //RevolverEloise - Revolver Eloise
 /obj/item/weapon/sword/fluff/revolver
@@ -1494,7 +1485,7 @@ End CHOMP Removal*/
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "lemonplush"
 	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
-	
+
 //Bricker98:Nettie Stough
 /obj/item/modular_computer/tablet/preset/custom_loadout/nettie
   name = "Remodeled Tablet"

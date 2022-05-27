@@ -94,10 +94,6 @@
 	
 /datum/gear/schnapsen
 	display_name = "schnapsen playing cards"
-<<<<<<< HEAD
-	description = "French-suit playing cards! Pre-picked for 2-player mode."
-	path = /obj/item/weapon/deck/schnapsen
-=======
 	description = "An ancient Austro-Hungarian suit of cards!"
 	path = /obj/item/weapon/deck/schnapsen
 
@@ -105,4 +101,3 @@
 	display_name = "EGY playing cards"
 	description = "A deck of cards for playing EGY! Be the first to lose all cards!"
 	path = /obj/item/weapon/deck/egy
->>>>>>> 421d3113d2... Merge pull request #12996 from Runa-Dacino/uno_eris

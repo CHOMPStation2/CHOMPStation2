@@ -4049,8 +4049,6 @@
 #include "code\modules\resleeving\implant.dm"
 #include "code\modules\resleeving\implant_ch.dm"
 #include "code\modules\resleeving\infocore_records.dm"
-#include "code\modules\resleeving\infomorph.dm"
-#include "code\modules\resleeving\infomorph_software.dm"
 #include "code\modules\resleeving\machine_subtypes.dm"
 #include "code\modules\resleeving\machines.dm"
 #include "code\modules\resleeving\machines_ch.dm"
