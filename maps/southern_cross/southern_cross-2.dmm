@@ -11760,7 +11760,7 @@
 /area/engineering/workshop)
 "aLu" = (
 /obj/machinery/vending/tool{
-	dir = 4
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -12254,7 +12254,7 @@
 /area/engineering/workshop)
 "aNa" = (
 /obj/machinery/vending/engivend{
-	dir = 4
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
