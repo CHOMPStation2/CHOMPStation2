@@ -12,8 +12,12 @@
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
-	melee_damage_upper = 0
-	melee_damage_lower = 0
+//ChompEdit begins	Prommies are cute and all, but they're still slimes, and ought to be deadlier than even this.  So far this part is just a direct copy of Protean_blob.dm
+	harm_intent_damage = 3
+	melee_damage_lower = 5
+	melee_damage_upper = 5
+	see_in_dark = 10
+//Chomp Edit ends
 	player_msg = "You're a little squisher! Your cuteness level has increased tenfold."
 	heat_damage_per_tick = 20 // Hot and cold are bad, but cold is AS bad for prommies as it is for slimes.
 	cold_damage_per_tick = 20
@@ -81,6 +85,13 @@
 		humanform.species.Stat(humanform)
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
+//ChompAdd Begins.  They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
+	adjustOxyLoss(-0.2)
+	adjustToxLoss(-0.2)
+	adjustFireLoss(-0.2)
+	adjustCloneLoss(-0.2)
+	adjustBruteLoss(-0.2)
+//ChompAdd Ends
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
 		set_light(max(1,min(5,rad_glow/15)), max(1,min(10,rad_glow/25)), color)
