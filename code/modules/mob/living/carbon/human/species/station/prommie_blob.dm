@@ -19,6 +19,7 @@
 	cold_damage_per_tick = 20
 	//glow_range = 0
 	//glow_intensity = 0
+	has_hands = 1  //Chomp Addition, brings in line with Proteans' own blob form.
 
 	var/mob/living/carbon/human/humanform
 	var/datum/modifier/healing
@@ -358,10 +359,10 @@
 	for(var/obj/item/clothing/head/H in things_to_drop)
 		if(H)
 			new_hat = H
-			has_hat = TRUE
+			has_hat = TRUE  //Chompedit, I'd delete the whole section, but this is used below for the slime having a hat.
 			drop_from_inventory(H)
 			things_to_drop -= H
-//Chompedit start
+//Chompremoval start
 //	for(var/obj/item/I in things_to_drop) //rip hoarders  //Chompedit: Or not.
 //		drop_from_inventory(I)
 
@@ -371,16 +372,21 @@
 //			for(var/obj/item/clothing/accessory/A in uniform.accessories)
 //				if(is_type_in_list(A, disallowed_protean_accessories))
 //					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
-//Chompedit End
+//Chompremoval End
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
 
-	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
-	if(r_hand) blob.prev_right_hand = r_hand
+//ChompEdit Begins:  Let's drop what's in our hands.
+//	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
+//	if(r_hand) blob.prev_right_hand = r_hand
+
+	if(l_hand) drop_from_inventory(l_hand)
+	if(r_hand) drop_from_inventory(r_hand)
+//ChompEdit Ends
 
 	//Put our owner in it (don't transfer var/mind)
-	blob.Weaken(2)
+//	blob.Weaken(2) //ChompRemoval  Not needed.
 	blob.transforming = TRUE
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
@@ -402,6 +408,20 @@
 	blob.verbs -= /mob/living/proc/ventcrawl // Absolutely not.
 	blob.verbs -= /mob/living/simple_mob/proc/set_name // We already have a name.
 	temporary_form = blob
+
+//ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.
+	var/obj/item/device/radio/R = null
+	if(isradio(l_ear))
+		R = l_ear
+	if(isradio(r_ear))
+		R = r_ear
+	if(R)
+		blob.mob_radio = R
+		R.forceMove(blob)
+	if(wear_id)
+		blob.myid = wear_id
+		wear_id.forceMove(blob)
+//ChompAdd End
 	//Mail them to nullspace
 	moveToNullspace()
 
@@ -451,7 +471,7 @@
 	forceMove(reform_spot)
 
 	//Put our owner in it (don't transfer var/mind)
-	Weaken(2)
+//	Weaken(2)  //Chompremoval again, not needed.
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
 	transforming = TRUE
 	ckey = blob.ckey
@@ -482,8 +502,21 @@
 		B.owner = src
 
 	//vore_organs.Cut()
-	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
-	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
+	
+//ChompEdit begin.  And let's drop them again.
+//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) 
+//	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
+
+	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
+	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
+
+	if(blob.mob_radio)
+		blob.mob_radio.forceMove(src)
+		blob.mob_radio = null
+	if(blob.myid)
+		blob.myid.forceMove(src)
+		blob.myid = null
+//ChompEdit End
 
 	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
