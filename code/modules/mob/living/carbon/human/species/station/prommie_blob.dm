@@ -361,17 +361,17 @@
 			has_hat = TRUE
 			drop_from_inventory(H)
 			things_to_drop -= H
+//Chompedit start
+//	for(var/obj/item/I in things_to_drop) //rip hoarders  //Chompedit: Or not.
+//		drop_from_inventory(I)
 
-	for(var/obj/item/I in things_to_drop) //rip hoarders
-		drop_from_inventory(I)
-
-	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
-		var/obj/item/clothing/uniform = w_uniform
-		if(LAZYLEN(uniform.accessories))
-			for(var/obj/item/clothing/accessory/A in uniform.accessories)
-				if(is_type_in_list(A, disallowed_protean_accessories))
-					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
-
+//	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
+//		var/obj/item/clothing/uniform = w_uniform
+//		if(LAZYLEN(uniform.accessories))
+//			for(var/obj/item/clothing/accessory/A in uniform.accessories)
+//				if(is_type_in_list(A, disallowed_protean_accessories))
+//					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
+//Chompedit End
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
