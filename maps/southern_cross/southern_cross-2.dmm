@@ -17264,10 +17264,10 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "bcv" = (
-/obj/item/device/geiger/wall/south,
-/obj/item/modular_computer/console/preset/engineering{
+/obj/machinery/computer/station_alert{
 	dir = 4
 	},
+/obj/item/device/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
 "bcw" = (
