@@ -2622,7 +2622,7 @@
 	},
 /obj/machinery/computer/general_air_control{
 	frequency = 1445;
-	name = "Engine Exhaust Control";
+	name = "Engine Exhaust Monitoring";
 	sensors = list("engine_exhaust_sensor" = "Engine Exhaust Sensor")
 	},
 /turf/simulated/floor,
@@ -10303,7 +10303,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock{
 	name = "Engineering Washroom";
-	req_one_access = list(10)
+	req_one_access = list(11,24)
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10877,6 +10877,7 @@
 /area/space)
 "aJc" = (
 /obj/structure/grille/broken,
+/obj/structure/lattice,
 /turf/space,
 /area/space)
 "aJd" = (
@@ -17781,6 +17782,11 @@
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/apcenter)
+"beB" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/space,
+/area/space)
 "beC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -22496,7 +22502,9 @@
 /obj/machinery/navbeacon/delivery/west{
 	location = "Kitchen"
 	},
-/obj/structure/plasticflaps/mining,
+/obj/structure/plasticflaps/mining{
+	opacity = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen)
 "bsM" = (
@@ -23376,7 +23384,7 @@
 	id = "qm_warehouse";
 	name = "Warehouse Door Control";
 	pixel_x = -26;
-	req_access = list(31)
+	req_access = list(50)
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
@@ -23770,6 +23778,10 @@
 /obj/machinery/door/window/southright{
 	name = "Kitchen Delivery";
 	req_access = list(28)
+	},
+/obj/machinery/alarm/freezer{
+	dir = 8;
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen)
@@ -39305,6 +39317,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/rnd/toxins_launch)
 "cvM" = (
@@ -42863,7 +42876,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
 "cGo" = (
-/obj/machinery/computer/aifixer,
+/obj/machinery/computer/aifixer{
+	dir = 4
+	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
@@ -44190,7 +44205,7 @@
 "duE" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/loading{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/plasticflaps{
 	opacity = 1
@@ -44318,7 +44333,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/research)
 "dwV" = (
-/obj/machinery/computer/robotics,
+/obj/machinery/computer/robotics{
+	dir = 4
+	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
@@ -45133,10 +45150,6 @@
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -24
-	},
-/obj/machinery/light_switch{
-	pixel_x = 11;
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
@@ -46199,7 +46212,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay_emt_bay)
 "eFx" = (
-/obj/machinery/computer/mecha,
+/obj/machinery/computer/mecha{
+	dir = 4
+	},
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
@@ -46646,6 +46661,7 @@
 "eMv" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/area_atmos/tag{
+	dir = 1;
 	scrub_id = "Toxins"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -49617,7 +49633,7 @@
 /area/rnd/research)
 "goF" = (
 /obj/machinery/vending/tool{
-	dir = 4;
+	dir = 8;
 	pixel_x = 5
 	},
 /obj/machinery/alarm{
@@ -52387,7 +52403,7 @@
 /area/hallway/secondary/entry/docking_lounge)
 "hPl" = (
 /obj/machinery/lapvend{
-	dir = 4;
+	dir = 8;
 	pixel_x = 5
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -65157,6 +65173,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
+"peA" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/space)
 "peJ" = (
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
@@ -75125,7 +75150,7 @@
 	id = "qm_warehouse";
 	name = "Warehouse Door Control";
 	pixel_x = 26;
-	req_access = list(31)
+	req_access = list(50)
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -75525,7 +75550,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Cargo Bay Warehouse Maintenance";
-	req_access = list(31)
+	req_access = list(50)
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
@@ -103213,7 +103238,7 @@ bZi
 aaa
 aaa
 aaa
-aag
+wWX
 aaf
 aaa
 aaa
@@ -103652,7 +103677,7 @@ aaa
 aaa
 aaa
 aaa
-aAs
+beB
 aag
 aaa
 aaa
@@ -104169,7 +104194,7 @@ aaa
 aaa
 aaa
 aaa
-aAs
+beB
 aaf
 aaa
 uZK
@@ -104427,7 +104452,7 @@ aaa
 aaa
 aaa
 aaa
-aAs
+beB
 aaa
 aaa
 uZK
@@ -104685,7 +104710,7 @@ aaa
 aaa
 aaa
 aaa
-aAs
+beB
 aaa
 aaf
 uZK
@@ -104943,7 +104968,7 @@ aaa
 aaa
 aaa
 aaa
-aAs
+beB
 aaa
 wWX
 aaf
@@ -105202,7 +105227,7 @@ aaa
 aaa
 aaa
 aJc
-aAs
+aaf
 aaa
 aag
 aag
@@ -105460,7 +105485,7 @@ aaa
 aaa
 aaa
 aaa
-aAs
+aag
 aaa
 aaa
 aaa
@@ -115125,7 +115150,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 tTx
 tTx
@@ -117705,7 +117730,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -119732,12 +119757,12 @@ aaa
 aaa
 aaa
 aaa
+aaf
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -122054,7 +122079,7 @@ juu
 cpO
 cpN
 wWX
-aag
+wWX
 aag
 aaa
 aaa
@@ -127655,6 +127680,7 @@ aao
 biH
 aIZ
 bcf
+abx
 abK
 abK
 abK
@@ -127670,8 +127696,7 @@ abK
 abK
 abK
 abK
-abK
-abK
+abx
 abK
 abK
 cBi
@@ -130751,7 +130776,7 @@ aao
 biH
 bnz
 brA
-bvj
+peA
 bvj
 bvj
 bvj
