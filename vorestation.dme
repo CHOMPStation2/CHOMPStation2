@@ -4439,14 +4439,9 @@
 #include "code\ZAS\Zone.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-<<<<<<< HEAD
-=======
 #include "maps\atoll\atoll_decals.dm"
 #include "maps\atoll\atoll_objs.dm"
 #include "maps\atoll\atoll_turfs.dm"
-#include "maps\expedition_vr\beach\submaps\mountains.dm"
-#include "maps\expedition_vr\beach\submaps\mountains_areas.dm"
->>>>>>> 0eb9f58c74... Merge pull request #13018 from Burrito-Justice/master
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
