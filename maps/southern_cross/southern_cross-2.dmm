@@ -9132,6 +9132,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway/engineer_hallway)
 "aCy" = (
@@ -39317,7 +39320,6 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/rnd/toxins_launch)
 "cvM" = (
@@ -44986,7 +44988,9 @@
 /turf/simulated/wall,
 /area/rnd/storage)
 "dUz" = (
-/obj/machinery/vending/phoronresearch,
+/obj/machinery/vending/phoronresearch{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "dUH" = (
@@ -127680,7 +127684,6 @@ aao
 biH
 aIZ
 bcf
-abx
 abK
 abK
 abK
@@ -127697,6 +127700,7 @@ abK
 abK
 abK
 abx
+abK
 abK
 abK
 cBi
@@ -130776,22 +130780,22 @@ aao
 biH
 bnz
 brA
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
+bvj
 peA
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
-bvj
 cvL
 cxm
 cyT
