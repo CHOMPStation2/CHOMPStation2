@@ -12,6 +12,7 @@ env:
 plugins:
   - radar
   - react
+  ## - unused-imports
 settings:
   react:
     version: '16.10'
@@ -375,6 +376,7 @@ rules:
     ignoreUrls: true,
     ignoreRegExpLiterals: true,
     ignoreStrings: true,
+    ignoreTemplateLiterals: true,
   }]
   ## Enforce a maximum number of lines per file
   # max-lines: error
@@ -756,3 +758,6 @@ rules:
   react/jsx-uses-vars: error
   ## Prevent missing parentheses around multilines JSX (fixable)
   react/jsx-wrap-multilines: error
+  ## Prevents the use of unused imports.
+  ## This could be done by enabling no-unused-vars, but we're doing this for now
+  ## unused-imports/no-unused-imports: error
