@@ -5,7 +5,7 @@
 "duration": 1500,
 "artist": "X-CEED",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": false,
 "genre": "Jazz"
 }, 
@@ -15,7 +15,7 @@
 "duration": 1180,
 "artist": "Cboyardee",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": false,
 "genre": "Electronic"
 }, 
@@ -25,7 +25,7 @@
 "duration": 2320,
 "artist": "Jeroen Tel (Remixed by Cuboos)",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Electronic"
 }, 
@@ -35,7 +35,7 @@
 "duration": 1370,
 "artist": "Earthcrusher",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Electronic"
 },
@@ -45,7 +45,7 @@
 "duration": 2230,
 "artist": "Leslie Fish",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Folk and Indie"
 },
@@ -55,7 +55,7 @@
 "duration": 3150,
 "artist": "Leslie Fish",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Folk and Indie"
 },
@@ -825,7 +825,7 @@
 "duration": 1170,
 "artist": "Hector",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Electronic"
 },
@@ -835,7 +835,7 @@
 "duration": 2200,
 "artist": "Garoad",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Electronic"
 },
@@ -870,10 +870,40 @@
 "genre": "Pop"
 },
 {
+"url": "https://cdn.discordapp.com/attachments/528973352728264714/956446080638283826/Deus_Ex_-_009_-_UNATCO_-_Ambient.mp3",
+"title": "UNATCO - Ambience",
+"duration": 1610,
+"artist": "Michiel van den Bos",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
+},
+{
 "url": "https://files.catbox.moe/gcej08.m4a",
 "title": "UNATCO - Conversation",
 "duration": 1720,
 "artist": "Michiel van den Bos",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
+},
+{
+"url": "https://cdn.discordapp.com/attachments/528973352728264714/956453078750593044/EdenShard_-_Deus_Ex-_Revision_Original_Soundtrack_-_06_The_Oath_of_Service.mp3",
+"title": "Oath of Service",
+"duration": 2160,
+"artist": "EdenShard",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
+},
+{
+"url": "https://cdn.discordapp.com/attachments/528973352728264714/956453288600039434/EdenShard_-_Deus_Ex-_Revision_Original_Soundtrack_-_08_Mind_the_Synaptic_Gap.mp3",
+"title": "Mind the Synaptic Gap",
+"duration": 5460,
+"artist": "EdenShard",
 "secret": false,
 "lobby": false,
 "jukebox": true,
@@ -1215,7 +1245,7 @@
 "duration": 2340,
 "artist": "Chris Remo",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true,
 "genre": "Folk and Indie"
 },
@@ -2255,7 +2285,7 @@
 "duration": 3330,
 "artist": "Chris Hadfield",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": false,
 "genre": "Pop"
 },
@@ -3566,7 +3596,7 @@
 "title" : "Peaceful Orbits",
 "artist" : "TeknoAXE",
 "secret": false,
-"lobby": false,
+"lobby": true,
 "jukebox": true,
 "genre": "Ambience"
 },
@@ -3576,7 +3606,7 @@
 "title" : "Passing Time in an Escape Pod",
 "artist" : "TeknoAXE",
 "secret": false,
-"lobby": false,
+"lobby": true,
 "jukebox": true,
 "genre": "Ambience"
 },
@@ -3865,7 +3895,7 @@
   "url" : "https://cdn.discordapp.com/attachments/526693916859170816/559236326264668190/Ocean_Man.mp3",
   "title" : "Ocean Man",
   "artist" : "Ween",
-"secret": true,
+"secret": false,
 "lobby": false,
 "jukebox": true,
 "genre": "Classical and Orchestral"
@@ -3896,6 +3926,26 @@
 "title" : "Scrap Attack",
 "artist" : "Headhunterz",
 "secret": true,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
+},
+{
+"duration" : 1416,
+"url" : "https://files.catbox.moe/h967s5.mp3",
+"title" : "MEGALOVANIA",
+"artist" : "Toby Fox",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Electronic"
+},
+{
+"duration" : 1416,
+"url" : "https://files.catbox.moe/yumfgs.mp3",
+"title" : "ASGORE",
+"artist" : "Toby Fox",
+"secret": false,
 "lobby": false,
 "jukebox": true,
 "genre": "Electronic"
