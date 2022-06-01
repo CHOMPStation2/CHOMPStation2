@@ -6,15 +6,15 @@
 
 // Recipes are stored as a list which alternates between chemical id's and volumes to add.
 
-// TODO: 
-// Design UI 
+// TODO:
+// Design UI
 // DONE TGUI procs
-// DONE Create procs to take synthesis steps as an input and stores as a 1 click synthesis button. Needs name, expected output volume. 
-// DONE Create procs to actually perform the reagent transfer/etc. for a synthesis, reading the stored synthesis steps. 
-// DONE Implement a step-mode where the player manually clicks on each step and an expert mode where players input a comma-delineated list. 
+// DONE Create procs to take synthesis steps as an input and stores as a 1 click synthesis button. Needs name, expected output volume.
+// DONE Create procs to actually perform the reagent transfer/etc. for a synthesis, reading the stored synthesis steps.
+// DONE Implement a step-mode where the player manually clicks on each step and an expert mode where players input a comma-delineated list.
 // DONE Add process() code which makes the machine actually work. Perhaps tie a boolean and single start proc into process().
 // DONE Give the machine queue-behavior which allows players to queue up multiple recipes, even when the machine is busy. Reference protolathe code.
-// DONE Give the machine a way to stop a synthesis and purge/bottle the reaction vessel. 
+// DONE Give the machine a way to stop a synthesis and purge/bottle the reaction vessel.
 // DONE Perhaps use recipes as a "ID" "num" "ID" "num" list to avoid using multiple lists.
 // DONE Panel open button.
 // DONE Code for power usage.
@@ -22,13 +22,13 @@
 // Underlay code for the reaction vessel.
 // DONE Add an eject catalyst bottle button.
 // DONE Make sure recipes can only be removed when the machine is idle. Adding should be fine.
-// May need yet another list which is just strings which match recipe ID's. 
+// May need yet another list which is just strings which match recipe ID's.
 // For user recipes, make clicking on the recipe give a prompt with "add to queue," "export recipe," and "delete recipe."
 
 /obj/machinery/chemical_synthesizer
 	name = "chemical synthesizer"
 	desc = "A programmable machine capable of automatically synthesizing medicine."
-	icon = 'icons/obj/chemical_ch.dmi'
+	icon = 'modular_chomp/icons/obj/chemical_ch.dmi'
 	icon_state = "synth_idle_bottle"
 
 	use_power = USE_POWER_IDLE
@@ -47,7 +47,7 @@
 
 	var/list/recipes = list(list()) // This holds chemical recipes up to a maximum determined by SYNTHESIZER_MAX_RECIPES. Two-dimensional.
 	var/list/queue = list() // This holds the recipe id's for queued up recipes.
-	var/list/catalyst_ids = list() // This keeps track of the chemicals in the catalyst to remove before bottling. 
+	var/list/catalyst_ids = list() // This keeps track of the chemicals in the catalyst to remove before bottling.
 	var/list/cartridges = list() // Associative, label -> cartridge
 
 	var/list/spawn_cartridges = list(
@@ -152,7 +152,7 @@
 	// But we won't use the screwdriver proc because chem dispenser behavior.
 	if(panel_open && W.is_screwdriver())
 		var/label = tgui_input_list(user, "Which cartridge would you like to remove?", "Chemical Synthesizer", cartridges)
-		if(!label) 
+		if(!label)
 			return
 		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
 		if(C)
@@ -161,7 +161,7 @@
 			playsound(src, W.usesound, 50, 1)
 			return
 
-	// We don't need a busy check here as the catalyst slot must be occupied for the machine to function. 
+	// We don't need a busy check here as the catalyst slot must be occupied for the machine to function.
 	if(istype(W, /obj/item/weapon/reagent_containers/glass))
 		if(catalyst)
 			to_chat(user, "<span class='warning'>There is already \a [catalyst] in \the [src] catalyst slot!</span>")
@@ -220,7 +220,7 @@
 	data["panel_open"] = panel_open
 	data["use_catalyst"] = use_catalyst
 
-	// Queue and recipe lists might not be formatted correctly here. Delete this once you've confirmed. 
+	// Queue and recipe lists might not be formatted correctly here. Delete this once you've confirmed.
 	data["queue"] = queue
 	data["recipes"] = recipes
 
@@ -259,25 +259,25 @@
 			if(!busy)
 				start_queue()
 		if("rem_queue")
-			// Remove a single entry from the queue. 
+			// Remove a single entry from the queue.
 			var/index = text2num(params["q_index"])
 			if(!isnum(index) || !ISINTEGER(index) || !istype(queue) || (index<1 || index>length(queue)))
 				return
 			queue -= queue[index]
 		if("clear_queue")
-			// Remove all entries from the queue except the currently processing recipe. 
+			// Remove all entries from the queue except the currently processing recipe.
 			queue = list()
 		if("eject_catalyst")
-			// Removes the catalyst bottle from the machine. 
+			// Removes the catalyst bottle from the machine.
 			if(!busy && catalyst)
 				catalyst.forceMove(get_turf(src))
 				catalyst = null
 		if("toggle_catalyst")
-			// Decides if the machine uses the catalyst. 
+			// Decides if the machine uses the catalyst.
 			if(!busy)
 				use_catalyst = !use_catalyst
 		if("emergency_stop")
-			// Stops everything if that's desirable for some reason. 
+			// Stops everything if that's desirable for some reason.
 			if(busy)
 				stall()
 		if("bottle_product")
@@ -298,18 +298,18 @@
 			else
 				import_recipe(usr)
 		if("rem_recipe")
-			// Allows the user to remove recipes while the machine is idle. 
+			// Allows the user to remove recipes while the machine is idle.
 			if(!busy)
 				var/index = params["rm_index"]
 				if(index in recipes)
 					recipes -= recipes[index]
 		if("add_queue")
-			// Adds recipes to the queue. 
+			// Adds recipes to the queue.
 			if(queue.len >= SYNTHESIZER_MAX_QUEUE)
 				to_chat(usr, "<span class='warning'>Synthesizer queue full!</span>")
 				return
 			var/index = params["qa_index"]
-			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe. 
+			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe.
 			if(index in recipes)
 				queue[queue.len + 1] = index
 
@@ -337,11 +337,11 @@
 
 	var/steps = 2 * CLAMP(round(input(user, "How many steps does your recipe contain (16 max)?", "Steps", null)), 0, RECIPE_MAX_STEPS) // Round to get a whole integer, clamp to ensure proper range.
 	var/new_rec = list() // This holds the actual recipe.
-	for(var/i = 1, i < steps, i += 2) // For the user, 1 step is both text and volume. For list arithmetic, that's 2 steps. 
+	for(var/i = 1, i < steps, i += 2) // For the user, 1 step is both text and volume. For list arithmetic, that's 2 steps.
 		var/label = tgui_input_list(user, "Which chemical would you like to use?", "Chemical Synthesizer", cartridges)
-		if(!label) 
+		if(!label)
 			to_chat(user, "Please select a chemical!")
-			return 
+			return
 		new_rec[i] = label // Add the reagent ID.
 		var/amount = CLAMP(round(input(user, "How much of the chemical would you like to add?", "Volume", null)), 0, src.reagents.maximum_volume)
 		if(!amount)
@@ -349,7 +349,7 @@
 			return
 		new_rec[i+1] = amount // Add the amount of reagent.
 
-	recipes[rec_name] = new_rec 
+	recipes[rec_name] = new_rec
 	SStgui.update_uis(src)
 	export_recipe(user, rec_name) // Now export the recipe to the user's chatbox formatted for import_recipe().
 	return
@@ -362,15 +362,15 @@
 		return
 
 	var/rec_input = input(user, "Input your recipe as 'Chem1,Vol1,Chem2,Vol2,...'", "Import recipe", null)
-	if(!rec_input || (length(rec_input) > RECIPE_MAX_STRING) || !findtext(rec_input, ",")) // The smallest possible recipe will contain 1 comma. 
+	if(!rec_input || (length(rec_input) > RECIPE_MAX_STRING) || !findtext(rec_input, ",")) // The smallest possible recipe will contain 1 comma.
 		to_chat(user, "Invalid input or recipe max length exceeded!")
 		return
 
-	rec_input = trim(rec_input) // Sanitize. 
+	rec_input = trim(rec_input) // Sanitize.
 	var/new_rec = list() // This holds the actual recipe.
-	var/vol = FALSE // This tracks if the next step is a chemical name or a volume. 
+	var/vol = FALSE // This tracks if the next step is a chemical name or a volume.
 	var/index = findtext(rec_input, ",") // This tracks the delineation index in the user-provided string. Should never be null at this point.
-	var/i = 1 // This tracks the index for new_rec, the actual list which gets added to recipes[rec_name]. 
+	var/i = 1 // This tracks the index for new_rec, the actual list which gets added to recipes[rec_name].
 	while(index) // Alternates between text strings and numbers. When false, the rest of rec_input is the final step.
 		new_rec[i] = copytext(rec_input, 1, index)
 		if(vol)
@@ -379,13 +379,13 @@
 		else
 			vol = TRUE
 		i++
-		rec_input = copytext(rec_input, index + 1) // Trim previous substrings from rec_input. 
+		rec_input = copytext(rec_input, index + 1) // Trim previous substrings from rec_input.
 		index = findtext(rec_input, ",")
 
-	if(rec_input) // The remainder of rec_input should be the final volume step of the recipe. The if() is a sanity check. 
+	if(rec_input) // The remainder of rec_input should be the final volume step of the recipe. The if() is a sanity check.
 		new_rec[i] = text2num(rec_input)
 
-	recipes[rec_name] = new_rec // Finally, add the recipe to the recipes list. 
+	recipes[rec_name] = new_rec // Finally, add the recipe to the recipes list.
 	SStgui.update_uis(src)
 	return
 
@@ -394,10 +394,10 @@
 	var/list/export = recipes[rec_name]
 	if(!export)
 		return
-	var/display_txt = export.Join(",") // This converts the entire list into a CSV string. 
+	var/display_txt = export.Join(",") // This converts the entire list into a CSV string.
 	to_chat(user, "[display_txt]")
 
-// This proc handles adding the catalyst starting the synthesizer's queue. 
+// This proc handles adding the catalyst starting the synthesizer's queue.
 /obj/machinery/chemical_synthesizer/proc/start_queue(mob/user)
 	if(stat & (BROKEN|NOPOWER))
 		return
@@ -442,10 +442,10 @@
 	if(!step)
 		step = 1
 
-	// The time between each step is the volume required by a step multiplied by the delay_modifier (in ticks/deciseconds). 
+	// The time between each step is the volume required by a step multiplied by the delay_modifier (in ticks/deciseconds).
 	addtimer(CALLBACK(src, .proc/perform_reaction, r_id, step), recipes[r_id][step + 1] * delay_modifier)
 
-// This proc carries out the actual steps in each reaction. 
+// This proc carries out the actual steps in each reaction.
 /obj/machinery/chemical_synthesizer/proc/perform_reaction(var/r_id, var/step as num)
 	if(stat & (BROKEN|NOPOWER))
 		stall()
@@ -455,7 +455,7 @@
 	var/label = recipes[r_id][step]
 	var/quantity = recipes[r_id][step+1]
 
-	// If we're missing a cartridge somehow or lack space for the next step, stall. It's now up to the chemist to fix this. 
+	// If we're missing a cartridge somehow or lack space for the next step, stall. It's now up to the chemist to fix this.
 	if(!cartridges[label])
 		visible_message("<span class='warning'>The [src] beeps loudly, flashing a 'cartridge missing' error!</span>", "You hear loud beeping!")
 		playsound(src, 'sound/weapons/smg_empty_alarm.ogg', 40)
@@ -475,7 +475,7 @@
 		addtimer(CALLBACK(src, .proc/perform_reaction, r_id, step), 1 MINUTE)
 		return
 
-	// After all this mess of code, we reach the line where the magic happens. 
+	// After all this mess of code, we reach the line where the magic happens.
 	C.reagents.trans_to_holder(src.reagents, quantity)
 	// playsound(src, 'sound/machinery/HPLC_binary_pump.ogg', 25, 1)
 
@@ -490,8 +490,8 @@
 			for(var/chem in catalyst_ids)
 				var/amount = reagents.get_reagent_amount(chem)
 				reagents.trans_id_to(catalyst, chem, amount)
-		
-		// Add a delay of 1 tick per unit of reagent. Clear the catalyst_ids. 
+
+		// Add a delay of 1 tick per unit of reagent. Clear the catalyst_ids.
 		catalyst_ids = list()
 		var/delay = reagents.total_volume
 		addtimer(CALLBACK(src, .proc/bottle_product, r_id), delay)
@@ -516,17 +516,17 @@
 		B.icon_state = "bottle-4"
 		reagents.trans_to_obj(B, min(reagents.total_volume, MAX_UNITS_PER_BOTTLE))
 		B.update_icon()
-	
+
 	// Sanity check when manual bottling is triggered.
 	if(queue)
 		queue -= queue[1]
 
-	// If the queue is now empty, we're done. Otherwise, re-add catalyst and proceed to the next recipe. 
+	// If the queue is now empty, we're done. Otherwise, re-add catalyst and proceed to the next recipe.
 	if(queue)
 		if(use_catalyst)
 			for(var/datum/reagent/chem in catalyst.reagents.reagent_list)
 				catalyst_ids += chem.id
-			catalyst.reagents.trans_to_holder(src.reagents, catalyst.reagents.total_volume)		
+			catalyst.reagents.trans_to_holder(src.reagents, catalyst.reagents.total_volume)
 		follow_recipe(queue[1], 1)
 
 	else
@@ -534,7 +534,7 @@
 		use_power = USE_POWER_IDLE
 		queue = list()
 		update_icon()
-		
+
 
 // What happens to the synthesizer if it breaks or loses power in the middle of running. Chemists must fix things manually.
 /obj/machinery/chemical_synthesizer/proc/stall()
