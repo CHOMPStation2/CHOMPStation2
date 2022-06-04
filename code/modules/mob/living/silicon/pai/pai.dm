@@ -48,10 +48,7 @@
 		"Duffel" = "pai-duffel",
 		"Rat" = "rat",
 		"Panther" = "panther",
-<<<<<<< HEAD
-=======
 		"Cyber Elf" = "cyberelf"
->>>>>>> 337b7e903f... Merge pull request #13031 from Very-Soft/master
 		//VOREStation Addition End
 		)
 
@@ -466,15 +463,9 @@
 
 
 /mob/living/silicon/pai/verb/wipe_software()
-<<<<<<< HEAD
-	set name = "Wipe Software (CRYO)" //CHOMP EDIT: making this clear on first glance
-	set category = "pAI Commands" //CHOMP EDIT: moving this to pai commands, where it belongs
-	set desc = "Wipe your software. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
-=======
 	set name = "Enter Storage"
 	set category = "pAI Commands"
 	set desc = "Upload your personality to the cloud and wipe your software from the card. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
->>>>>>> 337b7e903f... Merge pull request #13031 from Very-Soft/master
 
 	// Make sure people don't kill themselves accidentally
 	if(tgui_alert(usr, "WARNING: This will immediately wipe your software and ghost you, removing your character from the round permanently (similar to cryo and robotic storage). Are you entirely sure you want to do this?", "Wipe Software", list("No", "Yes")) != "Yes")
