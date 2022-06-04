@@ -266,7 +266,9 @@
 			queue -= queue[index]
 		if("clear_queue")
 			// Remove all entries from the queue except the currently processing recipe.
-			queue = list()
+			var/confirm = alert(usr, "Are you sure you want to clear the running queue?", "Confirm", "No", "Yes")
+			if(confirm == "Yes")
+				queue = list()
 		if("eject_catalyst")
 			// Removes the catalyst bottle from the machine.
 			if(!busy && catalyst)
@@ -300,9 +302,15 @@
 		if("rem_recipe")
 			// Allows the user to remove recipes while the machine is idle.
 			if(!busy)
-				var/index = params["rm_index"]
-				if(index in recipes)
-					recipes -= recipes[index]
+				var/confirm = alert(usr, "Are you sure you want to remove this recipe?", "Confirm", "No", "Yes")
+				if(confirm == "Yes")
+					var/index = params["rm_index"]
+					if(index in recipes)
+						recipes -= recipes[index]
+		if("exp_recipe")
+			// Allows the user to export recipes to chat formatted for easy importing. 
+			var/index = params["exp_index"]
+			export_recipe(usr, index)
 		if("add_queue")
 			// Adds recipes to the queue.
 			if(queue.len >= SYNTHESIZER_MAX_QUEUE)

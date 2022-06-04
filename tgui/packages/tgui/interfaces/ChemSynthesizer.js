@@ -3,180 +3,101 @@ import { useBackend } from "../backend";
 import { Box, Button, Flex, Icon, LabeledList, Section } from "../components";
 import { Window } from "../layouts";
 import { BeakerContents } from './common/BeakerContents';
-import { ComplexModal, modalOpen, modalRegisterBodyOverride } from './common/ComplexModal';
 
-const transferAmounts = [1, 5, 10, 30, 60];
-const bottleStyles = [
-  "bottle.png",
-  "small_bottle.png",
-  "wide_bottle.png",
-  "round_bottle.png",
-  "reagent_bottle.png",
-];
-
-const analyzeModalBodyOverride = (modal, context) => {
-  const { act, data } = useBackend(context);
-  const result = modal.args.analysis;
-  return (
-    <Section
-      level={2}
-      m="-1rem"
-      pb="1rem"
-      title={data.condi ? "Condiment Analysis" : "Reagent Analysis"}>
-      <Box mx="0.5rem">
-        <LabeledList>
-          <LabeledList.Item label="Name">
-            {result.name}
-          </LabeledList.Item>
-          <LabeledList.Item label="Description">
-            {(result.desc || "").length > 0 ? result.desc : "N/A"}
-          </LabeledList.Item>
-          {result.blood_type && (
-            <Fragment>
-              <LabeledList.Item label="Blood type">
-                {result.blood_type}
-              </LabeledList.Item>
-              <LabeledList.Item
-                label="Blood DNA"
-                className="LabeledList__breakContents">
-                {result.blood_dna}
-              </LabeledList.Item>
-            </Fragment>
-          )}
-          {!data.condi && (
-            <Button
-              icon={data.printing ? 'spinner' : 'print'}
-              disabled={data.printing}
-              iconSpin={!!data.printing}
-              ml="0.5rem"
-              content="Print"
-              onClick={() => act('print', {
-                idx: result.idx,
-                beaker: modal.args.beaker,
-              })}
-            />
-          )}
-        </LabeledList>
-      </Box>
-    </Section>
-  );
-};
-
-export const ChemMaster = (props, context) => {
-  const { data } = useBackend(context);
-  const {
-    condi,
-    beaker,
-    beaker_reagents = [],
-    buffer_reagents = [],
-    mode,
-  } = data;
+export const ChemSynthesizer = (props, context) => {
   return (
     <Window
       width={575}
       height={500}
       resizable>
-      <ComplexModal />
-      <Window.Content scrollable className="Layout__content--flexColumn">
-        <ChemMasterBeaker
-          beaker={beaker}
-          beakerReagents={beaker_reagents}
-          bufferNonEmpty={buffer_reagents.length > 0}
-        />
-        <ChemMasterBuffer
-          mode={mode}
-          bufferReagents={buffer_reagents}
-        />
-        <ChemMasterProduction
-          isCondiment={condi}
-          bufferNonEmpty={buffer_reagents.length > 0}
-        />
-        {/* <ChemMasterCustomization /> */}
+      <Window.Content className="Layout__content--flexColumn">
+        <ChemSynthesizerQueueRecipes />
+        <ChemSynthesizerQueueList />
+        <ChemSynthesizerRecipeList />
+        <ChemSynthesizerChemicals />
+        <ChemSynthesizerSettings />
       </Window.Content>
     </Window>
   );
 };
 
-const ChemMasterBeaker = (props, context) => {
+const ChemSynthesizerQueueRecipes = (props, context) => {
   const { act, data } = useBackend(context);
   const {
-    beaker,
-    beakerReagents,
-    bufferNonEmpty,
-  } = props;
-
-  let headerButton = bufferNonEmpty ? (
-    <Button.Confirm
-      icon="eject"
-      disabled={!beaker}
-      content="Eject and Clear Buffer"
-      onClick={() => act('eject')}
-    />
-  ) : (
-    <Button
-      icon="eject"
-      disabled={!beaker}
-      content="Eject and Clear Buffer"
-      onClick={() => act('eject')}
-    />
-  );
+    busy,
+    use_catalyst,
+    queue = [],
+  } = data;
 
   return (
-    <Section
-      title="Beaker"
-      buttons={headerButton}>
-      {beaker
-        ? (
-          <BeakerContents
-            beakerLoaded
-            beakerContents={beakerReagents}
-            buttons={(chemical, i) => (
-              <Box mb={(i < beakerReagents.length - 1) && "2px"}>
+    <Flex
+      height="100%"
+      width="100%"
+      direction="column">
+      <Flex.Item
+        height={0}
+        grow={1}>
+        <Section
+          height="100%"
+          title="Queue"
+          overflowY="auto"
+          buttons={
+            <Fragment>
+              <Button 
+                disabled={!!busy}
+                color="bad"
+                icon="wrench"
+                content={use_catalyst ? "Catalyst Active" : "Catalyst Disabled"}
+                onClick={() => act("toggle_catalyst")} />
+              <Button.Confirm
+                disabled={!queue.length}
+                color="bad"
+                icon="minus-circle"
+                content="Clear Queue"
+                onClick={() => act("clear_queue")} />
+              {(!busy && (
                 <Button
-                  content="Analyze"
-                  mb="0"
-                  onClick={() => modalOpen(context, 'analyze', {
-                    idx: i + 1,
-                    beaker: 1,
-                  })}
-                />
-                {transferAmounts.map((am, j) =>
-                  (<Button
-                    key={j}
-                    content={am}
-                    mb="0"
-                    onClick={() => act('add', {
-                      id: chemical.id,
-                      amount: am,
-                    })}
-                  />)
-                )}
-                <Button
-                  content="All"
-                  mb="0"
-                  onClick={() => act('add', {
-                    id: chemical.id,
-                    amount: chemical.volume,
-                  })}
-                />
-                <Button
-                  content="Custom.."
-                  mb="0"
-                  onClick={() => modalOpen(context, 'addcustom', {
-                    id: chemical.id,
-                  })}
-                />
-              </Box>
-            )}
-          />
-        )
-        : (
-          <Box color="label">
-            No beaker loaded.
-          </Box>
-        )}
-    </Section>
+                disabled={!queue.length}
+                content="Start Queue"
+                icon="play"
+                onClick={() => act("start_queue")} />
+              ))
+              }
+            </Fragment>
+          }>
+          <Flex
+            direction="column"
+            height="100%">
+            <Flex.Item>
+            <ChemSynthesizerQueueList />
+            </Flex.Item>
+          </Flex>
+        </Section>
+        <Section
+          height="100%"
+          title="Recipes"
+          overflowY="auto">
+          <Flex
+            direction="column"
+            height="100%">
+            <Flex.Item>
+            <ChemSynthesizerRecipeList />
+            </Flex.Item>
+          </Flex>
+        </Section>
+      </Flex.Item>
+    </Flex>
   );
+};
+
+const ChemSynthesizerQueueList = (props, context) => {
+  const { act, data } = useBackend(context);
+  const {
+    queue = [],
+    use_catalyst,
+    queue = [],
+  } = data;
+
 };
 
 const ChemMasterBuffer = (props, context) => {
