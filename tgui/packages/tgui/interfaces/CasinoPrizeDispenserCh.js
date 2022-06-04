@@ -17,13 +17,8 @@ export const CasinoPrizeDispenserCh = (props, context) => {
     <Window width={400} height={450} resizable>
       <Window.Content className="Layout__content--flexColumn" scrollable>
         <Fragment>
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/CasinoPrizeDispenserCh.js
-          <CasinoPrizeDispenserChSearch />
-          <CasinoPrizeDispenserChItems />	
-=======
           <CasinoPrizeDispenserSearch />
           <CasinoPrizeDispenserItems />
->>>>>>> 8d01c43739... Merge pull request #13034 from ItsSelis/tgui-remove-unused:tgui/packages/tgui/interfaces/CasinoPrizeDispenser.js
         </Fragment>
       </Window.Content>
     </Window>
