@@ -46,8 +46,14 @@
 /area/groundbase/wilderness
 	name = "wilderness"
 	icon_state = "greblacir"
+<<<<<<< HEAD
 /area/groundbase/wilderness/north
 /area/groundbase/wilderness/north/unexplored
+=======
+	base_turf = /turf/simulated/mineral/floor/virgo3c
+/area/submap/groundbase/wilderness/north
+/area/submap/groundbase/wilderness/north/unexplored
+>>>>>>> b32ab0cccf... Merge pull request #13032 from foopwo/debased
 	icon_state = "orablacir"
 /area/groundbase/wilderness/north/cave
 	icon_state = "yelblacir"
