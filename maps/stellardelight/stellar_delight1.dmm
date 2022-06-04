@@ -21694,7 +21694,7 @@
 /area/library)
 "Uj" = (
 /obj/structure/table/woodentable,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},

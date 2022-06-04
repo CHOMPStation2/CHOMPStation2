@@ -396,4 +396,20 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 		name = initial(src.name)
 		to_chat(AI, span_notice("You feel a tad claustrophobic as your mind closes back into your card, ejecting from \the [initial(src.name)]."))
 		if(user)
+<<<<<<< HEAD
 			to_chat(user, span_notice("You eject the card from \the [initial(src.name)]."))
+=======
+			to_chat(user, span_notice("You eject the card from \the [initial(src.name)]."))
+
+/obj/item/device/paicard/typeb
+	name = "personal AI device"
+	icon = 'icons/obj/paicard.dmi'
+
+/obj/random/paicard
+	name = "personal AI device spawner"
+	icon = 'icons/obj/paicard.dmi'
+	icon_state = "pai"
+
+/obj/random/paicard/item_to_spawn()
+	return pick(/obj/item/device/paicard ,/obj/item/device/paicard/typeb)
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai

@@ -842,6 +842,38 @@
 "abZ" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/atmos/backup)
+<<<<<<< HEAD
+=======
+"aca" = (
+/obj/machinery/holoposter{
+	pixel_y = -30
+	},
+/obj/structure/table/standard,
+/obj/random/soap,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/teleporter/departing)
+"acb" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/structure/table/standard,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/random/paicard,
+/turf/simulated/floor/tiled,
+/area/teleporter/departing)
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 "acc" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -27147,6 +27179,10 @@
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/random/junk,
+<<<<<<< HEAD
+=======
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor,
 /area/maintenance/station/exploration)
 "lVJ" = (
@@ -29076,6 +29112,10 @@
 	layer = 2.9
 	},
 /obj/random/junk,
+<<<<<<< HEAD
+=======
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
 "nCS" = (

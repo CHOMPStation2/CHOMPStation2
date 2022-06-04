@@ -921,7 +921,7 @@ lel
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/toolstorage)
 "cr" = (
@@ -5650,7 +5650,7 @@ lel
 /area/groundbase/security/lobby)
 "nU" = (
 /obj/structure/table/reinforced,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /obj/machinery/recharger{
 	pixel_y = 5
 	},
@@ -7505,6 +7505,20 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
+<<<<<<< HEAD
+=======
+"sq" = (
+/obj/structure/table/woodentable,
+/obj/random/paicard,
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/groundbase/civilian/gameroom)
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 "sr" = (
 /obj/structure/toilet,
 /obj/machinery/button/remote/airlock{

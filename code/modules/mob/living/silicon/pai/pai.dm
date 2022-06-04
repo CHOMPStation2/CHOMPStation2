@@ -48,6 +48,11 @@
 		"Duffel" = "pai-duffel",
 		"Rat" = "rat",
 		"Panther" = "panther",
+<<<<<<< HEAD
+=======
+		"Cyber Elf" = "cyberelf",
+		"Teppi" = "teppi"
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 		//VOREStation Addition End
 		)
 
