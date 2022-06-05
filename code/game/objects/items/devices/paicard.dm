@@ -425,4 +425,13 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 	icon_state = "pai"
 
 /obj/random/paicard/item_to_spawn()
+<<<<<<< HEAD
 	return pick(/obj/item/device/paicard ,/obj/item/device/paicard/typeb)
+=======
+	return pick(/obj/item/device/paicard ,/obj/item/device/paicard/typeb)
+
+/obj/item/device/paicard/digest_act(var/atom/movable/item_storage = null)
+	if(!pai.digestable)
+		return
+	. = ..()	
+>>>>>>> 46739db0f2... Merge pull request #13043 from Very-Soft/anotherpaiupdate
