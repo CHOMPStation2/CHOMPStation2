@@ -107,10 +107,17 @@
 
 	var/tip_timer // reference to timer id for a tooltip we might open soon
 
+<<<<<<< HEAD
 /obj/item/Initialize(mapload)
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
+=======
+	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
+
+/obj/item/New()
+	..()
+>>>>>>> bf0f84e952... Merge pull request #13041 from Heroman3003/fair-holodeck
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))
