@@ -7171,6 +7171,10 @@
 /turf/space,
 /turf/simulated/floor/plating,
 /area/hangar/two)
+"aKG" = (
+/obj/machinery/light,
+/turf/simulated/floor/plating,
+/area/hangar/two)
 "aKH" = (
 /obj/structure/sign/directions/engineering{
 	dir = 1;
@@ -9720,6 +9724,9 @@
 /obj/item/stack/material/silver{
 	amount = 6
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "bfF" = (
@@ -9748,6 +9755,9 @@
 /obj/structure/filingcabinet/medical{
 	desc = "A large cabinet with hard copy medical records.";
 	name = "Medical Records"
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -10351,9 +10361,6 @@
 "bLF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -15750,6 +15757,9 @@
 /obj/item/weapon/module/power_control,
 /obj/item/weapon/airlock_electronics,
 /obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "fUB" = (
@@ -21307,6 +21317,9 @@
 /obj/item/device/aicard,
 /obj/item/weapon/aiModule/reset,
 /obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "nlX" = (
@@ -21410,6 +21423,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/elevator)
+"nwe" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "nwj" = (
 /obj/item/stack/tile/wood,
 /obj/machinery/alarm{
@@ -21696,6 +21721,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown/border{
+	dir = 8
+	},
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -22650,6 +22678,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tcomm/computer)
+"pmB" = (
+/obj/machinery/deployable/barrier,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/security/checkpoint3)
 "pmG" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -25146,6 +25182,9 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "syH" = (
@@ -25714,6 +25753,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/firstdeck)
+"tgg" = (
+/obj/structure/lattice,
+/obj/item/stack/rods,
+/obj/structure/grille/broken,
+/turf/space,
+/area/space)
 "tgD" = (
 /obj/machinery/light{
 	dir = 1
@@ -48969,7 +49014,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -48989,8 +49034,8 @@ kwt
 aaf
 aaa
 aaa
-aaa
-aaa
+aVS
+xrX
 aaa
 aaa
 aaa
@@ -49227,7 +49272,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -49248,9 +49293,9 @@ kwt
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+aaf
+aaf
+aaf
 aaa
 aaa
 xrX
@@ -49485,7 +49530,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -49508,7 +49553,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -51803,10 +51848,10 @@ aaf
 aaf
 vYi
 vYi
-aaa
-aaa
-aaa
-aaa
+aaf
+aaf
+aaf
+aaf
 kwt
 abg
 aaC
@@ -52061,8 +52106,8 @@ aaa
 aaa
 aaf
 aaa
-aaa
-aaa
+aaf
+sFQ
 aaa
 aaa
 kwt
@@ -52865,7 +52910,7 @@ aEN
 awI
 tcO
 nTw
-aEN
+nwe
 awI
 ati
 nTw
@@ -59779,8 +59824,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aVS
+aaf
 tOo
 tOo
 tOo
@@ -64748,7 +64793,7 @@ dXx
 dYW
 ftR
 gYy
-kLb
+pmB
 qJp
 aNX
 aTA
@@ -64939,8 +64984,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
+aaf
 aap
 aap
 abz
@@ -65971,9 +66016,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+aaf
+aaf
+aaf
 acH
 aap
 aap
@@ -67003,8 +67048,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
+aaf
 abT
 abT
 abT
@@ -71450,7 +71495,7 @@ jUC
 xhd
 xhd
 jUC
-jUC
+aKG
 dWL
 aaf
 aaf
@@ -77373,7 +77418,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -77625,13 +77670,13 @@ xSg
 qSb
 moQ
 moQ
+aaf
 aaa
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -77883,13 +77928,13 @@ moQ
 moQ
 moQ
 aaf
+aaf
 aaa
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -78147,7 +78192,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -78405,7 +78450,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -78663,7 +78708,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -78921,7 +78966,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -79179,7 +79224,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -79435,9 +79480,9 @@ itV
 itV
 itV
 itV
-aaa
-aaa
-aaa
+aaf
+aaf
+xrX
 aaa
 ean
 aaa
@@ -79695,7 +79740,7 @@ xdz
 itV
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -79953,7 +79998,7 @@ jPJ
 itV
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -80211,7 +80256,7 @@ jPJ
 itV
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -80467,9 +80512,9 @@ okX
 okX
 okX
 itV
-aaa
-aaa
-aaa
+aaf
+aaf
+vYi
 aaa
 aaa
 aaa
@@ -80727,7 +80772,7 @@ jPJ
 itV
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -80985,7 +81030,7 @@ jPJ
 itV
 aaa
 aaa
-aaa
+aVS
 aaa
 aaa
 aaa
@@ -81243,7 +81288,7 @@ ust
 itV
 aaa
 aaa
-aaa
+xrX
 aaa
 aaa
 aaa
@@ -81499,8 +81544,8 @@ itV
 itV
 itV
 itV
-aaa
-aaa
+aaf
+aaf
 aaa
 aaa
 aaa
@@ -82016,8 +82061,8 @@ lse
 jVV
 aaa
 aaa
-vYi
 aaa
+vYi
 aaa
 aaa
 aaa
@@ -82274,8 +82319,8 @@ lsJ
 aaa
 aaa
 aaa
-vYi
 aaa
+vYi
 aaa
 ean
 aaa
@@ -82532,8 +82577,8 @@ itV
 aaf
 aaf
 aaf
+aaf
 vYi
-aaa
 aaa
 aaa
 aaa
@@ -82772,7 +82817,7 @@ vYi
 aaa
 aaa
 aaa
-aaa
+aaf
 itV
 oxn
 itV
@@ -82790,8 +82835,8 @@ aaa
 aaa
 aaa
 aaa
-vYi
 aaa
+vYi
 aaa
 aaa
 aaa
@@ -83030,7 +83075,7 @@ vYi
 vYi
 aaa
 aaa
-aaa
+aaf
 aaa
 oxq
 itV
@@ -83043,13 +83088,13 @@ jPJ
 pXB
 itV
 aaa
+aaf
 aaa
 aaa
 aaa
 aaa
 vYi
 vYi
-aaa
 aaa
 aaa
 aaa
@@ -83288,7 +83333,7 @@ aaa
 vYi
 aaa
 aaa
-aaa
+aaf
 aaa
 oxL
 itV
@@ -83301,12 +83346,12 @@ jSg
 sLG
 itV
 aaa
+aaf
 aaa
 aaa
 aaa
 aaa
 vYi
-aaa
 aaa
 aaa
 aaa
@@ -83546,7 +83591,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 oxL
 itV
@@ -83559,7 +83604,7 @@ wZU
 opg
 itV
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -83804,7 +83849,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -83816,8 +83861,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+fdW
+aaf
 aaa
 aaa
 aaa
@@ -84062,7 +84107,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -84075,7 +84120,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+sFQ
 aaa
 aaa
 aaa
@@ -84320,7 +84365,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+xrX
 aaa
 aaa
 aaa
@@ -84333,7 +84378,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+vYi
 aaa
 aaa
 aaa
@@ -84578,8 +84623,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+vYi
+vYi
 aaa
 aaa
 vYi
@@ -84837,8 +84882,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+vYi
+vYi
 aaa
 uXr
 eaV
@@ -85096,7 +85141,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+tgg
 aaa
 uXr
 uXr

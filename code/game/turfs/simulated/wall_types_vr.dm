@@ -186,6 +186,10 @@ var/list/flesh_overlay_cache = list()
 /turf/simulated/wall/sifwood
 	icon_state = "sifwood"
 	icon = 'icons/turf/wall_masks_vr.dmi'
+	
+/turf/simulated/wall/rsifwood
+	icon_state = "sifwood"
+	icon = 'icons/turf/wall_masks_vr.dmi'
 
 /turf/simulated/wall/silver
 	icon_state = "silver"

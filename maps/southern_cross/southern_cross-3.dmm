@@ -1736,6 +1736,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
 "bRW" = (
@@ -2321,6 +2322,9 @@
 	dir = 1
 	},
 /obj/structure/loot_pile/maint/boxfort,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "cvI" = (
@@ -14202,6 +14206,9 @@
 	dir = 4
 	},
 /obj/random/trash_pile,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
 "ogb" = (
@@ -15641,6 +15648,9 @@
 "pzk" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "pzv" = (
@@ -20475,6 +20485,7 @@
 /area/hallway/primary/thirddeck/aft)
 "uAL" = (
 /obj/machinery/vending/wallmed1{
+	dir = 1;
 	name = "NanoMed Wall";
 	pixel_y = -30
 	},
@@ -20567,7 +20578,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/thirddeck)
 "uEX" = (
-/obj/structure/curtain/open/shower,
 /obj/machinery/shower{
 	dir = 1
 	},
@@ -38899,7 +38909,7 @@ apc
 apc
 apc
 apc
-apc
+aqj
 apc
 apc
 jhg
@@ -38909,7 +38919,7 @@ jhg
 jhg
 apc
 apc
-apc
+aqj
 apc
 apc
 apc
@@ -48219,7 +48229,7 @@ xes
 apc
 apc
 apc
-epg
+tHb
 aqj
 apc
 apc
@@ -51517,8 +51527,8 @@ apc
 apc
 apc
 apc
-jhg
-jhg
+vvI
+vvI
 jhg
 jhg
 jhg
@@ -64131,7 +64141,7 @@ xeL
 epg
 aqj
 aqj
-apc
+aqj
 jhg
 jhg
 jhg
@@ -64932,7 +64942,7 @@ jhg
 apc
 apc
 apc
-apc
+aqj
 apc
 apc
 qjy
@@ -67062,7 +67072,7 @@ jhg
 apc
 apc
 apc
-apc
+tHb
 apc
 apc
 apc
@@ -67317,10 +67327,10 @@ jhg
 jhg
 jhg
 jhg
-apc
-apc
-apc
-apc
+aqj
+aqj
+aqj
+htn
 apc
 apc
 apc
@@ -72676,7 +72686,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
+vvI
 jhg
 jhg
 jhg
@@ -73711,7 +73721,7 @@ aqj
 aqj
 aqj
 aqj
-apc
+aqj
 jhg
 jhg
 jhg
@@ -75772,7 +75782,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
+vvI
 jhg
 jhg
 jhg
@@ -76593,7 +76603,7 @@ apc
 apc
 aqj
 apc
-apc
+aqj
 apc
 apc
 apc
@@ -76851,7 +76861,7 @@ epg
 epg
 epg
 htn
-apc
+aqj
 apc
 apc
 apc

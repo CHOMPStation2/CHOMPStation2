@@ -835,7 +835,18 @@
 
 	TLV["temperature"] =	list(T0C - 40, T0C - 20, T0C + 40, T0C + 66) // K, Lower Temperature for Freezer Air Alarms (This is because TLV is hardcoded to be generated on first_run, and therefore the only way to modify this without changing TLV generation)
 
-// VOREStation Edit End
+// VOREStation Edit End, CHOMPEdit START
+/obj/machinery/alarm/sifwilderness
+	breach_detection = 0
+	report_danger_level = 0
+	
+/obj/machinery/alarm/sifwilderness/first_run()
+	. = ..()
+	
+	TLV["oxygen"] =			list(16, 17, 135, 140)
+	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.50,ONE_ATMOSPHERE*1.60)
+	TLV["temperature"] =	list(T0C - 40, T0C - 31, T0C + 40, T0C + 120)
+// CHOMPEdit END
 #undef LOAD_TLV_VALUES
 #undef TEST_TLV_VALUES
 #undef DECLARE_TLV_VALUES

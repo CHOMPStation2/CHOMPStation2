@@ -2152,24 +2152,29 @@
 	dir = 9
 	},
 /obj/structure/cable/orange{
+	d1 = 4;
 	d2 = 10;
-	icon_state = "0-10"
+	icon_state = "4-10"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway/atmos_hallway)
 "afJ" = (
-/obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/orange{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway/atmos_hallway)
 "afK" = (
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/dark,
 /area/engineering/hallway/atmos_hallway)
 "afL" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -2412,6 +2417,9 @@
 /area/engineering/foyer)
 "agv" = (
 /obj/structure/undies_wardrobe,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/security_restroom)
 "agw" = (
@@ -6546,6 +6554,9 @@
 /obj/machinery/atmospherics/valve/digital{
 	name = "secondary TEG valve"
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "atI" = (
@@ -7082,6 +7093,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/red{
 	dir = 4
+	},
+/obj/structure/cable/orange{
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway/atmos_hallway)
@@ -7669,6 +7684,11 @@
 	d2 = 5;
 	icon_state = "2-5"
 	},
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway/atmos_hallway)
 "axC" = (
@@ -8177,9 +8197,6 @@
 	dir = 4
 	},
 /obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -8301,6 +8318,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -8710,6 +8730,9 @@
 	pixel_x = -25;
 	pixel_y = -6;
 	req_access = list(10)
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
@@ -16093,6 +16116,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Engine Power";
+	name_tag = "Engine Power"
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "aYD" = (
@@ -16102,7 +16129,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/computer/security/engineering{
+/obj/item/modular_computer/console/preset/engineering{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -17350,10 +17377,10 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "bcv" = (
-/obj/item/modular_computer/console/preset/engineering{
+/obj/item/device/geiger/wall/south,
+/obj/machinery/computer/security/engineering{
 	dir = 4
 	},
-/obj/item/device/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
 "bcw" = (
@@ -19063,6 +19090,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -23782,10 +23812,6 @@
 	name = "Kitchen Delivery";
 	req_access = list(28)
 	},
-/obj/machinery/alarm/freezer{
-	dir = 8;
-	pixel_x = 22
-	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen)
 "bwI" = (
@@ -27030,6 +27056,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "bFP" = (
@@ -29940,9 +29969,6 @@
 	id_tag = "co2_sensor"
 	},
 /obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
@@ -35309,7 +35335,15 @@
 /area/crew_quarters/cafeteria)
 "chX" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/cards,
+/obj/item/device/radio/subspace{
+	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO THE BAR!";
+	name = "Bar subspace radio";
+	pixel_y = 5
+	},
+/obj/item/weapon/deck/cards{
+	pixel_x = -5;
+	pixel_y = -2
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "chY" = (
@@ -36938,6 +36972,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
+"cnd" = (
+/obj/item/stack/rods,
+/obj/structure/lattice,
+/turf/space,
+/area/space)
 "cnf" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
@@ -39323,6 +39362,7 @@
 /turf/simulated/floor/airless,
 /area/rnd/toxins_launch)
 "cvM" = (
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/rnd/toxins_launch)
 "cvN" = (
@@ -41905,6 +41945,9 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/warning/airlock{
 	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/toxins_launch)
@@ -45208,8 +45251,7 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/air_sensor{
 	frequency = 1445;
-	id_tag = "engine_exhaust_sensor";
-	output = 2
+	id_tag = "engine_exhaust_sensor"
 	},
 /turf/simulated/floor/airless,
 /area/engineering/engine_waste)
@@ -48379,7 +48421,8 @@
 	output_level = 750000
 	},
 /obj/structure/cable/orange{
-	dir = 8
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway/engineer_hallway)
@@ -51836,6 +51879,9 @@
 	},
 /obj/machinery/ai_status_display{
 	pixel_x = -32
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
@@ -60892,6 +60938,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "mEp" = (
@@ -61784,6 +61833,9 @@
 	pixel_y = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "ngb" = (
@@ -65178,13 +65230,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "peA" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
+/obj/item/stack/rods,
+/obj/structure/lattice,
+/obj/structure/grille/broken,
+/turf/space,
 /area/space)
 "peJ" = (
 /turf/simulated/floor/wood,
@@ -66485,6 +66534,21 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/dockhallway)
+"pOA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/orange{
+	d1 = 2;
+	d2 = 5;
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/hallway/atmos_hallway)
 "pOD" = (
 /obj/machinery/smartfridge/secure/virology,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -68835,6 +68899,7 @@
 /area/hallway/primary/seconddeck/fscenter)
 "rnx" = (
 /obj/structure/flora/ausbushes/stalkybush,
+/obj/machinery/light,
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/fscenter)
 "roo" = (
@@ -70917,10 +70982,6 @@
 /obj/structure/cable/cyan{
 	d2 = 2;
 	icon_state = "0-2"
-	},
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - Engine Power";
-	name_tag = "Engine Power"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -73209,6 +73270,14 @@
 /obj/machinery/lapvend,
 /turf/simulated/floor/tiled/yellow,
 /area/crew_quarters/coffee_shop)
+"tXq" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 4559.63
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/security_starboard)
 "tXV" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -79295,6 +79364,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -93945,10 +94018,10 @@ wWX
 aaf
 aag
 aag
-aaf
-aaa
-aaa
-aaa
+wWX
+aag
+aag
+wWX
 aaa
 aaa
 aaa
@@ -94206,7 +94279,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aag
 aaa
 aaa
 aaa
@@ -94464,7 +94537,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aag
 aaa
 aaa
 aaa
@@ -94722,7 +94795,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -94980,7 +95053,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -95496,7 +95569,7 @@ bCE
 aaa
 aaa
 aaa
-aaa
+wWX
 aaa
 aaa
 aaa
@@ -95754,7 +95827,7 @@ bCC
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -101132,7 +101205,7 @@ cxn
 cyU
 auK
 afH
-afH
+pOA
 axA
 ayP
 ahe
@@ -119180,7 +119253,7 @@ bXK
 asb
 ccA
 cdG
-cgb
+tXq
 chd
 cjr
 cqx
@@ -125113,7 +125186,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+wWX
 aaa
 wxw
 aaf
@@ -125371,7 +125444,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aag
 aaa
 aaa
 aaf
@@ -125629,7 +125702,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aag
 aaa
 aaa
 aaa
@@ -125887,8 +125960,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
+aaf
 aaa
 aaa
 aaf
@@ -126146,8 +126219,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aag
+wWX
 aaa
 wWX
 aaa
@@ -126405,10 +126478,10 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aab
-aaa
-aaa
+aaf
+cnd
+aag
+aag
 ctj
 cvs
 cwN
@@ -127440,8 +127513,8 @@ aaa
 aaa
 aaa
 aaa
-wxw
-aaa
+aWC
+aaf
 aaf
 aaa
 aaa
@@ -127956,8 +128029,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aaf
+aaf
 aaf
 aaa
 aaa
@@ -130795,7 +130868,7 @@ bvj
 bvj
 bvj
 bvj
-peA
+bvj
 cvL
 cxm
 cyT
@@ -131017,7 +131090,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+wWX
 aaa
 aaa
 aaa
@@ -131275,10 +131348,10 @@ aaa
 aaa
 aaa
 aaa
+aaf
 aaa
 aaa
-aaa
-aaa
+aaf
 aaf
 aaa
 aaa
@@ -131533,10 +131606,10 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
+aaf
+aag
+aag
+aaf
 aaa
 aaa
 aaa
@@ -131793,7 +131866,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aag
 aaa
 aaa
 aaa
@@ -131874,7 +131947,7 @@ aag
 aag
 aag
 cuR
-aaa
+aaf
 aaa
 aaa
 aaa
@@ -132051,9 +132124,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aab
+aag
+aag
+peA
 aaa
 aaa
 aaa
@@ -132896,7 +132969,7 @@ opM
 aaa
 aaa
 aaa
-aaa
+aab
 aaa
 aaa
 aaa
@@ -133154,7 +133227,7 @@ opM
 aaa
 aaa
 aaa
-aaa
+aaf
 aaa
 aaa
 aaa

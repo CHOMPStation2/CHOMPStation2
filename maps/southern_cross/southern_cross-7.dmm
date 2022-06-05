@@ -7973,6 +7973,9 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/machinery/light/spot{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
 "vQ" = (
@@ -13554,6 +13557,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/expoutpost/innerportmaint)
+"Pl" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/device/bluespaceradio/southerncross_prelinked,
+/turf/simulated/floor/tiled,
+/area/expoutpost/prep)
 "Pq" = (
 /obj/structure/table/glass,
 /obj/random/soap,
@@ -13688,6 +13696,14 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
+"PN" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangartwo)
 "PO" = (
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -14351,6 +14367,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/shuttle)
+"Sz" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarone)
 "SC" = (
 /obj/structure/table/bench/sifwooden,
 /turf/simulated/floor/tiled,
@@ -35788,7 +35812,7 @@ sI
 dS
 of
 gT
-dW
+Sz
 ZV
 Zn
 Qh
@@ -37336,7 +37360,7 @@ sI
 dS
 of
 gT
-dW
+Sz
 ZV
 Zn
 Qh
@@ -45076,7 +45100,7 @@ oM
 ex
 dt
 aU
-tI
+PN
 eI
 eH
 ut
@@ -45103,7 +45127,7 @@ It
 KN
 NT
 Qt
-TR
+Pl
 TR
 XO
 Jh
@@ -46624,7 +46648,7 @@ sQ
 te
 dt
 aU
-tI
+PN
 eI
 eH
 ut

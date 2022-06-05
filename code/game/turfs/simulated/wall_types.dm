@@ -100,6 +100,9 @@
 
 /turf/simulated/wall/sifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD)
+	
+/turf/simulated/wall/rsifwood/Initialize(mapload)
+	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
 
 /turf/simulated/wall/log/Initialize(mapload)
 	. = ..(mapload,  MAT_LOG)
