@@ -1,20 +1,6 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-<<<<<<< HEAD
-
----
-
-#### Brief description of the issue
-
-
-#### What you expected to happen
-
-
-#### What actually happened
-
-
-=======
 title: ''
 labels: 'Type: Bug'
 assignees: ''
@@ -35,22 +21,15 @@ assignees: ''
 #### What actually happened
 
 <!-- Same here, please include any context that might have contributed, such as actions taken right before.-->
->>>>>>> b5b5a45a2e... Merge pull request #13027 from ItsSelis/master
 #### Steps to reproduce
 - (Step 1)
 - (Step 2)
 - (and so on)
 
-<<<<<<< HEAD
-#### Code Revision
-- (Found using the "Show Server Revision" verb under the OOC tab.)
- 
-=======
 <!--Optional, you may remove this section.-->
 #### Code Revision
 - (Found using the "Show Server Revision" verb under the OOC tab.)
  
 <!--Optional, you may remove this section.-->
->>>>>>> b5b5a45a2e... Merge pull request #13027 from ItsSelis/master
 #### Anything else you may wish to add:
 - (Location if it's a mapping issue, screenshots, sprites, etc.)
