@@ -553,11 +553,8 @@ const VoreSelectedBellyOptions = (props, context) => {
     contaminate_flavor,
     contaminate_color,
     egg_type,
-<<<<<<< HEAD
-    vorespawn_blacklist,
-=======
     save_digest_mode,
->>>>>>> f3b5098a9f... Merge pull request #13028 from lm40/modes
+    vorespawn_blacklist,
   } = belly;
 
   return (
