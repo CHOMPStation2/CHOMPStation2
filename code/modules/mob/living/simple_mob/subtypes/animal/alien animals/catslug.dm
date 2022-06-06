@@ -53,7 +53,7 @@
 
 	has_langs = list("Sign Language")
 
-	var/picked_color = FALSE
+	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(
 		/obj/item/weapon/implant,
