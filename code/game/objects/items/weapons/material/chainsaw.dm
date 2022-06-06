@@ -12,11 +12,12 @@
 	var/active_force = 55
 	var/inactive_force = 10
 
-//CHOMPEdit Start. Fixing runtime.
-/obj/item/weapon/chainsaw/Initialize()
-    . = ..()
-    reagents.add_reagent("fuel",max_fuel)
-//CHOMPEdit End
+/obj/item/weapon/chainsaw/Initialize() //CHOMPEdit Fixing runtime by doing New to Initialize.
+	var/datum/reagents/R = new/datum/reagents(max_fuel)
+	reagents = R
+	R.my_atom = src
+	R.add_reagent("fuel", max_fuel)
+	START_PROCESSING(SSobj, src)
 
 /obj/item/weapon/chainsaw/Destroy()
 	STOP_PROCESSING(SSobj, src)
