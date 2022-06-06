@@ -185,12 +185,6 @@
 		add_overlay(eye_layer)
 
 /mob/living/silicon/pai/proc/remove_eyes()
-<<<<<<< HEAD
-	if(chassis in allows_eye_color)
-		cut_overlay(eye_layer)
-		qdel(eye_layer)
-		eye_layer = null
-=======
 	cut_overlay(eye_layer)
 	qdel(eye_layer)
 	eye_layer = null
@@ -220,4 +214,3 @@
 				t_him = "her"
 	visible_message("<span class='notice'>\The [src] hugs [A] to make [t_him] feel better!</span>", \
 					"<span class='notice'>You hug [A] to make [t_him] feel better!</span>")
->>>>>>> 46739db0f2... Merge pull request #13043 from Very-Soft/anotherpaiupdate
