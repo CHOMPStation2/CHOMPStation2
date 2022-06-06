@@ -106,18 +106,13 @@
 	var/drop_sound = "generic_drop"
 
 	var/tip_timer // reference to timer id for a tooltip we might open soon
+	
+	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
 
-<<<<<<< HEAD
-/obj/item/Initialize(mapload)
+/obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
-=======
-	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
-
-/obj/item/New()
-	..()
->>>>>>> bf0f84e952... Merge pull request #13041 from Heroman3003/fair-holodeck
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))
