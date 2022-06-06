@@ -697,9 +697,6 @@
 		to_chat(src, "<span class='warning'>You are not allowed to eat this.</span>")
 		return
 
-<<<<<<< HEAD
-	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
-=======
 	if(istype(I, /obj/item/device/paicard))
 		var/obj/item/device/paicard/palcard = I
 		var/mob/living/silicon/pai/pocketpal = palcard.pai
@@ -707,8 +704,7 @@
 			to_chat(src, "<span class='warning'>\The [pocketpal] doesn't allow you to eat it.</span>")
 			return
 
-	if(is_type_in_list(I,edible_trash) | adminbus_trash)
->>>>>>> 46739db0f2... Merge pull request #13043 from Very-Soft/anotherpaiupdate
+	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
 		if(I.hidden_uplink)
 			to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
 			message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? ADMIN_JMP(src) : "null"])")
