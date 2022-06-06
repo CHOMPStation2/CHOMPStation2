@@ -222,7 +222,12 @@
 
 	// Queue and recipe lists might not be formatted correctly here. Delete this once you've confirmed.
 	data["queue"] = queue
-	data["recipes"] = recipes
+
+	// Convert the recipes list into an array of strings. The UI does not need the associative list attached to each string.
+	var/list/tmp_recipes = list()
+	data["recipes"] = tmp_recipes
+	for(var/i = 1, i <= recipes.len, i++)
+		tmp_recipes[i] = recipes[i]
 
 
 
@@ -259,16 +264,21 @@
 			if(!busy)
 				start_queue()
 		if("rem_queue")
-			// Remove a single entry from the queue.
+			// Remove a single entry from the queue. Sanity checks also prevent removing the first entry if the machine is busy though UI should already prevent that.
 			var/index = text2num(params["q_index"])
-			if(!isnum(index) || !ISINTEGER(index) || !istype(queue) || (index<1 || index>length(queue)))
+			if(!isnum(index) || !ISINTEGER(index) || !istype(queue) || (index<1 || index>length(queue) || (busy && index == 1)))
 				return
 			queue -= queue[index]
 		if("clear_queue")
 			// Remove all entries from the queue except the currently processing recipe.
 			var/confirm = alert(usr, "Are you sure you want to clear the running queue?", "Confirm", "No", "Yes")
 			if(confirm == "Yes")
-				queue = list()
+				if(busy)
+					// Oh no, I've broken code convention to remove all entries but the first.
+					for(var/i = queue.len, i >= 2, i--)
+						queue -= queue[i]
+				else
+					queue = list()
 		if("eject_catalyst")
 			// Removes the catalyst bottle from the machine.
 			if(!busy && catalyst)
@@ -281,7 +291,9 @@
 		if("emergency_stop")
 			// Stops everything if that's desirable for some reason.
 			if(busy)
-				stall()
+				var/confirm = alert(usr, "Are you sure you want to stall the machine?", "Confirm", "Yes", "No")
+				if(confirm == "Yes")
+					stall()
 		if("bottle_product")
 			// Bottles the reaction mixture if stalled.
 			if(!busy)
@@ -307,6 +319,8 @@
 					var/index = params["rm_index"]
 					if(index in recipes)
 						recipes -= recipes[index]
+			else
+				to_chat(usr, "<span class='warning'>You cannot remove recipes while the machine is running!</span>")
 		if("exp_recipe")
 			// Allows the user to export recipes to chat formatted for easy importing. 
 			var/index = params["exp_index"]
