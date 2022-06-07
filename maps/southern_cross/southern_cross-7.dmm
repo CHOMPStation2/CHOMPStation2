@@ -9932,8 +9932,7 @@
 "ze" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Teleport Access";
-	req_access = list(17,43);
-	req_one_access = list(17,43)
+	req_one_access = list(17)
 	},
 /obj/structure/cable/blue{
 	d1 = 1;
