@@ -145,11 +145,18 @@
 	var/new_size = input(nagmessage, "Pick a Size") as num|null
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
+<<<<<<< HEAD
 		if(temporary_form)	//CHOMPEdit - resizing both our forms
 			var/mob/living/L = temporary_form
 			L.resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		//CHOMPEDIT - I don't need to be informed every time a prommie changes sizes
 
+=======
+		// I'm not entirely convinced that `src ? ADMIN_JMP(src) : "null"` here does anything
+		// but just in case it does, I'm leaving the null-src checking
+		log_admin("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]")
+		
+>>>>>>> b7d29f901a... Merge pull request #13052 from Very-Soft/anotherpaiupdate
 /*
 //Add the set_size() proc to usable verbs. By commenting this out, we can leave the proc and hand it to species that need it.
 /hook/living_new/proc/resize_setup(mob/living/H)
