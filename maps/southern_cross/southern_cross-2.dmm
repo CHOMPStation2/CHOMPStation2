@@ -48424,7 +48424,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/engineering/hallway/engineer_hallway)
 "fJl" = (
 /obj/structure/cable/green{
@@ -58631,6 +58631,15 @@
 /obj/machinery/atmospherics/valve/digital/open{
 	name = "Hot Loop Waste Gas Management Switch"
 	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for the engine control room blast doors.";
+	id = "EngineEmitterPortWest";
+	name = "Engine Room Blast Doors";
+	pixel_x = 32;
+	pixel_y = 25;
+	req_access = null;
+	req_one_access = list(11,24)
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "lkD" = (
@@ -58655,14 +58664,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
-	},
-/obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for the engine control room blast doors.";
-	id = "EngineEmitterPortWest";
-	name = "Engine Room Blast Doors";
-	pixel_y = 25;
-	req_access = null;
-	req_one_access = list(11,24)
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)

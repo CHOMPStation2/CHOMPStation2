@@ -1628,12 +1628,31 @@
 /area/medical/first_aid_station/firstdeck)
 "agb" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/subspace/crystal,
-/obj/item/weapon/stock_parts/subspace/crystal,
-/obj/item/weapon/stock_parts/subspace/crystal,
+/obj/item/weapon/stock_parts/subspace/crystal{
+	pixel_x = -7;
+	pixel_y = -4
+	},
+/obj/item/weapon/stock_parts/subspace/crystal{
+	pixel_y = -4
+	},
+/obj/item/weapon/stock_parts/subspace/crystal{
+	pixel_x = 7;
+	pixel_y = -4
+	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/item/weapon/ore/bluespace_crystal/artificial{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/weapon/ore/bluespace_crystal/artificial{
+	pixel_y = 7
+	},
+/obj/item/weapon/ore/bluespace_crystal/artificial{
+	pixel_x = -7;
+	pixel_y = 7
 	},
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
@@ -2781,6 +2800,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
+"alx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/firstdeck)
 "alz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -3430,7 +3454,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/port)
 "apD" = (
-/obj/item/weapon/storage/toolbox/mechanical,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
@@ -12526,7 +12549,7 @@
 	},
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Auxiliary - Main";
-	charge = 1e+007;
+	charge = 2.4e+007;
 	cur_coils = 4;
 	input_level = 500000;
 	output_level = 500000
@@ -24531,6 +24554,11 @@
 /obj/machinery/camera/network/telecom{
 	c_tag = "TCOMMS - Storage"
 	},
+/obj/item/weapon/circuitboard/telecomms/relay,
+/obj/item/weapon/circuitboard/telecomms/relay,
+/obj/item/weapon/circuitboard/teleporter,
+/obj/item/weapon/circuitboard/teleporter_hub,
+/obj/item/weapon/circuitboard/teleporter_station,
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
 "rzN" = (
@@ -28160,6 +28188,8 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1/station)
 "vMc" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
 "vMv" = (
@@ -28732,6 +28762,10 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/engineering/auxiliary_engineering)
+"wtg" = (
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/space,
+/area/space)
 "wth" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -58820,8 +58854,8 @@ aFf
 aFf
 aFf
 aFf
-aaa
-aaa
+wtg
+wtg
 aaa
 aFf
 aFf
@@ -59077,7 +59111,7 @@ cZt
 aaa
 aaa
 aaa
-aaa
+wtg
 aaa
 aaa
 aaa
@@ -61148,7 +61182,7 @@ iLt
 jYP
 lGZ
 mSD
-oGT
+alx
 oGT
 rvk
 aRt
