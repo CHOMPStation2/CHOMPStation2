@@ -214,8 +214,6 @@
 				t_him = "her"
 	visible_message("<span class='notice'>\The [src] hugs [A] to make [t_him] feel better!</span>", \
 					"<span class='notice'>You hug [A] to make [t_him] feel better!</span>")
-<<<<<<< HEAD
-=======
 
 /mob/living/silicon/pai/proc/savefile_path(mob/user)
 	return "data/player_saves/[copytext(user.ckey, 1, 2)]/[user.ckey]/pai.sav"
@@ -276,4 +274,3 @@
 	set name = "Save Configuration"
 	savefile_save(src)
 	to_chat(src, "[name] configuration saved to global pAI settings.")
->>>>>>> b7d29f901a... Merge pull request #13052 from Very-Soft/anotherpaiupdate
