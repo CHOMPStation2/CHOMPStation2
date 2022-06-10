@@ -11471,9 +11471,6 @@
 /area/crew_quarters/heads/sc/sd)
 "lFA" = (
 /obj/structure/bed/chair/office/dark,
-/obj/effect/landmark/start{
-	name = "Colony Director"
-	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the Starboard Bridge Doors.";
 	id = "sbridgedoor";
@@ -11488,6 +11485,7 @@
 	pixel_x = 30;
 	pixel_y = 6
 	},
+/obj/effect/landmark/start/captain,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "lHl" = (
