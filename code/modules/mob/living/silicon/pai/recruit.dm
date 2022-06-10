@@ -11,7 +11,14 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 	var/role
 	var/comments
 	var/ready = 0
+<<<<<<< HEAD
 
+=======
+	var/chassis
+	var/ouremotion
+	var/eye_color
+	var/gender
+>>>>>>> 3c955280d6... Merge pull request #13059 from Very-Soft/pAIUI
 
 /hook/startup/proc/paiControllerSetup()
 	paiController = new /datum/paiController()
@@ -36,7 +43,23 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			if(!candidate.name)
 				pai.name = pick(ninja_names)
 			else
+<<<<<<< HEAD
 				pai.name = candidate.name
+=======
+				pai.SetName(candidate.name)
+			if(candidate.description)
+				pai.flavor_text = candidate.description
+			if(candidate.eye_color)
+				pai.eye_color = candidate.eye_color
+				card.screen_color = pai.eye_color
+			if(candidate.chassis)
+				pai.chassis = candidate.chassis
+			if(candidate.ouremotion)
+				card.setEmotion(candidate.ouremotion)
+			if(candidate.gender)
+				pai.gender = candidate.gender
+			pai.update_icon()
+>>>>>>> 3c955280d6... Merge pull request #13059 from Very-Soft/pAIUI
 			pai.real_name = pai.name
 			pai.key = candidate.key
 
