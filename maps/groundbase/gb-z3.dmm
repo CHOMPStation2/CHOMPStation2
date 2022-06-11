@@ -22,6 +22,12 @@ lol
 	},
 /turf/simulated/floor/carpet,
 /area/groundbase/medical/cmo)
+"aN" = (
+/obj/item/weapon/stool/padded{
+	dir = 4
+	},
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "aQ" = (
 /obj/structure/table/glass,
 /obj/item/weapon/folder/white_cmo,
@@ -124,6 +130,12 @@ lol
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level3/escapepad)
+"cD" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "cE" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 8
@@ -294,6 +306,11 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
+"fn" = (
+/obj/structure/table/steel,
+/obj/random/paicard,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "fu" = (
 /obj/structure/table/bench/marble,
 /obj/effect/landmark/start/chemist,
@@ -396,6 +413,11 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
+"gV" = (
+/obj/structure/railing,
+/obj/structure/table/steel,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "gZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -421,6 +443,13 @@ lol
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/groundbase/exploration)
+"hM" = (
+/obj/structure/railing,
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "hN" = (
 /obj/structure/table/bench/marble,
 /obj/effect/landmark/start/medical,
@@ -676,6 +705,16 @@ lol
 	},
 /turf/simulated/wall/r_wall,
 /area/groundbase/level3/escapepad)
+"mS" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/table/steel,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+"mT" = (
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "mU" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -691,6 +730,12 @@ lol
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level3/nw)
+"mY" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "nb" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/polarized/full{
@@ -699,6 +744,15 @@ lol
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/groundbase/medical/cmo)
+"nh" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "nq" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -745,8 +799,18 @@ lol
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/random/paicard,
 /turf/simulated/floor/wood,
 /area/groundbase/medical/cmo)
+"nD" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "nN" = (
 /obj/machinery/light,
 /obj/effect/landmark/start/explorer,
@@ -803,6 +867,12 @@ lol
 /obj/effect/overmap/visitable/sector/virgo3c,
 /turf/unsimulated/wall/planetary/virgo3c,
 /area/groundbase/level3/sw)
+"oI" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "oK" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -856,6 +926,10 @@ lol
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/patient4)
+"pa" = (
+/obj/item/weapon/stool/padded,
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "pd" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/alarm{
@@ -924,6 +998,12 @@ lol
 	edge_blending_priority = -1
 	},
 /area/groundbase/exploration/shuttlepad)
+"pP" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "pY" = (
 /obj/structure/sign/nanotrasen,
 /turf/simulated/wall,
@@ -1004,6 +1084,13 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/patient1)
+"rr" = (
+/obj/structure/railing,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "rD" = (
 /obj/structure/bookcase,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -1030,6 +1117,13 @@ lol
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+"sa" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "sb" = (
 /obj/machinery/power/apc{
 	dir = 8
@@ -1120,6 +1214,12 @@ lol
 "tZ" = (
 /turf/simulated/mineral/cave/virgo3c,
 /area/groundbase/level3/se)
+"ud" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "ui" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
@@ -1196,6 +1296,23 @@ lol
 	edge_blending_priority = -1
 	},
 /area/groundbase/exploration/shuttlepad)
+<<<<<<< HEAD
+=======
+"vD" = (
+/obj/machinery/alarm,
+/obj/structure/bed/chair/sofa/corp/left,
+/turf/simulated/floor/carpet/retro,
+/area/groundbase/dorms/bathroom)
+"vJ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "vV" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 8
@@ -1360,6 +1477,10 @@ lol
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
+"yu" = (
+/obj/machinery/light,
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
 "yy" = (
 /obj/structure/dispenser{
 	phorontanks = 0
@@ -1484,6 +1605,19 @@ lol
 	},
 /turf/simulated/floor,
 /area/groundbase/medical/patient2)
+<<<<<<< HEAD
+=======
+"AY" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/cosmosdouble{
+	icon_state = "dobulesheetcosmos"
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/dorms/bathroom)
+"AZ" = (
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "Bd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1546,6 +1680,28 @@ lol
 "BH" = (
 /turf/simulated/wall,
 /area/groundbase/medical/patient3)
+<<<<<<< HEAD
+=======
+"BM" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/virgo3c{
+	edge_blending_priority = -1
+	},
+/area/groundbase/level3/nw/open)
+"Ck" = (
+/obj/structure/table/woodentable,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
+/turf/simulated/floor/carpet/retro,
+/area/groundbase/dorms/bathroom)
+"Ct" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "Cv" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/medical,
@@ -1655,6 +1811,15 @@ lol
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+"Em" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "Es" = (
 /obj/structure/closet/secure_closet/pathfinder{
 	req_access = list(62,43,67)
@@ -1760,6 +1925,18 @@ lol
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/medical/patient2)
+<<<<<<< HEAD
+=======
+"Fh" = (
+/turf/simulated/floor/wood,
+/area/groundbase/dorms/bathroom)
+"Fr" = (
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/wmarble,
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "Fx" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1792,6 +1969,9 @@ lol
 	},
 /turf/simulated/floor/bmarble,
 /area/groundbase/civilian/pilot)
+"FU" = (
+/turf/simulated/floor/lino,
+/area/groundbase/civilian/kitchen)
 "FV" = (
 /obj/item/weapon/storage/backpack/parachute{
 	pixel_x = 4;
@@ -1842,6 +2022,13 @@ lol
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/level3/escapepad)
+"Gk" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "Gn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1872,6 +2059,9 @@ lol
 "GW" = (
 /turf/simulated/floor/outdoors/sidewalk/virgo3c,
 /area/groundbase/level3/escapepad)
+"Ha" = (
+/turf/simulated/wall,
+/area/groundbase/civilian/kitchen)
 "Hm" = (
 /turf/simulated/floor/reinforced/virgo3c{
 	edge_blending_priority = -1
@@ -2018,6 +2208,15 @@ lol
 "IS" = (
 /turf/simulated/open/virgo3c,
 /area/groundbase/level3/ne/open)
+"IW" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/bed/chair/backed_red{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "Jf" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/virgo3c,
@@ -2102,6 +2301,10 @@ lol
 "KG" = (
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+"KN" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "KZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2149,6 +2352,12 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/patient3)
+"Ms" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "Mz" = (
 /obj/structure/railing{
 	dir = 4
@@ -2217,6 +2426,31 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
+<<<<<<< HEAD
+=======
+"NR" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 16
+	},
+/turf/simulated/floor/lino,
+/area/groundbase/civilian/kitchen)
+"NT" = (
+/obj/machinery/alarm{
+	dir = 8
+	},
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "shower door"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/bathroom)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "NX" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/tank/oxygen,
@@ -2311,6 +2545,10 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
+"Pq" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/lino,
+/area/groundbase/civilian/kitchen)
 "Pr" = (
 /obj/machinery/button/remote/airlock{
 	dir = 8;
@@ -2369,6 +2607,15 @@ lol
 "Qa" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/level3/nw)
+"Qb" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "Qe" = (
 /obj/structure/table/bench/marble,
 /obj/structure/cable/yellow{
@@ -2404,6 +2651,13 @@ lol
 	outdoors = 0
 	},
 /area/groundbase/level3/escapepad)
+"Qs" = (
+/obj/structure/railing,
+/obj/structure/bed/chair/backed_red{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "QC" = (
 /obj/machinery/door/airlock/multi_tile/glass/polarized{
 	id_tag = null;
@@ -2460,6 +2714,18 @@ lol
 	outdoors = 0
 	},
 /area/groundbase/level3/escapepad)
+<<<<<<< HEAD
+=======
+"Rq" = (
+/turf/simulated/wall/r_wall,
+/area/groundbase/dorms/bathroom)
+"RH" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "RM" = (
 /obj/machinery/photocopier/faxmachine{
 	department = "Exploration"
@@ -2749,6 +3015,10 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/patient1)
+"Wh" = (
+/obj/structure/railing,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "Wm" = (
 /obj/structure/closet/secure_closet/pilot,
 /obj/machinery/light{
@@ -2785,6 +3055,13 @@ lol
 "Xv" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/unexplored/outdoors)
+"Xz" = (
+/obj/structure/railing,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
 "XB" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/medical,
@@ -2816,6 +3093,20 @@ lol
 /obj/item/clothing/head/helmet/space/void/medical/emt,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
+<<<<<<< HEAD
+=======
+"Yz" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/bathroom)
+"YG" = (
+/turf/simulated/floor/virgo3c{
+	edge_blending_priority = -1
+	},
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "YJ" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -5843,7 +6134,7 @@ QD
 QD
 QD
 QD
-Kr
+ly
 Kr
 pf
 pf
@@ -5985,7 +6276,7 @@ QD
 QD
 QD
 QD
-Kr
+ly
 Kr
 pf
 pf
@@ -6127,7 +6418,7 @@ QD
 QD
 QD
 QD
-Kr
+ly
 Kr
 Kr
 Kr
@@ -6265,11 +6556,11 @@ Kr
 Kr
 Kr
 Kr
+Kr
 QO
 By
 By
 ly
-Kr
 Kr
 Kr
 Kr
@@ -6407,11 +6698,11 @@ Kr
 Kr
 Kr
 Kr
+Kr
 QO
 By
 By
 ly
-Kr
 Kr
 Kr
 Kr
@@ -6549,11 +6840,11 @@ Kr
 Kr
 Kr
 Kr
-QO
-By
+Kr
+QD
+BM
 By
 ly
-Kr
 Kr
 Kr
 Kr
@@ -6683,22 +6974,22 @@ nU
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
 Kr
 Kr
 pf
@@ -6825,22 +7116,22 @@ pe
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+Ha
+nh
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+AZ
+AZ
+Ms
+sa
+Ha
+YG
 Kr
 Kr
 pf
@@ -6967,22 +7258,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+Em
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+rr
+YG
 Kr
 Kr
 pf
@@ -7109,22 +7400,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+nD
+Ct
+Ct
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+Ct
+Ct
+hM
+YG
 Kr
 Kr
 pf
@@ -7251,22 +7542,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+mS
+KN
+KN
+mT
+mT
+mT
+mT
+mT
+mT
+mT
+mT
+KN
+KN
+gV
+YG
 Kr
 Kr
 pf
@@ -7393,22 +7684,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+IW
+ud
+ud
+mT
+mT
+pP
+aN
+aN
+pP
+mT
+mT
+ud
+ud
+Qs
+YG
 Kr
 Kr
 pf
@@ -7535,22 +7826,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+RH
+AZ
+AZ
+mT
+yu
+Ha
+Pq
+Pq
+Ha
+oI
+mT
+AZ
+AZ
+Wh
+YG
 Kr
 Kr
 pf
@@ -7677,22 +7968,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+RH
+AZ
+AZ
+mT
+pa
+Pq
+FU
+FU
+Pq
+Fr
+mT
+AZ
+AZ
+Wh
+YG
 Kr
 Kr
 pf
@@ -7819,22 +8110,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+RH
+AZ
+AZ
+mT
+pa
+Pq
+FU
+FU
+Pq
+Fr
+mT
+AZ
+AZ
+Wh
+YG
 Kr
 Kr
 pf
@@ -7961,22 +8252,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+RH
+AZ
+AZ
+mT
+pa
+Pq
+FU
+FU
+Pq
+Fr
+mT
+AZ
+AZ
+Wh
+YG
 Kr
 Kr
 pf
@@ -8103,22 +8394,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+RH
+AZ
+AZ
+mT
+yu
+Ha
+NR
+FU
+Ha
+oI
+mT
+AZ
+AZ
+Wh
+YG
 Kr
 Kr
 pf
@@ -8245,22 +8536,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+nD
+Ct
+Ct
+mT
+mT
+mY
+mT
+mT
+mY
+mT
+mT
+Ct
+Ct
+hM
+YG
 Kr
 Kr
 pf
@@ -8387,22 +8678,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+mS
+fn
+KN
+mT
+mT
+mT
+mT
+mT
+mT
+mT
+mT
+KN
+KN
+gV
+YG
 Kr
 Kr
 pf
@@ -8529,22 +8820,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+IW
+ud
+ud
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+ud
+ud
+Qs
+YG
 Kr
 Kr
 pf
@@ -8671,22 +8962,22 @@ BE
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+vJ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+AZ
+Xz
+YG
 Kr
 Kr
 pf
@@ -8813,22 +9104,22 @@ pe
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+Ha
+Qb
+cD
+cD
+cD
+cD
+cD
+cD
+AZ
+AZ
+cD
+cD
+Gk
+Ha
+YG
 Kr
 Kr
 pf
@@ -8955,22 +9246,22 @@ VR
 Kr
 Kr
 Kr
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
-QD
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
+YG
 Kr
 Kr
 pf
@@ -14755,9 +15046,9 @@ Lf
 Lf
 Lf
 Lf
-Lf
-Lf
-Lf
+IS
+IS
+IS
 IS
 IS
 IS
@@ -14897,9 +15188,9 @@ Lf
 Lf
 Lf
 Lf
-Lf
-Lf
-Lf
+IS
+IS
+IS
 IS
 IS
 IS
@@ -15039,9 +15330,9 @@ Lf
 Lf
 Lf
 Lf
-Lf
-Lf
-Lf
+IS
+IS
+IS
 IS
 IS
 IS
@@ -15181,9 +15472,9 @@ Lf
 Lf
 Lf
 Lf
-Lf
-Lf
-Lf
+IS
+IS
+IS
 IS
 IS
 IS

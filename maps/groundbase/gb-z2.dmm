@@ -678,6 +678,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/random/paicard,
 /turf/simulated/floor/wood,
 /area/groundbase/command/captainq)
 "bQ" = (
@@ -814,11 +815,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "cm" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/eris/cafe,
@@ -871,7 +869,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "ct" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1029,7 +1027,7 @@
 "cU" = (
 /obj/structure/table/bench/padded,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "cV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2632,7 +2630,7 @@
 "hL" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "hM" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -2679,7 +2677,7 @@
 /area/rnd/xenobiology)
 "hU" = (
 /obj/machinery/button/remote/blast_door{
-	id = "rndshutters";
+	id = "robshutters";
 	name = "Privacy Shutter Control";
 	pixel_y = 30
 	},
@@ -2726,7 +2724,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "hZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2755,7 +2753,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "ic" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -2830,7 +2828,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "ir" = (
 /obj/machinery/firealarm{
 	dir = 8
@@ -2918,7 +2916,7 @@
 	},
 /obj/effect/landmark/start/intern,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "iC" = (
 /turf/simulated/wall/r_wall,
 /area/groundbase/command/hop)
@@ -3229,7 +3227,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "jv" = (
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/eris/cafe,
@@ -3415,7 +3413,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "jU" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research{
@@ -3744,8 +3742,12 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/dark,
+<<<<<<< HEAD
 /area/groundbase/civilian/bar/upper)
 >>>>>>> b7b3ae73e0... Merge pull request #12838 from Very-Soft/gbwilds
+=======
+/area/groundbase/civilian/bar)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "kY" = (
 /obj/machinery/power/apc{
 	dir = 8
@@ -3902,7 +3904,7 @@
 	},
 /obj/effect/landmark/start/visitor,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "lv" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/machinery/light{
@@ -4368,7 +4370,7 @@
 	},
 /obj/random/coin/sometimes,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "mN" = (
 /obj/item/weapon/bedsheet/browndouble,
 /obj/structure/bed/double/padded,
@@ -4873,6 +4875,14 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot)
+<<<<<<< HEAD
+=======
+"oy" = (
+/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+	outdoors = 0
+	},
+/area/groundbase/level2/se)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "oA" = (
 /obj/machinery/door/blast/regular{
 	id = "xenobiodiv3";
@@ -5381,6 +5391,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
+"qc" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/groundbase/civilian/bar)
 "qd" = (
 /obj/structure/sign/nanotrasen{
 	pixel_x = 32;
@@ -5651,7 +5670,22 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot)
 "qQ" = (
+<<<<<<< HEAD
 /obj/structure/table/standard,
+=======
+/obj/structure/closet/chefcloset,
+/obj/item/glass_jar,
+/obj/item/device/retail_scanner/civilian,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/device/destTagger{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/tool/wrench,
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 /turf/simulated/floor/tiled/eris/cafe,
 /area/groundbase/civilian/kitchen)
 "qS" = (
@@ -5780,7 +5814,7 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "rm" = (
 /obj/machinery/light,
 /turf/simulated/floor/wood,
@@ -6072,7 +6106,7 @@
 	},
 /obj/effect/landmark/start/intern,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "se" = (
 /obj/item/device/aicard,
 /obj/structure/table/reinforced,
@@ -6110,7 +6144,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "sn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light{
@@ -6234,7 +6268,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "sI" = (
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 1;
@@ -7344,7 +7378,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/landmark/start/visitor,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "we" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -7446,7 +7480,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "ww" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -7685,7 +7719,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "xo" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/biochemistry/full,
@@ -7881,7 +7915,7 @@
 	},
 /obj/machinery/alarm,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "xN" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -7907,7 +7941,7 @@
 /obj/structure/table/glass,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "xU" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
@@ -7999,13 +8033,13 @@
 	},
 /obj/effect/landmark/start/intern,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "yh" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "yj" = (
 /obj/structure/sign/directions/kitchen{
 	pixel_x = -32
@@ -8187,7 +8221,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "yJ" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -8820,14 +8854,8 @@
 "AK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/power/apc{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "AL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
@@ -8951,7 +8979,7 @@
 	},
 /obj/effect/landmark/start/visitor,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "AT" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/science/xenobot)
@@ -9237,7 +9265,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/bmarble,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "BU" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -9377,11 +9405,15 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
+<<<<<<< HEAD
 /area/groundbase/civilian/bar/upper)
 "Ci" = (
 /obj/structure/closet/secure_closet/hydroponics/sci,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot)
+=======
+/area/groundbase/civilian/bar)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "Cj" = (
 /obj/structure/sign/directions/stairs_down{
 	pixel_y = 38
@@ -9490,7 +9522,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "CE" = (
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room8)
@@ -9796,7 +9828,7 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Du" = (
 /turf/simulated/wall,
 /area/groundbase/medical/lobby)
@@ -9819,7 +9851,7 @@
 	},
 /obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Dy" = (
 /obj/structure/table/reinforced,
 /obj/machinery/requests_console{
@@ -9988,7 +10020,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "DV" = (
 /obj/structure/table/rack,
 /obj/item/weapon/tank/jetpack/oxygen,
@@ -10050,13 +10082,13 @@
 	},
 /obj/effect/landmark/start/entertainer,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Ea" = (
 /obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Eb" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -10557,7 +10589,7 @@
 /area/groundbase/cargo/office)
 "FF" = (
 /turf/simulated/wall,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "FI" = (
 /obj/structure/fence/corner{
 	dir = 5
@@ -10623,7 +10655,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "FU" = (
 /obj/structure/table/bench/standard,
 /obj/effect/landmark/start/rd,
@@ -10741,7 +10773,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/wall,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Gp" = (
 /turf/simulated/wall,
 /area/groundbase/level2/nw)
@@ -10847,6 +10879,12 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot/storage)
+"Gz" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/groundbase/civilian/bar)
 "GA" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -11351,6 +11389,34 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lobby)
+<<<<<<< HEAD
+=======
+"HV" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/machinery/door/window/southleft{
+	dir = 1;
+	name = "shower door";
+	req_access = null
+	},
+/obj/machinery/alarm{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/room7)
+"HW" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/freezer{
+	name = "Kitchen";
+	req_access = list(28)
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "HX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11928,7 +11994,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "JD" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/eris/cafe,
@@ -12763,7 +12829,7 @@
 "LS" = (
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "LT" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -12784,7 +12850,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "LW" = (
 /obj/structure/sign/xenobio{
 	plane = -34
@@ -13055,7 +13121,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "ME" = (
 /turf/simulated/wall,
 /area/groundbase/civilian/chapel/office)
@@ -13345,7 +13411,7 @@
 /area/groundbase/medical/triage)
 "Ny" = (
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Nz" = (
 /obj/structure/bed/chair/sofa/pew/right{
 	dir = 1
@@ -13738,7 +13804,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/computer/timeclock/premade/east,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "OD" = (
 /obj/structure/table/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14168,7 +14234,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "PT" = (
 /obj/machinery/button/remote/airlock{
 	dir = 8;
@@ -14191,7 +14257,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "PV" = (
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room2)
@@ -14700,7 +14766,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Rn" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
@@ -14921,7 +14987,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "RV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -15087,20 +15153,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
 "Ss" = (
-/obj/structure/closet/chefcloset,
-/obj/item/glass_jar,
-/obj/item/device/retail_scanner/civilian,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/device/destTagger{
-	pixel_x = 4;
-	pixel_y = 3
+/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+	outdoors = 0
 	},
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/tool/wrench,
-/turf/simulated/floor/tiled/eris/cafe,
-/area/groundbase/civilian/kitchen)
+/area/groundbase/level2/nw)
 "St" = (
 /obj/structure/fence/corner{
 	dir = 8
@@ -15593,7 +15649,7 @@
 /obj/machinery/light,
 /obj/effect/landmark/start/entertainer,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "TO" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start/cargo,
@@ -15611,7 +15667,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/bmarble,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "TT" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -15661,6 +15717,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
+"Uc" = (
+/obj/structure/stairs/spawner/south,
+/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/area/groundbase/level2/nw)
 "Ud" = (
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lobby)
@@ -15702,6 +15762,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot/storage)
+"Ui" = (
+/turf/simulated/open,
+/area/groundbase/civilian/bar)
 "Uj" = (
 /obj/machinery/door/blast/regular{
 	id = "xenobiodiv4";
@@ -15723,7 +15786,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Un" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
@@ -15775,14 +15838,14 @@
 "Ux" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Uy" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /obj/random/vendorall,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Uz" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -16324,7 +16387,7 @@
 	dir = 4
 	},
 /turf/simulated/wall,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Wd" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -16376,7 +16439,7 @@
 	},
 /obj/effect/landmark/start/entertainer,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Wj" = (
 /turf/simulated/wall,
 /area/groundbase/cargo/office)
@@ -16462,6 +16525,7 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/random/paicard,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rd)
 "Wz" = (
@@ -16682,7 +16746,7 @@
 /obj/structure/table/bench/padded,
 /obj/effect/landmark/start/visitor,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Xl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -16773,8 +16837,12 @@
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/dark,
+<<<<<<< HEAD
 /area/groundbase/civilian/bar/upper)
 >>>>>>> b7b3ae73e0... Merge pull request #12838 from Very-Soft/gbwilds
+=======
+/area/groundbase/civilian/bar)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "XB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -16977,7 +17045,7 @@
 	},
 /obj/machinery/firealarm,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Yg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -17001,7 +17069,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Ym" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -17033,7 +17101,7 @@
 "Yr" = (
 /obj/structure/sign/department/bar,
 /turf/simulated/wall,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "Ys" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -17168,7 +17236,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar/upper)
+/area/groundbase/civilian/bar)
 "YS" = (
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled,
@@ -18003,6 +18071,15 @@ UH
 UH
 UH
 wS
+<<<<<<< HEAD
+=======
+Ss
+Kl
+Kl
+xE
+xE
+KW
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 xE
 xE
 xE
@@ -18143,8 +18220,17 @@ UH
 UH
 wS
 wS
+<<<<<<< HEAD
 wS
 Fw
+=======
+Ss
+Kl
+Kl
+xE
+KW
+Fs
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 Fs
 pw
 bY
@@ -21008,11 +21094,11 @@ il
 il
 LA
 bY
-Jc
-Jc
-Jc
 bY
 bY
+Jc
+Jc
+Jc
 bY
 bY
 bY
@@ -21148,12 +21234,12 @@ bY
 bY
 bY
 bY
-bY
-bY
-bY
-bY
-bY
-bY
+Hn
+Ja
+Hn
+Hn
+Uc
+Gp
 bY
 bY
 bY
@@ -21292,7 +21378,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+HW
 Vl
 Vl
 JJ
@@ -21434,7 +21520,7 @@ Oz
 Ej
 ep
 LD
-Ss
+Gc
 Wp
 JO
 JJ
@@ -22983,7 +23069,7 @@ Bb
 Bb
 Iz
 yh
-GS
+qc
 CD
 FF
 bY
@@ -23125,8 +23211,8 @@ Ny
 Ny
 Ny
 yh
-YO
-Gl
+Gz
+Ui
 rl
 bY
 sZ
@@ -27820,11 +27906,19 @@ VR
 to
 to
 to
+<<<<<<< HEAD
 VR
 QD
 QD
 QD
 QD
+=======
+fp
+fp
+fp
+fp
+fp
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 VR
 oH
 oH

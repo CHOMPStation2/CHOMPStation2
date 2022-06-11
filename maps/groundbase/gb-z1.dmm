@@ -2082,6 +2082,8 @@ lel
 /obj/structure/sign/painting/library_secure{
 	pixel_y = -30
 	},
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
 "fk" = (
@@ -4390,6 +4392,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
 "kP" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
@@ -4401,6 +4404,12 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
+=======
+/obj/structure/table/glass,
+/obj/random/paicard,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
+>>>>>>> 087c02ed62... Merge pull request #13067 from Very-Soft/gbtweaks
 "kQ" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -6766,8 +6775,8 @@ lel
 /obj/machinery/cell_charger{
 	pixel_y = 7
 	},
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/super,
+/obj/item/weapon/cell/super,
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "qG" = (
@@ -13888,6 +13897,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+/obj/random/paicard,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/hos)
 "Hw" = (
@@ -14340,6 +14350,7 @@ lel
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/random/paicard,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/ce)
 "Iy" = (
@@ -16303,6 +16314,8 @@ lel
 	pixel_x = -3;
 	pixel_y = 26
 	},
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
 "Nh" = (
@@ -17994,6 +18007,12 @@ lel
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/level1/centsquare)
+"RB" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/simulated/floor/water/deep/virgo3c,
+/area/groundbase/level1/eastspur)
 "RC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light{
@@ -25393,7 +25412,7 @@ ht
 ht
 KR
 GF
-GF
+kP
 oQ
 uF
 pj
@@ -39144,7 +39163,7 @@ df
 uH
 uH
 eW
-eW
+RB
 eW
 uH
 uH
@@ -39697,7 +39716,7 @@ eW
 eW
 eW
 eW
-eW
+RB
 eW
 eW
 eW
@@ -39728,11 +39747,11 @@ eW
 eW
 eW
 eW
+RB
 eW
 eW
 eW
-eW
-eW
+RB
 eW
 eW
 eW
@@ -39999,13 +40018,13 @@ eW
 eW
 eW
 eW
+RB
 eW
 eW
 eW
 eW
 eW
-eW
-eW
+RB
 eW
 eW
 eW
@@ -40276,7 +40295,7 @@ uH
 uH
 uH
 eW
-eW
+RB
 eW
 eW
 eW
