@@ -95,9 +95,6 @@
 		L = loc
 
 	if(L)
-<<<<<<< HEAD
-		to_chat(L, "<span class='notice'>[bicon(src)] Message from [who].</span>")
-=======
 		to_chat(L, "<span class='notice'>[bicon(src)] Message from [who]: <b>\"[text]\"</b> (<a href='?src=\ref[src];action=Reply;target=\ref[candidate]'>Reply</a>)</span>")
 
 // This is the only Topic the communicators really uses
@@ -112,7 +109,6 @@
 				im_list += list(list("address" = exonet.address, "to_address" = comm.exonet.address, "im" = message))
 				log_pda("(COMM: [src]) sent \"[message]\" to [exonet.get_atom_from_address(comm.exonet.address)]", usr)
 				to_chat(usr, "<span class='notice'>[bicon(src)] Sent message to [comm.owner], <b>\"[message]\"</b></span>")
->>>>>>> 9d35ab996d... Merge pull request #13063 from ItsSelis/tgui-pda-fix
 
 // Verb: text_communicator()
 // Parameters: None
