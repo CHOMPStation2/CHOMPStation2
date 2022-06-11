@@ -11,14 +11,10 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 	var/role
 	var/comments
 	var/ready = 0
-<<<<<<< HEAD
-
-=======
 	var/chassis
 	var/ouremotion
 	var/eye_color
 	var/gender
->>>>>>> 3c955280d6... Merge pull request #13059 from Very-Soft/pAIUI
 
 /hook/startup/proc/paiControllerSetup()
 	paiController = new /datum/paiController()
@@ -40,12 +36,11 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			return
 		if(istype(card,/obj/item/device/paicard) && istype(candidate,/datum/paiCandidate))
 			var/mob/living/silicon/pai/pai = new(card)
+			pai.key = candidate.key
+			card.setPersonality(pai)
 			if(!candidate.name)
-				pai.name = pick(ninja_names)
+				pai.SetName(pick(ninja_names))
 			else
-<<<<<<< HEAD
-				pai.name = candidate.name
-=======
 				pai.SetName(candidate.name)
 			if(candidate.description)
 				pai.flavor_text = candidate.description
@@ -59,11 +54,7 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			if(candidate.gender)
 				pai.gender = candidate.gender
 			pai.update_icon()
->>>>>>> 3c955280d6... Merge pull request #13059 from Very-Soft/pAIUI
 			pai.real_name = pai.name
-			pai.key = candidate.key
-
-			card.setPersonality(pai)
 			card.looking_for_personality = 0
 
 			if(pai.mind) update_antag_icons(pai.mind)
@@ -110,7 +101,7 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			if("submit")
 				if(candidate)
 					candidate.ready = 1
-					for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
+					for(var/obj/item/device/paicard/p in all_pai_cards)
 						if(p.looking_for_personality == 1)
 							p.alertUpdate()
 				usr << browse(null, "window=paiRecruit")
@@ -193,7 +184,6 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 	<body>
 		<b><font size="3px">pAI Personality Configuration</font></b>
 		<p class="top">Please configure your pAI personality's options. Remember, what you enter here could determine whether or not the user requesting a personality chooses you!</p>
-
 		<table>
 			<tr class="d0">
 				<th rowspan="2"><a href='byond://?src=\ref[src];option=name;new=1;allow_submit=[allowSubmit];candidate=\ref[candidate]'>Name</a>:</th>
@@ -233,7 +223,7 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			</tr>
 			<tr>
 				<td class="button">
-					<a href='byond://?src=\ref[src];option=load;new=1;allow_submit=[allowSubmit];candidate=\ref[candidate]' class="button">Load Personality</a>
+					<a href='byond://?src=\ref[src];option=load;new=1;allow_submit=[allowSubmit];candidate=\ref[candidate]' class="button"><b><font size="3px">Load Personality</font></b></a>
 				</td>
 			</tr>
 		</table><br>

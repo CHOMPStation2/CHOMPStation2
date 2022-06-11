@@ -224,10 +224,6 @@
 				t_him = "him"
 			if(FEMALE)
 				t_him = "her"
-<<<<<<< HEAD
-	visible_message("<span class='notice'>\The [src] hugs [A] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You hug [A] to make [t_him] feel better!</span>")
-=======
 			if(NEUTER)
 				t_him = "it"
 			if(HERM)
@@ -365,4 +361,3 @@
 		return 0
 	gender = new_gender_identity
 	return 1
->>>>>>> 3c955280d6... Merge pull request #13059 from Very-Soft/pAIUI
