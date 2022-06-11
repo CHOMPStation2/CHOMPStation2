@@ -302,6 +302,9 @@
 			// Opens/closes the panel.
 			if(!busy)
 				panel_open = !panel_open
+		if("mode_toggle")
+			// Toggles production mode. 
+			production_mode = !production_mode
 		if("add_recipe")
 			// Allows the user to add a recipe. Kinda vital for this machine to do anything useful.
 			if(recipes.len >= SYNTHESIZER_MAX_RECIPES)
