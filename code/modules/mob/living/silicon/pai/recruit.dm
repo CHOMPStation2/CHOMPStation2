@@ -14,6 +14,7 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 	var/chassis
 	var/ouremotion
 	var/eye_color
+	var/gender
 
 /hook/startup/proc/paiControllerSetup()
 	paiController = new /datum/paiController()
@@ -50,6 +51,8 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 				pai.chassis = candidate.chassis
 			if(candidate.ouremotion)
 				card.setEmotion(candidate.ouremotion)
+			if(candidate.gender)
+				pai.gender = candidate.gender
 			pai.update_icon()
 			pai.real_name = pai.name
 			card.looking_for_personality = 0
@@ -98,7 +101,7 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			if("submit")
 				if(candidate)
 					candidate.ready = 1
-					for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
+					for(var/obj/item/device/paicard/p in GLOB.all_pai_cards) //CHOMPedit: Explicit use of GLOB
 						if(p.looking_for_personality == 1)
 							p.alertUpdate()
 				usr << browse(null, "window=paiRecruit")
@@ -181,7 +184,6 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 	<body>
 		<b><font size="3px">pAI Personality Configuration</font></b>
 		<p class="top">Please configure your pAI personality's options. Remember, what you enter here could determine whether or not the user requesting a personality chooses you!</p>
-
 		<table>
 			<tr class="d0">
 				<th rowspan="2"><a href='byond://?src=\ref[src];option=name;new=1;allow_submit=[allowSubmit];candidate=\ref[candidate]'>Name</a>:</th>
