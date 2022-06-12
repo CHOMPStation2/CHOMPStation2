@@ -122,7 +122,7 @@
 	using.name = "pda"
 	using.icon = ui_style
 	using.icon_state = "pda"
-	using.screen_loc = ui_acti
+	using.screen_loc = ui_pai_comms
 	using.color = ui_color
 	using.alpha = ui_alpha
 	hud_elements |= using
@@ -132,6 +132,16 @@
 	using.name = "communicator"
 	using.icon = ui_style
 	using.icon_state = "communicator"
+	using.screen_loc = ui_pai_comms
+	using.color = ui_color
+	using.alpha = ui_alpha
+	hud_elements |= using
+
+	//Language button
+	using = new /obj/screen()
+	using.name = "known languages"
+	using.icon = ui_style
+	using.icon_state = "language"
 	using.screen_loc = ui_acti
 	using.color = ui_color
 	using.alpha = ui_alpha
