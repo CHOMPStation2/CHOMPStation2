@@ -232,6 +232,8 @@
 	persist_storable = FALSE
 /obj/item/weapon/melee/cursedblade
 	persist_storable = FALSE
+/obj/item/weapon/circuitboard/mecha/imperion
+	persist_storable = FALSE
 /obj/item/device/paicard
 	persist_storable = FALSE
 /obj/item/organ
@@ -245,4 +247,8 @@
 /obj/item/seeds
 	persist_storable = FALSE
 /obj/item/weapon/reagent_containers/food/snacks/grown
+	persist_storable = FALSE
+/obj/item/weapon/stock_parts
+	persist_storable = FALSE
+/obj/item/weapon/rcd
 	persist_storable = FALSE

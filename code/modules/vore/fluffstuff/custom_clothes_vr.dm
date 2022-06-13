@@ -208,6 +208,20 @@
 	item_state = "greatcoat_mob"
 
 //For general use
+/obj/item/clothing/suit/storage/vest/hoscoat/russofurcoat
+	name = "long fur coat"
+	desc = "A sophisticated long coat made of fur."
+
+	icon = 'icons/inventory/suit/mob_vr.dmi'
+	icon_state = "russofurcoat"
+
+	icon_override = 'icons/inventory/suit/mob_vr.dmi'
+	item_state = "russofurcoat"
+
+	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
+	flags_inv = HIDETIE|HIDEHOLSTER
+
+//For general use
 /obj/item/clothing/suit/storage/fluff/fedcoat
 	name = "Federation Uniform Jacket (Red)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Set phasers to awesome."
@@ -625,6 +639,40 @@
 		else
 			return 1
 
+//scree:Avida
+/obj/item/clothing/under/skirt/outfit/fluff/avida
+	name = "purple dress"
+	desc = "A clingy purple dress with red lacework, with a hole at the back for a tail."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "avidadress"
+	item_state = "avidadress"
+	item_icons = list(
+		slot_l_hand_str = 'icons/vore/custom_clothes_left_hand_vr.dmi',
+		slot_r_hand_str = 'icons/vore/custom_clothes_right_hand_vr.dmi',
+		slot_w_uniform_str = 'icons/vore/custom_onmob_vr.dmi'
+		)
+
+//scree:Avida
+/obj/item/clothing/head/fluff/avida
+	name = "purple witch hat"
+	desc = "A pointy purple hat with a wide brim, with a red hatband. It appears to have ear-holes in it."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "avidahat"
+	item_state = "avidahat"
+	item_icons = list(
+		slot_l_hand_str = 'icons/vore/custom_clothes_left_hand_vr.dmi',
+		slot_r_hand_str = 'icons/vore/custom_clothes_right_hand_vr.dmi',
+		slot_head_str = 'icons/vore/custom_onmob_32x48_vr.dmi'
+		)
+
+/obj/item/clothing/head/fluff/avida/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+	if(..())
+		if(H.ear_style.name == "Bnnuy Ears"||H.ear_style.name == "Bnnuy Ears 2") //check if wearer's ear sprite is compatible with trimmed icon
+			item_state = initial(src.item_state)
+		else //if not, just use a generic icon
+			item_state = "avidahatnoears"
+		return TRUE
+
 //natje:Pumila
 /obj/item/clothing/under/fluff/aluranevines
 	name = "Pumila's vines"
@@ -644,27 +692,6 @@
 			return 0
 		else
 			return 1
-
-/obj/item/clothing/under/fluff/screesuit
-	name = "Scree's feathers"
-	desc = "A mop of fluffy blue feathers, the honkmother only knows what kind of bird they originally came from."
-
-	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "screesuit"
-
-	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "screesuit_mob"
-
-/obj/item/clothing/under/fluff/screesuit/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-	if(..())
-		if(H.ckey != "scree")
-			to_chat(H, "<span class='warning'>Are you just going to tape them on or what? This isn't gonna work.</span>")
-			return 0
-		else
-			return 1
-
-/obj/item/clothing/under/fluff/screesuit/digest_act(var/atom/movable/item_storage = null)
-	return FALSE
 
 //HOS Hardsuit
 /obj/item/clothing/suit/space/void/security/fluff/hos // ToDo: Rig version.
@@ -2420,4 +2447,13 @@ Departamental Swimsuits, for general use
 				H.update_inv_wear_suit()
 	else
 		RemoveHood_evelyn()
+		
+//Uncle_Fruit_VEVO - Bradley Khatibi
+/obj/item/clothing/shoes/fluff/airjordans
+    name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
+    desc = "Appearing in a classic Jordan Brand colorway, the Air Jordan 1 Mid 'Black Gym Red' released in May 2021. Built with leather, the shoe's upper sports a white base, contrasted by black on the overlays and highlighted by Gym Red on the padded collar, 'Wings' logo and Swoosh branding. A breathable nylon tongue and perforated toe box support the fit, while underfoot, a standard rubber cupsole with Air in the heel anchors the build."
+    icon_state = "airjordans"
+    icon = 'icons/vore/custom_clothes_vr.dmi'
+    icon_override = 'icons/vore/custom_onmob_vr.dmi'
+
 End CHOMP Removal*/

@@ -3,7 +3,7 @@
 /datum/reagent/inaprovaline
 	name = "Inaprovaline"
 	id = "inaprovaline"
-	description = "Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients."
+	description = "Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients. Also counteracts allergic reactions."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#00BFFF"
@@ -15,6 +15,7 @@
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_STABLE, 15)
 		M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
+		M.remove_chemical_effect(CE_ALLERGEN)
 
 /datum/reagent/inaprovaline/topical
 	name = "Inaprovalaze"
@@ -346,6 +347,7 @@
 		M.adjustToxLoss(3 * removed)
 
 /datum/reagent/tricorlidaze/touch_obj(var/obj/O)
+	..()
 	if(istype(O, /obj/item/stack/medical/bruise_pack) && round(volume) >= 5)
 		var/obj/item/stack/medical/bruise_pack/C = O
 		var/packname = C.name
@@ -1281,6 +1283,7 @@
 	M.add_chemical_effect(CE_PAINKILLER, 20 * M.species.chem_strength_pain) // 5 less than paracetamol.
 
 /datum/reagent/spacomycaze/touch_obj(var/obj/O)
+	..()
 	if(istype(O, /obj/item/stack/medical/crude_pack) && round(volume) >= 1)
 		var/obj/item/stack/medical/crude_pack/C = O
 		var/packname = C.name
@@ -1317,10 +1320,12 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/sterilizine/touch_obj(var/obj/O)
+	..()
 	O.germ_level -= min(volume*20, O.germ_level)
 	O.was_bloodied = null
 
 /datum/reagent/sterilizine/touch_turf(var/turf/T)
+	..()
 	T.germ_level -= min(volume*20, T.germ_level)
 	for(var/obj/item/I in T.contents)
 		I.was_bloodied = null
@@ -1330,10 +1335,11 @@
 	//VOREstation edit. Floor polishing.
 	if(istype(T, /turf/simulated))
 		var/turf/simulated/S = T
-		S.dirt = -50 
-	//VOREstation edit end	
+		S.dirt = -50
+	//VOREstation edit end
 
 /datum/reagent/sterilizine/touch_mob(var/mob/living/L, var/amount)
+	..()
 	if(istype(L))
 		if(istype(L, /mob/living/simple_mob/slime))
 			var/mob/living/simple_mob/slime/S = L
@@ -1406,106 +1412,6 @@
 		M.make_dizzy(5)
 		M.make_jittery(5)
 
-/* Antidepressants */
-
-#define ANTIDEPRESSANT_MESSAGE_DELAY 5*60*10
-
-/datum/reagent/methylphenidate
-	name = "Methylphenidate"
-	id = "methylphenidate"
-	description = "Improves the ability to concentrate."
-	taste_description = "bitterness"
-	reagent_state = LIQUID
-	color = "#BF80BF"
-	metabolism = 0.01
-	ingest_met = 0.25
-	mrate_static = TRUE
-	data = 0
-
-/datum/reagent/methylphenidate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	if(volume <= 0.1 && data != -1)
-		data = -1
-		to_chat(M, "<span class='warning'>You lose focus...</span>")
-	else
-		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
-			data = world.time
-			to_chat(M, "<span class='notice'>Your mind feels focused and undivided.</span>")
-
-/datum/reagent/citalopram
-	name = "Citalopram"
-	id = "citalopram"
-	description = "Stabilizes the mind a little."
-	taste_description = "bitterness"
-	reagent_state = LIQUID
-	color = "#FF80FF"
-	metabolism = 0.01
-	ingest_met = 0.25
-	mrate_static = TRUE
-	data = 0
-
-/datum/reagent/citalopram/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	if(volume <= 0.1 && data != -1)
-		data = -1
-		to_chat(M, "<span class='warning'>Your mind feels a little less stable...</span>")
-	else
-		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
-			data = world.time
-			to_chat(M, "<span class='notice'>Your mind feels stable... a little stable.</span>")
-
-/datum/reagent/paroxetine
-	name = "Paroxetine"
-	id = "paroxetine"
-	description = "Stabilizes the mind greatly, but has a chance of adverse effects."
-	taste_description = "bitterness"
-	reagent_state = LIQUID
-	color = "#FF80BF"
-	metabolism = 0.01
-	ingest_met = 0.25
-	mrate_static = TRUE
-	data = 0
-
-/datum/reagent/paroxetine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	if(volume <= 0.1 && data != -1)
-		data = -1
-		to_chat(M, "<span class='warning'>Your mind feels much less stable...</span>")
-	else
-		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
-			data = world.time
-			if(prob(90))
-				to_chat(M, "<span class='notice'>Your mind feels much more stable.</span>")
-			else
-				to_chat(M, "<span class='warning'>Your mind breaks apart...</span>")
-				M.hallucination += 200
-
-/datum/reagent/qerr_quem
-	name = "Qerr-quem"
-	id = "qerr_quem"
-	description = "A potent stimulant and anti-anxiety medication, made for the Qerr-Katish."
-	taste_description = "mint"
-	reagent_state = LIQUID
-	color = "#e6efe3"
-	metabolism = 0.01
-	ingest_met = 0.25
-	mrate_static = TRUE
-	data = 0
-
-/datum/reagent/qerr_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	if(volume <= 0.1 && data != -1)
-		data = -1
-		to_chat(M, "<span class='warning'>You feel antsy, your concentration wavers...</span>")
-	else
-		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
-			data = world.time
-			to_chat(M, "<span class='notice'>You feel invigorated and calm.</span>")
-
 // This exists to cut the number of chemicals a merc borg has to juggle on their hypo.
 /datum/reagent/healing_nanites
 	name = "Restorative Nanites"
@@ -1543,7 +1449,7 @@
 	reagent_state = LIQUID
 	color = "#ffb500"
 	overdose = REAGENTS_OVERDOSE * 0.50
-	
+
 
 /datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.heal_organ_damage (4 * removed, 4 * removed)

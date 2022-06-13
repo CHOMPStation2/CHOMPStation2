@@ -75,8 +75,7 @@
 	path = /obj/item/clothing/gloves/bluespace
 	cost = 5
 
-/datum/gear/utility/satchel_strapless
-	display_name = "satchel strapless"
-	path = /obj/item/weapon/storage/backpack/satchel/strapless
-	slot = slot_back
-	cost = 1
+/datum/gear/utility/walkpod
+	display_name = "podzu music player"
+	path = /obj/item/device/walkpod
+	cost = 2

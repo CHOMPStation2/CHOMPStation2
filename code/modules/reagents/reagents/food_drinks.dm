@@ -43,7 +43,7 @@
 		return
 	affect_ingest(M, alien, removed)
 	//VOREStation Edits Start
-	if(M.isSynthetic() && M.nutrition < 500)
+	if(M.isSynthetic())
 		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
 	//VOREStation Edits End
 	..()
@@ -60,6 +60,9 @@
 			M.heal_organ_damage(0.5 * removed, 0)
 			M.adjust_nutrition((nutriment_factor * removed) * M.species.organic_food_coeff)
 			M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
+	else
+		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
+
 	//VOREStation Edits Stop
 
 // Aurora Cooking Port Insertion Begin
@@ -71,6 +74,8 @@
 	Generally coatings are intended for deep frying foods
 */
 /datum/reagent/nutriment/coating
+	name = "coating"
+	id = "coating"
 	nutriment_factor = 6 //Less dense than the food itself, but coatings still add extra calories
 	var/messaged = 0
 	var/icon_raw
@@ -169,6 +174,8 @@
 /datum/reagent/nutriment/triglyceride/oil/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
 		return
+
+	..()
 
 	var/hotspot = (locate(/obj/fire) in T)
 	if(hotspot && !istype(T, /turf/space))
@@ -386,6 +393,7 @@
 	allergen_type = ALLERGEN_GRAINS //Flour is made from grain
 
 /datum/reagent/nutriment/flour/touch_turf(var/turf/simulated/T)
+	..()
 	if(!istype(T, /turf/space))
 		new /obj/effect/decal/cleanable/flour(T)
 
@@ -427,6 +435,15 @@
 	reagent_state = SOLID
 	nutriment_factor = 5
 	color = "#302000"
+
+/datum/reagent/nutriment/chocolate
+	name = "Chocolate"
+	id = "chocolate"
+	description = "Great for cooking or on its own!"
+	taste_description = "chocolate"
+	color = "#582815"
+	nutriment_factor = 5
+	taste_mult = 1.3
 
 /datum/reagent/nutriment/instantjuice
 	name = "Juice Powder"
@@ -565,6 +582,7 @@
 	glass_desc = "Durian paste. It smells horrific."
 
 /datum/reagent/nutriment/durian/touch_mob(var/mob/M, var/amount)
+	..()
 	if(iscarbon(M) && !M.isSynthetic())
 		var/message = pick("Oh god, it smells disgusting here.", "What is that stench?", "That's an awful odor.")
 		to_chat(M, "<span class='alien'>[message]</span>")
@@ -574,6 +592,7 @@
 	return ..()
 
 /datum/reagent/nutriment/durian/touch_turf(var/turf/T, var/amount)
+	..()
 	if(istype(T))
 		var/obj/effect/decal/cleanable/chemcoating/C = new /obj/effect/decal/cleanable/chemcoating(T)
 		C.reagents.add_reagent(id, amount)
@@ -672,6 +691,13 @@
 	description = "A dry mix for making delicious brownies."
 	reagent_state = SOLID
 	color = "#441a03"
+
+/datum/reagent/cakebatter
+	name = "Cake Batter"
+	id = "cakebatter"
+	description = "A batter for making delicious cakes."
+	reagent_state = LIQUID
+	color = "#F0EDDA"
 
 /datum/reagent/frostoil
 	name = "Frost Oil"
@@ -998,6 +1024,16 @@
 	..()
 	M.reagents.add_reagent("imidazoline", removed * 0.2)
 
+/datum/reagent/drink/juice/lettuce
+	name = "Lettuce Juice"
+	id = "lettucejuice"
+	description = "It's mostly water, just a bit more lettucy."
+	taste_description = "fresh greens"
+	color = "#29df4b"
+
+	glass_name = "lettuce juice"
+	glass_desc = "This is just lettuce water. Fresh but boring."
+
 /datum/reagent/drink/juice
 	name = "Grape Juice"
 	id = "grapejuice"
@@ -1086,7 +1122,7 @@
 	glass_desc = "Vitamins! Yay!"
 	allergen_type = ALLERGEN_FRUIT //Oranges are fruit
 
-/datum/reagent/drink/orangejuice/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/juice/orange/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien == IS_DIONA)
 		return

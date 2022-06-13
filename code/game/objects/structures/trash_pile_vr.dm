@@ -24,7 +24,8 @@
 		/obj/item/weapon/gun/energy/netgun,
 		/obj/item/weapon/gun/projectile/pirate,
 		/obj/item/clothing/accessory/permit/gun,
-		/obj/item/weapon/gun/projectile/dartgun
+		/obj/item/weapon/gun/projectile/dartgun,
+		/obj/item/clothing/gloves/black/bloodletter
 		)
 
 	var/global/list/allocated_gamma = list()
@@ -207,6 +208,7 @@
 					prob(2);/obj/item/toy/tennis/blue,
 					prob(2);/obj/item/toy/tennis/purple,
 					prob(1);/obj/item/clothing/glasses/sunglasses,
+					prob(1);/obj/item/clothing/glasses/sunglasses/bigshot,
 					prob(1);/obj/item/clothing/glasses/welding,
 					prob(1);/obj/item/clothing/gloves/yellow,
 					prob(1);/obj/item/clothing/head/bio_hood/general,
@@ -240,9 +242,11 @@
 					prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
 					prob(4);/obj/item/seeds/ambrosiavulgarisseed,
 					prob(4);/obj/item/weapon/gun/energy/sizegun,
+					prob(4);/obj/item/device/slow_sizegun,
 					prob(3);/obj/item/weapon/material/butterfly,
 					prob(3);/obj/item/weapon/material/butterfly/switchblade,
 					prob(3);/obj/item/clothing/gloves/knuckledusters,
+					prob(3);/obj/item/clothing/gloves/heavy_engineer,
 					prob(3);/obj/item/weapon/reagent_containers/syringe/drugs,
 					prob(2);/obj/item/weapon/implanter/sizecontrol,
 					prob(2);/obj/item/weapon/handcuffs/fuzzy,
@@ -250,7 +254,8 @@
 					prob(2);/obj/item/weapon/storage/box/syndie_kit/spy,
 					prob(2);/obj/item/weapon/grenade/anti_photon,
 					prob(2);/obj/item/clothing/under/hyperfiber/bluespace,
-					prob(2);/obj/item/weapon/reagent_containers/glass/beaker/vial/amorphorovir,
+					prob(2);/obj/item/selectable_item/chemistrykit/size,
+					prob(2);/obj/item/selectable_item/chemistrykit/gender,
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 					prob(1);/obj/item/device/nif/bad,
 					prob(1);/obj/item/device/radio_jammer,
@@ -288,10 +293,12 @@
 
 /obj/structure/mob_spawner/mouse_nest
 	name = "trash"
-	desc = "A small heap of trash, perfect for mice to nest in."
+	desc = "A small heap of trash, perfect for mice and other pests to nest in."
 	icon = 'icons/obj/trash_piles.dmi'
 	icon_state = "randompile"
-	spawn_types = list(/mob/living/simple_mob/animal/passive/mouse)
+	spawn_types = list(
+    /mob/living/simple_mob/animal/passive/mouse= 100,
+    /mob/living/simple_mob/animal/passive/cockroach = 25)
 	simultaneous_spawns = 1
 	destructible = 1
 	spawn_delay = 1 HOUR

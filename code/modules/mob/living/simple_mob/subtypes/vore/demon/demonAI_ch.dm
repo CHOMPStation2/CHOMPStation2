@@ -1,12 +1,12 @@
 /mob/living/simple_mob/vore/demonAI
 	name = "Rift Walker"
-	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
+	desc = "A large bipedal creature, its body has a mixture of dark fur and scales. Marks on the creature's body pulse slowly with red light."
 
 	icon_state = "boxfox"
 	icon_living = "boxfox"
 	icon_dead = "dead"
 	icon_rest = "boxfox_rest"
-	icon = 'icons/mob/demon_ch.dmi'
+	icon = 'modular_chomp/icons/mob/demon_ch.dmi'
 	vis_height = 47
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
 	var/cloaked_alpha = 60			// Lower = Harder to see.

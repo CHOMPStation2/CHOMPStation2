@@ -190,7 +190,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/item/device/paicard,
+/obj/random/paicard,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/workroom)
 "ax" = (
@@ -1458,7 +1458,14 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/item/weapon/paper/dockingcodes,
+/obj/item/weapon/paper/dockingcodes{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon{
+	pixel_x = -13;
+	pixel_y = 7
+	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/talon_v2/crew_quarters/cap_room)
 "ep" = (
@@ -3572,6 +3579,13 @@
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
+"lj" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/engineering/star_store)
 "lk" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4482,6 +4496,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/talon_v2/crew_quarters/bar)
+"oi" = (
+/obj/structure/catwalk,
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_port)
 "ok" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/brown,
@@ -15493,7 +15515,7 @@
 /area/talon_v2/crew_quarters/eng_room)
 "Xi" = (
 /obj/structure/table/woodentable,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/meditation)
 "Xl" = (
@@ -15641,6 +15663,10 @@
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon{
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/meditation)
@@ -23306,7 +23332,7 @@ aa
 lT
 Re
 Re
-XQ
+oi
 XQ
 XQ
 jQ
@@ -28030,7 +28056,7 @@ aL
 oE
 iH
 tS
-in
+lj
 in
 in
 in

@@ -136,6 +136,20 @@
 	},
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
+"W" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/wood,
+/area/om_adventure/poi/woodentemple)
+"X" = (
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/wood,
+/area/om_adventure/poi/woodentemple)
 "Z" = (
 /turf/simulated/wall/hardwood,
 /area/om_adventure/poi/woodentemple)
@@ -220,7 +234,7 @@ C
 j
 d
 A
-d
+X
 m
 N
 Q
@@ -450,7 +464,7 @@ k
 k
 d
 A
-d
+W
 U
 b
 Q

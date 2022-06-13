@@ -1,8 +1,6 @@
-import { sortBy } from 'common/collections';
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section, ColorBox, NoticeBox, Box } from '../components';
 import { Window } from '../layouts';
-import { LabeledListDivider } from '../components/LabeledList';
 
 export const PrecisionEditor = (props, context) => {
   const { act, data } = useBackend(context);

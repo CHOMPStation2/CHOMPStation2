@@ -168,28 +168,29 @@
 	if(pref.species == SPECIES_CUSTOM)
 		var/points_left = pref.starting_trait_points
 
-		for(var/T in pref.pos_traits + pref.neg_traits)
+		for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
 			points_left -= traits_costs[T]
+		for(var/T in pref.pos_traits)
 			traits_left--
 		. += "<b>Traits Left:</b> [traits_left]<br>"
 		. += "<b>Points Left:</b> [points_left]<br>"
 		if(points_left < 0 || traits_left < 0 || !pref.custom_species)
 			. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
 
-		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 		. += "<ul>"
 		for(var/T in pref.pos_traits)
 			var/datum/trait/trait = positive_traits[T]
 			. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
 
-		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 		. += "<ul>"
 		for(var/T in pref.neg_traits)
 			var/datum/trait/trait = negative_traits[T]
 			. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
-	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait +</a><br>"
+	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = neutral_traits[T]
@@ -201,13 +202,21 @@
 	. += "<br>"
 
 	. += "<b>Custom Say: </b>"
-	. += "<a href='?src=\ref[src];custom_say=1'>Set Say Verb</a><br>"
+	. += "<a href='?src=\ref[src];custom_say=1'>Set Say Verb</a>"
+	. += "(<a href='?src=\ref[src];reset_say=1'>Reset</A>)"
+	. += "<br>"
 	. += "<b>Custom Whisper: </b>"
-	. += "<a href='?src=\ref[src];custom_whisper=1'>Set Whisper Verb</a><br>"
+	. += "<a href='?src=\ref[src];custom_whisper=1'>Set Whisper Verb</a>"
+	. += "(<a href='?src=\ref[src];reset_whisper=1'>Reset</A>)"
+	. += "<br>"
 	. += "<b>Custom Ask: </b>"
-	. += "<a href='?src=\ref[src];custom_ask=1'>Set Ask Verb</a><br>"
+	. += "<a href='?src=\ref[src];custom_ask=1'>Set Ask Verb</a>"
+	. += "(<a href='?src=\ref[src];reset_ask=1'>Reset</A>)"
+	. += "<br>"
 	. += "<b>Custom Exclaim: </b>"
-	. += "<a href='?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a><br>"
+	. += "<a href='?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a>"
+	. += "(<a href='?src=\ref[src];reset_exclaim=1'>Reset</A>)"
+	. += "<br>"
 
 /datum/category_item/player_setup_item/vore/traits/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))
@@ -289,6 +298,30 @@
 			pref.custom_exclaim = exclaim_choice
 		return TOPIC_REFRESH
 
+	else if(href_list["reset_say"])
+		var/say_choice = tgui_alert(usr, "Reset your Custom Say Verb?","Reset Verb",list("Yes","No"))
+		if(say_choice == "Yes")
+			pref.custom_say = null
+		return TOPIC_REFRESH
+
+	else if(href_list["reset_whisper"])
+		var/whisper_choice = tgui_alert(usr, "Reset your Custom Whisper Verb?","Reset Verb",list("Yes","No"))
+		if(whisper_choice == "Yes")
+			pref.custom_whisper = null
+		return TOPIC_REFRESH
+
+	else if(href_list["reset_ask"])
+		var/ask_choice = tgui_alert(usr, "Reset your Custom Ask Verb?","Reset Verb",list("Yes","No"))
+		if(ask_choice == "Yes")
+			pref.custom_ask = null
+		return TOPIC_REFRESH
+
+	else if(href_list["reset_exclaim"])
+		var/exclaim_choice = tgui_alert(usr, "Reset your Custom Exclaim Verb?","Reset Verb",list("Yes","No"))
+		if(exclaim_choice == "Yes")
+			pref.custom_exclaim = null
+		return TOPIC_REFRESH
+
 	else if(href_list["add_trait"])
 		var/mode = text2num(href_list["add_trait"])
 		var/list/picklist
@@ -324,7 +357,7 @@
 		for(var/T in pref.pos_traits + pref.neu_traits + pref.neg_traits)
 			points_left -= traits_costs[T]
 
-		var/traits_left = pref.max_traits - (pref.pos_traits.len + pref.neg_traits.len)
+		var/traits_left = pref.max_traits - pref.pos_traits.len // CHOMPEdit: Only positive traits have a slot limit, to prevent broken builds
 
 		var/message = "Select a trait to learn more."
 		if(mode != NEUTRAL_MODE)

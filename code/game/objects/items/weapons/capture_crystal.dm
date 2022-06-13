@@ -1,5 +1,5 @@
 /obj/item/capture_crystal
-	name = "Curious Crystal"
+	name = "capture crystal"
 	desc = "A silent, unassuming crystal in what appears to be some kind of steel housing."
 	icon = 'icons/obj/capture_crystal_vr.dmi'
 	icon_state = "inactive"
@@ -99,6 +99,10 @@
 	else if(bound_mob.client)
 		to_chat(bound_mob, "<span class='notice'>\The [owner] wishes for you to follow them.</span>")
 	else if(bound_mob in contents)
+		if(!bound_mob.ai_holder)
+			to_chat(M, "<span class='notice'>\The [src] emits an unpleasant tone... \The [bound_mob] is not able to follow your command.</span>")
+			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
+			return
 		var/datum/ai_holder/AI = bound_mob.ai_holder
 		if(AI.leader)
 			to_chat(M, "<span class='notice'>\The [src] chimes~ \The [bound_mob] stopped following [AI.leader].</span>")
@@ -109,13 +113,17 @@
 	else if(!(bound_mob in view(M)))
 		to_chat(M, "<span class='notice'>\The [src] emits an unpleasant tone... \The [bound_mob] is not able to hear your command.</span>")
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-	var/datum/ai_holder/AI = bound_mob.ai_holder
-	if(AI.leader)
-		to_chat(M, "<span class='notice'>\The [src] chimes~ \The [bound_mob] stopped following [AI.leader].</span>")
-		AI.lose_follow(AI.leader)
-	else
-		AI.set_follow(M)
-		to_chat(M, "<span class='notice'>\The [src] chimes~ \The [bound_mob] started following following [AI.leader].</span>")
+		if(!bound_mob.ai_holder)
+			to_chat(M, "<span class='notice'>\The [src] emits an unpleasant tone... \The [bound_mob] is not able to follow your command.</span>")
+			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
+			return
+		var/datum/ai_holder/AI = bound_mob.ai_holder
+		if(AI.leader)
+			to_chat(M, "<span class='notice'>\The [src] chimes~ \The [bound_mob] stopped following [AI.leader].</span>")
+			AI.lose_follow(AI.leader)
+		else
+			AI.set_follow(M)
+			to_chat(M, "<span class='notice'>\The [src] chimes~ \The [bound_mob] started following following [AI.leader].</span>")
 
 //Don't really want people 'haha funny' capturing and releasing one another willy nilly. So! If you wanna release someone, you gotta destroy the thingy.
 //(Which is consistent with how it works with digestion anyway.)
@@ -218,6 +226,13 @@
 
 //Tries to unleash or recall your stored mob
 /obj/item/capture_crystal/attack_self(mob/living/user)
+	if(bound_mob && !owner)
+		if(bound_mob == user)
+			to_chat(user, "<span class='notice'>\The [src] emits an unpleasant tone... It does not activate for you.</span>")
+			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
+			return
+		if(tgui_alert(user, "\The [src] hasn't got an owner. It has \the [bound_mob] registered to it. Would you like to claim this as yours?", "Claim ownership", list("No","Yes")) == "Yes")
+			owner = user
 	if(!cooldown_check())
 		to_chat(user, "<span class='notice'>\The [src] emits an unpleasant tone... It is not ready yet.</span>")
 		if(bound_mob)
@@ -495,13 +510,18 @@
 		to_chat(thrower, "<span class='notice'>\The [src] clicks unpleasantly...</span>")
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 
+/obj/item/capture_crystal/basic
+
 /obj/item/capture_crystal/great
+	name = "great capture crystal"
 	capture_chance_modifier = 1.5
 
 /obj/item/capture_crystal/ultra
+	name = "ultra capture crystal"
 	capture_chance_modifier = 2
 
 /obj/item/capture_crystal/master
+	name = "master capture crystal"
 	capture_chance_modifier = 100
 
 /obj/item/capture_crystal/cass

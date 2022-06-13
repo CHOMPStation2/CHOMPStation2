@@ -855,6 +855,32 @@
 	nutriment_desc = list("dryness" = 2, "bread" = 2)
 	bitesize = 1
 
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat
+	name = "fillet"
+	desc = "A fillet of carp meat"
+	icon_state = "fishfillet"
+	filling_color = "#FFDEFE"
+	center_of_mass = list("x"=17, "y"=13)
+	bitesize = 6
+
+	var/toxin_type = "carpotoxin"
+	var/toxin_amount = 3
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/Initialize()
+	. = ..()
+	reagents.add_reagent("seafood", 3)
+	if(toxin_type && toxin_amount)
+		reagents.add_reagent(toxin_type, toxin_amount)
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish
+	desc = "A fillet of fish meat."
+	toxin_type = null
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sif
+	desc = "A fillet of sivian fish meat."
+	filling_color = "#2c2cff"
+	color = "#2c2cff"
+
 /obj/item/weapon/reagent_containers/food/snacks/crab_legs
 	name = "steamed crab legs"
 	desc = "Crab legs steamed and buttered to perfection. One day when the boss gets hungry..."
@@ -879,7 +905,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/fishfingers/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 4)
+	reagents.add_reagent("seafood", 4)
 
 /obj/item/weapon/reagent_containers/food/snacks/zestfish
 	name = "Zesty Fish"
@@ -891,7 +917,70 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/zestfish/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 4)
+	reagents.add_reagent("seafood", 4)
+
+/obj/item/weapon/reagent_containers/food/snacks/mushroomslice
+	name = "mushroom slice"
+	desc = "A slice of mushroom."
+	icon_state = "hugemushroomslice"
+	filling_color = "#E0D7C5"
+	center_of_mass = list("x"=17, "y"=16)
+	nutriment_amt = 3
+	nutriment_desc = list("raw" = 2, "mushroom" = 2)
+	bitesize = 6
+
+/obj/item/weapon/reagent_containers/food/snacks/mushroomslice/Initialize()
+	. = ..()
+	reagents.add_reagent("psilocybin", 3)
+
+/obj/item/weapon/reagent_containers/food/snacks/tomatomeat
+	name = "tomato slice"
+	desc = "A slice from a huge tomato"
+	icon_state = "tomatomeat"
+	filling_color = "#DB0000"
+	center_of_mass = list("x"=17, "y"=16)
+	nutriment_amt = 3
+	nutriment_desc = list("raw" = 2, "tomato" = 3)
+	bitesize = 6
+
+/obj/item/weapon/reagent_containers/food/snacks/bearmeat
+	name = "bear meat"
+	desc = "A very manly slab of meat."
+	icon_state = "bearmeat"
+	filling_color = "#DB0000"
+	center_of_mass = list("x"=16, "y"=10)
+	bitesize = 3
+
+/obj/item/weapon/reagent_containers/food/snacks/bearmeat/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 12)
+	reagents.add_reagent("hyperzine", 5)
+
+/obj/item/weapon/reagent_containers/food/snacks/xenomeat
+	name = "xenomeat"
+	desc = "A slab of green meat. Smells like acid."
+	icon_state = "xenomeat"
+	filling_color = "#43DE18"
+	center_of_mass = list("x"=16, "y"=10)
+	bitesize = 6
+
+/obj/item/weapon/reagent_containers/food/snacks/xenomeat/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 6)
+	reagents.add_reagent("pacid",6)
+
+/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat // Substitute for recipes requiring xeno meat.
+	name = "spider meat"
+	desc = "A slab of green meat."
+	icon_state = "xenomeat"
+	filling_color = "#43DE18"
+	center_of_mass = list("x"=16, "y"=10)
+	bitesize = 6
+
+/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat/Initialize()
+	. = ..()
+	reagents.add_reagent("spidertoxin",6)
+	reagents.remove_reagent("pacid",6)
 
 /obj/item/weapon/reagent_containers/food/snacks/meatball
 	name = "meatball"
@@ -918,7 +1007,7 @@
 	reagents.add_reagent("protein", 6)
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket
-	name = "Donk-pocket"
+	name = "\improper Donk-pocket"
 	desc = "The food of choice for the seasoned traitor."
 	description_fluff = "DONKpockets were originally a Nanotrasen product, an attempt to break into the food market controlled by Centauri Provisions. Somehow, Centauri wound up with the rights to the DONK brand, ending Nanotrasen's ambitions. They taste pretty okay."
 	icon_state = "donkpocket"
@@ -951,6 +1040,56 @@
 				src.reagents.del_reagent(reagent)
 			src.name = initial(name)
 	return
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy
+	name = "\improper Spicy-pocket"
+	desc = "The classic snack food, now with a heat-activated spicy flair."
+	icon_state = "donkpocketspicy"
+	nutriment_amt = 2
+	nutriment_desc = list("heartiness" = 1, "dough" = 2, "spice" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki
+	name = "\improper Teriyaki-pocket"
+	desc = "An east-asian take on the classic stationside snack."
+	icon_state = "donkpocketteriyaki"
+	nutriment_amt = 2
+	nutriment_desc = list("meat" = 1, "dough" = 2, "soy sauce" = 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza
+	name = "\improper Pizza-pocket"
+	desc = "Delicious, cheesy and surprisingly filling."
+	icon_state = "donkpocketpizza"
+	nutriment_amt = 2
+	nutriment_desc = list("meat" = 1, "dough" = 2, "cheese"= 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/honk
+	name = "\improper Honk-pocket"
+	desc = "The award-winning donk-pocket that won the hearts of clowns and humans alike."
+	icon_state = "donkpocketbanana"
+	nutriment_amt = 2
+	nutriment_desc = list("banana" = 1, "dough" = 2, "children's antibiotics"= 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/berry
+	name = "\improper Berry-pocket"
+	desc = "A relentlessly sweet donk-pocket first created for use in Operation Dessert Storm."
+	icon_state = "donkpocketberry"
+	nutriment_amt = 2
+	nutriment_desc = list("dough" = 2, "jam" = 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/gondola
+	name = "\improper Gondola-pocket"
+	desc = "The choice to use real gondola meat in the recipe is controversial, to say the least." //Only a monster would craft this.
+	icon_state = "donkpocketberry"
+	nutriment_amt = 2
+	nutriment_desc = list("heartiness" = 1, "dough" = 2, "inner peace" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/dankpocket
+	name = "\improper Dank-pocket"
+	desc = "The food of choice for the seasoned botanist."
+	icon_state = "dankpocket"
+	nutriment_amt = 2
+	nutriment_desc = list("heartiness" = 1, "dough" = 2)
+	heated_reagents = list("bliss" = 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/sinpocket
 	name = "\improper Sin-pocket"
@@ -1511,16 +1650,6 @@
 	nutriment_desc = list("noodles" = 2)
 	bitesize = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/fortunecookie
-	name = "Fortune cookie"
-	desc = "A true prophecy in each cookie!"
-	icon_state = "fortune_cookie"
-	filling_color = "#E8E79E"
-	center_of_mass = list("x"=15, "y"=14)
-	nutriment_amt = 3
-	nutriment_desc = list("fortune cookie" = 2)
-	bitesize = 2
-
 /obj/item/weapon/reagent_containers/food/snacks/badrecipe
 	name = "Burned mess"
 	desc = "Someone should be demoted from chef for this."
@@ -2079,14 +2208,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/boiledslimecore/Initialize()
 	. = ..()
 	reagents.add_reagent("slimejelly", 5)
-
-/obj/item/weapon/reagent_containers/food/snacks/mint
-	name = "mint"
-	desc = "it is only wafer thin."
-	icon_state = "mint"
-	filling_color = "#F2F2F2"
-	center_of_mass = list("x"=16, "y"=14)
-	bitesize = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit
 	name = "plump helmet biscuit"
@@ -3168,7 +3289,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/cosmicbrownies/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 2)
-	reagents.add_reagent("space_drugs", 2)
+	reagents.add_reagent("ambrosia_extract", 2)
 	reagents.add_reagent("bicaridine", 1)
 	reagents.add_reagent("kelotane", 1)
 	reagents.add_reagent("toxin", 1)
@@ -3785,7 +3906,7 @@
 	bitesize = 2
 	center_of_mass = list("x"=16, "y"=12)
 	nutriment_amt = 4
-	nutriment_desc = "bun"
+	nutriment_desc = list("bun" = 4)
 
 /obj/item/weapon/reagent_containers/food/snacks/bun/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	// Bun + meatball = burger
@@ -3863,7 +3984,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/rawcutlet/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 1)
+	reagents.add_reagent("fishbait", 9)
+	reagents.add_reagent("protein",  3)
 
 /obj/item/weapon/reagent_containers/food/snacks/cutlet
 	name = "cutlet"
@@ -3875,7 +3997,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/cutlet/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 2)
+	reagents.add_reagent("fishbait", 15)
+	reagents.add_reagent("protein",   5)
 
 /obj/item/weapon/reagent_containers/food/snacks/rawmeatball
 	name = "raw meatball"
@@ -3887,7 +4010,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/rawmeatball/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 2)
+	reagents.add_reagent("fishbait", 30)
+	reagents.add_reagent("protein",  10)
 
 /obj/item/weapon/reagent_containers/food/snacks/hotdog
 	name = "hotdog"
@@ -3968,7 +4092,7 @@
 
 	reagents.add_reagent("oxycodone", 1)
 	reagents.add_reagent("sifsap", 5)
-	reagents.add_reagent("space_drugs", 5)
+	reagents.add_reagent("bliss", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/bellefritter
 	name = "frostbelle fritters"
@@ -4023,7 +4147,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/liquidprotein
 	name = "\improper LiquidProtein Ration"
-	desc = "A variant of the liquidfood ration, designed for obligate carnivore species. Only barely more appealing than regular liquidfood. Should this be crunchy?"
+	desc = "A variant of the liquidfood ration, designed for more carnivorous species. Only barely more appealing than regular liquidfood. Should this be crunchy?"
 	icon_state = "liquidprotein"
 	trash = /obj/item/trash/liquidprotein
 	filling_color = "#A8A8A8"
@@ -4146,6 +4270,15 @@
 	. = ..()
 	reagents.add_reagent("bean_protein", 6)
 
+/obj/item/weapon/reagent_containers/food/snacks/cookie
+	name = "chocolate chip cookie"
+	desc = "Just like your mother used to make."
+	filling_color = "#DBC94F"
+	icon_state = "cookie"
+	nutriment_amt = 5
+	nutriment_desc = list("sweetness" = 2, "cookie" = 1, "chocolate" = 2)
+	bitesize = 1
+
 /obj/item/weapon/reagent_containers/food/snacks/sugarcookie
 	name = "sugar cookie"
 	desc = "Just like your little sister used to make."
@@ -4154,6 +4287,16 @@
 	nutriment_amt = 5
 	nutriment_desc = list("sweetness" = 4, "cookie" = 1)
 	bitesize = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/fortunecookie
+	name = "Fortune cookie"
+	desc = "A true prophecy in each cookie!"
+	icon_state = "fortune_cookie"
+	filling_color = "#E8E79E"
+	center_of_mass = list("x"=15, "y"=14)
+	nutriment_amt = 3
+	nutriment_desc = list("fortune cookie" = 2)
+	bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/berrymuffin
 	name = "berry muffin"
@@ -5802,32 +5945,6 @@
 //////////////////////////////Candy Vend Items//////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-/obj/item/weapon/reagent_containers/food/snacks/mint/Initialize()
-	. = ..()
-	reagents.add_reagent("mint", 1)
-
-/obj/item/weapon/reagent_containers/food/snacks/mint/admints
-	desc = "Spearmint, peppermint's non-festive cousin."
-	icon = 'icons/obj/food_snacks.dmi'
-	icon_state = "admint"
-
-/obj/item/weapon/storage/box/admints
-	name = "Ad-mints"
-	desc = "A pack of air fresheners for your mouth."
-	description_fluff = "Ad-mints earned their name, and reputation when a Major Bill's senior executive attended a meeting at a large a marketing firm and was so astounded by the quality of their complimentary mints, that he immediately bought the company - the mints company, not the ad agency - and began providing 'Ad-mints' on every MBT flight."
-	icon = 'icons/obj/food_snacks.dmi'
-	icon_state = "admint_pack"
-	item_state = "candy"
-	slot_flags = SLOT_EARS
-	w_class = 1
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/mint/admints = 6)
-	can_hold = list(/obj/item/weapon/reagent_containers/food/snacks/mint/admints)
-	use_sound = 'sound/items/drop/paper.ogg'
-	drop_sound = 'sound/items/drop/wrapper.ogg'
-	max_storage_space = 6
-	foldable = null
-	trash = /obj/item/trash/admints
-
 /obj/item/weapon/reagent_containers/food/snacks/mint
 	name = "mint"
 	desc = "it is only wafer thin."
@@ -5847,12 +5964,11 @@
 
 /obj/item/weapon/storage/box/admints
 	name = "Ad-mints"
+	desc = "A pack of air fresheners for your mouth."
+	description_fluff = "Ad-mints earned their name, and reputation when a Major Bill's senior executive attended a meeting at a large a marketing firm and was so astounded by the quality of their complimentary mints, that he immediately bought the company - the mints company, not the ad agency - and began providing 'Ad-mints' on every MBT flight."
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "admint_pack"
 	item_state = "candy"
-	desc = "A pack of air fresheners for your mouth."
-	description_fluff = "Ad-mints earned their name, and reputation when a Major Bill's senior executive attended a meeting at a large a marketing firm and was so astounded by the quality of their complimentary mints, that he immediately bought the company - the mints company, not the ad agency - and began providing 'Ad-mints' on every MBT flight."
-	trash = /obj/item/trash/admints
 	slot_flags = SLOT_EARS
 	w_class = 1
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/mint/admints = 6)
@@ -5861,11 +5977,12 @@
 	drop_sound = 'sound/items/drop/wrapper.ogg'
 	max_storage_space = 6
 	foldable = null
+	trash = /obj/item/trash/admints
 
 /obj/item/weapon/reagent_containers/food/snacks/candy
 	name = "\improper Grandma Ellen's Candy Bar"
 	desc = "Now without nuts!"
-	description_fluff = "Hard candies were banned from many early human colony ships due to the tendency for brittle, sticky chunks to find their way inside vital equipment in zero-G conditions. This only made them all the more popular to new arrivees, and the Grandma Ellen's brand was Tau Ceti's answer to that demand."
+	description_fluff = "Hard candies were banned from many early human colony ships due to the tendency for brittle, sticky chunks to find their way inside vital equipment in zero-G conditions. This only made them all the more popular to new arrivees, and the Grandpa Elliot's brand was Tau Ceti's answer to that demand."
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "candy"
 	trash = /obj/item/trash/candy
@@ -5879,7 +5996,7 @@
 	. = ..()
 	reagents.add_reagent("sugar", 3)
 
-/obj/item/weapon/reagent_containers/food/snacks/namagashi //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/namagashi
 	name = "\improper Ryo-kucha Namagashi"
 	desc = "Sweet Japanese gummy like candy that are just bursting with flavor!"
 	icon = 'icons/obj/food_snacks.dmi'
@@ -5949,7 +6066,7 @@
 	nutriment_desc = list("apricot" = 2, "sugar" = 2, "dates" = 2, "cranberry" = 2, "apple" = 2)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/fruitbar/Initialize()
 	. = ..()
 	reagents.add_reagent("sugar", 4)
 
@@ -6373,7 +6490,7 @@
 	. = ..()
 	reagents.add_reagent("doctorsdelight", 5)
 
-////////////////////sol_vend (Mars Mart) (ADDED 04/11/2021)////////////////////////////////////////////////////
+////////////////////sol_vend (Mars Mart)////////////////////////////////////////////////////
 
 /obj/item/weapon/reagent_containers/food/snacks/triton
 	name = "\improper Tidal Gobs"
@@ -6508,7 +6625,7 @@
 	nutriment_amt = 4
 	bitesize = 1
 
-////////////////////weeb_vend (Nippon-tan!) (ADDED 04/11/2021)////////////////////////////////////////////////////
+////////////////////weeb_vend (Nippon-tan!)////////////////////////////////////////////////////
 
 /obj/item/weapon/reagent_containers/food/snacks/ricecake
 	name = "rice cake"
@@ -6519,7 +6636,7 @@
 	nutriment_amt = 5
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/dorayaki //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/dorayaki
 	name = "dorayaki"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "dorayaki"
@@ -6528,7 +6645,7 @@
 	nutriment_amt = 6
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/daifuku //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/daifuku
 	name = "daifuku"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "daifuku"
@@ -6536,16 +6653,6 @@
 	nutriment_desc = list("cake" = 2, "sweetness" = 3)
 	nutriment_amt = 6
 	bitesize = 2
-
-///obj/item/weapon/reagent_containers/food/snacks/pocky (Moved to chewables)
-//	name = "pockys"
-//	icon = 'icons/obj/food_snacks.dmi'
-//	icon_state = "pockys"
-//	desc = "A bundle of chocolate-coated bisquit sticks."
-//	trash = /obj/item/trash/pocky
-//	nutriment_desc = list("chocolate" = 4, "biscuit" = 1)
-//	nutriment_amt = 5
-//	bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/weebonuts
 	name = "\improper Red Alert Nuts!"
@@ -6589,7 +6696,7 @@
 	.=..()
 	reagents.add_reagent("sprinkles", 10)
 
-/obj/item/weapon/reagent_containers/food/snacks/goma_dango //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/goma_dango
 	name = "\improper Goma dango"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "goma_dango"
@@ -6599,7 +6706,7 @@
 	nutriment_amt = 5
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/hanami_dango //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/hanami_dango
 	name = "\improper Hanami dango"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "hanami_dango"
@@ -6610,7 +6717,7 @@
 	nutriment_amt = 5
 	bitesize = 2
 
-////////////////////ancient_vend (Hot Food - Old) (ADDED 04/11/2021)////////////////////////////////////////////////////
+////////////////////ancient_vend (Hot Food - Old)////////////////////////////////////////////////////
 
 /obj/item/weapon/reagent_containers/food/snacks/old
 	name = "master old-food"

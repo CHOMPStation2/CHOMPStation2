@@ -53,6 +53,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/digest_leave_remains = FALSE
 	var/allowmobvore = TRUE
 	var/permit_healbelly = TRUE
+	var/noisy = FALSE
+
+	// These are 'modifier' prefs, do nothing on their own but pair with drop_prey/drop_pred settings.
+	var/drop_vore = TRUE
+	var/stumble_vore = TRUE
+	var/slip_vore = TRUE
 
 	var/resizable = TRUE
 	var/show_vore_fx = TRUE
@@ -147,6 +153,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	vore_taste = json_from_file["vore_taste"]
 	vore_smell = json_from_file["vore_smell"]
 	permit_healbelly = json_from_file["permit_healbelly"]
+	noisy = json_from_file["noisy"]
 	show_vore_fx = json_from_file["show_vore_fx"]
 	can_be_drop_prey = json_from_file["can_be_drop_prey"]
 	can_be_drop_pred = json_from_file["can_be_drop_pred"]
@@ -154,6 +161,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	step_mechanics_pref = json_from_file["step_mechanics_pref"]
 	pickup_pref = json_from_file["pickup_pref"]
 	belly_prefs = json_from_file["belly_prefs"]
+	drop_vore = json_from_file["drop_vore"]
+	slip_vore = json_from_file["slip_vore"]
+	stumble_vore = json_from_file["stumble_vore"]
 
 
 	//CHOMP stuff
@@ -181,6 +191,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		allowmobvore = TRUE
 	if(isnull(permit_healbelly))
 		permit_healbelly = TRUE
+	if (isnull(noisy))
+		noisy = FALSE
 	if(isnull(show_vore_fx))
 		show_vore_fx = TRUE
 	if(isnull(can_be_drop_prey))
@@ -195,6 +207,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		pickup_pref = TRUE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
+	if(isnull(drop_vore))
+		drop_vore = TRUE
+	if(isnull(slip_vore))
+		slip_vore = TRUE
+	if(isnull(stumble_vore))
+		stumble_vore = TRUE
 
 	//CHOMP stuff
 	if(isnull(latejoin_vore))
@@ -227,6 +245,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"vore_taste"			= vore_taste,
 			"vore_smell"			= vore_smell,
 			"permit_healbelly"		= permit_healbelly,
+			"noisy" 				= noisy,
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
@@ -238,7 +257,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
-			"autotransferable"		= autotransferable
+			"autotransferable"		= autotransferable,
+			"drop_vore"				= drop_vore,
+			"slip_vore"				= slip_vore,
+			"stumble_vore"			= stumble_vore,
 		)
 
 	//List to JSON

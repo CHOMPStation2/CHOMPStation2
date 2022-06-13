@@ -1,6 +1,6 @@
 /* eslint react/no-danger: "off" */
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, NoticeBox } from '../components';
+import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { resolveAsset } from '../assets';
 

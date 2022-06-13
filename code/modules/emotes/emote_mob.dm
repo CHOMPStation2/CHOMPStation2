@@ -27,6 +27,11 @@
 		if(world.time < next_emote)
 			to_chat(src, SPAN_WARNING("You cannot use another emote yet."))
 			return
+		//VOREStation Addition Start
+		if(forced_psay)
+			pme(message)
+			return
+		//VOREStation Addition End
 
 		if(act == "help")
 			if(world.time >= next_emote_refresh)
@@ -199,7 +204,12 @@
 				if(M)
 					if(isobserver(M))
 						message = "<span class='emote'><B>[src]</B> ([ghost_follow_link(src, M)]) [input]</span>"
-					M.show_message(message, m_type)
+					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
+					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/weapon/holder) && src.loc.loc == M)))
+						M.show_message(message)
+					else
+						M.show_message(message, m_type)
+					//CHOMPEdit End
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)

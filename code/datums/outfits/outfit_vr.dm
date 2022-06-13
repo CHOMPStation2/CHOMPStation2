@@ -134,7 +134,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	uniform_accessories = list(/obj/item/clothing/accessory/storage/webbing/pilot1 = 1)
 	id_slot = slot_wear_id
 	pda_slot = slot_belt
-	pda_type = /obj/item/device/pda
+	pda_type = /obj/item/device/pda/pilot
 	id_type = /obj/item/weapon/card/id/civilian/pilot
 	id_pda_assignment = "Pilot"
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL
@@ -166,6 +166,9 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	pda_type = /obj/item/device/pda/pathfinder
 	id_type = /obj/item/weapon/card/id/exploration/head
 	id_pda_assignment = "Pathfinder"
+	backpack = /obj/item/weapon/storage/backpack/explorer //CHOMPADD
+	satchel_one = /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPADD
+	messenger_bag = /obj/item/weapon/storage/backpack/messenger/explorer //CHOMPADD
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 /decl/hierarchy/outfit/job/assistant/explorer

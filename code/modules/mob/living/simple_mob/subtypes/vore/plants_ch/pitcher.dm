@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	icon_state = "pitcher_plant"
 	icon_living = "pitcher_plant"
 	icon_dead = "pitcher_plant_dead"
-	icon = 'icons/mob/vore_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore_ch.dmi'
 
 	anchored = 1 //Rooted plant. Only killing it will let you move it.
 	maxHealth = 200

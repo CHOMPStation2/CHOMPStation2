@@ -1257,18 +1257,43 @@
 	icon_state = "cowboy_grey"
 	worn_state = "cowboy_grey"
 
-/obj/item/clothing/under/primitive
-	name = "primitive clothes"
-	desc = "Some patched together rags. Better than being naked."
-	force = 0
-	icon_state = "rag"
-	worn_state = "rag"
-
 /obj/item/clothing/under/curator
 	name = "curator uniform"
 	desc = "A rugged uniform suitable for treasure hunting."
 	icon_state = "curator"
 	worn_state = "curator"
+
+/*
+ * 80s
+ */
+
+/obj/item/clothing/under/tropical
+	name = "black tropical oufit"
+	desc = "A classic themed outfit. This one makes you feel like an animal."
+	icon_state = "animalstyle"
+	worn_state = "animalstyle"
+	starting_accessories = list(/obj/item/clothing/accessory/tropical)
+
+/obj/item/clothing/under/tropical/green
+	name = "puke-green tropical oufit"
+	desc = "A classic themed outfit. This one makes you look like puke."
+	icon_state = "tropicopuke"
+	worn_state = "tropicopuke"
+	starting_accessories = list(/obj/item/clothing/accessory/tropical/green)
+
+/obj/item/clothing/under/tropical/pink
+	name = "pink tropical oufit"
+	desc = "A classic themed outfit. This one makes you feel nostalgic."
+	icon_state = "3005vintage"
+	worn_state = "3005vintage"
+	starting_accessories = list(/obj/item/clothing/accessory/tropical/pink)
+
+/obj/item/clothing/under/tropical/blue
+	name = "pink tropical oufit"
+	desc = "A classic themed outfit. This one makes you feel out of touch."
+	icon_state = "miamivice"
+	worn_state = "miamivice"
+	starting_accessories = list(/obj/item/clothing/accessory/tropical/blue)
 
 /*
  * Modern

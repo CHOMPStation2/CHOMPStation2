@@ -30,6 +30,7 @@
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
+	var/save_digest_mode = TRUE			// Whether this belly's digest mode persists across rounds
 	var/can_taste = FALSE					// If this belly prints the flavor of prey when it eats someone.
 	var/bulge_size = 0.25					// The minimum size the prey has to be in order to show up on examine.
 	var/display_absorbed_examine = FALSE	// Do we display absorption examine messages for this belly at all?
@@ -63,7 +64,7 @@
 	//Actual full digest modes
 	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
-	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS)
+	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY)
 	//Item related modes
 	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
 
@@ -134,7 +135,7 @@
 		"You feel %prey becoming part of you.")
 
 	var/list/absorb_messages_prey = list(
-		"Your feel yourself becoming part of %pred's %belly!")
+		"You feel yourself becoming part of %pred's %belly!")
 
 	var/list/unabsorb_messages_owner = list(
 		"You feel %prey reform into a recognizable state again.")
@@ -151,7 +152,7 @@
 		"Their %belly looks larger than usual.")
 
 	var/item_digest_mode = IM_DIGEST_FOOD	// Current item-related mode from item_digest_modes
-	var/contaminates = TRUE					// Whether the belly will contaminate stuff
+	var/contaminates = TRUE					// Whether the belly will contaminate stuff // CHOMPedit: reset to true like it always was
 	var/contamination_flavor = "Generic"	// Determines descriptions of contaminated items
 	var/contamination_color = "green"		// Color of contamination overlay
 
@@ -161,93 +162,99 @@
 
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
-	return ..() + list(
-		"name",
-		"desc",
-		"absorbed_desc",
-		"vore_sound",
-		"vore_verb",
-		"human_prey_swallow_time",
-		"nonhuman_prey_swallow_time",
-		"emote_time",
-		"nutrition_percent",
-		"digest_brute",
-		"digest_burn",
-		"digest_oxy",
-		"immutable",
-		"can_taste",
-		"escapable",
-		"escapetime",
-		"digestchance",
-		"absorbchance",
-		"escapechance",
-		"transferchance",
-		"transferchance_secondary",
-		"transferlocation",
-		"transferlocation_secondary",
-		"bulge_size",
-		"display_absorbed_examine",
-		"shrink_grow_size",
-		"struggle_messages_outside",
-		"struggle_messages_inside",
-		"absorbed_struggle_messages_outside",
-		"absorbed_struggle_messages_inside",
-		"digest_messages_owner",
-		"digest_messages_prey",
-		"absorb_messages_owner",
-		"absorb_messages_prey",
-		"unabsorb_messages_owner",
-		"unabsorb_messages_prey",
-		"examine_messages",
-		"examine_messages_absorbed",
-		"emote_lists",
-		"emote_time",
-		"emote_active",
-		"mode_flags",
-		"item_digest_mode",
-		"contaminates",
-		"contamination_flavor",
-		"contamination_color",
-		"release_sound",
-		"fancy_vore",
-		"is_wet",
-		"wet_loop",
-		"belly_fullscreen",
-		"disable_hud",
-		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
-		"belly_fullscreen_color",
-		"reagentbellymode",
-		"liquid_fullness1_messages",
-		"liquid_fullness2_messages",
-		"liquid_fullness3_messages",
-		"liquid_fullness4_messages",
-		"liquid_fullness5_messages",
-		"reagent_name",
-		"reagent_chosen",
-		"reagentid",
-		"reagentcolor",
-		"gen_cost",
-		"gen_amount",
-		"gen_time",
-		"gen_time_display",
-		"reagent_transfer_verb",
-		"custom_max_volume",
-		"generated_reagents",
-		"vorefootsteps_sounds",
-		"fullness1_messages",
-		"fullness2_messages",
-		"fullness3_messages",
-		"fullness4_messages",
-		"fullness5_messages",
-		"vorespawn_blacklist",
-		"autotransferchance",
-		"autotransferwait",
-		"autotransferlocation",
-		"autotransfer_enabled",
-		"autotransfer_min_amount",
-		"autotransfer_max_amount", //CHOMP end of variables from CHOMP
-		"egg_type"
-		)
+	var/list/saving = list(
+	"name",
+	"desc",
+	"absorbed_desc",
+	"vore_sound",
+	"vore_verb",
+	"human_prey_swallow_time",
+	"nonhuman_prey_swallow_time",
+	"emote_time",
+	"nutrition_percent",
+	"digest_brute",
+	"digest_burn",
+	"digest_oxy",
+	"immutable",
+	"can_taste",
+	"escapable",
+	"escapetime",
+	"digestchance",
+	"absorbchance",
+	"escapechance",
+	"transferchance",
+	"transferchance_secondary",
+	"transferlocation",
+	"transferlocation_secondary",
+	"bulge_size",
+	"display_absorbed_examine",
+	"shrink_grow_size",
+	"struggle_messages_outside",
+	"struggle_messages_inside",
+	"absorbed_struggle_messages_outside",
+	"absorbed_struggle_messages_inside",
+	"digest_messages_owner",
+	"digest_messages_prey",
+	"absorb_messages_owner",
+	"absorb_messages_prey",
+	"unabsorb_messages_owner",
+	"unabsorb_messages_prey",
+	"examine_messages",
+	"examine_messages_absorbed",
+	"emote_lists",
+	"emote_time",
+	"emote_active",
+	"mode_flags",
+	"item_digest_mode",
+	"contaminates",
+	"contamination_flavor",
+	"contamination_color",
+	"release_sound",
+	"fancy_vore",
+	"is_wet",
+	"wet_loop",
+	"belly_fullscreen",
+	"disable_hud",
+	"reagent_mode_flags",	//CHOMP start of variables from CHOMP
+	"belly_fullscreen_color",
+	"reagentbellymode",
+	"liquid_fullness1_messages",
+	"liquid_fullness2_messages",
+	"liquid_fullness3_messages",
+	"liquid_fullness4_messages",
+	"liquid_fullness5_messages",
+	"reagent_name",
+	"reagent_chosen",
+	"reagentid",
+	"reagentcolor",
+	"gen_cost",
+	"gen_amount",
+	"gen_time",
+	"gen_time_display",
+	"reagent_transfer_verb",
+	"custom_max_volume",
+	"generated_reagents",
+	"vorefootsteps_sounds",
+	"fullness1_messages",
+	"fullness2_messages",
+	"fullness3_messages",
+	"fullness4_messages",
+	"fullness5_messages",
+	"vorespawn_blacklist",
+	"autotransferchance",
+	"autotransferwait",
+	"autotransferlocation",
+	"autotransfer_enabled",
+	"autotransfer_min_amount",
+	"autotransfer_max_amount", //CHOMP end of variables from CHOMP
+	"egg_type",
+	"save_digest_mode"
+	)
+
+	if (save_digest_mode == 1)
+		return ..() + saving + list("digest_mode")
+
+	return ..() + saving
 
 /obj/belly/Initialize()
 	. = ..()
@@ -393,7 +400,7 @@
 		owner.update_icons()
 
 	//Print notifications/sound if necessary
-	if(!silent)
+	if(!silent && count)
 		owner.visible_message("<font color='green'><b>[owner] expels everything from their [lowertext(name)]!</b></font>")
 		var/soundfile
 		if(!fancy_vore)
@@ -412,14 +419,23 @@
 	if (!(M in contents))
 		return 0 // They weren't in this belly anyway
 
+	if(istype(M, /mob/living/simple_mob/vore/hostile/morph/dominated_prey))
+		var/mob/living/simple_mob/vore/hostile/morph/dominated_prey/p = M
+		p.undo_prey_takeover(FALSE)
+		return 0
 	for(var/mob/living/L in M.contents)
-		L.muffled = 0
-	for(var/obj/item/weapon/holder/H in M.contents)
-		H.held_mob.muffled = 0
+		L.muffled = FALSE
+		L.forced_psay = FALSE
 
+	for(var/obj/item/weapon/holder/H in M.contents)
+		H.held_mob.muffled = FALSE
+		H.held_mob.forced_psay = FALSE
+
+	if(isliving(M))
+		var/mob/living/slip = M
+		slip.slip_protect = world.time + 25 // This is to prevent slipping back into your pred if they stand on soap or something.
 	//Place them into our drop_location
 	M.forceMove(drop_location())
-
 	items_preserved -= M
 
 	//Special treatment for absorbed prey
@@ -429,9 +445,12 @@
 		if(ML.client)
 			ML.stop_sound_channel(CHANNEL_PREYLOOP) //Stop the internal loop, it'll restart if the isbelly check on next tick anyway
 		if(ML.muffled)
-			ML.muffled = 0
+			ML.muffled = FALSE
+		if(ML.forced_psay)
+			ML.forced_psay = FALSE
 		if(ML.absorbed)
 			ML.absorbed = FALSE
+			handle_absorb_langs(ML, owner)
 			if(ishuman(M) && ishuman(OW))
 				var/mob/living/carbon/human/Prey = M
 				var/mob/living/carbon/human/Pred = OW
@@ -476,6 +495,9 @@
 
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
+
+	if(prey.ckey)
+		GLOB.prey_eaten_roundstat++
 
 // Get the line that should show up in Examine message if the owner of this belly
 // is examined.   By making this a proc, we not only take advantage of polymorphism,
@@ -738,6 +760,11 @@
 	absorb_alert_prey = replacetext(absorb_alert_prey, "%countprey", absorbed_count)
 
 	M.absorbed = TRUE
+	if(M.ckey)
+		handle_absorb_langs(M, owner)
+
+		GLOB.prey_absorbed_roundstat++
+
 	to_chat(M, "<span class='notice'>[absorb_alert_prey]</span>")
 	to_chat(owner, "<span class='notice'>[absorb_alert_owner]</span>")
 	if(M.noisy) //Mute drained absorbee hunger if enabled.
@@ -803,6 +830,7 @@
 	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%countprey", absorbed_count)
 
 	M.absorbed = FALSE
+	handle_absorb_langs(M, owner)
 	to_chat(M, "<span class='notice'>[unabsorb_alert_prey]</span>")
 	to_chat(owner, "<span class='notice'>[unabsorb_alert_owner]</span>")
 
@@ -813,6 +841,13 @@
 	owner.updateVRPanel()
 	if(isanimal(owner))
 		owner.update_icon()
+
+/////////////////////////////////////////////////////////////////////////
+/obj/belly/proc/handle_absorb_langs()
+	owner.absorb_langs()
+
+////////////////////////////////////////////////////////////////////////
+
 
 //Digest a single item
 //Receives a return value from digest_act that's how much nutrition
@@ -1166,6 +1201,7 @@
 	dupe.egg_type = egg_type
 	dupe.emote_time = emote_time
 	dupe.emote_active = emote_active
+	dupe.save_digest_mode = save_digest_mode
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings

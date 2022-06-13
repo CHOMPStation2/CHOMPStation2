@@ -8,8 +8,8 @@
 							/obj/item/toy/blink										= 2,
 							/obj/item/clothing/under/syndicate/tacticool			= 2,
 							/obj/item/toy/sword										= 2,
-							/obj/item/weapon/gun/projectile/revolver/capgun			= 2,
-							/obj/item/toy/crossbow									= 2,
+							/obj/item/weapon/storage/box/capguntoy					= 2,
+							/obj/item/weapon/gun/projectile/revolver/toy/crossbow	= 2,
 							/obj/item/clothing/suit/syndicatefake					= 2,
 							/obj/item/weapon/storage/fancy/crayons					= 2,
 							/obj/item/toy/spinningtoy								= 2,
@@ -1324,6 +1324,7 @@
 		return 1
 		
 /obj/machinery/computer/arcade/attackby(obj/item/O, mob/user, params)
+	..()
 	if(istype(O, /obj/item/stack/arcadeticket))
 		var/obj/item/stack/arcadeticket/T = O
 		var/amount = T.get_amount()

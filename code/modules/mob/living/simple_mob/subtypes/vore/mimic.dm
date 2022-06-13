@@ -77,7 +77,7 @@
 
 	icon_state = "crate"
 	icon_living = "crate"
-	icon = 'icons/mob/animal_ch.dmi' //CHOMPEdit
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi' //CHOMPEdit
 
 	faction = "mimic"
 

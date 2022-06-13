@@ -115,3 +115,7 @@
 /datum/reagent/ethanol/arachnidslammer
 	glass_icon_state = "arachnidslammer"
 	glass_icon_file = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/drink/pilk
+	glass_icon_state = "whiskeyglass"
+	glass_icon_file = 'icons/obj/drinks.dmi'

@@ -36,7 +36,7 @@
 	name = "Cultist"
 	desc = "An awfully frail and ghastly looking individual"
 	tt_desc = "NULL"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "initiate"
 	faction = "cult"
 	mob_class = MOB_CLASS_DEMONIC

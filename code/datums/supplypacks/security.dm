@@ -256,7 +256,7 @@
 			/obj/item/weapon/shield/riot = 3,
 			/obj/item/weapon/handcuffs = 3,
 			/obj/item/weapon/storage/box/flashbangs,
-			/obj/item/weapon/storage/box/beanbags,
+			/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 			/obj/item/weapon/storage/box/handcuffs
 			)
 	cost = 40
@@ -287,6 +287,16 @@
 	containertype = /obj/structure/closet/crate/secure/lawson
 	containername = "Riot armor crate"
 	access = access_armory
+/*
+/datum/supply_pack/security/riot_sprayer
+	name = "Gear - Riot sprayer"
+	contains = list(
+			/obj/item/weapon/watertank/pepperspray
+			)
+	cost = 40
+	containertype = /obj/structure/closet/crate/secure/lawson
+	containername = "Riot sprayer crate"
+	access = access_armory*/
 
 /datum/supply_pack/security/ablative_armor
 	name = "Armor - Ablative"

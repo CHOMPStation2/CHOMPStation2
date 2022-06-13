@@ -129,3 +129,16 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshfatfirefly_markings"
+
+/datum/sprite_accessory/tail/longtail/longflufftail
+	name = "Long fluffy tail"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "longflufftail"
+
+/datum/sprite_accessory/tail/longtail/ringtailbig
+	name = "Long ring tail"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "bigringtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "bigringtail_markings"

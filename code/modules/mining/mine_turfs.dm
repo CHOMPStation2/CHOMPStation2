@@ -20,24 +20,28 @@ var/list/mining_overlay_cache = list()
 	name = "rock"
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock"
-	var/rock_side_icon_state = "rock_side"
-	var/sand_icon_state = "asteroid"
-	var/rock_icon_state = "rock"
-	var/random_icon = 0
 	oxygen = 0
 	nitrogen = 0
 	opacity = 1
 	density = TRUE
 	blocks_air = 1
 	temperature = T0C
-
 	can_dirty = FALSE
+
+	var/floor_name = "sand"
+	var/rock_side_icon_state = "rock_side"
+	var/sand_icon_state = "asteroid"
+	var/rock_icon_state = "rock"
+	var/sand_icon_path = 'icons/turf/flooring/asteroid.dmi' // Override this on a subtype turf if you want a custom icon
+	var/rock_icon_path = 'icons/turf/walls.dmi' // Override this on a subtype turf if you want a custom icon
+	var/random_icon = 0
 
 	var/ore/mineral
 	var/sand_dug
 	var/mined_ore = 0
 	var/last_act = 0
 	var/overlay_detail
+	var/overlay_detail_icon_path = 'icons/turf/flooring/decals.dmi' // Override this on a subtype turf if you want a custom icon
 
 	var/datum/geosample/geologic_data
 	var/excavation_level = 0
@@ -73,6 +77,10 @@ var/list/mining_overlay_cache = list()
 	)
 
 	has_resources = 1
+
+/turf/simulated/mineral/ChangeTurf(turf/N, tell_universe, force_lighting_update, preserve_outdoors)
+	clear_ore_effects()
+	. = ..()
 
 // Alternative rock wall sprites.
 /turf/simulated/mineral/light
@@ -118,6 +126,14 @@ var/list/mining_overlay_cache = list()
 	blocks_air = 0
 	can_build_into_floor = TRUE
 
+/turf/simulated/mineral/floor/mud
+	icon_state = "mud"
+	sand_icon_state = "mud"
+
+/turf/simulated/mineral/floor/dirt
+	icon_state = "dirt"
+	sand_icon_state = "dirt"
+
 //Alternative sand floor sprite.
 /turf/simulated/mineral/floor/light
 	icon_state = "sand-light"
@@ -149,6 +165,7 @@ var/list/mining_overlay_cache = list()
 	opacity = 0
 	blocks_air = 0
 	can_build_into_floor = TRUE
+	clear_ore_effects()
 	update_general()
 
 /turf/simulated/mineral/proc/make_wall()
@@ -215,7 +232,7 @@ var/list/mining_overlay_cache = list()
 		else
 			name = "rock"
 
-		icon = 'icons/turf/walls.dmi'
+		icon = rock_icon_path
 		icon_state = rock_icon_state
 
 		//Apply overlays if we should have borders
@@ -232,8 +249,8 @@ var/list/mining_overlay_cache = list()
 
 	//We are a sand floor
 	else
-		name = "sand"
-		icon = 'icons/turf/flooring/asteroid.dmi'
+		name = floor_name
+		icon = sand_icon_path
 		icon_state = sand_icon_state
 
 		if(sand_dug)
@@ -248,10 +265,10 @@ var/list/mining_overlay_cache = list()
 			else
 				var/turf/T = get_step(src, direction)
 				if(istype(T) && T.density)
-					add_overlay(get_cached_border(rock_side_icon_state,direction,'icons/turf/walls.dmi',rock_side_icon_state))
+					add_overlay(get_cached_border(rock_side_icon_state,direction,rock_icon_path,rock_side_icon_state))
 
 		if(overlay_detail)
-			add_overlay('icons/turf/flooring/decals.dmi',overlay_detail)
+			add_overlay(overlay_detail_icon_path,overlay_detail)
 
 		if(update_neighbors)
 			for(var/direction in alldirs)
@@ -395,30 +412,14 @@ var/list/mining_overlay_cache = list()
 					F.attackby(W,user)
 					return
 
-		else if(istype(W, /obj/item/stack/rods))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				return
-			var/obj/item/stack/rods/R = W
-			if (R.use(1))
-				to_chat(user, "<span class='notice'>Constructing support lattice ...</span>")
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				new /obj/structure/lattice(get_turf(src))
-
 		else if(istype(W, /obj/item/stack/tile/floor))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				var/obj/item/stack/tile/floor/S = W
-				if (S.get_amount() < 1)
-					return
-				qdel(L)
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				ChangeTurf(/turf/simulated/floor)
-				S.use(1)
+			var/obj/item/stack/tile/floor/S = W
+			if (S.get_amount() < 1)
 				return
-			else
-				to_chat(user, "<span class='warning'>The plating is going to need some support.</span>")
-				return
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			ChangeTurf(/turf/simulated/floor)
+			S.use(1)
+			return
 
 
 	else

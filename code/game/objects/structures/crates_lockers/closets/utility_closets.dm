@@ -98,6 +98,7 @@
 		/obj/item/clothing/suit/fire/heavy,
 		/obj/item/weapon/tank/oxygen/red,
 		/obj/item/weapon/extinguisher/atmo,
+		/obj/item/device/flashlight,
 		/obj/item/clothing/head/hardhat/firefighter/atmos)
 
 /*

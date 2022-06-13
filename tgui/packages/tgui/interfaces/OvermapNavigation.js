@@ -1,7 +1,6 @@
-import { round } from 'common/math';
 import { Fragment } from 'inferno';
 import { useBackend } from "../backend";
-import { Box, Button, Flex, Icon, LabeledList, ProgressBar, Section } from "../components";
+import { Button, LabeledList, Section } from "../components";
 import { Window } from "../layouts";
 import { OvermapFlightData } from "./common/Overmap";
 
@@ -38,7 +37,7 @@ export const OvermapNavigationContent = (props, context) => {
           <LabeledList.Item label="Current Location">
             {sector}
           </LabeledList.Item>
-          <LabeledList.Item label="Coordiantes">
+          <LabeledList.Item label="Coordinates">
             {s_x} : {s_y}
           </LabeledList.Item>
           <LabeledList.Item label="Additional Information">
