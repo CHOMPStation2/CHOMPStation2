@@ -6560,6 +6560,7 @@
 	name = "secondary TEG valve"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "atI" = (
@@ -13823,6 +13824,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "aRK" = (
@@ -14468,6 +14470,7 @@
 /obj/machinery/atmospherics/valve/digital{
 	name = "secondary TEG valve"
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "aTv" = (
@@ -58760,6 +58763,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "lkQ" = (
