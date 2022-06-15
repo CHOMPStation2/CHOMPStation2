@@ -120,19 +120,19 @@ const ChemSynthesizerQueueList = (props, context) => {
               }
             </LabeledList.Item>
           );
-        }
-        return (
-          <LabeledList.Item label={item.name}>
-            <Button
-              icon="trash"
-              onClick={() => act("rem_queue", {
-                q_index: item.index,
-              })}>
-              Delete
-            </Button>
-          </LabeledList.Item>
-        );
-      }) || (
+        
+          return (
+            <LabeledList.Item label={item.name}>
+              <Button
+                icon="trash"
+                onClick={() => act("rem_queue", {
+                  q_index: item.index,
+                })}>
+                Delete
+              </Button>
+            </LabeledList.Item>
+          );
+        } }) || (
         <Box m={1}>
           Queue Empty.
         </Box>
@@ -150,7 +150,7 @@ const ChemSynthesizerRecipeList = (props, context) => {
 
   return (
     <Flex>
-      {recipes.map(item => (
+      {recipes.map(item => {
         <Flex.Item>
           <Button
             color="bad"
@@ -172,9 +172,8 @@ const ChemSynthesizerRecipeList = (props, context) => {
           <Box>
             {item.name}
           </Box>
-        </Flex.Item>
-
-      ))}
+        </Flex.Item>;
+      })}
     </Flex>
   ); 
 };
