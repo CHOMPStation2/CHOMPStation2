@@ -99,6 +99,10 @@
 				var/mob/living/silicon/pai/p = usr
 				p.communicator.activate()
 
+		if("known languages")
+			if(ispAI(usr))
+				var/mob/living/silicon/pai/p = usr
+				p.check_languages()
 
 		else
 			return 0
