@@ -351,7 +351,7 @@
 			. += "<a href='?priv_msg=\ref[C]'>"
 
 		if(C && C.holder && C.holder.fakekey)
-			. += "Administrator"
+			. += C.holder.rank
 		else
 			. += key
 
