@@ -3,7 +3,7 @@
 	icon_state = "girder"
 	anchored = TRUE
 	density = TRUE
-	layer = TABLE_LAYER
+	layer = TABLE_LAYER //CHOMPEdit - moved so that they render above catwalks.
 	w_class = ITEMSIZE_HUGE
 	var/state = 0
 	var/health = 200
