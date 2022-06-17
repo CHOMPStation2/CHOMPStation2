@@ -103,7 +103,19 @@
 	containername = "Solgov engineering hardsuit crate"
 	access = access_engine
 
+<<<<<<< HEAD
 // CHOMPStation EDIT End
+=======
+/datum/supply_pack/misc/breacher_rig
+	name = "unathi breacher hardsuit (empty)"
+	contains = list(
+			/obj/item/weapon/rig/breacher = 1
+			)
+	cost = 250
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "unathi breacher hardsuit crate"
+	access = access_armory
+>>>>>>> 1f51cdc931... Merge pull request #13075 from Heroman3003/breacher-return
 
 /datum/supply_pack/misc/zero_rig
 	name = "null hardsuit (jets)"

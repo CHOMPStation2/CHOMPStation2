@@ -9,7 +9,7 @@
 	desc = "A cheap NT knock-off of an Unathi battle-rig. Uses softer, but lighter, armour plating, producing a still-useful suit"
 	suit_type = "\improper NT breacher"
 	icon_state = "breacher_rig_cheap"
-	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 50)
+	armor = list(melee = 60, bullet = 45, laser = 35, energy = 35, bomb = 70, bio = 100, rad = 50)
 	emp_protection = -20
 	slowdown = 3  //This is too much, reducing from 6 to 3.  May edit again in the future.
 	offline_slowdown = 5
