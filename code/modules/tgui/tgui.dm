@@ -221,7 +221,11 @@
 		"title" = title,
 		"status" = status,
 		"interface" = interface,
-		"refreshing" = refreshing,
+<<<<<<< HEAD
+=======
+		//"refreshing" = refreshing,
+		"refreshing" = FALSE,
+>>>>>>> 1beb095667... Merge pull request #13126 from ItsSelis/tgui-input-framework-hotfix
 		"map" = (using_map && using_map.path) ? using_map.path : "Unknown",
 		"mapZLevel" = map_z_level,
 		"window" = list(
