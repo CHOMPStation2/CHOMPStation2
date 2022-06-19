@@ -344,6 +344,21 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/carpet/retro
 	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
 
+<<<<<<< HEAD
+=======
+/decl/flooring/carpet/retro_red
+	name = "red retro carpet"
+	icon_base = "retrocarpet_red"
+	build_type = /obj/item/stack/tile/carpet/retro_red
+	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
+
+/decl/flooring/carpet/happy
+	name = "happy carpet"
+	icon_base = "happycarpet"
+	build_type = /obj/item/stack/tile/carpet/happy
+	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
+
+>>>>>>> e0ef010384... Merge pull request #13114 from Heroman3003/happycarpet
 /decl/flooring/tiling
 	name = "floor"
 	desc = "Scuffed from the passage of countless greyshirts."

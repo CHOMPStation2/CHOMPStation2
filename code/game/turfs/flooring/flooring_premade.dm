@@ -22,8 +22,13 @@
 /turf/simulated/floor/carpet/deco
 	name = "deco carpet"
 	icon_state = "decocarpet"
+<<<<<<< HEAD
 	initial_flooring = /decl/flooring/carpet/deco
 	
+=======
+	initial_flooring = /decl/flooring/carpet/geo
+
+>>>>>>> e0ef010384... Merge pull request #13114 from Heroman3003/happycarpet
 /turf/simulated/floor/carpet/retro
 	name = "retro carpet"
 	icon_state = "retrocarpet"
@@ -60,6 +65,29 @@
 	icon_state = "oracarpet"
 	initial_flooring = /decl/flooring/carpet/oracarpet
 
+<<<<<<< HEAD
+=======
+/turf/simulated/floor/carpet/geo
+	name = "geometric carpet"
+	icon_state = "geocarpet"
+	initial_flooring = /decl/flooring/carpet/geo
+
+/turf/simulated/floor/carpet/retro
+	name = "blue retro carpet"
+	icon_state = "retrocarpet"
+	initial_flooring = /decl/flooring/carpet/retro
+
+/turf/simulated/floor/carpet/retro_red
+	name = "red retro carpet"
+	icon_state = "retrocarpet_red"
+	initial_flooring = /decl/flooring/carpet/retro_red
+
+/turf/simulated/floor/carpet/happy
+	name = "happy carpet"
+	icon_state = "happycarpet"
+	initial_flooring = /decl/flooring/carpet/happy
+
+>>>>>>> e0ef010384... Merge pull request #13114 from Heroman3003/happycarpet
 /turf/simulated/floor/bluegrid
 	name = "mainframe floor"
 	icon = 'icons/turf/flooring/circuit.dmi'

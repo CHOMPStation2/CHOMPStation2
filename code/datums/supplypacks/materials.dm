@@ -72,8 +72,15 @@
 	containername = "Retro carpets crate"
 	cost = 15
 	contains = list(
+<<<<<<< HEAD
 					/obj/fiftyspawner/decocarpet,
 					/obj/fiftyspawner/retrocarpet
+=======
+					/obj/fiftyspawner/geocarpet,
+					/obj/fiftyspawner/retrocarpet,
+					/obj/fiftyspawner/retrocarpet_red,
+					/obj/fiftyspawner/happycarpet
+>>>>>>> e0ef010384... Merge pull request #13114 from Heroman3003/happycarpet
 					)
 
 /datum/supply_pack/misc/linoleum

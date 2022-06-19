@@ -36,6 +36,17 @@
 	name = "stack of retro carpet"
 	type_to_spawn = /obj/item/stack/tile/carpet/retro
 
+<<<<<<< HEAD
+=======
+/obj/fiftyspawner/retrocarpet_red
+	name = "stack of red retro carpet"
+	type_to_spawn = /obj/item/stack/tile/carpet/retro_red
+
+/obj/fiftyspawner/happycarpet
+	name = "stack of happy carpet"
+	type_to_spawn = /obj/item/stack/tile/carpet/happy
+
+>>>>>>> e0ef010384... Merge pull request #13114 from Heroman3003/happycarpet
 /obj/fiftyspawner/floor
 	name = "stack of floor tiles"
 	type_to_spawn = /obj/item/stack/tile/floor
