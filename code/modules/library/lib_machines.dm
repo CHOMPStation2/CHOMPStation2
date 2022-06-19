@@ -371,7 +371,7 @@
 	if(href_list["editbook"])
 		buffer_book = sanitizeSafe(input(usr, "Enter the book's title:") as text|null)
 	if(href_list["editmob"])
-		buffer_mob = sanitize(input(usr, "Enter the recipient's name:") as text|null, MAX_NAME_LEN)
+		buffer_mob = sanitize(tgui_input_text(usr, "Enter the recipient's name:", null, null, MAX_NAME_LEN), MAX_NAME_LEN)
 	if(href_list["checkout"])
 		var/datum/borrowbook/b = new /datum/borrowbook
 		b.bookname = sanitizeSafe(buffer_book)
@@ -386,7 +386,7 @@
 		var/obj/item/weapon/book/b = locate(href_list["delbook"])
 		inventory.Remove(b)
 	if(href_list["setauthor"])
-		var/newauthor = sanitize(input(usr, "Enter the author's name: ") as text|null)
+		var/newauthor = sanitize(tgui_input_text(usr, "Enter the author's name: "))
 		if(newauthor)
 			scanner.cache.author = newauthor
 	if(href_list["setcategory"])
@@ -458,7 +458,7 @@
 			qdel(query) //CHOMPEdit TGSQL
 
 	if(href_list["orderbyid"])
-		var/orderid = input(usr, "Enter your order:") as num|null
+		var/orderid = tgui_input_number(usr, "Enter your order:")
 		if(orderid)
 			if(isnum(orderid))
 				var/nhref = "src=\ref[src];targetid=[orderid]"
