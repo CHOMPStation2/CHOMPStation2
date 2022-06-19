@@ -4,8 +4,13 @@
     set category = "Fun"
     if(!check_rights(R_ADMIN, R_FUN))
         return
+<<<<<<< HEAD
 
     var/size_multiplier = input(usr, "Input size multiplier.", "Resize", 1) as num|null
+=======
+    
+    var/size_multiplier = tgui_input_number(usr, "Input size multiplier.", "Resize", 1)
+>>>>>>> b875945450... Merge pull request #13112 from ItsSelis/tgui-input-conversions
     if(!size_multiplier)
         return //cancelled
 
