@@ -291,3 +291,11 @@
 
 	playsound(T, S, volume, FALSE)
 	return
+<<<<<<< HEAD
+=======
+
+/mob/living/carbon/human/set_dir(var/new_dir)
+	. = ..()
+	if(. && (species.tail || tail_style))
+		update_tail_showing()
+>>>>>>> f5734f848d... Merge pull request #13107 from Heroman3003/tail-layer

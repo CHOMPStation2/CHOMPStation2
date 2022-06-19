@@ -66,6 +66,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define MOB_DAM_LAYER			4		//Injury overlay sprites like open wounds
 #define SURGERY_LAYER			5		//Overlays for open surgical sites
 #define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
+<<<<<<< HEAD
 #define SHOES_LAYER_ALT			7		//Shoe-slot item (when set to be under uniform via verb)
 #define UNIFORM_LAYER			8		//Uniform-slot item
 #define ID_LAYER				9		//ID-slot item
@@ -97,6 +98,42 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define TOTAL_LAYERS			34		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
 
+=======
+#define TAIL_SOUTH_LAYER		7		//Tail as viewed from the south
+#define SHOES_LAYER_ALT			8		//Shoe-slot item (when set to be under uniform via verb)
+#define UNIFORM_LAYER			9		//Uniform-slot item
+#define ID_LAYER				10		//ID-slot item
+#define SHOES_LAYER				11		//Shoe-slot item
+#define GLOVES_LAYER			12		//Glove-slot item
+#define BELT_LAYER				13		//Belt-slot item
+#define SUIT_LAYER				14		//Suit-slot item
+#define TAIL_NORTH_LAYER		15		//Some species have tails to render (As viewed from the N, E, or W)
+#define GLASSES_LAYER			16		//Eye-slot item
+#define BELT_LAYER_ALT			17		//Belt-slot item (when set to be above suit via verb)
+#define SUIT_STORE_LAYER		18		//Suit storage-slot item
+#define BACK_LAYER				19		//Back-slot item
+#define HAIR_LAYER				20		//The human's hair
+#define HAIR_ACCESSORY_LAYER	21		//VOREStation edit. Simply move this up a number if things are added.
+#define EARS_LAYER				22		//Both ear-slot items (combined image)
+#define EYES_LAYER				23		//Mob's eyes (used for glowing eyes)
+#define FACEMASK_LAYER			24		//Mask-slot item
+#define HEAD_LAYER				25		//Head-slot item
+#define HANDCUFF_LAYER			26		//Handcuffs, if the human is handcuffed, in a secret inv slot
+#define LEGCUFF_LAYER			27		//Same as handcuffs, for legcuffs
+#define L_HAND_LAYER			28		//Left-hand item
+#define R_HAND_LAYER			29		//Right-hand item
+#define WING_LAYER				30		//Wings or protrusions over the suit.
+#define TAIL_NORTH_LAYER_ALT	31		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	32		//Effects drawn by modifiers
+#define FIRE_LAYER				33		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			34		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			35		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			35		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+//////////////////////////////////
+
+#define GET_TAIL_LAYER (dir == SOUTH ? TAIL_SOUTH_LAYER : TAIL_NORTH_LAYER)
+
+>>>>>>> f5734f848d... Merge pull request #13107 from Heroman3003/tail-layer
 /mob/living/carbon/human
 	var/list/overlays_standing[TOTAL_LAYERS]
 	var/previous_damage_appearance // store what the body last looked like, so we only have to update it if something changed
@@ -838,7 +875,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		suit_sprite = INV_SUIT_DEF_ICON
 
 	var/icon/c_mask = null
+<<<<<<< HEAD
 	var/tail_is_rendered = (overlays_standing[TAIL_LAYER] || overlays_standing[TAIL_LAYER_ALT])
+=======
+	var/tail_is_rendered = (overlays_standing[TAIL_NORTH_LAYER] || overlays_standing[TAIL_NORTH_LAYER_ALT] || overlays_standing[TAIL_SOUTH_LAYER])
+>>>>>>> f5734f848d... Merge pull request #13107 from Heroman3003/tail-layer
 	var/valid_clip_mask = tail_style?.clip_mask
 
 	if(tail_is_rendered && valid_clip_mask && !(istype(suit) && suit.taurized)) //Clip the lower half of the suit off using the tail's clip mask for taurs since taur bodies aren't hidden.
@@ -955,10 +996,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(QDESTROYING(src))
 		return
 
+<<<<<<< HEAD
 	remove_layer(TAIL_LAYER)
 	remove_layer(TAIL_LAYER_ALT) // Alt Tail Layer
 
 	var/used_tail_layer = tail_alt ? TAIL_LAYER_ALT : TAIL_LAYER
+=======
+	remove_layer(TAIL_NORTH_LAYER)
+	remove_layer(TAIL_NORTH_LAYER_ALT)
+	remove_layer(TAIL_SOUTH_LAYER)
+
+	var/tail_layer = GET_TAIL_LAYER
+	if(tail_alt && tail_layer == TAIL_NORTH_LAYER)
+		tail_layer = TAIL_NORTH_LAYER_ALT
+>>>>>>> f5734f848d... Merge pull request #13107 from Heroman3003/tail-layer
 
 	var/image/tail_image = get_tail_image()
 	if(tail_image)
@@ -997,11 +1048,22 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	return tail_icon
 
 /mob/living/carbon/human/proc/set_tail_state(var/t_state)
+<<<<<<< HEAD
 	var/used_tail_layer = tail_alt ? TAIL_LAYER_ALT : TAIL_LAYER // Alt Tail Layer
 	var/image/tail_overlay = overlays_standing[used_tail_layer]
 
 	remove_layer(TAIL_LAYER)
 	remove_layer(TAIL_LAYER_ALT)
+=======
+	var/tail_layer = GET_TAIL_LAYER
+	if(tail_alt && tail_layer == TAIL_NORTH_LAYER)
+		tail_layer = TAIL_NORTH_LAYER_ALT
+	var/image/tail_overlay = overlays_standing[tail_layer]
+
+	remove_layer(TAIL_NORTH_LAYER)
+	remove_layer(TAIL_NORTH_LAYER_ALT)
+	remove_layer(TAIL_SOUTH_LAYER)
+>>>>>>> f5734f848d... Merge pull request #13107 from Heroman3003/tail-layer
 
 	if(tail_overlay)
 		overlays_standing[used_tail_layer] = tail_overlay
