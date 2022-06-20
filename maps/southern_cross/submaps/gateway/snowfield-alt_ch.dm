@@ -52,7 +52,6 @@
 /area/awaymission/snowfield/hallway/checkpointhallway
 	name = "Gate Hallway"
 	icon_state = "entry_1"
-	requires_power = 0
 
 /area/awaymission/snowfield/hallway/northhallway
 	name = "Northern Hallway"
@@ -87,14 +86,10 @@
 /area/awaymission/snowfield/security/frontgate
 	name = "Front Gate Checkpoint"
 	icon_state = "checkpoint1"
-	requires_power = 0
-	power_equip = 1 // Powering entry
 
 /area/awaymission/snowfield/security/seconddesk
 	name = "Second Gate Checkpoint"
 	icon_state = "checkpoint2"
-	requires_power = 0
-	power_equip = 1 // Powering entry
 
 /area/awaymission/snowfield/security/lobby
 	name = "Security Lobby"

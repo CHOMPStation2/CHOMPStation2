@@ -581,6 +581,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
 "aDO" = (
@@ -603,6 +606,12 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/public/toolstorage1)
+"aEG" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/awaymission/snowfield/security/security_lockerroom)
 "aFH" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -883,6 +892,14 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/dorms/dorm12)
+"aPP" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/grey/border,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/command/gateway)
 "aQV" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -920,6 +937,13 @@
 /obj/item/weapon/clipboard,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/seconddesk)
+"aTf" = (
+/obj/machinery/icecream_vat,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/snowfield/service/fridge)
 "aTz" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -1333,6 +1357,9 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/service/publicstaff)
@@ -1857,6 +1884,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/security_cell_hallway)
 "bSM" = (
@@ -1904,6 +1934,9 @@
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/morgue)
@@ -2015,6 +2048,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/patient_restroom)
@@ -2227,6 +2263,9 @@
 /obj/structure/closet/radiation,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
@@ -2473,6 +2512,18 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm2)
+"cEt" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "cEx" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/item/device/multitool,
@@ -2642,12 +2693,32 @@
 	pixel_x = 24;
 	start_charge = 0
 	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bridge)
 "cTa" = (
 /obj/machinery/door/blast/gate,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/cavern)
+"cTz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/security/hallway)
 "cTX" = (
 /obj/machinery/shower{
 	pixel_y = 18
@@ -3389,6 +3460,13 @@
 "dCq" = (
 /turf/simulated/mineral/cave,
 /area/awaymission/snowfield/restricted)
+"dCA" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm13)
 "dCP" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -3425,6 +3503,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/outside)
+"dEI" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/southhallway)
 "dEV" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin,
@@ -3459,6 +3549,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/snowfield/security/armory_entrance)
+"dHj" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm10)
 "dHD" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/grey/border,
@@ -3653,6 +3749,12 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm14)
+"dNO" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/awaymission/snowfield/command/sub_chamber)
 "dNW" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -3737,6 +3839,14 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/frontgate)
+"dSo" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/awaymission/snowfield/security/seconddesk)
 "dSA" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/steel_grid,
@@ -3953,7 +4063,6 @@
 	layer = 2.9
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/circuitboard/pointdefense,
 /obj/item/weapon/circuitboard/pointdefense_control{
 	pixel_x = 3;
 	pixel_y = -3
@@ -4374,9 +4483,11 @@
 /turf/simulated/mineral/cave,
 /area/awaymission/snowfield/cavern)
 "eyq" = (
-/obj/structure/bed/chair/office/light,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/front_desk)
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/snowfield/medical/staff_room)
 "eyW" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4548,6 +4659,14 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
+"eMd" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/public/charger)
 "eNp" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
@@ -5095,6 +5214,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/engineering/hallway)
 "fsW" = (
@@ -5233,6 +5355,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/engine_checkpoint)
+"fEp" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/security/security_cell_hallway)
 "fFQ" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -5776,6 +5910,12 @@
 /obj/item/clothing/head/helmet,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/commandarmory)
+"gjO" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm5)
 "gjR" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Server Control Room";
@@ -6215,6 +6355,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
+"gIL" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm16)
 "gJh" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/computer/skills{
@@ -7062,6 +7209,9 @@
 /obj/item/weapon/pen,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/item/weapon/paper_bin,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/service/janitor)
 "hBg" = (
@@ -7726,6 +7876,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "iiU" = (
@@ -7827,6 +7980,12 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
+"ioP" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/public/toolstroage2)
 "ipm" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/yellow{
@@ -7993,6 +8152,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/cafeteria_restroom)
+"iBq" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm2)
 "iBu" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/steel_grid,
@@ -8797,14 +8962,6 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/borgupload{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/weapon/circuitboard/aiupload{
-	pixel_x = 2;
-	pixel_y = -2
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/secure_tech_storage)
@@ -8819,15 +8976,8 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/robotics{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/weapon/circuitboard/mecha_control{
-	pixel_x = 1;
-	pixel_y = -1
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/weapon/circuitboard/security/mining,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/secure_tech_storage)
 "joy" = (
@@ -9178,6 +9328,9 @@
 	pixel_x = -24;
 	start_charge = 0
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/patients)
 "jJd" = (
@@ -9233,6 +9386,9 @@
 	name = "empty north bump";
 	pixel_y = 24;
 	start_charge = 0
+	},
+/obj/machinery/light_switch{
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/warden)
@@ -10064,6 +10220,13 @@
 /obj/item/weapon/towel/random,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/dorms/dorm9)
+"kDZ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm14)
 "kEj" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/firstaid/adv{
@@ -10071,6 +10234,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/armory_entrance)
+"kEl" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/front_desk)
 "kEt" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/window/reinforced{
@@ -10338,6 +10513,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/cafeteria_restroom)
 "kWO" = (
@@ -10575,6 +10753,9 @@
 	name = "empty west bump";
 	pixel_x = -24;
 	start_charge = 0
+	},
+/obj/machinery/light_switch{
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/medical_restroom)
@@ -11073,6 +11254,12 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
+"lCu" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm12)
 "lDj" = (
 /obj/structure/closet/secure_closet/engineering_personal{
 	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/weapon/storage/toolbox/mechanical,/obj/item/device/radio/headset/headset_eng,/obj/item/device/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/weapon/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/weapon/tank/emergency/oxygen/engi,/obj/item/weapon/storage/belt/utility,/obj/item/weapon/reagent_containers/spray/windowsealant)
@@ -11393,6 +11580,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/frontgate)
 "lWC" = (
@@ -11567,14 +11757,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/item/weapon/circuitboard/card{
-	pixel_x = 2;
-	pixel_y = -2
-	},
-/obj/item/weapon/circuitboard/communications{
-	pixel_x = 5;
-	pixel_y = -5
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/secure_tech_storage)
@@ -11608,6 +11790,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm9)
+"mjU" = (
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/medical/storage_room)
 "mkt" = (
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -11694,6 +11882,15 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
+"mor" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/engineering/monitor_room)
 "mpb" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/spray/cleaner,
@@ -11740,6 +11937,13 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/bridge)
+"mpJ" = (
+/obj/structure/catwalk,
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/security/security_cell)
 "mrS" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/engineering/monitor_room)
@@ -11939,6 +12143,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/checkpointhallway)
+"mCn" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/command/commandarmory)
 "mCK" = (
 /obj/structure/closet/crate/secure/engineering,
 /obj/item/stack/material/uranium{
@@ -12236,6 +12446,9 @@
 /obj/item/weapon/tank/emergency/oxygen/double,
 /obj/item/weapon/tank/emergency/oxygen/double,
 /obj/machinery/light,
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
 "mQm" = (
@@ -12341,6 +12554,9 @@
 "mTR" = (
 /obj/structure/closet/crate/bin,
 /obj/effect/floor_decal/borderfloorblack/corner,
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/public/toolstorage1)
 "mUx" = (
@@ -12494,6 +12710,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
 "ned" = (
@@ -12625,6 +12844,18 @@
 /obj/structure/coatrack,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
+"niu" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/snowfield/command/observatory)
 "niv" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/steel,
@@ -13710,6 +13941,12 @@
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/dorms/dorm7)
+"ool" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm7)
 "ooF" = (
 /obj/structure/table/bench/steel,
 /turf/simulated/floor/tiled/steel_grid,
@@ -13785,6 +14022,9 @@
 /obj/effect/floor_decal/corner/grey/border{
 	dir = 10
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "otE" = (
@@ -13822,6 +14062,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
+"ovi" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm11)
 "ovN" = (
 /obj/structure/cable/yellow,
 /obj/structure/window/reinforced{
@@ -14090,6 +14336,9 @@
 	},
 /obj/item/device/integrated_electronics/wirer{
 	pixel_x = 5
+	},
+/obj/machinery/light_switch{
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
@@ -14832,6 +15081,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
+"pFu" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm8)
 "pGl" = (
 /obj/machinery/door/blast/gate/open{
 	dir = 4
@@ -15136,6 +15391,12 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
+"pXE" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm9)
 "pYH" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -15292,6 +15553,9 @@
 /obj/structure/table/glass,
 /obj/item/weapon/soap,
 /obj/item/weapon/soap,
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/security/security_restroom)
 "qfC" = (
@@ -16009,15 +16273,17 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/monitorroom)
+"qQS" = (
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/engineering/monitor_room)
 "qRo" = (
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/cloning,
-/obj/item/weapon/circuitboard/clonescanner,
-/obj/item/weapon/circuitboard/clonepod,
-/obj/item/weapon/circuitboard/scan_consolenew,
 /obj/item/weapon/circuitboard/med_data{
 	pixel_x = 3;
 	pixel_y = -3
@@ -16045,6 +16311,9 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/panicroom)
@@ -16317,6 +16586,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "rjE" = (
@@ -17203,6 +17475,9 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/hallway)
 "sxi" = (
@@ -17317,6 +17592,12 @@
 /obj/structure/table/standard,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/commandhallway_substation)
+"sDm" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/awaymission/snowfield/security/interrogation)
 "sDF" = (
 /obj/structure/flora/bush,
 /obj/structure/railing{
@@ -17577,6 +17858,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bsa)
+"sUu" = (
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm6)
 "sUP" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
@@ -17655,11 +17942,6 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/security/mining,
-/obj/item/weapon/circuitboard/message_monitor{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
@@ -17694,6 +17976,12 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/checkpointunpowered)
+"tdo" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/engineering/engine_checkpoint)
 "tdM" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -17855,6 +18143,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/awaymission/snowfield/security/evidence_storage)
 "tkr" = (
@@ -17990,6 +18281,14 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/morgue)
+"tsW" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/medical_locker)
 "ttf" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/grass/both,
@@ -18108,6 +18407,20 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm6)
+"txW" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = -5
+	},
+/obj/structure/mirror{
+	pixel_x = -28
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/snowfield/public/publicrestroom)
 "txY" = (
 /obj/machinery/light/small/flicker{
 	dir = 1
@@ -18149,6 +18462,12 @@
 "tBf" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/medical/chemistry)
+"tBi" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm3)
 "tBA" = (
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
@@ -18214,6 +18533,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/checkpointhallway)
+"tFy" = (
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/awaymission/snowfield/command/monitorroom)
 "tFR" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -18245,8 +18570,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/gateway)
 "tIi" = (
-/obj/item/device/aicard,
-/obj/item/weapon/aiModule/reset,
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
@@ -18470,6 +18793,9 @@
 	req_one_access = list(1,45)
 	},
 /obj/item/device/radio/phone,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
 "tSs" = (
@@ -18865,6 +19191,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/commandhallway)
+"uop" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/grey/border,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/northhallway)
 "uoD" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -19302,6 +19636,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/awaymission/snowfield/security/observatory)
 "uKQ" = (
@@ -19413,6 +19750,12 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm1)
+"uQU" = (
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/lino,
+/area/awaymission/snowfield/security/detective)
 "uRd" = (
 /obj/machinery/vending/security{
 	description_fluff = "This security vending machine is kindly provided by the-... Sorry, how do you spell this company's name again?";
@@ -19455,6 +19798,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/service/cafeteria)
+"uSV" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm4)
 "uUj" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -19723,6 +20072,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/frontgate)
 "vgX" = (
@@ -19853,6 +20205,12 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/frontgate)
+"vkz" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm1)
 "vkB" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/bed/chair/wood{
@@ -20312,9 +20670,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
 "vKZ" = (
-/obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/outdoors/dirt,
-/area/awaymission/snowfield/outside)
+/obj/structure/outcrop,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/awaymission/snowfield/cavern)
 "vLR" = (
 /obj/structure/closet/crate/hydroponics{
 	desc = "All you need to start your own honey farm.";
@@ -20344,6 +20702,9 @@
 	name = "empty east bump";
 	pixel_x = 24;
 	start_charge = 0
+	},
+/obj/machinery/light_switch{
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/awaymission/snowfield/service/hydro)
@@ -20457,6 +20818,18 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/awaymission/snowfield/service/hydro)
+"vSU" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/dormhallway)
 "vSW" = (
 /obj/structure/artilleryplaceholder{
 	icon_state = "23"
@@ -20497,6 +20870,9 @@
 	dir = 4
 	},
 /obj/item/weapon/storage/box/beakers,
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/chemistry)
 "vVX" = (
@@ -21506,6 +21882,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/service/kitchen)
 "wVW" = (
@@ -21626,6 +22005,9 @@
 "wZM" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/closet/crate/bin,
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/staff_room)
 "wZT" = (
@@ -21752,6 +22134,13 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
+"xaU" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/light_switch{
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/dorms/dorm15)
 "xbN" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -22641,6 +23030,9 @@
 	dir = 5
 	},
 /obj/structure/coatrack,
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/lobby)
 "xPZ" = (
@@ -22669,6 +23061,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
+"xRo" = (
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/awaymission/snowfield/security/armory_entrance)
 "xSb" = (
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
@@ -22697,6 +23095,9 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/machinery/light_switch{
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/observatory_path)
@@ -28121,7 +28522,7 @@ evZ
 fnS
 fuQ
 fGh
-pbJ
+txW
 pbJ
 pbJ
 fGh
@@ -29961,25 +30362,25 @@ mWW
 sXc
 evg
 evg
-eUt
+vkz
 nwW
 uuq
 sXc
 xSb
 xSb
-ffS
+iBq
 oZe
 dmh
 vDR
 vrX
 vrX
-cVu
+tBi
 rqq
 uuz
 jBQ
 qZp
 qZp
-hVQ
+uSV
 pJb
 hwB
 sWl
@@ -31509,25 +31910,25 @@ wbN
 hoA
 aow
 aow
-vKm
+gjO
 bMx
 qtB
 hoA
 dhs
 dhs
-dJz
+sUu
 rbD
 dlz
 wWo
 onW
 onW
-kcj
+ool
 mdc
 iyS
 vaZ
 mGG
 mGG
-kTd
+pFu
 tZD
 hJH
 sIH
@@ -32241,7 +32642,7 @@ hrB
 vOj
 smE
 fDr
-ajG
+tdo
 ajG
 mIX
 hMS
@@ -32509,7 +32910,7 @@ ned
 ife
 eRq
 imu
-iAW
+aTf
 ife
 qyz
 kJm
@@ -32533,7 +32934,7 @@ nNr
 nNr
 gQT
 uvm
-xYN
+dEI
 rnD
 lus
 kug
@@ -33052,7 +33453,7 @@ uvm
 pHZ
 rnD
 lus
-kug
+vSU
 wbN
 hoA
 eSZ
@@ -33530,7 +33931,7 @@ aBn
 kYw
 txs
 wZo
-nab
+qQS
 mrS
 nvM
 nvM
@@ -34559,7 +34960,7 @@ sEL
 qJL
 ndW
 aBn
-ozF
+mor
 laA
 aeZ
 ciR
@@ -34572,7 +34973,7 @@ uOb
 ned
 kXK
 sxD
-xgf
+aEG
 hnK
 cQm
 dWX
@@ -35056,7 +35457,7 @@ ybq
 ybW
 ybq
 ybq
-ybq
+mjU
 xod
 gaW
 gaW
@@ -35363,7 +35764,7 @@ cRf
 cRf
 pWi
 bxE
-arw
+xRo
 wpf
 kEj
 bxE
@@ -35637,25 +36038,25 @@ wbN
 xad
 qSo
 qSo
-jil
+pXE
 jTW
 llx
 xad
 aas
 aas
-wpC
+dHj
 kZK
 iip
 vdE
 plq
 plq
-iMJ
+ovi
 hbK
 wkh
 eij
 bUq
 bUq
-fPe
+lCu
 eab
 tuz
 fSf
@@ -35840,7 +36241,7 @@ rGr
 ebt
 cuv
 rGr
-hqb
+cEt
 uYG
 tIi
 oLd
@@ -35853,7 +36254,7 @@ yjw
 uUw
 eip
 gvk
-gvk
+eMd
 jem
 eip
 hMS
@@ -37185,25 +37586,25 @@ byw
 asJ
 vNH
 wYC
-wYC
+dCA
 nei
 buF
 asJ
 xuc
 xuc
-xuc
+kDZ
 qiR
 iIb
 afW
 bVx
 bVx
-bVx
+xaU
 iRT
 hhs
 afW
 mwl
 mwl
-mwl
+gIL
 byq
 iji
 umM
@@ -37674,7 +38075,7 @@ qTW
 bLV
 eim
 eim
-eim
+sDm
 nBW
 mcC
 pEd
@@ -38405,7 +38806,7 @@ vUR
 tqN
 dgL
 dgL
-tqN
+eyq
 lmq
 mFK
 vUR
@@ -38448,7 +38849,7 @@ qPu
 rVp
 lFR
 aPr
-qPu
+uQU
 hez
 mcC
 pEd
@@ -39204,7 +39605,7 @@ roD
 wwm
 dpf
 fZD
-cBQ
+kEl
 qVA
 ihx
 cBQ
@@ -39462,7 +39863,7 @@ roD
 xJj
 dpf
 fbH
-eyq
+jgV
 jgV
 jgV
 jgV
@@ -39721,7 +40122,7 @@ hyD
 dpf
 uDy
 jWk
-jgV
+jWk
 jgV
 jgV
 mIf
@@ -40491,7 +40892,7 @@ wJl
 roD
 roD
 roD
-wwm
+tsW
 dpf
 cxN
 jgV
@@ -40772,7 +41173,7 @@ qft
 fFQ
 vGX
 jSi
-wCq
+cTz
 kRT
 hiL
 hiL
@@ -42567,7 +42968,7 @@ nHA
 iLw
 qne
 uOb
-ned
+uop
 fwr
 aip
 vII
@@ -42871,7 +43272,7 @@ cmo
 tBQ
 qLx
 rSA
-wiK
+niu
 uYe
 hBv
 mgO
@@ -43865,7 +44266,7 @@ onl
 rEA
 gQw
 gQw
-lcf
+dSo
 aMr
 uJj
 byc
@@ -44641,7 +45042,7 @@ gQw
 gQw
 xxz
 aMr
-uJj
+fEp
 byc
 aMr
 kZl
@@ -45456,7 +45857,7 @@ jsH
 hjv
 xSU
 ofH
-mGV
+olY
 mGV
 mGV
 iXK
@@ -45934,7 +46335,7 @@ aMr
 lsV
 nzx
 aMr
-mFz
+mpJ
 pwu
 ocr
 gRy
@@ -45953,7 +46354,7 @@ ewC
 rIs
 vot
 okK
-cle
+ioP
 wxz
 wLo
 dMJ
@@ -46086,7 +46487,7 @@ pun
 pun
 pun
 pun
-kNs
+pun
 pun
 pun
 pun
@@ -46600,7 +47001,7 @@ hTO
 hTO
 pun
 pun
-kNs
+pun
 pun
 pun
 pun
@@ -46856,9 +47257,9 @@ vDF
 vDF
 hTO
 pun
-kNs
-kNs
-kNs
+pun
+pun
+pun
 pun
 pun
 pun
@@ -47118,7 +47519,7 @@ pun
 pun
 pun
 pun
-kNs
+pun
 pun
 pun
 pun
@@ -47371,10 +47772,10 @@ hTO
 hTO
 hTO
 kNs
-kNs
-kNs
+dBB
+dBB
 pun
-kNs
+pun
 pun
 pun
 pun
@@ -47778,7 +48179,7 @@ wXM
 wXM
 luy
 wXM
-wXM
+mCn
 eJl
 syG
 xVV
@@ -47887,8 +48288,8 @@ qTN
 mEn
 sBs
 jCI
-kNs
-kNs
+dBB
+dBB
 dBB
 dBB
 dBB
@@ -48111,7 +48512,7 @@ dBB
 pun
 pun
 dBB
-laF
+mEn
 aaA
 mEn
 bvd
@@ -48145,8 +48546,8 @@ bvd
 bvd
 kdB
 qTN
-kNs
-kNs
+dBB
+dBB
 dBB
 dBB
 dBB
@@ -48403,7 +48804,7 @@ bvd
 bvd
 aaA
 bvd
-kNs
+dBB
 dBB
 dBB
 kNs
@@ -48887,7 +49288,7 @@ dBB
 dBB
 dBB
 aaA
-gcu
+bvd
 bvd
 bvd
 bvd
@@ -49065,7 +49466,7 @@ xFs
 mxJ
 uLC
 qsV
-poH
+dNO
 lWJ
 jRr
 kcD
@@ -49176,9 +49577,9 @@ bvd
 bvd
 bvd
 aaA
-kNs
-kNs
-kNs
+dBB
+dBB
+dBB
 kNs
 kNs
 kNs
@@ -49399,7 +49800,7 @@ pun
 pun
 pun
 dBB
-vKZ
+dBB
 dBB
 bvd
 aaA
@@ -49434,9 +49835,9 @@ bvd
 bvd
 bvd
 aaA
-kNs
-kNs
-kNs
+dBB
+dBB
+dBB
 pun
 pun
 pun
@@ -49578,7 +49979,7 @@ pTQ
 oac
 dAf
 fAI
-qJA
+tFy
 uLC
 wKo
 vOs
@@ -49672,8 +50073,8 @@ bvd
 bvd
 bvd
 mEn
-mEn
-mEn
+bvd
+bvd
 mEn
 bvd
 bvd
@@ -49693,8 +50094,8 @@ bvd
 qTN
 kdB
 dBB
-kNs
-kNs
+dBB
+dBB
 pun
 pun
 pun
@@ -49930,7 +50331,7 @@ mEn
 vDF
 vDF
 vDF
-mEn
+bvd
 mEn
 vDF
 vDF
@@ -49951,8 +50352,8 @@ bvd
 qTN
 sBs
 gmb
-kNs
-kNs
+dBB
+dBB
 kNs
 pun
 pun
@@ -50175,7 +50576,7 @@ pun
 pun
 pun
 kNs
-cKO
+vKZ
 hTO
 hTO
 hTO
@@ -50466,9 +50867,9 @@ hTO
 hTO
 hTO
 hTO
-kNs
-kNs
-kNs
+pun
+pun
+pun
 pun
 pun
 pun
@@ -50726,7 +51127,7 @@ hTO
 hTO
 pun
 pun
-kNs
+pun
 kNs
 pun
 kNs
@@ -51241,7 +51642,7 @@ vDF
 vDF
 hTO
 pun
-kNs
+pun
 pun
 pun
 pun
@@ -51647,7 +52048,7 @@ pqu
 ayK
 soY
 soY
-igK
+aPP
 bfk
 bfk
 bfk
@@ -66056,13 +66457,13 @@ xkl
 xkl
 xkl
 xkl
-mEn
 xkl
-mEn
-mEn
-mEn
-mEn
-xgt
+xkl
+xkl
+xkl
+xkl
+xkl
+xkl
 xkl
 xkl
 xkl
@@ -66314,15 +66715,15 @@ xkl
 mEn
 mEn
 mEn
-mEn
-mEn
-xgt
-mEn
-eAM
-mEn
 xkl
 xkl
-qVU
+xkl
+xkl
+xkl
+xkl
+xkl
+xkl
+xkl
 xkl
 xkl
 xkl
@@ -66574,12 +66975,12 @@ xkl
 xkl
 xkl
 xkl
-mEn
-mEn
+xkl
+xkl
 eAM
 xgt
-mEn
-mEn
+xkl
+xkl
 mEn
 qVU
 xkl
