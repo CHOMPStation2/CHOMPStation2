@@ -20,10 +20,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "abv" = (
-/obj/structure/catwalk,
-/obj/machinery/light/small/flicker,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/emergency_pathway/EP_powered)
+/area/awaymission/snowfield/command/commandarmory)
 "acD" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -1783,12 +1784,6 @@
 /obj/item/weapon/gun/projectile/serdy_pistols/makarov,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpoint)
-"bLV" = (
-/obj/machinery/light/small/flicker{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/snowfield/security/interrogation)
 "bMi" = (
 /obj/machinery/vending/coffee{
 	dir = 1
@@ -4763,7 +4758,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/awaymission/snowfield/outside)
 "eSa" = (
-/obj/machinery/light/small/flicker{
+/obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor,
@@ -10720,11 +10715,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/engineering/monitor_room)
-"lcJ" = (
-/obj/structure/catwalk,
-/obj/machinery/light_construct/small,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/emergency_pathway/EP_powered)
 "lcX" = (
 /obj/machinery/shower{
 	pixel_y = 18
@@ -11102,12 +11092,6 @@
 "lus" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/hallway/dormhallway)
-"luy" = (
-/obj/machinery/light/small/flicker{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/command/commandarmory)
 "lve" = (
 /obj/structure/bed/chair/oldsofa,
 /turf/simulated/floor/wood,
@@ -11810,17 +11794,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/commandarmory)
-"mlV" = (
-/obj/structure/closet/crate/freezer/rations,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/machinery/light/small/flicker,
-/turf/simulated/floor/tiled/steel_grid,
-/area/awaymission/snowfield/dorms/panicroom)
 "mlY" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -11944,6 +11917,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
+"mqp" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/awaymission/snowfield/security/interrogation)
 "mrS" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/engineering/monitor_room)
@@ -13335,13 +13314,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
-"nLz" = (
-/obj/structure/catwalk,
-/obj/machinery/light/small/flicker{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/emergency_pathway/EP_powered)
 "nLM" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -15629,9 +15601,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/machinery/light/small/flicker{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/testroom)
@@ -18421,13 +18390,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
-"txY" = (
-/obj/machinery/light/small/flicker{
-	dir = 1
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/emergency_pathway/EP_powered)
 "tzg" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/hallway/northhallway)
@@ -19009,7 +18971,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/light/small/flicker{
+/obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -21572,13 +21534,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm7)
-"wIS" = (
-/obj/structure/catwalk,
-/obj/machinery/light/small/flicker{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/emergency_pathway/EP_powered)
 "wIT" = (
 /obj/item/weapon/stool,
 /obj/machinery/light,
@@ -26422,7 +26377,7 @@ vZL
 vZL
 vZL
 vZL
-nLz
+rWB
 vZL
 vZL
 vZL
@@ -26453,8 +26408,8 @@ vZL
 vZL
 vZL
 vZL
-vZL
 rWB
+vZL
 vZL
 vZL
 vZL
@@ -28993,7 +28948,7 @@ vDF
 vDF
 vDF
 nGn
-wIS
+gbz
 vZL
 uLb
 vZL
@@ -31057,7 +31012,7 @@ vDF
 vDF
 vDF
 nGn
-txY
+gbz
 nGn
 vDF
 vDF
@@ -33121,7 +33076,7 @@ vDF
 vDF
 vDF
 nGn
-wIS
+gbz
 nGn
 vDF
 vDF
@@ -34669,7 +34624,7 @@ pun
 vDF
 vDF
 nGn
-wIS
+vZL
 nGn
 vDF
 vDF
@@ -34927,7 +34882,7 @@ pun
 vDF
 vDF
 nGn
-vZL
+gbz
 nGn
 vDF
 vDF
@@ -38072,7 +38027,7 @@ tbx
 vBj
 tji
 qTW
-bLV
+mqp
 eim
 eim
 sDm
@@ -41197,7 +41152,7 @@ eti
 giO
 vBW
 vBW
-mlV
+sCi
 eti
 eti
 szB
@@ -46638,7 +46593,7 @@ brj
 brj
 hTO
 nGn
-lcJ
+jlx
 nGn
 uoM
 uoM
@@ -48176,8 +48131,8 @@ osR
 mUV
 xVV
 wXM
+abv
 wXM
-luy
 wXM
 mCn
 eJl
@@ -48444,7 +48399,7 @@ xVV
 xVV
 hTO
 nGn
-lcJ
+jlx
 nGn
 uoM
 uoM
@@ -50250,7 +50205,7 @@ kcD
 kcD
 hTO
 nGn
-vZL
+jlx
 nGn
 uoM
 uoM
@@ -50508,7 +50463,7 @@ kcD
 kcD
 hTO
 nGn
-abv
+vZL
 nGn
 uoM
 uoM
