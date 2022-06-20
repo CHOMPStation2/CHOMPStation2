@@ -787,28 +787,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
-"aLO" = (
-/obj/effect/landmark/corpse/security{
-	corpseback = /obj/item/weapon/storage/backpack/satchel/military;
-	corpsebelt = /obj/item/weapon/storage/belt/security/tactical;
-	corpseglasses = /obj/item/clothing/glasses/night;
-	corpsegloves = /obj/item/clothing/gloves/tactical;
-	corpsehelmet = /obj/item/clothing/head/helmet/combat;
-	corpseidaccess = "Syndicate";
-	corpseidjob = "N/A";
-	corpsemask = /obj/item/clothing/mask/balaclava;
-	corpsepocket1 = /obj/item/device/binoculars;
-	corpsepocket2 = /obj/item/device/camerabug/spy;
-	corpseradio = /obj/item/device/radio/headset;
-	corpseshoes = /obj/item/clothing/shoes/boots/combat;
-	corpsesuit = /obj/item/clothing/suit/armor/pcarrier/bulletproof/full;
-	corpseuniform = /obj/item/clothing/under/tactical;
-	gender = "male";
-	mobname = "Colt Finnlay";
-	name = "Colt Finnlay"
-	},
-/turf/simulated/floor/outdoors/snow/sif/planetuse,
-/area/awaymission/snowfield/outside)
 "aMa" = (
 /obj/structure/coatrack,
 /turf/simulated/floor/wood,
@@ -11296,10 +11274,6 @@
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
-"lEI" = (
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c,
-/turf/simulated/floor/outdoors/snow/sif/planetuse,
-/area/awaymission/snowfield/outside)
 "lFf" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
@@ -30449,9 +30423,9 @@ pun
 imC
 pun
 pun
-aLO
 pun
-lEI
+pun
+pun
 pun
 nin
 imC
