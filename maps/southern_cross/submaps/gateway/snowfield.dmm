@@ -9491,7 +9491,7 @@
 /obj/item/ammo_magazine/pkm,
 /obj/item/ammo_magazine/pkm/ap,
 /obj/item/clothing/suit/bomb_suit/security{
-	armor = list("melee" = 90, "bullet" = 85, "laser" = 45, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
+	armor = list("melee" = 90, "bullet" = 85, "laser" = 70, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
 	armorsoak = list("melee" = 10, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 20, "bio" = 0, "rad" = 0);
 	desc = "You're up against the wall AND I AM THE FUCKING WALL!";
 	name = "EOD-Bullet proof suit";
