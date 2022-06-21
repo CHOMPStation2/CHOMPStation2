@@ -168,7 +168,11 @@
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
+<<<<<<< HEAD
 	var_changes = list("organic_food_coeff" = 0.75, "synthetic_food_coeff" = 1) //CHOMPEdit: Increase values
+=======
+	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.6)
+>>>>>>> dfe82ceb2c... Merge pull request #13102 from radiantAurora/master
 
 /datum/trait/neutral/glowing_eyes
 	name = "Glowing Eyes"
