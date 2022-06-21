@@ -174,7 +174,11 @@ world/New()
 	if(!found) 
 		to_chat(src, "<b>* An error occured, sorry.</b>")
 
-	var/body = tgui_input_text(src.mob, "Enter a body for the news", "Body", multiline = TRUE)
+<<<<<<< HEAD
+	var/body = input(src.mob, "Enter a body for the news", "Body") as null|message
+=======
+	var/body = tgui_input_text(src.mob, "Enter a body for the news", "Body", multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
 	if(!body) return
 
 	found.body = body

@@ -27,7 +27,15 @@
 	set desc = "Sets OOC notes about yourself or your RP preferences or status."
 	set category = "OOC"
 
+<<<<<<< refs/remotes/Upstream/master
 	var/new_metadata = sanitize(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently, only for this round.", "Game Preference" , html_decode(ooc_notes), multiline = TRUE), extra = 0)
+=======
+<<<<<<< HEAD
+	var/new_metadata = sanitize(input(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently, only for this round.", "Game Preference" , html_decode(ooc_notes)) as message, extra = 0)
+=======
+	var/new_metadata = sanitize(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently, only for this round.", "Game Preference" , html_decode(ooc_notes), , prevent_enter = TRUE), extra = 0)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 	if(new_metadata && CanUseTopic(usr))
 		ooc_notes = new_metadata
 		to_chat(usr, "OOC notes updated.")

@@ -180,7 +180,11 @@
 		assigned_role = new_role
 
 	else if (href_list["memory_edit"])
-		var/new_memo = sanitize(tgui_input_text(usr, "Write new memory", "Memory", memory, multiline = TRUE))
+<<<<<<< HEAD
+		var/new_memo = sanitize(input("Write new memory", "Memory", memory) as null|message)
+=======
+		var/new_memo = sanitize(tgui_input_text(usr, "Write new memory", "Memory", memory, multiline = TRUE, prevent_enter = TRUE))
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
 		if (isnull(new_memo)) return
 		memory = new_memo
 
@@ -188,7 +192,11 @@
 		var/datum/mind/mind = locate(href_list["amb_edit"])
 		if(!mind)
 			return
-		var/new_ambition = tgui_input_text(usr, "Enter a new ambition", "Memory", mind.ambitions, multiline = TRUE)
+<<<<<<< HEAD
+		var/new_ambition = input("Enter a new ambition", "Memory", mind.ambitions) as null|message
+=======
+		var/new_ambition = tgui_input_text(usr, "Enter a new ambition", "Memory", mind.ambitions, multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
 		if(isnull(new_ambition))
 			return
 		if(mind)

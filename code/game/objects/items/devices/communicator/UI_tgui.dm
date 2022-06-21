@@ -424,7 +424,11 @@
 			selected_tab = params["switch_tab"]
 
 		if("edit")
-			var/n = tgui_input_text(usr, "Please enter message", name, notehtml, multiline = TRUE)
+<<<<<<< HEAD
+			var/n = input(usr, "Please enter message", name, notehtml) as message|null
+=======
+			var/n = tgui_input_text(usr, "Please enter message", name, notehtml, multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
 			n = sanitizeSafe(n, extra = 0)
 			if(n)
 				note = html_decode(n)

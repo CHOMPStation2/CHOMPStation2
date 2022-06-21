@@ -12,6 +12,10 @@ type TextInputData = {
   placeholder: string;
   timeout: number;
   title: string;
+<<<<<<< refs/remotes/Upstream/master
+=======
+  prevent_enter: boolean;
+>>>>>>> Input Fixes
 };
 
 export const TextInputModal = (_, context) => {
@@ -24,6 +28,10 @@ export const TextInputModal = (_, context) => {
     placeholder,
     timeout,
     title,
+<<<<<<< refs/remotes/Upstream/master
+=======
+    prevent_enter,
+>>>>>>> Input Fixes
   } = data;
   const [input, setInput] = useLocalState<string>(
     context,
@@ -49,8 +57,15 @@ export const TextInputModal = (_, context) => {
       <Window.Content
         onEscape={() => act('cancel')}
         onEnter={(event) => {
+<<<<<<< refs/remotes/Upstream/master
           act('submit', { entry: input });
           event.preventDefault();
+=======
+          if (!prevent_enter) {
+            act('submit', { entry: input });
+            event.preventDefault();
+          }
+>>>>>>> Input Fixes
         }}>
         <Section fill>
           <Stack fill vertical>
@@ -76,7 +91,11 @@ export const TextInputModal = (_, context) => {
 /** Gets the user input and invalidates if there's a constraint. */
 const InputArea = (props, context) => {
   const { act, data } = useBackend<TextInputData>(context);
+<<<<<<< refs/remotes/Upstream/master
   const { max_length, multiline } = data;
+=======
+  const { max_length, multiline, prevent_enter } = data;
+>>>>>>> Input Fixes
   const { input, onType } = props;
 
   return (
@@ -87,8 +106,15 @@ const InputArea = (props, context) => {
       maxLength={max_length}
       onEscape={() => act('cancel')}
       onEnter={(event) => {
+<<<<<<< refs/remotes/Upstream/master
         act('submit', { entry: input });
         event.preventDefault();
+=======
+        if (!prevent_enter) {
+          act('submit', { entry: input });
+          event.preventDefault();
+        }
+>>>>>>> Input Fixes
       }}
       onInput={(_, value) => onType(value)}
       placeholder="Type something..."

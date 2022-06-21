@@ -627,8 +627,18 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!holder)
 		return
 
+<<<<<<< refs/remotes/Upstream/master
 	var/input = sanitize(tgui_input_text(usr, "Please enter anything you want. Anything. Serious.", "What?", "", multiline = TRUE), extra = 0)
 	var/customname = sanitizeSafe(tgui_input_text(usr, "Pick a title for the report.", "Title"))
+=======
+<<<<<<< HEAD
+	var/input = sanitize(input(usr, "Please enter anything you want. Anything. Serious.", "What?", "") as message|null, extra = 0)
+	var/customname = sanitizeSafe(input(usr, "Pick a title for the report.", "Title") as text|null)
+=======
+	var/input = sanitize(tgui_input_text(usr, "Please enter anything you want. Anything. Serious.", "What?", "", multiline = TRUE, prevent_enter = TRUE), extra = 0)
+	var/customname = sanitizeSafe(tgui_input_text(usr, "Pick a title for the report.", "Title"))
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 	if(!input)
 		return
 	if(!customname)

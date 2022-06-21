@@ -73,7 +73,15 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 				if(t)
 					candidate.name = t
 			if("desc")
+<<<<<<< refs/remotes/Upstream/master
 				t = tgui_input_text(usr, "Enter a description for your pAI", "pAI Description", candidate.description, multiline = TRUE)
+=======
+<<<<<<< HEAD
+				t = input(usr, "Enter a description for your pAI", "pAI Description", candidate.description) as message
+=======
+				t = tgui_input_text(usr, "Enter a description for your pAI", "pAI Description", candidate.description, multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 				if(t)
 					candidate.description = sanitize(t)
 			if("role")
@@ -81,7 +89,15 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 				if(t)
 					candidate.role = sanitize(t)
 			if("ooc")
+<<<<<<< refs/remotes/Upstream/master
 				t = tgui_input_text(usr, "Enter any OOC comments", "pAI OOC Comments", candidate.comments, multiline = TRUE)
+=======
+<<<<<<< HEAD
+				t = input(usr, "Enter any OOC comments", "pAI OOC Comments", candidate.comments) as message
+=======
+				t = tgui_input_text(usr, "Enter any OOC comments", "pAI OOC Comments", candidate.comments, multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 				if(t)
 					candidate.comments = sanitize(t)
 			if("save")

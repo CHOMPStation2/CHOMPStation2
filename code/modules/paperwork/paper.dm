@@ -448,7 +448,15 @@
 			to_chat(usr, "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>")
 			return
 
+<<<<<<< refs/remotes/Upstream/master
 		var/raw = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE)
+=======
+<<<<<<< HEAD
+		var/raw = input(usr, "Enter what you want to write:", "Write") as null|message
+=======
+		var/raw = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 		if(!raw)
 			return
 		

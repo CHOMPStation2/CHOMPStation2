@@ -263,7 +263,15 @@
 	..(A,user,flag,params)
 
 /obj/item/weapon/disk/nifsoft/compliance/attack_self(mob/user)
+<<<<<<< refs/remotes/Upstream/master
 	var/newlaws = tgui_input_text(user, "Please Input Laws", "Compliance Laws", laws, multiline = TRUE)
+=======
+<<<<<<< HEAD
+	var/newlaws = input(user,"Please Input Laws","Compliance Laws",laws) as message
+=======
+	var/newlaws = tgui_input_text(user, "Please Input Laws", "Compliance Laws", laws, multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 	newlaws = sanitize(newlaws,2048)
 	if(newlaws)
 		to_chat(user,"You set the laws to: <br><span class='notice'>[newlaws]</span>")

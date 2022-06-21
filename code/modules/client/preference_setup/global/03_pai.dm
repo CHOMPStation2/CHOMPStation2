@@ -46,7 +46,15 @@
 				if(t && CanUseTopic(user))
 					candidate.name = t
 			if("desc")
+<<<<<<< refs/remotes/Upstream/master
 				t = tgui_input_text(user, "Enter a description for your pAI", "Global Preference", html_decode(candidate.description), multiline = TRUE)
+=======
+<<<<<<< HEAD
+				t = input(user, "Enter a description for your pAI", "Global Preference", html_decode(candidate.description)) as message|null
+=======
+				t = tgui_input_text(user, "Enter a description for your pAI", "Global Preference", html_decode(candidate.description), multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 				if(!isnull(t) && CanUseTopic(user))
 					candidate.description = sanitize(t)
 			if("role")
@@ -54,7 +62,15 @@
 				if(!isnull(t) && CanUseTopic(user))
 					candidate.role = sanitize(t)
 			if("ooc")
+<<<<<<< refs/remotes/Upstream/master
 				t = tgui_input_text(user, "Enter any OOC comments", "Global Preference", html_decode(candidate.comments), multiline = TRUE)
+=======
+<<<<<<< HEAD
+				t = input(user, "Enter any OOC comments", "Global Preference", html_decode(candidate.comments)) as message
+=======
+				t = tgui_input_text(user, "Enter any OOC comments", "Global Preference", html_decode(candidate.comments), multiline = TRUE, prevent_enter = TRUE)
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
+>>>>>>> Input Fixes
 				if(!isnull(t) && CanUseTopic(user))
 					candidate.comments = sanitize(t)
 		return TOPIC_REFRESH

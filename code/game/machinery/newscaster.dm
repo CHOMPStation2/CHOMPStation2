@@ -447,7 +447,11 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			return TRUE
 
 		if("set_new_message")
-			msg = sanitize(tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", multiline = TRUE))
+<<<<<<< HEAD
+			msg = sanitize(tgui_input_message(usr, "Write your Feed story", "Network Channel Handler"))
+=======
+			msg = sanitize(tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", multiline = TRUE, prevent_enter = TRUE))
+>>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
 			return TRUE
 
 		if("set_new_title")
