@@ -1,2 +1,2 @@
 /datum/species/teshari
-    vore_belly_default_variant = "t"
+    vore_belly_default_variant = "T"

@@ -944,6 +944,11 @@
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
 
+	//CHOMPEdit Start - vore sprites struggle animation
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1))
+		owner.vs_animate(belly_sprite_to_affect)
+	//CHOMPEdit End
+
 	if(is_wet)
 		if(!fancy_vore)
 			struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))

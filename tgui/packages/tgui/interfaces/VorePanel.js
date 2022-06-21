@@ -750,65 +750,63 @@ const VoreSelectedBellyVisuals = (props, context) => {
     <Fragment>
       <Section title="Vore Sprites">
         <Flex direction="row">
-          <Flex.Item basis="49%" grow={1}>
-            <LabeledList>
-              <LabeledList.Item label="Affect Vore Sprites">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_affects_vore_sprites" })}
-                  icon={affects_voresprite ? "toggle-on" : "toggle-off"}
-                  selected={affects_voresprite}
-                  content={affects_voresprite ? "Yes" : "No"}
-                />
-              </LabeledList.Item>
-              {affects_voresprite ? (
-                <span>
-                  <LabeledList.Item label="Vore Sprite Mode">
-                    {vore_sprite_flags.length && vore_sprite_flags.join(", ") || "None"}
+          <LabeledList>
+            <LabeledList.Item label="Affect Vore Sprites">
+              <Button
+                onClick={() => act("set_attribute", { attribute: "b_affects_vore_sprites" })}
+                icon={affects_voresprite ? "toggle-on" : "toggle-off"}
+                selected={affects_voresprite}
+                content={affects_voresprite ? "Yes" : "No"}
+              />
+            </LabeledList.Item>
+            {affects_voresprite ? (
+              <span>
+                <LabeledList.Item label="Vore Sprite Mode">
+                  {vore_sprite_flags.length && vore_sprite_flags.join(", ") || "None"}
+                  <Button
+                    onClick={() => act("set_attribute", { attribute: "b_vore_sprite_flags" })}
+                    ml={1}
+                    icon="plus" />
+                </LabeledList.Item>
+                <LabeledList.Item label="Count Absorbed prey for vore sprites">
+                  <Button
+                    onClick={() => act("set_attribute", { attribute: "b_count_absorbed_prey_for_sprites" })}
+                    icon={absorbed_voresprite ? "toggle-on" : "toggle-off"}
+                    selected={absorbed_voresprite}
+                    content={absorbed_voresprite ? "Yes" : "No"}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Animation when prey resist">
+                  <Button
+                    onClick={() => act("set_attribute", { attribute: "b_resist_animation" })}
+                    icon={resist_animation ? "toggle-on" : "toggle-off"}
+                    selected={resist_animation}
+                    content={resist_animation ? "Yes" : "No"}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Vore Sprite Size Factor">
+                  <Button
+                    onClick={() => act("set_attribute", { attribute: "b_size_factor_sprites" })}
+                    content={voresprite_size_factor} />
+                </LabeledList.Item>
+                {belly_sprite_option_shown ? (
+                  <LabeledList.Item label="Belly Sprite to affect">
                     <Button
-                      onClick={() => act("set_attribute", { attribute: "b_vore_sprite_flags" })}
-                      ml={1}
-                      icon="plus" />
+                      onClick={() => act("set_attribute", { attribute: "b_belly_sprite_to_affect" })}
+                      content={belly_sprite_to_affect} />
                   </LabeledList.Item>
-                  <LabeledList.Item label="Count Absorbed prey for vore sprites">
+                ) : ""}
+                {tail_option_shown && vore_sprite_flags.includes("Tail adjustment") ? (
+                  <LabeledList.Item label="Tail to change to">
                     <Button
-                      onClick={() => act("set_attribute", { attribute: "b_count_absorbed_prey_for_sprites" })}
-                      icon={absorbed_voresprite ? "toggle-on" : "toggle-off"}
-                      selected={absorbed_voresprite}
-                      content={absorbed_voresprite ? "Yes" : "No"}
+                      onClick={() => act("set_attribute", { attribute: "b_tail_to_change_to" })}
+                      content={tail_to_change_to}
                     />
                   </LabeledList.Item>
-                  <LabeledList.Item label="Animation when prey resist">
-                    <Button
-                      onClick={() => act("set_attribute", { attribute: "b_resist_animation" })}
-                      icon={resist_animation ? "toggle-on" : "toggle-off"}
-                      selected={resist_animation}
-                      content={resist_animation ? "Yes" : "No"}
-                    />
-                  </LabeledList.Item>
-                  <LabeledList.Item label="Vore Sprite Size Factor">
-                    <Button
-                      onClick={() => act("set_attribute", { attribute: "b_size_factor_sprites" })}
-                      content={voresprite_size_factor} />
-                  </LabeledList.Item>
-                  {belly_sprite_option_shown ? (
-                    <LabeledList.Item label="Belly Sprite to affect">
-                      <Button
-                        onClick={() => act("set_attribute", { attribute: "b_belly_sprite_to_affect" })}
-                        content={belly_sprite_to_affect} />
-                    </LabeledList.Item>
-                  ) : ""}
-                  {tail_option_shown && vore_sprite_flags.includes("Tail adjustment") ? (
-                    <LabeledList.Item label="Tail to change to">
-                      <Button
-                        onClick={() => act("set_attribute", { attribute: "b_tail_to_change_to" })}
-                        content={tail_to_change_to}
-                      />
-                    </LabeledList.Item>
-                  ) : ""}
-                </span>
-              ) : ""}
-            </LabeledList>
-          </Flex.Item>
+                ) : ""}
+              </span>
+            ) : ""}
+          </LabeledList>
         </Flex>
       </Section>
       <Section title="Belly Fullscreens Preview and Coloring">

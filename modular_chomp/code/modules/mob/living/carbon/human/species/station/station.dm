@@ -1,2 +1,2 @@
 /datum/species/unathi
-    vore_belly_default_variant = "l"
+    vore_belly_default_variant = "L"
