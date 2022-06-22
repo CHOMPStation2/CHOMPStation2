@@ -67,7 +67,6 @@
 		var/mob/observer/dead/ghost = body.ghostize(1)
 		ghost.admin_ghosted = 1
 		log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-		var/mob/observer/dead/ghost
 		if(build_mode)
 			togglebuildmode(body)
 			ghost = body.ghostize(1)
