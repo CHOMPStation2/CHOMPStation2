@@ -225,10 +225,10 @@
 
 	// Convert the recipes list into an array of strings. The UI does not need the associative list attached to each string.
 	var/list/tmp_recipes = list()
+	if(recipes)
+		for(var/i = 1, i <= recipes.len, i++)
+			tmp_recipes[i] = recipes[i]
 	data["recipes"] = tmp_recipes
-	for(var/i = 1, i <= recipes.len, i++)
-		tmp_recipes[i] = recipes[i]
-
 
 
 	// Read data from the reaction vessel.
