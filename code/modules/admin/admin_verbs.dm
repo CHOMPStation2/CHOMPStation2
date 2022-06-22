@@ -64,11 +64,9 @@
 	else
 		//ghostize
 		var/mob/body = mob
-<<<<<<< HEAD
 		var/mob/observer/dead/ghost = body.ghostize(1)
 		ghost.admin_ghosted = 1
 		log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-=======
 		var/mob/observer/dead/ghost
 		if(build_mode)
 			togglebuildmode(body)
@@ -79,7 +77,6 @@
 		else
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
->>>>>>> 2c7c9c3fec... Merge pull request #13094 from ItsSelis/rcon-fix
 		if(body)
 			body.teleop = ghost
 			if(!body.key)
