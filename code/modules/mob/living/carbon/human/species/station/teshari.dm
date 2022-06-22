@@ -64,11 +64,7 @@
 
 	ambiguous_genders = TRUE
 
-<<<<<<< HEAD
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED	| SPECIES_NO_POSIBRAIN //CHOMPedit: This is overriden by teshari_vr.dm. Noting here for future reference.
-=======
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
->>>>>>> a423e9e3a0... Merge pull request #13086 from VOREStation/upstream-merge-8649
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
