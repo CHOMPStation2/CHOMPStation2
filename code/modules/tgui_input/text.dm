@@ -10,20 +10,12 @@
  * * message - The content of the text input, shown in the body of the TGUI window.
  * * title - The title of the text input modal, shown on the top of the TGUI window.
  * * default - The default (or current) value, shown as a placeholder.
-<<<<<<< refs/remotes/Upstream/master
- * * max_length - Specifies a max length for input. MAX_MESSAGE_LEN is default (1024)
-=======
  * * max_length - Specifies a max length for input. MAX_MESSAGE_LEN is default (4096)
->>>>>>> Input Fixes
  * * multiline -  Bool that determines if the input box is much larger. Good for large messages, laws, etc.
  * * encode - Toggling this determines if input is filtered via html_encode. Setting this to FALSE gives raw input.
  * * timeout - The timeout of the textbox, after which the modal will close and qdel itself. Set to zero for no timeout.
  */
-<<<<<<< refs/remotes/Upstream/master
-/proc/tgui_input_text(mob/user, message = "", title = "Text Input", default, max_length = MAX_MESSAGE_LEN, multiline = FALSE, encode = FALSE, timeout = 0)
-=======
 /proc/tgui_input_text(mob/user, message = "", title = "Text Input", default, max_length = INFINITY, multiline = FALSE, encode = FALSE, timeout = 0, prevent_enter = FALSE)
->>>>>>> Input Fixes
 	if (istext(user))
 		stack_trace("tgui_input_text() received text for user instead of mob")
 		return
@@ -47,11 +39,7 @@
 				return input(user, message, title, default) as message|null
 			else
 				return input(user, message, title, default) as text|null
-<<<<<<< refs/remotes/Upstream/master
-	var/datum/tgui_input_text/text_input = new(user, message, title, default, max_length, multiline, encode, timeout)
-=======
 	var/datum/tgui_input_text/text_input = new(user, message, title, default, max_length, multiline, encode, timeout, prevent_enter)
->>>>>>> Input Fixes
 	text_input.tgui_interact(user)
 	text_input.wait()
 	if (text_input)
@@ -86,13 +74,9 @@
 	/// The title of the TGUI window
 	var/title
 
-<<<<<<< refs/remotes/Upstream/master
-/datum/tgui_input_text/New(mob/user, message, title, default, max_length, multiline, encode, timeout)
-=======
 	var/prevent_enter
 
 /datum/tgui_input_text/New(mob/user, message, title, default, max_length, multiline, encode, timeout, prevent_enter)
->>>>>>> Input Fixes
 	src.default = default
 	src.encode = encode
 	src.max_length = max_length
@@ -103,10 +87,7 @@
 		src.timeout = timeout
 		start_time = world.time
 		QDEL_IN(src, timeout)
-<<<<<<< refs/remotes/Upstream/master
-=======
 	src.prevent_enter = prevent_enter
->>>>>>> Input Fixes
 
 /datum/tgui_input_text/Destroy(force, ...)
 	SStgui.close_uis(src)
@@ -142,10 +123,7 @@
 	data["placeholder"] = default // Default is a reserved keyword
 	data["swapped_buttons"] = !usr.client.prefs.tgui_swapped_buttons
 	data["title"] = title
-<<<<<<< refs/remotes/Upstream/master
-=======
 	data["prevent_enter"] = prevent_enter
->>>>>>> Input Fixes
 	return data
 
 /datum/tgui_input_text/tgui_data(mob/user)
