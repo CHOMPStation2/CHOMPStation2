@@ -947,11 +947,6 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"ema")
 
-				if("im_digest")
-					var/new_message = tgui_input_text(user,"These are sent to prey every minute when you are on Digest mode. Write them in 2nd person ('%pred's %belly squishes down on you.')."+help,"Idle Message (Digest)",host.vore_selected.get_messages("im_digest"), multiline = TRUE, prevent_enter = TRUE)
-					if(new_message)
-						host.vore_selected.set_messages(new_message,"im_digest")
-
 				if("im_hold")
 					var/new_message = tgui_input_text(user,"These are sent to prey every minute when you are on Hold mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Hold)",host.vore_selected.get_messages("im_hold"), multiline = TRUE, prevent_enter = TRUE)
 					if(new_message)
