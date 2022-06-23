@@ -362,9 +362,6 @@
 	if(!new_gender_identity)
 		return 0
 	gender = new_gender_identity
-<<<<<<< HEAD
-	return 1
-=======
 	return 1
 
 /mob/living/silicon/pai/verb/pai_hide()
@@ -433,4 +430,3 @@
 		else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears))
 			if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
 				to_chat(G, "<span class='cult'>[src.name]'s screen prints, \"[message]\"</span>")
->>>>>>> d3d28022f6... Merge pull request #13124 from Very-Soft/screenmsg
