@@ -59,11 +59,7 @@
 		switch(href_list["flavor_text"])
 			if("open")
 			if("general")
-<<<<<<< HEAD
-				var/msg = sanitize(input(usr,"Give a general description of your character. This will be shown regardless of clothings.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, MAX_RECORD_LENGTH, extra = 0)	//VOREStation Edit: separating out OOC notes
-=======
 				var/msg = sanitize(tgui_input_text(usr,"Give a general description of your character. This will be shown regardless of clothings.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]]), multiline = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
->>>>>>> b875945450... Merge pull request #13112 from ItsSelis/tgui-input-conversions
 				if(CanUseTopic(user))
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 			else
