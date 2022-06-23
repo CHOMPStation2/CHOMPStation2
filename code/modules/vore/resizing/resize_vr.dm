@@ -139,7 +139,6 @@
 		return
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
-	var/new_size = tgui_input_number(nagmessage, "Pick a Size")
 	var/default = size_multiplier * 100
 	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default)
 	if(size_range_check(new_size))
