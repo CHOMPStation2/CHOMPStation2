@@ -142,6 +142,12 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
 
+/datum/sprite_accessory/marking/ch/sylveonheadribbons1
+	name = "Sylveon Head Ribbons"
+	icon_state = "sylveon-bowribbons1"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
 	guilmonhead
 		name = "Guilmon head"
 		icon_state = "guilmon_head"
