@@ -180,35 +180,17 @@
 /datum/tgui/proc/send_full_update(custom_data, force)
 	if(!user.client || !initialized || closing)
 		return
-<<<<<<< refs/remotes/Upstream/master
-	if(!COOLDOWN_FINISHED(src, refresh_cooldown))
-		refreshing = TRUE
-		addtimer(CALLBACK(src, .proc/send_full_update), TGUI_REFRESH_FULL_UPDATE_COOLDOWN, TIMER_UNIQUE)
-		return
-	refreshing = FALSE
-=======
-<<<<<<< HEAD
-=======
 	//if(!COOLDOWN_FINISHED(src, refresh_cooldown))
 		//refreshing = TRUE
 		//addtimer(CALLBACK(src, .proc/send_full_update), TGUI_REFRESH_FULL_UPDATE_COOLDOWN, TIMER_UNIQUE)
 		//return
 	//refreshing = FALSE
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 	var/should_update_data = force || status >= STATUS_UPDATE
 	window.send_message("update", get_payload(
 		custom_data,
 		with_data = should_update_data,
 		with_static_data = TRUE))
-<<<<<<< refs/remotes/Upstream/master
-	COOLDOWN_START(src, refresh_cooldown, TGUI_REFRESH_FULL_UPDATE_COOLDOWN)
-=======
-<<<<<<< HEAD
-=======
 	//COOLDOWN_START(src, refresh_cooldown, TGUI_REFRESH_FULL_UPDATE_COOLDOWN)
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 
 /**
  * public
