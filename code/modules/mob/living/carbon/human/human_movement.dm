@@ -291,8 +291,8 @@
 
 	playsound(T, S, volume, FALSE)
 	return
-
+  
 /mob/living/carbon/human/set_dir(var/new_dir)
 	. = ..()
-	if(. && species.tail)
+	if(. && (species.tail || tail_style))
 		update_tail_showing()
