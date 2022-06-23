@@ -123,9 +123,14 @@
 		if(ishuman(body))
 			var/mob/living/carbon/human/H = body
 			add_overlay(H.overlays_standing)
-
-	if(!T)	T = pick(latejoin)			//Safety in case we cannot find the body's position
-	forceMove(T)
+			
+	if(!T)
+		T = pick(latejoin)			//Safety in case we cannot find the body's position
+	if(T)
+		forceMove(T)
+	else
+		moveToNullspace()
+		to_chat(src, "<span class='danger'>Could not locate an observer spawn point. Use the Teleport verb to jump to the station map.</span>")
 
 	if(!name)							//To prevent nameless ghosts
 		name = capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
