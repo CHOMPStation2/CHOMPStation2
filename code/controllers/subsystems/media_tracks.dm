@@ -126,21 +126,12 @@ SUBSYSTEM_DEF(media_tracks)
 			report_progress("New media track added by [C]: [T.title]")
 		sort_tracks()
 		return
-<<<<<<< HEAD
-
-	var/title = input(C, "REQUIRED: Provide title for track", "Track Title") as text|null
-	if(!title)
-		return
-
-	var/duration = input(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration") as num|null
-=======
 	
 	var/title = tgui_input_text(C, "REQUIRED: Provide title for track", "Track Title")
 	if(!title)
 		return
 	
 	var/duration = tgui_input_number(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration")
->>>>>>> b875945450... Merge pull request #13112 from ItsSelis/tgui-input-conversions
 	if(!duration)
 		return
 
@@ -148,13 +139,8 @@ SUBSYSTEM_DEF(media_tracks)
 	var/artist = tgui_input_text(C, "Optional: Provide artist for track", "Track Artist")
 	if(isnull(artist)) // Cancel rather than empty string
 		return
-<<<<<<< HEAD
-
-	var/genre = input(C, "Optional: Provide genre for track (try to match an existing one)", "Track Genre") as text|null
-=======
 	
 	var/genre = tgui_input_text(C, "Optional: Provide genre for track (try to match an existing one)", "Track Genre")
->>>>>>> b875945450... Merge pull request #13112 from ItsSelis/tgui-input-conversions
 	if(isnull(genre)) // Cancel rather than empty string
 		return
 
