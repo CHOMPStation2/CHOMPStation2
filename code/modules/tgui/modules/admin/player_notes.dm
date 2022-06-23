@@ -118,11 +118,7 @@
 
 		if("add_player_info")
 			var/key = params["ckey"]
-<<<<<<< refs/remotes/Upstream/master
-			var/add = tgui_input_text(usr, "Write your comment below.", "Add Player Info", multiline = TRUE)
-=======
 			var/add = tgui_input_text(usr, "Write your comment below.", "Add Player Info", multiline = TRUE, prevent_enter = TRUE)
->>>>>>> Input Fixes
 			if(!add) return
 
 			notes_add(key,add,usr)
