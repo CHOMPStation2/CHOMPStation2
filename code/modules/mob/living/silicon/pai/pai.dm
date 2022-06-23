@@ -84,8 +84,7 @@
 
 	var/obj/item/device/pda/ai/pai/pda = null
 
-	var/secHUD = 0			// Toggles whether the Security HUD is active or not
-	var/medHUD = 0			// Toggles whether the Medical  HUD is active or not
+	var/paiHUD = 0			// Toggles whether the AR HUD is active or not
 
 	var/medical_cannotfind = 0
 	var/datum/data/record/medicalActive1		// Datacore record declarations for record software
@@ -498,36 +497,3 @@
 	src.master = null
 	src.master_dna = null
 	to_chat(src, "<font color=green>You feel unbound.</font>")
-
-//FLUSH RAM, it sounded cool at first tbh now im not so sure
-//Externally now called Factory Reset.
-/mob/living/silicon/pai/verb/flush_ram()
-	set name = "Factory Reset"
-	set category = "pAI Commands"
-	set desc = "Uninstalls all software and reinstalls default."
-
-	software = null
-	software = default_pai_software.Copy()
-	ram = 100 //Reset since we just admin yeet the software and reloaded defaults.
-// Various software-specific vars
-	secHUD = 0			// Toggles whether the Security HUD is active or not
-	medHUD = 0			// Toggles whether the Medical  HUD is active or not
-	medical_cannotfind = 0
-	security_cannotfind = 0
-	translator_on = 0 // keeps track of the translator module
-//MEDHUD
-	src.plane_holder.set_vis(VIS_CH_STATUS, medHUD)
-	src.plane_holder.set_vis(VIS_CH_HEALTH, medHUD)
-//SECHUD
-	src.plane_holder.set_vis(VIS_CH_ID, secHUD)
-	src.plane_holder.set_vis(VIS_CH_WANTED, secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPTRACK, secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPLOYAL, secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPCHEM, secHUD)
-//Translator
-	src.remove_language(LANGUAGE_UNATHI)
-	src.remove_language(LANGUAGE_SIIK)
-	src.remove_language(LANGUAGE_AKHANI)
-	src.remove_language(LANGUAGE_SKRELLIAN)
-	src.remove_language(LANGUAGE_ZADDAT)
-	src.remove_language(LANGUAGE_SCHECHI)
