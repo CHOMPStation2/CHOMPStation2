@@ -846,15 +846,7 @@
 		if (ismob(M))
 			if(!check_if_greater_rights_than(M.client))
 				return
-<<<<<<< refs/remotes/Upstream/master
-			var/reason = sanitize(tgui_input_text(usr, "Please enter reason.", multiline = TRUE))
-=======
-<<<<<<< HEAD
-			var/reason = sanitize(input(usr, "Please enter reason.") as null|message)
-=======
 			var/reason = sanitize(tgui_input_text(usr, "Please enter reason.", multiline = TRUE, prevent_enter = TRUE))
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 			if(!reason)
 				return
 
@@ -1829,15 +1821,7 @@
 		src.access_news_network()
 
 	else if(href_list["ac_set_new_message"])
-<<<<<<< refs/remotes/Upstream/master
-		src.admincaster_feed_message.body = sanitize(tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", "", multiline = TRUE))
-=======
-<<<<<<< HEAD
-		src.admincaster_feed_message.body = sanitize(input(usr, "Write your Feed story", "Network Channel Handler", "")  as message)
-=======
 		src.admincaster_feed_message.body = sanitize(tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", "", multiline = TRUE, prevent_enter = TRUE))
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 		src.access_news_network()
 
 	else if(href_list["ac_submit_new_message"])
