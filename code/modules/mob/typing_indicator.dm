@@ -40,16 +40,8 @@
 	set hidden = 1
 
 	set_typing_indicator(TRUE)
-<<<<<<< HEAD
-	var/message
-	if(usr.client.prefs.tgui_input_mode)
-		message = tgui_input_text(usr, "Type your message:", "Say")
-	else
-		message = input(usr, "Type your message:", "Say") as text
-=======
 	var/message = tgui_input_text(usr, "Type your message:", "Say")
 	message = readd_quotes(message)
->>>>>>> 2999d185f1... Merge pull request #13115 from ItsSelis/tgui-input-framework-hotfix
 	set_typing_indicator(FALSE)
 
 	if(message)
@@ -60,16 +52,8 @@
 	set hidden = 1
 
 	set_typing_indicator(TRUE)
-<<<<<<< HEAD
-	var/message
-	if(usr.client.prefs.tgui_input_mode)
-		message = tgui_input_message(usr, "Type your message:", "Emote")
-	else
-		message = input(usr, "Type your message:", "Emote") as message
-=======
 	var/message = tgui_input_text(usr, "Type your message:", "Emote", multiline = TRUE)
 	message = readd_quotes(message)
->>>>>>> 2999d185f1... Merge pull request #13115 from ItsSelis/tgui-input-framework-hotfix
 	set_typing_indicator(FALSE)
 
 	if(message)
@@ -80,16 +64,8 @@
 	set name = ".Whisper"
 	set hidden = 1
 
-<<<<<<< HEAD
-	var/message
-	if(usr.client.prefs.tgui_input_mode)
-		message = tgui_input_text(usr, "Type your message:", "Whisper")
-	else
-		message = input(usr, "Type your message:", "Whisper") as text
-=======
 	var/message = tgui_input_text(usr, "Type your message:", "Whisper")
 	message = readd_quotes(message)
->>>>>>> 2999d185f1... Merge pull request #13115 from ItsSelis/tgui-input-framework-hotfix
 
 	if(message)
 		whisper(message)
@@ -98,16 +74,8 @@
 	set name = ".Subtle"
 	set hidden = 1
 
-<<<<<<< HEAD
-	var/message
-	if(usr.client.prefs.tgui_input_mode)
-		message = tgui_input_message(usr, "Type your message:", "Subtle")
-	else
-		message = input(usr, "Type your message:", "Subtle") as message
-=======
 	var/message = tgui_input_text(usr, "Type your message:", "Subtle", multiline = TRUE)
 	message = readd_quotes(message)
->>>>>>> 2999d185f1... Merge pull request #13115 from ItsSelis/tgui-input-framework-hotfix
 
 	if(message)
 		me_verb_subtle(message)
