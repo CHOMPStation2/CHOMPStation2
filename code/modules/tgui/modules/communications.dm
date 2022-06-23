@@ -260,7 +260,7 @@
 				if(message_cooldown > world.time)
 					to_chat(usr, "<span class='warning'>Please allow at least one minute to pass between announcements.</span>")
 					return
-				var/input = tgui_input_text(usr, "Please write a message to announce to the station crew.", "Priority Announcement", multiline = TRUE)
+				var/input = tgui_input_text(usr, "Please write a message to announce to the station crew.", "Priority Announcement", multiline = TRUE, prevent_enter = TRUE)
 				if(!input || message_cooldown > world.time || ..() || !(is_authenticated(usr) == COMM_AUTHENTICATION_MAX))
 					return
 				if(length(input) < COMM_MSGLEN_MINIMUM)
@@ -324,11 +324,11 @@
 					post_status(src, params["statdisp"], user = usr)
 
 		if("setmsg1")
-			stat_msg1 = reject_bad_text(sanitize(input(usr, "Line 1", "Enter Message Text", stat_msg1) as text|null, 40), 40)
+			stat_msg1 = reject_bad_text(sanitize(tgui_input_text(usr, "Line 1", "Enter Message Text", stat_msg1, 40), 40), 40)
 			setMenuState(usr, COMM_SCREEN_STAT)
 
 		if("setmsg2")
-			stat_msg2 = reject_bad_text(sanitize(input(usr, "Line 2", "Enter Message Text", stat_msg2) as text|null, 40), 40)
+			stat_msg2 = reject_bad_text(sanitize(tgui_input_text(usr, "Line 2", "Enter Message Text", stat_msg2, 40), 40), 40)
 			setMenuState(usr, COMM_SCREEN_STAT)
 
 		// OMG CENTCOMM LETTERHEAD
@@ -340,7 +340,7 @@
 				var/input = sanitize(tgui_input_text(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement. \
 				Please be aware that this process is very expensive, and abuse will lead to... termination.  \
 				Transmission does not guarantee a response. \
-				There is a 30 second delay before you may send another message, be clear, full and concise.", "Central Command Quantum Messaging", multiline = TRUE))
+				There is a 30 second delay before you may send another message, be clear, full and concise.", "Central Command Quantum Messaging", multiline = TRUE, prevent_enter = TRUE))
 				if(!input || ..() || !(is_authenticated(usr) == COMM_AUTHENTICATION_MAX))
 					return
 				if(length(input) < COMM_CCMSGLEN_MINIMUM)

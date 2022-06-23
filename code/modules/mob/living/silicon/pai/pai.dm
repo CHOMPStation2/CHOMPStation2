@@ -22,7 +22,7 @@
 	var/list/software = list()
 	var/userDNA		// The DNA string of our assigned user
 	var/obj/item/device/paicard/card	// The card we inhabit
-	var/obj/item/device/radio/radio		// Our primary radio
+	var/obj/item/device/radio/borg/pai/radio		// Our primary radio
 	var/obj/item/device/communicator/integrated/communicator	// Our integrated communicator.
 
 	var/chassis = "pai-repairbot"   // A record of your chosen chassis.
@@ -84,8 +84,7 @@
 
 	var/obj/item/device/pda/ai/pai/pda = null
 
-	var/secHUD = 0			// Toggles whether the Security HUD is active or not
-	var/medHUD = 0			// Toggles whether the Medical  HUD is active or not
+	var/paiHUD = 0			// Toggles whether the AR HUD is active or not
 
 	var/medical_cannotfind = 0
 	var/datum/data/record/medicalActive1		// Datacore record declarations for record software
@@ -112,7 +111,7 @@
 	communicator = new(src)
 	if(card)
 		if(!card.radio)
-			card.radio = new /obj/item/device/radio(src.card)
+			card.radio = new /obj/item/device/radio/borg/pai(src.card)
 		radio = card.radio
 
 	//Default languages without universal translator software
@@ -135,7 +134,7 @@
 
 		var/datum/data/pda/app/messenger/M = pda.find_program(/datum/data/pda/app/messenger)
 		if(M)
-			M.toff = TRUE
+			M.toff = FALSE
 	..()
 
 /mob/living/silicon/pai/Login()
@@ -143,7 +142,6 @@
 	// Vorestation Edit: Meta Info for pAI
 	if (client.prefs)
 		ooc_notes = client.prefs.metadata
-
 
 // this function shows the information about being silenced as a pAI in the Status panel
 /mob/living/silicon/pai/proc/show_silenced()
@@ -403,12 +401,14 @@
 			M.drop_from_inventory(H)
 		H.loc = get_turf(src)
 		src.loc = get_turf(H)
-
-	// Move us into the card and move the card to the ground.
-	src.loc = card
-	card.loc = get_turf(card)
-	src.forceMove(card)
-	card.forceMove(card.loc)
+	
+	if(isbelly(loc))	//If in tumby, when fold up, card go into tumby
+		var/obj/belly/B = loc
+		src.forceMove(card)
+		card.forceMove(B)
+	else				//Otherwise go on floor
+		src.forceMove(card)
+		card.forceMove(get_turf(card))
 	canmove = 1
 	resting = 0
 	icon_state = "[chassis]"
@@ -441,11 +441,15 @@
 					idcard.access |= ID.access
 					to_chat(user, "<span class='notice'>You add the access from the [W] to [src].</span>")
 					to_chat(src, "<span class='notice'>\The [user] swipes the [W] over you. You copy the access codes.</span>")
+					if(radio)
+						radio.recalculateChannels()
 					return
 				if("Remove Access")
 					idcard.access = list()
 					to_chat(user, "<span class='notice'>You remove the access from [src].</span>")
 					to_chat(src, "<span class='warning'>\The [user] swipes the [W] over you, removing access codes from you.</span>")
+					if(radio)
+						radio.recalculateChannels()
 					return
 				if("Cancel")
 					return
@@ -493,36 +497,3 @@
 	src.master = null
 	src.master_dna = null
 	to_chat(src, "<font color=green>You feel unbound.</font>")
-
-//FLUSH RAM, it sounded cool at first tbh now im not so sure
-//Externally now called Factory Reset.
-/mob/living/silicon/pai/verb/flush_ram()
-	set name = "Factory Reset"
-	set category = "pAI Commands"
-	set desc = "Uninstalls all software and reinstalls default."
-
-	software = null
-	software = default_pai_software.Copy()
-	ram = 100 //Reset since we just admin yeet the software and reloaded defaults.
-// Various software-specific vars
-	secHUD = 0			// Toggles whether the Security HUD is active or not
-	medHUD = 0			// Toggles whether the Medical  HUD is active or not
-	medical_cannotfind = 0
-	security_cannotfind = 0
-	translator_on = 0 // keeps track of the translator module
-//MEDHUD
-	src.plane_holder.set_vis(VIS_CH_STATUS, medHUD)
-	src.plane_holder.set_vis(VIS_CH_HEALTH, medHUD)
-//SECHUD
-	src.plane_holder.set_vis(VIS_CH_ID, secHUD)
-	src.plane_holder.set_vis(VIS_CH_WANTED, secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPTRACK, secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPLOYAL, secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPCHEM, secHUD)
-//Translator
-	src.remove_language(LANGUAGE_UNATHI)
-	src.remove_language(LANGUAGE_SIIK)
-	src.remove_language(LANGUAGE_AKHANI)
-	src.remove_language(LANGUAGE_SKRELLIAN)
-	src.remove_language(LANGUAGE_ZADDAT)
-	src.remove_language(LANGUAGE_SCHECHI)
