@@ -273,7 +273,10 @@
 	P.slip_vore = src.slip_vore
 	P.stumble_vore = src.stumble_vore
 
-<<<<<<< HEAD
+	P.nutrition_message_visible = src.nutrition_message_visible
+	P.nutrition_messages = src.nutrition_messages
+	P.weight_message_visible = src.weight_message_visible
+	P.weight_messages = src.weight_messages
 
 	//CHOMP stuff
 	P.latejoin_vore = src.latejoin_vore
@@ -281,13 +284,6 @@
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
 	P.autotransferable = src.autotransferable
-
-=======
-	P.nutrition_message_visible = src.nutrition_message_visible
-	P.nutrition_messages = src.nutrition_messages
-	P.weight_message_visible = src.weight_message_visible
-	P.weight_messages = src.weight_messages
->>>>>>> 1eee441c21... Merge pull request #13101 from Heroman3003/editable-fat
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -328,20 +324,18 @@
 	drop_vore = P.drop_vore
 	slip_vore = P.slip_vore
 	stumble_vore = P.stumble_vore
+	
+	nutrition_message_visible = P.nutrition_message_visible
+	nutrition_messages = P.nutrition_messages
+	weight_message_visible = P.weight_message_visible
+	weight_messages = P.weight_messages
 
-<<<<<<< HEAD
 	//CHOMP stuff
 	latejoin_vore = P.latejoin_vore
 	latejoin_prey = P.latejoin_prey
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
 	autotransferable = P.autotransferable
-=======
-	nutrition_message_visible = P.nutrition_message_visible
-	nutrition_messages = P.nutrition_messages
-	weight_message_visible = P.weight_message_visible
-	weight_messages = P.weight_messages
->>>>>>> 1eee441c21... Merge pull request #13101 from Heroman3003/editable-fat
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
