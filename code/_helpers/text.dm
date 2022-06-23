@@ -14,11 +14,9 @@
  */
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
-/proc/sanitizeSQL(var/t as text) 
-	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
-	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
-	return t
-	//CHOMPEdit End
+/proc/sanitizeSQL(var/t as text)
+	var/sqltext = dbcon.Quote(t);
+	return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 
 /*
  * Text sanitization
@@ -404,9 +402,9 @@
 	t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 	t = replacetext(t, "\[row\]", "</td><tr>")
 	t = replacetext(t, "\[cell\]", "<td>")
-	t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
-	t = replacetext(t, "\[redlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/redntlogo.png>") //CHOMPEdit
-	t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit
+	t = replacetext(t, "\[logo\]", "<img src = ntlogo.png>")
+	t = replacetext(t, "\[redlogo\]", "<img src = redntlogo.png>")
+	t = replacetext(t, "\[sglogo\]", "<img src = sglogo.png>")
 	t = replacetext(t, "\[editorbr\]", "")
 	return t
 
@@ -489,14 +487,9 @@
  ** no_trim - Prevents the input from being trimmed if you intend to parse newlines or whitespace.
 */
 /proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN, no_trim=FALSE)
-<<<<<<< HEAD
-	var/name = input(user, message, title, default) as text|null
-
-=======
 	var/user_input = input(user, message, title, default) as text|null
 	if(isnull(user_input)) // User pressed cancel
 		return
->>>>>>> 1beb095667... Merge pull request #13126 from ItsSelis/tgui-input-framework-hotfix
 	if(no_trim)
 		return copytext(html_encode(user_input), 1, max_length)
 	else
@@ -513,13 +506,9 @@
  ** no_trim - Prevents the input from being trimmed if you intend to parse newlines or whitespace.
 */
 /proc/stripped_multiline_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN, no_trim=FALSE)
-<<<<<<< HEAD
-	var/name = input(user, message, title, default) as message|null
-=======
 	var/user_input = input(user, message, title, default) as message|null
 	if(isnull(user_input)) // User pressed cancel
 		return
->>>>>>> 1beb095667... Merge pull request #13126 from ItsSelis/tgui-input-framework-hotfix
 	if(no_trim)
 		return copytext(html_encode(user_input), 1, max_length)
 	else
