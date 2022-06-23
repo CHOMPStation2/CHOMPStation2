@@ -363,9 +363,6 @@
 	if(!new_gender_identity)
 		return 0
 	gender = new_gender_identity
-<<<<<<< HEAD
-	return 1
-=======
 	return 1
 
 /mob/living/silicon/pai/verb/pai_hide()
@@ -379,4 +376,3 @@
 	else
 		hide_glow = FALSE
 	update_icon()
->>>>>>> b46f6ef17f... Merge pull request #13121 from Very-Soft/resizeandhide
