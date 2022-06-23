@@ -151,15 +151,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				return
 
 			var/current_ad = usr.client.prefs.directory_ad
-<<<<<<< refs/remotes/Upstream/master
-			var/new_ad = sanitize(tgui_input_text(usr, "Change your character ad", "Character Ad", current_ad, multiline = TRUE), extra = 0)
-=======
-<<<<<<< HEAD
-			var/new_ad = sanitize(input(usr, "Change your character ad", "Character Ad", current_ad) as message|null, extra = 0)
-=======
 			var/new_ad = sanitize(tgui_input_text(usr, "Change your character ad", "Character Ad", current_ad, multiline = TRUE, prevent_enter = TRUE), extra = 0)
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 			if(isnull(new_ad))
 				return
 			usr.client.prefs.directory_ad = new_ad
