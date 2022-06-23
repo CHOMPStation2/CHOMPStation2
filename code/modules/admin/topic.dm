@@ -151,11 +151,7 @@
 			switch(new_rank)
 				if(null,"") return
 				if("*New Rank*")
-<<<<<<< HEAD
-					new_rank = input(usr, "Please input a new rank", "New custom rank", null, null) as null|text
-=======
 					new_rank = tgui_input_text(usr, "Please input a new rank", "New custom rank")
->>>>>>> b875945450... Merge pull request #13112 from ItsSelis/tgui-input-conversions
 					if(config.admin_legacy_system)
 						new_rank = ckeyEx(new_rank)
 					if(!new_rank)
@@ -2023,21 +2019,6 @@
 
 	// player info stuff
 
-	if(href_list["add_player_info"])
-		var/key = href_list["add_player_info"]
-		var/add = sanitize(input(usr, "Add Player Info") as null|text)
-		if(!add) return
-
-		notes_add(key,add,usr)
-		show_player_info(key)
-
-	if(href_list["remove_player_info"])
-		var/key = href_list["remove_player_info"]
-		var/index = text2num(href_list["remove_index"])
-
-		notes_del(key, index)
-		show_player_info(key)
-
 	if(href_list["notes"])
 		var/ckey = href_list["ckey"]
 		if(!ckey)
@@ -2047,7 +2028,9 @@
 
 		switch(href_list["notes"])
 			if("show")
-				show_player_info(ckey)
+				var/datum/tgui_module/player_notes_info/A = new(src)
+				A.key = ckey
+				A.tgui_interact(usr)
 			if("list")
 				var/filter
 				if(href_list["filter"] && href_list["filter"] != "0")
