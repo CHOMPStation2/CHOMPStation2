@@ -863,6 +863,10 @@
 "nD" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/tether_away/beach/water)
+"nP" = (
+/mob/living/simple_mob/animal/passive/fennec/faux,
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "of" = (
 /obj/structure/table/woodentable,
 /obj/random/drinkbottle,
@@ -11025,7 +11029,7 @@ ad
 ad
 ad
 ad
-ad
+nP
 ad
 ad
 ad
