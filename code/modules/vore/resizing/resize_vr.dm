@@ -139,12 +139,9 @@
 		return
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
-<<<<<<< HEAD
-	var/new_size = input(nagmessage, "Pick a Size") as num|null
-=======
+	var/new_size = tgui_input_number(nagmessage, "Pick a Size")
 	var/default = size_multiplier * 100
 	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default)
->>>>>>> b46f6ef17f... Merge pull request #13121 from Very-Soft/resizeandhide
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		if(temporary_form)	//CHOMPEdit - resizing both our forms
