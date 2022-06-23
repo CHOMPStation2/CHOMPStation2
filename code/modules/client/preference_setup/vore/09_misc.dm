@@ -58,15 +58,7 @@
 		pref.directory_erptag = new_erptag
 		return TOPIC_REFRESH
 	else if(href_list["directory_ad"])
-<<<<<<< refs/remotes/Upstream/master
-		var/msg = sanitize(tgui_input_text(user,"Write your advertisement here!", "Flavor Text", html_decode(pref.directory_ad), multiline = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
-=======
-<<<<<<< HEAD
-		var/msg = sanitize(input(user,"Write your advertisement here!", "Flavor Text", html_decode(pref.directory_ad)) as message, extra = 0)	//VOREStation Edit: separating out OOC notes
-=======
 		var/msg = sanitize(tgui_input_text(user,"Write your advertisement here!", "Flavor Text", html_decode(pref.directory_ad), multiline = TRUE, prevent_enter = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 		pref.directory_ad = msg
 		return TOPIC_REFRESH
 	else if(href_list["toggle_sensor_setting"])
