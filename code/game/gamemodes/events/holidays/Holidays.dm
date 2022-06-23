@@ -214,13 +214,8 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 
 	Holiday = list()
 
-<<<<<<< HEAD
-	var/H = input(src,"What holiday is it today?","Set Holiday") as text
-	var/B = input(src,"Now explain what the holiday is about","Set Holiday") as message
-=======
 	var/H = tgui_input_text(src,"What holiday is it today?","Set Holiday")
 	var/B = tgui_input_text(src,"Now explain what the holiday is about","Set Holiday", multiline = TRUE, prevent_enter = TRUE)
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
 
 
 	Holiday[H] = B
