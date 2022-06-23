@@ -149,6 +149,10 @@
 	icon_state = "tile-carpet-retro-red"
 	desc = "A piece of carpet with red-ical space patterns. It is the same size as a normal floor tile!"
 
+/obj/item/stack/tile/carpet/happy
+	icon_state = "tile-carpet-happy"
+	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"
+
 /obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw //CHOMP Comment: Yawn commented out this block, but CHOMP already commented out this stuff so I just removed theirs.
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
