@@ -108,12 +108,7 @@
 "aw" = (
 /obj/machinery/appliance/mixer/cereal,
 /obj/machinery/light{
-<<<<<<< HEAD
 	dir = 4
-=======
-	dir = 4;
-	icon_state = "tube1"
->>>>>>> 081b1ba3d3... Merge pull request #13103 from ItsSelis/upstream-merge-8644-fix
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
@@ -199,12 +194,7 @@
 "aK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-<<<<<<< HEAD
 	dir = 4
-=======
-	dir = 4;
-	icon_state = "tube1"
->>>>>>> 081b1ba3d3... Merge pull request #13103 from ItsSelis/upstream-merge-8644-fix
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
@@ -325,12 +315,7 @@
 /area/submap/diner)
 "be" = (
 /obj/machinery/light{
-<<<<<<< HEAD
 	dir = 4
-=======
-	dir = 4;
-	icon_state = "tube1"
->>>>>>> 081b1ba3d3... Merge pull request #13103 from ItsSelis/upstream-merge-8644-fix
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
@@ -376,18 +361,8 @@
 /area/submap/diner)
 "bl" = (
 /turf/simulated/floor/lino,
-<<<<<<< HEAD
 /area/submap/diner)
 "bm" = (
-=======
-/area/submap/Diner)
-"bj" = (
-/obj/structure/table/standard,
-/obj/random/mug,
-/turf/simulated/floor/tiled/white,
-/area/submap/Diner)
-"bk" = (
->>>>>>> 081b1ba3d3... Merge pull request #13103 from ItsSelis/upstream-merge-8644-fix
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -416,12 +391,7 @@
 "br" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/windoor_assembly{
-<<<<<<< HEAD
 	dir = 2
-=======
-	dir = 2;
-	icon_state = "l_windoor_assembly01"
->>>>>>> 081b1ba3d3... Merge pull request #13103 from ItsSelis/upstream-merge-8644-fix
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
@@ -482,11 +452,7 @@
 /area/submap/diner)
 "bC" = (
 /obj/structure/table/standard,
-<<<<<<< HEAD
 /obj/item/stack/cable_coil,
-=======
-/obj/random/soap/anom,
->>>>>>> 081b1ba3d3... Merge pull request #13103 from ItsSelis/upstream-merge-8644-fix
 /turf/simulated/floor/tiled/hydro,
 /area/submap/diner)
 "gw" = (
