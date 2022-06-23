@@ -10,15 +10,7 @@
  * * timeout - The timeout of the alert, after which the modal will close and qdel itself. Set to zero for no timeout.
  * * autofocus - The bool that controls if this alert should grab window focus.
  */
-<<<<<<< refs/remotes/Upstream/master:code/modules/tgui_input/alert.dm
-/proc/tgui_alert(mob/user, message = "", title, list/buttons = list("Ok"), timeout = 0, autofocus = TRUE)
-=======
-<<<<<<< HEAD:code/modules/tgui/tgui_alert.dm
-/proc/tgui_alert(mob/user, message = null, title = null, list/buttons = list("Ok"), timeout = 0)
-=======
 /proc/tgui_alert(mob/user, message = "", title, list/buttons = list("Ok"), timeout = 0, autofocus = TRUE, strict_byond = FALSE)
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix:code/modules/tgui_input/alert.dm
->>>>>>> Input Fixes:code/modules/tgui/tgui_alert.dm
 	if (istext(buttons))
 		stack_trace("tgui_alert() received text for buttons instead of list")
 		return
@@ -33,33 +25,19 @@
 			user = client.mob
 		else
 			return
-<<<<<<< refs/remotes/Upstream/master:code/modules/tgui_input/alert.dm
-=======
-<<<<<<< HEAD:code/modules/tgui/tgui_alert.dm
-	var/datum/tgui_alert/alert = new(user, message, title, buttons, timeout)
-=======
->>>>>>> Input Fixes:code/modules/tgui/tgui_alert.dm
 	// A gentle nudge - you should not be using TGUI alert for anything other than a simple message.
 	if(length(buttons) > 3)
 		log_tgui(user, "Error: TGUI Alert initiated with too many buttons. Use a list.", "TguiAlert")
 		return tgui_input_list(user, message, title, buttons, timeout, autofocus)
 
 	// Client does NOT have tgui_input on: Returns regular input
-<<<<<<< refs/remotes/Upstream/master:code/modules/tgui_input/alert.dm
-	if(!usr.client.prefs.tgui_input_mode)
-=======
 	if(!usr.client.prefs.tgui_input_mode || strict_byond)
->>>>>>> Input Fixes:code/modules/tgui/tgui_alert.dm
 		if(length(buttons) == 2)
 			return alert(user, message, title, buttons[1], buttons[2])
 		if(length(buttons) == 3)
 			return alert(user, message, title, buttons[1], buttons[2], buttons[3])
 
 	var/datum/tgui_alert/alert = new(user, message, title, buttons, timeout, autofocus)
-<<<<<<< refs/remotes/Upstream/master:code/modules/tgui_input/alert.dm
-=======
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix:code/modules/tgui_input/alert.dm
->>>>>>> Input Fixes:code/modules/tgui/tgui_alert.dm
 	alert.tgui_interact(user)
 	alert.wait()
 	if (alert)
