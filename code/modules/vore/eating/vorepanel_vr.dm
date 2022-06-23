@@ -947,32 +947,6 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"ema")
 
-				if("en")
-					var/list/indices = list(1,2,3,4,5,6,7,8,9,10)
-					var/index = tgui_input_list(user,"Select a message to edit:","Select Message", indices)
-					if(index && index <= 10)
-						var/alert = tgui_alert(user, "What do you wish to do with this message?","Selection",list("Edit","Clear","Cancel"))
-						switch(alert)
-							if("Clear")
-								host.nutrition_messages[index] = ""
-							if("Edit")
-								var/new_message = tgui_input_text(user, "Input a message", "Input", host.nutrition_messages[index], multiline = TRUE, prevent_enter = TRUE)
-								if(new_message)
-									host.nutrition_messages[index] = new_message
-
-				if("ew")
-					var/list/indices = list(1,2,3,4,5,6,7,8,9,10)
-					var/index = tgui_input_list(user,"Select a message to edit:","Select Message", indices)
-					if(index && index <= 10)
-						var/alert = tgui_alert(user, "What do you wish to do with this message?","Selection",list("Edit","Clear","Cancel"))
-						switch(alert)
-							if("Clear")
-								host.weight_messages[index] = ""
-							if("Edit")
-								var/new_message = tgui_input_text(user, "Input a message", "Input", host.weight_messages[index], multiline = TRUE, prevent_enter = TRUE)
-								if(new_message)
-									host.weight_messages[index] = new_message
-
 				if("im_digest")
 					var/new_message = tgui_input_text(user,"These are sent to prey every minute when you are on Digest mode. Write them in 2nd person ('%pred's %belly squishes down on you.')."+help,"Idle Message (Digest)",host.vore_selected.get_messages("im_digest"), multiline = TRUE, prevent_enter = TRUE)
 					if(new_message)
