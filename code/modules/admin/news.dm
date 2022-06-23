@@ -28,15 +28,7 @@
 		var/new_body = sanitize(tgui_input_text(src,"Write the body of the news update here. Note: HTML is NOT supported, however paper markup is supported.  \n\
 		Hitting enter will automatically add a line break.  \n\
 		Valid markup includes: \[b\], \[i\], \[u\], \[large\], \[h1\], \[h2\], \[h3\]\ \[*\], \[hr\], \[small\], \[list\], \[table\], \[grid\], \
-<<<<<<< refs/remotes/Upstream/master
-		\[row\], \[cell\], \[logo\], \[sglogo\].","Write News", body, multiline = TRUE), extra = 0)
-=======
-<<<<<<< HEAD
-		\[row\], \[cell\], \[logo\], \[sglogo\].","Write News", body) as null|message, extra = 0)
-=======
 		\[row\], \[cell\], \[logo\], \[sglogo\].","Write News", body, multiline = TRUE, prevent_enter = TRUE), extra = 0)
->>>>>>> 9f14866f07... Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix
->>>>>>> Input Fixes
 
 		new_body = paper_markup2html(new_body)
 
