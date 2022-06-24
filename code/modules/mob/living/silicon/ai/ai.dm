@@ -363,7 +363,7 @@ var/list/ai_verbs_default = list(
 	if(message_cooldown)
 		to_chat(src, "Please allow one minute to pass between announcements.")
 		return
-	var/input = input(usr, "Please write a message to announce to the station crew.", "A.I. Announcement")
+	var/input = tgui_input_text(usr, "Please write a message to announce to the station crew.", "A.I. Announcement")
 	if(!input)
 		return
 
@@ -418,7 +418,7 @@ var/list/ai_verbs_default = list(
 	if(emergency_message_cooldown)
 		to_chat(usr, "<span class='warning'>Arrays recycling. Please stand by.</span>")
 		return
-	var/input = sanitize(input(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response. There is a 30 second delay before you may send another message, be clear, full and concise.", "To abort, send an empty message.", ""))
+	var/input = sanitize(tgui_input_text(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response. There is a 30 second delay before you may send another message, be clear, full and concise.", "To abort, send an empty message.", ""))
 	if(!input)
 		return
 	CentCom_announce(input, usr)
@@ -787,9 +787,11 @@ var/list/ai_verbs_default = list(
 		src.aiRadio.interact(src)
 
 /mob/living/silicon/ai/proc/sensor_mode()
-	set name = "Set Sensor Augmentation"
+	set name = "Toggle Sensor Augmentation" //VOREStation Add
 	set category = "AI Settings"
 	set desc = "Augment visual feed with internal sensor overlays"
+	sensor_type = !sensor_type //VOREStation Add
+	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
 	toggle_sensor_mode()
 
 /mob/living/silicon/ai/proc/toggle_hologram_movement()

@@ -13229,6 +13229,10 @@
 /obj/machinery/recharger,
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/random/drinkbottle,
+<<<<<<< HEAD
+=======
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/bar)
 "avg" = (
@@ -22139,7 +22143,7 @@
 /obj/item/device/taperecorder{
 	pixel_x = -3
 	},
-/obj/item/device/paicard{
+/obj/random/paicard{
 	pixel_x = 4
 	},
 /obj/item/weapon/circuitboard/teleporter,
@@ -31006,6 +31010,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
 "biK" = (
@@ -31859,6 +31870,10 @@
 	pixel_x = -23
 	},
 /obj/random/junk,
+<<<<<<< HEAD
+=======
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
 "bkE" = (

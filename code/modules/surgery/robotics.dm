@@ -152,13 +152,17 @@
 	max_duration = 60
 
 /datum/surgery_step/robotics/repair_brute/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if(..())
-		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		if(istype(tool, /obj/item/weapon/weldingtool))
-			var/obj/item/weapon/weldingtool/welder = tool
-			if(!welder.isOn() || !welder.remove_fuel(1,user))
-				return 0
-		return affected && affected.open == 3 && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH
+    if(..()) //CHOMPEdit begin. Added damage check.
+        var/obj/item/organ/external/affected = target.get_organ(target_zone)
+        if(istype(tool, /obj/item/weapon/weldingtool))
+            var/obj/item/weapon/weldingtool/welder = tool
+            if(affected.brute_dam == 0)
+                to_chat(user, "<span class='notice'>There is no damage to the internal structure here!</span>")
+                return SURGERY_FAILURE
+            else
+                if(!welder.isOn() || !welder.remove_fuel(1,user))
+                    return 0
+        return affected && affected.open == 3 && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH // CHOMPEdit End.
 
 /datum/surgery_step/robotics/repair_brute/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -470,7 +474,7 @@
 		var/new_name = target.real_name
 		while(target.client)
 			if(!target) return
-			var/try_name = input(target,"Pick a name for your new form!", "New Name", target.name)
+			var/try_name = tgui_input_text(target,"Pick a name for your new form!", "New Name", target.name)
 			var/clean_name = sanitizeName(try_name, allow_numbers = TRUE)
 			if(clean_name)
 				var/okay = tgui_alert(target,"New name will be '[clean_name]', ok?", "Confirmation",list("Cancel","Ok"))
@@ -562,7 +566,7 @@
 		var/new_name = ""
 		while(!new_name)
 			if(!target) return
-			var/try_name = input(target,"Pick a name for your new form!", "New Name", target.name)
+			var/try_name = tgui_input_text(target,"Pick a name for your new form!", "New Name", target.name)
 			var/clean_name = sanitizeName(try_name, allow_numbers = TRUE)
 			if(clean_name)
 				var/okay = tgui_alert(target,"New name will be '[clean_name]', ok?", "Confirmation",list("Cancel","Ok"))

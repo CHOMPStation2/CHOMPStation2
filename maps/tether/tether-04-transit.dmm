@@ -1182,7 +1182,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "Y" = (
+=======
+"Ud" = (
+/obj/structure/table/woodentable,
+/obj/random/paicard,
+/turf/simulated/floor/midpoint_glass/reinf,
+/area/tether/midpoint)
+"Ui" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;

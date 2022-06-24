@@ -1,3 +1,4 @@
+//CHOMP Disabled in DME in favor of modular_chomp folder
 /*
  * Device
  */
