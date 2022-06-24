@@ -6,6 +6,13 @@
 	var/hide_glow = FALSE
 	var/image/eye_layer = null		// Holds the eye overlay.
 	var/eye_color = "#00ff0d"
+<<<<<<< HEAD
+=======
+	var/icon/holo_icon
+	var/icon/holo_icon_north
+	var/holo_icon_dimension_X = 32
+	var/holo_icon_dimension_Y = 32
+>>>>>>> 3669e7afab... Merge pull request #13155 from Very-Soft/typexiii
 	var/global/list/wide_chassis = list(
 		"rat",
 		"panther",
@@ -78,6 +85,14 @@
 
 /mob/living/silicon/pai/update_icon() //Some functions cause this to occur, such as resting
 	..()
+<<<<<<< HEAD
+=======
+	if(chassis == "13")
+		icon = holo_icon
+		add_eyes()
+		return
+
+>>>>>>> 3669e7afab... Merge pull request #13155 from Very-Soft/typexiii
 	update_fullness_pai()
 
 	if(!people_eaten && !resting)
@@ -106,6 +121,13 @@
 
 /mob/living/silicon/pai/update_icons() //And other functions cause this to occur, such as digesting someone.
 	..()
+<<<<<<< HEAD
+=======
+	if(chassis == "13")
+		icon = holo_icon
+		add_eyes()
+		return
+>>>>>>> 3669e7afab... Merge pull request #13155 from Very-Soft/typexiii
 	update_fullness_pai()
 	if(!people_eaten && !resting)
 		icon_state = "[chassis]"
@@ -186,6 +208,7 @@
 
 /mob/living/silicon/pai/proc/add_eyes()
 	remove_eyes()
+<<<<<<< HEAD
 	if(chassis in allows_eye_color)
 		if(!eye_layer)
 			eye_layer = image(icon, "[icon_state]-eyes")
@@ -194,6 +217,32 @@
 		if(eye_glow && !hide_glow)
 			eye_layer.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(eye_layer)
+=======
+	if(chassis == "13")
+		if(holo_icon.Width() > 32)
+			holo_icon_dimension_X = 64
+			pixel_x = -16
+			default_pixel_x = -16
+		if(holo_icon.Height() > 32)
+			holo_icon_dimension_Y = 64
+		if(holo_icon_dimension_X == 32 && holo_icon_dimension_Y == 32)
+			eye_layer = image('icons/mob/pai_vr.dmi', "type13-eyes")
+		else if(holo_icon_dimension_X == 32 && holo_icon_dimension_Y == 64)
+			eye_layer = image('icons/mob/pai_vr32x64.dmi', "type13-eyes")
+		else if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 32)
+			eye_layer = image('icons/mob/pai_vr64x32.dmi', "type13-eyes")
+		else if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 64)
+			eye_layer = image('icons/mob/pai_vr64x64.dmi', "type13-eyes")
+		else
+	else if(chassis in allows_eye_color)
+		eye_layer = image(icon, "[icon_state]-eyes")
+	else return
+	eye_layer.appearance_flags = appearance_flags
+	eye_layer.color = eye_color
+	if(eye_glow && !hide_glow)
+		eye_layer.plane = PLANE_LIGHTING_ABOVE
+	add_overlay(eye_layer)
+>>>>>>> 3669e7afab... Merge pull request #13155 from Very-Soft/typexiii
 
 /mob/living/silicon/pai/proc/remove_eyes()
 	cut_overlay(eye_layer)
