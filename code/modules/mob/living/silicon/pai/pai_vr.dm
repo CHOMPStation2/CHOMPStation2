@@ -575,9 +575,6 @@
 	touch_window("Door Jack")
 
 /mob/living/silicon/pai/proc/ar_hud()
-<<<<<<< HEAD
-	touch_window("AR HUD")
-=======
 	touch_window("AR HUD")
 
 /mob/living/silicon/pai/proc/get_character_icon()
@@ -609,4 +606,3 @@
 				icon = holo_icon
 			else
 				icon = holo_icon_north
->>>>>>> 6b5f53fe6a... Merge pull request #13154 from Very-Soft/typexiii
