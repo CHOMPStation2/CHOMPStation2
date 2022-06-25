@@ -52,7 +52,8 @@
 		"Teppi" = "teppi",
 		"Catslug" = "catslug",
 		"Car" = "car",
-		"Type One" = "typeone"
+		"Type One" = "typeone",
+		"Type Thirteen" = "13"
 		//VOREStation Addition End
 		)
 
@@ -103,6 +104,8 @@
 	var/translator_on = 0 // keeps track of the translator module
 
 	var/current_pda_messaging = null
+
+	var/our_icon_rotation = 0
 
 /mob/living/silicon/pai/New(var/obj/item/device/paicard)
 	src.loc = paicard
@@ -246,6 +249,7 @@
 		return
 
 	if(world.time <= last_special)
+		to_chat(src, "<span class ='warning'>You can't unfold yet.</span>")
 		return
 	
 	last_special = world.time + 100
@@ -299,6 +303,7 @@
 		return
 
 	if(world.time <= last_special)
+		to_chat(src, "<span class ='warning'>You can't fold up yet.</span>")
 		return
 
 	close_up()
@@ -307,17 +312,13 @@
 /mob/living/silicon/pai/proc/choose_chassis()
 	set category = "pAI Commands"
 	set name = "Choose Chassis"
-
 	var/choice
 	var/finalized = "No"
 	while(finalized == "No" && src.client)
-
 		choice = tgui_input_list(usr,"What would you like to use for your mobile chassis icon?","Chassis Choice", possible_chassis)
 		if(!choice) return
-
 		icon_state = possible_chassis[choice]
 		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
-
 	chassis = possible_chassis[choice]
 	verbs |= /mob/living/proc/hide
 //VOREStation Removal End
@@ -345,39 +346,29 @@
 		var/obj/item/weapon/rig/rig = src.get_rig()
 		if(istype(rig))
 			rig.force_rest(src)
-<<<<<<< HEAD
-=======
 			return
 	else if(chassis == "13")
 		resting = !resting
 		//update_transform()	I want this to make you ROTATE like normal HUMANS do! But! There's lots of problems and I don't know how to fix them!
->>>>>>> 3669e7afab... Merge pull request #13155 from Very-Soft/typexiii
 	else
 		resting = !resting
 		icon_state = resting ? "[chassis]_rest" : "[chassis]"
 		update_icon() //VOREStation edit
-		to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
 
 	canmove = !resting
 
-<<<<<<< HEAD
-=======
 /*
 /mob/living/silicon/pai/update_transform()
-
 	var/desired_scale_x = size_multiplier * icon_scale_x
 	var/desired_scale_y = size_multiplier * icon_scale_y
-
 	// Now for the regular stuff.
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
 	M.Translate(0, (vis_height/2)*(desired_scale_y-1))
-
 	if(chassis != "13")
 		appearance_flags |= PIXEL_SCALE
-
 		var/anim_time = 3
-
 		if(resting)
 			M.Turn(90)
 			M.Scale(desired_scale_y, desired_scale_x)
@@ -398,7 +389,6 @@
 	src.transform = M
 	handle_status_indicators()
 */
->>>>>>> 3669e7afab... Merge pull request #13155 from Very-Soft/typexiii
 //Overriding this will stop a number of headaches down the track.
 /mob/living/silicon/pai/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(W.force)
