@@ -6,7 +6,12 @@ arandomalien - Xenochimera
 arokha - Protean
 aruis - Diona
 aruis - Xenochimera
+<<<<<<< HEAD
 amarewolf - Xenochimera
+=======
+ashburn_dracki - Protean
+auraribbon - Black-Eyed Shadekin
+>>>>>>> 6fc2976fe0... Merge pull request #13167 from faaaay/patch-1
 azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
