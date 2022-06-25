@@ -208,6 +208,7 @@
 					"Borgi" = "borgi-sec",
 					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
+					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec"
 					)
 	channels = list("Security" = 1)
@@ -288,6 +289,7 @@
 					"Mediborg model V-2" = "vale",
 					"Borgi" = "borgi-medi",
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
+					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed"
 					)
 
@@ -428,6 +430,7 @@
 					"Janihound model V-2" = "J9",
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
+					"Cat" = "vixjani", //CHOMPEdit
 					"Drake" = "drakejanit"
 					)
 	channels = list("Service" = 1)
@@ -515,6 +518,7 @@
 					"Borgi" = "borgi-sci",
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark",
+					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci"
 					)
 	channels = list("Science" = 1)
@@ -597,6 +601,7 @@
 					"V2 Engidog" = "thottbot",
 					"EngiHound" = "engihound",
 					"EngiHoundDark" = "engihounddark",
+					"Cat" = "vixengi", //CHOMPEdit
 					"Drake" = "drakeeng"
 					)
 	channels = list("Engineering" = 1)
@@ -754,6 +759,7 @@
 					"Pinkhound" = "k69",
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
+					"Cat" = "vixserv", //CHOMPEdit
 					"Drake" = "drakemine"
 					)
 	channels = list("Service" = 1)
@@ -830,6 +836,8 @@
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark",
+					"Cat Mining" = "vixmine", //CHOMPEdit
+					"Cat Cargo" = "vixcargo", //CHOMPEdit
 					"Drake" = "drakemine"
 					)
 	channels = list("Supply" = 1)
