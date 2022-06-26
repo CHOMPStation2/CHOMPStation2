@@ -916,7 +916,9 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() => act('set_attribute', { attribute: 'b_autotransfer_max_amount' })} />
             </LabeledList.Item>
           </LabeledList>
-        ) : "These options only display while Auto-Transfer is enabled."}
+        ) : (
+          'These options only display while Auto-Transfer is enabled.'
+        )}
       </Section>
     </Section>
   );
@@ -996,94 +998,78 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const {
-    show_liq,
-    liq_interacts,
-    liq_reagent_gen,
-    liq_reagent_type,
-    liq_reagent_name,
-    liq_reagent_transfer_verb,
-    liq_reagent_nutri_rate,
-    liq_reagent_capacity,
-    liq_sloshing,
-    liq_reagent_addons,
-    show_liq_fullness,
-    liq_messages,
-    liq_msg1,
-    liq_msg2,
-    liq_msg3,
-    liq_msg4,
-    liq_msg5,
-  } = belly;
+  const { show_liq, liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name, liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons, show_liq_fullness, liq_messages, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5 } = belly;
 
   return (
     <Section title="Liquid Options" buttons={
       <Button
-        onClick={() => act("liq_set_attribute", { liq_attribute: "b_show_liq" })}
-        icon={show_liq ? "toggle-on" : "toggle-off"}
+        onClick={() => act('liq_set_attribute', { liq_attribute: 'b_show_liq' })}
+        icon={show_liq ? 'toggle-on' : 'toggle-off'}
         selected={show_liq}
         tooltipPosition="left"
         tooltip={"These are the settings for liquid bellies, every belly has a liquid storage."}
-        content={show_liq ? "Liquids On" : "Liquids Off"} />
+        content={show_liq ? 'Liquids On' : 'Liquids Off'} />
     }>
       {show_liq ? (
         <LabeledList>
           <LabeledList.Item label="Generate Liquids">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_gen" })}
-              icon={liq_interacts.liq_reagent_gen? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_gen' })}
+              icon={liq_interacts.liq_reagent_gen? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.liq_reagent_gen}
-              content={liq_interacts.liq_reagent_gen ? "On" : "Off"} />
+              content={liq_interacts.liq_reagent_gen ? 'On' : 'Off'} />
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Type">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_type" })}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_type' })}
               icon="pen"
               content={liq_interacts.liq_reagent_type} />
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Name">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_name" })}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_name' })}
               content={liq_interacts.liq_reagent_name} />
           </LabeledList.Item>
           <LabeledList.Item label="Transfer Verb">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_transfer_verb" })}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_transfer_verb' })}
               content={liq_interacts.liq_reagent_transfer_verb} />
           </LabeledList.Item>
           <LabeledList.Item label="Generation Time">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_nutri_rate" })}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_nutri_rate' })}
               icon="clock"
-              content={((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 + " Hours"} />
+              content={((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 + ' Hours'} />
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Capacity">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_capacity" })}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_capacity' })}
               content={liq_interacts.liq_reagent_capacity} />
           </LabeledList.Item>
           <LabeledList.Item label="Slosh Sounds">
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_sloshing" })}
-              icon={liq_interacts.liq_sloshing? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_sloshing' })}
+              icon={liq_interacts.liq_sloshing? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.liq_sloshing}
-              content={liq_interacts.liq_sloshing ? "On" : "Off"} />
+              content={liq_interacts.liq_sloshing ? 'On' : 'Off'} />
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Addons">
-            {liq_interacts.liq_reagent_addons.length && liq_interacts.liq_reagent_addons.join(", ") || "None"}
+            {liq_interacts.liq_reagent_addons.length && liq_interacts.liq_reagent_addons.join(', ') || 'None'}
             <Button
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_reagent_addons" })}
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_addons' })}
               ml={1}
               icon="plus" />
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">
             <Button
               color="red"
-              onClick={() => act("liq_set_attribute", { liq_attribute: "b_liq_purge" })}
-              content={"Purge Liquids"} />
+              onClick={() => act('liq_set_attribute', { liq_attribute: 'b_liq_purge' })}
+              content="Purge Liquids" />
           </LabeledList.Item>
         </LabeledList>
-      ) : "These options only display while liquid settings are turned on."}
+      ) : (
+        'These options only display while liquid settings are turned on.'
+      )}
     </Section>
   );
 };
@@ -1092,94 +1078,74 @@ const VoreSelectedBellyLiquidMessages = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const {
-    liq_interacts,
-    liq_reagent_gen,
-    liq_reagent_type,
-    liq_reagent_name,
-    liq_reagent_transfer_verb,
-    liq_reagent_nutri_rate,
-    liq_reagent_capacity,
-    liq_sloshing,
-    liq_reagent_addons,
-    show_liq_fullness,
-    liq_messages,
-    liq_msg_toggle1,
-    liq_msg_toggle2,
-    liq_msg_toggle3,
-    liq_msg_toggle4,
-    liq_msg_toggle5,
-    liq_msg1,
-    liq_msg2,
-    liq_msg3,
-    liq_msg4,
-    liq_msg5,
-  } = belly;
+  const { liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name, liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons, show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4, liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, } = belly;
 
   return (
     <Section title="Liquid Messages" buttons={
       <Button
-        onClick={() => act("liq_set_messages", { liq_messages: "b_show_liq_fullness" })}
-        icon={show_liq_fullness ? "toggle-on" : "toggle-off"}
+        onClick={() => act('liq_set_messages', { liq_messages: 'b_show_liq_fullness' })}
+        icon={show_liq_fullness ? 'toggle-on' : 'toggle-off'}
         selected={show_liq_fullness}
         tooltipPosition="left"
         tooltip={"These are the settings for belly visibility when involving liquids fullness."}
-        content={show_liq_fullness ? "Messages On" : "Messages Off"} />
+        content={show_liq_fullness ? 'Messages On' : 'Messages Off'} />
     }>
       {show_liq_fullness ? (
         <LabeledList>
           <LabeledList.Item label="0 to 20%">
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle1" })}
-              icon={liq_messages.liq_msg_toggle1? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle1' })}
+              icon={liq_messages.liq_msg_toggle1? 'toggle-on' : 'toggle-off'}
               selected={liq_messages.liq_msg_toggle1}
-              content={liq_messages.liq_msg_toggle1 ? "On" : "Off"} />
+              content={liq_messages.liq_msg_toggle1 ? 'On' : 'Off'} />
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg1" })}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg1' })}
               content="Examine Message (0 to 20%)" />
           </LabeledList.Item>
           <LabeledList.Item label="20 to 40%">
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle2" })}
-              icon={liq_messages.liq_msg_toggle2? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle2' })}
+              icon={liq_messages.liq_msg_toggle2? 'toggle-on' : 'toggle-off'}
               selected={liq_messages.liq_msg_toggle2}
-              content={liq_messages.liq_msg_toggle2 ? "On" : "Off"} />
+              content={liq_messages.liq_msg_toggle2 ? 'On' : 'Off'} />
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg2" })}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg2' })}
               content="Examine Message (20 to 40%)" />
           </LabeledList.Item>
           <LabeledList.Item label="40 to 60%">
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle3" })}
-              icon={liq_messages.liq_msg_toggle3? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle3' })}
+              icon={liq_messages.liq_msg_toggle3? 'toggle-on' : 'toggle-off'}
               selected={liq_messages.liq_msg_toggle3}
-              content={liq_messages.liq_msg_toggle3 ? "On" : "Off"} />
+              content={liq_messages.liq_msg_toggle3 ? 'On' : 'Off'} />
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg3" })}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg3' })}
               content="Examine Message (40 to 60%)" />
           </LabeledList.Item>
           <LabeledList.Item label="60 to 80%">
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle4" })}
-              icon={liq_messages.liq_msg_toggle4? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle4' })}
+              icon={liq_messages.liq_msg_toggle4? 'toggle-on' : 'toggle-off'}
               selected={liq_messages.liq_msg_toggle4}
-              content={liq_messages.liq_msg_toggle4 ? "On" : "Off"} />
+              content={liq_messages.liq_msg_toggle4 ? 'On' : 'Off'} />
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg4" })}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg4' })}
               content="Examine Message (60 to 80%)" />
           </LabeledList.Item>
           <LabeledList.Item label="80 to 100%">
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg_toggle5" })}
-              icon={liq_messages.liq_msg_toggle5? "toggle-on" : "toggle-off"}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle5' })}
+              icon={liq_messages.liq_msg_toggle5? 'toggle-on' : 'toggle-off'}
               selected={liq_messages.liq_msg_toggle5}
-              content={liq_messages.liq_msg_toggle5 ? "On" : "Off"} />
+              content={liq_messages.liq_msg_toggle5 ? 'On' : 'Off'} />
             <Button
-              onClick={() => act("liq_set_messages", { liq_messages: "b_liq_msg5" })}
+              onClick={() => act('liq_set_messages', { liq_messages: 'b_liq_msg5' })}
               content="Examine Message (80 to 100%)" />
           </LabeledList.Item>
         </LabeledList>
-      ) : "These options only display while liquid examination settings are turned on."}
+      ) : (
+        'These options only display while liquid examination settings are turned on.'
+      )}
     </Section>
   );
 };
