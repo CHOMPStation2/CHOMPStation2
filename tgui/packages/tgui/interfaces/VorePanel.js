@@ -286,13 +286,9 @@ const VoreSelectedBelly = (props, context) => {
 
   tabs[6] = <VoreContentsPanel outside contents={contents} />;
 
-  tabs[7] = (
-    <VoreSelectedBellyLiquidOptions belly={belly} />
-  );
+  tabs[7] = <VoreSelectedBellyLiquidOptions belly={belly} />;
 
-  tabs[8] = (
-    <VoreSelectedBellyLiquidMessages belly={belly} />
-  );
+  tabs[8] = <VoreSelectedBellyLiquidMessages belly={belly} />;
 
   return (
     <Fragment>
