@@ -784,20 +784,20 @@ const VoreSelectedBellyVisuals = (props, context) => {
             selected={belly_fullscreen === '' || belly_fullscreen === null}
             onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: null })}>
             Disabled
-        </Button>
-        {Object.keys(possible_fullscreens).map((key) => (
-          <Button
-            key={key}
-            width="256px"
-            height="256px"
-            selected={key === belly_fullscreen}
-            onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: key })}>
-            <Box
-              className={classes(['vore240x240', key])}
-              style={{
-                transform: 'translate(0%, 4%)',
-              }}
-            />
+          </Button>
+          {Object.keys(possible_fullscreens).map((key) => (
+            <Button
+              key={key}
+              width="256px"
+              height="256px"
+              selected={key === belly_fullscreen}
+              onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: key })}>
+              <Box
+                className={classes(['vore240x240', key])}
+                style={{
+                  transform: 'translate(0%, 4%)',
+                }}
+              />
             </Button>
           ))}
         </Section>
