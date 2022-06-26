@@ -1341,46 +1341,30 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Stumble Vore Disabled',
       },
     },
-<<<<<<< HEAD
     spawnbelly: {
-      action: "toggle_latejoin_vore",
+      action: 'toggle_latejoin_vore',
       test: latejoin_vore,
       tooltip: {
-        main: "Toggle late join vore spawnpoint.",
-        enable: "Click here to turn on vorish spawnpoint.",
-        disable: "Click here to turn off vorish spawnpoint.",
+        main: 'Toggle late join vore spawnpoint.',
+        enable: 'Click here to turn on vorish spawnpoint.',
+        disable: 'Click here to turn off vorish spawnpoint.',
       },
       content: {
-        enabled: "Vore Spawn Pred Enabled",
-        disabled: "Vore Spawn Pred Disabled",
+        enabled: 'Vore Spawn Pred Enabled',
+        disabled: 'Vore Spawn Pred Disabled',
       },
     },
     spawnprey: {
-      action: "toggle_latejoin_prey",
+      action: 'toggle_latejoin_prey',
       test: latejoin_prey,
       tooltip: {
-        main: "Toggle late join preds spawning on you.",
-        enable: "Click here to turn on preds spawning around you.",
-        disable: "Click here to turn off preds spawning around you.",
+        main: 'Toggle late join preds spawning on you.',
+        enable: 'Click here to turn on preds spawning around you.',
+        disable: 'Click here to turn off preds spawning around you.',
       },
       content: {
-        enabled: "Vore Spawn Prey Enabled",
-        disabled: "Vore Spawn Prey Disabled",
-=======
-    inbelly_spawning: {
-      action: 'toggle_allow_inbelly_spawning',
-      test: allow_inbelly_spawning,
-      tooltip: {
-        main:
-          'This toggle is ghosts being able to spawn in one of your bellies.' +
-          ' You will have to confirm again when they attempt to.',
-        enable: 'Click here to allow prey to spawn in you.',
-        disable: 'Click here to prevent prey from spawning in you.',
-      },
-      content: {
-        enabled: 'Inbelly Spawning Allowed',
-        disabled: 'Inbelly Spawning Forbidden',
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
+        enabled: 'Vore Spawn Prey Enabled',
+        disabled: 'Vore Spawn Prey Disabled',
       },
     },
     noisy: {
@@ -1397,16 +1381,16 @@ const VoreUserPreferences = (props, context) => {
       },
     },
     noisy_full: {
-      action: "toggle_noisy_full",
+      action: 'toggle_noisy_full',
       test: noisy_full,
       tooltip: {
-        main: "Toggle belching while full.",
-        enable: "Click here to turn on belching while full.",
-        disable: "Click here to turn off belching while full.",
+        main: 'Toggle belching while full.',
+        enable: 'Click here to turn on belching while full.',
+        disable: 'Click here to turn off belching while full.',
       },
       content: {
-        enabled: "Belching Enabled",
-        disabled: "Belching Disabled",
+        enabled: 'Belching Enabled',
+        disabled: 'Belching Disabled',
       },
     },
     resize: {
@@ -1501,54 +1485,46 @@ const VoreUserPreferences = (props, context) => {
       },
     },
     liquid_receive: {
-      action: "toggle_liq_rec",
+      action: 'toggle_liq_rec',
       test: liq_rec,
       tooltip: {
-        main: "This button is for allowing or preventing others from giving you liquids from their vore organs.",
-        enable: "Click here to allow receiving liquids.",
-        disable: "Click here to prevent receiving liquids.",
+        main: 'This button is for allowing or preventing others from giving you liquids from their vore organs.',
+        enable: 'Click here to allow receiving liquids.',
+        disable: 'Click here to prevent receiving liquids.',
       },
       content: {
-        enabled: "Receiving Liquids Allowed",
-        disabled: "Do Not Allow Receiving Liquids",
+        enabled: 'Receiving Liquids Allowed',
+        disabled: 'Do Not Allow Receiving Liquids',
       },
     },
     liquid_give: {
-      action: "toggle_liq_giv",
+      action: 'toggle_liq_giv',
       test: liq_giv,
       tooltip: {
-        main: "This button is for allowing or preventing others from taking liquids from your vore organs.",
-        enable: "Click here to allow taking liquids.",
-        disable: "Click here to prevent taking liquids.",
+        main: 'This button is for allowing or preventing others from taking liquids from your vore organs.',
+        enable: 'Click here to allow taking liquids.',
+        disable: 'Click here to prevent taking liquids.',
       },
       content: {
-        enabled: "Taking Liquids Allowed",
-        disabled: "Do Not Allow Taking Liquids",
+        enabled: 'Taking Liquids Allowed',
+        disabled: 'Do Not Allow Taking Liquids',
       },
     },
     autotransferable: {
-      action: "toggle_autotransferable",
+      action: 'toggle_autotransferable',
       test: autotransferable,
       tooltip: {
-        main: "This button is for allowing or preventing belly auto-transfer mechanics from moving you.",
-        enable: "Click here to allow autotransfer.",
-        disable: "Click here to prevent autotransfer.",
+        main: 'This button is for allowing or preventing belly auto-transfer mechanics from moving you.',
+        enable: 'Click here to allow autotransfer.',
+        disable: 'Click here to prevent autotransfer.',
       },
       content: {
-        enabled: "Auto-Transfer Allowed",
-        disabled: "Do Not Allow Auto-Transfer",
+        enabled: 'Auto-Transfer Allowed',
+        disabled: 'Do Not Allow Auto-Transfer',
       },
     },
   };
 
-<<<<<<< HEAD
-  return tabIndex===4 ? null : (
-    <Section title="Preferences" buttons={
-      <Button icon="eye" selected={show_pictures} onClick={() => act("show_pictures")}>
-        Contents Preference: {show_pictures ? "Show Pictures" : "Show List"}
-      </Button>
-    }>
-=======
   return (
     <Section
       title="Preferences"
@@ -1557,7 +1533,6 @@ const VoreUserPreferences = (props, context) => {
           Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
         </Button>
       }>
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
       <Flex spacing={1} wrap="wrap" justify="center">
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.digestion} />
@@ -1622,30 +1597,14 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
-<<<<<<< HEAD
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
-        <Flex.Item basis="32%">
-          <Button
-            fluid
-            content="Set Taste"
-            icon="grin-tongue"
-            onClick={() => act("setflavor")} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <Button
-            fluid
-            content="Set Smell"
-            icon="wind"
-            onClick={() => act("setsmell")} />
-=======
         <Flex.Item basis="32%" grow={1}>
           <Button fluid content="Set Taste" icon="grin-tongue" onClick={() => act('setflavor')} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button fluid content="Set Smell" icon="wind" onClick={() => act('setsmell')} />
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
         </Flex.Item>
         <Flex.Item basis="49%">
           <VoreUserPreferenceItem spec={preferences.liquid_receive} tooltipPosition="top" />
