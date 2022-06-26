@@ -186,4 +186,15 @@
 
 /datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
+<<<<<<< HEAD
 	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+=======
+	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+
+/datum/trait/positive/linguist
+	name = "Linguist"
+	desc = "Allows you to have more languages."
+	cost = 1
+	var_changes = list("num_alternate_languages" = 6)
+	var_changes_pref = list("extra_languages" = 3)
+>>>>>>> 6b4d5fcf7b... Merge pull request #13183 from Heroman3003/linguist
