@@ -1,14 +1,8 @@
 import { capitalize } from 'common/string';
 import { Fragment } from 'inferno';
-<<<<<<< HEAD
-import { useBackend, useLocalState } from "../backend";
-import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
-import { Window } from "../layouts";
-=======
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from '../components';
+import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from '../components';
 import { Window } from '../layouts';
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
 import { classes } from 'common/react';
 
 const stats = [null, 'average', 'bad'];
@@ -572,13 +566,8 @@ const VoreSelectedBellyOptions = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Item label="Contaminates">
             <Button
-<<<<<<< HEAD
               onClick={() => act("set_attribute", { attribute: "b_contaminates" })}
               icon={contaminates ? "toggle-on" : "toggle-off"}
-=======
-              onClick={() => act('set_attribute', { attribute: 'b_contaminate' })}
-              icon={contaminates ? 'toggle-on' : 'toggle-off'}
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
               selected={contaminates}
               content={contaminates ? 'Yes' : 'No'}
             />
@@ -752,15 +741,8 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-<<<<<<< HEAD
-  const {
-    belly_fullscreen,
-    belly_fullscreen_color,
-    mapRef,
-    possible_fullscreens,
-    disable_hud,
-  } = belly;
-
+  const { belly_fullscreen, belly_fullscreen_color, mapRef, possible_fullscreens, disable_hud } = belly;
+  
   return (
     <Fragment>
       <Section title="Belly Fullscreens Preview and Coloring">
@@ -768,7 +750,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
           <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
           <Button
             icon="eye-dropper"
-            onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color', val: null })}>
             Select Color
           </Button>
         </Flex>
@@ -787,10 +769,11 @@ const VoreSelectedBellyVisuals = (props, context) => {
           <LabeledList>
             <LabeledList.Item label="Disable Prey HUD">
               <Button
-                onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-                icon={disable_hud ? "toggle-on" : "toggle-off"}
+                onClick={() => act('set_attribute', { attribute: 'b_disable_hud' })}
+                icon={disable_hud ? 'toggle-on' : 'toggle-off'}
                 selected={disable_hud}
-                content={disable_hud ? "Yes" : "No"} />
+                content={disable_hud ? 'Yes' : 'No'} 
+              />
             </LabeledList.Item>
           </LabeledList>
         </Section>
@@ -798,32 +781,9 @@ const VoreSelectedBellyVisuals = (props, context) => {
           Belly styles:
           <Button
             fluid
-            selected={belly_fullscreen === "" || belly_fullscreen === null}
-            onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+            selected={belly_fullscreen === '' || belly_fullscreen === null}
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: null })}>
             Disabled
-=======
-  const { belly_fullscreen, possible_fullscreens, disable_hud } = belly;
-
-  return (
-    <Fragment>
-      <Section title="Vore FX">
-        <LabeledList>
-          <LabeledList.Item label="Disable Prey HUD">
-            <Button
-              onClick={() => act('set_attribute', { attribute: 'b_disable_hud' })}
-              icon={disable_hud ? 'toggle-on' : 'toggle-off'}
-              selected={disable_hud}
-              content={disable_hud ? 'Yes' : 'No'}
-            />
-          </LabeledList.Item>
-        </LabeledList>
-      </Section>
-      <Section title="Belly Fullscreens">
-        <Button
-          fluid
-          selected={belly_fullscreen === '' || belly_fullscreen === null}
-          onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: null })}>
-          Disabled
         </Button>
         {Object.keys(possible_fullscreens).map((key) => (
           <Button
@@ -838,23 +798,6 @@ const VoreSelectedBellyVisuals = (props, context) => {
                 transform: 'translate(0%, 4%)',
               }}
             />
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
-          </Button>
-          {Object.keys(possible_fullscreens).map(key => (
-            <Button
-              key={key}
-              width="256px"
-              height="256px"
-              selected={key === belly_fullscreen}
-              onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-              <Box
-                className={classes([
-                  'vore240x240',
-                  key,
-                ])}
-                style={{
-                  transform: 'translate(0%, 4%)',
-                }} />
             </Button>
           ))}
         </Section>
