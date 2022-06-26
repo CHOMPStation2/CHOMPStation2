@@ -25,26 +25,10 @@ export const CasinoPrizeDispenserCh = (props, context) => {
   );
 };
 
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/CasinoPrizeDispenserCh.js
 const CasinoPrizeDispenserChSearch = (props, context) => {
-  const [
-    _searchText,
-    setSearchText,
-  ] = useLocalState(context, 'search', '');
-  const [
-    _sortOrder,
-    setSortOrder,
-  ] = useLocalState(context, 'sort', '');
-  const [
-    descending,
-    setDescending,
-  ] = useLocalState(context, 'descending', false);
-=======
-const CasinoPrizeDispenserSearch = (props, context) => {
   const [_searchText, setSearchText] = useLocalState(context, 'search', '');
   const [_sortOrder, setSortOrder] = useLocalState(context, 'sort', '');
   const [descending, setDescending] = useLocalState(context, 'descending', false);
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx:tgui/packages/tgui/interfaces/CasinoPrizeDispenser.js
   return (
     <Box mb="0.5rem">
       <Flex width="100%">
@@ -103,17 +87,7 @@ const CasinoPrizeDispenserChItems = (props, context) => {
     }
 
     has_contents = true;
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/CasinoPrizeDispenserCh.js
-    return (
-      <CasinoPrizeDispenserChItemsCategory
-        key={kv[0]}
-        title={kv[0]}
-        items={items_in_cat}
-      />
-    );
-=======
-    return <CasinoPrizeDispenserItemsCategory key={kv[0]} title={kv[0]} items={items_in_cat} />;
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx:tgui/packages/tgui/interfaces/CasinoPrizeDispenser.js
+    return <CasinoPrizeDispenserChItemsCategory key={kv[0]} title={kv[0]} items={items_in_cat} />;
   });
   return (
     <Flex.Item grow="1" overflow="auto">
