@@ -50,7 +50,7 @@ export const CharacterDirectory = (props, context) => {
                   <Button fluid content={personalErpTag} onClick={() => act('setErpTag')} />
                 </LabeledList.Item>
                 <LabeledList.Item label="Event Pref">
-                  <Button fluid content={personalEventTag} onClick={() => act("setEventTag")} />
+                  <Button fluid content={personalEventTag} onClick={() => act('setEventTag')} />
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">
                   <Button fluid content="Edit Ad" onClick={() => act('editAd')} />
@@ -84,9 +84,7 @@ const ViewCharacter = (props, context) => {
         <Box>{overlay.erptag}</Box>
       </Section>
       <Section level={2} title="Event Pref">
-        <Box>
-          {overlay.eventtag}
-        </Box>
+        <Box>{overlay.eventtag}</Box>
       </Section>
       <Section level={2} title="Character Ad">
         <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
