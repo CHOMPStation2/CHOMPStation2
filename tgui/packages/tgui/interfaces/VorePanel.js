@@ -1074,7 +1074,7 @@ const VoreSelectedBellyLiquidMessages = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const { liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name, liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons, show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4, liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, } = belly;
+  const { liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name, liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons, show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4, liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5 } = belly;
 
   return (
     <Section title="Liquid Messages" buttons={
