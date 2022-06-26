@@ -25,16 +25,7 @@ const getTagColor = (tag) => {
 export const CharacterDirectory = (props, context) => {
   const { act, data } = useBackend(context);
 
-<<<<<<< HEAD
-  const {
-    personalVisibility,
-    personalTag,
-    personalErpTag,
-    personalEventTag,
-  } = data;
-=======
-  const { personalVisibility, personalTag, personalErpTag } = data;
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
+  const { personalVisibility, personalTag, personalErpTag, personalEventTag } = data;
 
   const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
@@ -136,14 +127,10 @@ const CharacterDirectoryList = (props, context) => {
           <SortButton id="species">Species</SortButton>
           <SortButton id="tag">Vore Tag</SortButton>
           <SortButton id="erptag">ERP Tag</SortButton>
-<<<<<<< HEAD
           <SortButton id="eventtag">Event Pref</SortButton>
-          <Table.Cell collapsing textAlign="right">View</Table.Cell>
-=======
           <Table.Cell collapsing textAlign="right">
             View
           </Table.Cell>
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
         </Table.Row>
         {directory
           .sort((a, b) => {
