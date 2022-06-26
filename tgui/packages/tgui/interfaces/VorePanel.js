@@ -810,17 +810,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-<<<<<<< HEAD
-  const {
-    escapable,
-    interacts,
-    vorespawn_blacklist,
-    autotransfer_enabled,
-    autotransfer,
-  } = belly;
-=======
-  const { escapable, interacts } = belly;
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
+  const { escapable, interacts, vorespawn_blacklist, autotransfer_enabled, autotransfer } = belly;
 
   return (
     <Section
@@ -888,50 +878,46 @@ const VoreSelectedBellyInteractions = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Divider />
         </LabeledList>
-<<<<<<< HEAD
-      ) : "These options only display while interactions are turned on."}
+      ) : (
+        'These options only display while interactions are turned on.'
+      )}
       <Section title="Auto-Transfer Options" buttons={
         <Button
-          onClick={() => act("set_attribute", { attribute: "b_autotransfer_enabled" })}
-          icon={autotransfer_enabled ? "toggle-on" : "toggle-off"}
+          onClick={() => act('set_attribute', { attribute: 'b_autotransfer_enabled' })}
+          icon={autotransfer_enabled ? 'toggle-on' : 'toggle-off'}
           selected={autotransfer_enabled}
-          content={autotransfer_enabled ? "Auto-Transfer Enabled" : "Auto-Transfer Disabled"} />
+          content={autotransfer_enabled ? 'Auto-Transfer Enabled' : 'Auto-Transfer Disabled'} />
       }>
         {autotransfer_enabled ? (
           <LabeledList>
             <LabeledList.Item label="Auto-Transfer Chance">
               <Button
-                content={autotransfer.autotransferchance + "%"}
-                onClick={() => act("set_attribute", { attribute: "b_autotransferchance" })} />
+                content={autotransfer.autotransferchance + '%'}
+                onClick={() => act('set_attribute', { attribute: 'b_autotransferchance' })} />
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Time">
               <Button
-                content={autotransfer.autotransferwait / 10 + "s"}
-                onClick={() => act("set_attribute", { attribute: "b_autotransferwait" })} />
+                content={autotransfer.autotransferwait / 10 + 's'}
+                onClick={() => act('set_attribute', { attribute: 'b_autotransferwait' })} />
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Location">
               <Button
-                content={autotransfer.autotransferlocation ? autotransfer.autotransferlocation : "Disabled"}
-                onClick={() => act("set_attribute", { attribute: "b_autotransferlocation" })} />
+                content={autotransfer.autotransferlocation ? autotransfer.autotransferlocation : 'Disabled'}
+                onClick={() => act('set_attribute', { attribute: 'b_autotransferlocation' })} />
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Min Amount">
               <Button
                 content={autotransfer.autotransfer_min_amount}
-                onClick={() => act("set_attribute", { attribute: "b_autotransfer_min_amount" })} />
+                onClick={() => act('set_attribute', { attribute: 'b_autotransfer_min_amount' })} />
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Max Amount">
               <Button
                 content={autotransfer.autotransfer_max_amount}
-                onClick={() => act("set_attribute", { attribute: "b_autotransfer_max_amount" })} />
+                onClick={() => act('set_attribute', { attribute: 'b_autotransfer_max_amount' })} />
             </LabeledList.Item>
           </LabeledList>
         ) : "These options only display while Auto-Transfer is enabled."}
       </Section>
-=======
-      ) : (
-        'These options only display while interactions are turned on.'
-      )}
->>>>>>> 27374124c4... Merge pull request #13164 from ItsSelis/tgui-prettierx
     </Section>
   );
 };
