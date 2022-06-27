@@ -8,11 +8,8 @@
 
 /datum/category_item/player_setup_item/general/language/load_character(var/savefile/S)
 	S["language"]			>> pref.alternate_languages
-<<<<<<< HEAD
-=======
 	S["extra_languages"]	>> pref.extra_languages
 	testing("LANGSANI: Loaded from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 	S["language_prefixes"]	>> pref.language_prefixes
 	//CHOMPEdit Begin
 	S["species"]			>> pref.species
@@ -26,11 +23,8 @@
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
 	S["language"]			<< pref.alternate_languages
-<<<<<<< HEAD
-=======
 	S["extra_languages"]	<< pref.extra_languages
 	testing("LANGSANI: Saved to [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 	S["language_prefixes"]	<< pref.language_prefixes
 
 /datum/category_item/player_setup_item/general/language/sanitize_character()
@@ -39,16 +33,9 @@
 		var/datum/species/S = GLOB.all_species[pref.species]
 		if(!istype(S))
 			return
-<<<<<<< HEAD
-			
-		if(pref.alternate_languages.len > pref.numlanguage()) //CHOMPEdit
-			pref.alternate_languages.len = pref.numlanguage() // Truncate to allowed length CHOMPEdit
-=======
-
 		if(pref.alternate_languages.len > (S.num_alternate_languages + pref.extra_languages))
 			testing("LANGSANI: Truncated [pref.client]'s character [pref.real_name || "-name not yet loaded-"] language list because it was too long (len: [pref.alternate_languages.len], allowed: [S.num_alternate_languages])")
 			pref.alternate_languages.len = (S.num_alternate_languages + pref.extra_languages) // Truncate to allowed length
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 
 		// Sanitize illegal languages
 		for(var/language in pref.alternate_languages)
@@ -73,23 +60,13 @@
 		. += "- [S.language]<br>"
 	if(S.default_language && S.default_language != S.language)
 		. += "- [S.default_language]<br>"
-<<<<<<< HEAD
-	if(pref.numlanguage()) //CHOMPEdit
-=======
 	if(S.num_alternate_languages + pref.extra_languages)
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 		if(pref.alternate_languages.len)
 			for(var/i = 1 to pref.alternate_languages.len)
 				var/lang = pref.alternate_languages[i]
 				. += "- [lang] - <a href='?src=\ref[src];remove_language=[i]'>remove</a><br>"
-
-<<<<<<< HEAD
-		if(pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
-			. += "- <a href='?src=\ref[src];add_language=1'>add</a> ([pref.numlanguage() - pref.alternate_languages.len] remaining)<br>"	//CHOMPEdit
-=======
 		if(pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
 			. += "- <a href='?src=\ref[src];add_language=1'>add</a> ([(S.num_alternate_languages + pref.extra_languages) - pref.alternate_languages.len] remaining)<br>"
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 	else
 		. += "- [pref.species] cannot choose secondary languages.<br>"
 
@@ -103,11 +80,7 @@
 		return TOPIC_REFRESH
 	else if(href_list["add_language"])
 		var/datum/species/S = GLOB.all_species[pref.species]
-<<<<<<< HEAD
-		if(pref.alternate_languages.len >= pref.numlanguage()) //CHOMPEdit
-=======
 		if(pref.alternate_languages.len >= (S.num_alternate_languages + pref.extra_languages))
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 			tgui_alert_async(user, "You have already selected the maximum number of alternate languages for this species!")
 		else
 			var/list/available_languages = S.secondary_langs.Copy()
@@ -125,11 +98,7 @@
 				tgui_alert_async(user, "There are no additional languages available to select.")
 			else
 				var/new_lang = tgui_input_list(user, "Select an additional language", "Character Generation", available_languages)
-<<<<<<< HEAD
-				if(new_lang && pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
-=======
 				if(new_lang && pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 					pref.alternate_languages |= new_lang
 					return TOPIC_REFRESH
 
