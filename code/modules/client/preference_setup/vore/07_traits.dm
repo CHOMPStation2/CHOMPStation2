@@ -439,13 +439,8 @@
 			if(conflict)
 				tgui_alert_async(usr, "You cannot take this trait and [conflict] at the same time. Please remove that trait, or pick another trait to add.", "Error")
 				return TOPIC_REFRESH
-<<<<<<< HEAD
-			if(path==/datum/trait/positive/linguist)	//CHOMPEdit
-				pref.num_languages = 12		//CHOMPEdit
-=======
 
 			instance.apply_pref(pref)
->>>>>>> a6f7e932ad... Merge pull request #13178 from Heroman3003/linguist
 			mylist += path
 			return TOPIC_REFRESH
 
