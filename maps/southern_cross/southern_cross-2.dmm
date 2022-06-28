@@ -36030,15 +36030,14 @@
 /turf/simulated/floor/airless,
 /area/hallway/secondary/eva_hallway)
 "cjv" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
-	use_power = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
-/area/maintenance/research)
+/area/space)
 "cjw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -37843,9 +37842,14 @@
 /turf/simulated/floor/airless,
 /area/maintenance/research)
 "cqO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	use_power = 1
+	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/maintenance/research)
 "cqQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
@@ -125091,7 +125095,7 @@ aaa
 aaa
 aaa
 aaa
-cjv
+aaf
 cqO
 csb
 csb
@@ -127931,8 +127935,8 @@ abK
 abK
 abK
 abK
-abK
 abx
+abK
 abK
 abK
 abK
@@ -131027,7 +131031,7 @@ bvj
 bvj
 bvj
 bvj
-bvj
+cjv
 bvj
 cvL
 cxm
@@ -131801,7 +131805,7 @@ aaa
 aaa
 aaa
 aag
-aag
+wWX
 aaa
 aaa
 aaf
@@ -132059,8 +132063,8 @@ aaa
 aaa
 aaa
 aaa
+aag
 cuR
-aaf
 aaa
 aaf
 aaa
