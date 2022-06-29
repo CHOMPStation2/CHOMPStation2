@@ -134,6 +134,28 @@
 	if(!charging)
 		update_use_power(USE_POWER_IDLE)
 		icon_state = icon_state_idle
+<<<<<<< HEAD
+=======
+	//VOREStation Edit Start - pAI revival!
+	else if(istype(charging, /obj/item/device/paicard))
+		var/obj/item/device/paicard/pcard = charging
+		if(pcard.is_damage_critical())
+			pcard.forceMove(get_turf(src))
+			charging = null
+			pcard.damage_random_component()
+			update_icon()
+		else if(pcard.pai.bruteloss)
+			pcard.pai.adjustBruteLoss(-5)
+		else if(pcard.pai.fireloss)
+			pcard.pai.adjustFireLoss(-5)
+		else
+			charging = null
+			update_icon()
+			src.visible_message("<span class ='notice'>\The [src] ejects the [pcard]!</span>")
+			pcard.forceMove(get_turf(src))
+			pcard.pai.full_restore()
+	//VOREStation Edit End
+>>>>>>> 44c1b2cda9... Merge pull request #13199 from Very-Soft/paideath
 	else
 		var/obj/item/weapon/cell/C = charging.get_cell()
 		if(istype(C))
