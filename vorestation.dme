@@ -1255,7 +1255,11 @@
 #include "code\game\objects\items\devices\modkit.dm"
 #include "code\game\objects\items\devices\multitool.dm"
 #include "code\game\objects\items\devices\paicard.dm"
+<<<<<<< HEAD
 #include "code\game\objects\items\devices\paicard_ch.dm"
+=======
+#include "code\game\objects\items\devices\paicard_vr.dm"
+>>>>>>> e1dca305a0... Merge pull request #13180 from Very-Soft/paideath
 #include "code\game\objects\items\devices\pipe_painter.dm"
 #include "code\game\objects\items\devices\powersink.dm"
 #include "code\game\objects\items\devices\spy_bug.dm"
