@@ -188,9 +188,6 @@
 
 /datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
-<<<<<<< HEAD
-	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
-=======
 	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
 
 /datum/trait/positive/linguist
@@ -202,6 +199,7 @@
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 
+/* // CHOMPedit: commented out because we disabled baymiss so this does nothing.
 /datum/trait/positive/good_shooter
 	name = "Eagle Eye"
 	desc = "You are better at aiming than most."
@@ -209,4 +207,4 @@
 	var_changes = list("gun_accuracy_mod" = 25)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
->>>>>>> 4b43b02c06... Merge pull request #13193 from Heroman3003/traitening
+*/
