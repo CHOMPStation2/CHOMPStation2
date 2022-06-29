@@ -167,6 +167,7 @@
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 
+/* // CHOMPedit: commented out because we disabled baymiss so this does nothing.
 /datum/trait/negative/bad_shooter
 	name = "Bad Shot"
 	desc = "You are terrible at aiming."
@@ -174,4 +175,4 @@
 	var_changes = list("gun_accuracy_mod" = -35)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
-
+*/
