@@ -810,13 +810,8 @@
 		user.hud_used.remove_ammo_hud(user, src)
 	
 	return ..()
-<<<<<<< HEAD
-	
-/obj/item/weapon/gun/dropped(mob/living/user) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti. 
-=======
 
 /obj/item/weapon/gun/dropped(mob/living/user) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti.
->>>>>>> 4b43b02c06... Merge pull request #13193 from Heroman3003/traitening
 	user.hud_used.remove_ammo_hud(user, src)
 	
 	..()
