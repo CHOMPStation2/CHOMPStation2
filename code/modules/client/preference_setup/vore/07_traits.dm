@@ -174,35 +174,6 @@
 		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	var/traits_left = pref.max_traits
-<<<<<<< HEAD
-	
-	if(pref.species == SPECIES_CUSTOM)
-		var/points_left = pref.starting_trait_points
-
-		for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
-			points_left -= traits_costs[T]
-		for(var/T in pref.pos_traits)
-			traits_left--
-		. += "<b>Traits Left:</b> [traits_left]<br>"
-		. += "<b>Points Left:</b> [points_left]<br>"
-		if(points_left < 0 || traits_left < 0 || !pref.custom_species)
-			. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
-
-		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
-		. += "<ul>"
-		for(var/T in pref.pos_traits)
-			var/datum/trait/trait = positive_traits[T]
-			. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
-		. += "</ul>"
-
-		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
-		. += "<ul>"
-		for(var/T in pref.neg_traits)
-			var/datum/trait/trait = negative_traits[T]
-			. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
-		. += "</ul>"
-	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
-=======
 
 
 	var/points_left = pref.starting_trait_points
@@ -223,7 +194,6 @@
 	. += "</ul>"
 
 	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait +</a><br>"
->>>>>>> 4b43b02c06... Merge pull request #13193 from Heroman3003/traitening
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = neutral_traits[T]
