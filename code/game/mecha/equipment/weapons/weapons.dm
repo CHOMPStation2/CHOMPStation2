@@ -95,12 +95,9 @@
 			P.accuracy += M.accuracy
 		if(!isnull(M.accuracy_dispersion))
 			P.dispersion = max(P.dispersion + M.accuracy_dispersion, 0)
-<<<<<<< HEAD
-=======
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.species)
 			P.accuracy += H.species.gun_accuracy_mod
 			P.dispersion = max(P.dispersion + H.species.gun_accuracy_dispersion_mod, 0)
->>>>>>> 4b43b02c06... Merge pull request #13193 from Heroman3003/traitening
