@@ -140,13 +140,19 @@
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
-	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default)
+	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default, 600, 1)
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
+<<<<<<< HEAD
 		if(temporary_form)	//CHOMPEdit - resizing both our forms
 			var/mob/living/L = temporary_form
 			L.resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		//CHOMPEDIT - I don't need to be informed every time a prommie changes sizes
+=======
+		// I'm not entirely convinced that `src ? ADMIN_JMP(src) : "null"` here does anything
+		// but just in case it does, I'm leaving the null-src checking
+		log_admin("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]")
+>>>>>>> c94decbc74... Merge pull request #13194 from ItsSelis/tgui-inputfix
 
 /*
 //Add the set_size() proc to usable verbs. By commenting this out, we can leave the proc and hand it to species that need it.
