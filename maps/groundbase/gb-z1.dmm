@@ -56,6 +56,13 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
+"ag" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/alarm,
+/turf/simulated/floor,
+/area/maintenance/groundbase/substation/aiciv)
 "ah" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -338,6 +345,18 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
+"aN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/firealarm{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/groundbase/substation/aiciv)
 "aO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/purple{
 	dir = 9
@@ -375,6 +394,18 @@ lel
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/or1)
+"aU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/engislug{
+	ghostjoin = 1
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/lobby)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light_switch{
@@ -398,6 +429,18 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
+"aY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/gatslug{
+	ghostjoin = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/lobby)
 "aZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -6227,18 +6270,6 @@ lel
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
-"pp" = (
-/mob/living/simple_mob/vore/alienanimals/catslug/custom/engislug{
-	ghostjoin = 1
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/lobby)
 "pq" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -7661,6 +7692,7 @@ lel
 /obj/structure/bed/chair/backed_red{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/gameroom)
 "sI" = (
@@ -7669,6 +7701,10 @@ lel
 	},
 /turf/simulated/floor,
 /area/maintenance/groundbase/substation/aiciv)
+=======
+/turf/simulated/floor/tiled/techfloor,
+/area/groundbase/civilian/arrivals)
+>>>>>>> 7790e541bb... Merge pull request #13190 from Heroman3003/airalarm
 "sJ" = (
 /obj/structure/table/rack,
 /obj/item/device/suit_cooling_unit,
@@ -17724,15 +17760,6 @@ lel
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
-"QW" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor,
-/area/maintenance/groundbase/substation/aiciv)
 "QX" = (
 /obj/effect/landmark{
 	name = "JoinLateGateway"
@@ -19651,18 +19678,6 @@ lel
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
-"VH" = (
-/mob/living/simple_mob/vore/alienanimals/catslug/custom/gatslug{
-	ghostjoin = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/security/lobby)
 "VI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -25374,10 +25389,10 @@ WG
 WP
 WP
 Qi
-sI
+ag
 rq
 pq
-QW
+aN
 fk
 GJ
 Fi
@@ -27291,8 +27306,13 @@ wl
 wl
 wl
 tL
+<<<<<<< HEAD
 VH
 Np
+=======
+aY
+Zq
+>>>>>>> 7790e541bb... Merge pull request #13190 from Heroman3003/airalarm
 TC
 ti
 mZ
@@ -35074,7 +35094,7 @@ MK
 Wl
 fv
 ga
-pp
+aU
 Cq
 Cq
 Cq
