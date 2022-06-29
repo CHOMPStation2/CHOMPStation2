@@ -178,8 +178,10 @@
 
 	var/points_left = pref.starting_trait_points
 
-	for(var/T in pref.pos_traits + pref.neg_traits)
+
+	for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
 		points_left -= traits_costs[T]
+	for(var/T in pref.pos_traits)
 		traits_left--
 	. += "<b>Traits Left:</b> [traits_left]<br>"
 	. += "<b>Points Left:</b> [points_left]<br>"
