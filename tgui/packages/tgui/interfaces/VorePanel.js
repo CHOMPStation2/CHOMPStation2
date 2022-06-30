@@ -1,11 +1,7 @@
 import { capitalize } from 'common/string';
 import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
-<<<<<<< HEAD
-import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from '../components';
-=======
-import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider } from '../components';
->>>>>>> 0bb4a58dea... Merge pull request #13204 from ItsSelis/selis-better-vorepanel
+import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider } from '../components';
 import { Window } from '../layouts';
 import { classes } from 'common/react';
 
