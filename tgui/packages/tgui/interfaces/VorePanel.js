@@ -1555,7 +1555,32 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Spontaneous TF Disabled',
       },
     },
-<<<<<<< HEAD
+    examine_nutrition: {
+      action: 'toggle_nutrition_ex',
+      test: nutrition_message_visible,
+      tooltip: {
+        main: '',
+        enable: 'Click here to enable nutrition messages.',
+        disable: 'Click here to disable nutrition messages.',
+      },
+      content: {
+        enabled: 'Examine Nutrition Messages Active',
+        disabled: 'Examine Nutrition Messages Inactive',
+      },
+    },
+    examine_weight: {
+      action: 'toggle_weight_ex',
+      test: weight_message_visible,
+      tooltip: {
+        main: '',
+        enable: 'Click here to enable weight messages.',
+        disable: 'Click here to disable weight messages.',
+      },
+      content: {
+        enabled: 'Examine Weight Messages Active',
+        disabled: 'Examine Weight Messages Inactive',
+      },
+    },
     liquid_receive: {
       action: 'toggle_liq_rec',
       test: liq_rec,
@@ -1593,32 +1618,6 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: 'Auto-Transfer Allowed',
         disabled: 'Do Not Allow Auto-Transfer',
-=======
-    examine_nutrition: {
-      action: 'toggle_nutrition_ex',
-      test: nutrition_message_visible,
-      tooltip: {
-        main: '',
-        enable: 'Click here to enable nutrition messages.',
-        disable: 'Click here to disable nutrition messages.',
-      },
-      content: {
-        enabled: 'Examine Nutrition Messages Active',
-        disabled: 'Examine Nutrition Messages Inactive',
-      },
-    },
-    examine_weight: {
-      action: 'toggle_weight_ex',
-      test: weight_message_visible,
-      tooltip: {
-        main: '',
-        enable: 'Click here to enable weight messages.',
-        disable: 'Click here to disable weight messages.',
-      },
-      content: {
-        enabled: 'Examine Weight Messages Active',
-        disabled: 'Examine Weight Messages Inactive',
->>>>>>> 8126bb9235... Merge pull request #13206 from ItsSelis/selis-better-vorepanel
       },
     },
   };
@@ -1695,15 +1694,8 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
-<<<<<<< HEAD
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <Button fluid content="Set Taste" icon="grin-tongue" onClick={() => act('setflavor')} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <Button fluid content="Set Smell" icon="wind" onClick={() => act('setsmell')} />
         </Flex.Item>
         <Flex.Item basis="49%">
           <VoreUserPreferenceItem spec={preferences.liquid_receive} tooltipPosition="top" />
@@ -1711,8 +1703,6 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="49%">
           <VoreUserPreferenceItem spec={preferences.liquid_give} tooltipPosition="top" />
         </Flex.Item>
-=======
->>>>>>> 8126bb9235... Merge pull request #13206 from ItsSelis/selis-better-vorepanel
       </Flex>
       <Section title="Aesthetic Preferences">
         <Flex spacing={1} wrap="wrap" justify="center">
