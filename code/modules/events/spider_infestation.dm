@@ -22,8 +22,15 @@
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 			continue
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
+<<<<<<< HEAD
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
+=======
+			if(temp_vent.network.normal_members.len > 50)
+				var/area/A = get_area(temp_vent)
+				if(!(A.forbid_events))
+					vents += temp_vent
+>>>>>>> eb06a4b9e2... Merge pull request #13220 from Heroman3003/forbid-events
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)

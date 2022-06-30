@@ -357,6 +357,7 @@
 /area/groundbase/civilian/arrivals
 	name = "Arrivals"
 	lightswitch = 1
+	forbid_events = TRUE
 /area/groundbase/civilian/toolstorage
 	name = "Tool Storage"
 	lightswitch = 1
@@ -414,11 +415,16 @@
 	name = "Men's Restroom"
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	lightswitch = 1
+	forbid_events = TRUE
 /area/groundbase/civilian/womensrestroom
 	name = "Women's Restroom"
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	lightswitch = 1
+<<<<<<< HEAD
 >>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
+=======
+	forbid_events = TRUE
+>>>>>>> eb06a4b9e2... Merge pull request #13220 from Heroman3003/forbid-events
 
 /area/groundbase/exploration
 	name = "Exploration"
