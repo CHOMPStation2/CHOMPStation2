@@ -17,7 +17,7 @@
 	name = "advanced SMG"
 	desc = "An advanced submachine gun with a reflective laser optic that makes burst fire less inaccurate than other SMGs. Uses 9mm rounds."
 	icon = 'icons/obj/gun.dmi'
-	icon_state = "advanced_smg-e"
+	icon_state = "advanced_smg-e" //CHOMPedit
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = "9mm"
@@ -33,7 +33,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/advanced_smg/update_icon()
 	..()
-	icon_state = (ammo_magazine)? "advanced_smg" : "advanced_smg-e"
+	icon_state = (ammo_magazine)? "advanced_smg" : "advanced_smg-e" //CHOMPedit
 	return
 
 /obj/item/weapon/gun/projectile/automatic/advanced_smg/loaded
