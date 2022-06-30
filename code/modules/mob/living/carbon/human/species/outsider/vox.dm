@@ -6,12 +6,8 @@
 	default_language = LANGUAGE_VOX
 	language = LANGUAGE_GALCOM
 	species_language = LANGUAGE_VOX
-<<<<<<< HEAD
-	num_alternate_languages = 1
-	color_mult = 1  //CHOMP Edit
-=======
 	num_alternate_languages = 3
->>>>>>> 4b43b02c06... Merge pull request #13193 from Heroman3003/traitening
+	color_mult = 1  //CHOMP Edit
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL)
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,  /datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/strong)
 	rarity_value = 4
