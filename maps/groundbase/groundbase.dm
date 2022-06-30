@@ -8,7 +8,12 @@
 	#include "..\offmap_vr\common_offmaps.dm"
 	#include "..\tether\tether_jobs.dm"
 	#include "groundbase_poi_stuff.dm"
+<<<<<<< HEAD
 	#include "gb-wilds.dm"
+=======
+	#include "groundbase_wilds.dm"
+	#include "..\~map_system\maps_vr.dm"
+>>>>>>> 6e78061738... Merge pull request #13210 from Heroman3003/minor-maptweaks
 
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions
 		#include "gb-z1.dmm"

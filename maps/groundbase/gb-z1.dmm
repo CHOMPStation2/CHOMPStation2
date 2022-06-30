@@ -458,6 +458,16 @@ lel
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
+"bk" = (
+/obj/structure/bed/chair/office/dark,
+/obj/machinery/button/windowtint/multitint{
+	id = "detoffice";
+	pixel_x = -15;
+	pixel_y = -30
+	},
+/obj/effect/landmark/start/detective,
+/turf/simulated/floor/carpet,
+/area/groundbase/security/detective)
 "bl" = (
 /obj/machinery/power/apc,
 /obj/structure/cable/yellow,
@@ -3896,16 +3906,6 @@ lel
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/engineering/atmos)
-"jN" = (
-/obj/structure/bed/chair/office/dark,
-/obj/machinery/button/windowtint/multitint{
-	id = "detoffice0";
-	pixel_x = -15;
-	pixel_y = -30
-	},
-/obj/effect/landmark/start/detective,
-/turf/simulated/floor/carpet,
-/area/groundbase/security/detective)
 "jO" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -29698,7 +29698,7 @@ AZ
 yb
 Bp
 Uz
-jN
+bk
 jL
 dq
 cz
