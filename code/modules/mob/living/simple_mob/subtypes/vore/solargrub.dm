@@ -58,7 +58,11 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	var/datum/powernet/PN            // Our powernet
 	var/obj/structure/cable/attached        // the attached cable
 	var/shock_chance = 10 // Beware
+<<<<<<< HEAD
 	var/powerdraw = 100000 // previous value 150000 // CHOMPStation Addition, Rykka waz here. *pawstamp*
+=======
+	var/tracked = FALSE
+>>>>>>> 6617481621... Merge pull request #13232 from Heroman3003/solargrub-track
 
 /datum/say_list/solargrub
 	emote_see = list("squelches", "squishes")
