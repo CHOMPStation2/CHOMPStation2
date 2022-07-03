@@ -515,9 +515,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"bt" = (
-/turf/simulated/wall/r_wall,
-/area/groundbase/science)
 "bu" = (
 /obj/machinery/door/airlock/freezer{
 	name = "Kitchen";
@@ -22339,7 +22336,7 @@ Rh
 EJ
 YI
 ng
-bt
+PD
 AH
 lO
 Ga
@@ -22481,7 +22478,7 @@ Rh
 bO
 AZ
 ff
-bt
+PD
 IO
 qW
 PZ
@@ -22623,7 +22620,7 @@ Rh
 ff
 AZ
 ff
-bt
+PD
 nw
 qW
 lw
@@ -22765,7 +22762,7 @@ Rh
 Fk
 AZ
 yw
-bt
+PD
 ws
 qW
 lw
@@ -22907,7 +22904,7 @@ Rh
 vh
 Nb
 Ys
-bt
+PD
 aB
 PR
 lw
@@ -23049,7 +23046,7 @@ Rh
 PD
 qU
 PD
-bt
+PD
 Ov
 PR
 lw
