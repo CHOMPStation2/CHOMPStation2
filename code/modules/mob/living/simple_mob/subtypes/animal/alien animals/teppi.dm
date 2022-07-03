@@ -876,6 +876,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	speak_chance = 0.5
 	wander = TRUE
 
+<<<<<<< HEAD
 /datum/language/teppi
 	name = "Teppi"
 	desc = "The language of the meat things."
@@ -888,6 +889,8 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	space_chance = 100
 	syllables = list("gyoh", "snoof", "gyoooooOOOooh", "iuuuuh", "gyuuuuh")
 
+=======
+>>>>>>> 6ee75cc608... Merge pull request #13255 from Heroman3003/language-preview
 ////////////////// Da babby //////////////
 
 /mob/living/simple_mob/vore/alienanimals/teppi/baby

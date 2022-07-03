@@ -89,8 +89,17 @@
 				tgui_alert_async(user, "There are no additional languages available to select.")
 			else
 				var/new_lang = tgui_input_list(user, "Select an additional language", "Character Generation", available_languages)
+<<<<<<< HEAD
 				if(new_lang && pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
 					pref.alternate_languages |= new_lang
+=======
+				if(new_lang && pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
+					var/datum/language/chosen_lang = GLOB.all_languages[new_lang]
+					if(istype(chosen_lang))
+						var/choice = tgui_alert(usr, "[chosen_lang.desc]",chosen_lang.name, list("Take","Cancel"))
+						if(choice != "Cancel" && pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
+							pref.alternate_languages |= new_lang
+>>>>>>> 6ee75cc608... Merge pull request #13255 from Heroman3003/language-preview
 					return TOPIC_REFRESH
 
 	else if(href_list["change_prefix"])
