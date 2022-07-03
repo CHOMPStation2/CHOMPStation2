@@ -409,8 +409,6 @@
 /area/groundbase/civilian/gameroom
 	name = "Gamatorium"
 	sound_env = SMALL_SOFTFLOOR
-<<<<<<< HEAD
-=======
 /area/groundbase/civilian/mensrestroom
 	name = "Men's Restroom"
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
@@ -420,11 +418,7 @@
 	name = "Women's Restroom"
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	lightswitch = 1
-<<<<<<< HEAD
->>>>>>> d8515387bc... Merge pull request #12695 from Very-Soft/gbtweaks
-=======
 	forbid_events = TRUE
->>>>>>> eb06a4b9e2... Merge pull request #13220 from Heroman3003/forbid-events
 
 /area/groundbase/exploration
 	name = "Exploration"
