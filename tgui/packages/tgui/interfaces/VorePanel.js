@@ -175,6 +175,65 @@ export const VorePanel = (props, context) => {
 
   tabs[1] = <VoreUserPreferences />;
 
+  const generateBellyString = () => {
+    const {
+      // Controls
+      belly_name,
+      mode,
+      item_mode,
+      addons,
+
+      // Descriptions
+      verb,
+      desc,
+      absorbed_desc,
+    } = data.selected;
+
+    let result = '=== ' + belly_name + ' ===\n\n';
+    result += '== Controls ==\n\n';
+    result += 'Mode:\n' + mode + '\n\n';
+    result += 'Addons:\n' + addons + '\n\n';
+    result += 'Item Mode:\n' + item_mode + '\n\n';
+    result += '== Descriptions ==\n\n';
+    result += 'Verb:\n' + verb + '\n\n';
+    result += 'Description:\n"' + desc + '"\n\n';
+    result += 'Absorbed Description:\n"' + absorbed_desc + '"\n\n';
+
+    return result;
+  };
+
+  const downloadPrefs = () => {
+    const { belly_name } = data.selected;
+
+    const extension = '.txt';
+
+    let now = new Date();
+    let hours = String(now.getHours());
+    if (hours.length < 2) {
+      hours = '0' + hours;
+    }
+    let minutes = String(now.getMinutes());
+    if (minutes.length < 2) {
+      minutes = '0' + minutes;
+    }
+    let dayofmonth = String(now.getDate());
+    if (dayofmonth.length < 2) {
+      dayofmonth = '0' + dayofmonth;
+    }
+    let month = String(now.getMonth() + 1); // 0-11
+    if (month.length < 2) {
+      month = '0' + month;
+    }
+    let year = String(now.getFullYear());
+
+    let datesegment = ' ' + year + '-' + month + '-' + dayofmonth + ' (' + hours + ' ' + minutes + ')';
+
+    let filename = belly_name + datesegment + extension;
+
+    let blob = new Blob([generateBellyString()], { type: 'text/html;charset=utf8;' });
+    window.navigator.msSaveOrOpenBlob(blob, filename);
+  };
+
   return (
     <Window width={890} height={660} theme="abstract" resizable>
       <Window.Content scrollable>
@@ -184,6 +243,16 @@ export const VorePanel = (props, context) => {
               <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
               <Flex.Item>
                 <Button content="Save Prefs" icon="save" onClick={() => act('saveprefs')} />
+              </Flex.Item>
+              <Flex.Item>
+                <Button
+                  content="Save Prefs & Export Selected Belly"
+                  icon="download"
+                  onClick={() => {
+                    act('saveprefs');
+                    downloadPrefs();
+                  }}
+                />
               </Flex.Item>
             </Flex>
           </NoticeBox>
@@ -431,14 +500,6 @@ const VoreSelectedBellyDescriptions = (props, context) => {
       </LabeledList.Item>
       <LabeledList.Item label="Examine Messages">
         <Button
-          onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'en' })}
-          content="Nutrition Examine Message"
-        />
-        <Button
-          onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'ew' })}
-          content="Weight Examine Message"
-        />
-        <Button
           onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'em' })}
           content="Examine Message (when full)"
         />
@@ -563,8 +624,6 @@ const VoreSelectedBellyOptions = (props, context) => {
     shrink_grow_size,
     emote_time,
     emote_active,
-    nutrition_ex,
-    weight_ex,
     contaminates,
     contaminate_flavor,
     contaminate_color,
@@ -687,22 +746,6 @@ const VoreSelectedBellyOptions = (props, context) => {
               onClick={() => act('set_attribute', { attribute: 'b_egg_type' })}
               icon="pen"
               content={capitalize(egg_type)}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Examine Nutrition Messages">
-            <Button
-              onClick={() => act('set_attribute', { attribute: 'toggle_nutrition_ex' })}
-              icon={nutrition_ex ? 'toggle-on' : 'toggle-off'}
-              selected={nutrition_ex}
-              content={nutrition_ex ? 'Active' : 'Inactive'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Examine Weight Messages">
-            <Button
-              onClick={() => act('set_attribute', { attribute: 'toggle_weight_ex' })}
-              icon={weight_ex ? 'toggle-on' : 'toggle-off'}
-              selected={weight_ex}
-              content={weight_ex ? 'Active' : 'Inactive'}
             />
           </LabeledList.Item>
         </LabeledList>
@@ -1274,6 +1317,8 @@ const VoreUserPreferences = (props, context) => {
     drop_vore,
     stumble_vore,
     slip_vore,
+    nutrition_message_visible,
+    weight_message_visible,
   } = data.prefs;
 
   const { show_pictures } = data;
@@ -1579,6 +1624,32 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Spontaneous TF Disabled',
       },
     },
+    examine_nutrition: {
+      action: 'toggle_nutrition_ex',
+      test: nutrition_message_visible,
+      tooltip: {
+        main: '',
+        enable: 'Click here to enable nutrition messages.',
+        disable: 'Click here to disable nutrition messages.',
+      },
+      content: {
+        enabled: 'Examine Nutrition Messages Active',
+        disabled: 'Examine Nutrition Messages Inactive',
+      },
+    },
+    examine_weight: {
+      action: 'toggle_weight_ex',
+      test: weight_message_visible,
+      tooltip: {
+        main: '',
+        enable: 'Click here to enable weight messages.',
+        disable: 'Click here to disable weight messages.',
+      },
+      content: {
+        enabled: 'Examine Weight Messages Active',
+        disabled: 'Examine Weight Messages Inactive',
+      },
+    },
     liquid_receive: {
       action: 'toggle_liq_rec',
       test: liq_rec,
@@ -1622,7 +1693,7 @@ const VoreUserPreferences = (props, context) => {
 
   return (
     <Section
-      title="Preferences"
+      title="Mechanical Preferences"
       buttons={
         <Button icon="eye" selected={show_pictures} onClick={() => act('show_pictures')}>
           Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
@@ -1695,12 +1766,6 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <Button fluid content="Set Taste" icon="grin-tongue" onClick={() => act('setflavor')} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <Button fluid content="Set Smell" icon="wind" onClick={() => act('setsmell')} />
-        </Flex.Item>
         <Flex.Item basis="49%">
           <VoreUserPreferenceItem spec={preferences.liquid_receive} tooltipPosition="top" />
         </Flex.Item>
@@ -1708,6 +1773,39 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.liquid_give} tooltipPosition="top" />
         </Flex.Item>
       </Flex>
+      <Section title="Aesthetic Preferences">
+        <Flex spacing={1} wrap="wrap" justify="center">
+          <Flex.Item basis="50%" grow={1}>
+            <Button fluid content="Set Taste" icon="grin-tongue" onClick={() => act('setflavor')} />
+          </Flex.Item>
+          <Flex.Item basis="50%">
+            <Button fluid content="Set Smell" icon="wind" onClick={() => act('setsmell')} />
+          </Flex.Item>
+          <Flex.Item basis="50%" grow={1}>
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'en' })}
+              content="Set Nutrition Examine Message"
+              icon="flask"
+              fluid
+            />
+          </Flex.Item>
+          <Flex.Item basis="50%">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'ew' })}
+              content="Set Weight Examine Message"
+              icon="weight-hanging"
+              fluid
+            />
+          </Flex.Item>
+          <Flex.Item basis="50%" grow={1}>
+            <VoreUserPreferenceItem spec={preferences.examine_nutrition} />
+          </Flex.Item>
+          <Flex.Item basis="50%">
+            <VoreUserPreferenceItem spec={preferences.examine_weight} />
+          </Flex.Item>
+        </Flex>
+      </Section>
+      <Divider />
       <Section>
         <Flex spacing={1}>
           <Flex.Item basis="49%">

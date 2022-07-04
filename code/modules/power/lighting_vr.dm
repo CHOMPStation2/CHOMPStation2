@@ -46,7 +46,7 @@
 /obj/item/weapon/light/bulb/large
 	brightness_range = 6
 	brightness_power = 1
-	
+
 	nightshift_range = 6
 	nightshift_power = 0.45
 
