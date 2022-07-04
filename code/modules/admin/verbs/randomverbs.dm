@@ -529,7 +529,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	//If desired, apply equipment.
 	if(equipment)
 		if(charjob)
-			job_master.EquipRank(new_character, charjob, 1)
+			job_master.EquipRank(new_character, charjob, 1, announce)
 			new_character.mind.assigned_role = charjob
 			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
 		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
@@ -550,10 +550,10 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	log_admin("[admin] has spawned [player_key]'s character [new_character.real_name].")
 	message_admins("[admin] has spawned [player_key]'s character [new_character.real_name].", 1)
 
-	
+
 
 	feedback_add_details("admin_verb","RSPCH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	
+
 	// Drop pods
 	if(showy == "Polite")
 		var/turf/T = get_turf(new_character)
@@ -1078,7 +1078,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	set name = "Drop Pod Atom"
 	set desc = "Spawn a new atom/movable in a drop pod where you are."
 	set category = "Fun"
-	
+
 	if(!check_rights(R_SPAWN))
 		return
 
@@ -1099,7 +1099,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		chosen = tgui_input_list(usr, "Select a movable type:", "Spawn in Drop Pod", matches)
 		if(!chosen)
 			return
-	
+
 	var/podtype = tgui_alert(src,"Destructive drop pods cause damage in a 3x3 and may break turfs. Polite drop pods lightly damage the turfs but won't break through.", "Drop Pod", list("Polite", "Destructive", "Cancel"))
 	if(podtype == "Cancel")
 		return
@@ -1120,14 +1120,14 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	set name = "Drop Pod Deploy"
 	set desc = "Drop an existing mob where you are in a drop pod."
 	set category = "Fun"
-	
+
 	if(!check_rights(R_SPAWN))
 		return
 
 	var/mob/living/L = tgui_input_list(usr, "Select the mob to drop:", "Mob Picker", living_mob_list)
 	if(!L)
 		return
-	
+
 	var/podtype = tgui_alert(src,"Destructive drop pods cause damage in a 3x3 and may break turfs. Polite drop pods lightly damage the turfs but won't break through.", "Drop Pod", list("Polite", "Destructive", "Cancel"))
 	if(podtype == "Cancel")
 		return

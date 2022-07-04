@@ -355,7 +355,7 @@ var/global/datum/controller/occupations/job_master
 	return 1
 
 
-/datum/controller/occupations/proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
+/datum/controller/occupations/proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0, var/announce = TRUE)
 	if(!H)	return null
 
 	var/datum/job/job = GetJob(rank)
@@ -494,7 +494,7 @@ var/global/datum/controller/occupations/job_master
 			return H
 
 		// TWEET PEEP
-		if(rank == "Site Manager")
+		if(rank == "Site Manager" && announce)
 			var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
 			captain_announcement.Announce("All hands, [alt_title ? alt_title : "Site Manager"] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
 
