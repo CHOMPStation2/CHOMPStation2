@@ -130,8 +130,6 @@
 			icon_state = "big_flamp-construct-stage2"
 		if(3)
 			icon_state = "big_flamp-empty"
-<<<<<<< HEAD
-=======
 
 // Fairy lights
 
@@ -211,4 +209,3 @@
 		if(3)
 			icon_state = "big_flamp-empty"
 */
->>>>>>> 048fa34e2a... Merge pull request #13267 from Very-Soft/thatniceglow
