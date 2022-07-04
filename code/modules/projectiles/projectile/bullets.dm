@@ -58,6 +58,10 @@
 		if(D.glass) chance *= 2
 	else if(istype(A, /obj/structure/girder))
 		chance = 100
+	else if(istype(A, /obj/machinery/door/airlock/voidcraft)) //CHOMPEDIT Begin, lets the code see shuttlecraft structures and not treat them as air.
+		chance = 0
+	else if(istype(A, /turf/simulated/shuttle/wall))
+		chance = 0 //CHOMPEDIT End. Yeah, shuttlecraft can handle small arms fire just fine.
 
 	if(prob(chance))
 		if(A.opacity)
