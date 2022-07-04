@@ -83,25 +83,6 @@
 	var/list/cable_turfs = list()
 	var/list/dirs_checked = list()
 
-<<<<<<< HEAD
-	for(C in world)
-		T = null
-
-		T = get_turf(C)
-		if(T && T.z == 1)
-			cable_turfs |= get_turf(C)
-
-	for(T in cable_turfs)
-		var/bad_msg = "--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
-		dirs_checked.Cut()
-		for(C in T)
-			wire_test_count++
-			var/combined_dir = "[C.d1]-[C.d2]"
-			if(combined_dir in dirs_checked)
-				bad_tests++
-				log_unit_test("[bad_msg] Contains multiple wires with same direction on top of each other.")
-			dirs_checked.Add(combined_dir)
-=======
 	var/list/exempt_from_wires = list()
 	exempt_from_wires += using_map.unit_test_exempt_from_wires.Copy()
 
@@ -131,7 +112,6 @@
 				dirs_checked.Add(combined_dir)
 
 		log_unit_test("[color] wires checked.")
->>>>>>> 5a6fbe68c7... Merge pull request #13244 from ItsSelis/selis-multimap
 
 	if(bad_tests)
 		fail("\[[bad_tests] / [wire_test_count]\] Some turfs had overlapping wires going the same direction.")
