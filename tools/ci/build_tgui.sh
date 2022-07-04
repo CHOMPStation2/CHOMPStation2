@@ -7,7 +7,6 @@ source ~/.nvm/nvm.sh
 nvm use $NODE_VERSION
 cd tgui
 chmod +x bin/tgui
-<<<<<<< HEAD
 bin/tgui --ci
 bin/tgui --lint
 bin/tgui --test
