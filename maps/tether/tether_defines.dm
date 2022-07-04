@@ -149,7 +149,15 @@
 		/area/tether/surfacebase/emergency_storage/atrium,
 		/area/tether/surfacebase/lowernortheva, // it airlock
 		/area/tether/surfacebase/lowernortheva/external, //it outside
+<<<<<<< HEAD
 		/area/tether/surfacebase/security/gasstorage) //it maint
+=======
+		/area/tether/surfacebase/security/gasstorage, // Maint
+		/area/tcommsat/chamber,
+		/area/tether/outpost/solars_outside, // Outside
+		/area/vacant/vacant_bar_upper // Maint
+		)
+>>>>>>> 3ff5c6fae5... Merge pull request #13268 from Very-Soft/updatetether
 
 	unit_test_z_levels = list(
 		Z_LEVEL_SURFACE_LOW,
