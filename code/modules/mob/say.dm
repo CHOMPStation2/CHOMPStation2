@@ -116,9 +116,9 @@
 			else if(!(other.loc in view(src)))
 				return FALSE
 		else if(istype(src.loc, /obj/item/weapon/holder))
-			if(!other in view(src.loc.loc))
+			if((!other) in view(src.loc.loc))
 				return FALSE
-		else if(!other in view(src))
+		else if((!other) in view(src))
 			return FALSE
 		//CHOMPEdit End
 

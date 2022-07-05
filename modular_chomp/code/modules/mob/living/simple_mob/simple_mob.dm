@@ -15,7 +15,7 @@
 		Spit(A)
 	. = ..()
 
-mob/living/simple_mob/verb/toggle_vore_icons()
+/mob/living/simple_mob/verb/toggle_vore_icons()
 
 	set name = "Toggle Vore Sprite"
 	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
@@ -34,7 +34,7 @@ mob/living/simple_mob/verb/toggle_vore_icons()
 
 	update_icon()
 
-mob/living/simple_mob/handle_speech_sound()
+/mob/living/simple_mob/handle_speech_sound()
 	if(speech_sounds && speech_sounds.len && prob(speech_chance))
 		var/list/returns[2]
 		returns[1] = sound(pick(speech_sounds))
