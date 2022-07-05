@@ -4468,6 +4468,7 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
+#include "modular_chomp\clockwork_cult\clock_helpers\ratvarian_language.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
 #include "modular_chomp\code\modules\mob\holder.dm"
