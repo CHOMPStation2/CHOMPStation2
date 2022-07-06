@@ -989,7 +989,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "cz" = (
 /obj/structure/table/steel_reinforced,
@@ -1145,7 +1145,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
 "cZ" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1520,6 +1520,15 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/blue{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
 "dS" = (
@@ -1527,6 +1536,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
@@ -1563,6 +1578,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
@@ -1619,6 +1637,9 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
@@ -1866,8 +1887,9 @@
 	opacity = 1
 	},
 /obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 2e+006;
-	inputting = 1
+	charge = 4e+006;
+	inputting = 1;
+	outputting = 1
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -2029,11 +2051,11 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/power/apc/hyper{
 	coverlocked = 0;
+	locked = 0;
+	pixel_y = -24;
 	environ = 0;
 	equipment = 0;
-	lighting = 0;
-	locked = 0;
-	pixel_y = -24
+	lighting = 0
 	},
 /obj/structure/cable/green,
 /turf/simulated/shuttle/plating,
@@ -3169,6 +3191,14 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/airless,
 /area/solar/expportsolar)
+"iY" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/device/spaceflare,
+/obj/item/device/spaceflare{
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/prep)
 "iZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4571,13 +4601,12 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
-"oj" = (
-/obj/effect/floor_decal/borderfloorblack,
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarthree)
 "ok" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
@@ -4664,12 +4693,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
-"ow" = (
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
 "ox" = (
-/obj/structure/girder,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "oy" = (
 /turf/simulated/floor/tiled/monotile,
@@ -4750,10 +4784,11 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfour)
 "oG" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
 "oH" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
@@ -4776,12 +4811,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
-"oJ" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarthree)
 "oK" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -4832,10 +4861,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfour)
-"oU" = (
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
 "oV" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/ursula)
@@ -4846,19 +4871,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/ursula)
-"oX" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
-"oY" = (
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarthree)
 "oZ" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -5226,13 +5238,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
 "pS" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/obj/item/stack/cable_coil/blue,
+/turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "pT" = (
 /obj/structure/bed/chair/bay/shuttle,
@@ -5394,12 +5401,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/stargazer)
-"qk" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
 "qm" = (
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
@@ -5475,7 +5476,7 @@
 /obj/structure/fuel_port{
 	pixel_x = -32
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "qx" = (
 /turf/simulated/shuttle/wall/voidcraft/no_join,
@@ -5541,18 +5542,12 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/ursula)
-"qG" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
 "qH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/monotile,
 /area/expoutpost/hangarthree)
 "qI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -5560,10 +5555,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
-"qJ" = (
-/obj/structure/girder/displaced,
-/turf/simulated/floor/plating,
-/area/expoutpost/hangerhall)
 "qK" = (
 /obj/structure/closet/crate/engineering,
 /obj/fiftyspawner/steel,
@@ -5604,21 +5595,12 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/ursula)
 "qR" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -5780,11 +5762,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
-"qZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
 "ra" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
@@ -5792,10 +5769,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/expoutpost/aftdock)
-"rb" = (
-/obj/structure/girder/displaced,
-/turf/simulated/floor/plating,
-/area/expoutpost/hangarthree)
 "rc" = (
 /obj/machinery/light{
 	dir = 8
@@ -6276,7 +6249,9 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
 "sl" = (
-/obj/item/frame/apc,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "sm" = (
@@ -6409,10 +6384,13 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "sI" = (
 /obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -6423,11 +6401,17 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
 "sK" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
@@ -14267,8 +14251,8 @@
 /area/expoutpost/prep)
 "Sf" = (
 /obj/machinery/computer/shuttle_control/web/shuttle3{
-	my_doors = list("expshuttle3_door_L" = "Port Cargo", "shuttle3_outer" = "Airlock Outer", "shuttle3_inner" = "Airlock Inner", "expshuttle3_door_cargo" = "Cargo Hatch");
-	my_sensors = list("shuttle3sens_exp" = "Exterior Environment", "shuttle3sens_exp_int" = "Cargo Area", "shuttle3sens_exp_psg" = "Passenger Area")
+	my_doors = list("expshuttle3_door_L"="Port Cargo","shuttle3_outer"="Airlock Outer","shuttle3_inner"="Airlock Inner","expshuttle3_door_cargo"="Cargo Hatch");
+	my_sensors = list("shuttle3sens_exp"="Exterior Environment","shuttle3sens_exp_int"="Cargo Area","shuttle3sens_exp_psg"="Passenger Area")
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
@@ -34487,14 +34471,14 @@ pk
 of
 os
 os
-os
+sl
 os
 os
 of
 rQ
+pS
 os
-os
-os
+sl
 of
 of
 gT
@@ -34739,13 +34723,13 @@ dB
 of
 og
 ot
-ow
-oU
+ot
+ot
 pl
 pD
 pR
 pR
-pR
+oG
 cx
 cX
 cY
@@ -34997,19 +34981,19 @@ dB
 of
 oh
 ou
-oG
-oG
 ou
 ou
-pS
-qk
+ou
+ou
+ou
+ou
 qw
 cy
 rj
-qk
-pS
 ou
-pS
+ou
+ou
+ou
 sH
 dS
 of
@@ -35511,7 +35495,7 @@ nt
 nK
 dB
 of
-oj
+oi
 dk
 dk
 oH
@@ -35769,7 +35753,7 @@ nu
 ne
 dB
 of
-oj
+oi
 dk
 oH
 oV
@@ -36027,7 +36011,7 @@ nu
 ne
 dB
 of
-oj
+oi
 dk
 oI
 oW
@@ -36285,7 +36269,7 @@ dT
 nL
 dB
 of
-oj
+oi
 dk
 oH
 oV
@@ -36300,7 +36284,7 @@ rB
 rS
 rS
 dk
-os
+ox
 dY
 of
 gT
@@ -38093,16 +38077,16 @@ dB
 of
 ok
 ov
-oJ
-oX
-oX
 ov
 ov
-oX
-qG
-oJ
-oJ
-oJ
+ov
+ov
+ov
+ov
+ov
+ov
+ov
+ov
 ov
 ov
 ov
@@ -38350,7 +38334,7 @@ nP
 dB
 of
 og
-ow
+ot
 ot
 ot
 ps
@@ -38358,7 +38342,7 @@ pJ
 pR
 pR
 qH
-qZ
+qO
 qO
 rE
 rT
@@ -38610,17 +38594,17 @@ of
 of
 os
 oK
-oY
+os
 pt
 of
 os
 os
 qI
-rb
+os
 os
 of
 rU
-sl
+os
 dg
 qI
 of
@@ -38866,15 +38850,15 @@ dB
 aH
 aH
 of
-ox
-ox
 of
 of
 of
 of
 of
-ow
-ow
+of
+of
+of
+of
 of
 of
 of
@@ -39389,7 +39373,7 @@ eq
 eq
 eo
 eq
-qJ
+eq
 eq
 eq
 eo
@@ -45361,7 +45345,7 @@ IA
 KN
 NV
 Qt
-TR
+iY
 TR
 XO
 MR
