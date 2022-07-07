@@ -4510,4 +4510,5 @@
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
 #include "modular_chomp\code\modules\research\designs\power_cells.dm"
+#include "modular_chomp\code\modules\vore\resizing\resize.dm"
 // END_INCLUDE
