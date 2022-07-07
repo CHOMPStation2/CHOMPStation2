@@ -106,8 +106,10 @@
 	var/drop_sound = "generic_drop"
 
 	var/tip_timer // reference to timer id for a tooltip we might open soon
+	
+	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
 
-/obj/item/Initialize(mapload)
+/obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
@@ -812,8 +814,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	standing.alpha = alpha
 	standing.color = color
 	standing.layer = layer2use
-	if(istype(clip_mask)) //VOREStation Edit - For taur bodies/tails clipping off parts of uniforms and suits.
-		standing.filters += filter(type = "alpha", icon = clip_mask)
 
 	if(istype(clip_mask)) //For taur bodies/tails clipping off parts of uniforms and suits.
 		standing.filters += filter(type = "alpha", icon = clip_mask)

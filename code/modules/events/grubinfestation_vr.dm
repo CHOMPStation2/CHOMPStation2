@@ -11,9 +11,8 @@
 	spawncount = rand(2 * severity, 6 * severity)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
-		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
-		var/in_area = get_area(temp_vent)
-		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
+		var/area/A = get_area(temp_vent)
+		if(A.forbid_events)
 			continue
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
@@ -25,7 +24,8 @@
 /datum/event/grub_infestation/start()
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
-		new /mob/living/simple_mob/animal/solargrub_larva(get_turf(vent))
+		var/mob/living/simple_mob/animal/solargrub_larva/larva = new(get_turf(vent))
+		larva.tracked = TRUE
 		vents -= vent
 		spawncount--
 	vents.Cut()
@@ -35,6 +35,14 @@
 	for(var/mob/living/G as anything in existing_solargrubs)
 		if(!G || G.stat == DEAD)
 			continue
+		if(istype(G, /mob/living/simple_mob/animal/solargrub_larva))
+			var/mob/living/simple_mob/animal/solargrub_larva/L = G
+			if(!(L.tracked))
+				continue
+		if(istype(G, /mob/living/simple_mob/vore/solargrub))
+			var/mob/living/simple_mob/vore/solargrub/S = G
+			if(!(S.tracked))
+				continue
 		var/area/grub_area = get_area(G)
 		if(!grub_area) //Huh, really?
 			if(!get_turf(G)) //No turf either?

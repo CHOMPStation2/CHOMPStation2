@@ -75,6 +75,7 @@
 	light_color = "#8837A3"
 
 /obj/effect/projectile/impact/precursor //CHOMPedit add precursor impact
+	icon = 'icons/obj/projectiles_ch.dmi'  // CHOMPEdit: Fix path + replace missing file
 	icon_state = "impact_prec"
 	light_range = 2
 	light_power = 0.7

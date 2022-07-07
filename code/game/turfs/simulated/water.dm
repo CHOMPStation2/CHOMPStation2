@@ -8,6 +8,7 @@
 	var/under_state = "rock"
 	edge_blending_priority = -1
 	movement_cost = 4
+	can_be_plated = FALSE
 	outdoors = OUTDOORS_YES
 	flags = TURF_ACID_IMMUNE
 
@@ -18,6 +19,7 @@
 	var/depth = 1 // Higher numbers indicates deeper water.
 
 	var/reagent_type = "water"
+	// var/datum/looping_sound/water/soundloop CHOMPEdit: Removing soundloop for now.
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()
@@ -25,6 +27,14 @@
 	footstep_sounds = F?.footstep_sounds
 	update_icon()
 	handle_fish()
+	// soundloop = new(list(src), FALSE) // CHOMPEdit: Removing soundloop for now.
+	// soundloop.start() // CHOMPEdit: Removing soundloop for now.
+	
+/turf/simulated/floor/water/Destroy()
+	// soundloop.stop() // CHOMPEdit: Removing soundloop for now.
+	// QDEL_NULL(soundloop) // CHOMPEdit: Removing soundloop for now.
+	
+	. = ..()
 
 /turf/simulated/floor/water/update_icon()
 	..() // To get the edges.

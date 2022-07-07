@@ -7795,6 +7795,10 @@
 	pixel_x = 32
 	},
 /obj/structure/table/standard,
+<<<<<<< HEAD
+=======
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "amW" = (
@@ -29178,6 +29182,10 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
+<<<<<<< HEAD
+=======
+/obj/random/paicard,
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_laundry)
 "aWW" = (
@@ -34030,6 +34038,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/mining_eva)
+<<<<<<< HEAD
+=======
+"hTk" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/structure/cable/orange{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/random/paicard,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/locker)
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 "hTw" = (
 /obj/structure/cable/green{
 	d1 = 1;

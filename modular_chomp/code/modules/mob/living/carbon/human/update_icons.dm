@@ -1,9 +1,9 @@
 // Expand shoe layer to allow changing the icon for digi legs
 // For some reason, suit and uniform already has this funcitonality, but shoes do not.
 
-#define SHOES_LAYER_ALT			7		//Shoe-slot item (when set to be under uniform via verb)
-#define SHOES_LAYER				10		//Shoe-slot item
-#define VORE_BELLY_LAYER		30		//Should be the same that it is in update_icons.dm
+#define SHOES_LAYER_ALT			8		//Shoe-slot item (when set to be under uniform via verb)
+#define SHOES_LAYER				11		//Shoe-slot item
+#define VORE_BELLY_LAYER		31		//Should be the same that it is in update_icons.dm
 
 /mob/living/carbon/human/update_inv_shoes()
 	//. = ..()
@@ -42,7 +42,7 @@
 /mob/living/carbon/human/proc/update_vore_belly_sprite()
 	if(QDESTROYING(src))
 		return
-	
+
 	remove_layer(VORE_BELLY_LAYER)
 
 	var/image/vore_belly_image = get_vore_belly_image()
@@ -72,7 +72,7 @@
 /mob/living/carbon/human/proc/update_vore_tail_sprite()
 	if(QDESTROYING(src))
 		return
-	
+
 	remove_layer(VORE_TAIL_LAYER)
 
 	var/image/vore_tail_image = get_vore_tail_image()

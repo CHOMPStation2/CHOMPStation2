@@ -1,7 +1,6 @@
 /obj/item/weapon/reagent_containers/chem_disp_cartridge	
 	//CHOMP - Chems that are used but not meant for cargo supplies, at least for now. - Jack
 	champagne	spawn_reagent = "champagne"
-	grapesoda	spawn_reagent = "grapesoda"
 	singulo 	spawn_reagent = "singulo"
 	doctorsdelight	spawn_reagent = "doctorsdelight"
 	nothing		spawn_reagent = "nothing"

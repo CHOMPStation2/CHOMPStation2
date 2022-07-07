@@ -149,9 +149,24 @@
 #define PROGRAM_STATE_BACKGROUND 1
 #define PROGRAM_STATE_ACTIVE 2
 
+#define PROG_MISC  		"Miscellaneous"
+#define PROG_ENG  		"Engineering"
+#define PROG_OFFICE  	"Office Work"
+#define PROG_COMMAND  	"Command"
+#define PROG_SUPPLY  	"Supply and Shuttles"
+#define PROG_ADMIN  	"NTNet Administration"
+#define PROG_UTIL 		"Utility"
+#define PROG_SEC 		"Security"
+#define PROG_MONITOR	"Monitoring"
+
 // Caps for NTNet logging. Less than 10 would make logging useless anyway, more than 500 may make the log browser too laggy. Defaults to 100 unless user changes it.
 #define MAX_NTNET_LOGS 500
 #define MIN_NTNET_LOGS 10
+
+//Built-in email accounts
+#define EMAIL_DOCUMENTS "document.server@virgo.local"
+#define EMAIL_SYSADMIN  "admin@virgo.local"
+#define EMAIL_BROADCAST "broadcast@virgo.local"
 
 
 // Special return values from bullet_act(). Positive return values are already used to indicate the blocked level of the projectile.
@@ -423,6 +438,7 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define VOLUME_CHANNEL_VORE "Vore"
 #define VOLUME_CHANNEL_DOORS "Doors"
 #define VOLUME_CHANNEL_INSTRUMENTS "Instruments"
+#define VOLUME_CHANNEL_WEATHER "Weather"
 
 // Make sure you update this or clients won't be able to adjust the channel
 GLOBAL_LIST_INIT(all_volume_channels, list(
@@ -431,7 +447,8 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 	VOLUME_CHANNEL_ALARMS,
 	VOLUME_CHANNEL_VORE,
 	VOLUME_CHANNEL_DOORS,
-	VOLUME_CHANNEL_INSTRUMENTS
+	VOLUME_CHANNEL_INSTRUMENTS,
+	VOLUME_CHANNEL_WEATHER
 ))
 
 #define APPEARANCECHANGER_CHANGED_RACE "Race"
