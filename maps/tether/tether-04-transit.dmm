@@ -866,7 +866,18 @@
 	},
 /turf/simulated/floor/midpoint_glass/reinf,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "M" = (
+=======
+"Dz" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/tether_midpoint)
+"El" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"Et" = (
+>>>>>>> 225b53cd4e... Merge pull request #13293 from Aroliacue/aroliacue-dev-maps
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
@@ -22132,6 +22143,20 @@ pK
 pK
 pK
 pK
+<<<<<<< HEAD
+=======
+Dz
+iK
+pM
+pM
+El
+Dz
+oN
+yi
+ML
+PF
+uA
+>>>>>>> 225b53cd4e... Merge pull request #13293 from Aroliacue/aroliacue-dev-maps
 pK
 pK
 Or

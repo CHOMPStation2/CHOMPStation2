@@ -45,7 +45,7 @@
 	spawn_positions = 5
 	pto_type = PTO_SECURITY
 	alt_titles = list("Patrol Officer" = /datum/alt_title/patrol_officer, "Security Guard" = /datum/alt_title/security_guard,
-						"Security Deputy" = /datum/alt_title/security_guard, "Junior Officer" = /datum/alt_title/junior_officer)
+						"Security Deputy" = /datum/alt_title/security_guard, "Junior Officer" = /datum/alt_title/junior_officer, "Security Contractor" = /datum/alt_title/security_contractor)
 
 /datum/alt_title/patrol_officer
 	title = "Patrol Officer"
@@ -55,3 +55,9 @@
 
 /datum/alt_title/security_deputy
 	title = "Security Deputy"
+<<<<<<< HEAD
+=======
+
+/datum/alt_title/security_contractor
+	title = "Security Contractor"
+>>>>>>> 225b53cd4e... Merge pull request #13293 from Aroliacue/aroliacue-dev-maps
