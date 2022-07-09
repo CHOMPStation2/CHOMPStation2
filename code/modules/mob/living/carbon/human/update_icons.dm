@@ -1318,6 +1318,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef LEGCUFF_LAYER
 #undef L_HAND_LAYER
 #undef R_HAND_LAYER
+#undef VORE_BELLY_LAYER
 #undef MODIFIER_EFFECTS_LAYER
 #undef FIRE_LAYER
 #undef WATER_LAYER

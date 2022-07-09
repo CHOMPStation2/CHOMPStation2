@@ -85,7 +85,7 @@
 /mob/living/carbon/human/proc/get_vore_tail_image()
 	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness] dle")
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness] idle")
 		vorebelly_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16
