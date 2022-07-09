@@ -841,6 +841,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
             </LabeledList.Item>
             {affects_voresprite ? (
               <span>
+                {/* Once other options are added in:
                 <LabeledList.Item label="Vore Sprite Mode">
                   {(vore_sprite_flags.length && vore_sprite_flags.join(', ')) || 'None'}
                   <Button
@@ -848,7 +849,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
                     ml={1}
                     icon="plus"
                   />
-                </LabeledList.Item>
+                </LabeledList.Item>*/}
                 <LabeledList.Item label="Count Absorbed prey for vore sprites">
                   <Button
                     onClick={() => act('set_attribute', { attribute: 'b_count_absorbed_prey_for_sprites' })}
