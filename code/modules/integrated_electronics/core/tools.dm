@@ -279,6 +279,11 @@
 		)
 	cant_hold = list(/obj/item/weapon/tool/screwdriver/power)
 
+//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
+//Which is enough to trigger byond's recursion level protection
+/obj/item/weapon/storage/bag/circuits/emp_act()
+	return	//No
+
 /obj/item/weapon/storage/bag/circuits/basic/Initialize()
 	. = ..()
 	new /obj/item/weapon/storage/bag/circuits/mini/arithmetic(src)
