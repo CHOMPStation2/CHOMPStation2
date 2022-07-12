@@ -638,8 +638,6 @@
 			</html>
 			"}
 
-<<<<<<< HEAD
-=======
 /obj/item/weapon/book/manual/robotics_manual
 	name = "Guide to Robotics"
 	icon_state ="evabook"
@@ -657,7 +655,6 @@
 		</body>
 		</html>
 		"}
->>>>>>> 17850170bb... Merge pull request #13313 from FirstSgtDan/Books
 
 /obj/item/weapon/book/manual/robotics_cyborgs
 	name = "Cyborgs for Dummies"
