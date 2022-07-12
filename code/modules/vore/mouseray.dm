@@ -73,7 +73,6 @@
 	damage = 0
 	range = 7
 	check_armour = "laser"
-	can_miss = FALSE
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse
 	var/tf_admin_pref_override = FALSE
 
