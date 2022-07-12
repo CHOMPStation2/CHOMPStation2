@@ -1064,24 +1064,14 @@ Note that amputating the affected organ does in fact remove the infection from t
 	if((status & ORGAN_BROKEN) || cannot_break)
 		return
 
-<<<<<<< HEAD
 	if(owner)
-		//CHOMPEdit Begin
-		owner.custom_pain(pick(\
-			"<span class='danger'>You hear a loud cracking sound coming from \the [owner].</span>",\
-			"<span class='danger'>Something feels like it shattered in your [name]!</span>",\
-			"<span class='danger'>You hear a sickening crack.</span>"),brokenpain)
-		//CHOMPEdit End
-		jostle_bone()
-		if(organ_can_feel_pain() && !isbelly(owner.loc))
-=======
-	if(owner)	//VOREStation Edit Start
 		if(organ_can_feel_pain() && !isbelly(owner.loc) && !isliving(owner.loc))
-			owner.visible_message(\
+			//CHOMPEdit Begin
+			owner.custom_pain(pick(\
 				"<span class='danger'>You hear a loud cracking sound coming from \the [owner].</span>",\
 				"<span class='danger'>Something feels like it shattered in your [name]!</span>",\
-				"<span class='danger'>You hear a sickening crack.</span>")
->>>>>>> 9b7e3a34f6... Merge pull request #13294 from Very-Soft/mouseray
+				"<span class='danger'>You hear a sickening crack.</span>"),brokenpain)
+			//CHOMPEdit End
 			owner.emote("scream")
 		jostle_bone()	//VOREStation Edit End
 
