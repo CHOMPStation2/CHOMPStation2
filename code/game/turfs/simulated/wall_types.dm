@@ -101,6 +101,11 @@
 /turf/simulated/wall/sifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD)
 
+// CHOMPEdit Start
+/turf/simulated/wall/rsifwood/Initialize(mapload)
+	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
+// CHOMPEdit End
+
 /turf/simulated/wall/log/Initialize(mapload)
 	. = ..(mapload,  MAT_LOG)
 
