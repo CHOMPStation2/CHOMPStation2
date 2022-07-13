@@ -167,9 +167,6 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
 	icon_state = "tile-carpet"
-<<<<<<< HEAD
-	*/
-=======
 /obj/item/stack/tile/carpet/brncarpet
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet2
@@ -178,7 +175,7 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/purplecarpet
 	icon_state = "tile-carpet"
->>>>>>> 4f394a9221... Merge pull request #12911 from Youtubeboy139/Monch
+*/
 
 /obj/item/stack/tile/floor
 	name = "floor tile"
