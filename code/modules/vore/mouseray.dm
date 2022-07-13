@@ -73,7 +73,6 @@
 	damage = 0
 	range = 7
 	check_armour = "laser"
-	can_miss = FALSE
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse
 	var/tf_admin_pref_override = FALSE
 
@@ -213,7 +212,7 @@
 	new_mob.feeding = feeding
 	new_mob.can_be_drop_prey = can_be_drop_prey
 	new_mob.can_be_drop_pred = can_be_drop_pred
-	new_mob.allow_inbelly_spawning = allow_inbelly_spawning
+	new_mob.latejoin_vore = latejoin_vore
 	new_mob.digest_leave_remains = digest_leave_remains
 	new_mob.allowmobvore = allowmobvore
 	new_mob.permit_healbelly = permit_healbelly
