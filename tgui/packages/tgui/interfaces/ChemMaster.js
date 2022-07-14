@@ -371,6 +371,11 @@ const ChemMasterCustomization = (props, context) => {
     <Section title="Pill Bottle Customization">
       <Button
         disabled={!data.loaded_pill_bottle}
+        content='Customize Bottle Color'
+        onClick={() => modalOpen(context, 'change_pill_bottle_style')}
+      />
+      <Button
+        disabled={!data.loaded_pill_bottle}
         icon="eject"
         content={
           data.loaded_pill_bottle
