@@ -2456,4 +2456,21 @@ Departamental Swimsuits, for general use
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
+<<<<<<< HEAD
 End CHOMP Removal*/
+=======
+//Pandora029:Seona Young
+/obj/item/clothing/under/fluff/foxoflightsuit
+	name = "padded flightsui"
+	desc = "A ruddy-orange combination immersion-and-flight suit, fitted with extra padding across the front of its legs. Warm, waterproof and practical, seveal patches are scattered across it alongside a hard-wearing harness."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "foxflightsuit"
+	worn_state = "foxflightsuit_mob"
+	rolled_sleeves = 0
+	rolled_down = 0
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "foxflightsuit_mob"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS 
+>>>>>>> 6119bdcdc6... Merge pull request #13329 from BonniePandora/Fluff-Item-3
