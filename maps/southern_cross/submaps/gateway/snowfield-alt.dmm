@@ -1195,6 +1195,18 @@
 /obj/item/weapon/folder/red,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/seconddesk)
+"bkt" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/commandhallway)
 "bkM" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -2313,14 +2325,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/catwalk,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
 	id = "snowfield lab entrance lockdown";
 	opacity = 0
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/commandhallway)
 "cuv" = (
 /obj/structure/table/steel_reinforced,
@@ -2417,6 +2428,9 @@
 	dir = 1
 	},
 /obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3424,6 +3438,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -4885,6 +4900,8 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "fay" = (
@@ -5145,6 +5162,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/armory_entrance)
+"fqH" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/commandhallway)
 "fqI" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -5524,15 +5553,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/snowfield/security/armory_entrance)
 "fRZ" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/grey/border,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/hallway/northhallway)
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/hallway/frontgate_substation)
 "fSf" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/dorms/dorm12)
@@ -6344,15 +6369,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/seconddesk)
 "gJv" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/grey/border,
 /turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/hallway/centerhallway)
+/area/awaymission/snowfield/hallway/frontgate_substation)
 "gKh" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -6861,6 +6882,9 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -6918,6 +6942,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/medical/hallway)
 "hkK" = (
@@ -6931,6 +6956,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/public/toolstroage2)
@@ -7057,13 +7083,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "hsO" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
 	},
-/turf/simulated/floor,
-/area/awaymission/snowfield/medical/hallway)
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/checkpointhallway)
 "hsQ" = (
 /obj/structure/closet/crate/trashcart,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -7099,6 +7129,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -7172,7 +7203,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/catwalk,
+/obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -7499,18 +7530,16 @@
 	},
 /area/awaymission/snowfield/cavern)
 "hUt" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/grey/border{
-	dir = 4
-	},
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor,
 /area/awaymission/snowfield/hallway/dormhallway)
 "hUz" = (
 /obj/machinery/vending/tool{
@@ -7587,7 +7616,9 @@
 	name = "Test room access";
 	req_one_access = list(30,47)
 	},
-/obj/machinery/button/remote/blast_door,
+/obj/machinery/button/remote/blast_door{
+	id = "snowfield test room"
+	},
 /obj/machinery/button/remote/blast_door{
 	desc = "It kicks the beat to the horizon.";
 	name = "Remote beat-drop control";
@@ -7680,7 +7711,7 @@
 	id = "snowfield tool storage lockdown";
 	opacity = 0
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/public/toolstroage2)
 "icF" = (
 /obj/structure/table/rack/shelf/steel,
@@ -9151,7 +9182,6 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/engineering/engine)
 "jBt" = (
-/obj/structure/catwalk,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -9160,6 +9190,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "jBQ" = (
@@ -10737,7 +10768,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/service/janitor)
 "lfj" = (
-/obj/structure/catwalk,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -10748,6 +10778,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "lfp" = (
@@ -11280,6 +11314,18 @@
 	id = "snowfield testlab entrance";
 	name = "Lab Front Entrance";
 	req_one_access = list(1)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/commandhallway)
+"lFJ" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
@@ -11933,19 +11979,17 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/patients)
 "mun" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/corner/grey/border{
+/obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/hallway/centerhallway)
+/obj/structure/catwalk,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/dorms/panicroom)
 "mvU" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/southhallway)
@@ -14338,6 +14382,9 @@
 /area/awaymission/snowfield/dorms/dorm9)
 "oVW" = (
 /obj/structure/closet/crate/bin,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/public/toolstroage2)
 "oWf" = (
@@ -14539,12 +14586,6 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/northhallway)
 "phW" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/grey/border{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -14553,7 +14594,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/catwalk,
+/turf/simulated/floor,
 /area/awaymission/snowfield/hallway/northhallway)
 "plq" = (
 /obj/structure/bed,
@@ -14861,6 +14903,7 @@
 /obj/effect/floor_decal/corner/grey/border{
 	dir = 5
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/dormhallway)
 "pyg" = (
@@ -15212,6 +15255,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/grey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -15630,6 +15676,9 @@
 	name = "Path Blocker Control";
 	pixel_y = 23;
 	req_access = list(1)
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/dorms/panicroom)
@@ -16125,6 +16174,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
+"qKg" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/hallway/commandhallway)
 "qLa" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -16528,10 +16583,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/catwalk,
 /obj/machinery/light_switch{
 	pixel_y = -24
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "rjE" = (
@@ -17911,6 +17969,9 @@
 	},
 /obj/machinery/power/terminal{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -19388,6 +19449,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/checkpointhallway)
@@ -20527,6 +20591,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -21143,13 +21210,20 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
 "wmy" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
 	},
-/turf/simulated/floor,
-/area/awaymission/snowfield/medical/front_desk)
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/dormhallway)
 "wnn" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -21348,6 +21422,7 @@
 	pixel_x = -24;
 	start_charge = 0
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/public/toolstroage2)
@@ -21600,16 +21675,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/grey/border{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/catwalk,
+/turf/simulated/floor,
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "wNc" = (
 /obj/structure/cable/yellow{
@@ -22895,6 +22965,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -32335,7 +32406,7 @@ kJm
 xIj
 xbN
 rYI
-gJv
+bCH
 uRO
 byG
 scB
@@ -33612,7 +33683,7 @@ uOb
 yeW
 nYl
 mwO
-mun
+lPK
 tnN
 dcv
 dcv
@@ -36996,7 +37067,7 @@ rnD
 lus
 pyc
 hUt
-tkJ
+wmy
 xsa
 xsa
 xsa
@@ -37511,7 +37582,7 @@ lxV
 rnD
 eti
 qjJ
-byw
+mun
 asJ
 vNH
 wYC
@@ -41593,13 +41664,13 @@ iHU
 uGz
 thE
 uGz
-hsO
+uGz
 hjS
 uGz
 cBr
-wmy
-wmy
-wmy
+wVW
+wVW
+wVW
 wVW
 jVo
 twX
@@ -43155,7 +43226,7 @@ nHA
 hMS
 aMQ
 rvN
-fRZ
+rvN
 myq
 aHT
 qMk
@@ -44184,7 +44255,7 @@ kig
 kig
 kig
 kig
-gAd
+hsO
 lkO
 pcH
 ljd
@@ -44481,7 +44552,7 @@ vcq
 oNd
 mZG
 kpg
-gsZ
+bkt
 uoi
 sAx
 rSF
@@ -44955,7 +45026,7 @@ iIf
 iIf
 hAH
 kig
-euq
+gJv
 pxr
 kig
 gAd
@@ -44997,8 +45068,8 @@ mUV
 mUV
 mUV
 ciN
-gsZ
-rgL
+fqH
+qKg
 jvw
 brj
 brj
@@ -45469,7 +45540,7 @@ ocP
 vHd
 uzr
 dmp
-uzr
+fRZ
 kig
 hic
 euq
@@ -46286,7 +46357,7 @@ okK
 ioP
 wxz
 wLo
-dMJ
+lFJ
 gsZ
 rgL
 nid
@@ -46544,7 +46615,7 @@ woT
 woT
 hkK
 ibL
-uZn
+vIw
 mgJ
 rgL
 nid
