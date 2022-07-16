@@ -25,6 +25,15 @@
 	var/list/traits = list()
 	//Vars that need to be copied when producing a copy of species.
 	var/list/copy_vars = list("base_species", "icobase", "deform", "tail", "tail_animation", "icobase_tail", "color_mult", "primitive_form", "appearance_flags", "flesh_color", "base_color", "blood_mask", "damage_mask", "damage_overlays", "move_trail", "has_floating_eyes")
+<<<<<<< HEAD
+=======
+	var/trait_points = 0
+
+	var/micro_size_mod = 0		// How different is our size for interactions that involve us being small?
+	var/macro_size_mod = 0		// How different is our size for interactions that involve us being big?
+	var/digestion_nutrition_modifier = 1
+
+>>>>>>> 6ac73f563c... Merge pull request #13335 from Heroman3003/digestion-trait
 
 /datum/species/proc/give_numbing_bite() //Holy SHIT this is hacky, but it works. Updating a mob's attacks mid game is insane.
 	unarmed_attacks = list()

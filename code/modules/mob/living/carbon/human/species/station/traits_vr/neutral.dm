@@ -542,3 +542,48 @@
 /datum/trait/neutral/vertical_nom/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/vertical_nom
+<<<<<<< HEAD
+=======
+
+/datum/trait/neutral/micro_size_down
+	name = "Light Frame"
+	desc = "You are considered smaller than you are for micro interactions."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("micro_size_mod" = -0.15)
+
+/datum/trait/neutral/micro_size_up
+	name = "Heavy Frame"
+	desc = "You are considered bigger than you are for micro interactions."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("micro_size_mod" = 0.15)
+
+/datum/trait/neutral/digestion_value_up
+	name = "Highly Filling"
+	desc = "You provide notably more nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 2)
+
+/datum/trait/neutral/digestion_value_up_plus
+	name = "Extremely Filling"
+	desc = "You provide a lot more nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 3)
+
+/datum/trait/neutral/digestion_value_down
+	name = "Slightly Filling"
+	desc = "You provide notably less nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 0.5)
+
+/datum/trait/neutral/digestion_value_down_plus
+	name = "Barely Filling"
+	desc = "You provide a lot less nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 0.25)
+>>>>>>> 6ac73f563c... Merge pull request #13335 from Heroman3003/digestion-trait

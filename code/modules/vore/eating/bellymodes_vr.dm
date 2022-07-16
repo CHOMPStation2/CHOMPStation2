@@ -328,6 +328,7 @@
 		owner.update_icons()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
+<<<<<<< HEAD
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
 			R.cell.charge += (nutrition_percent / 100) * compensation * 15
 			GenerateBellyReagents_digested()
@@ -339,6 +340,11 @@
 			GenerateBellyReagents_digested()
 		else
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
+=======
+		R.cell.charge += (nutrition_percent / 100) * compensation * 25 * M.get_digestion_nutrition_modifier()
+	else
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * M.get_digestion_nutrition_modifier())
+>>>>>>> 6ac73f563c... Merge pull request #13335 from Heroman3003/digestion-trait
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
