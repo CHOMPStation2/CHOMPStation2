@@ -259,6 +259,12 @@ var/list/channel_to_radio_key = new
 	//Default range and italics, may be overridden past here
 	var/message_range = world.view
 	var/italics = 0
+<<<<<<< HEAD
+=======
+	var/do_sound = TRUE
+	if(!voice_sounds_list || !voice_sounds_list.len)
+		do_sound = FALSE
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 	//Speaking into radios
 	if(used_radios.len)

@@ -12,6 +12,11 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
+<<<<<<< HEAD
+=======
+	var/voice_freq = 0
+	var/voice_sound = "beep-boop"
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size
@@ -24,6 +29,11 @@
 	S["weight_gain"]		>> pref.weight_gain
 	S["weight_loss"]		>> pref.weight_loss
 	S["fuzzy"]				>> pref.fuzzy
+<<<<<<< HEAD
+=======
+	S["voice_freq"]			>> pref.voice_freq
+	S["voice_sound"]		>> pref.voice_sound
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 /datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
 	S["size_multiplier"]	<< pref.size_multiplier
@@ -31,6 +41,11 @@
 	S["weight_gain"]		<< pref.weight_gain
 	S["weight_loss"]		<< pref.weight_loss
 	S["fuzzy"]				<< pref.fuzzy
+<<<<<<< HEAD
+=======
+	S["voice_freq"]			<< pref.voice_freq
+	S["voice_sound"]		<< pref.voice_sound
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))
@@ -46,11 +61,51 @@
 	character.weight_loss		= pref.weight_loss
 	character.fuzzy				= pref.fuzzy
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
+<<<<<<< HEAD
+=======
+	if(!pref.voice_sound)
+		character.voice_sounds_list = talk_sound
+	else
+		switch(pref.voice_sound)
+			if("beep-boop")
+				character.voice_sounds_list = talk_sound
+			if("goon speak 1")
+				character.voice_sounds_list = goon_speak_one_sound
+			if("goon speak 2")
+				character.voice_sounds_list = goon_speak_two_sound
+			if("goon speak 3")
+				character.voice_sounds_list = goon_speak_three_sound
+			if("goon speak 4")
+				character.voice_sounds_list = goon_speak_four_sound
+			if("goon speak blub")
+				character.voice_sounds_list = goon_speak_blub_sound
+			if("goon speak bottalk")
+				character.voice_sounds_list = goon_speak_bottalk_sound
+			if("goon speak buwoo")
+				character.voice_sounds_list = goon_speak_buwoo_sound
+			if("goon speak cow")
+				character.voice_sounds_list = goon_speak_cow_sound
+			if("goon speak lizard")
+				character.voice_sounds_list = goon_speak_lizard_sound
+			if("goon speak pug")
+				character.voice_sounds_list = goon_speak_pug_sound
+			if("goon speak pugg")
+				character.voice_sounds_list = goon_speak_pugg_sound
+			if("goon speak roach")
+				character.voice_sounds_list = goon_speak_roach_sound
+			if("goon speak skelly")
+				character.voice_sounds_list = goon_speak_skelly_sound
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
+<<<<<<< HEAD
+=======
+	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
+	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -104,4 +159,47 @@
 			pref.weight_loss = round(text2num(weight_loss_rate),1)
 			return TOPIC_REFRESH
 
+<<<<<<< HEAD
+=======
+	else if(href_list["voice_freq"])
+		var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
+		var/choice = tgui_input_list(usr, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs)
+		if(!choice)
+			return
+		choice = preset_voice_freqs[choice]
+		if(choice == 0)
+			pref.voice_freq = choice
+			return TOPIC_REFRESH
+		else if(choice == 1)
+			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+		if(choice > MAX_VOICE_FREQ)
+			choice = MAX_VOICE_FREQ
+		else if(choice < MIN_VOICE_FREQ)
+			choice = MIN_VOICE_FREQ
+
+		pref.voice_freq = choice
+		return TOPIC_REFRESH
+	else if(href_list["voice_sounds_list"])
+		var/list/possible_voice_types = list(
+			"beep-boop",
+			"goon speak 1",
+			"goon speak 2",
+			"goon speak 3",
+			"goon speak 4",
+			"goon speak blub",
+			"goon speak bottalk",
+			"goon speak buwoo",
+			"goon speak cow",
+			"goon speak lizard",
+			"goon speak pug",
+			"goon speak pugg",
+			"goon speak roach",
+			"goon speak skelly")
+		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
+		if(!choice)
+			pref.voice_sound = "beep-boop"
+		else
+			pref.voice_sound = choice
+
+>>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 	return ..();
