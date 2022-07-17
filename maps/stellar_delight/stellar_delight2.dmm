@@ -1747,6 +1747,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/bay/r_wall/steel,
 /area/stellardelight/deck2/o2production)
+"dW" = (
+/obj/structure/closet/secure_closet/engineering_electrical/double{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner,
+/area/engineering/locker_room)
 "dX" = (
 /obj/machinery/light{
 	dir = 8
@@ -1899,6 +1905,10 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/aftstarboard)
+"eo" = (
+/obj/structure/closet/secure_closet/engineering_welding/double,
+/turf/simulated/floor/tiled/eris/dark/orangecorner,
+/area/engineering/locker_room)
 "ep" = (
 /obj/machinery/power/apc/angled{
 	dir = 4;
@@ -1965,7 +1975,7 @@
 	},
 /obj/item/clothing/shoes/black,
 /obj/item/device/communicator,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "ew" = (
 /obj/structure/table/steel_reinforced,
@@ -2308,6 +2318,10 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
+"fj" = (
+/obj/structure/closet/secure_closet/engineering_electrical,
+/turf/simulated/floor/tiled/techfloor,
+/area/stellardelight/deck2/o2production)
 "fk" = (
 /obj/machinery/vending/engivend,
 /obj/machinery/light{
@@ -2361,6 +2375,10 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"fq" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/simulated/floor/tiled/techfloor,
+/area/stellardelight/deck2/o2production)
 "fr" = (
 /obj/structure/sign/painting/public{
 	pixel_x = -30
@@ -3381,7 +3399,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4
 	},
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "hQ" = (
 /obj/structure/table/standard,
@@ -5433,10 +5451,15 @@
 	},
 /obj/machinery/vending/loadout/loadout_misc,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
 /obj/effect/landmark{
 	name = "vinestart"
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
+=======
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/dark,
+>>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
 /area/crew_quarters/locker)
 "me" = (
 /obj/structure/cable/white{
@@ -5672,7 +5695,7 @@
 /obj/item/clothing/shoes/black,
 /obj/machinery/light,
 /obj/item/device/communicator,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "mH" = (
 /obj/structure/table/steel_reinforced,
@@ -6926,12 +6949,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
-"pF" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/turf/simulated/floor/tiled/eris/dark/orangecorner,
-/area/engineering/locker_room)
 "pG" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -7740,9 +7757,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
-"ro" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/stellardelight/deck2/o2production)
 "rp" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -10471,7 +10485,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "xJ" = (
 /obj/structure/table/reinforced,
@@ -11524,7 +11538,7 @@
 	},
 /obj/machinery/vending/loadout/uniform,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "Af" = (
 /obj/structure/table/reinforced,
@@ -12768,7 +12782,7 @@
 	},
 /obj/machinery/vending/loadout/clothing,
 /obj/machinery/alarm/angled,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "CW" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -12956,7 +12970,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/holofloor/tiled/dark,
+=======
+/obj/structure/undies_wardrobe,
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/tiled/dark,
+>>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
 /area/crew_quarters/locker)
 "Dv" = (
 /obj/structure/cable/white{
@@ -14167,7 +14187,7 @@
 	},
 /obj/machinery/vending/loadout/overwear,
 /obj/machinery/camera/network/civilian,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "FS" = (
 /obj/structure/cable/green{
@@ -15150,7 +15170,7 @@
 /area/engineering/storage)
 "HV" = (
 /obj/machinery/washing_machine,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "HW" = (
 /obj/machinery/door/firedoor/glass,
@@ -18114,10 +18134,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
-"OB" = (
-/obj/structure/closet/secure_closet/engineering_welding,
-/turf/simulated/floor/tiled/eris/dark/orangecorner,
-/area/engineering/locker_room)
 "OC" = (
 /obj/structure/closet/crate/bin{
 	anchored = 1
@@ -21379,7 +21395,7 @@
 	dir = 8
 	},
 /obj/machinery/vending/loadout/gadget,
-/turf/simulated/floor/holofloor/tiled/dark,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "VV" = (
 /obj/structure/cable/orange{
@@ -29986,7 +30002,7 @@ UY
 OK
 pO
 Qu
-ro
+fj
 Sz
 ZG
 Jh
@@ -30128,7 +30144,7 @@ pY
 DE
 sT
 WM
-ro
+fq
 Sz
 QW
 Jh
@@ -35362,7 +35378,7 @@ Re
 OI
 da
 iw
-pF
+dW
 To
 To
 Vo
@@ -35506,7 +35522,7 @@ Kv
 dS
 vb
 Nm
-OB
+eo
 OF
 Oq
 rf
