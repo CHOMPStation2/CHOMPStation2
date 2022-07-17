@@ -2527,7 +2527,7 @@
 	desc = "Food made by dogs!"
 	product_ads = "EAT FOOD!!!;Awooooooooooooooo!~;Made by actual dogs!;Now with twenty percent more taste!!!"
 	icon = 'icons/obj/vending.dmi'
-	icon_state = "fridge_food"
+	icon_state = "hotfood"
 	products = list(/obj/item/weapon/tray = 50,
 					/obj/item/weapon/material/kitchen/utensil/fork = 50,
 					/obj/item/weapon/material/knife/plastic = 50,
@@ -3015,7 +3015,7 @@
 	desc = "Food made by dogs!"
 	product_ads = "EAT FOOD!!!;Awooooooooooooooo!~;Made by actual dogs!;Now with twenty percent more taste!!!"
 	icon = 'icons/obj/vending.dmi'
-	icon_state = "fridge_food"
+	icon_state = "hotfood"
 	products = list(/obj/item/weapon/tray = 50,
 					/obj/item/weapon/material/kitchen/utensil/fork = 50,
 					/obj/item/weapon/material/knife/plastic = 50,
@@ -3411,7 +3411,7 @@
 	desc = "Food made by dogs!"
 	product_ads = "EAT FOOD!!!;Awooooooooooooooo!~;Made by actual dogs!;Now with twenty percent more taste!!!"
 	icon = 'icons/obj/vending.dmi'
-	icon_state = "fridge_food"
+	icon_state = "hotfood"
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/bearmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/carpmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish = 10,
