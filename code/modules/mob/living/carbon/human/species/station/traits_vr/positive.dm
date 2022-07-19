@@ -188,16 +188,11 @@
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
 
+/* //CHOMPedit: We already have our own version of this trait.
 /datum/trait/positive/linguist
 	name = "Linguist"
 	desc = "Allows you to have more languages."
 	cost = 1
-	var_changes = list("num_alternate_languages" = 5)
-	var_changes_pref = list("extra_languages" = 2)
-
-/datum/trait/positive/polyglot
-	name = "Polyglot"
-	desc = "Allows you to have a lot more languages."
-	cost = 2
-	var_changes = list("num_alternate_languages" = 7)
-	var_changes_pref = list("extra_languages" = 4)
+	var_changes = list("num_alternate_languages" = 6)
+	var_changes_pref = list("extra_languages" = 3)
+*/
