@@ -13,7 +13,6 @@
 	S["language_prefixes"]	>> pref.language_prefixes
 	//CHOMPEdit Begin
 	S["species"]			>> pref.species
-	S["pos_traits"]		>> pref.pos_traits
 	//CHOMPEdit End
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
