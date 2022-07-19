@@ -406,8 +406,6 @@
 
 	feedback_add_details("admin_verb","TRadioSounds")
 
-<<<<<<< HEAD
-=======
 /client/verb/toggle_say_sounds()
 	set name = "Sound Toggle: Say"
 	set category = "Preferences"
@@ -448,7 +446,7 @@
 	feedback_add_details("admin_verb","TWhisperSounds")
 
 /client/verb/toggle_subtle_sounds()
-	set name = "Sound Toggle: Subtle"
+	set name = "Toggle Subtle Sounds"
 	set category = "Preferences"
 	set desc = "Toggle hearing a sound when somebody uses subtle."
 
@@ -460,7 +458,6 @@
 
 	feedback_add_details("admin_verb","TSubtleSounds")
 
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 // Not attached to a pref datum because those are strict binary toggles
 /client/verb/toggle_examine_mode()
 	set name = "Toggle Examine Mode"

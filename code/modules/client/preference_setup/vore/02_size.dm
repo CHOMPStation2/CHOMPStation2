@@ -3,6 +3,8 @@
 #define WEIGHT_MAX 500
 #define WEIGHT_CHANGE_MIN 0
 #define WEIGHT_CHANGE_MAX 100
+#define MAX_VOICE_FREQ 70000
+#define MIN_VOICE_FREQ 15000
 
 // Define a place to save in character setup
 /datum/preferences
@@ -12,11 +14,8 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
-<<<<<<< HEAD
-=======
 	var/voice_freq = 0
 	var/voice_sound = "beep-boop"
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size
@@ -29,11 +28,8 @@
 	S["weight_gain"]		>> pref.weight_gain
 	S["weight_loss"]		>> pref.weight_loss
 	S["fuzzy"]				>> pref.fuzzy
-<<<<<<< HEAD
-=======
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 /datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
 	S["size_multiplier"]	<< pref.size_multiplier
@@ -41,17 +37,17 @@
 	S["weight_gain"]		<< pref.weight_gain
 	S["weight_loss"]		<< pref.weight_loss
 	S["fuzzy"]				<< pref.fuzzy
-<<<<<<< HEAD
-=======
 	S["voice_freq"]			<< pref.voice_freq
 	S["voice_sound"]		<< pref.voice_sound
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
+
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))
 	pref.weight_gain		= sanitize_integer(pref.weight_gain, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_gain))
 	pref.weight_loss		= sanitize_integer(pref.weight_loss, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_loss))
 	pref.fuzzy				= sanitize_integer(pref.fuzzy, 0, 1, initial(pref.fuzzy))
+	if(pref.voice_freq != 0)
+		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.fuzzy))
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
 		pref.size_multiplier = initial(pref.size_multiplier)
 
@@ -60,9 +56,8 @@
 	character.weight_gain		= pref.weight_gain
 	character.weight_loss		= pref.weight_loss
 	character.fuzzy				= pref.fuzzy
+	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
-<<<<<<< HEAD
-=======
 	if(!pref.voice_sound)
 		character.voice_sounds_list = talk_sound
 	else
@@ -95,17 +90,13 @@
 				character.voice_sounds_list = goon_speak_roach_sound
 			if("goon speak skelly")
 				character.voice_sounds_list = goon_speak_skelly_sound
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
-<<<<<<< HEAD
-=======
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -159,8 +150,6 @@
 			pref.weight_loss = round(text2num(weight_loss_rate),1)
 			return TOPIC_REFRESH
 
-<<<<<<< HEAD
-=======
 	else if(href_list["voice_freq"])
 		var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
 		var/choice = tgui_input_list(usr, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs)
@@ -200,6 +189,4 @@
 			pref.voice_sound = "beep-boop"
 		else
 			pref.voice_sound = choice
-
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
 	return ..();

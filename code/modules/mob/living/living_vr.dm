@@ -33,9 +33,10 @@
 		to_chat(usr, "OOC notes updated.")
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
 
-
-<<<<<<< HEAD
-=======
+/mob/living/verb/set_voice_freq()
+	set name = "Set Voice Frequency"
+	set desc = "Sets your voice frequency to be higher or lower pitched!"
+	set category = "OOC"
 	var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 425000, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
 	var/choice = tgui_input_list(src, "What would you like to set your voice frequency to?", "Voice Frequency", preset_voice_freqs)
 	if(!choice)
@@ -104,4 +105,3 @@
 			voice_sounds_list = goon_speak_roach_sound
 		if("goon speak skelly")
 			voice_sounds_list = goon_speak_skelly_sound
->>>>>>> dd7585a45d... Merge pull request #13336 from Very-Soft/saysound
