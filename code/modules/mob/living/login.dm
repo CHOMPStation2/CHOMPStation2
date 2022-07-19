@@ -23,19 +23,14 @@
 	if(!no_vore)
 		verbs |= /mob/living/proc/vorebelly_printout
 		if(!vorePanel)
-			AddComponent(/datum/component/vore_panel)
-<<<<<<< HEAD
-			
+			AddComponent(/datum/component/vore_panel)	
 	verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
-=======
 	//VOREStation Add Start
 	if(client.prefs.voice_sounds_list)
 		voice_sounds_list = client.prefs.voice_sounds_list
 	else
 		voice_sounds_list = talk_sound
 	//VOREStation Add End
->>>>>>> f025598a04... Merge pull request #13333 from Very-Soft/saysound
-
 	return .
