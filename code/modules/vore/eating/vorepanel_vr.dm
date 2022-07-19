@@ -710,10 +710,10 @@
 	var/atom/movable/target = locate(params["pick"])
 	if(!(target in host.vore_selected))
 		return TRUE // Not in our X anymore, update UI
-	var/list/available_options = list("Examine", "Eject", "Move")
+	var/list/available_options = list("Examine", "Eject", "Move", "Transfer")
 	if(ishuman(target))
 		available_options += "Transform"
-	intent = tgui_alert(user, "What would you like to do with [target]?", "Vore Pick", available_options, strict_byond = TRUE)
+	intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", available_options)
 	switch(intent)
 		if("Examine")
 			var/list/results = target.examine(host)
@@ -734,9 +734,40 @@
 			if(host.stat)
 				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 				return TRUE
-
 			var/obj/belly/choice = tgui_input_list(usr, "Move [target] where?","Select Belly", host.vore_organs)
 			if(!choice || !(target in host.vore_selected))
+				return TRUE
+			to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			host.vore_selected.transfer_contents(target, choice)
+
+
+		if("Transfer")
+			if(host.stat)
+				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				return TRUE
+
+<<<<<<< HEAD
+			var/obj/belly/choice = tgui_input_list(usr, "Move [target] where?","Select Belly", host.vore_organs)
+			if(!choice || !(target in host.vore_selected))
+=======
+			var/mob/living/belly_owner = host
+
+			var/list/viable_candidates = list()
+			for(var/mob/living/candidate in range(1, host))
+				if(istype(candidate) && !(candidate == host))
+					if(candidate.vore_organs.len && candidate.feeding && !candidate.no_vore)
+						viable_candidates += candidate
+			if(!viable_candidates.len)
+				to_chat(user, "<span class='notice'>There are no viable candidates around you!</span>")
+				return TRUE
+			belly_owner = tgui_input_list(user, "Who do you want to recieve the target?", "Select Predator", viable_candidates)
+
+			if(!belly_owner || !(belly_owner in range(1, host)))
+				return TRUE
+
+			var/obj/belly/choice = tgui_input_list(user, "Move [target] where?","Select Belly", belly_owner.vore_organs)
+			if(!choice || !(target in host.vore_selected) || !belly_owner || !(belly_owner in range(1, host)))
+>>>>>>> 8cf5d36313... Merge pull request #13362 from Very-Soft/bramch
 				return TRUE
 
 			to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
