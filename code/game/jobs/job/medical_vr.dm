@@ -71,16 +71,15 @@
 
 /datum/job/paramedic
 	pto_type = PTO_MEDICAL
-	alt_titles = list("Emergency Medical Technician" = /datum/alt_title/emt, "Medical Responder" = /datum/alt_title/medical_responder, "Search and Rescue" = /datum/alt_title/sar)
+	alt_titles = list("Emergency Medical Technician" = /datum/alt_title/emt, "Medical Responder" = /datum/alt_title/medical_responder) //CHOMPedit: Removed SAR because that's an actual job here
 
 /datum/alt_title/medical_responder
 	title = "Medical Responder"
 	title_blurb = "A Medical Responder is primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their \
 					own. They are capable of keeping a patient stabilized until they reach the hands of someone with more training."
 	title_outfit = /decl/hierarchy/outfit/job/medical/paramedic/emt
-<<<<<<< HEAD
-=======
 
+/* //CHOMPedit: Commented out because this is an actual job here
 /datum/alt_title/sar
 	title = "Search and Rescue"
->>>>>>> 1599b120e3... Adds new alt titles for some jobs
+*/
