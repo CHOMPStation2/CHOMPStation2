@@ -256,8 +256,6 @@
 		var/datum/trait/trait = text2path(href_list["clicked_pos_trait"])
 		var/choice = tgui_alert(usr, "Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
-			if(traitpath == /datum/trait/positive/linguist)					//CHOMPEdit
-				pref.num_languages = null								//CHOMPEdit
 			pref.pos_traits -= trait
 			var/datum/trait/instance = all_traits[trait]
 			instance.remove_pref(pref)
