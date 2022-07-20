@@ -18736,6 +18736,7 @@ lel
 	departmentType = 2;
 	pixel_y = 30
 	},
+/obj/item/weapon/gun/energy/mouseray/medical,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/equipment)
 "To" = (

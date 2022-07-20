@@ -806,11 +806,13 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock One"
 	icon_state = "entry_D1"
 	base_turf = /turf/space
+	forbid_events = TRUE
 
 /area/hallway/secondary/entry/D2
 	name = "\improper Shuttle Dock Hallway - Dock Two"
 	icon_state = "entry_D2"
 	base_turf = /turf/space
+	forbid_events = TRUE
 
 /area/hallway/secondary/entry/D2/arrivals
 	name = "\improper Shuttle Dock Hallway - Dock Two"
@@ -822,6 +824,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock Three"
 	icon_state = "entry_D3"
 	base_turf = /turf/space
+	forbid_events = TRUE
 
 /area/hallway/secondary/entry/D4
 	name = "\improper Shuttle Dock Hallway - Dock Four"

@@ -645,7 +645,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
 	},
-/obj/machinery/power/smes/buildable/point_of_interest{
+/obj/machinery/power/smes/buildable{
 	charge = 2e+006;
 	input_attempt = 1;
 	input_level = 250000;
@@ -655,7 +655,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor,
 /area/submap/Chapel1)
 "Tv" = (
 /turf/simulated/floor/outdoors/grass/sif/forest,

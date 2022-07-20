@@ -1,8 +1,8 @@
 // Expand shoe layer to allow changing the icon for digi legs
 // For some reason, suit and uniform already has this funcitonality, but shoes do not.
 
-#define SHOES_LAYER_ALT			7		//Shoe-slot item (when set to be under uniform via verb)
-#define SHOES_LAYER				10		//Shoe-slot item
+#define SHOES_LAYER_ALT			8		//Shoe-slot item (when set to be under uniform via verb)
+#define SHOES_LAYER				11		//Shoe-slot item
 
 /mob/living/carbon/human/update_inv_shoes()
 	//. = ..()
