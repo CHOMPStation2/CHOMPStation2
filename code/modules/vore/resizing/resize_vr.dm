@@ -278,13 +278,8 @@
 
 	// We need to be above a certain size ratio in order to do anything to the prey.
 	// For DISARM and HURT intent, this is >=0.75, for GRAB it is >=0.5
-<<<<<<< HEAD
-	var/size_ratio = get_effective_size() - tmob.get_effective_size()
-	if((a_intent == I_GRAB || a_intent == I_DISARM) && size_ratio < 0.5) //CHOMPEDIT - more step changes
-=======
 	var/size_ratio = get_effective_size(FALSE) - tmob.get_effective_size(TRUE)
-	if(a_intent == I_GRAB && size_ratio < 0.5)
->>>>>>> dfffdf986a... Merge pull request #13321 from Heroman3003/frame-traits
+	if((a_intent == I_GRAB || a_intent == I_DISARM) && size_ratio < 0.5) //CHOMPEDIT - more step changes
 		return FALSE
 	if(a_intent == I_HURT && size_ratio < 0.75)
 		return FALSE
