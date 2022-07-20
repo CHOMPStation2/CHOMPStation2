@@ -62,7 +62,7 @@ export const ChemMaster = (props, context) => {
         />
         <ChemMasterBuffer mode={mode} bufferReagents={buffer_reagents} />
         <ChemMasterProduction isCondiment={condi} bufferNonEmpty={buffer_reagents.length > 0} />
-        <ChemMasterCustomization />
+        <ChemMasterCustomization /> {/* CHOMPEdit - Enable customizing pill bottle type */}
       </Window.Content>
     </Window>
   );
@@ -357,6 +357,7 @@ const ChemMasterProductionCondiment = (props, context) => {
   );
 };
 
+// CHOMPEdit Start - Enable customizing pill bottle type
 const ChemMasterCustomization = (props, context) => {
   const { act, data } = useBackend(context);
   if (!data.loaded_pill_bottle) {
@@ -371,7 +372,7 @@ const ChemMasterCustomization = (props, context) => {
     <Section title="Pill Bottle Customization">
       <Button
         disabled={!data.loaded_pill_bottle}
-        content='Customize Bottle Color'
+        content="Customize Bottle Color"
         onClick={() => modalOpen(context, 'change_pill_bottle_style')}
       />
       <Button
@@ -393,5 +394,6 @@ const ChemMasterCustomization = (props, context) => {
     </Section>
   );
 };
+// CHOMPEdit End
 
 modalRegisterBodyOverride('analyze', analyzeModalBodyOverride);

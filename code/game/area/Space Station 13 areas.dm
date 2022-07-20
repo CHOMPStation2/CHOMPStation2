@@ -966,6 +966,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "Sleep"
 	ambience = AMBIENCE_GENERIC
 	forbid_events = TRUE
+	forbid_singulo = TRUE
 
 /area/crew_quarters/toilet
 	name = "\improper Dormitory Toilets"
