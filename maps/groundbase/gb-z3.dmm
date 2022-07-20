@@ -2293,6 +2293,23 @@ lol
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level3/nw)
+<<<<<<< HEAD
+=======
+"OJ" = (
+/obj/effect/landmark/start/pilot,
+/obj/structure/closet/walllocker_double{
+	dir = 8;
+	name = "NIFsoft uploader cabinet";
+	pixel_x = -32
+	},
+/obj/item/weapon/storage/box/nifsofts_pilot,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/pilot)
+"OT" = (
+/obj/structure/lattice,
+/turf/simulated/open/virgo3c,
+/area/groundbase/dorms/bathroom)
+>>>>>>> 8de672043e... Merge pull request #13370 from FirstSgtDan/nifsoft
 "Pd" = (
 /obj/item/device/radio/intercom{
 	pixel_y = -24
@@ -5240,7 +5257,7 @@ Qa
 qO
 fz
 bm
-Tk
+OJ
 pd
 Tk
 bm
