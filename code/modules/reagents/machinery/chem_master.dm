@@ -11,7 +11,7 @@
 	idle_power_usage = 20
 	var/obj/item/weapon/reagent_containers/beaker = null
 	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
-	var/list/pill_bottle_wrappers = null
+	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
 	var/mode = 0
 	var/condi = 0
 	var/useramount = 15 // Last used amount
@@ -161,6 +161,7 @@
 
 					arguments["analysis"] = result
 					tgui_modal_message(src, id, "", null, arguments)
+				// CHOMPEdit Start - Enable changing pill bottle style
 				if("change_pill_bottle_style")
 					if(!loaded_pill_bottle)
 						return
@@ -180,6 +181,7 @@
 						)
 					var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
 					tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit End
 				if("addcustom")
 					if(!beaker || !beaker.reagents.total_volume)
 						return
@@ -252,6 +254,7 @@
 		if(TGUI_MODAL_ANSWER)
 			var/answer = params["answer"]
 			switch(id)
+				// CHOMPEdit Start - Enable changing pill bottle style
 				if("change_pill_bottle_style")
 					if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
 						return
@@ -267,6 +270,7 @@
 					else
 						loaded_pill_bottle.wrapper_color = null
 						loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit End
 				if("addcustom")
 					var/amount = isgoodnumber(text2num(answer))
 					if(!amount || !arguments["id"])
