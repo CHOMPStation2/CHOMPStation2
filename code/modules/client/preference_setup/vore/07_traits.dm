@@ -262,7 +262,6 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["clicked_pos_trait"])
-		var/traitpath = text2path(href_list["clicked_pos_trait"])	//CHOMPEdit
 		var/datum/trait/trait = text2path(href_list["clicked_pos_trait"])
 		var/choice = tgui_alert(usr, "Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
