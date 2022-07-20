@@ -55,9 +55,6 @@
 
 /datum/alt_title/security_deputy
 	title = "Security Deputy"
-<<<<<<< HEAD
-=======
 
 /datum/alt_title/security_contractor
 	title = "Security Contractor"
->>>>>>> 1599b120e3... Adds new alt titles for some jobs
