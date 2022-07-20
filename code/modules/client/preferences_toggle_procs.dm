@@ -407,9 +407,9 @@
 	feedback_add_details("admin_verb","TRadioSounds")
 
 /client/verb/toggle_say_sounds()
-	set name = "Sound Toggle: Say"
+	set name = "Toggle Voice Sounds"
 	set category = "Preferences"
-	set desc = "Toggle hearing a sound when somebody speaks using say."
+	set desc = "Toggle hearing a sound when somebody speaks or emotes."
 
 	var/pref_path = /datum/client_preference/say_sounds
 	toggle_preference(pref_path)
@@ -418,6 +418,8 @@
 	to_chat(src, "You will now [(is_preference_enabled(/datum/client_preference/say_sounds)) ? "hear" : "not hear"] say sounds.")
 
 	feedback_add_details("admin_verb","TSaySounds")
+/*
+CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra length to babyproof prefs wasn't necessary and got in the way of quick whisper/say autofill.
 
 /client/verb/toggle_emote_sounds()
 	set name = "Sound Toggle: Me"
@@ -457,6 +459,7 @@
 	to_chat(src, "You will now [(is_preference_enabled(/datum/client_preference/subtle_sounds)) ? "hear" : "not hear"] subtle sounds.")
 
 	feedback_add_details("admin_verb","TSubtleSounds")
+*/
 
 // Not attached to a pref datum because those are strict binary toggles
 /client/verb/toggle_examine_mode()

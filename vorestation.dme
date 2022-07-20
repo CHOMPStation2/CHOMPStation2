@@ -4494,6 +4494,7 @@
 #include "modular_chomp\code\modules\datums\supplypacks\munitions.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"
 #include "modular_chomp\code\modules\mob\holder.dm"
+#include "modular_chomp\code\modules\mob\mob.dm"
 #include "modular_chomp\code\modules\mob\living\emote.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\species.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\_protean_defines.dm"
