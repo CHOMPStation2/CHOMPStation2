@@ -2456,9 +2456,6 @@ Departamental Swimsuits, for general use
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
-<<<<<<< HEAD
-End CHOMP Removal*/
-=======
 //Pandora029:Seona Young
 /obj/item/clothing/under/fluff/foxoflightsuit
 	name = "padded flightsui"
@@ -2473,4 +2470,4 @@ End CHOMP Removal*/
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "foxflightsuit_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS 
->>>>>>> 6119bdcdc6... Merge pull request #13329 from BonniePandora/Fluff-Item-3
+End CHOMP Removal*/
