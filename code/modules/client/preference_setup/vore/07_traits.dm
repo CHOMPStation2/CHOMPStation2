@@ -20,7 +20,7 @@
 	var/list/neg_traits = list()
 
 	var/traits_cheating = 0 //Varedit by admins allows saving new maximums on people who apply/etc
-	var/starting_trait_points = STARTING_SPECIES_POINTS
+	var/starting_trait_points = 0
 	var/max_traits = MAX_SPECIES_TRAITS
 	var/dirty_synth = 0		//Are you a synth
 	var/gross_meatbag = 0		//Where'd I leave my Voight-Kampff test kit?
@@ -72,7 +72,11 @@
 	pref.blood_color = sanitize_hexcolor(pref.blood_color, default="#A10808")
 
 	if(!pref.traits_cheating)
-		pref.starting_trait_points = STARTING_SPECIES_POINTS
+		var/datum/species/S = GLOB.all_species[pref.species]
+		if(S)
+			pref.starting_trait_points = S.trait_points
+		else
+			pref.starting_trait_points = 0
 		pref.max_traits = MAX_SPECIES_TRAITS
 
 	if(pref.organ_data[O_BRAIN])	//Checking if we have a synth on our hands, boys.
@@ -90,6 +94,9 @@
 		if(!(path in positive_traits))
 			pref.pos_traits -= path
 			continue
+		if(!(pref.species == SPECIES_CUSTOM) && !(path in everyone_traits_positive))
+			pref.pos_traits -= path
+			continue
 		var/take_flags = initial(path.can_take)
 		if((pref.dirty_synth && !(take_flags & SYNTHETICS)) || (pref.gross_meatbag && !(take_flags & ORGANICS)))
 			pref.pos_traits -= path
@@ -98,7 +105,7 @@
 		if(!(path in neutral_traits))
 			pref.neu_traits -= path
 			continue
-		if(!(pref.species == SPECIES_CUSTOM) && !(path in everyone_traits))
+		if(!(pref.species == SPECIES_CUSTOM) && !(path in everyone_traits_neutral))
 			pref.neu_traits -= path
 			continue
 		var/take_flags = initial(path.can_take)
@@ -107,6 +114,9 @@
 	//Negative traits
 	for(var/datum/trait/path as anything in pref.neg_traits)
 		if(!(path in negative_traits))
+			pref.neg_traits -= path
+			continue
+		if(!(pref.species == SPECIES_CUSTOM) && !(path in everyone_traits_negative))
 			pref.neg_traits -= path
 			continue
 		var/take_flags = initial(path.can_take)
@@ -165,38 +175,41 @@
 		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	var/traits_left = pref.max_traits
-	
-	if(pref.species == SPECIES_CUSTOM)
-		var/points_left = pref.starting_trait_points
 
-		for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
-			points_left -= traits_costs[T]
-		for(var/T in pref.pos_traits)
-			traits_left--
-		. += "<b>Traits Left:</b> [traits_left]<br>"
-		. += "<b>Points Left:</b> [points_left]<br>"
-		if(points_left < 0 || traits_left < 0 || !pref.custom_species)
-			. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
 
-		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
-		. += "<ul>"
-		for(var/T in pref.pos_traits)
-			var/datum/trait/trait = positive_traits[T]
-			. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
-		. += "</ul>"
+	var/points_left = pref.starting_trait_points
 
-		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
-		. += "<ul>"
-		for(var/T in pref.neg_traits)
-			var/datum/trait/trait = negative_traits[T]
-			. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
-		. += "</ul>"
+
+	for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
+		points_left -= traits_costs[T]
+	for(var/T in pref.pos_traits)
+		traits_left--
+	. += "<b>Traits Left:</b> [traits_left]<br>"
+	. += "<b>Points Left:</b> [points_left]<br>"
+	if(points_left < 0 || traits_left < 0 || (!pref.custom_species && pref.species == SPECIES_CUSTOM))
+		. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
+
+	. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<ul>"
+	for(var/T in pref.pos_traits)
+		var/datum/trait/trait = positive_traits[T]
+		. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
+	. += "</ul>"
+
 	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = neutral_traits[T]
 		. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 	. += "</ul>"
+
+	. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<ul>"
+	for(var/T in pref.neg_traits)
+		var/datum/trait/trait = negative_traits[T]
+		. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
+	. += "</ul>"
+
 	. += "<b>Blood Color: </b>" //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
 	. += "<a href='?src=\ref[src];blood_color=1'>Set Color</a>"
 	. += "<a href='?src=\ref[src];blood_reset=1'>R</a><br>"
@@ -333,18 +346,26 @@
 		var/list/mylist
 		switch(mode)
 			if(POSITIVE_MODE)
-				picklist = positive_traits.Copy() - pref.pos_traits
-				mylist = pref.pos_traits
+				if(pref.species == SPECIES_CUSTOM)
+					picklist = positive_traits.Copy() - pref.pos_traits
+					mylist = pref.pos_traits
+				else
+					picklist = everyone_traits_positive.Copy() - pref.pos_traits
+					mylist = pref.pos_traits
 			if(NEUTRAL_MODE)
 				if(pref.species == SPECIES_CUSTOM)
 					picklist = neutral_traits.Copy() - pref.neu_traits
 					mylist = pref.neu_traits
 				else
-					picklist = everyone_traits.Copy() - pref.neu_traits
+					picklist = everyone_traits_neutral.Copy() - pref.neu_traits
 					mylist = pref.neu_traits
 			if(NEGATIVE_MODE)
-				picklist = negative_traits.Copy() - pref.neg_traits
-				mylist = pref.neg_traits
+				if(pref.species == SPECIES_CUSTOM)
+					picklist = negative_traits.Copy() - pref.neg_traits
+					mylist = pref.neg_traits
+				else
+					picklist = everyone_traits_negative.Copy() - pref.neg_traits
+					mylist = pref.neg_traits
 			else
 
 		if(isnull(picklist))
