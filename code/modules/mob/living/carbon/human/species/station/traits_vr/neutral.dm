@@ -1,4 +1,5 @@
 /datum/trait/neutral
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/neutral/metabolism_up
 	name = "Metabolism, Fast"
@@ -542,8 +543,6 @@
 /datum/trait/neutral/vertical_nom/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/vertical_nom
-<<<<<<< HEAD
-=======
 
 /datum/trait/neutral/micro_size_down
 	name = "Light Frame"
@@ -586,4 +585,3 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("digestion_nutrition_modifier" = 0.25)
->>>>>>> 6ac73f563c... Merge pull request #13335 from Heroman3003/digestion-trait
