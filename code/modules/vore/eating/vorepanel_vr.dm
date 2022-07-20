@@ -586,6 +586,14 @@
 			host.stumble_vore = !host.stumble_vore
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_nutrition_ex")
+			host.nutrition_message_visible = !host.nutrition_message_visible
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_weight_ex")
+			host.weight_message_visible = !host.weight_message_visible
+			unsaved_changes = TRUE
+			return TRUE
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -1076,7 +1084,7 @@
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
 			. = TRUE
 		if("b_bulge_size")
-			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 25)
+			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)
 			if(new_bulge == null)
 				return FALSE
 			if(new_bulge == 0) //Disable.
@@ -1133,7 +1141,7 @@
 			host.vore_selected.emote_active = !host.vore_selected.emote_active
 			. = TRUE
 		if("b_emotetime")
-			var/new_time = tgui_input_number(user, "Choose the period it takes for idle belly emotes to be shown to prey. Measured in seconds, Minimum 1 minute, Maximum 10 minutes.", "Set Belly Emote Delay.", host.vore_selected.digest_brute, 10, 1)
+			var/new_time = tgui_input_number(user, "Choose the period it takes for idle belly emotes to be shown to prey. Measured in seconds, Minimum 1 minute, Maximum 10 minutes.", "Set Belly Emote Delay.", host.vore_selected.digest_brute, 600, 60)
 			if(new_time == null)
 				return FALSE
 			var/new_new_time = CLAMP(new_time, 60, 600)
@@ -1246,12 +1254,6 @@
 			. = TRUE
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
-			. = TRUE
-		if("toggle_nutrition_ex")
-			host.nutrition_message_visible = !host.nutrition_message_visible
-			. = TRUE
-		if("toggle_weight_ex")
-			host.weight_message_visible = !host.weight_message_visible
 			. = TRUE
 		if("b_del")
 			var/alert = tgui_alert(usr, "Are you sure you want to delete your [lowertext(host.vore_selected.name)]?","Confirmation",list("Cancel","Delete"))

@@ -1242,6 +1242,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/mob/living/simple_mob/animal/passive/mouse/mining,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/mining_main/uxstorage)
 "dH" = (
@@ -1469,55 +1470,6 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_two)
 "ej" = (
-/obj/machinery/computer/crew,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 9
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/turf/simulated/floor/tiled/white,
-/area/surface/outpost/main/search_and_rescue)
-"ek" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006;
-	req_access = list(5)
-	},
-/obj/structure/table/rack,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/southleft{
-	req_access = list(5);
-	req_one_access = list(5,43)
-	},
-/turf/simulated/floor/tiled/white,
-/area/surface/outpost/main/search_and_rescue)
-"el" = (
 /obj/machinery/sleep_console{
 	dir = 4
 	},
@@ -1527,9 +1479,12 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/search_and_rescue)
-"em" = (
+"ek" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
@@ -1541,8 +1496,7 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/search_and_rescue)
-"en" = (
-/obj/structure/table/glass,
+"el" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
@@ -1552,16 +1506,85 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/structure/table/glass,
+/obj/item/roller{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/item/roller{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/item/roller{
+	pixel_x = -8;
+	pixel_y = 1
+	},
+/obj/item/roller{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/search_and_rescue)
+"em" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/search_and_rescue)
+"en" = (
+/obj/structure/table/glass,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/bodybag,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/storage/box/bodybags,
 /obj/item/weapon/reagent_containers/glass/beaker/cryoxadone{
 	pixel_x = 7;
 	pixel_y = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
@@ -2008,45 +2031,42 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/search_and_rescue)
 "fe" = (
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 8
-	},
 /obj/structure/cable/blue{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "ff" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 4
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "fg" = (
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 5
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "fh" = (
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 5
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/bed/chair/office/light{
+	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "fi" = (
@@ -2056,13 +2076,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/obj/machinery/door/window/westleft{
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/westleft{
 	name = "Medical Supplies";
 	req_access = null;
 	req_one_access = list(5,43)
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
@@ -2157,7 +2177,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/shieldwallgen{
-	req_access = list(43)
+	anchored = 1;
+	req_access = list(1,43);
+	state = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -2498,6 +2520,12 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner2{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "gc" = (
@@ -2518,10 +2546,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/table/glass,
-/obj/item/clothing/accessory/stethoscope,
-/obj/item/device/defib_kit/loaded,
-/obj/item/device/defib_kit/compact/loaded,
+/obj/machinery/computer/crew{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "gg" = (
@@ -2541,6 +2568,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/item/weapon/reagent_containers/blood/OPlus,
 /obj/item/weapon/reagent_containers/blood/OPlus,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "gh" = (
@@ -3125,19 +3153,19 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "hn" = (
-/obj/structure/table/glass,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/weapon/tool/wrench,
-/obj/item/bodybag/cryobag,
-/obj/item/bodybag/cryobag,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/table/glass,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/device/defib_kit/loaded,
+/obj/item/device/defib_kit/compact/loaded,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "ho" = (
@@ -3190,7 +3218,7 @@
 "ht" = (
 /obj/structure/closet/secure_closet{
 	name = "hunting locker";
-	req_one_access = list(43)
+	req_one_access = list(1,43)
 	},
 /obj/item/weapon/gun/energy/netgun,
 /obj/item/weapon/beartrap/hunting,
@@ -3495,16 +3523,16 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "ig" = (
-/obj/machinery/door/window/westleft{
-	name = "Medical Supplies";
-	req_access = null;
-	req_one_access = list(5,43)
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/westleft{
+	name = "Medical Supplies";
+	req_access = null;
+	req_one_access = list(5,43)
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
@@ -3518,12 +3546,6 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "ii" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/adv{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/firstaid/o2,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -3536,6 +3558,29 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO - Search and Rescue Starboard";
 	dir = 8
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006;
+	req_access = list(5)
+	},
+/obj/structure/table/rack,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/southleft{
+	dir = 8;
+	name = "EMT Supplies";
+	req_access = list(5);
+	req_one_access = list(5,43)
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
@@ -3604,7 +3649,7 @@
 "ir" = (
 /obj/structure/closet/secure_closet{
 	name = "hunting locker";
-	req_one_access = list(43)
+	req_one_access = list(1,43)
 	},
 /obj/item/weapon/gun/energy/netgun,
 /obj/item/weapon/beartrap/hunting,
@@ -3981,35 +4026,63 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
-/obj/structure/closet/l3closet/scientist,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/closet/l3closet/scientist,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "jb" = (
-/obj/structure/table/glass,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
-/obj/item/roller,
-/obj/item/roller{
-	pixel_y = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/surface/outpost/main/search_and_rescue)
-"jc" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/firstaid/toxin{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/fire{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/fire{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/search_and_rescue)
+"jc" = (
+/obj/structure/table/glass,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
 	},
+/obj/item/weapon/tool/wrench,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "jd" = (
@@ -4833,6 +4906,9 @@
 /area/surface/outside/plains/mountains)
 "kL" = (
 /obj/machinery/power/port_gen/pacman,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "ENG - Mining Outpost Power 2"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
 "kN" = (
@@ -5209,7 +5285,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/multi_tile/metal{
 	name = "Fauna Containment";
-	req_one_access = list(43,1)
+	req_one_access = list(1,43)
 	},
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/effect/floor_decal/steeldecal/steel_decals_central1{
@@ -5965,6 +6041,9 @@
 /area/surface/outpost/main/corridor/right_upper)
 "mR" = (
 /obj/machinery/telecomms/relay/preset/southerncross/wild,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/main/tcomm)
 "mS" = (
@@ -7430,6 +7509,7 @@
 /obj/item/stack/material/copper{
 	amount = 25
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
 "pc" = (
@@ -14563,6 +14643,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
+"Bu" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/engineering/atmos_room)
 "Bv" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -19226,6 +19313,9 @@
 /obj/structure/table/steel,
 /obj/random/junk,
 /obj/random/maintenance/engineering,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room)
 "Ks" = (
@@ -65768,7 +65858,7 @@ gO
 hM
 iH
 bO
-kL
+Bu
 lW
 nE
 pi
@@ -77112,7 +77202,7 @@ Tg
 Tg
 Tg
 Tg
-do
+dp
 ej
 fe
 gb
@@ -77888,7 +77978,7 @@ UX
 UX
 dp
 em
-fh
+ge
 ge
 hm
 if
@@ -78144,7 +78234,7 @@ UX
 UX
 UX
 UX
-dp
+do
 en
 fi
 gf
@@ -78405,7 +78495,7 @@ UX
 do
 eo
 fj
-ge
+fh
 ho
 ih
 jb

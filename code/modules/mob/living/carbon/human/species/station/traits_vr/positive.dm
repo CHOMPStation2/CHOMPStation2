@@ -190,6 +190,7 @@
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
 
+/* //CHOMPedit: We already have our own version of this trait.
 /datum/trait/positive/linguist
 	name = "Linguist"
 	desc = "Allows you to have more languages."
@@ -198,6 +199,7 @@
 	var_changes_pref = list("extra_languages" = 3)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+*/
 
 /* // CHOMPedit: commented out because we disabled baymiss so this does nothing.
 /datum/trait/positive/good_shooter
