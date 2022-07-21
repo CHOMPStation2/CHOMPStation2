@@ -54,7 +54,6 @@
 #include "AmbushBase.dmm"
 #include "CultBar.dmm"
 #include "RaidedMechBunker.dmm"
-#include "ScaryReplicants"
 #endif
 
 //#include "Boombase.dmm" YW edit remove boombase
