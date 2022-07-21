@@ -73,7 +73,11 @@
 		switch(href_list["flavour_text_robot"])
 			if("open")
 			if("Default")
+<<<<<<< HEAD
 				var/msg = sanitize(tgui_input_text(usr,"Set the default flavour text for your robot. It will be used for any module without individual setting.  Put in a single space to make blank.","Flavour Text",html_decode(pref.flavour_texts_robot["Default"]), multiline = TRUE, prevent_enter = TRUE), extra = 0)
+=======
+				var/msg = sanitize(tgui_input_text(usr,"Set the default flavour text for your robot. It will be used for any module without individual setting. Put in a single space to make blank.","Flavour Text",html_decode(pref.flavour_texts_robot["Default"]), multiline = TRUE, prevent_enter = TRUE), extra = 0)
+>>>>>>> 59fa1e3465... Merge pull request #13375 from TheGreatKitsune/flavortext-edit-fix
 				if(CanUseTopic(user) && !isnull(msg))
 					pref.flavour_texts_robot[href_list["flavour_text_robot"]] = msg
 			else
