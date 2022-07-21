@@ -3045,6 +3045,7 @@
 #include "code\modules\mob\living\carbon\human\species\station\teshari_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\station\xenochimera_hud_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\station\xenochimera_trait_vr.dm"
+#include "code\modules\mob\living\carbon\human\species\station\traits_vr\_traits.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\neutral.dm"
