@@ -11,6 +11,7 @@
 	idle_power_usage = 20
 	var/obj/item/weapon/reagent_containers/beaker = null
 	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
+	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
 	var/mode = 0
 	var/condi = 0
 	var/useramount = 15 // Last used amount
@@ -160,25 +161,27 @@
 
 					arguments["analysis"] = result
 					tgui_modal_message(src, id, "", null, arguments)
-				// if("change_pill_bottle_style")
-				// 	if(!loaded_pill_bottle)
-				// 		return
-				// 	if(!pill_bottle_wrappers)
-				// 		pill_bottle_wrappers = list(
-				// 			"CLEAR" = "Default",
-				// 			COLOR_RED = "Red",
-				// 			COLOR_GREEN = "Green",
-				// 			COLOR_PALE_BTL_GREEN = "Pale green",
-				// 			COLOR_BLUE = "Blue",
-				// 			COLOR_CYAN_BLUE = "Light blue",
-				// 			COLOR_TEAL = "Teal",
-				// 			COLOR_YELLOW = "Yellow",
-				// 			COLOR_ORANGE = "Orange",
-				// 			COLOR_PINK = "Pink",
-				// 			COLOR_MAROON = "Brown"
-				// 		)
-				// 	var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
-				// 	tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit Start - Enable changing pill bottle style
+				if("change_pill_bottle_style")
+					if(!loaded_pill_bottle)
+						return
+					if(!pill_bottle_wrappers)
+						pill_bottle_wrappers = list(
+							"CLEAR" = "Default",
+							COLOR_RED = "Red",
+							COLOR_GREEN = "Green",
+							COLOR_PALE_BTL_GREEN = "Pale green",
+							COLOR_BLUE = "Blue",
+							COLOR_CYAN_BLUE = "Light blue",
+							COLOR_TEAL = "Teal",
+							COLOR_YELLOW = "Yellow",
+							COLOR_ORANGE = "Orange",
+							COLOR_PINK = "Pink",
+							COLOR_MAROON = "Brown"
+						)
+					var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
+					tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit End
 				if("addcustom")
 					if(!beaker || !beaker.reagents.total_volume)
 						return
@@ -251,21 +254,23 @@
 		if(TGUI_MODAL_ANSWER)
 			var/answer = params["answer"]
 			switch(id)
-				// if("change_pill_bottle_style")
-				// 	if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
-				// 		return
-				// 	var/color = "CLEAR"
-				// 	for(var/col in pill_bottle_wrappers)
-				// 		var/col_name = pill_bottle_wrappers[col]
-				// 		if(col_name == answer)
-				// 			color = col
-				// 			break
-				// 	if(length(color) && color != "CLEAR")
-				// 		loaded_pill_bottle.wrapper_color = color
-				// 		loaded_pill_bottle.apply_wrap()
-				// 	else
-				// 		loaded_pill_bottle.wrapper_color = null
-				// 		loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit Start - Enable changing pill bottle style
+				if("change_pill_bottle_style")
+					if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
+						return
+					var/color = "CLEAR"
+					for(var/col in pill_bottle_wrappers)
+						var/col_name = pill_bottle_wrappers[col]
+						if(col_name == answer)
+							color = col
+							break
+					if(length(color) && color != "CLEAR")
+						loaded_pill_bottle.wrapper_color = color
+						loaded_pill_bottle.update_icon()
+					else
+						loaded_pill_bottle.wrapper_color = null
+						loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit End
 				if("addcustom")
 					var/amount = isgoodnumber(text2num(answer))
 					if(!amount || !arguments["id"])

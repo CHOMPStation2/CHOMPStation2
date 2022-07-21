@@ -320,13 +320,9 @@
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
-<<<<<<< HEAD
-    
-=======
 
 	var/personal_nutrition_modifier = M.get_digestion_nutrition_modifier()
 
->>>>>>> 29514067c6... Merge pull request #13368 from Heroman3003/runtime-fix
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
@@ -334,23 +330,17 @@
 		owner.update_icons()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
-<<<<<<< HEAD
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
-			R.cell.charge += (nutrition_percent / 100) * compensation * 15
+			R.cell.charge += (nutrition_percent / 100) * compensation * 15 * personal_nutrition_modifier
 			GenerateBellyReagents_digested()
 		else
-			R.cell.charge += (nutrition_percent / 100) * compensation * 25
+			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
 	else
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3)
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier
 			GenerateBellyReagents_digested()
 		else
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
-=======
-		R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
-	else
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier)
->>>>>>> 29514067c6... Merge pull request #13368 from Heroman3003/runtime-fix
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
