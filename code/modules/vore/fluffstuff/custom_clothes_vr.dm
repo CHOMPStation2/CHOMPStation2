@@ -2469,9 +2469,5 @@ Departamental Swimsuits, for general use
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "foxflightsuit_mob"
-<<<<<<< HEAD
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS 
 End CHOMP Removal*/
-=======
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
->>>>>>> 1019d8b0cb... Merge pull request #13371 from Heroman3003/vchat-icons
