@@ -187,7 +187,7 @@
 			"goon speak skelly")
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!choice)
-			pref.voice_sound = "goon speak 1"
+			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else
 			pref.voice_sound = choice
 	/*	Maybe later

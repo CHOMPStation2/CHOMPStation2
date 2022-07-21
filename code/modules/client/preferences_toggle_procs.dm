@@ -407,7 +407,7 @@
 	feedback_add_details("admin_verb","TRadioSounds")
 
 /client/verb/toggle_say_sounds()
-	set name = "Toggle Voice Sounds"
+	set name = "Toggle Voice Sounds"	//CHOMPEdit - changed name to one that doesn't interfere with say autofill
 	set category = "Preferences"
 	set desc = "Toggle hearing a sound when somebody speaks or emotes."
 
