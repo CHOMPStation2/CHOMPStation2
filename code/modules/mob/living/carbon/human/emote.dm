@@ -302,7 +302,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/vox_shriek,
 	/decl/emote/audible/purr,
 	/decl/emote/audible/purrlong,
-  //CHOMP Add start
+	//CHOMP Add start
 	/decl/emote/audible/prbt2
 	//CHOMP Add end
 	)
