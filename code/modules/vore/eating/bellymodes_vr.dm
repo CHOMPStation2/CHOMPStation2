@@ -337,7 +337,7 @@
 			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
 	else
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 			GenerateBellyReagents_digested()
 		else
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier) //CHOMPedit end
