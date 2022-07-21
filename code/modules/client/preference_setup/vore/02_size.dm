@@ -14,8 +14,8 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
-	var/voice_freq = 0
-	var/voice_sound = "beep-boop"
+	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
+	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size
@@ -97,6 +97,7 @@
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+//	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Voice:</b></a><br>"	Maybe later
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -186,7 +187,11 @@
 			"goon speak skelly")
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!choice)
-			pref.voice_sound = "beep-boop"
+			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else
 			pref.voice_sound = choice
+	/*	Maybe later
+	else if(href_list["voice_test"])
+		SEND_SOUND(user, sound(pick(voice_sounds_list), 50, frequency = pref.voice_freq))
+	*/
 	return ..();
