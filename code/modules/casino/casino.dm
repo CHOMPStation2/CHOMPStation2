@@ -7,7 +7,7 @@
 //
 /obj/structure/casino_table
 	name = "casino table"
-	desc = "this is an unremarkable table for a casino."
+	desc = "This is an unremarkable table for a casino."
 	icon = 'icons/obj/casino.dmi'
 	icon_state = "roulette_table"
 	density = 1
@@ -26,41 +26,106 @@
 
 /obj/structure/casino_table/roulette_table
 	name = "roulette"
-	desc = "Spin the roulette to try your luck."
+	desc = "The roulette. Spin to try your luck."
 	icon_state = "roulette_wheel"
+	var/spin_state = "roulette_wheel_spinning"
+
+	var/obj/item/roulette_ball/ball
+
+/obj/structure/casino_table/roulette_table/Initialize()
+	.=..()
+	ball = new(src)
+	return
+
+/obj/structure/casino_table/roulette_table/examine(mob/user)
+	.=..()
+	if(ball)
+		. += "It's currently using [ball.get_ball_desc()]."
+	else
+		. += "It doesn't have a ball."
 
 /obj/structure/casino_table/roulette_table/attack_hand(mob/user as mob)
-	if (busy)
+	if(busy)
 		to_chat(user,"<span class='notice'>You cannot spin now! The roulette is already spinning.</span> ")
 		return
-	visible_message("<span class='notice'>\ [user]  spins the roulette and throws inside little ball.</span>")
+	if(!ball)
+		to_chat(user,"<span class='notice'>This roulette wheel has no ball!</span> ")
+		return
+	visible_message("<span class='notice'>\The [user] spins the roulette and throws [ball.get_ball_desc()] into it.</span>")
 	playsound(src.loc, 'sound/machines/roulette.ogg', 40, 1)
 	busy = 1
-	icon_state = "roulette_wheel_spinning"
-	var/result = rand(0,36)
+	ball.on_spin()
+	icon_state = spin_state
+	var/result = rand(0,37)
+	if(ball.cheatball)
+		result = ball.get_cheated_result()
 	var/color = "green"
 	add_fingerprint(user)
-	if ((result>0 && result<11) || (result>18 && result<29))
-		if (result%2)
+	if((result > 0 && result < 11) || (result > 18 && result < 29))
+		if(result % 2)
 			color="red"
-	else
-		color="black"
-	if ( (result>10 && result<19) || (result>28) )
-		if (result%2)
+		else
 			color="black"
-	else
-		color="red"
+	if((result > 10 && result < 19) || (result > 28 && result < 37))
+		if(result % 2)
+			color="black"
+		else
+			color="red"
+	if(result == 37)
+		result = "00"
 	spawn(5 SECONDS)
 		visible_message("<span class='notice'>The roulette stops spinning, the ball landing on [result], [color].</span>")
-		busy=0
-		icon_state = "roulette_wheel"
+		busy = 0
+		icon_state = initial(icon_state)
+
+/obj/structure/casino_table/roulette_table/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/roulette_ball))
+		if(!ball)
+			user.drop_from_inventory(W)
+			W.forceMove(src)
+			ball = W
+			to_chat(user, "<span class='notice'>You insert [W] into [src].</span>")
+			return
+	..()
+
+/obj/structure/casino_table/roulette_table/verb/remove_ball()
+	set name = "Remove Roulette Ball"
+	set category = "Object"
+	set src in oview(1)
+
+	if(!usr || !isturf(usr.loc))
+		return
+	if(usr.stat || usr.restrained())
+		return
+	if(ismouse(usr) || (isobserver(usr)))
+		return
+
+	if(busy)
+		to_chat(usr, "<span class='warning'>You cannot remove \the [ball] while [src] is spinning!</span>")
+		return
+
+	if(ball)
+		usr.put_in_hands(ball)
+		to_chat(usr, "<span class='notice'>You remove \the [ball] from [src].</span>")
+		ball = null
+		return
+	else
+		to_chat(usr, "<span class='notice'>There is no ball in [src]!</span>")
+		return
+
+/obj/structure/casino_table/roulette_table/long
+	icon_state = "roulette_wheel_long"
+	spin_state = "roulette_wheel_long_spinning"
+
+/obj/structure/casino_table/roulette_long
+	name = "roulette table"
+	desc = "Roulette table."
+	icon_state = "roulette_long"
 
 /obj/structure/casino_table/roulette_chart
 	name = "roulette chart"
 	desc = "Roulette chart. Place your bets!"
 	icon_state = "roulette_table"
-<<<<<<< HEAD
-=======
 
 /obj/item/roulette_ball
 	name = "roulette ball"
@@ -256,7 +321,6 @@
 
 /obj/item/roulette_ball/cheat/odd/get_cheated_result()
 	return pick(list(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35))
->>>>>>> 99601cb2c1... Merge pull request #13338 from Heroman3003/casino-cleanup
 
 //
 //Blackjack table

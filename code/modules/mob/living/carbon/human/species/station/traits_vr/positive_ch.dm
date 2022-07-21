@@ -2,7 +2,8 @@
 	name = "Master Linguist"
 	desc = "You are a master of languages! For whatever reason you might have, you are able to learn many more languages than others. Your language cap is 12 slots."
 	cost = 2
-	var_changes = list("num_alternate_languages" = 12)
+	var_changes = list("num_alternate_languages" = 15)
+	var_changes_pref = list("extra_languages" = 12)
 
 /datum/trait/positive/darksight
 	name = "Darksight"
