@@ -489,6 +489,14 @@ lel
 	outdoors = 0
 	},
 /area/groundbase/security/lobby)
+"bq" = (
+/obj/machinery/vending/wardrobe/atmosdrobe,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/sign/scenery/fakefireaxe{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/atmos/monitoring)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -9005,11 +9013,6 @@ lel
 /obj/item/weapon/hand_labeler,
 /turf/simulated/floor/carpet,
 /area/groundbase/security/detective)
-"vS" = (
-/obj/machinery/vending/wardrobe/atmosdrobe,
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/atmos/monitoring)
 "vT" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -36642,7 +36645,7 @@ Lt
 Lt
 Lt
 iS
-vS
+bq
 wu
 aM
 iS
