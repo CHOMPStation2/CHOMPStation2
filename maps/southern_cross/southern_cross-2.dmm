@@ -44691,6 +44691,13 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/engineering)
+"doJ" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/spawner/wave_spawner{
+	reactor_id = "one"
+	},
+/turf/simulated/floor/boxing/gym,
+/area/crew_quarters/seconddeck/gym)
 "doR" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -76169,6 +76176,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint2)
+"uUI" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/power/damaged_reactor{
+	reactor_id = "one"
+	},
+/turf/simulated/floor/boxing{
+	name = "yoga mat"
+	},
+/area/crew_quarters/seconddeck/gym)
 "uVg" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
