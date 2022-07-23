@@ -12,6 +12,17 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
+"ac" = (
+/obj/effect/landmark/start/pilot,
+/obj/structure/closet/walllocker_double{
+	dir = 8;
+	name = "misc equipment cabinet";
+	pixel_x = -32
+	},
+/obj/item/weapon/storage/box/nifsofts_pilot,
+/obj/item/device/multitool/groundbase_buffered,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/pilot)
 "ak" = (
 /obj/structure/table/glass,
 /obj/item/weapon/paper_bin,
@@ -2301,6 +2312,7 @@ lol
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level3/nw)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "OJ" = (
 /obj/effect/landmark/start/pilot,
@@ -2312,6 +2324,8 @@ lol
 /obj/item/weapon/storage/box/nifsofts_pilot,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/pilot)
+=======
+>>>>>>> 5147a4ddae... Merge pull request #13383 from Heroman3003/gb-tweaks
 "OT" = (
 /obj/structure/lattice,
 /turf/simulated/open/virgo3c,
@@ -5264,7 +5278,7 @@ Qa
 qO
 fz
 bm
-OJ
+ac
 pd
 Tk
 bm
