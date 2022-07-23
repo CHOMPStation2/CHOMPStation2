@@ -4484,6 +4484,7 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\datums\autolathe\arms.dm"
+#include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
