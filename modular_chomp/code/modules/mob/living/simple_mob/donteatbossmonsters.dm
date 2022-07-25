@@ -4,10 +4,6 @@
 	digestable = 0
 	devourable = 0
 
-/mob/living/simple_mob/vore/bigdragon
-	digestable = 0
-	devourable = 0
-
 /mob/living/simple_mob/vore/aggressive/dragon
 	digestable = 0
 	devourable = 0
