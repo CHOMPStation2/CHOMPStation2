@@ -2208,6 +2208,11 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/outpost/mining_main/cave)
+"zy" = (
+/obj/effect/zone_divider,
+/obj/item/stack/flag/green,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/normal)
 "zI" = (
 /obj/machinery/atmospherics/valve/digital/open{
 	dir = 4
@@ -2529,10 +2534,10 @@
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
 "Ec" = (
-/obj/item/stack/flag/green,
 /obj/effect/zone_divider,
+/obj/item/stack/flag/green,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/cave/explored/normal)
+/area/surface/cave/explored/deep)
 "Em" = (
 /obj/structure/bed/chair/office/light,
 /obj/machinery/power/apc{
@@ -16325,7 +16330,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -16828,7 +16833,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -17111,7 +17116,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -17357,7 +17362,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -17604,7 +17609,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -17883,7 +17888,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -18883,7 +18888,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -19184,7 +19189,7 @@ nu
 nu
 YT
 nu
-nu
+bE
 iy
 iy
 iy
@@ -19659,7 +19664,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -19723,7 +19728,7 @@ iy
 iy
 iy
 nu
-nu
+bE
 nu
 nu
 nu
@@ -19955,7 +19960,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 YT
 nu
 nu
@@ -20497,7 +20502,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -20679,7 +20684,7 @@ HQ
 HQ
 HQ
 HQ
-YT
+Ec
 YT
 YT
 YT
@@ -20787,7 +20792,7 @@ BO
 BO
 BO
 BO
-BO
+zy
 rM
 rM
 rM
@@ -21001,7 +21006,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -21453,7 +21458,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 iy
 iy
@@ -21518,7 +21523,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -21955,7 +21960,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 YT
 nu
 nu
@@ -22084,8 +22089,8 @@ Hp
 mI
 mI
 mI
-Ec
-Hp
+BO
+sb
 Hp
 Hp
 Hp
@@ -22097,7 +22102,7 @@ mI
 mI
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -22335,7 +22340,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 mI
@@ -22843,7 +22848,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -22871,7 +22876,7 @@ mI
 mI
 mI
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -22987,7 +22992,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 HQ
 iy
 iy
@@ -23619,7 +23624,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 mI
 mI
 mI
@@ -23749,7 +23754,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -24524,7 +24529,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -25285,7 +25290,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -26060,7 +26065,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 iy
 iy
@@ -27460,7 +27465,7 @@ iy
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -29598,7 +29603,7 @@ mI
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 mI
@@ -30112,7 +30117,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -38606,7 +38611,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -39381,7 +39386,7 @@ mI
 mI
 Hp
 Hp
-Hp
+sb
 mI
 mI
 mI
@@ -42710,7 +42715,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -43482,7 +43487,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -49166,7 +49171,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -49384,7 +49389,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -49928,7 +49933,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -50158,7 +50163,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -50199,7 +50204,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 mI
 mI
 mI
@@ -50444,7 +50449,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -51940,7 +51945,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -52719,7 +52724,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 HQ
@@ -57864,15 +57869,15 @@ iy
 iy
 iy
 iy
+bE
 nu
 nu
 nu
+bE
 nu
 nu
 nu
-nu
-nu
-nu
+bE
 iy
 iy
 iy
@@ -63286,15 +63291,15 @@ iy
 iy
 iy
 iy
+bE
 nu
 nu
 nu
+bE
 nu
 nu
 nu
-nu
-nu
-nu
+bE
 iy
 iy
 iy

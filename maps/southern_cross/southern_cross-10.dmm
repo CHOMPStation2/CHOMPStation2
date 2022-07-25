@@ -32,7 +32,7 @@
 	id = "wilderness_shelter_1st_floor";
 	name = "Wilderness Shelter Shutters";
 	pixel_y = -26;
-	req_one_access = list(1,5,10,12,31,47,48,50)
+	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
@@ -240,7 +240,9 @@
 	icon_state = "sheet-wood_3";
 	pixel_y = 2
 	},
-/obj/item/weapon/chainsaw,
+/obj/item/weapon/chainsaw{
+	layer = 3.01
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "nY" = (
@@ -346,7 +348,7 @@
 	id = "wilderness_shelter_Utility";
 	name = "Wilderness Shelter Shutters";
 	pixel_x = 24;
-	req_one_access = list(1,5,10,12,31,47,48,50)
+	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)

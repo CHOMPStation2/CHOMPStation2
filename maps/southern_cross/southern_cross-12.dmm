@@ -1179,7 +1179,7 @@
 	id = "wilderness_shelter_2nd_floor_door";
 	name = "Wilderness Shelter Shutters";
 	pixel_x = -26;
-	req_one_access = list(1,5,10,12,31,47,48,50)
+	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
