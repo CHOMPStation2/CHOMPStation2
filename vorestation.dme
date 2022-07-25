@@ -4035,7 +4035,6 @@
 #include "code\modules\research\designs\subspace_parts.dm"
 #include "code\modules\research\designs\tech_disks.dm"
 #include "code\modules\research\designs\weapons.dm"
-#include "code\modules\research\designs\weapons_ch.dm"
 #include "code\modules\research\designs\weapons_vr.dm"
 #include "code\modules\research\designs\weapons_yw.dm"
 #include "code\modules\research\designs\xenoarch_toys.dm"
@@ -4484,6 +4483,7 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
+#include "modular_chomp\code\datums\autolathe\arms.dm"
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
@@ -4519,5 +4519,6 @@
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
 #include "modular_chomp\code\modules\research\designs\power_cells.dm"
+#include "modular_chomp\code\modules\research\designs\weapons.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 // END_INCLUDE
