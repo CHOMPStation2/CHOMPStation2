@@ -1,6 +1,6 @@
 //I've come to nerf vore in the vorecode, and only the headmins and maintainers can stop me.
 
-/mob/living/simple_mob/mobs_monsters/clowns/
+/mob/living/simple_mob/mobs_monsters/clowns
 	digestable = 0
 	devourable = 0
 
