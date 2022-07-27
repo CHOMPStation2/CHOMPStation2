@@ -152,3 +152,39 @@
 
 	initial_modules = list(
 		)
+//ChompEdit Begins
+
+obj/item/weapon/rig/vox/engineering
+	suit_type = "sinister alien"
+	icon_state = "voxstealth_rig"
+	desc = "A lightweight, alien rig dedicated for construction and engineering tasks. Not reccomended for hostile engagement."
+	armor = list (melee = 25, bullet = 5, laser = 40, energy = 45, bomb = 50, bio = 100, rad = 100) //CE suit values but shuffled to a tighter focus on the job hazards
+	flags = PHORONGUARD
+	item_flags = THICKMATERIAL
+	siemens_coefficient = .1
+	offline_slowdown = 2.5
+	slowdown = 0 
+	emp_protection = 40 //change this to 30 if too high.
+
+	req_one_access = list()
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage)
+	offline_vision_restriction = 1
+
+	initial_modules = list(
+	)
+
+	air_type = /obj/item/weapon/tank/vox
+
+	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+
+	obj/item/weapon/rig/vox engine technition control module/equipped
+	req_access = list(access_engineering)
+
+	initial_modules = list(
+	/obj/item/rig_module/maneuvering_jets,
+	/obj/item/rig_module/device/plasmacutter,
+	/obj/item/rig_module/device/rcd,
+	/obj/item/rig_module/vision/meson
+	)  
+
+//ChompEdit Ends
