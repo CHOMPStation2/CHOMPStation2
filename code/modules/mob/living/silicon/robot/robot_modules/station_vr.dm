@@ -354,7 +354,7 @@
 
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module
 	R.icon = 'icons/mob/widerobot_med_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_med_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -390,7 +390,7 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
 	src.modules += new /obj/item/weapon/tool/crowbar(src)
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)

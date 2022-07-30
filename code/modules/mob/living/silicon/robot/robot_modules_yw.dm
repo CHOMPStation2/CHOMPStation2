@@ -98,7 +98,7 @@
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
 
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module.
 	//R.icon_state = "medihound"
 	R.pixel_x 	 = -16
 	R.old_x  	 = -16
