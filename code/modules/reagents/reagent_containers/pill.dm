@@ -9,6 +9,7 @@
 	item_state = "pill"
 	drop_sound = 'sound/items/drop/food.ogg'
 	pickup_sound = 'sound/items/pickup/food.ogg'
+	var/survivalfood = TRUE //CHOMPEdit, Survival Pills
 
 	var/base_state = "pill"
 
@@ -22,14 +23,18 @@
 	if(!icon_state)
 		icon_state = "[base_state][rand(1, 4)]" //preset pills only use colour changing or unique icons
 
-/obj/item/weapon/reagent_containers/pill/attack(mob/M as mob, mob/user as mob)
-	if(M == user)
-		if(istype(M, /mob/living/carbon/human))
+/obj/item/weapon/reagent_containers/pill/attack(mob/M as mob, mob/user as mob) //CHOMPEdit Begin, Survivalfood Pills
+	if(M == user)								//If you're eating it yourself
+		if(istype(M,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
 			if(!H.check_has_mouth())
 				to_chat(user, "Where do you intend to put \the [src]? You don't have a mouth!")
 				return
-			var/obj/item/blocked = H.check_mouth_coverage()
+			var/obj/item/blocked = null
+			if(survivalfood)
+				blocked = H.check_mouth_coverage_survival()
+			else
+				blocked = H.check_mouth_coverage()
 			if(blocked)
 				to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
 				return
@@ -41,13 +46,25 @@
 			qdel(src)
 			return 1
 
-	else if(istype(M, /mob/living/carbon/human))
-
+	else if(istype(M,/mob/living/carbon/human))
+	
 		var/mob/living/carbon/human/H = M
 		if(!H.check_has_mouth())
 			to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
 			return
-		var/obj/item/blocked = H.check_mouth_coverage()
+		var/obj/item/blocked = null
+		//var/unconcious = FALSE // Bonk
+		blocked = H.check_mouth_coverage()
+		if(survivalfood)
+			blocked = H.check_mouth_coverage_survival()
+			if(H.stat && H.check_mouth_coverage())
+				//unconcious = TRUE // Bonk
+				blocked = H.check_mouth_coverage()
+
+		//if(unconcious) //You can feed dead people pills, so this should not make a difference
+		//	to_chat(user, "<span class='warning'>You can't feed [H] through \the [blocked] while they are unconcious!</span>")
+		//	return
+
 		if(blocked)
 			to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
 			return
@@ -70,7 +87,7 @@
 
 		return 1
 
-	return 0
+	return 0 //CHOMPEdit End
 
 /obj/item/weapon/reagent_containers/pill/afterattack(obj/target, mob/user, proximity)
 	if(!proximity) return
