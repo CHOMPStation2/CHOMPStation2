@@ -121,10 +121,15 @@
 /area/submap/Thiefc)
 "p" = (
 /obj/structure/closet/crate,
+<<<<<<< HEAD
 /obj/item/weapon/storage/box/shotgunammo,
 /obj/item/weapon/storage/box/practiceshells,
 /obj/item/weapon/grenade/spawnergrenade/manhacks/station,
 /turf/simulated/floor/outdoors/dirt{
+=======
+/obj/item/ammo_magazine/ammo_box/b12g/practice,
+/turf/simulated/floor/outdoors/dirt/virgo3b{
+>>>>>>> 595d4c1190... Merge pull request #13396 from Heroman3003/mapfix
 	outdoors = 0
 	},
 /area/submap/Thiefc)
