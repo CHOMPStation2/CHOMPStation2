@@ -4,7 +4,28 @@
 	admin_only = FALSE
 
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
+<<<<<<< HEAD
 	return "Current server status:\n**Down! Contact staff.** <https://cdn.discordapp.com/emojis/687779807358091364.gif?v=1>" //CHOMPEdit Not turning it off, but turning it into a sort of debug message to indicate if the server is down.
+=======
+	var/counts = 0
+	var/afks = 0
+	var/active = 0
+	var/bellied = 0
+
+	for(var/X in GLOB.clients)
+		var/client/C = X
+		if(C)
+			counts++
+		if(C && !(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
+			if(C && C.mob && isbelly(C.mob.loc))
+				bellied++
+		if(C.is_afk())
+			afks++
+		else
+			active++
+
+	return "Current server status:\n**Web Manifest:** <https://vore-station.net/manifest.php>\n**Players:** [counts]\n**Active:** [active]\n**AFK:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]"
+>>>>>>> 7ad46bb8c9... Merge pull request #13431 from Heroman3003/manifest-fix-esque
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
