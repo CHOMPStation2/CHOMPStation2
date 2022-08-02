@@ -174,9 +174,6 @@ VS Edit - anyone can select these. */
 	..()
 
 /obj/item/weapon/disk/limb/dsi_teshari
-<<<<<<< HEAD
-	company = "DSI - Teshari"
-=======
 	company = "DSI - Teshari"
 
 /datum/robolimb/dsi_zorren
@@ -206,4 +203,3 @@ VS Edit - anyone can select these. */
 
 /obj/item/weapon/disk/limb/dsi_fennec
 	company = "DSI - Fennec"
->>>>>>> 4986a011b7... Adds Zorren and Fennec DSI prosthetic brands (#13416)
