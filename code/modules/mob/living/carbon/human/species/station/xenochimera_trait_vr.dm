@@ -43,7 +43,7 @@
 	cost = 0
 	category = 0
 	custom_only = FALSE
-	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
+	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing)) // CHOMPEdit: Fix 'chimera unarmed attacks with this trait
 
 /datum/trait/positive/snowwalker/xenochimera
 	sort = TRAIT_SORT_SPECIES
