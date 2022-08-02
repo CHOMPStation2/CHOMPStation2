@@ -166,18 +166,6 @@
 	update_canmove()
 	weakened = 2
 
-<<<<<<< HEAD
-	//Visual effects
-	// CHOMPEdit Start: Tweaks Gibspawner to inherit color from prior
-	var/T = get_turf(src)
-	var/blood_color = species.blood_color
-	var/flesh_color = species.flesh_color
-	new /obj/effect/gibspawner/human/xenochimera(T, null, flesh_color, blood_color)
-
-	playsound(T, 'sound/effects/mob_effects/xenochimera/hatch.ogg', 50)
-
-=======
->>>>>>> 511a53afbd... Merge pull request #13403 from Screemonster/fistofthenorthrar
 	revive_ready = world.time + 10 MINUTES //set the cooldown CHOMPEdit: Reduced this to 10 minutes, you're playing with fire if you're reviving that often.
 
 /mob/living/carbon/human/proc/revivingreset() // keep this as a debug proc or potential future use
