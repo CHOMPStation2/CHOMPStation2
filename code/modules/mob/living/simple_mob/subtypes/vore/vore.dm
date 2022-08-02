@@ -11,8 +11,6 @@
 	verbs |= /mob/living/simple_mob/proc/set_name
 	verbs |= /mob/living/simple_mob/proc/set_desc
 
-<<<<<<< HEAD
-=======
 	ooc_notes = client.prefs.metadata
 	digestable = client.prefs_vr.digestable
 	devourable = client.prefs_vr.devourable
@@ -20,7 +18,7 @@
 	feeding = client.prefs_vr.feeding
 	can_be_drop_prey = client.prefs_vr.can_be_drop_prey
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
-	allow_inbelly_spawning = client.prefs_vr.allow_inbelly_spawning
+	latejoin_vore = client.prefs_vr.latejoin_vore //CHOMPedit
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
 	allowmobvore = client.prefs_vr.allowmobvore
@@ -38,7 +36,6 @@
 	pickup_pref = client.prefs_vr.pickup_pref
 
 
->>>>>>> 7550df1e26... Merge pull request #13406 from Heroman3003/selective-upgrade
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."

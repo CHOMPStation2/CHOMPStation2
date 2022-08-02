@@ -242,11 +242,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		B.ownegg = null
 		return list("to_update" = TRUE)
 	return
-<<<<<<< HEAD
-=======
 
 /datum/digest_mode/selective //unselectable, "smart" digestion mode for mobs only
 	id = DM_SELECT
+
 
 /datum/digest_mode/selective/process_mob(obj/belly/B, mob/living/L)
 	var/datum/digest_mode/tempmode = GLOB.digest_modes[DM_HOLD]			// Default to Hold in case of big oof fallback
@@ -281,4 +280,3 @@ GLOBAL_LIST_INIT(digest_modes, list())
 					else
 						tempmode = GLOB.digest_modes[DM_DRAIN]			// Otherwise drain.
 	return tempmode.process_mob(B, L)
->>>>>>> 7550df1e26... Merge pull request #13406 from Heroman3003/selective-upgrade
