@@ -86,7 +86,3 @@
 /* //CHOMPedit: Commented out because this is an actual job here
 /datum/alt_title/sar
 	title = "Search and Rescue"
-<<<<<<< HEAD
-*/
-=======
->>>>>>> 9e4ab51157... Merge pull request #13405 from BonniePandora/Contractor-alt-titles
