@@ -154,7 +154,7 @@
 		)
 //ChompEdit Begins
 
-obj/item/weapon/rig/vox/engineering
+/obj/item/weapon/rig/vox/engineering
 	suit_type = "sinister alien"
 	icon_state = "voxstealth_rig"
 	desc = "A lightweight, alien rig dedicated for construction and engineering tasks. Not reccomended for hostile engagement."
@@ -177,7 +177,7 @@ obj/item/weapon/rig/vox/engineering
 
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 
-	obj/item/weapon/rig/vox engine technition control module/equipped
+	/obj/item/weapon/rig/vox_engine_technition_control_module/equipped
 	req_access = list(access_engineering)
 
 	initial_modules = list(
