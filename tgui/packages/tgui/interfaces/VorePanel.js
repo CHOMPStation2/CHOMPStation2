@@ -1777,7 +1777,9 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
         <Flex.Item basis="32%">
-<<<<<<< HEAD
+          <Button fluid content="Slective Mode Preference" onClick={() => act('switch_selective_mode_pref')} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
         <Flex.Item basis="49%">
@@ -1785,9 +1787,6 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="49%">
           <VoreUserPreferenceItem spec={preferences.liquid_give} tooltipPosition="top" />
-=======
-          <Button fluid content="Slective Mode Preference" onClick={() => act('switch_selective_mode_pref')} />
->>>>>>> 7550df1e26... Merge pull request #13406 from Heroman3003/selective-upgrade
         </Flex.Item>
       </Flex>
       <Section title="Aesthetic Preferences">
