@@ -261,7 +261,7 @@
 	containername = "Vox Civilian Hardsuit"
 	
 /datum/supply_pack/voidsuits/voxeng
-	name = Vox Engineering Hardsuit
+	name = "Vox Engineering Hardsuit"
 	contains = list (obj/item/weapon/rig/vox/engineering)
 	cost = 150
 	containertype = /obj/structure/closet/crate/oculum
