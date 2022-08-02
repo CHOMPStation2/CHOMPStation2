@@ -177,7 +177,7 @@
 
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 
-	/obj/item/weapon/rig/vox_engine_technition_control_module/equipped
+/obj/item/weapon/rig/vox_engine_technition_control_module/equipped
 	req_access = list(access_engine)
 
 	initial_modules = list(
