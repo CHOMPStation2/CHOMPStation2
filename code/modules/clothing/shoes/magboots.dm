@@ -18,6 +18,7 @@
 	step_volume_mod = 1.3
 	drop_sound = 'sound/items/drop/metalboots.ogg'
 	pickup_sound = 'sound/items/pickup/toolbox.ogg'
+	armor = list (melee = 40, bullet = 10, laser = 10, energy = 20, bomb = 20, bio = 10, rad = 20) //magboots are also metal ass boots, they could take a bonk perhaps too //ChompEdit
 
 /obj/item/clothing/shoes/magboots/proc/set_slowdown()
 	slowdown = shoes? max(SHOES_SLOWDOWN, shoes.slowdown): SHOES_SLOWDOWN	//So you can't put on magboots to make you walk faster.
@@ -90,6 +91,7 @@
 	icon_state = "boots-vox"
 	flags = PHORONGUARD
 	species_restricted = list(SPECIES_VOX)
+	armor = list (melee = 40, bullet = 10, laser = 10, energy = 20, bomb = 20, bio = 10, rad = 20) //values of workboots and heavy duty engineering gloves, it's the only option that will ever be taken so may as well give the turkeys some protection //ChompEdit
 
 	action_button_name = "Toggle the magclaws"
 
