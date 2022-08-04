@@ -230,6 +230,15 @@
 	name = "Suburbs Condos"
 	icon_state = "green"
 
+/area/awaymission/darkrp/subpower
+	name = "Suburbs Power Station"
+	icon_state = "green"
+	outdoors = 1
+
+/area/awaymission/darkrp/subpowermaint
+	name = "Suburbs Power Station Maint"
+	icon_state = "green"
+
 //center
 /area/awaymission/darkrp/outside/center
 	name = "City Center"
