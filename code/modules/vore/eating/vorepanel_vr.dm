@@ -722,6 +722,10 @@
 	var/list/available_options = list("Examine", "Eject", "Move", "Transfer")
 	if(ishuman(target))
 		available_options += "Transform"
+	//CHOMPEdit Begin - Add Reforming
+	if(isobserver(target) || istype(target,/obj/item/device/mmi))
+		available_options += "Reform"
+	//CHOMPEdit End
 	intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", available_options)
 	switch(intent)
 		if("Examine")
@@ -802,6 +806,71 @@
 			var/datum/tgui_module/appearance_changer/vore/V = new(host, H)
 			V.tgui_interact(user)
 			return TRUE
+
+		//CHOMPEdit Begin - Add Reforming
+		if("Reform")
+			if(host.stat)
+				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				return TRUE
+
+			if(isobserver(target))
+				var/mob/observer/T = target
+				if(!ismob(T.body_backup) || prevent_respawns.Find(T.mind.name))
+					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
+					return TRUE
+
+				var/accepted = tgui_alert(T, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
+				if(accepted != "Yes")
+					to_chat(user,"<span class='warning'>[T] refused to be reformed!</span>")
+					return TRUE
+
+				if(isliving(T.body_backup))
+					var/mob/living/body_backup = T.body_backup
+					body_backup.revive()
+					body_backup.forceMove(T.loc)
+					body_backup.ajourn = 0
+					body_backup.key = T.key
+					body_backup.teleop = null
+					T.body_backup = null
+					host.vore_selected.release_specific_contents(T)
+					announce_ghost_joinleave(T.mind, 0, "They now occupy their body again.")
+			if(istype(target,/obj/item/device/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
+				var/obj/item/device/mmi/MMI = target
+				if(!ismob(MMI.body_backup) || !MMI.brainmob.mind || prevent_respawns.Find(MMI.brainmob.mind.name))
+					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
+					return TRUE
+				var/accepted = tgui_alert(MMI.brainmob, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
+				if(accepted != "Yes")
+					to_chat(user,"<span class='warning'>[MMI] refused to be reformed!</span>")
+					return TRUE
+
+				if(isliving(MMI.body_backup))
+					var/mob/living/body_backup = MMI.body_backup
+					body_backup.revive()
+					body_backup.forceMove(MMI.loc)
+					body_backup.ajourn = 0
+					body_backup.teleop = null
+					//And now installing the MMI into the body...
+					if(isrobot(body_backup)) //Just do the reverse of getting the MMI pulled out in /obj/belly/proc/digestion_death
+						var/mob/living/silicon/robot/R = body_backup
+						MMI.brainmob.mind.transfer_to(R)
+						MMI.loc = R
+						R.mmi = MMI
+						R.mmi.brainmob.add_language("Robot Talk")
+					else //reference /datum/surgery_step/robotics/install_mmi/end_step
+						var/obj/item/organ/internal/mmi_holder/holder = new(body_backup, 1)
+						body_backup.internal_organs_by_name["brain"] = holder
+						MMI.loc = holder
+						holder.stored_mmi = MMI
+						holder.update_from_mmi()
+
+						if(MMI.brainmob && MMI.brainmob.mind)
+							MMI.brainmob.mind.transfer_to(body_backup)
+							body_backup.languages = MMI.brainmob.languages
+						//You've hopefully already named yourself, so... not implementing that bit.
+					MMI.body_backup = null
+			return TRUE
+		//CHOMPEdit End
 
 /datum/vore_look/proc/set_attr(mob/user, params)
 	if(!host.vore_selected)
