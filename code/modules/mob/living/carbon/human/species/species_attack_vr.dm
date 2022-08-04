@@ -11,11 +11,8 @@
 
 	attack_damage = CLAMP(attack_damage, 1, 5)
 	if(target == user)
-		user.visible_message("<span class='danger'>[user] sinks their fangs in to themself in the [affecting.name]!</span>")
-		to_chat(target, "<font color='red'><b>You feel a wave of numbness as you sink your fangs in to yourself.</b></font>")
-		target.bloodstr.add_reagent("numbenzyme",attack_damage) //Yawn-edit. Allows adding venom to self.
-		return 0
-
+		user.visible_message("<span class='danger'>[user] [pick(attack_verb)] \himself in the [affecting.name]!</span>")
+		return 0 //No venom for you.
 	switch(zone)
 		if(BP_HEAD, O_MOUTH, O_EYES)
 			// ----- HEAD ----- //
@@ -61,3 +58,20 @@
 	..()
 	if(!(target == user))
 		user.shadekin_adjust_energy(attack_damage)
+
+/datum/unarmed_attack/claws/chimera //special feral attack that gets stronger as they get angrier
+
+/datum/unarmed_attack/claws/chimera/get_unarmed_damage(var/mob/living/carbon/human/user)
+	return user.feral/5
+
+/datum/unarmed_attack/claws/chimera/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
+	..()
+	if(user.feral && !(target == user))
+		var/selfdamage = ((user.feral/10)-7.5)
+		if(selfdamage > 0)
+			var/selfdamagezone = null
+			if (user.hand)
+				selfdamagezone=pick(BP_L_ARM, BP_L_HAND)
+			else
+				selfdamagezone=pick(BP_R_ARM, BP_R_HAND)
+			user.apply_damage(selfdamage, BRUTE, selfdamagezone, 0, 0, sharp=FALSE, edge=FALSE)

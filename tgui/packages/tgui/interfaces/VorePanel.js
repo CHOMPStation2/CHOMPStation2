@@ -13,6 +13,7 @@ const digestModeToColor = {
   'Absorb': 'purple',
   'Unabsorb': 'purple',
   'Drain': 'orange',
+  'Selective': 'orange',
   'Shrink': 'teal',
   'Grow': 'teal',
   'Size Steal': 'teal',
@@ -26,6 +27,7 @@ const digestModeToPreyMode = {
   'Absorb': 'being absorbed.',
   'Unabsorb': 'being unabsorbed.',
   'Drain': 'being drained.',
+  'Selective': 'being processed.',
   'Shrink': 'being shrunken.',
   'Grow': 'being grown.',
   'Size Steal': 'having your size stolen.',
@@ -347,7 +349,11 @@ const VoreBellySelectionAndCustomization = (props, context) => {
         </Section>
       </Flex.Item>
       <Flex.Item grow>
-        <Section title={selected.belly_name}>{selected && <VoreSelectedBelly belly={selected} />}</Section>
+        {selected && (
+          <Section title={selected.belly_name}>
+            <VoreSelectedBelly belly={selected} />
+          </Section>
+        )}
       </Flex.Item>
     </Flex>
   );
@@ -628,6 +634,7 @@ const VoreSelectedBellyOptions = (props, context) => {
     contaminate_flavor,
     contaminate_color,
     egg_type,
+    selective_preference,
     save_digest_mode,
     vorespawn_blacklist,
   } = belly;
@@ -746,6 +753,12 @@ const VoreSelectedBellyOptions = (props, context) => {
               onClick={() => act('set_attribute', { attribute: 'b_egg_type' })}
               icon="pen"
               content={capitalize(egg_type)}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Selective Mode Preference">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_selective_mode_pref_toggle' })}
+              content={capitalize(selective_preference)}
             />
           </LabeledList.Item>
         </LabeledList>
@@ -1762,6 +1775,9 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button fluid content="Slective Mode Preference" onClick={() => act('switch_selective_mode_pref')} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />

@@ -18804,7 +18804,7 @@
 	},
 /obj/machinery/door/airlock/security{
 	name = "Detective's office";
-	req_access = list (4);
+	req_access = list(4);
 	req_one_access = null
 	},
 /turf/simulated/floor/lino,

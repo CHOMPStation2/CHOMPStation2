@@ -12,3 +12,18 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TRandomEmotePitch") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/toggle_autotranscore()
+	set name = "Toggle Automatic Transcore Notification"
+	set category = "Preferences"
+	set desc = "Toggles whether or not your death with a backup implant will automatically trigger a transcore notification after a few minutes."
+
+	var/pref_path = /datum/client_preference/autotranscore
+
+	toggle_preference(pref_path)
+
+	to_chat(src, "Your death with a backup implant will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] trigger an automatic transcore notification.")
+
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	feedback_add_details("admin_verb","TAutoTranscore") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

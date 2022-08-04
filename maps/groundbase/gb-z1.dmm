@@ -489,6 +489,14 @@ lel
 	outdoors = 0
 	},
 /area/groundbase/security/lobby)
+"bq" = (
+/obj/machinery/vending/wardrobe/atmosdrobe,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/sign/scenery/fakefireaxe{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/atmos/monitoring)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -529,6 +537,7 @@ lel
 /turf/simulated/floor/outdoors/sidewalk/virgo3c,
 /area/groundbase/level1/westspur)
 "bw" = (
+<<<<<<< HEAD
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Teleporter"
@@ -540,6 +549,13 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/bmarble,
 /area/groundbase/civilian/arrivals)
+=======
+/obj/structure/closet/toolcloset,
+/obj/item/weapon/pickaxe,
+/obj/item/weapon/chainsaw,
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/workshop)
+>>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
 "bx" = (
 /obj/structure/table/reinforced,
 /obj/item/device/floor_painter,
@@ -597,10 +613,18 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/security/processing)
 "bD" = (
+<<<<<<< HEAD
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/carpet/turcarpet,
 /area/groundbase/civilian/gameroom)
+=======
+/obj/structure/closet/secure_closet/engineering_electrical/double,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/workshop)
+>>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
 "bE" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -640,6 +664,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
 "bH" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
@@ -654,6 +679,15 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
+=======
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/structure/closet/secure_closet/engineering_welding/double,
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/workshop)
+>>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
 "bJ" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
 /area/groundbase/level1/eastspur)
@@ -1830,11 +1864,6 @@ lel
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/bar)
-"ez" = (
-/obj/structure/closet/toolcloset,
-/obj/item/weapon/pickaxe,
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/workshop)
 "eA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -3135,14 +3164,6 @@ lel
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
-"hS" = (
-/obj/structure/closet/secure_closet/engineering_welding,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/light,
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/workshop)
 "hT" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
@@ -5319,6 +5340,7 @@ lel
 	},
 /obj/item/clothing/glasses/welding/superior,
 /obj/item/device/flashlight/lamp,
+/obj/item/weapon/stamp/ce,
 /turf/simulated/floor/carpet/oracarpet,
 /area/groundbase/engineering/ce)
 "nf" = (
@@ -9005,11 +9027,6 @@ lel
 /obj/item/weapon/hand_labeler,
 /turf/simulated/floor/carpet,
 /area/groundbase/security/detective)
-"vS" = (
-/obj/machinery/vending/wardrobe/atmosdrobe,
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/atmos/monitoring)
 "vT" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -13247,12 +13264,6 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/holodeck_control)
-"FW" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/workshop)
 "FX" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_security/polarized{
@@ -18736,6 +18747,7 @@ lel
 	departmentType = 2;
 	pixel_y = 30
 	},
+/obj/item/weapon/gun/energy/mouseray/medical,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/equipment)
 "To" = (
@@ -35223,14 +35235,14 @@ pe
 Wl
 VC
 XJ
-ez
+bw
 zv
 NY
 ER
 jf
 BH
-FW
-hS
+bD
+bH
 JM
 ph
 aE
@@ -36641,7 +36653,7 @@ Lt
 Lt
 Lt
 iS
-vS
+bq
 wu
 aM
 iS
