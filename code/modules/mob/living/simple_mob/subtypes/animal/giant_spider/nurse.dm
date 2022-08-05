@@ -256,9 +256,7 @@
 		for(var/A in targets)
 			if(!isliving(A))
 				targets -= A
-			if(istype(A, /mob/living/simple_mob/animal/giant_spider)) // CHOMPEdit Start. Please do not try to cocoon the things immune to being cocooned, thanks.
-				if(!A?:stat)
-					targets -= A  // CHOMPEdit end. No more Cocoon right-click bombs!
+
 	return ..(targets)
 
 /datum/ai_holder/simple_mob/melee/nurse_spider/can_attack(atom/movable/the_target, var/vision_required = TRUE)
