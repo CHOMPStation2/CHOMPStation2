@@ -4,9 +4,6 @@
 	admin_only = FALSE
 
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
-<<<<<<< HEAD
-	return "Current server status:\n**Down! Contact staff.** <https://cdn.discordapp.com/emojis/687779807358091364.gif?v=1>" //CHOMPEdit Not turning it off, but turning it into a sort of debug message to indicate if the server is down.
-=======
 	var/counts = 0
 	var/afks = 0
 	var/active = 0
@@ -24,8 +21,7 @@
 		else
 			active++
 
-	return "Current server status:\n**Web Manifest:** <https://vore-station.net/manifest.php>\n**Players:** [counts]\n**AFK:** [afks]\n**Active:** [active]\n**Bellied:** [bellied]\n\nRound Duration:** [roundduration2text()]"
->>>>>>> a5d71950ac... Merge pull request #13399 from Poojawa/bot-things
+	return "Current server status:\n**Web Manifest:** <https://manifest.chompstation13.net/>\n**Players:** [counts]\n**AFK:** [afks]\n**Active:** [active]\n**Bellied:** [bellied]\n\nRound Duration:** [roundduration2text()]" //CHOMP Edit changed manifest to chomp manifest link
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
@@ -98,11 +94,8 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	if(query.NextRow())
 		qdel(query) //CHOMPEdit TGSQL
 		return "[sender.friendly_name], your Discord ID is already registered to a Byond username. Please contact an administrator if you changed your Byond username or Discord ID."
-<<<<<<< HEAD
 	qdel(query) //CHOMPEdit TGSQL
-=======
-
->>>>>>> a5d71950ac... Merge pull request #13399 from Poojawa/bot-things
+	
 	var/key_to_find = "[ckey(params)]"
 
 	// They didn't provide anything worth looking up.
@@ -119,17 +112,14 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	// Couldn't find them logged in.
 	if(!user)
 		return "[sender.friendly_name], I couldn't find a logged-in user with the username of '[key_to_find]', which is what you provided after conversion to Byond's ckey format. Please connect to the game server and try again."
-<<<<<<< HEAD
 	
 	//var/sql_ckey = sql_sanitize_text(key_to_find) //CHOMPEdit TGSQL
 	var/DBQuery/query2 = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find)) //CHOMPEdit TGSQL
 	query2.Execute() //CHOMPEdit TGSQL
-=======
 
 	var/sql_ckey = sql_sanitize_text(key_to_find)
 	query = dbcon.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = '[sql_ckey]'")
 	query.Execute()
->>>>>>> a5d71950ac... Merge pull request #13399 from Poojawa/bot-things
 
 	// We somehow found their client, BUT they don't exist in the database
 	if(!query2.NextRow()) //CHOMPEdit TGSQL
@@ -140,11 +130,8 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	if(query2.item[1]) //CHOMPEdit TGSQL
 		qdel(query2) //CHOMPEdit TGSQL
 		return "[sender.friendly_name], it appears you've already registered your chat and game IDs. If you've changed game or chat usernames, please contact an administrator for help."
-<<<<<<< HEAD
 	qdel(query2) //CHOMPEdit TGSQL
-=======
 
->>>>>>> a5d71950ac... Merge pull request #13399 from Poojawa/bot-things
 	// Okay. We found them, they're in the DB, and they have no discord ID set.
 	var/message = "<span class='notice'>A request has been sent from Discord to validate your Byond username, by '[sender.friendly_name]' in '[sender.channel.friendly_name]'</span>\
 	<br><span class='warning'>If you did not send this request, do not click the link below, and do notify an administrator in-game or on Discord ASAP.</span>\
@@ -157,10 +144,12 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 
 	return "[sender.friendly_name], I've sent you a message in-game. Please verify your username there to complete your registration within 10 minutes."
 
+/* CHOMP Commenting this out to see what happens, lol. It should return vorestation's status fields instead of YW's
 //YW Commands
 //Status
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
 	return "Current server status:**Players:** [TGS_CLIENT_COUNT]\n**Round Duration:** [roundduration2text()]"
+*/
 
 // - FAX
 /datum/tgs_chat_command/readfax
