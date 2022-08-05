@@ -3,8 +3,10 @@
 	set category = "Abilities"
 	set desc = "Disinfect and heal small wounds with your saliva."
 
+	//CHOMPEdit Start - No longer usable while incapacitated
 	if(src.incapacitated())
 		return
+	//CHOMPEdit End
 
 	if(nutrition < 50)
 		to_chat(src, "<span class='warning'>You need more energy to produce antiseptic enzymes. Eat something and try again.</span>")
