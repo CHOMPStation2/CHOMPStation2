@@ -1,4 +1,4 @@
-//Variables to make certain things work. Consider sending upstream. 
+//Variables to make certain things work. Consider sending upstream.
 /datum/seed
 	var/ai_mob_product = 0 //This variable determines whether or not a mob product is meant to be ai-controlled. If set to 0, mob products die without a player to control them.
 
@@ -12,21 +12,29 @@
 
 /datum/seed/soybean/sapbean/orange
 	name = "orangesapbean"
-	mutants = list("Purplesapbean","bluesapbean","blacksapbean")
+	seed_name = "orange sapbean"
+	display_name = "orange sapbean"
+	mutants = list("purplesapbean","bluesapbean","blacksapbean")
 	chems = list("orangesap" = list(0,10))
 
 /datum/seed/soybean/sapbean/purple
 	name = "purplesapbean"
-	mutants = list("Orangesapbean","bluesapbean","blacksapbean")
+	seed_name = "purple sapbean"
+	display_name = "purple sapbean"
+	mutants = list("orangesapbean","bluesapbean","blacksapbean")
 	chems = list("purplesap" = list(0,10))
 
 /datum/seed/soybean/sapbean/blue
 	name = "bluesapbean"
+	seed_name = "blue sapbean"
+	display_name = "blue sapbean"
 	mutants = list("orangesapbean","purplesapbean","blacksapbean")
 	chems = list("bluesap" = list(0,10))
 
 /datum/seed/soybean/sapbean/black //A bean with all the power but in so little quanitity
 	name = "blacksapbean"
+	seed_name = "black sapbean"
+	display_name = "black sapbean"
 	chems = list("bluesap" = list(1,2),"orangesap" = list(1,2),"purplesap" = list(1,2))
 
 /datum/seed/soybean/sapbean/orange/New()
