@@ -49,13 +49,9 @@
 		/obj/item/device/cataloguer,
 		/obj/item/device/radio,
 		/obj/item/device/mapping_unit,
-<<<<<<< HEAD
 		/obj/item/device/binoculars, //CHOMPADD
-		/obj/item/weapon/kinetic_crusher
-=======
 		/obj/item/weapon/kinetic_crusher,
 		/obj/item/device/analyzer
->>>>>>> 38bdf24fee... Merge pull request #13454 from Cameron653/ROCK_AND_STONE
 		)
 
 /obj/item/weapon/storage/belt/explorer/pathfinder
@@ -136,12 +132,6 @@
 		/obj/item/device/beacon_locator,
 		/obj/item/device/radio/beacon,
 		/obj/item/device/gps,
-<<<<<<< HEAD
-		/obj/item/stack/marker_beacon,
-		/obj/item/stack/flag,
-		/obj/item/weapon/melee
-		)
-=======
 		/obj/item/device/measuring_tape,
 		/obj/item/device/flashlight,
 		/obj/item/device/depth_scanner,
@@ -163,4 +153,3 @@
 		/obj/item/weapon/anobattery,
 		/obj/item/weapon/pickaxe
 		)
->>>>>>> 38bdf24fee... Merge pull request #13454 from Cameron653/ROCK_AND_STONE
