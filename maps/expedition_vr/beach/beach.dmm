@@ -239,7 +239,7 @@
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "ba" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach)
 "bb" = (
 /obj/structure/bed/chair,
@@ -261,7 +261,7 @@
 /turf/simulated/floor/water/ocean,
 /area/tether_away/beach/water)
 "bg" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach/coast)
 "bh" = (
 /obj/effect/overlay/coconut,
@@ -309,7 +309,7 @@
 /turf/simulated/floor/beach/sand/outdoors,
 /area/tether_away/beach/jungle)
 "bq" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach/jungle)
 "br" = (
 /obj/effect/map_effect/portal/line/side_a,
@@ -861,7 +861,7 @@
 	},
 /area/tether_away/beach/resort)
 "nD" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach/water)
 "nP" = (
 /mob/living/simple_mob/animal/passive/fennec/faux,
@@ -1185,7 +1185,7 @@
 /area/tether_away/beach)
 "wv" = (
 /obj/effect/overlay/coconut,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach/jungle)
 "wM" = (
 /obj/structure/cable/cyan{
@@ -1682,7 +1682,7 @@
 /turf/simulated/wall/wood,
 /area/tether_away/beach/coast)
 "KU" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach/resort)
 "Le" = (
 /obj/structure/bookcase,
@@ -2257,7 +2257,7 @@
 	},
 /area/tether_away/beach/resort)
 "ZC" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/cave,
 /area/tether_away/beach/cavebase)
 "ZX" = (
 /obj/structure/cable/cyan{
