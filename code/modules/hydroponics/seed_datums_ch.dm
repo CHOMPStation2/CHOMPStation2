@@ -60,12 +60,12 @@
 	set_trait(TRAIT_POTENCY,10)
 	set_trait(TRAIT_YIELD,2)
 
-//Adding self harvesting apples which contain poison and can mutate into poisonapples
-/datum/seed/apple/falling
-	name = "fallingapple"
-	mutants = list("poisonapple")
-	can_self_harvest = 1
-	chems = list("nutriment" = list(1,5),"applejuice" = list(5,10),"cyanide" = list(1,3))
+//Commenting out because self_harvesting can be troublesome.
+//  /datum/seed/apple/falling
+// 	name = "fallingapple"
+// 	mutants = list("poisonapple")
+// 	can_self_harvest = 1
+// 	chems = list("nutriment" = list(1,5),"applejuice" = list(5,10),"cyanide" = list(1,3))
 
 /datum/seed/wheat/meatwheat
 	name = "meatwheat"
