@@ -180,7 +180,8 @@
 	desc = "A specialized grasping tool used to preserve and manipulate organic material."
 
 	can_hold = list(
-		/obj/item/organ
+		/obj/item/organ,
+		/obj/item/device/nif //NIFs can be slapped in during surgery
 		)
 
 /obj/item/weapon/gripper/no_use/organ/Entered(var/atom/movable/AM)
@@ -208,7 +209,8 @@
 		/obj/item/organ/external,
 		/obj/item/organ/internal/brain, //to insert into MMIs,
 		/obj/item/organ/internal/cell,
-		/obj/item/organ/internal/eyes/robot
+		/obj/item/organ/internal/eyes/robot,
+		/obj/item/device/nif //NIFs can be slapped in during surgery
 		)
 
 /obj/item/weapon/gripper/no_use/mech
