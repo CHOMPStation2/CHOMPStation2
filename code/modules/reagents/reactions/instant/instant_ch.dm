@@ -91,9 +91,9 @@
 /////SERAZINE RECIPES//////
 
 /decl/chemical_reaction/instant/alizene
-	name = "Alezine"
-	id = "alezine"
-	result = "alezine"
+	name = "Alizene"
+	id = "alizene"
+	result = "alizene"
 	required_reagents = list("bicaridine" = 1, "serazine" = 1, "tungsten" = 1)
 	result_amount = 3
 
