@@ -49,8 +49,13 @@
 		/obj/item/device/cataloguer,
 		/obj/item/device/radio,
 		/obj/item/device/mapping_unit,
+<<<<<<< HEAD
 		/obj/item/device/binoculars, //CHOMPADD
 		/obj/item/weapon/kinetic_crusher
+=======
+		/obj/item/weapon/kinetic_crusher,
+		/obj/item/device/analyzer
+>>>>>>> 38bdf24fee... Merge pull request #13454 from Cameron653/ROCK_AND_STONE
 		)
 
 /obj/item/weapon/storage/belt/explorer/pathfinder
@@ -72,17 +77,34 @@
 	max_w_class = ITEMSIZE_LARGE
 	max_storage_space = ITEMSIZE_COST_NORMAL * 6
 	can_hold = list(
-		/obj/item/weapon/storage/box/samplebags,
+		/obj/item/fulton_core,
+		/obj/item/extraction_pack,
+		/obj/item/resonator,
+		/obj/item/stack/marker_beacon,
+		/obj/item/stack/flag,
+		/obj/item/modular_computer/tablet,
+		/obj/item/clothing/glasses,
+		/obj/item/clothing/shoes/bhop,
+		/obj/item/device/multitool,
 		/obj/item/device/core_sampler,
 		/obj/item/device/beacon_locator,
-		/obj/item/device/radio/beacon,
+		/obj/item/device/radio,
 		/obj/item/device/measuring_tape,
 		/obj/item/device/flashlight,
+		/obj/item/device/depth_scanner,
+		/obj/item/device/camera,
+		/obj/item/device/ano_scanner,
+		/obj/item/device/xenoarch_multi_tool,
+		/obj/item/device/geiger,
+		/obj/item/device/gps,
+		/obj/item/device/laser_pointer,
+		/obj/item/device/survivalcapsule,
+		/obj/item/device/perfect_tele/one_beacon,
+		/obj/item/device/binoculars,
+		/obj/item/weapon/storage/box/samplebags,
 		/obj/item/weapon/cell/device,
 		/obj/item/weapon/pickaxe,
 		/obj/item/weapon/shovel,
-		/obj/item/device/depth_scanner,
-		/obj/item/device/camera,
 		/obj/item/weapon/paper,
 		/obj/item/weapon/photo,
 		/obj/item/weapon/folder,
@@ -90,17 +112,55 @@
 		/obj/item/weapon/folder,
 		/obj/item/weapon/clipboard,
 		/obj/item/weapon/anodevice,
-		/obj/item/clothing/glasses,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/storage/excavation,
 		/obj/item/weapon/anobattery,
-		/obj/item/device/ano_scanner,
-		/obj/item/weapon/pickaxe/hand,
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
+		/obj/item/weapon/plastique/seismic/locked,
+		/obj/item/weapon/gun/magnetic/matfed/phoronbore,
+		/obj/item/weapon/storage/bag/sheetsnatcher,
+		/obj/item/weapon/melee,
+		/obj/item/weapon/kinetic_crusher,
+		/obj/item/weapon/mining_scanner
+		)
+		//Pretty much, if it's in the mining vendor, they should be able to put it on the belt.
+
+/obj/item/weapon/storage/belt/archaeology
+	can_hold = list(
+		/obj/item/stack/marker_beacon,
+		/obj/item/clothing/glasses,
+		/obj/item/weapon/storage/box/samplebags,
 		/obj/item/device/xenoarch_multi_tool,
-		/obj/item/weapon/pickaxe/excavationdrill,
-		/obj/item/device/geiger,
+		/obj/item/device/core_sampler,
+		/obj/item/device/beacon_locator,
+		/obj/item/device/radio/beacon,
 		/obj/item/device/gps,
+<<<<<<< HEAD
 		/obj/item/stack/marker_beacon,
 		/obj/item/stack/flag,
 		/obj/item/weapon/melee
 		)
+=======
+		/obj/item/device/measuring_tape,
+		/obj/item/device/flashlight,
+		/obj/item/device/depth_scanner,
+		/obj/item/device/camera,
+		/obj/item/device/ano_scanner,
+		/obj/item/device/geiger,
+		/obj/item/weapon/cell/device,
+		/obj/item/weapon/pickaxe,
+		/obj/item/weapon/paper,
+		/obj/item/weapon/photo,
+		/obj/item/weapon/folder,
+		/obj/item/weapon/pen,
+		/obj/item/weapon/folder,
+		/obj/item/weapon/clipboard,
+		/obj/item/weapon/anodevice,
+		/obj/item/weapon/tool/wrench,
+		/obj/item/device/multitool,
+		/obj/item/weapon/storage/excavation,
+		/obj/item/weapon/anobattery,
+		/obj/item/weapon/pickaxe
+		)
+>>>>>>> 38bdf24fee... Merge pull request #13454 from Cameron653/ROCK_AND_STONE
