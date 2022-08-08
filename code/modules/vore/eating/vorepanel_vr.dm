@@ -832,7 +832,8 @@
 					body_backup.key = T.key
 					body_backup.teleop = null
 					T.body_backup = null
-					host.vore_selected.release_specific_contents(T)
+					host.vore_selected.release_specific_contents(T, TRUE)
+					T.update_icon()
 					announce_ghost_joinleave(T.mind, 0, "They now occupy their body again.")
 			if(istype(target,/obj/item/device/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
 				var/obj/item/device/mmi/MMI = target
