@@ -35,3 +35,10 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 10000, "glass" = 2000, "silver" = 1000, "diamond" = 750)
 	build_path = /obj/item/weapon/gun/energy/locked/phasegun/cannon
 	sort_string = "MACAD"
+//Leathals And any new CHOMP weapons.
+/datum/design/item/weapon/gun/projectile/caseless/prototype
+	id = "caselessrifle"
+	req_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 5, TECH_PHORON = 5)
+	materials = list(DEFAULT_WALL_MATERIAL = 7000, "titanium" = 4000)
+	build_path = /obj/item/weapon/gun/projectile/caseless/prototype
+	sort_string = "MACAE"

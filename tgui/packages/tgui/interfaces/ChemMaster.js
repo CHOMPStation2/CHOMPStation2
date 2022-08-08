@@ -62,7 +62,7 @@ export const ChemMaster = (props, context) => {
         />
         <ChemMasterBuffer mode={mode} bufferReagents={buffer_reagents} />
         <ChemMasterProduction isCondiment={condi} bufferNonEmpty={buffer_reagents.length > 0} />
-        {/* <ChemMasterCustomization /> */}
+        <ChemMasterCustomization /> {/* CHOMPEdit - Enable customizing pill bottle type */}
       </Window.Content>
     </Window>
   );
@@ -357,38 +357,43 @@ const ChemMasterProductionCondiment = (props, context) => {
   );
 };
 
-// const ChemMasterCustomization = (props, context) => {
-//   const { act, data } = useBackend(context);
-//   if (!data.loaded_pill_bottle) {
-//     return (
-//       <Section title="Pill Bottle Customization">
-//         <Box color="label">
-//           None loaded.
-//         </Box>
-//       </Section>
-//     );
-//   }
+// CHOMPEdit Start - Enable customizing pill bottle type
+const ChemMasterCustomization = (props, context) => {
+  const { act, data } = useBackend(context);
+  if (!data.loaded_pill_bottle) {
+    return (
+      <Section title="Pill Bottle Customization">
+        <Box color="label">None loaded.</Box>
+      </Section>
+    );
+  }
 
-//   return (
-//     <Section title="Pill Bottle Customization">
-//       <Button
-//         disabled={!data.loaded_pill_bottle}
-//         icon="eject"
-//         content={data.loaded_pill_bottle
-//           ? (
-//             data.loaded_pill_bottle_name
-//               + " ("
-//               + data.loaded_pill_bottle_contents_len
-//               + "/"
-//               + data.loaded_pill_bottle_storage_slots
-//               + ")"
-//           )
-//           : "None loaded"}
-//         mb="0.5rem"
-//         onClick={() => act('ejectp')}
-//       />
-//     </Section>
-//   );
-// };
+  return (
+    <Section title="Pill Bottle Customization">
+      <Button
+        disabled={!data.loaded_pill_bottle}
+        content="Customize Bottle Color"
+        onClick={() => modalOpen(context, 'change_pill_bottle_style')}
+      />
+      <Button
+        disabled={!data.loaded_pill_bottle}
+        icon="eject"
+        content={
+          data.loaded_pill_bottle
+            ? data.loaded_pill_bottle_name +
+            ' (' +
+            data.loaded_pill_bottle_contents_len +
+            '/' +
+            data.loaded_pill_bottle_storage_slots +
+            ')'
+            : 'None loaded'
+        }
+        mb="0.5rem"
+        onClick={() => act('ejectp')}
+      />
+    </Section>
+  );
+};
+// CHOMPEdit End
 
 modalRegisterBodyOverride('analyze', analyzeModalBodyOverride);

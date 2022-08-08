@@ -54,6 +54,7 @@
 	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
+	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
 
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.

@@ -174,7 +174,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/EmptyCabin)
 "R" = (
-/obj/structure/loot_pile/surface,
+/obj/structure/loot_pile/maint/trash,
 /turf/template_noop,
 /area/template_noop)
 "T" = (

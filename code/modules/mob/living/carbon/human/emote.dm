@@ -96,6 +96,15 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/floorspin,
 	/decl/emote/visible/flip,
 	//VOREStation Add
+	/decl/emote/audible/bug_hiss,
+	/decl/emote/audible/bug_buzz,
+	/decl/emote/audible/bug_chitter,
+	/decl/emote/audible/hiss,
+	/decl/emote/audible/chirp,
+	/decl/emote/audible/warble,
+	/decl/emote/audible/vox_shriek,
+	/decl/emote/audible/purr,
+	/decl/emote/audible/purrlong,
 	/decl/emote/audible/awoo,
 	/decl/emote/audible/awoo2,
 	/decl/emote/audible/belch,
@@ -145,8 +154,14 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/coyawoo4,
 	/decl/emote/audible/coyawoo5,
 	/decl/emote/audible/fennecscream,
-	/decl/emote/audible/zoom
+	/decl/emote/audible/zoom,
+	/decl/emote/audible/mothscream,
+	/decl/emote/audible/mothchitter,
+	/decl/emote/audible/mothlaugh,
 	//VOREStation Add End
+	//CHOMP Add start
+	/decl/emote/audible/prbt2
+	//CHOMP Add end
 )
 
 	//VOREStation Add Start
@@ -277,8 +292,19 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/gyoh,
 	/decl/emote/audible/rumble,
 	/decl/emote/audible/fennecscream,
-	/decl/emote/audible/zoom
-
+	/decl/emote/audible/zoom,
+	/decl/emote/audible/bug_hiss,
+	/decl/emote/audible/bug_buzz,
+	/decl/emote/audible/bug_chitter,
+	/decl/emote/audible/hiss,
+	/decl/emote/audible/chirp,
+	/decl/emote/audible/warble,
+	/decl/emote/audible/vox_shriek,
+	/decl/emote/audible/purr,
+	/decl/emote/audible/purrlong,
+	//CHOMP Add start
+	/decl/emote/audible/prbt2
+	//CHOMP Add end
 	)
 	//VOREStation Add End
 

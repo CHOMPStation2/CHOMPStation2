@@ -147,7 +147,7 @@
 
 	req_access = list()
 	req_one_access = list()
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage) //CHOMP Edit
 	offline_vision_restriction = 1
 
 	initial_modules = list(
