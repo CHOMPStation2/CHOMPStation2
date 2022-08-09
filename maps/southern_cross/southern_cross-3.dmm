@@ -10623,6 +10623,10 @@
 "kvs" = (
 /turf/simulated/floor/wood/broken,
 /area/maintenance/thirddeck/dormsatmos)
+"kvG" = (
+/obj/machinery/smartfridge/produce,
+/turf/simulated/wall/r_wall,
+/area/library)
 "kwc" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -16596,6 +16600,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftportcentral)
+"qsK" = (
+/obj/machinery/light,
+/obj/machinery/papershredder,
+/turf/simulated/floor/wood,
+/area/library)
 "qtx" = (
 /obj/structure/table/marble,
 /obj/item/weapon/hand_labeler,
@@ -16941,7 +16950,10 @@
 /turf/simulated/floor/carpet,
 /area/library)
 "qLM" = (
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
 "qMf" = (
@@ -17197,10 +17209,7 @@
 /turf/simulated/floor/wood,
 /area/library)
 "rcR" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
 "rcT" = (
@@ -60352,7 +60361,7 @@ sbH
 svw
 sGT
 qMu
-tbb
+qsK
 tnz
 tEC
 ucA
@@ -63174,7 +63183,7 @@ mRd
 iDw
 nAZ
 oif
-rcR
+qLM
 oIl
 sEn
 pbl
@@ -63433,7 +63442,7 @@ iDw
 nCz
 ojq
 owk
-qLM
+rcR
 oQe
 pbI
 prU
@@ -63697,7 +63706,7 @@ pdz
 prX
 pTi
 pZq
-pZq
+kvG
 pZq
 pZq
 rQi
