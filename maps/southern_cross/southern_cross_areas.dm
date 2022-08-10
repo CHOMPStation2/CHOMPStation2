@@ -997,10 +997,18 @@ z
 	name = "\improper Station Gym"
 	icon_state = "fitness"
 
-//CHOMPstation Edit 8/8/22 - Added a Art Gallery
+//CHOMPstation Edit 8/8/22 - Added a Art Gallery and some missing areas Kassc wanted me to add
 /area/crew_quarters/seconddeck/artgallery
 	name = "\improper Art Gallery"
 	icon_state = "art"
+
+/area/crew_quarters/seconddeck/artsupplies
+	name = "\improper Art Supplies"
+	icon_state = "artsupply"
+
+/area/crew_quarters/seconddeck/gameroom
+	name = "\improper Game Room"
+	icon_state = "gaming"
 
 //CHOMPStation Edit End
 
