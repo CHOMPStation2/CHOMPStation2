@@ -1515,6 +1515,13 @@
 /obj/structure/cable/yellow,
 /turf/simulated/floor/airless,
 /area/solar/forestarboardsolar)
+"bDD" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/camera/network/engineering{
+	c_tag = "SUBS - Dorms"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/substation/dorms)
 "bDN" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
@@ -7241,7 +7248,7 @@
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 1;
 	name = "Dorms";
-	sortType = "CMO Office"
+	sortType = "Dorms"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -10545,8 +10552,8 @@
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 1;
-	name = "Bridge Conference room";
-	sortType = "CMO Office"
+	name = "Bridge Conference Room";
+	sortType = "Bridge Conference Room"
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
@@ -11150,18 +11157,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/sd)
-"kBP" = (
-/obj/structure/table/bench/wooden,
-/obj/structure/flora/pottedplant/flower{
-	pixel_y = 10;
-	name = "pietra"
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Library Port";
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/library)
 "kCd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -14436,6 +14431,10 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/airless,
 /area/solar/aftportsolar)
+"nPL" = (
+/obj/structure/sink/puddle,
+/turf/space,
+/area/space)
 "nQq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -15882,6 +15881,18 @@
 /obj/item/weapon/bedsheet/cosmos,
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_12)
+"oZS" = (
+/obj/structure/table/bench/wooden,
+/obj/structure/flora/pottedplant/flower{
+	pixel_y = 10;
+	name = "pietra"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library Port";
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/library)
 "pbl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -17487,6 +17498,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
+"qCt" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/machinery/atm{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aftstarboardcentral)
 "qEC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17624,7 +17647,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 8;
 	name = "Library";
-	sortType = "Art Room"
+	sortType = "Library"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17686,7 +17709,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 8;
 	name = "Coffee Shop";
-	sortType = "Art Room"
+	sortType = "Coffee Shop"
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/cable/green{
@@ -21011,10 +21034,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/first_aid_station/thirddeck)
-"tZo" = (
-/obj/structure/sink/puddle,
-/turf/space,
-/area/space)
 "tZq" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -26019,18 +26038,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
-"ycj" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/obj/machinery/atm{
-	pixel_y = 30
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/aftstarboardcentral)
 "ycN" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -51548,7 +51555,7 @@ apc
 apc
 apc
 apc
-tZo
+nPL
 apc
 apc
 apc
@@ -55676,7 +55683,7 @@ rTn
 rTn
 sUG
 wzy
-kGY
+bDD
 tRV
 uoZ
 quN
@@ -60573,7 +60580,7 @@ rbF
 rwO
 rZl
 smc
-kBP
+oZS
 qlj
 rYj
 rMh
@@ -63659,7 +63666,7 @@ jbO
 sEn
 sEn
 sEn
-ycj
+qCt
 ppf
 pNe
 pYa

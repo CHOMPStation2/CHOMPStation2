@@ -46149,9 +46149,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/patient_a)
-"evZ" = (
-/turf/simulated/wall,
-/area/crew_quarters/seconddeck/artsupplies)
 "ewQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -57924,6 +57921,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/delivery)
+"kDF" = (
+/turf/simulated/wall,
+/area/crew_quarters/seconddeck/artgallery)
 "kDK" = (
 /obj/structure/table/glass,
 /obj/item/weapon/reagent_containers/blood/AMinus,
@@ -64367,9 +64367,6 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"opp" = (
-/turf/simulated/wall,
-/area/crew_quarters/seconddeck/artgallery)
 "opM" = (
 /turf/simulated/wall/r_wall,
 /area/medical/virology)
@@ -65985,7 +65982,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 8;
 	name = "Gallery";
-	sortType = "Art Room"
+	sortType = "Gallery"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/aft)
@@ -70033,7 +70030,7 @@
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 8;
 	name = "Gym";
-	sortType = "Locker Room"
+	sortType = "Gym"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -76220,6 +76217,9 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
+"vuT" = (
+/turf/simulated/wall,
+/area/crew_quarters/seconddeck/artsupplies)
 "vuU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -111059,7 +111059,7 @@ uDr
 jsP
 cmk
 nIS
-evZ
+vuT
 qLX
 kjI
 lKh
@@ -111317,7 +111317,7 @@ gQu
 clJ
 cmp
 rNn
-evZ
+vuT
 tfo
 nKk
 nPL
@@ -111571,10 +111571,10 @@ fbw
 vSK
 pfx
 mOG
-evZ
+vuT
 otM
 hZr
-evZ
+vuT
 tSo
 qJx
 nFz
@@ -111833,7 +111833,7 @@ qwQ
 iIG
 mHl
 gYm
-opp
+kDF
 oie
 foz
 ctN
@@ -112091,7 +112091,7 @@ dzX
 clL
 gMz
 cmD
-opp
+kDF
 erh
 mGz
 ctb
@@ -112349,7 +112349,7 @@ qHh
 wdr
 cme
 cmE
-opp
+kDF
 cnC
 wNx
 gil
@@ -112596,7 +112596,7 @@ ccN
 cdZ
 cCh
 ccN
-opp
+kDF
 haC
 pbj
 csW
@@ -112854,7 +112854,7 @@ cxh
 cea
 cfg
 cgq
-opp
+kDF
 cip
 cjg
 ckf
@@ -113112,7 +113112,7 @@ cxi
 ceb
 cCl
 cjN
-opp
+kDF
 ssC
 cjg
 xlb
@@ -113370,7 +113370,7 @@ cxi
 cec
 cCm
 cgs
-opp
+kDF
 cir
 cjh
 lXS
@@ -113628,7 +113628,7 @@ ccP
 cei
 cfo
 kgw
-opp
+kDF
 cis
 cji
 cji
@@ -113639,7 +113639,7 @@ clr
 pBI
 hWX
 sPu
-opp
+kDF
 mcf
 tCI
 hWv
@@ -113886,17 +113886,17 @@ ckj
 czb
 cfi
 ckj
-opp
+kDF
 txC
 wkq
 wkq
-opp
+kDF
 rcH
 cna
-opp
+kDF
 wkq
 wkq
-opp
+kDF
 xSl
 pqA
 tCI
