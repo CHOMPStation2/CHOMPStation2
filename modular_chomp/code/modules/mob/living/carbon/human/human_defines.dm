@@ -3,3 +3,9 @@
 	var/loneliness_stage = 0
 	var/next_loneliness_time = 0
 	var/digitigrade = 0 // 0 = no digi, 1 = default, 2+ = digi styles... (Not used yet)
+	vore_capacity = 3
+	vore_capacity_ex = list("stomach" = 3, "taur belly" = 3)
+	vore_fullness_ex = list("stomach" = 0, "taur belly" = 0)
+	vore_icon_bellies = list("stomach", "taur belly")
+	var/struggle_anim_stomach = FALSE
+	var/struggle_anim_taur = FALSE

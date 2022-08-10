@@ -245,6 +245,12 @@
 	"fullness4_messages",
 	"fullness5_messages",
 	"vorespawn_blacklist",
+	"vore_sprite_flags",
+	"affects_vore_sprites",
+	"count_absorbed_prey_for_sprite",
+	"resist_triggers_animation",
+	"size_factor_for_sprite",
+	"belly_sprite_to_affect",
 	"autotransferchance",
 	"autotransferwait",
 	"autotransferlocation",
@@ -324,6 +330,7 @@
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
 		vore_fx(M)
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
@@ -337,6 +344,7 @@
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	if(isliving(thing) && !isbelly(thing.loc))
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
 		L.clear_fullscreen("belly")
 		if(L.hud_used)
@@ -747,6 +755,7 @@
 		else if(M.reagents)
 			M.reagents.trans_to_holder(Pred.bloodstr, M.reagents.total_volume, 0.5, TRUE)
 
+	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
@@ -826,6 +835,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
+	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
 
@@ -860,6 +870,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
+	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
 
@@ -960,6 +971,11 @@
 
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
+
+	//CHOMPEdit Start - vore sprites struggle animation
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1))
+		owner.vs_animate(belly_sprite_to_affect)
+	//CHOMPEdit End
 
 	if(is_wet)
 		if(!fancy_vore)
@@ -1214,6 +1230,12 @@
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
 	dupe.vorespawn_blacklist = vorespawn_blacklist
+	dupe.vore_sprite_flags = vore_sprite_flags
+	dupe.affects_vore_sprites = affects_vore_sprites
+	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.resist_triggers_animation = resist_triggers_animation
+	dupe.size_factor_for_sprite = size_factor_for_sprite
+	dupe.belly_sprite_to_affect = belly_sprite_to_affect
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation
