@@ -937,7 +937,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
           }}
         />
       </Section>
-      <Section height="260px" style={{ overflow: 'auto' }}>
+      <Section>
         <Section title="Vore FX">
           <LabeledList>
             <LabeledList.Item label="Disable Prey HUD">
@@ -950,7 +950,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Belly Fullscreens Styles">
+        <Section title="Belly Fullscreens Styles" width="800px">
           Belly styles:
           <Button
             fluid
@@ -959,19 +959,21 @@ const VoreSelectedBellyVisuals = (props, context) => {
             Disabled
           </Button>
           {Object.keys(possible_fullscreens).map((key) => (
-            <Button
-              key={key}
-              width="256px"
-              height="256px"
-              selected={key === belly_fullscreen}
-              onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: key })}>
-              <Box
-                className={classes(['vore240x240', key])}
-                style={{
-                  transform: 'translate(0%, 4%)',
-                }}
-              />
-            </Button>
+            <span style={{ width: '256px' }}>
+              <Button
+                key={key}
+                width="256px"
+                height="256px"
+                selected={key === belly_fullscreen}
+                onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: key })}>
+                <Box
+                  className={classes(['vore240x240', key])}
+                  style={{
+                    transform: 'translate(0%, 4%)',
+                  }}
+                />
+              </Button>
+            </span>
           ))}
         </Section>
       </Section>
