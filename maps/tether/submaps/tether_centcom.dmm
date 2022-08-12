@@ -456,6 +456,20 @@
 /obj/machinery/status_display/supply_display,
 /turf/simulated/wall/r_wall,
 /area/centcom)
+"bn" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "ccboat";
+	pixel_y = 29
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
 "bo" = (
 /obj/structure/sign/department/bar,
 /turf/simulated/wall/r_wall,
@@ -500,6 +514,25 @@
 /obj/structure/sign/warning/nosmoking_2,
 /turf/simulated/wall/r_wall,
 /area/centcom/terminal)
+"by" = (
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	frequency = 1380;
+	id_tag = null;
+	pixel_x = 24
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
 "bz" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'HIGH VOLTAGE'";
@@ -524,6 +557,24 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/supply)
+"bC" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/shuttle_landmark/shuttle_initializer/ccboat,
+/obj/effect/overmap/visitable/ship/landable/ccboat,
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bD" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
 "bE" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -533,6 +584,41 @@
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
+"bF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/angled/open{
+	id = "ccshuttleshutter"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/angled/open{
+	dir = 4;
+	id = "ccshuttleshutter"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bH" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
 "bJ" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/box/pillbottles,
@@ -1024,12 +1110,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
-"df" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
-	},
-/turf/simulated/floor/airless,
-/area/shuttle/ccboat)
 "dh" = (
 /turf/simulated/floor/tiled/white,
 /area/centcom/bar)
@@ -1892,6 +1972,7 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/specops)
+<<<<<<< HEAD
 "gh" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -1902,6 +1983,8 @@
 /obj/effect/overmap/visitable/ship/landable/ccboat,
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/shuttle/ccboat)
+=======
+>>>>>>> a4bb6f06b7... Merge pull request #13479 from Heroman3003/tether-cent-ae-fix
 "gj" = (
 /obj/machinery/vending/cola{
 	name = "hacked Robust Softdrinks";
@@ -2085,6 +2168,7 @@
 /area/centcom/security{
 	name = "\improper CentCom Residential Security"
 	})
+<<<<<<< HEAD
 "gN" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -2104,6 +2188,8 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/shuttle/ccboat)
+=======
+>>>>>>> a4bb6f06b7... Merge pull request #13479 from Heroman3003/tether-cent-ae-fix
 "gP" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/green,
@@ -3775,22 +3861,6 @@
 /obj/item/weapon/melee/energy/sword/red,
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
-"mS" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/blast/angled/open{
-	dir = 4;
-	id = "ccshuttleshutter"
-	},
-/turf/simulated/floor,
-/area/shuttle/ccboat)
 "mT" = (
 /obj/machinery/camera/network/crescent,
 /obj/structure/table/reinforced,
@@ -5472,19 +5542,6 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
-"vY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/blast/angled/open{
-	id = "ccshuttleshutter"
-	},
-/turf/simulated/floor,
-/area/shuttle/ccboat)
 "vZ" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloorblack{
@@ -5610,6 +5667,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/centcom/control)
+<<<<<<< HEAD
 "ww" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -5618,6 +5676,8 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/shuttle/ccboat)
+=======
+>>>>>>> a4bb6f06b7... Merge pull request #13479 from Heroman3003/tether-cent-ae-fix
 "wx" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -6625,6 +6685,7 @@
 "Cj" = (
 /turf/simulated/shuttle/floor,
 /area/shuttle/supply)
+<<<<<<< HEAD
 "Cl" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -6639,6 +6700,8 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/shuttle/ccboat)
+=======
+>>>>>>> a4bb6f06b7... Merge pull request #13479 from Heroman3003/tether-cent-ae-fix
 "Cn" = (
 /turf/unsimulated/wall,
 /area/centcom/main_hall)
@@ -25750,7 +25813,7 @@ gn
 mY
 zN
 uf
-mS
+bG
 uf
 sX
 sX
@@ -25886,11 +25949,11 @@ sX
 WO
 uf
 uf
-mS
-mS
+bG
+bG
 go
-Cl
-gh
+bn
+bC
 gn
 wr
 uf
@@ -26025,14 +26088,14 @@ nJ
 px
 uf
 uf
-mS
+bG
 uf
 vq
 bP
 Bn
 go
-gN
-ww
+by
+bD
 xJ
 wm
 HU
@@ -26165,7 +26228,7 @@ ZQ
 ac
 nJ
 px
-vY
+bF
 Bc
 DW
 uf
@@ -26307,7 +26370,7 @@ ZQ
 ac
 nJ
 px
-vY
+bF
 LB
 cX
 qL
@@ -26321,7 +26384,7 @@ uf
 vi
 YD
 cY
-df
+bH
 pR
 nJ
 ac
@@ -26449,7 +26512,7 @@ ZQ
 ac
 nJ
 px
-vY
+bF
 Ti
 nA
 sp
@@ -26591,7 +26654,7 @@ ZQ
 ac
 nJ
 px
-vY
+bF
 UE
 CK
 jK
@@ -26605,7 +26668,7 @@ uf
 fG
 YD
 cY
-df
+bH
 pR
 nJ
 ac
@@ -26733,7 +26796,7 @@ ZQ
 ac
 nJ
 px
-vY
+bF
 VJ
 vG
 uf
@@ -26877,7 +26940,7 @@ nJ
 px
 uf
 uf
-mS
+bG
 uf
 vq
 bP
@@ -27022,8 +27085,8 @@ sX
 sX
 uf
 uf
-mS
-mS
+bG
+bG
 pw
 tT
 tT
@@ -27170,7 +27233,7 @@ UC
 uf
 uf
 uf
-mS
+bG
 uf
 sX
 sX
