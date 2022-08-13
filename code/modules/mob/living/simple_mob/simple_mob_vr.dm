@@ -12,7 +12,8 @@
 
 	var/vore_active = 0					// If vore behavior is enabled for this mob
 
-	var/vore_capacity = 1				// The capacity (in people) this person can hold
+	//CHOMPEdit - Vore_capacity is now defined on living
+	vore_capacity = 1					// The capacity (in people) this person can hold
 	var/vore_max_size = RESIZE_HUGE		// The max size this mob will consider eating
 	var/vore_min_size = RESIZE_TINY 	// The min size this mob will consider eating
 	var/vore_bump_chance = 0			// Chance of trying to eat anyone that bumps into them, regardless of hostility
@@ -40,9 +41,11 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
-	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//CHOMPEDIT start - Moved to living
+	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
+	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
+	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//CHOMPEDIT end.
 	var/life_disabled = 0				// For performance reasons
 
 	var/mount_offset_x = 5				// Horizontal riding offset.
@@ -69,6 +72,7 @@
 		return myid
 
 // Update fullness based on size & quantity of belly contents
+/* CHOMPEdit - moved to living
 /mob/living/simple_mob/proc/update_fullness()
 	var/new_fullness = 0
 	for(var/obj/belly/B as anything in vore_organs)
@@ -77,6 +81,7 @@
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
 	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
 	vore_fullness = min(vore_capacity, new_fullness)
+*/
 
 /mob/living/simple_mob/update_icon()
 	. = ..()

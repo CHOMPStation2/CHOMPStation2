@@ -91,8 +91,8 @@
 	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
-	excludes = list(/datum/trait/positive/bloodsucker_plus) //YW edit
+	var_changes = list("organic_food_coeff" = 0, "bloodsucker" = TRUE) //The verb is given in human.dm
+	excludes = list(/datum/trait/neutral/bloodsucker_freeform, /datum/trait/positive/bloodsucker_plus) //YW edit
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -103,6 +103,7 @@
 	desc = "You get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
+	var_changes = list("bloodsucker" = TRUE)
 	excludes = list(/datum/trait/neutral/bloodsucker, /datum/trait/positive/bloodsucker_plus) //YW edit
 
 /datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)

@@ -1191,6 +1191,7 @@
 	req_access = null;
 	req_one_access = list(2,5)
 	},
+/mob/living/simple_mob/animal/passive/chicken,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
 "beY" = (
@@ -3488,7 +3489,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/clothing/suit/chickensuit,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
 "dgL" = (
@@ -4761,7 +4761,6 @@
 	layer = 2.9
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/circuitboard/pointdefense,
 /obj/item/weapon/circuitboard/pointdefense_control{
 	pixel_x = 3;
 	pixel_y = -3
@@ -7107,11 +7106,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm16)
 "giF" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/grey/border,
-/mob/living/simple_mob/animal/giant_spider,
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/hallway/northhallway)
+/mob/living/simple_mob/animal/giant_spider/thermic,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/chemistry)
 "giO" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -8032,6 +8029,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
+"gWN" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/wraith/jaunt_spam{
+	devourable = 0
+	},
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/gateway)
 "gXo" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/grass/brown,
@@ -8572,15 +8576,15 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/command/bsa)
 "hru" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
 	},
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/thermic,
-/turf/simulated/floor,
-/area/awaymission/snowfield/medical/hallway)
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 1
+	},
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/hallway/northhallway)
 "hrB" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -9480,6 +9484,25 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/item/weapon/gun/projectile/automatic/serdy/pkm,
+/obj/item/ammo_magazine/pkm,
+/obj/item/ammo_magazine/pkm,
+/obj/item/ammo_magazine/pkm,
+/obj/item/ammo_magazine/pkm,
+/obj/item/ammo_magazine/pkm/ap,
+/obj/item/clothing/suit/bomb_suit/security{
+	armor = list("melee" = 90, "bullet" = 85, "laser" = 70, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
+	armorsoak = list("melee" = 10, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 20, "bio" = 0, "rad" = 0);
+	desc = "You're up against the wall AND I AM THE FUCKING WALL!";
+	name = "EOD-Bullet proof suit";
+	slowdown = 4
+	},
+/obj/item/clothing/head/bomb_hood/security{
+	armor = list("melee" = 90, "bullet" = 80, "laser" = 60, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
+	armorsoak = list("melee" = 10, "bullet" = 0, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
+	desc = "I'll kill you, with or without my visor!";
+	name = "EOD-Bullet proof hood"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "ihx" = (
@@ -9942,6 +9965,8 @@
 /obj/item/ammo_magazine/akm/drum,
 /obj/item/ammo_magazine/akm/drum,
 /obj/item/ammo_magazine/akm/drum,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "iEH" = (
@@ -10065,15 +10090,8 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "iIk" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/grey/border{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/grey/border,
 /mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
@@ -10484,12 +10502,18 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/storage_room)
 "jaj" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/grey/border,
-/obj/machinery/light,
-/mob/living/simple_mob/animal/giant_spider/lurker,
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/hallway/northhallway)
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/vore/demonAI/ira{
+	faction = "cult"
+	},
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/commandhallway)
 "jaS" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -10841,14 +10865,6 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/borgupload{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/weapon/circuitboard/aiupload{
-	pixel_x = 2;
-	pixel_y = -2
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/secure_tech_storage)
@@ -10866,10 +10882,6 @@
 /obj/item/weapon/circuitboard/robotics{
 	pixel_x = -2;
 	pixel_y = 2
-	},
-/obj/item/weapon/circuitboard/mecha_control{
-	pixel_x = 1;
-	pixel_y = -1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
@@ -14287,10 +14299,6 @@
 	pixel_x = 2;
 	pixel_y = -2
 	},
-/obj/item/weapon/circuitboard/communications{
-	pixel_x = 5;
-	pixel_y = -5
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/secure_tech_storage)
@@ -15759,7 +15767,7 @@
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/engorge{
 	faction = "cult";
-	health = 350;
+	health = 400;
 	size_multiplier = 1.25
 	},
 /turf/simulated/floor/cult,
@@ -18697,9 +18705,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/mob/living/simple_mob/vore/demonAI/ira{
-	faction = "cult"
-	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "pUI" = (
@@ -19361,7 +19366,7 @@
 /area/awaymission/snowfield/cavern)
 "qrA" = (
 /obj/item/weapon/bone/arm{
-	pixel_y = 8
+	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
@@ -19636,7 +19641,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/clothing/head/cueball,
+/obj/item/weapon/material/snow/snowball/reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
 "qHd" = (
@@ -19829,10 +19834,6 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/cloning,
-/obj/item/weapon/circuitboard/clonescanner,
-/obj/item/weapon/circuitboard/clonepod,
-/obj/item/weapon/circuitboard/scan_consolenew,
 /obj/item/weapon/circuitboard/med_data{
 	pixel_x = 3;
 	pixel_y = -3
@@ -19902,7 +19903,7 @@
 	id = "snowfield testlab entrance"
 	},
 /obj/item/weapon/bone/arm{
-	pixel_y = 8
+	pixel_y = 12
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/structure/cable/yellow{
@@ -20064,8 +20065,11 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
 "raJ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/hallway2)
 "rbD" = (
@@ -21810,11 +21814,12 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm11)
 "sUZ" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/structure/door_assembly/door_assembly_sec,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/hallway2)
 "sVf" = (
@@ -21898,10 +21903,6 @@
 	layer = 2.9
 	},
 /obj/item/weapon/circuitboard/security/mining,
-/obj/item/weapon/circuitboard/message_monitor{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
@@ -35312,7 +35313,7 @@ tzg
 hMS
 qne
 uOb
-ned
+iIk
 fGh
 ykS
 hAd
@@ -35828,7 +35829,7 @@ tzg
 iLw
 qne
 uOb
-jaj
+ylN
 fGh
 cTX
 fYo
@@ -36599,7 +36600,7 @@ mxV
 mxV
 mxV
 mIX
-hMS
+hru
 qne
 uOb
 ned
@@ -37115,7 +37116,7 @@ chX
 chX
 wxc
 mIX
-iIk
+iLw
 qne
 uOb
 ylN
@@ -37376,7 +37377,7 @@ mIX
 hMS
 mTL
 uOb
-ned
+iIk
 ife
 eRq
 sQm
@@ -37634,7 +37635,7 @@ mIX
 hMS
 qne
 uOb
-giF
+ned
 ife
 uEo
 imu
@@ -45354,7 +45355,7 @@ gzQ
 dGC
 kOt
 kOt
-kOt
+giF
 kOt
 kdE
 dpf
@@ -46642,7 +46643,7 @@ rLd
 uGz
 oVH
 iHU
-hru
+uGz
 xiw
 oVH
 uGz
@@ -48246,7 +48247,7 @@ qTe
 vIw
 jxy
 pUC
-jxy
+jaj
 uZn
 jhx
 ikI
@@ -58581,7 +58582,7 @@ bBV
 ibJ
 ewH
 pIi
-knS
+gWN
 srQ
 iRf
 iRf

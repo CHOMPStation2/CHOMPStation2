@@ -123,8 +123,8 @@
 	var/obj/effect/spider/cocoon/C = new(AM.loc)
 	var/large_cocoon = FALSE
 	for(var/mob/living/L in C.loc)
-		if(istype(L, /mob/living/simple_mob/animal/giant_spider)) // Cannibalism is bad.
-			continue
+		//if(istype(L, /mob/living/simple_mob/animal/giant_spider)) // Cannibalism is bad. CHOMPEdit BUT IT'S NEEDED TO STOP COCOON BOMBS!
+		//	continue // UNLESS YOU WANT TO FIGURE OUT THE AI TARGETING YOURSELF! TODO TODO TODO.
 		fed++
 		visible_message(span("warning","\The [src] sticks a proboscis into \the [L], and sucks a viscous substance out."))
 		to_chat(src, span("notice", "You've fed upon \the [L], and can now lay [fed] cluster\s of eggs."))

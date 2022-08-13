@@ -187,6 +187,7 @@ export const VorePanel = (props, context) => {
 
       // Descriptions
       verb,
+      release_verb,
       desc,
       absorbed_desc,
     } = data.selected;
@@ -198,6 +199,7 @@ export const VorePanel = (props, context) => {
     result += 'Item Mode:\n' + item_mode + '\n\n';
     result += '== Descriptions ==\n\n';
     result += 'Verb:\n' + verb + '\n\n';
+    result += 'Release Verb:\n' + release_verb + '\n\n';
     result += 'Description:\n"' + desc + '"\n\n';
     result += 'Absorbed Description:\n"' + absorbed_desc + '"\n\n';
 
@@ -487,7 +489,7 @@ const VoreSelectedBellyDescriptions = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const { verb, desc, absorbed_desc } = belly;
+  const { verb, release_verb, desc, absorbed_desc } = belly;
 
   return (
     <LabeledList>
@@ -503,6 +505,9 @@ const VoreSelectedBellyDescriptions = (props, context) => {
       </LabeledList.Item>
       <LabeledList.Item label="Vore Verb">
         <Button onClick={() => act('set_attribute', { attribute: 'b_verb' })} content={verb} />
+      </LabeledList.Item>
+      <LabeledList.Item label="Release Verb">
+        <Button onClick={() => act('set_attribute', { attribute: 'b_release_verb' })} content={release_verb} />
       </LabeledList.Item>
       <LabeledList.Item label="Examine Messages">
         <Button
@@ -819,10 +824,99 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const { belly_fullscreen, belly_fullscreen_color, mapRef, possible_fullscreens, disable_hud } = belly;
+  const {
+    belly_fullscreen,
+    belly_fullscreen_color,
+    mapRef,
+    possible_fullscreens,
+    disable_hud,
+    vore_sprite_flags,
+    affects_voresprite,
+    absorbed_voresprite,
+    resist_animation,
+    voresprite_size_factor,
+    belly_sprite_option_shown,
+    belly_sprite_to_affect,
+    tail_option_shown,
+    tail_to_change_to,
+    tail_colouration,
+    tail_extra_overlay,
+    tail_extra_overlay2,
+  } = belly;
 
   return (
     <Fragment>
+      <Section title="Vore Sprites">
+        <Flex direction="row">
+          <LabeledList>
+            <LabeledList.Item label="Affect Vore Sprites">
+              <Button
+                onClick={() => act('set_attribute', { attribute: 'b_affects_vore_sprites' })}
+                icon={affects_voresprite ? 'toggle-on' : 'toggle-off'}
+                selected={affects_voresprite}
+                content={affects_voresprite ? 'Yes' : 'No'}
+              />
+            </LabeledList.Item>
+            {affects_voresprite ? (
+              <span>
+                {/* Once other options are added in:
+                <LabeledList.Item label="Vore Sprite Mode">
+                  {(vore_sprite_flags.length && vore_sprite_flags.join(', ')) || 'None'}
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_vore_sprite_flags' })}
+                    ml={1}
+                    icon="plus"
+                  />
+                </LabeledList.Item>*/}
+                <LabeledList.Item label="Count Absorbed prey for vore sprites">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_count_absorbed_prey_for_sprites' })}
+                    icon={absorbed_voresprite ? 'toggle-on' : 'toggle-off'}
+                    selected={absorbed_voresprite}
+                    content={absorbed_voresprite ? 'Yes' : 'No'}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Animation when prey resist">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_resist_animation' })}
+                    icon={resist_animation ? 'toggle-on' : 'toggle-off'}
+                    selected={resist_animation}
+                    content={resist_animation ? 'Yes' : 'No'}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Vore Sprite Size Factor">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_size_factor_sprites' })}
+                    content={voresprite_size_factor}
+                  />
+                </LabeledList.Item>
+                {belly_sprite_option_shown ? (
+                  <LabeledList.Item label="Belly Sprite to affect">
+                    <Button
+                      onClick={() => act('set_attribute', { attribute: 'b_belly_sprite_to_affect' })}
+                      content={belly_sprite_to_affect}
+                    />
+                  </LabeledList.Item>
+                ) : (
+                  ''
+                )}
+                {tail_option_shown && vore_sprite_flags.includes('Tail adjustment') ? (
+                  <LabeledList.Item label="Tail to change to">
+                    <Button
+                      onClick={() => act('set_attribute', { attribute: 'b_tail_to_change_to' })}
+                      content={tail_to_change_to}
+                    />
+                  </LabeledList.Item>
+                ) : (
+                  ''
+                )}
+              </span>
+            ) : (
+              ''
+            )}
+          </LabeledList>
+        </Flex>
+      </Section>
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
           <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
@@ -843,7 +937,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
           }}
         />
       </Section>
-      <Section height="260px" style={{ overflow: 'auto' }}>
+      <Section>
         <Section title="Vore FX">
           <LabeledList>
             <LabeledList.Item label="Disable Prey HUD">
@@ -856,7 +950,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Belly Fullscreens Styles">
+        <Section title="Belly Fullscreens Styles" width="800px">
           Belly styles:
           <Button
             fluid
@@ -865,19 +959,21 @@ const VoreSelectedBellyVisuals = (props, context) => {
             Disabled
           </Button>
           {Object.keys(possible_fullscreens).map((key) => (
-            <Button
-              key={key}
-              width="256px"
-              height="256px"
-              selected={key === belly_fullscreen}
-              onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: key })}>
-              <Box
-                className={classes(['vore240x240', key])}
-                style={{
-                  transform: 'translate(0%, 4%)',
-                }}
-              />
-            </Button>
+            <span style={{ width: '256px' }}>
+              <Button
+                key={key}
+                width="256px"
+                height="256px"
+                selected={key === belly_fullscreen}
+                onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: key })}>
+                <Box
+                  className={classes(['vore240x240', key])}
+                  style={{
+                    transform: 'translate(0%, 4%)',
+                  }}
+                />
+              </Button>
+            </span>
           ))}
         </Section>
       </Section>

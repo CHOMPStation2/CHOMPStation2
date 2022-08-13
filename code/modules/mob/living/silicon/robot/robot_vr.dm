@@ -98,9 +98,10 @@
 	vr_sprite_check()
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
+		//update_fullness() // CHOMPEdit - Needed so that we can have the vore sprites when only using vore bellies
 		if(sleeper_g == TRUE)
 			add_overlay("[module_sprites[icontype]]-sleeper_g")
-		if(sleeper_r == TRUE)
+		if(sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])) //CHOMPEdit - Also allow normal vore bellies to affect this sprite
 			add_overlay("[module_sprites[icontype]]-sleeper_r")
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
 			add_overlay("laser")

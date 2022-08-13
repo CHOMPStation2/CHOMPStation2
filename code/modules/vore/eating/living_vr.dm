@@ -499,6 +499,7 @@
 			SA.prey_excludes[src] = world.time
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
 
+		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		if(!ishuman(B.owner))
 			B.owner.update_icons()
 
@@ -1092,6 +1093,7 @@
 			to_chat(src, "<span class='notice'><b>Belly desc:</b> [B.desc]</span>")
 			to_chat(src, "<span class='notice'><b>Belly absorbed desc:</b> [B.absorbed_desc]</span>")
 			to_chat(src, "<span class='notice'><b>Vore verb:</b> [B.vore_verb]</span>")
+			to_chat(src, "<span class='notice'><b>Release verb:</b> [B.release_verb]</span>")
 			to_chat(src, "<span class='notice'><b>Struggle messages (outside):</b></span>")
 			for(var/msg in B.struggle_messages_outside)
 				to_chat(src, "<span class='notice'>[msg]</span>")

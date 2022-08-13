@@ -90,12 +90,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define L_HAND_LAYER			28		//Left-hand item
 #define R_HAND_LAYER			29		//Right-hand item
 #define WING_LAYER				30		//Wings or protrusions over the suit.
-#define TAIL_NORTH_LAYER_ALT	31		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	32		//Effects drawn by modifiers
-#define FIRE_LAYER				33		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			34		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			35		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			35		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+#define VORE_BELLY_LAYER		31		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			32		//CHOMPStation edit - Move this and everything after up if things are added.
+#define TAIL_NORTH_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	34		//Effects drawn by modifiers
+#define FIRE_LAYER				35		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			36		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			37		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			37		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
 
 #define GET_TAIL_LAYER (dir == SOUTH ? TAIL_SOUTH_LAYER : TAIL_NORTH_LAYER)
@@ -122,10 +124,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
 	var/desired_scale_y = icon_scale_y
-	
+
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	
+
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.icon_scale_x_percent))
 			desired_scale_x *= M.icon_scale_x_percent
@@ -302,7 +304,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
 				icon_key += "_digi"
 			//ChompEDIT END
-			
+
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
 	if(human_icon_cache[icon_key])
@@ -378,6 +380,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//tail
 	update_tail_showing()
 	update_wing_showing()
+	update_vore_belly_sprite()
+	update_vore_tail_sprite()
 
 
 /mob/living/carbon/human/proc/update_skin()
@@ -1314,6 +1318,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef LEGCUFF_LAYER
 #undef L_HAND_LAYER
 #undef R_HAND_LAYER
+#undef VORE_BELLY_LAYER
 #undef MODIFIER_EFFECTS_LAYER
 #undef FIRE_LAYER
 #undef WATER_LAYER
