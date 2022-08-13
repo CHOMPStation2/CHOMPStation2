@@ -18,7 +18,7 @@
 	has_hands = TRUE
 	seedarkness = FALSE
 	attack_sound = 'sound/misc/demonattack.ogg'
-	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
+	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_DAEMON,LANGUAGE_SHADEKIN,LANGUAGE_CULT,LANGUAGE_OCCULT)
 
 	melee_damage_lower = 20
 	melee_damage_upper = 15
