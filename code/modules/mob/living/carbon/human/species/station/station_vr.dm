@@ -639,7 +639,7 @@
 	for their survival across the stars. Instead, they have opted to live in massive super capital-class colony-ships \
 	with a flagship as their place they would call home."
 
-	wikilink="https://wiki.vore-station.net/Altevian"
+	// wikilink="https://wiki.vore-station.net/Altevian" //CHOMPedit
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/altevian)
 
