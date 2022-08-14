@@ -143,8 +143,12 @@ var/list/robot_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
 	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
+<<<<<<< HEAD
 	"Service-Hound", "BoozeHound", "KMine"
 	, "UnityHound", "Honk-Hound" // CHOMPEdit -- Adds the UnityHound drone to the list.
+=======
+	"Service-Hound", "BoozeHound", "KMine", "TraumaHound"
+>>>>>>> b588e821d0... Merge pull request #13466 from User-U-U/Surgery-Robot
 )
 // List of modules added during code red
 var/list/emergency_module_types = list(
