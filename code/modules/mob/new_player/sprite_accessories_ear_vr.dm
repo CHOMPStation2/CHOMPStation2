@@ -851,8 +851,6 @@
 	extra_overlay = "bunny-tall-inner"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-<<<<<<< HEAD
-=======
 
 /datum/sprite_accessory/ears/altevian
 	name = "Altevian Ears"
@@ -862,4 +860,3 @@
 	extra_overlay = "altevian-inner"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
->>>>>>> 48b7134682... Merge pull request #13442 from Heroman3003/giant-rat-that-makes-all-of-the-rules
