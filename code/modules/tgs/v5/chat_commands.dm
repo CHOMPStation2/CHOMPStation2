@@ -15,7 +15,7 @@
 			counts++
 		if(C && !(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
 			if(C && C.mob && isbelly(C.mob.loc))
-							bellied++
+				bellied++
 		if(C.is_afk())
 			afks++
 		else
@@ -100,7 +100,7 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	// They didn't provide anything worth looking up.
 	if(!length(key_to_find))
 		return "[sender.friendly_name], you need to provide your Byond username at the end of the command. It can be in 'key' format (with spaces and characters) or 'ckey' format (without spaces or special characters)."
-	
+
 	// Try to find their client.
 	var/client/user
 	for(var/client/C in GLOB.clients)
