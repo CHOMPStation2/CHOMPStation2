@@ -90,23 +90,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define L_HAND_LAYER			28		//Left-hand item
 #define R_HAND_LAYER			29		//Right-hand item
 #define WING_LAYER				30		//Wings or protrusions over the suit.
-<<<<<<< HEAD
 #define VORE_BELLY_LAYER		31		//CHOMPStation edit - Move this and everything after up if things are added.
 #define VORE_TAIL_LAYER			32		//CHOMPStation edit - Move this and everything after up if things are added.
-#define TAIL_NORTH_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
+#define TAIL_UPPER_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
 #define MODIFIER_EFFECTS_LAYER	34		//Effects drawn by modifiers
 #define FIRE_LAYER				35		//'Mob on fire' overlay layer
 #define MOB_WATER_LAYER			36		//'Mob submerged' overlay layer
 #define TARGETED_LAYER			37		//'Aimed at' overlay layer
 #define TOTAL_LAYERS			37		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
-=======
-#define TAIL_UPPER_LAYER_ALT	31		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	32		//Effects drawn by modifiers
-#define FIRE_LAYER				33		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			34		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			35		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			35		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
->>>>>>> 48b7134682... Merge pull request #13442 from Heroman3003/giant-rat-that-makes-all-of-the-rules
 //////////////////////////////////
 
 /mob/living/carbon/human
