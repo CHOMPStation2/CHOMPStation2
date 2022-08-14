@@ -159,9 +159,6 @@
 /obj/structure/mirror
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/noticeboard
-<<<<<<< HEAD
-	layer = ABOVE_WINDOW_LAYER
-=======
 	layer = ABOVE_WINDOW_LAYER
 
 /obj/item/device/multitool/scioutpost
@@ -181,4 +178,3 @@
 /datum/random_map/noise/ore/virgo2		// Less OP generation map, but better than Underdark
 	deep_val = 0.7
 	rare_val = 0.5
->>>>>>> fd8a3ed26e... Merge pull request #13487 from Heroman3003/mine-nerf
