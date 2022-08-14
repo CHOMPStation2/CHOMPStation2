@@ -125,6 +125,7 @@
 //	flags = WHITELISTED (YWEdit)
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix")
 
+<<<<<<< HEAD
 /datum/language/skrellfar
 	name = LANGUAGE_SKRELLIANFAR
 	desc = "The most common language among the Skrellian Far Kingdoms. Has an even higher than usual concentration of inaudible phonemes. Native to Skrell."
@@ -138,6 +139,8 @@
 //	flags = WHITELISTED (YWEdit)
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix", "...", "oo", "q", "nq", "x", "xq", "ll", "...", "...", "...") //should sound like there's holes in it
 
+=======
+>>>>>>> 2cdfa72cdd... Merge pull request #13485 from Cameron653/LANGUAGE_MODIFIDICATION
 /datum/language/skrell/get_random_name(var/gender)
 	var/list/first_names = file2list('config/names/first_name_skrell.txt')
 	var/list/last_names = file2list('config/names/last_name_skrell.txt')
