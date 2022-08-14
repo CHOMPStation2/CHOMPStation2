@@ -421,6 +421,8 @@
 ///	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'	///Chomp edit
 	suit_sprites = 'icons/mob/taursuits_drake_ch.dmi'
 	icon_sprite_tag = "drake"
+	can_loaf = TRUE // CHOMPEdit: Taur Loafing
+	loaf_offset = 6 // CHOMPEdit: Taur Loafing
 
 /datum/sprite_accessory/tail/taur/ch/fatdrake
 	name = "Drake (Fat Taur dual-color)"
