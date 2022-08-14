@@ -37507,6 +37507,10 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 28
 	},
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+	pixel_y = -2;
+	pixel_x = -5
+	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
 "coJ" = (
