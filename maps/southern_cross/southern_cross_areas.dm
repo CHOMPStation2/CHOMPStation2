@@ -169,7 +169,7 @@
 
 /area/surface/outpost/shelter
 	name = "Wilderness Shelter"
-	
+
 /area/surface/outpost/shelter/dorms
 	name = "Wilderness Shelter Dorms"
 	icon_state = "Sleep"
@@ -182,7 +182,7 @@
 	icon_state = "exit"
 	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg', 'sound/music/LRRMenu.ogg', 'sound/music/LRRTrack3.ogg', 'sound/ambience/cave/AmbCaveDebriA.ogg', 'sound/ambience/cave/AmbCaveDebriB.ogg', 'sound/ambience/cave/AmbCaveDebriC.ogg', 'sound/ambience/cave/AmbCaveDebriD.ogg')
 	outdoors = OUTDOORS_YES
-	
+
 /area/surface/outpost/shelter/utilityroom
 	name = "Wilderness Shelter Utility Room"
 	icon_state = "substation"
@@ -996,6 +996,19 @@ z
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+
+//CHOMPstation Edit 8/8/22 - Added a Art Gallery and some missing areas Kassc wanted me to add
+/area/crew_quarters/seconddeck/artgallery
+	name = "\improper Art Gallery"
+	icon_state = "art"
+
+/area/crew_quarters/seconddeck/artsupplies
+	name = "\improper Art Supplies"
+	icon_state = "artsupply"
+
+/area/crew_quarters/seconddeck/gameroom
+	name = "\improper Game Room"
+	icon_state = "gaming"
 
 //CHOMPStation Edit End
 
