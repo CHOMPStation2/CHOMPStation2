@@ -12,7 +12,7 @@
 		digitigrade = dna.digitigrade
 
 	if( !model && ( istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot) ) ) //All leg icons go through here now.
-			
+
 		var/gender = "m"
 		if(owner && owner.gender == FEMALE)
 			gender = "f"
@@ -43,9 +43,12 @@
 					mob_icon = new /icon('icons/mob/human_races/robotic.dmi', "[icon_name][gender ? "_[gender]" : ""]")
 					apply_colouration(mob_icon)
 				else
-					//Use digi icon if digitigrade, otherwise use regular icon. Ternary operator is based.
-					mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
-					apply_colouration(mob_icon)
+					if(is_hidden_by_markings())
+						mob_icon = new /icon('icons/mob/human_races/r_blank.dmi', "[icon_name][gender ? "_[gender]" : ""]")
+					else
+						//Use digi icon if digitigrade, otherwise use regular icon. Ternary operator is based.
+						mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
+						apply_colouration(mob_icon)
 
 				//Code here is copied from organ_icon.dm line 118 at time of writing (9/20/21), VOREStation edits are left in intentionally, because I think it's worth keeping track of the fact that the code is from Virgo's edits.
 				//Body markings, actually does not include head this time. Done separately above.
@@ -66,7 +69,7 @@
 						I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
 						limb_icon_cache[cache_key] = I
 					mob_icon.Blend(limb_icon_cache[cache_key], ICON_OVERLAY)
-				
+
 				// VOREStation edit start
 				if(nail_polish)
 					var/icon/I = new(nail_polish.icon, nail_polish.icon_state)

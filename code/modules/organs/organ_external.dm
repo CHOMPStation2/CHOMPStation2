@@ -1407,6 +1407,20 @@ Note that amputating the affected organ does in fact remove the infection from t
 			if(!istype(I,/obj/item/weapon/implant) && !istype(I,/obj/item/device/nif)) //VOREStation Add - NIFs
 				return 1
 
+/obj/item/organ/external/proc/is_hidden_by_markings()	// target_covering checks for mouth/eye coverage
+	//code that checked all limbs.
+	/*
+	for(var/obj/item/organ/external/organ in owner.organs)
+		for(var/M in organ.markings)
+			var/datum/sprite_accessory/marking/mark_style = organ.markings[M]["datum"]
+			if (mark_style.hide_body_parts && (organ_tag in mark_style.hide_body_parts))
+				return 1
+	*/
+	for(var/M in markings)
+		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
+		if(mark_style.hide_body_parts && (organ_tag in mark_style.hide_body_parts))
+			return 1
+
 /obj/item/organ/external/proc/is_hidden_by_tail()
 	if(owner && owner.tail_style && owner.tail_style.hide_body_parts && (organ_tag in owner.tail_style.hide_body_parts))
 		return 1
