@@ -2236,11 +2236,8 @@
 #include "code\modules\clothing\under\accessories\accessory.dm"
 #include "code\modules\clothing\under\accessories\accessory_ch.dm"
 #include "code\modules\clothing\under\accessories\accessory_vr.dm"
-<<<<<<< HEAD
 #include "code\modules\clothing\under\accessories\accessory_yw.dm"
-=======
 #include "code\modules\clothing\under\accessories\altevian_vr.dm"
->>>>>>> 275d782e50... Merge pull request #13523 from Heroman3003/rat-fashion
 #include "code\modules\clothing\under\accessories\armband.dm"
 #include "code\modules\clothing\under\accessories\armor.dm"
 #include "code\modules\clothing\under\accessories\badges.dm"
