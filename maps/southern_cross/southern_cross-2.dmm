@@ -36739,32 +36739,31 @@
 /area/maintenance/bar)
 "cme" = (
 /obj/structure/table/woodentable,
-/obj/item/clothing/mask/smokable/ecig/deluxe{
-	pixel_y = 6;
-	pixel_x = -4
-	},
-/obj/item/weapon/reagent_containers/ecig_cartridge/high_nicotine,
-/obj/item/weapon/reagent_containers/ecig_cartridge/lemonlime{
-	pixel_y = 0;
-	pixel_x = 4
-	},
-/obj/item/weapon/reagent_containers/ecig_cartridge/mint{
-	pixel_x = 8
-	},
-/obj/item/clothing/mask/smokable/ecig/deluxe{
-	pixel_y = 6;
-	pixel_x = -4
-	},
-/obj/item/weapon/reagent_containers/ecig_cartridge/high_nicotine,
-/obj/item/weapon/reagent_containers/ecig_cartridge/lemonlime{
-	pixel_y = 0;
-	pixel_x = 4
-	},
-/obj/item/weapon/reagent_containers/ecig_cartridge/mint{
-	pixel_x = 8
-	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/item/clothing/suit/storage/apron/white{
+	pixel_y = 7;
+	pixel_x = -6
+	},
+/obj/item/clothing/suit/storage/apron/white{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/clothing/suit/storage/apron/white{
+	pixel_y = 6
+	},
+/obj/item/clothing/glasses/regular/hipster{
+	pixel_y = -2;
+	pixel_x = 4
+	},
+/obj/item/clothing/mask/smokable/pipe/cobpipe{
+	pixel_y = 3;
+	pixel_x = -4
+	},
+/obj/item/clothing/head/beret{
+	pixel_x = 5;
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/artgallery)
@@ -37551,10 +37550,10 @@
 /obj/structure/bed/chair/sofa/brown{
 	layer = 2.9
 	},
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/structure/window/basic{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
@@ -37577,11 +37576,11 @@
 /obj/structure/bed/chair/sofa/corner/brown{
 	layer = 2.9
 	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
+	},
+/obj/structure/window/basic{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/library)
@@ -44557,9 +44556,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(25,28)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -51689,15 +51686,14 @@
 /area/hallway/primary/seconddeck/aft)
 "hlC" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/device/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
+	},
+/obj/machinery/atm{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -59912,15 +59908,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "lJh" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
 /obj/structure/bed/chair/sofa/right/brown{
 	dir = 2;
 	layer = 2.9
+	},
+/obj/structure/window/basic{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/library)
@@ -63399,7 +63395,6 @@
 /area/medical/morgue)
 "nIS" = (
 /obj/structure/table/standard,
-/obj/fiftyspawner/cardboard,
 /obj/item/weapon/storage/box,
 /obj/item/weapon/storage/box,
 /obj/item/weapon/storage/box{
@@ -70622,6 +70617,11 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 24
+	},
+/obj/fiftyspawner/cardboard,
+/obj/item/device/threadneedle,
+/obj/item/device/threadneedle{
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/artsupplies)
@@ -79688,6 +79688,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/apcenter)
+"xjT" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
 "xka" = (
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
@@ -130745,7 +130758,7 @@ ylt
 odi
 xom
 iOS
-dTG
+xjT
 pkK
 oht
 rxD
