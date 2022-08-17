@@ -1,3 +1,5 @@
+var/global/last_fax_role_request
+
 /obj/machinery/photocopier/faxmachine
 	req_one_access = list()
 
@@ -94,6 +96,20 @@
 		world.TgsTargetedChatBroadcast("FAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - FAXID: **[sanitize(faxid)]** [contents]", TRUE) 
 	//YW EDIT END
 
+/**
+ * Call the chat webhook to transmit a notification of a job request
+ */
+/obj/machinery/photocopier/faxmachine/proc/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, var/reason, var/jobname)
+	if(config.chat_webhook_url)
+		spawn(0)
+			var/query_string = "type=rolerequest"
+			query_string += "&key=[url_encode(config.chat_webhook_key)]"
+			query_string += "&ping=[url_encode(role_to_ping)]"
+			query_string += "&color=[url_encode(font_colour)]"
+			query_string += "&reason=[url_encode(reason)]"
+			query_string += "&job=[url_encode(jobname)]"
+			world.Export("[config.chat_webhook_url]?[query_string]")
+
 //
 // Overrides/additions to stock defines go here, as well as hooks. Sort them by
 // the object they are overriding. So all /mob/living together, etc.
@@ -102,8 +118,6 @@
 	var/chat_webhook_url = ""		// URL of the webhook for sending announcements/faxes to discord chat.
 	var/chat_webhook_key = ""		// Shared secret for authenticating to the chat webhook
 	var/fax_export_dir = "data/faxes"	// Directory in which to write exported fax HTML files.
-<<<<<<< HEAD
-=======
 
 
 /obj/machinery/photocopier/faxmachine/verb/request_roles()
@@ -185,4 +199,3 @@
 	message_chat_rolerequest(message_color, ping_name, reason, role)
 	last_fax_role_request = world.time
 	to_chat(L, "<span class='notice'>Your request was transmitted.</span>")
->>>>>>> 4450e15c84... Merge pull request #13519 from Very-Soft/smolething
