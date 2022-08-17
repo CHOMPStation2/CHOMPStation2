@@ -421,13 +421,8 @@
 ///	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'	///Chomp edit
 	suit_sprites = 'icons/mob/taursuits_drake_ch.dmi'
 	icon_sprite_tag = "drake"
-<<<<<<< HEAD
-	can_loaf = TRUE // CHOMPEdit: Taur Loafing
-	loaf_offset = 6 // CHOMPEdit: Taur Loafing
-=======
 	can_loaf = TRUE // VOREStation Edit: Taur Loafing
 	loaf_offset = 6 // VOREStation Edit: Taur Loafing
->>>>>>> 05c4ba490f... Merge pull request #13499 from Rykka-Stormheart/shep-dev-taur-loaf
 
 /datum/sprite_accessory/tail/taur/ch/fatdrake
 	name = "Drake (Fat Taur dual-color)"
