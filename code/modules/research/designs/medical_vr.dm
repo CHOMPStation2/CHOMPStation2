@@ -30,6 +30,17 @@
 	build_path = /obj/item/weapon/reagent_containers/hypospray/science
 	sort_string = "KCAVB"
 
+<<<<<<< HEAD
+=======
+/datum/design/item/medical/recombobray
+	name = "recombobulation ray"
+	desc = "The Type Gamma Medical Recombobulation ray! A mysterious looking ray gun! It works to change people who have had their form significantly altered back into their original forms!"
+	id = "recombobray"
+	req_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_POWER = 4, TECH_BIO = 5, TECH_BLUESPACE = 4) //Not like these matter. *Glares at circuit printer.*
+	materials = list(MAT_STEEL = 1000, MAT_GLASS = 2000, MAT_URANIUM = 500, MAT_PHORON = 1500)
+	build_path = /obj/item/weapon/gun/energy/mouseray/medical
+	sort_string = "KCAVC"
+>>>>>>> 82ba29d72d... Merge pull request #13524 from Cameron653/SCIENCE-REVERSION-RAY
 
 // ML-3M medigun and cells
 // CH edit - turns ML3M to NERD, removes some overtuned cells.
