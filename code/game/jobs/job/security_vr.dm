@@ -67,9 +67,6 @@
 
 /datum/alt_title/security_contractor
 	title = "Security Contractor"
-<<<<<<< HEAD
-=======
 
 /datum/job/officer/get_request_reasons()
 	return list("Wildlife management")
->>>>>>> 38423301cb... Merge pull request #13492 from Heroman3003/role-pings
