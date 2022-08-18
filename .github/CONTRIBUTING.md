@@ -81,6 +81,12 @@ Then in our `handle_grabs_ch()` proc, if we want to avoid performing the stock g
 * Reference issues and pull requests liberally.
 * Use the GitHub magic words "Fixed/Fixes/Fix, Resolved/Resolves/Resolve, Closed/Closes/Close", as in, "Closes #1928", as this will automatically close that issue when the PR is merged if it is a fix for that issue.
 
+### Early porting
+
+*You may earlyport.
+*Follow standard chompcomments incase upstream ends up closing their PR for any reason.
+*If it does get merged upstream and the mirror appears on our repo, you are responsible for unfucking the comments situation, because it'll have to say VORE edits instead of CHOMP edits.
+
 ## Licensing
 CHOMPStation is licensed under the GNU Affero General Public License version 3, which can be found in full in LICENSE-AGPL3.txt.
 
