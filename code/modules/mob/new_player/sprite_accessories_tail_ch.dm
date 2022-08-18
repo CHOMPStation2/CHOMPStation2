@@ -166,3 +166,10 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "anthrovirustail"
+
+/datum/sprite_accessory/tail/tyranid_tail
+	name = "Tyranid"
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "tyranid"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
