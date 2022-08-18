@@ -43,12 +43,8 @@
 					mob_icon = new /icon('icons/mob/human_races/robotic.dmi', "[icon_name][gender ? "_[gender]" : ""]")
 					apply_colouration(mob_icon)
 				else
-					if(is_hidden_by_markings())
-						mob_icon = new /icon('icons/mob/human_races/r_blank.dmi', "[icon_name][gender ? "_[gender]" : ""]")
-					else
-						//Use digi icon if digitigrade, otherwise use regular icon. Ternary operator is based.
-						mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
-						apply_colouration(mob_icon)
+					mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
+					apply_colouration(mob_icon)
 
 				//Code here is copied from organ_icon.dm line 118 at time of writing (9/20/21), VOREStation edits are left in intentionally, because I think it's worth keeping track of the fact that the code is from Virgo's edits.
 				//Body markings, actually does not include head this time. Done separately above.

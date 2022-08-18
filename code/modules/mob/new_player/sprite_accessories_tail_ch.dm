@@ -158,3 +158,11 @@
     ani_state = "nightstalker_diamondback_w"
     extra_overlay = "nightstalker_diamondback_markings"
     extra_overlay_w = "nightstalker_diamondback_markings_w"
+
+/datum/sprite_accessory/tail/anthrovirus_tail
+	name = "Anthro Virus Tail"
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "anthrovirustail_mark"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "anthrovirustail"

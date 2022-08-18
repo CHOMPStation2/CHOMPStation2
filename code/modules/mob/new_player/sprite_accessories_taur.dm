@@ -346,11 +346,3 @@
 	suit_sprites = 'icons/mob/taursuits_noodle.dmi'
 	clip_mask_state = "taur_clip_mask_noodle"
 	icon_sprite_tag = "noodle"
-
-/datum/sprite_accessory/tail/taur/longvirus
-	name = "Long Virus (Taur)"
-	icon_state = "longvirus_s"
-	extra_overlay = "longvirus_markings"
-//	suit_sprites = 'icons/mob/taursuits_noodle.dmi' Aye, I've gotta sprite that shit.
-	icon_sprite_tag = "virus"
-	hide_body_parts	= list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT, BP_GROIN)
