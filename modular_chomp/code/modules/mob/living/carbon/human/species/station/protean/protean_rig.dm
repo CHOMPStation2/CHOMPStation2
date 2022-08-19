@@ -19,12 +19,14 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/protean
 	chest_type = /obj/item/clothing/suit/space/rig/protean
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/protean
-	canremove = 0
 	protean = 1
 	offline_vision_restriction = 0
 	open = 1
 	cell_type =  /obj/item/weapon/cell/protean
 	var/dead = 0
+	//interface_path = "RIGSuit_protean"
+	//ai_interface_path = "RIGSuit_protean"
+	var/sealed = 0
 
 /obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
@@ -48,6 +50,7 @@
 
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
+	verbs += /obj/item/weapon/rig/verb/RemoveBag
 	..(newloc)
 
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
@@ -57,18 +60,28 @@
 			P.unEquip(P.back)
 		B.forceMove(src)
 		rig_storage = B
-		rig_storage.max_w_class = ITEMSIZE_LARGE
-		rig_storage.max_storage_space = INVENTORY_STANDARD_SPACE
 		P.drop_item(B)
-		to_chat(P, "<span class='notice'>Your [B] has been integrated into your rigsuit.</span>")
-		P.equip_to_slot_if_possible(src, slot_back)
+		to_chat(P, "<span class='notice'>[B] has been integrated into the [src].</span>")
+		if(spawned)	//This feels very dumb to have a second if but I'm lazy
+			P.equip_to_slot_if_possible(src, slot_back)
 		src.Moved()
 	else
 		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
 
+/obj/item/weapon/rig/verb/RemoveBag(var/mob/living/L)
+	set name = "Remove Stored Bag"
+	set category = "Object"
+
+	if(rig_storage)
+		L.put_in_hands(rig_storage)
+		rig_storage = null
+	else
+		to_chat(L, "This Rig does not have a bag installed. Use a bag on it to install one.")
+
 /obj/item/weapon/rig/protean/attack_hand(mob/user as mob)
 	if (src.loc == user)
-		src.rig_storage.open(user)
+		if(rig_storage)
+			src.rig_storage.open(user)
 	else
 		..()
 		for(var/mob/M in range(1))
@@ -80,7 +93,6 @@
 /obj/item/clothing/head/helmet/space/rig/protean
 	name = "mass"
 	desc = "A helmet-shaped clump of nanomachines."
-	siemens_coefficient= 0
 	light_overlay = "should not use a light overlay"
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN) //CHOMPEDIT: adding more races to the proto rig
 
@@ -93,13 +105,11 @@
 /obj/item/clothing/shoes/magboots/rig/protean
 	name = "mass"
 	desc = "Boot-shaped clusters of nanomachines."
-	siemens_coefficient= 0
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN) //CHOMPEDIT: adding more races to the proto rig
 
 /obj/item/clothing/suit/space/rig/protean
 	name = "mass"
 	desc = "A body-hugging mass of nanomachines."
-	siemens_coefficient= 0
 	can_breach = 0
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 	allowed = list(
@@ -429,3 +439,22 @@
 			charger.nutrition -= ((1/200)*(charge - C))	//Take nutrition relative to charge. Change the 1/200 if you want to alter the nutrition to charge ratio
 	else
 		return PROCESS_KILL
+
+
+/obj/item/weapon/rig/protean/equipped(mob/living/carbon/human/M)
+	..()
+	if(dead)
+		canremove = 1
+	else
+		canremove = 0
+
+/obj/item/weapon/rig/protean/ai_can_move_suit(var/mob/user)
+	if(offline || !cell || !cell.charge || locked_down)
+		if(user)
+			to_chat(user, "<span class='warning'>Your host rig is unpowered and unresponsive.</span>")
+		return 0
+	if(!wearer || (wearer.back != src && wearer.belt != src))
+		if(user)
+			to_chat(user, "<span class='warning'>Your host rig is not being worn.</span>")
+		return 0
+	return 1

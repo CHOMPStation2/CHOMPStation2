@@ -506,16 +506,15 @@ var/global/list/disallowed_protean_accessories = list(
 	if(istype(loc, /obj/item/weapon/rig/protean))
 		var/obj/item/weapon/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
-		prig.ui_interact(src, interactive_state)
+		prig.tgui_interact(src)
 	else
 		to_chat(src, "You are not in RIG form.")
-//CHOMP Add end
 
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-	if(blob.loc == /obj/item/weapon/rig/protean) //CHOMP Add
-		return //CHOMP Add
+	if(blob.loc == /obj/item/weapon/rig/protean)
+		return
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
@@ -590,3 +589,23 @@ var/global/list/disallowed_protean_accessories = list(
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)
 		C.statpanel = "Protean"
+
+/mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, var/params)
+	if(istype(loc, /obj/item/weapon/rig/protean))
+		HardsuitClickOn(A)
+	..()
+
+/mob/living/simple_mob/protean_blob/can_use_rig()
+	return 1
+
+/mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
+	if(istype(loc, /obj/item/weapon/rig/protean))
+		var/obj/item/weapon/rig/protean/prig = loc
+		if(istype(prig) && !prig.offline && prig.selected_module)
+			if(!prig.ai_can_move_suit(src))
+				return 0
+			prig.selected_module.engage(A, alert_ai)
+			if(ismob(A)) // No instant mob attacking - though modules have their own cooldowns
+				setClickCooldown(get_attack_speed())
+			return 1
+	return 0

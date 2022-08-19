@@ -350,9 +350,10 @@
 					S.OurRig.myprotean = P
 					src.drop_from_inventory(S.OurRig)
 					P.forceMove(S.OurRig)
+					S.OurRig.canremove = 1
 			P.reset_view()
 		else	//Make one if not
-			to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. A new one has been created for you, contact a coder.</span>")
+			to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. This may have been caused by an admin heal. A new one has been created for you, contact a coder.</span>")
 			new /obj/item/weapon/rig/protean(src,src)
 
 /mob/living/carbon/human/proc/appearance_switch()
@@ -408,6 +409,7 @@
 			target = G.affecting
 			if(istype(target.species, /datum/species/protean))
 				to_chat(caller, "<span class='danger'>You can't latch onto a fellow Protean!</span>")
+				return
 			if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
 				caller.visible_message("<span class='warning'>[caller] is attempting to latch onto [target]!</span>", "<span class='danger'>You attempt to latch onto [target]!</span>")
 				if(do_after(caller, 50, target))
