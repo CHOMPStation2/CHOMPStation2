@@ -187,6 +187,9 @@
 			belly_data["size_factor_for_sprite"] = B.size_factor_for_sprite
 			belly_data["belly_sprite_to_affect"] = B.belly_sprite_to_affect
 
+			// Visuals (Belly Fullscreens Preview and Coloring)
+			belly_data["belly_fullscreen_color"] = B.belly_fullscreen_color
+
 			// Visuals (Vore FX)
 			belly_data["disable_hud"] = B.disable_hud
 

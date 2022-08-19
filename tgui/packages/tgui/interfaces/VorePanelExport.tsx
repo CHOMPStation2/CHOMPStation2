@@ -152,6 +152,9 @@ type Belly = {
   size_factor_for_sprite: number;
   belly_sprite_to_affect: string;
 
+  // Visuals (Belly Fullscreens Preview and Coloring)
+  belly_fullscreen_color: string;
+
   // Visuals (Vore FX)
   disable_hud: BooleanLike;
 
@@ -278,6 +281,9 @@ const generateBellyString = (belly: Belly, index: number) => {
     resist_triggers_animation,
     size_factor_for_sprite,
     belly_sprite_to_affect,
+
+    // Visuals (Belly Fullscreens Preview and Coloring)
+    belly_fullscreen_color,
 
     // Visuals (Vore FX)
     disable_hud,
@@ -596,6 +602,10 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Animation when prey resist: ' + (resist_triggers_animation ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '<li class="list-group-item">Vore Sprite Size Factor: ' + size_factor_for_sprite + '</li>';
   result += '<li class="list-group-item">Belly Sprite to affect: ' + belly_sprite_to_affect + '</li>';
+  result += '</ul>';
+  result += '<b>Belly Fullscreens Preview and Coloring</b>';
+  result += '<ul class="list-group">';
+  result += '<li class="list-group-item">Color: <span style="color: ' + belly_fullscreen_color + ';">' + belly_fullscreen_color + '</span>';
   result += '</ul>';
   result += '<b>Vore FX</b>';
   result += '<ul class="list-group">';
