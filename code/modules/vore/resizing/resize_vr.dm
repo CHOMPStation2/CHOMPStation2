@@ -39,11 +39,19 @@
  * but in the future we may also incorporate the "mob_size", so that
  * a macro mouse is still only effectively "normal" or a micro dragon is still large etc.
  */
-/mob/proc/get_effective_size()
+/mob/proc/get_effective_size(var/micro = FALSE)
 	return 100000 //Whatever it is, it's too big to pick up, or it's a ghost, or something.
 
-/mob/living/get_effective_size()
+/mob/living/get_effective_size(var/micro = FALSE)
 	return size_multiplier
+
+/mob/living/carbon/human/get_effective_size(var/micro = FALSE)		// Set micro to TRUE for interactions where you're small, to FALSE for ones where you're large.
+	var/effective_size = size_multiplier
+	if(micro)
+		effective_size += species.micro_size_mod
+	else
+		effective_size += species.macro_size_mod
+	return effective_size
 
 /atom/movable/proc/size_range_check(size_select)		//both objects and mobs needs to have that
 	var/area/A = get_area(src) //Get the atom's area to check for size limit.
@@ -140,7 +148,7 @@
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
-	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default)
+	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default, 600, 1)
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		if(temporary_form)	//CHOMPEdit - resizing both our forms
@@ -164,7 +172,7 @@
 		return 0
 	if(!(M.a_intent == I_HELP))
 		return 0
-	var/size_diff = M.get_effective_size() - get_effective_size()
+	var/size_diff = M.get_effective_size(FALSE) - get_effective_size(TRUE)
 	if(!holder_default && holder_type)
 		holder_default = holder_type
 	if(!istype(M))
@@ -198,16 +206,16 @@
 		return TRUE
 
 	//Both small! Go ahead and go.
-	if(get_effective_size() <= RESIZE_A_SMALLTINY && tmob.get_effective_size() <= RESIZE_A_SMALLTINY)
+	if(get_effective_size(TRUE) <= RESIZE_A_SMALLTINY && tmob.get_effective_size(TRUE) <= RESIZE_A_SMALLTINY)		// For help intent interaction just assume both are 'smol'
 		return TRUE
 
 	//Worthy of doing messages at all
-	if(abs(get_effective_size() - tmob.get_effective_size()) >= 0.50)
+	if(abs(get_effective_size(TRUE) - tmob.get_effective_size(TRUE)) >= 0.50)
 		var/src_message = null
 		var/tmob_message = null
 
 		//Smaller person being stepped onto
-		if(get_effective_size() > tmob.get_effective_size() && ishuman(src))
+		if(get_effective_size(TRUE) > tmob.get_effective_size(TRUE) && ishuman(src))
 			src_message = "You carefully step over [tmob]."
 			tmob_message = "[src] steps over you carefully!"
 			var/mob/living/carbon/human/H = src
@@ -219,7 +227,7 @@
 				tmob_message = tail.msg_prey_help_run
 
 		//Smaller person stepping under larger person
-		else if(get_effective_size() < tmob.get_effective_size() && ishuman(tmob))
+		else if(get_effective_size(TRUE) < tmob.get_effective_size(TRUE) && ishuman(tmob))
 			src_message = "You run between [tmob]'s legs."
 			tmob_message = "[src] runs between your legs."
 			var/mob/living/carbon/human/H = tmob
@@ -270,7 +278,7 @@
 
 	// We need to be above a certain size ratio in order to do anything to the prey.
 	// For DISARM and HURT intent, this is >=0.75, for GRAB it is >=0.5
-	var/size_ratio = get_effective_size() - tmob.get_effective_size()
+	var/size_ratio = get_effective_size(FALSE) - tmob.get_effective_size(TRUE)
 	if((a_intent == I_GRAB || a_intent == I_DISARM) && size_ratio < 0.5) //CHOMPEDIT - more step changes
 		return FALSE
 	if(a_intent == I_HURT && size_ratio < 0.75)

@@ -6,6 +6,10 @@
 	var/hide_glow = FALSE
 	var/image/eye_layer = null		// Holds the eye overlay.
 	var/eye_color = "#00ff0d"
+	var/icon/holo_icon
+	var/icon/holo_icon_north
+	var/holo_icon_dimension_X = 32
+	var/holo_icon_dimension_Y = 32
 	var/global/list/wide_chassis = list(
 		"rat",
 		"panther",
@@ -41,7 +45,8 @@
 		"teppi",
 		"catslug",
 		"car",
-		"typeone"
+		"typeone",
+		"13"
 		)
 	//These vars keep track of whether you have the related software, used for easily updating the UI
 	var/soft_ut = FALSE	//universal translator
@@ -54,11 +59,34 @@
 
 /mob/living/silicon/pai/Initialize()
 	. = ..()
-	
+
 	verbs |= /mob/proc/dominate_predator
 	verbs |= /mob/living/proc/dominate_prey
 	verbs |= /mob/living/proc/set_size
 	verbs |= /mob/living/proc/shred_limb
+
+/mob/living/silicon/pai/Login()
+	. = ..()
+	if(!holo_icon)
+		last_special = world.time + 100		//Let's give get_character_icon time to work
+		get_character_icon()
+	if(stat == DEAD)
+		healths.icon_state = "health7"
+
+/mob/living/silicon/pai/proc/full_restore()
+	adjustBruteLoss(- bruteloss)
+	adjustFireLoss(- fireloss)
+	do_after(src, 1 SECONDS)
+	card.setEmotion(16)
+	stat = CONSCIOUS
+	do_after(src, 5 SECONDS)
+	var/mob/observer/dead/ghost = src.get_ghost()
+	if(ghost)
+		ghost.notify_revive("Someone is trying to revive you. Re-enter your body if you want to be revived!", 'sound/effects/pai-restore.ogg', source = card)
+	canmove = TRUE
+	card.setEmotion(15)
+	playsound(card, 'sound/effects/pai-restore.ogg', 50, FALSE)
+	card.visible_message("\The [card] chimes.", runemessage = "chime")
 
 /mob/living/silicon/pai/proc/pai_nom(var/mob/living/T in oview(1))
 	set name = "pAI Nom"
@@ -78,6 +106,11 @@
 
 /mob/living/silicon/pai/update_icon() //Some functions cause this to occur, such as resting
 	..()
+	if(chassis == "13")
+		icon = holo_icon
+		add_eyes()
+		return
+
 	update_fullness_pai()
 
 	if(!people_eaten && !resting)
@@ -106,6 +139,10 @@
 
 /mob/living/silicon/pai/update_icons() //And other functions cause this to occur, such as digesting someone.
 	..()
+	if(chassis == "13")
+		icon = holo_icon
+		add_eyes()
+		return
 	update_fullness_pai()
 	if(!people_eaten && !resting)
 		icon_state = "[chassis]"
@@ -132,9 +169,15 @@
 	choice = tgui_input_list(usr, "What would you like to use for your mobile chassis icon?", "Chassis Choice", possible_chassis)
 	if(!choice) return
 	var/oursize = size_multiplier
-	resize(1, FALSE, TRUE, TRUE, FALSE)		//We resize ourselves to normal here for a moment to let the vis_height get reset 
+	resize(1, FALSE, TRUE, TRUE, FALSE)		//We resize ourselves to normal here for a moment to let the vis_height get reset
 	chassis = possible_chassis[choice]
-	if(chassis in wide_chassis)
+	if(chassis == "13")
+		if(!holo_icon)
+			if(!get_character_icon())
+				return
+		icon_state = null
+		icon = holo_icon
+	else if(chassis in wide_chassis)
 		icon = 'icons/mob/pai_vr64x64.dmi'
 		vis_height = 64
 	else
@@ -154,6 +197,7 @@
 /mob/living/silicon/pai/verb/toggle_eyeglow()
 	set category = "pAI Commands"
 	set name = "Toggle Eye Glow"
+
 	if(chassis in allows_eye_color)
 		if(eye_glow && !hide_glow)
 			eye_glow = FALSE
@@ -182,18 +226,41 @@
 // Release belly contents before being gc'd!
 /mob/living/silicon/pai/Destroy()
 	release_vore_contents()
+	if(ckey)
+		paikeys -= ckey
+	return ..()
+
+/mob/living/silicon/pai/clear_client()
+	if(ckey)
+		paikeys -= ckey
 	return ..()
 
 /mob/living/silicon/pai/proc/add_eyes()
 	remove_eyes()
-	if(chassis in allows_eye_color)
-		if(!eye_layer)
-			eye_layer = image(icon, "[icon_state]-eyes")
-		eye_layer.appearance_flags = appearance_flags
-		eye_layer.color = eye_color
-		if(eye_glow && !hide_glow)
-			eye_layer.plane = PLANE_LIGHTING_ABOVE
-		add_overlay(eye_layer)
+	if(chassis == "13")
+		if(holo_icon.Width() > 32)
+			holo_icon_dimension_X = 64
+			pixel_x = -16
+			default_pixel_x = -16
+		if(holo_icon.Height() > 32)
+			holo_icon_dimension_Y = 64
+		if(holo_icon_dimension_X == 32 && holo_icon_dimension_Y == 32)
+			eye_layer = image('icons/mob/pai_vr.dmi', "type13-eyes")
+		else if(holo_icon_dimension_X == 32 && holo_icon_dimension_Y == 64)
+			eye_layer = image('icons/mob/pai_vr32x64.dmi', "type13-eyes")
+		else if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 32)
+			eye_layer = image('icons/mob/pai_vr64x32.dmi', "type13-eyes")
+		else if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 64)
+			eye_layer = image('icons/mob/pai_vr64x64.dmi', "type13-eyes")
+		else
+	else if(chassis in allows_eye_color)
+		eye_layer = image(icon, "[icon_state]-eyes")
+	else return
+	eye_layer.appearance_flags = appearance_flags
+	eye_layer.color = eye_color
+	if(eye_glow && !hide_glow)
+		eye_layer.plane = PLANE_LIGHTING_ABOVE
+	add_overlay(eye_layer)
 
 /mob/living/silicon/pai/proc/remove_eyes()
 	cut_overlay(eye_layer)
@@ -229,7 +296,7 @@
 				t_him = "hir"
 			else
 				t_him = "them"
-	else	
+	else
 		switch(target.gender)
 			if(MALE)
 				t_him = "him"
@@ -325,7 +392,7 @@
 		eye_color = oureyes
 	if(ouremotion)
 		card.setEmotion(ouremotion)
-	
+
 	update_icon()
 	return 1
 
@@ -337,7 +404,7 @@
 
 /mob/living/silicon/pai/a_intent_change(input as text)
 	. = ..()
-	
+
 	switch(a_intent)
 		if(I_HELP)
 			hud_used.help_intent.icon_state = "intent_help-s"
@@ -377,7 +444,7 @@
 	set name = "Hide"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
 	set category = "Abilities"
-	
+
 	hide()
 	if(status_flags & HIDING)
 		hide_glow = TRUE
@@ -441,7 +508,10 @@
 				to_chat(G, "<span class='cult'>[src.name]'s screen prints, \"[message]\"</span>")
 
 /mob/living/silicon/pai/proc/touch_window(soft_name)	//This lets us touch TGUI procs and windows that may be nested behind other TGUI procs and windows
-	for(var/thing in software)							//so we can access our software without having to open up the software interface TGUI window
+	if(stat != CONSCIOUS)								//so we can access our software without having to open up the software interface TGUI window
+		to_chat(src, "<span class ='warning'>You can't do that right now.</span>")
+		return
+	for(var/thing in software)
 		var/datum/pai_software/S = software[thing]
 		if(istype(S, /datum/pai_software) && S.name == soft_name)
 			if(S.toggle)
@@ -466,7 +536,7 @@
 
 /mob/living/silicon/pai/proc/refresh_software_status()	//This manages the pAI software status buttons icon states based on if you have them and if they are enabled
 	for(var/thing in software)							//this only gets called when you click one of the relevent buttons, rather than all the time!
-		var/datum/pai_software/soft = software[thing]	
+		var/datum/pai_software/soft = software[thing]
 		if(istype(soft,/datum/pai_software/med_records))
 			soft_mr = TRUE
 		if(istype(soft,/datum/pai_software/sec_records))
@@ -545,3 +615,45 @@
 
 /mob/living/silicon/pai/proc/ar_hud()
 	touch_window("AR HUD")
+
+/mob/living/silicon/pai/proc/get_character_icon()
+	if(!client || !client.prefs) return FALSE
+	var/mob/living/carbon/human/dummy/dummy = new ()
+	//This doesn't include custom_items because that's ... hard.
+	client.prefs.dress_preview_mob(dummy)
+	sleep(1 SECOND) //Strange bug in preview code? Without this, certain things won't show up. Yay race conditions?
+	dummy.regenerate_icons()
+
+	var/icon/new_holo = getCompoundIcon(dummy)
+
+	dummy.tail_alt = TRUE
+	dummy.set_dir(NORTH)
+	var/icon/new_holo_north = getCompoundIcon(dummy)
+
+	qdel(holo_icon)
+	qdel(holo_icon_north)
+	qdel(dummy)
+	holo_icon = new_holo
+	holo_icon_north = new_holo_north
+	return TRUE
+
+/mob/living/silicon/pai/set_dir(var/new_dir)
+	. = ..()
+	if(. && (chassis == "13"))
+		switch(dir)
+			if(SOUTH)
+				icon = holo_icon
+			else
+				icon = holo_icon_north
+
+/mob/living/silicon/pai/adjustBruteLoss(amount, include_robo)
+	. = ..()
+	if(amount > 0 && health <= 90)	//Something's probably attacking us!
+		if(prob(amount))	//The more damage it is doing, the more likely it is to damage something important!
+			card.damage_random_component()
+
+/mob/living/silicon/pai/adjustFireLoss(amount, include_robo)
+	. = ..()
+	if(amount > 0 && health <= 90)
+		if(prob(amount))
+			card.damage_random_component()

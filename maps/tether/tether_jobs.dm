@@ -25,7 +25,10 @@
 	selection_color = "#999999"
 	economic_modifier = 7
 	minimal_player_age = 14
-	pto_type = null
+	playtime_only = TRUE
+	pto_type = PTO_TALON
+	timeoff_factor = 1
+	dept_time_required = 60
 	access = list(access_talon)
 	minimal_access = list(access_talon)
 	alt_titles = list("Talon Commander" = /datum/alt_title/talon_commander)
@@ -49,7 +52,9 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
-	pto_type = null
+	playtime_only = TRUE
+	pto_type = PTO_TALON
+	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
 	alt_titles = list("Talon Medic" = /datum/alt_title/talon_medic)
@@ -74,7 +79,9 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
-	pto_type = null
+	playtime_only = TRUE
+	pto_type = PTO_TALON
+	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
 	alt_titles = list("Talon Technician" = /datum/alt_title/talon_tech)
@@ -99,7 +106,9 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
-	pto_type = null
+	playtime_only = TRUE
+	pto_type = PTO_TALON
+	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
 	alt_titles = list("Talon Helmsman" = /datum/alt_title/talon_helmsman)
@@ -124,13 +133,18 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
-	pto_type = null
+	playtime_only = TRUE
+	pto_type = PTO_TALON
+	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
-	alt_titles = list("Talon Security" = /datum/alt_title/talon_security)
+	alt_titles = list("Talon Security" = /datum/alt_title/talon_security, "Talon Marine" = /datum/alt_title/talon_marine)
 
 /datum/alt_title/talon_security
 	title = "Talon Security"
+
+/datum/alt_title/talon_marine
+	title = "Talon Marine"
 
 /datum/job/talon_miner
 	title = "Talon Miner"
@@ -148,7 +162,9 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
-	pto_type = null
+	playtime_only = TRUE
+	pto_type = PTO_TALON
+	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
 	alt_titles = list("Talon Excavator" = /datum/alt_title/talon_excavator)

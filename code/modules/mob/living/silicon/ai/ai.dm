@@ -51,7 +51,7 @@ var/list/ai_verbs_default = list(
 	var/obj/machinery/camera/camera = null
 	var/aiRestorePowerRoutine = 0
 	var/viewalerts = 0
-	var/icon/holo_icon//Default is assigned when AI is created.
+	var/icon/holo_icon				//Default is assigned when AI is created.
 	var/list/connected_robots = list()
 	var/obj/item/device/pda/ai/aiPDA = null
 	var/obj/item/device/communicator/aiCommunicator = null
@@ -161,7 +161,6 @@ var/list/ai_verbs_default = list(
 	add_language(LANGUAGE_SIIK, 1)
 	add_language(LANGUAGE_AKHANI, 1)
 	add_language(LANGUAGE_SKRELLIAN, 1)
-	add_language(LANGUAGE_SKRELLIANFAR, 0)
 	add_language(LANGUAGE_TRADEBAND, 1)
 	add_language(LANGUAGE_GUTTER, 1)
 	add_language(LANGUAGE_EAL, 1)

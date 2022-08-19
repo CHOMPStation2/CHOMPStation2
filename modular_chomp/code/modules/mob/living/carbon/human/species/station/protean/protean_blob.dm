@@ -143,7 +143,7 @@
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob/protean_blob(src)
 
-datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
+/datum/riding/simple_mob/protean_blob/handle_vehicle_layer()
 	ridden.layer = OBJ_LAYER
 
 /mob/living/simple_mob/protean_blob/MouseDrop_T()

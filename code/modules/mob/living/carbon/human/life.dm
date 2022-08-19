@@ -807,6 +807,8 @@
 
 	if(adjusted_pressure >= species.hazard_high_pressure)
 		var/pressure_damage = min( ( (adjusted_pressure / species.hazard_high_pressure) -1 )*PRESSURE_DAMAGE_COEFFICIENT , MAX_HIGH_PRESSURE_DAMAGE)
+		if(stat==DEAD)
+			pressure_damage = pressure_damage/2
 		take_overall_damage(brute=pressure_damage, used_weapon = "High Pressure")
 		throw_alert("pressure", /obj/screen/alert/highpressure, 2)
 	else if(adjusted_pressure >= species.warning_high_pressure)
@@ -818,7 +820,10 @@
 	else
 		if( !(COLD_RESISTANCE in mutations))
 			if(!isSynthetic() || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF pressure seals
-				take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
+				var/pressure_damage = LOW_PRESSURE_DAMAGE
+				if(stat==DEAD)
+					pressure_damage = pressure_damage/2
+				take_overall_damage(brute=pressure_damage, used_weapon = "Low Pressure")
 			if(getOxyLoss() < 55) 		// 12 OxyLoss per 4 ticks when wearing internals;    unconsciousness in 16 ticks, roughly half a minute
 				var/pressure_dam = 3	// 16 OxyLoss per 4 ticks when no internals present; unconsciousness in 13 ticks, roughly twenty seconds
 										// (Extra 1 oxyloss from failed breath)
@@ -1980,8 +1985,10 @@ End Chomp edit */
 		//   increase your body temperature beyond 250C, but it's possible something else (atmos) has heated us up beyond it,
 		//   so don't worry about the firestacks at that point. Really, we should be cooling the room down, because it has
 		//   to expend energy to heat our body up! But let's not worry about that.
-		if((bodytemperature + fire_temp_add) > HUMAN_COMBUSTION_TEMP)
-			return
+
+		// This whole section above is ABSOLUTELY STUPID and makes no sense and this would prevent too-high-heat from even being able to hurt someone. No. We will heat up for as long as needed.
+		//if((bodytemperature + fire_temp_add) > HUMAN_COMBUSTION_TEMP)
+		//	return
 
 		bodytemperature += fire_temp_add
 

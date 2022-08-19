@@ -6,7 +6,7 @@
 	default_language = LANGUAGE_VOX
 	language = LANGUAGE_GALCOM
 	species_language = LANGUAGE_VOX
-	num_alternate_languages = 1
+	num_alternate_languages = 3
 	color_mult = 1  //CHOMP Edit
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL)
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,  /datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/strong)

@@ -91,9 +91,7 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
 "ag" = (
-/obj/machinery/computer/area_atmos{
-	dir = 1
-	},
+/obj/machinery/computer/area_atmos,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "ah" = (
@@ -238,6 +236,8 @@
 /obj/machinery/camera/network/research_outpost{
 	c_tag = "OPR - Xenoarchaeology SMES"
 	},
+/obj/item/weapon/airlock_electronics,
+/obj/item/weapon/airlock_electronics,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "bR" = (
@@ -402,6 +402,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"fc" = (
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/research/xenoarcheology/exterior)
 "fn" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/research/xenoarcheology/anomaly)
@@ -417,6 +420,12 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"fK" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/research/xenoarcheology/exterior)
 "fN" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/research/xenoarcheology/longtermstorage)
@@ -459,6 +468,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
+"gz" = (
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2"
+	},
+/area/surface/outpost/research/xenoarcheology/exterior)
 "gH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -526,6 +540,9 @@
 "hN" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "hO" = (
@@ -778,8 +795,18 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "kN" = (
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outpost/mining_main/cave)
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Outpost Maintenance Hatch";
+	normalspeed = 0;
+	req_one_access = list(1,5,10,12,31,47,48,50)
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2"
+	},
+/area/surface/outpost/research/xenoarcheology/exterior)
 "kO" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 1
@@ -1190,6 +1217,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
+"op" = (
+/obj/effect/zone_divider,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/research/xenoarcheology/exterior)
 "os" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -1255,6 +1286,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"oZ" = (
+/obj/structure/table/steel,
+/obj/item/weapon/storage/box/lights/bulbs{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/toolbox/emergency{
+	pixel_y = 3;
+	starts_with = list(/obj/item/weapon/tool/crowbar/red,/obj/item/weapon/extinguisher/mini,/obj/item/device/radio,/obj/item/weapon/light/bulb)
+	},
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2"
+	},
+/area/surface/outpost/research/xenoarcheology/exterior)
 "pb" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
@@ -1412,6 +1456,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
 "rz" = (
@@ -1464,6 +1509,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/cave/unexplored/normal)
+"rT" = (
+/obj/machinery/light/small,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/research/xenoarcheology/exterior)
 "rX" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -2070,6 +2119,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "yP" = (
@@ -2156,6 +2208,11 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/outpost/mining_main/cave)
+"zy" = (
+/obj/effect/zone_divider,
+/obj/item/stack/flag/green,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/normal)
 "zI" = (
 /obj/machinery/atmospherics/valve/digital/open{
 	dir = 4
@@ -2401,6 +2458,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"CS" = (
+/obj/structure/cable/heavyduty{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2"
+	},
+/area/surface/outpost/research/xenoarcheology/exterior)
 "CV" = (
 /obj/machinery/status_display{
 	pixel_y = -32
@@ -2463,10 +2534,10 @@
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
 "Ec" = (
-/obj/item/stack/flag/green,
 /obj/effect/zone_divider,
+/obj/item/stack/flag/green,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/cave/explored/normal)
+/area/surface/cave/explored/deep)
 "Em" = (
 /obj/structure/bed/chair/office/light,
 /obj/machinery/power/apc{
@@ -2642,6 +2713,14 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
+"FR" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2"
+	},
+/area/surface/outpost/research/xenoarcheology/exterior)
 "FV" = (
 /obj/machinery/artifact_scanpad,
 /turf/simulated/floor/tiled/white,
@@ -2733,10 +2812,13 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "GX" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2"
 	},
-/area/surface/cave/explored/normal)
+/area/surface/outpost/research/xenoarcheology/exterior)
 "GY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/blue{
@@ -3154,6 +3236,9 @@
 /obj/structure/cable/ender{
 	icon_state = "1-2";
 	id = "surface_cave"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2"
@@ -3608,6 +3693,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
+"RK" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2"
+	},
+/area/surface/outpost/mining_main/cave)
 "RV" = (
 /obj/effect/map_effect/portal/master/side_b/caves_to_plains{
 	dir = 1
@@ -3627,7 +3720,7 @@
 "Sh" = (
 /obj/item/weapon/banner/nt,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/cave/explored/normal)
+/area/surface/outpost/research/xenoarcheology/exterior)
 "Sn" = (
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -3807,6 +3900,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
 "TN" = (
@@ -4017,7 +4111,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2"
 	},
-/area/surface/cave/explored/normal)
+/area/surface/outpost/research/xenoarcheology/exterior)
 "Yg" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -4090,6 +4184,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"YE" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/research/xenoarcheology/exterior)
 "YG" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/research/xenoarcheology/medical)
@@ -4178,6 +4278,12 @@
 	icon_state = "asteroidplating2"
 	},
 /area/surface/outpost/mining_main/cave)
+"Zw" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/research/xenoarcheology/exterior)
 "Zy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -16224,7 +16330,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -16727,7 +16833,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -17010,7 +17116,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -17256,7 +17362,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -17503,7 +17609,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -17782,7 +17888,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -18782,7 +18888,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -19083,7 +19189,7 @@ nu
 nu
 YT
 nu
-nu
+bE
 iy
 iy
 iy
@@ -19558,7 +19664,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -19622,7 +19728,7 @@ iy
 iy
 iy
 nu
-nu
+bE
 nu
 nu
 nu
@@ -19854,7 +19960,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 YT
 nu
 nu
@@ -20396,7 +20502,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -20578,7 +20684,7 @@ HQ
 HQ
 HQ
 HQ
-YT
+Ec
 YT
 YT
 YT
@@ -20686,7 +20792,7 @@ BO
 BO
 BO
 BO
-BO
+zy
 rM
 rM
 rM
@@ -20900,7 +21006,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -21352,7 +21458,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 iy
 iy
@@ -21417,7 +21523,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -21854,7 +21960,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 YT
 nu
 nu
@@ -21983,8 +22089,8 @@ Hp
 mI
 mI
 mI
-Ec
-Hp
+BO
+sb
 Hp
 Hp
 Hp
@@ -21996,7 +22102,7 @@ mI
 mI
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -22234,7 +22340,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 mI
@@ -22742,7 +22848,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -22770,7 +22876,7 @@ mI
 mI
 mI
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -22886,7 +22992,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 HQ
 iy
 iy
@@ -23518,7 +23624,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 mI
 mI
 mI
@@ -23648,7 +23754,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -24423,7 +24529,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 iy
@@ -25184,7 +25290,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -25959,7 +26065,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 iy
 iy
@@ -27359,7 +27465,7 @@ iy
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -29497,7 +29603,7 @@ mI
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 mI
@@ -30011,7 +30117,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -30535,22 +30641,22 @@ Hp
 Hp
 Hp
 Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
 cv
 Uz
 Uz
@@ -30792,30 +30898,30 @@ mI
 mI
 Hp
 Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
 Yd
-Hp
-Hp
-Hp
-Hp
-Hp
-kN
+fc
+fc
+fc
+fc
+fc
+RK
 qq
 Zt
 uY
@@ -31049,31 +31155,31 @@ Hp
 mI
 mI
 mI
-mI
-mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
 Yd
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
 uY
+RK
 uY
 Zt
 uY
@@ -31307,31 +31413,31 @@ Hp
 Hp
 mI
 mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
+fc
+fc
+fc
+fK
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fK
 Sh
 Cg
 Cg
 Cg
 Sh
-Hp
+fK
 Yd
-Hp
-Hp
-Hp
-Hp
-Hp
-kN
+fc
+fc
+fc
+fc
+fc
+RK
 Dj
 Zt
 uY
@@ -31564,9 +31670,9 @@ Hp
 Hp
 Hp
 mI
-mI
-mI
-mI
+fc
+fc
+fc
 RW
 RW
 RW
@@ -31589,7 +31695,7 @@ NW
 NW
 NW
 NW
-XI
+kN
 XI
 Yg
 XI
@@ -31822,8 +31928,8 @@ Hp
 Hp
 Hp
 mI
-mI
-Hp
+fc
+fc
 RW
 RW
 Se
@@ -31847,7 +31953,7 @@ KX
 kV
 NW
 NW
-mI
+Yd
 jP
 SY
 ns
@@ -32078,10 +32184,10 @@ mI
 mI
 Hp
 Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
 cH
 oe
 mv
@@ -32105,7 +32211,7 @@ NQ
 NQ
 dA
 NW
-mI
+Yd
 jP
 SY
 ns
@@ -32335,11 +32441,11 @@ mI
 mI
 mI
 Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+rT
 RW
 rp
 uo
@@ -32363,8 +32469,8 @@ jf
 Fq
 mj
 NW
-mI
-mI
+Yd
+oZ
 mI
 ns
 "}
@@ -32592,12 +32698,12 @@ mI
 mI
 mI
 Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 RW
 gc
 Fi
@@ -32621,8 +32727,8 @@ Dv
 Tf
 OA
 NW
-mI
-mI
+CS
+gz
 mI
 ns
 "}
@@ -32850,12 +32956,12 @@ mI
 mI
 Hp
 Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 RW
 gm
 uo
@@ -32879,8 +32985,8 @@ MI
 lf
 pO
 NW
-mI
-mI
+FR
+gz
 mI
 ns
 "}
@@ -33108,12 +33214,12 @@ mI
 mI
 sb
 Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 cH
 gp
 iv
@@ -33137,8 +33243,8 @@ Kx
 sK
 CV
 NW
-mI
-mI
+fc
+fc
 mI
 ns
 "}
@@ -33366,9 +33472,9 @@ mI
 mI
 Hp
 Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bF
 bF
 bF
@@ -33395,8 +33501,8 @@ eo
 kx
 DD
 NW
-mI
-mI
+fc
+fc
 mI
 ns
 "}
@@ -33624,9 +33730,9 @@ mI
 Hp
 Hp
 Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bR
 bY
 AC
@@ -33653,8 +33759,8 @@ cL
 cL
 NW
 NW
-mI
-mI
+fc
+fc
 mI
 ns
 "}
@@ -33882,9 +33988,9 @@ Hp
 Hp
 Hp
 Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bR
 bR
 hq
@@ -33910,9 +34016,9 @@ WQ
 lI
 NA
 tC
-mI
-mI
-mI
+fc
+fc
+fc
 mI
 ns
 "}
@@ -34140,9 +34246,9 @@ mI
 Hp
 Hp
 sb
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bU
 bU
 aa
@@ -34168,9 +34274,9 @@ Ic
 LU
 pS
 tC
-mI
-mI
-mI
+Zw
+fc
+fc
 mI
 ns
 "}
@@ -34398,9 +34504,9 @@ Hp
 Hp
 mI
 mI
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bU
 cf
 AC
@@ -34426,9 +34532,9 @@ Gn
 hW
 iD
 tC
-mI
-mI
-mI
+fc
+fc
+fc
 mI
 ns
 "}
@@ -34656,9 +34762,9 @@ Hp
 mI
 mI
 mI
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bR
 bY
 AC
@@ -34685,8 +34791,8 @@ cL
 cL
 VW
 VW
-mI
-mI
+fc
+fc
 mI
 ns
 "}
@@ -34914,9 +35020,9 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
+fc
+fc
+fc
 bF
 bF
 bF
@@ -34943,8 +35049,8 @@ ai
 LV
 XL
 VW
-mI
-mI
+fc
+fc
 mI
 ns
 "}
@@ -35172,12 +35278,12 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 fE
 hD
 iF
@@ -35201,8 +35307,8 @@ NY
 Eu
 pF
 Hg
-Hp
-mI
+fc
+fc
 mI
 ns
 "}
@@ -35430,12 +35536,12 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+rT
 fn
 hH
 iG
@@ -35459,8 +35565,8 @@ Od
 Ir
 BH
 VW
-Hp
-Hp
+Zw
+fc
 mI
 ns
 "}
@@ -35688,12 +35794,12 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 fn
 hN
 ja
@@ -35717,8 +35823,8 @@ Gg
 ap
 sD
 VW
-Hp
-Hp
+fc
+fc
 mI
 ns
 "}
@@ -35946,12 +36052,12 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 fE
 hR
 jq
@@ -35975,8 +36081,8 @@ Hv
 pU
 PE
 Hg
-Hp
-Hp
+fc
+fc
 mI
 ns
 "}
@@ -36204,12 +36310,12 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 fN
 hU
 jF
@@ -36233,8 +36339,8 @@ bV
 oN
 Gp
 VW
-Hp
-Hp
+fc
+fc
 mI
 ns
 "}
@@ -36462,12 +36568,12 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
 fN
 ie
 jI
@@ -36491,8 +36597,8 @@ Ce
 pU
 Op
 VW
-Hp
-Hp
+fc
+fc
 mI
 ns
 "}
@@ -36721,11 +36827,11 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
 fN
 il
 jN
@@ -36749,8 +36855,8 @@ Kv
 Jr
 Jr
 KF
-Hp
-Hp
+fc
+fc
 mI
 ns
 "}
@@ -36979,11 +37085,11 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+rT
 fN
 it
 jQ
@@ -37007,8 +37113,8 @@ OP
 sv
 jE
 KF
-Hp
-Hp
+Zw
+fc
 mI
 ns
 "}
@@ -37237,11 +37343,11 @@ rM
 rM
 rM
 rM
-BO
-BO
-BO
-BO
-BO
+op
+op
+op
+op
+op
 fN
 fN
 jV
@@ -37265,8 +37371,8 @@ Fj
 Cr
 KF
 KF
-rM
-BO
+op
+op
 rM
 ax
 "}
@@ -37496,11 +37602,11 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
 fN
 fN
 fN
@@ -37522,9 +37628,9 @@ KF
 KF
 KF
 KF
-mI
-mI
-mI
+fc
+fc
+fc
 mI
 ns
 "}
@@ -37755,34 +37861,34 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+YE
+fc
+fc
+fc
+fc
+fc
+fc
 GX
+gz
+gz
+gz
 GX
-GX
-GX
-GX
-Hp
-Hp
-Hp
-Hp
-mI
-mI
-mI
-mI
-mI
-mI
-mI
+fc
+fc
+fc
+fc
+fc
+fc
+YE
+fc
+fc
+fc
+fc
 mI
 ns
 "}
@@ -38014,33 +38120,33 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-mI
-mI
-mI
-mI
-mI
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
 mI
 ns
 "}
@@ -38273,22 +38379,22 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
 mI
 mI
 mI
@@ -38505,45 +38611,45 @@ mI
 mI
 mI
 mI
-Hp
-Hp
-Hp
-Hp
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
-mI
+sb
 Hp
 Hp
 Hp
 mI
 mI
-Hp
-Hp
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+mI
+fc
+fc
+fc
+mI
+mI
+fc
+fc
 mI
 mI
 mI
@@ -39280,7 +39386,7 @@ mI
 mI
 Hp
 Hp
-Hp
+sb
 mI
 mI
 mI
@@ -42609,7 +42715,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -43381,7 +43487,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -49065,7 +49171,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -49283,7 +49389,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -49827,7 +49933,7 @@ mI
 mI
 mI
 mI
-Hp
+sb
 Hp
 Hp
 Hp
@@ -50057,7 +50163,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 nu
 nu
 nu
@@ -50098,7 +50204,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 mI
 mI
 mI
@@ -50343,7 +50449,7 @@ Hp
 Hp
 Hp
 Hp
-Hp
+sb
 Hp
 Hp
 Hp
@@ -51839,7 +51945,7 @@ iy
 iy
 iy
 iy
-nu
+bE
 nu
 nu
 nu
@@ -52618,7 +52724,7 @@ nu
 nu
 nu
 nu
-nu
+bE
 iy
 iy
 HQ
@@ -57763,15 +57869,15 @@ iy
 iy
 iy
 iy
+bE
 nu
 nu
 nu
+bE
 nu
 nu
 nu
-nu
-nu
-nu
+bE
 iy
 iy
 iy
@@ -63185,15 +63291,15 @@ iy
 iy
 iy
 iy
+bE
 nu
 nu
 nu
+bE
 nu
 nu
 nu
-nu
-nu
-nu
+bE
 iy
 iy
 iy
@@ -67055,11 +67161,11 @@ iy
 iy
 iy
 iy
+bE
 nu
 nu
 nu
-nu
-nu
+bE
 nu
 iy
 iy

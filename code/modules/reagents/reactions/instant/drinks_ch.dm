@@ -196,6 +196,7 @@
 	required_reagents = list("blood" = 1, "lemonjuice" = 1, "demonsblood" = 1)
 	mix_message = "The mixture develops a sinister glow."
 	reaction_sound = 'sound/effects/singlebeat.ogg'
+	result_amount = 3
 
 /decl/chemical_reaction/instant/drinks/cogchamp
 	name = "CogChamp"

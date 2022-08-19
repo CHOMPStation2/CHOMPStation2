@@ -1,4 +1,4 @@
-world/New()
+/world/New()
 	. = ..()
 	//add stuff to default emote vars specifically for chomp.
 

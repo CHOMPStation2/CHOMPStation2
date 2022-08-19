@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ad" = (
+/obj/machinery/light,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "aj" = (
 /obj/effect/zone_divider,
 /turf/simulated/wall/solidrock,
@@ -7,14 +11,31 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/wilderness/mountains)
+"bc" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/structure/bed/roller,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "bw" = (
-/obj/structure/railing,
+/obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
-/area/surface/outside/wilderness/normal)
+/area/surface/outpost/shelter/exterior)
 "cs" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/deep)
+"dh" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 1;
+	id = "wilderness_shelter_1st_floor";
+	name = "Wilderness Shelter Shutters";
+	pixel_y = -26;
+	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "dl" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -36,8 +57,50 @@
 	pixel_y = -26;
 	tag_door = "mining_dock_3_door"
 	},
-/turf/simulated/floor/plating/external,
+/obj/structure/cable{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"eI" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
+"eP" = (
+/obj/structure/closet/secure_closet/medical_wall{
+	name = "Wilderness Shelter defibrillator closet";
+	pixel_y = 31;
+	req_access = null;
+	req_one_access = list(1,3,43,66,67);
+	starts_with = list(/obj/item/device/defib_kit/loaded)
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
+"fW" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "gm" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -50,6 +113,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/deep)
+"hM" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter)
 "hW" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/wilderness)
@@ -59,6 +126,14 @@
 "iJ" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/path/wilderness)
+"jb" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/log_sif,
+/area/surface/outpost/shelter)
 "ji" = (
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
@@ -68,6 +143,25 @@
 "kj" = (
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall/checkpoint)
+"kA" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/frame{
+	anchored = 1
+	},
+/obj/machinery/camera/network/substations{
+	c_tag = "WILD - Shelter Utility Room";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "lY" = (
 /turf/simulated/floor/wood{
 	outdoors = 1;
@@ -80,23 +174,126 @@
 	},
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
-"mU" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating/external,
+"mD" = (
+/obj/machinery/button/remote/blast_door{
+	id = "wilderness_shelter_1st_floor";
+	name = "Wilderness Shelter Shutters";
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"nu" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "nv" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
+"nK" = (
+/obj/machinery/light,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"nW" = (
+/obj/machinery/power/thermoregulator/southerncross{
+	pixel_x = 1;
+	pixel_y = 26
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/table/sifwooden_reinforced,
+/obj/item/stack/material/log/sif{
+	amount = 25;
+	icon_state = "sheet-log_3";
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/obj/item/stack/material/log/sif{
+	amount = 25;
+	icon_state = "sheet-log_3";
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/obj/item/stack/tile/wood/sif{
+	amount = 60;
+	icon_state = "tile-sifwood_3"
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50;
+	icon_state = "sheet-wood_3";
+	pixel_y = 2
+	},
+/obj/item/weapon/chainsaw{
+	layer = 3.01
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
+"nY" = (
+/obj/structure/sign/department/medbay{
+	name = "FIRST AID"
+	},
+/turf/simulated/wall/log_sif,
+/area/surface/outpost/shelter)
+"om" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/structure/closet/walllocker_double/survival/north{
+	name = "Wilderness Shelter Emergency Food Wall Cabinet";
+	starts_with = list(/obj/random/mre = 20,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 20)
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "oO" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
 "pj" = (
 /turf/simulated/floor/water/deep,
 /area/surface/outside/wilderness/deep)
+"pk" = (
+/obj/structure/closet/medical_wall{
+	name = "Wilderness Shelter first-aid closet";
+	pixel_y = 31;
+	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular = 2,obj/item/weapon/storage/pill_bottle/spaceacillin)
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
+"pl" = (
+/obj/structure/simple_door/sifwood,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "wilderness_shelter_Utility";
+	layer = 3;
+	name = "Wilderness Shelter Shutters"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "pB" = (
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river{
 	dir = 1
@@ -116,14 +313,61 @@
 	},
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
+"qb" = (
+/obj/machinery/camera/network/exploration{
+	c_tag = "WILD - Shelter First Floor Exterior";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"qk" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "WILD - Shelter First Aid";
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/structure/table/rack,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/weapon/storage/box/bodybags{
+	pixel_x = 8;
+	pixel_y = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "ro" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/surface/outside/wilderness/deep)
+"rz" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "wilderness_shelter_Utility";
+	name = "Wilderness Shelter Shutters";
+	pixel_x = 24;
+	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "rN" = (
 /obj/structure/stairs/spawner/west,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/wilderness)
+"rR" = (
+/obj/structure/curtain/medical{
+	name = "medical curtain"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "rW" = (
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves{
 	dir = 1
@@ -137,6 +381,41 @@
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
 /turf/simulated/floor/water,
 /area/surface/outpost/wall/checkpoint)
+"tb" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"tq" = (
+/turf/simulated/wall/rsifwood,
+/area/surface/outpost/shelter/exterior)
+"tA" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"uh" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "wilderness_shelter_1st_floor";
+	layer = 4;
+	name = "Wilderness Shelter Shutters"
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter)
+"uO" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "uU" = (
 /obj/item/weapon/banner/nt,
 /turf/simulated/shuttle/floor/voidcraft/external,
@@ -171,9 +450,9 @@
 "xG" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/deep)
-"xO" = (
-/turf/simulated/floor/plating/external,
-/area/surface/outpost/shelter)
+"xZ" = (
+/turf/simulated/wall/rsifwood,
+/area/surface/outside/wilderness/mountains)
 "yb" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -204,10 +483,30 @@
 /area/surface/outside/path/wilderness)
 "ze" = (
 /obj/structure/simple_door/sifwood,
-/turf/simulated/floor/plating/external,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "wilderness_shelter_1st_floor";
+	layer = 4;
+	name = "Wilderness Shelter Shutters"
+	},
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"zf" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/frame{
+	anchored = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "zi" = (
-/obj/random/junk,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "mining_dock_1";
@@ -215,8 +514,31 @@
 	pixel_y = -26;
 	tag_door = "mining_dock_1_door"
 	},
-/turf/simulated/floor/plating/external,
+/obj/machinery/alarm/sifwilderness{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/table/sifwooden_reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"Ai" = (
+/obj/item/device/geiger/wall/north,
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
+"Am" = (
+/turf/simulated/wall/log_sif,
+/area/surface/outpost/shelter/utilityroom)
 "Az" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -255,12 +577,16 @@
 	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
-"Dg" = (
-/obj/structure/bed/chair{
-	dir = 8
+"CR" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating/external,
-/area/surface/outpost/shelter)
+/obj/structure/frame{
+	anchored = 1
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "Dy" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
@@ -272,19 +598,66 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
+"Ez" = (
+/obj/structure/cable{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "wilderness_shelter_Utility";
+	name = "Wilderness Shelter Shutters";
+	pixel_y = 26
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
+"EC" = (
+/obj/machinery/camera/network/substations{
+	c_tag = "WILD - Shelter Utility Exterior";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "Fj" = (
-/obj/structure/table/steel,
+/obj/structure/table/sifwooden_reinforced,
 /obj/machinery/power/apc{
 	dir = 8;
-	locked = 0;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24
 	},
-/obj/structure/cable,
-/obj/item/stack/material/phoron,
-/turf/simulated/floor/plating/external,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/device/radio/subspace{
+	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO WILDERNESS SHELTER!";
+	name = "Wilderness Shelter subspace radio"
+	},
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"GE" = (
+/obj/machinery/light/bigfloorlamp,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "GK" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -293,6 +666,12 @@
 "GL" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/surface/outpost/wall/checkpoint)
+"GZ" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter)
 "Hf" = (
 /obj/structure/showcase/sign{
 	desc = "This appears to be a sign warning people that the other side is extremely hazardous.";
@@ -308,27 +687,55 @@
 "Hx" = (
 /turf/simulated/mineral/sif,
 /area/surface/outside/wilderness/deep)
+"HM" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "IJ" = (
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/wilderness/deep)
+"IK" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
+"IS" = (
+/obj/machinery/camera/network/exploration{
+	c_tag = "WILD - Shelter First Floor";
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter)
 "IZ" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/power/thermoregulator/southerncross{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = 2
+	},
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/plating/external,
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"Jh" = (
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "Js" = (
 /turf/simulated/floor/water,
 /area/surface/outside/wilderness/deep)
-"Jy" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 4;
-	pixel_y = 26
-	},
-/turf/simulated/floor/plating/external,
-/area/surface/outpost/shelter)
 "JH" = (
 /turf/simulated/floor/water,
 /area/surface/outside/ocean)
@@ -339,9 +746,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/wilderness/normal)
 "KG" = (
-/obj/structure/closet,
-/obj/random/maintenance/clean,
-/turf/simulated/floor/plating/external,
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "Mm" = (
 /turf/unsimulated/wall/planetary/sif,
@@ -381,6 +786,14 @@
 "Rm" = (
 /turf/simulated/floor/water,
 /area/surface/outpost/wall/checkpoint)
+"RJ" = (
+/obj/structure/curtain/medical{
+	name = "medical curtain"
+	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "Si" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/normal)
@@ -396,17 +809,27 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/normal)
+"Tn" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "Tr" = (
-/obj/machinery/space_heater,
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "mining_dock_2";
-	name = "shuttle bay controller";
-	pixel_y = -26;
-	tag_door = "mining_dock_2_door"
-	},
-/turf/simulated/floor/plating/external,
-/area/surface/outpost/shelter)
+/obj/structure/table/rack,
+/obj/item/weapon/circuitboard/machine/rtg/advanced,
+/obj/item/weapon/circuitboard/machine/rtg/advanced,
+/obj/item/weapon/circuitboard/machine/rtg/advanced,
+/obj/item/stack/cable_coil,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
+"Tw" = (
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "Tx" = (
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
@@ -423,11 +846,23 @@
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/normal)
 "UR" = (
-/obj/structure/closet/crate,
-/obj/random/powercell,
-/obj/item/weapon/tool/screwdriver,
-/turf/simulated/floor/plating/external,
-/area/surface/outpost/shelter)
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/item/stack/material/phoron{
+	amount = 2
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/shelter/utilityroom)
 "Vt" = (
 /obj/item/weapon/banner/virgov,
 /turf/simulated/shuttle/floor/voidcraft/external,
@@ -437,8 +872,9 @@
 /turf/simulated/floor/water/deep,
 /area/surface/outside/ocean)
 "VE" = (
-/obj/machinery/space_heater,
-/turf/simulated/floor/plating/external,
+/obj/structure/table/sifwooden_reinforced,
+/obj/machinery/photocopier/faxmachine,
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "VH" = (
 /obj/effect/shuttle_landmark{
@@ -460,6 +896,11 @@
 /obj/effect/zone_divider,
 /turf/unsimulated/wall/planetary/sif,
 /area/surface/outside/ocean)
+"XH" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter)
 "Yg" = (
 /obj/structure/railing,
 /turf/simulated/floor/water,
@@ -474,10 +915,28 @@
 	},
 /turf/simulated/floor/water,
 /area/surface/outside/ocean)
+"Zr" = (
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "Zw" = (
-/obj/structure/table/steel,
+/obj/structure/table/sifwooden_reinforced,
 /obj/machinery/cell_charger,
-/turf/simulated/floor/plating/external,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -24;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter)
+"ZZ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 
 (1,1,1) = {"
@@ -19563,7 +20022,7 @@ Sr
 Sr
 Si
 Si
-Si
+oO
 Si
 Si
 Si
@@ -20080,8 +20539,8 @@ Si
 Si
 Si
 Si
-Si
-Si
+oO
+oO
 Si
 Si
 Oa
@@ -20333,16 +20792,16 @@ Sr
 Sr
 Sr
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
+Tw
+Zr
+Zr
+Zr
+Zr
+Zr
+Zr
+Zr
+Tw
+tA
 Oa
 yC
 "}
@@ -20591,16 +21050,16 @@ yb
 yb
 Si
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
+ad
+tq
+Zr
+Zr
+Zr
+tq
+Zr
+Tw
+Tn
+tq
 Oa
 yC
 "}
@@ -20849,16 +21308,16 @@ yb
 yb
 Sr
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
+Tw
+Zr
+Zr
+Zr
+Zr
+Zr
+Zr
+Tw
+Tw
+Zr
 Oa
 yC
 "}
@@ -21107,16 +21566,16 @@ Sr
 Sr
 Sr
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
+Tw
+Zr
+Zr
+Tw
+Zr
+Zr
+Tw
+Zr
+Tw
+Tw
 Oa
 yC
 "}
@@ -21365,16 +21824,16 @@ Sr
 yb
 yb
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
+Tw
+Zr
+Zr
+Zr
+Tw
+Tw
+Zr
+Zr
+Tw
+Zr
 Oa
 yC
 "}
@@ -21623,16 +22082,16 @@ Sr
 yb
 yb
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
+ad
+tq
+Zr
+Tw
+Tw
+tq
+Zr
+Tw
+Tw
+tq
 Oa
 yC
 "}
@@ -21881,16 +22340,16 @@ yb
 yb
 yb
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
-Oa
+Tw
+Zr
+Tw
+Zr
+Zr
+EC
+Zr
+Zr
+Tw
+Zr
 Oa
 yC
 "}
@@ -22139,16 +22598,16 @@ yb
 yb
 yb
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
-Oa
+Tw
+Tw
+Tw
+Tw
+Tw
+Tw
+Tw
+Tw
+Tw
+Zr
 Oa
 yC
 "}
@@ -22397,16 +22856,16 @@ yb
 yb
 yb
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
-Si
-Oa
-Oa
+Tw
+Tw
+Tw
+Tw
+Tw
+Tw
+tb
+Tw
+rz
+Zr
 Oa
 yC
 "}
@@ -22655,17 +23114,17 @@ yb
 yb
 yb
 Sr
-Sr
+ad
 AQ
 AQ
 AQ
 AQ
 AQ
 AQ
-Si
-Oa
-Oa
-Oa
+pl
+Am
+Am
+Am
 yC
 "}
 (87,1,1) = {"
@@ -22913,17 +23372,17 @@ yb
 yb
 yb
 yb
-Sr
-mU
+Tw
+uh
 IZ
 Fj
 Zw
 zi
-AQ
-Oa
-Oa
-Oa
-Oa
+jb
+Ez
+nu
+UR
+Am
 yC
 "}
 (88,1,1) = {"
@@ -23171,17 +23630,17 @@ yb
 yb
 yb
 Sr
-Sr
+dh
 AQ
-Jy
-Dg
-xO
+mD
+hM
+GZ
 VE
 AQ
-Oa
-Oa
-Oa
-Oa
+nW
+Jh
+fW
+Am
 yC
 "}
 (89,1,1) = {"
@@ -23429,17 +23888,17 @@ yb
 yb
 yb
 yb
-Sr
+Tw
 ze
-xO
-xO
-xO
+KG
+KG
+KG
 dE
 AQ
-Oa
-Oa
-Oa
-Oa
+Ai
+Jh
+kA
+Am
 yC
 "}
 (90,1,1) = {"
@@ -23687,17 +24146,17 @@ yb
 yb
 yb
 Sr
-Sr
+qb
 AQ
-xO
-xO
-xO
-xO
+KG
+KG
+KG
+XH
 AQ
-Oa
-Oa
-Oa
-Oa
+IK
+Jh
+zf
+Am
 yC
 "}
 (91,1,1) = {"
@@ -23945,17 +24404,17 @@ yb
 yb
 yb
 Sr
-Sr
-mU
-xO
+Tw
+uh
+ZZ
+IS
 KG
-UR
-Tr
+KG
 AQ
-Oa
-Oa
-Oa
-Oa
+Tr
+Jh
+CR
+Am
 yC
 "}
 (92,1,1) = {"
@@ -24203,17 +24662,17 @@ oO
 yb
 yb
 Sr
-Sr
+ad
 AQ
 AQ
+nY
+rR
+RJ
 AQ
-AQ
-AQ
-AQ
-Oa
-Oa
-Oa
-Oa
+Am
+Am
+Am
+Am
 yC
 "}
 (93,1,1) = {"
@@ -24461,13 +24920,13 @@ yb
 yb
 yb
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Si
+Tw
+Zr
+Zr
+AQ
+HM
+bc
+AQ
 Oa
 Oa
 Oa
@@ -24719,13 +25178,13 @@ Sr
 yb
 yb
 Sr
-Sr
-Sr
-Si
-Si
-Si
-Si
-Si
+Tw
+Tw
+Zr
+AQ
+eP
+uO
+AQ
 Oa
 Oa
 Oa
@@ -24977,13 +25436,13 @@ yb
 Sr
 Sr
 Sr
-Sr
-Sr
-Si
-Si
-Si
-Si
-Si
+Tw
+Tw
+Zr
+AQ
+pk
+eI
+AQ
 Oa
 Oa
 Oa
@@ -25235,13 +25694,13 @@ yb
 Sr
 Sr
 Sr
-Sr
-Sr
-Si
-Si
-Si
-Si
-Oa
+Tw
+Tw
+Zr
+AQ
+om
+qk
+AQ
 Oa
 Oa
 Oa
@@ -25493,13 +25952,13 @@ yb
 yb
 Sr
 Sr
-Sr
-Si
-Si
-Si
-Si
-Si
-Oa
+Tw
+Tw
+GE
+AQ
+AQ
+AQ
+AQ
 Oa
 Oa
 Oa
@@ -25751,13 +26210,13 @@ oO
 yb
 yb
 yb
-Sr
-Sr
-Si
-Si
-Si
-Si
-Oa
+Tw
+Tw
+Zr
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -26011,11 +26470,11 @@ yb
 yb
 Sr
 Sr
-Si
-Si
-Si
-Si
-Si
+Zr
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -26270,10 +26729,10 @@ yb
 Sr
 Sr
 Sr
-Si
-Si
-Si
-Si
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -26528,10 +26987,10 @@ yb
 Si
 Sr
 Sr
-Si
-Si
-Si
-Si
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -26786,10 +27245,10 @@ yb
 Si
 Sr
 Sr
-Si
-Si
-Si
-Si
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -27045,10 +27504,10 @@ Si
 Sr
 Sr
 Sr
-Si
-Si
-Si
-Si
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -27303,10 +27762,10 @@ Si
 Sr
 Sr
 Sr
-Si
-Si
-Si
-Si
+Zr
+Zr
+Zr
+Zr
 Oa
 Oa
 Oa
@@ -27562,10 +28021,10 @@ Si
 Si
 Sr
 Sr
-Si
-Si
-Si
-Oa
+Zr
+Zr
+nK
+xZ
 Oa
 Oa
 yC
@@ -27821,7 +28280,7 @@ Si
 Si
 Sr
 Sr
-Si
+Zr
 bw
 rN
 Oa

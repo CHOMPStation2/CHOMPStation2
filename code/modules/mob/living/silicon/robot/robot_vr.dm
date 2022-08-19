@@ -1,6 +1,7 @@
 /mob/living/silicon/robot
 	var/sleeper_g
 	var/sleeper_r
+	var/sleeper_resting = FALSE //CHOMPEdit - Enable resting belly sprites for dogborgs that have the sprites
 	var/leaping = 0
 	var/pounce_cooldown = 0
 	var/pounce_cooldown_time = 40
@@ -97,9 +98,10 @@
 	vr_sprite_check()
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
+		//update_fullness() // CHOMPEdit - Needed so that we can have the vore sprites when only using vore bellies
 		if(sleeper_g == TRUE)
 			add_overlay("[module_sprites[icontype]]-sleeper_g")
-		if(sleeper_r == TRUE)
+		if(sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])) //CHOMPEdit - Also allow normal vore bellies to affect this sprite
 			add_overlay("[module_sprites[icontype]]-sleeper_r")
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
 			add_overlay("laser")
@@ -111,10 +113,28 @@
 			cut_overlays() // Hide that gut for it has no ground sprite yo.
 			if(sitting)
 				icon_state = "[module_sprites[icontype]]-sit"
+				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
+				if(sleeper_resting && sleeper_g == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_g-sit")
+				if(sleeper_resting && sleeper_r == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_r-sit")
+				//CHOMPEdit End
 			if(bellyup)
 				icon_state = "[module_sprites[icontype]]-bellyup"
+				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
+				if(sleeper_resting && sleeper_g == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_g-bellyup")
+				if(sleeper_resting && sleeper_r == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_r-bellyup")
+				//CHOMPEdit End
 			else if(!sitting && !bellyup)
 				icon_state = "[module_sprites[icontype]]-rest"
+				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
+				if(sleeper_resting && sleeper_g == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_g-rest")
+				if(sleeper_resting && sleeper_r == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_r-rest")
+				//CHOMPEdit End
 		else
 			icon_state = "[module_sprites[icontype]]"
 	if(dogborg == TRUE && stat == DEAD)
@@ -159,6 +179,9 @@
 			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
 		else if(icontype == "Secborg model V-3" || icontype == "Mediborg model V-3") //CH edit
 			icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
+		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
+			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
+			sleeper_resting = TRUE
 		else
 			icon = wideborg_dept
 		return

@@ -52,7 +52,8 @@
 		"Teppi" = "teppi",
 		"Catslug" = "catslug",
 		"Car" = "car",
-		"Type One" = "typeone"
+		"Type One" = "typeone",
+		"Type Thirteen" = "13"
 		//VOREStation Addition End
 		)
 
@@ -104,6 +105,8 @@
 
 	var/current_pda_messaging = null
 
+	var/our_icon_rotation = 0
+
 /mob/living/silicon/pai/New(var/obj/item/device/paicard)
 	src.loc = paicard
 	card = paicard
@@ -120,7 +123,7 @@
 	add_language(LANGUAGE_GUTTER, 1)
 	add_language(LANGUAGE_EAL, 1)
 	add_language(LANGUAGE_TERMINUS, 1)
-	add_language(LANGUAGE_SIGN, 0)
+	add_language(LANGUAGE_SIGN, 1)
 
 	verbs += /mob/living/silicon/pai/proc/choose_chassis
 	verbs += /mob/living/silicon/pai/proc/choose_verbs
@@ -142,6 +145,7 @@
 	// Vorestation Edit: Meta Info for pAI
 	if (client.prefs)
 		ooc_notes = client.prefs.metadata
+	src << sound('sound/effects/pai_login.ogg', volume = 75)	//VOREStation Add
 
 // this function shows the information about being silenced as a pAI in the Status panel
 /mob/living/silicon/pai/proc/show_silenced()
@@ -168,7 +172,8 @@
 
 /mob/living/silicon/pai/emp_act(severity)
 	// Silence for 2 minutes
-	// 20% chance to kill
+	// 20% chance to damage critical components
+	// 50% chance to damage a non critical component
 		// 33% chance to unbind
 		// 33% chance to change prime directive (based on severity)
 		// 33% chance of no additional effect
@@ -177,10 +182,12 @@
 	to_chat(src, "<font color=green><b>Communication circuit overload. Shutting down and reloading communication circuits - speech and messaging functionality will be unavailable until the reboot is complete.</b></font>")
 	if(prob(20))
 		var/turf/T = get_turf_or_move(src.loc)
+		card.death_damage()
 		for (var/mob/M in viewers(T))
 			M.show_message("<font color='red'>A shower of sparks spray from [src]'s inner workings.</font>", 3, "<font color='red'>You hear and smell the ozone hiss of electrical sparks being expelled violently.</font>", 2)
-		return src.death(0)
-
+		return
+	if(prob(50))
+		card.damage_random_component(TRUE)
 	switch(pick(1,2,3))
 		if(1)
 			src.master = null
@@ -245,7 +252,11 @@
 	if(src.loc != card)
 		return
 
+	if(card.projector != PP_FUNCTIONAL && card.emitter != PP_FUNCTIONAL)
+		to_chat(src, "<span class ='warning'>ERROR: System malfunction. Service required!</span>")
+
 	if(world.time <= last_special)
+		to_chat(src, "<span class ='warning'>You can't unfold yet.</span>")
 		return
 
 	last_special = world.time + 100
@@ -281,6 +292,7 @@
 
 	card.forceMove(src)
 	card.screen_loc = null
+	canmove = TRUE
 
 	var/turf/T = get_turf(src)
 	if(istype(T)) T.visible_message("<b>[src]</b> folds outwards, expanding into a mobile form.")
@@ -299,6 +311,7 @@
 		return
 
 	if(world.time <= last_special)
+		to_chat(src, "<span class ='warning'>You can't fold up yet.</span>")
 		return
 
 	close_up()
@@ -307,17 +320,13 @@
 /mob/living/silicon/pai/proc/choose_chassis()
 	set category = "pAI Commands"
 	set name = "Choose Chassis"
-
 	var/choice
 	var/finalized = "No"
 	while(finalized == "No" && src.client)
-
 		choice = tgui_input_list(usr,"What would you like to use for your mobile chassis icon?","Chassis Choice", possible_chassis)
 		if(!choice) return
-
 		icon_state = possible_chassis[choice]
 		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
-
 	chassis = possible_chassis[choice]
 	verbs |= /mob/living/proc/hide
 //VOREStation Removal End
@@ -345,14 +354,49 @@
 		var/obj/item/weapon/rig/rig = src.get_rig()
 		if(istype(rig))
 			rig.force_rest(src)
+			return
+	else if(chassis == "13")
+		resting = !resting
+		//update_transform()	I want this to make you ROTATE like normal HUMANS do! But! There's lots of problems and I don't know how to fix them!
 	else
 		resting = !resting
 		icon_state = resting ? "[chassis]_rest" : "[chassis]"
 		update_icon() //VOREStation edit
-		to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
 
 	canmove = !resting
 
+/*
+/mob/living/silicon/pai/update_transform()
+	var/desired_scale_x = size_multiplier * icon_scale_x
+	var/desired_scale_y = size_multiplier * icon_scale_y
+	// Now for the regular stuff.
+	var/matrix/M = matrix()
+	M.Scale(desired_scale_x, desired_scale_y)
+	M.Translate(0, (vis_height/2)*(desired_scale_y-1))
+	if(chassis != "13")
+		appearance_flags |= PIXEL_SCALE
+		var/anim_time = 3
+		if(resting)
+			M.Turn(90)
+			M.Scale(desired_scale_y, desired_scale_x)
+			if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 64)
+				M.Translate(13,-22)
+			else if(holo_icon_dimension_X == 32 && holo_icon_dimension_Y == 64)
+				M.Translate(1,-22)
+			else if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 32)
+				M.Translate(13,-6)
+			else
+				M.Translate(1,-6)
+			layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
+		else
+			M.Scale(desired_scale_x, desired_scale_y)
+			M.Translate(0, (vis_height/2)*(desired_scale_y-1))
+			layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
+		animate(src, transform = M, time = anim_time)
+	src.transform = M
+	handle_status_indicators()
+*/
 //Overriding this will stop a number of headaches down the track.
 /mob/living/silicon/pai/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(W.force)
@@ -373,7 +417,7 @@
 		close_up()
 
 //I'm not sure how much of this is necessary, but I would rather avoid issues.
-/mob/living/silicon/pai/proc/close_up()
+/mob/living/silicon/pai/proc/close_up(silent= FALSE)
 
 	last_special = world.time + 100
 
@@ -383,7 +427,7 @@
 	release_vore_contents(FALSE) //VOREStation Add
 
 	var/turf/T = get_turf(src)
-	if(istype(T)) T.visible_message("<b>[src]</b> neatly folds inwards, compacting down to a rectangular card.")
+	if(istype(T) && !silent) T.visible_message("<b>[src]</b> neatly folds inwards, compacting down to a rectangular card.")
 
 	if(client)
 		src.stop_pulling()
@@ -401,7 +445,7 @@
 			M.drop_from_inventory(H)
 		H.loc = get_turf(src)
 		src.loc = get_turf(H)
-	
+
 	if(isbelly(loc))	//If in tumby, when fold up, card go into tumby
 		var/obj/belly/B = loc
 		src.forceMove(card)
