@@ -86,7 +86,7 @@ So here it sits, snowflake code for a single item.
 		data["modules"] = list()
 
 	return data
-
+/*
 /obj/item/weapon/rig/protean/tgui_act(action, params)
 	switch(action)
 		if("toggle_seals")
@@ -125,3 +125,4 @@ So here it sits, snowflake code for a single item.
 					if("select_charge_type")
 						module.charge_selected = params["charge_type"]
 						. = TRUE
+*/

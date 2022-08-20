@@ -27,6 +27,7 @@
 	//interface_path = "RIGSuit_protean"
 	//ai_interface_path = "RIGSuit_protean"
 	var/sealed = 0
+	var/reviving = 0
 
 /obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
@@ -68,15 +69,15 @@
 	else
 		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
 
-/obj/item/weapon/rig/verb/RemoveBag(var/mob/living/L)
+/obj/item/weapon/rig/verb/RemoveBag()
 	set name = "Remove Stored Bag"
 	set category = "Object"
 
 	if(rig_storage)
-		L.put_in_hands(rig_storage)
+		usr.put_in_hands(rig_storage)
 		rig_storage = null
 	else
-		to_chat(L, "This Rig does not have a bag installed. Use a bag on it to install one.")
+		to_chat(usr, "This Rig does not have a bag installed. Use a bag on it to install one.")
 
 /obj/item/weapon/rig/protean/attack_hand(mob/user as mob)
 	if (src.loc == user)
@@ -354,13 +355,17 @@
 	if(dead)
 		if(istype(W, /obj/item/stack/material/plasteel))
 			var/obj/item/stack/material/plasteel/PL = W
-			if(PL.get_amount() < 5)
-				to_chat(user, "<span class='warning'>You need five sheets of plasteel to reconstruct this Protean.</span>")
-				return
-			if(PL.use(5))
-				to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute now.</span>")
-				make_alive(myprotean)
-				return
+			if(!reviving)
+				if(PL.get_amount() < 5)
+					to_chat(user, "<span class='warning'>You need five sheets of plasteel to reconstruct this Protean.</span>")
+					return
+				if(PL.use(5))
+					to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute in a minute from now.</span>")
+					to_chat(myprotean, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you will be able to reconstitute in one minute.</span>")
+					addtimer(CALLBACK(src, .proc/make_alive, myprotean), 600)
+					return
+			else
+				to_chat(user, "<span class='notice'>This Protean is already reconstituting</span>")
 	if(rig_storage)
 		var/obj/item/weapon/storage/backpack = rig_storage
 		if(backpack.can_be_inserted(W, 1))
@@ -397,7 +402,8 @@
 			S = H.species
 			S.pseudodead = 0
 			dead = 0
-			to_chat(P, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you can act again!</span>")
+			reviving = 0
+			to_chat(P, "<span class='notice'>You have finished reconstituting.</span>")
 
 /obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
 	return	//We don't do that here
@@ -448,7 +454,7 @@
 	else
 		canremove = 0
 
-/obj/item/weapon/rig/protean/ai_can_move_suit(var/mob/user)
+/obj/item/weapon/rig/protean/ai_can_move_suit(mob/user, check_user_module = 0, check_for_ai = 0)
 	if(offline || !cell || !cell.charge || locked_down)
 		if(user)
 			to_chat(user, "<span class='warning'>Your host rig is unpowered and unresponsive.</span>")
@@ -458,3 +464,15 @@
 			to_chat(user, "<span class='warning'>Your host rig is not being worn.</span>")
 		return 0
 	return 1
+
+/obj/item/weapon/rig/protean/toggle_seals(mob/living/carbon/human/M, instant)
+	M = src.wearer
+	..()
+
+/obj/item/weapon/rig/protean/toggle_cooling(mob/user)
+	user = src.wearer
+	..()
+
+/obj/item/weapon/rig/protean/toggle_piece(piece, mob/living/carbon/human/H, deploy_mode, forced)
+	H = src.wearer
+	..()
