@@ -619,11 +619,3 @@
 	suit_sprites = 'icons/mob/taursuits_noodle_vr.dmi'
 	clip_mask_state = "taur_clip_mask_noodle"
 	icon_sprite_tag = "noodle"
-
-/datum/sprite_accessory/tail/taur/longvirus
-	name = "Long Virus (Taur)"
-	icon_state = "longvirus_s"
-	extra_overlay = "longvirus_markings"
-	//under_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
-	//suit_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
-	icon_sprite_tag = "virus"

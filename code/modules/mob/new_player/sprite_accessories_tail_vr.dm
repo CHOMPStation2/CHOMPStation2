@@ -1107,14 +1107,6 @@
 	ani_state = "Segmentedtail_w"
 	extra_overlay_w = "Segmentedtailmarking_w"
 
-/datum/sprite_accessory/tail/anthrovirus_tail
-	name = "Anthro Virus Tail"
-	desc = ""
-	icon_state = "anthrovirustail_mark"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "anthrovirustail"
-
 /datum/sprite_accessory/tail/Segmentedlights
 	name = "Segmented tail, animated synth"
 	desc = ""

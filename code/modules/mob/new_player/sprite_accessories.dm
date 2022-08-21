@@ -41,6 +41,7 @@
 
 	/// Should this sprite block emissives?
 	var/em_block = FALSE
+
 /*
 ////////////////////////////
 /  =--------------------=  /

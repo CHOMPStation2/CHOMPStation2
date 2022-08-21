@@ -81,10 +81,3 @@
 	icon_state = "sergwheat"
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
-
-/datum/sprite_accessory/tail/taur/ch/longvirus
-	name = "Long Virus (Taur)"
-	icon_state = "longvirus_s"
-	extra_overlay = "longvirus_markings"
-	icon_sprite_tag = "virus"
-	//suit_sprites = 'icons/mob/taursuits_noodle.dmi' Aye, I've gotta sprite that shit.
