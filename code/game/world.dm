@@ -80,8 +80,8 @@ var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
-	TGS_TOPIC
-	VGS_TOPIC // VOREStation Edit - VGS
+	VGS_TOPIC // VOREStation Edit - VGS //CHOMP Edit swapped lines around
+	TGS_TOPIC //CHOMP Edit swapped lines around
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
