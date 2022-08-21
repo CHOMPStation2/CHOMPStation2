@@ -3,7 +3,7 @@
 	desc = "That is one buff, angry lizard."
 	tt_desc = "E Anolis cuvieri muscular"
 
-	icon = 'icons/mob/vore32x64_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore32x64_ch.dmi'
 	icon_state = "lizardman"
 	icon_living = "lizardman"
 	icon_dead = "lizardman-dead"

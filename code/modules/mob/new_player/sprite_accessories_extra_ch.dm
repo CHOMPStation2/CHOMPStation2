@@ -142,66 +142,71 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
 
-	guilmonhead
+/datum/sprite_accessory/marking/ch/sylveonheadribbons1
+	name = "Sylveon Head Ribbons"
+	icon_state = "sylveon-bowribbons1"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/guilmonhead
 		name = "Guilmon head"
 		icon_state = "guilmon_head"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
-	guilmonchest
+/datum/sprite_accessory/marking/ch/guilmonchest
 		name = "Guilmon Chest"
 		icon_state = "guilmon_chest"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO)
 
-	guilmonchestmarking
+/datum/sprite_accessory/marking/ch/guilmonchestmarking
 		name = "Guilmon Chest Markings"
 		icon_state = "guilmon_marking"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO)
 
-	guilmonarms
+/datum/sprite_accessory/marking/ch/guilmonarms
 		name = "Guilmon arms"
 		icon_state = "guilmon"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND)
 
-	guilmonRLeg
+/datum/sprite_accessory/marking/ch/guilmonRLeg
 		name = "Guilmon Right leg"
 		icon_state = "guilmon"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_R_LEG)
 
-	guilmonLleg
+/datum/sprite_accessory/marking/ch/guilmonLleg
 		name = "Guilmon Left leg"
 		icon_state = "guilmon"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG)
 
-	guilmondigiRleg1
+/datum/sprite_accessory/marking/ch/guilmondigiRleg1
 		name = "Guilmon digigrade right leg 1"
 		icon_state = "guilmon_digitigrade_1"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_R_LEG)
 
-	guilmondigiLleg1
+/datum/sprite_accessory/marking/ch/guilmondigiLleg1
 		name = "Guilmon digigrade left leg 1"
 		icon_state = "guilmon_digitigrade_1"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG)
 
-	guilmondigiRleg2
+/datum/sprite_accessory/marking/ch/guilmondigiRleg2
 		name = "Guilmon digigrade right leg 2"
 		icon_state = "guilmon_digitigrade_2"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_R_LEG)
 
-	guilmondigiLleg2
+/datum/sprite_accessory/marking/ch/guilmondigiLleg2
 		name = "Guilmon digigrade left leg 2"
 		icon_state = "guilmon_digitigrade_2"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG)
-
 
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
@@ -212,10 +217,9 @@
 	color_blend_mode = ICON_MULTIPLY
 	species_allowed = list(SPECIES_AKULA)
 
-//TFF 16/1/20 - Cotton hair backport
 /datum/sprite_accessory/hair/ch
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 /datum/sprite_accessory/hair/ch/cotton
 	name = "Cotton"
 	icon_state = "hair_cotton"
@@ -228,99 +232,99 @@
 // Extra colorable options for Vox
 /datum/sprite_accessory/hair/vox_afro_color
 	name = "Vox Afro, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_afro"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_crestedquills_color
 	name = "Vox Crested Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_crestedquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_empquills_color
 	name = "Vox Emperor Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_emperorquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_hairhorns_color
 	name = "Vox Hair Horns, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_horns"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_keelquills_color
 	name = "Vox Keel Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_keelquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_keetquills_color
 	name = "Vox Keet Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_keetquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_kingly_color
 	name = "Vox Kingly Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_kingly"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_mohawk_color
 	name = "Vox Mohawk, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_mohawk"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_nights_color
 	name = "Vox Night Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_nights"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_razorclipped_color
 	name = "Vox Razor Clipped, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_razorclipped"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_razor_color
 	name = "Vox Razor, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_razor"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_shortquills_color
 	name = "Vox Short Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_shortquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_tielquills_color
 	name = "Vox Tiel Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_tielquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_yasuquills_color
 	name = "Vox Yasu Quills, Colorable"
-	icon = 'icons/mob/human_face_ch.dmi'
-	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_yasu"
 	species_allowed = list(SPECIES_VOX)
 
@@ -429,3 +433,52 @@
 	icon_state = "teshlarge_eyes_het"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
+
+// Nightstalker Body Markings
+/datum/sprite_accessory/marking/ch/desert_nightstalker
+    name = "Nightstalker Scales (Desert Coloration)"
+    icon_state = "nightstalker_desert"
+    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT,BP_TORSO,BP_GROIN) // Fullbody markings, save head
+    do_colouration = 0 // Don't color, these are pre-colored markings
+
+/datum/sprite_accessory/marking/ch/desert_nightstalker_head
+    name = "Nightstalker Head (Desert Coloration)"
+    icon_state = "nightstalker_desert"
+    body_parts = list(BP_HEAD)
+    do_colouration = 0 // Don't color, these are pre-colored markings
+
+/datum/sprite_accessory/marking/ch/nightstalker_head_center
+    name = "Nightstalker Head, Tricolor (Center)"
+    icon_state = "nightstalker_1"
+    body_parts = list(BP_HEAD)
+    color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/nightstalker_head_left
+    name = "Nightstalker Head, Tricolor (Left)"
+    icon_state = "nightstalker_2"
+    body_parts = list(BP_HEAD)
+    color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/nightstalker_head_right
+    name = "Nightstalker Head, Tricolor (Right)"
+    icon_state = "nightstalker_3"
+    body_parts = list(BP_HEAD)
+    color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/diamondback_nightstalker_outer
+    name = "Nightstalker Scales, Outer"
+    icon_state = "nightstalker_1"
+    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT,BP_TORSO,BP_GROIN) // Fullbody markings, save head
+    color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/diamondback_nightstalker_inner
+    name = "Nightstalker Scales, Inner"
+    icon_state = "nightstalker_2"
+    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_TORSO,BP_GROIN) // Fullbody markings, save head
+    color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/outer_spots
+    name = "Spots, Outer"
+    icon_state = "spots_extremities"
+    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
+    color_blend_mode = ICON_MULTIPLY

@@ -211,3 +211,15 @@
 /area/submap/XenoHive
 	name = "POI - Xeno Hive"
 	ambience = AMBIENCE_RUINS
+
+/area/submap/CultBar
+	name = "POI - Cult Bar"
+	ambience = AMBIENCE_GHOSTLY
+
+/area/submap/MechHanger
+	name = "POI - Mech Hanger"
+	ambience = AMBIENCE_SIF
+
+/area/submap/DugOutMercs
+	name = "POI - Dug Out Mercanries"
+	ambience = AMBIENCE_HIGHSEC

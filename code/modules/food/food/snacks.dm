@@ -3984,8 +3984,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/rawcutlet/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 9)
-	reagents.add_reagent("protein",  3)
+	reagents.add_reagent("protein", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/cutlet
 	name = "cutlet"
@@ -3997,8 +3996,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/cutlet/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 15)
-	reagents.add_reagent("protein",   5)
+	reagents.add_reagent("protein", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/rawmeatball
 	name = "raw meatball"
@@ -4010,8 +4008,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/rawmeatball/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 30)
-	reagents.add_reagent("protein",  10)
+	reagents.add_reagent("protein", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/hotdog
 	name = "hotdog"
@@ -4448,7 +4445,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/wormsickly/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 10)
+	reagents.add_reagent("fishbait", 9)
+	reagents.add_reagent("protein",  3)
 
 /obj/item/weapon/reagent_containers/food/snacks/worm
 	name = "strange worm"
@@ -4461,7 +4459,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/worm/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 20)
+	reagents.add_reagent("fishbait", 15)
+	reagents.add_reagent("protein",   5)
 
 /obj/item/weapon/reagent_containers/food/snacks/wormdeluxe
 	name = "deluxe worm"
@@ -4474,7 +4473,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/wormdeluxe/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 40)
+	reagents.add_reagent("fishbait", 30)
+	reagents.add_reagent("protein",  10)
 
 /obj/item/weapon/reagent_containers/food/snacks/siffruit
 	name = "pulsing fruit"
@@ -6900,6 +6900,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/appleberry/Initialize()
 	. = ..()
 	reagents.add_reagent("milk", 8)
+	reagents.add_reagent("sugar", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/ntbeans
 	name = "baked beans"
@@ -6928,10 +6929,11 @@
 	filling_color = "#caa3c9"
 	center_of_mass = list("x"=15, "y"=9)
 	bitesize = 2
+	var/brainmeat = "brain_protein"
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/Initialize()
 	. = ..()
-	reagents.add_reagent("brain_protein", 10)
+	reagents.add_reagent(brainmeat, 10)
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red
 	name = "\improper BrainzSnax RED"
@@ -6945,10 +6947,7 @@
 	filling_color = "#a6898d"
 	center_of_mass = list("x"=15, "y"=9)
 	bitesize = 2
-
-/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red/Initialize()
-	. = ..()
-	reagents.add_reagent("red_brain_protein", 10)
+	brainmeat = "red_brain_protein"
 
 //////////////Packaged Food - break open and eat//////////////
 

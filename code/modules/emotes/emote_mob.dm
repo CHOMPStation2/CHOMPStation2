@@ -54,7 +54,7 @@
 
 		if(act == "custom")
 			if(!message)
-				message = sanitize_or_reflect(input(src,"Choose an emote to display.") as text|null, src) //VOREStation Edit - Reflect too long messages, within reason
+				message = sanitize_or_reflect(tgui_input_text(src,"Choose an emote to display."), src) //VOREStation Edit - Reflect too long messages, within reason
 			if(!message)
 				return
 			if (!m_type)
@@ -165,7 +165,7 @@
 
 	var/input
 	if(!message)
-		input = sanitize(input(src,"Choose an emote to display.") as text|null)
+		input = sanitize(tgui_input_text(src,"Choose an emote to display."))
 	else
 		input = message
 
@@ -191,10 +191,23 @@
 	if(message)
 		message = encode_html_emphasis(message)
 
+		/*	CHOMPRemove - Not needed if you set your defaults right
+		var/ourfreq = null
+		if(isliving(src))
+			var/mob/living/L = src
+			if(L.voice_freq > 0 )
+				ourfreq = L.voice_freq
+		*/
+
+
 		// Hearing gasp and such every five seconds is not good emotes were not global for a reason.
 		// Maybe some people are okay with that.
 		var/turf/T = get_turf(src)
+
 		if(!T) return
+
+		if(client)
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds) //CHOMPEdit - use say prefs instead
 		var/list/in_range = get_mobs_and_objs_in_view_fast(T,range,2,remote_ghosts = client ? TRUE : FALSE)
 		var/list/m_viewers = in_range["mobs"]
 		var/list/o_viewers = in_range["objs"]
@@ -204,7 +217,12 @@
 				if(M)
 					if(isobserver(M))
 						message = "<span class='emote'><B>[src]</B> ([ghost_follow_link(src, M)]) [input]</span>"
-					M.show_message(message, m_type)
+					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
+					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/weapon/holder) && src.loc.loc == M)))
+						M.show_message(message)
+					else
+						M.show_message(message, m_type)
+					//CHOMPEdit End
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)

@@ -307,7 +307,7 @@
 
 //VOREStation Add Start		Makes it so that simplemobs can understand galcomm without being able to speak it.
 /mob/living/simple_mob/say_understands(var/mob/other, var/datum/language/speaking = null)
-	if(understands_common && speaking?.name == LANGUAGE_GALCOM)
+	if(understands_common && (speaking?.name == LANGUAGE_GALCOM || !speaking))
 		return TRUE
 	return ..()
 //Vorestation Add End
@@ -319,7 +319,7 @@
 /mob/living/simple_mob/Bump(var/atom/A)
 	if(mobcard && istype(A, /obj/machinery/door))
 		var/obj/machinery/door/D = A
-		if(!istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(mobcard))
+		if(client && !istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(mobcard))
 			D.open()
 	else
 		..()

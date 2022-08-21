@@ -1,7 +1,7 @@
 /obj/item/weapon/taskmanager
 	name = "Task Manager"
 	desc = "A high-tech tool used to pull surplus items from offsite storage. Select a department to begin! Has a five minute cooldown between successful uses"
-	icon = 'icons/mob/dogborg_ch.dmi'
+	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
 	icon_state = "taskmanager"
 	item_icons = list(
 			slot_l_hand_str = 'icons/mob/items/lefthand_vr.dmi',
@@ -23,12 +23,12 @@
 	var/ready = 1
 	var/list/scannables = list()
 	var/list/scanned = list()
-	var/static/image/radial_image_bridge = image(icon = 'icons/mob/radial_ch.dmi', icon_state = "bridge")
-	var/static/image/radial_image_engineering = image(icon= 'icons/mob/radial_ch.dmi', icon_state = "eng")
-	var/static/image/radial_image_medical = image(icon = 'icons/mob/radial_ch.dmi', icon_state = "medbay")
-	var/static/image/radial_image_science = image(icon = 'icons/mob/radial_ch.dmi', icon_state = "sci")
-	var/static/image/radial_image_service = image(icon = 'icons/mob/radial_ch.dmi', icon_state = "bar")
-	var/static/image/radial_image_security = image(icon = 'icons/mob/radial_ch.dmi', icon_state = "armory")
+	var/static/image/radial_image_bridge = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "bridge")
+	var/static/image/radial_image_engineering = image(icon= 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "eng")
+	var/static/image/radial_image_medical = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "medbay")
+	var/static/image/radial_image_science = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "sci")
+	var/static/image/radial_image_service = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "bar")
+	var/static/image/radial_image_security = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "armory")
 
 /obj/item/weapon/taskmanager/proc/check_menu(mob/living/user)
 	if(!istype(user))

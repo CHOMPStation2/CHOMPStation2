@@ -42,7 +42,7 @@
 
 	var/input
 	if(!message)
-		input = sanitize_or_reflect(input(src,"Choose an emote to display.") as text|null, src)
+		input = sanitize_or_reflect(tgui_input_text(src,"Choose an emote to display."), src)
 	else
 		input = message
 
@@ -61,12 +61,15 @@
 		var/list/vis_objs = vis["objs"]
 
 		for(var/mob/M as anything in vis_mobs)
-			if(isobserver(M) && !is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)
+			if(isobserver(M) && !(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) && !M.client?.holder) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
 				spawn(0)
 					M.show_message(message, 2)
+					if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
+							M << sound(pick(voice_sounds_list), volume = 25)
 
 		for(var/obj/O as anything in vis_objs)
 			spawn(0)
@@ -123,7 +126,7 @@
 			to_chat(src, "<span class='warning'>You cannot speak in IC (muted).</span>")
 			return
 	if (!message)
-		message = input(usr, "Type a message to say.","Psay") as text|null
+		message = tgui_input_text(usr, "Type a message to say.","Psay")
 	message = sanitize_or_reflect(message,src)
 	if (!message)
 		return
@@ -145,10 +148,16 @@
 		else
 			pb = db.pred_body
 			to_chat(pb, "<span class='changeling'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To our pred if dominated brain
+			if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					pb << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
 		to_chat(pb, "<span class='changeling'>\The [M] thinks, \"[message]\"</span>")	//To our pred if absorbed
+		if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+				pb << sound(pick(voice_sounds_list), volume = 25)
 		f = TRUE
 
 	if(pb)	//We are prey, let's do the prey thing.
@@ -157,11 +166,17 @@
 			if(istype(I, /mob/living/dominated_brain) && I != M)
 				var/mob/living/dominated_brain/db = I
 				to_chat(db, "<span class='changeling'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To any dominated brains in the pred
+				if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+						db << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
 		for(var/B in pb.vore_organs)
 			for(var/mob/living/L in B)
 				if(L.absorbed && L != M && L.ckey)
 					to_chat(L, "<span class='changeling'>\The [M] thinks, \"[message]\"</span>")	//To any absorbed people in the pred
+					if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+						if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+							L << sound(pick(voice_sounds_list), volume = 25)
 					f = TRUE
 
 	//Let's also check and see if there's anyone inside of us to send the message to.
@@ -169,18 +184,30 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			to_chat(db, "<span class='changeling'><b>\The [M] thinks, \"[message]\"</b></span>")	//To any dominated brains inside us
+			if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					db << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
 	for(var/B in M.vore_organs)
 		for(var/mob/living/L in B)
 			if(L.absorbed)
 				to_chat(L, "<span class='changeling'><b>\The [M] thinks, \"[message]\"</b></span>")	//To any absorbed people inside us
+				if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+						L << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
 
 	if(f)	//We found someone to send the message to
 		if(pb)
 			to_chat(M, "<span class='changeling'>You think \"[message]\"</span>")	//To us if we are the prey
+			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					M << sound(pick(voice_sounds_list), volume = 25)
 		else
 			to_chat(M, "<span class='changeling'><b>You think \"[message]\"</b></span>")	//To us if we are the pred
+			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
@@ -204,7 +231,7 @@
 			to_chat(src, "<span class='warning'>You cannot speak in IC (muted).</span>")
 			return
 	if (!message)
-		message = input(usr, "Type a message to emote.","Pme") as text|null
+		message = tgui_input_text(usr, "Type a message to emote.","Pme")
 	message = sanitize_or_reflect(message,src)
 	if (!message)
 		return
@@ -225,11 +252,17 @@
 		else
 			pb = db.pred_body
 			to_chat(pb, "<span class='changeling'>\The [M] [message]</span>")	//To our pred if dominated brain
+			if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					pb << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
 
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
 		to_chat(pb, "<span class='changeling'>\The [M] [message]</span>")	//To our pred if absorbed
+		if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+				pb << sound(pick(voice_sounds_list), volume = 25)
 		f = TRUE
 
 	if(pb)	//We are prey, let's do the prey thing.
@@ -238,11 +271,17 @@
 			if(istype(I, /mob/living/dominated_brain) && I != M)
 				var/mob/living/dominated_brain/db = I
 				to_chat(db, "<span class='changeling'>\The [M] [message]</span>")	//To any dominated brains in the pred
+				if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+						pb << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
 		for(var/B in pb.vore_organs)
 			for(var/mob/living/L in B)
 				if(L.absorbed && L != M && L.ckey)
 					to_chat(L, "<span class='changeling'>\The [M] [message]</span>")	//To any absorbed people in the pred
+					if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+						if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+							L << sound(pick(voice_sounds_list), volume = 25)
 					f = TRUE
 
 	//Let's also check and see if there's anyone inside of us to send the message to.
@@ -250,18 +289,30 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			to_chat(db, "<span class='changeling'><b>\The [M] [message]</b></span>")	//To any dominated brains inside us
+			if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					db << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
 	for(var/B in M.vore_organs)
 		for(var/mob/living/L in B)
 			if(L.absorbed)
 				to_chat(L, "<span class='changeling'><b>\The [M] [message]</b></span>")	//To any absorbed people inside us
+				if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+						L << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
 
 	if(f)	//We found someone to send the message to
 		if(pb)
 			to_chat(M, "<span class='changeling'>\The [M] [message]</span>")	//To us if we are the prey
+			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					M << sound(pick(voice_sounds_list), volume = 25)
 		else
 			to_chat(M, "<span class='changeling'><b>\The [M] [message]</b></span>")	//To us if we are the pred
+			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
+					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue

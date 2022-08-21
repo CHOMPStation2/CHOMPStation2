@@ -1,0 +1,14 @@
+Hey congratulations you found the modularity folder.
+What's it for? Well, chompstation is, currently, a downstream of another codebase, vorestation.
+Content we write for chomp often needs to be written in such a way as to not conflict with code that comes from this upstream.
+
+In an effort to make this easier to do, I've started our modularity folder.
+Ideally, any content that can be written that is wholelly independant of vorestation's content, should be
+included in this modularity folder, and put into the associated folder that it would have appeared in among the standard files.
+
+Ideally, the point of this is to make it slightly easier to differentiate chomp specific content from virgo content.
+
+When should you use this?
+Mostly for chomp exclusive stuff, otherwise if it's expected to be a part of upstream as well, probably in the base files.
+From now on, any code I completely rewrite from virgo, I'll be including in this set of folders.
+-BlackMajor

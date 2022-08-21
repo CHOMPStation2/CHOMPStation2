@@ -84,7 +84,7 @@
 		handle_shock()
 
 		handle_pain()
-		
+
 		handle_allergens()
 
 		handle_medical_side_effects()
@@ -573,12 +573,12 @@
 	else
 		failed_last_breath = 0
 		adjustOxyLoss(-5)
-		
+
 	if(!does_not_breathe && client) // If we breathe, and have an active client, check if we have synthetic lungs.
 		var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
-		var/turf = get_turf(src) 
+		var/turf = get_turf(src)
 		var/mob/living/carbon/human/M = src
-		if(L.robotic < ORGAN_ROBOT && is_below_sound_pressure(turf) && M.internal) // Only non-synthetic lungs, please, and only play these while the pressure is below that which we can hear sounds normally AND we're on internals. 
+		if(L.robotic < ORGAN_ROBOT && is_below_sound_pressure(turf) && M.internal) // Only non-synthetic lungs, please, and only play these while the pressure is below that which we can hear sounds normally AND we're on internals.
 			if(!failed_inhale && (world.time >= (last_breath_sound + 7 SECONDS))) // Were we able to inhale successfully? Play inhale.
 				var/exhale = failed_exhale // Pass through if we passed exhale or not
 				play_inhale(M, exhale)
@@ -617,11 +617,11 @@
 				apply_damage(COLD_GAS_DAMAGE_LEVEL_3, BURN, BP_HEAD, used_weapon = "Excessive Cold")
 				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MAX)
 			else if(breath.temperature <= species.breath_cold_level_2)
-				apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Cold")
-				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_LOW)
-			else if(breath.temperature <= species.breath_cold_level_1)
 				apply_damage(COLD_GAS_DAMAGE_LEVEL_2, BURN, BP_HEAD, used_weapon = "Excessive Cold")
 				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MODERATE)
+			else if(breath.temperature <= species.breath_cold_level_1)
+				apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Cold")
+				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_LOW)
 			else if(species.get_environment_discomfort(src, ENVIRONMENT_COMFORT_MARKER_COLD))
 				throw_alert("temp", /obj/screen/alert/chilly, COLD_ALERT_SEVERITY_LOW)
 			else
@@ -649,25 +649,25 @@
 
 	breath.update_values()
 	return 1
-	
+
 /mob/living/carbon/human/proc/play_inhale(var/mob/living/M, var/exhale)
 	var/suit_inhale_sound
 	if(species.suit_inhale_sound)
 		suit_inhale_sound = species.suit_inhale_sound
 	else // Failsafe
 		suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
-	
+
 	playsound_local(get_turf(src), suit_inhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
 		addtimer(CALLBACK(src, .proc/play_exhale, M), 5 SECONDS)
-	
+
 /mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
 	var/suit_exhale_sound
 	if(species.suit_exhale_sound)
 		suit_exhale_sound = species.suit_exhale_sound
 	else // Failsafe
 		suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
-	
+
 	playsound_local(get_turf(src), suit_exhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 
 /mob/living/carbon/human/proc/handle_allergens()
@@ -807,6 +807,8 @@
 
 	if(adjusted_pressure >= species.hazard_high_pressure)
 		var/pressure_damage = min( ( (adjusted_pressure / species.hazard_high_pressure) -1 )*PRESSURE_DAMAGE_COEFFICIENT , MAX_HIGH_PRESSURE_DAMAGE)
+		if(stat==DEAD)
+			pressure_damage = pressure_damage/2
 		take_overall_damage(brute=pressure_damage, used_weapon = "High Pressure")
 		throw_alert("pressure", /obj/screen/alert/highpressure, 2)
 	else if(adjusted_pressure >= species.warning_high_pressure)
@@ -818,7 +820,10 @@
 	else
 		if( !(COLD_RESISTANCE in mutations))
 			if(!isSynthetic() || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF pressure seals
-				take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
+				var/pressure_damage = LOW_PRESSURE_DAMAGE
+				if(stat==DEAD)
+					pressure_damage = pressure_damage/2
+				take_overall_damage(brute=pressure_damage, used_weapon = "Low Pressure")
 			if(getOxyLoss() < 55) 		// 12 OxyLoss per 4 ticks when wearing internals;    unconsciousness in 16 ticks, roughly half a minute
 				var/pressure_dam = 3	// 16 OxyLoss per 4 ticks when no internals present; unconsciousness in 13 ticks, roughly twenty seconds
 										// (Extra 1 oxyloss from failed breath)
@@ -1100,7 +1105,7 @@
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
-		if((getOxyLoss() > (species.total_health/2)) || (health <= config.health_threshold_crit))
+		if((getOxyLoss() > (species.total_health/2)) || (health <= (config.health_threshold_crit * species.crit_mod)))
 			Paralyse(3)
 
 		if(hallucination)
@@ -1659,49 +1664,54 @@
 /mob/living/carbon/human/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
-	if(!can_feel_pain()) return
-
-	if(health < config.health_threshold_softcrit)// health 0 makes you immediately collapse
-		shock_stage = max(shock_stage, 61)
-
-	if(traumatic_shock >= 80)
+	//CHOMPEdit - couple of fixes here. Fixes synths being stuck in permenant shock.
+	if(traumatic_shock >= 80 && can_feel_pain())
 		shock_stage += 1
-	else if(health < config.health_threshold_softcrit)
-		shock_stage = max(shock_stage, 61)
 	else
 		shock_stage = min(shock_stage, 160)
 		shock_stage = max(shock_stage-1, 0)
+	if(!can_feel_pain()) return
 
+	if(health < (config.health_threshold_softcrit * species.crit_mod)) //CHOMPEdit - fixes
+		shock_stage = max(shock_stage, 61)
+	//CHOMPEdit end
 	if(stat)
 		return 0
 
 	if(shock_stage == 10)
-		custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 40)
+		if(traumatic_shock >= 80)
+			custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 40)
 
 	if(shock_stage >= 30)
 		if(shock_stage == 30 && !isbelly(loc)) //VOREStation Edit
 			custom_emote(VISIBLE_MESSAGE, "is having trouble keeping their eyes open.")
 		eye_blurry = max(2, eye_blurry)
-		stuttering = max(stuttering, 5)
+		if(traumatic_shock >= 80)
+			stuttering = max(stuttering, 5)
+
 
 	if(shock_stage == 40)
-		to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+		if(traumatic_shock >= 80)
+			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 
 	if (shock_stage >= 60)
 		if(shock_stage == 60 && !isbelly(loc)) //VOREStation Edit
 			custom_emote(VISIBLE_MESSAGE, "'s body becomes limp.")
 		if (prob(2))
-			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+			if(traumatic_shock >= 80)
+				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 			Weaken(20)
 
 	if(shock_stage >= 80)
 		if (prob(5))
-			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+			if(traumatic_shock >= 80)
+				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 			Weaken(20)
 
 	if(shock_stage >= 120)
 		if (prob(2))
-			to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
+			if(traumatic_shock >= 80)
+				to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
 			Paralyse(5)
 
 	if(shock_stage == 150)
@@ -1975,8 +1985,10 @@ End Chomp edit */
 		//   increase your body temperature beyond 250C, but it's possible something else (atmos) has heated us up beyond it,
 		//   so don't worry about the firestacks at that point. Really, we should be cooling the room down, because it has
 		//   to expend energy to heat our body up! But let's not worry about that.
-		if((bodytemperature + fire_temp_add) > HUMAN_COMBUSTION_TEMP)
-			return
+
+		// This whole section above is ABSOLUTELY STUPID and makes no sense and this would prevent too-high-heat from even being able to hurt someone. No. We will heat up for as long as needed.
+		//if((bodytemperature + fire_temp_add) > HUMAN_COMBUSTION_TEMP)
+		//	return
 
 		bodytemperature += fire_temp_add
 

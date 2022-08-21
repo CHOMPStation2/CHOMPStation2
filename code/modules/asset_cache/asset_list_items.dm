@@ -1,9 +1,4 @@
 //DEFINITIONS FOR ASSET DATUMS START HERE.
-/datum/asset/simple/tgui_common
-	// keep_local_name = TRUE
-	assets = list(
-		"tgui-common.bundle.js" = file("tgui/public/tgui-common.bundle.js"),
-	)
 
 /datum/asset/simple/tgui
 	// keep_local_name = TRUE
@@ -305,7 +300,7 @@
 	name = "vore"
 
 /datum/asset/spritesheet/vore/register()
-	var/icon/downscaled = icon('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
+	var/icon/downscaled = icon('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
 	..()

@@ -19,6 +19,7 @@
 /obj/item/weapon/smes_coil/weak
 	name = "basic superconductive magnetic coil"
 	desc = "A cheaper model of superconductive magnetic coil. Its capacity and I/O rating are considerably lower."
+	icon_state = "smes_coil_weak"
 	ChargeCapacity = 1200000			// 20 kWh
 	IOCapacity = 150000					// 150 kW
 
@@ -26,6 +27,7 @@
 /obj/item/weapon/smes_coil/super_capacity
 	name = "superconductive capacitance coil"
 	desc = "A specialised type of superconductive magnetic coil with a significantly stronger containment field, allowing for larger power storage. Its IO rating is much lower, however."
+	icon_state = "smes_coil_capacitance"
 	ChargeCapacity = 60000000			// 1000 kWh
 	IOCapacity = 50000					// 50 kW
 
@@ -33,6 +35,7 @@
 /obj/item/weapon/smes_coil/super_io
 	name = "superconductive transmission coil"
 	desc = "A specialised type of superconductive magnetic coil with reduced storage capabilites but vastly improved power transmission capabilities, making it useful in systems which require large throughput."
+	icon_state = "smes_coil_transmission"
 	ChargeCapacity = 600000				// 10 kWh
 	IOCapacity = 1000000				// 1000 kW
 
@@ -309,7 +312,7 @@
 
 		// Multitool - change RCON tag
 		if(istype(W, /obj/item/device/multitool))
-			var/newtag = input(user, "Enter new RCON tag. Use \"NO_TAG\" to disable RCON or leave empty to cancel.", "SMES RCON system") as text
+			var/newtag = tgui_input_text(user, "Enter new RCON tag. Use \"NO_TAG\" to disable RCON or leave empty to cancel.", "SMES RCON system")
 			if(newtag)
 				RCon_tag = newtag
 				to_chat(user, "<span class='notice'>You changed the RCON tag to: [newtag]</span>")

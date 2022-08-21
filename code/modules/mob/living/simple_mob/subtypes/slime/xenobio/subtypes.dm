@@ -788,3 +788,16 @@
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick/Initialize()
 	pacify() // So the physical mob also gets made harmless.
 	return ..()
+
+//ChompAdd Begins
+// A pacified pink slime for either Admin-spawning or putting in a casino reward or capture crystal.
+/mob/living/simple_mob/slime/xenobio/pink/sana
+	name = "Sana"
+	desc = "A pink slime that seems to be oddly friendly, and doesn't seem interested in eating your face like the rest of them."
+	rainbow_core_candidate = FALSE
+	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
+
+/mob/living/simple_mob/slime/xenobio/pink/sana/Initialize()
+	pacify() // So the physical mob also gets made harmless.
+	return ..()
+//ChompAdd End

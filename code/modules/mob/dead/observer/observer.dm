@@ -123,9 +123,14 @@
 		if(ishuman(body))
 			var/mob/living/carbon/human/H = body
 			add_overlay(H.overlays_standing)
-
-	if(!T)	T = pick(latejoin)			//Safety in case we cannot find the body's position
-	forceMove(T)
+			
+	if(!T)
+		T = pick(latejoin)			//Safety in case we cannot find the body's position
+	if(T)
+		forceMove(T)
+	else
+		moveToNullspace()
+		to_chat(src, "<span class='danger'>Could not locate an observer spawn point. Use the Teleport verb to jump to the station map.</span>")
 
 	if(!name)							//To prevent nameless ghosts
 		name = capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
@@ -763,7 +768,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	var/max_length = 50
 
-	var/message = sanitize(input(usr, "Write a message. It cannot be longer than [max_length] characters.","Blood writing", ""))
+	var/message = sanitize(tgui_input_text(usr, "Write a message. It cannot be longer than [max_length] characters.","Blood writing", "", max_length))
 
 	if (message)
 
@@ -928,7 +933,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/mob/living/M = tgui_input_list(src, "Select who to whisper to:", "Whisper to?", options)
 		if(!M)
 			return 0
-		var/msg = sanitize(input(src, "Message:", "Spectral Whisper") as text|null)
+		var/msg = sanitize(tgui_input_text(src, "Message:", "Spectral Whisper"))
 		if(msg)
 			log_say("(SPECWHISP to [key_name(M)]): [msg]", src)
 			to_chat(M, "<span class='warning'> You hear a strange, unidentifiable voice in your head... <font color='purple'>[msg]</font></span>")
@@ -977,15 +982,29 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost"
 	set name = "Blank pAI alert"
 	set desc = "Flash an indicator light on available blank pAI devices for a smidgen of hope."
+
+	var/time_till_respawn = time_till_respawn()
+	if(time_till_respawn == -1) // Special case, never allowed to respawn
+		to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
+	else if(time_till_respawn) // Nonzero time to respawn
+		to_chat(usr, "<span class='warning'>You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
+		return
+
+	if(jobban_isbanned(usr, "pAI"))
+		to_chat(usr,"<span class='warning'>You cannot alert pAI cards when you are banned from playing as a pAI.</span>")
+		return
 	
 	if(usr.client.prefs?.be_special & BE_PAI)
+		var/choice = tgui_alert(usr, "Would you like to submit yourself to the recruitment list too?", "Confirmation", list("No", "Yes"))
+		if(choice == "Yes")
+			paiController.recruitWindow(usr)
 		var/count = 0
 		for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
 			var/obj/item/device/paicard/PP = p
 			if(PP.pai == null)
 				count++
-				PP.icon = 'icons/obj/pda_vr.dmi' // VOREStation Edit
 				PP.add_overlay("pai-ghostalert")
+				PP.alertUpdate()
 				spawn(54)
 					PP.cut_overlays()
 		to_chat(usr,"<span class='notice'>Flashing the displays of [count] unoccupied PAIs.</span>")

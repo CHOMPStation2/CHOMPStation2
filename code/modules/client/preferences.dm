@@ -28,9 +28,11 @@ var/list/preferences_datums = list()
 
 	var/tgui_fancy = TRUE
 	var/tgui_lock = FALSE
+	var/tgui_input_mode = FALSE			// All the Input Boxes (Text,Number,List,Alert)
+	var/tgui_large_buttons = TRUE
+	var/tgui_swapped_buttons = FALSE
 
 	//character preferences
-	var/num_languages = 0				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
@@ -161,12 +163,6 @@ var/list/preferences_datums = list()
 	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
 	var/selecting_slots = FALSE
 
-//CHOMPEdit Begin
-/datum/preferences/proc/numlanguage()
-	var/datum/species/S = GLOB.all_species[species]
-	var/num = max(num_languages, S.num_alternate_languages)
-	return (num == 0) ? 3 : num //Don't return 0
-//CHOMPEdit End
 
 /datum/preferences/New(client/C)
 	player_setup = new(src)
