@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ignore misc BYOND files
 Thumbs.db
 vchat.db
@@ -29,3 +30,33 @@ temp.dmi
 
 node_modules/
 package-lock.json
+=======
+#ignore misc BYOND files
+Thumbs.db
+vchat.db
+vchat.db*
+*.log
+*.int
+*.rsc
+*.dmb
+*.lk
+*.backup
+*.before
+*.pyc
+*.pid
+data
+data/
+cfg/
+
+#Visual studio stuff
+*.vscode/*
+!/.vscode/launch.json
+!/.vscode/extensions.json
+!/.vscode/settings.json
+!/.vscode/tasks.json
+
+temp.dmi
+
+node_modules/
+package-lock.json
+>>>>>>> 2d854312ad... Merge pull request #13549 from Cameron653/git-stop-ignoring
