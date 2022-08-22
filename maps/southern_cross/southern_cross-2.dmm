@@ -53786,6 +53786,14 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
+/obj/structure/closet/radiation{
+	anchored = 1;
+	starts_with = list(/obj/item/clothing/suit/radiation = 4, /obj/item/clothing/head/radiation = 4, /obj/item/device/geiger = 4)
+	},
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ilQ" = (

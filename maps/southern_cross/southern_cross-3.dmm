@@ -1464,7 +1464,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "bwM" = (
-/obj/structure/window/phoronreinforced,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
@@ -1474,8 +1475,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced,
 /obj/machinery/light/floortube{
 	dir = 8
 	},
@@ -6572,7 +6572,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/starboard)
 "fDz" = (
-/obj/structure/window/phoronreinforced,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
@@ -6582,8 +6583,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced,
 /obj/machinery/light/floortube{
 	dir = 8
 	},
@@ -7772,7 +7772,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "gwd" = (
-/obj/structure/window/phoronreinforced,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
@@ -7782,8 +7783,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -9707,7 +9707,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "iJl" = (
-/obj/structure/window/phoronreinforced,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
@@ -9717,8 +9718,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced,
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
 "iJD" = (
@@ -16010,7 +16010,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
 "oTp" = (
-/obj/structure/window/phoronreinforced,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
@@ -16020,15 +16021,14 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced,
+/obj/machinery/light/floortube{
+	dir = 8
+	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/machinery/light/floortube{
-	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
