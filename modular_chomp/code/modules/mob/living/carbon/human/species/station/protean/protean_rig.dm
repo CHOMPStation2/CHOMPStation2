@@ -455,6 +455,8 @@
 		canremove = 0
 
 /obj/item/weapon/rig/protean/ai_can_move_suit(mob/user, check_user_module = 0, check_for_ai = 0)
+	if(check_for_ai)
+		return 0	//We don't do that here.
 	if(offline || !cell || !cell.charge || locked_down)
 		if(user)
 			to_chat(user, "<span class='warning'>Your host rig is unpowered and unresponsive.</span>")
