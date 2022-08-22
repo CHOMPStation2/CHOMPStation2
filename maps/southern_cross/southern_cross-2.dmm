@@ -13370,9 +13370,9 @@
 /area/engineering/workshop)
 "aQb" = (
 /obj/machinery/door/window/northleft{
-	req_one_access = list(35,28);
+	name = "Animal Pen";
 	req_access = newlist();
-	name = "Animal Pen"
+	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
@@ -15666,6 +15666,27 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/port)
+"aXb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "aXe" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -32063,7 +32084,6 @@
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/sink/countertop{
-	dir = 2;
 	pixel_y = 7
 	},
 /obj/item/trash/plate{
@@ -35338,8 +35358,7 @@
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artgallery)
@@ -36743,23 +36762,23 @@
 	dir = 4
 	},
 /obj/item/clothing/suit/storage/apron/white{
-	pixel_y = 7;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /obj/item/clothing/suit/storage/apron/white{
-	pixel_y = 7;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 7
 	},
 /obj/item/clothing/suit/storage/apron/white{
 	pixel_y = 6
 	},
 /obj/item/clothing/glasses/regular/hipster{
-	pixel_y = -2;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -2
 	},
 /obj/item/clothing/mask/smokable/pipe/cobpipe{
-	pixel_y = 3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 3
 	},
 /obj/item/clothing/head/beret{
 	pixel_x = 5;
@@ -37090,8 +37109,7 @@
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artgallery)
@@ -37174,7 +37192,6 @@
 /obj/item/weapon/reagent_containers/food/drinks/smallmilk,
 /obj/item/weapon/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge{
-	pixel_y = 0;
 	pixel_x = 6
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -37290,8 +37307,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/carpet{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/button/windowtint{
 	id = "tabletop_window_tint";
@@ -37485,17 +37501,17 @@
 "coy" = (
 /obj/structure/table/marble,
 /obj/item/weapon/hand_labeler{
-	pixel_y = 8;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 8
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 2;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 2
 	},
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 2;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 2
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -37507,8 +37523,8 @@
 	pixel_x = 28
 	},
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour{
-	pixel_y = -2;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -2
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
@@ -37522,12 +37538,12 @@
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/box/donut{
 	pixel_x = 3;
@@ -43604,7 +43620,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/research{
 	name = "Toxins Storage";
-	req_access = list(8)
+	req_access = list(7)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/storage)
@@ -46167,6 +46183,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/ascenter)
+"ess" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "esJ" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /obj/machinery/meter,
@@ -48902,10 +48938,10 @@
 /area/maintenance/medbay)
 "fOV" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 1;
 	id = "coffeeshop";
 	name = "Cafe Shutters";
 	pixel_y = -26;
-	dir = 1;
 	req_one_access = list(25,28)
 	},
 /obj/machinery/button/neonsign{
@@ -50209,23 +50245,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "gwp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Research Hallway Starboard"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -50254,6 +50278,22 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
+	},
+/obj/structure/stairs/spawner/east,
+/obj/structure/cable/green{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
+/obj/machinery/atmospherics/pipe/zpipe/up/supply,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/disposalpipe/up,
+/obj/structure/sign/warning/radioactive{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -51324,9 +51364,7 @@
 /area/hallway/primary/seconddeck/fscenter)
 "haC" = (
 /obj/structure/easel,
-/obj/item/canvas/nineteen_nineteen{
-	pixel_y = 10
-	},
+/obj/item/canvas/nineteen_nineteen,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
@@ -51558,13 +51596,13 @@
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/window/southright{
-	name = "Hydroponics";
-	dir = 4
+	dir = 4;
+	name = "Hydroponics"
 	},
 /obj/machinery/door/window/northleft{
+	dir = 8;
 	name = "Hydroponics";
-	req_one_access = list(35,28);
-	dir = 8
+	req_one_access = list(35,28)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -51572,8 +51610,7 @@
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hydroponics)
@@ -52414,6 +52451,18 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "hIn" = (
@@ -52480,22 +52529,25 @@
 /area/hallway/secondary/entry/D2)
 "hJo" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
-/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "hJw" = (
@@ -53746,7 +53798,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
 	},
@@ -53758,6 +53813,10 @@
 "ini" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "inE" = (
@@ -54506,32 +54565,32 @@
 "iLA" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = -5;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -5
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 7;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -57728,28 +57787,27 @@
 "kqI" = (
 /obj/structure/table/woodentable,
 /obj/item/paint_palette{
-	pixel_y = -6;
+	pixel_x = 6;
+	pixel_y = -6
+	},
+/obj/item/paint_palette{
 	pixel_x = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 0;
-	pixel_x = 6
-	},
-/obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_brush{
-	pixel_y = -5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -5
 	},
 /obj/item/paint_brush{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/seconddeck/artgallery)
@@ -59912,7 +59970,6 @@
 	dir = 9
 	},
 /obj/structure/bed/chair/sofa/right/brown{
-	dir = 2;
 	layer = 2.9
 	},
 /obj/structure/window/basic{
@@ -62902,8 +62959,7 @@
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artsupplies)
@@ -63259,24 +63315,24 @@
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/table/marble,
 /obj/item/weapon/storage/box/glasses/coffeecup{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/storage/box/glasses/coffeemug{
-	pixel_y = 12;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 12
 	},
 /obj/item/weapon/storage/box/glasses/square{
-	pixel_y = 1;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 1
 	},
 /obj/item/weapon/storage/box/buns{
-	pixel_y = 12;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 12
 	},
 /obj/item/weapon/storage/box/buns{
-	pixel_y = 12;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 12
 	},
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack{
@@ -67569,8 +67625,8 @@
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/storage/box/donut{
-	pixel_y = -4;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
@@ -69432,8 +69488,8 @@
 "rbZ" = (
 /obj/structure/closet/emcloset,
 /obj/structure/extinguisher_cabinet{
-	pixel_y = -30;
-	dir = 1
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/library)
@@ -70738,8 +70794,7 @@
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artgallery)
@@ -72066,12 +72121,12 @@
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/reagent_containers/food/drinks/shaker{
-	pixel_y = 8;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 8
 	},
 /obj/item/weapon/reagent_containers/food/drinks/teapot{
-	pixel_y = 1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
@@ -73796,8 +73851,8 @@
 "tHc" = (
 /obj/structure/table/bench/wooden,
 /obj/structure/flora/pottedplant/flower{
-	pixel_y = 10;
-	name = "pietra"
+	name = "pietra";
+	pixel_y = 10
 	},
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
@@ -74289,8 +74344,8 @@
 	dir = 8
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_x = -25;
-	dir = 4
+	dir = 4;
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
@@ -75293,36 +75348,36 @@
 	name = "Art supplies"
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/tape_roll,
 /obj/item/weapon/tape_roll,
@@ -75339,20 +75394,20 @@
 /obj/item/weapon/hand_labeler,
 /obj/item/weapon/hand_labeler,
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/device/lightpainter,
 /obj/item/device/lightpainter,
@@ -76277,8 +76332,8 @@
 /area/quartermaster/warehouse)
 "viP" = (
 /obj/machinery/door/window/southleft{
-	name = "Library Desk Door";
 	dir = 8;
+	name = "Library Desk Door";
 	req_access = list(37)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -81060,36 +81115,36 @@
 	name = "Art supplies"
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/device/camera_film,
 /obj/item/device/camera_film,
@@ -129702,7 +129757,7 @@ cKu
 dOF
 eNj
 cBi
-gsP
+aXb
 hIh
 ily
 ijc
@@ -130219,7 +130274,7 @@ dUe
 eNJ
 cBi
 gyw
-hJC
+ess
 ini
 jjV
 kqp
@@ -130476,7 +130531,7 @@ cNk
 dUz
 eOJ
 cXZ
-eTf
+cXZ
 hJU
 eTf
 jlK
