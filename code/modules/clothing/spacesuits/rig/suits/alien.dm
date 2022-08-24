@@ -155,13 +155,14 @@
 //ChompEdit Begins
 
 /obj/item/weapon/rig/vox/engineering
+	name = "fluid alien control module"
 	suit_type = "sinister alien"
 	icon_state = "voxstealth_rig"
 	desc = "A lightweight, alien rig dedicated for construction and engineering tasks. Not reccomended for hostile engagement."
 	armor = list (melee = 25, bullet = 5, laser = 40, energy = 45, bomb = 50, bio = 100, rad = 100) //CE suit values but shuffled to a tighter focus on the job hazards
 	flags = PHORONGUARD
 	item_flags = THICKMATERIAL
-	siemens_coefficient = 0.1
+	siemens_coefficient = 0
 	offline_slowdown = 2.5
 	slowdown = 0 
 	emp_protection = 40 //change this to 30 if too high.
