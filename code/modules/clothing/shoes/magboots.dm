@@ -90,7 +90,6 @@
 	icon_state = "boots-vox"
 	flags = PHORONGUARD
 	species_restricted = list(SPECIES_VOX)
-	
 	armor = list (melee = 40, bullet = 10, laser = 10, energy = 20, bomb = 20, bio = 10, rad = 20) //values of workboots and heavy duty engineering gloves, it's the only option that will ever be taken so may as well give the turkeys some protection //ChompEdit
 	
 	action_button_name = "Toggle the magclaws"
