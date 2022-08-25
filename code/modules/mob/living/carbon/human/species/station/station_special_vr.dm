@@ -25,12 +25,16 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
+<<<<<<< HEAD
 		/mob/living/carbon/human/proc/tie_hair,
 		/mob/living/proc/flying_toggle,
 		/mob/living/proc/flying_vore_toggle,
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb
+=======
+		/mob/living/carbon/human/proc/tie_hair)
+>>>>>>> df05951dd6... Merge pull request #13573 from Cameron653/AQUATIC_LIFE
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
