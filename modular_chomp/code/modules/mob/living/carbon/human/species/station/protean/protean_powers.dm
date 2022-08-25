@@ -221,7 +221,7 @@
 
 	var/held = caller.get_active_hand()
 	if(!istype(held,/obj/item/stack/material))
-		to_chat(caller,"<span class='warning'>You aren't holding a stack of materials in your active hand...!</span>")
+		to_chat(caller,"<span class='warning'>You aren't holding a stack of materials in your active hand!</span>")
 		return
 
 	var/obj/item/stack/material/matstack = held
@@ -233,7 +233,7 @@
 		to_chat(caller,"<span class='warning'>You can't process [substance]!</span>")
 		return
 
-	var/howmuch = tgui_input_number(src,"How much do you want to store? (0-[matstack.get_amount()])","Select amount",null,matstack.get_amount(),0)
+	var/howmuch = tgui_input_number(caller,"How much do you want to store? (0-[matstack.get_amount()])","Select amount",null,matstack.get_amount(),0)
 	if(!howmuch || matstack != caller.get_active_hand() || howmuch > matstack.get_amount())
 		return //Quietly fail
 
@@ -343,9 +343,9 @@
 					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
 				else
 					if(P.l_hand)
-						P.drop_from_inventory(P.l_hand)
+						P.drop_l_hand()
 					if(P.r_hand)
-						P.drop_from_inventory(P.r_hand)
+						P.drop_r_hand()
 					P.has_hands = 0
 					S.OurRig.myprotean = P
 					src.drop_from_inventory(S.OurRig)

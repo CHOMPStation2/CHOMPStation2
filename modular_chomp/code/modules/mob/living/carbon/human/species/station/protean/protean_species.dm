@@ -37,7 +37,7 @@
 	radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
 	darksight = 10
 	siemens_coefficient = 2
-	emp_dmg_mod = 1.4
+	emp_dmg_mod = 0.8	//Since EMP's apply damage to all limbs, and Protean limbs account to their total health, EMP's are hyper lethal to them
 
 	hazard_low_pressure = -1 //Space doesn't bother them
 	hazard_high_pressure = INFINITY //consistency

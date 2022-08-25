@@ -4496,6 +4496,8 @@
 #include "modular_chomp\code\modules\clothing\face\miscellaneous.dm"
 #include "modular_chomp\code\modules\clothing\head\misc.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\defib.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\protean.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\medical.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\munitions.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"

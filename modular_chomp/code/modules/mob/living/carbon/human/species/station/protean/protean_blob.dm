@@ -439,8 +439,8 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
 
-	if(l_hand) drop_from_inventory(l_hand)
-	if(r_hand) drop_from_inventory(r_hand)
+	if(l_hand) drop_l_hand()
+	if(r_hand) drop_r_hand()
 
 	//Put our owner in it (don't transfer var/mind)
 	blob.ckey = ckey
@@ -534,8 +534,8 @@ var/global/list/disallowed_protean_accessories = list(
 	if(blob.healing)
 		blob.healing.expire()
 
-	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
-	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
+	if(blob.l_hand) blob.drop_l_hand()
+	if(blob.r_hand) blob.drop_r_hand()
 
 	if(blob.mob_radio)
 		blob.mob_radio.forceMove(src)

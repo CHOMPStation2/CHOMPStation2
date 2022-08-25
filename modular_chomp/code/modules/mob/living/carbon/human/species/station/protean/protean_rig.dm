@@ -13,7 +13,7 @@
 	offline_slowdown = 0
 	seal_delay = 1
 	var/mob/living/myprotean
-	//initial_modules = list(/obj/item/rig_module/power_sink)	//Commented out unless I end up needing roundstart modules
+	initial_modules = list(/obj/item/rig_module/protean/syphon)
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/protean //These are important for sprite pointers
 	boot_type = /obj/item/clothing/shoes/magboots/rig/protean
@@ -360,9 +360,9 @@
 					to_chat(user, "<span class='warning'>You need five sheets of plasteel to reconstruct this Protean.</span>")
 					return
 				if(PL.use(5))
-					to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute in a minute from now.</span>")
-					to_chat(myprotean, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you will be able to reconstitute in one minute.</span>")
-					addtimer(CALLBACK(src, .proc/make_alive, myprotean), 600)
+					to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute in ten minutes from now.</span>")
+					to_chat(myprotean, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you will be able to reconstitute in ten minutes.</span>")
+					addtimer(CALLBACK(src, .proc/make_alive, myprotean), 6000)
 					return
 			else
 				to_chat(user, "<span class='notice'>This Protean is already reconstituting</span>")
