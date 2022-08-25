@@ -15,7 +15,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "sand"
 	edge_blending_priority = 3
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /* Testing
 /decl/flooring/outdoors/sand
@@ -55,6 +55,28 @@
 	)
 	flooring_override = pickweight(possiblesands)
 	return ..()
+
+/turf/simulated/floor/water/hotspring
+	name = "Hotsprings"
+	desc = "A natural hotspring connecting to an aquifer. It seems the facility was built ontop of it."
+	edge_blending_priority = -2
+	movement_cost = 8
+	depth = 2
+	water_state = "water_shallow"
+	outdoors = FALSE
+
+/turf/simulated/floor/water/hotspring/Entered(atom/movable/AM, atom/oldloc)
+	if(istype(AM, /mob/living))
+		var/mob/living/L = AM
+		L.update_water()
+		if(L.check_submerged() <= 0)
+			return
+		if(!istype(oldloc, /turf/simulated/floor/water/hotspring))
+			to_chat(L, "<span class='warning'>You feel an overwhelming wave of warmth from entering \the [src]!</span>")
+	AM.water_act(5)
+	..()
+
+
 */
 
 /turf/simulated/floor/outdoors/desert_planet/deep_sand
@@ -63,7 +85,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "deep_sand"
 	edge_blending_priority = 2
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/grass
 	name = "grass"
@@ -71,7 +93,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "grass"
 	edge_blending_priority = 6
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/deep_grass
 	name = "dense grass"
@@ -79,7 +101,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "deep_grass"
 	edge_blending_priority = 7
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/gravel
 	name = "gravel"
@@ -87,7 +109,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "gravel"
 	edge_blending_priority = 5
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/mud
 	name = "mud"
@@ -95,7 +117,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "mud"
 	edge_blending_priority = 4
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/water
 	name = "water"
@@ -103,7 +125,7 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "water"
 	edge_blending_priority = 8
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/deep_water
 	name = "deep water"
@@ -111,4 +133,4 @@
 	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "deep_water"
 	edge_blending_priority = 9
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
