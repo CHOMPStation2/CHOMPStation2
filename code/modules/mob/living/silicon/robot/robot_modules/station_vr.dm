@@ -403,6 +403,11 @@
 	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
+<<<<<<< HEAD
+=======
+	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src) //let them succ
+>>>>>>> 88aff386e2... Merge pull request #13556 from TankTheBirb/moretraumafix
 	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
