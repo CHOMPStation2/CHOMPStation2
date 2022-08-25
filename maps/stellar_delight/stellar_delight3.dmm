@@ -124,6 +124,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/holodeck_control)
+"ap" = (
+/obj/machinery/vending/altevian,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/forestarroomb)
 "at" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/dark,
@@ -7027,7 +7031,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -28;
 	req_access = null;
-	req_one_access = list(11, 67)
+	req_one_access = list(11,67)
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/fancy_shuttle{
@@ -9956,7 +9960,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -28;
 	req_access = null;
-	req_one_access = list(11, 67)
+	req_one_access = list(11,67)
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -26091,7 +26095,7 @@ tF
 Sb
 Nz
 Jx
-FE
+ap
 sR
 FE
 Ef
