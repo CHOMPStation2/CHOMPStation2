@@ -299,11 +299,7 @@
 	src.modules += new /obj/item/device/healthanalyzer(src) // See who's hurt specificially.
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
-=======
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice, made it the large variant in 2022
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //This is kinda important for rescuing people without making it worse for everyone
@@ -312,11 +308,7 @@
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
-<<<<<<< HEAD
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)  //CHOMPedit
-=======
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000)
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	synths += medicine
 
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
@@ -562,16 +554,11 @@
 	//src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src) //so I am leaving them here but commented out because robotics no do the borging w/o medical
 	src.modules += new /obj/item/weapon/portable_destructive_analyzer(src) //destructive analyzer option for pref respect while also being able to do job
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)  //Chompedit this was missing for some strange reason.
-	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)  //Chompedit This also.
-=======
 	src.modules += new /obj/item/weapon/shockpaddles/robot/jumper(src) //unkilling synths may be important actually
 	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src) //save the xenobio from themselves
 	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src) //save the xenobio from themselves from a distance
 	src.modules += new /obj/item/device/xenoarch_multi_tool(src) //go find fancy rock
 	src.modules += new /obj/item/weapon/pickaxe/excavationdrill(src) //go get fancy rock
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -666,47 +653,27 @@
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
-<<<<<<< HEAD
 	metal.recharge_rate = 1000  //CHOMPedit Make less slow
-=======
-	metal.recharge_rate = 500
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	metal.max_energy = 50000
 	metal.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
-<<<<<<< HEAD
 	glass.recharge_rate = 1000  //CHOMPedit Make less slow
-=======
-	glass.recharge_rate = 500
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	glass.max_energy = 50000
 	glass.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood()
 	wood.name = "Wood reserves"
-<<<<<<< HEAD
 	wood.recharge_rate = 1000  //CHOMPedit Make less slow
-=======
-	wood.recharge_rate = 500
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	wood.max_energy = 50000
 	wood.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/plastic = new /datum/matter_synth/plastic()
 	plastic.name = "Plastic reserves"
-<<<<<<< HEAD
 	plastic.recharge_rate = 1000  //CHOMPedit Make less slow
-=======
-	plastic.recharge_rate = 500
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	plastic.max_energy = 50000
 	plastic.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel()
 	plasteel.name = "Plasteel reserves"// Adding plasteel synthesizer to move in-line with Engiborg.
-<<<<<<< HEAD
 	plasteel.recharge_rate = 1000  //CHOMPedit Make less slow
-=======
-	plasteel.recharge_rate = 250
->>>>>>> e07abfda52... Merge pull request #13456 from TankTheBirb/Borg-Module-Sync
 	plasteel.max_energy = 20000
 	plasteel.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
