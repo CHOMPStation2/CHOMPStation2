@@ -18,6 +18,15 @@ hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+=======
+joltze - Black-Eyed Shadekin
+khanivore - Protean
+killjaden - Protean
+kira72 - Xenochimera
+konner1055 - Black-Eyed Shadekin
+konner1055 - Protean
+>>>>>>> 4f37e8477a... Merge pull request #13571 from Runa-Dacino/kira-xenochimera
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
