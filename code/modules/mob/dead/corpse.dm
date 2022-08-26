@@ -28,8 +28,10 @@
 	var/corpseidicon = null //For setting it to be a gold, silver, CentCom etc ID
 	var/corpsesensormode = 0	//CHOMPAdd - For setting the suit sensors of a corpse. Default to 0 so we don't annoy medbay.
 
-/obj/effect/landmark/mobcorpse/New()
+/obj/effect/landmark/mobcorpse/Initialize()
+	..()
 	createCorpse()
+	return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/mobcorpse/proc/createCorpse() //Creates a mob and checks for gear in each slot before attempting to equip it.
 	var/mob/living/carbon/human/M = new /mob/living/carbon/human (src.loc)
@@ -82,9 +84,6 @@
 		W.registered_name = M.real_name
 		M.equip_to_slot_or_del(W, slot_wear_id)
 	delete_me = 1
-	qdel(src)
-
-
 
 //List of different corpse types
 

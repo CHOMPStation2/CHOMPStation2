@@ -28,8 +28,8 @@
 	var/drops_debris = 1
 	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
 
-/obj/item/weapon/material/New(var/newloc, var/material_key)
-	..(newloc)
+/obj/item/weapon/material/Initialize(var/ml, var/material_key)
+	. = ..(ml)
 	if(!material_key)
 		material_key = default_material
 	set_material(material_key)

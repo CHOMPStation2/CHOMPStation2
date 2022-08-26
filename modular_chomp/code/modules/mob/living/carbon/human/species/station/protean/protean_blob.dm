@@ -305,18 +305,18 @@
 		mouse_opacity = 1
 		icon_state = "wake"
 		plane = MOB_PLANE
-		sleep(7)
-		update_icon()
-		//Potential glob noms
-		if(can_be_drop_pred) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
-					if(target.buckled)
-						target.buckled.unbuckle_mob(target, force = TRUE)
-					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+		spawn(7)
+			update_icon()
+			//Potential glob noms
+			if(can_be_drop_pred) //Toggleable in vore panel
+				var/list/potentials = living_mobs(0)
+				if(potentials.len)
+					var/mob/living/target = pick(potentials)
+					if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+						if(target.buckled)
+							target.buckled.unbuckle_mob(target, force = TRUE)
+						target.forceMove(vore_selected)
+						to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
 	if(refactory && istype(A,/obj/item/stack/material))

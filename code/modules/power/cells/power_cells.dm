@@ -10,8 +10,8 @@
 	maxcharge = 500
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 40)
 
-/obj/item/weapon/cell/crap/empty/New()
-	..()
+/obj/item/weapon/cell/crap/empty/Initialize()
+	. = ..()
 	charge = 0
 
 /*
@@ -24,8 +24,8 @@
 	maxcharge = 600	//600 max charge / 100 charge per shot = six shots
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 40)
 
-/obj/item/weapon/cell/secborg/empty/New()
-	..()
+/obj/item/weapon/cell/secborg/empty/Initialize()
+	. = ..()
 	charge = 0
 	update_icon()
 
@@ -49,8 +49,8 @@
 	maxcharge = 10000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 60)
 
-/obj/item/weapon/cell/high/empty/New()
-	..()
+/obj/item/weapon/cell/high/empty/Initialize()
+	. = ..()
 	charge = 0
 	update_icon()
 
@@ -64,8 +64,8 @@
 	maxcharge = 20000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 70)
 
-/obj/item/weapon/cell/super/empty/New()
-	..()
+/obj/item/weapon/cell/super/empty/Initialize()
+	. = ..()
 	charge = 0
 	update_icon()
 
@@ -79,8 +79,8 @@
 	maxcharge = 30000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
 
-/obj/item/weapon/cell/hyper/empty/New()
-	..()
+/obj/item/weapon/cell/hyper/empty/Initialize()
+	. = ..()
 	charge = 0
 	update_icon()
 

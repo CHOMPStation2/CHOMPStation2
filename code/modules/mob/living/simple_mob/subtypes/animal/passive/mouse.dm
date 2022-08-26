@@ -46,8 +46,8 @@
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
 
-/mob/living/simple_mob/animal/passive/mouse/New()
-	..()
+/mob/living/simple_mob/animal/passive/mouse/Initialize()
+	. = ..()
 
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
@@ -177,7 +177,14 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
+<<<<<<< HEAD
 	
+=======
+
+/mob/living/simple_mob/animal/passive/mouse/brown/Tom/Initialize()
+	. = ..()
+	// Change my name back, don't want to be named Tom (666)
+>>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 //The names Cheese... Agent Cheese
@@ -185,8 +192,8 @@
 	name = "Agent Cheese"
 	desc = "I like my cheese Swiss... not American."
 
-/mob/living/simple_mob/animal/passive/mouse/operative/agent_cheese/New()
-	..()
+/mob/living/simple_mob/animal/passive/mouse/operative/agent_cheese/Initialize()
+	. = ..()
 	// Change my name back, don't want to be named agent_cheese (666)
 	name = initial(name)
 
