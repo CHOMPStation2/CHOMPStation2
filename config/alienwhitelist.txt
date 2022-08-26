@@ -38,6 +38,14 @@ rykkastormheart - Xenochimera
 rubyflamewing - Protean
 radiantaurora - Protean
 ryumi - Protean
+<<<<<<< HEAD
+=======
+ryumi - Xenochimera
+satinisle - Black-Eyed Shadekin
+satinisle - Protean
+scoutisafolflol - Xenochimera
+seagha - Vox
+>>>>>>> 1f3b174d49... Merge pull request #13587 from Runa-Dacino/satin-protean
 seiga - Vox
 sepulchre - Vox
 silvertalismen - Diona
