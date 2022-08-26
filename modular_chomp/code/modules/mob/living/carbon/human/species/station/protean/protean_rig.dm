@@ -13,7 +13,7 @@
 	offline_slowdown = 0
 	seal_delay = 1
 	var/mob/living/myprotean
-	initial_modules = list(/obj/item/rig_module/protean/syphon)
+	initial_modules = list(/obj/item/rig_module/protean/syphon, /obj/item/rig_module/protean/armor)
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/protean //These are important for sprite pointers
 	boot_type = /obj/item/clothing/shoes/magboots/rig/protean
