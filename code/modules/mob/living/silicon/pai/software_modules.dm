@@ -404,6 +404,7 @@
 		user.add_language(LANGUAGE_ZADDAT)
 		user.add_language(LANGUAGE_SCHECHI)
 		user.add_language(LANGUAGE_DRUDAKAR)
+		user.add_language(LANGUAGE_SLAVIC) //CHOMP reAdd
 		user.add_language(LANGUAGE_BIRDSONG)
 		user.add_language(LANGUAGE_SAGARU)
 		user.add_language(LANGUAGE_CANILUNZT)
@@ -430,6 +431,7 @@
 		user.remove_language(LANGUAGE_ZADDAT)
 		user.remove_language(LANGUAGE_SCHECHI)
 		user.remove_language(LANGUAGE_DRUDAKAR)
+		user.remove_language(LANGUAGE_SLAVIC) //CHOMP reAdd
 		user.remove_language(LANGUAGE_BIRDSONG)
 		user.remove_language(LANGUAGE_SAGARU)
 		user.remove_language(LANGUAGE_CANILUNZT)

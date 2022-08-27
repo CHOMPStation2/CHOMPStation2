@@ -103,6 +103,22 @@
 	machine_understands = FALSE
 	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
+/datum/language/slavic //CHOMP reAdd this language
+	name = LANGUAGE_SLAVIC
+	desc = "The official language of the Independent Colonial Confederation of Gilgamesh, originally established in 2122 by the short-lived United Slavic Confederation on Earth."
+	speech_verb = "govorit" // All Russian for "says" "asks" and "shouts". Mostly here as a joke.
+	ask_verb = "sprashivaet"
+	exclaim_verb = "krichit"
+	whisper_verb = "shepchet"
+	colour = "attack" // Red for slav!
+	key = "P"
+	syllables = list(
+		"rus", "zem", "ave", "blyat", "cyk", "groz", "ski", "ska", "ven", "konst", "pol", "lin", "svy",
+		"danya", "da", "mied", "kuz,", "zan", "das", "krem", "myka", "to", "st", "no", "na", "ni",
+		"ko", "ne", "en", "po", "tro", "ra", "li", "on", "byl", "cto", "eni", "ost", "ol", "ego",
+		"ver", "stv", "pro", "ski"
+	)
+
 /datum/language/drudakar
 	name = LANGUAGE_DRUDAKAR
 	desc = "The native language of the D'Rudak'Ar, a loosely tied together community of dragons and demi-dragons based in the Diul system. Features include many hard consonants and rolling 'r's."
