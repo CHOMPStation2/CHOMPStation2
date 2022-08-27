@@ -23,6 +23,7 @@
 	active_power_usage = 200
 	light_color = "#FF0000"
 
+
 /obj/machinery/vr_sleeper/Initialize()
 	. = ..()
 	default_apply_parts()
@@ -245,9 +246,12 @@
 		if(occupant.species.name != "Promethean" && occupant.species.name != "Human" && mirror_first_occupant)
 			avatar.shapeshifter_change_shape(occupant.species.name)
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
-		avatar.Sleeping(1)
 
 		occupant.enter_vr(avatar)
+		//Yes, I am using a aheal just so your markings trasnfer over, I could not get .prefs.copy_to working. This is very stupid. Too bad!
+		avatar.revive()
+		avatar.verbs += /mob/living/carbon/human/proc/exit_vr //ahealing removes the prommie verbs and the VR verbs, giving it back
+		avatar.Sleeping(1)
 
 		// Prompt for username after they've enterred the body.
 		var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
