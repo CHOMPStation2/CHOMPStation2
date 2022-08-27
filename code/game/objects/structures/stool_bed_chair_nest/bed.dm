@@ -22,8 +22,13 @@
 	var/base_icon = "bed"
 	var/applies_material_colour = 1
 
+<<<<<<< HEAD
 /obj/structure/bed/New(var/newloc, var/new_material, var/new_padding_material)
 	..(newloc)
+=======
+/obj/structure/bed/Initialize(var/ml, var/new_material, var/new_padding_material)
+	. = ..(ml)
+>>>>>>> ed001e241d... Merge pull request #13592 from Heroman3003/chair-fix
 	color = null
 	if(!new_material)
 		new_material = MAT_STEEL
