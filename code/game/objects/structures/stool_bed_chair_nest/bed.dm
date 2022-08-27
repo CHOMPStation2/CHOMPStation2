@@ -22,9 +22,14 @@
 	var/base_icon = "bed"
 	var/applies_material_colour = 1
 
+<<<<<<< HEAD
 /obj/structure/bed/New(var/newloc, var/new_material, var/new_padding_material)
 	..(newloc)
 	color = null
+=======
+/obj/structure/bed/Initialize(var/ml, var/new_material, var/new_padding_material)
+	. = ..(ml)
+>>>>>>> 0be7af4774... Merge pull request #13593 from VOREStation/revert-13592-chair-fix
 	if(!new_material)
 		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
