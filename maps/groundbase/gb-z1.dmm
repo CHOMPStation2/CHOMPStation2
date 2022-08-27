@@ -6883,7 +6883,7 @@ lel
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "qV" = (

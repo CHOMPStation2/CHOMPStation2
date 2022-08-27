@@ -5707,7 +5707,7 @@
 /obj/machinery/camera/network/research_outpost{
 	dir = 4
 	},
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
@@ -5737,7 +5737,7 @@
 /area/offmap/aerostat/inside/drillstorage)
 "uK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
@@ -8743,7 +8743,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
@@ -9234,7 +9234,7 @@
 	dir = 8;
 	pixel_x = -22
 	},
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
