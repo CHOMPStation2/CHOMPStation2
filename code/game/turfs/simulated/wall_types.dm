@@ -85,6 +85,7 @@
 	return
 /turf/simulated/wall/titanium/Initialize(mapload)
 	. = ..(mapload, "titanium")
+<<<<<<< HEAD
 
 /turf/simulated/wall/durasteel/Initialize(mapload)
 	. = ..(mapload, "durasteel", "durasteel")
@@ -124,6 +125,26 @@
 	icon = 'icons/obj/clockwork_objects.dmi'
 	icon_state = "clockwork_wall"
 
+=======
+
+/turf/simulated/wall/durasteel/Initialize(mapload)
+	. = ..(mapload, "durasteel", "durasteel")
+
+/turf/simulated/wall/wood/Initialize(mapload)
+	. = ..(mapload,  MAT_WOOD)
+
+/turf/simulated/wall/hardwood/Initialize(mapload)
+	. = ..(mapload,  MAT_HARDWOOD)
+
+/turf/simulated/wall/sifwood/Initialize(mapload)
+	. = ..(mapload,  MAT_SIFWOOD)
+
+/turf/simulated/wall/log/Initialize(mapload)
+	. = ..(mapload,  MAT_LOG)
+
+/turf/simulated/wall/log_sif/Initialize(mapload)
+	. = ..(mapload,  MAT_SIFLOG)
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 
 // Shuttle Walls
 /turf/simulated/shuttle/wall
@@ -344,18 +365,23 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
+<<<<<<< HEAD
+=======
+	cut_overlays()
+	
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
 		if(!istype(T))
 			continue
-
+		
 		name = T.name
 		desc = T.desc
-
+		
 		var/datum/material/B = T.material
 		var/datum/material/R = T.reinf_material
-
+		
 		if(B?.icon_colour)
 			color = B.icon_colour
 		if(R?.icon_colour)

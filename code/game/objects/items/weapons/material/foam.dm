@@ -26,6 +26,10 @@
 	base_icon = "spear_mask"
 	icon_state = "spear_mask0"
 	unbreakable = 1
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 /obj/item/weapon/material/twohanded/spear/foam/New(var/newloc)
 	..(newloc,"foam")
 

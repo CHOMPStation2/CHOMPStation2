@@ -328,6 +328,7 @@
 	else
 		return
 
+<<<<<<< HEAD
 /obj/item/weapon/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
 	to_chat(M, "<span class='danger'>BANG</span>")						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
@@ -394,6 +395,10 @@
 	else if(M.ear_damage >= 5)
 		to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
 //CHOMPEdit End
+=======
+	return new projectile_type(src)
+
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 /obj/item/weapon/gun/magnetic/fuelrod/New()
 	cell = new /obj/item/weapon/cell/high
 	capacitor = new /obj/item/weapon/stock_parts/capacitor

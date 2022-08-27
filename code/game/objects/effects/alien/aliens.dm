@@ -289,3 +289,8 @@
 		if(0 to 1)
 			visible_message("<span class='alium'>[src.target] begins to crumble under the acid!</span>")
 	spawn(rand(150, 200)) tick()
+<<<<<<< HEAD
+=======
+
+//Xenomorph Effect egg removed, replaced with Structure Egg.
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298

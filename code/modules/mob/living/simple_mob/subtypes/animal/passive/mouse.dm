@@ -177,7 +177,11 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 //The names Cheese... Agent Cheese

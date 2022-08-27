@@ -27,22 +27,28 @@
 			simulated = TRUE
 		//	delete_me = 1
 			return
+<<<<<<< HEAD
 		//VOREStation Add end
 		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list. 
 			latejoin += src
 			simulated = TRUE
 			return
 		//VOREStation Add end
+=======
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 		if("JoinLateGateway")
 			latejoin_gateway += loc
 			delete_me = 1
 			return
+<<<<<<< HEAD
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")
 			latejoin_gatewaystation += loc
 			delete_me = 1
 			return
 		//CHOMPEdit End
+=======
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = 1

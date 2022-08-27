@@ -237,7 +237,10 @@
 	author = "Cindy Crawfish"
 	title = "R-UST Operating Manual"
 
+<<<<<<< HEAD
 //R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates.
+=======
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 /obj/item/weapon/book/manual/rust_engine/New()
 	..()
 	dat = {"<html>

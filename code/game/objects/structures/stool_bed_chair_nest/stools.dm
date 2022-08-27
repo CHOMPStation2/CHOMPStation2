@@ -32,7 +32,11 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/weapon/stool/padded/New(var/newloc, var/new_material)
+<<<<<<< HEAD
 	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
+=======
+	..(newloc, "steel", "carpet")
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 
 /obj/item/weapon/stool/update_icon()
 	// Prep icon.

@@ -33,6 +33,7 @@
 
 /obj/structure/bonfire/permanent/sifwood/New(newloc, material_name)
 	..(newloc, MAT_SIFWOOD)
+<<<<<<< HEAD
 
 //CHOMPStation Addition Start
 /obj/structure/bonfire/examine(mob/user)
@@ -43,6 +44,8 @@
 	if(can_buckle)
 		to_chat(user, "[src] has a makeshift stake built in it, perfect for witches and space templars.")
 //CHOMPStation Addition end
+=======
+>>>>>>> 5195f71545... Merge pull request #13594 from VOREStation/revert-11826-upstream-merge-8298
 
 /obj/structure/bonfire/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/stack/rods) && !can_buckle && !grill)
