@@ -64,8 +64,6 @@
 	excludes = list(/datum/trait/positive/winged_flight/xenochimera)
 	custom_only = FALSE
 
-<<<<<<< HEAD
-=======
 /datum/trait/positive/winged_flight/xenochimera
 	name = "Xenochhimera: Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
@@ -73,7 +71,6 @@
 	excludes = list(/datum/trait/positive/aquatic/xenochimera)
 	custom_only = FALSE
 
->>>>>>> df05951dd6... Merge pull request #13573 from Cameron653/AQUATIC_LIFE
 /* // Commented out in lieu of finding a better solution.
 /datum/trait/neutral/coldadapt/xenochimera
 	sort = TRAIT_SORT_SPECIES
