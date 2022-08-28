@@ -422,8 +422,6 @@
 		if(0 to 1)
 			visible_message("<span class='alium'>[src.target] begins to crumble under the acid!</span>")
 	spawn(rand(150, 200)) tick()
-<<<<<<< HEAD
-=======
 
 /*
  * Egg
@@ -551,4 +549,3 @@
 	if(exposed_temperature > 500 + T0C)
 		health -= 5
 		healthcheck()
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
