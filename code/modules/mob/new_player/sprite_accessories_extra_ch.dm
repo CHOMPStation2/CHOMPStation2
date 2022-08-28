@@ -1,5 +1,6 @@
 /datum/sprite_accessory/marking/ch
 	icon = 'icons/mob/human_races/markings_ch.dmi'
+
 /datum/sprite_accessory/marking/ch/orca_head
 	name = "Orca head"
 	icon_state = "orca_head"

@@ -1176,7 +1176,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
-	
+
 /datum/sprite_accessory/tail/altevian
 	name = "Altevian Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
