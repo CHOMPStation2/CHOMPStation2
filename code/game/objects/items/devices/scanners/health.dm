@@ -16,17 +16,10 @@
 	var/advscan = 0
 	var/showadvscan = 1
 
-<<<<<<< HEAD
-/obj/item/device/healthanalyzer/New()
-	if(advscan >= 1)
-		verbs += /obj/item/device/healthanalyzer/proc/toggle_adv
-	..()
-=======
 /obj/item/device/healthanalyzer/Initialize()
 	if(advscan >= 1)
 		verbs += /obj/item/device/healthanalyzer/proc/toggle_adv
 	. = ..()
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 
 /obj/item/device/healthanalyzer/do_surgery(mob/living/M, mob/living/user)
 	if(user.a_intent != I_HELP) //in case it is ever used as a surgery tool
@@ -331,8 +324,4 @@
 	origin_tech = list(TECH_MAGNET = 7, TECH_BIO = 8)
 	icon_state = "health3"
 
-<<<<<<< HEAD
 #undef DEFIB_TIME_LIMIT //VOREStation addition
-=======
-#undef DEFIB_TIME_LIMIT //VOREStation addition
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
