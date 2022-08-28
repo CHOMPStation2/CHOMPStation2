@@ -315,13 +315,6 @@
 					conveyors += C
 			return
 
-//CHOMPedit: Conveyor belts can be fast :)
-	if(istype(I, /obj/item/weapon/tool/wirecutters))
-		if(panel_open)
-			toggle_speed()
-			to_chat(user, "You cut the safety wire of the conveyor switch.")
-			return
-//CHOMPedit End
 /obj/machinery/conveyor_switch/oneway
 	var/convdir = 1 //Set to 1 or -1 depending on which way you want the convayor to go. (In other words keep at 1 and set the proper dir on the belts.)
 	desc = "A conveyor control switch. It appears to only go in one direction."
