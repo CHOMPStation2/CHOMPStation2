@@ -250,10 +250,7 @@
 	persist_storable = FALSE
 /obj/item/weapon/rcd
 	persist_storable = FALSE
-<<<<<<< HEAD
-=======
 /obj/item/weapon/spacecash
 	persist_storable = FALSE
 /obj/item/weapon/spacecasinocash
 	persist_storable = FALSE
->>>>>>> e5ae85f667... Merge pull request #13536 from Heroman3003/casino-changes
