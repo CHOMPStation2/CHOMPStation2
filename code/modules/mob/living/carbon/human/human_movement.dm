@@ -20,7 +20,11 @@
 			. += M.slowdown
 
 	var/health_deficiency = (getMaxHealth() - health)
-	if(health_deficiency >= 40) . += (health_deficiency / 25)
+	if(health_deficiency >= 40) //VOREStation Edit Start
+		if(chem_effects[CE_PAINKILLER]) //On painkillers? Reduce pain! On anti-painkillers? Increase pain!
+			health_deficiency = max(0, health_deficiency - src.chem_effects[CE_PAINKILLER])
+		if(health_deficiency >= 40) //Still in enough pain for it to be significant?
+			. += (health_deficiency / 25) //VOREStation Edit End
 
 	if(can_feel_pain())
 		if(halloss >= 10) . += (halloss / 10) //halloss shouldn't slow you down if you can't even feel it
@@ -42,8 +46,8 @@
 				var/mob/living/carbon/human/H = M
 				if(H.size_multiplier > L.size_multiplier)
 					. += 1
-				if(H.weight > L.weight)
-					. += 1
+				//if(H.weight > L.weight) weight should not have mechanical impact
+					//. += 1
 	//VOREstation end
 
 	if(istype(buckled, /obj/structure/bed/chair/wheelchair))
