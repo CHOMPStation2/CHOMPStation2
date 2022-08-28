@@ -21,32 +21,15 @@
 			delete_me = 1
 		if("JoinLate") // Bit difference, since we need the spawn point to move.
 			latejoin += src
-<<<<<<< HEAD
-			simulated = TRUE
-		//	delete_me = 1
-			return
-		//VOREStation Add end
-		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list. 
-			latejoin += src
-			simulated = TRUE
-			return
-		//VOREStation Add end
-=======
 			simulated = 1
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 		if("JoinLateGateway")
 			latejoin_gateway += loc
 			delete_me = 1
-<<<<<<< HEAD
-			return
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")
 			latejoin_gatewaystation += loc
 			delete_me = 1
-			return
 		//CHOMPEdit End
-=======
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = 1
