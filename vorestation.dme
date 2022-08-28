@@ -4491,6 +4491,7 @@
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
+#include "modular_chomp\code\game\turfs\simulated\outdoors\desert_planet.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\client\preferences.dm"
 #include "modular_chomp\code\modules\client\preference_setup\global\setting_datums.dm"
