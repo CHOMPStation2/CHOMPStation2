@@ -4541,4 +4541,5 @@
 #include "modular_chomp\code\modules\research\designs\weapons.dm"
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
+#include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
 // END_INCLUDE
