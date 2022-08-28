@@ -351,6 +351,7 @@
 	P.charge_costs = list(1000)
 	P.synths = list(medicine)
 	S.uses_charge = 1
+	S.charge_costs = list(1000)
 	S.synths = list(medicine)
 	src.modules += O
 	src.modules += P
