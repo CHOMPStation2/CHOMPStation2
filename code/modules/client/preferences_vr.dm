@@ -105,8 +105,6 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TCaptureCrystal") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-<<<<<<< HEAD
-=======
 
 /client/verb/toggle_mentorhelp_ping()
 	set name = "Toggle Mentorhelp Ping"
@@ -122,4 +120,3 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb", "TSoundMentorhelps")
->>>>>>> 16eeda039c... Merge pull request #13503 from lm40/master
