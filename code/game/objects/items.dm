@@ -109,15 +109,10 @@
 	
 	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
 
-<<<<<<< HEAD
 /obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
-=======
-/obj/item/Initialize()
-	. = ..()
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))
