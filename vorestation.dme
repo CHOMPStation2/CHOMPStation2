@@ -4470,8 +4470,6 @@
 #include "maps\southern_cross\structures\closets\misc.dm"
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
-#include "maps\southern_cross\submaps\virtual_reality\construct.dm"
-#include "maps\southern_cross\submaps\virtual_reality\construct.dmm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "maps\submaps\engine_submaps\engine.dm"

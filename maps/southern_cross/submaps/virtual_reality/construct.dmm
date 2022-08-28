@@ -39,7 +39,7 @@
 "qW" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "ru" = (/obj/effect/floor_decal/corner/brown/border{dir = 9},/obj/effect/floor_decal/spline/fancy/wood{dir = 9},/turf/simulated/floor/wood,/area/vr/powered)
 "rV" = (/turf/simulated/floor/water/beach/corner{temperature = 293.15},/area/vr/outdoors/powered)
-"se" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/gun/launcher/grenade,/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"se" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/obj/item/weapon/grenade/explosive,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "sK" = (/turf/simulated/floor/water/beach{dir = 4; temperature = 293.15},/area/vr/outdoors/powered)
 "tQ" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/structure/table/rack/shelf/steel,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "tT" = (/turf/simulated/floor/water{temperature = 293.15},/area/vr/outdoors/powered)
@@ -124,10 +124,10 @@ GWJWJWJWJWwFwFwFwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVN
 GWJWJWJWJWwFwFwFwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoqWdaZaWyAgiaOEWyUtWCKgCoZLFjjfGW
 GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZDAWyLQAxDAWyLQpZDACoZLFjjfGW
 GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCouSpZfHWyoFAxgFWyhpCXAICoZLFjjfGW
-GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZNjWyLQAxDAWypZpZBkCoZLFjjfGW
+GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCosepZNjWyLQAxDAWypZpZBkCoZLFjjfGW
 GWJWJWJWJWJWJWJWJWwFCoCoCoCoCoCoCoNRCoCoCoCoCoCoCoCoCoNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZUwWyuSAxEtWypZpZPnCoZLFjjfGW
 GWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfCoNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCohwAxBOQmpsAxBOOjAxAxdbCoZLFjjfGW
-GWjfFjZLZLZLZLZLZLZLZLZLZLZLZLZLCoCoCoCoCoNRCoCoCoCoCoCoCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCosepZUBObwVAxUBUHpZpZiCCoZLFjjfGW
+GWjfFjZLZLZLZLZLZLZLZLZLZLZLZLZLCoCoCoCoCoNRCoCoCoCoCoCoCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZUBObwVAxUBUHpZpZiCCoZLFjjfGW
 GWjfFjZLCoCoCoCofGfGfGCoCoCoCoZLCoCoCoCoCoNRCoCoCoCoCoFjFjFjFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoYppZDAWyLQAxDAWypZpZhmCoZLFjjfGW
 GWjfFjZLCofGeufGfGfGfGfGeufGCoZLCoCoCoHwHwHwxJHwHwCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCotQpZDAWyLQAxDAWypZpZBiCoZLFjjfGW
 GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNOHVNVNVNVNVNVNZLCoXkzMwCWyLQAxDAWynfeFGLCoZLFjjfGW
