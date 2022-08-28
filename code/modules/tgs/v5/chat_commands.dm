@@ -21,7 +21,7 @@
 		else
 			active++
 
-	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**AFK:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]" //CHOMPEdit
+	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**Bar Statues:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]" //CHOMPEdit
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
