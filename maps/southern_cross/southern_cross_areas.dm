@@ -1010,6 +1010,11 @@ z
 	name = "\improper Game Room"
 	icon_state = "gaming"
 
+//CHOMPstation Edit 8/27/22 - VR Room for station baby~
+/area/crew_quarters/thirddeck/vrroom
+	name = "\improper Virtual Reality Room"
+	icon_state = "gaming"
+
 //CHOMPStation Edit End
 
 /area/crew_quarters/seconddeck/locker/locker_toilet
