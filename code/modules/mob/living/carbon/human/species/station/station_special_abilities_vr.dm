@@ -1065,8 +1065,6 @@
 		C.update_transform()
 		//egg_contents -= src
 		C.contents -= src
-<<<<<<< HEAD
-=======
 
 /mob/living/carbon/human/proc/water_stealth()
 	set name = "Dive under water / Resurface"
@@ -1155,4 +1153,3 @@
 			"<span class='danger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected]!</span>")
 		to_chat(src, "<span class='notice'>You successfully drag \the [target] into the water, slipping them into your [vore_selected].</span>")
 		target.forceMove(src.vore_selected)
->>>>>>> df05951dd6... Merge pull request #13573 from Cameron653/AQUATIC_LIFE
