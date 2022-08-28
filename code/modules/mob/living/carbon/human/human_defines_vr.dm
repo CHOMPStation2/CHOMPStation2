@@ -8,11 +8,8 @@
 	var/ability_flags = 0	//Shadekin abilities/potentially other species-based?
 	var/sensorpref = 5		//Suit sensor loadout pref
 	var/wings_hidden = FALSE
-<<<<<<< HEAD
 	var/nutrition_hidden = FALSE // Chomp Edit
-=======
 	var/tail_hidden = FALSE
->>>>>>> 6fe6af5879... Merge pull request #13569 from Cameron653/TAIL_TOGGLE
 
 /mob/living/carbon/human/proc/shadekin_get_energy()
 	var/datum/species/shadekin/SK = species
