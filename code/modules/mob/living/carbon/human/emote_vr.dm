@@ -62,7 +62,6 @@
 		message = "hides their wings."
 	visible_message("[src] [message]")
 
-<<<<<<< HEAD
 // Chomp Edit Start
 /mob/living/carbon/human/verb/hide_nutrition_vr()
 	set name = "Show/Hide Nutrition Levels"
@@ -71,7 +70,7 @@
 	nutrition_hidden = !nutrition_hidden
 	to_chat(src, "Players will [nutrition_hidden ? "no longer" : "now"] see your nutrition levels.")
 // Chomp Edit End
-=======
+
 /mob/living/carbon/human/verb/hide_tail_vr()
 	set name = "Show/Hide tail"
 	set category = "IC"
@@ -94,4 +93,3 @@
 	else
 		message = "hides their tail."
 	visible_message("[src] [message]")
->>>>>>> 6fe6af5879... Merge pull request #13569 from Cameron653/TAIL_TOGGLE
