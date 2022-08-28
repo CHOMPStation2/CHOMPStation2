@@ -164,13 +164,8 @@ var/bluespace_item_types = newlist(/obj/item/weapon/storage/backpack/holding,
 
 /datum/teleport/instant/science/setPrecision(aprecision)
 	..()
-<<<<<<< HEAD
-	if(bohsafe)
-		return 1
-	if(istype(teleatom, /obj/item/weapon/storage/backpack/holding))
-		precision = rand(1,100)
-=======
->>>>>>> aa6ad575e0... Merge pull request #13535 from lm40/nofun
+	if(bohsafe) //CHOMPedit
+		return 1 //CHOMPedit
 
 	var/list/bluespace_things = newlist()
 
