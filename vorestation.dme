@@ -4495,6 +4495,7 @@
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\client\preferences.dm"
 #include "modular_chomp\code\modules\client\preference_setup\global\setting_datums.dm"
+#include "modular_chomp\code\modules\clothing\clothing.dm"
 #include "modular_chomp\code\modules\clothing\face\gasmask.dm"
 #include "modular_chomp\code\modules\clothing\face\miscellaneous.dm"
 #include "modular_chomp\code\modules\clothing\head\misc.dm"
