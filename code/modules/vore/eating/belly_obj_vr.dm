@@ -289,6 +289,13 @@
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
 	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+		if(desc)
+			//Allow ghosts see where they are if they're still getting squished along inside.
+			var/formatted_desc
+			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
+			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
+			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+			to_chat(thing, "<span class='notice'><B>[formatted_desc]</B></span>")
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
