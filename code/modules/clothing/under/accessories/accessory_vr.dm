@@ -409,8 +409,6 @@
 	icon_state = "talon_pin"
 	item_state = "talonpin"
 	overlay_state = "talonpin"
-<<<<<<< HEAD
-=======
 
 //Casino Sentient Prize Collar
 
@@ -438,4 +436,3 @@
 	icon_state = "casinoslave_owned"
 	item_state = "casinoslave_owned"
 	overlay_state = "casinoslave_owned"
->>>>>>> e5ae85f667... Merge pull request #13536 from Heroman3003/casino-changes
