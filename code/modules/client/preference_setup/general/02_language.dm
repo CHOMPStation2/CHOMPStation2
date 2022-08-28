@@ -11,13 +11,10 @@
 	S["extra_languages"]	>> pref.extra_languages
 	testing("LANGSANI: Loaded from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
 	S["language_prefixes"]	>> pref.language_prefixes
-<<<<<<< HEAD
 	//CHOMPEdit Begin
 	S["species"]			>> pref.species
 	//CHOMPEdit End
-=======
 	S["language_custom_keys"]	>> pref.language_custom_keys
->>>>>>> 574adc02e0... Merge pull request #13541 from Heroman3003/customizable_key
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
 	S["language"]			<< pref.alternate_languages
@@ -71,12 +68,8 @@
 		if(pref.alternate_languages.len)
 			for(var/i = 1 to pref.alternate_languages.len)
 				var/lang = pref.alternate_languages[i]
-<<<<<<< HEAD
-				. += "- [lang] - <a href='?src=\ref[src];remove_language=[i]'>remove</a><br>"
-=======
 				. += "- [lang] - <a href='?src=\ref[src];remove_language=[i]'>remove</a> - <a href='?src=\ref[src];set_custom_key=[lang]'>Set Custom Key</a><br>"
 
->>>>>>> 574adc02e0... Merge pull request #13541 from Heroman3003/customizable_key
 		if(pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
 			. += "- <a href='?src=\ref[src];add_language=1'>add</a> ([(S.num_alternate_languages + pref.extra_languages) - pref.alternate_languages.len] remaining)<br>"
 	else
