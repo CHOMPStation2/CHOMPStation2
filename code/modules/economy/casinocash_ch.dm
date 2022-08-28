@@ -28,7 +28,7 @@
 			h_user.drop_from_inventory(src)
 			h_user.drop_from_inventory(SC)
 			h_user.put_in_hands(SC)
-		user << "<span class='notice'>You combine the casino chips to a stack of [SC.worth] of credits.</span>"
+		user << "<span class='notice'>You combine the casino chips to a stack of [SC.worth] credits.</span>"
 		qdel(src)
 
 /obj/item/weapon/spacecasinocash/update_icon()
@@ -57,7 +57,7 @@
 		M.Turn(pick(-45, -27.5, 0, 0, 0, 0, 0, 0, 0, 27.5, 45))
 		banknote.transform = M
 		src.overlays += banknote
-	src.desc = "They are worth [worth] of credits."
+	src.desc = "They are worth [worth] credits."
 
 /obj/item/weapon/spacecasinocash/proc/adjust_worth(var/adjust_worth = 0, var/update = 1)
 	worth += adjust_worth
