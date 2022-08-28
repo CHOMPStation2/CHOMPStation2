@@ -26,14 +26,9 @@
 	base_icon = "spear_mask"
 	icon_state = "spear_mask0"
 	unbreakable = 1
-<<<<<<< HEAD
-/obj/item/weapon/material/twohanded/spear/foam/New(var/newloc)
-	..(newloc,"foam")
-=======
 
 /obj/item/weapon/material/twohanded/spear/foam/Initialize(var/ml)
 	. = ..(ml, "foam")
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 
 /obj/item/weapon/material/twohanded/fireaxe/foam
 	attack_verb = list("bonked","whacked")
