@@ -4484,6 +4484,7 @@
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+#include "maps\submaps\virtual_reality\construct.dmm"
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\datums\autolathe\arms.dm"
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
