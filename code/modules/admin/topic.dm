@@ -24,11 +24,8 @@
 	else if(href_list["ahelp_tickets"])
 		GLOB.ahelp_tickets.BrowseTickets(text2num(href_list["ahelp_tickets"]))
 
-<<<<<<< HEAD
-=======
 	mentor_commands(href, href_list, src)
 
->>>>>>> 16eeda039c... Merge pull request #13503 from lm40/master
 	if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
 
 		var/adminckey = href_list["dbsearchadmin"]

@@ -32,7 +32,6 @@ pearlprophet - Protean
 phoenixx0 - Vox
 rapidvalj - Vox
 rapidvalj - Common Skrellian
-rapidvalj - High Skrellian
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
@@ -48,7 +47,6 @@ storesund97 - Protean
 sharplight - Protean
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
-tastypred - Protean
 timidvi - Diona
 varonis - Xenochimera
 verkister - Xenochimera
