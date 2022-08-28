@@ -248,7 +248,7 @@
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
 
 		occupant.enter_vr(avatar)
-		//Yes, I am using a aheal just so your markings trasnfer over, I could not get .prefs.copy_to working. This is very stupid. Too bad!
+		//CHOMPedit, Yes, I am using a aheal just so your markings trasnfer over, I could not get .prefs.copy_to working. This is very stupid. Too bad!
 		avatar.revive()
 		avatar.verbs += /mob/living/carbon/human/proc/exit_vr //ahealing removes the prommie verbs and the VR verbs, giving it back
 		avatar.Sleeping(1)
