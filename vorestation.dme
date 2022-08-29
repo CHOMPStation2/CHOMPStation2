@@ -3442,11 +3442,8 @@
 #include "code\modules\mob\new_player\sprite_accessories_taur_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing.dm"
-<<<<<<< HEAD
 #include "code\modules\mob\new_player\sprite_accessories_wing_ch.dm"
-=======
 #include "code\modules\mob\new_player\sprite_accessories_wing_large_vr.dm"
->>>>>>> 124841bd3a... Merge pull request #13598 from Heroman3003/megawings
 #include "code\modules\mob\new_player\sprite_accessories_wing_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_yw.dm"
 #include "code\modules\modular_computers\laptop_vendor.dm"
