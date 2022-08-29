@@ -395,12 +395,7 @@
 	else if(M.ear_damage >= 5)
 		to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
 //CHOMPEdit End
-/obj/item/weapon/gun/magnetic/fuelrod/New()
-=======
-	return new projectile_type(src)
-
 /obj/item/weapon/gun/magnetic/fuelrod/Initialize()
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 	cell = new /obj/item/weapon/cell/high
 	capacitor = new /obj/item/weapon/stock_parts/capacitor
 	. = ..()
