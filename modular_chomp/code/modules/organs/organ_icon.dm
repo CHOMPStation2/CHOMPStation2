@@ -117,7 +117,7 @@
 						mob_icon = new /icon('icons/mob/human_races/r_blank.dmi', "[icon_name][gender ? "_[gender]" : ""]")
 					else
 						//Use digi icon if digitigrade, otherwise use regular icon. Ternary operator is based.
-						mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
+						mob_icon = new /icon(species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
 						apply_colouration(mob_icon)
 
 				//Body markings, actually does not include head this time. Done separately above.
