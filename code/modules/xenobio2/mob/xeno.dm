@@ -101,10 +101,6 @@ Also includes Life and New
 		stasis += hit.stasisforce
 	..()
 
-<<<<<<< HEAD
-/mob/living/simple_animal/xeno/Destroy()
-=======
 /mob/living/simple_mob/xeno/Destroy()
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 	QDEL_NULL(traitdat)
 	..()
