@@ -177,14 +177,10 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
-<<<<<<< HEAD
-	
-=======
 
 /mob/living/simple_mob/animal/passive/mouse/brown/Tom/Initialize()
 	. = ..()
 	// Change my name back, don't want to be named Tom (666)
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 //The names Cheese... Agent Cheese
