@@ -106,16 +106,6 @@
 /turf/simulated/wall/skipjack/attackby()
 	return
 
-<<<<<<< HEAD
-/turf/simulated/wall/durasteel/Initialize(mapload)
-	. = ..(mapload, "durasteel", "durasteel")
-/turf/simulated/wall/durasteel/blueserg/New(var/newloc)
-	..(newloc,"durasteel", "durasteel")
-/turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
-	return
-/turf/simulated/wall/wood/Initialize(mapload)
-	. = ..(mapload,  MAT_WOOD)
-=======
 /turf/simulated/wall/titanium
 	material = MAT_TITANIUM
 
@@ -125,7 +115,6 @@
 
 /turf/simulated/wall/wood
 	material = MAT_WOOD
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 
 /turf/simulated/wall/hardwood
 	material = MAT_HARDWOOD
@@ -133,18 +122,8 @@
 /turf/simulated/wall/sifwood
 	material = MAT_SIFWOOD
 
-<<<<<<< HEAD
-// CHOMPEdit Start
-/turf/simulated/wall/rsifwood/Initialize(mapload)
-	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
-// CHOMPEdit End
-
-/turf/simulated/wall/log/Initialize(mapload)
-	. = ..(mapload,  MAT_LOG)
-=======
 /turf/simulated/wall/log
 	material = MAT_LOG
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 
 /turf/simulated/wall/log_sif
 	material = MAT_SIFLOG
@@ -385,11 +364,8 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
-<<<<<<< HEAD
-=======
 	cut_overlays()
 
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
