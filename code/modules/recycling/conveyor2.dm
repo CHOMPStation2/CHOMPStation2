@@ -319,7 +319,7 @@
 	if(istype(I, /obj/item/weapon/tool/wirecutters))
 		if(panel_open)
 			toggle_speed()
-			to_chat(user, "You cut the safety wire of the conveyor switch.")
+			to_chat(user, "You adjust the speed of the conveyor switch.")
 			return
 //CHOMPedit End
 /obj/machinery/conveyor_switch/oneway
