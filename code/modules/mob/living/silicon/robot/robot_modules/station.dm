@@ -45,20 +45,14 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/proc/hide_on_manifest()
 	. = hide_on_manifest
 
-<<<<<<< HEAD
-/obj/item/weapon/robot_module/New(var/mob/living/silicon/robot/R)
-	..()
-	R.module = src
-	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
-=======
 /obj/item/weapon/robot_module/Initialize(var/ml)
 	. = ..()
 	var/mob/living/silicon/robot/R = loc
 	if(!istype(R))
 		return INITIALIZE_HINT_QDEL
->>>>>>> 5b45f17809... Merge pull request #11826 from VOREStation/upstream-merge-8298
 
 	R.module = src
+	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
 	add_camera_networks(R)
 	add_languages(R)
 	add_subsystems(R)
