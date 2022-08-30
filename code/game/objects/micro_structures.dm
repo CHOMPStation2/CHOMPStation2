@@ -7,8 +7,8 @@
 	anchored = TRUE
 	density = FALSE
 
-	var/max_accepted_scale = 0.5
 	var/magic = FALSE	//For events and stuff, if true, this tunnel will show up in the list regardless of whether it's in valid range, of if you're in a tunnel with this var, all tunnels of the same faction will show up redardless of range
+	micro_target = TRUE
 
 /obj/structure/micro_tunnel/Initialize()
 	. = ..()
@@ -51,7 +51,7 @@
 	if(!isliving(user))
 		return ..()
 	if(user.loc == src)
-		var/choice = tgui_alert(user,"It's dark and gloomy in here. What would you like to do?","Tunnel",list("Exit", "Move"))
+		var/choice = tgui_alert(user,"It's dark and gloomy in here. What would you like to do?","Tunnel",list("Exit", "Move", "Cancel"))
 		switch(choice)
 			if("Exit")
 				user.forceMove(get_turf(src.loc))
@@ -92,7 +92,10 @@
 				if(!destinations.len)
 					to_chat(user, "<span class = 'warning'>There are no other tunnels connected to this one!</span>")
 					return
-				choice = tgui_input_list(user, "Where would you like to go?", "Pick a tunnel", destinations)
+				else if(destinations.len == 1)
+					choice = pick(destinations)
+				else
+					choice = tgui_input_list(user, "Where would you like to go?", "Pick a tunnel", destinations)
 				if(!choice)
 					return
 				to_chat(user,"<span class = 'notice'>You begin moving...</span>")
@@ -102,6 +105,8 @@
 				user.cancel_camera()
 				var/obj/structure/micro_tunnel/da_oddawun = choice
 				da_oddawun.tunnel_notify(user)
+				return
+			if("Cancel")
 				return
 
 	if(!can_enter(user))
@@ -154,7 +159,7 @@
 	enter_tunnel(user)
 
 /obj/structure/micro_tunnel/proc/can_enter(var/mob/living/user)
-	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= max_accepted_scale)
+	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= micro_accepted_scale)
 		return TRUE
 
 	return FALSE
@@ -206,8 +211,6 @@
 
 /obj/structure/micro_tunnel/magic
 	magic = TRUE
-<<<<<<< HEAD
-=======
 
 /obj
 	var/micro_accepted_scale = 0.5
@@ -377,4 +380,3 @@
 		tunnel.set_dir(dir)
 
 	qdel(src)
->>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
