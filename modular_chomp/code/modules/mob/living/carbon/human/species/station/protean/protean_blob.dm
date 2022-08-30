@@ -565,11 +565,11 @@ var/global/list/disallowed_protean_accessories = list(
 	//Return ourselves in case someone wants it
 	return src
 
-<<<<<<< HEAD:modular_chomp/code/modules/mob/living/carbon/human/species/station/protean/protean_blob.dm
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)
 		C.statpanel = "Protean"
-=======
+		
+//Start Vorestation fixes, apparently
 /mob/living/simple_mob/protean_blob/CanStumbleVore(mob/living/target)
 	if(target == humanform)
 		return FALSE
@@ -586,4 +586,4 @@ var/global/list/disallowed_protean_accessories = list(
 		if(PB.humanform == src)
 			return FALSE
 	return ..()
->>>>>>> ffa17d0eb7... Merge pull request #13528 from Heroman3003/protean-self-vore:code/modules/mob/living/carbon/human/species/station/protean_vr/protean_blob.dm
+//End Vorestation fixes
