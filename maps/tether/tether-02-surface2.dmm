@@ -16357,6 +16357,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_two_hall)
 "aBJ" = (
@@ -23586,6 +23589,19 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
+<<<<<<< HEAD
+=======
+"aPv" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/public_garden_maintenence/upper)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "aPw" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 9
@@ -33474,6 +33490,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
+"ftF" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
 "fxr" = (
 /obj/machinery/light{
 	dir = 8
@@ -33543,6 +33568,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/fish_farm)
+"fYb" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/mining)
 "gaR" = (
 /obj/item/device/radio/intercom/locked/ai_private{
 	dir = 4;
@@ -33754,6 +33792,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
+"idw" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/yellow/border,
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
 "ilH" = (
 /obj/structure/table/standard,
 /obj/item/weapon/aiModule/reset,
@@ -34486,6 +34530,12 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
+"nOG" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/tether/surfacebase/fish_farm)
 "nPO" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -34740,6 +34790,15 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
+"pXo" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
 "pYH" = (
 /obj/effect/floor_decal/techfloor/corner,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -34748,6 +34807,12 @@
 /obj/machinery/porta_turret,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
+"qbq" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/asmaint2)
 "qia" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -35135,6 +35200,20 @@
 	},
 /turf/simulated/floor/water/indoors,
 /area/tether/surfacebase/fish_farm)
+"sLA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/readingrooms)
 "sLP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -35282,6 +35361,18 @@
 /obj/effect/floor_decal/corner_techfloor_grid,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+"tuZ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 6
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/south)
 "tyG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -35343,7 +35434,25 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
+=======
+"tMW" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/south)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "tPB" = (
 /turf/simulated/floor/grass,
 /area/chapel/main)
@@ -35646,7 +35755,26 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
+=======
+"vmx" = (
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/structure/bed/chair/sofa/pew{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"vok" = (
+/obj/structure/catwalk,
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/south)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "voE" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -35839,6 +35967,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+"xem" = (
+/obj/structure/catwalk,
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/atmos)
 "xfa" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -40402,6 +40537,7 @@ adt
 adt
 adt
 adt
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -40448,6 +40584,63 @@ adt
 adt
 adt
 adt
+=======
+akX
+akX
+apu
+aqA
+ars
+asw
+akX
+akX
+aKj
+aPx
+aPU
+aPx
+aRi
+aPU
+fLW
+axO
+pqb
+bOW
+fLW
+aBB
+aCm
+aDj
+aDV
+nOG
+aBB
+aOM
+aJf
+aRK
+aJf
+arY
+aJf
+aJf
+aJf
+aJf
+arv
+aJf
+aJf
+arY
+aJf
+aJf
+aJf
+arR
+aJf
+aJf
+atk
+arY
+aJf
+aJf
+aJf
+aJf
+aJf
+arR
+aJf
+ayC
+aHE
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 adt
 adt
 adt
@@ -44961,7 +45154,7 @@ aTA
 aUo
 aPJ
 aQw
-aQw
+qbq
 aXv
 aYd
 aYD
@@ -45694,7 +45887,7 @@ baA
 baW
 bbf
 aJX
-baW
+xem
 aIn
 aJZ
 baX
@@ -46969,7 +47162,7 @@ baW
 baW
 baW
 baW
-baW
+xem
 baW
 beT
 baz
@@ -47208,7 +47401,7 @@ ayF
 aEK
 ayF
 aFZ
-ayF
+ftF
 aAh
 aHp
 aHK
@@ -48786,7 +48979,7 @@ aAG
 aKw
 aLj
 aLO
-aMv
+idw
 aNj
 aNR
 aOH
@@ -50323,7 +50516,7 @@ avI
 awk
 avD
 axG
-ayl
+pXo
 ayO
 azh
 azR
@@ -50377,7 +50570,7 @@ aLY
 aLY
 aLY
 aLY
-aLX
+vok
 bdQ
 bdb
 aIo
@@ -50762,9 +50955,13 @@ aiK
 aiK
 aiK
 aiK
+<<<<<<< HEAD
 >>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 aiK
 auX
+=======
+fYb
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 asV
 atY
 anW
@@ -51101,7 +51298,7 @@ aSo
 aSo
 bdu
 aSo
-aSo
+tMW
 aSo
 aSo
 bbR
@@ -51266,7 +51463,7 @@ bIG
 bde
 bdE
 csF
-cMd
+sLA
 jWK
 cMd
 gus
@@ -51838,7 +52035,7 @@ aRc
 aRH
 aSp
 aTp
-aSp
+tuZ
 aSp
 aSp
 aWy
