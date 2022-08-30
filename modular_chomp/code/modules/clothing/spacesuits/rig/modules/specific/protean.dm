@@ -63,7 +63,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 	name = "Protean Adaptive Armor"
 	desc = "This should never be outside of a RIG."
 	interface_name = "Protean Adaptive Armor"
-	interface_desc = "Adjusts the proteans deployed armor values to fit the needs of the wearer. Incurs a slowdown penalty that scales with the amount of armor provided."
+	interface_desc = "Adjusts the proteans deployed armor values to fit the needs of the wearer."
 	usable = 1
 	toggleable = 1
 	activate_string = "Enable Armor"
@@ -75,14 +75,15 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 /obj/item/rig_module/protean/armor/engage()
 	var/armor_chosen = input(usr, "Which armor to adjust?", "Protean Armor") as null|anything in armor_settings
 	if(armor_chosen)
-		var/value = input(usr, "Set armour reduction value (Max of 60%)", "Protean Armor") as num
-		if(value)
-			if((value > 60) || (value < 0))
-				to_chat(usr, "<span class ='warning'>Invalid armor value. Can only be between 0-60</span>")
-			else
-				value = round(value)
-				armor_settings[armor_chosen] = value
-
+		var/armorvalue = tgui_input_number(usr, "Set armour reduction value (Max of 60%)", "Protean Armor",0,60,0,0,1)
+		if(isnum(armorvalue))
+			armor_settings[armor_chosen] = armorvalue
+			interface_desc = initial(interface_desc)
+			slowdown = 0
+			for(var/entry in armor_settings)	//This is dumb and ugly but I dont feel like rewriting rig TGUI just to make this a pretty list
+				interface_desc += " [entry]: [armor_settings[entry]]"
+				slowdown += armor_settings[entry]*armor_weight_ratio
+			interface_desc += " Slowdown: [slowdown]"
 
 /obj/item/rig_module/protean/armor/activate()
 	if(!..(1))
@@ -97,10 +98,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		holder.armor = temparmor.Copy()
 		for(var/obj/item/piece in list(holder.gloves,holder.helmet,holder.boots,holder.chest))
 			piece.armor = temparmor.Copy()
-		for(var/entry in armor_settings)
-			holder.slowdown += temparmor[entry]*armor_weight_ratio
-			message_admins(temparmor[entry])
-		//holder.slowdown -= (armor_weight_ratio*200)
+		holder.slowdown = slowdown
 		active = 1
 	else
 		return 0
