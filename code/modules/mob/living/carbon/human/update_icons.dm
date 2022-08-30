@@ -67,37 +67,38 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define SURGERY_LAYER			5		//Overlays for open surgical sites
 #define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
 #define TAIL_LOWER_LAYER		7		//Tail as viewed from the south
-#define SHOES_LAYER_ALT			8		//Shoe-slot item (when set to be under uniform via verb)
-#define UNIFORM_LAYER			9		//Uniform-slot item
-#define ID_LAYER				10		//ID-slot item
-#define SHOES_LAYER				11		//Shoe-slot item
-#define GLOVES_LAYER			12		//Glove-slot item
-#define BELT_LAYER				13		//Belt-slot item
-#define SUIT_LAYER				14		//Suit-slot item
-#define TAIL_UPPER_LAYER		15		//Some species have tails to render (As viewed from the N, E, or W)
-#define GLASSES_LAYER			16		//Eye-slot item
-#define BELT_LAYER_ALT			17		//Belt-slot item (when set to be above suit via verb)
-#define SUIT_STORE_LAYER		18		//Suit storage-slot item
-#define BACK_LAYER				19		//Back-slot item
-#define HAIR_LAYER				20		//The human's hair
-#define HAIR_ACCESSORY_LAYER	21		//VOREStation edit. Simply move this up a number if things are added.
-#define EARS_LAYER				22		//Both ear-slot items (combined image)
-#define EYES_LAYER				23		//Mob's eyes (used for glowing eyes)
-#define FACEMASK_LAYER			24		//Mask-slot item
-#define HEAD_LAYER				25		//Head-slot item
-#define HANDCUFF_LAYER			26		//Handcuffs, if the human is handcuffed, in a secret inv slot
-#define LEGCUFF_LAYER			27		//Same as handcuffs, for legcuffs
-#define L_HAND_LAYER			28		//Left-hand item
-#define R_HAND_LAYER			29		//Right-hand item
-#define WING_LAYER				30		//Wings or protrusions over the suit.
-#define VORE_BELLY_LAYER		31		//CHOMPStation edit - Move this and everything after up if things are added.
-#define VORE_TAIL_LAYER			32		//CHOMPStation edit - Move this and everything after up if things are added.
-#define TAIL_UPPER_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	34		//Effects drawn by modifiers
-#define FIRE_LAYER				35		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			36		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			37		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			37		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+#define WING_LOWER_LAYER		8		//Wings as viewed from the south
+#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
+#define UNIFORM_LAYER			10		//Uniform-slot item
+#define ID_LAYER				11		//ID-slot item
+#define SHOES_LAYER				12		//Shoe-slot item
+#define GLOVES_LAYER			13		//Glove-slot item
+#define BELT_LAYER				14		//Belt-slot item
+#define SUIT_LAYER				15		//Suit-slot item
+#define TAIL_UPPER_LAYER		16	//Some species have tails to render (As viewed from the N, E, or W)
+#define GLASSES_LAYER			17		//Eye-slot item
+#define BELT_LAYER_ALT			18		//Belt-slot item (when set to be above suit via verb)
+#define SUIT_STORE_LAYER		19		//Suit storage-slot item
+#define BACK_LAYER				20		//Back-slot item
+#define HAIR_LAYER				21		//The human's hair
+#define HAIR_ACCESSORY_LAYER	22		//VOREStation edit. Simply move this up a number if things are added.
+#define EARS_LAYER				23		//Both ear-slot items (combined image)
+#define EYES_LAYER				24		//Mob's eyes (used for glowing eyes)
+#define FACEMASK_LAYER			25		//Mask-slot item
+#define HEAD_LAYER				26		//Head-slot item
+#define HANDCUFF_LAYER			27		//Handcuffs, if the human is handcuffed, in a secret inv slot
+#define LEGCUFF_LAYER			28		//Same as handcuffs, for legcuffs
+#define L_HAND_LAYER			29		//Left-hand item
+#define R_HAND_LAYER			30		//Right-hand item
+#define WING_LAYER				31		//Wings or protrusions over the suit.
+#define VORE_BELLY_LAYER		32		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			33		//CHOMPStation edit - Move this and everything after up if things are added.
+#define TAIL_UPPER_LAYER_ALT	34		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	35		//Effects drawn by modifiers
+#define FIRE_LAYER				36		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			37		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			38		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			38		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
 
 /mob/living/carbon/human
@@ -1109,13 +1110,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		return
 
 	remove_layer(WING_LAYER)
+	remove_layer(WING_LOWER_LAYER)
 
-	var/image/wing_image = get_wing_image()
+	var/image/wing_image = get_wing_image(FALSE)
 	if(wing_image)
 		wing_image.layer = BODY_LAYER+WING_LAYER
 		overlays_standing[WING_LAYER] = wing_image
+	if(wing_style && wing_style.multi_dir)
+		wing_image = get_wing_image(TRUE)
+		if(wing_image)
+			wing_image.layer = BODY_LAYER+WING_LOWER_LAYER
+			overlays_standing[WING_LOWER_LAYER] = wing_image
 
 	apply_layer(WING_LAYER)
+	apply_layer(WING_LOWER_LAYER)
 
 /mob/living/carbon/human/update_modifier_visuals()
 	if(QDESTROYING(src))
@@ -1182,7 +1190,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		overlays_standing[SURGERY_LAYER] = total
 		apply_layer(SURGERY_LAYER)
 
-/mob/living/carbon/human/proc/get_wing_image()
+/mob/living/carbon/human/proc/get_wing_image(var/under_layer)
 	if(QDESTROYING(src))
 		return
 
@@ -1196,7 +1204,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//If you have custom wings selected
 	if(wing_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL) && !wings_hidden) //VOREStation Edit
-		var/icon/wing_s = new/icon("icon" = wing_style.icon, "icon_state" = flapping && wing_style.ani_state ? wing_style.ani_state : wing_style.icon_state)
+		var/wing_state = (flapping && wing_style.ani_state) ? wing_style.ani_state : wing_style.icon_state
+		if(wing_style.multi_dir)
+			wing_state += "_[under_layer ? "back" : "front"]"
+		var/icon/wing_s = new/icon("icon" = wing_style.icon, "icon_state" = wing_state)
 		if(wing_style.do_colouration)
 			wing_s.Blend(rgb(src.r_wing, src.g_wing, src.b_wing), wing_style.color_blend_mode)
 		if(wing_style.extra_overlay)
@@ -1218,6 +1229,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		var/image/working = image(wing_s)
 		if(wing_style.em_block)
 			working.overlays += em_block_image_generic(working) // Leaving this as overlays +=
+		working.pixel_x -= wing_style.wing_offset
 		return working
 
 /mob/living/carbon/human/proc/get_ears_overlay()

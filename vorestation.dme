@@ -3444,6 +3444,7 @@
 #include "code\modules\mob\new_player\sprite_accessories_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing_ch.dm"
+#include "code\modules\mob\new_player\sprite_accessories_wing_large_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_yw.dm"
 #include "code\modules\modular_computers\laptop_vendor.dm"
