@@ -7,7 +7,7 @@
 	backpack = /obj/item/weapon/storage/backpack/captain
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/cap
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/com
-	id_type = /obj/item/weapon/card/id/gold
+	id_type = /obj/item/weapon/card/id/gold/captain
 	pda_type = /obj/item/device/pda/captain
 
 /decl/hierarchy/outfit/job/captain/post_equip(var/mob/living/carbon/human/H)
