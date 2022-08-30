@@ -1127,12 +1127,9 @@
 #include "code\game\objects\explosion_recursive.dm"
 #include "code\game\objects\items.dm"
 #include "code\game\objects\items_vr.dm"
-<<<<<<< HEAD
 #include "code\game\objects\kasscbuttons_ch.dm"
 #include "code\game\objects\mob_spawner_ch.dm"
-=======
 #include "code\game\objects\micro_structures.dm"
->>>>>>> 207ad325c3... Merge pull request #13603 from Very-Soft/micro_structures
 #include "code\game\objects\mob_spawner_vr.dm"
 #include "code\game\objects\objs.dm"
 #include "code\game\objects\structures.dm"
