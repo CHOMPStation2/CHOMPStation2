@@ -4297,6 +4297,11 @@
 #include "code\modules\vore\eating\bellymodes_vr.dm"
 #include "code\modules\vore\eating\contaminate_vr.dm"
 #include "code\modules\vore\eating\digest_act_vr.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\vore\eating\exportpanel_vr.dm"
+#include "code\modules\vore\eating\inbelly_spawn.dm"
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 #include "code\modules\vore\eating\leave_remains_vr.dm"
 #include "code\modules\vore\eating\living_ch.dm"
 #include "code\modules\vore\eating\living_vr.dm"

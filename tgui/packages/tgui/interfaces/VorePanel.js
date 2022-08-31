@@ -276,12 +276,18 @@ const VoreBellySelectionAndCustomization = (props, context) => {
               New
               <Icon name="plus" ml={0.5} />
             </Tabs.Tab>
+<<<<<<< HEAD
             {/* CHOMPEdit - "Belly HTML Export Earlyport" */}
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
             <Tabs.Tab onClick={() => act('exportpanel')}>
               Export
               <Icon name="file-export" ml={0.5} />
             </Tabs.Tab>
+<<<<<<< HEAD
             {/* CHOMPEdit End */}
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
             <Divider />
             {our_bellies.map((belly) => (
               <Tabs.Tab

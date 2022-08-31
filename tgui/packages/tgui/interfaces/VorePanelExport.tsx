@@ -21,7 +21,10 @@ const ItemModeSpan = {
   'Hold': '<span class="badge text-bg-secondary">Item: Hold</span>',
   'Digest (Food Only)': '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
   'Digest': '<span class="badge text-bg-danger">Item: Digest</span>',
+<<<<<<< HEAD
   'Digest (Dispersed Damage)': '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 };
 
 const AddonIcon = {
@@ -34,6 +37,7 @@ const AddonIcon = {
   'Complete Absorb': '',
 };
 
+<<<<<<< HEAD
 const ReagentAddonIcon = {
   'Produce Liquids': '',
   'Digestion Liquids': '',
@@ -41,6 +45,8 @@ const ReagentAddonIcon = {
   'Draining Liquids': '',
 };
 
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 const GetAddons = (addons: string[]) => {
   let result: string[] = [];
 
@@ -55,6 +61,7 @@ const GetAddons = (addons: string[]) => {
   return result;
 };
 
+<<<<<<< HEAD
 const GetLiquidAddons = (addons: string[]) => {
   let result: string[] = [];
 
@@ -71,6 +78,8 @@ const GetLiquidAddons = (addons: string[]) => {
   return result;
 };
 
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 type Data = {
   db_version: string;
   db_repo: string;
@@ -95,6 +104,11 @@ type Belly = {
   digest_brute: number;
   digest_burn: number;
   digest_oxy: number;
+<<<<<<< HEAD
+=======
+  digest_tox: number;
+  digest_clone: number;
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 
   can_taste: BooleanLike;
   contaminates: BooleanLike;
@@ -107,7 +121,10 @@ type Belly = {
   emote_active: BooleanLike;
   emote_time: number;
   shrink_grow_size: number;
+<<<<<<< HEAD
   vorespawn_blacklist: BooleanLike;
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
   egg_type: string;
   selective_preference: string;
 
@@ -145,6 +162,7 @@ type Belly = {
   vore_sound: string;
   release_sound: string;
 
+<<<<<<< HEAD
   // Visuals
   affects_vore_sprites: BooleanLike;
   count_absorbed_prey_for_sprite: BooleanLike;
@@ -155,6 +173,8 @@ type Belly = {
   // Visuals (Belly Fullscreens Preview and Coloring)
   belly_fullscreen_color: string;
 
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
   // Visuals (Vore FX)
   disable_hud: BooleanLike;
 
@@ -172,6 +192,7 @@ type Belly = {
 
   absorbchance: number;
   digestchance: number;
+<<<<<<< HEAD
 
   // Interactions (Auto-Transfer)
   autotransferchance: number;
@@ -204,6 +225,8 @@ type Belly = {
   fullness3_messages: string[];
   fullness4_messages: string[];
   fullness5_messages: string[];
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 };
 
 // prettier-ignore
@@ -225,6 +248,11 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_brute,
     digest_burn,
     digest_oxy,
+<<<<<<< HEAD
+=======
+    digest_tox,
+    digest_clone,
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 
     can_taste,
     contaminates,
@@ -237,7 +265,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     emote_active,
     emote_time,
     shrink_grow_size,
+<<<<<<< HEAD
     vorespawn_blacklist,
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
     egg_type,
     selective_preference,
 
@@ -275,6 +306,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     vore_sound,
     release_sound,
 
+<<<<<<< HEAD
     // Visuals
     affects_vore_sprites,
     count_absorbed_prey_for_sprite,
@@ -285,6 +317,8 @@ const generateBellyString = (belly: Belly, index: number) => {
     // Visuals (Belly Fullscreens Preview and Coloring)
     belly_fullscreen_color,
 
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
     // Visuals (Vore FX)
     disable_hud,
 
@@ -302,6 +336,7 @@ const generateBellyString = (belly: Belly, index: number) => {
 
     absorbchance,
     digestchance,
+<<<<<<< HEAD
 
     // Interactions (Auto-Transfer)
     autotransferchance,
@@ -334,6 +369,8 @@ const generateBellyString = (belly: Belly, index: number) => {
     fullness3_messages,
     fullness4_messages,
     fullness5_messages,
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
   } = belly;
 
   let result = '';
@@ -347,6 +384,13 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_burn +
     '</span>/<span style="color: blue;">' +
     digest_oxy +
+<<<<<<< HEAD
+=======
+    '</span>/<span style="color: green;">' +
+    digest_tox +
+    '</span>/<span style="color: purple;">' +
+    digest_clone +
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
     '</span>) - ' +
     ModeSpan[mode] +
     ' - ' +
@@ -558,7 +602,10 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Idle Emotes: ' + (emote_active ? '<span style="color: green;">Active' : '<span style="color: red;">Inactive') + '</li>';
   result += '<li class="list-group-item">Idle Emote Delay: ' + emote_time + ' seconds</li>';
   result += '<li class="list-group-item">Shrink/Grow Size: ' + shrink_grow_size * 100 + '%</li>';
+<<<<<<< HEAD
   result += '<li class="list-group-item">Vore Spawn Blacklist: ' + (vorespawn_blacklist ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
   result += '<li class="list-group-item">Egg Type: ' + egg_type + '</li>';
   result += '<li class="list-group-item">Selective Mode Preference: ' + selective_preference + '</li>';
   result += '</ul>';
@@ -595,6 +642,7 @@ const generateBellyString = (belly: Belly, index: number) => {
 
   result += '<div id="settingsAccordion' + index + '-collapseVisuals" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingVisuals>';
   result += '<div class="accordion-body">';
+<<<<<<< HEAD
   result += '<b>Vore Sprites</b>';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Affect Vore Sprites: ' + (affects_vore_sprites ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
@@ -607,6 +655,8 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Color: <span style="color: ' + belly_fullscreen_color + ';">' + belly_fullscreen_color + '</span>';
   result += '</ul>';
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
   result += '<b>Vore FX</b>';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Disable Prey HUD: ' + (disable_hud ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
@@ -637,6 +687,7 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Absorb Chance: ' + absorbchance + '%</li>';
   result += '<li class="list-group-item">Digest Chance: ' + digestchance + '%</li>';
   result += '</ul>';
+<<<<<<< HEAD
   result += '<hr>';
   result += '<b>Auto-Transfer Options (' +
   (autotransfer_enabled ? '<span style="color: green;">Enabled' : '<span style="color: red;">Disabled') +
@@ -739,6 +790,11 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '</div></div></div>';
 
   // END LIQUID MESSAGES
+=======
+  result += '</div></div></div>';
+
+  // END INTERACTIONS
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 
   result += '</div></div></div>';
 

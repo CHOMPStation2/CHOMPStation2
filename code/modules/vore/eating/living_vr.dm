@@ -1086,7 +1086,10 @@
 	set category = "Preferences"
 	set desc = "Print out your vorebelly messages into chat for copypasting."
 
+<<<<<<< HEAD
 	//CHOMPEdit - "Belly HTML Export Earlyport"
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 	var/result = tgui_alert(src, "Would you rather open the export panel?", "Selected Belly Export", list("Open Panel", "Print to Chat"))
 	if(result == "Open Panel")
 		var/mob/living/user = usr
@@ -1151,7 +1154,10 @@
 					to_chat(src, "<span class='notice'><b>[EL]:</b></span>")
 					for(var/msg in B.emote_lists[EL])
 						to_chat(src, "<span class='notice'>[msg]</span>")
+<<<<<<< HEAD
 	//CHOMPEdit End
+=======
+>>>>>>> 0d01c50ace... Merge pull request #13610 from ItsSelis/belly-html-export
 
 /**
  * Small helper component to manage the vore panel HUD icon
