@@ -5075,6 +5075,22 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
+<<<<<<< HEAD
+=======
+"mu" = (
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "engine_public_access";
+	name = "Public Access Shutters";
+	pixel_x = -25;
+	req_access = list(10)
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/engine)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "mv" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -5102,6 +5118,10 @@ lel
 /obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
+"mA" = (
+/obj/machinery/vending/altevian,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/foodplace)
 "mC" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -5228,6 +5248,7 @@ lel
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 "mQ" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -5236,6 +5257,13 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southeastspur)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "mR" = (
 /obj/structure/bed/chair/comfy/orange{
 	dir = 4
@@ -9613,6 +9641,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/foodplace)
 "xk" = (
+<<<<<<< HEAD
 /obj/item/weapon/storage/pill_bottle/dice,
 /obj/item/weapon/storage/pill_bottle/dice,
 /obj/item/weapon/storage/pill_bottle/dice_nerd,
@@ -9632,6 +9661,13 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southwestspur)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "xm" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -9881,6 +9917,12 @@ lel
 	},
 /turf/simulated/floor,
 /area/prison/cell_block/gb)
+"xL" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/eastspur)
 "xM" = (
 /obj/machinery/firealarm,
 /turf/simulated/floor/tiled/dark,
@@ -14098,6 +14140,12 @@ lel
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level1/westspur)
+"HQ" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/centsquare)
 "HR" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -16405,6 +16453,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
 "Nu" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
@@ -16417,6 +16466,13 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/westspur)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "Nv" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/level1/centsquare)
@@ -16564,6 +16620,10 @@ lel
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/level1/northspur)
+"NM" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/westspur)
 "NN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -16852,6 +16912,12 @@ lel
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/ai/robot)
+"Ov" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southeastspur)
 "Ow" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -19525,6 +19591,14 @@ lel
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/groundbase/security/hos)
+"Vp" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+	outdoors = 0
+	},
+/area/maintenance/groundbase/level1/nwtunnel)
 "Vq" = (
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/level1/southwestspur)
@@ -26445,7 +26519,7 @@ cB
 cB
 cB
 cB
-cB
+Nu
 AZ
 cv
 px
@@ -28318,7 +28392,7 @@ EZ
 mh
 Iw
 Tf
-vM
+xk
 Wm
 vM
 vM
@@ -28389,7 +28463,7 @@ MO
 MO
 MO
 MO
-FF
+Vp
 FF
 MO
 FF
@@ -28998,7 +29072,7 @@ mk
 cB
 cB
 cB
-cB
+NM
 gv
 Az
 Kh
@@ -29834,7 +29908,7 @@ Eb
 Eb
 Eb
 Eb
-Eb
+HQ
 Eb
 Eb
 Eb
@@ -33370,7 +33444,7 @@ qE
 qE
 qE
 Eb
-Eb
+HQ
 Eb
 Eb
 Eb
@@ -34988,7 +35062,7 @@ Uf
 Uf
 Uf
 Uf
-ck
+Ov
 ck
 TW
 ck
@@ -36057,7 +36131,7 @@ Ah
 Ah
 Ah
 MK
-MK
+xL
 sF
 MK
 MK
@@ -36262,7 +36336,7 @@ Lt
 Lt
 Uf
 Uf
-Aq
+mA
 pA
 Aq
 Uf
@@ -36408,7 +36482,7 @@ Uf
 Uf
 Uf
 Uf
-ck
+mQ
 ck
 Ac
 ck

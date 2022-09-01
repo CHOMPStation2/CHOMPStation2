@@ -26,9 +26,6 @@
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
-		/mob/living/proc/flying_toggle,
-		/mob/living/proc/flying_vore_toggle,
-		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb
 
