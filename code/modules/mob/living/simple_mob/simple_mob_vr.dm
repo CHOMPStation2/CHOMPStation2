@@ -377,6 +377,7 @@
 	if(buckle_mob(M))
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
+<<<<<<< HEAD
 /mob/living/simple_mob/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
 	//CHOMPEdit - This whole proc tbh
 	if(message_mode)
@@ -392,6 +393,18 @@
 			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
 				if(mob_radio.channels[message_mode])
 					mob_radio.talk_into(src,message,message_mode,verb,speaking)
+=======
+/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, used_radios, speaking, alt_name)
+	if(mob_radio)
+		switch(message_mode)
+			if("intercom")
+				for(var/obj/item/device/radio/intercom/I in view(1, null))
+					I.talk_into(src, message, verb, speaking)
+					used_radios += I
+			if("headset")
+				if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
+					mob_radio.talk_into(src,message,null,verb,speaking)
+>>>>>>> ab65f1ebfa... Merge pull request #13626 from Verkister/patch-120
 					used_radios += mob_radio
 	else
 		..()
