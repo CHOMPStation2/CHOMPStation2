@@ -13,11 +13,11 @@
 	name = "sand"
 	desc = "Salty and gritty."
 	icon = 'icons/turf/desert_planet.dmi'
-	icon_state = "sand"
-	// edge_blending_priority = 3 #Don't know how to make it work.
-	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
+	icon_state = "sand0"
+	edge_blending_priority = 1
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
-/* Want this for the desert tiles.
+/* #I want this for the desert tiles.
 /turf/simulated/floor/outdoors/desert_planet/sand
 	name = "sand"
 	desc = "Salty and gritty."
@@ -84,42 +84,42 @@
 	desc = "Salty and gritty."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "deep_sand"
-	// edge_blending_priority = 2 #Don't know how to make it work.
 	movement_cost = 3
-	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/grass
 	name = "grass"
 	desc = "Lively green grass, soft to walk on."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "grass"
-	// edge_blending_priority = 6 #Don't know how to make it work.
-	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
+	edge_blending_priority = 4
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/deep_grass
 	name = "dense grass"
 	desc = "Dense patch of grass, seems like a soft spot to lay on."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "deep_grass"
-	// edge_blending_priority = 7 #Don't know how to make it work.
-	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
+	edge_blending_priority = 5
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/gravel
 	name = "gravel"
 	desc = "Mix of dirt and sand, it crumbles in your hand."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "gravel"
-	// edge_blending_priority = 5 #Don't know how to make it work.
-	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
+	edge_blending_priority = 2
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/mud
 	name = "mud"
 	desc = "Squishy damp dirt, smells muddy."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "mud"
-	// edge_blending_priority = 4 #Don't know how to make it work.
-	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
+	edge_blending_priority = 3
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
+/*  #No idea how water tiles work
 /turf/simulated/floor/outdoors/desert_planet/water
 	name = "water"
 	desc = "Clear cool water, looks potable."
@@ -134,7 +134,7 @@
 	can_dirty = FALSE	// It's water
 	var/depth = 1 // Higher numbers indicates deeper water.
 	var/reagent_type = "water"
-	// edge_blending_priority = 2 #Don't know how to make it work.
+	edge_blending_priority = 2
 	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
 /turf/simulated/floor/outdoors/desert_planet/deep_water
@@ -151,10 +151,10 @@
 	can_dirty = FALSE	// It's water
 	var/depth = 2 // Higher numbers indicates deeper water.
 	var/reagent_type = "water"
-	// edge_blending_priority = 4 #Don't know how to make it work.
+	edge_blending_priority = 4
 	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
-/* I want this for the water tiles
+  //I want this for the water tiles
 /turf/simulated/floor/water
 	name = "shallow water"
 	desc = "A body of water.  It seems shallow enough to walk through, if needed."
