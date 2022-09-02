@@ -43,6 +43,7 @@
 	cost = 0
 	category = 0
 	custom_only = FALSE
+	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing)) // CHOMPEdit: Fix 'chimera unarmed attacks with this trait
 
 /datum/trait/positive/snowwalker/xenochimera
 	sort = TRAIT_SORT_SPECIES
@@ -53,15 +54,23 @@
 	category = 0
 	custom_only = FALSE
 
-/datum/trait/positive/water_breather/xenochimera
+/datum/trait/positive/aquatic/xenochimera
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
-	name = "Xenochimera: Water Breather"
-	desc = "You can breathe under water."
+	name = "Xenochimera: Aquatic"
+	desc = "You can breathe under water and can traverse water more efficiently. Additionally, you can eat others in the water."
 	cost = 0
 	category = 0
+	excludes = list(/datum/trait/positive/winged_flight/xenochimera)
 	custom_only = FALSE
-	
+
+/datum/trait/positive/winged_flight/xenochimera
+	name = "Xenochhimera: Winged Flight"
+	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
+	cost = 0
+	excludes = list(/datum/trait/positive/aquatic/xenochimera)
+	custom_only = FALSE
+
 /* // Commented out in lieu of finding a better solution.
 /datum/trait/neutral/coldadapt/xenochimera
 	sort = TRAIT_SORT_SPECIES

@@ -1,5 +1,5 @@
 /datum/trait/positive
-	category = 1
+	category = TRAIT_TYPE_POSITIVE
 
 /datum/trait/positive/speed_fast
 	name = "Haste"
@@ -127,6 +127,7 @@
 	desc = "You can fall from certain heights without suffering any injuries, be it via wings, lightness of frame or general dexterity."
 	cost = 1
 	var_changes = list("soft_landing" = TRUE)
+	custom_only = FALSE
 
 /datum/trait/positive/hardfeet
 	name = "Hard Feet"
@@ -150,6 +151,8 @@
 	desc = "You're capable of parkour and can *flip over low objects (most of the time)."
 	cost = 1 //CHOMPEdit this is not worth 2 points
 	var_changes = list("agility" = 90)
+	custom_only = FALSE
+	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 
 /datum/trait/positive/snowwalker
 	name = "Snow Walker"
@@ -172,18 +175,43 @@
 	H.verbs |= /mob/living/carbon/human/proc/weave_item
 	H.verbs |= /mob/living/carbon/human/proc/set_silk_color
 
-/datum/trait/positive/water_breather
-	name = "Water Breather"
-	desc = "You can breathe under water."
+/datum/trait/positive/aquatic
+	name = "Aquatic"
+	desc = "You can breathe under water and can traverse water more efficiently. Additionally, you can eat others in the water."
 	cost = 1
-	var_changes = list("water_breather" = 1)
+	var_changes = list("water_breather" = 1, "water_movement" = -4) //Negate shallow water. Half the speed in deep water.
+
+/datum/trait/positive/aquatic/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/water_stealth
+	H.verbs |= /mob/living/carbon/human/proc/underwater_devour
 
 /datum/trait/positive/cocoon_tf
 	name = "Cocoon Spinner"
 	desc = "Allows you to build a cocoon around yourself, using it to transform your body if you desire."
 	cost = 1
-	//custom_only = FALSE
 
 /datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+
+/* //CHOMPedit: We already have our own version of this trait.
+/datum/trait/positive/linguist
+	name = "Linguist"
+	desc = "Allows you to have more languages."
+	cost = 1
+	var_changes = list("num_alternate_languages" = 6)
+	var_changes_pref = list("extra_languages" = 3)
+	custom_only = FALSE
+	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+*/
+
+/* // CHOMPedit: commented out because we disabled baymiss so this does nothing.
+/datum/trait/positive/good_shooter
+	name = "Eagle Eye"
+	desc = "You are better at aiming than most."
+	cost = 2
+	var_changes = list("gun_accuracy_mod" = 25)
+	custom_only = FALSE
+	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+*/

@@ -33,7 +33,6 @@ var/list/preferences_datums = list()
 	var/tgui_swapped_buttons = FALSE
 
 	//character preferences
-	var/num_languages = 0				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
@@ -64,7 +63,8 @@ var/list/preferences_datums = list()
 	var/species = SPECIES_HUMAN         //Species datum to use.
 	var/species_preview                 //Used for the species selection window.
 	var/list/alternate_languages = list() //Secondary language(s)
-	var/list/language_prefixes = list() //Kanguage prefix keys
+	var/list/language_prefixes = list() //Language prefix keys
+	var/list/language_custom_keys = list() //Language custom call keys
 	var/list/gear						//Left in for Legacy reasons, will no longer save.
 	var/list/gear_list = list()			//Custom/fluff item loadouts.
 	var/gear_slot = 1					//The current gear save slot
@@ -164,12 +164,6 @@ var/list/preferences_datums = list()
 	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
 	var/selecting_slots = FALSE
 
-//CHOMPEdit Begin
-/datum/preferences/proc/numlanguage()
-	var/datum/species/S = GLOB.all_species[species]
-	var/num = max(num_languages, S.num_alternate_languages)
-	return (num == 0) ? 3 : num //Don't return 0
-//CHOMPEdit End
 
 /datum/preferences/New(client/C)
 	player_setup = new(src)
@@ -436,12 +430,12 @@ var/list/preferences_datums = list()
 	selecting_slots = FALSE
 	if(!choice)
 		return
-	
+
 	var/slotnum = charlist[choice]
 	if(!slotnum)
 		error("Player picked [choice] slot to load, but that wasn't one we sent.")
 		return
-	
+
 	load_character(slotnum)
 	attempt_vr(user.client?.prefs_vr,"load_vore","") //VOREStation Edit
 	sanitize_preferences()
@@ -476,12 +470,12 @@ var/list/preferences_datums = list()
 	selecting_slots = FALSE
 	if(!choice)
 		return
-	
+
 	var/slotnum = charlist[choice]
 	if(!slotnum)
 		error("Player picked [choice] slot to copy to, but that wasn't one we sent.")
 		return
-	
+
 	overwrite_character(slotnum)
 	sanitize_preferences()
 	ShowChoices(user)

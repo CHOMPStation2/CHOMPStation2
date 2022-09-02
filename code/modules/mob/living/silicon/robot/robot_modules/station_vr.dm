@@ -75,6 +75,7 @@
 	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
 	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
+	robot_modules["TraumaHound"] = /obj/item/weapon/robot_module/robot/medical/trauma
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -249,6 +250,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -299,10 +304,12 @@
 	src.modules += new /obj/item/device/healthanalyzer(src) // See who's hurt specificially.
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice, made it the large variant in 2022
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //This is kinda important for rescuing people without making it worse for everyone
+	src.modules += new /obj/item/weapon/gripper/medical(src) //Let them do literally anything in medbay other than patch external damage and lick people
+	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src) //dropper is nice to have for so much actually
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
@@ -310,10 +317,15 @@
 	synths += medicine
 
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
+	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
 	C.uses_charge = 1
-	C.charge_costs = list(1000)
+	C.charge_costs = list(5000)
 	C.synths = list(medicine)
+	S.uses_charge = 1
+	S.charge_costs = list(1000)
+	S.synths = list(medicine)
 	src.modules += C
+	src.modules += S
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
@@ -334,29 +346,102 @@
 	B.water = water
 	src.modules += B
 
+	R.icon = 'icons/mob/widerobot_vr.dmi'
+
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module
+	R.icon = 'icons/mob/widerobot_med_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_med_vr.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
+	R.pixel_x 	 = -16
+	R.old_x  	 = -16
+	R.default_pixel_x = -16
+	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
+	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs |= /mob/living/proc/toggle_rider_reins
+	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	..()
+
+/obj/item/weapon/robot_module/robot/medical/trauma
+	name = "traumahound robot module"
+	channels = list("Medical" = 1)
+	networks = list(NETWORK_MEDICAL)
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
+	pto_type = PTO_MEDICAL
+	can_be_pushed = 0
+	sprites = list(
+					"Traumahound" = "traumavale",
+					"Drake" = "draketrauma"
+					)
+
+/obj/item/weapon/robot_module/robot/medical/trauma/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/device/healthanalyzer(src)
+	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/weapon/autopsy_scanner(src)
+	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/cautery/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bonegel/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src) //let them succ
+	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
+	src.modules += new /obj/item/weapon/gripper/medical(src)
+	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
+	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
+	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
+	src.emag 	= new /obj/item/weapon/dogborg/pounce(src) //Pounce, also, lets not give them polyacid spray
+
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
+	water.name = "Water reserves"
+	water.recharge_rate = 0
+	R.water_res = water
+	synths += water
+
+	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	T.water = water
+	src.modules += T
+
+	var/obj/item/weapon/reagent_containers/borghypo/hound/trauma/H = new /obj/item/weapon/reagent_containers/borghypo/hound/trauma(src) //surgeon chems
+	H.water = water
+	src.modules += H
+
+	var/obj/item/device/dogborg/sleeper/compactor/trauma/B = new /obj/item/device/dogborg/sleeper/compactor/trauma(src) //So they can nom people and heal them
+	B.water = water
+	src.modules += B
+
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000) //this is so they can do brute/burn surgeries and fix assisted/prosthetic organs
+	synths += medicine
+
+	var/obj/item/stack/nanopaste/N = new /obj/item/stack/nanopaste(src)
+	var/obj/item/stack/medical/advanced/bruise_pack/S = new /obj/item/stack/medical/advanced/bruise_pack(src)
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
-	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
-	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
-	O.uses_charge = 1
-	O.charge_costs = list(1000)
-	O.synths = list(medicine)
-	P.uses_charge = 1
-	P.charge_costs = list(1000)
-	P.synths = list(medicine)
+	N.uses_charge = 1
+	N.charge_costs = list(1000)
+	N.synths = list(medicine)
 	S.uses_charge = 1
 	S.charge_costs = list(1000)
 	S.synths = list(medicine)
-	src.modules += O
-	src.modules += P
+	O.uses_charge = 1
+	O.charge_costs = list(1000)
+	O.synths = list(medicine)
+	src.modules += N
 	src.modules += S
+	src.modules += O
 
-// End YW Edit
-
-	R.icon = 'icons/mob/widerobot_vr.dmi'
-
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
-	R.icon = 'icons/mob/widerobot_med_vr.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_med_vr.dmi'
+	R.icon = 'icons/mob/widerobot_trauma_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_trauma_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -390,7 +475,7 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
 	src.modules += new /obj/item/weapon/tool/crowbar(src)
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -415,6 +500,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -503,6 +592,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -543,9 +636,15 @@
 	//Added a circuit gripper
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
+	//src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src) //these are on the normal one, but do not appear to have a purpose other than borging
+	//src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src) //so I am leaving them here but commented out because robotics no do the borging w/o medical
+	src.modules += new /obj/item/weapon/portable_destructive_analyzer(src) //destructive analyzer option for pref respect while also being able to do job
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
-	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)  //Chompedit this was missing for some strange reason.
-	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)  //Chompedit This also.
+	src.modules += new /obj/item/weapon/shockpaddles/robot/jumper(src) //unkilling synths may be important actually
+	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src) //save the xenobio from themselves
+	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src) //save the xenobio from themselves from a distance
+	src.modules += new /obj/item/device/xenoarch_multi_tool(src) //go find fancy rock
+	src.modules += new /obj/item/weapon/pickaxe/excavationdrill(src) //go get fancy rock
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -585,6 +684,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -743,6 +846,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -822,6 +929,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -885,6 +996,10 @@
 	R.old_x  	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -971,6 +1086,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	..()
@@ -1046,6 +1165,10 @@
 	R.old_x  	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount

@@ -74,7 +74,7 @@
 			return
 
 	var/client/ghost_client = ghost.client
-	
+
 	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
 		to_chat(ghost, "<span class='warning'>You are not whitelisted to spawn as this species!</span>")
 		return
@@ -132,7 +132,7 @@
 		else
 			spawn_slots --
 			return
-	
+
 	if(tgui_alert(ghost, "Would you like to be resleeved?", "Resleeve", list("No","Yes")) == "No")
 		return
 	var/mob/living/carbon/human/new_character
@@ -152,7 +152,7 @@
 		ghost.mind.transfer_to(new_character)
 
 	new_character.key = player_key
-	
+
 	//Were they any particular special role? If so, copy.
 	if(new_character.mind)
 		new_character.mind.loaded_from_ckey = picked_ckey
@@ -167,6 +167,11 @@
 		if(chosen_language)
 			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
 				new_character.add_language(lang)
+	for(var/key in ghost_client.prefs.language_custom_keys)
+		if(ghost_client.prefs.language_custom_keys[key])
+			var/datum/language/keylang = GLOB.all_languages[ghost_client.prefs.language_custom_keys[key]]
+			if(keylang)
+				new_character.language_keys[key] = keylang
 
 	//If desired, apply equipment.
 	if(equip_body)

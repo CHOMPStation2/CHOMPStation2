@@ -2130,7 +2130,9 @@
 /area/groundbase/cargo/office)
 "go" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/light/small/fairylights,
+/obj/machinery/light/small/fairylights{
+	pixel_y = -2
+	},
 /turf/simulated/floor/outdoors/sidewalk/virgo3c,
 /area/groundbase/level2/nw)
 "gq" = (
@@ -3127,6 +3129,10 @@
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room8)
+"jd" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/se)
 "je" = (
 /turf/unsimulated/wall/planetary/virgo3c,
 /area/groundbase/level2/se)
@@ -4925,6 +4931,12 @@
 	outdoors = 0
 	},
 /area/groundbase/level2/se)
+"oG" = (
+/obj/machinery/light/small/fairylights{
+	pixel_y = -1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/nw)
 "oH" = (
 /turf/simulated/open/virgo3c,
 /area/groundbase/level2/eastspur)
@@ -7398,8 +7410,19 @@
 /obj/machinery/light_switch{
 	pixel_y = 30
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/chapel)
+=======
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/room1)
+"wl" = (
+/obj/machinery/light/small/fairylights{
+	pixel_y = -1
+	},
+/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/area/groundbase/level2/nw)
+>>>>>>> 3c288de197... Merge pull request #13353 from Very-Soft/backtogb
 "wm" = (
 /obj/machinery/computer/supplycomp/control{
 	dir = 8
@@ -7498,6 +7521,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/chapel)
+"wD" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/nw)
 "wE" = (
 /obj/structure/table/woodentable,
 /obj/machinery/camera/network/civilian,
@@ -9408,6 +9437,12 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/chapel/office)
+"Co" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/se)
 "Cq" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -10305,6 +10340,12 @@
 /obj/machinery/alarm,
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room4)
+"EP" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/ne)
 "EQ" = (
 /obj/structure/filingcabinet,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -11032,6 +11073,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/triage)
+"GY" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/nw)
 "GZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11169,7 +11216,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/light/small/fairylights,
+/obj/machinery/light/small/fairylights{
+	pixel_y = -2
+	},
 /turf/simulated/floor/outdoors/sidewalk/virgo3c,
 /area/groundbase/level2/nw)
 "Hs" = (
@@ -12056,6 +12105,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
+"JS" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/ne)
 "JT" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -13163,11 +13218,21 @@
 	},
 /area/groundbase/level2/ne)
 "MU" = (
+<<<<<<< HEAD
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/medical/Chemistry)
+=======
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/virgo3c{
+	edge_blending_priority = -1
+	},
+/area/groundbase/level2/se)
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "MV" = (
 /obj/machinery/alarm{
 	dir = 8
@@ -13824,6 +13889,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot)
+"OM" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/ne)
 "ON" = (
 /turf/unsimulated/wall/planetary/virgo3c,
 /area/groundbase/level2/sw)
@@ -14584,6 +14653,12 @@
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
+/area/groundbase/level2/nw)
+"QS" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/level2/nw)
 "QV" = (
 /obj/structure/bed/chair/office/dark{
@@ -16511,6 +16586,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rnd)
+"WC" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/sw)
 "WD" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/medical/virology)
@@ -17274,6 +17353,12 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"Zf" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level2/se)
 "Zg" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/virgo3c,
@@ -20455,7 +20540,7 @@ qr
 Vb
 zb
 Do
-bY
+GY
 bY
 bY
 sN
@@ -21166,7 +21251,7 @@ bY
 bY
 bY
 bY
-bY
+wD
 bY
 bY
 bY
@@ -23057,7 +23142,7 @@ jG
 jG
 RL
 jG
-jG
+WC
 Rh
 mZ
 kZ
@@ -23412,7 +23497,7 @@ Ip
 IQ
 gR
 rP
-bY
+GY
 fI
 bY
 FF
@@ -23720,7 +23805,7 @@ bY
 sZ
 bY
 bY
-bY
+QS
 bY
 pw
 pw
@@ -23866,13 +23951,13 @@ bY
 bY
 bY
 bY
-EZ
+wl
 ml
 pw
-lM
+oG
 bY
 bY
-lM
+oG
 bY
 bY
 bY
@@ -24150,13 +24235,13 @@ bY
 bY
 bY
 bY
-EZ
+wl
 sN
 pw
-lM
+oG
 bY
 Oa
-lM
+oG
 bY
 bY
 bY
@@ -24299,7 +24384,7 @@ lM
 bY
 Oa
 lM
-bY
+wD
 Aq
 bY
 bY
@@ -28792,7 +28877,7 @@ ks
 to
 to
 to
-to
+OM
 Cz
 EQ
 ZD
@@ -29519,7 +29604,7 @@ Eq
 xP
 HJ
 Wj
-to
+JS
 to
 to
 to
@@ -29952,7 +30037,7 @@ to
 NC
 to
 to
-to
+OM
 sW
 sW
 sW
@@ -30288,7 +30373,7 @@ sx
 rK
 CK
 kU
-kU
+MU
 kU
 kU
 Bo
@@ -31528,7 +31613,7 @@ Nw
 KA
 Nw
 to
-to
+EP
 to
 to
 to
@@ -31976,7 +32061,7 @@ UE
 Bo
 cV
 Bo
-Bo
+jd
 ia
 Hc
 TX
@@ -32700,7 +32785,7 @@ SE
 gE
 hA
 an
-Bo
+Zf
 Bo
 Bo
 fk
@@ -34803,7 +34888,7 @@ Bo
 Bo
 Bo
 Bo
-Bo
+Co
 Bo
 Bo
 fk

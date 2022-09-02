@@ -152,7 +152,7 @@
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/vending/wallmed2
 	layer = ABOVE_WINDOW_LAYER
-/obj/structure/closet/fireaxecabinet
+/obj/structure/fireaxecabinet
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/extinguisher_cabinet
 	layer = ABOVE_WINDOW_LAYER
@@ -160,3 +160,21 @@
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/noticeboard
 	layer = ABOVE_WINDOW_LAYER
+
+/obj/item/device/multitool/scioutpost
+	name = "science outpost linked multitool"
+	desc = "It has the data for the science outpost's quantum pad pre-loaded... assuming you didn't override it."
+
+/obj/item/device/multitool/scioutpost/Initialize()
+	. = ..()
+	for(var/obj/machinery/power/quantumpad/scioutpost/outpost in world)
+		connectable = outpost
+		if(connectable)
+			icon_state = "multitool_red"
+		return
+
+/obj/machinery/power/quantumpad/scioutpost
+
+/datum/random_map/noise/ore/virgo2		// Less OP generation map, but better than Underdark
+	deep_val = 0.7
+	rare_val = 0.5
