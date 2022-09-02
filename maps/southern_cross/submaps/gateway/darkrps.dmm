@@ -6314,6 +6314,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/steel_reinforced,
+/obj/random/toy,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
 "Ic" = (
