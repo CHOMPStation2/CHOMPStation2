@@ -55,6 +55,7 @@
 /datum/alt_title/exploration_manager
 	title = "Exploration Manager"
 
+<<<<<<< HEAD
 
 /datum/job/pilot
 	title = "Pilot"
@@ -85,6 +86,10 @@
 /datum/alt_title/helmsman
 	title = "Helmsman"
 
+=======
+/datum/job/pathfinder/get_request_reasons()
+	return list("Training crew")
+>>>>>>> 6f0445784a... Merge pull request #13636 from Heroman3003/more-reasons
 
 /datum/job/explorer
 	title = "Explorer"
