@@ -17415,9 +17415,6 @@
 	icon_state = "4-8"
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 1;
-	frequency = 1473;
-	name = "Confession Intercom";
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/dark,
