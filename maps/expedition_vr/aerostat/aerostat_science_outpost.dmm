@@ -1943,8 +1943,8 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
-	name = "Xenobiology Emergency Blast Door";
-	id = "xenobio_blast"
+	id = "xenobio_blast";
+	name = "Xenobiology Emergency Blast Door"
 	},
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/xenobiolab)
@@ -2730,14 +2730,14 @@
 /area/offmap/aerostat/inside/airlock/east)
 "iz" = (
 /obj/machinery/door/airlock/glass_research{
-	name = "Xenobiology";
-	id_tag = "xenobio"
+	id_tag = "xenobio";
+	name = "Xenobiology"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
-	name = "Xenobiology Emergency Blast Door";
-	id = "xenobio_blast"
+	id = "xenobio_blast";
+	name = "Xenobiology Emergency Blast Door"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
@@ -3414,8 +3414,8 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
-	name = "Xenobiology Emergency Blast Door";
-	id = "xenobio_blast"
+	id = "xenobio_blast";
+	name = "Xenobiology Emergency Blast Door"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
@@ -6743,8 +6743,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
-	name = "Xenobiology Emergency Blast Door";
-	id = "xenobio_blast"
+	id = "xenobio_blast";
+	name = "Xenobiology Emergency Blast Door"
 	},
 /obj/structure/cable,
 /turf/simulated/floor/tiled,
@@ -9348,6 +9348,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/rnd{
 	req_one_access = null
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offmap/aerostat/inside/arm/se)
@@ -12621,8 +12624,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
-	name = "Xenobiology Emergency Blast Door";
-	id = "xenobio_blast"
+	id = "xenobio_blast";
+	name = "Xenobiology Emergency Blast Door"
 	},
 /obj/structure/cable,
 /obj/machinery/shieldwallgen{
