@@ -344,15 +344,11 @@
 		else
 			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
 	else
-<<<<<<< HEAD
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 			GenerateBellyReagents_digested()
 		else
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier) //CHOMPedit end
-=======
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency)
->>>>>>> a10e58a4e8... Merge pull request #13651 from Runa-Dacino/nutrition-trait
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
