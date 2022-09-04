@@ -36,8 +36,19 @@
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east)
 "y" = (
+<<<<<<< HEAD
 /turf/simulated/mineral/ignore_cavegen,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/mineral/ignore_cavegen/virgo3c,
+/area/submap/groundbase/wilderness/east)
+"B" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/simulated/floor/water/virgo3c,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 3e5775ea6e... Merge pull request #13634 from Heroman3003/3c-turfs
 "F" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/east/unexplored)
