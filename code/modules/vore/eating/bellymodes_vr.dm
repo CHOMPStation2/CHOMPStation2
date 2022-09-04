@@ -329,6 +329,7 @@
 		GLOB.prey_digested_roundstat++
 
 	var/personal_nutrition_modifier = M.get_digestion_nutrition_modifier()
+	var/pred_digestion_efficiency = owner.get_digestion_efficiency_modifier()
 
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
@@ -343,11 +344,15 @@
 		else
 			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
 	else
+<<<<<<< HEAD
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 			GenerateBellyReagents_digested()
 		else
 			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier) //CHOMPedit end
+=======
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency)
+>>>>>>> a10e58a4e8... Merge pull request #13651 from Runa-Dacino/nutrition-trait
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
