@@ -496,12 +496,7 @@ var/global/list/light_type_cache = list()
 	else
 		update_use_power(USE_POWER_IDLE)
 		set_light(0)
-<<<<<<< HEAD
-		update_icon()
-
-=======
 	update_light() //VOREStation Edit - Makes lights update when their color is changed.
->>>>>>> aa40f0411c... Merge pull request #13660 from Cameron653/NO_CRASHING
 	update_active_power_usage((light_range * light_power) * LIGHTING_POWER_FACTOR)
 
 /obj/machinery/light/proc/nightshift_mode(var/state)
