@@ -269,7 +269,7 @@
 	
 /datum/supply_pack/voidsuits/voxsec
 	name = "Vox Security Hardsuit"
-	contains = list (/obj/weapon/rig/vox/security)
+	contains = list (/obj/item/weapon/rig/vox/security)
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Voxcurity Rigsuit Crate"
