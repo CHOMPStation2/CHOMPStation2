@@ -275,5 +275,4 @@
 	containername = "Voxcurity Rigsuit Crate"
 	access = access_security
 
-
 //ChompEdit End
