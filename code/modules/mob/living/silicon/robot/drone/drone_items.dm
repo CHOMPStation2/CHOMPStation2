@@ -100,7 +100,8 @@
 		/obj/item/weapon/reagent_containers/pill,
 		/obj/item/weapon/reagent_containers/blood,
 		/obj/item/device/nif,       //Chompedit Add Nif handling
-		/obj/item/stack/material/phoron
+		/obj/item/stack/material/phoron,
+		/obj/item/weapon/disk/body_record //Vorestation Edit: this lets you get an empty sleeve or help someone else
 		)
 
 /obj/item/weapon/gripper/research //A general usage gripper, used for toxins/robotics/xenobio/etc

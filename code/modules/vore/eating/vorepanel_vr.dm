@@ -186,6 +186,8 @@
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
 			"digest_oxy" = selected.digest_oxy,
+			"digest_tox" = selected.digest_tox,
+			"digest_clone" = selected.digest_clone,
 			"bulge_size" = selected.bulge_size,
 			"save_digest_mode" = selected.save_digest_mode,
 			"display_absorbed_examine" = selected.display_absorbed_examine,
@@ -441,6 +443,25 @@
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
 				unsaved_changes = FALSE
 			return TRUE
+		//CHOMPEdit - "Belly HTML Export Earlyport"
+		if("exportpanel")
+			var/mob/living/user = usr
+			if(!user)
+				to_chat(usr,"<span class='notice'>Mob undefined: [user]</span>")
+				return FALSE
+
+			var/datum/vore_look/export_panel/exportPanel
+			if(!exportPanel)
+				exportPanel = new(usr)
+
+			if(!exportPanel)
+				to_chat(user,"<span class='notice'>Export panel undefined: [exportPanel]</span>")
+				return FALSE
+
+			exportPanel.open_export_panel(user)
+
+			return TRUE
+		//CHOMPEdit End
 		if("setflavor")
 			var/new_flavor = html_encode(tgui_input_text(usr,"What your character tastes like (400ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",host.vore_taste))
 			if(!new_flavor)
@@ -1215,6 +1236,20 @@
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 12)
 			host.vore_selected.digest_oxy = new_new_damage
+			. = TRUE
+		if("b_tox_dmg")
+			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0)
+			if(new_damage == null)
+				return FALSE
+			var/new_new_damage = CLAMP(new_damage, 0, 6)
+			host.vore_selected.digest_tox = new_new_damage
+			. = TRUE
+		if("b_clone_dmg")
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0)
+			if(new_damage == null)
+				return FALSE
+			var/new_new_damage = CLAMP(new_damage, 0, 6)
+			host.vore_selected.digest_clone = new_new_damage
 			. = TRUE
 		if("b_emoteactive")
 			host.vore_selected.emote_active = !host.vore_selected.emote_active
