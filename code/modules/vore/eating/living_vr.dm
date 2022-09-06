@@ -36,6 +36,7 @@
 	var/stumble_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/slip_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
+	var/throw_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 	var/allow_spontaneous_tf = FALSE	// Obviously.
@@ -280,6 +281,7 @@
 	P.pickup_pref = src.pickup_pref
 	P.drop_vore = src.drop_vore
 	P.slip_vore = src.slip_vore
+	P.throw_vore = src.throw_vore
 	P.stumble_vore = src.stumble_vore
 
 	P.nutrition_message_visible = src.nutrition_message_visible
@@ -333,6 +335,7 @@
 	pickup_pref = P.pickup_pref
 	drop_vore = P.drop_vore
 	slip_vore = P.slip_vore
+	throw_vore = P.throw_vore
 	stumble_vore = P.stumble_vore
 
 	nutrition_message_visible = P.nutrition_message_visible
@@ -1082,6 +1085,7 @@
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
 	dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Throw vore:</b> [throw_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"

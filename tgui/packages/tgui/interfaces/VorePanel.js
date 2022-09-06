@@ -1447,6 +1447,7 @@ const VoreUserPreferences = (props, context) => {
     drop_vore,
     stumble_vore,
     slip_vore,
+    throw_vore,
     nutrition_message_visible,
     weight_message_visible,
   } = data.prefs;
@@ -1611,9 +1612,30 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Stumble Vore Disabled',
       },
     },
+<<<<<<< HEAD
     spawnbelly: {
       action: 'toggle_latejoin_vore',
       test: latejoin_vore,
+=======
+    toggle_throw_vore: {
+      action: 'toggle_throw_vore',
+      test: throw_vore,
+      tooltip: {
+        main:
+          'Allows for throw related spontaneous vore to occur. ' +
+          ' Note, you still need spontaneous vore pred and/or prey enabled.',
+        enable: 'Click here to allow for throw vore.',
+        disable: 'Click here to disable throw vore.',
+      },
+      content: {
+        enabled: 'Throw Vore Enabled',
+        disabled: 'Throw Vore Disabled',
+      },
+    },
+    inbelly_spawning: {
+      action: 'toggle_allow_inbelly_spawning',
+      test: allow_inbelly_spawning,
+>>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
       tooltip: {
         main: 'Toggle late join vore spawnpoint.',
         enable: 'Click here to turn on vorish spawnpoint.',
@@ -1864,16 +1886,28 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
+<<<<<<< HEAD
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnprey} />
+=======
+          <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
+>>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
         </Flex.Item>
         <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
+        </Flex.Item>
+<<<<<<< HEAD
+        <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.noisy_full} />
+=======
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.noisy} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.noisy_full} />
+          <VoreUserPreferenceItem spec={preferences.resize} />
+>>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.resize} />
@@ -1881,7 +1915,7 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.vore_fx} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
@@ -1890,7 +1924,7 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.pickuppref} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
         <Flex.Item basis="32%">

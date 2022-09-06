@@ -18,7 +18,12 @@
 	feeding = client.prefs_vr.feeding
 	can_be_drop_prey = client.prefs_vr.can_be_drop_prey
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
+<<<<<<< HEAD
 	latejoin_vore = client.prefs_vr.latejoin_vore //CHOMPedit
+=======
+	throw_vore = client.prefs_vr.throw_vore
+	allow_inbelly_spawning = client.prefs_vr.allow_inbelly_spawning
+>>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
 	allowmobvore = client.prefs_vr.allowmobvore
