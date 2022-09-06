@@ -1,0 +1,33 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/machinery/disperser/front{dir = 1},/turf/template_noop,/area/template_noop)
+"c" = (/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
+"f" = (/obj/structure/fans/hardlight/colorable{color = "red"},/obj/machinery/door/airlock/hatch{icon_state = "door_locked"; id_tag = null; locked = 1; req_access = list(11)},/turf/simulated/floor/plating/external,/area/survivalpod)
+"h" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/shuttle/engine/heater,/turf/simulated/floor/plating/external,/area/survivalpod)
+"j" = (/obj/structure/salvageable/machine,/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
+"k" = (/turf/simulated/wall/rshull,/area/survivalpod)
+"l" = (/obj/machinery/disperser/back{dir = 1},/obj/structure/ship_munition/disperser_charge/explosive,/turf/simulated/wall/shull,/area/survivalpod)
+"n" = (/obj/structure/closet/walllocker_double/medical/west,/obj/item/weapon/storage/firstaid,/obj/item/weapon/storage/firstaid/fire,/obj/item/weapon/storage/firstaid/toxin,/obj/item/weapon/storage/firstaid/o2,/obj/item/roller,/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
+"q" = (/obj/effect/floor_decal/techfloor{dir = 8},/obj/structure/window/reinforced/survival_pod,/obj/machinery/light/poi{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
+"s" = (/obj/structure/window/plastitanium/full,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille/rustic{health = 25; name = "reinforced grille"},/obj/machinery/door/blast/regular/open{dir = 4; id = "stargazer_blast"; name = "window blast shield"},/turf/simulated/shuttle/plating,/area/survivalpod)
+"t" = (/obj/effect/catwalk_plated/dark,/turf/template_noop,/area/survivalpod)
+"u" = (/obj/machinery/disperser/middle{dir = 1},/turf/template_noop,/area/template_noop)
+"x" = (/obj/structure/closet/walllocker_double/kitchen/east{name = "Ration Cabinet"},/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/obj/effect/floor_decal/techfloor{dir = 8},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
+"D" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
+"F" = (/obj/machinery/portable_atmospherics/canister/phoron,/obj/machinery/atmospherics/portables_connector{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod)
+"H" = (/obj/structure/bed/chair/bay/comfy/red{dir = 1},/obj/machinery/door/window/survival_pod{dir = 2},/mob/living/simple_mob/humanoid/merc/ranged/laser,/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
+"L" = (/obj/machinery/atmospherics/unary/engine{dir = 1},/turf/template_noop,/area/survivalpod)
+"M" = (/obj/effect/catwalk_plated/dark,/obj/machinery/light/poi{dir = 1},/turf/template_noop,/area/survivalpod)
+"P" = (/obj/effect/floor_decal/techfloor{dir = 8},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
+"S" = (/turf/simulated/wall/shull,/area/survivalpod)
+"U" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/structure/window/reinforced/survival_pod,/obj/machinery/light/poi{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
+"X" = (/obj/structure/closet/walllocker_double/hydrant/east,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/turf/simulated/floor/tiled/techfloor,/area/survivalpod)
+
+(1,1,1) = {"
+aaakskaaa
+abkkjkkba
+SusUHqsuS
+SlSncxSlS
+SSFDcPXSS
+aShSfShSa
+aSLMtMLSa
+"}

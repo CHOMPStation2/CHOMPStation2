@@ -1,0 +1,45 @@
+"a" = (/obj/structure/table/standard,/obj/item/weapon/reagent_containers/glass/bucket{pixel_x = -6; pixel_y = 7},/obj/item/weapon/reagent_containers/glass/bucket{pixel_x = 6; pixel_y = 7},/obj/structure/sink/kitchen{layer = 1; pixel_y = 12},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"c" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/weapon/storage/box/survival/space,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/machinery/light{dir = 1},/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/starcaster_news,/obj/item/device/starcaster_news,/obj/item/device/threadneedle,/obj/item/device/flashlight,/obj/item/device/flashlight,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/random/soap,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/storage/box/flare,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"d" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/vertical,/turf/simulated/floor/tiled/techmaint,/area/space)
+"e" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"f" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/space)
+"l" = (/obj/machinery/seed_storage/garden,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"m" = (/obj/machinery/sleeper/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"q" = (/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"r" = (/obj/machinery/smartfridge/survival_pod{icon = 'icons/obj/vending.dmi'; icon_base = "smartfridge"; icon_contents = "boxes"; icon_state = "smartfridge"; name = "Advanced storage"; pixel_y = -1},/obj/item/device/multitool,/obj/item/device/multitool,/obj/item/bee_pack,/obj/item/bee_pack,/obj/item/bee_smoker,/obj/item/bee_smoker,/obj/item/beehive_assembly,/obj/item/beehive_assembly,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/weapon/tool/crowbar,/obj/item/weapon/tool/crowbar,/obj/item/device/analyzer/plant_analyzer,/obj/item/device/analyzer/plant_analyzer,/obj/item/clothing/gloves/botanic_leather,/obj/item/clothing/gloves/botanic_leather,/obj/item/clothing/head/greenbandana,/obj/item/clothing/head/greenbandana,/obj/item/weapon/material/minihoe,/obj/item/weapon/material/minihoe,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/tool/wirecutters/clippers/trimmers,/obj/item/weapon/tool/wirecutters/clippers/trimmers,/obj/item/weapon/reagent_containers/spray/plantbgone,/obj/item/weapon/reagent_containers/spray/plantbgone,/obj/item/clothing/suit/storage/apron/overalls,/obj/item/clothing/suit/storage/apron/overalls,/obj/item/weapon/storage/toolbox/mechanical,/obj/item/weapon/storage/toolbox/mechanical,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"s" = (/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 1; id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/space)
+"u" = (/obj/machinery/portable_atmospherics/hydroponics,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"v" = (/obj/structure/window/reinforced/polarized{id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/space)
+"w" = (/obj/effect/floor_decal/industrial/loading{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"x" = (/obj/machinery/door/window/survival_pod{dir = 2},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"y" = (/obj/machinery/button/windowtint{id = "SP-Hydro"; pixel_x = -28; pixel_y = 6},/obj/machinery/light_switch{name = "light switch "; pixel_x = -27; pixel_y = -5},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"z" = (/obj/structure/table/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod,/obj/item/modular_computer/laptop/preset/custom_loadout/cheap{pixel_x = 3; pixel_y = 12},/obj/item/weapon/material/kitchen/utensil/fork,/obj/item/weapon/material/kitchen/utensil/spoon{pixel_x = 2},/obj/item/pizzavoucher,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"B" = (/obj/structure/window/reinforced/polarized{id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/space)
+"F" = (/obj/machinery/portable_atmospherics/hydroponics,/obj/machinery/light,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"H" = (/obj/structure/window/reinforced/polarized{id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 1; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/space)
+"K" = (/obj/structure/tubes,/obj/structure/window/reinforced/survival_pod,/obj/structure/reagent_dispensers/watertank/high,/obj/machinery/power/apc/alarms_hidden{dir = 4; pixel_x = 20},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"L" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/plating/skipjack,/area/space)
+"M" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"N" = (/obj/machinery/smartfridge/produce,/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"O" = (/obj/machinery/biogenerator,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"P" = (/obj/effect/floor_decal/techfloor{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/space)
+"Q" = (/obj/machinery/honey_extractor,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"S" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/brown,/obj/machinery/newscaster{pixel_x = 30},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"T" = (/turf/simulated/shuttle/plating/skipjack,/area/space)
+"V" = (/obj/machinery/smartfridge/drying_rack{pixel_x = 9},/obj/machinery/smartfridge/drying_rack{pixel_x = -8},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"W" = (/obj/machinery/vending/hydronutrients,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"X" = (/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/space)
+"Y" = (/obj/machinery/seed_extractor,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"Z" = (/obj/structure/fans,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+
+(1,1,1) = {"
+qqqqqqqqq
+qVrOYZcMq
+qyeeemwSq
+NeQaezxKq
+dPTTTLTfd
+selWuuues
+XeeeeeeeX
+XuFuuuFuX
+BHHHHHHHv
+"}
