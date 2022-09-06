@@ -11626,7 +11626,7 @@
 "vk" = (
 /obj/machinery/light,
 /obj/effect/landmark{
-	name = "joinLateSifPlains"
+	name = "JoinLateSifPlains"
 	},
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall)
@@ -24025,7 +24025,7 @@
 /area/surface/outpost/main/dorms/dorm_5)
 "SG" = (
 /obj/effect/landmark{
-	name = "joinLateSifPlains"
+	name = "JoinLateSifPlains"
 	},
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall)
