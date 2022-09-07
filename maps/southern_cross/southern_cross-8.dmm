@@ -969,12 +969,6 @@
 "ayg" = (
 /turf/simulated/mineral,
 /area/skipjack_station)
-"ayq" = (
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/space)
 "ayE" = (
 /obj/effect/floor_decal/sign/small_4{
 	icon = 'icons/turf/flooring/decals.dmi'
@@ -4102,7 +4096,7 @@
 	dir = 5;
 	icon_state = "vault"
 	},
-/area/space)
+/area/centcom/specops)
 "eoN" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -10936,11 +10930,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"mMh" = (
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/space)
 "mMY" = (
 /obj/structure/table/woodentable/holotable,
 /turf/simulated/floor/holofloor/carpet,
@@ -11773,9 +11762,6 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
-"nNX" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/space)
 "nOa" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -39749,8 +39735,8 @@ vFi
 vFi
 vFi
 vFi
-nNX
-ayq
+nZC
+jSV
 eos
 eos
 eos
@@ -40007,12 +39993,12 @@ vFi
 vFi
 vFi
 vFi
-nNX
+nZC
 eos
-mMh
-mMh
-mMh
-mMh
+vHC
+vHC
+vHC
+vHC
 qJs
 jSV
 oSH
@@ -40265,8 +40251,8 @@ vFi
 vFi
 vFi
 vFi
-nNX
-ayq
+nZC
+jSV
 eos
 eos
 eos
@@ -40523,9 +40509,9 @@ vFi
 vFi
 vFi
 vFi
-nNX
-nNX
-nNX
+nZC
+nZC
+nZC
 nZC
 nZC
 nZC
