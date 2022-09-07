@@ -4507,7 +4507,6 @@
 #include "modular_chomp\code\modules\datums\supplypacks\medical.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\munitions.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\science.dm"
-#include "modular_chomp\code\modules\datums\supplypacks\security.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"
 #include "modular_chomp\code\modules\food\drinkgglass\metaglass.dm"
 #include "modular_chomp\code\modules\food\food\drinks\bottle.dm"
