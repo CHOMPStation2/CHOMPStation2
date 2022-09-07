@@ -124,7 +124,7 @@
 "as" = (
 /obj/machinery/vending/snack{
 	contraband = null;
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 0, /obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 0, /obj/item/weapon/reagent_containers/food/snacks/chips = 0, /obj/item/weapon/reagent_containers/food/snacks/sosjerky = 0, /obj/item/weapon/reagent_containers/food/snacks/no_raisin = 0, /obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie = 0, /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers = 0, /obj/item/weapon/reagent_containers/food/snacks/tastybread = 0, /obj/item/weapon/reagent_containers/food/snacks/skrellsnacks = 0)
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy=0,/obj/item/weapon/reagent_containers/food/drinks/dry_ramen=0,/obj/item/weapon/reagent_containers/food/snacks/chips=0,/obj/item/weapon/reagent_containers/food/snacks/sosjerky=0,/obj/item/weapon/reagent_containers/food/snacks/no_raisin=0,/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie=0,/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers=0,/obj/item/weapon/reagent_containers/food/snacks/tastybread=0,/obj/item/weapon/reagent_containers/food/snacks/skrellsnacks=0)
 	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_white"
@@ -133,14 +133,26 @@
 "at" = (
 /obj/machinery/vending/cola{
 	contraband = null;
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/starkist = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/space_up = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice = 0, /obj/item/weapon/reagent_containers/food/drinks/cans/gingerale = 0)
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola=0,/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind=0,/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb=0,/obj/item/weapon/reagent_containers/food/drinks/cans/starkist=0,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle=0,/obj/item/weapon/reagent_containers/food/drinks/cans/space_up=0,/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea=0,/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice=0,/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale=0)
 	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_white"
 	},
 /area/submap/cave/qShuttle)
 "au" = (
-/obj/structure/closet/crate/secure/loot,
+/obj/structure/closet/crate,
+/obj/fiftyspawner/plasteel,
+/obj/fiftyspawner/plasteel,
+/obj/fiftyspawner/phoronrglass,
+/obj/fiftyspawner/phoronrglass,
+/obj/item/stack/material/lead{
+	amount = 50
+	},
+/obj/item/stack/material/lead{
+	amount = 50
+	},
+/obj/fiftyspawner/gold,
+/obj/fiftyspawner/phoron,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_yellow"
 	},
@@ -722,10 +734,23 @@
 	},
 /area/submap/cave/qShuttle)
 "bR" = (
-/obj/structure/loot_pile/maint/technical,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/structure/closet/crate,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/qShuttle)
 "bS" = (
 /obj/structure/sign/biohazard,
@@ -839,6 +864,43 @@
 "cn" = (
 /obj/structure/closet/crate/medical,
 /turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/qShuttle)
+"Ll" = (
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/random/soap,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/pda,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/starcaster_news,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/gps,
+/obj/structure/closet{
+	name = "Survival closet"
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_yellow"
+	},
 /area/submap/cave/qShuttle)
 
 (1,1,1) = {"
@@ -1363,15 +1425,15 @@ aa
 aa
 ab
 ad
-au
+Ll
 aH
 aW
 bk
 bw
 bF
-bR
+aA
 ad
-ab
+bR
 bW
 cd
 ab

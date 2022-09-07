@@ -89,6 +89,7 @@
 "nx" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
 "nB" = (/obj/structure/closet/alien,/obj/random/toolbox,/obj/random/toolbox,/obj/random/toolbox,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/weapon/storage/toolbox/syndicate,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/plasteel,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/machinery/light/poi{dir = 1},/turf/simulated/shuttle/floor/yellow,/area/survivalpod)
 "nC" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor,/area/survivalpod)
+"nL" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/mecha/working/ripley/antique,/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
 "oh" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westleft{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/armor/alien/tank,/obj/item/clothing/head/helmet/alien/tank,/turf/simulated/shuttle/floor/darkred,/area/survivalpod)
 "oi" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/power/smes/buildable{icon = 'icons/obj/alien_smes.dmi'; icon_state = "unit"; input_level = 950000; name = "Alien Royal Capacitor"; output_level = 950000},/obj/structure/cable/cyan,/turf/simulated/floor,/area/survivalpod)
 "op" = (/obj/structure/window/reinforced/survival_pod{dir = 10},/obj/machinery/light/poi,/turf/simulated/floor/tiled/freezer,/area/survivalpod)
@@ -161,6 +162,7 @@
 "Bh" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westright{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/armor/alien,/obj/item/clothing/head/helmet/alien,/turf/simulated/shuttle/floor/darkred,/area/survivalpod)
 "Bo" = (/obj/effect/floor_decal/techfloor{dir = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "BE" = (/obj/structure/prop/alien/pod/hybrid,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod)
+"BT" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/mecha/combat/gygax/serenity,/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
 "Ca" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/energy/particle,/obj/item/weapon/gun/energy/particle,/obj/item/weapon/cell/device/hyper{pixel_y = -10},/obj/item/weapon/cell/device/hyper{pixel_y = -10},/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
 "Cl" = (/obj/effect/floor_decal/techfloor,/obj/machinery/chemical_dispenser/ert/specialops/abductor{dir = 4},/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
 "Cy" = (/obj/effect/floor_decal/techfloor,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/meter,/turf/simulated/floor,/area/survivalpod)
@@ -299,8 +301,8 @@ COCOCObiWOSSXANPbcYiYIfftrPRoGsOXAPRBfVkVkVkVkQiqaNPCaNPaMTgSSSSSSSSSSSSSSSSSSSS
 COCOCObiWTWTaJNPbcSSyDNVDMnxbcsOASnxBfhIdruTFsQiqaNPCaNPHcASSSkOGTBhSSyiKwrISSzufNWQSSxTpxIiwDBoBoSSasasasgWFmFmUitdnxCO
 COCOCOWTWTWTzINPbcSSvVjWDJSSbcsOFUABKBWuWuWuWuiMJWNPJWNPajFUSSuIyPohSSvQfckSSSvQTKEeSSMrhpVkZYqQqQSSYwseYwSSpCTLJBnvSSCO
 COCOCObiWTSSzINPbcbcbcTkbcbcbcNPFUsOFmFmFmFmFmFmFmFmFmFmFmbpSSMkBoMkSSUIUIeBSSUIUIeBSSiDdAGUwDqQqQSSYwzzxVSScByassSSSSCO
-COCOCObiWTltzIVRNPsOsOsOsOsONPVRFUgWqQqQkldPqQqQqQqQdPklqQqQzcwDgWwDSSSSgWSSSSSSgWSSSSSSSSSSSSqQqQSSYwsegSSSSSwDSSSSCOCO
-COCOCObiWTSSSSBowzBoBoBoBoBowzBosOsOqQqQSSSSIrbHTriySSSSqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQSSYwzzYwSSSSCOCOCOCOCO
+COCOCObiWTltzIVRNPsOsOsOsOsONPVRFUgWqQqQkldPqQqQqQqQdPklqQqQzcwDgWwDSSSSgWSSSSSSgWSSSSSSSSSSSSqQqQSSBTsegSSSSSwDSSSSCOCO
+COCOCObiWTSSSSBowzBoBoBoBoBowzBosOsOqQqQSSSSIrbHTriySSSSqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQqQSSYwzznLSSSSCOCOCOCOCO
 COCOCOWTWTSSSSpisOvVjWjWjWDJsOCYsOsOqQutSSClyIyITiyIUnSSSSHXqQqQdPqQqQqQqQqQdPqQqQqQqQqQqQdPqQHXSSSSSSSSSSSSCOCOCOCOCOCO
 COCOUuCObiSSSSKoVQuQuQuQuQuQVQKohVjgqQqQgWdedededededemvSSSSwDSSSSSSSSSSgWSSSSSSgWSSSSSSSdSSSSSSSSSSCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOWTSSWTWTuUXcXcXcfKWTWTWTgWqQqQSSXCdedededeAPSSSSCOCOCOSSPyALPyVkYASSqYVkmTSSnjPBLaFZSSSSCOCOCOCOCOCOCOCOCOCOCO

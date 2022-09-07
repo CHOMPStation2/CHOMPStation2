@@ -62,7 +62,22 @@
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "dr" = (
-/obj/item/stack/material/log/sif,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "dz" = (
@@ -174,10 +189,6 @@
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/oldhotel)
-"nZ" = (
-/obj/fiftyspawner/wood,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/oldhotel)
 "op" = (
 /obj/structure/table/woodentable,
 /obj/random/cigarettes,
@@ -238,10 +249,6 @@
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
-"uF" = (
-/obj/fiftyspawner/steel,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/oldhotel)
 "uU" = (
 /obj/structure/closet/cabinet,
 /obj/random/maintenance/medical,
@@ -298,8 +305,24 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "wX" = (
-/obj/random/trash_pile,
-/turf/template_noop,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood/sif,
+/obj/fiftyspawner/wood/sif,
+/obj/fiftyspawner/turcarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/marble,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/fiftyspawner/cardboard,
+/obj/fiftyspawner/cardboard,
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "yj" = (
 /obj/random/mob/sif/peaceful,
@@ -462,12 +485,39 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/oldhotel)
 "Mk" = (
-/obj/structure/closet/crate,
-/obj/random/action_figure,
-/obj/random/action_figure,
-/obj/random/action_figure,
-/obj/random/action_figure,
-/turf/simulated/floor/wood,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/random/soap,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/pda,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/starcaster_news,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/gps,
+/obj/structure/closet{
+	name = "Survival closet"
+	},
+/turf/simulated/floor/wood/broken,
 /area/submap/oldhotel)
 "Mo" = (
 /obj/structure/railing,
@@ -707,7 +757,7 @@ MU
 MU
 MU
 MU
-wX
+MU
 MU
 bW
 MU
@@ -1082,7 +1132,7 @@ Sy
 Vf
 nD
 dr
-uF
+Jq
 Jq
 Es
 Cx
@@ -1108,8 +1158,8 @@ Sy
 Nu
 Gz
 hQ
-dr
-nZ
+wX
+Jq
 bQ
 Cx
 Cx
@@ -1160,8 +1210,8 @@ MU
 MU
 MU
 bW
-wX
-wX
+MU
+MU
 MU
 Cx
 Cx

@@ -1,0 +1,71 @@
+"bL" = (/obj/item/weapon/bone/ribs,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"bX" = (/obj/fire,/turf/simulated/floor/gorefloor,/area/survivalpod)
+"eh" = (/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"eD" = (/turf/simulated/floor/cult,/area/survivalpod)
+"fH" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/lava,/area/survivalpod)
+"gW" = (/obj/effect/map_effect/interval/sound_emitter/punching,/obj/effect/map_effect/interval/effect_emitter/smoke/fire,/turf/simulated/floor/lava,/area/survivalpod)
+"iK" = (/turf/simulated/floor/gorefloor,/area/survivalpod)
+"lQ" = (/obj/item/weapon/bone/skull/unknown,/turf/simulated/floor/lava,/area/survivalpod)
+"nD" = (/obj/effect/gibspawner/human,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"qo" = (/obj/structure/cult/tome,/turf/simulated/floor/cult,/area/survivalpod)
+"vf" = (/turf/simulated/wall/cult,/area/survivalpod)
+"vT" = (/turf/simulated/floor/lava,/area/survivalpod)
+"xV" = (/obj/fire,/turf/simulated/floor/lava,/area/survivalpod)
+"yJ" = (/obj/machinery/crystal/lava,/turf/simulated/floor/lava,/area/survivalpod)
+"zh" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/cult,/area/survivalpod)
+"zJ" = (/obj/structure/grille/cult,/turf/simulated/floor/cult,/area/survivalpod)
+"AB" = (/obj/structure/grille/cult,/turf/simulated/floor/lava,/area/survivalpod)
+"Cy" = (/obj/structure/girder/cult,/turf/simulated/floor/lava,/area/survivalpod)
+"DW" = (/obj/structure/cult/pylon,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"El" = (/obj/structure/simple_door/cult,/turf/simulated/floor/cult,/area/survivalpod)
+"Fv" = (/obj/structure/girder/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"Fz" = (/obj/item/weapon/bone/ribs,/turf/simulated/floor/lava,/area/survivalpod)
+"FX" = (/obj/structure/grille/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"Hm" = (/obj/structure/girder/cult,/turf/simulated/floor/cult,/area/survivalpod)
+"Ia" = (/turf/template_noop,/area/survivalpod)
+"Jb" = (/obj/effect/decal/remains/deer,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"Ji" = (/obj/structure/grille/broken/cult,/obj/fire,/turf/simulated/floor/lava,/area/survivalpod)
+"Jt" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"Kb" = (/turf/simulated/goreeyes,/area/survivalpod)
+"Ko" = (/obj/structure/constructshell/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"LQ" = (/obj/structure/grille/cult,/turf/simulated/wall/cult,/area/survivalpod)
+"Mq" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"Mv" = (/turf/simulated/floor/flesh/colour{color = red},/area/survivalpod)
+"Nh" = (/turf/simulated/gore,/area/survivalpod)
+"PU" = (/obj/fire,/turf/template_noop,/area/survivalpod)
+"Qh" = (/obj/fire,/turf/simulated/wall/cult,/area/survivalpod)
+"RL" = (/obj/effect/decal/remains/deer,/turf/simulated/floor/cult,/area/survivalpod)
+"Sy" = (/obj/structure/grille/broken/cult,/obj/fire,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+"Ut" = (/obj/structure/cult/talisman,/turf/simulated/floor/cult,/area/survivalpod)
+"UO" = (/obj/item/weapon/bone/arm,/turf/simulated/floor/lava,/area/survivalpod)
+"Vn" = (/obj/structure/cult/forge,/turf/simulated/floor/cult,/area/survivalpod)
+"VA" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor,/area/survivalpod)
+"YJ" = (/obj/fire,/turf/simulated/floor/gorefloor2,/area/survivalpod)
+
+(1,1,1) = {"
+IaehIaIaehIaehIaehehIaNhehehNhIaIaehIaIavfIaNhehNhIaehIaNhIaehehehvfehIaNhIaehIa
+vfNhNhvfehehvfNhNhNhvTvTFXehvfehvTNhNhNhNhNhNhvfNhNhNhNhNhKbLQABJivTvTxVQhxVvTNh
+NhNhehehehehehNhNhNhxVYJehDWehYJehNhNhNhNhKbDWehYJYJYJehehiKiKbXbXABvTvTvTyJvfeh
+NhvfehehvTvTehehehNhehehehehehehehehNhNhehehehehiKiKiKiKiKiKiKiKiKVAiKMviKvTvTeh
+NhIaehvTvTvTvTYJehKbehehiKbXiKehehehnDNhehiKiKiKMvMviKiKMvMviKMvMviKMvMvMvvTxVvf
+IaehvTvTgWFzvTehehYJiKMvMvMvMviKJbehehKbiKMvMviKMvehYJehiKiKiKiKiKVAiKMviKvTQhIa
+IaehvTvTvTvTvTehehbXMvMviKiKMvMviKYJehYJiKiKiKehehehJtehehehbXbXiKABvTvTvTyJvTeh
+IaehehvTxVxVnDehMqiKMviKehehiKMviKehehehiKiKiKehnDKbNhKbFvehABJifHvTxVxVxVxVvfeh
+IaPUehehehYJehJbiKMvMviKehnDehMvMviKehehiKMvehehehYJYJYJehehKbNhKbNhNhNhNhNhNhIa
+IavfehehehehMqehiKMviKiKehFvehiKMviKYJvTiKMviKiKiKiKiKiKiKiKiKehehehNhNhNhNhNheh
+IaIaIavfvfKbehiKMvMviKehehKbehiKMvehMqehehehMvMvMviKiKMvMviKMvehSyYJehvTvTvTNhIa
+IaIaIaIaNhehehiKMviKehehehVAehiKMvMvehvTyJehiKiKiKiKiKehiKehMvMviKehYJYJvTvTvTeh
+NhvfNhNhehehehMvMviKYJehehKbehiKiKMvehxVUOehehKovfzhElzJvfKoehMviKMvYJYJvTvTvfIa
+IaNhNhehehFvehMviKiKYJehJtNhYJehiKMvehYJehehKbvfvfRLeDRLvfvfehehehMviKehehvfvTIa
+NhNhYJYJehiKiKMviKiKehehNhNhYJehiKMviKehehbLehHmeDeDeDeDeDvfehehiKiKehehehIaIaIa
+NhehYJehehiKMvMviKehehehNhNhehYJiKMvMvehehYJehvfVnqoUteDeDCylQDWiKMviKIavfIaehIa
+vfehehiKiKMvMviKiKehYJNhNhNhehehehMvMviKiKYJehvfvfzJvfvfzhvTvTehehMvMviKJbvfIaIa
+ehehiKiKIaMvMvMviKYJYJNhNhNhehehehiKMvMviKehehMqehehehehehYJYJehehMvMviKYJehvfvf
+ehehvfIaIaMvMvMviKYJYJNhNhNhehehJbehiKMvMvMviKehiKiKiKiKehehiKehiKMvMviKYJMqNheh
+IaIaIaMvMvMvMvMviKYJYJNhNhNhehehehehnDehiKiKMvMvMvMvMvMvMviKiKMvMvMviKiKYJehNheh
+IaIaIaMvMvMvMvMviKehehNhNhNhNhehIaKbehehYJehiKehMvMviKiKMvMvMvMviKehehehehehNhNh
+IaehiKMvMviKiKiKiKehNhNhNhNhNhehvfehehehYJehehehvfiKiKehiKiKiKIaehYJehehehNhNhIa
+IaNhehiKiKiKiKiKIavfvfNhNhNhNhvfIavfehehehNhvfvfNhehvfehehehMqvfehehehKbNhNhNheh
+IaIaNhehehehehIaehIaIavfNhNhvfIaIaIaehNhNhNhvfvfNhNhNhvfvfehvfIaIaehNhNhNhNhNhIa
+IaIaehIaIaNhehIaIaehehIaIaIaIaNhNhIaIaehehehIaIaIaehehehIaIaIaehehIaIaIaIaIaehIa
+"}

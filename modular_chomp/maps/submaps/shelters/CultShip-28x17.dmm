@@ -52,6 +52,7 @@
 "IX" = (/obj/structure/simple_door/cult,/turf/simulated/floor/tiled/techfloor,/area/survivalpod)
 "Kj" = (/obj/structure/closet/cabinet,/obj/random/curseditem,/obj/random/curseditem,/obj/item/weapon/melee/cursedblade,/obj/item/weapon/melee/cultblade,/obj/item/weapon/beartrap/hunting,/obj/item/weapon/beartrap/hunting,/obj/item/stack/material/phoron{amount = 25},/obj/item/stack/material/phoron{amount = 25},/obj/item/device/soulstone,/obj/item/device/soulstone,/obj/item/weapon/storage/belt/soulstone/full,/turf/simulated/floor/tiled/techfloor,/area/survivalpod)
 "Kq" = (/obj/structure/undies_wardrobe,/turf/simulated/floor/cult,/area/survivalpod)
+"Kt" = (/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/cult,/area/survivalpod)
 "KV" = (/obj/machinery/atmospherics/unary/engine/biggest{dir = 8},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod)
 "Ln" = (/turf/simulated/floor/cult,/area/survivalpod)
 "LR" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/machinery/light/floortube/flicker{dir = 8; pixel_x = -3},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod)
@@ -80,6 +81,7 @@
 "Xw" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod)
 "Yl" = (/obj/effect/floor_decal/techfloor/corner{dir = 4},/turf/simulated/floor/cult,/area/survivalpod)
 "Yu" = (/obj/machinery/door/airlock/phoron,/obj/structure/fans/hardlight/colorable/abductor,/turf/simulated/shuttle/plating,/area/survivalpod)
+"YN" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/machinery/power/apc/alarms_hidden{dir = 1; pixel_y = 20},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod)
 "YO" = (/obj/structure/cult/talisman,/obj/item/device/soulstone,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod)
 "ZJ" = (/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod)
 
@@ -87,7 +89,7 @@
 UGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUG
 UGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGCYawawawUGUGUG
 UGUGUGUGUGUGUGUGUGUGUGUGUGUGvfawyqkfQhawawawawZJZJUGUGUG
-UGUGUGUGUGUGUGUGUGxqawyqkfQhawbeNlMhizawawvfawZJZJUGUGUG
+UGUGUGUGUGUGUGUGUGxqawyqkfQhawbeNlMhizawYNKtawZJZJUGUGUG
 UGUGUGUGUGvfawYuawawawxhfZxhMhNlMhNlwlIXMgPRawKVZJUGUGUG
 UGMdawyqQhawpJnjawFwNlMhNlVLHFHFjqHFWmawLRgUawNQjONQUGUG
 UGawawjvheawvGnjawNlOpNlOpDeawawyqQhawawMgPRawawawjOUGUG

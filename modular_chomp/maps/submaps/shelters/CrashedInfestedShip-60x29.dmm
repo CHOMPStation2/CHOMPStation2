@@ -97,6 +97,7 @@
 "nx" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod)
 "nB" = (/obj/structure/closet/alien,/obj/random/toolbox,/obj/random/toolbox,/obj/random/toolbox,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/weapon/storage/toolbox/syndicate,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/plasteel,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/machinery/light/poi{dir = 1},/turf/simulated/shuttle/floor/yellow,/area/survivalpod)
 "nC" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor,/area/survivalpod)
+"nX" = (/obj/structure/alien/membrane,/turf/simulated/floor,/area/survivalpod)
 "ob" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor,/area/survivalpod)
 "oh" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westleft{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/armor/alien/tank,/obj/item/clothing/head/helmet/alien/tank,/turf/simulated/shuttle/floor/darkred,/area/survivalpod)
 "op" = (/obj/structure/window/reinforced/survival_pod{dir = 10},/obj/machinery/light/poi,/turf/simulated/floor/tiled/freezer,/area/survivalpod)
@@ -215,6 +216,7 @@
 "EJ" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/random/maintenance/engineering,/obj/fire,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod)
 "EM" = (/obj/structure/closet/alien,/obj/item/clothing/suit/space/void/autolok,/obj/item/clothing/suit/space/void/autolok,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/storage/toolbox/emergency,/obj/machinery/light/poi{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod)
 "EY" = (/obj/structure/lattice,/turf/template_noop,/area/survivalpod)
+"EZ" = (/obj/structure/alien/wall,/turf/template_noop,/area/survivalpod)
 "Ff" = (/obj/machinery/door/airlock/alien{req_one_access = null},/turf/template_noop,/area/survivalpod)
 "Fm" = (/obj/effect/floor_decal/techfloor{dir = 1},/turf/simulated/shuttle/floor/alien,/area/survivalpod)
 "Fu" = (/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/alien,/area/survivalpod)
@@ -340,7 +342,8 @@
 "XJ" = (/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/white,/area/template_noop)
 "XY" = (/obj/effect/floor_decal/techfloor,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor,/area/survivalpod)
 "Yi" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/template_noop,/area/survivalpod)
-"Yw" = (/obj/effect/alien/resin/membrane,/turf/simulated/floor,/area/survivalpod)
+"Yw" = (/obj/structure/alien/wall,/turf/simulated/floor,/area/survivalpod)
+"Yx" = (/obj/structure/alien/membrane,/turf/template_noop,/area/survivalpod)
 "YA" = (/obj/structure/closet/alien,/obj/item/clothing/suit/space/void/autolok,/obj/item/clothing/suit/space/void/autolok,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/storage/toolbox/emergency,/turf/simulated/floor/tiled/techfloor,/area/survivalpod)
 "YP" = (/obj/machinery/atmospherics/unary/engine/bigger{dir = 4; pixel_x = -3},/turf/template_noop,/area/template_noop)
 "Zh" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/structure/filingcabinet/medical,/turf/simulated/floor/tiled/techmaint,/area/survivalpod)
@@ -352,26 +355,26 @@
 
 (1,1,1) = {"
 COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOGQSSGQGQPiPiGQGQGQvVjWjWDJGQSSCOCOCOCOCOCOCOCOCOCOCOCOCOCO
+COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOGQSSGQGQEZEZGQGQGQvVjWjWDJGQSSCOCOCOCOCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOGQGQGQGQGQGQGQbvbvWTGQGQGQSSCOCOCOCOCOCOCOCOCOCOCOCOWTGQjdjdtKRTAVGQXegzgzgzgzXeGQSSCOCOCOCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOWTGQdgbwqeaophdzUpNdTDVFGQWTSSCOGQGQwDGQGQSSCOCOCOYPWTGQkDkDKpXikDKpUISOxTyixTUIJWGQSSCOCOCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOWTGQnCntxsTaxsSKzVLMJtPqGQqmWTGQSSWXjinBhwGQPiCOCOCOGQGQoMoMCyoMXYKpVqbObObObOVqVqoIGQCOCOCOCOCOCOCOCOCOCOCOCO
 COCOCOUuCOWTGQWTbveErJpOeIgdRCOYbvgWWTbvGQmQLYcPcPcPGQPiPiCOCOCOGQPyOSALVkYAGQVkVkVkIsVkVkVkBdGQSSCOCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOSSGQmKUSZqVuTFItmHqSmmqSjgOYbmgWIWIWLYcPLYjhGQPiPiwDGQGQGQGQGQgWGQGQGQgWGQGQGQGQGQGQGQGQSSCOCOCOCOCOCOCOCOCOCO
-COCOCOGQGQGQGQpiGQvVjWjWjWDJGQCYGQGQJJWTGQufMdMdKqMdZhGQSSHXMwbmvmetBtbNvmiGetvmvmbmbmbmbmTMbmHXSSGQGQWTWTWTCOCOCOCOCOCO
+COCOCOGQGQGQGQpiGQvVjWjWjWDJGQCYGQGQJJWTGQufMdMdKqMdZhGQSSHXMwbmvmetBtbNvmiGetvmvmbmbmbmbmTMbmHXSSGQGQnXnXYwCOCOCOCOCOCO
 COCOCOmpWTGQSSCSeGfDfDNSCSCSqPCSSSGQvmbvGQGQDKveQuNIGQGQqQPLZXZXvmvmLHLHZXMwMwbmbmbmUHbmbNbmbmbmFuGQoRWTNYGQSSCOCOCOCOCO
 COCOCOShbvGQzIzDJhJhwnJhJhsCJhVkFUgWbmZXMwbmbmVVvmFXbmbmbmvmGQGQgWGQGQGQgWGQGQGQgWGQGQGQgWGQGQbmbmgWbmXvcSGQGQwDGQSSCOCO
 COCOCObiGdGdzGgmRsJhsCGdPiNPVkiqwKGQgBCSfDTHtXSIbITLRYBHRYSYGQDFqQBEGQUIUIeBGQUIUIeBGQUIUIeBGQbmdNGQbmXvNYGQfmdxPTGQSSCO
-COCOCOPiPiPiYiPiPilpEYPizjlpXFNPFUjgkVjqTnjqjqcXgmJhDgNPJhFUGQfAyvJDGQqCKcAjGQqCfckSGQqCXvvgGQbmbmDXbNbmbmGQKSARNmPiPiCO
+COCOCOPiPiPiYiPiPilpEYPizjlpXFNPFUjgkVjqTnjqjqcXgmJhDgNPJhFUGQfAyvJDGQqCKcAjGQqCfckSGQqCXvvgGQbmbmDXbNbmbmGQKSARNmPiEZCO
 COCOCObiWTGQZQJhPiGdbcbcbcEYJhVRrLfiBfEpVSexQHQiJhSSSSSSJhrLGQatdSatGQzuruiwGQyijKrIGQyiKxNYGQCSCSGQCSCSCSgWCSzzPitdfiCO
 COCOCObiWTGQNPJhPiGdrigtCrPiGdNPvJPRBfiQVkXAdCQiJhxCIOxCJhNPGQGQABGQGQGQGQGQGQGQGQGQGQGQGQGQGQNPNPGQtuDGqbGQjmDGNPVPPRCO
 COCOUubiWTGQaJRsNPEYbcririPimtNPASnxBfyYzczcuTQiJhSSSSSSJhASGQkOHqBhGQyisMrIGQzucfWQGQxTWDiwGQjrjrGQasasasgWjrjraJtdnxCO
-COCOCOGQGQWTobJhNPEYPiPiEYEYJhNPFUjgKBEjMdMdEjiMspJhUyqENPVrGQuIyPohGQvQfckSGQvQTKEeGQvQKcAjGQbmbmGQYwWTYwGQpCCSJBnvGQCO
+COCOCOGQGQWTobJhNPEYPiPiEYEYJhNPFUjgKBEjMdMdEjiMspJhUyqENPVrGQuIyPohGQvQfckSGQvQTKEeGQvQKcAjGQbmbmGQWTWTWTGQpCCSJBnvGQCO
 COCOCObiWTPiYiJhRsJhPiPiNPNPRsqEwKGQdYNJjbEJNJQTNJlyGRCGsnbpGQDAFmDAGQqLUIeBGQUIUIeBGQUIUIeBGQbmdNGQboWTboGQcByassGQSSCO
 COCOCObiWTPizIVRNPJhsCReXoJhjIVkFUgWvmMwvmvmvmisvmbmVLisPLbmGQGQgWGQGQGQgWGQGQGQgWGQGQGQgWGQGQbNvUGQboseXbGQGQwDGQSSCOCO
 COCOCObiPiWTSSjrWrjrjrjrjrjrtNjrSSGQvmbmGQGQIrbHTriyGQGQqQPibmvmvmvmvmiGvmisMwMwbmbmbmbmbmbmbmbmPiGQboWTboGQSSCOCOCOCOCO
-COCOCOPiPiGQGQpiGQvVjWjWjWDJGQCYGQGQvmbmPiClyIyITiyIUnGQSSdbPiyUMwMwvmZlvmbmrXiGepvmbNbmbmyUbmHXPiPiGQGQGQSSCOCOCOCOCOCO
-COCOCOCOCOSSGQKohVuQuQuQuQqohVKohVjgvmbmFfvvDlvvXJXJUmmvPiPidFGQPiPiGQGQgWGQGQGQgWGQGQGQSdGQGQGQPiPiCOCOCOCOCOCOCOCOCOCO
+COCOCOPiPiGQGQpiGQvVjWjWjWDJGQCYGQGQvmbmPiClyIyITiyIUnGQSSdbPiyUMwMwvmZlvmbmrXiGepvmbNbmbmyUbmHXPiEZGQGQGQSSCOCOCOCOCOCO
+COCOCOCOCOSSGQKohVuQuQuQuQqohVKohVjgvmbmFfvvDlvvXJXJUmmvPiPidFGQPiPiGQGQgWGQGQGQgWGQGQGQSdGQGQGQYxEZCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOWTGQWTbvkuSESESEffWTWTbvgWbmqQPiXCdeDlvvdeAPGQPiCOCOCOPiPyALPyVkEMGQqYVkmTGQnjPBLaFZGQPiCOCOCOCOCOCOCOCOCOCOCO
 COCOCOCOCOWTGQnCrxlJKTlJNDOjzHIIVFGQHXSSPiSSWJpuaHZpWTSSCOCOCOGQPidBAOTxAOgcGQPFFmjZGQPBPBGHGQGQCOCOCOCOCOCOCOCOCOCOCOCO
 COCOCOUuCOWTGQdgDntraophdzxlwrACVFWTGQSSCOGQGQDvmyWTSSCOCOCOCOWTPicLcLWTcLQfGQhRqQXgGQQeopVwGQSSCOCOCOCOCOCOCOCOCOCOCOCO

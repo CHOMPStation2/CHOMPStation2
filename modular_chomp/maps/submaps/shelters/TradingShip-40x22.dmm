@@ -19,7 +19,7 @@
 "eS" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/item/device/kit/paint/ripley/death,/obj/item/device/kit/paint/ripley/flames_blue,/obj/item/device/kit/paint/ripley/flames_red,/obj/item/device/kit/paint/ripley,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "fe" = (/obj/machinery/mineral/mint{emagged = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "fm" = (/obj/structure/bed/chair/comfy/black,/turf/simulated/shuttle/floor/black,/area/survivalpod)
-"fG" = (/obj/machinery/vending/cigarette{name = "hacked cigarette machine"; prices = list(); products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)},/turf/simulated/shuttle/floor/black,/area/survivalpod)
+"fG" = (/obj/machinery/vending/cigarette{name = "hacked cigarette machine"; prices = list(); products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "fJ" = (/obj/machinery/door/airlock/silver{name = "Restroom"},/turf/simulated/shuttle/floor/white,/area/survivalpod)
 "fP" = (/obj/vehicle/train/engine,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "fU" = (/obj/machinery/door/window/northright{name = "Cargo Hold"; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod)
@@ -31,7 +31,7 @@
 "hI" = (/obj/structure/closet,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "hK" = (/obj/machinery/autolathe{desc = "Your typical Autolathe. It appears to have much more options than your regular one, however..."; emagged = 1; hacked = 1; name = "Unlocked Autolathe"},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "ia" = (/obj/machinery/optable,/turf/simulated/shuttle/floor/black,/area/survivalpod)
-"jA" = (/obj/machinery/door/airlock/external/glass,/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod)
+"jA" = (/obj/structure/fans/hardlight,/obj/machinery/door/airlock/multi_tile/metal/mait,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod)
 "jH" = (/obj/structure/table/standard,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "kd" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/machinery/meter,/obj/structure/largecrate/animal/cat,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "kw" = (/obj/machinery/embedded_controller/radio/simple_docking_controller{dir = 4; frequency = 1380; id_tag = "trade_shuttle"; pixel_x = -25; req_one_access = list(101); tag_door = "trade_shuttle_hatch"},/turf/simulated/shuttle/floor/black,/area/survivalpod)
@@ -42,6 +42,7 @@
 "kU" = (/obj/machinery/access_button{master_tag = null; pixel_x = 27; pixel_y = -7; req_one_access = null},/obj/machinery/door/airlock/external{frequency = null; icon_state = "door_locked"; id_tag = null; locked = 1; name = "Ship Hatch"; req_access = null},/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod)
 "kV" = (/obj/structure/table/woodentable,/turf/simulated/floor/carpet,/area/survivalpod)
 "lv" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradeportshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod)
+"lQ" = (/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod)
 "lW" = (/obj/structure/table/standard,/obj/item/weapon/storage/toolbox/mechanical,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "md" = (/obj/structure/salvageable/console_os{dir = 4},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "mi" = (/obj/structure/window/reinforced,/obj/machinery/door/blast/shutters{density = 0; icon_state = "shutter0"; id = "tradestarshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod)
@@ -51,7 +52,7 @@
 "mR" = (/obj/item/weapon/paper_bin{pixel_x = -3; pixel_y = 8},/obj/item/weapon/pen{pixel_y = 4},/obj/machinery/light,/obj/structure/table/glass,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "mY" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/coin/uranium,/obj/item/weapon/coin/silver,/obj/item/weapon/coin/platinum,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/iron,/obj/item/weapon/coin/gold,/obj/item/weapon/coin/diamond,/obj/structure/window/reinforced,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "nh" = (/obj/machinery/door/airlock/external{frequency = null; icon_state = "door_locked"; id_tag = null; locked = 1; name = "Ship Hatch"; req_access = null},/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod)
-"nC" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/head/bearpelt,/obj/item/clothing/head/bowler,/obj/item/clothing/head/caphat/cap,/obj/item/clothing/head/beaverhat,/obj/item/clothing/head/beret/centcom,/obj/item/clothing/head/beret/sec,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/petehat,/obj/item/clothing/head/collectable/pirate,/obj/item/clothing/head/collectable/wizard,/obj/item/clothing/head/collectable/xenom,/obj/item/clothing/head/cowboy_hat,/obj/item/clothing/head/pin/flower/violet,/obj/item/clothing/head/pin/flower/blue,/obj/item/clothing/head/pin/flower/orange,/obj/item/clothing/head/pin/flower/pink,/obj/item/clothing/head/justice,/obj/item/clothing/head/justice/blue,/obj/item/clothing/head/justice/green,/obj/item/clothing/head/justice/pink,/obj/item/clothing/head/justice/yellow,/obj/item/clothing/head/philosopher_wig,/obj/item/clothing/head/plaguedoctorhat,/obj/item/clothing/head/xenos,/turf/simulated/shuttle/floor/black,/area/survivalpod)
+"nC" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/head/bearpelt,/obj/item/clothing/head/bowler,/obj/item/clothing/head/caphat/cap,/obj/item/clothing/head/beaverhat,/obj/item/clothing/head/beret/centcom,/obj/item/clothing/head/beret/sec,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/petehat,/obj/item/clothing/head/collectable/pirate,/obj/item/clothing/head/collectable/wizard,/obj/item/clothing/head/collectable/xenom,/obj/item/clothing/head/pin/flower/violet,/obj/item/clothing/head/pin/flower/blue,/obj/item/clothing/head/pin/flower/orange,/obj/item/clothing/head/pin/flower/pink,/obj/item/clothing/head/justice,/obj/item/clothing/head/justice/blue,/obj/item/clothing/head/justice/green,/obj/item/clothing/head/justice/pink,/obj/item/clothing/head/justice/yellow,/obj/item/clothing/head/philosopher_wig,/obj/item/clothing/head/plaguedoctorhat,/obj/item/clothing/head/xenos,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "nD" = (/obj/structure/table/steel_reinforced,/obj/random/firstaid,/obj/random/firstaid,/obj/random/firstaid,/obj/random/firstaid,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "nT" = (/obj/machinery/vending/sovietsoda,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "nW" = (/obj/machinery/vending/snack{name = "hacked Getmore Chocolate Corp"; prices = list()},/turf/simulated/shuttle/floor/black,/area/survivalpod)
@@ -86,7 +87,7 @@
 "uL" = (/obj/machinery/light,/obj/structure/table/standard,/obj/item/weapon/soap,/obj/item/weapon/towel{color = "#0000FF"},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "uR" = (/obj/structure/toilet,/obj/machinery/light/small{dir = 1},/turf/simulated/shuttle/floor/white,/area/survivalpod)
 "vs" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/shuttle/floor/black,/area/survivalpod)
-"vC" = (/obj/machinery/vending/assist{contraband = null; name = "Old Vending Machine"; products = list(/obj/item/device/assembly/prox_sensor = 5, /obj/item/device/assembly/signaler = 4, /obj/item/device/assembly/infra = 4, /obj/item/device/assembly/prox_sensor = 4, /obj/item/weapon/handcuffs = 8, /obj/item/device/flash = 4, /obj/item/weapon/cartridge/signal = 4, /obj/item/clothing/glasses/sunglasses = 4)},/turf/simulated/shuttle/floor/black,/area/survivalpod)
+"vC" = (/obj/machinery/vending/assist{contraband = null; name = "Old Vending Machine"; products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/weapon/handcuffs=8,/obj/item/device/flash=4,/obj/item/weapon/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "vL" = (/obj/machinery/vending/boozeomat{req_access = null},/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "vM" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/floor/carpet,/area/survivalpod)
 "wn" = (/obj/structure/flora/pottedplant{icon_state = "plant-22"},/turf/simulated/floor/carpet,/area/survivalpod)
@@ -137,7 +138,7 @@
 "Km" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/largecrate/animal/cow,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "Ko" = (/obj/structure/table/glass,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "Kv" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/lipstick/black,/obj/item/weapon/lipstick/jade,/obj/item/weapon/lipstick/purple,/obj/item/weapon/lipstick,/obj/item/weapon/lipstick/random,/turf/simulated/shuttle/floor/black,/area/survivalpod)
-"Lp" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/table/steel_reinforced,/obj/item/weapon/contraband/poster,/obj/item/weapon/contraband/poster,/obj/item/weapon/contraband/poster,/obj/item/weapon/contraband/poster,/obj/item/weapon/contraband/poster,/turf/simulated/shuttle/floor/black,/area/survivalpod)
+"Lp" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/table/steel_reinforced,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "Lt" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/under/cheongsam,/obj/item/clothing/under/hosformalmale,/obj/item/clothing/under/hosformalfem,/obj/item/clothing/under/harness,/obj/item/clothing/under/gladiator,/obj/item/clothing/under/ert,/obj/item/clothing/under/schoolgirl,/obj/item/clothing/under/redcoat,/obj/item/clothing/under/sexymime,/obj/item/clothing/under/sexyclown,/obj/item/clothing/under/soviet,/obj/item/clothing/under/space,/obj/item/clothing/under/swimsuit/stripper/mankini,/obj/item/clothing/under/suit_jacket/female,/obj/item/clothing/under/rank/psych/turtleneck,/obj/item/clothing/under/syndicate/combat,/obj/item/clothing/under/syndicate/combat,/obj/item/clothing/under/syndicate/tacticool,/obj/item/clothing/under/syndicate/tacticool,/obj/item/clothing/under/dress/sailordress,/obj/item/clothing/under/dress/redeveninggown,/obj/item/clothing/under/dress/dress_saloon,/obj/item/clothing/under/dress/blacktango,/obj/item/clothing/under/dress/blacktango/alt,/obj/item/clothing/under/dress/dress_orange,/obj/item/clothing/under/dress/maid/janitor,/turf/simulated/shuttle/floor/black,/area/survivalpod)
 "Mc" = (/turf/template_noop,/area/space)
 "Mk" = (/obj/effect/floor_decal/industrial/warning,/obj/structure/closet/crate/internals,/turf/simulated/shuttle/floor/black,/area/survivalpod)
@@ -194,9 +195,9 @@
 
 (1,1,1) = {"
 McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMc
-McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcSEjAjASEMcMcMcMcMTMTMTMTMTMcMc
+McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcSEjAlQSEMcMcMcMcMTMTMTMTMTMcMc
 McMcMcMcMcMcMcMcMcMTMTMTMTMTMTxzJgmiMTMcMcMcMcMcMTMTkwxMMTMTMcMcMTMTMTMTBeAuMcMc
-McMcMcMcMcMcMcMcMTSEhIywMTGkHCsjBUwnMTMTMcMcMcMTMTSEjAjASEMTxzmiSEQBNQMTBeXOMcMc
+McMcMcMcMcMcMcMcMTSEhIywMTGkHCsjBUwnMTMTMcMcMcMTMTSEjAlQSEMTxzmiSEQBNQMTBeXOMcMc
 McMcMcMcMcMcMcMcUzQpSpSpEKSpSpuvHpTbMTMTxzJgmiMTMTPvSpSpVYMTsTJNOdSpdYMTBedsMcMc
 McMcMcMcMcMcMcMcpUxFmRTJMTSpSpvMuaNJMTxiWKyxDXVXILfPCVCVSpVPSpSpSpSpiaMTBeaAMcMc
 McMcMcMcMcMcMcMcMTMTMTMTMTMTARSpSpaaMTnDkDgJcVxdQQNECVCVSpVPSpDTcMSpSpMTMTMTMcMc

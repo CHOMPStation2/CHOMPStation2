@@ -164,8 +164,8 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aF" = (
-/obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aG" = (
@@ -186,9 +186,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/diner)
 "aJ" = (
-/obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aK" = (
@@ -214,6 +214,7 @@
 	brightness_range = 5;
 	dir = 8
 	},
+/obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/diner)
 "aN" = (
@@ -232,9 +233,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/diner)
 "aO" = (
-/obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aP" = (
@@ -270,7 +271,7 @@
 /area/submap/diner)
 "aU" = (
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/structure/table/standard,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aV" = (
@@ -311,17 +312,21 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor,
 /area/submap/diner)
 "be" = (
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/appliance/mixer/cereal,
+/obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "bf" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled,
+/obj/structure/table/standard,
+/obj/item/weapon/bikehorn/fluff/chew_ire,
+/turf/simulated/floor,
 /area/submap/diner)
 "bg" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -343,7 +348,11 @@
 /area/submap/diner)
 "bh" = (
 /obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/bar_coffee,
+/obj/machinery/chemical_dispenser/bar_coffee{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "bi" = (
@@ -406,19 +415,27 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "bu" = (
-/obj/structure/sink{
-	dir = 8;
-	icon_state = "sink";
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/turf/simulated/floor/tiled/hydro,
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "bv" = (
 /turf/simulated/floor/tiled/hydro,
 /area/submap/diner)
 "bw" = (
-/obj/structure/toilet,
+/obj/structure/toilet/prison{
+	name = "toilet";
+	pixel_y = 10
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 4
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0;
+	dir = 2
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/diner)
 "bx" = (
@@ -444,26 +461,123 @@
 	dir = 4;
 	pixel_x = -32
 	},
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -9
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -27
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/diner)
 "bB" = (
 /obj/machinery/light/small,
+/obj/structure/table/standard,
+/obj/random/soap,
+/obj/random/soap{
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/diner)
 "bC" = (
-/obj/structure/table/standard,
-/obj/item/stack/cable_coil,
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -9
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -27
+	},
 /turf/simulated/floor/tiled/hydro,
+/area/submap/diner)
+"dQ" = (
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/floor/lino,
 /area/submap/diner)
 "gw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor,
+/area/submap/diner)
+"hm" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor,
+/area/submap/diner)
+"lo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
 /area/submap/diner)
 "lT" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/white,
+/area/submap/diner)
+"qd" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/chem_master/condimaster,
+/turf/simulated/floor/tiled/white,
+/area/submap/diner)
+"wn" = (
+/obj/item/weapon/reagent_containers/food/snacks/chip/nacho/guac,
+/turf/simulated/floor,
+/area/submap/diner)
+"KP" = (
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/tiled,
+/area/submap/diner)
+"Lj" = (
+/turf/simulated/floor,
+/area/submap/diner)
+"Nb" = (
+/obj/structure/table/steel,
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/steel,
+/turf/simulated/floor,
+/area/submap/diner)
+"Ql" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/diner)
+"WB" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/tiled/white,
+/area/submap/diner)
+"XK" = (
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/plating,
+/area/submap/diner)
+"Zv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor,
 /area/submap/diner)
 
 (1,1,1) = {"
@@ -639,7 +753,7 @@ ab
 ab
 ab
 ad
-ad
+az
 az
 ad
 ab
@@ -720,7 +834,7 @@ ao
 aD
 ax
 ad
-ad
+az
 az
 ad
 ao
@@ -746,8 +860,8 @@ af
 af
 af
 af
-af
 aT
+af
 af
 ba
 af
@@ -863,7 +977,7 @@ af
 af
 af
 af
-ah
+bu
 af
 af
 by
@@ -874,13 +988,13 @@ aa
 (16,1,1) = {"
 aa
 ad
-bj
+WB
 ap
 ap
 ap
 az
 af
-aK
+qd
 aP
 aU
 aX
@@ -900,7 +1014,7 @@ aa
 "}
 (17,1,1) = {"
 aa
-ad
+ae
 ai
 ap
 au
@@ -927,7 +1041,7 @@ aa
 "}
 (18,1,1) = {"
 aa
-ad
+ae
 aj
 ap
 ah
@@ -944,9 +1058,9 @@ bc
 aG
 aG
 aL
-aG
+KP
 ad
-bu
+bw
 bv
 bA
 ad
@@ -965,7 +1079,7 @@ ad
 ad
 ad
 ad
-bc
+lo
 gw
 ad
 ad
@@ -973,7 +1087,7 @@ ad
 bq
 ad
 ad
-bv
+bw
 bv
 bB
 ad
@@ -987,18 +1101,18 @@ ap
 ap
 ap
 ad
-aH
+Ql
 aM
 aQ
 aV
 ad
 bd
-bc
+Zv
 ad
 bi
 bm
 bl
-bl
+dQ
 ad
 bw
 bv
@@ -1020,7 +1134,7 @@ aH
 ad
 ad
 aA
-aA
+ad
 ad
 bj
 bn
@@ -1045,16 +1159,16 @@ aH
 aH
 aH
 ad
-aG
-aG
-aG
+hm
+Lj
+XK
 ad
 bk
 bo
 bl
 bs
 ad
-ad
+wn
 ad
 ad
 ab
@@ -1072,8 +1186,8 @@ aI
 aN
 aR
 ad
-aG
-aG
+Nb
+Lj
 bf
 ad
 bl
@@ -1101,7 +1215,7 @@ ad
 ad
 ad
 aA
-aA
+ad
 ad
 ad
 ad

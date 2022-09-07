@@ -60,8 +60,23 @@
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "ao" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
-/turf/simulated/floor/wood,
+/obj/structure/closet/crate,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/turf/simulated/floor/plating,
 /area/submap/explorerhouse)
 "ap" = (
 /turf/simulated/floor/wood,
@@ -244,7 +259,7 @@
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aX" = (
-/obj/structure/coatrack,
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aY" = (
@@ -256,6 +271,7 @@
 /area/submap/explorerhouse)
 "aZ" = (
 /obj/item/clothing/shoes/boots/winter/explorer,
+/obj/item/weapon/gun/launcher/crossbow/bow/hardlight,
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "ba" = (
@@ -270,12 +286,17 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
 "bc" = (
-/obj/structure/loot_pile/maint/trash,
-/turf/simulated/floor/outdoors/grass/sif,
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/explorerhouse)
 "bd" = (
-/obj/structure/loot_pile/maint/junk,
-/turf/simulated/floor/outdoors/grass/sif,
+/obj/structure/table/glass,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/item/weapon/material/twohanded/sledgehammer/mjollnir,
+/turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "be" = (
 /obj/structure/sign/kiddieplaque{
@@ -288,8 +309,36 @@
 /obj/structure/bonfire/sifwood,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/explorerhouse)
+"eB" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood/sif,
+/obj/fiftyspawner/wood/sif,
+/obj/fiftyspawner/turcarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/marble,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/fiftyspawner/cardboard,
+/obj/fiftyspawner/cardboard,
+/turf/simulated/floor/plating,
+/area/submap/explorerhouse)
 "GN" = (
 /obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"Ky" = (
+/obj/structure/table/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/ore/diamond,
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 
@@ -399,7 +448,7 @@ an
 am
 am
 am
-bd
+bc
 ag
 ag
 "}
@@ -464,7 +513,7 @@ aP
 ap
 am
 am
-ao
+bd
 am
 ag
 ag
@@ -498,7 +547,7 @@ ag
 ag
 ag
 am
-ao
+eB
 am
 am
 ap
@@ -508,7 +557,7 @@ aP
 ap
 am
 am
-ao
+Ky
 be
 ag
 ag
@@ -575,7 +624,7 @@ aR
 am
 am
 am
-ad
+bc
 ag
 ag
 "}
@@ -597,7 +646,7 @@ aS
 aS
 ba
 am
-ad
+bc
 ag
 ag
 "}
@@ -619,7 +668,7 @@ aT
 aS
 bb
 am
-ad
+bc
 ag
 ag
 "}
@@ -641,7 +690,7 @@ am
 as
 am
 am
-ad
+bc
 ag
 ag
 "}
