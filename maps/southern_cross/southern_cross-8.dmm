@@ -969,6 +969,12 @@
 "ayg" = (
 /turf/simulated/mineral,
 /area/skipjack_station)
+"ayq" = (
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/space)
 "ayE" = (
 /obj/effect/floor_decal/sign/small_4{
 	icon = 'icons/turf/flooring/decals.dmi'
@@ -4065,6 +4071,38 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"eos" = (
+/obj/structure/table/rack,
+/obj/item/weapon/gun/energy/taser,
+/obj/item/clothing/suit/armor/vest/ert/security,
+/obj/item/clothing/head/helmet/ert/security,
+/obj/item/weapon/storage/backpack/ert/security,
+/obj/item/weapon/storage/belt/security/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/handcuffs,
+/obj/item/weapon/handcuffs,
+/obj/item/clothing/accessory/storage/webbing,
+/obj/item/clothing/under/ert,
+/obj/item/device/radio/headset/ert/alt,
+/obj/item/clothing/shoes/boots/swat,
+/obj/item/clothing/gloves/swat,
+/obj/item/clothing/mask/balaclava/tactical,
+/obj/item/weapon/reagent_containers/spray/pepper,
+/obj/item/clothing/accessory/holster/leg,
+/obj/item/weapon/card/id/centcom/ERT,
+/obj/item/weapon/melee/baton,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/space)
 "eoN" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -10898,6 +10936,11 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
+"mMh" = (
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
 "mMY" = (
 /obj/structure/table/woodentable/holotable,
 /turf/simulated/floor/holofloor/carpet,
@@ -11730,6 +11773,9 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
+"nNX" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/space)
 "nOa" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -13629,6 +13675,13 @@
 /obj/random/action_figure,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"qJs" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/centcom/specops)
 "qJE" = (
 /obj/machinery/light{
 	dir = 4
@@ -16697,6 +16750,10 @@
 /obj/machinery/door/airlock/centcom{
 	icon_state = "door_locked";
 	locked = 1
+	},
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -39692,12 +39749,12 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-vFi
+nNX
+ayq
+eos
+eos
+eos
+eos
 nZC
 jSV
 uOy
@@ -39950,15 +40007,15 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-nZC
+nNX
+eos
+mMh
+mMh
+mMh
+mMh
+qJs
 jSV
-nZC
+oSH
 vHC
 vHC
 vHC
@@ -40208,12 +40265,12 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-vFi
+nNX
+ayq
+eos
+eos
+eos
+eos
 nZC
 jSV
 uOy
@@ -40466,9 +40523,9 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
+nNX
+nNX
+nNX
 nZC
 nZC
 nZC
