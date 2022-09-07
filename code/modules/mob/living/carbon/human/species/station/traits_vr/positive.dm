@@ -214,9 +214,7 @@
 	var_changes = list("gun_accuracy_mod" = 25)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
-<<<<<<< HEAD
 */
-=======
 
 /datum/trait/negative/pain_tolerance
 	name = "Grit"
@@ -225,5 +223,3 @@
 	var_changes = list("trauma_mod" = 0.85)
 	excludes = list(/datum/trait/negative/neural_hypersensitivity)
 	can_take = ORGANICS
-
->>>>>>> 00381a575f... Merge pull request #13668 from Runa-Dacino/request-pain-tolerance
