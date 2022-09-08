@@ -4505,6 +4505,8 @@
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"
 #include "modular_chomp\code\modules\food\drinkgglass\metaglass.dm"
 #include "modular_chomp\code\modules\food\food\drinks\bottle.dm"
+#include "modular_chomp\code\modules\mining\shelter_atoms_ch.dm"
+#include "modular_chomp\code\modules\mining\shelters_ch.dm"
 #include "modular_chomp\code\modules\mob\holder.dm"
 #include "modular_chomp\code\modules\mob\mob.dm"
 #include "modular_chomp\code\modules\mob\living\emote.dm"
