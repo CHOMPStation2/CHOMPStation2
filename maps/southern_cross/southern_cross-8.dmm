@@ -13661,13 +13661,6 @@
 /obj/random/action_figure,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"qJs" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Special Operations";
-	req_access = list(103)
-	},
-/turf/space,
-/area/centcom/specops)
 "qJE" = (
 /obj/machinery/light{
 	dir = 4
@@ -39995,7 +39988,7 @@ vHC
 vHC
 vHC
 vHC
-qJs
+uOy
 jSV
 oSH
 vHC
