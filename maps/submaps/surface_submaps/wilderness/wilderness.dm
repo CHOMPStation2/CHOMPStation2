@@ -55,6 +55,7 @@
 #include "CultBar.dmm"
 #include "RaidedMechBunker.dmm"
 #include "AbandonedLab.dmm"
+#include "EngiCruiser.dmm"
 #endif
 
 //#include "Boombase.dmm" YW edit remove boombase
@@ -410,6 +411,12 @@
 	mappath = 'maps/submaps/surface_submaps/wilderness/AbandonedLab.dmm'
 	cost = 20
 
+/datum/map_template/surface/wilderness/deep/EngiCruiser
+	name = "Engi Cruiser"
+	desc = "A crashed ship with unknown buzzing coming from the inside."
+	mappath = 'maps/submaps/surface_submaps/wilderness/EngiCruiser.dmm'
+	cost = 50
+	
 /*==Disabled==/
 
 /datum/map_template/surface/wilderness/deep/Boombase //YW Edit remove boombase
