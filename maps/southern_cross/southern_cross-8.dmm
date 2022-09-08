@@ -13666,7 +13666,7 @@
 	name = "Special Operations";
 	req_access = list(103)
 	},
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/space,
 /area/centcom/specops)
 "qJE" = (
 /obj/machinery/light{
@@ -16733,10 +16733,6 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_basketball)
 "uOy" = (
-/obj/machinery/door/airlock/centcom{
-	icon_state = "door_locked";
-	locked = 1
-	},
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
 	req_access = list(103)
