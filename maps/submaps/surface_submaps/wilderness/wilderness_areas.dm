@@ -227,3 +227,8 @@
 /area/submap/AbandonedLab
 	name = "POI - Abandoned Lab"
 	ambience = AMBIENCE_HIGHSEC
+
+/area/submap/EngiCruiser
+	name = "POI - Engi Cruiser"
+	ambience = AMBIENCE_HIGHSEC
+	
