@@ -4,41 +4,41 @@
 /area/template_noop)
 "b" = (
 /turf/simulated/wall/log_sif,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "c" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "d" = (
 /obj/structure/bed/padded,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "e" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "f" = (
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "g" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "h" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "i" = (
 /obj/structure/table/rack,
 /obj/item/weapon/gun/launcher/crossbow,
@@ -48,18 +48,18 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "j" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "k" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "l" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "m" = (
 /obj/item/weapon/material/knife/machete/hatchet,
 /turf/template_noop,
@@ -67,11 +67,11 @@
 "n" = (
 /obj/item/weapon/flame/lighter,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "o" = (
 /obj/structure/bonfire/sifwood,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "v" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper_bin{
@@ -82,13 +82,13 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "y" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "B" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 1;
@@ -99,7 +99,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "F" = (
 /obj/item/device/flashlight/lamp{
 	pixel_x = -8;
@@ -117,7 +117,28 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
+"I" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/WoodenCamp)
 "K" = (
 /obj/item/weapon/storage/backpack/messenger,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
@@ -149,7 +170,7 @@
 	name = "Survival Cabinet"
 	},
 /turf/simulated/floor/wood,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "Q" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/green{
@@ -157,7 +178,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "W" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/chainsaw,
@@ -171,7 +192,7 @@
 	amount = 25
 	},
 /turf/simulated/floor,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "Y" = (
 /obj/item/weapon/storage/backpack/messenger,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
@@ -203,7 +224,7 @@
 	name = "Survival Cabinet"
 	},
 /turf/simulated/floor/wood,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 "Z" = (
 /obj/structure/table/steel,
 /obj/item/stack/material/phoron{
@@ -215,7 +236,7 @@
 /obj/fiftyspawner/wood,
 /obj/fiftyspawner/steel,
 /turf/simulated/floor,
-/area/submap/camp)
+/area/survivalpod/superpose/WoodenCamp)
 
 (1,1,1) = {"
 a
@@ -279,7 +300,7 @@ l
 "}
 (6,1,1) = {"
 c
-f
+I
 f
 f
 b

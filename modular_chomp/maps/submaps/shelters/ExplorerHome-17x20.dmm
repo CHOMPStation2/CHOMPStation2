@@ -1,64 +1,64 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/template_noop,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ab" = (
 /obj/structure/railing,
 /turf/template_noop,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ac" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/template_noop,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ad" = (
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ae" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/template_noop,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "af" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ag" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ah" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ai" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aj" = (
 /obj/structure/target_stake,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ak" = (
 /obj/item/target,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "al" = (
 /obj/item/target/syndicate,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "am" = (
 /turf/simulated/wall/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "an" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ao" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/glass,
@@ -77,51 +77,51 @@
 /obj/fiftyspawner/plastic,
 /obj/fiftyspawner/plastic,
 /turf/simulated/floor/plating,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ap" = (
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aq" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ar" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife,
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "as" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "at" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/purity,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "au" = (
 /obj/structure/toilet,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "av" = (
 /obj/structure/table/marble,
 /obj/random/drinkbottle,
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aw" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ax" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /obj/item/weapon/coin/phoron,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ay" = (
 /obj/item/clothing/head/bearpelt{
 	pixel_y = 6
@@ -129,13 +129,13 @@
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "az" = (
 /obj/item/weapon/material/harpoon,
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aA" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
@@ -143,7 +143,7 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aB" = (
 /obj/structure/sink{
 	dir = 8;
@@ -157,30 +157,30 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aC" = (
 /obj/item/weapon/towel,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aE" = (
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aF" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aG" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aH" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aI" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8;
@@ -191,104 +191,147 @@
 	},
 /obj/random/soap,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aJ" = (
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aK" = (
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aL" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aM" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/fancy/candle_box,
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aN" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/device/binoculars/spyglass,
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aO" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aP" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aQ" = (
-/obj/structure/table/rack,
-/obj/item/device/gps/explorer,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/random/soap,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/pda,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/starcaster_news,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/gps,
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aR" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aS" = (
 /turf/simulated/floor/carpet/sblucarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aT" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aU" = (
-/obj/structure/table/rack,
-/obj/item/clothing/under/explorer,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
+/obj/structure/closet/crate,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aV" = (
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aW" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aX" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aY" = (
-/obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/explorer,
 /obj/item/clothing/mask/gas/explorer,
 /obj/item/weapon/material/knife/tacknife/survival,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/cell/device,
+/obj/item/weapon/cell/device,
+/obj/item/weapon/cell/device,
+/obj/item/clothing/under/explorer,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "aZ" = (
 /obj/item/clothing/shoes/boots/winter/explorer,
 /obj/item/weapon/gun/launcher/crossbow/bow/hardlight,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "ba" = (
 /obj/structure/table/woodentable,
 /obj/random/action_figure,
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "bb" = (
 /obj/item/weapon/bedsheet/hopdouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "bc" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "bd" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced{
@@ -297,18 +340,18 @@
 	},
 /obj/item/weapon/material/twohanded/sledgehammer/mjollnir,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "be" = (
 /obj/structure/sign/kiddieplaque{
 	desc = "To anyone reading this, you'll note that I'm not home right now, and unfortunately due to reassignment, I won't be for a very long time. Exploring somewhere really far and dangerous now. You can stay if you want, but please try to keep my home in good condition.";
 	name = "read me visitors"
 	},
 /turf/simulated/wall/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "bf" = (
 /obj/structure/bonfire/sifwood,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "eB" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/wood,
@@ -328,11 +371,11 @@
 /obj/fiftyspawner/cardboard,
 /obj/fiftyspawner/cardboard,
 /turf/simulated/floor/plating,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "GN" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 "Ky" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced{
@@ -340,7 +383,7 @@
 	},
 /obj/item/weapon/ore/diamond,
 /turf/simulated/floor/wood,
-/area/submap/explorerhouse)
+/area/survivalpod/superpose/ExplorerHome)
 
 (1,1,1) = {"
 aa
