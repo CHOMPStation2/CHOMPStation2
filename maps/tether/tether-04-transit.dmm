@@ -198,6 +198,12 @@
 =======
 /turf/simulated/floor/midpoint_glass/reinf,
 /area/tether/midpoint)
+"dF" = (
+/obj/machinery/newscaster{
+	pixel_x = 28
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
 "dU" = (
 /obj/structure/table/woodentable,
 /obj/random/plushie,
@@ -318,6 +324,11 @@
 /obj/structure/table/woodentable,
 /obj/machinery/camera/network/civilian,
 /turf/simulated/floor/midpoint_glass/reinf,
+/area/tether/midpoint)
+"hw" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/computer/timeclock/premade/west,
+/turf/simulated/floor/wood,
 /area/tether/midpoint)
 "hW" = (
 /obj/structure/disposalpipe/segment{
@@ -918,9 +929,30 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
+<<<<<<< HEAD
 "Iq" = (
 /obj/machinery/light{
 	dir = 2
+=======
+"Hs" = (
+/turf/simulated/shuttle/wall/voidcraft/green{
+	hard_corner = 1
+	},
+/area/tether/elevator)
+"Hv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"Hy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+>>>>>>> b2a67a8ba1... Merge pull request #13691 from Enzo-Leon/Mapping-001
 	},
 /turf/simulated/floor/wood,
 =======
@@ -21866,7 +21898,7 @@ pK
 pK
 pK
 pK
-pK
+dF
 pK
 Pz
 Wc
@@ -22023,6 +22055,20 @@ Jl
 pK
 pK
 pK
+<<<<<<< HEAD
+=======
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+Hv
+>>>>>>> b2a67a8ba1... Merge pull request #13691 from Enzo-Leon/Mapping-001
 pK
 pK
 pK
@@ -23444,9 +23490,29 @@ kz
 kz
 kz
 kz
+<<<<<<< HEAD
 PF
 hp
 YB
+=======
+nD
+zP
+pK
+Hy
+Nt
+Nt
+Nt
+EI
+oz
+it
+jt
+jt
+cR
+JB
+XO
+hw
+KH
+>>>>>>> b2a67a8ba1... Merge pull request #13691 from Enzo-Leon/Mapping-001
 pK
 pK
 Iq

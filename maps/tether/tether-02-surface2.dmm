@@ -14411,6 +14411,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 27
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
 "axp" = (
@@ -16233,6 +16238,10 @@
 /obj/effect/floor_decal/borderfloor/corner2{
 	dir = 6
 	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
 "aBw" = (
@@ -17252,6 +17261,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/machinery/computer/timeclock/premade/north,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_two_hall)
 "aDr" = (
@@ -19717,7 +19727,7 @@
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/rust,
 /obj/item/clothing/suit/storage/vest/hoscoat/jensen{
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
+	armor = list("melee"=0,"bullet"=0,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
 	desc = "Its an old, dusty trenchcoat... what a shame.";
 	name = "trenchcoat"
 	},
@@ -26089,6 +26099,11 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 27
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUP" = (
@@ -27899,7 +27914,7 @@
 	input_tag = "atmos_out";
 	name = "Atmos Intake Control";
 	output_tag = "atmos_in";
-	sensors = list("atmos_intake" = "Tank")
+	sensors = list("atmos_intake"="Tank")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -33401,6 +33416,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
+"eKi" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/item/device/radio/intercom{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
 "eKn" = (
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
@@ -34645,10 +34667,20 @@
 /area/tether/surfacebase/funny/hideyhole)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 =======
 =======
+=======
+"omM" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/machinery/computer/timeclock/premade/east,
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
+>>>>>>> b2a67a8ba1... Merge pull request #13691 from Enzo-Leon/Mapping-001
 "opK" = (
 /obj/move_trader_landmark{
 	dir = 4;
@@ -50399,7 +50431,7 @@ ayd
 aKA
 ayd
 rBf
-aMG
+eKi
 avD
 asm
 asx
@@ -50539,7 +50571,7 @@ ayd
 aJu
 aJP
 aKB
-ayl
+omM
 ayl
 aMI
 avD
