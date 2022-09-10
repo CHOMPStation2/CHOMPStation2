@@ -5122,6 +5122,11 @@ lel
 /obj/machinery/vending/altevian,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/foodplace)
+"mB" = (
+/obj/machinery/light,
+/obj/effect/landmark/free_ai_shell,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/groundbase/command/ai/upload)
 "mC" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -14514,10 +14519,6 @@ lel
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level1/centsquare)
-"IL" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/groundbase/command/ai/upload)
 "IM" = (
 /obj/structure/sign/painting/public{
 	pixel_y = 30
@@ -24468,7 +24469,7 @@ yJ
 XU
 xA
 rM
-IL
+mB
 XY
 MO
 FF
