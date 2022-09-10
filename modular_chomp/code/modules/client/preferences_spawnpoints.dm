@@ -10,6 +10,7 @@
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"
 	msg = "has arrived on the station"
+	allow_offmap_spawn = TRUE
 
 /datum/spawnpoint/vore/pred
 	display_name = "Vorespawn - Pred"

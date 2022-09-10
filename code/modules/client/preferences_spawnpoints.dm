@@ -13,6 +13,7 @@ var/list/spawntypes = list()
 	var/list/restrict_job = null
 	var/list/disallow_job = null
 	var/announce_channel = "Common"
+	var/allow_offmap_spawn = FALSE //CHOMPEdit - add option to allow offmap spawns to a spawnpoint without entirely restricting that spawnpoint
 	var/allowed_mob_types = JOB_SILICON|JOB_CARBON
 
 /datum/spawnpoint/proc/check_job_spawning(job)
@@ -26,7 +27,7 @@ var/list/spawntypes = list()
 	if(!J) // Couldn't find, admin shenanigans? Allow it
 		return 1
 
-	if(J.offmap_spawn && !(job in restrict_job))
+	if(J.offmap_spawn && !allow_offmap_spawn && !(job in restrict_job)) //CHOMPEdit - add option to allow offmap spawns to a spawnpoint without entirely restricting that spawnpoint
 		return 0
 
 	if(!(J.mob_type & allowed_mob_types))

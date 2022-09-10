@@ -657,8 +657,7 @@ var/global/datum/controller/occupations/job_master
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
 
-	var/datum/job/J = SSjob.get_job(rank)
-	fail_deadly = J?.offmap_spawn
+	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.spawnpoint)
