@@ -1,0 +1,61 @@
+"a" = (/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"b" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/survival_pod,/turf/simulated/floor/tiled/techmaint,/area/space)
+"c" = (/obj/structure/table/survival_pod,/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"d" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/vending/wallmed1/public{pixel_y = 17},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"e" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/power/port_gen/pacman,/obj/machinery/newscaster{layer = 3.3; pixel_y = -27},/turf/simulated/floor/plating,/area/space)
+"f" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/vertical,/turf/simulated/floor/tiled/techmaint,/area/space)
+"g" = (/obj/structure/fans,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"h" = (/obj/item/clothing/shoes/magboots,/obj/item/clothing/suit/space/void/atmos,/obj/item/clothing/mask/breath,/obj/item/clothing/head/helmet/space/void/atmos,/obj/structure/window/reinforced{dir = 4; health = 1e+006},/obj/structure/window/reinforced,/obj/machinery/door/window/westleft{name = "Atmospherics Suits"; req_access = list(24)},/obj/structure/table/rack/shelf/steel,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"i" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"j" = (/obj/machinery/smartfridge/survival_pod{icon = 'icons/obj/vending.dmi'; icon_base = "smartfridge"; icon_contents = "boxes"; icon_state = "smartfridge"; name = "Advanced storage"; pixel_y = -1},/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/maglight,/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/fiftyspawner/plastic,/obj/item/stack/material/plasteel{amount = 30},/obj/fiftyspawner/rods,/obj/fiftyspawner/rods,/obj/item/stack/material/glass/phoronrglass{amount = 20},/obj/item/weapon/storage/toolbox/mechanical{pixel_y = 5},/obj/item/weapon/storage/toolbox/mechanical{pixel_y = 5},/obj/item/weapon/storage/toolbox/electrical,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/cell/high{charge = 100; maxcharge = 15000},/obj/item/weapon/cell/high{charge = 100; maxcharge = 15000},/obj/item/weapon/cell/high{charge = 100; maxcharge = 15000},/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/clothing/glasses/meson,/obj/item/clothing/glasses/meson,/obj/item/clothing/gloves/yellow,/obj/item/clothing/gloves/yellow,/obj/item/clothing/head/welding/demon,/obj/item/clothing/head/welding/knight,/obj/item/clothing/glasses/welding,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/item/weapon/inducer,/obj/item/weapon/storage/belt/utility/full,/obj/item/weapon/storage/belt/utility/full,/obj/item/device/multitool,/obj/item/device/multitool,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/device/megaphone,/obj/item/device/megaphone,/obj/item/weapon/extinguisher/atmo,/obj/item/weapon/extinguisher/atmo,/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/backpack/dufflebag/eng,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"k" = (/obj/machinery/suit_cycler/engineering{req_access = null},/turf/simulated/floor/plating,/area/space)
+"m" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/table/steel_reinforced,/obj/fiftyspawner/glass{pixel_y = -5},/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/glass/phoronrglass{amount = 20; pixel_y = 5},/obj/item/stack/material/phoron{amount = 25},/turf/simulated/floor/plating,/area/space)
+"o" = (/obj/structure/sign/mining,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/space)
+"p" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"q" = (/obj/machinery/portable_atmospherics/canister/oxygen,/obj/machinery/power/apc/alarms_hidden{dir = 8; pixel_x = -20},/turf/simulated/floor/plating,/area/space)
+"r" = (/obj/item/clothing/shoes/magboots,/obj/item/clothing/suit/space/void/atmos,/obj/item/clothing/mask/breath,/obj/item/clothing/head/helmet/space/void/atmos,/obj/structure/window/reinforced{dir = 4; health = 1e+006},/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/westright{name = "Atmospherics Suits"; req_access = list(24)},/obj/structure/table/rack/shelf/steel,/obj/structure/sign/warning/nosmoking_2{pixel_x = 32},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"s" = (/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"t" = (/obj/machinery/autolathe,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"u" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/shieldgen,/turf/simulated/floor/plating,/area/space)
+"v" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/vending/engivend{pixel_x = -1},/turf/simulated/floor/plating,/area/space)
+"w" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/weapon/storage/box/survival/space,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/machinery/light{dir = 1},/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/starcaster_news,/obj/item/device/starcaster_news,/obj/item/device/threadneedle,/obj/item/device/flashlight,/obj/item/device/flashlight,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/random/soap,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/storage/box/flare,/turf/simulated/shuttle/floor/voidcraft,/area/space)
+"x" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille,/obj/structure/curtain/black,/turf/simulated/floor/plating,/area/space)
+"y" = (/obj/structure/closet/secure_closet/guncabinet/phase{pixel_y = -32},/obj/item/weapon/gun/energy/locked/frontier/holdout,/obj/item/weapon/gun/energy/locked/frontier/holdout,/obj/item/clothing/accessory/permit/gun/planetside,/obj/item/clothing/accessory/permit/gun/planetside,/obj/item/clothing/accessory/holster/waist,/obj/item/clothing/accessory/holster/waist,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"z" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"A" = (/obj/structure/sign/mining/survival,/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"B" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"C" = (/obj/structure/table/steel_reinforced,/obj/machinery/cell_charger{pixel_x = 1; pixel_y = 4},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"D" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"E" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/shieldgen,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/space)
+"F" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/dispenser{phorontanks = 0},/turf/simulated/floor/plating,/area/space)
+"G" = (/obj/structure/reagent_dispensers/fueltank/high,/obj/structure/closet/walllocker_double/hydrant/east,/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"H" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/space_heater,/turf/simulated/floor/plating,/area/space)
+"I" = (/obj/structure/table/steel_reinforced,/obj/machinery/recharger{pixel_x = -3; pixel_y = 9},/obj/machinery/cell_charger{pixel_x = 1; pixel_y = -2},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"K" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"L" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/space)
+"M" = (/obj/effect/floor_decal/industrial/loading{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"N" = (/obj/effect/floor_decal/techfloor,/obj/effect/floor_decal/industrial/warning,/turf/simulated/shuttle/plating/skipjack,/area/space)
+"O" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/light{dir = 8; layer = 3},/obj/machinery/power/emitter,/turf/simulated/floor/plating,/area/space)
+"P" = (/obj/machinery/door/window/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"Q" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/space)
+"R" = (/obj/structure/reagent_dispensers/watertank/high,/obj/machinery/light{dir = 4; layer = 3},/turf/simulated/shuttle/floor/voidcraft/dark,/area/space)
+"S" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/power/thermoregulator,/turf/simulated/floor/plating,/area/space)
+"T" = (/obj/structure/sign/warning/engineering_access,/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"U" = (/obj/machinery/sleeper/survival_pod,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"V" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/ce,/turf/simulated/shuttle/floor/voidcraft/light,/area/space)
+"W" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/survival,/area/space)
+"X" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/vending/tool{pixel_x = -1},/turf/simulated/floor/plating,/area/space)
+"Y" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/portable_atmospherics/powered/scrubber,/turf/simulated/floor/plating,/area/space)
+"Z" = (/turf/simulated/shuttle/plating/skipjack,/area/space)
+
+(1,1,1) = {"
+aaxaoaWaa
+aqDFagwia
+BksraUMVz
+ajshacsIx
+xEPpdvPXT
+auYmZZZLf
+BOQQZCKRz
+aHSeNtyGa
+aaAabTaaa
+"}

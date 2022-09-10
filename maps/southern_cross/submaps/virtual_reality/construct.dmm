@@ -1,41 +1,55 @@
+"ak" = (/obj/machinery/recharger/wallcharger{pixel_y = 24},/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "ay" = (/obj/fiftyspawner/uranium,/obj/item/stack/cable_coil/random,/obj/item/stack/cable_coil/random,/obj/machinery/power/port_gen/pacman/super,/turf/simulated/floor/tiled,/area/vr/powered)
+"aI" = (/obj/structure/cliff/automatic{dir = 10},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "bD" = (/turf/simulated/floor/outdoors/sidewalk{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
+"bW" = (/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
 "cn" = (/obj/machinery/light{layer = 3},/turf/simulated/floor/tiled/asteroid_steel,/area/vr/powered)
+"cq" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
+"cA" = (/obj/structure/cliff/automatic{dir = 8},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "da" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/projectile/revolver,/obj/item/weapon/gun/projectile/revolver,/obj/item/weapon/gun/projectile/revolver,/obj/item/weapon/gun/projectile/revolver,/turf/simulated/shuttle/floor/black,/area/vr/powered)
-"db" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/adv,/obj/item/weapon/storage/firstaid/adv,/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
+"db" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/adv,/obj/item/weapon/storage/firstaid/adv,/obj/machinery/recharger/wallcharger{pixel_x = 34},/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
 "dh" = (/obj/item/clothing/head/cone,/turf/simulated/floor/outdoors/grass{temperature = 293.15},/area/vr/outdoors/powered)
 "dy" = (/obj/effect/fake_sun{possible_light_setups = list(list("brightness"=6,"color"="#abfff7"),list("brightness"=4,"color"="#F4EA55"),list("brightness"=2.5,"color"="#EE9AC6"),list("brightness"=1.5,"color"="#F07AD8"),list("brightness"=1.5,"color"="#61AEF3"))},/turf/simulated/floor/outdoors/newdirt_nograss{temperature = 293.15},/area/vr/outdoors/powered)
 "dz" = (/obj/structure/table/steel,/obj/item/weapon/storage/toolbox/electrical{pixel_y = 7},/obj/item/weapon/storage/toolbox/mechanical{pixel_y = 1},/obj/item/weapon/storage/toolbox/syndicate/powertools{pixel_y = -5},/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 "dS" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/vr/powered)
 "ea" = (/turf/simulated/floor/beach/sand/desert{outdoors = 1},/area/vr/outdoors/powered)
 "eu" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/vr/powered)
+"ey" = (/obj/structure/cliff/automatic/corner{dir = 10},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "eF" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/box/monkeycubes/wolpincubes,/obj/item/weapon/storage/box/monkeycubes/sobakacubes,/obj/item/weapon/storage/box/monkeycubes/farwacubes,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "fk" = (/turf/simulated/floor/tiled/asteroid_steel,/area/vr/outdoors/powered)
 "fG" = (/turf/simulated/floor/tiled/asteroid_steel,/area/vr/powered)
 "fH" = (/obj/structure/table/rack/shelf/steel,/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/item/weapon/gun/projectile/shotgun/pump/slug,/obj/item/weapon/gun/projectile/shotgun/pump/slug,/obj/item/weapon/gun/projectile/shotgun/pump/slug,/obj/item/weapon/gun/projectile/shotgun/pump/slug,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "fO" = (/turf/simulated/floor/wood,/area/vr/powered)
+"gw" = (/obj/machinery/light{layer = 3},/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "gF" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/twohanded/fireaxe,/obj/item/weapon/material/twohanded/fireaxe,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "gX" = (/obj/machinery/light{layer = 3},/turf/simulated/floor/wood,/area/vr/powered)
-"hm" = (/obj/machinery/light{dir = 4},/obj/structure/table/standard,/obj/item/weapon/reagent_containers/glass/beaker/large,/obj/item/device/healthanalyzer/advanced,/obj/item/device/healthanalyzer/advanced,/obj/item/device/healthanalyzer/advanced,/obj/item/weapon/storage/firstaid/toxin,/obj/item/weapon/storage/firstaid/toxin,/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"hm" = (/obj/machinery/light{dir = 4},/obj/structure/table/standard,/obj/item/weapon/reagent_containers/glass/beaker/large,/obj/item/device/healthanalyzer/advanced,/obj/item/device/healthanalyzer/advanced,/obj/item/device/healthanalyzer/advanced,/obj/item/weapon/storage/firstaid/toxin,/obj/item/weapon/storage/firstaid/toxin,/obj/machinery/recharger/wallcharger{pixel_x = 34},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "hp" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/shuttle/floor/black,/area/vr/powered)
-"hw" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
+"hw" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/machinery/recharger/wallcharger{pixel_x = -24},/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
 "hF" = (/obj/structure/table/steel,/obj/item/weapon/shovel,/obj/item/weapon/shovel,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/material/knife/machete/hatchet,/turf/simulated/floor/outdoors/grass{temperature = 293.15},/area/vr/outdoors/powered)
 "ia" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/melee/energy/sword,/obj/item/weapon/melee/energy/sword,/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
 "ih" = (/obj/structure/bed/chair/comfy/red{pixel_y = 0; dir = 4},/obj/structure/plushie/ian{dir = 4},/turf/simulated/floor/plating,/area/vr/powered)
-"iC" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/bonemed{pixel_y = 1},/obj/item/weapon/storage/firstaid/clotting{pixel_y = -3},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"iC" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/bonemed{pixel_y = 1},/obj/item/weapon/storage/firstaid/clotting{pixel_y = -3},/obj/machinery/recharger/wallcharger{pixel_x = 34},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"ja" = (/obj/machinery/autolathe{hacked = 1; name = "hacked autolathe"},/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "jf" = (/turf/unsimulated/wall,/area/vr/outdoors/powered)
 "kr" = (/turf/simulated/floor/water/deep{temperature = 293.15},/area/vr/outdoors/powered)
 "kA" = (/obj/effect/floor_decal/corner/brown/border{dir = 1},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/wood,/area/vr/powered)
+"lc" = (/obj/structure/showcase/sign{name = "WARNING: OSHA VIOLATIONS"; desc = "Don't Fall."},/turf/simulated/floor/tiled/asteroid_steel{outdoors = 1},/area/vr/outdoors/powered)
+"lf" = (/obj/machinery/light{layer = 3},/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "ml" = (/obj/fiftyspawner/wood,/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 "nf" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/box/monkeycubes,/obj/item/weapon/storage/box/monkeycubes/sarucubes,/obj/item/weapon/storage/box/monkeycubes/neaeracubes,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "nC" = (/obj/machinery/autolathe{hacked = 1; name = "hacked autolathe"},/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
+"nS" = (/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "nX" = (/obj/fiftyspawner/rods,/turf/simulated/floor/tiled,/area/vr/powered)
+"on" = (/obj/structure/cliff/automatic/corner{dir = 9},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
+"oC" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "oF" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/pickaxe/diamond,/obj/item/weapon/pickaxe/diamond,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "oQ" = (/obj/structure/table/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 "ps" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 1},/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
 "pS" = (/obj/structure/table/bench/wooden,/obj/structure/flora/pottedplant/shoot{pixel_y = 9},/obj/effect/floor_decal/corner/brown/border{dir = 1},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/wood,/area/vr/powered)
 "pZ" = (/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "qb" = (/obj/structure/showcase/sign{name = "UNDER CONSTRUCTION"; desc = "This sign appears to be telling you that there are more maps under construction."},/turf/simulated/floor/outdoors/grass{temperature = 293.15},/area/vr/outdoors/powered)
+"qA" = (/obj/structure/cliff/automatic/corner{dir = 6},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "qW" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/obj/item/weapon/gun/projectile/serdy_pistols/glock71,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "ru" = (/obj/effect/floor_decal/corner/brown/border{dir = 9},/obj/effect/floor_decal/spline/fancy/wood{dir = 9},/turf/simulated/floor/wood,/area/vr/powered)
 "rV" = (/turf/simulated/floor/water/beach/corner{temperature = 293.15},/area/vr/outdoors/powered)
@@ -44,16 +58,24 @@
 "tQ" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/item/ammo_magazine/m762,/obj/structure/table/rack/shelf/steel,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "tT" = (/turf/simulated/floor/water{temperature = 293.15},/area/vr/outdoors/powered)
 "uS" = (/obj/machinery/light{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"uU" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/machinery/recharger/wallcharger{pixel_x = -24},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"vY" = (/turf/simulated/floor/lava,/area/vr/outdoors/powered)
+"vZ" = (/obj/structure/table/bench/wooden,/obj/item/weapon/gun/energy/pulse_rifle,/turf/simulated/floor/plating,/area/vr/powered)
 "wC" = (/obj/structure/table/rack/shelf/steel,/obj/effect/floor_decal/industrial/warning{dir = 6},/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/obj/item/ammo_magazine/ammo_box/b12g/pellet,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "wF" = (/turf/unsimulated/wall,/area/vr/powered)
 "wG" = (/obj/structure/table/woodentable,/obj/item/weapon/reagent_containers/food/snacks/chipplate{pixel_y = -7},/obj/item/weapon/reagent_containers/food/snacks/donerkebab{pixel_y = 4},/turf/simulated/floor/wood,/area/vr/powered)
 "wV" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "xJ" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled,/area/vr/powered)
 "yp" = (/turf/simulated/floor/tiled{outdoors = 1},/area/vr/powered)
+"zL" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "zM" = (/obj/structure/table/rack/shelf/steel,/obj/effect/floor_decal/industrial/warning,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/obj/item/ammo_magazine/m9mml,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Ag" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/tool/crowbar/red{force = 15; throwforce = 16; name = "heavy crowbar"; desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"},/obj/item/weapon/tool/crowbar/red{force = 15; throwforce = 16; name = "heavy crowbar"; desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"},/obj/item/weapon/tool/crowbar/red{force = 15; throwforce = 16; name = "heavy crowbar"; desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"},/obj/item/weapon/tool/crowbar/red{force = 15; throwforce = 16; name = "heavy crowbar"; desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"Ah" = (/obj/structure/railing{dir = 1},/obj/effect/decal/remains,/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
+"Am" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/structure/table/rack/shelf/steel,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Ax" = (/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
+"AG" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/knife/machete,/obj/item/weapon/material/knife/machete,/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "AI" = (/obj/machinery/light{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 6},/obj/machinery/vending/medical{req_access = null; req_log_access = null; dir = 8},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"AY" = (/turf/simulated/wall/r_wall,/area/vr/powered/redbase)
 "Bi" = (/obj/structure/reagent_dispensers/watertank,/obj/item/weapon/reagent_containers/glass/bucket,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Bk" = (/obj/machinery/chemical_dispenser/ert/specialops{pixel_y = 7},/obj/structure/table/standard,/obj/item/weapon/reagent_containers/glass/beaker/large,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "BJ" = (/obj/effect/floor_decal/corner/brown/border{dir = 8},/obj/effect/floor_decal/spline/fancy/wood{dir = 8},/turf/simulated/floor/wood,/area/vr/powered)
@@ -63,114 +85,143 @@
 "CX" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Dr" = (/obj/machinery/computer/security/telescreen/entertainment{pixel_x = 31},/turf/simulated/floor/plating,/area/vr/powered)
 "DA" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"DR" = (/obj/structure/cliff/automatic{dir = 6},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "Et" = (/obj/machinery/light{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "ES" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled,/area/vr/powered)
+"Fa" = (/obj/structure/cliff/automatic{dir = 4},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "Fj" = (/turf/simulated/floor/tiled/asteroid_steel{outdoors = 1},/area/vr/outdoors/powered)
 "Fs" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/vr/powered)
+"FD" = (/obj/structure/cliff/automatic/corner,/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "FL" = (/obj/structure/table/woodentable,/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple,/turf/simulated/floor/wood,/area/vr/powered)
 "Gv" = (/obj/structure/table/woodentable,/obj/item/weapon/reagent_containers/food/snacks/pastatomato,/turf/simulated/floor/wood,/area/vr/powered)
-"GL" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/box/monkeycubes/stokcubes,/obj/item/weapon/storage/box/monkeycubes/sparracubes,/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"GL" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "GW" = (/turf/unsimulated/wall/seperator,/area/vr/outdoors/powered)
 "Ho" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled,/area/vr/powered)
 "Hw" = (/turf/simulated/floor/tiled,/area/vr/powered)
+"Hz" = (/obj/effect/decal/remains,/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
+"Iy" = (/obj/machinery/light{dir = 4},/obj/structure/table/rack/shelf/steel,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
+"IB" = (/obj/structure/railing,/obj/effect/decal/remains,/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
+"Je" = (/obj/machinery/light{dir = 8},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
+"Jz" = (/obj/effect/decal/remains/ribcage,/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "JW" = (/turf/simulated/floor/outdoors/newdirt_nograss{temperature = 293.15},/area/vr/outdoors/powered)
 "Kg" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "KY" = (/obj/effect/landmark/virtual_reality{name = "Construction Site"},/turf/simulated/floor/tiled,/area/vr/powered)
+"Lu" = (/obj/structure/showcase/sign{name = "WARNING: OSHA VIOLATIONS"; desc = "Don't Fall."},/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
 "LQ" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "LT" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/vr/powered)
+"LV" = (/obj/fiftyspawner/steel,/obj/fiftyspawner/glass,/obj/structure/table/rack/shelf/steel,/obj/item/clothing/head/cowboy,/obj/item/clothing/glasses/fakesunglasses/aviator,/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "LY" = (/obj/effect/map_helper/no_tele,/turf/simulated/floor/outdoors/newdirt_nograss{temperature = 293.15},/area/vr/outdoors/powered)
 "Mc" = (/obj/structure/table/steel,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/stack/cable_coil/random,/obj/item/stack/cable_coil/random,/obj/item/stack/cable_coil/random,/obj/item/stack/cable_coil/random,/obj/item/stack/cable_coil/random,/obj/item/weapon/storage/belt{pixel_y = 7},/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 "MJ" = (/obj/structure/table/bench/wooden,/obj/effect/floor_decal/corner/brown/border{dir = 1},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/wood,/area/vr/powered)
+"MX" = (/obj/machinery/autolathe{hacked = 1; name = "hacked autolathe"},/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
+"Ng" = (/obj/effect/decal/remains/unathi,/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "Nj" = (/obj/structure/table/rack/shelf/steel,/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/item/weapon/gun/projectile/automatic/z8,/obj/item/weapon/gun/projectile/automatic/z8,/obj/item/weapon/gun/projectile/automatic/z8,/obj/item/weapon/gun/projectile/automatic/z8,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Nn" = (/obj/structure/table/steel,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/weapon/storage/belt{pixel_y = 7},/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 "No" = (/obj/effect/floor_decal/corner/brown/border{dir = 5},/obj/effect/floor_decal/spline/fancy/wood{dir = 5},/turf/simulated/floor/wood,/area/vr/powered)
+"NB" = (/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "NR" = (/turf/simulated/floor/plating,/area/vr/powered)
 "Ob" = (/obj/machinery/door/window/brigdoor/eastright{req_access = null},/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/effect/floor_decal/industrial/warning,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Oj" = (/obj/machinery/door/window/brigdoor/westright{req_access = null},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
 "Oz" = (/obj/effect/floor_decal/corner/brown/border{dir = 4},/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/turf/simulated/floor/wood,/area/vr/powered)
 "OE" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/sword/katana,/obj/item/weapon/material/sword/katana,/obj/item/weapon/material/sword,/obj/item/weapon/material/sword,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "OH" = (/turf/simulated/floor/outdoors/newdirt{temperature = 293.15},/area/vr/outdoors/powered)
+"OP" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/projectile/heavysniper,/obj/item/weapon/gun/projectile/heavysniper,/obj/item/weapon/gun/projectile/heavysniper,/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "Pm" = (/turf/simulated/floor/water/beach{temperature = 293.15},/area/vr/outdoors/powered)
 "Pn" = (/obj/machinery/chem_master,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Qm" = (/obj/machinery/door/window/brigdoor/eastleft{req_access = null},/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/shuttle/floor/darkred,/area/vr/powered)
+"QA" = (/obj/machinery/light{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/energy/laser,/obj/item/weapon/gun/energy/laser,/obj/item/weapon/gun/energy/laser,/obj/item/weapon/gun/energy/lasercannon,/obj/item/weapon/gun/energy/lasercannon,/obj/item/weapon/gun/energy/lasercannon,/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"QH" = (/obj/item/weapon/material/knife/machete,/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/knife/machete,/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "Rb" = (/obj/structure/railing{dir = 1},/turf/simulated/floor/tiled/asteroid_steel{outdoors = 1},/area/vr/outdoors/powered)
+"RA" = (/obj/structure/cliff/automatic,/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "RE" = (/obj/structure/table/woodentable,/obj/item/weapon/reagent_containers/food/snacks/dip/salsa{pixel_y = 9},/obj/item/weapon/reagent_containers/food/snacks/sharkmeatdip{pixel_y = 0; pixel_x = -3},/turf/simulated/floor/wood,/area/vr/powered)
+"SB" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/projectile/heavysniper,/obj/item/weapon/gun/projectile/heavysniper,/obj/item/weapon/gun/projectile/heavysniper,/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
+"SJ" = (/obj/structure/cliff/automatic{dir = 5},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
+"To" = (/obj/structure/table/rack/shelf/steel,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/obj/item/ammo_casing/a145,/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "Ts" = (/obj/item/weapon/flame/candle/everburn,/obj/structure/table/bench/wooden,/turf/simulated/floor/plating,/area/vr/powered)
+"Tu" = (/obj/structure/cliff/automatic{dir = 9},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "Ty" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/vr/outdoors/powered)
+"Uf" = (/obj/structure/railing{dir = 1},/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
+"Uo" = (/obj/machinery/light{dir = 8},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/obj/item/ammo_casing/microbattery/medical/omni3,/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "Ut" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/obj/machinery/bodyscanner,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Uw" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/launcher/crossbow,/obj/item/weapon/gun/launcher/crossbow,/obj/item/weapon/gun/launcher/crossbow,/obj/item/weapon/gun/launcher/crossbow,/obj/item/weapon/cell/hyper,/obj/item/weapon/cell/hyper,/obj/item/weapon/cell/hyper,/obj/item/weapon/cell/hyper,/obj/fiftyspawner/rods,/obj/fiftyspawner/rods,/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "UB" = (/obj/effect/floor_decal/industrial/warning/corner,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "UF" = (/obj/structure/closet/crate/rcd,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd/advanced/loaded,/obj/item/weapon/rcd/advanced/loaded,/obj/item/weapon/rcd/advanced/loaded,/obj/item/weapon/rcd/advanced/loaded,/obj/item/weapon/rcd_ammo/large,/obj/item/weapon/rcd_ammo/large,/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 "UH" = (/obj/machinery/door/window/brigdoor/westleft{req_access = null},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"Vf" = (/turf/simulated/wall/r_wall,/area/vr/powered/bluebase)
+"Vi" = (/obj/structure/railing,/turf/simulated/floor/outdoors/rocks{temperature = 293.15},/area/vr/outdoors/powered)
 "VN" = (/turf/simulated/floor/outdoors/grass{temperature = 293.15},/area/vr/outdoors/powered)
+"Wi" = (/obj/machinery/recharger/wallcharger{pixel_x = 4; pixel_y = -34},/turf/simulated/floor/reinforced,/area/vr/powered/bluebase)
 "Wy" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/vr/powered)
 "WC" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/machinery/body_scanconsole,/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"WJ" = (/obj/structure/railing,/turf/simulated/floor/outdoors/newdirt_nograss{temperature = 293.15},/area/vr/outdoors/powered)
 "WO" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/vr/powered)
+"WZ" = (/obj/structure/cliff/automatic{dir = 2},/turf/simulated/floor/lava,/area/vr/outdoors/powered)
 "Xa" = (/obj/structure/closet/wardrobe/grey,/obj/item/clothing/under/teshari/undercoat/standard/black_grey,/obj/item/clothing/under/teshari/undercoat/standard/black_grey,/obj/item/clothing/under/teshari/undercoat/standard/black_grey,/obj/item/clothing/under/color/grey,/obj/item/clothing/under/color/grey,/obj/item/clothing/under/color/grey,/turf/simulated/floor/tiled,/area/vr/powered)
 "Xk" = (/obj/structure/table/rack/shelf/steel,/obj/effect/floor_decal/industrial/warning{dir = 10},/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/obj/item/ammo_magazine/m9mm,/turf/simulated/shuttle/floor/black,/area/vr/powered)
+"XE" = (/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/structure/table/rack/shelf/steel,/obj/item/clothing/head/cowboy,/obj/item/clothing/glasses/fakesunglasses/aviator,/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "XN" = (/obj/structure/closet{name = "physicist's wardrobe"},/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/glasses/regular,/obj/item/clothing/glasses/regular,/obj/item/clothing/glasses/regular,/obj/item/clothing/glasses/regular,/obj/item/clothing/accessory/tie,/obj/item/clothing/accessory/tie,/obj/item/clothing/accessory/tie,/obj/item/clothing/accessory/tie,/obj/item/clothing/under/sl_suit,/obj/item/clothing/under/sl_suit,/obj/item/clothing/under/sl_suit,/obj/item/clothing/under/sl_suit,/turf/simulated/floor/tiled,/area/vr/powered)
 "Yp" = (/obj/machinery/light{dir = 8},/obj/structure/table/rack/shelf/steel,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/item/ammo_magazine/s357,/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "Za" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/projectile/automatic/pdw,/obj/item/weapon/gun/projectile/automatic/pdw,/obj/item/weapon/gun/projectile/automatic/pdw,/obj/item/weapon/gun/projectile/automatic/pdw,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "ZL" = (/turf/simulated/floor/outdoors/sidewalk/slab{temperature = 293.15; movement_cost = 0},/area/vr/outdoors/powered)
 
 (1,1,1) = {"
-GWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGW
-GWJWJWJWJWwFwFwFwFwFwFwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWdyJWJWJWwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWLYJWJWJWwFwFihNRDrCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCojfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfGW
-GWJWJWJWJWwFwFTsNRNRCBNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWJWJWJWJWwFwFNRNRNRCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjjfGW
-GWJWJWJWJWwFwFwFwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoCoCoCoCoCoCoCoCoCoCoCoCoZLFjjfGW
-GWJWJWJWJWwFwFwFwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoqWdaZaWyAgiaOEWyUtWCKgCoZLFjjfGW
-GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZDAWyLQAxDAWyLQpZDACoZLFjjfGW
-GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCouSpZfHWyoFAxgFWyhpCXAICoZLFjjfGW
-GWJWJWJWJWJWJWJWJWwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCosepZNjWyLQAxDAWypZpZBkCoZLFjjfGW
-GWJWJWJWJWJWJWJWJWwFCoCoCoCoCoCoCoNRCoCoCoCoCoCoCoCoCoNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZUwWyuSAxEtWypZpZPnCoZLFjjfGW
-GWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfCoNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCohwAxBOQmpsAxBOOjAxAxdbCoZLFjjfGW
-GWjfFjZLZLZLZLZLZLZLZLZLZLZLZLZLCoCoCoCoCoNRCoCoCoCoCoCoCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZUBObwVAxUBUHpZpZiCCoZLFjjfGW
-GWjfFjZLCoCoCoCofGfGfGCoCoCoCoZLCoCoCoCoCoNRCoCoCoCoCoFjFjFjFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoYppZDAWyLQAxDAWypZpZhmCoZLFjjfGW
-GWjfFjZLCofGeufGfGfGfGfGeufGCoZLCoCoCoHwHwHwxJHwHwCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCotQpZDAWyLQAxDAWypZpZBiCoZLFjjfGW
-GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNOHVNVNVNVNVNVNZLCoXkzMwCWyLQAxDAWynfeFGLCoZLFjjfGW
-GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwypypypypHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNZLCoCoCoCoCoLQAxDACoCoCoCoCoZLFjjfGW
-GWjfFjZLfGfGfGfGfGfGfGfGfGfGfGZLCoESypypypypypypypHwHwFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNOHVNVNVNOHVNOHZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjjfGW
-GWjfFjZLfGfGfGfGfGfGfGfGfGfGfGZLCoHwHwHwHwypypypypHwHwFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNVNVNZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjjfGW
-GWjfFjZLfGfGfGfGfGfGfGfGfGfGfGZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNFjjfGW
-GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwypypypypHwHwHwHoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaFjjfGW
-GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwypypypypypypypHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNearVPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmFjjfGW
-GWjfFjZLCofGcnfGfGfGfGfGcnfGCoZLCoHwHwHwHwypypypypHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNeasKtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTFjjfGW
-GWjfFjZLCoCoCoCofGfGfGCoCoCoCoZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTFjjfGW
-GWjfFjZLZLZLZLZLZLZLZLZLZLZLZLZLCoESypypypypHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNeasKtTtTtTtTtTtTtTtTkrkrkrtTtTtTtTtTtTtTtTtTtTtTtTFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjConXypypypypypypypHoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTtTkrkrkrkrkrkrkrkrkrkrtTtTkrkrtTtTtTkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjCoayHwHwHwypypypypHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjCoCoHwHwHwHwHwHwHwCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjFjFjVNVNVNVNVNVNVNVNVNVNVNVNOHOHVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDZLZLZLZLZLZLZLZLZLZLZLbDhFVNVNdhqbdhVNVNVNVNVNOHOHVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDZLZLZLZLZLZLZLZLZLZLZLbDmlmlmlZLZLZLZLZLZLZLZLZLZLZLZLZLVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCoCoCoCofkfkfkCoCoCoCobDZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGCofkfkTyCofGfGCobDZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjFjFjRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGCofkfkfkCofGfGCobDnCoQMcNnNndzUFZLZLZLZLZLZLZLZLZLZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGLTCoCofGCoCoWOfGCobDCoCoCoCoCoCoCoHwCoCoZLZLZLZLZLZLZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoXaXaXaXNxJHwHwHwCoCoHwHwCoCoCoZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoHwHwHwHwHwHwHwHwHwHwHwHwxJHwCoZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoXaKYHwHwHwHwHwHwHwHwHwHwHwHwHwZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCoWOfGfGfGfGfGfGfGLTCobDCoXaHwHwrukApSkAkAkAMJkANoHwHwHwZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoESHwHwBJdSwGFsfOdSFLFsOzHwHwCoZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoHwHwHwBJdSREFsgXdSGvFsOzHwHwCoZLZLZLFjFjFjFjFjjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGcnfGfGfGfGCobDCoHwHwCoCoCoCoCoCoCoCoCoCoCoCoCoZLZLZLFjFjFjFjFjjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCoCoCoCoCoCoCofGfGCoCobDwFHwHwwFjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfwFfGfGwFwFwFwFHwHwwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWwFfGfGfGfGfGfGfGfGwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWwFfGcnfGfGfGcnfGfGwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWwFwFwFwFwFwFwFwFwFwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWGW
-GWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGW
+GWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGW
+GWJWJWJWJWwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfGW
+GWdyJWJWJWwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFwFjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWLYJWJWJWwFwFihNRDrCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCoCojfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWJWJWJWJWwFwFTsNRNRCBNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfjfJWJWJWJWJWJWJWVfVfVfVfnSnSVfVfVfVfJWJWJWJWjfGW
+GWJWJWJWJWwFwFvZNRNRCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjjfjfJWJWJWJWJWJWVfVfnSoCnSnSnSnSoCnSVfVfJWJWJWjfGW
+GWJWJWJWJWwFwFwFwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoCoCoCoCoCoCoCoCoCoCoCoCoZLFjjfjfJWJWJWJWJWJWVfnSnSnSnSnSnSnSnSnSnSVfJWJWJWjfGW
+GWJWJWJWJWwFwFwFwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoqWdaZaWyAgiaOEWyUtWCKgCoZLFjjfjfJWJWJWJWJWJWVfnSnSVfVfVfVfVfVfnSnSVfJWJWJWjfGW
+GWJWJWJWJWJWJWJWwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoLQpZDAWyLQAxDAWyLQpZDACoZLFjjfjfJWJWJWJWJWJWVfnSnSVfUoQHLVjaVfnSnSVfJWJWJWjfGW
+GWJWJWJWJWJWJWJWwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoQApZfHWyoFAxgFWyhpCXAICoZLFjjfjfJWJWJWJWJWJWnSnSnSnSnSnSnSnSnSnSnSnSJWJWJWjfGW
+GWJWJWJWJWJWJWJWwFwFCoNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCosepZNjWyLQAxDAWypZpZBkCoZLFjjfjfJWJWJWJWJWJWnSnSnSnSnSnSnSnSnSnSnSnSJWJWJWjfGW
+GWJWJWJWJWJWJWJWwFwFCoCoCoCoCoCoCoNRCoCoCoCoCoCoCoCoCoNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCouUpZUwWyuSAxEtWypZpZPnCoZLFjjfjfJWJWJWJWJWJWVfnSnSVfnSWiSBIyVfnSnSVfJWJWJWjfGW
+GWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfCoNRNRNRNRNRNRNRNRNRNRNRCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCohwAxBOQmpsAxBOOjAxAxdbCoZLFjjfjfJWJWJWJWJWJWVfnSnSVfVfVfVfVfVfnSnSVfJWJWJWjfGW
+GWjfFjZLZLZLZLZLZLZLZLZLZLZLZLZLCoCoCoCoCoNRCoCoCoCoCoCoCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCouUpZUBObwVAxUBUHpZpZiCCoZLFjjfjfJWJWJWJWJWJWVfnSnSnSnSnSnSnSnSnSnSVfJWJWJWjfGW
+GWjfFjZLCoCoCoCofGfGfGCoCoCoCoZLCoCoCoCoCoNRCoCoCoCoCoFjFjFjFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCoYppZAmWyLQAxDAWypZpZhmCoZLFjjfjfJWJWJWJWJWJWVfVfnSgwnSnSnSnSgwnSVfVfJWJWJWjfGW
+GWjfFjZLCofGeufGfGfGfGfGeufGCoZLCoCoCoHwHwHwxJHwHwCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNZLCotQpZDAWyLQAxDAWypZpZBiCoZLFjjfjfJWJWJWJWJWJWJWVfVfVfVfnSnSVfVfVfVfJWJWJWJWjfGW
+GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNOHVNVNVNVNVNVNZLCoXkzMwCWyLQAxDAWynfeFGLCoZLFjjfjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwypypypypHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNZLCoCoCoCoCoLQAxDACoCoCoCoCoZLFjjfjfJWJWJWJWJWJWJWJWJWJWJWJWbWJWJWJWJWJWJWJWJWjfGW
+GWjfFjZLfGfGfGfGfGfGfGfGfGfGfGZLCoESypypypypypypypHwHwFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNOHVNVNVNOHVNOHZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjjfjfJWJWbWJWJWJWJWJWJWJWJWJWbWbWbWJWJWJWJWJWJWjfGW
+GWjfFjZLfGfGfGfGfGfGfGfGfGfGfGZLCoHwHwHwHwypypypypHwHwFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNVNVNZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjjfjfJWbWbWbWViViWJViViJWbWbWbWWJWJIBWJWJJWJWbWjfGW
+GWjfFjZLfGfGfGfGfGfGfGfGfGfGfGZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNFjjfjfJWbWbWbWTuRARARASJbWbWLubWTuRARARARARASJbWjfGW
+GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwypypypypHwHwHwHoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaFjjfjfJWJWTuRAonvYvYvYFDSJbWTuRAonvYvYvYvYvYFaJWjfGW
+GWjfFjZLCofGfGfGfGfGfGfGfGfGCoZLCoHwypypypypypypypHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNearVPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmPmFjjfjfJWJWcAvYvYvYvYvYvYFabWcAvYvYvYvYvYvYqADRJWjfGW
+GWjfFjZLCofGcnfGfGfGfGfGcnfGCoZLCoHwHwHwHwypypypypHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNeasKtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTFjjfjfJWJWaIWZeyvYvYvYvYFabWcAvYvYvYvYvYvYFabWJWjfGW
+GWjfFjZLCoCoCoCofGfGfGCoCoCoCoZLCoHwHwHwHwHwHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTFjjfjfJWJWbWbWcAvYvYJzvYFabWcAvYvYvYvYvYvYFabWJWjfGW
+GWjfFjZLZLZLZLZLZLZLZLZLZLZLZLZLCoESypypypypHwHwHwHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNeasKtTtTtTtTtTtTtTtTkrkrkrtTtTtTtTtTtTtTtTtTtTtTtTFjjfjfJWJWbWbWcAvYvYvYvYFabWaIeyvYvYvYvYvYFaJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjConXypypypypypypypHoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTtTkrkrkrkrkrkrkrkrkrkrtTtTkrkrtTtTtTkrkrFjjfjfJWJWbWbWcAvYvYvYvYFabWHzcAvYvYvYvYqADRJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjCoayHwHwHwypypypypHwCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWTuRAonvYvYvYvYFabWTuonvYvYvYvYFabWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjCoCoHwHwHwHwHwHwHwCoCoFjVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWcAvYvYvYvYvYvYFabWcAvYvYvYvYvYFabWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjFjFjVNVNVNVNVNVNVNVNVNVNVNVNOHOHVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWcAvYvYvYvYvYvYFabWcAvYvYvYvYvYFDSJJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWcAvYvYvYvYvYvYFabWcAvYvYvYvYvYvYFabWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWcAvYvYvYvYvYvYFabWcAvYvYvYNgvYvYFabWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWaIeyvYvYvYvYvYFabWcAvYvYvYvYvYqADRbWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWbWaIeyvYvYvYvYFabWaIeyvYvYvYqADRbWbWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWbWbWaIWZWZWZWZDRbWbWaIWZWZWZDRbWbWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWbWUfUfAhUfUfLubWbWUfUfUfUfUfbWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWJWJWJWJWJWJWbWbWJWJWbWbWbWbWbWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWJWJWJWJWJWJWbWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNOHVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNVNFjFjFjFjFjFjFjFjFjFjFjbDVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWJWAYAYAYAYNBNBAYAYAYAYJWJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDZLZLZLZLZLZLZLZLZLZLZLbDhFVNVNdhqbdhVNVNVNVNVNOHOHVNVNVNVNVNVNVNVNVNeasKtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWAYAYNBzLNBNBNBNBzLNBAYAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDZLZLZLZLZLZLZLZLZLZLZLbDmlmlmlZLZLZLZLZLZLZLZLZLZLZLZLZLVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWAYNBNBNBNBNBNBNBNBNBNBAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCoCoCoCofkfkfkCoCoCoCobDZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLVNVNVNVNVNVNeasKtTtTtTkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrFjjfjfJWJWJWAYNBNBAYAYAYAYAYAYNBNBAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGCofkfkTyCofGfGCobDZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLZLFjFjFjRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbRbFjjfjfJWJWJWAYNBNBAYJeakToOPAYNBNBAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGCofkfkfkCofGfGCobDnCoQMcNnNndzUFZLZLZLZLZLZLZLZLZLZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjlcFjJWJWJWNBNBNBNBNBNBNBNBNBNBNBNBJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGLTCoCofGCoCoWOfGCobDCoCoCoCoCoCoCoHwCoCoZLZLZLZLZLZLZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjJWJWJWNBNBNBNBNBNBNBNBNBNBNBNBJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoXaXaXaXNxJHwHwHwCoCoHwHwCoCoCoZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjJWJWJWAYNBNBAYMXXEAGcqAYNBNBAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoHwHwHwHwHwHwHwHwHwHwHwHwxJHwCoZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjJWJWJWAYNBNBAYAYAYAYAYAYNBNBAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoXaKYHwHwHwHwHwHwHwHwHwHwHwHwHwZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjlcFjJWJWJWAYNBNBNBNBNBNBNBNBNBNBAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCoWOfGfGfGfGfGfGfGLTCobDCoXaHwHwrukApSkAkAkAMJkANoHwHwHwZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfjfJWJWJWAYAYNBlfNBNBNBNBlfNBAYAYJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoESHwHwBJdSwGFsfOdSFLFsOzHwHwCoZLZLZLFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjjfjfJWJWJWJWAYAYAYAYNBNBAYAYAYAYJWJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGfGfGfGfGfGCobDCoHwHwHwBJdSREFsgXdSGvFsOzHwHwCoZLZLZLFjFjFjFjFjjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCofGfGfGfGcnfGfGfGfGCobDCoHwHwCoCoCoCoCoCoCoCoCoCoCoCoCoZLZLZLFjFjFjFjFjjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWjfVNVNVNVNVNVNVNVNVNVNVNVNbDCoCoCoCoCoCoCofGfGCoCobDwFHwHwwFjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfwFfGfGwFwFwFwFHwHwwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWwFfGfGfGfGfGfGfGfGwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWwFfGcnfGfGfGcnfGfGwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfGW
+GWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWwFwFwFwFwFwFwFwFwFwFJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWJWjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfGW
+GWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGWGW
 "}

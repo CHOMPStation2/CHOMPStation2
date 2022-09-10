@@ -1,0 +1,75 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/fire,/mob/living/simple_mob/vore/demonAI/lutra{faction = "neutral"},/turf/simulated/floor/gorefloor,/area/template_noop)
+"c" = (/turf/simulated/floor/gorefloor,/area/template_noop)
+"d" = (/obj/fire,/turf/simulated/floor/lava/outdoors,/area/template_noop)
+"e" = (/obj/structure/bed/chair/wood/wings{dir = 4},/turf/simulated/floor/cult,/area/template_noop)
+"f" = (/obj/structure/grille/cult,/turf/simulated/floor/gorefloor,/area/template_noop)
+"g" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/template_noop)
+"h" = (/obj/effect/gateway,/turf/simulated/floor/gorefloor,/area/template_noop)
+"i" = (/obj/structure/bed/chair/wood/wings{dir = 1},/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"j" = (/obj/structure/cult/pylon,/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"k" = (/turf/simulated/floor/cult{icon_state = "cult-narsie"},/area/template_noop)
+"l" = (/turf/simulated/floor/gorefloor2,/area/template_noop)
+"m" = (/obj/structure/table/hardwoodtable,/obj/item/weapon/reagent_containers/food/snacks/sliceable/braincake,/turf/simulated/floor/cult,/area/template_noop)
+"n" = (/mob/living/simple_mob/vore/demonAI/wendigo{faction = "neutral"},/turf/simulated/floor/cult,/area/template_noop)
+"o" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8; icon_state = "pwindow"},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/template_noop)
+"q" = (/mob/living/simple_mob/vore/demonAI{faction = "neutral"},/turf/simulated/floor/gorefloor,/area/template_noop)
+"r" = (/obj/structure/grille/broken/cult,/turf/template_noop,/area/template_noop)
+"s" = (/obj/effect/gateway,/turf/simulated/floor/gorefloor2,/area/template_noop)
+"t" = (/obj/structure/table/hardwoodtable,/obj/item/weapon/flame/candle/candelabra/everburn{pixel_y = 8},/turf/simulated/floor/cult,/area/template_noop)
+"u" = (/obj/structure/grille/cult,/turf/simulated/floor/gorefloor2,/area/template_noop)
+"v" = (/turf/simulated/goreeyes,/area/template_noop)
+"w" = (/obj/fire,/turf/template_noop,/area/template_noop)
+"x" = (/obj/structure/table/marble{color = "#B03A2E"},/obj/item/clothing/shoes/cult,/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/item/device/soulstone,/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"y" = (/turf/simulated/wall/cult,/area/template_noop)
+"z" = (/obj/structure/bed/chair/wood/wings{dir = 8},/turf/simulated/floor/cult,/area/template_noop)
+"A" = (/obj/structure/simple_door/sandstone{color = "#D35400"},/turf/simulated/floor/cult,/area/template_noop)
+"B" = (/obj/structure/grille/broken/cult,/obj/fire,/turf/template_noop,/area/template_noop)
+"C" = (/obj/structure/cult/forge,/turf/simulated/floor/cult,/area/template_noop)
+"D" = (/turf/simulated/floor/cult,/area/template_noop)
+"E" = (/obj/fire,/turf/simulated/floor/cult,/area/template_noop)
+"F" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor2,/area/template_noop)
+"G" = (/mob/living/simple_mob/vore/demonAI/engorge{evasion = 1; health = 750; projectilesound = 'sound/weapons/taser2.ogg'; projectiletype = /obj/item/projectile/beam/stun/electric_spider; size_multiplier = 3; faction = "neutral"},/turf/simulated/floor/cult,/area/template_noop)
+"H" = (/obj/structure/cult/talisman,/obj/item/weapon/melee/cultblade,/turf/simulated/floor/cult,/area/template_noop)
+"I" = (/obj/fire,/obj/fire,/turf/simulated/floor/gorefloor2,/area/template_noop)
+"J" = (/obj/fire,/obj/fire,/turf/simulated/floor/lava/outdoors,/area/template_noop)
+"K" = (/obj/structure/table/marble{color = "#B03A2E"},/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/item/clothing/shoes/cult,/obj/item/device/soulstone,/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"L" = (/obj/structure/constructshell/cult,/turf/simulated/floor/cult,/area/template_noop)
+"M" = (/turf/simulated/floor/lava/outdoors,/area/template_noop)
+"N" = (/obj/structure/cult/tome,/turf/simulated/floor/cult,/area/template_noop)
+"O" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor,/area/template_noop)
+"P" = (/mob/living/simple_mob/vore/demonAI/covern{faction = "neutral"},/turf/simulated/floor/gorefloor2,/area/template_noop)
+"Q" = (/obj/structure/grille/cult,/obj/structure/bonfire/permanent,/turf/simulated/floor/gorefloor2,/area/template_noop)
+"R" = (/obj/structure/bed/chair/bay/chair/padded/red/bignest,/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"S" = (/obj/structure/grille/cult,/turf/template_noop,/area/template_noop)
+"T" = (/obj/fire,/turf/simulated/floor/gorefloor2,/area/template_noop)
+"U" = (/obj/fire,/obj/fire,/turf/simulated/floor/gorefloor,/area/template_noop)
+"V" = (/turf/simulated/gore,/area/template_noop)
+"W" = (/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"X" = (/obj/fire,/turf/simulated/floor/gorefloor,/area/template_noop)
+"Y" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood/alt/tile,/area/template_noop)
+"Z" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8; icon_state = "pwindow"},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/template_noop)
+
+(1,1,1) = {"
+aaalalalaaaaalaaaaaaa
+lTavVVVVuVvlaaalawaaa
+aTwllacccVVuVVVFvBlla
+aauTTTXXXXXcMMllVTVaa
+wTFcTEEITTlcddTlaTVla
+wTucXqclcLDcXclPTTVla
+awFlXVVyVyyVVVuDETVal
+awOlTcyxWYyRjVscTTvla
+llcVXlyiWjyWKyDVTTvaa
+alfdQcyvAyVAyycvQTVav
+aVVJdDZDkDGkDADllTVlV
+avVEDhyemtzHNyDMllrla
+lllDcVVyogyyyvLlclula
+aluTbVvcMMclCycXTcVla
+laFXXclcMMDnllXITaVal
+aaflXXcTTTXTXTUTcaVla
+VlulaccIITVVlTTlccVaa
+aVValTTITIVvlcccaVvaa
+avVSrwwwalaaOFffVaala
+aaaaVVVVVlllllaaaaaaa
+aaaaaaaaalaaaaaaaaaaa
+"}

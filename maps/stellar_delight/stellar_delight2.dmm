@@ -7746,6 +7746,9 @@
 /area/stellardelight/deck2/central)
 "rl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardfore)
 "rm" = (
@@ -8857,6 +8860,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -14086,6 +14092,18 @@
 /obj/structure/medical_stand,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
+"FI" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portaft)
 "FJ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -15882,6 +15900,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
+"Jw" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/starboardsolars)
 "Jx" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
@@ -21266,6 +21293,16 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"VD" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portfore)
 "VE" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -21841,6 +21878,15 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/fuelstorage)
+"WV" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "WW" = (
 /obj/machinery/power/apc/angled{
 	dir = 8
@@ -22114,6 +22160,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/art)
+"XE" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
 "XF" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/adv{
@@ -30232,7 +30287,7 @@ Gv
 Gv
 Gv
 Uv
-Gv
+VD
 yz
 KL
 WP
@@ -30387,7 +30442,7 @@ Yh
 Yh
 Yh
 AP
-Yh
+FI
 Yh
 Yh
 uL
@@ -30679,7 +30734,7 @@ zp
 eL
 fr
 vU
-MD
+WV
 MD
 fR
 IC
@@ -35498,8 +35553,13 @@ us
 aL
 zS
 Wy
+<<<<<<< HEAD
 Mk
 Mk
+=======
+xh
+XE
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 Mk
 fs
 Tk
@@ -35511,7 +35571,7 @@ LH
 Mk
 pm
 Mk
-Mk
+XE
 lv
 Aj
 LI
@@ -35792,7 +35852,7 @@ Ie
 HS
 am
 Cc
-aM
+Jw
 aM
 FT
 pj

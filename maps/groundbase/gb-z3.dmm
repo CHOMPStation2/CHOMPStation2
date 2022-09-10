@@ -413,6 +413,12 @@ lol
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/medical/cmo)
+"hb" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level3/nw)
 "hl" = (
 /turf/simulated/wall,
 /area/groundbase/level3/escapepad)
@@ -759,6 +765,10 @@ lol
 /obj/effect/landmark/start/explorer,
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+"nR" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level3/nw)
 "nU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -1003,6 +1013,12 @@ lol
 	outdoors = 0
 	},
 /area/groundbase/level3/escapepad)
+"rh" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level3/nw)
 "ro" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/medical,
@@ -5545,7 +5561,7 @@ Xv
 Xv
 Xv
 qO
-qO
+nR
 fz
 dI
 dR
@@ -5553,7 +5569,7 @@ xO
 Nf
 TH
 fz
-qO
+rh
 qO
 qO
 qO
@@ -6121,7 +6137,7 @@ MF
 qO
 Qa
 Qa
-qO
+nR
 hl
 Rk
 ow
@@ -6253,7 +6269,7 @@ qO
 qO
 qO
 qO
-qO
+hb
 qO
 qO
 qO

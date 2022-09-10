@@ -23,6 +23,8 @@
 	var/digest_brute = 0.5					// Brute damage per tick in digestion mode
 	var/digest_burn = 0.5					// Burn damage per tick in digestion mode
 	var/digest_oxy = 0						// Oxy damage per tick in digestion mode
+	var/digest_tox = 0						// Toxins damage per tick in digestion mode
+	var/digest_clone = 0					// Clone damage per tick in digestion mode
 	var/immutable = FALSE					// Prevents this belly from being deleted
 	var/escapable = FALSE					// Belly can be resisted out of at any time
 	var/escapetime = 20 SECONDS				// Deciseconds, how long to escape this belly
@@ -178,6 +180,8 @@
 	"digest_brute",
 	"digest_burn",
 	"digest_oxy",
+	"digest_tox",
+	"digest_clone",
 	"immutable",
 	"can_taste",
 	"escapable",
@@ -289,6 +293,13 @@
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
 	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+		if(desc)
+			//Allow ghosts see where they are if they're still getting squished along inside.
+			var/formatted_desc
+			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
+			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
+			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+			to_chat(thing, "<span class='notice'><B>[formatted_desc]</B></span>")
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
@@ -1187,6 +1198,8 @@
 	dupe.digest_brute = digest_brute
 	dupe.digest_burn = digest_burn
 	dupe.digest_oxy = digest_oxy
+	dupe.digest_tox = digest_tox
+	dupe.digest_clone = digest_clone
 	dupe.immutable = immutable
 	dupe.can_taste = can_taste
 	dupe.escapable = escapable

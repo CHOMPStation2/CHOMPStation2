@@ -177,67 +177,6 @@ export const VorePanel = (props, context) => {
 
   tabs[1] = <VoreUserPreferences />;
 
-  const generateBellyString = () => {
-    const {
-      // Controls
-      belly_name,
-      mode,
-      item_mode,
-      addons,
-
-      // Descriptions
-      verb,
-      release_verb,
-      desc,
-      absorbed_desc,
-    } = data.selected;
-
-    let result = '=== ' + belly_name + ' ===\n\n';
-    result += '== Controls ==\n\n';
-    result += 'Mode:\n' + mode + '\n\n';
-    result += 'Addons:\n' + addons + '\n\n';
-    result += 'Item Mode:\n' + item_mode + '\n\n';
-    result += '== Descriptions ==\n\n';
-    result += 'Verb:\n' + verb + '\n\n';
-    result += 'Release Verb:\n' + release_verb + '\n\n';
-    result += 'Description:\n"' + desc + '"\n\n';
-    result += 'Absorbed Description:\n"' + absorbed_desc + '"\n\n';
-
-    return result;
-  };
-
-  const downloadPrefs = () => {
-    const { belly_name } = data.selected;
-
-    const extension = '.txt';
-
-    let now = new Date();
-    let hours = String(now.getHours());
-    if (hours.length < 2) {
-      hours = '0' + hours;
-    }
-    let minutes = String(now.getMinutes());
-    if (minutes.length < 2) {
-      minutes = '0' + minutes;
-    }
-    let dayofmonth = String(now.getDate());
-    if (dayofmonth.length < 2) {
-      dayofmonth = '0' + dayofmonth;
-    }
-    let month = String(now.getMonth() + 1); // 0-11
-    if (month.length < 2) {
-      month = '0' + month;
-    }
-    let year = String(now.getFullYear());
-
-    let datesegment = ' ' + year + '-' + month + '-' + dayofmonth + ' (' + hours + ' ' + minutes + ')';
-
-    let filename = belly_name + datesegment + extension;
-
-    let blob = new Blob([generateBellyString()], { type: 'text/html;charset=utf8;' });
-    window.navigator.msSaveOrOpenBlob(blob, filename);
-  };
-
   return (
     <Window width={890} height={660} theme="abstract" resizable>
       <Window.Content scrollable>
@@ -248,16 +187,18 @@ export const VorePanel = (props, context) => {
               <Flex.Item>
                 <Button content="Save Prefs" icon="save" onClick={() => act('saveprefs')} />
               </Flex.Item>
+              {/* CHOMPEdit - "Belly HTML Export Earlyport" */}
               <Flex.Item>
                 <Button
-                  content="Save Prefs & Export Selected Belly"
+                  content="Save Prefs & Open Export Panel"
                   icon="download"
                   onClick={() => {
                     act('saveprefs');
-                    downloadPrefs();
+                    act('exportpanel');
                   }}
                 />
               </Flex.Item>
+              {/* CHOMPEdit End */}
             </Flex>
           </NoticeBox>
         )) ||
@@ -335,6 +276,12 @@ const VoreBellySelectionAndCustomization = (props, context) => {
               New
               <Icon name="plus" ml={0.5} />
             </Tabs.Tab>
+            {/* CHOMPEdit - "Belly HTML Export Earlyport" */}
+            <Tabs.Tab onClick={() => act('exportpanel')}>
+              Export
+              <Icon name="file-export" ml={0.5} />
+            </Tabs.Tab>
+            {/* CHOMPEdit End */}
             <Divider />
             {our_bellies.map((belly) => (
               <Tabs.Tab
@@ -630,6 +577,8 @@ const VoreSelectedBellyOptions = (props, context) => {
     digest_brute,
     digest_burn,
     digest_oxy,
+    digest_tox,
+    digest_clone,
     bulge_size,
     display_absorbed_examine,
     shrink_grow_size,
@@ -738,6 +687,12 @@ const VoreSelectedBellyOptions = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Item label="Digest Suffocation Damage">
             <Button onClick={() => act('set_attribute', { attribute: 'b_oxy_dmg' })} content={digest_oxy} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digest Toxins Damage">
+            <Button onClick={() => act('set_attribute', { attribute: 'b_tox_dmg' })} content={digest_tox} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digest Clone Damage">
+            <Button onClick={() => act('set_attribute', { attribute: 'b_clone_dmg' })} content={digest_clone} />
           </LabeledList.Item>
           <LabeledList.Item label="Shrink/Grow Size">
             <Button

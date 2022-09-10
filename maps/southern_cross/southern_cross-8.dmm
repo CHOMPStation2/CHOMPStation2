@@ -4065,6 +4065,38 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"eos" = (
+/obj/structure/table/rack,
+/obj/item/weapon/gun/energy/taser,
+/obj/item/clothing/suit/armor/vest/ert/security,
+/obj/item/clothing/head/helmet/ert/security,
+/obj/item/weapon/storage/backpack/ert/security,
+/obj/item/weapon/storage/belt/security/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/handcuffs,
+/obj/item/weapon/handcuffs,
+/obj/item/clothing/accessory/storage/webbing,
+/obj/item/clothing/under/ert,
+/obj/item/device/radio/headset/ert/alt,
+/obj/item/clothing/shoes/boots/swat,
+/obj/item/clothing/gloves/swat,
+/obj/item/clothing/mask/balaclava/tactical,
+/obj/item/weapon/reagent_containers/spray/pepper,
+/obj/item/clothing/accessory/holster/leg,
+/obj/item/weapon/card/id/centcom/ERT,
+/obj/item/weapon/melee/baton,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "eoN" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -16695,8 +16727,8 @@
 /area/holodeck/source_basketball)
 "uOy" = (
 /obj/machinery/door/airlock/centcom{
-	icon_state = "door_locked";
-	locked = 1
+	name = "Special Operations";
+	req_access = list(103)
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -39692,12 +39724,12 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-vFi
+nZC
+jSV
+eos
+eos
+eos
+eos
 nZC
 jSV
 uOy
@@ -39950,15 +39982,15 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-vFi
 nZC
+eos
+vHC
+vHC
+vHC
+vHC
+uOy
 jSV
-nZC
+oSH
 vHC
 vHC
 vHC
@@ -40208,12 +40240,12 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
-vFi
-vFi
-vFi
+nZC
+jSV
+eos
+eos
+eos
+eos
 nZC
 jSV
 uOy
@@ -40466,9 +40498,9 @@ vFi
 vFi
 vFi
 vFi
-vFi
-vFi
-vFi
+nZC
+nZC
+nZC
 nZC
 nZC
 nZC

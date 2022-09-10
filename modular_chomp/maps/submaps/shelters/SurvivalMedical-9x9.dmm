@@ -1,0 +1,543 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"b" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"c" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/space)
+"d" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/space)
+"e" = (
+/obj/machinery/iv_drip,
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"f" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"g" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"h" = (
+/obj/structure/table/survival_pod,
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -13
+	},
+/obj/machinery/recharger,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"i" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/vending/medical{
+	req_access = null;
+	req_log_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"j" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/storage/box/bodybags,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/mask/muzzle,
+/obj/item/device/sleevemate,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/device/defib_kit/compact/loaded,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/device/binoculars,
+/obj/item/device/bluespaceradio,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/device/radio/emergency,
+/obj/item/device/radio/emergency,
+/obj/item/device/radio/emergency,
+/obj/item/device/radio/emergency,
+/obj/item/device/radio/emergency,
+/obj/item/device/radio/emergency,
+/obj/item/weapon/storage/backpack/dufflebag/emt,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"k" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
+/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
+/obj/item/weapon/storage/box/freezer,
+/obj/item/weapon/storage/box/freezer,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/device/defib_kit/loaded,
+/obj/item/device/defib_kit/loaded,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/starcaster_news,
+/obj/item/device/starcaster_news,
+/obj/item/device/threadneedle,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/random/soap,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/weapon/storage/box/flare,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"l" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"m" = (
+/obj/structure/table/survival_pod,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"n" = (
+/obj/item/device/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"o" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/space)
+"p" = (
+/obj/structure/table/glass,
+/obj/structure/closet/secure_closet/guncabinet/phase{
+	pixel_y = -32
+	},
+/obj/item/weapon/gun/energy/locked/frontier/holdout,
+/obj/item/weapon/gun/energy/locked/frontier/holdout,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"q" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"r" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/chemical_dispenser/full,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"s" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+"u" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/table/gamblingtable,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/deck/cards,
+/obj/structure/fireaxecabinet{
+	pixel_y = 27
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"v" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+"w" = (
+/obj/machinery/light,
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"x" = (
+/obj/structure/table/survival_pod,
+/obj/item/weapon/storage/firstaid/adv,
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"y" = (
+/obj/structure/sign/mining,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/space)
+"z" = (
+/obj/machinery/iv_drip,
+/obj/machinery/iv_drip,
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = 3
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"A" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"B" = (
+/turf/simulated/shuttle/plating/skipjack,
+/area/space)
+"C" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+"D" = (
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+"F" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/curtain/open/privacy,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"G" = (
+/obj/machinery/optable,
+/obj/machinery/oxygen_pump/anesthetic{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"H" = (
+/obj/structure/sign/nosmoking_2,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/space)
+"I" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/space)
+"J" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/box/masks,
+/obj/item/weapon/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = -30
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"K" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/item/weapon/soap/deluxe,
+/obj/structure/curtain,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"L" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"M" = (
+/obj/machinery/light/small,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"N" = (
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"O" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+"Q" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"R" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/space)
+"S" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/space)
+"T" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+"U" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"V" = (
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/voidcraft/vertical,
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
+"W" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/washing_machine,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"X" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/space)
+"Y" = (
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"Z" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/space)
+
+(1,1,1) = {"
+D
+s
+o
+o
+d
+V
+o
+s
+D
+"}
+(2,1,1) = {"
+C
+A
+a
+h
+i
+c
+N
+Q
+v
+"}
+(3,1,1) = {"
+o
+k
+e
+Y
+f
+B
+N
+w
+o
+"}
+(4,1,1) = {"
+o
+n
+G
+r
+b
+B
+N
+p
+o
+"}
+(5,1,1) = {"
+y
+o
+o
+o
+u
+B
+N
+J
+y
+"}
+(6,1,1) = {"
+o
+j
+x
+m
+l
+B
+W
+H
+o
+"}
+(7,1,1) = {"
+S
+U
+Y
+Y
+f
+B
+g
+M
+o
+"}
+(8,1,1) = {"
+C
+F
+z
+F
+q
+I
+L
+K
+v
+"}
+(9,1,1) = {"
+T
+Z
+R
+R
+X
+V
+o
+O
+D
+"}
