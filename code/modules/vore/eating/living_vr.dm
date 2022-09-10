@@ -48,6 +48,7 @@
 	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
 	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
 	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
+	var/appendage_color = "#e03997" //Default pink. Used for the 'long_vore' trait.
 	var/regen_sounds = list(
 		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
@@ -276,6 +277,7 @@
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
 	P.allow_spontaneous_tf = src.allow_spontaneous_tf
+	P.appendage_color = src.appendage_color
 	P.step_mechanics_pref = src.step_mechanics_pref
 	P.pickup_pref = src.pickup_pref
 	P.drop_vore = src.drop_vore
@@ -329,6 +331,7 @@
 	can_be_drop_pred = P.can_be_drop_pred
 //	allow_inbelly_spawning = P.allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
 	allow_spontaneous_tf = P.allow_spontaneous_tf
+	appendage_color = P.appendage_color
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
 	drop_vore = P.drop_vore
