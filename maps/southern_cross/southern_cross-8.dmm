@@ -4459,6 +4459,21 @@
 	icon_state = "wood"
 	},
 /area/skipjack_station)
+"eQB" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "eQT" = (
 /obj/structure/closet/crate/medical,
 /obj/item/weapon/surgical/circular_saw,
@@ -14785,6 +14800,17 @@
 	icon_state = "white"
 	},
 /area/ninja_dojo/dojo)
+"shL" = (
+/obj/structure/table/rack,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "shS" = (
 /obj/item/frame/light,
 /turf/unsimulated/floor{
@@ -39725,7 +39751,7 @@ vFi
 vFi
 vFi
 nZC
-jSV
+eQB
 eos
 eos
 eos
@@ -40241,7 +40267,7 @@ vFi
 vFi
 vFi
 nZC
-jSV
+shL
 eos
 eos
 eos

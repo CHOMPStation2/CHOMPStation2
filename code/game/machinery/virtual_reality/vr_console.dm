@@ -89,9 +89,9 @@
 
 
 
-/obj/machinery/sleeper/relaymove(var/mob/user)
+/obj/machinery/vr_sleeper/relaymove(var/mob/user)
 	..()
-	if(usr.incapacitated())
+	if(user.incapacitated())
 		return
 	go_out()
 
@@ -247,8 +247,10 @@
 			avatar.shapeshifter_change_shape(occupant.species.name)
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
 
+
 		occupant.enter_vr(avatar)
-		//CHOMPedit, Yes, I am using a aheal just so your markings trasnfer over, I could not get .prefs.copy_to working. This is very stupid. Too bad!
+		//Yes, I am using a aheal just so your markings transfer over, I could not get .prefs.copy_to working. This is very stupid, and I can't be assed to rewrite this.  Too bad!
+		avatar.revive()
 		avatar.revive()
 		avatar.verbs += /mob/living/carbon/human/proc/exit_vr //ahealing removes the prommie verbs and the VR verbs, giving it back
 		avatar.Sleeping(1)
