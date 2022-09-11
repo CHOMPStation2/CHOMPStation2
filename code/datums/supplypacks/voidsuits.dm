@@ -272,7 +272,7 @@
 	contains = list (/obj/item/weapon/rig/vox/security)
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
-	containername = "Voxcurity Rigsuit Crate"
+	containername = "Vox security Rigsuit Crate"
 	access = access_security
 
 //ChompEdit End
