@@ -2,7 +2,7 @@
 "a" = (
 /obj/machinery/sleeper/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "b" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -11,7 +11,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "c" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -20,32 +20,32 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "d" = (
 /obj/structure/sign/mining/survival{
 	dir = 8
 	},
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "e" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "f" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "g" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "h" = (
 /obj/structure/table/survival_pod,
 /obj/item/weapon/storage/firstaid/surgery,
@@ -55,7 +55,7 @@
 	},
 /obj/machinery/recharger,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "i" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -65,7 +65,7 @@
 	req_log_access = null
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "j" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/weapon/storage/box/bodybags,
@@ -122,7 +122,7 @@
 /obj/item/device/radio/emergency,
 /obj/item/weapon/storage/backpack/dufflebag/emt,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "k" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/weapon/storage/mre/menu10,
@@ -172,7 +172,7 @@
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "l" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -181,7 +181,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "m" = (
 /obj/structure/table/survival_pod,
 /obj/item/weapon/storage/firstaid/toxin,
@@ -190,14 +190,14 @@
 	pixel_y = 5
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "n" = (
 /obj/item/device/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "o" = (
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "p" = (
 /obj/structure/table/glass,
 /obj/structure/closet/secure_closet/guncabinet/phase{
@@ -210,7 +210,7 @@
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "q" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -221,18 +221,18 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "r" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/chemical_dispenser/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "s" = (
 /obj/structure/sign/mining/survival{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/survivalpod/superpose/SurvivalMedical)
 "u" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -244,18 +244,18 @@
 	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "v" = (
 /obj/structure/sign/mining/survival,
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMedical)
 "w" = (
 /obj/machinery/light,
 /obj/machinery/sleeper{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "x" = (
 /obj/structure/table/survival_pod,
 /obj/item/weapon/storage/firstaid/adv,
@@ -264,11 +264,11 @@
 	pixel_y = 5
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "y" = (
 /obj/structure/sign/mining,
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "z" = (
 /obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
@@ -278,40 +278,46 @@
 	pixel_y = 3
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "A" = (
 /obj/structure/fans,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "B" = (
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "C" = (
 /obj/structure/sign/mining/survival{
 	dir = 1
 	},
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "D" = (
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
+"E" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMedical)
 "F" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/medical,
 /obj/structure/curtain/open/privacy,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "G" = (
 /obj/machinery/optable,
 /obj/machinery/oxygen_pump/anesthetic{
 	pixel_x = 32
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "H" = (
 /obj/structure/sign/nosmoking_2,
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "I" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -320,7 +326,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "J" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/masks,
@@ -336,7 +342,7 @@
 	pixel_x = 20
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "K" = (
 /obj/machinery/shower{
 	dir = 8
@@ -344,7 +350,7 @@
 /obj/item/weapon/soap/deluxe,
 /obj/structure/curtain,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "L" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -353,7 +359,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "M" = (
 /obj/machinery/light/small,
 /obj/structure/sink{
@@ -362,27 +368,30 @@
 	pixel_y = 2
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "N" = (
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "O" = (
 /obj/structure/sign/mining/survival{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/survivalpod/superpose/SurvivalMedical)
+"P" = (
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/survivalpod/superpose/SurvivalMedical)
 "Q" = (
 /obj/machinery/sleep_console{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "R" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/survivalpod/superpose/SurvivalMedical)
 "S" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -397,30 +406,30 @@
 /obj/structure/grille,
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "T" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "U" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "V" = (
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "W" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
 /obj/machinery/washing_machine,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "X" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -430,31 +439,31 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "Y" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalMedical)
 "Z" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/mining/survival{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMedical)
 
 (1,1,1) = {"
 D
-s
-o
-o
+d
+P
+P
 d
 V
-o
+P
 s
 D
 "}
 (2,1,1) = {"
-C
+E
 A
 a
 h
@@ -465,7 +474,7 @@ Q
 v
 "}
 (3,1,1) = {"
-o
+P
 k
 e
 Y
@@ -473,10 +482,10 @@ f
 B
 N
 w
-o
+P
 "}
 (4,1,1) = {"
-o
+P
 n
 G
 r
@@ -484,7 +493,7 @@ b
 B
 N
 p
-o
+P
 "}
 (5,1,1) = {"
 y
@@ -498,7 +507,7 @@ J
 y
 "}
 (6,1,1) = {"
-o
+P
 j
 x
 m
@@ -506,7 +515,7 @@ l
 B
 W
 H
-o
+P
 "}
 (7,1,1) = {"
 S
@@ -517,7 +526,7 @@ f
 B
 g
 M
-o
+P
 "}
 (8,1,1) = {"
 C
@@ -537,7 +546,7 @@ R
 R
 X
 V
-o
+P
 O
 D
 "}

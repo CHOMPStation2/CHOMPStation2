@@ -94,10 +94,8 @@
 
 /datum/gear/suit/taur/white_dress
 	display_name = "white wedding dress (Wolf/Horse-taur)"
-	path = /obj/item/clothing/suit/taur_dress/white
+	path = /obj/item/clothing/suit/taur/dress
 	sort_category = "Xenowear"
-<<<<<<< HEAD
-=======
 
 /datum/gear/suit/taur/colorable_skirt
 	display_name = "colorable skirt (Wolf/Horse-taur)"
@@ -107,4 +105,3 @@
 /datum/gear/suit/taur/colorable_skirt/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
->>>>>>> 15b60b17e2... Merge pull request #13710 from Novacat/nova-basicfixes

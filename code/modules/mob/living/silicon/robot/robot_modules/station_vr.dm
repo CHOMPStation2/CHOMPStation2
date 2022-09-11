@@ -345,6 +345,19 @@
 	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	B.water = water
 	src.modules += B
+	
+	//CHOMPEdit Start - Give back the ATK/ABP since we don't have the surgeryhound
+	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
+	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
+	O.uses_charge = 1
+	O.charge_costs = list(1000)
+	O.synths = list(medicine)
+	P.uses_charge = 1
+	P.charge_costs = list(1000)
+	P.synths = list(medicine)
+	src.modules += O
+	src.modules += P
+	//CHOMPEdit End
 
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
