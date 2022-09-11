@@ -1,47 +1,53 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aq" = (
+/obj/structure/fence/corner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
 "av" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/icepepperseed,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "cs" = (
 /obj/machinery/seed_storage/garden,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "cz" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/yellowdouble,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "db" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/fancy/candle_box,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "dx" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "dJ" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "dM" = (
 /obj/item/weapon/material/knife/machete/hatchet,
 /turf/simulated/floor/outdoors/mud{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "dV" = (
 /obj/structure/table/bench/sifwooden,
 /turf/simulated/floor/outdoors/rocks,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "eb" = (
 /obj/machinery/power/port_gen/pacman,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "ec" = (
 /obj/structure/window/reinforced/full{
 	dir = 8
@@ -51,7 +57,11 @@
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"ep" = (
+/obj/structure/flora/bboulder1,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
 "eq" = (
 /turf/template_noop,
 /area/template_noop)
@@ -61,125 +71,134 @@
 	icon_state = "wooden_chair"
 	},
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "gq" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "gB" = (
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "gG" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/cornseed,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"hJ" = (
+/obj/structure/flora/smallbould,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
 "hQ" = (
 /turf/simulated/floor/water,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "kb" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "kd" = (
 /obj/item/weapon/material/fishing_rod/modern/strong,
 /turf/simulated/floor/outdoors/rocks,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "my" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/wheatseed,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "mB" = (
 /obj/structure/sink/puddle,
 /turf/simulated/floor/outdoors/mud{
 	outdoors = 0
 	},
-/area/submap/farm)
-"oc" = (
-/obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+/area/survivalpod/superpose/Farm)
+"nv" = (
+/obj/structure/fence/door{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"nN" = (
+/obj/structure/flora/tree/jungle_small,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"oc" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/template_noop)
 "or" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "pU" = (
 /obj/machinery/door/window/eastleft,
 /obj/machinery/door/window/westleft,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "qW" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "te" = (
 /obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "ty" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+/obj/structure/fence{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "vN" = (
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "wH" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/bluetomatoseed,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "ys" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Ah" = (
 /obj/item/clothing/shoes/boots/winter/hydro,
 /obj/item/clothing/suit/storage/hooded/wintercoat/hydro,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Bb" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Bz" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "BI" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "BR" = (
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Eu" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Fe" = (
-/obj/structure/railing,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/farm)
+/obj/structure/flora/tree/jungle,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
 "FS" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/glass,
@@ -198,24 +217,30 @@
 /obj/fiftyspawner/plastic,
 /obj/fiftyspawner/plastic,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Gm" = (
 /turf/simulated/wall/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"GB" = (
+/obj/structure/fence/corner{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
 "GK" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "GQ" = (
 /obj/item/weapon/storage/box/wormcan/deluxe,
 /turf/simulated/floor/outdoors/rocks,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "GX" = (
 /mob/living/bot/farmbot,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Hv" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
@@ -224,30 +249,27 @@
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "If" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/hydroponics_pod_people,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Ip" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Ir" = (
 /turf/simulated/floor/outdoors/mud{
 	outdoors = 0
 	},
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Is" = (
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
+/obj/structure/fence,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Iw" = (
 /obj/item/weapon/storage/backpack/messenger,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
@@ -282,59 +304,69 @@
 	name = "Survival closet"
 	},
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "IS" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Ju" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "JM" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "LM" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 1;
 	pixel_y = 20
 	},
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"Mo" = (
+/obj/structure/flora/bboulder2,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
 "Ny" = (
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Oe" = (
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "On" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/matches,
 /obj/item/weapon/flame/match,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Ox" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "OW" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"Sr" = (
+/obj/structure/fence/corner{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
 "SV" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille/rustic,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "TA" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "UW" = (
 /turf/simulated/floor/outdoors/rocks,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "VN" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/wood,
@@ -354,50 +386,56 @@
 /obj/fiftyspawner/cardboard,
 /obj/fiftyspawner/cardboard,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "WM" = (
 /obj/machinery/autolathe,
 /turf/simulated/floor/plating,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 "Xe" = (
 /obj/structure/bonfire/permanent/sifwood,
 /obj/item/weapon/reagent_containers/cooking_container/grill,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
+"Yz" = (
+/obj/structure/fence/corner{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
 "Zf" = (
 /obj/structure/table/bench/sifwooden,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/farm)
+/area/survivalpod/superpose/Farm)
 
 (1,1,1) = {"
 eq
 eq
 eq
+oc
+oc
+oc
+oc
+eq
+eq
+oc
 eq
 eq
 eq
 eq
 eq
 eq
+oc
+eq
+oc
+eq
+eq
+oc
 eq
 eq
 eq
 eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
+oc
+oc
 eq
 eq
 eq
@@ -405,8 +443,8 @@ eq
 "}
 (2,1,1) = {"
 eq
-eq
-dJ
+oc
+Yz
 Is
 Is
 Is
@@ -432,7 +470,7 @@ Is
 Is
 Is
 Is
-dJ
+GB
 eq
 eq
 eq
@@ -440,7 +478,7 @@ eq
 (3,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 Oe
@@ -467,14 +505,14 @@ Oe
 Oe
 Oe
 ty
-eq
+oc
 eq
 eq
 "}
 (4,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 Oe
@@ -507,8 +545,8 @@ eq
 "}
 (5,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 Gm
@@ -542,7 +580,7 @@ eq
 (6,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 Gm
@@ -564,7 +602,7 @@ UW
 hQ
 UW
 UW
-dJ
+hJ
 dJ
 Oe
 Oe
@@ -576,7 +614,7 @@ eq
 (7,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 or
@@ -604,13 +642,13 @@ dJ
 Oe
 ty
 eq
-eq
+oc
 eq
 "}
 (8,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 or
@@ -643,8 +681,8 @@ eq
 "}
 (9,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 Gm
@@ -673,12 +711,12 @@ Oe
 ty
 eq
 eq
-eq
+oc
 "}
 (10,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 Gm
@@ -693,7 +731,7 @@ Gm
 cs
 Oe
 Oe
-Oe
+Mo
 dJ
 UW
 hQ
@@ -707,12 +745,12 @@ Oe
 ty
 eq
 eq
-eq
+oc
 "}
 (11,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 Oe
@@ -746,12 +784,12 @@ eq
 (12,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 dJ
 dJ
-Oe
+nN
 dJ
 dJ
 Gm
@@ -773,14 +811,14 @@ UW
 dJ
 Oe
 ty
-eq
-eq
+oc
+oc
 eq
 "}
 (13,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 Oe
@@ -807,14 +845,14 @@ UW
 dJ
 Oe
 ty
-eq
+oc
 eq
 eq
 "}
 (14,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 Oe
@@ -837,7 +875,7 @@ dJ
 GQ
 UW
 UW
-dJ
+ep
 dJ
 Oe
 ty
@@ -848,7 +886,7 @@ eq
 (15,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -882,7 +920,7 @@ eq
 (16,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -909,14 +947,14 @@ Oe
 dJ
 Oe
 ty
-eq
+oc
 eq
 eq
 "}
 (17,1,1) = {"
+oc
 eq
-eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -943,14 +981,14 @@ Gm
 Oe
 Oe
 ty
-eq
+oc
 eq
 eq
 "}
 (18,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -978,13 +1016,13 @@ dJ
 Oe
 ty
 eq
-eq
+oc
 eq
 "}
 (19,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -1012,13 +1050,13 @@ Oe
 Oe
 ty
 eq
-eq
+oc
 eq
 "}
 (20,1,1) = {"
-eq
-eq
-Fe
+oc
+oc
+ty
 Oe
 Oe
 SV
@@ -1052,7 +1090,7 @@ eq
 (21,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -1080,13 +1118,13 @@ Oe
 Oe
 ty
 eq
-eq
+oc
 eq
 "}
 (22,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 SV
@@ -1114,13 +1152,13 @@ Oe
 Oe
 ty
 eq
-eq
+oc
 eq
 "}
 (23,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 SV
@@ -1147,14 +1185,14 @@ Gm
 Oe
 Oe
 ty
-eq
+oc
 eq
 eq
 "}
 (24,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -1170,7 +1208,7 @@ Oe
 dJ
 dJ
 dJ
-Oe
+Fe
 Gm
 BI
 Bz
@@ -1181,14 +1219,14 @@ Gm
 Oe
 Oe
 ty
-eq
+oc
 eq
 eq
 "}
 (25,1,1) = {"
 eq
 eq
-Fe
+ty
 Oe
 Oe
 SV
@@ -1221,8 +1259,8 @@ eq
 "}
 (26,1,1) = {"
 eq
-eq
-Fe
+oc
+ty
 Oe
 Oe
 Oe
@@ -1255,40 +1293,56 @@ eq
 "}
 (27,1,1) = {"
 eq
+oc
+aq
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+nv
+Is
+nv
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Sr
 eq
-dJ
 oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-dJ
-dJ
-dJ
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-oc
-dJ
-eq
-eq
 eq
 "}
 (28,1,1) = {"
 eq
+oc
+oc
+oc
+eq
+eq
+eq
+oc
+oc
+oc
+eq
+eq
+eq
+eq
+eq
+oc
+oc
 eq
 eq
 eq
@@ -1298,62 +1352,46 @@ eq
 eq
 eq
 eq
+oc
+oc
 eq
 eq
-eq
-eq
-eq
-dJ
-dJ
-dJ
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
+oc
 eq
 "}
 (29,1,1) = {"
 eq
 eq
 eq
+oc
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+eq
+oc
+oc
+eq
+oc
+eq
+oc
 eq
 eq
 eq
 eq
 eq
 eq
+oc
+oc
 eq
 eq
 eq
 eq
-eq
-eq
-dJ
-dJ
-dJ
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
+oc
+oc
 "}
 (30,1,1) = {"
 eq
@@ -1362,6 +1400,7 @@ eq
 eq
 eq
 eq
+oc
 eq
 eq
 eq
@@ -1371,17 +1410,16 @@ eq
 eq
 eq
 eq
-dJ
-dJ
-dJ
+oc
+oc
 eq
 eq
 eq
-eq
-eq
-eq
-eq
-eq
+oc
+oc
+oc
+oc
+oc
 eq
 eq
 eq
@@ -1395,25 +1433,25 @@ eq
 eq
 eq
 eq
+oc
 eq
 eq
 eq
+oc
+oc
 eq
 eq
+oc
+eq
+oc
+eq
+oc
 eq
 eq
-eq
-eq
-eq
-dJ
-dJ
-dJ
-eq
-eq
-eq
-eq
-eq
-eq
+oc
+oc
+oc
+oc
 eq
 eq
 eq

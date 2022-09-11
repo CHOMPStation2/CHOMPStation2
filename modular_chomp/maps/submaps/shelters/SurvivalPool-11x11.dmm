@@ -1,192 +1,113 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
-/turf/simulated/floor/water/pool,
-/area/space)
-"b" = (
-/obj/item/weapon/beach_ball,
-/turf/simulated/floor/water/deep/pool,
-/area/space)
-"c" = (
-/obj/structure/table/bench/wooden,
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4;
-	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
-	pressure_checks = 0;
-	pressure_checks_default = 0;
-	use_power = 1
-	},
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/item/weapon/bikehorn/rubberducky,
-/turf/simulated/floor/wood,
-/area/space)
-"d" = (
-/obj/item/weapon/inflatable_duck,
-/turf/simulated/floor/water/pool,
-/area/space)
-"e" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/structure/fans/tiny,
-/obj/machinery/door/airlock/maintenance/int{
-	name = "Sauna"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
-"f" = (
-/obj/structure/fans,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
-"g" = (
-/obj/item/weapon/stool/padded,
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood,
-/area/space)
-"h" = (
+"al" = (
 /obj/structure/window/reinforced/polarized{
 	dir = 4;
-	id = "SP-Sauna"
+	id = "SP-Pool"
 	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Sauna"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Sauna"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"i" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
-"j" = (
-/obj/machinery/atmospherics/unary/heater/sauna{
-	dir = 8;
-	icon_state = "heater_1";
-	use_power = 1
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/space)
-"k" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Sauna"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Sauna"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"l" = (
-/turf/simulated/shuttle/plating/skipjack,
-/area/space)
-"m" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/black{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/space)
-"o" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Sauna"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Sauna"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"p" = (
-/obj/item/device/gps/computer,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
-"q" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Sauna"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Sauna"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"r" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 6
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/space)
-"s" = (
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "SP-Pool"
 	},
-/obj/structure/grille/rustic,
 /obj/structure/window/reinforced/polarized{
+	dir = 8;
 	id = "SP-Pool"
 	},
+/obj/structure/grille/rustic,
 /obj/structure/window/reinforced/polarized/full{
 	id = "SP-Pool"
 	},
 /turf/simulated/floor/plating,
-/area/space)
-"t" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/button/windowtint{
-	id = "SP-Pool";
-	pixel_x = -27
-	},
-/turf/simulated/floor/wood,
-/area/space)
-"u" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/light{
+/area/survivalpod/superpose/SurvivalPool)
+"aJ" = (
+/obj/structure/sign/mining/survival{
 	dir = 4
 	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalPool)
+"bt" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalPool)
+"bG" = (
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalPool)
+"bS" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalPool)
+"cB" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Sauna"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Sauna"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"eM" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Pool"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Pool"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Pool"
+	},
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Pool"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"gf" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalPool)
+"gE" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+	pixel_x = 5;
+	pixel_y = 6
+	},
 /turf/simulated/floor/wood,
-/area/space)
-"v" = (
-/obj/structure/closet/athletic_mixed,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
-"w" = (
-/obj/structure/fans/tiny,
-/obj/effect/floor_decal/industrial/danger/full,
-/obj/machinery/door/airlock/voidcraft/vertical,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
-"x" = (
+/area/survivalpod/superpose/SurvivalPool)
+"hC" = (
+/obj/item/device/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalPool)
+"ih" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Sauna"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Sauna"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"il" = (
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "SP-Sauna"
@@ -203,11 +124,32 @@
 	id = "SP-Sauna"
 	},
 /turf/simulated/floor/plating,
-/area/space)
-"y" = (
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
-"z" = (
+/area/survivalpod/superpose/SurvivalPool)
+"iA" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalPool)
+"jH" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Sauna"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Sauna"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"ki" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
@@ -215,27 +157,61 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
-"A" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Pool"
+/area/survivalpod/superpose/SurvivalPool)
+"kZ" = (
+/obj/machinery/button/windowtint{
+	id = "SP-Sauna";
+	pixel_y = -29
 	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalPool)
+"mr" = (
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "SP-Pool"
 	},
+/obj/structure/grille/rustic,
 /obj/structure/window/reinforced/polarized{
-	dir = 8;
 	id = "SP-Pool"
 	},
-/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Pool"
+	},
 /obj/structure/window/reinforced/polarized/full{
 	id = "SP-Pool"
 	},
 /turf/simulated/floor/plating,
-/area/space)
-"B" = (
+/area/survivalpod/superpose/SurvivalPool)
+"mK" = (
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalPool)
+"qA" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"rw" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalPool)
+"rP" = (
+/obj/structure/table/bench/wooden,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"sX" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
 	external_pressure_bound = 0;
@@ -255,42 +231,112 @@
 	},
 /obj/item/weapon/reagent_containers/glass/bucket/wood,
 /turf/simulated/floor/wood,
-/area/space)
-"C" = (
+/area/survivalpod/superpose/SurvivalPool)
+"ul" = (
+/obj/structure/fans/tiny,
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/machinery/door/airlock/voidcraft/vertical,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalPool)
+"uA" = (
 /obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Pool"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized{
+	dir = 4;
 	id = "SP-Pool"
 	},
 /obj/structure/window/reinforced/polarized{
 	dir = 8;
 	id = "SP-Pool"
 	},
+/obj/structure/grille/rustic,
 /obj/structure/window/reinforced/polarized/full{
 	id = "SP-Pool"
 	},
 /turf/simulated/floor/plating,
-/area/space)
-"D" = (
-/obj/machinery/button/windowtint{
-	id = "SP-Pool";
-	pixel_y = -29
-	},
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/space)
-"E" = (
+/area/survivalpod/superpose/SurvivalPool)
+"vr" = (
+/obj/structure/closet/athletic_mixed,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalPool)
+"wl" = (
+/obj/effect/mist,
+/obj/machinery/light,
+/turf/simulated/floor/water/pool,
+/area/survivalpod/superpose/SurvivalPool)
+"wS" = (
+/obj/item/weapon/beach_ball,
 /turf/simulated/floor/water/deep/pool,
-/area/space)
-"F" = (
+/area/survivalpod/superpose/SurvivalPool)
+"xf" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalPool)
+"yA" = (
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalPool)
+"yE" = (
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalPool)
+"yN" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/SurvivalPool)
+"zi" = (
+/obj/effect/mist,
+/turf/simulated/floor/water/pool,
+/area/survivalpod/superpose/SurvivalPool)
+"Aa" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalPool)
+"CK" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Pool"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Pool"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Pool"
+	},
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Pool"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"DO" = (
+/obj/structure/sign/mining,
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalPool)
+"IV" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"IW" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Sauna"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Sauna"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"Ju" = (
 /obj/structure/table/glass,
 /obj/item/clothing/shoes/swimmingfins,
 /obj/item/clothing/mask/snorkel,
@@ -303,126 +349,47 @@
 	pixel_y = 28
 	},
 /turf/simulated/floor/carpet/bcarpet,
-/area/space)
-"G" = (
-/obj/machinery/light,
-/turf/simulated/floor/water/deep/pool,
-/area/space)
-"H" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Pool"
+/area/survivalpod/superpose/SurvivalPool)
+"KB" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/black{
+	dir = 8
 	},
-/obj/structure/window/reinforced/polarized{
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"KM" = (
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/SurvivalPool)
+"Lb" = (
+/obj/machinery/atmospherics/unary/heater/sauna{
 	dir = 8;
-	id = "SP-Pool"
+	icon_state = "heater_1";
+	use_power = 1
 	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Pool"
-	},
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Pool"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"I" = (
-/obj/structure/table/reinforced,
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
-"J" = (
+/area/survivalpod/superpose/SurvivalPool)
+"Ls" = (
+/obj/structure/table/bench/wooden,
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 4;
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	pressure_checks = 0;
+	pressure_checks_default = 0;
+	use_power = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/weapon/bikehorn/rubberducky,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"Mm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
-/area/space)
-"K" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Pool"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Pool"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Pool"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"N" = (
-/obj/machinery/door/window/survival_pod,
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 20
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
-"O" = (
-/turf/simulated/floor/carpet/bcarpet,
-/area/space)
-"P" = (
-/obj/effect/mist,
-/obj/machinery/light,
-/turf/simulated/floor/water/pool,
-/area/space)
-"Q" = (
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
-"R" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/turf/simulated/floor/wood,
-/area/space)
-"S" = (
-/obj/structure/table/bench/wooden,
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood,
-/area/space)
-"T" = (
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/floor/carpet/bcarpet,
-/area/space)
-"U" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood,
-/area/space)
-"V" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Sauna"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Sauna"
-	},
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-Sauna"
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"W" = (
-/obj/machinery/vending/wallmed1{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
-"X" = (
-/obj/effect/mist,
-/turf/simulated/floor/water/pool,
-/area/space)
-"Y" = (
+/area/survivalpod/superpose/SurvivalPool)
+"Nd" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/weapon/storage/mre/random,
 /obj/item/weapon/storage/mre/random,
@@ -467,8 +434,29 @@
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
-"Z" = (
+/area/survivalpod/superpose/SurvivalPool)
+"Nk" = (
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/survivalpod/superpose/SurvivalPool)
+"Ok" = (
+/obj/item/weapon/inflatable_duck,
+/turf/simulated/floor/water/pool,
+/area/survivalpod/superpose/SurvivalPool)
+"PV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/maintenance/int{
+	name = "Sauna"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalPool)
+"Qo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 6
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalPool)
+"QB" = (
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "SP-Pool"
@@ -477,156 +465,208 @@
 /obj/structure/window/reinforced/polarized{
 	id = "SP-Pool"
 	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Pool"
-	},
 /obj/structure/window/reinforced/polarized/full{
 	id = "SP-Pool"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalPool)
+"Rw" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Sauna"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Sauna"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Sauna"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalPool)
+"RD" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"Tf" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/button/windowtint{
+	id = "SP-Pool";
+	pixel_x = -27
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalPool)
+"TV" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalPool)
+"Yb" = (
+/obj/machinery/door/window/survival_pod,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalPool)
+"YF" = (
+/turf/simulated/floor/water/pool,
+/area/survivalpod/superpose/SurvivalPool)
+"YZ" = (
+/obj/machinery/light,
+/turf/simulated/floor/water/deep/pool,
+/area/survivalpod/superpose/SurvivalPool)
+"Ze" = (
+/turf/simulated/floor/water/deep/pool,
+/area/survivalpod/superpose/SurvivalPool)
 
 (1,1,1) = {"
-Q
-Q
-Q
-Q
-w
-Q
-q
-V
-V
-h
-Q
+Nk
+TV
+iA
+Aa
+ul
+bt
+Rw
+ih
+ih
+cB
+Nk
 "}
 (2,1,1) = {"
-Q
-T
-O
-W
-D
-Q
-R
-c
-X
-X
-x
+TV
+yN
+KM
+mK
+kZ
+TV
+gE
+Ls
+zi
+zi
+il
 "}
 (3,1,1) = {"
-Q
-T
-O
-y
-r
-e
-m
-J
-X
-P
-o
+rw
+yN
+KM
+gf
+Qo
+PV
+KB
+Mm
+zi
+wl
+IW
 "}
 (4,1,1) = {"
-Q
-F
-O
-y
-j
-Q
-B
-S
-X
-X
-k
+Aa
+Ju
+KM
+gf
+Lb
+TV
+sX
+rP
+zi
+zi
+jH
 "}
 (5,1,1) = {"
-Q
-T
-O
-y
-I
-Q
-q
-V
-V
-h
-Q
+Aa
+yN
+KM
+gf
+yA
+TV
+Rw
+ih
+ih
+cB
+DO
 "}
 (6,1,1) = {"
-Q
-T
-O
-y
-l
-t
-a
-a
-E
-E
-C
+TV
+yN
+KM
+gf
+bG
+Tf
+YF
+YF
+Ze
+Ze
+eM
 "}
 (7,1,1) = {"
-Q
-Q
-N
-y
-l
-g
-a
-d
-E
-E
-s
+Aa
+TV
+Yb
+gf
+bG
+RD
+YF
+Ok
+Ze
+Ze
+QB
 "}
 (8,1,1) = {"
-Q
-f
-i
-v
-l
-U
-a
-a
-E
-G
-s
+Aa
+bS
+yE
+vr
+bG
+qA
+YF
+YF
+Ze
+YZ
+QB
 "}
 (9,1,1) = {"
-Q
-Y
-i
-v
-l
-g
-a
-a
-b
-E
-s
+DO
+Nd
+yE
+vr
+bG
+RD
+YF
+YF
+wS
+Ze
+QB
 "}
 (10,1,1) = {"
-Q
-p
-i
-v
-z
-u
-a
-a
-E
-E
-Z
+TV
+hC
+yE
+vr
+ki
+IV
+YF
+YF
+Ze
+Ze
+mr
 "}
 (11,1,1) = {"
-Q
-Q
-Q
-Q
-w
-Q
-A
-K
-K
-H
-Q
+Nk
+TV
+xf
+Aa
+ul
+aJ
+al
+uA
+uA
+CK
+Nk
 "}

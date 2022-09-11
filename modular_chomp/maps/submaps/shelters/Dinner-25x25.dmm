@@ -4,36 +4,36 @@
 /area/template_noop)
 "ab" = (
 /turf/template_noop,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ac" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ad" = (
 /turf/simulated/wall,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ae" = (
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "af" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ag" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ah" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ai" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/enzyme,
 /obj/item/weapon/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aj" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -41,45 +41,45 @@
 	},
 /obj/item/weapon/material/knife/butch,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ak" = (
 /obj/machinery/vending/hotfood,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "al" = (
 /obj/machinery/vending/dinnerware,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "am" = (
 /obj/structure/sink/kitchen,
 /turf/simulated/wall,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "an" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ao" = (
 /obj/structure/bed/chair/wood,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ap" = (
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aq" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ar" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "as" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
@@ -88,37 +88,37 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "at" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "au" = (
 /obj/structure/table/standard,
 /obj/item/weapon/book/manual/chef_recipes,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "av" = (
 /obj/structure/table/standard,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aw" = (
 /obj/machinery/appliance/mixer/cereal,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ax" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ay" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/storage/fancy/egg_box,
@@ -132,48 +132,48 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "az" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aA" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aB" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aC" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aD" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aE" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aF" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aG" = (
 /turf/simulated/floor/tiled,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aH" = (
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aI" = (
 /obj/structure/closet/crate/freezer,
 /obj/random/meat,
@@ -184,20 +184,20 @@
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aJ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aL" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -206,7 +206,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aM" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -216,7 +216,7 @@
 	},
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aN" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light/small{
@@ -231,19 +231,19 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aO" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aP" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aQ" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour,
@@ -254,66 +254,66 @@
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour,
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aR" = (
 /obj/machinery/gibber,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aS" = (
 /obj/structure/table/standard,
 /obj/item/weapon/module/power_control,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aT" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/coatrack,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aU" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aV" = (
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aW" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aX" = (
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "aZ" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "ba" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bb" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bd" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "be" = (
 /obj/machinery/light{
 	dir = 4
@@ -321,13 +321,13 @@
 /obj/machinery/appliance/mixer/cereal,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bf" = (
 /obj/machinery/light/small,
 /obj/structure/table/standard,
 /obj/item/weapon/bikehorn/fluff/chew_ire,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bg" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -345,7 +345,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bh" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/bar_coffee{
@@ -354,73 +354,73 @@
 	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bi" = (
 /obj/item/frame/apc,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bj" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bk" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bl" = (
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bm" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bn" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/cell/high,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bo" = (
 /obj/structure/table/woodentable,
 /obj/random/mug,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bp" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bq" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "br" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/windoor_assembly{
 	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bs" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bt" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/space_heater,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bu" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bv" = (
 /turf/simulated/floor/tiled/hydro,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bw" = (
 /obj/structure/toilet/prison{
 	name = "toilet";
@@ -437,25 +437,25 @@
 	dir = 2
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bx" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "by" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bz" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bA" = (
 /obj/structure/mirror{
 	dir = 4;
@@ -470,7 +470,7 @@
 	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bB" = (
 /obj/machinery/light/small,
 /obj/structure/table/standard,
@@ -479,7 +479,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "bC" = (
 /obj/structure/sink{
 	dir = 1;
@@ -490,29 +490,29 @@
 	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "dQ" = (
 /obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor/lino,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "gw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "hm" = (
 /obj/machinery/power/port_gen/pacman,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "lo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "lT" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "qd" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
@@ -520,18 +520,18 @@
 	},
 /obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "wn" = (
 /obj/item/weapon/reagent_containers/food/snacks/chip/nacho/guac,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "KP" = (
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "Lj" = (
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "Nb" = (
 /obj/structure/table/steel,
 /obj/item/stack/material/phoron{
@@ -543,16 +543,16 @@
 /obj/fiftyspawner/wood,
 /obj/fiftyspawner/steel,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "Ql" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "WB" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/tiled/white,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "XK" = (
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
@@ -571,14 +571,14 @@
 /obj/fiftyspawner/plastic,
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/plating,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 "Zv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor,
-/area/submap/diner)
+/area/survivalpod/superpose/Dinner)
 
 (1,1,1) = {"
 aa

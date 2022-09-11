@@ -5,24 +5,24 @@
 	},
 /obj/structure/closet/walllocker_double/survival/north,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "aX" = (
 /obj/machinery/vending/wallmed1{
 	dir = 4;
 	pixel_x = -23
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "by" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "bS" = (
 /obj/structure/closet/cabinet,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "bX" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower,
@@ -30,22 +30,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "cK" = (
 /obj/structure/fans,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "eH" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "eW" = (
 /obj/structure/table/marble,
 /obj/machinery/reagentgrinder,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"iq" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"jn" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "jw" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/material/kitchen/utensil/spoon{
@@ -53,10 +62,10 @@
 	},
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "jz" = (
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "jL" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/box/glasses/square{
@@ -108,7 +117,7 @@
 	pixel_y = -4
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "ku" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/deck/cards,
@@ -117,17 +126,17 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "nZ" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 2
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "ov" = (
 /obj/machinery/door/window/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "pn" = (
 /obj/structure/sink{
 	dir = 4;
@@ -138,21 +147,27 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"qZ" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "rm" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "rY" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "sa" = (
 /obj/structure/table/bench/wooden,
 /obj/item/device/flashlight/lamp/green{
 	pixel_y = 2
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "sq" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
@@ -160,7 +175,7 @@
 	pixel_y = 2
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "sF" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -169,14 +184,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "tb" = (
 /obj/structure/table/bench/marble,
 /obj/structure/flora/pottedplant/bamboo{
 	pixel_y = 7
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "tx" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/material/kitchen/utensil/spoon{
@@ -187,7 +202,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "ty" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -196,35 +211,39 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "tK" = (
 /obj/structure/table/woodentable,
 /obj/item/pizzavoucher,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "uz" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "wD" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "wS" = (
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"xt" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "zK" = (
 /obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "zN" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/cosmos,
@@ -232,7 +251,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/tealcarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "AI" = (
 /obj/structure/table/marble,
 /obj/machinery/light{
@@ -240,13 +259,19 @@
 	},
 /obj/machinery/microwave,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "By" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/box/characters,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"BM" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "BP" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
@@ -255,7 +280,7 @@
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "CD" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/weapon/storage/mre/random,
@@ -301,7 +326,7 @@
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Dv" = (
 /obj/structure/table/bench/wooden{
 	pixel_x = -9
@@ -311,25 +336,25 @@
 	pixel_y = 10
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "DL" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	pixel_y = 17
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "DN" = (
 /obj/machinery/door/window/survival_pod,
 /obj/structure/closet/walllocker_double/survival/north,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "DT" = (
 /obj/machinery/door/airlock/maintenance/common{
 	name = "Dorm"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Gb" = (
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -339,7 +364,13 @@
 	pixel_x = 20
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Hk" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "HO" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -348,13 +379,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Jk" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/machinery/door/airlock/voidcraft/survival_pod,
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "JA" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
@@ -367,7 +398,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/sblucarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "JH" = (
 /obj/structure/table/standard,
 /obj/item/weapon/towel/random{
@@ -381,21 +412,24 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "JK" = (
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"LR" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "ML" = (
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "MR" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/cedouble,
 /turf/simulated/floor/carpet/oracarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Nv" = (
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Nx" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -410,7 +444,7 @@
 /obj/structure/grille,
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Oc" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -420,22 +454,22 @@
 	pixel_x = -5
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Pf" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Qs" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/sharpeningkit,
 /obj/item/weapon/reagent_containers/dropper,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "SI" = (
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Wx" = (
 /obj/structure/toilet,
 /obj/structure/window/reinforced/survival_pod{
@@ -443,7 +477,7 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "WI" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 36;
@@ -454,95 +488,95 @@
 	pixel_y = -10
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "XT" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Yw" = (
 /obj/structure/closet/walllocker_double/survival/west,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "YY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
 /turf/simulated/floor/carpet/tealcarpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 "Zy" = (
 /obj/item/device/gps/computer,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalLuxuryHome)
 
 (1,1,1) = {"
 JK
-JK
+jn
 Nx
-JK
+BM
 Nx
-JK
-JK
-JK
-JK
-JK
+jn
+LR
+qZ
+LR
+jn
 JK
 "}
 (2,1,1) = {"
-JK
+jn
 BP
 rY
 by
 ML
 ty
 eH
-JK
+jn
 By
 Dv
-JK
+jn
 "}
 (3,1,1) = {"
-JK
+LR
 rm
 rY
 sq
 ML
 JA
 jw
-JK
+jn
 ao
 YY
 Nx
 "}
 (4,1,1) = {"
-JK
+Hk
 AI
 rY
 Qs
 ML
 tx
 ku
-JK
+jn
 Nv
 zN
-JK
+xt
 "}
 (5,1,1) = {"
-JK
+LR
 DL
 rY
 nZ
 ML
 HO
 sF
-JK
+jn
 DT
-JK
-JK
+jn
+LR
 "}
 (6,1,1) = {"
-JK
+jn
 jL
 rY
 eW
@@ -555,25 +589,25 @@ zK
 Jk
 "}
 (7,1,1) = {"
-JK
+LR
 Oc
 ov
-JK
+jn
 DN
-JK
-JK
-JK
+jn
+jn
+jn
 DT
-JK
-JK
+jn
+LR
 "}
 (8,1,1) = {"
-JK
+Hk
 cK
 wS
 Wx
 jz
-JK
+jn
 tK
 Yw
 Nv
@@ -581,41 +615,41 @@ tb
 Nx
 "}
 (9,1,1) = {"
-JK
+LR
 CD
 wS
 bX
 jz
-JK
+jn
 bS
 uz
 Pf
 Pf
-JK
+xt
 "}
 (10,1,1) = {"
-JK
+jn
 Zy
 Gb
 JH
 pn
-JK
+jn
 bS
 wD
 MR
 sa
-JK
+jn
 "}
 (11,1,1) = {"
 JK
-JK
-JK
-JK
-JK
-JK
-JK
-JK
-JK
-JK
+jn
+LR
+iq
+LR
+jn
+LR
+iq
+LR
+jn
 JK
 "}
