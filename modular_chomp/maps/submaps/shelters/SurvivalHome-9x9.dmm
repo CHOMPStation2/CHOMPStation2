@@ -3,20 +3,20 @@
 /obj/item/device/flashlight/lamp/green,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "b" = (
 /obj/machinery/door/window/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "c" = (
 /obj/machinery/door/airlock/maintenance/common{
 	name = "Dorm"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "d" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "e" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -27,19 +27,25 @@
 	pixel_y = 2
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
+"g" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHome)
 "h" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/pill_bottle/dice_nerd,
 /obj/item/weapon/deck/cards,
 /turf/simulated/floor/carpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "i" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 8
 	},
 /turf/simulated/floor/carpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "k" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/deck/cah{
@@ -58,29 +64,35 @@
 	pixel_y = 28
 	},
 /turf/simulated/floor/carpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "m" = (
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "n" = (
 /obj/structure/closet/cabinet,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
+"o" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHome)
 "p" = (
 /obj/structure/bed/double,
 /obj/item/weapon/bedsheet/hosdouble,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "q" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 8
 	},
 /obj/structure/closet/walllocker_double/survival/north,
 /turf/simulated/floor/carpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "r" = (
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "t" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -101,13 +113,13 @@
 	pixel_x = 7
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "v" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "x" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -116,40 +128,43 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "y" = (
 /obj/structure/closet/walllocker_double/survival/south,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "z" = (
 /obj/machinery/power/apc/alarms_hidden{
 	pixel_y = -20
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "A" = (
 /obj/structure/bed/double,
 /obj/item/weapon/bedsheet/cedouble,
 /turf/simulated/floor/wood,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "B" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "E" = (
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "I" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "J" = (
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
+"K" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHome)
 "L" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/weapon/storage/mre/random,
@@ -195,11 +210,11 @@
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "M" = (
 /obj/structure/fans,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "N" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 4
@@ -209,24 +224,27 @@
 	},
 /obj/structure/closet/walllocker_double/survival/north,
 /turf/simulated/floor/carpet,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "P" = (
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "Q" = (
 /obj/item/device/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
+"R" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalHome)
 "T" = (
 /obj/machinery/vending/wallmed1{
 	dir = 4;
 	pixel_x = -23
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 "U" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -241,7 +259,17 @@
 /obj/structure/grille,
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
+"X" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHome)
+"Y" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHome)
 "Z" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -250,32 +278,32 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalHome)
 
 (1,1,1) = {"
 m
-m
-m
-m
+K
+g
+R
 v
-m
-m
-m
+R
+g
+K
 m
 "}
 (2,1,1) = {"
-m
+K
 N
 I
 T
 x
-m
+R
 n
 y
-m
+R
 "}
 (3,1,1) = {"
-m
+K
 k
 h
 J
@@ -286,43 +314,43 @@ r
 U
 "}
 (4,1,1) = {"
-m
+R
 q
 i
 J
 E
-m
+R
 A
 a
-m
+K
 "}
 (5,1,1) = {"
-m
+R
 t
 b
 e
 P
-m
-m
-m
-m
+R
+R
+R
+Y
 "}
 (6,1,1) = {"
-m
+R
 M
 d
-m
+R
 B
-m
+R
 n
 y
-m
+K
 "}
 (7,1,1) = {"
-m
+o
 L
 d
-m
+R
 E
 c
 r
@@ -330,24 +358,24 @@ r
 U
 "}
 (8,1,1) = {"
-m
+K
 Q
 z
-m
+R
 Z
-m
+R
 p
 a
-m
+R
 "}
 (9,1,1) = {"
 m
-m
-m
-m
+K
+X
+R
 v
-m
-m
-m
+R
+X
+K
 m
 "}

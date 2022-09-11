@@ -4459,6 +4459,21 @@
 	icon_state = "wood"
 	},
 /area/skipjack_station)
+"eQB" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "eQT" = (
 /obj/structure/closet/crate/medical,
 /obj/item/weapon/surgical/circular_saw,
@@ -13661,13 +13676,6 @@
 /obj/random/action_figure,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"qJs" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Special Operations";
-	req_access = list(103)
-	},
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/centcom/specops)
 "qJE" = (
 /obj/machinery/light{
 	dir = 4
@@ -14792,6 +14800,17 @@
 	icon_state = "white"
 	},
 /area/ninja_dojo/dojo)
+"shL" = (
+/obj/structure/table/rack,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "shS" = (
 /obj/item/frame/light,
 /turf/unsimulated/floor{
@@ -16733,10 +16752,6 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_basketball)
 "uOy" = (
-/obj/machinery/door/airlock/centcom{
-	icon_state = "door_locked";
-	locked = 1
-	},
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
 	req_access = list(103)
@@ -39736,7 +39751,7 @@ vFi
 vFi
 vFi
 nZC
-jSV
+eQB
 eos
 eos
 eos
@@ -39999,7 +40014,7 @@ vHC
 vHC
 vHC
 vHC
-qJs
+uOy
 jSV
 oSH
 vHC
@@ -40252,7 +40267,7 @@ vFi
 vFi
 vFi
 nZC
-jSV
+shL
 eos
 eos
 eos

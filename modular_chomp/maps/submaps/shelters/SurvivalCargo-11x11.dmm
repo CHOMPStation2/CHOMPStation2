@@ -14,29 +14,29 @@
 	pixel_x = 6
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "cF" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/machinery/newscaster{
 	pixel_x = 30
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "ea" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "ex" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate/freezer,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "eZ" = (
 /obj/machinery/floodlight,
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "fm" = (
 /obj/item/weapon/shovel,
 /obj/item/weapon/tool/wrench,
@@ -65,41 +65,41 @@
 	},
 /obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "gj" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "gG" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "ix" = (
 /obj/structure/ore_box,
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "lW" = (
 /obj/vehicle/train/trolley{
 	dir = 2
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "mS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate/medical,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "ne" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "np" = (
 /obj/structure/sign/mining/survival,
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalCargo)
 "nM" = (
 /obj/item/weapon/mining_scanner,
 /obj/item/clothing/mask/breath,
@@ -115,17 +115,17 @@
 	icon_state = "pwindow"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "op" = (
 /obj/structure/sign/mining/survival{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalCargo)
 "or" = (
 /obj/machinery/autolathe,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "oQ" = (
 /obj/machinery/sleeper/survival_pod,
 /obj/structure/window/reinforced/survival_pod{
@@ -133,22 +133,22 @@
 	icon_state = "pwindow"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "pr" = (
 /obj/structure/ore_box,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "pI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate/large,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "qh" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/ce,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "qp" = (
 /obj/item/weapon/mining_scanner,
 /obj/item/clothing/mask/breath,
@@ -165,14 +165,14 @@
 	icon_state = "pwindow"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "qu" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "SP-Mining"
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "qP" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -181,7 +181,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "qR" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 1;
@@ -190,44 +190,44 @@
 /obj/structure/ore_box,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "rc" = (
 /obj/item/device/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "sz" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate,
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "vz" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "xp" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "xx" = (
 /obj/structure/sign/mining/survival{
 	dir = 1
 	},
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/survivalpod/superpose/SurvivalCargo)
 "yl" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 2;
 	req_one_access = null
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Ag" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "By" = (
 /obj/item/weapon/storage/backpack/messenger,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
@@ -260,18 +260,18 @@
 /obj/item/device/gps,
 /obj/structure/closet/walllocker_double/east,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "BP" = (
 /obj/structure/sign/mining/survival{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalCargo)
 "BT" = (
 /obj/machinery/mining/brace,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Cq" = (
 /obj/machinery/conveyor_switch{
 	id = "SP-Mining";
@@ -282,11 +282,11 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Ct" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Cu" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/gun/energy/locked/frontier/carbine{
@@ -299,17 +299,21 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
+"Di" = (
+/obj/structure/sign/mining,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalCargo)
 "Dp" = (
 /obj/structure/table/steel,
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/tool/wrench,
 /obj/machinery/recharger,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Eb" = (
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Er" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 4
@@ -319,19 +323,15 @@
 	layer = 3
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "EX" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate/internals,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Fy" = (
-/obj/machinery/vending/wallmed1{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalCargo)
 "Hi" = (
 /obj/item/weapon/shovel,
 /obj/item/weapon/tool/wrench,
@@ -361,7 +361,7 @@
 	},
 /obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "HC" = (
 /obj/structure/closet/secure_closet/miner{
 	locked = 0
@@ -372,7 +372,7 @@
 	icon_state = "tube1"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "JT" = (
 /obj/structure/fans,
 /obj/structure/window/reinforced/survival_pod{
@@ -380,7 +380,7 @@
 	icon_state = "pwindow"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Lz" = (
 /obj/structure/closet/crate,
 /obj/item/stack/material/phoron{
@@ -398,21 +398,29 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = 3
+	},
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Mi" = (
 /obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "ND" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/dispenser/oxygen,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Or" = (
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
+"Qg" = (
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/survivalpod/superpose/SurvivalCargo)
 "Qq" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	icon_state = "door_locked";
@@ -430,7 +438,7 @@
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Tx" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/weapon/storage/mre/random,
@@ -476,16 +484,16 @@
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Ue" = (
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "UD" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/mecha/working/ripley/mining/old,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Vl" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/gun/energy/locked/phasegun/rifle{
@@ -495,19 +503,19 @@
 	pixel_y = -4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "VF" = (
 /obj/machinery/mining/drill/loaded,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "VQ" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "SP-Mining"
 	},
 /turf/simulated/shuttle/plating/skipjack,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "VS" = (
 /obj/structure/plasticflaps/mining,
 /obj/machinery/conveyor{
@@ -515,11 +523,11 @@
 	id = "SP-Mining"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Wa" = (
 /obj/structure/sign/mining,
-/turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/survivalpod/superpose/SurvivalCargo)
 "WH" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -534,19 +542,19 @@
 /obj/structure/grille,
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "WY" = (
 /obj/structure/closet/secure_closet/miner{
 	locked = 0
 	},
 /obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/voidcraft/light,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Ye" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/floodlight,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "Zt" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -564,30 +572,30 @@
 	pixel_y = 28
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 "ZM" = (
 /obj/vehicle/train/engine{
 	dir = 2
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
+/area/survivalpod/superpose/SurvivalCargo)
 
 (1,1,1) = {"
 Or
-Or
+Fy
 op
 xp
-Or
-Or
-Or
+Qg
+Qg
+Qg
 op
 Or
 Cq
 eZ
 "}
 (2,1,1) = {"
-Or
+Qg
 BT
 ND
 qP
@@ -608,12 +616,12 @@ Ct
 Ct
 Ct
 Ct
-Or
+Fy
 Zt
 ix
 "}
 (4,1,1) = {"
-Or
+Qg
 BT
 Ye
 Eb
@@ -621,12 +629,12 @@ Ct
 mS
 Ct
 sz
-Or
+Fy
 Dp
 ix
 "}
 (5,1,1) = {"
-Or
+Fy
 Cu
 Ue
 Eb
@@ -635,7 +643,7 @@ EX
 ex
 ne
 Or
-Wa
+Di
 Or
 "}
 (6,1,1) = {"
@@ -647,13 +655,13 @@ Eb
 Eb
 Eb
 Eb
-Fy
+Eb
 Mi
 Qq
 "}
 (7,1,1) = {"
-Or
-Or
+Fy
+Fy
 qR
 pr
 lW
@@ -665,7 +673,7 @@ Mi
 Ag
 "}
 (8,1,1) = {"
-Or
+Qg
 JT
 oQ
 ag
@@ -691,7 +699,7 @@ gG
 WH
 "}
 (10,1,1) = {"
-Or
+Qg
 rc
 qh
 or
@@ -701,18 +709,18 @@ cF
 Lz
 By
 UD
-Or
+Fy
 "}
 (11,1,1) = {"
 Or
-Or
+Fy
 WH
 BP
-Or
-Or
-Or
+Qg
+Qg
+Qg
 BP
-Or
-Or
+Fy
+Fy
 Or
 "}
