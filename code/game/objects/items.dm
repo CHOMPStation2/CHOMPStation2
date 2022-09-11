@@ -106,7 +106,7 @@
 	var/drop_sound = "generic_drop"
 
 	var/tip_timer // reference to timer id for a tooltip we might open soon
-	
+
 	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
 
 /obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
@@ -223,7 +223,10 @@
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
 	if(anchored)
-		to_chat(user, span("notice", "\The [src] won't budge, you can't pick it up!"))
+		if(hascall(src, "attack_self"))
+			return src.attack_self(user)
+		else
+			to_chat ("This is anchored and you can't lift it.")
 		return
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
