@@ -160,7 +160,7 @@
 /area/survivalpod/superpose/SurvivalPool)
 "kZ" = (
 /obj/machinery/button/windowtint{
-	id = "SP-Pool";
+	id = "SP-Sauna";
 	pixel_y = -29
 	},
 /obj/effect/floor_decal/techfloor{
