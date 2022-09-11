@@ -25358,6 +25358,18 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/lower/south)
+"aTi" = (
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai_upload_foyer)
+"aTj" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor,
+/obj/effect/landmark/free_ai_shell,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai_upload)
 "aTl" = (
 /obj/structure/table/rack,
 /obj/random/maintenance/research,
@@ -33764,11 +33776,6 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload_foyer)
-"hCO" = (
-/obj/effect/landmark/free_ai_shell,
-/obj/effect/floor_decal/techfloor,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai_upload_foyer)
 "hHc" = (
 /obj/machinery/turretid/stun{
 	control_area = /area/ai_upload;
@@ -34522,13 +34529,6 @@
 /obj/item/weapon/aiModule/antimov,
 /obj/item/weapon/aiModule/teleporterOffline,
 /turf/simulated/floor/bluegrid,
-/area/ai_upload)
-"nKV" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/techfloor,
-/turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
 "nOG" = (
 /obj/effect/mouse_hole_spawner{
@@ -49016,8 +49016,13 @@ aLX
 aLY
 adt
 adt
+<<<<<<< HEAD
 eTp
 hCO
+=======
+aJA
+aTi
+>>>>>>> 03b4da0184... Merge pull request #13715 from Heroman3003/tether-fixes-whatever
 klz
 mNZ
 nUS
@@ -49584,8 +49589,13 @@ aLX
 aLY
 adt
 adt
+<<<<<<< HEAD
 fBS
 nKV
+=======
+aJY
+aTj
+>>>>>>> 03b4da0184... Merge pull request #13715 from Heroman3003/tether-fixes-whatever
 kPR
 ndB
 oXH
