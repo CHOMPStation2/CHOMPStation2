@@ -12,6 +12,7 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
+	vis_height = 92
 	melee_damage_lower = 10
 	melee_damage_upper = 25
 	friendly = list("nudges", "sniffs on", "rumbles softly at", "slobberlicks")

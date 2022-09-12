@@ -115,6 +115,9 @@
 	return ..()
 
 /obj/item/organ/external/emp_act(severity)
+	for(var/obj/O as anything in src.contents)
+		O.emp_act(severity)
+
 	if(!(robotic >= ORGAN_ROBOT))
 		return
 	var/burn_damage = 0
@@ -595,8 +598,6 @@ This function completely restores a damaged organ to perfect condition.
 		return 1
 	else
 		last_dam = brute_dam + burn_dam
-	if (number_wounds != 0)
-		return 1
 	if(germ_level)
 		return 1
 	return 0
@@ -733,8 +734,8 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return
 
 	for(var/datum/wound/W in wounds)
-		// wounds used to be able to disappear after 10 minutes at the earliest, for now just remove them as soon as there is no damage
-		if(W.damage <= 0)
+		// wounds can disappear after 10 minutes at the earliest
+		if(W.damage <= 0 && W.created + 10 * 10 * 60 <= world.time)
 			wounds -= W
 			continue
 			// let the GC handle the deletion of the wound

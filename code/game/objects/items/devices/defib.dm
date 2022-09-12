@@ -308,8 +308,8 @@
 		return bad_vital_organ
 
 	//this needs to be last since if any of the 'other conditions are met their messages take precedence
-	if(!H.client && !H.teleop)
-		return "buzzes, \"Resuscitation failed - Mental interface error. Further attempts may be successful.\""
+	//if(!H.client && !H.teleop)
+	//	return "buzzes, \"Resuscitation failed - Mental interface error. Further attempts may be successful.\""// CHOMPEdit, removing this check to allow revival through bad internet connections.
 
 	return null
 

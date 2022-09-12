@@ -54,6 +54,7 @@
 #include "AmbushBase.dmm"
 #include "CultBar.dmm"
 #include "RaidedMechBunker.dmm"
+#include "AbandonedLab.dmm"
 #endif
 
 //#include "Boombase.dmm" YW edit remove boombase
@@ -402,6 +403,12 @@
 	desc = "A hanger with mechs far past useabiltiy."
 	mappath = 'maps/submaps/surface_submaps/wilderness/RaidedMechBunker.dmm'
 	cost = 10
+	
+/datum/map_template/surface/wilderness/deep/AbandonedLab
+	name = "Abandoned Lab"
+	desc = "Experiments gone wrong! Be wary of the test subjects gone rogue."
+	mappath = 'maps/submaps/surface_submaps/wilderness/AbandonedLab.dmm'
+	cost = 20
 
 /*==Disabled==/
 
