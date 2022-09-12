@@ -137,8 +137,69 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 /obj/item/rig_module/protean/healing
 	name = "Protean Restorative Nanites"
 	desc = "This should never be outside of a RIG."
-	icon_state = "flash"
 	interface_name = "Protean Restorative Nanites"
 	interface_desc = "Utilises stored steel from the Protean to slowly heal and repair the wearer."
-	usable = 1
-	engage_string = "Toggle Mode"
+	toggleable = 1
+	activate_string = "Enable Healing"
+	deactivate_string = "Disable Healing"
+	var/datum/modifier/healing
+
+/obj/item/rig_module/protean/healing/activate()
+	if(!..(1))
+		return 0
+
+	var/mob/living/carbon/human/H = holder.wearer
+	var/mob/living/P = holder?:myprotean
+	if(H && P)
+		if(istype(H.species, /datum/species/protean))
+			to_chat(H, "<span class='warning'>Your Protean modules do not function on yourself.</span>")
+			return 0
+		if(P?:refactory.get_stored_material(MAT_STEEL) >= 100)
+			healing = holder.wearer.add_modifier(/datum/modifier/protean/steel, origin = P?:refactory)
+			to_chat(usr, "<font color='blue'><b>You activate the suit's restorative nanites.</b></font>")
+			to_chat(H, "<span class='warning'>Your suit begins mend your injuries.</span>")
+			active = 1
+			return 1
+	return 0
+
+/obj/item/rig_module/protean/healing/deactivate()
+	if(!..(1))
+		return 0
+	var/mob/living/carbon/human/H = holder.wearer
+	if(H)
+		to_chat(usr, "<font color='blue'><b>You deactivate the suit's restorative nanites.</b></font>")
+		to_chat(H, "<span class='warning'>Your suit is no longer mending your injuries.</span>")
+		active = 0
+		if(healing)
+			healing.expire()
+			healing = null
+		return 1
+	else
+		return 0
+
+/obj/item/rig_module/protean/healing/process()
+	if(active)
+		var/mob/living/carbon/human/H = holder.wearer
+		var/mob/living/P = holder?:myprotean
+		if((istype(H.species, /datum/species/protean)) || !H || !P)
+			to_chat(H, "<span class='warning'>Your Protean modules do not function on yourself.</span>")
+			deactivate()
+			return
+		if((!P?:refactory.get_stored_material(MAT_STEEL)))
+			to_chat(H, "<span class='warning'>Your [holder] is out of steel.</span>")
+			deactivate()
+			return
+
+/obj/item/rig_module/protean/healing/accepts_item(var/obj/item/stack/material/steel/S, var/mob/living/user)
+
+	if(!istype(S) || !istype(user))
+		return 0
+
+	if(!holder?:myprotean.nano_get_refactory())
+		return 0
+
+	var/obj/item/organ/internal/nano/refactory/R = holder?:myprotean.nano_get_refactory()
+	if(R.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
+		to_chat(user, "<font color='blue'><b>You directly feed some steel to the [holder].</b></font>")
+		return 1
+	return 0

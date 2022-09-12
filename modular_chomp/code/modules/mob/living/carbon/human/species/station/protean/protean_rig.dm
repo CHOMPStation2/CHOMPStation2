@@ -13,7 +13,7 @@
 	offline_slowdown = 0
 	seal_delay = 1
 	var/mob/living/myprotean
-	initial_modules = list(/obj/item/rig_module/protean/syphon, /obj/item/rig_module/protean/armor)
+	initial_modules = list(/obj/item/rig_module/protean/syphon, /obj/item/rig_module/protean/armor, /obj/item/rig_module/protean/healing)
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/protean //These are important for sprite pointers
 	boot_type = /obj/item/clothing/shoes/magboots/rig/protean
@@ -48,7 +48,7 @@
 		S.OurRig = src
 		if(P.back)
 			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1, P.back), 3)
-
+			myprotean = P
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	verbs += /obj/item/weapon/rig/verb/RemoveBag

@@ -404,12 +404,6 @@
 		return
 	..()
 
-var/global/list/disallowed_protean_accessories = list(
-	/obj/item/clothing/accessory/holster,
-	/obj/item/clothing/accessory/storage,
-	/obj/item/clothing/accessory/armor
-	)
-
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
 	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
