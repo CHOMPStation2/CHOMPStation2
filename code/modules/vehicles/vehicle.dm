@@ -69,7 +69,7 @@
 		riding_datum.restore_position(buckled_mob)
 		riding_datum.handle_vehicle_offsets() // So the person in back goes to the front.
 
-/obj/vehicle/Move(var/newloc, var/direction, var/movetime)
+/obj/vehicle/Move(mob/living/buckled_mob, var/newloc, var/direction, var/movetime)
 	if(world.time < l_move_time + move_delay) //This AND the riding datum move speed limit?
 		return
 
@@ -79,7 +79,7 @@
 
 	. = ..()
 
-	if(mechanical && on && powered)
+	if(mechanical && on && powered && !(buckled_mob.paralysis) && !(buckled_mob.sleeping))
 		cell.use(charge_use)
 
 	//Dummy loads do not have to be moved as they are just an overlay
