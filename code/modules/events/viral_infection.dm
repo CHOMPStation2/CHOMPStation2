@@ -4,6 +4,9 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	var/list/viruses = list()
 
 /datum/event/viral_infection/setup()
+	if(prob(50))
+		kill()
+		return
 	announceWhen = rand(0, 3000)
 	endWhen = announceWhen + 1
 
