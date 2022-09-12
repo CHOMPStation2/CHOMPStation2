@@ -5,7 +5,7 @@
 	icon_dead = "dino-dead"
 	icon_living = "dino"
 	icon_state = "dino"
-	icon = 'modular_chomp/icons/mob/vorelizard.dmi'
+	icon = 'modular_chomp/icons/mob/vorelizard.dmi' //CHOMPEdit - Changed it so that the code points to the new, updated vorelizard sprite in modular_chomp.
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
