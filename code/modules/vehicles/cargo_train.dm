@@ -184,6 +184,9 @@
 /obj/vehicle/train/engine/relaymove(mob/user, direction)
 	if(user != load)
 		return 0
+  
+	if(user.paralysis || user.sleeping)
+		return 0
 
 	if(is_train_head())
 		if(direction == reverse_direction(dir) && tow)
