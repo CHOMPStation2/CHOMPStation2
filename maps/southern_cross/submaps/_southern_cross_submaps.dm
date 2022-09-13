@@ -73,9 +73,9 @@
 	mappath = 'gateway/carpfarm.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
-//VR maps go here
-#include "virtual_reality/construct.dm"
-#include "virtual_reality/construct.dmm"
+//VR maps go here, tell me if theres a better way to load this
+#include "virtual_reality/constructVR.dm"
+#include "virtual_reality/constructVR.dmm"
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
 #include "../../expedition_vr/space/_fueldepot.dm"

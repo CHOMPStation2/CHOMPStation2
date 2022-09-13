@@ -1,4 +1,4 @@
-// -- Areas -- //
+w// -- Areas -- //
 
 /area/vr
 	name = "VR world"
@@ -24,6 +24,8 @@
 	power_equip = 1
 	power_environ = 1
 	power_light = 1
+	ambience = AMBIENCE_SIF
+
 
 /area/vr/powered/bluebase
 	name = "Blue Base"
