@@ -99,6 +99,13 @@
 /obj/machinery/gibber/attackby(var/obj/item/W, var/mob/user)
 	var/obj/item/weapon/grab/G = W
 
+	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
+		return
+	if(default_deconstruction_crowbar(user, O))
+		return
+	if(default_part_replacement(user, O))
+		return
+
 	if(default_unfasten_wrench(user, W, 40))
 		return
 
