@@ -529,10 +529,18 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	//If desired, apply equipment.
 	if(equipment)
 		if(charjob)
+<<<<<<< HEAD
 			job_master.EquipRank(new_character, charjob, 1, announce)
 			new_character.mind.assigned_role = charjob
 			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
 		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
+=======
+			job_master.EquipRank(new_character, charjob, 1)
+			if(new_character.mind)
+				new_character.mind.assigned_role = charjob
+				new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
+		//equip_custom_items(new_character)	//VOREStation Removal
+>>>>>>> 607d730743... Merge pull request #13738 from Heroman3003/admin-runtimes
 
 	//If desired, add records.
 	if(records)
