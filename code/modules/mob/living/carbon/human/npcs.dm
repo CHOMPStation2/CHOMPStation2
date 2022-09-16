@@ -5,7 +5,6 @@
 	worn_state = "punpun"
 	has_sensor = 0
 	species_restricted = list("Monkey")
-	can_be_drop_prey = TRUE //CHOMP Add
 
 /mob/living/carbon/human/monkey/punpun/Initialize()
 	. = ..()
