@@ -117,6 +117,10 @@
 		B.name = "Stomach"
 		B.desc = "It appears to be rather warm and wet. Makes sense, considering it's inside \the [name]."
 		B.can_taste = TRUE
+		if(ishuman(src))
+			var/mob/living/carbon/human/H = src
+			if(istype(H.species,/datum/species/monkey))
+				allow_spontaneous_tf = TRUE
 		return TRUE
 
 //
@@ -741,6 +745,9 @@
 	var/trash_eatable = TRUE
 
 /mob/living/proc/get_digestion_nutrition_modifier()
+	return 1
+
+/mob/living/proc/get_digestion_efficiency_modifier()
 	return 1
 
 /mob/living/proc/eat_trash()
