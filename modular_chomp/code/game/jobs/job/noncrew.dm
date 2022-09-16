@@ -2,7 +2,7 @@
     title = "Non crew"
     disallow_jobhop = TRUE
     total_positions = -1
-    spawn_positions = 2
+    spawn_positions = 6
     supervisors = "no one."
 
     flag = NONCREW
