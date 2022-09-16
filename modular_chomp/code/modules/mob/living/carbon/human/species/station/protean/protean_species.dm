@@ -37,7 +37,9 @@
 	radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
 	darksight = 10
 	siemens_coefficient = 2
-	emp_dmg_mod = 0.8	//Since EMP's apply damage to all limbs, and Protean limbs account to their total health, EMP's are hyper lethal to them
+	emp_dmg_mod = 0.8
+	emp_sensitivity = EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG
+	item_slowdown_mod = 1.5	//Gentle encouragement to let others wear you
 
 	hazard_low_pressure = -1 //Space doesn't bother them
 	hazard_high_pressure = INFINITY //consistency
@@ -328,17 +330,26 @@ CHOMP Removal end*/
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
+	//Heal a random damaged limb by 1,1 per tick
 	holder.adjustBruteLoss(-1,include_robo = TRUE)
 	holder.adjustFireLoss(-1,include_robo = TRUE)
 	holder.adjustToxLoss(-1)
-	var/mob/living/carbon/human/H = holder
-	for(var/obj/item/organ/O as anything in H.internal_organs)
-		// Fix internal damage
-		if(O.damage > 0)
-			O.damage = max(0,O.damage-0.1)
-		// If not damaged, but dead, fix it
-		else if(O.status & ORGAN_DEAD)
-			O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
+
+	var/mob/living/carbon/human/H
+	if(ishuman(holder))
+		H = holder
+
+	//Then heal every damaged limb by a smaller amount
+	if(H)
+		for(var/obj/item/organ/external/O in H.organs)
+			O.heal_damage(0.5, 0.5, 0, 1)
+
+		//Heal the organs a little bit too, as a treat
+		for(var/obj/item/organ/O as anything in H.internal_organs)
+			if(O.damage > 0)
+				O.damage = max(0,O.damage-0.3)
+			else if(O.status & ORGAN_DEAD)
+				O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
 
 // PAN Card
 /obj/item/clothing/accessory/permit/nanotech
