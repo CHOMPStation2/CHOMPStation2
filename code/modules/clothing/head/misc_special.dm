@@ -20,7 +20,7 @@
 	item_state_slots = list(slot_r_hand_str = "welding", slot_l_hand_str = "welding")
 	matter = list(MAT_STEEL = 3000, MAT_GLASS = 1000)
 	var/up = 0
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 5, laser = 20,energy = 10, bomb = 20, bio = 10, rad = 20) // CHOMPEdit Buffed to be inline with hardhats
 	flags_inv = (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 	body_parts_covered = HEAD|FACE|EYES
 	action_button_name = "Flip Welding Mask"
