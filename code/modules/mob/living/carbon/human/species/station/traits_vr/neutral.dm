@@ -166,11 +166,16 @@
 
 /datum/trait/neutral/synth_chemfurnace
 	name = "Biofuel Processor"
-	desc = "You are able to gain energy through consuming and processing normal food. Energy-dense foods such as protein bars and survival food will yield the best results."
+	desc = "You are able to gain energy through consuming and processing normal food, at the cost of significantly slower recharging via cyborg chargers. Energy-dense foods such as protein bars and survival food will yield the best results."
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
+<<<<<<< HEAD
 	var_changes = list("organic_food_coeff" = 0.75, "synthetic_food_coeff" = 1) //CHOMPEdit: Increase values
+=======
+	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.6)
+	excludes = list(/datum/trait/neutral/biofuel_value_down)
+>>>>>>> 30869d8f29... Merge pull request #13744 from KillianKirilenko/kk-chargerpenalty
 
 /datum/trait/neutral/glowing_eyes
 	name = "Glowing Eyes"
@@ -608,7 +613,7 @@
 
 /datum/trait/neutral/biofuel_value_down
 	name = "Discount Biofuel processor"
-	desc = "You are able to gain energy through consuming and processing normal food. Unfortunately, it is half as effective as premium models."
+	desc = "You are able to gain energy through consuming and processing normal food. Unfortunately, it is half as effective as premium models. On the plus side, you still recharge from charging stations fairly efficiently."
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
