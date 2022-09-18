@@ -333,6 +333,11 @@
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
 		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
+<<<<<<< HEAD
+=======
+		"appendage_color" = host.appendage_color,
+		"appendage_alt_setting" = host.appendage_alt_setting,
+>>>>>>> 6285a02b37... Merge pull request #13731 from Cameron653/TONGUE_EDIT
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
 		"noisy" = host.noisy,

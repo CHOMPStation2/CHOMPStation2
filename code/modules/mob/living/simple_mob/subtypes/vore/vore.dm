@@ -25,6 +25,11 @@
 	permit_healbelly = client.prefs_vr.permit_healbelly
 	noisy = client.prefs_vr.noisy
 	selective_preference = client.prefs_vr.selective_preference
+<<<<<<< HEAD
+=======
+	appendage_color = client.prefs_vr.appendage_color
+	appendage_alt_setting = client.prefs_vr.appendage_alt_setting
+>>>>>>> 6285a02b37... Merge pull request #13731 from Cameron653/TONGUE_EDIT
 
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore

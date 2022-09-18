@@ -230,6 +230,11 @@
 	new_mob.permit_healbelly = permit_healbelly
 	new_mob.noisy = noisy
 	new_mob.selective_preference = selective_preference
+<<<<<<< HEAD
+=======
+	new_mob.appendage_color = appendage_color
+	new_mob.appendage_alt_setting = appendage_alt_setting
+>>>>>>> 6285a02b37... Merge pull request #13731 from Cameron653/TONGUE_EDIT
 	new_mob.drop_vore = drop_vore
 	new_mob.stumble_vore = stumble_vore
 	new_mob.slip_vore = slip_vore
