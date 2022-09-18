@@ -46,6 +46,7 @@
 
 	breath_type = "nitrogen" //CHOMPedit
 	poison_type = "oxygen"
+	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 
 	flags = NO_SCAN | NO_DEFIB
@@ -109,7 +110,11 @@
 		H.internal = H.r_hand
 	H.internal = locate(/obj/item/weapon/tank) in H.contents
 	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
+<<<<<<< HEAD
 		H.internals.icon_state = "internal1"
 
 /datum/species/vox/get_perfect_belly_air_type()
 	return /datum/gas_mixture/belly_air/vox
+=======
+		H.internals.icon_state = "internal1"
+>>>>>>> 1956924b99... Merge pull request #13753 from Heroman3003/airfix
