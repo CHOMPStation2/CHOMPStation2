@@ -14,7 +14,7 @@
 	desc = "Salty and gritty."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "sand0"
-	edge_blending_priority = 1
+	//edge_blending_priority = 1
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /* #I want this for the desert tiles.
@@ -92,7 +92,7 @@
 	desc = "Lively green grass, soft to walk on."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "grass"
-	edge_blending_priority = 4
+	//edge_blending_priority = 4
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/deep_grass
@@ -100,7 +100,7 @@
 	desc = "Dense patch of grass, seems like a soft spot to lay on."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "deep_grass"
-	edge_blending_priority = 5
+	//edge_blending_priority = 5
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/gravel
@@ -108,7 +108,7 @@
 	desc = "Mix of dirt and sand, it crumbles in your hand."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "gravel"
-	edge_blending_priority = 2
+	//edge_blending_priority = 2
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
 /turf/simulated/floor/outdoors/desert_planet/mud
@@ -116,8 +116,42 @@
 	desc = "Squishy damp dirt, smells muddy."
 	icon = 'icons/turf/desert_planet.dmi'
 	icon_state = "mud"
-	edge_blending_priority = 3
+	//edge_blending_priority = 3
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+
+/turf/simulated/floor/outdoors/desert_planet/sandstone_tiles
+	name = "sandstone_tiles"
+	desc = "Smooth polished sandstone tiles, fitted and fixed in patters"
+	icon = 'icons/turf/desert_planet.dmi'
+	icon_state = "sandstone_tiles"
+	//edge_blending_priority = 3
+	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+
+/obj/effect/floor_decal/desert_planet/floor/sand0-edge
+	name = "sand0-edge"
+	icon = 'icons/turf/desert_planet.dmi'
+	icon_state = "sand0-edge"
+
+/obj/effect/floor_decal/desert_planet/floor/gravel-edge
+	name = "gravel-edge"
+	icon = 'icons/turf/desert_planet.dmi'
+	icon_state = "gravel-edge"
+
+/obj/effect/floor_decal/desert_planet/floor/mud-edge
+	name = "mud-edge"
+	icon = 'icons/turf/desert_planet.dmi'
+	icon_state = "mud-edge"
+
+/obj/effect/floor_decal/desert_planet/floor/grass-edge
+	name = "grass-edge"
+	icon = 'icons/turf/desert_planet.dmi'
+	icon_state = "grass-edge"
+
+/obj/effect/floor_decal/desert_planet/floor/deep_grass-edge
+	name = "deep_grass-edge"
+	icon = 'icons/turf/desert_planet.dmi'
+	icon_state = "deep_grass-edge"
+
 
 /*  #No idea how water tiles work
 /turf/simulated/floor/outdoors/desert_planet/water
