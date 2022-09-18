@@ -124,6 +124,7 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
+<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_vassilian/xenochimera
@@ -144,3 +145,15 @@
 	),
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+=======
+	excludes = list(/datum/trait/neutral/autohiss_unathi)
+
+/datum/trait/positive/cocoon_tf/xenochimera
+	sort = TRAIT_SORT_SPECIES
+	allowed_species = list(SPECIES_XENOCHIMERA)
+	custom_only = FALSE
+	name = "Xenochimera: Cocoon Spinner"
+	desc = "Allows you to build a cocoon around yourself, using it to transform your body if you desire."
+	cost = 0
+	category = 0
+>>>>>>> cd9088cdd5... Merge pull request #13729 from faaaay/xeno-morph
