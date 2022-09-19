@@ -37,6 +37,7 @@
 	active_power_usage = 150
 	anchored = TRUE
 	unacidable = TRUE
+	density = TRUE
 	panel_open = TRUE
 
 	var/busy = FALSE
@@ -45,7 +46,9 @@
 	var/delay_modifier = 3 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
 	var/obj/item/weapon/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
 
-	var/list/recipes = list(list()) // This holds chemical recipes up to a maximum determined by SYNTHESIZER_MAX_RECIPES. Two-dimensional.
+	var/list/debug_data // DELETE THIS ONCE DONE TESTNG
+
+	var/list/recipes = list() // This holds chemical recipes up to a maximum determined by SYNTHESIZER_MAX_RECIPES. Two-dimensional.
 	var/list/queue = list() // This holds the recipe id's for queued up recipes.
 	var/list/catalyst_ids = list() // This keeps track of the chemicals in the catalyst to remove before bottling.
 	var/list/cartridges = list() // Associative, label -> cartridge
@@ -221,13 +224,15 @@
 	data["use_catalyst"] = use_catalyst
 
 	// Queue and recipe lists might not be formatted correctly here. Delete this once you've confirmed.
-	data["queue"] = queue
+	var/list/tmp_queue = list()
+	for(var/i = 1, i <= queue.len, i++)
+		tmp_queue.Add(list(list("name" = queue[i], "index" = i))) // Thanks byond
+	data["queue"] = tmp_queue
 
 	// Convert the recipes list into an array of strings. The UI does not need the associative list attached to each string.
 	var/list/tmp_recipes = list()
-	if(recipes)
-		for(var/i = 1, i <= recipes.len, i++)
-			tmp_recipes[i] = recipes[i]
+	for(var/i = 1, i <= recipes.len, i++)
+		tmp_recipes.Add(list(list("name" = recipes[i])))
 	data["recipes"] = tmp_recipes
 
 
@@ -245,12 +250,20 @@
 		for(var/datum/reagent/R in catalyst.reagents.reagent_list)
 			catalyst_reagents_list[++catalyst_reagents_list.len] = list("name" = R.name, "volume" = R.volume, "description" = R.description, "id" = R.id)
 
+	if(catalyst)
+		data["catalystCurrentVolume"] = catalyst.reagents.total_volume
+		data["catalystMaxVolume"] = catalyst.reagents.maximum_volume
+	else
+		data["catalystCurrentVolume"] = null
+		data["catalystMaxVolume"] = null
+
 	var/chemicals[0]
 	for(var/label in cartridges)
 		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 		chemicals.Add(list(list("title" = label, "id" = label, "amount" = C.reagents.total_volume))) // list in a list because Byond merges the first list
 	data["chemicals"] = chemicals
 
+	debug_data = data
 	return data
 
 /obj/machinery/chemical_synthesizer/tgui_act(action, params)
@@ -262,7 +275,7 @@
 		if("start_queue")
 			// Start up the queue.
 			if(!busy)
-				start_queue()
+				start_queue(usr)
 		if("rem_queue")
 			// Remove a single entry from the queue. Sanity checks also prevent removing the first entry if the machine is busy though UI should already prevent that.
 			var/index = text2num(params["q_index"])
@@ -303,7 +316,7 @@
 			if(!busy)
 				panel_open = !panel_open
 		if("mode_toggle")
-			// Toggles production mode. 
+			// Toggles production mode.
 			production_mode = !production_mode
 		if("add_recipe")
 			// Allows the user to add a recipe. Kinda vital for this machine to do anything useful.
@@ -321,11 +334,11 @@
 				if(confirm == "Yes")
 					var/index = params["rm_index"]
 					if(index in recipes)
-						recipes -= recipes[index]
+						recipes.Remove(list(index)) // Fuck off Byond.
 			else
 				to_chat(usr, "<span class='warning'>You cannot remove recipes while the machine is running!</span>")
 		if("exp_recipe")
-			// Allows the user to export recipes to chat formatted for easy importing. 
+			// Allows the user to export recipes to chat formatted for easy importing.
 			var/index = params["exp_index"]
 			export_recipe(usr, index)
 		if("add_queue")
@@ -336,7 +349,7 @@
 			var/index = params["qa_index"]
 			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe.
 			if(index in recipes)
-				queue[queue.len + 1] = index
+				queue[++queue.len] = index
 
 	add_fingerprint(usr)
 
@@ -360,19 +373,23 @@
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/steps = 2 * CLAMP(round(input(user, "How many steps does your recipe contain (16 max)?", "Steps", null)), 0, RECIPE_MAX_STEPS) // Round to get a whole integer, clamp to ensure proper range.
-	var/new_rec = list() // This holds the actual recipe.
+	var/steps = 2 * CLAMP(round(input(user, "How many steps does your recipe contain (16 max)?", "Steps", null) as num), 0, RECIPE_MAX_STEPS) // Round to get a whole integer, clamp to ensure proper range.
+	if(!steps)
+		to_chat(user, "Please input a valid number of steps!")
+		return
+
+	var/list/new_rec = list() // This holds the actual recipe.
 	for(var/i = 1, i < steps, i += 2) // For the user, 1 step is both text and volume. For list arithmetic, that's 2 steps.
 		var/label = tgui_input_list(user, "Which chemical would you like to use?", "Chemical Synthesizer", cartridges)
 		if(!label)
 			to_chat(user, "Please select a chemical!")
 			return
-		new_rec[i] = label // Add the reagent ID.
-		var/amount = CLAMP(round(input(user, "How much of the chemical would you like to add?", "Volume", null)), 0, src.reagents.maximum_volume)
+		new_rec[++new_rec.len] = label // Add the reagent ID.
+		var/amount = CLAMP(round(input(user, "How much of the chemical would you like to add?", "Volume", null) as num), 0, src.reagents.maximum_volume)
 		if(!amount)
 			to_chat(user, "Please select a volume!")
 			return
-		new_rec[i+1] = amount // Add the amount of reagent.
+		new_rec[++new_rec.len] = amount // Add the amount of reagent.
 
 	recipes[rec_name] = new_rec
 	SStgui.update_uis(src)
@@ -386,18 +403,18 @@
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/rec_input = input(user, "Input your recipe as 'Chem1,Vol1,Chem2,Vol2,...'", "Import recipe", null)
+	var/rec_input = input(user, "Input your recipe as 'Chem1,vol1,Chem2,vol2,...'", "Import recipe", null)
 	if(!rec_input || (length(rec_input) > RECIPE_MAX_STRING) || !findtext(rec_input, ",")) // The smallest possible recipe will contain 1 comma.
 		to_chat(user, "Invalid input or recipe max length exceeded!")
 		return
 
 	rec_input = trim(rec_input) // Sanitize.
-	var/new_rec = list() // This holds the actual recipe.
+	var/list/new_rec = list() // This holds the actual recipe.
 	var/vol = FALSE // This tracks if the next step is a chemical name or a volume.
 	var/index = findtext(rec_input, ",") // This tracks the delineation index in the user-provided string. Should never be null at this point.
 	var/i = 1 // This tracks the index for new_rec, the actual list which gets added to recipes[rec_name].
 	while(index) // Alternates between text strings and numbers. When false, the rest of rec_input is the final step.
-		new_rec[i] = copytext(rec_input, 1, index)
+		new_rec[++new_rec.len] = copytext(rec_input, 1, index)
 		if(vol)
 			new_rec[i] = text2num(new_rec[i]) // If it's a volume step, convert to a number.
 			vol = FALSE
@@ -408,7 +425,7 @@
 		index = findtext(rec_input, ",")
 
 	if(rec_input) // The remainder of rec_input should be the final volume step of the recipe. The if() is a sanity check.
-		new_rec[i] = text2num(rec_input)
+		new_rec[++new_rec.len] = text2num(rec_input)
 
 	recipes[rec_name] = new_rec // Finally, add the recipe to the recipes list.
 	SStgui.update_uis(src)
@@ -543,11 +560,11 @@
 		B.update_icon()
 
 	// Sanity check when manual bottling is triggered.
-	if(queue)
+	if(queue.len)
 		queue -= queue[1]
 
 	// If the queue is now empty, we're done. Otherwise, re-add catalyst and proceed to the next recipe.
-	if(queue)
+	if(queue.len)
 		if(use_catalyst)
 			for(var/datum/reagent/chem in catalyst.reagents.reagent_list)
 				catalyst_ids += chem.id

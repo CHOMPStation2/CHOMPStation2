@@ -7,15 +7,22 @@ import { BeakerContents } from './common/BeakerContents';
 export const ChemSynthesizer = (props, context) => {
   return (
     <Window
-      width={575}
-      height={500}
+      width={1100}
+      height={640}
       resizable>
-      <Window.Content className="Layout__content--flexColumn">
-        <ChemSynthesizerQueueRecipes />
-        <ChemSynthesizerQueueList />
-        <ChemSynthesizerRecipeList />
-        <ChemSynthesizerChemicals />
-        <ChemSynthesizerSettings />
+      <Window.Content>
+        <Flex
+          height="100%">
+          <Flex.Item grow={1} maxWidth="33%" >
+            <ChemSynthesizerQueueRecipes />
+          </Flex.Item>
+          <Flex.Item grow={1}>
+            <ChemSynthesizerChemicals />
+          </Flex.Item>
+          <Flex.Item grow={1}>
+            <ChemSynthesizerSettings />
+          </Flex.Item>
+        </Flex>
       </Window.Content>
     </Window>
   );
@@ -27,6 +34,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
     busy,
     use_catalyst,
     queue = [],
+    recipes = [],
     production_mode,
   } = data;
 
@@ -36,15 +44,16 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
       width="100%"
       direction="column">
       <Flex.Item
-        height={0}
-        grow={1}>
+        maxHeight="50%"
+        grow={1}
+        basis={0}>
         <Section
           height="100%"
           title="Queue"
-          overflowY="auto"
+          overflowY="scroll"
           buttons={
             <Fragment>
-              <Button 
+              <Button
                 disabled={!!busy}
                 color={use_catalyst ? "green" : "bad"}
                 icon="wrench"
@@ -66,116 +75,91 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
               ))}
             </Fragment>
           }>
-          <Flex
-            direction="column"
-            height="100%">
-            <Flex.Item>
-              <ChemSynthesizerQueueList />
-            </Flex.Item>
-          </Flex>
+          <LabeledList>
+          {(queue.length && queue.map((item) => {
+            if ((item.index === 1) && !!busy) {
+              return (
+                <LabeledList.Item label={item.name} labelColor="bad">
+                  {
+                    <Box>
+                      <Button
+                        disabled icon="trash">
+                        Delete
+                      </Button>
+                    </Box>
+                  }
+                </LabeledList.Item>
+              );
+            }
+              return (
+                <LabeledList.Item label={item.name}>
+                  <Button
+                    icon="trash"
+                    onClick={() => act("rem_queue", {
+                      q_index: item.index,
+                    })}>
+                    Delete
+                  </Button>
+                </LabeledList.Item>
+              );
+            })) || (
+            <Box m={1}>
+              Queue Empty.
+            </Box>
+          )}
+          </LabeledList>
         </Section>
+      </Flex.Item>
+      <Flex.Item
+        maxHeight="50%"
+        grow={1}
+        basis={0}>
         <Section
           height="100%"
           title="Recipes"
-          overflowY="auto"
+          overflowY="scroll"
           buttons={
             <Button
               icon="plus"
               tooltip={production_mode ? "Import Recipe" : "Generate Recipe"}
               onClick={() => act("add_recipe")} />
           }>
-          <Flex
-            direction="column"
-            height="100%">
-            <Flex.Item>
-              <ChemSynthesizerRecipeList />
-            </Flex.Item>
-          </Flex>
+          <LabeledList>
+          {(recipes.length && recipes.map((item) => {
+              return (
+                <LabeledList.Item label={item.name}>
+                  <Button
+                    icon="plus"
+                    tooltip="Add to Queue"
+                    onClick={() => act("add_queue", {
+                      qa_index: item.name,
+                    })} />
+                  <Button
+                    icon="inbox"
+                    tooltip="Export Recipe"
+                    onClick={() => act("exp_recipe", {
+                      exp_index: item.name,
+                    })} />
+                  <Button
+                    color="bad"
+                    icon="minus-circle"
+                    tooltip="Delete Recipe"
+                    disabled={!!busy}
+                    onClick={() => act("rem_recipe", {
+                      rm_index: item.name,
+                    })} />
+                </LabeledList.Item>
+              );
+            })) || (
+            <Box m={1}>
+              No recipes found.
+            </Box>
+          )}
+          </LabeledList>
         </Section>
       </Flex.Item>
     </Flex>
   );
-};
-
-const ChemSynthesizerQueueList = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    queue = [],
-    busy,
-  } = data;
-
-  return (
-    <LabeledList>
-      {queue.length && queue.map(item => {
-        if ((item.index === 1) && !!busy) {
-          return (
-            <LabeledList.Item label={item.name} labelColor="bad">
-              {
-                <Box>
-                  <Button
-                    disabled icon="trash">
-                    Delete
-                  </Button>
-                </Box>
-              }
-            </LabeledList.Item>
-          );
-        
-          return (
-            <LabeledList.Item label={item.name}>
-              <Button
-                icon="trash"
-                onClick={() => act("rem_queue", {
-                  q_index: item.index,
-                })}>
-                Delete
-              </Button>
-            </LabeledList.Item>
-          );
-        } }) || (
-        <Box m={1}>
-          Queue Empty.
-        </Box>
-      )}
-    </LabeledList>
-  );
-};
-
-const ChemSynthesizerRecipeList = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    recipes = [],
-    busy,
-  } = data;
-
-  return (
-    <Flex>
-      {recipes.map(item => {
-        <Flex.Item>
-          <Button
-            color="bad"
-            icon="minus"
-            disabled={!!busy}
-            onClick={() => act("rem_recipe", { 
-              rm_index: item.name,
-            })} />
-          <Button
-            icon="inbox"
-            onClick={() => act("exp_recipe", { 
-              exp_index: item.name,
-            })} />
-          <Button
-            icon="plus"
-            onClick={() => act("add_queue", { 
-              qa_index: item.name,
-            })} />
-          <Box>
-            {item.name}
-          </Box>
-        </Flex.Item>;
-      })}
-    </Flex>
-  ); 
 };
 
 const ChemSynthesizerChemicals = (props, context) => {
@@ -185,6 +169,8 @@ const ChemSynthesizerChemicals = (props, context) => {
     chemicals = [],
     rxn_vessel = [],
     catalyst,
+    catalystCurrentVolume,
+    catalystMaxVolume,
     catalyst_reagents = [],
   } = data;
 
@@ -193,7 +179,8 @@ const ChemSynthesizerChemicals = (props, context) => {
     flexFillers.push(true);
   }
   return (
-    <Flex>
+    <Flex
+    direction="column">
       <Section
         title="Cartridge Reagents"
         flexGrow="1">
@@ -203,11 +190,16 @@ const ChemSynthesizerChemicals = (props, context) => {
           height="100%"
           align="flex-start">
           {chemicals.map((c, i) => (
-            <Flex.Item key={i} grow="1" m={0.2} basis="40%" height="20px">
-              <Box>
-                {c.title + " (" + c.amount + ")"}
-              </Box>
-            </Flex.Item>
+          <Flex.Item key={i} grow="1" m={0.2} basis="40%" height="20px">
+            <Button
+              icon="arrow-circle-down"
+              width="100%"
+              height="100%"
+              align="flex-start"
+              disabled={1}
+              content={c.title + ' (' + c.amount + ')'}
+            />
+          </Flex.Item>
           ))}
           {flexFillers.map((_, i) => (
             <Flex.Item key={i} grow="1" basis="25%" height="20px" />
@@ -235,9 +227,9 @@ const ChemSynthesizerChemicals = (props, context) => {
         minHeight="25%"
         buttons={(
           <Box>
-            {!!beaker && (
+            {!!catalyst && (
               <Box inline color="label" mr={2}>
-                {beakerCurrentVolume} / {beakerMaxVolume} units
+                {catalystCurrentVolume} / {catalystMaxVolume} units
               </Box>
             )}
             <Button
@@ -277,20 +269,25 @@ const ChemSynthesizerSettings = (props, context) => {
         <Section
           height="100%"
           title="Settings"
-          overflowY="auto"
-          buttons={
-            <Fragment>
-              <Button 
+          overflowY="auto">
+            <Flex
+              direction="column">
+              <Flex.Item>
+              <Button
                 color={production_mode ? "green" : "bad"}
                 icon="wrench"
                 content={production_mode ? "Recipe mode: Import" : "Recipe mode: Tutorial"}
-                onClick={() => act("panel_toggle")} />
-              <Button 
+                onClick={() => act("mode_toggle")} />
+              </Flex.Item>
+              <Flex.Item>
+              <Button
                 disabled={!!busy}
                 color={panel_open ? "bad" : "green"}
                 icon="wrench"
                 content={panel_open ? "Panel Open" : "Panel Closed"}
                 onClick={() => act("panel_toggle")} />
+              </Flex.Item>
+              <Flex.Item>
               {(!busy && (
                 <Button
                   disabled={!rxn_vessel.length}
@@ -300,14 +297,17 @@ const ChemSynthesizerSettings = (props, context) => {
                   content="Bottle Manually"
                   onClick={() => act("bottle_product")} />
               ))}
+              </Flex.Item>
+              <Flex.Item>
               <Button
                 disabled={!busy}
                 color="bad"
                 icon="minus-circle"
                 content="EMERGENCY STOP"
                 onClick={() => act("emergency_stop")} />
-            </Fragment>
-          } />
+              </Flex.Item>
+            </Flex>
+        </Section>
       </Flex.Item>
     </Flex>
   );
