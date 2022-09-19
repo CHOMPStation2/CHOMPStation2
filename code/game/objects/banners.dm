@@ -31,17 +31,13 @@
 	desc = "A banner with the symbol of the Solar Confederate Government."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/solgov)
 
-<<<<<<< HEAD
-//VOREStation Removal //CHOMP re-addition. Seriously? You commented this out for your lore? What's wrong with JUST NOT SPAWNING IT or something.
-=======
 /obj/item/weapon/banner/altevian
 	name = "\improper Altevian Hegemony Banner"
 	icon_state = "banner-altevian"
 	desc = "A banner that flies for the pride of the hegemony."
 	//catalogue_data = list(/datum/category_item/catalogue/information/organization/altevian_hegemony) // TODO?
 
-/* //VOREStation Removal
->>>>>>> b235d3c27e... Merge pull request #13750 from Heroman3003/altevian-foodstuff-2
+//VOREStation Removal //CHOMP re-addition. Seriously? You commented this out for your lore? What's wrong with JUST NOT SPAWNING IT or something.
 /obj/item/weapon/banner/virgov
 	name = "\improper VirGov banner"
 	icon_state = "banner-virgov"
