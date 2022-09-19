@@ -223,3 +223,7 @@
 /area/submap/DugOutMercs
 	name = "POI - Dug Out Mercanries"
 	ambience = AMBIENCE_HIGHSEC
+
+/area/submap/AbandonedLab
+	name = "POI - Abandoned Lab"
+	ambience = AMBIENCE_HIGHSEC

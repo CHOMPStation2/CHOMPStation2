@@ -54,6 +54,7 @@
 	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
+	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
 	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
 
@@ -91,6 +92,7 @@
 			voremob_awake = TRUE
 		update_fullness()
 		if(!vore_fullness)
+			update_transform()
 			return 0
 		else if((stat == CONSCIOUS) && (!icon_rest || !resting || !incapacitated(INCAPACITATION_DISABLED)) && (vore_icons & SA_ICON_LIVING))
 			icon_state = "[icon_living]-[vore_fullness]"
@@ -377,7 +379,7 @@
 	if(buckle_mob(M))
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
-/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
+/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, used_radios, speaking, alt_name)
 	//CHOMPEdit - This whole proc tbh
 	if(message_mode)
 		if(message_mode == "intercom")

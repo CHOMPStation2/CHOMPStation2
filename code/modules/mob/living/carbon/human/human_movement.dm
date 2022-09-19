@@ -20,7 +20,14 @@
 			. += M.slowdown
 
 	var/health_deficiency = (getMaxHealth() - health)
-	if(health_deficiency >= 40) . += (health_deficiency / 25)
+	if(istype(src, /mob/living/carbon/human)) //VOREStation Edit Start
+		var/mob/living/carbon/human/H = src
+		health_deficiency *= H.species.trauma_mod //Species pain sensitivity does not apply to painkillers, so we apply it before
+	if(health_deficiency >= 40)
+		if(chem_effects[CE_PAINKILLER]) //On painkillers? Reduce pain! On anti-painkillers? Increase pain!
+			health_deficiency = max(0, health_deficiency - src.chem_effects[CE_PAINKILLER])
+		if(health_deficiency >= 40) //Still in enough pain for it to be significant?
+			. += (health_deficiency / 25) //VOREStation Edit End
 
 	if(can_feel_pain())
 		if(halloss >= 10) . += (halloss / 10) //halloss shouldn't slow you down if you can't even feel it
