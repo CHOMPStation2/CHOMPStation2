@@ -362,7 +362,7 @@
 				if(PL.use(5))
 					to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute in ten minutes from now.</span>")
 					to_chat(myprotean, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you will be able to reconstitute in ten minutes.</span>")
-					addtimer(CALLBACK(src, .proc/make_alive, myprotean), 6000)
+					addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 6000)
 					return
 			else
 				to_chat(user, "<span class='notice'>This Protean is already reconstituting</span>")
@@ -375,11 +375,8 @@
 			AssimilateBag(user,0,W)
 	..()
 
-/obj/item/weapon/rig/protean/proc/make_alive(var/mob/living/simple_mob/protean_blob/P)
-	var/mob/living/carbon/human/H
-	var/datum/species/protean/S
-	if(P.humanform)
-		H = P.humanform
+/obj/item/weapon/rig/protean/proc/make_alive(var/mob/living/carbon/human/H, var/partial)
+	if(H)
 		H.setToxLoss(0)
 		H.setOxyLoss(0)
 		H.setCloneLoss(0)
@@ -393,17 +390,30 @@
 		H.ear_deaf = 0
 		H.ear_damage = 0
 		H.heal_overall_damage(H.getActualBruteLoss(), H.getActualFireLoss(), 1)
-		dead_mob_list.Remove(H)
-		living_mob_list += H
-		H.tod = null
-		H.timeofdeath = 0
-		H.set_stat(CONSCIOUS)
-		if(istype(H.species, /datum/species/protean))
-			S = H.species
-			S.pseudodead = 0
-			dead = 0
-			reviving = 0
-			to_chat(P, "<span class='notice'>You have finished reconstituting.</span>")
+		for(var/I in H.organs_by_name)
+			if(!H.organs_by_name[I] || istype(H.organs_by_name[I], /obj/item/organ/external/stump))
+				if(H.organs_by_name[I])
+					var/obj/item/organ/external/oldlimb = H.organs_by_name[I]
+					oldlimb.removed()
+					qdel(oldlimb)
+				var/list/organ_data = H.species.has_limbs[I]
+				var/limb_path = organ_data["path"]
+				var/obj/item/organ/external/new_eo = new limb_path(H)
+				new_eo.robotize(H.synthetic ? H.synthetic.company : null)
+				new_eo.sync_colour_to_human(H)
+		if(!partial)
+			dead_mob_list.Remove(H)
+			living_mob_list += H
+			H.tod = null
+			H.timeofdeath = 0
+			H.set_stat(CONSCIOUS)
+			if(istype(H.species, /datum/species/protean))
+				var/datum/species/protean/S
+				S = H.species
+				S.pseudodead = 0
+				dead = 0
+				reviving = 0
+				to_chat(myprotean, "<span class='notice'>You have finished reconstituting.</span>")
 
 /obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
 	return	//We don't do that here

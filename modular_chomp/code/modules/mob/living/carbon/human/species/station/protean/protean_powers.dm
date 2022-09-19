@@ -89,113 +89,39 @@
 	update_icons_body()
 
 /mob/living/carbon/human/proc/nano_regenerate()
-	set name = "Total Reassembly (wip)"
-	set desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
+	set name = "Total Reassembly"
+	set desc = "Fully repair yourself or reload your appearance from whatever character slot you have loaded."
 	set category = "Abilities"
 	set hidden = 1
 	var/mob/living/caller = src
 	if(temporary_form)
 		caller = temporary_form
-		to_chat(caller,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
-	else
-		to_chat(src,"<span class ='warning'>This function isn't coded yet. Soon, my child.</span>")
-
-
-
-	/*if(stat)
-		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
+	var/input = tgui_alert(caller,{"Do you want to rebuild or reassemble yourself?
+	Rebuilding will cost 10,000 steel and will rebuild all of your limbs as well as repair all damage over a 40s period.
+	Reassembling costs no steel and will copy the appearance data of your currently loaded save slot."},"Reassembly",list("Rebuild","Reassemble","Cancel"))
+	if(input == "Cancel" || !input)
 		return
-
-	if(!isturf(loc))
-		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
-		return
-
-	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
-	//Missing the organ that does this
-	if(!istype(refactory))
-		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
-		return
-
-	//Already regenerating
-	if(active_regen)
-		to_chat(src, "<span class='warning'>You are already refactoring!</span>")
-		return
-
-	var/swap_not_rebuild = tgui_alert(src,"Do you want to rebuild, or reshape?","Rebuild or Reshape",list("Reshape","Cancel","Rebuild"))
-	if(swap_not_rebuild == "Cancel")
-		return
-	if(swap_not_rebuild == "Reshape")
-		var/list/usable_manufacturers = list()
-		for(var/company in chargen_robolimbs)
-			var/datum/robolimb/M = chargen_robolimbs[company]
-			if(!(BP_TORSO in M.parts))
-				continue
-			if(impersonate_bodytype in M.species_cannot_use)
-				continue
-			if(M.whitelisted_to && !(ckey in M.whitelisted_to))
-				continue
-			usable_manufacturers[company] = M
-		if(!usable_manufacturers.len)
-			return
-		var/manu_choice = tgui_input_list(src, "Which manufacturer do you wish to mimic?", "Manufacturer", usable_manufacturers)
-
-		if(!manu_choice)
-			return //Changed mind
-		if(!organs_by_name[BP_TORSO])
-			return //Ain't got a torso!
-
-		var/obj/item/organ/external/torso = organs_by_name[BP_TORSO]
-		to_chat(src, "<span class='danger'>Remain still while the process takes place! It will take 5 seconds.</span>")
-		visible_message("<B>[src]</B>'s form collapses into an amorphous blob of black ichor...")
-
-		var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
-		active_regen = 1
-		if(do_after(blob,5 SECONDS))
-			synthetic = usable_manufacturers[manu_choice]
-			torso.robotize(manu_choice) //Will cascade to all other organs.
-			regenerate_icons()
-			visible_message("<B>[src]</B>'s form reshapes into a new one...")
-		active_regen = 0
-		nano_outofblob(blob)
-		return
-
-	//Not enough resources (AND spends the resources, should be the last check)
-	if(!refactory.use_stored_material(MAT_STEEL,refactory.max_storage))
-		to_chat(src, "<span class='warning'>You need to be maxed out on normal metal to do this!</span>")
-		return
-
-	var/delay_length = round(active_regen_delay * species.active_regen_mult)
-	to_chat(src, "<span class='danger'>Remain still while the process takes place! It will take [delay_length/10] seconds.</span>")
-	visible_message("<B>[src]</B>'s form begins to shift and ripple as if made of oil...")
-	active_regen = 1
-
-	var/mob/living/simple_mob/protean_blob/blob = nano_intoblob()
-	if(do_after(blob, delay_length, null, 0))
-		if(stat != DEAD && refactory)
-			var/list/holder = refactory.materials
-			species.create_organs(src)
-			var/obj/item/organ/external/torso = organs_by_name[BP_TORSO]
-			torso.robotize() //synthetic wasn't defined here.
-			LAZYCLEARLIST(blood_DNA)
-			LAZYCLEARLIST(feet_blood_DNA)
-			blood_color = null
-			feet_blood_color = null
-			regenerate_icons() //Probably worth it, yeah.
-			var/obj/item/organ/internal/nano/refactory/new_refactory = locate() in internal_organs
-			if(!new_refactory)
-				log_debug("[src] protean-regen'd but lacked a refactory when done.")
-			else
-				new_refactory.materials = holder
-			to_chat(src, "<span class='notice'>Your refactoring is complete.</span>") //Guarantees the message shows no matter how bad the timing.
-			to_chat(blob, "<span class='notice'>Your refactoring is complete!</span>")
+	if(input == "Rebuild")
+		var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
+		if(refactory.get_stored_material(MAT_STEEL) >= 10000)
+			to_chat(caller, "<span class='notify'>You begin to rebuild. You will need to remain still.</span>")
+			if(do_after(caller, 400))
+				if(species?:OurRig)	//Unsafe, but we should only ever be using this with a Protean
+					species?:OurRig?:make_alive(src,1)	//Re-using this proc
+					refactory.use_stored_material(MAT_STEEL,refactory.get_stored_material(MAT_STEEL))	//Use all of our steel
+				else
+					to_chat(caller, "<span class='usrdanger'>Somehow, you are missing your protean rig. You are unable to rebuild without one.</span>")
 		else
-			to_chat(src,  "<span class='critical'>Your refactoring has failed.</span>")
-			to_chat(blob, "<span class='critical'>Your refactoring has failed!</span>")
+			to_chat(caller, "<span class='warning'>You do not have enough steel stored for this operation.</span>")
 	else
-		to_chat(src,  "<span class='critical'>Your refactoring is interrupted.</span>")
-		to_chat(blob, "<span class='critical'>Your refactoring is interrupted!</span>")
-	active_regen = 0
-	nano_outofblob(blob)*/
+		to_chat(caller, "<span class='notify'>You begin to reassemble. You will need to remain still.</span>")
+		caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble.</span>")
+		if(do_after(caller, 40))
+			if(client.prefs)	//Make sure we didn't d/c
+				var/obj/item/weapon/rig/protean/Rig = species?:OurRig
+				GetAppearanceFromPrefs()
+				species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
+				caller.visible_message("<span class='notify'>[caller] adopts a new form!</span>", "<span class='danger'>You have reassembled.</span>")
 
 ////
 //  Storing metal
@@ -511,8 +437,8 @@
 	to_call = /mob/living/carbon/human/proc/nano_partswap
 
 /obj/effect/protean_ability/reform_body
-	ability_name = "Total Reassembly (wip)"
-	desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
+	ability_name = "Total Reassembly"
+	desc = "Fully repair yourself or reload your appearance from whatever character slot you have loaded."
 	icon_state = "body"
 	to_call = /mob/living/carbon/human/proc/nano_regenerate
 
