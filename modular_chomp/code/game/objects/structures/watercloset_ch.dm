@@ -156,6 +156,7 @@
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
-	B.name = "waste shredder"
-	B.digest_brute = 12
+	B.name = "waste hopper"
+	B.desc = "With a resounding CRUNCH, your form has gotten snagged by the Muffin Monster's rotational interlocking cutters indiscriminately crunching away at anything unlucky enough to end up in its hopper, only for the insatiable machine to grind it all down into a slurry mulch fine enough to pass through the narrow sewage lines trouble-free..."
+	B.digest_brute = 20
 	B.special_entrance_sound = 'sound/machines/blender.ogg'
