@@ -2,6 +2,7 @@
 	name = OUTFIT_JOB_NAME("Non-Crew")
 	//hierarchy_type = /decl/hierarchy/outfit/noncrew
 	r_pocket = /obj/item/weapon/spacecash/ewallet
+	l_pocket = /obj/item/device/survivalcapsule/superpose
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 /decl/hierarchy/outfit/noncrew/post_equip(mob/living/carbon/human/H)
