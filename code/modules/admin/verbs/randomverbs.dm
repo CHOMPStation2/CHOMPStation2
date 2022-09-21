@@ -530,8 +530,9 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(equipment)
 		if(charjob)
 			job_master.EquipRank(new_character, charjob, 1, announce)
-			new_character.mind.assigned_role = charjob
-			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
+			if(new_character.mind)
+				new_character.mind.assigned_role = charjob
+				new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
 		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//If desired, add records.

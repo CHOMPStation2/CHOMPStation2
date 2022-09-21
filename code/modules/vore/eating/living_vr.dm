@@ -117,6 +117,10 @@
 		B.name = "Stomach"
 		B.desc = "It appears to be rather warm and wet. Makes sense, considering it's inside \the [name]."
 		B.can_taste = TRUE
+		if(ishuman(src))
+			var/mob/living/carbon/human/H = src
+			if(istype(H.species,/datum/species/monkey))
+				allow_spontaneous_tf = TRUE
 		return TRUE
 
 //
@@ -645,8 +649,6 @@
 		qdel(H)
 	else
 		belly.nom_mob(prey, user)
-	if(!ishuman(user))
-		user.update_icons()
 
 	// Inform Admins
 	if(pred == user)
@@ -709,6 +711,16 @@
     . = ..()
     gas = list(
         "oxygen" = 100)
+
+/datum/gas_mixture/belly_air/nitrogen_breather
+    volume = 2500
+    temperature = 293.150
+    total_moles = 104
+
+/datum/gas_mixture/belly_air/nitrogen_breather/New()
+    . = ..()
+    gas = list(
+        "nitrogen" = 100)
 
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)

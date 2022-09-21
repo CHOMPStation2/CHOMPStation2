@@ -53,7 +53,8 @@ Mostly for chomp exclusive stuff, otherwise if you need to modify a base file fo
     * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* CHOMP Removal - "Reason"
 * If it is something like a bugfix that Polaris or Vorestation would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
-* Any new files should have "_ch" at the end. For example, "life_ch.dm". Just make them in the same location as the file they are related to.
+* Any new files should preferrably go into the modular_chomp folder following the file structure of where it would be placed normally. The old method was to have "_ch" at the end. For example, "life_ch.dm".
+* Do not make changes to base icon files. New icon files should go into modular_chomp and code should be changed to point to the new file.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 The `attempt_ch()` proc has been added for your convienence. It allows a many-line change to become a single-line change in the existing Polaris files, preserving mergeability and allowing better code separation while preventing your new code from causing runtimes that stop the original code from running. If you are wanting to inject new procedures into an existing proc, called `update_atoms()` for example, you would create `update_atoms_ch()` in a nearby `_ch.dm` file, and then call to it from a single line in the original `update_atoms()` with `attempt_ch()`.
