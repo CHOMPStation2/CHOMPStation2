@@ -1,5 +1,5 @@
 /datum/job/noncrew
-    title = "Non crew"
+    title = "Non-Crew"
     disallow_jobhop = TRUE
     total_positions = -1
     spawn_positions = 6
@@ -13,7 +13,7 @@
     account_allowed = 0
     offmap_spawn = TRUE
 
-    outfit_type = /decl/hierarchy/outfit/job/noncrew
+    outfit_type = /decl/hierarchy/outfit/noncrew
     job_description = "Not a crew member."
 
 /datum/job/noncrew/is_species_banned(species_name, brain_type)

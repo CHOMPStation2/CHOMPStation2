@@ -803,7 +803,8 @@ var/global/datum/controller/occupations/job_master
 			.["msg"] = spawnpos.msg
 			.["channel"] = spawnpos.announce_channel
 		else
-			if(fail_deadly)
+			var/datum/job/J = SSjob.get_job(rank)
+			if(fail_deadly || J?.offmap_spawn)
 				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice.</span>")
 				return
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")
