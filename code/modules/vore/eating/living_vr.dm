@@ -1093,7 +1093,7 @@
 
 // Full screen belly overlays!
 /obj/screen/fullscreen/belly
-	icon = 'modular_chomp/icons/mob/screen_full_vore.dmi' //CHOMPedit
+	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit
 	icon_state = ""
 
 /obj/screen/fullscreen/belly/colorized
