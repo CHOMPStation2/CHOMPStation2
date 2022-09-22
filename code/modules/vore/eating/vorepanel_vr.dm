@@ -199,8 +199,8 @@
 			"nutrition_ex" = host.nutrition_message_visible,
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
-<<<<<<< HEAD
-			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
+			"belly_fullscreen_color" = selected.belly_fullscreen_color,
+			"colorization_enabled" = selected.colorization_enabled,
 			"mapRef" = map_name,	//CHOMPEdit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
 			//CHOMP add: vore sprite options
@@ -217,10 +217,6 @@
 			"tail_extra_overlay2" = selected.tail_extra_overlay2
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
-=======
-			"belly_fullscreen_color" = selected.belly_fullscreen_color,
-			"colorization_enabled" = selected.colorization_enabled,
->>>>>>> 3ba4e4b189... Merge pull request #13619 from Cameron653/GREYSCALE_TUMMY_V2
 		)
 
 		var/list/addons = list()
@@ -267,9 +263,6 @@
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 
 		selected_list["disable_hud"] = selected.disable_hud
-<<<<<<< HEAD
-		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
-=======
 		selected_list["colorization_enabled"] = selected.colorization_enabled
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
 
@@ -287,7 +280,6 @@
 			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono_hole"
 			selected_list["possible_fullscreens"] -= "a_anim_belly"
 			//INSERT COLORIZE-ONLY STOMACHS HERE
->>>>>>> 3ba4e4b189... Merge pull request #13619 from Cameron653/GREYSCALE_TUMMY_V2
 
 		var/list/selected_contents = list()
 		for(var/O in selected)
