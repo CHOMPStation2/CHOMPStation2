@@ -958,6 +958,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
           </LabeledList.Item>
         </Flex>
       </Section>
+      <Section>
         <Section title="Vore FX">
           <LabeledList>
             <LabeledList.Item label="Disable Prey HUD">
