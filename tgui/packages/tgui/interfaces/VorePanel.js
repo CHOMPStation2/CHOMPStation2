@@ -1612,11 +1612,6 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Stumble Vore Disabled',
       },
     },
-<<<<<<< HEAD
-    spawnbelly: {
-      action: 'toggle_latejoin_vore',
-      test: latejoin_vore,
-=======
     toggle_throw_vore: {
       action: 'toggle_throw_vore',
       test: throw_vore,
@@ -1632,10 +1627,9 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Throw Vore Disabled',
       },
     },
-    inbelly_spawning: {
-      action: 'toggle_allow_inbelly_spawning',
-      test: allow_inbelly_spawning,
->>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
+    spawnbelly: {
+      action: 'toggle_latejoin_vore',
+      test: latejoin_vore,
       tooltip: {
         main: 'Toggle late join vore spawnpoint.',
         enable: 'Click here to turn on vorish spawnpoint.',
@@ -1886,28 +1880,19 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
-<<<<<<< HEAD
+          <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnprey} />
-=======
-          <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
->>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
         </Flex.Item>
-<<<<<<< HEAD
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy_full} />
-=======
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.noisy} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.resize} />
->>>>>>> f02c3b6163... Merge pull request #13676 from Cameron653/TONGUE_VORE
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.resize} />
