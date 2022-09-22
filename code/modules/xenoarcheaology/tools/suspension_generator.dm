@@ -2,7 +2,7 @@
 	name = "suspension field generator"
 	desc = "It has stubby legs bolted up against it's body for stabilising."
 	icon = 'icons/obj/xenoarchaeology.dmi'
-	icon_state = "suspension2"
+	icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
 	density = TRUE
 	req_access = list(access_research)
 	var/obj/item/weapon/cell/cell
@@ -44,6 +44,7 @@
 			deactivate()
 
 /obj/machinery/suspension_gen/attack_hand(var/mob/user)
+	tgui_interact(user) //CHOMPStation EDIT - Fixes soft locking the device
 	if(panel_open)
 		if(cell)
 			to_chat(user, "<span class='notice'>You remove [cell].</span>")
@@ -51,11 +52,9 @@
 			cell.add_fingerprint(user)
 			cell.update_icon()
 
-			icon_state = "suspension0"
+			icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
 			cell = null
 		return
-
-	tgui_interact(user)
 
 /obj/machinery/suspension_gen/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -110,8 +109,10 @@
 			playsound(src, W.usesound, 50, 1)
 			to_chat(user, "<span class='notice'>You wrench the stabilising legs [anchored ? "into place" : "up against the body"].</span>")
 			if(anchored)
+				icon_state = "suspension_wrenched" //CHOMPStation EDIT - Fixes Icon State
 				desc = "It is resting securely on four stubby legs."
 			else
+				icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
 				desc = "It has stubby legs bolted up against it's body for stabilising."
 		else
 			to_chat(user, "<span class='warning'>You are unable to unsecure [src] while it is active!</span>")
@@ -124,7 +125,7 @@
 				W.forceMove(src)
 				cell = W
 				to_chat(user, "<span class='notice'>You insert [cell].</span>")
-				icon_state = "suspension1"
+				icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
 	else if(istype(W, /obj/item/weapon/card/emag))
 		return W.resolve_attackby(src, user)
 	else
@@ -151,7 +152,7 @@
 
 	suspension_field = new(T)
 	visible_message("<span class='notice'>\icon[src][bicon(src)] [src] activates with a low hum.</span>")
-	icon_state = "suspension3"
+	icon_state = "suspension_on" //CHOMPStation EDIT - Fixes Icon State
 
 	for(var/obj/item/I in T)
 		I.loc = suspension_field
@@ -178,7 +179,7 @@
 	visible_message("<span class='notice'>\icon[src][bicon(src)] [src] deactivates with a gentle shudder.</span>")
 	qdel(suspension_field)
 	suspension_field = null
-	icon_state = "suspension2"
+	icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
 
 /obj/machinery/suspension_gen/Destroy()
 	deactivate()
