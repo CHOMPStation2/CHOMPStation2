@@ -46,7 +46,7 @@
 /datum/vore_look/ui_assets(mob/user)
 	. = ..()
 	. += get_asset_datum(/datum/asset/spritesheet/vore)
-	. += get_asset_datum(/datum/asset/spritesheet/vore_colorized) //Either this isn't working or my cache is corrupted and won't show them.
+	. += get_asset_datum(/datum/asset/spritesheet/vore_fixed) //Either this isn't working or my cache is corrupted and won't show them. //CHOMPedit
 
 /datum/vore_look/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -264,9 +264,9 @@
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
 
 		if(selected.colorization_enabled)
-			selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_colorized_vore.dmi') //Makes any icons inside of here selectable.
+			selected_list["possible_fullscreens"] = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //Makes any icons inside of here selectable. //CHOMPedit
 		else
-			selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_vore.dmi') //Where all stomachs - colorable and not - are stored.
+			selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_vore.dmi') //Where all upstream stomachs are stored. I'm not touching the chunks of comments below but they are inaccurate here.
 			//INSERT COLORIZE-ONLY STOMACHS HERE.
 			//This manually removed color-only stomachs from the above list.
 			//For some reason, colorized stomachs have to be added to both colorized_vore(to be selected) and full_vore (to show the preview in tgui)

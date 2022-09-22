@@ -163,7 +163,7 @@
 	// Lets you do a fullscreen overlay. Set to an icon_state string.
 	var/belly_fullscreen = ""
 	var/disable_hud = FALSE
-	var/colorization_enabled = FALSE
+	var/colorization_enabled = TRUE //CHOMPedit
 	var/belly_fullscreen_color = "#823232"
 
 
@@ -393,7 +393,7 @@
 
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/colorized)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
 			F.icon_state = belly_fullscreen
 			F.color = belly_fullscreen_color
 			/* //Allows for 'multilayered' stomachs. Currently not implemented.
@@ -401,7 +401,7 @@
 				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
 			*/
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
 			F.icon_state = belly_fullscreen
 	else
 		L.clear_fullscreen("belly")
@@ -420,7 +420,7 @@
 
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/colorized)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
 			F.icon_state = belly_fullscreen
 			F.color = belly_fullscreen_color
 			/* //Allows for 'multilayered' stomachs. Currently not implemented.
@@ -428,7 +428,7 @@
 				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
 			*/
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
 			F.icon_state = belly_fullscreen
 	else
 		L.clear_fullscreen("belly")
