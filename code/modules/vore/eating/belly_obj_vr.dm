@@ -227,9 +227,9 @@
 	"wet_loop",
 	"belly_fullscreen",
 	"disable_hud",
-<<<<<<< HEAD
 	"reagent_mode_flags",	//CHOMP start of variables from CHOMP
 	"belly_fullscreen_color",
+	"colorization_enabled",
 	"reagentbellymode",
 	"liquid_fullness1_messages",
 	"liquid_fullness2_messages",
@@ -266,10 +266,6 @@
 	"autotransfer_enabled",
 	"autotransfer_min_amount",
 	"autotransfer_max_amount", //CHOMP end of variables from CHOMP
-=======
-	"belly_fullscreen_color",
-	"colorization_enabled",
->>>>>>> 3ba4e4b189... Merge pull request #13619 from Cameron653/GREYSCALE_TUMMY_V2
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -396,11 +392,6 @@
 		return
 
 	if(belly_fullscreen)
-<<<<<<< HEAD
-		var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
-		F.icon_state = belly_fullscreen
-		F.color = belly_fullscreen_color //CHOMPEdit
-=======
 		if(colorization_enabled)
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/colorized)
 			F.icon_state = belly_fullscreen
@@ -412,7 +403,6 @@
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
 			F.icon_state = belly_fullscreen
->>>>>>> 3ba4e4b189... Merge pull request #13619 from Cameron653/GREYSCALE_TUMMY_V2
 	else
 		L.clear_fullscreen("belly")
 		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
