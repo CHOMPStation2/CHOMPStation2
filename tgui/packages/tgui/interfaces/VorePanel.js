@@ -337,15 +337,12 @@ const VoreBellySelectionAndCustomization = (props, context) => {
               New
               <Icon name="plus" ml={0.5} />
             </Tabs.Tab>
-<<<<<<< HEAD
             {/* CHOMPEdit - "Belly HTML Export Earlyport" */}
             <Tabs.Tab onClick={() => act('exportpanel')}>
               Export
               <Icon name="file-export" ml={0.5} />
             </Tabs.Tab>
             {/* CHOMPEdit End */}
-=======
->>>>>>> 3ba4e4b189... Merge pull request #13619 from Cameron653/GREYSCALE_TUMMY_V2
             <Divider />
             {our_bellies.map((belly) => (
               <Tabs.Tab
@@ -843,11 +840,11 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-<<<<<<< HEAD
   const {
     belly_fullscreen,
     belly_fullscreen_color,
     mapRef,
+    colorization_enabled,
     possible_fullscreens,
     disable_hud,
     vore_sprite_flags,
@@ -945,53 +942,6 @@ const VoreSelectedBellyVisuals = (props, context) => {
             onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color', val: null })}>
             Select Color
           </Button>
-        </Flex>
-        <ByondUi
-          style={{
-            width: '200px',
-            height: '200px',
-          }}
-          params={{
-            id: mapRef,
-            type: 'map',
-          }}
-        />
-      </Section>
-      <Section>
-        <Section title="Vore FX">
-          <LabeledList>
-            <LabeledList.Item label="Disable Prey HUD">
-              <Button
-                onClick={() => act('set_attribute', { attribute: 'b_disable_hud' })}
-                icon={disable_hud ? 'toggle-on' : 'toggle-off'}
-                selected={disable_hud}
-                content={disable_hud ? 'Yes' : 'No'}
-              />
-            </LabeledList.Item>
-          </LabeledList>
-        </Section>
-        <Section title="Belly Fullscreens Styles" width="800px">
-          Belly styles:
-          <Button
-            fluid
-            selected={belly_fullscreen === '' || belly_fullscreen === null}
-            onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: null })}>
-            Disabled
-          </Button>
-=======
-  const { belly_fullscreen, possible_fullscreens, disable_hud, belly_fullscreen_color, mapRef, colorization_enabled } =
-    belly;
-
-  return (
-    <Fragment>
-      <Section title="Belly Fullscreens Preview and Coloring">
-        <Flex direction="row">
-          <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
-          <Button
-            icon="eye-dropper"
-            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color', val: null })}>
-            Select Color
-          </Button>
           <LabeledList.Item label="Enable Coloration">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_colorization_enabled' })}
@@ -1008,7 +958,6 @@ const VoreSelectedBellyVisuals = (props, context) => {
           </LabeledList.Item>
         </Flex>
       </Section>
-      <Section>
         <Section title="Vore FX">
           <LabeledList>
             <LabeledList.Item label="Disable Prey HUD">
@@ -1029,7 +978,6 @@ const VoreSelectedBellyVisuals = (props, context) => {
             onClick={() => act('set_attribute', { attribute: 'b_fullscreen', val: null })}>
             Disabled
           </Button>
->>>>>>> 3ba4e4b189... Merge pull request #13619 from Cameron653/GREYSCALE_TUMMY_V2
           {Object.keys(possible_fullscreens).map((key) => (
             <span style={{ width: '256px' }}>
               <Button
