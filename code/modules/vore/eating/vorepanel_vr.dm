@@ -199,7 +199,6 @@
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"colorization_enabled" = selected.colorization_enabled,
-			"mapRef" = map_name,	//CHOMPEdit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
 			//CHOMP add: vore sprite options
 			"affects_voresprite" = selected.affects_vore_sprites,
