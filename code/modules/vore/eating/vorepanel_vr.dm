@@ -1483,19 +1483,16 @@
 			var/newcolor = input(usr, "Choose tail color.", "", host.vore_selected.tail_colouration) as color|null
 			if(newcolor)
 				host.vore_selected.tail_colouration = newcolor
-			update_preview_icon()
 			. = TRUE
 		if("b_tail_color2") // CHOMP Addition
 			var/newcolor = input(usr, "Choose tail secondary color.", "", host.vore_selected.tail_extra_overlay) as color|null
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay = newcolor
-			update_preview_icon()
 			. = TRUE
 		if("b_tail_color3") // CHOMP Addition
 			var/newcolor = input(usr, "Choose tail tertiary color.", "", host.vore_selected.tail_extra_overlay2) as color|null
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay2 = newcolor
-			update_preview_icon()
 			. = TRUE
 
 	if(.)
