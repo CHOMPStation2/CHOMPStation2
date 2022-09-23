@@ -9,8 +9,13 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/diner)
 "ad" = (
+<<<<<<< HEAD
 /turf/simulated/wall,
 /area/submap/diner)
+=======
+/turf/simulated/wall/concrete,
+/area/submap/Diner)
+>>>>>>> 1a8f1760fa... [MIRROR] conk rete (ABLE TO BE MERGED)  (#13467)
 "ae" = (
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/tiled/white,
@@ -52,8 +57,13 @@
 /area/submap/diner)
 "am" = (
 /obj/structure/sink/kitchen,
+<<<<<<< HEAD
 /turf/simulated/wall,
 /area/submap/diner)
+=======
+/turf/simulated/wall/concrete,
+/area/submap/Diner)
+>>>>>>> 1a8f1760fa... [MIRROR] conk rete (ABLE TO BE MERGED)  (#13467)
 "an" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
