@@ -5,10 +5,16 @@
 	#include "groundbase_shuttles.dm"
 	#include "groundbase_telecomms.dm"
 	#include "groundbase_things.dm"
-	#include "..\offmap_vr\common_offmaps.dm"
 	#include "..\tether\tether_jobs.dm"
+	#include "groundbase_events.dm"
 	#include "groundbase_poi_stuff.dm"
+<<<<<<< HEAD
 	#include "gb-wilds.dm"
+=======
+	#include "groundbase_wilds.dm"
+	#include "..\offmap_vr\common_offmaps.dm"
+	#include "..\~map_system\maps_vr.dm"
+>>>>>>> 5640070caa... Merge pull request #13761 from Heroman3003/map-specific-eventsa
 
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions
 		#include "gb-z1.dmm"
