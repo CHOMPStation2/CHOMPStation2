@@ -1198,7 +1198,6 @@
 			appendage_alt_setting = 0
 		else
 			appendage_alt_setting = 1
-
 	else
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
