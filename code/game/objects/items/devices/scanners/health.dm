@@ -105,7 +105,6 @@
 	if(M.radiation)
 		if(advscan >= 2 && showadvscan == 1)
 			var/severity = ""
-			if(M.radiation >= 75)
 			if(M.radiation >= 1500)
 				severity = "Lethal"
 			else if(M.radiation >= 600)
