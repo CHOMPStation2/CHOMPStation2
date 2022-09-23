@@ -48,8 +48,8 @@
 /area/submap/ChemSpill2
 	name = "POI Wilderness - Acrid Lake"
 	ambience = AMBIENCE_FOREBODING
- 
- /area/submap/CultBar
+
+/area/submap/CultBar
 	name = "POI - Cult Bar"
 	ambience = AMBIENCE_GHOSTLY
 
@@ -80,9 +80,9 @@
 /area/submap/Drugd
 	name = "POI Wilderness - Drug Den"
 	ambience = AMBIENCE_FOREBODING
- 
- /area/submap/DugOutMercs
-	name = "POI - Dug Out Mercanries"
+
+/area/submap/DugOutMercs
+	name = "POI - Dug Out Mercenaries"
 	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/Cragzone1
@@ -156,8 +156,8 @@
 /area/submap/Manor1
 	name = "POI Wilderness - Manor House"
 	ambience = AMBIENCE_FOREBODING
- 
- /area/submap/MechHanger
+
+/area/submap/MechHanger
 	name = "POI - Mech Hanger"
 	ambience = AMBIENCE_SIF
 
