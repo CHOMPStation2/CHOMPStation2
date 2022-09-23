@@ -1154,7 +1154,6 @@
 		to_chat(src, "<span class='notice'>You successfully drag \the [target] into the water, slipping them into your [vore_selected].</span>")
 		target.forceMove(src.vore_selected)
 
-
 /mob/living/carbon/human/proc/toggle_pain_module()
 	set name = "Toggle pain simulation."
 	set desc = "Turn on your pain simulation for that organic experience! Or turn it off for repairs, or if it's too much."
@@ -1166,8 +1165,6 @@
 		to_chat(src, "<span class='danger'> You turn on your pain simulators </span>")
 
 	synth_cosmetic_pain = !synth_cosmetic_pain
-<<<<<<< HEAD
-=======
 
 //This is the 'long vore' ability. Also known as "Grab Prey with appendage" or "Long Predatorial Reach". Or simply "Tongue Vore"
 //It involves projectiles (which means it can be VV'd onto a gun for shenanigans)
@@ -1194,12 +1191,14 @@
 		var/new_color = input(usr, "Choose a color to set your appendage to!", "", appendage_color) as color|null
 		if(new_color)
 			appendage_color = new_color
+
 	if(choice == "Functionality") //Easy way to set color so we don't bloat up the menu with even more buttons.
 		var/choice2 = tgui_alert(usr, "Choose if you want to be pulled to the target or pull them to you!", "Functionality Setting", list("Pull target to self", "Pull self to target"))
 		if(choice2 == "Pull target to self")
 			appendage_alt_setting = 0
 		else
 			appendage_alt_setting = 1
+
 	else
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
@@ -1379,4 +1378,3 @@
 	hitsound = 'sound/vore/sunesound/pred/schlorp.ogg'
 	hitsound_wall = 'sound/vore/sunesound/pred/schlorp.ogg'
 	zaptype = /obj/item/projectile/beam/appendage
->>>>>>> 6285a02b37... Merge pull request #13731 from Cameron653/TONGUE_EDIT

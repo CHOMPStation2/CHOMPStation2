@@ -12,8 +12,6 @@
 		"Draining Liquids" = DM_FLAG_REAGENTSDRAIN
 		)
 
-	var/belly_fullscreen_color = "#823232"
-
 	var/show_liquids = FALSE //Moved from vorepanel_ch to be a belly var
 	var/show_fullness_messages = FALSE //Moved from vorepanel_ch to be a belly var
 

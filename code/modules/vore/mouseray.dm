@@ -139,7 +139,7 @@
 					N.gender = H.gender
 					N.identifying_gender = H.identifying_gender
 				else
-					new_mob.gender = H.identifying_gender
+					new_mob.gender = H.gender
 			else
 				new_mob.gender = M.gender
 				if(ishuman(new_mob))
@@ -230,14 +230,12 @@
 	new_mob.permit_healbelly = permit_healbelly
 	new_mob.noisy = noisy
 	new_mob.selective_preference = selective_preference
-<<<<<<< HEAD
-=======
 	new_mob.appendage_color = appendage_color
 	new_mob.appendage_alt_setting = appendage_alt_setting
->>>>>>> 6285a02b37... Merge pull request #13731 from Cameron653/TONGUE_EDIT
 	new_mob.drop_vore = drop_vore
 	new_mob.stumble_vore = stumble_vore
 	new_mob.slip_vore = slip_vore
+	new_mob.throw_vore = throw_vore
 	new_mob.resizable = resizable
 	new_mob.show_vore_fx = show_vore_fx
 	new_mob.step_mechanics_pref = step_mechanics_pref
