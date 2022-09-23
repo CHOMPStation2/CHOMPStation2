@@ -1,6 +1,7 @@
 /mob/living/simple_mob/vore
 	mob_class = MOB_CLASS_ANIMAL
 	mob_bump_flag = 0
+	can_be_drop_pred = 1
 
 /mob/living/simple_mob
 	var/nameset
@@ -26,6 +27,7 @@
 	permit_healbelly = client.prefs_vr.permit_healbelly
 	noisy = client.prefs_vr.noisy
 	selective_preference = client.prefs_vr.selective_preference
+	appendage_color = client.prefs_vr.appendage_color
 
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore
