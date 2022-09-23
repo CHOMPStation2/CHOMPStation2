@@ -154,10 +154,10 @@
 // 		/datum/asset/simple/fontawesome
 // 	)
 
-// /datum/asset/simple/jquery
-// 	assets = list(
-// 		"jquery.min.js"            = 'code/modules/goonchat/browserassets/js/jquery.min.js',
-// 	)
+/datum/asset/simple/jquery
+	assets = list(
+		"jquery.min.js"            = 'code/modules/tooltip/jquery.min.js',
+	)
 
 // /datum/asset/simple/goonchat
 // 	assets = list(
@@ -530,20 +530,5 @@
 		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
 		"southern_cross_nanomap_z10.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
-		//"tether_nanomap_z1.png"				= 'icons/_nanomaps/tether_nanomap_z1.png',
-		//"tether_nanomap_z2.png"				= 'icons/_nanomaps/tether_nanomap_z2.png',
-		//"tether_nanomap_z3.png"				= 'icons/_nanomaps/tether_nanomap_z3.png',
-		//"tether_nanomap_z4.png"				= 'icons/_nanomaps/tether_nanomap_z4.png',
-		//"tether_nanomap_z5.png"				= 'icons/_nanomaps/tether_nanomap_z5.png',
-		//"tether_nanomap_z6.png"				= 'icons/_nanomaps/tether_nanomap_z6.png',
-		//"tether_nanomap_z7.png"				= 'icons/_nanomaps/tether_nanomap_z7.png',
-		//"tether_nanomap_z8.png"				= 'icons/_nanomaps/tether_nanomap_z8.png',
-		//"tether_nanomap_z9.png"				= 'icons/_nanomaps/tether_nanomap_z9.png',
-		//"tether_nanomap_z10.png"			= 'icons/_nanomaps/tether_nanomap_z10.png',
-		//"tether_nanomap_z13.png"			= 'icons/_nanomaps/tether_nanomap_z13.png',
-		//"tether_nanomap_z14.png"			= 'icons/_nanomaps/tether_nanomap_z14.png',
-		//"stellardelight_nanomap_z1.png"		= 'icons/_nanomaps/sd_deck1.png',
-		//"stellardelight_nanomap_z2.png"		= 'icons/_nanomaps/sd_deck2.png',
-		//"stellardelight_nanomap_z3.png"		= 'icons/_nanomaps/sd_deck3.png',
 		// CHOMP Edit End
 	)
