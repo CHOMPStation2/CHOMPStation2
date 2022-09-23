@@ -157,8 +157,8 @@
 	name = "POI Wilderness - Manor House"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/MechHanger
-	name = "POI - Mech Hanger"
+/area/submap/MechHangar
+	name = "POI - Mech Hangar"
 	ambience = AMBIENCE_SIF
 
 /area/submap/MHR
