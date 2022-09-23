@@ -19,6 +19,7 @@
 	can_be_drop_prey = client.prefs_vr.can_be_drop_prey
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
 	latejoin_vore = client.prefs_vr.latejoin_vore //CHOMPedit
+	throw_vore = client.prefs_vr.throw_vore
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
 	allowmobvore = client.prefs_vr.allowmobvore
