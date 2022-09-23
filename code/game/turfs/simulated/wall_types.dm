@@ -79,17 +79,12 @@
 	. = ..(mapload, "resin",null,"resin")
 
 /turf/simulated/wall/concrete
-	desc = "A wall made out of concrete bricks"
-	material = MAT_CONCRETE
 	icon_state = "brick"
 
 /turf/simulated/wall/concrete/Initialize(mapload)
 	. = ..(mapload, "concrete") //3strong
 
 /turf/simulated/wall/r_concrete
-	desc = "A sturdy wall made of concrete and reinforced with plasteel rebar"
-	material = MAT_CONCRETE
-	reinf_material = MAT_PLASTEELREBAR
 	icon_state = "rbrick"
 
 /turf/simulated/wall/r_concrete/Initialize(mapload)
@@ -431,7 +426,7 @@
 					if(decided_to_blend)
 						dirs += direction
 						break blend_obj_loop // breaks outer loop
-						
+
 /turf/simulated/wall/eris/r_wall
 	icon_state = "rgeneric"
 /turf/simulated/wall/eris/r_wall/Initialize(mapload)
@@ -444,7 +439,7 @@
 	wall_masks = 'icons/turf/wall_masks_bay.dmi'
 	var/list/blend_objects = list(/obj/machinery/door)
 	var/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor)
-	
+
 	var/stripe_color // Adds a colored stripe to the walls
 
 /turf/simulated/wall/bay/can_join_with_low_wall(var/obj/structure/low_wall/WF)
@@ -458,7 +453,7 @@
 			I = image(wall_masks, "stripe[wall_connections[i]]", dir = 1<<(i-1))
 			I.color = stripe_color
 			add_overlay(I)
-			
+
 /turf/simulated/wall/bay/special_wall_connections(list/dirs, list/inrange)
 	..()
 	for(var/direction in cardinal)
