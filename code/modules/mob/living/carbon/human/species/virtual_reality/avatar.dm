@@ -118,3 +118,13 @@
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
 		V.go_out()
+
+	if(died_in_vr)
+		spawn(3000) //Delete the body after 5 minutes to make sure mob subsystem doesn't cry
+			var/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
+			for(var/slot in slots)
+				var/obj/item/I = get_equipped_item(slot = slot)
+				if(I)
+					unEquip(I,force = TRUE)
+			release_vore_contents(include_absorbed = TRUE, silent = TRUE)
+			qdel(src)
