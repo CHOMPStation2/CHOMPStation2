@@ -46,12 +46,11 @@
 /datum/vore_look/ui_assets(mob/user)
 	. = ..()
 	. += get_asset_datum(/datum/asset/spritesheet/vore)
+	. += get_asset_datum(/datum/asset/spritesheet/vore_fixed) //Either this isn't working or my cache is corrupted and won't show them. //CHOMPedit
 
 /datum/vore_look/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		update_preview_icon()	//CHOMPEdit
-		give_client_previews(user.client) //CHOMPEdit
 		ui = new(user, src, "VorePanel", "Vore Panel")
 		ui.open()
 		ui.set_autoupdate(FALSE)
@@ -198,8 +197,8 @@
 			"nutrition_ex" = host.nutrition_message_visible,
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
-			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
-			"mapRef" = map_name,	//CHOMPEdit
+			"belly_fullscreen_color" = selected.belly_fullscreen_color,
+			"colorization_enabled" = selected.colorization_enabled,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
 			//CHOMP add: vore sprite options
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -261,7 +260,23 @@
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 
 		selected_list["disable_hud"] = selected.disable_hud
-		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
+		selected_list["colorization_enabled"] = selected.colorization_enabled
+		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
+
+		if(selected.colorization_enabled)
+			selected_list["possible_fullscreens"] = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //Makes any icons inside of here selectable. //CHOMPedit
+		else
+			selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_vore.dmi') //Where all upstream stomachs are stored. I'm not touching the chunks of comments below but they are inaccurate here.
+			//INSERT COLORIZE-ONLY STOMACHS HERE.
+			//This manually removed color-only stomachs from the above list.
+			//For some reason, colorized stomachs have to be added to both colorized_vore(to be selected) and full_vore (to show the preview in tgui)
+			//Why? I have no flipping clue. As you can see above, vore_colorized is included in the assets but isn't working. It makes no sense.
+			//I can only imagine this is a BYOND/TGUI issue with the cache. If you can figure out how to fix this and make it so you only need to
+			//include things in full_colorized_vore, that would be great. For now, this is the only workaround that I could get to work.
+			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono"
+			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono_hole"
+			selected_list["possible_fullscreens"] -= "a_anim_belly"
+			//INSERT COLORIZE-ONLY STOMACHS HERE
 
 		var/list/selected_contents = list()
 		for(var/O in selected)
@@ -582,6 +597,7 @@
 				host.client.prefs_vr.show_vore_fx = host.show_vore_fx
 			if(!host.show_vore_fx)
 				host.clear_fullscreen("belly")
+				//host.clear_fullscreen("belly2") //For multilayered stomachs. Not currently implemented.
 				if(!host.hud_used.hud_shown)
 					host.toggle_hud_vis()
 			unsaved_changes = TRUE
@@ -1361,16 +1377,30 @@
 			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
-			update_preview_icon()	//CHOMPEdit Begin
+			. = TRUE
+		if("b_disable_hud")
+			host.vore_selected.disable_hud = !host.vore_selected.disable_hud
+			. = TRUE
+		if("b_colorization_enabled") //ALLOWS COLORIZATION.
+			host.vore_selected.colorization_enabled = !host.vore_selected.colorization_enabled
+			host.vore_selected.belly_fullscreen = "dark" //This prevents you from selecting a belly that is not meant to be colored and then turning colorization on.
+			. = TRUE
+		/*
+		if("b_multilayered") //Allows for 'multilayered' stomachs. Currently not implemented. Add to TGUI.
+			host.vore_selected.multilayered = !host.vore_selected.multilayered 				//Add to stomach vars.
+			host.vore_selected.belly_fullscreen = "dark"
+			. = TRUE
+		*/
+		if("b_preview_belly")
+			host.vore_selected.vore_preview(host) //Gives them the stomach overlay. It fades away after ~2 seconds as human/life.dm removes the overlay if not in a gut.
+			. = TRUE
+		if("b_clear_preview")
+			host.vore_selected.clear_preview(host) //Clears the stomach overlay. This is a failsafe but shouldn't occur.
 			. = TRUE
 		if("b_fullscreen_color")
 			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
-			update_preview_icon()
-			. = TRUE 				//CHOMPEdit End
-		if("b_disable_hud")
-			host.vore_selected.disable_hud = !host.vore_selected.disable_hud
 			. = TRUE
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
@@ -1453,19 +1483,16 @@
 			var/newcolor = input(usr, "Choose tail color.", "", host.vore_selected.tail_colouration) as color|null
 			if(newcolor)
 				host.vore_selected.tail_colouration = newcolor
-			update_preview_icon()
 			. = TRUE
 		if("b_tail_color2") // CHOMP Addition
 			var/newcolor = input(usr, "Choose tail secondary color.", "", host.vore_selected.tail_extra_overlay) as color|null
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay = newcolor
-			update_preview_icon()
 			. = TRUE
 		if("b_tail_color3") // CHOMP Addition
 			var/newcolor = input(usr, "Choose tail tertiary color.", "", host.vore_selected.tail_extra_overlay2) as color|null
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay2 = newcolor
-			update_preview_icon()
 			. = TRUE
 
 	if(.)

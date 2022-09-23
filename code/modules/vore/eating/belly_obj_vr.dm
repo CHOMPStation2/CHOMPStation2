@@ -163,6 +163,10 @@
 	// Lets you do a fullscreen overlay. Set to an icon_state string.
 	var/belly_fullscreen = ""
 	var/disable_hud = FALSE
+	var/colorization_enabled = TRUE //CHOMPedit
+	var/belly_fullscreen_color = "#823232"
+
+
 
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
@@ -225,6 +229,7 @@
 	"disable_hud",
 	"reagent_mode_flags",	//CHOMP start of variables from CHOMP
 	"belly_fullscreen_color",
+	"colorization_enabled",
 	"reagentbellymode",
 	"liquid_fullness1_messages",
 	"liquid_fullness2_messages",
@@ -387,16 +392,52 @@
 		return
 
 	if(belly_fullscreen)
-		var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
-		F.icon_state = belly_fullscreen
-		F.color = belly_fullscreen_color //CHOMPEdit
+		if(colorization_enabled)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
+			F.color = belly_fullscreen_color
+			/* //Allows for 'multilayered' stomachs. Currently not implemented.
+			if(b_multilayered)
+				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
+			*/
+		else
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
 	else
 		L.clear_fullscreen("belly")
+		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
 
 	if(disable_hud)
 		if(L?.hud_used?.hud_shown)
 			to_chat(L, "<span class='notice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
 			L.toggle_hud_vis(TRUE)
+
+/obj/belly/proc/vore_preview(mob/living/L)
+	if(!istype(L))
+		return
+	if(!L.client)
+		return
+
+	if(belly_fullscreen)
+		if(colorization_enabled)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
+			F.color = belly_fullscreen_color
+			/* //Allows for 'multilayered' stomachs. Currently not implemented.
+			if(b_multilayered)
+				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
+			*/
+		else
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
+	else
+		L.clear_fullscreen("belly")
+		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
+
+/obj/belly/proc/clear_preview(mob/living/L)
+	L.clear_fullscreen("belly")
+
+
 
 // Release all contents of this belly into the owning mob's location.
 // If that location is another mob, contents are transferred into whichever of its bellies the owning mob is in.
@@ -1258,6 +1299,8 @@
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
+	dupe.belly_fullscreen_color = belly_fullscreen_color
+	dupe.colorization_enabled = colorization_enabled
 	dupe.egg_type = egg_type
 	dupe.emote_time = emote_time
 	dupe.emote_active = emote_active
