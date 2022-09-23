@@ -11,12 +11,7 @@ const sortTypes = {
   'By price': (a, b) => a.price - b.price,
 };
 
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/CasinoPrizeDispenserCh.js
-export const CasinoPrizeDispenserCh = (props, context) => {
-  const { act, data } = useBackend(context);
-=======
-export const CasinoPrizeDispenser = () => {
->>>>>>> 62b9721655... Some (smaller) .js files moved over to .tsx for interfaces (#13263):tgui/packages/tgui/interfaces/CasinoPrizeDispenser.js
+export const CasinoPrizeDispenserCh = () => {
   return (
     <Window width={400} height={450} resizable>
       <Window.Content className="Layout__content--flexColumn" scrollable>
