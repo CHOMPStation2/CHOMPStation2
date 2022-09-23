@@ -79,7 +79,7 @@
 		EQUIPMENT("Survival Equipment - Exploration Plate",		/obj/item/clothing/accessory/armor/armorplate/explorer,			50), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Exploration Arm Guards",		/obj/item/clothing/accessory/armor/armguards/explorer,		50), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Exploration Leg Guards",		/obj/item/clothing/accessory/armor/legguards/explorer,		50), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Exploration Leg Guards",	/obj/item/weapon/shield/riot/explorer,					75), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Riot shield",	/obj/item/weapon/shield/riot/explorer,					75), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/green,				10), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,		25), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD	
