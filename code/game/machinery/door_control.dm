@@ -149,6 +149,7 @@
 					M.close()
 					return
 
+//CHOMP Add start
 /obj/machinery/button/remote/blast_door/bear
 	name = "stuffed bear"
 	icon = 'icons/obj/stationobjs_vr.dmi'
@@ -181,6 +182,7 @@
 		icon_state = "stuffedbear"
 	else
 		icon_state = "stuffedbear"
+//CHOMP Add end
 
 /*
 	Emitter remote control
