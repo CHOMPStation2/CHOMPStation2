@@ -2,13 +2,8 @@
 	name = "suspension field generator"
 	desc = "It has stubby bolts up against it's treads for stabilising."
 	icon = 'icons/obj/xenoarchaeology.dmi'
-<<<<<<< HEAD
-	icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
-	density = TRUE
-=======
 	icon_state = "suspension"
 	density = 1
->>>>>>> f2fb02756e... Merge pull request #13766 from Cameron653/xenoarch_hotfix2
 	req_access = list(access_research)
 	var/obj/item/weapon/cell/cell
 	var/obj/item/weapon/card/id/auth_card
@@ -41,20 +36,6 @@
 			deactivate()
 
 /obj/machinery/suspension_gen/attack_hand(var/mob/user)
-<<<<<<< HEAD
-	tgui_interact(user) //CHOMPStation EDIT - Fixes soft locking the device
-	if(panel_open)
-		if(cell)
-			to_chat(user, "<span class='notice'>You remove [cell].</span>")
-			cell.forceMove(loc)
-			cell.add_fingerprint(user)
-			cell.update_icon()
-
-			icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
-			cell = null
-		return
-
-=======
 	if(!panel_open)
 		tgui_interact(user)
 	else if(cell)
@@ -66,7 +47,6 @@
 		cell = null
 		to_chat(user, "<span class='info'>You remove the power cell</span>")
 
->>>>>>> f2fb02756e... Merge pull request #13766 from Cameron653/xenoarch_hotfix2
 /obj/machinery/suspension_gen/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -120,13 +100,6 @@
 			playsound(src, W.usesound, 50, 1)
 			to_chat(user, "<span class='info'>You wrench the stabilising bolts [anchored ? "into place" : "loose"].</span>")
 			if(anchored)
-<<<<<<< HEAD
-				icon_state = "suspension_wrenched" //CHOMPStation EDIT - Fixes Icon State
-				desc = "It is resting securely on four stubby legs."
-			else
-				icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
-				desc = "It has stubby legs bolted up against it's body for stabilising."
-=======
 				desc = "Its tracks are held firmly in place with securing bolts."
 				icon_state = "suspension_wrenched"
 			else
@@ -134,7 +107,6 @@
 				icon_state = "suspension"
 			playsound(loc, 'sound/items/Ratchet.ogg', 40)
 			update_icon()
->>>>>>> f2fb02756e... Merge pull request #13766 from Cameron653/xenoarch_hotfix2
 		else
 			to_chat(user, "<span class='warning'>You are unable to secure [src] while it is active!</span>")
 	else if (istype(W, /obj/item/weapon/cell))
@@ -145,16 +117,6 @@
 				user.drop_item()
 				W.loc = src
 				cell = W
-<<<<<<< HEAD
-				to_chat(user, "<span class='notice'>You insert [cell].</span>")
-				icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
-	else if(istype(W, /obj/item/weapon/card/emag))
-		return W.resolve_attackby(src, user)
-	else
-		if(check_access(W))
-			locked = !locked
-			to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] [src].</span>")
-=======
 				to_chat(user, "<span class='info'>You insert the power cell.</span>")
 				icon_state = "suspension"
 	else if(istype(W, /obj/item/weapon/card))
@@ -164,7 +126,6 @@
 				to_chat(user, "<span class='info'>You swipe [I], the console flashes \'<i>Access granted.</i>\'</span>")
 			else
 				to_chat(user, "<span class='warning'>You swipe [I], console flashes \'<i>Access denied.</i>\'</span>")
->>>>>>> f2fb02756e... Merge pull request #13766 from Cameron653/xenoarch_hotfix2
 		else
 			to_chat(user, "<span class='warning'>Remove [auth_card] first.</span>")
 
@@ -192,15 +153,10 @@
 		M.visible_message("<font color='blue'>[bicon(M)] [M] begins to float in the air!</font>","You feel tingly and light, but it is difficult to move.")
 
 	suspension_field = new(T)
-<<<<<<< HEAD
-	visible_message("<span class='notice'>\icon[src][bicon(src)] [src] activates with a low hum.</span>")
-	icon_state = "suspension_on" //CHOMPStation EDIT - Fixes Icon State
-=======
 	visible_message("<font color='blue'>[bicon(src)] [src] activates with a low hum.</font>")
 	icon_state = "suspension_on"
 	playsound(loc, 'sound/machines/quiet_beep.ogg', 40)
 	update_icon()
->>>>>>> f2fb02756e... Merge pull request #13766 from Cameron653/xenoarch_hotfix2
 
 	for(var/obj/item/weapon/I in T)
 		I.loc = suspension_field
@@ -227,13 +183,9 @@
 	visible_message("<font color='blue'>[bicon(src)] [src] deactivates with a gentle shudder.</font>")
 	qdel(suspension_field)
 	suspension_field = null
-<<<<<<< HEAD
-	icon_state = "suspension" //CHOMPStation EDIT - Fixes Icon State
-=======
 	icon_state = "suspension_wrenched"
 	playsound(loc, 'sound/machines/quiet_beep.ogg', 40)
 	update_icon()
->>>>>>> f2fb02756e... Merge pull request #13766 from Cameron653/xenoarch_hotfix2
 
 /obj/machinery/suspension_gen/Destroy()
 	deactivate()
