@@ -10,7 +10,7 @@
 /area/submap/diner)
 "ad" = (
 /turf/simulated/wall/concrete,
-/area/submap/Diner)
+/area/submap/diner)
 "ae" = (
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/tiled/white,
@@ -53,7 +53,7 @@
 "am" = (
 /obj/structure/sink/kitchen,
 /turf/simulated/wall/concrete,
-/area/submap/Diner)
+/area/submap/diner)
 "an" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
