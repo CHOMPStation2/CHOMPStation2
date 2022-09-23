@@ -1094,6 +1094,9 @@
 // Full screen belly overlays!
 /obj/screen/fullscreen/belly
 	icon = 'modular_chomp/icons/mob/screen_full_vore_ch.dmi' //CHOMPedit
+
+/obj/screen/fullscreen/belly/fixed //CHOMPedit: tweaking to preserve save data
+	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit: tweaking to preserve save data
 	icon_state = ""
 
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
