@@ -5,43 +5,43 @@
 "b" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "d" = (
 /turf/simulated/floor/tiled,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "f" = (
 /turf/template_noop,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "g" = (
 /obj/random/humanoidremains{
 	spawn_nothing_percentage = 60
 	},
 /obj/structure/table/bench/padded,
 /turf/simulated/floor/tiled,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "i" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "p" = (
 /turf/simulated/floor/tiled/red,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "v" = (
 /obj/structure/table/standard,
 /obj/random/firstaid,
 /turf/simulated/floor/tiled,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "x" = (
 /obj/effect/decal/mecha_wreckage/gygax,
 /turf/simulated/floor/tiled/red,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "y" = (
 /mob/living/simple_mob/mechanical/mecha/combat/phazon,
 /turf/template_noop,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "z" = (
 /obj/effect/decal/mecha_wreckage/durand,
 /turf/simulated/floor/tiled/red,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "A" = (
 /turf/template_noop,
 /area/template_noop)
@@ -49,22 +49,22 @@
 /obj/structure/table/standard,
 /obj/random/toolbox,
 /turf/simulated/floor/tiled,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "H" = (
 /turf/simulated/wall/r_wall,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "J" = (
 /obj/structure/loot_pile/surface/alien/engineering,
 /turf/simulated/floor/tiled,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "M" = (
 /obj/effect/decal/mecha_wreckage/ripley/deathripley,
 /turf/simulated/floor/tiled/red,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 "Y" = (
 /obj/effect/decal/mecha_wreckage/odysseus,
 /turf/simulated/floor/tiled/red,
-/area/submap/MechHanger)
+/area/submap/MechHangar)
 
 (1,1,1) = {"
 A
