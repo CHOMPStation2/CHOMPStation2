@@ -1322,3 +1322,9 @@
 	ckeywhitelist = list ("thedavestdave")
 	character_name = list("Lucky")
 	allowed_roles = "Chaplain"
+
+/datum/gear/fluff/greek_dress
+    path = /obj/item/clothing/under/fluff/greek_dress
+    display_name = "mytilenean Dress"
+    ckeywhitelist = list("sudate")
+    character_name = list("Shea Corbett")
