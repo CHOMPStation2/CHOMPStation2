@@ -78,8 +78,6 @@
 /turf/simulated/wall/resin/Initialize(mapload)
 	. = ..(mapload, "resin",null,"resin")
 
-<<<<<<< HEAD
-=======
 /turf/simulated/wall/concrete
 	desc = "A wall made out of concrete bricks"
 	material = MAT_CONCRETE
@@ -97,7 +95,6 @@
 /turf/simulated/wall/r_concrete/Initialize(mapload)
 	. = ..(mapload, "concrete","plasteel rebar") //3strong
 
->>>>>>> 84181ef54e... Release Bugfixes and changes (MERGE BEFORE RELEASE) (#13787)
 // Kind of wondering if this is going to bite me in the butt.
 /turf/simulated/wall/skipjack/Initialize(mapload)
 	. = ..(mapload, "alienalloy")
@@ -345,10 +342,9 @@
 /obj/structure/hull_corner
 	name = "hull corner"
 	plane = OBJ_PLANE - 1
-	
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "hull_corner"
-	
+
 	anchored = TRUE
 	density = TRUE
 	breakable = TRUE
@@ -364,6 +360,7 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
+	cut_overlays()
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
@@ -383,7 +380,7 @@
 			I.color = R.icon_colour
 			add_overlay(I)
 		break
-	
+
 	if(!T)
 		warning("Hull corner at [x],[y] not placed adjacent to a hull it can find.")
 

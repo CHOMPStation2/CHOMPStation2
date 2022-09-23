@@ -615,9 +615,6 @@ var/list/flooring_types
 	footstep_sounds = list("human" = list(
 		'sound/effects/footstep/lava1.ogg',
 		'sound/effects/footstep/lava2.ogg',
-<<<<<<< HEAD
-		'sound/effects/footstep/lava3.ogg'))
-=======
 		'sound/effects/footstep/lava3.ogg'))
 
 /decl/flooring/concrete
@@ -629,4 +626,4 @@ var/list/flooring_types
 	can_paint = 1		//VOREStation edit. Let's allow for some fun.
 	can_engrave = 1		//VOREStation edit. Fun.
 	flags = TURF_ACID_IMMUNE | TURF_CAN_BREAK | TURF_REMOVE_CROWBAR
->>>>>>> 84181ef54e... Release Bugfixes and changes (MERGE BEFORE RELEASE) (#13787)
+  

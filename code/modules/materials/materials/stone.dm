@@ -47,9 +47,6 @@
 
 /datum/material/stone/flint/generate_recipes()
 	return
-<<<<<<< HEAD
-//VOREStation Addition End 
-=======
 //VOREStation Addition End
 
 /datum/material/stone/concrete
@@ -82,4 +79,3 @@
 
 /datum/material/stone/concrete/get_wall_texture()
 	return texture
->>>>>>> 84181ef54e... Release Bugfixes and changes (MERGE BEFORE RELEASE) (#13787)
