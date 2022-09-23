@@ -254,3 +254,8 @@
 	persist_storable = FALSE
 /obj/item/weapon/spacecasinocash
 	persist_storable = FALSE
+<<<<<<< HEAD
+=======
+/obj/item/device/personal_shield_generator
+	persist_storable = FALSE
+>>>>>>> 95138e4672... Merge pull request #13696 from Cameron653/TEST
