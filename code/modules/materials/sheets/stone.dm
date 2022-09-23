@@ -22,9 +22,6 @@
 	drop_sound = 'sound/items/drop/boots.ogg'
 	pickup_sound = 'sound/items/pickup/boots.ogg'
 	pass_color = TRUE
-<<<<<<< HEAD
-	apply_colour = TRUE 
-=======
 	apply_colour = TRUE
 
 /obj/item/stack/material/concrete
@@ -33,4 +30,3 @@
 	default_type = "concrete"
 	no_variants = FALSE
 	apply_colour = 1
->>>>>>> 1a8f1760fa... [MIRROR] conk rete (ABLE TO BE MERGED)  (#13467)
