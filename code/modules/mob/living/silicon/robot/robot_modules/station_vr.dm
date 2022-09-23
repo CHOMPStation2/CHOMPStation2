@@ -1103,11 +1103,7 @@
 
 /obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
-<<<<<<< HEAD
 	E.reagents.add_reagent("enzyme", 2 * amount)
-	if(src.emag)
-		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
-		B.reagents.add_reagent("beer2", 2 * amount)
 
 //CHOMP addition start BORGHYPO
 /obj/item/weapon/reagent_containers/borghypo/service/booze
@@ -1201,7 +1197,3 @@
 	R.verbs -= /mob/living/proc/shred_limb
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
-// CH changes - Unity Hound end
-=======
-	E.reagents.add_reagent("enzyme", 2 * amount)
->>>>>>> 9976b61395... Merge pull request #13732 from Heroman3003/emag-booze
