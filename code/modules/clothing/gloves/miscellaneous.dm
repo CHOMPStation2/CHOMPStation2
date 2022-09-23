@@ -92,7 +92,12 @@
 	icon_state = "work"
 	item_state = "wgloves"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
-
+// CHOMPEdit Start - If they resist lasers and energy they should help inulate against heat and cold.
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+// CHOMPEdit End
 /obj/item/clothing/gloves/tactical
 	desc = "These brown tactical gloves are made from a durable synthetic, and have hardened knuckles."
 	name = "tactical gloves"
@@ -115,6 +120,7 @@
 	species_restricted = list("Vox")
 	drop_sound = 'sound/items/drop/metalboots.ogg'
 	pickup_sound = 'sound/items/pickup/toolbox.ogg'
+	armor = list (melee = 20, bullet = 15, laser = 10, energy = 10, bomb =5, bio = 30, rad = 30) //gently bumped up Heavy engineering gloves value for protection //ChompEdit
 
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
@@ -172,5 +178,3 @@
 	name = "water wings"
 	desc = "Swim aids designed to help a wearer float in water and learn to swim."
 	icon_state = "waterwings"
-
-

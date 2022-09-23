@@ -124,7 +124,14 @@
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(istype(user,/mob/living/silicon/robot))
-			return
+			if(istype(tool, /obj/item/weapon/gripper))
+				var/obj/item/weapon/gripper/Gripper = tool
+				if(Gripper.wrapped)
+					tool = Gripper.wrapped
+				else
+					return
+			else
+				return
 		if(affected && affected.cavity)
 			var/total_volume = tool.w_class
 			for(var/obj/item/I in affected.implants)
@@ -135,6 +142,9 @@
 
 /datum/surgery_step/cavity/place_item/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	if(isrobot(user) && istype(tool, /obj/item/weapon/gripper))
+		var/obj/item/weapon/gripper/G = tool
+		tool = G.wrapped
 	user.visible_message("<span class='notice'>[user] starts putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>", \
 	"<span class='notice'>You start putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>" ) //Nobody will probably ever see this, but I made these two blue. ~CK
 	target.custom_pain("The pain in your chest is living hell!",1)
@@ -142,7 +152,12 @@
 
 /datum/surgery_step/cavity/place_item/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
-
+	if(isrobot(user) && istype(tool, /obj/item/weapon/gripper))
+		var/obj/item/weapon/gripper/G = tool
+		tool = G.wrapped
+		G.drop_item()
+	else
+		user.drop_item()
 	user.visible_message("<span class='notice'>[user] puts \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>", \
 	"<span class='notice'>You put \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>" )
 	if (tool.w_class > get_max_wclass(affected)/2 && prob(50) && (affected.robotic < ORGAN_ROBOT))
@@ -150,7 +165,6 @@
 		var/datum/wound/internal_bleeding/I = new (10)
 		affected.wounds += I
 		affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
-	user.drop_item()
 	affected.implants += tool
 	tool.loc = affected
 	if(istype(tool,/obj/item/device/nif)){var/obj/item/device/nif/N = tool;N.implant(target)} //VOREStation Add - NIF support
@@ -189,7 +203,7 @@
 /datum/surgery_step/cavity/implant_removal/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 
-	var/find_prob = 0
+	var/time_to_remove = 0 // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 
 	if (affected.implants.len)
 
@@ -198,13 +212,13 @@
 		if(istype(obj,/obj/item/weapon/implant))
 			var/obj/item/weapon/implant/imp = obj
 			if (imp.islegal())
-				find_prob +=60
+				time_to_remove += 10 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 			else
-				find_prob +=40
+				time_to_remove += 20 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 		else
-			find_prob +=50
+			time_to_remove += 10 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer. This else is shrapnel and the like.
 
-		if (prob(find_prob))
+		if(do_after(user, time_to_remove)) // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
 			user.visible_message("<span class='notice'>[user] takes something out of incision on [target]'s [affected.name] with \the [tool]!</span>", \
 			"<span class='notice'>You take [obj] out of incision on [target]'s [affected.name]s with \the [tool]!</span>" )
 			affected.implants -= obj
@@ -229,7 +243,7 @@
 					imp.imp_in = null
 					imp.implanted = 0
 				else if(istype(tool,/obj/item/device/nif)){var/obj/item/device/nif/N = tool;N.unimplant(target)} //VOREStation Add - NIF support
-		else
+		else // CHOMPEdit: Shouldn't hit this anymore, but leaving in just-in-case.
 			user.visible_message("<span class='notice'>[user] removes \the [tool] from [target]'s [affected.name].</span>", \
 			"<span class='notice'>There's something inside [target]'s [affected.name], but you just missed it this time.</span>" )
 	else

@@ -16,12 +16,15 @@
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
 	var/vore_sound = "Gulp"					// Sound when ingesting someone
 	var/vore_verb = "ingest"				// Verb for eating with this in messages
+	var/release_verb = "expels"				// Verb for releasing something from a stomach
 	var/human_prey_swallow_time = 100		// Time in deciseconds to swallow /mob/living/carbon/human
 	var/nonhuman_prey_swallow_time = 30		// Time in deciseconds to swallow anything else
 	var/nutrition_percent = 100				// Nutritional percentage per tick in digestion mode
 	var/digest_brute = 0.5					// Brute damage per tick in digestion mode
 	var/digest_burn = 0.5					// Burn damage per tick in digestion mode
 	var/digest_oxy = 0						// Oxy damage per tick in digestion mode
+	var/digest_tox = 0						// Toxins damage per tick in digestion mode
+	var/digest_clone = 0					// Clone damage per tick in digestion mode
 	var/immutable = FALSE					// Prevents this belly from being deleted
 	var/escapable = FALSE					// Belly can be resisted out of at any time
 	var/escapetime = 20 SECONDS				// Deciseconds, how long to escape this belly
@@ -30,6 +33,7 @@
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
+	var/save_digest_mode = TRUE				// Whether this belly's digest mode persists across rounds
 	var/can_taste = FALSE					// If this belly prints the flavor of prey when it eats someone.
 	var/bulge_size = 0.25					// The minimum size the prey has to be in order to show up on examine.
 	var/display_absorbed_examine = FALSE	// Do we display absorption examine messages for this belly at all?
@@ -49,6 +53,8 @@
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
+	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
+	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -61,7 +67,7 @@
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
-	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
+	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_SELECT,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
 	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY)
 	//Item related modes
@@ -151,103 +157,124 @@
 		"Their %belly looks larger than usual.")
 
 	var/item_digest_mode = IM_DIGEST_FOOD	// Current item-related mode from item_digest_modes
-	var/contaminates = TRUE					// Whether the belly will contaminate stuff
+	var/contaminates = TRUE					// Whether the belly will contaminate stuff // CHOMPedit: reset to true like it always was
 	var/contamination_flavor = "Generic"	// Determines descriptions of contaminated items
 	var/contamination_color = "green"		// Color of contamination overlay
 
 	// Lets you do a fullscreen overlay. Set to an icon_state string.
 	var/belly_fullscreen = ""
 	var/disable_hud = FALSE
+	var/colorization_enabled = TRUE //CHOMPedit
+	var/belly_fullscreen_color = "#823232"
+
+
 
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
-	return ..() + list(
-		"name",
-		"desc",
-		"absorbed_desc",
-		"vore_sound",
-		"vore_verb",
-		"human_prey_swallow_time",
-		"nonhuman_prey_swallow_time",
-		"emote_time",
-		"nutrition_percent",
-		"digest_brute",
-		"digest_burn",
-		"digest_oxy",
-		"immutable",
-		"can_taste",
-		"escapable",
-		"escapetime",
-		"digestchance",
-		"absorbchance",
-		"escapechance",
-		"transferchance",
-		"transferchance_secondary",
-		"transferlocation",
-		"transferlocation_secondary",
-		"bulge_size",
-		"display_absorbed_examine",
-		"shrink_grow_size",
-		"struggle_messages_outside",
-		"struggle_messages_inside",
-		"absorbed_struggle_messages_outside",
-		"absorbed_struggle_messages_inside",
-		"digest_messages_owner",
-		"digest_messages_prey",
-		"absorb_messages_owner",
-		"absorb_messages_prey",
-		"unabsorb_messages_owner",
-		"unabsorb_messages_prey",
-		"examine_messages",
-		"examine_messages_absorbed",
-		"emote_lists",
-		"emote_time",
-		"emote_active",
-		"mode_flags",
-		"item_digest_mode",
-		"contaminates",
-		"contamination_flavor",
-		"contamination_color",
-		"release_sound",
-		"fancy_vore",
-		"is_wet",
-		"wet_loop",
-		"belly_fullscreen",
-		"disable_hud",
-		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
-		"belly_fullscreen_color",
-		"reagentbellymode",
-		"liquid_fullness1_messages",
-		"liquid_fullness2_messages",
-		"liquid_fullness3_messages",
-		"liquid_fullness4_messages",
-		"liquid_fullness5_messages",
-		"reagent_name",
-		"reagent_chosen",
-		"reagentid",
-		"reagentcolor",
-		"gen_cost",
-		"gen_amount",
-		"gen_time",
-		"gen_time_display",
-		"reagent_transfer_verb",
-		"custom_max_volume",
-		"generated_reagents",
-		"vorefootsteps_sounds",
-		"fullness1_messages",
-		"fullness2_messages",
-		"fullness3_messages",
-		"fullness4_messages",
-		"fullness5_messages",
-		"vorespawn_blacklist",
-		"autotransferchance",
-		"autotransferwait",
-		"autotransferlocation",
-		"autotransfer_enabled",
-		"autotransfer_min_amount",
-		"autotransfer_max_amount", //CHOMP end of variables from CHOMP
-		"egg_type"
-		)
+	var/list/saving = list(
+	"name",
+	"desc",
+	"absorbed_desc",
+	"vore_sound",
+	"vore_verb",
+	"release_verb",
+	"human_prey_swallow_time",
+	"nonhuman_prey_swallow_time",
+	"emote_time",
+	"nutrition_percent",
+	"digest_brute",
+	"digest_burn",
+	"digest_oxy",
+	"digest_tox",
+	"digest_clone",
+	"immutable",
+	"can_taste",
+	"escapable",
+	"escapetime",
+	"digestchance",
+	"absorbchance",
+	"escapechance",
+	"transferchance",
+	"transferchance_secondary",
+	"transferlocation",
+	"transferlocation_secondary",
+	"bulge_size",
+	"display_absorbed_examine",
+	"shrink_grow_size",
+	"struggle_messages_outside",
+	"struggle_messages_inside",
+	"absorbed_struggle_messages_outside",
+	"absorbed_struggle_messages_inside",
+	"digest_messages_owner",
+	"digest_messages_prey",
+	"absorb_messages_owner",
+	"absorb_messages_prey",
+	"unabsorb_messages_owner",
+	"unabsorb_messages_prey",
+	"examine_messages",
+	"examine_messages_absorbed",
+	"emote_lists",
+	"emote_time",
+	"emote_active",
+	"selective_preference",
+	"mode_flags",
+	"item_digest_mode",
+	"contaminates",
+	"contamination_flavor",
+	"contamination_color",
+	"release_sound",
+	"fancy_vore",
+	"is_wet",
+	"wet_loop",
+	"belly_fullscreen",
+	"disable_hud",
+	"reagent_mode_flags",	//CHOMP start of variables from CHOMP
+	"belly_fullscreen_color",
+	"colorization_enabled",
+	"reagentbellymode",
+	"liquid_fullness1_messages",
+	"liquid_fullness2_messages",
+	"liquid_fullness3_messages",
+	"liquid_fullness4_messages",
+	"liquid_fullness5_messages",
+	"reagent_name",
+	"reagent_chosen",
+	"reagentid",
+	"reagentcolor",
+	"gen_cost",
+	"gen_amount",
+	"gen_time",
+	"gen_time_display",
+	"reagent_transfer_verb",
+	"custom_max_volume",
+	"generated_reagents",
+	"vorefootsteps_sounds",
+	"fullness1_messages",
+	"fullness2_messages",
+	"fullness3_messages",
+	"fullness4_messages",
+	"fullness5_messages",
+	"vorespawn_blacklist",
+	"vore_sprite_flags",
+	"affects_vore_sprites",
+	"count_absorbed_prey_for_sprite",
+	"resist_triggers_animation",
+	"size_factor_for_sprite",
+	"belly_sprite_to_affect",
+	"autotransferchance",
+	"autotransferwait",
+	"autotransferlocation",
+	"autotransfer_enabled",
+	"autotransfer_min_amount",
+	"autotransfer_max_amount", //CHOMP end of variables from CHOMP
+	"egg_type",
+	"save_digest_mode"
+	)
+
+	if (save_digest_mode == 1)
+		return ..() + saving + list("digest_mode")
+
+	return ..() + saving
 
 /obj/belly/Initialize()
 	. = ..()
@@ -272,6 +299,13 @@
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
 	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+		if(desc)
+			//Allow ghosts see where they are if they're still getting squished along inside.
+			var/formatted_desc
+			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
+			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
+			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+			to_chat(thing, "<span class='notice'><B>[formatted_desc]</B></span>")
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
@@ -286,6 +320,8 @@
 			soundfile = classic_vore_sounds[vore_sound]
 		else
 			soundfile = fancy_vore_sounds[vore_sound]
+		if(special_entrance_sound) //CHOMPEdit: Custom sound set by mob's init_vore or ingame varedits.
+			soundfile = special_entrance_sound
 		if(soundfile)
 			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 			recent_sound = TRUE
@@ -313,6 +349,7 @@
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
 		vore_fx(M)
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
@@ -326,6 +363,7 @@
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	if(isliving(thing) && !isbelly(thing.loc))
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
 		L.clear_fullscreen("belly")
 		if(L.hud_used)
@@ -357,16 +395,52 @@
 		return
 
 	if(belly_fullscreen)
-		var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
-		F.icon_state = belly_fullscreen
-		F.color = belly_fullscreen_color //CHOMPEdit
+		if(colorization_enabled)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
+			F.color = belly_fullscreen_color
+			/* //Allows for 'multilayered' stomachs. Currently not implemented.
+			if(b_multilayered)
+				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
+			*/
+		else
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
 	else
 		L.clear_fullscreen("belly")
+		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
 
 	if(disable_hud)
 		if(L?.hud_used?.hud_shown)
 			to_chat(L, "<span class='notice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
 			L.toggle_hud_vis(TRUE)
+
+/obj/belly/proc/vore_preview(mob/living/L)
+	if(!istype(L))
+		return
+	if(!L.client)
+		return
+
+	if(belly_fullscreen)
+		if(colorization_enabled)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
+			F.color = belly_fullscreen_color
+			/* //Allows for 'multilayered' stomachs. Currently not implemented.
+			if(b_multilayered)
+				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
+			*/
+		else
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			F.icon_state = belly_fullscreen
+	else
+		L.clear_fullscreen("belly")
+		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
+
+/obj/belly/proc/clear_preview(mob/living/L)
+	L.clear_fullscreen("belly")
+
+
 
 // Release all contents of this belly into the owning mob's location.
 // If that location is another mob, contents are transferred into whichever of its bellies the owning mob is in.
@@ -393,8 +467,8 @@
 		owner.update_icons()
 
 	//Print notifications/sound if necessary
-	if(!silent)
-		owner.visible_message("<font color='green'><b>[owner] expels everything from their [lowertext(name)]!</b></font>")
+	if(!silent && count)
+		owner.visible_message("<font color='green'><b>[owner] [release_verb] everything from their [lowertext(name)]!</b></font>")
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -429,6 +503,9 @@
 		slip.slip_protect = world.time + 25 // This is to prevent slipping back into your pred if they stand on soap or something.
 	//Place them into our drop_location
 	M.forceMove(drop_location())
+	if(ismob(M))
+		var/mob/ourmob = M
+		ourmob.reset_view(null)
 	items_preserved -= M
 
 	//Special treatment for absorbed prey
@@ -461,7 +538,7 @@
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message("<font color='green'><b>[owner] expels [M] from their [lowertext(name)]!</b></font>")
+		owner.visible_message("<font color='green'><b>[owner] [release_verb] [M] from their [lowertext(name)]!</b></font>")
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -469,6 +546,10 @@
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
 			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+	//Should fix your view not following you out of mobs sometimes!
+	if(ismob(M))
+		var/mob/ourmob = M
+		ourmob.reset_view(null)
 
 	return 1
 
@@ -482,6 +563,9 @@
 		prey.buckled.unbuckle_mob()
 
 	prey.forceMove(src)
+	if(ismob(prey))
+		var/mob/ourmob = prey
+		ourmob.reset_view(owner)
 	owner.updateVRPanel()
 	if(isanimal(owner))
 		owner.update_icon()
@@ -624,6 +708,9 @@
 		else if((type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") && (length(raw_list[i]) > 510 || length(raw_list[i]) < 10))
 			raw_list.Cut(i,i)
 			log_debug("[owner] tried to set [lowertext(name)] idle message with >501 or <10 char message")
+		else if((type == "em" || type == "ema") && (length(raw_list[i]) > 260 || length(raw_list[i]) < 10))
+			raw_list.Cut(i,i)
+			log_debug("[owner] tried to set [lowertext(name)] examine message with >260 or <10 char message")
 		else
 			raw_list[i] = readd_quotes(raw_list[i])
 			//Also fix % sign for var replacement
@@ -723,6 +810,7 @@
 		else if(M.reagents)
 			M.reagents.trans_to_holder(Pred.bloodstr, M.reagents.total_volume, 0.5, TRUE)
 
+	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
@@ -778,6 +866,10 @@
 	if(M.loc != src)
 		M.forceMove(src)
 
+	if(ismob(M))
+		var/mob/ourmob = M
+		ourmob.reset_view(owner)
+
 	//Seek out absorbed prey of the prey, absorb them too.
 	//This in particular will recurse oddly because if there is absorbed prey of prey of prey...
 	//it will just move them up one belly. This should never happen though since... when they were
@@ -798,6 +890,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
+	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
 
@@ -832,6 +925,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
+	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
 
@@ -932,6 +1026,11 @@
 
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
+
+	//CHOMPEdit Start - vore sprites struggle animation
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1))
+		owner.vs_animate(belly_sprite_to_affect)
+	//CHOMPEdit End
 
 	if(is_wet)
 		if(!fancy_vore)
@@ -1089,6 +1188,9 @@
 	if(!(content in src) || !istype(target))
 		return
 	content.forceMove(target)
+	if(ismob(content))
+		var/mob/ourmob = content
+		ourmob.reset_view(owner)
 	if(isitem(content))
 		var/obj/item/I = content
 		if(istype(I,/obj/item/weapon/card/id))
@@ -1132,6 +1234,7 @@
 	dupe.absorbed_desc = absorbed_desc
 	dupe.vore_sound = vore_sound
 	dupe.vore_verb = vore_verb
+	dupe.release_verb = release_verb
 	dupe.human_prey_swallow_time = human_prey_swallow_time
 	dupe.nonhuman_prey_swallow_time = nonhuman_prey_swallow_time
 	dupe.emote_time = emote_time
@@ -1139,6 +1242,8 @@
 	dupe.digest_brute = digest_brute
 	dupe.digest_burn = digest_burn
 	dupe.digest_oxy = digest_oxy
+	dupe.digest_tox = digest_tox
+	dupe.digest_clone = digest_clone
 	dupe.immutable = immutable
 	dupe.can_taste = can_taste
 	dupe.escapable = escapable
@@ -1182,6 +1287,12 @@
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
 	dupe.vorespawn_blacklist = vorespawn_blacklist
+	dupe.vore_sprite_flags = vore_sprite_flags
+	dupe.affects_vore_sprites = affects_vore_sprites
+	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.resist_triggers_animation = resist_triggers_animation
+	dupe.size_factor_for_sprite = size_factor_for_sprite
+	dupe.belly_sprite_to_affect = belly_sprite_to_affect
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation
@@ -1191,9 +1302,13 @@
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
+	dupe.belly_fullscreen_color = belly_fullscreen_color
+	dupe.colorization_enabled = colorization_enabled
 	dupe.egg_type = egg_type
 	dupe.emote_time = emote_time
 	dupe.emote_active = emote_active
+	dupe.selective_preference = selective_preference
+	dupe.save_digest_mode = save_digest_mode
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings

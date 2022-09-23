@@ -6,8 +6,8 @@
 /obj/item/clothing/under/permit
 	name = "public nudity permit"
 	desc = "This permit entitles the bearer to conduct their duties without a uniform. Normally issued to furred crewmembers or those with nothing to hide."
-	icon = 'icons/obj/card.dmi'
-	icon_state = "guest"
+	icon = 'icons/obj/card_new.dmi'
+	icon_state = "permit-nude"
 	body_parts_covered = 0
 	equip_sound = null
 
@@ -76,7 +76,7 @@
 		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
 		return
 
-	var/new_size = input(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+	var/new_size = tgui_input_number(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200, 600, 1)
 	if(!new_size)
 		return //cancelled
 
@@ -109,7 +109,7 @@
 
 /obj/item/clothing/under/hyperfiber/bluespace/mob_can_unequip(mob/M, slot, disable_warning = 0)
 	. = ..()
-	if(. && ishuman(M) && original_size)
+	if(. && ishuman(M) && original_size && !disable_warning)
 		var/mob/living/carbon/human/H = M
 		H.resize(original_size, ignore_prefs = TRUE)
 		original_size = null
@@ -129,7 +129,7 @@
 
 /obj/item/clothing/gloves/bluespace/mob_can_equip(mob/M, gloves, disable_warning = 0)
 	. = ..()
-	if(. && ishuman(M))
+	if(. && ishuman(M) && !disable_warning)
 		var/mob/living/carbon/human/H = M
 		if(!H.resizable)
 			return
@@ -145,7 +145,7 @@
 
 /obj/item/clothing/gloves/bluespace/mob_can_unequip(mob/M, gloves, disable_warning = 0)
 	. = ..()
-	if(. && ishuman(M) && original_size)
+	if(. && ishuman(M) && original_size && !disable_warning)
 		var/mob/living/carbon/human/H = M
 		if(!H.resizable)
 			return
@@ -299,7 +299,7 @@
 /obj/item/clothing/under/summerdress/blue
 	icon_state = "summerdress2"
 
-/obj/item/clothing/under/dress/dress_cap/femformal // formal in the loosest sense. because it's going to be taken off. or something. funnier in my head i swear 
+/obj/item/clothing/under/dress/dress_cap/femformal // formal in the loosest sense. because it's going to be taken off. or something. funnier in my head i swear
 	name = "site manager's feminine formalwear"
 	desc = "Essentially a skimpy...dress? Leotard? Whatever it is, it has the coloration and markings suitable for a site manager or rough equivalent."
 	icon = 'icons/inventory/uniform/item_vr.dmi'

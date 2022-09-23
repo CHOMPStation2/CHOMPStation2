@@ -5,7 +5,7 @@
 /mob/living/simple_mob/humanoid/possessed
 	name = "old EVA RIG suit"
 	desc = "A light hardsuit for repairs and maintenance to the outside of habitats and vessels. Seems to be worn down and damaged. But it seems to still be moving. Is someone in it?"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "eva-rig"
 
 	faction = "Possessed"

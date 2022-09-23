@@ -675,7 +675,7 @@
 		var/list/selected = TLV["temperature"]
 		var/max_temperature = min(selected[3] - T0C, MAX_TEMPERATURE)
 		var/min_temperature = max(selected[2] - T0C, MIN_TEMPERATURE)
-		var/input_temperature = input(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C) as num|null
+		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature)
 		if(isnum(input_temperature))
 			if(input_temperature > max_temperature || input_temperature < min_temperature)
 				to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
@@ -729,7 +729,7 @@
 			var/env = params["env"]
 
 			var/name = params["var"]
-			var/value = input(usr, "New [name] for [env]:", name, TLV[env][name]) as num|null
+			var/value = tgui_input_number(usr, "New [name] for [env]:", name, TLV[env][name])
 			if(!isnull(value) && !..())
 				if(value < 0)
 					TLV[env][name] = -1
@@ -835,7 +835,18 @@
 
 	TLV["temperature"] =	list(T0C - 40, T0C - 20, T0C + 40, T0C + 66) // K, Lower Temperature for Freezer Air Alarms (This is because TLV is hardcoded to be generated on first_run, and therefore the only way to modify this without changing TLV generation)
 
-// VOREStation Edit End
+// VOREStation Edit End, CHOMPEdit START
+/obj/machinery/alarm/sifwilderness
+	breach_detection = 0
+	report_danger_level = 0
+	
+/obj/machinery/alarm/sifwilderness/first_run()
+	. = ..()
+	
+	TLV["oxygen"] =			list(16, 17, 135, 140)
+	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.50,ONE_ATMOSPHERE*1.60)
+	TLV["temperature"] =	list(T0C - 40, T0C - 31, T0C + 40, T0C + 120)
+// CHOMPEdit END
 #undef LOAD_TLV_VALUES
 #undef TEST_TLV_VALUES
 #undef DECLARE_TLV_VALUES

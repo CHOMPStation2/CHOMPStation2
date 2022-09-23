@@ -157,6 +157,20 @@
 	desc = "A neosilk clip-on tie. This one is disgusting."
 	icon_state = "horribletie"
 
+/obj/item/clothing/accessory/bowtie
+	name = "red bow tie"
+	desc = "Snazzy!"
+	icon_state = "redbowtie"
+	slot = ACCESSORY_SLOT_TIE
+
+/obj/item/clothing/accessory/bowtie/black
+	name = "black bow tie"
+	icon_state = "blackbowtie"
+
+/obj/item/clothing/accessory/bowtie/white
+	name = "white bow tie"
+	icon_state = "whitebowtie"
+
 /obj/item/clothing/accessory/stethoscope
 	name = "stethoscope"
 	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
@@ -285,6 +299,10 @@
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = "medal of exceptional heroism"
 	desc = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
+
+/obj/item/clothing/accessory/medal/gold/casino
+	name = "medal of true lucky winner"
+	desc = "A gaudy golden medal with a logo of a casino engraved on top. The only achievement you had to earn this was great luck or great richness, neither of which is an achievement. Still, it instills a feeling of hope and smell of fresh bagels."
 
 // Base type for 'medals' found in a "dungeon" submap, as a sort of trophy to celebrate the player's conquest.
 /obj/item/clothing/accessory/medal/dungeon

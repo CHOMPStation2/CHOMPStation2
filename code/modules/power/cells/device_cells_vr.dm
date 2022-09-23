@@ -1,4 +1,4 @@
-
+//CHOMP Disabled in DME in favor of modular_chomp folder
 //The device cell
 /obj/item/weapon/cell/device/weapon/recharge/alien
 	name = "void cell (device)"

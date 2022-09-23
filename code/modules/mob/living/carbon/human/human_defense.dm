@@ -37,6 +37,18 @@ emp_act
 		var/armor = getarmor_organ(organ, "bullet")
 		if(!prob(armor/2))		//Even if the armor doesn't stop the bullet from hurting you, it might stop it from embedding.
 			var/hit_embed_chance = P.embed_chance + (P.damage - armor)	//More damage equals more chance to embed
+
+			//Modifiers can make bullets less likely to embed! These are the normal modifiers and shouldn't be related to energy stuff, but they can be anyways!
+			for(var/datum/modifier/M in modifiers)
+				if(!isnull(M.incoming_damage_percent))
+					if(M.energy_based)
+						M.energy_source.use(M.energy_cost) //We use energy_cost here for special effects, such as embedding.
+					hit_embed_chance = hit_embed_chance*M.incoming_damage_percent
+				if(P.damage_type == BRUTE && (!isnull(M.incoming_brute_damage_percent)))
+					if(M.energy_based)
+						M.energy_source.use(M.energy_cost)
+					hit_embed_chance = hit_embed_chance*M.incoming_brute_damage_percent
+
 			if(prob(max(hit_embed_chance, 0)))
 				var/obj/item/weapon/material/shard/shrapnel/SP = new()
 				SP.name = (P.name != "shrapnel")? "[P.name] shrapnel" : "shrapnel"
@@ -321,9 +333,9 @@ emp_act
 					H.bloody_body(src)
 					H.bloody_hands(src)
 
-		if(!stat)
+		if(!stat && !(I.no_random_knockdown))
 			switch(hit_zone)
-				if("head")//Harder to score a stun but if you do it lasts a bit longer
+				if(BP_HEAD)//Harder to score a stun but if you do it lasts a bit longer
 					if(prob(effective_force))
 						apply_effect(20, PARALYZE, blocked, soaked)
 						visible_message("<span class='danger'>\The [src] has been knocked unconscious!</span>")
@@ -337,7 +349,7 @@ emp_act
 						if(glasses && prob(33))
 							glasses.add_blood(src)
 							update_inv_glasses(0)
-				if("chest")//Easier to score a stun but lasts less time
+				if(BP_TORSO)//Easier to score a stun but lasts less time
 					if(prob(effective_force + 10))
 						apply_effect(6, WEAKEN, blocked, soaked)
 						visible_message("<span class='danger'>\The [src] has been knocked down!</span>")
@@ -347,7 +359,7 @@ emp_act
 	return 1
 
 /mob/living/carbon/human/proc/attack_joint(var/obj/item/organ/external/organ, var/obj/item/W, var/effective_force, var/dislocate_mult, var/blocked, var/soaked)
-	if(!organ || (organ.dislocated == 2) || (organ.dislocated == -1) || blocked >= 100)
+	if(!organ || (organ.dislocated == 1) || (organ.dislocated == -1) || blocked >= 100) //VOREStation Edit Bugfix
 		return 0
 
 	if(W.damtype != BRUTE)

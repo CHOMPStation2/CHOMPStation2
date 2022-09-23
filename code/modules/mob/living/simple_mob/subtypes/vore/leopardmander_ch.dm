@@ -3,7 +3,7 @@
 	desc = "A huge salamander-like drake. They are best known for their rarity, their voracity, their very potent paralyzing venom, and their healing stomach. This one is white."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/leopardmander)
 	tt_desc = "S Draconis uncia"
-	icon = 'icons/mob/vore128x64_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore128x64_ch.dmi'
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"
@@ -12,6 +12,7 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
+	vis_height = 92
 	melee_damage_lower = 10
 	melee_damage_upper = 25
 	friendly = list("nudges", "sniffs on", "rumbles softly at", "slobberlicks")

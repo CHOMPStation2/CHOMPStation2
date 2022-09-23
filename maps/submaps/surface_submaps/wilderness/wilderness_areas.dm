@@ -1,3 +1,4 @@
+//Can yall keep this alphabetized? Thanks.
 /area/submap
 	name = "Submap Area"
 	icon_state = "submap"
@@ -10,6 +11,10 @@
 /area/submap/event //To be used for Events not for regular PoIs
 	name = "Unknown"
 	requires_power = FALSE
+
+/area/submap/AbandonedLab
+	name = "POI - Abandoned Lab"
+	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/Blackshuttledown
 	name = "POI Wilderness - Black-Operative Shuttle"
@@ -43,6 +48,10 @@
 /area/submap/ChemSpill2
 	name = "POI Wilderness - Acrid Lake"
 	ambience = AMBIENCE_FOREBODING
+ 
+ /area/submap/CultBar
+	name = "POI - Cult Bar"
+	ambience = AMBIENCE_GHOSTLY
 
 /area/submap/DeathDen
 	name = "POI Wilderness - Death Den"
@@ -71,6 +80,10 @@
 /area/submap/Drugd
 	name = "POI Wilderness - Drug Den"
 	ambience = AMBIENCE_FOREBODING
+ 
+ /area/submap/DugOutMercs
+	name = "POI - Dug Out Mercanries"
+	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/Cragzone1
 	name = "POI Wilderness - Craggy Area"
@@ -143,6 +156,10 @@
 /area/submap/Manor1
 	name = "POI Wilderness - Manor House"
 	ambience = AMBIENCE_FOREBODING
+ 
+ /area/submap/MechHanger
+	name = "POI - Mech Hanger"
+	ambience = AMBIENCE_SIF
 
 /area/submap/MHR
 	name = "POI Wilderness - Manhack Rock"

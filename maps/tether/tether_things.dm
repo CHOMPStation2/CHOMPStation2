@@ -145,6 +145,7 @@
 	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
+	can_be_plated = FALSE
 
 	var/area/shock_area = /area/tether/surfacebase/tram
 
@@ -367,7 +368,7 @@
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/vending/wallmed2
 	layer = ABOVE_WINDOW_LAYER
-/obj/structure/closet/fireaxecabinet
+/obj/structure/fireaxecabinet
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/extinguisher_cabinet
 	layer = ABOVE_WINDOW_LAYER

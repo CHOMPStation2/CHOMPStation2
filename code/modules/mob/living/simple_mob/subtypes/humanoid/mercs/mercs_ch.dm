@@ -66,7 +66,7 @@
 	value = CATALOGUER_REWARD_EASY
 
 /mob/living/simple_mob/humanoid/merc
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/human)
 
 /mob/living/simple_mob/humanoid/merc/ranged
@@ -293,7 +293,6 @@
 /mob/living/simple_mob/humanoid/merc/voxpirate	//Don't use this one.
 	name = "vox mannequin"
 	desc = "You shouldn't be seeing this one."
-	icon = 'icons/mob/animal_ch.dmi'
 	icon_state = "voxpirate"
 	icon_living = "voxpirate"
 	icon_dead = "voxpirate_dead"

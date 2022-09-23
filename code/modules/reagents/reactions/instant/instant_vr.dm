@@ -147,13 +147,6 @@
     inhibitors = list("fluorine" = 0.01)
     result_amount = 1
 
-/decl/chemical_reaction/instant/nutridax
-	name = "Nutridax"
-	id = "nutridax"
-	result = "nutridax"
-	required_reagents = list("oxygen" = 1, "lipozine" = 1, "carbon" = 1)
-	result_amount = 3
-
 ///////////////////////////////////////////////////////////////////////////////////
 /// Vore Drugs
 
@@ -187,6 +180,13 @@
 	required_reagents = list("kelotane" = 1, "dermaline" = 1, "shockchem" = 1, "phoron" = 0.1)
 	catalysts = list("phoron" = 5)
 	result_amount = 3
+
+/decl/chemical_reaction/instant/prussian_blue
+	name = "Prussian Blue"
+	id = "prussian_blue"
+	result = "prussian_blue"
+	required_reagents = list("carbon" = 3, "iron" = 1, "nitrogen" = 3)
+	result_amount = 7
 
 ///////////////////////////////////////////////////////////////////////////////////
 /// Reagent colonies.

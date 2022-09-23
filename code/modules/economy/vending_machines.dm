@@ -47,17 +47,21 @@
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/shot = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/pint = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/mug = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/carafe = 2,	//VOREStation Add - Carafes and Pitchers
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/pitcher = 2,	//VOREStation Add - Carafes and Pitchers
+					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 10,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/metaglass = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 10,
+					/obj/item/weapon/reagent_containers/glass/beaker/stopperedbottle = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/gin = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine = 5,
 					/obj/item/weapon/reagent_containers/food/condiment/cookingoil = 5,
+					/obj/item/weapon/reagent_containers/food/condiment/cornoil = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps = 5,
@@ -70,8 +74,6 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/wine = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/jager = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 15,
@@ -194,7 +196,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/cb10 = 6,
 					/obj/item/weapon/reagent_containers/food/snacks/tuna = 2)
 	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/syndicake = 6,
-					/obj/item/weapon/reagent_containers/food/snacks/unajerky = 12)
+					/obj/item/weapon/reagent_containers/food/snacks/unajerky = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax = 6)
 	prices = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy = 2,
 				/obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 5,
@@ -529,6 +532,7 @@
 					/obj/item/seeds/cocoapodseed = 3,
 					/obj/item/seeds/plumpmycelium = 2,
 					/obj/item/seeds/cabbageseed = 3,
+					/obj/item/seeds/lettuce = 3,
 					/obj/item/seeds/grapeseed = 3,
 					/obj/item/seeds/pumpkinseed = 3,
 					/obj/item/seeds/cherryseed = 3,
@@ -627,6 +631,7 @@
 					/obj/item/device/analyzer = 5,
 					/obj/item/device/t_scanner = 5,
 					/obj/item/weapon/tool/screwdriver = 5,
+					/obj/item/weapon/extinguisher/mini = 3,
 					/obj/item/device/flashlight/glowstick = 3,
 					/obj/item/device/flashlight/glowstick/red = 3,
 					/obj/item/device/flashlight/glowstick/blue = 3,
@@ -1065,7 +1070,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/driedfish = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/cookiesnack = 8
 					)
-	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/unajerky = 1)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/unajerky = 1,
+					/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red = 6)
 
 	prices = list(	/obj/item/weapon/reagent_containers/food/snacks/tuna = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/semki = 5,
@@ -1253,6 +1259,7 @@
 		/obj/item/clothing/suit/chef = 5,
 		/obj/item/clothing/suit/chef/classic = 5,
 		/obj/item/clothing/head/chefhat = 5,
+		/obj/item/clothing/head/hairnet = 5,
 		/obj/item/clothing/under/waiter = 5,
 		/obj/item/clothing/under/sundress = 1
 	)
@@ -1539,7 +1546,7 @@
 	has_logs = 1
 
 /obj/machinery/vending/wardrobe/lawdrobe
-	name = "lawyer wardrobe vendor"
+	name = "IAA wardrobe vendor"
 	desc = "All the things you need to perform your job! Why didn't you already have them?"
 	product_slogans = "Want to do your job? Sure you do!"
 	icon_state = "lawdrobe"

@@ -1,4 +1,5 @@
 /datum/trait/neutral
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/neutral/metabolism_up
 	name = "Metabolism, Fast"
@@ -53,8 +54,8 @@
 	autohiss_extra_map = list(
 			"x" = list("ks", "kss", "ksss")
 		),
-	autohiss_exempt = list("Sinta'unathi"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
+	autohiss_exempt = list(LANGUAGE_UNATHI))
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -64,16 +65,34 @@
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		),
-	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
+	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
+
+/datum/trait/neutral/autohiss_zaddat
+	name = "Autohiss (Zaddat)"
+	desc = "You buzz your S's and F's."
+	cost = 0
+	var_changes = list(
+	autohiss_basic_map = list(
+			"f" = list("v","vh"),
+			"ph" = list("v", "vh")
+		),
+	autohiss_extra_map = list(
+			"s" = list("z", "zz", "zzz"),
+			"ce" = list("z", "zz"),
+			"ci" = list("z", "zz"),
+			"v" = list("vv", "vvv")
+		),
+	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 
 /datum/trait/neutral/bloodsucker
 	name = "Bloodsucker, Obligate"
 	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
-	excludes = list(/datum/trait/positive/bloodsucker_plus) //YW edit
+	var_changes = list("organic_food_coeff" = 0, "bloodsucker" = TRUE) //The verb is given in human.dm
+	excludes = list(/datum/trait/neutral/bloodsucker_freeform, /datum/trait/positive/bloodsucker_plus) //YW edit
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -84,6 +103,7 @@
 	desc = "You get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
+	var_changes = list("bloodsucker" = TRUE)
 	excludes = list(/datum/trait/neutral/bloodsucker, /datum/trait/positive/bloodsucker_plus) //YW edit
 
 /datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -146,11 +166,12 @@
 
 /datum/trait/neutral/synth_chemfurnace
 	name = "Biofuel Processor"
-	desc = "You are able to gain energy through consuming and processing normal food. Energy-dense foods such as protein bars and survival food will yield the best results."
+	desc = "You are able to gain energy through consuming and processing normal food, at the cost of significantly slower recharging via cyborg chargers. Energy-dense foods such as protein bars and survival food will yield the best results."
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
-	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.25)
+	var_changes = list("organic_food_coeff" = 0.75, "synthetic_food_coeff" = 1) //CHOMPEdit: Increase values
+	excludes = list(/datum/trait/neutral/biofuel_value_down)
 
 /datum/trait/neutral/glowing_eyes
 	name = "Glowing Eyes"
@@ -255,7 +276,7 @@
 	desc = "This trait drastically reduces the effects of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 2, "allergen_disable_severity" = 3)
+	var_changes = list("allergen_damage_severity" = 1.25, "allergen_disable_severity" = 5)
 	excludes = list(/datum/trait/neutral/allergen_increased_effect)
 
 /datum/trait/neutral/allergen_increased_effect
@@ -263,7 +284,7 @@
 	desc = "This trait drastically increases the effects of allergen reactions, enough that even a small dose can be lethal. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 8, "allergen_disable_severity" = 6)
+	var_changes = list("allergen_damage_severity" = 5, "allergen_disable_severity" = 20)
 	excludes = list(/datum/trait/neutral/allergen_reduced_effect)
 
 // Spicy Food Traits, from negative to positive.
@@ -514,3 +535,95 @@
 /datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/lend_prey_control
+
+/datum/trait/neutral/vertical_nom
+	name = "Vertical Nom"
+	desc = "Allows you to consume people from up above."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/vertical_nom/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/vertical_nom
+
+/datum/trait/neutral/micro_size_down
+	name = "Light Frame"
+	desc = "You are considered smaller than you are for micro interactions."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("micro_size_mod" = -0.15)
+
+/datum/trait/neutral/micro_size_up
+	name = "Heavy Frame"
+	desc = "You are considered bigger than you are for micro interactions."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("micro_size_mod" = 0.15)
+
+/datum/trait/neutral/digestion_value_up
+	name = "Highly Filling"
+	desc = "You provide notably more nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 2)
+
+/datum/trait/neutral/digestion_value_up_plus
+	name = "Extremely Filling"
+	desc = "You provide a lot more nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 3)
+
+/datum/trait/neutral/digestion_value_down
+	name = "Slightly Filling"
+	desc = "You provide notably less nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 0.5)
+
+/datum/trait/neutral/digestion_value_down_plus
+	name = "Barely Filling"
+	desc = "You provide a lot less nutrition to anyone who makes a meal of you."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("digestion_nutrition_modifier" = 0.25)
+
+
+/datum/trait/neutral/food_value_down
+	name = "Insatiable"
+	desc = "You need to eat a third of a plate more to be sated."
+	cost = 0
+	custom_only = FALSE
+	can_take = ORGANICS
+	var_changes = list(organic_food_coeff = 0.67, digestion_efficiency = 0.66)
+	excludes = list(/datum/trait/neutral/bloodsucker)
+
+/datum/trait/neutral/food_value_down_plus
+	name = "Insatiable, Greater"
+	desc = "You need to eat three times as much to feel sated."
+	cost = 0
+	custom_only = FALSE
+	can_take = ORGANICS
+	var_changes = list(organic_food_coeff = 0.33, digestion_efficiency = 0.33)
+	excludes = list(/datum/trait/neutral/bloodsucker, /datum/trait/neutral/food_value_down)
+
+/datum/trait/neutral/biofuel_value_down
+	name = "Discount Biofuel processor"
+	desc = "You are able to gain energy through consuming and processing normal food. Unfortunately, it is half as effective as premium models. On the plus side, you still recharge from charging stations fairly efficiently."
+	cost = 0
+	custom_only = FALSE
+	can_take = SYNTHETICS
+	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.3, digestion_efficiency = 0.5)
+	excludes = list(/datum/trait/neutral/synth_chemfurnace)
+
+/datum/trait/neutral/synth_cosmetic_pain
+	name = "Pain simulation"
+	desc = "You have added modules in your synthetic shell that simulates the sensation of pain. You are able to turn this on and off for repairs as needed or convenience at will."
+	cost = 0
+	custom_only = FALSE
+	can_take = SYNTHETICS
+
+
+/datum/trait/neutral/synth_cosmetic_pain/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/toggle_pain_module

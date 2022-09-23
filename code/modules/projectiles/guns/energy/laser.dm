@@ -115,6 +115,7 @@
 	name = "alien pistol"
 	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
 	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
@@ -151,6 +152,7 @@
 	name = "laser cannon"
 	desc = "With the laser cannon, the lasing medium is enclosed in a tube lined with uranium-235 and subjected to high neutron \
 	flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
+	icon = 'icons/obj/gun.dmi'  // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "lasercannon"
 	item_state = null
 	wielded_item_state = "mhdhowitzer-wielded" //Placeholder
@@ -179,6 +181,7 @@
 	name = "xray laser gun"
 	desc = "A high-power laser gun capable of expelling concentrated xray blasts, which are able to penetrate matter easier than \
 	standard photonic beams, resulting in an effective 'anti-armor' energy weapon."
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "xray"
 	item_state = "xray"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
@@ -191,6 +194,8 @@
 	desc = "The HI DMR 9E is an older design of Hephaestus Industries. A designated marksman rifle capable of shooting powerful \
 	ionized beams, this is a weapon to kill from a distance."
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by armed forces across human space."
+	icon = 'icons/obj/64x32guns_ch.dmi' // CHOMPEdit: Gun Sprites
+	icon_expected_width = 64 // CHOMPEdit: Gun Sprites
 	icon_state = "sniper"
 	item_state = "sniper"
 	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")

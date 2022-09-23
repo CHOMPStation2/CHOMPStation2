@@ -5,8 +5,8 @@
 /obj/item/weapon/cell
 	name = "power cell"
 	desc = "A rechargable electrochemical power cell."
-	icon = 'icons/obj/power_cells.dmi'
-	icon_state = "b_st"
+	icon = 'modular_chomp/icons/obj/power_cells.dmi' //CHOMP Edit using modular folders now
+	icon_state = "b_st" //CHOMP Edit
 	item_state = "cell"
 	origin_tech = list(TECH_POWER = 1)
 	force = 5.0
@@ -54,6 +54,12 @@
 	if(self_recharge)
 		if(world.time >= last_use + charge_delay)
 			give(charge_amount)
+			// TGMC Ammo HUD - Update the HUD every time we're called to recharge.
+			if(istype(loc, /obj/item/weapon/gun/energy)) // Are we in a gun currently?
+				var/obj/item/weapon/gun/energy/gun = loc
+				var/mob/living/user = gun.loc
+				if(istype(user))
+					user?.hud_used.update_ammo_hud(user, gun) // Update the HUD
 	else
 		return PROCESS_KILL
 

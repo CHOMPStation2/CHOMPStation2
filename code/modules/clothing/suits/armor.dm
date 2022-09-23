@@ -513,14 +513,17 @@
 		|ACCESSORY_SLOT_ARMOR_A\
 		|ACCESSORY_SLOT_ARMOR_L\
 		|ACCESSORY_SLOT_ARMOR_S\
-		|ACCESSORY_SLOT_ARMOR_M)
+		|ACCESSORY_SLOT_ARMOR_M\
+		|ACCESSORY_SLOT_OVER\
+		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_INSIGNIA\
 		|ACCESSORY_SLOT_ARMOR_C\
 		|ACCESSORY_SLOT_ARMOR_A\
 		|ACCESSORY_SLOT_ARMOR_L\
 		|ACCESSORY_SLOT_ARMOR_S\
-		|ACCESSORY_SLOT_ARMOR_M)
+		|ACCESSORY_SLOT_ARMOR_M\
+		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
 	blood_overlay_type = "armor"
 
 /obj/item/clothing/suit/armor/pcarrier/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)

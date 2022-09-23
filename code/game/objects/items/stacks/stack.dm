@@ -333,7 +333,10 @@
 		if (prob(transfer/orig_amount * 100))
 			transfer_fingerprints_to(S)
 			if(blood_DNA)
-				S.blood_DNA |= blood_DNA
+				if(S.blood_DNA)
+					S.blood_DNA |= blood_DNA
+				else
+					S.blood_DNA = blood_DNA.Copy()
 		return transfer
 	return 0
 
@@ -399,7 +402,7 @@
 
 /obj/item/stack/attack_hand(mob/user as mob)
 	if (user.get_inactive_hand() == src)
-		var/N = input(usr, "How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1) as num|null
+		var/N = tgui_input_number(usr, "How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1, amount, 1)
 		if(N)
 			var/obj/item/stack/F = src.split(N)
 			if (F)

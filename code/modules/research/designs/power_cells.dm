@@ -1,3 +1,4 @@
+//CHOMP Disabled in DME in favor of modular_chomp folder
 /datum/design/item/powercell
 	build_type = PROTOLATHE | MECHFAB
 
@@ -17,7 +18,6 @@
 
 /datum/design/item/powercell/basic
 	name = "basic"
-	build_type = PROTOLATHE | MECHFAB
 	id = "basic_cell"
 	req_tech = list(TECH_POWER = 1)
 	materials = list(MAT_STEEL = 700, MAT_GLASS = 50)
@@ -27,7 +27,6 @@
 
 /datum/design/item/powercell/high
 	name = "high-capacity"
-	build_type = PROTOLATHE | MECHFAB
 	id = "high_cell"
 	req_tech = list(TECH_POWER = 2)
 	materials = list(MAT_STEEL = 700, MAT_GLASS = 60)
@@ -100,3 +99,21 @@
 	category = list("Misc")
 	sort_string = "BAABE"
 //End of Yawn add
+
+/datum/design/item/powercell/mecha/high
+	name = "high-capacity mecha"
+	id = "high_mech_cell"
+	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 3)
+	materials = list(MAT_STEEL = 600, MAT_SILVER = 150, MAT_GLASS = 70)
+	build_path = /obj/item/weapon/cell/mech/high
+	category = list("Misc")
+	sort_string = "BAACA"
+
+/datum/design/item/powercell/mecha/super
+	name = "super-capacity mecha"
+	id = "super_mech_cell"
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
+	materials = list(MAT_STEEL = 500, MAT_GOLD = 200, MAT_SILVER = 200, MAT_GLASS = 80)
+	build_path = /obj/item/weapon/cell/mech/super
+	category = list("Misc")
+	sort_string = "BAACB"

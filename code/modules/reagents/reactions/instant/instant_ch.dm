@@ -4,7 +4,7 @@
 	result = "aphrodisiac"
 	required_reagents = list("carbon" = 2, "hydrogen" = 2, "oxygen" = 2, "water" = 1)
 	result_amount = 6
-  
+
 /decl/chemical_reaction/instant/claridyl
 	name = "claridyl"
 	id = "claridyl"
@@ -37,7 +37,7 @@
 	id = "eden_snake"
 	result = "eden_snake"
 	required_reagents = list("eden" = 1, "ethanol" = 1)
-	
+
 /decl/chemical_reaction/instant/tercozolam
 	id = "tercozolam"
 	result = "tercozolam"
@@ -48,8 +48,15 @@
 	name = "Peridaxon"
 	id = "peridaxon_ch"
 	result = "peridaxon"
-	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)	
-	result_amount = 12 //More phoron-efficient alternative recipe. 
+	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)
+	result_amount = 12 //More phoron-efficient alternative recipe.
+
+/decl/chemical_reaction/instant/sorbitol
+	name = "Sorbitol"
+	id = "sorbitol"
+	result = "sorbitol"
+	required_reagents = list("unsorbitol" = 1, "phoron" = 1)
+	result_amount = 2
 
 ///SAP RECIPES//////
 
@@ -71,7 +78,7 @@
 	name = "Bullvalene"
 	id = "bullvalene"
 	result = "bullvalene"
-	required_reagents = list("dermaline" = 1, "orangesap" = 1, "Copper" = 1)
+	required_reagents = list("dermaline" = 1, "orangesap" = 1, "copper" = 1)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/nutrient
@@ -80,16 +87,16 @@
 	result = "nutriment"
 	required_reagents = list("purplesap" = 1, "orangesap" = 1, "bluesap" = 1)
 	result_amount = 3
-	
+
 /////SERAZINE RECIPES//////
 
-/decl/chemical_reaction/instant/alizine
-	name = "Alizine"
-	id = "alizine"
-	result = "alizine"
+/decl/chemical_reaction/instant/alizene
+	name = "Alizene"
+	id = "alizene"
+	result = "alizene"
 	required_reagents = list("bicaridine" = 1, "serazine" = 1, "tungsten" = 1)
 	result_amount = 3
-	
+
 /////GENDER CHANGE RECIPES/////
 
 /decl/chemical_reaction/instant/change_drug/male
@@ -112,7 +119,7 @@
 	result = "change_drug_intersex"
 	required_reagents = list("change_drug_male" = 1, "change_drug_female" = 1)
 	result_amount = 1
-  
+
 // Frost oil reactions for material sheets
 /decl/chemical_reaction/instant/solidification/aluminium
 	name = "Solid Aluminium"
@@ -125,7 +132,7 @@
 	id = "solidcopper"
 	required_reagents = list("frostoil" = 5, "copper" = REAGENTS_PER_SHEET)
 	sheet_to_give = /obj/item/stack/material/copper
-  
+
 //YW stuff
 /decl/chemical_reaction/instant/benzilate
 	name = "Benzilate"

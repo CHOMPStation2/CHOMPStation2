@@ -104,6 +104,7 @@
 		//cut_overlays()
 		invisibility = initial(invisibility)
 		see_invisible = initial(see_invisible)
+		see_invisible_default = initial(see_invisible_default) // CHOMPEdit - Allow seeing phased entities while phased.
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		force_max_speed = initial(force_max_speed)
@@ -175,6 +176,7 @@
 		sleep(5)
 		invisibility = INVISIBILITY_LEVEL_TWO
 		see_invisible = INVISIBILITY_LEVEL_TWO
+		see_invisible_default = INVISIBILITY_LEVEL_TWO // CHOMPEdit - Allow seeing phased entities while phased.
 		//cut_overlays()
 		update_icon()
 		alpha = 127

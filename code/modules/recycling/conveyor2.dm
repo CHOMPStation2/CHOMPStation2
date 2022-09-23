@@ -130,7 +130,7 @@
 
 	if(istype(I, /obj/item/device/multitool))
 		if(panel_open)
-			var/input = sanitize(input(usr, "What id would you like to give this conveyor?", "Multitool-Conveyor interface", id))
+			var/input = sanitize(tgui_input_text(usr, "What id would you like to give this conveyor?", "Multitool-Conveyor interface", id))
 			if(!input)
 				to_chat(user, "No input found. Please hang up and try your call again.")
 				return
@@ -304,7 +304,7 @@
 
 	if(istype(I, /obj/item/device/multitool))
 		if(panel_open)
-			var/input = sanitize(input(usr, "What id would you like to give this conveyor switch?", "Multitool-Conveyor interface", id))
+			var/input = sanitize(tgui_input_text(usr, "What id would you like to give this conveyor switch?", "Multitool-Conveyor interface", id))
 			if(!input)
 				to_chat(user, "No input found. Please hang up and try your call again.")
 				return
@@ -315,6 +315,13 @@
 					conveyors += C
 			return
 
+//CHOMPedit: Conveyor belts can be fast :)
+	if(istype(I, /obj/item/weapon/tool/wirecutters))
+		if(panel_open)
+			toggle_speed()
+			to_chat(user, "You adjust the speed of the conveyor switch.")
+			return
+//CHOMPedit End
 /obj/machinery/conveyor_switch/oneway
 	var/convdir = 1 //Set to 1 or -1 depending on which way you want the convayor to go. (In other words keep at 1 and set the proper dir on the belts.)
 	desc = "A conveyor control switch. It appears to only go in one direction."

@@ -100,12 +100,13 @@
 
 			// Also recharge their internal battery.
 			if(H.isSynthetic() && H.nutrition < 500) //VOREStation Edit
-				H.nutrition = min(H.nutrition+10, 500) //VOREStation Edit
+				H.nutrition = min(H.nutrition+(10*(1-H.species.synthetic_food_coeff)), 500) //VOREStation Edit
 				cell.use(7000/450*10)
 
 			// And clear up radiation
-			if(H.radiation > 0)
-				H.radiation = max(H.radiation - rand(5, 15), 0)
+			if(H.radiation > 0 || H.accumulated_rads > 0)
+				H.radiation = max(H.radiation - 25, 0)
+				H.accumulated_rads = max(H.accumulated_rads - 25, 0)
 
 		if(H.wearing_rig) // stepping into a borg charger to charge your rig and fix your shit
 			var/obj/item/weapon/rig/wornrig = H.get_rig()
@@ -198,7 +199,7 @@
 		desc += "<br>It is capable of repairing burn damage."
 
 /obj/machinery/recharge_station/proc/build_overlays()
-	cut_overlay()
+	cut_overlays()
 	switch(round(chargepercentage()))
 		if(1 to 20)
 			add_overlay("statn_c0")

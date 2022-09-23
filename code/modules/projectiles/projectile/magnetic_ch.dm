@@ -4,6 +4,7 @@
 	fire_sound = 'sound/weapons/rapidslice.ogg'
 	damage = 10
 	armor_penetration = 35
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz
 	name = "blitz rod"
@@ -22,6 +23,7 @@
 	detonate_travel = 1
 	detonate_mob = 1
 	energetic_impact = 1
+	hud_state = "rocket_thermobaric"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A)
 	if(src.loc)

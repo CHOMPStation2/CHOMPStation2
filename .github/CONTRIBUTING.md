@@ -34,7 +34,16 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 
 ### Chomp Station Coding Standards
 
-Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start.
+Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start:
+
+In an effort to make contributing easier to do, Black Major has started a modularity folder, https://github.com/CHOMPStation2/CHOMPStation2/tree/master/modular_chomp.
+Ideally, any content that can be written that is wholelly independant of vorestation's content, should be
+included in this modularity folder, and put into the associated folder that it would have appeared in among the standard files.
+
+Ideally, the point of this is to make it slightly easier to differentiate chomp specific content from virgo content.
+
+When should you use this?
+Mostly for chomp exclusive stuff, otherwise if you need to modify a base file for any reason or if it is expected to be a part of upstream as well, write it in the base files with the following standards/policies/guidelines in the meantime:
 
 * If it is something like a bugfix that VoreStation or Polaris would want (the codebases we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation). All PRs with edits to stock .DMI files might be rejected.
@@ -42,9 +51,10 @@ Any code submissions that do not meet our coding standards are likely to be reje
     * For single-line changes: //CHOMPEdit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
     * For multi-line additions: //CHOMPEdit - "Explanation" and then at the bottom of your changes, //CHOMPEdit End
     * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* CHOMP Removal - "Reason"
-* If it is something like a bugfix that Polaris would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
+* If it is something like a bugfix that Polaris or Vorestation would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
-* Any new files should have "_ch" at the end. For example, "life_ch.dm". Just make them in the same location as the file they are related to.
+* Any new files should preferrably go into the modular_chomp folder following the file structure of where it would be placed normally. The old method was to have "_ch" at the end. For example, "life_ch.dm".
+* Do not make changes to base icon files. New icon files should go into modular_chomp and code should be changed to point to the new file.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 The `attempt_ch()` proc has been added for your convienence. It allows a many-line change to become a single-line change in the existing Polaris files, preserving mergeability and allowing better code separation while preventing your new code from causing runtimes that stop the original code from running. If you are wanting to inject new procedures into an existing proc, called `update_atoms()` for example, you would create `update_atoms_ch()` in a nearby `_ch.dm` file, and then call to it from a single line in the original `update_atoms()` with `attempt_ch()`.
@@ -71,6 +81,12 @@ Then in our `handle_grabs_ch()` proc, if we want to avoid performing the stock g
 * Limit the first line to 72 characters or less, otherwise it truncates the title with '...', wrapping the rest into the description.
 * Reference issues and pull requests liberally.
 * Use the GitHub magic words "Fixed/Fixes/Fix, Resolved/Resolves/Resolve, Closed/Closes/Close", as in, "Closes #1928", as this will automatically close that issue when the PR is merged if it is a fix for that issue.
+
+### Early porting
+
+* You may earlyport.
+* Follow standard chompcomments incase upstream ends up closing their PR for any reason.
+* If it does get merged upstream and the mirror appears on our repo, you are responsible for unfucking the comments situation, because it'll have to say VORE edits instead of CHOMP edits.
 
 ## Licensing
 CHOMPStation is licensed under the GNU Affero General Public License version 3, which can be found in full in LICENSE-AGPL3.txt.

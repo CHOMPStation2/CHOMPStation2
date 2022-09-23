@@ -311,7 +311,7 @@
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
 	muzzle_velocity = 960
-	w_class = ITEMSIZE_HUGE
+	w_class = ITEMSIZE_LARGE
 	one_handed_penalty = 40
 
 /obj/item/weapon/gun/projectile/automatic/serdy/ar10
@@ -334,7 +334,7 @@
 /obj/item/weapon/gun/projectile/automatic/serdy/m41ab //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A/2"
 	desc = "The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. This one is a rare, and fairly competent replica of the original by Scarborough Arms, with some minor design improvements over the original. The aluminium chassis is painted steel blue, and it has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock."
-	caliber = "10x24mm caseless"
+	caliber = "10x24mm"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
 	icon_state="m41b"
@@ -347,11 +347,12 @@
 	muzzle_velocity = 840
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/m41a.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/m41a //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A"
 	desc = "A tried and true original. The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. 'PEACE THROUGH SUPERIOR FIREPOWER' is stamped into the side of the aluminium chassis."
-	caliber = "10x24mm caseless"
+	caliber = "10x24mm"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
 	icon_state="m41a"
@@ -364,13 +365,14 @@
 	muzzle_velocity = 840
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/m41a.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/t12 //This gun is pretty overpowered. Leaving it as an admin spawn.
 	name = "T-12"
 	desc = "The standard issue rifle of both the SGC and the USDF nowadays, alongside the newer versions of the M41A/2. A caseless version of the classic G36E. Some folk call it the lego gun because of how light it is, even when loaded. Chambered in 10x24mm Caseless."
-	caliber = "10x24mm caseless"
-	magazine_type = /obj/item/ammo_magazine/m41
-	allowed_magazines = list(/obj/item/ammo_magazine/m41)
+	caliber = "10x24mm"
+	magazine_type = /obj/item/ammo_magazine/t12
+	allowed_magazines = list(/obj/item/ammo_magazine/t12)
 	icon_state="t12"
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
 	firemodes = list(
@@ -381,17 +383,18 @@
 	muzzle_velocity = 840
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/type901.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/fal
-	name = "FAL"
+	name = "FN-FAL"
 	desc = "The right arm of the free galaxy. Chambered in 7.62x51mm."
-	caliber = "5.56x45mm"
+	caliber = "7.62mm"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/fal
 	allowed_magazines = list(/obj/item/ammo_magazine/fal)
 	icon_state = "fal"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	muzzle_velocity = 840
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 40
@@ -406,9 +409,9 @@
 	magazine_type = /obj/item/ammo_magazine/m16
 	allowed_magazines = list(/obj/item/ammo_magazine/m16)
 	icon_state = "keltecG"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	muzzle_velocity = 950
-	w_class = ITEMSIZE_HUGE
+	w_class = ITEMSIZE_LARGE
 	one_handed_penalty = 40
 	fire_sound = "sound/weapons/serdy/sks.ogg"
 
@@ -504,7 +507,7 @@
 	desc = "A lightweight bullpup assault carbine of unknown make, with a very high muzzle velocity and fair accuracy. A favorite of scum and villainy everywhere due to its complete lack of identification markings. Popularized by the 2541 movie, 'Boarding Party'. This one is smaller and more compact than its larger counterpart. Chambered in 7.62x39mm."
 	icon_state = "type901b"
 	muzzle_velocity = 880
-	w_class = ITEMSIZE_HUGE
+	w_class = ITEMSIZE_LARGE
 	one_handed_penalty = 30
 
 /obj/item/weapon/gun/projectile/automatic/serdy/awp
@@ -545,7 +548,7 @@
 	magazine_type = /obj/item/ammo_magazine/hectate
 	allowed_magazines = list(/obj/item/ammo_magazine/hectate)
 	icon_state = "hectate"
-	projectile_type = /obj/item/projectile/bullet/rifle/a50bmg
+	projectile_type = /obj/item/projectile/bullet/rifle/a145 //the old round type was ass
 	load_method = MAGAZINE
 	muzzle_velocity = 825
 	action_button_name = "Use Scope"
@@ -628,7 +631,7 @@
 	caliber = "9x39mm"
 	magazine_type = /obj/item/ammo_magazine/plamya
 	allowed_magazines = list(/obj/item/ammo_magazine/plamya)
-	icon_state = "plamyac"
+	icon_state = "plamyab"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -653,7 +656,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/serdy/plamya/mk3
 	name = "WKHM 'Plamya' Mk. 3"
-	icon_state = "plamyab"
+	icon_state = "plamyac"
 	desc = "An old school assault rifle with a modern twist. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. This is a newer variant, with a fully synthetic stock, and a shorter barrel. The serial number and production stamp has been sanded off. Chambered in 9x39mm."
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -685,16 +688,11 @@
 
 /obj/item/weapon/gun/projectile/automatic/serdy/spas35
 	name = "Spas-35"
-	desc = "A complex pump shotgun, modelled after the classic Spas-12. Upgraded with durable parts to fix the flaws of the classic. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge." 
+	desc = "A complex pump shotgun, modelled after the classic Spas-12. Upgraded with durable parts to fix the flaws of the classic. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge."
 	caliber = "12g"
 	icon_state = "spas12"
 	ammo_type = /obj/item/ammo_casing/a12g/pellet
 	projectile_type = /obj/item/projectile/bullet/shotgun
-	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=3,    burst_accuracy=list(0,-5), dispersion=list(0.0, 0.2)),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
-	)
 	max_shells = 7
 	bolt_name = "bolt"
 	bolt_release = null //No bolt release on spas-12
@@ -776,13 +774,36 @@
 	fire_sound = "sound/weapons/serdy/vityaz.ogg"
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
+/obj/item/weapon/gun/projectile/automatic/serdy/vityazb
+	name = "WKHM 'Vityaz-B'"
+	desc = "A swarm of angry bees. The Plamya's baby brother. With 12 total moving parts, including the trigger mechanism, this gun was built with one purpose. Longevity and reliability. Commonly found in the hands of private security, criminals, and law enforcement alike across many worlds. This one is a B model, made to fire faster, at the expense of reliability. Chambered in 10mm."
+	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
+	caliber = "10mm"
+	magazine_type = /obj/item/ammo_magazine/m10mm
+	allowed_magazines = list(/obj/item/ammo_magazine/m10mm)
+	icon_state = "vityaz"
+	burst_delay = 1
+	projectile_type = /obj/item/projectile/bullet/a10mm
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
+	muzzle_velocity = 430
+	is_long = FALSE
+	fire_sound = "sound/weapons/serdy/vityaz.ogg"
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+
+
 //LMGs
 
-/obj/item/weapon/gun/projectile/automatic/serdy/molniya
+/obj/item/weapon/gun/projectile/automatic/serdy/molniya //this is essentially a space MG42
 	name = "WKHM 'Molniya'"
 	desc = "A light machinegun manufactured by WKHM for various paramilitaries, private security companies, and rimworld governments. Big, heavy, and with a fire rate similar to that of an MG42. Often used in emplacements and on top of armored vehicles, or as a squad support weapon. Nicknamed the 'Pig' or the 'Sawzall', this one has a solid oak stock, and bears the 'WKHM Adamant' arkship's production stamp. If you ever see this gun, there is no doubt shit's about to go down. Chambered in 7.62x51mm."
 	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "7.62mm"
+	burst_delay = 1
 	magazine_type = /obj/item/ammo_magazine/molniya
 	allowed_magazines = list(/obj/item/ammo_magazine/molniya)
 	icon_state = "molniya"
@@ -790,8 +811,10 @@
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
@@ -805,12 +828,13 @@
 	magazine_type = /obj/item/ammo_magazine/pkm
 	allowed_magazines = list(/obj/item/ammo_magazine/pkm)
 	icon_state = "pkm"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x54
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 825
@@ -830,6 +854,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 735
@@ -849,6 +874,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 745
@@ -873,11 +899,14 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
+	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
 	one_handed_penalty = 90
 
+//commented this out because it seems to be breaking the Kord -- Ocelot
+/*
 /obj/item/weapon/gun/projectile/automatic/serdy/kord/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(user.size_multiplier <= 0.5) //They're 50% or lower. If they fire this gun, they're gonna get obliterated.
 		to_chat(user,"<span class='warning'>You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea...</span>")
@@ -889,7 +918,7 @@
 	var/unhappy_factor = 1.3333333*(user.size_multiplier - 0.5) //Unhappy factor based on size. Below 50% is a really bad day, and above 125% is fine, everything inbetween is varying.
 	if(unhappy_factor >= 1) //They're fine
 		return
-	
+
 	if(unhappy_factor <= 0) //RIP them
 		var/is_human = FALSE
 		var/mob/living/carbon/human/H = user
@@ -942,9 +971,7 @@
 			message_on_fire += "<span class='notice'> The force causes you to stumble backwards, dropping the gun and falling to the ground.</span>"
 			user.drop_item()
 			user.apply_effect(25,WEAKEN)
-
-
-
+*/
 
 //Pistols
 
@@ -1017,13 +1044,32 @@
 	caliber = "9mm"
 	magazine_type = /obj/item/ammo_magazine/m9mm/large
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
-	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-20,-40), dispersion=list(0.0, 0.9, 1.8))
-	)
 	projectile_type = /obj/item/projectile/bullet/pistol
 	muzzle_velocity = 375
 	fire_sound = "sound/weapons/serdy/9mmpistol.ogg"
+
+/obj/item/weapon/gun/projectile/serdy_pistols/tp23s
+	name = "TP-23 Terran Special"
+	desc = "A high end service pistol, that outclasses most of its type, due to its slick operation, ease of concealment, and its built in laser/flashlight combo, and its unusual choice of caliber. Spits some pretty nasty fireballs from the muzzle. Most often seen in the holsters of high ranking SGC, or NT officials. Chambered in .44 magnum."
+	icon_state = "tp23b"
+	caliber = ".44"
+	magazine_type = /obj/item/ammo_magazine/tp23s
+	allowed_magazines = list(/obj/item/ammo_magazine/tp23s)
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	muzzle_velocity = 465
+	fire_sound = "sound/weapons/serdy/deagle.ogg"
+
+/obj/item/weapon/gun/projectile/serdy_pistols/tp23
+	name = "TP-23"
+	desc = "A classic service pistol, that outclasses most of its type, due to its slick operation, ease of concealment, and its built in laser/flashlight combo, and its unusual choice of caliber. Most often seen in the holsters of SGC and USDF troops and peacekeepers, or in the hands of NT security personnel with money to spend, and officers. Chambered in .45 ACP."
+	icon_state = "tp23"
+	caliber = ".45"
+	magazine_type = /obj/item/ammo_magazine/tp23/rubber
+	allowed_magazines = list(/obj/item/ammo_magazine/tp23)
+	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	muzzle_velocity = 300
+	fire_sound = "sound/weapons/serdy/pistol_service.ogg"
+
 
 /obj/item/weapon/gun/projectile/revolver/nagant
 	name = "nagant revolver"
@@ -1032,6 +1078,18 @@
 	icon_state = "nagant"
 	max_shells = 7
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+
+/obj/item/weapon/gun/projectile/revolver/saa
+	name = "Colt Single Action Army"
+	desc = "A Colt Single Action Army. The greatest handgun ever made. Six shots. More than enough to kill anything that moves... Chambered in .45 Long-Colt." //sue me -- Ocelot
+	icon = 'icons/obj/gun_ch.dmi'
+	caliber = ".45 LC"
+	icon_state = "saa"
+	fire_delay = 0 //fastest gun in the west
+	ammo_type = /obj/item/ammo_casing/a45lc
+	max_shells = 6
+	move_delay = 0
+	fire_sound = "sound/weapons/serdy/44mag.ogg"
 
 /obj/item/weapon/gun/projectile/revolver/nagant/skinned
 	name = "nagant revolver"
@@ -1050,6 +1108,26 @@
 
 /obj/item/weapon/gun/projectile/automatic/c20r
 	muzzle_velocity = 285	//Based off UMP-45, since apparently this 10mm smg fires .45 ftw. May be fixed in future updates.
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "c20r-20"
+	icon_expected_height = 32
+	icon_expected_width = 64
+
+/obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,4)]"
+	else
+		icon_state = "c20r"
+	return
+
+/obj/item/weapon/gun/projectile/automatic/c20r/Initialize()
+	. = ..()
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/c20r/update_transform()
+	. = ..()
+	transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/automatic/sts35
 	muzzle_velocity = 900	//Based off AK-74
@@ -1072,14 +1150,51 @@
 
 /obj/item/weapon/gun/projectile/automatic/wt550
 	muzzle_velocity = 375	//Guestimation
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "wt550-20"
+	icon_expected_height = 32
+	icon_expected_width = 64
+
+/obj/item/weapon/gun/projectile/automatic/wt550/update_icon()
+	. = ..()
+	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
+
+/obj/item/weapon/gun/projectile/automatic/wt550/Initialize()
+	. = ..()
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/wt550/update_transform()
+	. = ..()
+	transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/automatic/z8
 	muzzle_velocity = 750	//Based off HK417 16 in barrel.
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "carbine-10"
+	icon_expected_height = 32
+	icon_expected_width = 64
+
+/obj/item/weapon/gun/projectile/automatic/z8/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
+	else
+		icon_state = "carbine-e"
+	return
+
+/obj/item/weapon/gun/projectile/automatic/z8/Initialize()
+	. = ..()
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/z8/update_transform()
+	. = ..()
+	transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw
-	bolt_name="charging handle"
+	bolt_name = "charging handle"
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 960 //Prototype PU-21(https://en.wikipedia.org/wiki/IP-2)
+
 
 /obj/item/weapon/gun/projectile/automatic/as24
 	muzzle_velocity = 470 //Temporary, might be changed.
@@ -1087,6 +1202,22 @@
 /obj/item/weapon/gun/projectile/automatic/mini_uzi
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 280 //Mac-10 .45
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "mini-uzi"
+	icon_expected_height = 32
+	icon_expected_width = 64
+
+/obj/item/weapon/gun/projectile/automatic/mini_uzi/update_icon()
+	. = ..()
+	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-empty"
+
+/obj/item/weapon/gun/projectile/automatic/mini_uzi/Initialize()
+	. = ..()
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/mini_uzi/update_transform()
+	. = ..()
+	transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/automatic/p90	//Finally a gun that exists irl. oh wait fuck they decided to chamber the p90 in 9mm //Fixed bb
 	muzzle_velocity = 715	//Guestimation. Will hopefully be able to replace with actual 5.7mm at some point. //Done
@@ -1099,7 +1230,7 @@
 	muzzle_velocity = 285
 
 /obj/item/weapon/gun/projectile/automatic/bullpup
-	muzzle_velocity = 880	//7.62 NATO Bullpup was unsurprisingly difficult to find https://en.wikipedia.org/wiki/Kel-Tec_RFB 
+	muzzle_velocity = 880	//7.62 NATO Bullpup was unsurprisingly difficult to find https://en.wikipedia.org/wiki/Kel-Tec_RFB
 
 /obj/item/weapon/gun/projectile/automatic/combatsmg
 	muzzle_velocity = 370	//Guestimation
@@ -1371,6 +1502,7 @@
 	desc = "A professionally cut down pump-action shotgun, with a checkered pistol grip, and a 6 round tube. Come with me if you want to live. Chambered in 12 gauge."
 	icon = 'icons/obj/64x32guns_ch.dmi'
 	icon_state = "shorty"
+	max_shells = 6
 	pump_animation = "shorty-pump"
 
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel
@@ -1407,7 +1539,7 @@
 		if(do_after(user, 30))	//SHIT IS STEALTHY EYYYYY
 			icon_state = "sawnshotgun"
 			item_state = "sawnshotgun"
-			
+
 			desc = "Omar's coming!"
 			to_chat(user, "<span class='warning'>You shorten the barrel of \the [src]!</span>")
 	else
@@ -1422,7 +1554,7 @@
 	name = "sawn-off shotgun"
 	desc += " The barrel seems to be crudely sawn in half."
 	icon = 'icons/obj/gun_ch.dmi'
-	icon_state = "sawnshotgun[shotgun_variant]" 
+	icon_state = "sawnshotgun[shotgun_variant]"
 	icon_expected_width = 32
 	update_icon()
 	update_transform()

@@ -5,7 +5,7 @@ Scour its code if you dare.
 
 Here's a summary, however.
 
-This is a 128x64px mob with sprites drawn by Przyjaciel (thanks mate) and some codersprites.
+This is a 128x92px mob with sprites drawn by Przyjaciel (thanks mate) and some codersprites.
 
 The bigdragon is an 800 health hostile boss mob with three special attacks.
 The first (disarm intent) is a charge attack that activates when the target is >5 tiles away and requires line of sight.
@@ -62,6 +62,7 @@ I think I covered everything.
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
+	vis_height = 92
 	melee_damage_lower = 35
 	melee_damage_upper = 25
 	melee_miss_chance = 0
@@ -318,6 +319,7 @@ I think I covered everything.
 	update_fullness()
 	build_icons()
 
+/* CHOMPEDIT - removed
 /mob/living/simple_mob/vore/bigdragon/update_fullness()
 	var/new_fullness = 0
 	// Only count stomachs to fullness
@@ -328,6 +330,7 @@ I think I covered everything.
 	new_fullness /= size_multiplier
 	new_fullness = round(new_fullness, 1)
 	vore_fullness = min(vore_capacity, new_fullness)
+*/
 
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
@@ -505,6 +508,7 @@ I think I covered everything.
 
 /mob/living/simple_mob/vore/bigdragon/init_vore()
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HOLD] = list(
 		"The dragon's breath continues to pant over you rhythmically, each exhale carrying a bone-shivering growl",
 		"The thick, heavy tongue lifts, curling around you, cramming you tightly against it's teeth, to squeeze some flavor out of you.",
@@ -514,6 +518,7 @@ I think I covered everything.
 	gut1 = B
 	vore_selected = B
 	B = new /obj/belly/dragon/throat(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HOLD] = list(
 		"Gggllrrrk! Another loud, squelching swallow rings out in your ears, dragging you a little deeper into the furnace-like humid heat of the dragon's body.",
 		"Nestling in a still throat for a moment, you feel the walls quiver and undulate excitedly in tune with the beast's heartbeat.",
@@ -529,6 +534,7 @@ I think I covered everything.
 		"The constant, rhythmic kneading and massaging starts to take its toll along with the muggy heat, making you feel weaker and weaker!",
 		"The drake happily wanders around while digesting its meal, almost like it is trying to show off the hanging gut you've given it.")
 	B = new /obj/belly/dragon/maw/heal(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HEAL] = list(
 		"Gently, the dragon's hot, bumpy tongue cradles you, feeling like a slime-soaked memory-foam bed, twitching with life. The delicacy that the dragon holds you with is quite soothing.",
 		"The wide, slick throat infront of you constantly quivers and undulates. Every hot muggy exhale of the beast makes that throat spread, ropes of slime within it's hold shivering in the flow, inhales causing it to clench up somewhat.",
@@ -537,6 +543,7 @@ I think I covered everything.
 		"Saliva soaks the area all around you thickly, lubricating absolutely everything with the hot liquid. From time to time, the beast carefully shifts the rear of it's tongue to piston a cache of the goop down the hatch. The throat seen clenching tightly shut, the tongue's rear bobbing upwards, before down again - showing off a freshly slime-soaked entrance.")
 	gut2 = B
 	B = new /obj/belly/dragon/throat/heal(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HEAL] = list(
 		"The tunnel of the gullet closely wraps around you, mummifying you in a hot writhing embrace of silky flesh. The walls are slick, soaked in a lubricating slime, and so very warm.",
 		"The walls around you pulse in time with the dragon's heartbeat, which itself pounds in your ears. Rushing wind of calm breaths fill the gaps, and distant squelches of slimy payloads shifted around by soft flesh echo down below.",

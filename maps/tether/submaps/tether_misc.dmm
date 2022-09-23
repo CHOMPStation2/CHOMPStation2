@@ -593,6 +593,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
 "bN" = (
+<<<<<<< HEAD
 /obj/effect/landmark/ai_multicam_room,
 /turf/unsimulated/ai_visible,
 /area/ai_multicam_room)
@@ -638,6 +639,10 @@
 /area/shuttle/supply)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+/turf/simulated/floor/flesh,
+/area/holodeck/the_uwu_zone)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "bQ" = (
 /turf/space/internal_edge/left,
 /area/space)
@@ -1654,6 +1659,14 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
+"fw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
 "fz" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -1861,6 +1874,11 @@
 /obj/structure/flora/tree/pine,
 /turf/simulated/floor/holofloor/snow,
 /area/holodeck/holodorm/source_snow)
+"gp" = (
+/obj/structure/fitness/weightlifter,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
 "gq" = (
 /obj/structure/bed/holobed,
 /turf/simulated/floor/holofloor/wood,
@@ -1882,6 +1900,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"gD" = (
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
 "gN" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/holofloor/desert,
@@ -1913,6 +1934,18 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/steel,
 /area/centcom/simulated/main_hall)
+"gZ" = (
+/obj/effect/floor_decal/carpet{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 9
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
 "hg" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/landmark{
@@ -1920,6 +1953,19 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/holodorm/source_garden)
+"ho" = (
+/obj/structure/table/holotable,
+/obj/item/device/flashlight/lamp/green,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "hx" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/holodorm/source_seating)
@@ -2091,9 +2137,18 @@
 	},
 /turf/space/transit/west,
 /area/space)
+"iZ" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
 "jf" = (
 /turf/space/transit/north,
 /area/space)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "jA" = (
 /obj/machinery/light{
@@ -2143,6 +2198,20 @@
 /area/centcom/simulated/terminal)
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+"jA" = (
+/obj/effect/landmark/ai_multicam_room,
+/turf/unsimulated/ai_visible,
+/area/ai_multicam_room)
+"jI" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "jQ" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -2184,6 +2253,14 @@
 /obj/effect/floor_decal/sign/small_5,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"kW" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "lf" = (
 /obj/effect/floor_decal/transit/orange{
 	dir = 8
@@ -2200,6 +2277,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"lh" = (
+/obj/structure/table/woodentable/holotable,
+/obj/item/weapon/dice/d12,
+/obj/item/weapon/dice/d10,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "lu" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2216,6 +2299,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"lA" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/gladiator,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "lW" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2229,6 +2317,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"lX" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/fakewizard,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "mb" = (
 /obj/effect/shuttle_landmark{
 	landmark_tag = "escape_transit";
@@ -2252,10 +2345,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"mG" = (
+/obj/structure/table/holotable,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "nj" = (
 /obj/item/toy/chess/rook_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "nn" = (
 /obj/machinery/telecomms/allinone/antag{
@@ -2333,6 +2439,29 @@
 /area/centcom/control)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"no" = (
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"nu" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
+"nI" = (
+/obj/structure/table/holotable,
+/obj/item/clothing/gloves/boxing/hologlove{
+	icon_state = "boxinggreen";
+	item_state = "boxinggreen"
+	},
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "nV" = (
 /obj/item/toy/chess/rook_black,
 /turf/simulated/floor/holofloor/wmarble,
@@ -2509,10 +2638,19 @@
 /obj/effect/floor_decal/sign/small_h,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"qS" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
 "qV" = (
 /obj/effect/floor_decal/sign/small_6,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "qY" = (
 /obj/effect/fancy_shuttle/orangeline{
@@ -2574,14 +2712,45 @@
 	})
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"rc" = (
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/privacy,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "ru" = (
 /obj/item/toy/chess/pawn_black,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"rV" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "sb" = (
 /obj/item/toy/chess/knight_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"sf" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/chicken,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+"sk" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/pirate,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "sp" = (
 /obj/effect/step_trigger/lost_in_space/tram,
 /obj/effect/floor_decal/transit/orange{
@@ -2600,6 +2769,7 @@
 /obj/effect/overmap/bluespace_rift,
 /turf/unsimulated/map,
 /area/overmap)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "sN" = (
 /obj/effect/floor_decal/fancy_shuttle{
@@ -2718,6 +2888,16 @@
 /area/space)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"ty" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "tD" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2931,10 +3111,20 @@
 /obj/effect/floor_decal/sign/small_a,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"vY" = (
+/obj/structure/table/woodentable/holotable,
+/obj/item/weapon/dice,
+/obj/item/weapon/dice/d4,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "wa" = (
 /obj/effect/floor_decal/sign/small_3,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"wc" = (
+/obj/machinery/fitness/punching_bag/clown,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
 "wh" = (
 /obj/item/toy/chess/knight_black,
 /turf/simulated/floor/holofloor/bmarble,
@@ -2944,6 +3134,7 @@
 	icon_state = "sandwater"
 	},
 /area/beach)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "xe" = (
 /obj/machinery/account_database{
@@ -3119,6 +3310,12 @@
 	})
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"xc" = (
+/obj/machinery/scale,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "ya" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -3134,6 +3331,32 @@
 	icon = 'icons/turf/transit_vr.dmi'
 	},
 /area/space)
+"yr" = (
+/obj/effect/floor_decal/carpet{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet,
+/obj/effect/floor_decal/carpet{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
+"yJ" = (
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/privacy,
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"yW" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/cutewitch,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "zb" = (
 /obj/effect/step_trigger/thrower{
 	direction = 1;
@@ -3142,6 +3365,7 @@
 	},
 /turf/space/transit/east,
 /area/space)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "zp" = (
 /obj/machinery/chem_master,
@@ -3242,6 +3466,20 @@
 	})
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"zn" = (
+/obj/structure/table/holotable,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "Av" = (
 /obj/effect/transit/light{
 	dir = 8
@@ -3260,6 +3498,11 @@
 "Az" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
+"Bi" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/madscientist,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "Bm" = (
 /obj/item/toy/chess/bishop_black,
 /turf/simulated/floor/holofloor/bmarble,
@@ -3294,10 +3537,23 @@
 /obj/item/weapon/reagent_containers/food/snacks/chips,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"DJ" = (
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "DL" = (
 /obj/effect/floor_decal/sign/small_b,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"Ej" = (
+/obj/structure/table/woodentable/holotable,
+/turf/space,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
 "El" = (
 /turf/space/transit/west,
 /area/space)
@@ -3453,6 +3709,11 @@
 /obj/structure/table/standard,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"Fk" = (
+/obj/structure/table/holotable,
+/obj/item/clothing/gloves/boxing/hologlove,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
 "Fp" = (
 /obj/effect/transit/light{
 	dir = 4
@@ -3473,6 +3734,10 @@
 	},
 /turf/unsimulated/beach/sand,
 /area/beach)
+"FQ" = (
+/obj/structure/table/woodentable/holotable,
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
 "FT" = (
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -3487,6 +3752,7 @@
 /obj/effect/overlay/palmtree_l,
 /turf/unsimulated/beach/sand,
 /area/beach)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "Gz" = (
@@ -3534,6 +3800,26 @@
 /area/centcom/simulated/terminal)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"Gx" = (
+/obj/structure/bed/chair/holochair{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet,
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
+"Gy" = (
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/privacy,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "GW" = (
 /obj/item/toy/chess/king_white,
 /turf/simulated/floor/holofloor/bmarble,
@@ -3565,6 +3851,7 @@
 /obj/effect/floor_decal/sign/small_1,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "HQ" = (
 /obj/machinery/telecomms/broadcaster/preset_cent,
@@ -3633,6 +3920,18 @@
 /area/centcom/simulated/restaurant)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"HU" = (
+/obj/structure/table/woodentable/holotable,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+"HX" = (
+/obj/structure/table/woodentable/holotable,
+/obj/effect/landmark/costume/elpresidente,
+/turf/space,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "Ik" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola,
@@ -3652,6 +3951,20 @@
 	},
 /turf/space/transit/north,
 /area/space)
+"IF" = (
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/privacy,
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"IM" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
 "IR" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -3665,6 +3978,13 @@
 /obj/item/toy/chess/bishop_white,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"Jw" = (
+/obj/structure/bed/chair/holochair,
+/obj/effect/floor_decal/carpet{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
 "Jz" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -3698,6 +4018,17 @@
 	opacity = 1
 	},
 /area/beach)
+"Ka" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "Kj" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -3832,6 +4163,7 @@
 	opacity = 1
 	},
 /area/beach)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "Nw" = (
 /obj/machinery/sleep_console{
@@ -4007,6 +4339,36 @@
 /area/centcom/simulated/bar)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"NF" = (
+/obj/structure/bed/chair/holochair{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"NH" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
+"NO" = (
+/obj/effect/floor_decal/corner/paleblue/full,
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"NZ" = (
+/obj/structure/table/woodentable/holotable,
+/obj/item/weapon/dice/d100,
+/obj/item/weapon/dice/d20,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "Oj" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -4020,6 +4382,18 @@
 /obj/item/toy/chess/knight_white,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"OL" = (
+/obj/structure/bed/chair/holochair{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"OS" = (
+/obj/structure/fitness/punchingbag,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
 "OY" = (
 /turf/unsimulated/map,
 /area/overmap)
@@ -4033,6 +4407,7 @@
 	},
 /turf/space/transit/west,
 /area/space)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "Pk" = (
 /obj/effect/floor_decal/fancy_shuttle{
@@ -4175,6 +4550,15 @@
 	})
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"Pr" = (
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+"Px" = (
+/turf/space,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "PM" = (
 /turf/simulated/floor/smole/megablocks,
 /area/holodeck/source_smoleworld)
@@ -4223,6 +4607,7 @@
 /obj/item/toy/chess/queen_black,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "QY" = (
 /obj/structure/flora/pottedplant{
@@ -4426,6 +4811,33 @@
 	})
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"QU" = (
+/obj/structure/bed/chair/holochair{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
+"RL" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+"RT" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "RV" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -4652,6 +5064,7 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/unknown/dorm4)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "SV" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
@@ -4705,6 +5118,19 @@
 /area/centcom/simulated/living)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"SX" = (
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/privacy,
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "SZ" = (
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/alienplating,
@@ -4840,6 +5266,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "Tt" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/hopdouble,
@@ -4868,6 +5295,13 @@
 /area/shuttle/escape)
 =======
 >>>>>>> 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
+=======
+"Tv" = (
+/obj/machinery/fitness/heavy/lifter,
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/holodeck/source_gym)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "Tx" = (
 /obj/structure/prop/alien/dispenser,
 /turf/simulated/shuttle/floor/alien,
@@ -5184,6 +5618,17 @@
 /obj/structure/prop/alien/power,
 /turf/simulated/shuttle/floor/alienplating,
 /area/unknown/dorm1)
+"Vf" = (
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/privacy,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "white"
+	},
+/area/holodeck/source_patient_ward)
 "Vy" = (
 /turf/simulated/floor/tiled/steel,
 /area/centcom/simulated/main_hall)
@@ -5206,13 +5651,33 @@
 /obj/effect/overlay/coconut,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"Xc" = (
+/obj/structure/bed/chair/holochair{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
 "Xl" = (
 /turf/unsimulated/map/edge,
 /area/overmap)
+"Xn" = (
+/obj/effect/floor_decal/carpet,
+/obj/effect/floor_decal/carpet{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 6
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
 "Xp" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel,
 /area/centcom/simulated/main_hall)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "WH" = (
 /obj/structure/bed/chair/wood/wings{
@@ -5703,6 +6168,13 @@
 /area/centcom/simulated/medical)
 =======
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
+=======
+"Xs" = (
+/obj/structure/table/woodentable/holotable,
+/obj/item/weapon/dice/d8,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_game_room)
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 "XO" = (
 /obj/structure/signpost,
 /turf/unsimulated/beach/sand,
@@ -5711,6 +6183,33 @@
 /obj/structure/closet,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"Yi" = (
+/obj/structure/bed/chair/holochair{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 8
+	},
+/turf/space,
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
+"YI" = (
+/obj/effect/floor_decal/carpet{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet{
+	dir = 5
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/holodeck/source_game_room)
+"YT" = (
+/turf/simulated/floor/holofloor/tiled{
+	icon_state = "monotile"
+	},
+/area/holodeck/source_gym)
 "YX" = (
 /obj/effect/floor_decal/sign/small_e,
 /turf/simulated/floor/holofloor/wood,
@@ -120119,25 +120618,25 @@ aI
 aI
 aI
 ar
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
 ap
 ap
 ap
@@ -120261,25 +120760,25 @@ Me
 Me
 Me
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+cd
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+cd
 ap
 ap
 ap
@@ -120403,25 +120902,25 @@ Me
 Me
 Me
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+cd
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+cd
 ap
 ap
 ap
@@ -120545,25 +121044,25 @@ PM
 Me
 Me
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+cd
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+cd
 ap
 ap
 ap
@@ -120687,25 +121186,25 @@ PM
 Me
 Me
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+cd
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+cd
 ap
 ap
 ap
@@ -120732,6 +121231,114 @@ Xl
 Xl
 Xl
 Xl
+<<<<<<< HEAD
+=======
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+iO
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+El
+iO
+"}
+(57,1,1) = {"
+as
+nW
+Qs
+oT
+pT
+CK
+pT
+CK
+CJ
+Wf
+Kn
+dB
+Me
+Me
+PM
+PM
+PM
+PM
+PM
+PM
+Me
+Me
+fZ
+cd
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+ci
+cd
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 Xl
 Xl
 Xl
@@ -121264,7 +121871,7 @@ ci
 ci
 ci
 ci
-ci
+jA
 ci
 ci
 ci
@@ -122676,23 +123283,23 @@ ec
 dF
 fZ
 cd
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
 cd
 ap
 ap
@@ -122817,25 +123424,6 @@ dF
 dF
 dF
 fZ
-cd
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-cd
 ap
 ap
 ap
@@ -122845,6 +123433,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 OY
 OY
 OY
@@ -122854,6 +123443,38 @@ OY
 OY
 OY
 Xl
+OY
+Xl
+=======
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Xl
+OY
+OY
+OY
+OY
+OY
+OY
+OY
+OY
 OY
 Xl
 ap
@@ -122959,25 +123580,25 @@ dF
 dF
 dF
 fZ
-cd
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-cd
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -123101,25 +123722,25 @@ dF
 dF
 dF
 fZ
-cd
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-cd
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -123243,25 +123864,25 @@ aL
 aL
 aL
 ar
-cd
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-ci
-cd
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+ar
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -123384,26 +124005,26 @@ dG
 fG
 dG
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
-cd
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -123526,18 +124147,18 @@ dG
 dG
 eT
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -123668,18 +124289,18 @@ dG
 dG
 dG
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -123810,18 +124431,18 @@ dG
 dG
 eJ
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -123952,18 +124573,18 @@ ed
 dG
 dG
 fG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -124094,18 +124715,18 @@ dG
 fG
 dG
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -124236,18 +124857,18 @@ eJ
 dG
 eT
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -124378,18 +124999,18 @@ dG
 dG
 dG
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -124520,18 +125141,18 @@ dG
 dG
 eJ
 dG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -124662,18 +125283,18 @@ ed
 dG
 dG
 fG
+dB
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -124805,17 +125426,17 @@ aL
 aL
 aL
 ar
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+ar
 ap
 ap
 ap
@@ -124946,18 +125567,18 @@ eL
 eL
 eL
 eL
+dB
+yJ
+rV
+rc
+rV
+rc
+rV
+rV
+rV
+rV
+NO
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -125088,6 +125709,17 @@ eK
 eK
 eK
 eK
+dB
+RL
+no
+no
+no
+no
+no
+no
+no
+no
+kW
 fZ
 ap
 ap
@@ -125266,6 +125898,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 ap
 ap
 ap
@@ -125278,6 +125911,8 @@ ap
 ap
 ap
 ap
+=======
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 Jz
 jf
 jf
@@ -125362,6 +125997,17 @@ fn
 fn
 fO
 eK
+dB
+Vf
+no
+IF
+no
+IF
+no
+no
+mG
+no
+kW
 fZ
 ap
 ap
@@ -125409,6 +126055,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 ap
 ap
 ap
@@ -125444,6 +126091,32 @@ fg
 fg
 fg
 fg
+=======
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 iO
 El
 El
@@ -125504,18 +126177,18 @@ fo
 fo
 fP
 eK
+dB
+RL
+no
+no
+no
+no
+no
+no
+mG
+OL
+kW
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -125646,6 +126319,17 @@ fo
 fo
 fP
 eK
+dB
+Ka
+no
+no
+no
+zn
+no
+no
+ho
+mG
+zn
 fZ
 ap
 ap
@@ -125806,6 +126490,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 ap
 ap
 ap
@@ -125818,6 +126503,8 @@ ap
 ap
 ap
 ap
+=======
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 ce
 ce
 ce
@@ -125902,6 +126589,17 @@ fo
 fo
 fP
 eK
+dB
+mG
+no
+no
+no
+zn
+no
+no
+no
+NF
+kW
 fZ
 ap
 ap
@@ -126046,6 +126744,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 ap
 ap
 ap
@@ -126058,6 +126757,8 @@ ap
 ap
 ap
 ap
+=======
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 ce
 cf
 cf
@@ -126142,18 +126843,18 @@ fo
 fo
 fP
 eK
+dB
+RL
+no
+no
+no
+no
+no
+no
+no
+no
+kW
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -126284,18 +126985,18 @@ fo
 fo
 fP
 eK
+dB
+Vf
+no
+IF
+no
+IF
+no
+no
+no
+no
+kW
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -126426,18 +127127,18 @@ fp
 fH
 fQ
 eK
+dB
+RL
+no
+no
+no
+no
+no
+no
+no
+no
+kW
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -126568,6 +127269,17 @@ eK
 eK
 eK
 eK
+dB
+SX
+ty
+Gy
+ty
+Gy
+ty
+ty
+ty
+ty
+DJ
 fZ
 <<<<<<< HEAD
 Vu
@@ -126726,6 +127438,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 ap
 ap
 ap
@@ -126738,6 +127451,8 @@ ap
 ap
 ap
 ap
+=======
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 ce
 cf
 cf
@@ -126823,6 +127538,7 @@ aL
 aL
 aL
 ar
+<<<<<<< HEAD
 <<<<<<< HEAD
 Vu
 YE
@@ -126945,6 +127661,19 @@ ap
 ap
 ap
 ap
+=======
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+ar
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 ap
 ap
 ap
@@ -127076,18 +127805,18 @@ fz
 fz
 fz
 fS
+dB
+Xs
+vY
+HU
+Pr
+Ej
+HU
+Pr
+lX
+HX
+yW
 fZ
-ap
-ap
-ap
-ap
-VW
-ap
-ap
-ap
-VW
-ap
-ap
 ap
 ap
 ap
@@ -127218,18 +127947,18 @@ ei
 ei
 ei
 fJ
+dB
+lh
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+sf
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -127360,18 +128089,18 @@ ei
 fJ
 fz
 fS
+dB
+NZ
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Bi
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -127502,6 +128231,17 @@ ei
 fJ
 ei
 fT
+dB
+Pr
+Pr
+gZ
+QU
+Yi
+QU
+QU
+yr
+Px
+lA
 fZ
 <<<<<<< HEAD
 Vu
@@ -127602,17 +128342,6 @@ ae
 ae
 ae
 =======
-ap
-ap
-ap
-ap
-VW
-ap
-ap
-ap
-VW
-ap
-ap
 ap
 ap
 ap
@@ -127744,18 +128473,18 @@ ei
 fJ
 fA
 fU
+dB
+Pr
+Pr
+Jw
+FQ
+FQ
+FQ
+FQ
+Gx
+Pr
+sk
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -127886,18 +128615,18 @@ ei
 ei
 ei
 fJ
+dB
+Pr
+Pr
+Jw
+FQ
+FQ
+FQ
+FQ
+Gx
+Pr
+Pr
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -128028,6 +128757,17 @@ fA
 fA
 fA
 fU
+dB
+Pr
+Pr
+YI
+Xc
+Xc
+Xc
+Xc
+Xn
+Pr
+Pr
 fZ
 <<<<<<< HEAD
 Vu
@@ -128174,6 +128914,7 @@ ap
 ap
 ap
 ap
+<<<<<<< HEAD
 ap
 ap
 >>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
@@ -128186,6 +128927,8 @@ ap
 ap
 ap
 ap
+=======
+>>>>>>> 450841f58d... Merge pull request #12633 from Very-Soft/gbtweaks
 ce
 cf
 cf
@@ -128270,18 +129013,18 @@ aG
 bh
 aG
 aG
+dB
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -128412,18 +129155,18 @@ dK
 dJ
 dK
 dK
+dB
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -128554,18 +129297,18 @@ dJ
 dJ
 dJ
 dJ
+dB
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -128697,17 +129440,17 @@ aL
 aL
 aL
 ar
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+ar
 ap
 ap
 ap
@@ -128838,18 +129581,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -128980,18 +129723,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+Tv
+gD
+gp
+gD
+iZ
+qS
+qS
+nu
+gD
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -129122,18 +129865,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+gD
+gD
+gD
+gD
+fw
+YT
+YT
+IM
+gD
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -129264,18 +130007,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+Tv
+gD
+gp
+gD
+fw
+YT
+YT
+IM
+gD
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -129406,18 +130149,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+gD
+gD
+gD
+gD
+NH
+jI
+jI
+RT
+gD
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 VW
 ap
@@ -129548,6 +130291,17 @@ dQ
 fK
 fR
 fR
+dB
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
 fZ
 <<<<<<< HEAD
 aq
@@ -129648,17 +130402,6 @@ ae
 ae
 ae
 =======
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 VW
 ap
@@ -129790,6 +130533,17 @@ dQ
 fK
 fR
 fR
+dB
+gD
+OS
+gD
+wc
+gD
+gD
+gD
+gD
+gD
+gD
 fZ
 <<<<<<< HEAD
 aq
@@ -129890,17 +130644,6 @@ ae
 ae
 ae
 =======
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 VW
 ap
@@ -130032,18 +130775,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+xc
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 VW
 ap
@@ -130174,18 +130917,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+wc
+gD
+OS
+gD
+gD
+gD
+gD
+gD
+Fk
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 VW
 ap
@@ -130316,18 +131059,18 @@ dQ
 fK
 fR
 fR
+dB
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+gD
+nI
 fZ
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
 ap
 ap
 ap
@@ -130459,17 +131202,17 @@ aL
 aL
 aL
 ar
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+ar
 ap
 ap
 ap

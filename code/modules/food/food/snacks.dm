@@ -34,6 +34,8 @@
 	var/package_trash
 	/// Packaged meals switch to this state when opened, if set
 	var/package_open_state
+	/// Packaged meals that have opening animation
+	var/package_opening_state
 
 	/// If this is canned. If true, it will print a message and ask you to open it
 	var/canned = FALSE
@@ -269,6 +271,8 @@
 		user.put_in_hands(T)
 	if(package_open_state)
 		icon_state = package_open_state
+		if(package_opening_state)
+			flick(package_opening_state, src)
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
@@ -1007,7 +1011,7 @@
 	reagents.add_reagent("protein", 6)
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket
-	name = "Donk-pocket"
+	name = "\improper Donk-pocket"
 	desc = "The food of choice for the seasoned traitor."
 	description_fluff = "DONKpockets were originally a Nanotrasen product, an attempt to break into the food market controlled by Centauri Provisions. Somehow, Centauri wound up with the rights to the DONK brand, ending Nanotrasen's ambitions. They taste pretty okay."
 	icon_state = "donkpocket"
@@ -1040,6 +1044,56 @@
 				src.reagents.del_reagent(reagent)
 			src.name = initial(name)
 	return
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy
+	name = "\improper Spicy-pocket"
+	desc = "The classic snack food, now with a heat-activated spicy flair."
+	icon_state = "donkpocketspicy"
+	nutriment_amt = 2
+	nutriment_desc = list("heartiness" = 1, "dough" = 2, "spice" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki
+	name = "\improper Teriyaki-pocket"
+	desc = "An east-asian take on the classic stationside snack."
+	icon_state = "donkpocketteriyaki"
+	nutriment_amt = 2
+	nutriment_desc = list("meat" = 1, "dough" = 2, "soy sauce" = 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza
+	name = "\improper Pizza-pocket"
+	desc = "Delicious, cheesy and surprisingly filling."
+	icon_state = "donkpocketpizza"
+	nutriment_amt = 2
+	nutriment_desc = list("meat" = 1, "dough" = 2, "cheese"= 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/honk
+	name = "\improper Honk-pocket"
+	desc = "The award-winning donk-pocket that won the hearts of clowns and humans alike."
+	icon_state = "donkpocketbanana"
+	nutriment_amt = 2
+	nutriment_desc = list("banana" = 1, "dough" = 2, "children's antibiotics"= 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/berry
+	name = "\improper Berry-pocket"
+	desc = "A relentlessly sweet donk-pocket first created for use in Operation Dessert Storm."
+	icon_state = "donkpocketberry"
+	nutriment_amt = 2
+	nutriment_desc = list("dough" = 2, "jam" = 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/gondola
+	name = "\improper Gondola-pocket"
+	desc = "The choice to use real gondola meat in the recipe is controversial, to say the least." //Only a monster would craft this.
+	icon_state = "donkpocketberry"
+	nutriment_amt = 2
+	nutriment_desc = list("heartiness" = 1, "dough" = 2, "inner peace" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/donkpocket/dankpocket
+	name = "\improper Dank-pocket"
+	desc = "The food of choice for the seasoned botanist."
+	icon_state = "dankpocket"
+	nutriment_amt = 2
+	nutriment_desc = list("heartiness" = 1, "dough" = 2)
+	heated_reagents = list("bliss" = 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/sinpocket
 	name = "\improper Sin-pocket"
@@ -3239,7 +3293,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/cosmicbrownies/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 2)
-	reagents.add_reagent("space_drugs", 2)
+	reagents.add_reagent("ambrosia_extract", 2)
 	reagents.add_reagent("bicaridine", 1)
 	reagents.add_reagent("kelotane", 1)
 	reagents.add_reagent("toxin", 1)
@@ -3934,8 +3988,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/rawcutlet/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 9)
-	reagents.add_reagent("protein",  3)
+	reagents.add_reagent("protein", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/cutlet
 	name = "cutlet"
@@ -3947,8 +4000,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/cutlet/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 15)
-	reagents.add_reagent("protein",   5)
+	reagents.add_reagent("protein", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/rawmeatball
 	name = "raw meatball"
@@ -3960,8 +4012,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/rawmeatball/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 30)
-	reagents.add_reagent("protein",  10)
+	reagents.add_reagent("protein", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/hotdog
 	name = "hotdog"
@@ -4042,7 +4093,7 @@
 
 	reagents.add_reagent("oxycodone", 1)
 	reagents.add_reagent("sifsap", 5)
-	reagents.add_reagent("space_drugs", 5)
+	reagents.add_reagent("bliss", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/bellefritter
 	name = "frostbelle fritters"
@@ -4398,7 +4449,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/wormsickly/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 10)
+	reagents.add_reagent("fishbait", 9)
+	reagents.add_reagent("protein",  3)
 
 /obj/item/weapon/reagent_containers/food/snacks/worm
 	name = "strange worm"
@@ -4411,7 +4463,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/worm/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 20)
+	reagents.add_reagent("fishbait", 15)
+	reagents.add_reagent("protein",   5)
 
 /obj/item/weapon/reagent_containers/food/snacks/wormdeluxe
 	name = "deluxe worm"
@@ -4424,7 +4477,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/wormdeluxe/Initialize()
 	. = ..()
-	reagents.add_reagent("fishbait", 40)
+	reagents.add_reagent("fishbait", 30)
+	reagents.add_reagent("protein",  10)
 
 /obj/item/weapon/reagent_containers/food/snacks/siffruit
 	name = "pulsing fruit"
@@ -6847,9 +6901,10 @@
 	nutriment_desc = list("apple" = 1, "sweetness" = 1)
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/appleberry/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/canned/appleberry/Initialize()
 	. = ..()
 	reagents.add_reagent("milk", 8)
+	reagents.add_reagent("sugar", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/ntbeans
 	name = "baked beans"
@@ -6878,10 +6933,11 @@
 	filling_color = "#caa3c9"
 	center_of_mass = list("x"=15, "y"=9)
 	bitesize = 2
+	var/brainmeat = "brain_protein"
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/Initialize()
 	. = ..()
-	reagents.add_reagent("brain_protein", 10)
+	reagents.add_reagent(brainmeat, 10)
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red
 	name = "\improper BrainzSnax RED"
@@ -6895,10 +6951,7 @@
 	filling_color = "#a6898d"
 	center_of_mass = list("x"=15, "y"=9)
 	bitesize = 2
-
-/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red/Initialize()
-	. = ..()
-	reagents.add_reagent("red_brain_protein", 10)
+	brainmeat = "red_brain_protein"
 
 //////////////Packaged Food - break open and eat//////////////
 

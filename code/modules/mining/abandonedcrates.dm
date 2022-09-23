@@ -19,7 +19,7 @@
 	generate_loot()
 
 /obj/structure/closet/crate/secure/loot/proc/generate_loot()
-	var/loot = rand(1, 99)
+	var/loot = rand(1, 100)
 	switch(loot)
 		if(1 to 5) // Common things go, 5%
 			new/obj/item/weapon/reagent_containers/food/drinks/bottle/rum(src)
@@ -27,7 +27,7 @@
 			new/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus(src)
 			new/obj/item/weapon/flame/lighter/zippo(src)
 		if(6 to 10)
-			new/obj/item/weapon/pickaxe/drill(src)
+			new/obj/item/weapon/pickaxe/advdrill(src)
 			new/obj/item/device/taperecorder(src)
 			new/obj/item/clothing/suit/space(src)
 			new/obj/item/clothing/head/helmet/space(src)
@@ -140,13 +140,15 @@
 		if(99)
 			new/obj/item/weapon/storage/belt/champion(src)
 			new/obj/item/clothing/mask/luchador(src)
+		if(100)
+			new/obj/item/device/personal_shield_generator/belt/mining/loaded(src)
 
 /obj/structure/closet/crate/secure/loot/togglelock(mob/user as mob)
 	if(!locked)
 		return
 
 	to_chat(user, "<span class='notice'>The crate is locked with a Deca-code lock.</span>")
-	var/input = input(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "") as text
+	var/input = tgui_input_text(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "")
 	if(!Adjacent(user))
 		return
 	var/list/sanitised = list()
@@ -214,4 +216,11 @@
 					previousattempt = addtext(previousattempt, lastattempt[i])
 				to_chat(user, "<span class='notice'>Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions.</span>")
 			return
+	..()
+
+/obj/structure/closet/crate/secure/loot/damage(var/damage)
+	if(contents.len)
+		visible_message("<font color='red'><b>[src] makes a grinding noise as its contents are destroyed by the deca-lock safety!</b></font>")
+		for(var/obj/O in src.contents)
+			qdel(O)
 	..()

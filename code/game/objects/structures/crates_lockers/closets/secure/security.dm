@@ -60,7 +60,7 @@
 		/obj/item/clothing/under/suit_jacket/teal/skirt,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/hop,
-		/obj/item/clothing/head/caphat/hop/beret/,
+		/obj/item/clothing/head/caphat/hop/beret,
 		/obj/item/clothing/head/caphat/hop/beret/white)
 
 
@@ -237,6 +237,9 @@
 	name = "detective's cabinet"
 	req_access = list(access_forensics_lockers)
 	closet_appearance = /decl/closet_appearance/cabinet/secure
+
+	open_sound = 'sound/effects/wooden_closet_open.ogg'
+	close_sound = 'sound/effects/wooden_closet_close.ogg'
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,

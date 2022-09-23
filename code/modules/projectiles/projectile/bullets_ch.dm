@@ -80,16 +80,19 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 716
 	damage = 15
 	armor_penetration = 15	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
+	hud_state = "smg_light"
 
 /obj/item/projectile/bullet/a57/ap
 	grains = 23
 	energy_add = 312.75
 	velocity = 850
 	armor_penetration = 25		//Also, no, this isn't as high as it looks because of the formulas I was using. This would have around a 35% chance of piercing combat armor(50 bullet armor)
+	hud_state = "smg_ap"
 
 /obj/item/projectile/bullet/a57/hp
 	hollow_point = TRUE
 	armor_penetration = -10
+	hud_state = "smg"
 
 /obj/item/projectile/bullet/a357
 	fire_sound = 'sound/weapons/gunshot4.ogg'
@@ -97,27 +100,32 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 125
 	velocity = 440
 	damage = 20
+	hud_state = "revolver"
 
 /obj/item/projectile/bullet/a357/ap
 	energy_add = 298.07
 	velocity = 480
 	armor_penetration = 15
+	hud_state = "revolver_heavy"
 
 /obj/item/projectile/bullet/a357/hp
 	hollow_point = TRUE
 	armor_penetration = -10
+	hud_state = "revolver_slim"
 
 /obj/item/projectile/bullet/a38
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 9.1
 	grains = 147
 	velocity = 270
+	hud_state = "revolver_small"
 
 /obj/item/projectile/bullet/a38/ap
 	grains = 125
 	energy_add = 138
 	velocity = 300
 	armor_penetration = 15
+	hud_state = "pistol_lightap"
 
 /obj/item/projectile/bullet/a38/hp
 	grains = 158
@@ -125,30 +133,45 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 297
 	hollow_point = TRUE
 	armor_penetration = -10
+	hud_state = "pistol_hollow"
 
 /obj/item/projectile/bullet/a762x25
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 7.92
 	grains = 85
 	velocity = 469
+	hud_state = "pistol_light"
 
 /obj/item/projectile/bullet/a9x18
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 9.27
 	grains = 95
 	velocity = 319
+	hud_state = "pistol"
+
+/obj/item/projectile/bullet/a9x18/rubber
+	armor_penetration = -10
+	grains = 102
+	velocity = 301
+	damage = 10
+	agony = 40
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/a10mm
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 10.17
 	grains = 180
 	velocity = 400
+	hud_state = "pistol"
 
 /obj/item/projectile/bullet/a10mm/ap
 	grains = 200
 	energy_add = 435
 	velocity = 440
 	armor_penetration = 15
+	hud_state = "pistol_ap"
 
 /obj/item/projectile/bullet/a10mm/hp
 	grains = 135
@@ -156,18 +179,31 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 490
 	armor_penetration = -10
 	hollow_point = TRUE
+	hud_state = "pistol_hollow"
+
+/obj/item/projectile/bullet/a10mm/rubber
+	armor_penetration = -10
+	grains = 142
+	velocity = 301
+	damage = 10
+	agony = 50
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/a380
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 9
 	grains= 95
 	velocity = 300
+	hud_state = "pistol_light"
 
 /obj/item/projectile/bullet/a380/ap
 	grains = 45
 	energy_add = 648.74
 	velocity = 559
 	armor_penetration = 15
+	hud_state = "pistol_lightap"
 
 /obj/item/projectile/bullet/a380/hp
 	grains = 95
@@ -175,23 +211,27 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 343
 	armor_penetration = -10
 	hollow_point = TRUE
+	hud_state = "pistol_hollow"
 
 /obj/item/projectile/bullet/a22lr
 	fire_sound = 'sound/weapons/gunshot_pathetic.ogg'
 	grains = 40
 	diam = 5.7
 	velocity = 370
+	hud_state = "pistol_light"
 
 /obj/item/projectile/bullet/a22lr/ap
 	grains = 31
 	velocity = 530
 	armor_penetration = 15
+	hud_state = "pistol_ap"
 
 /obj/item/projectile/bullet/a22lr/hp
 	grains = 38
 	velocity = 380
 	hollow_point = TRUE
 	armor_penetration = -5
+	hud_state = "pistol_hollow"
 
 //Shotgun projectiles
 
@@ -213,6 +253,7 @@ only use the hollow_point and armor_penetration values.*/
 	use_submunitions = TRUE
 	submunition_spread_max = 67.5
 	submunitions = list(/obj/item/projectile/bullet/shotgun/buckshot = 8)
+	hud_state = "shotgun_buckshot"
 
 //Rifle projectiles
 /obj/item/projectile/bullet/rifle
@@ -236,21 +277,44 @@ only use the hollow_point and armor_penetration values.*/
 	armor_penetration = -10
 	hollow_point = TRUE
 
+/obj/item/projectile/bullet/rifle/a762/rubber
+	armor_penetration = -10
+	grains = 142
+	velocity = 661
+	damage = 25 //this still hurts like a motherfucker
+	agony = 100
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
+
 /obj/item/projectile/bullet/rifle/a762x39 //7.62x39 Soviet
 	fire_sound = 'sound/weapons/ballistics/a762.ogg'
 	diam = 7.85
 	grains = 122
 	velocity = 730
+	hud_state = "rifle"
 
 /obj/item/projectile/bullet/rifle/a762x39/ap
 	grains = 123
 	velocity = 740
 	energy_add = 117.16
 	armor_penetration = 25
+	hud_state = "rifle_ap"
 
 /obj/item/projectile/bullet/rifle/a762x39/hp
 	hollow_point = TRUE
 	armor_penetration = -10
+	hud_state = "hivelo_iff"
+
+/obj/item/projectile/bullet/rifle/a762x39/rubber
+	armor_penetration = -10
+	grains = 142
+	velocity = 661
+	damage = 15 //this still hurts like a motherfucker
+	agony = 70
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a545
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
@@ -263,6 +327,16 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 890
 	armor_penetration = 15
 
+/obj/item/projectile/bullet/rifle/a545/rubber
+	armor_penetration = -10
+	grains = 82
+	velocity = 761
+	damage = 15
+	agony = 60
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
+
 /obj/item/projectile/bullet/rifle/a545/hp
 	hollow_point = TRUE
 	armor_penetration = -10
@@ -271,16 +345,29 @@ only use the hollow_point and armor_penetration values.*/
 	diam = 5.7
 	grains = 62
 	velocity = 961
+	hud_state = "rifle"
 
 /obj/item/projectile/bullet/rifle/a556/ap
 	grains = 52
 	velocity = 1030
 	energy_add = 462.92
 	armor_penetration = 25
+	hud_state = "rifle_ap"
 
 /obj/item/projectile/bullet/rifle/a556/hp
 	hollow_point = TRUE
 	armor_penetration = -10
+	hud_state = "hivelo_iff"
+
+/obj/item/projectile/bullet/rifle/a556/rubber
+	armor_penetration = -10
+	grains = 82
+	velocity = 861
+	damage = 15
+	agony = 60
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a145 // 14.5×114mm
 	fire_sound = 'sound/weapons/ballistics/a145.ogg'
@@ -302,28 +389,54 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/rifle/a95 //I hate you. There is no real world analog for 9.5x40mm, I will guestimate from the 9x39mm russian round and give it some bonus for future points or whatever
 	diam = 9.5
 	grains = 310
-	velocity = 365
+	velocity = 365 //cadyn cope above, beware ^^
+	hud_state = "rifle"
+
+//beware of cadyn cope above ^^ - Ocelot
 
 /obj/item/projectile/bullet/rifle/a9x39 //We also have actual 9x39mm
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
 	diam = 9.25
 	grains = 259
 	velocity = 280
+	hud_state = "smartgun"
 
 /obj/item/projectile/bullet/rifle/a9x39/ap
 	grains = 267
 	armor_penetration = 25
+	hud_state = "minigun"
+
+/obj/item/projectile/bullet/rifle/a9x39/rubber
+	armor_penetration = -10
+	grains = 282
+	velocity = 161
+	damage = 20
+	agony = 70
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a10x24
-	fire_sound = 'sound/weapons/ballistics/a762.ogg'
 	grains = 210
 	diam = 10.2
 	velocity = 840
+	hud_state = "rifle"
+
+/obj/item/projectile/bullet/rifle/a10x24/rubber
+	armor_penetration = -10
+	grains = 280
+	velocity = 400
+	damage = 20
+	agony = 80
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 /obj/item/projectile/bullet/rifle/a762/lmg	//This is actually 7.92x57 ffs
 	diam = 7.92
 	grains = 181
 	velocity = 820
+	hud_state = "rifle"
 
 /obj/item/projectile/bullet/rifle/a762x54
 	fire_sound = 'sound/weapons/ballistics/a762x54.ogg'
@@ -331,9 +444,11 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 151
 	velocity = 830
 	hitscan = 1
+	hud_state = "sniper_crude"
 
 /obj/item/projectile/bullet/rifle/a762x54/ap
 	armor_penetration = 35
+	hud_state = "sniper_supersonic"
 
 /obj/item/projectile/bullet/rifle/a338
 	fire_sound = 'sound/weapons/ballistics/a762x54.ogg'
@@ -343,9 +458,11 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 921
 	hitscan = 1
 	penetrating = 2
+	hud_state = "sniper_crude"
 
 /obj/item/projectile/bullet/rifle/a338/ap
 	armor_penetration = 50
+	hud_state = "sniper_supersonic"
 
 /obj/item/projectile/bullet/rifle/a50bmg
 	fire_sound = 'sound/weapons/ballistics/a145.ogg'
@@ -355,6 +472,7 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 860
 	hitscan = 1
 	penetrating = 2
+	hud_state = "sniper_supersonic"
 
 /obj/item/projectile/bullet/rifle/a50bmg/ap
 	armor_penetration = 50
@@ -367,6 +485,27 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 820
 	penetrating = 2
 	armor_penetration=30
+	hud_state = "sniper_fire"
+
+/obj/item/projectile/bullet/rifle/a45lc //yee haw
+	diam = 11.43
+	grains = 250
+	velocity = 600
+
+/obj/item/projectile/bullet/rifle/a45lc/rifle
+	grains = 267
+	velocity = 800
+	armor_penetration = 15
+
+/obj/item/projectile/bullet/rifle/a45lc/rubber
+	armor_penetration = -10
+	grains = 282
+	velocity = 200
+	damage = 20
+	agony = 70
+	embed_chance = 0
+	sharp = FALSE
+	check_armour = "melee"
 
 //NOTE: Ammo casings and magazines used to be in this part of the file. They have been moved to respective files in the projectiles/ammunition folder.
 
@@ -422,6 +561,8 @@ only use the hollow_point and armor_penetration values.*/
 	accuracy = -20 // he do miss actually
 	speed = 0.4 // if the pathfinder gets a funny burst rifle, they deserve a rival
 	// that's 2x projectile speed btw
+	hud_state = "monkey"
 
 /obj/item/projectile/bullet/pistol/medium/ap/suppressor/turbo // spicy boys
 	speed = 0.2 // this is 4x projectile speed
+	hud_state = "monkey"

@@ -30,7 +30,7 @@
 	projectile_type = /obj/item/projectile/bullet/cap
 	matter = list(MAT_STEEL = 1000)
 	handle_casings = null
-	recoil = 1 //it's a toy
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /*
  * Shotgun
@@ -52,7 +52,20 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	matter = list(MAT_PLASTIC = 2000)
 	handle_casings = null
-	recoil = null //it's a toy
+	recoil = 0 //it's a toy //CHOMP Edit
+
+/*
+ * Moist Nugget
+ */
+/obj/item/weapon/gun/projectile/shotgun/pump/toy/moistnugget
+	name = "\improper Donk-Soft mosin-nagant"
+	desc = "Donk-Soft foam mosin-nagant! It's Donk or Don't! Ages 8 and up."
+	description_fluff = "A special Donk-Soft rifle originally made to pair with a Soviet Soldier costume. It didn't catch on quite as well as other Donk-Soft products."
+	icon = 'icons/obj/gun_toy.dmi'
+	icon_state = "moistnugget"
+	item_state = "moistnugget"
+	max_shells = 5
+	matter = list(MAT_PLASTIC = 2500)
 
 /*
  * Pistol
@@ -70,7 +83,7 @@
 	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 1)
 	load_method = MAGAZINE
 	matter = list(MAT_PLASTIC = 1000)
-	recoil = null //it's a toy
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /obj/item/weapon/gun/projectile/pistol/toy/update_icon()
 	if(ammo_magazine)
@@ -199,7 +212,52 @@
 		icon_state = initial(icon_state)
 	else
 		icon_state = "[initial(icon_state)]-e"
+/*
+ * Cyborg
+ */
+/obj/item/weapon/gun/projectile/cyborgtoy
+	name = "\improper Donk-Soft Cyborg Blaster"
+	desc = "Donk-Soft Cyborg Blaster! It's Donk or Don't! Adult supervision required. Use to toggle between battle and cleanup mode."
+	icon = 'icons/obj/gun_toy.dmi'
+	icon_state = "smg"
+	caliber = "foam"
+	load_method = SINGLE_CASING
+	max_shells = 15
+	var/cleanup = 0
+	ammo_type = /obj/item/ammo_casing/afoam_dart
+	projectile_type = /obj/item/projectile/bullet/foam_dart
+	recoil = null
+	handle_casings = null
 
+/obj/item/weapon/gun/projectile/cyborgtoy/attack_self(var/mob/user)
+	cleanup = !cleanup
+	to_chat(user, "The [src] is now on [cleanup ? "cleanup" : "battle"] mode.")
+
+/obj/item/weapon/gun/projectile/cyborgtoy/afterattack(atom/A, mob/living/user, adjacent, params)
+	if(cleanup)
+		if(!adjacent)
+			return 0
+		collectammo(A, user)
+		return 0
+	..()
+
+/obj/item/weapon/gun/projectile/cyborgtoy/proc/collectammo(atom/A, user)
+	if(loaded.len >= max_shells)
+		to_chat(user, "The [src] is at max capacity.")
+		return
+	var/T = get_turf(A)
+	var/success = 0
+	for(var/obj/item/ammo_casing/afoam_dart/D in T)
+		if(loaded.len >= max_shells)
+			break
+		D.loc = src
+		loaded.Insert(1, D)
+		success = 1
+	if(success)
+		playsound(src, 'sound/machines/hiss.ogg', 50, 0)
+		to_chat(user, "The [src] vacuums in the darts!")
+	else
+		to_chat(user, "No Donk-Soft brand foam darts detected. Aborting.")
 /*
  * Laser Tag
  */
@@ -215,6 +273,7 @@
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge
 	battery_lock = 1
 	var/required_vest
+	recoil = 0 //it's a toy //CHOMP Edit
 
 /obj/item/weapon/gun/energy/lasertag/special_check(var/mob/living/carbon/human/M)
 	if(ishuman(M))

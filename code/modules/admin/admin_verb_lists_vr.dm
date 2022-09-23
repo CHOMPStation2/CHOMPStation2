@@ -7,6 +7,8 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_admin_say,			//VOREStation Add,
 	/client/proc/cmd_mod_say,			//VOREStation Add,
 	/client/proc/cmd_event_say,			//VOREStation Add,
+	/client/proc/cmd_mentor_ticket_panel,
+	/client/proc/cmd_mentor_say,
 //	/client/proc/hide_verbs,			//hides all our adminverbs, //VOREStation Remove,
 //	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs, //VOREStation Remove,
 //	/client/proc/debug_variables,		//allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify, //VOREStation Remove,
@@ -16,6 +18,8 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
+	/client/proc/toggle_admin_global_looc,
+	/client/proc/toggle_admin_deadchat
 	)
 
 var/list/admin_verbs_admin = list(
@@ -112,7 +116,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/change_human_appearance_self,	// Allows the human-based mob itself change its basic appearance ,
 	/client/proc/change_security_level,
 	/client/proc/view_chemical_reaction_logs,
-	/client/proc/makePAI,
+	/client/proc/makepAI,
 	/client/proc/toggle_debug_logs,
 	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
@@ -122,7 +126,9 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/make_mentor,
+	/client/proc/unmake_mentor
 	)
 
 var/list/admin_verbs_ban = list(
@@ -262,7 +268,9 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -396,7 +404,8 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
-	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
+	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+	/datum/admins/proc/quick_nif //CHOMPStation Add,
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -520,7 +529,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/change_human_appearance_admin,     // Allows an admin to change the basic appearance of human-based mobs ,
 	/client/proc/change_human_appearance_self,      // Allows the human-based mob itself change its basic appearance ,
 	/client/proc/change_security_level,
-	/client/proc/makePAI,
+	/client/proc/makepAI,
 	/client/proc/toggle_debug_logs,
 	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
@@ -539,7 +548,9 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
-	/client/proc/modify_server_news
+	/client/proc/modify_server_news,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
 
 )
 
