@@ -500,6 +500,7 @@
 			prob(1);list(
 				/obj/item/weapon/gun/projectile/shotgun/semi,
 				/obj/item/ammo_magazine/ammo_box/b12g
+			)
 		)
 
 // Not strictly a gun, but is used in PoIs to spawn the dropped guns of mercs, or a busted version.
