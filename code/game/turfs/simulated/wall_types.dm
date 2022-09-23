@@ -355,11 +355,7 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
-<<<<<<< HEAD
-=======
 	cut_overlays()
-
->>>>>>> 1a8f1760fa... [MIRROR] conk rete (ABLE TO BE MERGED)  (#13467)
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
