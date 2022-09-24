@@ -295,7 +295,6 @@
 
 	if(!inserted)
 		usr.remove_from_mob(S)
-		usr.update_icons()	//update our overlays
 		if (usr.client && usr.s_active != src)
 			usr.client.screen -= S
 		S.dropped(usr)

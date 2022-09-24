@@ -60,14 +60,19 @@
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "ao" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
-/turf/simulated/floor/wood,
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled,
 /area/submap/explorerhouse)
 "ap" = (
+/obj/machinery/button/remote/blast_door/bear{
+	id = "explorerhome"
+	},
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aq" = (
 /obj/structure/table/marble,
+/obj/random/drinkbottle,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled,
 /area/submap/explorerhouse)
@@ -93,55 +98,81 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/explorerhouse)
 "av" = (
-/obj/structure/table/marble,
-/obj/random/drinkbottle,
-/turf/simulated/floor/tiled,
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/outdoors/grass/sif,
 /area/submap/explorerhouse)
 "aw" = (
-/obj/item/device/flashlight/lantern,
-/turf/simulated/floor/tiled,
-/area/submap/explorerhouse)
-"ax" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
-/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron{
+	desc = "This phoron coin is a very early mint. It still flips as good as any other.";
+	name = "vintage phoron coin"
+	},
+/obj/structure/sign/kiddieplaque/poi4{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"ax" = (
+/obj/item/clothing/head/bearpelt{
+	desc = "A bit worn, but still fuzzy. There's a harpoon-shaped patch on the back of it.";
+	name = "vintage bear pelt hat";
+	pixel_y = 6
+	},
+/obj/structure/table/glass,
+/obj/structure/window/reinforced,
+/obj/structure/sign/kiddieplaque/poi3{
+	pixel_y = 28
+	},
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "ay" = (
-/obj/item/clothing/head/bearpelt{
-	pixel_y = 6
+/obj/item/weapon/material/harpoon{
+	desc = "This harpoon looks like it's seen better days, but is reinforced enough to still skewer beasts.";
+	name = "vintage harpoon"
 	},
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
+/obj/structure/sign/kiddieplaque/poi2{
+	pixel_y = 28
+	},
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "az" = (
-/obj/item/weapon/material/harpoon,
-/obj/structure/table/glass,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/wood,
-/area/submap/explorerhouse)
-"aA" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /obj/item/clothing/accessory/medal/conduct{
+	desc = "A rusted medal. It's too faded to make much out beyond the words 'Audentes fortuna iuvat'.";
+	name = "expeditionary corps medal";
 	pixel_y = 6
+	},
+/obj/structure/sign/kiddieplaque/poi1{
+	pixel_y = 28
 	},
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
+"aA" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/cane,
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/crude_pack,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/submap/explorerhouse)
 "aB" = (
-/obj/structure/sink{
-	dir = 8;
-	icon_state = "sink";
-	pixel_x = -12;
-	pixel_y = 2
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = -28;
-	pixel_y = 0
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	operating = 1;
+	pixel_x = 0;
+	pixel_y = 24
 	},
-/turf/simulated/floor/tiled/freezer,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/window/westleft,
+/turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aC" = (
 /obj/item/weapon/towel,
@@ -163,8 +194,20 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/explorerhouse)
 "aH" = (
-/obj/item/device/flashlight/lantern,
-/turf/simulated/floor/tiled/freezer,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aI" = (
 /obj/structure/window/reinforced/tinted{
@@ -214,7 +257,7 @@
 "aQ" = (
 /obj/structure/table/rack,
 /obj/item/device/gps/explorer,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aR" = (
 /obj/structure/simple_door/wood,
@@ -224,23 +267,29 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
 "aT" = (
-/obj/machinery/space_heater,
-/turf/simulated/floor/carpet/sblucarpet,
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aU" = (
-/obj/structure/table/rack,
-/obj/item/clothing/under/explorer,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
-/turf/simulated/floor/wood,
+/obj/machinery/button/remote/blast_door{
+	id = "explorerhome";
+	name = "Armory Door";
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aV" = (
-/obj/item/device/flashlight/lantern,
-/turf/simulated/floor/wood,
+/obj/machinery/door/blast/regular/bookcase{
+	id = "explorerhome"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aW" = (
-/obj/machinery/space_heater,
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aX" = (
@@ -249,20 +298,21 @@
 /area/submap/explorerhouse)
 "aY" = (
 /obj/structure/table/rack,
-/obj/item/clothing/suit/storage/hooded/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/weapon/material/knife/tacknife/survival,
-/turf/simulated/floor/wood,
+/obj/item/clothing/under/explorer,
+/obj/item/weapon/cell/device,
+/obj/item/weapon/cell/device,
+/obj/item/weapon/cell/device,
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aZ" = (
-/obj/item/clothing/shoes/boots/winter/explorer,
-/turf/simulated/floor/wood,
+/obj/structure/table/woodentable,
+/obj/item/weapon/book/manual/excavation,
+/obj/item/clothing/glasses/regular,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
 "ba" = (
-/obj/structure/table/woodentable,
-/obj/random/action_figure,
-/obj/item/device/flashlight/lantern,
-/turf/simulated/floor/carpet/sblucarpet,
+/obj/machinery/space_heater,
+/turf/simulated/floor/outdoors/grass/sif,
 /area/submap/explorerhouse)
 "bb" = (
 /obj/item/weapon/bedsheet/hopdouble,
@@ -270,27 +320,131 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
 "bc" = (
-/obj/structure/loot_pile/maint/trash,
-/turf/simulated/floor/outdoors/grass/sif,
+/obj/structure/loot_pile/maint/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "bd" = (
-/obj/structure/loot_pile/maint/junk,
-/turf/simulated/floor/outdoors/grass/sif,
+/obj/structure/loot_pile/maint/trash,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "be" = (
-/obj/structure/sign/kiddieplaque{
-	desc = "To anyone reading this, you'll note that I'm not home right now, and unfortunately due to reassignment, I won't be for a very long time. Exploring somewhere really far and dangerous now. You can stay if you want, but please try to keep my home in good condition.";
-	name = "read me visitors"
+/obj/structure/bed/chair/wood{
+	dir = 8
 	},
-/turf/simulated/wall/wood,
+/turf/simulated/floor/carpet/turcarpet,
 /area/submap/explorerhouse)
 "bf" = (
 /obj/structure/bonfire/sifwood,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/explorerhouse)
-"GN" = (
-/obj/machinery/portable_atmospherics/canister/air,
+"bg" = (
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"bh" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/storage/hooded/explorer,
+/obj/item/clothing/mask/gas/explorer,
+/obj/item/weapon/material/knife/tacknife/survival,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/explorerhouse)
+"bi" = (
+/obj/item/clothing/shoes/boots/winter/explorer,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/explorerhouse)
+"bj" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"bk" = (
+/obj/item/weapon/tool/prybar,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/submap/explorerhouse)
+"bl" = (
+/obj/machinery/door/window/eastright,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"bm" = (
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"bn" = (
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"bo" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/explorerhouse)
+"bp" = (
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 0
+	},
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/submap/explorerhouse)
+"bq" = (
+/turf/simulated/floor/tiled/freezer,
+/area/submap/explorerhouse)
+"br" = (
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/turf/simulated/floor/wood,
+/area/submap/explorerhouse)
+"bw" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/explorerhouse)
+"bx" = (
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/submap/explorerhouse)
+"bz" = (
+/obj/structure/sign/kiddieplaque{
+	desc = "To anyone reading this, you'll note that I'm not home right now, and unfortunately due to reassignment, I won't be for a very long time. Exploring somewhere really far and dangerous now. You can stay if you want, but please try to keep my home in good condition.";
+	name = "read me visitors";
+	pixel_y = 0
+	},
+/turf/simulated/wall/wood,
 /area/submap/explorerhouse)
 
 (1,1,1) = {"
@@ -306,7 +460,7 @@ ad
 ad
 ad
 ad
-ad
+bk
 ad
 ad
 ad
@@ -327,13 +481,13 @@ am
 as
 am
 am
+aB
+am
+am
+am
+am
+am
 ad
-am
-am
-as
-am
-am
-bc
 ag
 ag
 "}
@@ -345,17 +499,17 @@ aj
 ag
 al
 am
+ao
 aq
-av
 aD
 am
-ad
+aH
 am
 aQ
-aU
 aY
+bh
 am
-bc
+ad
 ag
 ag
 "}
@@ -368,16 +522,16 @@ ag
 ak
 am
 ar
-aw
+bo
 aE
 am
+aT
+am
+aU
+bw
+bi
+am
 ad
-am
-ap
-aV
-aZ
-am
-bc
 ag
 ag
 "}
@@ -395,11 +549,11 @@ aF
 am
 am
 am
-an
+aV
 am
 am
 am
-bd
+ad
 ag
 ag
 "}
@@ -410,15 +564,15 @@ ag
 ag
 ag
 ad
-ad
-as
-ax
-ap
-ap
-GN
-ap
-ap
-ap
+av
+am
+aw
+aW
+aW
+bg
+aW
+aW
+aW
 as
 ad
 ad
@@ -434,13 +588,13 @@ ag
 am
 am
 am
-ay
-ap
+ax
+aW
 aJ
 aL
 aJ
-ap
 aW
+aX
 am
 am
 am
@@ -454,17 +608,17 @@ ag
 ag
 ag
 am
-ao
+bm
 am
 am
-ap
+aW
 aK
 aM
 aP
-ap
+aW
 am
 am
-ao
+bm
 am
 ag
 ag
@@ -476,17 +630,17 @@ ag
 ag
 ag
 an
-ap
-ap
+aW
+aW
 an
-ap
+aW
 aK
 aN
 aP
-ap
+aW
 an
-ap
-ap
+aW
+aW
 an
 ag
 ag
@@ -498,18 +652,18 @@ ag
 ag
 ag
 am
-ao
+bn
 am
 am
-ap
+aW
 aK
 aO
 aP
-ap
+br
 am
 am
-ao
-be
+bn
+bz
 ag
 ag
 "}
@@ -522,13 +676,13 @@ ag
 am
 am
 am
-az
-ap
+ay
+aW
 aJ
-aP
+be
 aJ
+aW
 ap
-aX
 am
 am
 am
@@ -542,15 +696,15 @@ ah
 ag
 ah
 ad
-ad
-as
-aA
-ap
-ap
-ap
-ap
-ap
-ap
+ba
+am
+az
+aW
+aW
+bj
+aW
+aW
+aW
 as
 ad
 ad
@@ -588,14 +742,14 @@ ah
 ad
 am
 at
-aB
-aH
+bp
+bq
 am
-ad
+bc
 am
 aS
-aS
-ba
+bx
+aZ
 am
 ad
 ag
@@ -613,9 +767,9 @@ au
 aC
 aI
 am
-ad
+bd
 am
-aT
+aA
 aS
 bb
 am
@@ -635,7 +789,7 @@ am
 am
 am
 am
-ad
+bl
 am
 am
 as

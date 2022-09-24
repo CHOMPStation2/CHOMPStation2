@@ -324,8 +324,6 @@
 					src.anchored = TRUE
 					src.pinned += O
 
-<<<<<<< HEAD
-=======
 	//VORESTATION EDIT START - Allows for thrown vore!
 	//Throwing a prey into a pred takes priority. After that it checks to see if the person being thrown is a pred.
 	if(istype(AM, /mob/living))
@@ -352,7 +350,6 @@
 /mob/living/proc/on_throw_vore_special(var/pred = TRUE, var/mob/living/target)
 	return
 
->>>>>>> d105238544... Merge pull request #13762 from Heroman3003/pakkunfix
 /mob/living/proc/embed(var/obj/O, var/def_zone=null)
 	O.loc = src
 	src.embedded += O
