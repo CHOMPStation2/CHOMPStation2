@@ -4506,6 +4506,7 @@
 #include "modular_chomp\code\modules\clothing\face\gasmask.dm"
 #include "modular_chomp\code\modules\clothing\face\miscellaneous.dm"
 #include "modular_chomp\code\modules\clothing\head\misc.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\clockwork_ch.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\contraband.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\engineering.dm"
