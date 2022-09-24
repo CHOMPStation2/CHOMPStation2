@@ -1130,9 +1130,7 @@
 #include "code\game\objects\items_vr.dm"
 <<<<<<< HEAD
 #include "code\game\objects\kasscbuttons_ch.dm"
-=======
 #include "code\game\objects\micro_event.dm"
->>>>>>> 6ec4ff924a... Merge pull request #13794 from Very-Soft/microeventtools
 #include "code\game\objects\micro_structures.dm"
 #include "code\game\objects\mob_spawner_ch.dm"
 #include "code\game\objects\mob_spawner_vr.dm"
