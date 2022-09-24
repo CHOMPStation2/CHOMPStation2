@@ -1084,13 +1084,7 @@
 
 	src.modules += new /obj/item/weapon/tray/robotray(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
-	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
 
-	var/datum/reagents/N = new/datum/reagents(50)
-	src.emag.reagents = N
-	N.my_atom = src.emag
-	N.add_reagent("beer2", 50)
-	src.emag.name = "Mickey Finn's Special Brew"
 	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -1110,9 +1104,6 @@
 /obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
 	E.reagents.add_reagent("enzyme", 2 * amount)
-	if(src.emag)
-		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
-		B.reagents.add_reagent("beer2", 2 * amount)
 
 //CHOMP addition start BORGHYPO
 /obj/item/weapon/reagent_containers/borghypo/service/booze
@@ -1206,4 +1197,3 @@
 	R.verbs -= /mob/living/proc/shred_limb
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
-// CH changes - Unity Hound end
