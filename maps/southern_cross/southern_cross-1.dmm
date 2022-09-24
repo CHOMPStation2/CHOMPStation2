@@ -2443,10 +2443,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/apcenter)
-"ajU" = (
-/obj/random/junk,
-/turf/simulated/floor/airless,
-/area/maintenance/firstdeck/centralport)
 "ajZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17897,7 +17893,7 @@
 "iXF" = (
 /obj/random/junk,
 /obj/random/junk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "iXQ" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -25579,7 +25575,7 @@
 /area/hallway/primary/firstdeck/port)
 "sUP" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "sVg" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -50097,10 +50093,10 @@ kwt
 xPQ
 nFX
 nFX
-dWX
+aqH
 iXF
-ajU
-ajU
+aoy
+aoy
 sUP
 kwt
 aaa

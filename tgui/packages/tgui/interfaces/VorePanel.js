@@ -1,7 +1,7 @@
 import { capitalize } from 'common/string';
 import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider } from '../components';
+import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider } from '../components';
 import { Window } from '../layouts';
 import { classes } from 'common/react';
 
@@ -177,6 +177,67 @@ export const VorePanel = (props, context) => {
 
   tabs[1] = <VoreUserPreferences />;
 
+  const generateBellyString = () => {
+    const {
+      // Controls
+      belly_name,
+      mode,
+      item_mode,
+      addons,
+
+      // Descriptions
+      verb,
+      release_verb,
+      desc,
+      absorbed_desc,
+    } = data.selected;
+
+    let result = '=== ' + belly_name + ' ===\n\n';
+    result += '== Controls ==\n\n';
+    result += 'Mode:\n' + mode + '\n\n';
+    result += 'Addons:\n' + addons + '\n\n';
+    result += 'Item Mode:\n' + item_mode + '\n\n';
+    result += '== Descriptions ==\n\n';
+    result += 'Verb:\n' + verb + '\n\n';
+    result += 'Release Verb:\n' + release_verb + '\n\n';
+    result += 'Description:\n"' + desc + '"\n\n';
+    result += 'Absorbed Description:\n"' + absorbed_desc + '"\n\n';
+
+    return result;
+  };
+
+  const downloadPrefs = () => {
+    const { belly_name } = data.selected;
+
+    const extension = '.txt';
+
+    let now = new Date();
+    let hours = String(now.getHours());
+    if (hours.length < 2) {
+      hours = '0' + hours;
+    }
+    let minutes = String(now.getMinutes());
+    if (minutes.length < 2) {
+      minutes = '0' + minutes;
+    }
+    let dayofmonth = String(now.getDate());
+    if (dayofmonth.length < 2) {
+      dayofmonth = '0' + dayofmonth;
+    }
+    let month = String(now.getMonth() + 1); // 0-11
+    if (month.length < 2) {
+      month = '0' + month;
+    }
+    let year = String(now.getFullYear());
+
+    let datesegment = ' ' + year + '-' + month + '-' + dayofmonth + ' (' + hours + ' ' + minutes + ')';
+
+    let filename = belly_name + datesegment + extension;
+
+    let blob = new Blob([generateBellyString()], { type: 'text/html;charset=utf8;' });
+    window.navigator.msSaveOrOpenBlob(blob, filename);
+  };
+
   return (
     <Window width={890} height={660} theme="abstract" resizable>
       <Window.Content scrollable>
@@ -190,11 +251,11 @@ export const VorePanel = (props, context) => {
               {/* CHOMPEdit - "Belly HTML Export Earlyport" */}
               <Flex.Item>
                 <Button
-                  content="Save Prefs & Open Export Panel"
+                  content="Save Prefs & Export Selected Belly"
                   icon="download"
                   onClick={() => {
                     act('saveprefs');
-                    act('exportpanel');
+                    downloadPrefs();
                   }}
                 />
               </Flex.Item>
@@ -783,6 +844,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
     belly_fullscreen,
     belly_fullscreen_color,
     mapRef,
+    colorization_enabled,
     possible_fullscreens,
     disable_hud,
     vore_sprite_flags,
@@ -880,17 +942,21 @@ const VoreSelectedBellyVisuals = (props, context) => {
             onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color', val: null })}>
             Select Color
           </Button>
+          <LabeledList.Item label="Enable Coloration">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_colorization_enabled' })}
+              icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
+              selected={colorization_enabled}
+              content={colorization_enabled ? 'Yes' : 'No'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Preview Belly">
+            <Button onClick={() => act('set_attribute', { attribute: 'b_preview_belly' })} content={'Preview'} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Clear Preview">
+            <Button onClick={() => act('set_attribute', { attribute: 'b_clear_preview' })} content={'Clear'} />
+          </LabeledList.Item>
         </Flex>
-        <ByondUi
-          style={{
-            width: '200px',
-            height: '200px',
-          }}
-          params={{
-            id: mapRef,
-            type: 'map',
-          }}
-        />
       </Section>
       <Section>
         <Section title="Vore FX">
@@ -1381,6 +1447,7 @@ const VoreUserPreferences = (props, context) => {
     drop_vore,
     stumble_vore,
     slip_vore,
+    throw_vore,
     nutrition_message_visible,
     weight_message_visible,
   } = data.prefs;
@@ -1543,6 +1610,21 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: 'Stumble Vore Enabled',
         disabled: 'Stumble Vore Disabled',
+      },
+    },
+    toggle_throw_vore: {
+      action: 'toggle_throw_vore',
+      test: throw_vore,
+      tooltip: {
+        main:
+          'Allows for throw related spontaneous vore to occur. ' +
+          ' Note, you still need spontaneous vore pred and/or prey enabled.',
+        enable: 'Click here to allow for throw vore.',
+        disable: 'Click here to disable throw vore.',
+      },
+      content: {
+        enabled: 'Throw Vore Enabled',
+        disabled: 'Throw Vore Disabled',
       },
     },
     spawnbelly: {
@@ -1798,6 +1880,9 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
@@ -1815,7 +1900,7 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.vore_fx} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
@@ -1824,7 +1909,7 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.pickuppref} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
         <Flex.Item basis="32%">

@@ -1,6 +1,7 @@
 /mob/living/simple_mob/vore
 	mob_class = MOB_CLASS_ANIMAL
 	mob_bump_flag = 0
+	can_be_drop_pred = 1
 
 /mob/living/simple_mob
 	var/nameset
@@ -19,12 +20,15 @@
 	can_be_drop_prey = client.prefs_vr.can_be_drop_prey
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
 	latejoin_vore = client.prefs_vr.latejoin_vore //CHOMPedit
+	throw_vore = client.prefs_vr.throw_vore
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
 	allowmobvore = client.prefs_vr.allowmobvore
 	permit_healbelly = client.prefs_vr.permit_healbelly
 	noisy = client.prefs_vr.noisy
 	selective_preference = client.prefs_vr.selective_preference
+	appendage_color = client.prefs_vr.appendage_color
+	appendage_alt_setting = client.prefs_vr.appendage_alt_setting
 
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore
