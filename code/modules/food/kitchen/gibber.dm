@@ -99,13 +99,6 @@
 /obj/machinery/gibber/attackby(var/obj/item/W, var/mob/user)
 	var/obj/item/weapon/grab/G = W
 
-	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
-		return
-	if(default_deconstruction_crowbar(user, O))
-		return
-	if(default_part_replacement(user, O))
-		return
-
 	if(default_unfasten_wrench(user, W, 40))
 		return
 
@@ -118,6 +111,14 @@
 
 	move_into_gibber(user,G.affecting)
 	// Grab() process should clean up the grab item, no need to del it.
+	
+/obj/machinery/gibber/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
+		return
+	if(default_deconstruction_crowbar(user, O))
+		return
+	if(default_part_replacement(user, O))
+		return
 
 /obj/machinery/gibber/MouseDrop_T(mob/target, mob/user)
 	if(user.stat || user.restrained())
