@@ -32,30 +32,14 @@
 
 /obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/ore))
-<<<<<<< HEAD
-		if (W.name != "strange rock")
-			user.remove_from_mob(W)
-			src.contents += W
-		else
-			to_chat(user,"<span class='notice'>The [W] bounces out of the [src]!</span>")
-=======
 		var/obj/item/weapon/ore/ore = W
 		stored_ore[ore.material]++
 		user.remove_from_mob(W)
 		qdel(ore)
->>>>>>> fe004aefc3... Merge pull request #13799 from Cameron653/MINING_ADJUSTMENTS
 
 	else if (istype(W, /obj/item/weapon/storage/bag/ore))
 		var/obj/item/weapon/storage/bag/ore/S = W
 		S.hide_from(user)
-<<<<<<< HEAD
-		for(var/obj/item/weapon/ore/O in S.contents)
-			if (O.name != "strange rock")
-				S.remove_from_storage(O, src) //This will move the item to this item's contents
-			else
-				to_chat(user,"<span class='notice'>The [O] bounces out of the [src]!</span>")
-		to_chat(user,"<span class='notice'>You empty the satchel into the [src].</span>")
-=======
 		for(var/ore in S.stored_ore)
 			if(S.stored_ore[ore] > 0)
 				var/ore_amount = S.stored_ore[ore]	// How many ores does the satchel have?
@@ -63,7 +47,6 @@
 				S.stored_ore[ore] = 0 				// Set the value of the ore in the satchel to 0.
 				S.current_capacity = 0				// Set the amount of ore in the satchel  to 0.
 		to_chat(user, "<span class='notice'>You empty the satchel into the box.</span>")
->>>>>>> fe004aefc3... Merge pull request #13799 from Cameron653/MINING_ADJUSTMENTS
 
 	return
 
