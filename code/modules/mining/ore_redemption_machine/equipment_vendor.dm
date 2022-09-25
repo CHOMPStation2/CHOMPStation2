@@ -52,7 +52,7 @@
 		// EQUIPMENT("Mining Conscription Kit",					/obj/item/storage/backpack/duffelbag/mining_conscript,				1000),
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							1200),
-		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),							1000), //CHOMP Add //CHOMPstation addition
+		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),
 		EQUIPMENT("Mining Satchel of Holding",					/obj/item/weapon/storage/bag/ore/holding,							1500),
 		EQUIPMENT("Advanced Ore Scanner",						/obj/item/weapon/mining_scanner/advanced,							500),
 	)
