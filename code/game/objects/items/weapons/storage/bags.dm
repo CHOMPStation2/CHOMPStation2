@@ -249,7 +249,6 @@
 			stored_ore[O.name]++
 		else
 			stored_ore[O.name] = 1
-<<<<<<< HEAD
 
 //CHOMPstation edit START
 /obj/item/weapon/storage/bag/ore/large
@@ -268,9 +267,7 @@
 
 //CHOMPstation edit END
 
-=======
 */
->>>>>>> fe004aefc3... Merge pull request #13799 from Cameron653/MINING_ADJUSTMENTS
 // -----------------------------
 //          Plant bag
 // -----------------------------
