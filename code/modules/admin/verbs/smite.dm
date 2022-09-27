@@ -41,8 +41,7 @@
 			target.visible_message("<span class='danger'>[target] is struck by lightning!</span>")
 
 		if(SMITE_PIE) //CHOMP Add
-			var/obj/effect/decal/cleanable/pie_smudge = new(get_turf(target))
-			//WIP something needs to go here in order to actually spawn the smudge at the target. I need help.
+			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
 			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
 			target.Weaken(1)
 			target.visible_message("<span class='danger'>[target] is struck by pie!</span>")
