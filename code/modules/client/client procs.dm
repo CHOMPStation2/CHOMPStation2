@@ -211,6 +211,9 @@
 	if(prefs)
 		prefs.selecting_slots = FALSE
 
+	// Initialize stat panel
+	src << browse(file('html/statbrowser.html'), "window=statbrowser")
+
 	// Initialize tgui panel
 	tgui_panel.initialize()
 
@@ -231,9 +234,6 @@
 		add_admin_verbs()
 		admin_memo_show()
 		message_admins("Staff login: [key_name(src)]") // CHOMPEdit: Admin Login Notice //Edit2: This logs more than just admins so why not change it
-
-	// Initialize tgui panel
-	src << browse(file('html/statbrowser.html'), "window=statbrowser")
 
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
