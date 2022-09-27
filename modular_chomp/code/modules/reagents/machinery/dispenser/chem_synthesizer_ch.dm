@@ -4,27 +4,7 @@
 #define RECIPE_MAX_STRING 160
 #define RECIPE_MAX_STEPS 16
 
-// Recipes are stored as a list which alternates between chemical id's and volumes to add.
-
-// TODO:
-// Design UI
-// DONE TGUI procs
-// DONE Create procs to take synthesis steps as an input and stores as a 1 click synthesis button. Needs name, expected output volume.
-// DONE Create procs to actually perform the reagent transfer/etc. for a synthesis, reading the stored synthesis steps.
-// DONE Implement a step-mode where the player manually clicks on each step and an expert mode where players input a comma-delineated list.
-// DONE Add process() code which makes the machine actually work. Perhaps tie a boolean and single start proc into process().
-// DONE Give the machine queue-behavior which allows players to queue up multiple recipes, even when the machine is busy. Reference protolathe code.
-// DONE Give the machine a way to stop a synthesis and purge/bottle the reaction vessel.
-// DONE Perhaps use recipes as a "ID" "num" "ID" "num" list to avoid using multiple lists.
-// DONE Panel open button.
-// DONE Code for power usage.
-// Update_icon() overrides.
-// Underlay code for the reaction vessel.
-// DONE Add an eject catalyst bottle button.
-// DONE Make sure recipes can only be removed when the machine is idle. Adding should be fine.
-// May need yet another list which is just strings which match recipe ID's.
-// For user recipes, make clicking on the recipe give a prompt with "add to queue," "export recipe," and "delete recipe."
-
+// Recipes are stored as a list which alternates between chemical id's and volumes to add, e.g. 1 = 'Carbon', 2 = 20, 3 = 'Silicon', 4 = 20
 /obj/machinery/chemical_synthesizer
 	name = "chemical synthesizer"
 	desc = "A programmable machine capable of automatically synthesizing medicine."
@@ -43,10 +23,8 @@
 	var/busy = FALSE
 	var/production_mode = FALSE // Toggle between click-step input and comma-delineated text input for creating recipes.
 	var/use_catalyst = TRUE // Determines whether or not the catalyst will be added to reagents while processing a recipe.
-	var/delay_modifier = 3 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
+	var/delay_modifier = 4 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
 	var/obj/item/weapon/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
-
-	var/list/debug_data // DELETE THIS ONCE DONE TESTNG
 
 	var/list/recipes = list() // This holds chemical recipes up to a maximum determined by SYNTHESIZER_MAX_RECIPES. Two-dimensional.
 	var/list/queue = list() // This holds the recipe id's for queued up recipes.
@@ -98,10 +76,71 @@
 			add_cartridge(new type(src))
 		panel_open = FALSE
 
+	var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(get_turf(src))
+	P.name = "Synthesizer Instructions"
+	P.desc = "A photocopy of a handwritten note."
+	P.info = {"Hello there! This device is a new NanoTrasen product currently being shipped to select facilities \
+	for internal testing! We haven't finished the instruction manual yet so each unit shipped with this pamphlet \
+	(I really hope you can read my handwriting). This machine is a programmable chemical synthesizer which, if used \
+	correctly, will allow you to queue up some recipes and go work on something else while the medicine manufactures. \
+	It's slower than doing things by hand but it also keeps your hands free! And yes, it bottles automatically. \
+	<BR><BR>To get started, you need to program some recipes. The machine has two modes for this: tutorial and production. \
+	Tutorial is intended to teach you how recipes work, or to create recipes for later use with production mode. This one \
+	should be self-explanatory, just follow the prompts. Production mode allows you to rapidly import recipes in CSV format. \
+	If I've lost you, just keep reading; once you give it a name and tell the machine how many steps are in the recipe, just \
+	input the recipe as a comma-separated string of chemical names and volumes to be added, like "Chem1,10,Chem2,20,... \
+	<BR><BR>If that still doesn't make sense, I've included an example for Dylovene at the bottom. Also, don't include \
+	catalyst reagents in the recipe, read below for that part. Also also, remember that chemical names are case sensitive and \
+	cartridge names are usually Capitalized Like These Words (AND FOR THE LOVE OF GOD KEVIN, STOP CHANGING THE NAMES ON THE \
+	LABELS WHEN THE CHEMISTS AREN'T LOOKING IT ISN'T FUNNY ANYMORE). \
+	<BR><BR>Next important concept is the catalyst, intended for catalyst reagents (usually phoron). When the catalyst option is \
+	enabled, whatever is in the catalyst bottle gets added to the reaction chamber before synthesis begins. When the \
+	recipe is done, it extracts the catalyst, bottles whatever you made, then adds the catalyst back before starting \
+	the next recipe in the queue. It's up to you to make sure no unwanted side reactions happen, and yes, this means \
+	you cannot queue up catalyst recipes with recipes ruined by the catalyst. Maybe add "NO CAT" or something to the \
+	name for recipes like that? \
+	<BR><BR>And that's the really important stuff. Remember you can export recipes for later shifts, just copy the \
+	output into your PDA or something. Oh, and stalling. Say you're missing a cartridge or the vessel is full (the \
+	capacity is [src.reagents.maximum_volume]) or you press the emergency stop button. The machine will stall, \
+	clearing the temporary memory. To get it started again, you just need to empty the vessel. Anyway, here's \
+	example recipe. \
+	<BR><BR> Name: Dylovene (60u) \
+	<BR> Number of steps: 3 \
+	<BR> Recipe string: Silicon,20,Nitrogen,20,Potassium,20"}
+
 /obj/machinery/chemical_synthesizer/examine(mob/user)
 	. = ..()
 	if(panel_open)
 		. += "It has [cartridges.len] cartridges installed, and has space for [SYNTHESIZER_MAX_CARTRIDGES - cartridges.len] more."
+
+/obj/machinery/chemical_synthesizer/power_change()
+	. = ..()
+	update_icon()
+
+/obj/machinery/chemical_synthesizer/update_icon()
+	underlays.Cut()
+	if(stat & BROKEN)
+		icon_state = "synth_broken"
+		return
+	if(stat & NOPOWER)
+		icon_state = "synth_off"
+		return
+	if(!busy)
+		if(catalyst)
+			icon_state = "synth_idle_bottle"
+		else
+			icon_state = "synth_idle"
+	else
+		icon_state = "synth_working"
+	if(catalyst) // All underlay icon_states requires the catalyst bottle to be present, so this works as a check.
+		if(catalyst.reagents.reagent_list.len)
+			var/image/cat_filling = image(icon, src, "synth_catalyst", -1)
+			cat_filling.color = catalyst.reagents.get_color()
+			underlays += cat_filling
+		if(src.reagents.reagent_list.len)
+			var/image/ves_filling = image(icon, src, "synth_vessel", -2)
+			ves_filling.color = src.reagents.get_color()
+			underlays += ves_filling
 
 /obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/weapon/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!panel_open)
@@ -169,6 +208,9 @@
 		if(catalyst)
 			to_chat(user, "<span class='warning'>There is already \a [catalyst] in \the [src] catalyst slot!</span>")
 			return
+		if(stat & (BROKEN|NOPOWER))
+			to_chat(user, "<span class='warning'>The clamp will not secure the catalyst while the machine is down!</span>")
+			return
 
 		var/obj/item/weapon/reagent_containers/RC = W
 
@@ -223,7 +265,6 @@
 	data["panel_open"] = panel_open
 	data["use_catalyst"] = use_catalyst
 
-	// Queue and recipe lists might not be formatted correctly here. Delete this once you've confirmed.
 	var/list/tmp_queue = list()
 	for(var/i = 1, i <= queue.len, i++)
 		tmp_queue.Add(list(list("name" = queue[i], "index" = i))) // Thanks byond
@@ -263,7 +304,6 @@
 		chemicals.Add(list(list("title" = label, "id" = label, "amount" = C.reagents.total_volume))) // list in a list because Byond merges the first list
 	data["chemicals"] = chemicals
 
-	debug_data = data
 	return data
 
 /obj/machinery/chemical_synthesizer/tgui_act(action, params)
@@ -297,6 +337,7 @@
 			if(!busy && catalyst)
 				catalyst.forceMove(get_turf(src))
 				catalyst = null
+				update_icon()
 		if("toggle_catalyst")
 			// Decides if the machine uses the catalyst.
 			if(!busy)
@@ -471,6 +512,7 @@
 		catalyst.reagents.trans_to_holder(src.reagents, catalyst.reagents.total_volume)
 
 	// Start the first recipe in the queue, starting with step 1.
+	update_icon()
 	follow_recipe(queue[1], 1)
 
 
@@ -480,7 +522,6 @@
 		stall()
 		return
 
-	icon_state = "synth_working"
 	if(!step)
 		step = 1
 
@@ -519,13 +560,13 @@
 
 	// After all this mess of code, we reach the line where the magic happens.
 	C.reagents.trans_to_holder(src.reagents, quantity)
-	// playsound(src, 'sound/machinery/HPLC_binary_pump.ogg', 25, 1)
+	update_icon() // Update underlays.
+	playsound(src, 'modular_chomp/sound/machines/HPLC_binary_pump.ogg', 15, 1)
 
 	// Advance to the next step in the recipe. If this is outside of the recipe's index, we're finished. Otherwise, proceed to next step.
 	step += 2
 	var/list/tmp = recipes[r_id]
 	if(step > tmp.len)
-		icon_state = "synth_finished"
 
 		// First extract the catalyst(s), if any remain.
 		if(use_catalyst)
@@ -536,6 +577,8 @@
 		// Add a delay of 1 tick per unit of reagent. Clear the catalyst_ids.
 		catalyst_ids = list()
 		var/delay = reagents.total_volume
+		update_icon() // Update the icon first to remove underlays, then switch to the new icon_state.
+		icon_state = "synth_finished"
 		addtimer(CALLBACK(src, .proc/bottle_product, r_id), delay)
 
 	else
@@ -569,6 +612,7 @@
 			for(var/datum/reagent/chem in catalyst.reagents.reagent_list)
 				catalyst_ids += chem.id
 			catalyst.reagents.trans_to_holder(src.reagents, catalyst.reagents.total_volume)
+		update_icon()
 		follow_recipe(queue[1], 1)
 
 	else
