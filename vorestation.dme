@@ -33,6 +33,7 @@
 #include "code\__defines\_protect.dm"
 #include "code\__defines\_tick.dm"
 #include "code\__defines\admin.dm"
+#include "code\__defines\admin_ch.dm"
 #include "code\__defines\admin_vr.dm"
 #include "code\__defines\appearance.dm"
 #include "code\__defines\atmos.dm"
