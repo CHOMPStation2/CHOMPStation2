@@ -26018,6 +26018,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/woodentable,
+/obj/item/weapon/paper{
+	desc = "";
+	info = "Pain sustained in Virtual Reality will be sustained in the real world.";
+	name = "VR Pod Disclaimer"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "ydk" = (
