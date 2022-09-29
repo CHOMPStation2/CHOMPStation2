@@ -3,3 +3,4 @@
 	self_recharge = 1
 	use_external_power = 1
 	recharge_time = 10
+	one_handed_penalty = 0
