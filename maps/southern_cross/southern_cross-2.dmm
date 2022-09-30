@@ -73256,6 +73256,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "tpy" = (
+/obj/machinery/chemical_synthesizer,
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
