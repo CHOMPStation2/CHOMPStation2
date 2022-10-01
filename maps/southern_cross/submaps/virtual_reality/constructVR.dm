@@ -4,10 +4,11 @@ w// -- Areas -- //
 	name = "VR world"
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/outdoors/dirt
-	dynamic_lighting = 1
+
 
 /area/vr/outdoors
-	outdoors = 1
+	outdoors = OUTDOORS_YES
+	ambience = AMBIENCE_SIF
 
 /area/vr/powered
 	name = "Powered VR World Inside"
@@ -24,7 +25,7 @@ w// -- Areas -- //
 	power_equip = 1
 	power_environ = 1
 	power_light = 1
-	ambience = AMBIENCE_SIF
+
 
 
 /area/vr/powered/bluebase

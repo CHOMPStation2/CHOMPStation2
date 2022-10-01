@@ -1014,6 +1014,7 @@ z
 /area/crew_quarters/thirddeck/vrroom
 	name = "\improper Virtual Reality Room"
 	icon_state = "gaming"
+	flags = RAD_SHIELDED //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
