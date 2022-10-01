@@ -122,6 +122,16 @@
 	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_finalize
 	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_lethal
 
+/datum/trait/neutral/long_vore
+	name = "Long Predatorial Reach"
+	desc = "Makes you able to use your tongue to grab creatures."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/long_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/long_vore
+
 /datum/trait/neutral/feeder
 	name = "Feeder"
 	desc = "Allows you to feed your prey using your own body."
@@ -166,11 +176,12 @@
 
 /datum/trait/neutral/synth_chemfurnace
 	name = "Biofuel Processor"
-	desc = "You are able to gain energy through consuming and processing normal food. Energy-dense foods such as protein bars and survival food will yield the best results."
+	desc = "You are able to gain energy through consuming and processing normal food, at the cost of significantly slower recharging via cyborg chargers. Energy-dense foods such as protein bars and survival food will yield the best results."
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
 	var_changes = list("organic_food_coeff" = 0.75, "synthetic_food_coeff" = 1) //CHOMPEdit: Increase values
+	excludes = list(/datum/trait/neutral/biofuel_value_down)
 
 /datum/trait/neutral/glowing_eyes
 	name = "Glowing Eyes"
@@ -608,7 +619,7 @@
 
 /datum/trait/neutral/biofuel_value_down
 	name = "Discount Biofuel processor"
-	desc = "You are able to gain energy through consuming and processing normal food. Unfortunately, it is half as effective as premium models."
+	desc = "You are able to gain energy through consuming and processing normal food. Unfortunately, it is half as effective as premium models. On the plus side, you still recharge from charging stations fairly efficiently."
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS

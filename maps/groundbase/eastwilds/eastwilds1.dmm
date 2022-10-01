@@ -1,7 +1,15 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/unsimulated/wall/planetary/virgo3c,
+<<<<<<< HEAD
 /area/groundbase/wilderness/east)
+=======
+/area/submap/groundbase/wilderness/east)
+"b" = (
+/mob/living/simple_mob/vore/pakkun,
+/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/area/submap/groundbase/wilderness/east/unexplored)
+>>>>>>> 79258d98bc... Merge pull request #13749 from Heroman3003/pakkun
 "c" = (
 /turf/simulated/mineral/cave/virgo3c,
 /area/groundbase/wilderness/east)
@@ -10,7 +18,21 @@
 	dir = 4
 	},
 /turf/simulated/floor/water/virgo3c,
+<<<<<<< HEAD
 /area/groundbase/wilderness/east)
+=======
+/area/submap/groundbase/wilderness/east)
+"e" = (
+/mob/living/simple_mob/vore/pakkun,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/submap/groundbase/wilderness/east/unexplored)
+"f" = (
+/mob/living/simple_mob/vore/pakkun,
+/turf/simulated/floor/water/virgo3c{
+	outdoors = 0
+	},
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 79258d98bc... Merge pull request #13749 from Heroman3003/pakkun
 "l" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east/unexplored)
@@ -3331,7 +3353,7 @@ r
 r
 r
 Q
-Q
+f
 Q
 Q
 U
@@ -3443,7 +3465,7 @@ Z
 Z
 V
 V
-F
+e
 F
 F
 F
@@ -13455,7 +13477,7 @@ r
 F
 F
 F
-l
+b
 l
 l
 l
@@ -13664,7 +13686,7 @@ Z
 V
 V
 F
-F
+e
 F
 F
 l
@@ -13703,7 +13725,7 @@ r
 Q
 Q
 Q
-Q
+f
 Q
 Q
 Q

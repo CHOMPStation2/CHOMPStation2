@@ -275,6 +275,28 @@
 	desc = "Next to the extremely long list of names and job titles. Beneath the image, someone has scratched the word \"PACKETS\""
 	icon_state = "kiddieplaque"
 
+//CHOMP Add start
+/obj/structure/sign/kiddieplaque/poi1
+	name = "expeditionary corps frame"
+	desc = "An old framed photograph of four figures in retro mining gear wielding harpoons. They look ready for a fight."
+	icon_state = "explorerplaque"
+
+/obj/structure/sign/kiddieplaque/poi2
+	name = "expeditionary corps frame"
+	desc = "An old framed photograph of an oversized harpoon cannon."
+	icon_state = "explorerplaque2"
+
+/obj/structure/sign/kiddieplaque/poi3
+	name = "expeditionary corps frame"
+	desc = "An old framed photograph of a gigantic black bear. Even through print it's chilling to examine."
+	icon_state = "explorerplaque3"
+
+/obj/structure/sign/kiddieplaque/poi4
+	name = "expeditionary corps frame"
+	desc = "An old framed paper map littered with notes. Looks like the creator was marking the location of deposits."
+	icon_state = "explorerplaque4"
+//CHOMP Add end
+
 /obj/structure/sign/atmosplaque
 	name = "\improper FEA atmospherics division plaque"
 	desc = "This plaque commemorates the fall of the Atmos FEA division. For all the charred, dizzy, and brittle men who have died in its hands."
