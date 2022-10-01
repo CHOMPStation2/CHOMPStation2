@@ -276,7 +276,6 @@
 "hS" = (/turf/simulated/shuttle/wall/hard_corner,/area/vr/powered)
 "hU" = (/obj/structure/table/bench/wooden,/obj/effect/floor_decal/corner/brown/border{dir = 1},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/wood,/area/vr/powered)
 "hV" = (/obj/structure/flora/ausbushes/fullgrass,/obj/structure/flora/ausbushes/fullgrass,/turf/simulated/floor/outdoors/grass/heavy{can_atmos_pass = 0; temperature = 311},/area/vr/outdoors/powered)
-"hX" = (/obj/item/weapon/stool/padded,/turf/simulated/shuttle/floor/voidcraft,/area/vr/powered)
 "hY" = (/obj/effect/floor_decal/spline/fancy{dir = 8},/obj/structure/cult/pylon{pixel_y = 4},/turf/simulated/floor/cult,/area/vr/powered)
 "hZ" = (/obj/machinery/door/window/survival_pod,/turf/simulated/shuttle/floor/black,/area/vr/powered)
 "ia" = (/obj/structure/ship_munition/disperser_charge/explosive,/turf/simulated/floor/tiled/techmaint,/area/vr/powered)
@@ -750,7 +749,7 @@
 "vi" = (/obj/structure/table/glass,/obj/item/weapon/storage/fancy/candle_box,/obj/item/weapon/storage/box/matches,/turf/simulated/floor/carpet/oracarpet,/area/vr/powered)
 "vk" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/vr/powered)
 "vl" = (/turf/simulated/floor/flock{color = "grey"},/area/vr/powered)
-"vo" = (/obj/machinery/computer/transhuman/resleeving{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/light/poi,/turf/simulated/floor/tiled/techmaint,/area/vr/powered)
+"vo" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/light/poi,/turf/simulated/floor/tiled/techmaint,/area/vr/powered)
 "vr" = (/obj/structure/table/marble,/obj/item/weapon/material/sharpeningkit,/obj/item/weapon/reagent_containers/dropper,/turf/simulated/floor/tiled/white,/area/vr/powered)
 "vt" = (/obj/structure/flora/tree/jungle,/turf/unsimulated/wall,/area/vr/outdoors/powered)
 "vu" = (/obj/machinery/light{dir = 8},/obj/machinery/vending/sol,/turf/simulated/floor/tiled,/area/vr/powered)
@@ -999,7 +998,7 @@
 "BY" = (/obj/effect/floor_decal/spline/fancy{dir = 1},/turf/simulated/floor/cult,/area/vr/powered)
 "BZ" = (/turf/simulated/floor/outdoors/dirt{temperature = 311; outdoors = 0},/area/vr/powered)
 "Cb" = (/obj/machinery/door/airlock/angled_tgmc/wide/security{dir = 4},/obj/structure/fans/hardlight/colorable{color = "red"},/turf/simulated/shuttle/plating,/area/vr/powered)
-"Cd" = (/obj/machinery/transhuman/synthprinter,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/shuttle/floor/white,/area/vr/powered)
+"Cd" = (/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/shuttle/floor/white,/area/vr/powered)
 "Cf" = (/obj/effect/floor_decal/techfloor/corner{dir = 6},/turf/simulated/shuttle/plating,/area/vr/powered)
 "Ch" = (/mob/living/simple_mob/construct/shade{ai_holder_type = null},/obj/effect/floor_decal/techfloor,/turf/simulated/floor/cult,/area/vr/powered)
 "Cj" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/obj/machinery/meter,/turf/simulated/floor/airless,/area/vr/powered)
@@ -1663,7 +1662,7 @@
 "VC" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/shuttle/floor/yellow,/area/vr/powered)
 "VD" = (/obj/structure/table/rack,/obj/item/weapon/material/knife/ritual,/obj/structure/curtain/open/bed,/obj/item/clothing/under/suit_jacket/really_black,/obj/item/clothing/under/suit_jacket/navy,/obj/item/clothing/head/soft/solgov/veteranhat,/turf/simulated/floor/wood,/area/vr/powered)
 "VF" = (/obj/screen/alert/highpressure,/turf/simulated/shuttle/wall/hard_corner,/area/vr/powered)
-"VG" = (/obj/machinery/transhuman/resleever,/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/techfloor{dir = 8},/turf/simulated/shuttle/floor/white,/area/vr/powered)
+"VG" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/techfloor{dir = 8},/turf/simulated/shuttle/floor/white,/area/vr/powered)
 "VH" = (/obj/machinery/door/airlock/glass_centcom{name = "Starboard Wing Atmos"},/turf/simulated/floor/tiled/techfloor/grid,/area/vr/powered)
 "VI" = (/obj/structure/railing,/turf/simulated/floor/beach/sand/desert{can_atmos_pass = 0; outdoors = 1; temperature = 311},/area/vr/outdoors/powered)
 "VL" = (/obj/mecha/combat/fighter/gunpod/recon{dir = 8},/turf/space,/area/space)
@@ -2009,7 +2008,7 @@ oIMIaWFIFIFIFIkeVRiYRuHJHJHJlNHJtmHJHJHJHJSOTyDxFIFIFIFIFIFIUFFIFIFIFIFIFIyxFIFI
 oIvtaWFIFIFIFImvmvmvmvmvmvmvmvHJmvHJHJHJHJZsvUDxFIFIJQFIFIFIFIFIFIFIFIFIFIyxFIFIFIFIFIFIFIyxyxFIFIFIFIFIFIFILbFILbnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKUZnKpzopoppWnKnKnKnKnKnKnKnKnKnKnKnKnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdXTOdjtOdOdOdOdOdOdOdOdOdjtOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdrZOdkSabhBhBhBhBhBhBhBhBhBhBhBhBhBhBADGOLdxoLoPUjstUalSlzQOYzfGOhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBRvhBcAGOGOKGGOGOTZEQdxykWZOareykdEowLnGxGxmdXfGOcAsgab
 oIOuFISJtTNNFJmvmvHEVDXwHJHJyaHJmvKTxMpHvzmvmvmvFJFIFIFIUFFIaWFIFIFIFIFIFIFIFIFIFIFIFIrfFIFIFIFIFIFIFIFILbLbLbLbLbnKnKYonKpzopoppWnKYoEdnKnKnKYonKnKUZnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdtoOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdXTOdOdOdOdOdOdOdOdkSabhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBpjIMxoyVvQVCPdQwOYRDOYSPpjhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBsgsgsgsgsgcAGOZIoOUkGOGOaPnGGOGOGOGOGOdZGOGOKGGOGOGOGOcAsgab
 oIMIbPSJFIFIFImvTKHJZbeZZbHJmvqNmvmvmvmvmvmvVOmvmvFIaWFIUFFIFIFIFIFIFIFIFIFIFIFIFIyxyxFIFIFIFIFIFIFIFIFIFIFILbLbLbnKEdnKmEpzopoppWnKnKnKnKnKnKaZnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKthJpwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdwjOdkSabhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBGOZqxoxoJWakPdaoBNOYWHOmGOhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBcAaiZDmPPzKGCQnfSFqEDwMVebGObLGOmPmPBKicJfGOcAhBab
-oINmFISJFIFIaWmvMdHJZbZbZbMZmvHJmvaJbkRcFOmvbarFmvFIFIFIFIFIJQFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFILbLbLbLbLbnKnKnKnKpzopoppWnKnKnKnKnKnKnKnKnKJmUZnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdkSabhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBpjxaxoxoxoakhXQwOYOYRDbzpjhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBffhBcATDJVxefVLOmPgxgPicGrYxreViEqKGveGxXkPTZBGOsghBab
+oINmFISJFIFIaWmvMdHJZbZbZbMZmvHJmvaJbkRcFOmvbarFmvFIFIFIFIFIJQFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFIFILbLbLbLbLbnKnKnKnKpzopoppWnKnKnKnKnKnKnKnKnKJmUZnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdkSabhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBpjxaxoxoxoakPdQwOYOYRDbzpjhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBffhBcATDJVxefVLOmPgxgPicGrYxreViEqKGveGxXkPTZBGOsghBab
 oIMIFISJFIFIFImvzJihZbZbZbazmvHJyaHJDRCCfKmvbamhmvaWFIFIUFJQFIFIFIFJFIFIFIFIFIFIFIFIFIFIFIFIycFIFIyxFIFIFILbLbLbLbnKnKnKnKpzuIoppWnKnKnKnKnKnKnKnKUZUZnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdkSabhBhBhBhBhBhBhBhBhBhBhBGOGOGOGOGOqkCSxooLoPvoVGCdOYHmqyGOGOGOGOGOhBhBhBhBhBhBhBhBhBhBhBhBsgsgsgsgsgcATDcUPPmPKGgxswswswswGxmPGOdZGOWGgxKaLLSNGOsghBab
 oIMIFIFINNFIFImvcGWuHJHJHJyvmvHJmvWuBnyOUXmvBtDhmvFIFIJQFIFIFIaWFIFIFIFIFIxIFIFIFIFIFINbFIFIFIFIFIFIyxFILbLbLbLbLbnKnKnKnKnKnKnKnKnKnKEdnKnKaZnKUZUZUZUZUZnKEdCZCZCZCZCZCZCZCZCZCZCZnKnKnKgUnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdkSabhBhBhBhBhBhBhBhBhBhBGOGOedeCPSGOGOGOAFGOGOGOGOGOAFGOGOGOtaWiAmGOGOhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBhBcATDFMZXCtGOxDGOclGOxDGOOUGOzCowmaswvXKSbrGOhBsgab
 oIMIFJSJFIJQFIFImvmvYTmmQCmvmvHJmvmvmvmvmvmvMqNfmvFIFIFIUFulFIUFUFUFUFFIFIFIFIFIFIaWFIUFlHlHNbFIFIFIyxFIFILbLbLbLbnKnKnKnKnKnKYonKnKnKnKnKnKUZUZUZUZUZUZUZUZUZCZBaCZBaCZBaCZBaCZBaCZnKnKnKnKnKWqwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjwjOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdjtOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdtoOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdOdkSabhBhBhBhBhBhBhBhBhBhBGObisUGOPdHbGOpJRytSEBLxEBypRyctGOTfpnPdPdbeGOhBhBhBhBhBhBhBhBhBhBhBhBhBhBishBcABpFRGreYGOTwGOjXGOTwGOTwGOdZGOLNmPubmPglGOcAsgab
