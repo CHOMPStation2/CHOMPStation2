@@ -6,7 +6,13 @@
 
 Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) first!
 
+<<<<<<< HEAD
 CHOMPStation was a fork of the Yawn-wider code branch which is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, but we are now since separated from Yawn-wider code, while keeping some of their features, which is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, for the game Space Station 13.
+=======
+Want to make a test server or your own private server? Read our [GitHub Wiki!](https://github.com/VOREStation/VOREStation/wiki)
+
+VOREStation is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, for the game Space Station 13.
+>>>>>>> b9137359f1... Merge pull request #13821 from VOREStation/Cameron653-patch-2
 
 ![Render Nanomaps](https://github.com/VOREStation/VOREStation/workflows/Render%20Nanomaps/badge.svg)
 
