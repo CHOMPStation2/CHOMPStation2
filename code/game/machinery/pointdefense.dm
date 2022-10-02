@@ -97,7 +97,8 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 /obj/machinery/pointdefense_control/attackby(var/obj/item/W, var/mob/user)
 	if(W?.is_multitool())
-		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag)
+		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
+		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			// Check for duplicate controllers with this ID
 			for(var/obj/machinery/pointdefense_control/PC as anything in GLOB.pointdefense_controllers)
@@ -212,7 +213,8 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 /obj/machinery/pointdefense/attackby(var/obj/item/W, var/mob/user)
 	if(W?.is_multitool())
-		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag)
+		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
+		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			to_chat(user, "<span class='notice'>You register [src] with the [new_ident] network.</span>")
 			id_tag = new_ident
@@ -295,6 +297,25 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	if(!istype(PC) || !PC.powered(EQUIP))
 		return
+<<<<<<< HEAD
+=======
+
+	// Compile list of known targets
+	var/list/existing_targets = list()
+	for(var/weakref/WR in PC.targets)
+		var/obj/effect/meteor/M = WR.resolve()
+		existing_targets += M
+
+	// First, try and acquire new targets
+	var/list/potential_targets = GLOB.meteor_list.Copy() - existing_targets
+	for(var/obj/effect/meteor/M in potential_targets)
+		if(targeting_check(M))
+			var/weakref/target = weakref(M)
+			PC.targets += target
+			engaging = target
+			Shoot(target)
+			return
+>>>>>>> 73d3802786... Merge pull request #13825 from Cameron653/rcon_sanitization
 
 	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
 	for(var/obj/effect/meteor/M in GLOB.meteor_list)
@@ -319,6 +340,22 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			PC.targets += target
 			Shoot(target)
 			return
+<<<<<<< HEAD
+=======
+
+/obj/machinery/power/pointdefense/proc/targeting_check(var/obj/effect/meteor/M)
+	// Target in range
+	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
+	if(!(M.z in connected_z_levels))
+		return FALSE
+	if(get_dist(M, src) > kill_range)
+		return FALSE
+	// If we can shoot it, then shoot
+	if(emagged || !space_los(M))
+		return FALSE
+
+	return TRUE
+>>>>>>> 73d3802786... Merge pull request #13825 from Cameron653/rcon_sanitization
 
 /obj/machinery/pointdefense/RefreshParts()
 	. = ..()
