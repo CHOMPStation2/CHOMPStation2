@@ -4,6 +4,7 @@ w// -- Areas -- //
 	name = "VR world"
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/outdoors/dirt
+	limit_mob_size = FALSE
 
 
 /area/vr/outdoors
