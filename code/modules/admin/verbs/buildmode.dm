@@ -372,7 +372,7 @@
 				easter_egg.name = "coding teshari plushie"
 				easter_egg.desc = "A small purple teshari with a plush keyboard attached to it. Where did this come from?"
 				easter_egg.color = "#a418c7"
-//CHOMP Remove end */
+CHOMP Remove end */
 
 		if(BUILDMODE_ADVANCED)
 			if(pa.Find("left") && !pa.Find("ctrl"))
