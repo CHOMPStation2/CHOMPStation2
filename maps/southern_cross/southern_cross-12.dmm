@@ -102,7 +102,7 @@
 "dd" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
-/turf/simulated/open{
+/turf/simulated/open/sif{
 	temperature = 243.15
 	},
 /area/surface/outside/wilderness/skylands/empty)
@@ -343,7 +343,7 @@
 /area/surface/outside/wilderness/skylands)
 "jM" = (
 /obj/effect/zone_divider,
-/turf/simulated/open{
+/turf/simulated/open/sif{
 	temperature = 243.15
 	},
 /area/surface/outside/wilderness/skylands/empty)
@@ -432,7 +432,7 @@
 /obj/machinery/camera/network/exploration{
 	c_tag = "WILD - Shelter Second Floor Utilities"
 	},
-/turf/simulated/open{
+/turf/simulated/open/sif{
 	temperature = 243.15
 	},
 /area/surface/outpost/shelter/utilityroom)
@@ -1007,7 +1007,7 @@
 /turf/simulated/floor/outdoors/grass,
 /area/surface/outside/wilderness/skylands)
 "ye" = (
-/turf/simulated/open{
+/turf/simulated/open/sif{
 	temperature = 243.15
 	},
 /area/surface/outpost/shelter/exterior)
@@ -1259,7 +1259,7 @@
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "DD" = (
-/turf/simulated/open{
+/turf/simulated/open/sif{
 	temperature = 243.15
 	},
 /area/surface/outside/wilderness/skylands)
@@ -2068,7 +2068,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/wilderness/skylands)
 "WO" = (
-/turf/simulated/open{
+/turf/simulated/open/sif{
 	temperature = 243.15
 	},
 /area/surface/outside/wilderness/skylands/empty)

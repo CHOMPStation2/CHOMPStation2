@@ -143,13 +143,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
-"av" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
 "aw" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
@@ -200,20 +193,6 @@
 	icon_state = "bordercolor"
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Blackshuttledown)
-"aG" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
-"aH" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark6";
-	name = "Unknown Shuttle"
-	},
 /area/submap/Blackshuttledown)
 "aI" = (
 /mob/living/simple_mob/mechanical/viscerator,
@@ -366,13 +345,6 @@
 "be" = (
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/white,
-/area/submap/Blackshuttledown)
-"bf" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark10";
-	name = "Unknown Shuttle"
-	},
 /area/submap/Blackshuttledown)
 "bg" = (
 /obj/machinery/computer/communications,
@@ -1028,14 +1000,14 @@ ab
 ab
 ab
 ab
-aH
+ai
 aj
 bq
 bx
 bx
 bG
 aj
-av
+cp
 ab
 ab
 ab
@@ -1064,7 +1036,7 @@ ab
 ab
 ab
 ab
-aH
+ai
 aj
 bg
 br
@@ -1073,7 +1045,7 @@ br
 br
 bJ
 aj
-av
+cp
 ab
 ab
 ab
@@ -1099,8 +1071,8 @@ ad
 ai
 aj
 aj
-av
-aH
+cp
+ai
 aj
 bb
 bh
@@ -1111,8 +1083,8 @@ bl
 bF
 bT
 aj
-av
-aH
+cp
+ai
 aj
 aj
 cp
@@ -1840,18 +1812,18 @@ aj
 aj
 aj
 aj
-aG
+cq
 ab
-bf
+ak
 aj
 bw
 bK
 bK
 bI
 aj
-aG
+cq
 ab
-bf
+ak
 aj
 aj
 aj
@@ -1876,20 +1848,20 @@ ab
 aj
 aj
 aj
-aG
+cq
 ab
 ab
 ab
-bf
+ak
 al
 al
 al
 al
-aG
+cq
 ab
 ab
 ab
-bf
+ak
 al
 al
 cq
