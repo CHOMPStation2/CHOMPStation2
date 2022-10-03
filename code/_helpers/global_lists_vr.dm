@@ -874,14 +874,14 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 	/area/mine,
 	/area/surface/outside, 	//SC
 	/area/surface/cave,		//SC
-	/area/tether/surfacebase/outside,
-	/area/groundbase/unexplored/outdoors,
-	/area/maintenance/groundbase/level1,
-	/area/submap/groundbase/wilderness,
-	/area/groundbase/mining,
-	/area/offmap/aerostat/surface,
-	/area/tether_away/beach,
-	/area/tether_away/cave,
+//	/area/tether/surfacebase/outside,	//CHOMP Edit Downstreams, uncomment these if you are using these maps
+//	/area/groundbase/unexplored/outdoors,
+//	/area/maintenance/groundbase/level1,
+//	/area/submap/groundbase/wilderness,
+//	/area/groundbase/mining,
+//	/area/offmap/aerostat/surface, 
+//	/area/tether_away/beach,
+//	/area/tether_away/cave,
 )
 
 var/static/list/blacklisted_areas = typecacheof(list(
