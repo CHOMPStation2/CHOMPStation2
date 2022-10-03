@@ -137,6 +137,11 @@
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_ALTSIF
+	
+/turf/simulated/floor/tiled/asteroid_steel //CHOMP Edit now I'm adding shit here now too. Abandoned temple.
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_ALTSIF
 
 // Space mineral tiles are now not the default, so they get demoted to subtype status.
 
