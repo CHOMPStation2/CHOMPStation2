@@ -22,7 +22,7 @@
 "cX" = (/obj/effect/floor_decal/techfloor/corner{dir = 10},/obj/fire,/obj/item/trash/material/device,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "db" = (/obj/structure/closet/alien,/obj/item/clothing/suit/space/void/autolok,/obj/item/clothing/suit/space/void/autolok,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/storage/toolbox/emergency,/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
 "de" = (/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
-"dg" = (/obj/structure/loot_pile/surface/alien/engineering,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
+"dg" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/machinery/door/window/brigdoor/eastright{name = "Laser Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/energy/hooklauncher,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
 "dx" = (/obj/effect/floor_decal/techfloor{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "dz" = (/obj/machinery/atmospherics/binary/circulator{anchored = 1; dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "dB" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1},/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -50,10 +50,10 @@
 "gt" = (/obj/machinery/the_singularitygen,/turf/simulated/floor/airless,/area/survivalpod/superpose/CrashedInfestedShip)
 "gz" = (/obj/structure/bed/chair/wood/wings,/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/CrashedInfestedShip)
 "gB" = (/obj/effect/floor_decal/techfloor,/obj/machinery/light/poi{dir = 8},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
-"gK" = (/obj/structure/loot_pile/surface/alien/engineering,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
+"gK" = (/obj/structure/prop/poicanister{icon_state = "orangeps-1"},/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
 "gW" = (/obj/machinery/door/airlock/alien{req_one_access = null},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
 "hw" = (/obj/machinery/vending/engivend{emagged = 1; req_access = list(777); req_log_access = null},/turf/simulated/shuttle/floor/yellow,/area/survivalpod/superpose/CrashedInfestedShip)
-"hR" = (/obj/machinery/cryopod{dir = 4},/obj/structure/cryofeed{pixel_x = -32},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
+"hR" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westleft{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/rig/hazard/equipped,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
 "hV" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "iq" = (/obj/item/trash/material/metal,/obj/item/trash/material/circuit,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "is" = (/obj/fire,/obj/effect/decal/cleanable/generic,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -63,9 +63,9 @@
 "iM" = (/obj/effect/floor_decal/techfloor/corner{dir = 9},/obj/fire,/obj/item/trash/material/circuit,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "iQ" = (/obj/structure/particle_accelerator/particle_emitter/center{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "jb" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/fire,/obj/fire,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
-"jd" = (/obj/machinery/atmospherics/pipe/tank/phoron/full,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
+"jd" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/item/trash/material/metal,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
 "jg" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'RADIOACTIVE AREA'"; icon_state = "radiation"; name = "RADIOACTIVE AREA"; pixel_x = 0; pixel_y = 0},/turf/simulated/shuttle/wall/alien/blue/hard_corner,/area/survivalpod/superpose/CrashedInfestedShip)
-"jh" = (/obj/structure/loot_pile/surface/alien/engineering,/turf/simulated/shuttle/floor/yellow,/area/survivalpod/superpose/CrashedInfestedShip)
+"jh" = (/obj/structure/prop/poicanister{icon_state = "orangeps-1"},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "ji" = (/obj/structure/closet/alien,/obj/random/toolbox,/obj/random/toolbox,/obj/random/toolbox,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/weapon/storage/toolbox/syndicate,/obj/fiftyspawner/phoronrglass,/obj/fiftyspawner/phoronrglass,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/shuttle/floor/yellow,/area/survivalpod/superpose/CrashedInfestedShip)
 "jm" = (/obj/structure/table/alien,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "jq" = (/obj/effect/floor_decal/techfloor,/obj/fire,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -73,11 +73,11 @@
 "jI" = (/obj/fire,/obj/item/trash/material/metal,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "jK" = (/obj/machinery/light/poi,/turf/simulated/floor/carpet/tealcarpet,/area/survivalpod/superpose/CrashedInfestedShip)
 "jW" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced,/obj/structure/window/phoronreinforced{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
-"jZ" = (/obj/machinery/cryopod,/obj/structure/cryofeed{dir = 4; pixel_x = 32},/obj/effect/floor_decal/techfloor{dir = 1},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
+"jZ" = (/obj/structure/closet/alien,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "ku" = (/obj/structure/cable/cyan{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/fire,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "kD" = (/obj/machinery/atmospherics/binary/pump/on{target_pressure = 200},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"kN" = (/obj/item/weapon/storage/backpack/messenger,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/weapon/reagent_containers/pill/dylovene,/obj/item/weapon/reagent_containers/pill/dylovene,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/random/soap,/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,/obj/item/device/fbp_backup_cell,/obj/item/device/pda,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/starcaster_news,/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/obj/item/device/suit_cooling_unit/emergency,/obj/item/device/gps,/obj/structure/closet{name = "Survival closet"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
-"kO" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/machinery/door/window/brigdoor/eastleft{name = "Laser Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/energy/alien{pixel_y = -6},/obj/item/weapon/gun/energy/alien,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
+"kN" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westright{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/device/slow_sizegun,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
+"kO" = (/obj/structure/closet/alien,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "kS" = (/obj/structure/table/bench/glass,/turf/simulated/floor/carpet/tealcarpet,/area/survivalpod/superpose/CrashedInfestedShip)
 "kU" = (/obj/machinery/light/poi,/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
 "kV" = (/obj/effect/floor_decal/techfloor/corner{dir = 6},/obj/fire,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -87,7 +87,7 @@
 "mm" = (/obj/machinery/power/emitter/gyrotron,/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/cyan,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "mp" = (/obj/fire,/turf/simulated/floor,/area/template_noop)
 "mt" = (/obj/effect/decal/cleanable/generic,/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
-"mv" = (/obj/structure/table/alien/blue,/obj/item/weapon/reagent_containers/glass/beaker/bluespace,/obj/item/weapon/reagent_containers/glass/beaker/bluespace{pixel_x = -7},/obj/item/weapon/storage/belt/medical/alien,/obj/item/weapon/storage/belt/medical/alien{pixel_y = 6},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
+"mv" = (/obj/effect/floor_decal/techfloor,/obj/machinery/vending/foodmeat{dir = 8},/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/CrashedInfestedShip)
 "my" = (/obj/machinery/oxygen_pump/anesthetic,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "mH" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/cyan,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "mK" = (/obj/machinery/power/emitter/gyrotron,/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/cyan,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -101,9 +101,9 @@
 "nC" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "nX" = (/obj/structure/alien/membrane,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "ob" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"oh" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westleft{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/armor/alien/tank,/obj/item/clothing/head/helmet/alien/tank,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
+"oh" = (/obj/structure/closet/alien,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/yellow,/area/survivalpod/superpose/CrashedInfestedShip)
 "op" = (/obj/structure/window/reinforced/survival_pod{dir = 10},/obj/machinery/light/poi,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/CrashedInfestedShip)
-"oI" = (/obj/effect/floor_decal/techfloor,/obj/machinery/vending/deluxe_dinner{req_access = null; req_log_access = null},/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/CrashedInfestedShip)
+"oI" = (/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
 "oM" = (/obj/effect/floor_decal/techfloor,/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "oR" = (/obj/structure/table/darkglass,/obj/random/maintenance/security,/obj/random/maintenance/security,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "ph" = (/obj/machinery/power/generator{anchored = 1; dir = 4},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -121,7 +121,7 @@
 "qP" = (/obj/effect/floor_decal/techfloor,/obj/machinery/light/poi{dir = 1},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "qQ" = (/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
 "qS" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"qY" = (/obj/machinery/cryopod{dir = 4},/obj/structure/cryofeed{pixel_x = -32},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
+"qY" = (/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/obj/structure/closet/crate,/turf/simulated/floor/plating,/area/survivalpod/superpose/CrashedInfestedShip)
 "ri" = (/obj/fire,/turf/simulated/floor/airless,/area/survivalpod/superpose/CrashedInfestedShip)
 "ru" = (/obj/machinery/light/poi,/turf/simulated/floor/carpet/blue,/area/survivalpod/superpose/CrashedInfestedShip)
 "rx" = (/obj/effect/floor_decal/industrial/warning/corner,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -143,7 +143,7 @@
 "tN" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/machinery/light/poi,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "tX" = (/obj/effect/floor_decal/techfloor,/obj/fire,/obj/item/trash/material/circuit,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "uf" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/structure/table/alien/blue,/obj/item/weapon/paper_bin,/obj/item/weapon/folder/yellow,/obj/item/weapon/pen/reagent/paralysis,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
-"uI" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/machinery/door/window/brigdoor/eastright{name = "Laser Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/energy/darkmatter{pixel_y = 6},/obj/item/weapon/gun/energy/darkmatter,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
+"uI" = (/obj/structure/salvageable/data_os,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/CrashedInfestedShip)
 "uQ" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/cable/cyan{d2 = 2; icon_state = "0-2"},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "uT" = (/obj/effect/floor_decal/industrial/warning{dir = 6},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "ve" = (/obj/structure/table/alien/blue,/obj/structure/window/reinforced/survival_pod,/obj/item/weapon/hand_labeler,/obj/item/device/tape/random,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -180,21 +180,21 @@
 "zI" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "zV" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/structure/cable/cyan{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Aj" = (/obj/structure/table/bench/glass,/turf/simulated/floor/carpet/blue,/area/survivalpod/superpose/CrashedInfestedShip)
-"AB" = (/obj/structure/loot_pile/surface/alien/security,/turf/simulated/shuttle/wall/alien/blue/hard_corner,/area/survivalpod/superpose/CrashedInfestedShip)
+"AB" = (/obj/structure/cryofeed{dir = 4; pixel_x = 32},/obj/effect/floor_decal/techfloor{dir = 1},/obj/item/trash/material/metal,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "AC" = (/obj/machinery/atmospherics/binary/pump/on{dir = 8; name = "Scrubber to Waste"},/obj/machinery/light/poi,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "AL" = (/obj/structure/prop/alien/pod/open,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "AO" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1},/obj/random/maintenance/engineering,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "AP" = (/obj/machinery/vending/medical{dir = 4; emagged = 1; pixel_x = 5; req_access = list(777)},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "AR" = (/obj/effect/floor_decal/techfloor{dir = 1},/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
 "AS" = (/obj/effect/floor_decal/techfloor{dir = 9},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
-"AV" = (/obj/machinery/atmospherics/pipe/tank/phoron/full,/obj/machinery/light/poi{dir = 1},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"Bd" = (/obj/machinery/vending/deluxe_boozeomat{req_access = null; req_log_access = null},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
+"AV" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/machinery/door/window/brigdoor/eastleft{name = "Laser Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/gun/energy/crossbow/largecrossbow,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
+"Bd" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/structure/closet/alien,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Bf" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
-"Bh" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/brigdoor/westright{name = "Combat Armor"},/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/armor/alien,/obj/item/clothing/head/helmet/alien,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
+"Bh" = (/obj/item/trash/material/metal,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "Bt" = (/obj/random/maintenance/clean,/obj/fire,/obj/item/trash/material/circuit,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "BE" = (/obj/structure/prop/alien/pod/hybrid,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/CrashedInfestedShip)
 "BH" = (/obj/effect/floor_decal/techfloor,/obj/fire,/obj/fire,/obj/effect/decal/cleanable/generic,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
-"Cl" = (/obj/effect/floor_decal/techfloor,/obj/machinery/chemical_dispenser/ert/specialops/abductor{dir = 4},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
+"Cl" = (/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/turcarpet,/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/algae{amount = 50},/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/lead{amount = 30},/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/resin{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/machinery/light/poi,/obj/structure/closet/alien,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Cr" = (/obj/fire,/obj/item/trash/material/circuit,/turf/simulated/floor/airless,/area/survivalpod/superpose/CrashedInfestedShip)
 "Cy" = (/obj/effect/floor_decal/techfloor,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/meter,/obj/random/maintenance/engineering,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "CG" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/fire,/obj/effect/decal/cleanable/generic,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -203,9 +203,9 @@
 "CY" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced,/obj/structure/window/phoronreinforced{dir = 1},/obj/structure/window/phoronreinforced{dir = 8},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
 "Dg" = (/obj/fire,/obj/machinery/light/poi,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "Dl" = (/obj/random/maintenance/medical,/obj/fire,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
-"Dn" = (/obj/structure/loot_pile/surface/alien/engineering,/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
+"Dn" = (/obj/structure/table/alien/blue,/obj/item/weapon/storage/belt/medical/alien{pixel_y = 6},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
 "Dv" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced{dir = 1},/obj/structure/window/phoronreinforced,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"DA" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid{pixel_y = -7},/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid{pixel_y = 7},/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,/obj/structure/table/alien/blue,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
+"DA" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/structure/table/alien/blue,/obj/item/slime_cube,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
 "DF" = (/obj/structure/prop/alien/pod/hybrid,/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/CrashedInfestedShip)
 "DG" = (/obj/random/maintenance/clean,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "DJ" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced,/obj/structure/window/phoronreinforced{dir = 1},/obj/structure/window/phoronreinforced{dir = 4},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -231,12 +231,12 @@
 "GR" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/fire,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
 "Hq" = (/obj/machinery/light/poi{dir = 1},/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/CrashedInfestedShip)
 "HX" = (/obj/structure/closet/alien,/obj/item/clothing/suit/space/void/autolok,/obj/item/clothing/suit/space/void/autolok,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/storage/toolbox/emergency,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
-"Ib" = (/obj/machinery/atmospherics/pipe/tank/phoron/full{dir = 1},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
+"Ib" = (/obj/structure/cryofeed{pixel_x = -32},/obj/item/trash/material/circuit,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Ir" = (/obj/structure/table/alien/blue,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/item/weapon/paper_bin,/obj/item/weapon/folder/yellow,/obj/item/weapon/pen/reagent/paralysis,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/CrashedInfestedShip)
 "Is" = (/obj/machinery/light/poi,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "It" = (/obj/machinery/power/rad_collector,/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/cyan,/obj/fire,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "II" = (/obj/machinery/atmospherics/binary/pump/on{dir = 8; name = "Scrubber to Waste"},/obj/random/maintenance/engineering,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"IO" = (/obj/structure/prop/blackbox/xenofrigate,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/CrashedInfestedShip)
+"IO" = (/obj/machinery/vending/coffee{categories = 3; dir = 8; name = "hacked Hot Drinks machine"; prices = list()},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "IW" = (/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/yellow,/area/survivalpod/superpose/CrashedInfestedShip)
 "Jh" = (/obj/fire,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "Jt" = (/obj/machinery/atmospherics/binary/pump/on{dir = 8; name = "Scrubber to Waste"},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -267,11 +267,11 @@
 "NS" = (/obj/effect/floor_decal/techfloor,/obj/fire,/obj/fire,/obj/item/trash/material/metal,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "NY" = (/obj/structure/bed/nest,/turf/simulated/floor/carpet,/area/survivalpod/superpose/CrashedInfestedShip)
 "Oj" = (/obj/effect/floor_decal/industrial/warning,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/structure/cable/cyan{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/fire,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"OS" = (/obj/structure/closet/crate,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/machinery/light/poi,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
+"OS" = (/obj/machinery/light/poi{dir = 1},/obj/machinery/portable_atmospherics/canister/empty/phoron,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "OY" = (/obj/random/maintenance/engineering,/obj/fire,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Pi" = (/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
-"Pq" = (/obj/machinery/light/poi{dir = 4},/obj/machinery/atmospherics/pipe/tank/phoron/full{dir = 8},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"Py" = (/obj/structure/closet/crate,/obj/fiftyspawner/wood,/obj/fiftyspawner/wood,/obj/fiftyspawner/wood/sif,/obj/fiftyspawner/wood/sif,/obj/fiftyspawner/turcarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/marble,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/fiftyspawner/cardboard,/obj/fiftyspawner/cardboard,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
+"Pq" = (/obj/effect/floor_decal/techfloor,/obj/machinery/chemical_dispenser/full{pixel_y = 11},/obj/structure/table/alien/blue,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
+"Py" = (/obj/structure/cryofeed{pixel_x = -32},/obj/item/trash/material/metal,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "PB" = (/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/CrashedInfestedShip)
 "PF" = (/obj/machinery/cryopod{dir = 4},/obj/structure/cryofeed{pixel_x = -32},/obj/effect/floor_decal/techfloor{dir = 1},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "PL" = (/obj/fire,/obj/item/trash/material/circuit,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -286,7 +286,7 @@
 "Re" = (/obj/fire,/obj/item/trash/material/device,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "Rs" = (/obj/fire,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "RC" = (/obj/fire,/obj/fire,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
-"RT" = (/obj/machinery/atmospherics/pipe/tank/phoron/full,/turf/template_noop,/area/survivalpod/superpose/CrashedInfestedShip)
+"RT" = (/obj/structure/closet/crate,/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "RY" = (/obj/effect/floor_decal/techfloor,/obj/fire,/obj/fire,/obj/fire,/obj/effect/decal/cleanable/generic,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/CrashedInfestedShip)
 "Sd" = (/obj/machinery/door/airlock/alien{req_one_access = null},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "Sh" = (/obj/fire,/turf/template_noop,/area/template_noop)
@@ -320,12 +320,13 @@
 "Vr" = (/obj/effect/floor_decal/techfloor{dir = 8},/obj/fire,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "Vu" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/cyan,/obj/random/maintenance/clean,/obj/fire,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Vw" = (/obj/machinery/recharge_station,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/CrashedInfestedShip)
-"VF" = (/obj/machinery/atmospherics/pipe/tank/phoron/full{dir = 8},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
+"VF" = (/obj/machinery/portable_atmospherics/canister/empty/phoron,/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "VL" = (/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "VP" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "VR" = (/obj/machinery/field_generator{anchored = 1; state = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "VS" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "VV" = (/obj/random/maintenance/cargo,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
+"VX" = (/obj/machinery/light/poi{dir = 4},/obj/structure/prop/poicanister{icon_state = "orangeps-1"},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Wr" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/machinery/light/poi,/obj/effect/decal/cleanable/generic,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 "WD" = (/obj/machinery/light/poi{dir = 1},/turf/simulated/floor/carpet/blue,/area/survivalpod/superpose/CrashedInfestedShip)
 "WJ" = (/obj/machinery/sleep_console{dir = 4},/obj/machinery/light/poi,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -339,7 +340,7 @@
 "Xo" = (/obj/fire,/obj/item/trash/material/metal,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
 "Xv" = (/turf/simulated/floor/carpet,/area/survivalpod/superpose/CrashedInfestedShip)
 "XA" = (/obj/structure/particle_accelerator/fuel_chamber{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CrashedInfestedShip)
-"XC" = (/obj/structure/loot_pile/surface/alien/medical,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
+"XC" = (/obj/structure/closet/alien,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/CrashedInfestedShip)
 "XF" = (/obj/fire,/obj/fire,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/CrashedInfestedShip)
 "XJ" = (/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/white,/area/template_noop)
 "XY" = (/obj/effect/floor_decal/techfloor,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor,/area/survivalpod/superpose/CrashedInfestedShip)
@@ -356,33 +357,29 @@
 "ZX" = (/obj/fire,/obj/fire,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/CrashedInfestedShip)
 
 (1,1,1) = {"
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOGQSSGQGQEZEZGQGQGQvVjWjWDJGQSSCOCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOGQGQGQGQGQGQGQbvbvWTGQGQGQSSCOCOCOCOCOCOCOCOCOCOCOCOWTGQjdjdtKRTAVGQXegzgzgzgzXeGQSSCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOWTGQdgbwqeaophdzUpNdTDVFGQWTSSCOGQGQwDGQGQSSCOCOCOYPWTGQkDkDKpXikDKpUISOxTyixTUIJWGQSSCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOWTGQnCntxsTaxsSKzVLMJtPqGQqmWTGQSSWXjinBhwGQPiCOCOCOGQGQoMoMCyoMXYKpVqbObObObOVqVqoIGQCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOUuCOWTGQWTbveErJpOeIgdRCOYbvgWWTbvGQmQLYcPcPcPGQPiPiCOCOCOGQgKOSALVkYAGQVkVkVkIsVkVkVkBdGQSSCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOSSGQmKUSZqVuTFItmHqSmmqSjgOYbmgWIWIWLYcPLYjhGQPiPiwDGQGQGQGQGQgWGQGQGQgWGQGQGQGQGQGQGQGQSSCOCOCOCOCOCOCOCOCOCO
-COCOCOGQGQGQGQpiGQvVjWjWjWDJGQCYGQGQJJWTGQufMdMdKqMdZhGQSSHXMwbmvmetBtbNvmiGetvmvmbmbmbmbmTMbmHXSSGQGQnXnXYwCOCOCOCOCOCO
-COCOCOmpWTGQSSCSeGfDfDNSCSCSqPCSSSGQvmbvGQGQDKveQuNIGQGQqQPLZXZXvmvmLHLHZXMwMwbmbmbmUHbmbNbmbmbmFuGQoRWTNYGQSSCOCOCOCOCO
-COCOCOShbvGQzIzDJhJhwnJhJhsCJhVkFUgWbmZXMwbmbmVVvmFXbmbmbmvmGQGQgWGQGQGQgWGQGQGQgWGQGQGQgWGQGQbmbmgWbmXvcSGQGQwDGQSSCOCO
-COCOCObiGdGdzGgmRsJhsCGdPiNPVkiqwKGQgBCSfDTHtXSIbITLRYBHRYSYGQDFqQBEGQUIUIeBGQUIUIeBGQUIUIeBGQbmdNGQbmXvNYGQfmdxPTGQSSCO
-COCOCOPiPiPiYiPiPilpEYPizjlpXFNPFUjgkVjqTnjqjqcXgmJhDgNPJhFUGQfAyvJDGQqCKcAjGQqCfckSGQqCXvvgGQbmbmDXbNbmbmGQKSARNmPiEZCO
-COCOCObiWTGQZQJhPiGdbcbcbcEYJhVRrLfiBfEpVSexQHQiJhSSSSSSJhrLGQatdSatGQzuruiwGQyijKrIGQyiKxNYGQCSCSGQCSCSCSgWCSzzPitdfiCO
-COCOCObiWTGQNPJhPiGdrigtCrPiGdNPvJPRBfiQVkXAdCQiJhxCIOxCJhNPGQGQABGQGQGQGQGQGQGQGQGQGQGQGQGQGQNPNPGQtuDGqbGQjmDGNPVPPRCO
-COCOUubiWTGQaJRsNPEYbcririPimtNPASnxBfyYzczcuTQiJhSSSSSSJhASGQkOHqBhGQyisMrIGQzucfWQGQxTWDiwGQjrjrGQasasasgWjrjraJtdnxCO
-COCOCOGQGQWTobJhNPEYPiPiEYEYJhNPFUjgKBEjMdMdEjiMspJhUyqENPVrGQuIyPohGQvQfckSGQvQTKEeGQvQKcAjGQbmbmGQWTWTWTGQpCCSJBnvGQCO
-COCOCObiWTPiYiJhRsJhPiPiNPNPRsqEwKGQdYNJjbEJNJQTNJlyGRCGsnbpGQDAFmDAGQqLUIeBGQUIUIeBGQUIUIeBGQbmdNGQboWTboGQcByassGQSSCO
-COCOCObiWTPizIVRNPJhsCReXoJhjIVkFUgWvmMwvmvmvmisvmbmVLisPLbmGQGQgWGQGQGQgWGQGQGQgWGQGQGQgWGQGQbNvUGQboseXbGQGQwDGQSSCOCO
-COCOCObiPiWTSSjrWrjrjrjrjrjrtNjrSSGQvmbmGQGQIrbHTriyGQGQqQPibmvmvmvmvmiGvmisMwMwbmbmbmbmbmbmbmbmPiGQboWTboGQSSCOCOCOCOCO
-COCOCOPiPiGQGQpiGQvVjWjWjWDJGQCYGQGQvmbmPiClyIyITiyIUnGQSSdbPiyUMwMwvmZlvmbmrXiGepvmbNbmbmyUbmHXPiEZGQGQGQSSCOCOCOCOCOCO
-COCOCOCOCOSSGQKohVuQuQuQuQqohVKohVjgvmbmFfvvDlvvXJXJUmmvPiPidFGQPiPiGQGQgWGQGQGQgWGQGQGQSdGQGQGQYxEZCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOWTGQWTbvkuSESESEffWTWTbvgWbmqQPiXCdeDlvvdeAPGQPiCOCOCOPikNALPyVkEMGQqYVkmTGQnjPBLaFZGQPiCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOWTGQnCrxlJKTlJNDOjzHIIVFGQHXSSPiSSWJpuaHZpWTSSCOCOCOGQPidBAOTxAOgcGQPFFmjZGQPBPBGHGQGQCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOUuCOWTGQdgDntraophdzxlwrACVFWTGQSSCOGQGQDvmyWTSSCOCOCOCOWTPicLcLWTcLQfGQhRqQXgGQQeopVwGQSSCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOGQGQGQGQGQGQWTWTWTWTGQWTWTSSCOCOCOCOCOCOCOCOCOCOCOCOPikUIbIbxGIbIbGQtFyUtFGQElGQGQSSCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOGQGQGQWTWTWTGQGQGQGQGQGQGQGQSSCOCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCO
-COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCO
+COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOGQSSGQGQEZEZGQGQGQvVjWjWDJGQSSCOCOCOCOCOCOCOCOCOCOCOCOCO
+COCOGQGQGQGQGQGQGQbvbvWTGQGQGQSSCOCOCOCOCOCOCOCOCOCOCOCOWTGQVFVFtKgKOSGQXegzgzgzgzXeGQSSCOCOCOCOCOCOCOCOCOCOCOCO
+COCOWTGQkObwqeaophdzUpNdTDVFGQWTSSCOGQGQwDGQGQSSCOCOCOYPWTGQkDkDKpXikDKpUISOxTyixTUIJWGQSSCOCOCOCOCOCOCOCOCOCOCO
+COCOWTGQnCntxsTaxsSKzVLMJtVXGQqmWTGQSSWXjinBhwGQPiCOCOCOGQGQoMoMCyoMXYKpVqbObObObOVqVqmvGQCOCOCOCOCOCOCOCOCOCOCO
+UuCOWTGQWTbveErJpOeIgdRCOYbvgWWTbvGQmQLYcPcPcPGQPiPiCOCOCOGQjZClALVkYAGQVkVkVkIsVkVkVkIOGQSSCOCOCOCOCOCOCOCOCOCO
+COCOSSGQmKUSZqVuTFItmHqSmmqSjgOYbmgWIWIWLYcPLYohGQPiPiwDGQGQGQGQGQgWGQGQGQgWGQGQGQGQGQGQGQGQSSCOCOCOCOCOCOCOCOCO
+GQGQGQGQpiGQvVjWjWjWDJGQCYGQGQJJWTGQufMdMdKqMdZhGQSSHXMwbmvmetBtbNvmiGetvmvmbmbmbmbmTMbmHXSSGQGQnXnXYwCOCOCOCOCO
+mpWTGQSSCSeGfDfDNSCSCSqPCSSSGQvmbvGQGQDKveQuNIGQGQqQPLZXZXvmvmLHLHZXMwMwbmbmbmUHbmbNbmbmbmFuGQoRWTNYGQSSCOCOCOCO
+ShbvGQzIzDJhJhwnJhJhsCJhVkFUgWbmZXMwbmbmVVvmFXbmbmbmvmGQGQgWGQGQGQgWGQGQGQgWGQGQGQgWGQGQbmbmgWbmXvcSGQGQwDGQSSCO
+biGdGdzGgmRsJhsCGdPiNPVkiqwKGQgBCSfDTHtXSIbITLRYBHRYSYGQDFqQBEGQUIUIeBGQUIUIeBGQUIUIeBGQbmdNGQbmXvNYGQfmdxPTGQSS
+PiPiPiYiPiPilpEYPizjlpXFNPFUjgkVjqTnjqjqcXgmJhDgNPJhFUGQfAyvJDGQqCKcAjGQqCfckSGQqCXvvgGQbmbmDXbNbmbmGQKSARNmPiEZ
+biWTGQZQJhPiGdbcbcbcEYJhVRrLfiBfEpVSexQHQiJhSSSSSSJhrLGQatdSatGQzuruiwGQyijKrIGQyiKxNYGQCSCSGQCSCSCSgWCSzzPitdfi
+biWTGQNPJhPiGdrigtCrPiGdNPvJPRBfiQVkXAdCQiJhxCuIxCJhNPGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQNPNPGQtuDGqbGQjmDGNPVPPR
+biWTGQaJRsNPEYbcririPimtNPASnxBfyYzczcuTQiJhSSSSSSJhASGQAVHqkNGQyisMrIGQzucfWQGQxTWDiwGQjrjrGQasasasgWjrjraJtdnx
+GQGQWTobJhNPEYPiPiEYEYJhNPFUjgKBEjMdMdEjiMspJhUyqENPVrGQdgyPhRGQvQfckSGQvQTKEeGQvQKcAjGQbmbmGQWTWTWTGQpCCSJBnvGQ
+biWTPiYiJhRsJhPiPiNPNPRsqEwKGQdYNJjbEJNJQTNJlyGRCGsnbpGQDAFmDAGQqLUIeBGQUIUIeBGQUIUIeBGQbmdNGQboWTboGQcByassGQSS
+biWTPizIVRNPJhsCReXoJhjIVkFUgWvmMwvmvmvmisvmbmVLisPLbmGQGQoIGQGQGQgWGQGQGQgWGQGQGQgWGQGQbNvUGQboseXbGQGQwDGQSSCO
+biPiWTSSjrWrjrjrjrjrjrtNjrSSGQvmbmGQGQIrbHTriyGQGQqQPibmvmvmvmvmiGvmisMwMwbmbmbmbmbmbmbmbmPiGQboWTboGQSSCOCOCOCO
+PiPiGQGQpiGQvVjWjWjWDJGQCYGQGQvmbmPiPqyIyITiyIUnGQSSdbPiyUMwMwvmZlvmbmrXiGepvmbNbmbmyUbmHXPiEZGQGQGQSSCOCOCOCOCO
+COCOSSGQKohVuQuQuQuQqohVKohVjgvmbmFfvvDlvvXJXJUmDnPiPidFGQPiPiGQGQgWGQGQGQgWGQGQGQSdGQGQGQYxEZCOCOCOCOCOCOCOCOCO
+COCOWTGQWTbvkuSESESEffWTWTbvgWbmqQPiXCdeDlvvdeAPGQPiCOCOCOPiqYALRTVkEMGQIbVkmTGQnjPBLaFZGQPiCOCOCOCOCOCOCOCOCOCO
+COCOWTGQnCrxlJKTlJNDOjzHIIjhGQHXSSPiSSWJpuaHZpWTSSCOCOCOGQPidBAOTxAOgcGQPFjdABGQPBPBGHGQGQCOCOCOCOCOCOCOCOCOCOCO
+UuCOWTGQkOBdtraophdzxlwrACVFWTGQSSCOGQGQDvmyWTSSCOCOCOCOWTPicLcLWTcLQfGQPyqQXgGQQeopVwGQSSCOCOCOCOCOCOCOCOCOCOCO
+COCOGQGQGQGQGQGQWTWTWTWTGQWTWTSSCOCOCOCOCOCOCOCOCOCOCOCOPikUjhjhxGVFjhGQtFyUBhGQElGQGQSSCOCOCOCOCOCOCOCOCOCOCOCO
+COCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOCOGQGQGQWTWTWTGQGQGQGQGQGQGQGQSSCOCOCOCOCOCOCOCOCOCOCOCOCO
 "}
