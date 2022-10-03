@@ -297,8 +297,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	if(!istype(PC) || !PC.powered(EQUIP))
 		return
-<<<<<<< HEAD
-=======
 
 	// Compile list of known targets
 	var/list/existing_targets = list()
@@ -315,7 +313,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			engaging = target
 			Shoot(target)
 			return
->>>>>>> 73d3802786... Merge pull request #13825 from Cameron653/rcon_sanitization
 
 	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
 	for(var/obj/effect/meteor/M in GLOB.meteor_list)
@@ -340,8 +337,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			PC.targets += target
 			Shoot(target)
 			return
-<<<<<<< HEAD
-=======
 
 /obj/machinery/power/pointdefense/proc/targeting_check(var/obj/effect/meteor/M)
 	// Target in range
@@ -355,7 +350,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		return FALSE
 
 	return TRUE
->>>>>>> 73d3802786... Merge pull request #13825 from Cameron653/rcon_sanitization
 
 /obj/machinery/pointdefense/RefreshParts()
 	. = ..()
