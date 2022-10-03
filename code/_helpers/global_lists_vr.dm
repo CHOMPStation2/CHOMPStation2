@@ -889,16 +889,16 @@ var/static/list/blacklisted_areas = typecacheof(list(
 	/area/mine,
 	/area/surface/outside,	//SC
 	/area/surface/cave,		//SC
-	//TETHER STUFF BELOW THIS
-	/area/tether/surfacebase/outside,
+	//TETHER STUFF BELOW THIS	//CHOMP Edit Downstreams, uncomment these if you are using these maps
+//	/area/tether/surfacebase/outside,
 	//GROUNDBASE STUFF BELOW THIS
-	/area/groundbase/unexplored/outdoors,
-	/area/maintenance/groundbase/level1,
-	/area/submap/groundbase/wilderness,
-	/area/groundbase/mining,
-	/area/offmap/aerostat/surface,
-	/area/tether_away/beach,
-	/area/tether_away/cave
+//	/area/groundbase/unexplored/outdoors,
+//	/area/maintenance/groundbase/level1,
+//	/area/submap/groundbase/wilderness,
+//	/area/groundbase/mining,
+//	/area/offmap/aerostat/surface,
+//	/area/tether_away/beach,
+//	/area/tether_away/cave
 	))
 
 var/global/list/SPECIALS = list(
