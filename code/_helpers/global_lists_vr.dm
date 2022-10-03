@@ -850,8 +850,6 @@ var/global/list/xenobio_rainbow_extracts = list(
 										/obj/item/slime_extract/emerald = 3,
 										/obj/item/slime_extract/light_pink = 1,
 										/obj/item/slime_extract/rainbow = 1)
-<<<<<<< HEAD
-=======
 
 
 // AREA GENERATION AND BLUEPRINT STUFF BELOW HERE
@@ -874,8 +872,8 @@ var/global/list/xenobio_rainbow_extracts = list(
 var/global/list/BUILDABLE_AREA_TYPES = list(
 	/area/space,
 	/area/mine,
-//	/area/surface/outside, 	//SC
-//	/area/surface/cave,		//SC
+	/area/surface/outside, 	//SC
+	/area/surface/cave,		//SC
 	/area/tether/surfacebase/outside,
 	/area/groundbase/unexplored/outdoors,
 	/area/maintenance/groundbase/level1,
@@ -889,8 +887,8 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 var/static/list/blacklisted_areas = typecacheof(list(
 	/area/space,
 	/area/mine,
-//	/area/surface/outside,	//SC
-//	/area/surface/cave,		//SC
+	/area/surface/outside,	//SC
+	/area/surface/cave,		//SC
 	//TETHER STUFF BELOW THIS
 	/area/tether/surfacebase/outside,
 	//GROUNDBASE STUFF BELOW THIS
@@ -944,4 +942,3 @@ var/global/list/area_or_turf_fail_types = typecacheof(list(
 	/area/submap/event,
 	/area/submap/casino_event
 	))
->>>>>>> 420957ffec... Merge pull request #13828 from Cameron653/BUILDABLE_SHUTTLES
