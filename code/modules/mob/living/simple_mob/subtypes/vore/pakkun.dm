@@ -2,8 +2,11 @@
 	name = "Wildlife - Pakkun"
 	desc = "Classification: Mordens Lacerta\
 	<br><br>\
-	Their diet is primarily pescatarian, but they known to consume other species and even their own - this activity doesn't appear to be malicious \
-	or even borne out of hunger, but more of a form of playfighting among packmates."
+	Their diet is primarily pescatarian, but they are known to consume other species and even their own - this activity doesn't appear to be malicious \
+	or even borne out of hunger, but more of a form of playfighting among packmates. Some colonies are known to keep domesticated specimens as a form of pest control \
+	despite the occasional accidents that can occur as a result of staff becoming overly friendly and triggering their playfighting instincts. \
+	More mature specimens are identifiable by a greener tint to their skin, and eventually the development of frills \
+	around their neck and along the backs of their heads."
 	value = CATALOGUER_REWARD_TRIVIAL
 
 /mob/living/simple_mob/vore/pakkun
@@ -11,6 +14,8 @@
 	desc = "A small, blue, bipedal reptile. Its head and jaws are rather large in proportion to its body."
 	tt_desc = "Mordens Lacerta"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/pakkun)
+	player_msg = "Pakkuns are bipedal lizardy things. You don't really have much in the way of grasping fingers, but you have an extremely long and powerful tongue and a frankly disproportionate \
+	stomach-to-body ratio. Pakkuns will eat just about anything, both for food and out of idle curiosity - if you encounter something you don't understand, put it in your mouth for science."
 
 	icon_dead = "pakkun-dead"
 	icon_living = "pakkun"
@@ -32,6 +37,10 @@
 	harm_intent_damage = 3
 	melee_damage_lower = 3
 	melee_damage_upper = 5
+
+	response_help = "pets"
+	response_disarm = "shoves"
+	response_harm = "punches"
 
 	base_attack_cooldown = 5 SECONDS
 	projectiletype = /obj/item/projectile/beam/appendage
@@ -119,9 +128,6 @@
 /mob/living/simple_mob/vore/pakkun/on_throw_vore_special(var/pred, var/mob/living/target)
 	if(pred && !extra_posessive)
 		prey_excludes += target
-<<<<<<< HEAD
-		addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(target)), 5 MINUTES)
-=======
 		addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(target)), 5 MINUTES)
 	if(ai_holder)
 		ai_holder.remove_target()
@@ -213,4 +219,3 @@
 	most of her girth. Your movements are rewarded only with squeezing from outside, the skin of the reptile easily stretching out to match your movements no matter how hard you try to push. If anything, \
 	wriggling about just seems to prompt the playful creature to mess with you more, mooshing her paws into the bulges you make, wrapping both arms around you and squeezing you tight, making it absolutely \
 	plain that she's more than happy to just keep you in there - and is more than capable of doing so if she so chooses."
->>>>>>> a7126744ed... Merge pull request #13819 from Very-Soft/pakkuntime
