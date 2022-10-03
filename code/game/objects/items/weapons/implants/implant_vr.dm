@@ -134,8 +134,6 @@
 	..()
 	update()
 	return
-<<<<<<< HEAD
-=======
 
 
 //////////////////////////////
@@ -208,4 +206,3 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 		new nif_payload(target.nif,laws)
 		to_chat(target, "<span class='notice'>((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))</span>")
 		to_chat(target, "<span class='notice'>((OOC NOTE: If you did not agree to this, you are not compelled to follow the laws.))</span>")
->>>>>>> 6dc704f8bd... Merge pull request #13823 from Cameron653/organic_compliance
