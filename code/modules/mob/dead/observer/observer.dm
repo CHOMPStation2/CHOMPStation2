@@ -12,7 +12,7 @@
 	stat = DEAD
 	canmove = 0
 	blinded = 0
-	anchored = TRUE	//  don't get pushed around
+	anchored = TRUE		//  don't get pushed around
 
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud
@@ -168,10 +168,10 @@
 		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE)
 		set_cached_examine_icon(src, I, 200 SECONDS)
 	return I
-
+	
 /mob/observer/dead/examine(mob/user)
 	. = ..()
-
+	
 	if(is_admin(user))
 		. += "\t><span class='admin'>[ADMIN_FULLMONTY(src)]</span>"
 
@@ -344,7 +344,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	var/list/areas = return_sorted_areas()
 	if(client?.holder)
 		return areas
-
+	
 	for(var/key in areas)
 		var/area/A = areas[key]
 		if(A.z in using_map?.secret_levels)
@@ -365,7 +365,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			mobs -= key
 		if(mobz in using_map?.hidden_levels)
 			mobs -= key
-
+	
 	return mobs
 
 /mob/observer/dead/verb/dead_tele(areaname as anything in jumpable_areas())
@@ -378,7 +378,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	var/area/A
-
+	
 	if(!areaname)
 		var/list/areas = jumpable_areas()
 		var/input = tgui_input_list(usr, "Select an area:", "Ghost Teleport", areas)
@@ -420,29 +420,29 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	ManualFollow(M || jumpable_mobs()[mobname])
-
+	
 /mob/observer/dead/forceMove(atom/destination)
 	if(client?.holder)
 		return ..()
-
+	
 	if(get_z(destination) in using_map?.secret_levels)
 		to_chat(src,SPAN_WARNING("Sorry, that z-level does not allow ghosts."))
 		if(following)
 			stop_following()
 		return
-
+	
 	return ..()
 
 /mob/observer/dead/Move(atom/newloc, direct = 0, movetime)
 	if(client?.holder)
 		return ..()
-
+	
 	if(get_z(newloc) in using_map?.secret_levels)
 		to_chat(src,SPAN_WARNING("Sorry, that z-level does not allow ghosts."))
 		if(following)
 			stop_following()
 		return
-
+	
 	return ..()
 
 // This is the ghost's follow verb with an argument
@@ -522,7 +522,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	for(var/mob/observer/dead/M in following_mobs)
 		if(!.)
 			M.stop_following()
-
+		
 		if(M.following != src)
 			following_mobs -= M
 		else
@@ -645,7 +645,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(config.disable_player_mice)
 		to_chat(src, "<span class='warning'>Spawning as a mouse is currently disabled.</span>")
 		return
-
+		
 	//VOREStation Add Start
 	if(jobban_isbanned(src, "GhostRoles"))
 		to_chat(src, "<span class='warning'>You cannot become a mouse because you are banned from playing ghost roles.</span>")
@@ -667,7 +667,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='warning'>You may only spawn again as a mouse more than [mouse_respawn_time] minutes after your death. You have [timedifference_text] left.</span>")
 		return
 
-	var/response = tgui_alert(src, "Are you -sure- you want to become a mouse?","Are you sure you want to squeek?",list("Squeek!","Nope!"))
+	var/response = tgui_alert(src, "Are you -sure- you want to become a mouse? You will have no rights or OOC protections.","Are you sure you want to squeek? You will have no rights or OOC protections.",list("Squeek!","Nope!")) //CHOMP Edit
 	if(response != "Squeek!") return  //Hit the wrong key...again.
 
 
@@ -996,13 +996,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(jobban_isbanned(usr, "pAI"))
 		to_chat(usr,"<span class='warning'>You cannot alert pAI cards when you are banned from playing as a pAI.</span>")
 		return
-
+	
 	if(usr.client.prefs?.be_special & BE_PAI)
 		var/choice = tgui_alert(usr, "Would you like to submit yourself to the recruitment list too?", "Confirmation", list("No", "Yes"))
 		if(choice == "Yes")
 			paiController.recruitWindow(usr)
 		var/count = 0
-		for(var/obj/item/device/paicard/p in all_pai_cards)
+		for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
 			var/obj/item/device/paicard/PP = p
 			if(PP.pai == null)
 				count++
