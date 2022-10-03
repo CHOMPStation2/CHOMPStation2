@@ -290,19 +290,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	return TRUE
 
-/obj/machinery/power/pointdefense/proc/targeting_check(var/obj/effect/meteor/M)
-	// Target in range
-	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
-	if(!(M.z in connected_z_levels))
-		return FALSE
-	if(get_dist(M, src) > kill_range)
-		return FALSE
-	// If we can shoot it, then shoot
-	if(emagged || !space_los(M))
-		return FALSE
-
-	return TRUE
-
 /obj/machinery/pointdefense/RefreshParts()
 	. = ..()
 	// Calculates an average rating of components that affect shooting rate
