@@ -366,7 +366,11 @@
 		"nutrition_message_visible" = host.nutrition_message_visible,
 		"nutrition_messages" = host.nutrition_messages,
 		"weight_message_visible" = host.weight_message_visible,
-		"weight_messages" = host.weight_messages
+		"weight_messages" = host.weight_messages,
+		//CHOMPEdit start, vore sprites
+		"vore_sprite_color" = host.vore_sprite_color,
+		"vore_sprite_multiply" = host.vore_sprite_multiply
+		//CHOMPEdit end
 	)
 
 	return data
@@ -670,6 +674,20 @@
 			host.weight_message_visible = !host.weight_message_visible
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit start - vore sprites color
+		if("set_vs_color")
+			var/belly_choice = tgui_input_list(usr, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
+			if(newcolor)
+				host.vore_sprite_color[belly_choice] = newcolor
+				var/multiply = tgui_input_list(usr, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
+				if(multiply == "Multiply")
+					host.vore_sprite_multiply[belly_choice] = TRUE
+				else if(multiply == "Add")
+					host.vore_sprite_multiply[belly_choice] = FALSE
+				host.update_icons_body()
+			return TRUE
+		//CHOMPEdit end
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])

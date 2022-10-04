@@ -1955,6 +1955,9 @@ const VoreUserPreferences = (props, context) => {
           <Flex.Item basis="50%">
             <VoreUserPreferenceItem spec={preferences.examine_weight} />
           </Flex.Item>
+          <Flex.Item basis="50%">
+            <Button fluid content="Vore Sprite Color" onClick={() => act('set_vs_color')} />
+          </Flex.Item>
         </Flex>
       </Section>
       <Divider />

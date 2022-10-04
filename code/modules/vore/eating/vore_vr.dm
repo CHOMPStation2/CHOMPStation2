@@ -72,6 +72,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/latejoin_vore = FALSE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
+	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
+	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
   //CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -211,6 +213,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	receive_reagents = json_from_file["receive_reagents"]
 	give_reagents = json_from_file["give_reagents"]
 	autotransferable = json_from_file["autotransferable"]
+	vore_sprite_color = json_from_file["vore_sprite_color"]
+	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
 
 
 	//Quick sanitize
@@ -306,6 +310,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		give_reagents = FALSE
 	if(isnull(autotransferable))
 		autotransferable = TRUE
+	if(isnull(vore_sprite_color))
+		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	if(isnull(vore_sprite_multiply))
+		vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 
 	return TRUE
 
@@ -350,6 +358,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"nutrition_messages"		= nutrition_messages,
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
+			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
+			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
 		)
 
 	//List to JSON
