@@ -15666,27 +15666,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/port)
-"aXb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/research)
 "aXe" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -19588,6 +19567,12 @@
 /area/security/brig)
 "bjC" = (
 /obj/machinery/computer/supplycomp/control,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "bjD" = (
@@ -21929,15 +21914,14 @@
 /area/security/warden)
 "bql" = (
 /obj/machinery/computer/supplycomp{
-	dir = 1
+	dir = 4;
+	icon_rotation = 90
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 9
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
 	},
-/obj/effect/floor_decal/corner/brown/bordercorner2{
-	dir = 9
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
@@ -23017,11 +23001,18 @@
 /turf/simulated/wall,
 /area/quartermaster/delivery)
 "buf" = (
-/obj/machinery/computer/supplycomp/control,
+/obj/machinery/computer/supplycomp/control{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bug" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
@@ -43620,7 +43611,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/research{
 	name = "Toxins Storage";
-	req_access = list(7)
+	req_access = list(8)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/storage)
@@ -43767,6 +43758,26 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
+"cSx" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "cSC" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
@@ -46183,26 +46194,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/ascenter)
-"ess" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
-/area/rnd/research)
 "esJ" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /obj/machinery/meter,
@@ -73307,6 +73298,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "tpy" = (
+/obj/machinery/chemical_synthesizer,
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -73991,6 +73983,27 @@
 /obj/item/device/toner,
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
+"tKT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "tMo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -76475,6 +76488,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
+"vnq" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "vof" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -104509,7 +104526,7 @@ bqo
 bqn
 bsn
 buf
-bCU
+vnq
 bEJ
 bCU
 bAO
@@ -129765,7 +129782,7 @@ cKu
 dOF
 eNj
 cBi
-aXb
+tKT
 hIh
 ily
 ijc
@@ -130282,7 +130299,7 @@ dUe
 eNJ
 cBi
 gyw
-ess
+cSx
 ini
 jjV
 kqp
