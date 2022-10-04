@@ -19,12 +19,12 @@
 
 /obj/machinery/appliance/mixer/candy/Initialize()
 	. = ..()
-	
+
 	candymaker_loop = new(list(src), FALSE)
-	
+
 /obj/machinery/appliance/mixer/candy/Destroy()
 	. = ..()
-	
+
 	QDEL_NULL(candymaker_loop)
 
 /obj/machinery/appliance/mixer/candy/update_icon()
@@ -51,3 +51,4 @@
 		return
 	if(default_part_replacement(user, O))
 		return
+	..()

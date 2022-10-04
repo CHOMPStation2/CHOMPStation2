@@ -16,12 +16,12 @@
 
 /obj/machinery/appliance/mixer/cereal/Initialize()
 	. = ..()
-	
+
 	cerealmaker_loop = new(list(src), FALSE)
-	
+
 /obj/machinery/appliance/mixer/cereal/Destroy()
 	. = ..()
-	
+
 	QDEL_NULL(cerealmaker_loop)
 
 /*
@@ -93,3 +93,4 @@
 		return
 	if(default_part_replacement(user, O))
 		return
+	..()
