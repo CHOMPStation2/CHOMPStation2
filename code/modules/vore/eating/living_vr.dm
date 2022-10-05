@@ -299,6 +299,8 @@
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
 	P.autotransferable = src.autotransferable
+	P.vore_sprite_color = src.vore_sprite_color
+	P.vore_sprite_multiply = src.vore_sprite_multiply
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -355,6 +357,8 @@
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
 	autotransferable = P.autotransferable
+	vore_sprite_color = P.vore_sprite_color
+	vore_sprite_multiply = P.vore_sprite_multiply
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
