@@ -67811,6 +67811,9 @@
 	layer = 3.1;
 	name = "Cafe Shutters"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
 "pZY" = (
