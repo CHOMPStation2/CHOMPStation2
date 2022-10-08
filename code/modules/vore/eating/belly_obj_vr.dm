@@ -355,8 +355,8 @@
 			M.ai_holder.go_sleep()
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
 		var/obj/item/capture_crystal/CC = thing
-		if(CC.bound_mob && CC.bound_mob in CC.contents)
-			if(desc)
+		if(CC.bound_mob && desc)
+			if(CC.bound_mob in CC.contents)
 				var/formatted_desc
 				formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
 				formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
