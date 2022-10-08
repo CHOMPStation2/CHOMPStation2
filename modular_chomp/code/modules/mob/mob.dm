@@ -3,6 +3,6 @@
 	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!
 
 /mob/is_incorporeal()
-	if(incoporeal_move)
+	if(incorporeal_move)
 		return 1
 	..()
