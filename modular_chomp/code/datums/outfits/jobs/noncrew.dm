@@ -1,6 +1,8 @@
 /decl/hierarchy/outfit/noncrew
 	name = OUTFIT_JOB_NAME("Non-Crew")
 	//hierarchy_type = /decl/hierarchy/outfit/noncrew
+	uniform = /obj/item/clothing/under/primitive
+	shoes = /obj/item/clothing/shoes/primitive
 	r_pocket = /obj/item/weapon/spacecash/ewallet
 	l_pocket = /obj/item/device/survivalcapsule/superpose
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
