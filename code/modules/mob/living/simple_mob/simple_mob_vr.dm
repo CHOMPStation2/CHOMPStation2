@@ -54,6 +54,7 @@
 	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
+	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
 	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
 
@@ -264,6 +265,7 @@
 		"The juices pooling beneath you sizzle against your sore skin.",
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
+	can_be_drop_pred = TRUE // Mobs will eat anyone that decides to drop/slip into them by default.
 
 /mob/living/simple_mob/Bumped(var/atom/movable/AM, yes)
 	if(tryBumpNom(AM))

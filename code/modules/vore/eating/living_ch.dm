@@ -16,6 +16,8 @@
 	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
+	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 
 	var/list/vore_icon_bellies = list("stomach")
 

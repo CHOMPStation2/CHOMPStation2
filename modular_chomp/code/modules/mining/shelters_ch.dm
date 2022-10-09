@@ -247,3 +247,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/WoodenCamp-10x10.dmm"
 	name = "Wooden camp."
 	description = "A very small camping lodge, a quick emergency hut to stave off the planets weather."
+
+/datum/map_template/shelter/superpose/AnimalHospital
+	shelter_id = "AnimalHospital"
+	mappath = "modular_chomp/maps/submaps/shelters/AnimalHospital-20x28.dmm"
+	name = "Low-Tech Hospital."
+	description = "An animal hospital, doesnt not contain high end medical supplies, better then nothing."

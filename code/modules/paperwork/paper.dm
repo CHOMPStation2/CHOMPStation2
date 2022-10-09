@@ -375,7 +375,7 @@
 		t = replacetext(t, "\[row\]", "</td><tr>")
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
-		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit 
+		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit
 
 		t = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
@@ -451,7 +451,7 @@
 		var/raw = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE, prevent_enter = TRUE)
 		if(!raw)
 			return
-		
+
 		var/t =  sanitize(raw, MAX_PAPER_MESSAGE_LEN, extra = 0)
 		if(!t)
 			return
@@ -534,7 +534,7 @@
 /obj/item/weapon/paper/attackby(obj/item/weapon/P as obj, mob/user as mob)
 	..()
 	var/clown = 0
-	if(user.mind && (user.mind.assigned_role == "Clown"))
+	if(user.mind && ((user.mind.role_alt_title == "Clown") || (user.mind.role_alt_title == "Jester") || (user.mind.role_alt_title == "Fool"))) // CHOMPStation Edit - Let clows/fools/jesters use clown stamps
 		clown = 1
 
 	if(istype(P, /obj/item/weapon/tape_roll))

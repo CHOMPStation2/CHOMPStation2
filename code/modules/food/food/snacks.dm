@@ -34,6 +34,8 @@
 	var/package_trash
 	/// Packaged meals switch to this state when opened, if set
 	var/package_open_state
+	/// Packaged meals that have opening animation
+	var/package_opening_state
 
 	/// If this is canned. If true, it will print a message and ask you to open it
 	var/canned = FALSE
@@ -269,6 +271,8 @@
 		user.put_in_hands(T)
 	if(package_open_state)
 		icon_state = package_open_state
+		if(package_opening_state)
+			flick(package_opening_state, src)
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
@@ -6897,7 +6901,7 @@
 	nutriment_desc = list("apple" = 1, "sweetness" = 1)
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/appleberry/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/canned/appleberry/Initialize()
 	. = ..()
 	reagents.add_reagent("milk", 8)
 	reagents.add_reagent("sugar", 5)

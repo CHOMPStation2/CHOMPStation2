@@ -59,11 +59,12 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
+			var/strangername = H.real_name //CHOMPEdit
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
 					if(!find_record("name", H.real_name, data_core.hidden_general))
-						continue
-			name = H.real_name
+						strangername = "unknown" //CHOMPEdit
+			name = strangername //CHOMPEdit
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
 			flavor_text = H.flavor_texts["general"]

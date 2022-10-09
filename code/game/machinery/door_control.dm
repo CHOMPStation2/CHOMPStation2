@@ -149,6 +149,41 @@
 					M.close()
 					return
 
+//CHOMP Add start
+/obj/machinery/button/remote/blast_door/bear
+	name = "stuffed bear"
+	icon = 'icons/obj/stationobjs_vr.dmi'
+	icon_state = "stuffedbear"
+	desc = "A stuffed and mounted bear. Quite a statement piece, but holds a curious glare."
+	density = 1
+
+/obj/machinery/button/remote/blast_door/bear/attack_hand(mob/user as mob) //code to stop bear ever reverting to standard button sprites
+	if(..())
+		return
+
+	add_fingerprint(user)
+	if(stat & (NOPOWER|BROKEN))
+		return
+
+	if(!allowed(user) && (wires & 1))
+		to_chat(user, "<span class='warning'>Access Denied</span>")
+		flick("doorctrl-denied",src)
+		return
+
+	use_power(5)
+	icon_state = "stuffedbear"
+	desiredstate = !desiredstate
+	trigger(user)
+	spawn(15)
+		update_icon()
+
+/obj/machinery/button/remote/blast_door/bear/update_icon()
+	if(stat & NOPOWER)
+		icon_state = "stuffedbear"
+	else
+		icon_state = "stuffedbear"
+//CHOMP Add end
+
 /*
 	Emitter remote control
 */
