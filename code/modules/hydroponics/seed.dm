@@ -830,12 +830,19 @@
 				product = new has_item_product(get_turf(user))
 			else
 				product = new /obj/item/weapon/reagent_containers/food/snacks/grown(get_turf(user),name)
+<<<<<<< HEAD
 			if(get_trait(TRAIT_PRODUCT_COLOUR))
 				if(!istype(product, /mob))
 					//product.color = get_trait(TRAIT_PRODUCT_COLOUR) //Already applied correctly on overlays in icon_update, no need to double color over all overlays
 					if(istype(product,/obj/item/weapon/reagent_containers/food))
 						var/obj/item/weapon/reagent_containers/food/food = product
 						food.filling_color = get_trait(TRAIT_PRODUCT_COLOUR)
+=======
+			if (get_trait(TRAIT_PRODUCT_COLOUR))
+				if (istype(product,/obj/item/weapon/reagent_containers/food))
+					var/obj/item/weapon/reagent_containers/food/food = product
+					food.filling_color = get_trait(TRAIT_PRODUCT_COLOUR)
+>>>>>>> 2c961d572e... Merge pull request #13866 from VOREStation/upstream-merge-8735
 
 			if(mysterious)
 				product.name += "?"
