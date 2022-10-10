@@ -290,6 +290,12 @@
 	character_name = list("M41L")
 
 //  D CKEYS
+/datum/gear/fluff/Aku_briefcase
+	path = /obj/item/weapon/storage/secure/briefcase/dealer
+	display_name = "Aku's dealer briefcase"
+	ckeywhitelist = list("defiintelynotarock")
+	character_name = list("Aku Zoles")
+
 /datum/gear/fluff/dhaeleena_medal
 	path = /obj/item/clothing/accessory/medal/silver/security/fluff/dhael
 	display_name = "Dhaeleena's Medal"
@@ -1322,3 +1328,12 @@
 	ckeywhitelist = list ("thedavestdave")
 	character_name = list("Lucky")
 	allowed_roles = "Chaplain"
+<<<<<<< HEAD
+=======
+
+/datum/gear/fluff/greek_dress
+    path = /obj/item/clothing/under/fluff/greek_dress
+    display_name = "mytilenean Dress"
+    ckeywhitelist = list("sudate")
+    character_name = list("Shea Corbett")
+>>>>>>> 123a0f4431... Merge pull request #13886 from DefinitelyNotARock/master
