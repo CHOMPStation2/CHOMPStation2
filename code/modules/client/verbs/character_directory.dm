@@ -57,14 +57,15 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/eventtag = vantag_choices_list[C.prefs.vantag_preference] //CHOMPEdit
 		var/character_ad = C.prefs.directory_ad
 
+		//CHOMPEdit Start
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
-			var/strangername = H.real_name //CHOMPEdit
+			var/strangername = H.real_name
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
 					if(!find_record("name", H.real_name, data_core.hidden_general))
-						strangername = "unknown" //CHOMPEdit
-			name = strangername //CHOMPEdit
+						strangername = "unknown"
+			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
 			flavor_text = H.flavor_texts["general"]
@@ -84,6 +85,22 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			species = "[R.modtype] [R.braintype]"
 			ooc_notes = R.ooc_notes
 			flavor_text = R.flavor_text
+
+		if(istype(C.mob, /mob/living/silicon/pai))
+			var/mob/living/silicon/pai/P = C.mob
+			name = P.name
+			species = "pAI"
+			ooc_notes = P.ooc_notes
+			if(P.print_flavor_text())
+				flavor_text = "\n[P.print_flavor_text()]\n"
+
+		if(istype(C.mob, /mob/living/simple_mob))
+			var/mob/living/simple_mob/S = C.mob
+			name = S.name
+			species = "simplemob"
+			ooc_notes = S.ooc_notes
+			flavor_text = S.desc
+			//CHOMPEdit End
 
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
