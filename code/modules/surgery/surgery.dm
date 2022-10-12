@@ -145,54 +145,16 @@
 	if(zone in M.op_stage.in_progress) //Can't operate on someone repeatedly.
 		to_chat(user, "<span class='warning'>You can't operate on this area while surgery is already in progress.</span>")
 		return 1
-<<<<<<< HEAD
-=======
 	var/obj/surface = M.get_surgery_surface(user)
 	if(!surface || !surface.surgery_odds) 	// If the surface has a chance of 0% surgery odds (ground), don't even bother trying to do surgery.
 		return 0 							// This is meant to prevent the 'glass shard mouth 60 damage click' exploit. Also saves CPU by doing it here!
 
 	var/list/datum/surgery_step/available_surgeries = list()
->>>>>>> 2e2881654f... Merge pull request #13848 from Cameron653/medical_tweak
 	for(var/datum/surgery_step/S in surgery_steps)
 		//check if tool is right or close enough and if this step is possible
 		if(S.tool_quality(src))
 			var/step_is_valid = S.can_use(user, M, zone, src)
 			if(step_is_valid && S.is_valid_target(M))
-<<<<<<< HEAD
-				if(step_is_valid == SURGERY_FAILURE) // This is a failure that already has a message for failing.
-					return 1
-				M.op_stage.in_progress += zone
-				S.begin_step(user, M, zone, src)		//start on it
-				var/success = TRUE
-
-				// Bad tools make it less likely to succeed.
-				if(!prob(S.tool_quality(src)))
-					success = FALSE
-
-				// Bad or no surface may mean failure as well.
-				var/obj/surface = M.get_surgery_surface()
-				if(!surface || !prob(surface.surgery_odds))
-					success = FALSE
-
-				// Not staying still fails you too.
-				if(success)
-					var/calc_duration = rand(S.min_duration, S.max_duration)
-					if(!do_mob(user, M, calc_duration * toolspeed, zone, exclusive = TRUE))
-						success = FALSE
-						to_chat(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.</span>")
-
-				if(success)
-					S.end_step(user, M, zone, src)
-				else
-					S.fail_step(user, M, zone, src)
-
-				M.op_stage.in_progress -= zone 									// Clear the in-progress flag.
-				if (ishuman(M))
-					var/mob/living/carbon/human/H = M
-					H.update_surgery()
-				return	1	  												//don't want to do weapony things after surgery
-	return 0
-=======
 				if(step_is_valid == SURGERY_FAILURE)
 					continue
 				available_surgeries[S.surgery_name] = S //Adds the surgery name to the list and sets it equal to S. (Ex: "Cauterize" = surgery_step/cauterize)
@@ -261,7 +223,6 @@
 		var/mob/living/carbon/human/H = M
 		H.update_surgery()
 	return	1	  												//don't want to do weapony things after surgery
->>>>>>> 2e2881654f... Merge pull request #13848 from Cameron653/medical_tweak
 
 /proc/sort_surgeries()
 	var/gap = surgery_steps.len
