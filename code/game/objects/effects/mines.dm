@@ -96,7 +96,7 @@
 		explode(M)
 
 	if(istype(M, /mob/living/))
-		if(!M.hovering)
+		if(!M.hovering) //CHOMPedit: let's not make wings ignore mines because we use those here.
 			explode(M)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -398,6 +398,6 @@
 
 // This tells AI mobs to not be dumb and step on mines willingly.
 /obj/item/weapon/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering)
+	if(!L.hovering) //CHOMPedit: Let's not trivialize mines.
 		return FALSE
 	return ..()
