@@ -376,9 +376,6 @@
 	name = "Central Command undersuit"
 	desc = "A very descript undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for NanoTrasen Central Command officers, and comes with a swanky gold trim and other fancy markings."
 	icon_state = "bodysuit_cent"
-<<<<<<< HEAD
-	item_state = "bodysuit_cent"
-=======
 	item_state = "bodysuit_cent"
 
 
@@ -459,4 +456,3 @@
 	name = "yellow-green feminine jumpsuit"
 	icon_state = "yellowgreen"
 	worn_state = "yellowgreenf"
->>>>>>> 344a971aac... Merge pull request #13880 from Cameron653/colorable_jacket
