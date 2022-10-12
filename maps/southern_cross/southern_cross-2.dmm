@@ -54436,12 +54436,15 @@
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/emergency/eva)
 "iKn" = (
-/obj/structure/flora/pottedplant/crystal,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
+	},
+/obj/machinery/smartfridge/sheets{
+	density = 0;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
@@ -56565,9 +56568,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "jMY" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/reagent_dispensers/acid{
-	pixel_x = -30
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
@@ -58630,6 +58630,9 @@
 "kQH" = (
 /obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kQV" = (
