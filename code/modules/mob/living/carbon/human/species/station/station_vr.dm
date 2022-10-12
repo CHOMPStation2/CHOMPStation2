@@ -290,17 +290,13 @@
 	base_color = "#B43214"
 
 	min_age = 18
-<<<<<<< HEAD
 	max_age = 110
-=======
-	max_age = 80
 	
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
 		"Your overheated skin itches."
 		)
->>>>>>> faa4a376da... Merge pull request #13864 from Runa-Dacino/vulpkanin-heat
 
 /datum/species/unathi
 	mob_size = MOB_MEDIUM //To allow normal mob swapping
