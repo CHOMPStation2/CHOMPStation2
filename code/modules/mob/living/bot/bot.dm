@@ -296,11 +296,6 @@
 			frustration++ //CHOMPEdit
 	return
 
-<<<<<<< HEAD
-/mob/living/bot/proc/handleFrustrated(var/targ)
-	if((targ && LAZYLEN(target_path)) || LAZYLEN(patrol_path))
-		obstacle = targ ? target_path[1] : patrol_path[1]
-=======
 
 /mob/living/bot/proc/handleFrustrated(has_target)
 	obstacle = null
@@ -309,7 +304,6 @@
 			obstacle = target_path[1]
 	else if (length(patrol_path))
 		obstacle = patrol_path[1]
->>>>>>> 2c961d572e... Merge pull request #13866 from VOREStation/upstream-merge-8735
 	target_path = list()
 	patrol_path = list()
 
