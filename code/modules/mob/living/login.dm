@@ -19,12 +19,13 @@
 	verbs |= /mob/living/proc/lick
 	verbs |= /mob/living/proc/smell
 	verbs |= /mob/living/proc/switch_scaling
+	verbs |= /mob/living/proc/mute_entry //CHOMPEdit
 
 	if(!no_vore)
 		verbs |= /mob/living/proc/vorebelly_printout
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
-			
+
 	verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
