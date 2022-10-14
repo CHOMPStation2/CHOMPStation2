@@ -5,6 +5,8 @@
 	var/step_mechanics_pref = TRUE		// Allow participation in macro-micro step mechanics
 	var/pickup_pref = TRUE				// Allow participation in macro-micro pickup mechanics
 	var/pickup_active = TRUE			// Toggle whether your help intent picks up micros or pets them
+	var/center_offset = 0.5				// Center offset for uneven scaling symmetry. //CHOMPEdit
+	var/offset_override = FALSE			// Pref toggle for center offset. //CHOMPEdit
 
 // Define holder_type on types we want to be scoop-able
 /mob/living/carbon/human
@@ -28,9 +30,11 @@
 /mob/living/update_icons()
 	. = ..()
 	ASSERT(!ishuman(src))
+	if(fuzzy || offset_override) //CHOMPEdit
+		center_offset = 0 //CHOMPEdit
 	var/matrix/M = matrix()
 	M.Scale(size_multiplier * icon_scale_x, size_multiplier * icon_scale_y)
-	M.Translate(0, (vis_height/2)*(size_multiplier-1))
+	M.Translate(center_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1)) //CHOMPEdit
 	transform = M
 
 /**
@@ -103,8 +107,12 @@
 			var/datum/species/S = H.species
 			special_x = S.icon_scale_x
 			special_y = S.icon_scale_y
+			if(fuzzy || offset_override) //CHOMPEdit Start
+				center_offset = 0
+			else
+				center_offset = S.center_offset
 		resize.Scale(new_size * icon_scale_x * special_x, new_size * icon_scale_y * special_y) //Change the size of the matrix
-		resize.Translate(0, (vis_height/2) * (new_size - 1)) //Move the player up in the tile so their feet align with the bottom
+		resize.Translate(center_offset * size_multiplier * icon_scale_x * special_x, (vis_height/2) * (new_size - 1)) //Move the player up in the tile so their feet align with the bottom //CHOMPEdit End
 		animate(src, transform = resize, time = duration) //Animate the player resizing
 
 		if(aura_animation)
