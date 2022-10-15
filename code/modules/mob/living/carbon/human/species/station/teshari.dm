@@ -27,6 +27,7 @@
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	center_offset = 0 //CHOMPEdit
 	//CHOMPStation Add End
 
 	blood_color = "#D514F7"

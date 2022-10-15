@@ -137,10 +137,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
+	center_offset = species.center_offset //CHOMPEdit
+	if(offset_override) //CHOMPEdit
+		center_offset = 0 //CHOMPEdit
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
 		appearance_flags &= ~PIXEL_SCALE
+		center_offset = 0 //CHOMPEdit
 	//VOREStation Edit End
 
 	// Regular stuff again.
@@ -176,7 +180,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
-		M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
+		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
