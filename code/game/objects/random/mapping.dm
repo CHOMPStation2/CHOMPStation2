@@ -77,14 +77,14 @@
 				prob(3);/obj/machinery/vending/fitness,
 				prob(4);/obj/machinery/vending/cigarette,
 				prob(3);/obj/machinery/vending/giftvendor,
-				prob(1);/obj/machinery/vending/hotfood,
 				prob(5);/obj/machinery/vending/weeb,
 				prob(5);/obj/machinery/vending/sol,
 				prob(5);/obj/machinery/vending/snix,
 				prob(5);/obj/machinery/vending/snlvend,
 				prob(5);/obj/machinery/vending/sovietsoda,
 				prob(5);/obj/machinery/vending/sovietvend,
-				prob(5);/obj/machinery/vending/radren) //VOREStation Edit End
+				prob(5);/obj/machinery/vending/radren,
+				prob(3);/obj/machinery/vending/altevian) //VOREStation Edit End
 
 /obj/random/vendorfood //Random food vendors for station use
 	name = "random snack vending machine"

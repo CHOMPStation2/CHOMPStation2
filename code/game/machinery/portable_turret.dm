@@ -903,7 +903,6 @@
 	var/check_weapons
 	var/check_anomalies
 	var/check_all
-	var/check_down
 	var/ailock
 
 /obj/machinery/porta_turret/proc/setState(var/datum/turret_checks/TC)
@@ -919,7 +918,6 @@
 	check_weapons = TC.check_weapons
 	check_anomalies = TC.check_anomalies
 	check_all = TC.check_all
-	check_down = TC.check_down
 	ailock = TC.ailock
 
 	power_change()

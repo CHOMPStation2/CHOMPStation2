@@ -333,7 +333,10 @@
 		if (prob(transfer/orig_amount * 100))
 			transfer_fingerprints_to(S)
 			if(blood_DNA)
-				S.blood_DNA |= blood_DNA
+				if(S.blood_DNA)
+					S.blood_DNA |= blood_DNA
+				else
+					S.blood_DNA = blood_DNA.Copy()
 		return transfer
 	return 0
 

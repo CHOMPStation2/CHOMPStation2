@@ -156,8 +156,8 @@
 
 /obj/item/weapon/rig/vox/engineering
 	name = "fluid alien control module"
-	suit_type = "sinister alien"
-	icon_state = "voxstealth_rig"
+	suit_type = "vox_engineer_rig_sealed"
+	icon_state = "vox_engineer_rig"
 	desc = "A lightweight, alien rig dedicated for construction and engineering tasks. Not reccomended for hostile engagement."
 	armor = list (melee = 25, bullet = 5, laser = 40, energy = 45, bomb = 50, bio = 100, rad = 100) //CE suit values but shuffled to a tighter focus on the job hazards
 	flags = PHORONGUARD
@@ -189,3 +189,32 @@
 	)  
 
 //ChompEdit Ends
+
+
+//Chompedit Begins
+
+/obj/item/weapon/rig/vox/security
+	name = "sturdy alien control module"
+	suit_type = "vox_sec_rig_sealed"
+	icon_state = "vox_sec_rig"
+	desc = "A medium weight, alien control module. Built sturdy for security engagements."
+	armor = list (melee = 60, bullet = 50, laser = 40, energy = 10, bomb = 20, bio = 100, rad = 50) //CE suit values but shuffled to a tighter focus on the job hazards
+	flags = PHORONGUARD
+	item_flags = THICKMATERIAL
+	siemens_coefficient = 0.5
+	offline_slowdown = 5
+	slowdown = 0 
+	emp_protection = 40 //change this to 30 if too high.
+
+	req_one_access = list()
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage)
+	offline_vision_restriction = 1
+
+	initial_modules = list(
+	)
+
+	air_type = /obj/item/weapon/tank/vox
+
+	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	
+	//ChompEdit Ends

@@ -13370,9 +13370,9 @@
 /area/engineering/workshop)
 "aQb" = (
 /obj/machinery/door/window/northleft{
-	req_one_access = list(35,28);
+	name = "Animal Pen";
 	req_access = newlist();
-	name = "Animal Pen"
+	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
@@ -19567,6 +19567,12 @@
 /area/security/brig)
 "bjC" = (
 /obj/machinery/computer/supplycomp/control,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "bjD" = (
@@ -21908,15 +21914,14 @@
 /area/security/warden)
 "bql" = (
 /obj/machinery/computer/supplycomp{
-	dir = 1
+	dir = 4;
+	icon_rotation = 90
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 9
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
 	},
-/obj/effect/floor_decal/corner/brown/bordercorner2{
-	dir = 9
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
@@ -22996,11 +23001,18 @@
 /turf/simulated/wall,
 /area/quartermaster/delivery)
 "buf" = (
-/obj/machinery/computer/supplycomp/control,
+/obj/machinery/computer/supplycomp/control{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bug" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
@@ -35335,11 +35347,11 @@
 	dir = 4
 	},
 /obj/structure/curtain/black{
+	dir = 2;
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artgallery)
@@ -36743,23 +36755,23 @@
 	dir = 4
 	},
 /obj/item/clothing/suit/storage/apron/white{
-	pixel_y = 7;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /obj/item/clothing/suit/storage/apron/white{
-	pixel_y = 7;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 7
 	},
 /obj/item/clothing/suit/storage/apron/white{
 	pixel_y = 6
 	},
 /obj/item/clothing/glasses/regular/hipster{
-	pixel_y = -2;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -2
 	},
 /obj/item/clothing/mask/smokable/pipe/cobpipe{
-	pixel_y = 3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 3
 	},
 /obj/item/clothing/head/beret{
 	pixel_x = 5;
@@ -37087,11 +37099,11 @@
 	name = "Gallery"
 	},
 /obj/structure/curtain/black{
+	dir = 2;
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artgallery)
@@ -37174,8 +37186,8 @@
 /obj/item/weapon/reagent_containers/food/drinks/smallmilk,
 /obj/item/weapon/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge{
-	pixel_y = 0;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 0
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/effect/floor_decal/borderfloorblack{
@@ -37485,17 +37497,17 @@
 "coy" = (
 /obj/structure/table/marble,
 /obj/item/weapon/hand_labeler{
-	pixel_y = 8;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 8
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 2;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 2
 	},
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 2;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 2
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -37507,8 +37519,8 @@
 	pixel_x = 28
 	},
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour{
-	pixel_y = -2;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -2
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
@@ -37522,12 +37534,12 @@
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/box/donut{
 	pixel_x = 3;
@@ -48902,10 +48914,10 @@
 /area/maintenance/medbay)
 "fOV" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 1;
 	id = "coffeeshop";
 	name = "Cafe Shutters";
 	pixel_y = -26;
-	dir = 1;
 	req_one_access = list(25,28)
 	},
 /obj/machinery/button/neonsign{
@@ -51558,22 +51570,22 @@
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/window/southright{
-	name = "Hydroponics";
-	dir = 4
+	dir = 4;
+	name = "Hydroponics"
 	},
 /obj/machinery/door/window/northleft{
+	dir = 8;
 	name = "Hydroponics";
-	req_one_access = list(35,28);
-	dir = 8
+	req_one_access = list(35,28)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/curtain/black{
+	dir = 2;
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hydroponics)
@@ -54424,12 +54436,15 @@
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/emergency/eva)
 "iKn" = (
-/obj/structure/flora/pottedplant/crystal,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
+	},
+/obj/machinery/smartfridge/sheets{
+	density = 0;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
@@ -54506,32 +54521,32 @@
 "iLA" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = -5;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -5
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 7;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -56553,9 +56568,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "jMY" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/reagent_dispensers/acid{
-	pixel_x = -30
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
@@ -57728,28 +57740,28 @@
 "kqI" = (
 /obj/structure/table/woodentable,
 /obj/item/paint_palette{
-	pixel_y = -6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -6
 	},
 /obj/item/paint_palette{
-	pixel_y = 0;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 0
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_brush{
-	pixel_y = -5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -5
 	},
 /obj/item/paint_brush{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/seconddeck/artgallery)
@@ -58618,6 +58630,9 @@
 "kQH" = (
 /obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kQV" = (
@@ -62899,11 +62914,11 @@
 	icon_state = "4-8"
 	},
 /obj/structure/curtain/black{
+	dir = 2;
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artsupplies)
@@ -63259,24 +63274,24 @@
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/table/marble,
 /obj/item/weapon/storage/box/glasses/coffeecup{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/storage/box/glasses/coffeemug{
-	pixel_y = 12;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 12
 	},
 /obj/item/weapon/storage/box/glasses/square{
-	pixel_y = 1;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 1
 	},
 /obj/item/weapon/storage/box/buns{
-	pixel_y = 12;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 12
 	},
 /obj/item/weapon/storage/box/buns{
-	pixel_y = 12;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 12
 	},
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack{
@@ -67569,8 +67584,8 @@
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/storage/box/donut{
-	pixel_y = -4;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
@@ -67798,6 +67813,9 @@
 	id = "coffeeshop";
 	layer = 3.1;
 	name = "Cafe Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
@@ -69432,8 +69450,8 @@
 "rbZ" = (
 /obj/structure/closet/emcloset,
 /obj/structure/extinguisher_cabinet{
-	pixel_y = -30;
-	dir = 1
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/library)
@@ -70735,11 +70753,11 @@
 /area/hallway/secondary/entry/D1)
 "rRc" = (
 /obj/structure/curtain/black{
+	dir = 2;
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/artgallery)
@@ -72066,12 +72084,12 @@
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/weapon/reagent_containers/food/drinks/shaker{
-	pixel_y = 8;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 8
 	},
 /obj/item/weapon/reagent_containers/food/drinks/teapot{
-	pixel_y = 1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
@@ -73244,6 +73262,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "tpy" = (
+/obj/machinery/chemical_synthesizer,
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -73796,8 +73815,8 @@
 "tHc" = (
 /obj/structure/table/bench/wooden,
 /obj/structure/flora/pottedplant/flower{
-	pixel_y = 10;
-	name = "pietra"
+	name = "pietra";
+	pixel_y = 10
 	},
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
@@ -74289,8 +74308,8 @@
 	dir = 8
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_x = -25;
-	dir = 4
+	dir = 4;
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
@@ -75293,36 +75312,36 @@
 	name = "Art supplies"
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/tape_roll,
 /obj/item/weapon/tape_roll,
@@ -75339,20 +75358,20 @@
 /obj/item/weapon/hand_labeler,
 /obj/item/weapon/hand_labeler,
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/pen/multi{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/device/lightpainter,
 /obj/item/device/lightpainter,
@@ -76277,8 +76296,8 @@
 /area/quartermaster/warehouse)
 "viP" = (
 /obj/machinery/door/window/southleft{
-	name = "Library Desk Door";
 	dir = 8;
+	name = "Library Desk Door";
 	req_access = list(37)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -76412,6 +76431,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
+"vnq" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "vof" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -81060,36 +81083,36 @@
 	name = "Art supplies"
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/device/camera_film,
 /obj/item/device/camera_film,
@@ -104446,7 +104469,7 @@ bqo
 bqn
 bsn
 buf
-bCU
+vnq
 bEJ
 bCU
 bAO

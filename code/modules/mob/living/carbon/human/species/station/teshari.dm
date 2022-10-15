@@ -27,6 +27,7 @@
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	center_offset = 0 //CHOMPEdit
 	//CHOMPStation Add End
 
 	blood_color = "#D514F7"
@@ -80,7 +81,7 @@
 	breath_cold_level_2 = 100	//Default 180
 	breath_cold_level_3 = 60	//Default 100
 
-	heat_level_1 = 320	//Default 360
+	heat_level_1 = 330	//Default 360
 	heat_level_2 = 370	//Default 400
 	heat_level_3 = 600	//Default 1000
 

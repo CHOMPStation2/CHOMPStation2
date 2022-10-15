@@ -8,7 +8,7 @@
 	if(!istype(target))
 		return
 
-	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT)
+	var/list/smite_types = list(SMITE_PIE, SMITE_SPICE, SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT) //CHOMP Add pie and spicy air
 
 	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)
@@ -39,6 +39,20 @@
 			T.Beam(target, icon_state="lightning[rand(1,12)]", time = 5)
 			target.electrocute_act(75,def_zone = BP_HEAD)
 			target.visible_message("<span class='danger'>[target] is struck by lightning!</span>")
+
+		if(SMITE_PIE) //CHOMP Add
+			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
+			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
+			target.Weaken(1)
+			target.visible_message("<span class='danger'>[target] is struck by pie!</span>")
+
+		if(SMITE_SPICE) //CHOMP Add
+			to_chat(target, "<span class='warning'>Spice spice baby!</span>")
+			target.eye_blurry = max(target.eye_blurry, 25)
+			target.Blind(10)
+			target.Stun(5)
+			target.Weaken(5)
+			playsound(target, 'sound/effects/spray2.ogg', 100, 1, get_rand_frequency(), falloff = 5)
 
 		else
 			return //Injection? Don't print any messages.

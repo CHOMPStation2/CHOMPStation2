@@ -35,7 +35,7 @@
 	// #include "structures/closets/misc.dm"
 	// #include "structures/closets/research.dm"
 	// #include "structures/closets/security.dm"
-	#include "turfs/outdoors.dm"
+	//#include "turfs/outdoors.dm" //Moved inclusion to vorestation.dme to appease CI's smooth brain.
 	#include "events/wildlife_encounter.dm"
 
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.

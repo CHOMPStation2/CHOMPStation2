@@ -8,6 +8,7 @@
 
 	var/organic_food_coeff = 1
 	var/synthetic_food_coeff = 0
+	var/digestion_efficiency = 1 //VORE specific digestion var
 	//var/vore_numbing = 0
 	var/metabolism = 0.0015
 	var/lightweight = FALSE //Oof! Nonhelpful bump stumbles.
@@ -29,9 +30,12 @@
 	var/list/copy_vars = list("base_species", "icobase", "deform", "tail", "tail_animation", "icobase_tail", "color_mult", "primitive_form", "appearance_flags", "flesh_color", "base_color", "blood_mask", "damage_mask", "damage_overlays", "move_trail", "has_floating_eyes")
 	var/trait_points = 0
 
+	var/ideal_air_type = null	// Set to something else if you breathe something else from default composition. Used for inbelly air.
+
 	var/micro_size_mod = 0		// How different is our size for interactions that involve us being small?
 	var/macro_size_mod = 0		// How different is our size for interactions that involve us being big?
 	var/digestion_nutrition_modifier = 1
+	var/center_offset = 0.5 //CHOMPEdit
 
 
 /datum/species/proc/give_numbing_bite() //Holy SHIT this is hacky, but it works. Updating a mob's attacks mid game is insane.

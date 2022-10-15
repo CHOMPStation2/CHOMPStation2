@@ -7,6 +7,7 @@
 	products += list(/obj/item/weapon/gun/energy/taser = 8,/obj/item/weapon/gun/energy/stunrevolver = 4,
 					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6,
 					/obj/item/clothing/glasses/omnihud/sec = 6)
+	contraband += list(/obj/item/weapon/implanter/compliance = 1)
 	..()
 
 /obj/machinery/vending/tool/New()
@@ -3548,8 +3549,14 @@
 	product_ads = "Perfectly edible!;Squeaky clean foods!;Cheesed to meet you!;Made for spacers, by spacers, of spacers!"
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/ratveggies = 15,
-					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 15)
+					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 8)
 
 	prices = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratveggies = 8,
-					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 8)
+					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 10)

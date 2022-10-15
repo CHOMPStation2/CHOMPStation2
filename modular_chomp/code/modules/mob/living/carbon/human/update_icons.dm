@@ -1,9 +1,10 @@
 // Expand shoe layer to allow changing the icon for digi legs
 // For some reason, suit and uniform already has this funcitonality, but shoes do not.
 
-#define SHOES_LAYER_ALT			8		//Shoe-slot item (when set to be under uniform via verb)
-#define SHOES_LAYER				11		//Shoe-slot item
-#define VORE_BELLY_LAYER		31		//Should be the same that it is in update_icons.dm
+//Duplicate defines so the code below can compile. See non-modular update_icons.dm for proper placement.
+#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
+#define SHOES_LAYER				12		//Shoe-slot item
+#define VORE_BELLY_LAYER		32		//Should be the same that it is in update_icons.dm
 
 /mob/living/carbon/human/update_inv_shoes()
 	//. = ..()
@@ -56,7 +57,7 @@
 	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
 		var/vs_fullness = vore_fullness_ex["stomach"]
 		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness][struggle_anim_stomach ? "" : " idle"]")
-		vorebelly_s.Blend(rgb(r_skin, g_skin, b_skin), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
+		vorebelly_s.Blend(vore_sprite_color["stomach"], vore_sprite_multiply["stomach"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.overlays += em_block_image_generic(working)
 		return working
@@ -87,7 +88,7 @@
 	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
 		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][struggle_anim_taur ? "" : " idle"]")
-		vorebelly_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
+		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16
 		if(tail_style.em_block)

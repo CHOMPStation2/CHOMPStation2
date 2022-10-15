@@ -21,7 +21,7 @@
 	ambience = AMBIENCE_RUINS
 
 /area/submap/diner
-	name = "POI - Diner"
+	name = "POI Plains - Diner"
 	ambience = AMBIENCE_SIF
 
 /area/submap/dragon
@@ -88,11 +88,15 @@
 /area/submap/rationcache
 	name = "POI Plains - Ration Cache"
 
+/area/submap/Rocky2a
+	name = "POI Plains - Rocky Crevice"
+	ambience = AMBIENCE_SIF
+
 /area/submap/rockyoutcrop
 	name = "POI Plains - Rocky Outcrop"
 
 /area/submap/Shakden
-	name = "POI - Shantak den"
+	name = "POI Plains - Shantak Den"
 
 /area/submap/snow1
 	name = "POI Plains - Snow"
