@@ -20,6 +20,7 @@
 	verbs |= /mob/living/proc/smell
 	verbs |= /mob/living/proc/switch_scaling
 	verbs |= /mob/living/proc/mute_entry //CHOMPEdit
+	verbs |= /mob/living/proc/center_offset //CHOMPEdit
 
 	if(!no_vore)
 		verbs |= /mob/living/proc/vorebelly_printout
