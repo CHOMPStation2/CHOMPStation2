@@ -90,8 +90,7 @@
 "ap" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -101,7 +100,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "as" = (
 /obj/structure/cable/green{
@@ -109,7 +110,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "ay" = (
 /turf/simulated/wall/r_wall,
@@ -206,6 +209,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgas)
+"ba" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "bd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -234,13 +247,21 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/ghetto)
+"bf" = (
+/obj/structure/salvageable/console_os{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "bm" = (
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/subcondo)
 "bn" = (
 /obj/machinery/door/airlock/glass,
@@ -257,7 +278,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "bq" = (
 /turf/simulated/floor/outdoors/sidewalk/slab{
@@ -266,8 +289,7 @@
 	},
 /area/awaymission/darkrp/ghettobank)
 "br" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/warehouses)
@@ -400,6 +422,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"cd" = (
+/obj/machinery/button/remote/blast_door{
+	id = "centralbuilding22";
+	name = "Warehouse Shutters Button";
+	pixel_x = -4;
+	dir = 4;
+	pixel_y = 27
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownwarehouse)
 "ce" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -533,8 +565,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -713,8 +744,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownresturaunt)
 "du" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/tunnels/warehouse)
@@ -789,8 +819,7 @@
 /area/awaymission/darkrp/parkmaint)
 "dL" = (
 /obj/effect/decal/cleanable/molten_item,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -869,6 +898,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
+"eg" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/paper{
+	desc = "";
+	info = "Man, once I sell this in the blockchain, I'll make millions!";
+	name = "note"
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
+"eh" = (
+/turf/simulated/floor/carpet,
+/area/awaymission/darkrp/centersidehouse)
 "ek" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
 	outdoors = 1
@@ -921,7 +962,9 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
 "et" = (
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "eu" = (
 /obj/machinery/light/small{
@@ -991,6 +1034,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"fd" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/carpet/oracarpet,
+/area/awaymission/darkrp/plazahotel)
 "ff" = (
 /obj/structure/table/woodentable,
 /obj/item/pizzabox/old,
@@ -1121,7 +1168,9 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
 "fU" = (
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "fV" = (
 /obj/machinery/power/apc{
@@ -1180,7 +1229,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 295.15
+	},
 /area/awaymission/darkrp/outside/plaza)
 "gn" = (
 /obj/machinery/light{
@@ -1308,8 +1359,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -1327,8 +1377,7 @@
 /area/awaymission/darkrp/outside/ghetto)
 "gP" = (
 /obj/structure/fence/door,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/plaza)
@@ -1363,7 +1412,8 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors{
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/tunnels/suburbs)
 "hb" = (
@@ -1418,7 +1468,9 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "hm" = (
 /obj/machinery/door/blast/shutters{
@@ -1528,6 +1580,10 @@
 /obj/item/weapon/material/shard/plastitaniumglass,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/sewers)
+"hR" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/carpet/blue,
+/area/awaymission/darkrp/plazahotel)
 "hT" = (
 /obj/item/device/assembly/mousetrap/armed,
 /turf/simulated/floor/outdoors/newdirt,
@@ -1586,8 +1642,7 @@
 /area/awaymission/darkrp/plazarecroom)
 "ij" = (
 /obj/structure/fence/corner,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -1629,7 +1684,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "ir" = (
 /obj/machinery/light{
@@ -1748,8 +1805,7 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/plaza)
@@ -1759,8 +1815,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -1768,7 +1823,9 @@
 /obj/structure/fence/end{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "ju" = (
 /turf/simulated/wall/r_wall,
@@ -1885,11 +1942,15 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/center)
 "kc" = (
 /obj/structure/fence,
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "kd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1919,6 +1980,15 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/subpower)
+"kh" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/drinks/coffee{
+	pixel_y = 6;
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/food/snacks/soydope,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "ki" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1938,8 +2008,7 @@
 	},
 /area/awaymission/darkrp/outside/ghetto)
 "kj" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
@@ -1980,6 +2049,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/center)
+"kw" = (
+/obj/item/modular_computer/console/preset/civilian{
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "ky" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -2047,11 +2123,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "kM" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -2334,6 +2411,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"mm" = (
+/obj/structure/salvageable/implant_container_os,
+/obj/item/weapon/spacecash/c10,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "mr" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -2394,7 +2476,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "mI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2463,7 +2547,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
 "mY" = (
 /obj/machinery/door/airlock,
@@ -2523,8 +2609,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -2534,8 +2619,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -2583,7 +2667,9 @@
 /obj/structure/fence/corner{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "nD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2701,8 +2787,7 @@
 /obj/structure/fence/corner{
 	dir = 10
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -2738,8 +2823,7 @@
 /obj/structure/fence/corner{
 	dir = 8
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -2840,6 +2924,11 @@
 /obj/random/ammo,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"oH" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "oI" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/tool/wrench,
@@ -2861,9 +2950,9 @@
 	},
 /area/awaymission/darkrp/outside/warehouses)
 "oN" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating2";
-	outdoors = 1
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
 "oO" = (
@@ -2932,8 +3021,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
 "pf" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/plaza)
@@ -2962,8 +3050,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -3045,7 +3132,8 @@
 	},
 /area/awaymission/darkrp/outside/downtown)
 "pL" = (
-/obj/item/modular_computer/console/preset{
+/obj/item/modular_computer/console/preset/civilian{
+	pixel_y = 0;
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -3060,8 +3148,8 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
 "pW" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating"
+/turf/simulated/floor/concrete{
+	outdoors = 0
 	},
 /area/awaymission/darkrp/tunnels/park)
 "pY" = (
@@ -3127,7 +3215,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/warehouses)
 "qA" = (
 /obj/structure/bed/chair/wood{
@@ -3148,7 +3238,9 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazashop)
 "qF" = (
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/center)
 "qI" = (
 /obj/structure/cable/green{
@@ -3276,6 +3368,15 @@
 /obj/item/weapon/soap/nanotrasen,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"rK" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/centersidehouse)
 "rN" = (
 /obj/machinery/light{
 	dir = 4
@@ -3421,7 +3522,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
 "sw" = (
 /obj/effect/map_effect/portal/master/side_a{
@@ -3541,8 +3644,7 @@
 /area/awaymission/darkrp/ghettoapartments)
 "th" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -3808,6 +3910,24 @@
 /obj/structure/reagent_dispensers/fueltank/barrel/two,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"uD" = (
+/obj/structure/table/marble,
+/obj/structure/sink/countertop{
+	dir = 2;
+	pixel_y = 7
+	},
+/obj/item/trash/plate{
+	pixel_y = -2
+	},
+/obj/item/trash/plate,
+/obj/item/trash/plate{
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_y = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "uE" = (
 /obj/machinery/power/rtg/reg,
 /obj/structure/cable/green{
@@ -3833,7 +3953,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "uI" = (
 /turf/simulated/floor/wood,
@@ -3844,7 +3966,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "uN" = (
 /obj/structure/cable/green{
@@ -3887,8 +4011,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/fence/door,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -3944,8 +4067,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -3985,6 +4107,14 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"vn" = (
+/obj/machinery/door/blast/shutters{
+	id = "centralbuilding22";
+	name = "Garage Door";
+	dir = 2
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownwarehouse)
 "vp" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4024,6 +4154,11 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
+"vz" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/orange,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "vA" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/wood,
@@ -4357,8 +4492,7 @@
 /obj/structure/fence/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -4452,7 +4586,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/center)
 "xw" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -4825,7 +4961,9 @@
 "zc" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/structure/flora/grass/both,
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "zd" = (
 /obj/machinery/door/airlock,
@@ -4875,10 +5013,12 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/subcondo)
 "zo" = (
-/obj/machinery/door/airlock,
+/obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
 "zt" = (
@@ -4951,7 +5091,9 @@
 /area/awaymission/darkrp/subway)
 "zQ" = (
 /obj/structure/flora/ausbushes/grassybush,
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "zR" = (
 /obj/machinery/light{
@@ -4990,7 +5132,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "Ab" = (
 /obj/structure/cable/green{
@@ -5030,7 +5174,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/plaza)
 "Am" = (
 /obj/effect/map_effect/portal/master/side_b{
@@ -5041,6 +5187,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
+"An" = (
+/turf/simulated/floor/water/pool{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "Ap" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5064,7 +5215,9 @@
 /area/awaymission/darkrp/ghettoapartments)
 "Au" = (
 /obj/structure/flora/ausbushes/grassybush,
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
 "Av" = (
 /obj/machinery/power/apc{
@@ -5085,7 +5238,8 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors{
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/tunnel/ghettos)
 "AA" = (
@@ -5202,7 +5356,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "Bf" = (
 /obj/structure/cable/green{
@@ -5222,8 +5378,7 @@
 /area/awaymission/darkrp/sewers)
 "Bi" = (
 /obj/random/trash,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -5245,7 +5400,9 @@
 /area/awaymission/darkrp/ghettohouse1)
 "Bx" = (
 /obj/structure/fence,
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "By" = (
 /obj/structure/table/reinforced,
@@ -5259,8 +5416,7 @@
 /area/awaymission/darkrp/plazahotel)
 "BD" = (
 /obj/item/weapon/tool/screwdriver/diamonddrill,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -5330,11 +5486,16 @@
 /area/awaymission/darkrp/ghettoeats)
 "BN" = (
 /obj/item/weapon/tool/screwdriver,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"BS" = (
+/obj/structure/bed/chair/sofa/brown{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "BY" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable/green{
@@ -5345,14 +5506,13 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
 "BZ" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/rack/shelf/steel,
 /obj/random,
-/obj/random/toy,
+/obj/random,
 /turf/simulated/floor/wood,
-/area/awaymission/darkrp/ghettooffice)
+/area/awaymission/darkrp/centersidehouse)
 "Cb" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/park)
@@ -5385,8 +5545,8 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
 "Ck" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating"
+/turf/simulated/floor/concrete{
+	outdoors = 0
 	},
 /area/awaymission/darkrp/tunnel/ghettos)
 "Cn" = (
@@ -5398,6 +5558,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"Cp" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/material/sword/katana,
+/obj/item/clothing/head/fedora,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Cq" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5411,8 +5577,7 @@
 	},
 /area/awaymission/darkrp/outside/center)
 "Cr" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -5482,7 +5647,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
 "CG" = (
 /turf/simulated/floor/carpet/turcarpet,
@@ -5875,8 +6042,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -6010,6 +6176,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"Fq" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazashop)
 "Ft" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/door_assembly,
@@ -6030,8 +6200,14 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/park)
+"FA" = (
+/obj/structure/salvageable/data_os,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "FB" = (
 /obj/machinery/light{
 	dir = 8
@@ -6039,8 +6215,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
 "FD" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
@@ -6055,6 +6230,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"FI" = (
+/obj/structure/bed/chair/sofa/right/brown{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "FJ" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/tunnels/warehouse)
@@ -6099,7 +6280,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "FY" = (
 /obj/structure/window/plastitanium/full,
@@ -6121,8 +6304,7 @@
 /turf/simulated/shuttle/plating,
 /area/awaymission/darkrp/sewers)
 "Ga" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/tunnels/plaza)
@@ -6177,7 +6359,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/center)
 "Gt" = (
 /obj/structure/cable/green{
@@ -6218,8 +6402,7 @@
 /area/awaymission/darkrp/plazahotel)
 "GA" = (
 /obj/random/trash_pile,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -6289,7 +6472,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/center)
 "GM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6394,7 +6579,8 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors{
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/tunnels/suburbs)
 "Hs" = (
@@ -6443,6 +6629,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgas)
+"HI" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/centersidehouse)
 "HJ" = (
 /obj/structure/toilet{
 	dir = 4
@@ -6458,8 +6654,8 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
 "HO" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating"
+/turf/simulated/floor/concrete{
+	outdoors = 0
 	},
 /area/awaymission/darkrp/tunnels/suburbs)
 "HQ" = (
@@ -6477,8 +6673,7 @@
 /area/awaymission/darkrp/ghettowarehouse)
 "HU" = (
 /obj/item/taperoll/police,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -6635,6 +6830,19 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/awaymission/darkrp/sewers)
+"IF" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/reagent_containers/pill/happy{
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/obj/item/weapon/reagent_containers/pill/diet{
+	pixel_y = 2;
+	pixel_x = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "IG" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -6659,7 +6867,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/center)
 "IR" = (
 /turf/simulated/wall/r_wall,
@@ -6712,6 +6922,9 @@
 /obj/structure/sign/warning/high_voltage,
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/subpower)
+"Jk" = (
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/centersidehouse)
 "Jl" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgas)
@@ -6794,8 +7007,7 @@
 /area/awaymission/darkrp/subhouse2)
 "JL" = (
 /obj/random/unidentified_medicine/drug_den,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -6889,8 +7101,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -6954,7 +7165,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "KC" = (
 /obj/machinery/door/airlock,
@@ -7024,8 +7237,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkghetto1)
 "KY" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/tunnel/ghettos)
@@ -7052,8 +7264,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -7209,7 +7420,9 @@
 	},
 /area/awaymission/darkrp/outside/ghetto)
 "LM" = (
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "LO" = (
 /obj/machinery/light{
@@ -7223,8 +7436,49 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
+"LS" = (
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = 8
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = -4
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = -4;
+	pixel_y = 12
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
+"LV" = (
+/obj/machinery/chemical_dispenser/bar_alc/full,
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "LX" = (
 /obj/structure/table/rack,
 /obj/item/weapon/cell/device,
@@ -7351,8 +7605,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -7477,10 +7730,11 @@
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
 "Na" = (
-/obj/structure/table/woodentable,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/obj/structure/table/marble,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "Nc" = (
@@ -7515,8 +7769,14 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
+"Ni" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Nm" = (
 /obj/effect/floor_decal/stairs,
 /turf/simulated/floor/tiled,
@@ -7580,7 +7840,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "NC" = (
 /obj/effect/decal/remains,
@@ -7631,6 +7893,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"NN" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "NQ" = (
 /obj/machinery/light{
 	dir = 1
@@ -7657,7 +7924,8 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors{
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/tunnels/warehouse)
 "NW" = (
@@ -7679,15 +7947,14 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazashop)
 "Ob" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subcondo)
 "Oc" = (
 /obj/random/trash,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating"
+/turf/simulated/floor/concrete{
+	outdoors = 0
 	},
 /area/awaymission/darkrp/tunnel/ghettos)
 "Od" = (
@@ -7745,6 +8012,13 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/sewers)
+"Or" = (
+/obj/structure/bed/chair/office/dark{
+	pixel_y = 0;
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Ov" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/plating,
@@ -7767,6 +8041,15 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside)
+"OA" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/random,
+/obj/random,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "OB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/sidewalk/slab{
@@ -7800,7 +8083,6 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "OF" = (
-/obj/structure/table/woodentable,
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -7810,6 +8092,23 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/storage/box/glasses/square{
+	pixel_x = 9;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/glasses/rocks{
+	pixel_y = 1;
+	pixel_x = -6
+	},
+/obj/item/weapon/storage/box/glasses/pint{
+	pixel_y = 11;
+	pixel_x = -6
+	},
+/obj/item/weapon/storage/box/glasses/meta/metapint{
+	pixel_y = 11;
+	pixel_x = 9
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
@@ -7833,7 +8132,8 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors{
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/tunnels/park)
 "OL" = (
@@ -7892,13 +8192,17 @@
 /area/awaymission/darkrp/outside/downtown)
 "Pa" = (
 /obj/structure/fence/corner,
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "Pb" = (
 /obj/structure/fence/corner{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "Pd" = (
 /obj/machinery/door/airlock,
@@ -7916,7 +8220,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "Po" = (
 /obj/structure/table/steel,
@@ -7952,8 +8258,7 @@
 /area/awaymission/darkrp/sewers)
 "Px" = (
 /obj/structure/fence,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -8087,7 +8392,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "Qn" = (
 /obj/item/weapon/tool/crowbar,
@@ -8098,7 +8405,9 @@
 /area/awaymission/darkrp/outside)
 "Qp" = (
 /obj/structure/flora/grass/both,
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
 "Qq" = (
 /turf/simulated/wall/r_wall,
@@ -8248,8 +8557,19 @@
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
 "Re" = (
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
+"Ri" = (
+/obj/structure/sink{
+	dir = 1
+	},
+/obj/structure/mirror{
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/centersidehouse)
 "Ro" = (
 /obj/structure/bed/chair/oldsofa/right{
 	dir = 8
@@ -8450,9 +8770,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"SM" = (
+/obj/structure/bed/chair/sofa/left/brown{
+	dir = 8;
+	layer = 2.9
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "SO" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
@@ -8509,6 +8835,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
+"Tc" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/centersidehouse)
 "Td" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8567,6 +8899,14 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
+"To" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/action_figure{
+	pixel_y = -3
+	},
+/obj/item/glass_jar,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Tp" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/carpet/purcarpet,
@@ -8655,8 +8995,7 @@
 "TV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/ghetto)
@@ -8727,14 +9066,12 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
 "Up" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/center)
@@ -8789,6 +9126,22 @@
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
+"UB" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/action_figure{
+	pixel_x = 4;
+	pixel_y = -5
+	},
+/obj/random/action_figure{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/random/action_figure{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "UC" = (
 /obj/machinery/light{
 	dir = 4
@@ -8894,8 +9247,7 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -8971,7 +9323,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "VP" = (
 /turf/simulated/wall/r_wall,
@@ -8980,7 +9334,9 @@
 /obj/structure/fence/corner{
 	dir = 10
 	},
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/suburbs)
 "VU" = (
 /obj/machinery/door/window/brigdoor/westleft{
@@ -9164,8 +9520,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -9300,8 +9655,7 @@
 /area/awaymission/darkrp/parkmaint)
 "XF" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
@@ -9342,7 +9696,9 @@
 "XQ" = (
 /obj/item/weapon/gun/projectile/colt,
 /obj/item/ammo_magazine/m45,
-/turf/simulated/floor/outdoors/grass/heavy,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/downtown)
 "XR" = (
 /turf/simulated/wall/r_wall,
@@ -9374,6 +9730,10 @@
 /obj/effect/decal/remains,
 /turf/simulated/floor/outdoors/newdirt,
 /area/awaymission/darkrp/sewers)
+"XY" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "Yd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -9405,8 +9765,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
@@ -9506,8 +9865,7 @@
 /area/awaymission/darkrp/outside/center)
 "Yq" = (
 /obj/structure/fence,
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
@@ -9516,8 +9874,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazashop)
 "Yt" = (
-/turf/simulated/floor/plating{
-	icon_state = "asteroidplating";
+/turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/awaymission/darkrp/tunnels/park)
@@ -9544,6 +9901,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"YL" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/rack/shelf,
+/obj/structure/table/rack/shelf,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/random/soap,
+/obj/random/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/centersidehouse)
 "YM" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9640,7 +10010,8 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors{
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/tunnels/park)
 "Zc" = (
@@ -9706,12 +10077,18 @@
 /area/awaymission/darkrp/outside)
 "Zr" = (
 /obj/structure/flora/grass/both,
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
 /area/awaymission/darkrp/outside/ghetto)
 "Zs" = (
 /obj/item/weapon/storage/bag/cash,
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazabunker)
+"Zu" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Zv" = (
 /obj/item/weapon/weldingtool/electric,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -13751,7 +14128,7 @@ lz
 kZ
 uZ
 pL
-BZ
+MF
 MF
 lz
 Cr
@@ -14624,7 +15001,7 @@ zR
 Iv
 UU
 Iv
-Iv
+Co
 Iv
 Iv
 MT
@@ -15111,7 +15488,7 @@ Iv
 xB
 Iv
 Iv
-Co
+Iv
 Iv
 MT
 NA
@@ -17671,9 +18048,9 @@ fg
 rC
 QJ
 QJ
-QJ
-QJ
-QJ
+uD
+XY
+XY
 QJ
 Ly
 QJ
@@ -17687,7 +18064,7 @@ Ck
 Ck
 mg
 jN
-aW
+IX
 aW
 aW
 aW
@@ -17835,7 +18212,7 @@ ru
 rC
 rC
 rC
-Ly
+LS
 QJ
 Ly
 QJ
@@ -17997,7 +18374,7 @@ QJ
 QJ
 QJ
 rC
-Ly
+LV
 QJ
 Ly
 QJ
@@ -18659,7 +19036,7 @@ FD
 FD
 CA
 jN
-aW
+IX
 aW
 aW
 aW
@@ -19308,9 +19685,9 @@ FD
 CA
 jN
 jN
-aW
+vn
 jN
-aW
+vn
 jN
 jN
 jN
@@ -19469,7 +19846,7 @@ FD
 FD
 CA
 jN
-aW
+cd
 aW
 aW
 aW
@@ -25326,9 +25703,9 @@ gq
 gq
 gq
 AW
-gj
-gj
-gj
+ba
+ba
+ba
 gj
 Kb
 Lt
@@ -25472,12 +25849,12 @@ Up
 Up
 NU
 gq
-Gz
-Gz
+hR
+hR
 QX
 gq
-yF
-yF
+fd
+fd
 BA
 gq
 wY
@@ -25502,10 +25879,10 @@ Lt
 ZJ
 gW
 gW
-gj
-gj
-gj
-gj
+ba
+ba
+ba
+ba
 Aj
 pf
 pf
@@ -26607,7 +26984,7 @@ Up
 NU
 gq
 yF
-yF
+fd
 BA
 gq
 Gz
@@ -26772,7 +27149,7 @@ yF
 yF
 QH
 gq
-Gz
+hR
 Gz
 Jf
 gq
@@ -26934,7 +27311,7 @@ yF
 yF
 eo
 gq
-Gz
+hR
 Gz
 iu
 gq
@@ -27443,7 +27820,7 @@ oN
 oN
 oN
 RT
-RT
+An
 oN
 oN
 oN
@@ -28724,7 +29101,7 @@ qC
 qC
 FN
 FN
-qC
+Fq
 FN
 FN
 BE
@@ -29690,8 +30067,8 @@ zo
 Uc
 Uc
 jE
-Uc
-Uc
+eg
+NN
 uo
 Xa
 Xa
@@ -29850,10 +30227,10 @@ Uc
 Uc
 uo
 Uc
+Ni
 Uc
-Uc
-Uc
-Uc
+Or
+kh
 uo
 Xa
 Xa
@@ -30011,11 +30388,11 @@ Mj
 jW
 fV
 uo
-Uc
-Uc
-Uc
-Uc
-Uc
+eh
+eh
+oH
+kw
+IF
 uo
 Xa
 Xa
@@ -30173,11 +30550,11 @@ Uc
 Uc
 cO
 uo
-Uc
-Uc
-Uc
-Uc
-Uc
+eh
+eh
+bf
+mm
+FA
 uo
 Xa
 Xa
@@ -30335,8 +30712,8 @@ Uc
 Uc
 Uc
 uo
-Uc
-Uc
+eh
+eh
 Uc
 Uc
 Uc
@@ -30497,7 +30874,7 @@ Uc
 Uc
 Uc
 uo
-Uc
+UB
 Uc
 Uc
 Uc
@@ -30659,11 +31036,11 @@ Uc
 Uc
 Uc
 uo
-Uc
+To
 Uc
 AA
-Uc
-Uc
+Cp
+vz
 uo
 Xa
 Xa
@@ -30982,12 +31359,12 @@ ay
 Uc
 Uc
 Uc
-Uc
-Uc
-jE
-Uc
-Uc
-Uc
+BZ
+BZ
+OA
+uo
+HI
+YL
 uo
 Xa
 Xa
@@ -31147,9 +31524,9 @@ Uc
 Uc
 Uc
 Uc
-Uc
-Uc
-Uc
+zo
+Jk
+Jk
 uo
 Xa
 Xa
@@ -31309,9 +31686,9 @@ Uc
 Uc
 Uc
 Uc
-Uc
-Uc
-Uc
+uo
+rK
+Jk
 uo
 Xa
 Xa
@@ -31465,15 +31842,15 @@ HO
 HO
 Hp
 ay
+Zu
+Zu
 Uc
 Uc
 Uc
 Uc
-Uc
-Uc
-Uc
-Uc
-Uc
+uo
+Jk
+Ri
 uo
 Xa
 Xa
@@ -31627,15 +32004,15 @@ HO
 HO
 Hp
 ay
+FI
+BS
+SM
 Uc
 Uc
 Uc
-Uc
-Uc
-Uc
-Uc
-Uc
-Uc
+uo
+Tc
+Jk
 uo
 Xa
 Xa
