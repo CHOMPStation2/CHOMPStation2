@@ -256,6 +256,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		if(check_rights((R_ADMIN|R_MOD|R_EVENT),0,C))
 			to_chat(C,msg)
 			C << 'sound/machines/printer.ogg'
+	sender.client << 'sound/machines/printer.ogg' //CHOMPEdit - The pain must be felt
 
 	// VoreStation Edit Start
 	var/faxid = export_fax(sent)
