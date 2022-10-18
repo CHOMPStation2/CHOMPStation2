@@ -14,6 +14,7 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
+	var/offset_override = FALSE //CHOMPEdit
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 
@@ -28,6 +29,7 @@
 	S["weight_gain"]		>> pref.weight_gain
 	S["weight_loss"]		>> pref.weight_loss
 	S["fuzzy"]				>> pref.fuzzy
+	S["offset_override"]	>> pref.offset_override //CHOMPEdit
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
 
@@ -37,6 +39,7 @@
 	S["weight_gain"]		<< pref.weight_gain
 	S["weight_loss"]		<< pref.weight_loss
 	S["fuzzy"]				<< pref.fuzzy
+	S["offset_override"]	<< pref.offset_override //CHOMPEdit
 	S["voice_freq"]			<< pref.voice_freq
 	S["voice_sound"]		<< pref.voice_sound
 
@@ -46,6 +49,7 @@
 	pref.weight_gain		= sanitize_integer(pref.weight_gain, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_gain))
 	pref.weight_loss		= sanitize_integer(pref.weight_loss, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_loss))
 	pref.fuzzy				= sanitize_integer(pref.fuzzy, 0, 1, initial(pref.fuzzy))
+	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override)) //CHOMPEdit
 	if(pref.voice_freq != 0)
 		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.fuzzy))
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
@@ -56,6 +60,7 @@
 	character.weight_gain		= pref.weight_gain
 	character.weight_loss		= pref.weight_loss
 	character.fuzzy				= pref.fuzzy
+	character.offset_override	= pref.offset_override //CHOMPEdit
 	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
 	if(!pref.voice_sound)
@@ -95,6 +100,7 @@
 	. += "<br>"
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
+	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
 //	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Voice:</b></a><br>"	Maybe later
@@ -116,6 +122,10 @@
 
 	else if(href_list["toggle_fuzzy"])
 		pref.fuzzy = pref.fuzzy ? 0 : 1;
+		return TOPIC_REFRESH_UPDATE_PREVIEW
+
+	else if(href_list["toggle_offset_override"]) //CHOMPEdit
+		pref.offset_override = pref.offset_override ? 0 : 1;
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["weight"])

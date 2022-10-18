@@ -353,6 +353,15 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
+		var/obj/item/capture_crystal/CC = thing
+		if(CC.bound_mob && desc)
+			if(CC.bound_mob in CC.contents)
+				var/formatted_desc
+				formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
+				formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
+				formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+				to_chat(CC.bound_mob, "<span class='notice'><B>[formatted_desc]</B></span>")
 
 	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)

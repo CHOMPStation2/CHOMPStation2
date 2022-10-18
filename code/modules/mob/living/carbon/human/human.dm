@@ -1149,6 +1149,7 @@
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
+	center_offset = species.center_offset //CHOMPEdit
 
 	if(LAZYLEN(descriptors))
 		descriptors = null

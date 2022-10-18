@@ -299,6 +299,8 @@
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
 	P.autotransferable = src.autotransferable
+	P.vore_sprite_color = src.vore_sprite_color
+	P.vore_sprite_multiply = src.vore_sprite_multiply
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -355,6 +357,8 @@
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
 	autotransferable = P.autotransferable
+	vore_sprite_color = P.vore_sprite_color
+	vore_sprite_multiply = P.vore_sprite_multiply
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
@@ -1051,6 +1055,14 @@
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
 	fuzzy = !fuzzy
+	update_transform() //CHOMPEdit
+
+/mob/living/proc/center_offset() //CHOMPAdd
+	set name = "Switch center offset mode"
+	set category = "Preferences"
+	set desc = "Switch sprite center offset to fix even/odd symmetry."
+	offset_override = !offset_override
+	update_transform()
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
