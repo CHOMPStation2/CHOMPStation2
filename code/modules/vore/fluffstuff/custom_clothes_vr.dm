@@ -2477,12 +2477,8 @@ Departamental Swimsuits, for general use
 	desc = "Cerise's hard-won belt from her glory days. Her skill might have waned since then, but her renown lives on."
 	icon_state = "champion"
 	item_state = null // i swear to god this works - hatterhat
-<<<<<<< HEAD
-	
-End CHOMP Removal*/
-=======
-
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	
 //Sudate: Shea Corbett
 /obj/item/clothing/under/fluff/greek_dress
     name = "mytilenean dress"
@@ -2507,6 +2503,3 @@ End CHOMP Removal*/
     item_state = "freyrmask_mob"
     item_state_slots = null
     body_parts_covered = FACE
-
-
->>>>>>> bb74c593e1... Merge pull request #13920 from Heroman3003/freyrmask
