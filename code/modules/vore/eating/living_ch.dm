@@ -6,7 +6,7 @@
 	var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
 	var/vore_footstep_chance = 0
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
-
+	var/mute_entry = FALSE				//Toggleable vorgan entry logs.
 	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
 
 	// CHOMP vore icons refactor (Now on living)
@@ -270,3 +270,9 @@
 			return TRUE
 	to_chat(src, "<span class='warning'>There is no suitable belly for rubs.</span>")
 	return FALSE
+
+/mob/living/proc/mute_entry()
+	set name = "Mute Vorgan Entrance"
+	set category = "Preferences"
+	set desc = "Mute the chatlog messages when something enters a vore belly."
+	mute_entry = !mute_entry
