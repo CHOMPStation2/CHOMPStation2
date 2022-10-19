@@ -2503,3 +2503,5 @@ Departamental Swimsuits, for general use
     item_state = "freyrmask_mob"
     item_state_slots = null
     body_parts_covered = FACE
+
+End CHOMP Removal*/
