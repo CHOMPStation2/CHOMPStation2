@@ -1,7 +1,7 @@
 ///////////////////// Simple Animal /////////////////////
 /mob/living/simple_mob
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
-	var/list/prey_excludes = list()		//For excluding people from being eaten.
+	var/list/prey_excludes = null		//For excluding people from being eaten.
 
 /mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
 	if(vore_active && !voremob_loaded)
@@ -107,8 +107,8 @@
 			user.visible_message("<span class='info'>[user] swats [src] with [O]!</span>")
 			release_vore_contents()
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
-				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.
-					prey_excludes += L
+				if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
+					LAZYSET(prey_excludes, L, world.time)
 					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
 	else if(istype(O, /obj/item/device/healthanalyzer))
 		var/healthpercent = health/maxHealth*100
@@ -119,6 +119,7 @@
 /mob/living/simple_mob/proc/removeMobFromPreyExcludes(weakref/target)
 	if(isweakref(target))
 		var/mob/living/L = target.resolve()
+<<<<<<< HEAD
 		if(L)
 			LAZYREMOVE(prey_excludes, L)
 
@@ -161,3 +162,6 @@
 			adjustCloneLoss(-heal_amount)
 			return
 		adjustCloneLoss(-getCloneLoss())
+=======
+		LAZYREMOVE(prey_excludes, L) // It's fine to remove a null from the list if we couldn't resolve L
+>>>>>>> ebb3dff71a... Merge pull request #13949 from VOREStation/preyexclude
