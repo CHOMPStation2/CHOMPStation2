@@ -119,9 +119,7 @@
 /mob/living/simple_mob/proc/removeMobFromPreyExcludes(weakref/target)
 	if(isweakref(target))
 		var/mob/living/L = target.resolve()
-<<<<<<< HEAD
-		if(L)
-			LAZYREMOVE(prey_excludes, L)
+		LAZYREMOVE(prey_excludes, L) // It's fine to remove a null from the list if we couldn't resolve L
 
 /mob/living/simple_mob/proc/nutrition_heal()
 	set name = "Nutrition Heal"
@@ -162,6 +160,3 @@
 			adjustCloneLoss(-heal_amount)
 			return
 		adjustCloneLoss(-getCloneLoss())
-=======
-		LAZYREMOVE(prey_excludes, L) // It's fine to remove a null from the list if we couldn't resolve L
->>>>>>> ebb3dff71a... Merge pull request #13949 from VOREStation/preyexclude
