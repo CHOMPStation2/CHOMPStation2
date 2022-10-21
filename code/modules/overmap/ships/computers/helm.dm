@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	var/speedlimit = 1/(20 SECONDS) //top speed for autopilot, 5
 	var/accellimit = 0.001 //manual limiter for acceleration
 	req_one_access = list(access_pilot) //VOREStation Edit
-	ai_control = true	//ChompStation Edit - Not an issue here
+	ai_control = TRUE	//ChompStation Edit - Not an issue here
 
 // fancy sprite
 /obj/machinery/computer/ship/helm/adv
