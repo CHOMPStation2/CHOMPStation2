@@ -10,7 +10,7 @@
 
 	var/skip_act = FALSE
 	var/tgui_subtemplate = "ShuttleControlConsoleDefault"
-	var/ai_control = TRUE	//ChompStation Edit - Unnecessary nuisance that causes issues.
+	var/ai_control = TRUE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help //ChompStation Edit: Flying is better prevented by restricting the helm console if wanted. This is only an unnecessary nuisance that also breaks various other uses for the shuttle console.
 
 /obj/machinery/computer/shuttle_control/attack_hand(user as mob)
 	if(..(user))
