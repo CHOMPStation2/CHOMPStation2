@@ -10,10 +10,16 @@
 
 	var/skip_act = FALSE
 	var/tgui_subtemplate = "ShuttleControlConsoleDefault"
+	var/ai_control = TRUE	//ChompStation Edit - Unnecessary nuisance that causes issues.
 
 /obj/machinery/computer/shuttle_control/attack_hand(user as mob)
 	if(..(user))
 		return
+	//VOREStation Addition Start
+	if(!ai_control && issilicon(user))
+		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		return TRUE
+	//VOREStation Addition End
 
 	//src.add_fingerprint(user)	//shouldn't need fingerprints just for looking at it.
 	if(!allowed(user))
