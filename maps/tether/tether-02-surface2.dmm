@@ -33068,6 +33068,7 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 "bCs" = (
 /obj/effect/floor_decal/techfloor{
@@ -33083,6 +33084,12 @@
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/fish_farm)
 =======
+=======
+"byX" = (
+/mob/living/simple_mob/vore/pakkun/snapdragon/snappy,
+/turf/simulated/floor/beach/sand/desert,
+/area/tether/surfacebase/fish_farm)
+>>>>>>> fd12df42f2... Merge pull request #13966 from Runa-Dacino/Pakkun-tether-snappy
 "bCs" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -43976,7 +43983,7 @@ ayw
 azq
 azq
 ayw
-axR
+byX
 aCr
 ayw
 azq
