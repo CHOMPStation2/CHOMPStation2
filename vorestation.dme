@@ -4567,6 +4567,8 @@
 #include "modular_chomp\code\modules\reagents\reagents\food_drinks.dm"
 #include "modular_chomp\code\modules\research\designs\power_cells.dm"
 #include "modular_chomp\code\modules\research\designs\weapons.dm"
+#include "modular_chomp\code\modules\shieldgen\shield_capacitor.dm"
+#include "modular_chomp\code\modules\shieldgen\shield_gen.dm"
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
