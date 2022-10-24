@@ -1200,9 +1200,11 @@
 			var/turf/T = loc
 			light_amount = T.get_lumcount() / 10
 		adjust_nutrition(light_amount)
-	//CHOMPEdit End
 	// nutrition decrease
-	if (nutrition > 0 && stat != DEAD)
+	if(nutrition <= 0 &&  species.shrinks && size_multiplier > RESIZE_TINY)
+		nutrition = 0.1
+	//CHOMPEdit End
+	if(nutrition > 0 && stat != DEAD)
 		var/nutrition_reduction = species.hunger_factor
 
 		for(var/datum/modifier/mod in modifiers)
