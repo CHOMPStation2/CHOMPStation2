@@ -425,7 +425,7 @@
 	if(!istype(tasted))
 		return
 
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT)) //CHOMPEdit
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -465,7 +465,7 @@
 
 	if(!istype(smelled))
 		return
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT)) //CHOMPEdit
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
