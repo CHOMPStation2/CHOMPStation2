@@ -113,6 +113,9 @@
 
 	if(annihilate)
 		annihilate_bounds(old_T, centered, orientation)
+	if(old_T) //CHOMPAdd x 3
+		for(var/obj/effect/zone_divider/ZD in old_T)
+			qdel(ZD)
 
 	var/list/bounds = SSmapping.maploader.load_map(file(mappath), T.x, T.y, T.z, cropMap=TRUE, orientation = orientation)
 	if(!bounds)
