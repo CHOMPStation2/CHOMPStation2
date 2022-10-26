@@ -480,6 +480,9 @@
 	icon_state = "fatdrake_s"
 	extra_overlay = "fatdrake_markings"
 	icon_sprite_tag = "drake"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 6
 
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"
