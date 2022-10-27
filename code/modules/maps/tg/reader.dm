@@ -421,6 +421,8 @@ GLOBAL_DATUM_INIT(_preloader, /dmm_suite/preloader, new)
 	if(istype(crds, /turf/simulated/floor)) //CHOMPAdd: Wilderness ceilings!
 		var/turf/simulated/floor/F = crds
 		if(istype(F.loc, /area/submap) && F.outdoors != 1)
+			for(var/obj/effect/zone_divider/ZD in F.contents)
+				qdel(ZD)
 			var/turf/above = GetAbove(F)
 			if(above && istype(above, /turf/simulated/open))
 				above.ChangeTurf(get_base_turf_by_area(F), FALSE, TRUE) //CHOMPAdd End
