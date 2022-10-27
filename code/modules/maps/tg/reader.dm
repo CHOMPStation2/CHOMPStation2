@@ -422,7 +422,7 @@ GLOBAL_DATUM_INIT(_preloader, /dmm_suite/preloader, new)
 		var/turf/simulated/floor/F = crds
 		if(istype(F.loc, /area/submap))
 			var/turf/B = get_base_turf(F.z)
-			if(istype(B, /turf_simulated)) //If I have to force standardized POI atmos, I will.
+			if(istype(B, /turf/simulated)) //If I have to force standardized POI atmos, I will.
 				F.oxygen = B.oxygen
 				F.nitrogen = B.nitrogen
 				F.temperature = B.temperature
