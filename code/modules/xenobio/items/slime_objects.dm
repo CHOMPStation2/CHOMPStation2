@@ -141,9 +141,10 @@
 	light_range = 6
 	on = 1 //Bio-luminesence has one setting, on.
 	power_use = 0
+	light_system = STATIC_LIGHT
 
-/obj/item/device/flashlight/slime/New()
-	..()
+/obj/item/device/flashlight/slime/Initialize()
+	.=..()
 	set_light(light_range, light_power, light_color)
 
 /obj/item/device/flashlight/slime/update_brightness()
