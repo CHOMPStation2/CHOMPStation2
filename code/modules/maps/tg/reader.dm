@@ -423,7 +423,7 @@ GLOBAL_DATUM_INIT(_preloader, /dmm_suite/preloader, new)
 		if(istype(F.loc, /area/submap) && F.outdoors != 1)
 			var/turf/above = GetAbove(F)
 			if(above && istype(above, /turf/simulated/open))
-				above.ChangeTurf(get_base_turf_by_area(F), FALSE, TRUE)
+				above.ChangeTurf(get_base_turf_by_area(F), FALSE, TRUE) //CHOMPAdd End
 
 /dmm_suite/proc/create_atom(path, crds)
 	set waitfor = FALSE
