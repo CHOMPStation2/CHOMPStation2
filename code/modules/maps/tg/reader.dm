@@ -420,12 +420,18 @@ GLOBAL_DATUM_INIT(_preloader, /dmm_suite/preloader, new)
 		A.set_dir(turn(A.dir, orientation))
 	if(istype(crds, /turf/simulated/floor)) //CHOMPAdd: Wilderness ceilings!
 		var/turf/simulated/floor/F = crds
-		if(istype(F.loc, /area/submap) && F.outdoors != 1)
-			for(var/obj/effect/zone_divider/ZD in F.contents)
-				qdel(ZD)
-			var/turf/above = GetAbove(F)
-			if(above && istype(above, /turf/simulated/open))
-				above.ChangeTurf(get_base_turf_by_area(F), FALSE, TRUE) //CHOMPAdd End
+		if(istype(F.loc, /area/submap))
+			var/turf/B = get_base_turf(F.z)
+			if(istype(B, /turf_simulated)) //If I have to force standardized POI atmos, I will.
+				F.oxygen = B.oxygen
+				F.nitrogen = B.nitrogen
+				F.temperature = B.temperature
+			if(F.outdoors != 1)
+				for(var/obj/effect/zone_divider/ZD in F.contents)
+					qdel(ZD)
+				var/turf/above = GetAbove(F)
+				if(above && istype(above, /turf/simulated/open))
+					above.ChangeTurf(get_base_turf_by_area(F), FALSE, TRUE) //CHOMPAdd End
 
 /dmm_suite/proc/create_atom(path, crds)
 	set waitfor = FALSE
