@@ -159,6 +159,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		// CHOMPEdit Start Loafy Time
 		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
 			update_tail_showing()
+			M.Scale(desired_scale_x, desired_scale_y)
 		else
 			var/randn = rand(1, 2)
 			if(randn <= 1) // randomly choose a rotation
@@ -169,7 +170,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				M.Translate(13,-22)
 			else
 				M.Translate(1,-6)
-		M.Scale(desired_scale_y, desired_scale_x)
+			M.Scale(desired_scale_y, desired_scale_x)
 		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
