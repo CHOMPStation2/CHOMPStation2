@@ -4330,6 +4330,7 @@
 #include "code\modules\vore\fluffstuff\custom_clothes_ch.dm"
 #include "code\modules\vore\fluffstuff\custom_clothes_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_clothes_yw.dm"
+#include "code\modules\vore\fluffstuff\custom_implants_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_items_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_items_yw.dm"
 #include "code\modules\vore\fluffstuff\custom_mecha_vr.dm"

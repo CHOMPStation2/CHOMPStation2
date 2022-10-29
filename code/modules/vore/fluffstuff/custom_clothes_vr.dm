@@ -2478,30 +2478,55 @@ Departamental Swimsuits, for general use
 	icon_state = "champion"
 	item_state = null // i swear to god this works - hatterhat
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
-	
+
 //Sudate: Shea Corbett
 /obj/item/clothing/under/fluff/greek_dress
-    name = "mytilenean dress"
-    desc = "It's a breezy, colorful two-part dress woven from linen, with the top consisting of white linen, and the skirt of rougher, sturdy fabric. It's adorned with a yellow belt and embroidered stripes in the hem, and blue highlights at the sleeves. More notably, however, it exposes the wearer's chest entirely."
+	name = "mytilenean dress"
+	desc = "It's a breezy, colorful two-part dress woven from linen, with the top consisting of white linen, and the skirt of rougher, sturdy fabric. It's adorned with a yellow belt and embroidered stripes in the hem, and blue highlights at the sleeves. More notably, however, it exposes the wearer's chest entirely."
 
-    icon = 'icons/vore/custom_clothes_vr.dmi'
-    icon_state = "greek_dress"
-    worn_state = "greek_dress"
-    rolled_sleeves = 0
-    rolled_down = 0
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "greek_dress"
+	worn_state = "greek_dress"
+	rolled_sleeves = 0
+	rolled_down = 0
 
-    icon_override = 'icons/vore/custom_clothes_vr.dmi'
-    item_state = "greek_dress"
-    body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "greek_dress"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+
 //JadeManique: Freyr
 /obj/item/clothing/mask/fluff/freyr_mask
-    name = "Freyr's Mask"
-    desc = "A pristine white mask with antlers. Its silky to the touch, like porcelain!"
-    icon = 'icons/vore/custom_clothes_vr.dmi'
-    icon_state = "freyrmask"
-    icon_override = 'icons/vore/custom_onmob_vr.dmi'
-    item_state = "freyrmask_mob"
-    item_state_slots = null
-    body_parts_covered = FACE
+	name = "Freyr's Mask"
+	desc = "A pristine white mask with antlers. Its silky to the touch, like porcelain!"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "freyrmask"
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	item_state = "freyrmask_mob"
+	item_state_slots = null
+	body_parts_covered = FACE
+	flags_inv = HIDEFACE
+	item_flags = FLEXIBLEMATERIAL
 
+//codeme: Perrin Kade
+/obj/item/clothing/shoes/fluff/gildedshoes_perrin
+	name = "gilded shoes"
+	desc = "Black shoes with gilding, revealing and comfortable for any wearer!"
+
+	icon_state = "perrinshoes"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+
+/obj/item/clothing/under/fluff/gildedrobe_perrin
+	name = "gilded robe"
+	desc = "Black robe with gilding, revealing and comfortable for any wearer!"
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "perrinrobes"
+	worn_state = "perrinrobes_s"
+	rolled_sleeves = 0
+	rolled_down = 0
+
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	item_state = "perrinrobes_s"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 End CHOMP Removal*/
