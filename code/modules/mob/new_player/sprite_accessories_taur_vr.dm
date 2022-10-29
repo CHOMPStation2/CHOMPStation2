@@ -58,12 +58,13 @@
 	icon_sprite_tag = "wolf"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 4
 
 /datum/sprite_accessory/tail/taur/wolf/fatwolf
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
 	icon_sprite_tag = "wolf"	//This could be modified later.
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c
 	name = "Wolf 3-color (Taur)"
@@ -87,6 +88,7 @@
 	extra_overlay = "fatwolf_markings"
 	extra_overlay2 = "wolf_markings_2"
 	//icon_sprite_tag = "fatwolf2c"
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
@@ -94,12 +96,14 @@
 	extra_overlay = "synthwolf_markings"
 	extra_overlay2 = "synthwolf_glow"
 	//icon_sprite_tag = "synthwolf"
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/fatsynthwolf
 	name = "Fat SynthWolf dual-color (Taur)"
 	icon_state = "fatsynthwolf_s"
 	extra_overlay = "fatsynthwolf_markings"
 	extra_overlay2 = "fatsynthwolf_glow"
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/skunk
 	name = "Skunk (Taur)"
@@ -190,7 +194,7 @@
 	//icon_sprite_tag = "synthhorse"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 4
 
 /datum/sprite_accessory/tail/taur/cow
 	name = "Cow (Taur)"
@@ -224,7 +228,7 @@
 	icon_sprite_tag = "deer"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 6
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
@@ -249,7 +253,7 @@
 	icon_sprite_tag = "lizard"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 5
 
 /datum/sprite_accessory/tail/taur/lizard/lizard_2c
 	name = "Lizard dual-color (Taur)"
@@ -258,7 +262,7 @@
 	//icon_sprite_tag = "lizard2c"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 5
 
 /datum/sprite_accessory/tail/taur/lizard/fatlizard
 	name = "Fat Lizard (Taur)"
@@ -349,7 +353,7 @@
 	icon_sprite_tag = "feline"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 5
 
 /datum/sprite_accessory/tail/taur/fatfeline
 	name = "Fat Feline (Taur)"
@@ -363,6 +367,8 @@
 	name = "Fat Feline (Taur) (vwag)"
 	icon_state = "fatfeline_s"
 	ani_state = "fatfeline_w"
+	can_loaf = TRUE
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c
 	name = "Feline 3-color (Taur)"
@@ -377,10 +383,11 @@
 	name = "Fat Feline 3-color (Taur)"
 	icon_state = "fatfeline_s"
 	extra_overlay = "fatfeline_markings"
-	extra_overlay2 = "feline_markings_2"
+	extra_overlay2 = "fatfeline_markings_2"
 	//icon_sprite_tag = "fatfeline2c"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
 	name = "SynthFeline dual-color (Taur)"
@@ -390,6 +397,7 @@
 	//icon_sprite_tag = "synthfeline"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/fatsynthfeline
 	name = "Fat SynthFeline dual-color (Taur)"
@@ -398,6 +406,7 @@
 	extra_overlay2 = "fatsynthfeline_glow"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/slug
 	name = "Slug (Taur)"
@@ -493,7 +502,7 @@
 	icon_sprite_tag = "otie"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 5
 
 /datum/sprite_accessory/tail/taur/alraune/alraune_2c
 	name = "Alraune (dual color)"
@@ -600,12 +609,14 @@
 	name = "Feline (wickedtemp) (Taur)"
 	icon_state = "tempest_s"
 	ckeys_allowed = list("wickedtemp")
+	can_loaf = FALSE
 
 //silencedmp5a5: Serdykov Antoz
 /datum/sprite_accessory/tail/taur/wolf/serdy
 	name = "CyberSerdy (silencedmp5a5) (Taur)"
 	icon_state = "serdy_s"
 	ckeys_allowed = list("silencedmp5a5")
+	can_loaf = FALSE
 
 //liquidfirefly: Ariana Scol
 /datum/sprite_accessory/tail/taur/centipede
