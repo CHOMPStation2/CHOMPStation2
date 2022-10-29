@@ -1,3 +1,5 @@
+//Department defines
+#define DEPARTMENT_NONCREW      "Non crew"
 
 //Material defines
 #define MAT_CARPET				"red carpet"

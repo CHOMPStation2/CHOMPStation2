@@ -1,6 +1,7 @@
 /datum/spawnpoint/stationgateway
 	display_name = "Station gateway"
 	msg = "has completed translation from station gateway"
+	disallow_job = list("Non-Crew")
 
 /datum/spawnpoint/stationgateway/New()
 	..()
@@ -9,6 +10,7 @@
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"
 	msg = "has arrived on the station"
+	allow_offmap_spawn = TRUE
 
 /datum/spawnpoint/vore/pred
 	display_name = "Vorespawn - Pred"
@@ -17,3 +19,12 @@
 /datum/spawnpoint/vore/New()
 	..()
 	turfs = latejoin
+
+/datum/spawnpoint/plainspath
+	display_name = "Sif plains"
+	msg = "has checked in at the plains gate"
+	restrict_job = list("Non-Crew")
+
+/datum/spawnpoint/plainspath/New()
+	..()
+	turfs = latejoin_plainspath
