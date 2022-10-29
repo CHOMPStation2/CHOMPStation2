@@ -169,7 +169,7 @@
 	icon_sprite_tag = "horse"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+	loaf_offset = 4
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
@@ -194,7 +194,7 @@
 	//icon_sprite_tag = "synthhorse"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 4
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/cow
 	name = "Cow (Taur)"
