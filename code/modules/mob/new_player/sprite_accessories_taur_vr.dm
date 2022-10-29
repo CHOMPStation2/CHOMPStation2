@@ -86,7 +86,7 @@
 	name = "Fat Wolf 3-color (Taur)"
 	icon_state = "fatwolf_s"
 	extra_overlay = "fatwolf_markings"
-	extra_overlay2 = "wolf_markings_2"
+	extra_overlay2 = "fatwolf_markings_2"
 	//icon_sprite_tag = "fatwolf2c"
 	loaf_offset = 3
 
