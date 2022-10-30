@@ -892,9 +892,6 @@
 	icon = 'icons/mob/human_races/markings_vr.dmi'
 	icon_state = "perrinmarkings"
 	color_blend_mode = ICON_MULTIPLY
-<<<<<<< HEAD
-	body_parts = list(BP_HEAD,BP_L_ARM,BP_L_HAND,BP_R_ARM,BP_R_HAND,BP_L_LEG,BP_L_FOOT,BP_R_LEG,BP_R_FOOT)
-=======
 	body_parts = list(BP_HEAD,BP_L_ARM,BP_L_HAND,BP_R_ARM,BP_R_HAND,BP_L_LEG,BP_L_FOOT,BP_R_LEG,BP_R_FOOT)
 
 /datum/sprite_accessory/marking/vr_tesh_beak
@@ -917,4 +914,3 @@
 	icon_state = "crabclaws"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_HAND,BP_R_HAND)
->>>>>>> 54b6e02588... Merge pull request #14014 from Heroman3003/markings-wings
