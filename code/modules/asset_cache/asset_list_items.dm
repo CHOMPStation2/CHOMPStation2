@@ -473,6 +473,9 @@
 	for(var/i = 1 to 4)
 		assets["bottle-[i].png"] = icon('icons/obj/chemical.dmi', "bottle-[i]")
 
+	for(var/i = 1 to 4) // CHOMPedit
+		assets["patch[i].png"] = icon('icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
+
 	for(var/asset_name in assets)
 		register_asset(asset_name, assets[asset_name])
 
