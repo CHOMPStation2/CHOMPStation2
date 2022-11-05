@@ -26,7 +26,7 @@
 
 /obj/item/stack/material/concrete
 	name = "concrete brick"
-	icon_state = "brick"
+	icon_state = "sheet-brick"
 	default_type = "concrete"
 	no_variants = FALSE
 	apply_colour = 1
