@@ -47,6 +47,8 @@
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
 
+	nom_mob = TRUE
+
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
 	desc = "Classification: S Draconis uncia\

@@ -57,6 +57,7 @@
 	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
 	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
+	var/nom_mob = FALSE //If a mob is meant to be hostile for vore purposes but is otherwise not hostile, if true makes certain AI ignore the mob
 
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
 
