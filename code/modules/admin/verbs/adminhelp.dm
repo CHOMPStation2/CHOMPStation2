@@ -239,10 +239,17 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 /datum/admin_help/proc/FullMonty(ref_src)
 	if(!ref_src)
 		ref_src = "\ref[src]"
+<<<<<<< HEAD
 	if(initiator && initiator.mob) //CHOMPEdit Start
 		. = ADMIN_FULLMONTY_NONAME(initiator.mob)
 	else
 		. = "Initiator disconnected." //CHOMPEdit End
+=======
+	if(initiator && initiator.mob)
+		. = ADMIN_FULLMONTY_NONAME(initiator.mob)
+	else
+		. = "Initiator disconnected."
+>>>>>>> 318629da8e... Merge pull request #14037 from ItsSelis/patch-6
 	if(state == AHELP_ACTIVE)
 		. += ClosureLinks(ref_src)
 
