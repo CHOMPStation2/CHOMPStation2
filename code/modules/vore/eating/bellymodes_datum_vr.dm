@@ -29,15 +29,20 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 	//Person just died in guts!
 	if(L.stat == DEAD)
-		if(L.is_preference_enabled(/datum/client_preference/digestion_noises))
+		if(!L.digestion_in_progress) //CHOMPEdit Start
+			if(L.is_preference_enabled(/datum/client_preference/digestion_noises))
+				if(!B.fancy_vore)
+					SEND_SOUND(L, sound(get_sfx("classic_death_sounds")))
+				else
+					SEND_SOUND(L, sound(get_sfx("fancy_death_prey")))
+			B.handle_digestion_death(L)
 			if(!B.fancy_vore)
-				SEND_SOUND(L, sound(get_sfx("classic_death_sounds")))
-			else
-				SEND_SOUND(L, sound(get_sfx("fancy_death_prey")))
-		B.handle_digestion_death(L)
-		if(!B.fancy_vore)
-			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
-		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
+				return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
+			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
+		else
+			B.handle_digestion_death(L)
+	if(!L)
+		return //CHOMPEdit End
 
 		//CHOMPEDIT: Parasitic digestion immunity hook, used to be a synx istype check but this is more optimized.
 	if(L.parasitic)
@@ -68,7 +73,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/actual_tox = L.getToxLoss() - old_tox
 	var/actual_clone = L.getCloneLoss() - old_clone
 	var/damage_gain = (actual_brute + actual_burn + actual_oxy/2 + actual_tox + actual_clone*2)*(B.nutrition_percent / 100)
-
+	if(B.slow_digestion) //CHOMPEdit
+		damage_gain = damage_gain * 0.5
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 	if(isrobot(B.owner))

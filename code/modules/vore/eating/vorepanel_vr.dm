@@ -1000,6 +1000,9 @@
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
 			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on
+			host.vore_selected.slow_digestion = FALSE //CHOMPAdd
+			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY) //CHOMPAdd
+				host.vore_selected.slow_digestion = TRUE //CHOMPAdd
 			. = TRUE
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()

@@ -46,7 +46,21 @@
 			spawn(refill_cooldown)
 				for(var/atom/movable/F in bowl_contents)
 					if(F.loc == src)
-						F.forceMove(exit_landmark)
+						var/list/bs_things = list()
+						var/bs_error = FALSE
+						for(var/item in bluespace_item_types)
+							if(istype(F, item))
+								bs_error = TRUE
+							else
+								bs_things |= F.search_contents_for(item)
+						if(bs_error || LAZYLEN(bs_things))
+							bs_things.Cut()
+							bs_error = rand(1, 100)
+							var/list/posturfs = circlerangeturfs(exit_landmark,bs_error)
+							var/destturf = safepick(posturfs)
+							F.forceMove(destturf)
+						else
+							F.forceMove(exit_landmark)
 				bowl_contents.Cut()
 				refilling = FALSE
 			return

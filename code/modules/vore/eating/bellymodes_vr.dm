@@ -294,6 +294,33 @@
 	return did_an_item
 
 /obj/belly/proc/handle_digestion_death(mob/living/M)
+	if(slow_digestion) //CHOMPAdd Start: Gradual corpse digestion
+		if(!M.digestion_in_progress)
+			M.digestion_in_progress = TRUE
+			if(M.health > -36 || (ishuman(M) && M.health > -136))
+				to_chat(M, "<span class='notice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
+		if(M.health < M.maxHealth * -1) //Siplemobs etc
+			if(ishuman(M))
+				if(M.health < (M.maxHealth * -1) -100) //Spacemans can go much deeper. Jank but maxHealth*-2 doesn't work with flat standard -100hp death threshold.
+					if(slow_brutal)
+						var/mob/living/carbon/human/P = M
+						var/vitals_only = TRUE
+						for(var/obj/item/organ/external/E in P.organs)
+							if(!E.vital)
+								vitals_only = FALSE
+								if(!LAZYLEN(E.children))
+									E.droplimb(TRUE, DROPLIMB_EDGE)
+									qdel(E)
+									break
+							continue
+						if(vitals_only)
+							M.digestion_in_progress = FALSE
+					else
+						M.digestion_in_progress = FALSE
+			else
+				M.digestion_in_progress = FALSE
+		if(M.digestion_in_progress)
+			return //CHOMPAdd End
 	var/digest_alert_owner = pick(digest_messages_owner)
 	var/digest_alert_prey = pick(digest_messages_prey)
 	var/compensation = M.maxHealth / 5 //Dead body bonus.

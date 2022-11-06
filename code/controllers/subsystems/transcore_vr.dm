@@ -74,9 +74,13 @@ SUBSYSTEM_DEF(transcore)
 		//In a human
 		BITSET(H.hud_updateflag, BACKUP_HUD)
 
-		if(H == imp.imp_in && H.mind && H.stat < DEAD)
-			db.m_backup(H.mind,H.nif)
-			persist_nif_data(H)
+		if(H == imp.imp_in && H.stat < DEAD) //CHOMPEdit Start
+			if(H.mind)
+				db.m_backup(H.mind,H.nif)
+				persist_nif_data(H)
+			else if(H.vr_link && H.vr_link.mind)
+				db.m_backup(H.vr_link.mind,H.nif)
+				persist_nif_data(H) //CHOMPEdit End
 
 		if(MC_TICK_CHECK)
 			return

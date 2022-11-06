@@ -982,6 +982,9 @@
 				<h1>Food for Dummies</h1>
 				Here is a guide on basic food recipes and also how to not poison your customers accidentally.
 
+				<h2>((OOC link for updated working recipes here))</h2>
+				vore-station.net/infodump/recipes_food.html
+
 				<h3>Basics:</h3>
 				Knead an egg and some flour to make dough. Bake that to make a bun or flatten and cut it.
 
