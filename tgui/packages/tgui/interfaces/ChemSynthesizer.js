@@ -3,10 +3,12 @@ import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { BeakerContents } from './common/BeakerContents';
+import { ComplexModal, modalOpen } from './common/ComplexModal';
 
 export const ChemSynthesizer = (props, context) => {
   return (
     <Window width={1100} height={640} resizable>
+      <ComplexModal />
       <Window.Content>
         <Flex height="100%">
           <Flex.Item grow={1} maxWidth="33%">
@@ -15,7 +17,7 @@ export const ChemSynthesizer = (props, context) => {
           <Flex.Item grow={1}>
             <ChemSynthesizerChemicals />
           </Flex.Item>
-          <Flex.Item grow={1}>
+          <Flex.Item grow={1} maxWidth="33%">
             <ChemSynthesizerSettings />
           </Flex.Item>
         </Flex>
@@ -212,7 +214,7 @@ const ChemSynthesizerChemicals = (props, context) => {
 
 const ChemSynthesizerSettings = (props, context) => {
   const { act, data } = useBackend(context);
-  const { busy, production_mode, panel_open, rxn_vessel } = data;
+  const { busy, production_mode, panel_open, rxn_vessel, drug_substance, bottle_icon, pill_icon, patch_icon } = data;
 
   return (
     <Flex height="100%" width="100%" direction="column">
@@ -258,6 +260,87 @@ const ChemSynthesizerSettings = (props, context) => {
               />
             </Flex.Item>
           </Flex>
+        </Section>
+      </Flex.Item>
+      <Flex.Item height={0} grow={1}>
+        <Section height="100%" title="Drug Substance" overflowY="auto">
+          <LabeledList>
+            <LabeledList.Item label="Bottle">
+              <Button
+                icon="wine-bottle"
+                content="Activate"
+                selected={data.drug_substance === 1}
+                mr="0.5rem"
+                onClick={() => act('drug_form', { drug_index: 1 })}
+              />
+              <Button onClick={() => modalOpen(context, 'change_bottle_style')}>
+                <div
+                  style={
+                    'display: inline-block;' +
+                    'width: 16px;' +
+                    'height: 16px;' +
+                    'vertical-align: middle;' +
+                    'background: url(bottle-' +
+                    data.bottle_icon +
+                    '.png);' +
+                    'background-size: 200%;' +
+                    'background-position: left -10px bottom -6px;'
+                  }
+                />
+                Style
+              </Button>
+            </LabeledList.Item>
+            <LabeledList.Item label="Pill">
+              <Button
+                icon="circle"
+                content="Activate"
+                selected={data.drug_substance === 2}
+                mr="0.5rem"
+                onClick={() => act('drug_form', { drug_index: 2 })}
+              />
+              <Button onClick={() => modalOpen(context, 'change_pill_style')}>
+                <div
+                  style={
+                    'display: inline-block;' +
+                    'width: 16px;' +
+                    'height: 16px;' +
+                    'vertical-align: middle;' +
+                    'background: url(pill' +
+                    data.pill_icon +
+                    '.png);' +
+                    'background-size: 200%;' +
+                    'background-position: left -10px bottom -6px;'
+                  }
+                />
+                Style
+              </Button>
+            </LabeledList.Item>
+            <LabeledList.Item label="Patch">
+              <Button
+                icon="square"
+                content="Activate"
+                selected={data.drug_substance === 3}
+                mr="0.5rem"
+                onClick={() => act('drug_form', { drug_index: 3 })}
+              />
+              <Button onClick={() => modalOpen(context, 'change_patch_style')}>
+                <div
+                  style={
+                    'display: inline-block;' +
+                    'width: 16px;' +
+                    'height: 16px;' +
+                    'vertical-align: middle;' +
+                    'background: url(patch' +
+                    data.patch_icon +
+                    '.png);' +
+                    'background-size: 200%;' +
+                    'background-position: left -10px bottom -6px;'
+                  }
+                />
+                Style
+              </Button>
+            </LabeledList.Item>
+          </LabeledList>
         </Section>
       </Flex.Item>
     </Flex>
