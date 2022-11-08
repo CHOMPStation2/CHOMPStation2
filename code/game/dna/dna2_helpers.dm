@@ -262,6 +262,12 @@
 /mob/living/carbon/human/proc/force_update_organs()
 	for(var/obj/item/organ/O as anything in organs + internal_organs)
 		O.species = species
+	if (species.selects_bodytype == SELECTS_BODYTYPE_SHAPESHIFTER && dna.base_species && organs_by_name[BP_HEAD]) //CHOMPedit Begin
+		var/headtype = GLOB.all_species[dna.base_species]?.has_limbs[BP_HEAD]
+		var/obj/item/organ/external/head/headtypepath = headtype["path"]
+		if (headtypepath)
+			organs_by_name[BP_HEAD].eye_icon = initial(headtypepath.eye_icon)
+			organs_by_name[BP_HEAD].eye_icon_location = initial(headtypepath.eye_icon_location) //CHOMPedit End
 	species.post_spawn_special(src)
 //VOREStation Add End
 
