@@ -165,6 +165,8 @@ var/list/wrapped_species_by_ref = list()
 		return
 
 	wrapped_species_by_ref["\ref[src]"] = new_species
+	dna.base_species = new_species
+	species.base_species = new_species
 	if (visible)
 		visible_message("<b>\The [src]</b> shifts and contorts, taking the form of \a [new_species]!")
 		regenerate_icons()
