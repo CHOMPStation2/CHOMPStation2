@@ -2250,7 +2250,7 @@
 "Xj" = (/obj/effect/overlay/snow/wall{dir = 1},/obj/machinery/alarm/freezer{dir = 1; pixel_y = -33},/turf/simulated/floor/tiled/freezer,/area/space)
 "Xk" = (/obj/effect/floor_decal/borderfloorwhite,/obj/effect/floor_decal/corner/paleblue/border,/obj/effect/floor_decal/borderfloorwhite/corner2{dir = 9},/obj/effect/floor_decal/corner/paleblue/bordercorner2{dir = 9},/obj/machinery/door/firedoor,/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/tiled/white,/area/space)
 "Xl" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/disposalpipe/segment,/obj/structure/cable/yellow{icon_state = "1-2"},/turf/simulated/floor/tiled/steel,/area/space)
-"Xm" = (/obj/structure/sign/warning/internals_required{desc = A warning informing staff not to cut the wall.; name = "\improper DO NOT CUT"},/turf/simulated/wall/bay,/area/space)
+"Xm" = (/obj/structure/sign/warning/internals_required{desc = "A warning informing staff not to cut the wall."; name = "\improper DO NOT CUT"},/turf/simulated/wall/bay,/area/space)
 "Xn" = (/obj/effect/catwalk_plated,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating/external,/area/space)
 "Xp" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/tiled/steel,/area/space)
 "Xq" = (/obj/structure/girder,/turf/simulated/floor/plating/external,/area/space)
