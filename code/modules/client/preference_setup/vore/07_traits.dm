@@ -105,7 +105,7 @@
 		var/take_flags = initial(path.can_take)
 		if((pref.dirty_synth && !(take_flags & SYNTHETICS)) || (pref.gross_meatbag && !(take_flags & ORGANICS)))
 			pref.neg_traits -= path
-	
+
 	var/datum/species/selected_species = GLOB.all_species[pref.species]
 	if(selected_species.selects_bodytype)
 		// Allowed!
@@ -157,7 +157,7 @@
 		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	var/traits_left = pref.max_traits
-	
+
 	if(pref.species == SPECIES_CUSTOM)
 		var/points_left = pref.starting_trait_points
 
@@ -214,9 +214,15 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_base"])
-		var/list/choices = GLOB.custom_species_bases
-		if(pref.species != SPECIES_CUSTOM)
-			choices = (choices | pref.species)
+		var/list/choices
+		var/datum/species/spec = GLOB.all_species[pref.species]
+		if (spec.selects_bodytype == SELECTS_BODYTYPE_SHAPESHIFTER && istype(spec, /datum/species/shapeshifter))
+			var/datum/species/shapeshifter/spec_shifter = spec
+			choices = spec_shifter.valid_transform_species
+		else
+			choices = GLOB.custom_species_bases
+			if(pref.species != SPECIES_CUSTOM)
+				choices = (choices | pref.species)
 		var/text_choice = tgui_input_list(usr, "Pick an icon set for your species:","Icon Base", choices)
 		if(text_choice in choices)
 			pref.custom_base = text_choice

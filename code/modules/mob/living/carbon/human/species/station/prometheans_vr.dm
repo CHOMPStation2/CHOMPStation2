@@ -35,3 +35,4 @@
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/promethean_select_opaqueness,
 		)
+	digi_allowed = TRUE //CHOMPedit
