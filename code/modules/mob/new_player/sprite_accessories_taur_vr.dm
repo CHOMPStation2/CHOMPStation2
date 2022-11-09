@@ -368,6 +368,7 @@
 	icon_state = "fatfeline_s"
 	ani_state = "fatfeline_w"
 	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c
