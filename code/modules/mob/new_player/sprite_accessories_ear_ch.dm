@@ -70,7 +70,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/chorns_nubbydogs
+/datum/sprite_accessory/ears/chorns_nubbydogs_c
 	name = "Nubby Chorns (colorable)"
 	icon = 'icons/mob/vore/ears_ch.dmi'
 	icon_state = "chorn_nubby"
