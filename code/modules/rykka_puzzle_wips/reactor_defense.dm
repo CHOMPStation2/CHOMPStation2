@@ -38,8 +38,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 
 	/* 	== Customization Options. == */
 	// Use these to customize how you want the mode to play out.
-	var/health = 2000								// The reactor's health value (Set this to be what maxhealth is, the code will handle the rest).
-	var/maxhealth = 2000							// The maximum health this object can have.
+	var/health = 500								// The reactor's health value (Set this to be what maxhealth is, the code will handle the rest).
+	var/maxhealth = 500								// The maximum health this object can have.
 	var/list/waves = list(1)						// Total amount of waves we'll have, and what mob lists we'll use PER wave. Add more entries to the list to increase the # of waves.
 													// The # (for instance, 1) NEEDS to match with the # of lists in wave_mobs. For instance, if list(1,2,3), we need to have wave_mobs with 3 list(/mob/blah) in it. Ask for help if you're not sure.
 	var/current_wave = 0							// The wave we're on currently. (Needed if # of waves is > 1). We start at 0 to allow ticking up and counting correctly.
@@ -50,9 +50,9 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/warmup_complete = null						// When is warmup complete? This is set in start_warmup()
 	var/wave_length = 90 SECONDS					// How long are our waves?
 	var/wave_complete = null						// When is the wave complete? This is set in start_wave()
-	// var/area_defense = FALSE						// Are we using area defense as well as object defense? (IE, you must stay inside /area/ during the waves.) Currently nonfunctional, will re-evaluate after core functions complete.
-	// var/persistent_health = FALSE				// Are we NOT resetting the reactor's health between waves? FALSE is 'default' behavior - on each wave conclusion or reset/start, set health to max. TRUE keeps health the same between waves and warmups. Currently nonfunctional and commented out as TBD.
-	// var/insane_difficuly = FALSE					// If TRUE, then once the reactor's health hits 0, you FULLY restart back on wave 1, irregardless of if you were on wave 7/8. Basically super hardmode. Combine with persistent_health to make your players fucking cry.
+	// var/area_defense = FALSE						// Are we using area defense as well as object defense? (IE, you must stay inside /area/ during the waves.) Currently nonfunctional, will re-evaluate after core functions complete. (Intent is for TGUI to present a list of players, confirm if this is the group they want to do it with, and track their location.)
+	var/persistent_health = FALSE					// Are we NOT resetting the reactor's health between waves? FALSE is 'default' behavior - on each wave conclusion or reset/start, set health to max. TRUE keeps health the same between waves and warmups. Currently nonfunctional and commented out as TBD.
+	// var/full_wave_reset = FALSE					// If TRUE, then once the reactor's health hits 0, you FULLY restart back on wave 1, irregardless of if you were on wave 7/8. Basically super hardmode. Combine with persistent_health to make your players fucking cry.
 	var/verification_required = TRUE				// Are users required to verify by hitting a button or typing in a phrase? (This is an AFK/cheese anti-measure, DO NOT DISABLE without a counter in place.)
 	var/verification_time = 90 SECONDS				// How long are we allowing users to have during the verification step?
 	var/verification_dangerous = FALSE				// Do spawners continue to run during verification?
@@ -63,11 +63,14 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/threshold_enabled = FALSE					// Is the requirement to keep the reactor above x hp enabled?
 	var/damage_threshold = 0						// This is configurable, allowing you to choose if you want players to keep the reactor above x amount of HP. Formula checks health < damage_threshold, so 1500 threshold means once reactor hits 1499 HP you fail.
 	var/continuous_defense = FALSE					// Are we immediately going to start the next warmup/wave without giving explorers a break? If FALSE, this will kick the reactor back to IDLE and require explorers to hit the button to start the next wave.
-	var/level_1_keys = list("wolf, left, right")	// Level 1 difficulty typed keys. Keep these SHORT. "Wolf, Left, Up, Down."
-	var/level_2_keys = list("wolf, left, right")	// Level 2 difficulty typed keys. Keep these semi-short. "Wolfpaw, Leftface, Downwind"
-	var/level_3_keys = list("wolf, left, right")	// Level 3 difficulty typed keys. Keep these medium-length. "Wolf's Paw, Eager Snout, Wild Dog"
-	var/level_4_keys = list("wolf, left, right")	// Level 4 difficulty typed keys. Keep these longer-med-length. "Wolf's Paw Strike, Eager-footed wolf, Wild Dog's Hunting Call."
-	var/level_5_keys = list("wolf, left, right")	// Level 5 difficulty typed keys. Keep these full-length phrases. "Midsummers Hammer strikes hard on the eve, The wolf's scent permeates the air, Howls pierce the full-moonlit night", etc
+	var/level_1_keys = list("wolf", "left", "right")					// Level 1 difficulty typed keys. Keep these SHORT. "Wolf, Left, Up, Down."
+	var/level_2_keys = list("Wolfpaw", "Leftface", "Downwind")			// Level 2 difficulty typed keys. Keep these semi-short. "Wolfpaw, Leftface, Downwind"
+	var/level_3_keys = list("Wolf's Paw", "Eager Snout", "Wild Dog")	// Level 3 difficulty typed keys. Keep these medium-length. "Wolf's Paw, Eager Snout, Wild Dog"
+	var/level_4_keys = list("Wolf's Paw Strike", "Eager-footed wolf", "Wild Dog's Hunting Call")	// Level 4 difficulty typed keys. Keep these longer-med-length. "Wolf's Paw Strike, Eager-footed wolf, Wild Dog's Hunting Call."
+	var/level_5_keys = list("Midsummers Hammer strikes hard on the eve",
+							"The wolf's scent permeates the air with a foul chill",
+							"Howls pierce the full-moonlit night with an eery chorus"
+							)	// Level 5 difficulty typed keys. Keep these full-length phrases. "Midsummers Hammer strikes hard on the eve, The wolf's scent permeates the air, Howls pierce the full-moonlit night", etc
 	var/warmup_lighting = "#916508"					// What color do we set our lights during warmup sequence? This is fed into set_lights in start_warmup()
 	var/wave_lighting = "#913a08"					// What color do we set our lights during active waves (reactor is assumed engaged, treat this like emergency/test lighting). This is fed into set_lights in start_wave()
 	var/countdown_sound = 'sound/effects/reactor_defense/reactor_10s_countdown.ogg' // This is the sound played at the end of each wave.
@@ -99,7 +102,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	// Can be left value-less for all equally likely
 	// Simply uncomment each additional list per wave you want to use. If you want to add more to the list, just copy the previous wave, add a comma, and make sure to remove the comma from the last entry in the list.
 	var/list/wave_mobs = list(
-		list(/mob/living/simple_mob/animal/wolf, /mob/living/simple_mob/mechanical/hivebot)
+		list(/mob/living/simple_mob/vore/aggressive/corrupthound, /mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic)
 //		list(/mob/living/wave2mob, /mob/living/otherwave2mob, etc),
 //		list(/mob/living/wave3mob, /mob/living/otherwave3mob, etc),
 //		list(/mob/living/wave4mob, /mob/living/otherwave4mob, etc),
@@ -306,9 +309,9 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	data["wave"] = current_wave
 	data["warmup_enabled"] = warmup
 	data["currentTab"] = current_screen
-	data["warmup_time_left"] = (warmup_complete - world.time) / 10 // We want to take the TOTAL time and subtract the CURRENT time, then divide it, to get our fancy UI percentage/time.
-	data["wave_time_left"] = (wave_complete - world.time) / 10 // Same as above method, but for wave time.
-	data["verification_time_left"] = (verification_timeout - world.time) / 10 // Same as above 2, for our verification timeout parameter.
+	data["warmup_time_left"] = round((warmup_complete - world.time) / 10) // We want to take the TOTAL time and subtract the CURRENT time, then divide it, to get our fancy UI percentage/time.
+	data["wave_time_left"] = round((wave_complete - world.time) / 10) // Same as above method, but for wave time.
+	data["verification_time_left"] = round((verification_timeout - world.time) / 10) // Same as above 2, for our verification timeout parameter.
 	var/warmup_min = (warmup_complete - warmup_time)
 	var/warmup_max = warmup_complete
 	data["warmupcompletePercent"] = ((world.time - warmup_min) / (warmup_max - warmup_min))
@@ -552,6 +555,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 				ten_notif_played = FALSE // Reset this because we're starting the next wave.
 				to_world("Wave ended!") // Debug announce, comment out later
 				state = ENGAGED // Now we're back to engaged
+				if(!persistent_health) // Are we preserving reactor health between waves? If not, then reset it here.
+					health == maxhealth
 				return // Don't execute the code underneath us.
 		else // If we're not continuing waves, then we need to reset.
 			state = IDLE
@@ -570,6 +575,9 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	wave_complete = null
 	ten_notif_played = FALSE // Reset this.
 
+	if(!persistent_health) // Are we preserving reactor health between waves? If not, then reset it here.
+		health == maxhealth
+
 	reset_lights() // Restoring lights to defaults!
 
 /obj/machinery/power/damaged_reactor/proc/warmup() // Do these things EVERY tick of SSProcess - if you need it to run once, put it in an if statement, or put it in the start/complete procs.
@@ -579,7 +587,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		playsound(get_turf(src), countdown_sound, 100) // Play our sound locally
 		ten_notif_played = TRUE // Set this true so we don't play this every time it's called
 
-	if(warmup_dangerous)
+	if(warmup_dangerous)  // The reactor cannot be damaged during these phases, but we still want mobs to aggro towards us (useful for if the spawners are, say, down a hidden tunnel.)
 		can_aggro = aggro_mobs()
 
 /obj/machinery/power/damaged_reactor/proc/start_warmup()
@@ -599,6 +607,9 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	ten_notif_played = FALSE // Set this to false to tell the reactor we've notified successfully.
 
 	to_world("Warmup ended!")
+
+	if(!persistent_health) // Are we preserving reactor health between waves? If not, then reset it here.
+		health == maxhealth
 
 	reset_lights() // Restoring lights to defaults!
 
@@ -645,7 +656,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		playsound(get_turf(src), countdown_sound, 100) // Play our sound locally
 		ten_notif_played = TRUE // Set this true so we don't play this every time it's called
 
-	if(verification_dangerous)
+	if(verification_dangerous) // The reactor cannot be damaged during these phases, but we still want mobs to aggro towards us (useful for if the spawners are, say, down a hidden tunnel.)
 		can_aggro = aggro_mobs()
 
 /obj/machinery/power/damaged_reactor/proc/complete_verification()
@@ -770,6 +781,19 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 				M.ai_holder.target = src
 				to_world("We've just updated our mob's target to [M.ai_holder.target] and called the attack proc!")
 				return FALSE
+				/* // TBD if we need pathfinding defined ourselves versus the mobs doing it with their own ai holder.
+				if(src in M.oview(7)) // Are we visually in range of the reactor?
+					M.ai_holder.react_to_attack(src)
+					M.ai_holder.target = src
+					to_world("We've just updated our mob's target to [M.ai_holder.target] and called the attack proc!")
+					return FALSE
+				else // Else, we need to pathfind to it + piss our guys off
+
+					M.ai_holder.react_to_attack(src)
+					M.ai_holder.target = src
+					to_world("We've just updated our mob's target to [M.ai_holder.target] and called the attack proc!")
+					return FALSE
+				*/
 	else
 		return TRUE
 
