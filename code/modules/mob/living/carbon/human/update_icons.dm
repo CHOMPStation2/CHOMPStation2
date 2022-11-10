@@ -739,16 +739,34 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!l_ear && !r_ear)
 		return //Why bother, if no ear sprites
 
+	if(hide_headset) //CHOMPEdit Start
+		if(l_ear && istype(l_ear, /obj/item/device/radio/headset)) //No need to generate blank images if only headsets are present.
+			if(!r_ear || istype(r_ear, /obj/item/device/radio/headset))
+				return
+		if(r_ear && istype(r_ear, /obj/item/device/radio/headset))
+			if(!l_ear || istype(l_ear, /obj/item/device/radio/headset))
+				return
+
 	// Blank image upon which to layer left & right overlays.
 	var/image/both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing", layer = BODY_LAYER+EARS_LAYER)
 
 	if(l_ear)
-		var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
-		both.add_overlay(standing)
+		if(istype(l_ear, /obj/item/device/radio/headset))
+			if(!hide_headset)
+				var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+				both.add_overlay(standing)
+		else
+			var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+			both.add_overlay(standing)
 
 	if(r_ear)
-		var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
-		both.add_overlay(standing)
+		if(istype(r_ear, /obj/item/device/radio/headset))
+			if(!hide_headset)
+				var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+				both.add_overlay(standing)
+		else
+			var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+			both.add_overlay(standing) //CHOMPEdit End
 
 	overlays_standing[EARS_LAYER] = both
 	apply_layer(EARS_LAYER)
