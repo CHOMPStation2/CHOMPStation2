@@ -32,11 +32,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 	data["personalVisibility"] = user?.client?.prefs?.show_in_directory
 	data["personalTag"] = user?.client?.prefs?.directory_tag || "Unset"
-	data["personalGenderTag"] = user?.client?.prefs?.directory_gendertag || "Unset"
-	data["personalSexualityTag"] = user?.client?.prefs?.directory_sexualitytag || "Unset"
+	data["personalGenderTag"] = user?.client?.prefs?.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
+	data["personalSexualityTag"] = user?.client?.prefs?.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 	data["personalErpTag"] = user?.client?.prefs?.directory_erptag || "Unset"
-	data["personalBDSMTag"] = user?.client?.prefs?.directory_bdsmtag || "Unset"
-	data["personalFurryPrefTag"] = user?.client?.prefs?.directory_furrypreftag || "Unset"
+	data["personalBDSMTag"] = user?.client?.prefs?.directory_bdsmtag || "Unset" // CHOMPStation Edit: Character Directory Update
+	data["personalFurryPrefTag"] = user?.client?.prefs?.directory_furrypreftag || "Unset" // CHOMPStation Edit: Character Directory Update
 	data["personalEventTag"] = vantag_choices_list[user?.client?.prefs?.vantag_preference] //CHOMPEdit
 
 	return data
@@ -57,11 +57,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/ooc_notes = null
 		var/flavor_text = null
 		var/tag = C.prefs.directory_tag || "Unset"
-		var/gendertag = C.prefs.directory_gendertag || "Unset"
-		var/sexualitytag = C.prefs.directory_sexualitytag || "Unset"
+		var/gendertag = C.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
+		var/sexualitytag = C.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 		var/erptag = C.prefs.directory_erptag || "Unset"
-		var/bdsmtag = C.prefs.directory_bdsmtag || "Unset"
-		var/furrypreftag = C.prefs.directory_furrypreftag || "Unset"
+		var/bdsmtag = C.prefs.directory_bdsmtag || "Unset" // CHOMPStation Edit: Character Directory Update
+		var/furrypreftag = C.prefs.directory_furrypreftag || "Unset" // CHOMPStation Edit: Character Directory Update
 		var/eventtag = vantag_choices_list[C.prefs.vantag_preference] //CHOMPEdit
 		var/character_ad = C.prefs.directory_ad
 
@@ -121,11 +121,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			"species" = species,
 			"ooc_notes" = ooc_notes,
 			"tag" = tag,
-			"gendertag" = gendertag,
-			"sexualitytag" = sexualitytag,
+			"gendertag" = gendertag, // CHOMPStation Edit: Character Directory Update
+			"sexualitytag" = sexualitytag, // CHOMPStation Edit: Character Directory Update
 			"erptag" = erptag,
-			"bdsmtag" = bdsmtag,
-			"furrypreftag" = furrypreftag,
+			"bdsmtag" = bdsmtag, // CHOMPStation Edit: Character Directory Update
+			"furrypreftag" = furrypreftag, // CHOMPStation Edit: Character Directory Update
 			"eventtag" = eventtag, //CHOMPEdit
 			"character_ad" = character_ad,
 			"flavor_text" = flavor_text,
@@ -156,6 +156,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				return
 			usr?.client?.prefs?.directory_tag = new_tag
 			return TRUE
+		// CHOMPStation Edit Start: Directory Update
 		if("setGenderTag")
 			var/list/new_gendertag = tgui_input_list(usr, "Pick a new Gender tag for the character directory. This is YOUR gender, not what you prefer.", "Character Gender Tag", GLOB.char_directory_gendertags)
 			if(!new_gendertag)
@@ -168,12 +169,14 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				return
 			usr?.client?.prefs?.directory_sexualitytag = new_sexualitytag
 			return TRUE
+		// CHOMPStation Edit End: Directory Update
 		if("setErpTag")
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
 			usr?.client?.prefs?.directory_erptag = new_erptag
 			return TRUE
+		// CHOMPStation Edit Start: Directory Update
 		if("setBDSMTag")
 			var/list/new_bdsmtag = tgui_input_list(usr, "Pick a new BDSM tag for the character directory", "Character BDSM Tag", GLOB.char_directory_bdsmtags)
 			if(!new_bdsmtag)
@@ -186,6 +189,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				return
 			usr?.client?.prefs?.directory_furrypreftag = new_furrypreftag
 			return TRUE
+		// CHOMPStation Edit End: Directory Update
 		//CHOMPEdit start
 		if("setEventTag")
 			var/list/names_list = list()
