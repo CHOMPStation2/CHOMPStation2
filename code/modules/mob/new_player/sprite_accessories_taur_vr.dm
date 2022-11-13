@@ -63,17 +63,13 @@
 /datum/sprite_accessory/tail/taur/wolf/fatwolf
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
-<<<<<<< HEAD
-	icon_sprite_tag = "wolf"	//This could be modified later.
-	loaf_offset = 3
-=======
 	//icon_sprite_tag = "wolf"	//This could be modified later.
+	loaf_offset = 3	
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_wag
 	name = "Wolf (Taur, Fat vwag)"
 	icon_state = "wolf_s"
 	ani_state = "fatwolf_s"
->>>>>>> efc2448d72... Merge pull request #14062 from Heroman3003/sectaurs
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c
 	name = "Wolf 3-color (Taur)"
@@ -88,6 +84,7 @@
 	extra_overlay = "fatwolf_markings"
 	extra_overlay2 = "wolf_markings_2"
 	//icon_sprite_tag = "fatwolf2c"
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c_wag
 	name = "Wolf 3-color (Taur, Fat vwag)"
@@ -98,17 +95,6 @@
 	extra_overlay_w = "fatwolf_markings"
 	extra_overlay2_w = "wolf_markings_2"
 
-<<<<<<< HEAD
-/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
-	name = "Fat Wolf 3-color (Taur)"
-	icon_state = "fatwolf_s"
-	extra_overlay = "fatwolf_markings"
-	extra_overlay2 = "fatwolf_markings_2"
-	//icon_sprite_tag = "fatwolf2c"
-	loaf_offset = 3
-
-=======
->>>>>>> efc2448d72... Merge pull request #14062 from Heroman3003/sectaurs
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
 	icon_state = "synthwolf_s"
@@ -286,6 +272,9 @@
 /datum/sprite_accessory/tail/taur/lizard/fatlizard
 	name = "Fat Lizard (Taur)"
 	icon_state = "fatlizard_s"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/lizard/lizard_wag
 	name = "Lizard (Taur, Fat vwag)"
@@ -301,26 +290,13 @@
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 5
 
-<<<<<<< HEAD
-/datum/sprite_accessory/tail/taur/lizard/fatlizard
-	name = "Fat Lizard (Taur)"
-	icon_state = "fatlizard_s"
-	can_loaf = TRUE
-	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
-
-/datum/sprite_accessory/tail/taur/lizard/fatlizard_2c
-	name = "Fat Lizard (Taur, dual-color)"
-	icon_state = "fatlizard_s"
-	extra_overlay= "fatlizard_markings"
-	can_loaf = TRUE
-	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
-=======
 /datum/sprite_accessory/tail/taur/lizard/fatlizard_2c
 	name = "Fat Lizard (Taur, dual-color)"
 	icon_state = "fatlizard_s"
 	extra_overlay = "fatlizard_markings"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/lizard/lizard_2c_wag
 	name = "Fat Lizard (Taur, dual-color, Fat vwag)"
@@ -328,7 +304,6 @@
 	extra_overlay = "lizard_markings"
 	ani_state = "fatlizard_s"
 	extra_overlay_w = "fatlizard_markings"
->>>>>>> efc2448d72... Merge pull request #14062 from Heroman3003/sectaurs
 
 /datum/sprite_accessory/tail/taur/lizard/synthlizard
 	name = "SynthLizard dual-color (Taur)"
@@ -567,13 +542,9 @@
 	name = "Fat Drake (Taur)"
 	icon_state = "fatdrake_s"
 	extra_overlay = "fatdrake_markings"
-<<<<<<< HEAD
-	icon_sprite_tag = "drake"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 6
-=======
-	can_loaf = FALSE
 
 /datum/sprite_accessory/tail/taur/drake/drake_vwag
 	name = "Drake (Taur, Fat vwag)"
@@ -582,8 +553,6 @@
 	ani_state = "fatdrake_s"
 	extra_overlay_w = "fatdrake_markings"
 	can_loaf = FALSE
-
->>>>>>> efc2448d72... Merge pull request #14062 from Heroman3003/sectaurs
 
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"
