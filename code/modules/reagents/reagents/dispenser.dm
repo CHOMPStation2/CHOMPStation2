@@ -116,15 +116,11 @@
 		removed *= 2
 
 	if(alien == IS_SLIME)
-<<<<<<< HEAD
-		strength_mod *= 2 // VOREStation Edit - M.adjustToxLoss(removed)
-=======
 		M.adjustToxLoss(removed) //Sterilizing, if only by a little bit. Also already doubled above.
 
 	var/strength_mod = 3 * M.species.chem_strength_alcohol //Alcohol is 3x stronger when injected into the veins.
 	if(!strength_mod)
 		return
->>>>>>> 118097ed4c... Merge pull request #14061 from KillianKirilenko/8823-fixed
 
 	M.add_chemical_effect(CE_ALCOHOL, 1)
 	var/effective_dose = dose * strength_mod * (1 + volume/60) //drinking a LOT will make you go down faster
