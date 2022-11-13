@@ -8,8 +8,6 @@
 	S["directory_gendertag"]	>> pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	>> pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
 	S["directory_erptag"]		>> pref.directory_erptag
-	S["directory_bdsmtag"]		>> pref.directory_bdsmtag // CHOMPStation Edit: Character Directory Update
-	S["directory_furrypreftag"]	>> pref.directory_furrypreftag // CHOMPStation Edit: Character Directory Update
 	S["directory_ad"]			>> pref.directory_ad
 	S["sensorpref"]				>> pref.sensorpref
 	S["capture_crystal"]		>> pref.capture_crystal
@@ -20,8 +18,6 @@
 	S["directory_gendertag"]	<< pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	<< pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
 	S["directory_erptag"]		<< pref.directory_erptag
-	S["directory_bdsmtag"]		<< pref.directory_bdsmtag // CHOMPStation Edit: Character Directory Update
-	S["directory_furrypreftag"]	<< pref.directory_furrypreftag // CHOMPStation Edit: Character Directory Update
 	S["directory_ad"]			<< pref.directory_ad
 	S["sensorpref"]				<< pref.sensorpref
 	S["capture_crystal"]		<< pref.capture_crystal
@@ -39,8 +35,6 @@
 	pref.directory_gendertag	= sanitize_inlist(pref.directory_gendertag, GLOB.char_directory_gendertags, initial(pref.directory_gendertag)) // CHOMPStation Edit: Character Directory Update
 	pref.directory_sexualitytag	= sanitize_inlist(pref.directory_sexualitytag, GLOB.char_directory_sexualitytags, initial(pref.directory_sexualitytag)) // CHOMPStation Edit: Character Directory Update
 	pref.directory_erptag		= sanitize_inlist(pref.directory_erptag, GLOB.char_directory_erptags, initial(pref.directory_erptag))
-	pref.directory_bdsmtag		= sanitize_inlist(pref.directory_bdsmtag, GLOB.char_directory_bdsmtags, initial(pref.directory_bdsmtag)) // CHOMPStation Edit: Character Directory Update
-	pref.directory_furrypreftag	= sanitize_inlist(pref.directory_furrypreftag, GLOB.char_directory_furrypreftags, initial(pref.directory_furrypreftag)) // CHOMPStation Edit: Character Directory Update
 	pref.sensorpref				= sanitize_integer(pref.sensorpref, 1, sensorpreflist.len, initial(pref.sensorpref))
 	pref.capture_crystal		= sanitize_integer(pref.capture_crystal, 0, 1, initial(pref.capture_crystal))
 
@@ -51,8 +45,6 @@
 	. += "<b>Character Directory Gender:</b> <a href='?src=\ref[src];directory_gendertag=1'><b>[pref.directory_gendertag]</b></a><br>" // CHOMPStation Edit: Character Directory Update
 	. += "<b>Character Directory Sexuality:</b> <a href='?src=\ref[src];directory_sexualitytag=1'><b>[pref.directory_sexualitytag]</b></a><br>" // CHOMPStation Edit: Character Directory Update
 	. += "<b>Character Directory ERP Tag:</b> <a href='?src=\ref[src];directory_erptag=1'><b>[pref.directory_erptag]</b></a><br>"
-	. += "<b>Character Directory BDSM Tag:</b> <a href='?src=\ref[src];directory_bdsmtag=1'><b>[pref.directory_bdsmtag]</b></a><br>" // CHOMPStation Edit: Character Directory Update
-	. += "<b>Character Directory Furry/Human Preference:</b> <a href='?src=\ref[src];directory_furrypreftag=1'><b>[pref.directory_furrypreftag]</b></a><br>" // CHOMPStation Edit: Character Directory Update
 	. += "<b>Character Directory Advertisement:</b> <a href='?src=\ref[src];directory_ad=1'><b>Set Directory Ad</b></a><br>"
 	. += "<b>Suit Sensors Preference:</b> <a [pref.sensorpref ? "" : ""] href='?src=\ref[src];toggle_sensor_setting=1'><b>[sensorpreflist[pref.sensorpref]]</b></a><br>"
 	. += "<b>Capture Crystal Preference</b> <a [pref.capture_crystal ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_capture_crystal=1'><b>[pref.capture_crystal ? "Yes" : "No"]</b></a><br>"
@@ -87,20 +79,6 @@
 			return
 		pref.directory_erptag = new_erptag
 		return TOPIC_REFRESH
-	// CHOMPStation Edit Start: Directory Update
-	else if(href_list["directory_bdsmtag"])
-		var/new_bdsmtag = tgui_input_list(user, "Pick a new BDSM tag for the character directory", "Character BDSM Tag", GLOB.char_directory_bdsmtags, pref.directory_bdsmtag)
-		if(!new_bdsmtag)
-			return
-		pref.directory_bdsmtag = new_bdsmtag
-		return TOPIC_REFRESH
-	else if(href_list["directory_furrypreftag"])
-		var/new_furrypreftag = tgui_input_list(user, "Pick a new Furry/Human preference tag for the character directory", "Character Furry/Human Preference", GLOB.char_directory_furrypreftags, pref.directory_furrypreftag)
-		if(!new_furrypreftag)
-			return
-		pref.directory_furrypreftag = new_furrypreftag
-		return TOPIC_REFRESH
-	// CHOMPStation Edit End: Directory Update
 	else if(href_list["directory_ad"])
 		var/msg = sanitize(tgui_input_text(user,"Write your advertisement here!", "Flavor Text", html_decode(pref.directory_ad), multiline = TRUE, prevent_enter = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
 		pref.directory_ad = msg

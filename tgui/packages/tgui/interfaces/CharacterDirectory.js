@@ -25,16 +25,8 @@ const getTagColor = (tag) => {
 export const CharacterDirectory = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const {
-    personalVisibility,
-    personalTag,
-    personalGenderTag,
-    personalSexualityTag,
-    personalErpTag,
-    personalBDSMTag,
-    personalFurryPrefTag,
-    personalEventTag,
-  } = data;
+  const { personalVisibility, personalTag, personalGenderTag, personalSexualityTag, personalErpTag, personalEventTag } =
+    data;
 
   const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
@@ -63,12 +55,6 @@ export const CharacterDirectory = (props, context) => {
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
                   <Button fluid content={personalErpTag} onClick={() => act('setErpTag')} />
-                </LabeledList.Item>
-                <LabeledList.Item label="BDSM Tag">
-                  <Button fluid content={personalBDSMTag} onClick={() => act('setErpTag')} />
-                </LabeledList.Item>
-                <LabeledList.Item label="Furry/Human Pref">
-                  <Button fluid content={personalFurryPrefTag} onClick={() => act('setFurryPrefTag')} />
                 </LabeledList.Item>
                 <LabeledList.Item label="Event Pref">
                   <Button fluid content={personalEventTag} onClick={() => act('setEventTag')} />
@@ -109,12 +95,6 @@ const ViewCharacter = (props, context) => {
       </Section>
       <Section level={2} title="ERP Tag">
         <Box>{overlay.erptag}</Box>
-      </Section>
-      <Section level={2} title="BDSM Tag">
-        <Box>{overlay.bdsmtag}</Box>
-      </Section>
-      <Section level={2} title="Furry Preference">
-        <Box>{overlay.furrypreftag}</Box>
       </Section>
       <Section level={2} title="Event Pref">
         <Box>{overlay.eventtag}</Box>
@@ -157,8 +137,6 @@ const CharacterDirectoryList = (props, context) => {
           <SortButton id="gendertag">Gender</SortButton>
           <SortButton id="sexualitytag">Sexuality</SortButton>
           <SortButton id="erptag">ERP Tag</SortButton>
-          <SortButton id="erptag">BDSM Tag</SortButton>
-          <SortButton id="furrypreftag">Furry/Human Pref</SortButton>
           <SortButton id="eventtag">Event Pref</SortButton>
           <Table.Cell collapsing textAlign="right">
             View
@@ -177,8 +155,6 @@ const CharacterDirectoryList = (props, context) => {
               <Table.Cell>{character.gendertag}</Table.Cell>
               <Table.Cell>{character.sexualitytag}</Table.Cell>
               <Table.Cell>{character.erptag}</Table.Cell>
-              <Table.Cell>{character.bdsmtag}</Table.Cell>
-              <Table.Cell>{character.furrypreftag}</Table.Cell>
               <Table.Cell>{character.eventtag}</Table.Cell>
               <Table.Cell collapsing textAlign="right">
                 <Button

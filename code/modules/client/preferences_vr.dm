@@ -5,8 +5,6 @@
 	// CHOMPStation Edit Start: Directory Update
 	var/directory_gendertag = "Unset" // Gender stuff!
 	var/directory_sexualitytag = "Unset" // Sexuality!
-	var/directory_furrypreftag = "Unset" // Furry/human preference!
-	var/directory_bdsmtag = "Unset"	// BDSM prefs! Dom/Sub/Switch
 	// CHOMPStation Edit End: Directory Update
 	var/directory_ad = ""		//Advertisement stuff to show in character directory.
 	var/sensorpref = 5			//Set character's suit sensor level
