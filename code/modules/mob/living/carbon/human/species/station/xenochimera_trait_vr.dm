@@ -43,11 +43,7 @@
 	cost = 0
 	category = 0
 	custom_only = FALSE
-<<<<<<< HEAD
-	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing)) // CHOMPEdit: Fix 'chimera unarmed attacks with this trait
-=======
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing)) // Fixes the parent forgetting to add 'chimera-specific claws
->>>>>>> c86ab5fed8... Merge pull request #14078 from Rykka-Stormheart/shep-dev-chimera-attack-fix
 
 /datum/trait/positive/snowwalker/xenochimera
 	sort = TRAIT_SORT_SPECIES
