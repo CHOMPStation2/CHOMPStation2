@@ -158,6 +158,19 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/mothscream,
 	/decl/emote/audible/mothchitter,
 	/decl/emote/audible/mothlaugh,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/multichirp,
+	/decl/emote/audible/gnarl,
+	/decl/emote/audible/teshsqueak,
+	/decl/emote/audible/teshchirp,
+	/decl/emote/audible/teshtrill,
+	/decl/emote/visible/bounce,
+	/decl/emote/visible/jiggle,
+	/decl/emote/visible/lightup,
+	/decl/emote/visible/vibrate
+
+>>>>>>> 0f7edb4589... Merge pull request #14077 from TankTheBirb/lemme-chirp
 	//VOREStation Add End
 	//CHOMP Add start
 	/decl/emote/audible/prbt2
