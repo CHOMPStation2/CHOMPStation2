@@ -32,7 +32,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 	data["personalVisibility"] = user?.client?.prefs?.show_in_directory
 	data["personalTag"] = user?.client?.prefs?.directory_tag || "Unset"
+	data["personalGenderTag"] = user?.client?.prefs?.directory_gendertag || "Unset"
+	data["personalSexualityTag"] = user?.client?.prefs?.directory_sexualitytag || "Unset"
 	data["personalErpTag"] = user?.client?.prefs?.directory_erptag || "Unset"
+	data["personalBDSMTag"] = user?.client?.prefs?.directory_bdsmtag || "Unset"
+	data["personalFurryPrefTag"] = user?.client?.prefs?.directory_furrypreftag || "Unset"
 	data["personalEventTag"] = vantag_choices_list[user?.client?.prefs?.vantag_preference] //CHOMPEdit
 
 	return data
@@ -53,7 +57,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/ooc_notes = null
 		var/flavor_text = null
 		var/tag = C.prefs.directory_tag || "Unset"
+		var/gendertag = C.prefs.directory_gendertag || "Unset"
+		var/sexualitytag = C.prefs.directory_sexualitytag || "Unset"
 		var/erptag = C.prefs.directory_erptag || "Unset"
+		var/bdsmtag = C.prefs.directory_bdsmtag || "Unset"
+		var/furrypreftag = C.prefs.directory_furrypreftag || "Unset"
 		var/eventtag = vantag_choices_list[C.prefs.vantag_preference] //CHOMPEdit
 		var/character_ad = C.prefs.directory_ad
 
@@ -113,7 +121,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			"species" = species,
 			"ooc_notes" = ooc_notes,
 			"tag" = tag,
+			"gendertag" = gendertag,
+			"sexualitytag" = sexualitytag,
 			"erptag" = erptag,
+			"bdsmtag" = bdsmtag,
+			"furrypreftag" = furrypreftag,
 			"eventtag" = eventtag, //CHOMPEdit
 			"character_ad" = character_ad,
 			"flavor_text" = flavor_text,
@@ -144,11 +156,35 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				return
 			usr?.client?.prefs?.directory_tag = new_tag
 			return TRUE
+		if("setGenderTag")
+			var/list/new_gendertag = tgui_input_list(usr, "Pick a new Gender tag for the character directory. This is YOUR gender, not what you prefer.", "Character Gender Tag", GLOB.char_directory_gendertags)
+			if(!new_gendertag)
+				return
+			usr?.client?.prefs?.directory_gendertag = new_gendertag
+			return TRUE
+		if("setSexualityTag")
+			var/list/new_sexualitytag = tgui_input_list(usr, "Pick a new Sexuality/Orientation tag for the character directory", "Character Sexuality/Orientation Tag", GLOB.char_directory_sexualitytags)
+			if(!new_sexualitytag)
+				return
+			usr?.client?.prefs?.directory_sexualitytag = new_sexualitytag
+			return TRUE
 		if("setErpTag")
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
 			usr?.client?.prefs?.directory_erptag = new_erptag
+			return TRUE
+		if("setBDSMTag")
+			var/list/new_bdsmtag = tgui_input_list(usr, "Pick a new BDSM tag for the character directory", "Character BDSM Tag", GLOB.char_directory_bdsmtags)
+			if(!new_bdsmtag)
+				return
+			usr?.client?.prefs?.directory_bdsmtag = new_bdsmtag
+			return TRUE
+		if("setFurryPrefTag")
+			var/list/new_furrypreftag = tgui_input_list(usr, "Pick a new Furry/Human preference tag for the character directory", "Character Furry/Human Preference", GLOB.char_directory_furrypreftags)
+			if(!new_furrypreftag)
+				return
+			usr?.client?.prefs?.directory_furrypreftag = new_furrypreftag
 			return TRUE
 		//CHOMPEdit start
 		if("setEventTag")
