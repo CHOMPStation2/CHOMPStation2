@@ -55,6 +55,8 @@
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
 	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
+	var/slow_digestion = FALSE				// CHOMPEdit: Gradual corpse digestion
+	var/slow_brutal = FALSE					// CHOMPEdit: Gradual corpse digestion: Stumpy's Special
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -69,7 +71,7 @@
 	//Actual full digest modes
 	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_SELECT,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
-	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY)
+	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Slow Body Digestion" = DM_FLAG_SLOWBODY) //CHOMPEdit
 	//Item related modes
 	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
 
@@ -266,7 +268,9 @@
 	"autotransferlocation",
 	"autotransfer_enabled",
 	"autotransfer_min_amount",
-	"autotransfer_max_amount", //CHOMP end of variables from CHOMP
+	"autotransfer_max_amount",
+	"slow_digestion",
+	"slow_brutal", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -311,7 +315,8 @@
 		return //Someone dropping something (or being stripdigested)
 
 	//Generic entered message
-	to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
+	if(!owner.mute_entry) //CHOMPEdit
+		to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound)
@@ -1307,7 +1312,9 @@
 	dupe.autotransferlocation = autotransferlocation
 	dupe.autotransfer_enabled = autotransfer_enabled
 	dupe.autotransfer_min_amount = autotransfer_min_amount
-	dupe.autotransfer_max_amount = autotransfer_max_amount //CHOMP end of variables from CHOMP
+	dupe.autotransfer_max_amount = autotransfer_max_amount
+	dupe.slow_digestion = slow_digestion
+	dupe.slow_brutal = slow_brutal //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

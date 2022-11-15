@@ -23,8 +23,14 @@
 	var/busy = FALSE
 	var/production_mode = FALSE // Toggle between click-step input and comma-delineated text input for creating recipes.
 	var/use_catalyst = TRUE // Determines whether or not the catalyst will be added to reagents while processing a recipe.
+	var/stalled = FALSE  // Required for emergency stop to interrupt on-going recipes.
+	var/drug_substance = 1 // Controls which form medicine takes (bottle, pill, etc). 1 for bottle, 2 for pill, 3 for patch.
 	var/delay_modifier = 4 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
 	var/obj/item/weapon/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
+
+	var/bottle_icon = 4 // Determines icon states of bottles, pills, and patches.
+	var/pill_icon = 2
+	var/patch_icon = 2
 
 	var/list/recipes = list() // This holds chemical recipes up to a maximum determined by SYNTHESIZER_MAX_RECIPES. Two-dimensional.
 	var/list/queue = list() // This holds the recipe id's for queued up recipes.
@@ -264,6 +270,10 @@
 	data["production_mode"] = production_mode
 	data["panel_open"] = panel_open
 	data["use_catalyst"] = use_catalyst
+	data["drug_substance"] = drug_substance
+	data["bottle_icon"] = bottle_icon
+	data["pill_icon"] = pill_icon
+	data["patch_icon"] = patch_icon
 
 	var/list/tmp_queue = list()
 	for(var/i = 1, i <= queue.len, i++)
@@ -304,11 +314,18 @@
 		chemicals.Add(list(list("title" = label, "id" = label, "amount" = C.reagents.total_volume))) // list in a list because Byond merges the first list
 	data["chemicals"] = chemicals
 
+	data["modal"] = tgui_modal_data(src)
+
 	return data
 
-/obj/machinery/chemical_synthesizer/tgui_act(action, params)
+/obj/machinery/chemical_synthesizer/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
+
+	if(tgui_act_modal(action, params, ui, state))
+		return TRUE
+
+	add_fingerprint(usr)
 
 	. = TRUE
 	switch(action)
@@ -347,7 +364,7 @@
 			if(busy)
 				var/confirm = alert(usr, "Are you sure you want to stall the machine?", "Confirm", "Yes", "No")
 				if(confirm == "Yes")
-					stall()
+					stalled = TRUE
 		if("bottle_product")
 			// Bottles the reaction mixture if stalled.
 			if(!busy)
@@ -391,8 +408,56 @@
 			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe.
 			if(index in recipes)
 				queue[++queue.len] = index
+		if("drug_form")
+			// Toggles between bottles, pills, and patches.
+			drug_substance = params["drug_index"]
 
-	add_fingerprint(usr)
+/obj/machinery/chemical_synthesizer/proc/tgui_act_modal(action, params, datum/tgui/ui, datum/tgui_state/state)
+	. = TRUE
+	var/id = params["id"] // The modal's ID
+	var/list/arguments = istext(params["arguments"]) ? json_decode(params["arguments"]) : params["arguments"]
+	switch(tgui_modal_act(src, action, params))
+		if(TGUI_MODAL_OPEN)
+			switch(id)
+				if("change_pill_style")
+					var/list/choices = list()
+					for(var/i = 1 to MAX_PILL_SPRITE)
+						choices += "pill[i].png"
+					tgui_modal_bento(src, id, "Please select the new style for pills:", null, arguments, pill_icon, choices)
+				if("change_patch_style")
+					var/list/choices = list()
+					for(var/i = 1 to MAX_PATCH_SPRITE)
+						choices += "patch[i].png"
+					tgui_modal_bento(src, id, "Please select the new style for patches:", null, arguments, patch_icon, choices)
+				if("change_bottle_style")
+					var/list/choices = list()
+					for(var/i = 1 to MAX_BOTTLE_SPRITE)
+						choices += "bottle-[i].png"
+					tgui_modal_bento(src, id, "Please select the new style for bottles:", null, arguments, bottle_icon, choices)
+				else
+					return FALSE
+		if(TGUI_MODAL_ANSWER)
+			var/answer = params["answer"]
+			switch(id)
+				if("change_pill_style")
+					var/new_style = CLAMP(text2num(answer) || 0, 0, MAX_PILL_SPRITE)
+					if(!new_style)
+						return
+					pill_icon = new_style
+				if("change_patch_style")
+					var/new_style = CLAMP(text2num(answer) || 0, 0, MAX_PATCH_SPRITE)
+					if(!new_style)
+						return
+					patch_icon = new_style
+				if("change_bottle_style")
+					var/new_style = CLAMP(text2num(answer) || 0, 0, MAX_BOTTLE_SPRITE)
+					if(!new_style)
+						return
+					bottle_icon = new_style
+				else
+					return FALSE
+		else
+			return FALSE
 
 /obj/machinery/chemical_synthesizer/attack_ghost(mob/user)
 	if(stat & (BROKEN|NOPOWER))
@@ -482,6 +547,9 @@
 
 // This proc handles adding the catalyst starting the synthesizer's queue.
 /obj/machinery/chemical_synthesizer/proc/start_queue(mob/user)
+	if(stalled) // Incase SOMEHOW this var is true when the machine isn't running.
+		stalled = FALSE
+
 	if(stat & (BROKEN|NOPOWER))
 		return
 
@@ -518,6 +586,11 @@
 
 // This proc controls the timing for each step in a reaction. Step is the index for the current chem of our recipe, step + 1 is the volume of said chem.
 /obj/machinery/chemical_synthesizer/proc/follow_recipe(var/r_id, var/step as num)
+	if(stalled) // Emergency stop if() check.
+		stalled = FALSE
+		stall()
+		return
+
 	if(stat & (BROKEN|NOPOWER))
 		stall()
 		return
@@ -530,6 +603,11 @@
 
 // This proc carries out the actual steps in each reaction.
 /obj/machinery/chemical_synthesizer/proc/perform_reaction(var/r_id, var/step as num)
+	if(stalled) // Emergency stop if() check.
+		stalled = FALSE
+		stall()
+		return
+
 	if(stat & (BROKEN|NOPOWER))
 		stall()
 		return
@@ -593,14 +671,41 @@
 	if(!r_id)
 		r_id = "[reagents.get_master_reagent_name()]"
 
-	while(reagents.total_volume)
-		var/obj/item/weapon/reagent_containers/glass/bottle/B = new(src.loc)
-		B.name = "[r_id] bottle"
-		B.pixel_x = rand(-7, 7) // random position
-		B.pixel_y = rand(-7, 7)
-		B.icon_state = "bottle-4"
-		reagents.trans_to_obj(B, min(reagents.total_volume, MAX_UNITS_PER_BOTTLE))
-		B.update_icon()
+	// Copy-pasta go brr
+	switch(drug_substance)
+		if(2) // Pills
+			while(reagents.total_volume)
+				var/obj/item/weapon/reagent_containers/pill/P= new(src.loc)
+				P.name = "[r_id]"
+				P.pixel_x = rand(-7, 7) // random position
+				P.pixel_y = rand(-7, 7)
+				P.icon_state = "pill[pill_icon]"
+				reagents.trans_to_obj(P, min(reagents.total_volume, MAX_UNITS_PER_PILL))
+				if(P.icon_state in list("pill1", "pill2", "pill3", "pill4")) // if using greyscale, take colour from reagent
+					P.color = P.reagents.get_color()
+				P.update_icon()
+
+		if(3) // Patches
+			while(reagents.total_volume)
+				var/obj/item/weapon/reagent_containers/pill/patch/P= new(src.loc)
+				P.name = "[r_id]"
+				P.pixel_x = rand(-7, 7) // random position
+				P.pixel_y = rand(-7, 7)
+				P.icon_state = "patch[patch_icon]"
+				reagents.trans_to_obj(P, min(reagents.total_volume, MAX_UNITS_PER_PATCH))
+				if(P.icon_state in list("patch1", "patch2", "patch3", "patch4")) // if using greyscale, take colour from reagent
+					P.color = P.reagents.get_color()
+				P.update_icon()
+
+		else // Bottles. Official value is 1, but this works as a sanity check.
+			while(reagents.total_volume)
+				var/obj/item/weapon/reagent_containers/glass/bottle/B = new(src.loc)
+				B.name = "[r_id] bottle"
+				B.pixel_x = rand(-7, 7) // random position
+				B.pixel_y = rand(-7, 7)
+				B.icon_state = "bottle-[bottle_icon]"
+				reagents.trans_to_obj(B, min(reagents.total_volume, MAX_UNITS_PER_BOTTLE))
+				B.update_icon()
 
 	// Sanity check when manual bottling is triggered.
 	if(queue.len)

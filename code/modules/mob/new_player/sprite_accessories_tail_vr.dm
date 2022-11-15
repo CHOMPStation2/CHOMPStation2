@@ -12,6 +12,7 @@
 	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use
 
 	var/list/lower_layer_dirs = list(SOUTH)
+	var/icon_loaf = null //CHOMPEdit
 
 /datum/sprite_accessory/tail/New()
 	. = ..()
@@ -1200,6 +1201,12 @@
 	ani_state = "tentacle_w"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	
+/datum/sprite_accessory/tail/perrin_tentacles
+	name = "octopus tentacles (Perrin Kade)"
+	desc = ""
+	icon_state = "perrintentacles"
+	ckeys_allowed = list("codeme")
 
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
