@@ -8,7 +8,7 @@
 	var/afks = 0
 	var/active = 0
 	var/bellied = 0
-	var/map_name = "n/a"
+//	var/map_name = "n/a" //CHOMP Remove we don't use this and it is causing problems with the dmb compiler.
 	if(using_map && using_map.full_name)
 		map_name = using_map.full_name
 
