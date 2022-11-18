@@ -161,8 +161,6 @@
 	cost = 300
 	containertype = /obj/structure/closet/crate
 	containername = "cordless jukebox speakers crate"
-<<<<<<< HEAD
-=======
 
 /datum/supply_pack/misc/explorer_headsets
 	name = "shortwave-capable headsets (x4)"
@@ -178,4 +176,3 @@
 		access_pilot
 	)
 	one_access = TRUE
->>>>>>> 1657a7f62a... Merge pull request #14092 from KillianKirilenko/kk-cargo
