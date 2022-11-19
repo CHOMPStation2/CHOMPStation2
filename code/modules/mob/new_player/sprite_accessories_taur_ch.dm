@@ -82,7 +82,7 @@
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
 
-/datum/sprite_accessory/tail/taur/giantspider_colorable//these are honestly better fit for vass icontypes whoops
+/datum/sprite_accessory/tail/taur/ch/giantspider_colorable//these are honestly better fit for vass icontypes whoops
 	name = "Giant Spider dual-color (Taur)"
 	icon_state = "giantspidertaur-colorable"
 	extra_overlay = "giantspidertaur-colorable-markings"
@@ -103,7 +103,7 @@
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
-/datum/sprite_accessory/tail/taur/carrierspider
+/datum/sprite_accessory/tail/taur/ch/carrierspider
 	name = "Carrier Spider (Taur)"
 	icon_state = "carrierspidertaur"
 	extra_overlay = null
@@ -124,7 +124,7 @@
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
-/datum/sprite_accessory/tail/taur/giantspider
+/datum/sprite_accessory/tail/taur/ch/giantspider
 	name = "Giant Spider (Taur)"
 	icon_state = "giantspidertaur"
 	extra_overlay = null
@@ -145,7 +145,7 @@
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
-/datum/sprite_accessory/tail/taur/phoronspider
+/datum/sprite_accessory/tail/taur/ch/phoronspider
 	name = "Phorogenic Spider (Taur)"
 	icon_state = "phoronspidertaur"
 	extra_overlay = null
@@ -166,7 +166,7 @@
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
-/datum/sprite_accessory/tail/taur/sparkspider
+/datum/sprite_accessory/tail/taur/ch/sparkspider
 	name = "Voltaic Spider (Taur)"
 	icon_state = "sparkspidertaur"
 	extra_overlay = null
@@ -187,7 +187,7 @@
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
-/datum/sprite_accessory/tail/taur/frostspider
+/datum/sprite_accessory/tail/taur/ch/frostspider
 	name = "Frost Spider (Taur)"
 	icon_state = "frostspidertaur"
 	extra_overlay = null
