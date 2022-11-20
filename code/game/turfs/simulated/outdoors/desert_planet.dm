@@ -127,30 +127,30 @@
 	//edge_blending_priority = 3
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 
-/obj/effect/floor_decal/desert_planet/floor/sand0-edge
-	name = "sand0-edge"
+/obj/effect/floor_decal/desert_planet/floor/sand0_edge
+	name = "sand0_edge"
 	icon = 'icons/turf/desert_planet.dmi'
-	icon_state = "sand0-edge"
+	icon_state = "sand0_edge"
 
-/obj/effect/floor_decal/desert_planet/floor/gravel-edge
-	name = "gravel-edge"
+/obj/effect/floor_decal/desert_planet/floor/gravel_edge
+	name = "gravel_edge"
 	icon = 'icons/turf/desert_planet.dmi'
-	icon_state = "gravel-edge"
+	icon_state = "gravel_edge"
 
-/obj/effect/floor_decal/desert_planet/floor/mud-edge
-	name = "mud-edge"
+/obj/effect/floor_decal/desert_planet/floor/mud_edge
+	name = "mud_edge"
 	icon = 'icons/turf/desert_planet.dmi'
-	icon_state = "mud-edge"
+	icon_state = "mud_edge"
 
-/obj/effect/floor_decal/desert_planet/floor/grass-edge
-	name = "grass-edge"
+/obj/effect/floor_decal/desert_planet/floor/grass_edge
+	name = "grass_edge"
 	icon = 'icons/turf/desert_planet.dmi'
-	icon_state = "grass-edge"
+	icon_state = "grass_edge"
 
-/obj/effect/floor_decal/desert_planet/floor/deep_grass-edge
-	name = "deep_grass-edge"
+/obj/effect/floor_decal/desert_planet/floor/deep_grass_edge
+	name = "deep_grass_edge"
 	icon = 'icons/turf/desert_planet.dmi'
-	icon_state = "deep_grass-edge"
+	icon_state = "deep_grass_edge"
 
 
 /*  #No idea how water tiles work
