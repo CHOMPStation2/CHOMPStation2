@@ -8042,6 +8042,11 @@ lel
 /obj/item/weapon/book/manual/security_space_law,
 /obj/item/gunbox/warden,
 /obj/structure/closet/secure_closet/warden,
+<<<<<<< HEAD
+=======
+/obj/item/device/ticket_printer,
+/obj/item/weapon/gun/energy/sizegun,
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/warden)
 "tx" = (

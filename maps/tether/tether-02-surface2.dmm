@@ -11719,6 +11719,11 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
+=======
+/obj/item/device/ticket_printer,
+/obj/item/weapon/gun/energy/sizegun,
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/warden)
 "asF" = (

@@ -5935,6 +5935,27 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/engineering/engine_room)
+<<<<<<< HEAD
+=======
+"nh" = (
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/walllocker_double/west{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/effect/floor_decal/milspec/color/green/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 "ni" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/engine_room)
@@ -19731,8 +19752,29 @@
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/engine_room)
 "RZ" = (
+<<<<<<< HEAD
 /turf/simulated/open,
 /area/maintenance/stellardelight/deck2/portaft)
+=======
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/crate/medical{
+	desc = "A crate full of emergency supplies to help with response and rescue operations. A logo of NanoTrasen with a checkmark is stamped on the crate.";
+	name = "NanoTrasen Emergency Supply Crate"
+	},
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/firstaid/adv,
+/obj/item/weapon/storage/firstaid,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/turf/simulated/floor/tiled/eris/dark/monofloor,
+/area/bridge)
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 "Sb" = (
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/engineering/engine_room)
@@ -21003,12 +21045,15 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/storage/tech)
+<<<<<<< HEAD
 "UW" = (
 /obj/structure/sign/poster{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/cargo,
 /area/crew_quarters/recreation_area)
+=======
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 "UX" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/carpet,
@@ -32677,7 +32722,7 @@ VG
 KH
 zz
 nt
-UW
+mt
 Bp
 oS
 oS
@@ -34664,7 +34709,7 @@ FA
 Zr
 sj
 FU
-Zr
+xS
 Zr
 vj
 pZ

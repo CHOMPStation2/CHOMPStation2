@@ -1660,6 +1660,24 @@
 	},
 /turf/simulated/floor/airless,
 /area/stellardelight/deck3/exterior)
+<<<<<<< HEAD
+=======
+"gx" = (
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/walllocker_double/south{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/turf/simulated/floor,
+/area/stellardelight/deck2/fore)
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 "gy" = (
 /obj/structure/closet/secure_closet/engineering_chief,
 /obj/item/device/radio/intercom{
@@ -1843,6 +1861,17 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+<<<<<<< HEAD
+=======
+"gY" = (
+/obj/structure/closet/walllocker_double/south{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/stellardelight/deck2/port)
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 "hb" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -2097,6 +2126,16 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+<<<<<<< HEAD
+=======
+"ie" = (
+/obj/structure/closet/walllocker_double/south{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 "if" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8988,6 +9027,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
 "GV" = (
+<<<<<<< HEAD
+=======
+/obj/structure/closet/walllocker_double/south{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+>>>>>>> 357ffe41dd... Merge pull request #14125 from Very-Soft/moarsizegun
 /obj/structure/lattice,
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -24569,7 +24615,7 @@ oP
 dN
 UA
 Fj
-sO
+gx
 EJ
 rx
 rx
