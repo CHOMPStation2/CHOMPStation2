@@ -8,6 +8,8 @@
 /datum/say_list/clown
 	speak = list("HONK", "Honk!", "Henk!")
 	emote_see = list("honks")
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 
 

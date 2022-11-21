@@ -60,6 +60,8 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	var/shock_chance = 10 // Beware
 	var/powerdraw = 100000 // previous value 150000 // CHOMPStation Addition, Rykka waz here. *pawstamp*
 	var/tracked = FALSE
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/solargrub
 	emote_see = list("squelches", "squishes")

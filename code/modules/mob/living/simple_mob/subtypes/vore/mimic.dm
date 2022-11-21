@@ -20,6 +20,8 @@
 	desc = "A rectangular steel crate. This one looks particularly unstable."
 	var/mimic_chance = 30
 	var/mimic_active = TRUE
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /obj/structure/closet/crate/mimic/open()
 	if(src.opened)

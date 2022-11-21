@@ -25,3 +25,5 @@
 	max_n2 = 0
 	minbodytemp = 0
 	maxbodytemp = 700
+
+	can_be_drop_prey = FALSE //CHOMP Add
