@@ -62,7 +62,7 @@
 	var/list/construct_spells = list()
 //	var/do_glow = TRUE
 
-can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/construct/place_spell_in_hand(var/path)
 	if(!path || !ispath(path))
