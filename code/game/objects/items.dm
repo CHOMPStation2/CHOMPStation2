@@ -109,10 +109,17 @@
 
 	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
 
+<<<<<<< HEAD
 /obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
+=======
+	var/protean_drop_whitelist = FALSE
+
+/obj/item/New()
+	..()
+>>>>>>> 4b16eda00f... Merge pull request #14110 from Heroman3003/protean-whitelist-item-mask-freyr
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))

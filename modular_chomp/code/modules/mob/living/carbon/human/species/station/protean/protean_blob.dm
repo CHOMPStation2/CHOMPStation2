@@ -413,6 +413,36 @@ var/global/list/disallowed_protean_accessories = list(
 	//Create our new blob
 	var/mob/living/simple_mob/protean_blob/blob = new(creation_spot,src)
 
+<<<<<<< HEAD:modular_chomp/code/modules/mob/living/carbon/human/species/station/protean/protean_blob.dm
+=======
+	//Drop all our things
+	var/list/things_to_drop = contents.Copy()
+	var/list/things_to_not_drop = list(w_uniform,nif,l_store,r_store,wear_id,l_ear,r_ear) //And whatever else we decide for balancing.
+
+	/* No for now, because insta-pepperspray or flash on unblob
+	if(l_hand && l_hand.w_class <= ITEMSIZE_SMALL) //Hands but only if small or smaller
+		things_to_not_drop += l_hand
+	if(r_hand && r_hand.w_class <= ITEMSIZE_SMALL)
+		things_to_not_drop += r_hand
+	*/
+
+	things_to_drop -= things_to_not_drop //Crunch the lists
+	things_to_drop -= organs //Mah armbs
+	things_to_drop -= internal_organs //Mah sqeedily spooch
+
+	for(var/obj/item/I in things_to_drop) //rip hoarders
+		if(I.protean_drop_whitelist)
+			continue
+		drop_from_inventory(I)
+
+	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
+		var/obj/item/clothing/uniform = w_uniform
+		if(LAZYLEN(uniform.accessories))
+			for(var/obj/item/clothing/accessory/A in uniform.accessories)
+				if(is_type_in_list(A, disallowed_protean_accessories))
+					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
+
+>>>>>>> 4b16eda00f... Merge pull request #14110 from Heroman3003/protean-whitelist-item-mask-freyr:code/modules/mob/living/carbon/human/species/station/protean_vr/protean_blob.dm
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
