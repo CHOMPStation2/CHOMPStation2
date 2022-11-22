@@ -64,7 +64,7 @@
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
 	//icon_sprite_tag = "wolf"	//This could be modified later.
-	loaf_offset = 3	
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_wag
 	name = "Wolf (Taur, Fat vwag)"
@@ -80,20 +80,22 @@
 
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
 	name = "Fat Wolf 3-color (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
 	icon_state = "fatwolf_s"
 	extra_overlay = "fatwolf_markings"
-	extra_overlay2 = "wolf_markings_2"
+	extra_overlay2 = "fatwolf_markings_2" //CHOMPEdit
 	//icon_sprite_tag = "fatwolf2c"
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c_wag
 	name = "Wolf 3-color (Taur, Fat vwag)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
 	icon_state = "wolf_s"
 	extra_overlay = "wolf_markings"
 	extra_overlay2 = "wolf_markings_2"
 	ani_state = "fatwolf_s"
 	extra_overlay_w = "fatwolf_markings"
-	extra_overlay2_w = "wolf_markings_2"
+	extra_overlay2_w = "fatwolf_markings_2" //CHOMPEdit
 
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
@@ -417,9 +419,10 @@
 
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
 	name = "Fat Feline 3-color (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
 	icon_state = "fatfeline_s"
 	extra_overlay = "fatfeline_markings"
-	extra_overlay2 = "fatfeline_markings_2"
+	extra_overlay2 = "fatfeline_markings_2" //CHOMPEdit
 	//icon_sprite_tag = "fatfeline2c"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
@@ -427,12 +430,13 @@
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c_wag
 	name = "Feline 3-color (Taur, Fat vwag)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
 	icon_state = "feline_s"
 	extra_overlay = "feline_markings"
 	extra_overlay2 = "feline_markings_2"
 	ani_state = "fatfeline_s"
 	extra_overlay_w = "fatfeline_markings"
-	extra_overlay2_w = "feline_markings_2"
+	extra_overlay2_w = "fatfeline_markings_2" //CHOMPEdit
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
 	name = "SynthFeline dual-color (Taur)"
