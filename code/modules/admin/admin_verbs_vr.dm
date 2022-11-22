@@ -54,3 +54,25 @@
 		segments = 36
 	if(tgui_alert(usr, "\The [orbiter] will orbit around [center]. Is this okay?", "Confirm Orbit", list("Yes", "No")) == "Yes")
 		orbiter.orbit(center, distance, clock, speed, segments)
+<<<<<<< HEAD
+=======
+
+/client/proc/removetickets()
+	set name = "Security Tickets"
+	set category = "Admin"
+	set desc = "Allows one to remove tickets from the global list."
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(security_printer_tickets.len >= 1)
+		var/input = tgui_input_list(usr, "Which message?", "Security Tickets", security_printer_tickets)
+		if(!input)
+			return
+		if(tgui_alert(usr, "Do you want to remove the following message from the global list? \"[input]\"", "Remove Ticket", list("Yes", "No")) == "Yes")
+			security_printer_tickets -= input
+			log_and_message_admins("removed a security ticket from the global list: \"[input]\"", usr)
+
+	else
+		tgui_alert_async(usr, "The ticket list is empty.","Empty")
+>>>>>>> df07586ebd... Merge pull request #14128 from Very-Soft/SecurityTickettweak
