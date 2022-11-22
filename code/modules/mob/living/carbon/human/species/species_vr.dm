@@ -87,6 +87,8 @@
 	if(H.dna)
 		H.dna.ready_dna(H)
 
+	handle_base_eyes(H, custom_base) //ChompEDIT. ensure custom species with a base get the correct eyes
+
 	return new_copy
 
 /datum/species/proc/copy_variables(var/datum/species/S, var/list/whitelist)
