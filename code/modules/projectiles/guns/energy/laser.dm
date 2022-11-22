@@ -147,7 +147,7 @@
 	charge_cost = 480	//to compensate a bit for self-recharging
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/captain
 	battery_lock = 1
-	var/remainingshots = 0 //you may get a limited number of shots regardless of the charge
+/* 	var/remainingshots = 0 //you may get a limited number of shots regardless of the charge //CHOMPedit: no
 	var/failurechance = 0 //chance per shot of something going awry
 
 /obj/item/weapon/gun/energy/captain/Initialize()
@@ -248,7 +248,7 @@
 		if(10) //10% chance of just straight-up breaking on the spot
 			burnout(user)
 			return
-
+*/
 
 /obj/item/weapon/gun/energy/lasercannon
 	name = "laser cannon"
