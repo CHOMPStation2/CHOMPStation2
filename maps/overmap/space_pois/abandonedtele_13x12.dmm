@@ -1,0 +1,320 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/turf/simulated/wall/r_wall,
+/area/AIsattele)
+"c" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/space)
+"d" = (
+/obj/structure/frame/computer,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"e" = (
+/obj/machinery/teleport/station,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"f" = (
+/obj/machinery/teleport/hub,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"g" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"i" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/gloves/yellow,
+/obj/item/stack/cable_coil,
+/obj/item/weapon/cell/super/empty,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"j" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"k" = (
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"l" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"m" = (
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"n" = (
+/obj/machinery/atmospherics/pipe/tank/phoron,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"o" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"p" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"q" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/radio/beacon,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"r" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"s" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"u" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"v" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"w" = (
+/obj/structure/closet,
+/obj/item/stack/material/phoron{
+	amount = 10
+	},
+/obj/item/stack/material/phoron{
+	amount = 10
+	},
+/obj/item/weapon/circuitboard/teleporter,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"x" = (
+/obj/item/weapon/storage/toolbox/electrical,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"y" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/circuitboard/teleporter,
+/obj/item/device/aicard,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/device/multitool,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"z" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"A" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/abandonedtele)
+"B" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"N" = (
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedtele)
+"P" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+"X" = (
+/obj/item/stack/material/glass{
+	amount = 15;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedtele)
+
+(1,1,1) = {"
+a
+a
+a
+a
+c
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+c
+a
+c
+a
+c
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+c
+j
+o
+j
+c
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+c
+c
+j
+k
+j
+c
+c
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+c
+N
+N
+o
+N
+N
+c
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+N
+N
+k
+k
+s
+N
+N
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+N
+N
+g
+k
+p
+u
+k
+N
+N
+c
+a
+a
+"}
+(8,1,1) = {"
+N
+d
+k
+l
+m
+k
+X
+y
+N
+c
+c
+a
+"}
+(9,1,1) = {"
+N
+e
+k
+k
+q
+u
+l
+P
+A
+c
+a
+c
+"}
+(10,1,1) = {"
+N
+f
+v
+m
+k
+k
+k
+z
+P
+a
+a
+c
+"}
+(11,1,1) = {"
+N
+N
+i
+l
+k
+v
+x
+N
+B
+c
+a
+a
+"}
+(12,1,1) = {"
+c
+N
+N
+n
+r
+w
+N
+N
+c
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+a
+N
+N
+N
+N
+b
+a
+a
+a
+a
+a
+"}
