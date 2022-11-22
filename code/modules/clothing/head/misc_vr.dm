@@ -129,11 +129,8 @@
 	icon_override = 'icons/inventory/head/mob_vr.dmi'
 	icon_state = "beret_talon_officer"
 	item_state = "baret_talon_command"
-<<<<<<< HEAD
-=======
 
 /obj/item/clothing/head/cowboy
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/head/mob_vr_teshari.dmi'
 		)
->>>>>>> e33d3c7895... Merge pull request #14103 from tacoguy7765093/youyeedyourlasthaw-hats
