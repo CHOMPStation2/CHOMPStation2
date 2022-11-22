@@ -1,0 +1,104 @@
+"aI" = (/obj/item/device/gps/internal/poi{name = "#$(@@%$#"},/turf/simulated/wall/r_wall,/area/submap/listeningpost)
+"br" = (/obj/effect/catwalk_plated/techmaint,/turf/simulated/floor/plating,/area/submap/listeningpost)
+"er" = (/mob/living/simple_mob/humanoid/merc/ranged/space,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"ex" = (/obj/structure/disposalpipe/segment,/turf/simulated/mineral,/area/submap/listeningpost)
+"gq" = (/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/simulated/mineral,/area/submap/listeningpost)
+"gQ" = (/obj/machinery/vending/cola,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"gZ" = (/obj/machinery/shower{dir = 8; tag = "icon-shower (WEST)"},/turf/simulated/floor/tiled/freezer,/area/submap/listeningpost)
+"hP" = (/obj/item/weapon/paper/monitorkey,/obj/item/clothing/glasses/regular,/obj/structure/table/steel,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"hU" = (/obj/item/clothing/suit/space/syndicate,/obj/item/clothing/mask/gas,/obj/item/clothing/head/helmet/space/syndicate,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"iH" = (/obj/item/weapon/paper{info = "<b>Mission Details</b>: You have been assigned to a newly constructed listening post constructed within an asteroid in Nanotrasen space to monitor their plasma mining operations. Accurate intel is crucial to the success of our operatives onboard, do not fail us."; name = "mission briefing"},/obj/structure/table/steel,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"kh" = (/obj/structure/bed,/obj/item/weapon/bedsheet/brown,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"ki" = (/turf/simulated/mineral,/area/submap/listeningpost)
+"lY" = (/obj/machinery/door/airlock,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"ml" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/weapon/cell/super/empty,/turf/simulated/floor/plating,/area/submap/listeningpost)
+"mq" = (/turf/simulated/floor/tiled/freezer,/area/submap/listeningpost)
+"mT" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"nq" = (/obj/machinery/telecomms/relay/preset/ruskie,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"nx" = (/obj/machinery/power/apc/high{dir = 8; pixel_x = -20},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"nK" = (/obj/structure/table/steel,/obj/item/device/radio/bluespacehandset/linked/talon_prelinked,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"pK" = (/obj/structure/table/steel,/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"qx" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/embedded_controller/radio/airlock/access_controller{id_tag = "spacebar_control"; pixel_x = -26; pixel_y = -26; tag_exterior_door = "spacebar_exterior"; tag_interior_door = "spacebar_interior"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"rP" = (/turf/template_noop,/area/template_noop)
+"tg" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/mineral,/area/submap/listeningpost)
+"tX" = (/obj/item/weapon/tank/jetpack/carbondioxide,/obj/item/weapon/tank/air,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"ub" = (/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"uw" = (/obj/random/outcrop,/turf/simulated/mineral/floor/vacuum,/area/submap/listeningpost)
+"uD" = (/obj/machinery/access_button{command = "cycle_exterior"; frequency = 1379; master_tag = "listeningpost_control"; name = "External Access Button"; pixel_y = -26},/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "listeningpost_exterior"; locked = 1; name = "Bar Airlock"},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"uM" = (/obj/machinery/light/small{dir = 1},/obj/structure/table/steel,/obj/item/device/radio/bluespacehandset/linked/talon_prelinked,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"vl" = (/turf/simulated/wall/r_wall,/area/submap/listeningpost)
+"vm" = (/obj/machinery/computer/message_monitor{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"wB" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"xD" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/listeningpost)
+"ya" = (/turf/simulated/mineral/floor/vacuum,/area/submap/listeningpost)
+"yD" = (/obj/machinery/embedded_controller/radio/airlock/access_controller{id_tag = "listeningpost_control"; pixel_x = 25; pixel_y = -26; tag_exterior_door = "listeningpost_exterior"; tag_interior_door = "listeningpost_interior"},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"zd" = (/obj/structure/filingcabinet,/obj/item/weapon/paper{info = "A good start to the operation: intercepted Nanotrasen military communications. A convoy is scheduled to transfer nuclear warheads to a new military base. This is as good a chance as any to get our hands on some heavy weaponry, I suggest we take it."; name = "april report"},/obj/item/weapon/paper{info = "Nothing of real interest to report this month. I have intercepted faint transmissions from what appears to be some sort of pirate radio station. They do not appear to be relevant to my assignment."; name = "may report"},/obj/item/weapon/paper{info = "Nanotrasen communications have been noticably less frequent recently.  The pirate radio station I found last month has been transmitting pro-Nanotrasen propaganda. I will continue to monitor it."; name = "june report"},/obj/item/weapon/paper{info = "Nothing of interest to report."; name = "july report"},/obj/item/weapon/paper{info = "Nothing of interest to report."; name = "august report"},/obj/item/weapon/paper{info = "Nothing of interest to report."; name = "september report"},/obj/item/weapon/paper{info = "Nothing of interest to report."; name = "october report"},/obj/item/weapon/paper{info = "1 x Stechtkin pistol - $600<br>1 x silencer - $200<br>shipping charge - $4360<br>total - $5160"; name = "receipt"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"zk" = (/turf/simulated/wall,/area/submap/listeningpost)
+"zo" = (/obj/machinery/light/small,/turf/simulated/floor/plating,/area/submap/listeningpost)
+"Ac" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"Ba" = (/obj/structure/disposaloutlet{dir = 4},/obj/structure/disposalpipe/trunk{dir = 8},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"BG" = (/obj/machinery/vending/snack,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"Gg" = (/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "listeningpost_exterior"; locked = 1; name = "Bar Airlock"},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"GT" = (/turf/simulated/floor/plating,/area/submap/listeningpost)
+"IL" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/freezer,/area/submap/listeningpost)
+"Kl" = (/obj/structure/cable{d2 = 2; icon_state = "0-2"},/obj/machinery/power/port_gen/pacman,/turf/simulated/floor/plating,/area/submap/listeningpost)
+"KY" = (/obj/item/weapon/paper{info = "Nothing of interest to report."; name = "november report"},/obj/item/weapon/pen,/obj/structure/table/steel,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"LC" = (/obj/effect/catwalk_plated/techmaint,/turf/template_noop,/area/template_noop)
+"MO" = (/obj/machinery/access_button{command = "cycle_interior"; frequency = 1379; master_tag = "listeningpost_control"; name = "Internal Access Button"; pixel_x = 7; pixel_y = -26},/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "listeningpost_interior"; locked = 1; name = "Bar Airlock"},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"Nv" = (/obj/structure/table/rack/shelf/steel,/obj/item/stack/material/phoron{amount = 10},/obj/item/stack/material/phoron{amount = 10},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"Ny" = (/obj/machinery/door/airlock,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"NE" = (/obj/structure/closet,/obj/item/clothing/gloves/boxing,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"OM" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"PL" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/wall/r_wall,/area/submap/listeningpost)
+"Qp" = (/obj/machinery/light/small,/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"Ri" = (/obj/machinery/door/airlock{name = "Toilet"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"RJ" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"Sd" = (/obj/structure/disposalpipe/segment{dir = 8; icon_state = "pipe-c"},/turf/simulated/mineral,/area/submap/listeningpost)
+"Sj" = (/obj/machinery/power/smes/buildable/hybrid,/obj/structure/cable{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating,/area/submap/listeningpost)
+"TS" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"Vz" = (/turf/simulated/floor/tiled/asteroid_steel,/area/submap/listeningpost)
+"WK" = (/obj/structure/toilet{dir = 8; tag = "icon-toilet00 (WEST)"},/turf/simulated/floor/tiled/freezer,/area/submap/listeningpost)
+"WO" = (/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "listeningpost_interior"; locked = 1; name = "Bar Airlock"},/turf/simulated/floor/plating,/area/submap/listeningpost)
+
+(1,1,1) = {"
+rPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPkikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPkikikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPkikirPkikirPrPrPrP
+rPrPrPkikikikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPkirPrPrPrPkikikikirPrPrPrPrPrP
+rPrPrPkikikikikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPkirPrPrPrPrPrPkikikikirPrPrPrPrPrP
+rPrPrPrPkikikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPkikikirPrPrPrPrPrPkikirPrPrPrPrPrP
+rPrPrPrPrPkikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPkikikikirPrPrPrPrPrPrPrPrPkirPrPrP
+rPrPrPrPrPrPrPkikirPrPrPkikikikirPrPrPrPrPrPrPrPrPkikirPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPrPrPrPrPrPkikikikikikikikikirPrPrPrPrPrPrPrPrPrPrPrPrPkikirPrPrPrPrPrP
+rPrPrPrPrPrPrPrPkikikikikikikikikikikikikikirPrPrPrPrPrPrPrPrPkikikikirPrPrPrPrP
+rPrPrPrPrPrPrPyayauwkikikikikikikikikikikikikikirPrPrPrPrPrPrPrPrPkikikirPrPrPrP
+rPrPrPrPrPrPyayayayayakikikikikivlvlvlvlvlkikikikikirPrPrPrPrPrPrPrPkikikirPrPrP
+rPrPrPrPkikikikiyayayakikikikikivlmlNvKlvlvlkikikikikirPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPkikikikikiyayayakikikikikikivlGTzoxDSjvlkikikikikikirPrPrPrPrPrPrPrPrPrPrPrP
+rPkikikikikiyayayauwkikikikikikivlvlvllYzkvlvlvlvlbrrPkikirPrPrPrPrPrPrPrPrPrPrP
+rPyauwkikiuwyayayakikikikikikivlvlhPuMRJVzWOmTGTGgbrLCLCrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPyayayayayayakikikikikikikivlvmubKYqxyDMOGTGTuDbrLCLCrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPyayayayayayakikikikikikikivlaInxnKActXvlvlvlvlbryayarPrPrPrPrPrPrPrPrPrPrPrP
+rPrPyayayayayayakikikikikikikivlnqVzQpTShUvlkikikikikikikirPrPrPrPrPrPrPrPrPrPrP
+rPrPyayayakikiuwyakikikikivlvlvlvlNyzkzkzkvlkigqtgtgBarPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPyakikikikiyakikikikivlkhpKzkVzOMVzBGvlkiexkikikikikirPrPrPrPrPrPrPrPrPrPrP
+rPrPrPyauwkikiyayakikikikivlerTSNyVzTSVzgQvlkiexkikikikikirPrPrPrPrPrPrPrPrPrPrP
+rPrPrPkikikiyayayakikikikivlNEzdzkiHVzwBPLPLtgSdkikikikirPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPkiyayakikikikikikivlvlvlvlvlRizkvlkikikikikikirPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPrPkikikikikikikikikikikivlILgZvlkikikikikikikikirPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPrPrPkikikikikikikikikikivlmqWKvlkikikikikikiyayarPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPrPrPkikikikikikikikikikivlvlvlvlkikikikikiyayarPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPkikikikikikikikikikikikikikikikikikiuwyayayayarPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPrPkikikikikikikikikikikikikikikiyayayayayarPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPrPrPrPkikikikikikikikikikikiyayayayayarPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPkikirPrPrPrPrPrPkikikikikikikiuwyayayayarPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPkikikirPrPrPkikikikikikikiyayayayarPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPkikikikikirPrPrPrPrPrPkikiyayayarPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPkikikirPrPkikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPrPkikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPkikikikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPkikikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPkikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPrPkikirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+rPrPrPkirPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrPrP
+"}

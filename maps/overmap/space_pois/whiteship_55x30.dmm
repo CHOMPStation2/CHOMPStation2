@@ -32,16 +32,19 @@
 "oh" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/whiteship)
 "ok" = (/obj/item/weapon/bedsheet,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/structure/bed/padded,/turf/simulated/shuttle/floor,/area/submap/whiteship)
 "pE" = (/obj/machinery/door/airlock/glass{name = "Pod Bay"},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"pU" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/mob/living/simple_mob/metroid/juvenile/zeta,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "qP" = (/mob/living/simple_mob/humanoid/merc/melee,/obj/random/gun/random,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "rk" = (/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "ry" = (/mob/living/simple_mob/humanoid/merc/melee,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "sn" = (/obj/random/junk,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "tb" = (/obj/item/weapon/cell{charge = 100; maxcharge = 15000},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"tg" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/metroid/juvenile/omega,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "tK" = (/obj/item/weapon/material/shard,/obj/structure/bed/chair,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
 "us" = (/obj/machinery/door/airlock/glass,/turf/simulated/shuttle/floor,/area/submap/whiteship)
 "uz" = (/obj/machinery/light_switch{pixel_x = 27},/turf/simulated/shuttle/floor,/area/submap/whiteship)
 "uD" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "burst_l"},/turf/template_noop,/area/submap/whiteship)
 "va" = (/obj/random/trash,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"vf" = (/mob/living/simple_mob/metroid/juvenile/super,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
 "vQ" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "burst_r"},/turf/template_noop,/area/submap/whiteship)
 "wd" = (/obj/machinery/computer/pod{dir = 1; id = "oldship_gun"},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
 "ww" = (/obj/structure/cable,/obj/structure/frame/computer,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
@@ -64,9 +67,11 @@
 "EE" = (/obj/structure/lattice,/turf/template_noop,/area/submap/whiteship)
 "EF" = (/obj/structure/table/standard,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
 "EM" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Fn" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/metroid/juvenile/super,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
 "FB" = (/obj/structure/lattice,/obj/structure/lattice,/turf/template_noop,/area/submap/whiteship)
 "FT" = (/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
 "Gy" = (/obj/machinery/mass_driver{dir = 8; id = "oldship_gun"},/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"GA" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/metroid/juvenile/super,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "GV" = (/obj/random/gun/random,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
 "Hl" = (/turf/simulated/shuttle/plating,/area/submap/whiteship)
 "HM" = (/obj/machinery/light_switch{pixel_x = 27},/obj/machinery/light{dir = 4},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
@@ -116,15 +121,15 @@ fRfRfRgJWOewywWOgJgJBrBrBrgJgJwDgJgJgJWOHlHlztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
 fRfRfRgJewewTSewgKgJalewzYirhMewewewewAQHlWOgJuDfRfRfRfRfRfRNcfRfRfRfRfRfRfRfRfRfRfREEEEfRfRfRfRfRfRfRfRfRfRfR
 fRfRfRgJewVCIKrkSugJirIKrkTCIKrkIKIKewWOWOgJgJfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfRfRfREEEEfRfRfRfRfRfRfRfRfRfRfRfR
 fRfRfRBrewIKeNIKIBgJirIKgJusgJgJWOsnMKgJJUewWOgJgJfRfRfREEEENcfREEEEfRfRfRfRfRfRfRFBfRfRfRfRfRfRfRfRfRfRfRfRfR
-fRfRfRBrewIKryloewgJirIKgJJbUqDcgJIKvagJbIewewewWOgJfRgJgJgJgJgJgJgJgJgJgJgJfRfREEEEfRfRfRfRfRfRfRfRfRfRfREENc
-fRfRfRBrVudZzRrkewBrhMIKgJWtNquzgJIKewBrewirIKMiewgJgJgJewewAtewEMewAtewewgJEEfRNcgJgJgJgJgJgJgJgJgJgJgJfREEfR
-fRfRfRBrdwenIKesewEsirrkgJCdogJbgJeVewEsewIKodrkewEsewEsirJyTCIKloeNIKrkewEsEEfREEgJewirirlRirewAtewewgJfREEfR
-fRfRfRBrEFdZIKIKewBrewrkgJgVokbXgJIKewBrewMiqPirirgJgJgJirirAtAtirlRirFTewgJEEEEEEEsewIKloMaeNIKIKrkewEsEEEEfR
+fRfRfRBrewIKryloewgJirIKgJJbUqDcgJIKvagJbIvfewewWOgJfRgJgJgJgJgJgJgJgJgJgJgJfRfREEEEfRfRfRfRfRfRfRfRfRfRfREENc
+fRfRfRBrVudZzRrkewBrhMIKgJWtNquzgJtgewBrewirIKMiewgJgJgJewewAtewEMewAtewewgJEEfRNcgJgJgJgJgJgJgJgJgJgJgJfREEfR
+fRfRfRBrdwenIKesewEsirrkgJCdogJbgJeVewEsewIKodrkewEsewEsirJyTCIKpUeNIKrkewEsEEfREEgJewirirlRirewAtewewgJfREEfR
+fRfRfRBrEFdZIKIKewBrewrkgJgVokbXgJIKewBrewMiqPirirgJgJgJirirAtAtirlRirFTewgJEEEEEEEsewIKloMaeNIKGArkewEsEEEEfR
 fRfRfRBrewsnIKIKewgJewrkWOgJgJusgJXyirgJbIewewewWOgJfRgJgJgJgJgJgJgJgJgJgJgJfRNcEEgJewAtirAtewofMiAtewgJfREEfR
 fRfRfRBrewewirSwHMgJWOrkrkrkrkrkrkwxirgJewewWOgJgJfRfRfRfRfRfRfRfRfRfRfRfREEfRFBfRgJgJgJgJgJgJgJgJgJgJgJfRfRBq
 fRfRfRgJLWtKcRewWOgJgJgJgJgJWOewrkrkewWOWOgJgJfRfRfRfRfRfRfRfRfRfRfRfRfRfREENcNcfRfRfRfRfRfRfRfRfRfRfRfRfRfREE
 fRfRfRgJWOwwcSWOgJWOxwabNEWOgJnPWxtbewAQHlWOgJvQfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfREEfRfRfRfRfRfRfRfRfRfRfRfRfRfR
-fRfRfRfRgJgJgJgJWOewirmLirewgJMiirewWOWOHlHlztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfREEfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRgJgJgJgJWOewirmLFnewgJMiirewWOWOHlHlztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfREEfRfRfRfRfRfRfRfRfRfRfRfRfRfR
 fRfRfRfRfRcAGyEsewewmLUAzTewpEewewWOgJgJWORBztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRNcfR
 fRfRfRfRfRgJgJWOwdewirmOirewgJWOWOgJfRfRgJWOztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
 fRfRfRfRfRfRfRgJgJWOewSoAnWOgJgJgJfRfRfRfRgJgJuDfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
