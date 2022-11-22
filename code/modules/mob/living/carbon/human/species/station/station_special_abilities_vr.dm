@@ -118,13 +118,13 @@
 
 		//Dead when hatching
 		if(stat == DEAD)
-			var/sickness_duration = 10 MINUTES
+			// var/sickness_duration = 10 MINUTES //CHOMPedit
 			//Reviving from ded takes extra nutrition - if it isn't provided from outside sources, it comes from you
 			if(!hasnutriment())
 				nutrition=nutrition * 0.75
-				sickness_duration = 20 MINUTES
+				// sickness_duration = 20 MINUTES //CHOMPedit
 			chimera_hatch()
-			add_modifier(/datum/modifier/resleeving_sickness/chimera, sickness_duration)
+			// add_modifier(/datum/modifier/resleeving_sickness/chimera, sickness_duration) //CHOMPedit
 			adjustBrainLoss(5) // if they're reviving from dead, they come back with 5 brainloss on top of whatever's unhealed.
 			visible_message("<span class='warning'><p><font size=4>The former corpse staggers to its feet, all its former wounds having vanished...</font></p></span>") //Bloody hell...
 			clear_alert("hatch")
