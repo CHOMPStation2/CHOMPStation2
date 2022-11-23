@@ -68,7 +68,7 @@
 			else
 				L.flicker(10)
 		*/
-		handle_phasein_flicker()
+		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
 	//Shifting out
 	else
