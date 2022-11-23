@@ -183,6 +183,12 @@
 			// Visuals
 			belly_data["affects_vore_sprites"] = B.affects_vore_sprites
 			belly_data["count_absorbed_prey_for_sprite"] = B.count_absorbed_prey_for_sprite
+			belly_data["absorbed_multiplier"] = B.absorbed_multiplier
+			belly_data["count_liquid_for_sprite"] = B.count_liquid_for_sprite
+			belly_data["liquid_multiplier"] = B.liquid_multiplier
+			belly_data["count_items_for_sprite"] = B.count_items_for_sprite
+			belly_data["item_multiplier"] = B.item_multiplier
+			belly_data["health_impacts_size"] = B.health_impacts_size
 			belly_data["resist_triggers_animation"] = B.resist_triggers_animation
 			belly_data["size_factor_for_sprite"] = B.size_factor_for_sprite
 			belly_data["belly_sprite_to_affect"] = B.belly_sprite_to_affect

@@ -260,6 +260,12 @@
 	"vore_sprite_flags",
 	"affects_vore_sprites",
 	"count_absorbed_prey_for_sprite",
+	"absorbed_multiplier",
+	"count_liquid_for_sprite",
+	"liquid_multiplier",
+	"count_items_for_sprite",
+	"item_multiplier",
+	"health_impacts_size",
 	"resist_triggers_animation",
 	"size_factor_for_sprite",
 	"belly_sprite_to_affect",
@@ -1304,6 +1310,12 @@
 	dupe.vore_sprite_flags = vore_sprite_flags
 	dupe.affects_vore_sprites = affects_vore_sprites
 	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.absorbed_multiplier = absorbed_multiplier
+	dupe.count_liquid_for_sprite = count_liquid_for_sprite
+	dupe.liquid_multiplier = liquid_multiplier
+	dupe.count_items_for_sprite = count_items_for_sprite
+	dupe.item_multiplier = item_multiplier
+	dupe.health_impacts_size = health_impacts_size
 	dupe.resist_triggers_animation = resist_triggers_animation
 	dupe.size_factor_for_sprite = size_factor_for_sprite
 	dupe.belly_sprite_to_affect = belly_sprite_to_affect
