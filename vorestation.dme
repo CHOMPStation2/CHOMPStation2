@@ -4509,6 +4509,7 @@
 #include "modular_chomp\code\datums\outfits\jobs\noncrew.dm"
 #include "modular_chomp\code\game\jobs\job\department.dm"
 #include "modular_chomp\code\game\jobs\job\noncrew.dm"
+#include "modular_chomp\code\game\jobs\job\silicon.dm"
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
 #include "modular_chomp\code\game\objects\structures\watercloset_ch.dm"
 #include "modular_chomp\code\game\objects\structures\crate_lockers\largecrate.dm"
