@@ -119,6 +119,7 @@
 
 	var/obj/belly/tail = new /obj/belly(src)
 	tail.immutable = TRUE
+	tail.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	tail.name = "tail stomach"
 	tail.desc = "You slide out into the narrow, constricting tube of flesh that is the lamia's snake half, heated walls and strong muscles all around clinging to your form with every slither."
 	tail.digest_mode = vore_default_mode
@@ -136,7 +137,7 @@
 	tail.human_prey_swallow_time = swallowTime
 	tail.nonhuman_prey_swallow_time = swallowTime
 	tail.vore_verb = "stuff"
-	tail.belly_sprite_to_affect = "tail"
+	tail.belly_sprite_to_affect = "tail" //CHOMPEdit - So that tail belly affects tail vore sprite.
 	tail.emote_lists[DM_HOLD] = B.emote_lists[DM_HOLD].Copy()
 	tail.emote_lists[DM_DIGEST] = B.emote_lists[DM_DIGEST].Copy()
 

@@ -80,7 +80,7 @@
 		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
 		)
 
-	var/affects_vore_sprites = TRUE
+	var/affects_vore_sprites = FALSE
 	var/count_absorbed_prey_for_sprite = TRUE
 	var/resist_triggers_animation = TRUE
 	var/size_factor_for_sprite = 1
