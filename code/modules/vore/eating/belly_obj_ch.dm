@@ -119,13 +119,13 @@
 			var/fullness_to_add = 0
 			if(I.w_class == ITEMSIZE_TINY)
 				fullness_to_add = ITEMSIZE_COST_TINY
-			if(I.w_class == ITEMSIZE_SMALL)
+			else if(I.w_class == ITEMSIZE_SMALL)
 				fullness_to_add = ITEMSIZE_COST_SMALL
-			if(I.w_class == ITEMSIZE_NORMAL)
+			else if(I.w_class == ITEMSIZE_NORMAL)
 				fullness_to_add = ITEMSIZE_COST_NORMAL
-			if(I.w_class == ITEMSIZE_LARGE)
+			else if(I.w_class == ITEMSIZE_LARGE)
 				fullness_to_add = ITEMSIZE_COST_LARGE
-			if(I.w_class == ITEMSIZE_HUGE)
+			else if(I.w_class == ITEMSIZE_HUGE)
 				fullness_to_add = ITEMSIZE_COST_HUGE
 			else
 				fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
@@ -161,6 +161,8 @@
 		owner.nutrition -= gen_cost
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
+	if(count_liquid_for_sprite)
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 
 //////////////////////////// REAGENT_DIGEST ////////////////////////
 

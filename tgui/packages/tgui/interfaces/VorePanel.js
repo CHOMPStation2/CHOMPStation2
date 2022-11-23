@@ -933,6 +933,14 @@ const VoreSelectedBellyVisuals = (props, context) => {
                     content={item_multiplier}
                   />
                 </LabeledList.Item>
+                <LabeledList.Item label="Prey health affects vore sprites">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_health_impacts_size' })}
+                    icon={health_voresprite ? 'toggle-on' : 'toggle-off'}
+                    selected={health_voresprite}
+                    content={health_voresprite ? 'Yes' : 'No'}
+                  />
+                </LabeledList.Item>
                 <LabeledList.Item label="Animation when prey resist">
                   <Button
                     onClick={() => act('set_attribute', { attribute: 'b_resist_animation' })}

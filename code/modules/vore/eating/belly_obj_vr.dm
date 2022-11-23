@@ -364,6 +364,8 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
 		var/obj/item/capture_crystal/CC = thing
 		if(CC.bound_mob && desc)
@@ -392,6 +394,8 @@
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
+		if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/obj/item/I = thing
 		if(I.gurgled)
 			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.

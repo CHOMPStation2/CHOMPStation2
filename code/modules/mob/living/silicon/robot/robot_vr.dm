@@ -109,7 +109,7 @@
 	if(dogborg == TRUE && stat == CONSCIOUS)
 		//update_fullness() // CHOMPEdit - Needed so that we can have the vore sprites when only using vore bellies
 		//CHOMPEdit begin - Add multiple belly size support
-		//Add a check when selecting a chassis if you add in support for this, to set vore_capacity to 2 or however many states you have.
+		//Add a check when selecting an icon in robot.dm if you add in support for this, to set vore_capacity to 2 or however many states you have.
 		var/fullness_extension = ""
 		if(vore_capacity_ex["stomach"] > 1 && vore_fullness_ex["stomach"] > 1)
 			fullness_extension = "_[vore_fullness_ex["stomach"]]"
