@@ -547,6 +547,10 @@
 			// Checks for jobs with minimum age requirements
 			if((job.minimum_character_age || job.min_age_by_species) && (client.prefs.age < job.get_min_age(client.prefs.species, client.prefs.organ_data["brain"])))
 				continue
+			//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
+			if(job.is_species_banned(client.prefs.species, client.prefs.organ_data["brain"]))
+				continue
+			//CHOMPEdit End
 			// Checks for jobs set to "Never" in preferences	//TODO: Figure out a better way to check for this
 			if(!(client.prefs.GetJobDepartment(job, 1) & job.flag))
 				if(!(client.prefs.GetJobDepartment(job, 2) & job.flag))
