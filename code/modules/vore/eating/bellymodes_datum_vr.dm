@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
  		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
-	var/old_health = L.health;
+	var/old_health = L.health; //CHOMPEdit - Store old health for the hard crit calculation
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
 	var/old_oxy = L.getOxyLoss()
