@@ -117,6 +117,8 @@
 		/obj/item/stack/material/chitin = 1\
 		)
 
+	can_be_drop_prey = FALSE //CHOMP Add
+
 /mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A

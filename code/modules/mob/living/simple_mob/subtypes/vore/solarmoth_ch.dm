@@ -67,6 +67,8 @@
 				"bomb" = 100,
 				"bio" = 100,
 				"rad" = 100)
+				
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
