@@ -59,6 +59,12 @@
 	var/obj/item/held = user.get_active_hand()
 	if(!istype(held) || is_robot_module(held))
 		stripping = TRUE
+		//CHOMPEdit Start - Let borg grippers put stuff on.
+		if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
+			var/obj/item/weapon/gripper/G = held
+			if(istype(G.wrapped))
+				stripping = FALSE
+		//CHOMPEdit End
 	else
 		var/obj/item/weapon/holder/holder = held
 		if(istype(holder) && src == holder.held_mob)
@@ -67,7 +73,7 @@
 			var/obj/item/weapon/grab/grab = held
 			if(istype(grab) && grab.affecting == src)
 				stripping = TRUE
-		
+
 	if(stripping)
 		if(!istype(target_slot))  // They aren't holding anything valid and there's nothing to remove, why are we even here?
 			return
@@ -75,11 +81,19 @@
 			to_chat(user, "<span class='warning'>You cannot remove \the [src]'s [target_slot.name].</span>")
 			return
 		visible_message("<span class='danger'>\The [user] is trying to remove \the [src]'s [target_slot.name]!</span>")
-	else
+	else if(!istype(held, /obj/item/weapon/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
 		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/weapon/grenade))
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] in \the [src]'s mouth!</span>")
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] on \the [src]!</span>")
+	//CHOMPEdit Start - Let borg grippers put stuff on.
+	else
+		var/obj/item/weapon/gripper/G = held
+		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/weapon/grenade))
+			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] in \the [src]'s mouth!</span>")
+		else
+			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] on \the [src]!</span>")
+	//CHOMPEdit End
 
 	if(!do_after(user,HUMAN_STRIP_DELAY,src))
 		return
@@ -95,6 +109,14 @@
 	if(stripping)
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
 		unEquip(target_slot)
+	//CHOMPEdit Start - Let borg grippers put stuff on.
+	else if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
+		var/obj/item/weapon/gripper/G = held
+		var/obj/item/wrapped = G.wrapped
+		if(istype(wrapped))
+			G.drop_item_nm()
+			equip_to_slot_if_possible(wrapped, text2num(slot_to_strip), 0, 1, 1)
+	//CHOMPEdit End
 	else if(user.unEquip(held))
 		equip_to_slot_if_possible(held, text2num(slot_to_strip), 0, 1, 1)
 		if(held.loc != src)
