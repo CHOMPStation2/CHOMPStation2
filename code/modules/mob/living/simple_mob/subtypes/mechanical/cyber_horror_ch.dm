@@ -365,7 +365,7 @@
 	base_attack_cooldown = 2.5
 	attack_sharp = 1
 	attack_edge = 1
-	attack_sound = 'sound/weapons/bite.ogg
+	attack_sound = 'sound/weapons/bite.ogg'
 
 	attacktext = list("jabbed", "injected")
 
