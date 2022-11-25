@@ -24,4 +24,7 @@
 
 		targetHead.eye_icon = baseHead.eye_icon
 		targetHead.eye_icon_location = baseHead.eye_icon_location
+
+		if(!QDELETED(baseHead) && baseHead)
+			qdel(baseHead)
 	return
