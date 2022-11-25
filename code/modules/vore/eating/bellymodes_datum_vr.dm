@@ -59,6 +59,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
  		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
+	var/old_health = L.health; //CHOMPEdit - Store old health for the hard crit calculation
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
 	var/old_oxy = L.getOxyLoss()
@@ -69,6 +70,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	L.adjustOxyLoss(B.digest_oxy)
 	L.adjustToxLoss(B.digest_tox)
 	L.adjustCloneLoss(B.digest_clone)
+	//CHOMPEdit start - Send a message when a prey-thing enters hard crit.
+	if(iscarbon(L) && old_health > 0 && L.health <= 0)
+		to_chat(B.owner, "<span class='notice'>You feel [L] go still within your [lowertext(B.name)].</span>")
+	//CHOMPEdit end
 	var/actual_brute = L.getBruteLoss() - old_brute
 	var/actual_burn = L.getFireLoss() - old_burn
 	var/actual_oxy = L.getOxyLoss() - old_oxy
