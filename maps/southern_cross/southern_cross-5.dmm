@@ -11629,7 +11629,7 @@
 	name = "JoinLateSifPlains"
 	},
 /obj/effect/landmark/start{
-	name = "Non-Crew"
+	name = "Outsider"
 	},
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall)
@@ -24031,7 +24031,7 @@
 	name = "JoinLateSifPlains"
 	},
 /obj/effect/landmark/start{
-	name = "Non-Crew"
+	name = "Outsider"
 	},
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall)
