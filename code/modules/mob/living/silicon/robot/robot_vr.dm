@@ -108,16 +108,10 @@
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
 		//update_fullness() // CHOMPEdit - Needed so that we can have the vore sprites when only using vore bellies
-		//CHOMPEdit begin - Add multiple belly size support
-		//Add a check when selecting an icon in robot.dm if you add in support for this, to set vore_capacity to 2 or however many states you have.
-		var/fullness_extension = ""
-		if(vore_capacity_ex["stomach"] > 1 && vore_fullness_ex["stomach"] > 1)
-			fullness_extension = "_[vore_fullness_ex["stomach"]]"
-		//CHOMPEdit end
 		if(sleeper_g == TRUE)
 			add_overlay("[module_sprites[icontype]]-sleeper_g")
 		if(sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])) //CHOMPEdit - Also allow normal vore bellies to affect this sprite
-			add_overlay("[module_sprites[icontype]]-sleeper_r[fullness_extension]") //CHOMPEdit - Allow multiple belly sizes...
+			add_overlay("[module_sprites[icontype]]-sleeper_r")
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
 			add_overlay("laser")
 		if(istype(module_active,/obj/item/weapon/gun/energy/taser/mounted/cyborg))
@@ -131,24 +125,24 @@
 				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
 				if(sleeper_resting && sleeper_g == TRUE)
 					add_overlay("[module_sprites[icontype]]-sleeper_g-sit")
-				if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
-					add_overlay("[module_sprites[icontype]]-sleeper_r-sit[fullness_extension]")
+				if(sleeper_resting && sleeper_r == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_r-sit")
 				//CHOMPEdit End
 			if(bellyup)
 				icon_state = "[module_sprites[icontype]]-bellyup"
 				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
 				if(sleeper_resting && sleeper_g == TRUE)
 					add_overlay("[module_sprites[icontype]]-sleeper_g-bellyup")
-				if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
-					add_overlay("[module_sprites[icontype]]-sleeper_r-bellyup[fullness_extension]")
+				if(sleeper_resting && sleeper_r == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_r-bellyup")
 				//CHOMPEdit End
 			else if(!sitting && !bellyup)
 				icon_state = "[module_sprites[icontype]]-rest"
 				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
 				if(sleeper_resting && sleeper_g == TRUE)
 					add_overlay("[module_sprites[icontype]]-sleeper_g-rest")
-				if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
-					add_overlay("[module_sprites[icontype]]-sleeper_r-rest[fullness_extension]")
+				if(sleeper_resting && sleeper_r == TRUE)
+					add_overlay("[module_sprites[icontype]]-sleeper_r-rest")
 				//CHOMPEdit End
 		else
 			icon_state = "[module_sprites[icontype]]"
@@ -196,6 +190,9 @@
 			icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
+			sleeper_resting = TRUE
+		else if(icontype == "Mediborg model V-4" || icontype == "Secborg model V-4"|| icontype == "Sciborg model V-4")
+			icon = 'icons/mob/raptorborg/raptor.dmi'
 		else
 			icon = wideborg_dept
 		return
