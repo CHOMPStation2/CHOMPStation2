@@ -196,6 +196,8 @@
 			icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
+		else if(icontype == "Mediborg model V-4" || icontype == "Secborg model V-4"|| icontype == "Sciborg model V-4") //CHOMPEdit
+			icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi'
 		else
 			icon = wideborg_dept
 		return
