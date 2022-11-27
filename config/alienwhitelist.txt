@@ -18,6 +18,16 @@ hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+=======
+joltze - Black-Eyed Shadekin
+khanivore - Protean
+killjaden - Protean
+kira72 - Xenochimera
+kitchifox - Black-Eyed Shadekin
+konner1055 - Black-Eyed Shadekin
+konner1055 - Protean
+>>>>>>> c3f819571d... Merge pull request #14151 from Very-Soft/aliens
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
@@ -27,6 +37,12 @@ natje - Xenochimera
 nerdass - Protean
 ontejbjoav - Diona
 oreganovulgaris - Xenochimera
+<<<<<<< HEAD
+=======
+owwy - Black-Eyed Shadekin
+oxenfree - Protean
+ozyton - Black-Eyed Shadekin
+>>>>>>> c3f819571d... Merge pull request #14151 from Very-Soft/aliens
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
