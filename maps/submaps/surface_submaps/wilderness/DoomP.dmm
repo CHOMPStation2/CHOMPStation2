@@ -364,26 +364,36 @@
 "bo" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/box/smokes,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"bp" = (
-/obj/structure/table/rack,
 /obj/item/weapon/storage/box/handcuffs,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bq" = (
 /obj/structure/table/rack,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/clothing/gloves/tactical,
+/obj/item/clothing/gloves/tactical,
+/obj/item/clothing/head/helmet/tactical,
+/obj/item/clothing/accessory/armor/armorplate/tactical,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/clothing/shoes/boots/tactical,
+/obj/item/clothing/shoes/boots/tactical,
+/obj/item/clothing/head/helmet/tactical,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "br" = (
 /obj/structure/table/rack,
 /obj/random/energy,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/random/energy,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bs" = (
 /obj/structure/table/rack,
+/obj/item/weapon/gun/projectile/contender,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
 /obj/item/weapon/gun/projectile/contender,
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
@@ -2206,7 +2216,7 @@ aN
 bg
 be
 at
-bp
+bq
 bL
 at
 ac
