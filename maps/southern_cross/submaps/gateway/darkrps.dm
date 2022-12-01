@@ -8,8 +8,11 @@
 
 /area/awaymission/darkrp/outside
 	icon_state = "green"
-	always_unpowered = 1
 	dynamic_lighting = 1
+	requires_power = 0
+	power_equip = 0
+	power_environ = 1
+	power_light = 1
 	outdoors = 1
 
 /area/awaymission/darkrp/tunnels
@@ -306,4 +309,3 @@
 	power_equip = 0
 	power_environ = 0
 	power_light = 0
-

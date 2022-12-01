@@ -54,6 +54,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"ah" = (
+/obj/machinery/light/bigfloorlamp,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	icon_state = "slab2"
+	},
+/area/awaymission/darkrp/outside/warehouses)
 "ai" = (
 /obj/structure/simple_door/wood,
 /obj/structure/cable/green{
@@ -301,9 +307,21 @@
 	},
 /area/awaymission/darkrp/subcondo)
 "bn" = (
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/wood,
-/area/awaymission/darkrp/subcondo)
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/random/vendorfood{
+	pixel_y = 0;
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/side{
+	icon_state = "sidewalk";
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "bo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -442,6 +460,9 @@
 /obj/item/weapon/reagent_containers/food/snacks/pastatomato,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"bT" = (
+/turf/simulated/floor/carpet,
+/area/awaymission/darkrp/subhouse1)
 "bU" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -627,6 +648,16 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"cr" = (
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
+"cs" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse3)
 "ct" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/computer_hardware/hard_drive,
@@ -697,6 +728,10 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
+"cF" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "cG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -835,6 +870,10 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/ghettooffice)
+"dh" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "di" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -866,7 +905,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownpharmacy)
 "dn" = (
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/tiled/freezer,
 /area/awaymission/darkrp/subhouse1)
 "do" = (
 /obj/structure/cable/green{
@@ -893,6 +932,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/tunnels/warehouse)
+"dv" = (
+/obj/machinery/mecha_part_fabricator/pros,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "dw" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -990,6 +1033,12 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"dQ" = (
+/obj/random/vendordrink,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "dS" = (
 /turf/simulated/mineral/ignore_oregen,
 /area/awaymission/darkrp/outside/park)
@@ -1013,6 +1062,10 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/darkrp/subhouse1)
+"dZ" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "ea" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/outside/park)
@@ -1071,6 +1124,14 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/darkrp/centersidehouse)
+"ej" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/structure/sink{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "ek" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
 	outdoors = 1
@@ -1083,11 +1144,11 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
 "em" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
+/obj/machinery/light/bigfloorlamp,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
@@ -1143,6 +1204,32 @@
 /obj/random,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"ey" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/weapon/beach_ball/dodgeball,
+/turf/simulated/floor/outdoors/sidewalk/side{
+	icon_state = "sidewalk";
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/suburbs)
+"eC" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centermaint)
+"eD" = (
+/obj/machinery/light/small,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subcondo)
 "eH" = (
 /obj/machinery/button/remote/blast_door{
 	id = "centralbuilding2";
@@ -1216,10 +1303,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"eZ" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/parkcondo)
 "fd" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/darkrp/plazahotel)
+"fe" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "ff" = (
 /obj/structure/table/woodentable,
 /obj/item/pizzabox/old,
@@ -1317,15 +1412,18 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
 "fA" = (
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
-/area/awaymission/darkrp/outside/ghetto)
+/obj/structure/salvageable/server_os,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "fB" = (
 /turf/simulated/floor/outdoors/newdirt{
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
+"fC" = (
+/obj/structure/bed/padded,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "fD" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1373,6 +1471,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazabunker)
+"fL" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "fM" = (
 /turf/simulated/floor/outdoors/newdirt{
 	temperature = 293.15
@@ -1432,10 +1535,9 @@
 /area/awaymission/darkrp/sewers)
 "ga" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
-/area/awaymission/darkrp/outside/ghetto)
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centerwarehouse)
 "gd" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
@@ -1446,6 +1548,14 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/darkrp/plazahotel)
+"ge" = (
+/obj/structure/table/woodentable,
+/obj/machinery/microwave{
+	pixel_y = 6;
+	pixel_x = 2
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "gg" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -1479,6 +1589,12 @@
 	outdoors = 0
 	},
 /area/awaymission/darkrp/outside/plaza)
+"gk" = (
+/obj/random/junk,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "gn" = (
 /obj/machinery/light{
 	dir = 1
@@ -1671,6 +1787,15 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
+"gS" = (
+/obj/structure/fence/door{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/park)
 "gT" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1729,6 +1854,10 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"hd" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "he" = (
 /obj/machinery/light{
 	dir = 1
@@ -1793,6 +1922,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"ht" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subcondo)
 "hw" = (
 /obj/random/cash/big,
 /turf/simulated/floor/plating,
@@ -1812,12 +1947,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
 "hC" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -1886,6 +2016,21 @@
 /obj/item/weapon/material/shard/plastitaniumglass,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/sewers)
+"hP" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/random/vendordrink{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/side{
+	icon_state = "sidewalk";
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "hR" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/carpet/blue,
@@ -1944,7 +2089,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
 "ie" = (
 /obj/machinery/chemical_analyzer,
@@ -2086,6 +2231,11 @@
 /obj/item/clothing/suit/armor/bulletproof,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
+"iN" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centermaint)
 "iP" = (
 /obj/structure/table/standard,
 /obj/random/soap,
@@ -2116,6 +2266,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazabunker)
+"iY" = (
+/obj/structure/closet/secure_closet/medical2{
+	req_access = null
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "jc" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2178,7 +2334,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazacoffee)
 "jt" = (
-/obj/structure/table/woodentable,
+/obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkcondo)
 "ju" = (
@@ -2202,6 +2358,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/subhouse1)
+"jy" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/box/syringes,
+/obj/item/weapon/storage/box/syringes,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "jB" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2213,6 +2375,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/subpower)
+"jC" = (
+/obj/structure/table/steel,
+/obj/random/tool/power,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "jD" = (
 /obj/structure/fence{
 	dir = 4
@@ -2260,6 +2427,10 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/downtownresturaunt)
+"jP" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "jS" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2369,12 +2540,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
 	movement_cost = 0;
@@ -2516,6 +2682,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
 "kL" = (
@@ -2533,6 +2700,11 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
+"kN" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subcondo)
 "kQ" = (
 /obj/structure/salvageable/bliss,
 /obj/item/weapon/spacecash/c10,
@@ -2594,9 +2766,16 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownresturaunt)
+"li" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subcondo)
 "lk" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/darkrp/outside/ghetto)
+"ll" = (
+/turf/simulated/floor/tiled/steel_ridged,
+/area/awaymission/darkrp/downtownempty)
 "lm" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/lino,
@@ -2650,8 +2829,18 @@
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
 "lz" = (
-/turf/simulated/wall/r_wall,
-/area/awaymission/darkrp/ghettooffice)
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/center)
+"lA" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/awaymission/darkrp/sewers)
 "lB" = (
 /obj/structure/sign/greencross{
 	pixel_y = -32
@@ -2683,12 +2872,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
 	movement_cost = 0;
@@ -2918,8 +3102,17 @@
 /obj/machinery/light{
 	layer = 3
 	},
+/obj/structure/table/steel,
+/obj/random/toolbox,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
+"mv" = (
+/obj/structure/bed/chair/comfy/black{
+	pixel_y = 0;
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "mw" = (
 /obj/structure/table/gamblingtable,
 /obj/item/weapon/deck/cards,
@@ -2941,12 +3134,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -2975,7 +3163,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/stool/padded,
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "mJ" = (
@@ -3102,6 +3292,13 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"ns" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "nw" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3113,12 +3310,7 @@
 	},
 /area/awaymission/darkrp/outside/suburbs)
 "nx" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
 	movement_cost = 0;
@@ -3351,8 +3543,9 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkcondo)
 "ov" = (
-/turf/simulated/wall/r_wall,
-/area/awaymission/darkrp/ghettohouse2)
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centerwarehouse)
 "ow" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -3441,6 +3634,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	icon_state = "slab2"
 	},
@@ -3455,7 +3649,6 @@
 	pixel_y = 5
 	},
 /obj/item/weapon/storage/firstaid/fire,
-/obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "oN" = (
@@ -3588,6 +3781,12 @@
 "pg" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/darkrp/tunnels/park)
+"ph" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/contraband,
+/obj/random,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "pi" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -3604,6 +3803,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subway)
+"pk" = (
+/obj/structure/table/standard,
+/obj/random/tool,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "pl" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3634,7 +3838,7 @@
 	},
 /area/awaymission/darkrp/outside/suburbs)
 "pr" = (
-/turf/simulated/wall,
+/turf/simulated/wall/wood,
 /area/awaymission/darkrp/ghettohouse2)
 "ps" = (
 /obj/structure/fence/end{
@@ -3780,11 +3984,11 @@
 	},
 /area/awaymission/darkrp/outside/park)
 "pZ" = (
-/turf/simulated/wall,
+/turf/simulated/wall/titanium,
 /area/awaymission/darkrp/downtownwarehouse)
 "qa" = (
 /obj/structure/sign/warning/caution,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "qb" = (
 /obj/machinery/light{
@@ -3859,6 +4063,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazacoffee)
+"qv" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "qw" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/freezer,
@@ -4030,6 +4239,13 @@
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"rb" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse2)
 "rg" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet/purcarpet,
@@ -4057,6 +4273,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
 "ro" = (
@@ -4130,6 +4347,16 @@
 /obj/item/weapon/soap/nanotrasen,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"rF" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
+"rH" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "rK" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
@@ -4214,12 +4441,23 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centermaint)
 "rV" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"rW" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/regular,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "rZ" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -4252,6 +4490,11 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/structure/closet/crate/medical/blood,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "sk" = (
@@ -4311,7 +4554,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/carpet,
 /area/awaymission/darkrp/subhouse1)
 "st" = (
 /obj/machinery/door/blast/shutters{
@@ -4392,6 +4635,30 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"sK" = (
+/obj/structure/fence/door{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/warehouses)
+"sL" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "sN" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
@@ -4411,6 +4678,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centermaint)
 "sT" = (
@@ -4419,6 +4687,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"sU" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subhouse1)
 "sW" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4497,6 +4771,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowncenter)
+"tp" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse3)
 "tq" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -4519,6 +4797,10 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"tu" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centerwarehouse)
 "tv" = (
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
@@ -4526,10 +4808,26 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"tx" = (
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/downtown)
 "ty" = (
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/darkrp/warehouseshack)
 "tz" = (
@@ -4794,6 +5092,12 @@
 /obj/item/weapon/reagent_containers/food/snacks/dip/guac,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
+"ur" = (
+/obj/item/weapon/beach_ball,
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/suburbs)
 "ut" = (
 /obj/structure/railing/grey{
 	pixel_y = 0;
@@ -4844,12 +5148,16 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "uE" = (
-/obj/machinery/power/rtg/reg,
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/rtg/fake_reactor,
+/obj/item/weapon/paper{
+	info = "If you see this, someone forgot to make a powernet";
+	name = "Stained sheet of paper"
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -4880,12 +5188,25 @@
 "uI" = (
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkcondo)
+"uK" = (
+/obj/structure/bed/chair/comfy/blue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "uL" = (
 /obj/machinery/light{
 	layer = 3
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownresturaunt)
+"uM" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subhouse1)
 "uN" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4953,7 +5274,7 @@
 	},
 /area/awaymission/darkrp/subpower)
 "uW" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/awaymission/darkrp/ghettoeats)
 "uX" = (
 /obj/structure/cable/green{
@@ -5036,6 +5357,16 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/center)
+"vi" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/darkrp/warehouseshack)
+"vl" = (
+/obj/machinery/light/bigfloorlamp,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "vm" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5124,6 +5455,17 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"vG" = (
+/obj/structure/closet/crate/trashcart,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/item/weapon/gun/projectile/silenced,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "vI" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -5144,12 +5486,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
 "vJ" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -5193,8 +5530,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/outside)
 "vS" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
 "vU" = (
 /obj/machinery/door/blast/gate/bars,
@@ -5298,6 +5634,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/ghetto)
+"wm" = (
+/obj/structure/table/standard,
+/obj/structure/salvageable/personal,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "wn" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5329,10 +5670,12 @@
 	},
 /area/awaymission/darkrp/outside)
 "wx" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/carpet/blue,
+/obj/random/soap,
+/obj/structure/table/rack/shelf,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/turf/simulated/floor/tiled/freezer,
 /area/awaymission/darkrp/subhouse1)
 "wz" = (
 /obj/structure/cable/green{
@@ -5375,6 +5718,9 @@
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
+"wE" = (
+/turf/simulated/wall,
+/area/awaymission/darkrp/downtownbar)
 "wF" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/sewers)
@@ -5440,6 +5786,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkghetto2)
+"wQ" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subpowermaint)
 "wR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5496,7 +5846,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
 "xc" = (
 /obj/structure/cable/green{
@@ -5534,6 +5884,11 @@
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"xo" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/rods,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "xq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/vehicle/train/trolley{
@@ -5551,7 +5906,9 @@
 	},
 /area/awaymission/darkrp/outside)
 "xu" = (
-/obj/item/weapon/stool/padded,
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "xv" = (
@@ -5703,6 +6060,9 @@
 	dir = 4;
 	pixel_y = 0
 	},
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/awaymission/darkrp/sewers)
 "xY" = (
@@ -5771,6 +6131,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"yc" = (
+/obj/structure/fence/door{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/suburbs)
 "ye" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5790,7 +6158,9 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/sewers)
 "yi" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/weapon/stool/baystool/padded{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
 "yk" = (
@@ -5885,6 +6255,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
+"yB" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centermaint)
 "yD" = (
 /obj/machinery/computer/operating{
 	dir = 4
@@ -5953,7 +6327,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/blue,
+/obj/structure/bed/chair/comfy/black{
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
 "yS" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -5966,12 +6344,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "yT" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -5999,6 +6372,15 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"za" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/vehicle/train/engine/quadbike,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "zb" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -6040,6 +6422,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkghetto1)
+"zi" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "zj" = (
 /obj/machinery/light/floortube{
 	dir = 4
@@ -6085,8 +6471,12 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"zs" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "zt" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/wood,
 /area/awaymission/darkrp/ghettoapartments)
 "zv" = (
 /obj/structure/cable/green{
@@ -6151,10 +6541,10 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
 "zG" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/awaymission/darkrp/downtownwarehouse)
+/obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centerwarehouse)
 "zH" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/cigarettes,
@@ -6201,6 +6591,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"zS" = (
+/obj/structure/table/steel,
+/obj/random/toolbox,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
+"zT" = (
+/obj/machinery/light/bigfloorlamp,
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "zU" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -6253,12 +6655,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -6277,6 +6674,10 @@
 /obj/random/toolbox,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
+"Ag" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subhouse1)
 "Ah" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
@@ -6475,6 +6876,13 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
+"AQ" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/park)
 "AS" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6582,6 +6990,10 @@
 /obj/item/weapon/flamethrower/full,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"Bm" = (
+/obj/structure/flora/pottedplant,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "Bq" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/darkrp/ghettohouse1)
@@ -6604,10 +7016,23 @@
 /obj/item/weapon/material/fishing_net,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
+"Bz" = (
+/obj/random/trash_pile,
+/obj/random/trash,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "BA" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/darkrp/plazahotel)
+"BB" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32
+	},
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "BD" = (
 /obj/item/weapon/tool/screwdriver/diamonddrill,
 /turf/simulated/floor/concrete{
@@ -6682,6 +7107,12 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"BQ" = (
+/obj/structure/sign/chemistry{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "BS" = (
 /obj/structure/bed/chair/sofa/brown{
 	dir = 8
@@ -6940,9 +7371,17 @@
 "CV" = (
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"CX" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse2)
 "CY" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/plazarecroom)
+"CZ" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "Da" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/pancakes{
@@ -7022,6 +7461,21 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subhouse1)
+"Do" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "Dp" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -7031,10 +7485,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "Du" = (
-/obj/machinery/light{
-	dir = 1;
-	layer = 3
-	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
 "Dv" = (
@@ -7104,8 +7555,17 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
+"DI" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/plazabunker)
 "DK" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -7179,8 +7639,7 @@
 "DS" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/box/syringegun,
-/obj/structure/table/rack/shelf/steel,
-/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/gun/launcher/syringe/rapid,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "DU" = (
@@ -7322,6 +7781,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
+"Ey" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "Ez" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
@@ -7464,6 +7931,18 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"EW" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light/bigfloorlamp,
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/warehouses)
 "EX" = (
 /obj/structure/sink{
 	dir = 4;
@@ -7474,9 +7953,6 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
-	},
-/obj/structure/sign/chemistry{
-	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
@@ -7568,6 +8044,20 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"Fm" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
+"Fn" = (
+/obj/item/trash/plate,
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Fq" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet,
@@ -7775,6 +8265,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"Gn" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/toolbox,
+/obj/random/toolbox,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "Gq" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/darkrp/outside/park)
@@ -7822,6 +8318,10 @@
 	outdoors = -1
 	},
 /area/awaymission/darkrp/sewers)
+"Gx" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse3)
 "Gz" = (
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/darkrp/plazahotel)
@@ -7946,6 +8446,9 @@
 "GR" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
+"GU" = (
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subcondo)
 "GW" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -7963,10 +8466,19 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownpharmacy)
+"GZ" = (
+/obj/structure/salvageable/implant_container_os,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "Ha" = (
 /obj/structure/bed/padded,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
+"Hb" = (
+/obj/random/maintenance/foodstuff,
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Hc" = (
 /obj/machinery/light{
 	dir = 8
@@ -8058,9 +8570,6 @@
 /area/awaymission/darkrp/tunnels/suburbs)
 "Hq" = (
 /obj/structure/railing/grey{
-	dir = 1
-	},
-/obj/structure/railing/grey{
 	pixel_y = 0;
 	dir = 8
 	},
@@ -8098,6 +8607,14 @@
 /obj/item/weapon/bedsheet/browndouble,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"HA" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "HB" = (
 /obj/machinery/light{
 	dir = 1
@@ -8168,11 +8685,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
+"HN" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subcondo)
 "HO" = (
 /turf/simulated/floor/concrete{
 	outdoors = 0
 	},
 /area/awaymission/darkrp/tunnels/suburbs)
+"HP" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/carpet,
+/area/awaymission/darkrp/subhouse1)
 "HQ" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -8180,7 +8712,8 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
-/turf/simulated/floor/carpet/blue,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
 "HS" = (
 /obj/structure/table/marble,
@@ -8205,11 +8738,11 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
 "HU" = (
-/obj/item/taperoll/police,
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/awaymission/darkrp/outside/ghetto)
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/quickdraw/syringe_case,
+/obj/item/weapon/storage/quickdraw/syringe_case,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "HW" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -8222,6 +8755,21 @@
 /obj/item/weapon/folder/white,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"HX" = (
+/obj/structure/fence/door{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/ghetto)
+"HZ" = (
+/obj/structure/fence,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/suburbs)
 "Ia" = (
 /obj/machinery/light{
 	dir = 4
@@ -8296,6 +8844,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
 "Im" = (
@@ -8333,6 +8882,9 @@
 "Ip" = (
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/awaymission/darkrp/sewers)
@@ -8433,6 +8985,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"IL" = (
+/obj/structure/table/steel,
+/obj/random/tool,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "IM" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/pd)
@@ -8458,6 +9015,12 @@
 "IR" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/downtownshop)
+"IW" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/parkcondo)
 "IX" = (
 /obj/machinery/light{
 	dir = 1
@@ -8475,11 +9038,20 @@
 "Jb" = (
 /turf/simulated/wall/thull,
 /area/awaymission/darkrp/sewers)
+"Jc" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "Jd" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
+/obj/item/ammo_magazine/m10mm/pistol,
+/obj/item/ammo_magazine/m10mm/pistol,
+/obj/item/ammo_magazine/m10mm/pistol,
+/obj/item/ammo_magazine/m10mm/pistol,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "Je" = (
@@ -8539,6 +9111,13 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
+"Jq" = (
+/obj/machinery/light{
+	layer = 3
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse2)
 "Jr" = (
 /obj/machinery/light{
 	dir = 4
@@ -8546,12 +9125,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkcondo)
 "Jt" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -8584,6 +9158,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
+"Jy" = (
+/obj/machinery/smartfridge/chemistry,
+/turf/simulated/wall/titanium,
+/area/awaymission/darkrp/downtownwarehouse)
 "Jz" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -8595,6 +9173,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "JA" = (
@@ -8616,7 +9197,6 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/random/awayloot,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "JC" = (
@@ -8727,6 +9307,12 @@
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/ghettooffice)
+"Ke" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownshop)
 "Kf" = (
 /obj/structure/simple_door/wood,
 /obj/structure/cable/green{
@@ -8951,6 +9537,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazacoffee)
+"KW" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse1)
 "KX" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -9093,6 +9683,11 @@
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/water/contaminated,
 /area/awaymission/darkrp/outside)
+"Lq" = (
+/obj/structure/table/steel,
+/obj/random/toolbox,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "Ls" = (
 /obj/machinery/button/remote/blast_door{
 	id = "garhouse";
@@ -9101,6 +9696,7 @@
 	dir = 4;
 	pixel_y = 27
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
 "Lt" = (
@@ -9155,7 +9751,6 @@
 	},
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night,
-/obj/random/awayloot,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "LD" = (
@@ -9179,6 +9774,7 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "LL" = (
@@ -9192,12 +9788,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -9306,6 +9897,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
+"Md" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "Me" = (
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
@@ -9322,6 +9920,11 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/sink/countertop{
+	dir = 2;
+	pixel_y = 7
+	},
+/obj/structure/table/marble,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
 "Mm" = (
@@ -9378,12 +9981,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -9470,6 +10068,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"MN" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/orange,
+/turf/simulated/floor/carpet,
+/area/awaymission/darkrp/subhouse1)
 "MO" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -9494,7 +10097,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
 "MT" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "MU" = (
 /obj/structure/cable/green{
@@ -9550,12 +10153,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/downtowncenter)
 "Ne" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -9635,12 +10233,11 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/downtownresturaunt)
 "Nr" = (
-/obj/structure/closet/secure_closet/chemical,
-/obj/item/weapon/storage/box/syringes,
-/obj/item/weapon/storage/box/pillbottles,
-/obj/item/weapon/storage/box/beakers,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/darkrp/downtownwarehouse)
+/obj/machinery/drone_fabricator{
+	fabricator_tag = "Unknown"
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "Nt" = (
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
@@ -9669,7 +10266,7 @@
 /obj/machinery/holosign/bar{
 	id = "poiopen"
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/awaymission/darkrp/ghettoeats)
 "Ny" = (
 /obj/item/weapon/circuitboard/body_scanner{
@@ -9694,6 +10291,13 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"Nz" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subcondo)
 "NA" = (
 /turf/simulated/mineral/ignore_oregen,
 /area/awaymission/darkrp/outside)
@@ -9724,12 +10328,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/outside/ghetto)
 "NH" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
 	movement_cost = 0;
@@ -9766,12 +10365,14 @@
 /obj/item/weapon/reagent_containers/food/drinks/soymilk,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
+"NP" = (
+/obj/structure/salvageable/computer_os,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "NQ" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/awaymission/darkrp/subcondo)
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centermaint)
 "NS" = (
 /obj/machinery/light{
 	dir = 4
@@ -9819,6 +10420,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
+"Oa" = (
+/obj/item/weapon/stool/padded{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "Ob" = (
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -9859,6 +10466,10 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
+"Oj" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/downtownwarehouse)
 "Om" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/pill_bottle/citalopram,
@@ -9916,6 +10527,14 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/center)
+"Ou" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medbay";
+	req_access = null;
+	req_one_access = list(696)
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "Ov" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/plating,
@@ -9944,6 +10563,9 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
@@ -10021,18 +10643,17 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "OG" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
 	movement_cost = 0;
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"OH" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "OI" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10136,11 +10757,22 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkcondo)
 "Pg" = (
-/obj/effect/decal/mecha_wreckage/shuttlecraft,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
+/obj/machinery/light{
+	dir = 4
 	},
-/area/awaymission/darkrp/outside/ghetto)
+/obj/structure/salvageable/implant_container_os,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
+"Pk" = (
+/obj/structure/closet/crate/trashcart,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "Pm" = (
 /obj/structure/railing/grey{
 	pixel_y = 0;
@@ -10189,6 +10821,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
+"Pu" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subhouse1)
 "Pv" = (
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
@@ -10250,6 +10890,12 @@
 /obj/item/weapon/pen,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
+"PK" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subcondo)
 "PN" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/carpet/oracarpet,
@@ -10276,6 +10922,10 @@
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
+"PT" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse1)
 "PV" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10290,12 +10940,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -10318,6 +10963,14 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
+"Qb" = (
+/obj/machinery/microwave{
+	pixel_y = 3;
+	pixel_x = 2
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "Qe" = (
 /obj/machinery/light{
 	dir = 4
@@ -10358,7 +11011,7 @@
 	},
 /area/awaymission/darkrp/outside/downtown)
 "Qq" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/wood,
 /area/awaymission/darkrp/parkcondo)
 "Qu" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -10386,12 +11039,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "QC" = (
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -10462,12 +11110,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -10531,11 +11174,12 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
 "Ra" = (
-/obj/machinery/light{
-	layer = 3
-	},
-/turf/simulated/floor/wood,
-/area/awaymission/darkrp/subcondo)
+/turf/simulated/floor/tiled/steel_ridged,
+/area/awaymission/darkrp/plazawarehouse)
+"Rb" = (
+/obj/structure/salvageable/data_os,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "Rc" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/plating,
@@ -10613,6 +11257,11 @@
 /obj/item/device/camera,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
+"RA" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/misc,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subcondo)
 "RC" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10773,11 +11422,22 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
+"Se" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random,
+/obj/random,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "Sh" = (
 /obj/structure/simple_door/wood,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -10930,6 +11590,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"SV" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/subhouse1)
 "SW" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -10940,6 +11606,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centermaint)
 "SZ" = (
@@ -10984,6 +11651,11 @@
 	outdoors = 0
 	},
 /area/awaymission/darkrp/tunnels/park)
+"Tf" = (
+/obj/structure/table/woodentable,
+/obj/random/mainttoyloot/nofail,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "Tg" = (
 /obj/item/weapon/flame/candle,
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
@@ -11034,6 +11706,10 @@
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
+"Ts" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/wall/wood,
+/area/awaymission/darkrp/subcondo)
 "Tv" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/darkrp/subway)
@@ -11045,6 +11721,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"Tz" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "TA" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11053,6 +11735,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subapartments)
+"TB" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light/small,
+/obj/machinery/microwave{
+	pixel_y = -3;
+	pixel_x = 2
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subcondo)
 "TE" = (
 /obj/machinery/light{
 	dir = 4
@@ -11060,10 +11751,11 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/subhouse2)
 "TF" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/darkrp/downtownwarehouse)
+/obj/structure/bed/chair/comfy/blue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "TH" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/quickdraw/syringe_case,
@@ -11136,8 +11828,11 @@
 	},
 /area/awaymission/darkrp/outside)
 "TS" = (
-/turf/simulated/wall/r_wall,
-/area/awaymission/darkrp/subcondo)
+/obj/item/weapon/stool/padded{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "TU" = (
 /obj/item/weapon/tool/wirecutters,
 /turf/simulated/floor/outdoors/newdirt{
@@ -11167,6 +11862,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"Ua" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/bigfloorlamp,
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/warehouses)
 "Ub" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -11349,6 +12056,11 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/darkrp/warehouseshack)
+"UD" = (
+/obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centermaint)
 "UE" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/pen,
@@ -11391,7 +12103,8 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/carpet/blue,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
 "UM" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full{
@@ -11423,6 +12136,13 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/outside)
+"UR" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "US" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -11460,6 +12180,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"UW" = (
+/obj/random/junk,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/center)
 "UY" = (
 /obj/effect/map_effect/portal/master/side_a{
 	dir = 8;
@@ -11492,6 +12218,12 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"Vi" = (
+/obj/random/trash,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "Vk" = (
 /obj/structure/fence{
 	dir = 4
@@ -11615,6 +12347,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"VT" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/flora/pottedplant/large,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "VU" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -11704,6 +12443,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkghetto2)
+"Wf" = (
+/obj/structure/table/woodentable,
+/obj/machinery/microwave{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "Wg" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11736,14 +12483,21 @@
 /obj/item/weapon/tool/screwdriver/brass,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"Wo" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "Wp" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazacoffee)
 "Wq" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
 /obj/structure/railing/grey{
 	pixel_y = 0;
 	dir = 4
@@ -11753,6 +12507,13 @@
 	outdoors = 0
 	},
 /area/awaymission/darkrp/outside/plaza)
+"Wr" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centerwarehouse)
 "Ws" = (
 /obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral,
 /obj/structure/table/steel_reinforced,
@@ -11766,6 +12527,12 @@
 /obj/structure/flora/pottedplant/large,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownresturaunt)
+"Wv" = (
+/obj/random/vendorfood,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "Wx" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/subpowermaint)
@@ -11826,12 +12593,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
@@ -11930,6 +12692,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
+"Xh" = (
+/obj/structure/closet/secure_closet/medical1{
+	req_access = null
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "Xk" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11977,18 +12745,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centermaint)
+"Xu" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/weapon/material/knife/butch,
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
+"Xv" = (
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/warehouses)
 "Xx" = (
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -12155,6 +12930,11 @@
 /obj/item/weapon/reagent_containers/food/snacks/pastatomato,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"Yc" = (
+/obj/structure/table/standard,
+/obj/random/toolbox,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "Yd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12281,12 +13061,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -12328,11 +13103,6 @@
 	pixel_x = 1
 	},
 /obj/random/medical,
-/obj/item/weapon/storage/firstaid/regular{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/firstaid/regular,
 /obj/random/medical,
 /obj/item/weapon/storage/box/gloves{
 	pixel_x = 4;
@@ -12361,6 +13131,11 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
+"YD" = (
+/obj/structure/table/steel,
+/obj/random/tool,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "YF" = (
 /obj/machinery/light{
 	dir = 1
@@ -12380,6 +13155,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"YJ" = (
+/obj/item/trash/plate,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/centersidehouse)
 "YL" = (
 /obj/machinery/light{
 	dir = 8
@@ -12397,12 +13176,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -12414,12 +13188,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
 	movement_cost = 0;
@@ -12464,6 +13233,13 @@
 /obj/structure/barricade,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"YS" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centermaint)
 "YT" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -12509,12 +13285,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -12533,6 +13304,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/center)
+"Ze" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownshop)
 "Zg" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife,
@@ -12548,12 +13325,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/machinery/light/bigfloorlamp{
-	use_power = 0;
-	desc = "A set of tube lights on a raised, solid fixture. This one seems to have solar panels attatched to them keeping them powered for the many years they were on.";
-	light_on = 1;
-	on = 1
-	},
+/obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -12572,6 +13344,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
+"Zm" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/warehouses)
 "Zr" = (
 /obj/structure/flora/grass/both,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -12646,6 +13425,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/subpower)
+"ZG" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/ghetto)
 "ZH" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
@@ -12730,6 +13516,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazacoffee)
+"ZQ" = (
+/obj/vehicle/bike/built,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "ZR" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -12738,6 +13528,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"ZS" = (
+/obj/machinery/mecha_part_fabricator,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtownempty)
 "ZT" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -12749,10 +13543,21 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/plazahotel)
 "ZV" = (
-/turf/simulated/floor/outdoors/newdirt{
-	temperature = 293.15
+/obj/structure/table/woodentable,
+/obj/machinery/light/small{
+	dir = 1
 	},
-/area/awaymission/darkrp/outside/park)
+/obj/machinery/microwave{
+	pixel_y = 3;
+	pixel_x = 2
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subcondo)
+"ZW" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "ZY" = (
 /obj/machinery/light{
 	dir = 8
@@ -14956,12 +15761,12 @@ oz
 oz
 oz
 oz
-oz
-oz
-oz
-oz
-oz
-oz
+NG
+NG
+NG
+NG
+NG
+NG
 oz
 oz
 oz
@@ -15118,12 +15923,12 @@ NA
 NA
 NA
 NA
-NA
-NA
-NA
-NA
-NA
-NA
+NG
+Nt
+Nt
+Nt
+Nt
+NG
 NA
 NA
 NA
@@ -15281,10 +16086,10 @@ NG
 NG
 NG
 NG
-NG
-NG
-NG
-NG
+ZG
+ZG
+HX
+ZG
 NG
 NG
 NG
@@ -15774,7 +16579,7 @@ Cr
 th
 th
 th
-Dy
+rs
 NG
 NA
 NA
@@ -15936,7 +16741,7 @@ Cr
 Cr
 th
 th
-Dy
+rs
 NG
 NG
 NG
@@ -16401,28 +17206,28 @@ On
 TI
 GO
 AP
-Em
-Em
-Em
-Em
-Em
-Em
-Em
-Em
-Em
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
 mY
-Em
-Em
-Em
-Em
-Em
-Em
+vs
+vs
+vs
+vs
+vs
+vs
 rs
 Cr
 Cr
 Cr
 Cr
-Dy
+rs
 SQ
 Cr
 Cr
@@ -16530,17 +17335,17 @@ th
 th
 th
 rs
-lz
-lz
-lz
-lz
-lz
-lz
-lz
-lz
-lz
-lz
-lz
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
 Cr
 Cr
 Cr
@@ -16563,14 +17368,14 @@ TI
 gg
 lO
 cP
-Em
+vs
 pn
 pn
 pn
 Fe
 GG
 fs
-Em
+vs
 fm
 fm
 fm
@@ -16578,7 +17383,7 @@ xk
 fm
 fm
 vu
-Em
+vs
 rs
 Cr
 th
@@ -16692,17 +17497,17 @@ th
 th
 th
 rs
-lz
+iB
 VF
 QF
 dC
-lz
+iB
 kZ
 uZ
 pL
 DC
 MF
-lz
+iB
 Cr
 Cr
 Cr
@@ -16725,7 +17530,7 @@ uW
 BM
 uW
 uW
-Em
+vs
 fm
 fm
 fm
@@ -16740,7 +17545,7 @@ fm
 fm
 fm
 vu
-Em
+vs
 rs
 Cr
 th
@@ -16858,13 +17663,13 @@ lx
 VF
 fD
 dC
-lz
+iB
 dC
 dC
 Kv
 dC
 NW
-lz
+iB
 Cr
 Cr
 Cr
@@ -16887,14 +17692,14 @@ ZD
 sz
 mr
 vN
-Em
+vs
 fm
 fm
 fm
 fX
 ef
 MP
-Em
+vs
 fm
 fm
 fm
@@ -16902,13 +17707,13 @@ Od
 Od
 Od
 mq
-Em
+vs
 rs
 Cr
 th
 th
 th
-Dy
+rs
 Cr
 Cr
 Cr
@@ -17016,7 +17821,7 @@ th
 Cr
 th
 Dy
-lz
+iB
 nH
 fD
 dC
@@ -17026,14 +17831,14 @@ dC
 dC
 dC
 rk
-lz
+iB
 Cr
 Cr
 Cr
-fA
-fA
 Cr
-HU
+Cr
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -17049,22 +17854,22 @@ uW
 Uz
 xw
 Mb
-Em
+vs
 mY
-Em
-Em
-Em
-Em
-Em
-Em
-Em
+vs
+vs
+vs
+vs
+vs
+vs
+vs
 mY
-Em
-Em
-Em
-Em
-Em
-Em
+vs
+vs
+vs
+vs
+vs
+vs
 rs
 Cr
 th
@@ -17178,11 +17983,11 @@ th
 Cr
 th
 rs
-lz
+iB
 NW
 fD
 dC
-lz
+iB
 qX
 dC
 dC
@@ -17191,10 +17996,10 @@ cJ
 lx
 Cr
 th
-ga
-ga
-Pg
-fA
+th
+th
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -17211,7 +18016,7 @@ uW
 Ge
 xw
 Xy
-Em
+vs
 fm
 fm
 fm
@@ -17226,7 +18031,7 @@ fm
 fm
 xk
 rw
-Em
+vs
 rs
 Cr
 Cr
@@ -17344,18 +18149,18 @@ lx
 nH
 fD
 rk
-lz
-lz
-lz
-lz
-lz
-lz
-lz
+iB
+iB
+iB
+iB
+iB
+iB
+iB
 Cr
 th
-ga
-ga
-ga
+th
+th
+th
 Cr
 Cr
 Cr
@@ -17373,7 +18178,7 @@ XO
 rZ
 xw
 fR
-Em
+vs
 fm
 fm
 fm
@@ -17383,12 +18188,12 @@ fm
 fm
 fm
 fm
-Em
+vs
 fm
 fm
 fm
 fm
-Em
+vs
 rs
 Cr
 th
@@ -17502,22 +18307,22 @@ Cr
 Cr
 Cr
 rs
-lz
+iB
 Cy
 fD
 dC
-lz
+iB
 MF
 RR
 pL
 Fa
 PJ
-lz
+iB
 Cr
 Cr
-ga
-ga
-ga
+th
+th
+th
 Cr
 Cr
 Cr
@@ -17535,9 +18340,9 @@ YT
 rZ
 rZ
 vB
-Em
+vs
 mY
-Em
+vs
 Em
 Em
 Em
@@ -17545,12 +18350,12 @@ Em
 Em
 Em
 fm
-Em
+vs
 nl
 mz
 fm
 fm
-Em
+vs
 rs
 Cr
 th
@@ -17664,23 +18469,23 @@ Cr
 Cr
 Cr
 rs
-lz
+iB
 OC
 fD
 dC
-lz
+iB
 NW
 dC
 dC
 vA
 uZ
-lz
+iB
 Cr
 Cr
 th
 th
-ga
-ga
+th
+th
 Cr
 Cr
 Cr
@@ -17697,7 +18502,7 @@ Ce
 rZ
 rZ
 ES
-Em
+vs
 fm
 fm
 hE
@@ -17707,12 +18512,12 @@ fm
 Vm
 Em
 fm
-Em
+vs
 xO
 xO
 UE
 pB
-Em
+vs
 rs
 Cr
 Cr
@@ -17836,13 +18641,13 @@ dC
 dC
 dC
 rk
-lz
+iB
 Cr
 Cr
 th
 th
 th
-fA
+Cr
 Cr
 Cr
 Cr
@@ -17859,7 +18664,7 @@ QK
 Hh
 sy
 Fb
-Em
+vs
 fm
 fm
 JS
@@ -17869,12 +18674,12 @@ fm
 da
 Em
 ir
-Em
-Em
-Em
-Em
-Em
-Em
+vs
+vs
+vs
+vs
+vs
+vs
 mC
 VO
 VO
@@ -17988,11 +18793,11 @@ Cr
 Cr
 Cr
 CI
-lz
+iB
 dC
 dC
 dC
-lz
+iB
 qX
 dC
 dC
@@ -18003,8 +18808,8 @@ Cr
 Cr
 Cr
 th
-ga
-ga
+th
+th
 Cr
 Cr
 Cr
@@ -18021,7 +18826,7 @@ uW
 uW
 uW
 uW
-Em
+vs
 fm
 fm
 hE
@@ -18031,12 +18836,12 @@ fm
 uc
 Em
 fm
-Em
+vs
 fH
 fH
 ZY
 fH
-Em
+vs
 CI
 Cr
 Cr
@@ -18150,24 +18955,24 @@ Cr
 Cr
 Cr
 CI
-lz
+iB
 dC
 dC
 cJ
-lz
-lz
-lz
-lz
-lz
-lz
-lz
+iB
+iB
+iB
+iB
+iB
+iB
+iB
 Cr
 Cr
 Cr
 th
 Cr
-fA
-ga
+Cr
+th
 Cr
 Cr
 Cr
@@ -18183,7 +18988,7 @@ Cr
 Cr
 Cr
 Cr
-Em
+vs
 Tb
 fm
 hE
@@ -18198,7 +19003,7 @@ fH
 fH
 fH
 fH
-Em
+vs
 CI
 Cr
 Cr
@@ -18318,11 +19123,11 @@ NW
 ff
 NW
 ct
-lz
+iB
 Kd
 iB
 HJ
-lz
+iB
 Cr
 Cr
 Cr
@@ -18345,7 +19150,7 @@ Cr
 Cr
 Cr
 Cr
-Em
+vs
 fm
 fm
 JS
@@ -18355,12 +19160,12 @@ fm
 yM
 Em
 fm
-Em
+vs
 fH
 UP
 vs
 qw
-Em
+vs
 CI
 Cr
 Cr
@@ -18474,17 +19279,17 @@ Cr
 Cr
 Cr
 CI
-lz
+iB
 dC
 NW
 Kv
 OC
 dC
-lz
+iB
 Lv
 iB
 Lv
-lz
+iB
 Cr
 Cr
 Cr
@@ -18493,7 +19298,7 @@ Cr
 Cr
 th
 th
-fA
+Cr
 Cr
 CI
 Cr
@@ -18507,7 +19312,7 @@ Cr
 Cr
 Cr
 Cr
-Em
+vs
 fm
 Qe
 hE
@@ -18517,12 +19322,12 @@ fm
 Vm
 Em
 fm
-Em
+vs
 fH
 UP
 vs
 cX
-Em
+vs
 CI
 Cr
 Cr
@@ -18636,7 +19441,7 @@ Cr
 Cr
 Cr
 CI
-lz
+iB
 dC
 dC
 dC
@@ -18646,14 +19451,14 @@ Lv
 vY
 BJ
 vY
-lz
+iB
 Cr
 Cr
 Cr
 Cr
 Cr
 Cr
-ga
+th
 th
 th
 Cr
@@ -18669,9 +19474,9 @@ Cr
 Cr
 Cr
 Cr
-Em
-Em
-Em
+vs
+vs
+vs
 Em
 Em
 Em
@@ -18679,12 +19484,12 @@ Em
 Em
 Em
 mY
-Em
-Em
-Em
-Em
-Em
-Em
+vs
+vs
+vs
+vs
+vs
+vs
 CI
 Cr
 Cr
@@ -18804,11 +19609,11 @@ dC
 dC
 dC
 dC
-lz
+iB
 wM
 vY
 dg
-lz
+iB
 Cr
 Cr
 Cr
@@ -18832,10 +19637,10 @@ MR
 MR
 Cr
 Cr
-QR
+vs
 bq
 bq
-Em
+vs
 Nt
 Nt
 Nt
@@ -18960,17 +19765,17 @@ Cr
 Cr
 Cr
 CI
-lz
+iB
 OC
 dC
 iF
 dC
 dC
-lz
+iB
 iP
 ke
 ke
-lz
+iB
 Cr
 Cr
 Cr
@@ -18994,10 +19799,10 @@ CV
 MR
 Cr
 Cr
-QR
+vs
 bq
 bq
-Em
+vs
 Nt
 Pq
 Sc
@@ -19122,17 +19927,17 @@ th
 Cr
 Cr
 CI
-lz
-lz
-lz
-lz
+iB
+iB
+iB
+iB
 lx
 lx
-lz
-lz
-lz
-lz
-lz
+iB
+iB
+iB
+iB
+iB
 Cr
 Cr
 Cr
@@ -19156,7 +19961,7 @@ CV
 MR
 Cr
 Cr
-QR
+vs
 VW
 Gt
 kC
@@ -19318,10 +20123,10 @@ CV
 uY
 Cr
 Cr
-QR
+vs
 bq
 bq
-rC
+wE
 rC
 rC
 rC
@@ -19487,7 +20292,7 @@ rC
 Zh
 QJ
 Xb
-xu
+TS
 QJ
 QJ
 QJ
@@ -19811,9 +20616,9 @@ rC
 EE
 QJ
 QJ
-xu
-xu
-xu
+Oa
+Oa
+Oa
 QJ
 Bg
 Bg
@@ -19987,23 +20792,23 @@ Oc
 Oc
 Ck
 mg
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
+pZ
 OZ
 OZ
 OZ
@@ -20036,9 +20841,9 @@ Xa
 Xa
 aP
 CG
-CG
-CG
-CG
+vi
+vi
+vi
 ty
 CG
 CG
@@ -20132,13 +20937,13 @@ bO
 CV
 CV
 rC
-xu
-xu
-xu
-xu
-xu
-xu
-xu
+TS
+TS
+TS
+TS
+TS
+TS
+TS
 QJ
 QJ
 QJ
@@ -20149,13 +20954,13 @@ Oc
 Oc
 Ck
 mg
-jN
+pZ
 zf
 fI
 HW
 Qu
 TH
-jN
+pZ
 qy
 fi
 Hd
@@ -20165,7 +20970,7 @@ gH
 kU
 yD
 sk
-jN
+pZ
 FD
 FD
 FD
@@ -20205,7 +21010,7 @@ CG
 CG
 CG
 aP
-uS
+Ua
 br
 br
 br
@@ -20215,7 +21020,7 @@ lX
 ak
 ak
 aj
-ak
+KW
 ak
 ak
 lX
@@ -20311,23 +21116,23 @@ Oc
 Oc
 Ck
 mg
-jN
+pZ
 sH
 Ql
 Ql
 Ql
 xN
-jN
+pZ
 wX
 iv
 Ql
-xC
+sL
 pZ
 Ox
 xr
 xr
 HC
-jN
+pZ
 FD
 FD
 FD
@@ -20420,16 +21225,16 @@ Cr
 Cr
 Cr
 Cr
-ov
+pr
 hg
-ov
-ov
-ov
-ov
+pr
+pr
+pr
+pr
 zA
 zA
-ov
-ov
+pr
+pr
 zA
 zA
 NG
@@ -20473,23 +21278,23 @@ Oc
 Oc
 Ck
 mg
-jN
+pZ
 sH
 Ql
 Ql
 Ql
 ra
-jN
+pZ
 ZZ
 cG
 Ql
 LJ
 pZ
 hI
-sx
+xr
 xr
 MV
-jN
+pZ
 FD
 IR
 IR
@@ -20537,11 +21342,11 @@ br
 uS
 lX
 ak
-ak
-ak
-ak
-ak
-ak
+PT
+PT
+PT
+PT
+PT
 lX
 NA
 NA
@@ -20582,7 +21387,7 @@ Cr
 Cr
 Cr
 Cr
-ov
+pr
 qB
 Rq
 Rq
@@ -20635,23 +21440,23 @@ Oc
 Oc
 Ck
 mg
-jN
+pZ
 XP
 Ql
 Ql
 tm
 Uh
-jN
+pZ
 wX
 iv
 Ql
 xC
 pZ
 Uk
+sx
 xr
 xr
-xr
-jN
+pZ
 FD
 IR
 Gj
@@ -20700,7 +21505,7 @@ uS
 st
 ak
 ak
-ak
+KW
 ak
 ak
 ak
@@ -20744,7 +21549,7 @@ Cr
 Cr
 Cr
 Cr
-ov
+pr
 qB
 Rq
 Rq
@@ -20797,31 +21602,31 @@ Oc
 Oc
 Ck
 mg
-jN
+pZ
 sH
 Ql
 Ql
 Ql
 Fk
-jN
+pZ
 AH
 Kl
 Ql
-xC
+ej
 pZ
 vX
 aQ
 xr
 xr
-jN
+pZ
 FD
 IR
 Gj
 Gj
 Gj
 Gj
-Gj
-Gj
+sP
+Ke
 IR
 NA
 NA
@@ -20861,11 +21666,11 @@ br
 uS
 st
 ak
-ak
-ak
-ak
-ak
-ak
+PT
+PT
+PT
+PT
+PT
 lX
 NA
 NA
@@ -20906,7 +21711,7 @@ Cr
 Cr
 Cr
 Cr
-ov
+pr
 sA
 yG
 yG
@@ -20959,31 +21764,31 @@ XF
 FD
 FD
 CA
-jN
+pZ
 sH
 Eg
 Ql
 Ql
 QB
-jN
+pZ
 US
 RZ
 zp
 Jz
 pZ
-zG
-zG
-zG
+Oj
+Oj
+Oj
 Ak
-jN
+pZ
 FD
 IR
+Ze
 Gj
 Gj
 Gj
-Gj
-Gj
-Gj
+sP
+Ke
 IR
 NA
 NA
@@ -21068,13 +21873,13 @@ Cr
 Cr
 Cr
 Cr
-ov
-ov
-ov
-ov
-ov
-ov
-ov
+pr
+pr
+pr
+pr
+pr
+pr
+pr
 qB
 Ro
 AE
@@ -21121,13 +21926,13 @@ XF
 FD
 FD
 lB
-jN
+pZ
 sH
 EM
 OJ
 ko
 ow
-jN
+pZ
 FO
 Hd
 Ql
@@ -21136,8 +21941,8 @@ pA
 Ny
 Hd
 Hd
-Ql
-jN
+Fm
+pZ
 FD
 IR
 Gj
@@ -21186,10 +21991,10 @@ tq
 PX
 Pt
 Il
-ak
-ak
-ak
-ak
+PT
+PT
+PT
+PT
 lX
 NA
 NA
@@ -21230,13 +22035,13 @@ Cr
 Cr
 Cr
 Cr
-ov
+pr
 lP
 VX
 ma
 dM
 Rq
-ov
+pr
 qB
 Rq
 Rq
@@ -21299,7 +22104,7 @@ Ql
 Ql
 Ql
 xC
-jN
+pZ
 FD
 IR
 Gj
@@ -21350,7 +22155,7 @@ lZ
 yA
 ak
 ak
-ak
+KW
 ak
 lX
 NA
@@ -21392,13 +22197,13 @@ NG
 NG
 NG
 NG
-ov
+pr
 Rq
 Rq
 Rq
 Rq
 Rq
-ov
+pr
 TY
 Rq
 YH
@@ -21451,7 +22256,7 @@ Ql
 Ql
 Ql
 xC
-zG
+Oj
 IE
 Ql
 Ql
@@ -21461,7 +22266,7 @@ ao
 Ql
 Ql
 xC
-jN
+pZ
 FD
 IR
 IR
@@ -21508,7 +22313,7 @@ br
 br
 uS
 lX
-ak
+KW
 ky
 Ex
 ak
@@ -21554,7 +22359,7 @@ oz
 oz
 oz
 oz
-ov
+pr
 Mh
 Zg
 jZ
@@ -21607,7 +22412,7 @@ FD
 XF
 FD
 CA
-jN
+pZ
 gp
 Ql
 Ql
@@ -21622,8 +22427,8 @@ Oe
 Ql
 Ql
 Ql
-xC
-jN
+HA
+pZ
 FD
 IR
 Gj
@@ -21649,21 +22454,21 @@ NA
 NA
 NA
 iz
+Gx
+Gx
+Gx
+Gx
+Gx
 hB
 hB
 hB
-hB
+iz
 hB
 hB
 hB
 hB
 iz
-hB
-hB
-hB
-hB
-iz
-uS
+Ua
 br
 br
 br
@@ -21716,7 +22521,7 @@ oz
 oz
 oz
 oz
-ov
+pr
 Rq
 Rq
 Rq
@@ -21769,13 +22574,13 @@ FD
 XF
 FD
 CA
-jN
+pZ
 sH
 Ql
 Ql
 Ql
 xC
-jN
+pZ
 WL
 Ql
 Ql
@@ -21785,7 +22590,7 @@ Ql
 Ql
 Ql
 sj
-jN
+pZ
 FD
 IR
 Gj
@@ -21811,7 +22616,7 @@ NA
 NA
 NA
 iz
-hB
+Gx
 hB
 hB
 hB
@@ -21878,7 +22683,7 @@ oz
 oz
 oz
 oz
-ov
+pr
 Rq
 hx
 OO
@@ -21931,13 +22736,13 @@ FD
 XF
 XF
 CA
-jN
+pZ
 sH
 Ql
 Ql
 Ql
 kb
-jN
+pZ
 Ig
 SZ
 SZ
@@ -21947,7 +22752,7 @@ SZ
 SZ
 Ld
 FT
-jN
+pZ
 FD
 IR
 IR
@@ -21985,7 +22790,7 @@ iz
 hB
 hB
 hB
-hB
+tp
 lJ
 uS
 br
@@ -22040,13 +22845,13 @@ oz
 oz
 oz
 oz
-ov
+pr
 Rq
 hx
 JN
 sT
 Rq
-ov
+pr
 IA
 pr
 Vu
@@ -22093,13 +22898,13 @@ XF
 FD
 FD
 CA
-jN
+pZ
 Oh
 eJ
 eJ
 eJ
 ZN
-jN
+pZ
 rM
 eJ
 EX
@@ -22109,7 +22914,7 @@ eJ
 eJ
 eS
 BV
-jN
+pZ
 FD
 IR
 PQ
@@ -22145,7 +22950,7 @@ hB
 QQ
 iz
 hB
-hB
+tp
 hB
 hB
 lJ
@@ -22202,18 +23007,18 @@ EU
 oz
 oz
 oz
-ov
-ov
-ov
-ov
-ov
-ov
-ov
-ov
-ov
-ov
-ov
-ov
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
 ea
 Cb
 Cb
@@ -22255,23 +23060,23 @@ XF
 FD
 FD
 CA
-jN
-jN
-vn
-jN
-vn
-jN
-jN
-jN
-DP
-jN
-jN
 pZ
-TF
-TF
+pZ
+vn
+pZ
+vn
+pZ
+pZ
+pZ
+Ou
+pZ
+pZ
+pZ
+Oj
+Oj
 Wg
 pZ
-jN
+pZ
 FD
 IR
 PQ
@@ -22297,10 +23102,10 @@ NA
 NA
 NA
 iz
-hB
-hB
-hB
-hB
+cs
+cs
+cs
+cs
 hB
 hB
 hB
@@ -22417,23 +23222,23 @@ XF
 XF
 FD
 CA
-jN
+pZ
 cd
 qJ
 EA
 qJ
 Ql
 oY
-jN
+pZ
 Ql
-Vv
-jN
+Xh
+pZ
 Yw
 oM
 DS
 Kn
 ED
-jN
+pZ
 FD
 IR
 sP
@@ -22579,23 +23384,23 @@ FD
 XF
 FD
 CA
-jN
+pZ
 sN
 Ql
 ie
 Ql
 Ql
 sN
-jN
+pZ
 Ql
-Vv
-jN
+iY
+pZ
 Ql
 Ql
 Ql
 Kn
 Sa
-jN
+pZ
 FD
 IR
 ug
@@ -22741,23 +23546,23 @@ FD
 XF
 FD
 CA
-jN
+pZ
 GB
 Ql
 Ql
 Ql
 Ql
 cp
-jN
+pZ
 IX
-Nr
-jN
-bc
-bc
 Ql
+pZ
+bc
+bc
+rW
 Kn
 fq
-jN
+pZ
 FD
 IR
 Gj
@@ -22903,23 +23708,23 @@ FD
 FD
 FD
 CA
-jN
+pZ
+Vv
 Ql
 Ql
 Ql
 Ql
 Ql
+Jy
 Ql
 Ql
-Ql
-Nr
-jN
-eH
-Ql
-Ql
+pZ
+Ey
+HU
+jy
 Kn
 Dh
-jN
+pZ
 FD
 IR
 Gj
@@ -22967,7 +23772,7 @@ br
 uS
 nL
 od
-WF
+CX
 WF
 WF
 WF
@@ -23039,7 +23844,7 @@ Cb
 Io
 CD
 CD
-CD
+Do
 as
 ve
 oO
@@ -23065,23 +23870,23 @@ FD
 FD
 FD
 CA
-jN
+pZ
 Lj
 EA
 LY
 EQ
 Ql
 Ql
+DP
+BQ
 Ql
-Ql
-Ql
-jN
-Ql
+pZ
+eH
 Ql
 Ql
 Kn
 qD
-jN
+pZ
 FD
 IR
 Gj
@@ -23121,7 +23926,7 @@ Xa
 Xa
 Xa
 Th
-uS
+Ua
 br
 br
 br
@@ -23227,23 +24032,23 @@ FD
 FD
 FD
 CA
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
-jN
+pZ
+pZ
+Oj
+pZ
+pZ
+Oj
+pZ
+pZ
+pZ
+pZ
+pZ
 uG
 uG
 jN
 Xn
-jN
-jN
+pZ
+pZ
 FD
 IR
 IR
@@ -23294,7 +24099,7 @@ WF
 WF
 WF
 WF
-WF
+CX
 WF
 nL
 NA
@@ -23617,7 +24422,7 @@ kW
 WF
 WF
 WF
-WF
+CX
 WF
 WF
 nL
@@ -23947,7 +24752,7 @@ WF
 Iz
 WF
 WF
-eY
+Jq
 nL
 kJ
 "}
@@ -24080,9 +24885,9 @@ CM
 xq
 CM
 Nc
-Xa
-Xa
-Xa
+Th
+Th
+Th
 Xa
 Xa
 Xa
@@ -24242,9 +25047,9 @@ CM
 xq
 CM
 Nc
-Xa
-Xa
-Xa
+Xv
+Xv
+Th
 Xa
 Xa
 Xa
@@ -24342,7 +25147,7 @@ Qq
 Ks
 Qq
 Qq
-WI
+Re
 OZ
 OZ
 OZ
@@ -24404,8 +25209,8 @@ CM
 xq
 Zz
 Nc
-Th
-Th
+sK
+Zm
 Th
 Th
 Th
@@ -24504,10 +25309,10 @@ jt
 jt
 uI
 Qq
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
 XR
 Lx
 vO
@@ -24524,7 +25329,7 @@ XF
 FD
 FD
 KR
-xA
+Yc
 Sl
 xA
 xA
@@ -24571,7 +25376,7 @@ oE
 oE
 oE
 oE
-oE
+EW
 oE
 oE
 oE
@@ -24666,10 +25471,10 @@ zw
 zw
 uI
 Qq
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
 XR
 Lx
 vf
@@ -24686,11 +25491,11 @@ XF
 FD
 FD
 KR
+pk
 xA
+Nr
 xA
-xA
-xA
-xA
+Nr
 xA
 xA
 xA
@@ -24698,10 +25503,10 @@ te
 KR
 FD
 XF
-XF
+ns
 XF
 FD
-FD
+vG
 bt
 Wh
 kx
@@ -24828,10 +25633,10 @@ uI
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
 XR
 Yn
 vf
@@ -24848,22 +25653,22 @@ FD
 FD
 FD
 KR
+pk
 xA
 xA
 xA
 xA
 xA
 xA
-xA
-xA
+CZ
 te
 KR
-FD
+Wv
 XF
 XF
 XF
 FD
-FD
+Pk
 bt
 Wh
 Yr
@@ -24915,7 +25720,7 @@ NA
 nL
 WF
 WF
-wZ
+rb
 WF
 nL
 NA
@@ -24990,10 +25795,10 @@ uI
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
 XR
 MB
 vf
@@ -25012,7 +25817,7 @@ PZ
 KR
 xA
 xA
-xA
+CZ
 xA
 xA
 xA
@@ -25020,12 +25825,12 @@ xA
 xA
 te
 KR
-FD
+dQ
 FD
 FD
 XF
 FD
-FD
+gk
 bt
 Wh
 Kg
@@ -25152,10 +25957,10 @@ uI
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
 XR
 XR
 XR
@@ -25174,20 +25979,20 @@ xA
 KR
 xA
 xA
+Nr
 xA
-xA
-xA
-xA
+Nr
+CZ
 xA
 xA
 te
 KR
+Bz
+Vi
 FD
-FD
-FD
-FD
-FD
-FD
+gk
+UR
+gk
 bt
 pw
 lf
@@ -25316,11 +26121,11 @@ Qq
 Qq
 Qq
 Qq
-WI
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
+Re
 KR
 xA
 xA
@@ -25394,7 +26199,7 @@ gG
 gG
 gG
 gG
-EJ
+ah
 Th
 NA
 NA
@@ -25467,7 +26272,7 @@ Te
 pW
 Za
 pg
-uI
+Qq
 uI
 uI
 bx
@@ -25476,25 +26281,25 @@ uI
 uI
 Qq
 uI
-uI
+bx
 Qq
-WI
-WI
-WI
-WI
-WI
+Re
+vl
+FD
+vl
+Re
 KR
-xA
-xA
-xA
+fA
+GZ
+NP
 xA
 KR
+wm
+rH
+rH
 xA
 xA
-xA
-xA
-xA
-xA
+uK
 KR
 eq
 MS
@@ -25629,39 +26434,39 @@ Te
 pW
 Za
 pg
-uI
-uI
-uI
-uI
-uI
+Qq
+eZ
+jt
+jt
+IW
 uI
 uI
 Qq
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
-WI
+Re
+FD
+FD
+FD
+Re
 KR
-xA
-xA
-xA
+ll
+ll
+ll
 xA
 KR
 Oy
 xA
+rH
 xA
 xA
-xA
-xA
+rH
 KR
 xA
 xA
-xA
-xA
+ZS
+OH
 xA
 xA
 xA
@@ -25791,44 +26596,44 @@ Te
 pW
 Za
 pg
-uI
-uI
-uI
-uI
-uI
+Qq
+eZ
+jt
+jt
+IW
 uI
 uI
 Qq
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
-WI
+Re
+FD
+FD
+FD
+Re
 KR
-xA
-Cc
-xA
-xA
-KR
-xA
-xA
-xA
-xA
-xA
+Rb
+Pg
+GZ
 xA
 KR
 xA
+xA
+xA
+xA
+xA
+uK
+KR
+xA
 Cc
-xA
-xA
+dv
+OH
 xA
 Cc
-xA
-xA
-xA
+rF
+fL
+xo
 KR
 Le
 Rk
@@ -25953,22 +26758,22 @@ pW
 pW
 Za
 pg
-uI
-uI
-uI
-uI
-uI
+Qq
+eZ
+jt
+jt
+IW
 uI
 uI
 Qq
-uI
-uI
+Pd
 Qq
-WI
-WI
-WI
-WI
-WI
+Qq
+Re
+FD
+FD
+FD
+Re
 KR
 KR
 KR
@@ -25978,9 +26783,9 @@ KR
 xA
 xA
 xA
-Cc
-xA
-xA
+VT
+TF
+rH
 KR
 KR
 KR
@@ -26115,7 +26920,7 @@ pW
 pW
 Za
 pg
-uI
+Qq
 uI
 uI
 uI
@@ -26126,15 +26931,15 @@ bx
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+Re
+FD
+FD
+FD
+Re
+Re
+Re
+Re
+Re
 XU
 XU
 XU
@@ -26150,8 +26955,8 @@ ci
 OM
 VP
 OM
-ci
-OM
+YS
+NQ
 VP
 bt
 bt
@@ -26277,7 +27082,7 @@ pW
 pW
 Za
 pg
-uI
+Qq
 uI
 uI
 uI
@@ -26288,18 +27093,18 @@ uI
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+Re
+FD
+FD
+FD
+FD
+FD
+FD
+FD
+Re
 XU
-Up
-Up
+UW
+lz
 Up
 Up
 Up
@@ -26307,13 +27112,13 @@ Up
 Up
 Up
 VP
-OM
-OM
+NQ
+yB
 OM
 VP
 OM
-OM
-OM
+NQ
+NQ
 VP
 WI
 WI
@@ -26330,7 +27135,7 @@ WI
 WI
 WI
 OZ
-CA
+tx
 FD
 XF
 XF
@@ -26439,7 +27244,7 @@ pW
 pW
 Za
 pg
-uI
+Qq
 uI
 uI
 uI
@@ -26450,17 +27255,17 @@ uI
 uI
 uI
 Qq
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+Re
+FD
+FD
+FD
+FD
+FD
+FD
+FD
+Re
 XU
-Up
+UW
 Up
 Up
 Up
@@ -26469,14 +27274,14 @@ Up
 Up
 Up
 VP
-OM
-OM
-OM
-VP
-OM
+eC
 OM
 OM
 VP
+OM
+iN
+OM
+VP
 WI
 WI
 WI
@@ -26492,7 +27297,7 @@ nT
 nT
 nT
 nT
-CA
+xc
 FD
 XF
 XF
@@ -26612,15 +27417,15 @@ Qq
 Qq
 Qq
 Qq
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+Re
+FD
+FD
+FD
+FD
+FD
+FD
+FD
+Re
 XU
 Up
 Up
@@ -26636,8 +27441,8 @@ OM
 OM
 Jg
 OM
-OM
-OM
+eC
+NQ
 VP
 WI
 WI
@@ -26654,7 +27459,7 @@ Cn
 ZO
 Cn
 nT
-CA
+xc
 FD
 FD
 FD
@@ -26763,26 +27568,26 @@ Te
 pW
 Za
 pg
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+ea
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+FD
+FD
+FD
+FD
+FD
+FD
+FD
+Re
 XU
 Up
 Up
@@ -26798,8 +27603,8 @@ OM
 OM
 VP
 OM
-OM
-OM
+UD
+eC
 VP
 WI
 WI
@@ -26816,7 +27621,7 @@ Cn
 Cn
 Cn
 nT
-nj
+BE
 pf
 pf
 pf
@@ -26926,25 +27731,25 @@ pW
 Za
 pg
 ea
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+vl
+FD
+FD
+FD
+FD
+FD
+vl
+Re
 XU
 Up
 Up
@@ -26956,12 +27761,12 @@ Up
 Gr
 VP
 SW
-OM
+eC
 OM
 VP
 OM
-OM
-OM
+eC
+eC
 VP
 WI
 WI
@@ -26969,16 +27774,16 @@ WI
 WI
 WI
 nT
-Cn
-Cn
-Cn
+IL
+dh
+dh
 Cn
 Cn
 Cn
 Cn
 Cn
 Uv
-nj
+BE
 pf
 pf
 pf
@@ -27095,18 +27900,18 @@ ea
 ea
 ea
 ea
-ZV
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
-WI
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
+Re
 XU
 Up
 Up
@@ -27140,7 +27945,7 @@ Cn
 Cn
 Cn
 nT
-nj
+BE
 pf
 pf
 pf
@@ -27289,16 +28094,16 @@ eO
 CT
 nT
 Cn
-Cn
-ZO
-Cn
+dZ
+Md
+Gn
 nT
 Cn
-Cn
-Cn
-Cn
-Cn
-Cn
+Lq
+Ra
+ZW
+Ra
+ZW
 Cn
 Cn
 nT
@@ -27456,15 +28261,15 @@ Cn
 Cn
 nT
 Cn
-Cn
-Cn
-Cn
-Cn
-Cn
+jC
+Ra
+ZW
+Ra
+ZW
 Cn
 Cn
 nT
-nj
+BE
 pf
 pf
 pf
@@ -27626,7 +28431,7 @@ tD
 tD
 OR
 nT
-nj
+BE
 pf
 pf
 pf
@@ -28107,7 +28912,7 @@ Cn
 Cn
 RX
 Cn
-Cn
+ZQ
 Cn
 RX
 Cn
@@ -28449,8 +29254,8 @@ Lt
 Lt
 Lt
 ZJ
-gW
-gW
+hP
+bn
 ba
 ba
 ba
@@ -29215,14 +30020,14 @@ NA
 NA
 ZL
 GR
-GR
-GR
-GR
+ov
+zG
+ov
 GR
 ZL
 GR
-GR
-GR
+ov
+ov
 ZL
 vh
 Up
@@ -29251,7 +30056,7 @@ pf
 pf
 pf
 pf
-em
+zT
 Zl
 Zl
 nj
@@ -29264,7 +30069,7 @@ Qn
 Qn
 uC
 Zl
-em
+zT
 pf
 pf
 pf
@@ -29377,14 +30182,14 @@ NA
 NA
 ZL
 GR
-GR
-GR
-GR
+ov
+ov
+ov
 GR
 ZL
 GR
-GR
-GR
+ov
+ga
 ZL
 vh
 Up
@@ -29538,14 +30343,14 @@ NA
 NA
 NA
 ZL
-GR
-GR
-GR
+tu
+ov
+ov
 GR
 GR
 bZ
 GR
-GR
+zG
 GR
 ZL
 vh
@@ -29862,10 +30667,10 @@ NA
 NA
 NA
 ZL
+ov
+ov
 GR
-GR
-GR
-hh
+Wr
 GR
 GR
 GR
@@ -30025,13 +30830,13 @@ NA
 NA
 ZL
 GR
+ov
 GR
 GR
 GR
 GR
-GR
-GR
-GR
+ov
+zG
 GR
 hM
 vh
@@ -30187,11 +30992,11 @@ NA
 NA
 ZL
 GR
+ov
 GR
 GR
-GR
-GR
-GR
+ov
+ov
 GR
 GR
 tU
@@ -30348,13 +31153,13 @@ NA
 NA
 NA
 ZL
+ov
+ov
+tu
 GR
-GR
-GR
-GR
-GR
-GR
-GR
+ga
+zG
+tu
 GR
 lR
 ZL
@@ -30510,9 +31315,9 @@ NA
 NA
 NA
 ZL
-GR
-GR
-GR
+tu
+ov
+ov
 GR
 GR
 GR
@@ -31357,7 +32162,7 @@ pf
 pf
 pf
 pf
-em
+zT
 oW
 oW
 nj
@@ -31370,7 +32175,7 @@ nj
 nj
 oW
 oW
-em
+zT
 pf
 pf
 pf
@@ -31824,7 +32629,7 @@ Hp
 ay
 sq
 Uc
-Uc
+Zu
 uo
 yx
 yU
@@ -32148,7 +32953,7 @@ Hp
 ay
 TP
 Uc
-Uc
+YJ
 uo
 uN
 yU
@@ -32266,10 +33071,10 @@ oz
 NA
 dS
 Db
-Cb
-Cb
-Cb
-Cb
+tv
+tv
+tv
+tv
 Db
 LZ
 LZ
@@ -32427,11 +33232,11 @@ oz
 oz
 NA
 dS
-vg
-tv
-tv
-tv
-tv
+ea
+gS
+AQ
+AQ
+ea
 vg
 Cb
 Cb
@@ -32589,11 +33394,11 @@ oz
 oz
 NA
 dS
-Cb
-Cb
-Cb
-Cb
-Cb
+ea
+vg
+vg
+vg
+ea
 Cb
 Cb
 Cb
@@ -32751,11 +33556,11 @@ oz
 oz
 NA
 dS
-dS
-dS
-dS
-dS
-dS
+ea
+ea
+ea
+ea
+ea
 dS
 dS
 dS
@@ -33118,8 +33923,8 @@ HO
 HO
 Hp
 ay
-Uc
-Uc
+Fn
+YJ
 cO
 uo
 eh
@@ -33280,7 +34085,7 @@ HO
 HO
 Hp
 ay
-Uc
+Qb
 Uc
 Uc
 uo
@@ -33442,7 +34247,7 @@ HO
 HO
 Hp
 ay
-Uc
+Hb
 Uc
 Uc
 uo
@@ -34768,7 +35573,7 @@ CY
 CY
 hA
 hA
-GC
+DI
 db
 hw
 db
@@ -35062,11 +35867,11 @@ HO
 HO
 Hp
 ay
-Xa
-Xa
-Xa
-Xa
-Xa
+yn
+yn
+yn
+yn
+yn
 Xa
 Xa
 Xa
@@ -35224,11 +36029,11 @@ HO
 HO
 Hp
 ay
-Xa
-Xa
-Xa
-Xa
-Xa
+yn
+SO
+SO
+SO
+yn
 Xa
 Xa
 Xa
@@ -35387,9 +36192,9 @@ HO
 Hp
 ay
 yn
-yn
-yn
-yn
+yc
+HZ
+HZ
 yn
 yn
 yn
@@ -35801,7 +36606,7 @@ Bs
 Ka
 Ka
 Ka
-Ka
+yI
 mT
 MD
 mT
@@ -37510,17 +38315,17 @@ hk
 LM
 LM
 xJ
-QY
-QY
-QY
-QY
-xJ
-QY
+Se
 QY
 QY
 QY
 xJ
+Se
 QY
+QY
+QY
+xJ
+Se
 QY
 QY
 QY
@@ -37836,18 +38641,18 @@ LM
 xJ
 QY
 QY
-QY
-QY
+cF
+fC
 xJ
 QY
 QY
-QY
-QY
+cF
+fC
 xJ
 QY
 QY
-QY
-QY
+cF
+fC
 xJ
 LM
 Ku
@@ -38158,20 +38963,20 @@ hk
 LM
 LM
 xJ
+ph
 QY
-QY
-QY
-QY
+mv
+mv
 xJ
+ph
 QY
-QY
-QY
-QY
+mv
+mv
 xJ
+ph
 QY
-QY
-QY
-QY
+mv
+mv
 xJ
 LM
 Ku
@@ -38484,18 +39289,18 @@ LM
 xJ
 YF
 QY
-QY
-QY
+Tf
+Jc
 xJ
 YF
 QY
-QY
-QY
+cF
+Tz
 xJ
 YF
 QY
-QY
-QY
+qv
+Jc
 xJ
 LM
 Ku
@@ -38565,13 +39370,13 @@ yI
 Jb
 Jb
 JF
-JF
+lA
 JF
 Ip
 JF
+lA
 JF
-JF
-JF
+lA
 JF
 Jb
 yI
@@ -38644,17 +39449,17 @@ hk
 LM
 LM
 xJ
-QY
-QY
-QY
-QY
-xJ
-QY
+Jc
 QY
 QY
 QY
 xJ
+Jc
 QY
+QY
+QY
+xJ
+Jc
 QY
 QY
 QY
@@ -38727,13 +39532,13 @@ hN
 DO
 JF
 JF
+lA
 JF
+lA
 JF
+lA
 JF
-JF
-JF
-JF
-JF
+lA
 JF
 Jb
 yI
@@ -38806,20 +39611,20 @@ hk
 LM
 LM
 xJ
+ge
 QY
 QY
-QY
-QY
+Bm
 xJ
+ge
 QY
 QY
-QY
-QY
+Bm
 xJ
+ge
 QY
 QY
-QY
-QY
+Bm
 xJ
 LM
 Ku
@@ -39051,13 +39856,13 @@ yI
 FY
 JF
 JF
+lA
 JF
+lA
 JF
+lA
 JF
-JF
-JF
-JF
-JF
+lA
 JF
 Jb
 yI
@@ -39213,13 +40018,13 @@ yI
 Jb
 Jb
 JF
-JF
+lA
 JF
 xX
 JF
+lA
 JF
-JF
-JF
+lA
 JF
 Jb
 yI
@@ -40086,7 +40891,7 @@ gv
 gv
 gv
 by
-TS
+iK
 CP
 MK
 MK
@@ -40112,7 +40917,7 @@ mc
 mc
 mc
 No
-mc
+ey
 mc
 mc
 mc
@@ -40248,7 +41053,7 @@ gv
 gv
 gv
 wC
-TS
+iK
 wC
 gv
 gv
@@ -40404,19 +41209,19 @@ NA
 hk
 SO
 SO
-TS
-TS
+iK
+iK
 LH
 LH
-TS
-bn
-TS
-bn
-TS
+iK
+HT
+iK
+HT
+iK
 LH
 LH
-TS
-TS
+iK
+iK
 JL
 JL
 EG
@@ -40445,12 +41250,12 @@ oe
 eX
 DK
 dV
-dn
-dn
-dn
+Wf
+hd
+rS
 wx
-dn
-dn
+Pu
+SV
 rS
 NA
 NA
@@ -40566,19 +41371,19 @@ NA
 hk
 SO
 SO
-TS
+iK
 An
 An
 An
 An
 An
-TS
+iK
 An
 An
 An
 An
 An
-TS
+iK
 JL
 JL
 jD
@@ -40597,8 +41402,8 @@ hk
 LM
 eX
 oe
-Hu
-oe
+za
+fe
 oe
 oe
 oe
@@ -40607,11 +41412,11 @@ oe
 eX
 DK
 dV
+Wo
+vS
+rS
 dn
-dn
-dn
-dn
-dn
+sU
 dn
 rS
 NA
@@ -40728,19 +41533,19 @@ NA
 hk
 SO
 SO
-TS
-NQ
+iK
 An
+Du
+kN
+RA
 An
+iK
 An
+kN
+RA
+Du
 An
-TS
-An
-An
-An
-An
-Ra
-TS
+iK
 SO
 JL
 jD
@@ -40769,12 +41574,12 @@ oe
 eX
 jw
 dV
-dn
-dn
-dn
-dn
-dn
-dn
+Xu
+cr
+rS
+Ag
+rS
+uM
 rS
 NA
 NA
@@ -40890,19 +41695,19 @@ NA
 hk
 SO
 SO
-TS
-HT
-iK
-iK
-An
-An
-TS
-An
-An
-iK
 iK
 HT
-TS
+iK
+iK
+ZV
+An
+iK
+An
+TB
+iK
+iK
+HT
+iK
 SO
 JL
 jD
@@ -40925,15 +41730,15 @@ Hu
 oe
 oe
 oe
-oe
+fe
 oe
 mu
 eX
 Dn
 rS
-dn
-dn
-rS
+jP
+vS
+vS
 vS
 rS
 rS
@@ -41052,15 +41857,15 @@ NA
 hk
 SO
 SO
-UN
+Ts
 An
 An
 iK
-An
-Ra
-TS
-NQ
-An
+iK
+HT
+iK
+HT
+iK
 iK
 An
 An
@@ -41089,16 +41894,16 @@ dz
 qS
 oe
 oe
-oe
+zS
 eX
 DH
 rS
-dn
-dn
+vS
+vS
 rS
-dn
-dn
-dn
+HP
+rS
+rS
 rS
 NA
 NA
@@ -41214,19 +42019,19 @@ NA
 Pb
 kc
 kc
-TS
-An
-Ra
 iK
-An
-An
-TS
-An
+ht
 An
 iK
-Du
+HN
+GU
+iK
+GU
+eD
+iK
 An
-TS
+li
+iK
 kc
 Et
 Vo
@@ -41245,22 +42050,22 @@ hk
 LM
 eX
 oe
-oe
-oe
-oe
+zs
+zs
+zs
 kK
-oe
-oe
-oe
+YD
+zi
+zi
 eX
 ib
-dn
-dn
-dn
+BB
+vS
+vS
 rS
-dn
-dn
-dn
+bT
+bT
+bT
 rS
 NA
 NA
@@ -41358,10 +42163,10 @@ SO
 Wx
 cz
 pc
-rA
-rA
 pG
 pG
+wQ
+wQ
 Hl
 Wx
 SO
@@ -41376,19 +42181,19 @@ NA
 LM
 LM
 LM
-TS
+iK
 Ha
 An
 iK
-An
-An
-TS
-An
-An
+Nz
+PK
+iK
+Nz
+PK
 iK
 An
 Ha
-TS
+iK
 LM
 di
 gv
@@ -41416,13 +42221,13 @@ eX
 eX
 eX
 xb
-dn
-dn
-dn
+vS
+vS
+vS
 rS
 sr
-dn
-dn
+bT
+bT
 rS
 NA
 NA
@@ -41538,19 +42343,19 @@ NA
 LM
 LM
 LM
-TS
-TS
-TS
-TS
-TS
-TS
-TS
-TS
-TS
-TS
-TS
-TS
-TS
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
 LM
 di
 gv
@@ -41578,13 +42383,13 @@ LM
 LM
 eX
 ib
-dn
-dn
-dn
+vS
+vS
+vS
 rS
-dn
-dn
-dn
+bT
+bT
+bT
 rS
 NA
 NA
@@ -41733,7 +42538,7 @@ LM
 LM
 LM
 LM
-LM
+ur
 LM
 LM
 LM
@@ -41744,9 +42549,9 @@ yR
 yR
 HQ
 rS
-dn
-dn
-dn
+bT
+bT
+MN
 rS
 NA
 NA
