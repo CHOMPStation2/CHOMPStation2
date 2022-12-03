@@ -254,12 +254,6 @@
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
 "dc" = (
-/obj/structure/table/standard,
-/obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
@@ -271,6 +265,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/research_outpost,
+/obj/machinery/alarm,
 /turf/simulated/floor/tiled/monotile,
 /area/groundbase/science/outpost/anomaly_lab)
 "de" = (
@@ -281,7 +276,6 @@
 /turf/simulated/floor,
 /area/groundbase/engineering/solarshed)
 "dg" = (
-/obj/machinery/radiocarbon_spectrometer,
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
@@ -292,7 +286,14 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 1
 	},
-/obj/machinery/alarm,
+/obj/structure/table/standard,
+/obj/item/stack/nanopaste{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/weapon/reagent_containers/glass/bucket{
+	pixel_x = -3
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/groundbase/science/outpost/anomaly_lab)
 "dh" = (
@@ -2033,12 +2034,19 @@
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/wilderness/west)
 "zs" = (
+<<<<<<< HEAD
 /obj/structure/table/standard,
 /obj/item/device/flashlight/lamp,
 /obj/machinery/vending/wallmed1{
 	pixel_x = 30
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+=======
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/filingcabinet/chestdrawer{
+	name = "SCAN RECORDS"
+	},
+>>>>>>> 6a1677562f... Merge pull request #14155 from woutere/master
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/outpost/anomaly_lab)
 "zz" = (
@@ -2141,7 +2149,13 @@
 /area/groundbase/science/outpost/atmos)
 "AD" = (
 /obj/machinery/artifact_scanpad,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+=======
+/obj/machinery/light{
+	dir = 1
+	},
+>>>>>>> 6a1677562f... Merge pull request #14155 from woutere/master
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/outpost/anomaly_lab)
 "AH" = (
@@ -3051,6 +3065,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/groundbase/science/outpost/anomaly_lab)
 "Kb" = (
@@ -3232,6 +3249,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/closet/crate/science,
 /turf/simulated/floor,
 /area/groundbase/science/outpost/anomaly_storage)
 "Lp" = (
@@ -3466,6 +3484,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
+"Pj" = (
+/obj/machinery/vending/wallmed1,
+/turf/simulated/wall,
+/area/groundbase/science/outpost/anomaly_lab)
 "Pl" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 4
@@ -20582,7 +20604,7 @@ sS
 Jx
 XR
 GC
-OK
+Pj
 iL
 iL
 rQ
