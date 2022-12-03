@@ -73,9 +73,6 @@
 			log_and_message_admins("removed a security ticket from the global list: \"[input]\"", usr)
 
 	else
-<<<<<<< HEAD
-		tgui_alert_async(usr, "The ticket list is empty.","Empty")
-=======
 		tgui_alert_async(usr, "The ticket list is empty.","Empty")
 
 /client/proc/delbook()
@@ -124,4 +121,3 @@
 
 	usr << browse(dat, "window=library")
 	onclose(usr, "library")
->>>>>>> 2c6bd88519... Merge pull request #14140 from Very-Soft/bookmanagement
