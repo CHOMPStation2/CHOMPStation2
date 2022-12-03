@@ -221,7 +221,8 @@
 					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Cat" = "vixsec", //CHOMPEdit
-					"Drake" = "drakesec"
+					"Drake" = "drakesec",
+					"Secborg model V-4" = "secraptor"//CHOMPEdit
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -307,7 +308,8 @@
 					"Borgi" = "borgi-medi",
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Cat" = "vixmed", //CHOMPEdit
-					"Drake" = "drakemed"
+					"Drake" = "drakemed",
+					"Mediborg model V-4" = "medraptor" //CHOMPEdit
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
@@ -357,7 +359,7 @@
 	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	B.water = water
 	src.modules += B
-	
+
 	//CHOMPEdit Start - Give back the ATK/ABP since we don't have the surgeryhound
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -638,7 +640,8 @@
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark",
 					"Cat" = "vixsci", //CHOMPEdit
-					"Drake" = "drakesci"
+					"Drake" = "drakesci",
+					"Sciborg model V-4" = "sciraptor"//CHOMPEdit
 					)
 	channels = list("Science" = 1)
 	pto_type = PTO_SCIENCE

@@ -68,7 +68,8 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
-			flavor_text = H.flavor_texts["general"]
+			if(LAZYLEN(H.flavor_texts))
+				flavor_text = H.flavor_texts["general"]
 
 		if(isAI(C.mob))
 			var/mob/living/silicon/ai/A = C.mob
