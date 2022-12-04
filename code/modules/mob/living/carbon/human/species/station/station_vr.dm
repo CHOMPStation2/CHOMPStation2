@@ -257,20 +257,20 @@
 //	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
-	
+
 	//Furry fox-like animals shouldn't start freezing at 5 degrees celsius.
 	//Minor cold is resisted, but not severe frost.
-	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans. 
-	
+	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans.
+
 	cold_level_1 = 243 //Default 260, other values remain at default. Starts taking damage at -30 celsius. Default tier 2 is -70 and tier 3 is -150
-	
-	
-	breath_cold_level_1 = 220 // Default 240, lower is better.	
-	
+
+
+	breath_cold_level_1 = 220 // Default 240, lower is better.
+
 	//While foxes can survive in deserts, that's handled by zorren. It's a good contrast that our vulp find heat a little uncomfortable.
-	
+
 	heat_discomfort_level = 295 //Just above standard 20 C to avoid heat message spam, same as Taj
-	
+
 	heat_level_1 = 345 //Default 360
 	heat_level_2 = 390 //Default 400
 	heat_level_3 = 900 //Default 1000
@@ -290,8 +290,13 @@
 	base_color = "#B43214"
 
 	min_age = 18
+<<<<<<< HEAD
 	max_age = 110
 	
+=======
+	max_age = 80
+
+>>>>>>> 727e3cc9c7... Merge pull request #14171 from Heroman3003/alilore
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
@@ -311,9 +316,22 @@
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
+<<<<<<< HEAD
 
 //CHOMPSedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi"
+=======
+	blurb = "Heavily reptilian in appearance, the Unathi hail from the Uueoa-Esa system, roughly translated as 'Burning Mother'. \
+			Their home planet, Moghes, is an arid climate with hot rocky plains and deserts, and a temperate band of swamps and savannas with \
+			massive saltwater lakes being the closest equivalent to oceans. This environment bred a very hardy people who value ideals of honesty, \
+			virtue, proficiency and bravery above all else, frequently even one's own life. These same values lend them culturally to imperialistic \
+			politics, as well as often being viewed as haughty and arrogant by other interstellar species.<br><br>\
+			On the stage of the interstellar political realm the Unathi are noteworthy contenders, the Moghes Hegemony possesses vast technological and \
+			material prowess when compared to human contemporaries such as the Sol-Procyon Commonwealth or Ares Confederation. The Hegemony War nearly one \
+			hundred years ago is a prime example of this, having engaged in brutal warfare that ultimately fell to a stalemate between all involved parties. \
+			Nowadays relations remain cool and somewhat tense, although this does not prevent individual Unathi from finding reasonable career success within Human space."
+	wikilink="https://wiki.vore-station.net/Unathi"
+>>>>>>> 727e3cc9c7... Merge pull request #14171 from Heroman3003/alilore
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
