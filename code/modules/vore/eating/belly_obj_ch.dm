@@ -80,8 +80,14 @@
 		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
 		)
 
-	var/affects_vore_sprites = TRUE
+	var/affects_vore_sprites = FALSE
 	var/count_absorbed_prey_for_sprite = TRUE
+	var/absorbed_multiplier = 1
+	var/count_liquid_for_sprite = FALSE
+	var/liquid_multiplier = 1
+	var/count_items_for_sprite = FALSE
+	var/item_multiplier = 1
+	var/health_impacts_size = TRUE
 	var/resist_triggers_animation = TRUE
 	var/size_factor_for_sprite = 1
 	var/belly_sprite_to_affect = "stomach"
@@ -99,7 +105,32 @@
 	var/belly_fullness = 0
 	for(var/mob/living/M in src)
 		if(count_absorbed_prey_for_sprite || !M.absorbed)
-			belly_fullness += M.size_multiplier
+			var/fullness_to_add = M.size_multiplier
+			fullness_to_add *= M.mob_size / 20
+			if(M.absorbed)
+				fullness_to_add *= absorbed_multiplier
+			if(health_impacts_size)
+				fullness_to_add *= M.health / M.getMaxHealth()
+			belly_fullness += fullness_to_add
+	if(count_liquid_for_sprite)
+		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier
+	if(count_items_for_sprite)
+		for(var/obj/item/I in src)
+			var/fullness_to_add = 0
+			if(I.w_class == ITEMSIZE_TINY)
+				fullness_to_add = ITEMSIZE_COST_TINY
+			else if(I.w_class == ITEMSIZE_SMALL)
+				fullness_to_add = ITEMSIZE_COST_SMALL
+			else if(I.w_class == ITEMSIZE_NORMAL)
+				fullness_to_add = ITEMSIZE_COST_NORMAL
+			else if(I.w_class == ITEMSIZE_LARGE)
+				fullness_to_add = ITEMSIZE_COST_LARGE
+			else if(I.w_class == ITEMSIZE_HUGE)
+				fullness_to_add = ITEMSIZE_COST_HUGE
+			else
+				fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
+			fullness_to_add /= 32
+			belly_fullness += fullness_to_add * item_multiplier
 	belly_fullness *= size_factor_for_sprite
 	return belly_fullness
 
@@ -130,6 +161,8 @@
 		owner.nutrition -= gen_cost
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
+	if(count_liquid_for_sprite)
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 
 //////////////////////////// REAGENT_DIGEST ////////////////////////
 

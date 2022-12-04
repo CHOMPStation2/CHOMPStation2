@@ -4,6 +4,8 @@
 	response_harm = "hits"
 
 	say_list_type = /datum/say_list/clown
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/clown
 	speak = list("HONK", "Honk!", "Henk!")

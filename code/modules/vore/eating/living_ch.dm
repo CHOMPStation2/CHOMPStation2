@@ -6,7 +6,7 @@
 	var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
 	var/vore_footstep_chance = 0
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
-
+	var/mute_entry = FALSE				//Toggleable vorgan entry logs.
 	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
 
 	// CHOMP vore icons refactor (Now on living)
@@ -111,7 +111,7 @@
 	set desc = "Transfer liquid from an organ to another or stomach, or into another person or container."
 	set popup_menu = FALSE
 
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT))
 		return FALSE
 
 	var/mob/living/user = usr
@@ -154,6 +154,8 @@
 					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
 					add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
+				if(RTB.count_liquid_for_sprite || TB.count_liquid_for_sprite)
+					update_fullness()
 
 			else if(TR.receive_reagents == FALSE)
 				to_chat(user, "<span class='warning'>This person's prefs dont allow that!</span>")
@@ -176,6 +178,10 @@
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 				add_attack_logs(user,TR,"Transfered reagents from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
+				if(RTB.count_liquid_for_sprite)
+					update_fullness()
+				if(TB.count_liquid_for_sprite)
+					TR.update_fullness()
 
 
 		if("Stomach")
@@ -191,6 +197,8 @@
 					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their stomach.</span>")
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")
+				if(RTB.count_liquid_for_sprite)
+					update_fullness()
 
 			else if(TR.receive_reagents == FALSE)
 				to_chat(user, "<span class='warning'>This person's prefs dont allow that!</span>")
@@ -204,6 +212,8 @@
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
+				if(RTB.count_liquid_for_sprite)
+					update_fullness()
 
 		if("Container")
 			var/list/choices = list()
@@ -222,10 +232,14 @@
 
 			RTB.reagents.vore_trans_to_con(T, transfer_amount, 1, 0)
 			add_attack_logs(user, T,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to a [T]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
+			if(RTB.count_liquid_for_sprite)
+				update_fullness()
 		if("Floor")
 			if(RTB.reagentid == "water")
 				return
 			var/amount_removed = RTB.reagents.remove_any(transfer_amount)
+			if(RTB.count_liquid_for_sprite)
+				update_fullness()
 			var/puddle_amount = round(amount_removed/5)
 
 			if(puddle_amount == 0)
@@ -270,3 +284,9 @@
 			return TRUE
 	to_chat(src, "<span class='warning'>There is no suitable belly for rubs.</span>")
 	return FALSE
+
+/mob/living/proc/mute_entry()
+	set name = "Mute Vorgan Entrance"
+	set category = "Preferences"
+	set desc = "Mute the chatlog messages when something enters a vore belly."
+	mute_entry = !mute_entry

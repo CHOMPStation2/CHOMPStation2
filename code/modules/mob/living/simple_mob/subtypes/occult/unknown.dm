@@ -40,6 +40,8 @@
 	var/all_special_attacks = list(GA_ADS, GA_CALLDOWN, GA_LINES, GA_BULLETHELL, GA_ILLUSION, GA_CONFUSION, GA_SPEEDUP)
 
 	loot_list = list(/obj/item/device/nif/glitch = 100)
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /obj/item/projectile/energy/slow_orb
 	name = "TROJAN"
@@ -260,7 +262,7 @@
 	vision_range = 10
 	closest_distance = 4
 
-/datum/ai_holder/simple_mob/ranged/bossmob_glitch/pre_special_attack(atom/A)
+/datum/ai_holder/simple_mob/ranged/aggressive/bossmob_glitch/pre_special_attack(atom/A)
 	var/mob/living/simple_mob/glitch_boss/GB
 	if(istype(holder, /mob/living/simple_mob/glitch_boss))
 		GB = holder

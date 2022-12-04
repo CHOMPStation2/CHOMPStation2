@@ -40,6 +40,8 @@
 				)
 
 	has_langs = list(LANGUAGE_ANIMAL)
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/passive/honkpet/attack_hand(mob/living/user as mob)
 	if(user.a_intent == I_DISARM)

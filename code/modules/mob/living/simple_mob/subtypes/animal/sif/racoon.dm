@@ -68,6 +68,7 @@
 	var/obj/item/clothing/head/hat = null // The hat the Sakimm may be wearing.
 	var/list/friend_loot_list = list(/obj/item/weapon/coin)	// What will make this animal non-hostile if held?
 	var/randomize_size = TRUE
+	can_be_drop_prey = TRUE //CHOMP Add
 
 /mob/living/simple_mob/animal/sif/sakimm/verb/remove_hat()
 	set name = "Remove Hat"

@@ -281,8 +281,75 @@
 	custom_only = FALSE
 	allergen = ALLERGEN_COFFEE
 
+/datum/trait/neutral/allergy_reaction
+	name = "Allergy Reaction: Disable Toxicity"
+	desc = "Take this trait to disable the toxic damage effect of being exposed to one of your allergens. Combine with the Disable Suffocation trait to have purely nonlethal reactions."
+	cost = 0
+	custom_only = FALSE
+	var/reaction = AG_TOX_DMG
+
+/datum/trait/neutral/allergy_reaction/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	S.allergen_reaction ^= reaction
+	..(S,H)
+
+/datum/trait/neutral/allergy_reaction/oxy
+	name = "Allergy Reaction: Disable Suffocation"
+	desc = "Take this trait to disable the oxygen deprivation damage effect of being exposed to one of your allergens. Combine with the Disable Toxicity trait to have purely nonlethal reactions."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_OXY_DMG
+
+/datum/trait/neutral/allergy_reaction/brute
+	name = "Allergy Reaction: Spontaneous Trauma"
+	desc = "When exposed to one of your allergens, your skin develops unnatural bruises and other 'stigmata'-like injuries. Be aware that untreated wounds may become infected."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_PHYS_DMG
+
+/datum/trait/neutral/allergy_reaction/burn
+	name = "Allergy Reaction: Blistering"
+	desc = "When exposed to one of your allergens, your skin develops unnatural blisters and burns, as if exposed to fire. Be aware that untreated burns are very susceptible to infection!"
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_BURN_DMG
+
+/datum/trait/neutral/allergy_reaction/pain
+	name = "Allergy Reaction: Disable Pain"
+	desc = "Take this trait to disable experiencing pain after being exposed to one of your allergens."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_PAIN
+
+/datum/trait/neutral/allergy_reaction/weaken
+	name = "Allergy Reaction: Knockdown"
+	desc = "When exposed to one of your allergens, you will experience sudden and abrupt loss of muscle control and tension, resulting in immediate collapse and immobility. Does nothing if you have no allergens."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_WEAKEN
+
+/datum/trait/neutral/allergy_reaction/blurry
+	name = "Allergy Reaction: Disable Blurring"
+	desc = "Take this trait to disable the blurred/impeded vision effect of allergens."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_BLURRY
+
+/datum/trait/neutral/allergy_reaction/sleepy
+	name = "Allergy Reaction: Fatigue"
+	desc = "When exposed to one of your allergens, you will experience fatigue and tiredness, and may potentially pass out entirely. Does nothing if you have no allergens."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_SLEEPY
+
+/datum/trait/neutral/allergy_reaction/confusion
+	name = "Allergy Reaction: Disable Confusion"
+	desc = "Take this trait to disable the confusion/disorientation effect of allergens."
+	cost = 0
+	custom_only = FALSE
+	reaction = AG_CONFUSE
+
 /datum/trait/neutral/allergen_reduced_effect
-	name = "Reduced Allergen Reaction"
+	name = "Allergen Reaction: Reduced Intensity"
 	desc = "This trait drastically reduces the effects of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
@@ -290,7 +357,7 @@
 	excludes = list(/datum/trait/neutral/allergen_increased_effect)
 
 /datum/trait/neutral/allergen_increased_effect
-	name = "Increased Allergen Reaction"
+	name = "Allergen Reaction: Increased Intensity"
 	desc = "This trait drastically increases the effects of allergen reactions, enough that even a small dose can be lethal. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
@@ -343,45 +410,53 @@
 // Alcohol Traits Start Here, from negative to positive.
 /datum/trait/neutral/alcohol_intolerance_advanced
 	name = "Liver of Air"
-	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks are three times as strong."
+	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Alcohol hits you three times as hard as they do other people."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("alcohol_mod" = 3) // 300% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+	var_changes = list("chem_strength_alcohol" = 3)
 
 /datum/trait/neutral/alcohol_intolerance_basic
 	name = "Liver of Lilies"
-	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks are twice as strong."
+	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with your system... either way, alcohol hits you twice as hard."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("alcohol_mod" = 2) // 200% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+	var_changes = list("chem_strength_alcohol" = 2)
 
 /datum/trait/neutral/alcohol_intolerance_slight
 	name = "Liver of Tulips"
-	desc = "You have a slight struggle with alcohol. Drinks are one and a half times stronger."
+	desc = "You are what some might call 'a bit of a lightweight', but you can still keep your drinks down... most of the time. Alcohol hits you fifty percent harder."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("alcohol_mod" = 1.5) // 150% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+	var_changes = list("chem_strength_alcohol" = 1.5)
+	
+/datum/trait/neutral/alcohol_tolerance_reset
+	name = "Liver of Unremarkableness"
+	desc = "This trait exists to reset alcohol (in)tolerance for non-custom species to baseline normal. It can only be taken by Skrell, Tajara, Unathi, Diona, and Prometheans, as it would have no effect on other species."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("chem_strength_alcohol" = 1)
+	allowed_species = list(SPECIES_SKRELL,SPECIES_TAJ,SPECIES_UNATHI,SPECIES_DIONA,SPECIES_PROMETHEAN)
 
 /datum/trait/neutral/alcohol_tolerance_basic
 	name = "Liver of Iron"
-	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! Drinks are only three-quarters as strong."
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! Alcohol's effects on you are reduced by about a quarter."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("alcohol_mod" = 0.75) // 75% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+	var_changes = list("chem_strength_alcohol" = 0.75)
 
 /datum/trait/neutral/alcohol_tolerance_advanced
 	name = "Liver of Steel"
-	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers! Drinks are only half as strong."
+	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers! Alcohol has just half the effect on you as it does on others."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("alcohol_mod" = 0.5) // 50% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+	var_changes = list("chem_strength_alcohol" = 0.5)
 
 /datum/trait/neutral/alcohol_immunity
 	name = "Liver of Durasteel"
 	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("alcohol_mod" = 0.25) // 25% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+	var_changes = list("chem_strength_alcohol" = 0.25)
 // Alcohol Traits End Here.
 
 /datum/trait/neutral/colorblind/mono

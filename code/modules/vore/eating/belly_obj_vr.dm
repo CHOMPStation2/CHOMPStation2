@@ -55,6 +55,8 @@
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
 	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
+	var/slow_digestion = FALSE				// CHOMPEdit: Gradual corpse digestion
+	var/slow_brutal = FALSE					// CHOMPEdit: Gradual corpse digestion: Stumpy's Special
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -69,7 +71,7 @@
 	//Actual full digest modes
 	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_SELECT,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
-	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY)
+	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Slow Body Digestion" = DM_FLAG_SLOWBODY) //CHOMPEdit
 	//Item related modes
 	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
 
@@ -258,6 +260,12 @@
 	"vore_sprite_flags",
 	"affects_vore_sprites",
 	"count_absorbed_prey_for_sprite",
+	"absorbed_multiplier",
+	"count_liquid_for_sprite",
+	"liquid_multiplier",
+	"count_items_for_sprite",
+	"item_multiplier",
+	"health_impacts_size",
 	"resist_triggers_animation",
 	"size_factor_for_sprite",
 	"belly_sprite_to_affect",
@@ -266,7 +274,9 @@
 	"autotransferlocation",
 	"autotransfer_enabled",
 	"autotransfer_min_amount",
-	"autotransfer_max_amount", //CHOMP end of variables from CHOMP
+	"autotransfer_max_amount",
+	"slow_digestion",
+	"slow_brutal", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -311,7 +321,8 @@
 		return //Someone dropping something (or being stripdigested)
 
 	//Generic entered message
-	to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
+	if(!owner.mute_entry) //CHOMPEdit
+		to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound)
@@ -353,6 +364,8 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
 		var/obj/item/capture_crystal/CC = thing
 		if(CC.bound_mob && desc)
@@ -381,6 +394,8 @@
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
+		if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/obj/item/I = thing
 		if(I.gurgled)
 			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
@@ -1299,6 +1314,12 @@
 	dupe.vore_sprite_flags = vore_sprite_flags
 	dupe.affects_vore_sprites = affects_vore_sprites
 	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.absorbed_multiplier = absorbed_multiplier
+	dupe.count_liquid_for_sprite = count_liquid_for_sprite
+	dupe.liquid_multiplier = liquid_multiplier
+	dupe.count_items_for_sprite = count_items_for_sprite
+	dupe.item_multiplier = item_multiplier
+	dupe.health_impacts_size = health_impacts_size
 	dupe.resist_triggers_animation = resist_triggers_animation
 	dupe.size_factor_for_sprite = size_factor_for_sprite
 	dupe.belly_sprite_to_affect = belly_sprite_to_affect
@@ -1307,7 +1328,9 @@
 	dupe.autotransferlocation = autotransferlocation
 	dupe.autotransfer_enabled = autotransfer_enabled
 	dupe.autotransfer_min_amount = autotransfer_min_amount
-	dupe.autotransfer_max_amount = autotransfer_max_amount //CHOMP end of variables from CHOMP
+	dupe.autotransfer_max_amount = autotransfer_max_amount
+	dupe.slow_digestion = slow_digestion
+	dupe.slow_brutal = slow_brutal //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

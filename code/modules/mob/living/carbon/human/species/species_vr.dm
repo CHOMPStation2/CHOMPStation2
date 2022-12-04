@@ -35,6 +35,7 @@
 	var/micro_size_mod = 0		// How different is our size for interactions that involve us being small?
 	var/macro_size_mod = 0		// How different is our size for interactions that involve us being big?
 	var/digestion_nutrition_modifier = 1
+	var/center_offset = 0.5 //CHOMPEdit
 
 
 /datum/species/proc/give_numbing_bite() //Holy SHIT this is hacky, but it works. Updating a mob's attacks mid game is insane.
@@ -85,6 +86,8 @@
 
 	if(H.dna)
 		H.dna.ready_dna(H)
+
+	handle_base_eyes(H, custom_base) //ChompEDIT. ensure custom species with a base get the correct eyes
 
 	return new_copy
 

@@ -43,7 +43,7 @@
 	cost = 0
 	category = 0
 	custom_only = FALSE
-	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing)) // CHOMPEdit: Fix 'chimera unarmed attacks with this trait
+	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing)) // Fixes the parent forgetting to add 'chimera-specific claws
 
 /datum/trait/positive/snowwalker/xenochimera
 	sort = TRAIT_SORT_SPECIES
@@ -65,6 +65,8 @@
 	custom_only = FALSE
 
 /datum/trait/positive/winged_flight/xenochimera
+	sort = TRAIT_SORT_SPECIES
+	allowed_species = list(SPECIES_XENOCHIMERA)
 	name = "Xenochhimera: Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
 	cost = 0

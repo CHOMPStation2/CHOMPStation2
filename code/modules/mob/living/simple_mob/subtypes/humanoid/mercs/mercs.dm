@@ -42,6 +42,7 @@
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 
+
 ////////////////////////////////
 //		Grenade Attack
 ////////////////////////////////

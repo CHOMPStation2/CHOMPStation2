@@ -100,6 +100,7 @@
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-medical",
+						"W02M" = "worm-surgeon",
 						"Feminine Humanoid" = "uptall-medical"
 					 )
 
@@ -110,6 +111,7 @@
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-crisis",
+						"W02M" = "worm-crisis",
 						"Feminine Humanoid" = "uptall-crisis"
 					 )
 
@@ -121,6 +123,7 @@
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
 						"ZOOM-BA" = "zoomba-service",
+						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
 					 )
 
@@ -131,6 +134,7 @@
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
 						"ZOOM-BA" = "zoomba-clerical",
+						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
 					 )
 
@@ -141,6 +145,7 @@
 						"Acheron" = "mechoid-Janitor",
 						"Shellguard Noble" = "Noble-CLN",
 						"ZOOM-BA" = "zoomba-janitor",
+						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-janitor"
 					 )
 
@@ -151,6 +156,7 @@
 						"Acheron" = "mechoid-Security",
 						"Shellguard Noble" = "Noble-SEC",
 						"ZOOM-BA" = "zoomba-security",
+						"W02M" = "worm-security",
 						"Feminine Humanoid" = "uptall-security"
 					 )
 
@@ -161,6 +167,7 @@
 						"Acheron" = "mechoid-Miner",
 						"Shellguard Noble" = "Noble-DIG",
 						"ZOOM-BA" = "zoomba-miner",
+						"W02M" = "worm-miner",
 						"Feminine Humanoid" = "uptall-miner"
 					 )
 
@@ -171,6 +178,7 @@
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
 						"ZOOM-BA" = "zoomba-standard",
+						"W02M" = "worm-standard",
 						"Feminine Humanoid" = "uptall-standard",
 						"Feminine Humanoid, Variant 2" = "uptall-standard2"
 					 )
@@ -180,6 +188,7 @@
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
 						"ZOOM-BA" = "zoomba-engineering",
+						"W02M" = "worm-engineering",
 						"Feminine Humanoid" = "uptall-engineering"
 					 )
 
@@ -189,6 +198,7 @@
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research",
 						"XI-GUS" = "spiderscience",
+						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-science"
 					 )
 
@@ -197,6 +207,7 @@
 	vr_sprites = list(
 						"Acheron" = "mechoid-Combat",
 						"ZOOM-BA" = "zoomba-combat",
+						"W02M" = "worm-combat",
 						"Feminine Humanoid" = "uptall-security"
 					 )
 
@@ -226,6 +237,7 @@
 	src.modules += new /obj/item/taperoll/police(src) //Block out crime scenes.
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
+	src.modules += new /obj/item/device/ticket_printer(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -391,7 +403,8 @@
 	can_be_pushed = 0
 	sprites = list(
 					"Traumahound" = "traumavale",
-					"Drake" = "draketrauma"
+					"Drake" = "draketrauma",
+					"Borgi" = "borgi-trauma"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/trauma/New(var/mob/living/silicon/robot/R)

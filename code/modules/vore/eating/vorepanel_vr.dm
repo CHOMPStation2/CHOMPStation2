@@ -203,6 +203,12 @@
 			//CHOMP add: vore sprite options
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
+			"absorbed_multiplier" = selected.absorbed_multiplier,
+			"liquid_voresprite" = selected.count_liquid_for_sprite,
+			"liquid_multiplier" = selected.liquid_multiplier,
+			"item_voresprite" = selected.count_items_for_sprite,
+			"item_multiplier" = selected.item_multiplier,
+			"health_voresprite" = selected.health_impacts_size,
 			"resist_animation" = selected.resist_triggers_animation,
 			"voresprite_size_factor" = selected.size_factor_for_sprite,
 			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
@@ -1000,6 +1006,9 @@
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
 			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on
+			host.vore_selected.slow_digestion = FALSE //CHOMPAdd
+			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY) //CHOMPAdd
+				host.vore_selected.slow_digestion = TRUE //CHOMPAdd
 			. = TRUE
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()
@@ -1552,11 +1561,41 @@
 			host.vore_selected.count_absorbed_prey_for_sprite = !host.vore_selected.count_absorbed_prey_for_sprite
 			host.update_fullness()
 			. = TRUE
+		if("b_absorbed_multiplier") //CHOMP Addition
+			var/absorbed_multiplier_input = input(user, "Set the impact absorbed prey's size have on your vore sprite. 1 means no scaling, 0.5 means absorbed prey count half as much, 2 means absorbed prey count double. (Range from 0.1 - 3)", "Absorbed Multiplier") as num|null
+			if(!isnull(absorbed_multiplier_input))
+				host.vore_selected.absorbed_multiplier = CLAMP(absorbed_multiplier_input, 0.1, 3)
+				host.update_fullness()
+			. = TRUE
+		if("b_count_liquid_for_sprites") //CHOMP Addition
+			host.vore_selected.count_liquid_for_sprite = !host.vore_selected.count_liquid_for_sprite
+			host.update_fullness()
+			. = TRUE
+		if("b_liquid_multiplier") //CHOMP Addition
+			var/liquid_multiplier_input = input(user, "Set the impact amount of liquid reagents will have on your vore sprite. 1 means a belly with 100 reagents of fluid will count as 1 normal sized prey-thing's worth, 0.5 means liquid counts half as much, 2 means liquid counts double. (Range from 0.1 - 10)", "Liquid Multiplier") as num|null
+			if(!isnull(liquid_multiplier_input))
+				host.vore_selected.liquid_multiplier = CLAMP(liquid_multiplier_input, 0.1, 10)
+				host.update_fullness()
+			. = TRUE
+		if("b_count_items_for_sprites") //CHOMP Addition
+			host.vore_selected.count_items_for_sprite = !host.vore_selected.count_items_for_sprite
+			host.update_fullness()
+			. = TRUE
+		if("b_item_multiplier") //CHOMP Addition
+			var/item_multiplier_input = input(user, "Set the impact items will have on your vore sprite. 1 means a belly with 8 normal-sized items will count as 1 normal sized prey-thing's worth, 0.5 means items count half as much, 2 means items count double. (Range from 0.1 - 10)", "Item Multiplier") as num|null
+			if(!isnull(item_multiplier_input))
+				host.vore_selected.item_multiplier = CLAMP(item_multiplier_input, 0.1, 10)
+				host.update_fullness()
+			. = TRUE
+		if("b_health_impacts_size") //CHOMP Addition
+			host.vore_selected.health_impacts_size = !host.vore_selected.health_impacts_size
+			host.update_fullness()
+			. = TRUE
 		if("b_resist_animation") //CHOMP Addition
 			host.vore_selected.resist_triggers_animation = !host.vore_selected.resist_triggers_animation
 			. = TRUE
 		if("b_size_factor_sprites") //CHOMP Addition
-			var/size_factor_input = input(user, "Set the impact prey's size have on your vore sprite. 1 means no scaling, 0.5 means prey count half as much, 2 means prey count double. (Range from 0.1 - 3)", "Size Factor") as num|null
+			var/size_factor_input = input(user, "Set the impact all belly content's collective size has on your vore sprite. 1 means no scaling, 0.5 means content counts half as much, 2 means contents count double. (Range from 0.1 - 3)", "Size Factor") as num|null
 			if(!isnull(size_factor_input))
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
 				host.update_fullness()

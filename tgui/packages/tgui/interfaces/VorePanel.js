@@ -850,6 +850,12 @@ const VoreSelectedBellyVisuals = (props, context) => {
     vore_sprite_flags,
     affects_voresprite,
     absorbed_voresprite,
+    absorbed_multiplier,
+    liquid_voresprite,
+    liquid_multiplier,
+    item_voresprite,
+    item_multiplier,
+    health_voresprite,
     resist_animation,
     voresprite_size_factor,
     belly_sprite_option_shown,
@@ -891,6 +897,48 @@ const VoreSelectedBellyVisuals = (props, context) => {
                     icon={absorbed_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={absorbed_voresprite}
                     content={absorbed_voresprite ? 'Yes' : 'No'}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Absorbed Multiplier">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_absorbed_multiplier' })}
+                    content={absorbed_multiplier}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Count liquid reagents for vore sprites">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_count_liquid_for_sprites' })}
+                    icon={liquid_voresprite ? 'toggle-on' : 'toggle-off'}
+                    selected={liquid_voresprite}
+                    content={liquid_voresprite ? 'Yes' : 'No'}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Liquid Multiplier">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_liquid_multiplier' })}
+                    content={liquid_multiplier}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Count items for vore sprites">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_count_items_for_sprites' })}
+                    icon={item_voresprite ? 'toggle-on' : 'toggle-off'}
+                    selected={item_voresprite}
+                    content={item_voresprite ? 'Yes' : 'No'}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Items Multiplier">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_item_multiplier' })}
+                    content={item_multiplier}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Prey health affects vore sprites">
+                  <Button
+                    onClick={() => act('set_attribute', { attribute: 'b_health_impacts_size' })}
+                    icon={health_voresprite ? 'toggle-on' : 'toggle-off'}
+                    selected={health_voresprite}
+                    content={health_voresprite ? 'Yes' : 'No'}
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Animation when prey resist">

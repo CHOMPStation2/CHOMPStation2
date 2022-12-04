@@ -1,7 +1,7 @@
 "a" = (/turf/template_noop,/area/template_noop)
 "b" = (/obj/machinery/disperser/front{dir = 1},/turf/template_noop,/area/template_noop)
 "c" = (/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/TinyCombatShip)
-"f" = (/obj/structure/fans/hardlight/colorable{color = "red"},/obj/machinery/door/airlock/hatch{icon_state = "door_locked"; id_tag = null; locked = 1; req_access = list(11)},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/TinyCombatShip)
+"f" = (/obj/structure/fans/hardlight/colorable{color = "red"},/obj/machinery/door/airlock/hatch{req_one_access = null},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/TinyCombatShip)
 "h" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/shuttle/engine/heater,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/TinyCombatShip)
 "j" = (/obj/structure/salvageable/machine,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/TinyCombatShip)
 "k" = (/turf/simulated/wall/rshull,/area/survivalpod/superpose/TinyCombatShip)

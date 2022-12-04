@@ -189,6 +189,7 @@ I think I covered everything.
 	player_msg = "You're a variant of the large dragon stripped of its firebreath attack (harm intent). You can still charge (disarm) and tail sweep (grab). Rest to heal slowly. Check your abilities tab for functions."
 	norange = 1
 	noenrage = 1
+	nom_mob = TRUE
 
 // Weakened variant for maintpreds
 /mob/living/simple_mob/vore/bigdragon/friendly/maintpred
@@ -526,6 +527,7 @@ I think I covered everything.
 		"The throat closes in tightly, utterly cocooning you with it's silken spongey embrace. Like this it holds, until you feel like you might pass out... eventually, it would shlllrrk agape and loosen up all around you once more, the beast not wanting to lose the wriggly sensation of live prey.",
 		"Blrrbles and squelching pops from it's stomach echo out below you. Each swallow brings greater clarity to those digestive sounds, and stronger acidity to the muggy air around you, inching you closer to it's grasp. Not long now.")
 	B = new /obj/belly/dragon/stomach(src)
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.emote_lists[DM_DIGEST] = list(
 		"The stomach walls spontaneously contract! Those wavey, fleshy walls binding your body in their embrace for the moment, slathering you with thick, caustic acids.",
 		"You hear a soft rumbling as the dragon’s insides churn around your body, the well-used stomach walls shuddering with a growl as you melt down.",
@@ -551,6 +553,7 @@ I think I covered everything.
 		"Soothing thrumms from the beast sound out, to try help calm you on your way down. The dragon seems to not want you to panic, using surprisingly gentle intent.",
 		"Clenchy embraces rhythmically squelch over you. Spreading outwards, the walls would relent, letting you spread a hot, gooey pocket of space around yourself. You linger, before another undulation of a swallow nudges you further down.")
 	B = new /obj/belly/dragon/stomach/heal(src)
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.emote_lists[DM_HEAL] = list(
 		"In tune with the beast's heartbeat, the walls heave and spread all around you. In, tight and close, and then outwards, spreading cobwebs of slime all around.",
 		"The thick folds of flesh around you blrrrble and sqllrrch, as the flesh itself secretes more of this strange, pure, goopy liquid, clenching it among it's crevices to squeeze it all over you in a mess.",
@@ -947,6 +950,17 @@ I think I covered everything.
 		if(L.stat)
 			if(L.stat == DEAD && !handle_corpse) // Leave dead things alone
 				return
+		if(isanimal(L))	//Don't attack simplemobs unless they are hostile.
+			var/mob/living/simple_mob/M = L
+			if(M.client)	//Don't attack players for no reason even if they're a traditionally hostile mob
+				return 0
+			if(M.nom_mob)	//Don't attack mobs that are hostile for their vore functions to work
+				return 0
+			if(M.ai_holder)	//Don't attack non-hostile mobs
+				if(M.ai_holder.hostile)
+					return 1
+				else return 0
+			else return 0
 		if(holder.IIsAlly(L))
 			if(confirmPatient(L))
 				holder.a_intent = I_HELP

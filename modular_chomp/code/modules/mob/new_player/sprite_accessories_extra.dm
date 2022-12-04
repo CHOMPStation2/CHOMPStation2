@@ -146,3 +146,21 @@
 	icon_state = "sectdrone_eyes"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/thickneck
+	name = "Thick Neck"
+	icon_state = "thickneck"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/thickerneck
+	name = "Thicker Neck"
+	icon_state = "thickerneck"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/thickthroat
+	name = "Thick Throat"
+	icon_state = "thickthroat"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
