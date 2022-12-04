@@ -140,7 +140,6 @@
 "xM" = (/obj/effect/floor_decal/spline/fancy{dir = 9},/turf/simulated/floor/carpet/purple,/area/survivalpod/superpose/RestaurationBar)
 "xN" = (/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/turf/simulated/floor/tiled/white,/area/survivalpod/superpose/RestaurationBar)
 "xO" = (/turf/simulated/floor/carpet/purple,/area/survivalpod/superpose/RestaurationBar)
-"xP" = (/obj/item/capture_crystal,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/RestaurationBar)
 "yv" = (/obj/structure/table/marble,/obj/machinery/light{layer = 3},/obj/machinery/chemical_dispenser/bar_soft/full{dir = 1},/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,/turf/simulated/floor/lino,/area/survivalpod/superpose/RestaurationBar)
 "yL" = (/obj/effect/floor_decal/corner/yellow/diagonal,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/RestaurationBar)
 "yS" = (/obj/effect/floor_decal/corner/lime/border{dir = 8},/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/RestaurationBar)
@@ -173,7 +172,7 @@
 "DV" = (/obj/structure/bed/chair/wood{dir = 8},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/obj/machinery/light{dir = 1; layer = 3},/turf/simulated/floor/carpet/bcarpet,/area/survivalpod/superpose/RestaurationBar)
 "Ee" = (/obj/structure/closet/secure_closet/freezer/fridge,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/turf/simulated/floor/tiled/white,/area/survivalpod/superpose/RestaurationBar)
 "Eh" = (/obj/structure/bed/chair/wood{dir = 8},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/survivalpod/superpose/RestaurationBar)
-"Ez" = (/obj/machinery/power/apc/alarms_hidden,/turf/simulated/wall,/area/survivalpod/superpose/RestaurationBar)
+"Ez" = (/obj/machinery/firealarm/alarms_hidden{dir = 8},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/RestaurationBar)
 "EA" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/survivalpod/superpose/RestaurationBar)
 "EQ" = (/obj/structure/bed/chair/comfy/black{dir = 8},/turf/simulated/floor/carpet/oracarpet,/area/survivalpod/superpose/RestaurationBar)
 "ET" = (/obj/machinery/vending/wallmed1{name = "NanoMed Wall"; pixel_y = -30},/turf/simulated/floor/carpet/brown,/area/survivalpod/superpose/RestaurationBar)
@@ -292,7 +291,7 @@
 "Vh" = (/obj/machinery/light{dir = 8; icon_state = "tube1"},/turf/simulated/floor/carpet/brown,/area/survivalpod/superpose/RestaurationBar)
 "Vy" = (/obj/structure/sink{pixel_y = 16},/obj/structure/mirror{pixel_y = 32},/obj/effect/floor_decal/corner/purple/diagonal,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/RestaurationBar)
 "VD" = (/obj/structure/table/standard,/obj/item/device/starcaster_news,/obj/item/weapon/reagent_containers/food/snacks/meatsteak,/turf/simulated/floor/carpet/purple,/area/survivalpod/superpose/RestaurationBar)
-"VF" = (/obj/machinery/door/window/westleft{name = "Bar"},/turf/simulated/floor/lino,/area/survivalpod/superpose/RestaurationBar)
+"VF" = (/obj/machinery/door/window/westleft{name = "Bar"},/obj/machinery/power/apc/alarms_hidden,/turf/simulated/floor/lino,/area/survivalpod/superpose/RestaurationBar)
 "VJ" = (/obj/structure/table/marble,/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{pixel_x = -3},/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{pixel_x = 3},/obj/item/weapon/reagent_containers/food/condiment/enzyme,/turf/simulated/floor/tiled/white,/area/survivalpod/superpose/RestaurationBar)
 "VK" = (/obj/structure/flora/ausbushes/lavendergrass,/turf/simulated/floor/outdoors/grass/sif,/area/template_noop)
 "VO" = (/obj/structure/closet/crate/hydroponics{desc = "All you need to start your own honey farm."; name = "beekeeping crate"},/obj/item/beehive_assembly,/obj/item/bee_smoker,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/weapon/tool/crowbar,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/bee_pack,/obj/machinery/portable_atmospherics/hydroponics/soil,/obj/machinery/light{layer = 3},/turf/simulated/floor/grass,/area/survivalpod/superpose/RestaurationBar)
@@ -340,17 +339,17 @@ TnvfvfTnCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiEAxnGNKc
 iivfvfTnCiETCiCiCiTTCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiCiEAUHGNKc
 AeAeAeAeAeAeAeMiSJAeCiCiCiqvQDQDAJNReFEhpBAemxAJAJAJAJHLsykeSzKc
 AeBKSuBlSuBlSueKMYTiCiCiCizGDcxqsZBryTsZwgAeQXDcqxMBMBLcAeAeAeKc
-AeBlqtBlqtxPqtBlBlAeVhCiCizGQhtjsZBrJosZcigCLAbmuuuMuMhrAeKcKcKc
+AeBlqtBlqtBlqtBlBlAeVhCiCizGQhtjsZBrJosZcigCLAbmuuuMuMhrAeKcKcKc
 AeOvAeLHAeHKAeLEBlAeCiCiCiEAuoLyuMGUGUGUvGAeAeAeAeKwKwAeAeAeAeKc
-AerhAeVgAeZUAeBlBlslCiCiCiEAMBciOAjLizizAfTihufasCxNxNuXFkrOAeKc
-AeAeAeAeAeAegCAeAeAeAeCiCifcMBRxbrgGgGgGQKAexNxNxNxNxNxNxNxNAGKc
+AerhAeVgAeZUAeEzBlslCiCiCiEAMBciOAjLizizAfTihufasCxNxNuXFkrOAeKc
+AeAeAeAeAeAeAeAeAeAeAeCiCifcMBRxbrgGgGgGQKAexNxNxNxNxNxNxNxNAGKc
 KcAeaSmprSmpmpmpmpxjLaCiCiSjsZRxsIgGgGXpgGGBxNxNxNxNxNxNxNxNKlKc
 KctcmploFfEQmpFIFIqDAeCiCixGMBRxizATgGsPowAebJxNVJNjftxNxNFiKlKc
 KcXSmploJfEQIRFIFIcKAeVhCiEAMBRxizgGgGDFgGKwxNxNgoYgnBxNxNIIKlKc
 KcAeWVmpmpmpmpFIFITfLVCiCifcMBciKogGgGuOFlAeAesixNxNxNxNxNIIGIKc
 KcAeAejvZLAeAeAeAeAeTiCiCiFOVQPEVFgGgGgGgGAqMidNxNxNxNxNxNDiAeKc
 KcAexKeNyLAeLYVyvBAeFECiCiCiCiBXAeKmyvYcgGzAAeEexNxNxNxNxNpvAeKc
-KcAeiyfqrgAelselbNAetCCiCiCiqpAeAeAeAeAeEzAeAeAeqZKwlnAeAeAeAeKc
+KcAeiyfqrgAelselbNAetCCiCiCiqpAeAeAeAeAeAeAeAeAeqZKwlnAeAeAeAeKc
 KcAejvjvjvAeZLAeAeAeAeCiCiCiblAeqyuJhwldAexoAWGxLoIBffdPsYJQAeKc
 KcAeYXmpmpmpmpxOxOZRAeCiCiCiecAewmmpmpBCAeySIBIBIBIBHVXIXIGDMiKc
 KcDompPJuwZSmpxOxOsAgCVhCiCidaAeAeFVwpAeAeySYqIBWcIBnmKRpFOIAeKc
