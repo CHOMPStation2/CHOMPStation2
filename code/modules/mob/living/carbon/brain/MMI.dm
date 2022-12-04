@@ -66,11 +66,7 @@
 		brainmob.loc = src
 		brainmob.container = src
 		brainmob.set_stat(CONSCIOUS)
-<<<<<<< HEAD
-		brainmob.blinded = 0 //CHOMPedit earlyport, gives MMIs proper vision again
-=======
 		brainmob.blinded = 0 //VOREedit Fixes MMIs vision
->>>>>>> daa6905a5b... Merge pull request #14159 from tacoguy7765093/brain_blast
 		dead_mob_list -= brainmob//Update dem lists
 		living_mob_list += brainmob
 
