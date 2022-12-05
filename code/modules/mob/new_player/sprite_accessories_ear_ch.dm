@@ -139,3 +139,18 @@
 	icon_state = "chorn_chub"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/goatflops
+	name = "Floppy Goat Ears"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "goatflops"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/goatflops_horn
+	name = "Floppy Goat Ears (with horns)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "goatflops"
+	extra_overlay = "goatflops_horn"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
