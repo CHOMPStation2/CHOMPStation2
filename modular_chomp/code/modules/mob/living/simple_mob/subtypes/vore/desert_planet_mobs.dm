@@ -1,10 +1,10 @@
 /mob/living/simple_mob/animal/passive/dog/stray
 	name = "dog"
-	desc = "The most standard dog you have evern see, it even smells like one."
+	desc = "The most standard dog you have ever seen, it even smells like one."
 	tt_desc = "Canis lupus familiaris"
 	//faction = "mexico" //They are from Mexico. //Amusing but this prompts aggression from crew-aligned mobs.
 
-	icon = 'icons/turf/desert_planet.dmi'
+	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
 	icon_state = "dog"
 	item_state = "dog"
 	icon_living = "dog"
