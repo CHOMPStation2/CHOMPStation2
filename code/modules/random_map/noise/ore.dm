@@ -48,7 +48,7 @@
 				continue
 			if(!priority_process) sleep(-1)
 			T.resources = list()
-			T.resources["silicates"] = rand(3,5)
+			T.resources["sand"] = rand(3,5)
 			T.resources["carbon"] = rand(3,5)
 
 			var/current_cell = map[get_map_cell(x,y)]
@@ -60,8 +60,8 @@
 				T.resources["marble"] =   rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
 				T.resources["diamond"] =  0
 				T.resources["phoron"] =   0
-				T.resources["osmium"] =   0
-				T.resources["hydrogen"] = 0
+				T.resources["platinum"] =   0
+				T.resources["mhydrogen"] = 0
 				T.resources["verdantium"] = 0
 				T.resources["lead"]     = 0
 				//T.resources["copper"] =   rand(RESOURCE_MID_MIN, RESOURCE_HIGH_MAX)
@@ -76,10 +76,10 @@
 				T.resources["silver"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["uranium"] =  rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["phoron"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
-				T.resources["osmium"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
+				T.resources["platinum"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["verdantium"] = rand(RESOURCE_LOW_MIN, RESOURCE_LOW_MAX)
 				T.resources["lead"] =     rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
-				T.resources["hydrogen"] = 0
+				T.resources["mhydrogen"] = 0
 				T.resources["diamond"] =  0
 				T.resources["hematite"] = 0
 				T.resources["marble"] =   0
@@ -95,8 +95,8 @@
 				T.resources["diamond"] =  rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX)
 				T.resources["verdantium"] = rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
 				T.resources["phoron"] =   rand(RESOURCE_HIGH_MIN, RESOURCE_HIGH_MAX)
-				T.resources["osmium"] =   rand(RESOURCE_HIGH_MIN, RESOURCE_HIGH_MAX)
-				T.resources["hydrogen"] = rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
+				T.resources["platinum"] =   rand(RESOURCE_HIGH_MIN, RESOURCE_HIGH_MAX)
+				T.resources["mhydrogen"] = rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["marble"] =   rand(RESOURCE_MID_MIN, RESOURCE_HIGH_MAX)
 				T.resources["lead"] =     rand(RESOURCE_LOW_MIN, RESOURCE_HIGH_MAX)
 				T.resources["hematite"] = 0

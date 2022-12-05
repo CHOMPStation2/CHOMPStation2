@@ -61,21 +61,81 @@
 /area/survivalpod/superpose/ExplorerHome)
 "ao" = (
 /obj/structure/closet/crate,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ExplorerHome)
 "ap" = (
@@ -227,36 +287,50 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/survivalpod/superpose/ExplorerHome)
 "aQ" = (
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/random/soap,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/structure/closet/walllocker_double/north,
 /obj/item/device/gps,
-/obj/structure/table/rack/shelf,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ExplorerHome)
 "aR" = (
@@ -272,21 +346,68 @@
 /area/survivalpod/superpose/ExplorerHome)
 "aU" = (
 /obj/structure/closet/crate,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ExplorerHome)
 "aV" = (
@@ -353,23 +474,98 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/ExplorerHome)
 "eB" = (
-/obj/structure/closet/crate,
-/obj/fiftyspawner/wood,
-/obj/fiftyspawner/wood,
-/obj/fiftyspawner/wood/sif,
-/obj/fiftyspawner/wood/sif,
-/obj/fiftyspawner/turcarpet,
-/obj/fiftyspawner/tealcarpet,
-/obj/fiftyspawner/sblucarpet,
-/obj/fiftyspawner/purcarpet,
-/obj/fiftyspawner/oracarpet,
-/obj/fiftyspawner/blucarpet,
-/obj/fiftyspawner/marble,
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/tape_roll,
+/obj/item/sticky_pad/random,
+/obj/item/weapon/pen/blue,
+/obj/item/weapon/pen/blue,
+/obj/item/fulton_core,
+/obj/item/fulton_core,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
+/obj/item/weapon/pickaxe/hand,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/flashlight/color/orange,
+/obj/item/device/threadneedle,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/device/flashlight/lantern,
+/obj/random/soap,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/stack/nanopaste,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/box/flare,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/item/weapon/storage/box/khcrystal,
 /obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/fiftyspawner/cardboard,
-/obj/fiftyspawner/cardboard,
+/obj/item/stack/marker_beacon/ten,
+/obj/item/device/starcaster_news,
+/obj/item/device/mapping_unit,
+/obj/item/weapon/storage/box/dosimeter,
+/obj/item/device/gps,
+/obj/item/device/gps,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/device/pda,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/weapon/material/knife/machete,
+/obj/item/weapon/material/fishing_net,
+/obj/item/weapon/storage/backpack/sport,
+/obj/item/weapon/storage/backpack/sport,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/storage/belt,
+/obj/item/clothing/accessory/poncho/thermal,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ExplorerHome)
 "GN" = (

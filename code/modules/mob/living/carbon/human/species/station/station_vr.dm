@@ -14,6 +14,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_SAGARU)
 	name_language = LANGUAGE_SAGARU
+	species_language = LANGUAGE_SAGARU
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
@@ -81,8 +82,9 @@
 	//burn_mod =  1.15
 	//gluttonous = 1
 	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_SKRELLIAN)
-	name_language = LANGUAGE_SKRELLIAN
+	secondary_langs = list(LANGUAGE_SPACER)
+	name_language = LANGUAGE_SPACER
+	species_language = LANGUAGE_SPACER
 	color_mult = 1
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
@@ -136,6 +138,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
+	species_language = LANGUAGE_BIRDSONG
 	color_mult = 1
 	inherent_verbs = list(/mob/living/proc/flying_toggle,
 		/mob/living/proc/flying_vore_toggle,
@@ -185,6 +188,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
+	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
@@ -239,6 +243,7 @@
 //	default_language = "Sol Common"
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
+	species_language = LANGUAGE_CANILUNZT
 	primitive_form = "Wolpin"
 	tail = "vulptail"
 	tail_animation = 'icons/mob/species/vulpkanin/tail.dmi' // probably need more than just one of each, but w/e
@@ -257,6 +262,27 @@
 //	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
+	
+	//Furry fox-like animals shouldn't start freezing at 5 degrees celsius.
+	//Minor cold is resisted, but not severe frost.
+	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans. 
+	
+	cold_level_1 = 243 //Default 260, other values remain at default. Starts taking damage at -30 celsius. Default tier 2 is -70 and tier 3 is -150
+	
+	
+	breath_cold_level_1 = 220 // Default 240, lower is better.	
+	
+	//While foxes can survive in deserts, that's handled by zorren. It's a good contrast that our vulp find heat a little uncomfortable.
+	
+	heat_discomfort_level = 295 //Just above standard 20 C to avoid heat message spam, same as Taj
+	
+	heat_level_1 = 345 //Default 360
+	heat_level_2 = 390 //Default 400
+	heat_level_3 = 900 //Default 1000
+
+	breath_heat_level_1 = 370	//Default 380 - Higher is better
+	breath_heat_level_2 = 445	//Default 450
+	breath_heat_level_3 = 1125	//Default 1250
 
 	primitive_form = "Wolpin"
 
@@ -270,6 +296,12 @@
 
 	min_age = 18
 	max_age = 110
+	
+	heat_discomfort_strings = list(
+		"Your fur prickles in the heat.",
+		"You feel uncomfortably warm.",
+		"Your overheated skin itches."
+		)
 
 /datum/species/unathi
 	mob_size = MOB_MEDIUM //To allow normal mob swapping
@@ -398,7 +430,8 @@
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_BIRDSONG)
+	secondary_langs = list(LANGUAGE_BIRDSONG, LANGUAGE_UNATHI)
+	species_language = LANGUAGE_UNATHI
 	name_language = null
 	color_mult = 1
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -557,6 +590,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
+	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,/mob/living/proc/shred_limb,/mob/living/carbon/human/proc/tie_hair)
 
 	min_age = 18
@@ -631,6 +665,7 @@
 	language = LANGUAGE_TAVAN
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TAVAN)
+	species_language = LANGUAGE_TAVAN
 	name_language = null
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)

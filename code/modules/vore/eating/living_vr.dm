@@ -36,6 +36,7 @@
 	var/stumble_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/slip_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
+	var/throw_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 	var/allow_spontaneous_tf = FALSE	// Obviously.
@@ -48,6 +49,9 @@
 	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
 	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
 	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
+	var/appendage_color = "#e03997" //Default pink. Used for the 'long_vore' trait.
+	var/appendage_alt_setting = FALSE	// Dictates if 'long_vore' user pulls prey to them or not. 1 = user thrown towards target.
+	var/digestion_in_progress = FALSE	// CHOMPEdit: Gradual corpse gurgles
 	var/regen_sounds = list(
 		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
@@ -276,10 +280,13 @@
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
 	P.allow_spontaneous_tf = src.allow_spontaneous_tf
+	P.appendage_color = src.appendage_color
+	P.appendage_alt_setting = src.appendage_alt_setting
 	P.step_mechanics_pref = src.step_mechanics_pref
 	P.pickup_pref = src.pickup_pref
 	P.drop_vore = src.drop_vore
 	P.slip_vore = src.slip_vore
+	P.throw_vore = src.throw_vore
 	P.stumble_vore = src.stumble_vore
 
 	P.nutrition_message_visible = src.nutrition_message_visible
@@ -293,6 +300,8 @@
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
 	P.autotransferable = src.autotransferable
+	P.vore_sprite_color = src.vore_sprite_color
+	P.vore_sprite_multiply = src.vore_sprite_multiply
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -329,10 +338,13 @@
 	can_be_drop_pred = P.can_be_drop_pred
 //	allow_inbelly_spawning = P.allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
 	allow_spontaneous_tf = P.allow_spontaneous_tf
+	appendage_color = P.appendage_color
+	appendage_alt_setting = P.appendage_alt_setting
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
 	drop_vore = P.drop_vore
 	slip_vore = P.slip_vore
+	throw_vore = P.throw_vore
 	stumble_vore = P.stumble_vore
 
 	nutrition_message_visible = P.nutrition_message_visible
@@ -346,6 +358,8 @@
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
 	autotransferable = P.autotransferable
+	vore_sprite_color = P.vore_sprite_color
+	vore_sprite_multiply = P.vore_sprite_multiply
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
@@ -412,7 +426,7 @@
 	if(!istype(tasted))
 		return
 
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT)) //CHOMPEdit
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -452,7 +466,7 @@
 
 	if(!istype(smelled))
 		return
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT)) //CHOMPEdit
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -500,7 +514,7 @@
 		muffled = FALSE		//Removes Muffling
 		forceMove(get_turf(src)) //Just move me up to the turf, let's not cascade through bellies, there's been a problem, let's just leave.
 		for(var/mob/living/simple_mob/SA in range(10))
-			SA.prey_excludes[src] = world.time
+			LAZYSET(SA.prey_excludes, src, world.time)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
 
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
@@ -783,7 +797,7 @@
 	if(istype(I, /obj/item/device/paicard))
 		var/obj/item/device/paicard/palcard = I
 		var/mob/living/silicon/pai/pocketpal = palcard.pai
-		if(!pocketpal.devourable)
+		if(pocketpal && (!pocketpal.devourable))
 			to_chat(src, "<span class='warning'>\The [pocketpal] doesn't allow you to eat it.</span>")
 			return
 
@@ -1042,6 +1056,14 @@
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
 	fuzzy = !fuzzy
+	update_transform() //CHOMPEdit
+
+/mob/living/proc/center_offset() //CHOMPAdd
+	set name = "Switch center offset mode"
+	set category = "Preferences"
+	set desc = "Switch sprite center offset to fix even/odd symmetry."
+	offset_override = !offset_override
+	update_transform()
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
@@ -1082,6 +1104,7 @@
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
 	dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Throw vore:</b> [throw_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
@@ -1094,6 +1117,9 @@
 // Full screen belly overlays!
 /obj/screen/fullscreen/belly
 	icon = 'modular_chomp/icons/mob/screen_full_vore_ch.dmi' //CHOMPedit
+
+/obj/screen/fullscreen/belly/fixed //CHOMPedit: tweaking to preserve save data
+	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit: tweaking to preserve save data
 	icon_state = ""
 
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.

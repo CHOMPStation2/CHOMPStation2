@@ -1,0 +1,63 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/item/stack/rods,/turf/simulated/floor/airless,/area/submap/debris3)
+"c" = (/obj/item/trash/popcorn,/turf/template_noop,/area/submap/debris3)
+"d" = (/obj/item/device/nif/bad,/turf/simulated/floor/airless,/area/submap/debris3)
+"e" = (/obj/item/stack/arcadeticket/thirty,/turf/template_noop,/area/submap/debris3)
+"f" = (/obj/structure/lattice,/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris3)
+"g" = (/obj/item/weapon/paperplane,/turf/template_noop,/area/submap/debris3)
+"h" = (/obj/item/device/nif/bad,/turf/template_noop,/area/submap/debris3)
+"i" = (/obj/item/stack/rods,/turf/template_noop,/area/submap/debris3)
+"k" = (/obj/item/weapon/material/shard,/turf/template_noop,/area/submap/debris3)
+"l" = (/obj/item/stack/cable_coil{amount = 10},/turf/simulated/floor/airless,/area/submap/debris3)
+"m" = (/turf/simulated/wall,/area/submap/debris3)
+"n" = (/obj/item/stack/material/glass,/turf/template_noop,/area/submap/debris3)
+"o" = (/obj/item/stack/material/wood,/turf/simulated/floor/airless,/area/submap/debris3)
+"p" = (/obj/random/plushie,/turf/template_noop,/area/submap/debris3)
+"q" = (/obj/item/stack/rods,/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris3)
+"t" = (/obj/machinery/computer/arcade/battle,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/debris3)
+"u" = (/obj/random/tool,/turf/template_noop,/area/submap/debris3)
+"v" = (/obj/item/trash/syndi_cakes,/turf/template_noop,/area/submap/debris3)
+"w" = (/obj/item/stack/arcadeticket,/turf/template_noop,/area/submap/debris3)
+"x" = (/obj/structure/bookcase{name = "bookcase (Adult)"},/turf/simulated/floor/airless,/area/submap/debris3)
+"y" = (/obj/item/stack/material/steel,/turf/simulated/floor/airless,/area/submap/debris3)
+"z" = (/turf/simulated/floor/airless,/area/submap/debris3)
+"A" = (/obj/structure/sign/poster/nanotrasen{dir = 1},/turf/simulated/wall,/area/submap/debris3)
+"B" = (/obj/item/weapon/paper,/turf/template_noop,/area/submap/debris3)
+"D" = (/obj/item/weapon/paper,/obj/item/weapon/paper,/turf/template_noop,/area/submap/debris3)
+"F" = (/obj/random/tool,/turf/simulated/floor/airless,/area/submap/debris3)
+"G" = (/turf/template_noop,/area/submap/debris3)
+"H" = (/obj/item/stack/material/wood,/turf/template_noop,/area/submap/debris3)
+"I" = (/obj/item/stack/rods,/obj/item/stack/rods,/turf/template_noop,/area/submap/debris3)
+"J" = (/obj/item/trash/pistachios,/turf/template_noop,/area/submap/debris3)
+"K" = (/obj/structure/lattice,/obj/structure/girder,/turf/template_noop,/area/submap/debris3)
+"L" = (/obj/structure/girder,/turf/template_noop,/area/submap/debris3)
+"M" = (/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris3)
+"N" = (/obj/structure/lattice,/turf/simulated/floor/airless,/area/submap/debris3)
+"O" = (/obj/structure/girder/displaced,/turf/template_noop,/area/submap/debris3)
+"S" = (/obj/structure/lattice,/turf/template_noop,/area/submap/debris3)
+"U" = (/obj/item/stack/material/wood,/obj/item/stack/material/wood,/turf/simulated/floor/airless,/area/submap/debris3)
+"V" = (/obj/item/weapon/circuitboard/arcade,/turf/template_noop,/area/submap/debris3)
+"Z" = (/obj/item/weapon/paper,/turf/simulated/floor/airless,/area/submap/debris3)
+
+(1,1,1) = {"
+aaaaiaaaaaaaaaaaaaiaaaaaaaaaia
+aaaaaaaaaaiaaaaaaaaaaaaaaaaaaa
+aaGGGGGGGGiGGGGGGiGGGGGGGGiGaa
+iaGiGGGiwGGGGnGGMGGiGGiGGGGGaa
+aaGGGIkGmGGGiGzSHGMGwMkGiGGGaa
+aaGiGGGMGGSGOGHGGGdOGOzGGGGGaa
+aaGGGiGGGBGHefGSBGSHGmbGGGiGaa
+aaGGGGOwGGFLibzUbGGvMAzMGGGGia
+aaGGGGGoyzzShGGixzSGGLbzGiGGaa
+aaGGMiGGSiGmMzSiSzMVwGgzGGGGaa
+aiGGGiwGGSSAGiGGiiGHBinlGiiGaa
+aaGGGMGnGGGbDGqGSdmGGGGGiGGGaa
+aaGGGGmmGMBGKmzSGGpiiGOGGGGGaa
+aaGGGGGGiLGGztzGkOGLGqGGGiGGaa
+aaGiGMGGMzzZNGGMJwGGGGGGGGGGaa
+aaGiGGGiGcGGHGGiGMiMGGiGGiGGaa
+aiGGGGMGOGMiiGOuGGGGGGiGGGGGaa
+aaGGGGGGGGGGGGGGGGGGGGGGGGGGai
+aaaaaaaaaaaiaaaaaaaaaaaaaaaaaa
+aaaaiaaaaaaaaaaiaaaaaaaaaaaiaa
+"}

@@ -100,6 +100,7 @@
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-medical",
+						"W02M" = "worm-surgeon",
 						"Feminine Humanoid" = "uptall-medical"
 					 )
 
@@ -110,6 +111,7 @@
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-crisis",
+						"W02M" = "worm-crisis",
 						"Feminine Humanoid" = "uptall-crisis"
 					 )
 
@@ -121,6 +123,7 @@
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
 						"ZOOM-BA" = "zoomba-service",
+						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
 					 )
 
@@ -131,6 +134,7 @@
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
 						"ZOOM-BA" = "zoomba-clerical",
+						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
 					 )
 
@@ -141,6 +145,7 @@
 						"Acheron" = "mechoid-Janitor",
 						"Shellguard Noble" = "Noble-CLN",
 						"ZOOM-BA" = "zoomba-janitor",
+						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-janitor"
 					 )
 
@@ -151,6 +156,7 @@
 						"Acheron" = "mechoid-Security",
 						"Shellguard Noble" = "Noble-SEC",
 						"ZOOM-BA" = "zoomba-security",
+						"W02M" = "worm-security",
 						"Feminine Humanoid" = "uptall-security"
 					 )
 
@@ -161,6 +167,7 @@
 						"Acheron" = "mechoid-Miner",
 						"Shellguard Noble" = "Noble-DIG",
 						"ZOOM-BA" = "zoomba-miner",
+						"W02M" = "worm-miner",
 						"Feminine Humanoid" = "uptall-miner"
 					 )
 
@@ -171,6 +178,7 @@
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
 						"ZOOM-BA" = "zoomba-standard",
+						"W02M" = "worm-standard",
 						"Feminine Humanoid" = "uptall-standard",
 						"Feminine Humanoid, Variant 2" = "uptall-standard2"
 					 )
@@ -180,6 +188,7 @@
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
 						"ZOOM-BA" = "zoomba-engineering",
+						"W02M" = "worm-engineering",
 						"Feminine Humanoid" = "uptall-engineering"
 					 )
 
@@ -189,6 +198,7 @@
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research",
 						"XI-GUS" = "spiderscience",
+						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-science"
 					 )
 
@@ -197,6 +207,7 @@
 	vr_sprites = list(
 						"Acheron" = "mechoid-Combat",
 						"ZOOM-BA" = "zoomba-combat",
+						"W02M" = "worm-combat",
 						"Feminine Humanoid" = "uptall-security"
 					 )
 
@@ -210,7 +221,8 @@
 					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Cat" = "vixsec", //CHOMPEdit
-					"Drake" = "drakesec"
+					"Drake" = "drakesec",
+					"Secborg model V-4" = "secraptor"//CHOMPEdit
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -226,6 +238,7 @@
 	src.modules += new /obj/item/taperoll/police(src) //Block out crime scenes.
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
+	src.modules += new /obj/item/device/ticket_printer(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -295,7 +308,8 @@
 					"Borgi" = "borgi-medi",
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Cat" = "vixmed", //CHOMPEdit
-					"Drake" = "drakemed"
+					"Drake" = "drakemed",
+					"Mediborg model V-4" = "medraptor" //CHOMPEdit
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
@@ -345,7 +359,7 @@
 	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	B.water = water
 	src.modules += B
-	
+
 	//CHOMPEdit Start - Give back the ATK/ABP since we don't have the surgeryhound
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -391,7 +405,8 @@
 	can_be_pushed = 0
 	sprites = list(
 					"Traumahound" = "traumavale",
-					"Drake" = "draketrauma"
+					"Drake" = "draketrauma",
+					"Borgi" = "borgi-trauma"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/trauma/New(var/mob/living/silicon/robot/R)
@@ -625,7 +640,8 @@
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark",
 					"Cat" = "vixsci", //CHOMPEdit
-					"Drake" = "drakesci"
+					"Drake" = "drakesci",
+					"Sciborg model V-4" = "sciraptor"//CHOMPEdit
 					)
 	channels = list("Science" = 1)
 	pto_type = PTO_SCIENCE
@@ -1084,13 +1100,7 @@
 
 	src.modules += new /obj/item/weapon/tray/robotray(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
-	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
 
-	var/datum/reagents/N = new/datum/reagents(50)
-	src.emag.reagents = N
-	N.my_atom = src.emag
-	N.add_reagent("beer2", 50)
-	src.emag.name = "Mickey Finn's Special Brew"
 	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -1110,9 +1120,6 @@
 /obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
 	E.reagents.add_reagent("enzyme", 2 * amount)
-	if(src.emag)
-		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
-		B.reagents.add_reagent("beer2", 2 * amount)
 
 //CHOMP addition start BORGHYPO
 /obj/item/weapon/reagent_containers/borghypo/service/booze
@@ -1206,4 +1213,3 @@
 	R.verbs -= /mob/living/proc/shred_limb
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
-// CH changes - Unity Hound end

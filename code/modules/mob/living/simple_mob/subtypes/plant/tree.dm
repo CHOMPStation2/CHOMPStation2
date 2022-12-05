@@ -31,6 +31,8 @@
 	meat_amount = 2
 
 	pixel_x = -16
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/tree/apply_melee_effects(var/atom/A)
 	if(isliving(A))

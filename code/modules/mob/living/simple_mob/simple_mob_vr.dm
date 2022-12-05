@@ -57,14 +57,14 @@
 	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
 	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
+	var/nom_mob = FALSE //If a mob is meant to be hostile for vore purposes but is otherwise not hostile, if true makes certain AI ignore the mob
 
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
 
 // Release belly contents before being gc'd!
 /mob/living/simple_mob/Destroy()
 	release_vore_contents()
-	if(prey_excludes)
-		prey_excludes.Cut()
+	LAZYCLEARLIST(prey_excludes)
 	return ..()
 
 //For all those ID-having mobs
@@ -125,7 +125,7 @@
 	if(!M.allowmobvore || !M.devourable) // Don't eat people who don't want to be ate by mobs
 		//ai_log("vr/wont eat [M] because they don't allow mob vore", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
-	if(M in prey_excludes) // They're excluded
+	if(LAZYFIND(prey_excludes, M)) // They're excluded
 		//ai_log("vr/wont eat [M] because they are excluded", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
 	if(M.size_multiplier < vore_min_size || M.size_multiplier > vore_max_size)
@@ -230,6 +230,7 @@
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -265,6 +266,8 @@
 		"The juices pooling beneath you sizzle against your sore skin.",
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
+	can_be_drop_pred = TRUE // Mobs will eat anyone that decides to drop/slip into them by default.
+	B.belly_fullscreen = "yet_another_tumby"
 
 /mob/living/simple_mob/Bumped(var/atom/movable/AM, yes)
 	if(tryBumpNom(AM))

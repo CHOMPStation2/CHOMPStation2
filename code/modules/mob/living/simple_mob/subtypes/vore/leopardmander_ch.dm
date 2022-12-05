@@ -46,6 +46,8 @@
 	vore_default_mode = DM_HEAL
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"

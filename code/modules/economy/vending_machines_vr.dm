@@ -7,6 +7,7 @@
 	products += list(/obj/item/weapon/gun/energy/taser = 8,/obj/item/weapon/gun/energy/stunrevolver = 4,
 					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6,
 					/obj/item/clothing/glasses/omnihud/sec = 6)
+	contraband += list(/obj/item/weapon/implanter/compliance = 1)
 	..()
 
 /obj/machinery/vending/tool/New()
@@ -1523,7 +1524,9 @@
 					/obj/item/clothing/gloves/combat/knight_costume = 3,
 					/obj/item/clothing/gloves/combat/knight_costume/brown = 3,
 					/obj/item/clothing/shoes/knight_costume = 3,
-					/obj/item/clothing/shoes/knight_costume/black = 3)
+					/obj/item/clothing/shoes/knight_costume/black = 3,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/hotdog = 3,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/turnip = 3)
 	prices = list(/obj/item/clothing/suit/storage/hooded/costume/carp = 200,
 					/obj/item/clothing/suit/storage/hooded/costume/carp = 200,
 					/obj/item/clothing/suit/chickensuit = 200,
@@ -1588,7 +1591,9 @@
 					/obj/item/clothing/gloves/combat/knight_costume = 200,
 					/obj/item/clothing/gloves/combat/knight_costume/brown = 200,
 					/obj/item/clothing/shoes/knight_costume = 200,
-					/obj/item/clothing/shoes/knight_costume/black = 200)
+					/obj/item/clothing/shoes/knight_costume/black = 200,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/hotdog = 200,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/turnip = 200)
 	premium = list(/obj/item/clothing/suit/imperium_monk = 3,
 					/obj/item/clothing/suit/barding/agatha = 2,
 					/obj/item/clothing/suit/barding/alt_agatha = 2,
@@ -3551,11 +3556,13 @@
 					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 8,
-					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 8)
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 2)
 
 	prices = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratveggies = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 10)
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 200)

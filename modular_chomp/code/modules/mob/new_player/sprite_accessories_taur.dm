@@ -10,4 +10,20 @@
 	icon_state = "longvirus_s"
 	extra_overlay = "longvirus_markings"
 	icon_sprite_tag = "virus"
-	//suit_sprites = 'icons/mob/taursuits_noodle.dmi' Aye, I've gotta sprite that shit.
+	//suit_sprites = 'icons/mob/taursuits_noodle.dmi' Aye, I've gotta sprite that shit.´
+
+/datum/sprite_accessory/tail/taur/ch/fox
+	name = "Fox (Taur, 3-color)"
+	icon_state = "fox"
+	extra_overlay = "fox_markings"
+	extra_overlay2 = "fox_markings2"
+
+/datum/sprite_accessory/tail/taur/ch/sectdrone
+	name = "Sect Drone (Taur)"
+	icon_state = "sectdrone"
+	extra_overlay = "sectdrone_markings"
+
+/datum/sprite_accessory/tail/taur/ch/fatsectdrone
+	name = "Fat Sect Drone (Taur)"
+	icon_state = "fatsectdrone"
+	extra_overlay = "fatsectdrone_markings"

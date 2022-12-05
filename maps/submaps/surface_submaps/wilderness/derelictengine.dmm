@@ -83,7 +83,7 @@
 /area/submap/DerelictEngine)
 "bl" = (
 /obj/item/weapon/material/shard/phoron,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "bn" = (
 /obj/structure/girder/reinforced,
@@ -113,7 +113,7 @@
 	pixel_x = -9;
 	pixel_y = -7
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "bH" = (
 /obj/machinery/power/emitter/gyrotron,
@@ -146,7 +146,7 @@
 	pixel_x = 7;
 	pixel_y = 10
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "db" = (
 /obj/effect/floor_decal/techfloor{
@@ -184,7 +184,7 @@
 "dy" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DerelictEngine)
 "dC" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
@@ -302,7 +302,7 @@
 /area/submap/DerelictEngine)
 "fJ" = (
 /mob/living/simple_mob/mechanical/hivebot/tank,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "fO" = (
 /turf/simulated/shuttle/wall/alien,
@@ -374,7 +374,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "ht" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -891,7 +891,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "ql" = (
 /obj/item/device/gps/internal/poi,
@@ -1304,7 +1304,7 @@
 /area/submap/DerelictEngine)
 "wK" = (
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DerelictEngine)
 "wM" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -1434,7 +1434,7 @@
 /area/submap/DerelictEngine)
 "yk" = (
 /mob/living/simple_mob/mechanical/hivebot/swarm,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "yA" = (
 /obj/structure/table/alien,
@@ -2198,6 +2198,9 @@
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/plating,
 /area/submap/DerelictEngine)
+"KU" = (
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/template_noop)
 "Lb" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -2321,7 +2324,7 @@
 /area/submap/DerelictEngine)
 "Nr" = (
 /mob/living/simple_mob/mechanical/hivebot/swarm,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "Ns" = (
 /mob/living/simple_mob/mechanical/hivebot/tank/armored,
@@ -2496,6 +2499,9 @@
 /obj/item/clothing/under/psysuit,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
+"Qv" = (
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/template_noop)
 "QJ" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/window/titanium/full,
@@ -2534,6 +2540,10 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
+"QY" = (
+/obj/structure/shuttle/engine/propulsion/burst,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DerelictEngine)
 "Rk" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -2632,7 +2642,7 @@
 /area/submap/DerelictEngine)
 "SW" = (
 /obj/effect/gibspawner/robot,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "Tt" = (
 /turf/simulated/floor/outdoors/dirt,
@@ -3074,22 +3084,22 @@ SF
 ap
 SF
 SF
-Tt
-Tt
-bN
-bN
+Qv
+Qv
+KU
+KU
 jl
-bN
-jl
-jl
+KU
 jl
 jl
 jl
-bN
 jl
 jl
-bN
-bN
+KU
+jl
+jl
+KU
+KU
 jl
 SF
 SF
@@ -3121,13 +3131,13 @@ SF
 jl
 SF
 SF
-Tt
-Tt
-bN
-bN
-bN
+Qv
+Qv
+KU
+KU
+KU
 jl
-bN
+KU
 jl
 jl
 zH
@@ -3142,10 +3152,10 @@ gy
 EC
 wK
 SF
-bN
-bN
+KU
+KU
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -3169,11 +3179,11 @@ SF
 SF
 SF
 Xp
-Tt
-bN
+Qv
+KU
 jl
-bN
-bN
+KU
+KU
 jl
 jl
 jl
@@ -3189,16 +3199,16 @@ fO
 zH
 Ja
 EC
-Bz
-Tt
-Tt
-Tt
-bN
+wK
+Qv
+Qv
+Qv
+KU
 Nr
 SF
-Tt
+Qv
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -3219,8 +3229,8 @@ ap
 SF
 fJ
 jl
-bN
-bN
+KU
+KU
 jl
 jl
 jl
@@ -3239,17 +3249,17 @@ fO
 fO
 EC
 wK
-bN
-bN
-bN
-bN
-Tt
-bN
+KU
+KU
+KU
+KU
+Qv
+KU
 fJ
 hb
-Tt
-Tt
-Tt
+Qv
+Qv
+Qv
 SF
 SF
 SF
@@ -3266,9 +3276,9 @@ SF
 (5,1,1) = {"
 jl
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 jl
 jl
 jl
@@ -3289,21 +3299,21 @@ fO
 EC
 wK
 SF
-Tt
-bN
-Tt
-bN
-Tt
-bN
-bN
-Tt
-bN
-bN
-bN
+Qv
+KU
+Qv
+KU
+Qv
+KU
+KU
+Qv
+KU
+KU
+KU
 SF
-Tt
+Qv
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -3314,8 +3324,8 @@ SF
 "}
 (6,1,1) = {"
 SF
-Tt
-bN
+Qv
+KU
 jl
 jl
 jl
@@ -3340,20 +3350,20 @@ gy
 SF
 SF
 SF
-bN
+KU
 SF
-bN
+KU
 SF
-bN
+KU
 ap
-bN
+KU
 SF
-Tt
-bN
-Tt
+Qv
+KU
+Qv
 SF
-Tt
-Tt
+Qv
+Qv
 SF
 SF
 SF
@@ -3362,9 +3372,9 @@ SF
 SF
 "}
 (7,1,1) = {"
-Tt
+Qv
 jl
-bN
+KU
 jl
 jl
 jl
@@ -3400,10 +3410,10 @@ SF
 SF
 SF
 yk
-bN
+KU
 SF
-Tt
-Tt
+Qv
+Qv
 SF
 SF
 SF
@@ -3412,8 +3422,8 @@ SF
 "}
 (8,1,1) = {"
 jl
-bN
-bN
+KU
+KU
 jl
 jl
 fO
@@ -3445,22 +3455,22 @@ zH
 BR
 fO
 EC
-wK
+QY
 SF
-Tt
-Tt
-bN
-Tt
-bN
-Tt
-bN
+Qv
+Qv
+KU
+Qv
+KU
+Qv
+KU
 SF
 SF
 SF
 SF
 "}
 (9,1,1) = {"
-Tt
+Qv
 jl
 jl
 jl
@@ -3496,21 +3506,21 @@ Yr
 EC
 dy
 SF
-bN
+KU
 SF
-Tt
+Qv
 Xp
 fJ
 SF
+KU
 bN
-bN
-Tt
+Qv
 SF
 SF
 "}
 (10,1,1) = {"
-bN
-bN
+KU
+KU
 jl
 jl
 jl
@@ -3543,22 +3553,22 @@ fO
 jE
 Eu
 EC
-wK
-bN
-bN
-bN
-bN
-bN
-Tt
+QY
+KU
+KU
+KU
+KU
+KU
+Qv
 Nr
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 SF
 "}
 (11,1,1) = {"
-bN
+KU
 jl
 jl
 zH
@@ -3592,19 +3602,19 @@ fO
 fO
 fO
 EC
-Bz
+QY
 SF
 SF
 SF
 SF
-bN
-bN
-bN
-Tt
-Tt
+KU
+KU
+KU
+Qv
+Qv
 SF
-bN
-Tt
+KU
+Qv
 "}
 (12,1,1) = {"
 jl
@@ -3649,8 +3659,8 @@ SF
 SF
 SF
 SF
-bN
-bN
+KU
+KU
 SF
 SF
 SF
@@ -3700,9 +3710,9 @@ jU
 EC
 wK
 SF
-bN
-bN
-bN
+KU
+KU
+KU
 "}
 (14,1,1) = {"
 jl
@@ -3747,11 +3757,11 @@ zH
 gy
 gy
 EC
-Bz
+QY
 SF
 SF
 SW
-bN
+KU
 "}
 (15,1,1) = {"
 jl
@@ -3849,7 +3859,7 @@ fH
 fp
 fO
 zH
-bN
+KU
 "}
 (17,1,1) = {"
 jl
@@ -3897,8 +3907,8 @@ db
 yZ
 Vb
 Bd
-Tt
-bN
+Qv
+KU
 "}
 (18,1,1) = {"
 jl
@@ -3947,7 +3957,7 @@ QS
 ib
 ab
 Xq
-Tt
+Qv
 "}
 (19,1,1) = {"
 jl
@@ -3996,7 +4006,7 @@ Ku
 YJ
 VX
 SF
-Tt
+Qv
 "}
 (20,1,1) = {"
 bG
@@ -4045,7 +4055,7 @@ fH
 wM
 zH
 zH
-bN
+KU
 "}
 (21,1,1) = {"
 cX
@@ -4189,10 +4199,10 @@ jG
 jG
 EC
 Bz
-Tt
+Qv
 SW
-bN
-Tt
+KU
+Qv
 "}
 (24,1,1) = {"
 SF
@@ -4240,7 +4250,7 @@ SF
 SF
 SF
 SF
-bN
+KU
 SF
 "}
 (25,1,1) = {"
@@ -4278,9 +4288,9 @@ fO
 fO
 fO
 EC
-Bz
+QY
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -4327,11 +4337,11 @@ fO
 RG
 RG
 EC
-wK
-bN
-bN
-bN
-Tt
+QY
+KU
+KU
+KU
+Qv
 SF
 SF
 SF
@@ -4339,7 +4349,7 @@ ap
 SF
 SF
 SF
-Tt
+Qv
 "}
 (27,1,1) = {"
 SF
@@ -4376,19 +4386,19 @@ Vs
 Vk
 Yr
 EC
-Bz
+QY
 SF
-bN
+KU
 SF
-bN
+KU
 Nr
 SF
-Tt
+Qv
 SF
 SF
 SF
 SF
-bN
+KU
 "}
 (28,1,1) = {"
 SF
@@ -4425,15 +4435,15 @@ fO
 BR
 fO
 EC
-Bz
+QY
 SF
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 pR
-Tt
-Tt
+Qv
+Qv
 SF
 SF
 SF
@@ -4479,10 +4489,10 @@ SF
 SF
 SF
 SF
-bN
+KU
 SF
-bN
-bN
+KU
+KU
 Tt
 SF
 SF
@@ -4514,11 +4524,11 @@ fO
 gy
 zH
 SF
-bN
-bN
-Tt
+KU
+KU
+Qv
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -4529,11 +4539,11 @@ SF
 SF
 ap
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 SF
-bN
+KU
 SF
 SF
 "}
@@ -4561,15 +4571,15 @@ iZ
 Ng
 fO
 EC
-Bz
-bN
+wK
+KU
 SF
 SF
-bN
-bN
+KU
+KU
 SF
 SF
-Tt
+Qv
 SF
 Nr
 SF
@@ -4580,10 +4590,10 @@ SF
 SF
 SF
 SF
-bN
-bN
+KU
+KU
 SF
-bN
+KU
 SF
 "}
 (32,1,1) = {"
@@ -4612,28 +4622,28 @@ fO
 EC
 wK
 SF
-bN
-bN
-bN
+KU
+KU
+KU
 SF
 ap
-bN
+KU
 SF
 SF
 SF
-bN
-bN
+KU
+KU
 SF
 SF
 SF
 SF
 SF
 SF
-Tt
-Tt
+Qv
+Qv
 SF
 SF
-bN
+KU
 "}
 (33,1,1) = {"
 SF
@@ -4660,28 +4670,28 @@ fO
 GU
 EC
 wK
-bN
-Tt
-Tt
-Tt
+KU
+Qv
+Qv
+Qv
 SF
-bN
+KU
 SF
 hb
 bX
-bN
+KU
 SF
 SF
 SF
-bN
-Tt
-bN
+KU
+Qv
+KU
 SF
 SF
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 SF
 "}
 (34,1,1) = {"
@@ -4713,22 +4723,22 @@ SF
 SF
 SF
 SF
+Qv
+SF
+SF
+KU
 Tt
 SF
-SF
-bN
-Tt
-SF
-bN
-bN
+KU
+KU
 SF
 SF
 SF
 SF
 SF
-bN
+KU
 SF
-bN
+KU
 SF
 SF
 SF
@@ -4764,13 +4774,13 @@ SF
 SF
 SF
 SF
-Tt
+Qv
 SF
 SF
 SF
 SF
 SF
-bN
+KU
 SF
 SF
 SF
@@ -4778,7 +4788,7 @@ SF
 SF
 SF
 SF
-bN
-bN
-bN
+KU
+KU
+KU
 "}

@@ -107,13 +107,18 @@ var/image/no_ceiling_image = null
 		// Has to have it's own edge_blending_priority
 		// Has to have a higher priority than us
 		// Their icon_state is not our icon_state
-		// They don't forbid_turf_edge			
+		// They don't forbid_turf_edge
 		if(istype(T) && T.edge_blending_priority && edge_blending_priority < T.edge_blending_priority && icon_state != T.icon_state && !T.forbid_turf_edge())
 			var/cache_key = "[T.get_edge_icon_state()]-[checkdir]" // Usually [icon_state]-[dirnum]
 			if(!turf_edge_cache[cache_key])
-				var/image/I = image(icon = 'icons/turf/outdoors_edge.dmi', icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = ABOVE_TURF_LAYER) // Icon should be abstracted out
-				I.plane = TURF_PLANE
-				turf_edge_cache[cache_key] = I
+				if(T.modular_icon)
+					var/image/I = image(icon = 'modular_chomp/icons/turf/outdoors_edge.dmi', icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = ABOVE_TURF_LAYER) // CHOMPedit start: use our turf edges for our turfs
+					I.plane = TURF_PLANE
+					turf_edge_cache[cache_key] = I
+				else
+					var/image/I = image(icon = 'icons/turf/outdoors_edge.dmi', icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = ABOVE_TURF_LAYER) // Icon should be abstracted out
+					I.plane = TURF_PLANE
+					turf_edge_cache[cache_key] = I // CHOMPedit end
 			add_overlay(turf_edge_cache[cache_key])
 
 // We will take this state and use it for a cache key, and append '-edge' to it to get the edge overlay (edges *from other turfs*, not our own internal edges)
@@ -282,4 +287,3 @@ var/image/no_ceiling_image = null
 		I.layer = layer
 		flooring_cache[cache_key] = I
 	return flooring_cache[cache_key]
-

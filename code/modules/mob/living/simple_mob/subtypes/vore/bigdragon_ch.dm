@@ -177,6 +177,8 @@ I think I covered everything.
 		"Normal"
 	)
 	var/eyes
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 ///
 ///		Subtypes
