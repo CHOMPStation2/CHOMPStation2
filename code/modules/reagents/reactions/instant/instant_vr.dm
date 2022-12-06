@@ -60,42 +60,42 @@
 /decl/chemical_reaction/instant/androrovir
 	name = "Androrovir"
 	id = "androrovir"
-	result = "change_drug_male"
+	result = "change_drug_male" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "bicaridine" = 20, "iron" = 20, "ethanol" = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/gynorovir
 	name = "Gynorovir"
 	id = "gynorovir"
-	result = "change_drug_female"
+	result = "change_drug_female" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "inaprovaline" = 20, "silicon" = 20, "sugar" = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androgynorovir
 	name = "Androgynorovir"
 	id = "androgynorovir"
-	result = "change_drug_intersex"
+	result = "change_drug_intersex" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "anti_toxin" = 20, "fluorine" = 20, "tungsten" = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androrovir_bootleg
 	name = "Bootleg Androrovir"
 	id = "androrovir_bootleg"
-	result = "change_drug_male"
+	result = "change_drug_male" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "protein" = 10, "capsaicin" = 10)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/gynorovir_bootleg
 	name = "Bootleg Gynorovir"
 	id = "gynorovir_bootleg"
-	result = "change_drug_female"
+	result = "change_drug_female" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "soymilk" = 10, "sugar" = 10)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androgynorovir_bootleg
 	name = "Bootleg Androgynorovir"
 	id = "androgynorovir_bootleg"
-	result = "change_drug_intersex"
+	result = "change_drug_intersex" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "cola" = 10, "berryjuice" = 10)
 	result_amount = 1
 

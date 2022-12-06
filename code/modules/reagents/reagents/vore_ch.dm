@@ -37,7 +37,7 @@
 
 			else if(prob(10))
 				B.absorb_living(P)
-				//CHOMPedit: absorption reagent production
+				//absorption reagent production
 				if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume)
 					B.GenerateBellyReagents_absorbed()
 
