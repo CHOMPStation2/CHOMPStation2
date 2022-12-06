@@ -8,7 +8,7 @@
 	reagent_state = LIQUID
 	color = "#FF9999"
 	scannable = 1
-	
+
 /datum/reagent/aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!M)	return
 
@@ -37,14 +37,15 @@
 
 			else if(prob(10))
 				B.absorb_living(P)
-				if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
+				//CHOMPedit: absorption reagent production
+				if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume)
 					B.GenerateBellyReagents_absorbed()
 
-	
+
 ///GENDER CHANGE REAGENTS////
 
 /datum/reagent/change_drug //base chemical
-	name = "Elixer of Change" //always the same name
+	name = "Amorphorovir" //always the same name
 	id = "change_drug"
 	metabolism = 100 //set high enough that it does not process multiple times(delay implemented below)
 	description = "the bloods DNA in this seems aggressive"
@@ -53,15 +54,23 @@
 	var/gender_change = null //set the gender variable here so we can set it to others in varients
 
 /datum/reagent/change_drug/male //inherits base chemical properties listed above
+	name = "Androrovir"
 	id = "change_drug_male" //unique ID for each varient
-	taste_description = "old spice odor blocker body wash"
+	taste_description = "old spice odor blocker and body wash"
 	reagent_state = LIQUID
+	description = \
+		"A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems\
+		to realign the target's gender to be male."
 	color = "#428AFF"
 	gender_change = "male"
 	scannable = 1
 
 /datum/reagent/change_drug/female
+	name = "Gynorovir"
 	id = "change_drug_female"
+	description = \
+		"A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems\
+		to realign the target's gender to be female."
 	taste_description = "spiced honey"
 	reagent_state = LIQUID
 	color = "#FFA0FA"
@@ -69,25 +78,31 @@
 	scannable = 1
 
 /datum/reagent/change_drug/intersex
+	name = "Androgynorovir"
 	id = "change_drug_intersex"
+	description = \
+		"A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems\
+		to realign the target's gender to be mixed."
 	taste_description = "something salty and sweet"
 	reagent_state = LIQUID
 	color = "#CB9EFF"
-	gender_change = "herm"
+	gender_change = "plural"
 	scannable = 1
 
-/datum/reagent/change_drug/affect_blood(var/mob/living/carbon/human/M, var/alien, var/removed) //we need to process the change
-	if(alien == IS_DIONA) //doesn't work on multiple creature hiveminds
-		return
-	if(M.identifying_gender == gender_change) //don't bug them if they're already the same gender
-		return
-	if(M.gender_change_cooldown == 1) //if already done, don't bug them
-		return
-	else
-		M.gender_change_cooldown = 1 //set not to bug them because the chem is activating
-		M << "<span class='notice'>You lose focus as warmth spreads throughout your chest and abdomen.</span>"
-		spawn(300) //wait 30 seconds, growth takes time yo
-			M.gender_change_cooldown = 0 //allow it to bug them again now that we've waited
-			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes") //check if they want this to happen for pref sake
+/datum/reagent/change_drug/affect_blood(var/mob/living/carbon/human/M, var/alien, var/removed)
+	if (!(alien == IS_DIONA || M.gender == gender_change || M.gender_change_cooldown == 1) && M.allow_spontaneous_tf)
+		//set not to bug them because the chem is activating
+		M.gender_change_cooldown = 1
+		M.visible_message(
+			"<span class='notice'>[M] suddenly twitches as some of their features seem to contort and reshape.</span>",
+			"<span class='notice'>You lose focus as warmth spreads throughout your chest and abdomen.</span>"
+		)
+		//wait 30 seconds, growth takes time yo
+		spawn(300)
+			//allow it to bug them again now that we've waited
+			M.gender_change_cooldown = 0
+			//check if they want this to happen for pref sake
+			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes")
 				M.change_gender_identity(gender_change)
-				M << "<span class='warning'>You feel like a new person</span>" //success
+				M.change_gender(gender_change)
+				M << "<span class='warning'>You feel like a new person.</span>" //success
