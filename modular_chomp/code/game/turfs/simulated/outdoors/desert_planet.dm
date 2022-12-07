@@ -13,7 +13,7 @@
 /turf/simulated/floor/outdoors/desert_planet
 	name = "sand"
 	desc = "Salty and gritty."
-	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
+	icon = 'modular_chomp/icons/turf/desert_tiles.dmi'
 	modular_icon = TRUE // This must be true to add edges from our .dmi files.
 
 /turf/simulated/floor/outdoors/desert_planet/sand
@@ -80,10 +80,11 @@
 // At last we've come full circle, a floor which is actually a wall.
 /turf/simulated/floor/outdoors/desert_planet/sandrock
 	name = "sandstone"
-	desc = "Worn, patterned sandstone."
-	icon_state = "sandrock"
+	desc = "Rough sandstone."
+	icon_state = "stonewall"
 	density = TRUE
 	opacity = TRUE
+	edge_blending_priority = 7
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 	var/last_act = 0
 

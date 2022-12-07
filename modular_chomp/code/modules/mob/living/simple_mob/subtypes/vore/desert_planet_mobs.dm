@@ -4,7 +4,7 @@
 	tt_desc = "Canis lupus familiaris"
 	//faction = "mexico" //They are from Mexico. //Amusing but this prompts aggression from crew-aligned mobs.
 
-	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
+	icon = 'modular_chomp/icons/turf/desert_tiles.dmi'
 	icon_state = "dog"
 	item_state = "dog"
 	icon_living = "dog"
