@@ -111,7 +111,7 @@
 		if(is_preference_enabled(/datum/client_preference/ghost_ears) && (speaker in view(src)))
 			message = "<b>[message]</b>"
 
-	if(is_deaf())
+	if(is_deaf() && stat != DEAD) //CHOMPEdit - Dead people should be able to hear stuff like ghosts can
 		if(speaker == src)
 			to_chat(src, "<span class='filter_say'><span class='warning'>You cannot hear yourself speak!</span></span>")
 		else
