@@ -57,6 +57,7 @@
 	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
 	var/slow_digestion = FALSE				// CHOMPEdit: Gradual corpse digestion
 	var/slow_brutal = FALSE					// CHOMPEdit: Gradual corpse digestion: Stumpy's Special
+	var/sound_volume = 100					// CHOMPEdit: Volume knob.
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -276,7 +277,8 @@
 	"autotransfer_min_amount",
 	"autotransfer_max_amount",
 	"slow_digestion",
-	"slow_brutal", //CHOMP end of variables from CHOMP
+	"slow_brutal",
+	"sound_volume", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -334,7 +336,7 @@
 		if(special_entrance_sound) //CHOMPEdit: Custom sound set by mob's init_vore or ingame varedits.
 			soundfile = special_entrance_sound
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
 			recent_sound = TRUE
 
 	//Messages if it's a mob
@@ -499,7 +501,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
 
 	return count
 
@@ -569,7 +571,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
 	//Should fix your view not following you out of mobs sometimes!
 	if(ismob(M))
 		var/mob/ourmob = M
@@ -1330,7 +1332,8 @@
 	dupe.autotransfer_min_amount = autotransfer_min_amount
 	dupe.autotransfer_max_amount = autotransfer_max_amount
 	dupe.slow_digestion = slow_digestion
-	dupe.slow_brutal = slow_brutal //CHOMP end of variables from CHOMP
+	dupe.slow_brutal = slow_brutal
+	dupe.sound_volume = sound_volume //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
