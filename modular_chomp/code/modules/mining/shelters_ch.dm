@@ -253,3 +253,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/AnimalHospital-20x28.dmm"
 	name = "Low-Tech Hospital."
 	description = "An animal hospital, doesnt not contain high end medical supplies, better then nothing."
+
+/datum/map_template/shelter/superpose/RestaurationBar
+	shelter_id = "RestaurationBar"
+	mappath = "modular_chomp/maps/submaps/shelters/RestaurationBar-32x32.dmm"
+	name = "Resto-Bar"
+	description = "A large restaurant for food and drink, two overnight rental rooms and a small garden."
