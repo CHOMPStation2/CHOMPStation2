@@ -114,8 +114,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
 "aam" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -524,16 +524,9 @@
 /turf/simulated/floor/plating,
 /area/construction/firstdeck)
 "acm" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/device/cataloguer,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/device/binoculars,
-/turf/simulated/floor/tiled,
-/area/hangar/lockerroomone)
+/obj/machinery/vending/entertainer,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "acn" = (
 /obj/structure/closet/secure_closet/explorer,
 /obj/item/device/cataloguer,
@@ -688,10 +681,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock{
-	name = "Exploration Locker Room";
-	req_access = null;
-	req_one_access = list(43,67)
+/obj/machinery/door/airlock/glass{
+	name = "Weapon Storage"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomone)
@@ -3593,16 +3587,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aqk" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/device/cataloguer,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/device/binoculars,
-/turf/simulated/floor/tiled,
-/area/hangar/lockerroomtwo)
+/obj/machinery/computer/arcade/clawmachine,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "aql" = (
 /turf/simulated/wall,
 /area/hangar/lockerroomtwo)
@@ -7678,7 +7665,7 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/expoutpost/station)
 "aMG" = (
-/obj/machinery/door/firedoor/glass,
+/obj/random/mob/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aMJ" = (
@@ -10831,9 +10818,11 @@
 /area/teleporter/firstdeck)
 "chC" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/teleporter/firstdeck)
 "chO" = (
@@ -11614,14 +11603,31 @@
 "cVJ" = (
 /obj/machinery/button/remote/airlock{
 	id = "qpdoorout";
+	name = "Outer Door Control";
+	pixel_x = -1;
+	pixel_y = 35;
+	req_one_access = list(1,19)
+	},
+/obj/machinery/computer/secure_data{
+	pixel_y = 9
+	},
+/obj/machinery/button/remote/airlock{
+	id = "qpdoorin";
+	name = "Inner Door Control";
+	pixel_x = 8;
+	pixel_y = 35;
+	req_one_access = list(1,19)
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "qpdoorout";
 	name = "Outer Door Bolts";
 	pixel_x = -1;
 	pixel_y = 24;
 	req_one_access = list(1,19);
 	specialfunctions = 4
-	},
-/obj/machinery/computer/secure_data{
-	pixel_y = 9
 	},
 /obj/machinery/button/remote/airlock{
 	id = "qpdoorin";
@@ -11630,9 +11636,6 @@
 	pixel_y = 24;
 	req_one_access = list(1,19);
 	specialfunctions = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -12145,11 +12148,17 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(67,43)
+	req_one_access = null
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
 	},
 /obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier/carbine,
 /obj/item/weapon/gun/energy/locked/frontier,
+/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
@@ -12532,7 +12541,9 @@
 /area/teleporter/firstdeck)
 "dVU" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass,
+/obj/machinery/door/airlock/glass{
+	name = "Checkpoint Prep Room"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -15087,7 +15098,8 @@
 /area/hallway/primary/firstdeck/auxdockaft)
 "ezu" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	id_tag = "qpdoorout"
+	id_tag = "qpdoorout";
+	name = "Checkpoint Booth"
 	},
 /obj/machinery/door/firedoor/multi_tile,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15684,6 +15696,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomtwo)
 "frS" = (
@@ -16231,6 +16247,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/starboard)
 "fWF" = (
@@ -16483,6 +16505,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "gnU" = (
@@ -16495,6 +16520,15 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/techmaint,
 /area/teleporter/firstdeck)
+"gpf" = (
+/obj/machinery/replicator/clothing,
+/obj/item/toy/plushie/bigcat{
+	desc = "A big, fluffy looking cat that just looks very huggable. Though, there's an odd feeling to them..";
+	name = "Odd Cat Plushie"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "gqi" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/space;
@@ -16684,10 +16718,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock{
-	name = "Exploration Locker Room";
-	req_access = null;
-	req_one_access = list(43,67)
+/obj/machinery/door/airlock/glass{
+	name = "Weapon Storage"
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomtwo)
@@ -16713,7 +16745,9 @@
 /area/rnd/research/firstdeck/hallway)
 "gEu" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass,
+/obj/machinery/door/airlock/glass{
+	name = "Checkpoint Lounge"
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -17604,6 +17638,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"hSR" = (
+/obj/random/plushie,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "hTg" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/bag/circuits/basic,
@@ -17835,6 +17873,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"ijM" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor,
+/area/hangar/lockerroomtwo)
 "ikt" = (
 /obj/structure/loot_pile/surface/medicine_cabinet/fresh{
 	pixel_y = 25
@@ -18064,17 +18107,16 @@
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "iCS" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -18106,7 +18148,8 @@
 /area/teleporter/firstdeck)
 "iEp" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	id_tag = "qpdoorin"
+	id_tag = "qpdoorin";
+	name = "Processing Booth"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -18234,6 +18277,10 @@
 	temperature = 80
 	},
 /area/tcomm/chamber)
+"iOj" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "iPi" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
@@ -18308,8 +18355,10 @@
 	},
 /area/tcomm/chamber)
 "iQH" = (
-/turf/simulated/wall,
-/area/teleporter/firstdeck)
+/obj/structure/table/steel,
+/obj/item/clothing/accessory/collar/spike,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "iRg" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -20106,9 +20155,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "lcJ" = (
@@ -21462,8 +21509,8 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -22843,6 +22890,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
+"owF" = (
+/obj/structure/table/steel,
+/obj/item/clothing/accessory/cowledvest,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "owI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
@@ -22970,6 +23022,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
 "oDZ" = (
@@ -22983,6 +23039,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomone)
@@ -23959,6 +24021,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"pOa" = (
+/obj/structure/table/steel,
+/obj/item/clothing/accessory/poncho/blue,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "pOw" = (
 /obj/machinery/vending/cigarette{
 	dir = 1
@@ -24494,18 +24561,24 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
 	name = "Exploration Locker Room Access";
-	req_access = null;
-	req_one_access = list(43,67)
+	req_one_access = null
 	},
 /turf/simulated/floor/plating,
 /area/hangar/lockerroomtwo)
 "qrm" = (
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = null
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
 	},
 /obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
 /obj/item/weapon/gun/energy/locked/frontier,
+/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
@@ -24885,6 +24958,11 @@
 /obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
+"qSG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/hangar/lockerroomone)
 "qTi" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
@@ -25197,6 +25275,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_starboard)
+"riw" = (
+/obj/item/clothing/ears/earring/dangle,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "rlo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -25370,10 +25452,9 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 2;
+	d1 = 1;
 	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -25694,7 +25775,8 @@
 /area/hallway/primary/firstdeck/ascenter)
 "rUK" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1
+	dir = 1;
+	name = "Checkpoint Locker Room"
 	},
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 1
@@ -26427,7 +26509,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "sQR" = (
-/obj/machinery/door/airlock/multi_tile/glass,
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Quantum Checkpoint Access"
+	},
 /obj/machinery/door/firedoor/multi_tile,
 /turf/simulated/floor/tiled/steel_grid,
 /area/teleporter/firstdeck)
@@ -28682,9 +28766,6 @@
 "vgG" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/firstdeck)
 "vgS" = (
@@ -54879,13 +54960,13 @@ aaa
 aaa
 aaa
 tOo
+acm
 ajn
-aVW
-aVW
-aVW
+ajn
+ajn
 cfo
 ajn
-ajE
+aFf
 aVW
 dXb
 ajE
@@ -55137,10 +55218,10 @@ aaa
 aaa
 aaa
 aaj
+aqk
+hSR
 ajn
-ajn
-aFf
-aFf
+riw
 aiY
 aiY
 aiY
@@ -55395,7 +55476,7 @@ aaa
 aaa
 aaa
 aCl
-ajn
+iQH
 aMG
 ajn
 ajn
@@ -55653,10 +55734,10 @@ aaa
 aaa
 aaa
 tOo
-ajn
-ajn
-ajn
-ajn
+pOa
+gpf
+owF
+iOj
 aiY
 cIq
 mMT
@@ -57219,9 +57300,9 @@ xrz
 olL
 aiY
 aiY
-amq
+qSG
 acD
-amq
+qSG
 aPa
 adT
 akV
@@ -57477,7 +57558,7 @@ aaU
 rUK
 aiY
 aiY
-acm
+acn
 oDZ
 qlN
 amq
@@ -59269,7 +59350,7 @@ aiY
 aiY
 aiY
 aiY
-iQH
+aiY
 aiY
 aiY
 aiY
@@ -71935,7 +72016,7 @@ wgS
 aql
 nVn
 fqS
-aqk
+pII
 arE
 asE
 atJ
@@ -72191,9 +72272,9 @@ tsa
 uMv
 vQi
 xva
-aql
+ijM
 gDs
-aql
+ijM
 aKj
 mdb
 atJ
