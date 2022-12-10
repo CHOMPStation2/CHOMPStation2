@@ -21,6 +21,7 @@
 	var/datum/reagents/metabolism/bloodstream/bloodstr = null
 	var/datum/reagents/metabolism/ingested/ingested = null
 	var/datum/reagents/metabolism/touch/touching = null
+	var/toxin_gut = FALSE //CHOMPAdd
 
 	var/pulse = PULSE_NORM	//current pulse level
 
