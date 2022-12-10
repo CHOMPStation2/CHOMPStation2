@@ -284,6 +284,10 @@
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
+	//CHOMPEdit Start - Prevent reforming causing a lot of log spam/sounds
+	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi))
+		return //Someone getting reformed most likely (And if not, uh... shouldn't happen anyways?)
+	//CHOMPEdit end
 
 	//Generic entered message
 	to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
@@ -713,6 +717,7 @@
 	//CHOMPEdit Start - Reverts TF on death. This fixes a bug with posibrains or similar, and also makes reforming easier.
 	if(M.tf_mob_holder && M.tf_mob_holder.loc == M)
 		M.tf_mob_holder.ckey = M.ckey
+		M.tf_mob_holder.enabled = TRUE
 		M.tf_mob_holder.loc = M.loc
 		M.tf_mob_holder.forceMove(M.loc)
 		QDEL_LIST_NULL(M.tf_mob_holder.vore_organs)
@@ -732,7 +737,7 @@
 	if(is_vore_predator(M))
 		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 
-	var/hasMMI = FALSE // CHOMPEdit - Adjust how MMI's are handled
+	var/obj/item/device/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
 
 	//Drop all items into the belly.
 	if(config.items_survive_digestion)
@@ -782,6 +787,7 @@
 				R.mmi.brainmob.languages = R.languages
 			R.mmi.brainmob.remove_language("Robot Talk")
 			hasMMI = R.mmi
+			M.mind.transfer_to(hasMMI.brainmob)
 			R.mmi = null
 		else if(!R.shell) // Shells don't have brainmobs in their MMIs.
 			to_chat(R, "<span class='danger'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
@@ -789,17 +795,17 @@
 			qdel(R)
 			return
 
-	if(hasMMI)
-		var/obj/item/device/mmi/MMI = hasMMI
-		M.mind.transfer_to(MMI.brainmob)
-		MMI.body_backup = M
-		M.forceMove(MMI)
+	if(istype(hasMMI))
+		hasMMI.body_backup = M
+		M.enabled = FALSE
+		M.forceMove(hasMMI)
 	else
 		//Another CHOMPEdit started here. I left the comment here, though obviously we're doing a lot more now as well.
 		var/mob/observer/G = M.ghostize(FALSE) //CHOMPEdit start. Make sure they're out, so we can copy attack logs and such.
 		if(G)
 			G.forceMove(src)
 			G.body_backup = M
+			M.enabled = FALSE
 			M.forceMove(G)
 		else
 			qdel(M)
