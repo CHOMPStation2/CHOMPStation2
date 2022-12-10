@@ -263,16 +263,17 @@
 /datum/supply_pack/voidsuits/voxeng
 	name = "Vox Engineering Hardsuit"
 	contains = list (/obj/item/weapon/rig/vox/engineering)
-	cost = 150
-	containertype = /obj/structure/closet/crate/oculum
+	cost = 90
+	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Vox Engineering Hardsuit"
-	
+	access = access_engineering
+
 /datum/supply_pack/voidsuits/voxsec
 	name = "Vox Security Hardsuit"
 	contains = list (/obj/item/weapon/rig/vox/security)
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Vox security Rigsuit Crate"
-	access = access_security
+	
 
 //ChompEdit End
