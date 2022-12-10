@@ -266,7 +266,7 @@
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Vox Engineering Hardsuit"
-	access = access_engineering
+	access = access_engine
 
 /datum/supply_pack/voidsuits/voxsec
 	name = "Vox Security Hardsuit"
@@ -274,6 +274,6 @@
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Vox security Rigsuit Crate"
-	
+	access = access_security
 
 //ChompEdit End
