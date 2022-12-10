@@ -86,6 +86,8 @@
 	reload_max = 1
 	reload_count = 0
 	reload_time = 7 SECONDS
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 
 /datum/ai_holder/simple_mob/ranged/kiting/space_ghost
@@ -208,7 +210,8 @@
 
 /mob/living/simple_mob/vore/alienanimals/spooky_ghost/apply_melee_effects(var/atom/A)
 	var/mob/living/L = A
-	L.hallucination += rand(1,50)
+	if(L && istype(L))
+		L.hallucination += rand(1,50)
 
 /mob/living/simple_mob/vore/alienanimals/spooky_ghost/Life()
 	. = ..()

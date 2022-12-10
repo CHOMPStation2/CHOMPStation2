@@ -34,6 +34,8 @@
 	var/package_trash
 	/// Packaged meals switch to this state when opened, if set
 	var/package_open_state
+	/// Packaged meals that have opening animation
+	var/package_opening_state
 
 	/// If this is canned. If true, it will print a message and ask you to open it
 	var/canned = FALSE
@@ -269,6 +271,8 @@
 		user.put_in_hands(T)
 	if(package_open_state)
 		icon_state = package_open_state
+		if(package_opening_state)
+			flick(package_opening_state, src)
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
@@ -1886,7 +1890,6 @@
 	. = ..()
 	reagents.add_reagent("protein", 3)
 
-
 /obj/item/weapon/reagent_containers/food/snacks/rofflewaffles
 	name = "Roffle Waffles"
 	desc = "Waffles from Roffle. Co."
@@ -2142,6 +2145,15 @@
 /obj/item/weapon/reagent_containers/food/snacks/sandwich/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 3)
+
+/obj/item/weapon/reagent_containers/food/snacks/clubsandwich
+	name = "Club Sandwich"
+	desc = "Tastes like the good feelings when you're part of a clique."
+	icon_state = "clubsandwich"
+	trash = "obj/item/trash/plate"
+	nutriment_amt = 3
+	nutriment_desc = list("a galactic economy coming together in pursuit of mundane foods" = 3)
+	bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/toastedsandwich
 	name = "Toasted Sandwich"
@@ -6897,9 +6909,10 @@
 	nutriment_desc = list("apple" = 1, "sweetness" = 1)
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/appleberry/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/canned/appleberry/Initialize()
 	. = ..()
 	reagents.add_reagent("milk", 8)
+	reagents.add_reagent("sugar", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/ntbeans
 	name = "baked beans"
@@ -6928,10 +6941,11 @@
 	filling_color = "#caa3c9"
 	center_of_mass = list("x"=15, "y"=9)
 	bitesize = 2
+	var/brainmeat = "brain_protein"
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/Initialize()
 	. = ..()
-	reagents.add_reagent("brain_protein", 10)
+	reagents.add_reagent(brainmeat, 10)
 
 /obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red
 	name = "\improper BrainzSnax RED"
@@ -6945,10 +6959,7 @@
 	filling_color = "#a6898d"
 	center_of_mass = list("x"=15, "y"=9)
 	bitesize = 2
-
-/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red/Initialize()
-	. = ..()
-	reagents.add_reagent("red_brain_protein", 10)
+	brainmeat = "red_brain_protein"
 
 //////////////Packaged Food - break open and eat//////////////
 

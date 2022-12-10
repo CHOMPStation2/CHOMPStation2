@@ -40,7 +40,7 @@ SUBSYSTEM_DEF(mobs)
 		if(!M || QDELETED(M))
 			mob_list -= M
 			continue
-		else if(M.low_priority && !(M.loc && process_z[get_z(M)]))
+		else if(M.low_priority && !(M.loc && get_z(M) && process_z[get_z(M)]))
 			slept_mobs++
 			continue
 		//CHOMPEdit Start - Enable pausing mobs (For transformation, holding until reformation, etc.)

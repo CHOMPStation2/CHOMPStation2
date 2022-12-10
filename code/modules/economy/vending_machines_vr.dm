@@ -7,6 +7,7 @@
 	products += list(/obj/item/weapon/gun/energy/taser = 8,/obj/item/weapon/gun/energy/stunrevolver = 4,
 					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6,
 					/obj/item/clothing/glasses/omnihud/sec = 6)
+	contraband += list(/obj/item/weapon/implanter/compliance = 1)
 	..()
 
 /obj/machinery/vending/tool/New()
@@ -638,7 +639,7 @@
 					/obj/item/clothing/mask/surgical = 5,
 					/obj/item/clothing/accessory/pride/bi = 5,
 					/obj/item/clothing/accessory/pride/trans = 5,
-					/obj/item/clothing/accessory/pride/ace = 5, 
+					/obj/item/clothing/accessory/pride/ace = 5,
 					/obj/item/clothing/accessory/pride/enby = 5,
 					/obj/item/clothing/accessory/pride/pan = 5,
 					/obj/item/clothing/accessory/pride/lesbian = 5,
@@ -763,7 +764,7 @@
 					/obj/item/clothing/mask/surgical = 50,
 					/obj/item/clothing/accessory/pride/bi = 50,
 					/obj/item/clothing/accessory/pride/trans = 50,
-					/obj/item/clothing/accessory/pride/ace = 50, 
+					/obj/item/clothing/accessory/pride/ace = 50,
 					/obj/item/clothing/accessory/pride/enby = 50,
 					/obj/item/clothing/accessory/pride/pan = 50,
 					/obj/item/clothing/accessory/pride/lesbian = 50,
@@ -1241,7 +1242,9 @@
 					/obj/item/weapon/pack/spaceball = 10,
 					/obj/item/weapon/storage/pill_bottle/dice = 5,
 					/obj/item/weapon/storage/pill_bottle/dice_nerd = 5,
-					/obj/item/weapon/melee/umbrella/random = 10)
+					/obj/item/weapon/melee/umbrella/random = 10,
+					/obj/item/weapon/deck/schnapsen = 5,
+					/obj/item/weapon/deck/egy = 5)
 	prices = list(/obj/item/weapon/cane = 100,
 					/obj/item/weapon/pack/cardemon = 100,
 					/obj/item/weapon/deck/holder = 100,
@@ -1252,7 +1255,9 @@
 					/obj/item/weapon/pack/spaceball = 100,
 					/obj/item/weapon/storage/pill_bottle/dice = 100,
 					/obj/item/weapon/storage/pill_bottle/dice_nerd = 100,
-					/obj/item/weapon/melee/umbrella/random = 100)
+					/obj/item/weapon/melee/umbrella/random = 100,
+					/obj/item/weapon/deck/schnapsen = 100,
+					/obj/item/weapon/deck/egy = 100)
 	premium = list(/obj/item/toy/bosunwhistle = 1)
 	contraband = list(/obj/item/toy/katana = 1)
 
@@ -1519,7 +1524,9 @@
 					/obj/item/clothing/gloves/combat/knight_costume = 3,
 					/obj/item/clothing/gloves/combat/knight_costume/brown = 3,
 					/obj/item/clothing/shoes/knight_costume = 3,
-					/obj/item/clothing/shoes/knight_costume/black = 3)
+					/obj/item/clothing/shoes/knight_costume/black = 3,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/hotdog = 3,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/turnip = 3)
 	prices = list(/obj/item/clothing/suit/storage/hooded/costume/carp = 200,
 					/obj/item/clothing/suit/storage/hooded/costume/carp = 200,
 					/obj/item/clothing/suit/chickensuit = 200,
@@ -1584,7 +1591,9 @@
 					/obj/item/clothing/gloves/combat/knight_costume = 200,
 					/obj/item/clothing/gloves/combat/knight_costume/brown = 200,
 					/obj/item/clothing/shoes/knight_costume = 200,
-					/obj/item/clothing/shoes/knight_costume/black = 200)
+					/obj/item/clothing/shoes/knight_costume/black = 200,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/hotdog = 200,
+					/obj/item/clothing/suit/storage/hooded/foodcostume/turnip = 200)
 	premium = list(/obj/item/clothing/suit/imperium_monk = 3,
 					/obj/item/clothing/suit/barding/agatha = 2,
 					/obj/item/clothing/suit/barding/alt_agatha = 2,
@@ -3534,3 +3543,26 @@
 					/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer = 1)
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
 	vending_sound = "machines/vending/vending_cans.ogg"
+
+/obj/machinery/vending/altevian
+	name = "Altevian Imported Meals"
+	desc = "A vending machine containing imported foods from Altevian Hegemony. Delicious and nutritious. No natural ingridients guaranteed!"
+	icon = 'icons/obj/vending_vr.dmi'
+	icon_state = "rattevendor"
+	product_slogans = "Spacer's choice!;Voidborn food for voidborn people!;Most processed foods ever!"
+	product_ads = "Perfectly edible!;Squeaky clean foods!;Cheesed to meet you!;Made for spacers, by spacers, of spacers!"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/ratveggies = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 2)
+
+	prices = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratveggies = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratliquid = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 200)

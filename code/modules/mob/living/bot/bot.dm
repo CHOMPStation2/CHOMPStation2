@@ -296,11 +296,17 @@
 			frustration++ //CHOMPEdit
 	return
 
-/mob/living/bot/proc/handleFrustrated(var/targ)
-	obstacle = targ ? target_path[1] : patrol_path[1]
+
+/mob/living/bot/proc/handleFrustrated(has_target)
+	obstacle = null
+	if (has_target)
+		if (length(target_path))
+			obstacle = target_path[1]
+	else if (length(patrol_path))
+		obstacle = patrol_path[1]
 	target_path = list()
 	patrol_path = list()
-	return
+
 
 /mob/living/bot/proc/lookForTargets()
 	return

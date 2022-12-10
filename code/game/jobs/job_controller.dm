@@ -393,7 +393,7 @@ var/global/datum/controller/occupations/job_master
 		//Equip custom gear loadout.
 		var/list/custom_equip_slots = list()
 		var/list/custom_equip_leftovers = list()
-		if(H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
+		if(H.client && H.client.prefs && H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
 			for(var/thing in H.client.prefs.gear)
 				var/datum/gear/G = gear_datums[thing]
 				if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
@@ -657,8 +657,7 @@ var/global/datum/controller/occupations/job_master
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
 
-	var/datum/job/J = SSjob.get_job(rank)
-	fail_deadly = J?.offmap_spawn
+	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.spawnpoint)
@@ -804,7 +803,8 @@ var/global/datum/controller/occupations/job_master
 			.["msg"] = spawnpos.msg
 			.["channel"] = spawnpos.announce_channel
 		else
-			if(fail_deadly)
+			var/datum/job/J = SSjob.get_job(rank)
+			if(fail_deadly || J?.offmap_spawn)
 				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice.</span>")
 				return
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")

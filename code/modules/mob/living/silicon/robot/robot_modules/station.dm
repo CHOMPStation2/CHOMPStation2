@@ -182,6 +182,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/tool/crowbar/cyborg(src)
 	src.modules += new /obj/item/weapon/extinguisher(src)
 	src.modules += new /obj/item/device/gps/robot(src)
+	src.modules += new /obj/item/weapon/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
 	vr_new() // Vorestation Edit: For modules in robot_modules_vr.dm
 
 /obj/item/weapon/robot_module/robot/standard
@@ -262,6 +263,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src) //VoreStation Edit: LET ME SUCC
 	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
@@ -278,14 +280,19 @@ var/global/list/robot_modules = list(
 
 	var/obj/item/stack/nanopaste/N = new /obj/item/stack/nanopaste(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/B = new /obj/item/stack/medical/advanced/bruise_pack(src)
+	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src) //VoreStation edit: we have burn surgeries so they should be able to do them
 	N.uses_charge = 1
 	N.charge_costs = list(1000)
 	N.synths = list(medicine)
 	B.uses_charge = 1
 	B.charge_costs = list(1000)
 	B.synths = list(medicine)
+	O.uses_charge = 1
+	O.charge_costs = list(1000)
+	O.synths = list(medicine)
 	src.modules += N
 	src.modules += B
+	src.modules += O
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 
@@ -538,6 +545,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/weapon/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/weapon/gripper/security(src)
+	src.modules += new /obj/item/device/ticket_printer(src)	//VOREStation Add
 	src.emag = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 /obj/item/weapon/robot_module/robot/security/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
@@ -607,7 +615,6 @@ var/global/list/robot_modules = list(
 					LANGUAGE_SIIK		= 1,
 					LANGUAGE_AKHANI		= 1,
 					LANGUAGE_SKRELLIAN	= 1,
-					LANGUAGE_SKRELLIANFAR = 0,
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_TRADEBAND	= 1,
 					LANGUAGE_GUTTER		= 1,
@@ -675,7 +682,8 @@ var/global/list/robot_modules = list(
 	src.emag.reagents = R
 	R.my_atom = src.emag
 	R.add_reagent("beer2", 50)
-	src.emag.name = "Mickey Finn's Special Brew"
+	src.emag.name = "Auntie Hong's Final Sip"
+	src.emag.desc = "A bottle of very special mix of alcohol and poison. Some may argue that there's alcohol to die for, but Auntie Hong took it to next level."
 
 /obj/item/weapon/robot_module/robot/clerical/general
 	name = "clerical robot module"
@@ -856,6 +864,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/pickaxe/plasmacutter/borg(src)
 	src.modules += new /obj/item/borg/combat/shield(src)
 	src.modules += new /obj/item/borg/combat/mobility(src)
+	src.modules += new /obj/item/device/ticket_printer(src)	//VOREStation Add
 	src.emag = new /obj/item/weapon/gun/energy/lasercannon/mounted(src)
 
 

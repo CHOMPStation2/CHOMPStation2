@@ -4,7 +4,7 @@
 	var/last_emote_summary
 
 /mob/proc/get_available_emotes()
-	return global._default_mob_emotes
+	return global._default_mob_emotes.Copy()
 
 /mob/proc/can_emote(var/emote_type)
 	return (stat == CONSCIOUS)
@@ -128,6 +128,7 @@
 	if(findtext(subtext, "*"))
 		// abort abort!
 		to_chat(emoter, SPAN_WARNING("You may use only one \"["*"]\" symbol in your emote."))
+		to_chat(emoter, SPAN_WARNING(message))
 		return
 
 	if(pretext)

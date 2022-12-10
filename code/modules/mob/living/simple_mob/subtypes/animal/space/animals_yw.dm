@@ -77,6 +77,8 @@
 
 	var/turns_since_scan = 0
 	var/mob/flee_target
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/clockwork/handle_special()
 	if(!stat && prob(2)) // spooky

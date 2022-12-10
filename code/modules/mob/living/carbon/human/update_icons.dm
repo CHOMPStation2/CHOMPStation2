@@ -66,39 +66,40 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define MOB_DAM_LAYER			4		//Injury overlay sprites like open wounds
 #define SURGERY_LAYER			5		//Overlays for open surgical sites
 #define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
-#define TAIL_SOUTH_LAYER		7		//Tail as viewed from the south
-#define SHOES_LAYER_ALT			8		//Shoe-slot item (when set to be under uniform via verb)
-#define UNIFORM_LAYER			9		//Uniform-slot item
-#define ID_LAYER				10		//ID-slot item
-#define SHOES_LAYER				11		//Shoe-slot item
-#define GLOVES_LAYER			12		//Glove-slot item
-#define BELT_LAYER				13		//Belt-slot item
-#define SUIT_LAYER				14		//Suit-slot item
-#define TAIL_NORTH_LAYER		15		//Some species have tails to render (As viewed from the N, E, or W)
-#define GLASSES_LAYER			16		//Eye-slot item
-#define BELT_LAYER_ALT			17		//Belt-slot item (when set to be above suit via verb)
-#define SUIT_STORE_LAYER		18		//Suit storage-slot item
-#define BACK_LAYER				19		//Back-slot item
-#define HAIR_LAYER				20		//The human's hair
-#define HAIR_ACCESSORY_LAYER	21		//VOREStation edit. Simply move this up a number if things are added.
-#define EARS_LAYER				22		//Both ear-slot items (combined image)
-#define EYES_LAYER				23		//Mob's eyes (used for glowing eyes)
-#define FACEMASK_LAYER			24		//Mask-slot item
-#define HEAD_LAYER				25		//Head-slot item
-#define HANDCUFF_LAYER			26		//Handcuffs, if the human is handcuffed, in a secret inv slot
-#define LEGCUFF_LAYER			27		//Same as handcuffs, for legcuffs
-#define L_HAND_LAYER			28		//Left-hand item
-#define R_HAND_LAYER			29		//Right-hand item
-#define WING_LAYER				30		//Wings or protrusions over the suit.
-#define TAIL_NORTH_LAYER_ALT	31		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	32		//Effects drawn by modifiers
-#define FIRE_LAYER				33		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			34		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			35		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			35		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+#define TAIL_LOWER_LAYER		7		//Tail as viewed from the south
+#define WING_LOWER_LAYER		8		//Wings as viewed from the south
+#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
+#define UNIFORM_LAYER			10		//Uniform-slot item
+#define ID_LAYER				11		//ID-slot item
+#define SHOES_LAYER				12		//Shoe-slot item
+#define GLOVES_LAYER			13		//Glove-slot item
+#define BELT_LAYER				14		//Belt-slot item
+#define SUIT_LAYER				15		//Suit-slot item
+#define TAIL_UPPER_LAYER		16	//Some species have tails to render (As viewed from the N, E, or W)
+#define GLASSES_LAYER			17		//Eye-slot item
+#define BELT_LAYER_ALT			18		//Belt-slot item (when set to be above suit via verb)
+#define SUIT_STORE_LAYER		19		//Suit storage-slot item
+#define BACK_LAYER				20		//Back-slot item
+#define HAIR_LAYER				21		//The human's hair
+#define HAIR_ACCESSORY_LAYER	22		//VOREStation edit. Simply move this up a number if things are added.
+#define EARS_LAYER				23		//Both ear-slot items (combined image)
+#define EYES_LAYER				24		//Mob's eyes (used for glowing eyes)
+#define FACEMASK_LAYER			25		//Mask-slot item
+#define HEAD_LAYER				26		//Head-slot item
+#define HANDCUFF_LAYER			27		//Handcuffs, if the human is handcuffed, in a secret inv slot
+#define LEGCUFF_LAYER			28		//Same as handcuffs, for legcuffs
+#define L_HAND_LAYER			29		//Left-hand item
+#define R_HAND_LAYER			30		//Right-hand item
+#define WING_LAYER				31		//Wings or protrusions over the suit.
+#define VORE_BELLY_LAYER		32		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			33		//CHOMPStation edit - Move this and everything after up if things are added.
+#define TAIL_UPPER_LAYER_ALT	34		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	35		//Effects drawn by modifiers
+#define FIRE_LAYER				36		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			37		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			38		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			38		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
-
-#define GET_TAIL_LAYER (dir == SOUTH ? TAIL_SOUTH_LAYER : TAIL_NORTH_LAYER)
 
 /mob/living/carbon/human
 	var/list/overlays_standing[TOTAL_LAYERS]
@@ -122,10 +123,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
 	var/desired_scale_y = icon_scale_y
-	
+
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	
+
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.icon_scale_x_percent))
 			desired_scale_x *= M.icon_scale_x_percent
@@ -136,10 +137,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
+	center_offset = species.center_offset //CHOMPEdit
+	if(offset_override) //CHOMPEdit
+		center_offset = 0 //CHOMPEdit
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
 		appearance_flags &= ~PIXEL_SCALE
+		center_offset = 0 //CHOMPEdit
 	//VOREStation Edit End
 
 	// Regular stuff again.
@@ -151,20 +156,29 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		anim_time = 1 //Thud
 
 	if(lying && !species.prone_icon) //Only rotate them if we're not drawing a specific icon for being prone.
-		var/randn = rand(1, 2)
-		if(randn <= 1) // randomly choose a rotation
-			M.Turn(-90)
+		// CHOMPEdit Start Loafy Time
+		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
+			update_tail_showing()
+			M.Scale(desired_scale_x, desired_scale_y)
 		else
-			M.Turn(90)
-		M.Scale(desired_scale_y, desired_scale_x)//VOREStation Edit
-		if(species.icon_height == 64)//VOREStation Edit
-			M.Translate(13,-22)
-		else
-			M.Translate(1,-6)
+			var/randn = rand(1, 2)
+			if(randn <= 1) // randomly choose a rotation
+				M.Turn(-90)
+			else
+				M.Turn(90)
+			if(species.icon_height == 64)
+				M.Translate(13,-22)
+			else
+				M.Translate(1,-6)
+			M.Scale(desired_scale_y, desired_scale_x)
+		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
-		M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
+		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
+			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
 	animate(src, transform = M, time = anim_time)
@@ -252,6 +266,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/obj/item/organ/external/head/head = organs_by_name[BP_HEAD]
 	if(head)
 		if(!istype(head, /obj/item/organ/external/stump))
+			if (species.selects_bodytype != SELECTS_BODYTYPE_FALSE)
+				var/headtype = GLOB.all_species[species.base_species]?.has_limbs[BP_HEAD]
+				var/obj/item/organ/external/head/headtypepath = headtype["path"]
+				if (headtypepath)
+					head.eye_icon = initial(headtypepath.eye_icon)
+					head.eye_icon_location = initial(headtypepath.eye_icon_location)
 			icon_key += "[head.eye_icon]"
 	for(var/organ_tag in species.has_limbs)
 		var/obj/item/organ/external/part = organs_by_name[organ_tag]
@@ -302,7 +322,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
 				icon_key += "_digi"
 			//ChompEDIT END
-			
+
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
 	if(human_icon_cache[icon_key])
@@ -378,6 +398,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//tail
 	update_tail_showing()
 	update_wing_showing()
+	update_vore_belly_sprite()
+	update_vore_tail_sprite()
 
 
 /mob/living/carbon/human/proc/update_skin()
@@ -723,16 +745,34 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!l_ear && !r_ear)
 		return //Why bother, if no ear sprites
 
+	if(hide_headset) //CHOMPEdit Start
+		if(l_ear && istype(l_ear, /obj/item/device/radio/headset)) //No need to generate blank images if only headsets are present.
+			if(!r_ear || istype(r_ear, /obj/item/device/radio/headset))
+				return
+		if(r_ear && istype(r_ear, /obj/item/device/radio/headset))
+			if(!l_ear || istype(l_ear, /obj/item/device/radio/headset))
+				return
+
 	// Blank image upon which to layer left & right overlays.
 	var/image/both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing", layer = BODY_LAYER+EARS_LAYER)
 
 	if(l_ear)
-		var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
-		both.add_overlay(standing)
+		if(istype(l_ear, /obj/item/device/radio/headset))
+			if(!hide_headset)
+				var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+				both.add_overlay(standing)
+		else
+			var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+			both.add_overlay(standing)
 
 	if(r_ear)
-		var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
-		both.add_overlay(standing)
+		if(istype(r_ear, /obj/item/device/radio/headset))
+			if(!hide_headset)
+				var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+				both.add_overlay(standing)
+		else
+			var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+			both.add_overlay(standing) //CHOMPEdit End
 
 	overlays_standing[EARS_LAYER] = both
 	apply_layer(EARS_LAYER)
@@ -845,7 +885,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		suit_sprite = INV_SUIT_DEF_ICON
 
 	var/icon/c_mask = null
-	var/tail_is_rendered = (overlays_standing[TAIL_NORTH_LAYER] || overlays_standing[TAIL_NORTH_LAYER_ALT] || overlays_standing[TAIL_SOUTH_LAYER])
+	var/tail_is_rendered = (overlays_standing[TAIL_UPPER_LAYER] || overlays_standing[TAIL_UPPER_LAYER_ALT] || overlays_standing[TAIL_LOWER_LAYER])
 	var/valid_clip_mask = tail_style?.clip_mask
 
 	if(tail_is_rendered && valid_clip_mask && !(istype(suit) && suit.taurized)) //Clip the lower half of the suit off using the tail's clip mask for taurs since taur bodies aren't hidden.
@@ -958,19 +998,29 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	apply_layer(L_HAND_LAYER)
 
+/mob/living/carbon/human/proc/get_tail_layer()
+	var/list/lower_layer_dirs = list(SOUTH)
+	if(tail_style)
+		lower_layer_dirs = tail_style.lower_layer_dirs.Copy()
+
+	if(dir in lower_layer_dirs)
+		return TAIL_LOWER_LAYER
+	else
+		return TAIL_UPPER_LAYER
+
 /mob/living/carbon/human/proc/update_tail_showing()
 	if(QDESTROYING(src))
 		return
 
-	remove_layer(TAIL_NORTH_LAYER)
-	remove_layer(TAIL_NORTH_LAYER_ALT)
-	remove_layer(TAIL_SOUTH_LAYER)
+	remove_layer(TAIL_UPPER_LAYER)
+	remove_layer(TAIL_UPPER_LAYER_ALT)
+	remove_layer(TAIL_LOWER_LAYER)
 
-	var/tail_layer = GET_TAIL_LAYER
+	var/tail_layer = get_tail_layer()
 	if(src.tail_style && src.tail_style.clip_mask_state)
-		tail_layer = TAIL_NORTH_LAYER		// Use default, let clip mask handle everything
-	if(tail_alt && tail_layer == TAIL_NORTH_LAYER)
-		tail_layer = TAIL_NORTH_LAYER_ALT
+		tail_layer = TAIL_UPPER_LAYER		// Use default, let clip mask handle everything
+	if(tail_alt && tail_layer == TAIL_UPPER_LAYER)
+		tail_layer = TAIL_UPPER_LAYER_ALT
 
 	var/image/tail_image = get_tail_image()
 	if(tail_image)
@@ -1009,16 +1059,16 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	return tail_icon
 
 /mob/living/carbon/human/proc/set_tail_state(var/t_state)
-	var/tail_layer = GET_TAIL_LAYER
+	var/tail_layer = get_tail_layer()
 	if(src.tail_style && src.tail_style.clip_mask_state)
-		tail_layer = TAIL_NORTH_LAYER		// Use default, let clip mask handle everything
-	if(tail_alt && tail_layer == TAIL_NORTH_LAYER)
-		tail_layer = TAIL_NORTH_LAYER_ALT
+		tail_layer = TAIL_UPPER_LAYER		// Use default, let clip mask handle everything
+	if(tail_alt && tail_layer == TAIL_UPPER_LAYER)
+		tail_layer = TAIL_UPPER_LAYER_ALT
 	var/image/tail_overlay = overlays_standing[tail_layer]
 
-	remove_layer(TAIL_NORTH_LAYER)
-	remove_layer(TAIL_NORTH_LAYER_ALT)
-	remove_layer(TAIL_SOUTH_LAYER)
+	remove_layer(TAIL_UPPER_LAYER)
+	remove_layer(TAIL_UPPER_LAYER_ALT)
+	remove_layer(TAIL_LOWER_LAYER)
 
 	if(tail_overlay)
 		overlays_standing[tail_layer] = tail_overlay
@@ -1036,9 +1086,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		return
 
 	var/t_state = "[species.get_tail(src)]_once"
-	var/tail_layer = GET_TAIL_LAYER
+	var/tail_layer = get_tail_layer()
 	if(src.tail_style && src.tail_style.clip_mask_state)
-		tail_layer = TAIL_NORTH_LAYER		// Use default, let clip mask handle everything
+		tail_layer = TAIL_UPPER_LAYER		// Use default, let clip mask handle everything
 
 	var/image/tail_overlay = overlays_standing[tail_layer]
 	if(tail_overlay && tail_overlay.icon_state == t_state)
@@ -1084,13 +1134,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		return
 
 	remove_layer(WING_LAYER)
+	remove_layer(WING_LOWER_LAYER)
 
-	var/image/wing_image = get_wing_image()
+	var/image/wing_image = get_wing_image(FALSE)
 	if(wing_image)
 		wing_image.layer = BODY_LAYER+WING_LAYER
 		overlays_standing[WING_LAYER] = wing_image
+	if(wing_style && wing_style.multi_dir)
+		wing_image = get_wing_image(TRUE)
+		if(wing_image)
+			wing_image.layer = BODY_LAYER+WING_LOWER_LAYER
+			overlays_standing[WING_LOWER_LAYER] = wing_image
 
 	apply_layer(WING_LAYER)
+	apply_layer(WING_LOWER_LAYER)
 
 /mob/living/carbon/human/update_modifier_visuals()
 	if(QDESTROYING(src))
@@ -1104,8 +1161,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/image/effects = new()
 	for(var/datum/modifier/M in modifiers)
 		if(M.mob_overlay_state)
-			var/image/I = image(icon = 'icons/mob/modifier_effects.dmi', icon_state = M.mob_overlay_state)
-			effects.overlays += I // Leaving this as overlays +=
+			if(M.icon_override) //VOREStation Edit. Override for the modifer icon.
+				var/image/I = image(icon = 'icons/mob/modifier_effects_vr.dmi', icon_state = M.mob_overlay_state)
+				I.color = M.effect_color
+				effects.overlays += I // Leaving this as overlays +=
+			else
+				var/image/I = image(icon = 'icons/mob/modifier_effects.dmi', icon_state = M.mob_overlay_state)
+				I.color = M.effect_color
+				effects.overlays += I // Leaving this as overlays +=
 
 	overlays_standing[MODIFIER_EFFECTS_LAYER] = effects
 
@@ -1157,7 +1220,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		overlays_standing[SURGERY_LAYER] = total
 		apply_layer(SURGERY_LAYER)
 
-/mob/living/carbon/human/proc/get_wing_image()
+/mob/living/carbon/human/proc/get_wing_image(var/under_layer)
 	if(QDESTROYING(src))
 		return
 
@@ -1171,7 +1234,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//If you have custom wings selected
 	if(wing_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL) && !wings_hidden) //VOREStation Edit
-		var/icon/wing_s = new/icon("icon" = wing_style.icon, "icon_state" = flapping && wing_style.ani_state ? wing_style.ani_state : wing_style.icon_state)
+		var/wing_state = (flapping && wing_style.ani_state) ? wing_style.ani_state : wing_style.icon_state
+		if(wing_style.multi_dir)
+			wing_state += "_[under_layer ? "back" : "front"]"
+		var/icon/wing_s = new/icon("icon" = wing_style.icon, "icon_state" = wing_state)
 		if(wing_style.do_colouration)
 			wing_s.Blend(rgb(src.r_wing, src.g_wing, src.b_wing), wing_style.color_blend_mode)
 		if(wing_style.extra_overlay)
@@ -1193,6 +1259,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		var/image/working = image(wing_s)
 		if(wing_style.em_block)
 			working.overlays += em_block_image_generic(working) // Leaving this as overlays +=
+		working.pixel_x -= wing_style.wing_offset
 		return working
 
 /mob/living/carbon/human/proc/get_ears_overlay()
@@ -1224,18 +1291,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 /mob/living/carbon/human/proc/get_tail_image()
 	//If you are FBP with tail style and didn't set a custom one
 	var/datum/robolimb/model = isSynthetic()
-	if(istype(model) && model.includes_tail && !tail_style)
+	if(istype(model) && model.includes_tail && !tail_style && !tail_hidden)
 		var/icon/tail_s = new/icon("icon" = synthetic.icon, "icon_state" = "tail")
 		tail_s.Blend(rgb(src.r_skin, src.g_skin, src.b_skin), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
 		return image(tail_s)
 
 	//If you have a custom tail selected
-	if(tail_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL && !istaurtail(tail_style)))
-		var/icon/tail_s = new/icon("icon" = tail_style.icon, "icon_state" = wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state)
+	if(tail_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL && !istaurtail(tail_style)) && !tail_hidden)
+		var/icon/tail_s = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = (wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state)) //CHOMPEdit
+		if(tail_style.can_loaf && !is_shifted)
+			pixel_y = (resting) ? -tail_style.loaf_offset*size_multiplier : default_pixel_y //move player down, then taur up, to fit the overlays correctly // VOREStation Edit: Taur Loafing
 		if(tail_style.do_colouration)
 			tail_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
 		if(tail_style.extra_overlay)
-			var/icon/overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay)
+			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay) //CHOMPEdit
 			if(wagging && tail_style.ani_state)
 				overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay_w)
 				overlay.Blend(rgb(src.r_tail2, src.g_tail2, src.b_tail2), tail_style.color_blend_mode)
@@ -1247,7 +1316,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				qdel(overlay)
 
 		if(tail_style.extra_overlay2)
-			var/icon/overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay2)
+			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2) //CHOMPEdit
 			if(wagging && tail_style.ani_state)
 				overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)
 				overlay.Blend(rgb(src.r_tail3, src.g_tail3, src.b_tail3), tail_style.color_blend_mode)
@@ -1298,9 +1367,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef GLOVES_LAYER
 #undef BELT_LAYER
 #undef SUIT_LAYER
-#undef TAIL_NORTH_LAYER
-#undef TAIL_SOUTH_LAYER
-#undef GET_TAIL_LAYER
+#undef TAIL_UPPER_LAYER
+#undef TAIL_LOWER_LAYER
 #undef GLASSES_LAYER
 #undef BELT_LAYER_ALT
 #undef SUIT_STORE_LAYER
@@ -1314,6 +1382,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef LEGCUFF_LAYER
 #undef L_HAND_LAYER
 #undef R_HAND_LAYER
+#undef VORE_BELLY_LAYER
 #undef MODIFIER_EFFECTS_LAYER
 #undef FIRE_LAYER
 #undef WATER_LAYER

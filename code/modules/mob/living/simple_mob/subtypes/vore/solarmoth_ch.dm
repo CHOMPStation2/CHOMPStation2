@@ -17,19 +17,19 @@
 
 	var/mycolour = COLOR_BLUE //Variable Lighting colours
 	var/original_temp = null //Value to remember temp
-	var/set_temperature = T0C + 450	//Sets the target point of 450 degrees celsius
-	var/heating_power = 100000	//This controls the strength at which it heats the environment. // The number seems ridiculous but this is actually pretty reasonable - Lunar
+	var/set_temperature = T0C + 10000	//Sets the target point of 10k degrees celsius
+	var/heating_power = 100000		//This controls the strength at which it heats the environment.
 	var/emp_heavy = 2
 	var/emp_med = 4
 	var/emp_light = 7
 	var/emp_long = 10
 
 	faction = "grubs"
-	maxHealth = 200 // Tanky fuckers.
-	health = 200 // Tanky fuckers.
+	maxHealth = 400 // Tanky fuckers.
+	health = 400 // Tanky fuckers.
 
-	melee_damage_lower = 5
-	melee_damage_upper = 10
+	melee_damage_lower = 1
+	melee_damage_upper = 5
 
 	movement_cooldown = 5
 
@@ -59,18 +59,20 @@
 	minbodytemp = 0
 	heat_damage_per_tick = 0 //Even if the atmos stuff doesn't work, at least it won't take any damage.
 
-	armor = list(
-				"melee" = -50,
-				"bullet" = 0,
-				"laser" = 50,
-				"energy" = 50,
-				"bomb" = 25,
+	armor = list(			
+				"melee" = 0,
+				"bullet" = 90,
+				"laser" = 100,
+				"energy" = 100,
+				"bomb" = 100,
 				"bio" = 100,
 				"rad" = 100)
+				
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
-
+	
 /mob/living/simple_mob/vore/solarmoth/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
@@ -99,24 +101,26 @@
 /mob/living/simple_mob/vore/solarmoth/Life()
 	. = ..()
 	if(icon_state != icon_dead) //I mean on death() Life() should disable but i guess doesnt hurt to make sure -shark
-		var/datum/gas_mixture/env = loc.return_air() //Gets all the information on the local air.
-		var/transfer_moles = 0.25 * env.total_moles //The bigger the room, the harder it is to heat the room.
-		var/datum/gas_mixture/removed = env.remove(transfer_moles)
-		var/heat_transfer = removed.get_thermal_energy_change(set_temperature)
-		if(heat_transfer > 0 && env.temperature < T0C + 200)	//This should start heating the room at a moderate pace up to 200 degrees celsius.
-			heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater
-			removed.add_thermal_energy(heat_transfer)
+		var/turf/moth_loc = get_turf(src)
+		if(isturf(moth_loc) && moth_loc.air)
+			var/datum/gas_mixture/env = moth_loc.return_air() //Gets all the information on the local air.
+			var/transfer_moles = 0.25 * env.total_moles //The bigger the room, the harder it is to heat the room.
+			var/datum/gas_mixture/removed = env.remove(transfer_moles)
+			var/heat_transfer = removed.get_thermal_energy_change(set_temperature)
+			if(heat_transfer > 0 && env.temperature < T0C + 200)	//This should start heating the room at a moderate pace up to 200 degrees celsius.
+				heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater
+				removed.add_thermal_energy(heat_transfer)
+			
+			else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 10,000 degrees celsius. So this thing will start cooking crazy hot between the temperatures of 200C and 10,000C.
+				heating_power = original_temp*100 //Changed to work variable -shark //FLAME ON! This will make the moth heat up the room at an incredible rate.
+				heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater. Except it's hot, so yeah.
+				removed.add_thermal_energy(heat_transfer)
+			
+			else
+				return
 
-		else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 450 degrees celsius. Heating rate should increase between 200 and 450 C.
-			heating_power = original_temp*100
-			heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater. Except it's hot, so yeah.
-			removed.add_thermal_energy(heat_transfer)
-
-		else
-			return
-
-		env.merge(removed)
-
+			env.merge(removed)
+		
 
 
 	//Since I'm changing hyper mode to be variable we need to store old power
@@ -132,10 +136,11 @@
 /mob/living/simple_mob/vore/solarmoth/death()
 	explode()
 	..()
-
+	
 /mob/living/simple_mob/vore/solarmoth/gib() //This baby will explode no matter what you do to it.
 	explode()
 	..()
+	
 
 
 /mob/living/simple_mob/vore/solarmoth/handle_light()
@@ -156,7 +161,9 @@
 /mob/living/simple_mob/vore/solarmoth/lunarmoth
 	name = "lunarmoth"
 	desc = "A majestic sparkling lunarmoth. Also a slight engineering hazard."
+	
 	var/nospampls = 0
+	
 	cold_damage_per_tick = 0
 	//ATMOS
 	set_temperature = T0C - 10000
@@ -169,7 +176,7 @@
 	if(prob(25))
 		for(var/obj/machinery/light/light in range(5, src))
 			if(prob(50))
-				light.broken()
+				light.broken() 
 	if(prob(10))
 		for(var/obj/structure/window/window in range(5, src))
 			if(prob(50))
@@ -180,7 +187,7 @@
 				visible_message("<span class='danger'>Emergency Shutter malfunction!</span>")
 				door.blocked = 0
 				door.open(1)
-
+	
 	spawn(100)
 		nospampls = 0
 
@@ -188,5 +195,4 @@
 	..()
 	if(!nospampls)
 		chilltheglass() //shatter and broken calls for glass and lights. Also some special thing.
-
-
+	

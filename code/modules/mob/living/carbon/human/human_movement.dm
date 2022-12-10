@@ -20,7 +20,14 @@
 			. += M.slowdown
 
 	var/health_deficiency = (getMaxHealth() - health)
-	if(health_deficiency >= 40) . += (health_deficiency / 25)
+	if(istype(src, /mob/living/carbon/human)) //VOREStation Edit Start
+		var/mob/living/carbon/human/H = src
+		health_deficiency *= H.species.trauma_mod //Species pain sensitivity does not apply to painkillers, so we apply it before
+	if(health_deficiency >= 40)
+		if(chem_effects[CE_PAINKILLER]) //On painkillers? Reduce pain! On anti-painkillers? Increase pain!
+			health_deficiency = max(0, health_deficiency - src.chem_effects[CE_PAINKILLER])
+		if(health_deficiency >= 40) //Still in enough pain for it to be significant?
+			. += (health_deficiency / 25) //VOREStation Edit End
 
 	if(can_feel_pain())
 		if(halloss >= 10) . += (halloss / 10) //halloss shouldn't slow you down if you can't even feel it
@@ -32,8 +39,6 @@
 	if (feral >= 10) //crazy feral animals give less and less of a shit about pain and hunger as they get crazier
 		. = max(species.slowdown, species.slowdown+((.-species.slowdown)/(feral/10))) // As feral scales to damage, this amounts to an effective +1 slowdown cap
 		if(shock_stage >= 10) . -= 1.5 //this gets a +3 later, feral critters take reduced penalty
-	if(reagents.has_reagent("numbenzyme"))
-		. += 1.5 //A tad bit of slowdown.
 	if(riding_datum) //Bit of slowdown for taur rides if rider is bigger or fatter than mount.
 		var/datum/riding/R = riding_datum
 		var/mob/living/L = R.ridden
@@ -42,8 +47,8 @@
 				var/mob/living/carbon/human/H = M
 				if(H.size_multiplier > L.size_multiplier)
 					. += 1
-				if(H.weight > L.weight)
-					. += 1
+				//if(H.weight > L.weight) weight should not have mechanical impact
+					//. += 1
 	//VOREstation end
 
 	if(istype(buckled, /obj/structure/bed/chair/wheelchair))
@@ -202,7 +207,13 @@
 	if(restrained())	return 0
 
 	if(..()) //Can move due to other reasons, don't use jetpack fuel
-		return 1
+		return TRUE
+
+	if(species.can_space_freemove || (species.can_zero_g_move && !istype(get_turf(src), /turf/space))) //VOREStation Edit.
+		return TRUE  //VOREStation Edit.
+
+	if(flying) //VOREStation Edit. If you're flying, you glide around!
+		return TRUE  //VOREStation Edit.
 
 	//Do we have a working jetpack?
 	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
@@ -210,22 +221,23 @@
 	if(thrust)
 		if(((!check_drift) || (check_drift && thrust.stabilization_on)) && (!lying) && (thrust.do_thrust(0.01, src)))
 			inertia_dir = 0
-			return 1
-	if(flying) //VOREStation Edit. If you're flying, you glide around!
-		return 0  //VOREStation Edit.
+			return TRUE
 
-	return 0
+	return FALSE
 
 
 /mob/living/carbon/human/Process_Spaceslipping(var/prob_slip = 5)
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
 
 	if(species.flags & NO_SLIP)
-		return 0
+		return FALSE
+
+	if(species.can_space_freemove || species.can_zero_g_move)
+		return FALSE
 
 	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
 	if(thrust?.can_thrust(0.01))
-		return 0
+		return FALSE
 
 	if(stat)
 		prob_slip = 0 // Changing this to zero to make it line up with the comment, and also, make more sense.

@@ -50,6 +50,7 @@
 		// Do this after the potential vore, so we get the belly
 		update_icon()
 
+		/* CHOMPEdit, comment out and handle in custom proc
 		//Affect nearby lights
 		var/destroy_lights = 0
 		if(eye_state == RED_EYES)
@@ -66,6 +67,8 @@
 					L.broken()
 			else
 				L.flicker(10)
+		*/
+		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
 	//Shifting out
 	else

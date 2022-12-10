@@ -38,6 +38,8 @@
 	var/vision_flags_mob = 0
 	var/darkness_view = 0
 
+	var/can_uninstall = TRUE
+
 	var/list/planes_enabled = null	// List of vision planes this nifsoft enables when active
 
 	var/vision_exclusive = FALSE	//Whether or not this NIFSoft provides exclusive vision modifier
@@ -67,6 +69,8 @@
 
 //Called when the software is removed from the NIF
 /datum/nifsoft/proc/uninstall()
+	if(!can_uninstall)
+		return nif.uninstall(src)
 	if(nif)
 		if(active)
 			deactivate()
@@ -377,32 +381,3 @@
 	..()
 	for(var/i = 0 to 7)
 		new /obj/item/weapon/disk/nifsoft/mining(src)
-
-// Pilot Disk //
-/obj/item/weapon/disk/nifsoft/pilot
-	name = "NIFSoft Uploader - Pilot"
-	desc = "Contains free NIFSofts useful for pilot members.\n\
-	It has a small label: \n\
-	\"Portable NIFSoft Installation Media. \n\
-	Align ocular port with eye socket and depress red plunger.\""
-
-	icon_state = "pilot"
-	stored_organic = /datum/nifsoft/package/pilot
-	stored_synthetic = /datum/nifsoft/package/pilot_synth
-
-/datum/nifsoft/package/pilot
-	software = list(/datum/nifsoft/spare_breath)
-
-/datum/nifsoft/package/pilot_synth
-	software = list(/datum/nifsoft/pressure,/datum/nifsoft/heatsinks)
-
-/obj/item/weapon/storage/box/nifsofts_pilot
-	name = "pilot nifsoft uploaders"
-	desc = "A box of free nifsofts for pilot employees."
-	icon = 'icons/obj/boxes.dmi'
-	icon_state = "nifsoft_kit_pilot"
-
-/obj/item/weapon/storage/box/nifsofts_pilot/New()
-	..()
-	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/pilot(src)

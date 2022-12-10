@@ -446,8 +446,13 @@
 	},
 /area/groundbase/wilderness/west)
 "fM" = (
+<<<<<<< HEAD
 /turf/simulated/mineral/ignore_cavegen,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/mineral/ignore_cavegen/virgo3c,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> 3e5775ea6e... Merge pull request #13634 from Heroman3003/3c-turfs
 "fQ" = (
 /obj/machinery/chem_master,
 /obj/machinery/camera/network/research_outpost{

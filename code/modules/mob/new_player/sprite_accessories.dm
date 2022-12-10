@@ -56,7 +56,7 @@
 	var/flags
 
 /datum/sprite_accessory/hair/eighties
-	name = "80's"
+	name = "80s"
 	icon_state = "hair_80s"
 	flags = HAIR_TIEABLE
 
@@ -1605,27 +1605,27 @@ shaved
 	icon_state = "facial_dwarf"
 
 /datum/sprite_accessory/facial_hair/threeOclock
-	name = "3 O'clock Shadow"
+	name = "3 O-clock Shadow"
 	icon_state = "facial_3oclock"
 
 /datum/sprite_accessory/facial_hair/threeOclockstache
-	name = "3 O'clock Shadow and Moustache"
+	name = "3 O-clock Shadow and Moustache"
 	icon_state = "facial_3oclockmoustache"
 
 /datum/sprite_accessory/facial_hair/fiveOclock
-	name = "5 O'clock Shadow"
+	name = "5 O-clock Shadow"
 	icon_state = "facial_5oclock"
 
 /datum/sprite_accessory/facial_hair/fiveOclockstache
-	name = "5 O'clock Shadow and Moustache"
+	name = "5 O-clock Shadow and Moustache"
 	icon_state = "facial_5oclockmoustache"
 
 /datum/sprite_accessory/facial_hair/sevenOclock
-	name = "7 O'clock Shadow"
+	name = "7 O-clock Shadow"
 	icon_state = "facial_7oclock"
 
 /datum/sprite_accessory/facial_hair/sevenOclockstache
-	name = "7 O'clock Shadow and Moustache"
+	name = "7 O-clock Shadow and Moustache"
 	icon_state = "facial_7oclockmoustache"
 
 /datum/sprite_accessory/facial_hair/mutton
@@ -1708,22 +1708,49 @@ shaved
 //Skrell 'hairstyles'
 
 /datum/sprite_accessory/hair/skr
-	name = "Skrell Average Tentacles"
-	icon_state = "skrell_hair_average"
+	name = "Tentacles, Average"
+	icon_state = "skrell_short"
 	species_allowed = list(SPECIES_SKRELL, SPECIES_EVENT1, SPECIES_EVENT2, SPECIES_EVENT3)
 
-/datum/sprite_accessory/hair/skr/tentacle_veryshort
-	name = "Skrell Short Tentacles"
-	icon_state = "skrell_hair_short"
-	gender = MALE
+/datum/sprite_accessory/hair/skr/pullback
+	name = "Tentacles, Average, Pullback"
+	icon_state = "skrell_short_pullback"
 
-/datum/sprite_accessory/hair/skr/tentacle_average
-	name = "Skrell Long Tentacles"
-	icon_state = "skrell_hair_long"
+/datum/sprite_accessory/hair/skr/very_short
+	name = "Tentacles, Short"
+	icon_state = "skrell_very_short"
 
-/datum/sprite_accessory/hair/skr/tentacle_verylong
-	name = "Skrell Very Long Tentacles"
-	icon_state = "skrell_hair_verylong"
+/datum/sprite_accessory/hair/skr/long
+	name = "Tentacles, Long"
+	icon_state = "skrell_long"
+
+/datum/sprite_accessory/hair/skr/long/pullback
+	name = "Tentacles, Long, Pullback"
+	icon_state = "skrell_long_pullback"
+
+/datum/sprite_accessory/hair/skr/long/scarf
+	name = "Tentacles, Long, Scarf"
+	icon_state = "skrell_long_scarf"
+
+/datum/sprite_accessory/hair/skr/long/wavy
+	name = "Tentacles, Long, Wavy"
+	icon_state = "skrell_long_wavy"
+
+/datum/sprite_accessory/hair/skr/very_long
+	name = "Tentacles, Very Long"
+	icon_state = "skrell_very_long"
+
+/datum/sprite_accessory/hair/skr/very_long/pullback
+	name = "Tentacles, Very Long, Pullback"
+	icon_state = "skrell_very_long_pullback"
+
+/datum/sprite_accessory/hair/skr/very_long/scarf
+	name = "Tentacles, Very Long, Scarf"
+	icon_state = "skrell_very_long_scarf"
+
+/datum/sprite_accessory/hair/skr/very_long/wavy
+	name = "Tentacles, Very Long, Wavy"
+	icon_state = "skrell_very_long_wavy"
 
 //Tajaran hairstyles
 /datum/sprite_accessory/hair/taj

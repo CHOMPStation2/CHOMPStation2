@@ -36,7 +36,7 @@
 /datum/gear/uniform/job_khi/med
 	display_name = "ge uniform, med" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/med
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Field Medic","Psychiatrist")
 
 /datum/gear/uniform/job_khi/eng
 	display_name = "ge uniform, eng" //CHOMPedit: changed to GE suit
@@ -290,3 +290,29 @@ Talon jumpsuit
 	display_name = "undersuit, command (SM/HoP)"
 	allowed_roles = list("Site Manager", "Head of Personnel")
 	path = /obj/item/clothing/under/undersuit/command
+
+//Altevian Uniforms
+/datum/gear/uniform/altevian
+	description = "An extremely comfortable set of clothing that's made to help people handle their day to day work around the fleets with little to no discomfort."
+	display_name = "altevian uniform selection"
+
+/datum/gear/uniform/altevian/New()
+	..()
+	var/list/pants = list()
+	for(var/obj/item/clothing/under/pants/altevian/pants_type as anything in typesof(/obj/item/clothing/under/pants/altevian))
+		pants[initial(pants_type.name)] = pants_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(pants))
+
+
+//Feminine Colored Jumpsuits.
+/datum/gear/suit/f_jumpsuit_alt
+	display_name = "Colored Feminine Jumpsuit"
+	path = /obj/item/clothing/under/color/fjumpsuit
+
+/datum/gear/uniform/f_jumpsuit_alt/New()
+	..()
+	var/list/jumpsuits = list()
+	for(var/jumpsuit_style in typesof(/obj/item/clothing/under/color/fjumpsuit))
+		var/obj/item/clothing/under/color/fjumpsuit/jumpsuit = jumpsuit_style
+		jumpsuits[initial(jumpsuit.name)] = jumpsuit
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(jumpsuits))

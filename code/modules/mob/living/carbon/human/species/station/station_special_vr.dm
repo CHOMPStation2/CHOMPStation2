@@ -15,9 +15,10 @@
 	brute_mod = 0.8		//About as tanky to brute as a Unathi. They'll probably snap and go feral when hurt though.
 	burn_mod =  1.15	//As vulnerable to burn as a Tajara.
 	base_species = "Xenochimera"
-	selects_bodytype = TRUE
+	selects_bodytype = SELECTS_BODYTYPE_CUSTOM
 
 	num_alternate_languages = 3
+	species_language = null
 	secondary_langs = list("Sol Common")
 	//color_mult = 1 //It seemed to work fine in testing, but I've been informed it's unneeded.
 	tail = "tail" //Scree's tail. Can be disabled in the vore tab by choosing "hide species specific tail sprite"
@@ -26,9 +27,6 @@
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
-		/mob/living/proc/flying_toggle,
-		/mob/living/proc/flying_vore_toggle,
-		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb
 
@@ -151,14 +149,14 @@
 		cause = "jittery"
 
 	//check to see if they go feral if they weren't before
-	if(!feral)
+	if(!feral && !isbelly(H.loc))
 		// if stress is below 15, no chance of snapping. Also if they weren't feral before, they won't suddenly become feral unless they get MORE stressed
 		if((currentstress > laststress) && prob(clamp(currentstress-15, 0, 100)) )
 			go_feral(H, currentstress, cause)
 			feral = currentstress //update the local var
 
 		//they didn't go feral, give 'em a chance of hunger messages
-		else if(H.nutrition <= 200 && prob(0.5) && !isbelly(H.loc))
+		else if(H.nutrition <= 200 && prob(0.5))
 			switch(H.nutrition)
 				if(150 to 200)
 					to_chat(H,"<span class='info'>You feel rather hungry. It might be a good idea to find some some food...</span>")
@@ -167,7 +165,8 @@
 					danger = TRUE
 
 	//now the check's done, update their brain so it remembers how stressed they were
-	B.laststress = currentstress
+	if(B && !isbelly(H.loc)) //another sanity check for brain implant shenanigans, also no you don't get to hide in a belly and get your laststress set to a huge amount to skip rolls
+		B.laststress = currentstress
 
 	// Handle being feral
 	if(feral)
@@ -340,6 +339,7 @@
 	burn_mod =  1.15	//15% burn damage increase. They're spiders. Aerosol can+lighter = dead spiders.
 
 	num_alternate_languages = 3
+	species_language = LANGUAGE_VESPINAE
 	secondary_langs = list(LANGUAGE_VESPINAE)
 	color_mult = 1
 	tail = "tail" //Spider tail.
@@ -428,6 +428,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
+	species_language = LANGUAGE_CANILUNZT
 	primitive_form = "Wolpin"
 	color_mult = 1
 	icon_height = 64

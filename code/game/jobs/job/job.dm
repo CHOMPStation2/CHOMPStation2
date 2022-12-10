@@ -147,7 +147,7 @@
 		var/mob/living/carbon/human/dummy/mannequin/mannequin = get_mannequin("#job_icon")
 		dress_mannequin(mannequin)
 		mannequin.dir = SOUTH
-		COMPILE_OVERLAYS(mannequin)
+		mannequin.ImmediateOverlayUpdate()
 		var/icon/preview_icon = getFlatIcon(mannequin)
 
 		preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
@@ -174,6 +174,10 @@
 	//return (brain_type && LAZYACCESS(ideal_age_by_species, brain_type)) || LAZYACCESS(ideal_age_by_species, brain_type) || ideal_character_age //VOREStation Removal
 
 /datum/job/proc/is_species_banned(species_name, brain_type)
+	// CHOMPEdit begin -- Shadekin cannot be any crew position
+	if(species_name == SPECIES_SHADEKIN)
+		return TRUE
+	// CHOMPEdit end
 	return FALSE // VOREStation Edit - Any species can be any job.
 	/* VOREStation Removal
 	if(banned_job_species == null)

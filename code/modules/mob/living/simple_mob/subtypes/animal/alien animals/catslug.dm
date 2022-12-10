@@ -51,7 +51,7 @@
 	say_list_type = /datum/say_list/catslug
 	player_msg = "You have escaped the foul weather, into this much more pleasant place. You are an intelligent creature capable of more than most think. You can pick up and use many things, and even carry some of them with you into the vents, which you can use to move around quickly. You're quiet and capable, you speak with your hands and your deeds! <br>- - - - -<br> <span class='notice'>Keep in mind, your goal should generally be to survive. You're expected to follow the same rules as everyone else, so don't go self antagging without permission from the staff team, but you are able and capable of defending yourself from those who would attack you for no reason.</span>"
 
-	has_langs = list("Sign Language")
+	has_langs = list(LANGUAGE_SIGN)
 
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
@@ -108,7 +108,9 @@
 	say_got_target = list()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPEdit
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The hot slick gut of a catslug!! Copious slime smears over you as you’re packed away into the gloom and oppressive humidity of this churning gastric sac. The pressure around you is intense, the squashy flesh bends and forms to your figure, clinging to you insistently! There’s basically no free space at all as your ears are filled with the slick slide of flesh against flesh and the burbling of gastric juices glooping all around you. The thumping of a heart booms from somewhere nearby, making everything pulse in against you in time with it! This is it! You’ve been devoured by a catslug!!!"
@@ -160,7 +162,7 @@
 	else
 		to_chat(user, "<span class='notice'>\The [src] takes a bite of \the [O].</span>")
 		if(user != src)
-			to_chat(user, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
+			to_chat(src, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
 	playsound(src, 'sound/items/eatfood.ogg', 75, 1)
 
 /mob/living/simple_mob/vore/alienanimals/catslug/attack_hand(mob/living/carbon/human/M as mob)
@@ -714,7 +716,7 @@
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
 //=============================================================================
 
-//Deathsquad catslug 
+//Deathsquad catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/deathslug
 	name = "Asset Purrtection"
 	desc = "What are you doing staring at this angry little fella? <b>Run.</b>"
@@ -739,7 +741,7 @@
 		"bomb" = 40,
 		"bio" = 100,
 		"rad" = 100
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -751,8 +753,8 @@
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
 	mob_radio.frequency = DTH_FREQ 			//Can't tell if bugged, deathsquad freq in general seems broken
 	mobcard.access |= get_all_station_access()
-	
-//Syndicate catslug 
+
+//Syndicate catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug
 	name = "Mercenyary"
 	desc = "What are you doing staring at this crimson-hardsuit wearing angry little fella? <b>Run.</b>"
@@ -769,7 +771,7 @@
 	health = 100
 	taser_kill = 0
 	melee_damage_lower = 15
-	melee_damage_upper = 20	
+	melee_damage_upper = 20
 	mob_size = MOB_MEDIUM		//Something something hardsuits are heavy.
 	siemens_coefficient = 0
 	armor = list(
@@ -780,7 +782,7 @@
 		"bomb" = 80,
 		"bio" = 100,
 		"rad" = 60
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -797,7 +799,7 @@
 	mob_radio.recalculateChannels(1)
 	mobcard.access |= get_all_station_access()
 
-//ERT catslug 
+//ERT catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug
 	name = "Emeowgency Responder"
 	desc = "The cavalry has arrived."
@@ -822,7 +824,7 @@
 		"bomb" = 30,
 		"bio" = 100,
 		"rad" = 100
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -834,7 +836,7 @@
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/Initialize()
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
-	mob_radio.frequency = ERT_FREQ 
+	mob_radio.frequency = ERT_FREQ
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/device/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/ert(mob_radio)

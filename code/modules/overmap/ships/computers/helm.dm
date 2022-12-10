@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	var/speedlimit = 1/(20 SECONDS) //top speed for autopilot, 5
 	var/accellimit = 0.001 //manual limiter for acceleration
 	req_one_access = list(access_pilot) //VOREStation Edit
-	ai_control = FALSE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help
+	ai_control = TRUE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help // Chompstation Edit - Not an issue on this server, use of shuttles is extremely rare also .
 
 // fancy sprite
 /obj/machinery/computer/ship/helm/adv
@@ -157,7 +157,8 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	switch(action)
 		if("add")
 			var/datum/computer_file/data/waypoint/R = new()
-			var/sec_name = tgui_input_text(usr, "Input navigation entry name", "New navigation entry", "Sector #[known_sectors.len]")
+			var/sec_name = tgui_input_text(usr, "Input navigation entry name", "New navigation entry", "Sector #[known_sectors.len]", MAX_NAME_LEN)
+			sec_name = sanitize(sec_name,MAX_NAME_LEN)
 			if(tgui_status(usr, state) != STATUS_INTERACTIVE)
 				return FALSE
 			if(!sec_name)
@@ -244,7 +245,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 			else
 				autopilot = !autopilot
 			. = TRUE
-		
+
 		if("apilot_lock")
 			autopilot_disabled = !autopilot_disabled
 			autopilot = FALSE

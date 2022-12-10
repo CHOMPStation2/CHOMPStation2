@@ -364,6 +364,12 @@ var/list/_client_preferences_by_type
 	enabled_description = "Popup New On Login"
 	disabled_description = "Do Nothing"
 
+/datum/client_preference/play_mentorhelp_ping
+	description = "Mentorhelps"
+	key = "SOUND_MENTORHELP"
+	enabled_description = "Hear"
+	disabled_description = "Silent"
+
 /********************
 * Staff Preferences *
 ********************/
@@ -414,5 +420,11 @@ var/list/_client_preferences_by_type
 /datum/client_preference/holder/show_rlooc
 	description ="Remote LOOC chat"
 	key = "CHAT_RLOOC"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/holder/show_staff_dsay
+	description ="Staff Deadchat"
+	key = "CHAT_ADSAY"
 	enabled_description = "Show"
 	disabled_description = "Hide"

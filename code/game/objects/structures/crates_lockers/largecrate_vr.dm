@@ -56,7 +56,7 @@
 						/mob/living/simple_mob/otie/zorgoia, //CHOMPstation edit
 						/mob/living/simple_mob/vore/rabbit,
 						/mob/living/simple_mob/vore/weretiger;0.5,
-//						/mob/living/simple_mob/otie;0.5
+						/mob/living/simple_mob/otie;0.5
 						))
 	return ..()
 
@@ -72,11 +72,12 @@
 						/mob/living/simple_mob/animal/space/alien/drone,
 						/mob/living/simple_mob/animal/space/alien/sentinel,
 						/mob/living/simple_mob/animal/space/alien/queen,
-//						/mob/living/simple_mob/otie/feral,
-//						/mob/living/simple_mob/otie/red,
+						/mob/living/simple_mob/otie/feral,
+						/mob/living/simple_mob/otie/feral/chubby,
+						/mob/living/simple_mob/otie/red,
 						/mob/living/simple_mob/vore/aggressive/corrupthound))
 	return ..()
-/*
+
 /obj/structure/largecrate/animal/guardbeast
 	name = "VARMAcorp autoNOMous security solution"
 	desc = "The VARMAcorp bioengineering division flagship product on trained optimal snowflake guard dogs."
@@ -84,12 +85,23 @@
 	icon_state = "sotiecrate"
 	starts_with = list(/mob/living/simple_mob/otie/security)
 
+/obj/structure/largecrate/animal/otie/guardbeast/Initialize()
+	starts_with = list(pick(/mob/living/simple_mob/otie/security,
+						/mob/living/simple_mob/otie/security/chubby))
+	return ..()
+
 /obj/structure/largecrate/animal/guardmutant
 	name = "VARMAcorp autoNOMous security solution for hostile environments."
 	desc = "The VARMAcorp bioengineering division flagship product on trained optimal snowflake guard dogs. This one can survive hostile atmosphere."
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "sotiecrate"
 	starts_with = list(/mob/living/simple_mob/otie/security/phoron)
+
+/obj/structure/largecrate/animal/otie/guardmutant/Initialize()
+	starts_with = list(pick(/mob/living/simple_mob/otie/security/phoron;2,
+						/mob/living/simple_mob/otie/security/phoron/red;0.5,
+						/mob/living/simple_mob/otie/security/phoron/red/chubby;0.5))
+	return ..()
 
 /obj/structure/largecrate/animal/otie
 	name = "VARMAcorp adoptable reject (Dangerous!)"
@@ -99,6 +111,11 @@
 	starts_with = list(/mob/living/simple_mob/otie/cotie)
 	var/taped = 1
 
+/obj/structure/largecrate/animal/otie/Initialize()
+	starts_with = list(pick(/mob/living/simple_mob/otie/cotie,
+						/mob/living/simple_mob/otie/cotie/chubby))
+	return ..()
+
 /obj/structure/largecrate/animal/otie/phoron
 	name = "VARMAcorp adaptive beta subject (Experimental)"
 	desc = "VARMAcorp experimental hostile environment adaptive breeding development kit. WARNING, DO NOT RELEASE IN WILD!"
@@ -106,7 +123,8 @@
 
 /obj/structure/largecrate/animal/otie/phoron/Initialize()
 	starts_with = list(pick(/mob/living/simple_mob/otie/cotie/phoron;2,
-						/mob/living/simple_mob/otie/red/friendly;0.5))
+						/mob/living/simple_mob/otie/red/friendly;0.5,
+						/mob/living/simple_mob/otie/red/chubby;0.5))
 	return ..()
 
 /obj/structure/largecrate/animal/otie/attack_hand(mob/living/carbon/human/M as mob)//I just couldn't decide between the icons lmao
@@ -115,7 +133,6 @@
 		icon_state = "otiecrate"
 		taped = 0
 	..()
-*/ //VORESTATION AI REMOVAL, Oties are still fucking broken.
 
 /obj/structure/largecrate/animal/catgirl
 	name = "Catgirl Crate"
@@ -146,3 +163,8 @@
 	name = "Weretiger Crate"
 	desc = "You can hear a lot of annoyed scratches, clearly someone doesn't enjoy being locked up."
 	starts_with = list(/mob/living/simple_mob/vore/weretiger)
+
+/obj/structure/largecrate/tits
+	name = "A pair of Great tits"
+	desc = "You can hear two round things inside"
+	starts_with = list (/mob/living/simple_mob/animal/passive/bird/azure_tit/great, /mob/living/simple_mob/animal/passive/bird/azure_tit/great)

@@ -1,91 +1,91 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/template_noop)
+/area/submap/cave/ratden)
 "b" = (
 /turf/template_noop,
 /area/template_noop)
 "c" = (
-/obj/effect/decal/cleanable/blood/tracks/paw,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"g" = (
-/mob/living/simple_mob/vore/aggressive/rat,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"k" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"n" = (
-/obj/effect/decal/cleanable/blood/tracks/paw,
-/obj/effect/decal/cleanable/blood/tracks/paw,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"o" = (
-/obj/effect/decal/cleanable/blood,
-/mob/living/simple_mob/vore/aggressive/rat,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"p" = (
-/obj/structure/barricade,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"u" = (
-/obj/structure/barricade,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"A" = (
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"B" = (
-/obj/structure/outcrop/diamond,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"C" = (
-/obj/structure/frame,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"F" = (
-/obj/structure/girder,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"J" = (
-/obj/effect/decal/cleanable/blood/tracks/paw,
-/obj/effect/decal/cleanable/blood/drip,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"M" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"N" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"Q" = (
-/obj/structure/bonfire/permanent,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"T" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"W" = (
+/area/submap/cave/ratden)
+"d" = (
+/obj/effect/decal/cleanable/blood/tracks/paw,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"e" = (
+/obj/structure/barricade,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"f" = (
 /obj/structure/barricade,
 /obj/effect/decal/cleanable/blood/tracks/paw,
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"Z" = (
+/area/submap/cave/ratden)
+"g" = (
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"h" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"i" = (
+/obj/effect/decal/cleanable/blood/tracks/paw,
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"j" = (
+/obj/structure/outcrop/diamond,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"k" = (
+/obj/effect/decal/cleanable/blood/tracks/paw,
+/obj/effect/decal/cleanable/blood/tracks/paw,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"l" = (
+/obj/structure/girder,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"m" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"n" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"o" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"p" = (
 /obj/item/weapon/pickaxe/diamond,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
+/area/submap/cave/ratden)
+"q" = (
+/obj/structure/frame,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"r" = (
+/obj/structure/bonfire/permanent,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"s" = (
+/obj/structure/barricade,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
+"t" = (
+/obj/effect/decal/cleanable/blood,
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/ratden)
 
 (1,1,1) = {"
 b
@@ -106,13 +106,13 @@ b
 b
 b
 a
-T
-N
-N
-N
-N
-A
-A
+c
+g
+g
+g
+g
+n
+n
 a
 "}
 (3,1,1) = {"
@@ -120,13 +120,13 @@ b
 b
 b
 a
-N
-N
-N
 g
-N
-N
-A
+g
+g
+h
+g
+g
+n
 a
 "}
 (4,1,1) = {"
@@ -134,125 +134,125 @@ a
 a
 a
 a
-N
-N
-N
-N
-N
-N
-A
+g
+g
+g
+g
+g
+g
+n
 a
 "}
 (5,1,1) = {"
-T
-u
-N
-N
-N
-N
-N
-N
-N
-N
-N
+c
+e
+g
+g
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (6,1,1) = {"
-c
-c
-c
-J
-N
-N
-N
-C
-N
-N
-N
+d
+d
+d
+i
+g
+g
+g
+q
+g
+g
+g
 a
 "}
 (7,1,1) = {"
-u
-N
-N
-c
-N
-N
-N
-N
-N
-N
-N
+e
+g
+g
+d
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (8,1,1) = {"
 a
 a
-N
-c
-c
-M
-M
-Q
-N
-N
-A
+g
+d
+d
+m
+m
+r
+g
+g
+n
 a
 "}
 (9,1,1) = {"
 a
 a
 a
-N
-c
-N
-k
-k
-N
-N
-N
+g
+d
+g
+o
+o
+g
+g
+g
 a
 "}
 (10,1,1) = {"
 a
 a
+h
+j
+d
+n
 g
-B
-c
-A
-N
-k
-N
-N
-A
+o
+g
+g
+n
 a
 "}
 (11,1,1) = {"
-W
-c
-c
-c
-n
-N
-Z
+f
+d
+d
+d
 k
-N
-N
-N
+g
+p
+o
+g
+g
+g
 a
 "}
 (12,1,1) = {"
-u
-N
-N
-N
-N
-N
-N
-k
-N
-N
-N
+e
+g
+g
+g
+g
+g
+g
+o
+g
+g
+g
 a
 "}
 (13,1,1) = {"
@@ -260,13 +260,13 @@ a
 a
 a
 a
-N
-N
-N
-k
-N
-N
-N
+g
+g
+g
+o
+g
+g
+g
 a
 "}
 (14,1,1) = {"
@@ -274,13 +274,13 @@ b
 b
 b
 a
+h
 g
-N
-N
-k
-N
-N
-A
+g
+o
+g
+g
+n
 a
 "}
 (15,1,1) = {"
@@ -288,13 +288,13 @@ b
 b
 b
 a
-F
-N
-N
-k
-N
-A
+l
+g
+g
 o
+g
+n
+t
 a
 "}
 (16,1,1) = {"
@@ -305,7 +305,7 @@ a
 a
 a
 a
-p
+s
 a
 a
 a

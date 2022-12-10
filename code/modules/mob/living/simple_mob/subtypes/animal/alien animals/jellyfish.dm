@@ -77,6 +77,7 @@ GLOBAL_VAR_INIT(jellyfish_count, 0)
 	vore_default_contamination_flavor = "Wet"
 	vore_default_contamination_color = "grey"
 	vore_default_item_mode = IM_DIGEST
+	can_be_drop_prey = FALSE //CHOMP Add
 
 	var/reproduction_cooldown = 0
 
@@ -85,7 +86,9 @@ GLOBAL_VAR_INIT(jellyfish_count, 0)
 
 
 /mob/living/simple_mob/vore/alienanimals/space_jellyfish/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "internal chamber"
 	B.desc = "It's smooth and translucent. You can see the world around you distort and wobble with the movement of the space jellyfish. It floats casually, while the delicate flesh seems to form to you. It's surprisingly cool, and flickers with its own light. You're on display for all to see, trapped within the confines of this strange space alien!"

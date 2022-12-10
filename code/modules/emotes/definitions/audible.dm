@@ -140,7 +140,7 @@
 
 /decl/emote/audible/bug_buzz
 	key = "bbuzz"
-	emote_message_3p = "buzzes its wings."
+	emote_message_3p = "buzzes USER_THEIR wings."
 	emote_sound = 'sound/voice/BugBuzz.ogg'
 
 /decl/emote/audible/bug_chitter
@@ -237,6 +237,12 @@
 	emote_message_1p_target = "You trill at TARGET."
 	emote_message_3p_target = "trills at TARGET."
 	emote_sound = 'sound/voice/teshtrill.ogg' // Copyright CC BY-NC 3.0 Arnaud Coutancier (freesound.org) for the source audio.
+
+/decl/emote/audible/teshscream
+	key = "teshscream"
+	emote_message_1p = "You scream!"
+	emote_message_3p = "screams!"
+	emote_sound = 'sound/voice/teshscream.ogg'
 
 /decl/emote/audible/prbt
 	key = "prbt"

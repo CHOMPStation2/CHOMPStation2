@@ -85,6 +85,8 @@
 
 	var/flipped = FALSE
 	var/flip_cooldown = 0
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/startreader
 	emote_see = list("bobs", "digs around","gnashes at something","yawns","snaps at something")
@@ -110,12 +112,13 @@
 	violent_breakthrough = TRUE
 
 /mob/living/simple_mob/vore/alienanimals/startreader/apply_melee_effects(mob/living/L)
+	if(!isliving(L))
+		return
 	if(L.weakened) //Don't stun people while they're already stunned! That's SILLY!
 		return
 	if(prob(15))
-		if(isliving(L))
-			visible_message("<span class='danger'>\The [src] trips \the [L]!</span>!")
-			L.weakened += rand(1,10)
+		visible_message("<span class='danger'>\The [src] trips \the [L]!</span>!")
+		L.weakened += rand(1,10)
 
 /mob/living/simple_mob/vore/alienanimals/startreader/Life()
 	. = ..()

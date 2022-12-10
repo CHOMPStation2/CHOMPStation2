@@ -34,8 +34,12 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
 		/mob/living/carbon/human/proc/shapeshifter_select_gender,
+		/mob/living/carbon/human/proc/shapeshifter_select_wings,
+		/mob/living/carbon/human/proc/shapeshifter_select_tail,
+		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/regenerate,
-		/mob/living/carbon/human/proc/shapeshifter_change_opacity,
+		/mob/living/carbon/human/proc/promethean_select_opaqueness,
 		/mob/living/carbon/human/proc/exit_vr
 		)
 
@@ -75,9 +79,9 @@
 	src.vr_link = avatar // Can't reuse vr_holder so that death can automatically eject users from VR
 
 	// Move the mind
-	avatar.Sleeping(1)
+	// avatar.Sleeping(1) So vox don't drop their can, also feels arbitrary
 	src.mind.transfer_to(avatar)
-	to_chat(avatar, "<b>You have enterred Virtual Reality!\nAll normal gameplay rules still apply.\nWounds you suffer here won't persist when you leave VR, but some of the pain will.\nYou can leave VR at any time by using the \"Exit Virtual Reality\" verb in the Abilities tab, or by ghosting.\nYou can modify your appearance by using various \"Change \[X\]\" verbs in the Abilities tab.</b>")
+	to_chat(avatar, "<b>You have enterred Virtual Reality!\nAll normal gameplay rules still apply.\nWounds you suffer here won't persist when you leave VR, but some of the pain will.\nYou can leave VR at any time by using the \"Exit Virtual Reality\" verb in the Abilities tab, or by ghosting.</b>") //No more prommie VR thing, so removed tidbit about changing appearance
 	to_chat(avatar, "<span class='notice'> You black out for a moment, and wake to find yourself in a new body in virtual reality.</span>") // So this is what VR feels like?
 
 // exit_vr is called on the vr mob, and puts the mind back into the original mob
@@ -114,3 +118,13 @@
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
 		V.go_out()
+
+	if(died_in_vr)
+		spawn(3000) //Delete the body after 5 minutes to make sure mob subsystem doesn't cry
+			var/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
+			for(var/slot in slots)
+				var/obj/item/I = get_equipped_item(slot = slot)
+				if(I)
+					unEquip(I,force = TRUE)
+			release_vore_contents(include_absorbed = TRUE, silent = TRUE)
+			qdel(src)

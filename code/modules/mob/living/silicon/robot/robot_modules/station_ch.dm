@@ -85,6 +85,8 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount

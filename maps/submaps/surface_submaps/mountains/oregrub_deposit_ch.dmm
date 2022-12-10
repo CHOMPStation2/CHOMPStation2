@@ -2,32 +2,32 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+"b" = (
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/oregrubdeposit)
 "c" = (
 /obj/machinery/crystal/lava,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"m" = (
-/obj/item/weapon/pickaxe/silver,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"o" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"P" = (
+/area/submap/cave/oregrubdeposit)
+"d" = (
 /mob/living/simple_mob/vore/oregrub/lava,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
-"Z" = (
+/area/submap/cave/oregrubdeposit)
+"e" = (
 /mob/living/simple_mob/vore/oregrub,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
+/area/submap/cave/oregrubdeposit)
+"f" = (
+/obj/item/weapon/pickaxe/silver,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/oregrubdeposit)
 
 (1,1,1) = {"
 a
 a
 a
-o
-o
+b
+b
 a
 a
 a
@@ -36,8 +36,8 @@ a
 a
 a
 a
-o
-o
+b
+b
 a
 a
 a
@@ -46,38 +46,38 @@ a
 a
 a
 c
-o
-o
-P
+b
+b
+d
 a
 a
 "}
 (4,1,1) = {"
-o
-o
-o
-Z
-o
-o
-o
-o
+b
+b
+b
+e
+b
+b
+b
+b
 "}
 (5,1,1) = {"
 c
-o
-o
-o
-m
-o
-P
-o
+b
+b
+b
+f
+b
+d
+b
 "}
 (6,1,1) = {"
 a
 a
-P
-o
-o
+d
+b
+b
 c
 a
 a
@@ -86,8 +86,8 @@ a
 a
 a
 a
-o
-o
+b
+b
 a
 a
 a
@@ -96,8 +96,8 @@ a
 a
 a
 a
-o
-o
+b
+b
 a
 a
 a

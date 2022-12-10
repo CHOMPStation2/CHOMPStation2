@@ -38,6 +38,7 @@
 	var/image/modifier_overlay = null // Holds overlays from modifiers.
 	var/image/eye_layer = null		// Holds the eye overlay.
 	var/has_eye_glow = FALSE		// If true, adds an overlay over the lighting plane for [icon_state]-eyes.
+	var/custom_eye_color = null
 	attack_icon = 'icons/effects/effects.dmi' //Just the default, played like the weapon attack anim
 	attack_icon_state = "slash" //Just the default
 
@@ -252,11 +253,13 @@
 
 	// Turf related slowdown
 	var/turf/T = get_turf(src)
-	if(T && T.movement_cost && !hovering) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
+	if(T && T.movement_cost && (!hovering || !flying)) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
 		if(istype(T,/turf/simulated/floor/water) && aquatic_movement)
 			. -= aquatic_movement - 1
 		else
 			. += T.movement_cost
+		if(flying)
+			adjust_nutrition(-0.5)
 
 	if(purge)//Purged creatures will move more slowly. The more time before their purge stops, the slower they'll move.
 		if(. <= 0)
