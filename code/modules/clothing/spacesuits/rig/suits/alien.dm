@@ -181,13 +181,6 @@
 /obj/item/weapon/rig/vox_engine_technition_control_module/equipped
 	req_access = list(access_engine)
 
-	initial_modules = list(
-	/obj/item/rig_module/maneuvering_jets,
-	/obj/item/rig_module/device/plasmacutter,
-	/obj/item/rig_module/device/rcd,
-	/obj/item/rig_module/vision/meson
-	)  
-
 //ChompEdit Ends
 
 
