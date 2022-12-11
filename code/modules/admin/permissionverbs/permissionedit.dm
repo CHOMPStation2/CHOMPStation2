@@ -18,7 +18,7 @@
 <body onload='selectTextField();updateSearch();'>
 <div id='main'><table id='searchable' cellspacing='0'>
 <tr class='title'>
-<th style='width:125px;text-align:right;'>CKEY <a class='small' href='?src=\ref[src];editrights=add'>\[+\]</a></th>
+<th style='width:125px;text-align:right;'>CKEY <a class='small' href='?src=\ref[src];[HrefToken(TRUE)];editrights=add'>\[+\]</a></th>
 <th style='width:125px;'>RANK</th><th style='width:100%;'>PERMISSIONS</th>
 </tr>
 "}
@@ -31,9 +31,9 @@
 		if(!rights)	rights = "*none*"
 
 		output += "<tr>"
-		output += "<td style='text-align:right;'>[adm_ckey] <a class='small' href='?src=\ref[src];editrights=remove;ckey=[adm_ckey]'>\[-\]</a></td>"
-		output += "<td><a href='?src=\ref[src];editrights=rank;ckey=[adm_ckey]'>[rank]</a></td>"
-		output += "<td><a class='small' href='?src=\ref[src];editrights=permissions;ckey=[adm_ckey]'>[rights]</a></td>"
+		output += "<td style='text-align:right;'>[adm_ckey] <a class='small' href='?src=\ref[src];[HrefToken(TRUE)];editrights=remove;ckey=[adm_ckey]'>\[-\]</a></td>"
+		output += "<td><a href='?src=\ref[src];[HrefToken(TRUE)];editrights=rank;ckey=[adm_ckey]'>[rank]</a></td>"
+		output += "<td><a class='small' href='?src=\ref[src];[HrefToken(TRUE)];editrights=permissions;ckey=[adm_ckey]'>[rights]</a></td>"
 		output += "</tr>"
 
 	output += {"
@@ -153,5 +153,9 @@
 		qdel(insert_query) //CHOMPEdit TGSQL
 		var/DBQuery/log_query = SSdbcore.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added permission [rights2text(new_permission)] (flag = [new_permission]) to admin [adm_ckey]')") //CHOMPEdit TGSQL
 		log_query.Execute()
+<<<<<<< HEAD
 		qdel(log_query) //CHOMPEdit TGSQL
 		to_chat(usr, "<span class='filter_adminlog'><font color='blue'>Permission added.</font></span>")
+=======
+		to_chat(usr, "<span class='filter_adminlog'><font color='blue'>Permission added.</font></span>")
+>>>>>>> 3537c20742... Merge pull request #14188 from ItsSelis/selis-admin-tokens
