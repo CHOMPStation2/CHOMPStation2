@@ -1,6 +1,6 @@
 /datum/lore/codex/category/species
 	name = "Species"
-	data = "There are many different types of lifeforms (both alive and artificial) in the galaxy, which you may find inside Vir."
+	data = "There are many different types of lifeforms (both alive and artificial) in the galaxy, which you may find inside the Virgo-Erigone system."
 	children = list(
 		/datum/lore/codex/page/human,
 		/datum/lore/codex/page/skrell,
@@ -203,9 +203,9 @@
 	name = "Positronics"
 	keywords += list("Positronic", "Posi", "Posibrain", "Posibrains")
 	data = "A Positronic being, is an individual with a positronic brain, manufactured \
-	and fostered amongst organic life. Positronic brains enjoy the same legal status as a human in [quick_link("SolGov")] space, although discrimination is \
+	and fostered amongst organic life. Positronic brains enjoy the same legal status as a human in Sol-Procyon Commonwealth space, although discrimination is \
 	still prevalent, and are considered sapient on all accounts. They can be considered a \"synthetic species\". Half-developed and \
-	half-discovered in the 2280’s by a human black lab studying alien artifacts, the first positronic brain was an inch-wide cube \
+	half-discovered in the 2280's by a human black lab studying alien artifacts, the first positronic brain was an inch-wide cube \
 	of an palladium-iridium alloy, nano-etched with billions upon billions of conduits and connections. Upon activation, \
 	hard-booted with an emitter laser, the brain issued a single sentence before the neural pathways collapsed and \
 	it became an inert lump of platinum: \"What is my purpose?\"."
@@ -244,9 +244,28 @@
 	they are considered legal adults and hold the same basis of rights as a normal human. At that point, Positronics are not allowed to be lawed, \
 	unless on a contractual basis or otherwise under their own volition."
 
+<<<<<<< HEAD
 // Drone lore
 /*
 /datum/lore/codex/category/drone
+=======
+
+/datum/lore/codex/page/cyborg/add_content()
+	name = "Cyborgs"
+	keywords += list("MMI", "Cyborg")
+	data = "A somewhat outdated form of synthetic life, powered by the brain of a sapient within a man-machine interface. \
+	Originally made in an effort to alleviate the drawbacks of drone intelligences - that is - their reprogrammability, \
+	Positronic intelligences have overshadowed cyborgs as capable of all the same strengths and weaknesses but without moral conundroms. \
+	<br><br>\
+	Barbaric history often involved cruel acts such as mindwiping - taking a sapient brain and turning it into a clean slate for programmed personalities. \
+	Often, such was done to prisoners on the death row as an alternate means of punishment. \
+	Such acts are now strictly outlawed within Commonwealth territories and those beholden to their laws. \
+	<br><br>\
+	These days, the main origin of cyborgs, or as some may prefer - full-body prostheses - is organics seeking to overcome their disabilities, \
+	genetic illnesses when unable to afford genetic modification, or a desire to avoid digitization or resleeving."
+
+/datum/lore/codex/category/drones/add_content()
+>>>>>>> 9da3be9113... Merge pull request #14191 from Runa-Dacino/travellerguide-corporatehistory
 	name = "Drones"
 	keywords = list("Drone")
 	data = "While low-level drone intelligences are as old as the oldest human colonies, research into higher-level systems was stymied in human space by precautionist \
