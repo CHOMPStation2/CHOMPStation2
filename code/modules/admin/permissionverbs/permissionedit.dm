@@ -153,9 +153,5 @@
 		qdel(insert_query) //CHOMPEdit TGSQL
 		var/DBQuery/log_query = SSdbcore.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added permission [rights2text(new_permission)] (flag = [new_permission]) to admin [adm_ckey]')") //CHOMPEdit TGSQL
 		log_query.Execute()
-<<<<<<< HEAD
 		qdel(log_query) //CHOMPEdit TGSQL
 		to_chat(usr, "<span class='filter_adminlog'><font color='blue'>Permission added.</font></span>")
-=======
-		to_chat(usr, "<span class='filter_adminlog'><font color='blue'>Permission added.</font></span>")
->>>>>>> 3537c20742... Merge pull request #14188 from ItsSelis/selis-admin-tokens
