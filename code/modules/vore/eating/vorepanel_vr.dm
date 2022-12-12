@@ -200,6 +200,7 @@
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"colorization_enabled" = selected.colorization_enabled,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
+			"sound_volume" = selected.sound_volume, //CHOMPAdd
 			//CHOMP add: vore sprite options
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
@@ -1293,6 +1294,11 @@
 				voretest = classic_vore_sounds[host.vore_selected.vore_sound]
 			if(voretest)
 				SEND_SOUND(user, voretest)
+			. = TRUE
+		if("b_sound_volume") //CHOMPAdd
+			var/sound_volume_input = tgui_input_number(user, "Set belly sound volume percentage.", "Sound Volume", null, 100, 0)
+			if(!isnull(sound_volume_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
+				host.vore_selected.sound_volume = sanitize_integer(sound_volume_input, 0, 100, initial(host.vore_selected.sound_volume))
 			. = TRUE
 		if("b_tastes")
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
