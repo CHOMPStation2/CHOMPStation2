@@ -43,6 +43,11 @@ SUBSYSTEM_DEF(mobs)
 		else if(M.low_priority && !(M.loc && get_z(M) && process_z[get_z(M)]))
 			slept_mobs++
 			continue
+		//CHOMPEdit Start - Enable pausing mobs (For transformation, holding until reformation, etc.)
+		else if(!M.enabled)
+			slept_mobs++
+			continue
+		//CHOMPEdit End
 
 		M.Life(times_fired)
 

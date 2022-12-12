@@ -49,7 +49,7 @@ const digestModeToPreyMode = {
  *   show_liq, liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name,
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
- *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5,
+ *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume,
  *
  * To the tabs section of VoreSelectedBelly return
  *       <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
@@ -792,7 +792,7 @@ const VoreSelectedBellySounds = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const { is_wet, wet_loop, fancy, sound, release_sound } = belly;
+  const { is_wet, wet_loop, fancy, sound, release_sound, sound_volume } = belly;
 
   return (
     <Flex wrap="wrap">
@@ -829,6 +829,12 @@ const VoreSelectedBellySounds = (props, context) => {
           <LabeledList.Item label="Release Sound">
             <Button onClick={() => act('set_attribute', { attribute: 'b_release' })} content={release_sound} />
             <Button onClick={() => act('set_attribute', { attribute: 'b_releasesoundtest' })} icon="volume-up" />
+          </LabeledList.Item>
+          <LabeledList.Item label="Sound Volume">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_sound_volume' })}
+              content={sound_volume + '%'}
+            />
           </LabeledList.Item>
         </LabeledList>
       </Flex.Item>

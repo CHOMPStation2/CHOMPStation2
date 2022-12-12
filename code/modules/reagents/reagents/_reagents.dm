@@ -165,6 +165,9 @@
 			if(CHEM_BLOOD)
 				affect_blood(M, alien, removed)
 			if(CHEM_INGEST)
+				if(istype(src, /datum/reagent/toxin) && M.toxin_gut) //CHOMPAdd
+					remove_self(removed)
+					return
 				affect_ingest(M, alien, removed * ingest_abs_mult)
 			if(CHEM_TOUCH)
 				affect_touch(M, alien, removed)
@@ -214,7 +217,7 @@
 /datum/reagent/Destroy() // This should only be called by the holder, so it's already handled clearing its references
 	holder = null
 	. = ..()
-	
+
 //YW edit start
 // Called when reagents are removed from a container, most likely after metabolizing in a mob
 /datum/reagent/proc/on_remove(var/atom/A)
