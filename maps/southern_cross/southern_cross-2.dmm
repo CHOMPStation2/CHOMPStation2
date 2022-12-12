@@ -16153,7 +16153,8 @@
 	anchored = 1;
 	dir = 8;
 	id = "EngineEmitter";
-	state = 2
+	state = 2;
+	icon_state = "emitter2"
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -66056,6 +66057,9 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Autoresleeving Bay";
 	dir = 4
+	},
+/obj/machinery/atm{
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
