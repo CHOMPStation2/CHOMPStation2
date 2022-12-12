@@ -64,10 +64,7 @@ jobs:
 
   unit_tests:
     name: Integration Tests
-<<<<<<< HEAD
-=======
     # needs: ['file_tests', 'dreamchecker']
->>>>>>> c1f532e646... Merge pull request #14135 from TheGreatKitsune/ci-fix
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
@@ -109,8 +106,6 @@ jobs:
           TEST_DEFINE: "AWAY_MISSION_TEST"
           TEST_FILE: "code/_away_mission_tests.dm"
           RUN: "0"
-<<<<<<< HEAD
-=======
 
   tests_successful:
     name: Integration Tests
@@ -120,4 +115,3 @@ jobs:
       - name: Report Success
         run: |
           echo "Jobs Successful!"
->>>>>>> c1f532e646... Merge pull request #14135 from TheGreatKitsune/ci-fix
