@@ -4275,11 +4275,8 @@
 #include "code\modules\vehicles\cargo_train.dm"
 #include "code\modules\vehicles\construction.dm"
 #include "code\modules\vehicles\quad.dm"
-<<<<<<< HEAD
-#include "code\modules\vehicles\Securitrain_vr.dm"
-=======
 #include "code\modules\vehicles\rover_vr.dm"
->>>>>>> cc34fe95e1... Merge pull request #14187 from Heroman3003/duke-rover
+#include "code\modules\vehicles\Securitrain_vr.dm"
 #include "code\modules\vehicles\snowmobile.dm"
 #include "code\modules\vehicles\train.dm"
 #include "code\modules\vehicles\vehicle.dm"
