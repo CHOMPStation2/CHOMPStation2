@@ -2212,11 +2212,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/weapon/stool,
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/flashbangs{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/storage/box/empslite{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "afS" = (
-/obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -2225,12 +2233,30 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/item/weapon/stool,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/standard,
+/obj/item/device/binoculars{
+	pixel_y = 5
+	},
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "afT" = (
-/obj/item/weapon/stool,
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/handcuffs{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/weapon/storage/box/chemimp{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box/trackimp,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "afU" = (
@@ -2919,21 +2945,7 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/armoury)
-"ahK" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/box/empslite{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/weapon/storage/box/flashbangs{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/dark,
-/area/security/armoury)
 "ahL" = (
-/obj/structure/table/standard,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -2944,34 +2956,8 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/device/binoculars{
-	pixel_y = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/armoury)
-"ahM" = (
-/obj/structure/table/standard,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/item/weapon/storage/box/handcuffs{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/weapon/storage/box/chemimp{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box/trackimp,
+/obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -3932,6 +3918,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/table/rack/shelf,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "akV" = (
@@ -6039,7 +6028,11 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -24;
-	pixel_y = -4
+	pixel_y = 3
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -24;
+	pixel_y = -8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -6417,9 +6410,9 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 34;
-	pixel_y = -4
+/obj/machinery/autolathe{
+	hacked = 1;
+	name = "Security Autolathe"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -16153,8 +16146,7 @@
 	anchored = 1;
 	dir = 8;
 	id = "EngineEmitter";
-	state = 2;
-	icon_state = "emitter2"
+	state = 2
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -66058,9 +66050,6 @@
 	c_tag = "MED - Autoresleeving Bay";
 	dir = 4
 	},
-/obj/machinery/atm{
-	pixel_x = -28
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
 "pfT" = (
@@ -114468,7 +114457,7 @@ aaj
 aax
 acp
 afR
-ahK
+act
 akH
 arT
 ayk
@@ -114984,7 +114973,7 @@ aaj
 aaz
 act
 afT
-ahM
+acp
 akK
 ats
 ayk
@@ -125900,7 +125889,7 @@ bNV
 bNV
 bPC
 bRa
-bSx
+lWH
 eEj
 izw
 iho
