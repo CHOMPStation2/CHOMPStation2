@@ -103,7 +103,7 @@
 		dat += {"<A href='?our_comp=\ref[our_comp];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 		<table>
 		<tr><td><A href='?our_comp=\ref[our_comp];sort=author>AUTHOR</A></td><td><A href='?our_comp=\ref[our_comp];sort=title>TITLE</A></td><td><A href='?our_comp=\ref[our_comp];sort=category>CATEGORY</A></td><td></td></tr>"}
-		var/DBQuery/query = SSdbcore_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY [our_comp.sortby]")
+		var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [our_comp.sortby]")
 		query.Execute()
 
 		var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
