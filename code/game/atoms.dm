@@ -721,8 +721,6 @@
 
 /atom/proc/interact(mob/user)
 	return
-<<<<<<< HEAD
-=======
 
 // Purpose: Determines if the object can pass this atom.
 // Called by: Movement.
@@ -731,4 +729,3 @@
 // Airflow and ZAS zones now uses CanZASPass() instead of this proc.
 /atom/proc/CanPass(atom/movable/mover, turf/target)
 	return !density
->>>>>>> fe91b1a43b... Merge pull request #14206 from ItsSelis/selis-href-adds
