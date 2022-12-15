@@ -10,3 +10,4 @@
 	var/struggle_anim_stomach = FALSE
 	var/struggle_anim_taur = FALSE
 	var/hide_headset = FALSE
+	var/hide_glasses = FALSE
