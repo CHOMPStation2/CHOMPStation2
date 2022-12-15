@@ -73,9 +73,6 @@
 			log_and_message_admins("removed a security ticket from the global list: \"[input]\"", usr)
 
 	else
-<<<<<<< HEAD
-		tgui_alert_async(usr, "The ticket list is empty.","Empty")
-=======
 		tgui_alert_async(usr, "The ticket list is empty.","Empty")
 
 /client/proc/delbook()
@@ -100,7 +97,7 @@
 	dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 	establish_old_db_connection()
 
-	if(!dbcon_old.IsConnected())
+	if(!SSdbcore.IsConnected())
 		dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 	else
 		dat += {"<A href='?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
@@ -124,4 +121,3 @@
 
 	usr << browse(dat, "window=library")
 	onclose(usr, "library")
->>>>>>> fe91b1a43b... Merge pull request #14206 from ItsSelis/selis-href-adds

@@ -13678,6 +13678,7 @@
 /area/centcom/terminal)
 "SK" = (
 /obj/structure/table/reinforced,
+/obj/machinery/librarycomp,
 /turf/simulated/floor/tiled,
 /area/centcom/control)
 "SL" = (

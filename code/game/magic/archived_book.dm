@@ -39,19 +39,24 @@ var/global/datum/book_manager/book_mgr = new()
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
+//VOREStation Edit Start
+	var/obj/machinery/librarycomp/our_comp
+	for(var/obj/machinery/librarycomp/l in world)
+		if(istype(l, /obj/machinery/librarycomp))
+			our_comp = l
+			break
 
-	var/isbn = tgui_input_number(usr, "ISBN number?", "Delete Book")
-	if(!isbn)
+	if(!our_comp)
+		to_chat(usr, "<span class = 'warning'>Unable to locate a library computer to use for book deleting.</span>")
 		return
 
-	if(BOOKS_USE_SQL && config.sql_enabled)
-		var/DBConnection/dbcon = new()
-		dbcon.Connect("dbi:mysql:[sqldb]:[sqladdress]:[sqlport]","[sqllogin]","[sqlpass]")
-		if(!dbcon.IsConnected())
-			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
-			return
+	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
+		establish_old_db_connection()
+
+		if(!SSdbcore.IsConnected()) //CHOMP Edit
+			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
-<<<<<<< HEAD
 			var/DBQuery/query = dbcon.NewQuery("DELETE FROM library WHERE id=[isbn]")
 			if(!query.Execute())
 				to_chat(usr,query.ErrorMsg())
@@ -59,11 +64,6 @@ var/global/datum/book_manager/book_mgr = new()
 	else
 		book_mgr.remove(isbn)
 	log_admin("[usr.key] has deleted the book [isbn]")
-=======
-			dat += {"<A href='?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
-			<table>
-			<tr><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=author>AUTHOR</A></td><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=title>TITLE</A></td><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=category>CATEGORY</A></td><td></td></tr>"}
-			var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 			query.Execute()
 
 			var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
@@ -82,7 +82,6 @@ var/global/datum/book_manager/book_mgr = new()
 	usr << browse(dat, "window=library")
 	onclose(usr, "library")
 //VOREStation Edit End
->>>>>>> fe91b1a43b... Merge pull request #14206 from ItsSelis/selis-href-adds
 
 // delete a book
 /datum/book_manager/proc/remove(var/id)
