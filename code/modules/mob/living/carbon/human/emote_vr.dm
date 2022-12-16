@@ -62,15 +62,6 @@
 		message = "hides their wings."
 	visible_message("[src] [message]")
 
-// Chomp Edit Start
-/mob/living/carbon/human/verb/hide_nutrition_vr()
-	set name = "Show/Hide Nutrition Levels"
-	set category = "IC"
-	set desc = "Allow other player to see your current nutrition level or not."
-	nutrition_hidden = !nutrition_hidden
-	to_chat(src, "Players will [nutrition_hidden ? "no longer" : "now"] see your nutrition levels.")
-// Chomp Edit End
-
 /mob/living/carbon/human/verb/hide_tail_vr()
 	set name = "Show/Hide tail"
 	set category = "IC"
