@@ -307,9 +307,7 @@
 /area/submap/Manor1)
 "bi" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken0"
-	},
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bj" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -396,6 +394,11 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
 /obj/item/clothing/head/hood/winter,
 /obj/item/clothing/shoes/boots/winter/climbing,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bz" = (
@@ -641,6 +644,7 @@
 /obj/item/stack/material/tritium{
 	amount = 20
 	},
+/obj/item/weapon/cell/super,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "co" = (
@@ -1237,6 +1241,9 @@
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/spider/stickyweb,
 /obj/item/weapon/gun/projectile/gyropistol,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "GM" = (
