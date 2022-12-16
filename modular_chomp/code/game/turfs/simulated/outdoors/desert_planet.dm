@@ -1,26 +1,17 @@
-/* Testing
-/turf/simulated/floor/outdoors/desert_planet/sand
-	name = "sand"
-	desc = "Sandy, taste salty and gritty."
-	icon = 'modular_chomp/icons/turf/desert_planet.dmi'
-	edge_blending_priority = 2
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
-	initial_flooring = /decl/flooring/sand
-	can_dig = false
-*/
-
 // Parent turf.
 /turf/simulated/floor/outdoors/desert_planet
 	name = "sand"
 	desc = "Salty and gritty."
 	icon = 'modular_chomp/icons/turf/desert_tiles.dmi'
 	modular_icon = TRUE // This must be true to add edges from our .dmi files.
+	can_dig = FALSE
 
 /turf/simulated/floor/outdoors/desert_planet/sand
 	name = "sand"
 	desc = "Salty and gritty."
 	icon_state = "sand0"
 	edge_blending_priority = 2
+	initial_flooring = /decl/flooring/desert_planet/sand
 
 // Necessary to get the edges to generate correctly since we use a random-ish icon_state. Inelegant to hard code, but this is a one-off case.
 /turf/simulated/floor/outdoors/desert_planet/sand/get_edge_icon_state()
@@ -48,6 +39,7 @@
 	icon_state = "deep_sand0"
 	edge_blending_priority = 1
 	movement_cost = 3
+	initial_flooring = /decl/flooring/desert_planet/deep_sand
 
 /turf/simulated/floor/outdoors/desert_planet/deep_sand/Initialize(mapload)
 	. = ..()
@@ -58,38 +50,43 @@
 	desc = "Lively green grass, soft to walk on."
 	icon_state = "grass"
 	edge_blending_priority = 5
+	initial_flooring = /decl/flooring/desert_planet/grass
 
 /turf/simulated/floor/outdoors/desert_planet/deep_grass
 	name = "dense grass"
 	desc = "Dense patch of grass, seems like a soft spot to lay on."
 	icon_state = "deep_grass"
 	edge_blending_priority = 6
+	initial_flooring = /decl/flooring/desert_planet/deep_grass
 
 /turf/simulated/floor/outdoors/desert_planet/gravel
 	name = "gravel"
 	desc = "Mix of dirt and sand, it crumbles in your hand."
 	icon_state = "gravel"
 	edge_blending_priority = 3
+	initial_flooring = /decl/flooring/desert_planet/gravel
 
 /turf/simulated/floor/outdoors/desert_planet/mud
 	name = "mud"
 	desc = "Squishy damp dirt, smells muddy."
 	icon_state = "mud"
 	edge_blending_priority = 4
+	initial_flooring = /decl/flooring/desert_planet/mud
 
 // At last we've come full circle, a floor which is actually a wall.
-/turf/simulated/floor/outdoors/desert_planet/sandrock
+/turf/simulated/floor/outdoors/desert_planet/stonewall
 	name = "sandstone"
 	desc = "Rough sandstone."
 	icon_state = "stonewall"
 	density = TRUE
 	opacity = TRUE
 	edge_blending_priority = 7
+	initial_flooring = /decl/flooring/desert_planet/stonewall
 	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
 	var/last_act = 0
 
 // Stolen from mineral turf code.
-/turf/simulated/floor/outdoors/desert_planet/sandrock/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/turf/simulated/floor/outdoors/desert_planet/stonewall/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
@@ -114,6 +111,64 @@
 			opacity = FALSE
 			demote() // Converts the turf to the next layer in turf_layers.
 	..()
+
+/turf/simulated/floor/outdoors/desert_planet/sandrock
+	name = "sandstone tiles"
+	desc = "Tightly joined in a mesmerizing lattice."
+	icon_state = "sandrock"
+	density = TRUE
+	opacity = TRUE
+	initial_flooring = /decl/flooring/desert_planet/sandrock
+
+// Declarations (for initial_flooring)
+/decl/flooring/desert_planet // Yeah don't use this one, it's a parent just for setting icon.
+	name = "desert stuff"
+	desc = "If you see this, this turf is using the wrong decl."
+	icon = 'modular_chomp/icons/turf/desert_tiles.dmi'
+	icon_base = null
+
+/decl/flooring/desert_planet/sand
+	name = "sand"
+	desc = "Salty and gritty."
+	icon_base = "sand"
+	has_base_range = 2
+
+/decl/flooring/desert_planet/deep_sand
+	name = "sand"
+	desc = "Really gets everywhere."
+	icon_base = "deep_sand"
+	has_base_range = 2
+
+/decl/flooring/desert_planet/grass
+	name = "grass"
+	desc = "Lively green grass, soft to walk on."
+	icon_base = "grass"
+
+/decl/flooring/desert_planet/deep_grass
+	name = "dense grass"
+	desc = "Dense patch of grass, seems like a soft spot to lay on."
+	icon_base = "deep_grass"
+
+/decl/flooring/desert_planet/gravel
+	name = "gravel"
+	desc = "Mix of dirt and sand, it crumbles in your hand."
+	icon_base = "gravel"
+
+/decl/flooring/desert_planet/mud
+	name = "mud"
+	desc = "Squishy damp dirt, smells muddy."
+	icon_base = "mud"
+
+/decl/flooring/desert_planet/stonewall
+	name = "sandstone"
+	desc = "Rough sandstone."
+	icon_base = "stonewall"
+
+/decl/flooring/desert_planet/sandrock
+	name = "sandstone tiles"
+	desc = "Tightly joined in a mesmerizing lattice."
+	icon_base = "sandrock"
+	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS
 
 /*
 /obj/effect/floor_decal/desert_planet/floor/sand0_edge

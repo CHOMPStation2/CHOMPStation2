@@ -16,26 +16,9 @@
 	if(do_after(user, 3 SECONDS, src))
 		step(src, movedir)
 
-/obj/structure/prop/desert_rock/rock/rock
-	icon_state = "desert_rock"
-
-/obj/structure/prop/desert_rock/rock/rock1
-	icon_state = "desert_rock1"
-
-/obj/structure/prop/desert_rock/rock/rock2
-	icon_state = "desert_rock2"
-
-/obj/structure/prop/desert_rock/rock/rock3
-	icon_state = "desert_rock3"
-
-/obj/structure/prop/desert_rock/rock/rock4
-	icon_state = "desert_rock4"
-
-/obj/structure/prop/desert_rock/rock/rock5
-	icon_state = "desert_rock5"
-
-/obj/structure/prop/desert_rock/rock/rock6
-	icon_state = "desert_rock6"
+/obj/structure/prop/desert_rock/rock/New()
+	..()
+	icon_state = "desert_rock[rand(0,6)]"
 
 /obj/structure/prop/desert_rock/pebble
 	name = "sandy pebble"
@@ -50,26 +33,9 @@
 			M.Weaken(2)
 			to_chat(M, "You trip over the [src]!")
 
-/obj/structure/prop/desert_rock/pebble/pebble
-	icon_state = "desert_pebble"
-
-/obj/structure/prop/desert_rock/pebble/pebble1
-	icon_state = "desert_pebble1"
-
-/obj/structure/prop/desert_rock/pebble/pebble2
-	icon_state = "desert_pebble2"
-
-/obj/structure/prop/desert_rock/pebble/pebble3
-	icon_state = "desert_pebble3"
-
-/obj/structure/prop/desert_rock/pebble/pebble4
-	icon_state = "desert_pebble4"
-
-/obj/structure/prop/desert_rock/pebble/pebble5
-	icon_state = "desert_pebble5"
-
-/obj/structure/prop/desert_rock/pebble/pebble6
-	icon_state = "desert_pebble6"
+/obj/structure/prop/desert_rock/pebble/New()
+	..()
+	icon_state = "desert_pebble[rand(0,6)]"
 
 /obj/structure/prop/desert_rock/anthill
 	name = "ant hill"
@@ -202,7 +168,7 @@
 
 /obj/structure/flora/desert_planet/shrub/New()
 	..()
-	icon_state = "shrub[rand(0,6)]"
+	icon_state = "shrub[rand(0,5)]"
 
 /obj/structure/flora/desert_planet/bush
 	name = "bush"
