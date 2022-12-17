@@ -1,3 +1,6 @@
+/datum/sprite_accessory/tail/taur
+	var/icon/taur_belly_icon = 'icons/mob/vore/Taur_Bellies.dmi'
+
 /datum/sprite_accessory/tail/taur/ch
 	icon = 'icons/mob/vore/taurs_ch.dmi'//Parent which allows us to not need to set icon every time.
 

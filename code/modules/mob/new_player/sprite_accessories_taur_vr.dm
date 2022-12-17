@@ -752,7 +752,7 @@
 	suit_sprites = 'icons/mob/taursuits_noodle_vr.dmi'
 	clip_mask_state = "taur_clip_mask_noodle"
 	icon_sprite_tag = "noodle"
-
+/* CHOMPEdit - removed as a sprite accessory of the same name already exists for us, and having this here stops it from registering as a sprite accessory.
 /datum/sprite_accessory/tail/taur/sect_drone
 	name = "Sect Drone (Taur)"
 	icon_state = "sect_drone"
@@ -773,11 +773,12 @@
 
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
-
+*/
 /datum/sprite_accessory/tail/taur/sect_drone/fat
 	name = "Fat Sect Drone (Taur)"
 	icon_state = "fat_sect_drone"
 	extra_overlay = "fat_sect_drone_markings"
+	icon_sprite_tag = "sect_drone" //CHOMPEdit addition
 
 /datum/sprite_accessory/tail/taur/sect_drone/drone_wag
 	name = "Sect Drone (Taur, Fat vwag)"
@@ -785,6 +786,7 @@
 	extra_overlay = "sect_drone_markings"
 	ani_state = "fat_sect_drone"
 	extra_overlay_w = "fat_sect_drone_markings"
+	icon_sprite_tag = "sect_drone" //CHOMPEdit addition
 
 /datum/sprite_accessory/tail/taur/giantspider_colorable//these are honestly better fit for vass icontypes whoops
 	name = "Giant Spider dual-color (Taur)"
