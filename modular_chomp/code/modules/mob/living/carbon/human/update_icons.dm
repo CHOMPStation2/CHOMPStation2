@@ -88,7 +88,7 @@
 	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
 		var/loaf_alt = lying && tail_style:belly_variant_when_loaf
-		var/icon/vorebelly_s = new/icon(icon = tail_style:taur_belly_icon, icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
 		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16

@@ -24,7 +24,6 @@
 	extra_overlay = "sectdrone_markings"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
-	taur_belly_icon = 'icons/mob/vore/Taur_Bellies_ch.dmi'
 	vore_tail_sprite_variant = "SectDrone"
 	belly_variant_when_loaf = TRUE
 	loaf_offset = 3
