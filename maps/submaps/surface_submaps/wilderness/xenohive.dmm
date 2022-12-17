@@ -533,6 +533,7 @@
 /obj/effect/alien/weeds,
 /obj/structure/prop/transmitter,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/device/gps/internal/poi,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Vj" = (
