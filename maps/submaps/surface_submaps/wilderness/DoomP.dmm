@@ -904,13 +904,15 @@
 /obj/item/weapon/archaeological_find,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/item/capture_crystal,
-/obj/item/stack/material/morphium{
-	amount = "5"
-	},
 /obj/item/weapon/circuitboard/mecha/imperion/main,
 /obj/item/weapon/circuitboard/mecha/imperion/targeting,
-/obj/item/weapon/archaeological_find,
 /obj/item/weapon/cell/device/weapon/recharge/alien/omni,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
