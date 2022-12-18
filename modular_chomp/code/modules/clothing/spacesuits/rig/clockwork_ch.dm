@@ -20,7 +20,10 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/ch/clockwork
 	cell_type =  /obj/item/weapon/cell/clockwork
 
-	allowed = list(
+	allowed = list(/obj/item/device/flashlight,
+	/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/bag/ore,
+	/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd,/obj/item/weapon/storage/backpack,
+	/obj/item/device/bluespaceradio, /obj/item/device/defib_kit, /obj/item/weapon/ratvarian_spear
 		)
 
 	initial_modules = list(
@@ -57,7 +60,7 @@
 	name = "hierophant ansible"
 	desc = "A curiously cold brass doodad. It seems as though it really doesn't appreciate being held. Due to it's size and the apparent electrical arc, it might be useful as a battery?"
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)
-	icon = 'icons/obj/clockwork_objects.dmi'
+	icon = 'modular_chomp/icons/obj/clockwork_objects.dmi'
 	icon_state = "hierophant_ansible"
 	maxcharge = 4800 //same stats as a void cell, but slower at recharging itself
 	charge_amount = 120

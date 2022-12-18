@@ -636,13 +636,13 @@
 	. = ..()
 	var/custom_edit_name
 	if(!isliving(src))
-		custom_edit_name = "<a href='?_src_=vars;datumedit=\ref[src];varnameedit=name'><b>[src]</b></a>"
+		custom_edit_name = "<a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=name'><b>[src]</b></a>"
 	. += {"
 		[custom_edit_name]
 		<br><font size='1'>
-		<a href='?_src_=vars;rotatedatum=\ref[src];rotatedir=left'><<</a>
-		<a href='?_src_=vars;datumedit=\ref[src];varnameedit=dir'>[dir2text(dir)]</a>
-		<a href='?_src_=vars;rotatedatum=\ref[src];rotatedir=right'>>></a>
+		<a href='?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=left'><<</a>
+		<a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=dir'>[dir2text(dir)]</a>
+		<a href='?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=right'>>></a>
 		</font>
 		"}
 	var/turf/T = get_turf(src)
@@ -721,3 +721,11 @@
 
 /atom/proc/interact(mob/user)
 	return
+
+// Purpose: Determines if the object can pass this atom.
+// Called by: Movement.
+// Inputs: The moving atom, target turf.
+// Outputs: Boolean if can pass.
+// Airflow and ZAS zones now uses CanZASPass() instead of this proc.
+/atom/proc/CanPass(atom/movable/mover, turf/target)
+	return !density

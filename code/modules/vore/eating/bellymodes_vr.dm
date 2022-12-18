@@ -105,9 +105,9 @@
 					continue
 				if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 					if(fancy_vore)
-						M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 					else
-						M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 					 //these are all external sound triggers now, so it's ok.
 		return
 
@@ -132,9 +132,9 @@
 				continue
 			if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 				if(fancy_vore)
-					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 				else
-					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
