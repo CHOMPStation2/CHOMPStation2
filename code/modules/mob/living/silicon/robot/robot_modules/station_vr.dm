@@ -221,7 +221,8 @@
 					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Cat" = "vixsec", //CHOMPEdit
-					"Drake" = "drakesec"
+					"Drake" = "drakesec",
+					"Secborg model V-4" = "secraptor"//CHOMPEdit
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -237,6 +238,7 @@
 	src.modules += new /obj/item/taperoll/police(src) //Block out crime scenes.
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
+	src.modules += new /obj/item/device/ticket_printer(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -306,7 +308,8 @@
 					"Borgi" = "borgi-medi",
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Cat" = "vixmed", //CHOMPEdit
-					"Drake" = "drakemed"
+					"Drake" = "drakemed",
+					"Mediborg model V-4" = "medraptor" //CHOMPEdit
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
@@ -356,7 +359,7 @@
 	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	B.water = water
 	src.modules += B
-	
+
 	//CHOMPEdit Start - Give back the ATK/ABP since we don't have the surgeryhound
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -637,7 +640,8 @@
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark",
 					"Cat" = "vixsci", //CHOMPEdit
-					"Drake" = "drakesci"
+					"Drake" = "drakesci",
+					"Sciborg model V-4" = "sciraptor"//CHOMPEdit
 					)
 	channels = list("Science" = 1)
 	pto_type = PTO_SCIENCE

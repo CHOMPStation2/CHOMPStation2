@@ -875,3 +875,22 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "wild_doginner"
+
+/datum/sprite_accessory/ears/teshbeeantenna
+	name = "Teshari bee antenna"
+	icon = 'icons/mob/vore/ears_vr.dmi'
+	icon_state = "teshbee"
+
+/datum/sprite_accessory/ears/teshantenna
+	name = "Teshari antenna, colorable"
+	icon = 'icons/mob/vore/ears_vr.dmi'
+	icon_state = "teshantenna"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/curlyteshantenna
+	name = "Teshari curly antenna, colorable"
+	icon = 'icons/mob/vore/ears_vr.dmi'
+	icon_state = "curly_bug_tesh"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

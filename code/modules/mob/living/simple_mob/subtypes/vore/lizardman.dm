@@ -32,6 +32,8 @@
 
 	say_list_type = /datum/say_list/lizardman
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 
 /datum/say_list/lizardman

@@ -1,3 +1,7 @@
+/datum/sprite_accessory/tail
+	lower_layer_dirs = list(SOUTH, WEST, EAST)
+
+
 /datum/sprite_accessory/tail/anthrovirus_tail
 	name = "Anthro Virus Tail"
 	icon = 'icons/mob/vore/tails_ch.dmi'

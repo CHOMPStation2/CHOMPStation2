@@ -85,10 +85,6 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
-"dh" = (
-/obj/structure/flora/lily1,
-/turf/simulated/floor/water/ocean,
-/area/template_noop)
 "dt" = (
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
@@ -114,9 +110,6 @@
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
-"ei" = (
-/turf/simulated/floor/outdoors/grass,
-/area/template_noop)
 "ez" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
@@ -339,11 +332,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
-"mD" = (
-/obj/structure/flora/ausbushes/reedbush,
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/water/ocean,
-/area/template_noop)
 "mQ" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/carpet,
@@ -508,10 +496,6 @@
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
-"va" = (
-/obj/structure/flora/lily2,
-/turf/simulated/floor/water/ocean,
-/area/template_noop)
 "wr" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
 /obj/effect/decal/cleanable/dirt,
@@ -674,10 +658,6 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
-"DS" = (
-/obj/structure/flora/ausbushes/reedbush,
-/turf/simulated/floor/water/ocean,
-/area/template_noop)
 "DY" = (
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/wood/sif,
@@ -1095,10 +1075,6 @@
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
-"Ww" = (
-/obj/structure/flora/ausbushes/sunnybush,
-/turf/simulated/floor/outdoors/grass,
-/area/template_noop)
 "WL" = (
 /obj/machinery/light/small/flicker,
 /obj/effect/decal/cleanable/blood,
@@ -1189,7 +1165,7 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "ZZ" = (
-/obj/structure/window/basic,
+/obj/structure/window/plastitanium,
 /obj/structure/curtain,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
@@ -1271,36 +1247,36 @@ ok
 (3,1,1) = {"
 ok
 ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ID
-ei
-ei
-ID
-ei
-Ww
-ei
-ID
-ID
-ok
-ok
-ok
-ok
-ID
-ID
-ID
-ID
-ok
-ok
-ok
-ok
-ok
-ok
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+wt
+fF
+fF
+wt
+fF
+jy
+fF
+wt
+wt
+Ti
+Ti
+Ti
+Ti
+wt
+wt
+wt
+wt
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
 ok
 ok
 ok
@@ -1308,7 +1284,7 @@ ok
 (4,1,1) = {"
 ok
 ok
-ok
+Ti
 Wf
 wt
 wt
@@ -1337,7 +1313,7 @@ wt
 Ti
 wt
 wt
-ok
+Ti
 ok
 ok
 ok
@@ -1345,7 +1321,7 @@ ok
 (5,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 VZ
@@ -1374,7 +1350,7 @@ fF
 Om
 wt
 wt
-ID
+wt
 ok
 ok
 ok
@@ -1382,7 +1358,7 @@ ok
 (6,1,1) = {"
 ok
 ok
-ID
+wt
 wt
 VZ
 Sn
@@ -1411,7 +1387,7 @@ wt
 wt
 Cp
 Cp
-ID
+wt
 ID
 ok
 ok
@@ -1419,7 +1395,7 @@ ok
 (7,1,1) = {"
 ok
 ok
-ID
+wt
 fF
 VZ
 EJ
@@ -1448,7 +1424,7 @@ wt
 Cp
 Px
 Cp
-EM
+Cp
 ID
 ID
 ok
@@ -1456,7 +1432,7 @@ ok
 (8,1,1) = {"
 ok
 ID
-Ww
+jy
 fF
 VZ
 zU
@@ -1485,7 +1461,7 @@ Cp
 Cp
 Nw
 Cp
-EM
+Cp
 XI
 ID
 ok
@@ -1493,7 +1469,7 @@ ok
 (9,1,1) = {"
 ok
 ID
-ei
+fF
 fF
 VZ
 HK
@@ -1522,7 +1498,7 @@ Cp
 Cp
 Cp
 Cp
-va
+rH
 EM
 ID
 ok
@@ -1530,7 +1506,7 @@ ok
 (10,1,1) = {"
 ok
 ok
-ID
+wt
 CC
 VZ
 yP
@@ -1559,7 +1535,7 @@ Cp
 Cp
 Cp
 fs
-EM
+Cp
 EM
 ID
 ok
@@ -1567,7 +1543,7 @@ ok
 (11,1,1) = {"
 ok
 ok
-ID
+wt
 fF
 VZ
 dt
@@ -1596,7 +1572,7 @@ Cp
 cJ
 Cp
 Cp
-EM
+Cp
 EM
 ID
 ok
@@ -1604,7 +1580,7 @@ ok
 (12,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 zU
@@ -1633,7 +1609,7 @@ Cp
 Cp
 rH
 Cp
-DS
+Nw
 EM
 ID
 ok
@@ -1641,7 +1617,7 @@ ok
 (13,1,1) = {"
 ok
 ok
-ID
+wt
 fF
 VZ
 Fb
@@ -1670,7 +1646,7 @@ Cp
 Cp
 Cp
 Cp
-EM
+Cp
 EM
 ID
 ok
@@ -1678,7 +1654,7 @@ ok
 (14,1,1) = {"
 ok
 ID
-ei
+fF
 fF
 VZ
 Xs
@@ -1707,7 +1683,7 @@ wt
 Cp
 Cp
 Px
-EM
+Cp
 ID
 ID
 ok
@@ -1715,7 +1691,7 @@ ok
 (15,1,1) = {"
 ok
 ok
-ID
+wt
 zk
 VZ
 zU
@@ -1744,7 +1720,7 @@ wt
 Cp
 Cp
 Cp
-ID
+wt
 ID
 ok
 ok
@@ -1752,7 +1728,7 @@ ok
 (16,1,1) = {"
 ok
 ok
-ID
+wt
 fF
 VZ
 Sn
@@ -1781,7 +1757,7 @@ wt
 wt
 Cp
 Cp
-ID
+wt
 ID
 ok
 ok
@@ -1789,7 +1765,7 @@ ok
 (17,1,1) = {"
 ok
 ok
-ID
+wt
 fF
 VZ
 VZ
@@ -1818,7 +1794,7 @@ fF
 wt
 wt
 wt
-ID
+wt
 ok
 ok
 ok
@@ -1826,7 +1802,7 @@ ok
 (18,1,1) = {"
 ok
 ok
-ok
+Ti
 Wf
 VZ
 dO
@@ -1855,7 +1831,7 @@ IU
 cT
 wt
 Om
-ID
+wt
 ID
 ok
 ok
@@ -1863,7 +1839,7 @@ ok
 (19,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 nO
@@ -1892,7 +1868,7 @@ fF
 fF
 wt
 wt
-EM
+Cp
 ID
 ID
 ok
@@ -1900,7 +1876,7 @@ ok
 (20,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 AO
@@ -1929,7 +1905,7 @@ fF
 wt
 wt
 Cp
-dh
+fs
 EM
 ID
 ok
@@ -1937,7 +1913,7 @@ ok
 (21,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 VZ
@@ -1966,7 +1942,7 @@ wt
 wt
 Cp
 Cp
-EM
+Cp
 EM
 ID
 ok
@@ -1974,7 +1950,7 @@ ok
 (22,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 MF
@@ -2003,7 +1979,7 @@ wt
 wt
 Cp
 Cp
-mD
+cJ
 EM
 ID
 ok
@@ -2011,7 +1987,7 @@ ok
 (23,1,1) = {"
 ok
 ok
-ID
+wt
 fF
 VZ
 Gy
@@ -2040,7 +2016,7 @@ wt
 Px
 Cp
 Cp
-EM
+Cp
 EM
 ID
 ok
@@ -2048,7 +2024,7 @@ ok
 (24,1,1) = {"
 ok
 ok
-ID
+wt
 zk
 VZ
 hN
@@ -2077,7 +2053,7 @@ wt
 Cp
 Nw
 Cp
-EM
+Cp
 ID
 ID
 ok
@@ -2085,7 +2061,7 @@ ok
 (25,1,1) = {"
 ok
 ID
-ei
+fF
 fF
 VZ
 ug
@@ -2114,7 +2090,7 @@ Cp
 Cp
 Cp
 Cp
-ID
+wt
 ID
 ok
 ok
@@ -2122,7 +2098,7 @@ ok
 (26,1,1) = {"
 ok
 ID
-Ww
+jy
 fF
 QX
 Gd
@@ -2151,7 +2127,7 @@ Cp
 Cp
 Cp
 wt
-ID
+wt
 ok
 ok
 ok
@@ -2159,7 +2135,7 @@ ok
 (27,1,1) = {"
 ok
 ID
-ei
+fF
 fF
 VZ
 Mx
@@ -2188,7 +2164,7 @@ cJ
 Cp
 Px
 wt
-ID
+wt
 ok
 ok
 ok
@@ -2196,7 +2172,7 @@ ok
 (28,1,1) = {"
 ok
 ok
-ID
+wt
 zk
 VZ
 YU
@@ -2225,7 +2201,7 @@ Cp
 Cp
 Px
 wt
-ID
+wt
 ok
 ok
 ok
@@ -2233,7 +2209,7 @@ ok
 (29,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 ij
@@ -2262,7 +2238,7 @@ Cp
 wt
 wt
 wt
-ok
+Ti
 ok
 ok
 ok
@@ -2270,7 +2246,7 @@ ok
 (30,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 fB
@@ -2299,7 +2275,7 @@ wt
 wt
 Om
 Ti
-ok
+Ti
 ok
 ok
 ok
@@ -2307,7 +2283,7 @@ ok
 (31,1,1) = {"
 ok
 ok
-ok
+Ti
 wt
 VZ
 VZ
@@ -2336,7 +2312,7 @@ wt
 Ti
 Ti
 Ti
-ok
+Ti
 ok
 ok
 ok
@@ -2344,7 +2320,7 @@ ok
 (32,1,1) = {"
 ok
 ok
-ok
+Ti
 Wf
 wt
 wt
@@ -2373,7 +2349,7 @@ Ti
 Ti
 Ti
 Ti
-ok
+Ti
 ok
 ok
 ok
@@ -2381,36 +2357,36 @@ ok
 (33,1,1) = {"
 ok
 ok
-ok
-ok
-ok
-ok
-ID
-ID
-ID
-ID
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ok
-ID
-ID
-ID
-ok
-ok
-ok
-ok
-ok
-ok
+Ti
+Ti
+Ti
+Ti
+wt
+wt
+wt
+wt
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
+wt
+wt
+wt
+Ti
+Ti
+Ti
+Ti
+Ti
+Ti
 ok
 ok
 ok

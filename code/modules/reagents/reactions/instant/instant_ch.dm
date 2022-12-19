@@ -97,29 +97,6 @@
 	required_reagents = list("bicaridine" = 1, "serazine" = 1, "tungsten" = 1)
 	result_amount = 3
 
-/////GENDER CHANGE RECIPES/////
-
-/decl/chemical_reaction/instant/change_drug/male
-	name = "Elixer of Change"
-	id = "change_drug_male"
-	result = "change_drug_male"
-	required_reagents = list("blood" = 1, "mutagen" = 1, "iron" = 1)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/change_drug/female
-	name = "Elixer of Change"
-	id = "change_drug_female"
-	result = "change_drug_female"
-	required_reagents = list("blood" = 1, "mutagen" = 1, "sugar" = 1)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/change_drug/intersex
-	name = "Elixer of Change"
-	id = "change_drug_intersex"
-	result = "change_drug_intersex"
-	required_reagents = list("change_drug_male" = 1, "change_drug_female" = 1)
-	result_amount = 1
-
 // Frost oil reactions for material sheets
 /decl/chemical_reaction/instant/solidification/aluminium
 	name = "Solid Aluminium"
@@ -147,3 +124,28 @@
 	result = "phenethylamine"
 	required_reagents = list("paroxetine" = 1, "benzilate" = 1)
 	result_amount = 2
+
+// Xenochem stuff
+/decl/chemical_reaction/instant/xenolazarus // Moved here because upstream axed it and this file cannot conflict
+	name = "Discount Lazarus"
+	id = "discountlazarus"
+	result = null
+	required_reagents = list("monstertamer" = 5, "clonexadone" = 5)
+
+/decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
+	if(ishuman(holder.my_atom))
+		var/mob/living/carbon/human/H = holder.my_atom
+		if(H.stat == DEAD && (/mob/living/carbon/human/proc/reconstitute_form in H.verbs)) //no magical regen for non-regenners, and can't force the reaction on live ones
+			if(H.hasnutriment()) // make sure it actually has the conditions to revive
+				if(H.revive_ready >= 1) // if it's not reviving, start doing so
+					H.revive_ready = REVIVING_READY // overrides the normal cooldown
+					H.visible_message("<span class='info'>[H] shudders briefly, then relaxes, faint movements stirring within.</span>")
+					H.chimera_regenerate()
+				else if (/mob/living/carbon/human/proc/hatch in H.verbs)// already reviving, check if they're ready to hatch
+					H.chimera_hatch()
+					H.visible_message("<span class='danger'><p><font size=4>[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera.</font></p></span>") // Hope you were wearing waterproofs, doc...
+					H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
+				else //they're already reviving but haven't hatched. Give a little message to tell them to wait.
+					H.visible_message("<span class='info'>[H] stirs faintly, but doesn't appear to be ready to wake up yet.</span>")
+			else
+				H.visible_message("<span class='info'>[H] twitches for a moment, but remains still.</span>") // no nutriment

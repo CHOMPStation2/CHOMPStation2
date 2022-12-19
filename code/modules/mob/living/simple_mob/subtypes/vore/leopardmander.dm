@@ -48,6 +48,8 @@
 	vore_bump_emote = "tries to snap up"
 
 	nom_mob = TRUE
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"

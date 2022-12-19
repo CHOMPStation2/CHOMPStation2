@@ -59,6 +59,8 @@
 	var/evo_limit = 0
 	var/next
 	meat_type = /obj/item/toy/figure/bounty_hunter
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/metroid/Initialize()
 	nutrition = 100		//Have them start off pretty hungry still.

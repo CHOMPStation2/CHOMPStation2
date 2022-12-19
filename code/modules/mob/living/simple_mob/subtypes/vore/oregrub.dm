@@ -88,6 +88,8 @@
 				"rad"		= 100
 				)
 
+	can_be_drop_prey = FALSE //CHOMP Add
+
 /mob/living/simple_mob/vore/oregrub/lava
 	name = "mature lavagrub"
 	desc = "A mature, rocky lavagrub"

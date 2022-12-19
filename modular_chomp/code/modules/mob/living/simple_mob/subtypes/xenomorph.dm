@@ -88,6 +88,8 @@
 	var/datum/action/innate/xeno_ch/xeno_pounce/pounce_action = new
 	var/datum/action/innate/xeno_ch/xeno_spin/spin_action = new
 
+	can_be_drop_prey = FALSE //CHOMP Add
+
 /mob/living/simple_mob/xeno_ch/Initialize()
 	..()
 	src.adjust_nutrition(src.max_nutrition)
@@ -97,6 +99,7 @@
 	. = ..()
 	faction = "neutral"
 	verbs |= /mob/living/simple_mob/xeno_ch/proc/xeno_build
+	verbs |= /mob/living/simple_mob/verb/toggle_speech_sounds
 	build_action.Grant(src)
 
 

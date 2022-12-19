@@ -64,6 +64,8 @@
 	meat_amount = 1
 
 	say_list_type = /datum/say_list/hare
+	
+	can_be_drop_prey = TRUE //CHOMP Add
 
 /datum/say_list/hare
 	speak = list("Snrf...","Crk!")

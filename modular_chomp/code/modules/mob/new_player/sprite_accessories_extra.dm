@@ -164,3 +164,21 @@
 	icon_state = "thickthroat"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/fangs2
+	name = "Forward Fangs"
+	icon_state = "fangs2"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/fangs3
+	name = "Further Forward Fangs"
+	icon_state = "fangs3"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/normeyes
+	name = "Normal Eyes"
+	icon_state = "normeyes"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY

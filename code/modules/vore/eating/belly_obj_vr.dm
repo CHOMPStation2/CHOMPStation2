@@ -57,6 +57,7 @@
 	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
 	var/slow_digestion = FALSE				// CHOMPEdit: Gradual corpse digestion
 	var/slow_brutal = FALSE					// CHOMPEdit: Gradual corpse digestion: Stumpy's Special
+	var/sound_volume = 100					// CHOMPEdit: Volume knob.
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -260,6 +261,12 @@
 	"vore_sprite_flags",
 	"affects_vore_sprites",
 	"count_absorbed_prey_for_sprite",
+	"absorbed_multiplier",
+	"count_liquid_for_sprite",
+	"liquid_multiplier",
+	"count_items_for_sprite",
+	"item_multiplier",
+	"health_impacts_size",
 	"resist_triggers_animation",
 	"size_factor_for_sprite",
 	"belly_sprite_to_affect",
@@ -270,7 +277,8 @@
 	"autotransfer_min_amount",
 	"autotransfer_max_amount",
 	"slow_digestion",
-	"slow_brutal", //CHOMP end of variables from CHOMP
+	"slow_brutal",
+	"sound_volume", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -313,6 +321,10 @@
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
+	//CHOMPEdit Start - Prevent reforming causing a lot of log spam/sounds
+	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi))
+		return //Someone getting reformed most likely (And if not, uh... shouldn't happen anyways?)
+	//CHOMPEdit end
 
 	//Generic entered message
 	if(!owner.mute_entry) //CHOMPEdit
@@ -328,7 +340,7 @@
 		if(special_entrance_sound) //CHOMPEdit: Custom sound set by mob's init_vore or ingame varedits.
 			soundfile = special_entrance_sound
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
 			recent_sound = TRUE
 
 	//Messages if it's a mob
@@ -358,6 +370,8 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
 		var/obj/item/capture_crystal/CC = thing
 		if(CC.bound_mob && desc)
@@ -386,6 +400,8 @@
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
+		if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/obj/item/I = thing
 		if(I.gurgled)
 			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
@@ -489,7 +505,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
 
 	return count
 
@@ -559,7 +575,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
 	//Should fix your view not following you out of mobs sometimes!
 	if(ismob(M))
 		var/mob/ourmob = M
@@ -789,9 +805,30 @@
 /obj/belly/proc/digestion_death(mob/living/M)
 	add_attack_logs(owner, M, "Digested in [lowertext(name)]")
 
+	//CHOMPEdit Start - Reverts TF on death. This fixes a bug with posibrains or similar, and also makes reforming easier.
+	if(M.tf_mob_holder && M.tf_mob_holder.loc == M)
+		M.tf_mob_holder.ckey = M.ckey
+		M.tf_mob_holder.enabled = TRUE
+		M.tf_mob_holder.loc = M.loc
+		M.tf_mob_holder.forceMove(M.loc)
+		QDEL_LIST_NULL(M.tf_mob_holder.vore_organs)
+		M.tf_mob_holder.vore_organs = list()
+		for(var/obj/belly/B as anything in M.vore_organs)
+			B.loc = M.tf_mob_holder
+			B.forceMove(M.tf_mob_holder)
+			B.owner = M.tf_mob_holder
+			M.tf_mob_holder.vore_organs |= B
+			M.vore_organs -= B
+
+	if(M.tf_mob_holder)
+		M.tf_mob_holder = null
+	//CHOMPEdit End
+
 	// If digested prey is also a pred... anyone inside their bellies gets moved up.
 	if(is_vore_predator(M))
 		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
+
+	var/obj/item/device/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
 
 	//Drop all items into the belly.
 	if(config.items_survive_digestion)
@@ -801,6 +838,7 @@
 				var/obj/item/device/mmi/brainbox = MMI.removed()
 				if(brainbox)
 					items_preserved += brainbox
+					hasMMI = brainbox // CHOMPEdit - Adjust how MMI's are handled
 			for(var/slot in slots)
 				var/obj/item/I = M.get_equipped_item(slot = slot)
 				if(I)
@@ -828,10 +866,42 @@
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
-	var/mob/observer/G = M.ghostize() //CHOMPEdit start. Make sure they're out, so we can copy attack logs and such.
-	if(G)
-		G.forceMove(src) //CHOMPEdit end.
-	qdel(M)
+	//CHOMPEdit start - Changed qdel to a forceMove to allow reforming, and... handled robots special.
+	if(isrobot(M))
+		var/mob/living/silicon/robot/R = M
+		if(R.mmi && R.mind && R.mmi.brainmob)
+			R.mmi.loc = src
+			items_preserved += R.mmi
+			var/obj/item/weapon/robot_module/MB = locate() in R.contents
+			if(MB)
+				R.mmi.brainmob.languages = MB.original_languages
+			else
+				R.mmi.brainmob.languages = R.languages
+			R.mmi.brainmob.remove_language("Robot Talk")
+			hasMMI = R.mmi
+			M.mind.transfer_to(hasMMI.brainmob)
+			R.mmi = null
+		else if(!R.shell) // Shells don't have brainmobs in their MMIs.
+			to_chat(R, "<span class='danger'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
+		if(R.shell) // Let the standard procedure for shells handle this.
+			qdel(R)
+			return
+
+	if(istype(hasMMI))
+		hasMMI.body_backup = M
+		M.enabled = FALSE
+		M.forceMove(hasMMI)
+	else
+		//Another CHOMPEdit started here. I left the comment here, though obviously we're doing a lot more now as well.
+		var/mob/observer/G = M.ghostize(FALSE) //CHOMPEdit start. Make sure they're out, so we can copy attack logs and such.
+		if(G)
+			G.forceMove(src)
+			G.body_backup = M
+			M.enabled = FALSE
+			M.forceMove(G)
+		else
+			qdel(M)
+	//CHOMPEdit End
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
@@ -1304,6 +1374,12 @@
 	dupe.vore_sprite_flags = vore_sprite_flags
 	dupe.affects_vore_sprites = affects_vore_sprites
 	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.absorbed_multiplier = absorbed_multiplier
+	dupe.count_liquid_for_sprite = count_liquid_for_sprite
+	dupe.liquid_multiplier = liquid_multiplier
+	dupe.count_items_for_sprite = count_items_for_sprite
+	dupe.item_multiplier = item_multiplier
+	dupe.health_impacts_size = health_impacts_size
 	dupe.resist_triggers_animation = resist_triggers_animation
 	dupe.size_factor_for_sprite = size_factor_for_sprite
 	dupe.belly_sprite_to_affect = belly_sprite_to_affect
@@ -1314,7 +1390,8 @@
 	dupe.autotransfer_min_amount = autotransfer_min_amount
 	dupe.autotransfer_max_amount = autotransfer_max_amount
 	dupe.slow_digestion = slow_digestion
-	dupe.slow_brutal = slow_brutal //CHOMP end of variables from CHOMP
+	dupe.slow_brutal = slow_brutal
+	dupe.sound_volume = sound_volume //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

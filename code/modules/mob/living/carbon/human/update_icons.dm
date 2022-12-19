@@ -266,6 +266,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/obj/item/organ/external/head/head = organs_by_name[BP_HEAD]
 	if(head)
 		if(!istype(head, /obj/item/organ/external/stump))
+			if (species.selects_bodytype != SELECTS_BODYTYPE_FALSE)
+				var/headtype = GLOB.all_species[species.base_species]?.has_limbs[BP_HEAD]
+				var/obj/item/organ/external/head/headtypepath = headtype["path"]
+				if (headtypepath)
+					head.eye_icon = initial(headtypepath.eye_icon)
+					head.eye_icon_location = initial(headtypepath.eye_icon_location)
 			icon_key += "[head.eye_icon]"
 	for(var/organ_tag in species.has_limbs)
 		var/obj/item/organ/external/part = organs_by_name[organ_tag]
@@ -720,7 +726,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	remove_layer(GLASSES_LAYER)
 
-	if(!glasses)
+	if(!glasses || hide_glasses) // CHOMPEdit - Add "|| hide_glasses" for glasses hiding
 		return //Not wearing glasses, no need to update anything.
 
 	overlays_standing[GLASSES_LAYER] = glasses.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_gloves_str, default_icon = INV_EYES_DEF_ICON, default_layer = GLASSES_LAYER)
@@ -993,7 +999,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	apply_layer(L_HAND_LAYER)
 
 /mob/living/carbon/human/proc/get_tail_layer()
-	var/list/lower_layer_dirs = list(SOUTH)
+	var/list/lower_layer_dirs = list(SOUTH, EAST, WEST) //ChompEDIT - Tail below clothing on side views too.
 	if(tail_style)
 		lower_layer_dirs = tail_style.lower_layer_dirs.Copy()
 

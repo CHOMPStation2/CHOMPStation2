@@ -1,6 +1,9 @@
 //Department defines
 #define DEPARTMENT_NONCREW      "Non crew"
 
+//Job defines
+#define JOB_OUTSIDER            "Outsider"
+
 //Material defines
 #define MAT_CARPET				"red carpet"
 #define MAT_CARPET_TEAL			"teal carpet"

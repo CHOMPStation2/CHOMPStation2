@@ -23,6 +23,8 @@
 
 	say_list_type = /datum/say_list/wolfgirl
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative/wolfgirl
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 // Activate Noms!
 /mob/living/simple_mob/vore/wolfgirl
