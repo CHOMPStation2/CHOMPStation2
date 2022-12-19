@@ -32,6 +32,16 @@
 	vore_capacity = 1
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
+/mob/living/simple_mob/animal/passive/raccoon_ch/Initialize()
+	. = ..()
+	ghostjoin = 1
+	ghostjoin_icon()
+	active_ghost_pods |= src
+
+/mob/living/simple_mob/animal/passive/raccoon_ch/Destroy()
+	active_ghost_pods -= src
+	return ..()
+
 /datum/say_list/raccoon_ch
 	speak = list("HSSSSS")
 	emote_see = list("shakes their head", "shivers","grooms self", "nibbles on some trash")
