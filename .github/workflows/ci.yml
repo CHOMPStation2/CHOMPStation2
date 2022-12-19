@@ -10,7 +10,7 @@ env:
 jobs:
   file_tests:
     name: Run Linters
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: Ensure +x on CI directory
@@ -36,7 +36,7 @@ jobs:
 
   dreamchecker:
     name: DreamChecker
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
 
@@ -64,7 +64,8 @@ jobs:
 
   unit_tests:
     name: Integration Tests
-    runs-on: ubuntu-latest
+    # needs: ['file_tests', 'dreamchecker']
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: Ensure +x on CI directory
@@ -105,3 +106,12 @@ jobs:
           TEST_DEFINE: "AWAY_MISSION_TEST"
           TEST_FILE: "code/_away_mission_tests.dm"
           RUN: "0"
+
+  tests_successful:
+    name: Integration Tests
+    needs: ['file_tests', 'dreamchecker', 'unit_tests']
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Report Success
+        run: |
+          echo "Jobs Successful!"

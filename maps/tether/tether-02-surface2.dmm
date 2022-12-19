@@ -4747,6 +4747,7 @@
 	dir = 8
 	},
 /obj/item/device/holowarrant,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "ahp" = (
@@ -4814,6 +4815,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 6
 	},
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "ahu" = (
@@ -5122,6 +5124,7 @@
 	pixel_x = 2;
 	pixel_y = 3
 	},
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/carpet,
 /area/tether/surfacebase/security/detective/officea)
 "ahU" = (
@@ -5135,6 +5138,7 @@
 	pixel_x = 2;
 	pixel_y = 3
 	},
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/carpet,
 /area/tether/surfacebase/security/detective/officeb)
 "ahV" = (
@@ -5209,6 +5213,7 @@
 	pixel_x = -24
 	},
 /obj/item/device/holowarrant,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "aid" = (
@@ -5274,6 +5279,7 @@
 	},
 /obj/structure/closet/secure_closet/security,
 /obj/item/device/holowarrant,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "aii" = (
@@ -6001,6 +6007,7 @@
 	},
 /obj/structure/closet/secure_closet/security,
 /obj/item/device/holowarrant,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "ajk" = (
@@ -6090,6 +6097,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner2,
 /obj/structure/closet/secure_closet/security,
 /obj/item/device/holowarrant,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "ajp" = (
@@ -11719,6 +11727,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/warden)
 "asF" = (

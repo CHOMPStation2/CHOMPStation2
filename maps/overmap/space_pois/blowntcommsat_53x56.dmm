@@ -1,0 +1,213 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"ad" = (/obj/structure/lattice,/obj/structure/grille/broken,/turf/template_noop,/area/submap/blowntcommsat)
+"ae" = (/obj/structure/lattice,/obj/structure/grille,/turf/template_noop,/area/submap/blowntcommsat)
+"af" = (/obj/structure/grille,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"aj" = (/obj/structure/girder,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"al" = (/obj/structure/window/reinforced{dir = 4},/turf/template_noop,/area/submap/blowntcommsat)
+"am" = (/obj/structure/window/reinforced{dir = 8},/obj/item/stack/material/phoron{amount = 10},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"an" = (/obj/machinery/power/apc{cell_type = 2500; dir = 1; name = "Worn-out APC"; pixel_x = 1; pixel_y = 26},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"ao" = (/obj/machinery/light/small{dir = 1},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"aq" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"as" = (/obj/structure/bed,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"at" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"av" = (/obj/structure/lattice,/obj/structure/window/reinforced{dir = 4},/turf/template_noop,/area/submap/blowntcommsat)
+"aw" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"ax" = (/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"ay" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"az" = (/obj/structure/lattice,/obj/structure/window/reinforced{dir = 8},/turf/template_noop,/area/submap/blowntcommsat)
+"aA" = (/obj/structure/table/steel,/obj/item/stack/material/phoron{amount = 10},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"aB" = (/obj/machinery/light/small{dir = 1},/obj/structure/table/steel,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"aC" = (/obj/structure/frame/computer,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"aD" = (/obj/structure/table/steel,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"aF" = (/obj/structure/grille,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"aG" = (/obj/structure/grille/broken,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"aH" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"aI" = (/obj/structure/window/reinforced,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"aJ" = (/obj/item/stack/cable_coil/cut{amount = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"aK" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/closet,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"aL" = (/obj/structure/window/reinforced{dir = 8},/turf/template_noop,/area/submap/blowntcommsat)
+"aN" = (/obj/structure/bed,/obj/effect/decal/remains/human,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"aP" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"aQ" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"aR" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"aS" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/turf/template_noop,/area/submap/blowntcommsat)
+"aT" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/turf/template_noop,/area/submap/blowntcommsat)
+"aU" = (/obj/structure/window/reinforced,/turf/template_noop,/area/submap/blowntcommsat)
+"aV" = (/obj/structure/sign/securearea,/turf/simulated/wall/r_wall,/area/submap/blowntcommsat)
+"aW" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"aX" = (/obj/item/device/gps/internal/base{gps_tag = "NT_SATELLITE"},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"aY" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"aZ" = (/obj/structure/table,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"ba" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"bb" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"bc" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"bd" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/item/weapon/airlock_electronics,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"be" = (/obj/structure/door_assembly/door_assembly_hatch,/turf/simulated/floor/tiled/steel_grid,/area/submap/blowntcommsat)
+"bf" = (/obj/item/weapon/paper/crumpled,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"bg" = (/obj/machinery/vending/snack,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"bh" = (/obj/machinery/vending/cola,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"bi" = (/obj/structure/bed/chair{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"bj" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"bl" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/wall/r_wall,/area/submap/blowntcommsat)
+"bm" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/structure/grille/broken,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bn" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bo" = (/obj/structure/disposaloutlet{dir = 4},/obj/structure/disposalpipe/trunk{dir = 8},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bp" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/turf/template_noop,/area/submap/blowntcommsat)
+"bq" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"br" = (/obj/structure/window/reinforced{dir = 1},/turf/template_noop,/area/submap/blowntcommsat)
+"bs" = (/obj/structure/table/steel,/obj/item/weapon/cell/super/empty,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"bt" = (/obj/structure/bed/chair,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"bv" = (/obj/machinery/door/airlock/hatch,/turf/simulated/floor/tiled/steel_grid,/area/submap/blowntcommsat)
+"bw" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"bx" = (/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"by" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bz" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bA" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bB" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bC" = (/obj/machinery/door/airlock/maintenance_hatch,/turf/simulated/floor/tiled/steel_grid,/area/submap/blowntcommsat)
+"bD" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"bE" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"bF" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/obj/item/stack/rods,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"bG" = (/obj/item/stack/rods,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bI" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/submap/blowntcommsat)
+"bJ" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bK" = (/obj/structure/window/reinforced{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"bL" = (/obj/item/weapon/circuitboard/teleporter,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"bM" = (/obj/structure/frame/computer,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bN" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"bO" = (/obj/effect/decal/cleanable/blood,/obj/item/clothing/under/rank/centcom_officer,/obj/effect/decal/remains/human,/obj/structure/bed/chair,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bP" = (/obj/structure/table/steel,/obj/item/device/flashlight/lamp,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bQ" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"bR" = (/obj/structure/door_assembly/door_assembly_mhatch,/turf/simulated/floor/tiled/steel_grid,/area/submap/blowntcommsat)
+"bS" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"bT" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bU" = (/obj/structure/table/steel,/obj/item/ammo_casing/microbattery/combat/lethal,/obj/item/weapon/reagent_containers/syringe/drugs,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bV" = (/obj/item/weapon/storage/toolbox/syndicate/powertools,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"bW" = (/obj/structure/table/steel,/obj/item/device/radio/electropack,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bX" = (/obj/structure/table/steel,/obj/item/weapon/surgical/hemostat,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bY" = (/obj/structure/table/steel,/obj/item/weapon/surgical/circular_saw{pixel_y = 8},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"bZ" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 4},/obj/item/stack/rods,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"ca" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/turf/template_noop,/area/submap/blowntcommsat)
+"cb" = (/obj/structure/window/reinforced,/obj/structure/lattice,/turf/template_noop,/area/submap/blowntcommsat)
+"cc" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"ce" = (/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cf" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cg" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced,/turf/template_noop,/area/submap/blowntcommsat)
+"ch" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"ci" = (/obj/item/stack/rods,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cj" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"ck" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/blowntcommsat)
+"cl" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cm" = (/obj/machinery/light/small,/obj/random/trash,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"cn" = (/obj/effect/floor_decal/industrial/warning{dir = 6},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"co" = (/turf/template_noop,/area/submap/blowntcommsat)
+"cp" = (/obj/structure/lattice,/obj/item/stack/rods,/turf/template_noop,/area/submap/blowntcommsat)
+"cq" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/turf/space,/area/submap/blowntcommsat)
+"cr" = (/obj/structure/grille/broken,/turf/template_noop,/area/submap/blowntcommsat)
+"cs" = (/obj/machinery/door/airlock/hatch,/turf/space,/area/submap/blowntcommsat)
+"ct" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cu" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cx" = (/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cz" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cA" = (/obj/structure/sign/vacuum,/turf/simulated/wall/r_wall,/area/submap/blowntcommsat)
+"cB" = (/obj/structure/closet/emcloset,/obj/effect/floor_decal/industrial/warning{dir = 9},/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cD" = (/obj/structure/closet/malf/suits,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cE" = (/obj/structure/door_assembly/door_assembly_ext,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cF" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cG" = (/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"cH" = (/turf/simulated/shuttle/plating,/area/submap/blowntcommsat)
+"cI" = (/obj/structure/closet/crate,/obj/item/clothing/glasses/night,/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cJ" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cK" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/obj/item/weapon/storage/toolbox/mechanical,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cL" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"cM" = (/obj/machinery/light/small{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 6},/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"cN" = (/obj/structure/frame/computer,/turf/simulated/floor/plating,/area/submap/blowntcommsat)
+"cO" = (/obj/machinery/teleport/station,/turf/simulated/floor/plating,/area/submap/blowntcommsat)
+"cP" = (/obj/machinery/teleport/hub,/turf/simulated/floor/plating,/area/submap/blowntcommsat)
+"cQ" = (/turf/simulated/wall/r_wall,/area/submap/blowntcommsat)
+"dx" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"eo" = (/obj/structure/girder,/turf/simulated/floor/plating/external,/area/submap/blowntcommsat)
+"eA" = (/obj/structure/table/reinforced,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"gT" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"jO" = (/obj/structure/loot_pile/maint/boxfort,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"kW" = (/obj/random/trash,/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"nv" = (/obj/random/trash,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"nT" = (/obj/structure/frame/computer,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"oy" = (/obj/item/device/radio/beacon,/obj/random/trash,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"rU" = (/obj/structure/frame,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"zO" = (/obj/structure/loot_pile/maint/boxfort,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"Ca" = (/obj/structure/girder,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"EO" = (/obj/random/trash,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"EX" = (/obj/item/device/radio/off,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"Ho" = (/obj/item/weapon/storage/toolbox/electrical,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"Ib" = (/turf/simulated/floor/tiled/airless,/area/submap/blowntcommsat)
+"Ig" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+"Kx" = (/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"Lv" = (/obj/random/trash,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"NI" = (/obj/item/stolenpackage,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"Oc" = (/obj/structure/frame,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"Oz" = (/obj/structure/grille,/turf/space,/area/submap/blowntcommsat)
+"Qt" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"QT" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/airless,/area/submap/blowntcommsat)
+"Uc" = (/obj/structure/loot_pile/surface/drone,/turf/simulated/floor/tiled/dark{nitrogen = 500; oxygen = 0; temperature = 80},/area/submap/blowntcommsat)
+"Vm" = (/obj/machinery/power/port_gen/pacman,/turf/simulated/floor/tiled,/area/submap/blowntcommsat)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaababaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaababaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabcGabaaaaaacGabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabcGaaaaaaaacGcGabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabcGaaaaaaaaabcGabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaabaaaaaaaaabababaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeababcGcGcGcGcGcGcGababaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaeaaaaabaaaacGaaaaabaaaaaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadaaaaabadaeaeaeaeaeaeaeafaeadaeaeaeaeaeaeadabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaecQajajcGajcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQeocGababaaabaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaadaecQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQajcGabababababaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaecQcQcQabaaalamanaoaxaqcQcQcQcQcQcQcQcQcQcxcQasatcGQTcGcGabcGeoadaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaecQcQabababavbxaxawaxayazcQVmceaAaBaCaDcQcxcQaFaGIbIbcGcGcGajcQaeaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaecQcQaaabaaalaHaIaJaIaKaLcQdxnvcGcecenTcQcxcQaNaFkWkWkWIbcQcQcQaeaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaadcQcQaaabaacoaPaQaRaSaTaUaVaWcGaXoycenTcQcxcQaFaFIbaYaZbacQcQcQaeaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaecQcQaaabaaalbbbcaIbcaIbdbecGcebfcecGcQcQcQcQbgbhkWIbbibjblblblbmbnboaaaaaaaaaa
+aaaaaaaaaaaaaaaaababadaeaeaecQcQaaabaaalaRbpbqbrbrbrcQcebsbtnvcebCcGcQcQcQcQbvcQcQcQcQcQcQaeaeadabaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaabaecQcQabababbwbxazcQcQcQcQcQbybzbAbAbBcQbCcQcQcQbwbDbEabababcQcQaeaeaeaaaaaaaaaa
+aaaaaaababcGcGcGcGcGababaaaecQcQaaabaaalbFbEcQcGQtcxcxcxbGLvcxcxcxcxcxUccQbwbDcoaaabaacQcQaeaeaaabaaaaaaaa
+ababababababababcGcGcGcGaaaecQcQaaabaaalbxbEcQcGKxrUcxKxcGLvcGcGLvKxOccxcQbwbKaLbIbIbIcQcQcQaeabcGababaaaa
+aaaaaaaaaaababababcGcGcGaaaecQcQaaabaacoaRbEcQcxKxcGcxKxcGcxEXbJcxKxOccxcQbwbKaLbIzOcebLcQcQaeaaabaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaacGaaaecQcQaaabaaalbDaLcQcxKxrUcxKxcGLvKxbMcxKxOccxcQbwbDaUbIcenveAcQcQaeaaabaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaacGcGafcQcQabababbwaRazcQcxKxKxcGKxbNbOKxbPUccGKxcxcQbwbxbQbRcenvbScQcQafcGabaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaacGaaaecQcQaaabaaalaRaLcQcxKxKxcGKxcGcxbTbUcxKxKxcxcQalbDbrbInvbVeAcQcQaeaaabaaaaaaaa
+aaaaaaaaaaaaabababcGcGcGaaaecQcQaaabaacobDcocQcxcGOccxOcNIbWbXbYcxOccGcxcQcobDaLbIceceeAcQcQaeaacGaaaaaaaa
+aaaaaaaaaaabababcGcGcGcGaaaecQcQaaabaaalaRaLcQcxKxKxcxOcKxcxKxKxcxKxcGcxcQalbDaLbIbIbIcQcQcQaeabcGabababab
+aaaaaaabababababababababaaaecQcQaaabaacobZaLcQUccGcxcGcGcxgTcxcxcxcxcGjOcQalbKaLaaabaacQcQaeaeaaabababaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaeaecQcQabababbwbKazcQcQcQcQcQcQcQcQcQcQcQcQcQcQcQbwbDazabababcQajaeaeaeaaaaaaaaaa
+aaaaaaaaaaaaabababababadaeaeajcQaaaaaaalbDcacbaUcocQcccecececececfcQaUaUaUcgbDaLaaabaaajabaeaeaeadabababaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaadcGajaaaaaaalaHaIbcbcbcbvchceceEOcGcicjbvbcaIbcbcckaLaaabaacGabadaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaabcGabaaaaaacobrbrbqbrbrcQclcmcenvcececncQbrbrbrcobrcoaaabaaabaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaabaacQcQcQcQcQceCacQcQcQcQaaaaaaaaaaaaabaaaaaaaaabaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaababababcpcqcxcGcQcecececQcxcxcQababababaaaaaaaaaaaaaaabcraaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacQcQcxcxcecGceceIgcxcxcQcQaaaaaaaaaaaaaaaaaaabcGaeaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabcGajcQcQcQcQcQcQcQcQcQcQcscQcQcQcQcQcQcQajcGababaaaaaaaacGajaeaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaajcQcQcQcQcQcQcQcQcQcQctcucGcQcQcQcQcGabababaaaaaaabababajcQadaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadaeaeaeaeaeaeaecQcQcxcxcGcQcQaeaeaeadaaaaaaaaaaaaabcQcQcQaeaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadcHcHaeaecQcQcznvcGcGHocQcQaeaeaaaaaaaaabcGcGajcQcQaeaeaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacHcHcHcQcQcAcBcecenvcecGcDcQaeadaaaaaaaaaaababcGcQaeaeaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacHcHcHcEcecFcGEOceEOcecGcecQaeaeaaaaaaaaaaabadaeaeaeaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacHcHcHcQcQcAcIcJcGcGcececDcQaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabcHcHaeaecQcQcKcLcLcLcMcQcQaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadaeaeaecQcQcNcOcPcQcQaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeaeaecQcQcQcQcQaeaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeaaaeaeaeOzaeaeaeaaaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaaaaabaaaacGaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaaabcGabcGcGcGabababaaaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaabaaaaaaaaabababaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaabaaaaaaaaababaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaacGaaaaaaaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacGaaaaaaaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

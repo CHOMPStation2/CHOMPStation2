@@ -1,4 +1,4 @@
-w// -- Areas -- //
+// -- Areas -- //
 
 /area/vr
 	name = "VR world"
@@ -27,8 +27,6 @@ w// -- Areas -- //
 	power_environ = 1
 	power_light = 1
 
-
-
 /area/vr/powered/bluebase
 	name = "Blue Base"
 	icon_state = "bluenew"
@@ -36,3 +34,27 @@ w// -- Areas -- //
 /area/vr/powered/redbase
 	name = "Red Base"
 	icon_state = "red"
+
+// -- Objects -- //
+/obj/effect/fake_sun/always_day
+	name = "fake sun"
+	desc = "Deletes itself, but first updates all the lighting on outdoor turfs to cool colors."
+	possible_light_setups = list(
+
+		list(
+			"brightness" = 6.0,
+			"color" = "#ABfff7"
+		),
+		list(
+			"brightness" = 4.0,
+			"color" = "#F4EA55"
+		),
+		list(
+			"brightness" = 2.5,
+			"color" = "#EE9AC6"
+		),
+		list(
+			"brightness" = 1.0,
+			"color" = "#F07AD8"
+		)
+	)

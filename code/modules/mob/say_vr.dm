@@ -61,6 +61,8 @@
 		var/list/vis_objs = vis["objs"]
 
 		for(var/mob/M as anything in vis_mobs)
+			if(isnewplayer(M))
+				continue
 			if(isobserver(M) && !(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) && !M.client?.holder) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
@@ -116,7 +118,7 @@
 
 ///// PSAY /////
 
-/mob/verb/psay(message as text|null)
+/mob/verb/psay(message as text)
 	set category = "IC"
 	set name = "Psay"
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
@@ -221,7 +223,7 @@
 
 ///// PME /////
 
-/mob/verb/pme(message as text|null)
+/mob/verb/pme(message as message)
 	set category = "IC"
 	set name = "Pme"
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
@@ -324,7 +326,7 @@
 		M.forced_psay = FALSE
 		M.me_verb(message)
 
-/mob/living/verb/player_narrate(message as text|null)
+/mob/living/verb/player_narrate(message as message)
 	set category = "IC"
 	set name = "Narrate (Player)"
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
@@ -365,6 +367,8 @@
 		if(M)
 			if(isobserver(M))
 				message = "[message] ([ghost_follow_link(src, M)])"
+			if(isnewplayer(M))
+				continue
 			if(M.stat == UNCONSCIOUS || M.sleeping > 0)
 				continue
 			to_chat(M, message)

@@ -148,6 +148,12 @@ type Belly = {
   // Visuals
   affects_vore_sprites: BooleanLike;
   count_absorbed_prey_for_sprite: BooleanLike;
+  absorbed_multiplier: number;
+  count_liquid_for_sprite: BooleanLike;
+  liquid_multiplier: number;
+  count_items_for_sprite: BooleanLike;
+  item_multiplier: number;
+  health_impacts_size: BooleanLike;
   resist_triggers_animation: BooleanLike;
   size_factor_for_sprite: number;
   belly_sprite_to_affect: string;

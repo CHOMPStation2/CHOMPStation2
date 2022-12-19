@@ -63,8 +63,13 @@
 /datum/sprite_accessory/tail/taur/wolf/fatwolf
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
-	icon_sprite_tag = "wolf"	//This could be modified later.
+	//icon_sprite_tag = "wolf"	//This could be modified later.
 	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/wolf/wolf_wag
+	name = "Wolf (Taur, Fat vwag)"
+	icon_state = "wolf_s"
+	ani_state = "fatwolf_s"
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c
 	name = "Wolf 3-color (Taur)"
@@ -73,22 +78,24 @@
 	extra_overlay2 = "wolf_markings_2"
 	//icon_sprite_tag = "wolf2c"
 
+/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
+	name = "Fat Wolf 3-color (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
+	icon_state = "fatwolf_s"
+	extra_overlay = "fatwolf_markings"
+	extra_overlay2 = "fatwolf_markings_2" //CHOMPEdit
+	//icon_sprite_tag = "fatwolf2c"
+	loaf_offset = 3
+
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c_wag
-	name = "Wolf 3-color (Taur, vwag)"
+	name = "Wolf 3-color (Taur, Fat vwag)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
 	icon_state = "wolf_s"
 	extra_overlay = "wolf_markings"
 	extra_overlay2 = "wolf_markings_2"
 	ani_state = "fatwolf_s"
 	extra_overlay_w = "fatwolf_markings"
-	extra_overlay2_w = "wolf_markings_2"
-
-/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
-	name = "Fat Wolf 3-color (Taur)"
-	icon_state = "fatwolf_s"
-	extra_overlay = "fatwolf_markings"
-	extra_overlay2 = "fatwolf_markings_2"
-	//icon_sprite_tag = "fatwolf2c"
-	loaf_offset = 3
+	extra_overlay2_w = "fatwolf_markings_2" //CHOMPEdit
 
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
@@ -104,6 +111,15 @@
 	extra_overlay = "fatsynthwolf_markings"
 	extra_overlay2 = "fatsynthwolf_glow"
 	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/wolf/fatsynthwolf_wag
+	name = "SynthWolf dual-color (Taur, Fat vwag)"
+	icon_state = "synthwolf_s"
+	extra_overlay = "synthwolf_markings"
+	extra_overlay2 = "synthwolf_glow"
+	ani_state = "fatsynthwolf_s"
+	extra_overlay_w = "fatsynthwolf_markings"
+	extra_overlay2_w = "fatsynthwolf_glow"
 
 /datum/sprite_accessory/tail/taur/skunk
 	name = "Skunk (Taur)"
@@ -255,6 +271,18 @@
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 5
 
+/datum/sprite_accessory/tail/taur/lizard/fatlizard
+	name = "Fat Lizard (Taur)"
+	icon_state = "fatlizard_s"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/lizard/lizard_wag
+	name = "Lizard (Taur, Fat vwag)"
+	icon_state = "lizard_s"
+	ani_state = "fatlizard_s"
+
 /datum/sprite_accessory/tail/taur/lizard/lizard_2c
 	name = "Lizard dual-color (Taur)"
 	icon_state = "lizard_s"
@@ -264,20 +292,20 @@
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 5
 
-/datum/sprite_accessory/tail/taur/lizard/fatlizard
-	name = "Fat Lizard (Taur)"
+/datum/sprite_accessory/tail/taur/lizard/fatlizard_2c
+	name = "Fat Lizard (Taur, dual-color)"
 	icon_state = "fatlizard_s"
+	extra_overlay = "fatlizard_markings"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 3
 
-/datum/sprite_accessory/tail/taur/lizard/fatlizard_2c
-	name = "Fat Lizard (Taur, dual-color)"
-	icon_state = "fatlizard_s"
-	extra_overlay= "fatlizard_markings"
-	can_loaf = TRUE
-	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 3
+/datum/sprite_accessory/tail/taur/lizard/lizard_2c_wag
+	name = "Fat Lizard (Taur, dual-color, Fat vwag)"
+	icon_state = "lizard_s"
+	extra_overlay = "lizard_markings"
+	ani_state = "fatlizard_s"
+	extra_overlay_w = "fatlizard_markings"
 
 /datum/sprite_accessory/tail/taur/lizard/synthlizard
 	name = "SynthLizard dual-color (Taur)"
@@ -297,6 +325,15 @@
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/lizard/synthlizard_wag
+	name = "SynthLizard dual-color (Taur, Fat vwag)"
+	icon_state = "synthlizard_s"
+	extra_overlay = "synthlizard_markings"
+	extra_overlay2 = "synthlizard_glow"
+	ani_state = "fatsynthlizard_s"
+	extra_overlay_w = "fatsynthlizard_markings"
+	extra_overlay2_w = "fatsynthlizard_glow"
 
 /datum/sprite_accessory/tail/taur/spider
 	name = "Spider (Taur)"
@@ -364,10 +401,11 @@
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/fatfeline_wag
-	name = "Fat Feline (Taur) (vwag)"
+	name = "Fat Feline (Taur, Fat vwag)"
 	icon_state = "fatfeline_s"
 	ani_state = "fatfeline_w"
 	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c
@@ -381,13 +419,24 @@
 
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
 	name = "Fat Feline 3-color (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
 	icon_state = "fatfeline_s"
 	extra_overlay = "fatfeline_markings"
-	extra_overlay2 = "fatfeline_markings_2"
+	extra_overlay2 = "fatfeline_markings_2" //CHOMPEdit
 	//icon_sprite_tag = "fatfeline2c"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/feline/feline_2c_wag
+	name = "Feline 3-color (Taur, Fat vwag)"
+	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
+	icon_state = "feline_s"
+	extra_overlay = "feline_markings"
+	extra_overlay2 = "feline_markings_2"
+	ani_state = "fatfeline_s"
+	extra_overlay_w = "fatfeline_markings"
+	extra_overlay2_w = "fatfeline_markings_2" //CHOMPEdit
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
 	name = "SynthFeline dual-color (Taur)"
@@ -407,6 +456,15 @@
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/feline/synthfeline_wag
+	name = "SynthFeline dual-color (Taur, Fat vwag)"
+	icon_state = "synthfeline_s"
+	extra_overlay = "synthfeline_markings"
+	extra_overlay2 = "synthfeline_glow"
+	ani_state = "fatsynthfeline_s"
+	extra_overlay_w = "fatsynthfeline_markings"
+	extra_overlay2_w = "fatsynthfeline_glow"
 
 /datum/sprite_accessory/tail/taur/slug
 	name = "Slug (Taur)"
@@ -484,14 +542,21 @@
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 6
 
-/datum/sprite_accessory/tail/taur/ch/fatdrake
-	name = "Drake (Fat Taur dual-color)"
+/datum/sprite_accessory/tail/taur/drake/fat
+	name = "Fat Drake (Taur)"
 	icon_state = "fatdrake_s"
 	extra_overlay = "fatdrake_markings"
-	icon_sprite_tag = "drake"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 6
+
+/datum/sprite_accessory/tail/taur/drake/drake_vwag
+	name = "Drake (Taur, Fat vwag)"
+	icon_state = "drake_s"
+	extra_overlay = "drake_markings"
+	ani_state = "fatdrake_s"
+	extra_overlay_w = "fatdrake_markings"
+	can_loaf = FALSE
 
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"
@@ -673,7 +738,7 @@
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
 
 /datum/sprite_accessory/tail/taur/rat
-	name = "Rat (dual color)"
+	name = "Rat (Taur)"
 	icon_state = "rat_s"
 	extra_overlay = "rat_markings"
 	clip_mask_state = "taur_clip_mask_rat"
@@ -687,3 +752,162 @@
 	suit_sprites = 'icons/mob/taursuits_noodle_vr.dmi'
 	clip_mask_state = "taur_clip_mask_noodle"
 	icon_sprite_tag = "noodle"
+
+/datum/sprite_accessory/tail/taur/sect_drone
+	name = "Sect Drone (Taur)"
+	icon_state = "sect_drone"
+	extra_overlay = "sect_drone_markings"
+	icon_sprite_tag = "sect_drone"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/sect_drone/fat
+	name = "Fat Sect Drone (Taur)"
+	icon_state = "fat_sect_drone"
+	extra_overlay = "fat_sect_drone_markings"
+
+/datum/sprite_accessory/tail/taur/sect_drone/drone_wag
+	name = "Sect Drone (Taur, Fat vwag)"
+	icon_state = "sect_drone"
+	extra_overlay = "sect_drone_markings"
+	ani_state = "fat_sect_drone"
+	extra_overlay_w = "fat_sect_drone_markings"
+
+/datum/sprite_accessory/tail/taur/giantspider_colorable//these are honestly better fit for vass icontypes whoops
+	name = "Giant Spider dual-color (Taur)"
+	icon_state = "giantspidertaur-colorable"
+	extra_overlay = "giantspidertaur-colorable-markings"
+	icon_sprite_tag = "giantspidertaur-colorable"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/carrierspider
+	name = "Carrier Spider (Taur)"
+	icon_state = "carrierspidertaur"
+	extra_overlay = null
+	icon_sprite_tag = "carrierspidertaur"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/giantspider
+	name = "Giant Spider (Taur)"
+	icon_state = "giantspidertaur"
+	extra_overlay = null
+	icon_sprite_tag = "giantspidertaur"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/phoronspider
+	name = "Phorogenic Spider (Taur)"
+	icon_state = "phoronspidertaur"
+	extra_overlay = null
+	icon_sprite_tag = "phoronspidertaur"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/sparkspider
+	name = "Voltaic Spider (Taur)"
+	icon_state = "sparkspidertaur"
+	extra_overlay = null
+	icon_sprite_tag = "sparkspidertaur"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/frostspider
+	name = "Frost Spider (Taur)"
+	icon_state = "frostspidertaur"
+	extra_overlay = null
+	icon_sprite_tag = "frostspidertaur"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"

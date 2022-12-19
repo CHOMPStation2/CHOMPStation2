@@ -200,9 +200,16 @@
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"colorization_enabled" = selected.colorization_enabled,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
+			"sound_volume" = selected.sound_volume, //CHOMPAdd
 			//CHOMP add: vore sprite options
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
+			"absorbed_multiplier" = selected.absorbed_multiplier,
+			"liquid_voresprite" = selected.count_liquid_for_sprite,
+			"liquid_multiplier" = selected.liquid_multiplier,
+			"item_voresprite" = selected.count_items_for_sprite,
+			"item_multiplier" = selected.item_multiplier,
+			"health_voresprite" = selected.health_impacts_size,
 			"resist_animation" = selected.resist_triggers_animation,
 			"voresprite_size_factor" = selected.size_factor_for_sprite,
 			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
@@ -807,6 +814,10 @@
 	var/list/available_options = list("Examine", "Eject", "Move", "Transfer")
 	if(ishuman(target))
 		available_options += "Transform"
+	//CHOMPEdit Begin - Add Reforming
+	if(isobserver(target) || istype(target,/obj/item/device/mmi))
+		available_options += "Reform"
+	//CHOMPEdit End
 	if(isliving(target))
 		var/mob/living/datarget = target
 		if(datarget.client)
@@ -892,6 +903,154 @@
 			V.tgui_interact(user)
 			return TRUE
 
+		//CHOMPEdit Begin - Add Reforming
+		if("Reform")
+			if(host.stat)
+				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				return TRUE
+
+			if(isobserver(target))
+				var/mob/observer/T = target
+				if(!ismob(T.body_backup) || prevent_respawns.Find(T.mind.name) || ispAI(T.body_backup))
+					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
+					return TRUE
+
+				var/accepted = tgui_alert(T, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
+				if(accepted != "Yes")
+					to_chat(user,"<span class='warning'>[T] refused to be reformed!</span>")
+					return TRUE
+
+				if(isliving(T.body_backup))
+					var/mob/living/body_backup = T.body_backup
+					if(ishuman(body_backup))
+						var/mob/living/carbon/human/H = body_backup
+						body_backup.adjustBruteLoss(-6)
+						body_backup.adjustFireLoss(-6)
+						body_backup.setOxyLoss(0)
+						if(H.isSynthetic())
+							H.adjustToxLoss(-H.getToxLoss())
+						else
+							H.adjustToxLoss(-6)
+						body_backup.adjustCloneLoss(-6)
+						body_backup.updatehealth()
+						// Now we do the check to see if we should revive...
+						var/should_proceed_with_revive = TRUE
+						var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
+						should_proceed_with_revive &&= !H.should_have_organ(O_BRAIN) || (brain && (!istype(brain) || brain.defib_timer > 0))
+						if(!H.isSynthetic())
+							should_proceed_with_revive &&= !(HUSK in H.mutations) && H.can_defib
+						if(should_proceed_with_revive)
+							for(var/organ_tag in H.species.has_organ)
+								var/obj/item/organ/O = H.species.has_organ[organ_tag]
+								var/vital = initial(O.vital) //check for vital organs
+								if(vital)
+									O = H.internal_organs_by_name[organ_tag]
+									if(!O || O.damage > O.max_damage)
+										should_proceed_with_revive = FALSE
+										break
+						if(should_proceed_with_revive)
+							dead_mob_list.Remove(H)
+							if((H in living_mob_list) || (H in dead_mob_list))
+								WARNING("Mob [H] was defibbed but already in the living or dead list still!")
+							living_mob_list += H
+
+							H.timeofdeath = 0
+							H.set_stat(UNCONSCIOUS) //Life() can bring them back to consciousness if it needs to.
+							H.failed_last_breath = 0 //So mobs that died of oxyloss don't revive and have perpetual out of breath.
+							H.reload_fullscreen()
+					else
+						body_backup.revive()
+					body_backup.forceMove(T.loc)
+					body_backup.enabled = TRUE
+					body_backup.ajourn = 0
+					body_backup.key = T.key
+					body_backup.teleop = null
+					T.body_backup = null
+					host.vore_selected.release_specific_contents(T, TRUE)
+					if(istype(body_backup, /mob/living/simple_mob))
+						var/mob/living/simple_mob/sm = body_backup
+						if(sm.icon_rest && sm.resting)
+							sm.icon_state = sm.icon_rest
+						else
+							sm.icon_state = sm.icon_living
+					T.update_icon()
+					announce_ghost_joinleave(T.mind, 0, "They now occupy their body again.")
+			else if(istype(target,/obj/item/device/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
+				var/obj/item/device/mmi/MMI = target
+				if(!ismob(MMI.body_backup) || !MMI.brainmob.mind || prevent_respawns.Find(MMI.brainmob.mind.name))
+					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
+					return TRUE
+				var/accepted = tgui_alert(MMI.brainmob, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
+				if(accepted != "Yes")
+					to_chat(user,"<span class='warning'>[MMI] refused to be reformed!</span>")
+					return TRUE
+
+				if(isliving(MMI.body_backup))
+					var/mob/living/body_backup = MMI.body_backup
+					body_backup.enabled = TRUE
+					body_backup.forceMove(MMI.loc)
+					body_backup.ajourn = 0
+					body_backup.teleop = null
+					//And now installing the MMI into the body...
+					if(isrobot(body_backup)) //Just do the reverse of getting the MMI pulled out in /obj/belly/proc/digestion_death
+						var/mob/living/silicon/robot/R = body_backup
+						R.revive()
+						MMI.brainmob.mind.transfer_to(R)
+						MMI.loc = R
+						R.mmi = MMI
+						R.mmi.brainmob.add_language("Robot Talk")
+					else //reference /datum/surgery_step/robotics/install_mmi/end_step
+						var/obj/item/organ/internal/mmi_holder/holder
+						if(istype(MMI, /obj/item/device/mmi/digital/posibrain))
+							var/obj/item/organ/internal/mmi_holder/posibrain/holdertmp = new(body_backup, 1)
+							holder = holdertmp
+						else if(istype(MMI, /obj/item/device/mmi/digital/robot))
+							var/obj/item/organ/internal/mmi_holder/robot/holdertmp = new(body_backup, 1)
+							holder = holdertmp
+						else
+							holder = new(body_backup, 1)
+						body_backup.internal_organs_by_name["brain"] = holder
+						MMI.loc = holder
+						holder.stored_mmi = MMI
+						holder.update_from_mmi()
+
+						if(MMI.brainmob && MMI.brainmob.mind)
+							MMI.brainmob.mind.transfer_to(body_backup)
+							body_backup.languages = MMI.brainmob.languages
+						//You've hopefully already named yourself, so... not implementing that bit.
+						var/mob/living/carbon/human/H = body_backup
+						body_backup.adjustBruteLoss(-6, TRUE)
+						body_backup.adjustFireLoss(-6, TRUE)
+						body_backup.setOxyLoss(0)
+						H.adjustToxLoss(-H.getToxLoss())
+						body_backup.adjustCloneLoss(-6)
+						body_backup.updatehealth()
+						// Now we do the check to see if we should revive...
+						var/should_proceed_with_revive = TRUE
+						var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
+						should_proceed_with_revive &&= !H.should_have_organ(O_BRAIN) || (brain && brain.defib_timer > 0 )
+						if(should_proceed_with_revive)
+							for(var/organ_tag in H.species.has_organ)
+								var/obj/item/organ/O = H.species.has_organ[organ_tag]
+								var/vital = initial(O.vital) //check for vital organs
+								if(vital)
+									O = H.internal_organs_by_name[organ_tag]
+									if(!O || O.damage > O.max_damage)
+										should_proceed_with_revive = FALSE
+										break
+						if(should_proceed_with_revive)
+							dead_mob_list.Remove(H)
+							if((H in living_mob_list) || (H in dead_mob_list))
+								WARNING("Mob [H] was defibbed but already in the living or dead list still!")
+							living_mob_list += H
+
+							H.timeofdeath = 0
+							H.set_stat(UNCONSCIOUS) //Life() can bring them back to consciousness if it needs to.
+							H.failed_last_breath = 0 //So mobs that died of oxyloss don't revive and have perpetual out of breath.
+							H.reload_fullscreen()
+					MMI.body_backup = null
+			return TRUE
+		//CHOMPEdit End
 		if("Process")
 			var/mob/living/ourtarget = target
 			var/list/process_options = list()
@@ -1288,6 +1447,11 @@
 			if(voretest)
 				SEND_SOUND(user, voretest)
 			. = TRUE
+		if("b_sound_volume") //CHOMPAdd
+			var/sound_volume_input = tgui_input_number(user, "Set belly sound volume percentage.", "Sound Volume", null, 100, 0)
+			if(!isnull(sound_volume_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
+				host.vore_selected.sound_volume = sanitize_integer(sound_volume_input, 0, 100, initial(host.vore_selected.sound_volume))
+			. = TRUE
 		if("b_tastes")
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
 			. = TRUE
@@ -1555,11 +1719,41 @@
 			host.vore_selected.count_absorbed_prey_for_sprite = !host.vore_selected.count_absorbed_prey_for_sprite
 			host.update_fullness()
 			. = TRUE
+		if("b_absorbed_multiplier") //CHOMP Addition
+			var/absorbed_multiplier_input = input(user, "Set the impact absorbed prey's size have on your vore sprite. 1 means no scaling, 0.5 means absorbed prey count half as much, 2 means absorbed prey count double. (Range from 0.1 - 3)", "Absorbed Multiplier") as num|null
+			if(!isnull(absorbed_multiplier_input))
+				host.vore_selected.absorbed_multiplier = CLAMP(absorbed_multiplier_input, 0.1, 3)
+				host.update_fullness()
+			. = TRUE
+		if("b_count_liquid_for_sprites") //CHOMP Addition
+			host.vore_selected.count_liquid_for_sprite = !host.vore_selected.count_liquid_for_sprite
+			host.update_fullness()
+			. = TRUE
+		if("b_liquid_multiplier") //CHOMP Addition
+			var/liquid_multiplier_input = input(user, "Set the impact amount of liquid reagents will have on your vore sprite. 1 means a belly with 100 reagents of fluid will count as 1 normal sized prey-thing's worth, 0.5 means liquid counts half as much, 2 means liquid counts double. (Range from 0.1 - 10)", "Liquid Multiplier") as num|null
+			if(!isnull(liquid_multiplier_input))
+				host.vore_selected.liquid_multiplier = CLAMP(liquid_multiplier_input, 0.1, 10)
+				host.update_fullness()
+			. = TRUE
+		if("b_count_items_for_sprites") //CHOMP Addition
+			host.vore_selected.count_items_for_sprite = !host.vore_selected.count_items_for_sprite
+			host.update_fullness()
+			. = TRUE
+		if("b_item_multiplier") //CHOMP Addition
+			var/item_multiplier_input = input(user, "Set the impact items will have on your vore sprite. 1 means a belly with 8 normal-sized items will count as 1 normal sized prey-thing's worth, 0.5 means items count half as much, 2 means items count double. (Range from 0.1 - 10)", "Item Multiplier") as num|null
+			if(!isnull(item_multiplier_input))
+				host.vore_selected.item_multiplier = CLAMP(item_multiplier_input, 0.1, 10)
+				host.update_fullness()
+			. = TRUE
+		if("b_health_impacts_size") //CHOMP Addition
+			host.vore_selected.health_impacts_size = !host.vore_selected.health_impacts_size
+			host.update_fullness()
+			. = TRUE
 		if("b_resist_animation") //CHOMP Addition
 			host.vore_selected.resist_triggers_animation = !host.vore_selected.resist_triggers_animation
 			. = TRUE
 		if("b_size_factor_sprites") //CHOMP Addition
-			var/size_factor_input = input(user, "Set the impact prey's size have on your vore sprite. 1 means no scaling, 0.5 means prey count half as much, 2 means prey count double. (Range from 0.1 - 3)", "Size Factor") as num|null
+			var/size_factor_input = input(user, "Set the impact all belly content's collective size has on your vore sprite. 1 means no scaling, 0.5 means content counts half as much, 2 means contents count double. (Range from 0.1 - 3)", "Size Factor") as num|null
 			if(!isnull(size_factor_input))
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
 				host.update_fullness()

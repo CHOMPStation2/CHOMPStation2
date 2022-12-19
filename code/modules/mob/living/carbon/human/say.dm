@@ -192,7 +192,7 @@
 
 /mob/living/carbon/human/handle_speech_sound()
 	var/list/returns[2]
-	if(species.speech_sounds && species.speech_sounds.len && prob(species.speech_chance))		//VOREStation Edit: Sanity Check
+	if(speech_sound_enabled && species.speech_sounds && species.speech_sounds.len && prob(species.speech_chance))		//VOREStation Edit: Sanity Check //CHOMPStation Edit: add ability to disable speech sounds with a verb
 		returns[1] = sound(pick(species.speech_sounds))
 		returns[2] = 50
 	return returns

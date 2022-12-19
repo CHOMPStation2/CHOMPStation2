@@ -127,9 +127,12 @@
 	var/emagged = FALSE
 	var/target_size = 1
 
-/obj/item/clothing/gloves/bluespace/mob_can_equip(mob/M, gloves, disable_warning = 0)
-	. = ..()
-	if(. && ishuman(M) && !disable_warning)
+/obj/item/proc/equip_special()
+	return
+
+/obj/item/clothing/gloves/bluespace/equip_special()
+	var/mob/M = src.loc
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!H.resizable)
 			return
@@ -174,6 +177,15 @@
 			target_size = 0.1
 		user.visible_message("<span class='notice'>\The [user] swipes the [emag_source] over the \the [src].</span>","<span class='notice'>You swipes the [emag_source] over the \the [src].</span>")
 		return 1
+
+/obj/item/clothing/gloves/bluespace/emagged
+	emagged = TRUE
+
+/obj/item/clothing/gloves/bluespace/emagged/Initialize()
+	. = ..()
+	target_size = (rand(1,300)) /100
+	if(target_size < 0.1)
+		target_size = 0.1
 
 //Same as Nanotrasen Security Uniforms
 /obj/item/clothing/under/ert

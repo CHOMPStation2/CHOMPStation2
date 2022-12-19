@@ -85,6 +85,8 @@
 
 	var/flipped = FALSE
 	var/flip_cooldown = 0
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/startreader
 	emote_see = list("bobs", "digs around","gnashes at something","yawns","snaps at something")

@@ -1405,7 +1405,7 @@
 "Of" = (/obj/machinery/door/firedoor/glass,/obj/structure/table/reinforced,/obj/machinery/door/window/northright{dir = 4; name = "Medical booth"},/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/shuttle/floor/white,/area/vr/powered)
 "Og" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/reinforced,/area/vr/powered/redbase)
 "Oh" = (/turf/simulated/mineral/sif,/area/vr/outdoors/powered)
-"Oi" = (/obj/effect/fake_sun{possible_light_setups = list(list("brightness"=6,"color"="#abfff7"),list("brightness"=4,"color"="#F4EA55"),list("brightness"=2.5,"color"="#EE9AC6"),list("brightness"=1.5,"color"="#F07AD8"),list("brightness"=1.5,"color"="#61AEF3"))},/turf/simulated/floor/outdoors/newdirt_nograss{temperature = 293.15},/area/vr/outdoors/powered)
+"Oi" = (/obj/effect/fake_sun/always_day,/turf/simulated/floor/outdoors/newdirt_nograss{temperature = 293.15},/area/vr/outdoors/powered)
 "Oj" = (/obj/effect/floor_decal/techfloor/corner{dir = 10},/turf/simulated/floor/cult,/area/vr/powered)
 "Ok" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance/engineering,/obj/random/maintenance/medical,/obj/random/maintenance/research,/turf/simulated/shuttle/floor/voidcraft,/area/vr/powered)
 "Ol" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/tiled/techmaint,/area/vr/powered)

@@ -6501,6 +6501,10 @@
 /obj/structure/table/steel,
 /obj/item/weapon/virusdish/random,
 /obj/item/weapon/virusdish/random,
+/obj/item/weapon/surgical/scalpel,
+/obj/item/weapon/surgical/cautery,
+/obj/item/weapon/surgical/FixOVein,
+/obj/item/weapon/surgical/retractor,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "fFq" = (
@@ -12677,6 +12681,9 @@
 /obj/structure/table/steel,
 /obj/item/weapon/implant/sizecontrol,
 /obj/item/weapon/implant/dud,
+/obj/item/clothing/under/rank/geneticist,
+/obj/item/weapon/handcuffs/cable/white,
+/obj/item/clothing/suit/storage/toggle/labcoat,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "mhn" = (
@@ -18101,9 +18108,9 @@
 "rnN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/button/windowtint{
+	id = "vrroom";
 	pixel_x = 26;
-	pixel_y = 11;
-	id = "vrroom"
+	pixel_y = 11
 	},
 /obj/machinery/alarm{
 	dir = 8;
@@ -18132,8 +18139,8 @@
 	},
 /obj/item/weapon/pen,
 /obj/item/weapon/tape_roll{
-	pixel_y = 14;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 14
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/thirddeck/vrroom)
@@ -18170,6 +18177,12 @@
 /obj/structure/table,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
+"rqw" = (
+/turf/simulated/wall{
+	can_open = 1;
+	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
+	},
+/area/maintenance/thirddeck/dormsstarboard)
 "rqQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -18389,8 +18402,8 @@
 "rCL" = (
 /obj/structure/cryofeed{
 	dir = 4;
-	pixel_y = 0;
-	pixel_x = -31
+	pixel_x = -31;
+	pixel_y = 0
 	},
 /obj/machinery/vr_sleeper{
 	icon_state = "body_scanner_0"
@@ -19332,8 +19345,8 @@
 	dir = 9
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_x = -25;
-	dir = 4
+	dir = 4;
+	pixel_x = -25
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/crew_quarters/thirddeck/vrroom)
@@ -19757,12 +19770,12 @@
 	},
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/towel/random{
-	pixel_y = -5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = -5;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -5
 	},
 /obj/item/weapon/towel/random{
 	pixel_x = -5
@@ -19780,12 +19793,12 @@
 	pixel_y = 5
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = -5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = -5;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -5
 	},
 /obj/item/weapon/towel/random{
 	pixel_x = -5
@@ -20063,6 +20076,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/seconddeck/gym)
+"tfU" = (
+/obj/machinery/oxygen_pump/mobile/anesthetic,
+/obj/structure/loot_pile/surface/medicine_cabinet/fresh{
+	pixel_y = 25
+	},
+/turf/simulated/floor,
+/area/maintenance/thirddeck/dormsstarboard)
 "tgc" = (
 /obj/structure/sign/warning/high_voltage{
 	pixel_x = -32
@@ -20136,8 +20156,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/securearea{
-	icon_state = "atmos_waste";
 	desc = "VR-Room under construction, not all of it's features have been implemented yet.";
+	icon_state = "atmos_waste";
 	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	pixel_x = -32
 	},
@@ -21087,8 +21107,8 @@
 "udn" = (
 /obj/machinery/disposal/wall{
 	dir = 4;
-	pixel_y = 0;
-	pixel_x = -37
+	pixel_x = -37;
+	pixel_y = 0
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -24037,8 +24057,8 @@
 	dir = 8
 	},
 /obj/structure/sign/securearea{
-	icon_state = "atmos_waste";
 	desc = "VR-Room under construction, not all of it's features have been implemented yet.";
+	icon_state = "atmos_waste";
 	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	pixel_x = -32
 	},
@@ -24627,8 +24647,8 @@
 	dir = 10
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_x = -25;
-	dir = 4
+	dir = 4;
+	pixel_x = -25
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/crew_quarters/thirddeck/vrroom)
@@ -24996,6 +25016,7 @@
 /obj/effect/decal/cleanable/generic,
 /obj/item/weapon/implanter,
 /obj/structure/table/steel,
+/obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "xob" = (
@@ -25036,8 +25057,8 @@
 	},
 /obj/machinery/disposal/wall{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 35
+	pixel_x = 35;
+	pixel_y = 0
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -25742,13 +25763,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "xRv" = (
-/obj/item/clothing/under/rank/geneticist,
-/obj/item/clothing/under/rank/geneticist,
-/obj/item/clothing/under/rank/geneticist_new,
-/obj/structure/table/rack,
-/obj/structure/loot_pile/surface/medicine_cabinet/fresh{
-	pixel_y = 25
-	},
+/obj/machinery/optable,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "xRV" = (
@@ -64941,7 +64956,7 @@ sJM
 sJM
 sJM
 sJM
-sJM
+rqw
 sJM
 izz
 qRF
@@ -65712,7 +65727,7 @@ jhg
 jhg
 jhg
 qaU
-qaU
+tfU
 yeL
 fFk
 fZP
@@ -65969,7 +65984,7 @@ jhg
 jhg
 jhg
 jhg
-jhg
+qaU
 qaU
 yfn
 qaU

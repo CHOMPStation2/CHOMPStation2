@@ -28,6 +28,8 @@
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/tomatomeat
 	meat_amount = 4
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /decl/mob_organ_names/tomato
 	hit_zones = list("flesh", "leaf", "mouth")

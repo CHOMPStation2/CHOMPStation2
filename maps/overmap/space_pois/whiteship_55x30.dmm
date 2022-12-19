@@ -1,0 +1,141 @@
+"ab" = (/obj/structure/table/rack,/obj/item/clothing/suit/space/syndicate,/obj/item/clothing/head/helmet/space/syndicate,/obj/item/clothing/mask/breath,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"al" = (/obj/item/device/multitool,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"bI" = (/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"bX" = (/obj/random/junk,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"co" = (/obj/machinery/sleep_console,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"cA" = (/obj/machinery/door/blast/regular{id = "oldship_gun"; name = "Pod Bay Door"},/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"cR" = (/obj/structure/bed/chair,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"cS" = (/obj/structure/cable,/obj/structure/frame/computer,/obj/item/stack/cable_coil/cut,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"dw" = (/obj/structure/table/standard,/obj/item/device/analyzer,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"dZ" = (/obj/structure/table/standard,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"en" = (/obj/structure/bed/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"es" = (/mob/living/simple_mob/metroid/juvenile/alpha,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"ew" = (/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"eN" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"eV" = (/obj/random/trash,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"fR" = (/turf/template_noop,/area/template_noop)
+"gr" = (/obj/item/weapon/surgical/scalpel,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"gJ" = (/turf/simulated/shuttle/wall,/area/submap/whiteship)
+"gK" = (/obj/structure/table/standard,/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"gV" = (/obj/machinery/door/window/northright,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"hM" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"ir" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"kz" = (/obj/machinery/atmospherics/pipe/tank/phoron,/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"lo" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"lR" = (/obj/effect/landmark/loot_spawn/low,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"mL" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"mO" = (/mob/living/simple_mob/humanoid/merc/melee,/obj/random/gun/random,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"nP" = (/obj/machinery/power/apc{dir = 8; name = "west bump-derelict"; operating = 0; pixel_x = -24},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"od" = (/mob/living/simple_mob/metroid/juvenile/baby,/obj/effect/decal/cleanable/dirt,/obj/random/trash,/obj/random/trash,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"of" = (/obj/structure/table,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"og" = (/mob/living/simple_mob/metroid/juvenile/baby,/obj/random/handgun/sec,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"oh" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"ok" = (/obj/item/weapon/bedsheet,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/structure/bed/padded,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"pE" = (/obj/machinery/door/airlock/glass{name = "Pod Bay"},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"pU" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/mob/living/simple_mob/metroid/juvenile/zeta,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"qP" = (/mob/living/simple_mob/humanoid/merc/melee,/obj/random/gun/random,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"rk" = (/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"ry" = (/mob/living/simple_mob/humanoid/merc/melee,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"sn" = (/obj/random/junk,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"tb" = (/obj/item/weapon/cell{charge = 100; maxcharge = 15000},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"tg" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/metroid/juvenile/omega,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"tK" = (/obj/item/weapon/material/shard,/obj/structure/bed/chair,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"us" = (/obj/machinery/door/airlock/glass,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"uz" = (/obj/machinery/light_switch{pixel_x = 27},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"uD" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "burst_l"},/turf/template_noop,/area/submap/whiteship)
+"va" = (/obj/random/trash,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"vf" = (/mob/living/simple_mob/metroid/juvenile/super,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"vQ" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "burst_r"},/turf/template_noop,/area/submap/whiteship)
+"wd" = (/obj/machinery/computer/pod{dir = 1; id = "oldship_gun"},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"ww" = (/obj/structure/cable,/obj/structure/frame/computer,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"wx" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"wD" = (/obj/machinery/door/airlock/glass{name = "Hibernation Pods"},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"xw" = (/obj/structure/table/rack,/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/oxygen,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"yw" = (/obj/structure/frame/computer,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"zt" = (/obj/structure/shuttle/engine/heater{dir = 4},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/airless,/area/submap/whiteship)
+"zR" = (/obj/random/handgun/sec,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"zT" = (/mob/living/simple_mob/metroid/juvenile/baby,/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"zY" = (/obj/item/weapon/cell{charge = 100; maxcharge = 15000},/obj/random/trash,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"An" = (/obj/structure/table/standard,/obj/item/device/radio/off,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"At" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"AQ" = (/obj/machinery/door/airlock/glass,/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"Bq" = (/obj/structure/lattice,/obj/item/stack/rods,/turf/template_noop,/area/submap/whiteship)
+"Br" = (/obj/structure/shuttle/window,/obj/structure/grille,/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"Cd" = (/mob/living/simple_mob/humanoid/merc/melee,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Dc" = (/obj/machinery/door/window,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Es" = (/obj/machinery/door/airlock/glass,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"EE" = (/obj/structure/lattice,/turf/template_noop,/area/submap/whiteship)
+"EF" = (/obj/structure/table/standard,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"EM" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Fn" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/metroid/juvenile/super,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"FB" = (/obj/structure/lattice,/obj/structure/lattice,/turf/template_noop,/area/submap/whiteship)
+"FT" = (/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Gy" = (/obj/machinery/mass_driver{dir = 8; id = "oldship_gun"},/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"GA" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/metroid/juvenile/super,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"GV" = (/obj/random/gun/random,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"Hl" = (/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"HM" = (/obj/machinery/light_switch{pixel_x = 27},/obj/machinery/light{dir = 4},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"IB" = (/obj/structure/table/standard,/obj/machinery/light{dir = 4},/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"IK" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"Jb" = (/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Jy" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/random/trash,/obj/random/junk,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"JU" = (/obj/machinery/portable_atmospherics/powered/scrubber,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"LD" = (/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"LH" = (/obj/structure/shuttle/engine/propulsion{dir = 4},/turf/template_noop,/area/submap/whiteship)
+"LW" = (/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Ma" = (/obj/item/weapon/banner/solgov,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"Md" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/regular{pixel_x = 6; pixel_y = -5},/obj/random/maintenance/medical,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Mi" = (/obj/random/junk,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"MK" = (/obj/machinery/light_switch{pixel_x = 27},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Nc" = (/obj/item/stack/rods,/turf/template_noop,/area/submap/whiteship)
+"Nk" = (/obj/machinery/light{dir = 1},/obj/machinery/sleeper{dir = 8},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Nq" = (/obj/structure/table/standard,/obj/item/weapon/tank/oxygen,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"NE" = (/obj/structure/table/rack,/obj/item/weapon/storage/toolbox/syndicate,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"RB" = (/obj/machinery/atmospherics/pipe/tank/phoron{dir = 1},/turf/simulated/shuttle/plating,/area/submap/whiteship)
+"So" = (/obj/structure/table/standard,/obj/item/weapon/tool/screwdriver,/obj/machinery/light,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Su" = (/obj/structure/table/standard,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Sw" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"TC" = (/mob/living/simple_mob/metroid/juvenile/baby,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"TS" = (/obj/structure/bed/chair{dir = 1},/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Uq" = (/obj/item/weapon/bedsheet,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/bed/padded,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"UA" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Vu" = (/obj/structure/table/standard,/obj/item/weapon/gun/energy/retro,/turf/simulated/shuttle/floor/white,/area/submap/whiteship)
+"Vz" = (/obj/machinery/computer/med_data{dir = 4},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"VC" = (/mob/living/simple_mob/metroid/juvenile/alpha,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"Wt" = (/obj/machinery/light/small{dir = 8},/turf/simulated/shuttle/floor,/area/submap/whiteship)
+"Wx" = (/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+"WO" = (/turf/simulated/shuttle/wall/hard_corner,/area/submap/whiteship)
+"Xy" = (/mob/living/simple_mob/metroid/juvenile/baby,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/yellow,/area/submap/whiteship)
+
+(1,1,1) = {"
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRgJgJgJgJgJgJgJfRfRfRfRfRfRfRgJgJfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRgJgJWOJbJbNkcoJbWOgJgJfRfRfRfRgJWOvQfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRgJgJVzLDUAXyGVIKJbMdJbgJgJfRfRgJWOztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRgJgJgJWOJbmLohmLgrmLmLJbgJgJgJgJWOkzztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfRfRfRfRfR
+fRfRfRgJWOewywWOgJgJBrBrBrgJgJwDgJgJgJWOHlHlztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfRfRfRfRfRfR
+fRfRfRgJewewTSewgKgJalewzYirhMewewewewAQHlWOgJuDfRfRfRfRfRfRNcfRfRfRfRfRfRfRfRfRfRfREEEEfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRgJewVCIKrkSugJirIKrkTCIKrkIKIKewWOWOgJgJfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfRfRfREEEEfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRBrewIKeNIKIBgJirIKgJusgJgJWOsnMKgJJUewWOgJgJfRfRfREEEENcfREEEEfRfRfRfRfRfRfRFBfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRBrewIKryloewgJirIKgJJbUqDcgJIKvagJbIvfewewWOgJfRgJgJgJgJgJgJgJgJgJgJgJfRfREEEEfRfRfRfRfRfRfRfRfRfRfREENc
+fRfRfRBrVudZzRrkewBrhMIKgJWtNquzgJtgewBrewirIKMiewgJgJgJewewAtewEMewAtewewgJEEfRNcgJgJgJgJgJgJgJgJgJgJgJfREEfR
+fRfRfRBrdwenIKesewEsirrkgJCdogJbgJeVewEsewIKodrkewEsewEsirJyTCIKpUeNIKrkewEsEEfREEgJewirirlRirewAtewewgJfREEfR
+fRfRfRBrEFdZIKIKewBrewrkgJgVokbXgJIKewBrewMiqPirirgJgJgJirirAtAtirlRirFTewgJEEEEEEEsewIKloMaeNIKGArkewEsEEEEfR
+fRfRfRBrewsnIKIKewgJewrkWOgJgJusgJXyirgJbIewewewWOgJfRgJgJgJgJgJgJgJgJgJgJgJfRNcEEgJewAtirAtewofMiAtewgJfREEfR
+fRfRfRBrewewirSwHMgJWOrkrkrkrkrkrkwxirgJewewWOgJgJfRfRfRfRfRfRfRfRfRfRfRfREEfRFBfRgJgJgJgJgJgJgJgJgJgJgJfRfRBq
+fRfRfRgJLWtKcRewWOgJgJgJgJgJWOewrkrkewWOWOgJgJfRfRfRfRfRfRfRfRfRfRfRfRfRfREENcNcfRfRfRfRfRfRfRfRfRfRfRfRfRfREE
+fRfRfRgJWOwwcSWOgJWOxwabNEWOgJnPWxtbewAQHlWOgJvQfRfRfRfRfRfRfRfRfRfRNcfRfRfRfRfREEfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRgJgJgJgJWOewirmLFnewgJMiirewWOWOHlHlztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfREEfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRcAGyEsewewmLUAzTewpEewewWOgJgJWORBztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRNcfR
+fRfRfRfRfRgJgJWOwdewirmOirewgJWOWOgJfRfRgJWOztLHfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRgJgJWOewSoAnWOgJgJgJfRfRfRfRgJgJuDfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRgJgJgJgJgJgJgJfRfRfRfRfRfRfRgJgJfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+fRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfRfR
+"}

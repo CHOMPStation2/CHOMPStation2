@@ -62,11 +62,95 @@
 	icon_state = "Guilmon_Horns"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	
+
 /datum/sprite_accessory/ears/una_bighorns
 	name = "Unathi Big Horns"
 	icon = 'icons/mob/Human_face_m.dmi'
 	icon_state = "unathi_bighorn"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	
+
+/datum/sprite_accessory/ears/chorns_nubbydogs_c
+	name = "Nubby Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_nubby"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_herk_c
+	name = "Herk Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_herk"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_bork_c
+	name = "Bork Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_bork"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_bull_c
+	name = "Bull Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_bull"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_bicarrot_c
+	name = "Bicarrot Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_bicarrot"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_longcarrot_c
+	name = "Long Carrot Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_longcarrot"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_shortcarrot_c
+	name = "Short Carrot Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_shortcarrot"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_scorp_c
+	name = "Scorp Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_scorp"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_ocean_c
+	name = "Ocean Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_ocean"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/chorns_chub_c
+	name = "Chub Chorns (colorable)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "chorn_chub"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/goatflops
+	name = "Floppy Goat Ears"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "goatflops"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/goatflops_horn
+	name = "Floppy Goat Ears (with horns)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "goatflops"
+	extra_overlay = "goatflops_horn"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

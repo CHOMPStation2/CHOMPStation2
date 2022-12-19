@@ -128,7 +128,9 @@ var/list/admin_verbs_admin = list(
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
 	/client/proc/make_mentor,
-	/client/proc/unmake_mentor
+	/client/proc/unmake_mentor,
+	/client/proc/removetickets,
+	/client/proc/delbook
 	)
 
 var/list/admin_verbs_ban = list(

@@ -27,6 +27,8 @@
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
 	meat_amount = 3
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/goose
 	speak = list("HONK!")

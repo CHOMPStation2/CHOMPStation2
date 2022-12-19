@@ -2,6 +2,7 @@
 	//speech sounds
 	var/list/speech_sounds = list()
 	var/speech_chance = 75 //mobs can be a bit more emotive than carbon/humans
+	var/speech_sound_enabled = TRUE
 
 	//vars for vore_icons toggle control
 	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
@@ -34,8 +35,22 @@
 
 	update_icon()
 
+/mob/living/simple_mob/verb/toggle_speech_sounds()
+	set name = "Toggle Species Speech Sounds"
+	set desc = "Toggle if your species defined speech sound has a chance of playing on a Say"
+	set category = "IC"
+
+	if(stat)
+		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
+		return
+
+	speech_sound_enabled = !speech_sound_enabled
+	to_chat(src, "You will [speech_sound_enabled ? "now" : "no longer"] have a chance to play your species defined speech sound on a Say.")
+
+	return TRUE
+
 /mob/living/simple_mob/handle_speech_sound()
-	if(speech_sounds && speech_sounds.len && prob(speech_chance))
+	if(speech_sound_enabled && speech_sounds && speech_sounds.len && prob(speech_chance))
 		var/list/returns[2]
 		returns[1] = sound(pick(speech_sounds))
 		returns[2] = 50
@@ -82,6 +97,3 @@
 
 	// This from original living.dm update_transforms too
 	handle_status_indicators()
-
-
-

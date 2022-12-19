@@ -51,7 +51,7 @@
 	vol *= client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
 	S.volume = vol
 
-	if(vary)
+	if(vary || frequency) //CHOMPEdit
 		if(frequency)
 			S.frequency = frequency
 		else
