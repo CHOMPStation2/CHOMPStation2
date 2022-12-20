@@ -307,10 +307,16 @@
 /area/awaymission/darkrp/outside/ghetto)
 "bf" = (
 /obj/structure/salvageable/console_os{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
+"bg" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/parkcondo)
 "bm" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -427,6 +433,10 @@
 	},
 /turf/simulated/floor/water/indoors,
 /area/awaymission/darkrp/sewers)
+"bC" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/parkcondo)
 "bF" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/material/ashtray/glass,
@@ -3383,6 +3393,10 @@
 /obj/effect/decal/remains,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/sewers)
+"np" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "nr" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4864,7 +4878,7 @@
 "td" = (
 /obj/effect/map_effect/portal/master/side_b{
 	dir = 4;
-	portal_id = "sewer2"
+	portal_id = "housething"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
@@ -6080,6 +6094,11 @@
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
+"xj" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs,
+/turf/simulated/floor/wmarble,
+/area/awaymission/darkrp/subhouse2)
 "xk" = (
 /obj/machinery/light{
 	dir = 8
@@ -6183,6 +6202,10 @@
 "xD" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/outside/park)
+"xE" = (
+/obj/random/pottedplant,
+/turf/simulated/floor/wmarble,
+/area/awaymission/darkrp/subhouse2)
 "xH" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6542,6 +6565,12 @@
 /obj/item/weapon/flame/lighter/zippo/gold,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
+"yN" = (
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownshop)
 "yO" = (
 /obj/machinery/light{
 	dir = 8
@@ -6853,6 +6882,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/ghetto)
+"zW" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse1)
 "zX" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/head/fishing,
@@ -7974,6 +8009,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
+"Ed" = (
+/obj/structure/table/bench/padded,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wmarble,
+/area/awaymission/darkrp/subhouse2)
 "Ee" = (
 /obj/structure/janitorialcart{
 	dir = 4
@@ -9184,7 +9226,9 @@
 	icon_state = "1-4"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/random/maintenance,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/morestuff,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
 "Im" = (
@@ -9387,6 +9431,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"IZ" = (
+/obj/structure/curtain/open/shower,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/parkcondo)
 "Jb" = (
 /turf/simulated/wall/thull,
 /area/awaymission/darkrp/sewers)
@@ -9612,6 +9666,10 @@
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/downtownresturaunt)
+"JP" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subhouse2)
 "JS" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -9625,6 +9683,15 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"JU" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/parkcondo)
 "JX" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11276,7 +11343,7 @@
 /area/awaymission/darkrp/sewers)
 "PI" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/radio/phone,
+/obj/item/device/camera,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
 "PJ" = (
@@ -11295,7 +11362,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/darkrp/plazarecroom)
 "PO" = (
-/obj/effect/fake_sun,
+/obj/effect/fake_sun/warm,
 /turf/simulated/floor/outdoors/newdirt{
 	temperature = 293.15
 	},
@@ -11318,7 +11385,9 @@
 /area/awaymission/darkrp/downtownshop)
 "PT" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/random/maintenance,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/morestuff,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
 "PV" = (
@@ -11950,6 +12019,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
+"Sv" = (
+/obj/structure/bed/chair/comfy/black{
+	pixel_y = 0;
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subhouse2)
 "Sw" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -12155,6 +12231,10 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
+"Tn" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/wmarble,
+/area/awaymission/darkrp/subhouse2)
 "To" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/action_figure{
@@ -12668,7 +12748,7 @@
 "UY" = (
 /obj/effect/map_effect/portal/master/side_a{
 	dir = 8;
-	portal_id = "sewer2"
+	portal_id = "housething"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
@@ -13256,6 +13336,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/warehouses)
+"Xw" = (
+/turf/simulated/floor/outdoors/grass/heavy{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside)
 "Xx" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -13328,6 +13413,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
+"XJ" = (
+/obj/random/pottedplant,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subhouse2)
 "XK" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp/green,
@@ -21867,10 +21956,10 @@ br
 uS
 lX
 ak
-PT
-PT
-PT
-PT
+zW
+zW
+zW
+zW
 PT
 lX
 NA
@@ -22191,11 +22280,11 @@ br
 uS
 st
 ak
+zW
+zW
 PT
-PT
-PT
-PT
-PT
+zW
+zW
 lX
 NA
 NA
@@ -22516,10 +22605,10 @@ tq
 PX
 Pt
 Il
-PT
-PT
-PT
-PT
+zW
+zW
+zW
+zW
 lX
 NA
 NA
@@ -22632,7 +22721,7 @@ vj
 pZ
 FD
 IR
-Gj
+yN
 Gj
 sn
 Gj
@@ -26805,8 +26894,8 @@ uI
 uI
 uI
 Qq
-Jr
-Jr
+JU
+bg
 Qq
 Re
 vl
@@ -27130,7 +27219,7 @@ uI
 au
 Qq
 Jr
-Jr
+IZ
 Qq
 Re
 FD
@@ -27617,7 +27706,7 @@ uI
 uI
 uI
 uI
-Qq
+bC
 Re
 FD
 FD
@@ -27779,7 +27868,7 @@ uI
 uI
 uI
 uI
-Qq
+bC
 Re
 FD
 FD
@@ -33972,12 +34061,12 @@ jE
 eg
 NN
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 ad
 kE
@@ -34134,12 +34223,12 @@ Uc
 Or
 kh
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 Qh
 mR
@@ -34296,12 +34385,12 @@ oH
 kw
 IF
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 Qh
 mR
@@ -34458,12 +34547,12 @@ bf
 mm
 FA
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 Qh
 mR
@@ -34620,12 +34709,12 @@ Uc
 Uc
 Uc
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 Qh
 mR
@@ -34782,12 +34871,12 @@ Uc
 Uc
 Uc
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 Qh
 mR
@@ -34944,12 +35033,12 @@ AA
 Cp
 vz
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 CY
 CY
@@ -35106,12 +35195,12 @@ uo
 uo
 uo
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 vb
 vb
@@ -35268,12 +35357,12 @@ uo
 HI
 YL
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 vb
 vb
@@ -35430,12 +35519,12 @@ zo
 Jk
 Jk
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 CY
 CY
@@ -35592,12 +35681,12 @@ uo
 rK
 Jk
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 vb
 vb
@@ -35754,12 +35843,12 @@ uo
 Jk
 Ri
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 vb
 vb
@@ -35916,12 +36005,12 @@ uo
 Tc
 Jk
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 vb
 vb
@@ -36078,12 +36167,12 @@ uo
 uo
 uo
 uo
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 vb
 vb
@@ -36230,22 +36319,22 @@ HO
 HO
 Hp
 ay
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 bX
 Ea
@@ -36397,17 +36486,17 @@ yn
 yn
 yn
 yn
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 tM
 Iq
@@ -36559,17 +36648,17 @@ SO
 SO
 SO
 yn
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 CY
 bX
 Ui
@@ -38988,7 +39077,7 @@ hk
 LM
 JK
 HD
-Yv
+xj
 VA
 VA
 VA
@@ -39149,7 +39238,7 @@ ym
 hk
 LM
 JK
-HD
+Ed
 Yv
 VA
 VA
@@ -39311,8 +39400,8 @@ ym
 hk
 LM
 JK
-VA
-VA
+Tn
+xE
 VA
 wm
 VA
@@ -39635,12 +39724,12 @@ ym
 hk
 LM
 JK
-sQ
+XJ
 sQ
 sQ
 fK
-sQ
-sQ
+Sv
+Sv
 fK
 sQ
 sQ
@@ -39801,8 +39890,8 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
+JP
+JP
 sQ
 sQ
 sQ
@@ -40975,7 +41064,7 @@ Ta
 NA
 oz
 oz
-oz
+Xa
 Xa
 Xa
 Xa
@@ -41674,13 +41763,13 @@ EU
 Pv
 Pv
 EU
-Xz
+np
 FB
+np
 Xz
-Xz
-Xz
+np
 FB
-Xz
+np
 EU
 Ka
 Ka
@@ -41836,13 +41925,13 @@ EU
 Pv
 Pv
 EU
+np
 Xz
+np
 Xz
+np
 Xz
-Xz
-Xz
-Xz
-Xz
+np
 EU
 Ka
 Ka
@@ -41998,13 +42087,13 @@ EU
 Pv
 Pv
 EU
+np
 Xz
+np
 Xz
+np
 Xz
-Xz
-Xz
-Xz
-Xz
+np
 EU
 Ka
 Ka
