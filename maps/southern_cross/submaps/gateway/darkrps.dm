@@ -258,6 +258,11 @@
 /area/awaymission/darkrp/centersidehouse
 	name = "Center Side House"
 	icon_state = "blue"
+
+/area/awaymission/darkrp/reference
+	name = "Secret Tunnel Room"
+	icon_state = "blue"
+	requires_power = 0
 //Sewers,,,
 
 /area/awaymission/darkrp/subway

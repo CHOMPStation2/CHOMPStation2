@@ -4583,6 +4583,7 @@
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
 #include "modular_chomp\code\modules\projectiles\gun.dm"
 #include "modular_chomp\code\modules\projectiles\clockwork\clockwork_guns_ch.dm"
+#include "modular_chomp\code\modules\projectiles\guns\projectile\revolver.dm"
 #include "modular_chomp\code\modules\reagents\machinery\dispenser\chem_synthesizer_ch.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\drinks.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\instant.dm"
