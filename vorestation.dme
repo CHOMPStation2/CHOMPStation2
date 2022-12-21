@@ -4509,6 +4509,7 @@
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\datums\outfits\jobs\noncrew.dm"
+#include "modular_chomp\code\datums\supplypacks\medical.dm"
 #include "modular_chomp\code\game\jobs\job\department.dm"
 #include "modular_chomp\code\game\jobs\job\noncrew.dm"
 #include "modular_chomp\code\game\jobs\job\silicon.dm"

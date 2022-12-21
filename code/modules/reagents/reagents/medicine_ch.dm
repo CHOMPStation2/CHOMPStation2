@@ -209,6 +209,6 @@
 	M.eye_blurry = min(20, max(0, M.eye_blurry + 10))
 	if(prob(10)) // 1 in 10 per tick
 		var/mob/living/carbon/human/H = M
-		var/obj/item/organ/internal/brain/br = H.internal_organs_by_name[O_BRAIN]
+		var/obj/item/organ/internal/brain/br = H.internal_organs_by_name[O_BRAIN] //Give brain damage spaceman, AKA no change at all
 		br?.take_damage(1)
 		to_chat(M, "<span class='warning'>You feel extremely jittery!</span>")
