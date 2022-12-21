@@ -277,7 +277,7 @@
 
 /datum/gear/suit/dept/cloak/cap
 	display_name = "site manager cloak (Teshari)"
-	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/cap
+	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs
 	allowed_roles = list("Site Manager")
 
 /datum/gear/suit/dept/cloak/hop
