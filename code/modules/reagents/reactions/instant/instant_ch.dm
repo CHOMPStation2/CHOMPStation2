@@ -103,29 +103,6 @@
 	required_reagents = list("bicaridine" = 1, "serazine" = 1, "tungsten" = 1)
 	result_amount = 3
 
-/////GENDER CHANGE RECIPES/////
-
-/decl/chemical_reaction/instant/change_drug/male
-	name = "Elixer of Change"
-	id = "change_drug_male"
-	result = "change_drug_male"
-	required_reagents = list("blood" = 1, "mutagen" = 1, "iron" = 1)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/change_drug/female
-	name = "Elixer of Change"
-	id = "change_drug_female"
-	result = "change_drug_female"
-	required_reagents = list("blood" = 1, "mutagen" = 1, "sugar" = 1)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/change_drug/intersex
-	name = "Elixer of Change"
-	id = "change_drug_intersex"
-	result = "change_drug_intersex"
-	required_reagents = list("change_drug_male" = 1, "change_drug_female" = 1)
-	result_amount = 1
-
 // Frost oil reactions for material sheets
 /decl/chemical_reaction/instant/solidification/aluminium
 	name = "Solid Aluminium"
