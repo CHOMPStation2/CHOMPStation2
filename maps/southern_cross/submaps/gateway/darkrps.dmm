@@ -133,7 +133,30 @@
 /area/awaymission/darkrp/parkcondo)
 "av" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_casing/a145{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -4;
+	pixel_x = -4;
+	dir = 1
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 4;
+	pixel_x = -4;
+	dir = 2
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 3;
+	pixel_x = 4;
+	dir = 8
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -1;
+	pixel_x = 5;
+	dir = 2
+	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/darkrp/reference)
 "aw" = (
@@ -4456,7 +4479,30 @@
 /area/awaymission/darkrp/plazarecroom)
 "rp" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_casing/a145{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -4;
+	pixel_x = -4;
+	dir = 1
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 4;
+	pixel_x = -4;
+	dir = 2
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 3;
+	pixel_x = 4;
+	dir = 8
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -1;
+	pixel_x = 5;
+	dir = 2
+	},
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
@@ -7575,7 +7621,30 @@
 /area/awaymission/darkrp/ghettoeats)
 "Cf" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_casing/a145{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -4;
+	pixel_x = -4;
+	dir = 1
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 4;
+	pixel_x = -4;
+	dir = 2
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 3;
+	pixel_x = 4;
+	dir = 8
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -1;
+	pixel_x = 5;
+	dir = 2
+	},
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -7834,6 +7903,30 @@
 /area/awaymission/darkrp/plazashop)
 "Dg" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/ammo_casing/a145{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -4;
+	pixel_x = -4;
+	dir = 1
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 4;
+	pixel_x = -4;
+	dir = 2
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 3;
+	pixel_x = 4;
+	dir = 8
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -1;
+	pixel_x = 5;
+	dir = 2
+	},
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
@@ -8330,7 +8423,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "ER" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/shuttle/wall/voidcraft,
 /area/awaymission/darkrp/reference)
 "ES" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -9935,7 +10028,7 @@
 /area/awaymission/darkrp/plazacoffee)
 "Kj" = (
 /obj/structure/table/marble,
-/obj/item/weapon/gun/projectile/revolver/judge,
+/obj/item/weapon/gun/projectile/revolver/slab,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/reference)
 "Kk" = (
@@ -11602,6 +11695,30 @@
 /area/awaymission/darkrp/downtownempty)
 "Qa" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/ammo_casing/a145{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -4;
+	pixel_x = -4;
+	dir = 1
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 4;
+	pixel_x = -4;
+	dir = 2
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 3;
+	pixel_x = 4;
+	dir = 8
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -1;
+	pixel_x = 5;
+	dir = 2
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/reference)
 "Qb" = (
@@ -12951,6 +13068,30 @@
 /area/awaymission/darkrp/downtowngunshop)
 "Vd" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/ammo_casing/a145{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -4;
+	pixel_x = -4;
+	dir = 1
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 4;
+	pixel_x = -4;
+	dir = 2
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = 3;
+	pixel_x = 4;
+	dir = 8
+	},
+/obj/item/ammo_casing/a145{
+	pixel_y = -1;
+	pixel_x = 5;
+	dir = 2
+	},
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -34875,7 +35016,7 @@ ER
 El
 El
 El
-xh
+El
 qT
 qT
 qT
@@ -35847,7 +35988,7 @@ ER
 El
 El
 El
-El
+xh
 xh
 xh
 xh
