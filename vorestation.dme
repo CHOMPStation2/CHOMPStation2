@@ -4518,6 +4518,7 @@
 #include "modular_chomp\code\modules\client\preference_setup\general\03_body.dm"
 #include "modular_chomp\code\modules\client\preference_setup\global\setting_datums.dm"
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_general.dm"
+#include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_xeno.dm"
 #include "modular_chomp\code\modules\clothing\clothing.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\clockwork_ch.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
