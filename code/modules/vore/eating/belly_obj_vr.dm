@@ -49,6 +49,7 @@
 	var/obj/item/weapon/storage/vore_egg/ownegg	// Is this belly creating an egg?
 	var/egg_type = "Egg"					// Default egg type and path.
 	var/egg_path = /obj/item/weapon/storage/vore_egg
+	var/egg_name = null						// CHOMPAdd. Custom egg name
 	var/list/list/emote_lists = list()			// Idle emotes that happen on their own, depending on the bellymode. Contains lists of strings indexed by bellymode
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
@@ -278,7 +279,8 @@
 	"autotransfer_max_amount",
 	"slow_digestion",
 	"slow_brutal",
-	"sound_volume", //CHOMP end of variables from CHOMP
+	"sound_volume",
+	"egg_name", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -1391,7 +1393,8 @@
 	dupe.autotransfer_max_amount = autotransfer_max_amount
 	dupe.slow_digestion = slow_digestion
 	dupe.slow_brutal = slow_brutal
-	dupe.sound_volume = sound_volume //CHOMP end of variables from CHOMP
+	dupe.sound_volume = sound_volume
+	dupe.egg_name = egg_name //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
