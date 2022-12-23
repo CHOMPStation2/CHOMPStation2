@@ -2160,6 +2160,19 @@ lol
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
+<<<<<<< HEAD
+=======
+"Ma" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/closet/walllocker_double/east,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tool/crowbar/red,
+/turf/simulated/floor,
+/area/shuttle/groundbase/exploration)
+>>>>>>> d14dfdaef4... Merge pull request #14232 from Very-Soft/removeexplo
 "Mc" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -2337,9 +2350,21 @@ lol
 /turf/simulated/floor/tiled/virgo3c,
 /area/groundbase/medical/patio)
 "Pf" = (
+<<<<<<< HEAD
 /obj/machinery/mineral/equipment_vendor/survey,
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+=======
+/obj/machinery/power/smes/buildable{
+	charge = 500000
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/light,
+/turf/simulated/floor,
+/area/shuttle/groundbase/exploration)
+>>>>>>> d14dfdaef4... Merge pull request #14232 from Very-Soft/removeexplo
 "Ph" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2854,6 +2879,7 @@ lol
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
 "YJ" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
@@ -2863,6 +2889,12 @@ lol
 /obj/effect/landmark/start/fieldmedic,
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+=======
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable/yellow,
+/turf/simulated/floor,
+/area/shuttle/groundbase/exploration)
+>>>>>>> d14dfdaef4... Merge pull request #14232 from Very-Soft/removeexplo
 "YK" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
