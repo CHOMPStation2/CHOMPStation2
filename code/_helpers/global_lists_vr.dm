@@ -534,7 +534,6 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				"Research Intern",
 				"Security Cadet",
 				"Jr. Cargo Tech",
-				"Jr. Explorer",
 				"Server",
 				"Electrician",
 				"Barista")

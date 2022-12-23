@@ -80,7 +80,13 @@
 
 /datum/job/paramedic
 	pto_type = PTO_MEDICAL
+<<<<<<< HEAD
 	alt_titles = list("Emergency Medical Technician" = /datum/alt_title/emt, "Medical Responder" = /datum/alt_title/medical_responder) //CHOMPedit: Removed SAR because that's an actual job here
+=======
+	alt_titles = list("Emergency Medical Technician" = /datum/alt_title/emt, "Medical Responder" = /datum/alt_title/medical_responder, "Search and Rescue" = /datum/alt_title/sar)
+	total_positions = 3
+	spawn_positions = 3
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 
 /datum/alt_title/medical_responder
 	title = "Medical Responder"

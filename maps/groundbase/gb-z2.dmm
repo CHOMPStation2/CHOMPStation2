@@ -1922,21 +1922,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room6)
-"fI" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
-/area/groundbase/level2/nw)
 "fJ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4173,10 +4158,6 @@
 "mk" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -7970,9 +7951,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/structure/disposalpipe/up{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 4
 	},
@@ -10148,11 +10126,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 1;
-	name = "Exploration";
-	sortType = "Exploration"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level2/nw)
 "Eh" = (
@@ -13309,10 +13283,6 @@
 "Nd" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -23356,7 +23326,7 @@ TD
 Oc
 rP
 bY
-fI
+sN
 bY
 rl
 Rm
@@ -23498,7 +23468,7 @@ IQ
 gR
 rP
 GY
-fI
+sN
 bY
 FF
 iB
@@ -23640,7 +23610,7 @@ rP
 rP
 rP
 bY
-fI
+sN
 bY
 FF
 FF
@@ -23782,7 +23752,7 @@ LT
 bY
 bY
 bY
-fI
+sN
 Vv
 bY
 bY
@@ -23924,7 +23894,7 @@ pw
 bY
 bY
 pw
-fI
+sN
 pw
 bY
 bY

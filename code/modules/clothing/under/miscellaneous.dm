@@ -1114,7 +1114,7 @@
 
 /obj/item/clothing/under/explorer
 	desc = "A green uniform for operating in hazardous environments."
-	name = "explorer's jumpsuit"
+	name = "away team's jumpsuit"
 	icon_state = "explorer"
 
 /obj/item/clothing/under/explorer/armored
@@ -1501,4 +1501,8 @@
 /obj/item/clothing/under/christmas/croptop/green
 	name = "green crop-top christmas suit"
 	desc = "A simple green christmas suit that doesn't quite looks like Mrs Claus'. Smells minty!"
+<<<<<<< HEAD
 	icon_state = "christmascroppedgreen" 
+=======
+	icon_state = "christmascroppedgreen"
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
