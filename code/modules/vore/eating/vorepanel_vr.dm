@@ -1093,7 +1093,7 @@
 							var/mob/living/carbon/human/h = l
 							thismuch = thismuch * h.species.digestion_nutrition_modifier
 						l.adjust_nutrition(thismuch)
-					b.handle_digestion_death(ourtarget)
+					b.handle_digestion_death(ourtarget, instant = TRUE) //CHOMPEdit
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
 						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your absorb attempt.</span>")
