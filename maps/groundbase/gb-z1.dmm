@@ -551,6 +551,7 @@ lel
 /obj/structure/closet/toolcloset,
 /obj/item/weapon/pickaxe,
 /obj/item/weapon/chainsaw,
+/obj/item/weapon/shovel,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 >>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
