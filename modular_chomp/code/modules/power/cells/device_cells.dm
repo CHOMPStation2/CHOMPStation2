@@ -89,7 +89,7 @@
 	name = "giga device power cell"
 	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
 	icon_state = "meb_m_hi"
-	maxcharge = 6000
+	maxcharge = 10000
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
 
