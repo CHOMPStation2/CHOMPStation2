@@ -314,3 +314,5 @@
 	power_equip = 0
 	power_environ = 0
 	power_light = 0
+
+//Map exclssive powers

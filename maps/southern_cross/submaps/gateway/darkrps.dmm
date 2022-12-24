@@ -232,6 +232,12 @@
 /obj/item/weapon/weldingtool,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/outside)
+"aU" = (
+/obj/random/junk,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = -1
+	},
+/area/awaymission/darkrp/sewers)
 "aV" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1100,11 +1106,9 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
 "dL" = (
-/obj/effect/decal/cleanable/molten_item,
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/awaymission/darkrp/outside/suburbs)
+/obj/structure/bonfire,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "dM" = (
 /obj/machinery/microwave{
 	pixel_x = -3;
@@ -1142,6 +1146,12 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/darkrp/subhouse1)
+"dW" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/darkrp/warehouseshack)
 "dY" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1444,6 +1454,10 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"fk" = (
+/obj/effect/decal/remains,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/reference)
 "fm" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
@@ -1500,6 +1514,12 @@
 /obj/structure/dogbed,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"fx" = (
+/obj/item/weapon/stool{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "fy" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -1535,10 +1555,14 @@
 "fG" = (
 /obj/machinery/button/remote/blast_door{
 	id = "ultrasecret1";
-	name = "Shutters Button";
+	name = "Slab Button I";
 	pixel_x = 1;
 	dir = 4;
-	pixel_y = 24
+	pixel_y = 24;
+	req_one_access = list(886)
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/reference)
@@ -1579,6 +1603,7 @@
 "fL" = (
 /obj/structure/table/standard,
 /obj/fiftyspawner/steel,
+/obj/random/material/precious,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
 "fM" = (
@@ -1946,12 +1971,9 @@
 	},
 /area/awaymission/darkrp/tunnels/suburbs)
 "gY" = (
-/obj/item/weapon/card{
-	req_one_access = list(696);
-	name = "Gun Store Access ID"
-	},
-/turf/simulated/floor/carpet/blue,
-/area/awaymission/darkrp/plazahotel)
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "hb" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
@@ -3207,6 +3229,11 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
+"mj" = (
+/obj/random/obstruction,
+/obj/item/tape/police,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "ml" = (
 /obj/machinery/power/rtg,
 /obj/structure/cable/green{
@@ -3366,6 +3393,11 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/center)
+"mO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "mP" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -3451,6 +3483,10 @@
 /obj/effect/decal/remains,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/sewers)
+"no" = (
+/obj/effect/decal/remains,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "np" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled,
@@ -3804,6 +3840,14 @@
 /obj/item/weapon/bedsheet/browndouble,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"oK" = (
+/obj/item/weapon/card/id{
+	access = list(886);
+	icon_state = "gold-id-alternate";
+	name = "slab ID I"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "oL" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4194,6 +4238,12 @@
 /obj/random/drinkbottle,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
+"qh" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "qj" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -5167,6 +5217,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
+"tE" = (
+/obj/item/weapon/card/id{
+	access = list(696);
+	name = "Gun Store ID"
+	},
+/turf/simulated/floor/carpet/blue,
+/area/awaymission/darkrp/plazahotel)
 "tF" = (
 /obj/structure/simple_door/wood,
 /obj/structure/cable/green{
@@ -5336,6 +5393,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
+"uh" = (
+/obj/random/obstruction,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "ui" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -5352,6 +5413,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazabunker)
+"uk" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/reference)
 "ul" = (
 /obj/item/weapon/tool/wrench/brass,
 /turf/simulated/floor/lino,
@@ -6230,6 +6297,7 @@
 "xo" = (
 /obj/structure/table/standard,
 /obj/fiftyspawner/rods,
+/obj/random/material/refined,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
 "xq" = (
@@ -7541,6 +7609,15 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"BR" = (
+/obj/item/stack/material/wood{
+	amount = 5
+	},
+/obj/item/weapon/stool{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "BS" = (
 /obj/structure/bed/chair/sofa/brown{
 	dir = 8
@@ -8844,6 +8921,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"Gl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/sewers)
 "Gn" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/toolbox,
@@ -9031,10 +9113,14 @@
 "GV" = (
 /obj/machinery/button/remote/blast_door{
 	id = "ultrasecret2";
-	name = "Shutters Button";
+	name = "Slab Button II";
 	pixel_x = 1;
 	dir = 4;
-	pixel_y = 24
+	pixel_y = 24;
+	req_one_access = list(887)
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/darkrp/reference)
@@ -10165,6 +10251,13 @@
 /obj/structure/plasticflaps,
 /turf/simulated/floor/reinforced,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"KI" = (
+/obj/item/stack/cable_coil/green,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/subpower)
 "KK" = (
 /turf/simulated/floor/outdoors/grass/heavy{
 	temperature = 293.15
@@ -11945,6 +12038,10 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"QU" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/darkrp/warehouseshack)
 "QW" = (
 /obj/structure/table/steel,
 /obj/item/weapon/reagent_containers/spray/cleaner,
@@ -13593,6 +13690,7 @@
 	layer = 3
 	},
 /obj/effect/floor_decal/rust,
+/obj/random/junk,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
 "Xh" = (
@@ -14066,6 +14164,15 @@
 /obj/random/tool,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
+"YE" = (
+/obj/random/trash,
+/obj/item/weapon/card/id{
+	access = list(887);
+	icon_state = "gold-id-alternate";
+	name = "slab ID II"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "YF" = (
 /obj/machinery/light{
 	dir = 1
@@ -14204,6 +14311,12 @@
 "YY" = (
 /turf/simulated/wall/durasteel,
 /area/awaymission/darkrp/ghettosouthwarehouse)
+"YZ" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/darkrp/reference)
 "Za" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -14320,6 +14433,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
+"Zy" = (
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "Zz" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled,
@@ -21794,7 +21911,7 @@ vi
 vi
 vi
 ty
-CG
+QU
 CG
 aP
 qI
@@ -21952,7 +22069,7 @@ TU
 kj
 aP
 CG
-CG
+dW
 CG
 CG
 CG
@@ -23375,7 +23492,7 @@ AT
 ao
 Ql
 Ql
-Ql
+Zy
 HA
 pZ
 gk
@@ -24535,7 +24652,7 @@ NA
 NA
 NA
 QR
-Xa
+Xw
 iz
 iz
 iz
@@ -24697,21 +24814,21 @@ NA
 NA
 NA
 QR
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 Th
 uS
 br
@@ -24859,21 +24976,21 @@ NA
 NA
 NA
 QR
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 Ua
 br
@@ -25021,21 +25138,21 @@ QR
 QR
 QR
 QR
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 uS
 br
@@ -25186,18 +25303,18 @@ Nc
 Nc
 Nc
 Nc
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 uS
 br
@@ -25348,18 +25465,18 @@ CM
 CM
 ua
 Nc
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 uS
 br
@@ -25510,18 +25627,18 @@ ec
 CM
 ua
 Nc
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 uS
 br
@@ -25672,18 +25789,18 @@ CM
 kz
 ua
 Nc
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 uS
 br
@@ -25837,15 +25954,15 @@ Nc
 Th
 Th
 Th
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+BW
+BW
+BW
+BW
+BW
+BW
+BW
+Xw
 Th
 uS
 br
@@ -25886,7 +26003,7 @@ Ka
 Ka
 Ka
 EU
-Xz
+gY
 Xz
 EU
 EU
@@ -25999,15 +26116,15 @@ Nc
 Xv
 Xv
 Th
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
-Xa
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 Th
 jT
 br
@@ -26368,14 +26485,14 @@ Bs
 Ka
 Ka
 EU
-Xz
+gY
 Xz
 Xz
 hf
 Hs
 Xz
 rh
-rh
+mO
 Xz
 EU
 Ka
@@ -26693,7 +26810,7 @@ Ka
 Ka
 EU
 Hs
-Xz
+Ni
 Xz
 EU
 Hs
@@ -27022,9 +27139,9 @@ Hs
 EU
 rh
 Xz
+gY
 Xz
-Xz
-rh
+KO
 EU
 Ka
 Ka
@@ -29611,11 +29728,11 @@ kr
 Rl
 Rl
 Rl
+mO
 rh
+KO
 rh
-rh
-rh
-rh
+mO
 wT
 kr
 wT
@@ -29772,7 +29889,7 @@ kr
 kr
 rh
 rh
-Rl
+qh
 rx
 rh
 rh
@@ -31078,7 +31195,7 @@ wT
 kr
 kr
 wT
-wT
+aU
 wT
 EU
 Ka
@@ -31414,7 +31531,7 @@ Ka
 Ka
 Ka
 EU
-rh
+KO
 kr
 EU
 Ka
@@ -31476,7 +31593,7 @@ yF
 QH
 gq
 hR
-Gz
+tE
 so
 gq
 wY
@@ -31638,7 +31755,7 @@ yF
 fn
 gq
 hR
-gY
+Gz
 iu
 gq
 wY
@@ -32053,9 +32170,9 @@ Pv
 EU
 Pv
 Pv
+Gl
 Ft
-Ft
-Ft
+nD
 Ft
 Pv
 Pv
@@ -32221,7 +32338,7 @@ Pv
 Pv
 Pv
 po
-Ft
+Gl
 Pv
 Rc
 Hs
@@ -32546,7 +32663,7 @@ Ka
 EU
 Mo
 pM
-rh
+KO
 hf
 Hs
 kr
@@ -33358,7 +33475,7 @@ EU
 EU
 EU
 EU
-Xz
+gY
 kr
 EU
 Ka
@@ -33992,7 +34109,7 @@ Ka
 EU
 Oi
 Oi
-Oi
+XW
 EU
 Ka
 Ka
@@ -34701,8 +34818,8 @@ xh
 xh
 xh
 xh
-qT
-qT
+uh
+uh
 xh
 ay
 HO
@@ -34866,7 +34983,7 @@ xh
 qT
 qT
 qT
-ds
+mj
 HO
 HO
 HO
@@ -35178,10 +35295,10 @@ ER
 ER
 ER
 ER
-rU
+uk
 qT
-qT
-qT
+no
+fx
 xh
 xh
 xh
@@ -35337,12 +35454,12 @@ Vl
 pI
 pI
 ER
-pI
+YZ
 pI
 YK
 rU
-qT
-qT
+no
+dL
 xh
 xh
 xh
@@ -35504,7 +35621,7 @@ pI
 YK
 rU
 Fj
-qT
+BR
 xh
 xh
 xh
@@ -35664,8 +35781,8 @@ ER
 GV
 pI
 YK
-rU
-qT
+fk
+oK
 qT
 xh
 xh
@@ -35827,7 +35944,7 @@ ER
 ER
 ER
 fG
-Fj
+YE
 qT
 xh
 xh
@@ -38087,9 +38204,9 @@ Bs
 Ta
 Ta
 Ta
-BD
 SO
-BN
+SO
+SO
 SO
 SO
 SO
@@ -38249,11 +38366,11 @@ Bs
 Ta
 Ta
 SO
+SO
+SO
+SO
+SO
 BN
-dL
-SO
-SO
-SO
 SO
 SO
 SO
@@ -38412,10 +38529,10 @@ Ta
 Ta
 SO
 SO
-BN
-BN
 SO
 SO
+SO
+BD
 SO
 SO
 SO
@@ -38577,7 +38694,7 @@ SO
 SO
 SO
 SO
-SO
+BN
 SO
 SO
 SO
@@ -40848,7 +40965,7 @@ Sn
 kM
 ck
 pl
-ck
+KI
 Vk
 SO
 Ta

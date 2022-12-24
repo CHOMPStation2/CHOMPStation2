@@ -5,6 +5,7 @@
 	ammo_type = /obj/item/ammo_casing/a145
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	icon_state = "ukr"
+	item_state = "ukr"
 	icon = 'modular_chomp/icons/obj/guns/altmarksman/altmarksman.dmi'
 	fire_sound = 'modular_chomp/sound/weapons/marksmanalt.ogg'
 	item_icons = list(
