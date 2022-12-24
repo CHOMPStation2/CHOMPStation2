@@ -309,6 +309,8 @@
 							if(!E.vital)
 								vitals_only = FALSE
 								if(!LAZYLEN(E.children))
+									for(var/obj/item/weapon/implant/I as anything in E.implants)
+										qdel(I)
 									E.droplimb(TRUE, DROPLIMB_EDGE)
 									qdel(E)
 									break
