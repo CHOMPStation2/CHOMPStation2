@@ -113,8 +113,8 @@
 /datum/design/item/powercell/advance_device_recharge
 	name = "device, advanced recharging"
 	id = "recharging_advanced_device"
-	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_PHORON = 4, TECH_PRECURSOR = 2)
-	materials = list(MAT_STEEL = 1500, MAT_GLASS = 100, MAT_MORPHIUM = 100, MAT_PHORON = 500, MAT_DURASTEEL = 500, MAT_URANIUM = 200, MAT_VERDANTIUM = 150)
+	req_tech = list(TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
+	materials = list(MAT_STEEL = 1000, MAT_GLASS = 400, MAT_DURASTEEL = 100, MAT_METALHYDROGEN = 200, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge
 	category = list("Misc")
 	sort_string = "BAABE"
