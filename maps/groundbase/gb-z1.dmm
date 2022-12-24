@@ -5444,12 +5444,28 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
 "np" = (
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/item/weapon/stool/baystool/padded{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
+=======
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/flora/tree/pine/xmas/presents,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
+>>>>>>> b8b421f889... Merge pull request #14236 from Heroman3003/cristmas
 "nq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -8928,6 +8944,7 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
+<<<<<<< HEAD
 "vF" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/yellow{
@@ -8953,6 +8970,8 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+>>>>>>> b8b421f889... Merge pull request #14236 from Heroman3003/cristmas
 "vH" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_security{
@@ -26343,7 +26362,7 @@ oe
 gF
 FB
 JX
-vF
+np
 Cy
 cN
 Bo
