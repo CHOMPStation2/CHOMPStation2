@@ -1268,6 +1268,7 @@
 /obj/belly/proc/transfer_contents(atom/movable/content, obj/belly/target, silent = 0)
 	if(!(content in src) || !istype(target))
 		return
+	content.belly_cycles = 0 //CHOMPEdit
 	content.forceMove(target)
 	if(ismob(content))
 		var/mob/ourmob = content

@@ -69,7 +69,7 @@
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
-	B.autotransferwait = 70
+	B.autotransferwait = 130
 
 	B = new /obj/belly/longneck/(src)
 	B.affects_vore_sprites = TRUE
@@ -77,19 +77,30 @@
 	B.name = "vacuum hose"
 	B.autotransferlocation = "vacuum hose 2"
 	B.autotransferwait = 70
+	B.fancy_vore = 1
+	B.vore_sound = "Stomach Move"
+	B.sound_volume = 100
+
+	B = new /obj/belly/longneck(src)
+	B.speedy_mob_processing = FALSE
+	B.affects_vore_sprites = FALSE
+	B.name = "Vac-Beak"
+	B.desc = "SNAP! You have been sucked up into the big synthbird's beak, the powerful vacuum within the bird roaring somewhere beyond the abyssal deep gullet hungrily gaping before you, eagerly sucking you deeper inside towards a long bulgy ride down the bird's vacuum hose of a neck!"
+	B.autotransferlocation = "vacuum hose"
+	B.autotransfer_max_amount = 0
 
 	vore_selected = B
 
 /obj/belly/longneck
 	affects_vore_sprites = TRUE
-	belly_sprite_to_affect = "neck-1"
+	belly_sprite_to_affect = "neck1"
 	name = "vacuum hose"
 	desc = "With a mighty WHUMP, the suction of the big bird's ravenous vacuum system has sucked you up out of the embrace of its voracious main beak and into a tight bulge squeezing along the long ribbed rubbery tube leading towards the roaring doom of the synthetic bird's efficient waste disposal system."
 	digest_mode = DM_HOLD
 	item_digest_mode = IM_HOLD
 	autotransfer_enabled = TRUE
 	autotransferchance = 100
-	autotransferwait = 50
+	autotransferwait = 60
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
