@@ -2610,6 +2610,10 @@
 	},
 /turf/simulated/floor,
 /area/groundbase/engineering/solarshed)
+"Fr" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl)
 "Fs" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -17279,6 +17283,28 @@ QG
 Hu
 st
 hd
+<<<<<<< HEAD
+=======
+iL
+LJ
+Uf
+Uf
+sN
+iE
+CY
+ja
+ur
+bs
+xg
+or
+iE
+Fr
+Uf
+Uf
+qV
+iL
+yy
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 ia
 ia
 kc

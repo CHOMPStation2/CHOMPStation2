@@ -969,6 +969,16 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/groundbase/engineering/solarshed)
+<<<<<<< HEAD
+=======
+"lh" = (
+/turf/simulated/wall/shull,
+/area/shuttle/axolotl_cockpit)
+"li" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "lk" = (
 /obj/machinery/light{
 	dir = 8
@@ -19719,6 +19729,30 @@ YK
 YK
 YK
 nr
+<<<<<<< HEAD
+=======
+Wl
+Wl
+zm
+tX
+tX
+Uh
+yC
+NH
+rL
+Ye
+oO
+BL
+Pw
+yC
+li
+tX
+tX
+WD
+Wl
+Wl
+Wl
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 XS
 XS
 nr

@@ -376,8 +376,18 @@ lol
 /turf/simulated/floor/tiled,
 /area/shuttle/groundbase/exploration)
 "gx" = (
+<<<<<<< HEAD
 /obj/machinery/firealarm{
 	dir = 4
+=======
+/obj/machinery/door/airlock/science{
+	name = "Shuttle";
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 	},
 /obj/structure/closet/secure_closet/guncabinet/excursion,
 /turf/simulated/floor/tiled,
@@ -512,8 +522,15 @@ lol
 	dir = 8;
 	pixel_x = -27
 	},
+<<<<<<< HEAD
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
+=======
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 /area/shuttle/groundbase/exploration)
 "jo" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -786,6 +803,23 @@ lol
 /obj/machinery/suit_cycler/medical,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
+<<<<<<< HEAD
+=======
+"oi" = (
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/machinery/door/firedoor/glass/talon,
+/obj/machinery/door/airlock/science{
+	frequency = null;
+	name = "Shuttle";
+	req_one_access = null
+	},
+/obj/effect/map_helper/airlock/door/simple,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/shuttle/groundbase/exploration)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "ok" = (
 /obj/random/mob/bird,
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
@@ -1095,6 +1129,18 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
+<<<<<<< HEAD
+=======
+"ta" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/groundbase/exploration)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "to" = (
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
@@ -1342,9 +1388,18 @@ lol
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
 "xH" = (
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/explorer,
 /obj/machinery/camera/network/exploration{
 	dir = 1
+=======
+/obj/machinery/power/apc/hyper{
+	dir = 8;
+	req_access = list(11,67)
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
@@ -1477,6 +1532,30 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/paramedic)
+<<<<<<< HEAD
+=======
+"zS" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/shuttle/groundbase/exploration)
+"zW" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+	outdoors = 0
+	},
+/area/groundbase/level3/escapepad)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "Aa" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/medical,
@@ -1583,14 +1662,22 @@ lol
 	},
 /area/groundbase/level3/escapepad)
 "CU" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+=======
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
 "Dm" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/groundbase/exploration)
@@ -1679,8 +1766,20 @@ lol
 /obj/structure/closet/secure_closet/pathfinder{
 	req_access = list(62,43,67)
 	},
+<<<<<<< HEAD
 /obj/item/device/bluespaceradio/groundbase_prelinked,
 /obj/machinery/camera/network/exploration,
+=======
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+"Es" = (
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug{
+	ghostjoin = 1
+	},
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
 "Ev" = (
@@ -1910,8 +2009,16 @@ lol
 	},
 /area/groundbase/medical/patio)
 "HE" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/obj/machinery/alarm{
+	pixel_y = 28
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2005,6 +2112,9 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
 "ID" = (
@@ -2035,6 +2145,12 @@ lol
 	edge_blending_priority = -1
 	},
 /area/groundbase/level3/nw/open)
+"IP" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/groundbase/exploration)
 "IS" = (
 /turf/simulated/open/virgo3c,
 /area/groundbase/level3/ne/open)
@@ -2043,8 +2159,16 @@ lol
 /turf/simulated/floor/tiled/virgo3c,
 /area/groundbase/medical/patio)
 "Jh" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/turf/simulated/floor/tiled/eris/dark/panels,
+/area/shuttle/groundbase/exploration)
+"Jk" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-8"
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/groundbase/exploration)
@@ -2160,6 +2284,19 @@ lol
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/uhallway)
+<<<<<<< HEAD
+=======
+"Ma" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-8"
+	},
+/obj/structure/closet/walllocker_double/east,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tool/crowbar/red,
+/turf/simulated/floor,
+/area/shuttle/groundbase/exploration)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "Mc" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -2218,6 +2355,13 @@ lol
 	dir = 4;
 	pixel_x = 27
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/overmap/visitable/ship/landable/gbexplo,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled,
 /area/shuttle/groundbase/exploration)
 "Nf" = (
@@ -2337,9 +2481,21 @@ lol
 /turf/simulated/floor/tiled/virgo3c,
 /area/groundbase/medical/patio)
 "Pf" = (
+<<<<<<< HEAD
 /obj/machinery/mineral/equipment_vendor/survey,
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+=======
+/obj/machinery/power/smes/buildable{
+	charge = 500000
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
+	},
+/obj/machinery/light,
+/turf/simulated/floor,
+/area/shuttle/groundbase/exploration)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "Ph" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2704,8 +2860,16 @@ lol
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/groundbase/exploration/equipment)
+=======
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/eris/dark/panels,
+/area/shuttle/groundbase/exploration)
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 "Vh" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/alarm,
@@ -2730,11 +2894,18 @@ lol
 /obj/structure/bed/chair/shuttle{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/closet/emergsuit_wall{
 	dir = 8;
 	pixel_x = -27
 	},
 /turf/simulated/floor/tiled,
+=======
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/eris/dark/panels,
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 /area/shuttle/groundbase/exploration)
 "VB" = (
 /obj/structure/table/bench/marble,
@@ -2786,10 +2957,26 @@ lol
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/patient1)
+<<<<<<< HEAD
 "Wm" = (
 /obj/structure/closet/secure_closet/pilot,
 /obj/machinery/light{
 	dir = 1
+=======
+"Wh" = (
+/obj/structure/railing,
+/turf/simulated/floor/bmarble,
+/area/groundbase/civilian/kitchen)
+"Wl" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/groundbase/exploration)
+"Wr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/pilot)
@@ -7402,11 +7589,19 @@ qO
 aa
 Es
 gx
+<<<<<<< HEAD
 Un
 dQ
 RM
 aa
 qO
+=======
+Wl
+PH
+PH
+sL
+XC
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 qO
 Fx
 tM
@@ -7686,11 +7881,19 @@ qO
 aa
 Zx
 Hm
+<<<<<<< HEAD
 tY
 Hm
 Oc
 gt
 qO
+=======
+zS
+PH
+PH
+rb
+XC
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 qO
 Fx
 mw
@@ -7967,6 +8170,13 @@ Zo
 qO
 uG
 DE
+<<<<<<< HEAD
+=======
+fc
+zF
+Hm
+zS
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 PH
 PH
 bh
@@ -8251,12 +8461,20 @@ Zo
 qO
 uG
 jX
+<<<<<<< HEAD
 pm
 Dm
 Jh
 wn
 gu
 wu
+=======
+vV
+PH
+Ka
+Wl
+PH
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 PH
 Bd
 OI
@@ -8541,6 +8759,12 @@ dW
 cE
 cE
 PH
+<<<<<<< HEAD
+=======
+Ef
+IP
+vV
+>>>>>>> 62b8034f06... Merge pull request #14242 from Very-Soft/removeexplo
 PH
 Bd
 Kr
