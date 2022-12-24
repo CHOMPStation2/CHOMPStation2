@@ -40,14 +40,13 @@
 
 	B = new /obj/belly/longneck/(src)
 	B.affects_vore_sprites = TRUE
-	B.belly_sprite_to_affect = "neck2"
-	B.name = "vacuum hose 2"
-	B.autotransferlocation = "vacuum hose 3"
-	B.desc = "It feels very tight in here..."
+	B.belly_sprite_to_affect = "neck4"
+	B.name = "vacuum hose 4"
+	B.autotransferlocation = "Churno-Vac"
+	B.desc = "Thank you for your biofuel contribution~"
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.sound_volume = 80
-	B.autotransferwait = 60
+	B.sound_volume = 20
 
 	B = new /obj/belly/longneck/(src)
 	B.affects_vore_sprites = TRUE
@@ -58,36 +57,33 @@
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 40
-	B.autotransferwait = 70
 
 	B = new /obj/belly/longneck/(src)
 	B.affects_vore_sprites = TRUE
-	B.belly_sprite_to_affect = "neck4"
-	B.name = "vacuum hose 4"
-	B.autotransferlocation = "Churno-Vac"
-	B.desc = "Thank you for your biofuel contribution~"
+	B.belly_sprite_to_affect = "neck2"
+	B.name = "vacuum hose 2"
+	B.autotransferlocation = "vacuum hose 3"
+	B.desc = "It feels very tight in here..."
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.sound_volume = 20
-	B.autotransferwait = 130
+	B.sound_volume = 80
 
 	B = new /obj/belly/longneck/(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck1"
 	B.name = "vacuum hose"
 	B.autotransferlocation = "vacuum hose 2"
-	B.autotransferwait = 70
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 100
 
 	B = new /obj/belly/longneck(src)
-	B.speedy_mob_processing = FALSE
 	B.affects_vore_sprites = FALSE
 	B.name = "Vac-Beak"
 	B.desc = "SNAP! You have been sucked up into the big synthbird's beak, the powerful vacuum within the bird roaring somewhere beyond the abyssal deep gullet hungrily gaping before you, eagerly sucking you deeper inside towards a long bulgy ride down the bird's vacuum hose of a neck!"
 	B.autotransferlocation = "vacuum hose"
 	B.autotransfer_max_amount = 0
+	B.autotransferwait = 60
 
 	vore_selected = B
 
@@ -100,7 +96,7 @@
 	item_digest_mode = IM_HOLD
 	autotransfer_enabled = TRUE
 	autotransferchance = 100
-	autotransferwait = 60
+	autotransferwait = 70
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
@@ -119,8 +115,14 @@
 		if(L.speedy_mob_processing)
 			L.process()
 	var/turf/T = get_turf(src)
-	if(istype(T, /turf/simulated))
-		var/turf/simulated/S = T
-		T.clean_blood()
-		if(S.dirt > 50)
-			S.dirt = 0
+	if(istype(T))
+		for(var/obj/O in T)
+			if(O.clean_blood())
+				adjust_nutrition(rand(1))
+		if(istype(T, /turf/simulated))
+			var/turf/simulated/S = T
+			if(T.clean_blood())
+				adjust_nutrition(rand(1))
+			if(S.dirt > 50)
+				S.dirt = 0
+				adjust_nutrition(rand(1))
