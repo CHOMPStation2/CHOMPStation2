@@ -54,10 +54,6 @@
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
-	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
-	var/slow_digestion = FALSE				// CHOMPEdit: Gradual corpse digestion
-	var/slow_brutal = FALSE					// CHOMPEdit: Gradual corpse digestion: Stumpy's Special
-	var/sound_volume = 100					// CHOMPEdit: Volume knob.
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -278,7 +274,8 @@
 	"autotransfer_max_amount",
 	"slow_digestion",
 	"slow_brutal",
-	"sound_volume", //CHOMP end of variables from CHOMP
+	"sound_volume",
+	"speedy_mob_processing", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
