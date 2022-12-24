@@ -1,3 +1,4 @@
+/*
 /datum/supply_pack/munitions/expeditionguns
 	name = "Frontier phaser (station-locked) crate"
 	contains = list(
@@ -17,7 +18,12 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "phaser handbow crate"
+<<<<<<< HEAD
 	access = access_explorer
+=======
+	access = access_security
+*/
+>>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
 
 /datum/supply_pack/munitions/ofd_charge_emp
 	name = "OFD Charge - EMP"

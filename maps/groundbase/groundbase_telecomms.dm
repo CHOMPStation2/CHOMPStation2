@@ -77,11 +77,16 @@
 		num2text(EXP_FREQ) = list(access_explorer)
 	)
 
+<<<<<<< HEAD
 /obj/item/device/multitool/groundbase_buffered
 	name = "pre-linked multitool (groundbase hub)"
+=======
+/obj/item/device/multitool/station_buffered
+	name = "pre-linked multitool (Rascal's Pass hub)"
+>>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
 	desc = "This multitool has already been linked to the groundbase telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/device/multitool/groundbase_buffered/Initialize()
+/obj/item/device/multitool/station_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/groundbase)
 

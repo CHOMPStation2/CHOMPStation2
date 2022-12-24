@@ -178,8 +178,13 @@
 					)
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
+<<<<<<< HEAD
 	containername = "Explorer equipment"
 	access = access_explorer
+=======
+	containername = "Away Team equipment"
+	access = list(access_eva, access_explorer)
+>>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
 
 /datum/supply_pack/pilotgear
 	name= "Pilot gear"

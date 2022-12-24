@@ -1464,6 +1464,12 @@ lol
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
+=======
+/obj/item/weapon/storage/box/nifsofts_pilot,
+/obj/item/device/multitool/station_buffered,
+/obj/structure/table/steel,
+>>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/pilot)
 "zL" = (
