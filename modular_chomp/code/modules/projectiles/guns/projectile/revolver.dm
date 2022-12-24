@@ -5,5 +5,9 @@
 	ammo_type = /obj/item/ammo_casing/a145
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	icon_state = "ukr"
-	icon = 'modular_chomp/icons/obj/guns/altmarksman.dmi' //todo, ask for a better spot to put dmis
+	icon = 'modular_chomp/icons/obj/guns/altmarksman/altmarksman.dmi'
 	fire_sound = 'modular_chomp/sound/weapons/marksmanalt.ogg'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/altmarksman/lefthand_guns.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/altmarksman/righthand_guns.dmi',
+		)
