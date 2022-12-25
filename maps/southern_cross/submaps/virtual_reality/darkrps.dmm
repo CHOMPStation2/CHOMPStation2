@@ -1120,6 +1120,12 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"dO" = (
+/obj/machinery/vending/loadout/uniform,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/center)
 "dQ" = (
 /obj/random/vendordrink,
 /turf/simulated/floor/concrete{
@@ -1418,6 +1424,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "fd" = (
@@ -1897,6 +1904,29 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
+"gK" = (
+/obj/structure/closet/wardrobe/grey,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/teshari/undercoat/standard/black_grey,
+/obj/item/clothing/under/teshari/undercoat/standard/black_grey,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/center)
 "gL" = (
 /obj/structure/bed/chair/wood{
 	dir = 4;
@@ -1926,6 +1956,14 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
+"gR" = (
+/obj/effect/landmark/virtual_reality{
+	name = "Downtown Main Spawn"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/center)
 "gS" = (
 /obj/structure/fence/door{
 	dir = 8
@@ -4866,6 +4904,27 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
+"sv" = (
+/obj/structure/closet/wardrobe/grey,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/permit,
+/obj/item/clothing/under/teshari/undercoat/standard/black_grey,
+/obj/item/clothing/under/teshari/undercoat/standard/black_grey,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "sw" = (
 /obj/effect/map_effect/portal/master/side_a{
 	dir = 4;
@@ -6784,6 +6843,12 @@
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"yP" = (
+/obj/effect/landmark/virtual_reality{
+	name = "Downtown Hospital Spawn"
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "yR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -24499,7 +24564,7 @@ pZ
 Ql
 iY
 pZ
-Ql
+yP
 Ql
 Ql
 Kn
@@ -24661,7 +24726,7 @@ pZ
 IX
 Ql
 pZ
-bc
+sv
 bc
 rW
 Kn
@@ -28534,7 +28599,7 @@ XU
 Up
 Up
 Up
-Up
+gR
 Up
 Up
 Up
@@ -28693,7 +28758,7 @@ FD
 FD
 Re
 XU
-Up
+dO
 Up
 Up
 Up
@@ -28855,7 +28920,7 @@ FD
 vl
 Re
 XU
-Up
+gK
 Up
 Up
 Up
