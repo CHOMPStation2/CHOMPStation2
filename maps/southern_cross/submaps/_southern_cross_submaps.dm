@@ -50,11 +50,11 @@
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 //VR maps go here, tell me if theres a better way to load this
-#include "virtual_reality/constructVR.dm"
+#include "virtual_reality/darkrps.dm"
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."
-	mappath = 'virtual_reality/constructVR.dmm'
+	mappath = 'virtual_reality/darkrps.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
 
 /datum/map_z_level/sc_lateload/vr_world
