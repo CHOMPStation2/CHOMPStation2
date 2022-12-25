@@ -290,15 +290,18 @@
 /obj/structure/closet/medical,
 /obj/item/weapon/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card"
+	name = "Medical Staff ID Card";
+	desc = "A card issued to the downtown medical staff."
 	},
 /obj/item/weapon/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card"
+	name = "Medical Staff ID Card";
+	desc = "A card issued to the downtown medical staff."
 	},
 /obj/item/weapon/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card"
+	name = "Medical Staff ID Card";
+	desc = "A card issued to the downtown medical staff."
 	},
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
@@ -3843,7 +3846,6 @@
 "oK" = (
 /obj/item/weapon/card/id{
 	access = list(886);
-	icon_state = "gold-id-alternate";
 	name = "slab ID I"
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -5032,6 +5034,17 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"tc" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/masks,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/darkrp/downtownwarehouse)
 "td" = (
 /obj/effect/map_effect/portal/master/side_b{
 	dir = 4;
@@ -7164,7 +7177,7 @@
 /obj/machinery/door/airlock/glass_medical{
 	name = "Medbay";
 	req_access = null;
-	req_one_access = list(696)
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
@@ -8775,6 +8788,8 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/gloves,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "FP" = (
@@ -13455,7 +13470,7 @@
 	id_tag = "MedbayFoyer";
 	name = "EMT Bay";
 	req_access = null;
-	req_one_access = list(696)
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
@@ -13607,6 +13622,30 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/item/stack/medical/advanced/bruise_pack{
+	pixel_y = 10;
+	pixel_x = 10
+	},
+/obj/item/stack/medical/advanced/bruise_pack{
+	pixel_y = -5;
+	pixel_x = 10
+	},
+/obj/item/stack/medical/advanced/bruise_pack{
+	pixel_y = 3;
+	pixel_x = 10
+	},
+/obj/item/stack/medical/advanced/ointment{
+	pixel_y = 10;
+	pixel_x = -4
+	},
+/obj/item/stack/medical/advanced/ointment{
+	pixel_y = -5;
+	pixel_x = -4
+	},
+/obj/item/stack/medical/advanced/ointment{
+	pixel_y = 3;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
@@ -14168,7 +14207,6 @@
 /obj/random/trash,
 /obj/item/weapon/card/id{
 	access = list(887);
-	icon_state = "gold-id-alternate";
 	name = "slab ID II"
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -23000,7 +23038,7 @@ ko
 ow
 pZ
 FO
-Hd
+tc
 Ql
 in
 yS
