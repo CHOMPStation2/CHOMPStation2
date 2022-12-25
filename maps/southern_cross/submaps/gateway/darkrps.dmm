@@ -1302,7 +1302,7 @@
 /area/awaymission/darkrp/sewers)
 "ev" = (
 /obj/structure/table/woodentable,
-/obj/random,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
 "ey" = (
@@ -4008,7 +4008,7 @@
 "ph" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/contraband,
-/obj/random,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subapartments)
 "pi" = (
@@ -6193,7 +6193,7 @@
 /area/awaymission/darkrp/pd)
 "wM" = (
 /obj/structure/table/standard,
-/obj/random,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/ghettooffice)
 "wN" = (
@@ -7672,8 +7672,8 @@
 /area/awaymission/darkrp/pd)
 "BZ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/random,
-/obj/random,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
 "Cb" = (
@@ -8133,7 +8133,7 @@
 /area/awaymission/darkrp/outside/suburbs)
 "DC" = (
 /obj/structure/table/woodentable,
-/obj/random,
+/obj/random/maintenance/clean,
 /obj/item/weapon/pen,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
@@ -10870,7 +10870,7 @@
 /area/awaymission/darkrp/sewers)
 "MF" = (
 /obj/structure/table/woodentable,
-/obj/random,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "MH" = (
@@ -11406,8 +11406,8 @@
 	dir = 8
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/random,
-/obj/random,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
 "OB" = (
@@ -12357,8 +12357,8 @@
 /area/awaymission/darkrp/outside/plaza)
 "Se" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/random,
-/obj/random,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subapartments)
 "Sh" = (
@@ -13910,7 +13910,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
 "XN" = (
-/obj/random,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
 "XO" = (
