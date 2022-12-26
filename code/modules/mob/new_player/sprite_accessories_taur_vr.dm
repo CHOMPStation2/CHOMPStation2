@@ -557,7 +557,7 @@
 	extra_overlay = "drake_markings"
 	ani_state = "fatdrake_s"
 	extra_overlay_w = "fatdrake_markings"
-	can_loaf = FALSE
+	can_loaf = TRUE
 
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"
