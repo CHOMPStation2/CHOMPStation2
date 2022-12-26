@@ -17,6 +17,7 @@
 	vore_pounce_chance = 100
 	vore_pounce_maxhealth = 125
 	has_hands = TRUE
+	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
