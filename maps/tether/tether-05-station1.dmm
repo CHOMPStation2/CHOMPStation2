@@ -8508,6 +8508,7 @@
 "atx" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	dir = 2;
+<<<<<<< HEAD
 	name = "Gateway Prep Room"
 	},
 /obj/machinery/door/blast/shutters{
@@ -8515,6 +8516,11 @@
 	id = "PubPrepFront";
 	layer = 3.3;
 	name = "Gateway Prep Shutter"
+=======
+	name = "Gateway/EVA Prep Room";
+	req_access = null;
+	req_one_access = list(18,19,43,67)
+>>>>>>> 31d45b98b1... Merge pull request #14248 from Very-Soft/backtotether
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
