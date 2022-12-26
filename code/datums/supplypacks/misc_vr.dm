@@ -176,3 +176,10 @@
 		access_pilot
 	)
 	one_access = TRUE
+
+/datum/supply_pack/misc/swoopie //CHOMPAdd
+	name = "SWOOPIE XL CleanBot Kit"
+	contains = list()
+	cost = 100
+	containertype = /obj/structure/largecrate/animal/swoopie
+	containername = "SWOOPIE XL CleanBot Starter Kit"
