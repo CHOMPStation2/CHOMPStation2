@@ -132,6 +132,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lobby)
+<<<<<<< HEAD
+=======
+"av" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1
+	},
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/science/robotics)
+"aw" = (
+/obj/machinery/firework_launcher,
+/turf/simulated/floor/tiled,
+/area/groundbase/science/hall)
+>>>>>>> 5dad1cf58a... Merge pull request #14245 from Heroman3003/firework-stuff
 "ax" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/weapon/towel/random,
@@ -23017,7 +23036,7 @@ aB
 PR
 lw
 Vr
-Vr
+aw
 Bl
 ag
 ag
