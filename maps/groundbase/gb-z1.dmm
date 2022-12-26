@@ -11047,6 +11047,15 @@ lel
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/lobby)
+<<<<<<< HEAD
+=======
+"An" = (
+/obj/structure/table/rack/shelf,
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 "Ao" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/gunbox{
@@ -16829,6 +16838,33 @@ lel
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
+<<<<<<< HEAD
+=======
+"Oi" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/weapon/tank/oxygen,
+/obj/item/device/suit_cooling_unit,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/exploration,
+/obj/item/clothing/suit/space/void/exploration,
+/obj/item/clothing/head/helmet/space/void/exploration,
+/obj/item/clothing/head/helmet/space/void/exploration,
+/obj/item/device/bluespaceradio/groundbase_prelinked,
+/obj/machinery/door/window/brigdoor/eastright{
+	req_access = list(43)
+	},
+/obj/item/device/mapping_unit,
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer/compact,
+/obj/item/device/cataloguer/compact,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 "Oj" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"

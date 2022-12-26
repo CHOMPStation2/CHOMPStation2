@@ -14735,12 +14735,15 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/green/border,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+=======
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
 "bkU" = (
@@ -19516,8 +19519,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/atrium)
 "frS" = (
-/obj/structure/closet/secure_closet/guncabinet/excursion,
-/obj/item/weapon/pickaxe,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -22805,6 +22806,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
+<<<<<<< HEAD
 /obj/machinery/light{
 	dir = 8
 	},
@@ -22821,6 +22823,12 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/tether/station/dock_two)
+=======
+/obj/item/device/cataloguer/compact,
+/obj/item/device/cataloguer/compact,
+/turf/simulated/floor/tiled/dark,
+/area/ai_monitored/storage/eva)
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 "ifp" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 9
@@ -23389,6 +23397,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 6
 	},
@@ -23403,6 +23412,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
+=======
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer,
+/turf/simulated/floor/tiled/dark,
+/area/ai_monitored/storage/eva)
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 "iIf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6

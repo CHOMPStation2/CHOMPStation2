@@ -9610,6 +9610,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/item/device/bluespaceradio/sd_prelinked,
+/obj/item/device/cataloguer/compact,
+/obj/item/device/cataloguer/compact,
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploequipment)
 "ue" = (
@@ -13734,7 +13740,11 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/oxygen,
+=======
+/obj/structure/table/standard,
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploequipment)
 "CU" = (
@@ -17052,6 +17062,12 @@
 /obj/machinery/camera/network/exploration{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/item/device/mapping_unit,
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer,
+>>>>>>> 68404f8844... Merge pull request #14254 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled/milspec,
 /area/stellardelight/deck1/exploequipment)
 "Kf" = (
