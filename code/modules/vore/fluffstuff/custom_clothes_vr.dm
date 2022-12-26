@@ -2529,7 +2529,4 @@ Departamental Swimsuits, for general use
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	item_state = "perrinrobes_s"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-<<<<<<< HEAD
 End CHOMP Removal*/
-=======
->>>>>>> ccba3b03ae... Merge pull request #14252 from BonniePandora/Typo-grrr
