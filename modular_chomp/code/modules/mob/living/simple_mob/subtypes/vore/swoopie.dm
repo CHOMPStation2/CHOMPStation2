@@ -120,11 +120,11 @@
 	if(istype(T))
 		for(var/obj/O in T)
 			if(O.clean_blood())
-				adjust_nutrition(rand(1))
+				adjust_nutrition(1)
 		if(istype(T, /turf/simulated))
 			var/turf/simulated/S = T
 			if(T.clean_blood())
-				adjust_nutrition(rand(1))
+				adjust_nutrition(1)
 			if(S.dirt > 50)
 				S.dirt = 0
-				adjust_nutrition(rand(1))
+				adjust_nutrition(1)
