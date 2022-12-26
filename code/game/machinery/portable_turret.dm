@@ -683,22 +683,6 @@
 	for(var/mob/M as anything in living_mob_list)
 		if(M.z != z || !(get_turf(M) in seenturfs)) // Skip
 			continue
-<<<<<<< HEAD
-		if(get_turf(M) in seenturfs)
-			assess_and_assign(M, targets, secondarytargets)
-	This was dumb.*/
-
-	for(var/mob/M in oview(world.view, src))
-		assess_and_assign(M, targets, secondarytargets)
-	//CHOMPEdit End
-
-	if(!tryToShootAt(targets))
-		if(!tryToShootAt(secondarytargets)) // if no valid targets, go for secondary targets
-			timeout--
-			if(timeout <= 0)
-				spawn()
-					popDown() // no valid targets, close the cover
-=======
 		switch(assess_living(M))
 			if(TURRET_PRIORITY_TARGET)
 				targets += M
@@ -716,7 +700,6 @@
 
 	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
 		popDown() // no valid targets, close the cover
->>>>>>> 74edcc9c5c... Merge pull request #14237 from Heroman3003/turret-mecha
 
 	if(auto_repair && (health < maxhealth))
 		use_power(20000)
