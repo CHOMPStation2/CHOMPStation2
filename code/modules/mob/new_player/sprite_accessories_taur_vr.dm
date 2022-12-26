@@ -437,6 +437,7 @@
 	ani_state = "fatfeline_s"
 	extra_overlay_w = "fatfeline_markings"
 	extra_overlay2_w = "fatfeline_markings_2" //CHOMPEdit
+	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
 	name = "SynthFeline dual-color (Taur)"
