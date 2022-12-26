@@ -17,6 +17,7 @@
 	vore_pounce_chance = 100
 	vore_pounce_maxhealth = 125
 	has_hands = TRUE
+	faction = "neutral"
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
 	if(!voremob_loaded)
