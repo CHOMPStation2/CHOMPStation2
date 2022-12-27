@@ -97,7 +97,17 @@
 	var/tail_extra_overlay2 = FALSE
 	//var/marking_to_add = NULL
 	//var/marking_color = NULL
+	var/special_entrance_sound				// Mob specific custom entry sound set by mob's init_vore when applicable
+	var/slow_digestion = FALSE				// Gradual corpse digestion
+	var/slow_brutal = FALSE					// Gradual corpse digestion: Stumpy's Special
+	var/sound_volume = 100					// Volume knob.
+	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize mob Life() instead of subsystem for 3x speed.
 
+
+/obj/belly/Initialize()
+	. = ..()
+	if(speedy_mob_processing) //Breaking free from subsystem. Can be implemented in mob's Life() proc for example (as seen in swoopie.dm)
+		STOP_PROCESSING(SSbellies, src)
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)

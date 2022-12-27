@@ -10,3 +10,4 @@
 	pixel_x = -32
 	bound_width = 96
 	bound_height = 64
+	density = 1

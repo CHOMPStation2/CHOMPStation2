@@ -31,7 +31,7 @@
 		return
 	*/
 	feed_grabbed_to_self(src,T)
-	update_icon()
+	//update_icon() CHOMPEdit
 
 //CHOMPedit: On-demand belly loading.
 /mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
