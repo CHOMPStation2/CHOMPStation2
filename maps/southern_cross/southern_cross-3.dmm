@@ -1010,7 +1010,7 @@
 "jiY" = (/obj/item/clothing/suit/cultrobes/alt{armor = list("melee"=5,"bullet"=5,"laser"=5,"energy"=10,"bomb"=25,"bio"=10,"rad"=0)},/turf/simulated/floor/wood/sif/broken,/area/maintenance/thirddeck/aftstarboard)
 "jjg" = (/obj/effect/floor_decal/spline/plain,/obj/machinery/light_construct{dir = 8},/turf/simulated/floor/tiled/eris/steel/bar_dance,/area/maintenance/thirddeck/aftport)
 "jjl" = (/obj/structure/closet/emcloset,/obj/item/weapon/storage/box/lights/mixed,/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsaft{name = "Third Deck Aft Maintenance"})
-"jjx" = (/obj/machinery/power/thermoregulator/southerncross{pixel_y = 30},/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/obj/machinery/power/emitter{anchored = 1; state = 2},/turf/simulated/floor/reinforced,/area/rnd/research/particleaccelerator)
+"jjx" = (/obj/machinery/power/thermoregulator,/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/obj/machinery/power/emitter{anchored = 1; state = 2},/turf/simulated/floor/reinforced,/area/rnd/research/particleaccelerator)
 "jjB" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/obj/structure/sink{pixel_y = 16},/obj/structure/mirror{pixel_y = 32},/turf/simulated/floor/tiled/freezer,/area/crew_quarters/sleep/vistor_room_3)
 "jjF" = (/obj/effect/floor_decal/spline/plain{dir = 6},/turf/simulated/floor/tiled/eris/steel/bar_dance,/area/maintenance/thirddeck/aftport)
 "jjK" = (/obj/machinery/alarm{dir = 4; pixel_x = -22},/obj/random/trash_pile,/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsport{name = "Third Deck Aft Port Maintenance"})
