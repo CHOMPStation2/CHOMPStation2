@@ -1314,7 +1314,7 @@
 /area/surface/outpost/main/corridor/right_lower)
 "cF" = (
 /obj/effect/zone_divider,
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/ocean,
 /area/surface/outside/ocean)
 "cG" = (
 /obj/machinery/door/firedoor/border_only,
@@ -18336,7 +18336,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/dorms/dorm_1)
 "Ig" = (
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/ocean,
 /area/surface/outside/ocean)
 "Ih" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
