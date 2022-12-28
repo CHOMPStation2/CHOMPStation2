@@ -144,7 +144,7 @@
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/wilderness/normal)
 "aN" = (
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/ocean,
 /area/surface/outside/ocean)
 "aO" = (
 /obj/effect/zone_divider,
@@ -788,7 +788,7 @@
 /area/surface/outpost/shelter/utilityroom)
 "No" = (
 /obj/effect/zone_divider,
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/ocean,
 /area/surface/outside/ocean)
 "Nq" = (
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves{
