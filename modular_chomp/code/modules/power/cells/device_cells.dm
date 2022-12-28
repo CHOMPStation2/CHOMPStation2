@@ -125,7 +125,7 @@
 	icon_state = "meb_m_nu"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 80)
 	self_recharge = TRUE
-	charge_amount = 120
+	charge_amount = 60 //2.5%
 	charge_delay = 75
 	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
 
@@ -225,7 +225,7 @@
 /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	name = "omni weapon power cell"
 	desc = "A mix between alien technology and phoron tech. Seems to fit in almost any cell slot..."
-	charge_amount = 240 // 5%.
+	charge_amount = 120 // 2.5%.
 	maxcharge = 4800
 	charge_delay = 50
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6, TECH_PHORON = 6, TECH_ARCANE = 2, TECH_PRECURSOR = 2)
