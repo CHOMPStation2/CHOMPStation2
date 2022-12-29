@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //The pathfinder doesn't have a OM shuttle that they are in charge of, and so, doesn't need pilot access.
 //Mostly to prevent explo from just commandeering the Starstuff as the explo shuttle without involving a pilot every round.
 /datum/job/pathfinder
@@ -29,5 +30,7 @@
 /datum/alt_title/master_at_arms
 	title = "Master-at-Arms"
 
+=======
+>>>>>>> e37a38073a... Merge pull request #14263 from Heroman3003/sd-job-titles
 /datum/job/pilot/get_request_reasons()
 	return list("Moving Stellar Delight")

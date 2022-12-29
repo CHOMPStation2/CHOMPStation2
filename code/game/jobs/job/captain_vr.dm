@@ -24,8 +24,13 @@
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
 
+<<<<<<< HEAD
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro, "Deputy Director" = /datum/alt_title/deputy_director, "Staff Manager" = /datum/alt_title/staff_manager,
 						"Facility Steward" = /datum/alt_title/facility_steward) //CHOMPEdit
+=======
+	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro, "Deputy Manager" = /datum/alt_title/deputy_manager, "Staff Manager" = /datum/alt_title/staff_manager,
+						"Facility Steward" = /datum/alt_title/facility_steward, "First Mate" = /datum/alt_title/first_mate)
+>>>>>>> e37a38073a... Merge pull request #14263 from Heroman3003/sd-job-titles
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
@@ -48,6 +53,9 @@
 
 /datum/alt_title/facility_steward
 	title = "Facility Steward"
+
+/datum/alt_title/first_mate
+	title = "First Mate"
 
 /datum/job/hop/get_request_reasons()
 	return list("ID modification", "Training crew")

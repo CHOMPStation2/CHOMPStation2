@@ -50,7 +50,12 @@
 /datum/job/atmos
 	spawn_positions = 3
 	pto_type = PTO_ENGINEERING
+<<<<<<< HEAD
 	alt_titles = list("Atmospheric Engineer" = /datum/alt_title/atmos_engi, "Atmospheric Maintainer" = /datum/alt_title/atmos_maint, /*CHOMPEdit "Disposals Technician" = /datum/alt_title/disposals_tech*/)
+=======
+	alt_titles = list("Atmospheric Engineer" = /datum/alt_title/atmos_engi, "Atmospheric Maintainer" = /datum/alt_title/atmos_maint, "Disposals Technician" = /datum/alt_title/disposals_tech,
+						"Fuel Technician" = /datum/alt_title/refuel_tech)
+>>>>>>> e37a38073a... Merge pull request #14263 from Heroman3003/sd-job-titles
 
 /datum/alt_title/atmos_maint
 	title = "Atmospheric Maintainer"
@@ -61,6 +66,9 @@
 /datum/alt_title/disposals_tech
 	title = "Disposals Technician"
 	title_blurb = "A Disposals Technician is an Atmospheric Technician still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
+
+/datum/alt_title/refuel_tech
+	title = "Fuel Technician"
 
 /datum/job/atmos/get_request_reasons()
 	return list("Construction project", "Repairs necessary")
