@@ -1024,17 +1024,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 "abP" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "psych_birdcage"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
-	},
-/turf/simulated/floor/wood,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/mentalhealth)
 "abQ" = (
 /obj/structure/catwalk,
@@ -1094,12 +1089,13 @@
 /turf/simulated/floor/tiled,
 /area/rnd/testingroom)
 "abX" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized/full{
-	id = "psych_birdcage"
+/obj/machinery/door/window{
+	dir = 8;
+	name = "Birdcage";
+	req_one_access = list(64)
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/carpet/blue,
 /area/tether/surfacebase/medical/mentalhealth)
 "abY" = (
 /obj/machinery/door/airlock/medical{
@@ -1500,12 +1496,14 @@
 /turf/simulated/floor/carpet/blue,
 /area/tether/surfacebase/medical/mentalhealth)
 "acG" = (
-/obj/machinery/door/window{
-	dir = 8;
-	name = "Birdcage";
-	req_one_access = list(64)
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
 /area/tether/surfacebase/medical/mentalhealth)
 "acH" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -1734,7 +1732,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
-/obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/paramed)
 "adc" = (
@@ -1990,8 +1987,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 8
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
@@ -2255,17 +2257,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/lower/first_west)
 "adP" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/tether/surfacebase/medical/paramed)
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/medical/virology)
 "adQ" = (
 /obj/structure/closet/secure_closet/paramedic,
 /obj/effect/floor_decal/corner/paleblue{
@@ -9606,6 +9602,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/surface_eva)
+"apN" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Virology Laboratory";
+	req_access = list(39)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "apO" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
@@ -13920,6 +13938,22 @@
 /obj/item/weapon/folder/red,
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
+"awR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/lowerhall)
 "awS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14069,24 +14103,18 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
 "awY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
+	dir = 8
 	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 1
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/lowerhall)
+/turf/simulated/floor/tiled/dark,
+/area/tether/surfacebase/medical/paramed)
 "awZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -14110,19 +14138,17 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
 "axa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 6
 	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
-	},
+/obj/effect/floor_decal/borderfloorblack/corner2,
+/obj/effect/floor_decal/corner/paleblue/bordercorner2,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/paramed)
 "axb" = (
@@ -14488,6 +14514,15 @@
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/tram)
+"axz" = (
+/obj/machinery/door/airlock/medical{
+	id_tag = null;
+	name = "Auto Resleeving";
+	req_access = list(5)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/autoresleeving)
 "axA" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14551,6 +14586,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/xenoflora)
 "axD" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/rust,
 /obj/structure/cable{
 	d1 = 4;
@@ -14560,6 +14596,24 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/solars)
+=======
+/obj/machinery/door/window/eastright{
+	dir = 1;
+	name = "Virology Isolation Room One";
+	req_one_access = list(39)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 "axE" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -15168,24 +15222,20 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ayw" = (
-/obj/machinery/door/airlock/glass_medical{
-	name = "Virology Laboratory";
-	req_access = list(39)
+/obj/machinery/door/window/eastright{
+	dir = 1;
+	name = "Virology Isolation Room Two";
+	req_one_access = list(39)
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ayx" = (
@@ -15968,42 +16018,38 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
 "azH" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/medical/virology)
+/obj/machinery/door/airlock/maintenance/medical{
+	id_tag = "autor";
+	name = "Auto-Resleeving";
+	req_access = list(5)
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/autoresleeving)
 "azI" = (
-/obj/machinery/door/window/eastright{
-	dir = 1;
-	name = "Virology Isolation Room One";
-	req_one_access = list(39)
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/lime{
-	dir = 9
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/lime{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
-"azJ" = (
-/obj/machinery/door/window/eastright{
-	dir = 1;
-	name = "Virology Isolation Room Two";
-	req_one_access = list(39)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/lime{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/lime{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
+/obj/effect/floor_decal/borderfloor/corner2,
+/obj/effect/floor_decal/corner/brown/bordercorner2,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/lowernorthhall)
 "azK" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -35411,25 +35457,6 @@
 /obj/machinery/holoposter,
 /turf/simulated/wall,
 /area/hallway/lower/first_west)
-"lBv" = (
-/obj/machinery/door/airlock/maintenance/medical{
-	id_tag = "autor";
-	name = "Auto-Resleeving";
-	req_access = list(5)
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/autoresleeving)
 "lBO" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -36303,6 +36330,12 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/weaponsrange)
+<<<<<<< HEAD
+=======
+"nAK" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/engineering/atmos/airlock/gas)
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 "nBm" = (
 /obj/structure/railing{
 	dir = 4
@@ -49784,6 +49817,7 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 gCa
 wwm
 jio
@@ -49842,6 +49876,65 @@ aEr
 aFh
 aDi
 aah
+=======
+aad
+aap
+aav
+aaG
+aaX
+abe
+acf
+acH
+adD
+aao
+afj
+age
+azI
+aCr
+aDt
+aEg
+aEU
+aCr
+aGh
+aGO
+aHK
+aJl
+aHK
+aOS
+aGa
+haf
+anW
+aoj
+aoS
+apC
+aqf
+aqK
+aqf
+aqf
+aqf
+aqf
+aqf
+aqf
+aqf
+aqK
+aqf
+arg
+aoS
+aoj
+awH
+hFn
+ayh
+ayh
+ayh
+ayh
+ayh
+ayh
+ayh
+ayh
+aAZ
+aFl
+aBO
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aah
 aBO
 aBP
@@ -49885,6 +49978,109 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+aap
+aaw
+aaH
+aaY
+abi
+ach
+acL
+awY
+aev
+afk
+agg
+aBB
+aCr
+aDB
+aEh
+aDC
+aCr
+aGi
+aGP
+aHM
+aJt
+aKf
+aQE
+aGa
+bbk
+anW
+aoj
+aoS
+apC
+aqf
+aqf
+aqf
+aqg
+aqg
+aqg
+aqg
+aqg
+aqf
+aqf
+aqf
+arg
+aoS
+aoj
+awH
+axm
+ayh
+ayQ
+azZ
+hmx
+aBR
+aCD
+aDl
+ayh
+aBa
+aFl
+aBO
+aah
+aBO
+aBO
+aEz
+aHD
+aIh
+aKx
+aKx
+aJI
+aMu
+aNe
+aMr
+aJI
+aOC
+aNe
+aPD
+aPZ
+aPZ
+aPZ
+ajk
+aSf
+aSP
+aTu
+aIh
+aUc
+aUc
+aUc
+aUc
+aUc
+aUc
+aUc
+aUb
+aXu
+aHe
+aYd
+aYs
+aYO
+aZi
+aYd
+aWA
+aVh
+aWc
+aWc
+bas
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aad
 aad
 aad
@@ -49993,7 +50189,7 @@ aaK
 abo
 aaK
 aaK
-adP
+axa
 aao
 cPX
 afO
@@ -50856,6 +51052,114 @@ aah
 aah
 aah
 aad
+<<<<<<< HEAD
+=======
+aan
+abf
+acl
+acR
+acG
+aeY
+atN
+adX
+adY
+awR
+adR
+adU
+afo
+aem
+afF
+aBX
+aDG
+aBX
+aBX
+aFu
+aGv
+aBX
+aBX
+aJS
+aKR
+aKR
+bbb
+agf
+anW
+aoi
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoi
+awH
+axr
+fAW
+kKl
+xzn
+ldI
+agM
+aCJ
+aCJ
+aCJ
+aCJ
+aFs
+aCJ
+aCJ
+aCJ
+agM
+oGO
+aJe
+aJP
+aKB
+aLg
+aLM
+aLM
+aLM
+aLg
+aOk
+aOk
+aOk
+aOj
+aQc
+aQc
+aQc
+aQb
+aSj
+aSj
+aSj
+aSi
+aUg
+aUJ
+aUJ
+aVq
+aVJ
+aVJ
+aWG
+aUb
+aXr
+aXJ
+aYg
+aYx
+aIi
+aJu
+aZQ
+aZO
+bah
+aWu
+aXf
+baS
+baU
+baU
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aad
 aad
 aad
@@ -51144,6 +51448,7 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -51328,6 +51633,61 @@ kgk
 mSz
 qhq
 oib
+=======
+aan
+aan
+abp
+abq
+acY
+adB
+aan
+atP
+awE
+aeU
+uIU
+uIU
+uIU
+azH
+cqg
+afE
+aef
+aef
+aef
+aEY
+aFO
+aGw
+aHh
+aef
+aef
+aef
+aef
+aef
+bbt
+anZ
+aol
+aoT
+apE
+wDf
+aqL
+doa
+aqL
+ajA
+asf
+ass
+mGP
+atn
+cHW
+auu
+auQ
+avo
+avX
+awK
+aqh
+vfy
+qwm
+ayG
+qRI
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 agM
 aCJ
 aCJ
@@ -62695,7 +63055,11 @@ awz
 aeU
 uIU
 uIU
+<<<<<<< HEAD
 uIU
+=======
+axz
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 uIU
 axP
 qBa
@@ -63060,6 +63424,115 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+aah
+aan
+aan
+abP
+abX
+abP
+aan
+aan
+acP
+awW
+axR
+aee
+ayC
+aza
+aAd
+axP
+aAz
+oJY
+uVK
+jXR
+xtV
+qEW
+xRP
+sVe
+dNP
+pFF
+pFF
+pFF
+pFF
+pFF
+pFF
+xTI
+okP
+okP
+omy
+aqQ
+tnF
+rhc
+apF
+ash
+asx
+asU
+hTk
+atT
+aux
+auR
+avv
+awd
+auR
+awN
+auR
+azg
+cWS
+rRC
+agM
+aCO
+aCO
+aCO
+aEI
+aFw
+aCO
+aCO
+aCO
+aHG
+aHG
+aHG
+aHG
+aCO
+aLj
+aLj
+aLj
+aNn
+aNS
+aNS
+aNS
+aPd
+aPK
+aPK
+aPK
+aRm
+aPK
+aSo
+aSo
+aqS
+aSo
+aUm
+aUm
+aUq
+aUr
+xnn
+aWn
+aWn
+aVn
+aVn
+aVn
+aYi
+aHX
+aZc
+aNt
+aYi
+eoh
+aZD
+baD
+aZD
+baT
+baU
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aad
 aad
 aad
@@ -63716,6 +64189,7 @@ baU
 baU
 aah
 aah
+<<<<<<< HEAD
 auD
 aud
 aud
@@ -63808,6 +64282,124 @@ auD
 aad
 aad
 aad
+=======
+aah
+aah
+aah
+aah
+aah
+aah
+aeE
+cdl
+jrh
+afn
+avk
+axc
+ayg
+ayE
+azu
+adP
+azW
+aAe
+aeE
+qhk
+aAD
+hGe
+bbj
+bbx
+bbJ
+bbV
+bbj
+ahk
+ahA
+ahk
+ahA
+aop
+lry
+sHK
+yey
+nmb
+lry
+aql
+arl
+apF
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+agM
+azl
+iti
+vDb
+aBZ
+agM
+aCO
+aEa
+aEM
+aFC
+aFT
+aGy
+aHn
+aCP
+aIv
+aCP
+aCP
+xnS
+aLj
+aLj
+ave
+aLj
+aNS
+aNS
+awk
+aNS
+aPK
+aPK
+azr
+aPK
+aPK
+aSo
+aDL
+aSo
+aSo
+arD
+bcT
+aVf
+nTC
+aVf
+cwS
+aUP
+aXa
+aUm
+bcG
+ktr
+xyI
+pud
+sJP
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aad
 aad
 aad
@@ -63878,6 +64470,43 @@ aah
 aah
 aah
 aah
+<<<<<<< HEAD
+=======
+aeE
+sLf
+jhN
+afx
+mjL
+axd
+ayj
+ayF
+azy
+axD
+azX
+aAg
+aeE
+aAz
+aAD
+uVK
+bbj
+bby
+bbK
+bbW
+bbj
+aaU
+aaU
+aaU
+xik
+aBo
+lry
+tHb
+emK
+vkL
+lry
+aql
+arl
+apF
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aah
 aah
 aah
@@ -64026,7 +64655,7 @@ axj
 ayk
 ayK
 azv
-azH
+adP
 azY
 aAh
 aeE
@@ -64077,9 +64706,12 @@ scf
 aLK
 act
 aDu
+<<<<<<< HEAD
 aIx
 aDu
 aCR
+=======
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aKK
 aLj
 aLX
@@ -64109,6 +64741,281 @@ aXc
 aUm
 aUm
 aUm
+<<<<<<< HEAD
+=======
+aUm
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aaa
+"}
+(113,1,1) = {"
+aaa
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aeE
+nLm
+avl
+afD
+vXS
+axF
+ayl
+avl
+azw
+aeE
+aeE
+aeE
+aeE
+aAA
+aAH
+aAX
+sQc
+bbA
+bbj
+bbj
+aaU
+aaU
+aaU
+aaU
+aaU
+iaI
+lry
+qbw
+cWJ
+lVt
+lry
+aql
+aql
+apF
+aah
+aah
+aah
+aah
+atx
+afG
+auB
+auB
+auB
+aex
+atx
+axy
+ayo
+azn
+auU
+tLx
+aCa
+axy
+atx
+afY
+aVT
+auB
+auB
+auB
+aHG
+aCP
+aIu
+aCP
+aCR
+qpt
+aLj
+aLj
+aLj
+aLj
+aNS
+aNS
+aNS
+aNS
+aPK
+aPK
+aPK
+aPK
+aPK
+aSo
+aSo
+aSo
+aUm
+aUm
+aUm
+cwS
+aVD
+qCD
+aUm
+aUm
+aUm
+aUm
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aaa
+"}
+(114,1,1) = {"
+aaa
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aeE
+bHA
+hCT
+afL
+avR
+axG
+ayt
+avl
+azx
+adP
+azW
+aAe
+aeE
+aAI
+dSg
+wvV
+fVG
+aBh
+fVG
+fVG
+bHK
+fVG
+fVG
+qSJ
+pIG
+aBq
+lry
+mxi
+fkx
+vBy
+lry
+aqj
+cZF
+apF
+aah
+aah
+aah
+aah
+atx
+atX
+auB
+auT
+avB
+awi
+atx
+atx
+atx
+azo
+qfJ
+mOz
+atx
+atx
+atx
+atx
+aEO
+auB
+auB
+aGA
+aCO
+aHI
+aIy
+aJW
+aJW
+aJW
+aLk
+wEk
+aCO
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aUm
 aUm
 aah
@@ -64242,6 +65149,18 @@ aah
 aah
 aah
 aeE
+<<<<<<< HEAD
+=======
+agq
+avS
+axH
+ayu
+ayL
+azz
+ayw
+azX
+aAg
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aeE
 aeE
 afm
@@ -64468,6 +65387,7 @@ baU
 aah
 aah
 aah
+<<<<<<< HEAD
 auD
 aud
 aud
@@ -64509,6 +65429,104 @@ aaa
 (126,1,1) = {"
 aaa
 >>>>>>> 44766f85bb... Merge pull request #10079 from KillianKirilenko/kk-mapping
+=======
+aah
+aah
+aah
+aah
+aah
+ano
+ack
+acM
+acM
+aen
+aig
+auL
+xpP
+ayv
+ayM
+bcf
+adP
+azY
+aAh
+aeE
+fWT
+fWT
+fAv
+fWT
+fWT
+fWT
+aAI
+aAI
+aAI
+cNL
+aAI
+lry
+uaa
+lry
+wRb
+fkx
+vCn
+lry
+apF
+apF
+apF
+aah
+aah
+aah
+atx
+atx
+atZ
+auC
+auC
+avD
+awj
+awj
+awj
+ayq
+azq
+jva
+dZW
+aCb
+aCU
+aCU
+aCU
+aEP
+aFX
+aFX
+aGB
+aCO
+aHJ
+aHJ
+aHJ
+aCO
+aHJ
+aHJ
+aHJ
+aCO
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aUm
+lei
+wVm
+uke
+jAq
+glu
+bcJ
+mvl
+aUm
+>>>>>>> fdc4a5de91... Merge pull request #14265 from Heroman3003/tethermed-cod
 aad
 aad
 aad
@@ -64698,8 +65716,8 @@ ano
 aeE
 aeE
 aeE
-azH
-ayw
+adP
+apN
 aeE
 aeE
 aeE
