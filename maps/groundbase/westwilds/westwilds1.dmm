@@ -13,7 +13,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -25,7 +25,7 @@
 	dir = 1
 	},
 /obj/structure/railing,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -100,7 +100,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -329,14 +329,14 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "dw" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -344,9 +344,13 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
 /obj/machinery/power/solar,
 /turf/simulated/floor/virgo3c{
+=======
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -406,7 +410,7 @@
 /area/groundbase/science/outpost/atmos)
 "ew" = (
 /obj/structure/railing,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "ex" = (
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -440,8 +444,13 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "eN" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -482,8 +491,13 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "fn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -523,7 +537,7 @@
 	icon_state = "1-8"
 	},
 /obj/effect/wire_deleter,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -573,11 +587,19 @@
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/east_west{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
 "gm" = (
 /turf/simulated/mineral/cave/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/west)
+"gm" = (
+/turf/simulated/mineral/cave,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "gq" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -586,7 +608,7 @@
 	icon_state = "1-8"
 	},
 /obj/effect/wire_deleter,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -657,7 +679,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "hm" = (
 /obj/structure/anomaly_container,
@@ -682,7 +704,7 @@
 /area/groundbase/science/outpost/atmos)
 "hx" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/science/outpost)
 "hI" = (
 /obj/machinery/computer/general_air_control/supermatter_core{
@@ -721,8 +743,33 @@
 /turf/simulated/floor,
 /area/groundbase/engineering/solarshed)
 "ia" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/west/unexplored)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/west/unexplored)
+"ie" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl)
+"if" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/axolotl_cockpit)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ij" = (
 /obj/machinery/door/blast/regular{
 	dir = 8;
@@ -769,7 +816,7 @@
 /obj/machinery/atmospherics/pipe/vent{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/science/outpost/atmos)
@@ -800,8 +847,13 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/science/outpost/toxins_storage)
 "iL" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "iM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -844,8 +896,13 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ji" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -854,6 +911,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/outpost/toxins_lab)
+<<<<<<< HEAD
+=======
+"jk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "jm" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -892,8 +958,13 @@
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
 "kc" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west/unexplored)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/west/unexplored)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "kh" = (
 /turf/simulated/wall/r_wall,
 /area/groundbase/science/outpost/toxins_mixing)
@@ -937,8 +1008,17 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/sidewalk/side,
+/area/submap/groundbase/wilderness/west)
+"kx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ky" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -967,7 +1047,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -1056,8 +1136,13 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "nc" = (
 /obj/machinery/conveyor_switch/oneway{
 	icon_state = "switch-fwd";
@@ -1071,7 +1156,7 @@
 /area/groundbase/science/outpost/toxing_gasworks)
 "np" = (
 /obj/item/stack/cable_coil/random,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "nq" = (
 /obj/structure/closet/excavation,
@@ -1118,8 +1203,13 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "nY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1132,8 +1222,13 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ov" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
@@ -1328,7 +1423,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "qQ" = (
 /obj/structure/cable{
@@ -1337,10 +1432,33 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
+<<<<<<< HEAD
+=======
+"qV" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+"qY" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/axolotl)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "rc" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -1383,13 +1501,18 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
 "rQ" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "rS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -1422,7 +1545,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -1454,7 +1577,7 @@
 /turf/simulated/floor,
 /area/groundbase/engineering/solarshed)
 "st" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "su" = (
 /obj/machinery/door/blast/regular{
@@ -1490,7 +1613,7 @@
 	name = "Powernet Sensor - Solar Farm Input";
 	name_tag = "Solar Farm Input"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarshed)
@@ -1547,8 +1670,13 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "te" = (
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -1765,7 +1893,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "vP" = (
 /obj/structure/cable/green{
@@ -1786,8 +1914,26 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+"we" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/axolotl)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "wg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -1887,8 +2033,13 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "wX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -1927,8 +2078,13 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "xX" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -1959,7 +2115,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/science/outpost)
 "yv" = (
 /obj/machinery/camera/network/research_outpost{
@@ -1968,8 +2124,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/outpost/anomaly_testing)
 "yy" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "yI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1986,8 +2147,13 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/sidewalk,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "yQ" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
@@ -1999,7 +2165,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -2030,8 +2196,13 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "zs" = (
 /obj/structure/table/standard,
 /obj/item/device/flashlight/lamp,
@@ -2048,7 +2219,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -2074,7 +2245,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -2086,16 +2257,31 @@
 /area/groundbase/science/outpost/atmos)
 "zM" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/mineral/ignore_cavegen,
 /area/groundbase/wilderness/west)
 =======
 /turf/simulated/mineral/ignore_cavegen/virgo3c,
+=======
+/turf/simulated/mineral/ignore_cavegen,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/submap/groundbase/wilderness/west)
 >>>>>>> 3e5775ea6e... Merge pull request #13634 from Heroman3003/3c-turfs
 "zP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
+<<<<<<< HEAD
+=======
+"zT" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	edge_blending_priority = -1
+	},
+/area/groundbase/engineering/solarfield)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "zX" = (
 /obj/structure/table/standard,
 /obj/machinery/light,
@@ -2246,10 +2432,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/outpost/anomaly_testing)
 "BA" = (
+<<<<<<< HEAD
 /turf/unsimulated/wall/planetary/virgo3c{
 	icon_state = "riveted"
 	},
 /area/groundbase/wilderness/west)
+=======
+/turf/unsimulated/wall/planetary/normal,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "BC" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -2356,7 +2547,7 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/science/outpost/anomaly_testing)
 "CX" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/engineering/solarfield)
 "Db" = (
 /obj/machinery/light,
@@ -2383,7 +2574,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -2398,8 +2589,28 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
+<<<<<<< HEAD
+=======
+"Ds" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/railing/grey,
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron{
+	start_pressure = 8000.25
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
+"Dt" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Du" = (
 /obj/structure/closet/secure_closet/xenoarchaeologist,
 /obj/machinery/light,
@@ -2435,7 +2646,7 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "Ee" = (
 /obj/structure/cable/green{
@@ -2471,6 +2682,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
+<<<<<<< HEAD
+=======
+"Ek" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Ep" = (
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
@@ -2640,7 +2863,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -2712,6 +2935,26 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/groundbase/science/outpost/toxins_mixing)
+<<<<<<< HEAD
+=======
+"GM" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	edge_blending_priority = -1
+	},
+/area/groundbase/engineering/solarfield)
+"GT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "GX" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -2759,6 +3002,18 @@
 	},
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
+<<<<<<< HEAD
+=======
+"Hq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Ht" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
@@ -2769,8 +3024,15 @@
 /area/groundbase/science/outpost/atmos)
 "Hu" = (
 /obj/structure/cable,
+<<<<<<< HEAD
 /obj/machinery/power/solar,
 /turf/simulated/floor/virgo3c{
+=======
+/obj/machinery/power/solar{
+	SOLAR_MAX_DIST = 140
+	},
+/turf/simulated/floor{
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -2778,8 +3040,15 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/power/solar,
 /turf/simulated/floor/virgo3c{
+=======
+/obj/machinery/power/solar{
+	SOLAR_MAX_DIST = 140
+	},
+/turf/simulated/floor{
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -2817,14 +3086,14 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "HR" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
 	target_pressure = 200
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "HT" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -2858,6 +3127,12 @@
 	},
 /turf/simulated/floor,
 /area/groundbase/science/outpost/substation)
+<<<<<<< HEAD
+=======
+"Ih" = (
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Ii" = (
 /obj/machinery/atmospherics/trinary/atmos_filter/m_filter{
 	dir = 8;
@@ -2876,7 +3151,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -2898,6 +3173,38 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
+<<<<<<< HEAD
+=======
+"IF" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/pointdefense_control{
+	id_tag = "axolotl_pd";
+	name = "axolotl defense control";
+	req_one_access = null
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
+"IG" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/structure/catwalk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl)
+"II" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+"IK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "IO" = (
 /obj/machinery/atmospherics/trinary/atmos_filter/m_filter{
 	dir = 8;
@@ -2981,8 +3288,13 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "JI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
@@ -3007,7 +3319,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/wire_deleter,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -3024,7 +3336,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -3074,7 +3386,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "Ko" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3168,7 +3480,7 @@
 	dir = 1
 	},
 /obj/structure/railing,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -3185,7 +3497,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarshed)
@@ -3193,8 +3505,13 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Lf" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 4
@@ -3245,7 +3562,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "LA" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -3265,12 +3582,26 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/wall,
 /area/groundbase/science/outpost/atmos)
+<<<<<<< HEAD
+=======
+"LJ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "LK" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/west{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "LM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 10
@@ -3347,6 +3678,26 @@
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
+<<<<<<< HEAD
+=======
+"Na" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
+	edge_blending_priority = -1
+	},
+/area/groundbase/engineering/solarfield)
+"Nc" = (
+/obj/structure/hull_corner{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/axolotl_engineering)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Nd" = (
 /obj/machinery/atmospherics/trinary/atmos_filter{
 	dir = 4;
@@ -3364,6 +3715,26 @@
 	},
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
+<<<<<<< HEAD
+=======
+"Nx" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+"NG" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "NJ" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 4
@@ -3375,7 +3746,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/engineering/solarfield)
 "NM" = (
 /obj/machinery/firealarm{
@@ -3387,8 +3758,13 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 9
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "NS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -3420,7 +3796,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/wire_deleter,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -3460,6 +3836,18 @@
 "OK" = (
 /turf/simulated/wall,
 /area/groundbase/science/outpost/anomaly_lab)
+<<<<<<< HEAD
+=======
+"OT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Pi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -3527,8 +3915,17 @@
 /turf/simulated/floor,
 /area/groundbase/science/outpost/toxins_mixing)
 "PG" = (
+<<<<<<< HEAD
 /turf/unsimulated/wall/planetary/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "PK" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor,
@@ -3572,7 +3969,7 @@
 	name = "Powernet Sensor - Solar Farm Output";
 	name_tag = "Solar Farm Output"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarshed)
@@ -3586,7 +3983,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -3752,7 +4149,7 @@
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
 "RY" = (
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -3812,13 +4209,13 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
 "SM" = (
 /obj/machinery/atmospherics/pipe/vent/high_volume,
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/outpost/toxins_mixing)
 "SO" = (
 /obj/structure/table/standard,
@@ -3858,7 +4255,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarshed)
@@ -3877,7 +4274,7 @@
 	dir = 1
 	},
 /obj/structure/railing,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -4076,7 +4473,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarshed)
@@ -4158,7 +4555,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -4175,7 +4572,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/virgo3c{
+/turf/simulated/floor/tiled/asteroid_steel/outdoors{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -4198,8 +4595,13 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/science/outpost/anomaly_lab)
 "Xk" = (
+<<<<<<< HEAD
 /turf/simulated/mineral/cave/virgo3c,
 /area/groundbase/wilderness/west/cave)
+=======
+/turf/simulated/mineral/cave,
+/area/submap/groundbase/wilderness/west/cave)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Xt" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4266,12 +4668,40 @@
 "XR" = (
 /turf/simulated/floor/tiled,
 /area/groundbase/science/outpost/anomaly_lab)
+<<<<<<< HEAD
+=======
+"XZ" = (
+/obj/structure/bed/chair/bay/chair,
+/obj/structure/handrail,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	req_access = null;
+	req_one_access = list(11,67)
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/axolotl_galley)
+"Yc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/submap/groundbase/wilderness/west)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Ye" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/effect/wire_deleter,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/engineering/solarfield)
@@ -4283,7 +4713,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/wilderness/west)
@@ -4318,8 +4748,26 @@
 /area/groundbase/science/outpost/toxins_lab)
 "Yv" = (
 /obj/structure/anomaly_container,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/west)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/west)
+"Yw" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron{
+	start_pressure = 8000.25
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "YD" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
