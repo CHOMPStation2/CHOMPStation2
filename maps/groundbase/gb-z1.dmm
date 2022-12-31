@@ -134,7 +134,11 @@ lel
 /obj/effect/landmark{
 	name = "droppod_landing"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southeastspur)
 "as" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -247,7 +251,11 @@ lel
 	dir = 4;
 	pixel_x = 32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "aE" = (
 /obj/machinery/shieldgen,
@@ -884,7 +892,11 @@ lel
 /turf/simulated/floor,
 /area/groundbase/security/armory)
 "ck" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southeastspur)
 "cl" = (
 /obj/structure/table/reinforced,
@@ -1026,7 +1038,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
 "cB" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "cC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1491,7 +1507,11 @@ lel
 /area/maintenance/groundbase/level1/nwtunnel)
 "dF" = (
 /obj/machinery/light/bigfloorlamp,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/eastspur)
 "dG" = (
 /obj/structure/cable/yellow{
@@ -1620,7 +1640,11 @@ lel
 /area/groundbase/medical/or1)
 "dS" = (
 /obj/effect/map_effect/portal/line/side_a,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/nw)
 "dU" = (
 /obj/machinery/alarm,
@@ -1979,7 +2003,11 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/morgue)
 "eR" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/unexplored/outdoors)
 "eT" = (
 /obj/structure/railing/grey{
@@ -2774,7 +2802,11 @@ lel
 	pixel_x = 32;
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/northspur)
 "gN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -2908,7 +2940,11 @@ lel
 	req_access = null;
 	req_one_access = list(18)
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "hh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3296,10 +3332,17 @@ lel
 	dir = 10;
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/level1/centsquare)
 "ij" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/groundbase/level1/centsquare)
+"ij" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/security/lobby)
 "ik" = (
 /obj/structure/table/reinforced,
@@ -3854,7 +3897,11 @@ lel
 	pixel_x = 32;
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "jE" = (
 /obj/item/device/radio/intercom{
@@ -5262,7 +5309,11 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southeastspur)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "mR" = (
@@ -5751,7 +5802,11 @@ lel
 /area/groundbase/civilian/bar)
 "ob" = (
 /obj/effect/landmark/vines,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/eastspur)
 "oc" = (
 /obj/structure/morgue{
@@ -6189,7 +6244,11 @@ lel
 	},
 /area/maintenance/groundbase/level1/netunnel)
 "pc" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/unexplored/outdoors)
 "pe" = (
 /obj/machinery/firealarm{
@@ -7812,7 +7871,11 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southwestspur)
 "sT" = (
 /obj/machinery/telecomms/server/presets/science,
@@ -8004,7 +8067,11 @@ lel
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/west{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "tr" = (
 /obj/structure/table/rack/shelf/steel,
@@ -8114,7 +8181,11 @@ lel
 /obj/effect/landmark{
 	name = "droppod_landing"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/unexplored/outdoors)
 "tF" = (
 /obj/structure/cable{
@@ -8134,7 +8205,11 @@ lel
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/maintenance/groundbase/level1/swtunnel)
 "tG" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/northspur)
 "tH" = (
 /obj/structure/dispenser{
@@ -8226,7 +8301,11 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
 "tT" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c{
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow{
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 	outdoors = 0
 	},
 /area/groundbase/unexplored/outdoors)
@@ -8644,7 +8723,11 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "uX" = (
 /obj/machinery/light_switch{
@@ -9024,7 +9107,11 @@ lel
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/level1/northspur)
 "vM" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southwestspur)
 "vN" = (
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
@@ -9668,7 +9755,11 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southwestspur)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "xm" = (
@@ -9957,6 +10048,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/toolstorage)
 "xQ" = (
+<<<<<<< HEAD
 /obj/machinery/telecomms/server/presets/supply,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -9964,6 +10056,12 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_nosnow{
+	outdoors = 0
+	},
+/area/groundbase/level1/eastspur)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "xR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10054,7 +10152,11 @@ lel
 	dir = 1;
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "ye" = (
 /obj/structure/closet/secure_closet/personal{
@@ -10986,10 +11088,17 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/level1/westspur)
 "Ah" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/groundbase/level1/westspur)
+"Ah" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/eastspur)
 "Ai" = (
 /obj/machinery/conveyor_switch/oneway{
@@ -11238,7 +11347,11 @@ lel
 /area/prison/cell_block/gb)
 "AL" = (
 /obj/machinery/light/small,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "AM" = (
 /obj/structure/cable{
@@ -12448,7 +12561,11 @@ lel
 /area/groundbase/cargo/mining)
 "DM" = (
 /obj/machinery/light/bigfloorlamp,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "DN" = (
 /obj/machinery/light/small{
@@ -12509,6 +12626,32 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
+<<<<<<< HEAD
+=======
+"DU" = (
+/obj/structure/sign/directions/stairs_up{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = 8
+	},
+/obj/structure/sign/directions/bar{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = -4
+	},
+/obj/structure/sign/directions/chapel{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = -10
+	},
+/obj/structure/sign/directions/evac{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = 2
+	},
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/groundbase/level1/northspur)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "DV" = (
 /obj/machinery/vending/medical,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -12568,7 +12711,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/security/processing)
 "Eb" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Ec" = (
 /obj/machinery/door/window/westleft{
@@ -12840,7 +12987,11 @@ lel
 /area/groundbase/civilian/cafe)
 "EO" = (
 /obj/machinery/light/bigfloorlamp,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "EP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13281,7 +13432,11 @@ lel
 /obj/machinery/light/small{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/civilian/foodplace)
 "FR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -14154,7 +14309,11 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "HR" = (
 /obj/structure/cable/yellow{
@@ -14183,6 +14342,9 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/eva)
+"HV" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_nosnow,
+/area/groundbase/level1/eastspur)
 "HW" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -14996,7 +15158,11 @@ lel
 	dir = 1;
 	pixel_y = 43
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "JX" = (
 /obj/structure/cable/yellow{
@@ -15049,7 +15215,11 @@ lel
 	dir = 10;
 	pixel_y = 24
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Kb" = (
 /obj/structure/table/reinforced,
@@ -15800,7 +15970,11 @@ lel
 /area/maintenance/groundbase/substation/medcargo)
 "LM" = (
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/north,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/nw)
 "LN" = (
 /obj/machinery/firealarm{
@@ -16204,7 +16378,11 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/or1)
 "MK" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/eastspur)
 "ML" = (
 /obj/structure/closet/walllocker_double/west{
@@ -16481,11 +16659,19 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "Nv" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Nw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16633,7 +16819,11 @@ lel
 /area/groundbase/level1/northspur)
 "NM" = (
 /obj/effect/mouse_hole_spawner,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "NN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16927,7 +17117,11 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southeastspur)
 "Ow" = (
 /obj/structure/railing/grey{
@@ -17146,7 +17340,11 @@ lel
 /area/groundbase/security/halle)
 "Pg" = (
 /obj/effect/landmark/vines,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Ph" = (
 /obj/structure/cable{
@@ -17198,7 +17396,11 @@ lel
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/gameroom)
 "Pp" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southeastspur)
 "Pr" = (
 /obj/structure/bed/chair/sofa/bench{
@@ -17679,7 +17881,11 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/equipment)
 "QD" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/westspur)
 "QE" = (
 /obj/machinery/door/firedoor,
@@ -18097,7 +18303,11 @@ lel
 	dir = 4;
 	trader_type = /obj/trader/general
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/eastspur)
 "RE" = (
 /obj/machinery/vending/security,
@@ -18680,7 +18890,11 @@ lel
 /area/groundbase/civilian/arrivals)
 "SV" = (
 /obj/effect/map_effect/portal/line/side_a,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/nw)
 "SW" = (
 /obj/structure/cable/yellow{
@@ -19361,7 +19575,11 @@ lel
 /obj/machinery/light/small{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "UD" = (
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -19492,7 +19710,11 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
 "UX" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/northspur)
 "UY" = (
 /obj/structure/disposalpipe/segment,
@@ -20199,7 +20421,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
 "WL" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c{
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow{
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -20778,6 +21004,11 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
+"Yi" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_nosnow{
+	outdoors = 0
+	},
+/area/groundbase/level1/northspur)
 "Yj" = (
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/level1/sw)
@@ -20845,7 +21076,11 @@ lel
 /obj/machinery/light/small{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Yu" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -21191,7 +21426,11 @@ lel
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/south{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/southwestspur)
 "Zj" = (
 /obj/machinery/blackbox_recorder,
@@ -21205,7 +21444,11 @@ lel
 /obj/machinery/light/small{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Zn" = (
 /obj/structure/table/rack,
@@ -21290,7 +21533,11 @@ lel
 	dir = 1;
 	pixel_y = 26
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/level1/northspur)
 "ZB" = (
 /turf/simulated/floor/reinforced,
@@ -21422,7 +21669,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/foodplace)
 "ZT" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/groundbase/civilian/foodplace)
 "ZU" = (
 /obj/machinery/power/terminal{
@@ -31160,7 +31411,11 @@ UX
 UX
 UX
 UX
+<<<<<<< HEAD
 dL
+=======
+Yi
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 UX
 UX
 UX
@@ -31302,7 +31557,11 @@ UX
 UX
 UX
 UX
+<<<<<<< HEAD
 WL
+=======
+Yi
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 UX
 UX
 tG
@@ -31443,9 +31702,15 @@ tG
 tG
 tG
 UX
+<<<<<<< HEAD
 tG
 WL
 tG
+=======
+OJ
+Yi
+OJ
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 tG
 tG
 tG
@@ -32903,12 +33168,12 @@ pc
 pc
 pc
 pc
-pc
+eR
 eR
 eR
 Qy
 Eb
-Nv
+Eb
 Nv
 Nv
 Nv
@@ -33043,17 +33308,17 @@ pc
 pc
 pc
 pc
-pc
-pc
+eR
+eR
 eR
 eR
 eR
 Qy
 Eb
 Eb
-Nv
 Eb
-Nv
+Eb
+Eb
 Nv
 Eb
 Eb
@@ -33185,7 +33450,7 @@ pc
 pc
 eR
 eR
-pc
+eR
 nN
 Bv
 Bv
@@ -33195,7 +33460,7 @@ Ku
 Gx
 Gx
 Gj
-Nv
+Eb
 Eb
 Eb
 Eb
@@ -37137,9 +37402,15 @@ Ah
 MK
 Ah
 MK
+<<<<<<< HEAD
 LK
 sF
 LK
+=======
+HV
+Il
+HV
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 Ah
 Ah
 MK
@@ -37279,9 +37550,9 @@ Ah
 Ah
 Ah
 Ah
-LK
-Il
-LK
+HV
+xQ
+HV
 Ah
 Ah
 Ah
@@ -37421,9 +37692,9 @@ Ah
 Ah
 Ah
 Ah
-LK
-Il
-LK
+HV
+xQ
+HV
 Ah
 Ah
 Ah
@@ -37563,9 +37834,9 @@ Ah
 Ah
 MK
 MK
-LK
-Il
-LK
+HV
+xQ
+HV
 Ah
 Ah
 Ah
@@ -37705,9 +37976,9 @@ MK
 MK
 MK
 Ah
-LK
-Il
-LK
+HV
+xQ
+HV
 Ah
 MK
 MK
@@ -37847,9 +38118,15 @@ MK
 MK
 MK
 MK
+<<<<<<< HEAD
 MK
 sF
 LK
+=======
+HV
+Il
+HV
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 Ah
 MK
 MK

@@ -35,7 +35,11 @@
 /area/submap/groundbase/poi/wildvillage/long/long2)
 "o" = (
 /obj/machinery/light/bigfloorlamp,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/submap/groundbase/poi/wildvillage/long/long2)
 "p" = (
 /obj/structure/table/rack,
@@ -66,7 +70,11 @@
 	},
 /area/submap/groundbase/poi/wildvillage/long/long2)
 "u" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/submap/groundbase/poi/wildvillage/long/long2)
 "x" = (
 /obj/machinery/light{

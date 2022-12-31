@@ -7,7 +7,11 @@
 /area/submap/groundbase/wilderness/east)
 "b" = (
 /mob/living/simple_mob/vore/pakkun,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/submap/groundbase/wilderness/east/unexplored)
 >>>>>>> 79258d98bc... Merge pull request #13749 from Heroman3003/pakkun
 "c" = (
@@ -24,7 +28,11 @@
 /area/submap/groundbase/wilderness/east)
 "e" = (
 /mob/living/simple_mob/vore/pakkun,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/submap/groundbase/wilderness/east/unexplored)
 "f" = (
 /mob/living/simple_mob/vore/pakkun,
@@ -34,8 +42,13 @@
 /area/submap/groundbase/wilderness/east)
 >>>>>>> 79258d98bc... Merge pull request #13749 from Heroman3003/pakkun
 "l" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east/unexplored)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east/unexplored)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "m" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 4
@@ -46,8 +59,13 @@
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "r" = (
 /turf/simulated/mineral/cave/virgo3c,
 /area/groundbase/wilderness/east/cave)
@@ -55,8 +73,13 @@
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/east_west{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "y" = (
 <<<<<<< HEAD
 /turf/simulated/mineral/ignore_cavegen,
@@ -72,23 +95,41 @@
 /area/submap/groundbase/wilderness/east)
 >>>>>>> 3e5775ea6e... Merge pull request #13634 from Heroman3003/3c-turfs
 "F" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/east/unexplored)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east/unexplored)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "G" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/east)
 "M" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east)
+"M" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "O" = (
 /turf/simulated/floor/water/virgo3c,
 /area/groundbase/wilderness/east/cave)
 "P" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "Q" = (
 /turf/simulated/floor/water/virgo3c{
 	outdoors = 0

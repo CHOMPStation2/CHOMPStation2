@@ -86,7 +86,11 @@
 /area/maintenance/groundbase/poi/caves)
 "cG" = (
 /mob/living/simple_mob/vore/alienanimals/teppi/mutant,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "cS" = (
 /obj/random/soap,
@@ -156,7 +160,11 @@
 /area/template_noop)
 "fY" = (
 /obj/structure/fence/door,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "gq" = (
 /obj/structure/bed/chair/sofa/left/brown{
@@ -181,7 +189,11 @@
 /obj/structure/fence{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "hm" = (
 /obj/random/maintenance/cargo,
@@ -201,7 +213,11 @@
 /area/groundbase/poi/outdoor/cabin5)
 "hY" = (
 /obj/structure/fence,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "in" = (
 /obj/random/maintenance/engineering,
@@ -239,11 +255,19 @@
 /obj/structure/fence/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/template_noop)
 "kP" = (
 /mob/living/simple_mob/vore/alienanimals/teppi,
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/template_noop)
+"kP" = (
+/mob/living/simple_mob/vore/alienanimals/teppi,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "lk" = (
 /obj/random/pottedplant,
@@ -257,7 +281,11 @@
 	},
 /area/groundbase/poi/outdoor/cabin5)
 "lK" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "lO" = (
 /obj/structure/table/rack,
@@ -361,7 +389,11 @@
 	},
 /area/groundbase/poi/outdoor/cabin1)
 "pM" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c{
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow{
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 	outdoors = 0
 	},
 /area/groundbase/poi/outdoor/roofed)
@@ -369,6 +401,7 @@
 /obj/structure/fence/corner{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/template_noop)
 "qc" = (
@@ -378,6 +411,17 @@
 "qh" = (
 /obj/structure/flora/tree/bigtree,
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/template_noop)
+"qc" = (
+/obj/structure/prop/rock/crystal,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/template_noop)
+"qh" = (
+/obj/structure/flora/tree/bigtree,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "qx" = (
 /obj/random/thermalponcho,
@@ -421,7 +465,11 @@
 /turf/template_noop,
 /area/template_noop)
 "tA" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "tI" = (
 /obj/item/stack/cable_coil/random,
@@ -468,7 +516,11 @@
 /area/groundbase/poi/outdoor/cabin2)
 "wc" = (
 /obj/structure/fence/corner,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "wq" = (
 /obj/random/trash_pile,
@@ -640,7 +692,11 @@
 /area/maintenance/groundbase/poi/caves)
 "EQ" = (
 /obj/random/mob/semirandom_mob_spawner/animal,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "Fb" = (
 /obj/random/maintenance/misc,
@@ -821,7 +877,11 @@
 /obj/structure/fence/corner{
 	dir = 10
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/template_noop)
 "PK" = (
 /obj/structure/table/standard,

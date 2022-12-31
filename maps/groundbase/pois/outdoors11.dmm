@@ -25,8 +25,13 @@
 /turf/simulated/wall,
 /area/groundbase/poi/outdoor/roofed)
 "G" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 "T" = (
 /turf/simulated/floor,
 /area/groundbase/poi/outdoor/roofed)

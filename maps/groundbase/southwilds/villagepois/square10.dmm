@@ -82,7 +82,11 @@
 /turf/simulated/floor/wmarble,
 /area/submap/groundbase/poi/wildvillage/square/square10)
 "B" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c/notrees,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+>>>>>>> 5f0fb16e59... Merge pull request #14279 from Very-Soft/seasontime
 /area/submap/groundbase/poi/wildvillage/square/square10)
 "G" = (
 /turf/simulated/floor/wood,
