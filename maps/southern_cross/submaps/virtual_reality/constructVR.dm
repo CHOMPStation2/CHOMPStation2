@@ -19,6 +19,10 @@
 	power_environ = 1
 	power_light = 1
 
+/area/vr/powered/rocks
+	name = "VR World Underground"
+	icon_state = "darkred"
+
 /area/vr/outdoors/powered
 	name = "Powered VR World Outside"
 	icon_state = "away"
@@ -34,6 +38,57 @@
 /area/vr/powered/redbase
 	name = "Red Base"
 	icon_state = "red"
+
+/area/vr/outdoors/powered/lava
+	name = "VR Lava Bridge"
+
+/area/vr/powered/vendor
+	name = "VR Vendor Room"
+	icon_state = "green"
+
+/area/vr/powered/material
+	name = "VR Material Room"
+	icon_state = "green"
+
+/area/vr/powered/building1
+	name = "VR Building 1"
+	icon_state = "green"
+
+/area/vr/powered/building2
+	name = "VR Building 2"
+	icon_state = "green"
+
+/area/vr/powered/conspawn
+	name = "VR Construct Spawn"
+	icon_state = "green"
+
+/area/vr/powered/armory
+	name = "VR Armory"
+	icon_state = "firingrange"
+
+/area/vr/powered/cult
+	name = "VR Cultist Base"
+	icon_state = "green"
+
+/area/vr/outdoors/powered/cult
+	name = "Cultist Outside"
+	ambience = AMBIENCE_UNHOLY
+
+/area/vr/powered/space
+	name = "VR Space Vessel"
+	icon_state = "away2"
+	base_turf = /turf/space
+/area/vr/powered/space/whiteship
+	name = "VR Whiteship"
+	icon_state = "green"
+
+/area/vr/powered/space/sciship
+	name = "VR Sci Ship"
+	icon_state = "green"
+
+/area/vr/powered/space/mechfactory
+	name = "VR Mech Factory"
+	icon_state = "green"
 
 // -- Objects -- //
 /obj/effect/fake_sun/always_day
