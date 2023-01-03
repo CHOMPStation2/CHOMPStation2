@@ -622,6 +622,7 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 
 	var/animal_chance = 0.5
 	var/animal_types = list(
+<<<<<<< HEAD
 		/mob/living/simple_mob/vore/alienanimals/teppi = 5,
 		/mob/living/simple_mob/vore/redpanda = 20,
 		/mob/living/simple_mob/vore/redpanda/fae = 1,
@@ -633,6 +634,18 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 		/mob/living/simple_mob/vore/horse/big = 5,
 		/mob/living/simple_mob/vore/bigdragon/friendly = 0.5,
 		/mob/living/simple_mob/vore/alienanimals/dustjumper = 10
+=======
+		/mob/living/simple_mob/vore/redpanda = 40,
+		/mob/living/simple_mob/vore/redpanda/fae = 2,
+		/mob/living/simple_mob/vore/sheep = 20,
+		/mob/living/simple_mob/vore/rabbit/black = 20,
+		/mob/living/simple_mob/vore/rabbit/white = 20,
+		/mob/living/simple_mob/vore/rabbit/brown = 20,
+		/mob/living/simple_mob/vore/leopardmander = 2,
+		/mob/living/simple_mob/vore/horse/big = 10,
+		/mob/living/simple_mob/vore/bigdragon/friendly = 1,
+		/mob/living/simple_mob/vore/alienanimals/dustjumper = 20
+>>>>>>> 57f20a211d... Merge pull request #14296 from Very-Soft/removeteppi
 		)
 
 
