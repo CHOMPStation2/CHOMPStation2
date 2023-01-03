@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/west/unexplored)
 "ab" = (
 /turf/simulated/wall,
 /area/groundbase/science/outpost/anomaly_testing)
@@ -5789,7 +5793,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 ia
 ia
@@ -7368,7 +7372,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -7675,7 +7679,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -9535,7 +9539,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 ia
 ia
 ia
@@ -10024,7 +10028,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -11487,7 +11491,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -12460,7 +12464,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 ia
 ia
@@ -12778,7 +12782,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -13266,7 +13270,7 @@ Xk
 ia
 kc
 kc
-kc
+aa
 kc
 ia
 ia
@@ -14502,7 +14506,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -16895,7 +16899,7 @@ ia
 ia
 ia
 kc
-kc
+aa
 kc
 kc
 kc
@@ -18522,7 +18526,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -20527,7 +20531,7 @@ ia
 ia
 ia
 kc
-kc
+aa
 kc
 kc
 kc

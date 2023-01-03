@@ -12,8 +12,29 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/water/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/water,
+/area/submap/groundbase/wilderness/east)
+"e" = (
+/obj/effect/landmark/wildlife/water,
+/turf/simulated/floor/water/deep,
+/area/submap/groundbase/wilderness/east)
+"f" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east/unexplored)
+"g" = (
+/obj/effect/landmark/wildlife/water,
+/turf/simulated/floor/water,
+/area/submap/groundbase/wilderness/east)
+"h" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east/unexplored)
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "l" = (
 /turf/simulated/mineral/cave/virgo3c,
 /area/groundbase/wilderness/east/cave)
@@ -40,8 +61,13 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/water/deep/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/water/deep,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "F" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/east/unexplored)
@@ -49,8 +75,13 @@
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/east_west{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/east)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/east)
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "V" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/east{
 	dir = 4
@@ -3373,7 +3404,7 @@ Z
 Z
 Z
 t
-t
+e
 t
 Z
 Z
@@ -5419,7 +5450,7 @@ b
 b
 b
 b
-b
+f
 F
 F
 F
@@ -5682,7 +5713,7 @@ F
 F
 F
 F
-b
+f
 b
 b
 b
@@ -5938,7 +5969,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
@@ -7115,7 +7146,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
@@ -7230,7 +7261,11 @@ Z
 t
 t
 t
+<<<<<<< HEAD
 t
+=======
+e
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 t
 t
 t
@@ -7767,7 +7802,7 @@ Z
 t
 t
 t
-t
+e
 t
 t
 Z
@@ -8980,7 +9015,7 @@ Z
 Z
 Z
 Z
-Z
+g
 Z
 t
 t
@@ -9140,7 +9175,7 @@ t
 t
 t
 Z
-Z
+g
 Z
 Z
 Z
@@ -9433,7 +9468,7 @@ n
 F
 F
 F
-F
+h
 F
 F
 l
@@ -9798,7 +9833,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
@@ -10108,7 +10143,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
@@ -10337,7 +10372,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
@@ -11529,7 +11564,7 @@ Z
 Z
 Z
 Z
-Z
+g
 Z
 Z
 Z
@@ -12892,7 +12927,7 @@ Z
 Z
 Z
 Z
-Z
+g
 Z
 Z
 Z
@@ -13900,7 +13935,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
@@ -14204,7 +14239,7 @@ Z
 Z
 Z
 Z
-Z
+g
 t
 t
 t
@@ -14233,7 +14268,7 @@ t
 t
 t
 t
-t
+e
 t
 t
 t
@@ -15634,7 +15669,7 @@ F
 F
 F
 b
-b
+f
 b
 b
 F
@@ -16032,9 +16067,13 @@ Z
 Z
 Z
 Z
+<<<<<<< HEAD
+Z
+=======
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 Z
 Z
-Z
+g
 Z
 Z
 Z
@@ -16357,6 +16396,10 @@ Z
 Z
 t
 t
+<<<<<<< HEAD
+t
+=======
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 t
 t
 t
@@ -16384,7 +16427,7 @@ t
 t
 t
 t
-Z
+g
 Z
 Z
 n
@@ -17289,7 +17332,7 @@ F
 F
 F
 b
-b
+f
 b
 b
 F
@@ -18459,7 +18502,7 @@ l
 l
 F
 F
-F
+h
 b
 b
 F
