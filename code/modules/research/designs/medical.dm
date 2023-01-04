@@ -107,15 +107,6 @@
 	sort_string = "KCAAA"
 
 //YAWN changes
-/datum/design/item/medical/advanced_analyzer
-	name = "advanced health analyzer"
-	desc = "A prototype version of the improved health analyzer, able to distinguish the location of more serious injuries as well as accurately determine radiation levels, and neurological analysis suites"
-	id = "advanced_analyzer"
-	req_tech = list(TECH_MAGNET = 6, TECH_BIO = 7, TECH_PHORON = 4)
-	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1000, "silver" = 1250, "gold" = 1750, "uranium" = 1000, "plastic" = 500)
-	build_path = /obj/item/device/healthanalyzer/advanced
-	sort_string = "KBAAC"
-
 /datum/design/item/medical/phasic_analyzer
 	name = "phasic health analyzer"
 	desc = "A prototype version of the advanced health analyzer, able to distinguish the location of more serious injuries as well as accurately determine radiation levels, and neurological analysis suites. This analyzer even picks up chemicals in the patient's stomach."
