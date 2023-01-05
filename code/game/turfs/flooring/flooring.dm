@@ -635,9 +635,6 @@ var/list/flooring_types
 	can_paint = 1		//VOREStation edit. Let's allow for some fun.
 	can_engrave = 1		//VOREStation edit. Fun.
 	flags = TURF_ACID_IMMUNE | TURF_CAN_BREAK | TURF_REMOVE_CROWBAR
-<<<<<<< HEAD
-  
-=======
 
 ///// Season Time! ///// VOREStation Addition Start
 /decl/flooring/grass/seasonal_grass
@@ -649,4 +646,3 @@ var/list/flooring_types
 /decl/flooring/grass/seasonal_grass/dark
 	name = "grass"
 	icon_base = "darkgrass"
->>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
