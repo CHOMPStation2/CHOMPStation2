@@ -27,8 +27,8 @@ var/world_time_season
 
 	grass_types = list()
 	var/static/list/overlays_cache = list()
-	var/animal_chance = 0.5
-	var/animal_types = list()
+	animal_chance = 0.5 // CHOMPedit: upstream redeclared these as new vars for some reason
+	animal_types = list() // CHOMPedit end
 	var/tree_chance = 5
 	var/tree_types = list()
 	var/snow_chance = 10
