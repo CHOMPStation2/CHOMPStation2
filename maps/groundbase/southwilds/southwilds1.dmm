@@ -3,6 +3,18 @@
 <<<<<<< HEAD
 /turf/unsimulated/wall/planetary/virgo3c,
 /area/groundbase/wilderness/south)
+=======
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
+/area/submap/groundbase/wilderness/south)
+"b" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "c" = (
 /turf/simulated/floor/water/virgo3c,
 /area/groundbase/wilderness/south)
@@ -23,6 +35,21 @@
 	},
 <<<<<<< HEAD
 /area/groundbase/wilderness/south)
+=======
+/area/submap/groundbase/wilderness/south)
+"e" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
+"f" = (
+/obj/effect/landmark/wildlife/water,
+/turf/simulated/floor/water/deep,
+/area/submap/groundbase/wilderness/south)
+"g" = (
+/obj/effect/landmark/wildlife/water,
+/turf/simulated/floor/water,
+/area/submap/groundbase/wilderness/south)
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "p" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/south)
@@ -66,8 +93,13 @@
 /turf/simulated/floor/water/deep/virgo3c,
 /area/groundbase/wilderness/south)
 "H" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/south/unexplored)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
+>>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "K" = (
 /obj/effect/map_effect/portal/line/side_b,
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
@@ -1173,7 +1205,7 @@ H
 d
 c
 c
-F
+f
 F
 c
 d
@@ -2126,7 +2158,7 @@ H
 H
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -3585,7 +3617,7 @@ Y
 Y
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -4554,7 +4586,7 @@ Y
 Y
 Y
 Y
-Y
+b
 H
 d
 c
@@ -4703,7 +4735,7 @@ c
 c
 c
 F
-F
+f
 c
 c
 c
@@ -4914,7 +4946,7 @@ Y
 Y
 Y
 Y
-Y
+b
 Y
 Y
 H
@@ -5155,7 +5187,7 @@ F
 F
 F
 F
-F
+f
 F
 c
 c
@@ -5599,7 +5631,7 @@ Y
 Y
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -7300,7 +7332,7 @@ F
 F
 F
 F
-F
+f
 F
 F
 F
@@ -8235,7 +8267,7 @@ H
 Y
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -8448,7 +8480,7 @@ H
 Y
 Y
 Y
-Y
+b
 Y
 H
 H
@@ -9752,7 +9784,7 @@ H
 H
 H
 H
-H
+e
 H
 H
 H
@@ -9771,7 +9803,7 @@ H
 Y
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -9833,7 +9865,7 @@ H
 Y
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -11274,7 +11306,7 @@ H
 H
 Y
 Y
-Y
+b
 Y
 Y
 Y
@@ -12009,7 +12041,7 @@ d
 H
 Y
 Y
-Y
+b
 Y
 H
 H
@@ -12372,7 +12404,7 @@ Y
 Y
 H
 H
-H
+e
 H
 H
 H
@@ -12633,7 +12665,7 @@ H
 H
 H
 H
-H
+e
 H
 H
 H
@@ -13142,7 +13174,7 @@ c
 c
 c
 c
-c
+g
 c
 c
 c
@@ -14381,7 +14413,7 @@ F
 F
 F
 F
-F
+f
 F
 c
 c
@@ -16148,7 +16180,7 @@ Y
 Y
 Y
 Y
-Y
+b
 Y
 Y
 H
@@ -17318,7 +17350,7 @@ H
 H
 H
 Y
-Y
+b
 Y
 Y
 Y
@@ -17474,7 +17506,7 @@ d
 d
 d
 c
-F
+f
 F
 c
 c
@@ -18191,7 +18223,7 @@ d
 d
 H
 Y
-Y
+b
 Y
 Y
 Y
@@ -18428,7 +18460,7 @@ c
 c
 F
 F
-F
+f
 F
 F
 c
