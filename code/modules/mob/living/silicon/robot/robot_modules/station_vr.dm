@@ -1033,12 +1033,7 @@
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-<<<<<<< HEAD
-/obj/item/weapon/robot_module/robot/booze
-=======
-
 /obj/item/weapon/robot_module/robot/clerical/butler/booze
->>>>>>> a533de71c6... Merge pull request #14269 from Heroman3003/borg-event-stuff
 	name = "BoozeHound robot module"
 	can_be_pushed = 0
 	sprites = list(
