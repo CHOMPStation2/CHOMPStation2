@@ -27,7 +27,7 @@
 	name = "hooligan crab"
 	desc = "A large, hard-shelled crustacean. This one is mostly grey. \
 	You probably shouldn't mess with it."
-	//catalogue_data = list(/datum/category_item/catalogue/fauna/hooligan_crab)			//TODO: write non-sif lore
+	catalogue_data = list(/datum/category_item/catalogue/fauna/hooligan_crab)
 
 	icon_state = "sif_crab"
 	icon_living = "sif_crab"
