@@ -63,19 +63,6 @@
 					)
 
 /hook/startup/proc/robot_modules_vr()
-<<<<<<< HEAD
-	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medihound
-	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/knine
-	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/ert
-	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
-	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
-	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
-	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
-	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
-	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
-=======
 	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medical/medihound
 	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/security/knine
 	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/security/ert
@@ -85,7 +72,8 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/butler/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/clerical/butler/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/miner/kmine
->>>>>>> a533de71c6... Merge pull request #14269 from Heroman3003/borg-event-stuff
+	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
+	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
 	robot_modules["TraumaHound"] = /obj/item/weapon/robot_module/robot/medical/traumahound
 	return 1
