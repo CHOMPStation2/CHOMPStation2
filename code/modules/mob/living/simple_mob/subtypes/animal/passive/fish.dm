@@ -11,7 +11,7 @@
 	icon = 'icons/mob/fish.dmi'
 	item_state = "fish"
 
-	//catalogue_data = list(/datum/category_item/catalogue/fauna/invasive_fish)		 //TODO: write non-sif lore
+	catalogue_data = list(/datum/category_item/catalogue/fauna/invasive_fish)
 
 	mob_size = MOB_SMALL
 	// So fish are actually underwater.
