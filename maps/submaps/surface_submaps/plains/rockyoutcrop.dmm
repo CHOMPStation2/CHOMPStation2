@@ -2,12 +2,24 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+<<<<<<< HEAD:maps/submaps/surface_submaps/plains/rockyoutcrop.dmm
 "b" = (
 /turf/template_noop,
 /area/submap/rockyoutcrop)
 "c" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/submap/rockyoutcrop)
+=======
+"B" = (
+/turf/simulated/wall,
+/area/template_noop)
+"Z" = (
+/turf/simulated/floor{
+	edge_blending_priority = -1;
+	outdoors = 0
+	},
+/area/template_noop)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime:maps/groundbase/southwilds/villagepois/wide template.dmm
 
 (1,1,1) = {"
 a
