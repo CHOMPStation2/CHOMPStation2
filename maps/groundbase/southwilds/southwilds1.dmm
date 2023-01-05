@@ -18,8 +18,19 @@
 "c" = (
 /turf/simulated/floor/water/virgo3c,
 /area/groundbase/wilderness/south)
+=======
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
+/area/submap/groundbase/wilderness/south)
+"c" = (
+/turf/simulated/floor/water,
+/area/submap/groundbase/wilderness/south)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "d" = (
-/turf/simulated/floor/beach/sand/virgo3c{
+/turf/simulated/floor/beach/sand{
 	edge_blending_priority = -1
 	},
 <<<<<<< HEAD
@@ -45,16 +56,37 @@
 "y" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
+=======
+/area/submap/groundbase/wilderness/south)
+"o" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/simulated/floor/water/deep,
+/area/submap/groundbase/wilderness/south)
+"p" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/south)
+"y" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/south)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "B" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/north_south{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/south)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "C" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
 "F" = (
@@ -81,15 +113,48 @@
 /area/groundbase/wilderness/south)
 =======
 /turf/simulated/mineral/ignore_cavegen/virgo3c,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/south)
+"F" = (
+/turf/simulated/floor/water/deep,
+/area/submap/groundbase/wilderness/south)
+"H" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/south/unexplored)
+"I" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/simulated/floor/water,
+/area/submap/groundbase/wilderness/south)
+"K" = (
+/obj/effect/map_effect/portal/line/side_b,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/south)
+"N" = (
+/turf/simulated/mineral/cave,
+/area/submap/groundbase/wilderness/south/cave)
+"Q" = (
+/turf/simulated/mineral/ignore_cavegen,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/submap/groundbase/wilderness/south)
 >>>>>>> 3e5775ea6e... Merge pull request #13634 from Heroman3003/3c-turfs
 "S" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/south,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
 "Y" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south/unexplored)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/south)
+"Y" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/south/unexplored)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 
 (1,1,1) = {"
 a

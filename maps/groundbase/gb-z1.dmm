@@ -6,7 +6,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/eastspur)
 "ab" = (
 /obj/machinery/door/firedoor,
@@ -24,7 +24,7 @@ lel
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/netunnel)
@@ -39,7 +39,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "ae" = (
 /obj/structure/grille,
@@ -134,7 +134,7 @@ lel
 /obj/effect/landmark{
 	name = "droppod_landing"
 	},
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/southeastspur)
 "as" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -200,7 +200,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "az" = (
 /obj/structure/table/bench/steel,
@@ -247,7 +247,7 @@ lel
 	dir = 4;
 	pixel_x = 32
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "aE" = (
 /obj/machinery/shieldgen,
@@ -300,7 +300,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "aJ" = (
 /obj/machinery/gateway{
@@ -432,7 +432,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/centsquare)
 "bg" = (
 /turf/simulated/wall,
@@ -485,7 +485,7 @@ lel
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -532,7 +532,7 @@ lel
 /area/groundbase/engineering/atmos)
 "bv" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
 "bw" = (
 <<<<<<< HEAD
@@ -598,7 +598,7 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "bB" = (
 /obj/machinery/alarm{
@@ -687,7 +687,7 @@ lel
 /area/groundbase/engineering/workshop)
 >>>>>>> c527964372... Merge pull request #13346 from Heroman3003/doubleclosets
 "bJ" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/eastspur)
 "bL" = (
 /obj/machinery/vending/loadout/accessory,
@@ -783,7 +783,22 @@ lel
 /obj/machinery/light{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/lino,
+=======
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level1/northspur)
+"bW" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/groundbase/civilian/cafe)
 "bX" = (
 /obj/structure/cable/yellow{
@@ -816,7 +831,7 @@ lel
 /turf/simulated/floor/carpet/gaycarpet,
 /area/groundbase/civilian/clown)
 "ca" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
@@ -845,7 +860,7 @@ lel
 /turf/simulated/floor,
 /area/groundbase/engineering/ce)
 "ce" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/unexplored/rock)
 "cf" = (
 /obj/structure/filingcabinet/chestdrawer,
@@ -884,7 +899,7 @@ lel
 /turf/simulated/floor,
 /area/groundbase/security/armory)
 "ck" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southeastspur)
 "cl" = (
 /obj/structure/table/reinforced,
@@ -925,7 +940,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -1026,7 +1041,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
 "cB" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/westspur)
 "cC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1139,7 +1154,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -1263,7 +1278,7 @@ lel
 /turf/simulated/floor,
 /area/groundbase/civilian/arrivals)
 "da" = (
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "db" = (
 /obj/machinery/door/firedoor,
@@ -1290,7 +1305,7 @@ lel
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
 "df" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/eastspur)
 "dg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1302,7 +1317,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "dj" = (
 /obj/structure/table/marble,
@@ -1371,7 +1386,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "du" = (
 /obj/structure/table/standard,
@@ -1395,7 +1410,7 @@ lel
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -1421,10 +1436,16 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
+<<<<<<< HEAD
+=======
+"dA" = (
+/turf/simulated/mineral/cave,
+/area/maintenance/groundbase/level1/setunnel)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "dB" = (
 /obj/machinery/light{
 	dir = 8
@@ -1438,7 +1459,7 @@ lel
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -1484,14 +1505,14 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 "dF" = (
 /obj/machinery/light/bigfloorlamp,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/eastspur)
 "dG" = (
 /obj/structure/cable/yellow{
@@ -1563,12 +1584,12 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
 "dL" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c{
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
 "dM" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
@@ -1582,7 +1603,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "dO" = (
 /obj/machinery/door/firedoor,
@@ -1610,7 +1631,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/eastspur)
 "dR" = (
 /obj/effect/floor_decal/industrial/loading{
@@ -1620,7 +1641,7 @@ lel
 /area/groundbase/medical/or1)
 "dS" = (
 /obj/effect/map_effect/portal/line/side_a,
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/nw)
 "dU" = (
 /obj/machinery/alarm,
@@ -1751,7 +1772,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -1773,13 +1794,13 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "el" = (
 /turf/simulated/wall/r_wall,
 /area/groundbase/command/ai/storage)
 "em" = (
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/slab{
 	outdoors = 0
 	},
 /area/groundbase/civilian/bar)
@@ -1979,13 +2000,13 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/morgue)
 "eR" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/unexplored/outdoors)
 "eT" = (
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "eU" = (
 /obj/structure/cable{
@@ -2017,7 +2038,7 @@ lel
 /turf/simulated/floor,
 /area/maintenance/groundbase/substation/secsci)
 "eW" = (
-/turf/simulated/floor/water/deep/virgo3c,
+/turf/simulated/floor/water/deep,
 /area/groundbase/level1/eastspur)
 "eX" = (
 /obj/machinery/suit_cycler/security,
@@ -2132,7 +2153,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
 "fm" = (
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -2178,7 +2199,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southeastspur)
 "fr" = (
 /obj/machinery/light_switch{
@@ -2202,7 +2223,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -2234,7 +2255,11 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/prison/cell_block/gb)
 "fx" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/southwestspur)
 "fy" = (
 /obj/structure/sign/department/eva,
@@ -2345,7 +2370,7 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "fQ" = (
 /obj/structure/table/steel_reinforced,
@@ -2410,11 +2435,6 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/techstorage)
-"fV" = (
-/turf/unsimulated/wall/planetary/virgo3c{
-	alpha = 0
-	},
-/area/groundbase/level1/ne)
 "fW" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -2492,9 +2512,7 @@ lel
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/engineering/atmos)
 "gh" = (
-/turf/unsimulated/wall/planetary/virgo3c{
-	icon_state = "riveted"
-	},
+/turf/unsimulated/wall/planetary/normal,
 /area/groundbase/level1/westspur)
 "gi" = (
 /obj/machinery/power/terminal{
@@ -2571,7 +2589,7 @@ lel
 	dir = 4
 	},
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -2604,7 +2622,7 @@ lel
 "gt" = (
 /obj/structure/stairs/spawner/west,
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "gu" = (
 /obj/structure/cable/yellow{
@@ -2666,7 +2684,7 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "gC" = (
 /obj/machinery/camera/network/security{
@@ -2757,7 +2775,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "gL" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -2774,7 +2792,7 @@ lel
 	pixel_x = 32;
 	pixel_y = 32
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/northspur)
 "gN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -2908,7 +2926,7 @@ lel
 	req_access = null;
 	req_one_access = list(18)
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "hh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2958,19 +2976,31 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
+<<<<<<< HEAD
 "hm" = (
 /turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
+=======
+"hn" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air/airlock{
+	start_pressure = 4559.63
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/groundbase/command/tcomms/chamber)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ho" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/eastspur)
 "hp" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -3060,20 +3090,26 @@ lel
 /area/groundbase/security/equipment)
 "hD" = (
 /obj/random/trash_pile,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 "hE" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/se)
 "hF" = (
 /obj/structure/table/hardwoodtable,
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
+=======
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level1/eastspur)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "hH" = (
 /obj/machinery/alarm{
 	dir = 8
@@ -3109,7 +3145,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southeastspur)
 "hL" = (
 /obj/structure/cable/yellow{
@@ -3190,7 +3226,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "hX" = (
 /obj/structure/table/steel_reinforced,
@@ -3214,7 +3250,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -3296,10 +3332,10 @@ lel
 	dir = 10;
 	pixel_y = 32
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "ij" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/security/lobby)
 "ik" = (
 /obj/structure/table/reinforced,
@@ -3369,7 +3405,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -3381,7 +3417,7 @@ lel
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/security/halle)
 "iv" = (
 /obj/structure/table/reinforced,
@@ -3487,7 +3523,7 @@ lel
 /turf/simulated/floor,
 /area/maintenance/groundbase/substation/secsci)
 "iG" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/maintenance/groundbase/level1/netunnel)
 "iH" = (
 /turf/simulated/wall/r_wall,
@@ -3590,13 +3626,25 @@ lel
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/halls)
+<<<<<<< HEAD
 "iW" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
 	outdoors = 0
 	},
 /area/groundbase/unexplored/rock)
+=======
+"iX" = (
+/obj/machinery/power/apc{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/groundbase/command/tcomms/chamber)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "iY" = (
-/turf/simulated/mineral/floor/virgo3c,
+/turf/simulated/mineral/floor,
 /area/maintenance/groundbase/level1/netunnel)
 "iZ" = (
 /obj/structure/table/rack/shelf/steel,
@@ -3688,7 +3736,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "jj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3854,7 +3902,7 @@ lel
 	pixel_x = 32;
 	pixel_y = 32
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "jE" = (
 /obj/item/device/radio/intercom{
@@ -3869,7 +3917,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -3931,7 +3979,7 @@ lel
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "jP" = (
 /obj/machinery/atmospherics/binary/pump/on{
@@ -3980,7 +4028,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -4045,7 +4093,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/halle)
 "kd" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/level1/centsquare)
@@ -4114,7 +4162,7 @@ lel
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
@@ -4214,7 +4262,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southeastspur)
 "kw" = (
 /obj/machinery/message_server,
@@ -4230,7 +4278,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -4247,7 +4295,7 @@ lel
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "kA" = (
 /obj/machinery/door/firedoor,
@@ -4307,7 +4355,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -4436,7 +4484,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "kR" = (
 /obj/machinery/newscaster{
@@ -4465,7 +4513,7 @@ lel
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/engineering/engine)
 "kW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4513,7 +4561,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
@@ -4587,7 +4635,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -4704,7 +4752,7 @@ lel
 "lx" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -4804,7 +4852,7 @@ lel
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/command/ai/foyer)
@@ -4889,7 +4937,7 @@ lel
 /area/groundbase/cargo/mining)
 "lT" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "lU" = (
 /obj/structure/cable{
@@ -4901,7 +4949,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "lV" = (
 /obj/effect/floor_decal/milspec/color/orange/half,
@@ -4937,7 +4985,7 @@ lel
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1
 	},
 /area/groundbase/level1/centsquare)
@@ -4963,7 +5011,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/southeastspur)
 "me" = (
 /obj/structure/cable/yellow{
@@ -5016,7 +5064,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/westspur)
 "ml" = (
 /obj/structure/table/reinforced,
@@ -5112,7 +5160,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/ce)
 "my" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/ne)
 "mz" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
@@ -5155,7 +5203,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "mG" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/unexplored/outdoors)
 "mH" = (
 /obj/structure/table/woodentable,
@@ -5183,7 +5231,7 @@ lel
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/medical/lhallway)
@@ -5243,7 +5291,7 @@ lel
 	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -5262,7 +5310,7 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southeastspur)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "mR" = (
@@ -5386,7 +5434,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "nh" = (
 /obj/effect/floor_decal/industrial/danger,
@@ -5401,7 +5449,7 @@ lel
 /obj/effect/step_trigger/teleporter/to_mining{
 	pixel_y = -32
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/netunnel)
@@ -5431,7 +5479,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -5562,7 +5610,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -5605,7 +5653,11 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/equipment)
 "nH" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/ne)
 "nI" = (
 /obj/machinery/computer/HolodeckControl,
@@ -5654,7 +5706,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "nO" = (
 /obj/machinery/suit_cycler,
@@ -5689,7 +5741,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
 "nS" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/stunnel)
@@ -5749,9 +5801,28 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
+<<<<<<< HEAD
+=======
+"oa" = (
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 4;
+	name = "Resleeving";
+	sortType = "Resleeving"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level1/centsquare)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ob" = (
 /obj/effect/landmark/vines,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/eastspur)
 "oc" = (
 /obj/structure/morgue{
@@ -5885,10 +5956,10 @@ lel
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "os" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/security/lobby)
 "ot" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -6012,7 +6083,7 @@ lel
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -6035,7 +6106,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -6054,7 +6125,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/groundbase/security/halle)
@@ -6102,7 +6173,7 @@ lel
 /area/groundbase/engineering/eva)
 "oS" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "oT" = (
 /obj/structure/table/standard,
@@ -6174,7 +6245,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -6183,13 +6254,13 @@ lel
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/netunnel)
 "pc" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/unexplored/outdoors)
 "pe" = (
 /obj/machinery/firealarm{
@@ -6253,7 +6324,7 @@ lel
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "pn" = (
 /obj/structure/cable/yellow{
@@ -6509,7 +6580,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/westspur)
 "pS" = (
 /obj/structure/cable/yellow{
@@ -6529,12 +6600,12 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
 "pU" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/netunnel)
 "pV" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/groundbase/unexplored/rock)
@@ -6740,7 +6811,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "qv" = (
 /obj/structure/table/steel,
@@ -6810,7 +6881,7 @@ lel
 /turf/simulated/wall/r_wall,
 /area/groundbase/command/ai/chamber)
 "qE" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/ne)
 "qF" = (
 /obj/structure/table/reinforced,
@@ -6832,7 +6903,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "qJ" = (
 /obj/machinery/conveyor{
@@ -6877,7 +6948,7 @@ lel
 "qP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "qQ" = (
 /obj/structure/closet/secure_closet/security,
@@ -6962,7 +7033,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/eastspur)
 "rb" = (
 /obj/structure/cable{
@@ -6989,7 +7060,7 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 8
 	},
-/turf/simulated/floor/water/deep/virgo3c,
+/turf/simulated/floor/water/deep,
 /area/groundbase/level1/eastspur)
 "re" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -7112,7 +7183,7 @@ lel
 /obj/effect/step_trigger/teleporter/to_mining{
 	pixel_y = -32
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
@@ -7141,7 +7212,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -7222,19 +7293,19 @@ lel
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/eastspur)
 "rC" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/westspur)
 "rD" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/centsquare)
 "rE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7277,7 +7348,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
 "rJ" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -7337,7 +7408,7 @@ lel
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/level1/westspur)
 "rQ" = (
 /obj/structure/cable{
@@ -7349,7 +7420,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southwestspur)
 "rR" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -7368,7 +7439,7 @@ lel
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/gameroom)
 "rT" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/level1/sw)
@@ -7445,7 +7516,7 @@ lel
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/slab{
 	outdoors = 0
 	},
 /area/groundbase/civilian/bar)
@@ -7516,7 +7587,7 @@ lel
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/engineering/atmos)
 "sm" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/level1/ne)
@@ -7624,7 +7695,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -7657,7 +7728,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/or1)
 "sy" = (
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
 "sz" = (
 /obj/structure/cable{
@@ -7665,7 +7736,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -7704,11 +7775,6 @@ lel
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
-"sF" = (
-/turf/simulated/floor/outdoors/grass/virgo3c{
-	outdoors = 0
-	},
-/area/groundbase/level1/eastspur)
 "sH" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 8
@@ -7754,7 +7820,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/briefing)
 "sM" = (
-/turf/simulated/mineral/floor/virgo3c,
+/turf/simulated/mineral/floor,
 /area/maintenance/groundbase/level1/nwtunnel)
 "sN" = (
 /obj/machinery/door/firedoor,
@@ -7773,7 +7839,7 @@ lel
 /turf/simulated/floor/bmarble,
 /area/groundbase/cargo/mining)
 "sO" = (
-/turf/simulated/floor/outdoors/grass/virgo3c{
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow{
 	outdoors = 0
 	},
 /area/groundbase/level1/westspur)
@@ -7806,13 +7872,13 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "sS" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southwestspur)
 "sT" = (
 /obj/machinery/telecomms/server/presets/science,
@@ -7834,7 +7900,7 @@ lel
 	},
 /area/groundbase/command/tcomms)
 "sV" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/setunnel)
@@ -7892,7 +7958,7 @@ lel
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/eastspur)
 "tf" = (
 /obj/structure/cable/yellow{
@@ -7949,7 +8015,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -7980,7 +8046,14 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+=======
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "to" = (
 /obj/machinery/washing_machine,
@@ -8004,7 +8077,7 @@ lel
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/west{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/westspur)
 "tr" = (
 /obj/structure/table/rack/shelf/steel,
@@ -8079,7 +8152,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -8097,7 +8170,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "tC" = (
 /obj/structure/table/reinforced,
@@ -8114,7 +8187,7 @@ lel
 /obj/effect/landmark{
 	name = "droppod_landing"
 	},
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/unexplored/outdoors)
 "tF" = (
 /obj/structure/cable{
@@ -8131,10 +8204,10 @@ lel
 	name = "Science";
 	sortType = "Science"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/maintenance/groundbase/level1/swtunnel)
 "tG" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/northspur)
 "tH" = (
 /obj/structure/dispenser{
@@ -8150,7 +8223,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/groundbase/level1/westspur)
@@ -8183,7 +8256,7 @@ lel
 /area/groundbase/command/ai/chamber)
 "tN" = (
 /obj/structure/stairs/spawner/north,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "tO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -8204,7 +8277,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "tQ" = (
 /obj/machinery/door/firedoor,
@@ -8226,7 +8299,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
 "tT" = (
-/turf/simulated/floor/outdoors/grass/virgo3c{
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs{
 	outdoors = 0
 	},
 /area/groundbase/unexplored/outdoors)
@@ -8243,7 +8316,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/southwestspur)
 "tW" = (
 /turf/simulated/floor/outdoors/mud,
@@ -8334,6 +8407,15 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
+<<<<<<< HEAD
+=======
+"uh" = (
+/obj/structure/stairs/spawner/south,
+/turf/simulated/floor/outdoors/newdirt_nograss{
+	outdoors = 0
+	},
+/area/maintenance/groundbase/level1/setunnel)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "ui" = (
 /obj/machinery/light/floortube{
 	dir = 8;
@@ -8393,7 +8475,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "un" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/engineering/engine)
 "uo" = (
 /obj/structure/cable/yellow{
@@ -8449,7 +8531,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "uv" = (
 /obj/machinery/camera/network/command{
@@ -8478,7 +8560,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
 "uB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8487,7 +8569,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "uC" = (
 /obj/structure/closet/bombcloset/double,
@@ -8521,7 +8603,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/ce)
 "uH" = (
-/turf/simulated/floor/water/virgo3c,
+/turf/simulated/floor/water,
 /area/groundbase/level1/eastspur)
 "uI" = (
 /obj/machinery/hologram/holopad,
@@ -8585,7 +8667,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -8644,7 +8726,7 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/westspur)
 "uX" = (
 /obj/machinery/light_switch{
@@ -8692,7 +8774,7 @@ lel
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southwestspur)
 "vd" = (
 /turf/simulated/floor/tiled/dark,
@@ -8714,7 +8796,7 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/slab{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
@@ -8738,7 +8820,7 @@ lel
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
 "vj" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/setunnel)
@@ -8784,7 +8866,7 @@ lel
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
 "vp" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/stunnel)
@@ -8826,7 +8908,7 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -9024,10 +9106,10 @@ lel
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/level1/northspur)
 "vM" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southwestspur)
 "vN" = (
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
@@ -9042,7 +9124,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/apparel)
 "vQ" = (
-/turf/simulated/floor/outdoors/grass/virgo3c{
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow{
 	outdoors = 0
 	},
 /area/groundbase/security/lobby)
@@ -9229,7 +9311,7 @@ lel
 "wn" = (
 /obj/structure/bed/chair/sofa/bench,
 /obj/effect/landmark/start/visitor,
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/southeastspur)
 "wp" = (
 /obj/structure/cable/ender{
@@ -9242,7 +9324,7 @@ lel
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "wq" = (
 /obj/machinery/atmospherics/binary/pump/on{
@@ -9288,7 +9370,7 @@ lel
 	name = "Bridge";
 	sortType = "Bridge"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "ww" = (
 /obj/structure/cable{
@@ -9297,7 +9379,7 @@ lel
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -9309,10 +9391,14 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+=======
+/turf/simulated/floor/outdoors/sidewalk/slab,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "wy" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -9496,7 +9582,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "wU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/green{
@@ -9528,7 +9614,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -9539,7 +9625,7 @@ lel
 	name = "Station Intercom (General)";
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -9668,7 +9754,7 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southwestspur)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "xm" = (
@@ -9773,7 +9859,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -9890,7 +9976,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/slab{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -9924,7 +10010,7 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow,
 /area/groundbase/level1/eastspur)
 "xM" = (
 /obj/machinery/firealarm,
@@ -9995,7 +10081,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk{
 	outdoors = 0
 	},
 /area/groundbase/level1/eastspur)
@@ -10020,7 +10106,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -10045,6 +10131,9 @@ lel
 "yb" = (
 /turf/simulated/wall/r_wall,
 /area/groundbase/security/detective)
+"yc" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow,
+/area/groundbase/security/lobby)
 "yd" = (
 /obj/structure/sign/directions/engineering{
 	dir = 4;
@@ -10054,7 +10143,7 @@ lel
 	dir = 1;
 	pixel_y = 32
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "ye" = (
 /obj/structure/closet/secure_closet/personal{
@@ -10410,7 +10499,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "yV" = (
 /obj/machinery/station_map{
@@ -10521,7 +10610,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -10578,7 +10667,7 @@ lel
 /area/groundbase/command/tcomms)
 "zn" = (
 /obj/structure/stairs/spawner/north,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "zo" = (
 /obj/structure/cable/yellow{
@@ -10745,7 +10834,7 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -10845,7 +10934,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -10952,7 +11041,7 @@ lel
 	dir = 4
 	},
 /obj/effect/landmark/vines,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southwestspur)
 "Ac" = (
 /obj/structure/cable{
@@ -10961,7 +11050,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/southeastspur)
 "Ad" = (
 /obj/structure/table/reinforced,
@@ -10986,10 +11075,10 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/westspur)
 "Ah" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/eastspur)
 "Ai" = (
 /obj/machinery/conveyor_switch/oneway{
@@ -11238,14 +11327,14 @@ lel
 /area/prison/cell_block/gb)
 "AL" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "AM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
 "AN" = (
 /turf/simulated/floor/tiled/dark,
@@ -11310,7 +11399,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -11320,7 +11409,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/security/processing)
 "AZ" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/sw)
 "Bb" = (
 /obj/structure/cable/yellow{
@@ -11353,7 +11442,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/groundbase/level1/sw)
@@ -11380,10 +11469,14 @@ lel
 /area/groundbase/command/ai/foyer)
 "Bg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Bh" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/se)
 "Bj" = (
 /obj/machinery/door/airlock{
@@ -11446,7 +11539,7 @@ lel
 /obj/effect/step_trigger/teleporter/to_mining{
 	pixel_y = -32
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
@@ -11466,7 +11559,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/groundbase/medical/lhallway)
@@ -11486,7 +11579,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -11497,7 +11590,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Bw" = (
 /obj/item/weapon/stool/padded{
@@ -11669,6 +11762,25 @@ lel
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
+<<<<<<< HEAD
+=======
+"BP" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level1/centsquare)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "BQ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -11733,7 +11845,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -11755,7 +11867,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
 "Cb" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/maintenance/groundbase/level1/stunnel)
 "Cc" = (
 /obj/machinery/door/firedoor,
@@ -11797,7 +11909,7 @@ lel
 /area/groundbase/security/lobby)
 "Ch" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -11810,7 +11922,7 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -11933,7 +12045,7 @@ lel
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -11994,7 +12106,7 @@ lel
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/east{
 	dir = 8
 	},
-/turf/simulated/floor/water/virgo3c,
+/turf/simulated/floor/water,
 /area/groundbase/level1/eastspur)
 "CG" = (
 /obj/structure/table/reinforced,
@@ -12018,7 +12130,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "CI" = (
 /turf/simulated/wall,
@@ -12027,7 +12139,7 @@ lel
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "CK" = (
 /obj/machinery/vending/assist,
@@ -12050,7 +12162,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -12160,7 +12272,7 @@ lel
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
 "Db" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/southeastspur)
 "Dc" = (
 /turf/simulated/wall/r_wall,
@@ -12182,7 +12294,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -12191,7 +12303,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Dh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -12308,7 +12420,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -12354,7 +12466,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "DB" = (
 /obj/machinery/door/airlock{
@@ -12448,7 +12560,7 @@ lel
 /area/groundbase/cargo/mining)
 "DM" = (
 /obj/machinery/light/bigfloorlamp,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/westspur)
 "DN" = (
 /obj/machinery/light/small{
@@ -12509,6 +12621,32 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
+<<<<<<< HEAD
+=======
+"DU" = (
+/obj/structure/sign/directions/stairs_up{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = 8
+	},
+/obj/structure/sign/directions/bar{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = -4
+	},
+/obj/structure/sign/directions/chapel{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = -10
+	},
+/obj/structure/sign/directions/evac{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = 2
+	},
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/groundbase/level1/northspur)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "DV" = (
 /obj/machinery/vending/medical,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -12568,7 +12706,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/security/processing)
 "Eb" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "Ec" = (
 /obj/machinery/door/window/westleft{
@@ -12592,7 +12730,7 @@ lel
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/unexplored/rock)
@@ -12600,7 +12738,7 @@ lel
 /turf/simulated/wall/r_wall,
 /area/groundbase/command/ai/foyer)
 "Eg" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/maintenance/groundbase/level1/swtunnel)
 "Eh" = (
 /obj/structure/cable/heavyduty{
@@ -12609,7 +12747,7 @@ lel
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "Ei" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -12627,7 +12765,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/sw)
 "Ek" = (
 /obj/item/weapon/storage/briefcase/inflatable{
@@ -12650,7 +12788,7 @@ lel
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -12776,10 +12914,10 @@ lel
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 8
 	},
-/turf/simulated/floor/water/virgo3c,
+/turf/simulated/floor/water,
 /area/groundbase/level1/eastspur)
 "ED" = (
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "EE" = (
 /obj/machinery/alarm,
@@ -12798,7 +12936,7 @@ lel
 /obj/structure/bed/chair/sofa/bench{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/eastspur)
 "EI" = (
 /obj/structure/cable/yellow{
@@ -12812,7 +12950,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/security/lobby)
 "EK" = (
 /obj/structure/cable/yellow{
@@ -12822,7 +12960,7 @@ lel
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -12840,7 +12978,7 @@ lel
 /area/groundbase/civilian/cafe)
 "EO" = (
 /obj/machinery/light/bigfloorlamp,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "EP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12992,7 +13130,7 @@ lel
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "Fg" = (
 /obj/random/vendorall,
@@ -13012,13 +13150,13 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "Fi" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -13062,7 +13200,7 @@ lel
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -13191,10 +13329,10 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/detective)
 "FE" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/centsquare)
 "FF" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
@@ -13243,7 +13381,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
 "FL" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/nw)
 "FN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13281,7 +13423,7 @@ lel
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/civilian/foodplace)
 "FR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13368,11 +13510,11 @@ lel
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Gf" = (
 /obj/random/coin/sometimes,
-/turf/simulated/floor/water/deep/virgo3c,
+/turf/simulated/floor/water/deep,
 /area/groundbase/level1/eastspur)
 "Gg" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
@@ -13404,7 +13546,7 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "Gk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
@@ -13528,7 +13670,7 @@ lel
 	dir = 8
 	},
 /obj/effect/landmark/start/intern,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Gw" = (
 /obj/structure/table/reinforced,
@@ -13543,7 +13685,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Gy" = (
 /obj/structure/cable{
@@ -13634,7 +13776,7 @@ lel
 /turf/simulated/wall,
 /area/maintenance/groundbase/substation/aiciv)
 "GK" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/northspur)
 "GL" = (
 /obj/machinery/power/sensor{
@@ -13659,7 +13801,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "GN" = (
 /obj/machinery/mech_recharger,
@@ -13684,7 +13826,7 @@ lel
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "GR" = (
 /obj/structure/table/marble,
@@ -13881,7 +14023,7 @@ lel
 "Hn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -13926,7 +14068,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -13961,7 +14103,7 @@ lel
 /area/groundbase/engineering/lobby)
 "Hx" = (
 /obj/structure/bed/chair/sofa/bench/left,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Hy" = (
 /obj/structure/cable{
@@ -13976,7 +14118,11 @@ lel
 /turf/simulated/floor/carpet/gaycarpet,
 /area/groundbase/civilian/clown)
 "Hz" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/southeastspur)
 "HA" = (
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -14059,7 +14205,7 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/eastspur)
 "HH" = (
 /obj/machinery/door/firedoor,
@@ -14118,7 +14264,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "HN" = (
 /obj/machinery/disposal/wall/cleaner{
@@ -14148,13 +14294,13 @@ lel
 	dir = 1;
 	pixel_y = -26
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "HQ" = (
 /obj/effect/mouse_hole_spawner{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "HR" = (
 /obj/structure/cable/yellow{
@@ -14272,7 +14418,7 @@ lel
 /obj/item/stack/cable_coil/random,
 /obj/item/stack/cable_coil/random,
 /obj/item/stack/cable_coil/random,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -14315,7 +14461,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/office)
 "Il" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c/notrees{
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow{
 	outdoors = 0
 	},
 /area/groundbase/level1/eastspur)
@@ -14331,7 +14477,7 @@ lel
 /area/groundbase/engineering/atmos)
 "Io" = (
 /obj/structure/bed/chair/sofa/bench/right,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Ip" = (
 /obj/machinery/computer/atmos_alert,
@@ -14415,7 +14561,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "Iz" = (
 /obj/structure/table/reinforced,
@@ -14438,7 +14584,7 @@ lel
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/eastspur)
 "IB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14522,7 +14668,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "IL" = (
 /obj/machinery/light,
@@ -14563,10 +14709,10 @@ lel
 /area/maintenance/groundbase/substation/aiciv)
 "IS" = (
 /obj/structure/stairs/spawner/east,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "IT" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/westspur)
 "IU" = (
 /obj/structure/cable{
@@ -14576,7 +14722,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/storage)
 "IV" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/sw)
 "IW" = (
 /obj/structure/table/standard,
@@ -14596,7 +14746,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
 "IZ" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/command/ai/foyer)
@@ -14641,7 +14791,7 @@ lel
 /area/groundbase/engineering/eva)
 "Jf" = (
 /obj/structure/bed/chair/sofa/bench/right,
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/southeastspur)
 "Jg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -14660,7 +14810,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -14788,7 +14938,7 @@ lel
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/civilian/clown)
@@ -14818,6 +14968,17 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/security/processing)
+<<<<<<< HEAD
+=======
+"JB" = (
+/obj/structure/stairs/spawner/west,
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level1/eastspur)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "JC" = (
 /turf/simulated/floor/tiled,
 /area/groundbase/command/tcomms/foyer)
@@ -14858,7 +15019,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -14941,7 +15102,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -14959,7 +15120,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/southwestspur)
 "JT" = (
 /obj/machinery/camera/network/command,
@@ -14996,7 +15157,7 @@ lel
 	dir = 1;
 	pixel_y = 43
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/westspur)
 "JX" = (
 /obj/structure/cable/yellow{
@@ -15024,7 +15185,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "JZ" = (
 /obj/machinery/camera/network/medbay{
@@ -15049,7 +15210,7 @@ lel
 	dir = 10;
 	pixel_y = 24
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "Kb" = (
 /obj/structure/table/reinforced,
@@ -15087,7 +15248,20 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Ke" = (
 /obj/structure/table/reinforced,
@@ -15173,7 +15347,7 @@ lel
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -15246,7 +15420,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "Kv" = (
 /obj/machinery/hologram/holopad,
@@ -15358,7 +15532,7 @@ lel
 	icon_state = "1-4"
 	},
 /obj/structure/railing,
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "KO" = (
 /obj/structure/cable{
@@ -15368,7 +15542,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/eastspur)
 "KP" = (
 /obj/structure/table/steel_reinforced,
@@ -15399,13 +15573,13 @@ lel
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/eastspur)
 "KU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "KV" = (
 /obj/machinery/telecomms/server/presets/service/groundbase,
@@ -15455,7 +15629,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "La" = (
 /obj/structure/cable/yellow{
@@ -15473,7 +15647,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
 "Lb" = (
-/turf/simulated/floor/water/virgo3c{
+/turf/simulated/floor/water{
 	outdoors = 0
 	},
 /area/groundbase/level1/eastspur)
@@ -15555,7 +15729,7 @@ lel
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
 "Lk" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Ll" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15631,7 +15805,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
 "Lt" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/se)
 "Lu" = (
 /obj/structure/cable/yellow{
@@ -15698,7 +15872,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "LB" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -15759,7 +15933,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/lobby)
 "LH" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/groundbase/level1/sw)
@@ -15785,7 +15959,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
 "LK" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c/notrees,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow,
 /area/groundbase/level1/eastspur)
 "LL" = (
 /obj/machinery/door/firedoor,
@@ -15800,7 +15974,7 @@ lel
 /area/maintenance/groundbase/substation/medcargo)
 "LM" = (
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/north,
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/nw)
 "LN" = (
 /obj/machinery/firealarm{
@@ -15826,7 +16000,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -15902,7 +16076,7 @@ lel
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "Mb" = (
 /obj/structure/cable{
@@ -15912,7 +16086,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "Mc" = (
 /obj/structure/cable{
@@ -15921,7 +16095,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "Md" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -15991,7 +16165,7 @@ lel
 /area/groundbase/civilian/arrivals)
 "Mj" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "Mk" = (
 /obj/structure/table/bench/standard,
@@ -16096,7 +16270,7 @@ lel
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "Mx" = (
 /obj/machinery/power/apc/hyper{
@@ -16119,7 +16293,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -16204,7 +16378,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/or1)
 "MK" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/eastspur)
 "ML" = (
 /obj/structure/closet/walllocker_double/west{
@@ -16249,7 +16423,7 @@ lel
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
 "MO" = (
-/turf/simulated/mineral/cave/virgo3c,
+/turf/simulated/mineral/cave,
 /area/groundbase/level1/nw)
 "MP" = (
 /turf/simulated/floor/tiled/white,
@@ -16481,11 +16655,11 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/westspur)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 "Nv" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/centsquare)
 "Nw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16519,7 +16693,7 @@ lel
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -16535,7 +16709,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -16614,7 +16788,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -16629,11 +16803,11 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "NM" = (
 /obj/effect/mouse_hole_spawner,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/westspur)
 "NN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16755,7 +16929,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -16765,7 +16939,7 @@ lel
 	dir = 4
 	},
 /obj/effect/landmark/start/intern,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Oe" = (
 /obj/effect/landmark/start/hos,
@@ -16824,7 +16998,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -16913,7 +17087,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 "Os" = (
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/eastspur)
 "Ot" = (
 /obj/machinery/hologram/holopad,
@@ -16927,7 +17101,7 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southeastspur)
 "Ow" = (
 /obj/structure/railing/grey{
@@ -16961,7 +17135,7 @@ lel
 "Oz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "OA" = (
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
@@ -16988,7 +17162,7 @@ lel
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/cargo/mining)
 "OG" = (
 /obj/machinery/alarm,
@@ -17001,6 +17175,9 @@ lel
 /obj/machinery/firealarm,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/engine)
+"OJ" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow,
+/area/groundbase/level1/northspur)
 "OK" = (
 /obj/machinery/light{
 	dir = 1
@@ -17008,6 +17185,7 @@ lel
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
 "OL" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
@@ -17016,6 +17194,10 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_nosnow,
+/area/groundbase/level1/westspur)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "OM" = (
 /obj/machinery/transhuman/resleever,
 /obj/machinery/light{
@@ -17055,7 +17237,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/eastspur)
 "OT" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -17146,7 +17328,7 @@ lel
 /area/groundbase/security/halle)
 "Pg" = (
 /obj/effect/landmark/vines,
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/centsquare)
 "Ph" = (
 /obj/structure/cable{
@@ -17167,7 +17349,7 @@ lel
 /turf/simulated/wall/r_wall,
 /area/groundbase/engineering/storage)
 "Pi" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -17189,7 +17371,7 @@ lel
 /area/groundbase/command/ai/robot)
 "Pn" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/eastspur)
 "Po" = (
 /obj/structure/cable/yellow{
@@ -17198,14 +17380,14 @@ lel
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/gameroom)
 "Pp" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/southeastspur)
 "Pr" = (
 /obj/structure/bed/chair/sofa/bench{
 	dir = 1
 	},
 /obj/effect/landmark/start/visitor,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "Ps" = (
 /obj/machinery/power/sensor{
@@ -17273,7 +17455,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -17312,7 +17494,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "PH" = (
 /obj/machinery/light,
@@ -17437,7 +17619,7 @@ lel
 /area/groundbase/engineering/ce)
 "PW" = (
 /obj/machinery/recharge_station,
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -17461,7 +17643,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -17500,7 +17682,7 @@ lel
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/civilian/foodplace)
 "Qf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
@@ -17589,7 +17771,12 @@ lel
 	oxygen = 0;
 	temperature = 80
 	},
+<<<<<<< HEAD
 /area/groundbase/command/tcomms)
+=======
+/turf/simulated/floor/outdoors/sidewalk/side,
+/area/groundbase/level1/centsquare)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Qu" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/suit/storage/vest/heavy/officer{
@@ -17614,7 +17801,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/dark/virgo3c{
+/turf/simulated/floor/tiled/dark{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -17642,7 +17829,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "Qz" = (
 /obj/machinery/gateway{
@@ -17673,13 +17860,13 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "QC" = (
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/equipment)
 "QD" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/westspur)
 "QE" = (
 /obj/machinery/door/firedoor,
@@ -17788,7 +17975,7 @@ lel
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
 "QR" = (
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/maintenance/groundbase/level1/nwtunnel)
 "QS" = (
 /obj/item/weapon/stool/baystool/padded{
@@ -17846,7 +18033,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -17861,7 +18048,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "Rc" = (
 /obj/structure/cable{
@@ -17873,7 +18060,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/southwestspur)
 "Rd" = (
 /obj/effect/landmark{
@@ -17906,7 +18093,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -17939,7 +18126,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/eva)
 "Rl" = (
-/turf/unsimulated/wall/planetary/virgo3c,
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
+	},
 /area/groundbase/level1/westspur)
 "Rm" = (
 /obj/structure/cable{
@@ -17958,13 +18149,13 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/storage)
 "Rn" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/maintenance/groundbase/level1/nwtunnel)
 "Ro" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18050,7 +18241,17 @@ lel
 	name = "Engineering";
 	sortType = "Engineering"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "Ry" = (
 /obj/structure/table/reinforced,
@@ -18077,11 +18278,16 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/level1/centsquare)
+=======
+/turf/simulated/floor/water/deep,
+/area/groundbase/level1/eastspur)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "RC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light{
@@ -18097,7 +18303,7 @@ lel
 	dir = 4;
 	trader_type = /obj/trader/general
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/eastspur)
 "RE" = (
 /obj/machinery/vending/security,
@@ -18115,7 +18321,7 @@ lel
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "RG" = (
 /obj/machinery/computer/operating,
@@ -18143,6 +18349,15 @@ lel
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
+<<<<<<< HEAD
+=======
+"RJ" = (
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/outdoors/newdirt_nograss{
+	outdoors = 0
+	},
+/area/maintenance/groundbase/level1/nwtunnel)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "RK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -18151,7 +18366,14 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+=======
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab,
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 /area/groundbase/level1/centsquare)
 "RL" = (
 /obj/structure/filingcabinet/chestdrawer,
@@ -18193,7 +18415,7 @@ lel
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "RR" = (
 /obj/structure/cable{
@@ -18208,7 +18430,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "RS" = (
 /obj/machinery/light{
@@ -18227,7 +18449,7 @@ lel
 	dir = 9
 	},
 /obj/effect/landmark/vines,
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "RU" = (
 /obj/machinery/door/firedoor,
@@ -18289,7 +18511,7 @@ lel
 /obj/machinery/camera/network/command{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/command/ai/foyer)
@@ -18348,7 +18570,7 @@ lel
 "Sj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Sl" = (
 /obj/structure/cable/yellow{
@@ -18429,7 +18651,7 @@ lel
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18491,7 +18713,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18519,7 +18741,7 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18556,7 +18778,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18590,13 +18812,13 @@ lel
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/westspur)
 "SK" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/security/halls)
@@ -18608,7 +18830,7 @@ lel
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/virgo3c,
+/turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "SN" = (
 /obj/machinery/door/firedoor,
@@ -18680,7 +18902,7 @@ lel
 /area/groundbase/civilian/arrivals)
 "SV" = (
 /obj/effect/map_effect/portal/line/side_a,
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/nw)
 "SW" = (
 /obj/structure/cable/yellow{
@@ -18720,7 +18942,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18735,7 +18957,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -18887,7 +19109,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk/side{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
@@ -19037,7 +19259,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "TL" = (
 /obj/structure/table/rack/steel,
@@ -19053,7 +19275,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "TN" = (
 /obj/machinery/computer/rcon{
@@ -19138,7 +19360,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/southeastspur)
 "TX" = (
 /obj/machinery/atmospherics/pipe/tank/nitrous_oxide{
@@ -19236,7 +19458,7 @@ lel
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Uk" = (
 /obj/machinery/light{
@@ -19247,7 +19469,7 @@ lel
 "Ul" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "Um" = (
 /obj/structure/cable/yellow{
@@ -19361,7 +19583,7 @@ lel
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "UD" = (
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -19370,7 +19592,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/engine)
 "UE" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/netunnel)
@@ -19407,7 +19629,7 @@ lel
 /turf/simulated/floor,
 /area/maintenance/groundbase/substation/aiciv)
 "UK" = (
-/turf/simulated/mineral/floor/virgo3c,
+/turf/simulated/mineral/floor,
 /area/maintenance/groundbase/level1/swtunnel)
 "UL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19479,7 +19701,7 @@ lel
 "US" = (
 /obj/structure/bed/chair/sofa/bench,
 /obj/effect/landmark/start/visitor,
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c,
+/turf/simulated/floor/outdoors/newdirt_nograss,
 /area/groundbase/level1/centsquare)
 "UU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19492,7 +19714,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
 "UX" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/northspur)
 "UY" = (
 /obj/structure/disposalpipe/segment,
@@ -19569,7 +19791,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "Vi" = (
 /obj/machinery/door/firedoor,
@@ -19606,12 +19828,12 @@ lel
 /obj/effect/mouse_hole_spawner{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 "Vq" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/southwestspur)
 "Vr" = (
 /obj/structure/cable/yellow{
@@ -19629,7 +19851,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/storage)
 "Vs" = (
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 "Vt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
@@ -19732,7 +19954,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -19786,7 +20008,7 @@ lel
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -19804,7 +20026,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/southwestspur)
 "VN" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -19829,7 +20051,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/northspur)
 "VS" = (
 /obj/structure/cable{
@@ -19838,14 +20060,14 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/swtunnel)
 "VT" = (
 /obj/structure/bed/chair/sofa/bench/left,
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/southeastspur)
 "VU" = (
 /obj/item/weapon/storage/box/bodybags,
@@ -19872,7 +20094,7 @@ lel
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
 "VX" = (
 /obj/structure/table/standard,
@@ -19993,7 +20215,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/southwestspur)
 "Wo" = (
 /obj/machinery/light/floortube{
@@ -20025,7 +20247,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c{
+/turf/simulated/floor/outdoors/sidewalk{
 	outdoors = 0
 	},
 /area/groundbase/security/halls)
@@ -20095,7 +20317,7 @@ lel
 	},
 /area/groundbase/command/tcomms)
 "WB" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c{
+/turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
@@ -20155,7 +20377,7 @@ lel
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "WI" = (
 /obj/machinery/camera/network/civilian,
@@ -20199,7 +20421,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
 "WL" = (
-/turf/simulated/floor/outdoors/grass/virgo3c{
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs{
 	outdoors = 0
 	},
 /area/groundbase/level1/northspur)
@@ -20271,7 +20493,7 @@ lel
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -20287,7 +20509,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 "WX" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/maintenance/groundbase/level1/setunnel)
 "WY" = (
 /obj/structure/table/rack{
@@ -20671,7 +20893,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -20698,7 +20920,7 @@ lel
 /turf/simulated/wall/r_wall,
 /area/groundbase/security/armory)
 "XX" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/eastspur)
 "XY" = (
 /turf/simulated/wall/r_wall,
@@ -20767,7 +20989,7 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/westspur)
 "Yh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -20779,7 +21001,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
 "Yj" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/sw)
 "Yk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -20794,7 +21016,7 @@ lel
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "Yo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -20845,7 +21067,7 @@ lel
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "Yu" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -20875,7 +21097,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -20904,10 +21126,10 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/southwestspur)
 "YC" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/centsquare)
 "YD" = (
 /obj/machinery/camera/network/command,
@@ -20961,6 +21183,16 @@ lel
 /obj/structure/cable/yellow,
 /turf/simulated/floor/reinforced,
 /area/groundbase/engineering/engine)
+<<<<<<< HEAD
+=======
+"YI" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level1/eastspur)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "YJ" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -20987,7 +21219,7 @@ lel
 /turf/simulated/wall/r_wall,
 /area/groundbase/engineering/techstorage)
 "YM" = (
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
+/turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/westspur)
 "YN" = (
 /obj/structure/closet/secure_closet/detective,
@@ -21064,7 +21296,7 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "YX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -21123,7 +21355,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/virgo3c{
+/turf/simulated/floor{
 	edge_blending_priority = -1;
 	outdoors = 0
 	},
@@ -21173,7 +21405,7 @@ lel
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "Zg" = (
 /obj/structure/cable{
@@ -21185,13 +21417,13 @@ lel
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/centsquare)
 "Zi" = (
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/south{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southwestspur)
 "Zj" = (
 /obj/machinery/blackbox_recorder,
@@ -21205,7 +21437,7 @@ lel
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/centsquare)
 "Zn" = (
 /obj/structure/table/rack,
@@ -21238,7 +21470,7 @@ lel
 "Zs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/sidewalk/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/civilian/foodplace)
 "Zt" = (
 /obj/machinery/light,
@@ -21290,7 +21522,7 @@ lel
 	dir = 1;
 	pixel_y = 26
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/northspur)
 "ZB" = (
 /turf/simulated/floor/reinforced,
@@ -21338,7 +21570,7 @@ lel
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "ZI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -21367,7 +21599,7 @@ lel
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/ai/robot)
 "ZK" = (
-/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+/turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/groundbase/civilian/clown)
@@ -21410,7 +21642,7 @@ lel
 	},
 /area/holodeck/alphadeck)
 "ZR" = (
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
+/turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "ZS" = (
 /obj/structure/sign/painting/public{
@@ -21422,7 +21654,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/foodplace)
 "ZT" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/civilian/foodplace)
 "ZU" = (
 /obj/machinery/power/terminal{
@@ -22289,7 +22521,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -22417,22 +22649,22 @@ ce
 ce
 ce
 ce
-iW
+Bk
 ce
 ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
-iW
-iW
+Bk
+Bk
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -22557,30 +22789,30 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-ce
-ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
 Bk
 Bk
-iW
-iW
+Bk
+ce
+ce
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -22641,11 +22873,11 @@ nC
 nC
 NC
 ce
-iW
+Bk
 ce
 ce
 ce
-iW
+Bk
 FF
 FF
 MO
@@ -22687,46 +22919,46 @@ pV
 ce
 ce
 ce
-iW
+Bk
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -22787,7 +23019,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 FF
 FF
 FF
@@ -22828,14 +23060,14 @@ ca
 ca
 ca
 ce
-iW
-iW
+Bk
+Bk
 ce
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -22863,12 +23095,12 @@ sz
 sz
 ei
 ce
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -22924,7 +23156,7 @@ MO
 MO
 MO
 Fi
-iW
+Bk
 ce
 ce
 ce
@@ -22978,37 +23210,37 @@ sz
 sz
 sz
 ei
-iW
+Bk
 ce
 ce
-iW
+Bk
 PC
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
-iW
+Bk
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 PC
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23125,7 +23357,7 @@ sz
 sz
 sz
 hZ
-iW
+Bk
 ce
 ce
 ce
@@ -23147,10 +23379,10 @@ ce
 ce
 wX
 ei
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23265,9 +23497,9 @@ dM
 dM
 dM
 dM
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23289,9 +23521,9 @@ ce
 ce
 ce
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23407,9 +23639,9 @@ AZ
 dM
 dM
 dM
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23431,9 +23663,9 @@ ce
 ce
 dM
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23549,9 +23781,9 @@ AZ
 dM
 dM
 dM
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23573,8 +23805,8 @@ Qq
 Qq
 dM
 PC
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -23691,7 +23923,7 @@ AZ
 dM
 dM
 dM
-iW
+Bk
 ce
 ce
 ce
@@ -23715,8 +23947,8 @@ UK
 Bq
 dM
 PC
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -23833,7 +24065,7 @@ AZ
 dM
 dM
 dM
-iW
+Bk
 ce
 ce
 ce
@@ -23857,9 +24089,9 @@ UK
 Bq
 dM
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -23942,7 +24174,7 @@ ce
 ce
 ce
 Bk
-iW
+Bk
 ce
 WB
 WB
@@ -23999,11 +24231,11 @@ Qq
 Qq
 dM
 PC
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 Bk
@@ -24083,7 +24315,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 kF
 JQ
 JQ
@@ -24142,11 +24374,11 @@ dM
 dM
 wX
 ei
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
 Bk
 Bk
 Bk
@@ -24276,7 +24508,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 dM
 dM
 dM
@@ -24285,12 +24517,12 @@ kl
 dM
 wX
 ei
-iW
-iW
 Bk
 Bk
 Bk
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -24428,12 +24660,12 @@ dM
 dM
 wX
 ei
-iW
 Bk
 Bk
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -24509,7 +24741,7 @@ ce
 ce
 ce
 Bu
-iW
+Bk
 ce
 ce
 ce
@@ -24576,7 +24808,7 @@ sz
 sz
 sz
 ei
-iW
+Bk
 ce
 ce
 ce
@@ -24649,9 +24881,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Bu
-iW
+Bk
 ce
 ce
 ce
@@ -24708,17 +24940,17 @@ AZ
 AZ
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 PC
-iW
+Bk
 ce
 ce
 ce
@@ -24791,7 +25023,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Bu
 ce
 ce
@@ -24855,12 +25087,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 PC
-iW
+Bk
 ce
 ce
 ce
@@ -24933,10 +25165,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Bu
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -24997,12 +25229,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 PC
-iW
+Bk
 ce
 ce
 ce
@@ -25075,9 +25307,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Bu
-iW
+Bk
 ce
 ce
 ce
@@ -25141,10 +25373,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 PC
-iW
+Bk
 ce
 ce
 ce
@@ -25216,11 +25448,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Bu
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -25282,14 +25514,14 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 PC
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -25358,11 +25590,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Bu
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -25426,10 +25658,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 PC
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -25500,10 +25732,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Bu
-iW
+Bk
 ce
 ce
 ce
@@ -25568,11 +25800,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -25642,10 +25874,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Bu
-iW
+Bk
 ce
 ce
 ce
@@ -25710,11 +25942,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -25783,12 +26015,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 Bu
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -25852,11 +26084,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -25925,12 +26157,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 Bu
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -25996,9 +26228,9 @@ ce
 ce
 ce
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26067,14 +26299,14 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 Bu
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26136,11 +26368,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26186,8 +26418,8 @@ MO
 MO
 FF
 Fi
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -26207,23 +26439,23 @@ Ed
 pj
 ce
 ce
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
 Bu
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
 ce
-iW
+Bk
 ce
 AZ
 AZ
@@ -26276,13 +26508,13 @@ Hp
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 PC
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26314,13 +26546,13 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
-iW
+Bk
 Jh
 MO
 MO
@@ -26328,8 +26560,8 @@ MO
 MO
 FF
 Fi
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -26365,8 +26597,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 AZ
 AZ
 AZ
@@ -26422,8 +26654,8 @@ VS
 VS
 VS
 zE
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -26456,7 +26688,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
 ce
 ce
@@ -26470,7 +26702,7 @@ MO
 FF
 FF
 Fi
-iW
+Bk
 ce
 ce
 ce
@@ -26494,7 +26726,7 @@ MO
 MO
 FF
 FF
-hm
+FF
 FF
 Ht
 jU
@@ -26508,8 +26740,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 AZ
 AZ
 AZ
@@ -26561,12 +26793,12 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 su
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26596,7 +26828,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 xs
 jU
 Ob
@@ -26612,7 +26844,7 @@ nC
 nC
 nC
 Oh
-iW
+Bk
 ce
 ce
 ce
@@ -26636,7 +26868,7 @@ MO
 MO
 Wx
 Wx
-hm
+FF
 FF
 FF
 FF
@@ -26650,12 +26882,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26703,10 +26935,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 su
-iW
+Bk
 ce
 ce
 ce
@@ -26738,21 +26970,21 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Jh
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26793,12 +27025,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26846,9 +27078,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 su
-iW
+Bk
 ce
 ce
 ce
@@ -26889,11 +27121,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 ce
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -26928,17 +27160,17 @@ Jh
 FF
 co
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -26988,9 +27220,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 su
-iW
+Bk
 ce
 ce
 ce
@@ -27022,8 +27254,8 @@ ce
 ce
 ce
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27074,14 +27306,14 @@ PY
 PY
 PY
 dE
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -27132,8 +27364,8 @@ ce
 ce
 ce
 su
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27162,10 +27394,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27174,7 +27406,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
 ce
 ce
@@ -27216,9 +27448,9 @@ FF
 FF
 FF
 co
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -27234,13 +27466,13 @@ AZ
 AZ
 AZ
 AZ
-cB
-cB
-cB
-cB
+OL
+OL
+OL
+OL
 Yf
-cB
-ij
+OL
+yc
 fm
 fm
 wl
@@ -27272,9 +27504,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 su
-iW
+Bk
 ce
 ce
 ce
@@ -27304,10 +27536,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27315,8 +27547,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Jh
 ce
 ce
@@ -27358,8 +27590,8 @@ AZ
 AZ
 AZ
 co
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27414,10 +27646,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 su
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27448,7 +27680,7 @@ ce
 ce
 ce
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -27457,10 +27689,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -27500,9 +27732,9 @@ AZ
 AZ
 AZ
 co
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -27519,12 +27751,12 @@ AZ
 AZ
 AZ
 AZ
-cB
-cB
-cB
+OL
+OL
+OL
 Yf
-cB
-ij
+OL
+yc
 fm
 fm
 wl
@@ -27558,8 +27790,8 @@ AZ
 AZ
 dM
 su
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -27590,7 +27822,7 @@ ce
 ce
 ce
 Jh
-iW
+Bk
 Bk
 Bk
 Bk
@@ -27599,10 +27831,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -27642,9 +27874,9 @@ AZ
 AZ
 AZ
 co
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -27700,7 +27932,7 @@ AZ
 AZ
 dM
 su
-iW
+Bk
 ce
 ce
 ce
@@ -27730,9 +27962,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 Bk
@@ -27741,10 +27973,10 @@ Bk
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -27784,9 +28016,9 @@ AZ
 AZ
 AZ
 co
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -27872,9 +28104,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -27926,8 +28158,8 @@ AZ
 AZ
 AZ
 co
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -28014,10 +28246,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 Bk
@@ -28026,9 +28258,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -28036,7 +28268,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 vN
 FF
 FF
@@ -28068,7 +28300,7 @@ AZ
 AZ
 FF
 co
-iW
+Bk
 ce
 ce
 ce
@@ -28156,9 +28388,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -28168,17 +28400,17 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
-iW
+Bk
+Bk
 ce
-iW
-ce
-ce
+Bk
 ce
 ce
-iW
+ce
+ce
+Bk
 vN
 FF
 MO
@@ -28300,7 +28532,7 @@ ce
 ce
 ce
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -28310,7 +28542,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Ht
 jU
 jU
@@ -28440,9 +28672,9 @@ Bk
 Bk
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -28454,12 +28686,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -28582,9 +28814,9 @@ Bk
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -28595,16 +28827,16 @@ ce
 ce
 ce
 ce
-iW
 Bk
-iW
+Bk
+Bk
 ce
-iW
+Bk
 Jh
-iW
-iW
+Bk
+Bk
 ce
-iW
+Bk
 vN
 FF
 FF
@@ -28726,27 +28958,27 @@ ce
 ce
 ce
 Jh
-iW
-ce
-ce
-ce
-ce
 Bk
 ce
 ce
 ce
 ce
 Bk
+ce
+ce
+ce
+ce
+Bk
 Bk
 ce
-iW
+Bk
 ce
-iW
+Bk
 Jh
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 vN
 FF
 FF
@@ -28868,8 +29100,8 @@ ce
 ce
 ce
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -28881,8 +29113,8 @@ Bk
 Bk
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 Ht
 jU
@@ -29008,9 +29240,9 @@ Bk
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
+Bk
 ce
 ce
 ce
@@ -29023,7 +29255,7 @@ Bk
 Bk
 ce
 ce
-iW
+Bk
 ce
 ce
 FF
@@ -29150,10 +29382,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Jh
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -30023,8 +30255,8 @@ MO
 MO
 tG
 tG
-tG
-WL
+OJ
+dL
 ZR
 Rn
 MO
@@ -30165,8 +30397,8 @@ tG
 tG
 tG
 tG
-tG
-WL
+OJ
+dL
 ZR
 tG
 tG
@@ -30307,8 +30539,8 @@ tG
 UX
 UX
 UX
-tG
-WL
+OJ
+dL
 ZR
 tG
 tG
@@ -30449,8 +30681,8 @@ UX
 UX
 tG
 tG
-UX
-WL
+OJ
+dL
 ZR
 tG
 tG
@@ -30591,8 +30823,8 @@ tG
 tG
 tG
 UX
-UX
-WL
+OJ
+dL
 ZR
 tG
 tG
@@ -30733,8 +30965,8 @@ tG
 tG
 tG
 tG
-tG
-WL
+OJ
+dL
 ZR
 tG
 tG
@@ -31017,9 +31249,9 @@ tG
 tG
 tG
 tG
-tG
-WL
-tG
+OJ
+dL
+OJ
 tG
 tG
 tG
@@ -31159,9 +31391,9 @@ UX
 UX
 UX
 UX
-UX
+OJ
 dL
-UX
+OJ
 UX
 UX
 UX
@@ -31244,12 +31476,12 @@ AZ
 ce
 ce
 ce
-iW
+Bk
 NK
 ww
 ww
 li
-iW
+Bk
 ce
 ce
 ce
@@ -31301,9 +31533,9 @@ UX
 UX
 UX
 UX
-UX
-WL
-UX
+OJ
+dL
+OJ
 UX
 tG
 tG
@@ -31388,8 +31620,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 SH
 ce
 ce
@@ -31443,9 +31675,9 @@ tG
 tG
 tG
 UX
-tG
-WL
-tG
+OJ
+dL
+OJ
 tG
 tG
 tG
@@ -31529,13 +31761,13 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 SH
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -31585,9 +31817,9 @@ tG
 tG
 tG
 tG
-tG
-WL
-tG
+OJ
+dL
+OJ
 qE
 qE
 qE
@@ -31672,11 +31904,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 SH
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -31727,8 +31959,8 @@ qE
 qE
 qE
 qE
-tG
-WL
+OJ
+dL
 qE
 qE
 qE
@@ -31814,12 +32046,12 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 SH
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -31957,11 +32189,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 SH
-iW
+Bk
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -32099,11 +32331,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 SH
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -32243,7 +32475,7 @@ ce
 ce
 ce
 SH
-iW
+Bk
 ce
 ce
 ce
@@ -32381,11 +32613,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 SH
-iW
+Bk
 ce
 ce
 ce
@@ -32523,12 +32755,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 SH
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -32665,7 +32897,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Yw
 ww
 JG
@@ -32807,11 +33039,11 @@ ce
 ce
 ce
 ce
-iW
+Bk
 SH
-iW
-iW
-iW
+Bk
+Bk
+Bk
 Bk
 Bk
 Bk
@@ -32949,10 +33181,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 SH
-iW
-iW
+Bk
+Bk
 ce
 Bk
 Bk
@@ -32975,10 +33207,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 De
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -33093,7 +33325,7 @@ Lt
 nS
 nS
 SH
-iW
+Bk
 ce
 ce
 ce
@@ -33116,11 +33348,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 De
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -33235,8 +33467,8 @@ Lt
 nS
 nS
 SH
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -33259,10 +33491,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 De
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -33377,8 +33609,8 @@ Lt
 vp
 vp
 SH
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -33400,11 +33632,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 SA
 rr
-iW
+Bk
 ce
 ce
 ce
@@ -33519,7 +33751,7 @@ vp
 vp
 vp
 SH
-iW
+Bk
 ce
 ce
 ce
@@ -33544,9 +33776,9 @@ Bk
 ce
 Bk
 Bk
-iW
+Bk
 De
-iW
+Bk
 ce
 ce
 ce
@@ -33661,7 +33893,7 @@ vp
 vp
 vp
 SH
-iW
+Bk
 ce
 ce
 ce
@@ -33685,10 +33917,10 @@ Bk
 Bk
 Bk
 Bk
-iW
-iW
+Bk
+Bk
 De
-iW
+Bk
 ce
 ce
 ce
@@ -33827,10 +34059,10 @@ ce
 Bk
 Bk
 Bk
-iW
-iW
+Bk
+Bk
 De
-iW
+Bk
 ce
 ce
 ce
@@ -33970,11 +34202,11 @@ Bk
 Bk
 ce
 ce
-iW
+Bk
 De
-iW
+Bk
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -34112,11 +34344,11 @@ Bk
 ce
 ce
 ce
-iW
+Bk
 De
 ce
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -34257,9 +34489,9 @@ ce
 ce
 De
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -34279,7 +34511,7 @@ ce
 ce
 ce
 Ro
-iW
+Bk
 ce
 ce
 ce
@@ -34402,7 +34634,7 @@ Dv
 Dv
 Dv
 rr
-iW
+Bk
 ce
 ce
 jI
@@ -34418,10 +34650,10 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 Ro
-iW
+Bk
 ce
 ce
 ce
@@ -34539,13 +34771,13 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 De
-iW
-iW
+Bk
+Bk
 ce
 qE
 qE
@@ -34558,10 +34790,10 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 Ro
 ce
 ce
@@ -34683,11 +34915,11 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 De
 ce
-iW
+Bk
 ce
 pU
 qE
@@ -34696,7 +34928,7 @@ pU
 pU
 qE
 pU
-iW
+Bk
 ce
 Fm
 uO
@@ -34705,7 +34937,7 @@ uO
 uO
 uO
 ir
-iW
+Bk
 ce
 ce
 ce
@@ -34839,7 +35071,7 @@ pU
 pU
 pU
 ce
-iW
+Bk
 Ro
 pU
 qE
@@ -34847,7 +35079,7 @@ pU
 pU
 ac
 Ro
-iW
+Bk
 ce
 ce
 ce
@@ -34969,7 +35201,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 pU
 qE
 Rh
@@ -34989,9 +35221,9 @@ pU
 pU
 pU
 Ro
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -35118,10 +35350,10 @@ BX
 Jy
 sm
 ce
-iW
-iW
 Bk
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -35260,7 +35492,7 @@ oU
 Vc
 Vc
 ce
-iW
+Bk
 Bk
 Bk
 ce
@@ -36144,8 +36376,8 @@ Ah
 Ah
 MK
 xL
-sF
-MK
+Il
+LK
 MK
 qE
 qE
@@ -36282,12 +36514,18 @@ Ah
 Ah
 Ah
 Ah
+<<<<<<< HEAD
 Ah
 Ah
 Ah
 MK
 sF
 MK
+=======
+LK
+Il
+LK
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 MK
 MK
 MK
@@ -36427,9 +36665,9 @@ Ah
 MK
 MK
 MK
-MK
-sF
-MK
+LK
+Il
+LK
 MK
 MK
 MK
@@ -36569,9 +36807,9 @@ MK
 MK
 MK
 MK
-MK
-sF
-MK
+LK
+Il
+LK
 MK
 MK
 MK
@@ -36853,9 +37091,9 @@ MK
 MK
 MK
 MK
-MK
-sF
-MK
+LK
+Il
+LK
 MK
 MK
 MK
@@ -36995,9 +37233,9 @@ MK
 MK
 MK
 MK
-MK
-sF
-MK
+LK
+Il
+LK
 MK
 MK
 MK
@@ -37138,7 +37376,7 @@ MK
 Ah
 MK
 LK
-sF
+Il
 LK
 Ah
 Ah
@@ -37847,8 +38085,8 @@ MK
 MK
 MK
 MK
-MK
-sF
+LK
+Il
 LK
 Ah
 MK
@@ -37863,7 +38101,7 @@ qE
 qE
 zf
 pV
-iW
+Bk
 ce
 ce
 ce
@@ -37989,9 +38227,9 @@ qE
 MK
 MK
 MK
-MK
-sF
-MK
+LK
+Il
+LK
 MK
 MK
 MK
@@ -38145,8 +38383,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 zf
 ce
 ce
@@ -38288,7 +38526,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 zf
 ce
 ce
@@ -38430,7 +38668,7 @@ ce
 ce
 ce
 ce
-iW
+Bk
 Cw
 vu
 Bk
@@ -38474,8 +38712,8 @@ OH
 Lt
 Lt
 zf
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -38573,9 +38811,9 @@ Bk
 Bk
 ce
 ce
-iW
+Bk
 zf
-iW
+Bk
 Bk
 ce
 ce
@@ -38715,9 +38953,9 @@ Bk
 ce
 ce
 ce
-iW
+Bk
 zf
-iW
+Bk
 ce
 ce
 ce
@@ -38736,10 +38974,10 @@ Lt
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -38755,10 +38993,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 VL
 QZ
-iW
+Bk
 ce
 ce
 ce
@@ -38861,7 +39099,7 @@ ce
 Cw
 jF
 vu
-iW
+Bk
 ce
 ce
 Bk
@@ -38895,12 +39133,12 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 VL
 QZ
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -39001,9 +39239,9 @@ ce
 ce
 ce
 ce
-iW
+Bk
 zf
-iW
+Bk
 ce
 ce
 Bk
@@ -39018,15 +39256,15 @@ sM
 sM
 rn
 zf
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
-iW
+Bk
 Cw
 vu
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -39035,12 +39273,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 VL
 QZ
-iW
+Bk
 ce
 ce
 ce
@@ -39143,10 +39381,10 @@ ce
 ce
 ce
 ce
-iW
+Bk
 zf
-iW
-iW
+Bk
+Bk
 ce
 ce
 Bk
@@ -39160,7 +39398,7 @@ sM
 sM
 rn
 zf
-iW
+Bk
 ce
 ce
 ce
@@ -39171,18 +39409,18 @@ jF
 jF
 jF
 vu
-iW
+Bk
 ce
 ce
 ce
 ce
-iW
+Bk
 VL
 jF
 jF
 QZ
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -39309,22 +39547,22 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 zf
-iW
+Bk
 ce
 ce
-iW
-iW
+Bk
+Bk
 VL
 QZ
-iW
-iW
+Bk
+Bk
 ce
 ce
-iW
+Bk
 ce
 ce
 ce
@@ -39428,8 +39666,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 zf
 ce
 ce
@@ -39444,7 +39682,7 @@ jF
 jF
 jF
 QZ
-iW
+Bk
 ce
 ce
 ce
@@ -39453,16 +39691,16 @@ ce
 ce
 ce
 ce
-iW
+Bk
 zf
 ce
 ce
-iW
+Bk
 VL
 jF
 QZ
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -39569,8 +39807,8 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 zf
 ce
@@ -39582,26 +39820,26 @@ ce
 Bk
 Bk
 zf
-iW
+Bk
 ce
-iW
-iW
-iW
-ce
-ce
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
 ce
-iW
+ce
+ce
+Bk
 zf
 ce
 ce
-iW
+Bk
 zf
-iW
+Bk
 ce
 ce
 ce
@@ -39711,12 +39949,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 Cw
 vu
-iW
+Bk
 ce
 ce
 ce
@@ -39724,26 +39962,26 @@ ce
 ce
 Bk
 zf
-iW
+Bk
 ce
-iW
-iW
-iW
-iW
-ce
-ce
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
-iW
-iW
+ce
+ce
+Bk
+Bk
 zf
 ce
-iW
-iW
+Bk
+Bk
 zf
-iW
+Bk
 ce
 ce
 ce
@@ -39758,12 +39996,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -39853,12 +40091,12 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 zf
-iW
+Bk
 ce
 ce
 ce
@@ -39866,20 +40104,20 @@ ce
 ce
 ce
 zf
-iW
+Bk
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 Cw
 jF
 jF
@@ -39892,21 +40130,21 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -39994,11 +40232,15 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 ce
+<<<<<<< HEAD
 ce
+=======
+Bk
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 Cw
 jF
 vu
@@ -40006,49 +40248,49 @@ ce
 ce
 ce
 ce
-iW
+Bk
 zf
-iW
+Bk
 ce
 ce
 ce
-iW
-iW
-iW
-ce
-ce
-ce
-ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+ce
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+ce
+ce
+ce
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40129,37 +40371,39 @@ qE
 ce
 ce
 ce
+Bk
+ce
+ce
+ce
+ce
+ce
+ce
+Bk
+ce
+ce
+ce
+<<<<<<< HEAD
+ce
 iW
-ce
-ce
-ce
-ce
-ce
-ce
 iW
-ce
-ce
-ce
-ce
-iW
-iW
+=======
+Bk
+Bk
+Bk
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 zf
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 zf
-iW
+Bk
 ce
 ce
 ce
-iW
-iW
-ce
-ce
-ce
-ce
+Bk
+Bk
 ce
 ce
 ce
@@ -40174,23 +40418,27 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-ce
-ce
-iW
-iW
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+ce
+Bk
+Bk
+Bk
+ce
+ce
+Bk
+Bk
+ce
+ce
+ce
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40269,24 +40517,30 @@ Lb
 Lb
 sV
 pV
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
-iW
-iW
+Bk
+Bk
+ce
+Bk
+Bk
+ce
+ce
+ce
+<<<<<<< HEAD
 ce
 iW
 iW
-ce
-ce
-ce
-ce
-iW
-iW
+=======
+Bk
+Bk
+Bk
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 zf
-iW
+Bk
 ce
 VL
 jF
@@ -40297,10 +40551,10 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40315,24 +40569,24 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
-iW
+Bk
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40348,7 +40602,7 @@ Pp
 Hz
 "}
 (134,1,1) = {"
-fV
+nH
 qE
 qE
 qE
@@ -40410,29 +40664,34 @@ qE
 Lb
 sV
 qE
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 Ee
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
+<<<<<<< HEAD
 ce
 ce
+=======
+Bk
+vj
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 Cw
 jF
 jF
 QZ
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -40440,21 +40699,21 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
@@ -40464,17 +40723,17 @@ ce
 ce
 ce
 ce
-iW
-iW
+Bk
+Bk
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40490,7 +40749,7 @@ Pp
 Hz
 "}
 (135,1,1) = {"
-fV
+nH
 qE
 qE
 qE
@@ -40556,32 +40815,25 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
 ce
 ce
-ce
-ce
-iW
-iW
-iW
-iW
-iW
-ce
-ce
-ce
-ce
-ce
-ce
-ce
-ce
+<<<<<<< HEAD
+=======
+Bk
+vj
+vj
+uh
+dA
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 ce
 ce
 iW
@@ -40589,15 +40841,6 @@ iW
 iW
 iW
 iW
-iW
-ce
-ce
-ce
-ce
-iW
-iW
-iW
-iW
 ce
 ce
 ce
@@ -40607,16 +40850,40 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+ce
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+ce
+Bk
+Bk
+Bk
+Bk
+ce
+ce
+ce
+ce
+ce
+ce
+ce
+ce
+ce
+Bk
+Bk
+Bk
+ce
+ce
+ce
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40632,7 +40899,7 @@ Pp
 Hz
 "}
 (136,1,1) = {"
-fV
+nH
 qE
 qE
 qE
@@ -40729,17 +40996,17 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40750,14 +41017,14 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40774,7 +41041,7 @@ Lt
 Bh
 "}
 (137,1,1) = {"
-fV
+nH
 qE
 qE
 qE
@@ -40874,13 +41141,13 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40893,10 +41160,10 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
-iW
+Bk
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -40916,7 +41183,7 @@ Lt
 Bh
 "}
 (138,1,1) = {"
-fV
+nH
 qE
 qE
 qE
@@ -41018,9 +41285,9 @@ ce
 ce
 ce
 ce
-iW
-iW
-iW
+Bk
+Bk
+Bk
 ce
 ce
 ce
@@ -41058,7 +41325,7 @@ Lt
 Bh
 "}
 (139,1,1) = {"
-fV
+nH
 qE
 qE
 qE
@@ -41200,31 +41467,31 @@ Lt
 Bh
 "}
 (140,1,1) = {"
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
 CF
 EC
 rd
@@ -41232,30 +41499,30 @@ rd
 rd
 EC
 EC
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
-fV
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+nH
 nH
 nH
 nH

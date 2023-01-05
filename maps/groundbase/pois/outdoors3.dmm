@@ -3,12 +3,18 @@
 /obj/structure/fence/corner{
 	dir = 10
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "b" = (
 /obj/structure/fence{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
 "c" = (
@@ -30,22 +36,59 @@
 /obj/structure/fence/corner,
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+"c" = (
+/mob/living/simple_mob/vore/alienanimals/teppi,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+"e" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+"f" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+"q" = (
+/obj/structure/fence/door,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+"F" = (
+/obj/structure/fence/corner,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "H" = (
 /obj/structure/fence/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
 "W" = (
 /mob/living/simple_mob/vore/alienanimals/teppi/mutant,
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+"W" = (
+/mob/living/simple_mob/vore/alienanimals/teppi/mutant,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "Y" = (
 /obj/structure/fence/corner{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 
 (1,1,1) = {"
 H
