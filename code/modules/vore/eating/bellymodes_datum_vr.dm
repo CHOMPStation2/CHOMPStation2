@@ -218,7 +218,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/list/egg_contents = list()
 	for(var/E in touchable_atoms)
 		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
-			var/obj/item/weapon/storage/vore_egg/EG //CHOMPEdit Start
+			var/obj/item/weapon/storage/vore_egg/EG = E //CHOMPEdit Start
 			if(EG.egg_name != B.egg_name)
 				if(!B.egg_name)
 					EG.egg_name = null
