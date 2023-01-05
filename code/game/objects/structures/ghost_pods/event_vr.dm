@@ -75,18 +75,10 @@
 
 	while(finalized == "No" && M.client)
 		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", possible_mobs)
-<<<<<<< HEAD
-		if(!choice)
-//			randomize = TRUE //CHOMP remove FUCK OFF. When I press cancel I expect to cancel.
-			used = FALSE //CHOMP add 200 IQ
-			busy = FALSE //CHOMP add 201 IQ
-			break
-=======
 		if(!choice)	//We probably pushed the cancel button on the mob selection. Let's just put the ghost pod back in the list.
 			to_chat(M, "<span class='notice'>No mob selected, cancelling.</span>")
 			reset_ghostpod()
 			return
->>>>>>> a694901ce2... Merge pull request #14262 from Very-Soft/damob
 
 		if(choice)
 			finalized = tgui_alert(M, "Are you sure you want to play as [choice]?","Confirmation",list("No","Yes"))
