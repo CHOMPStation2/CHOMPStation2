@@ -293,8 +293,8 @@
 			did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 	return did_an_item
 
-/obj/belly/proc/handle_digestion_death(mob/living/M)
-	if(slow_digestion) //CHOMPAdd Start: Gradual corpse digestion
+/obj/belly/proc/handle_digestion_death(mob/living/M, instant = FALSE) //CHOMPEdit
+	if(!instant && slow_digestion) //CHOMPAdd Start: Gradual corpse digestion
 		if(!M.digestion_in_progress)
 			M.digestion_in_progress = TRUE
 			if(M.health > -36 || (ishuman(M) && M.health > -136))
@@ -309,6 +309,8 @@
 							if(!E.vital)
 								vitals_only = FALSE
 								if(!LAZYLEN(E.children))
+									for(var/obj/item/weapon/implant/I as anything in E.implants)
+										qdel(I)
 									E.droplimb(TRUE, DROPLIMB_EDGE)
 									qdel(E)
 									break

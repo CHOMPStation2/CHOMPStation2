@@ -29,6 +29,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "ae" = (
@@ -108,6 +111,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 10
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "an" = (
@@ -148,6 +154,12 @@
 /obj/machinery/newscaster{
 	pixel_x = 29
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/gateway)
 "aq" = (
@@ -166,6 +178,9 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Left Wing - Hallway 4";
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -219,6 +234,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -295,6 +313,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
+"aC" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/landing_south)
 "aD" = (
 /obj/effect/mist,
 /turf/simulated/floor/water/pool,
@@ -360,6 +388,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
@@ -535,6 +566,7 @@
 	tag_exterior_door = "main5_airlock_exterior";
 	tag_interior_door = "main5_airlock_interior"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
 "bc" = (
@@ -555,6 +587,19 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"be" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/left_two)
 "bf" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
@@ -597,6 +642,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "bj" = (
@@ -751,6 +797,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "bv" = (
@@ -786,6 +836,7 @@
 	},
 /obj/item/weapon/material/ashtray/plastic,
 /obj/random/cigarettes,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "by" = (
@@ -801,6 +852,7 @@
 	pixel_y = -21
 	},
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "bz" = (
@@ -821,6 +873,12 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"bC" = (
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "bD" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -838,8 +896,18 @@
 /obj/item/weapon/extinguisher/mini,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"bF" = (
+/obj/structure/table/steel,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "bG" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/left_three)
 "bH" = (
@@ -878,6 +946,9 @@
 /area/surface/outpost/main/dorms/dorm_4)
 "bM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "bN" = (
@@ -923,15 +994,23 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "bS" = (
 /obj/structure/table/glass,
 /obj/item/device/paicard,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "bT" = (
 /obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"bU" = (
+/obj/structure/flora/tree/pine/xmas,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "bV" = (
@@ -1033,6 +1112,9 @@
 /area/surface/outpost/main/showers)
 "cf" = (
 /obj/machinery/light,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "cg" = (
@@ -1113,6 +1195,7 @@
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/white/bordercorner2,
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "cn" = (
@@ -1314,7 +1397,7 @@
 /area/surface/outpost/main/corridor/right_lower)
 "cF" = (
 /obj/effect/zone_divider,
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/ocean,
 /area/surface/outside/ocean)
 "cG" = (
 /obj/machinery/door/firedoor/border_only,
@@ -1542,6 +1625,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "db" = (
@@ -1560,6 +1646,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "dc" = (
@@ -1606,6 +1693,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
 "dg" = (
@@ -1673,6 +1761,12 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "do" = (
@@ -1683,6 +1777,7 @@
 	dir = 1;
 	name = "MO Right Wing - Hallway Three"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "dp" = (
@@ -1730,6 +1825,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"ds" = (
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "dt" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -1753,6 +1852,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_north)
 "dw" = (
@@ -2000,6 +2100,9 @@
 	dir = 4
 	},
 /obj/item/weapon/dice/d20,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "dX" = (
@@ -2067,6 +2170,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "ed" = (
@@ -2096,6 +2202,7 @@
 	c_tag = "MO Right Wing - Hallway 6";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "eg" = (
@@ -2206,6 +2313,9 @@
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "eo" = (
@@ -2214,6 +2324,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -2229,6 +2342,12 @@
 /area/surface/outpost/main/showers)
 "eq" = (
 /obj/structure/table/glass,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "er" = (
@@ -2291,6 +2410,9 @@
 /obj/machinery/computer/guestpass{
 	pixel_y = 28
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "eu" = (
@@ -2309,6 +2431,12 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "ex" = (
@@ -2326,8 +2454,15 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
+"ey" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outpost/civilian/smes)
 "ez" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -2345,6 +2480,9 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -2381,6 +2519,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "eD" = (
@@ -2389,6 +2530,12 @@
 	pixel_x = -24
 	},
 /obj/machinery/vending/giftvendor,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "eE" = (
@@ -2397,6 +2544,12 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
@@ -2436,6 +2589,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "eJ" = (
@@ -2452,6 +2608,9 @@
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -2516,7 +2675,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
-/obj/structure/flora/pottedplant,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "eR" = (
@@ -2587,6 +2748,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"eZ" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "fa" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -2709,6 +2879,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "fj" = (
@@ -2738,6 +2909,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "fl" = (
@@ -2773,6 +2945,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
@@ -2810,6 +2985,7 @@
 "fs" = (
 /obj/structure/table/glass,
 /obj/item/clothing/shoes/swimmingfins,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "ft" = (
@@ -2906,6 +3082,10 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "fD" = (
@@ -2954,8 +3134,11 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
 "fI" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -2968,6 +3151,12 @@
 	dir = 9;
 	name = "Engineering_Outpost";
 	network = list("Engineering")
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/monitoring)
@@ -2991,6 +3180,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
 "fL" = (
@@ -3022,6 +3214,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -3245,12 +3440,25 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/showers)
+"gq" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/landing_north)
 "gr" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
@@ -3269,6 +3477,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"gt" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_upper)
 "gu" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -3316,6 +3530,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "gB" = (
@@ -3430,6 +3645,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "gK" = (
@@ -3466,6 +3684,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "gO" = (
@@ -3480,6 +3701,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -3506,6 +3730,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
 "gR" = (
@@ -3530,6 +3755,12 @@
 "gS" = (
 /obj/structure/closet/crate/freezer/rations,
 /obj/effect/floor_decal/industrial/outline,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/corridor/right_upper)
 "gT" = (
@@ -3697,6 +3928,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "hk" = (
@@ -3777,12 +4009,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "ho" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -3795,6 +4027,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 8
 	},
+/obj/structure/flora/pottedplant/xmas,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
 "hq" = (
@@ -3835,6 +4068,7 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CO - Airlock Access 2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "ht" = (
@@ -3846,6 +4080,10 @@
 	dir = 8;
 	name = "west bump";
 	pixel_x = -24
+	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -4032,6 +4270,9 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "hK" = (
@@ -4107,6 +4348,9 @@
 	pixel_x = -32
 	},
 /obj/structure/bed/chair,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "hR" = (
@@ -4200,6 +4444,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/left_three)
+"hY" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/overlay/snow/floor/edges,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/mining_main/tools)
 "hZ" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 8
@@ -4253,8 +4506,9 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
 "ih" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/borderfloor{
@@ -4410,8 +4664,15 @@
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 6
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
+"iv" = (
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "iw" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -4433,6 +4694,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "ix" = (
@@ -4446,6 +4710,9 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -4470,6 +4737,10 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/tools)
+"iB" = (
+/obj/effect/overlay/snow/floor/pointy,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "iC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 6
@@ -4599,8 +4870,16 @@
 	c_tag = "MO Left Wing - Central Hall";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"iP" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 8
+	},
+/obj/effect/overlay/snow/floor/pointy,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "iQ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -4614,6 +4893,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
 "iR" = (
@@ -4639,6 +4919,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -4832,6 +5115,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "jg" = (
@@ -4867,6 +5153,9 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "jk" = (
@@ -4879,6 +5168,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
@@ -4966,6 +5258,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "jt" = (
@@ -5018,6 +5311,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "jw" = (
@@ -5042,6 +5336,9 @@
 "jx" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/light,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/landing_north)
 "jy" = (
@@ -5081,8 +5378,19 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Right Wing - Teleporter Hallway"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"jC" = (
+/obj/item/weapon/stool/padded,
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "jD" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 1
@@ -5130,6 +5438,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "jG" = (
@@ -5156,6 +5465,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -5292,6 +5604,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "jS" = (
@@ -5303,6 +5618,9 @@
 "jT" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
@@ -5360,6 +5678,9 @@
 /area/surface/outside/plains/outpost)
 "ka" = (
 /obj/structure/closet/athletic_mixed,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "kb" = (
@@ -5392,6 +5713,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "kd" = (
@@ -5422,6 +5746,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 5
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -5462,6 +5789,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "kk" = (
@@ -5508,6 +5839,7 @@
 	name = "NanoMed Wall";
 	pixel_y = -30
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "kn" = (
@@ -5561,6 +5893,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "kq" = (
@@ -5593,6 +5928,7 @@
 	c_tag = "MO Right Wing - Teleporter Hallway";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "kv" = (
@@ -5653,6 +5989,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "kB" = (
@@ -5697,6 +6034,7 @@
 	pixel_x = 4;
 	pixel_y = -26
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "kF" = (
@@ -5800,6 +6138,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "kP" = (
@@ -5897,6 +6238,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
@@ -6029,6 +6373,10 @@
 	c_tag = "CO - Pool 2";
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "ll" = (
@@ -6059,6 +6407,22 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_three)
+"ln" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/landing_north)
 "lo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
@@ -6076,6 +6440,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
@@ -6109,6 +6476,10 @@
 	c_tag = "MO Left Wing - Hallway 2";
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "ls" = (
@@ -6135,6 +6506,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/tools)
 "lu" = (
@@ -6142,6 +6516,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/construction_area)
+"lv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "lw" = (
 /obj/effect/landmark/event_spawn/dronepod_landing,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -6183,6 +6569,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "lC" = (
@@ -6218,6 +6607,10 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "lG" = (
@@ -6246,6 +6639,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/smes)
+"lH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "lI" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor/border_only,
@@ -6283,6 +6693,9 @@
 	dir = 8
 	},
 /obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -6432,6 +6845,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_south)
 "mb" = (
@@ -6440,6 +6854,9 @@
 /area/surface/outpost/engineering/auxiliary_storage)
 "mc" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/left_two)
 "md" = (
@@ -6478,6 +6895,9 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
+"mg" = (
+/turf/simulated/wall/log_sif,
+/area/surface/outpost/civilian/smes)
 "mh" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/floodlight,
@@ -6566,6 +6986,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_1)
+"mp" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "mq" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -6699,6 +7128,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "mz" = (
@@ -6750,6 +7182,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
 "mE" = (
@@ -6772,6 +7207,9 @@
 /area/surface/outpost/civilian/fishing)
 "mG" = (
 /obj/machinery/light,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "mH" = (
@@ -6793,6 +7231,9 @@
 /area/surface/outpost/main/corridor/right_upper)
 "mI" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/mining_main/tools)
 "mJ" = (
@@ -7035,6 +7476,9 @@
 /area/surface/outpost/main/corridor/right_lower)
 "nc" = (
 /obj/structure/closet/emcloset,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "nd" = (
@@ -7119,6 +7563,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "nl" = (
@@ -7145,6 +7590,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
+"nn" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/landing_south)
 "no" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -7183,6 +7644,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "ns" = (
@@ -7217,6 +7681,9 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 6
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -7314,6 +7781,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
+"nB" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "nC" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
@@ -7434,6 +7907,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
@@ -7585,6 +8061,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "ob" = (
@@ -7668,6 +8145,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "ol" = (
@@ -7719,6 +8197,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
+"oq" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "os" = (
 /obj/structure/table/standard,
 /obj/structure/extinguisher_cabinet{
@@ -7753,6 +8238,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
 "ou" = (
@@ -7778,7 +8264,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/left_three)
 "ow" = (
-/obj/structure/flora/pottedplant/fern,
+/obj/structure/flora/pottedplant/xmas,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "ox" = (
@@ -7789,8 +8278,27 @@
 /area/surface/outpost/main/corridor)
 "oy" = (
 /obj/machinery/light,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
+"oz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_lower)
 "oA" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -7853,6 +8361,12 @@
 	dir = 9
 	},
 /obj/machinery/computer/timeclock/premade/north,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "oH" = (
@@ -7895,8 +8409,17 @@
 /obj/effect/floor_decal/corner/blue/border,
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/blue/bordercorner2,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
+"oK" = (
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "oL" = (
 /obj/structure/ore_box,
 /obj/effect/floor_decal/corner/brown/full{
@@ -7953,6 +8476,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "oR" = (
@@ -7979,6 +8503,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
@@ -8085,6 +8612,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "pf" = (
@@ -8158,6 +8688,13 @@
 /obj/item/weapon/beach_ball,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
+"pl" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/engineering/monitoring)
 "pm" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -8182,6 +8719,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "po" = (
@@ -8199,8 +8739,20 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/tools)
+"pq" = (
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "pr" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -8256,6 +8808,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "pv" = (
@@ -8331,6 +8884,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "pA" = (
@@ -8474,6 +9031,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
 "pQ" = (
@@ -8524,6 +9084,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "pV" = (
@@ -8560,6 +9123,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "pY" = (
@@ -8653,6 +9217,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "qd" = (
@@ -8715,6 +9280,9 @@
 /area/surface/outpost/main/corridor/left_lower)
 "qj" = (
 /obj/machinery/computer/timeclock/premade/east,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "qk" = (
@@ -8781,6 +9349,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "qo" = (
@@ -8839,6 +9408,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "qs" = (
@@ -8880,6 +9450,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gateway)
@@ -8998,6 +9571,9 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "qI" = (
@@ -9020,6 +9596,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "qJ" = (
@@ -9095,6 +9672,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"qS" = (
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "qT" = (
 /turf/simulated/wall,
 /area/surface/outpost/main/exploration)
@@ -9152,6 +9735,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
@@ -9253,7 +9839,7 @@
 	name = "Main Outpost Internal"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
 "rh" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1;
@@ -9298,6 +9884,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -9475,6 +10064,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/tools)
 "rB" = (
@@ -9496,6 +10088,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/engineering/monitoring)
 "rE" = (
@@ -9508,6 +10101,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
 "rF" = (
@@ -9528,6 +10122,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -9574,6 +10171,10 @@
 /obj/structure/closet/lasertag/red,
 /obj/item/stack/flag/red,
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "rO" = (
@@ -9652,6 +10253,12 @@
 /obj/item/weapon/cell/high,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/mining_main)
+"rX" = (
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "rY" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/mining_main/exterior)
@@ -9694,6 +10301,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
@@ -9905,6 +10515,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "su" = (
@@ -9934,6 +10547,9 @@
 	},
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -9981,6 +10597,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "sz" = (
@@ -10001,6 +10620,9 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Left Wing - Hallway 3";
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -10129,6 +10751,9 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "sJ" = (
@@ -10158,6 +10783,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "sK" = (
@@ -10179,6 +10807,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/machinery/vending/coffee{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -10245,6 +10879,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "sQ" = (
@@ -10252,6 +10887,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Left Wing - Central Hall";
+	dir = 1
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -10287,6 +10925,24 @@
 /obj/random/tech_supply,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/bar)
+"sU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 6
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_lower)
 "sV" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
@@ -10329,6 +10985,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"sZ" = (
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "ta" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -10337,6 +10996,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
@@ -10415,6 +11077,9 @@
 /obj/structure/table/glass,
 /obj/machinery/recharger,
 /obj/item/weapon/tool/screwdriver,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "th" = (
@@ -10428,6 +11093,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "ti" = (
@@ -10451,6 +11117,9 @@
 	c_tag = "PO - Airlock Access 1";
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
 "tl" = (
@@ -10463,6 +11132,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "tm" = (
@@ -10520,6 +11190,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "ts" = (
@@ -10530,6 +11203,9 @@
 "tt" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -25
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
@@ -10586,6 +11262,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 10
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "ty" = (
@@ -10600,6 +11279,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 6
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -10635,6 +11317,9 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
@@ -10673,6 +11358,10 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "tD" = (
@@ -10757,6 +11446,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
@@ -10866,6 +11558,32 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"tS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_upper)
 "tT" = (
 /obj/structure/plasticflaps/mining,
 /obj/machinery/conveyor{
@@ -10918,6 +11636,9 @@
 	dir = 8
 	},
 /obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -11044,6 +11765,12 @@
 	dir = 8
 	},
 /obj/item/device/starcaster_news,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "ug" = (
@@ -11085,6 +11812,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "uk" = (
@@ -11121,6 +11851,9 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 10
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
@@ -11217,6 +11950,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/corridor)
+"uy" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
+"uz" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "uA" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/floor_decal/borderfloor{
@@ -11301,6 +12051,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "uE" = (
@@ -11353,15 +12106,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
-"uM" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "uN" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -11453,6 +12202,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
 "uU" = (
@@ -11497,6 +12249,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -11599,6 +12354,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
 "vi" = (
@@ -11907,6 +12663,7 @@
 	c_tag = "MO Left Wing - Hallway 1";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "vN" = (
@@ -11932,6 +12689,15 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"vQ" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "vR" = (
 /obj/structure/boxingrope{
 	dir = 1
@@ -12056,6 +12822,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
 "wf" = (
@@ -12075,6 +12844,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -12216,6 +12988,12 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "wu" = (
@@ -12250,6 +13028,11 @@
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"wz" = (
+/obj/item/weapon/stool/padded,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "wA" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -12481,6 +13264,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "wX" = (
@@ -12522,6 +13308,42 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_upper)
+"xa" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "xb" = (
@@ -12539,6 +13361,9 @@
 /area/surface/outpost/civilian/fishing)
 "xd" = (
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -12566,6 +13391,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
+"xg" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outpost/civilian/smes)
 "xh" = (
 /turf/simulated/floor/water/shoreline{
 	dir = 6
@@ -12574,6 +13405,14 @@
 "xi" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/security/smes)
+"xj" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 8
+	},
+/obj/effect/overlay/snow/floor/pointy,
+/obj/structure/event/present,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "xk" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
@@ -12689,6 +13528,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -25
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "xt" = (
@@ -12729,6 +13571,12 @@
 	},
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Left Wing - Airlock 3"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/left_three)
@@ -12776,6 +13624,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
 "xy" = (
@@ -12958,6 +13807,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/junction/yjunction,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "xN" = (
@@ -13001,6 +13851,7 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Left Wing - Central Hall"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "xS" = (
@@ -13071,8 +13922,21 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
+"xX" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/civilian/fishing)
 "xY" = (
 /obj/structure/table/glass,
 /obj/item/inflatable{
@@ -13086,6 +13950,9 @@
 /obj/item/inflatable{
 	pixel_x = -2;
 	pixel_y = -3
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
@@ -13123,6 +13990,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "yb" = (
@@ -13193,6 +14061,9 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -13311,6 +14182,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
@@ -13470,8 +14344,11 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/surface/outpost/main/airlock/right_three)
 "yG" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -13593,6 +14470,7 @@
 	tag_exterior_door = "main1_airlock_exterior";
 	tag_interior_door = "main1_airlock_interior"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "yQ" = (
@@ -13611,6 +14489,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
 "yS" = (
@@ -13623,6 +14504,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
@@ -13733,6 +14617,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "zg" = (
@@ -13754,6 +14641,12 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -13797,6 +14690,9 @@
 	pixel_x = -30
 	},
 /obj/item/weapon/reagent_containers/food/drinks/britcup,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "zn" = (
@@ -13808,6 +14704,9 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -13826,14 +14725,27 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
+"zp" = (
+/obj/structure/bed/chair,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "zq" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
@@ -13915,6 +14827,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
+"zy" = (
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "zz" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -13939,6 +14855,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
@@ -13987,8 +14906,23 @@
 /area/surface/outpost/main/exploration/containment)
 "zF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
+"zG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "zH" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 6
@@ -14015,6 +14949,25 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/surface/outpost/engineering/reactor_smes)
+"zK" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/left_one)
 "zL" = (
 /obj/structure/table/steel,
 /obj/random/tech_supply,
@@ -14097,6 +15050,13 @@
 "zS" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/dorms/dorm_4)
+"zU" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor/pointy,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "zV" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -14161,6 +15121,12 @@
 "Aa" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/left_two)
+"Ab" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outpost/civilian/smes)
 "Ac" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -14262,6 +15228,25 @@
 	icon_state = "asteroidplating2"
 	},
 /area/surface/outpost/mining_main/exterior)
+"Al" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/landing_north)
 "Am" = (
 /obj/effect/overlay/snow/floor,
 /obj/machinery/disposal,
@@ -14320,6 +15305,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Ar" = (
@@ -14350,9 +15338,6 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/engineering/smes)
-"At" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outside/plains/outpost)
 "Au" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -14372,8 +15357,8 @@
 /area/surface/outpost/civilian/fishing)
 "Av" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/structure/flora/pottedplant,
 /obj/effect/floor_decal/corner/white/border,
+/obj/structure/flora/pottedplant/xmas,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "Aw" = (
@@ -14396,6 +15381,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outside/plains/outpost)
+"Ay" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/left_lower)
 "Az" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -14418,6 +15415,9 @@
 	pixel_y = 26;
 	tag_exterior_door = "main6_airlock_exterior";
 	tag_interior_door = "main6_airlock_interior"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
@@ -14662,6 +15662,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
+"AS" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_lower)
 "AT" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -14826,6 +15838,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Bg" = (
@@ -14916,6 +15931,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
 "Br" = (
@@ -14945,6 +15963,10 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -15072,6 +16094,7 @@
 	c_tag = "MO - Landing South Airlock";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_south)
 "BH" = (
@@ -15084,6 +16107,7 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CO - Airlock Access 1"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "BI" = (
@@ -15096,6 +16120,7 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO - Landing North Airlock Access"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
 "BJ" = (
@@ -15212,6 +16237,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
+"BS" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/left_lower)
 "BT" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -15230,6 +16270,9 @@
 	dir = 8;
 	frequency = 1441;
 	pixel_x = 22
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -15264,12 +16307,22 @@
 /obj/machinery/newscaster{
 	pixel_x = -30
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "BX" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
+"BY" = (
+/obj/structure/table/steel,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "BZ" = (
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -15370,6 +16423,13 @@
 	outdoors = 0
 	},
 /area/surface/outside/plains/mountains)
+"Cj" = (
+/obj/structure/event/present,
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Ck" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -15420,6 +16480,11 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/restroom)
+"Cq" = (
+/obj/machinery/mech_recharger,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/main/corridor/right_upper)
 "Cr" = (
 /obj/structure/closet/crate{
 	name = "Tritium Storage"
@@ -15450,6 +16515,9 @@
 	dir = 9
 	},
 /obj/structure/table/glass,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Cu" = (
@@ -15531,6 +16599,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "Cz" = (
@@ -15580,6 +16649,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "CD" = (
@@ -15588,6 +16660,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/monitoring)
 "CE" = (
@@ -15723,6 +16796,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
+"CS" = (
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outpost/civilian/smes)
 "CT" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/right_one)
@@ -15731,6 +16810,9 @@
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -15764,10 +16846,28 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
+"Da" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/gateway)
 "Db" = (
 /obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -15805,6 +16905,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Dh" = (
@@ -15827,6 +16930,9 @@
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -15934,6 +17040,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Ds" = (
@@ -15952,6 +17059,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/white/bordercorner,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Du" = (
@@ -16032,6 +17140,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass/hidden,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "DB" = (
@@ -16045,6 +17156,9 @@
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
@@ -16087,12 +17201,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
-"DI" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "DJ" = (
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
@@ -16100,6 +17208,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "DK" = (
@@ -16123,6 +17232,9 @@
 "DM" = (
 /obj/structure/closet/lasertag/blue,
 /obj/item/stack/flag/blue,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "DN" = (
@@ -16130,6 +17242,24 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/wine,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
+"DO" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/right_upper)
 "DP" = (
 /obj/machinery/light{
 	dir = 8
@@ -16148,6 +17278,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "DU" = (
@@ -16155,6 +17288,9 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
@@ -16186,7 +17322,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
 "DY" = (
 /obj/machinery/shower{
 	dir = 1
@@ -16234,6 +17370,9 @@
 	},
 /obj/machinery/atm{
 	pixel_y = 30
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -16284,6 +17423,10 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "Eg" = (
@@ -16296,12 +17439,27 @@
 	},
 /turf/simulated/floor/carpet,
 /area/surface/outpost/main/dorms/dorm_6)
+"Eh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Ei" = (
 /obj/structure/table/steel,
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/item/device/multitool,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/corridor/right_upper)
 "Ej" = (
@@ -16314,7 +17472,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 1
 	},
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "Ek" = (
 /turf/simulated/floor/holofloor/tiled/dark,
@@ -16389,8 +17547,16 @@
 /area/surface/outpost/main/tcomm)
 "Ep" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/left_one)
+"Eq" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/landing_south)
 "Er" = (
 /obj/machinery/telecomms/relay/preset/southerncross/wild,
 /obj/machinery/light/small{
@@ -16398,6 +17564,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/main/tcomm)
+"Es" = (
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Et" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/reddouble,
@@ -16437,6 +17609,13 @@
 "Ey" = (
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/plains/normal)
+"Ez" = (
+/obj/structure/bed/chair,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "EA" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
@@ -16453,6 +17632,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -16477,6 +17659,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "EG" = (
@@ -16606,6 +17789,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "EU" = (
@@ -16626,6 +17812,13 @@
 /obj/effect/overlay/snow/floor/edges,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"EV" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/civilian/sauna)
 "EW" = (
 /obj/machinery/door/airlock{
 	name = "Unit 1"
@@ -16683,6 +17876,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"Fb" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/landing_north)
 "Fc" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -16773,6 +17982,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
 "Fo" = (
@@ -16823,6 +18035,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
 "Fr" = (
@@ -16891,8 +18104,17 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"Fw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outpost/civilian/smes)
 "Fy" = (
 /obj/machinery/recharge_station,
 /obj/effect/floor_decal/borderfloor{
@@ -16949,6 +18171,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
 "FF" = (
@@ -16974,6 +18197,7 @@
 	tag_exterior_door = "main7_airlock_exterior";
 	tag_interior_door = "main7_airlock_interior"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
 "FH" = (
@@ -17050,6 +18274,9 @@
 /obj/structure/symbol/em{
 	pixel_x = 32
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "FP" = (
@@ -17076,6 +18303,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass/hidden,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "FR" = (
@@ -17154,6 +18384,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Gc" = (
@@ -17162,6 +18395,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -17249,6 +18485,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "Gk" = (
@@ -17302,6 +18539,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
+"Go" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Gp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -17381,6 +18624,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "Gu" = (
@@ -17423,6 +18669,9 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Gx" = (
@@ -17445,6 +18694,9 @@
 "Gy" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -17473,8 +18725,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
+"GB" = (
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "GC" = (
 /obj/machinery/mech_recharger,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/corridor/right_upper)
 "GD" = (
@@ -17492,6 +18756,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -17520,6 +18788,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "GG" = (
@@ -17530,6 +18799,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "GH" = (
@@ -17826,6 +19096,9 @@
 /area/surface/outpost/engineering/atmos_room)
 "Hg" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/right_two)
 "Hh" = (
@@ -17836,6 +19109,9 @@
 /obj/effect/floor_decal/corner/white/border,
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/white/bordercorner2,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "Hj" = (
@@ -17929,6 +19205,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "Hu" = (
@@ -17997,6 +19276,12 @@
 	dir = 1
 	},
 /obj/machinery/disposal,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "HB" = (
@@ -18041,6 +19326,9 @@
 /area/surface/outpost/main/dorms/dorm_1)
 "HD" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/right_one)
 "HE" = (
@@ -18081,6 +19369,9 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 10
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -18134,6 +19425,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "HN" = (
@@ -18154,6 +19448,9 @@
 	dir = 4;
 	name = "security camera"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "HO" = (
@@ -18163,6 +19460,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
 "HP" = (
@@ -18181,6 +19479,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "HR" = (
@@ -18191,6 +19490,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
@@ -18254,6 +19556,9 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "HY" = (
@@ -18290,6 +19595,9 @@
 "Ic" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
@@ -18336,7 +19644,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/dorms/dorm_1)
 "Ig" = (
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/ocean,
 /area/surface/outside/ocean)
 "Ih" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -18369,6 +19677,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "Il" = (
@@ -18397,15 +19708,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
-"Io" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/space)
 "Ip" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/exploration)
@@ -18433,6 +19735,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
 "Iu" = (
@@ -18446,6 +19751,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
 "Iv" = (
@@ -18480,6 +19786,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Ix" = (
@@ -18695,6 +20002,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "IT" = (
@@ -18749,6 +20057,9 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -18813,6 +20124,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "Jb" = (
@@ -18932,6 +20244,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Jj" = (
@@ -18959,6 +20272,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "Jk" = (
@@ -19008,6 +20324,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Jn" = (
@@ -19038,6 +20357,16 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/landing_south)
+"Jp" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 1
+	},
+/obj/structure/event/present,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Jq" = (
 /turf/simulated/wall,
 /area/surface/outpost/main/corridor)
@@ -19117,6 +20446,9 @@
 /area/surface/outpost/security)
 "Jx" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/civilian/sauna)
 "Jy" = (
@@ -19149,6 +20481,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "JA" = (
@@ -19162,6 +20495,9 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Right Wing - Teleporter";
 	dir = 5
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -19246,6 +20582,12 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/surface/outpost/wall)
+"JI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "JJ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -19283,6 +20625,9 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
 "JN" = (
@@ -19301,6 +20646,9 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -19371,6 +20719,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "JT" = (
@@ -19582,6 +20931,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 5
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Kp" = (
@@ -19590,6 +20942,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
+"Kq" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Kr" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Reactor Room External Access";
@@ -19665,7 +21023,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/flora/pottedplant/minitree,
+/obj/structure/sign/christmas/wreath,
+/obj/structure/flora/pottedplant/xmas,
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "KA" = (
@@ -19742,6 +21101,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/oracarpet,
 /area/surface/outpost/main/dorms/dorm_1)
+"KJ" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outpost/civilian/smes)
 "KK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -19770,6 +21135,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "KM" = (
@@ -19786,6 +21152,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "KN" = (
@@ -19878,6 +21245,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -20131,6 +21501,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "Ls" = (
@@ -20231,6 +21602,9 @@
 /obj/item/weapon/melee/umbrella{
 	color = "#7c0d0d"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_south)
 "LE" = (
@@ -20270,6 +21644,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
 "LH" = (
@@ -20349,6 +21724,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_one)
 "LN" = (
@@ -20375,6 +21751,7 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "LP" = (
@@ -20664,6 +22041,9 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "Mq" = (
@@ -20775,6 +22155,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "MB" = (
@@ -20862,6 +22245,12 @@
 	dir = 9
 	},
 /obj/structure/bed/chair,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "MJ" = (
@@ -20880,6 +22269,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -20925,6 +22317,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "MP" = (
@@ -20957,6 +22352,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "MQ" = (
@@ -20974,6 +22372,13 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"MS" = (
+/obj/effect/overlay/snow/floor/pointy,
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "MT" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced_phoron,
@@ -21143,6 +22548,9 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "Nk" = (
@@ -21168,14 +22576,29 @@
 	c_tag = "MO Right Wing - Hallway 3";
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"Nl" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 1
+	},
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Nm" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -21246,6 +22669,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"Nr" = (
+/obj/machinery/alarm{
+	dir = 8;
+	frequency = 1441;
+	pixel_x = 22
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Ns" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -21273,6 +22710,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "Nt" = (
@@ -21283,6 +22723,10 @@
 	dir = 8;
 	frequency = 1441;
 	pixel_x = 22
+	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -21296,6 +22740,9 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
@@ -21313,6 +22760,9 @@
 	dir = 9
 	},
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -21363,6 +22813,9 @@
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "NB" = (
@@ -21391,6 +22844,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_4)
 "NF" = (
@@ -21410,10 +22864,16 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "NG" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/right_three)
 "NH" = (
@@ -21517,6 +22977,10 @@
 "NP" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "NQ" = (
@@ -21527,6 +22991,12 @@
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/mining_main/exterior)
+"NS" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/path/plains)
 "NU" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -21683,6 +23153,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Oj" = (
@@ -21696,6 +23167,15 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/surface/outpost/engineering/reactor_smes)
+"Ok" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/right_one)
+"Ol" = (
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "Om" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -21726,6 +23206,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"On" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 6
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor/left_lower)
 "Oo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21750,6 +23248,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "Os" = (
@@ -21760,6 +23259,9 @@
 /area/surface/outpost/civilian/pool)
 "Ot" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -21785,6 +23287,9 @@
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -21846,6 +23351,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_south)
 "OA" = (
@@ -21885,6 +23393,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
@@ -22114,6 +23625,9 @@
 /area/surface/outpost/security/smes)
 "Pb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
 "Pc" = (
@@ -22228,6 +23742,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
 "Pm" = (
@@ -22236,6 +23751,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/janitor)
+"Pn" = (
+/obj/structure/event/present,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Po" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 6
@@ -22263,6 +23782,7 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Pu" = (
@@ -22369,6 +23889,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/engineering/reactor_smes)
+"PB" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "PC" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
@@ -22412,6 +23942,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gateway)
 "PF" = (
@@ -22449,6 +23980,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "PJ" = (
@@ -22463,6 +23997,9 @@
 /obj/structure/cable/blue{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
@@ -22529,6 +24066,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "PN" = (
@@ -22546,6 +24084,16 @@
 	dir = 1
 	},
 /area/surface/outside/ocean)
+"PP" = (
+/obj/structure/table/glass,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "PQ" = (
 /obj/machinery/pipedispenser,
 /turf/simulated/floor/plating,
@@ -22584,6 +24132,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "PT" = (
@@ -22603,6 +24154,7 @@
 /obj/item/weapon/melee/umbrella{
 	color = "#7c0d0d"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_north)
 "PU" = (
@@ -22697,8 +24249,19 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
+"Qc" = (
+/obj/effect/overlay/snow/floor/pointy,
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 4
+	},
+/obj/structure/event/present,
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Qd" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -22827,6 +24390,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
+"Qm" = (
+/obj/structure/loot_pile/christmas_tree{
+	desc = "A large Christmas tree heavily decorated in holiday ornaments, there are various present stacked up high. You spot your name on one of them, it's from Santaur!"
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outpost/civilian/smes)
 "Qn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -22927,6 +24497,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "QA" = (
@@ -22960,6 +24531,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "QD" = (
@@ -22972,6 +24546,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
@@ -23039,6 +24616,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/corridor/right_lower)
+"QK" = (
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outpost/civilian/smes)
 "QL" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -23054,6 +24635,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
 "QM" = (
@@ -23105,6 +24687,9 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO Right Wing - Hallway 1"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "QR" = (
@@ -23155,6 +24740,12 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -23235,6 +24826,9 @@
 	dir = 8
 	},
 /obj/machinery/recharge_station,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gateway)
 "Rc" = (
@@ -23292,6 +24886,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "Rg" = (
@@ -23320,6 +24917,7 @@
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "Rj" = (
@@ -23332,6 +24930,12 @@
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Rk" = (
@@ -23470,6 +25074,9 @@
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO - Landing North Airlock"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_north)
 "Ry" = (
@@ -23492,6 +25099,7 @@
 	c_tag = "MO Left Wing - Hallway 1";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "RA" = (
@@ -23499,6 +25107,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -23537,7 +25148,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
 "RD" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -23596,6 +25207,12 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
 "RI" = (
@@ -23651,6 +25268,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "RN" = (
@@ -23690,6 +25310,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/right_one)
+"RR" = (
+/obj/effect/overlay/snow/floor/pointy,
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "RS" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/backpack/parachute{
@@ -23726,9 +25353,22 @@
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating,
 /area/surface/outside/plains/outpost)
+"RU" = (
+/obj/item/weapon/stool/padded,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "RV" = (
 /obj/structure/table/glass,
 /obj/item/clothing/mask/snorkel,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "RW" = (
@@ -23745,6 +25385,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "RX" = (
@@ -23792,6 +25433,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Sb" = (
@@ -23826,6 +25470,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Se" = (
@@ -23843,6 +25490,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "Sf" = (
@@ -23874,6 +25522,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "Sj" = (
@@ -23888,6 +25537,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/shuttle/wall/voidcraft,
 /area/surface/outpost/wall)
+"Sl" = (
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outpost/civilian/smes)
 "Sm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23973,6 +25625,12 @@
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating,
 /area/surface/outside/plains/outpost)
+"Sw" = (
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outpost/civilian/smes)
 "Sx" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -23999,6 +25657,9 @@
 "SC" = (
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_two)
@@ -24076,6 +25737,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "SN" = (
@@ -24106,6 +25768,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
 "SO" = (
@@ -24164,6 +25827,9 @@
 	c_tag = "MO - Gateway";
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
 "SU" = (
@@ -24181,6 +25847,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/landing_south)
 "SX" = (
@@ -24207,6 +25874,9 @@
 	dir = 9
 	},
 /obj/structure/flora/pottedplant,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Tc" = (
@@ -24240,6 +25910,9 @@
 	dir = 6
 	},
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -24296,6 +25969,9 @@
 	dir = 9
 	},
 /obj/machinery/computer/timeclock/premade/east,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Tl" = (
@@ -24309,6 +25985,9 @@
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_north)
@@ -24533,6 +26212,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "TH" = (
@@ -24547,6 +26227,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"TK" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outpost/civilian/smes)
 "TL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -24594,6 +26280,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -24677,6 +26366,9 @@
 /obj/item/weapon/storage/belt/utility/full,
 /obj/effect/floor_decal/industrial/outline,
 /obj/item/clothing/head/welding,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/corridor/right_upper)
 "Ua" = (
@@ -24765,6 +26457,9 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -25109,6 +26804,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "UK" = (
@@ -25149,6 +26845,9 @@
 "UN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
@@ -25207,6 +26906,9 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
@@ -25349,6 +27051,12 @@
 /obj/item/weapon/extinguisher,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/bar)
+"Vi" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Vj" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -25361,6 +27069,13 @@
 /area/surface/outpost/main/corridor/right_lower)
 "Vk" = (
 /turf/simulated/wall/r_wall,
+/area/surface/outpost/mining_main/storage)
+"Vm" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/mining_main/storage)
 "Vn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
@@ -25384,6 +27099,9 @@
 	pixel_y = -26;
 	tag_exterior_door = "main8_airlock_exterior";
 	tag_interior_door = "main8_airlock_interior"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
@@ -25409,6 +27127,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -25462,6 +27183,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"Vw" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
 "Vy" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -25498,6 +27228,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_north)
 "VC" = (
@@ -25509,6 +27240,9 @@
 	},
 /obj/machinery/camera/network/main_outpost{
 	c_tag = "MO - Landing South Airlock Access";
+	dir = 1
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -25671,6 +27405,13 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_two)
+"VS" = (
+/obj/item/weapon/stool/padded,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "VT" = (
 /obj/structure/table/steel,
 /obj/random/junk,
@@ -25734,6 +27475,12 @@
 	c_tag = "CO - Pool 1";
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "VZ" = (
@@ -25755,6 +27502,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -25835,6 +27585,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
 "Wj" = (
@@ -25849,6 +27600,10 @@
 /area/surface/outpost/main/laundry)
 "Wk" = (
 /obj/structure/closet/secure_closet/personal,
+/obj/structure/sign/christmas/lights,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "Wl" = (
@@ -25891,6 +27646,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_three)
 "Wp" = (
@@ -25942,6 +27698,23 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"Wu" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/left_three)
 "Wv" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment,
@@ -25966,6 +27739,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Wx" = (
@@ -25997,6 +27771,9 @@
 	},
 /obj/machinery/camera/network/mining{
 	c_tag = "PO - Airlock Access 2";
+	dir = 1
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -26055,7 +27832,10 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
 "WG" = (
-/obj/structure/flora/pottedplant/fern,
+/obj/structure/flora/pottedplant/xmas,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "WH" = (
@@ -26078,6 +27858,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "WI" = (
@@ -26093,6 +27876,9 @@
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/monitoring)
@@ -26165,6 +27951,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
 "WP" = (
@@ -26220,6 +28009,22 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/restroom)
+"WU" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/airlock/landing_south)
 "WV" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -26266,6 +28071,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
 "Xb" = (
@@ -26278,6 +28086,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -26401,6 +28212,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -25
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
 "Xm" = (
@@ -26466,6 +28280,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Xt" = (
@@ -26552,6 +28367,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "XA" = (
@@ -26603,6 +28421,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -26762,6 +28583,7 @@
 	dir = 6
 	},
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "XV" = (
@@ -26804,6 +28626,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "XX" = (
@@ -26821,6 +28646,12 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/monitoring)
@@ -26879,6 +28710,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
 "Yf" = (
@@ -26895,6 +28727,10 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gateway)
 "Yg" = (
@@ -26930,6 +28766,7 @@
 	dir = 6
 	},
 /obj/machinery/light,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Yi" = (
@@ -26951,6 +28788,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 6
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "Yl" = (
@@ -26969,6 +28809,9 @@
 /obj/item/bodybag/cryobag,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/effect/floor_decal/industrial/outline,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/corridor/right_upper)
 "Yn" = (
@@ -27026,6 +28869,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "Yr" = (
@@ -27033,6 +28879,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
@@ -27080,6 +28929,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Yu" = (
@@ -27090,6 +28942,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_one)
 "Yw" = (
@@ -27199,6 +29052,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "YM" = (
@@ -27263,6 +29119,9 @@
 	pixel_x = 22;
 	pixel_y = -10
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "YS" = (
@@ -27315,6 +29174,9 @@
 /area/surface/outpost/main/dorms/dorm_2)
 "YX" = (
 /obj/machinery/space_heater,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
 "YZ" = (
@@ -27330,10 +29192,14 @@
 	c_tag = "MO Left Wing - Hallway 1";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Zb" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/civilian/fishing)
 "Zc" = (
@@ -27354,6 +29220,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_right)
+"Ze" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/civilian/pool)
 "Zf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27365,6 +29236,7 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/white/bordercorner,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "Zg" = (
@@ -27397,6 +29269,9 @@
 /area/surface/outpost/main/corridor/right_upper)
 "Zj" = (
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/mining_main/storage)
 "Zk" = (
@@ -27471,6 +29346,9 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "Zo" = (
@@ -27534,12 +29412,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"Zs" = (
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 1
+	},
+/obj/effect/overlay/snow/floor/pointy{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/civilian/smes)
 "Zt" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "Zu" = (
@@ -27560,6 +29451,10 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gateway)
 "Zx" = (
@@ -27590,8 +29485,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
-/area/surface/outside/plains/outpost)
+/area/surface/outpost/main/airlock/right_three)
 "Zz" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/corner/white{
@@ -27615,6 +29511,9 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -27682,6 +29581,13 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/pool)
+"ZH" = (
+/obj/effect/overlay/snow/floor,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/airlock/right_two)
 "ZI" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -27868,6 +29774,9 @@
 "ZZ" = (
 /obj/machinery/newscaster{
 	pixel_x = -30
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
@@ -48855,7 +50764,7 @@ Dn
 Pl
 QD
 Je
-Xv
+Wu
 gx
 GE
 gx
@@ -51392,7 +53301,7 @@ EB
 ha
 WL
 OS
-lc
+pl
 lc
 OS
 lc
@@ -51936,7 +53845,7 @@ Ri
 YW
 MI
 Cs
-fC
+BS
 Ta
 pz
 YW
@@ -52187,11 +54096,11 @@ aF
 aF
 aF
 aF
-aF
+On
 wS
 EN
 xJ
-aF
+On
 aF
 aF
 aF
@@ -52428,7 +54337,7 @@ gx
 ha
 gx
 gx
-UH
+zK
 Sc
 rE
 oy
@@ -53730,7 +55639,7 @@ Bj
 IQ
 da
 yN
-YU
+Ay
 Cn
 RJ
 SB
@@ -54744,7 +56653,7 @@ XQ
 qx
 Wy
 IE
-Ho
+hY
 gx
 gx
 ha
@@ -55012,7 +56921,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 ha
 ha
@@ -55295,7 +57204,7 @@ Lo
 Lo
 Lo
 vq
-NB
+be
 NB
 vq
 hH
@@ -56309,7 +58218,7 @@ ha
 Bj
 oM
 kO
-Hm
+Es
 Dt
 oM
 ha
@@ -56319,7 +58228,7 @@ ha
 LW
 ha
 ha
-ha
+bU
 ha
 ha
 ha
@@ -57380,7 +59289,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 ha
 ha
@@ -58101,7 +60010,7 @@ gx
 gx
 gx
 ha
-ha
+bU
 gu
 ha
 ha
@@ -58128,7 +60037,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 ha
 gx
@@ -58864,7 +60773,7 @@ yy
 yy
 yy
 vo
-YA
+Vm
 YA
 CQ
 ur
@@ -59110,7 +61019,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 wL
 kV
@@ -59147,7 +61056,7 @@ PC
 NJ
 oM
 CC
-VW
+zG
 jF
 oM
 ha
@@ -59431,7 +61340,7 @@ ha
 gx
 gx
 gx
-Hu
+xX
 Nn
 BH
 mG
@@ -59656,21 +61565,21 @@ dv
 Gq
 eD
 Db
-TM
-pH
-NH
+Ez
+BY
+uz
 Db
 ht
 RE
 ad
-fj
+lH
 GF
 zV
 HA
-Hm
-TM
-pH
-NH
+GB
+Ez
+BY
+uz
 lF
 Ir
 Oy
@@ -59912,24 +61821,24 @@ Qt
 Qt
 FE
 Gq
+Kq
 Hm
 Hm
 Hm
 Hm
 Hm
-Hm
-Hm
+ds
 Jq
 nr
 VH
 iO
 Jq
-Hm
+Kq
 Hm
 TM
 pH
 NH
-Hm
+ds
 Ir
 UN
 GM
@@ -60161,9 +62070,9 @@ gx
 gx
 RX
 ID
-yr
-It
-nM
+Fb
+gq
+ln
 TT
 mt
 UK
@@ -60196,7 +62105,7 @@ XL
 Jo
 gN
 MA
-kp
+WU
 Cb
 Sz
 gx
@@ -60417,7 +62326,7 @@ gx
 gx
 gx
 gx
-RX
+Al
 vx
 BI
 Cd
@@ -60434,13 +62343,13 @@ VM
 VM
 VM
 VM
-dH
+lv
 FW
-VM
+JI
 sF
 wg
 FW
-dH
+PB
 VM
 VM
 VM
@@ -60456,7 +62365,7 @@ SW
 tp
 VC
 fT
-Sz
+Eq
 gx
 gx
 gx
@@ -60710,8 +62619,8 @@ at
 at
 Mt
 Jo
-gN
-MA
+nn
+aC
 kp
 Cb
 Sz
@@ -60944,24 +62853,24 @@ Qt
 Qt
 VB
 Gq
+Kq
 Hm
 Hm
 Hm
 Hm
 Hm
-Hm
-Hm
+ds
 Jq
 CU
 VH
 fk
 Jq
-Hm
+Kq
 AA
 AA
 AA
 Hm
-Hm
+ds
 Ir
 Xa
 GM
@@ -61202,11 +63111,11 @@ zX
 sM
 PT
 Gq
-BV
+Nr
 xd
-TM
-pH
-NH
+zp
+bF
+vQ
 ET
 Bs
 zV
@@ -61727,7 +63636,7 @@ ha
 ha
 oM
 XD
-VW
+Eh
 Yh
 oM
 ha
@@ -61755,7 +63664,7 @@ gx
 gx
 Qp
 WV
-se
+RU
 FC
 OL
 OL
@@ -61960,7 +63869,7 @@ ha
 ha
 ha
 VF
-HP
+ZH
 HP
 hW
 LX
@@ -62271,7 +64180,7 @@ SU
 SU
 aY
 FR
-se
+VS
 QR
 Pf
 Ya
@@ -62280,7 +64189,7 @@ Ya
 Ya
 aW
 xn
-se
+wz
 FR
 ha
 ha
@@ -62487,7 +64396,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 ha
 ha
@@ -62495,10 +64404,10 @@ ha
 ha
 ha
 ux
-Hm
+Vw
 JB
-Hm
-pb
+GB
+mp
 uk
 Hm
 VW
@@ -62517,7 +64426,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 ha
 ha
@@ -62538,7 +64447,7 @@ qG
 qG
 JE
 xn
-OL
+Ol
 FR
 FR
 ha
@@ -62797,7 +64706,7 @@ qG
 JE
 xn
 OL
-Wk
+uy
 ZG
 ha
 ha
@@ -63044,7 +64953,7 @@ gx
 gx
 gx
 WV
-se
+VS
 OL
 QR
 nS
@@ -63055,7 +64964,7 @@ cT
 BU
 xn
 OL
-Wk
+Ze
 ZG
 ha
 ha
@@ -63527,9 +65436,9 @@ ha
 ha
 ha
 ux
-Hm
+pq
 BV
-Hm
+rX
 ZB
 Hm
 Hm
@@ -63548,19 +65457,19 @@ ha
 ha
 ha
 ha
+oK
 ha
 ha
 ha
 ha
-ha
-ha
+Sw
 ha
 gx
 gx
 gx
 gx
 WV
-se
+VS
 OL
 QR
 nS
@@ -63571,7 +65480,7 @@ cT
 BU
 xn
 OL
-Wk
+Ze
 ZG
 ha
 ha
@@ -63805,20 +65714,20 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+zy
+mg
+KJ
+xj
+Nl
+QK
+mg
+nB
 gx
 gx
 gx
 gx
 WV
-eq
+PP
 se
 QR
 VK
@@ -64064,12 +65973,12 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-gu
-ha
-ha
+CS
+iP
+Vi
+Vi
+Nl
+CS
 ha
 gx
 gx
@@ -64086,7 +65995,7 @@ cT
 cT
 BU
 xn
-OL
+Ol
 FR
 FR
 ha
@@ -64322,20 +66231,20 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
+Sl
+iB
+Fw
+ey
+Pn
+Zs
 gu
-ha
-ha
-ha
 ha
 gx
 gx
 gx
 ha
 FR
-se
+VS
 QR
 Os
 Uq
@@ -64344,7 +66253,7 @@ Uq
 Uq
 ij
 xn
-se
+wz
 FR
 ha
 ha
@@ -64556,7 +66465,7 @@ ha
 ha
 ha
 ha
-ha
+bU
 ha
 ha
 ha
@@ -64565,7 +66474,7 @@ ha
 ha
 oM
 eJ
-Hm
+bC
 oQ
 oM
 ha
@@ -64580,14 +66489,14 @@ ha
 ha
 ha
 ha
-ha
-ha
+MS
+sZ
+TK
+Qm
+Go
+Sl
 ha
 gu
-ha
-ha
-ha
-ha
 gx
 gx
 gx
@@ -64838,12 +66747,12 @@ ha
 ha
 ha
 ha
-ha
-ha
-gu
-ha
-ha
-ha
+Qc
+sZ
+Ab
+xg
+sZ
+Zs
 ha
 gx
 gx
@@ -64860,7 +66769,7 @@ OL
 OL
 OL
 HK
-se
+jC
 ZG
 ha
 ha
@@ -65055,7 +66964,7 @@ ZR
 CG
 tg
 pd
-GC
+Cq
 af
 qI
 WQ
@@ -65096,12 +67005,12 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
+Sw
+RR
+Cj
+iv
+eZ
+Sw
 ha
 gx
 gx
@@ -65340,7 +67249,7 @@ QJ
 Ut
 kd
 kF
-Sp
+AS
 iV
 ha
 ha
@@ -65353,14 +67262,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-gx
+zy
+mg
+KJ
+zU
+Jp
+QK
+mg
+NS
 gx
 gx
 gx
@@ -65598,7 +67507,7 @@ QJ
 ay
 kd
 TL
-Sp
+AS
 iV
 ha
 ha
@@ -65608,16 +67517,16 @@ ha
 ha
 ha
 ha
+bU
+ha
+ha
+ha
+qS
 ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
+qS
 gx
 gx
 gx
@@ -65854,9 +67763,9 @@ YO
 YO
 YO
 vb
-kd
+oz
 yE
-Sp
+AS
 iV
 ha
 ha
@@ -66372,7 +68281,7 @@ LZ
 vb
 MJ
 GU
-Sp
+AS
 iV
 ha
 ha
@@ -66630,7 +68539,7 @@ aJ
 vb
 Gw
 ja
-Sp
+AS
 iV
 ha
 ha
@@ -66858,12 +68767,12 @@ Ku
 eE
 ST
 Xl
-mO
+Da
 Rb
 Zv
 Ky
-Hk
-gZ
+tS
+gt
 qT
 qT
 WQ
@@ -67171,7 +69080,7 @@ gx
 gx
 gx
 gx
-pS
+EV
 iZ
 hs
 cf
@@ -67386,7 +69295,7 @@ zr
 Jt
 Om
 uC
-zr
+xa
 Nk
 sE
 tW
@@ -67401,14 +69310,14 @@ BW
 sJ
 sv
 lK
-Zx
+sU
 Jl
 ll
 BM
 Zx
 Zx
 Zx
-Zx
+sU
 xs
 LE
 my
@@ -67677,7 +69586,7 @@ dF
 Yv
 OD
 ZI
-fb
+Ok
 gx
 gx
 gx
@@ -67897,7 +69806,7 @@ wl
 Wg
 SX
 EM
-UF
+DO
 UF
 UF
 UF
@@ -67905,7 +69814,7 @@ UF
 ez
 tP
 Vv
-UF
+DO
 NA
 gO
 Tk
@@ -71248,9 +73157,9 @@ ha
 ha
 uh
 uh
-DI
+vl
 rg
-At
+uh
 ha
 ha
 ha
@@ -71508,7 +73417,7 @@ iI
 NG
 CZ
 Zy
-uM
+yu
 bT
 wJ
 wJ
@@ -71762,11 +73671,11 @@ ha
 ha
 ha
 ha
-Io
+iI
 yF
 fH
 ig
-uM
+yu
 ha
 gu
 gu
@@ -72020,11 +73929,11 @@ pC
 pC
 pC
 ha
-At
-At
+uh
+uh
 DX
 RC
-At
+uh
 ha
 zg
 zg
@@ -72280,7 +74189,7 @@ pC
 ha
 ha
 lY
-yy
+oq
 yy
 lY
 zg

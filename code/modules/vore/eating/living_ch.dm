@@ -35,6 +35,8 @@
 		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
 		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
 		vore_fullness += new_fullness[belly_class]
+	if(vore_fullness < 0)
+		vore_fullness = 0
 	vore_fullness = min(vore_capacity, vore_fullness)
 
 

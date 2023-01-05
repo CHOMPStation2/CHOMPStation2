@@ -1135,10 +1135,10 @@
 /area/centcom/medical)
 "dV" = (
 /obj/structure/table/reinforced,
-/obj/item/device/healthanalyzer/advanced,
-/obj/item/device/healthanalyzer/advanced,
-/obj/item/device/healthanalyzer/advanced,
-/obj/item/device/healthanalyzer/advanced,
+/obj/item/device/healthanalyzer/phasic,
+/obj/item/device/healthanalyzer/phasic,
+/obj/item/device/healthanalyzer/phasic,
+/obj/item/device/healthanalyzer/phasic,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/specops)
 "dX" = (
@@ -2562,7 +2562,7 @@
 "iY" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/space;
-	base_turf = /turf/simulated/floor/reinforced/virgo3c;
+	base_turf = /turf/simulated/floor/reinforced;
 	landmark_tag = "supply_cc";
 	name = "Centcom Supply Depot"
 	},
@@ -7683,7 +7683,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
-/obj/item/device/healthanalyzer/advanced,
+/obj/item/device/healthanalyzer/phasic,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "zv" = (
@@ -12424,7 +12424,7 @@
 	pixel_x = 4;
 	pixel_y = 2
 	},
-/obj/item/device/healthanalyzer/advanced,
+/obj/item/device/healthanalyzer/phasic,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "Pb" = (
@@ -13860,7 +13860,7 @@
 /area/centcom/command)
 "Tw" = (
 /obj/structure/table/glass,
-/obj/item/device/healthanalyzer/advanced,
+/obj/item/device/healthanalyzer/phasic,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "Tx" = (

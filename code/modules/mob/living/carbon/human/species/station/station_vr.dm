@@ -86,7 +86,7 @@
 	name_language = LANGUAGE_SPACER
 	species_language = LANGUAGE_SPACER
 	color_mult = 1
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	min_age = 18
 	max_age = 110
@@ -347,7 +347,7 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	reagent_tag = null
 	allergens = null
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
@@ -662,7 +662,6 @@
 	icobase = 'icons/mob/human_races/r_altevian.dmi'
 	deform = 'icons/mob/human_races/r_def_altevian.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
-	language = LANGUAGE_TAVAN
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TAVAN)
 	species_language = LANGUAGE_TAVAN
