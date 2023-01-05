@@ -3,7 +3,7 @@
 	name = "sand"
 	desc = "Salty and gritty."
 	icon = 'modular_chomp/icons/turf/desert_tiles.dmi'
-	modular_icon = TRUE // This must be true to add edges from our .dmi files.
+	icon_edge = 'modular_chomp/icons/turf/outdoors_edge.dmi'
 	can_dig = FALSE
 
 /turf/simulated/floor/outdoors/desert_planet/sand
