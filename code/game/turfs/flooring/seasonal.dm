@@ -212,7 +212,7 @@ var/world_time_season
 	tree_chance = 0
 	animal_chance = 0
 	snow_chance = 0
-turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow
 	tree_chance = 0
 	animal_chance = 0
 	snow_chance = 1
