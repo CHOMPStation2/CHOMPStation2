@@ -452,7 +452,8 @@
 /area/groundbase/science/rnd)
 "bh" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "bi" = (
@@ -517,7 +518,11 @@
 /obj/structure/fence{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -981,7 +986,11 @@
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room4)
 "cK" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/unexplored/outdoors)
 "cM" = (
 /obj/structure/cable/yellow{
@@ -1244,7 +1253,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/rnd)
 "dz" = (
@@ -1338,7 +1348,8 @@
 	name = "Privacy Shutters"
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/rnd)
 "dS" = (
@@ -1392,7 +1403,11 @@
 /area/groundbase/civilian/chapel)
 "dY" = (
 /obj/structure/fence/door,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "ea" = (
 /obj/structure/stairs/spawner/west,
@@ -1833,7 +1848,8 @@
 /area/groundbase/dorms)
 "fp" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/ne)
 "fq" = (
@@ -1897,7 +1913,8 @@
 /area/groundbase/civilian/kitchen)
 "fD" = (
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/nw)
 "fE" = (
@@ -2676,7 +2693,8 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "hQ" = (
@@ -2797,7 +2815,8 @@
 /area/rnd/xenobiology)
 "if" = (
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/command/hop)
 "ih" = (
@@ -2905,7 +2924,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/chapel)
 "iw" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/level2/ne)
 "ix" = (
 /obj/structure/railing/grey,
@@ -2995,12 +3018,17 @@
 =======
 "iH" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/westspur)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "iI" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "iJ" = (
 /obj/machinery/photocopier,
@@ -3447,7 +3475,8 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "jS" = (
@@ -3547,7 +3576,8 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "kf" = (
@@ -3787,7 +3817,8 @@
 /area/groundbase/science/rd)
 "kU" = (
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "kV" = (
@@ -3828,7 +3859,8 @@
 	req_access = list(7)
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/circuits)
 "la" = (
@@ -4425,7 +4457,8 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "mL" = (
@@ -4516,7 +4549,8 @@
 	req_access = list(7)
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/circuits)
 "nd" = (
@@ -6681,7 +6715,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/glass/reinforced{
+	outdoors = 1
+	},
 /area/groundbase/level2/eastspur)
 "tL" = (
 /obj/structure/cable/yellow{
@@ -6707,7 +6743,8 @@
 /area/groundbase/level2/se)
 "tO" = (
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/nw)
 "tP" = (
@@ -7120,7 +7157,11 @@
 /area/groundbase/civilian/kitchen)
 "uX" = (
 /obj/structure/fence,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "uY" = (
 /obj/machinery/light,
@@ -7598,7 +7639,8 @@
 	req_one_access = null
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/xenobot)
 "wy" = (
@@ -8195,7 +8237,8 @@
 "yo" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/command/bridge)
 "yp" = (
@@ -8524,7 +8567,9 @@
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/triage)
 "zx" = (
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/glass/reinforced{
+	outdoors = 1
+	},
 /area/groundbase/level2/eastspur)
 "zz" = (
 /obj/machinery/vending/wardrobe/janidrobe,
@@ -8654,7 +8699,8 @@
 	name = "Privacy Shutters"
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/rnd)
 "zL" = (
@@ -8809,7 +8855,8 @@
 "Am" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/ne)
 "An" = (
@@ -9643,7 +9690,8 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/xenobot)
 "CG" = (
@@ -9671,7 +9719,8 @@
 /area/medical/virology)
 "CK" = (
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/command/bridge)
 "CL" = (
@@ -10009,7 +10058,8 @@
 	name = "Privacy Shutters"
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/robotics)
 "DF" = (
@@ -10583,7 +10633,11 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenohall)
 "Fl" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/level2/sw)
 "Fm" = (
 /turf/simulated/floor/tiled,
@@ -10646,7 +10700,11 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/science/picnic)
 "Fv" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/science/picnic)
 "Fw" = (
 /turf/simulated/floor/outdoors/newdirt{
@@ -10828,7 +10886,11 @@
 /area/groundbase/civilian/kitchen)
 "Gd" = (
 /mob/living/simple_mob/animal/passive/chicken,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "Ge" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
@@ -11261,7 +11323,8 @@
 /area/groundbase/civilian/hydroponics/out)
 "Hj" = (
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/ne)
 "Hk" = (
@@ -11941,7 +12004,11 @@
 /turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level2/nw)
 "Jc" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/level2/nw)
 "Jd" = (
 /obj/machinery/button/remote/blast_door{
@@ -12048,7 +12115,8 @@
 /area/groundbase/science/picnic)
 "Jr" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/sw)
 "Js" = (
@@ -12056,7 +12124,8 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "Jt" = (
@@ -12080,7 +12149,8 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/ne)
 "Jy" = (
@@ -12563,7 +12633,8 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/command/bridge)
 "KL" = (
@@ -13343,7 +13414,8 @@
 /area/groundbase/science/rnd)
 "MS" = (
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/ne)
 "MU" = (
@@ -13358,7 +13430,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 >>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
@@ -13457,7 +13530,8 @@
 /area/groundbase/command/hop)
 "Nf" = (
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/westspur)
 "Ni" = (
@@ -13537,7 +13611,8 @@
 /area/groundbase/medical/lobby)
 "Nq" = (
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "Ns" = (
@@ -13671,7 +13746,8 @@
 "NO" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/se)
 "NP" = (
@@ -14007,7 +14083,8 @@
 /area/medical/virology)
 "OI" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/northspur)
 "OJ" = (
@@ -14589,7 +14666,11 @@
 /obj/effect/landmark{
 	name = "droppod_landing"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/unexplored/outdoors)
 "Qv" = (
 /obj/machinery/vending/wardrobe/cargodrobe,
@@ -14654,7 +14735,8 @@
 /area/groundbase/science/xenobot/storage)
 "QD" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/eastspur)
 "QE" = (
@@ -14966,7 +15048,11 @@
 /area/groundbase/medical/lobby)
 "Rp" = (
 /mob/living/simple_mob/animal/passive/cow,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "Rq" = (
 /obj/machinery/door/firedoor/glass,
@@ -15011,7 +15097,8 @@
 /area/groundbase/civilian/chapel)
 "Ru" = (
 /turf/simulated/floor/reinforced{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/sw)
 "Rv" = (
@@ -15366,7 +15453,11 @@
 /obj/structure/fence/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "Su" = (
 /obj/machinery/door/firedoor/glass,
@@ -16076,11 +16167,16 @@
 /area/groundbase/civilian/hydroponics)
 "UD" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/unexplored/outdoors)
 "UE" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/level2/se)
 "UF" = (
 /obj/structure/sign/directions/bar{
@@ -16406,7 +16502,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "VA" = (
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/glass/reinforced{
+	outdoors = 1
+	},
 /area/groundbase/level2/westspur)
 "VB" = (
 /obj/machinery/door/window/brigdoor/westleft{
@@ -16423,7 +16521,8 @@
 	name = "Privacy Shutters"
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/robotics)
 "VC" = (
@@ -17126,7 +17225,8 @@
 	dir = 8
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/xenobot)
 "XJ" = (
@@ -17294,7 +17394,8 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/command/bridge)
 "Yj" = (
@@ -17332,7 +17433,8 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/xenobot)
 "Yp" = (
@@ -17446,7 +17548,8 @@
 /area/groundbase/science/xenobot/storage)
 "YM" = (
 /turf/simulated/floor/tiled{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level2/sw)
 "YN" = (
@@ -17497,7 +17600,11 @@
 /obj/structure/fence/corner{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/civilian/hydroponics/out)
 "YX" = (
 /obj/structure/table/steel,
@@ -17787,7 +17894,8 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/science/xenobot)
 "ZO" = (

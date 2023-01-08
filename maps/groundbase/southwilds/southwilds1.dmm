@@ -12,7 +12,7 @@
 /area/submap/groundbase/wilderness/south)
 "b" = (
 /obj/effect/landmark/wildlife/forest,
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/south/unexplored)
 >>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "c" = (
@@ -26,12 +26,13 @@
 	},
 /area/submap/groundbase/wilderness/south)
 "c" = (
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/seasonal,
 /area/submap/groundbase/wilderness/south)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "d" = (
 /turf/simulated/floor/beach/sand{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 <<<<<<< HEAD
 /area/groundbase/wilderness/south)
@@ -43,11 +44,11 @@
 /area/submap/groundbase/wilderness/south/unexplored)
 "f" = (
 /obj/effect/landmark/wildlife/water,
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/seasonal,
 /area/submap/groundbase/wilderness/south)
 "g" = (
 /obj/effect/landmark/wildlife/water,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/seasonal,
 /area/submap/groundbase/wilderness/south)
 >>>>>>> 9faf154bbb... Merge pull request #14294 from Heroman3003/roaming-wildlife
 "p" = (
@@ -68,7 +69,11 @@
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/submap/groundbase/wilderness/south)
 "y" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/south)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "B" = (
@@ -76,16 +81,21 @@
 	dir = 1
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/south)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "C" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
 	},
+<<<<<<< HEAD
 <<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
@@ -115,9 +125,12 @@
 /turf/simulated/mineral/ignore_cavegen/virgo3c,
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/south)
 "F" = (
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/seasonal,
 /area/submap/groundbase/wilderness/south)
 "H" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
@@ -130,7 +143,11 @@
 /area/submap/groundbase/wilderness/south)
 "K" = (
 /obj/effect/map_effect/portal/line/side_b,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/south)
 "N" = (
 /turf/simulated/mineral/cave,
@@ -143,6 +160,7 @@
 "S" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/south,
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/south)
 "Y" = (
@@ -153,6 +171,12 @@
 /area/submap/groundbase/wilderness/south)
 "Y" = (
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/south)
+"Y" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/south/unexplored)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 
@@ -7826,7 +7850,7 @@ a
 "}
 (55,1,1) = {"
 S
-y
+p
 p
 p
 H
@@ -8394,7 +8418,7 @@ a
 "}
 (59,1,1) = {"
 K
-y
+p
 p
 p
 Y

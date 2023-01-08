@@ -36,11 +36,11 @@
 /area/submap/groundbase/wilderness/west/unexplored)
 "af" = (
 /obj/effect/landmark/wildlife/water,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/seasonal,
 /area/submap/groundbase/wilderness/west/unexplored)
 "ag" = (
 /obj/effect/landmark/wildlife/forest,
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/west/unexplored)
 "am" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -772,6 +772,7 @@
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/science/outpost/toxins_mixing)
+<<<<<<< HEAD
 "iV" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 4
@@ -783,6 +784,8 @@
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/submap/groundbase/wilderness/west)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
+=======
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 "jb" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/atmospherics/portables_connector{
@@ -1030,10 +1033,14 @@
 /area/groundbase/science/outpost/anomaly_testing)
 "kQ" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/west)
 "kR" = (
 /obj/structure/table/steel,
@@ -2000,10 +2007,14 @@
 	dir = 8
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/west)
 "ui" = (
 /obj/machinery/door/firedoor/glass,
@@ -2143,6 +2154,7 @@
 	},
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
+<<<<<<< HEAD
 "vw" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
@@ -2153,6 +2165,14 @@
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/submap/groundbase/wilderness/west)
+=======
+"vs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/wall/shull,
+/area/shuttle/axolotl)
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 "vx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -2375,10 +2395,14 @@
 	dir = 4
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west)
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/west)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "xv" = (
@@ -3038,12 +3062,16 @@
 /area/groundbase/science/outpost/anomaly_testing)
 "DA" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/water/virgo3c{
 	outdoors = 0
 	},
 /area/groundbase/wilderness/west/unexplored)
 =======
 /turf/simulated/floor/water,
+=======
+/turf/simulated/floor/water/seasonal,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/west/unexplored)
 "DB" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -4859,10 +4887,14 @@
 /area/groundbase/science/outpost/substation)
 "YK" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/west/unexplored)
 =======
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/wilderness/west/unexplored)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "YL" = (
@@ -5046,8 +5078,8 @@ lO
 xr
 KF
 KF
-iV
-iV
+KF
+KF
 lO
 lO
 lO
@@ -5185,11 +5217,11 @@ fM
 fM
 fM
 YK
-YK
 nr
 nr
 nr
-YK
+nr
+nr
 YK
 fM
 fM
@@ -5327,7 +5359,7 @@ fM
 fM
 fM
 YK
-YK
+nr
 nr
 nr
 nr
@@ -24497,11 +24529,11 @@ fM
 fM
 YK
 YK
-YK
+nr
 nr
 XS
 nr
-YK
+nr
 YK
 fB
 YK
@@ -24639,11 +24671,11 @@ fM
 fM
 fM
 YK
-YK
+nr
 nr
 XS
 nr
-YK
+nr
 YK
 CL
 fM
@@ -24781,7 +24813,7 @@ lO
 lO
 lO
 lO
-vw
+lE
 lE
 Kt
 lE

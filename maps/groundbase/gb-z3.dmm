@@ -21,7 +21,8 @@ lol
 	dir = 8
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 "ac" = (
@@ -279,7 +280,9 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/landmark/start/chemist,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "dW" = (
 /turf/simulated/floor/tiled,
@@ -293,7 +296,8 @@ lol
 /area/shuttle/groundbase/exploration)
 "ed" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw)
 "ei" = (
@@ -351,7 +355,9 @@ lol
 "fu" = (
 /obj/structure/table/bench/marble,
 /obj/effect/landmark/start/chemist,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "fy" = (
 /obj/structure/bed/chair/backed_red{
@@ -398,7 +404,9 @@ lol
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "gc" = (
 /obj/machinery/light/floortube,
@@ -410,7 +418,9 @@ lol
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 <<<<<<< HEAD
 "gt" = (
@@ -422,7 +432,8 @@ lol
 	dir = 4
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
@@ -516,7 +527,9 @@ lol
 "hN" = (
 /obj/structure/table/bench/marble,
 /obj/effect/landmark/start/medical,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "hO" = (
 /obj/effect/landmark/map_data/groundbase,
@@ -688,7 +701,9 @@ lol
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "kB" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
@@ -713,7 +728,8 @@ lol
 /area/groundbase/medical/paramedic)
 "kU" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/sw/open)
 "lk" = (
@@ -761,7 +777,9 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "mr" = (
 /turf/unsimulated/wall/planetary/normal{
@@ -889,7 +907,11 @@ lol
 /area/groundbase/medical/paramedic)
 "ok" = (
 /obj/random/mob/bird,
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/unexplored/outdoors)
 "om" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1099,7 +1121,9 @@ lol
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "rb" = (
 <<<<<<< HEAD
@@ -1213,7 +1237,8 @@ lol
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "sP" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/ne)
 "sQ" = (
@@ -1338,7 +1363,8 @@ lol
 /area/groundbase/exploration/equipment)
 "vs" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/unexplored/outdoors)
 "vu" = (
@@ -1484,7 +1510,9 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "xs" = (
 /obj/structure/railing/grey,
@@ -1537,7 +1565,9 @@ lol
 /area/groundbase/level3/nw)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "xX" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "ym" = (
 /obj/structure/cable/yellow{
@@ -1561,7 +1591,8 @@ lol
 /area/groundbase/medical/paramedic)
 "yA" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/se/open)
 "yQ" = (
@@ -1576,7 +1607,9 @@ lol
 	dir = 1
 	},
 /obj/random/vendorall,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "zb" = (
 /obj/structure/cable/yellow{
@@ -1632,7 +1665,9 @@ lol
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "zK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1765,7 +1800,9 @@ lol
 	dir = 1
 	},
 /obj/effect/landmark/start/cmo,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "BE" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1779,7 +1816,8 @@ lol
 "BM" = (
 /obj/structure/catwalk,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 "Cc" = (
@@ -2044,8 +2082,13 @@ lol
 	dir = 4
 =======
 /turf/simulated/floor{
+<<<<<<< HEAD
 	edge_blending_priority = -1
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
+=======
+	edge_blending_priority = -1;
+	outdoors = 1
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 	},
 /obj/machinery/door/airlock{
 	name = "Pilots Office";
@@ -2111,7 +2154,9 @@ lol
 	dir = 1
 	},
 /obj/machinery/vending/coffee,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Gx" = (
 /obj/machinery/photocopier,
@@ -2149,12 +2194,15 @@ lol
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Hx" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/medical/patio)
 "HE" = (
@@ -2171,7 +2219,9 @@ lol
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "HP" = (
 /turf/simulated/wall,
@@ -2280,7 +2330,8 @@ lol
 "IH" = (
 /obj/effect/shuttle_landmark/premade/groundbase,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 "IS" = (
@@ -2288,7 +2339,9 @@ lol
 /area/groundbase/level3/ne/open)
 "Jf" = (
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Jh" = (
 /obj/structure/cable/yellow{
@@ -2448,7 +2501,9 @@ lol
 /obj/machinery/camera/network/medbay{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "MM" = (
 /obj/structure/closet/secure_closet/personal/patient,
@@ -2588,6 +2643,7 @@ lol
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level3/nw)
 <<<<<<< HEAD
@@ -2602,6 +2658,12 @@ lol
 /obj/item/weapon/storage/box/nifsofts_pilot,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/pilot)
+=======
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
+/area/groundbase/medical/patio)
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 "OT" = (
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -2611,7 +2673,9 @@ lol
 /obj/item/device/radio/intercom{
 	pixel_y = -24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Pf" = (
 /obj/machinery/mineral/equipment_vendor/survey,
@@ -2664,7 +2728,9 @@ lol
 /obj/machinery/camera/network/medbay{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "PV" = (
 /obj/structure/cable/yellow{
@@ -2678,10 +2744,16 @@ lol
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Qa" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/level3/nw)
 "Qe" = (
 /obj/structure/table/bench/marble,
@@ -2713,7 +2785,8 @@ lol
 	dir = 6
 	},
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
@@ -2745,7 +2818,8 @@ lol
 /area/groundbase/medical/uhallway)
 "QD" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 "QO" = (
@@ -2761,7 +2835,9 @@ lol
 /area/groundbase/medical/cmo)
 "Rh" = (
 /obj/structure/table/reinforced,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Ri" = (
 /obj/item/modular_computer/console/preset/command,
@@ -2964,7 +3040,11 @@ lol
 /obj/effect/landmark{
 	name = "droppod_landing"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/unexplored/outdoors)
 "Uf" = (
 /obj/structure/cable/yellow{
@@ -3126,7 +3206,11 @@ lol
 /turf/simulated/floor/carpet,
 /area/groundbase/medical/cmo)
 "Xv" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/unexplored/outdoors)
 "XB" = (
 /obj/structure/bed/padded,
@@ -3157,7 +3241,8 @@ lol
 "XL" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/level3/nw/open)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
@@ -3183,7 +3268,8 @@ lol
 /area/groundbase/dorms/bathroom)
 "YG" = (
 /turf/simulated/floor{
-	edge_blending_priority = -1
+	edge_blending_priority = -1;
+	outdoors = 1
 	},
 /area/groundbase/civilian/kitchen)
 >>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
@@ -3235,7 +3321,9 @@ lol
 	dir = 8
 	},
 /obj/effect/landmark/start/paramedic,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled{
+	outdoors = 1
+	},
 /area/groundbase/medical/patio)
 "Zn" = (
 /obj/machinery/firealarm{
