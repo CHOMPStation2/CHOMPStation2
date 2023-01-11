@@ -13,3 +13,4 @@
 	var/hide_glasses = FALSE
 	var/speech_sound_enabled = TRUE
 	var/nutrition_hidden = FALSE
+	low_priority = TRUE
