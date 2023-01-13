@@ -131,11 +131,52 @@
 	pickup_sound = 'sound/items/pickup/cloth.ogg'
 
 /obj/item/stack/tile/carpet/teal
-	name = "teal carpet"
-	singular_name = "teal carpet"
 	desc = "A piece of teal carpet. It is the same size as a normal floor tile!"
 	icon_state = "tile-tealcarpet"
-	no_variants = FALSE
+
+/obj/item/stack/tile/carpet/turcarpet
+	desc = "A piece of turqoise carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-turcarpet"
+
+/obj/item/stack/tile/carpet/bcarpet
+	desc = "A piece of black diamond-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-bcarpet"
+
+/obj/item/stack/tile/carpet/blucarpet
+	desc = "A piece of blue diamond-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-blucarpet"
+
+/obj/item/stack/tile/carpet/sblucarpet
+	desc = "A piece of silver-blue diamond-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-sblucarpet"
+
+/obj/item/stack/tile/carpet/gaycarpet
+	desc = "A piece of pink diamond-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-gaycarpet"
+
+/obj/item/stack/tile/carpet/purcarpet
+	desc = "A piece of purple diamond-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-purcarpet"
+
+/obj/item/stack/tile/carpet/oracarpet
+	desc = "A piece of orange diamond-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-oracarpet"
+
+/obj/item/stack/tile/carpet/brncarpet
+	desc = "A piece of brown ornate-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-brncarpet"
+
+/obj/item/stack/tile/carpet/blucarpet2
+	desc = "A piece of blue ornate-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-blucarpet2"
+
+/obj/item/stack/tile/carpet/greencarpet
+	desc = "A piece of green ornate-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-greencarpet"
+
+/obj/item/stack/tile/carpet/purplecarpet
+	desc = "A piece of purple ornate-pattern carpet. It is the same size as a normal floor tile!"
+	icon_state = "tile-purplecarpet"
 
 /obj/item/stack/tile/carpet/geo
 	icon_state = "tile-carpet-deco"
@@ -153,6 +194,7 @@
 	icon_state = "tile-carpet-happy"
 	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"
 
+<<<<<<< HEAD
 /obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw //CHOMP Comment: Yawn commented out this block, but CHOMP already commented out this stuff so I just removed theirs.
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
@@ -177,6 +219,8 @@
 	icon_state = "tile-carpet"
 */
 
+=======
+>>>>>>> 9ea28d1962... Merge pull request #14327 from Heroman3003/carpeting
 /obj/item/stack/tile/floor
 	name = "floor tile"
 	singular_name = "floor tile"
