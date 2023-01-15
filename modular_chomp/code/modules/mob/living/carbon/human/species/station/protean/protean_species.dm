@@ -43,14 +43,14 @@
 	item_slowdown_mod = 1.5	//Gentle encouragement to let others wear you
 
 	hazard_low_pressure = -1 //Space doesn't bother them
-	hazard_high_pressure = INFINITY //consistency
+	hazard_high_pressure = 10 * ONE_ATMOSPHERE //Same as their RIG
 
 	cold_level_1 = -INFINITY
 	cold_level_2 = -INFINITY
 	cold_level_3 = -INFINITY
-	heat_level_1 = INFINITY
-	heat_level_2 = INFINITY
-	heat_level_3 = INFINITY
+	heat_level_1 = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE - 500
+	heat_level_2 = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE - 200
+	heat_level_3 = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 
 	body_temperature =      290
 
@@ -83,7 +83,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable/nano)
 		)
 
-	heat_discomfort_strings = list("You feel too warm.")
+	heat_discomfort_strings = list("WARNING: Temperature exceeding acceptable thresholds!.")
 	cold_discomfort_strings = list("You feel too cool.")
 
 	//These verbs are hidden, for hotkey use only
