@@ -4587,6 +4587,7 @@
 #include "modular_chomp\code\modules\mob\new_player\sprite_accessories_wing.dm"
 #include "modular_chomp\code\modules\organs\organ_external.dm"
 #include "modular_chomp\code\modules\organs\organ_icon.dm"
+#include "modular_chomp\code\modules\overmap\dynamic_sector.dm"
 #include "modular_chomp\code\modules\power\cells\device_cells.dm"
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
@@ -4605,4 +4606,5 @@
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
+#include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
 // END_INCLUDE

@@ -72,7 +72,7 @@
 		icon_state = unknown_state
 		color = null
 		desc = "Scan this to find out more information."
-		
+
 
 // You generally shouldn't destroy these.
 /obj/effect/overmap/visitable/Destroy()
@@ -143,7 +143,7 @@
 	if(A in SSshuttles.shuttle_areas)
 		return 0
 	if(is_type_in_list(A, unowned_areas))
-		return 0	
+		return 0
 	if(get_z(object) in map_z)
 		return 1
 
@@ -213,17 +213,17 @@
 	This beacon was launched from '[initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
 	Per the Interplanetary Convention on Space SAR, those receiving this message must attempt rescue, \
 	or relay the message to those who can. This message will repeat one time in 5 minutes. Thank you for your urgent assistance."
-	
+
 	if(!levels_for_distress)
 		levels_for_distress = list(1)
 	for(var/zlevel in levels_for_distress)
 		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevel = zlevel)
-	
+
 	var/image/I = image(icon, icon_state = "distress")
 	I.plane = PLANE_LIGHTING_ABOVE
 	I.appearance_flags = KEEP_APART|RESET_TRANSFORM|RESET_COLOR
 	add_overlay(I)
-	
+
 	addtimer(CALLBACK(src, .proc/distress_update), 5 MINUTES)
 	return TRUE
 
@@ -256,6 +256,8 @@
 
 	global.using_map.sealed_levels |= global.using_map.overmap_z
 
+	if(!GLOB.dynamic_sector_master) //CHOMPedit: hook dynamic sector generation into overmap gen
+		new /obj/effect/overmap/visitable/dynamic // CHOMPedit, glob var assignment is handled in the object.
+
 	testing("Overmap build complete.")
 	return 1
-
