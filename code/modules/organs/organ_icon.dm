@@ -81,6 +81,22 @@ var/global/list/limb_icon_cache = list()
 
 /obj/item/organ/external/proc/get_icon(var/skeletal)
 
+<<<<<<< HEAD
+=======
+	for(var/M in markings)
+		var/datum/sprite_accessory/marking/mark = markings[M]["datum"]
+		if(mark.organ_override)
+			var/icon/mark_s = new/icon("icon" = mark.icon, "icon_state" = "[mark.icon_state]-[organ_tag]")
+			mob_icon = new /icon("icon" = mark.icon, "icon_state" = "blank")
+			mark_s.Blend(markings[M]["color"], mark.color_blend_mode) // VOREStation edit
+			mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
+			icon_cache_key = "[M][markings[M]["color"]]"
+
+			dir = EAST
+			icon = mob_icon
+			return mob_icon
+
+>>>>>>> 43b1746a29... Merge pull request #14343 from BonniePandora/override-fail-fix
 	var/gender = "m"
 	if(owner && owner.gender == FEMALE)
 		gender = "f"
