@@ -75,9 +75,11 @@
 	name = "Sergal (Taur)"
 	icon_state = "sergwheat"
 	icon_sprite_tag = "wolf"
+	vore_tail_sprite_variant = "N"
 
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties_2c
 	name = "Sergal (Taur, dual-color)"
 	icon_state = "sergwheat"
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
+	vore_tail_sprite_variant = "N"
