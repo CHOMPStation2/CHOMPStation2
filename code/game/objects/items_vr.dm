@@ -25,3 +25,14 @@
 	listening_objects |= src
 	new_voice.verbs -= /mob/living/voice/verb/change_name //No changing your name! Bad!
 	new_voice.verbs -= /mob/living/voice/verb/hang_up //Also you can't hang up. You are the item!
+
+// Chomp edit
+/obj/item/proc/muffled_by_belly(var/mob/user)
+	if(isbelly(user.loc))
+		var/obj/belly/B = user.loc
+		if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
+			return TRUE
+		return FALSE
+	else
+		return FALSE
+// Chomp edit end
