@@ -240,7 +240,9 @@
 	// Chomp edit
 		if(isbelly(user.loc))
 			var/obj/belly/B = user.loc
-			if(!B.mode_flags & DM_FLAG_MUFFLEITEMS)
+			if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
+				// Do nothing
+			else
 				playsound(src, src.use_sound, 50, 0, -5)
 	// Chomp edit end
 
