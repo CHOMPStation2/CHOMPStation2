@@ -185,9 +185,9 @@
 		user.do_attack_animation(src)
 		shatter()
 
-	else if (usr.a_intent == I_HURT)
+	else if(usr && usr.a_intent == I_HURT) //CHOMPEdit
 
-		if (istype(usr,/mob/living/carbon/human))
+		if(istype(usr,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = usr
 			if(H.species.can_shred(H))
 				attack_generic(H,25)
