@@ -75,3 +75,6 @@
 /datum/species/xenochimera
 	digi_allowed = TRUE
 
+/datum/species/protean
+	digi_allowed = TRUE
+

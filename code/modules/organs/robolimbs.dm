@@ -65,6 +65,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	var/list/species_cannot_use = list(SPECIES_TESHARI, SPECIES_PROMETHEAN, SPECIES_DIONA, SPECIES_XENOCHIMERA)  //VOREStation Edit
 	// "Species Name" = "Robolimb Company", List, when initialized, will become "Species Name" = RobolimbDatum, used for alternate species sprites.
 	var/list/species_alternates = list(SPECIES_TAJ = "Unbranded - Tajaran", SPECIES_UNATHI = "Unbranded - Unathi")
+	var/can_be_digitigrade = FALSE //CHOMPStation edit
 
 /datum/robolimb/unbranded_monitor
 	company = "Unbranded Monitor"
