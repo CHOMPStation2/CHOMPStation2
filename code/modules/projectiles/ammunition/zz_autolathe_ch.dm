@@ -42,19 +42,19 @@
 	path = /obj/item/ammo_magazine/m9mmp90
 	hidden = 1
 
-/datum/category_item/autolathe/arms/smg_p90
+/datum/category_item/autolathe/arms/smg_p90/ap
 	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"
-	path = /obj/item/ammo_magazine/m9mmp90
+	path = /obj/item/ammo_magazine/m9mmp90/ap
 	hidden = 1
 
-/datum/category_item/autolathe/arms/smg_p90
+/datum/category_item/autolathe/arms/smg_p90/rubber
 	name = "large capacity top mounted magazine (5.7x28mm rubber)"
-	path = /obj/item/ammo_magazine/m9mmp90
+	path = /obj/item/ammo_magazine/m9mmp90/rubber
 	hidden = 1
 
-/datum/category_item/autolathe/arms/smg_p90
+/datum/category_item/autolathe/arms/smg_p90/hp
 	name = "large capacity top mounted magazine (5.7x28mm hollow-point)"
-	path = /obj/item/ammo_magazine/m9mmp90
+	path = /obj/item/ammo_magazine/m9mmp90/hp
 	hidden = 1
 
 /datum/category_item/autolathe/arms/svd_762
