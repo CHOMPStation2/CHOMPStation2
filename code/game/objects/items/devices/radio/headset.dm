@@ -8,7 +8,8 @@
 	subspace_transmission = 1
 	canhear_range = 0 // can't hear headsets from very far away
 	slot_flags = SLOT_EARS
-	sprite_sheets = list(SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi')
+	sprite_sheets = list(SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi',
+						SPECIES_VOX = 'icons/inventory/ears/mob_vox.dmi')
 
 	var/translate_binary = 0
 	var/translate_hive = 0
