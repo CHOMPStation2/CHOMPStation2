@@ -66,7 +66,7 @@
 		var/datum/robolimb/M = chargen_robolimbs[company]
 		if(!(choice in M.parts))
 			continue
-		if(impersonate_bodytype in M.species_cannot_use)
+		if(species?.base_species in M.species_cannot_use)
 			continue
 		if(M.whitelisted_to && !(ckey in M.whitelisted_to))
 			continue
@@ -283,7 +283,6 @@
 
 	var/new_species = tgui_input_list(usr, "Please select a species to emulate.", "Shapeshifter Body", GLOB.playable_species)
 	if(new_species)
-		impersonate_bodytype = new_species
 		species?.base_species = new_species // Really though you better have a species
 		regenerate_icons() //Expensive, but we need to recrunch all the icons we're wearing
 

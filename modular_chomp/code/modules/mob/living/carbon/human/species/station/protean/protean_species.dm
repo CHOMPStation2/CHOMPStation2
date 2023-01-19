@@ -14,6 +14,9 @@
 	flesh_color = "#505050"
 	base_color = "#FFFFFF" //Color mult, start out with this
 
+	selects_bodytype = SELECTS_BODYTYPE_SHAPESHIFTER
+	base_species = SPECIES_HUMAN
+
 	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
 	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
@@ -126,9 +129,12 @@
 		saved_nif.quick_implant(H)
 
 /datum/species/protean/get_bodytype(var/mob/living/carbon/human/H)
-	if(H)
-		return H.impersonate_bodytype || ..()
-	return ..()
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_bodytype(H)
+
+/datum/species/protean/get_valid_shapeshifter_forms(var/mob/living/carbon/human/H)
+	return GLOB.playable_species
 
 /datum/species/protean/handle_post_spawn(var/mob/living/carbon/human/H)
 	..()
