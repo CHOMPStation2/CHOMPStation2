@@ -3537,7 +3537,6 @@
 "secret": true,
 "lobby": false,
 "jukebox": true,
-"genre": "Rock"
 },
 {
 "url" : "https://cdn.discordapp.com/attachments/404660884531707906/676726491806957568/Cassette.mp3",
@@ -4688,50 +4687,97 @@
 "jukebox": true
 },
 {
+<<<<<<< HEAD
 "url": "https://files.catbox.moe/5pwnw3.m4a",
 "title": "Eristocrats (Discordia Pt.II)",
 "duration": 1690,
 "artist": "That Handsome Devil",
 "genre": "Rock",
+=======
+"url": "https://files.catbox.moe/2t5tjk.mp3",
+"title": "Waiting For The Sun",
+"duration": 1910,
+"artist": "Alistair Lindsay",
+"genre": "Video Game",
+>>>>>>> 52d7827078... Merge pull request #14351 from SnoodleDragon/master
 "secret": false,
 "lobby": false,
 "jukebox": true
 },
 {
+<<<<<<< HEAD
 "url": "https://files.catbox.moe/2ozzmg.m4a",
 "title": "Charlie's Inferno",
 "duration": 2250,
 "artist": "That Handsome Devil",
 "genre": "Rock",
+=======
+"url": "https://files.catbox.moe/8r5d7q.mp3",
+"title": "Take me to Snurch (Snail Church)",
+"duration": 2370,
+"artist": "fairyeiry",
+"secret": true,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/fjjcdw.mp3",
+"title": "Bearded Dragon",
+"duration": 2370,
+"artist": "Beat Fatigue",
+"genre": "Electronic",
+>>>>>>> 52d7827078... Merge pull request #14351 from SnoodleDragon/master
 "secret": false,
 "lobby": false,
 "jukebox": true
 },
 {
+<<<<<<< HEAD
 "url": "https://files.catbox.moe/w8x8qb.m4a",
 "title": "Monster Mash",
 "duration": 1930,
 "artist": "Bobby Pickett",
+=======
+"url": "https://files.catbox.moe/2dzinb.mp3",
+"title": "A Good Song Never Dies",
+"duration": 2010,
+"artist": "Saint Motel",
+>>>>>>> 52d7827078... Merge pull request #14351 from SnoodleDragon/master
 "genre": "Pop",
 "secret": false,
 "lobby": false,
 "jukebox": true
 },
 {
+<<<<<<< HEAD
 "url": "https://files.catbox.moe/rjvm4j.mp3",
 "title": "What's New Pussycat",
 "duration": 1290,
 "artist": "Tom Jones",
 "genre": "Pop",
+=======
+"url": "https://files.catbox.moe/73nan0.mp3",
+"title": "Ya Soldat",
+"duration": 1880,
+"artist": "5'nizza",
+"genre": "Video Game",
+>>>>>>> 52d7827078... Merge pull request #14351 from SnoodleDragon/master
 "secret": false,
 "lobby": false,
 "jukebox": true
 },
 {
+<<<<<<< HEAD
 "url": "https://files.catbox.moe/t19nip.m4a",
 "title": "It's Not Unusual",
 "duration": 1200,
 "artist": "Tom Jones",
+=======
+"url": "https://files.catbox.moe/p1lwg8.mp3",
+"title": "Space Ghost Coast to Coast",
+"duration": 1880,
+"artist": "Glass Animals",
+>>>>>>> 52d7827078... Merge pull request #14351 from SnoodleDragon/master
 "genre": "Pop",
 "secret": false,
 "lobby": false,
