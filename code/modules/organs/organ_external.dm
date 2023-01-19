@@ -81,7 +81,6 @@
 
 	// HUD element variable, see organ_icon.dm get_damage_hud_image()
 	var/image/hud_damage_image
-	var/prosthetic_digi = FALSE //CHOMPStation edit - when it's prosthetic, can it be a digitigrade
 
 /obj/item/organ/external/Destroy()
 

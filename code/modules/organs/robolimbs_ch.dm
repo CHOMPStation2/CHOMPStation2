@@ -1,3 +1,6 @@
+/datum/robolimb
+	var/can_be_digitigrade = FALSE //maybe move this over into more of a "does this have a custom digitigrade sprite, and if so, what is its icon file/icon name in the limb's file" when someone can be bothered making them
+
 /datum/robolimb/valehoundhead
 	company = "VALE Hound- Head"
 	desc = "A VALE hound head meant for synthetics."
@@ -31,3 +34,7 @@
 
 /datum/robolimb/dsi_fennec
 	can_be_digitigrade = TRUE
+
+/datum/robolimb/dsi_teshari/New()
+	. = ..()
+	species_cannot_use -= SPECIES_PROTEAN
