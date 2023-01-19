@@ -462,11 +462,12 @@
 		if("omni")src.heal_damage(repair_amount, repair_amount, 0, 1)
 
 	if(damage_desc)
+		var/fix_verb = (damage_amount > repair_amount) ? "patches" : "finishes patching"
 		if(user == src.owner)
 			var/datum/gender/T = gender_datums[user.get_visible_gender()]
-			user.visible_message("<b>\The [user]</b> patches [damage_desc] on [T.his] [src.name] with [tool].")
+			user.visible_message("<b>\The [user]</b> [fix_verb] [damage_desc] on [T.his] [src.name] with [tool].")
 		else
-			user.visible_message("<b>\The [user]</b> patches [damage_desc] on [owner]'s [src.name] with [tool].")
+			user.visible_message("<b>\The [user]</b> [fix_verb] [damage_desc] on [owner]'s [src.name] with [tool].")
 
 	return 1
 
@@ -1413,3 +1414,11 @@ Note that amputating the affected organ does in fact remove the infection from t
 /obj/item/organ/external/proc/is_hidden_by_tail()
 	if(owner && owner.tail_style && owner.tail_style.hide_body_parts && (organ_tag in owner.tail_style.hide_body_parts))
 		return 1
+<<<<<<< HEAD
+=======
+	if(clothing_only && markings.len)
+		for(var/M in markings)
+			var/datum/sprite_accessory/marking/mark = markings[M]["datum"]
+			if(mark.hide_body_parts && (organ_tag in mark.hide_body_parts))
+				return 1
+>>>>>>> fd94efe521... Merge pull request #14336 from VOREStation/upstream-merge-8870
