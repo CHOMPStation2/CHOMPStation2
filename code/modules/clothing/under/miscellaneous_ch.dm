@@ -12,13 +12,8 @@
 /obj/item/clothing/under/cohesion
 	permeability_coefficient = 0  //Should have this anyway
 
-/obj/item/clothing/under/cohesion/decal/test  //Testing both at once.
-	water_protection = 1
+/obj/item/clothing/under/cohesion/striped/testpartial //testing better coverage.
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 
 /obj/item/clothing/under/cohesion/striped/testfull //testing both, but with full coverage.
-	water_protection = 1
-	body_parts_covered = HEAD|FACE|EYES|UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
-
-/obj/item/clothing/under/cohesion/striped/testpartial //testing both, but without as full coverage.
-	water_protection = 1
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	body_parts_covered = HEAD|UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
