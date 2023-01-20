@@ -9,22 +9,16 @@
 /obj/item/clothing/under/sexybunny_white/sexybunny_black
 	icon_state = "sexybunny_black"
 
+/obj/item/clothing/under/cohesion
+	permeability_coefficient = 0  //Should have this anyway
+
 /obj/item/clothing/under/cohesion/decal/test  //Testing both at once.
 	water_protection = 1
-	permeability_coefficient = 0
-
-/obj/item/clothing/under/cohesion/striped/test
-	permeability_coefficient = 0  //Test for if this affects water or not.
-
-/obj/item/clothing/under/cohesion/hazard/test
-	water_protection = 1  //Test for if this even does anything, as it's referenced a bunch in the defense code and promethean code.
 
 /obj/item/clothing/under/cohesion/striped/testfull //testing both, but with full coverage.
 	water_protection = 1
-	permeability_coefficient = 0
 	body_parts_covered = HEAD|FACE|EYES|UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 
-/obj/item/clothing/under/cohesion/striped/testfull //testing both, but without as full coverage.
+/obj/item/clothing/under/cohesion/striped/testpartial //testing both, but without as full coverage.
 	water_protection = 1
-	permeability_coefficient = 0
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
