@@ -33,7 +33,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
@@ -102,7 +102,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
@@ -262,20 +262,20 @@
 //	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
-	
+
 	//Furry fox-like animals shouldn't start freezing at 5 degrees celsius.
 	//Minor cold is resisted, but not severe frost.
-	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans. 
-	
+	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans.
+
 	cold_level_1 = 243 //Default 260, other values remain at default. Starts taking damage at -30 celsius. Default tier 2 is -70 and tier 3 is -150
-	
-	
-	breath_cold_level_1 = 220 // Default 240, lower is better.	
-	
+
+
+	breath_cold_level_1 = 220 // Default 240, lower is better.
+
 	//While foxes can survive in deserts, that's handled by zorren. It's a good contrast that our vulp find heat a little uncomfortable.
-	
+
 	heat_discomfort_level = 295 //Just above standard 20 C to avoid heat message spam, same as Taj
-	
+
 	heat_level_1 = 345 //Default 360
 	heat_level_2 = 390 //Default 400
 	heat_level_3 = 900 //Default 1000
@@ -296,7 +296,7 @@
 
 	min_age = 18
 	max_age = 110
-	
+
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
@@ -380,7 +380,7 @@
 	min_age = 18
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona" //CHOMPedit
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	
+
 //CHOMPedit start
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
@@ -412,7 +412,7 @@
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	min_age = 18
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
-	icobase = 'icons/mob/human_races/r_vox_old.dmi'
+	icobase = 'icons/mob/human_races/r_vox_ch.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
@@ -452,7 +452,7 @@
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
@@ -482,7 +482,7 @@
 	documented in the Virgo system, following a mining bombardment of Virgo 3. The crew of NSB Adephagia have \
 	taken to calling these creatures 'Shadekin', and the name has generally stuck and spread. "		//TODO: Something more fitting for black-eyes
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
 
