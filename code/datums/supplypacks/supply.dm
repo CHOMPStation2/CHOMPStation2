@@ -157,7 +157,7 @@
 	containername = "Cargo Train Trolley Crate"
 
 /datum/supply_pack/explorergear
-	name="Away Team gear"
+	name="Explore gear" //CHOMP explo keep
 	contains = list (
 					/obj/item/device/cataloguer,
 					/obj/item/device/geiger,
@@ -178,8 +178,8 @@
 					)
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
-	containername = "Away Team equipment"
-	access = list(access_eva, access_awayteam)
+	containername = "Explore equipment" //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/pilotgear
 	name= "Pilot gear"
@@ -192,6 +192,7 @@
 					/obj/item/stack/marker_beacon/thirty,
 					/obj/item/device/gps/explorer,
 					/obj/item/clothing/gloves/fingerless,
+					/obj/item/device/cataloguer/compact, //CHOMP explo keep
 					/obj/item/clothing/suit/storage/toggle/bomber/pilot,
 			 		/obj/item/clothing/shoes/boots/winter/explorer,
 					/obj/item/device/flashlight,

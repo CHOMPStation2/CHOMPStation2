@@ -2,7 +2,7 @@
 
 /obj/machinery/suit_cycler/exploration
 	req_access = null
-	req_one_access = list(access_awayteam,access_medical_equip)
+	req_one_access = list(access_explorer,access_medical_equip) //CHOMP explo keep
 
 /obj/machinery/suit_cycler/pilot
 	req_access = list(access_pilot)

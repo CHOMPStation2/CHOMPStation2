@@ -534,6 +534,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				"Research Intern",
 				"Security Cadet",
 				"Jr. Cargo Tech",
+				"Jr. Explorer", //CHOMP explo keep
 				"Server",
 				"Electrician",
 				"Barista")
@@ -878,7 +879,7 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 //	/area/maintenance/groundbase/level1,
 //	/area/submap/groundbase/wilderness,
 //	/area/groundbase/mining,
-//	/area/offmap/aerostat/surface, 
+//	/area/offmap/aerostat/surface,
 //	/area/tether_away/beach,
 //	/area/tether_away/cave,
 )

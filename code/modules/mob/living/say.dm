@@ -16,7 +16,7 @@ var/list/department_radio_keys = list(
 	":u" = "Supply",		".u" = "Supply",
 	":v" = "Service",		".v" = "Service",
 	":p" = "AI Private",	".p" = "AI Private",
-	":a" = "Away Team",	".a" = "Away Team",	//VOREStation Edit
+	":a" = "Explorer",	".a" = "Explorer",	//VOREStation Edit //CHOMP keep explo
 	":y" = "Talon",		".y" = "Talon", //VOREStation Add,
 	":g" = "Casino",	".g" = "Casino",
 
@@ -36,7 +36,7 @@ var/list/department_radio_keys = list(
 	":U" = "Supply",		".U" = "Supply",
 	":V" = "Service",		".V" = "Service",
 	":P" = "AI Private",	".P" = "AI Private",
-	":A" = "Away Team",	".A" = "Away Team",
+	":A" = "Explorer",	".A" = "Explorer", //CHOMP keep explo
 	":Y" = "Talon",		".Y" = "Talon", //VOREStation Add,
 	":G" = "Casino",	".G" = "Casino",
 
@@ -58,7 +58,7 @@ var/list/department_radio_keys = list(
 	":г" = "Supply",        ".г" = "Supply",
 	":м" = "Service",        ".м" = "Service",
 	":з" = "AI Private",    ".з" = "AI Private",
-	":ф" = "Away Team",    ".ф" = "Away Team",
+	":ф" = "Explorer",    ".ф" = "Explorer", //CHOMP keep explo
 	":н" = "Talon",        ".н" = "Talon", //VOREStation Add
 	":п" = "Casino",	".п" = "Casino",
 )

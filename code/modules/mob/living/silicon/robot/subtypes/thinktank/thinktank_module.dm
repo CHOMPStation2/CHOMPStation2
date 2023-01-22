@@ -44,7 +44,7 @@
 	)
 	channels = list(
 		"Science" = 1,
-		"Away Team" = 1
+		"Explorer" = 1
 	)
 
 /obj/item/weapon/robot_module/robot/platform/explorer/New()
@@ -64,11 +64,7 @@
 	modules += bandaid
 	synths += medicine
 
-<<<<<<< HEAD
-	var/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src) 
-=======
-	var/obj/item/weapon/gun/energy/phasegun/mounted/cyborg/phasegun = new(src)
->>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
+	var/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src)  //CHOMP Edit
 	modules += phasegun
 
 	emag = new /obj/item/weapon/chainsaw(src)
