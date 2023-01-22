@@ -14024,7 +14024,7 @@
 /area/security/warden)
 "aSs" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_security{
+/obj/machinery/door/airlock/security{
 	name = "Warden's Office";
 	req_access = list(3)
 	},
@@ -14036,7 +14036,13 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
+/obj/machinery/door/blast/shutters{
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "aSv" = (
@@ -14046,7 +14052,13 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
+/obj/machinery/door/blast/shutters{
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "aSx" = (
@@ -14758,10 +14770,12 @@
 /area/security/prison)
 "aUu" = (
 /obj/machinery/computer/prisoner,
-/obj/machinery/newscaster/security_unit{
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aUv" = (
@@ -14784,11 +14798,6 @@
 /turf/simulated/floor/wood,
 /area/rnd/research)
 "aUx" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
@@ -14807,11 +14816,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "aUz" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/stamp/denied{
 	pixel_x = 5
@@ -14829,19 +14833,16 @@
 /area/security/warden)
 "aUA" = (
 /obj/structure/closet/secure_closet/warden,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/machinery/light_switch{
-	pixel_x = 36
+	pixel_x = 36;
+	pixel_y = 6
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/button/windowtint{
+	id = "secward";
+	pixel_x = 36;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aUB" = (
@@ -16112,14 +16113,18 @@
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aYx" = (
-/obj/item/device/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -26;
 	pixel_y = 26
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -16429,13 +16434,13 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/ascenter)
 "aZJ" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -16480,6 +16485,22 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "security_lockdown";
+	name = "Brig Lockdown";
+	pixel_x = 26;
+	pixel_y = 38;
+	req_access = list(2)
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "Warden_Shutters";
+	name = "Privacy Shutters";
+	pixel_x = 26;
+	pixel_y = 27;
+	req_access = list(2)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aZO" = (
@@ -16496,6 +16517,11 @@
 /obj/item/weapon/folder/red,
 /obj/item/weapon/pen,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aZQ" = (
@@ -18259,12 +18285,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "bfG" = (
-/obj/machinery/button/remote/blast_door{
-	id = "security_lockdown";
-	name = "Brig Lockdown";
-	pixel_x = 36;
-	pixel_y = 18;
-	req_access = list(2)
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -18275,6 +18299,11 @@
 	req_access = list(3)
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "bfI" = (
@@ -19603,6 +19632,9 @@
 "bjF" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "bjG" = (
@@ -20188,6 +20220,11 @@
 	},
 /obj/item/weapon/hand_labeler,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "bld" = (
@@ -21895,8 +21932,15 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "bql" = (
@@ -22967,8 +23011,15 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "buc" = (
@@ -22981,7 +23032,14 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "bud" = (
@@ -23064,14 +23122,14 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/glass_security{
-	name = "Warden's Office";
-	req_access = list(3)
-	},
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/machinery/door/airlock/security{
+	name = "Warden's Office";
+	req_access = list(3)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/warden)
@@ -23135,8 +23193,15 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "buE" = (
@@ -23145,8 +23210,15 @@
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secward"
+	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "Warden_Shutters";
+	name = "Warden Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "buF" = (
@@ -113242,7 +113314,7 @@ aKU
 aOb
 aSr
 aUv
-aZB
+bfG
 aZB
 bkm
 bpM
@@ -114017,7 +114089,7 @@ aOe
 aSv
 aUA
 aZN
-bfG
+aZB
 blb
 bqh
 buE
