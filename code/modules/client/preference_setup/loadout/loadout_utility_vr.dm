@@ -57,8 +57,9 @@
 	allowed_roles = list("Research Director","Scientist","Roboticist","Xenobiologist","Xenobotanist")
 
 /datum/gear/utility/dufflebag/explorer
-	display_name = "aexplorer dufflebag" //CHOMP explo keep
+	display_name = "explorer dufflebag" //CHOMP explo keep
 	path = /obj/item/weapon/storage/backpack/dufflebag/explorer
+	allowed_roles = list("Pathfinder","Explorer") //CHOMP explo keep
 
 /datum/gear/utility/dufflebag/talon
 	display_name = "Talon dufflebag"
