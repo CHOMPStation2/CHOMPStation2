@@ -21,6 +21,7 @@
 					  "Lab Assistant" = /datum/alt_title/intern_sci, //CHOMPEdit
 					  "Security Cadet" = /datum/alt_title/intern_sec,
 					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
+					  "Jr. Explorer" = /datum/alt_title/intern_exp, //CHOMP Explo keep
 					  "Server" = /datum/alt_title/server,
 					  "Assistant" = /datum/alt_title/assistant)
 	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
