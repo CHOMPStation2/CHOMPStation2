@@ -3536,8 +3536,12 @@
 "artist": "Wesley Willis Fiasco",
 "secret": true,
 "lobby": false,
+<<<<<<< HEAD
 "jukebox": true,
 "genre": "Rock"
+=======
+"jukebox": true
+>>>>>>> f4821862bc... Merge pull request #14371 from Very-Soft/jukeboxcomma
 },
 {
 "url" : "https://cdn.discordapp.com/attachments/404660884531707906/676726491806957568/Cassette.mp3",
