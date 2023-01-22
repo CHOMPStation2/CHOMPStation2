@@ -157,7 +157,7 @@
 	containername = "Cargo Train Trolley Crate"
 
 /datum/supply_pack/explorergear
-	name="Explore gear" //CHOMP explo keep
+	name="Explorer gear" //CHOMP explo keep
 	contains = list (
 					/obj/item/device/cataloguer,
 					/obj/item/device/geiger,
