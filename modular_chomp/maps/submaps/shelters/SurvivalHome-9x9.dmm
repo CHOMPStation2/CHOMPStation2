@@ -109,12 +109,12 @@
 	pixel_x = -4
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -3
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalHome)
@@ -146,7 +146,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/device/camera,

@@ -839,9 +839,6 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
 "SI" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
 /obj/structure/cable{
 	d2 = 4;
 	icon_state = "0-4"
@@ -851,8 +848,10 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/item/stack/material/phoron{
-	amount = 2
+/obj/machinery/power/rtg/fake_gen{
+	desc = "A simple power generator, used in small outposts to reliably provide power for decades. This one seems to have been stripped of some parts, but is otherwise functional!... Enough...";
+	name = "Wilderness Shelter power generator";
+	power_gen = 4250
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
@@ -874,7 +873,6 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
 "WB" = (
-/obj/machinery/power/rtg/advanced,
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -883,6 +881,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/item/stack/material/phoron{
+	amount = 2
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
