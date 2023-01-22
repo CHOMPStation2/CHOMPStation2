@@ -95,7 +95,7 @@
 	pto_type = PTO_CARGO
 	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector,
 						"Excavator" = /datum/alt_title/excavator)
-						
+
 /datum/alt_title/deep_space_miner
 	title = "Deep Space Miner"
 	title_blurb = "A Deep Space Miner specializes primarily in mining operations in zero-g environments, mostly in asteroid and debris fields."
@@ -214,8 +214,8 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 5 //CHOMP explo keep
+	spawn_positions = 5 //CHOMP explo keep
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
 	economic_modifier = 5
