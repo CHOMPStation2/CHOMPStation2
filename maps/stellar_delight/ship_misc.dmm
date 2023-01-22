@@ -414,7 +414,7 @@
 /obj/structure/fitness/boxing_ropes{
 	dir = 1
 	},
-/obj/structure/fitness/boxing_turnbuckle{
+/obj/structure/fitness/boxing_ropes/turnbuckle{
 	dir = 8;
 	layer = 3.4
 	},
@@ -437,7 +437,7 @@
 /obj/structure/fitness/boxing_ropes{
 	dir = 1
 	},
-/obj/structure/fitness/boxing_turnbuckle{
+/obj/structure/fitness/boxing_ropes/turnbuckle{
 	dir = 4;
 	layer = 3.4
 	},
@@ -459,21 +459,21 @@
 /turf/simulated/fitness,
 /area/holodeck/source_boxingcourt)
 "bD" = (
-/obj/structure/fitness/boxing_turnbuckle{
+/obj/structure/fitness/boxing_ropes/turnbuckle{
 	dir = 8
 	},
-/obj/structure/fitness/boxing_ropes_bottom,
+/obj/structure/fitness/boxing_ropes/bottom,
 /turf/simulated/fitness,
 /area/holodeck/source_boxingcourt)
 "bE" = (
-/obj/structure/fitness/boxing_ropes_bottom,
+/obj/structure/fitness/boxing_ropes/bottom,
 /turf/simulated/fitness,
 /area/holodeck/source_boxingcourt)
 "bF" = (
-/obj/structure/fitness/boxing_turnbuckle{
+/obj/structure/fitness/boxing_ropes/turnbuckle{
 	dir = 4
 	},
-/obj/structure/fitness/boxing_ropes_bottom,
+/obj/structure/fitness/boxing_ropes/bottom,
 /turf/simulated/fitness,
 /area/holodeck/source_boxingcourt)
 "bG" = (
