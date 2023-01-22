@@ -331,10 +331,6 @@
 /obj/item/clothing/suit/space/void/medical/emt,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space/void/medical/emt,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
@@ -659,9 +655,6 @@
 "abd" = (
 /obj/structure/table/rack,
 /obj/item/weapon/rig/medical/equipped,
-/obj/structure/fireaxecabinet{
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
@@ -677,6 +670,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/paramed)
@@ -16019,8 +16016,36 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
+=======
+/obj/effect/floor_decal/borderfloor/corner2,
+/obj/effect/floor_decal/corner/brown/bordercorner2,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/lowernorthhall)
+"azJ" = (
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/table/standard,
+/obj/item/device/pipe_painter{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/device/pipe_painter,
+/obj/machinery/newscaster{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
+"azK" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/xenoflora)
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 "azL" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -17073,12 +17098,29 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/solars)
 "aBv" = (
 /turf/simulated/wall,
 /area/rnd/miscellaneous_lab)
+=======
+/turf/simulated/floor/virgo3b_indoors,
+/area/tether/surfacebase/outside/outside1)
+"aBv" = (
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/table/standard,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 "aBw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -22140,38 +22182,6 @@
 	name = "Atmospherics Lockdown";
 	req_one_access = list(10,24)
 	},
-/turf/simulated/floor/tiled,
-/area/engineering/atmos)
-"aKn" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/fireaxecabinet{
-	pixel_y = 32
-	},
-/obj/structure/table/standard,
-/obj/item/device/pipe_painter{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/device/pipe_painter,
-/turf/simulated/floor/tiled,
-/area/engineering/atmos)
-"aKo" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/newscaster{
-	pixel_y = 30
-	},
-/obj/structure/table/standard,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKp" = (
@@ -47327,6 +47337,120 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+pCj
+oTK
+oTK
+tdh
+hQg
+nvD
+eBd
+eBd
+fqa
+fOy
+xtS
+auJ
+auX
+fqa
+anp
+adK
+aah
+aah
+aah
+aah
+abT
+abT
+abT
+ahX
+aey
+aiP
+aoK
+apu
+apu
+apu
+apu
+apu
+apu
+apu
+apu
+aqb
+ate
+apu
+bcd
+apu
+adr
+avT
+agb
+agb
+agc
+agc
+agi
+agb
+avU
+aAE
+aBO
+aah
+aah
+aah
+aah
+aBO
+aHc
+aHv
+aHv
+aHv
+aIh
+azJ
+aKV
+aLC
+aJI
+aJI
+aJI
+aJI
+aJI
+aJI
+aJI
+aJI
+aJI
+aQy
+aRF
+aSn
+aSF
+aTl
+aIh
+rwD
+xdA
+uOQ
+prr
+nAK
+aTZ
+aEC
+aVn
+aXe
+aXy
+aXR
+aYk
+aTZ
+aTZ
+aTZ
+aVn
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 aad
 aad
 aad
@@ -47355,6 +47479,119 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+iKy
+iKy
+iKy
+iKy
+iKy
+iKy
+iKy
+iKy
+fqa
+fqa
+fqa
+fqa
+fqa
+fqa
+anc
+abT
+abT
+abT
+abT
+abT
+abT
+qor
+qor
+pyD
+bbR
+aez
+aoL
+apv
+aqb
+aqb
+aqb
+arw
+ate
+arX
+apu
+aqb
+atf
+apu
+bcd
+apu
+adr
+apu
+agM
+axg
+axT
+axT
+azL
+aAN
+agM
+aAF
+aBO
+aah
+aah
+aah
+aah
+aBO
+aHc
+aHv
+aCj
+aIL
+aIh
+aBv
+aJI
+aLC
+aJI
+aJI
+aJI
+aJI
+aJI
+aJI
+aPv
+aPV
+aQu
+aRa
+aRG
+aRY
+aSG
+aTm
+aIh
+aIh
+aIh
+qhg
+qhg
+nAK
+aTZ
+aWv
+aVn
+aFk
+aTZ
+aXS
+aTZ
+aTZ
+aYk
+aTZ
+aVn
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 aad
 aad
 aad

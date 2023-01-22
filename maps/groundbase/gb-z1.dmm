@@ -1644,11 +1644,27 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/or1)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "dS" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/floor/outdoors/grass/seasonal/dark,
 /area/groundbase/level1/nw)
 =======
+=======
+"dS" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 "dT" = (
 /obj/machinery/telecomms/bus/preset_two/groundbase,
 /turf/simulated/floor/tiled/dark{
@@ -5506,6 +5522,7 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
+<<<<<<< HEAD
 "np" = (
 /obj/machinery/light,
 /obj/item/weapon/stool/baystool/padded{
@@ -5513,6 +5530,8 @@ lel
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
+=======
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 "nq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -26653,7 +26672,11 @@ oe
 gF
 FB
 JX
+<<<<<<< HEAD
 vF
+=======
+dS
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 Cy
 cN
 Bo

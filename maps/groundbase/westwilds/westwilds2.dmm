@@ -42,6 +42,18 @@
 /obj/effect/landmark/wildlife/forest,
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/west/unexplored)
+"ah" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/obj/structure/railing/grey,
+/obj/machinery/computer/ship/engines{
+	dir = 4;
+	req_one_access = null
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
 "am" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 9
@@ -19824,6 +19836,7 @@ YK
 YK
 YK
 YK
+<<<<<<< HEAD
 YK
 YK
 YK
@@ -19844,6 +19857,28 @@ YK
 YK
 YK
 nr
+=======
+kQ
+Wl
+zm
+IE
+IE
+yC
+lR
+hG
+nG
+fl
+ah
+dq
+pq
+De
+yC
+IE
+IE
+WD
+Wl
+Wl
+>>>>>>> 881df823e5... Merge pull request #14362 from Heroman3003/minor-mapstuff
 XS
 XS
 nr
