@@ -10,7 +10,7 @@
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Exploration voidsuit crate" //CHOMP explo keep
-	access = access_exolorer //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/voidsuits/explorer_medic
 	name = "Expedition Medic voidsuits" //CHOMP explo keep
