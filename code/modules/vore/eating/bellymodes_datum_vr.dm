@@ -218,6 +218,14 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/list/egg_contents = list()
 	for(var/E in touchable_atoms)
 		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
+			var/obj/item/weapon/storage/vore_egg/EG = E //CHOMPEdit Start
+			if(EG.egg_name != B.egg_name)
+				if(!B.egg_name)
+					EG.egg_name = null
+					EG.name = initial(EG.name)
+				else
+					EG.egg_name = B.egg_name
+					EG.name = B.egg_name
 			continue
 		if(isliving(E))
 			var/mob/living/L = E
@@ -231,6 +239,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			if(B.egg_type in tf_vore_egg_types)
 				B.egg_path = tf_vore_egg_types[B.egg_type]
 			B.ownegg = new B.egg_path(B)
+			if(B.ownegg && B.egg_name)
+				B.ownegg.egg_name = B.egg_name
+				B.ownegg.name = B.egg_name //CHOMPEdit End
 		for(var/atom/movable/C in egg_contents)
 			if(isitem(C) && egg_contents.len == 1) //Only egging one item
 				var/obj/item/I = C

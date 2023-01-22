@@ -49,15 +49,12 @@
 	var/obj/item/weapon/storage/vore_egg/ownegg	// Is this belly creating an egg?
 	var/egg_type = "Egg"					// Default egg type and path.
 	var/egg_path = /obj/item/weapon/storage/vore_egg
+	var/egg_name = null						// CHOMPAdd. Custom egg name
 	var/list/list/emote_lists = list()			// Idle emotes that happen on their own, depending on the bellymode. Contains lists of strings indexed by bellymode
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
-	var/special_entrance_sound				// CHOMPEdit: Mob specific custom entry sound set by mob's init_vore when applicable
-	var/slow_digestion = FALSE				// CHOMPEdit: Gradual corpse digestion
-	var/slow_brutal = FALSE					// CHOMPEdit: Gradual corpse digestion: Stumpy's Special
-	var/sound_volume = 100					// CHOMPEdit: Volume knob.
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -278,7 +275,9 @@
 	"autotransfer_max_amount",
 	"slow_digestion",
 	"slow_brutal",
-	"sound_volume", //CHOMP end of variables from CHOMP
+	"sound_volume",
+	"speedy_mob_processing",
+	"egg_name", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -843,7 +842,7 @@
 				var/obj/item/I = M.get_equipped_item(slot = slot)
 				if(I)
 					M.unEquip(I,force = TRUE)
-					if(contaminates || istype(I, /obj/item/weapon/card/id))
+					if(contaminates)
 						I.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff like IDs wet.
 					if(item_digest_mode == IM_HOLD)
 						items_preserved |= I
@@ -1271,6 +1270,7 @@
 /obj/belly/proc/transfer_contents(atom/movable/content, obj/belly/target, silent = 0)
 	if(!(content in src) || !istype(target))
 		return
+	content.belly_cycles = 0 //CHOMPEdit
 	content.forceMove(target)
 	if(ismob(content))
 		var/mob/ourmob = content
@@ -1391,7 +1391,8 @@
 	dupe.autotransfer_max_amount = autotransfer_max_amount
 	dupe.slow_digestion = slow_digestion
 	dupe.slow_brutal = slow_brutal
-	dupe.sound_volume = sound_volume //CHOMP end of variables from CHOMP
+	dupe.sound_volume = sound_volume
+	dupe.egg_name = egg_name //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

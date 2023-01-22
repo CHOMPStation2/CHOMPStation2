@@ -187,7 +187,7 @@
 	if(has_eye_glow)
 		add_eyes()
 
-	if(!IsAdvancedToolUser())	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
+	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
 		verbs |= /mob/living/simple_mob/proc/animal_nom
 		verbs |= /mob/living/proc/shred_limb
 	verbs |= /mob/living/simple_mob/proc/nutrition_heal //CHOMPSTATION edit

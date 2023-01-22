@@ -142,7 +142,7 @@
 	},
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null;
-	req_one_access = list (10,11)
+	req_one_access = list(10,11)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -510,7 +510,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null;
-	req_one_access = list (10,11)
+	req_one_access = list(10,11)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -1374,11 +1374,11 @@
 	dir = 8
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/device/geiger,
@@ -2907,6 +2907,10 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
+"cCl" = (
+/mob/living/simple_mob/animal/giant_spider/electric,
+/turf/simulated/floor,
+/area/awaymission/snowfield/security/firingrange)
 "cCA" = (
 /obj/machinery/door/blast/gate/open,
 /turf/simulated/floor/outdoors/rocks,
@@ -2926,7 +2930,7 @@
 /area/awaymission/snowfield/outside)
 "cDP" = (
 /obj/structure/closet/secure_closet/warden{
-	starts_with = list(/obj/item/clothing/gloves/combat, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/weapon/shield/riot, /obj/item/ammo_magazine/akm = 2, /obj/item/weapon/gun/projectile/automatic/serdy/krinkov, /obj/item/clothing/head/beret/sec/corporate/warden, /obj/item/clothing/head/helmet/warden/hat, /obj/item/clothing/head/helmet/warden, /obj/item/clothing/suit/armor/swat/officer, /obj/item/device/radio/headset/heads/hos/alt, /obj/item/device/radio/headset/heads/hos, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/ammo_magazine/s357 = 2, /obj/item/weapon/gun/projectile/revolver/nagant/skinned, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton)
+	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/weapon/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/weapon/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/device/radio/headset/heads/hos/alt,/obj/item/device/radio/headset/heads/hos,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/weapon/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
@@ -3127,7 +3131,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -3137,6 +3141,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/electric,
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/security_cell)
 "cQM" = (
@@ -3841,7 +3846,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell 2;
+	id = Cell2;
 	name = "Cell 2";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -3919,11 +3924,11 @@
 "dzh" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/clothing/head/hardhat/firefighter/atmos,
@@ -3985,7 +3990,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -4617,7 +4622,7 @@
 "dWX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -5063,7 +5068,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -6074,6 +6079,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
+"fnn" = (
+/obj/structure/catwalk,
+/mob/living/simple_mob/animal/giant_spider/ion,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/security/security_cell)
 "fnD" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -6155,6 +6165,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
+"fpL" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
+/turf/simulated/floor,
+/area/awaymission/snowfield/security/firingrange)
 "fqn" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -6801,7 +6816,7 @@
 /area/awaymission/snowfield/medical/chemistry)
 "fWi" = (
 /obj/structure/closet/crate/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation = 8, /obj/item/clothing/head/radiation = 8)
+	starts_with = list(/obj/item/clothing/suit/radiation=8,/obj/item/clothing/head/radiation=8)
 	},
 /obj/item/stack/material/lead{
 	amount = 50
@@ -9164,7 +9179,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random = 10, /obj/item/weapon/tool/crowbar = 5, /obj/item/weapon/weldingtool = 3, /obj/item/weapon/tool/wirecutters = 5, /obj/item/weapon/tool/wrench = 5, /obj/item/device/analyzer = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3, /obj/item/device/flashlight/glowstick/orange = 3, /obj/item/device/flashlight/glowstick/yellow = 3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/weapon/tool/crowbar=5,/obj/item/weapon/weldingtool=3,/obj/item/weapon/tool/wirecutters=5,/obj/item/weapon/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/weapon/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -9380,20 +9395,20 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee"=30,"bullet"=15,"laser"=5,"energy"=20,"bomb"=40,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee"=30,"bullet"=15,"laser"=5,"energy"=20,"bomb"=40,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee"=30,"bullet"=15,"laser"=5,"energy"=20,"bomb"=40,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 10, "energy" = 20, "bomb" = 45, "bio" = 5, "rad" = 20);
-	armorsoak = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 5, "bio" = 0, "rad" = 0);
+	armor = list("melee"=30,"bullet"=30,"laser"=10,"energy"=20,"bomb"=45,"bio"=5,"rad"=20);
+	armorsoak = list("melee"=5,"bullet"=0,"laser"=0,"energy"=5,"bomb"=5,"bio"=0,"rad"=0);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9491,15 +9506,15 @@
 /obj/item/ammo_magazine/pkm,
 /obj/item/ammo_magazine/pkm/ap,
 /obj/item/clothing/suit/bomb_suit/security{
-	armor = list("melee" = 90, "bullet" = 85, "laser" = 70, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
-	armorsoak = list("melee" = 10, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 20, "bio" = 0, "rad" = 0);
+	armor = list("melee"=45,"bullet"=70,"laser"=35,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
+	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=20,"bio"=0,"rad"=0);
 	desc = "You're up against the wall AND I AM THE FUCKING WALL!";
 	name = "EOD-Bullet proof suit";
 	slowdown = 4
 	},
 /obj/item/clothing/head/bomb_hood/security{
-	armor = list("melee" = 90, "bullet" = 80, "laser" = 60, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
-	armorsoak = list("melee" = 10, "bullet" = 0, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
+	armor = list("melee"=40,"bullet"=80,"laser"=30,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
+	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
 	desc = "I'll kill you, with or without my visor!";
 	name = "EOD-Bullet proof hood"
 	},
@@ -9972,9 +9987,9 @@
 "iEH" = (
 /obj/structure/catwalk,
 /obj/machinery/vending/food/prison{
-	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/bearstew = 3);
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/bearstew=3);
 	icon_state = "hotfood";
-	products = list(/obj/item/weapon/tray = 6, /obj/item/weapon/material/kitchen/utensil/spoon = 20, /obj/item/weapon/reagent_containers/food/snacks/tofu = 10, /obj/item/weapon/reagent_containers/food/snacks/mashedpotato = 10, /obj/item/weapon/reagent_containers/food/snacks/flatbread = 10)
+	products = list(/obj/item/weapon/tray=6,/obj/item/weapon/material/kitchen/utensil/spoon=20,/obj/item/weapon/reagent_containers/food/snacks/tofu=10,/obj/item/weapon/reagent_containers/food/snacks/mashedpotato=10,/obj/item/weapon/reagent_containers/food/snacks/flatbread=10)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
@@ -10760,7 +10775,7 @@
 /obj/machinery/vending/engivend{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/device/geiger = 4, /obj/item/device/multitool = 4, /obj/item/weapon/cell/high = 10, /obj/item/weapon/airlock_electronics = 10, /obj/item/weapon/module/power_control = 10, /obj/item/weapon/circuitboard/airalarm = 10, /obj/item/weapon/circuitboard/firealarm = 10, /obj/item/weapon/circuitboard/status_display = 2, /obj/item/weapon/circuitboard/ai_status_display = 2, /obj/item/weapon/circuitboard/newscaster = 2, /obj/item/weapon/circuitboard/intercom = 4, /obj/item/weapon/circuitboard/security/telescreen/entertainment = 4, /obj/item/weapon/stock_parts/motor = 2, /obj/item/weapon/stock_parts/spring = 2, /obj/item/weapon/stock_parts/gear = 2, /obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing)
+	products = list(/obj/item/device/geiger=4,/obj/item/device/multitool=4,/obj/item/weapon/cell/high=10,/obj/item/weapon/airlock_electronics=10,/obj/item/weapon/module/power_control=10,/obj/item/weapon/circuitboard/airalarm=10,/obj/item/weapon/circuitboard/firealarm=10,/obj/item/weapon/circuitboard/status_display=2,/obj/item/weapon/circuitboard/ai_status_display=2,/obj/item/weapon/circuitboard/newscaster=2,/obj/item/weapon/circuitboard/intercom=4,/obj/item/weapon/circuitboard/security/telescreen/entertainment=4,/obj/item/weapon/stock_parts/motor=2,/obj/item/weapon/stock_parts/spring=2,/obj/item/weapon/stock_parts/gear=2,/obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -10982,7 +10997,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "jtR" = (
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/window/reinforced,
@@ -10990,10 +11005,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
 "jtT" = (
-/turf/simulated/wall/solidrock{
-	block_tele = 0
-	},
-/area/awaymission/snowfield/outside)
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/awaymission/snowfield/security/security_cell)
 "juu" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -11240,7 +11256,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/detective{
-	starts_with = list(/obj/item/clothing/gloves/forensic, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/fedora, /obj/item/clothing/head/fedora/brown, /obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey, /obj/item/clothing/suit/armor/bulletproof, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/under/soviet, /obj/item/weapon/melee/classic_baton, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/device/flash, /obj/item/ammo_magazine/s357 = 2, /obj/item/weapon/gun/projectile/revolver/nagant)
+	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/weapon/melee/classic_baton,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/device/flash,/obj/item/ammo_magazine/s357=2,/obj/item/weapon/gun/projectile/revolver/nagant)
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
@@ -11884,7 +11900,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "kcv" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell 1;
+	id = Cell1;
 	name = "Cell 1";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -12169,7 +12185,7 @@
 /obj/item/weapon/soap,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -12395,7 +12411,7 @@
 	icon_state = "1-2"
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -13444,17 +13460,17 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/vial{
 	name = "vial (Lexorin)";
-	prefill = list("lexorin" = 30)
+	prefill = list("lexorin"=30)
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/vial{
 	name = "vial (Zombie Powder)";
 	pixel_x = -5;
-	prefill = list("zombiepowder" = 30)
+	prefill = list("zombiepowder"=30)
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/vial{
 	name = "vial (Cryptobiolin)";
 	pixel_x = 5;
-	prefill = list("cryptobiolin" = 30)
+	prefill = list("cryptobiolin"=30)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
@@ -13918,7 +13934,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /obj/item/weapon/soap,
 /turf/simulated/floor/tiled/neutral,
@@ -13969,6 +13985,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "lPD" = (
@@ -15536,6 +15553,7 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "niv" = (
 /obj/effect/floor_decal/industrial/warning,
+/mob/living/simple_mob/animal/giant_spider/pepper,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "niM" = (
@@ -16812,7 +16830,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random = 10, /obj/item/weapon/tool/crowbar = 5, /obj/item/weapon/weldingtool = 3, /obj/item/weapon/tool/wirecutters = 5, /obj/item/weapon/tool/wrench = 5, /obj/item/device/analyzer = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3, /obj/item/device/flashlight/glowstick/orange = 3, /obj/item/device/flashlight/glowstick/yellow = 3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/weapon/tool/crowbar=5,/obj/item/weapon/weldingtool=3,/obj/item/weapon/tool/wirecutters=5,/obj/item/weapon/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/weapon/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -17099,6 +17117,11 @@
 /obj/item/weapon/storage/box/masks,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
+"owE" = (
+/obj/structure/catwalk,
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/security/security_cell)
 "oxR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/ore/glass,
@@ -17875,7 +17898,7 @@
 /area/awaymission/snowfield/medical/surgery)
 "prj" = (
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -17995,6 +18018,11 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
+"puf" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/awaymission/snowfield/security/hallway2)
 "pun" = (
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
@@ -19663,7 +19691,7 @@
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box/lights/bulbs,
 /turf/simulated/floor/tiled/steel_grid,
@@ -19784,7 +19812,7 @@
 /area/awaymission/snowfield/public/publicrestroom)
 "qPi" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_one_access = list(1, 53)
+	req_one_access = list(1,53)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -21307,7 +21335,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell 3;
+	id = Cell3;
 	name = "Cell 3";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -21893,7 +21921,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null;
-	req_one_access = list (10,11)
+	req_one_access = list(10,11)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -22752,29 +22780,29 @@
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
@@ -22858,22 +22886,22 @@
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -22994,7 +23022,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random = 10, /obj/item/weapon/tool/crowbar = 5, /obj/item/weapon/weldingtool = 3, /obj/item/weapon/tool/wirecutters = 5, /obj/item/weapon/tool/wrench = 5, /obj/item/device/analyzer = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3, /obj/item/device/flashlight/glowstick/orange = 3, /obj/item/device/flashlight/glowstick/yellow = 3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/weapon/tool/crowbar=5,/obj/item/weapon/weldingtool=3,/obj/item/weapon/tool/wirecutters=5,/obj/item/weapon/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/weapon/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -24027,7 +24055,7 @@
 /obj/machinery/vending/security{
 	description_fluff = "This security vending machine is kindly provided by the-... Sorry, how do you spell this company's name again?";
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't shoot me bro!;Shoot them, bro.;Why not have a slice of sandwich.";
-	products = list(/obj/item/weapon/handcuffs = 12, /obj/item/weapon/grenade/flashbang = 4, /obj/item/weapon/reagent_containers/food/snacks/sandwich = 12, /obj/item/weapon/storage/box/evidence = 6,/obj/item/ammo_magazine/makarov = 18,/obj/item/weapon/gun/projectile/serdy_pistols/makarov = 4,/obj/item/weapon/melee/classic_baton = 8)
+	products = list(/obj/item/weapon/handcuffs=12,/obj/item/weapon/grenade/flashbang=4,/obj/item/weapon/reagent_containers/food/snacks/sandwich=12,/obj/item/weapon/storage/box/evidence=6,/obj/item/ammo_magazine/makarov=18,/obj/item/weapon/gun/projectile/serdy_pistols/makarov=4,/obj/item/weapon/melee/classic_baton=8)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -24202,7 +24230,7 @@
 "vaq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -25862,7 +25890,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -26452,6 +26480,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "wSz" = (
@@ -47458,7 +47487,7 @@ tvg
 aaw
 xDT
 aBy
-xPZ
+fpL
 nBr
 oGm
 pgb
@@ -47719,7 +47748,7 @@ aBy
 aBy
 rSH
 okr
-rSH
+cCl
 bZn
 bZn
 bZn
@@ -48230,7 +48259,7 @@ aKI
 iUn
 raJ
 mmT
-cwI
+puf
 mJi
 mJi
 mJi
@@ -49007,7 +49036,7 @@ uDJ
 cTE
 eUs
 tlT
-cTE
+jtT
 uqf
 faB
 uDJ
@@ -50550,7 +50579,7 @@ byc
 aMr
 mFz
 mFz
-mFz
+owE
 rIV
 rIV
 mfc
@@ -50816,7 +50845,7 @@ mFz
 fcB
 dFg
 mFz
-mFz
+fnn
 ocr
 ocr
 ocr
@@ -69288,7 +69317,7 @@ pfs
 pun
 qym
 pfs
-jtT
+qqw
 kNs
 gwC
 eAM

@@ -508,6 +508,8 @@ I think I covered everything.
 ///	My thanks to Raeschen for these descriptions
 
 /mob/living/simple_mob/vore/bigdragon/init_vore()
+	if(!voremob_loaded) //CHOMPEdit
+		return
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
 	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HOLD] = list(

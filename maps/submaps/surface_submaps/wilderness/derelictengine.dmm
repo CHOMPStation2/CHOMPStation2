@@ -73,6 +73,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/plating,
 /area/submap/DerelictEngine)
 "bk" = (
@@ -238,6 +239,10 @@
 /obj/random/trash,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
+"ez" = (
+/obj/item/weapon/stock_parts/capacitor,
+/turf/simulated/shuttle/floor/alien,
+/area/submap/DerelictEngine)
 "eR" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -367,6 +372,7 @@
 	pixel_x = 7;
 	pixel_y = 10
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "hb" = (
@@ -461,6 +467,13 @@
 	dir = 4
 	},
 /obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/structure/prop/alien/dispenser{
+	pixel_x = -27
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"iu" = (
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "iz" = (
@@ -475,6 +488,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "iB" = (
@@ -540,7 +554,7 @@
 /obj/structure/table/alien,
 /obj/item/weapon/gun/energy/alien,
 /obj/item/prop/alien/phasecoil,
-/obj/item/clothing/suit/armor/alien/tank,
+/obj/item/clothing/suit/armor/alien,
 /obj/item/stack/material/diamond{
 	amount = 15
 	},
@@ -622,13 +636,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "lr" = (
-/obj/structure/prop/alien/dispenser{
-	pixel_x = -27
-	},
-/obj/effect/floor_decal/techfloor{
+/obj/structure/loot_pile/surface/alien/end,
+/obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/alienplating/external,
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "ls" = (
 /obj/item/weapon/surgical/circular_saw/alien,
@@ -639,6 +651,13 @@
 	dir = 8
 	},
 /obj/effect/gibspawner/human,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"lE" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "lV" = (
@@ -686,6 +705,18 @@
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
+"mE" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/item/weapon/stock_parts/micro_laser,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"mI" = (
+/obj/effect/decal/remains/xeno,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
+/turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
 "mM" = (
 /obj/effect/floor_decal/techfloor{
@@ -981,6 +1012,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
+"rh" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
+"rl" = (
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/floor/greengrid,
+/area/submap/DerelictEngine)
 "rI" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -1006,6 +1054,11 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
+"sn" = (
+/obj/random/trash,
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "sq" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -1014,7 +1067,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman,
+/obj/structure/frame,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "st" = (
@@ -1088,6 +1141,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
 "tB" = (
@@ -1385,6 +1439,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 6
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "xQ" = (
@@ -1442,7 +1497,7 @@
 	dir = 10
 	},
 /obj/item/prop/alien/junk,
-/obj/item/device/perfect_tele/alien/bluefo,
+/obj/item/weapon/implantcase/surge,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "yB" = (
@@ -1574,7 +1629,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/storage/belt/utility/alien,
+/obj/item/weapon/storage/belt/utility/alien/full,
 /obj/item/weapon/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
@@ -1709,6 +1764,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
 "Cz" = (
@@ -1868,6 +1924,13 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
+"FC" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "FE" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -1931,7 +1994,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 8
 	},
-/obj/random/mob/robotic/hivebot,
+/mob/living/simple_mob/mechanical/hivebot/support/commander,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "GU" = (
@@ -2261,6 +2324,10 @@
 /obj/effect/decal/cleanable/molten_item,
 /turf/simulated/floor/plating,
 /area/submap/DerelictEngine)
+"Ma" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
+/turf/simulated/shuttle/floor/alien/blue,
+/area/submap/DerelictEngine)
 "MD" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
 /obj/effect/floor_decal/techfloor{
@@ -2305,10 +2372,10 @@
 /obj/structure/closet/alien,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/shield_projector/rectangle/weak,
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
+/obj/item/device/perfect_tele/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "Nm" = (
@@ -2499,6 +2566,13 @@
 /obj/item/clothing/under/psysuit,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
+"Qm" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "Qv" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
@@ -2603,7 +2677,7 @@
 "RU" = (
 /obj/structure/closet/alien,
 /obj/item/weapon/weldingtool/alien,
-/obj/item/weapon/storage/belt/utility/alien/full,
+/obj/item/weapon/storage/belt/utility/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "RW" = (
@@ -2675,6 +2749,19 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
+"TK" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
 "TO" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
 /obj/structure/cable/green{
@@ -2694,6 +2781,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "TV" = (
@@ -2873,6 +2961,7 @@
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
+/obj/item/weapon/stock_parts/matter_bin,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/DerelictEngine)
 "WB" = (
@@ -2983,7 +3072,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/clothing/suit/armor/alien,
+/obj/item/weapon/circuitboard/pacman,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "Yr" = (
@@ -3027,6 +3116,7 @@
 	pixel_x = -9;
 	pixel_y = -7
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "YI" = (
@@ -3043,6 +3133,10 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"YW" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
+/turf/simulated/shuttle/floor/alien,
 /area/submap/DerelictEngine)
 "Zh" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -3391,7 +3485,7 @@ YJ
 YJ
 YJ
 YJ
-YJ
+lE
 YJ
 xs
 fO
@@ -3443,7 +3537,7 @@ je
 iB
 iB
 je
-je
+iu
 gy
 bp
 TB
@@ -3575,7 +3669,7 @@ zH
 fO
 fO
 AX
-HS
+rl
 jD
 fO
 gy
@@ -3596,7 +3690,7 @@ QT
 YJ
 YJ
 YJ
-YJ
+Qm
 Um
 fO
 fO
@@ -3722,7 +3816,7 @@ tx
 DJ
 QT
 fO
-LG
+Ma
 VA
 fO
 cH
@@ -3839,7 +3933,7 @@ je
 BR
 je
 je
-je
+iu
 je
 je
 je
@@ -3851,7 +3945,7 @@ yg
 iO
 WV
 je
-je
+iu
 Pw
 gy
 or
@@ -3918,7 +4012,7 @@ ql
 JX
 UV
 gy
-wM
+rh
 Yp
 fO
 Uv
@@ -4035,7 +4129,7 @@ cQ
 BR
 je
 je
-je
+iu
 je
 je
 je
@@ -4047,7 +4141,7 @@ iB
 je
 eq
 je
-eq
+sn
 BG
 gy
 or
@@ -4084,7 +4178,7 @@ je
 BR
 Wk
 iB
-iB
+ez
 iB
 Iv
 pF
@@ -4114,7 +4208,7 @@ Ct
 tj
 zk
 fO
-aG
+mI
 CV
 fO
 DA
@@ -4282,7 +4376,7 @@ Fd
 il
 Vb
 xQ
-lr
+FC
 vC
 fO
 fO
@@ -4316,7 +4410,7 @@ gy
 ms
 ht
 Yl
-rg
+TK
 jU
 vl
 iQ
@@ -4409,7 +4503,7 @@ SF
 fO
 gy
 yi
-yi
+lr
 gy
 zn
 je
@@ -4420,7 +4514,7 @@ TV
 Yu
 Yl
 je
-iB
+YW
 iB
 je
 je
@@ -4468,7 +4562,7 @@ Vb
 Vb
 Vb
 Vb
-Vb
+mE
 Vb
 Vb
 Ki

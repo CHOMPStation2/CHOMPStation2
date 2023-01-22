@@ -97,3 +97,10 @@
 
 	// This from original living.dm update_transforms too
 	handle_status_indicators()
+
+/mob/living/simple_mob/update_icon()
+	. = ..()
+	for(var/belly_class in vore_fullness_ex)
+		var/vs_fullness = vore_fullness_ex[belly_class]
+		if(vs_fullness > 0)
+			add_overlay("[icon_state]_[belly_class]-[vs_fullness]")

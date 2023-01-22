@@ -1,21 +1,45 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
+<<<<<<< HEAD
 /turf/unsimulated/wall/planetary/virgo3c,
 /area/groundbase/wilderness/north)
+=======
+/turf/unsimulated/wall/planetary,
+/area/submap/groundbase/wilderness/north)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "d" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
 	},
+<<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/north)
 "g" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/north)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/north)
+"g" = (
+/obj/effect/map_effect/portal/line/side_a,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north)
+"g" = (
+/obj/effect/map_effect/portal/line/side_a,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
+/area/submap/groundbase/wilderness/north)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "m" = (
 /turf/simulated/mineral/ignore_cavegen,
 /area/groundbase/wilderness/north/cave)
 "o" = (
+<<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/north/unexplored)
 "p" = (
@@ -25,15 +49,48 @@
 "K" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/wilderness/north)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/north/unexplored)
+"p" = (
+/obj/effect/map_effect/portal/master/side_a/gb_wilds/north_south,
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north/unexplored)
+"p" = (
+/obj/effect/map_effect/portal/master/side_a/gb_wilds/north_south,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
+/area/submap/groundbase/wilderness/north)
+"K" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/wilderness/north)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "N" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/north{
 	dir = 1
 	},
+<<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/north)
 "X" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/wilderness/north)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+/area/submap/groundbase/wilderness/north)
+"X" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark,
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north)
+"X" = (
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
+/area/submap/groundbase/wilderness/north)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 
 (1,1,1) = {"
 a

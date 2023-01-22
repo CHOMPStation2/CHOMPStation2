@@ -74,7 +74,7 @@ var/global/list/security_printer_tickets = list()	//VOREStation Edit
 
 	//VOREStation Add Start - Vore stats lets gooooo
 	if(GLOB.prey_eaten_roundstat > 0)
-		valid_stats_list.Add("A total of [GLOB.prey_eaten_roundstat] individuals were eaten today!")
+		valid_stats_list.Add("Individuals were eaten a total of [GLOB.prey_eaten_roundstat] times today!") //CHOMPEdit
 	if(GLOB.prey_digested_roundstat > 0)
 		valid_stats_list.Add("A total of [GLOB.prey_digested_roundstat] individuals were digested today!")
 	if(GLOB.prey_absorbed_roundstat > 0)
