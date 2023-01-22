@@ -57,8 +57,8 @@
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
 
 /datum/gear/accessory/holster
-	display_name = "holster selection (Security, SM, HoP)"
-	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Talon Captain","Talon Guard")
+	display_name = "holster selection (Security, SM, HoP, Exploration)" //CHOMP keep explo
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") //CHOMP keep explo
 
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown (Eng, Sec, Med, Exploration, Miner)" //CHOMP keep explo
