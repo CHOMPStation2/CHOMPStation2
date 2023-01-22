@@ -3812,13 +3812,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/guncabinet/phase{
-	description_fluff = "TO EXPLO WITH LOVE!!!! <3 - Warden";
-	name = "Heavy Phase Weapon Cabinet";
-	req_access = newlist();
-	req_one_access = list(3);
-	starts_with = list(/obj/item/weapon/gun/energy/locked/phasegun/rifle = 4, /obj/item/weapon/gun/energy/locked/phasegun/cannon = 4,/obj/item/weapon/cell/device/weapon = 8, /obj/item/clothing/accessory/permit/gun/planetside = 8)
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "akH" = (
