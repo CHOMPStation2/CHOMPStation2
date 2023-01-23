@@ -1114,7 +1114,7 @@
 
 /obj/item/clothing/under/explorer
 	desc = "A green uniform for operating in hazardous environments."
-	name = "explorer's jumpsuit"
+	name = "explorer's jumpsuit" //CHOMP keep explo
 	icon_state = "explorer"
 
 /obj/item/clothing/under/explorer/armored
@@ -1481,7 +1481,7 @@
 	worn_state = "hedberg_tech"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10) // Equivalent to engineer's jumpsuit.
 	rolled_sleeves = 0
-	
+
 //christmas stuff
 /obj/item/clothing/under/christmas/red
 	name = "red christmas suit"
@@ -1501,4 +1501,4 @@
 /obj/item/clothing/under/christmas/croptop/green
 	name = "green crop-top christmas suit"
 	desc = "A simple green christmas suit that doesn't quite looks like Mrs Claus'. Smells minty!"
-	icon_state = "christmascroppedgreen" 
+	icon_state = "christmascroppedgreen"
