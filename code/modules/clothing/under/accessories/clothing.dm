@@ -523,7 +523,7 @@
 
 /obj/item/clothing/accessory/asymovercoat
 	name = "orange asymmetrical overcoat"
-	desc = "An asymmetrical orange overcoat in a 2560's fashion."
+	desc = "An asymmetrical orange overcoat in a 2320's fashion."
 	icon_state = "asymovercoat"
 
 /*

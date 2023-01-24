@@ -42,9 +42,13 @@
 /obj/item/weapon/gun/projectile/automatic/c20r
 	name = "submachine gun"
 	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas', inscribed on the stock. Uses 10mm rounds."
+<<<<<<< HEAD
 	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
 	icon = 'icons/obj/64x32guns_ch.dmi'
 	icon_expected_width = 64
+=======
+	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2271, and has gained a dedicated following among a certain flavor of private operative."
+>>>>>>> 0b4713eedd... Merge pull request #14377 from Runa-Dacino/GygaxFix
 	icon_state = "c20r"
 	item_state = "c20r"
 	w_class = ITEMSIZE_NORMAL
@@ -137,9 +141,16 @@
 
 /obj/item/weapon/gun/projectile/automatic/z8
 	name = "battle rifle"
+<<<<<<< HEAD
 	desc = "The Z8 Bulldog is an older model battle rifle, made by the now defunct Zendai Foundries. Makes you feel like an old-school badass when you hold it, even though it can only hold 10 round magazines. Uses 7.62mm rounds and has an under barrel grenade launcher."
 	description_fluff = "Zendai Foundries was a well-respected mid-sized arms company that operated until 2508, when it was acquired by Hephaestus Industries. \
 	Plans to integrate the brand into wider corporate operations were brought to an abrupt halt by the SolGov-Hegemony war, and the company was left by the wayside. \
+=======
+	desc = "The Z8 Bulldog is an older model battle rifle, made by the now defunct Zendai Foundries. Makes you feel like an old-school badass when you hold it, \
+	even though it can only hold 10 round magazines. Uses 7.62mm rounds and has an under barrel grenade launcher."
+	description_fluff = "Zendai Foundries was a well-respected mid-sized arms company that operated until 2187, when it was acquired by Hephaestus Industries. \
+	Plans to integrate the brand into wider corporate operations were brought to an abrupt halt by the Commonwealth-Hegemony war, and the company was left by the wayside. \
+>>>>>>> 0b4713eedd... Merge pull request #14377 from Runa-Dacino/GygaxFix
 	Hephaestus still produces replacement parts for many of Zendai's most popular weapons, including the Z8 Bulldog, and a great detail remain in service."
 	icon = 'icons/obj/64x32guns_ch.dmi'
 	icon_expected_width = 64
