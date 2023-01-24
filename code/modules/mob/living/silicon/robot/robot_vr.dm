@@ -162,12 +162,17 @@
 	if(wideborg == TRUE)
 		if(icontype == "Drake") // Why, Why can't we have normal nice things
 			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
+<<<<<<< HEAD
 		else if(icontype == "Secborg model V-3" || icontype == "Mediborg model V-3") //CH edit
 			icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
 		else if(icontype == "Mediborg model V-4" || icontype == "Secborg model V-4"|| icontype == "Sciborg model V-4") //CHOMPEdit
 			icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi'
+=======
+		else if(icontype == "Raptor V-4") //Added for raptor sprites
+			icon = 'icons/mob/raptorborg/raptor.dmi'
+>>>>>>> f414ed39c3... Merge pull request #14378 from SatinIsle/Raptorborgs
 		else
 			icon = wideborg_dept
 		return

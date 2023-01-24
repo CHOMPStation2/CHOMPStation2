@@ -231,10 +231,15 @@
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
 					"Otieborg" = "oties",
+<<<<<<< HEAD
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec",
 					"Secborg model V-4" = "secraptor"//CHOMPEdit
+=======
+					"Drake" = "drakesec",
+					"Raptor V-4" = "secraptor"
+>>>>>>> f414ed39c3... Merge pull request #14378 from SatinIsle/Raptorborgs
 					)
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
@@ -308,10 +313,15 @@
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
 					"Borgi" = "borgi-medi",
+<<<<<<< HEAD
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed",
 					"Mediborg model V-4" = "medraptor" //CHOMPEdit
+=======
+					"Drake" = "drakemed",
+					"Raptor V-4" = "medraptor"
+>>>>>>> f414ed39c3... Merge pull request #14378 from SatinIsle/Raptorborgs
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
@@ -630,9 +640,14 @@
 					"Borgi" = "borgi-sci",
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark",
+<<<<<<< HEAD
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
 					"Sciborg model V-4" = "sciraptor"//CHOMPEdit
+=======
+					"Drake" = "drakesci",
+					"Raptor V-4" = "sciraptor"
+>>>>>>> f414ed39c3... Merge pull request #14378 from SatinIsle/Raptorborgs
 					)
 	can_be_pushed = 0
 
