@@ -22,8 +22,12 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/shadekin, /datum/unarmed_attack/bite/sharp/shadekin)
 	rarity_value = 15	//INTERDIMENSIONAL FLUFFERS
 
+<<<<<<< HEAD
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+=======
+	inherent_verbs = list(/mob/proc/adjust_hive_range)
+>>>>>>> 68f3b83a08... Merge pull request #14375 from Very-Soft/shadekinempathy
 
 	siemens_coefficient = 1
 	darksight = 10
