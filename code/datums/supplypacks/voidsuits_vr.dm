@@ -1,5 +1,5 @@
 /datum/supply_pack/voidsuits/explorer
-	name = "Exploration voidsuits"
+	name = "Exploration voidsuits" //CHOMP explo keep
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
@@ -9,11 +9,11 @@
 			)
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Exploration voidsuit crate"
-	access = access_explorer
+	containername = "Exploration voidsuit crate" //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/voidsuits/explorer_medic
-	name = "Expedition Medic voidsuits"
+	name = "Expedition Medic voidsuits" //CHOMP explo keep
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
@@ -23,8 +23,8 @@
 			)
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Expedition Medic voidsuit crate"
-	access = access_explorer
+	containername = "Expedition Medic voidsuit crate" //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/voidsuits/pilot
 	name = "Pilot voidsuits"
@@ -53,9 +53,9 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov mining voidsuit crate"
 	access = access_mining
-	
-/datum/supply_pack/voidsuits/solgov_anomaly
-	name = "Solgov anomaly suit"
+
+/datum/supply_pack/voidsuits/solgov_anomaly //CHOMP explo keep
+	name = "Solgov anomaly suit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/anomaly/alt,
 		/obj/item/clothing/head/helmet/space/anomaly/alt
@@ -64,9 +64,9 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov anomaly suit crate"
 	access = access_xenoarch
-	
-/datum/supply_pack/voidsuits/solgov_riot
-	name = "Solgov riot voidsuit"
+
+/datum/supply_pack/voidsuits/solgov_riot //CHOMP explo keep
+	name = "Solgov riot voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/security/riot/alt,
 		/obj/item/clothing/head/helmet/space/void/security/riot/alt
@@ -75,9 +75,9 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov riot voidsuit crate"
 	access = access_brig
-	
-/datum/supply_pack/voidsuits/solgov_pilot
-	name = "Solgov pilot voidsuit"
+
+/datum/supply_pack/voidsuits/solgov_pilot //CHOMP explo keep
+	name = "Solgov pilot voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/pilot/alt2,
 		/obj/item/clothing/head/helmet/space/void/pilot/alt2
@@ -86,9 +86,9 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov pilot voidsuit crate"
 	access = access_pilot
-	
-/datum/supply_pack/voidsuits/solgov_medical
-	name = "Solgov medical voidsuit"
+
+/datum/supply_pack/voidsuits/solgov_medical //CHOMP explo keep
+	name = "Solgov medical voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/medical/alt2,
 		/obj/item/clothing/head/helmet/space/void/medical/alt2
@@ -105,11 +105,11 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-	name = "Solgov exploration voidsuit crate"
-	access = access_explorer
+	name = "Solgov exploration voidsuit crate"  //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 	
-/datum/supply_pack/voidsuits/solgov_engineer
-	name = "Solgov engineering voidsuit"
+/datum/supply_pack/voidsuits/solgov_engineer //CHOMP explo keep
+	name = "Solgov engineering voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/engineering/alt2,
 		/obj/item/clothing/head/helmet/space/void/engineering/alt2
@@ -118,9 +118,9 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov engineering voidsuit crate"
 	access = access_engine
-	
-/datum/supply_pack/voidsuits/solgov_atmos
-	name = "Solgov atmos voidsuit"
+
+/datum/supply_pack/voidsuits/solgov_atmos //CHOMP explo keep
+	name = "Solgov atmos voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/atmos/alt2,
 		/obj/item/clothing/head/helmet/space/void/atmos/alt2
@@ -129,9 +129,9 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov atmos voidsuit crate"
 	access = access_atmospherics
-	
-/datum/supply_pack/voidsuits/solgov_captain
-	name = "Solgov captain voidsuit"
+
+/datum/supply_pack/voidsuits/solgov_captain //CHOMP explo keep
+	name = "Solgov captain voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/captain/alt,
 		/obj/item/clothing/head/helmet/space/void/captain/alt

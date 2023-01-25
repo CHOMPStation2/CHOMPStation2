@@ -44,12 +44,14 @@
 	name = "Cargo Technician"
 /obj/effect/landmark/start/miner
 	name = "Shaft Miner"
+ //CHOMP explo keep removed wide comment field
 /obj/effect/landmark/start/pf
 	name = "Pathfinder"
 /obj/effect/landmark/start/explorer
 	name = "Explorer"
 /obj/effect/landmark/start/fieldmedic
 	name = "Field Medic"
+ //CHOMP explo keep removed wide comment field end
 /obj/effect/landmark/start/bartender
 	name = "Bartender"
 /obj/effect/landmark/start/botanist

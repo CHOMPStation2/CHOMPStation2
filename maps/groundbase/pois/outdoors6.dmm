@@ -6,8 +6,13 @@
 /turf/simulated/floor/wood,
 /area/groundbase/poi/outdoor/cabin3)
 "e" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "j" = (
 /obj/random/crate,
 /obj/random/maintenance/misc,

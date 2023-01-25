@@ -115,6 +115,8 @@ var/list/flooring_types
 	var/list/movable_atom_whitelist = list()
 	var/list/movable_atom_blacklist = list()
 
+	var/check_season = FALSE	//VOREStation Addition
+
 /decl/flooring/proc/get_plating_type(var/turf/T)
 	return plating_type
 
@@ -251,6 +253,12 @@ var/list/flooring_types
 		'sound/effects/footstep/snow3.ogg',
 		'sound/effects/footstep/snow4.ogg',
 		'sound/effects/footstep/snow5.ogg'))
+
+/decl/flooring/snow/fake
+		desc = "A coating of fake snow, looks surprisingly realistic, though not as cold as the real thing."
+		icon = 'icons/turf/flooring/fakesnow.dmi'
+		icon_base = "snow"
+		flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_SHOVEL
 
 /decl/flooring/snow/snow2
 	name = "snow"
@@ -627,4 +635,14 @@ var/list/flooring_types
 	can_paint = 1		//VOREStation edit. Let's allow for some fun.
 	can_engrave = 1		//VOREStation edit. Fun.
 	flags = TURF_ACID_IMMUNE | TURF_CAN_BREAK | TURF_REMOVE_CROWBAR
-  
+
+///// Season Time! ///// VOREStation Addition Start
+/decl/flooring/grass/seasonal_grass
+	desc = "It's grass!"
+	icon = 'icons/seasonal/turf.dmi'
+	check_season = TRUE
+	has_base_range = 11
+
+/decl/flooring/grass/seasonal_grass/dark
+	name = "grass"
+	icon_base = "darkgrass"

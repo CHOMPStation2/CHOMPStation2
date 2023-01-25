@@ -1,8 +1,23 @@
 //Overrides
 /obj/item/ammo_magazine/m9mmp90	//congratulations you are now being converted 5.7x28mm, a.k.a the round the p90 actually uses.
-	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"	//Ugh, we'll leave it AP I guess
-	ammo_type = /obj/item/ammo_casing/a57/ap
+	name = "large capacity top mounted magazine (5.7x28mm standard)" //Standard boolet. Cheaper to make.
+	ammo_type = /obj/item/ammo_casing/a57
+	matter = list(MAT_STEEL = 2700)
 	caliber = "5.7x28mm"
+
+/obj/item/ammo_magazine/m9mmp90/hp
+	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"
+	ammo_type = /obj/item/ammo_casing/a57/ap
+	matter = list(MAT_STEEL = 3000)
+
+/obj/item/ammo_magazine/m9mmp90/rubber
+	name = "large capacity top mounted magazine (5.7x28mm rubber)"
+	ammo_type = /obj/item/ammo_casing/a57/rubber
+
+/obj/item/ammo_magazine/m9mmp90/ap
+	name = "large capacity top mounted magazine (5.7x28mm hollow-point)"
+	ammo_type = /obj/item/ammo_casing/a57/hp
+	matter = list(MAT_STEEL = 3000)
 
 /obj/item/ammo_magazine/m762svd	//You are now being converted to 7.62x54mmR :3
 	name = "\improper SVD magazine (7.62x54mmR)"
