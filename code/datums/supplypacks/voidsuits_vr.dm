@@ -105,19 +105,11 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
-	name = "Solgov exploration voidsuit crate"
-	access = access_explorer
+	name = "Solgov exploration voidsuit crate"  //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 	
-/datum/supply_pack/voidsuits/solgov_engineer
-	name = "Solgov engineering voidsuit"
-=======
-	name = "Commonwealth exploration voidsuit crate"
-	access = list(access_eva, access_explorer)
-
-/datum/supply_pack/voidsuits/com_engineer
-	name = "Commonwealth engineering voidsuit"
->>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
+/datum/supply_pack/voidsuits/solgov_engineer //CHOMP explo keep
+	name = "Solgov engineering voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/engineering/alt2,
 		/obj/item/clothing/head/helmet/space/void/engineering/alt2
