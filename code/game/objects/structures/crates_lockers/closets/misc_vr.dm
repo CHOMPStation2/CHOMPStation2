@@ -215,11 +215,8 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
 		/obj/item/device/gps/explorer,
-<<<<<<< HEAD
-		/obj/item/device/cataloguer/compact)
-=======
-		/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked)
->>>>>>> 7fe4a72808... Merge pull request #14247 from BonniePandora/Pilot-holdout-mk2
+		/obj/item/device/cataloguer/compact) //CHOMP edit
+//		/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked) //CHOMP Remove
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
 	if(prob(50))
