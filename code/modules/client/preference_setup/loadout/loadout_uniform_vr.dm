@@ -316,3 +316,5 @@ Talon jumpsuit
 		var/obj/item/clothing/under/color/fjumpsuit/jumpsuit = jumpsuit_style
 		jumpsuits[initial(jumpsuit.name)] = jumpsuit
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(jumpsuits))
+
+code/modules/client/preference_setup/loadout/loadout_uniform_vr.dm
