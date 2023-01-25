@@ -35,8 +35,9 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	maxbodytemp = INFINITY
+	maxbodytemp = 1100
 	movement_cooldown = 2
+	hunger_rate = 0
 
 	var/mob/living/carbon/human/humanform
 	var/obj/item/organ/internal/nano/refactory/refactory
@@ -271,6 +272,12 @@
 	else
 		return ..()
 
+/mob/living/simple_mob/protean_blob/adjust_nutrition(amount)
+	if(humanform)
+		return humanform.adjust_nutrition(amount)
+	else
+		return ..()
+
 /mob/living/simple_mob/protean_blob/emp_act(severity)
 	if(humanform)
 		return humanform.emp_act(severity)
@@ -284,6 +291,8 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/rad_act(severity)
+	if(istype(loc, /obj/item/weapon/rig))
+		return	//Don't irradiate us while we're in rig mode
 	if(humanform)
 		return humanform.rad_act(severity)
 	else
@@ -301,9 +310,6 @@
 	else
 		animate(src, alpha = 0, time = 2 SECONDS)
 		sleep(2 SECONDS)
-
-	if(!QDELETED(src)) // Human's handle death should have taken us, but maybe we were adminspawned or something without a human counterpart
-		qdel(src)
 
 /mob/living/simple_mob/protean_blob/Life()
 	. = ..()
@@ -409,81 +415,84 @@
 	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
+	to_chat(src, "<span class='notice'>You rapidly disassociate your form</span>")
+	if(force || do_after(src,20))
+		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
+		remove_micros(src, src) //Living things don't fare well in roblobs.
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(LAZYLEN(buckled_mobs))
+			for(var/buckledmob in buckled_mobs)
+				riding_datum.force_dismount(buckledmob)
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
 
-	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
-	remove_micros(src, src) //Living things don't fare well in roblobs.
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(LAZYLEN(buckled_mobs))
-		for(var/buckledmob in buckled_mobs)
-			riding_datum.force_dismount(buckledmob)
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
+		var/client/C = client
 
-	var/client/C = client
+		//Record where they should go
+		var/atom/creation_spot = drop_location()
 
-	//Record where they should go
-	var/atom/creation_spot = drop_location()
+		//Create our new blob
+		var/mob/living/simple_mob/protean_blob/blob = new(creation_spot,src)
 
-	//Create our new blob
-	var/mob/living/simple_mob/protean_blob/blob = new(creation_spot,src)
+		//Size update
+		blob.transform = matrix()*size_multiplier
+		blob.size_multiplier = size_multiplier
 
-	//Size update
-	blob.transform = matrix()*size_multiplier
-	blob.size_multiplier = size_multiplier
+		if(l_hand) drop_l_hand()
+		if(r_hand) drop_r_hand()
 
-	if(l_hand) drop_l_hand()
-	if(r_hand) drop_r_hand()
+		//Put our owner in it (don't transfer var/mind)
+		blob.ckey = ckey
+		blob.ooc_notes = ooc_notes
+		temporary_form = blob
+		var/obj/item/device/radio/R = null
+		if(isradio(l_ear))
+			R = l_ear
+		if(isradio(r_ear))
+			R = r_ear
+		if(R)
+			blob.mob_radio = R
+			R.forceMove(blob)
+		if(wear_id)
+			blob.myid = wear_id
+			wear_id.forceMove(blob)
 
-	//Put our owner in it (don't transfer var/mind)
-	blob.ckey = ckey
-	blob.ooc_notes = ooc_notes
-	temporary_form = blob
-	var/obj/item/device/radio/R = null
-	if(isradio(l_ear))
-		R = l_ear
-	if(isradio(r_ear))
-		R = r_ear
-	if(R)
-		blob.mob_radio = R
-		R.forceMove(blob)
-	if(wear_id)
-		blob.myid = wear_id
-		wear_id.forceMove(blob)
+		//Mail them to nullspace
+		moveToNullspace()
 
-	//Mail them to nullspace
-	moveToNullspace()
+		//Message
+		blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
 
-	//Message
-	blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
+		//Duration of the to_puddle iconstate that the blob starts with
+		sleep(13)
+		blob.update_icon() //Will remove the collapse anim
 
-	//Duration of the to_puddle iconstate that the blob starts with
-	sleep(13)
-	blob.update_icon() //Will remove the collapse anim
+		//Transfer vore organs
+		blob.vore_organs = vore_organs.Copy()
+		blob.vore_selected = vore_selected
+		for(var/obj/belly/B as anything in vore_organs)
+			B.forceMove(blob)
+			B.owner = blob
+		vore_organs.Cut()
 
-	//Transfer vore organs
-	blob.vore_organs = vore_organs.Copy()
-	blob.vore_selected = vore_selected
-	for(var/obj/belly/B as anything in vore_organs)
-		B.forceMove(blob)
-		B.owner = blob
-	vore_organs.Cut()
+		//We can still speak our languages!
+		blob.languages = languages.Copy()
+		blob.name = real_name
+		blob.voice_name = name
+		var/datum/species/protean/S = src.species
+		blob.icon_living = S.blob_appearance
+		blob.item_state = S.blob_appearance
+		blob.update_icon()
 
-	//We can still speak our languages!
-	blob.languages = languages.Copy()
-	blob.name = real_name
-	blob.voice_name = name
-	var/datum/species/protean/S = src.species
-	blob.icon_living = S.blob_appearance
-	blob.item_state = S.blob_appearance
-	blob.update_icon()
+		//Flip them to the protean panel
+		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
 
-	//Flip them to the protean panel
-	addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
-
-	//Return our blob in case someone wants it
-	return blob
+		//Return our blob in case someone wants it
+		return blob
+	else
+		to_chat(src, "<span class='warning'>You must remain still to blobform!</span>")
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
 /proc/remove_micros(var/src, var/mob/root)
@@ -512,73 +521,76 @@
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
+	to_chat(src, "<span class='notice'>You rapidly reassemble your form</span>")
+	if(force || do_after(blob,20))
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(LAZYLEN(buckled_mobs))
+			for(var/buckledmob in buckled_mobs)
+				riding_datum.force_dismount(buckledmob)
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
 
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(LAZYLEN(buckled_mobs))
-		for(var/buckledmob in buckled_mobs)
-			riding_datum.force_dismount(buckledmob)
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
+		var/client/C = blob.client
 
-	var/client/C = blob.client
+		//Stop healing if we are
+		if(blob.healing)
+			blob.healing.expire()
 
-	//Stop healing if we are
-	if(blob.healing)
-		blob.healing.expire()
+		if(blob.l_hand) blob.drop_l_hand()
+		if(blob.r_hand) blob.drop_r_hand()
 
-	if(blob.l_hand) blob.drop_l_hand()
-	if(blob.r_hand) blob.drop_r_hand()
+		if(blob.mob_radio)
+			blob.mob_radio.forceMove(src)
+			blob.mob_radio = null
+		if(blob.myid)
+			blob.myid.forceMove(src)
+			blob.myid = null
 
-	if(blob.mob_radio)
-		blob.mob_radio.forceMove(src)
-		blob.mob_radio = null
-	if(blob.myid)
-		blob.myid.forceMove(src)
-		blob.myid = null
+		//Play the animation
+		blob.icon_state = "from_puddle"
 
-	//Play the animation
-	blob.icon_state = "from_puddle"
+		//Message
+		blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
 
-	//Message
-	blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
+		//Duration of above animation
+		sleep(8)
 
-	//Duration of above animation
-	sleep(8)
+		//Record where they should go
+		var/atom/reform_spot = blob.drop_location()
 
-	//Record where they should go
-	var/atom/reform_spot = blob.drop_location()
+		//Size update
+		resize(blob.size_multiplier, FALSE, ignore_prefs = TRUE)
 
-	//Size update
-	resize(blob.size_multiplier, FALSE, ignore_prefs = TRUE)
+		//Move them back where the blob was
+		forceMove(reform_spot)
 
-	//Move them back where the blob was
-	forceMove(reform_spot)
+		//Put our owner in it (don't transfer var/mind)
+		ckey = blob.ckey
+		ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
+		temporary_form = null
 
-	//Put our owner in it (don't transfer var/mind)
-	ckey = blob.ckey
-	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
-	temporary_form = null
+		//Transfer vore organs
+		vore_organs = blob.vore_organs.Copy()
+		vore_selected = blob.vore_selected
+		for(var/obj/belly/B as anything in blob.vore_organs)
+			B.forceMove(src)
+			B.owner = src
+		languages = blob.languages.Copy()
 
-	//Transfer vore organs
-	vore_organs = blob.vore_organs.Copy()
-	vore_selected = blob.vore_selected
-	for(var/obj/belly/B as anything in blob.vore_organs)
-		B.forceMove(src)
-		B.owner = src
-	languages = blob.languages.Copy()
+		Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
-	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
+		//Get rid of friend blob
+		qdel(blob)
 
-	//Get rid of friend blob
-	qdel(blob)
+		//Flip them to the protean panel
+		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
 
-	//Flip them to the protean panel
-	addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
-
-	//Return ourselves in case someone wants it
-	return src
+		//Return ourselves in case someone wants it
+		return src
+	else
+		to_chat(src, "<span class='warning'>You must remain still to reshape yourself!</span>")
 
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)
@@ -616,3 +628,6 @@
 		if(PB.humanform == src)
 			return FALSE
 	return ..()
+
+/mob/living/simple_mob/protean_blob/handle_mutations_and_radiation()
+	humanform.handle_mutations_and_radiation()

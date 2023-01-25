@@ -86,6 +86,9 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 			interface_desc += " Slowdown: [slowdown]"
 
 /obj/item/rig_module/protean/armor/activate()
+	if(holder?:assimilated_rig)
+		to_chat(usr, "<font color='red'><b>Armor module non-functional while a RIG is assimilated.</b></font>")
+		return
 	if(!..(1))
 		return 0
 

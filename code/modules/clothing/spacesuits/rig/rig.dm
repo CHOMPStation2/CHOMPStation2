@@ -536,7 +536,8 @@
 			offline = 0
 			if(istype(wearer) && !wearer.wearing_rig)
 				wearer.wearing_rig = src
-			slowdown = initial(slowdown)
+			if(!istype(src,/obj/item/weapon/rig/protean))	//CHOMPEdit - Stupid snowflake protean special check for rig assimilation code
+				slowdown = initial(slowdown)
 
 	if(offline)
 		if(offline == 1)

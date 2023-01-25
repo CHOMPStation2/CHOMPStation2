@@ -52,7 +52,7 @@
 		else
 			blob = temporary_form
 		active_regen = 1
-		if(do_after(blob,5 SECONDS))
+		if(do_after(blob,50))
 			var/list/limblist = species.has_limbs[choice]
 			var/limbpath = limblist["path"]
 			var/obj/item/organ/external/new_eo = new limbpath(src)
@@ -114,12 +114,24 @@
 		else
 			to_chat(caller, "<span class='warning'>You do not have enough steel stored for this operation.</span>")
 	else
+		input = tgui_alert(caller,{"Include Flavourtext?"},"Reassembly",list("Yes","No","Cancel"))
+		if(input == "Cancel" || !input)
+			return
+		var/flavour = 0
+		if(input == "Yes")
+			flavour = 1
+		input = tgui_alert(caller,{"Include OOC notes?"},"Reassembly",list("Yes","No","Cancel"))
+		if(input == "Cancel" || !input)
+			return
+		var/oocnotes = 0
+		if(input == "Yes")
+			oocnotes = 1
 		to_chat(caller, "<span class='notify'>You begin to reassemble. You will need to remain still.</span>")
 		caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble.</span>")
 		if(do_after(caller, 40))
 			if(client.prefs)	//Make sure we didn't d/c
 				var/obj/item/weapon/rig/protean/Rig = species?:OurRig
-				GetAppearanceFromPrefs()
+				GetAppearanceFromPrefs(flavour, oocnotes)
 				species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
 				caller.visible_message("<span class='notify'>[caller] adopts a new form!</span>", "<span class='danger'>You have reassembled.</span>")
 
@@ -239,48 +251,54 @@
 	set category = "Abilities"
 	set hidden = 1
 
+	var/mob/living/caller = src
+	if(temporary_form)
+		caller = temporary_form
 	if(nano_dead_check(src))
-		to_chat(temporary_form, "<span class='warning'>You need to be repaired first before you can act!</span>")
+		to_chat(caller, "<span class='warning'>You need to be repaired first before you can act!</span>")
 		return
+	to_chat(src, "<span class='notice'>You rapidly condense into your module.</span>")
+	if(forced || do_after(caller,20))
+		if(!temporary_form)	//If you're human, force you into blob form before rig'ing
+			nano_blobform(forced)
+		spawn(2)
 
-	if(!temporary_form)	//If you're human, force you into blob form before rig'ing
-		nano_blobform(forced)
-	spawn(2)
-
-	if(istype(src.species, /datum/species/protean))
-		var/datum/species/protean/S = src.species
-		var/mob/living/simple_mob/protean_blob/P = temporary_form
-		if(S.OurRig) //Do we even have a RIG?
-			if(P.loc == S.OurRig)	//we're inside our own RIG
-				if(S.OurRig.wearer) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
-					var/mob/living/carbon/human/victim = S.OurRig.wearer
-					victim.drop_from_inventory(S.OurRig)
-					if(P.can_be_drop_pred && victim.devourable && victim.can_be_drop_prey)
-						if(P.vore_selected)
-							perform_the_nom(P,victim,P,P.vore_selected,1)
-				P.forceMove(get_turf(S.OurRig))
-				S.OurRig.forceMove(src)
-				S.OurRig.myprotean = src
-				src.equip_to_slot_if_possible(S.OurRig, slot_back)
-				S.OurRig.Moved()
-				P.has_hands = 1
-			else	//We're not in our own RIG
-				if(P.stat || P.resting && !forced)
-					to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
-				else
-					if(P.l_hand)
-						P.drop_l_hand()
-					if(P.r_hand)
-						P.drop_r_hand()
-					P.has_hands = 0
-					S.OurRig.myprotean = P
-					src.drop_from_inventory(S.OurRig)
-					P.forceMove(S.OurRig)
-					S.OurRig.canremove = 1
-			P.reset_view()
-		else	//Make one if not
-			to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. This may have been caused by an admin heal. A new one has been created for you, contact a coder.</span>")
-			new /obj/item/weapon/rig/protean(src,src)
+		if(istype(src.species, /datum/species/protean))
+			var/datum/species/protean/S = src.species
+			var/mob/living/simple_mob/protean_blob/P = temporary_form
+			if(S.OurRig) //Do we even have a RIG?
+				if(P.loc == S.OurRig)	//we're inside our own RIG
+					if(S.OurRig.wearer) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
+						var/mob/living/carbon/human/victim = S.OurRig.wearer
+						victim.drop_from_inventory(S.OurRig)
+						if(P.can_be_drop_pred && victim.devourable && victim.can_be_drop_prey)
+							if(P.vore_selected)
+								perform_the_nom(P,victim,P,P.vore_selected,1)
+					P.forceMove(get_turf(S.OurRig))
+					S.OurRig.forceMove(src)
+					S.OurRig.myprotean = src
+					src.equip_to_slot_if_possible(S.OurRig, slot_back)
+					S.OurRig.Moved()
+					P.has_hands = 1
+				else	//We're not in our own RIG
+					if(P.stat || P.resting && !forced)
+						to_chat(P,"<span class='warning'>You can only do this while not stunned.</span>")
+					else
+						if(P.l_hand)
+							P.drop_l_hand()
+						if(P.r_hand)
+							P.drop_r_hand()
+						P.has_hands = 0
+						S.OurRig.myprotean = P
+						src.drop_from_inventory(S.OurRig)
+						P.forceMove(S.OurRig)
+						S.OurRig.canremove = 1
+				P.reset_view()
+			else	//Make one if not
+				to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. This may have been caused by an admin heal. A new one has been created for you, contact a coder.</span>")
+				new /obj/item/weapon/rig/protean(src,src)
+	else
+		to_chat(src, "<span class='warning'>You must remain still to condense!</span>")
 
 /mob/living/carbon/human/proc/appearance_switch()
 	set name = "Switch Blob Appearance"

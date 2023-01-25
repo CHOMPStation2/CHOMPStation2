@@ -114,7 +114,7 @@
 /datum/design/item/mechfab/rigsuit/phase
 	name = "hardsuit phase rifle"
 	desc = "A compact phase rifle for a hardsuit."
-	id = "rig_gun_taser"
+	id = "rig_gun_phase"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 4, TECH_MAGNET = 3, TECH_POWER = 4, TECH_COMBAT = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1250)
 	build_path = /obj/item/rig_module/mounted/phase

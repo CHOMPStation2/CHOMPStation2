@@ -105,7 +105,7 @@
 			struggle_anim_taur = FALSE
 			update_vore_tail_sprite()
 
-/mob/living/carbon/human/proc/GetAppearanceFromPrefs()
+/mob/living/carbon/human/proc/GetAppearanceFromPrefs(var/flavourtext, var/oocnotes)
 	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
 	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
 	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
@@ -123,6 +123,10 @@
 		dna.species_traits = traits.Copy()
 		UpdateAppearance()
 		icon = Dummy.icon
+		if(flavourtext)
+			flavor_texts = client.prefs.flavor_texts.Copy()
+		if(oocnotes)
+			ooc_notes = client.prefs.metadata
 	qdel(Dummy)
 
 /*	Alternative version of the above proc, incase it turns out cloning our dummy mob's DNA is an awful, terrible bad idea.

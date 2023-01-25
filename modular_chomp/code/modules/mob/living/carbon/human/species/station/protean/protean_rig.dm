@@ -27,20 +27,20 @@
 	//interface_path = "RIGSuit_protean"
 	//ai_interface_path = "RIGSuit_protean"
 	var/sealed = 0
-	var/reviving = 0
+	var/assimilated_rig
 
 /obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
 		return
-	forced_move(direction, user, FALSE)
+	forced_move(direction, user, 0)
 
 /obj/item/weapon/rig/protean/check_suit_access(mob/living/user)
 	if(user == myprotean)
-		return TRUE
+		return 1
 	return ..()
 
 /obj/item/weapon/rig/protean/digest_act(atom/movable/item_storage = null)
-	return FALSE
+	return 0
 
 /obj/item/weapon/rig/protean/New(var/newloc, var/mob/living/carbon/human/P)
 	if(P)
@@ -51,7 +51,6 @@
 			myprotean = P
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
-	verbs += /obj/item/weapon/rig/verb/RemoveBag
 	..(newloc)
 
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
@@ -69,7 +68,7 @@
 	else
 		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
 
-/obj/item/weapon/rig/verb/RemoveBag()
+/obj/item/weapon/rig/protean/verb/RemoveBag()
 	set name = "Remove Stored Bag"
 	set category = "Object"
 
@@ -95,18 +94,18 @@
 	name = "mass"
 	desc = "A helmet-shaped clump of nanomachines."
 	light_overlay = "should not use a light overlay"
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN) //CHOMPEDIT: adding more races to the proto rig
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 
 /obj/item/clothing/gloves/gauntlets/rig/protean
 	name = "mass"
 	desc = "Glove-shaped clusters of nanomachines."
 	siemens_coefficient= 0
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN) //CHOMPEDIT: adding more races to the proto rig
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 
 /obj/item/clothing/shoes/magboots/rig/protean
 	name = "mass"
 	desc = "Boot-shaped clusters of nanomachines."
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN) //CHOMPEDIT: adding more races to the proto rig
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 
 /obj/item/clothing/suit/space/rig/protean
 	name = "mass"
@@ -120,7 +119,7 @@
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/melee/baton,
 		/obj/item/weapon/storage/backpack,
-		)	//Subspace radio is in for the citadel version. IDK if we have that and I don't think we need it so I removed it from this list.
+		)
 
 
 
@@ -278,6 +277,48 @@
 /obj/item/weapon/rig/protean/attackby(obj/item/W as obj, mob/living/user as mob)
 	if(!istype(user))
 		return 0
+	if(dead)
+		switch(dead)
+			if(1)
+				if(W.is_screwdriver())
+					playsound(src, W.usesound, 50, 1)
+					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
+						to_chat(user, "<span class='notice'>You unscrew the maintenace panel on the [src].</span>")
+						dead +=1
+				return
+			if(2)
+				if(istype(W, /obj/item/device/protean_reboot))//placeholder
+					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
+						playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
+						to_chat(user, "<span class='notice'>You carefully slot [W] in the [src].</span>")
+						dead +=1
+						qdel(W)
+				return
+			if(3)
+				if(istype(W, /obj/item/stack/nanopaste))
+					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
+						playsound(src, 'sound/effects/ointment.ogg', 50, 1)
+						to_chat(user, "<span class='notice'>You slather the interior confines of the [src] with the [W].</span>")
+						dead +=1
+						W?:use(1)
+				return
+			if(4)
+				if(istype(W, /obj/item/weapon/shockpaddles))
+					if(W?:can_use(user))
+						to_chat(user, "<span class='notice'>You hook up the [W] to the contact points in the maintenance assembly</span>")
+						if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
+							playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
+							if(do_after(user,10,src))
+								playsound(src, 'sound/machines/defib_zap.ogg', 50, 1, -1)
+								playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
+								new /obj/effect/gibspawner/robot(src.loc)
+								src.atom_say("Contact received! Reassembly nanites calibrated. Estimated time to resucitation: 1 minute 30 seconds")
+								dead = 0
+								addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 900)
+				return
+	if(istype(W,/obj/item/weapon/rig))
+		if(!assimilated_rig)
+			AssimilateRig(user,W)
 	if(istype(W,/obj/item/weapon/tank)) //Todo, some kind of check for suits without integrated air supplies.
 		if(air_supply)
 			to_chat(user, "\The [src] already has a tank installed.")
@@ -352,20 +393,6 @@
 	for(var/obj/item/rig_module/module in installed_modules)
 		if(module.accepts_item(W,user)) //Item is handled in this proc
 			return
-	if(dead)
-		if(istype(W, /obj/item/stack/material/plasteel))
-			var/obj/item/stack/material/plasteel/PL = W
-			if(!reviving)
-				if(PL.get_amount() < 5)
-					to_chat(user, "<span class='warning'>You need five sheets of plasteel to reconstruct this Protean.</span>")
-					return
-				if(PL.use(5))
-					to_chat(user, "<span class='notice'>You feed plasteel to the Protean, they will be able to reconstitute in ten minutes from now.</span>")
-					to_chat(myprotean, "<span class='notice'>You've been fed the necessary plasteel to reconstitute your form, you will be able to reconstitute in ten minutes.</span>")
-					addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 6000)
-					return
-			else
-				to_chat(user, "<span class='notice'>This Protean is already reconstituting</span>")
 	if(rig_storage)
 		var/obj/item/weapon/storage/backpack = rig_storage
 		if(backpack.can_be_inserted(W, 1))
@@ -411,9 +438,8 @@
 				var/datum/species/protean/S
 				S = H.species
 				S.pseudodead = 0
-				dead = 0
-				reviving = 0
 				to_chat(myprotean, "<span class='notice'>You have finished reconstituting.</span>")
+				playsound(src, 'sound/machines/ping.ogg', 50, 0)
 
 /obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
 	return	//We don't do that here
@@ -488,3 +514,78 @@
 /obj/item/weapon/rig/protean/toggle_piece(piece, mob/living/carbon/human/H, deploy_mode, forced)
 	H = src.wearer
 	..()
+
+/obj/item/weapon/rig/protean/get_description_interaction()
+	if(dead)
+		var/list/results = list()
+		switch(dead)
+			if(1)
+				results += "Use a screwdriver to start repairs."
+			if(2)
+				results += "Insert a Protean Reboot Programmer, printed from a protolathe."
+			if(3)
+				results += "Use some Nanopaste."
+			if(4)
+				results += "Use either a defib or jumper cables to start the reboot sequence."
+		return results
+
+//Effectively a round about way of letting a Protean wear other rigs.
+/obj/item/weapon/rig/protean/proc/AssimilateRig(mob/user, var/obj/item/weapon/rig/R)
+	if(!R || assimilated_rig)
+		return
+	to_chat(user, "You assimilate the [R] into the [src]. Mimicking its stats and appearance.")
+	for(var/obj/item/piece in list(gloves,helmet,boots,chest))
+		piece.armor = R.armor.Copy()
+	//I dislike this piece of code, but not every rig has the full set of parts
+	if(R.gloves)
+		gloves.sprite_sheets = R.gloves.sprite_sheets.Copy()
+		gloves.sprite_sheets_obj = R.gloves.sprite_sheets.Copy()
+		gloves.icon_state = R.gloves.icon_state
+	if(R.helmet)
+		helmet.sprite_sheets = R.helmet.sprite_sheets.Copy()
+		helmet.sprite_sheets_obj = R.helmet.sprite_sheets.Copy()
+		helmet.icon_state = R.helmet.icon_state
+	if(R.boots)
+		boots.sprite_sheets = R.boots.sprite_sheets.Copy()
+		boots.sprite_sheets_obj = R.boots.sprite_sheets.Copy()
+		boots.icon_state = R.boots.icon_state
+	if(R.chest)
+		chest.sprite_sheets = R.chest.sprite_sheets.Copy()
+		chest.sprite_sheets_obj = R.chest.sprite_sheets.Copy()
+		chest.icon_state = R.chest.icon_state
+	suit_state = R.suit_state
+	user.drop_item(R)
+	contents += R
+	assimilated_rig = R
+	slowdown = (R.slowdown *0.5)
+	offline_slowdown = slowdown
+
+/obj/item/weapon/rig/protean/verb/RemoveRig()
+	set name = "Remove Assimilated Rig"
+	set category = "Object"
+
+	if(assimilated_rig)
+		for(var/obj/item/piece in list(gloves,helmet,boots,chest))
+			piece.armor = armor.Copy()
+			piece.icon_state = initial(piece.icon_state)
+
+		//Byond at this time does not support initial() on lists
+		//So we have to create a new rig, just so we can copy the lists we're after
+		//If someone figures out a smarter way to do this, please tell me
+		var/obj/item/weapon/rig/tempRig = new /obj/item/weapon/rig/protean()
+		gloves.sprite_sheets = tempRig.gloves.sprite_sheets.Copy()
+		gloves.sprite_sheets_obj = tempRig.gloves.sprite_sheets.Copy()
+		helmet.sprite_sheets = tempRig.helmet.sprite_sheets.Copy()
+		helmet.sprite_sheets_obj = tempRig.helmet.sprite_sheets.Copy()
+		boots.sprite_sheets = tempRig.boots.sprite_sheets.Copy()
+		boots.sprite_sheets_obj = tempRig.boots.sprite_sheets.Copy()
+		chest.sprite_sheets = tempRig.chest.sprite_sheets.Copy()
+		chest.sprite_sheets_obj = tempRig.chest.sprite_sheets.Copy()
+		slowdown = initial(slowdown)
+		suit_state = icon_state
+		offline_slowdown = initial(offline_slowdown)
+		usr.put_in_hands(assimilated_rig)
+		assimilated_rig = null
+		qdel(tempRig)
+	else
+		to_chat(usr, "[src] has not assimilated a RIG. Use one on it to assimilate.")
