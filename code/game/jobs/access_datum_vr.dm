@@ -2,11 +2,7 @@
 var/const/access_explorer = 43
 /datum/access/explorer
 	id = access_explorer
-<<<<<<< HEAD
-	desc = "Explorer"
-=======
-	desc = "Away Team"
->>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
+	desc = "Explorer" //CHOMP explo keep
 	region = ACCESS_REGION_GENERAL
 
 /var/const/access_pathfinder = 44
