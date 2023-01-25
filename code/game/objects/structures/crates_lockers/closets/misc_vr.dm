@@ -51,11 +51,7 @@
  * Explorer
  */
 /obj/structure/closet/secure_closet/explorer
-<<<<<<< HEAD
-	name = "explorer locker"
-=======
-	name = "away team locker"
->>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
+	name = "explorer locker" //CHOMP explo keep
 	req_access = list(access_explorer)
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/explorer
 
@@ -97,11 +93,7 @@
  */
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder locker"
-<<<<<<< HEAD
-	req_access = list(access_pathfinder)
-=======
-	req_access = list(access_explorer)
->>>>>>> 7dec3dbaeb... Merge pull request #14234 from Novacat/nova-basicfixes
+	req_access = list(access_pathfinder) //CHOMP explo keep
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
 
 	starts_with = list(
