@@ -114,3 +114,7 @@
 /area/medical/cryo/autoresleeve
 	name = "\improper Medical Autoresleeving"
 	forbid_events = TRUE
+
+/area/rnd/research/particleaccelerator
+	name = "\improper Particle Accelerator Lab"
+	icon_state = "toxlab"

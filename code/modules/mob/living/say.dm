@@ -16,8 +16,8 @@ var/list/department_radio_keys = list(
 	":u" = "Supply",		".u" = "Supply",
 	":v" = "Service",		".v" = "Service",
 	":p" = "AI Private",	".p" = "AI Private",
-	":y" = "Explorer",	".y" = "Explorer",
-	":a" = "Talon",		".a" = "Talon", //VOREStation Add,
+	":y" = "Explorer",	".y" = "Explorer",	//VOREStation Edit //CHOMP keep explo
+	":a" = "Talon",		".a" = "Talon", //VOREStation Add, //CHOMP keep explo
 	":g" = "Casino",	".g" = "Casino",
 
 	":R" = "right ear",	".R" = "right ear",
@@ -36,8 +36,8 @@ var/list/department_radio_keys = list(
 	":U" = "Supply",		".U" = "Supply",
 	":V" = "Service",		".V" = "Service",
 	":P" = "AI Private",	".P" = "AI Private",
-	":Y" = "Explorer",	".Y" = "Explorer",
-	":A" = "Talon",		".A" = "Talon", //VOREStation Add,
+	":Y" = "Explorer",	".Y" = "Explorer", //CHOMP keep explo
+	":A" = "Talon",		".A" = "Talon", //VOREStation Add, //CHOMP keep explo
 	":G" = "Casino",	".G" = "Casino",
 
 	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
@@ -58,8 +58,8 @@ var/list/department_radio_keys = list(
 	":г" = "Supply",        ".г" = "Supply",
 	":м" = "Service",        ".м" = "Service",
 	":з" = "AI Private",    ".з" = "AI Private",
-	":н" = "Explorer",    ".н" = "Explorer",
-	":ф" = "Talon",        ".ф" = "Talon", //VOREStation Add
+	":н" = "Explorer",    ".н" = "Explorer", //CHOMP keep explo
+	":ф" = "Talon",        ".ф" = "Talon", //VOREStation Add //CHOMP keep explo
 	":п" = "Casino",	".п" = "Casino",
 )
 

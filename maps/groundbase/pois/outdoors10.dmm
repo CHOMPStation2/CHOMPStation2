@@ -24,8 +24,13 @@
 /turf/simulated/floor/wood,
 /area/groundbase/poi/outdoor/cabin5)
 "m" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "q" = (
 /obj/structure/bed/chair/sofa/corner/brown{
 	dir = 4
