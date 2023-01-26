@@ -525,7 +525,9 @@
 /obj/item/weapon/rig/protean/proc/AssimilateRig(mob/user, var/obj/item/weapon/rig/R)
 	if(!R || assimilated_rig)
 		return
-	to_chat(user, "You assimilate the [R] into the [src]. Mimicking its stats and appearance.")
+	if(istype(R, /obj/item/weapon/rig/protean))
+		to_chat(user, "<span class='warning'>The world is not ready for such a technological singularity.</span>")
+	to_chat(user, "<span class='notice'>You assimilate the [R] into the [src]. Mimicking its stats and appearance.</span>")
 	for(var/obj/item/piece in list(gloves,helmet,boots,chest))
 		piece.armor = R.armor.Copy()
 		piece.max_pressure_protection = R.max_pressure_protection
@@ -567,7 +569,7 @@
 			piece.armor = armor.Copy()
 			piece.max_pressure_protection = initial(piece.max_pressure_protection)
 			piece.max_heat_protection_temperature = initial(piece.max_heat_protection_temperature)
-			piece.icon_state = initial(piece.icon_state)
+			piece.icon_state = src.icon_state
 			piece.icon = initial(piece.icon)
 
 		//Byond at this time does not support initial() on lists

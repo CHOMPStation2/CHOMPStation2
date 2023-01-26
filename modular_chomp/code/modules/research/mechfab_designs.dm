@@ -118,3 +118,11 @@
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 4, TECH_MAGNET = 3, TECH_POWER = 4, TECH_COMBAT = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1250)
 	build_path = /obj/item/rig_module/mounted/phase
+
+/datum/design/item/mechfab/rigsuit/defib
+	name = "mounted defib unit"
+	desc = "A rig mounted defib and jumper kit combo."
+	id = "rig_defib"
+	req_tech = list(TECH_BIO = 5, TECH_MAGNET = 2, TECH_POWER = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 2000)
+	build_path = /obj/item/rig_module/device/defib

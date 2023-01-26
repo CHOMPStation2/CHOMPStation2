@@ -561,9 +561,6 @@
 		if(blob.healing)
 			blob.healing.expire()
 
-		if(blob.l_hand) blob.drop_l_hand()
-		if(blob.r_hand) blob.drop_r_hand()
-
 		if(blob.mob_radio)
 			blob.mob_radio.forceMove(src)
 			blob.mob_radio = null
@@ -584,10 +581,13 @@
 		var/atom/reform_spot = blob.drop_location()
 
 		//Size update
-		resize(blob.size_multiplier, FALSE, ignore_prefs = TRUE)
+		resize(blob.size_multiplier, 1, 1, ignore_prefs = TRUE)
 
 		//Move them back where the blob was
 		forceMove(reform_spot)
+
+		if(blob.l_hand) blob.drop_l_hand()
+		if(blob.r_hand) blob.drop_r_hand()
 
 		//Put our owner in it (don't transfer var/mind)
 		ckey = blob.ckey
