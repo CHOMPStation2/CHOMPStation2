@@ -95,17 +95,125 @@
 	desc = "A helmet-shaped clump of nanomachines."
 	light_overlay = "should not use a light overlay"
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	sprite_sheets = list(
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/helmet_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/species/unathi/helmet_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/species/unathi/helmet_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/species/akula/helmet_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/species/sergal/helmet_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/species/sergal/helmet_ch.dmi',
+		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/species/vulpkanin/helmet_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/species/fox/helmet_ch.dmi',
+		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/species/vulpkanin/helmet_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/helmet_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/head_ch.dmi'
+		)
+
+	sprite_sheets_obj = list(
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/head_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/head_ch.dmi'
+		)
+	icon = 'modular_chomp/icons/mob/head_ch.dmi'
 
 /obj/item/clothing/gloves/gauntlets/rig/protean
 	name = "mass"
 	desc = "Glove-shaped clusters of nanomachines."
 	siemens_coefficient= 0
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	sprite_sheets = list(
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_FENNEC			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/hands_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/gloves_ch.dmi'
+		)
+
+	sprite_sheets_obj = list(
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/hands_ch.dmi'
+		)
+	icon = 'modular_chomp/icons/mob/hands_ch.dmi'
 
 /obj/item/clothing/shoes/magboots/rig/protean
 	name = "mass"
 	desc = "Boot-shaped clusters of nanomachines."
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	sprite_sheets = list(
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_FENNEC			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/feet_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi'
+		)
+
+	sprite_sheets_obj = list(
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/feet_ch.dmi'
+		)
+	icon = 'modular_chomp/icons/mob/feet_ch.dmi'
 
 /obj/item/clothing/suit/space/rig/protean
 	name = "mass"
@@ -120,49 +228,6 @@
 		/obj/item/weapon/melee/baton,
 		/obj/item/weapon/storage/backpack,
 		)
-
-
-
-
-//Backend stuff to make the sprites work. Copied and pasted from rig_pieces_vr.dm, but added ch to everything. Only reason for this to be touched is to add or remove species. This might just need to go in a new file named rig_pieces_ch.dm.
-/obj/item/clothing/head/helmet/space/rig/protean
-	sprite_sheets = list(
-		SPECIES_HUMAN			= 'modular_chomp/icons/mob/head_ch.dmi',
-		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/helmet_ch.dmi',
-		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
-		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/species/unathi/helmet_ch.dmi',
-		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/species/unathi/helmet_ch.dmi',
-		SPECIES_AKULA 			= 'modular_chomp/icons/mob/species/akula/helmet_ch.dmi',
-		SPECIES_SERGAL			= 'modular_chomp/icons/mob/species/sergal/helmet_ch.dmi',
-		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/species/sergal/helmet_ch.dmi',
-		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/species/vulpkanin/helmet_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/species/fox/helmet_ch.dmi',
-		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/species/vulpkanin/helmet_ch.dmi',
-		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/inventory/head/mob_ch_teshari.dmi',
-		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/head_ch.dmi'
-		)
-
-	sprite_sheets_obj = list(
-		SPECIES_HUMAN			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_TAJ 			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_AKULA 			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_SERGAL			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_VULPKANIN 		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_FENNEC 			= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_VASILISSAN		= 'icons/obj/clothing/hats_ch.dmi',
-		SPECIES_VOX				= 'icons/obj/clothing/hats_ch.dmi'
-		)
-
-/obj/item/clothing/suit/space/rig/protean
 	sprite_sheets = list(
 		SPECIES_HUMAN			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
 		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/suit_ch.dmi',
@@ -176,102 +241,29 @@
 		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/species/fox/suit_ch.dmi',
 		SPECIES_FENNEC			= 'modular_chomp/icons/mob/species/vulpkanin/suit_ch.dmi',
 		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/species/skrell/suit_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/inventory/suit/mob_ch_teshari.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/suit_ch.dmi',
 		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/species/skrell/suit_ch.dmi',
 		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/suit_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
-		SPECIES_HUMAN			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_TAJ 			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_AKULA 			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_SERGAL			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_VULPKANIN 		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_FENNEC 			= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_VASILISSAN		= 'icons/obj/clothing/spacesuits_ch.dmi',
-		SPECIES_VOX				= 'icons/obj/clothing/spacesuits_ch.dmi'
+		SPECIES_HUMAN			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_TAJ 			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_AKULA 			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_SERGAL			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_VULPKANIN 		= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_FENNEC 			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
+		SPECIES_VOX				= 'modular_chomp/icons/mob/spacesuit_ch.dmi'
 		)
-
-/obj/item/clothing/gloves/gauntlets/rig/protean
-	sprite_sheets = list(
-		SPECIES_HUMAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_TAJ 			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_AKULA 			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_SERGAL			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_FENNEC			= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/hands_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/gloves_ch.dmi'
-		)
-
-	sprite_sheets_obj = list(
-		SPECIES_HUMAN			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_TAJ 			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_AKULA 			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_SERGAL			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_VULPKANIN 		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_FENNEC 			= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_VASILISSAN		= 'icons/obj/clothing/gloves_ch.dmi',
-		SPECIES_VOX				= 'icons/obj/clothing/gloves_ch.dmi'
-		)
-
-/obj/item/clothing/shoes/magboots/rig/protean
-	sprite_sheets = list(
-		SPECIES_HUMAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_TAJ 			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_UNATHI 			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_XENOHYBRID		= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_AKULA 			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_SERGAL			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_NEVREAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_VULPKANIN		= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_FENNEC			= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_PROMETHEAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_VASILISSAN		= 'modular_chomp/icons/mob/feet_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi'
-		)
-
-	sprite_sheets_obj = list(
-		SPECIES_HUMAN			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_TAJ 			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_SKRELL 			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_UNATHI 			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_XENOHYBRID		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_AKULA 			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_SERGAL			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_NEVREAN			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_VULPKANIN 		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_FENNEC 			= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_PROMETHEAN		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_VASILISSAN		= 'icons/obj/clothing/shoes_ch.dmi',
-		SPECIES_VOX				= 'icons/obj/clothing/shoes_ch.dmi'
-		)
+	icon = 'modular_chomp/icons/mob/spacesuit_ch.dmi'
 
 //Copy pasted most of this proc from base because I don't feel like rewriting the base proc with a shit load of exceptions
 /obj/item/weapon/rig/protean/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -536,28 +528,34 @@
 	to_chat(user, "You assimilate the [R] into the [src]. Mimicking its stats and appearance.")
 	for(var/obj/item/piece in list(gloves,helmet,boots,chest))
 		piece.armor = R.armor.Copy()
+		piece.max_pressure_protection = R.max_pressure_protection
+		piece.max_heat_protection_temperature = R.max_heat_protection_temperature
 	//I dislike this piece of code, but not every rig has the full set of parts
 	if(R.gloves)
 		gloves.sprite_sheets = R.gloves.sprite_sheets.Copy()
 		gloves.sprite_sheets_obj = R.gloves.sprite_sheets.Copy()
+		gloves.icon = R.gloves.icon
 		gloves.icon_state = R.gloves.icon_state
 	if(R.helmet)
 		helmet.sprite_sheets = R.helmet.sprite_sheets.Copy()
 		helmet.sprite_sheets_obj = R.helmet.sprite_sheets.Copy()
+		helmet.icon = R.helmet.icon
 		helmet.icon_state = R.helmet.icon_state
 	if(R.boots)
 		boots.sprite_sheets = R.boots.sprite_sheets.Copy()
 		boots.sprite_sheets_obj = R.boots.sprite_sheets.Copy()
+		boots.icon = R.boots.icon
 		boots.icon_state = R.boots.icon_state
 	if(R.chest)
 		chest.sprite_sheets = R.chest.sprite_sheets.Copy()
 		chest.sprite_sheets_obj = R.chest.sprite_sheets.Copy()
+		chest.icon = R.chest.icon
 		chest.icon_state = R.chest.icon_state
 	suit_state = R.suit_state
 	user.drop_item(R)
 	contents += R
 	assimilated_rig = R
-	slowdown = (R.slowdown *0.5)
+	slowdown = (initial(R.slowdown) *0.5)
 	offline_slowdown = slowdown
 
 /obj/item/weapon/rig/protean/verb/RemoveRig()
@@ -567,7 +565,10 @@
 	if(assimilated_rig)
 		for(var/obj/item/piece in list(gloves,helmet,boots,chest))
 			piece.armor = armor.Copy()
+			piece.max_pressure_protection = initial(piece.max_pressure_protection)
+			piece.max_heat_protection_temperature = initial(piece.max_heat_protection_temperature)
 			piece.icon_state = initial(piece.icon_state)
+			piece.icon = initial(piece.icon)
 
 		//Byond at this time does not support initial() on lists
 		//So we have to create a new rig, just so we can copy the lists we're after
@@ -589,3 +590,33 @@
 		qdel(tempRig)
 	else
 		to_chat(usr, "[src] has not assimilated a RIG. Use one on it to assimilate.")
+
+/obj/item/weapon/rig/protean/MouseDrop(obj/over_object as obj)
+	if(!canremove)
+		return
+
+	if (isliving(usr) || isobserver(usr))
+
+		if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
+			return
+
+		if (!( istype(over_object, /obj/screen) ))
+			return ..()
+
+		if (!(src.loc == usr) || (src.loc && src.loc.loc == usr))
+			return
+
+		if (( usr.restrained() ) || ( usr.stat ))
+			return
+
+		if ((src.loc == usr) && !(istype(over_object, /obj/screen)) && !usr.unEquip(src))
+			return
+
+		switch(over_object.name)
+			if("r_hand")
+				usr.unEquip(src)
+				usr.put_in_r_hand(src)
+			if("l_hand")
+				usr.unEquip(src)
+				usr.put_in_l_hand(src)
+		src.add_fingerprint(usr)

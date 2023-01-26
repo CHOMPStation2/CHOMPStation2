@@ -56,6 +56,9 @@
 	shock_resist = 1
 	nameset = 1
 	holder_type = /obj/item/weapon/holder/protoblob
+	var/hiding = 0
+	vore_icons = 1
+	vore_active = 1
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")
@@ -321,20 +324,30 @@
 			healing = null
 
 /mob/living/simple_mob/protean_blob/lay_down()
-	..()
 	var/obj/item/weapon/rig/rig = src.get_rig()
 	if(rig)
 		rig.force_rest(src)
 		return
-	if(resting)
+	..()
+
+/mob/living/simple_mob/protean_blob/verb/prot_hide()
+	set name = "Hide Self"
+	set desc = "Disperses your mass into a thin viel, making a trap to snatch prey with, or simply hide."
+	set category = "Abilities"
+
+	if(!hiding)
+		icon_state = "hide"
+		sleep(7)
 		mouse_opacity = 0
 		plane = ABOVE_OBJ_PLANE
+		hiding = 1
 	else
 		mouse_opacity = 1
 		icon_state = "wake"
 		plane = MOB_PLANE
 		sleep(7)
 		update_icon()
+		hiding = 0
 		//Potential glob noms
 		if(can_be_drop_pred) //Toggleable in vore panel
 			var/list/potentials = living_mobs(0)
@@ -345,6 +358,15 @@
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+	update_canmove()
+
+/mob/living/simple_mob/protean_blob/update_canmove()
+	if(hiding)
+		canmove = 0
+		return canmove
+	else
+		..()
+
 
 /*	Don't need this block anymore since our Prots have hands
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
@@ -484,6 +506,7 @@
 		var/datum/species/protean/S = src.species
 		blob.icon_living = S.blob_appearance
 		blob.item_state = S.blob_appearance
+		blob.icon_rest = S.blob_appearance + "_rest"
 		blob.update_icon()
 
 		//Flip them to the protean panel

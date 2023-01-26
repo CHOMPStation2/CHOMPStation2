@@ -268,9 +268,11 @@
 			var/mob/living/simple_mob/protean_blob/P = temporary_form
 			if(S.OurRig) //Do we even have a RIG?
 				if(P.loc == S.OurRig)	//we're inside our own RIG
+					if(ismob(S.OurRig.loc))
+						var/mob/m = S.OurRig.loc
+						m.drop_from_inventory(S.OurRig)
 					if(S.OurRig.wearer) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
 						var/mob/living/carbon/human/victim = S.OurRig.wearer
-						victim.drop_from_inventory(S.OurRig)
 						if(P.can_be_drop_pred && victim.devourable && victim.can_be_drop_prey)
 							if(P.vore_selected)
 								perform_the_nom(P,victim,P,P.vore_selected,1)
@@ -309,7 +311,7 @@
 	var/mob/living/caller = src
 	if(temporary_form)
 		caller = temporary_form
-	var/blobstyle = input(caller, "Which blob style would you like?") in list("Red and Blue Stars", "Blue Star", "Plain")
+	var/blobstyle = input(caller, "Which blob style would you like?") in list("Red and Blue Stars", "Blue Star", "Plain", "Catslug", "Pai Cat")
 	switch(blobstyle)
 		if("Red and Blue Stars")
 			S.blob_appearance = "puddle2"
@@ -317,10 +319,15 @@
 			S.blob_appearance = "puddle1"
 		if("Plain")
 			S.blob_appearance = "puddle0"
+		if("Catslug")
+			S.blob_appearance = "catslug"
+		if("Pai Cat")
+			S.blob_appearance = "pai-cat"
 	if(temporary_form)
 		if(blobstyle)
 			temporary_form.icon_living = S.blob_appearance
 			temporary_form.item_state = S.blob_appearance
+			temporary_form.icon_rest = S.blob_appearance + "_rest"
 			temporary_form.update_icon()
 			if(istype(temporary_form.loc, /obj/item/weapon/holder/protoblob))
 				var/obj/item/weapon/holder/protoblob/PB = temporary_form.loc
@@ -361,7 +368,7 @@
 						target.drop_from_inventory(target.back)
 						caller.visible_message("<span class='danger'>[caller] latched onto [target]!</span>", "<span class='danger'>You latch yourself onto [target]!</span>")
 						target.Weaken(3)
-						nano_rig_transform()
+						nano_rig_transform(1)
 						spawn(2)	//Have to give time for the above proc to resolve
 						S.OurRig.forceMove(target)
 						target.equip_to_slot_if_possible(S.OurRig, slot_back)
