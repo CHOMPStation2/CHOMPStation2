@@ -90,12 +90,14 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 80, bullet = 50, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 2
+	sprite_sheets = list(SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi')
 
 /obj/item/clothing/suit/armor/combat/crusader/bedevere
 	name = "bedevere's armor"
 	desc = "ye olde knight, risen again."
 	icon_state = "bedevere"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	sprite_sheets = list(SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi')
 
 // Costume Versions Here
 /obj/item/clothing/suit/armor/combat/crusader_costume
@@ -107,12 +109,14 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 1
+	sprite_sheets = list(SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi')
 
 /obj/item/clothing/suit/armor/combat/crusader_costume/bedevere
 	name = "bedevere's costume armor"
 	desc = "ye olde knight, risen again."
 	icon_state = "bedevere"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	sprite_sheets = list(SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi')
 
 
 
