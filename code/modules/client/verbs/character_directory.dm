@@ -96,8 +96,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = P.name
 			species = "pAI"
 			ooc_notes = P.ooc_notes
-			if(P.print_flavor_text())
-				flavor_text = "\n[P.print_flavor_text()]\n"
+			flavor_text = P.flavor_text
 
 		if(istype(C.mob, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = C.mob
