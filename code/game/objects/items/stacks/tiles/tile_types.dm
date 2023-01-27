@@ -113,9 +113,6 @@
 	stacktype = /obj/item/stack/tile/wood
 	build_type = /obj/item/stack/tile/wood
 
-
-//CHOMPEDIT: Moving carpets to tile_types_ch to give them proper names, descriptions and material variables
-/*
 /obj/item/stack/tile/carpet
 	name = "carpet"
 	singular_name = "carpet"
