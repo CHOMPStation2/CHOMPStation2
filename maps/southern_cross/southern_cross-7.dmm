@@ -2051,11 +2051,11 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/power/apc/hyper{
 	coverlocked = 0;
-	locked = 0;
-	pixel_y = -24;
 	environ = 0;
 	equipment = 0;
-	lighting = 0
+	lighting = 0;
+	locked = 0;
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /turf/simulated/shuttle/plating,
@@ -5927,10 +5927,10 @@
 	},
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
 /obj/effect/floor_decal/industrial/warning/cee{
@@ -7397,20 +7397,26 @@
 	},
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/item/weapon/gun/energy/locked/frontier/carbine,
-/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/baby_mammoth)
 "uJ" = (
@@ -7818,15 +7824,19 @@
 	},
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
 "vD" = (
@@ -7982,14 +7992,18 @@
 	},
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /obj/item/clothing/accessory/holster/waist,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
 "vS" = (
@@ -14523,12 +14537,16 @@
 	},
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/shuttle3/start)
 "Tz" = (

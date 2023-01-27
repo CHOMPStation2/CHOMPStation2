@@ -81,8 +81,6 @@ var/global/list/limb_icon_cache = list()
 
 /obj/item/organ/external/proc/get_icon(var/skeletal)
 
-<<<<<<< HEAD
-=======
 	for(var/M in markings)
 		var/datum/sprite_accessory/marking/mark = markings[M]["datum"]
 		if(mark.organ_override)
@@ -96,7 +94,6 @@ var/global/list/limb_icon_cache = list()
 			icon = mob_icon
 			return mob_icon
 
->>>>>>> 43b1746a29... Merge pull request #14343 from BonniePandora/override-fail-fix
 	var/gender = "m"
 	if(owner && owner.gender == FEMALE)
 		gender = "f"

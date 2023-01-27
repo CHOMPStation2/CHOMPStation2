@@ -207,14 +207,12 @@
 "aB" = (
 /obj/structure/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
 /obj/structure/mirror{
 	dir = 4;
-	pixel_x = -28;
-	pixel_y = 0
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/ExplorerHome)
@@ -243,8 +241,7 @@
 /area/survivalpod/superpose/ExplorerHome)
 "aI" = (
 /obj/structure/window/reinforced/tinted{
-	dir = 8;
-	icon_state = "twindow"
+	dir = 8
 	},
 /obj/machinery/shower{
 	dir = 1
@@ -546,8 +543,8 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
 /obj/item/weapon/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2

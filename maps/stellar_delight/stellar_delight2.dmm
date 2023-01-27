@@ -558,8 +558,8 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/directions{
-	desc = "A direction sign, pointing out the way to Exploration.";
-	name = "\improper Exploration Department";
+	desc = "A direction sign, pointing out the way to the shuttle bay.";
+	name = "\improper Shuttle Bay";
 	pixel_x = 32;
 	pixel_y = -6
 	},
@@ -627,8 +627,8 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/directions{
-	desc = "A direction sign, pointing out the way to Exploration.";
-	name = "\improper Exploration Department";
+	desc = "A direction sign, pointing out the way to the shuttle bay.";
+	name = "\improper Shuttle Bay";
 	pixel_x = -32;
 	pixel_y = -6
 	},
@@ -5312,9 +5312,9 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/directions{
-	desc = "A direction sign, pointing out the way to Exploration.";
+	desc = "A direction sign, pointing out the way to the shuttle bay.";
 	dir = 1;
-	name = "\improper Exploration Department";
+	name = "\improper Shuttle Bay";
 	pixel_x = 32;
 	pixel_y = -12
 	},

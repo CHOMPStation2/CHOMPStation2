@@ -74,6 +74,51 @@
 	name = "Cultist Outside"
 	ambience = AMBIENCE_UNHOLY
 
+//City section
+/area/vr/powered/bar
+	name = "VR Bar"
+	icon_state = "green"
+
+/area/vr/powered/cafe
+	name = "VR Ghost Cafe"
+	icon_state = "green"
+
+/area/vr/powered/gunshop
+	name = "VR GunShop"
+	icon_state = "green"
+
+/area/vr/powered/vet
+	name = "VR Vet"
+	icon_state = "green"
+
+/area/vr/powered/shop
+	name = "VR Shop"
+	icon_state = "green"
+
+/area/vr/powered/art
+	name = "VR Art Gallery"
+	icon_state = "green"
+
+/area/vr/powered/constore
+	name = "VR Convenience Store"
+	icon_state = "green"
+
+/area/vr/powered/nuke
+	name = "VR Violation"
+	icon_state = "green"
+
+/area/vr/powered/motel
+	name = "VR Motel"
+	icon_state = "green"
+
+/area/vr/powered/dungeon
+	name = "VR Dungeon"
+	icon_state = "darkred"
+
+/area/vr/powered/dungeon/indoors
+	name = "VR Sewers"
+	icon_state = "red"
+
 /area/vr/powered/space
 	name = "VR Space Vessel"
 	icon_state = "away2"
