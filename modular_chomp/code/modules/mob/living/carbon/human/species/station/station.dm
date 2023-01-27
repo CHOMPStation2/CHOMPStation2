@@ -44,6 +44,9 @@
 /datum/species/custom
 	digi_allowed = TRUE
 
+/datum/species/shapeshifter/promethean
+	digi_allowed = TRUE
+
 /datum/species/unathi
 	digi_allowed = TRUE
 	vore_belly_default_variant = "L"
@@ -70,5 +73,8 @@
 	digi_allowed = TRUE
 
 /datum/species/xenochimera
+	digi_allowed = TRUE
+
+/datum/species/protean
 	digi_allowed = TRUE
 
