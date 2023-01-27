@@ -25,12 +25,8 @@
 	if(!istype(refactory))
 		to_chat(caller,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
-<<<<<<< HEAD:modular_chomp/code/modules/mob/living/carbon/human/species/station/protean/protean_powers.dm
-	var/choice = tgui_input_list(caller,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
-=======
 
 	var/choice = tgui_input_list(src,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
->>>>>>> 465a66032f... Merge pull request #14355 from Seris02/proteanhelp:code/modules/mob/living/carbon/human/species/station/protean_vr/protean_powers.dm
 	if(!choice)
 		return
 
