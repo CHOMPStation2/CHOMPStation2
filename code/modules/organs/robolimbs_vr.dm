@@ -81,9 +81,6 @@ var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 	monitor_styles = cyberbeast_monitor_styles
 
 /obj/item/weapon/disk/limb/cyber_beast
-<<<<<<< HEAD
-	company = "Cyber Tech"
-=======
 	company = "Cyber Tech"
 
 /datum/robolimb/zenghu_glacier
@@ -101,4 +98,3 @@ var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/zenghu/zenghu_glacier_taj.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
->>>>>>> 2d6e78eae7... Merge pull request #14346 from SatinIsle/ZenguHu-Glacier
