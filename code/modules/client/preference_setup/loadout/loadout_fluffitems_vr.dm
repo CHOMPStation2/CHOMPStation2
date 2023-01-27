@@ -1334,8 +1334,6 @@
 
 //  Y CKEYS
 
-<<<<<<< HEAD
-=======
 /datum/gear/fluff/lemon_plush
 	path = /obj/item/toy/plushie/fluff/lemonplush
 	display_name = "yellow slime plushie"
@@ -1348,7 +1346,6 @@
 	ckeywhitelist = list("yeehawguvnah")
 	character_name = list("Cephyra")
 
->>>>>>> 1adfa7995a... Merge pull request #14358 from faaaay/loaded-dice
 //  Z CKEYS
 /datum/gear/fluff/tachika_medal
 	path = /obj/item/clothing/accessory/medal/conduct
