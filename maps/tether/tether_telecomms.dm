@@ -13,7 +13,7 @@
 	network = "tcommsat"
 	autolinkers = list("hub",
 		"tether_relay", "c_relay", "m_relay", "r_relay",
-		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "explorer", "unused",
+		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "Away Team", "unused",
 		"hb_relay", "receiverA", "broadcasterA"
 	)
 
@@ -29,7 +29,7 @@
 
 /obj/machinery/telecomms/server/presets/service/tether
 	freq_listening = list(SRV_FREQ, EXP_FREQ)
-	autolinkers = list("service", "explorer")
+	autolinkers = list("service", "Away Team")
 
 // Telecommunications Satellite
 /area/tether/surfacebase/tcomms
@@ -78,13 +78,13 @@
 		num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 		num2text(SUP_FREQ) = list(access_cargo),
 		num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
-		num2text(EXP_FREQ) = list(access_explorer)
+		num2text(EXP_FREQ) = list(access_awayteam)
 	)
 
-/obj/item/device/multitool/tether_buffered
+/obj/item/device/multitool/station_buffered
 	name = "pre-linked multitool (tether hub)"
 	desc = "This multitool has already been linked to the Tether telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/device/multitool/tether_buffered/Initialize()
+/obj/item/device/multitool/station_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/tether)

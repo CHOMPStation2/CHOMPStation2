@@ -297,6 +297,16 @@
 				possible_mobs |= L
 			else
 				continue
+	//CHOMPEdit Start - Let dominate prey work on grabbed people
+	var/obj/item/weapon/grab/G = src.get_active_hand()
+	if(istype(G))
+		var/mob/living/L = G.affecting
+		if(istype(L))
+			if(G.state != GRAB_NECK)
+				possible_mobs |= "~~[L.name]~~ (reinforce grab first)"
+			else
+				possible_mobs |= L
+	//CHOMPEdit End
 	if(!possible_mobs)
 		to_chat(src, "<span class='warning'>There are no valid targets inside of you.</span>")
 		return
@@ -304,6 +314,11 @@
 	if(!input)
 		return
 	var/mob/living/M = input
+	//CHOMPEdit Start - Let dominate prey work on grabbed people
+	if(!istype(M))
+		to_chat(src, "<span class='warning'>You must have a tighter grip to dominate this creature.</span>")
+		return
+	//CHOMPEdit End
 	if(tgui_alert(src, "You selected [M] to attempt to dominate. Are you sure?", "Dominate Prey",list("No","Yes")) != "Yes")
 		return
 	log_admin("[key_name_admin(src)] offered to use dominate prey on [M] ([M.ckey]).")
@@ -317,11 +332,15 @@
 	to_chat(M, "<span class='warning'>You can feel the will of another pulling you away from your body...</span>")
 	to_chat(src, "<span class='warning'>You can feel the will of your prey diminishing as you gather them!</span>")
 
+	//CHOMPEdit Start - Let dominate prey work on grabbed people
+	if(istype(G) && M == G.affecting)
+		src.visible_message("<span class='danger'>[src] seems to be doing something to [M], resulting in [M]'s body looking increasingly drowsy with every passing moment!</span>")
+	//CHOMPEdit End
 	if(!do_after(src, 10 SECONDS, exclusive = TRUE))
 		to_chat(M, "<span class='notice'>The alien presence fades, and you are left along in your body...</span>")
 		to_chat(src, "<span class='notice'>Your attempt to gather [M]'s mind has been interrupted.</span>")
 		return
-	if(!isbelly(M.loc))
+	if(!isbelly(M.loc) && !(istype(G) && M == G.affecting && G.state == GRAB_NECK)) //CHOMPEdit - Let dominate prey work on grabbed people
 		to_chat(M, "<span class='notice'>The alien presence fades, and you are left along in your body...</span>")
 		to_chat(src, "<span class='notice'>Your attempt to gather [M]'s mind has been interrupted.</span>")
 		return
@@ -347,6 +366,10 @@
 	log_admin("[db] ([db.ckey]) has agreed to [src]'s dominate prey attempt, and so no longer occupies their original body.")
 	to_chat(src, "<span class='notice'>You feel your mind expanded as [M] is incorporated into you.</span>")
 	to_chat(M, "<span class='warning'>Your mind is gathered into \the [src], becoming part of them...</span>")
+	//CHOMPEdit Start - Let dominate prey work on grabbed people
+	if(istype(G) && M == G.affecting)
+		visible_message("<span class='danger'>[src] seems to finish whatever they were doing to [M].</span>")
+	//CHOMPEdit End
 
 /mob/living/dominated_brain/proc/cease_this_foolishness()
 	set category = "Abilities"

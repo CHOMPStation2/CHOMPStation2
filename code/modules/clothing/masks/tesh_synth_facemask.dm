@@ -2,7 +2,7 @@
 /obj/item/clothing/mask/synthfacemask
 	name = "Synth Face"
 	desc = "A round dark muzzle made of LEDs."
-	body_parts_covered = FACE|EYES
+	body_parts_covered = EYES //CHOMPedit, though isnt this chomp exclusive item?
 	icon = 'icons/mob/species/teshari/synth_facemask.dmi'
 	icon_override = 'icons/mob/species/teshari/synth_facemask.dmi'
 	icon_state = "synth_facemask"
