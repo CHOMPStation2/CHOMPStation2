@@ -194,33 +194,6 @@
 	icon_state = "tile-carpet-happy"
 	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"
 
-<<<<<<< HEAD
-/obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw //CHOMP Comment: Yawn commented out this block, but CHOMP already commented out this stuff so I just removed theirs.
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/blucarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/turcarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/sblucarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/gaycarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/purcarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/oracarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/brncarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/blucarpet2
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/greencarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/purplecarpet
-	icon_state = "tile-carpet"
-*/
-
-=======
->>>>>>> 9ea28d1962... Merge pull request #14327 from Heroman3003/carpeting
 /obj/item/stack/tile/floor
 	name = "floor tile"
 	singular_name = "floor tile"
