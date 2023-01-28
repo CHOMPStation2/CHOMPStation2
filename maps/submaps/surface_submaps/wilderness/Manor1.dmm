@@ -326,10 +326,6 @@
 /obj/item/clothing/accessory/sweater/blue,
 /turf/simulated/floor/carpet/blucarpet,
 /area/submap/Manor1)
-"bn" = (
-/obj/structure/window/reinforced/full,
-/turf/template_noop,
-/area/submap/Manor1)
 "bo" = (
 /obj/item/weapon/material/twohanded/baseballbat/metal,
 /turf/simulated/floor/carpet/blucarpet,
@@ -341,15 +337,6 @@
 "bq" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"br" = (
-/obj/structure/bed/chair/comfy/purp{
-	dir = 4;
-	icon_state = "comfychair_preview"
-	},
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken5"
-	},
 /area/submap/Manor1)
 "bs" = (
 /obj/structure/table,
@@ -1744,8 +1731,8 @@ aa
 aa
 aa
 ab
-bn
-bn
+ac
+ac
 ab
 aa
 aa
@@ -3634,7 +3621,7 @@ ab
 ab
 ab
 ag
-br
+bx
 ML
 bC
 ab

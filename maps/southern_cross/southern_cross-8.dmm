@@ -236,7 +236,7 @@
 	dir = 4;
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
@@ -251,7 +251,7 @@
 	contraband = null;
 	dir = 1;
 	name = "Old Vending Machine";
-	products = list(/obj/item/device/assembly/prox_sensor = 5, /obj/item/device/assembly/signaler = 4, /obj/item/device/assembly/infra = 4, /obj/item/device/assembly/prox_sensor = 4, /obj/item/weapon/handcuffs = 8, /obj/item/device/flash = 4, /obj/item/weapon/cartridge/signal = 4, /obj/item/clothing/glasses/sunglasses = 4)
+	products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/weapon/handcuffs=8,/obj/item/device/flash=4,/obj/item/weapon/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
@@ -9182,7 +9182,7 @@
 	dir = 4;
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -10315,7 +10315,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/unsimulated/floor{
 	icon_state = "steel"
@@ -10717,7 +10717,7 @@
 /area/shuttle/syndicate)
 "mBJ" = (
 /mob/living/simple_mob/animal/passive/cat/space{
-	armor_soak = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 100);
+	armor_soak = list("melee"=100,"bullet"=100,"laser"=100,"energy"=100,"bomb"=100,"bio"=100,"rad"=100);
 	desc = "They look well taken care of. There is a small scratch mark through the L of their collar that looks like it was made by a claw.";
 	description_antag = "That space suit looks like it can withstand just about any assault. You feel that you will regret hurting this one.";
 	description_fluff = "Back after a very long trip. Their suit smells of adventure!";
@@ -12993,7 +12993,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "pGr" = (
-/obj/structure/table/reinforced,
+/obj/structure/table/steel_reinforced,
 /obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
 /obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
 /turf/unsimulated/floor{
@@ -13779,7 +13779,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/syndicate)
@@ -16304,7 +16304,7 @@
 /obj/machinery/vending/assist{
 	contraband = null;
 	name = "AntagCorpVend";
-	products = list(/obj/item/device/assembly/prox_sensor = 5, /obj/item/device/assembly/signaler = 4, /obj/item/device/assembly/infra = 4, /obj/item/device/assembly/prox_sensor = 4, /obj/item/weapon/handcuffs = 8, /obj/item/device/flash = 4, /obj/item/weapon/cartridge/signal = 4, /obj/item/clothing/glasses/sunglasses = 4)
+	products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/weapon/handcuffs=8,/obj/item/device/flash=4,/obj/item/weapon/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/syndicate)
@@ -16927,7 +16927,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/unsimulated/floor{
 	dir = 5;

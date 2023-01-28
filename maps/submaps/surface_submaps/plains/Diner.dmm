@@ -465,6 +465,11 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+"Km" = (
+/obj/structure/table/standard,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/tiled/white,
+/area/submap/diner)
 
 (1,1,1) = {"
 aa
@@ -874,7 +879,7 @@ aa
 (16,1,1) = {"
 aa
 ad
-bj
+Km
 ap
 ap
 ap

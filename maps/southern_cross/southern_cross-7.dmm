@@ -2912,7 +2912,6 @@
 /obj/item/weapon/gun/energy/locked/phasegun/rifle{
 	pixel_y = -4
 	},
-/obj/item/weapon/gun/energy/locked/frontier/holdout,
 /obj/item/clothing/accessory/holster/hip,
 /obj/item/device/gps,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -4720,6 +4719,14 @@
 "oA" = (
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/shuttle/stargazer)
+"oB" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/paper{
+	info = "Heyo, notice from one of the few reaming clean-up crew. Somethings up with the gateway, things seem to be changing. Careful, it's destination might even change at some point.";
+	name = "Notice"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/prep)
 "oC" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -5936,6 +5943,8 @@
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
 	},
+/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/stargazer)
 "rw" = (
@@ -45387,7 +45396,7 @@ KN
 NV
 Qt
 iY
-TR
+oB
 XO
 MR
 LG
