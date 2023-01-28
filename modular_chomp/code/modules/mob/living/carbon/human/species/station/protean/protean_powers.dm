@@ -52,7 +52,7 @@
 		else
 			blob = temporary_form
 		active_regen = 1
-		if(do_after(blob,50))
+		if(do_after(blob,50,exclusive = TASK_ALL_EXCLUSIVE))
 			var/list/limblist = species.has_limbs[choice]
 			var/limbpath = limblist["path"]
 			var/obj/item/organ/external/new_eo = new limbpath(src)
@@ -105,7 +105,7 @@
 		var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 		if(refactory.get_stored_material(MAT_STEEL) >= 10000)
 			to_chat(caller, "<span class='notify'>You begin to rebuild. You will need to remain still.</span>")
-			if(do_after(caller, 400))
+			if(do_after(caller, 400,exclusive = TASK_ALL_EXCLUSIVE))
 				if(species?:OurRig)	//Unsafe, but we should only ever be using this with a Protean
 					species?:OurRig?:make_alive(src,1)	//Re-using this proc
 					refactory.use_stored_material(MAT_STEEL,refactory.get_stored_material(MAT_STEEL))	//Use all of our steel
@@ -128,7 +128,7 @@
 			oocnotes = 1
 		to_chat(caller, "<span class='notify'>You begin to reassemble. You will need to remain still.</span>")
 		caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble.</span>")
-		if(do_after(caller, 40))
+		if(do_after(caller, 40,exclusive = TASK_ALL_EXCLUSIVE))
 			if(client.prefs)	//Make sure we didn't d/c
 				var/obj/item/weapon/rig/protean/Rig = species?:OurRig
 				GetAppearanceFromPrefs(flavour, oocnotes)
@@ -258,7 +258,7 @@
 		to_chat(caller, "<span class='warning'>You need to be repaired first before you can act!</span>")
 		return
 	to_chat(src, "<span class='notice'>You rapidly condense into your module.</span>")
-	if(forced || do_after(caller,20))
+	if(forced || do_after(caller,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(!temporary_form)	//If you're human, force you into blob form before rig'ing
 			nano_blobform(forced)
 		spawn(2)
@@ -363,15 +363,15 @@
 				return
 			if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
 				caller.visible_message("<span class='warning'>[caller] is attempting to latch onto [target]!</span>", "<span class='danger'>You attempt to latch onto [target]!</span>")
-				if(do_after(caller, 50, target))
+				if(do_after(caller, 50, target,exclusive = TASK_ALL_EXCLUSIVE))
 					if(G.loc == caller && G.state >= GRAB_AGGRESSIVE)
 						target.drop_from_inventory(target.back)
 						caller.visible_message("<span class='danger'>[caller] latched onto [target]!</span>", "<span class='danger'>You latch yourself onto [target]!</span>")
 						target.Weaken(3)
 						nano_rig_transform(1)
-						spawn(2)	//Have to give time for the above proc to resolve
-						S.OurRig.forceMove(target)
-						target.equip_to_slot_if_possible(S.OurRig, slot_back)
+						spawn(5)	//Have to give time for the above proc to resolve
+						//S.OurRig.forceMove(target)
+						target.equip_to_slot(S.OurRig, slot_back)
 						S.OurRig.Moved()
 						spawn(1)	//Same here :(
 						S.OurRig.wearer = target
@@ -445,7 +445,7 @@
 /// The actual abilities
 /obj/effect/protean_ability/into_blob
 	ability_name = "Toggle Blobform"
-	desc = "Discard your shape entirely, changing to a low-energy blob that can fit into small spaces. You'll consume steel to repair yourself in this form."
+	desc = "Discard your shape entirely, changing to a low-energy blob. You'll consume steel to repair yourself in this form."
 	icon_state = "blob"
 	to_call = /mob/living/carbon/human/proc/nano_blobform
 
@@ -469,26 +469,26 @@
 
 /obj/effect/protean_ability/metal_nom
 	ability_name = "Ref - Store Metals"
-	desc = "Store the metal you're holding. Your refactory can only store steel, and all other metals will be converted into nanites ASAP for various effects."
+	desc = "Store the metal you're holding. Your refactory can only store steel."
 	icon_state = "metal"
 	to_call = /mob/living/carbon/human/proc/nano_metalnom
 
 /obj/effect/protean_ability/hardsuit
 	ability_name = "Hardsuit Transform"
-	desc = "Coalesce your naniteswarm into their control module, allowing others to wear you."
+	desc = "Coalesce your nanite swarm into their control module, allowing others to wear you."
 	icon_state = "rig"
 	to_call = /mob/living/carbon/human/proc/nano_rig_transform
 
 /obj/effect/protean_ability/appearance_switch
 	ability_name = "Blob Appearance"
 	desc = "Toggle your blob appearance. Also affects your worn appearance."
-	icon_state = "rig"
+	icon_state = "switch"
 	to_call = /mob/living/carbon/human/proc/appearance_switch
 
 /obj/effect/protean_ability/latch_host
 	ability_name = "Latch Host"
 	desc = "Forcibly latch or unlatch your RIG from a host mob."
-	icon_state = "rig"
+	icon_state = "latch"
 	to_call = /mob/living/carbon/human/proc/nano_latch
 
 #undef PER_LIMB_STEEL_COST

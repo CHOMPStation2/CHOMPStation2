@@ -120,7 +120,7 @@
 	build_path = /obj/item/rig_module/mounted/phase
 
 /datum/design/item/mechfab/rigsuit/defib
-	name = "mounted defib unit"
+	name = "hardsuit defib unit"
 	desc = "A rig mounted defib and jumper kit combo."
 	id = "rig_defib"
 	req_tech = list(TECH_BIO = 5, TECH_MAGNET = 2, TECH_POWER = 3)

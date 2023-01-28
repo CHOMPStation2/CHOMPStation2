@@ -10,6 +10,7 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
+#include "_runtimestation.dm"
 #include "code\__spaceman_dmm.dm"
 #include "code\_away_mission_tests.dm"
 #include "code\_macros.dm"

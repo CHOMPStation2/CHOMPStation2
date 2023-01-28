@@ -1,0 +1,2602 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark/start{
+	name = "Head of Personnel"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"aw" = (
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"aA" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark/start{
+	name = "Scientist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"aD" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"aP" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"aW" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"bA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"bK" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"cb" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/loading,
+/obj/machinery/navbeacon/delivery/west{
+	location = "Kitchen"
+	},
+/obj/structure/plasticflaps/mining{
+	opacity = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"cg" = (
+/obj/structure/closet/gmcloset,
+/obj/item/glass_jar,
+/obj/item/device/retail_scanner/civilian,
+/obj/item/device/retail_scanner/civilian,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Bar Storage"
+	},
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/obj/item/clothing/head/that{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"ch" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance/clean,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"cu" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"cC" = (
+/obj/machinery/appliance/cooker/grill,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"cT" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"cY" = (
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"dt" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/item/weapon/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"dw" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"dT" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"ef" = (
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/obj/item/toy/xmastree,
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"en" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"eo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Chief Medical Officer"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"es" = (
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/cafeteria)
+"eE" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Intern"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"fj" = (
+/obj/structure/table/marble,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"fo" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/landmark/start{
+	name = "Chemist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"fE" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/material/knife/butch,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"fJ" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"fZ" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "kitchen";
+	layer = 3.3;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"gh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"gQ" = (
+/obj/machinery/vending/cigarette{
+	dir = 1
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"gX" = (
+/obj/machinery/media/jukebox,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"hp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/effect/landmark/start{
+	name = "Psychiatrist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"hC" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Cafeteria Port";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"hH" = (
+/obj/machinery/vending/cola{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"hK" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"hO" = (
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"hR" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Botanist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"il" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/closet/crate,
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
+/obj/random/powercell,
+/obj/random/maintenance,
+/obj/random/maintenance/clean,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"ix" = (
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"iE" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"iQ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"jg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Medical Doctor"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"jj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"jB" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/landmark/start{
+	name = "Warden"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"jX" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"kg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/start{
+	name = "Internal Affairs Agent"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"kq" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"kA" = (
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"kQ" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/southright{
+	name = "Kitchen Delivery";
+	req_access = list(28)
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"lo" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"lF" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark/start{
+	name = "Chaplain"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"lQ" = (
+/obj/item/weapon/stool/padded,
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark/start{
+	name = "Bartender"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"nh" = (
+/obj/machinery/vending/coffee{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"nQ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"os" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"oM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"oT" = (
+/obj/item/weapon/card/id/gold/captain/spare,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"oU" = (
+/obj/effect/landmark{
+	name = "JoinLateStationGateway"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"oW" = (
+/obj/machinery/door/firedoor/multi_tile/glass{
+	dir = 1
+	},
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"pi" = (
+/obj/structure/closet,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"pm" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/landmark/start{
+	name = "Barista"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"pu" = (
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"pw" = (
+/obj/structure/table/woodentable,
+/obj/machinery/reagentgrinder,
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/packageWrap,
+/obj/structure/cable/green,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"pA" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/structure/cable,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"qj" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"qC" = (
+/obj/effect/landmark{
+	name = "JoinLateGateway"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"qR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 10
+	},
+/obj/effect/landmark/start{
+	name = "Quartermaster"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"qS" = (
+/obj/machinery/newscaster{
+	pixel_y = 30
+	},
+/obj/effect/landmark/start,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"rS" = (
+/obj/machinery/vending/boozeomat,
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"sa" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"ss" = (
+/turf/simulated/wall,
+/area/crew_quarters/cafeteria)
+"sz" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/snacks/pie,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"sB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"sC" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark/start{
+	name = "Detective"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"te" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/deck/cah{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/deck/cah/black{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"tj" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/landmark/start{
+	name = "Explorer"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"tT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Engineer"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"uv" = (
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"vm" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/item/device/starcaster_news{
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"vF" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"vM" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"wc" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"wy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"wD" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/book/manual/chef_recipes,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"wW" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/atm{
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"wY" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"xd" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"xg" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"xh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"xM" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"ya" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"ys" = (
+/obj/machinery/appliance/cooker/fryer,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"yC" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
+/obj/item/weapon/tool/screwdriver,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	desc = "Talk... lisssssten through this.";
+	name = "Station Intercom (Brig Radio)";
+	pixel_y = -21;
+	wires = 7
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"yJ" = (
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"yP" = (
+/obj/machinery/door/window/southright{
+	name = "Bar";
+	req_access = list(25)
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"yT" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Xenobiologist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"yW" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"zf" = (
+/obj/machinery/smartfridge/drinks,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"zh" = (
+/obj/structure/plasticflaps{
+	opacity = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/loading,
+/obj/machinery/navbeacon/delivery/south{
+	location = "Bar"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"zu" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/sign/securearea{
+	desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'";
+	icon_state = "monkey_painting";
+	name = "Mr. Deempisi portrait";
+	pixel_x = -28;
+	pixel_y = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"zP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"zQ" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"zR" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"zS" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "kitchen";
+	layer = 3.3;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"zY" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Ai" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Am" = (
+/obj/structure/flora/pottedplant/bamboo{
+	pixel_y = 10
+	},
+/obj/structure/table/bench/glass,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"At" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/light_switch{
+	name = "light switch ";
+	pixel_x = 38
+	},
+/obj/machinery/power/fractal_reactor/fluff/smes,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"AM" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/cafeteria)
+"AT" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"AU" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"AX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Bj" = (
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"BK" = (
+/obj/structure/flora/pottedplant,
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"BY" = (
+/obj/machinery/vending/snack{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Cb" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = 17
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Cq" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Cafeteria Starboard";
+	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Cyborg"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Ct" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"CR" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/landmark/start{
+	name = "AI"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"CU" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/obj/effect/landmark/start{
+	name = "Atmospheric Technician"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"CZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Paramedic"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Db" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 4;
+	name = "Kitchen";
+	sortType = "Kitchen"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Dc" = (
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Dj" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"DR" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = -32
+	},
+/obj/machinery/chem_master/condimaster{
+	name = "CondiMaster Neo";
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"DV" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"Ev" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"EG" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Fo" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Fq" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/clothing/head/that{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"Fy" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"FM" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "kitchen";
+	name = "Kitchen Shutters Control";
+	pixel_x = 26;
+	req_access = list(28)
+	},
+/obj/machinery/light_switch{
+	name = "light switch ";
+	pixel_x = 36;
+	pixel_y = -6
+	},
+/obj/machinery/button/holosign{
+	id = "baropen";
+	name = "Open Sign";
+	pixel_x = 36;
+	pixel_y = 6
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"FV" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/start{
+	name = "Command Secretary"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"FY" = (
+/obj/machinery/vending/dinnerware{
+	dir = 4;
+	pixel_x = -4
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Ga" = (
+/obj/effect/landmark/start{
+	name = "Head of Security"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Gc" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Gd" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/snacks/mint,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/reagent_containers/dropper,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Gf" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/southleft{
+	name = "Bar Delivery";
+	req_access = list(25)
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"GA" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/ashtray/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"GJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"Hs" = (
+/obj/machinery/appliance/mixer/cereal,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Hz" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/structure/table/marble,
+/obj/machinery/microwave{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"HP" = (
+/obj/machinery/appliance/cooker/oven,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"HY" = (
+/obj/structure/closet/secure_closet/bar,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Iv" = (
+/obj/structure/kitchenspike,
+/obj/machinery/alarm/freezer{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"II" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"IP" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"IZ" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Kitchen";
+	dir = 4
+	},
+/obj/structure/table/marble,
+/obj/machinery/microwave{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Je" = (
+/obj/effect/landmark{
+	name = "Observer-Start"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Jh" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central6,
+/turf/simulated/floor/tiled/monotile,
+/area/crew_quarters/cafeteria)
+"KC" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"KF" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"KS" = (
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"KY" = (
+/obj/machinery/button/remote/blast_door{
+	id = "bar";
+	name = "Bar Shutters";
+	pixel_x = -26;
+	pixel_y = -6
+	},
+/obj/machinery/button/holosign{
+	id = "baropen";
+	name = "Open Sign";
+	pixel_x = -24;
+	pixel_y = 6
+	},
+/obj/machinery/light_switch{
+	name = "light switch ";
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Bar Fore";
+	dir = 4
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = 17
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"Lr" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Lx" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full,
+/obj/structure/sign/double/barsign{
+	pixel_y = 32
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"LG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"LV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"LW" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/newscaster{
+	pixel_y = 30
+	},
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"MI" = (
+/obj/structure/catwalk,
+/obj/random/plushielarge,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"ML" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"MM" = (
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 4;
+	name = "Bar";
+	sortType = "Bar"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Librarian"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"MR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Nl" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"Np" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/structure/closet/crate,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/cargo,
+/obj/item/weapon/material/knife,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"NI" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/landmark/start{
+	name = "Research Director"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"NZ" = (
+/obj/effect/landmark/start{
+	name = "Chef"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Of" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"Og" = (
+/obj/machinery/icecream_vat,
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"Oj" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/start{
+	name = "Chief Engineer"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Ou" = (
+/obj/machinery/vending/coffee{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Ov" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"OH" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "kitchen";
+	layer = 3.3;
+	name = "Kitchen Shutters"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"OZ" = (
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"Pj" = (
+/obj/effect/landmark/start{
+	name = "Geneticist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Pu" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/toy/xmastree,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"PA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"PY" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Qk" = (
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/effect/landmark/start,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"Ql" = (
+/obj/effect/landmark{
+	name = "JoinLateSifPlains"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Rp" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/freezer{
+	name = "Kitchen cold room";
+	req_access = list(28)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/fans/hardlight/colorable{
+	light_color = "#D7D7D7"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"Rs" = (
+/obj/machinery/computer/guestpass{
+	dir = 4;
+	pixel_x = -19
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"RU" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 4559.63
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"So" = (
+/obj/machinery/atmospherics/valve,
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"SG" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"ST" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"Tn" = (
+/obj/structure/table/woodentable,
+/obj/item/device/radio/subspace{
+	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO THE BAR!";
+	name = "Bar subspace radio";
+	pixel_y = 5
+	},
+/obj/item/weapon/deck/cards{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Tx" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"TB" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 4;
+	name = "Hydroponics";
+	sortType = "Hydroponics"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"TD" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/cee{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"TL" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cafeteria)
+"TZ" = (
+/obj/machinery/appliance/mixer/candy,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Ux" = (
+/obj/item/weapon/stool/padded,
+/obj/effect/landmark/start{
+	name = "Cargo Technician"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Vc" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/effect/landmark/start{
+	name = "Shaft Miner"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Vf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"Vx" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"Wn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Janitor"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Xe" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Xm" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance{
+	name = "Bar Maintenance";
+	req_access = list(25)
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"XL" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/start{
+	name = "Roboticist"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"XS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"XU" = (
+/obj/machinery/door/airlock/glass{
+	name = "Kitchen";
+	req_access = list(28)
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"Ya" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Kitchen Cold Room";
+	dir = 1
+	},
+/obj/structure/closet/chefcloset,
+/obj/item/glass_jar,
+/obj/item/device/retail_scanner/civilian,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/device/destTagger{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/gloves/sterile/latex,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"Yo" = (
+/obj/effect/landmark{
+	name = "JoinLateCyborg"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Yw" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/cafeteria)
+"YA" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
+"Zi" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"Zl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock{
+	name = "Bar Backroom";
+	req_access = list(25)
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/cafeteria)
+"ZA" = (
+/turf/space,
+/area/space)
+"ZQ" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+"ZR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafeteria)
+"ZU" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/item/toy/xmastree,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cafeteria)
+
+(1,1,1) = {"
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+"}
+(2,1,1) = {"
+es
+bA
+aD
+ss
+ss
+os
+ss
+ss
+fJ
+pi
+ZR
+So
+il
+RU
+ss
+ZA
+ZA
+ZA
+ZA
+es
+"}
+(3,1,1) = {"
+es
+PA
+SG
+ss
+aw
+oM
+ST
+ss
+ss
+ss
+ss
+ss
+ss
+ss
+ss
+ss
+ss
+ZA
+ZA
+es
+"}
+(4,1,1) = {"
+es
+jj
+xg
+ss
+Og
+gh
+Iv
+ss
+FY
+TZ
+Hs
+IZ
+Hz
+DR
+qj
+ys
+bK
+ZA
+ZA
+es
+"}
+(5,1,1) = {"
+es
+Vf
+AU
+ss
+sa
+Dj
+Ya
+ss
+Cb
+Ai
+vM
+Ai
+Ai
+iE
+Ai
+cC
+bK
+ZA
+ZA
+es
+"}
+(6,1,1) = {"
+es
+wy
+Np
+ss
+cu
+LV
+sB
+Rp
+XS
+wc
+dt
+Pu
+KF
+fE
+Ai
+HP
+bK
+ZA
+ZA
+es
+"}
+(7,1,1) = {"
+es
+PA
+hO
+cb
+kQ
+Yw
+Of
+ss
+LW
+vF
+Gd
+ML
+ya
+wD
+Ai
+Tx
+ss
+ZA
+ZA
+es
+"}
+(8,1,1) = {"
+es
+GJ
+ss
+ss
+ss
+ss
+ss
+ss
+lo
+TB
+xM
+Ev
+Ai
+xd
+Ai
+Lr
+es
+ZA
+ZA
+es
+"}
+(9,1,1) = {"
+es
+hO
+zh
+Gf
+zu
+Ou
+ss
+AM
+Zi
+Db
+dw
+Zi
+Zi
+FM
+Fo
+EG
+iQ
+ZA
+ZA
+es
+"}
+(10,1,1) = {"
+es
+hO
+Xm
+PY
+kA
+zY
+ss
+ss
+fZ
+OH
+zS
+zS
+fZ
+ss
+XU
+bK
+ss
+ZA
+ZA
+es
+"}
+(11,1,1) = {"
+es
+aD
+ss
+cg
+AX
+yC
+ss
+gX
+ZQ
+ZU
+Dc
+vm
+sz
+hC
+TD
+BK
+ss
+ss
+LG
+es
+"}
+(12,1,1) = {"
+es
+dT
+ss
+HY
+MR
+pw
+ss
+qS
+fo
+eE
+NI
+CR
+tj
+kA
+zQ
+kA
+Rs
+Ct
+Vx
+es
+"}
+(13,1,1) = {"
+es
+pA
+ss
+ss
+Zl
+ss
+ss
+CU
+Oj
+kg
+XL
+FV
+cT
+cT
+YA
+en
+Ov
+aW
+Jh
+es
+"}
+(14,1,1) = {"
+es
+MI
+ss
+KY
+xh
+KS
+GA
+pm
+eo
+Wn
+aA
+Gc
+II
+oU
+hK
+At
+wW
+yW
+yJ
+es
+"}
+(15,1,1) = {"
+es
+pu
+ss
+TL
+zR
+Nl
+fj
+lQ
+sC
+MM
+kq
+Tn
+AT
+Ql
+Am
+ss
+ss
+aP
+oW
+es
+"}
+(16,1,1) = {"
+es
+cY
+ss
+rS
+DV
+KC
+ef
+hR
+tT
+jg
+Vc
+oT
+kA
+qC
+gQ
+ss
+ZA
+ZA
+ZA
+es
+"}
+(17,1,1) = {"
+es
+dT
+ss
+zf
+zP
+uv
+Bj
+Ux
+Pj
+CZ
+jB
+te
+AT
+Je
+BY
+bK
+ZA
+ZA
+ZA
+es
+"}
+(18,1,1) = {"
+es
+OZ
+ss
+Lx
+IP
+uv
+Bj
+lF
+ah
+hp
+yT
+Xe
+wY
+Yo
+nh
+bK
+ZA
+ZA
+ZA
+es
+"}
+(19,1,1) = {"
+es
+ch
+ss
+jX
+Fq
+Fy
+yP
+NZ
+Ga
+qR
+Qk
+Cq
+nQ
+ix
+hH
+ss
+ZA
+ZA
+ZA
+es
+"}
+(20,1,1) = {"
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+es
+"}

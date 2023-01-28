@@ -316,10 +316,15 @@
 
 /mob/living/simple_mob/protean_blob/Life()
 	. = ..()
-	if(. && istype(refactory) && humanform)
-		if(!healing && (human_brute || human_burn) && refactory.get_stored_material(MAT_STEEL) >= 100)
-			healing = humanform.add_modifier(/datum/modifier/protean/steel, origin = refactory)
-		else if(healing && !(human_brute || human_burn))
+	if(!humanform.nano_dead_check(src))
+		if(. && istype(refactory) && humanform)
+			if(!healing && (human_brute || human_burn) && refactory.get_stored_material(MAT_STEEL) >= 100)
+				healing = humanform.add_modifier(/datum/modifier/protean/steel, origin = refactory)
+			else if(healing && !(human_brute || human_burn))
+				healing.expire()
+				healing = null
+	else
+		if(healing)
 			healing.expire()
 			healing = null
 
@@ -438,7 +443,7 @@
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
 	to_chat(src, "<span class='notice'>You rapidly disassociate your form</span>")
-	if(force || do_after(src,20))
+	if(force || do_after(src,20,exclusive = TASK_ALL_EXCLUSIVE))
 		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 		remove_micros(src, src) //Living things don't fare well in roblobs.
 		if(buckled)
@@ -545,7 +550,7 @@
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
 	to_chat(src, "<span class='notice'>You rapidly reassemble your form</span>")
-	if(force || do_after(blob,20))
+	if(force || do_after(blob,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(buckled)
 			buckled.unbuckle_mob()
 		if(LAZYLEN(buckled_mobs))

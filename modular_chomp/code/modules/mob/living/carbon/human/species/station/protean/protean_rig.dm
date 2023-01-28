@@ -94,8 +94,9 @@
 	name = "mass"
 	desc = "A helmet-shaped clump of nanomachines."
 	light_overlay = "should not use a light overlay"
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 	sprite_sheets = list(
+		SPECIES_PROTEAN			= 'modular_chomp/icons/mob/head_ch.dmi',
 		SPECIES_HUMAN			= 'modular_chomp/icons/mob/head_ch.dmi',
 		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/helmet_ch.dmi',
 		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/species/skrell/helmet_ch.dmi',
@@ -114,6 +115,7 @@
 		)
 
 	sprite_sheets_obj = list(
+		SPECIES_PROTEAN			= 'modular_chomp/icons/mob/head_ch.dmi',
 		SPECIES_HUMAN			= 'modular_chomp/icons/mob/head_ch.dmi',
 		SPECIES_TAJ 			= 'modular_chomp/icons/mob/head_ch.dmi',
 		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/head_ch.dmi',
@@ -136,8 +138,9 @@
 	name = "mass"
 	desc = "Glove-shaped clusters of nanomachines."
 	siemens_coefficient= 0
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 	sprite_sheets = list(
+		SPECIES_PROTEAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
 		SPECIES_HUMAN			= 'modular_chomp/icons/mob/hands_ch.dmi',
 		SPECIES_TAJ 			= 'modular_chomp/icons/mob/hands_ch.dmi',
 		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/hands_ch.dmi',
@@ -177,8 +180,9 @@
 /obj/item/clothing/shoes/magboots/rig/protean
 	name = "mass"
 	desc = "Boot-shaped clusters of nanomachines."
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 	sprite_sheets = list(
+		SPECIES_PROTEAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
 		SPECIES_HUMAN			= 'modular_chomp/icons/mob/feet_ch.dmi',
 		SPECIES_TAJ 			= 'modular_chomp/icons/mob/feet_ch.dmi',
 		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/feet_ch.dmi',
@@ -219,7 +223,7 @@
 	name = "mass"
 	desc = "A body-hugging mass of nanomachines."
 	can_breach = 0
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
+	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/device/flashlight,
@@ -229,6 +233,7 @@
 		/obj/item/weapon/storage/backpack,
 		)
 	sprite_sheets = list(
+		SPECIES_PROTEAN			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
 		SPECIES_HUMAN			= 'modular_chomp/icons/mob/spacesuit_ch.dmi',
 		SPECIES_TAJ 			= 'modular_chomp/icons/mob/species/tajaran/suit_ch.dmi',
 		SPECIES_SKRELL 			= 'modular_chomp/icons/mob/species/skrell/suit_ch.dmi',
@@ -305,7 +310,6 @@
 								playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
 								new /obj/effect/gibspawner/robot(src.loc)
 								src.atom_say("Contact received! Reassembly nanites calibrated. Estimated time to resucitation: 1 minute 30 seconds")
-								dead = 0
 								addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 900)
 				return
 	if(istype(W,/obj/item/weapon/rig))
@@ -431,7 +435,8 @@
 				S = H.species
 				S.pseudodead = 0
 				to_chat(myprotean, "<span class='notice'>You have finished reconstituting.</span>")
-				playsound(src, 'sound/machines/ping.ogg', 50, 0)
+				playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
+		dead = 0
 
 /obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
 	return	//We don't do that here
@@ -527,6 +532,7 @@
 		return
 	if(istype(R, /obj/item/weapon/rig/protean))
 		to_chat(user, "<span class='warning'>The world is not ready for such a technological singularity.</span>")
+		return
 	to_chat(user, "<span class='notice'>You assimilate the [R] into the [src]. Mimicking its stats and appearance.</span>")
 	for(var/obj/item/piece in list(gloves,helmet,boots,chest))
 		piece.armor = R.armor.Copy()
