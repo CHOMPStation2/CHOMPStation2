@@ -247,7 +247,7 @@
 
 /datum/gear/suit/roles/cloak
 	display_name = "cloak selection, departments"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo 
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
 	cost = 1
 
 /datum/gear/suit/roles/cloak/New()
@@ -390,12 +390,12 @@
 /datum/gear/suit/wintercoat/medical
 	display_name = "winter coat, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
+	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/suit/wintercoat/medical/alt
 	display_name = "winter coat, medical alt"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/alt
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
+	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist","Field Medic") //CHOMP keep explo
 
 /datum/gear/suit/wintercoat/medical/viro
 	display_name = "winter coat, virologist"
@@ -420,7 +420,7 @@
 /datum/gear/suit/wintercoat/medical/sar
 	display_name = "winter coat, search and rescue"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar
-	allowed_roles = list("Chief Medical Officer", "Field Medic")
+	allowed_roles = list("Chief Medical Officer", "Field Medic") //CHOMP keep explo
 
 /datum/gear/suit/wintercoat/science
 	display_name = "winter coat, science"

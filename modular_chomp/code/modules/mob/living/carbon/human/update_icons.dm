@@ -16,7 +16,7 @@
 
 	for(var/f in list(BP_L_FOOT, BP_R_FOOT))
 		var/obj/item/organ/external/foot/foot = get_organ(f)
-		if(istype(foot) && foot.is_hidden_by_tail()) //If either foot is hidden by the tail, don't render footwear.
+		if(istype(foot) && foot.is_hidden_by_sprite_accessory()) //If either foot is hidden by the tail, don't render footwear.
 			return
 
 	var/obj/item/clothing/shoes/shoe = shoes

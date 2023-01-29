@@ -39,7 +39,7 @@
 		voremob_loaded = TRUE
 		init_vore()
 		belly = vore_selected
-	..()
+	return ..()
 
 //
 // Simple proc for animals to have their digestion toggled on/off externally

@@ -499,6 +499,13 @@
 	ckeywhitelist = list("jemli")
 	character_name = list("Jemli")
 
+/datum/gear/fluff/fen_crown
+	path = /obj/item/clothing/head/crown
+	display_name = "Princess Crown"
+	slot = slot_head
+	ckeywhitelist = list("jemli")
+	character_name = list("Princess Afenia")
+
 /datum/gear/fluff/jeremiah_holster
 	path = /obj/item/clothing/accessory/holster/armpit
 	display_name = "Ace's Holster"
@@ -649,7 +656,7 @@
 	display_name = "Kenzie's Hypospray"
 	ckeywhitelist = list("lm40")
 	character_name = list("Kenzie Houser")
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic") //CHOMP keep explo
 
 /datum/gear/fluff/brianna_backpack
 	path = /obj/item/weapon/storage/backpack/messenger/black/fluff/briana
@@ -886,7 +893,7 @@
 	display_name = "LUNA's Nobel Science Award"
 	ckeywhitelist = list("residentcody")
 	character_name = list("LUNA")
-	
+
 /datum/gear/fluff/luna_conduct_medal
 	path = /obj/item/clothing/accessory/medal/conduct
 	display_name = "LUNA's Distinguished Conduct Medal"
@@ -1289,7 +1296,7 @@
 	slot = slot_glasses
 	ckeywhitelist = list("wickedtemp")
 	character_name = list("Chakat Tempest Venosare")
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic", "Off-duty Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic","Field Medic","Off-duty Medic") //CHOMP keep explo
 
 /datum/gear/fluff/tempest_hypospray
 	path = /obj/item/weapon/reagent_containers/hypospray/vial/tempest
@@ -1297,7 +1304,7 @@
 	slot = slot_belt
 	ckeywhitelist = list("wickedtemp")
 	character_name = list("Chakat Tempest Venosare")
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic", "Off-duty Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic", "Off-duty Medic") //CHOMP keep explo
 
 /datum/gear/fluff/tempest_backpack
 	path = /obj/item/weapon/storage/backpack/saddlebag/tempest
@@ -1333,6 +1340,18 @@
 
 
 //  Y CKEYS
+
+/datum/gear/fluff/lemon_plush
+	path = /obj/item/toy/plushie/fluff/lemonplush
+	display_name = "yellow slime plushie"
+	ckeywhitelist = list("yecrowbarman")
+	character_name = list("Lemon Yellow", "Lemon Gettler Yellow", "Lemon Lee Yellow", "Lemon Jade Yellow") //different sleeves, same char
+
+/datum/gear/fluff/cephyra_d6
+	path = /obj/item/weapon/dice/loaded/ceph
+	display_name = "engraved d6"
+	ckeywhitelist = list("yeehawguvnah")
+	character_name = list("Cephyra")
 
 //  Z CKEYS
 /datum/gear/fluff/tachika_medal

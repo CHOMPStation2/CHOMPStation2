@@ -8,6 +8,7 @@
 	throwforce = 0
 	force = 0
 	action_button_name = "Command"
+	w_class = ITEMSIZE_SMALL //CHOMPEdit
 
 	var/active = FALSE					//Is it set up?
 	var/mob/living/owner				//Reference to the owner
