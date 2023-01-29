@@ -112,10 +112,12 @@
 	if(client.prefs)
 		client.prefs.copy_to(Dummy)
 		//Important, since some sprites only work for specific species
+		/*	Probably not needed anymore since impersonate_bodytype no longer exists
 		if(Dummy.species.base_species == "Promethean")
 			impersonate_bodytype = "Human"
 		else
 			impersonate_bodytype = Dummy.species.base_species
+		*/
 		custom_species = Dummy.custom_species
 		var/list/traits = dna.species_traits.Copy()
 		dna = Dummy.dna.Clone()
