@@ -4501,7 +4501,7 @@
 	},
 /obj/item/device/multitool,
 /obj/item/clothing/head/welding,
-/obj/item/weapon/storage/belt/utility,
+/obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
 "ans" = (
@@ -23451,6 +23451,10 @@
 /area/security/aid_station)
 "bve" = (
 /obj/structure/table/rack,
+/obj/item/weapon/storage/box/cdeathalarm_kit{
+	pixel_x = -3;
+	pixel_y = 2
+	},
 /obj/item/weapon/storage/box/seccarts{
 	pixel_x = 3;
 	pixel_y = 2
@@ -30384,6 +30388,7 @@
 /obj/item/device/t_scanner,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
+/obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
 "bRu" = (
@@ -77263,7 +77268,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
 /obj/machinery/mineral/equipment_vendor{
-	dir = 4;
+	dir = 8;
 	pixel_x = 4
 	},
 /turf/simulated/floor/tiled,
