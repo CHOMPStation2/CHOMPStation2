@@ -222,6 +222,7 @@
 	layer = 4;
 	name = "Wilderness Shelter Shutters"
 	},
+/obj/structure/fans/tiny,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "bd" = (
