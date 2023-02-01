@@ -23,6 +23,9 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	// Overmap poi's CURRENTLY USING a z-level. Dynamic POI's get referenced here when loading in and removed when unloaded.
 	// Length must match map_z length or bad things may happen.
 	var/list/active_pois[MAX_DYNAMIC_LEVELS]
+
+	// Reference list of shuttle landmarks for each z-level. Used to register/unregister shuttle landmarks in POI's.
+	var/list/shuttle_landmarks[MAX_DYNAMIC_LEVELS]
 	var/list/all_children = list()
 
 
@@ -33,6 +36,14 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		for(var/i = 1; i <= 3; i++) // Hard-coding limit because this is dangerous.
 			world.increment_max_z()
 			map_z[i] = world.maxz
+			// Find the center turf, spawn a shuttle landmark -10 tiles outside of the spawn/despawn boundaries.
+			// Shuttles are typically longer in x coordinates than y, so it's safer to set the landmark by x coordinates.
+			var/turf/T = locate(round(world.maxx/2 - MAX_DYNAMIC_POI_DIMENSIONS - 10), round(world.maxy/2), map_z[i])
+			if(istype(T))
+				var/obj/effect/shuttle_landmark/S = new(T)
+				S.name = "Subspace sector [i]"
+				S.landmark_tag = "dynamic_sector_[i]"
+				shuttle_landmarks[i] = S
 		generated_z = TRUE
 
 /obj/effect/overmap/visitable/dynamic/Initialize()
@@ -82,7 +93,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		index = 1
 	testing("Checking if sector at [map_z[index]] has no players.")
 	for(var/mob/M in global.player_list)
-		if(M != observer && (M.z in map_z[index]))
+		if(M != observer && (M.z == map_z[index]))
 			testing("There are people on it.")
 			return FALSE
 	return TRUE
@@ -205,6 +216,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	my_template.load(T, centered=TRUE)
 	loaded = TRUE
 	my_template.update_lighting(T)
+	add_landmark(parent.shuttle_landmarks[my_index]) // This lets overmap shuttles find our newly assigned z-level.
 	to_chat(user, "Stabilization tether successfully created.")
 	if(my_template.active_icon)
 		icon_state = my_template.active_icon
