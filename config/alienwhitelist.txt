@@ -17,6 +17,14 @@ flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
+<<<<<<< HEAD
+=======
+iivoracious - Black-Eyed Shadekin
+irkallaepsilon - Protean
+jademanique - Black-Eyed Shadekin
+jademanique - Protean
+jademanique - Teppi
+>>>>>>> b2e27cbfbd... Merge pull request #14412 from Heroman3003/wl-fixes
 jademanique - Xenochimera
 ktccd - Diona
 khanivore - Protean
