@@ -23,6 +23,7 @@
 
 /obj/item/device/radio/headset
 	sprite_sheets = list(SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi',
+						SPECIES_VOX = 'icons/inventory/ears/mob_vox.dmi',
 						SPECIES_WEREBEAST = 'icons/inventory/ears/mob_vr_werebeast.dmi')
 
 /obj/item/device/radio/headset/mob_headset	//Adminbus headset for simplemob shenanigans.
