@@ -10,25 +10,30 @@
 	var/mob/ultimate_mob
 	var/atom/to_check = loc
 	var/n = 0
-	while (to_check && !isturf(to_check) && n < 6)
+	while (to_check && !isturf(to_check) && n++ < 16)
 		if (ismob(to_check))
 			ultimate_mob = to_check
 			to_check = to_check.loc
-			n = 0
-		n++
 	return ultimate_mob
 
 /atom/proc/get_ultimate_belly()
 	var/obj/belly/ultimate_belly
 	var/atom/to_check = loc
 	var/n = 0
-	while (to_check && !isturf(to_check) && n < 6)
+	while (to_check && !isturf(to_check) && n++ < 16)
 		if (isbelly(to_check))
 			ultimate_belly = to_check
 			to_check = to_check.loc
-			n = 0
-		n++
 	return ultimate_belly
+
+/atom/proc/is_inside_atom_recursive(var/atom/atom) //is this already a thing??
+	var/atom/to_check = loc
+	var/n = 0
+	while (to_check && !isturf(to_check) && n++ < 16)
+		if (to_check == atom)
+			return TRUE
+		to_check = to_check.loc
+	return FALSE
 
 /mob/verb/me_verb_subtle_distanced(message as message) //This would normally go in say.dm
 	set name = "Subtle-Targeted"

@@ -64,10 +64,21 @@
 		var/all_targets_mobs = list()
 		var/all_targets_objs = list()
 		if (distanced)
-			var/obj/belly/u_belly = get_ultimate_belly()
-			var/mob/living/u_pred = u_belly?.owner || src
-
+			var/mob/u_mob = get_ultimate_mob() || src
+			var/possessed = list()
 			var/valid_targets = list("One tile radius" = "otr", "Single tile" = "st", "All in belly and preds" = "aibap")
+			for (var/obj/item/i in vis_objs)
+				if (LAZYLEN(i.possessed_voice))
+					var/x = i.get_ultimate_mob()
+					if ((!x && (isturf(loc) || i.loc == loc)) || x == u_mob)
+						var/is_active = FALSE
+						for (var/mob/M in i.possessed_voice)
+							if (M.client)
+								is_active = TRUE
+								break
+						if (is_active)
+							valid_targets["Only [i]"] = "\ref[i]"
+							possessed += i.possessed_voice
 			for (var/mob/M as anything in vis_mobs)
 				if (!M.client || M == src)
 					continue
@@ -75,16 +86,16 @@
 					if (isbelly(M.loc) && (M.loc in contents))
 						valid_targets["Only [M]"] = "\ref[M]"
 					continue
-				if ((isturf(M.loc) && !u_belly) || M.loc == loc)
+				if (isturf(M.loc) || M.loc == loc)
 					valid_targets["Only [M]"] = "\ref[M]"
 					continue
-				if (get_turf(M) == get_turf(src)) //so we aren't going through everything, it's a safe bet the belly is in the mob it's supposed to be in
-					var/obj/belly/belly = M.get_ultimate_belly()
-					if (belly?.owner == u_pred || u_pred == M)
+				if (get_turf(M) == get_turf(src)) //so we aren't going through everything
+					if (length(possessed))
+						if (M in possessed)
+							continue
+					if (M == u_mob || M.is_inside_atom_recursive(u_mob))
 						valid_targets["Only [M]"] = "\ref[M]"
-			for (var/obj/item/i in vis_objs)
-				if (LAZYLEN(i.possessed_voice) && i.get_ultimate_mob() == src)
-					valid_targets["Only [i]"] = "\ref[i]"
+						continue
 			valid_targets += list("Cancel" = "c")
 			valid_targets += list("Cancel and print to chat" = "captc")
 			var/selected = input(src, "Choose the target to send it to.", "Subtle Distance", "One tile radius") as anything in valid_targets //default to one tile radius
@@ -113,7 +124,7 @@
 						if (get_dist(get_turf(src), get_turf(M)) < 1)
 							all_targets_objs |= M
 				if ("aibap")
-					var/obj/belly/belly = get_ultimate_belly() //in case it's changed
+					var/obj/belly/belly = get_ultimate_belly()
 					var/mob/pred = belly?.owner || src
 					if (pred)
 						all_targets_mobs |= pred.get_all_in_bellies()
