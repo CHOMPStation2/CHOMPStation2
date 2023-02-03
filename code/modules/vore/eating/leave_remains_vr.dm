@@ -24,6 +24,24 @@
 	skull_type = /obj/item/weapon/digestion_remains/skull/teshari
 /datum/species/vox
 	skull_type = /obj/item/weapon/digestion_remains/skull/vox
+//CHOMPadd start
+/datum/species/monkey
+	skull_type = /obj/item/weapon/digestion_remains/skull
+/datum/species/monkey/tajaran
+	skull_type = /obj/item/weapon/digestion_remains/skull/tajaran
+/datum/species/monkey/unathi
+	skull_type = /obj/item/weapon/digestion_remains/skull/unathi
+/datum/species/monkey/skrell
+	skull_type = /obj/item/weapon/digestion_remains/skull/skrell
+/datum/species/monkey/shark
+	skull_type = /obj/item/weapon/digestion_remains/skull/akula
+/datum/species/monkey/sparra
+	skull_type = /obj/item/weapon/digestion_remains/skull/rapala
+/datum/species/monkey/vulpkanin
+	skull_type = /obj/item/weapon/digestion_remains/skull/vulpkanin
+/datum/species/monkey/sergal
+	skull_type = /obj/item/weapon/digestion_remains/skull/sergal
+//CHOMPadd end.
 
 /obj/belly/proc/handle_remains_leaving(var/mob/living/M)
 	if(!ishuman(M))	//Are we even humanoid?
@@ -46,7 +64,7 @@
 	if(H.species.skull_type)
 		new H.species.skull_type(src, owner, H) //CHOMPEdit
 		skull_amount--
-	
+
 	if(skull_amount && H.species.selects_bodytype)
 		// We still haven't found correct skull...
 		if(H.species.base_species == SPECIES_HUMAN)
