@@ -10,15 +10,12 @@
 	var/custom_say = null
 	var/custom_ask = null
 	var/custom_exclaim = null
-	var/custom_whisper = null
-<<<<<<< HEAD
+	var/custom_whisper = null	
+//custom temperature discomfort vars
+	var/list/custom_heat = list()
+	var/list/custom_cold = list()
 
 //YW Add Start
 /mob
 	var/wingdings = 0
 //Yw Add End
-=======
-//custom temperature discomfort vars
-	var/list/custom_heat = list()
-	var/list/custom_cold = list()
->>>>>>> f37df09d38... Merge pull request #14384 from Runa-Dacino/Custom-species-heat
