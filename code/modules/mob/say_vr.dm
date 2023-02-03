@@ -69,18 +69,22 @@
 
 			var/valid_targets = list("One tile radius" = "otr", "Single tile" = "st", "All in belly and preds" = "aibap")
 			for (var/mob/M as anything in vis_mobs)
-				if (M == src)
+				if (!M.client || M == src)
 					continue
-				if (istype(M, /mob/living) && isturf(M.loc) && !u_belly)
-					valid_targets["[M]"] = "\ref[M]"
+				if (isobserver(M))
+					if (isbelly(M.loc) && (M.loc in contents))
+						valid_targets["Only [M]"] = "\ref[M]"
+					continue
+				if ((isturf(M.loc) && !u_belly) || M.loc == loc)
+					valid_targets["Only [M]"] = "\ref[M]"
 					continue
 				if (get_turf(M) == get_turf(src)) //so we aren't going through everything, it's a safe bet the belly is in the mob it's supposed to be in
 					var/obj/belly/belly = M.get_ultimate_belly()
 					if (belly?.owner == u_pred || u_pred == M)
-						valid_targets["[M]"] = "\ref[M]"
+						valid_targets["Only [M]"] = "\ref[M]"
 			for (var/obj/item/i in vis_objs)
 				if (LAZYLEN(i.possessed_voice) && i.get_ultimate_mob() == src)
-					valid_targets["[i]"] = "\ref[i]"
+					valid_targets["Only [i]"] = "\ref[i]"
 			valid_targets += list("Cancel" = "c")
 			valid_targets += list("Cancel and print to chat" = "captc")
 			var/selected = input(src, "Choose the target to send it to.", "Subtle Distance", "One tile radius") as anything in valid_targets //default to one tile radius
@@ -106,7 +110,7 @@
 						if (isobserver(M) || get_dist(get_turf(src), get_turf(M)) < 1)
 							all_targets_mobs |= M
 					for (var/obj/M as anything in vis_objs)
-						if (isobserver(M) || get_dist(get_turf(src), get_turf(M)) < 1)
+						if (get_dist(get_turf(src), get_turf(M)) < 1)
 							all_targets_objs |= M
 				if ("aibap")
 					var/obj/belly/belly = get_ultimate_belly() //in case it's changed
