@@ -25,6 +25,8 @@
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
 
+	inherent_verbs = list(/mob/proc/adjust_hive_range)
+
 	siemens_coefficient = 1
 	darksight = 10
 
