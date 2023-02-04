@@ -190,6 +190,8 @@
 	emote_sound = 'sound/effects/warble.ogg' // Copyright CC BY 3.0 alienistcog (freesound.org) for the sound.
 	emote_message_3p = "warbles."
 
+<<<<<<< HEAD
+=======
 /decl/emote/audible/croon
 	key = "croon"
 	emote_message_3p = "croons..."
@@ -200,11 +202,12 @@
 	emote_message_3p = "lets out a low, throaty warble!"
 	emote_sound = 'sound/voice/lwarble.ogg'
 
-/decl/emote/audible/croak
-	key = "croak"
+/decl/emote/audible/croak_skrell
+	key = "scroak"
 	emote_message_3p = "croaks!"
-	emote_sound = 'sound/voice/croak.ogg'
+	emote_sound = 'sound/voice/croak_skrell.ogg'
 
+>>>>>>> 7c14ead771... Merge pull request #14439 from Heroman3003/post-mirror-fixes
 /decl/emote/audible/vox_shriek
 	key = "shriek"
 	emote_message_3p = "SHRIEKS!"

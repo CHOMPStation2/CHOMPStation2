@@ -168,6 +168,13 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/jiggle,
 	/decl/emote/visible/lightup,
 	/decl/emote/visible/vibrate,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/croon,
+	/decl/emote/audible/lwarble,
+	/decl/emote/audible/croak_skrell
+
+>>>>>>> 7c14ead771... Merge pull request #14439 from Heroman3003/post-mirror-fixes
 	//VOREStation Add End
 	//CHOMP Add start
 	/decl/emote/audible/prbt2
