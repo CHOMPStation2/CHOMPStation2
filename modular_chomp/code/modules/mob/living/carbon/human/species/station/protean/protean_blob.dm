@@ -512,6 +512,7 @@
 		//We can still speak our languages!
 		blob.languages = languages.Copy()
 		blob.name = real_name
+		blob.real_name = real_name
 		blob.voice_name = name
 		var/datum/species/protean/S = src.species
 		blob.icon_living = S.blob_appearance
