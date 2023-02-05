@@ -228,10 +228,18 @@
 				//Thickbelly flag
 				if((mode_flags & DM_FLAG_THICKBELLY) && !H.muffled)
 					H.muffled = TRUE
+				//CHOMPEdit Start - Fix muffled sometimes being sticky.
+				else if(!(mode_flags & DM_FLAG_THICKBELLY) && H.muffled)
+					H.muffled = FALSE
+				//CHOMPEdit End
 
 				//Force psay
 				if((mode_flags & DM_FLAG_FORCEPSAY) && !H.forced_psay && H.absorbed)
 					H.forced_psay = TRUE
+				//CHOMPEdit Start - Fix forcepsay sometimes being sticky.
+				else if(!(mode_flags & DM_FLAG_FORCEPSAY) && H.forced_psay)
+					H.forced_psay = FALSE
+				//CHOMPEdit End
 
 				//Worn items flag
 				if(mode_flags & DM_FLAG_AFFECTWORN)

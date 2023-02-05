@@ -9,7 +9,7 @@
 	},
 /area/submap/FrostflyNest)
 "d" = (
-/turf/simulated/wall/solidrock,
+/turf/simulated/mineral,
 /area/submap/FrostflyNest)
 "e" = (
 /turf/simulated/floor/outdoors/dirt{
@@ -29,12 +29,7 @@
 	},
 /area/submap/FrostflyNest)
 "h" = (
-/obj/structure/prop/nest{
-	color = "#041164";
-	creature_types = list(/mob/living/simple_mob/animal/sif/frostfly);
-	name = "frostfly den";
-	spawn_delay = 300
-	},
+/mob/living/simple_mob/animal/sif/frostfly,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -120,7 +115,7 @@ f
 i
 e
 e
-e
+h
 g
 d
 d
@@ -142,7 +137,7 @@ d
 d
 d
 i
-e
+h
 e
 l
 d

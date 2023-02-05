@@ -437,6 +437,11 @@
 		return
 	..()
 
+/mob/living/simple_mob/protean_blob/character_directory_species()
+	if (humanform)
+		return "[humanform.custom_species ? humanform.custom_species : (humanform.species ? humanform.species.name : "Protean")]"
+	return "Protean"
+
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
 	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)

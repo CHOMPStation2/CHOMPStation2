@@ -45,7 +45,7 @@
 /obj/item/clothing/mask/gas/explorer,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/suit/armor/pcarrier/light/nt,
-/obj/random/projectile/scrapped_smg,
+/obj/random/projectile/scrapped_gun,
 /obj/random/projectile/scrapped_pistol,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/Shelter1)
