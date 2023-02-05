@@ -469,6 +469,9 @@
 		blob.transform = matrix()*size_multiplier
 		blob.size_multiplier = size_multiplier
 
+		//dir update
+		blob.dir = dir
+
 		if(l_hand) drop_l_hand()
 		if(r_hand) drop_r_hand()
 
@@ -582,14 +585,17 @@
 		//Message
 		blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
 
+		//Size update
+		resize(blob.size_multiplier, FALSE, TRUE, ignore_prefs = TRUE)
+
 		//Duration of above animation
 		sleep(8)
 
 		//Record where they should go
 		var/atom/reform_spot = blob.drop_location()
 
-		//Size update
-		resize(blob.size_multiplier, 1, 1, ignore_prefs = TRUE)
+		//dir update
+		dir = blob.dir
 
 		//Move them back where the blob was
 		forceMove(reform_spot)
