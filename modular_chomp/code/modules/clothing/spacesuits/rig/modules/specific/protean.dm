@@ -157,8 +157,9 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		if(istype(H.species, /datum/species/protean))
 			to_chat(H, "<span class='warning'>Your Protean modules do not function on yourself.</span>")
 			return 0
-		if(P?:refactory.get_stored_material(MAT_STEEL) >= 100)
-			healing = holder.wearer.add_modifier(/datum/modifier/protean/steel, origin = P?:refactory)
+		var/obj/item/organ/internal/nano/refactory/R = P.nano_get_refactory()
+		if(R.get_stored_material(MAT_STEEL) >= 100)
+			healing = holder.wearer.add_modifier(/datum/modifier/protean/steel, origin = R)
 			to_chat(usr, "<font color='blue'><b>You activate the suit's restorative nanites.</b></font>")
 			to_chat(H, "<span class='warning'>Your suit begins mend your injuries.</span>")
 			active = 1
@@ -188,7 +189,8 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 			to_chat(H, "<span class='warning'>Your Protean modules do not function on yourself.</span>")
 			deactivate()
 			return
-		if((!P?:refactory.get_stored_material(MAT_STEEL)))
+		var/obj/item/organ/internal/nano/refactory/R = P.nano_get_refactory()
+		if((!R.get_stored_material(MAT_STEEL)))
 			to_chat(H, "<span class='warning'>Your [holder] is out of steel.</span>")
 			deactivate()
 			return
@@ -198,11 +200,10 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 	if(!istype(S) || !istype(user))
 		return 0
 
-	if(!holder?:myprotean.nano_get_refactory())
-		return 0
+	var/mob/living/P = holder?:myprotean
+	var/obj/item/organ/internal/nano/refactory/R = P?.nano_get_refactory()
 
-	var/obj/item/organ/internal/nano/refactory/R = holder?:myprotean.nano_get_refactory()
-	if(R.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
+	if(R?.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
 		to_chat(user, "<font color='blue'><b>You directly feed some steel to the [holder].</b></font>")
 		return 1
 	return 0
