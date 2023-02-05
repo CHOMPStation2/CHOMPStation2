@@ -34,6 +34,7 @@
 		/mob/living/carbon/human/proc/prommie_blobform,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/promethean_select_opaqueness,
+		/mob/living/carbon/human/proc/shapeshifter_reassemble //CHOMPEdit: reform verb
 		)
 
 /mob/living/carbon/human/proc/prommie_blobform()

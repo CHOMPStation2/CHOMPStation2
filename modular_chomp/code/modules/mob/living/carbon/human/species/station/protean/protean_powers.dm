@@ -132,7 +132,7 @@
 		if(do_after(caller, 40,exclusive = TASK_ALL_EXCLUSIVE))
 			if(client.prefs)	//Make sure we didn't d/c
 				var/obj/item/weapon/rig/protean/Rig = species?:OurRig
-				GetAppearanceFromPrefs(flavour, oocnotes)
+				caller.client.prefs.vanity_copy_to(caller, FALSE, flavour, oocnotes, TRUE)
 				species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
 				caller.visible_message("<span class='notify'>[caller] adopts a new form!</span>", "<span class='danger'>You have reassembled.</span>")
 
@@ -237,7 +237,7 @@
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
-	var/new_species = tgui_input_list(usr, "Please select a species to emulate.", "Shapeshifter Body", GLOB.playable_species)
+	var/new_species = tgui_input_list(usr, "Please select a species to emulate.", "Shapeshifter Body", list(species?.vanity_base_fit)|GLOB.playable_species)
 	if(new_species)
 		species?.base_species = new_species // Really though you better have a species
 		regenerate_icons() //Expensive, but we need to recrunch all the icons we're wearing
