@@ -42,6 +42,9 @@
 /obj/item/weapon/rig/protean/digest_act(atom/movable/item_storage = null)
 	return 0
 
+/obj/item/weapon/rig/protean/ex_act(severity)
+	return
+
 /obj/item/weapon/rig/protean/New(var/newloc, var/mob/living/carbon/human/P)
 	if(P)
 		var/datum/species/protean/S = P.species
