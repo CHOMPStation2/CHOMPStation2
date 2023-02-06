@@ -11,6 +11,22 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+=======
+bricker98 - Black-Eyed Shadekin
+burritojustice - Protean
+camanis - Protean
+cameron653 - Protean
+cgr - Protean
+chaosdoomsday - Black-Eyed Shadekin
+chaosdoomsday - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+chloeplayer - Protean
+comradenitro - Protean
+coolcrow420 - Black-Eyed Shadekin
+>>>>>>> 1c9b826c9b... Merge pull request #14454 from Burrito-Justice/patch-1
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
