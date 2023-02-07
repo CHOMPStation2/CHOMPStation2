@@ -64,8 +64,8 @@ var/list/holder_mob_icon_cache = list()
 			location = "[H.loc.loc]'s [H.loc]"
 		else
 			location = "[H.loc]"
-
-		stat("Location", location)
+		if (location != "" && statpanel("Status"))
+			stat("Location", location)
 //CHOMPEdit End
 
 /obj/item/weapon/holder/Entered(mob/held, atom/OldLoc)
