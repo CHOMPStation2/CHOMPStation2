@@ -371,7 +371,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//YWadd END	
   
 	// Destroy/cyborgize organs and limbs.
-
 	character.synthetic = null //Clear the existing var.
 	//VOREStation Edit
 	var/list/organs_to_edit = list()
