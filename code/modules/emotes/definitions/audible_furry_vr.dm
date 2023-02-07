@@ -123,7 +123,11 @@
 /decl/emote/audible/croak
     key = "croak"
     emote_message_3p = "rumbles their throat, puffs their cheeks and croaks."
+<<<<<<< HEAD
     emote_sound = 'sound/voice/Croak.ogg'
+=======
+    emote_sound = 'sound/voice/croak_frog.ogg'
+>>>>>>> 395b1a8d90... Merge pull request #14466 from Heroman3003/croakfix2
 /decl/emote/audible/gao
     key = "gao"
     emote_message_3p = "lets out a gao."
