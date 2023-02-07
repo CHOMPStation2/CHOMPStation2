@@ -11,12 +11,7 @@
 	maxhealth = 5000
 	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1.
 	deflect_chance = 50
-<<<<<<< HEAD
-	damage_absorption = list("brute"=0.1,"fire"=0.7,"bullet"=0.1,"laser"=0.6,"energy"=0.7,"bomb"=0.7) //values show how much damage will pass through, not how much will be absorbed.
-	max_temperature = 35000
-=======
 	max_temperature = 35000 //Just a bit better than the Durand.
->>>>>>> 4aa23a5874... Merge pull request #14430 from VOREStation/upstream-merge-8905
 	infra_luminosity = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/gorilla
 	add_req_access = 0
