@@ -15,7 +15,7 @@
 /datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/succubus_bite
-	
+
 /datum/trait/neutral/nutritiongrow
 	name = "Growing"
 	desc = "After you consume enough nutrition, you start to slowly grow while metabolizing nutrition faster."
@@ -41,20 +41,27 @@
 	var_changes = list("metabolic_rate" = 2, "hunger_factor" = 1.6, "metabolism" = 0.012)	//2x metabolism speed, 32x hunger speed
 	custom_only = FALSE
 
-/datum/trait/neutral/big_mouth
-	name = "Mouth, Big"
+/datum/trait/neutral/fast_eater_minor
+	name = "Fast Eater, Minor"
 	desc = "It takes half as many bites to finish food as it does for most people."
 	cost = 0
 	var_changes = list("bite_mod" = 2)
 	custom_only = FALSE
-	
-/datum/trait/neutral/big_mouth_extreme
-	name = "Mouth, Giant"
+
+/datum/trait/neutral/fast_eater
+	name = "Fast Eater"
 	desc = "It takes a quarter as many bites to finish food as it does for most people."
 	cost = 0
 	var_changes = list("bite_mod" = 4)
 	custom_only = FALSE
-	
+
+/datum/trait/neutral/fast_eater_major
+	name = "Fast Eater, Major"
+	desc = "You will eat anything instantly, in one bite."
+	cost = 0
+	var_changes = list("bite_mod" = 16) // Setting this intentionally ridiculously high, so anything will overflow and be eaten in one go.
+	custom_only = FALSE
+
 // CHOMPNote: Moving YW additions here, to sync our files better with VORE in the event of edits.
 /datum/trait/neutral/autohiss_vassilian
 	name = "Autohiss (Vassilian)"
@@ -71,4 +78,3 @@
 	),
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
-	
