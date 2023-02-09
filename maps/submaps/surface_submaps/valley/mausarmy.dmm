@@ -1,0 +1,1148 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ao" = (
+/turf/template_noop,
+/area/space)
+"ay" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"cU" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"dd" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"dW" = (
+/obj/machinery/door/blast/shutters,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"ed" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/obstruction,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"et" = (
+/obj/random/trash_pile,
+/turf/template_noop,
+/area/space)
+"gf" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire,
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"ht" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"hR" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"iL" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"kT" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/obstruction,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"mJ" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/medical,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"mQ" = (
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire,
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"oS" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/structure/safe,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"pB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"ra" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"rx" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"sg" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"to" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"tq" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"uN" = (
+/obj/machinery/power/apc,
+/turf/simulated/wall/r_wall,
+/area/space)
+"vj" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/obstruction,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"vn" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"vp" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/structure/closet/crate/secure/loot,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"vI" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"we" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"wi" = (
+/obj/structure/table/gold,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"wP" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"xm" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"zy" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"zz" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"zN" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/structure/table/fancyblack,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/item/stolenpackage,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"zV" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"Ad" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"AG" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"AV" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"AX" = (
+/obj/structure/fence{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"Bu" = (
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"BV" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"CB" = (
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"Do" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/effect/landmark/loot_spawn,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"DU" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/research,
+/obj/random/contraband,
+/obj/random/rigsuit/chancetofail,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Er" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Ev" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Fn" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"FJ" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/structure/table/fancyblack,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"FO" = (
+/turf/simulated/wall/gold,
+/area/space)
+"Hj" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Hr" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/item/stolenpackage,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"JM" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/blast/regular,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Lh" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"LI" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"MF" = (
+/mob/living/simple_mob/mechanical/mecha/mouse_tank,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"NM" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"Oq" = (
+/obj/machinery/door/airlock/gold,
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"OJ" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/item/stolenpackage,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/research,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"OO" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/wall/gold,
+/area/space)
+"Pz" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/structure/table/fancyblack,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/rigsuit,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Qd" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/item/stolenpackage,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/security,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Qj" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/item/stolenpackage,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/medical,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Rp" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Rx" = (
+/turf/simulated/wall/r_wall,
+/area/space)
+"RE" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/security,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"RQ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Tp" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"TL" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Vf" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"VC" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/random/crate,
+/obj/item/stolenpackage,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/research,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"VE" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"WV" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"XT" = (
+/obj/effect/floor_decal/corner_techfloor_gray/diagonal,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"XW" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Yh" = (
+/turf/simulated/wall/uranium,
+/area/space)
+"YT" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Ze" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"Zm" = (
+/obj/structure/fence/cut/large{
+	dir = 8;
+	icon_state = "straight_cut3"
+	},
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"ZK" = (
+/obj/structure/fence/corner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/space)
+"ZV" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+
+(1,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(2,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(3,1,1) = {"
+ao
+ao
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+ao
+ao
+ao
+"}
+(4,1,1) = {"
+ao
+ao
+vn
+XW
+XW
+XW
+Fn
+XW
+pB
+ZV
+XW
+XW
+XW
+ZV
+XW
+XW
+pB
+Fn
+XW
+XW
+XW
+cU
+ao
+ao
+ao
+"}
+(5,1,1) = {"
+ao
+ao
+ay
+VE
+VE
+VE
+dW
+VE
+VE
+FO
+Oq
+FO
+Oq
+OO
+Ad
+VE
+VE
+dW
+VE
+VE
+VE
+tq
+ao
+ao
+ao
+"}
+(6,1,1) = {"
+ao
+ao
+ay
+VE
+VE
+VE
+dW
+VE
+Bu
+FO
+mQ
+wi
+mQ
+FO
+VE
+MF
+VE
+dW
+VE
+VE
+VE
+tq
+ao
+ao
+ao
+"}
+(7,1,1) = {"
+ao
+ao
+ay
+VE
+VE
+VE
+dW
+VE
+VE
+FO
+Oq
+FO
+Oq
+OO
+Ad
+VE
+Ze
+dW
+VE
+VE
+VE
+tq
+ao
+ao
+ao
+"}
+(8,1,1) = {"
+ao
+ao
+TL
+zy
+zy
+zy
+WV
+zy
+RQ
+zy
+zy
+zy
+zy
+zy
+zy
+zy
+zy
+WV
+zy
+zy
+zy
+Lh
+ao
+ao
+ao
+"}
+(9,1,1) = {"
+ao
+ao
+Rx
+Rx
+Rx
+Rx
+Rx
+zz
+Ev
+to
+Ev
+Ev
+vj
+Tp
+Ev
+Rp
+Rp
+Rx
+Rx
+Rx
+Rx
+Rx
+ao
+ao
+ao
+"}
+(10,1,1) = {"
+ao
+ao
+CB
+CB
+AX
+sg
+uN
+VC
+Ev
+Ev
+vj
+OJ
+vj
+Ev
+XT
+Ev
+vj
+Rx
+ht
+CB
+ht
+CB
+ao
+ao
+ao
+"}
+(11,1,1) = {"
+ao
+ao
+CB
+CB
+Zm
+NM
+Rx
+vp
+Rp
+Ev
+Ev
+vI
+Ev
+xm
+Ev
+Ev
+BV
+Rx
+CB
+CB
+CB
+CB
+ao
+ao
+ao
+"}
+(12,1,1) = {"
+ao
+ao
+ao
+CB
+AX
+zV
+Rx
+Rp
+Ev
+Ev
+Ev
+vj
+Ev
+xm
+Ev
+Qj
+RE
+Rx
+ht
+CB
+CB
+CB
+ao
+ao
+ao
+"}
+(13,1,1) = {"
+ao
+ao
+ao
+CB
+AX
+CB
+Rx
+ed
+Ev
+gf
+Ev
+Ev
+vj
+Ev
+wP
+Ev
+kT
+Rx
+CB
+CB
+CB
+ao
+ao
+ao
+ao
+"}
+(14,1,1) = {"
+ao
+ao
+ao
+CB
+ZK
+LI
+Rx
+mJ
+ra
+Ev
+Ev
+Ev
+DU
+Hr
+Ev
+ra
+Rp
+Rx
+ht
+CB
+CB
+ao
+ao
+ao
+ao
+"}
+(15,1,1) = {"
+ao
+ao
+ao
+ao
+CB
+CB
+Rx
+Qd
+Ev
+Rp
+Do
+Ev
+vj
+dd
+Ev
+Rp
+hR
+Rx
+CB
+CB
+CB
+ao
+ao
+ao
+ao
+"}
+(16,1,1) = {"
+ao
+ao
+ao
+ao
+CB
+CB
+Rx
+Rx
+JM
+Rx
+Rx
+Rx
+Rx
+Rx
+Er
+Rx
+Rx
+Rx
+CB
+CB
+ao
+ao
+ao
+ao
+ao
+"}
+(17,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+CB
+Rx
+AV
+AV
+AV
+Yh
+Rx
+Hj
+iL
+Hj
+iL
+Hj
+Rx
+CB
+CB
+ao
+ao
+ao
+ao
+ao
+"}
+(18,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+CB
+Rx
+rx
+zN
+AV
+AV
+Rx
+AG
+Vf
+Hj
+Hj
+Hj
+Rx
+CB
+CB
+ao
+ao
+ao
+ao
+ao
+"}
+(19,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+CB
+Rx
+YT
+FJ
+AV
+AV
+JM
+Hj
+Hj
+Hj
+Hj
+Hj
+Rx
+CB
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(20,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+CB
+Rx
+rx
+Pz
+AV
+AV
+Rx
+AG
+we
+Hj
+Hj
+Hj
+Er
+CB
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(21,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+CB
+Rx
+oS
+AV
+AV
+Yh
+Rx
+Hj
+Hj
+Hj
+Hj
+Hj
+Rx
+CB
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(22,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+CB
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+Rx
+CB
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(23,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+et
+ao
+ao
+et
+ao
+ao
+et
+ao
+ao
+et
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(24,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+"}
+(25,1,1) = {"
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+ao
+"}

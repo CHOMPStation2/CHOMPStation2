@@ -1,0 +1,1036 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/elite,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"aj" = (
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/space)
+"ax" = (
+/obj/structure/table/glass,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"ay" = (
+/mob/living/simple_mob/mechanical/combat_drone{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/space)
+"bl" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"bA" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"cw" = (
+/obj/machinery/porta_turret/poi{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"cS" = (
+/obj/machinery/body_scanconsole,
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"dq" = (
+/obj/structure/table/standard,
+/turf/simulated/shuttle/floor/purple,
+/area/space)
+"dw" = (
+/obj/item/weapon/gun/projectile/automatic/as24,
+/obj/item/weapon/tank/jetpack/oxygen,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"ec" = (
+/obj/structure/closet/toolcloset,
+/obj/random/tool/power,
+/obj/random/tool/power,
+/obj/random/tool/power,
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"eD" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"eL" = (
+/obj/machinery/portable_atmospherics/canister/empty/oxygen,
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"fU" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"gQ" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"jy" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/clotting,
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"ko" = (
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/space)
+"kD" = (
+/mob/living/simple_mob/mechanical/combat_drone{
+	faction = "syndicate"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"lO" = (
+/mob/living/simple_mob/mechanical/combat_drone{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"mG" = (
+/obj/machinery/porta_turret/poi{
+	faction = "syndicate"
+	},
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/darkred,
+/area/space)
+"mO" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"od" = (
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"sV" = (
+/obj/structure/table/standard,
+/obj/item/weapon/telecube/randomized,
+/turf/simulated/shuttle/floor/purple,
+/area/space)
+"tK" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"wZ" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_r"
+	},
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/space)
+"xz" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/adv,
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"yh" = (
+/turf/simulated/wall/durasteel,
+/area/space)
+"yD" = (
+/mob/living/simple_mob/mechanical/mining_drone{
+	faction = "syndicate"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"zi" = (
+/obj/machinery/porta_turret/poi{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/plating,
+/area/space)
+"BM" = (
+/obj/machinery/porta_turret/poi{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/space)
+"En" = (
+/obj/structure/closet/secure_closet/guncabinet/excursion,
+/obj/item/weapon/gun/projectile/giskard/olivaw,
+/obj/item/weapon/gun/energy/lasershotgun,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"Fc" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"FQ" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"Gi" = (
+/obj/machinery/porta_turret/poi{
+	faction = "syndicate"
+	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/space)
+"GM" = (
+/mob/living/simple_mob/mechanical/combat_drone{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"Ic" = (
+/obj/machinery/computer/ship{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"Ix" = (
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/space)
+"IU" = (
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"Ja" = (
+/obj/machinery/power/port_gen/pacman/super,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"JY" = (
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"Kp" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/space)
+"Kv" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/space)
+"KU" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"Lv" = (
+/obj/machinery/autolathe,
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"Ov" = (
+/turf/simulated/shuttle/floor/purple,
+/area/space)
+"OA" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/space)
+"RI" = (
+/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/weapon/gun/energy/vepr/plasma{
+	accept_cell_type = /obj/item/weapon/cell;
+	cell_type = /obj/item/weapon/cell/device/weapon
+	},
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"RV" = (
+/turf/template_noop,
+/area/space)
+"Sw" = (
+/obj/machinery/bodyscanner,
+/turf/simulated/shuttle/floor/white,
+/area/space)
+"TX" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/space)
+"Ul" = (
+/obj/structure/closet/secure_closet/guncabinet/excursion,
+/obj/item/weapon/gun/projectile/multi_cannon,
+/obj/item/weapon/gun/energy/particle/cannon,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"Uz" = (
+/obj/structure/table/standard,
+/obj/item/weapon/card/emag/used,
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/purple,
+/area/space)
+"VO" = (
+/turf/simulated/shuttle/floor/black,
+/area/space)
+"WO" = (
+/obj/structure/closet/secure_closet/guncabinet/excursion,
+/obj/item/weapon/gun/magnetic/matfed,
+/obj/item/weapon/gun/energy/ionrifle,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"YR" = (
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/space)
+
+(1,1,1) = {"
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+"}
+(2,1,1) = {"
+RV
+RV
+RV
+RV
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+RV
+RV
+RV
+RV
+"}
+(3,1,1) = {"
+RV
+RV
+RV
+RV
+tK
+tK
+yD
+tK
+tK
+tK
+tK
+tK
+yD
+tK
+tK
+RV
+RV
+RV
+RV
+"}
+(4,1,1) = {"
+RV
+RV
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+RV
+RV
+"}
+(5,1,1) = {"
+RV
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+RV
+"}
+(6,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+tK
+aj
+aj
+fU
+mO
+Fc
+aj
+aj
+tK
+tK
+tK
+tK
+tK
+RV
+"}
+(7,1,1) = {"
+RV
+tK
+yD
+tK
+tK
+aj
+aj
+Ic
+Ic
+Ic
+Ic
+Ic
+aj
+aj
+tK
+tK
+yD
+tK
+RV
+"}
+(8,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+bl
+VO
+aa
+VO
+aa
+VO
+KU
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(9,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+eD
+VO
+VO
+VO
+VO
+VO
+Lv
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(10,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+aj
+aj
+VO
+VO
+VO
+aj
+aj
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(11,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+zi
+aj
+aj
+aj
+VO
+aj
+aj
+aj
+zi
+tK
+tK
+tK
+tK
+RV
+"}
+(12,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+aj
+cw
+aj
+Kp
+aj
+BM
+aj
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(13,1,1) = {"
+RV
+tK
+yD
+tK
+tK
+aj
+En
+IU
+aj
+Kv
+aj
+Ov
+dq
+aj
+tK
+tK
+yD
+tK
+RV
+"}
+(14,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+Ul
+lO
+Kp
+Kv
+Kp
+ay
+Uz
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(15,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+WO
+IU
+aj
+YR
+aj
+Ov
+sV
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(16,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+aj
+cw
+aj
+Kp
+aj
+BM
+aj
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(17,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+zi
+aj
+aj
+aj
+Kv
+aj
+aj
+aj
+zi
+tK
+tK
+tK
+tK
+RV
+"}
+(18,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+dw
+yh
+Gi
+Kv
+mG
+yh
+RI
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(19,1,1) = {"
+RV
+tK
+yD
+tK
+tK
+aj
+aj
+aj
+aj
+Kv
+aj
+aj
+aj
+aj
+tK
+tK
+yD
+tK
+RV
+"}
+(20,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+ec
+JY
+aj
+Kp
+aj
+od
+Sw
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(21,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+Ja
+OA
+aj
+Ix
+aj
+od
+cS
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(22,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+bA
+kD
+Kp
+Kv
+Kp
+GM
+ax
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(23,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+FQ
+gQ
+aj
+Kv
+ko
+od
+xz
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(24,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+aj
+eL
+eL
+aj
+Kv
+ko
+od
+jy
+aj
+tK
+tK
+tK
+tK
+RV
+"}
+(25,1,1) = {"
+RV
+tK
+yD
+tK
+tK
+TX
+TX
+TX
+aj
+Kv
+aj
+TX
+TX
+TX
+tK
+tK
+yD
+tK
+RV
+"}
+(26,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+wZ
+wZ
+wZ
+aj
+Kp
+aj
+wZ
+wZ
+wZ
+tK
+tK
+tK
+tK
+RV
+"}
+(27,1,1) = {"
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+"}
+(28,1,1) = {"
+RV
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+RV
+"}
+(29,1,1) = {"
+RV
+RV
+RV
+tK
+tK
+tK
+yD
+tK
+tK
+tK
+tK
+tK
+yD
+tK
+tK
+tK
+RV
+RV
+RV
+"}
+(30,1,1) = {"
+RV
+RV
+RV
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+RV
+RV
+RV
+"}
+(31,1,1) = {"
+RV
+RV
+RV
+RV
+RV
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+tK
+RV
+RV
+RV
+RV
+RV
+"}
+(32,1,1) = {"
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+RV
+"}

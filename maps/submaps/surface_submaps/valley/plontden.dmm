@@ -1,0 +1,1022 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aG" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"bB" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/cosmos,
+/obj/item/toy/plushie/red_fox,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"cN" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/gun/energy/xray/xenoarch,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"dT" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 28
+	},
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"dZ" = (
+/obj/machinery/door/airlock/glass_research,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"eF" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"fg" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"gA" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gD" = (
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"gH" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"hS" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenoflora Port";
+	dir = 1
+	},
+/obj/machinery/seed_extractor,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"im" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"iU" = (
+/turf/simulated/wall/r_wall,
+/area/space)
+"jf" = (
+/obj/machinery/smartfridge/drying_rack,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jt" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"ln" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/water/indoors,
+/area/space)
+"lL" = (
+/obj/structure/closet/crate/hydroponics/exotic,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"mt" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/hatch,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"mw" = (
+/obj/machinery/chemical_dispenser/xenoflora,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"mH" = (
+/turf/simulated/floor/tiled/white,
+/area/space)
+"mO" = (
+/obj/machinery/botany/editor,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"od" = (
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"oI" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"oO" = (
+/turf/simulated/floor/plating,
+/area/space)
+"pA" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"rH" = (
+/turf/simulated/floor/water/indoors,
+/area/space)
+"ur" = (
+/turf/template_noop,
+/area/space)
+"vg" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"vj" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"vy" = (
+/obj/structure/closet/crate/hydroponics/prespawned,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"wG" = (
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"xh" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"Aj" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"BG" = (
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
+/obj/machinery/chem_master,
+/obj/structure/cable,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Cc" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/plating,
+/area/space)
+"Cd" = (
+/obj/machinery/seed_storage/xenobotany{
+	dir = 1
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenoflora Starboard";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Cp" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"CQ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Dp" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"Er" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"HB" = (
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"JI" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/medical,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Ke" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"KI" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass_research,
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"Li" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"LV" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Mo" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"On" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"OR" = (
+/obj/structure/table/glass,
+/obj/item/weapon/material/minihoe,
+/obj/item/weapon/material/minihoe,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/device/analyzer/plant_analyzer,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Pd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass_research,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"Ps" = (
+/obj/structure/grille,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"Qm" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"Ra" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass_research,
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"Rs" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"Rw" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"RD" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"RJ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Sq" = (
+/obj/machinery/vending/hydronutrients{
+	categories = 3;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"SH" = (
+/obj/machinery/botany/extractor,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Te" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"UL" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"VY" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/industrial/hatch,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Wb" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"WF" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/space)
+"Xb" = (
+/obj/machinery/light,
+/obj/machinery/biogenerator,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Zb" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+
+(1,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(2,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+iU
+iU
+iU
+iU
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(3,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+cN
+gD
+gD
+HB
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(4,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+JI
+gD
+gD
+vg
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(5,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+On
+gD
+gD
+bB
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(6,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+iU
+iU
+im
+dZ
+im
+iU
+iU
+iU
+ur
+ur
+ur
+ur
+ur
+"}
+(7,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+iU
+lL
+Cp
+WF
+od
+Li
+mO
+iU
+ur
+ur
+ur
+ur
+ur
+"}
+(8,1,1) = {"
+ur
+ur
+ur
+ur
+gH
+jf
+mH
+Cp
+od
+od
+Li
+mH
+SH
+gH
+ur
+ur
+ur
+ur
+"}
+(9,1,1) = {"
+ur
+ur
+ur
+ur
+UL
+mt
+mH
+Cp
+od
+od
+Li
+mH
+Xb
+UL
+ur
+ur
+ur
+ur
+"}
+(10,1,1) = {"
+ur
+ur
+ur
+ur
+eF
+VY
+mH
+Cp
+od
+od
+Li
+mH
+hS
+eF
+ur
+ur
+ur
+ur
+"}
+(11,1,1) = {"
+ur
+ur
+ur
+ur
+iU
+VY
+mH
+Cp
+od
+od
+Li
+mH
+mw
+iU
+ur
+ur
+ur
+ur
+"}
+(12,1,1) = {"
+ur
+ur
+ur
+iU
+iU
+VY
+mH
+Cp
+Rs
+Dp
+Wb
+RJ
+BG
+iU
+iU
+ur
+ur
+ur
+"}
+(13,1,1) = {"
+ur
+ur
+ur
+gH
+VY
+mH
+mH
+LV
+ln
+rH
+xh
+RD
+od
+od
+KI
+ur
+ur
+ur
+"}
+(14,1,1) = {"
+ur
+ur
+ur
+UL
+CQ
+mH
+gA
+iU
+ln
+rH
+iU
+Te
+od
+jt
+fg
+ur
+ur
+ur
+"}
+(15,1,1) = {"
+ur
+ur
+ur
+eF
+VY
+mH
+mH
+Ke
+ln
+rH
+Er
+RD
+od
+od
+Ra
+ur
+ur
+ur
+"}
+(16,1,1) = {"
+ur
+ur
+ur
+iU
+iU
+VY
+mH
+Cp
+Mo
+od
+Zb
+pA
+vy
+iU
+iU
+ur
+ur
+ur
+"}
+(17,1,1) = {"
+ur
+ur
+ur
+ur
+iU
+VY
+mH
+Cp
+Mo
+od
+Li
+mH
+Sq
+iU
+ur
+ur
+ur
+ur
+"}
+(18,1,1) = {"
+ur
+ur
+ur
+ur
+gH
+VY
+mH
+Cp
+Mo
+od
+Li
+mH
+Cd
+Ps
+ur
+ur
+ur
+ur
+"}
+(19,1,1) = {"
+ur
+ur
+ur
+ur
+UL
+mt
+mH
+Cp
+Mo
+od
+Li
+mH
+Rw
+UL
+ur
+ur
+ur
+ur
+"}
+(20,1,1) = {"
+ur
+ur
+ur
+ur
+eF
+OR
+mH
+Cp
+Mo
+od
+Li
+mH
+wG
+eF
+ur
+ur
+ur
+ur
+"}
+(21,1,1) = {"
+ur
+ur
+ur
+ur
+iU
+iU
+dT
+Cp
+oI
+od
+Li
+wG
+iU
+ur
+ur
+ur
+ur
+ur
+"}
+(22,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+iU
+iU
+iU
+Pd
+im
+iU
+iU
+iU
+ur
+ur
+ur
+ur
+ur
+"}
+(23,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+aG
+vj
+oO
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(24,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+Aj
+Qm
+Cc
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(25,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+iU
+iU
+iU
+iU
+iU
+ur
+ur
+ur
+ur
+ur
+ur
+"}
+(26,1,1) = {"
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+ur
+"}

@@ -1,0 +1,2792 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aE" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"bt" = (
+/obj/structure/cable,
+/obj/machinery/power/port_gen/pacman/super,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"bG" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"bK" = (
+/obj/structure/table/marble,
+/obj/random/tool/power,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"bT" = (
+/mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"cg" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"ck" = (
+/obj/structure/closet/crate/secure/loot,
+/obj/item/stolenpackage,
+/obj/item/weapon/card/emag,
+/obj/item/rig_module/mounted/energy_blade,
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/space)
+"cK" = (
+/obj/random/tool,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"df" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"dB" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"dK" = (
+/obj/random/material,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"dZ" = (
+/obj/structure/table/marble,
+/obj/random/material/refined,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"es" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"eF" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/suit/pirate,
+/obj/item/clothing/head/collectable/pirate,
+/obj/item/clothing/under/pirate,
+/obj/item/weapon/melee/energy/sword/pirate,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"fq" = (
+/mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"ft" = (
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"fU" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/energy/highend,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"gN" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"gQ" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/armored,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"gU" = (
+/obj/structure/closet/grave/dirthole,
+/obj/random/projectile,
+/turf/template_noop,
+/area/space)
+"hd" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"hx" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/armored,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"hS" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"iK" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "PAPC";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"jg" = (
+/mob/living/simple_mob/humanoid/pirate/machete/armored,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"jO" = (
+/obj/structure/table/marble,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"jZ" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"kq" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"ky" = (
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"kC" = (
+/obj/machinery/porta_turret/industrial{
+	faction = "pirate"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"lc" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"le" = (
+/obj/structure/table/marble,
+/obj/random/material/precious,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"lh" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"lj" = (
+/obj/structure/table/marble,
+/obj/item/stack/material/tritium{
+	amount = 20
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"lw" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/pirate,
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"ms" = (
+/turf/simulated/floor/water,
+/area/space)
+"mx" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"mU" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/pirate,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"mY" = (
+/obj/structure/closet/grave/dirthole,
+/obj/random/maintenance,
+/turf/template_noop,
+/area/space)
+"nj" = (
+/obj/item/weapon/dnainjector/telemut,
+/obj/structure/closet/grave/dirthole,
+/turf/template_noop,
+/area/space)
+"nl" = (
+/obj/structure/table/marble,
+/obj/random/toolbox,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"or" = (
+/mob/living/simple_mob/vore/aggressive/frog{
+	faction = "pirate"
+	},
+/turf/simulated/floor/water,
+/area/space)
+"ov" = (
+/obj/structure/table/marble,
+/obj/random/material,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"oX" = (
+/turf/simulated/wall/skipjack,
+/area/space)
+"pA" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"sr" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"tr" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"uu" = (
+/turf/simulated/floor/water/pool,
+/area/space)
+"uB" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/weapon/implantcase/surge,
+/obj/item/weapon/gun/projectile/lamia,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"uU" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"vk" = (
+/obj/machinery/porta_turret/industrial{
+	faction = "pirate"
+	},
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/space)
+"vr" = (
+/obj/structure/table/reinforced,
+/obj/random/explorer_shield,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"vB" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/gun/projectile/revolver/lombardi/gold,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/weapon/material/minihoe,
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"vR" = (
+/turf/simulated/wall/skipjack{
+	can_open = 1
+	},
+/area/space)
+"vT" = (
+/turf/simulated/floor/outdoors/grass/sif/forest,
+/area/space)
+"wq" = (
+/obj/structure/table/marble,
+/obj/random/toolbox,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"wv" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"wN" = (
+/obj/item/clothing/glasses/graviton/medgravpatch,
+/obj/structure/closet/crate/secure{
+	req_access = list(150)
+	},
+/obj/item/stolenpackage,
+/obj/random/energy/highend,
+/obj/item/stolenpackage,
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/space)
+"xf" = (
+/obj/structure/table/marble,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/random/tool/power,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"xi" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"xj" = (
+/turf/simulated/wall/golddiamond,
+/area/space)
+"xk" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/suit/pirate,
+/obj/item/clothing/head/collectable/pirate,
+/obj/item/clothing/under/pirate,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"xM" = (
+/obj/machinery/door/airlock/gold,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"xN" = (
+/mob/living/simple_mob/humanoid/pirate/las/armored,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"xX" = (
+/obj/structure/table/gold,
+/obj/item/weapon/aliencoin/gold,
+/obj/random/energy/highend,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"yg" = (
+/turf/simulated/wall/durasteel,
+/area/space)
+"yi" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"zu" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"zR" = (
+/mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Au" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Av" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/bottle/robustharvest,
+/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"AJ" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"BP" = (
+/obj/structure/closet/crate/secure/loot,
+/obj/item/stolenpackage,
+/obj/random/energy/highend,
+/obj/item/rig_module/vision/multi,
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/space)
+"BT" = (
+/obj/structure/table/reinforced,
+/obj/random/projectile,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Di" = (
+/obj/item/clothing/glasses/thermal/plain/eyepatch,
+/obj/structure/closet/crate/secure{
+	req_access = list(150)
+	},
+/obj/item/stolenpackage,
+/obj/item/stolenpackage,
+/obj/random/energy/highend,
+/obj/item/stolenpackage,
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/space)
+"DD" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"DL" = (
+/mob/living/simple_mob/humanoid/pirate/captain,
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"DN" = (
+/obj/structure/closet/grave/dirthole,
+/obj/random/maintenance/morestuff,
+/turf/simulated/floor/outdoors/grass/sif/forest,
+/area/space)
+"En" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/goldappleseed,
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"EB" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance/morestuff,
+/obj/item/clothing/under/pirate,
+/obj/item/clothing/suit/pirate,
+/obj/item/clothing/head/collectable/pirate,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Fo" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"FC" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
+/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Gl" = (
+/obj/structure/closet/grave/dirthole,
+/obj/random/contraband,
+/turf/template_noop,
+/area/space)
+"Gv" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"GI" = (
+/mob/living/simple_mob/humanoid/pirate/mate/ranged,
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Hd" = (
+/obj/machinery/door/airlock/diamond,
+/turf/simulated/floor/tiled/red,
+/area/space)
+"HA" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"JV" = (
+/mob/living/simple_mob/vore/aggressive/panther{
+	faction = "pirate"
+	},
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"KS" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"La" = (
+/turf/simulated/floor/outdoors/rocks,
+/area/space)
+"Lr" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/pirate,
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Mo" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"MC" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"NA" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"NG" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"OB" = (
+/obj/structure/table/gold,
+/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/capture_crystal,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"ON" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"Pl" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/mob/living/simple_mob/mechanical/mecha/ripley/pirate,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Pr" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"PF" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"PJ" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"PP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"Qw" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/space)
+"QI" = (
+/obj/structure/table/reinforced,
+/obj/random/energy/highend,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"QM" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"St" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Su" = (
+/obj/structure/closet/secure_closet/engineering_electrical,
+/obj/item/stolenpackage,
+/obj/item/stolenpackage,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"Td" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/gun/projectile/deagle/gold,
+/obj/item/clothing/suit/pirate,
+/obj/item/clothing/head/collectable/pirate,
+/obj/item/clothing/under/pirate,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"TJ" = (
+/obj/structure/table/reinforced,
+/obj/random/projectile/shotgun,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"TL" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"Up" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Uu" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/goldappleseed,
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Uz" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/mob/living/simple_mob/mechanical/mecha/ripley/pirate,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"VJ" = (
+/obj/machinery/door/airlock/hatch,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"WW" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/goldappleseed,
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Xv" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/suit/pirate,
+/obj/item/clothing/head/collectable/pirate,
+/obj/item/clothing/under/pirate,
+/obj/item/weapon/melee/energy/sword/pirate,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"XD" = (
+/turf/template_noop,
+/area/space)
+"XJ" = (
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"XL" = (
+/obj/structure/table/marble,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/rigged,
+/obj/random/tool/power,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Zb" = (
+/obj/structure/table/marble,
+/obj/item/rig_module/atmos_shield,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"Zi" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"ZC" = (
+/mob/living/simple_mob/vore/lamia/random{
+	faction = "pirate"
+	},
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/yellow,
+/area/space)
+"ZQ" = (
+/obj/structure/railing,
+/turf/simulated/floor/wood,
+/area/space)
+
+(1,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(2,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(3,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+mY
+XD
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+mY
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(4,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(5,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(6,1,1) = {"
+XD
+mY
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+nj
+XD
+XD
+XD
+"}
+(7,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(8,1,1) = {"
+XD
+XD
+XD
+XD
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+or
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(9,1,1) = {"
+XD
+XD
+La
+La
+La
+ms
+ms
+ms
+ms
+or
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(10,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+vT
+vT
+La
+La
+La
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+XD
+XD
+XD
+XD
+XD
+"}
+(11,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+vT
+vT
+DN
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+XD
+XD
+XD
+XD
+XD
+"}
+(12,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+La
+vT
+kC
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+kC
+vT
+vT
+vT
+vT
+vT
+vT
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+XD
+XD
+XD
+XD
+"}
+(13,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+kC
+oX
+PP
+Qw
+oX
+oX
+oX
+PP
+Qw
+oX
+kC
+vT
+vT
+vT
+kC
+vT
+vT
+La
+La
+kC
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+XD
+XD
+XD
+XD
+"}
+(14,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+En
+Uu
+lw
+Lr
+lw
+Uu
+WW
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+kC
+La
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+XD
+XD
+XD
+"}
+(15,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+NA
+fq
+NA
+GI
+NA
+fq
+NA
+oX
+HA
+DL
+JV
+HA
+oX
+lh
+gN
+cK
+ov
+oX
+vT
+La
+La
+ms
+ms
+or
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(16,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+NA
+NA
+vB
+FC
+Av
+NA
+NA
+oX
+Up
+OB
+xX
+Up
+oX
+dK
+QM
+QM
+xf
+oX
+vT
+vT
+La
+La
+ms
+ms
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(17,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+kC
+oX
+oX
+St
+oX
+oX
+oX
+St
+oX
+oX
+Up
+Up
+Up
+Up
+xM
+QM
+QM
+QM
+jO
+oX
+vT
+vT
+kC
+La
+La
+ms
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(18,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+XJ
+XJ
+XJ
+kq
+XJ
+XJ
+XJ
+xM
+es
+Up
+Up
+es
+oX
+yi
+cK
+QM
+dZ
+oX
+oX
+oX
+oX
+kC
+La
+ms
+ms
+ms
+ms
+La
+XD
+mY
+XD
+"}
+(19,1,1) = {"
+XD
+XD
+La
+La
+ms
+ms
+ms
+ms
+La
+La
+vT
+oX
+XJ
+XJ
+XJ
+ky
+XJ
+XJ
+XJ
+oX
+xj
+Hd
+Hd
+xj
+oX
+cK
+QM
+QM
+bK
+le
+jO
+XL
+oX
+vT
+La
+ms
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(20,1,1) = {"
+XD
+gU
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+kC
+oX
+oX
+VJ
+oX
+oX
+oX
+Fo
+oX
+oX
+yg
+vk
+vk
+yg
+oX
+QM
+QM
+QM
+QM
+cK
+QM
+QM
+oX
+vT
+La
+La
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(21,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+oX
+TJ
+AJ
+lc
+oX
+Pr
+TL
+lj
+oX
+yg
+ck
+BP
+yg
+oX
+dB
+QM
+cK
+QM
+Uz
+QM
+Pl
+oX
+kC
+vT
+La
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(22,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+vT
+oX
+gQ
+XJ
+ZC
+oX
+iK
+jg
+bt
+oX
+yg
+wN
+Di
+yg
+oX
+cK
+QM
+QM
+dK
+QM
+cK
+QM
+oX
+vT
+vT
+La
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(23,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+or
+ms
+La
+La
+vT
+oX
+uu
+uu
+uu
+oX
+Pr
+ON
+Su
+oX
+oX
+yg
+yg
+oX
+oX
+QM
+dK
+sr
+Zb
+nl
+jO
+wq
+oX
+vT
+vT
+La
+ms
+ms
+ms
+La
+XD
+XD
+XD
+"}
+(24,1,1) = {"
+XD
+XD
+XD
+La
+La
+ms
+ms
+ms
+La
+DN
+vT
+oX
+uu
+uu
+uu
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+VJ
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+kC
+vT
+La
+ms
+or
+ms
+La
+XD
+XD
+XD
+"}
+(25,1,1) = {"
+XD
+XD
+XD
+XD
+La
+ms
+ms
+ms
+La
+vT
+vT
+oX
+uu
+uu
+uu
+oX
+DD
+cg
+DD
+oX
+df
+hd
+hd
+Zi
+hd
+XJ
+jZ
+oX
+Gv
+Up
+Xv
+mU
+oX
+vT
+vT
+La
+ms
+ms
+ms
+La
+La
+XD
+XD
+"}
+(26,1,1) = {"
+XD
+XD
+XD
+La
+La
+ms
+ms
+ms
+La
+vT
+vT
+oX
+xN
+XJ
+NG
+vR
+cg
+uB
+cg
+oX
+tr
+XJ
+mx
+XJ
+PF
+XJ
+XJ
+St
+zR
+Up
+Up
+zu
+oX
+vT
+vT
+La
+ms
+ms
+ms
+ms
+La
+XD
+XD
+"}
+(27,1,1) = {"
+XD
+mY
+XD
+La
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+Au
+hS
+fU
+oX
+DD
+cg
+DD
+oX
+PJ
+BT
+aE
+pA
+aE
+pA
+ft
+oX
+Td
+Up
+EB
+mU
+oX
+vT
+vT
+La
+La
+ms
+ms
+ms
+La
+XD
+XD
+"}
+(28,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+La
+vT
+kC
+oX
+oX
+VJ
+oX
+oX
+oX
+oX
+oX
+oX
+PJ
+pA
+aE
+vr
+aE
+QI
+ft
+oX
+xk
+Up
+EB
+mU
+oX
+vT
+DN
+vT
+La
+ms
+ms
+ms
+La
+La
+XD
+"}
+(29,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+df
+XJ
+hd
+hd
+bT
+Zi
+hd
+hd
+XJ
+XJ
+Mo
+XJ
+hx
+XJ
+XJ
+St
+zR
+Up
+Up
+uU
+oX
+vT
+vT
+vT
+La
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(30,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+La
+vT
+vT
+oX
+bG
+xi
+XJ
+xi
+wv
+xi
+xi
+xi
+xi
+xi
+xi
+wv
+xi
+xi
+MC
+oX
+Gv
+Up
+eF
+mU
+oX
+vT
+vT
+vT
+La
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(31,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+La
+La
+kC
+oX
+oX
+oX
+St
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+VJ
+oX
+oX
+oX
+kC
+vT
+vT
+La
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(32,1,1) = {"
+XD
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+La
+La
+kC
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+kC
+vT
+vT
+vT
+vT
+kC
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+kC
+vT
+vT
+La
+La
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(33,1,1) = {"
+XD
+XD
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+vT
+vT
+vT
+vT
+DN
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+La
+La
+La
+La
+vT
+vT
+vT
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(34,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+vT
+La
+La
+La
+La
+ms
+ms
+La
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(35,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+La
+La
+La
+La
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+or
+ms
+ms
+ms
+La
+XD
+"}
+(36,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+or
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+XD
+"}
+(37,1,1) = {"
+XD
+XD
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+or
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+XD
+"}
+(38,1,1) = {"
+XD
+XD
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+or
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+La
+La
+La
+La
+La
+La
+XD
+XD
+XD
+"}
+(39,1,1) = {"
+XD
+XD
+XD
+La
+La
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+La
+La
+La
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(40,1,1) = {"
+XD
+XD
+XD
+XD
+La
+La
+La
+La
+ms
+ms
+ms
+ms
+ms
+KS
+ZQ
+ms
+ms
+ms
+ms
+ms
+ms
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(41,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+La
+ms
+La
+La
+La
+La
+La
+ms
+ms
+La
+La
+La
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+mY
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+mY
+XD
+"}
+(42,1,1) = {"
+XD
+XD
+mY
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+La
+La
+La
+XD
+XD
+XD
+La
+La
+La
+La
+XD
+XD
+XD
+XD
+Gl
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}
+(43,1,1) = {"
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+XD
+"}

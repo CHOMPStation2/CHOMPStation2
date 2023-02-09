@@ -1,0 +1,952 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ak" = (
+/turf/simulated/wall/titanium,
+/area/space)
+"aH" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aQ" = (
+/obj/structure/blob/core/random_hard,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"bC" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"cq" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"dt" = (
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"dS" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"eL" = (
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"eY" = (
+/obj/structure/table/borosilicate,
+/obj/item/rig_module/rad_shield/advanced,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"fb" = (
+/obj/effect/floor_decal/corner/orange/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gk" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ig" = (
+/obj/structure/table/borosilicate,
+/obj/item/rig_module/mounted/egun,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iN" = (
+/obj/structure/table/borosilicate,
+/obj/item/weapon/storage/firstaid/bonemed,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"kY" = (
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ls" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"lt" = (
+/turf/simulated/mineral,
+/area/space)
+"lO" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"nB" = (
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"pr" = (
+/obj/effect/floor_decal/corner/green/bordercorner,
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"pU" = (
+/turf/simulated/floor/tiled/white,
+/area/space)
+"qc" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"qz" = (
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"qW" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ry" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"sJ" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"uj" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"uA" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"wD" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"wX" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"xW" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"yW" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"zE" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Ac" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"AJ" = (
+/obj/structure/table/borosilicate,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/empproof,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Bc" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Bw" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Db" = (
+/obj/structure/table/borosilicate,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"DR" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Fe" = (
+/obj/structure/table/borosilicate,
+/obj/item/rig_module/chem_dispenser/combat,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"FA" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"FC" = (
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"FL" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Gy" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Ha" = (
+/obj/structure/table/borosilicate,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Hs" = (
+/obj/structure/table/borosilicate,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"HQ" = (
+/obj/structure/table/borosilicate,
+/obj/random/energy/sec,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Iv" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"IC" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Kc" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"La" = (
+/obj/effect/floor_decal/corner/yellow/border,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"NS" = (
+/obj/structure/table/borosilicate,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"OA" = (
+/obj/structure/table/borosilicate,
+/obj/random/energy/highend,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"PM" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Qg" = (
+/obj/structure/table/borosilicate,
+/obj/item/rig_module/grenade_launcher/metalfoam,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Qp" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"RM" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"SR" = (
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Tq" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"TK" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Uv" = (
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Vm" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"WE" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"WG" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Yd" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+
+(1,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(2,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(3,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(4,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(5,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+lt
+lt
+lt
+lt
+"}
+(6,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+FA
+Ac
+Ac
+Gy
+ak
+PM
+dS
+sJ
+ak
+SR
+qW
+qW
+Bc
+ak
+lt
+lt
+lt
+lt
+"}
+(7,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+IC
+iN
+NS
+dt
+ak
+zE
+pU
+qz
+ak
+yW
+Ha
+OA
+kY
+ak
+lt
+lt
+lt
+lt
+"}
+(8,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+IC
+NS
+Fe
+dt
+ak
+zE
+pU
+qz
+ak
+yW
+Qg
+Ha
+kY
+ak
+lt
+lt
+lt
+lt
+"}
+(9,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+Tq
+ls
+ls
+aH
+qc
+zE
+pU
+qz
+qc
+uA
+uj
+uj
+wX
+ak
+lt
+lt
+lt
+lt
+"}
+(10,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+ak
+ak
+ak
+qc
+ak
+zE
+pU
+qz
+ak
+qc
+ak
+ak
+ak
+ak
+lt
+lt
+lt
+lt
+"}
+(11,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+PM
+dS
+dS
+dS
+dS
+nB
+RM
+Uv
+dS
+dS
+dS
+dS
+sJ
+ak
+lt
+lt
+lt
+lt
+"}
+(12,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+zE
+pU
+pU
+pU
+pU
+fb
+aQ
+xW
+pU
+pU
+pU
+pU
+qz
+ak
+lt
+lt
+lt
+lt
+"}
+(13,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+Iv
+gk
+gk
+gk
+gk
+FC
+cq
+pr
+gk
+gk
+gk
+gk
+DR
+ak
+lt
+lt
+lt
+lt
+"}
+(14,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+ak
+ak
+ak
+qc
+ak
+zE
+pU
+qz
+ak
+qc
+ak
+ak
+ak
+ak
+lt
+lt
+lt
+lt
+"}
+(15,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+aa
+WE
+WE
+Yd
+qc
+zE
+pU
+qz
+qc
+bC
+TK
+TK
+WG
+ak
+lt
+lt
+lt
+lt
+"}
+(16,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+Bw
+Hs
+eY
+La
+ak
+zE
+pU
+qz
+ak
+ry
+ig
+Db
+eL
+ak
+lt
+lt
+lt
+lt
+"}
+(17,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+Bw
+AJ
+Hs
+La
+ak
+zE
+pU
+qz
+ak
+ry
+Db
+HQ
+eL
+ak
+lt
+lt
+lt
+lt
+"}
+(18,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+FL
+lO
+lO
+Vm
+ak
+Iv
+gk
+DR
+ak
+wD
+Qp
+Qp
+Kc
+ak
+lt
+lt
+lt
+lt
+"}
+(19,1,1) = {"
+lt
+lt
+lt
+lt
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+lt
+lt
+lt
+lt
+"}
+(20,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(21,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(22,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}
+(23,1,1) = {"
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+lt
+"}

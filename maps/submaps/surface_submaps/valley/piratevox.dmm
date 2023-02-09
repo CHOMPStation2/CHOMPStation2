@@ -1,0 +1,1377 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"cH" = (
+/obj/structure/bed/chair/office{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"cK" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/plating,
+/area/space)
+"dy" = (
+/obj/machinery/computer/ship{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"dz" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"fA" = (
+/obj/random/mob/merc/all,
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/red,
+/area/space)
+"fD" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"fL" = (
+/obj/structure/table/standard,
+/obj/item/weapon/flame/lighter/zippo/rainbow,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"fV" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/gun/random,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gp" = (
+/obj/machinery/door/airlock/phoron,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"it" = (
+/obj/machinery/power/port_gen/pacman/mrs,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iJ" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iN" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/captain,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iU" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"mE" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/security,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"op" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/red,
+/area/space)
+"pD" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"pJ" = (
+/obj/structure/table/standard,
+/obj/random/toolbox,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"pK" = (
+/obj/structure/table/standard,
+/obj/random/gun/random,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"pV" = (
+/obj/structure/table/standard,
+/obj/item/weapon/card/emag/used,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"rp" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"rS" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"to" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/gun/random,
+/obj/random/rigsuit,
+/obj/random/gun/random,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"tX" = (
+/obj/structure/table/standard,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/rig_module/mounted/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"uQ" = (
+/obj/machinery/porta_turret/industrial/military{
+	faction = "voxpirate"
+	},
+/turf/simulated/shuttle/plating,
+/area/space)
+"vn" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"xe" = (
+/obj/random/mob/merc/all,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"xr" = (
+/turf/simulated/wall/rplastitanium,
+/area/space)
+"ye" = (
+/obj/structure/bed/chair/office,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"zq" = (
+/turf/simulated/wall/thull,
+/area/space)
+"An" = (
+/obj/structure/table/standard,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Ap" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"AS" = (
+/obj/machinery/door/airlock/phoron,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"AV" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/technician,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Bl" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/turf/simulated/wall/thull,
+/area/space)
+"Cm" = (
+/turf/template_noop,
+/area/space)
+"Dg" = (
+/obj/structure/table/standard,
+/obj/random/firstaid,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Dt" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"DI" = (
+/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/obj/structure/bed/chair/office{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"FN" = (
+/obj/random/mob/merc/all,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"LG" = (
+/obj/random/mob/merc/all,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"LP" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"NE" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"NI" = (
+/obj/structure/closet/crate/secure/loot,
+/obj/random/rigsuit,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Os" = (
+/turf/simulated/floor/tiled/white,
+/area/space)
+"OH" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Rr" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/simulated/wall/thull,
+/area/space)
+"Tk" = (
+/mob/living/simple_mob/vox/armalis{
+	faction = "voxpirate"
+	},
+/obj/structure/bed/chair/office,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Tl" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"Un" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"UL" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/plating,
+/area/space)
+"Vh" = (
+/turf/simulated/floor/tiled/red,
+/area/space)
+"VO" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"VU" = (
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/red,
+/area/space)
+"Wj" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"WN" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/rig_module/cleaner_launcher,
+/obj/item/weapon/mop/advanced,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ZP" = (
+/mob/living/simple_mob/vox/armalis{
+	faction = "voxpirate"
+	},
+/obj/structure/bed/chair/office{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ZU" = (
+/obj/machinery/computer/ship,
+/turf/simulated/floor/tiled/white,
+/area/space)
+
+(1,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(2,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Rr
+Rr
+Rr
+Rr
+Rr
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Rr
+Rr
+Rr
+Rr
+Rr
+Cm
+Cm
+Cm
+Cm
+"}
+(3,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Bl
+Bl
+Bl
+Bl
+Bl
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Bl
+Bl
+Bl
+Bl
+Bl
+Cm
+Cm
+Cm
+Cm
+"}
+(4,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+NI
+Os
+Os
+zq
+Cm
+Cm
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+Cm
+Cm
+zq
+Os
+Os
+NI
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(5,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+mE
+cH
+Tl
+zq
+zq
+zq
+zq
+LP
+Os
+DI
+Os
+Os
+zq
+zq
+zq
+zq
+rS
+ye
+mE
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(6,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+mE
+LP
+Os
+zq
+Os
+WN
+zq
+rp
+An
+fL
+pK
+rp
+zq
+Dt
+iJ
+zq
+Os
+Os
+mE
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(7,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+to
+xe
+Os
+AS
+Os
+tX
+zq
+Os
+Os
+iN
+Os
+LP
+zq
+it
+VO
+gp
+vn
+FN
+to
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(8,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+to
+AV
+Os
+zq
+zq
+zq
+zq
+zq
+zq
+AS
+zq
+zq
+zq
+zq
+zq
+zq
+pD
+AV
+to
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(9,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+Dg
+xe
+Os
+zq
+Os
+Os
+LP
+Os
+Os
+Os
+Os
+Un
+Os
+LP
+Os
+zq
+pD
+xe
+Dg
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(10,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+Dg
+ZP
+Os
+AS
+rp
+xe
+Os
+Os
+Os
+FN
+Os
+dz
+NE
+LG
+Ap
+gp
+iU
+Tk
+Dg
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(11,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+Dg
+Os
+LP
+zq
+Os
+Os
+Os
+Os
+AV
+Os
+AV
+Os
+Os
+Os
+Os
+zq
+Os
+LP
+Dg
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(12,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+Os
+Os
+Os
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+zq
+Cm
+Cm
+Cm
+Cm
+"}
+(13,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+xr
+xr
+xr
+Os
+LP
+Os
+zq
+xr
+xr
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(14,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+xr
+VU
+VU
+VU
+Tl
+VU
+VU
+VU
+xr
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(15,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+xr
+Vh
+op
+Vh
+Os
+Vh
+Vh
+Vh
+xr
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(16,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+xr
+VU
+VU
+fA
+Os
+fA
+VU
+VU
+xr
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(17,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+xr
+xr
+xr
+Os
+Os
+LP
+zq
+xr
+xr
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(18,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+UL
+zq
+zq
+AS
+zq
+zq
+UL
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(19,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+uQ
+UL
+UL
+Wj
+Os
+Os
+Os
+Wj
+UL
+UL
+uQ
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(20,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+UL
+UL
+Wj
+LP
+Os
+Tl
+Os
+Os
+Wj
+UL
+UL
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(21,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+UL
+UL
+Wj
+rp
+Os
+Os
+Os
+Os
+Os
+OH
+Wj
+cK
+UL
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(22,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+zq
+Wj
+Os
+Os
+xe
+Os
+xe
+Os
+xe
+Os
+LP
+Wj
+zq
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(23,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+zq
+zq
+Os
+Os
+Os
+Os
+dy
+zq
+ZU
+Os
+Os
+Os
+Os
+zq
+zq
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(24,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+fD
+Os
+Os
+rS
+xe
+dy
+zq
+zq
+zq
+ZU
+xe
+Tl
+Os
+Os
+fD
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(25,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+zq
+zq
+Os
+Os
+Os
+Os
+dy
+zq
+ZU
+Os
+Os
+LP
+Os
+zq
+zq
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(26,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+zq
+Wj
+Os
+Os
+xe
+Os
+xe
+LP
+xe
+Os
+Os
+Wj
+zq
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(27,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+UL
+UL
+Wj
+OH
+Os
+Os
+Os
+Os
+Os
+rp
+Wj
+UL
+UL
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(28,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+UL
+UL
+Wj
+LP
+Os
+AV
+LP
+Os
+Wj
+UL
+UL
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(29,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+uQ
+UL
+UL
+fV
+pJ
+pV
+pJ
+fV
+UL
+UL
+uQ
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(30,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+UL
+zq
+zq
+zq
+zq
+zq
+UL
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(31,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(32,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(33,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}

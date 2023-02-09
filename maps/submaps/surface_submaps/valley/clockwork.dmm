@@ -1,0 +1,691 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/lava,
+/area/space)
+"b" = (
+/obj/structure/cliff/automatic{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"h" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"k" = (
+/mob/living/simple_mob/clockwork/fluff/Ignis{
+	faction = "malf_drone"
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"p" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"q" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"u" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"v" = (
+/obj/structure/cliff/automatic{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"y" = (
+/obj/structure/catwalk,
+/mob/living/simple_mob/mechanical/wahlem{
+	faction = "malf_drone"
+	},
+/turf/simulated/floor/lava,
+/area/space)
+"z" = (
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"C" = (
+/obj/structure/cliff/automatic,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"F" = (
+/turf/template_noop,
+/area/space)
+"I" = (
+/obj/structure/cliff/automatic{
+	dir = 10;
+	icon_state = "cliffbuilder"
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"J" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"K" = (
+/obj/structure/cliff/automatic{
+	dir = 6;
+	icon_state = "cliffbuilder"
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"M" = (
+/turf/simulated/floor/lava,
+/area/space)
+"N" = (
+/obj/structure/cliff/automatic/corner,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"Q" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"R" = (
+/obj/structure/cliff/automatic{
+	dir = 5
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"U" = (
+/obj/structure/cliff/automatic{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"W" = (
+/mob/living/simple_mob/mechanical/mining_drone,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+"Z" = (
+/obj/structure/table/gold,
+/obj/item/weapon/rig/ch/clockwork,
+/obj/item/weapon/gun/energy/clockwork,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/space)
+
+(1,1,1) = {"
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+"}
+(2,1,1) = {"
+F
+F
+p
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+p
+F
+F
+"}
+(3,1,1) = {"
+F
+p
+z
+z
+b
+U
+U
+U
+Q
+U
+U
+U
+U
+U
+Q
+U
+U
+U
+I
+z
+z
+p
+F
+"}
+(4,1,1) = {"
+F
+z
+z
+b
+J
+M
+M
+M
+a
+M
+M
+M
+M
+M
+a
+M
+M
+M
+q
+I
+z
+z
+F
+"}
+(5,1,1) = {"
+F
+z
+b
+J
+M
+M
+M
+M
+a
+M
+M
+M
+M
+M
+a
+M
+M
+M
+M
+q
+I
+z
+F
+"}
+(6,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+M
+a
+M
+M
+M
+M
+M
+a
+M
+M
+M
+M
+M
+h
+z
+F
+"}
+(7,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+z
+z
+z
+M
+M
+M
+z
+z
+z
+M
+M
+M
+M
+h
+z
+F
+"}
+(8,1,1) = {"
+F
+z
+Q
+a
+a
+a
+a
+z
+z
+z
+M
+W
+M
+z
+z
+z
+a
+a
+a
+a
+Q
+z
+F
+"}
+(9,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+z
+z
+z
+M
+M
+M
+z
+z
+z
+M
+M
+M
+M
+h
+z
+F
+"}
+(10,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+M
+a
+M
+M
+M
+M
+M
+a
+M
+M
+M
+M
+M
+h
+z
+F
+"}
+(11,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+M
+a
+M
+Z
+z
+Z
+M
+a
+M
+M
+M
+M
+M
+h
+z
+F
+"}
+(12,1,1) = {"
+F
+z
+C
+M
+W
+M
+M
+M
+y
+M
+z
+k
+z
+M
+y
+M
+M
+M
+W
+M
+h
+z
+F
+"}
+(13,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+M
+a
+M
+z
+z
+z
+M
+a
+M
+M
+M
+M
+M
+h
+z
+F
+"}
+(14,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+M
+a
+M
+M
+a
+M
+M
+a
+M
+M
+M
+M
+M
+h
+z
+F
+"}
+(15,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+z
+z
+z
+M
+a
+M
+z
+z
+z
+M
+M
+M
+M
+h
+z
+F
+"}
+(16,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+z
+z
+z
+a
+a
+a
+z
+z
+z
+M
+M
+M
+M
+h
+z
+F
+"}
+(17,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+z
+z
+z
+M
+M
+M
+z
+z
+z
+M
+M
+M
+M
+h
+z
+F
+"}
+(18,1,1) = {"
+F
+z
+C
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+h
+z
+F
+"}
+(19,1,1) = {"
+F
+z
+R
+N
+M
+M
+M
+M
+M
+M
+M
+W
+M
+M
+M
+M
+M
+M
+M
+u
+K
+z
+F
+"}
+(20,1,1) = {"
+F
+z
+z
+R
+N
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+u
+K
+z
+z
+F
+"}
+(21,1,1) = {"
+F
+p
+z
+z
+R
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+K
+z
+z
+p
+F
+"}
+(22,1,1) = {"
+F
+F
+p
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+p
+F
+F
+"}
+(23,1,1) = {"
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+"}

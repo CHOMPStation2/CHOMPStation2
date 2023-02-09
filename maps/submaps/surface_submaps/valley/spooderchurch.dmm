@@ -1,0 +1,1446 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aZ" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"bM" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"cm" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 10;
+	icon_state = "cliffbuilder-corner"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"dT" = (
+/obj/structure/cliff/automatic,
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"fs" = (
+/mob/living/simple_mob/humanoid/cultist/noodle{
+	faction = "syndicate"
+	},
+/turf/simulated/floor/wood/sif,
+/area/space)
+"fJ" = (
+/obj/structure/cliff/automatic{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"hn" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/contraband/nofail,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"hp" = (
+/obj/structure/closet/crate/plastic,
+/obj/random/cash/huge,
+/obj/random/cash/huge,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"kl" = (
+/obj/effect/step_trigger/teleporter/offset/east,
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"lF" = (
+/obj/structure/table/rack/shelf,
+/obj/random/energy/highend,
+/obj/random/energy/highend,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"mY" = (
+/obj/effect/spider/eggcluster,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"ox" = (
+/obj/effect/step_trigger/teleporter/offset/west,
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"pK" = (
+/mob/living/simple_mob/humanoid/cultist/hunter/surt{
+	faction = "syndicate"
+	},
+/turf/simulated/floor/wood/sif,
+/area/space)
+"pV" = (
+/obj/effect/spider/stickyweb,
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"tn" = (
+/mob/living/simple_mob/humanoid/cultist/lizard{
+	faction = "syndicate"
+	},
+/turf/simulated/floor/wood/sif,
+/area/space)
+"tI" = (
+/obj/structure/cliff/automatic,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"uF" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/firstaid,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"vk" = (
+/obj/structure/table/rack/shelf,
+/obj/random/projectile,
+/obj/random/projectile,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"wl" = (
+/obj/structure/curtain,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"xw" = (
+/obj/structure/cliff/automatic{
+	dir = 10;
+	icon_state = "cliffbuilder"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"xx" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"xC" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/rigsuit,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"yq" = (
+/obj/structure/cliff/automatic{
+	dir = 9;
+	icon_state = "cliffbuilder"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"yG" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"yY" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"zv" = (
+/obj/structure/simple_door/sifwood,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"zY" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/card/emag,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Ah" = (
+/obj/structure/closet/crate/plastic,
+/obj/item/stolenpackage,
+/obj/random/cash/huge,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Bw" = (
+/turf/simulated/wall/log_sif,
+/area/space)
+"Cm" = (
+/turf/template_noop,
+/area/space)
+"Cq" = (
+/obj/structure/table/sifwoodentable,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Cv" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/toolbox,
+/obj/random/toolbox,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"EU" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"Fi" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"Fk" = (
+/obj/random/mob/merc/all,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"FR" = (
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"HI" = (
+/obj/structure/cliff/automatic,
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"HU" = (
+/obj/structure/cliff/automatic{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"IG" = (
+/mob/living/simple_mob/humanoid/cultist/tesh{
+	faction = "syndicate"
+	},
+/turf/simulated/floor/wood/sif,
+/area/space)
+"JI" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"KM" = (
+/obj/structure/cliff/automatic{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"Mj" = (
+/obj/effect/step_trigger/teleporter/offset/east,
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"Mn" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/eggcluster,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"MB" = (
+/obj/structure/cliff/automatic{
+	dir = 5;
+	icon_state = "cliffbuilder"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"NG" = (
+/obj/random/mob/merc/armored,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"NL" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"NM" = (
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"OH" = (
+/obj/structure/cliff/automatic/ramp{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"Pk" = (
+/obj/effect/step_trigger/teleporter/offset/west,
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"PR" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"Rv" = (
+/obj/structure/cliff/automatic/ramp,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"Tb" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"TM" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/eggcluster,
+/turf/simulated/floor/outdoors/dirt,
+/area/space)
+"UX" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"VU" = (
+/obj/structure/closet/crate/plastic,
+/obj/item/stolenpackage,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Wb" = (
+/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Wq" = (
+/obj/structure/curtain,
+/obj/structure/simple_door/sifwood,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Xe" = (
+/obj/structure/cliff/automatic/corner,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"XH" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/space)
+"YO" = (
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Zl" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"ZX" = (
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/spellbook/oneuse/smoke,
+/turf/simulated/floor/wood/sif,
+/area/space)
+
+(1,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(2,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(3,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(4,1,1) = {"
+Cm
+Cm
+NL
+KM
+KM
+KM
+KM
+KM
+KM
+KM
+KM
+KM
+Xe
+yY
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+NL
+KM
+KM
+KM
+KM
+KM
+KM
+KM
+KM
+KM
+Xe
+Cm
+Cm
+Cm
+"}
+(5,1,1) = {"
+Cm
+Cm
+JI
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+tI
+yY
+yY
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+yY
+JI
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(6,1,1) = {"
+Cm
+Cm
+JI
+Bw
+hn
+xx
+hn
+Ah
+hn
+FR
+hn
+Bw
+tI
+bM
+yY
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+bM
+JI
+Bw
+YO
+YO
+YO
+YO
+YO
+YO
+IG
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(7,1,1) = {"
+Cm
+Rv
+fJ
+Bw
+YO
+YO
+YO
+Fk
+YO
+YO
+YO
+Bw
+tI
+bM
+yY
+yY
+yY
+Cm
+Cm
+yY
+mY
+bM
+JI
+Bw
+YO
+YO
+Zl
+YO
+YO
+YO
+YO
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(8,1,1) = {"
+Cm
+NM
+NM
+Wq
+YO
+YO
+YO
+YO
+YO
+YO
+YO
+Bw
+tI
+pV
+bM
+yY
+yY
+yY
+yY
+yY
+yY
+bM
+JI
+Bw
+YO
+tn
+Cq
+YO
+YO
+YO
+YO
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(9,1,1) = {"
+Cm
+NM
+NM
+Wq
+YO
+YO
+YO
+YO
+YO
+YO
+YO
+Bw
+tI
+bM
+bM
+bM
+yY
+yY
+yY
+yY
+bM
+bM
+JI
+Bw
+YO
+YO
+Cq
+YO
+YO
+YO
+YO
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(10,1,1) = {"
+Cm
+OH
+xw
+Bw
+YO
+Fk
+Zl
+xx
+Zl
+Fk
+YO
+Bw
+tI
+bM
+Mn
+bM
+yY
+PR
+yY
+bM
+pV
+bM
+JI
+Bw
+YO
+YO
+YO
+YO
+YO
+YO
+IG
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(11,1,1) = {"
+Cm
+Cm
+JI
+Bw
+Bw
+zv
+Bw
+Bw
+Bw
+zv
+Bw
+Bw
+tI
+bM
+bM
+bM
+yY
+yY
+yY
+bM
+bM
+bM
+JI
+Bw
+wl
+wl
+Bw
+Bw
+Bw
+zv
+Bw
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(12,1,1) = {"
+JI
+Bw
+Bw
+Bw
+YO
+YO
+uF
+Bw
+xx
+YO
+YO
+Bw
+tI
+bM
+bM
+yY
+yY
+yY
+yY
+bM
+aZ
+bM
+JI
+Bw
+YO
+YO
+xx
+Bw
+NM
+NM
+NM
+NM
+tI
+Cm
+Cm
+Cm
+"}
+(13,1,1) = {"
+JI
+Bw
+YO
+YO
+YO
+YO
+Zl
+Bw
+xx
+YO
+YO
+Bw
+tI
+bM
+bM
+yY
+yY
+Tb
+yY
+mY
+bM
+aZ
+JI
+Bw
+YO
+YO
+hp
+Bw
+NM
+NM
+NM
+NM
+MB
+Rv
+Cm
+Cm
+"}
+(14,1,1) = {"
+JI
+Bw
+YO
+Zl
+YO
+YO
+lF
+Bw
+VU
+YO
+YO
+Bw
+HI
+kl
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+kl
+XH
+Bw
+YO
+YO
+hp
+Bw
+NM
+NM
+NM
+NM
+NM
+NM
+Cm
+Cm
+"}
+(15,1,1) = {"
+JI
+Bw
+Wb
+xC
+YO
+NG
+ZX
+Bw
+Cq
+YO
+YO
+YO
+Fi
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+Fi
+zv
+pK
+YO
+Cq
+Bw
+NM
+NM
+NM
+NM
+NM
+NM
+Cm
+Cm
+"}
+(16,1,1) = {"
+JI
+Bw
+YO
+zY
+YO
+YO
+vk
+Bw
+VU
+YO
+YO
+Bw
+dT
+Pk
+Pk
+Pk
+Pk
+Pk
+Pk
+Pk
+Pk
+ox
+yG
+Bw
+YO
+YO
+xx
+Bw
+NM
+NM
+NM
+NM
+NM
+NM
+Cm
+Cm
+"}
+(17,1,1) = {"
+JI
+Bw
+YO
+YO
+YO
+YO
+Zl
+Bw
+xx
+YO
+YO
+Bw
+tI
+bM
+yY
+yY
+mY
+yY
+yY
+yY
+yY
+pV
+JI
+Bw
+YO
+YO
+xx
+Bw
+NM
+NM
+NM
+NM
+yq
+OH
+Cm
+Cm
+"}
+(18,1,1) = {"
+JI
+Bw
+Bw
+Bw
+YO
+YO
+Cv
+Bw
+VU
+YO
+YO
+Bw
+tI
+pV
+bM
+yY
+yY
+yY
+yY
+yY
+Tb
+bM
+JI
+Bw
+YO
+YO
+hp
+Bw
+NM
+NM
+NM
+NM
+tI
+Cm
+Cm
+Cm
+"}
+(19,1,1) = {"
+Cm
+Cm
+JI
+Bw
+Bw
+zv
+Bw
+Bw
+Bw
+zv
+Bw
+Bw
+tI
+bM
+bM
+bM
+yY
+PR
+yY
+yY
+yY
+bM
+JI
+Bw
+wl
+wl
+Bw
+Bw
+Bw
+zv
+Bw
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(20,1,1) = {"
+Cm
+Rv
+fJ
+Bw
+YO
+Fk
+Zl
+Ah
+Zl
+Fk
+YO
+Bw
+tI
+bM
+bM
+bM
+yY
+yY
+yY
+yY
+bM
+bM
+JI
+Bw
+YO
+YO
+YO
+YO
+YO
+YO
+IG
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(21,1,1) = {"
+Cm
+NM
+NM
+Wq
+YO
+YO
+YO
+YO
+YO
+YO
+YO
+Bw
+tI
+aZ
+pV
+bM
+yY
+yY
+yY
+yY
+pV
+Mn
+JI
+Bw
+YO
+YO
+Cq
+YO
+YO
+YO
+YO
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(22,1,1) = {"
+Cm
+NM
+NM
+Wq
+YO
+YO
+YO
+YO
+YO
+YO
+YO
+Bw
+tI
+TM
+bM
+bM
+yY
+Cm
+Cm
+yY
+bM
+bM
+JI
+Bw
+YO
+fs
+Cq
+YO
+YO
+YO
+YO
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(23,1,1) = {"
+Cm
+OH
+xw
+Bw
+YO
+YO
+YO
+Fk
+YO
+YO
+YO
+Bw
+tI
+bM
+bM
+yY
+Cm
+Cm
+Cm
+Cm
+yY
+bM
+JI
+Bw
+YO
+YO
+Zl
+YO
+YO
+YO
+YO
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(24,1,1) = {"
+Cm
+Cm
+JI
+Bw
+hn
+xx
+hn
+FR
+hn
+xx
+hn
+Bw
+tI
+bM
+yY
+yY
+Cm
+Cm
+Cm
+Cm
+Cm
+bM
+JI
+Bw
+YO
+YO
+YO
+YO
+YO
+YO
+IG
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(25,1,1) = {"
+Cm
+Cm
+JI
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+tI
+bM
+yY
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+JI
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+tI
+Cm
+Cm
+Cm
+"}
+(26,1,1) = {"
+Cm
+Cm
+cm
+HU
+HU
+HU
+HU
+HU
+HU
+HU
+HU
+HU
+UX
+yY
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+cm
+HU
+HU
+HU
+HU
+HU
+HU
+HU
+HU
+HU
+UX
+Cm
+Cm
+Cm
+"}
+(27,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(28,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
+(29,1,1) = {"
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+Cm
+"}
