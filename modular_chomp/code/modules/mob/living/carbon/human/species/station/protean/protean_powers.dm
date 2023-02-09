@@ -130,11 +130,80 @@
 		to_chat(caller, "<span class='notify'>You begin to reassemble. You will need to remain still.</span>")
 		caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble.</span>")
 		if(do_after(caller, 40,exclusive = TASK_ALL_EXCLUSIVE))
-			if(client.prefs)	//Make sure we didn't d/c
+			if(caller.client.prefs)	//Make sure we didn't d/c
 				var/obj/item/weapon/rig/protean/Rig = species?:OurRig
-				caller.client.prefs.vanity_copy_to(caller, FALSE, flavour, oocnotes, TRUE)
+				caller.client.prefs.vanity_copy_to(src, FALSE, flavour, oocnotes, TRUE)
 				species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
 				caller.visible_message("<span class='notify'>[caller] adopts a new form!</span>", "<span class='danger'>You have reassembled.</span>")
+
+
+/mob/living/carbon/human/proc/nano_copy_body()
+	set name = "Copy Form"
+	set desc = "If you are aggressively grabbing someone, with their consent, you can turn into a copy of them. (Without their name)."
+	set category = "Abilities"
+	set hidden = 1
+	var/mob/living/caller = src
+	if(temporary_form)
+		caller = temporary_form
+
+	var/grabbing_but_not_enough
+	var/mob/living/carbon/human/victim = null
+	for(var/obj/item/weapon/grab/G in caller)
+		if(G.state < GRAB_AGGRESSIVE)
+			grabbing_but_not_enough = TRUE
+			return
+		else
+			victim = G.affecting
+	if (!victim)
+		if (grabbing_but_not_enough)
+			to_chat(caller, "<span class='warning'>You need a better grip to do that!</span>")
+		else
+			to_chat(caller, "<span class='notice'>You need to be aggressively grabbing someone before you can copy their form.</span>")
+		return
+	if (!istype(victim))
+		to_chat(caller, "<span class='warning'>You can only perform this on human mobs!</span>")
+		return
+	if (!victim.client)
+		to_chat(caller, "<span class='notice'>The person you try this on must have a client!</span>")
+		return
+
+
+	to_chat(caller, "<span class='notice'>Waiting for other person's consent.</span>")
+	var/consent = tgui_alert(victim, "Allow [src] to copy what you look like?", "Consent", list("Yes", "No"))
+	if (consent != "Yes")
+		to_chat(caller, "<span class='notice'>They declined your request.</span>")
+		return
+
+	var/input = tgui_alert(caller,{"Copy [victim]'s flavourtext?"},"Copy Form",list("Yes","No","Cancel"))
+	if(input == "Cancel" || !input)
+		return
+	var/flavour = 0
+	if(input == "Yes")
+		flavour = 1
+
+	var/checking = FALSE
+	for(var/obj/item/weapon/grab/G in caller)
+		if(G.affecting == victim && G.state >= GRAB_AGGRESSIVE)
+			checking = TRUE
+	if (!checking)
+		to_chat(caller, "<span class='warning'>You lost your grip on [victim]!</span>")
+		return
+
+	to_chat(caller, "<span class='notify'>You begin to reassemble into [victim]. You will need to remain still.</span>")
+	caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble into [victim].</span>")
+	if(do_after(caller, 40,exclusive = TASK_ALL_EXCLUSIVE))
+		checking = FALSE
+		for(var/obj/item/weapon/grab/G in caller)
+			if(G.affecting == victim && G.state >= GRAB_AGGRESSIVE)
+				checking = TRUE
+		if (!checking)
+			to_chat(caller, "<span class='warning'>You lost your grip on [victim]!</span>")
+			return
+		if(caller.client)	//Make sure we didn't d/c
+			var/obj/item/weapon/rig/protean/Rig = species?:OurRig
+			transform_into_other_human(victim, FALSE, flavour, TRUE)
+			species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
+			caller.visible_message("<span class='notify'>[caller] adopts the form of [victim]!</span>", "<span class='danger'>You have reassembled into [victim].</span>")
 
 ////
 //  Storing metal
@@ -490,5 +559,11 @@
 	desc = "Forcibly latch or unlatch your RIG from a host mob."
 	icon_state = "latch"
 	to_call = /mob/living/carbon/human/proc/nano_latch
+
+/obj/effect/protean_ability/copy_form
+	ability_name = "Copy Form"
+	desc = "If you are aggressively grabbing someone, with their consent, you can turn into a copy of them. (Without their name)."
+	icon_state = "copy_form"
+	to_call = /mob/living/carbon/human/proc/nano_copy_body
 
 #undef PER_LIMB_STEEL_COST

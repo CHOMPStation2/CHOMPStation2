@@ -186,6 +186,7 @@
 					body_descriptors[entry] = descriptor.default_value // Species datums have initial default value.
 				else
 					body_descriptors[entry] = CLAMP(last_descriptors[entry], 1, LAZYLEN(descriptor.standalone_value_descriptors))
+	character.descriptors = body_descriptors
 
 	if (copy_flavour)
 		character.flavor_texts["general"]	= flavor_texts["general"]
