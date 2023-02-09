@@ -29,7 +29,7 @@
 		to_chat(caller,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
 
-	var/choice = tgui_input_list(src,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
+	var/choice = tgui_input_list(caller,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
 	if(!choice)
 		return
 
@@ -326,7 +326,7 @@
 	if(nano_dead_check(src))
 		to_chat(caller, "<span class='warning'>You need to be repaired first before you can act!</span>")
 		return
-	to_chat(src, "<span class='notice'>You rapidly condense into your module.</span>")
+	to_chat(caller, "<span class='notice'>You rapidly condense into your module.</span>")
 	if(forced || do_after(caller,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(!temporary_form)	//If you're human, force you into blob form before rig'ing
 			nano_blobform(forced)
@@ -369,7 +369,7 @@
 				to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. This may have been caused by an admin heal. A new one has been created for you, contact a coder.</span>")
 				new /obj/item/weapon/rig/protean(src,src)
 	else
-		to_chat(src, "<span class='warning'>You must remain still to condense!</span>")
+		to_chat(caller, "<span class='warning'>You must remain still to condense!</span>")
 
 /mob/living/carbon/human/proc/appearance_switch()
 	set name = "Switch Blob Appearance"
