@@ -234,7 +234,7 @@
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec",
-					"Secborg model V-4" = "secraptor"//CHOMPEdit
+					"Raptor V-4" = "secraptor"
 					)
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
@@ -311,7 +311,7 @@
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed",
-					"Mediborg model V-4" = "medraptor" //CHOMPEdit
+					"Raptor V-4" = "medraptor"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
@@ -632,7 +632,7 @@
 					"SciHoundDark" = "scihounddark",
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
-					"Sciborg model V-4" = "sciraptor"//CHOMPEdit
+					"Raptor V-4" = "sciraptor"
 					)
 	can_be_pushed = 0
 

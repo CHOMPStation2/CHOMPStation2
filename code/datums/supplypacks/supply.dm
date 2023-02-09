@@ -178,7 +178,7 @@
 					)
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
-	containername = "Explore equipment" //CHOMP explo keep
+	containername = "Explorer equipment" //CHOMP explo keep
 	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/pilotgear

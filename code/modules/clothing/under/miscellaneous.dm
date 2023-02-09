@@ -360,6 +360,11 @@
 	desc = "You must be a bit risque teasing all of them in a maid uniform!"
 	icon_state = "sexymaid"
 
+/obj/item/clothing/under/dress/maid/under_maid
+	name = "modern maid costume"
+	desc = "You're going to use this for housekeeping, right?"
+	icon_state = "under_maid"
+
 /obj/item/clothing/under/dress/dress_fire
 	name = "flame dress"
 	desc = "A small black dress with blue flames print on it."
@@ -586,6 +591,16 @@
 	name = "high-waisted trousers"
 	desc = "A waistline this high is just made for ripping bodices, swashing buckles, or - just occasionally - sucking blood."
 	icon_state = "gayvampire"
+
+/obj/item/clothing/under/dress/singer
+	name = "blue singer dress"
+	desc = "Just looking at this makes you want to sing."
+	icon_state = "bsing"
+
+/obj/item/clothing/under/dress/singer/yellow
+	name = "yellow singer dress"
+	desc = "Just looking at this makes you want to sing."
+	icon_state = "ysing"
 
 /*
  * Wedding Stuff
@@ -872,18 +887,6 @@
 	name = "dark blue cheongsam"
 	desc = "It is a dark blue cheongsam dress."
 	icon_state = "cheongsam-darkblue"
-
-/obj/item/clothing/under/qipao_colorable
-	name = "qipao"
-	desc = "A traditional Chinese women's garment, typically made from silk."
-	icon_state = "qipao"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-
-/obj/item/clothing/under/qipao2_colorable
-	name = "slim qipao"
-	desc = "A traditional Chinese women's garment, typically made from silk. This one is fairly slim."
-	icon_state = "qipao2"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/blazer
 	name = "blue blazer"

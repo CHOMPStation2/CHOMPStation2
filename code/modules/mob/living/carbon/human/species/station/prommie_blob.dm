@@ -91,6 +91,7 @@
 	adjustFireLoss(-0.2)
 	adjustCloneLoss(-0.2)
 	adjustBruteLoss(-0.2)
+	adjustHalLoss(-6) // HalLoss ticks down FAST
 //ChompAdd Ends
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)

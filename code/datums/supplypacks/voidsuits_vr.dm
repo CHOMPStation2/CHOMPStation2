@@ -105,11 +105,11 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-	name = "Solgov exploration voidsuit crate" //CHOMP explo keep
+	name = "Solgov exploration voidsuit crate"  //CHOMP explo keep
 	access = access_explorer //CHOMP explo keep
-
-/datum/supply_pack/voidsuits/solgov_engineer
-	name = "Solgov engineering voidsuit"
+	
+/datum/supply_pack/voidsuits/solgov_engineer //CHOMP explo keep
+	name = "Solgov engineering voidsuit" //CHOMP explo keep
 	contains = list(
 		/obj/item/clothing/suit/space/void/engineering/alt2,
 		/obj/item/clothing/head/helmet/space/void/engineering/alt2
@@ -140,5 +140,5 @@
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov captain voidsuit crate"
 	access = access_captain
-
+	
 // CHOMPStation EDIT End

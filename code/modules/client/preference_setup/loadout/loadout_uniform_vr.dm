@@ -305,7 +305,7 @@ Talon jumpsuit
 
 
 //Feminine Colored Jumpsuits.
-/datum/gear/suit/f_jumpsuit_alt
+/datum/gear/uniform/f_jumpsuit_alt
 	display_name = "Colored Feminine Jumpsuit"
 	path = /obj/item/clothing/under/color/fjumpsuit
 
@@ -316,3 +316,17 @@ Talon jumpsuit
 		var/obj/item/clothing/under/color/fjumpsuit/jumpsuit = jumpsuit_style
 		jumpsuits[initial(jumpsuit.name)] = jumpsuit
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(jumpsuits))
+
+//Modernized Sec Jumpsuit
+/datum/gear/uniform/modernsec
+    display_name = "undersuit, security, modernized (Security)"
+    allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+    path = /obj/item/clothing/under/rank/security/modern
+
+/datum/gear/uniform/singer_blue
+	display_name = "blue singer dress"
+	path = /obj/item/clothing/under/dress/singer
+
+/datum/gear/uniform/singer_yellow
+	display_name = "yellow singer dress"
+	path = /obj/item/clothing/under/dress/singer/yellow

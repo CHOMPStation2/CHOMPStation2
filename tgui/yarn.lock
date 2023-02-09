@@ -3159,9 +3159,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001358":
-  version: 1.0.30001359
-  resolution: "caniuse-lite@npm:1.0.30001359"
-  checksum: e15dbf4ea445367e998ad525c54620275ae382446d0bc289d14bf014a159074a2207881b46406b011a72676686f8a734457ea8e8d4856dc3f700c3391e89b43e
+  version: 1.0.30001445
+  resolution: "caniuse-lite@npm:1.0.30001445"
+  checksum: f98ca67829c3c52af5af0a62b8510432b2ad9594437d24ad460a6eb1a23d93e7a31631b1f550fbbe482ad05c467aa00da710a41699eb13d1f246d7db4147ab79
   languageName: node
   linkType: hard
 
@@ -5145,9 +5145,9 @@ __metadata:
   linkType: hard
 
 "http-cache-semantics@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "http-cache-semantics@npm:4.1.0"
-  checksum: 974de94a81c5474be07f269f9fd8383e92ebb5a448208223bfb39e172a9dbc26feff250192ecc23b9593b3f92098e010406b0f24bd4d588d631f80214648ed42
+  version: 4.1.1
+  resolution: "http-cache-semantics@npm:4.1.1"
+  checksum: 83ac0bc60b17a3a36f9953e7be55e5c8f41acc61b22583060e8dedc9dd5e3607c823a88d0926f9150e571f90946835c7fe150732801010845c72cd8bbff1a236
   languageName: node
   linkType: hard
 
