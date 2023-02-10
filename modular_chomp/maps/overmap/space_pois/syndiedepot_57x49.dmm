@@ -137,8 +137,7 @@
 /area/submap/syndiedepotinner)
 "br" = (
 /obj/machinery/door/airlock/external{
-	id_tag = "sst_away";
-	req_access_txt = "0"
+	id_tag = "sst_away"
 	},
 /obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techfloor,
@@ -174,8 +173,7 @@
 /area/submap/syndiedepotinner)
 "bI" = (
 /obj/machinery/door/airlock/external{
-	id_tag = "sst_away";
-	req_access_txt = "0"
+	id_tag = "sst_away"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/syndiedepotoutter)
@@ -691,8 +689,7 @@
 /area/submap/syndiedepotinner)
 "Cy" = (
 /obj/machinery/door/airlock/external{
-	id_tag = "sst_away";
-	req_access_txt = "0"
+	id_tag = "sst_away"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/hardlight,
