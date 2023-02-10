@@ -244,9 +244,7 @@
 /area/submap/syndiecakesfactory)
 "uF" = (
 /obj/machinery/gibber/autogibber,
-/obj/structure/plasticflaps{
-	canmove = 0
-	},
+/obj/structure/plasticflaps,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/syndiecakesfactory)
 "vQ" = (
