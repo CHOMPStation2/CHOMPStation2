@@ -4,7 +4,9 @@
 GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // Also adjust find_z_levels() if you adjust increase dynamic levels, that part is hard-coded so you don't gloss over world.increment_max_z().
 #define MAX_DYNAMIC_LEVELS 3
-#define MAX_DYNAMIC_POI_DIMENSIONS 94 // Keep this an even number if using even world.maxx/maxy
+#define MAX_DYNAMIC_POI_DIMENSIONS 200 // Keep this an even number if using even world.maxx/maxy. This value MUST
+// a large enough static border to fit OM ships. A 30x30 ship means max dimensions must be 60 less than the z-level max
+// to keep a 30 turf border on each side of the load/unload area.
 
 // The "master" object, which creates + stores + registers the actual z-levels used for dynamic POI's. Handles overmap
 // sanity checks, + procs, should not be directly accessible by players. Do not use in maps. Only 1 should exist currently.
@@ -16,6 +18,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	in_space = TRUE
 	scanner_desc = "You should not see this."
 	var/generated_z = FALSE
+	var/base_area = /area/space
 
 	// Initialized to match max dynamic levels.
 	map_z = list(null,null,null)
@@ -36,26 +39,31 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		for(var/i = 1; i <= 3; i++) // Hard-coding limit because this is dangerous.
 			world.increment_max_z()
 			map_z[i] = world.maxz
-			// Find the center turf, spawn a shuttle landmark -10 tiles outside of the spawn/despawn boundaries.
-			// Shuttles are typically longer in x coordinates than y, so it's safer to set the landmark by x coordinates.
-			var/turf/T = locate(round(world.maxx/2 - MAX_DYNAMIC_POI_DIMENSIONS - 10), round(world.maxy/2), map_z[i])
+			// Spawn shuttle_landmarks near the lower x border, aligned with the POI spawning turf. These move during POI generation.
+			var/turf/T = locate(10, round(world.maxy/2), map_z[i])
 			if(istype(T))
-				var/obj/effect/shuttle_landmark/S = new(T)
-				S.name = "Subspace sector [i]"
-				S.landmark_tag = "dynamic_sector_[i]"
-				shuttle_landmarks[i] = S
+				var/list/spawn_directions = list() // Stores a landmark for each direction.
+				for(var/direction in list("FORE", "PORT", "AFT", "STARBOARD"))
+					var/obj/effect/shuttle_landmark/om_poi/S = new(T, "Subspace sector [i] - [direction]", "dynamic_sector_[i] - [direction]")
+					spawn_directions[direction] = S
+				shuttle_landmarks[i] = spawn_directions
 		generated_z = TRUE
 
 /obj/effect/overmap/visitable/dynamic/Initialize()
 	if(!GLOB.dynamic_sector_master)
 		GLOB.dynamic_sector_master = src
 	. = ..()
+	if(ispath(base_area))
+		var/area/spehss = locate(base_area)
+		if(!istype(spehss))
+			CRASH("Dynamic POI generation couldn't locate area [base_area].")
+		base_area = spehss
 	create_children()
 
 // Create POI objects for each overmap POI template, link to parent. Initialize() of children handles turf assignment
 /obj/effect/overmap/visitable/dynamic/proc/create_children()
 	for(var/datum/map_template/dynamic_overmap/poi as anything in subtypesof(/datum/map_template/dynamic_overmap))
-		if(!initial(poi.mappath) || !initial(poi.name)) // Exclude templates without an actual map (or are not included in the mapping subsystem map_templates)
+		if(!initial(poi.mappath) || !initial(poi.name) || (initial(poi.block_size) > MAX_DYNAMIC_POI_DIMENSIONS)) // Exclude templates without an actual map or are too big (or are not included in the mapping subsystem map_templates)
 			continue
 		var/obj/effect/overmap/visitable/dynamic/poi/P = new()
 		P.my_template = SSmapping.map_templates[initial(poi.name)] // Link to the stored map datums.
@@ -68,6 +76,17 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 /obj/effect/overmap/visitable/dynamic/proc/cull_child(mob/user)
 	var/random_index = rand(1,MAX_DYNAMIC_LEVELS)
 	var/obj/effect/overmap/visitable/dynamic/poi/P
+
+	// User selection. Remains random if user cancels.
+	if(user)
+		P = tgui_input_list(user, "Would you like to choose which link to sever?", "Sever link", active_pois)
+		if(P && istype(P) && src.is_empty(P.my_index))
+			random_index = P.my_index
+			P.destroy_poi(user)
+			active_pois[random_index] = null
+			return random_index
+		else
+			return 0
 
 	if(is_empty(random_index)) // If this z-level is empty, destroy the poi
 		P = active_pois[random_index]
@@ -132,6 +151,14 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 
 	forceMove(locate(start_x, start_y, global.using_map.overmap_z))
 
+	for(var/obj/effect/overmap/visitable/dynamic/poi/P in loc.contents) // If we've spawned on another poi, we'll try again once.
+		if(P == src)
+			continue
+		start_x = start_x || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
+		start_y = start_y || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
+		forceMove(locate(start_x, start_y, global.using_map.overmap_z))
+		break
+
 	if(!docking_codes)
 		docking_codes = "[ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))]"
 
@@ -193,7 +220,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			my_index = i
 			parent.active_pois[i] = src
 			map_z[1] = parent.map_z[i]
-			map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad
+			map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
 			break // Terminate loop
 	if(!my_index) // No z-levels available
 		var/confirm = alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", "No", "Yes")
@@ -213,10 +240,25 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	if(!istype(T))
 		log_debug("Dynamic overmap POI found [T] instead of a valid turf.")
 		return
+
+	// Move the shuttle landmarks.
+	var/list/landmark_directions = parent.shuttle_landmarks[my_index] // Each shuttle_landmarks entry is an associative list.
+	var/obj/effect/shuttle_landmark/om_poi/S = landmark_directions["FORE"]
+	S.forceMove(locate(T.x, min(world.maxy, T.y + round(src.my_template.block_size/2) + rand(10,20)), T.z)) // Above
+	add_landmark(S) // This lets overmap shuttles find our newly assigned z-level.
+	S = landmark_directions["AFT"]
+	S.forceMove(locate(T.x, max(1, T.y - round(src.my_template.block_size/2) - rand(10,20)), T.z))// Below
+	add_landmark(S)
+	S = landmark_directions["PORT"]
+	S.forceMove(locate(max(1, T.x - round(src.my_template.block_size/2) - rand(10,20)), T.y, T.z)) // Left
+	add_landmark(S)
+	S = landmark_directions["STARBOARD"]
+	S.forceMove(locate(min(world.maxx, T.x + round(src.my_template.block_size/2) + rand(10,20)), T.y, T.z)) // Right
+	add_landmark(S)
+
 	my_template.load(T, centered=TRUE)
 	loaded = TRUE
 	my_template.update_lighting(T)
-	add_landmark(parent.shuttle_landmarks[my_index]) // This lets overmap shuttles find our newly assigned z-level.
 	to_chat(user, "Stabilization tether successfully created.")
 	if(my_template.active_icon)
 		icon_state = my_template.active_icon
@@ -246,18 +288,24 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 
 	to_chat(user, "Destabilization initiated...")
 	log_debug("Dynamic overmap POI unloading initiated...")
-	// Some math to return a block of MAX_DYNAMIC_POI_DIMENSIONS turfs. Basically, start from center turf and subtract half of max dimensons for bottom left corner, add for top right corner.
-	var/list/turfs_to_reset = block(locate(round(world.maxx/2 - MAX_DYNAMIC_POI_DIMENSIONS/2), round(world.maxy/2 - MAX_DYNAMIC_POI_DIMENSIONS/2), map_z[1]), locate(round(world.maxx/2 + MAX_DYNAMIC_POI_DIMENSIONS/2), round(world.maxy/2 + MAX_DYNAMIC_POI_DIMENSIONS/2), map_z[1]))
+	// Some math to return a block of block_size turfs (+ 1 to each dimension to account for even-size maps lacking a true center to safely do math with). Basically, start from center turf and subtract half of block_size for bottom left corner, add for top right corner.
+	var/list/turfs_to_reset = block(locate(round(world.maxx/2 - my_template.block_size/2 - 1), round(world.maxy/2 - my_template.block_size/2 - 1), map_z[1]), locate(round(world.maxx/2 + my_template.block_size/2 + 1), round(world.maxy/2 + my_template.block_size/2 + 1), map_z[1]))
 	var/deleted_atoms = 0
 	if(turfs_to_reset.len)
+		var/area/A = parent.base_area
+		if(ispath(A))
+			A = locate(A)
+		if(!istype(A))
+			CRASH("Dynamic POI unloading couldn't locate area [A], unload aborted.")
+
 		for(var/turf/T in turfs_to_reset)
 			for(var/atom/movable/AM in T)
 				if(istype(AM, /mob/observer))
 					continue
 				++deleted_atoms
 				qdel(AM)
+			ChangeArea(T, A)
 			T = T.ChangeTurf(/turf/space)
-			ChangeArea(T, /area/space)
 	loaded = FALSE
 	map_z = null
 	icon_state = "ring_destroyed"
@@ -294,6 +342,16 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 
 /obj/effect/overmap/visitable/dynamic/poi/cull_child()
 	return
+
+/obj/effect/shuttle_landmark/om_poi // Landmarks used in dynamic poi generation
+	flags = SLANDMARK_FLAG_AUTOSET
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/om_poi/Initialize(mapload, var/new_name, var/new_tag)
+	name = new_name
+	landmark_tag = new_tag
+	. = ..()
 
 #undef MAX_DYNAMIC_LEVELS
 #undef MAX_DYNAMIC_POI_DIMENSIONS
