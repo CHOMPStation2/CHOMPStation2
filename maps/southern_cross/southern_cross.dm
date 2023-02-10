@@ -52,6 +52,7 @@
 		#include "southern_cross-9.dmm" //Transit z8
 		#include "southern_cross-10.dmm" //Sif wilds z9
 		#include "southern_cross-12.dmm" //Skylands z10
+		#include "southern_cross-13.dmm" //Valley z18
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 

@@ -33,8 +33,11 @@
 /turf/simulated/mineral/sif,
 /area/surface/outside/wilderness/mountains)
 "al" = (
-/turf/simulated/wall/solidrock,
-/area/surface/outside/river/svartan)
+/obj/effect/map_effect/portal/master/side_a/caves_to_valley{
+	dir = 8
+	},
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/mountains)
 "am" = (
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
@@ -463,12 +466,25 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
+"dB" = (
+/obj/effect/zone_divider,
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/mountains)
 "dO" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/water,
 /area/surface/outpost/wall/checkpoint)
+"ek" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/floor/water,
+/area/surface/outside/river/svartan)
 "er" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -588,6 +604,12 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
+"mZ" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/deep)
 "nN" = (
 /turf/simulated/wall/rsifwood,
 /area/surface/outside/wilderness/mountains)
@@ -714,6 +736,10 @@
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
+"zy" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/wilderness/mountains)
 "AB" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -773,6 +799,12 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
+"LT" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/mountains)
 "Mk" = (
 /obj/structure/table/rack,
 /obj/item/weapon/circuitboard/machine/rtg/advanced,
@@ -816,6 +848,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
+"QM" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/wilderness/deep)
 "Rc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -860,6 +898,18 @@
 /obj/effect/zone_divider,
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
+"SW" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/wilderness/normal)
+"VE" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "Wo" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -1086,18 +1136,18 @@ ab
 ab
 ab
 ad
-ab
-ab
-ab
-al
-al
-al
-al
-al
-al
-ab
-ab
-ab
+ah
+ah
+ah
+am
+am
+an
+an
+am
+am
+ap
+ap
+ap
 ab
 ab
 ab
@@ -1342,22 +1392,22 @@ ac
 ac
 ac
 ac
-ac
-ak
-ac
-ac
-ac
-am
-am
-an
-an
-am
-am
-ac
-ac
-ac
-ac
-ac
+LT
+dB
+QM
+QM
+mZ
+ek
+ek
+VE
+VE
+ek
+ek
+SW
+SW
+SW
+LT
+al
 ac
 ac
 ac
@@ -1601,20 +1651,20 @@ ac
 ac
 ac
 ac
-ak
-ac
-ac
-ac
+zy
+ah
+ah
+ah
 am
 am
 an
 an
 am
 am
-ac
-ac
-ac
-ac
+ap
+ap
+ap
+ap
 ac
 ac
 ac
@@ -1861,7 +1911,7 @@ ah
 ah
 aw
 ah
-ac
+ah
 ah
 am
 am
@@ -1870,9 +1920,9 @@ an
 am
 am
 ap
-ac
-ac
-ac
+ap
+ap
+ap
 ac
 ac
 ac
