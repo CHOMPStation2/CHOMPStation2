@@ -22,7 +22,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.2
-	permeability_coefficient = 0.1
+	permeability_coefficient = 0  //Zeroed this out to protect people vulnerable to water, which definitely shouldn't get through these suits.
 	unacidable = TRUE
 	preserve_item = 1
 
