@@ -208,6 +208,30 @@
 	character.offset_override	= offset_override //CHOMPEdit
 	character.voice_freq		= voice_freq
 	character.resize(size_multiplier, animate = FALSE, ignore_prefs = TRUE)
+
+	var/list/traits_to_copy = list(/datum/trait/neutral/tall,
+									/datum/trait/neutral/taller,
+									/datum/trait/neutral/short,
+									/datum/trait/neutral/shorter,
+									/datum/trait/neutral/obese,
+									/datum/trait/neutral/fat,
+									/datum/trait/neutral/thin,
+									/datum/trait/neutral/thinner,
+									/datum/trait/neutral/micro_size_down,
+									/datum/trait/neutral/micro_size_up)
+	//reset all the above trait vars
+	if (character.species)
+		character.species.micro_size_mod = 0
+		character.species.icon_scale_x = 1
+		character.species.icon_scale_y = 1
+		for (var/trait in neu_traits)
+			if (trait in traits_to_copy)
+				var/datum/trait/instance = all_traits[trait]
+				if (!instance)
+					continue
+				for (var/to_edit in instance.var_changes)
+					character.species.vars[to_edit] = instance.var_changes[to_edit]
+	character.update_transform()
 	if(!voice_sound)
 		character.voice_sounds_list = talk_sound
 	else

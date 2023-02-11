@@ -114,7 +114,12 @@
 	fuzzy				= character.fuzzy
 	offset_override	= character.offset_override //CHOMPEdit
 	voice_freq		= character.voice_freq
-	character.resize(character.size_multiplier, animate = TRUE, ignore_prefs = TRUE)
+	if (species && character.species)
+		species.micro_size_mod = character.species.micro_size_mod
+		species.icon_scale_x = character.species.icon_scale_x
+		species.icon_scale_y = character.species.icon_scale_y
+		update_transform()
+	resize(character.size_multiplier, animate = TRUE, ignore_prefs = TRUE)
 	voice_sounds_list = character.voice_sounds_list
 
 	species?.blood_color = character.species?.blood_color
