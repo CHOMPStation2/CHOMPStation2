@@ -136,7 +136,16 @@
 
 	// Destroy/cyborgize organs and limbs.
 	if (convert_to_prosthetics) //should only really be run for proteans
-		for(var/name in BP_ALL)
+		var/list/organs_to_edit = list()
+		for (var/name in list(BP_TORSO, BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
+			var/obj/item/organ/external/O = character.organs_by_name[name]
+			if (O)
+				var/x = organs_to_edit.Find(O.parent_organ)
+				if (x == 0)
+					organs_to_edit += name
+				else
+					organs_to_edit.Insert(x+(O.robotic == ORGAN_NANOFORM ? 1 : 0), name)
+		for(var/name in organs_to_edit)
 			var/status = organ_data[name]
 			var/obj/item/organ/external/O = character.organs_by_name[name]
 			if(O)
@@ -153,7 +162,7 @@
 						bodytype = selected_species.get_bodytype()
 					var/dsi_company = GLOB.dsi_to_species[bodytype]
 					if (!dsi_company)
-						dsi_company = "DSI - Synthetic"
+						dsi_company = "DSI - Adaptive"
 					O.robotize(dsi_company)
 
 	for(var/N in character.organs_by_name)

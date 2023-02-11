@@ -4,7 +4,7 @@ GLOBAL_LIST_INIT(dsi_to_species, list(SPECIES_TAJARAN = "DSI - Tajaran", SPECIES
 
 /datum/robolimb
 	var/no_icon = FALSE //specifically for DSI things, makes it so it doesn't override the species icons
-	//var/has_digitigrade_icon = FALSE //make this a thing
+	var/can_be_digitigrade = FALSE //used for skipping the icon if it can be digitigrade - maybe turn this into more of a 'use this icon/iconstate' instead later, when actual prosthetic digi icons get made
 
 /datum/robolimb/valehoundhead
 	company = "VALE Hound- Head"
@@ -14,34 +14,31 @@ GLOBAL_LIST_INIT(dsi_to_species, list(SPECIES_TAJARAN = "DSI - Tajaran", SPECIES
 	parts = list(BP_HEAD)
 
 /datum/robolimb/dsi_tajaran
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_lizard
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_sergal
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_nevrean
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_vulpkanin
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_akula
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_spider
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_zorren
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_fennec
-	no_icon = TRUE
-
-/datum/robolimb/dsi_teshari
-	no_icon = TRUE
+	can_be_digitigrade = TRUE
 
 /datum/robolimb/dsi_teshari/New()
 	. = ..()
@@ -49,7 +46,7 @@ GLOBAL_LIST_INIT(dsi_to_species, list(SPECIES_TAJARAN = "DSI - Tajaran", SPECIES
 
 
 /datum/robolimb/dsi_other
-	company = "DSI - Synthetic"
+	company = "DSI - Adaptive"
 	desc = "This limb has a  realistic design and squish. By Darkside Incorperated."
 	blood_color = "#ffe2ff"
 	lifelike = 1

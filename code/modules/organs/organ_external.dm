@@ -1140,6 +1140,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 			brute_mod *= R.robo_brute_mod
 			burn_mod *= R.robo_burn_mod
 			skip_robo_icon = R.no_icon //CHOMPStation edit
+			digi_prosthetic = R.can_be_digitigrade //CHOMPStation edit
 			if(R.lifelike)
 				robotic = ORGAN_LIFELIKE
 				name = "[initial(name)]"

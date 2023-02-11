@@ -10,6 +10,7 @@
 		digitigrade = dna.digitigrade && (istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot))
 
 	var/gender = "m"
+	var/skip_forced_icon = skip_robo_icon || (digi_prosthetic && digitigrade)
 	if(owner && owner.gender == FEMALE)
 		gender = "f"
 
@@ -18,7 +19,7 @@
 	else
 		icon_cache_key = "[icon_name]_[force_icon_key]"
 
-	if(force_icon && !skip_robo_icon)
+	if(force_icon && !skip_forced_icon)
 		mob_icon = new /icon(force_icon, "[icon_name][gendered_icon ? "_[gender]" : ""]")
 	else
 		if(!dna)
@@ -35,7 +36,7 @@
 
 			if(skeletal)
 				mob_icon = new /icon('icons/mob/human_races/r_skeleton.dmi', "[icon_name][gender ? "_[gender]" : ""]")
-			else if (robotic >= ORGAN_ROBOT && !skip_robo_icon)
+			else if (robotic >= ORGAN_ROBOT && !skip_forced_icon)
 				mob_icon = new /icon('icons/mob/human_races/robotic.dmi', "[icon_name][gender ? "_[gender]" : ""]")
 				apply_colouration(mob_icon)
 			else
@@ -46,13 +47,13 @@
 					mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
 					apply_colouration(mob_icon)
 
-	if (model && !skip_robo_icon)
+	if (model && !skip_forced_icon)
 		icon_cache_key += "_model_[model]"
 		apply_colouration(mob_icon)
 
 	//Code here is copied from organ_icon.dm line 118 at time of writing (9/20/21), VOREStation edits are left in intentionally, because I think it's worth keeping track of the fact that the code is from Virgo's edits.
 	//Body markings, actually does not include head this time. Done separately above.
-	if((!istype(src,/obj/item/organ/external/head) && !(force_icon && !skip_robo_icon)) || (model && owner && owner.synth_markings))
+	if((!istype(src,/obj/item/organ/external/head) && !(force_icon && !skip_forced_icon)) || (model && owner && owner.synth_markings))
 		for(var/M in markings)
 			var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 			var/isdigitype = istype(mark_style,/datum/sprite_accessory/marking/digi)
@@ -71,7 +72,7 @@
 		mob_icon.Blend(limb_icon_cache[cache_key], ICON_OVERLAY)
 
 	// VOREStation edit start
-	if(nail_polish && !(force_icon && !skip_robo_icon))
+	if(nail_polish && !(force_icon && !skip_forced_icon))
 		var/icon/I = new(nail_polish.icon, nail_polish.icon_state)
 		I.Blend(nail_polish.color, ICON_MULTIPLY)
 		add_overlay(I)
