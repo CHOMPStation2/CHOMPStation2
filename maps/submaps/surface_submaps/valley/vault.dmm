@@ -113,6 +113,11 @@
 /obj/item/weapon/implantcase/medkit,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
+"O" = (
+/obj/machinery/door/airlock/alien/blue/locked,
+/obj/structure/fans/tiny,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/vault)
 "P" = (
 /obj/machinery/porta_turret/alien{
 	faction = "hivebot"
@@ -446,15 +451,15 @@ c
 c
 c
 c
-Z
-Z
+O
+O
 c
 c
 c
 c
 c
-Z
-Z
+O
+O
 c
 c
 c
@@ -766,7 +771,7 @@ a
 Z
 a
 a
-Z
+O
 a
 a
 z
@@ -790,7 +795,7 @@ a
 z
 a
 a
-Z
+O
 a
 a
 Z
@@ -807,7 +812,7 @@ a
 Z
 a
 a
-Z
+O
 a
 a
 z
@@ -831,7 +836,7 @@ a
 z
 a
 a
-Z
+O
 a
 a
 Z
@@ -1053,7 +1058,7 @@ a
 Z
 a
 a
-Z
+O
 a
 a
 z
@@ -1077,7 +1082,7 @@ a
 z
 a
 a
-Z
+O
 a
 a
 Z
@@ -1094,7 +1099,7 @@ a
 Z
 a
 a
-Z
+O
 a
 a
 z
@@ -1118,7 +1123,7 @@ a
 z
 a
 a
-Z
+O
 a
 a
 Z
@@ -1430,15 +1435,15 @@ c
 c
 c
 c
-Z
-Z
+O
+O
 c
 c
 c
 c
 c
-Z
-Z
+O
+O
 c
 c
 c
