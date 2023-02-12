@@ -22,7 +22,15 @@
 
 /obj/item/weapon/storage/backpack/equipped(var/mob/user, var/slot)
 	if (slot == slot_back && src.use_sound)
-		playsound(src, src.use_sound, 50, 1, -5)
+// Chomp edit
+		if(isbelly(user.loc))
+			var/obj/belly/B = user.loc
+			if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
+				return
+		else
+// Chomp edit end
+			playsound(src, src.use_sound, 50, 1, -5)
+
 	..(user, slot)
 
 /*

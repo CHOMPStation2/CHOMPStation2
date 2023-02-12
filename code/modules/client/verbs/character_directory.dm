@@ -101,7 +101,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		if(istype(C.mob, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = C.mob
 			name = S.name
-			species = "simplemob"
+			species = S.character_directory_species()
 			ooc_notes = S.ooc_notes
 			flavor_text = S.desc
 			//CHOMPEdit End
