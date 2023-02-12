@@ -157,6 +157,12 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
+/datum/client_preference/looping_alarms // CHOMPStation Add: Looping Alarms
+	description ="Looping Alarm Sounds"
+	key = "SOUND_ALARMLOOP"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
