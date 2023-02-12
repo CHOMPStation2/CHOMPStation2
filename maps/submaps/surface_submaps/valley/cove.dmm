@@ -1,11 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "b" = (
 /mob/living/simple_mob/humanoid/pirate/las/armored,
 /turf/simulated/floor/outdoors/ironsand,
-/area/space)
+/area/submap/cove)
 "c" = (
 /obj/structure/railing{
 	dir = 1
@@ -14,46 +14,49 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "d" = (
 /mob/living/simple_mob/humanoid/pirate/captain,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "e" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "g" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/projectile/revolvershotgun,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "h" = (
 /turf/simulated/wall/wood,
-/area/space)
+/area/submap/cove)
 "i" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "j" = (
 /obj/structure/prop/rock/small/water,
 /turf/simulated/floor/water/ocean,
-/area/space)
+/area/submap/cove)
 "k" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/piratedouble,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
+"l" = (
+/turf/simulated/mineral/ignore_mapgen,
+/area/submap/cove)
 "n" = (
 /obj/structure/table/bench/wooden,
 /mob/living/simple_mob/humanoid/merc/melee/sword/space{
 	faction = "pirate"
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "o" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/machinery/chemical_dispenser/bar_coffee/full{
@@ -63,31 +66,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "p" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "q" = (
 /obj/structure/table/bench/wooden,
 /mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor{
 	faction = "pirate"
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "r" = (
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "s" = (
 /obj/structure/table/bench/wooden,
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "u" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -99,63 +102,63 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "v" = (
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "w" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "x" = (
 /turf/simulated/floor/water/ocean,
-/area/space)
+/area/submap/cove)
 "y" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /turf/simulated/floor/outdoors/ironsand,
-/area/space)
+/area/submap/cove)
 "z" = (
 /turf/simulated/wall/gold{
 	can_open = 1
 	},
-/area/space)
+/area/submap/cove)
 "A" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "B" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/gun/random,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "C" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/space)
+/area/template_noop)
 "D" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
 /turf/simulated/floor/outdoors/ironsand,
-/area/space)
+/area/submap/cove)
 "E" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/ocean,
-/area/space)
+/area/submap/cove)
 "F" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "G" = (
 /obj/machinery/teleport/hub,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "H" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/armored,
 /turf/simulated/floor/outdoors/ironsand,
-/area/space)
+/area/submap/cove)
 "I" = (
 /obj/structure/railing{
 	dir = 1
@@ -164,55 +167,55 @@
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "J" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/ocean,
-/area/space)
+/area/submap/cove)
 "K" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "L" = (
 /obj/machinery/light/poi,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "M" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "N" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "O" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "P" = (
 /obj/structure/table/bench/wooden,
 /mob/living/simple_mob/humanoid/merc/voxpirate/ranged/captain{
 	faction = "pirate"
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "Q" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "R" = (
 /turf/simulated/floor/outdoors/ironsand,
-/area/space)
+/area/submap/cove)
 "S" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/maintenance/foodstuff,
@@ -222,43 +225,43 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "T" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "U" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "V" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/contraband,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "W" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "X" = (
 /obj/random/mob/merc/all,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "Y" = (
 /obj/structure/table/bench/wooden,
 /mob/living/simple_mob/humanoid/pirate/mate/ranged/shotgun,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 "Z" = (
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/cove)
 
 (1,1,1) = {"
 F
@@ -472,7 +475,7 @@ x
 R
 R
 R
-C
+l
 C
 C
 C
@@ -503,10 +506,10 @@ x
 R
 R
 R
-C
-C
-C
-C
+l
+l
+l
+l
 C
 C
 C
@@ -535,12 +538,12 @@ R
 R
 R
 R
-C
-C
-C
-C
-C
-C
+l
+l
+l
+l
+l
+l
 C
 C
 C
@@ -1015,8 +1018,8 @@ x
 R
 R
 R
-C
-C
+l
+l
 h
 u
 a
@@ -1048,7 +1051,7 @@ R
 R
 R
 R
-C
+l
 h
 i
 N
@@ -1078,9 +1081,9 @@ x
 x
 x
 R
-C
-C
-C
+l
+l
+l
 h
 h
 h
@@ -1110,12 +1113,12 @@ x
 x
 x
 R
-C
-C
-C
-C
-C
-C
+l
+l
+l
+l
+l
+l
 h
 h
 h
@@ -1143,13 +1146,13 @@ x
 x
 R
 R
-C
-C
-C
-C
-C
-C
-C
+l
+l
+l
+l
+l
+l
+l
 C
 C
 C
@@ -1175,9 +1178,9 @@ x
 x
 x
 R
-C
-C
-C
+l
+l
+l
 C
 C
 C
@@ -1208,7 +1211,7 @@ x
 x
 R
 R
-C
+l
 C
 C
 C
@@ -1271,7 +1274,7 @@ x
 x
 x
 R
-C
+l
 C
 C
 C
@@ -1302,7 +1305,7 @@ x
 x
 x
 x
-C
+l
 C
 C
 C
@@ -1332,8 +1335,8 @@ x
 x
 x
 x
-C
-C
+l
+l
 C
 C
 C

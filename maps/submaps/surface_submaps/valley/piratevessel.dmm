@@ -2,51 +2,51 @@
 "aj" = (
 /obj/machinery/door/airlock/diamond,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "bh" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "bT" = (
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "cd" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "cn" = (
 /obj/structure/table/gold,
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/random/medical/pillbottle,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "cG" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/piratevessel)
 "cO" = (
 /mob/living/simple_mob/humanoid/pirate,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "dt" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "dx" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/item/seeds/goldappleseed,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "dN" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "dO" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -54,68 +54,67 @@
 /obj/item/weapon/reagent_containers/glass/bottle/mutagen,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "eO" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/structure/railing,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/piratevessel)
 "fJ" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/grenade/chem_grenade/miasma,
 /obj/item/weapon/reagent_containers/glass/bottle/left4zed,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "fX" = (
 /mob/living/simple_mob/humanoid/pirate/ranged,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "gd" = (
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "gA" = (
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "gO" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "hc" = (
 /obj/structure/closet/crate/medical,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "he" = (
 /mob/living/simple_mob/humanoid/pirate/las,
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "hO" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/steel,
 /obj/item/clothing/suit/space/pirate,
 /obj/item/clothing/head/helmet/space/pirate,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "hR" = (
 /obj/structure/table/gold,
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/weapon/card/emag/used,
+/obj/item/weapon/card/emag,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ib" = (
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
@@ -133,33 +132,33 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ka" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ky" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 5
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "lo" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
 /obj/structure/bed/chair/bar_stool,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "lC" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "lN" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
@@ -168,22 +167,21 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "lZ" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/grenade/chem_grenade/miasma,
 /obj/item/weapon/reagent_containers/glass/bottle/robustharvest,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "mq" = (
 /turf/simulated/wall/rplastihull,
-/area/space)
+/area/submap/piratevessel)
 "mw" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /mob/living/bot/farmbot,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "pu" = (
 /obj/structure/railing{
 	dir = 1
@@ -193,62 +191,62 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/piratevessel)
 "pQ" = (
 /turf/simulated/wall/golddiamond,
-/area/space)
+/area/submap/piratevessel)
 "pR" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
 /obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "qd" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "qB" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "qL" = (
 /obj/machinery/door/airlock/gold,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "qP" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "qW" = (
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "rp" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "rw" = (
 /obj/structure/table/gold,
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/item/rig_module/fabricator/energy_net,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "st" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 9
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "sP" = (
 /obj/structure/railing{
 	dir = 4
@@ -257,58 +255,58 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/piratevessel)
 "sX" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ta" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 10
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "tI" = (
 /obj/structure/closet/crate/hydroponics/exotic,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "tX" = (
 /obj/structure/table/marble,
 /obj/random/material/precious,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "uL" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/closet/jcloset,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "vY" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "wz" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "xr" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "AD" = (
 /obj/machinery/computer/ship{
 	dir = 8
@@ -318,12 +316,12 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Bx" = (
 /obj/structure/closet/crate/mimic,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "BG" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
@@ -333,42 +331,42 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "BJ" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "CN" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun,
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Dy" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "DY" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Ev" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "EC" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "EP" = (
 /mob/living/simple_mob/humanoid/pirate,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Fc" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -376,14 +374,14 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Fg" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/machinery/porta_turret/industrial{
+/obj/machinery/porta_turret/industrial/military{
 	faction = "pirate"
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Fh" = (
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
@@ -402,7 +400,7 @@
 /obj/item/rig_module/mounted/egun,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Fw" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
@@ -410,7 +408,7 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Gl" = (
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
@@ -427,14 +425,14 @@
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Gw" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/item/weapon/storage/pill_bottle/nutriment,
 /obj/item/weapon/reagent_containers/glass/bottle/biomass,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Hf" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
@@ -443,7 +441,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Hs" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/corner/yellow/border{
@@ -453,7 +451,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "HP" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
@@ -462,24 +460,24 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Io" = (
 /mob/living/simple_mob/humanoid/pirate/machete,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Jd" = (
 /obj/structure/closet/crate/freezer/nanotrasen,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Jn" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Jv" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
@@ -488,7 +486,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "JU" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -498,78 +496,78 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Lc" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 9
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Lh" = (
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "LK" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "LZ" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
 /obj/random/toolbox,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Mb" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
 /turf/simulated/wall/rplastihull,
-/area/space)
+/area/submap/piratevessel)
 "ML" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "MZ" = (
 /obj/machinery/door/airlock,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Nb" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Nu" = (
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Nz" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "NC" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/piratevessel)
 "NO" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/item/weapon/material/minihoe,
 /obj/item/weapon/material/knife/machete/hatchet,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "NZ" = (
 /obj/machinery/computer/ship{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Oj" = (
 /obj/structure/railing,
 /obj/machinery/power/port_gen/pacman,
@@ -577,7 +575,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/piratevessel)
 "Pd" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
@@ -585,170 +583,173 @@
 /obj/random/gun/random,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "PL" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
 /obj/random/firstaid,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "PT" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/steel,
 /obj/item/clothing/head/helmet/space/pirate,
 /obj/item/clothing/suit/space/pirate,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Qt" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/janitorialcart,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Rj" = (
 /mob/living/simple_mob/humanoid/pirate/machete,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "RF" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
 /obj/structure/bed/chair/bar_stool,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "RN" = (
 /obj/structure/closet/crate/carp,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Sb" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Sp" = (
 /obj/structure/table/marble,
 /obj/structure/table/marble,
 /obj/random/material/precious,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Tg" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "TI" = (
 /obj/structure/closet/crate/secure/large/reinforced,
 /obj/effect/floor_decal/corner/purple/diagonal,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Uc" = (
 /obj/structure/closet/crate/medical/blood,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Un" = (
 /obj/structure/table/marble,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "UN" = (
 /mob/living/simple_mob/humanoid/pirate,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Vb" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/mopbucket,
 /obj/item/weapon/mop/advanced,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "VB" = (
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "VY" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
 /turf/simulated/wall/rplastihull,
-/area/space)
+/area/submap/piratevessel)
 "Wd" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Wy" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "WG" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun,
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "WX" = (
 /mob/living/simple_mob/humanoid/pirate/ranged,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Xb" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "Yl" = (
 /mob/living/simple_mob/mechanical/mecha/ripley/pirate,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "YF" = (
 /mob/living/simple_mob/humanoid/pirate/las,
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "YG" = (
 /mob/living/simple_mob/humanoid/pirate/captain,
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "YU" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ZA" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ZK" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 "ZO" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/piratevessel)
 
 (1,1,1) = {"
 dt

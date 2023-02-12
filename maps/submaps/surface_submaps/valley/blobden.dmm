@@ -4,184 +4,184 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "ak" = (
 /turf/simulated/wall/titanium,
-/area/space)
+/area/submap/blobden)
 "aH" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "aQ" = (
 /obj/structure/blob/core/random_hard,
-/turf/simulated/floor/outdoors/dirt,
-/area/space)
+/turf/simulated/floor/tiled/white,
+/area/submap/blobden)
 "bC" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "cq" = (
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "dt" = (
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "dS" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "eL" = (
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "eY" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/rad_shield/advanced,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "fb" = (
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "gk" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "ig" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/mounted/egun,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "iN" = (
 /obj/structure/table/borosilicate,
 /obj/item/weapon/storage/firstaid/bonemed,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "kY" = (
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "ls" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "lt" = (
 /turf/simulated/mineral,
-/area/space)
+/area/template_noop)
 "lO" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "nB" = (
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/orange/bordercorner,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "pr" = (
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "pU" = (
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "qc" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
 	req_access = list(103)
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "qz" = (
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "qW" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "ry" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "sJ" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "uj" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "uA" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "wD" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "wX" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "xW" = (
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "yW" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "zE" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Ac" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "AJ" = (
 /obj/structure/table/borosilicate,
 /obj/item/weapon/cell/device/weapon/empproof,
@@ -189,43 +189,43 @@
 /obj/item/weapon/cell/device/weapon/empproof,
 /obj/item/weapon/cell/device/weapon/empproof,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Bc" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Bw" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Db" = (
 /obj/structure/table/borosilicate,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "DR" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Fe" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/chem_dispenser/combat,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "FA" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "FC" = (
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 4
@@ -234,113 +234,113 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "FL" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Gy" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Ha" = (
 /obj/structure/table/borosilicate,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Hs" = (
 /obj/structure/table/borosilicate,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "HQ" = (
 /obj/structure/table/borosilicate,
 /obj/random/energy/sec,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Iv" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "IC" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Kc" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "La" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "NS" = (
 /obj/structure/table/borosilicate,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "OA" = (
 /obj/structure/table/borosilicate,
 /obj/random/energy/highend,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "PM" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Qg" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/grenade_launcher/metalfoam,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Qp" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "RM" = (
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "SR" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Tq" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "TK" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Uv" = (
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
@@ -349,31 +349,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Vm" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "WE" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "WG" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 "Yd" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/blobden)
 
 (1,1,1) = {"
 lt

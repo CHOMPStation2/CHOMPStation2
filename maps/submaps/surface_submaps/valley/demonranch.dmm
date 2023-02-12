@@ -2,271 +2,277 @@
 "aM" = (
 /obj/fire,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "bm" = (
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "cc" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "cO" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "eM" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
+"gE" = (
+/turf/simulated/floor/outdoors/grass/sif,
+/area/template_noop)
 "hq" = (
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/demonranch)
 "hK" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/clothing/suit/cultrobes,
 /obj/item/clothing/head/culthood,
 /obj/item/clothing/shoes/cult,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "hY" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/demonranch)
 "iw" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "kd" = (
 /mob/living/simple_mob/vore/demonAI{
 	faction = "cult"
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "kV" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/maintenance/foodstuff,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "lo" = (
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "mG" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "nh" = (
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "ot" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "pr" = (
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/demonranch)
 "qv" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/maintenance/foodstuff,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/random/energy,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "qA" = (
 /obj/fire,
 /obj/random/humanoidremains,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "rx" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/maintenance/foodstuff,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/random/gun/random,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "su" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "sA" = (
 /obj/fire,
 /obj/fire,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "ug" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "ul" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "uK" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "uM" = (
 /obj/structure/cliff/automatic{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "vk" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "vY" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "we" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "wt" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "yi" = (
 /obj/structure/railing,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "zR" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/candelabra,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "AI" = (
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/demonranch)
 "Cj" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/contraband/nofail,
 /obj/random/maintenance/foodstuff,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "CN" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/clothing/suit/cultrobes/alt,
 /obj/item/clothing/head/culthood/alt,
 /obj/item/clothing/shoes/cult,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
+"Ev" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/template_noop)
 "Gt" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "Jf" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "JG" = (
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "Kf" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "KO" = (
 /obj/structure/cliff/automatic{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "Mq" = (
 /obj/structure/cliff/automatic{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "MV" = (
 /mob/living/simple_mob/humanoid/cultist/castertesh,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "Nt" = (
 /obj/structure/cliff/automatic{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "NC" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/firstaid,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "Pn" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "Rp" = (
 /mob/living/simple_mob/vore/demonAI{
 	faction = "cult"
 	},
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/demonranch)
 "Si" = (
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "SG" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "TH" = (
 /turf/simulated/wall/log_sif,
-/area/space)
+/area/submap/demonranch)
 "Up" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/demonranch)
 "UI" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/blue,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "UM" = (
 /obj/item/weapon/spellbook/oneuse/charge,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/demonranch)
 "WY" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/demonranch)
 "Xg" = (
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "XR" = (
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/demonranch)
 "Zy" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 
 (1,1,1) = {"
 Zy
@@ -350,7 +356,7 @@ su
 iw
 hq
 hq
-su
+iw
 su
 kd
 aM
@@ -383,7 +389,7 @@ Zy
 Zy
 Zy
 eM
-iw
+su
 hq
 hq
 hq
@@ -420,7 +426,7 @@ Zy
 Zy
 Zy
 eM
-hq
+su
 hq
 UM
 hq
@@ -457,7 +463,7 @@ Zy
 Zy
 Zy
 eM
-hq
+su
 hq
 hq
 hq
@@ -679,8 +685,8 @@ Zy
 Zy
 Zy
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -703,8 +709,8 @@ MV
 Xg
 yi
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -716,7 +722,7 @@ Zy
 Zy
 Zy
 eM
-sA
+su
 sA
 sA
 sA
@@ -740,7 +746,7 @@ Jf
 ul
 yi
 eM
-sA
+su
 sA
 sA
 sA
@@ -753,7 +759,7 @@ Zy
 Zy
 Zy
 eM
-sA
+su
 sA
 sA
 sA
@@ -777,7 +783,7 @@ TH
 TH
 TH
 eM
-sA
+su
 sA
 sA
 sA
@@ -790,8 +796,8 @@ Zy
 Zy
 Zy
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -814,8 +820,8 @@ pr
 pr
 pr
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -865,7 +871,7 @@ Zy
 Zy
 Zy
 Zy
-su
+Ev
 su
 su
 pr
@@ -891,8 +897,8 @@ pr
 su
 su
 su
-su
-su
+Ev
+Ev
 Zy
 Zy
 Zy
@@ -902,7 +908,7 @@ Zy
 Zy
 Zy
 Zy
-pr
+gE
 pr
 pr
 pr
@@ -938,8 +944,8 @@ Zy
 Zy
 Zy
 Zy
-pr
-pr
+gE
+gE
 pr
 pr
 pr
@@ -975,8 +981,8 @@ Zy
 Zy
 Zy
 Zy
-pr
-pr
+gE
+gE
 pr
 pr
 pr
@@ -1002,7 +1008,7 @@ hY
 pr
 pr
 pr
-pr
+gE
 Zy
 Zy
 Zy
@@ -1013,7 +1019,7 @@ Zy
 Zy
 Zy
 Zy
-pr
+gE
 pr
 pr
 pr
@@ -1039,7 +1045,7 @@ pr
 pr
 pr
 pr
-pr
+gE
 Zy
 Zy
 Zy
@@ -1076,7 +1082,7 @@ pr
 pr
 pr
 su
-su
+Ev
 Zy
 Zy
 Zy
@@ -1087,7 +1093,7 @@ Zy
 Zy
 Zy
 Zy
-su
+Ev
 su
 su
 su
@@ -1113,8 +1119,8 @@ pr
 su
 su
 su
-su
-su
+Ev
+Ev
 Zy
 Zy
 Zy
@@ -1160,8 +1166,8 @@ Zy
 Zy
 Zy
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -1184,8 +1190,8 @@ pr
 pr
 pr
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -1197,7 +1203,7 @@ Zy
 Zy
 Zy
 eM
-sA
+su
 sA
 sA
 sA
@@ -1221,7 +1227,7 @@ TH
 TH
 TH
 eM
-sA
+su
 sA
 sA
 sA
@@ -1234,7 +1240,7 @@ Zy
 Zy
 Zy
 eM
-sA
+su
 sA
 sA
 sA
@@ -1258,7 +1264,7 @@ Jf
 Xg
 yi
 eM
-sA
+su
 sA
 sA
 sA
@@ -1271,8 +1277,8 @@ Zy
 Zy
 Zy
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -1295,8 +1301,8 @@ MV
 Xg
 cO
 eM
-sA
 su
+sA
 su
 su
 sA
@@ -1567,8 +1573,8 @@ Zy
 Zy
 Zy
 eM
-iw
 su
+iw
 su
 hq
 hq
@@ -1605,8 +1611,8 @@ Zy
 Zy
 eM
 su
-iw
 su
+iw
 su
 su
 su

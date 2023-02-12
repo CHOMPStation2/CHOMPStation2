@@ -11,18 +11,18 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "bB" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/cosmos,
 /obj/item/toy/plushie/red_fox,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
 "cN" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/gun/energy/xray/xenoarch,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
 "dT" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 28
@@ -30,12 +30,12 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "dZ" = (
 /obj/machinery/door/airlock/glass_research,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
-/area/space)
+/area/submap/plontden)
 "eF" = (
 /obj/structure/grille,
 /obj/structure/window/basic,
@@ -46,7 +46,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "fg" = (
 /obj/structure/grille,
 /obj/structure/window/basic,
@@ -60,14 +60,19 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "gA" = (
 /obj/machinery/light,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "gD" = (
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
 "gH" = (
 /obj/structure/grille,
 /obj/structure/window/basic,
@@ -78,7 +83,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "hS" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoflora Port";
@@ -86,7 +91,7 @@
 	},
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "im" = (
 /obj/structure/grille,
 /obj/structure/window/basic,
@@ -100,30 +105,48 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
+"iS" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/plontden)
 "iU" = (
 /turf/simulated/wall/r_wall,
-/area/space)
+/area/submap/plontden)
 "jf" = (
 /obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "jt" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/hydro,
-/area/space)
-"ln" = (
+/area/submap/plontden)
+"kp" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/water/indoors,
-/area/space)
+/turf/simulated/floor/tiled/white,
+/area/submap/plontden)
+"ln" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/plontden)
 "lL" = (
 /obj/structure/closet/crate/hydroponics/exotic,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "mt" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/light{
@@ -131,21 +154,21 @@
 	},
 /obj/effect/floor_decal/industrial/hatch,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "mw" = (
 /obj/machinery/chemical_dispenser/xenoflora,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "mH" = (
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "mO" = (
 /obj/machinery/botany/editor,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "od" = (
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "oI" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -157,10 +180,10 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "oO" = (
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "pA" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
@@ -172,18 +195,18 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "rH" = (
 /turf/simulated/floor/water/indoors,
-/area/space)
+/area/submap/plontden)
 "ur" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "vg" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
 "vj" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -191,7 +214,15 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
+"vl" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/plontden)
 "vy" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -201,12 +232,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "wG" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "xh" = (
 /obj/machinery/light{
 	dir = 4;
@@ -214,7 +245,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "Aj" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
@@ -222,7 +253,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "BG" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -241,11 +272,11 @@
 /obj/machinery/chem_master,
 /obj/structure/cable,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Cc" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "Cd" = (
 /obj/machinery/seed_storage/xenobotany{
 	dir = 1
@@ -255,12 +286,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Cp" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "CQ" = (
 /obj/machinery/light{
 	dir = 1
@@ -269,7 +300,7 @@
 /obj/structure/table/marble,
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Dp" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -277,23 +308,30 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "Er" = (
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "HB" = (
 /obj/structure/closet/cabinet,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
+"HD" = (
+/mob/living/carbon/human/ai_controlled/replicant,
+/turf/simulated/floor/tiled/white,
+/area/submap/plontden)
 "JI" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/medical,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
 "Ke" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -302,12 +340,12 @@
 	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "KI" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_research,
 /turf/simulated/floor/tiled/steel_grid,
-/area/space)
+/area/submap/plontden)
 "Li" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -316,7 +354,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "LV" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -326,7 +364,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Mo" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -334,12 +372,12 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "On" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/plontden)
 "OR" = (
 /obj/structure/table/glass,
 /obj/item/weapon/material/minihoe,
@@ -348,7 +386,7 @@
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/device/analyzer/plant_analyzer,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Pd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -366,7 +404,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/space)
+/area/submap/plontden)
 "Ps" = (
 /obj/structure/grille,
 /obj/structure/window/basic{
@@ -377,7 +415,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "Qm" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
@@ -385,27 +423,28 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "Ra" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/glass_research,
 /turf/simulated/floor/tiled/steel_grid,
-/area/space)
+/area/submap/plontden)
 "Rs" = (
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
+	dir = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "Rw" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "RD" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
@@ -414,7 +453,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "RJ" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -431,24 +470,24 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Sq" = (
 /obj/machinery/vending/hydronutrients{
 	categories = 3;
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "SH" = (
 /obj/machinery/botany/extractor,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Te" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "UL" = (
 /obj/structure/grille,
 /obj/structure/window/basic,
@@ -456,12 +495,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/plontden)
 "VY" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/industrial/hatch,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Wb" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -475,7 +514,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "WF" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
@@ -484,12 +523,12 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/hydro,
-/area/space)
+/area/submap/plontden)
 "Xb" = (
 /obj/machinery/light,
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 "Zb" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
@@ -498,7 +537,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/plontden)
 
 (1,1,1) = {"
 ur
@@ -625,7 +664,7 @@ ur
 ur
 ur
 ur
-ur
+iU
 iU
 lL
 Cp
@@ -634,7 +673,7 @@ od
 Li
 mO
 iU
-ur
+iU
 ur
 ur
 ur
@@ -687,12 +726,12 @@ ur
 ur
 eF
 VY
-mH
+HD
 Cp
 od
 od
 Li
-mH
+HD
 hS
 eF
 ur
@@ -727,9 +766,9 @@ ur
 iU
 iU
 VY
-mH
-Cp
-Rs
+vl
+ln
+Dp
 Dp
 Wb
 RJ
@@ -747,9 +786,9 @@ ur
 gH
 VY
 mH
-mH
+kp
 LV
-ln
+rH
 rH
 xh
 RD
@@ -766,10 +805,10 @@ ur
 ur
 UL
 CQ
-mH
+HD
 gA
 iU
-ln
+rH
 rH
 iU
 Te
@@ -787,9 +826,9 @@ ur
 eF
 VY
 mH
-mH
+kp
 Ke
-ln
+rH
 rH
 Er
 RD
@@ -807,9 +846,9 @@ ur
 iU
 iU
 VY
-mH
-Cp
-Mo
+iS
+ln
+Rs
 od
 Zb
 pA
@@ -847,12 +886,12 @@ ur
 ur
 gH
 VY
-mH
+HD
 Cp
 Mo
 od
 Li
-mH
+HD
 Cd
 Ps
 ur
@@ -914,7 +953,7 @@ od
 Li
 wG
 iU
-ur
+iU
 ur
 ur
 ur

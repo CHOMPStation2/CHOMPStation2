@@ -5,12 +5,12 @@
 	},
 /obj/structure/sign/nanotrasen,
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/crashedexplo)
 "ag" = (
 /obj/effect/decal/cleanable/blood,
 /obj/random/mob/spider/mutant,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "am" = (
 /obj/structure/table/glass,
 /obj/item/device/defib_kit/loaded,
@@ -20,7 +20,7 @@
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/item/weapon/storage/firstaid/adv,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "aC" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector,
@@ -28,7 +28,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "bF" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -41,7 +41,7 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "bG" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -59,14 +59,14 @@
 	},
 /obj/item/weapon/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "cI" = (
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/broken,
 /obj/item/weapon/material/shard/titaniumglass,
 /obj/item/weapon/material/shard/titaniumglass,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "dv" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -74,14 +74,14 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "dU" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
 	},
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "ey" = (
 /obj/machinery/light{
 	dir = 1
@@ -89,14 +89,14 @@
 /obj/structure/bed/chair/bay/shuttle,
 /obj/random/rigsuit/chancetofail,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "eQ" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/crashedexplo)
 "fv" = (
 /obj/random/energy/highend,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "go" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -105,36 +105,36 @@
 	},
 /obj/item/weapon/circuitboard/sleeper_console,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "hi" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/computer/ship{
+/obj/structure/salvageable/console_broken_os{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "hl" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
 /turf/template_noop,
-/area/space)
+/area/submap/crashedexplo)
 "hn" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
 	},
 /obj/random/mob/spider/mutant,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "hr" = (
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "ig" = (
 /turf/simulated/shuttle/wall/voidcraft/no_join,
-/area/space)
+/area/submap/crashedexplo)
 "iG" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -149,13 +149,13 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "jc" = (
 /obj/structure/bed/chair/bay/shuttle,
 /mob/living/simple_mob/animal/giant_spider/nurse,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "ke" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -171,7 +171,7 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "lL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate/engineering,
@@ -190,17 +190,17 @@
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/gloves/yellow,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "mj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "mA" = (
 /obj/structure/sign/redcross,
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "mX" = (
 /obj/machinery/vending/wallmed1{
 	dir = 4;
@@ -212,14 +212,14 @@
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
 /obj/item/weapon/circuitboard/sleeper,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "nS" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "nV" = (
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "pd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -231,7 +231,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "pl" = (
 /obj/structure/closet/secure_closet/guncabinet/phase{
 	req_one_access = null
@@ -245,7 +245,7 @@
 /obj/random/rigsuit/chancetofail,
 /obj/random/projectile,
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/submap/crashedexplo)
 "qn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -260,7 +260,7 @@
 	pixel_y = 28
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "rh" = (
 /obj/machinery/computer/ship/navigation/telescreen{
 	pixel_x = -32;
@@ -272,7 +272,7 @@
 	},
 /mob/living/simple_mob/animal/giant_spider/carrier,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "sR" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -291,7 +291,7 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "tP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -300,7 +300,7 @@
 	},
 /obj/item/weapon/circuitboard/recharge_station,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "up" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -311,7 +311,7 @@
 	},
 /obj/structure/frame,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "ur" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
@@ -338,18 +338,18 @@
 	},
 /obj/structure/closet/walllocker_double/hydrant/east,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "uM" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/crashedexplo)
 "vH" = (
 /obj/item/weapon/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "wv" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 5
@@ -373,7 +373,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "wU" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -381,12 +381,12 @@
 	},
 /obj/structure/frame,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "wZ" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "xp" = (
 /obj/machinery/power/apc/hyper{
 	pixel_y = -24
@@ -397,7 +397,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "xA" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
@@ -411,11 +411,11 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "xB" = (
 /obj/machinery/optable,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "zI" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -431,7 +431,7 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "zO" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
@@ -458,7 +458,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "AE" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	icon_state = "door_locked";
@@ -484,7 +484,7 @@
 	name = "window blast shield"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "AK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -507,23 +507,23 @@
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Cc" = (
 /mob/living/simple_mob/animal/giant_spider/carrier,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "CY" = (
 /obj/machinery/shipsensors,
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "DH" = (
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "DJ" = (
-/obj/machinery/computer/ship,
+/obj/structure/salvageable/console_broken_os,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "DQ" = (
 /obj/structure/table/reinforced,
 /obj/item/device/gps{
@@ -540,7 +540,7 @@
 /obj/item/weapon/storage/mre/random,
 /obj/item/weapon/storage/mre/random,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "Ft" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -548,7 +548,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/random/mob/spider/mutant,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "FI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -560,7 +560,7 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "FX" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/machinery/meter,
@@ -573,23 +573,23 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Gb" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /turf/simulated/shuttle/wall/voidcraft/no_join,
-/area/space)
+/area/submap/crashedexplo)
 "Hk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "KT" = (
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "KV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -599,21 +599,21 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "Ln" = (
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 32
 	},
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/crashedexplo)
 "LN" = (
 /obj/machinery/light,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "LY" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -622,7 +622,7 @@
 	},
 /obj/item/weapon/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "MU" = (
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/light{
@@ -631,9 +631,9 @@
 /obj/machinery/mech_recharger,
 /obj/random/mob/spider/mutant,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Ns" = (
-/obj/machinery/computer/ship,
+/obj/structure/salvageable/console_broken_os,
 /obj/machinery/button/remote/blast_door{
 	dir = 4;
 	id = "stargazer_blast";
@@ -642,7 +642,7 @@
 	pixel_y = -1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "NF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -653,7 +653,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/random/rigsuit/chancetofail,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "NP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -665,36 +665,36 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "OF" = (
-/obj/machinery/computer/ship{
+/obj/structure/salvageable/console_broken_os{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "Pn" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/crashedexplo)
 "Qs" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
 /obj/structure/shuttle/engine/heater,
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "Qx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "QU" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/portables_connector,
@@ -703,13 +703,13 @@
 	pixel_y = 25
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Rd" = (
 /obj/machinery/shuttle_sensor{
 	id_tag = "shuttle4sens_exp_psg"
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "RE" = (
 /obj/structure/grille/broken,
 /obj/item/weapon/material/shard/titaniumglass,
@@ -718,7 +718,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "RL" = (
 /obj/machinery/power/shield_generator/upgraded,
 /obj/structure/railing{
@@ -734,11 +734,11 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Se" = (
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "SE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
@@ -754,7 +754,7 @@
 	},
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/crashedexplo)
 "SV" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
@@ -764,19 +764,19 @@
 	},
 /mob/living/simple_mob/animal/giant_spider/carrier,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "Tb" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "TU" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "Ue" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/portables_connector{
@@ -787,7 +787,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Uz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/button/remote/airlock{
@@ -811,12 +811,12 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "UG" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "UT" = (
-/obj/machinery/computer/ship,
+/obj/structure/salvageable/console_broken_os,
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
 	dir = 8;
@@ -827,7 +827,7 @@
 	specialfunctions = 4
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "UU" = (
 /obj/structure/fuel_port{
 	pixel_y = -28
@@ -847,7 +847,7 @@
 	},
 /obj/random/energy/highend,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/crashedexplo)
 "UY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/structure/cable/green{
@@ -858,13 +858,13 @@
 /obj/effect/decal/cleanable/blood,
 /obj/item/weapon/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/crashedexplo)
 "VE" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
 	},
 /turf/simulated/shuttle/wall/voidcraft/no_join,
-/area/space)
+/area/submap/crashedexplo)
 "Wn" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -874,7 +874,7 @@
 /obj/effect/decal/cleanable/blood,
 /mob/living/simple_mob/animal/giant_spider/nurse,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "Xp" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -894,47 +894,47 @@
 /obj/machinery/door/blast/regular,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/crashedexplo)
 "Yk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/item/weapon/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "Yq" = (
 /obj/machinery/shuttle_sensor{
 	dir = 5;
 	id_tag = "shuttle4sens_exp"
 	},
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/crashedexplo)
 "Yr" = (
 /obj/item/weapon/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/crashedexplo)
 "YK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
 	},
 /obj/structure/shuttle/engine/heater,
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "Zr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater,
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "Zs" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/space)
+/area/submap/crashedexplo)
 "ZS" = (
 /obj/structure/sign/nanotrasen,
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/crashedexplo)
 
 (1,1,1) = {"
 UG

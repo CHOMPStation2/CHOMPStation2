@@ -1,74 +1,74 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/space,
-/area/space)
+/turf/template_noop,
+/area/template_noop)
 "b" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "d" = (
 /obj/item/weapon/melee/energy/sword/imperial,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "g" = (
 /obj/effect/decal/cleanable/ash,
 /obj/random/energy/highend,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "m" = (
 /obj/item/weapon/storage/secure/briefcase/fuelrod,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "n" = (
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/solarmoff)
 "p" = (
 /obj/item/rig_module/ai_container,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "s" = (
 /obj/item/rig_module/vision/thermal,
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "v" = (
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/solarmoff)
 "E" = (
 /mob/living/simple_mob/animal/space/carp/large,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/solarmoff)
 "F" = (
 /obj/random/energy/highend,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "G" = (
 /turf/simulated/mineral/crystal_shiny,
-/area/space)
+/area/submap/solarmoff)
 "I" = (
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "M" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/solarmoff)
 "N" = (
 /obj/structure/flora/ausbushes/reedbush,
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/solarmoff)
 "R" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/solarmoff)
 "U" = (
 /mob/living/simple_mob/vore/solarmoth,
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 "V" = (
 /turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/area/submap/solarmoff)
 
 (1,1,1) = {"
 a

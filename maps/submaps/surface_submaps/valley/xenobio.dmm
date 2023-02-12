@@ -6,15 +6,15 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "bl" = (
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "bM" = (
 /obj/structure/table/woodentable,
 /obj/item/stolenpackage,
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "bR" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -33,11 +33,11 @@
 	},
 /mob/living/simple_mob/slime/xenobio/green,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "bY" = (
 /obj/structure/closet/l3closet/scientist,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "cV" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -46,74 +46,70 @@
 	},
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "dT" = (
 /obj/structure/table/standard,
 /obj/item/clothing/glasses/graviton,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "ee" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/full{
 	density = 1
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "fl" = (
 /obj/item/weapon/material/shard,
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "fz" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/reinforced,
-/area/space)
+/turf/simulated/floor/reinforced/phoron,
+/area/submap/xenobio)
 "fL" = (
 /obj/machinery/porta_turret,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "fZ" = (
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "gK" = (
 /turf/simulated/wall/r_lead,
-/area/space)
+/area/submap/xenobio)
 "gW" = (
 /obj/machinery/door/blast/regular,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "iJ" = (
 /turf/simulated/floor/reinforced/phoron,
-/area/space)
+/area/submap/xenobio)
 "iQ" = (
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "iT" = (
 /obj/machinery/door/airlock/external/bolted,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "kl" = (
 /mob/living/simple_mob/slime/xenobio/ruby,
 /turf/simulated/floor/carpet/green,
-/area/space)
-"kt" = (
-/obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/reinforced/phoron,
-/area/space)
+/area/submap/xenobio)
 "kM" = (
 /obj/structure/closet/l3closet/scientist,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "kN" = (
 /obj/machinery/power/terminal{
 	dir = 1;
@@ -124,7 +120,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "lU" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -132,7 +128,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "ng" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -140,45 +136,45 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "nt" = (
 /obj/machinery/optable{
 	name = "Xenobiology Operating Table"
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "os" = (
 /obj/machinery/door/airlock/external/bolted,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "oC" = (
 /turf/simulated/wall/r_wall,
-/area/space)
+/area/submap/xenobio)
 "pa" = (
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "pP" = (
 /turf/simulated/wall{
 	can_open = 1;
 	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
 	},
-/area/space)
+/area/submap/xenobio)
 "rf" = (
 /obj/structure/table/standard,
 /obj/item/weapon/grenade/shooter/energy/tesla,
-/turf/simulated/floor/reinforced,
-/area/space)
+/turf/simulated/floor/reinforced/phoron,
+/area/submap/xenobio)
 "ri" = (
 /obj/item/device/perfect_tele/frontier,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "rw" = (
 /obj/structure/loot_pile/mecha/phazon,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "rS" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/energy/taser/xeno,
@@ -188,12 +184,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "sl" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/purple,
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "tw" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -204,18 +200,18 @@
 	locked = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "tW" = (
 /obj/random/plushielarge,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "uu" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "vu" = (
 /obj/machinery/light/poi,
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "wb" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -228,7 +224,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "zk" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -236,17 +232,17 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "zo" = (
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Aa" = (
 /obj/machinery/smartfridge/secure/extract,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Af" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -254,13 +250,13 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Ai" = (
 /obj/structure/table/reinforced,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "AO" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -268,34 +264,34 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "AS" = (
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "Co" = (
 /obj/structure/sink{
 	dir = 4;
 	pixel_x = 12
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Cq" = (
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "DG" = (
 /obj/machinery/door/blast/regular,
 /obj/machinery/door/window/brigdoor/westright,
 /turf/simulated/floor/reinforced/phoron,
-/area/space)
+/area/submap/xenobio)
 "Ej" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "Gc" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
@@ -303,34 +299,34 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "Gh" = (
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "GP" = (
 /turf/simulated/wall,
-/area/space)
+/area/submap/xenobio)
 "Ha" = (
 /obj/structure/table/standard,
 /obj/item/weapon/melee/baton/slime/loaded,
 /obj/item/weapon/melee/baton/slime/loaded,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "HY" = (
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "JJ" = (
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "JM" = (
 /mob/living/simple_mob/slime/xenobio/oil,
 /turf/simulated/floor/reinforced/phoron,
-/area/space)
+/area/submap/xenobio)
 "JP" = (
 /mob/living/simple_mob/slime/feral/dark_blue,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "JZ" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -338,13 +334,13 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Kw" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "KH" = (
 /obj/machinery/door/blast/regular,
 /obj/machinery/door/window/brigdoor/southright{
@@ -353,24 +349,24 @@
 	req_one_access = list(1,19)
 	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "Me" = (
 /obj/structure/table/standard,
 /obj/item/weapon/melee/energy/axe,
 /turf/simulated/floor/reinforced/phoron,
-/area/space)
+/area/submap/xenobio)
 "MR" = (
 /obj/item/weapon/bedsheet/purple,
 /obj/structure/bed,
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "Ng" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Np" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/surgery,
@@ -378,12 +374,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "NN" = (
 /obj/structure/table/standard,
 /obj/item/weapon/telecube/randomized/mated,
-/turf/simulated/floor/reinforced,
-/area/space)
+/turf/simulated/floor/reinforced/phoron,
+/area/submap/xenobio)
 "OW" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -391,17 +387,17 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "PM" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "Qq" = (
 /obj/structure/table/standard,
 /obj/item/clothing/suit/armor/reactive,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "RZ" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/beakers{
@@ -410,11 +406,11 @@
 	},
 /obj/item/weapon/mop/advanced,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Sc" = (
 /mob/living/simple_mob/slime/feral/dark_blue,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "SD" = (
 /obj/structure/table/woodentable,
 /obj/item/stolenpackage,
@@ -422,15 +418,15 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "SZ" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "Tn" = (
 /mob/living/carbon/human/ai_controlled/replicant,
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "TN" = (
 /obj/structure/table/standard,
 /obj/item/stack/material/phoron{
@@ -438,7 +434,7 @@
 	},
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/submap/xenobio)
 "Um" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -451,7 +447,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 "UR" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
@@ -459,16 +455,16 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/xenobio)
 "Wj" = (
 /obj/machinery/door/blast/regular,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/reinforced/phoron,
-/area/space)
+/area/submap/xenobio)
 "WL" = (
 /mob/living/simple_mob/slime/xenobio/bluespace,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/submap/xenobio)
 "YT" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -476,7 +472,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/green,
-/area/space)
+/area/submap/xenobio)
 
 (1,1,1) = {"
 uu
@@ -847,8 +843,8 @@ bl
 Ai
 oC
 fz
-HY
-kt
+iJ
+fz
 oC
 dT
 bl
@@ -866,9 +862,9 @@ kM
 bl
 bl
 os
-HY
-HY
-HY
+iJ
+iJ
+iJ
 oC
 Qq
 bl
@@ -1060,7 +1056,7 @@ uu
 "}
 (30,1,1) = {"
 uu
-oC
+uu
 oC
 oC
 oC

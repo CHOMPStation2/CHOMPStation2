@@ -4,61 +4,61 @@
 	amount = 10
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "c" = (
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/phorondragon)
 "i" = (
 /mob/living/simple_mob/vore/aggressive/dragon/virgo3b,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "j" = (
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "k" = (
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/submap/phorondragon)
 "n" = (
 /obj/item/slime_extract/purple,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "s" = (
 /obj/structure/outcrop/phoron,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "u" = (
 /obj/item/toy/plushie/carp/nebula,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "x" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "A" = (
 /obj/item/slime_extract/dark_purple,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "E" = (
 /obj/item/mecha_parts/mecha_equipment/weapon/phoron_bore,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "H" = (
 /turf/simulated/wall/phoron,
-/area/space)
+/area/submap/phorondragon)
 "J" = (
 /turf/simulated/mineral,
-/area/space)
+/area/submap/phorondragon)
 "S" = (
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 "U" = (
 /obj/structure/prop/statue/phoron,
 /turf/simulated/floor/water/deep,
-/area/space)
+/area/submap/phorondragon)
 "W" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/phorondragon)
 
 (1,1,1) = {"
 x

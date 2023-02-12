@@ -1,92 +1,92 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/space,
-/area/space)
+/turf/template_noop,
+/area/template_noop)
 "i" = (
 /obj/structure/cliff/automatic{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "n" = (
 /obj/fiftyspawner/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "o" = (
 /obj/item/instrument/violin/golden{
 	pixel_x = 7
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "q" = (
 /obj/item/weapon/flame/lighter/zippo/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "s" = (
 /obj/structure/cliff/automatic/ramp,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "v" = (
 /obj/item/weapon/gun/projectile/deagle/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "w" = (
 /obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "z" = (
 /obj/item/toy/plushie/carp/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "A" = (
 /obj/item/weapon/card/id/gold/captain/spare/fakespare,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "C" = (
 /obj/item/clothing/accessory/medal/solgov/gold/crest,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "G" = (
 /obj/structure/cliff/automatic/ramp{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "H" = (
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "I" = (
 /turf/simulated/mineral,
-/area/space)
+/area/submap/begderg)
 "M" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "R" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "S" = (
 /obj/item/slime_extract/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "U" = (
 /mob/living/simple_mob/vore/bigdragon,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/begderg)
 "X" = (
 /obj/item/weapon/pickaxe/gold{
 	pixel_x = -12;
 	pixel_y = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 "Y" = (
 /obj/structure/cliff/automatic{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/begderg)
 
 (1,1,1) = {"
 a

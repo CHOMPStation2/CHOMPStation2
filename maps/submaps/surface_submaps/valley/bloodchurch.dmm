@@ -1,37 +1,37 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "b" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "c" = (
 /mob/living/simple_mob/construct/shade,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "d" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/firstaid,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "e" = (
 /mob/living/simple_mob/humanoid/cultist/elite,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "f" = (
 /obj/structure/bed/double/padded,
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
 /obj/item/weapon/bedsheet/hosdouble,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "g" = (
 /obj/structure/bed/double/padded,
 /mob/living/simple_mob/humanoid/cultist/castertesh,
 /obj/item/weapon/bedsheet/hosdouble,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "h" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/meat,
@@ -39,31 +39,37 @@
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "i" = (
-/obj/structure/table/sifwoodentable,
 /obj/random/explorer_shield,
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
+/obj/structure/closet/crate/secure/loot,
+/obj/item/weapon/rig/pathfinder,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "j" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/caster,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
+"k" = (
+/obj/structure/loot_pile/surface/bones,
+/obj/item/weapon/storage/backpack/holding/duffle,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "l" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/wintercoat/narsie,
 /obj/item/clothing/suit/storage/hooded/wintercoat/narsie,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "m" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "n" = (
 /obj/structure/closet/crate,
 /obj/item/stolenpackage,
@@ -71,75 +77,80 @@
 /obj/item/stolenpackage,
 /obj/item/rig_module/vision/thermal,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "o" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/castertesh,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "p" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/clothing/head/psy_crown/wrath,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "q" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "r" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "s" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
+"t" = (
+/obj/structure/loot_pile/surface/bones,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "u" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "v" = (
 /obj/item/clothing/head/wizard/amp,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "w" = (
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "x" = (
 /turf/simulated/wall/log_sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "y" = (
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "z" = (
 /mob/living/simple_mob/construct/juggernaut,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "A" = (
 /obj/item/weapon/gun/energy/staff/focus,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "B" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /obj/random/gun/random,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "C" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "D" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/meat,
@@ -148,104 +159,104 @@
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "E" = (
 /obj/item/clothing/suit/wizrobe,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "F" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "G" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "H" = (
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "I" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /mob/living/simple_mob/construct/shade,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "J" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "K" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "L" = (
 /obj/structure/closet,
 /obj/random/energy/highend,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "M" = (
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "N" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "O" = (
 /turf/template_noop,
-/area/submap/event)
+/area/template_noop)
 "P" = (
 /mob/living/simple_mob/vore/demonAI/wendigo{
 	faction = "cult"
 	},
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "Q" = (
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "R" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "S" = (
 /mob/living/simple_mob/construct/artificer/caster,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "T" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/spellbook/oneuse/forcewall,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "U" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "V" = (
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "W" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/event)
+/area/submap/bloodchurch)
 "X" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "Y" = (
 /obj/item/clothing/suit/wizrobe/psypurple,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 "Z" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/lizard,
 /turf/simulated/floor/wood/sif,
-/area/submap/event)
+/area/submap/bloodchurch)
 
 (1,1,1) = {"
 O
@@ -444,7 +455,6 @@ a
 a
 a
 a
-S
 a
 a
 a
@@ -457,7 +467,8 @@ a
 a
 a
 a
-S
+a
+a
 a
 a
 a
@@ -596,7 +607,7 @@ H
 q
 c
 A
-r
+t
 x
 f
 Q
@@ -667,7 +678,7 @@ q
 Q
 c
 Y
-r
+k
 v
 r
 I
@@ -867,7 +878,7 @@ a
 a
 a
 a
-S
+a
 a
 U
 a
@@ -901,7 +912,7 @@ Q
 K
 a
 a
-a
+S
 a
 a
 a
@@ -1015,7 +1026,7 @@ a
 a
 a
 a
-S
+a
 a
 U
 a
@@ -1085,7 +1096,7 @@ K
 x
 a
 a
-a
+S
 a
 U
 a
@@ -1122,7 +1133,7 @@ Q
 x
 a
 a
-S
+a
 a
 U
 a
@@ -1502,7 +1513,7 @@ O
 a
 a
 a
-U
+m
 O
 "}
 (35,1,1) = {"

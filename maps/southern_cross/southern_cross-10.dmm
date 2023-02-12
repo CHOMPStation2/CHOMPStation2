@@ -32,12 +32,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/wilderness/mountains)
-"al" = (
-/obj/effect/map_effect/portal/master/side_a/caves_to_valley{
-	dir = 8
-	},
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/mountains)
 "am" = (
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
@@ -466,25 +460,12 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
-"dB" = (
-/obj/effect/zone_divider,
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
-	},
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/mountains)
 "dO" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/water,
 /area/surface/outpost/wall/checkpoint)
-"ek" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
-	},
-/turf/simulated/floor/water,
-/area/surface/outside/river/svartan)
 "er" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -569,6 +550,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"kh" = (
+/turf/simulated/wall/solidrock,
+/area/surface/outside/wilderness/normal)
 "kZ" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -604,12 +588,6 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
-"mZ" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
-	},
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/deep)
 "nN" = (
 /turf/simulated/wall/rsifwood,
 /area/surface/outside/wilderness/mountains)
@@ -652,6 +630,13 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/wilderness)
+"sC" = (
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "td" = (
 /obj/structure/curtain/medical{
 	name = "medical curtain"
@@ -715,6 +700,13 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/wilderness)
+"xx" = (
+/obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/water,
+/area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -736,10 +728,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
-"zy" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/surface/outside/wilderness/mountains)
 "AB" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -754,6 +742,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"BF" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "Dk" = (
 /obj/structure/sign/department/medbay{
 	name = "FIRST AID"
@@ -772,6 +767,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
+"IZ" = (
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/normal)
 "Jk" = (
 /obj/item/device/geiger/wall/north,
 /obj/structure/reagent_dispensers/watertank,
@@ -794,17 +792,22 @@
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
+"Lh" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "Lv" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
-"LT" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
+"LI" = (
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
 	},
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/mountains)
+/turf/simulated/floor/water,
+/area/surface/outside/river/svartan)
 "Mk" = (
 /obj/structure/table/rack,
 /obj/item/weapon/circuitboard/machine/rtg/advanced,
@@ -848,12 +851,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
-"QM" = (
+"Pw" = (
 /obj/effect/map_effect/portal/line/side_a{
-	dir = 8
+	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/surface/outside/wilderness/deep)
+/obj/structure/catwalk,
+/turf/simulated/floor/water,
+/area/surface/outside/river/svartan)
 "Rc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -898,18 +902,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
-"SW" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/surface/outside/wilderness/normal)
-"VE" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "Wo" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -957,6 +949,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
+"XD" = (
+/turf/simulated/wall/solidrock,
+/area/surface/outside/wilderness/deep)
 "Yq" = (
 /obj/machinery/power/thermoregulator/southerncross{
 	pixel_x = 1;
@@ -996,6 +991,9 @@
 "YL" = (
 /turf/simulated/mineral/sif,
 /area/surface/outpost/wall/checkpoint)
+"Za" = (
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/deep)
 "ZG" = (
 /obj/structure/showcase/sign{
 	desc = "This appears to be a sign warning people that the other side is extremely hazardous.";
@@ -1005,6 +1003,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
+"ZN" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/water,
+/area/surface/outside/river/svartan)
 
 (1,1,1) = {"
 ab
@@ -1136,18 +1138,18 @@ ab
 ab
 ab
 ad
-ah
-ah
-ah
-am
-am
-an
-an
-am
-am
-ap
-ap
-ap
+ab
+XD
+XD
+Pw
+Pw
+BF
+BF
+Pw
+xx
+kh
+kh
+ab
 ab
 ab
 ab
@@ -1392,22 +1394,22 @@ ac
 ac
 ac
 ac
-LT
-dB
-QM
-QM
-mZ
-ek
-ek
-VE
-VE
-ek
-ek
-SW
-SW
-SW
-LT
-al
+ac
+ak
+ac
+Za
+Za
+ZN
+ZN
+Lh
+Lh
+ZN
+ZN
+IZ
+IZ
+ac
+ac
+ac
 ac
 ac
 ac
@@ -1651,16 +1653,16 @@ ac
 ac
 ac
 ac
-zy
+ak
 ah
 ah
 ah
-am
-am
-an
-an
-am
-am
+ZN
+ZN
+Lh
+Lh
+ZN
+ZN
 ap
 ap
 ap
@@ -1913,12 +1915,12 @@ aw
 ah
 ah
 ah
-am
-am
-an
-an
-am
-am
+ZN
+ZN
+Lh
+Lh
+ZN
+ZN
 ap
 ap
 ap
@@ -2171,12 +2173,12 @@ aw
 ah
 ah
 ah
-am
-am
-an
-an
-am
-am
+LI
+LI
+sC
+sC
+LI
+LI
 am
 ap
 ap

@@ -1,66 +1,70 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
+"b" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/ion,
+/turf/simulated/shuttle/floor/alien,
+/area/submap/vault)
 "c" = (
 /turf/simulated/shuttle/wall/alien,
-/area/space)
+/area/submap/vault)
 "d" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "e" = (
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /obj/item/weapon/implantcase/chem,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "i" = (
 /obj/structure/loot_pile/surface/alien/security,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "n" = (
 /obj/structure/loot_pile/surface/alien/end,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "o" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
 /turf/simulated/shuttle/floor/alien,
-/area/space)
+/area/submap/vault)
 "p" = (
 /turf/space,
-/area/space)
+/area/submap/vault)
 "r" = (
 /obj/machinery/porta_turret/alien{
 	faction = "hivebot"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "v" = (
 /obj/structure/table/alien/blue,
 /obj/random/janusmodule,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "x" = (
 /turf/simulated/shuttle/floor/alienplating/external,
-/area/space)
+/area/submap/vault)
 "y" = (
-/obj/item/weapon/telecube/randomized/mated,
+/obj/item/clothing/suit/armor/shield,
 /obj/item/weapon/implantcase/handblade,
 /obj/item/weapon/implantcase/dart,
-/turf/simulated/shuttle/floor/alien,
-/area/space)
+/turf/simulated/floor/airless,
+/area/submap/vault)
 "z" = (
 /turf/simulated/shuttle/floor/alien,
-/area/space)
+/area/submap/vault)
 "B" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "C" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "D" = (
 /obj/structure/window/titanium/full,
 /obj/structure/grille/cult{
@@ -78,56 +82,66 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/floor/alienplating/external,
-/area/space)
+/area/submap/vault)
+"G" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/dot,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/vault)
 "H" = (
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "I" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "J" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
 /turf/simulated/shuttle/floor/alien,
-/area/space)
+/area/submap/vault)
 "L" = (
 /mob/living/simple_mob/mechanical/hivebot/support/logistics,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "M" = (
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /obj/item/weapon/implantcase/medkit,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "P" = (
 /obj/machinery/porta_turret/alien{
 	faction = "hivebot"
 	},
 /turf/simulated/shuttle/floor/alien,
-/area/space)
+/area/submap/vault)
 "R" = (
 /obj/structure/table/alien/blue,
 /obj/item/weapon/gun/energy/alien,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
+"V" = (
+/obj/machinery/porta_turret/alien{
+	faction = "hivebot"
+	},
+/turf/simulated/floor/airless,
+/area/submap/vault)
 "X" = (
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
 	faction = "hivebot"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 "Z" = (
 /obj/machinery/door/airlock/alien/blue/locked,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/space)
+/area/submap/vault)
 
 (1,1,1) = {"
 d
@@ -802,13 +816,13 @@ I
 a
 c
 c
-P
+V
 p
 p
 p
 p
 p
-P
+V
 c
 c
 a
@@ -1048,13 +1062,13 @@ I
 a
 c
 c
-P
+V
 p
 p
 p
 p
 p
-P
+V
 c
 c
 a
@@ -1170,15 +1184,15 @@ a
 c
 c
 c
-a
-a
+G
+G
 a
 a
 v
 a
 a
-a
-a
+G
+G
 c
 c
 c
@@ -1213,11 +1227,11 @@ c
 a
 a
 a
+b
+b
 z
-z
-z
-z
-z
+b
+b
 a
 a
 a
@@ -1254,11 +1268,11 @@ a
 a
 a
 a
-a
-a
-X
-a
-a
+G
+G
+G
+G
+G
 a
 a
 a

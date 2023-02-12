@@ -4,18 +4,18 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "bt" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "bG" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "bK" = (
 /obj/structure/table/marble,
 /obj/random/tool/power,
@@ -23,17 +23,17 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "bT" = (
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "cg" = (
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "ck" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/item/stolenpackage,
@@ -43,18 +43,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratefortress)
 "cK" = (
 /obj/random/tool,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "df" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "dB" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -62,12 +62,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "dK" = (
 /obj/random/material,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "dZ" = (
 /obj/structure/table/marble,
 /obj/random/material/refined,
@@ -76,14 +76,14 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "es" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "eF" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/suit/pirate,
@@ -95,17 +95,17 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "fq" = (
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "ft" = (
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "fU" = (
 /obj/structure/table/reinforced,
 /obj/random/maintenance/security,
@@ -115,14 +115,14 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "gN" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "gQ" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/armored,
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -132,31 +132,33 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "gU" = (
-/obj/structure/closet/grave/dirthole,
+/obj/structure/closet/grave{
+	opened = 0
+	},
 /obj/random/projectile,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "hd" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "hx" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/armored,
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "hS" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "iK" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -168,8 +170,14 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "jg" = (
 /mob/living/simple_mob/humanoid/pirate/machete/armored,
 /obj/structure/cable{
@@ -188,45 +196,45 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "jO" = (
 /obj/structure/table/marble,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "jZ" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "kq" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "ky" = (
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "kC" = (
 /obj/machinery/porta_turret/industrial{
 	faction = "pirate"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/piratefortress)
 "lc" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "le" = (
 /obj/structure/table/marble,
 /obj/random/material/precious,
@@ -237,51 +245,55 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "lh" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "lj" = (
 /obj/structure/table/marble,
 /obj/item/stack/material/tritium{
 	amount = 20
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "lw" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/pirate,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "ms" = (
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/piratefortress)
 "mx" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "mU" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "mY" = (
-/obj/structure/closet/grave/dirthole,
+/obj/structure/closet/grave{
+	opened = 0
+	},
 /obj/random/maintenance,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "nj" = (
 /obj/item/weapon/dnainjector/telemut,
-/obj/structure/closet/grave/dirthole,
+/obj/structure/closet/grave{
+	opened = 0
+	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "nl" = (
 /obj/structure/table/marble,
 /obj/random/toolbox,
@@ -293,13 +305,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "or" = (
 /mob/living/simple_mob/vore/aggressive/frog{
 	faction = "pirate"
 	},
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/piratefortress)
 "ov" = (
 /obj/structure/table/marble,
 /obj/random/material,
@@ -307,43 +319,43 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "oX" = (
 /turf/simulated/wall/skipjack,
-/area/space)
+/area/submap/piratefortress)
 "pA" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "sr" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "tr" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "uu" = (
 /turf/simulated/floor/water/pool,
-/area/space)
+/area/submap/piratefortress)
 "uB" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/weapon/implantcase/surge,
 /obj/item/weapon/gun/projectile/lamia,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "uU" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "vk" = (
 /obj/machinery/porta_turret/industrial{
 	faction = "pirate"
@@ -352,12 +364,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratefortress)
 "vr" = (
 /obj/structure/table/reinforced,
 /obj/random/explorer_shield,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "vB" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/gun/projectile/revolver/lombardi/gold,
@@ -365,15 +377,15 @@
 /obj/item/weapon/material/minihoe,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "vR" = (
 /turf/simulated/wall/skipjack{
 	can_open = 1
 	},
-/area/space)
+/area/submap/piratefortress)
 "vT" = (
 /turf/simulated/floor/outdoors/grass/sif/forest,
-/area/space)
+/area/submap/piratefortress)
 "wq" = (
 /obj/structure/table/marble,
 /obj/random/toolbox,
@@ -381,7 +393,7 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "wv" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
@@ -390,7 +402,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "wN" = (
 /obj/item/clothing/glasses/graviton/medgravpatch,
 /obj/structure/closet/crate/secure{
@@ -406,7 +418,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratefortress)
 "xf" = (
 /obj/structure/table/marble,
 /obj/item/mecha_parts/mecha_equipment/storage/bluespace,
@@ -415,16 +427,16 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "xi" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "xj" = (
 /turf/simulated/wall/golddiamond,
-/area/space)
+/area/submap/piratefortress)
 "xk" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/night,
@@ -433,11 +445,11 @@
 /obj/item/clothing/under/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "xM" = (
 /obj/machinery/door/airlock/gold,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "xN" = (
 /mob/living/simple_mob/humanoid/pirate/las/armored,
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -447,54 +459,54 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "xX" = (
 /obj/structure/table/gold,
 /obj/item/weapon/aliencoin/gold,
 /obj/random/energy/highend,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "yg" = (
 /turf/simulated/wall/durasteel,
-/area/space)
+/area/submap/piratefortress)
 "yi" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "zu" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "zR" = (
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Au" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Av" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/glass/bottle/robustharvest,
 /obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "AJ" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "BP" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/item/stolenpackage,
@@ -504,12 +516,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratefortress)
 "BT" = (
 /obj/structure/table/reinforced,
 /obj/random/projectile,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Di" = (
 /obj/item/clothing/glasses/thermal/plain/eyepatch,
 /obj/structure/closet/crate/secure{
@@ -526,11 +538,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratefortress)
 "DD" = (
 /mob/living/simple_mob/vore/pitcher_plant,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "DL" = (
 /mob/living/simple_mob/humanoid/pirate/captain,
 /obj/structure/bed/chair/backed_red{
@@ -538,12 +550,12 @@
 	},
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "DN" = (
 /obj/structure/closet/grave/dirthole,
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/outdoors/grass/sif/forest,
-/area/space)
+/area/submap/piratefortress)
 "En" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/goldappleseed,
@@ -552,7 +564,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "EB" = (
 /obj/structure/table/reinforced,
 /obj/random/maintenance/morestuff,
@@ -561,11 +573,11 @@
 /obj/item/clothing/head/collectable/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Fo" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "FC" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/glass/bottle/left4zed,
@@ -575,51 +587,55 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Gl" = (
-/obj/structure/closet/grave/dirthole,
+/obj/structure/closet/grave{
+	opened = 0
+	},
 /obj/random/contraband,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Gv" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "GI" = (
 /mob/living/simple_mob/humanoid/pirate/mate/ranged,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Hd" = (
-/obj/machinery/door/airlock/diamond,
+/obj/machinery/door/airlock/diamond{
+	locked = 1
+	},
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratefortress)
 "HA" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "JV" = (
 /mob/living/simple_mob/vore/aggressive/panther{
 	faction = "pirate"
 	},
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "KS" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/piratefortress)
 "La" = (
 /turf/simulated/floor/outdoors/rocks,
-/area/space)
+/area/submap/piratefortress)
 "Lr" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/pirate,
@@ -628,37 +644,37 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Mo" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "MC" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "NA" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "NG" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "OB" = (
 /obj/structure/table/gold,
 /obj/item/weapon/flame/lighter/zippo/gold,
 /obj/item/capture_crystal,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "ON" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -666,7 +682,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "Pl" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -674,7 +690,7 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Pr" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable{
@@ -682,14 +698,14 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "PF" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "PJ" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
@@ -698,7 +714,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "PP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -711,7 +727,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/piratefortress)
 "Qw" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -722,26 +738,26 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/piratefortress)
 "QI" = (
 /obj/structure/table/reinforced,
 /obj/random/energy/highend,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "QM" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "St" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Su" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "Td" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/gun/projectile/deagle/gold,
@@ -750,7 +766,7 @@
 /obj/item/clothing/under/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "TJ" = (
 /obj/structure/table/reinforced,
 /obj/random/projectile/shotgun,
@@ -760,7 +776,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "TL" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -768,35 +784,35 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/submap/piratefortress)
 "Up" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Uu" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/goldappleseed,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Uz" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /mob/living/simple_mob/mechanical/mecha/ripley/pirate,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "VJ" = (
 /obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "WW" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/goldappleseed,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Xv" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/night,
@@ -809,13 +825,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "XD" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "XJ" = (
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "XL" = (
 /obj/structure/table/marble,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/rigged,
@@ -824,7 +840,7 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Zb" = (
 /obj/structure/table/marble,
 /obj/item/rig_module/atmos_shield,
@@ -832,7 +848,7 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "Zi" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
@@ -841,7 +857,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "ZC" = (
 /mob/living/simple_mob/vore/lamia/random{
 	faction = "pirate"
@@ -849,11 +865,11 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/yellow,
-/area/space)
+/area/submap/piratefortress)
 "ZQ" = (
 /obj/structure/railing,
 /turf/simulated/floor/wood,
-/area/space)
+/area/submap/piratefortress)
 
 (1,1,1) = {"
 XD

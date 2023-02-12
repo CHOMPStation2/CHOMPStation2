@@ -5,10 +5,10 @@
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/elite,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "aj" = (
 /turf/simulated/shuttle/wall/voidcraft/orange,
-/area/space)
+/area/submap/dronelord)
 "ax" = (
 /obj/structure/table/glass,
 /obj/random/firstaid,
@@ -16,18 +16,18 @@
 /obj/random/firstaid,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "ay" = (
 /mob/living/simple_mob/mechanical/combat_drone{
 	faction = "syndicate"
 	},
 /turf/simulated/shuttle/floor/purple,
-/area/space)
+/area/submap/dronelord)
 "bl" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "bA" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -41,33 +41,33 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "cw" = (
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate"
 	},
 /turf/simulated/shuttle/floor/red,
-/area/space)
+/area/submap/dronelord)
 "cS" = (
 /obj/machinery/body_scanconsole,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "dq" = (
 /obj/structure/table/standard,
 /turf/simulated/shuttle/floor/purple,
-/area/space)
+/area/submap/dronelord)
 "dw" = (
 /obj/item/weapon/gun/projectile/automatic/as24,
 /obj/item/weapon/tank/jetpack/oxygen,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "ec" = (
 /obj/structure/closet/toolcloset,
 /obj/random/tool/power,
 /obj/random/tool/power,
 /obj/random/tool/power,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "eD" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
@@ -75,11 +75,11 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "eL" = (
 /obj/machinery/portable_atmospherics/canister/empty/oxygen,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "fU" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -97,7 +97,7 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "gQ" = (
 /obj/machinery/power/terminal{
 	dir = 1;
@@ -108,15 +108,15 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "jy" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/firstaid/clotting,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "ko" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/space)
+/area/submap/dronelord)
 "kD" = (
 /mob/living/simple_mob/mechanical/combat_drone{
 	faction = "syndicate"
@@ -132,20 +132,20 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "lO" = (
 /mob/living/simple_mob/mechanical/combat_drone{
 	faction = "syndicate"
 	},
 /turf/simulated/shuttle/floor/red,
-/area/space)
+/area/submap/dronelord)
 "mG" = (
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate"
 	},
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/submap/dronelord)
 "mO" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -160,57 +160,57 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "od" = (
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "sV" = (
 /obj/structure/table/standard,
 /obj/item/weapon/telecube/randomized,
 /turf/simulated/shuttle/floor/purple,
-/area/space)
+/area/submap/dronelord)
 "tK" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/dronelord)
 "wZ" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "propulsion_r"
 	},
 /turf/simulated/shuttle/wall/voidcraft/orange,
-/area/space)
+/area/submap/dronelord)
 "xz" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/firstaid/adv,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "yh" = (
 /turf/simulated/wall/durasteel,
-/area/space)
+/area/submap/dronelord)
 "yD" = (
 /mob/living/simple_mob/mechanical/mining_drone{
 	faction = "syndicate"
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/dronelord)
 "zi" = (
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/dronelord)
 "BM" = (
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate"
 	},
 /turf/simulated/shuttle/floor/purple,
-/area/space)
+/area/submap/dronelord)
 "En" = (
 /obj/structure/closet/secure_closet/guncabinet/excursion,
 /obj/item/weapon/gun/projectile/giskard/olivaw,
 /obj/item/weapon/gun/energy/lasershotgun,
 /turf/simulated/shuttle/floor/red,
-/area/space)
+/area/submap/dronelord)
 "Fc" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -226,11 +226,11 @@
 	},
 /obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "FQ" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "Gi" = (
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate"
@@ -239,28 +239,28 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/submap/dronelord)
 "GM" = (
 /mob/living/simple_mob/mechanical/combat_drone{
 	faction = "syndicate"
 	},
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "Ic" = (
-/obj/machinery/computer/ship{
+/obj/machinery/computer{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "Ix" = (
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/voidcraft,
-/area/space)
+/area/submap/dronelord)
 "IU" = (
 /turf/simulated/shuttle/floor/red,
-/area/space)
+/area/submap/dronelord)
 "Ja" = (
 /obj/machinery/power/port_gen/pacman/super,
 /obj/structure/cable{
@@ -268,17 +268,17 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "JY" = (
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "Kp" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/shuttle/floor/voidcraft,
-/area/space)
+/area/submap/dronelord)
 "Kv" = (
 /turf/simulated/shuttle/floor/voidcraft,
-/area/space)
+/area/submap/dronelord)
 "KU" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stack/material/glass{
@@ -290,15 +290,15 @@
 	amount = 50
 	},
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "Lv" = (
 /obj/machinery/autolathe,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "Ov" = (
 /turf/simulated/shuttle/floor/purple,
-/area/space)
+/area/submap/dronelord)
 "OA" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -306,22 +306,19 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/space)
+/area/submap/dronelord)
 "RI" = (
 /obj/item/weapon/tank/jetpack/oxygen,
-/obj/item/weapon/gun/energy/vepr/plasma{
-	accept_cell_type = /obj/item/weapon/cell;
-	cell_type = /obj/item/weapon/cell/device/weapon
-	},
+/obj/item/weapon/gun/projectile/automatic/as24,
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "RV" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Sw" = (
 /obj/machinery/bodyscanner,
 /turf/simulated/shuttle/floor/white,
-/area/space)
+/area/submap/dronelord)
 "TX" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 4
@@ -330,7 +327,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/wall/voidcraft/orange,
-/area/space)
+/area/submap/dronelord)
 "Ul" = (
 /obj/structure/closet/secure_closet/guncabinet/excursion,
 /obj/item/weapon/gun/projectile/multi_cannon,
@@ -339,28 +336,28 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/red,
-/area/space)
+/area/submap/dronelord)
 "Uz" = (
 /obj/structure/table/standard,
 /obj/item/weapon/card/emag/used,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/purple,
-/area/space)
+/area/submap/dronelord)
 "VO" = (
 /turf/simulated/shuttle/floor/black,
-/area/space)
+/area/submap/dronelord)
 "WO" = (
 /obj/structure/closet/secure_closet/guncabinet/excursion,
 /obj/item/weapon/gun/magnetic/matfed,
 /obj/item/weapon/gun/energy/ionrifle,
 /turf/simulated/shuttle/floor/red,
-/area/space)
+/area/submap/dronelord)
 "YR" = (
 /obj/machinery/light/poi{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft,
-/area/space)
+/area/submap/dronelord)
 
 (1,1,1) = {"
 RV

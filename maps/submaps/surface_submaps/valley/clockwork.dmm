@@ -2,117 +2,110 @@
 "a" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/lava,
-/area/space)
+/area/submap/clockwork)
 "b" = (
 /obj/structure/cliff/automatic{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "h" = (
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "k" = (
-/mob/living/simple_mob/clockwork/fluff/Ignis{
+/mob/living/simple_mob/mechanical/wahlem{
 	faction = "malf_drone"
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "p" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "q" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "u" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "v" = (
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
-"y" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/mechanical/wahlem{
-	faction = "malf_drone"
-	},
-/turf/simulated/floor/lava,
-/area/space)
+/area/submap/clockwork)
 "z" = (
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "C" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "F" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "I" = (
 /obj/structure/cliff/automatic{
 	dir = 10;
 	icon_state = "cliffbuilder"
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "J" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "K" = (
 /obj/structure/cliff/automatic{
 	dir = 6;
 	icon_state = "cliffbuilder"
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "M" = (
 /turf/simulated/floor/lava,
-/area/space)
+/area/submap/clockwork)
 "N" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "Q" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "R" = (
 /obj/structure/cliff/automatic{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "U" = (
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "W" = (
 /mob/living/simple_mob/mechanical/mining_drone,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 "Z" = (
 /obj/structure/table/gold,
 /obj/item/weapon/rig/ch/clockwork,
 /obj/item/weapon/gun/energy/clockwork,
 /turf/simulated/floor/outdoors/rocks/caves,
-/area/space)
+/area/submap/clockwork)
 
 (1,1,1) = {"
 F
@@ -398,13 +391,13 @@ W
 M
 M
 M
-y
+a
 M
 z
 k
 z
 M
-y
+a
 M
 M
 M

@@ -2,13 +2,13 @@
 "a" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "b" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "c" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -16,187 +16,187 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "d" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "g" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/template_noop)
 "h" = (
 /obj/random/energy/highend,
 /obj/item/weapon/material/knife/machete/hatchet/unathiknife,
 /obj/structure/closet/crate,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "i" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "j" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "k" = (
 /turf/simulated/wall/log_sif,
-/area/space)
+/area/submap/teppifarm)
 "l" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/template_noop)
 "m" = (
 /obj/structure/table/standard,
 /obj/item/weapon/material/minihoe,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "p" = (
 /obj/structure/table/standard,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "q" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "r" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/firstaid,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "s" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/candelabra,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "t" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/template_noop)
 "u" = (
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "x" = (
 /obj/structure/window/basic,
 /obj/structure/curtain/black,
 /obj/structure/table/standard,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "y" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "z" = (
 /obj/structure/window/basic,
 /obj/effect/landmark/loot_spawn,
 /obj/structure/curtain/black,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "A" = (
 /obj/structure/table/rack,
 /obj/item/weapon/melee/umbrella/random,
 /obj/item/weapon/gun/energy/taser/xeno,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "C" = (
 /obj/structure/railing{
 	dir = 8;
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "D" = (
 /turf/simulated/floor/water,
-/area/space)
+/area/submap/teppifarm)
 "E" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "G" = (
 /obj/structure/simple_door/sifwood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "H" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "I" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/hydroponics/exotic,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "L" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/template_noop)
 "M" = (
 /obj/structure/simple_door/sifwood,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "O" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "P" = (
 /obj/item/weapon/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "Q" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "S" = (
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "U" = (
 /mob/living/simple_mob/vore/alienanimals/teppi,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "V" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/structure/table/rack,
 /obj/item/weapon/melee/umbrella/random,
 /obj/item/weapon/gun/energy/taser/xeno,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "W" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/grass,
-/area/space)
+/area/submap/teppifarm)
 "X" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "Y" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/blue,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/teppifarm)
 "Z" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 
 (1,1,1) = {"
 Z

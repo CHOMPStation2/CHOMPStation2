@@ -3,49 +3,49 @@
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "aZ" = (
 /obj/structure/table/darkglass,
 /obj/item/ammo_casing/microbattery/medical/burn3,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "bH" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "bV" = (
 /obj/machinery/oxygen_pump/mobile/anesthetic,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "eq" = (
 /obj/structure/closet/toolcloset,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "es" = (
 /turf/simulated/wall/ironphoron,
-/area/space)
+/area/submap/fallenlab)
 "fh" = (
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "fl" = (
 /obj/structure/salvageable/implant_container,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "fr" = (
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "fL" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait,
 /obj/structure/barricade/planks,
@@ -54,26 +54,26 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "fY" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "gy" = (
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "gN" = (
 /obj/machinery/oxygen_pump/mobile/anesthetic,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "gP" = (
 /obj/structure/table/standard,
 /obj/item/ammo_casing/microbattery/medical/haste,
@@ -81,16 +81,16 @@
 /obj/random/material/precious,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "hc" = (
 /obj/machinery/porta_turret/stationary/syndie/CIWS,
 /turf/simulated/floor/plating,
-/area/space)
+/area/submap/fallenlab)
 "iw" = (
 /mob/living/simple_mob/mechanical/cyber_horror/vox,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "jh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -98,16 +98,16 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "kh" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "ki" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "kq" = (
 /obj/structure/table/darkglass,
 /obj/random/medical,
@@ -115,27 +115,27 @@
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "kW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "kZ" = (
 /obj/structure/salvageable/data,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "lh" = (
 /turf/simulated/floor/grass,
-/area/space)
+/area/submap/fallenlab)
 "mf" = (
 /obj/machinery/door/airlock,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "mo" = (
 /obj/structure/table/standard,
 /obj/random/material/refined,
@@ -143,61 +143,61 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/item/clothing/suit/armor/crusader,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "ny" = (
 /obj/structure/salvageable/data,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "qK" = (
 /obj/structure/table/darkglass,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "qL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "rk" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "rv" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "rL" = (
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "sf" = (
 /obj/machinery/optable,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "sg" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "sM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "sN" = (
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "sS" = (
 /obj/structure/table/standard,
 /obj/item/device/nif,
@@ -205,12 +205,12 @@
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "tb" = (
 /obj/structure/barricade/planks,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "tc" = (
 /obj/structure/table/standard,
 /obj/item/ammo_casing/microbattery/medical/brute3,
@@ -218,7 +218,7 @@
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "tl" = (
 /obj/structure/table/darkglass,
 /obj/item/ammo_casing/microbattery/medical/brute3,
@@ -226,19 +226,19 @@
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "tI" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "vt" = (
 /obj/machinery/optable,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "wi" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/projectile/cell_loaded/medical,
@@ -246,7 +246,7 @@
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "xo" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/storage/toolbox/syndicate/powertools,
@@ -254,32 +254,32 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "xI" = (
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "ye" = (
 /obj/structure/salvageable/server,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "yC" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "zJ" = (
 /obj/structure/salvageable/computer,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Ay" = (
 /obj/structure/salvageable/console_broken_os,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "AE" = (
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
 /obj/effect/decal/cleanable/dirt,
@@ -287,99 +287,99 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "AU" = (
 /obj/structure/salvageable/data,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Bi" = (
 /obj/structure/table/darkglass,
 /obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Ck" = (
 /mob/living/simple_mob/mechanical/cyber_horror/vox,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Cw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Cx" = (
 /obj/structure/salvageable/data,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "CW" = (
 /obj/structure/table/darkglass,
 /obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Dz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "DM" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/space/void/syndicate_contract,
 /obj/item/clothing/head/helmet/space/void/syndicate_contract,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Et" = (
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Gi" = (
 /turf/simulated/wall/iron,
-/area/space)
+/area/submap/fallenlab)
 "GJ" = (
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "HP" = (
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Iq" = (
 /obj/machinery/optable,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Iw" = (
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Ix" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "KF" = (
 /obj/machinery/oxygen_pump/mobile/anesthetic,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "KI" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/storage/firstaid/clotting,
@@ -387,14 +387,14 @@
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "KR" = (
 /obj/structure/table/darkglass,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Ld" = (
 /obj/structure/table/darkglass,
 /obj/item/ammo_casing/microbattery/medical/burn3,
@@ -403,7 +403,7 @@
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Mp" = (
 /obj/structure/table/standard,
 /obj/item/ammo_magazine/cell_mag/medical/advanced,
@@ -411,7 +411,7 @@
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Ni" = (
 /obj/structure/table/standard,
 /obj/item/ammo_casing/microbattery/medical/haste,
@@ -419,17 +419,17 @@
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "NT" = (
 /mob/living/simple_mob/mechanical/cyber_horror/vox,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "OG" = (
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "OO" = (
 /obj/structure/table/standard,
 /obj/item/clothing/mask/gas/syndicate,
@@ -437,94 +437,94 @@
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "PB" = (
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Qh" = (
 /obj/machinery/optable,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "QH" = (
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Rg" = (
 /obj/structure/table/standard,
 /obj/random/material/refined,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "RQ" = (
 /obj/machinery/clonepod,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "RS" = (
 /obj/structure/salvageable/computer,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "SK" = (
 /obj/item/clothing/suit/armor/reactive,
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /turf/simulated/floor/grass,
-/area/space)
+/area/submap/fallenlab)
 "SL" = (
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "SX" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Ub" = (
 /obj/structure/table/standard,
 /obj/random/material/refined,
 /obj/random/material/precious,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Uf" = (
 /obj/machinery/clonepod,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "UG" = (
 /obj/machinery/oxygen_pump/mobile/anesthetic,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "UK" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Wd" = (
 /obj/structure/salvageable/console_broken_os,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "XG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "XJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "XS" = (
 /obj/structure/salvageable/data,
 /obj/effect/decal/cleanable/dirt,
@@ -532,16 +532,16 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 "Yn" = (
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror,
 /turf/simulated/floor/grass,
-/area/space)
+/area/submap/fallenlab)
 "ZC" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/submap/fallenlab)
 
 (1,1,1) = {"
 SX

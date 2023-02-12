@@ -1,23 +1,23 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/floor/dungeon,
-/area/space)
+/area/submap/metroidmaze)
 "s" = (
 /turf/simulated/wall/dungeon{
 	can_open = 1
 	},
-/area/space)
+/area/submap/metroidmaze)
 "w" = (
 /mob/living/simple_mob/metroid/juvenile/omega,
 /turf/simulated/floor/dungeon,
-/area/space)
+/area/submap/metroidmaze)
 "D" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "E" = (
 /mob/living/simple_mob/metroid/juvenile/alpha,
 /turf/simulated/floor/dungeon,
-/area/space)
+/area/submap/metroidmaze)
 "F" = (
 /obj/structure/table/standard,
 /obj/random/projectile/random,
@@ -25,10 +25,10 @@
 /obj/random/firstaid,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/dungeon,
-/area/space)
+/area/submap/metroidmaze)
 "Z" = (
 /turf/simulated/wall/dungeon,
-/area/space)
+/area/submap/metroidmaze)
 
 (1,1,1) = {"
 D

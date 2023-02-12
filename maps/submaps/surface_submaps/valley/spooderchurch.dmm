@@ -3,18 +3,20 @@
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "bM" = (
 /obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/eggcluster,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "cm" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10;
 	icon_state = "cliffbuilder-corner"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "dT" = (
 /obj/structure/cliff/automatic,
 /obj/structure/railing{
@@ -22,30 +24,34 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "fs" = (
 /mob/living/simple_mob/humanoid/cultist/noodle{
 	faction = "syndicate"
 	},
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "fJ" = (
 /obj/structure/cliff/automatic{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "hn" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/contraband/nofail,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "hp" = (
 /obj/structure/closet/crate/plastic,
 /obj/random/cash/huge,
 /obj/random/cash/huge,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
+"ig" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/spooderchurch)
 "kl" = (
 /obj/effect/step_trigger/teleporter/offset/east,
 /obj/structure/railing{
@@ -54,7 +60,14 @@
 	},
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
+"lp" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 10;
+	icon_state = "cliffbuilder-corner"
+	},
+/turf/template_noop,
+/area/submap/spooderchurch)
 "lF" = (
 /obj/structure/table/rack/shelf,
 /obj/random/energy/highend,
@@ -62,11 +75,17 @@
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "mY" = (
 /obj/effect/spider/eggcluster,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
+"nJ" = (
+/obj/structure/cliff/automatic{
+	dir = 4
+	},
+/turf/template_noop,
+/area/submap/spooderchurch)
 "ox" = (
 /obj/effect/step_trigger/teleporter/offset/west,
 /obj/structure/railing{
@@ -75,33 +94,33 @@
 	},
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "pK" = (
 /mob/living/simple_mob/humanoid/cultist/hunter/surt{
 	faction = "syndicate"
 	},
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "pV" = (
 /obj/effect/spider/stickyweb,
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "tn" = (
 /mob/living/simple_mob/humanoid/cultist/lizard{
 	faction = "syndicate"
 	},
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "tI" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "uF" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/firstaid,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "vk" = (
 /obj/structure/table/rack/shelf,
 /obj/random/projectile,
@@ -109,34 +128,41 @@
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
+"vA" = (
+/obj/structure/cliff/automatic{
+	dir = 6;
+	icon_state = "cliffbuilder"
+	},
+/turf/simulated/floor/outdoors/grass/sif,
+/area/submap/spooderchurch)
 "wl" = (
 /obj/structure/curtain,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "xw" = (
 /obj/structure/cliff/automatic{
 	dir = 10;
 	icon_state = "cliffbuilder"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "xx" = (
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "xC" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/rigsuit,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "yq" = (
 /obj/structure/cliff/automatic{
 	dir = 9;
 	icon_state = "cliffbuilder"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "yG" = (
 /obj/structure/cliff/automatic{
 	dir = 2
@@ -146,57 +172,57 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "yY" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "zv" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "zY" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/card/emag,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Ah" = (
 /obj/structure/closet/crate/plastic,
 /obj/item/stolenpackage,
 /obj/random/cash/huge,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Bw" = (
 /turf/simulated/wall/log_sif,
-/area/space)
+/area/submap/spooderchurch)
 "Cm" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Cq" = (
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Cv" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/toolbox,
 /obj/random/toolbox,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "EU" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "Fi" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Fk" = (
 /obj/random/mob/merc/all,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "FR" = (
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "HI" = (
 /obj/structure/cliff/automatic,
 /obj/structure/railing{
@@ -204,31 +230,37 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "HU" = (
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "IG" = (
 /mob/living/simple_mob/humanoid/cultist/tesh{
 	faction = "syndicate"
 	},
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
+"JH" = (
+/obj/structure/cliff/automatic{
+	dir = 8
+	},
+/turf/template_noop,
+/area/submap/spooderchurch)
 "JI" = (
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "KM" = (
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Mj" = (
 /obj/effect/step_trigger/teleporter/offset/east,
 /obj/structure/railing{
@@ -236,38 +268,44 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "Mn" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/eggcluster,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "MB" = (
 /obj/structure/cliff/automatic{
 	dir = 5;
 	icon_state = "cliffbuilder"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
+"MV" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/template_noop)
 "NG" = (
 /obj/random/mob/merc/armored,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "NL" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "NM" = (
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "OH" = (
 /obj/structure/cliff/automatic/ramp{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
+"Pd" = (
+/turf/template_noop,
+/area/submap/spooderchurch)
 "Pk" = (
 /obj/effect/step_trigger/teleporter/offset/west,
 /obj/structure/railing{
@@ -275,49 +313,43 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "PR" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "Rv" = (
 /obj/structure/cliff/automatic/ramp,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Tb" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
-"TM" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/spider/stickyweb,
-/obj/effect/spider/eggcluster,
-/turf/simulated/floor/outdoors/dirt,
-/area/space)
+/area/submap/spooderchurch)
 "UX" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "VU" = (
 /obj/structure/closet/crate/plastic,
 /obj/item/stolenpackage,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Wb" = (
 /mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Wq" = (
 /obj/structure/curtain,
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Xe" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
 "XH" = (
 /obj/structure/cliff/automatic{
 	dir = 2
@@ -327,20 +359,26 @@
 	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/grass/sif,
-/area/space)
+/area/submap/spooderchurch)
+"Yb" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 6
+	},
+/turf/template_noop,
+/area/submap/spooderchurch)
 "YO" = (
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "Zl" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 "ZX" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/spellbook/oneuse/smoke,
 /turf/simulated/floor/wood/sif,
-/area/space)
+/area/submap/spooderchurch)
 
 (1,1,1) = {"
 Cm
@@ -470,7 +508,7 @@ KM
 KM
 KM
 Xe
-yY
+MV
 Cm
 Cm
 Cm
@@ -510,12 +548,12 @@ Bw
 tI
 yY
 yY
-Cm
-Cm
-Cm
-Cm
-Cm
-Cm
+Pd
+Pd
+Pd
+Pd
+Pd
+Pd
 yY
 JI
 Bw
@@ -546,15 +584,15 @@ FR
 hn
 Bw
 tI
-bM
 yY
-Cm
-Cm
-Cm
-Cm
-Cm
-Cm
-bM
+ig
+Pd
+Pd
+Pd
+Pd
+Pd
+Pd
+ig
 JI
 Bw
 YO
@@ -584,15 +622,15 @@ YO
 YO
 Bw
 tI
-bM
+yY
+ig
 yY
 yY
-yY
-Cm
-Cm
+Pd
+Pd
 yY
 mY
-bM
+ig
 JI
 Bw
 YO
@@ -622,15 +660,15 @@ YO
 YO
 Bw
 tI
+yY
 pV
-bM
+ig
 yY
 yY
 yY
 yY
 yY
-yY
-bM
+ig
 JI
 Bw
 YO
@@ -660,15 +698,15 @@ YO
 YO
 Bw
 tI
-bM
-bM
-bM
+yY
+ig
+ig
+ig
 yY
 yY
 yY
-yY
-bM
-bM
+ig
+ig
 JI
 Bw
 YO
@@ -698,15 +736,15 @@ Fk
 YO
 Bw
 tI
-bM
-Mn
-bM
 yY
+ig
+Mn
+ig
 PR
 yY
-bM
+ig
 pV
-bM
+ig
 JI
 Bw
 YO
@@ -723,9 +761,9 @@ Cm
 Cm
 "}
 (11,1,1) = {"
-Cm
-Cm
-JI
+Yb
+nJ
+vA
 Bw
 Bw
 zv
@@ -736,15 +774,15 @@ zv
 Bw
 Bw
 tI
-bM
-bM
-bM
+yY
+ig
+ig
+ig
 yY
 yY
-yY
-bM
-bM
-bM
+ig
+ig
+ig
 JI
 Bw
 wl
@@ -774,15 +812,15 @@ YO
 YO
 Bw
 tI
-bM
-bM
+yY
+ig
+ig
 yY
 yY
 yY
-yY
-bM
+ig
 aZ
-bM
+ig
 JI
 Bw
 YO
@@ -812,14 +850,14 @@ YO
 YO
 Bw
 tI
-bM
-bM
 yY
+ig
+ig
 yY
 Tb
 yY
 mY
-bM
+ig
 aZ
 JI
 Bw
@@ -850,8 +888,8 @@ YO
 YO
 Bw
 HI
-kl
 Mj
+kl
 Mj
 Mj
 Mj
@@ -964,11 +1002,11 @@ YO
 YO
 Bw
 tI
-bM
+yY
+ig
 yY
 yY
 mY
-yY
 yY
 yY
 yY
@@ -1002,15 +1040,15 @@ YO
 YO
 Bw
 tI
-pV
-bM
 yY
+pV
+ig
 yY
 yY
 yY
 yY
 Tb
-bM
+ig
 JI
 Bw
 YO
@@ -1027,9 +1065,9 @@ Cm
 Cm
 "}
 (19,1,1) = {"
-Cm
-Cm
-JI
+lp
+JH
+xw
 Bw
 Bw
 zv
@@ -1040,15 +1078,15 @@ zv
 Bw
 Bw
 tI
-bM
-bM
-bM
 yY
+ig
+ig
+ig
 PR
 yY
 yY
 yY
-bM
+ig
 JI
 Bw
 wl
@@ -1078,15 +1116,15 @@ Fk
 YO
 Bw
 tI
-bM
-bM
-bM
+yY
+ig
+ig
+ig
 yY
 yY
 yY
-yY
-bM
-bM
+ig
+ig
 JI
 Bw
 YO
@@ -1116,10 +1154,10 @@ YO
 YO
 Bw
 tI
+yY
 aZ
 pV
-bM
-yY
+ig
 yY
 yY
 yY
@@ -1154,15 +1192,15 @@ YO
 YO
 Bw
 tI
-TM
-bM
-bM
-yY
-Cm
-Cm
 yY
 bM
-bM
+ig
+ig
+Pd
+Pd
+yY
+ig
+ig
 JI
 Bw
 YO
@@ -1192,15 +1230,15 @@ YO
 YO
 Bw
 tI
-bM
-bM
 yY
-Cm
-Cm
-Cm
-Cm
+ig
+ig
 yY
-bM
+Pd
+Pd
+Pd
+yY
+ig
 JI
 Bw
 YO
@@ -1218,7 +1256,7 @@ Cm
 "}
 (24,1,1) = {"
 Cm
-Cm
+Pd
 JI
 Bw
 hn
@@ -1230,15 +1268,15 @@ xx
 hn
 Bw
 tI
-bM
+yY
+ig
 yY
 yY
-Cm
-Cm
-Cm
-Cm
-Cm
-bM
+Pd
+Pd
+Pd
+Pd
+ig
 JI
 Bw
 YO
@@ -1268,15 +1306,15 @@ Bw
 Bw
 Bw
 tI
-bM
 yY
-Cm
-Cm
-Cm
-Cm
-Cm
-Cm
-Cm
+ig
+yY
+Pd
+Pd
+Pd
+Pd
+Pd
+Pd
 JI
 Bw
 Bw
@@ -1306,8 +1344,8 @@ HU
 HU
 HU
 UX
-yY
-Cm
+MV
+MV
 Cm
 Cm
 Cm

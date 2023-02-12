@@ -4,7 +4,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "cK" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -16,13 +16,13 @@
 	},
 /obj/structure/window/plastitanium/full,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/piratevox)
 "dy" = (
 /obj/machinery/computer/ship{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "dz" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -30,28 +30,28 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "fA" = (
 /obj/random/mob/merc/all,
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratevox)
 "fD" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "fL" = (
 /obj/structure/table/standard,
 /obj/item/weapon/flame/lighter/zippo/rainbow,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "fV" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/random/gun/random,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "gp" = (
 /obj/machinery/door/airlock/phoron,
 /obj/structure/cable/green{
@@ -60,7 +60,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "it" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /obj/structure/cable/green{
@@ -68,7 +68,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "iJ" = (
 /obj/machinery/power/terminal{
 	dir = 1;
@@ -79,11 +79,11 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "iN" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/ranged/captain,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "iU" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -91,17 +91,17 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "mE" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "op" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratevox)
 "pD" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -109,38 +109,38 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "pJ" = (
 /obj/structure/table/standard,
 /obj/random/toolbox,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "pK" = (
 /obj/structure/table/standard,
 /obj/random/gun/random,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "pV" = (
 /obj/structure/table/standard,
 /obj/item/weapon/card/emag/used,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "rp" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "rS" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "to" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/gun/random,
 /obj/random/rigsuit,
 /obj/random/gun/random,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "tX" = (
 /obj/structure/table/standard,
 /obj/item/weapon/grenade/chem_grenade/cleaner,
@@ -148,13 +148,13 @@
 /obj/item/rig_module/mounted/mop,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "uQ" = (
-/obj/machinery/porta_turret/industrial/military{
+/obj/machinery/porta_turret/stationary/syndie{
 	faction = "voxpirate"
 	},
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/piratevox)
 "vn" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -162,26 +162,26 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "xe" = (
 /obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "xr" = (
 /turf/simulated/wall/rplastitanium,
-/area/space)
+/area/submap/piratevox)
 "ye" = (
 /obj/structure/bed/chair/office,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "zq" = (
 /turf/simulated/wall/thull,
-/area/space)
+/area/submap/piratevox)
 "An" = (
 /obj/structure/table/standard,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "Ap" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
 /obj/structure/cable/green{
@@ -190,59 +190,69 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "AS" = (
 /obj/machinery/door/airlock/phoron,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "AV" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/technician,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "Bl" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
 /turf/simulated/wall/thull,
-/area/space)
+/area/submap/piratevox)
 "Cm" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Dg" = (
 /obj/structure/table/standard,
 /obj/random/firstaid,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "Dt" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "DI" = (
 /mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /obj/structure/bed/chair/office{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
+"DX" = (
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
 "FN" = (
 /obj/random/mob/merc/all,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
+"Iu" = (
+/mob/living/simple_mob/vox/armalis{
+	faction = "voxpirate"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
 "LG" = (
-/obj/random/mob/merc/all,
+/mob/living/simple_mob/humanoid/merc/ranged,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "LP" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "NE" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -250,36 +260,40 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "NI" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/random/rigsuit,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
+"Op" = (
+/mob/living/simple_mob/humanoid/merc/ranged,
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
 "Os" = (
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "OH" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "Rr" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
 /turf/simulated/wall/thull,
-/area/space)
+/area/submap/piratevox)
 "Tk" = (
 /mob/living/simple_mob/vox/armalis{
 	faction = "voxpirate"
 	},
 /obj/structure/bed/chair/office,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "Tl" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "Un" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -290,7 +304,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "UL" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -298,10 +312,10 @@
 	},
 /obj/structure/window/plastitanium/full,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/submap/piratevox)
 "Vh" = (
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratevox)
 "VO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -319,17 +333,17 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "VU" = (
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/red,
-/area/space)
+/area/submap/piratevox)
 "Wj" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "WN" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/spray/cleaner,
@@ -337,7 +351,18 @@
 /obj/item/rig_module/cleaner_launcher,
 /obj/item/weapon/mop/advanced,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
+"Xl" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/mob/living/simple_mob/vox/armalis{
+	faction = "voxpirate"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
+"Za" = (
+/mob/living/simple_mob/humanoid/merc/ranged/garand,
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
 "ZP" = (
 /mob/living/simple_mob/vox/armalis{
 	faction = "voxpirate"
@@ -346,11 +371,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 "ZU" = (
 /obj/machinery/computer/ship,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/submap/piratevox)
 
 (1,1,1) = {"
 Cm
@@ -551,11 +576,11 @@ AS
 Os
 tX
 zq
-Os
+Iu
 Os
 iN
 Os
-LP
+Xl
 zq
 it
 VO
@@ -607,7 +632,7 @@ Cm
 Cm
 zq
 Dg
-xe
+Op
 Os
 zq
 Os
@@ -623,7 +648,7 @@ LP
 Os
 zq
 pD
-xe
+Op
 Dg
 zq
 Cm
@@ -642,7 +667,7 @@ ZP
 Os
 AS
 rp
-xe
+Op
 Os
 Os
 Os
@@ -1016,11 +1041,11 @@ zq
 Wj
 Os
 Os
-xe
+Za
 Os
 xe
 Os
-xe
+DX
 Os
 LP
 Wj
@@ -1140,11 +1165,11 @@ zq
 Wj
 Os
 Os
-xe
+DX
 Os
 xe
 LP
-xe
+Za
 Os
 Os
 Wj

@@ -187,7 +187,7 @@
 	name = "Wilderness Shelter Utility Room"
 	icon_state = "substation"
 
-//Valley stuffs
+//Valley stuffs, chomps Edit by Jasper, for wilds but stranger.
 /area/surface/outpost/unfinished
 	name = "Unfinished"
 	icon_state = "red"

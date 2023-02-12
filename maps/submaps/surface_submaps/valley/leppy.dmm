@@ -1,65 +1,65 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "b" = (
 /obj/structure/table/gold,
 /obj/random/energy/highend,
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "d" = (
 /mob/living/simple_mob/vore/lamia/random,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "r" = (
 /obj/structure/table/gold,
 /obj/random/contraband/nofail,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "s" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/random,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "t" = (
 /mob/living/simple_mob/vore/leopardmander/exotic,
 /turf/simulated/floor/water/ocean{
 	outdoors = 0
 	},
-/area/space)
+/area/submap/leppy)
 "z" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/space)
+/area/submap/leppy)
 "A" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "D" = (
 /obj/structure/table/gold,
 /obj/random/medical/pillbottle,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "F" = (
 /obj/structure/table/gold,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "J" = (
 /obj/structure/table/gold,
 /obj/random/firstaid,
 /turf/simulated/mineral/floor/cave,
-/area/space)
+/area/submap/leppy)
 "K" = (
 /turf/simulated/wall/sandstone,
-/area/space)
+/area/submap/leppy)
 "L" = (
 /turf/simulated/floor/water/ocean{
 	outdoors = 0
 	},
-/area/space)
+/area/submap/leppy)
 
 (1,1,1) = {"
 A
