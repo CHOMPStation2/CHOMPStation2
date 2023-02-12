@@ -512,7 +512,7 @@
 /area/surface/outpost/unfinished)
 "Qj" = (
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
-/area/space)
+/area/surface/outside/valley/river)
 "Qy" = (
 /obj/structure/table/bench/wooden,
 /obj/item/device/flashlight/lamp/green,
