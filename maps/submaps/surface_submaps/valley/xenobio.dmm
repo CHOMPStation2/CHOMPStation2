@@ -66,7 +66,7 @@
 /area/submap/xenobio)
 "fz" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/reinforced/phoron,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "fL" = (
 /obj/machinery/porta_turret,
@@ -87,7 +87,8 @@
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "iJ" = (
-/turf/simulated/floor/reinforced/phoron,
+/mob/living/simple_mob/slime/xenobio/dark_purple,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "iQ" = (
 /obj/machinery/light/poi{
@@ -165,7 +166,7 @@
 "rf" = (
 /obj/structure/table/standard,
 /obj/item/weapon/grenade/shooter/energy/tesla,
-/turf/simulated/floor/reinforced/phoron,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "ri" = (
 /obj/item/device/perfect_tele/frontier,
@@ -285,7 +286,7 @@
 "DG" = (
 /obj/machinery/door/blast/regular,
 /obj/machinery/door/window/brigdoor/westright,
-/turf/simulated/floor/reinforced/phoron,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "Ej" = (
 /obj/machinery/power/rad_collector,
@@ -321,7 +322,7 @@
 /area/submap/xenobio)
 "JM" = (
 /mob/living/simple_mob/slime/xenobio/oil,
-/turf/simulated/floor/reinforced/phoron,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "JP" = (
 /mob/living/simple_mob/slime/feral/dark_blue,
@@ -353,7 +354,7 @@
 "Me" = (
 /obj/structure/table/standard,
 /obj/item/weapon/melee/energy/axe,
-/turf/simulated/floor/reinforced/phoron,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "MR" = (
 /obj/item/weapon/bedsheet/purple,
@@ -378,7 +379,7 @@
 "NN" = (
 /obj/structure/table/standard,
 /obj/item/weapon/telecube/randomized/mated,
-/turf/simulated/floor/reinforced/phoron,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "OW" = (
 /obj/structure/cable/yellow{
@@ -455,11 +456,6 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/submap/xenobio)
-"Wj" = (
-/obj/machinery/door/blast/regular,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/reinforced/phoron,
 /area/submap/xenobio)
 "WL" = (
 /mob/living/simple_mob/slime/xenobio/bluespace,
@@ -762,9 +758,9 @@ zo
 zo
 zo
 GP
-Wj
+gW
 DG
-Wj
+gW
 GP
 AS
 fl
@@ -782,9 +778,9 @@ zo
 zo
 zo
 GP
-iJ
-iJ
-iJ
+HY
+HY
+HY
 GP
 HY
 Sc
@@ -802,9 +798,9 @@ zo
 zo
 Co
 GP
-iJ
+HY
 JM
-iJ
+HY
 GP
 HY
 HY
@@ -823,7 +819,7 @@ iT
 oC
 oC
 GP
-iJ
+GP
 GP
 oC
 oC
@@ -843,7 +839,7 @@ bl
 Ai
 oC
 fz
-iJ
+HY
 fz
 oC
 dT
@@ -862,8 +858,8 @@ kM
 bl
 bl
 os
-iJ
-iJ
+HY
+HY
 iJ
 oC
 Qq

@@ -378,6 +378,10 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/water,
 /area/surface/outside/valley/river)
+"DA" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outside/valley/river)
 "DE" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/closet/secure_closet/guncabinet,
@@ -580,7 +584,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/plating,
 /area/surface/outside/valley/river)
 "WT" = (
 /turf/simulated/wall/wood,
@@ -66008,12 +66012,12 @@ HM
 HM
 HM
 HM
-sc
-sc
-xz
-xz
-sc
-sc
+DA
+DA
+DA
+DA
+DA
+DA
 HM
 HM
 HM
@@ -66526,8 +66530,8 @@ qe
 qe
 sc
 sc
-xz
-xz
+DA
+DA
 sc
 sc
 qe

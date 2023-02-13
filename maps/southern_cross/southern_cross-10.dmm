@@ -728,6 +728,10 @@
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
+"As" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/surface/outside/river/svartan)
 "AB" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -747,7 +751,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/plating,
 /area/surface/outside/river/svartan)
 "Dk" = (
 /obj/structure/sign/department/medbay{
@@ -1401,8 +1405,8 @@ Za
 Za
 ZN
 ZN
-Lh
-Lh
+As
+As
 ZN
 ZN
 IZ
@@ -1657,12 +1661,12 @@ ak
 ah
 ah
 ah
-ZN
-ZN
-Lh
-Lh
-ZN
-ZN
+As
+As
+As
+As
+As
+As
 ap
 ap
 ap
