@@ -680,7 +680,7 @@
 
 /datum/gear/shoes/teshwrap
 	display_name = "Teshari legwraps"
-	path = /obj/item/clothing/shoes/footwraps/teshari
+	path = /obj/item/clothing/shoes/footwraps //CHOMPEDIT: Tesh can wear regular footwraps, but im paranoid about corrupting saves so we just repath this for now
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_TESHARI
 	cost = 1
