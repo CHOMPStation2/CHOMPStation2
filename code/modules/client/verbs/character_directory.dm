@@ -58,12 +58,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/species = null
 		var/ooc_notes = null
 		var/flavor_text = null
-<<<<<<< HEAD
-		var/tag = C.prefs.directory_tag || "Unset"
-		var/erptag = C.prefs.directory_erptag || "Unset"
 		var/eventtag = vantag_choices_list[C.prefs.vantag_preference] //CHOMPEdit
-		var/character_ad = C.prefs.directory_ad
-=======
 		var/tag
 		var/erptag
 		var/character_ad
@@ -75,7 +70,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			tag = C.prefs.directory_tag || "Unset"
 			erptag = C.prefs.directory_erptag || "Unset"
 			character_ad = C.prefs.directory_ad
->>>>>>> c55fa159ab... Merge pull request #14359 from Seris02/characterdirectorybetter
 
 		//CHOMPEdit Start
 		if(ishuman(C.mob))
@@ -179,34 +173,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
-<<<<<<< HEAD
-			usr?.client?.prefs?.directory_erptag = new_erptag
-			return TRUE
-		//CHOMPEdit start
-		if("setEventTag")
-			var/list/names_list = list()
-			for(var/C in vantag_choices_list)
-				names_list[vantag_choices_list[C]] = C
-			var/list/new_eventtag = input(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference) as null|anything in names_list
-			if(!new_eventtag)
-				return
-			usr?.client?.prefs?.vantag_preference = names_list[new_eventtag]
-			return TRUE
-		//CHOMPEdit end
-		if("setVisible")
-			usr?.client?.prefs?.show_in_directory = !usr?.client?.prefs?.show_in_directory
-			to_chat(usr, "<span class='notice'>You are now [usr.client.prefs.show_in_directory ? "shown" : "not shown"] in the directory.</span>")
-			return TRUE
-		if("editAd")
-			if(!usr?.client?.prefs)
-				return
-
-			var/current_ad = usr.client.prefs.directory_ad
-			var/new_ad = sanitize(tgui_input_text(usr, "Change your character ad", "Character Ad", current_ad, multiline = TRUE, prevent_enter = TRUE), extra = 0)
-			if(isnull(new_ad))
-				return
-			usr.client.prefs.directory_ad = new_ad
-=======
 			return set_for_mind_or_prefs(user, action, new_erptag, can_set_prefs, can_set_mind)
 		if ("setVisible")
 			var/visible = TRUE
@@ -222,6 +188,18 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if(isnull(new_ad))
 				return
 			return set_for_mind_or_prefs(user, action, new_ad, can_set_prefs, can_set_mind)
+				//CHOMPEdit start
+	//CHOMPEdit begin
+		if("setEventTag")
+			var/list/names_list = list()
+			for(var/C in vantag_choices_list)
+				names_list[vantag_choices_list[C]] = C
+			var/list/new_eventtag = input(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference) as null|anything in names_list
+			if(!new_eventtag)
+				return
+			usr?.client?.prefs?.vantag_preference = names_list[new_eventtag]
+			return TRUE
+	//CHOMPEdit end
 
 /datum/character_directory/proc/set_for_mind_or_prefs(mob/user, action, new_value, can_set_prefs, can_set_mind)
 	can_set_prefs &&= !!user.client.prefs
@@ -253,5 +231,4 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				user.client.prefs.directory_ad = new_value
 			if (can_set_mind)
 				user.mind.directory_ad = new_value
->>>>>>> c55fa159ab... Merge pull request #14359 from Seris02/characterdirectorybetter
 			return TRUE
