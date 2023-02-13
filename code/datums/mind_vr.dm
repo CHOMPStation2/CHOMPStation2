@@ -16,6 +16,7 @@
 		mind.directory_tag = client.prefs.directory_tag
 		mind.directory_erptag = client.prefs.directory_erptag
 		mind.directory_ad = client.prefs.directory_ad
+		 //CHOMPEdit additions
 		mind.vantag_preference = client.prefs.vantag_preference
 		mind.directory_gendertag = client.prefs.directory_gendertag
 		mind.directory_sexualitytag = client.prefs.directory_sexualitytag
