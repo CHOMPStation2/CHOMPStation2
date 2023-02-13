@@ -2,11 +2,7 @@
 	set category = "Special Verbs"
 	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite 
 	set hidden = 1
-<<<<<<< HEAD
-	if(!check_rights(R_ADMIN)) //VOREStation Edit //CHOMPEdit meh, our stuff was conflicting so just removed the stealth thingamabobber
-=======
 	if(!check_rights(R_ADMIN)) //VOREStation Edit
->>>>>>> 8be06b127b... Merge pull request #14474 from VOREStation/Staff-Viewing_Patch
 		return
 
 	msg = sanitize(msg)
@@ -15,10 +11,6 @@
 
 	log_adminsay(msg,src)
 
-<<<<<<< HEAD
-	//VOREStation Edit Start - Adds R_STEALTH //CHOMPEdit meh, our stuff was conflicting so just removed the stealth thingamabobber
-=======
->>>>>>> 8be06b127b... Merge pull request #14474 from VOREStation/Staff-Viewing_Patch
 	for(var/client/C in GLOB.admins)
 		if(check_rights(R_ADMIN))
 			to_chat(C, "<span class='admin_channel'>" + create_text_tag("admin", "ADMIN:", C) + " <span class='name'>[key_name(usr, 1)]</span>([admin_jump_link(mob, src)]): <span class='message'>[msg]</span></span>")
@@ -30,11 +22,7 @@
 	set name = "Msay"
 	set hidden = 1
 
-<<<<<<< HEAD
 	if(!check_rights(R_ADMIN|R_MOD|R_EVENT)) //VOREStation Edit //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
-=======
-	if(!check_rights(R_ADMIN|R_MOD|R_SERVER)) //VOREStation Edit
->>>>>>> 8be06b127b... Merge pull request #14474 from VOREStation/Staff-Viewing_Patch
 		return
 
 	msg = sanitize(msg)
@@ -57,11 +45,7 @@
 	set name = "Esay"
 	set hidden = 1
 
-<<<<<<< HEAD
 	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_EVENT)) //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
-=======
-	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_SERVER)) //VOREStation Edit
->>>>>>> 8be06b127b... Merge pull request #14474 from VOREStation/Staff-Viewing_Patch
 		return
 
 	msg = sanitize(msg)
