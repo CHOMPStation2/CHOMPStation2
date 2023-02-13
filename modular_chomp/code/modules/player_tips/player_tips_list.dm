@@ -21,7 +21,7 @@ When editing the list, please try and keep similar probabilities near each other
 
 	switch(choice)
 		if("general")
-			var/info = "The following is a general tip to playing on CHOMPStation! \n"
+			var/info = "The following is a general tip to playing on CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 			prob(60); "[info] Got a question about gameplay, roleplay or the setting? Press F1 to Mentorhelp!",
 			prob(60); "[info] We have a wiki that is actively updated! Please check it out at https://wiki.chompstation13.net/index.php/Chomp_Station_Wiki for help!",
@@ -36,7 +36,7 @@ When editing the list, please try and keep similar probabilities near each other
 
 
 		if("gameplay")
-			var/info = "The following is a gameplay-focused tip to playing on CHOMPStation \n"
+			var/info = "The following is a gameplay-focused tip to playing on CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 				prob(50); "[info] To talk to your fellow coworkers, use ';'! You may append it by an exclamation mark, like ';!' to perform an audiable emote. ",
 				prob(50); "[info] Lost on the map? You can find In-Character help by speaking on the Common Radio. You can do this by pressing F3 and typing ' ; ' before your message. Your fellow co-workers will likely help. If OOC help is preferred, press F1 for mentorhelp. ",
@@ -51,7 +51,7 @@ When editing the list, please try and keep similar probabilities near each other
 				)
 
 		if("roleplay")
-			var/info = "The following is a roleplay-focused tip to playing on CHOMPStation \n"
+			var/info = "The following is a roleplay-focused tip to playing on CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 				prob(50); "[info] Having difficulty finding scenes? The number one tip that people should take for finding scenes is to be active! Generally speaking, people are more likely to interact with you if you are moving about and doing things. Don't be afraid to talk to people, you're less likely to be approached if you're sat alone at a table silently. People that are looking for scenes generally like to see how you type and RP before they'll start working towards a scene with you.",
 				prob(50); "[info] Please avoid a character that knows everything. Having only a small set of jobs you are capable of doing can help flesh out your character! It's OK for things to break and fail if nobody is around to fix it - you do not need to do others' jobs.",
@@ -64,7 +64,7 @@ When editing the list, please try and keep similar probabilities near each other
 				)
 
 		if("lore")
-			var/info = "The following is tip for understanding the lore of CHOMPStation \n"
+			var/info = "The following is tip for understanding the lore of CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 				prob(25); "[info] Our lore is somewhat in line with other servers. But not Virgo's. They wrote themselves out of the timeline, lol. The year is 2564 (current year+541).",
 				prob(75); "[info] You can find a short summary of our setting that everyone should know at https://wiki.chompstation13.net/index.php/Lore",
