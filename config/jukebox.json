@@ -4734,10 +4734,6 @@
 "artist": "Tom Jones",
 "secret": false,
 "lobby": false,
-<<<<<<< HEAD
-"jukebox": true,
-"genre": "Pop"
-=======
 "jukebox": true
 },
 {
@@ -4759,6 +4755,5 @@
 "secret": true,
 "lobby": false,
 "jukebox": true
->>>>>>> a2fd507efb... Merge pull request #14463 from Very-Soft/juke
 }
 ]
