@@ -191,7 +191,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			usr?.client?.prefs?.directory_sexualitytag = new_sexualitytag
 			return TRUE
 		// CHOMPStation Edit End: Directory Update
-    if ("setErpTag")
+		if("setErpTag")
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
