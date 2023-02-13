@@ -281,6 +281,7 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/redshuttledown)
 "oC" = (
@@ -303,6 +304,7 @@
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
+/mob/living/simple_mob/mechanical/viscerator/piercing,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "qr" = (
@@ -533,13 +535,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "zL" = (
-/obj/machinery/door/airlock/external{
-	density = 1;
-	frequency = 1331;
-	id_tag = "merc_shuttle_outer";
-	name = "Ship External Access";
-	req_access = list(150)
-	},
+/mob/living/simple_mob/mechanical/viscerator/mercenary,
+/mob/living/simple_mob/mechanical/viscerator/mercenary,
+/mob/living/simple_mob/mechanical/viscerator/mercenary,
+/mob/living/simple_mob/mechanical/viscerator/piercing,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "zU" = (
@@ -636,6 +635,10 @@
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
+"FE" = (
+/obj/machinery/door/airlock/security,
+/turf/simulated/floor/tiled/steel,
+/area/submap/redshuttledown)
 "Gd" = (
 /obj/effect/floor_decal/corner/grey,
 /obj/structure/table/woodentable,
@@ -650,6 +653,16 @@
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /turf/simulated/floor/tiled/steel,
+/area/submap/redshuttledown)
+"GW" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8;
+	icon_state = "bordercolor"
+	},
+/obj/structure/table/standard,
+/obj/item/weapon/storage/pill_bottle/combat,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "GZ" = (
 /obj/structure/dispenser/oxygen,
@@ -837,6 +850,12 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
+"Sz" = (
+/obj/machinery/shower,
+/obj/structure/curtain/open/shower,
+/obj/item/weapon/smes_coil/super_capacity,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/redshuttledown)
 "SD" = (
 /obj/structure/closet/toolcloset,
 /turf/simulated/floor/tiled/steel,
@@ -850,6 +869,7 @@
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
+/mob/living/simple_mob/mechanical/viscerator/piercing,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "SH" = (
@@ -938,7 +958,16 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "Yv" = (
-/obj/effect/landmark/loot_spawn,
+/obj/structure/closet/crate/secure/loot,
+/obj/item/stack/material/durasteel{
+	amount = 5
+	},
+/obj/item/stack/material/plasteel{
+	amount = 5
+	},
+/obj/item/stack/material/mhydrogen{
+	amount = 5
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "YR" = (
@@ -1585,8 +1614,8 @@ VF
 ss
 ss
 ss
-wV
-wV
+FE
+FE
 ss
 ss
 ss
@@ -1615,7 +1644,7 @@ bm
 Cv
 Cv
 Cv
-zL
+It
 It
 OO
 VF
@@ -1630,7 +1659,7 @@ ss
 OO
 VF
 It
-zL
+It
 Cv
 Cv
 Cv
@@ -1652,7 +1681,7 @@ Cv
 Cv
 Cv
 Cv
-zL
+It
 It
 zz
 cH
@@ -1667,7 +1696,7 @@ ss
 wP
 EC
 It
-zL
+It
 Cv
 Cv
 Cv
@@ -1728,7 +1757,7 @@ Cv
 ss
 JN
 jh
-jh
+GW
 ZC
 ss
 oU
@@ -1954,13 +1983,13 @@ Xb
 ss
 ss
 Yo
+zL
 GT
 GT
-GT
-GT
+zL
 lC
 ss
-CG
+Sz
 zU
 oA
 ss
@@ -1991,10 +2020,10 @@ ss
 ss
 ss
 tn
-GT
+zL
 Fb
 GT
-GT
+zL
 mj
 ss
 ss

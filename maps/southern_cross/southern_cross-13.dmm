@@ -144,6 +144,14 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
 /area/surface/outpost/unfinished)
+"lr" = (
+/obj/structure/door_assembly,
+/turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
+"lw" = (
+/obj/item/frame/apc,
+/turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
 "lD" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -319,6 +327,10 @@
 /obj/structure/railing,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/valley/river)
+"ze" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
 "zD" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/fireaxecabinet{
@@ -331,6 +343,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
+/area/surface/outpost/unfinished)
+"zT" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/circuitboard/telecomms,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "Aa" = (
 /obj/structure/cable,
@@ -371,6 +388,10 @@
 /obj/structure/curtain/open/privacy,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
+"Ck" = (
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/water/deep,
+/area/surface/outside/valley/river)
 "Dg" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
@@ -474,6 +495,10 @@
 	},
 /turf/simulated/floor/water/deep,
 /area/surface/outside/valley/river)
+"Jb" = (
+/obj/structure/door_assembly,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/unfinished)
 "Kv" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
@@ -484,6 +509,10 @@
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/surface/outpost/unfinished)
+"Lr" = (
+/obj/item/weapon/cell/super/empty,
+/turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
 "LA" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled,
@@ -493,6 +522,11 @@
 /obj/structure/frame{
 	anchored = 1
 	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/unfinished)
+"MU" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/circuitboard/telecomms/broadcaster,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "NV" = (
@@ -514,6 +548,10 @@
 /obj/random/energy,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
+"Pk" = (
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
 "Qj" = (
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/surface/outside/valley/river)
@@ -534,6 +572,10 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled,
+/area/surface/outpost/unfinished)
+"Rn" = (
+/obj/item/device/multitool,
+/turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
 "Rs" = (
 /obj/effect/zone_divider,
@@ -3310,10 +3352,10 @@ HM
 HM
 Fh
 Zd
-ic
+Jb
 Zd
 Zd
-Zd
+ze
 Zd
 Zd
 Zd
@@ -3854,7 +3896,7 @@ kW
 eA
 HP
 HP
-TX
+Jb
 TX
 TX
 TX
@@ -3869,7 +3911,7 @@ TX
 TX
 TX
 TX
-lR
+lr
 HM
 HM
 HM
@@ -4082,7 +4124,7 @@ HM
 HM
 HM
 HM
-Fh
+Pk
 lR
 lR
 TX
@@ -4340,20 +4382,20 @@ HM
 HM
 HM
 HM
-Fh
+Pk
 lR
 lR
 TX
 Zd
 Zd
 Zd
+ze
 Zd
 Zd
 Zd
+lR
 Zd
-Zd
-Zd
-ic
+Jb
 Zd
 Fh
 dd
@@ -4376,10 +4418,10 @@ ic
 Zd
 Zd
 Zd
+ze
 Zd
-Zd
-Zd
-Zd
+ze
+ze
 Zd
 Zd
 TX
@@ -4635,7 +4677,7 @@ TR
 TR
 Rl
 TR
-TR
+zT
 TR
 TR
 TR
@@ -4643,7 +4685,7 @@ Zd
 TX
 Bv
 lR
-lR
+Pk
 HM
 HM
 HM
@@ -4901,7 +4943,7 @@ Zd
 TX
 lR
 lR
-lR
+Pk
 HM
 HM
 HM
@@ -5121,7 +5163,7 @@ TX
 Zd
 lR
 lR
-lR
+Lr
 lR
 lR
 lR
@@ -5137,7 +5179,7 @@ rU
 vf
 rU
 rU
-rU
+Ck
 rU
 rU
 rU
@@ -5407,13 +5449,13 @@ lR
 lR
 lR
 lR
-lR
+Rn
 lR
 lR
 cW
 lR
 TR
-Zd
+ze
 TX
 TX
 TX
@@ -5661,7 +5703,7 @@ rU
 rK
 rK
 Fh
-lR
+lw
 lR
 TX
 cW
@@ -5670,7 +5712,7 @@ lR
 lR
 lR
 lR
-TR
+MU
 Zd
 TX
 TX
@@ -5891,7 +5933,7 @@ HM
 Fh
 Fh
 ic
-Fh
+Pk
 Fh
 Fh
 GW
@@ -5901,7 +5943,7 @@ Ip
 Ip
 lR
 GW
-lR
+Pk
 Fh
 Fh
 rK
@@ -5922,10 +5964,10 @@ Fh
 lR
 GW
 lR
-lR
+Pk
 GW
 GW
-lR
+Pk
 lR
 Ip
 Fh
