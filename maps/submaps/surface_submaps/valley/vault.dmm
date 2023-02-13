@@ -56,7 +56,7 @@
 /obj/item/clothing/suit/armor/shield,
 /obj/item/weapon/implantcase/handblade,
 /obj/item/weapon/implantcase/dart,
-/turf/simulated/floor/airless,
+/turf/space,
 /area/submap/vault)
 "z" = (
 /turf/simulated/shuttle/floor/alien,

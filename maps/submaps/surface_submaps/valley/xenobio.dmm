@@ -93,12 +93,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
-"iJ" = (
-/mob/living/simple_mob/slime/xenobio/dark_purple,
-/turf/simulated/floor/reinforced/phoron{
-	phoron = 103
-	},
-/area/submap/xenobio)
 "iQ" = (
 /obj/machinery/light/poi{
 	dir = 1
@@ -878,7 +872,7 @@ bl
 os
 fH
 fH
-iJ
+fH
 oC
 Qq
 bl

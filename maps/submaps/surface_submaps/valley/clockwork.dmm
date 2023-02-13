@@ -21,6 +21,22 @@
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
+"n" = (
+/obj/structure/cliff/automatic{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"o" = (
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/lava,
+/area/submap/clockwork)
 "p" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/rocks/caves,
@@ -28,6 +44,14 @@
 "q" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"t" = (
+/obj/structure/cliff/automatic,
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
@@ -43,16 +67,61 @@
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
+"y" = (
+/obj/structure/railing,
+/turf/simulated/floor/lava,
+/area/submap/clockwork)
 "z" = (
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"A" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
 "C" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
+"D" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"E" = (
+/obj/structure/cliff/automatic{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
 "F" = (
 /turf/template_noop,
 /area/template_noop)
+"G" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/lava,
+/area/submap/clockwork)
+"H" = (
+/obj/structure/cliff/automatic,
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
 "I" = (
 /obj/structure/cliff/automatic{
 	dir = 10;
@@ -95,6 +164,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"V" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/lava,
 /area/submap/clockwork)
 "W" = (
 /mob/living/simple_mob/mechanical/mining_drone,
@@ -165,15 +241,15 @@ z
 b
 U
 U
-U
+E
 Q
+n
 U
 U
 U
-U
-U
+E
 Q
-U
+n
 U
 U
 I
@@ -190,15 +266,15 @@ b
 J
 M
 M
-M
+y
 a
+G
 M
 M
 M
-M
-M
+y
 a
-M
+G
 M
 M
 q
@@ -215,15 +291,15 @@ J
 M
 M
 M
-M
+y
 a
+G
 M
 M
 M
-M
-M
+y
 a
-M
+G
 M
 M
 M
@@ -240,15 +316,15 @@ M
 M
 M
 M
-M
+y
 a
+G
 M
 M
 M
-M
-M
+y
 a
-M
+G
 M
 M
 M
@@ -260,11 +336,11 @@ F
 (7,1,1) = {"
 F
 z
-C
-M
-M
-M
-M
+H
+V
+V
+V
+V
 z
 z
 z
@@ -274,11 +350,11 @@ M
 z
 z
 z
-M
-M
-M
-M
-h
+V
+V
+V
+V
+A
 z
 F
 "}
@@ -310,11 +386,11 @@ F
 (9,1,1) = {"
 F
 z
-C
-M
-M
-M
-M
+t
+o
+o
+o
+o
 z
 z
 z
@@ -324,11 +400,11 @@ M
 z
 z
 z
-M
-M
-M
-M
-h
+o
+o
+o
+o
+D
 z
 F
 "}
@@ -340,15 +416,15 @@ M
 M
 M
 M
-M
+y
 a
+G
 M
 M
 M
-M
-M
+y
 a
-M
+G
 M
 M
 M
@@ -365,15 +441,15 @@ M
 M
 M
 M
-M
+y
 a
-M
+G
 Z
 z
 Z
-M
+y
 a
-M
+G
 M
 M
 M
@@ -390,15 +466,15 @@ M
 W
 M
 M
-M
+y
 a
-M
+G
 z
 k
 z
-M
+y
 a
-M
+G
 M
 M
 W
@@ -415,15 +491,15 @@ M
 M
 M
 M
-M
+y
 a
-M
+G
 z
 z
 z
-M
+y
 a
-M
+G
 M
 M
 M
@@ -440,15 +516,15 @@ M
 M
 M
 M
-M
+y
 a
-M
-M
+G
+y
 a
-M
-M
+G
+y
 a
-M
+G
 M
 M
 M
@@ -468,9 +544,9 @@ M
 z
 z
 z
-M
+y
 a
-M
+G
 z
 z
 z
@@ -518,9 +594,9 @@ M
 z
 z
 z
-M
-M
-M
+o
+o
+o
 z
 z
 z
