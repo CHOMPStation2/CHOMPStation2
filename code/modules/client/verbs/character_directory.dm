@@ -30,21 +30,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 /datum/character_directory/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
 
-<<<<<<< HEAD
-	data["personalVisibility"] = user?.client?.prefs?.show_in_directory
-	data["personalTag"] = user?.client?.prefs?.directory_tag || "Unset"
-	data["personalErpTag"] = user?.client?.prefs?.directory_erptag || "Unset"
-	data["personalEventTag"] = vantag_choices_list[user?.client?.prefs?.vantag_preference] //CHOMPEdit
-=======
 	if (user?.mind)
 		data["personalVisibility"] = user.mind.show_in_directory
 		data["personalTag"] = user.mind.directory_tag || "Unset"
 		data["personalErpTag"] = user.mind.directory_erptag || "Unset"
+		data["personalEventTag"] = vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
 	else if (user?.client?.prefs)
 		data["personalVisibility"] = user.client.prefs.show_in_directory
 		data["personalTag"] = user.client.prefs.directory_tag || "Unset"
 		data["personalErpTag"] = user.client.prefs.directory_erptag || "Unset"
->>>>>>> c55fa159ab... Merge pull request #14359 from Seris02/characterdirectorybetter
+		data["personalEventTag"] = vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
 
 	return data
 
