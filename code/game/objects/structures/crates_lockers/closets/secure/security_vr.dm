@@ -20,8 +20,10 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/clothing/accessory/holster/waist,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+//		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
+		/obj/item/clothing/shoes/boots/winter/security,
+//CHOMP Add ^
 		/obj/item/clothing/mask/gas/half)
 
 /obj/structure/closet/secure_closet/hos2
@@ -46,9 +48,9 @@
 		/obj/item/weapon/gun/energy/x01,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/weapon/melee/telebaton,
-		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
-		/obj/item/clothing/shoes/boots/winter/security,
+//		/obj/item/clothing/head/beret/sec/corporate/hos, //CHOMP Remove
+//		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
+//		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
 		/obj/item/device/flashlight/maglight)
 
 //Custom NT Security Lockers, Only found at central command
