@@ -436,8 +436,6 @@
 	icon_state = "casinoslave_owned"
 	item_state = "casinoslave_owned"
 	overlay_state = "casinoslave_owned"
-<<<<<<< HEAD
-=======
 
 //The gold trim from one of the qipaos, separated to an accessory to preserve the color
 /obj/item/clothing/accessory/qipaogold
@@ -574,4 +572,3 @@
 	desc = "A shoulder mantle bearing the colors usually found on a Site Manager, a commanding blue with regal gold inlay."
 	icon_state = "capmantle"
 	item_state = "capmantle"
->>>>>>> 1976342d32... Merge pull request #14470 from Burrito-Justice/master
