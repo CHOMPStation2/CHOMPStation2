@@ -22,6 +22,17 @@
 	icon = 'icons/mob/vore/tails_ch.dmi'
 	icon_state = "zorgoia"
 	extra_overlay = "zorgoia_fluff"
+	extra_overlay2 = "zorgoia_fluff_top"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/leopard
+	name = "Leopard tail, dual-color (vwag)"
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "leopard"
+	ani_state = "leopard_w"
+	extra_overlay = "leopard_spots"
+	extra_overlay_w = "leopard_spots_w"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -144,17 +155,17 @@
 	extra_overlay = "bigringtail_markings"
 
 /datum/sprite_accessory/tail/longtail/desert_nightstalker
-    name = "Desert Nightstalker Tail (vwag)"
-    icon = 'icons/mob/vore/taurs_ch.dmi'
-    icon_state = "nightstalker_desert"
-    ani_state = "nightstalker_desert_w"
-    do_colouration = 0 // We're not coloring this, these are pre-colored
-    color_blend_mode = ICON_ADD
+	name = "Desert Nightstalker Tail (vwag)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "nightstalker_desert"
+	ani_state = "nightstalker_desert_w"
+	do_colouration = 0 // We're not coloring this, these are pre-colored
+	color_blend_mode = ICON_ADD
 
 /datum/sprite_accessory/tail/longtail/diamondback_nightstalker
-    name = "Diamondback Nightstalker Tail (dual-color, vwag)"
-    icon = 'icons/mob/vore/taurs_ch.dmi'
-    icon_state = "nightstalker_diamondback"
-    ani_state = "nightstalker_diamondback_w"
-    extra_overlay = "nightstalker_diamondback_markings"
-    extra_overlay_w = "nightstalker_diamondback_markings_w"
+	name = "Diamondback Nightstalker Tail (dual-color, vwag)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "nightstalker_diamondback"
+	ani_state = "nightstalker_diamondback_w"
+	extra_overlay = "nightstalker_diamondback_markings"
+	extra_overlay_w = "nightstalker_diamondback_markings_w"

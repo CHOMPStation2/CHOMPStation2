@@ -71,6 +71,7 @@
 #include "code\__defines\misc_ch.dm"
 #include "code\__defines\misc_vr.dm"
 #include "code\__defines\mobs.dm"
+#include "code\__defines\mobs_ch.dm"
 #include "code\__defines\mobs_vr.dm"
 #include "code\__defines\mobs_yw.dm"
 #include "code\__defines\nifsoft.dm"
