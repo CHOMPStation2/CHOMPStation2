@@ -572,10 +572,7 @@
 
 			if(pref.dirty_synth && !(instance.can_take & SYNTHETICS))
 				tgui_alert_async(usr, "The trait you've selected can only be taken by organic characters!", "Error")
-<<<<<<< HEAD
 				//pref.dirty_synth = 0	//Just to be sure //CHOMPEdit this shit broke, stop.
-=======
->>>>>>> 5d2045f712... Merge pull request #14472 from Seris02/traitprefs2
 				return TOPIC_REFRESH
 
 			if(pref.gross_meatbag && !(instance.can_take & ORGANICS))
