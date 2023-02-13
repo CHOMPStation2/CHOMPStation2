@@ -4845,5 +4845,15 @@
 "secret": false,
 "lobby": false,
 "jukebox": true
+},
+{
+"url": "https://files.catbox.moe/i9b6ew.mp3",
+"title": "Sleeping In The Cold Below",
+"duration": 2110,
+"artist": "Warframe",
+"genre": "Folk and Indie",
+"secret": false,
+"lobby": false,
+"jukebox": true
 }
 ]
