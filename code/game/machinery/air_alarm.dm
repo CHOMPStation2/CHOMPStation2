@@ -84,7 +84,7 @@
 
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
-	var/datum/looping_sound/decompression_alarm/soundloop
+	var/datum/looping_sound/alarm/decompression_alarm/soundloop
 
 /obj/machinery/alarm/nobreach
 	breach_detection = 0

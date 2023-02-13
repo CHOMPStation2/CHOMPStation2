@@ -26,6 +26,8 @@ FIRE ALARM
 	circuit = /obj/item/weapon/circuitboard/firealarm
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
+	var/datum/looping_sound/alarm/fire_alarm/soundloop
+
 /obj/machinery/firealarm/alarms_hidden
 	alarms_hidden = TRUE
 
@@ -50,6 +52,12 @@ FIRE ALARM
 
 	if(z in using_map.contact_levels)
 		set_security_level(security_level ? get_security_level() : "green")
+
+	soundloop = new(list(src), FALSE) // Create soundloop
+
+/obj/machinery/firealarm/Destroy()
+	QDEL_NULL(soundloop) // Just clearing the loop here
+	return ..()
 
 /obj/machinery/firealarm/proc/offset_alarm()
 	pixel_x = (dir & 3) ? 0 : (dir == 4 ? 26 : -26)
@@ -88,14 +96,14 @@ FIRE ALARM
 			if("blue")	set_light(l_range = 2, l_power = 0.25, l_color = "#1024A9")
 			if("red")	set_light(l_range = 4, l_power = 0.9, l_color = "#ff0000")
 			if("delta")	set_light(l_range = 4, l_power = 0.9, l_color = "#FF6633")
-	
+
 	. += mutable_appearance(icon, fire_state)
 	. += emissive_appearance(icon, fire_state)
-	
+
 	if(seclevel)
 		. += mutable_appearance(icon, "overlay_[seclevel]")
 		. += emissive_appearance(icon, "overlay_[seclevel]")
-	
+
 	add_overlay(.)
 
 /obj/machinery/firealarm/fire_act(datum/gas_mixture/air, temperature, volume)
@@ -177,6 +185,7 @@ FIRE ALARM
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.clearAlarm(src.loc, FA)
+		FA.soundloop.stop()
 	update_icon()
 	if(user)
 		log_game("[user] reset a fire alarm at [COORD(src)]")
@@ -187,8 +196,9 @@ FIRE ALARM
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
+		FA.soundloop.start()
 	update_icon()
-	playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
+	// playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
 	if(user)
 		log_game("[user] triggered a fire alarm at [COORD(src)]")
 
