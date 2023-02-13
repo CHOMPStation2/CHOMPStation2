@@ -124,8 +124,6 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb", "TSoundMentorhelps")
-<<<<<<< HEAD
-=======
 
 /client/verb/toggle_player_tips()
 	set name = "Toggle Receiving Player Tips"
@@ -137,4 +135,3 @@
 	toggle_preference(pref_path)
 
 	to_chat(src, "You are [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] periodically receiving advice on gameplay and roleplay.")
->>>>>>> d260f6be19... Merge pull request #14456 from Runa-Dacino/HelpfulTips
