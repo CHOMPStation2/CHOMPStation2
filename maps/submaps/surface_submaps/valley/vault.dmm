@@ -118,7 +118,7 @@
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "O" = (
-/obj/machinery/door/airlock/alien/blue/locked,
+/obj/machinery/door/airlock/alien/blue/public,
 /obj/structure/fans/tiny,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
