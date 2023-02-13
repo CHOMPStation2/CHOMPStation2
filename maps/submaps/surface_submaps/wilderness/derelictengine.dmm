@@ -225,7 +225,8 @@
 /obj/structure/table/alien,
 /obj/effect/floor_decal/techfloor,
 /obj/item/weapon/storage/belt/medical/alien,
-/obj/item/clothing/head/helmet/alien/tank,
+/obj/item/weapon/telecube/precursor/mated/mirrorcolor,
+/obj/item/weapon/implantcase/sprinter,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "el" = (
@@ -554,10 +555,11 @@
 /obj/structure/table/alien,
 /obj/item/weapon/gun/energy/alien,
 /obj/item/prop/alien/phasecoil,
-/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/suit/armor/alien/tank,
 /obj/item/stack/material/diamond{
 	amount = 15
 	},
+/obj/item/clothing/head/helmet/alien/tank,
 /turf/simulated/floor/greengrid,
 /area/submap/DerelictEngine)
 "jE" = (
@@ -1285,7 +1287,6 @@
 "vU" = (
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/telecube/precursor/mated/mirrorcolor,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "wd" = (
@@ -1497,7 +1498,7 @@
 	dir = 10
 	},
 /obj/item/prop/alien/junk,
-/obj/item/weapon/implantcase/surge,
+/obj/item/device/perfect_tele/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "yB" = (
@@ -2328,6 +2329,10 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
+"MC" = (
+/mob/living/simple_mob/mechanical/hivebot/precusor/lobber,
+/turf/simulated/floor/greengrid,
+/area/submap/DerelictEngine)
 "MD" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
 /obj/effect/floor_decal/techfloor{
@@ -2375,7 +2380,7 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/obj/item/device/perfect_tele/alien,
+/obj/item/weapon/implantcase/surge,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "Nm" = (
@@ -2650,6 +2655,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 1
 	},
+/mob/living/simple_mob/mechanical/hivebot/precusor/machinegun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "RB" = (
@@ -2691,6 +2697,11 @@
 "SF" = (
 /turf/template_noop,
 /area/template_noop)
+"SJ" = (
+/obj/effect/decal/cleanable/generic,
+/mob/living/simple_mob/mechanical/hivebot/precusor/laser,
+/turf/simulated/floor/plating,
+/area/submap/DerelictEngine)
 "ST" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -2885,6 +2896,9 @@
 /obj/item/stack/material/glass/plastitanium{
 	amount = 20
 	},
+/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/head/helmet/alien/tank,
+/obj/item/weapon/gun/energy/alien,
 /turf/simulated/floor/greengrid,
 /area/submap/DerelictEngine)
 "Vb" = (
@@ -3073,6 +3087,7 @@
 	dir = 8
 	},
 /obj/item/weapon/circuitboard/pacman,
+/obj/item/weapon/telecube/precursor/mated/zone,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "Yr" = (
@@ -3620,7 +3635,7 @@ jl
 jl
 fO
 AX
-HS
+MC
 UZ
 gy
 yB
@@ -4018,7 +4033,7 @@ fO
 Uv
 GM
 IM
-CL
+SJ
 VQ
 iB
 nZ

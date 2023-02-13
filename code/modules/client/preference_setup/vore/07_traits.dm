@@ -42,6 +42,67 @@
 			choices = (choices | new_species)
 	return choices
 
+/datum/category_item/player_setup_item/vore/traits/proc/get_html_for_trait(var/datum/trait/trait, var/list/trait_prefs = null)
+	. = ""
+	if (!LAZYLEN(trait.has_preferences))
+		return
+	. = "<br><ul>"
+	var/altered = FALSE
+	if (!LAZYLEN(trait_prefs))
+		trait_prefs = trait.get_default_prefs()
+		altered = TRUE
+	for (var/identifier in trait.has_preferences)
+		var/pref_list = trait.has_preferences[identifier] //faster
+		if (LAZYLEN(pref_list) >= 2)
+			if (!(identifier in trait_prefs))
+				trait_prefs[identifier] = trait.default_value_for_pref(identifier) //won't be called at all often
+				altered = TRUE
+			. += "<li>- [pref_list[2]]:"
+			var/link = " <a href='?src=\ref[src];clicked_trait_pref=[trait.type];pref=[identifier]'>"
+			switch (pref_list[1])
+				if (1) //TRAIT_PREF_TYPE_BOOLEAN
+					. += link + (trait_prefs[identifier] ? "Enabled" : "Disabled")
+				if (2) //TRAIT_PREF_TYPE_COLOR
+					. += " " + color_square(hex = trait_prefs[identifier]) + link + "Change"
+			. += "</a></li>"
+	. += "</ul>"
+	if (altered)
+		switch(trait.category)
+			if (1) //TRAIT_TYPE_POSITIVE
+				pref.pos_traits[trait.type] = trait_prefs
+			if (0) //TRAIT_TYPE_NEUTRAL
+				pref.neu_traits[trait.type] = trait_prefs
+			if (-1)//TRAIT_TYPE_NEGATIVE
+				pref.neg_traits[trait.type] = trait_prefs
+
+/datum/category_item/player_setup_item/vore/traits/proc/get_pref_choice_from_trait(var/mob/user, var/datum/trait/trait, var/preference)
+	if (!trait || !preference)
+		return
+	var/list/trait_prefs
+	var/datum/trait/instance = all_traits[trait]
+	var/list/traitlist
+	switch(instance.category)
+		if (1)
+			traitlist = pref.pos_traits
+		if (0)
+			traitlist = pref.neu_traits
+		if (-1)
+			traitlist = pref.neg_traits
+	if (!LAZYLEN(instance.has_preferences) || !(preference in instance.has_preferences) || !traitlist)
+		return
+	if (!LAZYLEN(traitlist[trait]))
+		traitlist[trait] = instance.get_default_prefs()
+	trait_prefs = traitlist[trait]
+	if (!(preference in trait_prefs))
+		trait_prefs[preference] = instance.default_value_for_pref(preference) //won't be called at all often
+	switch(instance.has_preferences[preference][1])
+		if (1) //TRAIT_PREF_TYPE_BOOLEAN
+			trait_prefs[preference] = !trait_prefs[preference]
+		if (2) //TRAIT_PREF_TYPE_COLOR
+			var/new_color = input(user, "Choose the color for this trait preference:", "Trait Preference", trait_prefs[preference]) as color|null
+			if (new_color)
+				trait_prefs[preference] = new_color
+
 // Definition of the stuff for Ears
 /datum/category_item/player_setup_item/vore/traits
 	name = "Traits"
@@ -167,7 +228,6 @@
 	else
 		pref.custom_cold = list()
 
-
 /datum/category_item/player_setup_item/vore/traits/copy_to_mob(var/mob/living/carbon/human/character)
 	character.custom_species	= pref.custom_species
 	character.custom_say		= lowertext(trim(pref.custom_say))
@@ -202,8 +262,6 @@
 		var/english_traits = english_list(new_S.traits, and_text = ";", comma_text = ";")
 		log_game("TRAITS [pref.client_ckey]/([character]) with: [english_traits]") //Terrible 'fake' key_name()... but they aren't in the same entity yet
 
-
-
 /datum/category_item/player_setup_item/vore/traits/content(var/mob/user)
 	. += "<b>Custom Species Name:</b> "
 	. += "<a href='?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Input Name-"]</a><br>"
@@ -232,21 +290,21 @@
 	. += "<ul>"
 	for(var/T in pref.pos_traits)
 		var/datum/trait/trait = positive_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
+		. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.pos_traits[T])]</li>"
 	. += "</ul>"
 
 	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = neutral_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
+		. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neu_traits[T])]</li>"
 	. += "</ul>"
 
 	. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neg_traits)
 		var/datum/trait/trait = negative_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
+		. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neg_traits[T])]</li>"
 	. += "</ul>"
 
 	. += "<b>Blood Color: </b>" //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
@@ -336,6 +394,11 @@
 			instance.remove_pref(pref)
 		return TOPIC_REFRESH
 
+	else if(href_list["clicked_trait_pref"])
+		var/datum/trait/trait = text2path(href_list["clicked_trait_pref"])
+		get_pref_choice_from_trait(user, trait, href_list["pref"])
+		return TOPIC_REFRESH
+
 	else if(href_list["custom_say"])
 		var/say_choice = sanitize(tgui_input_text(usr, "This word or phrase will appear instead of 'says': [pref.real_name] says, \"Hi.\"", "Custom Say", pref.custom_say, 12), 12)
 		if(say_choice)
@@ -379,7 +442,7 @@
 
 	else if(href_list["custom_cold"])
 		tgui_alert(user, "You are setting custom cold messages. These will overwrite your species' defaults. To return to defaults, click reset.")
-		var/old_message = pref.custom_heat.Join("\n\n")
+		var/old_message = pref.custom_cold.Join("\n\n") //CHOMP Edit
 		var/new_message = sanitize(tgui_input_text(usr,"Use double enter between messages to enter a new one. Must be at least 3 characters long, 160 characters max and up to 10 messages are allowed.","Cold Discomfort messages",old_message, multiline= TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN,0,0,0)
 		if(length(new_message) > 0)
 			var/list/raw_list = splittext(new_message,"\n\n")
@@ -393,7 +456,6 @@
 			ASSERT(raw_list.len <= 10)
 			pref.custom_cold = raw_list
 		return TOPIC_REFRESH
-
 
 	else if(href_list["reset_say"])
 		var/say_choice = tgui_alert(usr, "Reset your Custom Say Verb?","Reset Verb",list("Yes","No"))
@@ -515,7 +577,6 @@
 
 			if(pref.gross_meatbag && !(instance.can_take & ORGANICS))
 				tgui_alert_async(usr, "The trait you've selected can only be taken by synthetic characters!", "Error")
-				pref.gross_meatbag = 0	//Just to be sure
 				return TOPIC_REFRESH
 
 			if(pref.species in instance.banned_species)
@@ -551,7 +612,7 @@
 				return TOPIC_REFRESH
 
 			instance.apply_pref(pref)
-			mylist += path
+			mylist[path] = instance.get_default_prefs()
 			return TOPIC_REFRESH
 
 	return ..()
