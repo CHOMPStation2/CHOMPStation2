@@ -36,14 +36,14 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		data["personalTag"] = user.mind.directory_tag || "Unset"
 		data["personalErpTag"] = user.mind.directory_erptag || "Unset"
 		data["personalEventTag"] = vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
-    data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
-	  data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
+   		data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
+	 	data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 	else if (user?.client?.prefs)
 		data["personalVisibility"] = user.client.prefs.show_in_directory
 		data["personalTag"] = user.client.prefs.directory_tag || "Unset"
 		data["personalErpTag"] = user.client.prefs.directory_erptag || "Unset"
 		data["personalEventTag"] = vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
-    data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
+   		data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
   	data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 
 	return data
