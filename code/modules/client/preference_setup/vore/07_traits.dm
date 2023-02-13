@@ -379,7 +379,7 @@
 
 	else if(href_list["custom_cold"])
 		tgui_alert(user, "You are setting custom cold messages. These will overwrite your species' defaults. To return to defaults, click reset.")
-		var/old_message = pref.custom_cold.Join("\n\n")
+		var/old_message = pref.custom_cold.Join("\n\n") //CHOMP Edit
 		var/new_message = sanitize(tgui_input_text(usr,"Use double enter between messages to enter a new one. Must be at least 3 characters long, 160 characters max and up to 10 messages are allowed.","Cold Discomfort messages",old_message, multiline= TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN,0,0,0)
 		if(length(new_message) > 0)
 			var/list/raw_list = splittext(new_message,"\n\n")
