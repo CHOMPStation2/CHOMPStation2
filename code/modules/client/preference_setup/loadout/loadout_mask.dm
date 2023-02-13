@@ -61,6 +61,12 @@
 	display_name = "neck gaiter selection"
 	path = /obj/item/clothing/accessory/gaiter
 	cost = 1
+	
+//CHOMPAdd - Put this mask in loadout
+/datum/gear/mask/death
+	display_name = "white mask"
+	path = /obj/item/clothing/mask/gas/cyborg
+	cost = 1
 
 /datum/gear/mask/gaiter/New()
 	..()
