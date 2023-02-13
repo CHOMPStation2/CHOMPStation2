@@ -17,6 +17,7 @@
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt,
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
+		/obj/item/weapon/cartridge/hos,
 		/obj/item/clothing/head/helmet/dermal,
 		/obj/item/device/radio/headset/heads/hos,
 		/obj/item/device/radio/headset/heads/hos/alt,
