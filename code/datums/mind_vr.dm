@@ -1,7 +1,5 @@
 /datum/mind
 	var/vore_death = FALSE	// Was our last gasp a gurgle?
-<<<<<<< HEAD
-=======
 	var/show_in_directory
 	var/directory_tag
 	var/directory_erptag
@@ -14,4 +12,3 @@
 		mind.directory_tag = client.prefs.directory_tag
 		mind.directory_erptag = client.prefs.directory_erptag
 		mind.directory_ad = client.prefs.directory_ad
->>>>>>> c55fa159ab... Merge pull request #14359 from Seris02/characterdirectorybetter
