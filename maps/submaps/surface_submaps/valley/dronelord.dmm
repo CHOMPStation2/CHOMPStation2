@@ -206,7 +206,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/dronelord)
 "En" = (
-/obj/structure/closet/secure_closet/guncabinet/excursion,
+/obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/projectile/giskard/olivaw,
 /obj/item/weapon/gun/energy/lasershotgun,
 /turf/simulated/shuttle/floor/red,
@@ -329,7 +329,7 @@
 /turf/simulated/shuttle/wall/voidcraft/orange,
 /area/submap/dronelord)
 "Ul" = (
-/obj/structure/closet/secure_closet/guncabinet/excursion,
+/obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/projectile/multi_cannon,
 /obj/item/weapon/gun/energy/particle/cannon,
 /obj/machinery/light/poi{
@@ -347,7 +347,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/submap/dronelord)
 "WO" = (
-/obj/structure/closet/secure_closet/guncabinet/excursion,
+/obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/magnetic/matfed,
 /obj/item/weapon/gun/energy/ionrifle,
 /turf/simulated/shuttle/floor/red,

@@ -66,7 +66,14 @@
 /area/submap/xenobio)
 "fz" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 103
+	},
+/area/submap/xenobio)
+"fH" = (
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 103
+	},
 /area/submap/xenobio)
 "fL" = (
 /obj/machinery/porta_turret,
@@ -88,7 +95,9 @@
 /area/submap/xenobio)
 "iJ" = (
 /mob/living/simple_mob/slime/xenobio/dark_purple,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 103
+	},
 /area/submap/xenobio)
 "iQ" = (
 /obj/machinery/light/poi{
@@ -165,8 +174,10 @@
 /area/submap/xenobio)
 "rf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/shooter/energy/tesla,
-/turf/simulated/floor/reinforced,
+/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 103
+	},
 /area/submap/xenobio)
 "ri" = (
 /obj/item/device/perfect_tele/frontier,
@@ -354,7 +365,9 @@
 "Me" = (
 /obj/structure/table/standard,
 /obj/item/weapon/melee/energy/axe,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 103
+	},
 /area/submap/xenobio)
 "MR" = (
 /obj/item/weapon/bedsheet/purple,
@@ -379,7 +392,9 @@
 "NN" = (
 /obj/structure/table/standard,
 /obj/item/weapon/telecube/randomized/mated,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 103
+	},
 /area/submap/xenobio)
 "OW" = (
 /obj/structure/cable/yellow{
@@ -391,7 +406,6 @@
 /area/submap/xenobio)
 "PM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
 "Qq" = (
@@ -456,6 +470,10 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
+/area/submap/xenobio)
+"VK" = (
+/obj/item/weapon/grenade/shooter/energy/tesla,
+/turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "WL" = (
 /mob/living/simple_mob/slime/xenobio/bluespace,
@@ -800,7 +818,7 @@ Co
 GP
 HY
 JM
-HY
+VK
 GP
 HY
 HY
@@ -838,8 +856,8 @@ af
 bl
 Ai
 oC
-fz
-HY
+fH
+fH
 fz
 oC
 dT
@@ -858,8 +876,8 @@ kM
 bl
 bl
 os
-HY
-HY
+fH
+fH
 iJ
 oC
 Qq

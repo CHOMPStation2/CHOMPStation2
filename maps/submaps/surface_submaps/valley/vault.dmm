@@ -34,6 +34,10 @@
 "p" = (
 /turf/space,
 /area/submap/vault)
+"q" = (
+/obj/machinery/door/airlock/alien/blue/public,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/vault)
 "r" = (
 /obj/machinery/porta_turret/alien{
 	faction = "hivebot"
@@ -140,6 +144,13 @@
 "X" = (
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
 	faction = "hivebot"
+	},
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/vault)
+"Y" = (
+/obj/machinery/door/airlock/alien/blue/public,
+/obj/structure/fans/tiny{
+	mouse_opacity = 0
 	},
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
@@ -328,15 +339,15 @@ a
 c
 c
 c
-Z
-Z
+Y
+Y
 c
 c
 c
 c
 c
-Z
-Z
+Y
+Y
 c
 c
 c
@@ -366,7 +377,7 @@ a
 z
 z
 a
-Z
+q
 a
 z
 a
@@ -380,7 +391,7 @@ a
 a
 z
 a
-Z
+q
 a
 z
 z
@@ -407,7 +418,7 @@ a
 a
 a
 a
-Z
+q
 a
 z
 a
@@ -421,7 +432,7 @@ a
 a
 z
 a
-Z
+q
 a
 a
 a
@@ -445,7 +456,7 @@ a
 a
 P
 c
-Z
+q
 c
 c
 c
@@ -465,7 +476,7 @@ c
 c
 c
 c
-Z
+q
 c
 P
 a
@@ -525,7 +536,7 @@ a
 z
 z
 a
-Z
+q
 a
 z
 a
@@ -549,7 +560,7 @@ R
 a
 z
 a
-Z
+q
 a
 z
 z
@@ -646,8 +657,8 @@ c
 c
 c
 c
-Z
-Z
+q
+q
 c
 c
 c
@@ -673,8 +684,8 @@ c
 c
 c
 c
-Z
-Z
+q
+q
 c
 c
 c
@@ -768,7 +779,7 @@ d
 a
 z
 a
-Z
+Y
 a
 a
 O
@@ -798,7 +809,7 @@ a
 O
 a
 a
-Z
+Y
 a
 z
 a
@@ -809,7 +820,7 @@ d
 a
 z
 a
-Z
+Y
 a
 a
 O
@@ -839,7 +850,7 @@ a
 O
 a
 a
-Z
+Y
 a
 z
 a
@@ -1055,7 +1066,7 @@ d
 a
 z
 a
-Z
+Y
 a
 a
 O
@@ -1085,7 +1096,7 @@ a
 O
 a
 a
-Z
+Y
 a
 z
 a
@@ -1096,7 +1107,7 @@ d
 a
 z
 a
-Z
+Y
 a
 a
 O
@@ -1126,7 +1137,7 @@ a
 O
 a
 a
-Z
+Y
 a
 z
 a
@@ -1220,8 +1231,8 @@ c
 c
 c
 c
-Z
-Z
+q
+q
 c
 c
 c
@@ -1247,8 +1258,8 @@ c
 c
 c
 c
-Z
-Z
+q
+q
 c
 c
 c
@@ -1369,7 +1380,7 @@ n
 a
 z
 a
-Z
+q
 a
 z
 z
@@ -1449,7 +1460,7 @@ c
 c
 c
 c
-Z
+q
 c
 P
 a
@@ -1473,7 +1484,7 @@ a
 a
 a
 a
-Z
+q
 a
 z
 a
@@ -1487,7 +1498,7 @@ a
 a
 z
 a
-Z
+q
 a
 a
 a
@@ -1514,7 +1525,7 @@ a
 z
 z
 a
-Z
+q
 a
 z
 a
@@ -1528,7 +1539,7 @@ a
 a
 z
 a
-Z
+q
 a
 z
 z
@@ -1558,15 +1569,15 @@ a
 c
 c
 c
-Z
-Z
+Y
+Y
 c
 c
 c
 c
 c
-Z
-Z
+Y
+Y
 c
 c
 c

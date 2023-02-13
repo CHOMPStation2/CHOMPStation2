@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ar" = (
+/obj/machinery/porta_turret/industrial/teleport_defense{
+	faction = "pirate"
+	},
+/turf/simulated/floor/plating,
+/area/submap/piratefortress)
 "aE" = (
 /obj/structure/table/reinforced,
 /obj/random/maintenance/foodstuff,
@@ -357,7 +363,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "vk" = (
-/obj/machinery/porta_turret/industrial{
+/obj/machinery/porta_turret/industrial/teleport_defense{
 	faction = "pirate"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -1378,7 +1384,7 @@ ms
 La
 La
 vT
-kC
+ar
 vT
 vT
 vT
@@ -1386,7 +1392,7 @@ vT
 vT
 vT
 vT
-kC
+ar
 vT
 vT
 vT
@@ -1422,7 +1428,7 @@ ms
 ms
 La
 vT
-kC
+ar
 oX
 PP
 Qw
@@ -1432,16 +1438,16 @@ oX
 PP
 Qw
 oX
-kC
+ar
 vT
 vT
 vT
-kC
+ar
 vT
 vT
 La
 La
-kC
+ar
 La
 ms
 ms
@@ -1487,7 +1493,7 @@ oX
 oX
 oX
 oX
-kC
+ar
 La
 ms
 ms
@@ -1602,7 +1608,7 @@ ms
 ms
 La
 vT
-kC
+ar
 oX
 oX
 St
@@ -1624,7 +1630,7 @@ jO
 oX
 vT
 vT
-kC
+ar
 La
 La
 ms
@@ -1670,7 +1676,7 @@ oX
 oX
 oX
 oX
-kC
+ar
 La
 ms
 ms
@@ -1737,7 +1743,7 @@ ms
 ms
 ms
 La
-kC
+ar
 oX
 oX
 VJ
@@ -1805,7 +1811,7 @@ Uz
 QM
 Pl
 oX
-kC
+ar
 vT
 La
 ms
@@ -1940,7 +1946,7 @@ oX
 oX
 oX
 oX
-kC
+ar
 vT
 La
 ms
@@ -2097,7 +2103,7 @@ ms
 ms
 La
 vT
-kC
+ar
 oX
 oX
 VJ
@@ -2255,7 +2261,7 @@ VJ
 oX
 oX
 oX
-kC
+ar
 vT
 vT
 La
@@ -2286,12 +2292,12 @@ vT
 vT
 vT
 vT
-kC
+ar
 vT
 vT
 vT
 vT
-kC
+ar
 vT
 vT
 vT
@@ -2299,7 +2305,7 @@ vT
 vT
 vT
 vT
-kC
+ar
 vT
 vT
 La

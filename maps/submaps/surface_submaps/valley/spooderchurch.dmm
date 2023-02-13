@@ -4,12 +4,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/spooderchurch)
-"bM" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/spider/stickyweb,
-/obj/effect/spider/eggcluster,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/spooderchurch)
 "cm" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10;
@@ -267,11 +261,6 @@
 	dir = 4;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/spooderchurch)
-"Mn" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/spider/eggcluster,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/spooderchurch)
 "MB" = (
@@ -629,7 +618,7 @@ yY
 Pd
 Pd
 yY
-mY
+yY
 ig
 JI
 Bw
@@ -738,7 +727,7 @@ Bw
 tI
 yY
 ig
-Mn
+ig
 ig
 PR
 yY
@@ -779,7 +768,7 @@ ig
 ig
 ig
 yY
-yY
+mY
 ig
 ig
 ig
@@ -856,7 +845,7 @@ ig
 yY
 Tb
 yY
-mY
+yY
 ig
 aZ
 JI
@@ -1006,7 +995,7 @@ yY
 ig
 yY
 yY
-mY
+yY
 yY
 yY
 yY
@@ -1120,7 +1109,7 @@ yY
 ig
 ig
 ig
-yY
+mY
 yY
 yY
 ig
@@ -1162,7 +1151,7 @@ yY
 yY
 yY
 pV
-Mn
+ig
 JI
 Bw
 YO
@@ -1193,7 +1182,7 @@ YO
 Bw
 tI
 yY
-bM
+aZ
 ig
 ig
 Pd

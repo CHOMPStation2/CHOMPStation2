@@ -60,6 +60,11 @@
 	outdoors = 0
 	},
 /area/submap/leppy)
+"Z" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/seeds/ambrosiavulgarisseed,
+/turf/simulated/mineral/floor/cave,
+/area/submap/leppy)
 
 (1,1,1) = {"
 A
@@ -457,7 +462,7 @@ a
 a
 a
 a
-s
+Z
 K
 A
 "}
@@ -507,7 +512,7 @@ a
 K
 s
 a
-s
+Z
 K
 A
 "}
@@ -557,7 +562,7 @@ z
 K
 s
 a
-s
+Z
 K
 A
 "}

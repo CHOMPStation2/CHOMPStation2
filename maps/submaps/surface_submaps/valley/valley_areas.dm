@@ -84,6 +84,7 @@
 
 /area/submap/redshuttledown
 	name = "Poi Valley - Red Shuttle"
+	requires_power = FALSE
 	ambience = AMBIENCE_RUINS
 
 /area/submap/solarmoff
@@ -100,6 +101,7 @@
 
 /area/submap/vault
 	name = "Poi Valley Walls - Vault"
+	requires_power = FALSE
 	ambience = AMBIENCE_RUINS
 
 /area/submap/xenobio
