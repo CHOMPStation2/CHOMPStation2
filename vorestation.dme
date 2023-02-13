@@ -4599,7 +4599,7 @@
 #include "modular_chomp\code\modules\mob\new_player\sprite_accessories_wing.dm"
 #include "modular_chomp\code\modules\organs\organ_external.dm"
 #include "modular_chomp\code\modules\organs\organ_icon.dm"
-#include "modular_chomp/code/modules/player_tips/player_tips_list.dm"
+#include "modular_chomp\code\modules\player_tips\player_tips_list.dm"
 #include "modular_chomp\code\modules\power\cells\device_cells.dm"
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
