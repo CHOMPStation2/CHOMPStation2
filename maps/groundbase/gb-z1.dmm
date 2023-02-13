@@ -445,7 +445,11 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/wall/r_wall,
+/obj/machinery/computer/guestpass{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
 "bi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/purple,
@@ -5724,7 +5728,7 @@ lel
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "nO" = (
-/obj/machinery/suit_cycler,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
 "nP" = (
@@ -8241,8 +8245,9 @@ lel
 	phorontanks = 0
 	},
 /obj/machinery/light_switch{
-	dir = 1;
-	pixel_y = -30
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = -2
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
@@ -8589,6 +8594,24 @@ lel
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/westspur)
+"uz" = (
+/obj/machinery/suit_cycler/exploration,
+/obj/effect/floor_decal/industrial/outline{
+	color = "#5c00ad"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
+"uA" = (
+/obj/item/weapon/paper_bin{
+	pixel_y = 7
+	},
+/obj/structure/table/steel,
+/obj/item/weapon/pen,
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
 "uB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -9479,11 +9502,39 @@ lel
 /turf/simulated/wall,
 /area/groundbase/civilian/arrivals)
 "wI" = (
-/obj/structure/table/rack,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = 4;
+	pixel_y = -6
+	},
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = 4;
+	pixel_y = -6
+	},
+/obj/item/weapon/storage/backpack/parachute{
+	pixel_x = -4;
+	pixel_y = -6
+	},
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
@@ -10014,7 +10065,10 @@ lel
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/ai/chamber)
 "xJ" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
 "xK" = (
@@ -11168,6 +11222,14 @@ lel
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/lobby)
+"An" = (
+/obj/structure/table/rack/shelf,
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer,
+/obj/item/device/cataloguer/compact,
+/obj/item/device/cataloguer/compact,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
 "Ao" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/gunbox{
@@ -12199,11 +12261,20 @@ lel
 	},
 /area/groundbase/level1/northspur)
 "CN" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/mineral/equipment_vendor/survey,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 "CO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 9
@@ -12300,9 +12371,18 @@ lel
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/command/tcomms/storage)
 "CZ" = (
+<<<<<<< HEAD
 /obj/machinery/holoplant,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 "Db" = (
 /turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/southeastspur)
@@ -12402,12 +12482,16 @@ lel
 	layer = 2.9
 	},
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/medical,
-/obj/item/clothing/head/helmet/space/void/medical,
 /obj/machinery/door/window/brigdoor{
 	req_access = list(5)
 	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/medical,
+/obj/item/clothing/suit/space/void/medical,
+/obj/item/clothing/head/helmet/space/void/medical,
+/obj/item/clothing/head/helmet/space/void/medical,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/gateway)
 "Dq" = (
@@ -12927,6 +13011,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 "Ez" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
@@ -12935,6 +13020,12 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/suit_cycler/engineering,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 "EA" = (
 /obj/machinery/computer/secure_data,
 /obj/machinery/light{
@@ -13014,6 +13105,14 @@ lel
 	},
 /turf/simulated/floor,
 /area/groundbase/civilian/cafe)
+"EN" = (
+/obj/machinery/camera/network/civilian{
+	dir = 1
+	},
+/obj/machinery/suit_cycler/medical,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
 "EO" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
@@ -15593,6 +15692,11 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/briefing)
+"KQ" = (
+/obj/machinery/suit_cycler/security,
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
 "KR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -15758,8 +15862,23 @@ lel
 /turf/simulated/floor/carpet/sblucarpet,
 /area/groundbase/security/hos)
 "Li" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
+"Lj" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 4
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 	},
 /obj/machinery/alarm{
 	dir = 8
@@ -16524,6 +16643,10 @@ lel
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
+"MV" = (
+/obj/machinery/chemical_analyzer,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
 "MW" = (
 /obj/item/weapon/stool/baystool/padded{
 	dir = 8
@@ -17061,6 +17184,26 @@ lel
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
+"Oi" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/weapon/tank/oxygen,
+/obj/item/device/suit_cooling_unit,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/exploration,
+/obj/item/clothing/suit/space/void/exploration,
+/obj/item/clothing/head/helmet/space/void/exploration,
+/obj/item/clothing/head/helmet/space/void/exploration,
+/obj/item/device/bluespaceradio/groundbase_prelinked,
+/obj/machinery/door/window/brigdoor/eastright{
+	req_access = list(43)
+	},
+/obj/item/device/mapping_unit,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
 "Oj" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -17448,6 +17591,34 @@ lel
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 >>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/groundbase/level1/southeastspur)
+"Pq" = (
+/obj/structure/table/rack/shelf,
+/obj/item/stack/marker_beacon/thirty{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/stack/marker_beacon/thirty{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/device/gps{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/item/device/gps{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/item/device/gps{
+	pixel_x = 6;
+	pixel_y = -4
+	},
+/obj/item/device/gps{
+	pixel_x = 6;
+	pixel_y = -4
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/gateway)
 "Pr" = (
 /obj/structure/bed/chair/sofa/bench{
 	dir = 1
@@ -17621,13 +17792,7 @@ lel
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
 "PP" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/obj/machinery/disposal,
-/obj/machinery/camera/network/civilian{
-	dir = 1
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
 "PQ" = (
@@ -17957,6 +18122,7 @@ lel
 /obj/structure/sign/painting/public{
 	pixel_x = -30
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/gameroom)
 "QG" = (
@@ -17970,6 +18136,13 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/camera/network/civilian{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/groundbase/civilian/arrivals)
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 "QH" = (
 /obj/structure/table/reinforced,
 /obj/item/device/sleevemate,
@@ -19419,6 +19592,13 @@ lel
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/pink/full,
+<<<<<<< HEAD
+=======
+/obj/machinery/vending/wallmed1/public{
+	dir = 1;
+	pixel_y = -28
+	},
+>>>>>>> 244095be9e... Merge pull request #14220 from Very-Soft/removeexplo
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
 "TW" = (
@@ -19844,6 +20024,11 @@ lel
 	},
 /turf/simulated/wall/r_wall,
 /area/groundbase/command/ai/chamber)
+"Vf" = (
+/obj/machinery/suit_cycler,
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/gateway)
 "Vg" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -20400,12 +20585,8 @@ lel
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 "WC" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/computer/guestpass{
-	dir = 1;
-	pixel_y = -22
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/gateway)
@@ -20516,6 +20697,11 @@ lel
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
 "WN" = (
+/obj/structure/table/rack,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
 /obj/machinery/firealarm{
 	dir = 4
 	},
@@ -20594,10 +20780,14 @@ lel
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/mask/breath,
+/obj/item/weapon/tank/oxygen,
+/obj/item/device/suit_cooling_unit,
 /obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/medical,
-/obj/item/clothing/head/helmet/space/void/medical,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/expedition_medical,
+/obj/item/clothing/suit/space/void/expedition_medical,
+/obj/item/clothing/head/helmet/space/void/expedition_medical,
+/obj/item/clothing/head/helmet/space/void/expedition_medical,
 /obj/machinery/door/window/brigdoor/eastright{
 	req_access = list(5)
 	},
@@ -29656,8 +29846,8 @@ lE
 sw
 pD
 XV
-AZ
-AZ
+lE
+lE
 Dt
 aC
 SQ
@@ -29796,10 +29986,10 @@ lE
 Dp
 WY
 jW
-XS
+Oi
 hB
-AZ
-AZ
+gO
+MV
 Dt
 CK
 SQ
@@ -29938,10 +30128,10 @@ fC
 pB
 pB
 aG
-WC
+pB
 bh
-AZ
-AZ
+XS
+Vf
 Dt
 cq
 KE
@@ -30080,10 +30270,10 @@ kg
 KG
 XS
 GO
-nO
-lE
-AZ
-AZ
+XS
+XS
+XS
+Ez
 Dt
 Dt
 Dt
@@ -30223,10 +30413,10 @@ MC
 KM
 FH
 PP
+PP
+xJ
+EN
 lE
-AZ
-AZ
-Eb
 Eb
 Eb
 Eb
@@ -30364,11 +30554,11 @@ Ek
 WZ
 XS
 kK
-nO
+XS
+XS
+WC
+KQ
 lE
-AZ
-AZ
-AZ
 Eb
 Eb
 Eb
@@ -30506,11 +30696,11 @@ XS
 FN
 XS
 kK
-xJ
+XS
+XS
+WC
+uz
 lE
-AZ
-Eb
-Eb
 Eb
 Eb
 Nv
@@ -30640,19 +30830,19 @@ MO
 MO
 lE
 wI
-nR
-XS
-XS
-XS
+CN
+An
+Pq
+uA
 WN
 FN
 nR
 av
 tH
+nO
+Li
+CZ
 lE
-AZ
-Eb
-Eb
 Eb
 Eb
 Nv
@@ -30792,9 +30982,9 @@ lE
 rl
 lE
 lE
-Eb
-Eb
-Eb
+lE
+lE
+lE
 Eb
 Eb
 Eb

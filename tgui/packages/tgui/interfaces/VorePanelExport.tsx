@@ -826,6 +826,10 @@ const downloadPrefs = (context, extension: string) => {
     );
   }
 
+  if (extension === '.vrdb') {
+    blob = new Blob([JSON.stringify(bellies)], { type: 'application/json' });
+  }
+
   (window.navigator as any).msSaveOrOpenBlob(blob, filename);
 };
 
@@ -849,6 +853,9 @@ const VorePanelExportContent = (props, context) => {
       <Section title="Export">
         <Button fluid icon="file-alt" onClick={() => downloadPrefs(context, '.html')}>
           Export (HTML)
+        </Button>
+        <Button fluid icon="file-alt" onClick={() => downloadPrefs(context, '.vrdb')}>
+          Export (VRDB)
         </Button>
       </Section>
     </Section>

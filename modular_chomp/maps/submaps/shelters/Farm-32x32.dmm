@@ -67,8 +67,7 @@
 /area/template_noop)
 "fp" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
@@ -324,7 +323,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/device/camera,

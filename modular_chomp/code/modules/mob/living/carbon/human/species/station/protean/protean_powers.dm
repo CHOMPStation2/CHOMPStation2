@@ -25,7 +25,8 @@
 	if(!istype(refactory))
 		to_chat(caller,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
-	var/choice = tgui_input_list(caller,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
+
+	var/choice = tgui_input_list(src,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
 	if(!choice)
 		return
 
@@ -66,7 +67,7 @@
 		var/datum/robolimb/M = chargen_robolimbs[company]
 		if(!(choice in M.parts))
 			continue
-		if(impersonate_bodytype in M.species_cannot_use)
+		if(species?.base_species in M.species_cannot_use)
 			continue
 		if(M.whitelisted_to && !(ckey in M.whitelisted_to))
 			continue
@@ -127,7 +128,7 @@
 			var/datum/robolimb/M = chargen_robolimbs[company]
 			if(!(BP_TORSO in M.parts))
 				continue
-			if(impersonate_bodytype in M.species_cannot_use)
+			if(species?.base_species in M.species_cannot_use)
 				continue
 			if(M.whitelisted_to && !(ckey in M.whitelisted_to))
 				continue
@@ -283,7 +284,6 @@
 
 	var/new_species = tgui_input_list(usr, "Please select a species to emulate.", "Shapeshifter Body", GLOB.playable_species)
 	if(new_species)
-		impersonate_bodytype = new_species
 		species?.base_species = new_species // Really though you better have a species
 		regenerate_icons() //Expensive, but we need to recrunch all the icons we're wearing
 

@@ -510,7 +510,8 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_DIONA,
 				SPECIES_ALRAUNE,
 				SPECIES_PROTEAN,
-				SPECIES_MONKEY,					//Exclude all monkey subtypes, to prevent abuse of it. They aren't,
+				/*
+				SPECIES_MONKEY,					//Exclude all monkey subtypes, to prevent abuse of it. They aren't, //CHOMPEDIT How about let preds have skeletons, people can do so much worse than this
 				SPECIES_MONKEY_TAJ,				//set to have remains anyway, but making double sure,
 				SPECIES_MONKEY_SKRELL,
 				SPECIES_MONKEY_UNATHI,
@@ -518,6 +519,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_MONKEY_NEVREAN,
 				SPECIES_MONKEY_SERGAL,
 				SPECIES_MONKEY_VULPKANIN,
+				*/
 				SPECIES_XENO,					//Same for xenos,
 				SPECIES_XENO_DRONE,
 				SPECIES_XENO_HUNTER,
@@ -534,7 +536,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				"Research Intern",
 				"Security Cadet",
 				"Jr. Cargo Tech",
-				"Jr. Explorer",
+				"Jr. Explorer", //CHOMP explo keep
 				"Server",
 				"Electrician",
 				"Barista")
@@ -973,7 +975,7 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 //	/area/maintenance/groundbase/level1,
 //	/area/submap/groundbase/wilderness,
 //	/area/groundbase/mining,
-//	/area/offmap/aerostat/surface, 
+//	/area/offmap/aerostat/surface,
 //	/area/tether_away/beach,
 //	/area/tether_away/cave,
 )

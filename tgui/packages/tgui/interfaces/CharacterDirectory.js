@@ -25,14 +25,15 @@ const getTagColor = (tag) => {
 export const CharacterDirectory = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { personalVisibility, personalTag, personalErpTag, personalEventTag } = data;
+  const { personalVisibility, personalTag, personalGenderTag, personalSexualityTag, personalErpTag, personalEventTag } =
+    data;
 
   const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
   const [overwritePrefs, setOverwritePrefs] = useLocalState(context, 'overwritePrefs', false);
 
   return (
-    <Window width={640} height={480} resizeable>
+    <Window width={816} height={722} resizeable>
       <Window.Content scrollable>
         {(overlay && <ViewCharacter />) || (
           <Fragment>
@@ -51,6 +52,7 @@ export const CharacterDirectory = (props, context) => {
                   />
                 </Fragment>
               }>
+            <Section title="Settings and Preferences">
               <LabeledList>
                 <LabeledList.Item label="Visibility">
                   <Button
@@ -65,6 +67,12 @@ export const CharacterDirectory = (props, context) => {
                     content={personalTag}
                     onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
                   />
+                </LabeledList.Item>
+                <LabeledList.Item label="Gender">
+                  <Button fluid content={personalGenderTag} onClick={() => act('setGenderTag')} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Sexuality">
+                  <Button fluid content={personalSexualityTag} onClick={() => act('setSexualityTag')} />
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
                   <Button
@@ -103,6 +111,12 @@ const ViewCharacter = (props, context) => {
         <Box p={1} backgroundColor={getTagColor(overlay.tag)}>
           {overlay.tag}
         </Box>
+      </Section>
+      <Section level={2} title="Gender">
+        <Box>{overlay.gendertag}</Box>
+      </Section>
+      <Section level={2} title="Sexuality">
+        <Box>{overlay.sexualitytag}</Box>
       </Section>
       <Section level={2} title="ERP Tag">
         <Box>{overlay.erptag}</Box>
@@ -145,6 +159,8 @@ const CharacterDirectoryList = (props, context) => {
           <SortButton id="name">Name</SortButton>
           <SortButton id="species">Species</SortButton>
           <SortButton id="tag">Vore Tag</SortButton>
+          <SortButton id="gendertag">Gender</SortButton>
+          <SortButton id="sexualitytag">Sexuality</SortButton>
           <SortButton id="erptag">ERP Tag</SortButton>
           <SortButton id="eventtag">Event Pref</SortButton>
           <Table.Cell collapsing textAlign="right">
@@ -161,6 +177,8 @@ const CharacterDirectoryList = (props, context) => {
               <Table.Cell p={1}>{character.name}</Table.Cell>
               <Table.Cell>{character.species}</Table.Cell>
               <Table.Cell>{character.tag}</Table.Cell>
+              <Table.Cell>{character.gendertag}</Table.Cell>
+              <Table.Cell>{character.sexualitytag}</Table.Cell>
               <Table.Cell>{character.erptag}</Table.Cell>
               <Table.Cell>{character.eventtag}</Table.Cell>
               <Table.Cell collapsing textAlign="right">
