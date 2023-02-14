@@ -330,7 +330,7 @@
 	item_state = null
 	phase_power = 20 
 
-	w_class = ITEM_SMALL
+	w_class = ITEMSIZE_SMALL
 	charge_cost = 200 //Chompedit Reduced cost
 	modifystate = "handbowkill"
 	firemodes = list(
