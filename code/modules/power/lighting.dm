@@ -451,6 +451,18 @@ var/global/list/light_type_cache = list()
 	update()
 
 //VOREstation Edit End
+
+//CHOMPStation Edit Start
+/obj/machinery/light/proc/set_alert_engineering()
+	if(!shows_alerts)
+		return
+	current_alert = "eng"
+	light_color = "#ff9900"
+	brightness_color = "#ff9900"
+	update()
+
+// CHOMPStation Edit End
+
 // update lighting
 /obj/machinery/light/proc/update(var/trigger = 1)
 	update_icon()
