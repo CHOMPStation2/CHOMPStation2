@@ -72,8 +72,6 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/butler/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/clerical/butler/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/miner/kmine
-	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
-	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
 	robot_modules["TraumaHound"] = /obj/item/weapon/robot_module/robot/medical/traumahound
 	return 1
