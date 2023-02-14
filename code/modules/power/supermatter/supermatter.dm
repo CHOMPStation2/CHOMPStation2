@@ -249,6 +249,9 @@
 	var/alert_msg = " Integrity at [integrity]%"
 	var/message_sound = 'sound/ambience/matteralarm.ogg'
 
+	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to warn.
+		return // CHOMPEdit: SM Global Warn Fix; No need to announce if we're outside the station's Z, at a POI, etc.
+
 	if(final_countdown) // Chompers additon
 		return
 	if(damage > emergency_point)
@@ -406,6 +409,10 @@
 
 /obj/machinery/power/supermatter/proc/countdown()
 	set waitfor = FALSE
+
+	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to use a stabilization field.
+		explode() // CHOMPEdit: SM Global Warn Fix;  Just exploding, because we're not on the station's Z. No safety countdown.
+		return // CHOMPEdit: SM Global Warn Fix; Stops the code here.
 
 	if(final_countdown) // We're already doing it go away
 		return
