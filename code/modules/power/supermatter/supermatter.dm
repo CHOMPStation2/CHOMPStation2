@@ -114,12 +114,19 @@
 
 	var/datum/looping_sound/supermatter/soundloop
 
+	var/engwarn = 0 // CHOMPEdit: Looping Alarms
+	var/critwarn = 0 // CHOMPEdit: Looping Alarms
+	var/causalitywarn = 0 // CHOMPEdit: Looping Alarms
+	var/stationcrystal = FALSE // CHOMPEdit: Looping Alarms
+
 /obj/machinery/power/supermatter/New()
 	..()
 	uid = gl_uid++
 
 /obj/machinery/power/supermatter/Initialize()
 	soundloop = new(list(src), TRUE)
+	if(src.z in using_map.station_levels) // CHOMPEdit: Looping Alarms
+		stationcrystal = TRUE  // CHOMPEdit: Looping Alarms
 	return ..()
 
 /obj/machinery/power/supermatter/Destroy()
@@ -174,6 +181,11 @@
 	anchored = TRUE
 	grav_pulling = 1
 	exploded = 1
+	// CHOMPEdit Start - Looping Alarms. We want to stop the alarm here.
+	if(stationcrystal) // Are we an on-station crystal?
+		addtimer(CALLBACK(src, .proc/reset_alarms), 10 SECONDS, TIMER_STOPPABLE)
+	// CHOMPEdit End
+
 	sleep(pull_time)
 	var/turf/TS = get_turf(src)		// The turf supermatter is on. SM being in a locker, exosuit, or other container shouldn't block it's effects that way.
 	if(!istype(TS))
@@ -254,14 +266,36 @@
 	if(damage > emergency_point)
 		alert_msg = emergency_alert + alert_msg
 		lastwarning = world.timeofday - WARNING_DELAY * 4
+		// CHOMPEdit Start
+		if(!critwarn)
+			if(src.z in using_map.station_levels)
+				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+					var/area/our_area = get_area(candidate_alarm)
+					if(istype(our_area, /area/engineering))
+						candidate_alarm.critalarm.start()
+			critwarn = 1
+		// CHOMPEdit End
 	else if(damage >= damage_archived) // The damage is still going up
+		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
+		if(!engwarn)
+			if(src.z in using_map.station_levels)
+				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+					var/area/our_area = get_area(candidate_alarm)
+					if(istype(our_area, /area/engineering))
+						for(var/obj/machinery/light/L in our_area)
+							L.set_alert_engineering()
+						candidate_alarm.engalarm.start()
+			engwarn = 1 // So we don't repeatedly try and start over the soundloop/etc
+		// CHOMPEdit End
 		safe_warned = 0
 		alert_msg = warning_alert + alert_msg
 		lastwarning = world.timeofday
+
 	else if(!safe_warned)
 		safe_warned = 1 // We are safe, warn only once
 		alert_msg = safe_alert
 		lastwarning = world.timeofday
+		reset_alarms() // CHOMPEdit: Looping Alarms
 	else
 		alert_msg = null
 	if(alert_msg)
@@ -406,6 +440,15 @@
 
 /obj/machinery/power/supermatter/proc/countdown()
 	set waitfor = FALSE
+
+	if(!final_countdown)
+		if(!causalitywarn)
+			if(src.z in using_map.station_levels)
+				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+					var/area/our_area = get_area(candidate_alarm)
+					if(istype(our_area, /area/engineering))
+						candidate_alarm.causality.start()
+			causalitywarn = 1
 
 	if(final_countdown) // We're already doing it go away
 		return
@@ -588,3 +631,21 @@
 /obj/item/broken_sm/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
+
+// CHOMP Edit Start
+/obj/machinery/power/supermatter/station
+	stationcrystal = TRUE
+
+/obj/machinery/power/supermatter/proc/reset_alarms()
+	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+		var/area/our_area = get_area(candidate_alarm)
+		if(istype(our_area, /area/engineering))
+			for(var/obj/machinery/light/L in our_area)
+				L.reset_alert()
+			candidate_alarm.engalarm.stop()
+			candidate_alarm.causality.stop() // Somehow, in case they reset the alarms and fix the SM.
+			candidate_alarm.critalarm.stop()
+			engwarn = 0
+			critwarn = 0
+			causalitywarn = 0
+// CHOMPEdit End

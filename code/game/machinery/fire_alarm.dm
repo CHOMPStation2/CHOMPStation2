@@ -26,7 +26,10 @@ FIRE ALARM
 	circuit = /obj/item/weapon/circuitboard/firealarm
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
-	var/datum/looping_sound/alarm/fire_alarm/soundloop
+	var/datum/looping_sound/alarm/fire_alarm/soundloop // CHOMPEdit: Soundloops
+	var/datum/looping_sound/alarm/engineering_alarm/engalarm // CHOMPEdit: Soundloops
+	var/datum/looping_sound/alarm/sm_critical_alarm/critalarm // CHOMPEdit: Soundloops
+	var/datum/looping_sound/alarm/sm_causality_alarm/causality // CHOMPEdit: Soundloops
 
 /obj/machinery/firealarm/alarms_hidden
 	alarms_hidden = TRUE
@@ -53,10 +56,16 @@ FIRE ALARM
 	if(z in using_map.contact_levels)
 		set_security_level(security_level ? get_security_level() : "green")
 
-	soundloop = new(list(src), FALSE) // Create soundloop
+	soundloop = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+	engalarm = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+	critalarm = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+	causality = new(list(src), FALSE) // CHOMPEdit: Create soundloop
 
 /obj/machinery/firealarm/Destroy()
-	QDEL_NULL(soundloop) // Just clearing the loop here
+	QDEL_NULL(soundloop) // CHOMPEdit: Just clearing the loop here
+	QDEL_NULL(engalarm) // CHOMPEdit: Clearing the loop here too
+	QDEL_NULL(critalarm) // CHOMPEdit: Clearing the loop here too
+	QDEL_NULL(causality) // CHOMPEdit: Clearing the loop here too
 	return ..()
 
 /obj/machinery/firealarm/proc/offset_alarm()
@@ -185,7 +194,7 @@ FIRE ALARM
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.clearAlarm(src.loc, FA)
-		FA.soundloop.stop()
+		FA.soundloop.stop() // CHOMPEdit: Soundloop
 	update_icon()
 	if(user)
 		log_game("[user] reset a fire alarm at [COORD(src)]")
@@ -196,9 +205,9 @@ FIRE ALARM
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
-		FA.soundloop.start()
+		FA.soundloop.start() // CHOMPEdit: Soundloop
 	update_icon()
-	// playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
+	// playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS) // CHOMPEdit: Disable as per soundloop
 	if(user)
 		log_game("[user] triggered a fire alarm at [COORD(src)]")
 
