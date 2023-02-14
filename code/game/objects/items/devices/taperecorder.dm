@@ -99,7 +99,7 @@
 		voice = M.name
 	//END OF CHOMPEDIT
 	if(mytape && recording)
-		mytape.record_speech("[voice] [verb], \"[msg]\"")
+		mytape.record_speech("[voice] [verb], \"[msg]\"") //CHOMP Edit
 
 
 /obj/item/device/taperecorder/see_emote(mob/M as mob, text, var/emote_type)
