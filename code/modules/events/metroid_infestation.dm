@@ -31,7 +31,10 @@
 		var/spawn_metroids = pickweight(list(
 			/mob/living/simple_mob/metroid/juvenile/baby = 60,
 			/mob/living/simple_mob/metroid/juvenile/super = 30,
-			/mob/living/simple_mob/metroid/juvenile/alpha = 10
+			/mob/living/simple_mob/metroid/juvenile/alpha = 10,
+			/mob/living/simple_mob/metroid/juvenile/gamma = 3,
+			/mob/living/simple_mob/metroid/juvenile/zeta = 2,
+			/mob/living/simple_mob/metroid/juvenile/omega = 1,
 			))
 		new spawn_metroids(get_turf(vent))
 		vents -= vent
