@@ -6,6 +6,9 @@
 
 
 /datum/event/spider_infestation/setup()
+	if(prob(75) && severity = 3) //75% chance of the event to even occur if chosen and is major severity
+		kill()
+		return
 	announceWhen = rand(announceWhen, announceWhen + 60)
 	spawncount = rand(6 * severity, 14 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14
 	sent_spiders_to_station = 0
