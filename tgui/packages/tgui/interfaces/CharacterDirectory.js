@@ -38,7 +38,7 @@ export const CharacterDirectory = (props, context) => {
         {(overlay && <ViewCharacter />) || (
           <Fragment>
             <Section
-              title="Controls"
+              title="Settings and Preferences"
               buttons={
                 <Fragment>
                   <Box color="label" inline>
@@ -52,7 +52,6 @@ export const CharacterDirectory = (props, context) => {
                   />
                 </Fragment>
               }>
-            <Section title="Settings and Preferences">
               <LabeledList>
                 <LabeledList.Item label="Visibility">
                   <Button
@@ -69,10 +68,18 @@ export const CharacterDirectory = (props, context) => {
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Gender">
-                  <Button fluid content={personalGenderTag} onClick={() => act('setGenderTag')} />
+                  <Button
+                    fluid
+                    content={personalGenderTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
                 </LabeledList.Item>
                 <LabeledList.Item label="Sexuality">
-                  <Button fluid content={personalSexualityTag} onClick={() => act('setSexualityTag')} />
+                  <Button
+                    fluid
+                    content={personalSexualityTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
                   <Button
@@ -82,7 +89,11 @@ export const CharacterDirectory = (props, context) => {
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Event Pref">
-                  <Button fluid content={personalEventTag} onClick={() => act('setEventTag')} />
+                  <Button
+                    fluid
+                    content={personalEventTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">
                   <Button fluid content="Edit Ad" onClick={() => act('editAd', { overwrite_prefs: overwritePrefs })} />
