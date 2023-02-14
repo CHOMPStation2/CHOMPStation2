@@ -84,7 +84,7 @@
 
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
-	var/datum/looping_sound/alarm/decompression_alarm/soundloop
+	var/datum/looping_sound/alarm/decompression_alarm/soundloop // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/nobreach
 	breach_detection = 0
@@ -130,7 +130,7 @@
 	if(alarm_area && alarm_area.master_air_alarm == src)
 		alarm_area.master_air_alarm = null
 		elect_master(exclude_self = TRUE)
-	QDEL_NULL(soundloop)
+	QDEL_NULL(soundloop)  // CHOMPEdit: Looping Alarms
 	return ..()
 
 /obj/machinery/alarm/proc/offset_airalarm()
@@ -168,7 +168,7 @@
 	set_frequency(frequency)
 	if(!master_is_operating())
 		elect_master()
-	soundloop = new(list(src), FALSE) // Create soundloop
+	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/process()
 	if((stat & (NOPOWER|BROKEN)) || shorted)
@@ -199,9 +199,9 @@
 		apply_mode()
 
 	if(alarm_area?.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
-		soundloop.start()
+		soundloop.start()  // CHOMPEdit: Looping Alarms
 	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
-		soundloop.stop()
+		soundloop.stop()  // CHOMPEdit: Looping Alarms
 
 	//atmos computer remote controll stuff
 	switch(rcon_setting)
