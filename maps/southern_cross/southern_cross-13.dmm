@@ -65,9 +65,6 @@
 /mob/living/simple_mob/mechanical/combat_drone/event,
 /turf/simulated/floor/carpet/oracarpet,
 /area/surface/outpost/unfinished)
-"eV" = (
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outside/valley/inner)
 "fe" = (
 /turf/simulated/floor/carpet/purcarpet,
 /area/surface/outpost/unfinished)
@@ -422,10 +419,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
-"Ep" = (
-/obj/effect/zone_divider,
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outside/valley/inner)
 "EA" = (
 /turf/simulated/floor/wood,
 /area/surface/outside/valley/river)
@@ -17623,8 +17616,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -17881,8 +17874,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -18139,8 +18132,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -18397,8 +18390,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -18655,8 +18648,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -18913,8 +18906,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -19172,7 +19165,7 @@ HM
 HM
 HM
 Yl
-Ep
+Ad
 YN
 YN
 YN
@@ -20850,7 +20843,7 @@ we
 we
 we
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -21108,7 +21101,7 @@ we
 we
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -21366,7 +21359,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -21624,7 +21617,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -21882,7 +21875,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -51810,7 +51803,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -52068,7 +52061,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -52326,7 +52319,7 @@ we
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -52584,7 +52577,7 @@ we
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -52842,7 +52835,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -53100,7 +53093,7 @@ YN
 YN
 YN
 YN
-Ep
+Ad
 HM
 HM
 HM
@@ -55808,7 +55801,7 @@ HM
 HM
 HM
 HM
-Ep
+Ad
 YN
 YN
 YN
@@ -56066,7 +56059,7 @@ HM
 HM
 HM
 HM
-Ep
+Ad
 YN
 YN
 YN
@@ -56324,7 +56317,7 @@ HM
 HM
 HM
 HM
-Ep
+Ad
 YN
 YN
 YN
@@ -56581,8 +56574,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -56839,8 +56832,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -57097,8 +57090,8 @@ HM
 HM
 HM
 HM
-eV
-Ep
+HM
+Ad
 YN
 YN
 YN
@@ -63162,8 +63155,8 @@ YN
 YN
 YN
 YN
-Ep
-eV
+Ad
+HM
 HM
 HM
 Rk
@@ -63420,8 +63413,8 @@ YN
 YN
 YN
 YN
-Ep
-eV
+Ad
+HM
 HM
 HM
 HM
@@ -63678,8 +63671,8 @@ YN
 YN
 YN
 YN
-Ep
-eV
+Ad
+HM
 HM
 HM
 HM
@@ -63936,8 +63929,8 @@ YN
 YN
 YN
 YN
-Ep
-eV
+Ad
+HM
 HM
 HM
 HM
@@ -64194,8 +64187,8 @@ we
 YN
 YN
 YN
-Ep
-eV
+Ad
+HM
 HM
 HM
 HM
@@ -64452,8 +64445,8 @@ we
 we
 we
 YN
-Ep
-eV
+Ad
+HM
 HM
 HM
 HM
@@ -64711,7 +64704,7 @@ we
 we
 we
 kI
-eV
+HM
 HM
 HM
 HM
