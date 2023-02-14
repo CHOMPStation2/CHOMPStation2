@@ -146,8 +146,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
 "lw" = (
-/obj/item/frame/apc,
-/turf/simulated/floor/plating,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "lD" = (
 /obj/structure/bed/chair/comfy/black{
@@ -342,11 +342,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/surface/outpost/unfinished)
 "zT" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/weapon/circuitboard/telecomms,
-/turf/simulated/floor/tiled,
-/area/surface/outpost/unfinished)
-"Aa" = (
+/obj/machinery/telecomms/relay/preset/southerncross/valley,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
@@ -386,9 +382,16 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "Ck" = (
-/obj/item/weapon/module/power_control,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/valley/river)
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
 "Dg" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
@@ -517,11 +520,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
-"MU" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/weapon/circuitboard/telecomms/broadcaster,
-/turf/simulated/floor/tiled,
-/area/surface/outpost/unfinished)
 "NV" = (
 /turf/simulated/floor/wood,
 /area/surface/outpost/unfinished)
@@ -627,15 +625,6 @@
 "Yl" = (
 /turf/simulated/mineral/sif,
 /area/surface/outside/valley/inner)
-"Ym" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/machinery/telecomms/relay,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/unfinished)
 "YN" = (
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/outside/valley/walls)
@@ -3641,7 +3630,7 @@ lR
 lR
 lR
 lR
-TX
+lw
 TX
 TX
 TX
@@ -4118,7 +4107,7 @@ HM
 HM
 HM
 Pk
-lR
+cW
 lR
 TX
 TX
@@ -4126,7 +4115,7 @@ TX
 lR
 lR
 lR
-lR
+cW
 lR
 lR
 lR
@@ -4641,7 +4630,7 @@ Zd
 lR
 lR
 lR
-lR
+cW
 lR
 lR
 fD
@@ -4670,7 +4659,7 @@ TR
 TR
 Rl
 TR
-zT
+TR
 TR
 TR
 TR
@@ -5172,7 +5161,7 @@ rU
 vf
 rU
 rU
-Ck
+rU
 rU
 rU
 rU
@@ -5180,10 +5169,10 @@ rU
 rK
 rK
 Fh
-Ym
-UG
-UG
-Aa
+TR
+lR
+lR
+lR
 Bv
 TX
 lR
@@ -5438,10 +5427,10 @@ rU
 rK
 rK
 Fh
-lR
-lR
-lR
-lR
+Ck
+UG
+UG
+zT
 Rn
 lR
 lR
@@ -5670,7 +5659,7 @@ TX
 TX
 TX
 Zd
-lR
+cW
 lR
 lR
 lR
@@ -5696,7 +5685,7 @@ rU
 rK
 rK
 Fh
-lw
+lR
 lR
 TX
 cW
@@ -5705,7 +5694,7 @@ lR
 lR
 lR
 lR
-MU
+TR
 Zd
 TX
 TX
