@@ -8,13 +8,32 @@
 	initial_flooring = /decl/flooring/sand
 	can_dig = false
 */
+/turf/simulated/floor/outdoors/lava_land
+	icon = 'modular_chomp/icons/turf/lava_land.dmi'
+	icon_edge = 'modular_chomp/icons/turf/lava_land_edge.dmi'
+	name = "lavaland base turf"
+	desc = "This should not exist"
 
 /turf/simulated/floor/outdoors/lava_land/ash
 	name = "ash"
 	desc = "A thin soot of grey ash."
-	icon = 'modular_chomp/icons/turf/lava_land.dmi'
 	icon_state = "ash"
 	edge_blending_priority = 2
+
+/turf/simulated/mineral/lava_land
+	name = "ashen rock"
+	desc = "A rock wall covered in a thick layer of ash."
+	icon_state = "ashrock"
+	edge_blending_priority = 3
+//	turf_layers = list(/turf/simulated/floor/outdoors/lava_land/ash)
+
+/turf/simulated/floor/outdoors/lava_land/basalt
+	name = "basalt"
+	desc = "A hard cracked black rock formed from rapidly cooling lava."
+	icon_state = "basalt0"
+	edge_blending_priority = 3
+	turf_layers = list(/turf/simulated/floor/outdoors/lava_land/ash)
+
 //	turf_layers = list(/turf/simulated/floor/outdoors/lava_land/ash) idk how these work
 
 /* Testing
@@ -78,19 +97,3 @@
 
 
 */
-
-/turf/simulated/mineral/lava_land
-	name = "ashen rock"
-	desc = "A rock wall covered in a thick layer of ash."
-	icon = 'modular_chomp/icons/turf/lava_land.dmi'
-	icon_state = "ashrock"
-	edge_blending_priority = 3
-//	turf_layers = list(/turf/simulated/floor/outdoors/lava_land/ash)
-
-/turf/simulated/floor/outdoors/lava_land/basalt
-	name = "basalt"
-	desc = "A hard cracked black rock formed from rapidly cooling lava."
-	icon = 'modular_chomp/icons/turf/lava_land.dmi'
-	icon_state = "basalt0"
-	edge_blending_priority = 3
-	turf_layers = list(/turf/simulated/floor/outdoors/lava_land/ash)
