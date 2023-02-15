@@ -218,40 +218,24 @@
 
 	return hear
 
-var/mobs_radio_range_fired = 1					//CHOMPEdit
+//CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
 
 	set background = 1
-	var/our_iter = num2text(++mobs_radio_range_fired)	//CHOMPEdit
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
-	var/list/speaker_coverage = list()
 	for(var/obj/item/device/radio/R as anything in radios)
-		var/turf/speaker = get_turf(R)
-		if(speaker)
+		if(get_turf(R))
 			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
-				T.temp_check[our_iter] = TRUE	//CHOMPEdit
-				speaker_coverage[T] = R
+				for (var/atom/movable/hearing in T)
+					if (hearing.recursive_listeners)
+						. += hearing.recursive_listeners
 
-	CHECK_TICK	//CHOMPEdit
-	// Try to find all the players who can hear the message
-	//CHOMPEdit Begin
-	//So, to explain a bit here: The old code that used to be here was pretty slow for a few reasons, most of which have been addressed now.
-	//Unsurprisingly, checking through the entire list of turfs within a radio's range for every mob's turf to see if it's in there is very slow.
-	//So, instead, we set a variable in a list on the turf that's unique to this runthrough(and thus multiple of these can run simultaneously)
-	//Then we just have to check if that variable is true for the turf the mob is on, and if it is, add that mob to our list.
-	for(var/i = 1; i <= player_list.len; i++)
-		var/mob/M = player_list[i]
-		var/turf/T = get_turf(M)
-		if(istype(T) && T.temp_check[our_iter])
-			. += M
-		else if(istype(M,/mob/observer))	//Give ghosts global hearing.
-			. += M
-	CHECK_TICK
-	for(var/turf/T in speaker_coverage)
-		T.temp_check -= our_iter //Freeing up the memory.
-	//CHOMPEdit End
-	return .
+	for (var/mob/M as anything in .)
+		if (!istype(M) || !M.client)
+			. -= M
+	for (var/mob/observer/O in player_list)
+		. |= O
 
 /mob/proc/can_hear_radio(var/list/hearturfs)
 	return FALSE
