@@ -198,7 +198,8 @@
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/holowarrant,				//CHOMPStation addition
 		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
-		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
+		/obj/item/device/ticket_printer			//CHOMPStation addition
 		)
 
 /obj/structure/closet/secure_closet/security/Initialize()
