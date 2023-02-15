@@ -31,6 +31,11 @@ FIRE ALARM
 	var/datum/looping_sound/alarm/sm_critical_alarm/critalarm // CHOMPEdit: Soundloops
 	var/datum/looping_sound/alarm/sm_causality_alarm/causality // CHOMPEdit: Soundloops
 
+	var/firewarn = FALSE // CHOMPEdit: Looping Alarms
+	var/engwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/critwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/causalitywarn = FALSE // CHOMPEdit: Looping Alarms
+
 /obj/machinery/firealarm/alarms_hidden
 	alarms_hidden = TRUE
 
@@ -176,6 +181,22 @@ FIRE ALARM
 	..()
 	spawn(rand(0,15))
 		update_icon()
+		// CHOMPEdit Start: Looping Red/Violet/Orange Alarms
+		if(stat & (NOPOWER | BROKEN)) // Are we broken or out of power?
+			soundloop.stop() // Stop the loop once we're out of power
+			engalarm.stop() // Stop these bc we're out of power
+			critalarm.stop() // Stop these, out of power
+			causality.stop() // etc etc
+		else
+			if(firewarn)
+				soundloop.start()
+			if(engwarn)
+				engalarm.start()
+			if(critwarn)
+				critalarm.start()
+			if(causalitywarn)
+				causality.start()
+		// CHOMPEdit End
 
 /obj/machinery/firealarm/attack_hand(mob/user as mob)
 	if(user.stat || stat & (NOPOWER | BROKEN))
@@ -195,6 +216,7 @@ FIRE ALARM
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.clearAlarm(src.loc, FA)
 		FA.soundloop.stop() // CHOMPEdit: Soundloop
+		FA.firewarn = FALSE // CHOMPEdit: Soundloop Fix
 	update_icon()
 	if(user)
 		log_game("[user] reset a fire alarm at [COORD(src)]")
@@ -206,6 +228,7 @@ FIRE ALARM
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
 		FA.soundloop.start() // CHOMPEdit: Soundloop
+		FA.firewarn = TRUE // CHOMPEdit: Soundloop Fix
 	update_icon()
 	// playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS) // CHOMPEdit: Disable as per soundloop
 	if(user)
