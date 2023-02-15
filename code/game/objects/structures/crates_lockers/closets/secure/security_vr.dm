@@ -51,6 +51,7 @@
 //		/obj/item/clothing/head/beret/sec/corporate/hos, //CHOMP Remove
 //		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
 //		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
+		/obj/item/device/ticket_printer, //CHOMP Add
 		/obj/item/device/flashlight/maglight)
 
 //Custom NT Security Lockers, Only found at central command
