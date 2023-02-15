@@ -34,7 +34,8 @@
 /obj/item/weapon/robot_module/robot/chound
 	name = "Unity Hound Module"
 	sprites = list(
-					"Kcom" = "kcom"
+					"Kcom" = "kcom",
+					"Raptor V-4.1" = "chraptor"
 					)
 	channels = list(
 			"Medical" = 1,
