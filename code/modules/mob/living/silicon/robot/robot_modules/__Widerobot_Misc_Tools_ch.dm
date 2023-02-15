@@ -17,6 +17,7 @@
 	src.modules += new /obj/item/weapon/surgical/bioregen(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src)
+	src.modules += new /obj/item/roller_holder(src) //So we can save people without voring them
 
 //TFF 5/1/20 - Add Ore Scanner for mining drones
 /obj/item/weapon/robot_module/drone/mining/New()
