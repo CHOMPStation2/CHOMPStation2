@@ -705,7 +705,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/water,
+/turf/simulated/floor/plating,
 /area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
@@ -796,10 +796,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
-"Lh" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "Lv" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -855,13 +851,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
-"Pw" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/water,
-/area/surface/outside/river/svartan)
 "Rc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1007,10 +996,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
-"ZN" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/water,
-/area/surface/outside/river/svartan)
 
 (1,1,1) = {"
 ab
@@ -1145,11 +1130,11 @@ ad
 ab
 XD
 XD
-Pw
-Pw
 BF
 BF
-Pw
+BF
+BF
+BF
 xx
 kh
 kh
@@ -1403,12 +1388,12 @@ ak
 ac
 Za
 Za
-ZN
-ZN
 As
 As
-ZN
-ZN
+As
+As
+As
+As
 IZ
 IZ
 ac
@@ -1919,12 +1904,12 @@ aw
 ah
 ah
 ah
-ZN
-ZN
-Lh
-Lh
-ZN
-ZN
+As
+As
+As
+As
+As
+As
 ap
 ap
 ap

@@ -125,7 +125,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/water,
+/turf/simulated/floor/plating,
 /area/surface/outside/valley/river)
 "kI" = (
 /obj/effect/zone_divider,
@@ -219,10 +219,6 @@
 "rU" = (
 /turf/simulated/floor/water/deep,
 /area/surface/outside/valley/river)
-"sc" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/water,
-/area/surface/outside/valley/river)
 "sf" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -287,10 +283,6 @@
 	dir = 4;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/valley/river)
-"xz" = (
-/obj/structure/catwalk,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/valley/river)
 "xB" = (
@@ -395,13 +387,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
-"Dg" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/water,
-/area/surface/outside/valley/river)
 "DA" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -65787,12 +65772,12 @@ HM
 HM
 HM
 HM
-sc
-sc
-xz
-xz
-sc
-sc
+DA
+DA
+DA
+DA
+DA
+DA
 HM
 HM
 HM
@@ -66303,11 +66288,11 @@ FG
 FG
 Yl
 Yl
-Dg
-Dg
 WK
 WK
-Dg
+WK
+WK
+WK
 kf
 Yl
 Yl
@@ -66561,12 +66546,12 @@ RW
 RW
 qe
 qe
-sc
-sc
 DA
 DA
-sc
-sc
+DA
+DA
+DA
+DA
 qe
 qe
 RW
