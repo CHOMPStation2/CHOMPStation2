@@ -85,6 +85,7 @@
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
 	var/datum/looping_sound/alarm/decompression_alarm/soundloop // CHOMPEdit: Looping Alarms
+	var/atmoswarn = FALSE // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/nobreach
 	breach_detection = 0
@@ -200,8 +201,10 @@
 
 	if(alarm_area?.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
 		soundloop.start()  // CHOMPEdit: Looping Alarms
+		atmoswarn = TRUE // CHOMPEdit: Looping Alarms
 	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
 		soundloop.stop()  // CHOMPEdit: Looping Alarms
+		atmoswarn = FALSE // CHOMPEdit: Looping Alarms
 
 	//atmos computer remote controll stuff
 	switch(rcon_setting)
@@ -840,6 +843,12 @@
 	..()
 	spawn(rand(0,15))
 		update_icon()
+		// CHOMPEdit Start: Looping Alarms
+		if(stat & (NOPOWER | BROKEN))
+			soundloop.stop()
+		else if(atmoswarn)
+			soundloop.start()
+		// CHOMPEdit End
 
 // VOREStation Edit Start
 /obj/machinery/alarm/freezer

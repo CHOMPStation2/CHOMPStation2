@@ -276,6 +276,7 @@
 					var/area/our_area = get_area(candidate_alarm)
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.critalarm.start()
+						candidate_alarm.critwarn = TRUE // Tell the fire alarm we're warning engineering
 			critwarn = 1
 		// CHOMPEdit End
 	else if(damage >= damage_archived) // The damage is still going up
@@ -288,6 +289,7 @@
 						for(var/obj/machinery/light/L in our_area)
 							L.set_alert_engineering()
 						candidate_alarm.engalarm.start()
+						candidate_alarm.engwarn = TRUE // Tell the fire alarm we're warning engineering
 			engwarn = 1 // So we don't repeatedly try and start over the soundloop/etc
 		// CHOMPEdit End
 		safe_warned = 0
@@ -451,6 +453,7 @@
 					var/area/our_area = get_area(candidate_alarm)
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.causality.start()
+						candidate_alarm.causalitywarn = TRUE // Tell the fire alarm it's warning, too
 			causalitywarn = 1
 
 	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to use a stabilization field.
@@ -650,8 +653,11 @@
 			for(var/obj/machinery/light/L in our_area)
 				L.reset_alert()
 			candidate_alarm.engalarm.stop()
+			candidate_alarm.engwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 			candidate_alarm.causality.stop() // Somehow, in case they reset the alarms and fix the SM.
+			candidate_alarm.causalitywarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 			candidate_alarm.critalarm.stop()
+			candidate_alarm.critwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 			engwarn = 0
 			critwarn = 0
 			causalitywarn = 0
