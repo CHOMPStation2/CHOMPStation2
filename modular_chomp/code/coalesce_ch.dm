@@ -1,4 +1,4 @@
-/proc/coalesce(var/args/...)
+/proc/coalesce(args...)
     for (var/arg in args)
         if (arg)
             return arg
