@@ -117,6 +117,8 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 		soul_link(/datum/soul_link/shared_body, src, target)
 		AI.deployed_shell = target
 		target.deploy_init(AI)
+		if(src.client) //CHOMPADDITION: Resize shell based on our preffered size
+			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		mind.transfer_to(target)
 		teleop = target // So the AI 'hears' messages near its core.
 		target.post_deploy()
