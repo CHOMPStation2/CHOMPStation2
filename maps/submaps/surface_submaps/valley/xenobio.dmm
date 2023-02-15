@@ -66,11 +66,15 @@
 /area/submap/xenobio)
 "fz" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
 /area/submap/xenobio)
 "fH" = (
 /mob/living/simple_mob/slime/xenobio/dark_purple,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
 /area/submap/xenobio)
 "fL" = (
 /obj/machinery/porta_turret,
@@ -166,7 +170,9 @@
 "rf" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/toolbox/syndicate/powertools,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
 /area/submap/xenobio)
 "ri" = (
 /obj/item/device/perfect_tele/frontier,
@@ -354,7 +360,14 @@
 "Me" = (
 /obj/structure/table/standard,
 /obj/item/weapon/melee/energy/axe,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
+/area/submap/xenobio)
+"Mo" = (
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
 /area/submap/xenobio)
 "MR" = (
 /obj/item/weapon/bedsheet/purple,
@@ -378,7 +391,9 @@
 /area/submap/xenobio)
 "NN" = (
 /obj/structure/table/standard,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
 /area/submap/xenobio)
 "OW" = (
 /obj/structure/cable/yellow{
@@ -840,8 +855,8 @@ af
 bl
 Ai
 oC
-HY
-HY
+Mo
+Mo
 fz
 oC
 dT
@@ -860,9 +875,9 @@ kM
 bl
 bl
 os
-HY
+Mo
 fH
-HY
+Mo
 oC
 Qq
 bl

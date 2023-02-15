@@ -139,7 +139,7 @@
 /obj/machinery/porta_turret/alien{
 	faction = "hivebot"
 	},
-/turf/simulated/floor/airless,
+/turf/space,
 /area/submap/vault)
 "X" = (
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
