@@ -1,9 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ar" = (
-/obj/machinery/porta_turret/industrial/teleport_defense{
-	faction = "pirate"
+/obj/item/clothing/glasses/thermal/plain/eyepatch,
+/obj/structure/closet/crate/secure{
+	req_access = list(150)
 	},
-/turf/simulated/floor/plating,
+/obj/item/stolenpackage,
+/obj/item/stolenpackage,
+/obj/random/energy/highend,
+/obj/item/stolenpackage,
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
 /area/submap/piratefortress)
 "aE" = (
 /obj/structure/table/reinforced,
@@ -230,7 +238,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "kC" = (
-/obj/machinery/porta_turret/industrial{
+/obj/machinery/porta_turret/stationary/syndie{
 	faction = "pirate"
 	},
 /turf/simulated/floor/plating,
@@ -363,9 +371,13 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "vk" = (
-/obj/machinery/porta_turret/industrial/teleport_defense{
-	faction = "pirate"
+/obj/item/clothing/glasses/graviton/medgravpatch,
+/obj/structure/closet/crate/secure{
+	req_access = list(150)
 	},
+/obj/item/stolenpackage,
+/obj/random/energy/highend,
+/obj/item/stolenpackage,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -410,13 +422,9 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "wN" = (
-/obj/item/clothing/glasses/graviton/medgravpatch,
-/obj/structure/closet/crate/secure{
-	req_access = list(150)
+/obj/machinery/porta_turret/alien{
+	faction = "Pirate"
 	},
-/obj/item/stolenpackage,
-/obj/random/energy/highend,
-/obj/item/stolenpackage,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -529,21 +537,8 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "Di" = (
-/obj/item/clothing/glasses/thermal/plain/eyepatch,
-/obj/structure/closet/crate/secure{
-	req_access = list(150)
-	},
-/obj/item/stolenpackage,
-/obj/item/stolenpackage,
-/obj/random/energy/highend,
-/obj/item/stolenpackage,
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 4
-	},
-/obj/machinery/light/poi{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/red,
+/obj/item/weapon/dnainjector/telemut,
+/turf/simulated/floor/outdoors/rocks,
 /area/submap/piratefortress)
 "DD" = (
 /mob/living/simple_mob/vore/pitcher_plant,
@@ -1384,7 +1379,7 @@ ms
 La
 La
 vT
-ar
+kC
 vT
 vT
 vT
@@ -1392,7 +1387,7 @@ vT
 vT
 vT
 vT
-ar
+kC
 vT
 vT
 vT
@@ -1428,7 +1423,7 @@ ms
 ms
 La
 vT
-ar
+kC
 oX
 PP
 Qw
@@ -1438,16 +1433,16 @@ oX
 PP
 Qw
 oX
-ar
+kC
 vT
 vT
 vT
-ar
+kC
 vT
 vT
 La
 La
-ar
+kC
 La
 ms
 ms
@@ -1493,7 +1488,7 @@ oX
 oX
 oX
 oX
-ar
+kC
 La
 ms
 ms
@@ -1608,7 +1603,7 @@ ms
 ms
 La
 vT
-ar
+kC
 oX
 oX
 St
@@ -1630,7 +1625,7 @@ jO
 oX
 vT
 vT
-ar
+kC
 La
 La
 ms
@@ -1676,7 +1671,7 @@ oX
 oX
 oX
 oX
-ar
+kC
 La
 ms
 ms
@@ -1743,7 +1738,7 @@ ms
 ms
 ms
 La
-ar
+kC
 oX
 oX
 VJ
@@ -1755,7 +1750,7 @@ oX
 oX
 yg
 vk
-vk
+ar
 yg
 oX
 QM
@@ -1811,7 +1806,7 @@ Uz
 QM
 Pl
 oX
-ar
+kC
 vT
 La
 ms
@@ -1845,7 +1840,7 @@ bt
 oX
 yg
 wN
-Di
+wN
 yg
 oX
 cK
@@ -1946,7 +1941,7 @@ oX
 oX
 oX
 oX
-ar
+kC
 vT
 La
 ms
@@ -2103,7 +2098,7 @@ ms
 ms
 La
 vT
-ar
+kC
 oX
 oX
 VJ
@@ -2261,7 +2256,7 @@ VJ
 oX
 oX
 oX
-ar
+kC
 vT
 vT
 La
@@ -2292,12 +2287,12 @@ vT
 vT
 vT
 vT
-ar
+kC
 vT
 vT
 vT
 vT
-ar
+kC
 vT
 vT
 vT
@@ -2305,7 +2300,7 @@ vT
 vT
 vT
 vT
-ar
+kC
 vT
 vT
 La
@@ -2578,7 +2573,7 @@ ZQ
 ms
 ms
 La
-La
+Di
 La
 La
 La

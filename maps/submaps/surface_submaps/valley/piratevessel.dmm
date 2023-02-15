@@ -377,8 +377,8 @@
 /area/submap/piratevessel)
 "Fg" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/machinery/porta_turret/industrial/teleport_defense{
-	faction = "pirate"
+/obj/machinery/porta_turret/alien{
+	faction = "Pirate"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)

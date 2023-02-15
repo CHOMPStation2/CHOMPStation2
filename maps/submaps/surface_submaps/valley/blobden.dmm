@@ -67,6 +67,7 @@
 "iN" = (
 /obj/structure/table/borosilicate,
 /obj/item/weapon/storage/firstaid/bonemed,
+/obj/random/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "kY" = (
@@ -184,10 +185,10 @@
 /area/submap/blobden)
 "AJ" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/cell/device/weapon/empproof,
-/obj/item/weapon/cell/device/weapon/empproof,
-/obj/item/weapon/cell/device/weapon/empproof,
-/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/weapon/cell/device/weapon/recharge,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Bc" = (
@@ -218,6 +219,7 @@
 "Fe" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/chem_dispenser/combat,
+/obj/random/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "FA" = (
@@ -264,6 +266,7 @@
 "HQ" = (
 /obj/structure/table/borosilicate,
 /obj/random/energy/sec,
+/obj/item/rig_module/stealth_field,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Iv" = (
@@ -298,6 +301,7 @@
 "OA" = (
 /obj/structure/table/borosilicate,
 /obj/random/energy/highend,
+/obj/item/rig_module/voice,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "PM" = (

@@ -2,6 +2,11 @@
 "a" = (
 /turf/simulated/floor/dungeon,
 /area/submap/metroidmaze)
+"p" = (
+/turf/simulated/wall/gold{
+	can_open = 1
+	},
+/area/submap/metroidmaze)
 "s" = (
 /turf/simulated/wall/dungeon{
 	can_open = 1
@@ -304,7 +309,7 @@ a
 a
 a
 E
-Z
+p
 a
 Z
 Z
@@ -373,7 +378,7 @@ a
 Z
 Z
 Z
-s
+p
 Z
 Z
 a
@@ -814,7 +819,7 @@ a
 a
 a
 E
-s
+p
 Z
 a
 Z

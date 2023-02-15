@@ -409,7 +409,7 @@
 /area/submap/xenobio)
 "Qq" = (
 /obj/structure/table/standard,
-/obj/item/clothing/suit/armor/reactive,
+/obj/item/clothing/suit/armor/tesla,
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
 "RZ" = (
@@ -754,11 +754,11 @@ nt
 JP
 zo
 zo
-fZ
+pa
 zo
 zo
 zo
-fZ
+pa
 zo
 zo
 zo
