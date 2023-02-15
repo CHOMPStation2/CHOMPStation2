@@ -155,6 +155,7 @@
 		/obj/item/weapon/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
+		/obj/item/device/ticket_printer,		//CHOMPStation addition
 		/obj/item/device/retail_scanner/security	//CHOMPStation addition
 		)
 
