@@ -34,7 +34,7 @@
 	obj_integrity = H.health + 100
 	original_int = obj_integrity
 	name = "statue of [H.name]"
-	desc = "A very lifelike statue of [H.name]."
+	desc = "A very lifelike statue."
 	stored_examine = H.examine()
 	description_fluff = H.get_description_fluff()
 
@@ -73,6 +73,11 @@
 	unpetrify()
 	. = ..()
 
+/obj/structure/gargoyle/examine_icon()
+	var/icon/examine_icon = ..()
+	examine_icon.MapColors(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))
+	return examine_icon
+
 /obj/structure/gargoyle/get_description_info()
 	if (gargoyle)
 		if (isspace(loc) || isopenspace(loc))
@@ -82,6 +87,7 @@
 /obj/structure/gargoyle/examine(mob/user)
 	. = ..()
 	if (gargoyle && stored_examine)
+		. += "The statue seems to have a bit more to them..."
 		. += stored_examine
 	return
 

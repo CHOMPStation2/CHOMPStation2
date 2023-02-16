@@ -21,8 +21,7 @@
 	if (!gargoyle)
 		return
 	if (paused && gargoyle.loc != paused_loc)
-		paused = FALSE
-		energy = max(energy - 5, 0)
+		unpause()
 	if (energy > 0)
 		if (!transformed && !paused)
 			energy = max(0,energy-0.05)
@@ -80,10 +79,11 @@
 		return
 
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
-	if (comp && !comp.transformed)
+	if (comp && !comp.transformed && !comp.paused)
 		comp.paused = TRUE
 		comp.paused_loc = loc
 		comp.RegisterSignal(src, COMSIG_ATOM_ENTERING, /datum/component/gargoyle/proc/unpause)
+		to_chat(src, "<span class='notice'>You start conserving your energy.</span>")
 
 /mob/living/carbon/human/proc/gargoyle_checkenergy()
 	set name = "Gargoyle - Check Energy"
