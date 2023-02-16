@@ -725,9 +725,9 @@
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/rms(src)
 	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)  //CHOMPedit: add RCD
-	src.modules += new /obj/item/weapon/pipe_dispenser(src)
+	src.modules |= new /obj/item/weapon/pipe_dispenser(src) //CHOMPEDIT: only add one if our core didnt already
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
-	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
+	//src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change //CHOMPREMOVE: duplicate definition
 
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
