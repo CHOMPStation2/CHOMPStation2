@@ -2,6 +2,9 @@
 /mob/living/simple_mob/mechanical/mecha/combat/gygax
 	movement_cooldown = 1 //Because normal Gygaxes are tougher then ths boss version with 0 speed
 
+/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced
+	movement_cooldown = 0 //Because AADG needs all the help it can get.
+
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/aerostat
 	desc = "A Vir System Authority automated combat mech with an aged apperance."
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
