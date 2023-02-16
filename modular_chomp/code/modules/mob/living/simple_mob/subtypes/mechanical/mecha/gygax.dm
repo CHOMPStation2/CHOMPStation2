@@ -1,8 +1,12 @@
+
+/mob/living/simple_mob/mechanical/mecha/combat/gygax
+	movement_cooldown = 1 //Because normal Gygaxes are tougher then ths boss version with 0 speed
+
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/aerostat
 	desc = "A Vir System Authority automated combat mech with an aged apperance."
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	say_list = /datum/say_list/gygax_aerostat
-	
+
 /datum/say_list/gygax_aerostat
 	speak = list("ALERT.","Hostile-ile-ile entities dee-twhoooo-wected.","Threat parameterszzzz- szzet.","Bring sub-sub-sub-systems uuuup to combat alert alpha-a-a.")
 	emote_see = list("beeps menacingly","whirrs threateningly","scans its immediate vicinity")
