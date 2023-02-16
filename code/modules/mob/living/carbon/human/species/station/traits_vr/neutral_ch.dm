@@ -79,3 +79,13 @@
 	),
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+
+/datum/trait/neutral/gargoyle
+	name = "Gargoyle"
+	desc = "You turn into a statue at will, but also whenever you run out of energy. Being a statue replenishes your energy slowly."
+	cost = 0
+	custom_only = FALSE //should this be custom only??
+
+/datum/trait/neutral/gargoyle/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.LoadComponent(/datum/component/gargoyle)
