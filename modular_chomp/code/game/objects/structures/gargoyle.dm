@@ -80,9 +80,10 @@
 		return "It can be [anchored ? "un" : ""]anchored with a wrench."
 
 /obj/structure/gargoyle/examine(mob/user)
+	. = ..()
 	if (gargoyle && stored_examine)
-		return stored_examine
-	return ..()
+		. += stored_examine
+	return
 
 /obj/structure/gargoyle/proc/unpetrify()
 	if (!gargoyle)
