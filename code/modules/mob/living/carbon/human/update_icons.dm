@@ -59,7 +59,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 // These are used as the layers for the icons, as well as indexes in a list that holds onto them.
 // Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
-//CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these
+//CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
