@@ -6,8 +6,11 @@
 
 
 /datum/event/spider_infestation/setup()
+	if(prob(75) && severity == 3) //CHOMP Add 75% chance of the event to even occur if chosen and is major severity
+		kill()
+		return
 	announceWhen = rand(announceWhen, announceWhen + 60)
-	spawncount = rand(6 * severity, 12 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: Tripled amount spawned
+	spawncount = rand(6 * severity, 14 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14
 	sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
@@ -29,6 +32,6 @@
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
-		new /obj/effect/spider/spiderling/virgo(vent.loc) //VOREStation Edit - No nurses
+		new /obj/effect/spider/spiderling(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
 		vents -= vent
 		spawncount--

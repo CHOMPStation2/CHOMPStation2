@@ -4364,7 +4364,7 @@
 "artist": "Network Music Ensemble",
 "genre": "Rock",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4424,7 +4424,7 @@
 "artist": "Fiona Apple",
 "genre": "Electronic",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4434,7 +4434,7 @@
 "artist": "Kamil Hala, Slovak Philharmonic Orchestra, Libor Pešek",
 "genre": "Classical and Orchestral",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4574,7 +4574,7 @@
 "artist": "Julia Ecklar & Anne Prather",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4624,7 +4624,7 @@
 "artist": "Free Fall & Other Delights",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4644,7 +4644,7 @@
 "artist": "Duane Elms",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4654,7 +4654,7 @@
 "artist": "Duane Elms",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4664,7 +4664,7 @@
 "artist": "Duane Elms",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
