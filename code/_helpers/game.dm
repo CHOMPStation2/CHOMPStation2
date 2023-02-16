@@ -229,7 +229,7 @@
 			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
 				for (var/atom/movable/hearing in T)
 					if (hearing.recursive_listeners)
-						. += hearing.recursive_listeners
+						. |= hearing.recursive_listeners
 
 	for (var/mob/M as anything in .)
 		if (!istype(M) || !M.client)
