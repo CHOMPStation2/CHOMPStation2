@@ -342,12 +342,13 @@
 	dir = 4;
 	pixel_y = 0
 	},
-/obj/structure/closet/crate,
-/obj/random/rigsuit,
+/obj/structure/closet/crate/secure/loot,
 /obj/random/grenade/box,
 /obj/random/grenade/box,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
+/obj/item/weapon/rig/merc,
+/obj/item/weapon/rig/internalaffairs,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "tv" = (
@@ -412,6 +413,10 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/redshuttledown)
+"wq" = (
+/obj/random/mob/merc/armored,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "wz" = (
@@ -949,12 +954,14 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Yo" = (
-/obj/structure/closet/secure_closet/guncabinet,
+/obj/structure/closet/crate/secure/loot,
 /obj/random/projectile,
 /obj/random/projectile,
 /obj/random/gun/random,
 /obj/random/energy/highend,
 /obj/random/energy/highend,
+/obj/item/weapon/rig/pmc/commander/grey/equipped,
+/obj/item/weapon/rig/pmc/commander/grey/equipped,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "Yv" = (
@@ -1502,10 +1509,10 @@ Ru
 VF
 ss
 MX
-IY
+wq
 Gd
 hU
-IY
+wq
 dL
 ss
 OO

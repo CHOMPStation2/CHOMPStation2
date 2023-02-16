@@ -1,6 +1,22 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"cD" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/gun/random,
+/obj/random/rigsuit,
+/obj/random/gun/random,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
 "cH" = (
-/mob/living/simple_mob/humanoid/merc/melee,
+/mob/living/simple_mob/humanoid/merc/ranged/ionrifle{
+	health = 15;
+	maxHealth = 15
+	},
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "cK" = (
@@ -59,6 +75,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
+"hj" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/gun/random,
+/obj/random/rigsuit,
+/obj/random/gun/random,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
+"hB" = (
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
 "it" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /obj/structure/cable/green{
@@ -87,6 +117,12 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
+"ki" = (
+/obj/machinery/light/poi{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
@@ -145,6 +181,9 @@
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /obj/item/rig_module/mounted/mop,
 /obj/item/weapon/reagent_containers/glass/bucket,
+/obj/machinery/light/poi{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "uQ" = (
@@ -203,7 +242,7 @@
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/turf/simulated/wall/thull,
+/turf/simulated/wall/fancy_shuttle,
 /area/submap/piratevox)
 "Cm" = (
 /turf/template_noop,
@@ -226,20 +265,30 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "DX" = (
-/turf/simulated/wall/thull,
-/area/template_noop)
+/turf/simulated/wall/fancy_shuttle,
+/area/submap/piratevox)
 "FN" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword,
+/mob/living/simple_mob/humanoid/merc/melee/sword/poi{
+	health = 15;
+	maxHealth = 15
+	},
+/obj/machinery/light/poi{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Iu" = (
-/mob/living/simple_mob/vox/armalis{
-	faction = "voxpirate"
+/mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
+/obj/machinery/light/poi{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "LG" = (
-/mob/living/simple_mob/humanoid/merc/ranged,
+/mob/living/simple_mob/humanoid/merc/ranged{
+	health = 15;
+	maxHealth = 15
+	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -267,7 +316,10 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Op" = (
-/mob/living/simple_mob/humanoid/merc/ranged,
+/mob/living/simple_mob/humanoid/merc/ranged{
+	health = 15;
+	maxHealth = 15
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Os" = (
@@ -281,12 +333,10 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/simulated/wall/thull,
+/turf/simulated/wall/fancy_shuttle,
 /area/submap/piratevox)
 "Tk" = (
-/mob/living/simple_mob/vox/armalis{
-	faction = "voxpirate"
-	},
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
 /obj/structure/bed/chair/office,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
@@ -316,6 +366,10 @@
 "Vh" = (
 /turf/simulated/floor/tiled/red,
 /area/submap/piratevox)
+"Vs" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
+/turf/template_noop,
+/area/template_noop)
 "VO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -331,6 +385,9 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/light/poi{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
@@ -354,8 +411,13 @@
 /area/submap/piratevox)
 "Xl" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/mob/living/simple_mob/vox/armalis{
-	faction = "voxpirate"
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
+/turf/simulated/floor/tiled/white,
+/area/submap/piratevox)
+"YQ" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/machinery/light/poi{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
@@ -365,9 +427,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "ZP" = (
-/mob/living/simple_mob/vox/armalis{
-	faction = "voxpirate"
-	},
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
 /obj/structure/bed/chair/office{
 	dir = 1
 	},
@@ -476,27 +536,27 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 NI
+hB
 Os
-Os
-zq
+DX
 Cm
 Cm
-zq
-zq
-zq
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
+DX
+DX
+DX
 Cm
 Cm
-zq
+DX
 Os
-Os
+hB
 NI
-zq
+DX
 Cm
 Cm
 Cm
@@ -507,27 +567,27 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 mE
 Os
 Tl
-zq
+DX
 Cm
 Cm
-zq
+DX
 LP
-Os
+hB
 DI
+hB
 Os
-Os
-zq
+DX
 Cm
 Cm
-zq
+DX
 rS
 Os
 mE
-zq
+DX
 Cm
 Cm
 Cm
@@ -538,27 +598,27 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 mE
 xe
 Os
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
 rp
 An
 fL
 pK
 rp
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
 Os
 Za
 mE
-zq
+DX
 Cm
 Cm
 Cm
@@ -569,27 +629,27 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 mE
 LP
 Os
-zq
+DX
 Os
 WN
-zq
+DX
 AV
 Os
 Os
 Os
 AV
-zq
+DX
 Dt
 iJ
-zq
+DX
 Os
 Os
 mE
-zq
+DX
 Cm
 Cm
 Cm
@@ -600,27 +660,27 @@ Cm
 Cm
 Cm
 Cm
-zq
-to
+DX
+cD
 Os
 Os
 AS
 Os
 tX
-zq
-Iu
+DX
+OH
 Os
 iN
 Os
 Xl
-zq
+DX
 it
 VO
 gp
 vn
 LP
-to
-zq
+hj
+DX
 Cm
 Cm
 Cm
@@ -631,27 +691,27 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 to
 AV
 Os
-zq
-zq
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
+DX
+DX
 AS
-zq
-zq
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
+DX
+DX
 pD
 AV
 to
-zq
+DX
 Cm
 Cm
 Cm
@@ -662,27 +722,27 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 Dg
 Op
 Os
-zq
+DX
 Os
 Os
 LP
 Os
-Tl
+Iu
 Os
-Tl
+Iu
 Un
 Os
 LP
 Os
-zq
+DX
 pD
 Op
 Dg
-zq
+DX
 Cm
 Cm
 Cm
@@ -693,7 +753,7 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 Dg
 ZP
 Os
@@ -703,7 +763,7 @@ Op
 Os
 Os
 Os
-LP
+Xl
 Os
 dz
 NE
@@ -713,7 +773,7 @@ gp
 iU
 Tk
 Dg
-zq
+DX
 Cm
 Cm
 Cm
@@ -724,13 +784,13 @@ Cm
 Cm
 Cm
 Cm
-zq
+DX
 Dg
-Os
+ki
 LP
-zq
+DX
 Os
-Os
+ki
 Os
 Os
 AV
@@ -738,13 +798,13 @@ Os
 AV
 Os
 Os
+ki
 Os
+DX
 Os
-zq
-Os
-LP
+YQ
 Dg
-zq
+DX
 Cm
 Cm
 Cm
@@ -755,26 +815,26 @@ Cm
 Cm
 Cm
 Cm
-zq
-zq
-zq
-zq
-zq
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
+DX
+DX
+DX
+DX
+DX
 Os
 Os
 Os
-zq
-zq
-zq
-zq
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
+DX
+DX
+DX
+DX
 DX
 Cm
 Cm
@@ -798,7 +858,7 @@ xr
 Os
 LP
 Os
-zq
+DX
 xr
 xr
 Cm
@@ -870,7 +930,7 @@ Cm
 Cm
 Cm
 Cm
-Cm
+Vs
 Cm
 Cm
 "}
@@ -919,10 +979,10 @@ Cm
 xr
 xr
 xr
+ki
 Os
-Os
-LP
-zq
+YQ
+DX
 xr
 xr
 Cm
@@ -949,11 +1009,11 @@ Cm
 ye
 ye
 UL
-zq
-zq
+DX
+DX
 AS
-zq
-zq
+DX
+DX
 UL
 ye
 ye
@@ -981,9 +1041,9 @@ uQ
 UL
 UL
 Wj
+hB
 Os
-Os
-Os
+hB
 Wj
 UL
 UL
@@ -1069,7 +1129,7 @@ Cm
 Cm
 Cm
 ye
-zq
+DX
 Wj
 Os
 Os
@@ -1081,7 +1141,7 @@ Os
 Os
 LP
 Wj
-zq
+DX
 ye
 Cm
 Cm
@@ -1099,8 +1159,8 @@ Cm
 Cm
 Cm
 ye
-zq
-zq
+DX
+DX
 Os
 Os
 Os
@@ -1112,8 +1172,8 @@ Os
 Os
 Os
 Os
-zq
-zq
+DX
+DX
 ye
 Cm
 Cm
@@ -1140,7 +1200,7 @@ zq
 zq
 zq
 ZU
-cH
+Op
 Tl
 Os
 Os
@@ -1162,7 +1222,7 @@ Cm
 Cm
 ye
 DX
-zq
+DX
 Os
 Os
 Os
@@ -1174,8 +1234,8 @@ Os
 Os
 LP
 Os
-zq
-zq
+DX
+DX
 ye
 Cm
 Cm
@@ -1193,7 +1253,7 @@ Cm
 Cm
 Cm
 ye
-zq
+DX
 Wj
 Os
 Os
@@ -1205,7 +1265,7 @@ Os
 Os
 Os
 Wj
-zq
+DX
 ye
 Cm
 Cm
@@ -1321,11 +1381,11 @@ Cm
 Cm
 ye
 UL
-zq
-zq
-zq
-zq
-zq
+DX
+DX
+DX
+DX
+DX
 UL
 ye
 Cm

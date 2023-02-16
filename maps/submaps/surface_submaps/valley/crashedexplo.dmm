@@ -19,10 +19,14 @@
 /obj/item/weapon/storage/firstaid/combat,
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/item/weapon/storage/firstaid/adv,
+/obj/item/selectable_item/chemistrykit/gender,
+/obj/item/selectable_item/chemistrykit/size,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "aC" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/portable_atmospherics/canister/phoron{
+	start_pressure = 0
+	},
 /obj/machinery/atmospherics/portables_connector,
 /obj/structure/sign/poster/nanotrasen{
 	dir = 1
@@ -103,7 +107,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/circuitboard/sleeper_console,
+/obj/item/weapon/circuitboard/pacman/mrs,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "hi" = (
@@ -148,12 +152,13 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/item/weapon/stock_parts/micro_laser/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "jc" = (
 /obj/structure/bed/chair/bay/shuttle,
-/mob/living/simple_mob/animal/giant_spider/nurse,
 /obj/effect/decal/cleanable/blood,
+/mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "ke" = (
@@ -189,6 +194,9 @@
 /obj/item/device/t_scanner,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/gloves/yellow,
+/obj/item/stack/material/tritium{
+	amount = 20
+	},
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "mj" = (
@@ -348,6 +356,7 @@
 /area/submap/crashedexplo)
 "vH" = (
 /obj/item/weapon/stock_parts/capacitor/omni,
+/mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "wv" = (
@@ -383,7 +392,9 @@
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "wZ" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/portable_atmospherics/canister/phoron{
+	start_pressure = 0
+	},
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
@@ -518,6 +529,7 @@
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "DH" = (
+/obj/item/weapon/stock_parts/matter_bin/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "DJ" = (
@@ -587,7 +599,8 @@
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/submap/crashedexplo)
 "KT" = (
-/obj/structure/frame,
+/obj/structure/table/glass,
+/obj/machinery/chemical_dispenser/full,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "KV" = (
@@ -604,7 +617,8 @@
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 32
 	},
-/obj/structure/frame,
+/obj/structure/table/glass,
+/obj/machinery/chemical_dispenser/biochemistry/full,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "LN" = (
@@ -612,6 +626,7 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
+/obj/item/weapon/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "LY" = (
@@ -872,7 +887,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_mob/animal/giant_spider/nurse,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Xp" = (

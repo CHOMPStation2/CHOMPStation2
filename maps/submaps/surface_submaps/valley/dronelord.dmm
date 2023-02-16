@@ -172,6 +172,12 @@
 "tK" = (
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/dronelord)
+"wv" = (
+/mob/living/simple_mob/mechanical/combat_drone{
+	faction = "syndicate"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/submap/dronelord)
 "wZ" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
@@ -209,6 +215,7 @@
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/projectile/giskard/olivaw,
 /obj/item/weapon/gun/energy/lasershotgun,
+/obj/item/weapon/gun/energy/particle/cannon,
 /turf/simulated/shuttle/floor/red,
 /area/submap/dronelord)
 "Fc" = (
@@ -331,10 +338,12 @@
 "Ul" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/projectile/multi_cannon,
-/obj/item/weapon/gun/energy/particle/cannon,
 /obj/machinery/light/poi{
 	dir = 1
 	},
+/obj/item/ammo_casing/macrobattery/buff,
+/obj/item/ammo_casing/macrobattery/ouchie,
+/obj/item/ammo_casing/macrobattery/healie,
 /turf/simulated/shuttle/floor/red,
 /area/submap/dronelord)
 "Uz" = (
@@ -350,6 +359,7 @@
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/weapon/gun/magnetic/matfed,
 /obj/item/weapon/gun/energy/ionrifle,
+/obj/item/weapon/gun/energy/sickshot,
 /turf/simulated/shuttle/floor/red,
 /area/submap/dronelord)
 "YR" = (
@@ -537,7 +547,7 @@ aj
 eD
 VO
 VO
-VO
+wv
 VO
 VO
 Lv
@@ -574,8 +584,8 @@ RV
 tK
 tK
 tK
-tK
 zi
+aj
 aj
 aj
 aj
@@ -583,8 +593,8 @@ VO
 aj
 aj
 aj
+aj
 zi
-tK
 tK
 tK
 tK
@@ -700,8 +710,8 @@ RV
 tK
 tK
 tK
-tK
 zi
+aj
 aj
 aj
 aj
@@ -709,8 +719,8 @@ Kv
 aj
 aj
 aj
+aj
 zi
-tK
 tK
 tK
 tK
@@ -826,7 +836,7 @@ RV
 tK
 tK
 tK
-tK
+zi
 aj
 FQ
 gQ
@@ -836,7 +846,7 @@ ko
 od
 xz
 aj
-tK
+zi
 tK
 tK
 tK
