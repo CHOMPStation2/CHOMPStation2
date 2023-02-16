@@ -71,7 +71,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "mY" = (
-/obj/effect/spider/eggcluster,
+/obj/effect/spider/eggcluster/small,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/spooderchurch)
 "nJ" = (
@@ -913,7 +913,7 @@ Bw
 Cq
 YO
 YO
-YO
+zv
 Fi
 EU
 EU

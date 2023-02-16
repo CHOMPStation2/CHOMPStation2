@@ -170,7 +170,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/dronelord)
 "tK" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/dronelord)
 "wZ" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -191,7 +191,7 @@
 /mob/living/simple_mob/mechanical/mining_drone{
 	faction = "syndicate"
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/dronelord)
 "zi" = (
 /obj/machinery/porta_turret/poi{
