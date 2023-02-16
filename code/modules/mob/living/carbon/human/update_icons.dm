@@ -62,7 +62,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
-#define WING_LOWER_LAYER		3		//Wings as viewed from the south
+#define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
 #define BODYPARTS_LAYER			4		//Bodyparts layer - CHOMPStation edit
 #define SKIN_LAYER				5		//Skin things added by a call on species
 #define BLOOD_LAYER				6		//Bloodied hands/feet/anything else
