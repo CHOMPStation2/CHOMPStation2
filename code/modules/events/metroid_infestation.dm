@@ -4,11 +4,14 @@
 	var/spawncount = 1
 	var/list/vents = list()
 	var/give_positions = 0
+	var/active_metroid_event = TRUE
 
 /datum/event/metroid_infestation/setup()
 	if(prob(50)) //50% chance of the event to even occur if procced
+		active_metroid_event = FALSE
 		kill()
 		return
+	active_metroid_event = TRUE
 	announceWhen = rand(announceWhen, announceWhen + 60)
 
 	spawncount = rand(2 * severity, 4 * severity)
@@ -53,6 +56,6 @@
 				qdel(M) //Must have been nullspaced
 				continue
 		area_names |= metroid_area.name
-	if(area_names.len)
+	if(area_names.len && active_metroid_event == TRUE)
 		var/english_list = english_list(area_names)
 		command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the followng areas: [english_list]", "Lifesign Alert")
