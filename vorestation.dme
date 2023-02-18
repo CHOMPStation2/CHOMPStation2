@@ -4546,6 +4546,7 @@
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_xeno.dm"
 #include "modular_chomp\code\modules\clothing\clothing.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\clockwork_ch.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\precursor.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\contraband.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\engineering.dm"
