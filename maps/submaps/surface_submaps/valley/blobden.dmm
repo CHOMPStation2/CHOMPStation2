@@ -81,7 +81,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "lt" = (
-/turf/simulated/mineral,
+/turf/simulated/mineral/light,
 /area/template_noop)
 "lO" = (
 /obj/effect/floor_decal/corner/yellow/border{
