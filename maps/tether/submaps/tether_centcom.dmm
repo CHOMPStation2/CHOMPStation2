@@ -533,6 +533,47 @@
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
+<<<<<<< HEAD
+=======
+"bF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/angled/open{
+	id = "ccshuttleshutter"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/angled/open{
+	dir = 4;
+	id = "ccshuttleshutter"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bH" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bI" = (
+/turf/simulated/floor/reinforced,
+/area/shuttle/centcom/ccbay)
+>>>>>>> bceefe7543... Merge pull request #14511 from Heroman3003/ae-tether-fix
 "bJ" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/box/pillbottles,
@@ -4996,9 +5037,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
-"sX" = (
-/turf/simulated/floor/reinforced/airless,
-/area/shuttle/centcom/ccbay)
 "sY" = (
 /obj/machinery/button/remote/blast_door{
 	id = "ArmouryC4";
@@ -25741,12 +25779,12 @@ ZQ
 ac
 nJ
 px
-sX
-sX
-sX
-sX
-sX
-sX
+bI
+bI
+bI
+bI
+bI
+bI
 fE
 gn
 mY
@@ -25754,8 +25792,8 @@ zN
 uf
 mS
 uf
-sX
-sX
+bI
+bI
 pR
 nJ
 ac
@@ -25883,8 +25921,8 @@ ZQ
 ac
 nJ
 px
-sX
-sX
+bI
+bI
 WO
 uf
 uf
@@ -27019,9 +27057,9 @@ ZQ
 ac
 nJ
 px
-sX
-sX
-sX
+bI
+bI
+bI
 uf
 uf
 mS
@@ -27161,12 +27199,12 @@ ZQ
 ac
 nJ
 px
-sX
-sX
-sX
-sX
-sX
-sX
+bI
+bI
+bI
+bI
+bI
+bI
 fE
 UC
 uf
@@ -27174,8 +27212,8 @@ uf
 uf
 mS
 uf
-sX
-sX
+bI
+bI
 pR
 nJ
 ic
