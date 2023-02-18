@@ -222,7 +222,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Ap" = (
-/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
+/mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -366,10 +366,6 @@
 "Vh" = (
 /turf/simulated/floor/tiled/red,
 /area/submap/piratevox)
-"Vs" = (
-/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
-/turf/template_noop,
-/area/template_noop)
 "VO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -758,7 +754,7 @@ Dg
 ZP
 Os
 AS
-rp
+Tl
 Op
 Os
 Os
@@ -930,7 +926,7 @@ Cm
 Cm
 Cm
 Cm
-Vs
+Cm
 Cm
 Cm
 "}

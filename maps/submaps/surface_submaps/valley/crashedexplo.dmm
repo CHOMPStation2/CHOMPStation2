@@ -270,10 +270,6 @@
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "rh" = (
-/obj/machinery/computer/ship/navigation/telescreen{
-	pixel_x = -32;
-	pixel_y = -5
-	},
 /obj/structure/closet/walllocker/emerglocker{
 	dir = 1;
 	pixel_y = -32

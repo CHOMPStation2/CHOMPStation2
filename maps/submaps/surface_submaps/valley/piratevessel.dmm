@@ -191,7 +191,9 @@
 /area/submap/piratevessel)
 "mw" = (
 /obj/effect/floor_decal/corner/green/diagonal,
-/mob/living/bot/farmbot,
+/mob/living/bot/farmbot{
+	faction = "pirate"
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "pu" = (
@@ -294,6 +296,15 @@
 /obj/structure/table/marble,
 /obj/random/material/precious,
 /obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/piratevessel)
+"ur" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/item/seeds/goldappleseed,
+/obj/structure/sink/kitchen{
+	pixel_y = 28
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "uL" = (
@@ -1107,7 +1118,7 @@ dt
 dt
 dt
 mq
-dx
+ur
 Ev
 Ev
 Ev
@@ -1137,7 +1148,7 @@ dt
 dt
 dt
 mq
-dx
+ur
 Ev
 Ev
 Ev
