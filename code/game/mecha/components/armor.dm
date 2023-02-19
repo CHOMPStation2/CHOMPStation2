@@ -101,7 +101,7 @@
 	required_type = list(/obj/mecha/combat)
 
 	damage_minimum = 15
-	minimum_penetration = 25
+	minimum_penetration = 20 //chompedit making this less OP, was 25, is now 20
 
 	damage_absorption = list(
 		"brute"=0.5,
