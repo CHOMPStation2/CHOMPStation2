@@ -214,7 +214,8 @@
 	throwforce = 2
 	slot_flags = SLOT_EARS
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi')
+		SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi',
+		SPECIES_VOX = 'icons/inventory/hands/mob_vox.dmi')
 
 /obj/item/clothing/ears/attack_hand(mob/user as mob)
 	if (!user) return
@@ -473,7 +474,7 @@
 
 /obj/item/clothing/head/proc/update_flashlight(var/mob/user = null)
 	set_light_on(!light_on)
-	
+
 	if(light_system == STATIC_LIGHT)
 		update_light()
 
@@ -828,7 +829,7 @@
 	var/rolled_down = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 	var/rolled_down_icon_override = TRUE
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
-	var/rolled_sleeves_icon_override = TRUE									
+	var/rolled_sleeves_icon_override = TRUE
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/uniform/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/uniform/mob_vox.dmi'
@@ -1058,10 +1059,10 @@
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
 	..()
-	
+
 //Vorestation edit - eject mobs from clothing before deletion
 /obj/item/clothing/Destroy()
 	for(var/mob/living/M in contents)
 		M.forceMove(get_turf(src))
 	return ..()
-//Vorestation edit end 
+//Vorestation edit end
