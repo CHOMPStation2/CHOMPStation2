@@ -31,7 +31,7 @@ var/world_time_season
 	var/tree_types = list()
 	var/snow_chance = 10
 
-/turf/simulated/floor/outdoors/grass/seasonal/Initialize()
+/turf/simulated/floor/outdoors/grass/seasonal/Initialize() //There are A LOT of chompedits here, I guess. 
 
 	switch(world_time_season)
 		if("spring")
@@ -41,14 +41,10 @@ var/world_time_season
 				/obj/structure/flora/tree/jungle
 			)
 			animal_types = list(
-<<<<<<< HEAD
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
+				/mob/living/simple_mob/vore/alienanimals/teppi = 10, //CHOMP Edit
+				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1, //CHOMP Edit
 				/mob/living/simple_mob/vore/redpanda = 40,
-				/mob/living/simple_mob/vore/redpanda/fae = 2,
-=======
-				/mob/living/simple_mob/vore/redpanda = 5,
->>>>>>> eeeb3309cb... Merge pull request #14502 from Very-Soft/editseason
+				/mob/living/simple_mob/vore/redpanda/fae = 2, //CHOMP Edit
 				/mob/living/simple_mob/vore/sheep = 20,
 				/mob/living/simple_mob/vore/rabbit/black = 20,
 				/mob/living/simple_mob/vore/rabbit/white = 20,
@@ -84,14 +80,10 @@ var/world_time_season
 				/obj/structure/flora/tree/jungle
 			)
 			animal_types = list(
-<<<<<<< HEAD
 				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
 				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
-				/mob/living/simple_mob/vore/redpanda = 40,
-				/mob/living/simple_mob/vore/redpanda/fae = 2,
-=======
-				/mob/living/simple_mob/vore/redpanda = 1,
->>>>>>> eeeb3309cb... Merge pull request #14502 from Very-Soft/editseason
+				/mob/living/simple_mob/vore/redpanda = 40, //CHOMP Edit
+				/mob/living/simple_mob/vore/redpanda/fae = 2, //CHOMP Edit
 				/mob/living/simple_mob/vore/sheep = 20,
 				/mob/living/simple_mob/vore/rabbit/black = 20,
 				/mob/living/simple_mob/vore/rabbit/white = 20,
