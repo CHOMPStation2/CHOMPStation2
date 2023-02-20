@@ -1,11 +1,11 @@
-/datum/sprite_accessory/ears/alien_slug
+/*/datum/sprite_accessory/ears/alien_slug //Is now a base vorestation feature
 	name = "Alien slug ears"
 	desc = "The ears of a slug from space"
 	icon = 'icons/mob/vore/ears_ch.dmi'
 	icon_state = "alien_slug"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-
+*/
 /datum/sprite_accessory/ears/zorgoia
 	name = "Zorgoia"
 	desc = "Ears only the slinkiest of noodles can have!"

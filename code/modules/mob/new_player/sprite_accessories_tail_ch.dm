@@ -1,4 +1,4 @@
-/datum/sprite_accessory/tail/alien_slug
+/*/datum/sprite_accessory/tail/alien_slug //Is now a base vorestation feature
 	name = "Alien slug tail"
 	desc = "The tail of a slug from space"
 	icon = 'icons/mob/vore/tails_ch.dmi'
@@ -6,7 +6,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "alien_slug_markings"
-
+*/
 /datum/sprite_accessory/tail/snaketail_stripes
 	name = "snake tail with stripes, dual-color"
 	desc = ""
