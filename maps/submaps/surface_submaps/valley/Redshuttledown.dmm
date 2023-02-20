@@ -342,13 +342,22 @@
 	dir = 4;
 	pixel_y = 0
 	},
-/obj/structure/closet/crate/secure/loot,
+/obj/structure/closet/crate,
 /obj/random/grenade/box,
 /obj/random/grenade/box,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
 /obj/item/weapon/rig/merc,
 /obj/item/weapon/rig/internalaffairs,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/misc,
+/obj/random/maintenance/security,
+/obj/random/maintenance/cargo,
+/obj/random/ammo,
+/obj/random/ammo,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "tv" = (
@@ -954,7 +963,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Yo" = (
-/obj/structure/closet/crate/secure/loot,
+/obj/structure/closet/crate,
 /obj/random/projectile,
 /obj/random/projectile,
 /obj/random/gun/random,
@@ -962,6 +971,16 @@
 /obj/random/energy/highend,
 /obj/item/weapon/rig/pmc/commander/grey/equipped,
 /obj/item/weapon/rig/pmc/commander/grey/equipped,
+/obj/item/weapon/card/emag/used,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/misc,
+/obj/random/maintenance/security,
+/obj/random/maintenance/cargo,
+/obj/random/ammo,
+/obj/random/ammo,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "Yv" = (

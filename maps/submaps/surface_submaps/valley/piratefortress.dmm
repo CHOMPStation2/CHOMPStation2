@@ -1,9 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ar" = (
 /obj/item/clothing/glasses/thermal/plain/eyepatch,
-/obj/structure/closet/crate/secure{
-	req_access = list(150)
-	},
+/obj/structure/closet/crate,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
 /obj/random/energy/highend,
@@ -372,9 +370,7 @@
 /area/submap/piratefortress)
 "vk" = (
 /obj/item/clothing/glasses/graviton/medgravpatch,
-/obj/structure/closet/crate/secure{
-	req_access = list(150)
-	},
+/obj/structure/closet/crate,
 /obj/item/stolenpackage,
 /obj/random/energy/highend,
 /obj/item/stolenpackage,
@@ -553,7 +549,9 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "DN" = (
-/obj/structure/closet/grave/dirthole,
+/obj/structure/closet/grave{
+	opened = 0
+	},
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/outdoors/grass/sif/forest,
 /area/submap/piratefortress)
@@ -749,6 +747,14 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
+"RI" = (
+/obj/structure/table/marble,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/piratefortress)
 "St" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/yellow,
@@ -840,6 +846,11 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/piratefortress)
+"YB" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg/rigged,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "Zb" = (
@@ -1753,7 +1764,7 @@ vk
 ar
 yg
 oX
-QM
+YB
 QM
 QM
 QM
@@ -1893,7 +1904,7 @@ dK
 sr
 Zb
 nl
-jO
+RI
 wq
 oX
 vT

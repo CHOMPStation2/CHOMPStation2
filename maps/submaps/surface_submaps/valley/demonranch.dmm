@@ -170,9 +170,6 @@
 /obj/item/clothing/shoes/cult,
 /turf/simulated/floor/wood/sif,
 /area/submap/demonranch)
-"Ev" = (
-/turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
 "Gt" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /obj/effect/decal/cleanable/blood/gibs,
@@ -323,12 +320,12 @@ bm
 bm
 bm
 bm
-bm
-bm
-bm
-bm
-bm
-bm
+wt
+su
+su
+aM
+su
+Up
 bm
 bm
 bm
@@ -408,7 +405,7 @@ aM
 aM
 su
 SG
-su
+aM
 kd
 su
 hq
@@ -444,7 +441,7 @@ ot
 su
 iw
 aM
-su
+aM
 su
 su
 su
@@ -473,7 +470,7 @@ su
 aM
 qA
 su
-su
+aM
 su
 aM
 aM
@@ -1090,7 +1087,7 @@ Zy
 Zy
 Zy
 Zy
-Ev
+Zy
 su
 su
 su
@@ -1620,7 +1617,7 @@ su
 aM
 su
 aM
-su
+aM
 su
 aM
 su
@@ -1655,12 +1652,12 @@ nh
 nh
 nh
 nh
-nh
-nh
-nh
-nh
-nh
-nh
+vk
+su
+su
+aM
+su
+ug
 nh
 nh
 nh
