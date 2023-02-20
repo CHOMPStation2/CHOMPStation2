@@ -572,8 +572,6 @@
 	desc = "A shoulder mantle bearing the colors usually found on a Site Manager, a commanding blue with regal gold inlay."
 	icon_state = "capmantle"
 	item_state = "capmantle"
-<<<<<<< HEAD
-=======
 
 //Boat cloaks
 /obj/item/clothing/accessory/poncho/roles/cloak/boat
@@ -688,4 +686,3 @@
 	name = "research shroud"
 	icon_state = "scishroud"
 	item_state = "scishroud"
->>>>>>> 770f8fb231... Merge pull request #14505 from Burrito-Justice/master
