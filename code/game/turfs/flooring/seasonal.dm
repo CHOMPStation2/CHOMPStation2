@@ -142,11 +142,8 @@ var/world_time_season
 
 			animal_types = list(
 				/mob/living/simple_mob/vore/rabbit/white = 40,
-<<<<<<< HEAD
 				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
 				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
-				/mob/living/simple_mob/vore/redpanda = 10
-=======
 				/mob/living/simple_mob/vore/redpanda = 10,
 				/mob/living/simple_mob/animal/wolf = 10,
 				/mob/living/simple_mob/animal/wolf/direwolf = 1,
@@ -155,7 +152,6 @@ var/world_time_season
 				/mob/living/simple_mob/otie/friendly/chubby = 1,
 				/mob/living/simple_mob/otie/red/friendly = 1,
 				/mob/living/simple_mob/otie/red/chubby = 1
->>>>>>> eeeb3309cb... Merge pull request #14502 from Very-Soft/editseason
 			)
 			if(prob(snow_chance))
 				chill()
