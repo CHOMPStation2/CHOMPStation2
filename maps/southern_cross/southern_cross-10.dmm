@@ -631,10 +631,7 @@
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/wilderness)
 "sC" = (
-/obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
-	},
+/obj/structure/railing,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
 "td" = (
@@ -704,8 +701,7 @@
 /obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
 	dir = 4
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
@@ -729,13 +725,21 @@
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "As" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/surface/outside/river/svartan)
 "AB" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/wilderness/normal)
+"AX" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "AZ" = (
 /obj/structure/simple_door/sifwood,
 /obj/machinery/door/blast/shutters{
@@ -750,8 +754,7 @@
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/surface/outside/river/svartan)
 "Dk" = (
 /obj/structure/sign/department/medbay{
@@ -808,6 +811,13 @@
 	},
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
+"Mg" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/obj/structure/railing,
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "Mk" = (
 /obj/structure/table/rack,
 /obj/item/weapon/circuitboard/machine/rtg/advanced,
@@ -851,6 +861,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
+"Qz" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "Rc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1132,8 +1148,8 @@ XD
 XD
 BF
 BF
-BF
-BF
+AX
+Mg
 BF
 xx
 kh
@@ -1390,8 +1406,8 @@ Za
 Za
 As
 As
-As
-As
+Qz
+sC
 As
 As
 IZ
@@ -1648,8 +1664,8 @@ ah
 ah
 As
 As
-As
-As
+Qz
+sC
 As
 As
 ap
@@ -1906,8 +1922,8 @@ ah
 ah
 As
 As
-As
-As
+Qz
+sC
 As
 As
 ap
@@ -2164,8 +2180,8 @@ ah
 ah
 LI
 LI
-sC
-sC
+an
+an
 LI
 LI
 am

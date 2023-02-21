@@ -124,13 +124,21 @@
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_valley{
 	dir = 8
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/surface/outside/valley/river)
 "kI" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/valley/inner)
+"kL" = (
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/water/deep,
+/area/surface/outside/valley/river)
 "kW" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep{
@@ -388,8 +396,11 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
 "DA" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor/water/deep,
 /area/surface/outside/valley/river)
 "DE" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -610,8 +621,7 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/surface/outside/valley/river)
 "WT" = (
 /turf/simulated/wall/wood,
@@ -65516,8 +65526,8 @@ HM
 rK
 pI
 ES
-ES
-ES
+rU
+rU
 ES
 pI
 rK
@@ -65772,12 +65782,12 @@ HM
 HM
 HM
 HM
-DA
-DA
-DA
-DA
-DA
-DA
+EA
+EA
+hx
+bH
+EA
+EA
 HM
 HM
 HM
@@ -66030,12 +66040,12 @@ HM
 HM
 HM
 HM
-DA
-DA
-DA
-DA
-DA
-DA
+EA
+EA
+hx
+bH
+EA
+EA
 HM
 HM
 HM
@@ -66290,8 +66300,8 @@ Yl
 Yl
 WK
 WK
-WK
-WK
+kL
+DA
 WK
 kf
 Yl
@@ -66546,12 +66556,12 @@ RW
 RW
 qe
 qe
-DA
-DA
-DA
-DA
-DA
-DA
+EA
+EA
+hx
+bH
+EA
+EA
 qe
 qe
 RW
