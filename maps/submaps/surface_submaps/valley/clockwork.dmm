@@ -9,6 +9,10 @@
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
+"d" = (
+/obj/effect/decal/cleanable/ash,
+/turf/simulated/floor/lava,
+/area/submap/clockwork)
 "h" = (
 /obj/structure/cliff/automatic{
 	dir = 2
@@ -20,6 +24,13 @@
 	faction = "malf_drone"
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"m" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/lava,
 /area/submap/clockwork)
 "n" = (
 /obj/structure/cliff/automatic{
@@ -159,6 +170,18 @@
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
+"S" = (
+/obj/structure/closet/grave,
+/obj/item/weapon/rig/ch/clockwork,
+/obj/item/weapon/gun/energy/clockwork,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/clockwork)
+"T" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/lava,
+/area/submap/clockwork)
 "U" = (
 /obj/structure/cliff/automatic{
 	dir = 8
@@ -174,13 +197,16 @@
 /area/submap/clockwork)
 "W" = (
 /mob/living/simple_mob/mechanical/mining_drone,
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/lava,
 /area/submap/clockwork)
 "Z" = (
-/obj/structure/table/gold,
-/obj/item/weapon/rig/ch/clockwork,
-/obj/item/weapon/gun/energy/clockwork,
-/turf/simulated/floor/outdoors/rocks/caves,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/lava,
 /area/submap/clockwork)
 
 (1,1,1) = {"
@@ -240,17 +266,17 @@ z
 z
 b
 U
-U
 E
 Q
 n
 U
 U
 U
+U
+U
 E
 Q
 n
-U
 U
 I
 z
@@ -265,17 +291,17 @@ z
 b
 J
 M
-M
 y
 a
 G
 M
 M
 M
+M
+M
 y
 a
 G
-M
 M
 q
 I
@@ -289,19 +315,19 @@ z
 b
 J
 M
-M
-M
+W
 y
 a
 G
 M
 M
 M
+M
+M
 y
 a
 G
-M
-M
+W
 M
 q
 I
@@ -315,17 +341,17 @@ C
 M
 M
 M
-M
 y
 a
 G
 M
 M
 M
+M
+M
 y
 a
 G
-M
 M
 M
 M
@@ -340,17 +366,17 @@ H
 V
 V
 V
-V
 z
 z
 z
 M
 M
 M
+M
+M
 z
 z
 z
-V
 V
 V
 V
@@ -365,17 +391,17 @@ Q
 a
 a
 a
-a
 z
 z
 z
+M
 M
 W
 M
+M
 z
 z
 z
-a
 a
 a
 a
@@ -390,17 +416,17 @@ t
 o
 o
 o
-o
 z
 z
 z
 M
 M
 M
+M
+M
 z
 z
 z
-o
 o
 o
 o
@@ -415,17 +441,17 @@ C
 M
 M
 M
-M
 y
 a
 G
 M
 M
 M
+M
+M
 y
 a
 G
-M
 M
 M
 M
@@ -440,17 +466,17 @@ C
 M
 M
 M
-M
 y
 a
 G
-Z
+M
 z
-Z
+z
+z
+M
 y
 a
 G
-M
 M
 M
 M
@@ -465,17 +491,17 @@ C
 M
 W
 M
-M
 y
 a
 G
-z
+M
+S
 k
-z
+S
+M
 y
 a
 G
-M
 M
 W
 M
@@ -490,17 +516,17 @@ C
 M
 M
 M
-M
-y
-a
-G
-z
-z
-z
 y
 a
 G
 M
+z
+z
+z
+M
+y
+a
+G
 M
 M
 M
@@ -515,17 +541,17 @@ C
 M
 M
 M
-M
-y
-a
-G
-y
-a
-G
 y
 a
 G
 M
+y
+a
+G
+M
+y
+a
+G
 M
 M
 M
@@ -540,17 +566,17 @@ C
 M
 M
 M
-M
 z
 z
 z
-y
-a
-G
+T
+m
+d
+Z
+T
 z
 z
 z
-M
 M
 M
 M
@@ -565,17 +591,17 @@ C
 M
 M
 M
+z
+z
+z
+a
+d
 M
-z
-z
-z
-a
-a
+d
 a
 z
 z
 z
-M
 M
 M
 M
@@ -590,17 +616,17 @@ C
 M
 M
 M
-M
 z
 z
 z
 o
 o
 o
+o
+o
 z
 z
 z
-M
 M
 M
 M

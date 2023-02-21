@@ -56,6 +56,7 @@
 /obj/item/clothing/suit/armor/shield,
 /obj/item/weapon/implantcase/handblade,
 /obj/item/weapon/implantcase/dart,
+/obj/item/clothing/head/technomancer/master,
 /turf/space,
 /area/submap/vault)
 "z" = (
@@ -117,6 +118,11 @@
 /obj/item/weapon/implantcase/medkit,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
+"N" = (
+/obj/item/clothing/head/technomancer/apprentice,
+/obj/structure/table/alien/blue,
+/turf/simulated/shuttle/floor/alien,
+/area/submap/vault)
 "O" = (
 /obj/machinery/door/airlock/alien/blue/public,
 /obj/structure/fans/tiny,
@@ -155,7 +161,11 @@
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "Z" = (
-/obj/machinery/door/airlock/alien/blue/locked,
+/obj/structure/table/alien/blue,
+/obj/item/weapon/gun/energy/alien,
+/obj/item/prop/alien/junk,
+/obj/item/prop/alien/junk,
+/obj/item/clothing/head/technomancer/apprentice,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 
@@ -269,9 +279,9 @@ z
 a
 a
 c
+c
 r
-a
-a
+r
 c
 c
 d
@@ -310,7 +320,7 @@ a
 r
 c
 c
-a
+c
 a
 a
 a
@@ -351,11 +361,11 @@ Y
 c
 c
 c
-a
+c
 z
 z
 a
-r
+a
 c
 c
 d
@@ -397,7 +407,7 @@ z
 z
 a
 a
-a
+r
 c
 c
 d
@@ -435,11 +445,11 @@ a
 q
 a
 a
-a
+c
 a
 a
 z
-a
+r
 c
 c
 d
@@ -476,12 +486,12 @@ c
 c
 c
 c
+c
 q
 c
-P
 a
 a
-r
+a
 c
 c
 d
@@ -518,8 +528,8 @@ c
 H
 a
 a
-c
-c
+z
+q
 a
 a
 a
@@ -556,16 +566,16 @@ a
 a
 a
 c
-R
+Z
 a
 z
 a
-q
-a
+c
+c
 z
 z
 a
-a
+P
 c
 d
 "}
@@ -606,7 +616,7 @@ a
 z
 z
 a
-a
+r
 c
 d
 "}
@@ -645,9 +655,9 @@ H
 c
 a
 a
-a
-a
-r
+c
+c
+c
 c
 d
 "}
@@ -1310,7 +1320,7 @@ d
 (29,1,1) = {"
 d
 c
-a
+r
 a
 z
 z
@@ -1318,7 +1328,7 @@ a
 c
 a
 a
-P
+N
 c
 c
 a
@@ -1351,12 +1361,12 @@ d
 (30,1,1) = {"
 d
 c
-a
+r
 a
 z
 z
 a
-Z
+c
 a
 z
 a
@@ -1397,8 +1407,8 @@ a
 a
 a
 a
-c
-c
+a
+a
 a
 a
 H
@@ -1435,12 +1445,12 @@ d
 d
 c
 c
-r
 a
 a
-P
+a
+a
+a
 c
-Z
 c
 c
 c
@@ -1561,7 +1571,7 @@ d
 d
 c
 c
-r
+a
 a
 z
 z
@@ -1645,8 +1655,8 @@ d
 d
 c
 c
-a
-a
+P
+r
 r
 c
 a

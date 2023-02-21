@@ -2,13 +2,8 @@
 "aG" = (
 /obj/structure/cable{
 	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/plontden)
@@ -30,11 +25,6 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/white,
-/area/submap/plontden)
-"dZ" = (
-/obj/machinery/door/airlock/glass_research,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_grid,
 /area/submap/plontden)
 "eF" = (
 /obj/structure/grille,
@@ -248,9 +238,9 @@
 /area/submap/plontden)
 "Aj" = (
 /obj/machinery/power/port_gen/pacman,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+/obj/structure/cable/cyan{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/submap/plontden)
@@ -342,8 +332,9 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/plontden)
 "KI" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_research,
+/obj/machinery/door/airlock/glass_research{
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/plontden)
 "Li" = (
@@ -396,12 +387,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_research,
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass_research{
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/plontden)
@@ -422,13 +414,8 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/structure/cable/cyan,
 /turf/simulated/floor/plating,
-/area/submap/plontden)
-"Ra" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/glass_research,
-/turf/simulated/floor/tiled/steel_grid,
 /area/submap/plontden)
 "Rs" = (
 /obj/structure/cable{
@@ -648,7 +635,7 @@ ur
 iU
 iU
 im
-dZ
+KI
 im
 iU
 iU
@@ -834,7 +821,7 @@ Er
 RD
 od
 od
-Ra
+KI
 ur
 ur
 ur

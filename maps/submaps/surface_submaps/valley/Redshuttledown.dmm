@@ -262,7 +262,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
 /obj/random/material,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer/rigged,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "nG" = (
@@ -275,6 +275,7 @@
 /obj/item/weapon/reagent_containers/spray/sterilizine,
 /obj/effect/floor_decal/corner/green/border,
 /obj/random/firstaid,
+/obj/item/mecha_parts/mecha_equipment/crisis_drone,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "oA" = (
@@ -579,6 +580,7 @@
 	dir = 8
 	},
 /obj/item/clothing/head/helmet/space/void/chrono,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "BA" = (
@@ -656,11 +658,20 @@
 "Gd" = (
 /obj/effect/floor_decal/corner/grey,
 /obj/structure/table/woodentable,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Gj" = (
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/white,
+/area/submap/redshuttledown)
+"GI" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "GT" = (
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
@@ -827,6 +838,7 @@
 /area/submap/redshuttledown)
 "Qw" = (
 /obj/structure/table/steel,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
 /turf/simulated/floor/tiled/red,
 /area/submap/redshuttledown)
 "QV" = (
@@ -1306,7 +1318,7 @@ Cv
 Ni
 ss
 kx
-BA
+GI
 YR
 BA
 Bx

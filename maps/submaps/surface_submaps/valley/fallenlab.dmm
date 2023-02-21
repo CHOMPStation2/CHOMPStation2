@@ -20,6 +20,16 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
+"cQ" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/mob/living/simple_mob/mechanical/cyber_horror/grey,
+/turf/simulated/floor/tiled/dark,
+/area/submap/fallenlab)
+"dx" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/mechanical/cyber_horror/grey,
+/turf/simulated/floor/tiled/dark,
+/area/submap/fallenlab)
 "eq" = (
 /obj/structure/closet/toolcloset,
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -48,7 +58,6 @@
 /area/submap/fallenlab)
 "fL" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait,
-/obj/structure/barricade/planks,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -203,11 +212,6 @@
 /obj/item/device/nif,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/effect/floor_decal/corner/orange/diagonal,
-/turf/simulated/floor/tiled/dark,
-/area/submap/fallenlab)
-"tb" = (
-/obj/structure/barricade/planks,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
@@ -537,6 +541,10 @@
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror,
 /turf/simulated/floor/grass,
 /area/submap/fallenlab)
+"Yv" = (
+/obj/machinery/door/airlock/external/bolted,
+/turf/simulated/floor/tiled/dark,
+/area/submap/fallenlab)
 "ZC" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -609,7 +617,7 @@ SX
 SX
 Gi
 KR
-kh
+cQ
 bH
 ki
 Gi
@@ -775,7 +783,7 @@ jh
 XJ
 kW
 sM
-tb
+kh
 sM
 ki
 XJ
@@ -926,7 +934,7 @@ rv
 kh
 xI
 kW
-rv
+Yv
 Yn
 lh
 lh
@@ -934,7 +942,7 @@ SK
 lh
 lh
 Yn
-rv
+Yv
 ki
 GJ
 ki
@@ -1016,7 +1024,7 @@ SX
 SX
 Gi
 Rg
-bH
+dx
 kh
 bH
 tI
@@ -1251,7 +1259,7 @@ kW
 Gi
 kW
 bH
-kh
+cQ
 KR
 Gi
 SX

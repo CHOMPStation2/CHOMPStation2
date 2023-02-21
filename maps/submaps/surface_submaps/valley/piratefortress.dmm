@@ -626,6 +626,12 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
+"KQ" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(155)
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/piratefortress)
 "KS" = (
 /obj/structure/railing{
 	dir = 1
@@ -810,7 +816,9 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "VJ" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "WW" = (
@@ -1752,8 +1760,8 @@ La
 kC
 oX
 oX
+XJ
 VJ
-oX
 oX
 oX
 Fo
@@ -1944,7 +1952,7 @@ oX
 oX
 oX
 oX
-VJ
+KQ
 oX
 oX
 oX
@@ -2111,7 +2119,7 @@ La
 vT
 kC
 oX
-oX
+XJ
 VJ
 oX
 oX
@@ -2156,7 +2164,7 @@ La
 vT
 vT
 oX
-df
+tr
 XJ
 hd
 hd
@@ -2248,7 +2256,7 @@ kC
 oX
 oX
 oX
-St
+KQ
 oX
 oX
 oX
@@ -2263,7 +2271,7 @@ oX
 oX
 oX
 oX
-VJ
+KQ
 oX
 oX
 oX
