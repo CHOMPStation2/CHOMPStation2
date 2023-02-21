@@ -51,7 +51,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	appearance_flags = NONE
-	
+
 	var/obj/effect/map_effect/portal/counterpart = null // The portal line or master that this is connected to, on the 'other side'.
 
 	// Information used to apply `pixel_[x|y]` offsets so that the visuals line up.
@@ -71,8 +71,8 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 
 // Called when something touches the portal, and usually teleports them to the other side.
 /obj/effect/map_effect/portal/Crossed(atom/movable/AM)
-	if(AM.is_incorporeal())
-		return
+	/*if(AM.is_incorporeal())
+		return CHOMPEdit: This is why phased critters couldn't enter z transits */
 	..()
 	if(!AM)
 		return

@@ -3,7 +3,7 @@
 ////////////////////////////
 
 /mob/living/simple_mob/construct
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
 /mob/living/simple_mob/construct/artificer

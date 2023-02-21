@@ -3,15 +3,17 @@
 	desc = "A huge salamander-like drake. They are best known for their rarity, their voracity, their very potent paralyzing venom, and their healing stomach. This one is white."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/leopardmander)
 	tt_desc = "S Draconis uncia"
-	icon = 'icons/mob/vore128x64_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore128x64_ch.dmi'
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"
+	icon_rest = "leopardmander-rest"
 	faction = "neutral"
 	meat_amount = 40 //I mean...
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
+	vis_height = 92
 	melee_damage_lower = 10
 	melee_damage_upper = 25
 	friendly = list("nudges", "sniffs on", "rumbles softly at", "slobberlicks")
@@ -39,12 +41,14 @@
 	vore_escape_chance = 50
 	vore_pounce_chance = 100
 	vore_active = 1
-	vore_icons = 4
+	vore_icons = 5
 	vore_capacity = 4
 	swallowTime = 100
 	vore_default_mode = DM_HEAL
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
+
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
@@ -65,6 +69,10 @@
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
 	movement_cooldown = 2
+	plane_holder.set_vis(VIS_CH_HEALTH_VR, 1)
+	plane_holder.set_vis(VIS_CH_ID, 1)
+	plane_holder.set_vis(VIS_CH_STATUS_R, 1)
+	plane_holder.set_vis(VIS_CH_BACKUP, 1)	//Makes sense for player Leppy's to be able to see health.
 
 /mob/living/simple_mob/vore/leopardmander/Initialize()
 	..()
@@ -116,6 +124,7 @@
 	icon_dead = "leopardmander_blue-dead"
 	icon_living = "leopardmander_blue"
 	icon_state = "leopardmander_blue"
+	icon_rest = "leopardmander_blue-rest"
 
 /mob/living/simple_mob/vore/leopardmander/exotic
 	name = "glass-belly leopardmander"
@@ -124,6 +133,7 @@
 	icon_dead = "leopardmander_exotic-dead"
 	icon_living = "leopardmander_exotic"
 	icon_state = "leopardmander_exotic"
+	icon_rest = "leopardmander_exotic-rest"
 
 	glow_toggle = TRUE //Glow!
 	glow_range = 2

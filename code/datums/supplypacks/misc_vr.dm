@@ -26,7 +26,7 @@
 	containername = "eva hardsuit crate"
 	access = list(access_mining,
 				  access_eva,
-				  access_explorer,
+				  access_explorer, //CHOMP explo keep
 				  access_pilot)
 	one_access = TRUE
 
@@ -125,12 +125,12 @@
 	access = list(access_mining,
 				  access_xenoarch,
 				  access_eva,
-				  access_explorer,
+				  access_explorer, //CHOMP explo keep
 				  access_pilot)
 	one_access = TRUE
 
 /datum/supply_pack/randomised/misc/explorer_shield
-	name = "Explorer shield"
+	name = "Explorer shield" //CHOMP explo keep
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/shield/riot/explorer,
@@ -139,7 +139,7 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration shield crate"
-	access = list(access_explorer,
+	access = list(access_explorer, //CHOMP explo keep
 				  access_eva,
 				  access_pilot)
 	one_access = TRUE
@@ -161,3 +161,25 @@
 	cost = 300
 	containertype = /obj/structure/closet/crate
 	containername = "cordless jukebox speakers crate"
+
+/datum/supply_pack/misc/explorer_headsets
+	name = "shortwave-capable headsets (x4)"
+	contains = list(
+		/obj/item/device/radio/headset/explorer = 4
+	)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "exploration radio headsets crate"
+	access = list(
+		access_explorer, //CHOMP explo keep
+		access_eva,
+		access_pilot
+	)
+	one_access = TRUE
+
+/datum/supply_pack/misc/swoopie //CHOMPAdd
+	name = "SWOOPIE XL CleanBot Kit"
+	contains = list()
+	cost = 100
+	containertype = /obj/structure/largecrate/animal/swoopie
+	containername = "SWOOPIE XL CleanBot Starter Kit"

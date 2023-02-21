@@ -1,0 +1,1316 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ai" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/fountain,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"as" = (
+/obj/machinery/door/airlock/maintenance/sec,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/MethLab)
+"aY" = (
+/obj/item/weapon/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/shard{
+	pixel_x = 9
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"bn" = (
+/obj/structure/fence/cut/medium,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"bA" = (
+/obj/item/device/multitool,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"bJ" = (
+/obj/structure/sign/atmos_waste,
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/MethLab)
+"bQ" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/obj/item/weapon/material/shard{
+	pixel_x = 9
+	},
+/obj/item/weapon/material/shard{
+	pixel_x = 5
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"cg" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/device/radio{
+	anchored = 1;
+	canhear_range = 1;
+	frequency = 1487;
+	icon = 'icons/obj/items.dmi';
+	icon_state = "red_phone";
+	name = "Reception Emergency Phone"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"ck" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/ambrosiadeusseed,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"dy" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/storage/bag/chemistry,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"fr" = (
+/obj/structure/fence,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"fD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"fY" = (
+/obj/item/stack/cable_coil,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"hf" = (
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"hj" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"hE" = (
+/obj/machinery/door/airlock/scp,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MethLab)
+"hQ" = (
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"ic" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"iz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"iB" = (
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"iN" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"jm" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/MethLab)
+"jo" = (
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"kp" = (
+/obj/effect/floor_decal/rust/mono_rusted3,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"lb" = (
+/obj/machinery/biogenerator,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"lt" = (
+/obj/item/frame/apc,
+/obj/structure/table/steel,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 22
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"lx" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/MethLab)
+"lJ" = (
+/obj/structure/fence/corner,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"lN" = (
+/obj/structure/barricade,
+/obj/effect/floor_decal/steeldecal/steel_decals_central5,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"me" = (
+/obj/structure/salvageable/data,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"mi" = (
+/obj/effect/floor_decal/sign,
+/turf/simulated/wall,
+/area/survivalpod/superpose/MethLab)
+"mw" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/toolbox/syndicate,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"nq" = (
+/obj/random/junk,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"oo" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/ambrosiainfernusseed,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"oF" = (
+/obj/structure/fence/cut/large,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"oN" = (
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/MethLab)
+"pq" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"ps" = (
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"rK" = (
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"rU" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/under/suit_jacket,
+/obj/item/clothing/shoes/dress{
+	pixel_y = -9
+	},
+/obj/item/clothing/mask/demon,
+/obj/structure/curtain/black,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"sI" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/storage/bag/chemistry,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"sW" = (
+/obj/item/weapon/material/shard{
+	pixel_x = 9
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"tt" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/salvageable/personal,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"tz" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"tL" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"tQ" = (
+/obj/structure/girder,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"uA" = (
+/obj/structure/fence/cut/large{
+	dir = 8
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"uY" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"wd" = (
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"wI" = (
+/obj/item/weapon/reagent_containers/dropper,
+/obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"wQ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"xM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/airlock/maintenance/sec,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/MethLab)
+"xR" = (
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/structure/closet/crate,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/MethLab)
+"yr" = (
+/obj/random/trash,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"yM" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/under/suit_jacket/really_black,
+/obj/item/clothing/shoes/dress{
+	pixel_y = -9
+	},
+/obj/item/clothing/mask/fluff/lucerna_1,
+/obj/structure/curtain/black,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"yY" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"zu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"zB" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/browndouble,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"zG" = (
+/obj/random/junk,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"zH" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"zZ" = (
+/obj/structure/fence/corner{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"AB" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"AM" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"AW" = (
+/obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"BP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"BR" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"BT" = (
+/obj/item/weapon/makeover,
+/obj/structure/curtain/open/bed,
+/obj/item/clothing/under/swimsuit/fluff/penelope,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"CH" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiainfernusseed,
+/obj/item/seeds/ambrosiainfernusseed,
+/obj/item/seeds/ambrosiainfernusseed,
+/obj/item/seeds/ambrosiadeusseed,
+/obj/item/seeds/ambrosiadeusseed,
+/obj/item/seeds/ambrosiadeusseed,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"CL" = (
+/obj/structure/grille/rustic,
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"CW" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"DG" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/MethLab)
+"DP" = (
+/obj/item/weapon/reagent_containers/dropper,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Eb" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/ambrosiadeusseed,
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"EW" = (
+/obj/item/weapon/stool,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"Fg" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"Gs" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"GP" = (
+/obj/structure/flora/tree/sif,
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"HA" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"HN" = (
+/obj/machinery/porta_turret/lasertag/red{
+	name = "REAL turret"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"HX" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Ih" = (
+/obj/structure/sign/warning/lethal_turrets,
+/turf/simulated/wall,
+/area/survivalpod/superpose/MethLab)
+"IC" = (
+/obj/structure/curtain/open/bed,
+/obj/item/clothing/under/suit_jacket/really_black,
+/obj/item/clothing/under/suit_jacket/navy,
+/obj/item/clothing/head/soft/solgov/veteranhat,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"IH" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"IQ" = (
+/obj/item/clothing/accessory/stethoscope,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"JQ" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Kg" = (
+/obj/structure/fence/cut/medium{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/MethLab)
+"KK" = (
+/obj/machinery/chem_master,
+/obj/effect/floor_decal/rust/color_rustedfull,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"KR" = (
+/obj/item/weapon/cell/hyper,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Lh" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"LM" = (
+/obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"LX" = (
+/obj/item/weapon/stool,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Mn" = (
+/obj/structure/barricade,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"Of" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"Ol" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"Oq" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"Py" = (
+/obj/random/trash,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/MethLab)
+"PH" = (
+/obj/machinery/seed_extractor,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"PO" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/module/power_control,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"PZ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"QP" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"QW" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"Sn" = (
+/obj/structure/barricade,
+/obj/effect/floor_decal/steeldecal/steel_decals_central5,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"St" = (
+/obj/structure/salvageable/implant_container,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Ti" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/seeds/ambrosiadeusseed,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"Tr" = (
+/obj/item/weapon/stool,
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"Ts" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/MethLab)
+"Ty" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/under/suit_jacket/burgundy,
+/obj/item/clothing/shoes/dress{
+	pixel_y = -9
+	},
+/obj/item/clothing/mask/dolphin,
+/obj/structure/curtain/black,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"TU" = (
+/obj/item/device/flashlight/lamp,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"Uy" = (
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"UD" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/under/suit_jacket/red,
+/obj/item/clothing/shoes/dress{
+	pixel_y = -9
+	},
+/obj/item/clothing/mask/goblin,
+/obj/structure/curtain/black,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MethLab)
+"UO" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"Vf" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"Vu" = (
+/obj/structure/fence/cut/medium{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"Vw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+"VV" = (
+/obj/structure/fence/corner{
+	dir = 10
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/MethLab)
+"Wp" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/MethLab)
+"Xi" = (
+/turf/simulated/wall,
+/area/survivalpod/superpose/MethLab)
+"Xo" = (
+/obj/random/maintenance,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"Xr" = (
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/extinguisher,
+/obj/item/weapon/storage/box/lights/mixed,
+/turf/simulated/floor,
+/area/survivalpod/superpose/MethLab)
+"Yz" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/survivalpod/superpose/MethLab)
+"Zh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"Zp" = (
+/obj/structure/grille/rustic,
+/obj/item/weapon/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/survivalpod/superpose/MethLab)
+"Zt" = (
+/obj/structure/salvageable/autolathe,
+/obj/effect/floor_decal/rust/color_rustedfull,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MethLab)
+
+(1,1,1) = {"
+Uy
+fr
+fr
+oF
+ps
+ps
+fr
+fr
+DG
+fr
+ps
+oF
+oF
+ps
+ps
+bn
+fr
+ps
+fr
+VV
+"}
+(2,1,1) = {"
+Oq
+ps
+ps
+ps
+ps
+ps
+ps
+lx
+ps
+ps
+ps
+ps
+bQ
+sW
+ps
+ps
+ps
+ps
+ps
+Oq
+"}
+(3,1,1) = {"
+Oq
+ps
+ps
+ps
+ps
+ps
+Xi
+tz
+Of
+Xi
+ps
+HA
+CL
+HA
+HA
+HA
+HA
+HA
+ps
+Oq
+"}
+(4,1,1) = {"
+Vu
+ps
+HN
+hf
+hf
+Ih
+Xi
+mw
+BR
+tQ
+bA
+HA
+Yz
+Yz
+ic
+oo
+oo
+HA
+ps
+Oq
+"}
+(5,1,1) = {"
+Oq
+ps
+ps
+ps
+ps
+Xi
+Zt
+Xo
+Lh
+Xi
+HA
+HA
+PZ
+PZ
+wd
+QW
+wd
+HA
+ps
+Oq
+"}
+(6,1,1) = {"
+Oq
+ps
+ps
+ps
+zG
+Of
+cg
+hQ
+uY
+xM
+kp
+Ol
+Zh
+PH
+jo
+lb
+CH
+HA
+ps
+Oq
+"}
+(7,1,1) = {"
+Oq
+ps
+GP
+lx
+Py
+Of
+tt
+Lh
+Xo
+Xi
+HA
+HA
+zu
+Ol
+zu
+IH
+QW
+HA
+ps
+uA
+"}
+(8,1,1) = {"
+Vu
+ps
+ps
+ps
+lx
+tz
+ai
+pq
+sI
+Xi
+Xi
+HA
+Eb
+ck
+Ti
+ck
+ck
+HA
+ps
+ps
+"}
+(9,1,1) = {"
+Oq
+ps
+ps
+ps
+ps
+Xi
+St
+hQ
+iz
+rU
+Xi
+HA
+HA
+HA
+HA
+HA
+Zp
+HA
+ps
+Oq
+"}
+(10,1,1) = {"
+Oq
+ps
+Xi
+Xi
+tQ
+Xi
+St
+AM
+LM
+Ty
+Xi
+Ts
+ps
+ps
+ps
+UO
+aY
+ps
+ps
+Vu
+"}
+(11,1,1) = {"
+Oq
+Xi
+Xi
+KR
+KK
+iB
+KK
+wI
+Vw
+yM
+Xi
+xR
+ps
+ps
+ps
+ps
+zG
+ps
+ps
+Oq
+"}
+(12,1,1) = {"
+jm
+tz
+KK
+rK
+AB
+EW
+PO
+tL
+BP
+UD
+Xi
+Wp
+ps
+zH
+ps
+zG
+ps
+ps
+ps
+Oq
+"}
+(13,1,1) = {"
+jm
+Of
+Gs
+DP
+iN
+yY
+AB
+LX
+HX
+Xi
+Xi
+Xi
+Xi
+mi
+ps
+ps
+ps
+ps
+ps
+Oq
+"}
+(14,1,1) = {"
+Oq
+Of
+QP
+Tr
+uY
+fY
+uY
+AW
+Sn
+as
+hf
+Mn
+as
+yr
+Py
+lx
+ps
+lx
+ps
+Oq
+"}
+(15,1,1) = {"
+Oq
+Ih
+Xi
+me
+me
+dy
+IQ
+JQ
+lN
+as
+hf
+Mn
+as
+hf
+lx
+ps
+lx
+ps
+ps
+Kg
+"}
+(16,1,1) = {"
+Oq
+ps
+Xi
+tQ
+oN
+oN
+hE
+bJ
+oN
+Xi
+Xi
+Xi
+Xi
+Ih
+hf
+HN
+ps
+ps
+ps
+ps
+"}
+(17,1,1) = {"
+Vu
+ps
+ps
+ps
+oN
+BT
+fD
+TU
+oN
+hj
+yr
+Fg
+nq
+wQ
+ps
+ps
+ps
+ps
+ps
+uA
+"}
+(18,1,1) = {"
+Oq
+ps
+GP
+ps
+oN
+IC
+CW
+zB
+oN
+lt
+Xr
+Xi
+yr
+ps
+ps
+ps
+GP
+ps
+ps
+Oq
+"}
+(19,1,1) = {"
+Oq
+ps
+ps
+ps
+oN
+oN
+oN
+oN
+oN
+Xi
+Xi
+Xi
+Vf
+ps
+ps
+ps
+ps
+ps
+ps
+uA
+"}
+(20,1,1) = {"
+zZ
+fr
+oF
+ps
+fr
+fr
+fr
+oF
+fr
+fr
+fr
+fr
+oF
+ps
+fr
+fr
+fr
+fr
+fr
+lJ
+"}

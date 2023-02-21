@@ -51,9 +51,9 @@
 	say_list_type = /datum/say_list/catslug
 	player_msg = "You have escaped the foul weather, into this much more pleasant place. You are an intelligent creature capable of more than most think. You can pick up and use many things, and even carry some of them with you into the vents, which you can use to move around quickly. You're quiet and capable, you speak with your hands and your deeds! <br>- - - - -<br> <span class='notice'>Keep in mind, your goal should generally be to survive. You're expected to follow the same rules as everyone else, so don't go self antagging without permission from the staff team, but you are able and capable of defending yourself from those who would attack you for no reason.</span>"
 
-	has_langs = list("Sign Language")
+	has_langs = list(LANGUAGE_SIGN)
 
-	var/picked_color = FALSE
+	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(
 		/obj/item/weapon/implant,
@@ -108,7 +108,9 @@
 	say_got_target = list()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPEdit
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The hot slick gut of a catslug!! Copious slime smears over you as you’re packed away into the gloom and oppressive humidity of this churning gastric sac. The pressure around you is intense, the squashy flesh bends and forms to your figure, clinging to you insistently! There’s basically no free space at all as your ears are filled with the slick slide of flesh against flesh and the burbling of gastric juices glooping all around you. The thumping of a heart booms from somewhere nearby, making everything pulse in against you in time with it! This is it! You’ve been devoured by a catslug!!!"
@@ -160,7 +162,7 @@
 	else
 		to_chat(user, "<span class='notice'>\The [src] takes a bite of \the [O].</span>")
 		if(user != src)
-			to_chat(user, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
+			to_chat(src, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
 	playsound(src, 'sound/items/eatfood.ogg', 75, 1)
 
 /mob/living/simple_mob/vore/alienanimals/catslug/attack_hand(mob/living/carbon/human/M as mob)
@@ -714,7 +716,7 @@
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
 //=============================================================================
 
-//Deathsquad catslug 
+//Deathsquad catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/deathslug
 	name = "Asset Purrtection"
 	desc = "What are you doing staring at this angry little fella? <b>Run.</b>"
@@ -739,7 +741,7 @@
 		"bomb" = 40,
 		"bio" = 100,
 		"rad" = 100
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -751,8 +753,8 @@
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
 	mob_radio.frequency = DTH_FREQ 			//Can't tell if bugged, deathsquad freq in general seems broken
 	mobcard.access |= get_all_station_access()
-	
-//Syndicate catslug 
+
+//Syndicate catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug
 	name = "Mercenyary"
 	desc = "What are you doing staring at this crimson-hardsuit wearing angry little fella? <b>Run.</b>"
@@ -769,7 +771,7 @@
 	health = 100
 	taser_kill = 0
 	melee_damage_lower = 15
-	melee_damage_upper = 20	
+	melee_damage_upper = 20
 	mob_size = MOB_MEDIUM		//Something something hardsuits are heavy.
 	siemens_coefficient = 0
 	armor = list(
@@ -780,7 +782,7 @@
 		"bomb" = 80,
 		"bio" = 100,
 		"rad" = 60
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -797,7 +799,7 @@
 	mob_radio.recalculateChannels(1)
 	mobcard.access |= get_all_station_access()
 
-//ERT catslug 
+//ERT catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug
 	name = "Emeowgency Responder"
 	desc = "The cavalry has arrived."
@@ -822,7 +824,7 @@
 		"bomb" = 30,
 		"bio" = 100,
 		"rad" = 100
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -834,12 +836,59 @@
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/Initialize()
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
-	mob_radio.frequency = ERT_FREQ 
+	mob_radio.frequency = ERT_FREQ
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/device/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/ert(mob_radio)
 	mob_radio.recalculateChannels(1)
 	mobcard.access |= get_all_station_access()
+
+//Pilot Catslug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug
+	name = "Navigator Purrverick"
+	desc = "A black-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one exudes an aura of coolness, they're so cool that their pilot's liscense was suspended."
+	tt_desc = "Mollusca Felis Mischefterous"
+	color = "#2b2b2b"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/pilotslug)
+	say_list_type = /datum/say_list/catslug/custom/pilotslug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug/Initialize()
+	. = ..()
+	if(prob(25))
+		var/list/possible_targets = list()
+		for(var/obj/machinery/computer/ship/helm/h in world)
+			if(h.z in using_map.player_levels)
+				possible_targets |= h
+		var/final = pick(possible_targets)
+		forceMove(get_turf(final))
+		ghostjoin = TRUE
+
+/datum/category_item/catalogue/fauna/catslug/custom/pilotslug
+	name = "Alien Wildlife - Catslug - Navigator Purrverick"
+	desc = "A resident at NSB Rascal's Pass, Navigator Purrverick \
+	is a catslug who is known to dream big and seek the sky.\
+	Purrverick has proved to be quite capable of utilizing shuttle\
+	controls with excellent grace and skill. Purrverick can however\
+	be rather self assured, which has on more than one occasion\
+	lead to unfortunate mistakes and incidents.\
+	Purrverick's provisionary piloting liscense is marked as suspended.\
+	There are however still more records of the catslug's piloting escapades\
+	dated afer their suspension.\
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/pilotslug
+	speak = list("In the pipe, five my five.","Kick the tires and light the fires!","Bogeys on my tail!","GOOSE!","I'm really good at the stick.","I'm not doing nothing.","Heh.","Can you keep up?","Can't keep the sky from me.")
 
 //=============================
 //Admin-spawn only catslugs end

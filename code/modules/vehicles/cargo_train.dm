@@ -48,6 +48,7 @@
 	key = new key_type(src)
 	var/image/I = new(icon = 'icons/obj/vehicles_vr.dmi', icon_state = "cargo_engine_overlay", layer = src.layer + 0.2) //over mobs		//VOREStation edit
 	add_overlay(I)
+	update_icon()
 	turn_off()	//so engine verbs are correctly set
 
 /obj/vehicle/train/engine/Move(var/turf/destination)
@@ -129,6 +130,8 @@
 /obj/vehicle/train/engine/turn_on()
 	if(!key)
 		return
+	if(!cell)
+		return
 	else
 		..()
 		update_stats()
@@ -182,7 +185,10 @@
 /obj/vehicle/train/engine/relaymove(mob/user, direction)
 	if(user != load)
 		return 0
-
+  // Start CHOMPStation Edit
+	if(user.paralysis || user.sleeping)
+		return 0
+  // End CHOMPStation Edit
 	if(is_train_head())
 		if(direction == reverse_direction(dir) && tow)
 			return 0
@@ -230,7 +236,9 @@
 	if (on)
 		to_chat(usr, "You start [src]'s engine.")
 	else
-		if(cell.charge < charge_use)
+		if(!cell)
+			to_chat(usr, "[src] doesn't appear to have a power cell!")
+		else if(cell.charge < charge_use)
 			to_chat(usr, "[src] is out of power.")
 		else
 			to_chat(usr, "[src]'s engine won't start.")

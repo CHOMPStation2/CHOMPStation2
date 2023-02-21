@@ -51,6 +51,10 @@
 #include "syndisniper.dmm"
 #include "wolfden.dmm"
 #include "xenohive.dmm"
+#include "AmbushBase.dmm"
+#include "CultBar.dmm"
+#include "RaidedMechBunker.dmm"
+#include "AbandonedLab.dmm"
 #endif
 
 //#include "Boombase.dmm" YW edit remove boombase
@@ -382,6 +386,29 @@
 	mappath = 'maps/submaps/surface_submaps/wilderness/xenohive.dmm'
 	cost = 25
 
+/datum/map_template/surface/wilderness/deep/cultbar
+	name = "Cult Bar"
+	desc = "A bar surronded by demons, for those of the occult."
+	mappath = 'maps/submaps/surface_submaps/wilderness/CultBar.dmm'
+	cost = 20
+
+/datum/map_template/surface/wilderness/deep/cliffbase
+	name = "Cliff Base"
+	desc = "A hideout protected by a lake, and duo of snipers."
+	mappath = 'maps/submaps/surface_submaps/wilderness/AmbushBase.dmm'
+	cost = 30
+
+/datum/map_template/surface/wilderness/deep/raideddmechhanger
+	name = "Raided Mech Hanger"
+	desc = "A hanger with mechs far past useabiltiy."
+	mappath = 'maps/submaps/surface_submaps/wilderness/RaidedMechBunker.dmm'
+	cost = 10
+	
+/datum/map_template/surface/wilderness/deep/AbandonedLab
+	name = "Abandoned Lab"
+	desc = "Experiments gone wrong! Be wary of the test subjects gone rogue."
+	mappath = 'maps/submaps/surface_submaps/wilderness/AbandonedLab.dmm'
+	cost = 20
 
 /*==Disabled==/
 

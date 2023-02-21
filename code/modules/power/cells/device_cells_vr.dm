@@ -1,4 +1,4 @@
-
+//CHOMP Disabled in DME in favor of modular_chomp folder
 //The device cell
 /obj/item/weapon/cell/device/weapon/recharge/alien
 	name = "void cell (device)"
@@ -12,6 +12,7 @@
 	user.put_in_active_hand(newcell)
 	var/percentage = charge/maxcharge
 	newcell.charge = newcell.maxcharge * percentage
+	newcell.persist_storable = persist_storable
 	qdel(src)
 
 //The machine cell
@@ -36,8 +37,9 @@
 	user.put_in_active_hand(newcell)
 	var/percentage = charge/maxcharge
 	newcell.charge = newcell.maxcharge * percentage
+	newcell.persist_storable = persist_storable
 	qdel(src)
-	
+
 // Bloo friendlier hybrid tech
 /obj/item/weapon/cell/device/weapon/recharge/alien/hybrid
 	icon = 'icons/obj/power_vr.dmi'

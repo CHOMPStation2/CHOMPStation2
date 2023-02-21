@@ -46,6 +46,8 @@
 
 	say_list_type = /datum/say_list/snake
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/snake
 	emote_hear = list("hisses")

@@ -6,9 +6,6 @@
 //
 // SSmachines subsystem - Processing machines, pipenets, and powernets!
 //
-// Implementation Plan:
-// PHASE 1 - Add subsystem using the existing global list vars
-// PHASE 2 - Move the global list vars into the subsystem.
 
 SUBSYSTEM_DEF(machines)
 	name = "Machines"
@@ -23,12 +20,6 @@ SUBSYSTEM_DEF(machines)
 	var/cost_machinery     = 0
 	var/cost_powernets     = 0
 	var/cost_power_objects = 0
-
-	// TODO - PHASE 2 - Switch these from globals to instance vars
-	// var/list/pipenets      = list()
-	// var/list/machinery     = list()
-	// var/list/powernets     = list()
-	// var/list/power_objects = list()
 
 	var/list/current_run = list()
 
@@ -51,28 +42,31 @@ SUBSYSTEM_DEF(machines)
 // The above is a lie. Turbolifts also call this proc.
 /datum/controller/subsystem/machines/proc/makepowernets()
 	// TODO - check to not run while in the middle of a tick!
-	for(var/datum/powernet/PN in powernets)
+	for(var/datum/powernet/PN as anything in powernets)
 		qdel(PN)
 	powernets.Cut()
 	setup_powernets_for_cables(cable_list)
 
 /datum/controller/subsystem/machines/proc/setup_powernets_for_cables(list/cables)
-	for(var/obj/structure/cable/PC in cables)
+	for(var/obj/structure/cable/PC as anything in cables)
 		if(!PC.powernet)
 			var/datum/powernet/NewPN = new()
 			NewPN.add_cable(PC)
 			propagate_network(PC,PC.powernet)
 
 /datum/controller/subsystem/machines/proc/setup_atmos_machinery(list/atmos_machines)
+	var/list/actual_atmos_machines = list()
+	
 	for(var/obj/machinery/atmospherics/machine in atmos_machines)
 		machine.atmos_init()
+		actual_atmos_machines += machine
 		CHECK_TICK
 
-	for(var/obj/machinery/atmospherics/machine in atmos_machines)
+	for(var/obj/machinery/atmospherics/machine as anything in actual_atmos_machines)
 		machine.build_network()
 		CHECK_TICK
 
-	for(var/obj/machinery/atmospherics/unary/U in atmos_machines)
+	for(var/obj/machinery/atmospherics/unary/U as anything in actual_atmos_machines)
 		if(istype(U, /obj/machinery/atmospherics/unary/vent_pump))
 			var/obj/machinery/atmospherics/unary/vent_pump/T = U
 			T.broadcast_status()
@@ -163,16 +157,24 @@ SUBSYSTEM_DEF(machines)
 			return
 
 /datum/controller/subsystem/machines/Recover()
-	// TODO - PHASE 2
-	// if (istype(SSmachines.pipenets))
-	// 	pipenets = SSmachines.pipenets
-	// if (istype(SSmachines.machinery))
-	// 	machinery = SSmachines.machinery
-	// if (istype(SSmachines.powernets))
-	// 	powernets = SSmachines.powernets
-	// if (istype(SSmachines.power_objects))
-	// 	power_objects = SSmachines.power_objects
+	for(var/datum/D as anything in global.pipe_networks)
+		if(!istype(D, /datum/pipe_network))
+			error("Found wrong type during SSmachinery recovery: list=global.pipe_networks, item=[D], type=[D?.type]")
+			global.pipe_networks -= D
+	for(var/datum/D as anything in global.processing_machines)
+		if(!istype(D, /obj/machinery))
+			error("Found wrong type during SSmachinery recovery: list=global.processing_machines, item=[D], type=[D?.type]")
+			global.processing_machines -= D
+	for(var/datum/D as anything in global.powernets)
+		if(!istype(D, /datum/powernet))
+			error("Found wrong type during SSmachinery recovery: list=global.powernets, item=[D], type=[D?.type]")
+			global.powernets -= D
+	for(var/datum/D as anything in global.processing_power_items)
+		if(!istype(D, /obj/item))
+			error("Found wrong type during SSmachinery recovery: list=global.processing_power_items, item=[D], type=[D?.type]")
+			global.processing_power_items -= D
 
 #undef SSMACHINES_PIPENETS
 #undef SSMACHINES_MACHINERY
+#undef SSMACHINES_POWERNETS
 #undef SSMACHINES_POWER_OBJECTS

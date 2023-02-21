@@ -163,6 +163,19 @@
 		return FALSE
 	return (hovering || is_incorporeal())
 
+/mob/living/simple_mob/can_ztravel()
+	if(incapacitated())
+		return FALSE
+
+	if(hovering || is_incorporeal())
+		return TRUE
+
+	if(Process_Spacemove())
+		return TRUE
+
+	if(has_hands)
+		return TRUE
+
 /mob/living/carbon/human/can_ztravel()
 	if(incapacitated())
 		return FALSE
@@ -171,7 +184,7 @@
 		return TRUE
 
 	if(flying) //VOREStation Edit. Allows movement up/down with wings.
-		return 1 //VOREStation Edit
+		return TRUE //VOREStation Edit
 
 	if(Process_Spacemove())
 		return TRUE
@@ -507,7 +520,11 @@
 /mob/living/carbon/human/fall_impact(atom/hit_atom, damage_min, damage_max, silent, planetary)
 	if(!species?.handle_falling(src, hit_atom, damage_min, damage_max, silent, planetary))
 		..()
-		
+		if(weight > 325 || size_multiplier > 1.75)
+			explosion(get_turf(hit_atom), -1, 0, 0)
+			var/turf/simulated/floor/hit_turf = get_turf(hit_atom)
+			if(istype(hit_turf))
+				hit_turf.break_tile()
 //Using /atom/movable instead of /obj/item because I'm not sure what all humans can pick up or wear
 /atom/movable
 	var/parachute = FALSE	// Is this thing a parachute itself?

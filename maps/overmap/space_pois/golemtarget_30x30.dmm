@@ -1,0 +1,39 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"x" = (/obj/structure/outcrop/phoron,/turf/simulated/mineral/floor/vacuum,/area/submap/golemtarget)
+"H" = (/turf/simulated/mineral,/area/submap/golemtarget)
+"Q" = (/obj/singularity,/turf/template_noop,/area/submap/golemtarget)
+"S" = (/turf/simulated/mineral/floor/vacuum,/area/submap/golemtarget)
+"Y" = (/obj/structure/outcrop/phoron,/obj/structure/outcrop/phoron,/turf/simulated/mineral/floor/vacuum,/area/submap/golemtarget)
+
+(1,1,1) = {"
+axHaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aHSxaaaaaaaaHHaaaaaaaaaaaaaaaa
+axSSxaaaaaaaHSxSSaaaaaaxaaaaaa
+aaxSSxaaaaaaaxSSxHaaaaSxSaaaaa
+aaaaaaaaaaaaaaaaSSHaaaHxSxaaaa
+aaaaaaaaaaaaaaaaaaaaaaaHSxaaaa
+aaaaaaaaaaHaaaaaaaaaaaaaHHaaaa
+aaaaaaaaaxHaaaaaaaaaaaaaaaaaaa
+aaaaaaaHHxaaaaHSxHHaaaaaaaaaaa
+aaaaaaaHHSaaaaaaaSxSaaaaaaaaaa
+aaaaaaSHaaaaaaaaaaSxaaaaaaaaaa
+aaaaaaxxaaaaaaaaaaaxaaaaaaaaaa
+aaaaaHSxaaaaaaaaaaaSaaaaaaaaaa
+aaaaaHaaaaaaaaaaaaaxaaaaaaaHaa
+aaaaaaaaaaaaaaQaaaaSHaaaaaHxxa
+aaaaaaaaaaaaaaaaaaaHaaaaaaSSHa
+aaaaaaaxYaaaaaaaaaaaaaaaaaxSxa
+aaaaaaaHSHxaaaaaaaaaaaaaaaSSSa
+aHHaaaaaxSSHaaaaaaaaaaaaaaSxaa
+aHxxaaaaaaxHaaaaaaaaaaaaaaaaaa
+aaxSSaaaaaaaaaaaaHHHSSxHaaaaaa
+aaaSxaaaaaaaaaaaxxSHaaaaaaaaaa
+aaaxSHaaaaaaaxSHxxaaaaaaaaaaaa
+aaaaHHaaaaaaHxSxSaaaaaaaaaaaaa
+aaaaaaaaaHSHHHaaaaaaaaaaaaaaaa
+aaaHHaaaaaaaaaaaaaaaaaaxaaaaaa
+aaaHSxSaaaaaaaaaaaaaaSxSSaaaaa
+aaaaSSxYSHSHSxxaaaaaxxHxxaaaaa
+aaaaaaaaaaaaaaaaaaaaaxSSSaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaSxaaaaa
+"}

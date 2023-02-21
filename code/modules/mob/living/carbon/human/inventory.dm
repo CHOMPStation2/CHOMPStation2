@@ -377,6 +377,12 @@ This saves us from having to call add_fingerprint() any time something is put in
 
 	W.in_inactive_hand(src)
 
+	//VOREStation Addition Start
+	if(istype(W, /obj/item))
+		var/obj/item/I = W
+		I.equip_special()
+	//VOREStation Addition End
+
 	return 1
 
 //Checks if a given slot can be accessed at this time, either to equip or unequip I

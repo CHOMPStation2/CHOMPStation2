@@ -1,9 +1,4 @@
 //DEFINITIONS FOR ASSET DATUMS START HERE.
-/datum/asset/simple/tgui_common
-	// keep_local_name = TRUE
-	assets = list(
-		"tgui-common.bundle.js" = file("tgui/public/tgui-common.bundle.js"),
-	)
 
 /datum/asset/simple/tgui
 	// keep_local_name = TRUE
@@ -159,10 +154,10 @@
 // 		/datum/asset/simple/fontawesome
 // 	)
 
-// /datum/asset/simple/jquery
-// 	assets = list(
-// 		"jquery.min.js"            = 'code/modules/goonchat/browserassets/js/jquery.min.js',
-// 	)
+/datum/asset/simple/jquery
+	assets = list(
+		"jquery.min.js"            = 'code/modules/tooltip/jquery.min.js',
+	)
 
 // /datum/asset/simple/goonchat
 // 	assets = list(
@@ -305,10 +300,20 @@
 	name = "vore"
 
 /datum/asset/spritesheet/vore/register()
-	var/icon/downscaled = icon('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
+	var/icon/downscaled = icon('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //CHOMPedit: preserving save data
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
 	..()
+
+/datum/asset/spritesheet/vore_fixed //This should be getting loaded in the TGUI vore panel but the game refuses to do so, for some reason. It only loads the vore spritesheet. //CHOMPedit
+	name = "fixedvore" //CHOMPedit
+
+/datum/asset/spritesheet/vore_fixed/register() //CHOMPedi start: preserving save data
+	var/icon/downscaledVF = icon('icons/mob/screen_full_vore.dmi')
+	downscaledVF.Scale(240, 240)
+	InsertAll("", downscaledVF) //CHOMpedit end
+	..()
+
 //VOREStation Add End
 
 // // Representative icons for each research design
@@ -468,6 +473,9 @@
 	for(var/i = 1 to 4)
 		assets["bottle-[i].png"] = icon('icons/obj/chemical.dmi', "bottle-[i]")
 
+	for(var/i = 1 to 4) // CHOMPedit
+		assets["patch[i].png"] = icon('icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
+
 	for(var/asset_name in assets)
 		register_asset(asset_name, assets[asset_name])
 
@@ -525,20 +533,5 @@
 		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
 		"southern_cross_nanomap_z10.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
-		//"tether_nanomap_z1.png"				= 'icons/_nanomaps/tether_nanomap_z1.png',
-		//"tether_nanomap_z2.png"				= 'icons/_nanomaps/tether_nanomap_z2.png',
-		//"tether_nanomap_z3.png"				= 'icons/_nanomaps/tether_nanomap_z3.png',
-		//"tether_nanomap_z4.png"				= 'icons/_nanomaps/tether_nanomap_z4.png',
-		//"tether_nanomap_z5.png"				= 'icons/_nanomaps/tether_nanomap_z5.png',
-		//"tether_nanomap_z6.png"				= 'icons/_nanomaps/tether_nanomap_z6.png',
-		//"tether_nanomap_z7.png"				= 'icons/_nanomaps/tether_nanomap_z7.png',
-		//"tether_nanomap_z8.png"				= 'icons/_nanomaps/tether_nanomap_z8.png',
-		//"tether_nanomap_z9.png"				= 'icons/_nanomaps/tether_nanomap_z9.png',
-		//"tether_nanomap_z10.png"			= 'icons/_nanomaps/tether_nanomap_z10.png',
-		//"tether_nanomap_z13.png"			= 'icons/_nanomaps/tether_nanomap_z13.png',
-		//"tether_nanomap_z14.png"			= 'icons/_nanomaps/tether_nanomap_z14.png',
-		//"stellardelight_nanomap_z1.png"		= 'icons/_nanomaps/sd_deck1.png',
-		//"stellardelight_nanomap_z2.png"		= 'icons/_nanomaps/sd_deck2.png',
-		//"stellardelight_nanomap_z3.png"		= 'icons/_nanomaps/sd_deck3.png',
 		// CHOMP Edit End
 	)

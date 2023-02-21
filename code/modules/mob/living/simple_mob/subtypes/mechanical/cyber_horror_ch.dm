@@ -2,14 +2,14 @@
 /mob/living/simple_mob/mechanical/cyber_horror
 	name = "Cyber horror"
 	desc = "What was once a man, twisted and warped by machine."
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "cyber_horror"
 	icon_dead = "cyber_horror_dead"
 	icon_gib = "cyber_horror_dead"
 
 	faction = "synthtide"
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/cyber_horror
 
 	maxHealth = 175
 	health = 175
@@ -45,6 +45,27 @@
 	emote_see = list ("stares unblinkingly.", "jitters and twitches.", "emits a synthetic scream.", "rapidly twitches.", "convulses.", "twitches uncontrollably.", "goes stock still.")
 	say_threaten = list ("FR@#DOM","EN@ T#I$-$","N0$ M^> B@!#")
 	say_got_target = list("I *#@ Y@%","!E@#$P","F#RR @I","D0@#$ ##OK %","IT $##TS")
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror.ogg'
+
+/datum/ai_holder/simple_mob/melee/evasive/cyber_horror
+	threaten = TRUE
+	threaten_delay = 1 SECOND
+	threaten_timeout = 30 SECONDS
+	
+/datum/ai_holder/simple_mob/melee/cyber_horror
+	threaten = TRUE
+	threaten_delay = 1 SECOND
+	threaten_timeout = 30 SECONDS
+
+/datum/ai_holder/simple_mob/melee/hit_and_run/cyber_horror
+	threaten = TRUE
+	threaten_delay = 1 SECOND
+	threaten_timeout = 30 SECONDS
+
+/datum/ai_holder/simple_mob/ranged/kiting/cyber_horror
+	threaten = TRUE
+	threaten_delay = 1 SECOND
+	threaten_timeout = 30 SECONDS
 
  // Fragile but dangerous
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror
@@ -52,6 +73,7 @@
 	desc = "What was once a phoronoid, now a empty shell of malfunctioning nanites."
 	icon_state = "plasma_cyber_horror"
 	icon_dead = "plasma_cyber_horror_dead"
+	say_list_type = /datum/say_list/cyber_horror/plasma
 
 	armor = list(melee = 40, bullet = -10, laser = 40, bio = 100, rad = 100)
 	maxHealth = 75
@@ -67,6 +89,9 @@
 	var/poison_per_bite = 3
 	var/poison_type = "neurophage_nanites"
 
+/datum/say_list/cyber_horror/plasma
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Plasma.ogg'
+
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
@@ -80,12 +105,15 @@
 	if(prob(poison_chance))
 		to_chat(L, "<span class='warning'>You feel nanites digging into your skin!</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
+
+
  // Mech Shredder
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror
 	name = "Nanite abomination"
 	desc = "What was once something, now an exposed shell with lashing cables."
 	icon_state = "ling_cyber_horror"
 	icon_dead = "ling_cyber_horror_dead"
+	say_list_type = /datum/say_list/cyber_horror/ling
 
 	maxHealth = 250
 	health = 250
@@ -96,13 +124,13 @@
 	base_attack_cooldown = 2.5
 	attack_sharp = 1
 	attack_edge = 1
-	attack_sound = 'sound/weapons/bladeslice.ogg'
+	attack_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
 	attacktext = list ("sliced", "diced", "lashed", "shredded")
  // Slow as all sin
 	movement_cooldown = 9
 	movement_sound = 'sound/effects/houndstep.ogg'
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/cyber_horror
 
  // You do NOT Want to get in touchy range of this thing.
 	armor = list(melee = 75, bullet = -10, laser = -25, bio = 100, rad = 100)
@@ -116,8 +144,11 @@
 	special_attack_cooldown = 60 SECONDS
  // How long the leap telegraphing is.
 	var/leap_warmup = 2 SECOND
-	var/leap_sound = 'sound/weapons/spiderlunge.ogg'
+	var/leap_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_ChangelingLeap.ogg'
 
+/datum/say_list/cyber_horror/ling
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Changeling.ogg'
+	
  // Multiplies damage if the victim is stunned in some form, including a successful leap.
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(isliving(A))
@@ -125,7 +156,6 @@
 		if(L.incapacitated(INCAPACITATION_DISABLED))
 			return damage_amount * 2.5
 	return ..()
-
 
  // The actual leaping attack.
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror/do_special_attack(atom/A)
@@ -177,30 +207,43 @@
 		. = TRUE
 
 	set_AI_busy(FALSE)
+
+
  //Slightly more durable fodder
 /mob/living/simple_mob/mechanical/cyber_horror/vox
 	name = "Vox shambles"
 	desc = "Once a Vox now torn and changed, peices of a Durand has been grafted onto it."
 	icon_state = "vox_cyber_horror"
 	icon_dead = "vox_cyber_horror_dead"
+	say_list_type = /datum/say_list/cyber_horror/vox
 
 	armor = list(melee = 40, bullet = 30, laser = 30, bio = 100, rad = 100)
-	ai_holder_type = /datum/ai_holder/simple_mob/melee
- // Hit and run mob
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/cyber_horror
+
+/datum/say_list/cyber_horror/vox
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Vox.ogg'
+
+
+// Hit and run mob
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran
 	name = "Tajaran cyber stalker"
 	desc = "A mangled mess of machine and fur, light seems to bounce off it."
 	icon_state = "tajaran_cyber_horror"
 	icon_dead = "tajaran_cyber_horror_dead"
+	say_list_type = /datum/say_list/cyber_horror/tajaran
+	attack_sound = 'modular_chomp/sound/weapons/meleetear.ogg'
 
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run/cyber_horror
 
 	var/cloaked_alpha = 30
 	var/cloaked_bonus_damage = 30
 	var/cloaked_weaken_amount = 3
 	var/cloak_cooldown = 10 SECONDS
 	var/last_uncloak = 0
+
+/datum/say_list/cyber_horror/tajaran
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Tajaran.ogg'
 
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/cloak()
 	if(cloaked)
@@ -256,6 +299,7 @@
 	. = ..()
 	break_cloak()
 
+
 //Arcing Ranged Mob
 /mob/living/simple_mob/mechanical/cyber_horror/grey
 	name = "Twisted cyber horror"
@@ -264,12 +308,17 @@
 	icon_dead = "grey_cyber_horror_dead"
 	maxHealth = 100
 	health = 100
+	say_list_type = /datum/say_list/cyber_horror/grey
 
 	projectiletype = /obj/item/projectile/arc/blue_energy
-	projectilesound = 'sound/weapons/Laser.ogg'
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
+	projectilesound = 'modular_chomp/sound/weapons/plasmaNEW.ogg'
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/cyber_horror
 
 	armor = list(melee = -30, bullet = 10, laser = 10, bio = 100, rad = 100)
+
+/datum/say_list/cyber_horror/grey
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Grey.ogg'
+
 
 //Direct Ranged Mob
 /mob/living/simple_mob/mechanical/cyber_horror/corgi
@@ -279,13 +328,18 @@
 	icon_dead = "corgi_cyber_horror_dead"
 	maxHealth = 50
 	health = 50
+	say_list_type = /datum/say_list/cyber_horror/corgi
 
 	base_attack_cooldown = 4
 	projectiletype = /obj/item/projectile/beam/drone
-	projectilesound = 'sound/weapons/weaponsounds_laserweak.ogg'
+	projectilesound = 'modular_chomp/sound/weapons/SmallLaser.ogg'
 	movement_sound = 'sound/effects/servostep.ogg'
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/threatening
+
+/datum/say_list/cyber_horror/corgi
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Corgi.ogg'
+	
 
 //Cats and mayhem
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror
@@ -294,6 +348,7 @@
 
 	icon_state = "cat_cyber_horror"
 	icon_dead = "cat_cyber_horror_dead"
+	say_list_type = /datum/say_list/cyber_horror/cat
 
 	maxHealth = 40
 	health = 40
@@ -310,6 +365,7 @@
 	base_attack_cooldown = 2.5
 	attack_sharp = 1
 	attack_edge = 1
+	attack_sound = 'sound/weapons/bite.ogg'
 
 	attacktext = list("jabbed", "injected")
 
@@ -317,6 +373,9 @@
 	var/poison_chance = 75
 	var/poison_per_bite = 3
 	var/poison_type = "mindbreaker"
+
+/datum/say_list/cyber_horror/cat
+	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Cat.ogg'
 
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -335,7 +394,7 @@
 //These are the projectiles mobs use
 /obj/item/projectile/beam/drone
 	damage = 3
-	
+
 /obj/item/projectile/arc/blue_energy
 	name = "energy missle"
 	icon_state = "force_missile"

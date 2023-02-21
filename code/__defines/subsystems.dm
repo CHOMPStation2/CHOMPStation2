@@ -94,6 +94,7 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 
 // Subsystem fire priority, from lowest to highest priority
 // If the subsystem isn't listed here it's either DEFAULT or PROCESS (if it's a processing subsystem child)
+#define FIRE_PRIORITY_PLAYERTIPS	5
 #define FIRE_PRIORITY_SHUTTLES		5
 #define FIRE_PRIORITY_SUPPLY		5
 #define FIRE_PRIORITY_NIGHTSHIFT	5
@@ -119,26 +120,3 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_CHAT			400
 #define FIRE_PRIORITY_OVERLAYS		500
 #define FIRE_PRIORITY_INPUT			1000 // This must always always be the max highest priority. Player input must never be lost.
-
-// Macro defining the actual code applying our overlays lists to the BYOND overlays list. (I guess a macro for speed)
-// TODO - I don't really like the location of this macro define.  Consider it. ~Leshana
-#define COMPILE_OVERLAYS(A)\
-	do {\
-		var/list/oo = A.our_overlays;\
-		var/list/po = A.priority_overlays;\
-		if(LAZYLEN(po)){\
-			if(LAZYLEN(oo)){\
-				A.overlays = oo + po;\
-			}\
-			else{\
-				A.overlays = po;\
-			}\
-		}\
-		else if(LAZYLEN(oo)){\
-			A.overlays = oo;\
-		}\
-		else{\
-			A.overlays.Cut();\
-		}\
-		A.flags &= ~OVERLAY_QUEUED;\
-	} while (FALSE)

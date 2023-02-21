@@ -530,6 +530,9 @@
 "ch" = (
 /turf/simulated/shuttle/wall/alien/hard_corner,
 /area/submap/cave/crashed_ufo_frigate)
+"xX" = (
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/cave/crashed_ufo_frigate)
 
 (1,1,1) = {"
 aa
@@ -1986,7 +1989,7 @@ ad
 ad
 ad
 aZ
-ae
+xX
 aZ
 ad
 ad

@@ -1,0 +1,55 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/mineral,/area/submap/asteroid5)
+"d" = (/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"f" = (/obj/structure/outcrop/gold,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"n" = (/obj/machinery/power/supermatter,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"p" = (/obj/random/outcrop,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"q" = (/obj/effect/fusion_em_field,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"r" = (/obj/structure/outcrop/uranium,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"t" = (/obj/structure/outcrop/diamond,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"v" = (/obj/structure/outcrop/lead,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"G" = (/obj/structure/outcrop/coal,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+"I" = (/obj/structure/outcrop/silver,/turf/simulated/mineral/floor/vacuum,/area/submap/asteroid5)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaabbbddfdbaaaaaaaaaaaaaaaaa
+aaaaaaaaaabbbbbbbbIddpbbbbbbaaaaaaaaaaaa
+aaaaaaaabbbbbbbbbbdddbbbbbbbbaaaaaaaaaaa
+aaaaafddIbbbbbbpdddfdIddpbbpdaaaaaaaaaaa
+aaaaaddddbbbbIdddIddfddddbbdIaaaaaaaaaaa
+aaabbddfdbbbdddfddaaaaaddddbbaaaaaaaaaaa
+aaabbbdpbbpdIdaaaaaaaaaaIdpbbbaaaaaaaaaa
+aaafbbbbbdddaaaaaabbbaaadfdbbbaaaaaaaaaa
+aaadbbbbbddaaaaaaabbbaaaaaaabbaaaaaaaaaa
+aaaabbbbIdfaaaaaaaabbaaaaaaabbaaaaaaabaa
+aaaaabbbddaaaaaaaaaaaaaaaaaabbaaaaaabtaa
+aaaaabbbddaaaaabaaaaaaaaaaabbaaaaaabpdGa
+aaaaabbbdddfaaaaaaaaaaaaaaabbaaaaaabddda
+aaaaaapfbdddaaaaaaabbbbaaaaaaaaaaaabdGpa
+aaaaaaddbpdfaaaaaabbdbbbaaaaaaaaaGdtbbba
+aaaaaadIbbdbaaaaabbdqdbaaaaaaaatddddbbaa
+aaaaaaaaaaaaaaaaabqndbbaaaaaaaaddddpbbaa
+aaaaaaaaaaaaaaaaabbdbbaaaaaaGddddddbbbaa
+aaaaaaaaaaaaaaaaabbbbaaaaaaadddpbtGbbbba
+aaaaaaaaaaaaaaaaaaaaaaaaaaaatdddbddbbbba
+aaaaaaaaaaaaaaaaaaaaaaaaaaaabpbbbdddbGba
+aaaaaaaaaaaaabddvddbbbaaaaabbbbbbdtddpba
+aaaaaaaaabvdddprddddddvaaaaabbbbbdddtbba
+aaaaaaabdrddddbbbbbbdddaaaaaaabbbGddbbaa
+aaaaaabddddbddddpbbbpdddbaaaaabbbbbbbbaa
+aaaaaabdvbbbdddddbbbbdddpaaaaabbbbbbbbaa
+aaaaddddbbvddbbbbbbbbddddvaaaaabdpbbaaaa
+aaaadddpbbddddpbbbvdddddrdaaaaaaabbpaaaa
+aaavrddbbbddrddbvddddbbdddaaaaaaaaaaaaaa
+aaadddddddrdddbbddddddddrdaaaaaaaaaaaaaa
+abbdpdbdddddrddvdddbpdddvdaaaaaaaaaaaaaa
+addbbbbrddddddddddbbbbbbbpaaaaaaaaaaaaaa
+ardpbbbdpvddddddpbbbbbbbbdaaaaaaaaaaaaaa
+addvbbbbbbbbbbbbbbvpbbbbbbaaaaaaaaabbaaa
+aaddbbbbbbbbbbbbbbddbbbbbaaaaaaaaabbbaaa
+aabbbbbbpdbbbbbbbbbbbbbbbaaaaaaaabbbbaaa
+aaabbbbbddbabbbbbpddvbbbbaaaaaaaabbbaaaa
+aaabbbbbaaaaaaaabddrdbbaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

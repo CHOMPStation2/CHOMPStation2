@@ -198,7 +198,7 @@ var/list/sacrificed = list()
 	if(cultists.len >= 9)
 		if(!narsie_cometh)//so we don't initiate Hell more than one time.
 			to_world("<font size='15' color='red'><b>THE VEIL HAS BEEN SHATTERED!</b></font>")
-			world << sound('sound/effects/weather/wind/wind_5_1.ogg')
+			world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
 
 			SetUniversalState(/datum/universal_state/hell)
 			narsie_cometh = 1
@@ -611,7 +611,7 @@ var/list/sacrificed = list()
 // returns 0 if the rune is not used. returns 1 if the rune is used.
 /obj/effect/rune/proc/communicate()
 	. = 1 // Default output is 1. If the rune is deleted it will return 1
-	var/input = input(usr, "Please choose a message to tell to the other acolytes.", "Voice of Blood", "")//sanitize() below, say() and whisper() have their own
+	var/input = tgui_input_text(usr, "Please choose a message to tell to the other acolytes.", "Voice of Blood", "")//sanitize() below, say() and whisper() have their own
 	if(!input)
 		if (istype(src))
 			fizzle()

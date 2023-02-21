@@ -71,9 +71,9 @@
 			door_y2 = ey + 1
 
 			light_x1 = ux + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_y1 = uy + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_x2 = ux + lift_size_x - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_y2 = uy + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			light_y1 = uy + (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
+			light_x2 = ex - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator //CHOMPFixy
+			light_y2 = uy + (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
 
 		if(SOUTH)
 
@@ -89,14 +89,14 @@
 
 			light_x1 = ux + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
 			light_y1 = uy + (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator
-			light_x2 = ux + lift_size_x - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_y2 = uy + lift_size_y - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			light_x2 = ex - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator //CHOMPFixy
+			light_y2 = uy + (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
 
 		if(EAST)
 
-			int_panel_x = ux+(make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			int_panel_x = ux + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
 			int_panel_y = uy + FLOOR(lift_size_y/2, 1)
-			ext_panel_x = ex+2
+			ext_panel_x = ex + 2
 			ext_panel_y = ey
 
 			door_x1 = ex + (make_walls ? 0 : 1)	//VOREStation edit: Wall-less elevator
@@ -104,16 +104,16 @@
 			door_x2 = ex + 1
 			door_y2 = ey - 1
 
-			light_x1 = ux + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			light_x1 = ux + (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
 			light_y1 = uy + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_x2 = ux + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_y2 = uy + lift_size_x - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			light_x2 = ux + (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
+			light_y2 = ey - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator //CHOMPFixy
 
 		if(WEST)
 
-			int_panel_x = ex-(make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			int_panel_x = ex - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
 			int_panel_y = uy + FLOOR(lift_size_y/2, 1)
-			ext_panel_x = ux-2
+			ext_panel_x = ux - 2
 			ext_panel_y = uy
 
 			door_x1 = ux - 1
@@ -121,10 +121,10 @@
 			door_x2 = ux - (make_walls ? 0 : 1)	//VOREStation edit: Wall-less elevator
 			door_y2 = ey - 1
 
-			light_x1 = ux + lift_size_x - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			light_x1 = ex - (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
 			light_y1 = uy + (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_x2 = ux + lift_size_x - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
-			light_y2 = uy + lift_size_y - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator
+			light_x2 = ex - (make_walls ? 2 : 1)	//VOREStation edit: Wall-less elevator //CHOMPFixy
+			light_y2 = ey - (make_walls ? 1 : 0)	//VOREStation edit: Wall-less elevator //CHOMPFixy
 
 	// Generate each floor and store it in the controller datum.
 	for(var/cz = uz;cz<=ez;cz++)

@@ -319,6 +319,15 @@
 /obj/machinery/camera/network/civilian,
 /turf/simulated/floor/midpoint_glass/reinf,
 /area/tether/midpoint)
+"hW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
 "it" = (
 >>>>>>> 484d131671... Merge pull request #11014 from VOREStation/Arokha/v3bicons
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -378,6 +387,10 @@
 "kz" = (
 /turf/space/v3b_midpoint,
 /area/tether/transit)
+"lG" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
 "lL" = (
 /obj/effect/blocker,
 /turf/space/v3b_midpoint,
@@ -591,6 +604,12 @@
 	},
 /obj/machinery/media/jukebox,
 /turf/simulated/floor/tiled/monotile,
+/area/tether/midpoint)
+"rW" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
 /area/tether/midpoint)
 "sw" = (
 /obj/effect/floor_decal/corner/lightgrey{
@@ -1182,7 +1201,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "Y" = (
+=======
+"Ud" = (
+/obj/structure/table/woodentable,
+/obj/random/paicard,
+/turf/simulated/floor/midpoint_glass/reinf,
+/area/tether/midpoint)
+"Ui" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+>>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -21821,11 +21853,32 @@ kz
 kz
 kz
 kz
+<<<<<<< HEAD
 kz
 kz
 PF
 PF
 fI
+=======
+NJ
+gq
+pK
+pK
+pK
+pK
+pK
+pK
+Pz
+Wc
+rW
+pK
+Wc
+Pz
+pK
+pK
+Or
+pK
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 pK
 mT
 ag
@@ -22677,8 +22730,12 @@ PF
 uC
 vh
 pK
+<<<<<<< HEAD
 pK
 Iq
+=======
+lG
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 Dz
 Ui
 HK
@@ -23256,8 +23313,12 @@ Gl
 Gl
 Hs
 PF
+<<<<<<< HEAD
 Kh
 hi
+=======
+hW
+>>>>>>> d8fddf3331... Merge pull request #13606 from Very-Soft/micro_structures
 pK
 pK
 Wf

@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/submap/cave/AbandonedTemple)
 "b" = (
-/turf/simulated/mineral/floor,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/cave/AbandonedTemple)
 "c" = (
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -206,7 +206,7 @@
 /area/submap/cave/AbandonedTemple)
 "O" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/mineral/floor,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/cave/AbandonedTemple)
 
 (1,1,1) = {"

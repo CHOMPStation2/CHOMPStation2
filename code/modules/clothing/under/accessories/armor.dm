@@ -213,7 +213,7 @@
 	desc = "A pair of green arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_green"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
-
+	
 /obj/item/clothing/accessory/armor/armguards/merc
 	name = "heavy arm guards"
 	desc = "A pair of red-trimmed black arm pads reinforced with heavy armor plating. Attaches to a plate carrier."

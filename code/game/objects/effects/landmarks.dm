@@ -42,6 +42,10 @@
 			latejoin_gatewaystation += loc
 			delete_me = 1
 			return
+		if("JoinLateSifPlains")
+			latejoin_plainspath += loc
+			delete_me = 1
+			return
 		//CHOMPEdit End
 		if("JoinLateElevator")
 			latejoin_elevator += loc

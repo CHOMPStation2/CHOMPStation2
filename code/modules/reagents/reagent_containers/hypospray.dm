@@ -151,6 +151,8 @@
 	desc = "A rapid and safe way to administer small amounts of drugs by untrained or trained personnel."
 	icon_state = "blue"
 	item_state = "blue"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_EARS
 	amount_per_transfer_from_this = 5
 	volume = 5
 	filled = 1
@@ -249,7 +251,7 @@
 	name = "purity hypo"
 	desc = "A refined version of the standard autoinjector, allowing greater capacity.  This variant excels at \
 	resolving viruses, infections, radiation, and genetic maladies."
-	filled_reagents = list("spaceacillin" = 9, "arithrazine" = 5, "ryetalyn" = 1)
+	filled_reagents = list("spaceacillin" = 4, "arithrazine" = 5, "prussian_blue" = 5, "ryetalyn" = 1)
 
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/pain
 	name = "pain hypo"

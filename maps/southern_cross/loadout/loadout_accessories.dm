@@ -16,17 +16,17 @@
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "drop pouches, brown"
 	path = /obj/item/clothing/accessory/storage/brown_drop_pouches
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Pathfinder","Search and Rescue","Explorer","Shaft Miner") //CHOMPEDIT
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Pathfinder","Search and Rescue","Explorer","Shaft Miner","Field Medic") //CHOMPEDIT
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "drop pouches, black"
 	path = /obj/item/clothing/accessory/storage/black_drop_pouches
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Pathfinder","Search and Rescue","Explorer","Shaft Miner") //CHOMPEDIT
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Pathfinder","Search and Rescue","Explorer","Shaft Miner","Field Medic") //CHOMPEDIT
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white"
 	path = /obj/item/clothing/accessory/storage/white_drop_pouches
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Pathfinder","Search and Rescue","Explorer","Shaft Miner") //CHOMPEDIT
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Pathfinder","Search and Rescue","Explorer","Shaft Miner","Field Medic") //CHOMPEDIT
 
 /datum/gear/accessory/holster
 	display_name = "holster selection (Security, CD, HoP)"

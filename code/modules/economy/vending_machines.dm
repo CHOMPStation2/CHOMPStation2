@@ -47,17 +47,21 @@
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/shot = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/pint = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/mug = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/carafe = 2,	//VOREStation Add - Carafes and Pitchers
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/pitcher = 2,	//VOREStation Add - Carafes and Pitchers
+					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 10,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/metaglass = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 10,
+					/obj/item/weapon/reagent_containers/glass/beaker/stopperedbottle = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/gin = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine = 5,
 					/obj/item/weapon/reagent_containers/food/condiment/cookingoil = 5,
+					/obj/item/weapon/reagent_containers/food/condiment/cornoil = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps = 5,
@@ -70,8 +74,6 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/wine = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/jager = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 15,
@@ -194,7 +196,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/cb10 = 6,
 					/obj/item/weapon/reagent_containers/food/snacks/tuna = 2)
 	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/syndicake = 6,
-					/obj/item/weapon/reagent_containers/food/snacks/unajerky = 12)
+					/obj/item/weapon/reagent_containers/food/snacks/unajerky = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax = 6)
 	prices = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy = 2,
 				/obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 5,
@@ -281,7 +284,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/fruitbar = 16,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 8,
 					/obj/item/weapon/reagent_containers/pill/diet = 8,
-					///obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal, //CHOMPedit nah
 					/obj/item/weapon/towel/random = 8,
 					/obj/item/toy/tennis = 4)
 
@@ -293,7 +296,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/fruitbar = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 5,
 					/obj/item/weapon/reagent_containers/pill/diet = 25,
-					///obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //CHOMPedit nah
 					/obj/item/weapon/towel/random = 20,
 					/obj/item/toy/tennis = 15)
 	//VOREStation Edit End
@@ -487,7 +490,6 @@
 					/obj/item/weapon/plantspray/pests = 20,
 					/obj/item/weapon/reagent_containers/syringe = 5,
 					/obj/item/weapon/reagent_containers/glass/beaker = 4,
-					/obj/item/weapon/watertank = 1,
 					/obj/item/weapon/storage/bag/plants = 5)
 	premium = list(/obj/item/weapon/reagent_containers/glass/bottle/ammonia = 10,
 					/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 5)
@@ -629,6 +631,7 @@
 					/obj/item/device/analyzer = 5,
 					/obj/item/device/t_scanner = 5,
 					/obj/item/weapon/tool/screwdriver = 5,
+					/obj/item/weapon/extinguisher/mini = 3,
 					/obj/item/device/flashlight/glowstick = 3,
 					/obj/item/device/flashlight/glowstick/red = 3,
 					/obj/item/device/flashlight/glowstick/blue = 3,
@@ -1067,7 +1070,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/driedfish = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/cookiesnack = 8
 					)
-	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/unajerky = 1)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/unajerky = 1,
+					/obj/item/weapon/reagent_containers/food/snacks/canned/brainzsnax/red = 6)
 
 	prices = list(	/obj/item/weapon/reagent_containers/food/snacks/tuna = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/semki = 5,
@@ -1225,6 +1229,7 @@
 		/obj/item/clothing/under/rank/security = 5,
 		/obj/item/clothing/under/rank/security2 = 5,
 		/obj/item/clothing/under/rank/security/turtleneck = 5,
+		/obj/item/clothing/under/rank/security/modern = 5,
 		/obj/item/clothing/under/rank/security/skirt = 5,
 		/obj/item/clothing/shoes/boots/jackboots = 5,
 		/obj/item/clothing/head/soft/sec = 5,
@@ -1233,6 +1238,8 @@
 		/obj/item/clothing/mask/bandana/red = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security = 5,
 		/obj/item/clothing/accessory/armband = 5,
+		/obj/item/clothing/glasses/sunglasses/sechud/tactical_sec_vis = 5, //VoreStation edit - cool visor!!!
+		/obj/item/clothing/glasses/hud/security/eyepatch2 = 5, //VoreStation edit - cool eyepatch!
 		/obj/item/clothing/accessory/holster/armpit = 2,	//VOREStation edit - gives some variety of available holsters for those who forgot to bring their own
 		/obj/item/clothing/accessory/holster/waist = 2,	//VOREStation edit - But also reduces the number per type, so there's 8 overall rather than like, 20
 		/obj/item/clothing/accessory/holster/hip = 2,	//VOREStation edit
@@ -1536,8 +1543,7 @@
 		/obj/item/clothing/gloves/black = 5,
 		/obj/item/weapon/storage/belt/janitor = 5,
 		/obj/item/clothing/shoes/galoshes = 5,
-		/obj/item/weapon/cartridge/janitor = 5,
-		/obj/item/weapon/watertank/janitor = 1
+		/obj/item/weapon/cartridge/janitor = 5
 	)
 	req_log_access = access_hop
 	has_logs = 1

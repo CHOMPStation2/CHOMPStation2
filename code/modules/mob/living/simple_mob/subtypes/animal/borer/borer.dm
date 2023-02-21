@@ -42,6 +42,8 @@
 	
 	var/has_reproduced = FALSE
 	var/used_dominate							// world.time when the dominate power was last used.
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/borer/roundstart
 	roundstart = TRUE

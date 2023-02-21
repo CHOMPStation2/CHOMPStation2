@@ -88,8 +88,18 @@
 
 /obj/item/device/taperecorder/hear_talk(mob/M, list/message_pieces, verb)
 	var/msg = multilingual_to_message(message_pieces, requires_machine_understands = TRUE, with_capitalization = TRUE)
+	//START OF CHOMPEDIT
+	var/voice = "Unknown"
+	if (M.type == /mob/living/carbon/human)
+	{
+		var/mob/living/carbon/human/H = M
+		voice = H.voice
+	}
+	else
+		voice = M.name
+	//END OF CHOMPEDIT
 	if(mytape && recording)
-		mytape.record_speech("[M.name] [verb], \"[msg]\"")
+		mytape.record_speech("[voice] [verb], \"[msg]\"") //CHOMP Edit
 
 
 /obj/item/device/taperecorder/see_emote(mob/M as mob, text, var/emote_type)
@@ -417,7 +427,7 @@
 		return
 	else if(istype(I, /obj/item/weapon/pen))
 		if(loc == user && !user.incapacitated())
-			var/new_name = input(user, "What would you like to label the tape?", "Tape labeling") as null|text
+			var/new_name = tgui_input_text(user, "What would you like to label the tape?", "Tape labeling")
 			if(isnull(new_name)) return
 			new_name = sanitizeSafe(new_name)
 			if(new_name)

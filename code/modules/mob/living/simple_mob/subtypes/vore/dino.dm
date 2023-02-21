@@ -38,6 +38,8 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/dino

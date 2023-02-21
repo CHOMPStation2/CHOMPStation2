@@ -91,7 +91,7 @@
 /datum/gear/uniform/pants/New()
 	..()
 	var/list/pants = list()
-	for(var/obj/item/clothing/under/pants/pant_type as anything in typesof(/obj/item/clothing/under/pants))
+	for(var/obj/item/clothing/under/pants/pant_type as anything in (typesof(/obj/item/clothing/under/pants) - typesof(/obj/item/clothing/under/pants/altevian)))
 		pants[initial(pant_type.name)] = pant_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(pants))
 
@@ -272,9 +272,8 @@
 	allowed_roles = list("Internal Affairs Agent")
 
 /datum/gear/uniform/suit/bartenderskirt
-	display_name = "suit, bartender skirt (Bartender)"
+	display_name = "suit, bartender skirt"
 	path = /obj/item/clothing/under/rank/bartender/skirt
-	allowed_roles = list("Bartender")
 
 /datum/gear/uniform/scrub
 	display_name = "scrubs selection"

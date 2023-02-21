@@ -54,7 +54,7 @@
 							M << 'sound/effects/explosionfar.ogg'
 
 		if(adminlog)
-			message_admins("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>JMP</a>)")
+			message_admins("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z]) (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>JMP</a>)")
 			log_game("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ")
 
 		var/approximate_intensity = (devastation_range * 3) + (heavy_impact_range * 2) + light_impact_range
@@ -78,16 +78,21 @@
 			for(var/turf/T in trange(max_range, epicenter))
 				var/dist = sqrt((T.x - x0)**2 + (T.y - y0)**2)
 
-				if(dist < devastation_range)		dist = 1
-				else if(dist < heavy_impact_range)	dist = 2
-				else if(dist < light_impact_range)	dist = 3
-				else								continue
+				if(dist < devastation_range)
+					dist = 1
+				else if(dist < heavy_impact_range)
+					dist = 2
+				else if(dist < light_impact_range)
+					dist = 3
+				else
+					continue
 
 				if(!T)
 					T = locate(x0,y0,z0)
 				for(var/atom_movable in T.contents)	//bypass type checking since only atom/movable can be contained by turfs anyway
 					var/atom/movable/AM = atom_movable
-					if(AM && AM.simulated)	AM.ex_act(dist)
+					if(AM && AM.simulated)
+						AM.ex_act(dist)
 
 				T.ex_act(dist)
 

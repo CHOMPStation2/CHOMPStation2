@@ -5,7 +5,7 @@
 /mob/living/simple_mob/humanoid/possessed
 	name = "old EVA RIG suit"
 	desc = "A light hardsuit for repairs and maintenance to the outside of habitats and vessels. Seems to be worn down and damaged. But it seems to still be moving. Is someone in it?"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "eva-rig"
 
 	faction = "Possessed"
@@ -46,6 +46,7 @@
 	//Simple mob merc so it stops, says something, then charges.
 	ai_holder_type = /datum/ai_holder/simple_mob/merc
 	say_list_type = /datum/say_list/possessed //Set to Null on silenced.
+
 
 //	corpse = /obj/effect/landmark/mobcorpse/possessed
 // Will eventually leave a full corpse with an activated RIG on it. But not yet.

@@ -99,10 +99,12 @@
 
 	// If the body is in VR, move the mind back to the real world
 	if(vr_holder)
+		src.died_in_vr = TRUE //CHOMPedit, so avatar.dm can delete bodies
 		src.exit_vr()
 		src.vr_holder.vr_link = null
 		for(var/obj/item/W in src)
 			src.drop_from_inventory(W)
+
 
 	// If our mind is in VR, bring it back to the real world so it can die with its body
 	if(vr_link)

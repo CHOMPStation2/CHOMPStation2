@@ -1,0 +1,1659 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"ab" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"ac" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/LoneHome)
+"ad" = (
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/LoneHome)
+"ae" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"ag" = (
+/obj/structure/girder,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"ah" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"ai" = (
+/obj/structure/coatrack,
+/obj/machinery/button/windowtint{
+	id = "h-living";
+	pixel_x = -27
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"ak" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"al" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"am" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"an" = (
+/obj/structure/table/marble,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"ao" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"ap" = (
+/obj/structure/table/bench/marble,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "h-living"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"ar" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"as" = (
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"au" = (
+/obj/item/device/tape,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"av" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/extinguisher{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/medical/lite,
+/obj/random/medical/lite,
+/obj/structure/mopbucket{
+	pixel_x = -8;
+	pixel_y = -4
+	},
+/obj/item/weapon/mop,
+/obj/item/device/multitool,
+/obj/item/device/flashlight{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/random/unidentified_medicine,
+/obj/random/unidentified_medicine,
+/obj/random/unidentified_medicine,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/LoneHome)
+"aw" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"ax" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"ay" = (
+/obj/item/clothing/suit/storage/apron/white,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"az" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/box/glasses/square{
+	pixel_y = -2
+	},
+/obj/item/weapon/storage/box/glass_extras/sticks{
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/box/glass_extras/straws{
+	pixel_y = 7
+	},
+/obj/item/weapon/packageWrap,
+/obj/structure/curtain/open/bed,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"aA" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/box/condimentbottles,
+/obj/item/weapon/reagent_containers/food/condiment/sugar,
+/obj/structure/curtain/open/bed,
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "h-kitchen"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"aB" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"aC" = (
+/obj/structure/bed/chair/oldsofa/corner{
+	dir = 4
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "h-living"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aD" = (
+/obj/structure/bed/chair/oldsofa/left,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aE" = (
+/obj/structure/table/fancyblack,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aF" = (
+/obj/random/trash,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aG" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/knife/butch,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"aH" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"aI" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/sharpeningkit,
+/obj/item/weapon/reagent_containers/dropper,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"aJ" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aK" = (
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "h-kitchen"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"aL" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"aM" = (
+/obj/item/weapon/material/shard,
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"aN" = (
+/obj/item/weapon/material/shard,
+/obj/item/weapon/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"aO" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 4
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "h-living"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aP" = (
+/obj/structure/table/bench/glass,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"aQ" = (
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"aR" = (
+/obj/random/junk,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"aS" = (
+/obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aT" = (
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aU" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aV" = (
+/obj/structure/bed/chair/wood,
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "h-kitchen"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"aW" = (
+/obj/item/weapon/material/shard{
+	pixel_x = 6
+	},
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"aX" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"aY" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"aZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"ba" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bb" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bc" = (
+/obj/item/stack/cable_coil,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"bd" = (
+/obj/structure/table/fancyblack,
+/obj/item/trash/plate,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"be" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "h-kitchen"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bf" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/LoneHome)
+"bg" = (
+/obj/structure/bed/chair/oldsofa/corner{
+	dir = 1
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "h-living"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bh" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bi" = (
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bj" = (
+/obj/item/weapon/module/power_control,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bk" = (
+/obj/structure/flora/pottedplant/bamboo{
+	pixel_y = 12
+	},
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bl" = (
+/obj/item/weapon/material/shard,
+/obj/item/weapon/material/shard{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bm" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/flora/pottedplant/fern{
+	pixel_y = 12
+	},
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bn" = (
+/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"bo" = (
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/random/trash,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bp" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/reagent_containers/food/snacks/ghostmuffin/poison,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bq" = (
+/obj/structure/table/fancyblack,
+/obj/item/trash/plate,
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "h-kitchen"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"br" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"bs" = (
+/obj/item/weapon/pen,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bt" = (
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bu" = (
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/item/weapon/pen,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bv" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/button/windowtint{
+	id = "h-kitchen";
+	pixel_y = -29
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bw" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "h-kitchen"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bx" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"by" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/LoneHome)
+"bz" = (
+/obj/structure/table/rack,
+/obj/item/weapon/material/knife/ritual,
+/obj/structure/curtain/open/bed,
+/obj/item/clothing/under/suit_jacket/really_black,
+/obj/item/clothing/under/suit_jacket/navy,
+/obj/item/clothing/head/soft/solgov/veteranhat,
+/obj/item/clothing/under/swimsuit/fluff/penelope,
+/obj/item/weapon/makeover,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bA" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/item/weapon/book/tome/imbued,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bB" = (
+/obj/item/weapon/paper{
+	info = "Seems to be filled with odd runes drawn with blood";
+	name = "Blood stained paper"
+	},
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/LoneHome)
+"bC" = (
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/LoneHome)
+"bD" = (
+/obj/item/seeds/random,
+/obj/item/seeds/random,
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bE" = (
+/obj/item/seeds/random,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bF" = (
+/obj/machinery/light/small,
+/obj/item/weapon/ore/diamond,
+/obj/structure/sign/goldenplaque{
+	desc = "Done No Harm.";
+	name = "Best Doctor 2552";
+	pixel_y = -32
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bG" = (
+/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/clothing/gloves/ring/engagement,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bH" = (
+/obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bI" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/storage/wallet/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/random/carp_plushie,
+/obj/random/curseditem,
+/obj/random/junk,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bJ" = (
+/obj/item/weapon/paper{
+	info = "Seems to be filled with odd runes drawn with blood";
+	name = "Blood stained paper"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bK" = (
+/obj/item/weapon/cell/high/empty,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bL" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/paper{
+	info = "F%$K this detective, I swear I can see them peeking from behind the window, these tinted glasses help but I swear I can still see them snooping around. His days are counted... I am so close to figuring this out, just need a few more days. Then Shepiffany will be part of the family once again, then our two kids and I can go back on having a normal life... a normal life...";
+	name = "Stained sheet of paper"
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bN" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bO" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/structure/kitchenspike,
+/obj/effect/rune,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"bP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/weapon/paper/courtroom,
+/obj/item/weapon/paper/courtroom,
+/obj/item/weapon/paper_bin,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bQ" = (
+/obj/item/weapon/pen/fountain,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/paper{
+	info = "Seems to be filled with odd runes drawn with blood";
+	name = "Blood stained paper"
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bS" = (
+/obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bT" = (
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"bU" = (
+/obj/item/weapon/photo,
+/obj/item/weapon/photo{
+	pixel_x = 4
+	},
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bV" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/box/characters,
+/obj/structure/curtain/open/bed,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bW" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bX" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/cosmos,
+/obj/item/weapon/book/custom_library/fiction/truelovehathmyheart,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bY" = (
+/obj/structure/closet/cabinet,
+/obj/random/multiple,
+/obj/random/multiple,
+/obj/random/multiple,
+/obj/random/multiple,
+/obj/random/multiple,
+/obj/random/toy,
+/obj/random/toy,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"bZ" = (
+/obj/item/clothing/suit/straight_jacket,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"ca" = (
+/obj/machinery/gibber/autogibber{
+	emagged = 1
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cb" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/storage/wallet/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/random/ammo,
+/obj/random/cigarettes,
+/obj/random/contraband,
+/obj/random/junk,
+/obj/random/maintenance/security,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cc" = (
+/mob/living/simple_mob/animal/passive/cat/bones{
+	desc = "A very odd behaved cat, their scratched name tag reads 'Felix'. They look very malnourished.";
+	name = "Felix"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cd" = (
+/obj/structure/bed/double/padded,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"ce" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/LoneHome)
+"cf" = (
+/obj/item/weapon/pack/cardemon,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/LoneHome)
+"cg" = (
+/obj/item/weapon/reagent_containers/blood,
+/obj/item/weapon/pack/cardemon,
+/obj/item/weapon/pack/cardemon,
+/obj/item/weapon/deck/tarot,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"ch" = (
+/obj/item/organ/internal/liver,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"ci" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/structure/table/marble,
+/obj/item/organ/internal/intestine/unathi,
+/obj/item/weapon/surgical/bonesetter,
+/obj/item/weapon/bone/ribs,
+/obj/item/weapon/bone/skull{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cj" = (
+/obj/structure/sign/periodic,
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/LoneHome)
+"ck" = (
+/obj/item/weapon/bedsheet/rddouble,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cl" = (
+/obj/item/weapon/phone,
+/obj/structure/table/bench/wooden,
+/obj/item/weapon/paper{
+	info = "Seems to be filled with odd runes drawn with blood";
+	name = "Blood stained paper"
+	},
+/obj/machinery/button/windowtint{
+	id = "h-master";
+	pixel_y = -29
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cm" = (
+/obj/item/weapon/pack/cardemon,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cn" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/pirate,
+/obj/random/trash,
+/obj/random/trash,
+/obj/random/trash,
+/obj/random/trash,
+/obj/random/trash,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"co" = (
+/obj/structure/closet/cabinet,
+/obj/random/tech_supply/component,
+/obj/random/tech_supply/component,
+/obj/random/tech_supply/component,
+/obj/random/tech_supply/component,
+/obj/random/tech_supply/component,
+/obj/random/toolbox,
+/obj/random/toolbox,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cp" = (
+/obj/item/clothing/mask/muzzle,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cq" = (
+/obj/structure/table/marble,
+/obj/item/organ/internal/brain/grey,
+/obj/item/weapon/material/knife/plastic,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cr" = (
+/obj/structure/table/bench/marble,
+/obj/structure/flora/pottedplant/overgrown{
+	pixel_y = 7
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "h-master"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cs" = (
+/obj/structure/table/bench/marble,
+/obj/structure/flora/pottedplant/bamboo{
+	pixel_y = 7
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "h-master"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"ct" = (
+/obj/structure/table/bench/marble,
+/obj/structure/flora/pottedplant/dead{
+	pixel_y = 7
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "h-master"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/LoneHome)
+"cv" = (
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/structure/table/rack/shelf/steel,
+/obj/structure/curtain/open/bed,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+"cw" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/item/clothing/gloves/yellow,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cx" = (
+/obj/structure/table/marble,
+/obj/item/organ/internal/fruitgland,
+/obj/item/weapon/material/knife/hook,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cz" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cA" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cB" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cC" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cD" = (
+/obj/item/frame/apc,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 22
+	},
+/obj/random/junk,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cE" = (
+/obj/structure/table/steel,
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/steel,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cF" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/chainsaw,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/extinguisher,
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cG" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cH" = (
+/obj/structure/table/marble,
+/obj/item/organ/internal/intestine/unathi{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/item/organ/internal/lungs,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cI" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cJ" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cK" = (
+/obj/item/weapon/material/minihoe,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cL" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cN" = (
+/obj/item/device/flashlight{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cO" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cP" = (
+/obj/item/organ/internal/lungs/vox,
+/obj/item/weapon/beartrap/hunting{
+	anchored = 1;
+	deployed = 1;
+	icon_state = "beartrap1"
+	},
+/obj/structure/curtain/black,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"cQ" = (
+/obj/structure/fence/cut/medium,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cR" = (
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cS" = (
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cT" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"cU" = (
+/obj/structure/fence/cut/large{
+	dir = 8
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"cV" = (
+/obj/structure/fence/cut/medium{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cW" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"cX" = (
+/obj/structure/fence/door/opened,
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"cY" = (
+/obj/structure/fence/cut/medium{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"cZ" = (
+/obj/structure/fence/cut/large{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/LoneHome)
+"da" = (
+/obj/structure/fence/corner,
+/turf/template_noop,
+/area/survivalpod/superpose/LoneHome)
+"mx" = (
+/obj/structure/girder,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
+"ES" = (
+/obj/structure/simple_door/wood,
+/obj/structure/sign/graffiti/pisoff,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
+
+(1,1,1) = {"
+aQ
+aQ
+aQ
+ad
+aQ
+aB
+aN
+aY
+aY
+ag
+ad
+ad
+ad
+ad
+ad
+aQ
+aQ
+cR
+cR
+aQ
+cR
+cR
+"}
+(2,1,1) = {"
+aQ
+ab
+ad
+ad
+ap
+aC
+aO
+aO
+bg
+ad
+ad
+bI
+bP
+cb
+cj
+ad
+ad
+cI
+cQ
+cI
+cS
+aQ
+"}
+(3,1,1) = {"
+aQ
+ad
+ad
+ai
+aJ
+aD
+aP
+aP
+bh
+ad
+cv
+bJ
+bQ
+cc
+ak
+ad
+cz
+cR
+cR
+cR
+cT
+aQ
+"}
+(4,1,1) = {"
+ab
+ab
+ae
+aj
+ar
+aE
+bT
+bT
+bi
+ad
+bz
+bK
+bR
+bS
+as
+cr
+cA
+cR
+cR
+cR
+cU
+aQ
+"}
+(5,1,1) = {"
+ab
+ad
+ad
+ak
+as
+aj
+aZ
+aZ
+aJ
+ad
+bA
+bL
+bH
+bT
+aJ
+cs
+cz
+cJ
+cR
+cR
+cV
+aQ
+"}
+(6,1,1) = {"
+aQ
+aQ
+ad
+ag
+aJ
+as
+aR
+cu
+aq
+ag
+aq
+bM
+bT
+bT
+ck
+ct
+cB
+cR
+cR
+cR
+cW
+aQ
+"}
+(7,1,1) = {"
+aQ
+aQ
+aQ
+ad
+au
+aF
+aJ
+ba
+bj
+ad
+bB
+as
+bU
+cd
+cl
+ad
+cA
+cR
+cR
+cR
+cW
+aQ
+"}
+(8,1,1) = {"
+aQ
+aQ
+aQ
+ad
+ad
+ag
+ae
+ad
+bk
+ad
+ae
+ad
+ag
+ad
+ad
+ad
+ad
+cK
+cR
+cR
+cU
+aQ
+"}
+(9,1,1) = {"
+aQ
+aQ
+aQ
+ad
+av
+ae
+aq
+aq
+bl
+ah
+br
+bN
+ar
+ar
+ar
+aj
+ae
+cR
+cR
+cR
+cX
+aQ
+"}
+(10,1,1) = {"
+aQ
+aQ
+ad
+ad
+ad
+ad
+ae
+ad
+bm
+ag
+ad
+ad
+ad
+ES
+ad
+ad
+ad
+cL
+ad
+cR
+cT
+aQ
+"}
+(11,1,1) = {"
+aQ
+aQ
+ad
+al
+ax
+aG
+aJ
+bb
+aJ
+bs
+bD
+ad
+bV
+br
+ak
+by
+cC
+aa
+ad
+cR
+cU
+aQ
+"}
+(12,1,1) = {"
+aQ
+aQ
+ag
+am
+ax
+aH
+aq
+bc
+aq
+bt
+bE
+ag
+bW
+ce
+cm
+ad
+cD
+ac
+ad
+cR
+cT
+aQ
+"}
+(13,1,1) = {"
+aQ
+aQ
+ag
+an
+ay
+aI
+aS
+aj
+bn
+aJ
+bF
+ad
+bX
+cf
+cn
+ad
+cE
+cN
+ag
+cR
+cY
+aQ
+"}
+(14,1,1) = {"
+aQ
+aQ
+ad
+ao
+aw
+aw
+aT
+aj
+bo
+bu
+bG
+ad
+bY
+cg
+co
+ad
+cF
+cO
+ad
+cR
+cT
+aQ
+"}
+(15,1,1) = {"
+aQ
+aQ
+ad
+ad
+az
+bC
+aU
+bd
+bp
+bv
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+mx
+ad
+cR
+cT
+aQ
+"}
+(16,1,1) = {"
+aQ
+aQ
+aQ
+ad
+aA
+aK
+aV
+be
+bq
+bw
+ad
+bO
+bZ
+ch
+cp
+cw
+cG
+cP
+ag
+cR
+cZ
+aQ
+"}
+(17,1,1) = {"
+aQ
+aQ
+aQ
+ad
+ab
+aL
+aW
+bf
+aM
+bx
+ad
+ad
+ca
+ci
+cq
+cx
+cH
+ad
+ad
+cI
+da
+cR
+"}
+(18,1,1) = {"
+aQ
+aQ
+aQ
+ab
+aQ
+aQ
+aX
+aQ
+aQ
+ab
+aQ
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aQ
+aQ
+aQ
+aQ
+"}

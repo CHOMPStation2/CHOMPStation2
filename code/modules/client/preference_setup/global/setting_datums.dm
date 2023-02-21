@@ -95,7 +95,7 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
-	
+
 /datum/client_preference/belch_noises // Belching noises - pref toggle for 'em
 	description = "Burping"
 	key = "BELCH_NOISES"
@@ -154,6 +154,12 @@ var/list/_client_preferences_by_type
 /datum/client_preference/air_pump_noise
 	description ="Air Pump Ambient Noise"
 	key = "SOUND_AIRPUMP"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
+/datum/client_preference/looping_alarms // CHOMPStation Add: Looping Alarms
+	description ="Looping Alarm Sounds"
+	key = "SOUND_ALARMLOOP"
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
@@ -301,6 +307,30 @@ var/list/_client_preferences_by_type
 	enabled_description = "On"
 	disabled_description = "Off"
 
+/datum/client_preference/say_sounds
+	description = "Say Sounds"
+	key = "SAY_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/emote_sounds
+	description = "Me Sounds"
+	key = "EMOTE_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/whisper_sounds
+	description = "Whisper Sounds"
+	key = "WHISPER_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/subtle_sounds
+	description = "Subtle Sounds"
+	key = "SUBTLE_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
 /datum/client_preference/runechat_mob
 	description = "Runechat (Mobs)"
 	key = "RUNECHAT_MOB"
@@ -339,6 +369,18 @@ var/list/_client_preferences_by_type
 	enabled_by_default = TRUE
 	enabled_description = "Popup New On Login"
 	disabled_description = "Do Nothing"
+
+/datum/client_preference/play_mentorhelp_ping
+	description = "Mentorhelps"
+	key = "SOUND_MENTORHELP"
+	enabled_description = "Hear"
+	disabled_description = "Silent"
+
+/datum/client_preference/player_tips
+	description = "Receive Tips Periodically"
+	key = "RECEIVE_TIPS"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
 
 /********************
 * Staff Preferences *
@@ -390,5 +432,11 @@ var/list/_client_preferences_by_type
 /datum/client_preference/holder/show_rlooc
 	description ="Remote LOOC chat"
 	key = "CHAT_RLOOC"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/holder/show_staff_dsay
+	description ="Staff Deadchat"
+	key = "CHAT_ADSAY"
 	enabled_description = "Show"
 	disabled_description = "Hide"

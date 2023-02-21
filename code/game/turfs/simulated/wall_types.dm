@@ -78,6 +78,18 @@
 /turf/simulated/wall/resin/Initialize(mapload)
 	. = ..(mapload, "resin",null,"resin")
 
+/turf/simulated/wall/concrete
+	icon_state = "brick"
+
+/turf/simulated/wall/concrete/Initialize(mapload)
+	. = ..(mapload, "concrete") //3strong
+
+/turf/simulated/wall/r_concrete
+	icon_state = "rbrick"
+
+/turf/simulated/wall/r_concrete/Initialize(mapload)
+	. = ..(mapload, "concrete","plasteel rebar") //3strong
+
 // Kind of wondering if this is going to bite me in the butt.
 /turf/simulated/wall/skipjack/Initialize(mapload)
 	. = ..(mapload, "alienalloy")
@@ -100,6 +112,11 @@
 
 /turf/simulated/wall/sifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD)
+
+// CHOMPEdit Start
+/turf/simulated/wall/rsifwood/Initialize(mapload)
+	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
+// CHOMPEdit End
 
 /turf/simulated/wall/log/Initialize(mapload)
 	. = ..(mapload,  MAT_LOG)
@@ -320,10 +337,9 @@
 /obj/structure/hull_corner
 	name = "hull corner"
 	plane = OBJ_PLANE - 1
-	
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "hull_corner"
-	
+
 	anchored = TRUE
 	density = TRUE
 	breakable = TRUE
@@ -339,6 +355,7 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
+	cut_overlays()
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
@@ -358,7 +375,7 @@
 			I.color = R.icon_colour
 			add_overlay(I)
 		break
-	
+
 	if(!T)
 		warning("Hull corner at [x],[y] not placed adjacent to a hull it can find.")
 
@@ -388,7 +405,7 @@
 
 /turf/simulated/wall/eris/can_join_with_low_wall(var/obj/structure/low_wall/WF)
 	return istype(WF, /obj/structure/low_wall/eris)
-	
+
 /turf/simulated/wall/eris/special_wall_connections(list/dirs, list/inrange)
 	..()
 	for(var/direction in cardinal)
@@ -409,7 +426,7 @@
 					if(decided_to_blend)
 						dirs += direction
 						break blend_obj_loop // breaks outer loop
-						
+
 /turf/simulated/wall/eris/r_wall
 	icon_state = "rgeneric"
 /turf/simulated/wall/eris/r_wall/Initialize(mapload)
@@ -422,7 +439,7 @@
 	wall_masks = 'icons/turf/wall_masks_bay.dmi'
 	var/list/blend_objects = list(/obj/machinery/door)
 	var/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor)
-	
+
 	var/stripe_color // Adds a colored stripe to the walls
 
 /turf/simulated/wall/bay/can_join_with_low_wall(var/obj/structure/low_wall/WF)
@@ -436,7 +453,7 @@
 			I = image(wall_masks, "stripe[wall_connections[i]]", dir = 1<<(i-1))
 			I.color = stripe_color
 			add_overlay(I)
-			
+
 /turf/simulated/wall/bay/special_wall_connections(list/dirs, list/inrange)
 	..()
 	for(var/direction in cardinal)

@@ -16,6 +16,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"diona" = 1,										// 12
 	"mutineer" = 1,										// 13
 	"loyalist" = 1,										// 14
+	"GHOST" = 0,										// CHOMPEDIT - add seperate section for ghost roles
 	"pAI candidate" = 1,								// 15
 	//VOREStation Add
 	"lost drone" = 1,									// 16
@@ -51,7 +52,12 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					. += "<b>Be [i]:</b> <font color=red><b> \[BANNED]</b></font><br>"
 				else
 					. += "<b>Be [i]:</b> <a href='?src=\ref[src];be_special=[n]'><b>[pref.be_special&(1<<n) ? "Yes" : "No"]</b></a><br>"
-			n++
+			// CHOMPEdit Start -  Add header for Ghost roles section
+			if(i == "GHOST")
+				. += "<h4><u>GHOST ROLES</u> - Roles that are joinable as ghosts, but not true antags.</h4><br>"
+			else
+			//CHOMPEdit End
+				n++
 
 /datum/category_item/player_setup_item/antagonism/candidacy/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["be_special"])

@@ -2,6 +2,8 @@
 	name = "domesticated goose"
 	desc = "It's a domesticated goose. It still looks pretty angry."
 	faction = "neutral" //Mess with this and the goose will eat anyones face, will eat other factions faces, appropiate considering its a hellbird - Jack
+	
+	can_be_drop_prey = TRUE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/goose/domesticated/casino
 	name = "Donella"
@@ -9,7 +11,7 @@
 	icon_state = "golden_goose"
 	icon_living = "golden_goose"
 	icon_dead = "golden_goose_dead"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 
 	faction = "neutral" //Mess with this and the goose will eat anyones face, will eat other factions faces, appropiate considering its a hellbird - Jack
 

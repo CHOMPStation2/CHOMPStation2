@@ -1,0 +1,64 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"c" = (/turf/simulated/floor/plating,/area/submap/derelict3)
+"d" = (/obj/structure/lattice,/turf/template_noop,/area/submap/derelict3)
+"e" = (/obj/structure/lattice,/obj/structure/lattice,/turf/template_noop,/area/submap/derelict3)
+"g" = (/obj/structure/salvageable/console_broken_os,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"h" = (/obj/structure/girder,/turf/simulated/floor/plating,/area/submap/derelict3)
+"i" = (/obj/random/maintenance/clean,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"k" = (/obj/structure/salvageable/server,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"m" = (/obj/item/stack/rods{amount = 5},/turf/template_noop,/area/submap/derelict3)
+"w" = (/obj/structure/salvageable/autolathe,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"C" = (/obj/random/maintenance/security,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"E" = (/turf/simulated/wall,/area/submap/derelict3)
+"F" = (/obj/structure/girder/displaced,/turf/simulated/floor/plating,/area/submap/derelict3)
+"J" = (/obj/random/maintenance,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"K" = (/obj/structure/table,/turf/simulated/floor/plating,/area/submap/derelict3)
+"L" = (/obj/structure/girder/displaced,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"Q" = (/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"U" = (/obj/structure/table,/obj/random/maintenance/medical,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"W" = (/obj/structure/salvageable/computer,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"Y" = (/obj/structure/table,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+"Z" = (/obj/structure/salvageable/machine,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict3)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaacFccaamaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaFQQQQQcaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaQQQcQQQaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaadQiQhEEQQcdaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaadQQEJEwEQQdamaaaaaaa
+aaaaaaaaaaaaaaaaaamadQQYQEQEQQddaaaaaaaa
+aaaaaaaaaaaaaaaaaaadddQQQQQQQQdddaaaaaaa
+aaaaaaaaaaaaaaaaaaadddddQQQddddQddaaaaaa
+aaaaaaaaaaaaaaaaamdQddddddddddddddaaaaaa
+aaaaaaaaaaaaaaaaadddddddddddddddddmaaaaa
+aaaaaaaaaaaaaaaaddQQQQJddQdddQQQQdaaaaaa
+aaaaaaaaaaaaaaaadQQEchQQdddQQQLQQdaaaaaa
+aaaaaaaaaaaaaaaaQQQEQiQQdddCQQQEQhaaaaaa
+aaaaaaaaaaaaaaaQcQUEhQQQddQQcJQEQcaaaaaa
+aaaaaaaaaaaaaaaQEEEFQQddddQccWEQQhaaaaaa
+aaaaaaaaaaaaaadQQQgEQQddddQcQEEhEQmaaaaa
+aaaaaaaaaaaaaadQccQQcddQddQQQQEQQaaaaaaa
+aaaaaaaaaaaamdddQJQQQdddddQQQQEhQaaaaaaa
+aaaaaaaaaaaaaddddddddddamddQFQhQaaaaaaaa
+aaaaaaaaaaaaadddaaaaaamaaaddmQhamaaaaaaa
+aaaaaaaaaaaaddaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaadmaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaacQamaaamaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaEccdddaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaEKQQdddddaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaFQiQddddamaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aahJQcQcddeaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaEQQQQQccdaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaEZkkQQchaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaEEEEFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

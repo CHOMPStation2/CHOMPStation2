@@ -277,7 +277,7 @@
 		"sodawater", "lemon_lime", "sugar", "orangejuice", "limejuice", "watermelonjuice", "thirteenloko", "grapesoda",
 		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice", "orangejuice", "lemonjuice",
 		"limejuice", "berryjuice", "mint", "lemon_lime", "sugar", "orangejuice", "limejuice", "sodawater",
-		"tonic", "beer", "kahlua", "whiskey", "wine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
+		"tonic", "beer", "kahlua", "whiskey", "redwine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
 		"ale", "mead", "bitters", "champagne", "singulo", "doctorsdelight", "nothing", "banana", "honey", "egg",
 		"coco", "cherryjelly", "carrotjuice", "applejuice", "tomatojuice", "peanutbutter", "soymilk", "grenadine", "gingerale", "roy_rogers",
 		"patron", "goldschlager", "gelatin", "melonliquor", "bluecuracao", "thirteenloko", "deadrum", "sake", "acidspit",

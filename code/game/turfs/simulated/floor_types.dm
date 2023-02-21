@@ -116,7 +116,7 @@
 /turf/simulated/shuttle/proc/underlay_update()
 	if(!takes_underlays)
 		//Basically, if it's not forced, and we don't care, don't do it.
-		return //CHOMP Edit removed 0. Sarcastically quoting the above comment ^ "Basically, if it's not stupposed to store a fucking value, don't store a fucking value."
+		return
 
 	var/turf/under //May be a path or a turf
 	var/mutable_appearance/us = new(src) //We'll use this for changes later

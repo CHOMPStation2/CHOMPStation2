@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	icon_state = "pitcher_plant"
 	icon_living = "pitcher_plant"
 	icon_dead = "pitcher_plant_dead"
-	icon = 'icons/mob/vore_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore_ch.dmi'
 
 	anchored = 1 //Rooted plant. Only killing it will let you move it.
 	maxHealth = 200
@@ -59,6 +59,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/scent_strength = 5 //How much can a hungry pitcher confuse nearby people?
 	var/last_lifechecks = 0 //Timing variable to limit vore/hungry proc calls
 	var/list/pitcher_plant_lure_messages = null
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 
 

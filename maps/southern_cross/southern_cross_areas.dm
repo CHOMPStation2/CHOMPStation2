@@ -170,6 +170,23 @@
 /area/surface/outpost/shelter
 	name = "Wilderness Shelter"
 
+/area/surface/outpost/shelter/dorms
+	name = "Wilderness Shelter Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	flags = RAD_SHIELDED
+
+/area/surface/outpost/shelter/exterior
+	name = "Wilderness Shelter Exterior"
+	icon_state = "exit"
+	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg', 'sound/music/LRRMenu.ogg', 'sound/music/LRRTrack3.ogg', 'sound/ambience/cave/AmbCaveDebriA.ogg', 'sound/ambience/cave/AmbCaveDebriB.ogg', 'sound/ambience/cave/AmbCaveDebriC.ogg', 'sound/ambience/cave/AmbCaveDebriD.ogg')
+	outdoors = OUTDOORS_YES
+
+/area/surface/outpost/shelter/utilityroom
+	name = "Wilderness Shelter Utility Room"
+	icon_state = "substation"
+
 // Main mining outpost
 /area/surface/outpost/mining_main
 	name = "North Mining Outpost"
@@ -290,6 +307,10 @@
 
 /area/surface/outpost/research/xenoarcheology
 	name = "\improper Xenoarcheology"
+
+/area/surface/outpost/research/xenoarcheology/exterior
+	name = "\improper xenoarcheology Exterior"
+	icon_state = "exit"
 
 /area/surface/outpost/research/xenoarcheology/medical
 	name = "Xenoarcheology First-Aid Station"
@@ -791,6 +812,7 @@ z
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
+	forbid_events = TRUE
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
@@ -974,6 +996,25 @@ z
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+
+//CHOMPstation Edit 8/8/22 - Added a Art Gallery and some missing areas Kassc wanted me to add
+/area/crew_quarters/seconddeck/artgallery
+	name = "\improper Art Gallery"
+	icon_state = "art"
+
+/area/crew_quarters/seconddeck/artsupplies
+	name = "\improper Art Supplies"
+	icon_state = "artsupply"
+
+/area/crew_quarters/seconddeck/gameroom
+	name = "\improper Game Room"
+	icon_state = "gaming"
+
+//CHOMPstation Edit 8/27/22 - VR Room for station baby~
+/area/crew_quarters/thirddeck/vrroom
+	name = "\improper Virtual Reality Room"
+	icon_state = "gaming"
+	flags = RAD_SHIELDED //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 

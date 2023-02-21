@@ -30,7 +30,7 @@
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
 	alt_titles = list("Hydroponicist" = /datum/alt_title/hydroponicist, "Cultivator" = /datum/alt_title/cultivator, "Farmer" = /datum/alt_title/farmer,
-						"Gardener" = /datum/alt_title/gardener, "Florist" = /datum/alt_title/florsit)
+						"Gardener" = /datum/alt_title/gardener, "Florist" = /datum/alt_title/florsit, "Rancher" = /datum/alt_title/rancher)
 
 /datum/alt_title/hydroponicist
 	title = "Hydroponicist"
@@ -45,6 +45,10 @@
 	title = "Florist"
 	title_blurb = "A Florist may be less professional than their counterparts, and are more likely to tend to the public gardens if they aren't needed elsewhere."
 
+/datum/alt_title/rancher
+	title = "Rancher"
+	title_blurb = "A Rancher is tasked with the care, feeding, raising, and harvesting of livestock."
+
 
 /datum/job/qm
 	pto_type = PTO_CARGO
@@ -56,6 +60,9 @@
 
 /datum/alt_title/cargo_supervisor
 	title = "Cargo Supervisor"
+
+/datum/job/qm/get_request_reasons()
+	return list("Training crew")
 
 
 /datum/job/cargo_tech
@@ -88,7 +95,7 @@
 	pto_type = PTO_CARGO
 	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector,
 						"Excavator" = /datum/alt_title/excavator)
-						
+
 /datum/alt_title/deep_space_miner
 	title = "Deep Space Miner"
 	title_blurb = "A Deep Space Miner specializes primarily in mining operations in zero-g environments, mostly in asteroid and debris fields."
@@ -207,8 +214,8 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 5 //CHOMP explo keep
+	spawn_positions = 5 //CHOMP explo keep
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
 	economic_modifier = 5

@@ -291,7 +291,7 @@
 
 /obj/item/weapon/shockpaddles/proc/can_revive(mob/living/carbon/human/H) //This is checked right before attempting to revive
 	var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
-	if(H.should_have_organ(O_BRAIN) && (!brain || brain.defib_timer <= 0 ) )
+	if(H.should_have_organ(O_BRAIN) && (!brain || (istype(brain) && brain.defib_timer <= 0 ) ) ) //CHOMPEdit - Fix a runtime when brain is an MMI
 		return "buzzes, \"Resuscitation failed - Excessive neural degeneration. Further attempts futile.\""
 
 	H.updatehealth()
@@ -308,8 +308,8 @@
 		return bad_vital_organ
 
 	//this needs to be last since if any of the 'other conditions are met their messages take precedence
-	if(!H.client && !H.teleop)
-		return "buzzes, \"Resuscitation failed - Mental interface error. Further attempts may be successful.\""
+	//if(!H.client && !H.teleop)
+	//	return "buzzes, \"Resuscitation failed - Mental interface error. Further attempts may be successful.\""// CHOMPEdit, removing this check to allow revival through bad internet connections.
 
 	return null
 

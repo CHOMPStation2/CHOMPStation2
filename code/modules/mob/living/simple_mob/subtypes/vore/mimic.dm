@@ -77,7 +77,7 @@
 
 	icon_state = "crate"
 	icon_living = "crate"
-	icon = 'icons/mob/animal_ch.dmi' //CHOMPEdit
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi' //CHOMPEdit
 
 	faction = "mimic"
 
@@ -120,6 +120,7 @@
 	swallowTime = 3 SECONDS
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/ai_holder/mimic
 	wander = FALSE

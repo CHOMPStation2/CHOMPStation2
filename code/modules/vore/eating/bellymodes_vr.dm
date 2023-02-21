@@ -105,9 +105,9 @@
 					continue
 				if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 					if(fancy_vore)
-						M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 					else
-						M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 					 //these are all external sound triggers now, so it's ok.
 		return
 
@@ -132,14 +132,14 @@
 				continue
 			if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 				if(fancy_vore)
-					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 				else
-					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
 		var/list/EL = emote_lists[digest_mode]
-		if((LAZYLEN(EL) || LAZYLEN(emote_lists[DM_HOLD_ABSORBED]) || (digest_mode == DM_DIGEST && LAZYLEN(emote_lists[DM_HOLD]))) && next_emote <= world.time)
+		if((LAZYLEN(EL) || LAZYLEN(emote_lists[DM_HOLD_ABSORBED]) || (digest_mode == DM_DIGEST && LAZYLEN(emote_lists[DM_HOLD])) || (digest_mode == DM_SELECT && (LAZYLEN(emote_lists[DM_HOLD])||LAZYLEN(emote_lists[DM_DIGEST])||LAZYLEN(emote_lists[DM_ABSORB])) )) && next_emote <= world.time)
 			var/living_count = 0
 			var/absorbed_count = 0
 			for(var/mob/living/L in contents)
@@ -157,9 +157,13 @@
 					formatted_message = replacetext(formatted_message, "%pred", owner)
 					formatted_message = replacetext(formatted_message, "%prey", M)
 					formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
-					to_chat(M, "<span class='notice'>[formatted_message]</span>")
+					if(formatted_message)
+						to_chat(M, "<span class='notice'>[formatted_message]</span>")
 				else
-					if(digest_mode == DM_DIGEST && !M.digestable)
+					if (digest_mode == DM_SELECT)
+						var/datum/digest_mode/selective/DM_S = GLOB.digest_modes[DM_SELECT]
+						EL = emote_lists[DM_S.get_selective_mode(src, M)]
+					else if(digest_mode == DM_DIGEST && !M.digestable)
 						EL = emote_lists[DM_HOLD]					// Use Hold's emote list if we're indigestible
 
 					var/raw_message = pick(EL)
@@ -169,7 +173,8 @@
 					formatted_message = replacetext(formatted_message, "%prey", M)
 					formatted_message = replacetext(formatted_message, "%countprey", living_count)
 					formatted_message = replacetext(formatted_message, "%count", contents.len)
-					to_chat(M, "<span class='notice'>[formatted_message]</span>")
+					if(formatted_message)
+						to_chat(M, "<span class='notice'>[formatted_message]</span>")
 
 	if(to_update)
 		updateVRPanels()
@@ -223,10 +228,18 @@
 				//Thickbelly flag
 				if((mode_flags & DM_FLAG_THICKBELLY) && !H.muffled)
 					H.muffled = TRUE
+				//CHOMPEdit Start - Fix muffled sometimes being sticky.
+				else if(!(mode_flags & DM_FLAG_THICKBELLY) && H.muffled)
+					H.muffled = FALSE
+				//CHOMPEdit End
 
 				//Force psay
 				if((mode_flags & DM_FLAG_FORCEPSAY) && !H.forced_psay && H.absorbed)
 					H.forced_psay = TRUE
+				//CHOMPEdit Start - Fix forcepsay sometimes being sticky.
+				else if(!(mode_flags & DM_FLAG_FORCEPSAY) && H.forced_psay)
+					H.forced_psay = FALSE
+				//CHOMPEdit End
 
 				//Worn items flag
 				if(mode_flags & DM_FLAG_AFFECTWORN)
@@ -288,7 +301,36 @@
 			did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 	return did_an_item
 
-/obj/belly/proc/handle_digestion_death(mob/living/M)
+/obj/belly/proc/handle_digestion_death(mob/living/M, instant = FALSE) //CHOMPEdit
+	if(!instant && slow_digestion) //CHOMPAdd Start: Gradual corpse digestion
+		if(!M.digestion_in_progress)
+			M.digestion_in_progress = TRUE
+			if(M.health > -36 || (ishuman(M) && M.health > -136))
+				to_chat(M, "<span class='notice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
+		if(M.health < M.maxHealth * -1) //Siplemobs etc
+			if(ishuman(M))
+				if(M.health < (M.maxHealth * -1) -100) //Spacemans can go much deeper. Jank but maxHealth*-2 doesn't work with flat standard -100hp death threshold.
+					if(slow_brutal)
+						var/mob/living/carbon/human/P = M
+						var/vitals_only = TRUE
+						for(var/obj/item/organ/external/E in P.organs)
+							if(!E.vital)
+								vitals_only = FALSE
+								if(!LAZYLEN(E.children))
+									for(var/obj/item/weapon/implant/I as anything in E.implants)
+										qdel(I)
+									E.droplimb(TRUE, DROPLIMB_EDGE)
+									qdel(E)
+									break
+							continue
+						if(vitals_only)
+							M.digestion_in_progress = FALSE
+					else
+						M.digestion_in_progress = FALSE
+			else
+				M.digestion_in_progress = FALSE
+		if(M.digestion_in_progress)
+			return //CHOMPAdd End
 	var/digest_alert_owner = pick(digest_messages_owner)
 	var/digest_alert_prey = pick(digest_messages_prey)
 	var/compensation = M.maxHealth / 5 //Dead body bonus.
@@ -318,7 +360,10 @@
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
-    
+
+	var/personal_nutrition_modifier = M.get_digestion_nutrition_modifier()
+	var/pred_digestion_efficiency = owner.get_digestion_efficiency_modifier()
+
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
@@ -327,16 +372,16 @@
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
-			R.cell.charge += (nutrition_percent / 100) * compensation * 15
+			R.cell.charge += (nutrition_percent / 100) * compensation * 15 * personal_nutrition_modifier
 			GenerateBellyReagents_digested()
 		else
-			R.cell.charge += (nutrition_percent / 100) * compensation * 25
+			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
 	else
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3)
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 			GenerateBellyReagents_digested()
 		else
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5) //CHOMPedit end
+			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)

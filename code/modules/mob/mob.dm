@@ -70,7 +70,7 @@
 	else
 		to_chat(src,msg)
 		if(teleop)
-			to_chat(teleop, create_text_tag("body", "BODY:", teleop) + "[msg]")
+			to_chat(teleop, create_text_tag("body", "BODY:", teleop.client) + "[msg]")
 	return
 
 // Show a message to all mobs and objects in sight of this one
@@ -293,7 +293,7 @@
 	set src in usr
 	if(usr != src)
 		to_chat(usr, "No.")
-	var/msg = sanitize(input(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text)) as message|null, extra = 0)	//VOREStation Edit: separating out OOC notes
+	var/msg = sanitize(tgui_input_text(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text), multiline = TRUE, prevent_enter = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
 
 	if(msg != null)
 		flavor_text = msg
@@ -647,7 +647,8 @@
 			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 			if(ticker && ticker.current_state != GAME_STATE_PREGAME)
 				stat("Station Time", stationtime2text())
-				stat("Station Date", stationdate2text())
+				var/date = "[stationdate2text()], [capitalize(world_time_season)]"
+				stat("Station Date", date)
 				stat("Round Duration", roundduration2text())
 
 		if(client.holder)
@@ -693,6 +694,11 @@
 					stat("Access Global SDQL2 List", GLOB.sdql2_vv_statobj)
 					for(var/datum/SDQL2_query/Q as anything in GLOB.sdql2_queries)
 						Q.generate_stat()
+
+
+		if(has_mentor_powers(client))
+			if(statpanel("Tickets"))
+				GLOB.mhelp_tickets.stat_entry()
 
 		if(listed_turf && client)
 			if(!TurfAdjacent(listed_turf))

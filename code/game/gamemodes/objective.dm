@@ -431,7 +431,7 @@ var/global/list/all_objectives = list()
 		"a site manager's jumpsuit" = /obj/item/clothing/under/rank/captain,
 		"a functional AI" = /obj/item/device/aicard,
 		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
-		"the station blueprints" = /obj/item/blueprints,
+		"the station blueprints" = /obj/item/areaeditor/blueprints,
 		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
 		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
 		"a sample of slime extract" = /obj/item/slime_extract,
@@ -481,7 +481,7 @@ var/global/list/all_objectives = list()
 		var/tmp_obj = new custom_target
 		var/custom_name = tmp_obj:name
 		qdel(tmp_obj)
-		custom_name = sanitize(input(usr, "Enter target name:", "Objective target", custom_name) as text|null)
+		custom_name = sanitize(tgui_input_text(usr, "Enter target name:", "Objective target", custom_name))
 		if (!custom_name) return
 		target_name = custom_name
 		steal_target = custom_target

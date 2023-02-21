@@ -54,7 +54,10 @@
 		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/weapon/material/knife/machete,							50),
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/manhacks/station/locked,	100),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/ward,						150),
-		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				750),
+		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/rifle,				1500), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				1500), //CHOMPEDIT
+		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,					1200), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/holdout,				700), //CHOMPADD
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/weapon/kinetic_crusher/machete/dagger,					75),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/weapon/kinetic_crusher/machete,							250),
 		EQUIPMENT("Fishing Net",								/obj/item/weapon/material/fishing_net,								50),
@@ -67,12 +70,20 @@
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							120),
 		EQUIPMENT("Survey Tools - Mapping Unit",				/obj/item/device/mapping_unit,										150),
 		EQUIPMENT("Survey Tools - Mapping Beacon",				/obj/item/device/holomap_beacon,									25),
+		EQUIPMENT("Survey Tools - Advanced Cataloguer",			/obj/item/device/cataloguer/advanced,								300), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											75),
 		EQUIPMENT("Survival Equipment - Glowstick", 			/obj/item/device/flashlight/glowstick,								5),
 		EQUIPMENT("Survival Equipment - Flare", 				/obj/item/device/flashlight/flare,									5),
 		EQUIPMENT("Survival Equipment - Radioisotope Glowstick",		/obj/item/device/flashlight/glowstick/radioisotope,			40),
 		EQUIPMENT("Survival Equipment - Modular Explorer Suit",		/obj/item/clothing/suit/armor/pcarrier/explorer,				200),
 		EQUIPMENT("Survival Equipment - Armored Jumpsuit",		/obj/item/clothing/under/explorer/armored,							200),
+		EQUIPMENT("Survival Equipment - Exploration Plate",		/obj/item/clothing/accessory/armor/armorplate/explorer,			50), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Arm Guards",		/obj/item/clothing/accessory/armor/armguards/explorer,		50), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Leg Guards",		/obj/item/clothing/accessory/armor/legguards/explorer,		50), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Riot shield",	/obj/item/weapon/shield/riot/explorer,					75), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/green,				10), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,		25), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD	
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -111,7 +122,6 @@
 		EQUIPMENT("Thalers - 100",				/obj/item/weapon/spacecash/c100,									100),
 		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
 		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/device/uav,												40),
-
 	)
 	//VOREStation Edit End
 

@@ -79,6 +79,7 @@ var/list/gamemode_cache = list()
 	var/static/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
 	var/static/show_mods = 0
 	var/static/show_devs = 0
+	var/static/show_mentors = 0
 	var/static/show_event_managers = 0
 	var/static/mods_can_tempban = 0
 	var/static/mods_can_job_tempban = 0
@@ -290,7 +291,7 @@ var/list/gamemode_cache = list()
 
 	// How strictly the loadout enforces object species whitelists
 	var/loadout_whitelist = LOADOUT_WHITELIST_LAX
-	
+
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 	
@@ -659,6 +660,9 @@ var/list/gamemode_cache = list()
 
 				if("show_devs")
 					config.show_devs = 1
+
+				if("show_mentors")
+					config.show_mentors = 1
 
 				if("show_event_managers")
 					config.show_event_managers = 1

@@ -38,7 +38,7 @@
 		return
 
 	// Advance plant age.
-	if(prob(30)) //CHOMPedit start: I have to push the age increase down for a line for this to work with the compiler.  
+	if(prob(30)) //CHOMPedit start: I have to push the age increase down for a line for this to work with the compiler.
 		age += 1 * HYDRO_SPEED_MULTIPLIER
 		if(age_mod >= 1) //Age reagents double the speed of plant growth in sufficient quantities
 			age += 1 * HYDRO_SPEED_MULTIPLIER
@@ -121,18 +121,21 @@
 
 	// If enough time (in cycles, not ticks) has passed since the plant was harvested, we're ready to harvest again.
 	if((age > seed.get_trait(TRAIT_MATURATION)) && \
-	 ((age - lastproduce) > seed.get_trait(TRAIT_PRODUCTION)) && \
-	 (!harvest && !dead))
+		((age - lastproduce) > seed.get_trait(TRAIT_PRODUCTION)) && \
+		(!harvest && !dead))
 		harvest = 1
 		lastproduce = age
 
 	// If we're a vine which is not in a closed tray and is at least half mature, and there's no vine currently on our turf: make one (maybe)
 	if(!closed_system && \
-	 seed.get_trait(TRAIT_SPREAD) == 2 && \
-	 2 * age >= seed.get_trait(TRAIT_MATURATION) && \
-	 !(locate(/obj/effect/plant) in get_turf(src)) && \
-	 prob(2 * seed.get_trait(TRAIT_POTENCY)))
-		new /obj/effect/plant(get_turf(src), seed)
+		seed.get_trait(TRAIT_SPREAD) == 2 && \
+		2 * age >= seed.get_trait(TRAIT_MATURATION) && \
+		!(locate(/obj/effect/plant) in get_turf(src)) && \
+	 	prob(2 * seed.get_trait(TRAIT_POTENCY)))
+		// CHOMPEdit Start - Need to start processing the vine or it'll never spread.
+		var/obj/effect/plant/D = new /obj/effect/plant(get_turf(src), seed)
+		SSplants.add_plant(D)
+		// CHOMPEdit End
 
 	if(prob(3))  // On each tick, there's a chance the pest population will increase
 		pestlevel += 0.1 * HYDRO_SPEED_MULTIPLIER

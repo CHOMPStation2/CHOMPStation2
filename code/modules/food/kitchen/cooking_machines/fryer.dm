@@ -206,7 +206,7 @@
 
 	var/obj/item/organ/external/E
 	var/nopain
-	if(ishuman(victim) && user.zone_sel.selecting != "groin" && user.zone_sel.selecting != "chest")
+	if(ishuman(victim) && user.zone_sel.selecting != BP_GROIN && user.zone_sel.selecting != BP_TORSO)
 		var/mob/living/carbon/human/H = victim
 		E = H.get_organ(user.zone_sel.selecting)
 		if(!E || E.species.flags & NO_PAIN)
@@ -235,7 +235,7 @@
 
 		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Has [cook_type] \the [victim] ([victim.ckey]) in \a [src]</font>")
 		victim.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been [cook_type] in \a [src] by [user.name] ([user.ckey])</font>")
-		msg_admin_attack("[key_name_admin(user)] [cook_type] \the [victim] ([victim.ckey]) in \a [src]. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
+		msg_admin_attack("[key_name_admin(user)] [cook_type] \the [victim] ([victim.ckey]) in \a [src]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
 
 	//Coat the victim in some oil
 	oil.trans_to(victim, 40)
@@ -243,6 +243,12 @@
 	fry_loop.stop()
 
 /obj/machinery/appliance/cooker/fryer/attackby(var/obj/item/I, var/mob/user)
+	if(default_deconstruction_screwdriver(user, I)) //CHOMPedit - Allows for deconstruction
+		return
+	if(default_deconstruction_crowbar(user, I))
+		return
+	if(default_part_replacement(user, I))
+		return
 	if(istype(I, /obj/item/weapon/reagent_containers/glass) && I.reagents)
 		if (I.reagents.total_volume <= 0 && oil)
 			//Its empty, handle scooping some hot oil out of the fryer

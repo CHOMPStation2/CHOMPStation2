@@ -73,6 +73,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/plating,
 /area/submap/DerelictEngine)
 "bk" = (
@@ -83,7 +84,7 @@
 /area/submap/DerelictEngine)
 "bl" = (
 /obj/item/weapon/material/shard/phoron,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "bn" = (
 /obj/structure/girder/reinforced,
@@ -113,7 +114,7 @@
 	pixel_x = -9;
 	pixel_y = -7
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "bH" = (
 /obj/machinery/power/emitter/gyrotron,
@@ -146,7 +147,7 @@
 	pixel_x = 7;
 	pixel_y = 10
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "db" = (
 /obj/effect/floor_decal/techfloor{
@@ -184,7 +185,7 @@
 "dy" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DerelictEngine)
 "dC" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
@@ -224,7 +225,8 @@
 /obj/structure/table/alien,
 /obj/effect/floor_decal/techfloor,
 /obj/item/weapon/storage/belt/medical/alien,
-/obj/item/clothing/head/helmet/alien/tank,
+/obj/item/weapon/telecube/precursor/mated/mirrorcolor,
+/obj/item/weapon/implantcase/sprinter,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "el" = (
@@ -237,6 +239,10 @@
 "eq" = (
 /obj/random/trash,
 /turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"ez" = (
+/obj/item/weapon/stock_parts/capacitor,
+/turf/simulated/shuttle/floor/alien,
 /area/submap/DerelictEngine)
 "eR" = (
 /obj/effect/floor_decal/techfloor{
@@ -302,7 +308,7 @@
 /area/submap/DerelictEngine)
 "fJ" = (
 /mob/living/simple_mob/mechanical/hivebot/tank,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "fO" = (
 /turf/simulated/shuttle/wall/alien,
@@ -367,6 +373,7 @@
 	pixel_x = 7;
 	pixel_y = 10
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "hb" = (
@@ -374,7 +381,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "ht" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -461,6 +468,13 @@
 	dir = 4
 	},
 /obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/structure/prop/alien/dispenser{
+	pixel_x = -27
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"iu" = (
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "iz" = (
@@ -475,6 +489,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "iB" = (
@@ -544,6 +559,7 @@
 /obj/item/stack/material/diamond{
 	amount = 15
 	},
+/obj/item/clothing/head/helmet/alien/tank,
 /turf/simulated/floor/greengrid,
 /area/submap/DerelictEngine)
 "jE" = (
@@ -622,13 +638,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "lr" = (
-/obj/structure/prop/alien/dispenser{
-	pixel_x = -27
-	},
-/obj/effect/floor_decal/techfloor{
+/obj/structure/loot_pile/surface/alien/end,
+/obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/alienplating/external,
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "ls" = (
 /obj/item/weapon/surgical/circular_saw/alien,
@@ -639,6 +653,13 @@
 	dir = 8
 	},
 /obj/effect/gibspawner/human,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"lE" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "lV" = (
@@ -686,6 +707,18 @@
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
+"mE" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/item/weapon/stock_parts/micro_laser,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"mI" = (
+/obj/effect/decal/remains/xeno,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
+/turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
 "mM" = (
 /obj/effect/floor_decal/techfloor{
@@ -891,7 +924,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "ql" = (
 /obj/item/device/gps/internal/poi,
@@ -981,6 +1014,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
+"rh" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
+"rl" = (
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/floor/greengrid,
+/area/submap/DerelictEngine)
 "rI" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -1006,6 +1056,11 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
+"sn" = (
+/obj/random/trash,
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "sq" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -1014,7 +1069,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman,
+/obj/structure/frame,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "st" = (
@@ -1088,6 +1143,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
 "tB" = (
@@ -1231,7 +1287,6 @@
 "vU" = (
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/telecube/precursor/mated/mirrorcolor,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "wd" = (
@@ -1304,7 +1359,7 @@
 /area/submap/DerelictEngine)
 "wK" = (
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DerelictEngine)
 "wM" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -1385,6 +1440,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 6
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "xQ" = (
@@ -1434,7 +1490,7 @@
 /area/submap/DerelictEngine)
 "yk" = (
 /mob/living/simple_mob/mechanical/hivebot/swarm,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "yA" = (
 /obj/structure/table/alien,
@@ -1442,7 +1498,7 @@
 	dir = 10
 	},
 /obj/item/prop/alien/junk,
-/obj/item/device/perfect_tele/alien/bluefo,
+/obj/item/device/perfect_tele/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "yB" = (
@@ -1574,7 +1630,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/storage/belt/utility/alien,
+/obj/item/weapon/storage/belt/utility/alien/full,
 /obj/item/weapon/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
@@ -1709,6 +1765,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/DerelictEngine)
 "Cz" = (
@@ -1868,6 +1925,13 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
+"FC" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "FE" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -1931,7 +1995,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 8
 	},
-/obj/random/mob/robotic/hivebot,
+/mob/living/simple_mob/mechanical/hivebot/support/commander,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "GU" = (
@@ -2198,6 +2262,9 @@
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/plating,
 /area/submap/DerelictEngine)
+"KU" = (
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/template_noop)
 "Lb" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -2258,6 +2325,14 @@
 /obj/effect/decal/cleanable/molten_item,
 /turf/simulated/floor/plating,
 /area/submap/DerelictEngine)
+"Ma" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
+/turf/simulated/shuttle/floor/alien/blue,
+/area/submap/DerelictEngine)
+"MC" = (
+/mob/living/simple_mob/mechanical/hivebot/precusor/lobber,
+/turf/simulated/floor/greengrid,
+/area/submap/DerelictEngine)
 "MD" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
 /obj/effect/floor_decal/techfloor{
@@ -2302,10 +2377,10 @@
 /obj/structure/closet/alien,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/shield_projector/rectangle/weak,
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
+/obj/item/weapon/implantcase/surge,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "Nm" = (
@@ -2321,7 +2396,7 @@
 /area/submap/DerelictEngine)
 "Nr" = (
 /mob/living/simple_mob/mechanical/hivebot/swarm,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "Ns" = (
 /mob/living/simple_mob/mechanical/hivebot/tank/armored,
@@ -2496,6 +2571,16 @@
 /obj/item/clothing/under/psysuit,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
+"Qm" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"Qv" = (
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/template_noop)
 "QJ" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/window/titanium/full,
@@ -2535,6 +2620,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
+"QY" = (
+/obj/structure/shuttle/engine/propulsion/burst,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/submap/DerelictEngine)
 "Rk" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
@@ -2566,6 +2655,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 1
 	},
+/mob/living/simple_mob/mechanical/hivebot/precusor/machinegun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "RB" = (
@@ -2593,7 +2683,7 @@
 "RU" = (
 /obj/structure/closet/alien,
 /obj/item/weapon/weldingtool/alien,
-/obj/item/weapon/storage/belt/utility/alien/full,
+/obj/item/weapon/storage/belt/utility/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "RW" = (
@@ -2607,6 +2697,11 @@
 "SF" = (
 /turf/template_noop,
 /area/template_noop)
+"SJ" = (
+/obj/effect/decal/cleanable/generic,
+/mob/living/simple_mob/mechanical/hivebot/precusor/laser,
+/turf/simulated/floor/plating,
+/area/submap/DerelictEngine)
 "ST" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -2632,7 +2727,7 @@
 /area/submap/DerelictEngine)
 "SW" = (
 /obj/effect/gibspawner/robot,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "Tt" = (
 /turf/simulated/floor/outdoors/dirt,
@@ -2665,6 +2760,19 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
+"TK" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/obj/random/mob/robotic/hivebot,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DerelictEngine)
 "TO" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
 /obj/structure/cable/green{
@@ -2684,6 +2792,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "TV" = (
@@ -2787,6 +2896,9 @@
 /obj/item/stack/material/glass/plastitanium{
 	amount = 20
 	},
+/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/head/helmet/alien/tank,
+/obj/item/weapon/gun/energy/alien,
 /turf/simulated/floor/greengrid,
 /area/submap/DerelictEngine)
 "Vb" = (
@@ -2863,6 +2975,7 @@
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
+/obj/item/weapon/stock_parts/matter_bin,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/DerelictEngine)
 "WB" = (
@@ -2973,7 +3086,8 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/clothing/suit/armor/alien,
+/obj/item/weapon/circuitboard/pacman,
+/obj/item/weapon/telecube/precursor/mated/zone,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "Yr" = (
@@ -3017,6 +3131,7 @@
 	pixel_x = -9;
 	pixel_y = -7
 	},
+/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
 "YI" = (
@@ -3033,6 +3148,10 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"YW" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
+/turf/simulated/shuttle/floor/alien,
 /area/submap/DerelictEngine)
 "Zh" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -3074,22 +3193,22 @@ SF
 ap
 SF
 SF
-Tt
-Tt
-bN
-bN
+Qv
+Qv
+KU
+KU
 jl
-bN
-jl
-jl
+KU
 jl
 jl
 jl
-bN
 jl
 jl
-bN
-bN
+KU
+jl
+jl
+KU
+KU
 jl
 SF
 SF
@@ -3121,13 +3240,13 @@ SF
 jl
 SF
 SF
-Tt
-Tt
-bN
-bN
-bN
+Qv
+Qv
+KU
+KU
+KU
 jl
-bN
+KU
 jl
 jl
 zH
@@ -3142,10 +3261,10 @@ gy
 EC
 wK
 SF
-bN
-bN
+KU
+KU
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -3169,11 +3288,11 @@ SF
 SF
 SF
 Xp
-Tt
-bN
+Qv
+KU
 jl
-bN
-bN
+KU
+KU
 jl
 jl
 jl
@@ -3189,16 +3308,16 @@ fO
 zH
 Ja
 EC
-Bz
-Tt
-Tt
-Tt
-bN
+wK
+Qv
+Qv
+Qv
+KU
 Nr
 SF
-Tt
+Qv
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -3219,8 +3338,8 @@ ap
 SF
 fJ
 jl
-bN
-bN
+KU
+KU
 jl
 jl
 jl
@@ -3239,17 +3358,17 @@ fO
 fO
 EC
 wK
-bN
-bN
-bN
-bN
-Tt
-bN
+KU
+KU
+KU
+KU
+Qv
+KU
 fJ
 hb
-Tt
-Tt
-Tt
+Qv
+Qv
+Qv
 SF
 SF
 SF
@@ -3266,9 +3385,9 @@ SF
 (5,1,1) = {"
 jl
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 jl
 jl
 jl
@@ -3289,21 +3408,21 @@ fO
 EC
 wK
 SF
-Tt
-bN
-Tt
-bN
-Tt
-bN
-bN
-Tt
-bN
-bN
-bN
+Qv
+KU
+Qv
+KU
+Qv
+KU
+KU
+Qv
+KU
+KU
+KU
 SF
-Tt
+Qv
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -3314,8 +3433,8 @@ SF
 "}
 (6,1,1) = {"
 SF
-Tt
-bN
+Qv
+KU
 jl
 jl
 jl
@@ -3340,20 +3459,20 @@ gy
 SF
 SF
 SF
-bN
+KU
 SF
-bN
+KU
 SF
-bN
+KU
 ap
-bN
+KU
 SF
-Tt
-bN
-Tt
+Qv
+KU
+Qv
 SF
-Tt
-Tt
+Qv
+Qv
 SF
 SF
 SF
@@ -3362,9 +3481,9 @@ SF
 SF
 "}
 (7,1,1) = {"
-Tt
+Qv
 jl
-bN
+KU
 jl
 jl
 jl
@@ -3381,7 +3500,7 @@ YJ
 YJ
 YJ
 YJ
-YJ
+lE
 YJ
 xs
 fO
@@ -3400,10 +3519,10 @@ SF
 SF
 SF
 yk
-bN
+KU
 SF
-Tt
-Tt
+Qv
+Qv
 SF
 SF
 SF
@@ -3412,8 +3531,8 @@ SF
 "}
 (8,1,1) = {"
 jl
-bN
-bN
+KU
+KU
 jl
 jl
 fO
@@ -3433,7 +3552,7 @@ je
 iB
 iB
 je
-je
+iu
 gy
 bp
 TB
@@ -3445,22 +3564,22 @@ zH
 BR
 fO
 EC
-wK
+QY
 SF
-Tt
-Tt
-bN
-Tt
-bN
-Tt
-bN
+Qv
+Qv
+KU
+Qv
+KU
+Qv
+KU
 SF
 SF
 SF
 SF
 "}
 (9,1,1) = {"
-Tt
+Qv
 jl
 jl
 jl
@@ -3496,27 +3615,27 @@ Yr
 EC
 dy
 SF
-bN
+KU
 SF
-Tt
+Qv
 Xp
 fJ
 SF
+KU
 bN
-bN
-Tt
+Qv
 SF
 SF
 "}
 (10,1,1) = {"
-bN
-bN
+KU
+KU
 jl
 jl
 jl
 fO
 AX
-HS
+MC
 UZ
 gy
 yB
@@ -3543,29 +3662,29 @@ fO
 jE
 Eu
 EC
-wK
-bN
-bN
-bN
-bN
-bN
-Tt
+QY
+KU
+KU
+KU
+KU
+KU
+Qv
 Nr
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 SF
 "}
 (11,1,1) = {"
-bN
+KU
 jl
 jl
 zH
 fO
 fO
 AX
-HS
+rl
 jD
 fO
 gy
@@ -3586,25 +3705,25 @@ QT
 YJ
 YJ
 YJ
-YJ
+Qm
 Um
 fO
 fO
 fO
 EC
-Bz
+QY
 SF
 SF
 SF
 SF
-bN
-bN
-bN
-Tt
-Tt
+KU
+KU
+KU
+Qv
+Qv
 SF
-bN
-Tt
+KU
+Qv
 "}
 (12,1,1) = {"
 jl
@@ -3649,8 +3768,8 @@ SF
 SF
 SF
 SF
-bN
-bN
+KU
+KU
 SF
 SF
 SF
@@ -3700,9 +3819,9 @@ jU
 EC
 wK
 SF
-bN
-bN
-bN
+KU
+KU
+KU
 "}
 (14,1,1) = {"
 jl
@@ -3712,7 +3831,7 @@ tx
 DJ
 QT
 fO
-LG
+Ma
 VA
 fO
 cH
@@ -3747,11 +3866,11 @@ zH
 gy
 gy
 EC
-Bz
+QY
 SF
 SF
 SW
-bN
+KU
 "}
 (15,1,1) = {"
 jl
@@ -3829,7 +3948,7 @@ je
 BR
 je
 je
-je
+iu
 je
 je
 je
@@ -3841,7 +3960,7 @@ yg
 iO
 WV
 je
-je
+iu
 Pw
 gy
 or
@@ -3849,7 +3968,7 @@ fH
 fp
 fO
 zH
-bN
+KU
 "}
 (17,1,1) = {"
 jl
@@ -3897,8 +4016,8 @@ db
 yZ
 Vb
 Bd
-Tt
-bN
+Qv
+KU
 "}
 (18,1,1) = {"
 jl
@@ -3908,13 +4027,13 @@ ql
 JX
 UV
 gy
-wM
+rh
 Yp
 fO
 Uv
 GM
 IM
-CL
+SJ
 VQ
 iB
 nZ
@@ -3947,7 +4066,7 @@ QS
 ib
 ab
 Xq
-Tt
+Qv
 "}
 (19,1,1) = {"
 jl
@@ -3996,7 +4115,7 @@ Ku
 YJ
 VX
 SF
-Tt
+Qv
 "}
 (20,1,1) = {"
 bG
@@ -4025,7 +4144,7 @@ cQ
 BR
 je
 je
-je
+iu
 je
 je
 je
@@ -4037,7 +4156,7 @@ iB
 je
 eq
 je
-eq
+sn
 BG
 gy
 or
@@ -4045,7 +4164,7 @@ fH
 wM
 zH
 zH
-bN
+KU
 "}
 (21,1,1) = {"
 cX
@@ -4074,7 +4193,7 @@ je
 BR
 Wk
 iB
-iB
+ez
 iB
 Iv
 pF
@@ -4104,7 +4223,7 @@ Ct
 tj
 zk
 fO
-aG
+mI
 CV
 fO
 DA
@@ -4189,10 +4308,10 @@ jG
 jG
 EC
 Bz
-Tt
+Qv
 SW
-bN
-Tt
+KU
+Qv
 "}
 (24,1,1) = {"
 SF
@@ -4240,7 +4359,7 @@ SF
 SF
 SF
 SF
-bN
+KU
 SF
 "}
 (25,1,1) = {"
@@ -4272,15 +4391,15 @@ Fd
 il
 Vb
 xQ
-lr
+FC
 vC
 fO
 fO
 fO
 EC
-Bz
+QY
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -4306,7 +4425,7 @@ gy
 ms
 ht
 Yl
-rg
+TK
 jU
 vl
 iQ
@@ -4327,11 +4446,11 @@ fO
 RG
 RG
 EC
-wK
-bN
-bN
-bN
-Tt
+QY
+KU
+KU
+KU
+Qv
 SF
 SF
 SF
@@ -4339,7 +4458,7 @@ ap
 SF
 SF
 SF
-Tt
+Qv
 "}
 (27,1,1) = {"
 SF
@@ -4376,19 +4495,19 @@ Vs
 Vk
 Yr
 EC
-Bz
+QY
 SF
-bN
+KU
 SF
-bN
+KU
 Nr
 SF
-Tt
+Qv
 SF
 SF
 SF
 SF
-bN
+KU
 "}
 (28,1,1) = {"
 SF
@@ -4399,7 +4518,7 @@ SF
 fO
 gy
 yi
-yi
+lr
 gy
 zn
 je
@@ -4410,7 +4529,7 @@ TV
 Yu
 Yl
 je
-iB
+YW
 iB
 je
 je
@@ -4425,15 +4544,15 @@ fO
 BR
 fO
 EC
-Bz
+QY
 SF
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 pR
-Tt
-Tt
+Qv
+Qv
 SF
 SF
 SF
@@ -4458,7 +4577,7 @@ Vb
 Vb
 Vb
 Vb
-Vb
+mE
 Vb
 Vb
 Ki
@@ -4479,10 +4598,10 @@ SF
 SF
 SF
 SF
-bN
+KU
 SF
-bN
-bN
+KU
+KU
 Tt
 SF
 SF
@@ -4514,11 +4633,11 @@ fO
 gy
 zH
 SF
-bN
-bN
-Tt
+KU
+KU
+Qv
 SF
-Tt
+Qv
 SF
 SF
 SF
@@ -4529,11 +4648,11 @@ SF
 SF
 ap
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 SF
-bN
+KU
 SF
 SF
 "}
@@ -4561,15 +4680,15 @@ iZ
 Ng
 fO
 EC
-Bz
-bN
+wK
+KU
 SF
 SF
-bN
-bN
+KU
+KU
 SF
 SF
-Tt
+Qv
 SF
 Nr
 SF
@@ -4580,10 +4699,10 @@ SF
 SF
 SF
 SF
-bN
-bN
+KU
+KU
 SF
-bN
+KU
 SF
 "}
 (32,1,1) = {"
@@ -4612,28 +4731,28 @@ fO
 EC
 wK
 SF
-bN
-bN
-bN
+KU
+KU
+KU
 SF
 ap
-bN
+KU
 SF
 SF
 SF
-bN
-bN
+KU
+KU
 SF
 SF
 SF
 SF
 SF
 SF
-Tt
-Tt
+Qv
+Qv
 SF
 SF
-bN
+KU
 "}
 (33,1,1) = {"
 SF
@@ -4660,28 +4779,28 @@ fO
 GU
 EC
 wK
-bN
-Tt
-Tt
-Tt
+KU
+Qv
+Qv
+Qv
 SF
-bN
+KU
 SF
 hb
 bX
-bN
+KU
 SF
 SF
 SF
-bN
-Tt
-bN
+KU
+Qv
+KU
 SF
 SF
 SF
-Tt
-bN
-bN
+Qv
+KU
+KU
 SF
 "}
 (34,1,1) = {"
@@ -4713,22 +4832,22 @@ SF
 SF
 SF
 SF
+Qv
+SF
+SF
+KU
 Tt
 SF
-SF
-bN
-Tt
-SF
-bN
-bN
+KU
+KU
 SF
 SF
 SF
 SF
 SF
-bN
+KU
 SF
-bN
+KU
 SF
 SF
 SF
@@ -4764,13 +4883,13 @@ SF
 SF
 SF
 SF
-Tt
+Qv
 SF
 SF
 SF
 SF
 SF
-bN
+KU
 SF
 SF
 SF
@@ -4778,7 +4897,7 @@ SF
 SF
 SF
 SF
-bN
-bN
-bN
+KU
+KU
+KU
 "}

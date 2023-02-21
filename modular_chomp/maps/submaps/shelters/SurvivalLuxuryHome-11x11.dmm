@@ -1,0 +1,707 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ao" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/closet/walllocker_double/survival/north,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"aX" = (
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"by" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/knife/butch,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"bS" = (
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"bX" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"cK" = (
+/obj/structure/fans,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"eH" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"eW" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"iq" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"jn" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"jw" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/weapon/material/kitchen/utensil/fork,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"jz" = (
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"jL" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/box/glasses/square{
+	pixel_y = -2
+	},
+/obj/item/weapon/storage/box/glass_extras/sticks{
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/box/glass_extras/straws{
+	pixel_y = 7
+	},
+/obj/item/weapon/packageWrap,
+/obj/structure/curtain/open/bed,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/weapon/storage/box/condimentbottles,
+/obj/item/weapon/reagent_containers/food/condiment/sugar,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = -4;
+	pixel_y = 12
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = -4;
+	pixel_y = 12
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cup{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/item/weapon/reagent_containers/food/drinks/teapot{
+	pixel_y = 7
+	},
+/obj/item/weapon/storage/box/donut{
+	pixel_y = -4
+	},
+/obj/item/weapon/storage/box/donut{
+	pixel_y = -4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"ku" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/deck/cards,
+/obj/machinery/computer/security/telescreen/entertainment{
+	layer = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"nZ" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"ov" = (
+/obj/machinery/door/window/survival_pod,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"pn" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 25
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"qZ" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"rm" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"rY" = (
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"sa" = (
+/obj/structure/table/bench/wooden,
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = 2
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"sq" = (
+/obj/structure/table/marble,
+/obj/structure/sink/countertop{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"sF" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"tb" = (
+/obj/structure/table/bench/marble,
+/obj/structure/flora/pottedplant/bamboo{
+	pixel_y = 7
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"tx" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/effect/floor_decal/spline/fancy{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"ty" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"tK" = (
+/obj/structure/table/woodentable,
+/obj/item/pizzavoucher,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"uz" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"wD" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"wS" = (
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"xt" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"zK" = (
+/obj/effect/floor_decal/techfloor,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"zN" = (
+/obj/structure/bed/pod,
+/obj/item/weapon/bedsheet/cosmos,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"AI" = (
+/obj/structure/table/marble,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/microwave,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"By" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/box/characters,
+/obj/structure/curtain/open/bed,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"BM" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"BP" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"CD" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/tape_roll,
+/obj/item/sticky_pad/random,
+/obj/item/weapon/pen/blue,
+/obj/item/weapon/pen/blue,
+/obj/item/fulton_core,
+/obj/item/fulton_core,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
+/obj/item/weapon/pickaxe/hand,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/flashlight/color/orange,
+/obj/item/device/threadneedle,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/device/flashlight/lantern,
+/obj/random/soap,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/stack/nanopaste,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/box/flare,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/stack/marker_beacon/ten,
+/obj/item/device/starcaster_news,
+/obj/item/device/mapping_unit,
+/obj/item/weapon/storage/box/dosimeter,
+/obj/item/device/gps,
+/obj/item/device/gps,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/device/pda,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/weapon/material/knife/machete,
+/obj/item/weapon/material/fishing_net,
+/obj/item/weapon/storage/backpack/sport,
+/obj/item/weapon/storage/backpack/sport,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/storage/belt,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Dv" = (
+/obj/structure/table/bench/wooden{
+	pixel_x = -9
+	},
+/obj/structure/flora/pottedplant/small{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"DL" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	pixel_y = 17
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"DN" = (
+/obj/machinery/door/window/survival_pod,
+/obj/structure/closet/walllocker_double/survival/north,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"DT" = (
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Dorm"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Gb" = (
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Hk" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"HO" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Jk" = (
+/obj/structure/fans/tiny,
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/machinery/door/airlock/voidcraft/survival_pod,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"JA" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"JH" = (
+/obj/structure/table/standard,
+/obj/item/weapon/towel/random{
+	pixel_y = -5
+	},
+/obj/item/weapon/towel/random,
+/obj/random/soap{
+	pixel_y = 5
+	},
+/obj/random/soap{
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"JK" = (
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"LR" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"ML" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"MR" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/cedouble,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Nv" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Nx" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Oc" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	locked = 0;
+	pixel_x = -5
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Pf" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Qs" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/sharpeningkit,
+/obj/item/weapon/reagent_containers/dropper,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"SI" = (
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Wx" = (
+/obj/structure/toilet,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"WI" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 36;
+	pixel_y = 3
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 36;
+	pixel_y = -10
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"XT" = (
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Yw" = (
+/obj/structure/closet/walllocker_double/survival/west,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"YY" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+"Zy" = (
+/obj/item/device/gps/computer,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalLuxuryHome)
+
+(1,1,1) = {"
+JK
+jn
+Nx
+BM
+Nx
+jn
+LR
+qZ
+LR
+jn
+JK
+"}
+(2,1,1) = {"
+jn
+BP
+rY
+by
+ML
+ty
+eH
+jn
+By
+Dv
+jn
+"}
+(3,1,1) = {"
+LR
+rm
+rY
+sq
+ML
+JA
+jw
+jn
+ao
+YY
+Nx
+"}
+(4,1,1) = {"
+Hk
+AI
+rY
+Qs
+ML
+tx
+ku
+jn
+Nv
+zN
+xt
+"}
+(5,1,1) = {"
+LR
+DL
+rY
+nZ
+ML
+HO
+sF
+jn
+DT
+jn
+LR
+"}
+(6,1,1) = {"
+jn
+jL
+rY
+eW
+ML
+XT
+WI
+aX
+SI
+zK
+Jk
+"}
+(7,1,1) = {"
+LR
+Oc
+ov
+jn
+DN
+jn
+jn
+jn
+DT
+jn
+LR
+"}
+(8,1,1) = {"
+Hk
+cK
+wS
+Wx
+jz
+jn
+tK
+Yw
+Nv
+tb
+Nx
+"}
+(9,1,1) = {"
+LR
+CD
+wS
+bX
+jz
+jn
+bS
+uz
+Pf
+Pf
+xt
+"}
+(10,1,1) = {"
+jn
+Zy
+Gb
+JH
+pn
+jn
+bS
+wD
+MR
+sa
+jn
+"}
+(11,1,1) = {"
+JK
+jn
+LR
+iq
+LR
+jn
+LR
+iq
+LR
+jn
+JK
+"}

@@ -412,7 +412,7 @@
 	},
 /area/submap/DemonPool)
 "EQ" = (
-/obj/structure/loot_pile/surface,
+/obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -493,11 +493,6 @@
 "Lu" = (
 /obj/fire,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/DemonPool)
-"Lx" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/obj/structure/loot_pile/surface,
-/turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "LD" = (
 /obj/structure/bonfire/permanent,
@@ -615,12 +610,8 @@
 /turf/template_noop,
 /area/submap/DemonPool)
 "WV" = (
-/obj/structure/loot_pile/surface,
+/obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/cult,
-/area/submap/DemonPool)
-"WZ" = (
-/obj/structure/loot_pile/surface,
-/turf/simulated/floor,
 /area/submap/DemonPool)
 "Xe" = (
 /obj/structure/grille/broken/cult,
@@ -969,7 +960,7 @@ Jo
 eR
 lG
 Zj
-WZ
+Ax
 Jo
 eR
 eR
@@ -1138,7 +1129,7 @@ pH
 pH
 pH
 pH
-Lx
+es
 eR
 Jo
 Jo

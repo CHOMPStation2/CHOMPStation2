@@ -23,10 +23,12 @@
 
 	organ_names = /decl/mob_organ_names/goose
 
-	has_langs = list("Bird")
+	has_langs = list(LANGUAGE_ANIMAL)
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
 	meat_amount = 3
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/goose
 	speak = list("HONK!")
@@ -48,3 +50,11 @@
 
 /decl/mob_organ_names/goose
 	hit_zones = list("head", "chest", "left leg", "right leg", "left wing", "right wing", "neck")
+
+/mob/living/simple_mob/animal/space/goose/white
+	icon = 'icons/mob/animal_vr.dmi'
+	icon_state = "whitegoose"
+	icon_living = "whitegoose"
+	icon_dead = "whitegoose_dead"
+	name = "white goose"
+	desc = "And just when you thought it was a lovely day..."

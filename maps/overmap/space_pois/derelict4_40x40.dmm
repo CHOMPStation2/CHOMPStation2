@@ -1,0 +1,72 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/mineral,/area/submap/derelict4)
+"d" = (/turf/simulated/mineral/floor/vacuum,/area/submap/derelict4)
+"e" = (/turf/simulated/shuttle/wall,/area/submap/derelict4)
+"f" = (/obj/machinery/door/airlock/maintenance/rnd,/turf/simulated/floor/airless,/area/submap/derelict4)
+"g" = (/turf/simulated/floor/airless,/area/submap/derelict4)
+"h" = (/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"i" = (/obj/structure/window/reinforced{dir = 8; tag = "icon-rwindow (WEST)"},/obj/structure/bed/chair/bay/comfy/lime,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"j" = (/obj/structure/bed/chair/bay/comfy/lime,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"k" = (/obj/random/maintenance,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"l" = (/obj/structure/shuttle/engine/propulsion{dir = 4; tag = "icon-propulsion (WEST)"},/turf/simulated/shuttle/plating,/area/submap/derelict4)
+"m" = (/obj/item/weapon/material/shard,/turf/simulated/floor/airless,/area/submap/derelict4)
+"n" = (/obj/structure/bed/chair/bay/comfy/captain{dir = 8},/turf/simulated/floor/airless,/area/submap/derelict4)
+"o" = (/obj/structure/grille,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"p" = (/obj/structure/table,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"q" = (/obj/item/weapon/material/shard,/obj/structure/bed/chair/bay/comfy/captain{dir = 8},/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"r" = (/obj/structure/window/reinforced{dir = 8; tag = "icon-rwindow (WEST)"},/obj/structure/bed/chair/bay/comfy/lime{dir = 1},/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"s" = (/obj/structure/bed/chair/bay/comfy/lime{dir = 1},/turf/simulated/floor/airless,/area/submap/derelict4)
+"t" = (/obj/structure/girder,/turf/simulated/floor/airless,/area/submap/derelict4)
+"w" = (/obj/random/maintenance,/turf/simulated/mineral/floor/vacuum,/area/submap/derelict4)
+"x" = (/obj/item/stack/rods{amount = 5},/turf/simulated/mineral/floor/vacuum,/area/submap/derelict4)
+"z" = (/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"G" = (/obj/random/outcrop,/turf/simulated/mineral/floor/vacuum,/area/submap/derelict4)
+"S" = (/obj/random/junk,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"U" = (/obj/random/trash,/turf/simulated/mineral/floor/vacuum,/area/submap/derelict4)
+"V" = (/obj/random/maintenance,/turf/simulated/floor/airless,/area/submap/derelict4)
+"W" = (/obj/random/junk,/turf/simulated/floor/airless,/area/submap/derelict4)
+"X" = (/obj/item/weapon/storage/backpack/holding,/turf/simulated/shuttle/floor,/area/submap/derelict4)
+"Z" = (/obj/structure/prop/blackbox/quarantined_shuttle,/turf/simulated/floor/airless,/area/submap/derelict4)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaabbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaddGbbbbaaaaaaaaaaaaaaabaaaaaaaaaaaa
+aaaaadddbbbbaaaaaaaaaaaaaabbbaaaaaaaaaaa
+aaaaaaddbbaaaaaaaaaaaaaaaabbbaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaabbdddddbbaaabbbbaaaaaaaaaaa
+aaaaaaaaaaabbbbdGddbbbbbbbbbbbaaaaaaaaaa
+aaaaaaaaaaaGbbbbbdbbbbbbbbbbbbbaaaaaaaaa
+aaaaaaaaGdddbbbbbbbbbddbbdddbbbaaaaaaaaa
+aaaaaaaadddddbGdbbdddxdddwxdbGdaaaaaaaaa
+aaaaaaaaaddddbddbbeeeefeeeeedddaaaaaaaaa
+aaaaaaaaadddddbbbgZVWhzijkeldddaaaaaaaaa
+aaaaaaaaadddddbbbgmnzzzzzSeldddaaaaaaaaa
+aaaaaaaaaddddbbbbopqSXSzhgeldddaaaaaaaaa
+aaaaaaaaaddddbbdbbgzkzzrsgeldaaaaaaaaaaa
+aaaaaaaaaabdGbbbbbeeeefetgeedaaaaaaaaaaa
+aaaaaabaaabbbbbbbdddddxUdxddxaaaaaaaaaaa
+aaaaaaaaaabbbbbbbbbbwdddxddddaaaaaaaaaaa
+aaabaaaaaaaabbbbbbbbbddddaaaaaaaaaaaaaaa
+aaaaaaaaaaaaabdbbdddbGdddaaaaaaaaaaaaaaa
+aaaaabbaaaaaaaaabdGdbbbaaaaaaaaaaaaabaaa
+aaaabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaabbaaaaaaaaaaaaaaaabbbaaaaaaaaaddbbaa
+aaaaaaaaaaaaaaaaaaaaadbbbbaaaaaaaddddbaa
+aaaaaaaaaaaaaaaaaaaGbbbbddaaaaaaadbGbaaa
+aaaaaaaaaaaaaaaaaadbbbbdaaaaaaaaaGbbbaaa
+aaaaaaaaaaaaaaaaaddbbGddaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaababbbbbdddaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaabbbbbddddaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaabbbbGdddaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaabbdddddaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaabddaaaaaaaaaaaaaaaaaaaaa
+"}

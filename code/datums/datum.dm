@@ -13,6 +13,7 @@
 	var/weakref/weakref // Holder of weakref instance pointing to this datum
 	var/datum_flags = NONE
 	var/trigger_uid //CHOMPEdit
+	var/status_traits //CHOMPEdit
 
 #ifdef REFERENCE_TRACKING
 	var/tmp/running_find_references

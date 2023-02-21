@@ -19,6 +19,7 @@
 "ae" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/random/medical,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "af" = (
@@ -43,11 +44,15 @@
 /obj/structure/table/woodentable,
 /obj/item/clothing/mask/smokable/cigarette/cigar,
 /obj/item/weapon/material/ashtray/glass,
+/obj/effect/spider/stickyweb,
+/obj/random/medical,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ak" = (
 /obj/structure/flora/pottedplant/dead,
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "al" = (
@@ -57,6 +62,7 @@
 "am" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "an" = (
@@ -93,6 +99,8 @@
 /obj/structure/bed,
 /obj/item/weapon/bedsheet,
 /obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/pepper,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "av" = (
@@ -107,10 +115,14 @@
 /area/submap/Manor1)
 "ax" = (
 /obj/structure/closet/cabinet,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
+/obj/item/clothing/shoes/boots/winter/climbing,
+/obj/random/projectile/random,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ay" = (
 /obj/effect/decal/cleanable/blood/gibs/robot/limb,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "az" = (
@@ -132,6 +144,7 @@
 "aC" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/maglight,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aD" = (
@@ -143,13 +156,14 @@
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/cobweb2,
 /obj/item/clothing/head/hood/winter,
-/obj/item/clothing/shoes/boots/winter,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/shoes/boots/winter/climbing,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aF" = (
 /obj/structure/table/woodentable,
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/stack/material/void_opal,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aG" = (
@@ -185,7 +199,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aN" = (
-/obj/effect/decal/cleanable/cobweb2,
+/mob/living/simple_mob/animal/giant_spider/nurse,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aO" = (
@@ -212,6 +226,8 @@
 "aT" = (
 /obj/structure/closet/cabinet,
 /obj/random/projectile/shotgun,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
+/obj/item/clothing/shoes/boots/winter/climbing,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aU" = (
@@ -270,14 +286,16 @@
 "bf" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/head/hood/winter,
-/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/shoes/boots/winter/climbing,
 /obj/item/clothing/suit/storage/hooded/wintercoat,
 /obj/random/contraband,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bg" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bh" = (
@@ -289,12 +307,11 @@
 /area/submap/Manor1)
 "bi" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken0"
-	},
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bj" = (
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bk" = (
@@ -309,10 +326,6 @@
 /obj/item/clothing/accessory/sweater/blue,
 /turf/simulated/floor/carpet/blucarpet,
 /area/submap/Manor1)
-"bn" = (
-/obj/structure/window/reinforced/full,
-/turf/template_noop,
-/area/submap/Manor1)
 "bo" = (
 /obj/item/weapon/material/twohanded/baseballbat/metal,
 /turf/simulated/floor/carpet/blucarpet,
@@ -325,15 +338,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"br" = (
-/obj/structure/bed/chair/comfy/purp{
-	dir = 4;
-	icon_state = "comfychair_preview"
-	},
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken5"
-	},
-/area/submap/Manor1)
 "bs" = (
 /obj/structure/table,
 /turf/simulated/floor/holofloor/wood,
@@ -344,6 +348,7 @@
 	icon_state = "wooden_chair"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bu" = (
@@ -357,6 +362,7 @@
 "bv" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bw" = (
@@ -372,9 +378,14 @@
 /area/submap/Manor1)
 "by" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
 /obj/item/clothing/head/hood/winter,
-/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/shoes/boots/winter/climbing,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bz" = (
@@ -386,16 +397,19 @@
 /obj/structure/table/standard,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /obj/item/weapon/material/kitchen/utensil/fork,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bB" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/snacks/stew,
 /obj/item/weapon/reagent_containers/food/snacks/stew,
+/obj/item/weapon/reagent_containers/food/snacks/meat/worm,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bC" = (
 /obj/item/weapon/shovel,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bD" = (
@@ -404,6 +418,7 @@
 	icon_state = "wooden_chair"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bE" = (
@@ -423,16 +438,25 @@
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/snacks/sausage,
 /obj/item/weapon/reagent_containers/food/snacks/sausage,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/pottedplant/drooping,
+/obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/pottedplant/dead,
+/obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bJ" = (
@@ -444,6 +468,7 @@
 "bK" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/glass/bottle/stoxin,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bL" = (
@@ -461,11 +486,16 @@
 /area/submap/Manor1)
 "bO" = (
 /obj/machinery/icecream_vat,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bP" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/blucarpet,
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bQ" = (
 /obj/effect/decal/cleanable/blood,
@@ -488,11 +518,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
-"bV" = (
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken6"
-	},
-/area/submap/Manor1)
 "bW" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/holofloor/wood,
@@ -505,12 +530,19 @@
 /area/submap/Manor1)
 "bY" = (
 /obj/structure/table/rack,
+/obj/random/carp_plushie,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bZ" = (
 /obj/structure/closet/crate,
 /obj/item/stack/cable_coil/random_belt,
 /obj/random/cash,
+/obj/random/contraband,
+/obj/random/contraband/nofail,
+/obj/random/cash/huge,
+/obj/item/stack/material/gold{
+	amount = 18
+	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ca" = (
@@ -521,13 +553,15 @@
 "cb" = (
 /obj/structure/closet/cabinet,
 /obj/random/gun/random,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
+/obj/item/clothing/shoes/boots/winter/climbing,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cc" = (
 /obj/structure/closet/cabinet,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
-/obj/random/medical,
+/obj/random/energy,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cd" = (
@@ -544,11 +578,14 @@
 "cf" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/wallet/random,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cg" = (
 /obj/structure/flora/pottedplant/dead,
 /obj/effect/decal/cleanable/cobweb2,
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ch" = (
@@ -560,18 +597,22 @@
 /obj/structure/closet/crate,
 /obj/item/weapon/flame/lighter/random,
 /obj/random/powercell,
+/obj/random/contraband,
+/obj/random/contraband/nofail,
+/obj/random/cash/huge,
+/obj/item/weapon/material/sword,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cj" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/shoes/boots/winter,
-/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/shoes/boots/winter/climbing,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
 /obj/item/clothing/head/hood/winter,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ck" = (
-/obj/effect/decal/cleanable/spiderling_remains,
-/turf/simulated/floor/holofloor/wood,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/turf/simulated/floor/carpet/turcarpet,
 /area/submap/Manor1)
 "cl" = (
 /turf/simulated/floor/carpet/turcarpet,
@@ -587,6 +628,13 @@
 "cn" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/storage/wallet/random,
+/obj/random/contraband,
+/obj/random/contraband/nofail,
+/obj/random/cash/huge,
+/obj/item/stack/material/tritium{
+	amount = 20
+	},
+/obj/item/weapon/cell/super,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "co" = (
@@ -612,12 +660,15 @@
 /area/submap/Manor1)
 "cs" = (
 /obj/item/weapon/material/twohanded/spear,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ct" = (
 /obj/structure/closet/cabinet{
 	opened = 1
 	},
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
+/obj/item/clothing/shoes/boots/winter/climbing,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cu" = (
@@ -637,6 +688,7 @@
 "cx" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Manor1)
 "cy" = (
@@ -652,12 +704,8 @@
 /area/submap/Manor1)
 "cA" = (
 /obj/item/weapon/paper/crumpled,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"cB" = (
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken3"
-	},
 /area/submap/Manor1)
 "cC" = (
 /obj/effect/decal/cleanable/spiderling_remains,
@@ -666,11 +714,12 @@
 /area/submap/Manor1)
 "cD" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/suit/armor/vest,
+/obj/item/weapon/gun/energy/locked/frontier/handbow,
+/obj/item/weapon/gun/energy/locked/frontier/handbow,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cE" = (
-/obj/structure/closet/crate,
+/obj/random/humanoidremains,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cF" = (
@@ -694,6 +743,7 @@
 /area/submap/Manor1)
 "cI" = (
 /obj/item/stack/material/wood,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cJ" = (
@@ -719,6 +769,7 @@
 "cM" = (
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cN" = (
@@ -727,6 +778,810 @@
 "cO" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
+/area/submap/Manor1)
+"cP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"dt" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"dH" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/obj/effect/spider/stickyweb/dark,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"eq" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ew" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"eA" = (
+/turf/simulated/wall/wood{
+	can_open = 1
+	},
+/area/submap/Manor1)
+"eI" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/sandwich,
+/obj/item/weapon/gun/projectile/revolver/cappeacekeeper,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"eL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"eT" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"fo" = (
+/obj/structure/table/rack,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"fx" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"fT" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"gc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"gf" = (
+/obj/structure/coatrack,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"gF" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"gY" = (
+/obj/structure/table/woodentable,
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"hu" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/item/slime_extract/rainbow,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"hM" = (
+/obj/structure/bed/chair/wood{
+	dir = 1;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"hN" = (
+/obj/structure/table/woodentable,
+/obj/item/device/soulstone,
+/obj/item/weapon/spellbook/oneuse/smoke,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ie" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"iX" = (
+/obj/structure/table/woodentable,
+/obj/random/projectile/shotgun,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ja" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"jc" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"jd" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"jl" = (
+/mob/living/simple_mob/animal/giant_spider/frost,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Manor1)
+"jr" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/sandwich,
+/obj/item/weapon/storage/firstaid/combat,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"jD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/obj/item/weapon/material/whip,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"jG" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"jJ" = (
+/obj/structure/flora/pottedplant/dead,
+/obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"jK" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/blucarpet,
+/area/submap/Manor1)
+"kb" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ks" = (
+/obj/structure/flora/pottedplant/dead,
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"kv" = (
+/obj/structure/simple_door/wood,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"le" = (
+/obj/random/humanoidremains,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"lz" = (
+/mob/living/simple_mob/animal/giant_spider/electric,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"lU" = (
+/obj/structure/flora/pottedplant/drooping,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"my" = (
+/obj/structure/table,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"nq" = (
+/obj/effect/spider/stickyweb,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"nr" = (
+/obj/structure/table/woodentable,
+/obj/effect/spider/stickyweb,
+/obj/item/weapon/gun/energy/medigun,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"oM" = (
+/obj/structure/table/woodentable,
+/obj/item/trash/candle,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"pf" = (
+/mob/living/simple_mob/animal/giant_spider/ion,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"pl" = (
+/mob/living/simple_mob/animal/giant_spider/broodmother,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"pA" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper{
+	info = "I am done with all of you. Father has gone missing, and no one cares. Mother contunies to stay up all day, chanting, and staring into space. Brother keeps going out hunting with his gang of friends. The spiders are watching me and just keep getting bigger. I am done. After the feast tonight, I am leaving, and I am taking our squish butler.";
+	name = "Goodbye"
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"pI" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"pR" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/mob/living/simple_mob/animal/giant_spider/electric,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"rg" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"rj" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"ro" = (
+/obj/item/weapon/bone/skull/unknown,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"rS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"sD" = (
+/obj/structure/table/woodentable,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"sL" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"sV" = (
+/obj/structure/sink{
+	pixel_y = 30
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Manor1)
+"tt" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"tM" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/snacks/lasagna,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ua" = (
+/obj/item/weapon/material/knife,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ut" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"uA" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/shoes/boots/winter/climbing,
+/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
+/obj/item/clothing/head/hood/winter,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"vd" = (
+/obj/structure/table/woodentable,
+/obj/item/toy/plushie/carp/void,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"vI" = (
+/mob/living/simple_mob/animal/giant_spider/thermic,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"wp" = (
+/mob/living/simple_mob/animal/giant_spider/electric,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"ws" = (
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ww" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/snacks/sausage,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"xH" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"xI" = (
+/obj/item/weapon/bone/ribs,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"yI" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"zV" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/snacks/jelliedtoast,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Aq" = (
+/mob/living/simple_mob/animal/giant_spider/nurse,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"At" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/thermic,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"AJ" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"AM" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"AQ" = (
+/obj/structure/table/woodentable,
+/obj/random/explorer_shield,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Bb" = (
+/mob/living/simple_mob/construct/wraith,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Bz" = (
+/obj/item/weapon/bone/leg,
+/turf/simulated/floor/carpet/turcarpet,
+/area/submap/Manor1)
+"BC" = (
+/obj/random/humanoidremains,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"BE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"CL" = (
+/obj/effect/rune,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"CO" = (
+/obj/structure/bed/chair/wood{
+	dir = 1;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"DL" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"DW" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/gun/energy/locked/frontier/rifle,
+/obj/item/clothing/suit/storage/hooded/techpriest{
+	armor = list("melee"=20,"bullet"=10,"laser"=50,"energy"=60,"bomb"=25,"bio"=50,"rad"=25)
+	},
+/obj/item/weapon/shield/energy/imperial,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Fc" = (
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/spider/stickyweb,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"FA" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"FH" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"FU" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Gg" = (
+/obj/structure/loot_pile/surface/bones,
+/obj/effect/spider/stickyweb,
+/obj/item/weapon/gun/projectile/gyropistol,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"GM" = (
+/mob/living/simple_mob/animal/giant_spider/ion,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"GU" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/spider/stickyweb/dark,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Hd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Hl" = (
+/mob/living/simple_mob/animal/giant_spider/nurse,
+/turf/simulated/floor/carpet/turcarpet,
+/area/submap/Manor1)
+"Hu" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"HJ" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Ig" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/mob/living/simple_mob/animal/giant_spider/electric,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Iz" = (
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/webslinger,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Manor1)
+"Jh" = (
+/obj/structure/toilet{
+	dir = 8;
+	icon_state = "toilet00"
+	},
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Manor1)
+"Jn" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Js" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"KN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Lv" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"LR" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Md" = (
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Ms" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/obj/item/weapon/gun/projectile/automatic/advanced_smg,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ML" = (
+/obj/structure/bed/chair/comfy/purp{
+	dir = 4;
+	icon_state = "comfychair_preview"
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"MZ" = (
+/obj/effect/spider/stickyweb/dark,
+/mob/living/simple_mob/animal/giant_spider/nurse,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"Nc" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/nurse,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ND" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/knife/ritual,
+/obj/item/weapon/whetstone,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Oo" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ON" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"OZ" = (
+/obj/structure/table/rack,
+/obj/random/grenade/lethal,
+/obj/random/grenade/lethal,
+/obj/random/grenade/lethal,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Pg" = (
+/obj/item/weapon/bone/arm,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/turcarpet,
+/area/submap/Manor1)
+"Pi" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/gun/projectile/deagle/gold,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Pw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"PY" = (
+/obj/structure/table/standard,
+/obj/effect/spider/stickyweb,
+/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread/filled,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Qh" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/obj/effect/spider/stickyweb/dark,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"QW" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"RI" = (
+/obj/structure/table/woodentable,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"RX" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/gun/energy/hooklauncher/ring,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Sl" = (
+/obj/item/weapon/material/kitchen/utensil/fork,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Sx" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper,
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Sy" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"SC" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Tv" = (
+/obj/structure/flora/pottedplant/drooping,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Uh" = (
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"UD" = (
+/mob/living/simple_mob/animal/giant_spider/webslinger,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"UF" = (
+/mob/living/simple_mob/animal/giant_spider/webslinger,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"VX" = (
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/turf/simulated/floor/carpet/bcarpet,
+/area/submap/Manor1)
+"VY" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Manor1)
+"WG" = (
+/obj/structure/table/woodentable,
+/obj/random/medical,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"WS" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/turcarpet,
+/area/submap/Manor1)
+"Xc" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"XE" = (
+/obj/item/weapon/bone/leg,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"YL" = (
+/obj/effect/spider/stickyweb/dark,
+/obj/item/weapon/bone,
+/obj/item/weapon/bone,
+/obj/item/weapon/bone/arm,
+/obj/item/weapon/bone/arm,
+/obj/item/weapon/bone/leg,
+/obj/item/weapon/bone/leg,
+/obj/item/weapon/bone/ribs,
+/obj/item/weapon/bone/ribs,
+/obj/item/weapon/bone/skull,
+/obj/item/weapon/gun/energy/pummeler,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"YY" = (
+/obj/item/weapon/bone,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"Za" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/obj/random/humanoidremains,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ZG" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ZK" = (
+/obj/structure/bed/chair/wood{
+	dir = 8;
+	icon_state = "wooden_chair"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"ZV" = (
+/obj/effect/decal/cleanable/blood/drip,
+/mob/living/simple_mob/animal/giant_spider/nurse,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 
 (1,1,1) = {"
@@ -916,8 +1771,8 @@ aa
 aa
 aa
 ab
-bn
-bn
+ac
+ac
 ab
 aa
 aa
@@ -959,7 +1814,7 @@ aa
 ab
 ab
 ag
-ag
+xI
 ab
 ab
 aa
@@ -1009,9 +1864,9 @@ ab
 ab
 ab
 ab
+aN
 ag
-ag
-ag
+XE
 ag
 ab
 ab
@@ -1035,23 +1890,23 @@ ax
 ab
 ag
 as
-ag
-ag
-aD
+an
+an
+Hu
 ab
-aD
+QW
+aK
+YY
 ag
 ag
-ag
-ag
-ag
-ag
-ag
-ag
-az
+aN
+aK
+aK
+aK
+oM
 ab
 bR
-ag
+cE
 ag
 ag
 bQ
@@ -1073,32 +1928,32 @@ aa
 ab
 ab
 at
-ag
+an
 as
 ag
 ab
 ag
-ag
-al
+Pw
+bz
 ab
-al
-bh
+RI
+CO
 ag
 ag
 ag
 ag
 ag
-ag
-ag
-al
+ro
+aK
+RI
 ab
 az
 ag
-ag
+xI
 bq
 bQ
 ag
-ag
+aN
 al
 ab
 ab
@@ -1121,10 +1976,10 @@ ag
 ab
 aT
 aM
-aO
+AJ
 ab
 bg
-ag
+cE
 bk
 aO
 al
@@ -1132,7 +1987,7 @@ by
 ag
 ag
 ag
-ag
+aK
 ab
 bS
 ag
@@ -1197,21 +2052,21 @@ aa
 aa
 ab
 ak
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-al
-az
-al
-ag
-ag
+an
+an
+an
+KN
+an
+KN
+aK
+aK
+aK
+aK
+RI
+oM
+RI
+aK
+aK
 an
 an
 ag
@@ -1222,10 +2077,10 @@ bq
 ag
 bq
 ag
-ah
+aI
 ab
-cv
-cw
+sV
+VY
 cw
 cw
 cw
@@ -1238,21 +2093,21 @@ cN
 aa
 aa
 ab
-ag
+KN
+ar
+ar
+ar
 aq
 aq
 aq
 aq
+le
+AM
+AM
+AM
+AM
 aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
+VX
 ar
 ar
 ar
@@ -1262,11 +2117,11 @@ aq
 aq
 aq
 aq
+wp
 aq
-aq
-aq
-as
-cw
+AM
+kv
+Iz
 ab
 cF
 ab
@@ -1280,18 +2135,18 @@ cN
 aa
 aa
 ab
-ag
+an
+rS
 aq
-aq
 ag
 ag
 ag
 ag
 ag
+UF
 ag
-ag
-ag
-ag
+aK
+aK
 ag
 ag
 an
@@ -1305,12 +2160,12 @@ ag
 ag
 ag
 ag
-ag
-ag
+aK
+aK
 ab
 cx
 ab
-cG
+Jh
 ab
 cG
 ab
@@ -1322,7 +2177,7 @@ cN
 aa
 aa
 ab
-ag
+aK
 aq
 aq
 ag
@@ -1364,16 +2219,16 @@ cN
 aa
 aa
 ab
-al
+RI
 aq
-aq
+UD
 az
 ab
 aF
 ag
 ag
-ag
-ag
+gF
+ab
 ag
 ag
 ag
@@ -1394,7 +2249,7 @@ bW
 ab
 cy
 cw
-cw
+jl
 cw
 cw
 ab
@@ -1411,10 +2266,10 @@ ar
 aq
 al
 ab
-aG
+aH
+FH
+CL
 ag
-aU
-aU
 aU
 ag
 aU
@@ -1448,21 +2303,21 @@ cN
 aa
 aa
 ab
-al
-ar
+RI
+eL
 aq
 al
 ab
+hN
+bh
+Bb
+DW
+ab
 ag
 ag
-ag
-ag
-ag
-ag
-ag
-ag
+cE
 an
-an
+yI
 an
 an
 an
@@ -1490,15 +2345,15 @@ cN
 aa
 aa
 ab
-ag
-ar
+aK
+eL
 aq
 ag
 ab
-al
+gF
 ag
-aU
-aU
+CL
+FH
 aU
 ag
 aU
@@ -1532,16 +2387,16 @@ cN
 aa
 aa
 ab
-an
+aA
 ar
 ar
 an
 ab
-aH
+ND
 ag
-ag
-ag
-ag
+FH
+gF
+ab
 an
 an
 an
@@ -1553,7 +2408,7 @@ ag
 ag
 ai
 ab
-an
+aA
 an
 ab
 ab
@@ -1574,7 +2429,7 @@ cN
 aa
 ab
 ab
-an
+aA
 ar
 ar
 an
@@ -1595,15 +2450,15 @@ ab
 ab
 ab
 ab
-an
-an
+aA
+aA
 ab
 bY
 ag
 ag
 ag
-bY
-bY
+fo
+OZ
 ab
 ab
 ab
@@ -1616,35 +2471,35 @@ cN
 ab
 ab
 ag
-ag
+cE
 ar
 ar
 an
 ab
-aI
+jJ
 aK
 ag
 ag
 ag
+cE
 ag
-ag
-ag
-ag
-an
-an
-an
-an
+fT
+aK
+aA
+aA
+aA
+Ms
 bH
 ab
 ab
-an
-an
+aA
+aA
 ab
+lz
 ag
+cE
 ag
-ag
-ag
-ag
+aN
 cC
 ab
 ab
@@ -1670,16 +2525,16 @@ ad
 ad
 ad
 ad
-ad
-ad
-ad
+bP
+bP
+bP
 bt
 bt
-an
-an
+Nc
+aA
 ab
 ab
-an
+aA
 an
 ab
 bZ
@@ -1700,7 +2555,7 @@ cN
 ac
 ae
 ag
-ag
+vI
 aq
 ar
 aB
@@ -1708,17 +2563,17 @@ ab
 aK
 aP
 al
+Pi
+SC
 al
-al
-al
-al
-aG
-al
-al
-al
+DL
+Sx
+Sy
+RI
+eI
 al
 bh
-an
+aA
 ab
 ab
 as
@@ -1751,27 +2606,27 @@ ag
 aP
 aV
 al
+kb
+sD
+dH
+jd
+xH
 al
-al
-al
-al
-al
-al
-al
+SC
 al
 bh
-ag
+aK
 ab
 al
 ag
 ag
-al
-al
-cj
+RI
+RI
+uA
 ab
 ab
-cz
-cE
+Fc
+cD
 ab
 aa
 aa
@@ -1782,7 +2637,7 @@ cN
 (26,1,1) = {"
 cN
 ac
-ag
+Md
 ag
 an
 ar
@@ -1790,16 +2645,16 @@ ar
 ag
 ab
 ag
-ag
+fT
 af
 af
 af
-af
-af
-af
-af
-af
-af
+ZG
+Qh
+ZK
+ZK
+Oo
+pR
 af
 ag
 ag
@@ -1808,9 +2663,9 @@ al
 ag
 ag
 ag
-ag
-ck
-co
+Md
+cC
+gf
 ab
 ab
 ab
@@ -1824,25 +2679,25 @@ cN
 (27,1,1) = {"
 cN
 ab
-ah
-ag
+aI
+nq
 an
 ar
 ar
 an
 ab
 aL
+BC
 aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
+bU
+BE
+ie
+cP
+cP
+MZ
+cP
+bU
+rj
 aQ
 aQ
 bN
@@ -1852,7 +2707,7 @@ aQ
 bU
 bU
 bU
-bU
+BE
 cr
 bU
 bU
@@ -1866,8 +2721,8 @@ cN
 (28,1,1) = {"
 cN
 ab
-ai
-ag
+Tv
+aK
 an
 ar
 ar
@@ -1875,18 +2730,18 @@ an
 ab
 aL
 aQ
+ja
+Gg
+jD
+BE
+BE
+pl
+ON
+YL
+ON
 aQ
 aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
+rg
 bN
 aQ
 aQ
@@ -1908,30 +2763,30 @@ cN
 (29,1,1) = {"
 cN
 ac
-ag
-ag
+Md
+aK
 an
 ar
 ar
 ag
 ab
 ag
+eq
+bP
+bt
+Za
+bt
+FU
+pI
+Xc
+FA
+Ig
+GU
 ag
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ag
-ag
+aK
 ab
 al
-ag
+aN
 ag
 ag
 ag
@@ -1950,29 +2805,29 @@ cN
 (30,1,1) = {"
 cN
 ac
-ad
-ag
-ag
+bP
+aK
+aK
 ar
-ar
+At
 ag
 ab
-ag
-aP
-aV
-al
-al
-al
-al
-al
-al
-al
-al
-al
-bh
-an
+aK
+ut
+HJ
+gY
+LR
+RI
+Lv
+fx
+jc
+sD
+Jn
+sD
+hM
+aA
 ab
-al
+RI
 ag
 ag
 al
@@ -1980,8 +2835,8 @@ ca
 cj
 ab
 ab
-az
-al
+oM
+RI
 ab
 aa
 aa
@@ -1993,26 +2848,26 @@ cN
 cN
 ac
 aj
-ag
+aK
 ag
 ar
 ar
 ag
 ab
-ag
-aP
+aK
+ut
+nr
+RI
+Sy
 al
+kb
 al
+SC
 al
-al
-al
-al
-al
-al
-al
-bz
+jr
+jd
 bD
-an
+aA
 ab
 ab
 as
@@ -2021,9 +2876,9 @@ ab
 ab
 ab
 ab
-ag
-af
-ag
+aK
+jG
+nq
 ab
 aa
 aa
@@ -2034,27 +2889,27 @@ cN
 (32,1,1) = {"
 cN
 ac
-af
-ag
+jG
+aK
 ag
 aq
 ar
 ag
 ab
-ag
-ag
+aK
+Aq
+jG
+jG
 af
 af
 af
 af
-af
-af
-af
+Js
 af
 bu
-bu
-an
-an
+dt
+ew
+aA
 ab
 ab
 ag
@@ -2064,8 +2919,8 @@ cb
 ag
 ag
 ag
-ag
-ag
+aK
+aK
 ab
 aa
 aa
@@ -2083,19 +2938,19 @@ aq
 aq
 ag
 ab
-ah
+jJ
+aK
+aK
+ag
+ag
+fT
 ag
 ag
 ag
 ag
-ag
-ag
-ag
-ag
-ag
-an
-an
-an
+aA
+aA
+Hd
 bI
 ab
 ab
@@ -2105,9 +2960,9 @@ ab
 cc
 cl
 cl
+Bz
 cl
-cl
-ag
+aK
 ab
 ab
 aa
@@ -2146,11 +3001,11 @@ ag
 ab
 ag
 cl
+Hl
 cl
 cl
-cl
-ag
-ah
+aK
+aI
 ab
 ab
 ab
@@ -2169,18 +3024,18 @@ ag
 ab
 ag
 aR
-aR
-aR
+tM
+zV
 bb
 ag
 ag
 ag
 ag
 ag
+Sl
 ag
 ag
-ag
-ag
+UF
 bO
 ab
 ag
@@ -2192,8 +3047,8 @@ cl
 cl
 cl
 ag
-ag
-al
+aK
+RI
 cM
 ab
 aa
@@ -2204,10 +3059,10 @@ cN
 aa
 aa
 ab
-ag
+aK
+UD
 aq
-aq
-ag
+aK
 ab
 aM
 ag
@@ -2215,14 +3070,14 @@ ag
 ag
 ag
 ag
+aN
 ag
 ag
 ag
 ag
 ag
 ag
-ag
-ag
+aK
 aK
 ab
 ag
@@ -2236,7 +3091,7 @@ cl
 cl
 cl
 cl
-al
+RI
 ab
 aa
 cN
@@ -2246,12 +3101,12 @@ cN
 aa
 aa
 ab
-ag
+aK
 aq
-aq
-ag
+AM
+aK
 ab
-ag
+aK
 aR
 aW
 aZ
@@ -2261,7 +3116,7 @@ ag
 ag
 ag
 ag
-aR
+bF
 bA
 bE
 bF
@@ -2275,10 +3130,10 @@ cl
 cl
 cl
 cl
+ck
 cl
 cl
-cl
-al
+RI
 ab
 aa
 cN
@@ -2288,32 +3143,32 @@ cN
 aa
 aa
 ab
-al
-aq
-aq
-al
+RI
+AM
+AM
+RI
 ab
-ag
+aK
 aR
 aX
-aR
+ww
 bc
 ag
-ag
+ua
 ag
 ag
 ag
 bv
-aR
 bF
+PY
 bJ
 aK
 ab
-ag
+aK
 ag
 ab
-ag
-cl
+aK
+WS
 cl
 cl
 cl
@@ -2330,33 +3185,33 @@ cN
 aa
 aa
 ab
-al
-aq
-aq
-al
+RI
+AM
+AM
+RI
 ab
+aK
 ag
 ag
 ag
 ag
+cE
 ag
 ag
+aN
 ag
 ag
-ag
-ag
-ag
-ag
-ag
-ag
+aK
+aK
+aK
+aK
+ab
+aK
 ag
 ab
-ag
-ag
-ab
-ag
-cl
-cl
+aK
+Pg
+WS
 cl
 cl
 cl
@@ -2372,34 +3227,34 @@ cN
 aa
 aa
 ab
-al
-aq
+RI
+AM
 aq
 aC
 ab
-aN
+cz
 aS
 aY
 ba
 bd
 ag
 ag
-ag
+ws
 ag
 ag
 ag
 bB
 bG
 bK
-ag
+aK
 ab
-ag
-ag
+aK
+aK
 ab
 cg
-aD
-al
-al
+QW
+RI
+RI
 ag
 cl
 cl
@@ -2414,10 +3269,10 @@ cN
 aa
 aa
 ab
-ag
+aK
+AM
 aq
-aq
-ag
+aK
 ab
 ab
 ab
@@ -2435,16 +3290,16 @@ ab
 ab
 ab
 ab
-ag
-ag
+aK
+aK
 ab
 ab
 ab
 ab
 ab
 ag
-cl
-cl
+Bz
+Hl
 cl
 ag
 ab
@@ -2456,39 +3311,39 @@ cN
 aa
 aa
 ab
-ag
+aK
 aq
 aq
-ag
-ag
-ag
+aK
+aK
+lz
 ag
 al
+aK
+aK
+aK
+aK
+aK
 ag
 ag
 ag
 ag
 ag
 ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
+aK
+aK
+aK
+Md
+aK
+aK
+aK
 ah
 ab
 ag
 cl
 cl
 cl
-ag
+aK
 ab
 aa
 cN
@@ -2507,6 +3362,8 @@ aq
 aq
 aq
 aq
+AM
+sL
 aq
 aq
 aq
@@ -2516,21 +3373,19 @@ aq
 aq
 aq
 aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
+AM
+AM
+AM
+AM
+pf
 aq
 aq
 as
 ag
 cl
 cl
-cl
-ag
+WS
+aK
 ab
 aa
 cN
@@ -2540,39 +3395,39 @@ cN
 aa
 aa
 ab
-ai
+lU
+GM
+ag
+ag
+ag
+Uh
+ag
+aK
+aK
+aK
+aK
+aK
 ag
 ag
 ag
 ag
 ag
 ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
+aK
+aK
+aK
+aK
+aK
+aK
 ag
 ag
 ah
 ab
 ah
 ag
-ag
-ag
-ah
+aK
+aK
+ks
 ab
 aa
 cN
@@ -2641,20 +3496,20 @@ ag
 ag
 ag
 ag
-al
 aD
-al
-al
+ab
 az
+pA
+ab
 al
 ag
 ag
-bq
-ag
+tt
+aK
 cs
-ag
+aK
 cA
-ag
+aK
 cI
 ab
 ab
@@ -2667,8 +3522,8 @@ aa
 aa
 ab
 ap
-ag
-ag
+aN
+hu
 ab
 ag
 ag
@@ -2683,19 +3538,19 @@ bl
 bo
 bl
 bl
-bl
-bl
-bl
-bw
-bl
-bl
+RI
+ab
+RX
+eT
+ab
+iX
 bl
 bp
 bw
 bw
-bl
+jK
 cA
-bq
+ZV
 cI
 ab
 ab
@@ -2712,32 +3567,32 @@ ab
 ab
 aw
 ab
-ag
-ag
-as
+aN
 ag
 as
 ag
+as
 ag
+aN
 ab
 ag
 bm
 bp
 bw
-bl
-bl
-bl
-bl
-bP
-bP
+jK
+RI
+ab
+vd
+an
+ab
+al
 bT
-bl
 ch
 bl
 bl
 bw
-cB
 ag
+aK
 ab
 ab
 aa
@@ -2755,7 +3610,7 @@ ab
 ab
 ab
 aE
-al
+AQ
 ab
 ag
 ab
@@ -2765,18 +3620,18 @@ ab
 ag
 ag
 bq
+Aq
+aA
+gc
+eA
+KN
+an
+ab
+WG
 ag
 ag
 ag
-al
-al
-al
-al
-ag
-bV
-ag
-ag
-ag
+cE
 ag
 ag
 ab
@@ -2806,8 +3661,8 @@ ab
 ab
 ab
 ag
-br
 bx
+ML
 bC
 ab
 ab
@@ -2815,7 +3670,7 @@ ab
 ab
 ab
 ab
-ag
+lz
 bx
 cm
 cp
@@ -2849,7 +3704,7 @@ aa
 ab
 ab
 bs
-bs
+my
 ab
 ab
 aa

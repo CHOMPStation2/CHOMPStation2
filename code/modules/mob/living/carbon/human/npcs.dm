@@ -12,3 +12,4 @@
 	real_name = name
 	w_uniform = new /obj/item/clothing/under/punpun(src)
 	regenerate_icons()
+	can_be_drop_prey = TRUE //CHOMP Add

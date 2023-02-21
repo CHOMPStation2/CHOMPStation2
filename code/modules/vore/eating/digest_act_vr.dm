@@ -9,6 +9,9 @@
 			var/obj/item/device/pda/P = src
 			if(P.id)
 				P.id = null
+
+		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+			V.Destroy() //Destroy the voice.
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
@@ -66,6 +69,8 @@
 			var/obj/item/device/pda/P = src
 			if(P.id)
 				P.id = null
+		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+			V.Destroy() //Destroy the voice.
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
@@ -103,7 +108,7 @@
 	return FALSE
 /obj/item/weapon/pinpointer/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
-/obj/item/blueprints/digest_act(var/atom/movable/item_storage = null)
+/obj/item/areaeditor/blueprints/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
 /obj/item/weapon/disk/nuclear/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
@@ -122,7 +127,8 @@
 		icon = 'icons/obj/card_vr.dmi'
 		icon_state = "[initial(icon_state)]_digested"
 	else
-		sprite_stack += "digested"
+		if(!sprite_stack.Find("digested"))
+			sprite_stack += "digested"
 	update_icon()
 	return FALSE
 
@@ -167,9 +173,7 @@
 	//Replace this with a VORE setting so all types of posibrains can/can't be digested on a whim
 	return FALSE
 
-/obj/item/organ/internal/nano/digest_act(atom/movable/item_storage = null)
-	//Make proteans recoverable too
-	return FALSE
+//CHOMPEdit - moved prot organ digest to their appropriate file
 
 // Gradual damage measurement
 /obj/item

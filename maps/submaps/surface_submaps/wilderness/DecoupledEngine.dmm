@@ -28,19 +28,19 @@
 "ah" = (
 /obj/item/weapon/arrow/rod,
 /obj/item/stack/material/steel,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "ai" = (
 /obj/item/stack/material/steel,
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "aj" = (
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "ak" = (
 /obj/structure/lattice,
 /obj/structure/girder/displaced,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "am" = (
 /obj/item/weapon/arrow/rod,
@@ -51,12 +51,12 @@
 /area/submap/DecoupledEngine)
 "ao" = (
 /obj/structure/lattice,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "ap" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aq" = (
 /obj/structure/girder,
@@ -92,12 +92,12 @@
 "ax" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "ay" = (
 /obj/effect/floor_decal/rust,
 /obj/item/stack/material/steel,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "az" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -105,14 +105,14 @@
 	icon_state = "intact"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aA" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aB" = (
 /obj/structure/shuttle/engine/heater{
@@ -124,7 +124,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aD" = (
 /obj/structure/lattice,
@@ -150,19 +150,19 @@
 /obj/machinery/fusion_fuel_compressor,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aH" = (
 /obj/machinery/fusion_fuel_injector/mapped,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aI" = (
 /obj/effect/decal/cleanable/blood/oil/streak{
 	amount = 0
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aJ" = (
 /obj/machinery/power/rad_collector,
@@ -171,7 +171,7 @@
 	dir = 9;
 	icon_state = "warning"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aK" = (
 /obj/effect/floor_decal/rust,
@@ -179,7 +179,7 @@
 	dir = 5;
 	icon_state = "warning"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aL" = (
 /obj/structure/grille/broken,
@@ -189,12 +189,12 @@
 	},
 /obj/item/weapon/material/shard/phoron,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aM" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aN" = (
 /obj/structure/shuttle/engine/heater{
@@ -205,7 +205,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aO" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -216,7 +216,7 @@
 /area/submap/DecoupledEngine)
 "aP" = (
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aQ" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -225,7 +225,7 @@
 	name = "Engine Access";
 	req_one_access = list(11)
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aR" = (
 /obj/structure/closet/crate/oldreactor{
@@ -236,14 +236,14 @@
 	dir = 8;
 	icon_state = "warning"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aS" = (
 /obj/structure/closet/crate/oldreactor{
 	anchored = 1
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aT" = (
 /obj/item/poi/brokenoldreactor{
@@ -254,12 +254,12 @@
 	dir = 4;
 	icon_state = "warning"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aU" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aV" = (
 /obj/structure/grille,
@@ -271,7 +271,7 @@
 	dir = 8;
 	icon_state = "phoronrwindow"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aW" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -279,11 +279,11 @@
 	icon_state = "intact"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aX" = (
 /obj/structure/shuttle/engine/router,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "aY" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -293,11 +293,11 @@
 /area/submap/DecoupledEngine)
 "aZ" = (
 /obj/item/stack/material/steel,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "ba" = (
 /obj/item/stack/rods,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bb" = (
 /obj/structure/lattice,
@@ -327,7 +327,7 @@
 "bd" = (
 /obj/machinery/atmospherics/pipe/tank/carbon_dioxide,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "be" = (
 /obj/machinery/power/rad_collector,
@@ -340,14 +340,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bf" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/window/phoronreinforced,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bg" = (
 /obj/machinery/power/rad_collector,
@@ -360,32 +360,32 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bh" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bi" = (
 /obj/machinery/atmospherics/tvalve/digital{
 	dir = 8
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bj" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bk" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bl" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -401,30 +401,30 @@
 	dir = 8;
 	icon_state = "phoronrwindow"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bm" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "propulsion_l"
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bn" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/closet/crate/radiation,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bo" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bp" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/rcd,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bq" = (
 /obj/structure/sign/warning/radioactive,
@@ -475,11 +475,11 @@
 /area/submap/DecoupledEngine)
 "bw" = (
 /obj/structure/girder,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bx" = (
 /obj/structure/girder/displaced,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 
 (1,1,1) = {"

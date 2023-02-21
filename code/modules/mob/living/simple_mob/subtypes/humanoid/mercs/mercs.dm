@@ -42,6 +42,7 @@
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 
+
 ////////////////////////////////
 //		Grenade Attack
 ////////////////////////////////
@@ -175,7 +176,7 @@
 
 /mob/living/simple_mob/humanoid/merc/ranged/smg/sol
 	icon_state = "bluforranged_smg"
-	icon_living = "blueforranged_smg"
+	icon_living = "bluforranged_smg"	//CHOMPEdit - Fixes typo that makes smg mercs invis sometimes
 
 	corpse = /obj/effect/landmark/mobcorpse/solarpeacekeeper
 	loot_list = list(/obj/item/weapon/gun/projectile/automatic/c20r = 100)

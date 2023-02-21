@@ -34,6 +34,8 @@
 		"catgirlblack",
 		"catgirlbrown"
 	)
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/catgirl/New()
 	..()

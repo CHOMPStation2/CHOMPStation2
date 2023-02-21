@@ -345,7 +345,7 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bv" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/template_noop)
 
 (1,1,1) = {"

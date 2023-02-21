@@ -8,22 +8,17 @@
 	icon = 'icons/obj/items_ch.dmi'
 	icon_state = "chomp_present"
 	item_state = "chomp_present"
-	var/chaos = "I can do anything!"
+	plane = ABOVE_MOB_PLANE
+	var/chaos
 
 /obj/item/weapon/a_gift/advanced/New()
 	..()
-	pixel_x = rand(-10,10)
-	pixel_y = rand(-10,10)
-	chaos = rand(1, 100)
-	if(chaos == 1)
+	icon_state += "_[pick("g","r","b","y","p")]"
+	if(prob(1))
 		icon_state = "chomp_present_chaos"
 		chaos = TRUE
 		name = "chaotic present"
 		desc = "The casino dev messed up and gave you the wrong present! This one pulses with potential for good or evil!"
-	else
-		chaos = FALSE
-
-	item_state = icon_state
 	return
 
 /obj/item/weapon/a_gift/advanced/attack_self(mob/M as mob) //WIP - ALWAYS add more items to list! - Jack
@@ -178,7 +173,7 @@
 	var/obj/item/I = null
 
 
-	if(chaos == TRUE)
+	if(chaos)
 		if(!ispath(gift_type_chaos,/obj/item))	return
 		I = new gift_type_chaos(M)
 

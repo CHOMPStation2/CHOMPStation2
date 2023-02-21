@@ -22,31 +22,7 @@ cfg/
 !/.vscode/settings.json
 !/.vscode/tasks.json
 
-ch-merge-upstream-pull-request.sh
-code/game/gamemodes/technomancer/spells/projectile/overload.dm
-code/game/gamemodes/technomancer/spells/projectile/overload.dm
-code/modules/client/preference_setup/loadout/loadout_xeno.dm
 temp.dmi
-/maps/RandomZLevels/backup/blackmarketpackers.dmm
-/maps/backup/virgo-1.dmm
-/maps/backup/virgo-2.dmm
-/tools/midi2piano/.vs/midi2piano/v14/.suo
-/tools/midi2piano/midi2piano/bin/x86/Debug/Sanford.Multimedia.Midi.dll
-/tools/midi2piano/midi2piano/bin/x86/Debug/midi2piano.exe
-/tools/midi2piano/midi2piano/bin/x86/Debug/midi2piano.pdb
-/tools/midi2piano/midi2piano/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-/tools/midi2piano/midi2piano/obj/x86/Debug/midi2piano.Form1.resources
-/tools/midi2piano/midi2piano/obj/x86/Debug/midi2piano.csproj.FileListAbsolute.txt
-/tools/midi2piano/midi2piano/obj/x86/Debug/midi2piano.csproj.GenerateResource.Cache
-/tools/midi2piano/midi2piano/obj/x86/Debug/midi2piano.csprojResolveAssemblyReference.cache
-/tools/midi2piano/midi2piano/obj/x86/Debug/midi2piano.exe
-/tools/midi2piano/midi2piano/obj/x86/Debug/midi2piano.pdb
-/maps/backup
-/maps/original
-/maps/RandomZLevels/backup
-/tools/midi2piano.zip
-/maps/yw/backup
 
-icons/mecha/mecha_ch.dmi
-
-.vscode/settings.json
+node_modules/
+package-lock.json

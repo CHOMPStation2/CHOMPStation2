@@ -6,8 +6,11 @@
 
 
 /datum/event/spider_infestation/setup()
+	if(prob(75) && severity == 3) //CHOMP Add 75% chance of the event to even occur if chosen and is major severity
+		kill()
+		return
 	announceWhen = rand(announceWhen, announceWhen + 60)
-	spawncount = rand(6 * severity, 12 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: Tripled amount spawned
+	spawncount = rand(6 * severity, 14 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14
 	sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
@@ -22,11 +25,13 @@
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 			continue
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
-			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
-				vents += temp_vent
+			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
+				var/area/A = get_area(temp_vent)
+				if(!(A.forbid_events))
+					vents += temp_vent
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
-		new /obj/effect/spider/spiderling/virgo(vent.loc) //VOREStation Edit - No nurses
+		new /obj/effect/spider/spiderling(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
 		vents -= vent
 		spawncount--

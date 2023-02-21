@@ -6,7 +6,7 @@
 	icon_living = "boxfox"
 	icon_dead = "dead"
 	icon_rest = "boxfox_rest"
-	icon = 'icons/mob/demon_ch.dmi'
+	icon = 'modular_chomp/icons/mob/demon_ch.dmi'
 	vis_height = 47
 
 	faction = "demon"
@@ -18,7 +18,7 @@
 	has_hands = TRUE
 	seedarkness = FALSE
 	attack_sound = 'sound/misc/demonattack.ogg'
-	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
+	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_DAEMON,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
 
 	melee_damage_lower = 20
 	melee_damage_upper = 15

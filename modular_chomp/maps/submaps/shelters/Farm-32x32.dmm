@@ -1,0 +1,1610 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aq" = (
+/obj/structure/fence/corner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"av" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/seeds/icepepperseed,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"cs" = (
+/obj/machinery/seed_storage/garden,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"cz" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/yellowdouble,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"db" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/fancy/candle_box,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"dx" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/knife,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"dJ" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"dM" = (
+/obj/item/weapon/material/knife/machete/hatchet,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"dV" = (
+/obj/structure/table/bench/sifwooden,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/Farm)
+"eb" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"ec" = (
+/obj/structure/window/reinforced/full{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"ep" = (
+/obj/structure/flora/bboulder1,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"eq" = (
+/turf/template_noop,
+/area/template_noop)
+"fp" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"gq" = (
+/obj/structure/table/woodentable,
+/obj/item/trash/candle,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"gB" = (
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"gG" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/seeds/cornseed,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"hJ" = (
+/obj/structure/flora/smallbould,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"hQ" = (
+/turf/simulated/floor/water,
+/area/survivalpod/superpose/Farm)
+"kb" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"kd" = (
+/obj/item/weapon/material/fishing_rod/modern/strong,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/Farm)
+"my" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/seeds/wheatseed,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"mB" = (
+/obj/structure/sink/puddle,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"nv" = (
+/obj/structure/fence/door{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"nN" = (
+/obj/structure/flora/tree/jungle_small,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"oc" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/template_noop)
+"or" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"pU" = (
+/obj/machinery/door/window/eastleft,
+/obj/machinery/door/window/westleft,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"qW" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"te" = (
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"ty" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"vN" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"wH" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/seeds/bluetomatoseed,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"ys" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Ah" = (
+/obj/item/clothing/shoes/boots/winter/hydro,
+/obj/item/clothing/suit/storage/hooded/wintercoat/hydro,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Bb" = (
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Bz" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"BI" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"BR" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Eu" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Fe" = (
+/obj/structure/flora/tree/jungle,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"Gm" = (
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/Farm)
+"GB" = (
+/obj/structure/fence/corner{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"GK" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"GQ" = (
+/obj/item/weapon/storage/box/wormcan/deluxe,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/Farm)
+"GX" = (
+/mob/living/bot/farmbot,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"Hv" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"If" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/hydroponics_pod_people,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Ip" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"Ir" = (
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/Farm)
+"Is" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"Iw" = (
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/structure/closet/crate,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"IS" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Ju" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"JM" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"LM" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"Mo" = (
+/obj/structure/flora/bboulder2,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"Ny" = (
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"Oe" = (
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"On" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/box/matches,
+/obj/item/weapon/flame/match,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Ox" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"OW" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Sr" = (
+/obj/structure/fence/corner{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"SV" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"TA" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"UW" = (
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/Farm)
+"VN" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"WM" = (
+/obj/machinery/autolathe,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
+"Xe" = (
+/obj/structure/bonfire/permanent/sifwood,
+/obj/item/weapon/reagent_containers/cooking_container/grill,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"Yz" = (
+/obj/structure/fence/corner{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Farm)
+"Zf" = (
+/obj/structure/table/bench/sifwooden,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+
+(1,1,1) = {"
+eq
+eq
+eq
+oc
+oc
+oc
+oc
+eq
+eq
+oc
+eq
+eq
+eq
+eq
+eq
+eq
+oc
+eq
+oc
+eq
+eq
+oc
+eq
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+eq
+eq
+"}
+(2,1,1) = {"
+eq
+oc
+Yz
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+GB
+eq
+eq
+eq
+"}
+(3,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+dJ
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+ty
+oc
+eq
+eq
+"}
+(4,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Gm
+Gm
+or
+or
+Gm
+Gm
+Gm
+Gm
+Gm
+Oe
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+Oe
+Oe
+Oe
+ty
+eq
+eq
+eq
+"}
+(5,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+Gm
+Gm
+Gm
+Gm
+Gm
+On
+TA
+db
+BR
+Gm
+If
+Eu
+Gm
+dJ
+dJ
+UW
+UW
+UW
+dJ
+dJ
+Oe
+dJ
+Oe
+ty
+eq
+eq
+eq
+"}
+(6,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+Gm
+JM
+vN
+Hv
+Gm
+TA
+fp
+vN
+vN
+OW
+vN
+vN
+Gm
+dJ
+UW
+UW
+hQ
+UW
+UW
+hJ
+dJ
+Oe
+Oe
+ty
+eq
+eq
+eq
+"}
+(7,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+or
+ys
+vN
+vN
+OW
+vN
+vN
+vN
+vN
+Gm
+vN
+vN
+Gm
+dJ
+UW
+hQ
+hQ
+hQ
+UW
+UW
+dJ
+dJ
+Oe
+ty
+eq
+oc
+eq
+"}
+(8,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+or
+IS
+vN
+vN
+Gm
+Ah
+vN
+vN
+Eu
+Gm
+cz
+gq
+Gm
+dJ
+UW
+hQ
+hQ
+hQ
+hQ
+UW
+UW
+dJ
+Oe
+ty
+eq
+eq
+eq
+"}
+(9,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+Gm
+Ju
+IS
+dx
+Gm
+Gm
+Gm
+OW
+Gm
+Gm
+Gm
+Gm
+Gm
+dJ
+UW
+hQ
+hQ
+hQ
+hQ
+hQ
+UW
+dJ
+Oe
+ty
+eq
+eq
+oc
+"}
+(10,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+Gm
+Gm
+or
+Gm
+Gm
+Gm
+Bb
+vN
+Gm
+cs
+Oe
+Oe
+Mo
+dJ
+UW
+hQ
+hQ
+hQ
+hQ
+hQ
+UW
+dJ
+Oe
+ty
+eq
+eq
+oc
+"}
+(11,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Gm
+vN
+vN
+Gm
+te
+Oe
+Oe
+Oe
+dJ
+kd
+dV
+hQ
+hQ
+hQ
+hQ
+UW
+dJ
+Oe
+ty
+eq
+eq
+eq
+"}
+(12,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+dJ
+dJ
+nN
+dJ
+dJ
+Gm
+Gm
+OW
+Gm
+Ox
+dJ
+dJ
+dJ
+dJ
+dJ
+GQ
+dV
+hQ
+hQ
+hQ
+UW
+dJ
+Oe
+ty
+oc
+oc
+eq
+"}
+(13,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+Oe
+Oe
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+Oe
+Zf
+dJ
+dJ
+kd
+dV
+hQ
+UW
+UW
+dJ
+Oe
+ty
+oc
+eq
+eq
+"}
+(14,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+dJ
+dJ
+Oe
+Oe
+Oe
+Oe
+dJ
+dJ
+Zf
+Xe
+Zf
+dJ
+dJ
+GQ
+UW
+UW
+ep
+dJ
+Oe
+ty
+eq
+eq
+eq
+"}
+(15,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+SV
+SV
+ec
+pU
+SV
+SV
+SV
+SV
+Oe
+Oe
+dJ
+dJ
+Zf
+Oe
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+dJ
+Oe
+ty
+eq
+eq
+eq
+"}
+(16,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+gG
+gB
+wH
+GX
+wH
+gB
+my
+SV
+Oe
+dJ
+dJ
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+dJ
+Oe
+ty
+oc
+eq
+eq
+"}
+(17,1,1) = {"
+oc
+eq
+ty
+Oe
+Oe
+SV
+gG
+gB
+wH
+gB
+wH
+gB
+my
+SV
+Oe
+Oe
+dJ
+Oe
+Oe
+Gm
+Gm
+or
+or
+or
+Gm
+Gm
+Oe
+Oe
+ty
+oc
+eq
+eq
+"}
+(18,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+gG
+gB
+wH
+gB
+wH
+gB
+my
+SV
+Oe
+Oe
+dJ
+dJ
+Oe
+Gm
+VN
+eb
+Iw
+Ip
+VN
+Gm
+dJ
+Oe
+ty
+eq
+oc
+eq
+"}
+(19,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+gG
+gB
+Ir
+Ir
+Ir
+gB
+my
+SV
+Oe
+Oe
+dJ
+dJ
+Oe
+Gm
+LM
+Ny
+Ny
+Ny
+Ny
+Gm
+Oe
+Oe
+ty
+eq
+oc
+eq
+"}
+(20,1,1) = {"
+oc
+oc
+ty
+Oe
+Oe
+SV
+gG
+gB
+Ir
+mB
+Ir
+gB
+my
+SV
+Oe
+dJ
+dJ
+dJ
+dJ
+Ny
+Ny
+Ny
+Ny
+Ny
+qW
+Gm
+Oe
+Oe
+ty
+eq
+eq
+eq
+"}
+(21,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+gG
+gB
+Ir
+dM
+Ir
+gB
+my
+SV
+Oe
+dJ
+dJ
+dJ
+dJ
+Ny
+Ny
+Ny
+WM
+Ny
+Ox
+Gm
+Oe
+Oe
+ty
+eq
+oc
+eq
+"}
+(22,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+SV
+gG
+gB
+av
+gB
+av
+gB
+my
+SV
+Oe
+dJ
+dJ
+dJ
+dJ
+Ny
+Ny
+Ny
+Ny
+Ny
+Ox
+Gm
+Oe
+Oe
+ty
+eq
+oc
+eq
+"}
+(23,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+SV
+gG
+gB
+av
+gB
+av
+gB
+my
+SV
+Oe
+dJ
+dJ
+dJ
+Oe
+Gm
+Ny
+Ny
+Ny
+Ny
+Ny
+Gm
+Oe
+Oe
+ty
+oc
+eq
+eq
+"}
+(24,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+gG
+gB
+av
+gB
+av
+gB
+my
+SV
+Oe
+dJ
+dJ
+dJ
+Fe
+Gm
+BI
+Bz
+GK
+GK
+kb
+Gm
+Oe
+Oe
+ty
+oc
+eq
+eq
+"}
+(25,1,1) = {"
+eq
+eq
+ty
+Oe
+Oe
+SV
+SV
+SV
+SV
+SV
+SV
+SV
+SV
+SV
+Oe
+dJ
+dJ
+dJ
+Oe
+Gm
+Gm
+or
+or
+or
+Gm
+Gm
+Oe
+Oe
+ty
+eq
+eq
+eq
+"}
+(26,1,1) = {"
+eq
+oc
+ty
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+dJ
+dJ
+dJ
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+Oe
+ty
+eq
+eq
+eq
+"}
+(27,1,1) = {"
+eq
+oc
+aq
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+nv
+Is
+nv
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Is
+Sr
+eq
+oc
+eq
+"}
+(28,1,1) = {"
+eq
+oc
+oc
+oc
+eq
+eq
+eq
+oc
+oc
+oc
+eq
+eq
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+oc
+eq
+"}
+(29,1,1) = {"
+eq
+eq
+eq
+oc
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+eq
+oc
+oc
+eq
+oc
+eq
+oc
+eq
+eq
+eq
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+eq
+eq
+oc
+oc
+"}
+(30,1,1) = {"
+eq
+eq
+eq
+eq
+eq
+eq
+oc
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+eq
+oc
+oc
+oc
+oc
+oc
+eq
+eq
+eq
+eq
+eq
+eq
+"}
+(31,1,1) = {"
+eq
+eq
+eq
+eq
+eq
+oc
+eq
+eq
+eq
+oc
+oc
+eq
+eq
+oc
+eq
+oc
+eq
+oc
+eq
+eq
+oc
+oc
+oc
+oc
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+"}
+(32,1,1) = {"
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+eq
+"}

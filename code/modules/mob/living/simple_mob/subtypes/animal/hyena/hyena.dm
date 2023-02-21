@@ -18,13 +18,13 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	value = CATALOGUER_REWARD_MEDIUM
 
 // Start Defining the mob here
-/mob/living/simple_mob/animal/hyena 
+/mob/living/simple_mob/animal/hyena
 	name = "Hyena"
 	desc = "Yeen! Its fur is a dusty yellow-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
 	tt_desc = "Crocuta crocuta"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/hyena)
 
-	icon = 'icons/mob/animals48x32_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animals48x32_ch.dmi'
 	icon_state = "yeen"
 	icon_living = "yeen"
 	icon_dead = "yeen_dead"

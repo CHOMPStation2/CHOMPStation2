@@ -25,6 +25,8 @@
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
 
+	inherent_verbs = list(/mob/proc/adjust_hive_range)
+
 	siemens_coefficient = 1
 	darksight = 10
 
@@ -115,6 +117,7 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 
 /datum/species/shadekin/New()
 	..()
@@ -124,6 +127,7 @@
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
 	spawn(1)
+		H.release_vore_contents(TRUE, TRUE) //CHOMPEdit - Drop all belly contents on death.
 		for(var/obj/item/W in H)
 			H.drop_from_inventory(W)
 		qdel(H)

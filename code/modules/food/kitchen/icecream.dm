@@ -88,11 +88,17 @@
 	popup.open()
 
 /obj/machinery/icecream_vat/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
+		return
+	if(default_deconstruction_crowbar(user, O))
+		return
+	if(default_part_replacement(user, O))
+		return
 	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/icecream))
 		var/obj/item/weapon/reagent_containers/food/snacks/icecream/I = O
 		if(!I.ice_creamed)
 			if(product_types[dispense_flavour] > 0)
-				src.visible_message("[bicon(src)] <span class='info'>[user] scoops delicious [flavour_name] icecream into [I].</span>")
+				src.visible_message("\icon[src][bicon(src)] <span class='info'>[user] scoops delicious [flavour_name] icecream into [I].</span>")
 				product_types[dispense_flavour] -= 1
 				I.add_ice_cream(flavour_name)
 			//	if(beaker)

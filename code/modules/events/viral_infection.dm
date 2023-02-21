@@ -4,6 +4,9 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	var/list/viruses = list()
 
 /datum/event/viral_infection/setup()
+	if(prob(50))
+		kill()
+		return
 	announceWhen = rand(0, 3000)
 	endWhen = announceWhen + 1
 
@@ -58,7 +61,7 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	var/list/used_viruses_links = list()
 	var/list/used_viruses_text = list()
 	for(var/datum/disease2/disease/D in used_viruses)
-		used_viruses_links += "<a href='?src=\ref[D];info=1'>[D.name()]</a>"
+		used_viruses_links += "<a href='?src=\ref[D];[HrefToken()];info=1'>[D.name()]</a>"
 		used_viruses_text += D.name()
 
 	var/list/used_candidates_links = list()

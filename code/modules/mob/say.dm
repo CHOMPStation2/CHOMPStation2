@@ -106,8 +106,21 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
-		if(!other || !(other in view(src)))
+		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
 			return FALSE
+		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
+		if(istype(other.loc, /obj/item/weapon/holder))
+			if(istype(src.loc, /obj/item/weapon/holder))
+				if(!(other.loc in view(src.loc.loc)))
+					return FALSE
+			else if(!(other.loc in view(src)))
+				return FALSE
+		else if(istype(src.loc, /obj/item/weapon/holder))
+			if((!other) in view(src.loc.loc))
+				return FALSE
+		else if((!other) in view(src))
+			return FALSE
+		//CHOMPEdit End
 
 	//Language check.
 	for(var/datum/language/L in languages)
@@ -180,6 +193,8 @@
 			// Okay, we're definitely now trying to invoke a language (probably)
 			// This "[]" is probably unnecessary but BYOND will runtime if a number is used
 			var/datum/language/L = GLOB.language_keys["[language_key]"]
+			if((language_key in language_keys) && language_keys[language_key])
+				L = language_keys[language_key]
 
 			// MULTILINGUAL_SPACE enforces a space after the language key
 			if(client && (client.prefs.multilingual_mode == MULTILINGUAL_SPACE) && (text2ascii(copytext(selection, 3, 4)) != 32)) // If we're looking for a space and we don't find one
@@ -249,7 +264,7 @@
 
 		// There are a few things that will make us want to ignore all other languages in - namely, HIVEMIND languages.
 		var/datum/language/L = current[1]
-		if(L && (L.flags & HIVEMIND || L.flags & SIGNLANG))
+		if(L && (L.flags & HIVEMIND || L.flags & SIGNLANG || L.flags & INAUDIBLE))
 			return new /datum/multilingual_say_piece(L, trim(sanitize(strip_prefixes(message))))
 
 		if(i + 1 > length(prefix_locations)) // We are out of lookaheads, that means the rest of the message is in cur lang

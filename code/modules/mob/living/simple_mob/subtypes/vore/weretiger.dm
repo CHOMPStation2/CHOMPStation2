@@ -30,6 +30,8 @@
 	default_pixel_x = -16
 
 	has_hands = 1
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 // Nomnomn
 /mob/living/simple_mob/vore/weretiger

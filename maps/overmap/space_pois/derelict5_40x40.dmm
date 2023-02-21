@@ -1,0 +1,78 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"c" = (/turf/simulated/mineral,/area/submap/derelict5)
+"e" = (/turf/simulated/wall,/area/submap/derelict5)
+"f" = (/obj/effect/floor_decal/rust,/turf/simulated/wall,/area/submap/derelict5)
+"h" = (/obj/structure/closet/crate,/turf/simulated/floor/plating,/area/submap/derelict5)
+"i" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"j" = (/obj/structure/door_assembly,/turf/simulated/floor/plating,/area/submap/derelict5)
+"k" = (/obj/structure/table,/obj/item/weapon/storage/toolbox/electrical,/turf/simulated/floor/plating,/area/submap/derelict5)
+"l" = (/obj/effect/decal/remains/human,/turf/simulated/floor/plating,/area/submap/derelict5)
+"m" = (/obj/structure/table,/obj/item/weapon/storage/toolbox/syndicate,/turf/simulated/floor/plating,/area/submap/derelict5)
+"n" = (/obj/structure/table,/turf/simulated/floor/plating,/area/submap/derelict5)
+"o" = (/obj/random/obstruction,/turf/simulated/floor/plating,/area/submap/derelict5)
+"p" = (/obj/machinery/door/airlock/external,/obj/random/obstruction,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict5)
+"q" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/submap/derelict5)
+"r" = (/turf/simulated/mineral/floor/vacuum,/area/submap/derelict5)
+"s" = (/obj/random/trash,/turf/simulated/floor/plating,/area/submap/derelict5)
+"t" = (/obj/random/maintenance/engineering,/turf/simulated/floor/plating,/area/submap/derelict5)
+"u" = (/turf/simulated/floor/plating,/area/submap/derelict5)
+"w" = (/obj/random/maintenance/research,/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"y" = (/obj/random/junk,/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"z" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/plating,/area/submap/derelict5)
+"A" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict5)
+"C" = (/obj/random/junk,/turf/simulated/floor/plating,/area/submap/derelict5)
+"D" = (/obj/item/stack/rods{amount = 5},/turf/simulated/floor/plating,/area/submap/derelict5)
+"H" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/plating,/area/submap/derelict5)
+"I" = (/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"L" = (/obj/random/maintenance/engineering,/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"N" = (/obj/random/trash,/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"O" = (/obj/effect/landmark/loot_spawn,/turf/simulated/shuttle/plating,/area/submap/derelict5)
+"R" = (/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict5)
+"T" = (/obj/random/maintenance/research,/turf/simulated/floor/plating,/area/submap/derelict5)
+"V" = (/obj/random/junk,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict5)
+"W" = (/obj/random/trash,/obj/random/junk,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict5)
+"X" = (/obj/item/stack/rods{amount = 5},/turf/simulated/mineral/floor/vacuum,/area/submap/derelict5)
+"Z" = (/obj/random/outcrop,/turf/simulated/mineral/floor/vacuum,/area/submap/derelict5)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccaccaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaacaaaaccccaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccccaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccaaaaaa
+aaaaaaaaaaacccccaaaaaaaaaaaaaaaaaaaacaaa
+aaaaaaaaccccccccaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaccccccccccccaaaaaaaaaaaaaaaaaaaaa
+aaaaaarccccrZcccccccccaaaaaaaaaaaacaaaaa
+aaaaaaZccccZrcccccccccccaaaaaaaaaaaaaaaa
+aaaaarrcccccZccceefcceecccccccaaaaaaaaaa
+aaaaarrcccccccciIzeiyshficccccccaaaaaaaa
+aaaaarrrZcccccfOLsjIIThfheccccccaaaaaaaa
+aaaaarrrrcccccfzCkfOtyzjIfccccccccaaaaaa
+aaaaaaarrcccccelwmfhsInffeccccccccaaaaaa
+aaaaaaarrrccccfHhueluIsIHcccccccccccaaaa
+aaaaaaaarrcccceffeeeejeeeccccZrcccccaaaa
+aaaaaaaarrcccceCIIRuIDTAeccccrrZccccaaaa
+aaaaaaaarrrZcceuLNIIWuVocccccrrrccccaaaa
+aaacaaaaarrrrZcceceffeepeccccZrrccccaaaa
+aaaaaaaaaaarrrcccccccceoecccccrccccccaaa
+aaaaaaaaaaarrrrrrZcccceqecccccZccccccaaa
+aaaaaaaaaaaaarrrrrcccccXcccccccccccccaaa
+aaaaacaaaaaaarrrrrrrrrrrrZcccccccccccaaa
+aaaaaaaaaaaaaaaaarrrrXrrrrcccccccccccaaa
+aaaaaaaccaaaaaaaaarrrrrrrrcccccccccccaaa
+aaaaaaaccccaaaaaaarrrrrrrXrccrZccccccaaa
+aaaaaaaccccaaaaaaarrrrrrrrrrrrrrZcccccaa
+aaaaaaaaaccaaaaaaaarrrrZrrrrrrrrrcccccaa
+aaaaaaaaaccaaaaaaaarrrrrrrrrrrrrrcccccaa
+aaaaaaaaaaaaaaaaaaarrrrrrrrrrZrrrcccccaa
+aaaaaaaaaaaaaaaaaccrrrrrZrrrrrrrrrccccaa
+accaaaaaaaaaaaaaaccZrrrrrrrrrrrrrZccccaa
+accaaaaaaaaaaaaaaccccrrrrrrrrrrrccccccaa
+acccaaaaaaaaaaaaaacccZrrrrrrrrrZcccccaaa
+aaaaaaaaaaaaaaaaaacccccccrrrrrcccccccaaa
+aaaaaaaaaaaaaaaaaaaaccccccZrrrcccccccaaa
+aaaaacaaaaaaaaaaaaaaccccccccccccccaaaaaa
+aaacaaaaaaaaaaaaaaaaaacccccccccaaaaaaaaa
+"}

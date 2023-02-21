@@ -638,6 +638,23 @@
 			</html>
 			"}
 
+/obj/item/weapon/book/manual/robotics_manual
+	name = "Guide to Robotics"
+	icon_state ="evabook"
+	item_state = "book3"
+	author = "Simple Robotics"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
+	title = "Guide to Robotics"
+
+/obj/item/weapon/book/manual/robotics_manual/New()
+	..()
+	dat = {"
+		<html><head>
+		</head>
+		<body>
+		<iframe width='100%' height='97%' src="[config.wikiurl]Guide_to_Robotics&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+		</html>
+		"}
 
 /obj/item/weapon/book/manual/robotics_cyborgs
 	name = "Cyborgs for Dummies"
@@ -964,6 +981,9 @@
 
 				<h1>Food for Dummies</h1>
 				Here is a guide on basic food recipes and also how to not poison your customers accidentally.
+
+				<h2>((OOC link for updated working recipes here))</h2>
+				vore-station.net/infodump/recipes_food.html
 
 				<h3>Basics:</h3>
 				Knead an egg and some flour to make dough. Bake that to make a bun or flatten and cut it.

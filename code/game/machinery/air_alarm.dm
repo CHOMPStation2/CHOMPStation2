@@ -84,6 +84,9 @@
 
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
+	var/datum/looping_sound/alarm/decompression_alarm/soundloop // CHOMPEdit: Looping Alarms
+	var/atmoswarn = FALSE // CHOMPEdit: Looping Alarms
+
 /obj/machinery/alarm/nobreach
 	breach_detection = 0
 
@@ -128,6 +131,7 @@
 	if(alarm_area && alarm_area.master_air_alarm == src)
 		alarm_area.master_air_alarm = null
 		elect_master(exclude_self = TRUE)
+	QDEL_NULL(soundloop)  // CHOMPEdit: Looping Alarms
 	return ..()
 
 /obj/machinery/alarm/proc/offset_airalarm()
@@ -154,11 +158,18 @@
 
 	update_icon()
 
+/obj/machinery/alarm/proc/update_area()
+	alarm_area = get_area(src)
+	area_uid = "\ref[alarm_area]"
+	if(name == "alarm")
+		name = "[alarm_area.name] Air Alarm"
+
 /obj/machinery/alarm/Initialize()
 	. = ..()
 	set_frequency(frequency)
 	if(!master_is_operating())
 		elect_master()
+	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/process()
 	if((stat & (NOPOWER|BROKEN)) || shorted)
@@ -187,6 +198,13 @@
 	if(mode == AALARM_MODE_CYCLE && environment.return_pressure() < ONE_ATMOSPHERE * 0.05)
 		mode = AALARM_MODE_FILL
 		apply_mode()
+
+	if(alarm_area?.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
+		soundloop.start()  // CHOMPEdit: Looping Alarms
+		atmoswarn = TRUE // CHOMPEdit: Looping Alarms
+	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
+		soundloop.stop()  // CHOMPEdit: Looping Alarms
+		atmoswarn = FALSE // CHOMPEdit: Looping Alarms
 
 	//atmos computer remote controll stuff
 	switch(rcon_setting)
@@ -540,9 +558,9 @@
 
 	var/list/list/environment_data = list()
 	data["environment_data"] = environment_data
-	
+
 	DECLARE_TLV_VALUES
-	
+
 	var/pressure = environment.return_pressure()
 	LOAD_TLV_VALUES(TLV["pressure"], pressure)
 	environment_data.Add(list(list(
@@ -551,7 +569,7 @@
 		"unit" = "kPa",
 		"danger_level" = TEST_TLV_VALUES
 	)))
-	
+
 	var/temperature = environment.temperature
 	LOAD_TLV_VALUES(TLV["temperature"], temperature)
 	environment_data.Add(list(list(
@@ -573,7 +591,7 @@
 			"unit" = "%",
 			"danger_level" = TEST_TLV_VALUES
 		)))
-	
+
 	if(!locked || issilicon(user) || data["remoteUser"])
 		var/list/list/vents = list()
 		data["vents"] = vents
@@ -595,7 +613,7 @@
 				"extdefault"= (info["external"] == ONE_ATMOSPHERE),
 				"intdefault"= (info["internal"] == 0),
 			)))
-		
+
 
 		var/list/list/scrubbers = list()
 		data["scrubbers"] = scrubbers
@@ -622,7 +640,7 @@
 		data["scrubbers"] = scrubbers
 
 		data["mode"] = mode
-		
+
 		var/list/list/modes = list()
 		data["modes"] = modes
 		modes[++modes.len] = list("name" = "Filtering - Scrubs out contaminants", 			"mode" = AALARM_MODE_SCRUBBING,		"selected" = mode == AALARM_MODE_SCRUBBING, 	"danger" = 0)
@@ -675,14 +693,14 @@
 		var/list/selected = TLV["temperature"]
 		var/max_temperature = min(selected[3] - T0C, MAX_TEMPERATURE)
 		var/min_temperature = max(selected[2] - T0C, MIN_TEMPERATURE)
-		var/input_temperature = input(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C) as num|null
+		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature)
 		if(isnum(input_temperature))
 			if(input_temperature > max_temperature || input_temperature < min_temperature)
 				to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
 			else
 				target_temperature = input_temperature + T0C
 		return TRUE
-	
+
 	// Account for remote users here.
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
@@ -729,7 +747,7 @@
 			var/env = params["env"]
 
 			var/name = params["var"]
-			var/value = input(usr, "New [name] for [env]:", name, TLV[env][name]) as num|null
+			var/value = tgui_input_number(usr, "New [name] for [env]:", name, TLV[env][name])
 			if(!isnull(value) && !..())
 				if(value < 0)
 					TLV[env][name] = -1
@@ -825,6 +843,12 @@
 	..()
 	spawn(rand(0,15))
 		update_icon()
+		// CHOMPEdit Start: Looping Alarms
+		if(stat & (NOPOWER | BROKEN))
+			soundloop.stop()
+		else if(atmoswarn)
+			soundloop.start()
+		// CHOMPEdit End
 
 // VOREStation Edit Start
 /obj/machinery/alarm/freezer
@@ -835,7 +859,18 @@
 
 	TLV["temperature"] =	list(T0C - 40, T0C - 20, T0C + 40, T0C + 66) // K, Lower Temperature for Freezer Air Alarms (This is because TLV is hardcoded to be generated on first_run, and therefore the only way to modify this without changing TLV generation)
 
-// VOREStation Edit End
+// VOREStation Edit End, CHOMPEdit START
+/obj/machinery/alarm/sifwilderness
+	breach_detection = 0
+	report_danger_level = 0
+
+/obj/machinery/alarm/sifwilderness/first_run()
+	. = ..()
+
+	TLV["oxygen"] =			list(16, 17, 135, 140)
+	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.50,ONE_ATMOSPHERE*1.60)
+	TLV["temperature"] =	list(T0C - 40, T0C - 31, T0C + 40, T0C + 120)
+// CHOMPEdit END
 #undef LOAD_TLV_VALUES
 #undef TEST_TLV_VALUES
 #undef DECLARE_TLV_VALUES

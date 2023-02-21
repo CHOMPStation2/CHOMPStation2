@@ -14,6 +14,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_SAGARU)
 	name_language = LANGUAGE_SAGARU
+	species_language = LANGUAGE_SAGARU
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
@@ -81,11 +82,12 @@
 	//burn_mod =  1.15
 	//gluttonous = 1
 	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_SKRELLIAN)
-	name_language = LANGUAGE_SKRELLIAN
+	secondary_langs = list(LANGUAGE_SPACER)
+	name_language = LANGUAGE_SPACER
+	species_language = LANGUAGE_SPACER
 	color_mult = 1
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	min_age = 18
 	max_age = 110
 
@@ -113,6 +115,7 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	water_breather = TRUE
+	water_movement = -4 //Negates shallow. Halves deep.
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
@@ -135,6 +138,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
+	species_language = LANGUAGE_BIRDSONG
 	color_mult = 1
 	inherent_verbs = list(/mob/living/proc/flying_toggle,
 		/mob/living/proc/flying_vore_toggle,
@@ -184,10 +188,11 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
+	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
 
 	min_age = 18
 	max_age = 110
@@ -238,6 +243,7 @@
 //	default_language = "Sol Common"
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
+	species_language = LANGUAGE_CANILUNZT
 	primitive_form = "Wolpin"
 	tail = "vulptail"
 	tail_animation = 'icons/mob/species/vulpkanin/tail.dmi' // probably need more than just one of each, but w/e
@@ -256,6 +262,27 @@
 //	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
+	
+	//Furry fox-like animals shouldn't start freezing at 5 degrees celsius.
+	//Minor cold is resisted, but not severe frost.
+	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans. 
+	
+	cold_level_1 = 243 //Default 260, other values remain at default. Starts taking damage at -30 celsius. Default tier 2 is -70 and tier 3 is -150
+	
+	
+	breath_cold_level_1 = 220 // Default 240, lower is better.	
+	
+	//While foxes can survive in deserts, that's handled by zorren. It's a good contrast that our vulp find heat a little uncomfortable.
+	
+	heat_discomfort_level = 295 //Just above standard 20 C to avoid heat message spam, same as Taj
+	
+	heat_level_1 = 345 //Default 360
+	heat_level_2 = 390 //Default 400
+	heat_level_3 = 900 //Default 1000
+
+	breath_heat_level_1 = 370	//Default 380 - Higher is better
+	breath_heat_level_2 = 445	//Default 450
+	breath_heat_level_3 = 1125	//Default 1250
 
 	primitive_form = "Wolpin"
 
@@ -269,6 +296,12 @@
 
 	min_age = 18
 	max_age = 110
+	
+	heat_discomfort_strings = list(
+		"Your fur prickles in the heat.",
+		"You feel uncomfortably warm.",
+		"Your overheated skin itches."
+		)
 
 /datum/species/unathi
 	mob_size = MOB_MEDIUM //To allow normal mob swapping
@@ -311,14 +344,17 @@
 	deform = 'icons/mob/human_races/r_def_skrell_vr.dmi'
 	color_mult = 1
 	min_age = 18
-	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	reagent_tag = null
 	allergens = null
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
+	water_breather = TRUE
+	water_movement = -4 //Negates shallow. Halves deep.
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
@@ -377,7 +413,11 @@
 	min_age = 18
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
+	tail = "voxtail"
+	tail_animation = 'icons/mob/species/vox/tail.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
+	color_mult = 1
+	
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
@@ -394,7 +434,8 @@
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_BIRDSONG)
+	secondary_langs = list(LANGUAGE_BIRDSONG, LANGUAGE_UNATHI)
+	species_language = LANGUAGE_UNATHI
 	name_language = null
 	color_mult = 1
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -456,6 +497,8 @@
 	num_alternate_languages = 3
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	rarity_value = 5	//INTERDIMENSIONAL FLUFFERS
+
+	inherent_verbs = list(/mob/proc/adjust_hive_range)
 
 	siemens_coefficient = 0
 	darksight = 10
@@ -553,6 +596,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
+	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,/mob/living/proc/shred_limb,/mob/living/carbon/human/proc/tie_hair)
 
 	min_age = 18
@@ -587,7 +631,7 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 4 //Better hunters in the dark.
 	hunger_factor = 0.1 //In exchange, they get hungry a tad faster.
-	num_alternate_languages = 2
+	num_alternate_languages = 3
 
 	min_age = 18
 	max_age = 80
@@ -616,4 +660,61 @@
 		"Your chitin feels extremely warm.",
 		"You feel uncomfortably warm.",
 		"Your chitin feels hot."
+		)
+
+/datum/species/altevian
+	name = SPECIES_ALTEVIAN
+	name_plural = "Altevians"
+	icobase = 'icons/mob/human_races/r_altevian.dmi'
+	deform = 'icons/mob/human_races/r_def_altevian.dmi'
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	num_alternate_languages = 3
+	secondary_langs = list(LANGUAGE_TAVAN)
+	species_language = LANGUAGE_TAVAN
+	name_language = null
+	color_mult = 1
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
+
+	min_age = 18
+	max_age = 80
+
+	blurb = "The Altevian are a species of tall, rodent humanoids that are akin to rats for their features. \
+	The Altevian, unlike most species, do not have a home planet, nor system, adopting a fully nomadic lifestyle \
+	for their survival across the stars. Instead, they have opted to live in massive super capital-class colony-ships \
+	with a flagship as their place they would call home."
+
+	// wikilink="https://wiki.vore-station.net/Altevian" //CHOMPedit
+
+	catalogue_data = list(/datum/category_item/catalogue/fauna/altevian)
+
+	spawn_flags = SPECIES_CAN_JOIN
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	flesh_color = "#AFA59E"
+	base_color = "#777777"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
+	burn_mod =  1.15
+	hunger_factor = 0.04
+	can_zero_g_move = TRUE
+
+	heat_discomfort_strings = list(
+		"Your fur prickles in the heat.",
+		"You feel uncomfortably warm.",
+		"Your overheated skin itches."
+		)
+
+	has_limbs = list(
+		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
+		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head),
+		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
+		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
+		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
+		BP_R_LEG =  list("path" = /obj/item/organ/external/leg/right),
+		BP_L_HAND = list("path" = /obj/item/organ/external/hand),
+		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right),
+		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
+		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)

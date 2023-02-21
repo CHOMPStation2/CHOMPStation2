@@ -13,12 +13,10 @@
 	return 0
 
 /obj/effect/step_trigger/Crossed(atom/movable/H as mob|obj)
-	if(H.is_incorporeal())
-		return
+	if((istype(H, /mob/observer) && !affect_ghosts) || (!istype(H, /mob/observer) && H.is_incorporeal() && !affect_ghosts))
+		return	//CHOMPEdit: Fixing some step trigger stuff to coincide with incorporeal check changes
 	..()
 	if(!H)
-		return
-	if(istype(H, /mob/observer) && !affect_ghosts)
 		return
 	Trigger(H)
 

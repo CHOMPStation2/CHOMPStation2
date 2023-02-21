@@ -3,6 +3,7 @@
 	seed_name = "wheat"
 	display_name = "wheat stalks"
 	kitchen_tag = "wheat"
+	mutants = list("meatwheat") //CHOMPEdit - Adding mutation strain for meatwheat.
 	chems = list("nutriment" = list(1,25), "flour" = list(10,30))
 
 /datum/seed/wheat/New()

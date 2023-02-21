@@ -1,0 +1,62 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/structure/loot_pile/surface/bones,/obj/random/trash,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"c" = (/obj/structure/shuttle/engine/heater{dir = 1; tag = "icon-heater (NORTH)"},/obj/structure/window/reinforced,/turf/simulated/shuttle/plating,/area/submap/clownmime)
+"e" = (/obj/machinery/door/unpowered/shuttle,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"f" = (/obj/item/weapon/broken_bottle,/obj/structure/loot_pile/surface/bones,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"g" = (/obj/item/weapon/material/shard{icon_state = "medium"},/obj/structure/loot_pile/surface/bones,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"j" = (/obj/structure/closet/crate,/obj/item/stack/material/supermatter,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"m" = (/turf/simulated/mineral,/area/submap/clownmime)
+"n" = (/obj/random/outcrop,/turf/simulated/mineral/floor/vacuum,/area/submap/clownmime)
+"p" = (/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/mineral/floor/vacuum,/area/submap/clownmime)
+"q" = (/obj/structure/closet/crate,/obj/item/stack/material/supermatter{amount = 5},/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"s" = (/turf/simulated/mineral/floor/vacuum,/area/submap/clownmime)
+"v" = (/turf/simulated/shuttle/wall,/area/submap/clownmime)
+"w" = (/obj/random/snack,/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"y" = (/obj/structure/closet/crate,/obj/item/weapon/tool/wrench/fuelrod,/obj/item/weapon/fuel_assembly/tritium,/obj/item/weapon/fuel_assembly/tritium,/obj/item/weapon/fuel_assembly/tritium,/obj/item/weapon/fuel_assembly/tritium,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"z" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/supermatter,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"A" = (/obj/structure/shuttle/engine/heater{dir = 4; tag = "icon-heater (EAST)"},/obj/structure/window/reinforced{dir = 8},/turf/simulated/shuttle/plating,/area/submap/clownmime)
+"B" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "propulsion_l"; tag = "icon-propulsion_l (WEST)"},/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "burst_r"; tag = "icon-burst_r (WEST)"},/turf/simulated/shuttle/plating,/area/submap/clownmime)
+"D" = (/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"E" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "propulsion_l"; tag = "icon-propulsion_l (WEST)"},/turf/simulated/shuttle/plating,/area/submap/clownmime)
+"F" = (/obj/item/weapon/material/shard{pixel_x = 9},/obj/machinery/computer/ship{dir = 4},/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"G" = (/obj/effect/landmark/mobcorpse/clown,/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"H" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"I" = (/obj/item/weapon/material/shard{icon_state = "medium"},/obj/random/trash,/turf/simulated/mineral/floor/vacuum,/area/submap/clownmime)
+"J" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 4},/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"K" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"L" = (/turf/simulated/shuttle/floor,/area/submap/clownmime)
+"M" = (/turf/simulated/shuttle/wall,/turf/space,/area/submap/clownmime)
+"N" = (/turf/space,/turf/simulated/shuttle/wall,/area/submap/clownmime)
+"O" = (/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"P" = (/obj/item/weapon/pickaxe,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"Q" = (/obj/structure/closet/crate,/obj/item/weapon/fuel_assembly/phoron,/obj/item/weapon/fuel_assembly/phoron,/obj/item/weapon/fuel_assembly/phoron,/obj/item/weapon/fuel_assembly/phoron,/obj/item/weapon/fuel_assembly/phoron,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"R" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "propulsion_l"; tag = "icon-propulsion_l (WEST)"},/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "propulsion_l"; tag = "icon-propulsion_l (WEST)"},/turf/simulated/shuttle/plating,/area/submap/clownmime)
+"S" = (/obj/item/weapon/material/shard{pixel_x = 9},/turf/simulated/mineral/floor/vacuum,/area/submap/clownmime)
+"T" = (/obj/structure/closet/crate,/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/deuterium,/obj/item/weapon/fuel_assembly/deuterium,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"U" = (/obj/item/weapon/material/shard{icon_state = "medium"},/obj/random/trash,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"V" = (/obj/structure/closet/crate,/obj/item/stack/material/supermatter{amount = 5},/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"W" = (/obj/structure/closet/crate,/obj/item/weapon/gun/magnetic/fuelrod,/obj/item/weapon/fuel_assembly/blitz/shielded,/obj/item/weapon/fuel_assembly/blitz/shielded,/obj/item/weapon/fuel_assembly/blitz/shielded,/obj/item/weapon/fuel_assembly/blitz/shielded,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+"Y" = (/obj/structure/closet/crate,/obj/item/weapon/fuel_assembly/supermatter,/obj/item/weapon/fuel_assembly/supermatter,/turf/simulated/shuttle/floor/white,/area/submap/clownmime)
+
+(1,1,1) = {"
+aaaaaaaaaMcccMaaaaaaaaaaaaaa
+aaaaaaaaaefgKeaaaaaaaaaaaaaa
+aaaaaaaaMvjGVvMaaaaaaaaaaaaa
+ammaaaanMvIqjvMaaaaaaaaaaaaa
+mmmmaammmmmsbvmmaaaaaaaaaaaa
+mmmmmmmmmmmSsmmaaaaaaaaaaaaa
+ammnmmmmmmmmmmmaaaaaaaaaaaaa
+ammmsnmmmmmmmsnaaMvveevvvvMa
+aammssssnmmmmmsMvNSKOOyTzOAB
+aaammssssmmmmmmmmpsHwLDLGOAE
+aammmnsnssmmmmmmFGHLDLHLHOAE
+aammmssssssmmmmJOKULHDLLDOAE
+aammmmmmsnsnsmmMvNOPOOQWYOAR
+aammmmmmmmmsmmmmmMvveevvvvMa
+ammmmmmmmmmmmmmmmmmmmmmmmaaa
+ammammmmmsnmmmmmmmmmmmaaaaaa
+aaaammmmsssmmmmmmmmmaaaaaaaa
+aaaammaaaasnmnmmsnsaaaaaaaaa
+aaaamaaaaaasmmmmmmsaaaaaaaaa
+aaaaaaaaaaaaaammmmnaaaaaaaaa
+"}

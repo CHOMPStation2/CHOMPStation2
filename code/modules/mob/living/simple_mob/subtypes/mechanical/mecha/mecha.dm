@@ -13,10 +13,10 @@
 	turn_sound = 'sound/mecha/mechturn.ogg'
 	maxHealth = 300
 	mob_size = MOB_LARGE
+	damage_threshold = 5 //Anything that's 5 or less damage will not do damage.
 
 	organ_names = /decl/mob_organ_names/mecha
 
-	// Very close to the base 'damage_absorption' var on the base mecha class.
 	armor = list(
 				"melee"		= 20,
 				"bullet"	= 10,

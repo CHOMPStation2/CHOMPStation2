@@ -2,6 +2,10 @@
 	var/show_in_directory = 1	//Show in Character Directory
 	var/directory_tag = "Unset" //Sorting tag to use in character directory
 	var/directory_erptag = "Unset"	//ditto, but for non-vore scenes
+	// CHOMPStation Edit Start: Directory Update
+	var/directory_gendertag = "Unset" // Gender stuff!
+	var/directory_sexualitytag = "Unset" // Sexuality!
+	// CHOMPStation Edit End: Directory Update
 	var/directory_ad = ""		//Advertisement stuff to show in character directory.
 	var/sensorpref = 5			//Set character's suit sensor level
 	var/capture_crystal = 1	//Whether or not someone is able to be caught with capture crystals
@@ -100,8 +104,38 @@
 	else
 		to_chat(src, "You are now catchable.")
 		prefs.capture_crystal = 1
-	if(L)
+	if(L && istype(L))
 		L.capture_crystal = prefs.capture_crystal
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TCaptureCrystal") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/toggle_mentorhelp_ping()
+	set name = "Toggle Mentorhelp Ping"
+	set category = "Preferences"
+	set desc = "Toggles the mentorhelp ping"
+
+	var/pref_path = /datum/client_preference/play_mentorhelp_ping
+
+	toggle_preference(pref_path)
+
+	to_chat(src, "Mentorhelp pings are now [ is_preference_enabled(pref_path) ? "enabled" : "disabled"]")
+
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	feedback_add_details("admin_verb", "TSoundMentorhelps")
+
+/client/verb/toggle_player_tips()
+	set name = "Toggle Receiving Player Tips"
+	set category = "Preferences"
+	set desc = "When toggled on, you receive tips periodically on roleplay and gameplay."
+
+	var/pref_path = /datum/client_preference/player_tips
+
+	toggle_preference(pref_path)
+
+	to_chat(src, "You are [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] periodically receiving advice on gameplay and roleplay.")
+
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	feedback_add_details("admin_verb", "TReceivePlayerTips")

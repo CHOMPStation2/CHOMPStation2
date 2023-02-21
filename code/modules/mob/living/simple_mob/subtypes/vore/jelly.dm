@@ -16,6 +16,8 @@
 
 	say_list_type = /datum/say_list/jelly
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/jelly
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 // Activate Noms!
 /mob/living/simple_mob/animal/space/jelly

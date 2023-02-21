@@ -512,7 +512,7 @@
 		var/obj/item/projectile/new_projectile = make_projectile(spell_projectile, user)
 		new_projectile.old_style_target(hit_atom)
 		new_projectile.fire()
-		log_and_message_admins("has casted [src] at \the [hit_atom].")
+		log_attack("has casted [src] at \the [hit_atom].")//CHOMPEdit from log_and_message_admins
 		if(fire_sound)
 			playsound(src, fire_sound, 75, 1)
 		return 1

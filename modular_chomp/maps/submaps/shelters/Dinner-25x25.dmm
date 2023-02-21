@@ -1,0 +1,1447 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/template_noop)
+"ab" = (
+/turf/template_noop,
+/area/survivalpod/superpose/Dinner)
+"ac" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Dinner)
+"ad" = (
+/turf/simulated/wall,
+/area/survivalpod/superpose/Dinner)
+"ae" = (
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"af" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ag" = (
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ah" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ai" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aj" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/material/knife/butch,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ak" = (
+/obj/machinery/vending/hotfood,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"al" = (
+/obj/machinery/vending/dinnerware,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"am" = (
+/obj/structure/sink/kitchen,
+/turf/simulated/wall,
+/area/survivalpod/superpose/Dinner)
+"an" = (
+/obj/structure/flora/tree/sif,
+/turf/template_noop,
+/area/survivalpod/superpose/Dinner)
+"ao" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ap" = (
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aq" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ar" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"as" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"at" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"au" = (
+/obj/structure/table/standard,
+/obj/item/weapon/book/manual/chef_recipes,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"av" = (
+/obj/structure/table/standard,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aw" = (
+/obj/machinery/appliance/mixer/cereal,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ax" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"ay" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
+/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"az" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aA" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"aB" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aC" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aD" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aE" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/item/weapon/stool/padded,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aF" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aG" = (
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"aH" = (
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aI" = (
+/obj/structure/closet/crate/freezer,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aJ" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aK" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aL" = (
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"aM" = (
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8
+	},
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aN" = (
+/obj/structure/closet/crate/freezer,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aO" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aP" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aQ" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aR" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aS" = (
+/obj/structure/table/standard,
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aT" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/coatrack,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aU" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aV" = (
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"aW" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aX" = (
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"aZ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/Dinner)
+"ba" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bb" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"bd" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"be" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/appliance/mixer/cereal,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bf" = (
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Dinner)
+"bg" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bh" = (
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_coffee{
+	dir = 8;
+	pixel_x = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bi" = (
+/obj/item/frame/apc,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bj" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bk" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bl" = (
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bm" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bn" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/cell/high,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bo" = (
+/obj/structure/table/woodentable,
+/obj/random/mug,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bp" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bq" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"br" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/windoor_assembly{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bs" = (
+/obj/structure/bookcase,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"bt" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/space_heater,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bu" = (
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bv" = (
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/Dinner)
+"bw" = (
+/obj/structure/toilet/prison{
+	name = "toilet";
+	pixel_y = 10
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 4
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/Dinner)
+"bx" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"by" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"bz" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/Dinner)
+"bA" = (
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -9
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/Dinner)
+"bB" = (
+/obj/machinery/light/small,
+/obj/structure/table/standard,
+/obj/random/soap,
+/obj/random/soap{
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/Dinner)
+"bC" = (
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -9
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/Dinner)
+"dQ" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/table/bench/marble,
+/obj/structure/curtain/black,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"eR" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/structure/table/bench/marble,
+/obj/structure/flora/pottedplant/overgrown{
+	pixel_y = 7
+	},
+/obj/structure/curtain/black,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"gw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"hm" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"lo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"lT" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+"qd" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/chem_master/condimaster,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"wn" = (
+/obj/item/weapon/reagent_containers/food/snacks/chip/nacho/guac,
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"KP" = (
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/Dinner)
+"Lj" = (
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"Nb" = (
+/obj/structure/table/steel,
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/steel,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"Ql" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"WB" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
+"XK" = (
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Dinner)
+"Zv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor,
+/area/survivalpod/superpose/Dinner)
+"ZZ" = (
+/obj/structure/bookcase,
+/obj/machinery/light/small,
+/turf/simulated/floor/lino,
+/area/survivalpod/superpose/Dinner)
+
+(1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+an
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(3,1,1) = {"
+aa
+ab
+ab
+an
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+an
+ab
+aa
+"}
+(4,1,1) = {"
+aa
+ab
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+aa
+"}
+(5,1,1) = {"
+aa
+ac
+ac
+ab
+ac
+ac
+ab
+ac
+ac
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ac
+ac
+ab
+ac
+ab
+ab
+aa
+"}
+(6,1,1) = {"
+aa
+ab
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aZ
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+aa
+"}
+(7,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ad
+az
+az
+ad
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(8,1,1) = {"
+aa
+ab
+ab
+ab
+ad
+ad
+ae
+ae
+ae
+ad
+ap
+ap
+ad
+ae
+ae
+ae
+ad
+ae
+ae
+ae
+ad
+ab
+ab
+ab
+aa
+"}
+(9,1,1) = {"
+aa
+ab
+ab
+ad
+ad
+af
+ao
+aC
+ax
+ad
+ap
+aW
+ad
+ao
+aC
+ax
+ao
+aC
+ax
+af
+ad
+ad
+ab
+ab
+aa
+"}
+(10,1,1) = {"
+aa
+ab
+ad
+ad
+aq
+af
+ao
+aD
+ax
+ad
+az
+az
+ad
+ao
+aD
+ax
+ao
+aD
+ax
+af
+bt
+ad
+ad
+ab
+aa
+"}
+(11,1,1) = {"
+aa
+ad
+ad
+af
+af
+af
+af
+af
+af
+aT
+af
+af
+ba
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ad
+ad
+aa
+"}
+(12,1,1) = {"
+aa
+ae
+af
+ao
+ar
+ax
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ad
+aa
+"}
+(13,1,1) = {"
+aa
+ae
+af
+ao
+as
+ax
+af
+aE
+aE
+aE
+aE
+aE
+aE
+aE
+aE
+aE
+aE
+aE
+aE
+af
+af
+bx
+bx
+ae
+aa
+"}
+(14,1,1) = {"
+aa
+ad
+ad
+ad
+ad
+ad
+ad
+aF
+aJ
+aO
+aF
+aF
+aF
+aF
+aF
+aF
+aO
+aJ
+aF
+af
+af
+aD
+aC
+ae
+aa
+"}
+(15,1,1) = {"
+aa
+ad
+ag
+ap
+at
+ap
+az
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+bu
+af
+af
+by
+by
+ae
+aa
+"}
+(16,1,1) = {"
+aa
+ad
+WB
+ap
+ap
+ap
+az
+af
+qd
+aP
+aU
+aX
+bb
+be
+bg
+bh
+aS
+aK
+br
+af
+af
+af
+af
+ad
+aa
+"}
+(17,1,1) = {"
+aa
+ae
+ai
+ap
+au
+ap
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bz
+ad
+ad
+aa
+"}
+(18,1,1) = {"
+aa
+ae
+aj
+ap
+ah
+ap
+aA
+aG
+aL
+aG
+aG
+aG
+aG
+bc
+bc
+aG
+aG
+aL
+KP
+ad
+bw
+bv
+bA
+ad
+aa
+"}
+(19,1,1) = {"
+aa
+ad
+ak
+ap
+av
+ap
+ad
+ad
+ad
+ad
+ad
+ad
+lo
+gw
+ad
+ad
+ad
+bq
+ad
+ad
+bw
+bv
+bB
+ad
+aa
+"}
+(20,1,1) = {"
+aa
+ad
+al
+ap
+ap
+ap
+ad
+Ql
+aM
+aQ
+aV
+ad
+bd
+Zv
+ad
+bi
+bm
+bl
+bl
+ad
+bw
+bv
+bC
+ad
+aa
+"}
+(21,1,1) = {"
+aa
+ad
+am
+ap
+ap
+ap
+aB
+aH
+aH
+aH
+ad
+ad
+aA
+ad
+ad
+bj
+bn
+bl
+lT
+ad
+ad
+ad
+ad
+ad
+aa
+"}
+(22,1,1) = {"
+aa
+ab
+ad
+ad
+aw
+ap
+ad
+aH
+aH
+aH
+ad
+hm
+Lj
+XK
+ad
+bk
+bo
+bl
+bs
+ad
+wn
+ad
+ad
+ab
+aa
+"}
+(23,1,1) = {"
+aa
+ab
+ab
+ad
+ad
+ay
+ad
+aI
+aN
+aR
+ad
+Nb
+Lj
+bf
+ad
+bp
+bl
+bl
+ZZ
+ad
+ad
+ad
+ab
+ab
+aa
+"}
+(24,1,1) = {"
+aa
+ab
+ab
+ab
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aA
+ad
+ad
+ad
+dQ
+eR
+ad
+ad
+ad
+ab
+ab
+ab
+aa
+"}
+(25,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}

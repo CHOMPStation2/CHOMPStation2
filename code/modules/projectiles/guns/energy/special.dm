@@ -44,6 +44,7 @@
 	name = "floral somatoray"
 	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."
 	description_fluff = "The floral somatoray is a relatively recent invention of the NanoTrasen corporation, turning a process that once involved transferring plants to massive mutating racks, into a remote interface. Do not look directly into the transmission end."
+	icon = 'icons/obj/gun.dmi' //CHOMPedit
 	icon_state = "floramut100"
 	item_state = "floramut"
 	projectile_type = /obj/item/projectile/energy/floramut

@@ -29,6 +29,7 @@
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
 	soundproofed = TRUE
+	forbid_events = TRUE
 
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Main Outpost Dorm One"
@@ -72,6 +73,7 @@
 
 /area/crew_quarters/sleep
 	soundproofed = TRUE
+	forbid_events = TRUE
 
 /area/crew_quarters/sleep/vistor_room_1
 	limit_mob_size = FALSE
@@ -111,3 +113,8 @@
 
 /area/medical/cryo/autoresleeve
 	name = "\improper Medical Autoresleeving"
+	forbid_events = TRUE
+
+/area/rnd/research/particleaccelerator
+	name = "\improper Particle Accelerator Lab"
+	icon_state = "toxlab"

@@ -102,3 +102,31 @@
 	desc = "A piece of orange carpet. It is the same size as a normal floor tile!"
 	icon_state = "tile-carpet"
 	default_type = MAT_CARPET_ORANGE
+	
+/obj/item/stack/tile/carpet/brncarpet
+	icon_state = "tile-carpet"
+	
+/obj/item/stack/tile/carpet/blucarpet2
+	icon_state = "tile-carpet"
+	
+/obj/item/stack/tile/carpet/greencarpet
+	icon_state = "tile-carpet"
+	
+/obj/item/stack/tile/carpet/purplecarpet
+	icon_state = "tile-carpet"
+	
+/obj/item/stack/tile/carpet/geo
+	icon_state = "tile-carpet-deco"
+	desc = "A piece of carpet with a gnarly geometric design. It is the same size as a normal floor tile!"
+
+/obj/item/stack/tile/carpet/retro
+	icon_state = "tile-carpet-retro"
+	desc = "A piece of carpet with totally wicked blue space patterns. It is the same size as a normal floor tile!"
+
+/obj/item/stack/tile/carpet/retro_red
+	icon_state = "tile-carpet-retro-red"
+	desc = "A piece of carpet with red-ical space patterns. It is the same size as a normal floor tile!"
+	
+/obj/item/stack/tile/carpet/happy
+	icon_state = "tile-carpet-happy"
+	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"

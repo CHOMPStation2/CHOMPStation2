@@ -83,6 +83,11 @@
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_SIF
 
+/turf/simulated/open/sif //CHOMP Edit now I'm adding shit here now too. Skylands
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_ALTSIF
+
 // PoI compatability, to stop active edges.
 // In hindsight it would've been better to do this first instead of making a billion /sif subtypes above,
 // but maybe we can transition to this instead now and over time get rid of the /sif subtypes.
@@ -134,6 +139,11 @@
 	temperature	= TEMPERATURE_SIF
 
 /turf/simulated/sky
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_ALTSIF
+	
+/turf/simulated/floor/tiled/asteroid_steel //CHOMP Edit now I'm adding shit here now too. Abandoned temple.
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_ALTSIF

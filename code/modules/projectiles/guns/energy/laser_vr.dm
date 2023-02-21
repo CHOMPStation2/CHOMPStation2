@@ -185,7 +185,7 @@
 			break
 		playsound(src,'sound/items/change_drill.ogg',25,1)
 		user.hud_used.update_ammo_hud(user, src)
-		if(power_supply.give(phase_power) < phase_power)
+		if(power_supply.give(phase_power/8) < phase_power/8) //CHOMP Edit: Nerfed charge time of all phasers by adding /8 in a couple spots to this line
 			break
 
 	recharging = 0

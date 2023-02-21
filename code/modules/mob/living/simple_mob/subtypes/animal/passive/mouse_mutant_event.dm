@@ -11,9 +11,20 @@
 		return
 
 /mob/living/simple_mob/animal/passive/mouse/event/proc/rat()
-	visible_message("<span class='warning'>\The [src] suddenly evolves!</span>")
+	var/mob/bigger = null
 	if(prob(99.5))
-		new /mob/living/simple_mob/vore/aggressive/rat/event(get_turf(src))
-		qdel(src)
+		bigger = new /mob/living/simple_mob/vore/aggressive/rat/event(get_turf(src))
 	else
-		new /mob/living/simple_mob/vore/aggressive/chungus(get_turf(src))
+		bigger = new /mob/living/simple_mob/vore/aggressive/chungus(get_turf(src))
+
+	if(istype(loc,/obj/belly)){
+		var/obj/belly/B = loc
+		B.owner.visible_message("<span class='warning'><b>Something grows inside [B.owner]'s [lowertext(B.name)]!</b></span>")
+		to_chat(B.owner, "<span class='warning'>\The [src] suddenly evolves inside your [lowertext(B.name)]!</span>")
+		B.release_specific_contents(src, TRUE)
+		B.nom_mob(bigger, null)
+		qdel(src)
+	}else{
+		visible_message("<span class='warning'>\The [src] suddenly evolves!</span>")
+		qdel(src)
+	}

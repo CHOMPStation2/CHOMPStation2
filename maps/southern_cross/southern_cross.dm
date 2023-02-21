@@ -35,7 +35,7 @@
 	// #include "structures/closets/misc.dm"
 	// #include "structures/closets/research.dm"
 	// #include "structures/closets/security.dm"
-	#include "turfs/outdoors.dm"
+	//#include "turfs/outdoors.dm" //Moved inclusion to vorestation.dme to appease CI's smooth brain.
 	#include "events/wildlife_encounter.dm"
 
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
@@ -43,8 +43,8 @@
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
 		#include "southern_cross-1.dmm" //Deck 1 z1
 		#include "southern_cross-2.dmm" //Deck 2 z2
-		#include "southern_cross-3.dmm" //Deck 3 z2
-//		#include "southern_cross-4.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.7
+		#include "southern_cross-3.dmm" //Deck 3 z3
+//		#include "southern_cross-4.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.
 		#include "southern_cross-5.dmm" //Sif outpost z4
 		#include "southern_cross-6.dmm" //Sif mine z5
 		#include "southern_cross-7.dmm" //Carrier z6
@@ -55,7 +55,7 @@
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
-	#include "submaps/_southern_cross_submaps.dm" //This contains gateway stuff
+	#include "submaps/_southern_cross_submaps.dm" //This contains VR world and gateway stuff
 
 
 //PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets

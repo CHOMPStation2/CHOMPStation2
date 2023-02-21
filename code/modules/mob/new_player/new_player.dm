@@ -369,7 +369,7 @@
 		popup.set_content(dat)
 		popup.open()
 
-/mob/new_player/proc/time_till_respawn()
+/mob/proc/time_till_respawn()
 	if(!ckey)
 		return -1 // What?
 
@@ -389,14 +389,21 @@
 
 /mob/new_player/proc/IsJobAvailable(rank)
 	var/datum/job/job = job_master.GetJob(rank)
-	if(!job)	return 0
-	if(!job.is_position_available()) return 0
-	if(jobban_isbanned(src,rank))	return 0
-	if(!job.player_old_enough(src.client))	return 0
+	if(!job)
+		return 0
+	if(!job.is_position_available())
+		return 0
+	if(jobban_isbanned(src,rank))
+		return 0
+	if(!job.player_old_enough(src.client))
+		return 0
 	//VOREStation Add
-	if(!job.player_has_enough_playtime(src.client))	return 0
-	if(!is_job_whitelisted(src,rank))	return 0
-	if(!job.player_has_enough_pto(src.client)) return 0
+	if(!job.player_has_enough_playtime(src.client))
+		return 0
+	if(!is_job_whitelisted(src,rank))
+		return 0
+	if(!job.player_has_enough_pto(src.client))
+		return 0
 	//VOREStation Add End
 	return 1
 
@@ -475,7 +482,13 @@
 
 	ticker.mode.latespawn(character)
 
-	if(J.mob_type & JOB_SILICON)
+	//CHOMPEdit Begin - non-crew join don't get a message
+	if(rank == JOB_OUTSIDER)
+		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
+		if(!(J.mob_type & JOB_SILICON))
+			ticker.minds += character.mind
+	//CHOMPEdit End
+	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
@@ -534,6 +547,10 @@
 			// Checks for jobs with minimum age requirements
 			if((job.minimum_character_age || job.min_age_by_species) && (client.prefs.age < job.get_min_age(client.prefs.species, client.prefs.organ_data["brain"])))
 				continue
+			//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
+			if(job.is_species_banned(client.prefs.species, client.prefs.organ_data["brain"]))
+				continue
+			//CHOMPEdit End
 			// Checks for jobs set to "Never" in preferences	//TODO: Figure out a better way to check for this
 			if(!(client.prefs.GetJobDepartment(job, 1) & job.flag))
 				if(!(client.prefs.GetJobDepartment(job, 2) & job.flag))
@@ -616,6 +633,11 @@
 		if(chosen_language)
 			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
 				new_character.add_language(lang)
+	for(var/key in client.prefs.language_custom_keys)
+		if(client.prefs.language_custom_keys[key])
+			var/datum/language/keylang = GLOB.all_languages[client.prefs.language_custom_keys[key]]
+			if(keylang)
+				new_character.language_keys[key] = keylang
 	// And uncomment this, too.
 	//new_character.dna.UpdateSE()
 

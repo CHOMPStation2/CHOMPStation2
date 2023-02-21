@@ -71,14 +71,60 @@
 	build_path = /obj/item/device/electronic_assembly/large
 	sort_string = "UDAAC"
 
-/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone
-	name = "Drone custom assembly"
+// CHOMPStation Edit Start
+/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_a
+	name = "type-a electronic drone assembly"
 	desc = "A customizable assembly optimized for autonomous devices."
-	id = "assembly-drone"
+	id = "assembly-drone-a"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 30000)
 	build_path = /obj/item/device/electronic_assembly/drone
 	sort_string = "UDAAD"
+
+/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_b
+	name = "type-b electronic drone assembly"
+	desc = "It's a case, for building mobile electronics with. This one is armed and dangerous."
+	id = "assembly-drone-b"
+	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
+	materials = list(MAT_STEEL = 30000)
+	build_path = /obj/item/device/electronic_assembly/drone/arms
+	sort_string = "UDAAD"
+
+/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_c
+	name = "type-c electronic drone assembly"
+	desc = "It's a case, for building mobile electronics with. This one resembles a Securitron."
+	id = "assembly-drone-c"
+	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
+	materials = list(MAT_STEEL = 30000)
+	build_path = /obj/item/device/electronic_assembly/drone/secbot
+	sort_string = "UDAAD"
+
+/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_d
+	name = "type-d electronic drone assembly"
+	desc = "It's a case, for building mobile electronics with. This one resembles a Medibot"
+	id = "assembly-drone-d"
+	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
+	materials = list(MAT_STEEL = 30000)
+	build_path = /obj/item/device/electronic_assembly/drone/medbot
+	sort_string = "UDAAD"
+
+/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_e
+	name = "type-e electronic drone assembly"
+	desc = "It's a case, for building mobile electronics with. This one has a generic bot design."
+	id = "assembly-drone-e"
+	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
+	materials = list(MAT_STEEL = 30000)
+	build_path = /obj/item/device/electronic_assembly/drone/genbot
+	sort_string = "UDAAD"
+/datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_f
+	name = "type-f electronic drone assembly"
+	desc = "It's a case, for building mobile electronics with. This one has a hominoid design."
+	id = "assembly-drone-f"
+	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
+	materials = list(MAT_STEEL = 30000)
+	build_path = /obj/item/device/electronic_assembly/drone/android
+	sort_string = "UDAAD"
+// CHOMPStation Edit End
 
 /datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_device
 	name = "Device custom assembly"

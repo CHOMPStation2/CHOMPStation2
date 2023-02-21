@@ -18,7 +18,7 @@
 	has_hands = TRUE //Pawbs
 	seedarkness = FALSE //SHAAAADEkin
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN)
+	has_langs = list(LANGUAGE_GALCOM, LANGUAGE_SHADEKIN)
 
 	melee_damage_lower = 10
 	melee_damage_upper = 20
@@ -131,6 +131,8 @@
 
 	update_icon()
 
+	verbs |= /mob/proc/adjust_hive_range
+
 	return ..()
 
 /mob/living/simple_mob/shadekin/Destroy()
@@ -144,6 +146,7 @@
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -212,7 +215,7 @@
 			phase_shift() // shifting back in, nobody present
 		else if (non_kin_count && !(ability_flags & AB_PHASE_SHIFTED))
 			phase_shift() // shifting out, scaredy
-				
+
 /mob/living/simple_mob/shadekin/update_icon()
 	. = ..()
 

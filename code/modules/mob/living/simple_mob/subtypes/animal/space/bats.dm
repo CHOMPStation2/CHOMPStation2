@@ -30,7 +30,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
-	has_langs = list("Mouse")
+	has_langs = list(LANGUAGE_MOUSE, LANGUAGE_ECHOSONG)		// Haha squeak
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	meat_amount = 2
@@ -38,6 +38,8 @@
 	say_list_type = /datum/say_list/mouse	// Close enough
 
 	var/scare_chance = 15
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/bats/apply_melee_effects(var/atom/A)
 	if(isliving(A))

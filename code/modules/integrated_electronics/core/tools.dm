@@ -122,14 +122,14 @@
 	switch(type_to_use)
 		if("string")
 			accepting_refs = 0
-			new_data = input(usr, "Now type in a string.","[src] string writing") as null|text
+			new_data = tgui_input_text(usr, "Now type in a string.","[src] string writing", null, MAX_MESSAGE_LEN)
 			new_data = sanitizeSafe(new_data, MAX_MESSAGE_LEN, 0, 0)
 			if(istext(new_data) && CanInteract(user, GLOB.tgui_physical_state))
 				data_to_write = new_data
 				to_chat(user, "<span class='notice'>You set \the [src]'s memory to \"[new_data]\".</span>")
 		if("number")
 			accepting_refs = 0
-			new_data = input(usr, "Now type in a number.","[src] number writing") as null|num
+			new_data = tgui_input_number(usr, "Now type in a number.","[src] number writing")
 			if(isnum(new_data) && CanInteract(user, GLOB.tgui_physical_state))
 				data_to_write = new_data
 				to_chat(user, "<span class='notice'>You set \the [src]'s memory to [new_data].</span>")
@@ -278,6 +278,11 @@
 		/obj/item/device/integrated_electronics/detailer, //CHOMP Edit,
 		)
 	cant_hold = list(/obj/item/weapon/tool/screwdriver/power)
+
+//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
+//Which is enough to trigger byond's recursion level protection
+/obj/item/weapon/storage/bag/circuits/emp_act()
+	return	//No
 
 /obj/item/weapon/storage/bag/circuits/basic/Initialize()
 	. = ..()

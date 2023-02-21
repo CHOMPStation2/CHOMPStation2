@@ -5,8 +5,7 @@
 // would require us to exclude that datum from the global list.
 
 /datum/sprite_accessory/hair
-
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //This lets all races use the default hairstyles.
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //This lets all races use the default hairstyles.
 
 /datum/sprite_accessory/hair/astolfo
 	name = "Astolfo"
@@ -46,28 +45,28 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "serg_plain"
-	species_allowed = list(SPECIES_SERGAL)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //CHOMPEdit
 
 /datum/sprite_accessory/hair/sergal_medicore
 	name = "Sergal Medicore"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "serg_medicore"
-	species_allowed = list(SPECIES_SERGAL)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //CHOMPEdit
 
 /datum/sprite_accessory/hair/sergal_tapered
 	name = "Sergal Tapered"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "serg_tapered"
-	species_allowed = list(SPECIES_SERGAL)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //CHOMPEdit
 
 /datum/sprite_accessory/hair/sergal_fairytail
 	name = "Sergal Fairytail"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "serg_fairytail"
-	species_allowed = list(SPECIES_SERGAL)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //CHOMPEdit
 
 /datum/sprite_accessory/hair/braid
 	name = "Floorlength Braid"
@@ -91,8 +90,8 @@
 	name = "Bald"
 	icon_state = "bald"
 	gender = MALE
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //Lets all the races be bald if they want.
-	
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //Lets all the races be bald if they want.
+
 /datum/sprite_accessory/hair/ponytail6_fixed
 	name = "Ponytail 6 but fixed"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -390,40 +389,40 @@
 //xeno stuffs
 /datum/sprite_accessory/hair/xeno_head_drone_color
 	name = "Drone dome"
-	icon = 'icons/mob/human_face_ch.dmi' //chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi' //chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi' //chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi' //chompstation edit
 	icon_state = "cxeno_drone"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 // figure this one out for better coloring
 /datum/sprite_accessory/hair/xeno_head_sentinel_color
 	name = "Sentinal dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_sentinel"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_queen_color
 	name = "Queen dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_queen"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_hunter_color
 	name = "Hunter dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_hunter"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_praetorian_color
 	name = "Praetorian dome"
-	icon = 'icons/mob/human_face_ch.dmi'//chompstation edit
-	icon_add = 'icons/mob/human_face_ch_add.dmi'//chompstation edit
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_praetorian"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
@@ -471,20 +470,20 @@
 /datum/sprite_accessory/facial_hair
 	icon = 'icons/mob/human_face_or_vr.dmi'
 	color_blend_mode = ICON_MULTIPLY
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //This lets all races use the facial hair styles.
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use the facial hair styles.
 
 /datum/sprite_accessory/facial_hair/shaved
 	name = "Shaved"
 	icon_state = "bald"
 	gender = NEUTER
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //This lets all races use the facial hair styles.
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use the facial hair styles.
 
 /datum/sprite_accessory/facial_hair/neck_fluff
 	name = "Neck Fluff"
 	icon = 'icons/mob/human_face_or_vr.dmi'
 	icon_state = "facial_neckfluff"
 	gender = NEUTER
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN)
 
 /datum/sprite_accessory/facial_hair/vulp_none
 	name = "None"
@@ -570,7 +569,7 @@
 	var/desc = "You should not see this..."
 
 /datum/sprite_accessory/hair_accessory/verie_hair_glow
-	name = "verie's hair glow"
+	name = "veries hair glow"
 	desc = ""
 	icon_state = "verie_hair_glow"
 	ignores_lighting = 1

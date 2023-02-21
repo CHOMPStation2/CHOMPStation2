@@ -32,22 +32,15 @@
 	"Beach" 			= new/datum/holodeck_program(/area/holodeck/source_beach),
 	"Desert" 			= new/datum/holodeck_program(/area/holodeck/source_desert,
 													list(
-														'sound/effects/weather/wind/wind_2_1.ogg',
-											 			'sound/effects/weather/wind/wind_2_2.ogg',
-											 			'sound/effects/weather/wind/wind_3_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_2.ogg',
-											 			'sound/effects/weather/wind/wind_5_1.ogg'
+														'sound/ambience/desert/desertnight1.ogg',
+											 			'sound/ambience/desert/desertnight2.ogg',
+											 			'sound/ambience/desert/desertnight3.ogg',
+														'sound/ambience/desert/desertnight4.ogg'
 												 		)
 		 											),
 	"Snowfield" 		= new/datum/holodeck_program(/area/holodeck/source_snowfield,
 													list(
-														'sound/effects/weather/wind/wind_2_1.ogg',
-											 			'sound/effects/weather/wind/wind_2_2.ogg',
-											 			'sound/effects/weather/wind/wind_3_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_2.ogg',
-											 			'sound/effects/weather/wind/wind_5_1.ogg'
+														'sound/effects/weather/snowstorm/snowstorm_loop.ogg'
 												 		)
 		 											),
 	"Space" 			= new/datum/holodeck_program(/area/holodeck/source_space,
@@ -343,6 +336,7 @@
 
 	spawn(30)
 		for(var/obj/effect/landmark/L in linkedholodeck)
+			L.delete_me = 1
 			if(L.name=="Atmospheric Test Start")
 				spawn(20)
 					var/turf/T = get_turf(L)

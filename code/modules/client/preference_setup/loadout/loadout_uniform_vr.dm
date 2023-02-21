@@ -20,7 +20,7 @@
 /datum/gear/uniform/job_turtle/medical
 	display_name = "turtleneck, medical"
 	path = /obj/item/clothing/under/rank/medical/turtleneck
-	allowed_roles = list("Chief Medical Officer", "Paramedic", "Medical Doctor", "Psychiatrist", "Field Medic", "Chemist")
+	allowed_roles = list("Chief Medical Officer", "Paramedic", "Medical Doctor", "Psychiatrist", "Field Medic", "Chemist") //CHOMP keep explo
 
 //KHI Uniforms
 /datum/gear/uniform/job_khi/cmd
@@ -36,7 +36,7 @@
 /datum/gear/uniform/job_khi/med
 	display_name = "ge uniform, med" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/med
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Field Medic","Psychiatrist") //CHOMP keep explo
 
 /datum/gear/uniform/job_khi/eng
 	display_name = "ge uniform, eng" //CHOMPedit: changed to GE suit
@@ -66,7 +66,7 @@
 /datum/gear/suit/job_fed/medsci
 	display_name = "fed uniform, med/sci"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat/fedblue
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist","Xenobotanist","Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist","Xenobotanist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/suit/job_fed/eng
 	display_name = "fed uniform, eng"
@@ -83,13 +83,13 @@
 /datum/gear/uniform/job_trek/medsci/tos
 	display_name = "TOS uniform, med/sci"
 	path = /obj/item/clothing/under/rank/trek/medsci
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/uniform/job_trek/eng/tos
 	display_name = "TOS uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
-	
+
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
 //TNG
@@ -101,13 +101,13 @@
 /datum/gear/uniform/job_trek/medsci/tng
 	display_name = "TNG uniform, med/sci"
 	path = /obj/item/clothing/under/rank/trek/medsci/next
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/uniform/job_trek/eng/tng
 	display_name = "TNG uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/next //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
-	
+
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
 //VOY
@@ -119,13 +119,13 @@
 /datum/gear/uniform/job_trek/medsci/voy
 	display_name = "VOY uniform, med/sci"
 	path = /obj/item/clothing/under/rank/trek/medsci/voy
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/uniform/job_trek/eng/voy
 	display_name = "VOY uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/voy //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
-	
+
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
 //DS9
@@ -136,7 +136,7 @@
 	allowed_roles = list("Head of Security","Site Manager","Head of Personnel","Chief Engineer","Research Director",
 						"Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist",
 						"Scientist","Roboticist","Xenobiologist","Xenobotanist","Atmospheric Technician",
-						"Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+						"Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard","Security Pilot") //YW ADDITIONS  //CHOMP keep explo
 
 
 /datum/gear/uniform/job_trek/cmd/ds9
@@ -147,7 +147,7 @@
 /datum/gear/uniform/job_trek/medsci/ds9
 	display_name = "DS9 uniform, med/sci"
 	path = /obj/item/clothing/under/rank/trek/medsci/ds9
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/uniform/job_trek/eng/ds9
 	display_name = "DS9 uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
@@ -165,15 +165,15 @@
 /datum/gear/uniform/job_trek/medsci/ent
 	display_name = "ENT uniform, med/sci"
 	path = /obj/item/clothing/under/rank/trek/medsci/ent
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Field Medic") //CHOMP keep explo
 
 /datum/gear/uniform/job_trek/eng/ent
 	display_name = "ENT uniform, eng" //CHOMPEdit: Removed sec from the name. Gonna separate sec into its own so that I can apply armor value.
 	path = /obj/item/clothing/under/rank/trek/eng/ent //CHOMPEdit: Engineering only
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer") //CHOMPEdit: Removed sec from the allowed list. Gonna separate sec into its own so that I can apply armor value.
-	
+
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
-	
+
 /*
 Swimsuits
 */
@@ -221,6 +221,14 @@ Qipao
 /datum/gear/uniform/qipao_white
 	display_name = "qipao, white"
 	path = /obj/item/clothing/under/qipao/white
+
+/datum/gear/uniform/qipao_colorable_alt
+	display_name = "qipao, colorable alt"
+	path = /obj/item/clothing/under/qipao/white/colorable
+
+/datum/gear/uniform/qipao_colorable_alt/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
 
 /*
 Bluespace jumpsuit
@@ -290,3 +298,75 @@ Talon jumpsuit
 	display_name = "undersuit, command (SM/HoP)"
 	allowed_roles = list("Site Manager", "Head of Personnel")
 	path = /obj/item/clothing/under/undersuit/command
+
+//Altevian Uniforms
+/datum/gear/uniform/altevian
+	description = "An extremely comfortable set of clothing that's made to help people handle their day to day work around the fleets with little to no discomfort."
+	display_name = "altevian uniform selection"
+
+/datum/gear/uniform/altevian/New()
+	..()
+	var/list/pants = list()
+	for(var/obj/item/clothing/under/pants/altevian/pants_type as anything in typesof(/obj/item/clothing/under/pants/altevian))
+		pants[initial(pants_type.name)] = pants_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(pants))
+
+
+//Feminine Colored Jumpsuits.
+/datum/gear/uniform/f_jumpsuit_alt
+	display_name = "Colored Feminine Jumpsuit"
+	path = /obj/item/clothing/under/color/fjumpsuit
+
+/datum/gear/uniform/f_jumpsuit_alt/New()
+	..()
+	var/list/jumpsuits = list()
+	for(var/jumpsuit_style in typesof(/obj/item/clothing/under/color/fjumpsuit))
+		var/obj/item/clothing/under/color/fjumpsuit/jumpsuit = jumpsuit_style
+		jumpsuits[initial(jumpsuit.name)] = jumpsuit
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(jumpsuits))
+
+//Modernized Sec Jumpsuit
+/datum/gear/uniform/modernsec
+    display_name = "undersuit, security, modernized (Security)"
+    allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+    path = /obj/item/clothing/under/rank/security/modern
+
+/datum/gear/uniform/singer_blue
+	display_name = "blue singer dress"
+	path = /obj/item/clothing/under/dress/singer
+
+/datum/gear/uniform/singer_yellow
+	display_name = "yellow singer dress"
+	path = /obj/item/clothing/under/dress/singer/yellow
+
+//Antediluvian corsets from CitRP
+/datum/gear/uniform/antediluvian
+	display_name = "corset, antediluvian"
+	path = /obj/item/clothing/under/dress/antediluvian
+
+/datum/gear/uniform/antediluvianalt
+	display_name = "corset, antediluvian alt"
+	path = /obj/item/clothing/under/dress/antediluvian/sheerless
+
+//Colorable skirts
+/datum/gear/uniform/coloredskirts
+	display_name = "skirt selection, colorable"
+	path = /obj/item/clothing/under/skirt/colorable
+
+/datum/gear/uniform/coloredskirts/New()
+	..()
+	var/list/skirts = list(
+	"casual skirt"=/obj/item/clothing/under/skirt/colorable,
+	"puffy skirt"=/obj/item/clothing/under/skirt/colorable/puffy,
+	"skater skirt"=/obj/item/clothing/under/skirt/colorable/skater,
+	"pleated skirt"=/obj/item/clothing/under/skirt/colorable/pleated,
+	"pencil skirt"=/obj/item/clothing/under/skirt/colorable/pencil,
+	"plaid skirt"=/obj/item/clothing/under/skirt/colorable/plaid,
+	"tube skirt"=/obj/item/clothing/under/skirt/colorable/tube,
+	"long skirt"=/obj/item/clothing/under/skirt/colorable/long,
+	"high skirt"=/obj/item/clothing/under/skirt/colorable/high,
+	"swept skirt"=/obj/item/clothing/under/skirt/colorable/swept,
+	"jumper skirt"=/obj/item/clothing/under/skirt/colorable/jumper,
+	"jumper dress"=/obj/item/clothing/under/skirt/colorable/jumperdress
+	)
+	gear_tweaks += list(new/datum/gear_tweak/path(skirts), gear_tweak_free_color_choice)

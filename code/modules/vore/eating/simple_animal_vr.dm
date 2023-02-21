@@ -1,7 +1,7 @@
 ///////////////////// Simple Animal /////////////////////
 /mob/living/simple_mob
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
-	var/list/prey_excludes = list()		//For excluding people from being eaten.
+	var/list/prey_excludes = null		//For excluding people from being eaten.
 
 /mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
 	if(vore_active && !voremob_loaded)
@@ -31,7 +31,7 @@
 		return
 	*/
 	feed_grabbed_to_self(src,T)
-	update_icon()
+	//update_icon() CHOMPEdit
 
 //CHOMPedit: On-demand belly loading.
 /mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
@@ -39,7 +39,7 @@
 		voremob_loaded = TRUE
 		init_vore()
 		belly = vore_selected
-	..()
+	return ..()
 
 //
 // Simple proc for animals to have their digestion toggled on/off externally
@@ -107,8 +107,8 @@
 			user.visible_message("<span class='info'>[user] swats [src] with [O]!</span>")
 			release_vore_contents()
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
-				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.
-					prey_excludes += L
+				if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
+					LAZYSET(prey_excludes, L, world.time)
 					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
 	else if(istype(O, /obj/item/device/healthanalyzer))
 		var/healthpercent = health/maxHealth*100
@@ -119,8 +119,7 @@
 /mob/living/simple_mob/proc/removeMobFromPreyExcludes(weakref/target)
 	if(isweakref(target))
 		var/mob/living/L = target.resolve()
-		if(L)
-			LAZYREMOVE(prey_excludes, L)
+		LAZYREMOVE(prey_excludes, L) // It's fine to remove a null from the list if we couldn't resolve L
 
 /mob/living/simple_mob/proc/nutrition_heal()
 	set name = "Nutrition Heal"

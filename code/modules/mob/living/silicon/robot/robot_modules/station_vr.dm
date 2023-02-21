@@ -40,41 +40,18 @@
 					LANGUAGE_TAVAN		= 1
 					)
 
-/obj/item/weapon/robot_module/robot/chound
-	languages = list(
-					LANGUAGE_SOL_COMMON	= 1,
-					LANGUAGE_TRADEBAND	= 1,
-					LANGUAGE_UNATHI		= 1,
-					LANGUAGE_SIIK		= 1,
-					LANGUAGE_SKRELLIAN	= 1,
-					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_GUTTER		= 0,
-					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
-					LANGUAGE_SIGN		= 0,
-					LANGUAGE_BIRDSONG	= 1,
-					LANGUAGE_SAGARU		= 1,
-					LANGUAGE_CANILUNZT	= 1,
-					LANGUAGE_ECUREUILIAN= 1,
-					LANGUAGE_DAEMON		= 1,
-					LANGUAGE_ENOCHIAN	= 1,
-					LANGUAGE_DRUDAKAR	= 1,
-					LANGUAGE_TAVAN		= 1
-					)
-
 /hook/startup/proc/robot_modules_vr()
-	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medihound
-	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/knine
-	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/ert
-	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
-	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
-	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
-	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
-	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CHOMP Addition Unity
-	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg //CHOMP Addition Honk
+	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medical/medihound
+	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/security/knine
+	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/security/ert
+	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/janitor/scrubpup
+	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/research/sciencehound
+	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engineering/engiedog
+	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/butler/brodog
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/clerical/butler/booze
+	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/miner/kmine
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
+	robot_modules["TraumaHound"] = /obj/item/weapon/robot_module/robot/medical/traumahound
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -93,73 +70,96 @@
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	. = ..() //Any Global vore modules will come from here
 
-/obj/item/weapon/robot_module/robot/medical/surgeon
+/obj/item/weapon/robot_module/robot/medical
 	pto_type = PTO_MEDICAL
+
+/obj/item/weapon/robot_module/robot/medical/surgeon
 	vr_sprites = list(
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-medical",
+						"W02M" = "worm-surgeon",
 						"Feminine Humanoid" = "uptall-medical"
 					 )
 
 /obj/item/weapon/robot_module/robot/medical/crisis
-	pto_type = PTO_MEDICAL
 	vr_sprites = list(
 						"Handy" = "handy-med",
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-crisis",
+						"W02M" = "worm-crisis",
 						"Feminine Humanoid" = "uptall-crisis"
 					 )
 
-/obj/item/weapon/robot_module/robot/clerical/butler
+/obj/item/weapon/robot_module/robot/clerical
 	pto_type = PTO_CIVILIAN
+
+/obj/item/weapon/robot_module/robot/clerical/butler/general
 	vr_sprites = list(
 						"Handy - Service" = "handy-service",
 						"Handy - Hydro" = "handy-hydro",
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
 						"ZOOM-BA" = "zoomba-service",
+						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/general
-	pto_type = PTO_CIVILIAN
 	vr_sprites = list(
 						"Handy" = "handy-clerk",
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
 						"ZOOM-BA" = "zoomba-clerical",
+						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
 					 )
 
 /obj/item/weapon/robot_module/robot/janitor
 	pto_type = PTO_CIVILIAN
+
+/obj/item/weapon/robot_module/robot/janitor/general
 	vr_sprites = list(
 						"Handy" = "handy-janitor",
 						"Acheron" = "mechoid-Janitor",
 						"Shellguard Noble" = "Noble-CLN",
 						"ZOOM-BA" = "zoomba-janitor",
+						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-janitor"
 					 )
 
-/obj/item/weapon/robot_module/robot/security/general
+/obj/item/weapon/robot_module/robot/security
 	pto_type = PTO_SECURITY
+
+/obj/item/weapon/robot_module/robot/security/general
 	vr_sprites = list(
 						"Handy" = "handy-sec",
 						"Acheron" = "mechoid-Security",
 						"Shellguard Noble" = "Noble-SEC",
 						"ZOOM-BA" = "zoomba-security",
+						"W02M" = "worm-security",
+						"Feminine Humanoid" = "uptall-security"
+					 )
+
+/obj/item/weapon/robot_module/robot/security/combat
+	vr_sprites = list(
+						"Acheron" = "mechoid-Combat",
+						"ZOOM-BA" = "zoomba-combat",
+						"W02M" = "worm-combat",
 						"Feminine Humanoid" = "uptall-security"
 					 )
 
 /obj/item/weapon/robot_module/robot/miner
 	pto_type = PTO_CARGO
+
+/obj/item/weapon/robot_module/robot/miner/general
 	vr_sprites = list(
 						"Handy" = "handy-miner",
 						"Acheron" = "mechoid-Miner",
 						"Shellguard Noble" = "Noble-DIG",
 						"ZOOM-BA" = "zoomba-miner",
+						"W02M" = "worm-miner",
 						"Feminine Humanoid" = "uptall-miner"
 					 )
 
@@ -170,36 +170,36 @@
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
 						"ZOOM-BA" = "zoomba-standard",
+						"W02M" = "worm-standard",
 						"Feminine Humanoid" = "uptall-standard",
 						"Feminine Humanoid, Variant 2" = "uptall-standard2"
 					 )
-/obj/item/weapon/robot_module/robot/engineering/general
+
+/obj/item/weapon/robot_module/robot/engineering
 	pto_type = PTO_ENGINEERING
+
+/obj/item/weapon/robot_module/robot/engineering/general
 	vr_sprites = list(
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
 						"ZOOM-BA" = "zoomba-engineering",
+						"W02M" = "worm-engineering",
 						"Feminine Humanoid" = "uptall-engineering"
 					 )
 
 /obj/item/weapon/robot_module/robot/research
 	pto_type = PTO_SCIENCE
+
+/obj/item/weapon/robot_module/robot/research/general
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research",
 						"XI-GUS" = "spiderscience",
+						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-science"
 					 )
 
-/obj/item/weapon/robot_module/robot/security/combat
-	pto_type = PTO_SECURITY
-	vr_sprites = list(
-						"Acheron" = "mechoid-Combat",
-						"ZOOM-BA" = "zoomba-combat",
-						"Feminine Humanoid" = "uptall-security"
-					 )
-
-/obj/item/weapon/robot_module/robot/knine
+/obj/item/weapon/robot_module/robot/security/knine
 	name = "k9 robot module"
 	sprites = list(
 					"K9 hound" = "k9",
@@ -208,15 +208,12 @@
 					"Borgi" = "borgi-sec",
 					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
-					"Drake" = "drakesec"
+					"Cat" = "vixsec", //CHOMPEdit
+					"Drake" = "drakesec",
+					"Raptor V-4" = "secraptor"
 					)
-	channels = list("Security" = 1)
-	networks = list(NETWORK_SECURITY)
-	pto_type = PTO_SECURITY
-	can_be_pushed = 0
-	supported_upgrades = list(/obj/item/borg/upgrade/tasercooler)
 
-/obj/item/weapon/robot_module/robot/knine/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src) //You need cuffs to be a proper sec borg!
 	src.modules += new /obj/item/weapon/dogborg/jaws/big(src) //In case there's some kind of hostile mob.
 	src.modules += new /obj/item/weapon/melee/baton/robot(src) //Since the pounce module refused to work, they get a stunbaton instead.
@@ -224,6 +221,7 @@
 	src.modules += new /obj/item/taperoll/police(src) //Block out crime scenes.
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
+	src.modules += new /obj/item/device/ticket_printer(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -248,6 +246,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -256,7 +258,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/knine/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/weapon/robot_module/robot/security/knine/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/device/flash/F = locate() in src.modules
 	if(F.broken)
 		F.broken = 0
@@ -275,31 +277,31 @@
 		B.bcell.give(amount)*/
 
 
-/obj/item/weapon/robot_module/robot/medihound
+/obj/item/weapon/robot_module/robot/medical/medihound
 	name = "MediHound module"
-	channels = list("Medical" = 1)
-	networks = list(NETWORK_MEDICAL)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
-	pto_type = PTO_MEDICAL
-	can_be_pushed = 0
 	sprites = list(
 					"Medical Hound" = "medihound",
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
 					"Borgi" = "borgi-medi",
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
-					"Drake" = "drakemed"
+					"Cat" = "vixmed", //CHOMPEdit
+					"Drake" = "drakemed",
+					"Raptor V-4" = "medraptor"
 					)
 
-/obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src) //In case a patient is being attacked by carp.
 	src.modules += new /obj/item/device/dogborg/boop_module(src) //Boop the crew.
 	src.modules += new /obj/item/device/healthanalyzer(src) // See who's hurt specificially.
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice, made it the large variant in 2022
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
+	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //This is kinda important for rescuing people without making it worse for everyone
+	src.modules += new /obj/item/weapon/gripper/medical(src) //Let them do literally anything in medbay other than patch external damage and lick people
+	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src) //dropper is nice to have for so much actually
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
@@ -307,10 +309,15 @@
 	synths += medicine
 
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
+	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
 	C.uses_charge = 1
-	C.charge_costs = list(1000)
+	C.charge_costs = list(5000)
 	C.synths = list(medicine)
+	S.uses_charge = 1
+	S.charge_costs = list(1000)
+	S.synths = list(medicine)
 	src.modules += C
+	src.modules += S
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
@@ -331,29 +338,111 @@
 	B.water = water
 	src.modules += B
 
+	//CHOMPEdit Start - Give back the ATK/ABP since we don't have the surgeryhound
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
-	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
 	O.uses_charge = 1
 	O.charge_costs = list(1000)
 	O.synths = list(medicine)
 	P.uses_charge = 1
 	P.charge_costs = list(1000)
 	P.synths = list(medicine)
-	S.uses_charge = 1
-	S.charge_costs = list(1000)
-	S.synths = list(medicine)
 	src.modules += O
 	src.modules += P
-	src.modules += S
-
-// End YW Edit
+	//CHOMPEdit End
 
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module
 	R.icon = 'icons/mob/widerobot_med_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_med_vr.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
+	R.pixel_x 	 = -16
+	R.old_x  	 = -16
+	R.default_pixel_x = -16
+	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
+	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs |= /mob/living/proc/toggle_rider_reins
+	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	..()
+
+/obj/item/weapon/robot_module/robot/medical/traumahound
+	name = "traumahound robot module"
+	sprites = list(
+					"Traumahound" = "traumavale",
+					"Drake" = "draketrauma",
+					"Borgi" = "borgi-trauma"
+					)
+
+/obj/item/weapon/robot_module/robot/medical/traumahound/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/device/healthanalyzer(src)
+	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/weapon/autopsy_scanner(src)
+	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/cautery/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bonegel/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src) //let them succ
+	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
+	src.modules += new /obj/item/weapon/gripper/medical(src)
+	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
+	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
+	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
+	src.emag 	= new /obj/item/weapon/dogborg/pounce(src) //Pounce, also, lets not give them polyacid spray
+
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
+	water.name = "Water reserves"
+	water.recharge_rate = 0
+	R.water_res = water
+	synths += water
+
+	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	T.water = water
+	src.modules += T
+
+	var/obj/item/weapon/reagent_containers/borghypo/hound/trauma/H = new /obj/item/weapon/reagent_containers/borghypo/hound/trauma(src) //surgeon chems
+	H.water = water
+	src.modules += H
+
+	var/obj/item/device/dogborg/sleeper/compactor/trauma/B = new /obj/item/device/dogborg/sleeper/compactor/trauma(src) //So they can nom people and heal them
+	B.water = water
+	src.modules += B
+
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000) //this is so they can do brute/burn surgeries and fix assisted/prosthetic organs
+	synths += medicine
+
+	var/obj/item/stack/nanopaste/N = new /obj/item/stack/nanopaste(src)
+	var/obj/item/stack/medical/advanced/bruise_pack/S = new /obj/item/stack/medical/advanced/bruise_pack(src)
+	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
+	N.uses_charge = 1
+	N.charge_costs = list(1000)
+	N.synths = list(medicine)
+	S.uses_charge = 1
+	S.charge_costs = list(1000)
+	S.synths = list(medicine)
+	O.uses_charge = 1
+	O.charge_costs = list(1000)
+	O.synths = list(medicine)
+	src.modules += N
+	src.modules += S
+	src.modules += O
+
+	R.icon = 'icons/mob/widerobot_trauma_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_trauma_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -368,26 +457,22 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/ert
+/obj/item/weapon/robot_module/robot/security/ert
 	name = "Emergency Responce module"
-	channels = list("Security" = 1)
-	networks = list(NETWORK_SECURITY)
-	pto_type = PTO_SECURITY
-	can_be_pushed = 0
 	sprites = list(
 					"Standard" = "ert",
 					"Classic" = "ertold",
 					"Borgi" = "borgi"
 					)
 
-/obj/item/weapon/robot_module/robot/ert/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/security/ert/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/ert(src)
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
 	src.modules += new /obj/item/weapon/tool/crowbar(src)
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	src.modules += new /obj/item/weapon/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -412,6 +497,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -420,20 +509,19 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/scrubpup
+/obj/item/weapon/robot_module/robot/janitor/scrubpup
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
 					"Janihound model V-2" = "J9",
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
+					"Cat" = "vixjani", //CHOMPEdit
 					"Drake" = "drakejanit"
 					)
-	channels = list("Service" = 1)
-	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
-/obj/item/weapon/robot_module/robot/scrubpup/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/janitor/scrubpup/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/pupscrubber(src)
@@ -499,6 +587,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -507,21 +599,20 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/science
+/obj/item/weapon/robot_module/robot/research/sciencehound
 	name = "Research Hound Module"
 	sprites = list(
 					"Research Hound" = "science",
 					"Borgi" = "borgi-sci",
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark",
-					"Drake" = "drakesci"
+					"Cat" = "vixsci", //CHOMPEdit
+					"Drake" = "drakesci",
+					"Raptor V-4" = "sciraptor"
 					)
-	channels = list("Science" = 1)
-	pto_type = PTO_SCIENCE
 	can_be_pushed = 0
-	supported_upgrades = list(/obj/item/borg/upgrade/advrped)
 
-/obj/item/weapon/robot_module/robot/science/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/research/sciencehound/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/weapon/gripper/research(src)
@@ -538,9 +629,15 @@
 	//Added a circuit gripper
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
+	//src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src) //these are on the normal one, but do not appear to have a purpose other than borging
+	//src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src) //so I am leaving them here but commented out because robotics no do the borging w/o medical
+	src.modules += new /obj/item/weapon/portable_destructive_analyzer(src) //destructive analyzer option for pref respect while also being able to do job
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
-	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src)  //Chompedit this was missing for some strange reason.
-	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src)  //Chompedit This also.
+	src.modules += new /obj/item/weapon/shockpaddles/robot/jumper(src) //unkilling synths may be important actually
+	src.modules += new /obj/item/weapon/melee/baton/slime/robot(src) //save the xenobio from themselves
+	src.modules += new /obj/item/weapon/gun/energy/taser/xeno/robot(src) //save the xenobio from themselves from a distance
+	src.modules += new /obj/item/device/xenoarch_multi_tool(src) //go find fancy rock
+	src.modules += new /obj/item/weapon/pickaxe/excavationdrill(src) //go get fancy rock
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -580,6 +677,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -588,7 +689,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/engiedog
+/obj/item/weapon/robot_module/robot/engineering/engiedog
 	name = "Construction Hound module"
 	sprites = list(
 					"Pupdozer" = "pupdozer",
@@ -596,15 +697,12 @@
 					"V2 Engidog" = "thottbot",
 					"EngiHound" = "engihound",
 					"EngiHoundDark" = "engihounddark",
+					"Cat" = "vixengi", //CHOMPEdit
 					"Drake" = "drakeeng"
 					)
-	channels = list("Engineering" = 1)
-	networks = list(NETWORK_ENGINEERING)
-	pto_type = PTO_ENGINEERING
-	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
 	can_be_pushed = 0
 
-/obj/item/weapon/robot_module/robot/engiedog/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/engineering/engiedog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
@@ -627,9 +725,9 @@
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/rms(src)
 	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)  //CHOMPedit: add RCD
-	src.modules += new /obj/item/weapon/pipe_dispenser(src)
+	src.modules |= new /obj/item/weapon/pipe_dispenser(src) //CHOMPEDIT: only add one if our core didnt already
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
-	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
+	//src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change //CHOMPREMOVE: duplicate definition
 
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
@@ -737,6 +835,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -746,22 +848,21 @@
 	..()
 
 // Uses modified K9 sprites.
-/obj/item/weapon/robot_module/robot/clerical/brodog
+/obj/item/weapon/robot_module/robot/clerical/butler/brodog
 	name = "service-hound module"
 	sprites = list(
 					"Blackhound" = "k50",
 					"Pinkhound" = "k69",
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
+					"Cat" = "vixserv", //CHOMPEdit
 					"Drake" = "drakemine"
 					)
-	channels = list("Service" = 1)
-	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
 
 // In a nutshell, basicly service/butler robot but in dog form. - Port from CitadelRP
-/obj/item/weapon/robot_module/robot/clerical/brodog/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/clerical/butler/brodog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
 	src.modules += new /obj/item/weapon/material/minihoe(src)
@@ -815,6 +916,10 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -823,20 +928,19 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/kmine
+/obj/item/weapon/robot_module/robot/miner/kmine
 	name = "Supply Hound Module"
 	sprites = list(
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark",
+					"Cat Mining" = "vixmine", //CHOMPEdit
+					"Cat Cargo" = "vixcargo", //CHOMPEdit
 					"Drake" = "drakemine"
 					)
-	channels = list("Supply" = 1)
-	pto_type = PTO_CARGO
 	can_be_pushed = 0
-	supported_upgrades = list(/obj/item/borg/upgrade/pka, /obj/item/borg/upgrade/diamonddrill)
 
-/obj/item/weapon/robot_module/robot/kmine/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/miner/kmine/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
@@ -876,6 +980,10 @@
 	R.old_x  	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
@@ -901,10 +1009,8 @@
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-/obj/item/weapon/robot_module/robot/booze
+/obj/item/weapon/robot_module/robot/clerical/butler/booze
 	name = "BoozeHound robot module"
-	channels = list("Service" = 1)
-	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 	sprites = list(
 				"Beer Buddy" = "boozeborg",
@@ -917,7 +1023,7 @@
 				"Vodka Komrade" = "boozeborg(vodka)"
 				) //CHOMP Edit Added Vodka Komrade
 
-/obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/clerical/butler/booze/New(var/mob/living/silicon/robot/R)
 	..()
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
@@ -947,13 +1053,7 @@
 
 	src.modules += new /obj/item/weapon/tray/robotray(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
-	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
 
-	var/datum/reagents/N = new/datum/reagents(50)
-	src.emag.reagents = N
-	N.my_atom = src.emag
-	N.add_reagent("beer2", 50)
-	src.emag.name = "Mickey Finn's Special Brew"
 	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -962,16 +1062,17 @@
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
 	R.dogborg = TRUE
+	//CHOMPEdit - Add vore capacity
+	R.vore_capacity = 1
+	R.vore_capacity_ex = list("stomach" = 1)
+	//CHOMPEdit End
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	..()
 
-/obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/weapon/robot_module/robot/clerical/butler/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
 	E.reagents.add_reagent("enzyme", 2 * amount)
-	if(src.emag)
-		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
-		B.reagents.add_reagent("beer2", 2 * amount)
 
 //CHOMP addition start BORGHYPO
 /obj/item/weapon/reagent_containers/borghypo/service/booze
@@ -984,67 +1085,6 @@
 	volume = 120
 	possible_transfer_amounts = list(1 ,5, 10, 20, 30)
 //Chomp addition end
-
-// CH Changes - Unity Hound begin
-/obj/item/weapon/robot_module/robot/chound
-	name = "Unity Hound Module"
-	sprites = list(
-					"Kcom" = "kcom"
-					)
-	channels = list(
-			"Medical" = 1,
-			"Engineering" = 1,
-			"Security" = 1,
-			"Service" = 1,
-			"Supply" = 0,
-			"Science" = 1,
-			"Command" = 1,
-			"Explorer" = 0
-			)
-	pto_type = PTO_CIVILIAN
-	can_be_pushed = 0
-
-/obj/item/weapon/robot_module/robot/chound/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/pen/robopen(src)
-	src.modules += new /obj/item/weapon/form_printer(src)
-	src.modules += new /obj/item/weapon/gripper/paperwork(src)
-	src.modules += new /obj/item/weapon/hand_labeler(src)
-	src.modules += new /obj/item/weapon/stamp(src)
-	src.modules += new /obj/item/weapon/stamp/denied(src)
-	src.modules += new /obj/item/weapon/taskmanager(src)
-	src.emag = new /obj/item/weapon/stamp/chameleon(src)
-	src.emag = new /obj/item/weapon/pen/chameleon(src)
-
-	var/datum/matter_synth/water = new /datum/matter_synth(500)
-	water.name = "Water reserves"
-	water.recharge_rate = 0
-	R.water_res = water
-	synths += water
-
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
-	T.water = water
-	src.modules += T
-
-	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper/command(src)
-	B.water = water
-	src.modules += B
-
-	R.icon = 'icons/mob/widerobot_ch.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_ch.dmi'
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.ui_style_vr = TRUE
-	R.pixel_x 	 = -16
-	R.old_x  	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/toggle_rider_reins
-	R.verbs |= /mob/living/proc/shred_limb
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
-
-	..()
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
 	R.pixel_x = initial(pixel_x)
@@ -1061,4 +1101,3 @@
 	R.verbs -= /mob/living/proc/shred_limb
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
-// CH changes - Unity Hound end

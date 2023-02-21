@@ -6,7 +6,7 @@
 /datum/species/custom
 	name = SPECIES_CUSTOM
 	name_plural = "Custom"
-	selects_bodytype = TRUE
+	selects_bodytype = SELECTS_BODYTYPE_CUSTOM
 	base_species = SPECIES_HUMAN
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
@@ -24,6 +24,7 @@
 	max_age = 200
 	health_hud_intensity = 2
 	num_alternate_languages = 3
+	species_language = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
@@ -45,6 +46,33 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot, "descriptor" = "left foot"),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right, "descriptor" = "right foot")
 		)
+
+	trait_points = 2
+
+	//CHOMPEdit Start - add a bunch of default emotes
+	default_emotes = list(
+		/decl/emote/audible/teshsqueak,
+		/decl/emote/audible/teshchirp,
+		/decl/emote/audible/teshtrill,
+		/decl/emote/audible/vox_shriek,
+		/decl/emote/audible/squish,
+		/decl/emote/audible/chirp,
+		/decl/emote/visible/bounce,
+		/decl/emote/visible/jiggle,
+		/decl/emote/visible/lightup,
+		/decl/emote/visible/vibrate,
+		/decl/emote/audible/gnarl,
+		/decl/emote/audible/purr,
+		/decl/emote/audible/purrlong,
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
+	//CHOMPEdit End
 
 /datum/species/custom/update_sort_hint()
 	sort_hint = SPECIES_SORT_CUSTOM

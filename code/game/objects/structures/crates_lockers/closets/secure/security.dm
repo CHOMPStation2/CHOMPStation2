@@ -60,7 +60,7 @@
 		/obj/item/clothing/under/suit_jacket/teal/skirt,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/hop,
-		/obj/item/clothing/head/caphat/hop/beret/,
+		/obj/item/clothing/head/caphat/hop/beret,
 		/obj/item/clothing/head/caphat/hop/beret/white)
 
 
@@ -155,6 +155,7 @@
 		/obj/item/weapon/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
+		/obj/item/device/ticket_printer,		//CHOMPStation addition
 		/obj/item/device/retail_scanner/security	//CHOMPStation addition
 		)
 
@@ -198,7 +199,8 @@
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/holowarrant,				//CHOMPStation addition
 		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
-		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
+		/obj/item/device/ticket_printer			//CHOMPStation addition
 		)
 
 /obj/structure/closet/secure_closet/security/Initialize()

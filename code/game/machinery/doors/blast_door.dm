@@ -319,6 +319,15 @@
 	density = FALSE
 	opacity = 0
 
+/obj/machinery/door/blast/regular/bookcase //CHOMP Add code block
+	name = "bookcase"
+	desc = "On closer inspection, the array of books is decorative and built into the frame."
+	icon_state = "bookcase1"
+	icon_state_open = "bookcase0"
+	icon_state_opening = "bookcasec0"
+	icon_state_closed = "bookcase1"
+	icon_state_closing = "bookcasec1"
+
 // SUBTYPE: Shutters
 // Nicer looking, and also weaker, shutters. Found in kitchen and similar areas.
 /obj/machinery/door/blast/shutters

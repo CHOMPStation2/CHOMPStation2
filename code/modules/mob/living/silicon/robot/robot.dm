@@ -358,7 +358,7 @@
 
 	spawn(0)
 		var/newname
-		newname = sanitizeSafe(input(src,"You are a robot. Enter a name, or leave blank for the default name.", "Name change","") as text, MAX_NAME_LEN)
+		newname = sanitizeSafe(tgui_input_text(src,"You are a robot. Enter a name, or leave blank for the default name.", "Name change","", MAX_NAME_LEN), MAX_NAME_LEN)
 		if (newname)
 			custom_name = newname
 			sprite_name = newname
@@ -1074,14 +1074,33 @@
 			choose_icon(icon_selection_tries, module_sprites)
 			return
 
+	//CHOMPEdit Begin - Allow multiple sizes of vore sprites and/or resting vore sprites
+	if(dogborg && (icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo"))
+		sleeper_resting = TRUE
+	else
+		sleeper_resting = FALSE
+	//And then for multiple belly sizes...
+	if(dogborg && (icontype == "example"))
+		vore_capacity = 2
+		vore_capacity_ex["stomach"] = 2
+	else if(dogborg)
+		vore_capacity = 1
+		vore_capacity_ex["stomach"] = 1
+	else
+		vore_capacity = 0
+		vore_capacity_ex["stomach"] = 0
+	//CHOMPEdit End
+
 	icon_selected = 1
 	icon_selection_tries = 0
 	to_chat(src, "Your icon has been set. You now require a module reset to change it.")
 
 /mob/living/silicon/robot/proc/sensor_mode() //Medical/Security HUD controller for borgs
-	set name = "Set Sensor Augmentation"
+	set name = "Toggle Sensor Augmentation" //VOREStation Add
 	set category = "Robot Commands"
 	set desc = "Augment visual feed with internal sensor overlays."
+	sensor_type = !sensor_type //VOREStation Add
+	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
 	toggle_sensor_mode()
 
 /mob/living/silicon/robot/proc/add_robot_verbs()

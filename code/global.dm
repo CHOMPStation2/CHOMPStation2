@@ -91,6 +91,7 @@ var/list/reverse_dir = list( // reverse_dir[dir] = reverse of dir
 	41, 43, 36, 38, 37, 39, 44, 46, 45, 47, 16, 18, 17, 19, 24, 26, 25, 27, 20, 22, 21,
 	23, 28, 30, 29, 31, 48, 50, 49, 51, 56, 58, 57, 59, 52, 54, 53, 55, 60, 62, 61, 63
 )
+var/global/const/SQRT_TWO = 1.41421356237
 
 var/datum/configuration/config      = null
 
@@ -143,8 +144,7 @@ var/list/robot_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
 	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
-	"Service-Hound", "BoozeHound", "KMine"
-	, "UnityHound", "Honk-Hound" // CHOMPEdit -- Adds the UnityHound drone to the list.
+	"Service-Hound", "BoozeHound", "KMine", "TraumaHound"
 )
 // List of modules added during code red
 var/list/emergency_module_types = list(

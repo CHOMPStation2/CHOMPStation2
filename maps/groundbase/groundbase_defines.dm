@@ -40,8 +40,8 @@
 
 	use_overmap = TRUE
 	overmap_z = Z_LEVEL_MISC
-	overmap_size = 25
-	overmap_event_areas = 15
+	overmap_size = 62
+	overmap_event_areas = 100
 	usable_email_tlds = list("virgo.nt")
 
 	zlevel_datum_type = /datum/map_z_level/groundbase
@@ -124,6 +124,9 @@
 	default_skybox = /datum/skybox_settings/groundbase
 
 	unit_test_exempt_areas = list(		//These are all outside
+		/area/groundbase/cargo/bay,
+		/area/groundbase/civilian/bar/upper,
+		/area/groundbase/exploration/shuttlepad,
 		/area/groundbase/level1,
 		/area/groundbase/level1/ne,
 		/area/groundbase/level1/nw,
@@ -140,11 +143,20 @@
 		/area/groundbase/level2/nw,
 		/area/groundbase/level2/se,
 		/area/groundbase/level2/sw,
+		/area/groundbase/level2/northspur,
+		/area/groundbase/level2/eastspur,
+		/area/groundbase/level2/westspur,
+		/area/groundbase/level2/southeastspur,
+		/area/groundbase/level2/southwestspur,
 		/area/groundbase/level3,
 		/area/groundbase/level3/ne,
 		/area/groundbase/level3/nw,
 		/area/groundbase/level3/se,
 		/area/groundbase/level3/sw,
+		/area/groundbase/level3/ne/open,
+		/area/groundbase/level3/nw/open,
+		/area/groundbase/level3/se/open,
+		/area/groundbase/level3/sw/open,
 		/area/maintenance/groundbase/level1/netunnel,
 		/area/maintenance/groundbase/level1/nwtunnel,
 		/area/maintenance/groundbase/level1/setunnel,
@@ -184,6 +196,11 @@
 
 	unit_test_exempt_from_atmos = list()
 
+	unit_test_z_levels = list(
+		Z_LEVEL_GB_BOTTOM,
+		Z_LEVEL_GB_MIDDLE,
+		Z_LEVEL_GB_TOP
+	)
 
 	lateload_z_levels = list(
 		list("Groundbase - Central Command"),
@@ -323,7 +340,7 @@
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
 
-	initial_generic_waypoints = list("groundbase", "gb_excursion_pad")
+	initial_generic_waypoints = list("groundbase", "gb_excursion_pad","omship_axolotl")
 	initial_restricted_waypoints = list()
 
 	extra_z_levels = list(
@@ -423,7 +440,7 @@
 	. = ..()
 //	seed_submaps(list(Z_LEVEL_MINING), 60, /area/gb_mine/unexplored, /datum/map_template/space_rocks)	//POI seeding
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_MINING, world.maxx - 4, world.maxy - 4)
-	new /datum/random_map/noise/ore/mining(null, 1, 1, Z_LEVEL_MINING, 64, 64)
+	new /datum/random_map/noise/ore/gb_mining(null, 1, 1, Z_LEVEL_MINING, 64, 64)
 
 /datum/map_z_level/gb_lateload/mining
 	z = Z_LEVEL_MINING
@@ -511,6 +528,20 @@
 	desc = "Wilderness"
 	mappath = 'maps/groundbase/southwilds/southwilds2.dmm'
 	associated_map_datum = /datum/map_z_level/gb_lateload/gb_south_wilds
+<<<<<<< HEAD
+=======
+/datum/map_template/gb_lateload/wilds/south/type3
+	name = "Southern Wilds 3"
+	desc = "Wilderness"
+	mappath = 'maps/groundbase/southwilds/southwilds3.dmm'
+	associated_map_datum = /datum/map_z_level/gb_lateload/gb_south_wilds
+/datum/map_template/gb_lateload/wilds/south/type3/on_map_loaded(z)
+	. = ..()
+	// Using landmarks for this now.
+	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 6, /area/submap/groundbase/poi/wildvillage/plot/square, /datum/map_template/groundbase/wildvillage/square)	//POI seeding
+	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 2, /area/submap/groundbase/poi/wildvillage/plot/wide, /datum/map_template/groundbase/wildvillage/wide)
+	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 1, /area/submap/groundbase/poi/wildvillage/plot/long, /datum/map_template/groundbase/wildvillage/long)
+>>>>>>> 6aa6c45620... Merge pull request #12842 from Heroman3003/poi-guarantee
 
 /datum/map_template/gb_lateload/wilds/east/type1
 	name = "Eastern Wilds 1"
@@ -544,5 +575,8 @@
 */
 
 ////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 
 >>>>>>> ae6ecf6fb4... Merge pull request #12817 from Very-Soft/gbwilds
+=======
+>>>>>>> 26e29da7c4... Merge pull request #13242 from ItsSelis/selis-multiz

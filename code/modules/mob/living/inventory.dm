@@ -25,6 +25,18 @@
 			else
 				newitem.forceMove(S)
 			return S
+
+	//CHOMPedit - protean rigsuit integrated backpack, behold, jank!
+	if(istype(src.back,/obj/item/weapon/rig))	//This would be much cooler if we had componentized storage datums
+		var/obj/item/weapon/rig/R = src.back
+		if(R.rig_storage)
+			var/obj/item/weapon/storage/backpack = R.rig_storage
+			if(backpack.can_be_inserted(newitem, 1))
+				if(user_initiated)
+					backpack.handle_item_insertion(newitem)
+				else
+					newitem.forceMove(src.back)
+				return backpack
 	return 0
 
 //Returns the thing in our active hand
@@ -119,14 +131,14 @@
 	// We're the first!
 	if(!L)
 		L = list()
-	
+
 	// Lefty grab!
 	if (istype(l_hand, /obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = l_hand
 		L |= G.affecting
 		if(mobchain_limit-- > 0)
 			G.affecting?.ret_grab(L, mobchain_limit) // Recurse! They can update the list. It's the same instance as ours.
-	
+
 	// Righty grab!
 	if (istype(r_hand, /obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = r_hand
@@ -144,7 +156,7 @@
 
 	if(!checkClickCooldown())
 		return
-	
+
 	setClickCooldown(1)
 
 	if(istype(loc,/obj/mecha)) return
@@ -272,7 +284,7 @@
 	if(..())
 		return TRUE
 
-	// If anyone wants the inventory panel to actually work, 
+	// If anyone wants the inventory panel to actually work,
 	// add code to handle actions "mask", "l_hand", "r_hand", "back", "pockets", and "internals" here
 	// No mobs other than humans actually supported stripping or putting stuff on before the /datum/inventory_panel was
 	// created, so feature parity demands not adding that and risking breaking stuff
@@ -345,12 +357,12 @@
 	data["sensors"] = FALSE
 	if(istype(suit) && suit.has_sensor == 1)
 		data["sensors"] = TRUE
-	
+
 	data["handcuffed"] = FALSE
 	if(H.handcuffed)
 		data["handcuffed"] = TRUE
 		data["handcuffedParams"] = list("slot" = slot_handcuffed)
-	
+
 	data["legcuffed"] = FALSE
 	if(H.legcuffed)
 		data["legcuffed"] = TRUE

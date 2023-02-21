@@ -58,6 +58,7 @@
 	organ_names = /decl/mob_organ_names/shantak
 
 	say_list_type = /datum/say_list/shantak
+	
 
 /datum/say_list/shantak
 	speak = list("Shuhn.","Shrunnph?","Shunpf.")

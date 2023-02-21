@@ -60,72 +60,47 @@
 /decl/chemical_reaction/instant/androrovir
 	name = "Androrovir"
 	id = "androrovir"
-	result = "androrovir"
+	result = "change_drug_male" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "bicaridine" = 20, "iron" = 20, "ethanol" = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/gynorovir
 	name = "Gynorovir"
 	id = "gynorovir"
-	result = "gynorovir"
+	result = "change_drug_female" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "inaprovaline" = 20, "silicon" = 20, "sugar" = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androgynorovir
 	name = "Androgynorovir"
 	id = "androgynorovir"
-	result = "androgynorovir"
+	result = "change_drug_intersex" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "anti_toxin" = 20, "fluorine" = 20, "tungsten" = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androrovir_bootleg
 	name = "Bootleg Androrovir"
 	id = "androrovir_bootleg"
-	result = "androrovir"
+	result = "change_drug_male" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "protein" = 10, "capsaicin" = 10)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/gynorovir_bootleg
 	name = "Bootleg Gynorovir"
 	id = "gynorovir_bootleg"
-	result = "gynorovir"
+	result = "change_drug_female" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "soymilk" = 10, "sugar" = 10)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androgynorovir_bootleg
 	name = "Bootleg Androgynorovir"
 	id = "androgynorovir_bootleg"
-	result = "androgynorovir"
+	result = "change_drug_intersex" // CHOMPEdit: using chomp reagents for outputs.
 	required_reagents = list("amorphorovir" = 1, "cola" = 10, "berryjuice" = 10)
 	result_amount = 1
 
 ///////////////////////////////////////////////////////////////////////////////////
 /// Miscellaneous Reactions
-
-/decl/chemical_reaction/instant/xenolazarus
-	name = "Discount Lazarus"
-	id = "discountlazarus"
-	result = null
-	required_reagents = list("monstertamer" = 5, "clonexadone" = 5)
-
-/decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
-	if(ishuman(holder.my_atom))
-		var/mob/living/carbon/human/H = holder.my_atom
-		if(H.stat == DEAD && (/mob/living/carbon/human/proc/reconstitute_form in H.verbs)) //no magical regen for non-regenners, and can't force the reaction on live ones
-			if(H.hasnutriment()) // make sure it actually has the conditions to revive
-				if(H.revive_ready >= 1) // if it's not reviving, start doing so
-					H.revive_ready = REVIVING_READY // overrides the normal cooldown
-					H.visible_message("<span class='info'>[H] shudders briefly, then relaxes, faint movements stirring within.</span>")
-					H.chimera_regenerate()
-				else if (/mob/living/carbon/human/proc/hatch in H.verbs)// already reviving, check if they're ready to hatch
-					H.chimera_hatch()
-					H.visible_message("<span class='danger'><p><font size=4>[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera.</font></p></span>") // Hope you were wearing waterproofs, doc...
-					H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
-				else //they're already reviving but haven't hatched. Give a little message to tell them to wait.
-					H.visible_message("<span class='info'>[H] stirs faintly, but doesn't appear to be ready to wake up yet.</span>")
-			else
-				H.visible_message("<span class='info'>[H] twitches for a moment, but remains still.</span>") // no nutriment
-
 
 /decl/chemical_reaction/instant/foam/softdrink
 	required_reagents = list("cola" = 1, "mint" = 1)
@@ -180,6 +155,13 @@
 	required_reagents = list("kelotane" = 1, "dermaline" = 1, "shockchem" = 1, "phoron" = 0.1)
 	catalysts = list("phoron" = 5)
 	result_amount = 3
+
+/decl/chemical_reaction/instant/prussian_blue
+	name = "Prussian Blue"
+	id = "prussian_blue"
+	result = "prussian_blue"
+	required_reagents = list("carbon" = 3, "iron" = 1, "nitrogen" = 3)
+	result_amount = 7
 
 ///////////////////////////////////////////////////////////////////////////////////
 /// Reagent colonies.

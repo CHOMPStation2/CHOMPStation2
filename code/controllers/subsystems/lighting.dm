@@ -32,17 +32,18 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
 	var/i = 0
-	for (i in 1 to length(queue))
-		var/datum/light_source/L = queue[i]
+	if(length(queue))
+		for(i in 1 to length(queue))
+			var/datum/light_source/L = queue[i]
 
-		L.update_corners()
+			L.update_corners()
 
-		L.needs_update = LIGHTING_NO_UPDATE
+			L.needs_update = LIGHTING_NO_UPDATE
 
-		if(init_tick_checks)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			break
+			if(init_tick_checks)
+				CHECK_TICK
+			else if (MC_TICK_CHECK)
+				break
 	if (i)
 		queue.Cut(1, i+1)
 		i = 0

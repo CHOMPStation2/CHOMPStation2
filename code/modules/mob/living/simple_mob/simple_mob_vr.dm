@@ -12,7 +12,8 @@
 
 	var/vore_active = 0					// If vore behavior is enabled for this mob
 
-	var/vore_capacity = 1				// The capacity (in people) this person can hold
+	//CHOMPEdit - Vore_capacity is now defined on living
+	vore_capacity = 1					// The capacity (in people) this person can hold
 	var/vore_max_size = RESIZE_HUGE		// The max size this mob will consider eating
 	var/vore_min_size = RESIZE_TINY 	// The min size this mob will consider eating
 	var/vore_bump_chance = 0			// Chance of trying to eat anyone that bumps into them, regardless of hostility
@@ -40,25 +41,30 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
-	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//CHOMPEDIT start - Moved to living
+	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
+	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
+	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//CHOMPEDIT end.
 	var/life_disabled = 0				// For performance reasons
 
 	var/mount_offset_x = 5				// Horizontal riding offset.
 	var/mount_offset_y = 8				// Vertical riding offset
 
-	var/obj/item/device/radio/headset/mob_headset/mob_radio		//Adminbus headset for simplemob shenanigans.
+	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
+	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
+	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
+	var/nom_mob = FALSE //If a mob is meant to be hostile for vore purposes but is otherwise not hostile, if true makes certain AI ignore the mob
 
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
 
 // Release belly contents before being gc'd!
 /mob/living/simple_mob/Destroy()
 	release_vore_contents()
-	prey_excludes.Cut()
+	LAZYCLEARLIST(prey_excludes)
 	return ..()
 
 //For all those ID-having mobs
@@ -67,6 +73,7 @@
 		return myid
 
 // Update fullness based on size & quantity of belly contents
+/* CHOMPEdit - moved to living
 /mob/living/simple_mob/proc/update_fullness()
 	var/new_fullness = 0
 	for(var/obj/belly/B as anything in vore_organs)
@@ -75,6 +82,7 @@
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
 	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
 	vore_fullness = min(vore_capacity, new_fullness)
+*/
 
 /mob/living/simple_mob/update_icon()
 	. = ..()
@@ -84,6 +92,7 @@
 			voremob_awake = TRUE
 		update_fullness()
 		if(!vore_fullness)
+			update_transform()
 			return 0
 		else if((stat == CONSCIOUS) && (!icon_rest || !resting || !incapacitated(INCAPACITATION_DISABLED)) && (vore_icons & SA_ICON_LIVING))
 			icon_state = "[icon_living]-[vore_fullness]"
@@ -116,7 +125,7 @@
 	if(!M.allowmobvore || !M.devourable) // Don't eat people who don't want to be ate by mobs
 		//ai_log("vr/wont eat [M] because they don't allow mob vore", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
-	if(M in prey_excludes) // They're excluded
+	if(LAZYFIND(prey_excludes, M)) // They're excluded
 		//ai_log("vr/wont eat [M] because they are excluded", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
 	if(M.size_multiplier < vore_min_size || M.size_multiplier > vore_max_size)
@@ -215,11 +224,13 @@
 	// Since they have bellies, add verbs to toggle settings on them.
 	verbs |= /mob/living/simple_mob/proc/toggle_digestion
 	verbs |= /mob/living/simple_mob/proc/toggle_fancygurgle
+	verbs |= /mob/living/proc/vertical_nom
 
 	//A much more detailed version of the default /living implementation
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -255,6 +266,8 @@
 		"The juices pooling beneath you sizzle against your sore skin.",
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
+	can_be_drop_pred = TRUE // Mobs will eat anyone that decides to drop/slip into them by default.
+	B.belly_fullscreen = "yet_another_tumby"
 
 /mob/living/simple_mob/Bumped(var/atom/movable/AM, yes)
 	if(tryBumpNom(AM))
@@ -369,22 +382,22 @@
 	if(buckle_mob(M))
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
-/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
-	if(mob_radio)
-		switch(message_mode)
-			if("intercom")
-				for(var/obj/item/device/radio/intercom/I in view(1, null))
-					I.talk_into(src, message, verb, speaking)
-					used_radios += I
-			if("headset")
-				if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
-					mob_radio.talk_into(src,message,null,verb,speaking)
+/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, used_radios, speaking, alt_name)
+	//CHOMPEdit - This whole proc tbh
+	if(message_mode)
+		if(message_mode == "intercom")
+			for(var/obj/item/device/radio/intercom/I in view(1, null))
+				I.talk_into(src,message,message_mode,verb,speaking)
+				used_radios += I
+		if(message_mode == "headset")
+			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+				mob_radio.talk_into(src,message,message_mode,verb,speaking)
+				used_radios += mob_radio
+		else
+			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+				if(mob_radio.channels[message_mode])
+					mob_radio.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += mob_radio
-			else
-				if(message_mode)
-					if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
-						mob_radio.talk_into(src,message, message_mode, verb, speaking)
-						used_radios += mob_radio
 	else
 		..()
 

@@ -62,6 +62,11 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+	//CHOMPEdit Start - Prevent bugs when spamming phase button
+	else if(SK.doing_phase)
+		to_chat(src, "<span class='warning'>You are already trying to phase!</span>")
+		return FALSE
+	//CHOMPEdit End
 
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
@@ -93,6 +98,7 @@
 	stop_pulling()
 	canmove = FALSE
 
+	SK.doing_phase = TRUE //CHOMPEdit - Prevent bugs when spamming phase button
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)
 		ability_flags &= ~AB_PHASE_SHIFTED
@@ -104,6 +110,7 @@
 		//cut_overlays()
 		invisibility = initial(invisibility)
 		see_invisible = initial(see_invisible)
+		see_invisible_default = initial(see_invisible_default) // CHOMPEdit - Allow seeing phased entities while phased.
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		force_max_speed = initial(force_max_speed)
@@ -123,6 +130,7 @@
 		canmove = original_canmove
 		alpha = initial(alpha)
 		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
+		remove_modifiers_of_type(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 
 		//Potential phase-in vore
 		if(can_be_drop_pred) //Toggleable in vore panel
@@ -172,9 +180,11 @@
 		phaseanim.dir = dir
 		alpha = 0
 		add_modifier(/datum/modifier/shadekin_phase_vision)
+		add_modifier(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 		sleep(5)
 		invisibility = INVISIBILITY_LEVEL_TWO
 		see_invisible = INVISIBILITY_LEVEL_TWO
+		see_invisible_default = INVISIBILITY_LEVEL_TWO // CHOMPEdit - Allow seeing phased entities while phased.
 		//cut_overlays()
 		update_icon()
 		alpha = 127
@@ -183,6 +193,13 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
+	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
+
+//CHOMPEdit Start - Shadekin probably shouldn't be hit while phasing
+/datum/modifier/shadekin_phase
+	name = "Shadekin Phasing"
+	evasion = 100
+//CHOMPEdit End
 
 /datum/modifier/shadekin_phase_vision
 	name = "Shadekin Phase Vision"

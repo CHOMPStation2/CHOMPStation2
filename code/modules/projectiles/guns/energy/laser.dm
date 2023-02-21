@@ -115,6 +115,7 @@
 	name = "alien pistol"
 	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
 	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
@@ -146,11 +147,114 @@
 	charge_cost = 480	//to compensate a bit for self-recharging
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/captain
 	battery_lock = 1
+/* 	var/remainingshots = 0 //you may get a limited number of shots regardless of the charge //CHOMPedit: no
+	var/failurechance = 0 //chance per shot of something going awry
+
+/obj/item/weapon/gun/energy/captain/Initialize()
+	//it's an antique and it's been sitting in a case, unmaintained, for who the hell knows how long - who knows what'll happen when you pull it out?
+	..()
+	//first, we decide, does it have a different type of beam? 75% of just being a 40-damage laser, 15% of being less or 0, 10% of being better
+	projectile_type = pick(prob(1);/obj/item/projectile/beam/pulse,
+						prob(2);/obj/item/projectile/beam/heavylaser/cannon,
+						prob(2);/obj/item/projectile/beam/heavylaser,
+						prob(5);/obj/item/projectile/beam/sniper,
+						prob(45);/obj/item/projectile/beam,
+						prob(10);/obj/item/projectile/beam/cyan,
+						prob(10);/obj/item/projectile/beam/eluger,
+						prob(10);/obj/item/projectile/beam/imperial,
+						prob(10);/obj/item/projectile/beam/weaklaser,
+						prob(5);/obj/item/projectile/beam/practice)
+	//now, decide whether it has a shot limit and if so how many
+	if(prob(50))
+		remainingshots = rand(1,40)
+	if(prob(50))
+		failurechance = rand(1,5)
+
+	//finally, update the description so it has a tell if it's gonna burn out on you
+	if(remainingshots || failurechance)
+		desc = "A rare weapon, produced by the Lunar Arms Company around 2105 - one of humanity's first wholly extra-terrestrial weapon designs. It's been reasonably well-preserved."
+
+/obj/item/weapon/gun/energy/captain/special_check(var/mob/user)
+	if(remainingshots)
+		remainingshots -= 1
+		if(!remainingshots) //you've shot your load, sonny
+			burnout(user)
+			return 0
+	else if(prob(failurechance))
+		malfunction(user)
+		return 0
+	return ..()
+
+/obj/item/weapon/gun/energy/captain/proc/burnout(var/mob/user)
+	//your gun is now rendered useless
+	projectile_type = /obj/item/projectile/beam/practice //just in case you somehow manage to get it to fire again, its beam type is set to one that sucks
+	power_supply.charge = 0
+	power_supply.maxcharge = 1 //just to avoid div/0 runtimes
+	desc = "A rare weapon, produced by the Lunar Arms Company around 2105 - one of humanity's first wholly extra-terrestrial weapon designs. It looks to have completely burned out."
+	user.visible_message("<span class='warning'>\The [src] erupts in a shower of sparks!</span>", "<span class='danger'>\the [src] bursts into a shower of sparks!</span>")
+	var/turf/T = get_turf(src)
+	var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+	sparks.set_up(2, 1, T)
+	sparks.start()
+	update_icon()
+
+/obj/item/weapon/gun/energy/captain/proc/malfunction(var/mob/user)
+	var/screwup = rand(1,10)
+	switch(screwup)
+		if(1 to 5) //50% of just draining the battery and making future malfunctions more likely
+			power_supply.charge = 0
+			var/turf/T = get_turf(src)
+			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+			sparks.set_up(2, 1, T)
+			sparks.start()
+			update_icon()
+			user.visible_message("<span class='warning'>\The [src] shorts out!</span>", "<span class='danger'>\the [src] shorts out!</span>")
+			failurechance += rand(1,5)
+			return
+		if(6 to 7) //20% chance of weakening the beam type, possibly to uselessness
+			var/obj/item/projectile/beam/B = new projectile_type
+			switch(B.damage)
+				if(0)
+					return //can't weaken it any further
+				if(1 to 15) //weaklaser becomes practice
+					projectile_type = /obj/item/projectile/beam/practice
+				if(16 to 40) //regular becomes weaklaser
+					projectile_type = /obj/item/projectile/beam/weaklaser
+				if(41 to 50) //sniper becomes regular
+					projectile_type = /obj/item/projectile/beam
+				if(51 to 60) //heavy becomes sniper
+					projectile_type = /obj/item/projectile/beam/sniper
+				if(61 to 80) //cannon becomes heavy
+					projectile_type = /obj/item/projectile/beam/heavylaser
+				if(81 to 100) //pulse becomes cannon
+					projectile_type = /obj/item/projectile/beam/heavylaser/cannon
+			user.visible_message("<span class='warning'>\The [src] dims slightly!</span>", "<span class='danger'>\the [src] dims slightly!</span>")
+			return
+		if(8) //10% chance of reducing the number of shots you have left, or giving you a limit if there isn't one
+			if(!remainingshots)
+				remainingshots = rand(1,40)
+			else
+				remainingshots = min(1, round(remainingshots/2))
+			user.visible_message("<span class='warning'>\The [src] lets out a faint pop.</span>", "<span class='danger'>\the [src] lets out a faint pop.</span>")
+		if(9) //10% chance of permanently reducing the cell's max charge
+			power_supply.maxcharge = power_supply.maxcharge/2
+			power_supply.charge = min(power_supply.charge, power_supply.maxcharge)
+			user.visible_message("<span class='warning'>\The [src] sparks,letting off a puff of smoke!</span>", "<span class='danger'>\the [src] sparks,letting off a puff of smoke!</span>")
+			var/turf/T = get_turf(src)
+			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+			sparks.set_up(2, 1, T)
+			sparks.start()
+			update_icon()
+		if(10) //10% chance of just straight-up breaking on the spot
+			burnout(user)
+			return
+*/
 
 /obj/item/weapon/gun/energy/lasercannon
 	name = "laser cannon"
 	desc = "With the laser cannon, the lasing medium is enclosed in a tube lined with uranium-235 and subjected to high neutron \
 	flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
+	icon = 'icons/obj/gun.dmi'  // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "lasercannon"
 	item_state = null
 	wielded_item_state = "mhdhowitzer-wielded" //Placeholder
@@ -179,6 +283,7 @@
 	name = "xray laser gun"
 	desc = "A high-power laser gun capable of expelling concentrated xray blasts, which are able to penetrate matter easier than \
 	standard photonic beams, resulting in an effective 'anti-armor' energy weapon."
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "xray"
 	item_state = "xray"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)

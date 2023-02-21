@@ -5,8 +5,10 @@
 var/global/list/hair_accesories_list= list()// Stores /datum/sprite_accessory/hair_accessory indexed by type
 var/global/list/negative_traits = list()	// Negative custom species traits, indexed by path
 var/global/list/neutral_traits = list()		// Neutral custom species traits, indexed by path
-var/global/list/everyone_traits = list()	// Neutral traits available to all species, indexed by path
 var/global/list/positive_traits = list()	// Positive custom species traits, indexed by path
+var/global/list/everyone_traits_positive = list()	// Neutral traits available to all species, indexed by path
+var/global/list/everyone_traits_neutral = list()	// Neutral traits available to all species, indexed by path
+var/global/list/everyone_traits_negative = list()	// Neutral traits available to all species, indexed by path
 var/global/list/traits_costs = list()		// Just path = cost list, saves time in char setup
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 var/global/list/active_ghost_pods = list()
@@ -41,7 +43,7 @@ var/global/list/item_vore_blacklist = list(
 		/obj/item/weapon/gun,
 		/obj/item/weapon/pinpointer,
 		/obj/item/clothing/shoes/magboots,
-		/obj/item/blueprints,
+		/obj/item/areaeditor/blueprints,
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/weapon/disk/nuclear,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz)
@@ -63,6 +65,7 @@ var/global/list/classic_vore_sounds = list(
 		"Rustle 3 (cloth)"	= 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)"	= 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)"	= 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"None" = null)
 
 var/global/list/classic_release_sounds = list(
@@ -71,6 +74,7 @@ var/global/list/classic_release_sounds = list(
 		"Rustle 3 (cloth)" = 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)" = 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)" = 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"Splatter" = 'sound/effects/splat.ogg',
 		"None" = null
 		)
@@ -93,6 +97,7 @@ var/global/list/fancy_vore_sounds = list(
 		"Rustle 3 (cloth)"	= 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)"	= 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)"	= 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"None" = null
 		)
 
@@ -102,6 +107,7 @@ var/global/list/fancy_release_sounds = list(
 		"Rustle 3 (cloth)" = 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)" = 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)" = 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"Stomach Move" = 'sound/vore/sunesound/pred/stomachmove.ogg',
 		"Pred Escape" = 'sound/vore/sunesound/pred/escape.ogg',
 		"Splatter" = 'sound/effects/splat.ogg',
@@ -254,7 +260,8 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/folder,
 				/obj/item/weapon/clipboard,
 				/obj/item/weapon/coin,
-				/obj/item/clothing/ears //chompstation addition end
+				/obj/item/clothing/ears, //chompstation addition end
+				//CHOMPedit: disabled because this is in a file we don't use /obj/item/roulette_ball
 				)
 
 var/global/list/contamination_flavors = list(
@@ -503,7 +510,8 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_DIONA,
 				SPECIES_ALRAUNE,
 				SPECIES_PROTEAN,
-				SPECIES_MONKEY,					//Exclude all monkey subtypes, to prevent abuse of it. They aren't,
+				/*
+				SPECIES_MONKEY,					//Exclude all monkey subtypes, to prevent abuse of it. They aren't, //CHOMPEDIT How about let preds have skeletons, people can do so much worse than this
 				SPECIES_MONKEY_TAJ,				//set to have remains anyway, but making double sure,
 				SPECIES_MONKEY_SKRELL,
 				SPECIES_MONKEY_UNATHI,
@@ -511,6 +519,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_MONKEY_NEVREAN,
 				SPECIES_MONKEY_SERGAL,
 				SPECIES_MONKEY_VULPKANIN,
+				*/
 				SPECIES_XENO,					//Same for xenos,
 				SPECIES_XENO_DRONE,
 				SPECIES_XENO_HUNTER,
@@ -527,7 +536,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				"Research Intern",
 				"Security Cadet",
 				"Jr. Cargo Tech",
-				"Jr. Explorer",
+				"Jr. Explorer", //CHOMP explo keep
 				"Server",
 				"Electrician",
 				"Barista")
@@ -563,12 +572,16 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		switch(category)
 			if(-INFINITY to -0.1)
 				negative_traits[traitpath] = T
+				if(!(T.custom_only))
+					everyone_traits_negative[traitpath] = T
 			if(0)
 				neutral_traits[traitpath] = T
 				if(!(T.custom_only))
-					everyone_traits[traitpath] = T
+					everyone_traits_neutral[traitpath] = T
 			if(0.1 to INFINITY)
 				positive_traits[traitpath] = T
+				if(!(T.custom_only))
+					everyone_traits_positive[traitpath] = T
 
 
 	// Weaver recipe stuff
@@ -839,3 +852,189 @@ var/global/list/xenobio_rainbow_extracts = list(
 										/obj/item/slime_extract/emerald = 3,
 										/obj/item/slime_extract/light_pink = 1,
 										/obj/item/slime_extract/rainbow = 1)
+
+
+//// Wildlife lists
+//Listed by-type. Under each type are lists of lists that contain 'groupings' of wildlife. Sorted from 1 to 5 by threat level.
+
+var/global/list/event_wildlife_aquatic = list(
+										list(
+												list(/mob/living/simple_mob/animal/passive/fish/koi = 1,
+													 /mob/living/simple_mob/animal/passive/fish/pike = 2,
+													 /mob/living/simple_mob/animal/passive/fish/perch = 2,
+													 /mob/living/simple_mob/animal/passive/fish/salmon = 2,
+													 /mob/living/simple_mob/animal/passive/fish/trout = 2,
+													 /mob/living/simple_mob/animal/passive/fish/bass = 3),
+												list(/mob/living/simple_mob/animal/passive/fish/salmon = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/perch = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/trout = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/bass = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/pike = 1),
+												list(/mob/living/simple_mob/animal/passive/crab = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/sif/duck = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/measelshark = 1),
+												list(/mob/living/simple_mob/vore/pakkun = 5,
+													 /mob/living/simple_mob/vore/pakkun/snapdragon = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/space/goose = 10,
+													 /mob/living/simple_mob/animal/space/goose/white = 1),
+												list(/mob/living/simple_mob/vore/alienanimals/space_jellyfish = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/sif/hooligan_crab = 1)
+											)
+										)
+
+var/global/list/event_wildlife_roaming = list(
+										list(
+												list(/mob/living/simple_mob/animal/passive/mouse/jerboa = 1,
+													 /mob/living/simple_mob/animal/passive/mouse/black = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/brown = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/gray = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/white = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/rat = 3),
+												list(/mob/living/simple_mob/animal/passive/bird/black_bird = 1,
+													 /mob/living/simple_mob/animal/passive/bird/azure_tit = 1,
+													 /mob/living/simple_mob/animal/passive/bird/european_robin = 1,
+													 /mob/living/simple_mob/animal/passive/bird/goldcrest = 1,
+													 /mob/living/simple_mob/animal/passive/bird/ringneck_dove = 1),
+												list(/mob/living/simple_mob/animal/passive/dog/corgi = 4,
+													 /mob/living/simple_mob/animal/passive/dog/corgi/puppy = 1),
+												list(/mob/living/simple_mob/vore/rabbit = 1),
+												list(/mob/living/simple_mob/vore/redpanda = 14,
+													 /mob/living/simple_mob/vore/redpanda/fae = 7,
+													 /mob/living/simple_mob/vore/redpanda/blue = 1),
+												list(/mob/living/simple_mob/animal/passive/cow = 1),
+												list(/mob/living/simple_mob/animal/passive/chicken = 4,
+													 /mob/living/simple_mob/animal/passive/chick = 1),
+												list(/mob/living/simple_mob/animal/passive/snake = 2,
+													 /mob/living/simple_mob/animal/passive/snake/red = 1,
+													 /mob/living/simple_mob/animal/passive/snake/python = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/vore/horse/big = 7,
+													 /mob/living/simple_mob/vore/horse = 2),
+												list(/mob/living/simple_mob/vore/fennix = 1,
+													 /mob/living/simple_mob/vore/fennec = 4),
+												list(/mob/living/simple_mob/vore/bee = 1),
+												list(/mob/living/simple_mob/animal/passive/fox = 1),
+												list(/mob/living/simple_mob/vore/sheep = 3,
+													 /mob/living/simple_mob/animal/goat = 1),
+												list(/mob/living/simple_mob/vore/hippo = 1),
+												list(/mob/living/simple_mob/vore/alienanimals/dustjumper = 1),
+												list(/mob/living/simple_mob/vore/alienanimals/teppi = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/vore/aggressive/frog = 1),
+												list(/mob/living/simple_mob/tomato = 1),
+												list(/mob/living/simple_mob/animal/wolf = 1),
+												list(/mob/living/simple_mob/vore/aggressive/dino = 1),
+												list(/mob/living/simple_mob/animal/space/bats = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/space/bear = 1),
+												list(/mob/living/simple_mob/vore/aggressive/deathclaw = 1),
+												list(/mob/living/simple_mob/otie = 1),
+												list(/mob/living/simple_mob/vore/aggressive/panther = 1),
+												list(/mob/living/simple_mob/vore/aggressive/rat = 1),
+												list(/mob/living/simple_mob/vore/aggressive/giant_snake = 1),
+												list(/mob/living/simple_mob/vore/aggressive/corrupthound = 1)
+											)
+										)
+
+
+
+
+// AREA GENERATION AND BLUEPRINT STUFF BELOW HERE
+// typecacheof(list) and list() are two completely separate things, don't break!
+
+// WHATEVER YOU DO, DO NOT LEAVE THE LAST THING IN THE LIST BELOW HAVE A COMMA OR EVERYTHING EVER WILL BREAK
+// ENSURE THE LAST AREA OR TURF LISTED IS SIMPLY "/area/clownhideout" AND NOT "/area/clownhideout," OR YOU WILL IMMEDIATELY DIE
+
+// These lists are, obviously, unfinished.
+
+// ALLOWING BUILDING IN AN AREA:
+// If you want someone to be able to build a new area in a place, add the area to the 'BUILDABLE_AREA_TYPES' and 'blacklisted_areas'
+// BUILDABLE_AREA_TYPES means they can build an area there. The blacklisted_areas means they CAN NOT EXPAND that area. No making space bigger!
+
+// DISALLOW BUILDING/AREA MANIPULATION IN AN AREA (OR A TURF TYPE):
+// Likewise, if you want someone to never ever EVER be able to do anything area generation/expansion related to an area
+// Then add it to SPECIALS and area_or_turf_fail_types
+
+// If you want someone to
+var/global/list/BUILDABLE_AREA_TYPES = list(
+	/area/space,
+	/area/mine,
+//	/area/surface/outside, 	//SC //CHOMP Comment - Actually these are causing compilation error.
+//	/area/surface/cave,		//SC
+//	/area/tether/surfacebase/outside,	//CHOMP Edit Downstreams, uncomment these if you are using these maps
+//	/area/groundbase/unexplored/outdoors,
+//	/area/maintenance/groundbase/level1,
+//	/area/submap/groundbase/wilderness,
+//	/area/groundbase/mining,
+//	/area/offmap/aerostat/surface,
+//	/area/tether_away/beach,
+//	/area/tether_away/cave,
+)
+
+var/static/list/blacklisted_areas = typecacheof(list(
+	/area/space,
+	/area/mine,
+//	/area/surface/outside,	//SC //CHOMP Comment - Actually these are causing compilation error.
+//	/area/surface/cave,		//SC
+	//TETHER STUFF BELOW THIS	//CHOMP Edit Downstreams, uncomment these if you are using these maps
+//	/area/tether/surfacebase/outside,
+	//GROUNDBASE STUFF BELOW THIS
+//	/area/groundbase/unexplored/outdoors,
+//	/area/maintenance/groundbase/level1,
+//	/area/submap/groundbase/wilderness,
+//	/area/groundbase/mining,
+//	/area/offmap/aerostat/surface,
+//	/area/tether_away/beach,
+//	/area/tether_away/cave
+	))
+
+var/global/list/SPECIALS = list(
+	/turf/space,
+	/area/shuttle,
+	/area/admin,
+	/area/arrival,
+	/area/centcom,
+	/area/asteroid,
+	/area/tdome,
+	/area/syndicate_station,
+	/area/wizard_station,
+	/area/prison,
+	/area/holodeck,
+	/area/turbolift,
+	/area/tether/elevator,
+	/turf/unsimulated/wall/planetary,
+	/area/submap/virgo2,
+	/area/submap/event,
+	/area/submap/casino_event
+	// /area/derelict //commented out, all hail derelict-rebuilders!
+)
+
+var/global/list/area_or_turf_fail_types = typecacheof(list(
+	/turf/space,
+	/area/shuttle,
+	/area/admin,
+	/area/arrival,
+	/area/centcom,
+	/area/asteroid,
+	/area/tdome,
+	/area/syndicate_station,
+	/area/wizard_station,
+	/area/prison,
+	/area/holodeck,
+	/turf/simulated/wall/elevator,
+	/area/turbolift,
+	/area/tether/elevator,
+	/turf/unsimulated/wall/planetary,
+	/area/submap/virgo2,
+	/area/submap/event,
+	/area/submap/casino_event
+	))

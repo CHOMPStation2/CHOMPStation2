@@ -115,6 +115,8 @@ var/list/flooring_types
 	var/list/movable_atom_whitelist = list()
 	var/list/movable_atom_blacklist = list()
 
+	var/check_season = FALSE	//VOREStation Addition
+
 /decl/flooring/proc/get_plating_type(var/turf/T)
 	return plating_type
 
@@ -252,6 +254,12 @@ var/list/flooring_types
 		'sound/effects/footstep/snow4.ogg',
 		'sound/effects/footstep/snow5.ogg'))
 
+/decl/flooring/snow/fake
+		desc = "A coating of fake snow, looks surprisingly realistic, though not as cold as the real thing."
+		icon = 'icons/turf/flooring/fakesnow.dmi'
+		icon_base = "snow"
+		flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_SHOVEL
+
 /decl/flooring/snow/snow2
 	name = "snow"
 	desc = "A layer of many tiny bits of frozen water. It's hard to tell how deep it is."
@@ -332,16 +340,48 @@ var/list/flooring_types
 	icon_base = "tealcarpet"
 	build_type = /obj/item/stack/tile/carpet/teal
 
-/decl/flooring/carpet/deco
-	name = "deco carpet"
-	icon_base = "decocarpet"
-	build_type = /obj/item/stack/tile/carpet/deco
+/decl/flooring/carpet/browncarpet
+	name = "brown carpet"
+	icon_base = "brncarpet"
+	build_type = /obj/item/stack/tile/carpet/brncarpet
+
+/decl/flooring/carpet/blucarpet2
+	name = "blue carpet"
+	icon_base = "blue1"
+	build_type = /obj/item/stack/tile/carpet/blucarpet2
+
+/decl/flooring/carpet/greencarpet
+	name = "green carpet"
+	icon_base = "green"
+	build_type = /obj/item/stack/tile/carpet/greencarpet
+
+/decl/flooring/carpet/purplecarpet
+	name = "purple carpet"
+	icon_base = "purple"
+	build_type = /obj/item/stack/tile/carpet/purplecarpet
+
+/decl/flooring/carpet/geo
+	name = "geometric carpet"
+	icon_base = "geocarpet"
+	build_type = /obj/item/stack/tile/carpet/geo
 	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
 
 /decl/flooring/carpet/retro
-	name = "retro carpet"
+	name = "blue retro carpet"
 	icon_base = "retrocarpet"
 	build_type = /obj/item/stack/tile/carpet/retro
+	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
+
+/decl/flooring/carpet/retro_red
+	name = "red retro carpet"
+	icon_base = "retrocarpet_red"
+	build_type = /obj/item/stack/tile/carpet/retro_red
+	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
+
+/decl/flooring/carpet/happy
+	name = "happy carpet"
+	icon_base = "happycarpet"
+	build_type = /obj/item/stack/tile/carpet/happy
 	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
 
 /decl/flooring/tiling
@@ -387,6 +427,7 @@ var/list/flooring_types
 
 /decl/flooring/tiling/new_tile/techmaint
 	icon_base = "techmaint"
+	build_type = /obj/item/stack/tile/floor/techmaint
 
 /decl/flooring/tiling/new_tile/monofloor
 	icon_base = "monofloor"
@@ -507,6 +548,31 @@ var/list/flooring_types
 	icon_base = "sifwood"
 	build_type = /obj/item/stack/tile/wood/sif
 
+/decl/flooring/wood/alt
+	icon = 'icons/turf/flooring/wood.dmi'
+	icon_base = "wood"
+	build_type = /obj/item/stack/tile/wood/alt
+
+/decl/flooring/wood/alt/panel
+	desc = "Polished wooden panels."
+	icon = 'icons/turf/flooring/wood.dmi'
+	icon_base = "wood_panel"
+	has_damage_range = 2
+	build_type = /obj/item/stack/tile/wood/panel
+
+/decl/flooring/wood/alt/parquet
+	desc = "Polished wooden tiles."
+	icon = 'icons/turf/flooring/wood.dmi'
+	icon_base = "wood_parquet"
+	build_type = /obj/item/stack/tile/wood/parquet
+
+/decl/flooring/wood/alt/tile
+	desc = "Polished wooden tiles."
+	icon = 'icons/turf/flooring/wood.dmi'
+	icon_base = "wood_tile"
+	has_damage_range = 2
+	build_type = /obj/item/stack/tile/wood/tile
+
 /decl/flooring/reinforced
 	name = "reinforced floor"
 	desc = "Heavily reinforced with steel rods."
@@ -559,3 +625,24 @@ var/list/flooring_types
 		'sound/effects/footstep/lava1.ogg',
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'))
+
+/decl/flooring/concrete
+	name = "concrete"
+	desc = "A flat area of concrete flooring."
+	icon = 'icons/turf/concrete.dmi'
+	icon_base = "concrete"
+	is_plating = FALSE 	//VOREStation edit. It's a lot cooler if it's actual tile.
+	can_paint = 1		//VOREStation edit. Let's allow for some fun.
+	can_engrave = 1		//VOREStation edit. Fun.
+	flags = TURF_ACID_IMMUNE | TURF_CAN_BREAK | TURF_REMOVE_CROWBAR
+
+///// Season Time! ///// VOREStation Addition Start
+/decl/flooring/grass/seasonal_grass
+	desc = "It's grass!"
+	icon = 'icons/seasonal/turf.dmi'
+	check_season = TRUE
+	has_base_range = 11
+
+/decl/flooring/grass/seasonal_grass/dark
+	name = "grass"
+	icon_base = "darkgrass"

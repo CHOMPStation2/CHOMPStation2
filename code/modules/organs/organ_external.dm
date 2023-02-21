@@ -115,6 +115,9 @@
 	return ..()
 
 /obj/item/organ/external/emp_act(severity)
+	for(var/obj/O as anything in src.contents)
+		O.emp_act(severity)
+
 	if(!(robotic >= ORGAN_ROBOT))
 		return
 	var/burn_damage = 0
@@ -379,7 +382,7 @@
 				droplimb(0, DROPLIMB_EDGE)
 			else if(spread_dam && owner && parent && (brute_overflow || burn_overflow) && (brute_overflow >= 5 || burn_overflow >= 5) && !permutation) //No infinite damage loops.
 				var/brute_third = brute_overflow * 0.33
-				var/burn_third = burn_overflow * 0.33	
+				var/burn_third = burn_overflow * 0.33
 				if(children && children.len)
 					var/brute_on_children = brute_third / children.len
 					var/burn_on_children = burn_third / children.len
@@ -459,11 +462,12 @@
 		if("omni")src.heal_damage(repair_amount, repair_amount, 0, 1)
 
 	if(damage_desc)
+		var/fix_verb = (damage_amount > repair_amount) ? "patches" : "finishes patching"
 		if(user == src.owner)
 			var/datum/gender/T = gender_datums[user.get_visible_gender()]
-			user.visible_message("<b>\The [user]</b> patches [damage_desc] on [T.his] [src.name] with [tool].")
+			user.visible_message("<b>\The [user]</b> [fix_verb] [damage_desc] on [T.his] [src.name] with [tool].")
 		else
-			user.visible_message("<b>\The [user]</b> patches [damage_desc] on [owner]'s [src.name] with [tool].")
+			user.visible_message("<b>\The [user]</b> [fix_verb] [damage_desc] on [owner]'s [src.name] with [tool].")
 
 	return 1
 
@@ -732,7 +736,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 
 	for(var/datum/wound/W in wounds)
 		// wounds can disappear after 10 minutes at the earliest
-		if(W.damage <= 0 && W.created + 10 * 10 * 60 <= world.time)
+		if(W.damage <= 0 && W.created + 10 MINUTES <= world.time)
 			wounds -= W
 			continue
 			// let the GC handle the deletion of the wound
@@ -1065,15 +1069,15 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return
 
 	if(owner)
-		//CHOMPEdit Begin
-		owner.custom_pain(pick(\
-			"<span class='danger'>You hear a loud cracking sound coming from \the [owner].</span>",\
-			"<span class='danger'>Something feels like it shattered in your [name]!</span>",\
-			"<span class='danger'>You hear a sickening crack.</span>"),brokenpain)
-		//CHOMPEdit End
-		jostle_bone()
-		if(organ_can_feel_pain() && !isbelly(owner.loc))
+		if(organ_can_feel_pain() && !isbelly(owner.loc) && !isliving(owner.loc))
+			//CHOMPEdit Begin
+			owner.custom_pain(pick(\
+				"<span class='danger'>You hear a loud cracking sound coming from \the [owner].</span>",\
+				"<span class='danger'>Something feels like it shattered in your [name]!</span>",\
+				"<span class='danger'>You hear a sickening crack.</span>"),brokenpain)
+			//CHOMPEdit End
 			owner.emote("scream")
+		jostle_bone()	//VOREStation Edit End
 
 	playsound(src, "fracture", 10, 1, -2)
 	status |= ORGAN_BROKEN
@@ -1136,6 +1140,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 			force_icon = R.icon
 			brute_mod *= R.robo_brute_mod
 			burn_mod *= R.robo_burn_mod
+			prosthetic_digi = R.can_be_digitigrade //CHOMPStation edit
 			if(R.lifelike)
 				robotic = ORGAN_LIFELIKE
 				name = "[initial(name)]"
@@ -1407,6 +1412,11 @@ Note that amputating the affected organ does in fact remove the infection from t
 			if(!istype(I,/obj/item/weapon/implant) && !istype(I,/obj/item/device/nif)) //VOREStation Add - NIFs
 				return 1
 
-/obj/item/organ/external/proc/is_hidden_by_tail()
+/obj/item/organ/external/proc/is_hidden_by_sprite_accessory(var/clothing_only = FALSE)			// Clothing only will mean the check should only be used in places where we want to hide clothing icon, not organ itself.
 	if(owner && owner.tail_style && owner.tail_style.hide_body_parts && (organ_tag in owner.tail_style.hide_body_parts))
 		return 1
+	if(clothing_only && markings.len)
+		for(var/M in markings)
+			var/datum/sprite_accessory/marking/mark = markings[M]["datum"]
+			if(mark.hide_body_parts && (organ_tag in mark.hide_body_parts))
+				return 1

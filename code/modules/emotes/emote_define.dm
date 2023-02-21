@@ -44,6 +44,7 @@ var/global/list/emotes_by_key
 	var/emote_range = 0                                 // If >0, restricts emote visibility to viewers within range.
 	
 	var/sound_preferences = list(/datum/client_preference/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
+	var/sound_vary = FALSE
 
 /decl/emote/Initialize()
 	. = ..()
@@ -186,7 +187,13 @@ var/global/list/emotes_by_key
 		if(islist(sound_to_play) && length(sound_to_play))
 			sound_to_play = pick(sound_to_play)
 	if(sound_to_play)
-		playsound(user.loc, sound_to_play, use_sound["vol"], 0, preference = sound_preferences) //VOREStation Add - Preference
+		//CHOMPEdit Add - Preference for variable pitch
+		if(istype(user, /mob))
+			var/mob/u = user
+			playsound(user.loc, sound_to_play, use_sound["vol"], u.is_preference_enabled(/datum/client_preference/random_emote_pitch) && sound_vary, frequency = u.voice_freq, preference = sound_preferences) //CHOMPEdit
+		else
+			playsound(user.loc, sound_to_play, use_sound["vol"], sound_vary, frequency = null, preference = sound_preferences) //VOREStation Add - Preference
+		//CHOMPEdit End - Previous line used to be outside an if/else before the edit.
 
 /decl/emote/proc/mob_can_use(var/mob/user)
 	return istype(user) && user.stat != DEAD && (type in user.get_available_emotes())

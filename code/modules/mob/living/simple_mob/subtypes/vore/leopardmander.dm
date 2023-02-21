@@ -18,6 +18,7 @@
 	default_pixel_x = -48
 	pixel_x = -48
 	pixel_y = 0
+	vis_height = 92
 	response_help = "pats"
 	response_disarm = "shoves"
 	response_harm = "bops"
@@ -45,6 +46,10 @@
 	vore_default_mode = DM_HEAL
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
+
+	nom_mob = TRUE
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"

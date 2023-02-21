@@ -355,7 +355,7 @@ var/global/datum/controller/occupations/job_master
 	return 1
 
 
-/datum/controller/occupations/proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
+/datum/controller/occupations/proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0, var/announce = TRUE)
 	if(!H)	return null
 
 	var/datum/job/job = GetJob(rank)
@@ -393,7 +393,7 @@ var/global/datum/controller/occupations/job_master
 		//Equip custom gear loadout.
 		var/list/custom_equip_slots = list()
 		var/list/custom_equip_leftovers = list()
-		if(H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
+		if(H.client && H.client.prefs && H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
 			for(var/thing in H.client.prefs.gear)
 				var/datum/gear/G = gear_datums[thing]
 				if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
@@ -427,9 +427,10 @@ var/global/datum/controller/occupations/job_master
 				// Try desperately (and sorta poorly) to equip the item. Now with increased desperation!
 				if(G.slot && !(G.slot in custom_equip_slots))
 					var/metadata = H.client.prefs.gear[G.display_name]
-					if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
-						custom_equip_leftovers += thing
-					else if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
+					//if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
+					//	custom_equip_leftovers += thing
+					//else
+					if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
 						to_chat(H, "<span class='notice'>Equipping you with \the [thing]!</span>")
 						if(G.slot != slot_tie)
 							custom_equip_slots.Add(G.slot)
@@ -494,7 +495,7 @@ var/global/datum/controller/occupations/job_master
 			return H
 
 		// TWEET PEEP
-		if(rank == "Site Manager")
+		if(rank == "Site Manager" && announce)
 			var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
 			captain_announcement.Announce("All hands, [alt_title ? alt_title : "Site Manager"] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
 
@@ -657,8 +658,7 @@ var/global/datum/controller/occupations/job_master
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
 
-	var/datum/job/J = SSjob.get_job(rank)
-	fail_deadly = J?.offmap_spawn
+	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.spawnpoint)
@@ -804,7 +804,8 @@ var/global/datum/controller/occupations/job_master
 			.["msg"] = spawnpos.msg
 			.["channel"] = spawnpos.announce_channel
 		else
-			if(fail_deadly)
+			var/datum/job/J = SSjob.get_job(rank)
+			if(fail_deadly || J?.offmap_spawn)
 				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice.</span>")
 				return
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")

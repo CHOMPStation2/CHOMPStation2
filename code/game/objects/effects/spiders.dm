@@ -132,15 +132,15 @@
 		qdel(src)
 
 /obj/effect/spider/eggcluster/small
-	spiders_min = 1
-	spiders_max = 3
+	spiders_min = 2 //CHOMP Edit
+	spiders_max = 6 //CHOMP Edit
 
 /obj/effect/spider/eggcluster/small/frost
 	spider_type = /obj/effect/spider/spiderling/frost
 
 /obj/effect/spider/eggcluster/royal
 	spiders_min = 2
-	spiders_max = 5
+	spiders_max = 6 //CHOMP Edit
 	spider_type = /obj/effect/spider/spiderling/varied
 
 /obj/effect/spider/spiderling
@@ -269,7 +269,7 @@
 				walk_to(src, target_atom, 5)
 				if(prob(25))
 					src.visible_message("<span class='notice'>\The [src] skitters[pick(" away"," around","")].</span>")
-		else if(prob(5))
+		else if(amount_grown < 75 && prob(5))
 			//vent crawl!
 			for(var/obj/machinery/atmospherics/unary/vent_pump/v in view(7,src))
 				if(!v.welded)

@@ -3,7 +3,7 @@
 	name = "raccoon"
 	desc = "A raccoon, also known as a trash panda."
 	tt_desc = "E purgamentum raccoonus"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "raccoon"
 	item_state = "raccoon"
 	icon_living = "raccoon"
@@ -31,6 +31,17 @@
 	vore_active = TRUE
 	vore_capacity = 1
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	center_offset = 0
+
+/mob/living/simple_mob/animal/passive/raccoon_ch/Initialize()
+	. = ..()
+	ghostjoin = 1
+	ghostjoin_icon()
+	active_ghost_pods |= src
+
+/mob/living/simple_mob/animal/passive/raccoon_ch/Destroy()
+	active_ghost_pods -= src
+	return ..()
 
 /datum/say_list/raccoon_ch
 	speak = list("HSSSSS")

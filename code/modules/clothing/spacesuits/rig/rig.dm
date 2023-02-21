@@ -45,7 +45,6 @@
 	var/glove_type = /obj/item/clothing/gloves/gauntlets/rig
 	var/cell_type =  /obj/item/weapon/cell/high
 	var/air_type =   /obj/item/weapon/tank/oxygen
-	var/unremovable_cell = FALSE //CHOMP Edit - an addition for protean living hardsuit.
 
 
 	//Component/device holders.
@@ -179,7 +178,7 @@
 		for(var/obj/item/piece in list(helmet,gloves,chest,boots))
 			if(!piece || piece.loc != wearer)
 				continue
-			. += "[bicon(piece)] \The [piece] [piece.gender == PLURAL ? "are" : "is"] deployed."
+			. += "\icon[piece][bicon(piece)] \The [piece] [piece.gender == PLURAL ? "are" : "is"] deployed."
 
 	if(src.loc == usr)
 		. += "The access panel is [locked? "locked" : "unlocked"]."
@@ -920,7 +919,7 @@
 
 	if(!wearer || !wearer.loc) //CHOMP Edit - Removed some stuff for protean living hardsuit
 		return
-		
+
 //CHOMP Addition - Added this for protean living hardsuit
 	if(ai_moving)
 		if(!ai_can_move_suit(user, check_user_module = 1))

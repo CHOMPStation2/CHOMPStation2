@@ -41,6 +41,8 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/faithless/Process_Spacemove(var/check_drift = 0)
 	return 1

@@ -26,6 +26,7 @@
 	var/corpseidjob = null // Needs to be in quotes, such as "Clown" or "Chef." This just determines what the ID reads as, not their access
 	var/corpseidaccess = null //This is for access. See access.dm for which jobs give what access. Again, put in quotes. Use "Captain" if you want it to be all access.
 	var/corpseidicon = null //For setting it to be a gold, silver, CentCom etc ID
+	var/corpsesensormode = 0	//CHOMPAdd - For setting the suit sensors of a corpse. Default to 0 so we don't annoy medbay.
 
 /obj/effect/landmark/mobcorpse/New()
 	createCorpse()
@@ -36,6 +37,8 @@
 	M.set_stat(DEAD) //Kills the new mob
 	if(src.corpseuniform)
 		M.equip_to_slot_or_del(new src.corpseuniform(M), slot_w_uniform)
+		if(M.w_uniform)
+			M.w_uniform?:sensor_mode = corpsesensormode	//CHOMPEdit
 	if(src.corpsesuit)
 		M.equip_to_slot_or_del(new src.corpsesuit(M), slot_wear_suit)
 	if(src.corpseshoes)

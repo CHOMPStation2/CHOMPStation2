@@ -63,7 +63,7 @@
 		return
 	if(!istype(ghost,/mob/observer/dead))
 		return
-	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD)
+	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
 		if(istype(ghost.mind.current.loc, /obj/item/device/mmi))
 			if(tgui_alert(ghost, "Your brain is still alive, using the auto-resleever will delete that brain. Are you sure?", "Delete Brain", list("No","Yes")) != "Yes")
 				return
@@ -74,21 +74,21 @@
 			return
 
 	var/client/ghost_client = ghost.client
-	
+
 	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
 		to_chat(ghost, "<span class='warning'>You are not whitelisted to spawn as this species!</span>")
 		return
-	
+
 	// CHOMPedit start
 	var/datum/species/chosen_species
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
-		
+
 	if(chosen_species.flags && NO_SCAN)
 		to_chat(ghost, "<span class='warning'>This species cannot be resleeved!</span>")
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
-	
+
 	//Name matching is ugly but mind doesn't persist to look at.
 	var/charjob
 	var/datum/data/record/record_found
@@ -132,7 +132,7 @@
 		else
 			spawn_slots --
 			return
-	
+
 	if(tgui_alert(ghost, "Would you like to be resleeved?", "Resleeve", list("No","Yes")) == "No")
 		return
 	var/mob/living/carbon/human/new_character
@@ -152,7 +152,7 @@
 		ghost.mind.transfer_to(new_character)
 
 	new_character.key = player_key
-	
+
 	//Were they any particular special role? If so, copy.
 	if(new_character.mind)
 		new_character.mind.loaded_from_ckey = picked_ckey
@@ -165,8 +165,13 @@
 	for(var/lang in ghost_client.prefs.alternate_languages)
 		var/datum/language/chosen_language = GLOB.all_languages[lang]
 		if(chosen_language)
-			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
+			if(is_lang_whitelisted(ghost,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
 				new_character.add_language(lang)
+	for(var/key in ghost_client.prefs.language_custom_keys)
+		if(ghost_client.prefs.language_custom_keys[key])
+			var/datum/language/keylang = GLOB.all_languages[ghost_client.prefs.language_custom_keys[key]]
+			if(keylang)
+				new_character.language_keys[key] = keylang
 
 	//If desired, apply equipment.
 	if(equip_body)
@@ -182,12 +187,12 @@
 
 	log_admin("[new_character.ckey]'s character [new_character.real_name] has been auto-resleeved.")
 	message_admins("[new_character.ckey]'s character [new_character.real_name] has been auto-resleeved.")
-	
+
 	var/obj/item/weapon/implant/backup/imp = new(src)
 
 	if(imp.handle_implant(new_character,new_character.zone_sel.selecting))
 		imp.post_implant(new_character)
-	
+
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(new_character.mind.name)
 	if(db)
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]

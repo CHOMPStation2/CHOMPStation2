@@ -60,6 +60,11 @@
 			nif_software = nifsofts
 			nif_savedata = M.nif.save_data.Copy()
 
+	//CHOMPEdit Start - Preference for Automatic transcore notifications
+	if(istype(M,/mob) && !M.is_preference_enabled(/datum/client_preference/autotranscore))
+		do_notify = FALSE
+	//CHOMPEdit End
+
 	last_update = world.time
 
 	if(add_to_db)

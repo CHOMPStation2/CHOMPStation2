@@ -30,10 +30,20 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 /datum/character_directory/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
 
-	data["personalVisibility"] = user?.client?.prefs?.show_in_directory
-	data["personalTag"] = user?.client?.prefs?.directory_tag || "Unset"
-	data["personalErpTag"] = user?.client?.prefs?.directory_erptag || "Unset"
-	data["personalEventTag"] = vantag_choices_list[user?.client?.prefs?.vantag_preference] //CHOMPEdit
+	if (user?.mind)
+		data["personalVisibility"] = user.mind.show_in_directory
+		data["personalTag"] = user.mind.directory_tag || "Unset"
+		data["personalErpTag"] = user.mind.directory_erptag || "Unset"
+		data["personalEventTag"] = vantag_choices_list[user.mind.vantag_preference] //CHOMPEdit
+		data["personalGenderTag"] = user.mind.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
+		data["personalSexualityTag"] = user.mind.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
+	else if (user?.client?.prefs)
+		data["personalVisibility"] = user.client.prefs.show_in_directory
+		data["personalTag"] = user.client.prefs.directory_tag || "Unset"
+		data["personalErpTag"] = user.client.prefs.directory_erptag || "Unset"
+		data["personalEventTag"] = vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
+		data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
+		data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 
 	return data
 
@@ -43,7 +53,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 	var/list/directory_mobs = list()
 	for(var/client/C in GLOB.clients)
 		// Allow opt-out.
-		if(!C?.prefs?.show_in_directory)
+		if(C?.mob?.mind ? !C.mob.mind.show_in_directory : !C?.prefs?.show_in_directory)
 			continue
 
 		// These are the three vars we're trying to find
@@ -52,21 +62,40 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/species = null
 		var/ooc_notes = null
 		var/flavor_text = null
-		var/tag = C.prefs.directory_tag || "Unset"
-		var/erptag = C.prefs.directory_erptag || "Unset"
-		var/eventtag = vantag_choices_list[C.prefs.vantag_preference] //CHOMPEdit
-		var/character_ad = C.prefs.directory_ad
+		var/gendertag = null // CHOMPStation Edit: Character Directory Update
+		var/sexualitytag = null // CHOMPStation Edit: Character Directory Update
+		var/eventtag = vantag_choices_list[VANTAG_NONE] //CHOMPEdit
+		var/tag
+		var/erptag
+		var/character_ad
+		if (C.mob?.mind) //could use ternary for all three but this is more efficient
+			tag = C.mob.mind.directory_tag || "Unset"
+			erptag = C.mob.mind.directory_erptag || "Unset"
+			character_ad = C.mob.mind.directory_ad
+			gendertag = C.mob.mind.directory_gendertag || "Unset"
+			sexualitytag = C.mob.mind.directory_sexualitytag || "Unset"
+			eventtag = vantag_choices_list[C.mob.mind.vantag_preference]
+		else
+			tag = C.prefs.directory_tag || "Unset"
+			erptag = C.prefs.directory_erptag || "Unset"
+			character_ad = C.prefs.directory_ad
+			gendertag = C.prefs.directory_gendertag || "Unset"
+			sexualitytag = C.prefs.directory_sexualitytag || "Unset"
+			eventtag = vantag_choices_list[C.prefs.vantag_preference]
 
+		//CHOMPEdit Start
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
+			var/strangername = H.real_name
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
 					if(!find_record("name", H.real_name, data_core.hidden_general))
-						continue
-			name = H.real_name
+						strangername = "unknown"
+			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
-			flavor_text = H.flavor_texts["general"]
+			if(LAZYLEN(H.flavor_texts))
+				flavor_text = H.flavor_texts["general"]
 
 		if(isAI(C.mob))
 			var/mob/living/silicon/ai/A = C.mob
@@ -84,6 +113,21 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			ooc_notes = R.ooc_notes
 			flavor_text = R.flavor_text
 
+		if(istype(C.mob, /mob/living/silicon/pai))
+			var/mob/living/silicon/pai/P = C.mob
+			name = P.name
+			species = "pAI"
+			ooc_notes = P.ooc_notes
+			flavor_text = P.flavor_text
+
+		if(istype(C.mob, /mob/living/simple_mob))
+			var/mob/living/simple_mob/S = C.mob
+			name = S.name
+			species = S.character_directory_species()
+			ooc_notes = S.ooc_notes
+			flavor_text = S.desc
+			//CHOMPEdit End
+
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
 		if(!name)
@@ -94,6 +138,8 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			"species" = species,
 			"ooc_notes" = ooc_notes,
 			"tag" = tag,
+			"gendertag" = gendertag, // CHOMPStation Edit: Character Directory Update
+			"sexualitytag" = sexualitytag, // CHOMPStation Edit: Character Directory Update
 			"erptag" = erptag,
 			"eventtag" = eventtag, //CHOMPEdit
 			"character_ad" = character_ad,
@@ -110,28 +156,63 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 	if(.)
 		return
 
+	if(action == "refresh")
+		// This is primarily to stop malicious users from trying to lag the server by spamming this verb
+		if(!usr.checkMoveCooldown())
+			to_chat(usr, "<span class='warning'>Don't spam character directory refresh.</span>")
+			return
+		usr.setMoveCooldown(10)
+		update_tgui_static_data(usr, ui)
+		return TRUE
+	else
+		return check_for_mind_or_prefs(usr, action, params["overwrite_prefs"])
+
+/datum/character_directory/proc/check_for_mind_or_prefs(mob/user, action, overwrite_prefs)
+	if (!user.client)
+		return
+	var/can_set_prefs = overwrite_prefs && !!user.client.prefs
+	var/can_set_mind = !!user.mind
+	if (!can_set_prefs && !can_set_mind)
+		if (!overwrite_prefs && !!user.client.prefs)
+			to_chat(user, "<span class='warning'>You cannot change these settings if you don't have a mind to save them to. Enable overwriting prefs and switch to a slot you're fine with overwriting.</span>")
+		return
 	switch(action)
-		if("refresh")
-			// This is primarily to stop malicious users from trying to lag the server by spamming this verb
-			if(!usr.checkMoveCooldown())
-				to_chat(usr, "<span class='warning'>Don't spam character directory refresh.</span>")
-				return
-			usr.setMoveCooldown(10)
-			update_tgui_static_data(usr, ui)
-			return TRUE
-		if("setTag")
+		if ("setTag")
 			var/list/new_tag = tgui_input_list(usr, "Pick a new Vore tag for the character directory", "Character Tag", GLOB.char_directory_tags)
 			if(!new_tag)
 				return
-			usr?.client?.prefs?.directory_tag = new_tag
-			return TRUE
+			return set_for_mind_or_prefs(user, action, new_tag, can_set_prefs, can_set_mind)
+		// CHOMPStation Edit End: Directory Update
 		if("setErpTag")
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
-			usr?.client?.prefs?.directory_erptag = new_erptag
-			return TRUE
-		//CHOMPEdit start
+			return set_for_mind_or_prefs(user, action, new_erptag, can_set_prefs, can_set_mind)
+		if ("setVisible")
+			var/visible = TRUE
+			if (can_set_mind)
+				visible = user.mind.show_in_directory
+			else if (can_set_prefs)
+				visible = user.client.prefs.show_in_directory
+			to_chat(usr, "<span class='notice'>You are now [!visible ? "shown" : "not shown"] in the directory.</span>")
+			return set_for_mind_or_prefs(user, action, !visible, can_set_prefs, can_set_mind)
+		if ("editAd")
+			var/current_ad = (can_set_mind ? usr.mind.directory_ad : null) || (can_set_prefs ? usr.client.prefs.directory_ad : null)
+			var/new_ad = sanitize(tgui_input_text(usr, "Change your character ad", "Character Ad", current_ad, multiline = TRUE, prevent_enter = TRUE), extra = 0)
+			if(isnull(new_ad))
+				return
+			return set_for_mind_or_prefs(user, action, new_ad, can_set_prefs, can_set_mind)
+		// CHOMPStation Edit Start: Directory Update
+		if("setGenderTag")
+			var/list/new_gendertag = tgui_input_list(usr, "Pick a new Gender tag for the character directory. This is YOUR gender, not what you prefer.", "Character Gender Tag", GLOB.char_directory_gendertags)
+			if(!new_gendertag)
+				return
+			return set_for_mind_or_prefs(user, action, new_gendertag, can_set_prefs, can_set_mind)
+		if("setSexualityTag")
+			var/list/new_sexualitytag = tgui_input_list(usr, "Pick a new Sexuality/Orientation tag for the character directory", "Character Sexuality/Orientation Tag", GLOB.char_directory_sexualitytags)
+			if(!new_sexualitytag)
+				return
+			return set_for_mind_or_prefs(user, action, new_sexualitytag, can_set_prefs, can_set_mind)
 		if("setEventTag")
 			var/list/names_list = list()
 			for(var/C in vantag_choices_list)
@@ -139,20 +220,52 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			var/list/new_eventtag = input(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference) as null|anything in names_list
 			if(!new_eventtag)
 				return
-			usr?.client?.prefs?.vantag_preference = names_list[new_eventtag]
-			return TRUE
+			return set_for_mind_or_prefs(user, action, names_list[new_eventtag], can_set_prefs, can_set_mind)
 		//CHOMPEdit end
-		if("setVisible")
-			usr?.client?.prefs?.show_in_directory = !usr?.client?.prefs?.show_in_directory
-			to_chat(usr, "<span class='notice'>You are now [usr.client.prefs.show_in_directory ? "shown" : "not shown"] in the directory.</span>")
-			return TRUE
-		if("editAd")
-			if(!usr?.client?.prefs)
-				return
 
-			var/current_ad = usr.client.prefs.directory_ad
-			var/new_ad = sanitize(input(usr, "Change your character ad", "Character Ad", current_ad) as message|null, extra = 0)
-			if(isnull(new_ad))
-				return
-			usr.client.prefs.directory_ad = new_ad
+/datum/character_directory/proc/set_for_mind_or_prefs(mob/user, action, new_value, can_set_prefs, can_set_mind)
+	can_set_prefs &&= !!user.client.prefs
+	can_set_mind &&= !!user.mind
+	if (!can_set_prefs && !can_set_mind)
+		to_chat(user, "<span class='warning'>You seem to have lost either your mind, or your current preferences, while changing the values.[action == "editAd" ? " Here is your ad that you wrote. [new_value]" : null]</span>")
+		return
+	switch(action)
+		if ("setTag")
+			if (can_set_prefs)
+				user.client.prefs.directory_tag = new_value
+			if (can_set_mind)
+				user.mind.directory_tag = new_value
 			return TRUE
+		if ("setErpTag")
+			if (can_set_prefs)
+				user.client.prefs.directory_erptag = new_value
+			if (can_set_mind)
+				user.mind.directory_erptag = new_value
+			return TRUE
+		if ("setVisible")
+			if (can_set_prefs)
+				user.client.prefs.show_in_directory = new_value
+			if (can_set_mind)
+				user.mind.show_in_directory = new_value
+			return TRUE
+		if ("editAd")
+			if (can_set_prefs)
+				user.client.prefs.directory_ad = new_value
+			if (can_set_mind)
+				user.mind.directory_ad = new_value
+			return TRUE
+		if ("setEventTag")
+			if (can_set_prefs)
+				user.client.prefs.vantag_preference = new_value
+			if (can_set_mind)
+				user.mind.vantag_preference = new_value
+		if ("setGenderTag")
+			if (can_set_prefs)
+				user.client.prefs.directory_gendertag = new_value
+			if (can_set_mind)
+				user.mind.directory_gendertag = new_value
+		if ("setSexualityTag")
+			if (can_set_prefs)
+				user.client.prefs.directory_sexualitytag = new_value
+			if (can_set_mind)
+				user.mind.directory_sexualitytag = new_value

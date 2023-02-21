@@ -28,8 +28,11 @@
 	// Vore tags
 	vore_active = 1
 	vore_capacity = 1
+	vore_capacity_ex = list("stomach" = 1, "tail" = 1)
+	vore_fullness_ex = list("stomach" = 0, "tail" = 0)
 	vore_bump_emote = "coils their tail around"
 	vore_icons = 0
+	vore_icon_bellies = list("stomach", "tail")
 	// Default stomach
 	vore_stomach_name = "upper stomach"
 	vore_stomach_flavor = "You've ended up inside of the lamia's human stomach. It's pretty much identical to any human stomach, but the valve leading deeper is much bigger."
@@ -50,7 +53,10 @@
 
 	say_list_type = /datum/say_list/lamia
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
+/* CHOMPEdit - now handled by new belly features.
 /mob/living/simple_mob/vore/lamia/update_fullness()
 	var/new_fullness = 0
 	// We only want to count our upper_stomach towards capacity
@@ -61,6 +67,7 @@
 	new_fullness /= size_multiplier
 	new_fullness = round(new_fullness, 1)
 	vore_fullness = min(vore_capacity, new_fullness)
+*/
 
 /mob/living/simple_mob/vore/lamia/update_icon()
 	. = ..()
@@ -72,6 +79,7 @@
 		// And copper_vore_1_0 is full upper stomach, but empty tail stomach
 		// For unconscious: [icon_rest]_vore_[upper]_[tail]
 		// For dead, it doesn't show.
+		/* CHOMPEdit - Handled differently now.
 		var/upper_shows = FALSE
 		var/tail_shows = FALSE
 
@@ -89,6 +97,9 @@
 					upper_shows = TRUE
 				else if(B.name == "tail stomach")
 					tail_shows = TRUE
+		*/
+		var/upper_shows = vore_fullness_ex["stomach"]
+		var/tail_shows = vore_fullness_ex["tail"]
 
 		if(upper_shows || tail_shows)
 			if((stat == CONSCIOUS) && (!icon_rest || !resting || !incapacitated(INCAPACITATION_DISABLED)))
@@ -97,6 +108,7 @@
 				icon_state = icon_dead
 			else if(((stat == UNCONSCIOUS) || resting || incapacitated(INCAPACITATION_DISABLED) ) && icon_rest)
 				icon_state = "[icon_rest]_vore_[upper_shows]_[tail_shows]"
+
 
 /mob/living/simple_mob/vore/lamia/init_vore()
 	if(!voremob_loaded)
@@ -109,6 +121,7 @@
 
 	var/obj/belly/tail = new /obj/belly(src)
 	tail.immutable = TRUE
+	tail.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	tail.name = "tail stomach"
 	tail.desc = "You slide out into the narrow, constricting tube of flesh that is the lamia's snake half, heated walls and strong muscles all around clinging to your form with every slither."
 	tail.digest_mode = vore_default_mode
@@ -126,6 +139,7 @@
 	tail.human_prey_swallow_time = swallowTime
 	tail.nonhuman_prey_swallow_time = swallowTime
 	tail.vore_verb = "stuff"
+	tail.belly_sprite_to_affect = "tail" //CHOMPEdit - So that tail belly affects tail vore sprite.
 	tail.emote_lists[DM_HOLD] = B.emote_lists[DM_HOLD].Copy()
 	tail.emote_lists[DM_DIGEST] = B.emote_lists[DM_DIGEST].Copy()
 

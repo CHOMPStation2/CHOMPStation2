@@ -169,7 +169,7 @@
 	icon_state = "winterboots_hydro"
 
 /obj/item/clothing/shoes/boots/winter/explorer
-	name = "explorer winter boots"
+	name = "explorer winter boots" //CHOMP keep explo
 	desc = "Steel-toed winter boots for mining or exploration in hazardous environments. Very good at keeping toes warm and uncrushed."
 	icon_state = "explorer"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
@@ -241,3 +241,13 @@
 	icon_state = "jackboots"
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
 	siemens_coefficient = 0.6
+
+/obj/item/clothing/shoes/boots/singer
+    name = "blue performer's boots"
+    desc = "These boots were made for dancing."
+    icon_state = "bsing"
+
+/obj/item/clothing/shoes/boots/singer/yellow
+	name = "yellow performer's boots"
+	desc = "These boots were made for dancing."
+	icon_state = "ysing"

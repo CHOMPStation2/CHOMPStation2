@@ -4,7 +4,7 @@
 	seed_name = "apple"
 	display_name = "apple tree"
 	kitchen_tag = "apple"
-	mutants = list("poisonapple","goldapple")
+	mutants = list("poisonapple", "goldapple")
 	chems = list("nutriment" = list(1,10),"applejuice" = list(10,20))
 
 /datum/seed/apple/New()

@@ -76,6 +76,7 @@
 	desc = "You are blind. For whatever reason, nothing is able to change this fact, not even surgery. WARNING: YOU WILL NOT BE ABLE TO SEE ANY POSTS USING THE ME VERB, ONLY SUBTLE AND DIALOGUE ARE VIEWABLE TO YOU, YOU HAVE BEEN WARNED."
 	cost = -8
 	special_env = TRUE
+	custom_only = FALSE
 
 /datum/trait/negative/blindness/handle_environment_special(var/mob/living/carbon/human/H)
 	H.sdisabilities |= BLIND 		//no matter what you do, the blindess still comes for you
@@ -169,10 +170,10 @@
 		// Check for company.
 		for(var/mob/living/M in viewers(get_turf(H)))
 			in_range |= check_mob_company(H,M)
-		
+
 		for(var/obj/effect/overlay/aiholo/A in range(5, H))
 			in_range |= A
-		
+
 		if(in_range.len > 2)
 			if(H.loneliness_stage < warning_cap)
 				H.loneliness_stage = min(warning_cap,H.loneliness_stage+escalation_speed)
@@ -232,7 +233,7 @@
 		return in_range
 	var/social_check = !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
 	var/ckey_check = !M.ckey
-	var/overall_checks = M == H || M.stat == DEAD || social_check || ckey_check 
+	var/overall_checks = M == H || M.stat == DEAD || social_check || ckey_check
 	if(invis_matters && M.invisibility > H.see_invisible)
 		return in_range
 	if(!overall_checks)
@@ -291,7 +292,7 @@
 	var/social_check = only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
 	var/self_invisible_check = M == H || M.invisibility > H.see_invisible
 	var/ckey_check = only_people && !M.ckey
-	var/overall_checks = M.stat == DEAD || social_check || ckey_check 
+	var/overall_checks = M.stat == DEAD || social_check || ckey_check
 	if(self_invisible_check)
 		return 0
 	if((M.faction == "neutral" || M.faction == H.faction) && !overall_checks)
@@ -351,7 +352,7 @@
 			sub_loneliness(H)
 		for(var/obj/effect/overlay/aiholo/A in range(5, H))
 			sub_loneliness(H)
-		
+
 		// No company? Suffer :(
 		if(H.loneliness_stage < warning_cap)
 			H.loneliness_stage = min(warning_cap,H.loneliness_stage+escalation_speed)
@@ -382,28 +383,31 @@
 	desc = "Your body is very fragile. Reduces your maximum hitpoints to 25. Beware sneezes. You require only 50 damage in total to die, compared to 200 normally. You will go into crit after losing 25 HP, compared to crit at 100 HP."
 	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
 	var_changes = list("total_health" = 25)
-	
+
 /datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.setMaxHealth(S.total_health)
-	
+
 /datum/trait/negative/reduced_biocompat_minor
 	name = "Reduced Biocompatibility, Minor"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 80% as effective on you!"
-	cost = -1
+	cost = -2
 	var_changes = list("chem_strength_heal" = 0.8)
-	
+	can_take = ORGANICS
+
 /datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 60% as effective on you!"
 	cost = -4
 	var_changes = list("chem_strength_heal" = 0.6)
-	
+	can_take = ORGANICS
+
 /datum/trait/negative/reduced_biocompat_extreme
 	name = "Reduced Biocompatibility, Major"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 30% as effective on you!"
 	cost = -8
 	var_changes = list("chem_strength_heal" = 0.3)
+	can_take = ORGANICS
 
 // Rykkanote: Relocated these here as we're no longer a YW downstream.
 /datum/trait/negative/light_sensitivity
@@ -428,10 +432,10 @@
 /datum/trait/negative/haemophilia_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
-	
+
 /datum/trait/negative/pain_intolerance_basic
 	name = "Pain Intolerance"
-	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources." 
+	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources."
 	cost = -2
 	var_changes = list("pain_mod" = 1.2) // CHOMPEdit: Makes this exact opposite of Pain Tolerance Basic.
 
@@ -440,7 +444,7 @@
 	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
 	cost = -3
 	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit. CHOMPEdit: This really should cost more if it's this bad.
-	
+
 
 /datum/trait/negative/sensitive_biochem
 	name = "Sensitive Biochemistry"

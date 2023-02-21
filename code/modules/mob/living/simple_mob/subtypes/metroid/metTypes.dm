@@ -13,10 +13,10 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	faction = "notmetroid"
 	maxHealth = 400
 	health = 400
-	melee_damage_lower = 2
-	melee_damage_upper = 6
+	melee_damage_lower = 0
+	melee_damage_upper = 0
 	movement_cooldown = 6
-	harm_intent_damage = 3
+	harm_intent_damage = 2
 	armor = list(
 				"melee" = 50,
 				"bullet" = -90,

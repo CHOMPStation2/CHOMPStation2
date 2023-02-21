@@ -62,7 +62,7 @@ var/list/mining_overlay_cache = list()
 		"phoron" = /obj/item/weapon/ore/phoron,
 		"osmium" = /obj/item/weapon/ore/osmium,
 		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
+		"sand" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
 		"verdantium" = /obj/item/weapon/ore/verdantium,
 		"marble" = /obj/item/weapon/ore/marble,
@@ -361,7 +361,7 @@ var/list/mining_overlay_cache = list()
 //Not even going to touch this pile of spaghetti
 /turf/simulated/mineral/attackby(obj/item/weapon/W as obj, mob/user as mob)
 
-	if (!(istype(usr, /mob/living/carbon/human) || ticker) && ticker.mode.name != "monkey")
+	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
 
@@ -412,30 +412,14 @@ var/list/mining_overlay_cache = list()
 					F.attackby(W,user)
 					return
 
-		else if(istype(W, /obj/item/stack/rods))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				return
-			var/obj/item/stack/rods/R = W
-			if (R.use(1))
-				to_chat(user, "<span class='notice'>Constructing support lattice ...</span>")
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				new /obj/structure/lattice(get_turf(src))
-
 		else if(istype(W, /obj/item/stack/tile/floor))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				var/obj/item/stack/tile/floor/S = W
-				if (S.get_amount() < 1)
-					return
-				qdel(L)
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				ChangeTurf(/turf/simulated/floor)
-				S.use(1)
+			var/obj/item/stack/tile/floor/S = W
+			if (S.get_amount() < 1)
 				return
-			else
-				to_chat(user, "<span class='warning'>The plating is going to need some support.</span>")
-				return
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			ChangeTurf(/turf/simulated/floor)
+			S.use(1)
+			return
 
 
 	else

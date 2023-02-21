@@ -41,6 +41,7 @@
 	name = "sunflowers"
 	seed_name = "sunflower"
 	display_name = "sunflowers"
+	mutants = list("solarflower") //CHOMPEdit - Adding mutation strain for solarflowers.
 	kitchen_tag = "sunflower"
 
 /datum/seed/flower/sunflower/New()
@@ -58,6 +59,7 @@
 	seed_name = "lavender"
 	display_name = "lavender"
 	kitchen_tag = "lavender"
+	mutants = list("milkdew") //CHOMPEdit - Adding mutation strain for milkdew.
 	chems = list("nutriment" = list(1,20), "bicaridine" = list(1,10))
 
 /datum/seed/flower/lavender/New()

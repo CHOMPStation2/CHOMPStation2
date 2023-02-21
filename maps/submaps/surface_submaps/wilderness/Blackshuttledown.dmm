@@ -151,7 +151,8 @@
 	},
 /area/submap/Blackshuttledown)
 "aw" = (
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "ax" = (
 /obj/structure/table/steel,
@@ -227,6 +228,8 @@
 	dir = 4;
 	pixel_y = 0
 	},
+/obj/random/projectile/sec,
+/obj/random/projectile/sec,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "aK" = (
@@ -252,8 +255,12 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "aO" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword/poi,
-/turf/simulated/floor/tiled/white,
+/obj/structure/table/steel,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/random/contraband/nofail,
+/turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "aP" = (
 /obj/machinery/light{
@@ -274,7 +281,9 @@
 /area/submap/Blackshuttledown)
 "aR" = (
 /obj/structure/table/steel,
-/obj/item/weapon/grenade/smokebomb,
+/obj/random/grenade/box,
+/obj/random/grenade/box,
+/obj/random/powercell,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "aS" = (
@@ -448,6 +457,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
+/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bs" = (
@@ -516,6 +526,7 @@
 /area/submap/Blackshuttledown)
 "bC" = (
 /obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bD" = (
@@ -553,7 +564,13 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bI" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword/poi,
+/obj/item/stolenpackage,
+/obj/structure/closet/crate,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/rigsuit/chancetofail,
+/obj/random/projectile,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bJ" = (
@@ -604,6 +621,9 @@
 /area/submap/Blackshuttledown)
 "bQ" = (
 /obj/structure/closet/toolcloset,
+/obj/random/tool/power,
+/obj/random/tool/power,
+/obj/random/tool/power,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bR" = (
@@ -637,6 +657,9 @@
 /area/submap/Blackshuttledown)
 "bV" = (
 /obj/structure/table/steel,
+/obj/random/rigsuit/chancetofail,
+/obj/random/projectile,
+/obj/random/projectile,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "bW" = (
@@ -710,13 +733,15 @@
 /area/submap/Blackshuttledown)
 "ch" = (
 /obj/structure/table/steel,
-/obj/random/energy,
+/obj/random/energy/highend,
+/obj/random/energy/highend,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "ci" = (
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Blackshuttledown)
 "cj" = (
@@ -755,6 +780,7 @@
 /area/submap/Blackshuttledown)
 "cn" = (
 /obj/structure/table/woodentable,
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "co" = (
@@ -785,10 +811,45 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "cs" = (
+/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"jW" = (
+/obj/item/weapon/stool,
+/mob/living/simple_mob/humanoid/merc/ranged/ionrifle/poi,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"pX" = (
+/obj/random/mob/merc/all,
+/turf/simulated/floor/tiled/white,
+/area/submap/Blackshuttledown)
+"rE" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/random/mob/merc/all,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"vW" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/random/mob/merc/all,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"AL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/mob/living/simple_mob/humanoid/merc/ranged/laser/poi,
+/obj/random/mob/merc/all,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"DG" = (
+/obj/structure/table/steel,
+/obj/random/contraband/nofail,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"RP" = (
+/obj/machinery/computer,
+/obj/effect/floor_decal/borderfloor/full,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 
@@ -1067,10 +1128,10 @@ ab
 aH
 aj
 bg
+aO
 br
 br
-br
-br
+aO
 bJ
 aj
 av
@@ -1138,14 +1199,14 @@ aj
 aj
 aj
 aj
-aQ
+RP
 bc
-az
+AL
 az
 aK
 aS
 az
-cs
+AL
 bU
 aQ
 aj
@@ -1210,9 +1271,9 @@ ab
 aj
 aj
 aj
-aw
+cb
 aI
-aw
+cg
 bd
 bi
 bs
@@ -1221,8 +1282,8 @@ bF
 bs
 bL
 bd
-aw
-cb
+cg
+cg
 cg
 aj
 aj
@@ -1251,12 +1312,12 @@ ax
 aJ
 aR
 aj
-aL
+rE
 bl
 bl
 bl
 bl
-aT
+vW
 aj
 bV
 cc
@@ -1361,14 +1422,14 @@ ao
 az
 aK
 aS
-az
+AL
 az
 bt
 bl
 bl
 bt
 bM
-az
+AL
 bW
 aS
 cr
@@ -1511,10 +1572,10 @@ aj
 aj
 aj
 bl
-bu
+jW
 bB
-bC
-bu
+DG
+jW
 bl
 aj
 aj
@@ -1586,8 +1647,8 @@ aW
 aj
 bn
 bu
-bC
-bC
+DG
+bB
 bu
 bn
 aj
@@ -1619,7 +1680,7 @@ aj
 as
 aD
 aN
-aE
+pX
 be
 bl
 bl
@@ -1628,7 +1689,7 @@ bl
 bl
 bl
 bA
-bl
+bn
 bY
 bY
 cm
@@ -1658,12 +1719,12 @@ aE
 aE
 aX
 aj
+aw
 bl
 bl
 bl
 bl
-bl
-bl
+aw
 aj
 bl
 bl
@@ -1691,8 +1752,8 @@ ab
 af
 aj
 au
+pX
 aE
-aO
 aY
 aj
 aj
@@ -1770,10 +1831,10 @@ aP
 ba
 aj
 bo
+bn
 bl
-bl
-bl
-bl
+cs
+bn
 bR
 aj
 ca

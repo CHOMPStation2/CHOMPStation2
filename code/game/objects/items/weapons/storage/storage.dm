@@ -237,7 +237,14 @@
 
 /obj/item/weapon/storage/proc/open(mob/user as mob)
 	if (use_sound)
-		playsound(src, src.use_sound, 50, 0, -5)
+	// Chomp edit
+		if(isbelly(user.loc))
+			var/obj/belly/B = user.loc
+			if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
+				// Do nothing
+			else
+				playsound(src, src.use_sound, 50, 0, -5)
+	// Chomp edit end
 
 	orient2hud(user)
 	if(user.s_active)
@@ -476,6 +483,11 @@
 		if(!stop_messages)
 			to_chat(usr, "<span class='notice'>[src] cannot hold [W] as it's a storage item of the same size.</span>")
 		return 0 //To prevent the stacking of same sized storage items.
+	//CHOMPEdit - Getting around to proper object flags
+	if(HAS_TRAIT(W, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
+		if(!stop_messages)
+			to_chat(usr, "<span class='warning'>\the [W] is stuck to your hand, you can't put it in \the [src]!</span>")
+		return FALSE
 
 	return 1
 
@@ -877,8 +889,8 @@
 	if(target != user) return // If the user didn't drag themselves, exit
 	if(user.incapacitated() || user.buckled) return // If user is incapacitated or buckled, exit
 	if(get_holder_of_type(src, /mob/living/carbon/human) == user) return // No jumping into your own equipment
-	if(ishuman(user) && user.get_effective_size() > 0.25) return // Only micro characters
-	if(ismouse(user) && user.get_effective_size() > 1) return // Only normal sized mice or less
+	if(ishuman(user) && user.get_effective_size(TRUE) > 0.25) return // Only micro characters
+	if(ismouse(user) && user.get_effective_size(TRUE) > 1) return // Only normal sized mice or less
 
 	// Create a dummy holder with user's size to test insertion
 	var/obj/item/weapon/holder/D = new/obj/item/weapon/holder

@@ -3,7 +3,7 @@
 	real_name = "mouse"
 	desc = "It's a small militarized rodent."
 	tt_desc = "E Mus musculus"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "mouse_gray"
 	item_state = "mouse_gray"
 	icon_living = "mouse_gray"
@@ -35,8 +35,8 @@
 	//Mob melee settings
 	melee_damage_lower = 5
 	melee_damage_upper = 15
-	list/attacktext = list("attacked", "chomped", "gnawed on")
-	list/friendly = list("baps", "nuzzles")
+	attacktext = list("attacked", "chomped", "gnawed on")
+	friendly = list("baps", "nuzzles")
 	attack_armor_type = "melee"
 	attack_sharp = 1
 	attack_edge = 1
@@ -62,6 +62,8 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 	var/rank //pyro, operative, ammo, stealth. more to come. Do not leave blank.
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/mouse_army/New()
 	..()
@@ -358,7 +360,7 @@
 	name = "\improper Whisker Tank"
 	desc = "A shockingly functional, miniaturized tank. Its inventor is unknown, but widely reviled."
 	catalogue_data = list(/datum/category_item/catalogue/technology/mouse_tank)
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "whisker"
 	wreckage = /obj/structure/loot_pile/mecha/mouse_tank
 	faction = "mouse_army"

@@ -439,7 +439,7 @@
 					for (var/datum/data/record/R in data_core.security)
 						if (R.fields["id"] == E.fields["id"])
 							if(hasHUD(usr,"security"))
-								var/t1 = sanitize(input(usr, "Add Comment:", "Sec. records", null, null)  as message)
+								var/t1 = sanitize(tgui_input_text(usr, "Add Comment:", "Sec. records", null, null, multiline = TRUE, prevent_enter = TRUE))
 								if ( !(t1) || usr.stat || usr.restrained() || !(hasHUD(usr,"security")) )
 									return
 								var/counter = 1
@@ -556,8 +556,89 @@
 					for (var/datum/data/record/R in data_core.medical)
 						if (R.fields["id"] == E.fields["id"])
 							if(hasHUD(usr,"medical"))
-								var/t1 = sanitize(input(usr, "Add Comment:", "Med. records", null, null)  as message)
+								var/t1 = sanitize(tgui_input_text(usr, "Add Comment:", "Med. records", null, null, multiline = TRUE, prevent_enter = TRUE))
 								if ( !(t1) || usr.stat || usr.restrained() || !(hasHUD(usr,"medical")) )
+									return
+								var/counter = 1
+								while(R.fields[text("com_[]", counter)])
+									counter++
+								if(istype(usr,/mob/living/carbon/human))
+									var/mob/living/carbon/human/U = usr
+									R.fields[text("com_[counter]")] = text("Made by [U.get_authentification_name()] ([U.get_assignment()]) on [time2text(world.realtime, "DDD MMM DD hh:mm:ss")], [game_year]<BR>[t1]")
+								if(istype(usr,/mob/living/silicon/robot))
+									var/mob/living/silicon/robot/U = usr
+									R.fields[text("com_[counter]")] = text("Made by [U.name] ([U.modtype] [U.braintype]) on [time2text(world.realtime, "DDD MMM DD hh:mm:ss")], [game_year]<BR>[t1]")
+
+	if (href_list["emprecord"])
+		if(hasHUD(usr,"best"))
+			var/perpname = "wot"
+			var/read = 0
+
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
+			else
+				perpname = name
+			for (var/datum/data/record/E in data_core.general)
+				if (E.fields["name"] == perpname)
+					for (var/datum/data/record/R in data_core.general)
+						if (R.fields["id"] == E.fields["id"])
+							if(hasHUD(usr,"best"))
+								to_chat(usr, "<b>Name:</b> [R.fields["name"]]")
+								to_chat(usr, "<b>Assignment:</b> [R.fields["real_rank"]] ([R.fields["rank"]])")
+								to_chat(usr, "<b>Home System:</b> [R.fields["home_system"]]")
+								to_chat(usr, "<b>Citizenship:</b> [R.fields["citizenship"]]")
+								to_chat(usr, "<b>Primary Employer:</b> [R.fields["personal_faction"]]")
+								to_chat(usr, "<b>Religious Beliefs:</b> [R.fields["religion"]]")
+								to_chat(usr, "<b>Notes:</b> [R.fields["notes"]]")
+								to_chat(usr, "<a href='?src=\ref[src];emprecordComment=`'>\[View Comment Log\]</a>")
+								read = 1
+
+			if(!read)
+				to_chat(usr, "<font color='red'>Unable to locate a data core entry for this person.</font>")
+
+	if (href_list["emprecordComment"])
+		if(hasHUD(usr,"best"))
+			var/perpname = "wot"
+			var/read = 0
+
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
+			else
+				perpname = name
+			for (var/datum/data/record/E in data_core.general)
+				if (E.fields["name"] == perpname)
+					for (var/datum/data/record/R in data_core.general)
+						if (R.fields["id"] == E.fields["id"])
+							if(hasHUD(usr,"best"))
+								read = 1
+								var/counter = 1
+								while(R.fields[text("com_[]", counter)])
+									to_chat(usr, "[R.fields[text("com_[]", counter)]]")
+									counter++
+								if (counter == 1)
+									to_chat(usr, "No comment found")
+								to_chat(usr, "<a href='?src=\ref[src];emprecordadd=`'>\[Add comment\]</a>")
+
+			if(!read)
+				to_chat(usr, "<font color='red'>Unable to locate a data core entry for this person.</font>")
+
+	if (href_list["emprecordadd"])
+		if(hasHUD(usr,"best"))
+			var/perpname = "wot"
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
+			else
+				perpname = name
+			for (var/datum/data/record/E in data_core.general)
+				if (E.fields["name"] == perpname)
+					for (var/datum/data/record/R in data_core.general)
+						if (R.fields["id"] == E.fields["id"])
+							if(hasHUD(usr,"best"))
+								var/t1 = sanitize(tgui_input_text(usr, "Add Comment:", "Emp. records", null, null, multiline = TRUE, prevent_enter = TRUE))
+								if ( !(t1) || usr.stat || usr.restrained() || !(hasHUD(usr,"best")) )
 									return
 								var/counter = 1
 								while(R.fields[text("com_[]", counter)])
@@ -572,6 +653,12 @@
 	if (href_list["lookitem"])
 		var/obj/item/I = locate(href_list["lookitem"])
 		src.examinate(I)
+
+	if (href_list["lookitem_desc_only"])
+		var/obj/item/I = locate(href_list["lookitem_desc_only"])
+		if(!I)
+			return
+		usr.examinate(I, 1)
 
 	if (href_list["lookmob"])
 		var/mob/M = locate(href_list["lookmob"])
@@ -588,11 +675,11 @@
 				src << browse(null, "window=flavor_changes")
 				return
 			if("general")
-				var/msg = sanitize(input(usr,"Update the general description of your character. This will be shown regardless of clothing.","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message, extra = 0)	//VOREStation Edit: separating out OOC notes
+				var/msg = sanitize(tgui_input_text(usr,"Update the general description of your character. This will be shown regardless of clothing.","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]]), multiline = TRUE, prevent_enter = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
 				flavor_texts[href_list["flavor_change"]] = msg
 				return
 			else
-				var/msg = sanitize(input(usr,"Update the flavor text for your [href_list["flavor_change"]].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message, extra = 0)
+				var/msg = sanitize(tgui_input_text(usr,"Update the flavor text for your [href_list["flavor_change"]].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]]), multiline = TRUE, prevent_enter = TRUE), extra = 0)
 				flavor_texts[href_list["flavor_change"]] = msg
 				set_flavor()
 				return
@@ -808,7 +895,7 @@
 	if (isnull(target))
 		return
 
-	var/say = sanitize(input(usr, "What do you wish to say"))
+	var/say = sanitize(tgui_input_text(usr, "What do you wish to say"))
 	if(mRemotetalk in target.mutations)
 		target.show_message("<font color='blue'> You hear [src.real_name]'s voice: [say]</font>")
 	else
@@ -855,13 +942,25 @@
 		remoteview_target = null
 		reset_view(0)
 
-/mob/living/carbon/human/get_visible_gender()
-	if(wear_suit && wear_suit.flags_inv & HIDEJUMPSUIT && ((head && head.flags_inv & HIDEMASK) || wear_mask))
-		return PLURAL //plural is the gender-neutral default
-	if(species)
-		if(species.ambiguous_genders)
-			return PLURAL // regardless of what you're wearing, your gender can't be figured out
-	return get_gender()
+/mob/living/carbon/human/get_visible_gender(mob/user, force)
+	switch(force)
+		if(VISIBLE_GENDER_FORCE_PLURAL)
+			return PLURAL
+		if(VISIBLE_GENDER_FORCE_IDENTIFYING)
+			return get_gender()
+		if(VISIBLE_GENDER_FORCE_BIOLOGICAL)
+			return gender
+		else
+			if(((wear_mask?.flags_inv & HIDEFACE) || (head?.flags_inv & HIDEMASK) || (head?.flags_inv & HIDEFACE)) && (wear_suit?.flags_inv & HIDEJUMPSUIT))
+				return PLURAL
+			if(species?.ambiguous_genders && user)
+				if(ishuman(user))
+					var/mob/living/carbon/human/human = user
+					if(!istype(human.species, species))
+						return PLURAL
+				else if(!isobserver(user) && !issilicon(user))
+					return PLURAL
+			return get_gender()
 
 /mob/living/carbon/human/proc/increase_germ_level(n)
 	if(gloves)
@@ -1137,6 +1236,7 @@
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
+	center_offset = species.center_offset //CHOMPEdit
 
 	if(LAZYLEN(descriptors))
 		descriptors = null
@@ -1211,7 +1311,7 @@
 
 	var/max_length = bloody_hands * 30 //tweeter style
 
-	var/message = sanitize(input(usr, "Write a message. It cannot be longer than [max_length] characters.","Blood writing", ""))
+	var/message = sanitize(tgui_input_text(usr, "Write a message. It cannot be longer than [max_length] characters.","Blood writing", ""))
 
 	if (message)
 		var/used_blood_amount = round(length(message) / 30, 1)
@@ -1395,10 +1495,8 @@
 		to_chat(S, "<span class='danger'>[U] pops your [current_limb.joint] back in!</span>")
 	current_limb.relocate()
 
-/mob/living/carbon/human/drop_from_inventory(var/obj/item/W, var/atom/Target = null)
-	if(W in organs)
-		return 0
-	return ..()
+/mob/living/carbon/human/drop_from_inventory(var/obj/item/W, var/atom/target = null)
+	return !(W in organs) && ..()
 
 /mob/living/carbon/human/reset_view(atom/A, update_hud = 1)
 	..()

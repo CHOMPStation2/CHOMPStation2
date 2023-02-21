@@ -371,8 +371,18 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//YWadd END	
   
 	// Destroy/cyborgize organs and limbs.
-	character.synthetic = null //Clear the existing var.
-	for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
+	//VOREStation Edit
+	character.synthetic = pref.species == "Protean" ? all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
+	var/list/organs_to_edit = list()
+	for (var/name in list(BP_TORSO, BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
+		var/obj/item/organ/external/O = character.organs_by_name[name]
+		if (O)
+			var/x = organs_to_edit.Find(O.parent_organ)
+			if (x == 0)
+				organs_to_edit += name
+			else
+				organs_to_edit.Insert(x+(O.robotic == ORGAN_NANOFORM ? 1 : 0), name)
+	for(var/name in organs_to_edit) //VOREStation edit end
 		var/status = pref.organ_data[name]
 		var/obj/item/organ/external/O = character.organs_by_name[name]
 		if(O)
@@ -405,14 +415,17 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/obj/item/organ/external/O = character.organs_by_name[N]
 		O.markings.Cut()
 
+	var/priority = 0
 	for(var/M in pref.body_markings)
+		priority += 1
 		var/datum/sprite_accessory/marking/mark_datum = body_marking_styles_list[M]
 		var/mark_color = "[pref.body_markings[M]]"
 
 		for(var/BP in mark_datum.body_parts)
 			var/obj/item/organ/external/O = character.organs_by_name[BP]
 			if(O)
-				O.markings[M] = list("color" = mark_color, "datum" = mark_datum)
+				O.markings[M] = list("color" = mark_color, "datum" = mark_datum, "priority" = priority)
+	character.markings_len = priority
 
 	var/list/last_descriptors = list()
 	if(islist(pref.body_descriptors))
@@ -579,12 +592,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if(has_flag(mob_species, HAS_SKIN_COLOR))
 		. += "<br><b>Body Color</b><br>"
 		. += "<a href='?src=\ref[src];skin_color=1'>Change Color</a> [color_square(pref.r_skin, pref.g_skin, pref.b_skin)]<br>"
-	
-	//CHOMPEdit START
-	if(mob_species.digi_allowed)
-		. += "<br><b>Digitigrade?:</b> <a href='?src=\ref[src];digitigrade=1'><b>[pref.digitigrade ? "Yes" : "No"]</b></a><br>"
-	//CHOMPEdit END
-	
+
+	. += chomp_custom_additions_body(user, mob_species) //CHOMPEdit - add custom chomp specific body customisation data with this proc.
+
 	. += "<h2>Genetics Settings</h2>"
 
 	var/list/ear_styles = pref.get_available_styles(global.ear_styles_list)
@@ -836,7 +846,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["skin_tone"])
 		if(!has_flag(mob_species, HAS_SKIN_TONE))
 			return TOPIC_NOACTION
-		var/new_s_tone = input(user, "Choose your character's skin-tone:\n(Light 1 - 220 Dark)", "Character Preference", (-pref.s_tone) + 35)  as num|null
+		var/new_s_tone = tgui_input_number(user, "Choose your character's skin-tone:\n(Light 1 - 220 Dark)", "Character Preference", (-pref.s_tone) + 35, 220, 1)
 		if(new_s_tone && has_flag(mob_species, HAS_SKIN_TONE) && CanUseTopic(user))
 			pref.s_tone = 35 - max(min( round(new_s_tone), 220),1)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -886,9 +896,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		/* VOREStation Removal - No markings whitelist, let people mix/match
 		for(var/M in usable_markings)
 			var/datum/sprite_accessory/S = usable_markings[M]
+			var/datum/species/spec = GLOB.all_species[pref.species]
 			if(!S.species_allowed.len)
 				continue
-			else if(!(pref.species in S.species_allowed))
+			else if(!(pref.species in S.species_allowed) && !(pref.custom_base in S.species_allowed) && !(spec.base_species in S.species_allowed))
 				usable_markings -= M
 		*/ //VOREStation Removal End
 		var/new_marking = tgui_input_list(user, "Choose a body marking:", "Character Preference", usable_markings)

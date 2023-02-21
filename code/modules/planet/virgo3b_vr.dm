@@ -99,28 +99,31 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 /datum/weather_holder/virgo3b
 	temperature = T0C
 	allowed_weather_types = list(
-		WEATHER_CLEAR		= new /datum/weather/virgo3b/clear(),
-		WEATHER_OVERCAST	= new /datum/weather/virgo3b/overcast(),
-		WEATHER_LIGHT_SNOW	= new /datum/weather/virgo3b/light_snow(),
-		WEATHER_SNOW		= new /datum/weather/virgo3b/snow(),
-		WEATHER_BLIZZARD	= new /datum/weather/virgo3b/blizzard(),
-		WEATHER_RAIN		= new /datum/weather/virgo3b/rain(),
-		WEATHER_STORM		= new /datum/weather/virgo3b/storm(),
-		WEATHER_HAIL		= new /datum/weather/virgo3b/hail(),
-		WEATHER_BLOOD_MOON	= new /datum/weather/virgo3b/blood_moon(),
-		WEATHER_EMBERFALL	= new /datum/weather/virgo3b/emberfall(),
-		WEATHER_ASH_STORM	= new /datum/weather/virgo3b/ash_storm(),
-		WEATHER_FALLOUT		= new /datum/weather/virgo3b/fallout()
+		WEATHER_CLEAR			= new /datum/weather/virgo3b/clear(),
+		WEATHER_OVERCAST		= new /datum/weather/virgo3b/overcast(),
+		WEATHER_LIGHT_SNOW		= new /datum/weather/virgo3b/light_snow(),
+		WEATHER_SNOW			= new /datum/weather/virgo3b/snow(),
+		WEATHER_BLIZZARD		= new /datum/weather/virgo3b/blizzard(),
+		WEATHER_RAIN			= new /datum/weather/virgo3b/rain(),
+		WEATHER_STORM			= new /datum/weather/virgo3b/storm(),
+		WEATHER_HAIL			= new /datum/weather/virgo3b/hail(),
+		WEATHER_BLOOD_MOON		= new /datum/weather/virgo3b/blood_moon(),
+		WEATHER_EMBERFALL		= new /datum/weather/virgo3b/emberfall(),
+		WEATHER_ASH_STORM		= new /datum/weather/virgo3b/ash_storm(),
+		WEATHER_ASH_STORM_SAFE	= new /datum/weather/virgo3b/ash_storm_safe(),
+		WEATHER_FALLOUT			= new /datum/weather/virgo3b/fallout(),
+		WEATHER_FALLOUT_TEMP	= new /datum/weather/virgo3b/fallout/temp(),
+		WEATHER_CONFETTI		= new /datum/weather/virgo3b/confetti()
 		)
 	roundstart_weather_chances = list(
-		WEATHER_CLEAR		= 30,
-		WEATHER_OVERCAST	= 30,
-		WEATHER_LIGHT_SNOW	= 20,
-		WEATHER_SNOW		= 5,
-		WEATHER_BLIZZARD	= 5,
-		WEATHER_RAIN		= 5,
-		WEATHER_STORM		= 2.5,
-		WEATHER_HAIL		= 2.5
+		WEATHER_CLEAR		= 60,
+		WEATHER_OVERCAST	= 60,
+		WEATHER_LIGHT_SNOW	= 40,
+		WEATHER_SNOW		= 10,
+		WEATHER_BLIZZARD	= 10,
+		WEATHER_RAIN		= 10,
+		WEATHER_STORM		= 5,
+		WEATHER_HAIL		= 5
 		)
 
 /datum/weather/virgo3b
@@ -395,7 +398,7 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 				if(show_message)
 					to_chat(H, "<span class='notice'>Hail patters onto your umbrella.</span>")
 				continue
-		
+
 			var/target_zone = pick(BP_ALL)
 			var/amount_blocked = H.run_armor_check(target_zone, "melee")
 			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
@@ -419,7 +422,7 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 	light_color = "#FF0000"
 	flight_failure_modifier = 25
 	transition_chances = list(
-		WEATHER_BLOODMOON = 100
+		WEATHER_BLOOD_MOON = 100
 		)
 	observed_message = "Everything is red. Something really ominous is going on."
 	transition_messages = list(
@@ -479,6 +482,27 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 
 			L.inflict_heat_damage(rand(1, 3))
 
+/datum/weather/virgo3b/ash_storm_safe
+	name = "light ash storm"
+	icon_state = "ashfall_moderate"
+	light_modifier = 0.1
+	light_color = "#FF0000"
+	temp_high = 323.15	// 50c
+	temp_low = 313.15	// 40c
+	wind_high = 6
+	wind_low = 3
+	flight_failure_modifier = 50
+	transition_chances = list(
+		WEATHER_ASH_STORM_SAFE = 100
+		)
+	observed_message = "All that can be seen is black smoldering ash."
+	transition_messages = list(
+		"Smoldering clouds of scorching ash billow down around you!"
+	)
+	// Lets recycle.
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
+	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+
 
 // Totally radical.
 /datum/weather/virgo3b/fallout
@@ -527,4 +551,28 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		return
 	if(T.is_outdoors())
 		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+
+/datum/weather/virgo3b/fallout/temp
+	name = "short-term fallout"
+	transition_chances = list(
+		WEATHER_FALLOUT = 10,
+		WEATHER_RAIN = 50,
+		WEATHER_STORM = 20,
+		WEATHER_OVERCAST = 5
+		)
+
+/datum/weather/virgo3b/confetti
+	name = "confetti"
+	icon = 'icons/effects/weather_vr.dmi'
+	icon_state = "confetti"
+
+	transition_chances = list(
+		WEATHER_CLEAR = 50,
+		WEATHER_OVERCAST = 20,
+		WEATHER_CONFETTI = 5
+		)
+	observed_message = "Confetti is raining from the sky."
+	transition_messages = list(
+		"Suddenly, colorful confetti starts raining from the sky."
+	)
 

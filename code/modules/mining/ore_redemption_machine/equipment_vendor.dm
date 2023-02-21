@@ -53,8 +53,8 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),
-		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMP Add //CHOMPstation addition
 		EQUIPMENT("Mining Satchel of Holding",					/obj/item/weapon/storage/bag/ore/holding,							1500),
+		EQUIPMENT("Advanced Ore Scanner",						/obj/item/weapon/mining_scanner/advanced,							500),
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -93,9 +93,6 @@
 		EQUIPMENT("Resonator",			/obj/item/resonator,							900),
 		EQUIPMENT("Silver Pickaxe",		/obj/item/weapon/pickaxe/silver,				1200),
 		EQUIPMENT("Super Resonator",	/obj/item/resonator/upgraded,					2500),
-		EQUIPMENT("Fine Excavation Kit - Chisels",			/obj/item/weapon/storage/excavation,			500),
-		EQUIPMENT("Fine Excavation Kit - Measuring Tape",	/obj/item/device/measuring_tape,				125),
-		EQUIPMENT("Fine Excavation Kit - Hand Pick",		/obj/item/weapon/pickaxe/hand,					375),
 		EQUIPMENT("Explosive Excavation Kit - Plastic Charge",/obj/item/weapon/plastique/seismic/locked,	1500),
 		EQUIPMENT("Industrial Equipment - Phoron Bore",		/obj/item/weapon/gun/magnetic/matfed/phoronbore/loaded,			3000),
 		EQUIPMENT("Industrial Equipment - Inducer",			/obj/item/weapon/inducer,						3500),
@@ -126,6 +123,7 @@
 		EQUIPMENT("Thalers - 1000",				/obj/item/weapon/spacecash/c1000,									10000),
 		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								200),
 		EQUIPMENT("Whiskey",					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,		125),
+		EQUIPMENT("Mining PSG Upgrade Disk",	/obj/item/borg/upgrade/shield_upgrade,								2500),
 	)
 	prize_list["Extra"] = list() // Used in child vendors
 	//VOREStation Edit End
