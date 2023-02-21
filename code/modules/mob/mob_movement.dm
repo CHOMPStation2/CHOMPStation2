@@ -355,6 +355,10 @@
 			if(mob.check_holy(T))
 				to_chat(mob, "<span class='warning'>You cannot get past holy grounds while you are in this plane of existence!</span>")
 				return
+			//CHOMPEdit start - add ability to block incorporeal movement for nonghosts
+			else if(!istype(mob, /mob/observer/dead) && T.blocks_nonghost_incorporeal)
+				return
+			//CHOMPEdit end
 			else
 				mob.forceMove(get_step(mob, direct))
 				mob.dir = direct
