@@ -4,7 +4,7 @@
 /area/submap/cove)
 "b" = (
 /mob/living/simple_mob/humanoid/pirate/las/armored,
-/turf/simulated/floor/outdoors/ironsand,
+/turf/simulated/floor/outdoors/snow,
 /area/submap/cove)
 "c" = (
 /obj/structure/railing{
@@ -125,7 +125,7 @@
 /area/submap/cove)
 "y" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
-/turf/simulated/floor/outdoors/ironsand,
+/turf/simulated/floor/outdoors/snow,
 /area/submap/cove)
 "z" = (
 /turf/simulated/wall/gold{
@@ -149,7 +149,7 @@
 /area/template_noop)
 "D" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
-/turf/simulated/floor/outdoors/ironsand,
+/turf/simulated/floor/outdoors/snow,
 /area/submap/cove)
 "E" = (
 /obj/structure/prop/rock/watersharp,
@@ -166,7 +166,7 @@
 /area/submap/cove)
 "H" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/armored,
-/turf/simulated/floor/outdoors/ironsand,
+/turf/simulated/floor/outdoors/snow,
 /area/submap/cove)
 "I" = (
 /obj/structure/railing{
@@ -225,7 +225,7 @@
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "R" = (
-/turf/simulated/floor/outdoors/ironsand,
+/turf/simulated/floor/outdoors/snow,
 /area/submap/cove)
 "S" = (
 /obj/structure/table/sifwooden_reinforced,
