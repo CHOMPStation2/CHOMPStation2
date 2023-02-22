@@ -12,6 +12,13 @@
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/submap/spooderchurch)
+"eg" = (
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/webslinger{
+	faction = "cult"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/spooderchurch)
 "fs" = (
 /mob/living/simple_mob/humanoid/cultist/noodle{
 	faction = "syndicate"
@@ -64,7 +71,9 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "mY" = (
-/obj/effect/spider/eggcluster/small,
+/mob/living/simple_mob/animal/giant_spider/webslinger{
+	faction = "cult"
+	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/spooderchurch)
 "ox" = (
@@ -120,6 +129,12 @@
 "wl" = (
 /obj/structure/curtain,
 /turf/simulated/floor/wood/sif,
+/area/submap/spooderchurch)
+"xf" = (
+/mob/living/simple_mob/animal/giant_spider/electric{
+	faction = "cult"
+	},
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/spooderchurch)
 "xw" = (
 /obj/structure/cliff/automatic{
@@ -663,13 +678,13 @@ YO
 Bw
 tI
 yY
-ig
+eg
 ig
 ig
 yY
 yY
 yY
-ig
+eg
 ig
 JI
 Bw
@@ -743,7 +758,7 @@ ig
 ig
 ig
 yY
-mY
+yY
 ig
 ig
 ig
@@ -780,7 +795,7 @@ yY
 ig
 ig
 yY
-yY
+xf
 yY
 ig
 aZ
@@ -1007,7 +1022,7 @@ tI
 yY
 pV
 ig
-yY
+xf
 yY
 yY
 yY
@@ -1049,7 +1064,7 @@ ig
 PR
 yY
 yY
-yY
+mY
 ig
 JI
 Bw
@@ -1084,8 +1099,8 @@ yY
 ig
 ig
 ig
-mY
 yY
+mY
 yY
 ig
 ig

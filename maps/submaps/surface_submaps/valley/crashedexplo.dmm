@@ -377,6 +377,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "wU" = (
@@ -464,6 +465,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "AE" = (
@@ -490,6 +492,7 @@
 	layer = 2.5;
 	name = "window blast shield"
 	},
+/obj/machinery/door/blast/regular,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "AK" = (
