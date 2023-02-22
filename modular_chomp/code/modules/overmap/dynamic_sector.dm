@@ -1,5 +1,6 @@
 // This is an attempt to make space POI's which load/unload on demand, so we can have 50 overmap POI's without
 // 50 z-levels (which may lead to OOM). No idea what forces I'm working with, so let's see how poorly this goes.
+// Map templates for this system are stored in space_pois.dm.
 
 GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // Also adjust find_z_levels() if you adjust increase dynamic levels, that part is hard-coded so you don't gloss over world.increment_max_z().
