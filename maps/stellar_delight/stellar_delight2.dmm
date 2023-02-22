@@ -558,8 +558,8 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/directions{
-	desc = "A direction sign, pointing out the way to Exploration.";
-	name = "\improper Exploration Department";
+	desc = "A direction sign, pointing out the way to the shuttle bay.";
+	name = "\improper Shuttle Bay";
 	pixel_x = 32;
 	pixel_y = -6
 	},
@@ -627,8 +627,8 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/directions{
-	desc = "A direction sign, pointing out the way to Exploration.";
-	name = "\improper Exploration Department";
+	desc = "A direction sign, pointing out the way to the shuttle bay.";
+	name = "\improper Shuttle Bay";
 	pixel_x = -32;
 	pixel_y = -6
 	},
@@ -3973,6 +3973,9 @@
 /obj/item/weapon/reagent_containers/glass/beaker/large,
 /obj/item/weapon/reagent_containers/dropper,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/injector_maker{
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/chemistry)
 "jg" = (
@@ -4232,9 +4235,6 @@
 /area/stellardelight/deck2/fore)
 "jK" = (
 /obj/structure/table/glass,
-/obj/machinery/camera/network/medbay{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
 "jL" = (
@@ -5312,9 +5312,9 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/directions{
-	desc = "A direction sign, pointing out the way to Exploration.";
+	desc = "A direction sign, pointing out the way to the shuttle bay.";
 	dir = 1;
-	name = "\improper Exploration Department";
+	name = "\improper Shuttle Bay";
 	pixel_x = 32;
 	pixel_y = -12
 	},
@@ -21931,6 +21931,9 @@
 	},
 /obj/machinery/camera/network/medbay{
 	dir = 8
+	},
+/obj/machinery/injector_maker{
+	pixel_x = 29
 	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)

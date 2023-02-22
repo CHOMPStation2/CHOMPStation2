@@ -237,7 +237,14 @@
 
 /obj/item/weapon/storage/proc/open(mob/user as mob)
 	if (use_sound)
-		playsound(src, src.use_sound, 50, 0, -5)
+	// Chomp edit
+		if(isbelly(user.loc))
+			var/obj/belly/B = user.loc
+			if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
+				// Do nothing
+			else
+				playsound(src, src.use_sound, 50, 0, -5)
+	// Chomp edit end
 
 	orient2hud(user)
 	if(user.s_active)

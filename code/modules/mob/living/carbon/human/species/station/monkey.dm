@@ -70,6 +70,12 @@
 /datum/species/monkey/get_random_name()
 	return "[lowertext(name)] ([rand(100,999)])"
 
+/datum/species/monkey/handle_post_spawn(var/mob/living/carbon/human/H)//CHOMPadd begin
+	if(!H.ckey)
+		H.can_be_drop_prey = TRUE
+		H.digest_leave_remains = 1
+	return ..()//CHOMPadd end
+
 /datum/species/monkey/tajaran
 	name = SPECIES_MONKEY_TAJ
 	name_plural = "Farwa"

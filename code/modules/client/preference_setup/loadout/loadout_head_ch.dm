@@ -25,3 +25,7 @@
 /datum/gear/head/tigerpeltpink
 	display_name = "pink tiger pelt"
 	path = /obj/item/clothing/head/pelt/tigerpeltpink
+
+/datum/gear/head/marisa
+	display_name = "Witch hat"
+	path = /obj/item/clothing/head/wizard/marisa

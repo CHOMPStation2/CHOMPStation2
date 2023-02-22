@@ -38,8 +38,23 @@
 	path = /obj/item/ammo_magazine/a57/rubber
 
 /datum/category_item/autolathe/arms/smg_p90
-	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"
+	name = "large capacity top mounted magazine (5.7x28mm standard)"
 	path = /obj/item/ammo_magazine/m9mmp90
+	hidden = 1
+
+/datum/category_item/autolathe/arms/smg_p90/ap
+	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"
+	path = /obj/item/ammo_magazine/m9mmp90/ap
+	hidden = 1
+
+/datum/category_item/autolathe/arms/smg_p90/rubber
+	name = "large capacity top mounted magazine (5.7x28mm rubber)"
+	path = /obj/item/ammo_magazine/m9mmp90/rubber
+	hidden = 1
+
+/datum/category_item/autolathe/arms/smg_p90/hp
+	name = "large capacity top mounted magazine (5.7x28mm hollow-point)"
+	path = /obj/item/ammo_magazine/m9mmp90/hp
 	hidden = 1
 
 /datum/category_item/autolathe/arms/svd_762
@@ -325,12 +340,12 @@
 	name = "RPK Drum magazine(7.62x39mm standard)"
 	path = /obj/item/ammo_magazine/akm/drum
 	hidden = 1
-	
+
 /datum/category_item/autolathe/arms/s45lc
 	name = "speedloader(.45 LC)"
 	path = /obj/item/ammo_magazine/s45lc
 	hidden = 1
-	
+
 /datum/category_item/autolathe/arms/s45lc/rubber
 	name = "speedloader(.45 LC Rubber)"
 	path = /obj/item/ammo_magazine/s45lc/rubber
@@ -345,4 +360,4 @@
 	name = ".45 LC"
 	path = /obj/item/ammo_casing/a45lc
 	hidden = 1
-	
+

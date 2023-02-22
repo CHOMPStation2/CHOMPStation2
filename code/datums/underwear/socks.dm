@@ -185,3 +185,27 @@
 /datum/category_item/underwear/socks/trans_thigh
 	name = "Trans Pride Thigh Socks"
 	icon_state = "trans_thigh"
+
+/datum/category_item/underwear/socks/rippedpantyhose
+	name = "Pantyhose, Ripped"
+	icon_state = "rippedpantyhose"
+
+/datum/category_item/underwear/socks/stirrup
+	name = "Normal, stirrup"
+	icon_state = "socks_norm-stir"
+	has_color = TRUE
+
+/datum/category_item/underwear/socks/stirrup_knee
+	name = "Knee, stirrup"
+	icon_state = "socks_knee-stir"
+	has_color = TRUE
+
+/datum/category_item/underwear/socks/stirrup_thigh
+	name = "Thigh, stirrup"
+	icon_state = "socks_thigh-stir"
+	has_color = TRUE
+
+/datum/category_item/underwear/socks/stirrup_thigh_black
+	name = "Black Stirrup Stockings"
+	icon_state = "leggings-stir-black"
+	has_color = TRUE

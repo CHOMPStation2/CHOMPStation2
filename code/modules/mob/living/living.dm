@@ -384,7 +384,17 @@
 	return result
 
 /mob/living/proc/setMaxHealth(var/newMaxHealth)
-	health = (health/maxHealth) * (newMaxHealth) //VOREStation Add - Adjust existing health
+	var/h_mult = maxHealth / newMaxHealth	//VOREStation Add Start - Calculate change multiplier
+	if(bruteloss)							//In case a damage value is 0, divide by 0 bad
+		bruteloss = round(bruteloss / h_mult)		//Health is calculated on life based on damage types, so we update the damage and let life handle health
+	if(fireloss)
+		fireloss = round(fireloss / h_mult)
+	if(toxloss)
+		toxloss = round(toxloss / h_mult)
+	if(oxyloss)
+		oxyloss = round(oxyloss / h_mult)
+	if(cloneloss)
+		cloneloss = round(cloneloss / h_mult)	//VOREStation Add End
 	maxHealth = newMaxHealth
 
 /mob/living/Stun(amount)
@@ -797,10 +807,8 @@
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
 
-/mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/Target = null)
-	if(W in internal_organs)
-		return 0
-	return ..()
+/mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
+	return !(W in internal_organs) && ..()
 
 /mob/living/touch_map_edge()
 

@@ -10,7 +10,6 @@
 	health = 250
 	maxhealth = 250
 	deflect_chance = 10
-	damage_absorption = list("brute"=0.8,"fire"=1,"bullet"=0.8,"laser"=0.8,"energy"=1,"bomb"=1)
 	max_temperature = 20000
 	infra_luminosity = 6
 

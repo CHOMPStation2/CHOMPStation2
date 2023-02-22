@@ -25,35 +25,78 @@ const getTagColor = (tag) => {
 export const CharacterDirectory = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { personalVisibility, personalTag, personalErpTag, personalEventTag } = data;
+  const { personalVisibility, personalTag, personalGenderTag, personalSexualityTag, personalErpTag, personalEventTag } =
+    data;
 
   const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
+  const [overwritePrefs, setOverwritePrefs] = useLocalState(context, 'overwritePrefs', false);
+
   return (
-    <Window width={640} height={480} resizeable>
+    <Window width={816} height={722} resizeable>
       <Window.Content scrollable>
         {(overlay && <ViewCharacter />) || (
           <Fragment>
-            <Section title="Controls">
+            <Section
+              title="Settings and Preferences"
+              buttons={
+                <Fragment>
+                  <Box color="label" inline>
+                    Save to current preferences slot:&nbsp;
+                  </Box>
+                  <Button
+                    icon={overwritePrefs ? 'toggle-on' : 'toggle-off'}
+                    selected={overwritePrefs}
+                    content={overwritePrefs ? 'On' : 'Off'}
+                    onClick={() => setOverwritePrefs(!overwritePrefs)}
+                  />
+                </Fragment>
+              }>
               <LabeledList>
                 <LabeledList.Item label="Visibility">
                   <Button
                     fluid
                     content={personalVisibility ? 'Shown' : 'Not Shown'}
-                    onClick={() => act('setVisible')}
+                    onClick={() => act('setVisible', { overwrite_prefs: overwritePrefs })}
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Vore Tag">
-                  <Button fluid content={personalTag} onClick={() => act('setTag')} />
+                  <Button
+                    fluid
+                    content={personalTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Gender">
+                  <Button
+                    fluid
+                    content={personalGenderTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
+                </LabeledList.Item>
+                <LabeledList.Item label="Sexuality">
+                  <Button
+                    fluid
+                    content={personalSexualityTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
-                  <Button fluid content={personalErpTag} onClick={() => act('setErpTag')} />
+                  <Button
+                    fluid
+                    content={personalErpTag}
+                    onClick={() => act('setErpTag', { overwrite_prefs: overwritePrefs })}
+                  />
                 </LabeledList.Item>
                 <LabeledList.Item label="Event Pref">
-                  <Button fluid content={personalEventTag} onClick={() => act('setEventTag')} />
+                  <Button
+                    fluid
+                    content={personalEventTag}
+                    onClick={() => act('setTag', { overwrite_prefs: overwritePrefs })}
+                  />
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">
-                  <Button fluid content="Edit Ad" onClick={() => act('editAd')} />
+                  <Button fluid content="Edit Ad" onClick={() => act('editAd', { overwrite_prefs: overwritePrefs })} />
                 </LabeledList.Item>
               </LabeledList>
             </Section>
@@ -79,6 +122,12 @@ const ViewCharacter = (props, context) => {
         <Box p={1} backgroundColor={getTagColor(overlay.tag)}>
           {overlay.tag}
         </Box>
+      </Section>
+      <Section level={2} title="Gender">
+        <Box>{overlay.gendertag}</Box>
+      </Section>
+      <Section level={2} title="Sexuality">
+        <Box>{overlay.sexualitytag}</Box>
       </Section>
       <Section level={2} title="ERP Tag">
         <Box>{overlay.erptag}</Box>
@@ -121,6 +170,8 @@ const CharacterDirectoryList = (props, context) => {
           <SortButton id="name">Name</SortButton>
           <SortButton id="species">Species</SortButton>
           <SortButton id="tag">Vore Tag</SortButton>
+          <SortButton id="gendertag">Gender</SortButton>
+          <SortButton id="sexualitytag">Sexuality</SortButton>
           <SortButton id="erptag">ERP Tag</SortButton>
           <SortButton id="eventtag">Event Pref</SortButton>
           <Table.Cell collapsing textAlign="right">
@@ -137,6 +188,8 @@ const CharacterDirectoryList = (props, context) => {
               <Table.Cell p={1}>{character.name}</Table.Cell>
               <Table.Cell>{character.species}</Table.Cell>
               <Table.Cell>{character.tag}</Table.Cell>
+              <Table.Cell>{character.gendertag}</Table.Cell>
+              <Table.Cell>{character.sexualitytag}</Table.Cell>
               <Table.Cell>{character.erptag}</Table.Cell>
               <Table.Cell>{character.eventtag}</Table.Cell>
               <Table.Cell collapsing textAlign="right">

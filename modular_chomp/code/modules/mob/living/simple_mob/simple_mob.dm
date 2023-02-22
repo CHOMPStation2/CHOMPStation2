@@ -104,3 +104,6 @@
 		var/vs_fullness = vore_fullness_ex[belly_class]
 		if(vs_fullness > 0)
 			add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
+
+/mob/living/simple_mob/proc/character_directory_species()
+	return "simplemob"

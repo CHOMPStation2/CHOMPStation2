@@ -101,7 +101,7 @@
 	required_type = list(/obj/mecha/combat)
 
 	damage_minimum = 15
-	minimum_penetration = 25
+	minimum_penetration = 20 //chompedit making this less OP, was 25, is now 20
 
 	damage_absorption = list(
 		"brute"=0.5,
@@ -216,9 +216,9 @@
 /obj/item/mecha_parts/component/armor/alien
 	name = "strange mecha plating"
 	step_delay = 2
-	//Chompedit start  This armour is dogshit and needs this to improve it.
+	//Chompedit start  Trying to make this armor decent, without making it OP.
 	damage_minimum = 12
-	minimum_penetration = 15
+	minimum_penetration = 10
 	//Chompedit end
 	
 	damage_absorption = list(

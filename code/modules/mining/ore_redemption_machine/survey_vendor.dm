@@ -54,9 +54,10 @@
 		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/weapon/material/knife/machete,							50),
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/manhacks/station/locked,	100),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/ward,						150),
-		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				400), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,						150), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Holdout Phaser", 		/obj/item/weapon/gun/energy/locked/frontier/holdout,				100), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/rifle,				1500), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				1500), //CHOMPEDIT
+		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,					1200), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/holdout,				700), //CHOMPADD
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/weapon/kinetic_crusher/machete/dagger,					75),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/weapon/kinetic_crusher/machete,							250),
 		EQUIPMENT("Fishing Net",								/obj/item/weapon/material/fishing_net,								50),

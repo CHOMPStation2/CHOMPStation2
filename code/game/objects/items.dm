@@ -360,13 +360,16 @@
 	user.position_hud_item(src,slot)
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
+	// Chomp edit starts
 	if((slot_flags & slot))
-		if(equip_sound)
+		if(equip_sound && !muffled_by_belly(user))
 			playsound(src, equip_sound, 20)
-		else
+		else if(!muffled_by_belly(user))
 			playsound(src, drop_sound, 20)
 	else if(slot == slot_l_hand || slot == slot_r_hand)
-		playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
+		if(!muffled_by_belly(user))
+			playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
+	// Chomp edit stops
 	return
 
 // As above but for items being equipped to an active module on a robot.
@@ -506,17 +509,22 @@ var/list/global/slot_flags_enumeration = list(
 		return
 	if(!usr.canmove || usr.stat || usr.restrained() || !Adjacent(usr))
 		return
-	if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
+	if(isanimal(usr))	//VOREStation Edit Start - Allows simple mobs with hands to use the pickup verb
+		var/mob/living/simple_mob/s = usr
+		if(!s.has_hands)
+			to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+			return
+	else if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
 		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
 		return
-	var/mob/living/carbon/C = usr
+	var/mob/living/L = usr
 	if( usr.stat || usr.restrained() )//Is not asleep/dead and is not restrained
 		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
 		return
 	if(src.anchored) //Object isn't anchored
 		to_chat(usr, "<span class='warning'>You can't pick that up!</span>")
 		return
-	if(C.get_active_hand()) //Hand is not full
+	if(L.get_active_hand()) //Hand is not full	//VOREStation Edit End
 		to_chat(usr, "<span class='warning'>Your hand is full.</span>")
 		return
 	if(!istype(src.loc, /turf)) //Object is on a turf

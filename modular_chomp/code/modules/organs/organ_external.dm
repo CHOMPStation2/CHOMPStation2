@@ -1,3 +1,6 @@
+/obj/item/organ/external
+	var/prosthetic_digi = FALSE //CHOMPStation edit - when it's prosthetic, can it be a digitigrade
+
 //new function to check for markings
 /obj/item/organ/external/proc/is_hidden_by_markings()
 	//code that checked all limbs.

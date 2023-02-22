@@ -354,8 +354,8 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
 /obj/item/weapon/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2

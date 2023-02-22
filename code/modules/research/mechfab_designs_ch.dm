@@ -110,3 +110,12 @@
 	build_path = /obj/item/mecha_parts/part/phazon_right_leg
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 15000, MAT_PHORON = 2000, MAT_GOLD = 2000, MAT_VERDANTIUM = 500)
+
+/datum/design/item/mechfab/rigsuit/precursor
+	name = "Xenotech Rig"
+	desc = "A rig made of alien tech and materials."
+	id = "rigmodule_precursor"
+	time = 30
+	req_tech = list(TECH_MATERIAL = 9, TECH_ENGINEERING = 6, TECH_PHORON = 5, TECH_MAGNET = 6, TECH_POWER = 6, TECH_ILLEGAL = 8, TECH_PRECURSOR = 3)
+	materials = list(MAT_PLASTEEL = 12000, MAT_GOLD = 5000, MAT_GRAPHITE = 8000, MAT_OSMIUM = 3000, MAT_PLASTIC = 6000, MAT_VERDANTIUM = 7500, MAT_MORPHIUM = 20000)
+	build_path = /obj/item/weapon/rig/ch/precursor
