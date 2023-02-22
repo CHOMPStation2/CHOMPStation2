@@ -261,9 +261,9 @@ d
 d
 c
 c
-a
-a
-r
+c
+c
+c
 c
 a
 a
@@ -304,7 +304,7 @@ c
 a
 a
 a
-a
+r
 c
 c
 r
@@ -341,7 +341,7 @@ d
 d
 c
 c
-r
+P
 a
 z
 z
@@ -381,8 +381,8 @@ d
 d
 c
 c
-a
-a
+c
+r
 a
 z
 z
@@ -421,9 +421,9 @@ d
 d
 c
 c
-a
-z
-a
+c
+c
+c
 a
 a
 a
@@ -461,10 +461,10 @@ d
 d
 c
 c
-r
-a
-a
 P
+r
+c
+c
 c
 q
 c
@@ -506,7 +506,7 @@ a
 a
 a
 c
-c
+r
 a
 a
 i
@@ -541,7 +541,7 @@ d
 (10,1,1) = {"
 d
 c
-a
+c
 a
 z
 z
@@ -582,7 +582,7 @@ d
 (11,1,1) = {"
 d
 c
-a
+c
 a
 z
 z
@@ -590,7 +590,7 @@ a
 c
 a
 a
-P
+a
 c
 c
 a
@@ -623,8 +623,8 @@ d
 (12,1,1) = {"
 d
 c
+c
 r
-a
 a
 a
 a
