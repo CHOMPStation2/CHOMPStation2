@@ -134,3 +134,53 @@
 	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
 	face_atom(target)
 	return TRUE
+
+
+//CHOMPEdit Begin - Add dark portal creation
+/mob/living/simple_mob/shadekin/proc/dark_tunneling()
+	var/template_id = "dark_portal"
+	var/datum/map_template/shelter/template
+
+	if(!template)
+		template = SSmapping.shelter_templates[template_id]
+		if(!template)
+			throw EXCEPTION("Shelter template ([template_id]) not found!")
+			return FALSE
+
+	var/turf/deploy_location = get_turf(src)
+	var/status = template.check_deploy(deploy_location)
+
+	switch(status)
+		//Not allowed due to /area technical reasons
+		if(SHELTER_DEPLOY_BAD_AREA)
+			to_chat(src, "<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
+
+		//Anchored objects or no space
+		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
+			var/width = template.width
+			var/height = template.height
+			to_chat(src, "<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
+
+	if(status != SHELTER_DEPLOY_ALLOWED)
+		return FALSE
+
+	var/turf/T = deploy_location
+	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
+	smoke.attach(T)
+	smoke.set_up(10, 0, T)
+	smoke.start()
+
+	src.visible_message("<span class='notice'>[src] begins pulling dark energies around themselves.</span>")
+	if(do_after(src, 600)) //60 seconds
+		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
+		src.visible_message("<span class='notice'>[src] finishes pulling dark energies around themselves, creating a portal.</span>")
+
+		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")
+		template.annihilate_plants(deploy_location)
+		template.load(deploy_location, centered = TRUE)
+		template.update_lighting(deploy_location)
+		ability_flags &= AB_DARK_TUNNEL
+		return TRUE
+	else
+		return FALSE
+//CHOMPEdit End

@@ -62,6 +62,9 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+	else if(ability_flags & AB_DARK_RESPITE)
+		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		return FALSE
 	//CHOMPEdit Start - Prevent bugs when spamming phase button
 	else if(SK.doing_phase)
 		to_chat(src, "<span class='warning'>You are already trying to phase!</span>")
@@ -228,6 +231,9 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+	else if(ability_flags & AB_DARK_RESPITE)
+		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		return FALSE
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
@@ -297,6 +303,9 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+	else if(ability_flags & AB_DARK_RESPITE)
+		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		return FALSE
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
@@ -341,13 +350,12 @@
 	my_kin = null
 
 
-
-//CHOMPEdit Begin - New ability!
+//CHOMPEdit Begin - Add dark portal creation
 /datum/power/shadekin/dark_tunneling
 	name = "Dark Tunneling (100) (Once)"
 	desc = "Make a passage to the dark."
 	verbpath = /mob/living/carbon/human/proc/dark_tunneling
-	ability_icon_state = "tech_dispelold"
+	ability_icon_state = "minion0"
 
 /mob/living/carbon/human/proc/dark_tunneling()
 	set name = "Dark Tunneling (100) (Once)"
@@ -369,6 +377,9 @@
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
+	else if(ability_flags & AB_DARK_RESPITE)
+		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		return FALSE
 	else if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
 		return FALSE
@@ -381,42 +392,52 @@
 		if(!template)
 			throw EXCEPTION("Shelter template ([template_id]) not found!")
 			return FALSE
-	
+
 	var/turf/deploy_location = get_turf(src)
 	var/status = template.check_deploy(deploy_location)
 
 	switch(status)
 		//Not allowed due to /area technical reasons
 		if(SHELTER_DEPLOY_BAD_AREA)
-			src.loc.visible_message("<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
+			to_chat(src, "<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
 
 		//Anchored objects or no space
 		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
 			var/width = template.width
 			var/height = template.height
-			src.loc.visible_message("<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
-
-		if(SHELTER_DEPLOY_SHIP_SPACE)
-			src.loc.visible_message("<span class='warning'>\The [src] can only be deployed in space.</span>")
+			to_chat(src, "<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
 
 	if(status != SHELTER_DEPLOY_ALLOWED)
 		return FALSE
-	
+
 	var/turf/T = deploy_location
 	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
 	smoke.attach(T)
 	smoke.set_up(10, 0, T)
 	smoke.start()
-	
+
+	src.visible_message("<span class='notice'>[src] begins pulling dark energies around themselves.</span>")
 	if(do_after(src, 600)) //60 seconds
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
+		src.visible_message("<span class='notice'>[src] finishes pulling dark energies around themselves, creating a portal.</span>")
 
 		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")
 		template.annihilate_plants(deploy_location)
 		template.load(deploy_location, centered = TRUE)
 		template.update_lighting(deploy_location)
 		ability_flags &= AB_DARK_TUNNEL
-		shadekin_adjust_energy(-ability_cost)
+		shadekin_adjust_energy(-(ability_cost - 10)) //Leaving enough energy to actually activate the portal
 		return TRUE
 	else
 		return FALSE
+
+/datum/map_template/shelter/dark_portal
+	name = "Dark Portal"
+	shelter_id = "dark_portal"
+	description = "A portal to a section of the Dark"
+	mappath = "modular_chomp/maps/submaps/shelters/dark_portal.dmm"
+
+/datum/map_template/shelter/dark_portal/New()
+	. = ..()
+	blacklisted_turfs = typecacheof(list(/turf/unsimulated))
+	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin))

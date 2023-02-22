@@ -2041,6 +2041,13 @@ End Chompstation Edit*/
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
 
+/area/shadekin
+	name = "\improper Shadekin Retreat"
+	icon_state = "blue"
+	requires_power = 0
+	ambience = AMBIENCE_OTHERWORLDLY
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED
+
 //Temp Removal TFF 15/2/20
 /*
 // CHOMP-Edit: This is the Belt Mining addition
