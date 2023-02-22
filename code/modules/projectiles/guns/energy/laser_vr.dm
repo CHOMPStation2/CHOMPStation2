@@ -290,8 +290,8 @@
 	modifystate = "riflekill"
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
-		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/phaser/heavy, modifystate="riflekill", charge_cost = 600),
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="riflestun", charge_cost = 200),
+		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/phaser/heavy, modifystate="riflekill", charge_cost = 600),
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/rifle/ui_action_click()
