@@ -34,6 +34,11 @@
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/water,
 /area/submap/solarmoff)
+"C" = (
+/obj/effect/decal/cleanable/ash,
+/obj/item/rig_module/atmos_shield,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/solarmoff)
 "E" = (
 /mob/living/simple_mob/animal/space/carp/large,
 /turf/simulated/floor/water,
@@ -62,8 +67,14 @@
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water,
 /area/submap/solarmoff)
+"T" = (
+/obj/effect/decal/cleanable/ash,
+/obj/item/rig_module/rescue_pharm,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/solarmoff)
 "U" = (
 /mob/living/simple_mob/vore/solarmoth,
+/obj/item/rig_module/device/stamp,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
 "V" = (
@@ -267,7 +278,7 @@ n
 E
 M
 G
-I
+T
 V
 U
 I
@@ -311,7 +322,7 @@ n
 n
 G
 G
-I
+C
 G
 G
 N
