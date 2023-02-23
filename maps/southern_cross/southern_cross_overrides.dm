@@ -12,3 +12,7 @@
 /obj/structure/dark_portal/hub
 	destination_station_areas = list(/area/crew_quarters/bar)
 	destination_wilderness_areas = list(/area/surface/outside/path/plains)
+
+/datum/map_template/shelter/dark_portal/New()
+	. = ..()
+	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin, /area/vr))
