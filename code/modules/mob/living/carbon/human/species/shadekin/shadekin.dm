@@ -112,7 +112,7 @@
 	var/list/shadekin_abilities = list(/datum/power/shadekin/phase_shift,
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade,
-									   /datum/power/shadekin/dark_tunneling)
+									   /datum/power/shadekin/dark_tunneling) //CHOMPEdit Add - Dark Tunneling
 	var/list/shadekin_ability_datums = list()
 	var/kin_type
 	var/energy_light = 0.25
@@ -234,6 +234,19 @@
 			H.adjustFireLoss((-0.25))
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
+			H.heal_organ_damage(3 * removed, 0)
+			for(var/obj/item/organ/external/O in H.bad_external_organs)
+				if(O.status & ORGAN_BROKEN)
+					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
+				for(var/datum/wound/W in O.wounds)
+					if(W.bleeding())
+						W.damage = max(W.damage - 3, 0)
+						if(W.damage <= 0)
+							O.wounds -= W
+					if(W.internal)
+						W.damage = max(W.damage - 3, 0)
+						if(W.damage <= 0)
+							O.wounds -= W
 		return
 	//CHOMPEdit End
 

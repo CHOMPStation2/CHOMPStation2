@@ -46,9 +46,11 @@
 	if(my_kin.stat)
 		to_chat(my_kin,"<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+	//CHOMPEdit Begin - Dark Respite
 	if(my_kin.ability_flags & AB_DARK_RESPITE)
 		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
 		return FALSE
+	//CHOMPEdit End
 	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.ability_flags & AB_PHASE_SHIFTED))
 		to_chat(my_kin,"<span class='warning'>Can't use that ability while phase shifted!</span>")
 		return FALSE
