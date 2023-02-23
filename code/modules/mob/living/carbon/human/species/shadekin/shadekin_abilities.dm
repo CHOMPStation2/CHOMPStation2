@@ -62,9 +62,11 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
-	else if(ability_flags & AB_DARK_RESPITE)
+	//CHOMPEdit Start - Dark Respite
+	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
 		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
 		return FALSE
+	//CHOMPEdit End
 	//CHOMPEdit Start - Prevent bugs when spamming phase button
 	else if(SK.doing_phase)
 		to_chat(src, "<span class='warning'>You are already trying to phase!</span>")
@@ -231,9 +233,11 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
-	else if(ability_flags & AB_DARK_RESPITE)
+	//CHOMPEdit Start - Dark Respite
+	else if(ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite))
 		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
 		return FALSE
+	//CHOMPEdit End
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
@@ -303,9 +307,11 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
-	else if(ability_flags & AB_DARK_RESPITE)
+	//CHOMPEdit Start - Dark Respite
+	else if(ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite))
 		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
 		return FALSE
+	//CHOMPEdit End
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
@@ -377,9 +383,11 @@
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
-	else if(ability_flags & AB_DARK_RESPITE)
+	//CHOMPEdit Begin - Dark Respite
+	else if(ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite))
 		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
 		return FALSE
+	//CHOMPEdit End
 	else if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
 		return FALSE

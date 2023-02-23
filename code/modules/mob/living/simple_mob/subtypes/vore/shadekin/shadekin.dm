@@ -79,6 +79,9 @@
 	var/check_for_observer = FALSE
 	var/check_timer = 0
 
+	var/respite_triggers = 0 //CHOMPEdit - Dark Respite
+	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
+
 /mob/living/simple_mob/shadekin/Initialize()
 	//You spawned the prototype, and want a totally random one.
 	if(type == /mob/living/simple_mob/shadekin)
@@ -201,7 +204,7 @@
 		density = FALSE
 
 	//Convert spare nutrition into energy at a certain ratio
-	if(. && nutrition > initial(nutrition) && energy < 100)
+	if(. && nutrition > initial(nutrition) && energy < 100 && !(ability_flags | AB_DARK_RESPITE)) //CHOMPEdit - Dark Respite
 		nutrition = max(0, nutrition-5)
 		energy = min(100,energy+1)
 	if(!client && check_for_observer && check_timer++ > 5)
@@ -237,13 +240,62 @@
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
+	//CHOMPEdit Begin - Dark Respite
+	if(respite_activating)
+		return
+	//CHOMPEdit End
 	cut_overlays()
-	icon_state = ""
 	flick("tp_out",src)
-	spawn(1 SECOND)
-		qdel(src) //Back from whence you came!
 
-	. = ..(FALSE, deathmessage)
+	//CHOMPEdit Begin - Actually phase to the dark on death
+	if((ability_flags & AB_DARK_RESPITE) || istype(get_area(src), /area/shadekin))
+		icon_state = ""
+		spawn(1 SECOND)
+			qdel(src) //Back from whence you came!
+
+		return ..(FALSE, deathmessage)
+
+
+	var/list/floors = list()
+	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
+		floors.Add(floor)
+	if(!LAZYLEN(floors))
+		log_and_message_admins("[src] died outside of the dark but there were no valid floors to warp to")
+		icon_state = ""
+		spawn(1 SECOND)
+			qdel(src) //Back from whence you came!
+
+		return ..(FALSE, deathmessage)
+
+	src.visible_message("<b>\The [src.name]</b> [deathmessage]")
+	respite_activating = TRUE
+
+	drop_l_hand()
+	drop_r_hand()
+
+	energy = 0
+	ability_flags |= AB_DARK_RESPITE
+	invisibility = INVISIBILITY_LEVEL_TWO
+
+	adjustFireLoss(-(getFireLoss() / 2))
+	adjustBruteLoss(-(getBruteLoss() / 2))
+	adjustToxLoss(-(getToxLoss() / 2))
+	Stun(10)
+	movement_cooldown = 5
+	nutrition = 0
+	respite_triggers += 1
+
+	spawn(1 SECOND)
+		forceMove(pick(floors))
+		update_icon()
+		flick("tp_in",src)
+		invisibility = initial(invisibility)
+		respite_activating = FALSE
+
+	spawn(25 MINUTES * respite_triggers)
+		ability_flags |= ~AB_DARK_RESPITE
+		movement_cooldown = initial(movement_cooldown)
+	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal
 //Blue-eyes want to nom people to heal them
@@ -321,6 +373,10 @@
 
 	if(energy_adminbuse)
 		energy = 100
+	//CHOMPEdit Begin - Dark Respite
+	if(ability_flags & AB_DARK_RESPITE)
+		energy = 0
+	//CHOMPEdit End
 
 	//Update turf darkness hud
 	if(darkhud)
