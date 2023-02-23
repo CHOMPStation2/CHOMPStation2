@@ -47,7 +47,9 @@
 /area/surface/outpost/unfinished)
 "cX" = (
 /obj/effect/zone_divider,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	outdoors = 1
+	},
 /area/surface/outside/valley/river)
 "dd" = (
 /obj/structure/railing{
@@ -106,6 +108,11 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
+"ie" = (
+/turf/simulated/floor/wood{
+	outdoors = 1
+	},
+/area/surface/outside/valley/river)
 "iQ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled,
@@ -155,6 +162,11 @@
 /obj/structure/door_assembly,
 /turf/simulated/floor/plating,
 /area/surface/outpost/unfinished)
+"lt" = (
+/turf/simulated/floor/wood{
+	outdoors = 1
+	},
+/area/surface/outside/valley/inner)
 "lw" = (
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled,
@@ -15979,8 +15991,8 @@ Rk
 Rk
 Rk
 WT
-Rk
-Rk
+lt
+lt
 WT
 Rk
 Rk
@@ -16011,8 +16023,8 @@ Rk
 Rk
 Rk
 WT
-Rk
-Rk
+lt
+lt
 WT
 Rk
 Rk
@@ -16237,8 +16249,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -16269,8 +16281,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -16495,8 +16507,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -16527,8 +16539,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -16753,8 +16765,8 @@ rU
 rU
 rU
 bH
-EA
-EA
+ie
+ie
 hx
 rU
 rU
@@ -16785,8 +16797,8 @@ rU
 rU
 rU
 bH
-EA
-EA
+ie
+ie
 hx
 rU
 rU
@@ -17269,8 +17281,8 @@ rU
 rU
 rU
 bH
-EA
-EA
+ie
+ie
 hx
 rU
 rU
@@ -17301,8 +17313,8 @@ rU
 rU
 rU
 bH
-EA
-EA
+ie
+ie
 hx
 rU
 rU
@@ -17527,8 +17539,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -17559,8 +17571,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -17785,8 +17797,8 @@ Rk
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -17817,8 +17829,8 @@ rK
 rK
 rK
 uF
-EA
-EA
+ie
+ie
 ph
 rK
 rK
@@ -18043,8 +18055,8 @@ Rk
 Rk
 Rk
 WT
-Rk
-Rk
+lt
+lt
 WT
 Rk
 Rk
@@ -18075,8 +18087,8 @@ Rk
 Rk
 Rk
 WT
-Rk
-Rk
+lt
+lt
 WT
 Rk
 Rk
