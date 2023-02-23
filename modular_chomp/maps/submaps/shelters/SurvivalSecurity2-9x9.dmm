@@ -1,0 +1,55 @@
+"a" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"b" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/obj/machinery/newscaster{pixel_x = -30},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"c" = (/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"d" = (/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"f" = (/obj/machinery/button/remote/blast_door{id = "SP-Cell"; name = "Cell Door"; pixel_x = 6; pixel_y = -33; req_one_access = list(2,4)},/obj/machinery/button/flasher{id = "SP-Cell flash"; name = "Cell Flash"; pixel_x = 7; pixel_y = -24; req_access = list(2,4)},/obj/effect/floor_decal/industrial/warning/corner{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"g" = (/obj/machinery/light{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"i" = (/obj/machinery/vending/emergencyfood/filled,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"j" = (/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"k" = (/obj/machinery/light{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalSecurityV2)
+"l" = (/obj/machinery/vending/security{pixel_x = 3; pixel_y = -1; req_access = null; dir = 1},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalSecurityV2)
+"m" = (/obj/machinery/light{layer = 3},/obj/structure/bed/padded,/obj/machinery/flasher{id = "SP-Cell flash"; pixel_y = -26},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"n" = (/obj/structure/fans,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalSecurityV2)
+"o" = (/obj/machinery/light{dir = 8},/obj/structure/bed/chair,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"p" = (/obj/structure/table/steel,/obj/item/device/starcaster_news{pixel_x = -6; pixel_y = 10},/obj/item/toy/eight_ball{pixel_x = 5; pixel_y = 4},/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"s" = (/obj/structure/closet/secure_closet/brig{id = "Cell"; name = "Cell Locker"},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"t" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/weapon/storage/box/survival/space,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/starcaster_news,/obj/item/device/starcaster_news,/obj/item/device/threadneedle,/obj/item/device/flashlight,/obj/item/device/flashlight,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/random/soap,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/storage/box/flare,/obj/machinery/light{layer = 3},/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalSecurityV2)
+"u" = (/obj/structure/sign/mining,/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalSecurityV2)
+"v" = (/obj/item/device/gps/computer,/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalSecurityV2)
+"w" = (/obj/machinery/door/window/survival_pod{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalSecurityV2)
+"y" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/flasher{id = "SP-Cell flash"; name = "Floor mounted flash"},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"z" = (/obj/structure/sign/mining/survival,/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalSecurityV2)
+"A" = (/obj/structure/closet/walllocker_double/survival/south,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"B" = (/obj/machinery/washing_machine{pixel_x = 8; pixel_y = 15},/obj/item/weapon/storage/laundry_basket{pixel_x = -1; pixel_y = -7},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"C" = (/obj/machinery/light{dir = 1},/obj/effect/floor_decal/industrial/warning/cee,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"D" = (/obj/structure/closet/crate/bin{pixel_x = 6; pixel_y = 13},/obj/structure/reagent_dispensers/water_cooler/full{pixel_x = -10; pixel_y = 12},/obj/machinery/newscaster{pixel_y = 30},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"F" = (/obj/machinery/button/remote/blast_door{dir = 8; id = "SP-Cell2"; name = "Cell Door"; pixel_x = -25; pixel_y = 8; req_one_access = list(2,4)},/obj/machinery/button/flasher{id = "SP-Cell flash"; name = "Cell Flash"; pixel_x = 7; pixel_y = 26; req_access = list(2,4)},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"G" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalSecurityV2)
+"H" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"I" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"J" = (/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"K" = (/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalSecurityV2)
+"L" = (/obj/item/weapon/newspaper,/obj/item/device/tape,/obj/item/device/taperecorder{pixel_x = -4; pixel_y = 2},/obj/structure/table/standard,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"N" = (/obj/machinery/door/blast/regular{dir = 2; id = "SP-Cell2"; name = "Cell Door"},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"O" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalSecurityV2)
+"P" = (/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"Q" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/green,/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"S" = (/obj/machinery/power/apc/alarms_hidden{dir = 1; pixel_y = 20},/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalSecurityV2)
+"T" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"U" = (/obj/machinery/door/blast/regular{dir = 4; id = "SP-Cell"; name = "Cell Door"},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"V" = (/obj/structure/grille,/obj/structure/window/reinforced/polarized{dir = 1; id = "SP-Sec"},/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Sec"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Sec"},/obj/structure/window/reinforced/polarized{id = "SP-Sec"},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalSecurityV2)
+"W" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/red,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalSecurityV2)
+"X" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalSecurityV2)
+"Z" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/vertical,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/SurvivalSecurityV2)
+
+(1,1,1) = {"
+KKOKKKuKK
+KiCQDWpBK
+XoyTjjygG
+KLjKKVVKK
+KKNKFJdSZ
+KaIKbPnvK
+XcjUHPwkG
+KsmKfAtlK
+KKuKKKzKK
+"}
