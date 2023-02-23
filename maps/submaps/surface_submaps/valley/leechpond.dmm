@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/template_noop)
 "d" = (
-/mob/living/simple_mob/animal/sif/leech,
+/mob/living/simple_mob/construct/wraith,
 /turf/simulated/floor/water,
 /area/submap/leechpond)
 "n" = (
@@ -20,6 +20,14 @@
 /area/submap/leechpond)
 "G" = (
 /turf/simulated/wall/log_sif,
+/area/submap/leechpond)
+"I" = (
+/mob/living/simple_mob/construct/artificer/caster,
+/turf/simulated/floor/water,
+/area/submap/leechpond)
+"T" = (
+/mob/living/simple_mob/faithless/strong,
+/turf/simulated/floor/water,
 /area/submap/leechpond)
 "U" = (
 /obj/effect/landmark/loot_spawn,
@@ -131,17 +139,17 @@ a
 a
 u
 C
-d
+T
 C
 C
 C
 C
-d
+T
 C
 C
 C
 C
-d
+I
 C
 C
 C
@@ -208,7 +216,7 @@ C
 C
 C
 C
-d
+I
 C
 C
 C
@@ -243,7 +251,7 @@ U
 G
 C
 C
-d
+T
 C
 C
 C
@@ -357,7 +365,7 @@ a
 u
 C
 C
-d
+T
 C
 C
 G
@@ -369,7 +377,7 @@ C
 C
 C
 C
-d
+I
 C
 C
 u
@@ -434,7 +442,7 @@ C
 C
 C
 C
-d
+I
 C
 C
 C
@@ -465,7 +473,7 @@ C
 C
 C
 C
-d
+T
 C
 C
 u
@@ -481,7 +489,7 @@ a
 u
 C
 C
-d
+T
 C
 C
 C
