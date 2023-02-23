@@ -5,6 +5,7 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/outdoors/dirt
 	limit_mob_size = FALSE
+	limit_dark_respite = TRUE
 
 
 /area/vr/outdoors

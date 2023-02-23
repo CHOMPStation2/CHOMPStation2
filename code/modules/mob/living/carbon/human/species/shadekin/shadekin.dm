@@ -131,7 +131,8 @@
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
 	if(respite_activating)
 		return TRUE
-	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || istype(get_area(H), /area/shadekin))
+	var/area/current_area = get_area(src)
+	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || current_area.limit_dark_respite)
 		return
 	var/list/floors = list()
 	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))

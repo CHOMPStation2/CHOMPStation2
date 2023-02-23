@@ -248,7 +248,8 @@
 	flick("tp_out",src)
 
 	//CHOMPEdit Begin - Actually phase to the dark on death
-	if((ability_flags & AB_DARK_RESPITE) || istype(get_area(src), /area/shadekin))
+	var/area/current_area = get_area(src)
+	if((ability_flags & AB_DARK_RESPITE) || current_area.limit_dark_respite)
 		icon_state = ""
 		spawn(1 SECOND)
 			qdel(src) //Back from whence you came!

@@ -1,6 +1,8 @@
 // Kind of like a combination of all the teleporter stuff all in one package.
 // And without the power requirements or accuracy loss,
 //   though it requires a shadekin to open the minion portals.
+
+// Also yes this needs to be outside of modular chomp because there are variables that have to be map overriden.
 /obj/structure/dark_portal
 	name = "Dark portal"
 	icon = 'modular_chomp/icons/obj/shadekin_portal.dmi'
@@ -72,8 +74,8 @@
 /obj/structure/dark_portal/hub
 	icon_state = "hub_portal"
 	desc = "A large portal. Touching it without going through may alter the destination."
-	var/list/destination_station_areas = list(/area/crew_quarters/cafeteria)
-	var/list/destination_sif_areas = list(/area/surface/outside/path/plains)
+	var/list/destination_station_areas // Override this in map files!
+	var/list/destination_wilderness_areas // Override this in map files!
 
 GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 
@@ -114,7 +116,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 		locked = L[desc]
 		locked_name = desc
 		return
-	else if(locked_name == "somewhere on the station" || locked_name == "somewhere on Sif")
+	else if(locked_name == "somewhere on the station" || locked_name == "somewhere in the wilderness")
 		to_chat(user, "<span class='warning'>The portal distorts for a moment, before returning to how it was, seemingly already determined where to send you.</span>")
 		return
 	else if(istype(user, /mob/living/carbon/human))
@@ -136,25 +138,25 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 			precision = 0
 			to_chat(user, "<span class='notice'>The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to the station now.</span>")
 			return
-	if(!LAZYLEN(destination_sif_areas))
+	if(!LAZYLEN(destination_wilderness_areas))
 		to_chat(user, "<span class='warning'>The portal distorts for a moment, seemingly unable to determine where to send you.</span>")
 		close_portal()
 		return
 	var/list/floors = list()
-	var/area/picked_area = pick(destination_sif_areas)
+	var/area/picked_area = pick(destination_wilderness_areas)
 	for(var/turf/simulated/floor/floor in get_area_turfs(picked_area))
 		floors.Add(floor)
 	if(!LAZYLEN(floors))
 		log_and_message_admins("[src]: There were no floors to teleport to in [picked_area]!")
 		to_chat(user, "<span class='warning'>The portal distorts for a moment, seemingly unable to determine where to send you.</span>")
 		close_portal()
-		destination_sif_areas.Remove(picked_area)
+		destination_wilderness_areas.Remove(picked_area)
 		return
 	locked = pick(floors)
-	locked_name = "somewhere on Sif"
+	locked_name = "somewhere in the wilderness"
 	one_time_use = TRUE
 	precision = 0
-	to_chat(user, "<span class='notice'>The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to somewhere on Sif now.</span>")
+	to_chat(user, "<span class='notice'>The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to somewhere in the wilderness now.</span>")
 	return
 
 /obj/structure/dark_portal/hub/Bumped(M as mob|obj)
