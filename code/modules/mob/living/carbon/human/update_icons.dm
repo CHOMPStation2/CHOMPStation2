@@ -432,7 +432,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//Bloody feet
 	if(feet_blood_DNA)
-		var/image/bloodsies = image(icon = species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER)
+		var/image/bloodsies = image(icon = digitigrade ? 'modular_chomp/icons/mob/human_races/masks/blood_digitigrade.dmi' : species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER) //CHOMPEdit: digitigrade feeties
 		bloodsies.color = feet_blood_color
 		both.add_overlay(bloodsies)
 

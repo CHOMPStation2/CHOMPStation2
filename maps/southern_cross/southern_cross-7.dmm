@@ -8437,6 +8437,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/baby_mammoth)
 "wJ" = (
@@ -8676,6 +8680,11 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/baby_mammoth)

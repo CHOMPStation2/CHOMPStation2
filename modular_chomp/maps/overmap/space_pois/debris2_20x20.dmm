@@ -1,0 +1,68 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"c" = (/obj/random/medical/pillbottle,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"d" = (/turf/simulated/wall/r_wall,/area/submap/debris2)
+"e" = (/obj/item/stack/cable_coil/cut,/turf/simulated/floor,/area/submap/debris2)
+"h" = (/obj/structure/girder,/turf/template_noop,/area/submap/debris2)
+"i" = (/obj/item/stack/rods,/mob/living/simple_mob/animal/space/carp/large,/turf/template_noop,/area/submap/debris2)
+"j" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"k" = (/mob/living/simple_mob/animal/space/carp/large/huge,/turf/template_noop,/area/submap/debris2)
+"l" = (/obj/structure/girder,/turf/simulated/floor/plating,/area/submap/debris2)
+"m" = (/obj/structure/grille/broken,/turf/template_noop,/area/submap/debris2)
+"n" = (/obj/item/stack/cable_coil/cut,/turf/template_noop,/area/submap/debris2)
+"o" = (/obj/machinery/door/airlock/command,/turf/simulated/floor/airless,/area/submap/debris2)
+"p" = (/mob/living/simple_mob/hostile/carp/pike,/turf/simulated/floor,/area/submap/debris2)
+"r" = (/obj/random/maintenance/medical,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"s" = (/obj/item/stack/rods,/turf/simulated/floor,/area/submap/debris2)
+"t" = (/obj/structure/door_assembly/door_assembly_com,/turf/template_noop,/area/submap/debris2)
+"u" = (/obj/item/clothing/head/bio_hood/virology,/turf/template_noop,/area/submap/debris2)
+"w" = (/obj/structure/lattice,/turf/template_noop,/area/submap/debris2)
+"x" = (/turf/template_noop,/area/submap/debris2)
+"y" = (/obj/structure/lattice,/obj/machinery/door/airlock/vault/bolted,/turf/simulated/floor/plating,/area/submap/debris2)
+"z" = (/obj/item/stack/rods,/turf/template_noop,/area/submap/debris2)
+"A" = (/obj/structure/closet/crate,/obj/item/weapon/reagent_containers/glass/beaker/bluespace,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"C" = (/obj/item/stack/material/steel,/mob/living/simple_mob/animal/space/carp,/turf/template_noop,/area/submap/debris2)
+"E" = (/obj/random/maintenance/medical,/turf/simulated/floor,/area/submap/debris2)
+"F" = (/obj/random/medical/lite,/turf/simulated/floor,/area/submap/debris2)
+"G" = (/obj/structure/safe,/obj/item/weapon/dnainjector/xraymut,/obj/item/weapon/dnainjector/runfast,/obj/item/weapon/dnainjector/antistutt,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"H" = (/obj/structure/table,/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"J" = (/obj/structure/loot_pile/surface,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"K" = (/mob/living/simple_mob/hostile/carp/pike,/turf/template_noop,/area/submap/debris2)
+"L" = (/obj/item/weapon/material/shard,/turf/template_noop,/area/submap/debris2)
+"M" = (/turf/simulated/floor,/area/submap/debris2)
+"N" = (/obj/item/clothing/suit/bio_suit/virology,/turf/template_noop,/area/submap/debris2)
+"O" = (/obj/item/weapon/material/shard{icon_state = "small"},/turf/template_noop,/area/submap/debris2)
+"P" = (/obj/item/stack/material/steel,/turf/simulated/floor,/area/submap/debris2)
+"Q" = (/mob/living/simple_mob/animal/space/carp/large,/turf/template_noop,/area/submap/debris2)
+"R" = (/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris2)
+"S" = (/obj/item/weapon/reagent_containers/spray/cleaner,/turf/template_noop,/area/submap/debris2)
+"T" = (/turf/simulated/wall,/area/submap/debris2)
+"U" = (/obj/item/clothing/accessory/stethoscope,/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+"V" = (/mob/living/simple_mob/animal/space/carp,/turf/template_noop,/area/submap/debris2)
+"W" = (/turf/simulated/floor/airless,/area/submap/debris2)
+"X" = (/mob/living/simple_mob/animal/space/carp,/turf/simulated/floor,/area/submap/debris2)
+"Y" = (/obj/structure/girder/reinforced,/turf/simulated/floor/airless,/area/submap/debris2)
+"Z" = (/obj/machinery/computer{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/debris2)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaa
+addYYdxxxzxRxxwxxxxa
+adGcMdxVzxxxxzxxxxxa
+adAUMypxTTTTlxxxCxxa
+adbjMdMxmEJxTxzxxxxa
+adFbwdMMwMMMTxwxnxxa
+aYdddYSxTTTNTxRwxxxa
+axzxixxkRxMsMMMxxhxa
+aSTwmwMPMXMxKxQOxxxa
+axTEMMTxOxrxuxzxMxxa
+axTbMnTwxxMLmxhwMRxa
+axTJExTxwxbwWrTMexxa
+axoMMwKbxQmwbHTMxxxa
+axTTTTTxxxbbrZTMwxxa
+axxwxxMxzxTTTTTxxxRa
+aRxxxxxxxxxxxxxxxxxa
+axOxMxwxzxxzxxxRxxxa
+axxxMRxxxxxxxxxxxxxa
+axxxxxxxxxtxxxxxxxxa
+aaaaaaaaaaaaaaaaaaaa
+"}
