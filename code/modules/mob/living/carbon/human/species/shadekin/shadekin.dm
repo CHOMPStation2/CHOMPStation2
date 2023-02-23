@@ -234,7 +234,7 @@
 			H.adjustFireLoss((-0.25))
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
-			H.heal_organ_damage(3 * removed, 0)
+			H.heal_organ_damage(3, 0)
 			for(var/obj/item/organ/external/O in H.bad_external_organs)
 				if(O.status & ORGAN_BROKEN)
 					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
