@@ -199,6 +199,7 @@
 /area/surface/outside/valley/walls
 	name = "Valley Walls"
 	icon_state = "yellow"
+	outdoors = OUTDOORS_NO
 
 /area/surface/outside/valley/edge
 	name = "Valley Edge"
