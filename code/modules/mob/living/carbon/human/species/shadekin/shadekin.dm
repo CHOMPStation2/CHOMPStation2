@@ -131,7 +131,7 @@
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
 	if(respite_activating)
 		return TRUE
-	var/area/current_area = get_area(src)
+	var/area/current_area = get_area(H)
 	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || current_area.limit_dark_respite)
 		return
 	var/list/floors = list()
