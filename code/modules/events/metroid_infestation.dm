@@ -9,6 +9,7 @@
 /datum/event/metroid_infestation/setup()
 	if(prob(50)) //50% chance of the event to even occur if procced
 		active_metroid_event = FALSE
+		log_debug("Metroid infestation failed successfully.")
 		kill()
 		return
 	active_metroid_event = TRUE
