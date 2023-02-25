@@ -383,11 +383,9 @@
 	else if(shadekin_get_energy() < ability_cost)
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
-	//CHOMPEdit Begin - Dark Respite
 	else if(ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite))
 		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
 		return FALSE
-	//CHOMPEdit End
 	else if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
 		return FALSE
@@ -438,6 +436,46 @@
 		return TRUE
 	else
 		return FALSE
+
+/datum/power/shadekin/dark_respite
+	name = "Dark Respite (Only in Dark)"
+	desc = "Focus yourself on healing any injuries sustained."
+	verbpath = /mob/living/carbon/human/proc/dark_respite
+	ability_icon_state = "ling_anatomic_panacea"
+
+/mob/living/carbon/human/proc/dark_respite()
+	set name = "Dark Respite (Only in Dark)"
+	set desc = "Focus yourself on healing any injuries sustained."
+	set category = "Shadekin"
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		return FALSE
+	else if(!istype(get_area(src), /area/shadekin))
+		to_chat(src, "<span class='warning'>Can only trigger Dark Respite in the Dark!</span>")
+		return FALSE
+	else if(stat)
+		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		return FALSE
+	else if(ability_flags & AB_DARK_RESPITE)
+		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		return FALSE
+	else if(has_modifier_of_type(/datum/modifier/dark_respite) && !SK.manual_respite)
+		to_chat(src, "<span class='warning'>You cannot manually end a Dark Respite triggered by an emergency warp!</span>")
+	else if(ability_flags & AB_PHASE_SHIFTED)
+		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		return FALSE
+
+	if(has_modifier_of_type(/datum/modifier/dark_respite))
+		to_chat(src, "<span class='Notice'>You stop focusing the Dark on healing yourself.</span>")
+		SK.manual_respite = FALSE
+		remove_a_modifier_of_type(/datum/modifier/dark_respite)
+		return TRUE
+	to_chat(src, "<span class='Notice'>You start focusing the Dark on healing yourself. (Leave the dark or trigger the ability again to end this.)</span>")
+	SK.manual_respite = TRUE
+	add_modifier(/datum/modifier/dark_respite)
+	return TRUE
 
 /datum/map_template/shelter/dark_portal
 	name = "Dark Portal"

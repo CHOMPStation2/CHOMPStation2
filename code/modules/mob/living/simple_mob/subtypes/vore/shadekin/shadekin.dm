@@ -79,7 +79,6 @@
 	var/check_for_observer = FALSE
 	var/check_timer = 0
 
-	var/respite_triggers = 0 //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 
 /mob/living/simple_mob/shadekin/Initialize()
@@ -284,18 +283,40 @@
 	Stun(10)
 	movement_cooldown = 5
 	nutrition = 0
-	respite_triggers += 1
 
-	spawn(1 SECOND)
+	if(istype(src.loc, /obj/belly))
+		//Yay digestion... presumably...
+		var/obj/belly/belly = src.loc
+		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
+		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]")
 		forceMove(pick(floors))
-		update_icon()
 		flick("tp_in",src)
-		invisibility = initial(invisibility)
 		respite_activating = FALSE
+		belly.owner.update_fullness()
+		clear_fullscreen("belly")
+		if(hud_used)
+			if(!hud_used.hud_shown)
+				toggle_hud_vis()
+		stop_sound_channel(CHANNEL_PREYLOOP)
 
-	spawn(25 MINUTES * respite_triggers)
-		ability_flags |= ~AB_DARK_RESPITE
-		movement_cooldown = initial(movement_cooldown)
+
+		spawn(10 MINUTES)
+			ability_flags &= ~AB_DARK_RESPITE
+			movement_cooldown = initial(movement_cooldown)
+			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	else
+		spawn(1 SECOND)
+			respite_activating = FALSE
+			forceMove(pick(floors))
+			update_icon()
+			flick("tp_in",src)
+			invisibility = initial(invisibility)
+			respite_activating = FALSE
+
+		spawn(15 MINUTES)
+			ability_flags &= ~AB_DARK_RESPITE
+			movement_cooldown = initial(movement_cooldown)
+			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
 	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal

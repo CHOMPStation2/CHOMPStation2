@@ -112,13 +112,14 @@
 	var/list/shadekin_abilities = list(/datum/power/shadekin/phase_shift,
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade,
-									   /datum/power/shadekin/dark_tunneling) //CHOMPEdit Add - Dark Tunneling
+									   /datum/power/shadekin/dark_tunneling, //CHOMPEdit Add - Dark Tunneling
+									   /datum/power/shadekin/dark_respite) //CHOMPEdit Add - Dark Respite
 	var/list/shadekin_ability_datums = list()
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
-	var/respite_triggers = 0 //CHOMPEdit - Dark Respite
+	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 
 /datum/species/shadekin/New()
@@ -162,25 +163,48 @@
 		bp.bandage()
 		bp.disinfect()
 	H.nutrition = 0
-	respite_triggers += 1
-	H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES * respite_triggers)
 	H.invisibility = INVISIBILITY_LEVEL_TWO
 	BITRESET(H.hud_updateflag, HEALTH_HUD)
 	BITRESET(H.hud_updateflag, STATUS_HUD)
 	BITRESET(H.hud_updateflag, LIFE_HUD)
 
-	spawn(1 SECOND)
+	if(istype(H.loc, /obj/belly))
+		//Yay digestion... presumably...
+		var/obj/belly/belly = H.loc
+		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
+		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]")
 		H.forceMove(pick(floors))
-		if(H.ability_flags & AB_PHASE_SHIFTED)
-			H.phase_shift()
-		else
-			var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
-			phaseanim.dir = H.dir
-		H.invisibility = initial(H.invisibility)
+		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
+		phaseanim.dir = H.dir
 		respite_activating = FALSE
+		belly.owner.update_fullness()
+		H.clear_fullscreen("belly")
+		if(H.hud_used)
+			if(!H.hud_used.hud_shown)
+				H.toggle_hud_vis()
+		H.stop_sound_channel(CHANNEL_PREYLOOP)
+		H.add_modifier(/datum/modifier/dark_respite, 10 MINUTES)
 
-	spawn(15 MINUTES * respite_triggers)
-		H.ability_flags |= ~AB_DARK_RESPITE
+
+		spawn(5 MINUTES)
+			H.ability_flags &= ~AB_DARK_RESPITE
+			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	else
+		H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
+
+		spawn(1 SECOND)
+			H.forceMove(pick(floors))
+			if(H.ability_flags & AB_PHASE_SHIFTED)
+				H.phase_shift()
+			else
+				var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
+				phaseanim.dir = H.dir
+			H.invisibility = initial(H.invisibility)
+			respite_activating = FALSE
+
+		spawn(15 MINUTES)
+			H.ability_flags &= ~AB_DARK_RESPITE
+			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
 
 	return TRUE
 
@@ -189,12 +213,47 @@
 	pain_immunity = 1
 
 /datum/modifier/dark_respite/tick()
-	if(istype(src.holder))
-		src.holder.nutrition = 0
-		if(!src.pain_immunity && istype(get_area(src.holder), /area/shadekin))
-			src.pain_immunity = 1
-		else if(src.pain_immunity)
-			src.pain_immunity = 0
+	if(istype(src.holder, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = src.holder
+		if(H.nutrition)
+			H.add_chemical_effect(CE_BLOODRESTORE, 5)
+			H.nutrition = max(H.nutrition - 5, 0)
+
+		if(istype(get_area(H), /area/shadekin))
+			if(!src.pain_immunity)
+				src.pain_immunity = 1
+			//Very good healing, but only in the Dark.
+			H.adjustFireLoss((-0.25))
+			H.adjustBruteLoss((-0.25))
+			H.adjustToxLoss((-0.25))
+			H.heal_organ_damage(3, 0)
+			for(var/obj/item/organ/I in H.internal_organs)
+				if(I.robotic >= ORGAN_ROBOT)
+					continue
+				if(I.damage > 0)
+					I.damage = max(I.damage - 0.25, 0)
+				if(I.damage <= 5 && I.organ_tag == O_EYES)
+					H.sdisabilities &= ~BLIND
+			for(var/obj/item/organ/external/O in H.organs)
+				if(O.status & ORGAN_BROKEN)
+					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
+				for(var/datum/wound/W in O.wounds)
+					if(W.bleeding())
+						W.damage = max(W.damage - 3, 0)
+						if(W.damage <= 0)
+							O.wounds -= W
+					if(W.internal)
+						W.damage = max(W.damage - 3, 0)
+						if(W.damage <= 0)
+							O.wounds -= W
+		else
+			var/datum/species/shadekin/SK = H.species
+			if(SK.manual_respite)
+				to_chat(H, "<span class='notice'>As you leave the Dark, you stop focusing the Dark on healing yourself.</span>")
+				SK.manual_respite = FALSE
+				src.expire()
+			if(src.pain_immunity)
+				src.pain_immunity = 0
 //CHOMPEdit End
 
 /datum/species/shadekin/get_bodytype()
@@ -230,24 +289,6 @@
 	if(H.has_modifier_of_type(/datum/modifier/dark_respite))
 		set_energy(H, 0)
 		update_shadekin_hud(H)
-		//Heal a bit better, but only in The Dark
-		if(istype(get_area(H), /area/shadekin))
-			H.adjustFireLoss((-0.25))
-			H.adjustBruteLoss((-0.25))
-			H.adjustToxLoss((-0.25))
-			H.heal_organ_damage(3, 0)
-			for(var/obj/item/organ/external/O in H.bad_external_organs)
-				if(O.status & ORGAN_BROKEN)
-					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
-				for(var/datum/wound/W in O.wounds)
-					if(W.bleeding())
-						W.damage = max(W.damage - 3, 0)
-						if(W.damage <= 0)
-							O.wounds -= W
-					if(W.internal)
-						W.damage = max(W.damage - 3, 0)
-						if(W.damage <= 0)
-							O.wounds -= W
 		return
 	//CHOMPEdit End
 
