@@ -385,10 +385,32 @@
 
 /*==DISABLED==/
 
+<<<<<<< HEAD
 /datum/map_template/surface/mountains/normal/Cavelake //This is the same thing as cavetrench
 	name = "Cave Lake"
 	desc = "A large underground lake."
 	mappath = 'maps/submaps/surface_submaps/mountains/Cavelake.dmm'
 	cost = 20
+=======
+/datum/map_template/surface/mountains/normal/excavation1 //VOREStation Edit
+	name = "Excavation Site"
+	desc = "An abandoned mining site."
+	mappath = 'maps/submaps/surface_submaps/mountains/excavation1.dmm'
+	cost = 20
+
+/datum/map_template/surface/mountains/deep/spatial_anomaly
+	name = "spatial anomaly"
+	desc = "A strange section of the caves that seems twist and turn in ways that shouldn't be physically possible."
+	mappath = 'maps/submaps/surface_submaps/mountains/spatial_anomaly.dmm'
+	cost = INFINITY /// Prevent spawning.
+	fixed_orientation = TRUE
+
+/datum/map_template/surface/mountains/normal/Speakeasy //VOREStation add
+	name = "Speakeasy"
+	desc = "A hidden underground bar to serve drinks in secret and in style."
+	mappath = 'maps/submaps/surface_submaps/mountains/speakeasy_vr.dmm'
+	cost = 10
+	allow_duplicates = FALSE
+>>>>>>> eea43677f4... Merge pull request #14557 from VOREStation/upstream-merge-8984
 
 */
