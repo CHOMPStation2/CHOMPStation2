@@ -1095,8 +1095,14 @@
 							var/mob/living/carbon/human/h = l
 							thismuch = thismuch * h.species.digestion_nutrition_modifier
 						l.adjust_nutrition(thismuch)
+<<<<<<< HEAD
 					ourtarget.death() //CHOMPEdit - Call .death() on process digest to trigger death hooks like nif_soulcatcher or digest_check (setting vore respawn timer)
 					b.handle_digestion_death(ourtarget, instant = TRUE) //CHOMPEdit
+=======
+					ourtarget.death()		// To make sure all on-death procs get properly called
+					if(ourtarget)
+						b.handle_digestion_death(ourtarget)
+>>>>>>> c7a633ac11... Merge pull request #14535 from Heroman3003/processdeath
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
 						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your absorb attempt.</span>")
