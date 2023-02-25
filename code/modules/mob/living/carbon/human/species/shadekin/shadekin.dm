@@ -172,7 +172,7 @@
 		//Yay digestion... presumably...
 		var/obj/belly/belly = H.loc
 		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]")
+		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]</span>")
 		H.forceMove(pick(floors))
 		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
 		phaseanim.dir = H.dir

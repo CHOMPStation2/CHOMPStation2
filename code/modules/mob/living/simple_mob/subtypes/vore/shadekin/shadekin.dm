@@ -288,7 +288,7 @@
 		//Yay digestion... presumably...
 		var/obj/belly/belly = src.loc
 		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]")
+		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]</span>")
 		forceMove(pick(floors))
 		flick("tp_in",src)
 		respite_activating = FALSE
