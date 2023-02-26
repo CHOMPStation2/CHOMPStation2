@@ -1649,6 +1649,7 @@
 			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
+			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_disable_hud")
 			host.vore_selected.disable_hud = !host.vore_selected.disable_hud
@@ -1673,21 +1674,25 @@
 			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color2")
 			var/newcolor2 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color2) as color|null
 			if(newcolor2)
 				host.vore_selected.belly_fullscreen_color2 = newcolor2
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color3")
 			var/newcolor3 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3) as color|null
 			if(newcolor3)
 				host.vore_selected.belly_fullscreen_color3 = newcolor3
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_alpha")
 			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Protean Armor",0,255,0,0,1)
 			if(newalpha)
 				host.vore_selected.belly_fullscreen_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
