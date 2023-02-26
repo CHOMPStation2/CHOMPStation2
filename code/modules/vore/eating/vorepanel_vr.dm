@@ -198,11 +198,14 @@
 			"nutrition_ex" = host.nutrition_message_visible,
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
+			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
+			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
+			"belly_fullscreen_color3" = selected.belly_fullscreen_color3,
+			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
-			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
-			"sound_volume" = selected.sound_volume, //CHOMPAdd
-			//CHOMP add: vore sprite options
+			"vorespawn_blacklist" = selected.vorespawn_blacklist,
+			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
 			"absorbed_multiplier" = selected.absorbed_multiplier,
@@ -271,6 +274,9 @@
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
+		selected_list["belly_fullscreen_color2"] = selected.belly_fullscreen_color2
+		selected_list["belly_fullscreen_color3"] = selected.belly_fullscreen_color3
+		selected_list["belly_fullscreen_alpha"] = selected.belly_fullscreen_alpha
 
 		if(selected.colorization_enabled)
 			selected_list["possible_fullscreens"] = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //Makes any icons inside of here selectable. //CHOMPedit
@@ -1667,6 +1673,21 @@
 			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
+			. = TRUE
+		if("b_fullscreen_color2")
+			var/newcolor2 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color2) as color|null
+			if(newcolor2)
+				host.vore_selected.belly_fullscreen_color2 = newcolor2
+			. = TRUE
+		if("b_fullscreen_color3")
+			var/newcolor3 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3) as color|null
+			if(newcolor3)
+				host.vore_selected.belly_fullscreen_color3 = newcolor3
+			. = TRUE
+		if("b_fullscreen_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Protean Armor",0,255,0,0,1)
+			if(newalpha)
+				host.vore_selected.belly_fullscreen_alpha = newalpha
 			. = TRUE
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
