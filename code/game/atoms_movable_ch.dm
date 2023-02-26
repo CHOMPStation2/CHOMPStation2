@@ -18,9 +18,9 @@
 			for (var/atom/movable/location as anything in get_nested_locs(src))
 				LAZYREMOVE(location.recursive_listeners, src)
 	if (!listening_recursive && set_to)
-		LAZYADD(recursive_listeners, src)
+		LAZYOR(recursive_listeners, src)
 		for (var/atom/movable/location as anything in get_nested_locs(src))
-			LAZYADD(location.recursive_listeners, src)
+			LAZYOR(location.recursive_listeners, src)
 	listening_recursive = set_to
 
 ///Returns a list of all locations (except the area) the movable is within.
@@ -48,4 +48,4 @@
 	if (!LAZYLEN(arrived.recursive_listeners))
 		return
 	for (var/atom/movable/location as anything in get_nested_locs(src)|src)
-		LAZYADD(location.recursive_listeners, arrived.recursive_listeners)
+		LAZYOR(location.recursive_listeners, arrived.recursive_listeners)
