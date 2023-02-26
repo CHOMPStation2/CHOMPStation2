@@ -103,7 +103,12 @@
 	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+<<<<<<< HEAD
 	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>" // CHOMPEdit: Enables testing voices
+=======
+	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
+	. += "<b>Custom Speech Bubble:</b> <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+>>>>>>> afd540e7a9... Merge pull request #14570 from Rykka-Stormheart/shep-dev-voice-testing
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -200,7 +205,19 @@
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else
 			pref.voice_sound = choice
+<<<<<<< HEAD
 	// CHOMPEdit: Enable testing voice sounds
+=======
+		return TOPIC_REFRESH
+	else if(href_list["customize_speech_bubble"])
+		var/choice = tgui_input_list(usr, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
+		if(!choice)
+			pref.custom_speech_bubble = "default"
+		else
+			pref.custom_speech_bubble = choice
+		return TOPIC_REFRESH
+
+>>>>>>> afd540e7a9... Merge pull request #14570 from Rykka-Stormheart/shep-dev-voice-testing
 	else if(href_list["voice_test"])
 		var/sound/S = pick(pref.voice_sound)
 		switch(pref.voice_sound)
@@ -235,5 +252,9 @@
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 50
 		SEND_SOUND(user, S)
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+
+>>>>>>> afd540e7a9... Merge pull request #14570 from Rykka-Stormheart/shep-dev-voice-testing
 	return ..();
