@@ -85,6 +85,24 @@
 
 /area/survivalpod/superpose/RestaurationBar
 
+/area/survivalpod/superpose/BordcastingPod
+
+/area/survivalpod/superpose/DemonPoolV2
+
+/area/survivalpod/superpose/PirateShip
+
+/area/survivalpod/superpose/SurvivalHomeV2
+
+/area/survivalpod/superpose/SurvivalMechFab
+
+/area/survivalpod/superpose/SurvivalMethLab
+
+/area/survivalpod/superpose/SurvivalScienceV2
+
+/area/survivalpod/superpose/SurvivalSecurityV2
+
+/area/survivalpod/superpose/HillOutpost
+
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
 	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; use a pen to reach the reset button. There's a license for use printed on the bottom."
