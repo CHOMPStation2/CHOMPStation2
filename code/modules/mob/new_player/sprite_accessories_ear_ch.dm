@@ -32,6 +32,15 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/fourears
+	name = "Four Ears"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "fourears"
+	extra_overlay = "fourears_fluff"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/vale
 	name = "VALE Model Ear Coloring"
 	desc = ""
