@@ -14,6 +14,7 @@ var/global/list/seen_religions = list()
 	return
 
 var/global/list/citizenship_choices = list(
+<<<<<<< HEAD
 	"Earth",
 	"Mars",
 	"Sif",
@@ -21,32 +22,104 @@ var/global/list/citizenship_choices = list(
 	"Moghes",
 	"Meralar",
 	"Qerr'balak"
+=======
+	"Greater Human Diaspora",
+	"Commonwealth of Sol-Procyon",
+	"Skrell Consensus",
+	"Moghes Hegemony",
+	"Tajaran Diaspora",
+	"Unitary Alliance of Salthan Fyrds",
+	"Elysian Colonies",
+	"Third Ares Confederation",
+	"Teshari Expeditionary Fleet",
+	"Altevian Hegemony",
+	"Kitsuhana Heavy Industries",
+	"Kosaky Fleets"
+>>>>>>> 6fd6b7af0c... Merge pull request #14548 from KillianKirilenko/kk-lore
 	)
 
 var/global/list/home_system_choices = list(
 	"Sol",
+<<<<<<< HEAD
 	"Vir",
 	"Nyx",
 	"Tau Ceti",
 	"Qerr'valis",
+=======
+	"Earth, Sol",
+	"Luna, Sol",
+	"Mars, Sol",
+	"Venus, Sol",
+	"Titan, Sol",
+	"Toledo, New Ohio",
+	"The Pact, Myria",
+	"Kitsuhana Prime",
+	"Kishar, Alpha Centauri",
+	"Anshar, Alpha Centauri",
+	"Heaven Complex, Alpha Centauri",
+	"Procyon",
+	"Altair",
+	"Kara, Vir",
+	"Sif, Vir",
+	"Brinkburn, Nyx",
+	"Binma, Tau Ceti",
+	"Qerr'balak, Qerr'valis",
+>>>>>>> 6fd6b7af0c... Merge pull request #14548 from KillianKirilenko/kk-lore
 	"Epsilon Ursae Minoris",
-	"Rarkajar"
+	"Meralar, Rarkajar",
+	"Tal, Vilous",
+	"Menhir, Alat-Hahr",
+	"Altam, Vazzend",
+	"Uh'Zata, Kelezakata",
+	"Moghes, Uuoea-Esa",
+	"Xohok, Uuoea-Esa",
+	"Varilak, Antares",
+	"Sanctorum, Sanctum",
+	"Infernum, Sanctum",
+	"Abundance in All Things Serene, Beta-Carnelium Ventrum",
+	"Jorhul, Barkalis",
+	"Shelf Flotilla",
+	"Ue-Orsi Flotilla"
 	)
 
 var/global/list/faction_choices = list(
+<<<<<<< HEAD
 	"Sol Central",
 	"Vey Med",
 	"Einstein Engines",
+=======
+	"NanoTrasen Incorporated",
+	"Hephaestus Industries",
+	"Vey-Medical",
+	"Zeng-Hu Pharmaceuticals",
+	"Ward-Takahashi GMC",
+	"Bishop Cybernetics",
+	"Morpheus Cyberkinetics",
+	"Xion Manufacturing Group",
+>>>>>>> 6fd6b7af0c... Merge pull request #14548 from KillianKirilenko/kk-lore
 	"Free Trade Union",
-	"NanoTrasen",
-	"Ward-Takahashi GMB",
-	"Gilthari Exports",
+	"Major Bill's Transportation",
+	"Ironcrest Transport Group",
 	"Grayson Manufactories Ltd.",
 	"Aether Atmospherics",
-	"Zeng-Hu Pharmaceuticals",
-	"Hephaestus Industries",
-	"Morpheus Cyberkinetics",
-	"Xion Manufacturing Group"
+	"Focal Point Energistics",
+	"StarFlight Inc.",
+	"Oculum Broadcasting Network",
+	"Periphery Post",
+	"Free Anur Tribune",
+	"Centauri Provisions",
+	"Einstein Engines",
+	"Wulf Aeronautics",
+	"Gilthari Exports",
+	"Coyote Salvage Corp.",
+	"Chimera Genetics Corp.",
+	"Kitsuhana Heavy Industries",
+	"Independent Pilots Association",
+	"Local System Defense Force",
+	"United Solar Defense Force",
+	"Proxima Centauri Risk Control",
+	"HIVE Security",
+	"Stealth Assault Enterprises"
 	)
 
 var/global/list/antag_faction_choices = list()	//Should be populated after brainstorming. Leaving as blank in case brainstorming does not occur.
