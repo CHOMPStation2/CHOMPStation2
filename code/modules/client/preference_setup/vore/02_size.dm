@@ -14,15 +14,10 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
-<<<<<<< HEAD
 	var/offset_override = FALSE //CHOMPEdit
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
-=======
-	var/voice_freq = 0
-	var/voice_sound = "beep-boop"
 	var/custom_speech_bubble = "default"
->>>>>>> ed8dcd12d7... Merge pull request #14564 from Heroman3003/protean
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size
@@ -114,11 +109,8 @@
 	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
-<<<<<<< HEAD
-	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>" // CHOMPEdit: Enables testing voices
-=======
 	. += "<b>Custom Speech Bubble:</b> <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
->>>>>>> ed8dcd12d7... Merge pull request #14564 from Heroman3003/protean
+	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>" // CHOMPEdit: Enables testing voices
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -215,7 +207,14 @@
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else
 			pref.voice_sound = choice
-<<<<<<< HEAD
+		return TOPIC_REFRESH
+	else if(href_list["customize_speech_bubble"])
+		var/choice = tgui_input_list(usr, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
+		if(!choice)
+			pref.custom_speech_bubble = "default"
+		else
+			pref.custom_speech_bubble = choice
+		return TOPIC_REFRESH
 	// CHOMPEdit: Enable testing voice sounds
 	else if(href_list["voice_test"])
 		var/sound/S = pick(pref.voice_sound)
@@ -252,15 +251,4 @@
 		S.volume = 50
 		SEND_SOUND(user, S)
 	// CHOMPEdit End
-=======
-		return TOPIC_REFRESH
-	else if(href_list["customize_speech_bubble"])
-		var/choice = tgui_input_list(usr, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
-		if(!choice)
-			pref.custom_speech_bubble = "default"
-		else
-			pref.custom_speech_bubble = choice
-		return TOPIC_REFRESH
-
->>>>>>> ed8dcd12d7... Merge pull request #14564 from Heroman3003/protean
 	return ..();
