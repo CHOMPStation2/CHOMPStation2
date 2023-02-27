@@ -233,7 +233,7 @@ SUBSYSTEM_DEF(vote)
 					if(ticker.current_state <= GAME_STATE_SETTING_UP)
 						to_chat(initiator_key, "The crew transfer button has been disabled!")
 						return 0
-				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects? (OOC Notice: Transfer votes must exceed Extend votes by 70% to transfer.)"  //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour. Add notice stating transfer must exceed extend by 70%.
+				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects? (OOC Notice: Transfer votes must have a majority (70%) of all votes to initiate transfer.)"  //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour. Add notice stating transfer must contain 70% of total vote.
 				choices.Add("Initiate Crew Transfer", "Extend the Shift")  //VOREStation Edit
 			if(VOTE_ADD_ANTAGONIST)
 				if(!config.allow_extra_antags || ticker.current_state >= GAME_STATE_SETTING_UP)
