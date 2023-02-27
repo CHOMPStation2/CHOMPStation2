@@ -79,7 +79,7 @@ SUBSYSTEM_DEF(vote)
 		if(transfer_votes / total_votes > 0.7)
 			greatest_votes = transfer_votes
 			. = list("Initiate Crew Transfer")
-		else 
+		else
 			greatest_votes = extend_votes
 			. = list("Extend the Shift")
 	else
@@ -233,7 +233,7 @@ SUBSYSTEM_DEF(vote)
 					if(ticker.current_state <= GAME_STATE_SETTING_UP)
 						to_chat(initiator_key, "The crew transfer button has been disabled!")
 						return 0
-				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects?" //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour.
+				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects? (OOC Notice: Transfer votes must exceed Extend votes by 70% to transfer.)"  //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour. Add notice stating transfer must exceed extend by 70%.
 				choices.Add("Initiate Crew Transfer", "Extend the Shift")  //VOREStation Edit
 			if(VOTE_ADD_ANTAGONIST)
 				if(!config.allow_extra_antags || ticker.current_state >= GAME_STATE_SETTING_UP)
