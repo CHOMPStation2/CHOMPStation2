@@ -55,6 +55,8 @@
 	else if(mind)
 		soul_link(/datum/soul_link/shared_body, src, target)
 		deployed_shell = target
+		if(src.client) //CHOMPADDITION: Resize shell based on our preffered size
+			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		target.deploy_init(src)
 		mind.transfer_to(target)
 		teleop = target // So the AI 'hears' messages near its core.
