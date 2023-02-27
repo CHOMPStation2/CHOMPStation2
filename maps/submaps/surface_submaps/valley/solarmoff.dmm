@@ -3,7 +3,24 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/simulated/mineral/ignore_mapgen,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor,
+/area/submap/solarmoff)
+"c" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor,
 /area/submap/solarmoff)
 "d" = (
 /obj/item/weapon/melee/energy/sword/imperial,
@@ -13,6 +30,17 @@
 /obj/effect/decal/cleanable/ash,
 /obj/random/energy/highend,
 /turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/solarmoff)
+"i" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor,
 /area/submap/solarmoff)
 "m" = (
 /obj/item/weapon/storage/secure/briefcase/fuelrod,
@@ -30,9 +58,26 @@
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
+"u" = (
+/turf/simulated/wall/r_wall,
+/area/submap/solarmoff)
 "v" = (
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/water,
+/area/submap/solarmoff)
+"B" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor,
 /area/submap/solarmoff)
 "C" = (
 /obj/effect/decal/cleanable/ash,
@@ -54,6 +99,31 @@
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
+"J" = (
+/turf/simulated/floor,
+/area/submap/solarmoff)
+"K" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/submap/solarmoff)
+"L" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor,
+/area/submap/solarmoff)
 "M" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water,
@@ -62,6 +132,18 @@
 /obj/structure/flora/ausbushes/reedbush,
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/water,
+/area/submap/solarmoff)
+"P" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor,
 /area/submap/solarmoff)
 "R" = (
 /obj/structure/flora/lily2,
@@ -79,6 +161,10 @@
 /area/submap/solarmoff)
 "V" = (
 /turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/solarmoff)
+"W" = (
+/obj/machinery/door/airlock/highsecurity,
+/turf/simulated/floor,
 /area/submap/solarmoff)
 
 (1,1,1) = {"
@@ -128,17 +214,17 @@ a
 a
 a
 a
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
+u
+B
+K
+K
+K
+K
+K
+K
+K
+P
+u
 a
 a
 a
@@ -148,8 +234,8 @@ a
 a
 a
 a
-b
-b
+u
+u
 n
 M
 n
@@ -159,8 +245,8 @@ n
 n
 n
 M
-b
-b
+u
+u
 a
 a
 a
@@ -168,8 +254,8 @@ a
 (5,1,1) = {"
 a
 a
-b
-b
+u
+u
 n
 n
 R
@@ -181,15 +267,15 @@ n
 R
 n
 n
-b
-b
+u
+u
 a
 a
 "}
 (6,1,1) = {"
 a
 a
-b
+L
 n
 n
 E
@@ -203,7 +289,7 @@ n
 E
 n
 n
-b
+L
 a
 a
 "}
@@ -357,7 +443,7 @@ a
 (14,1,1) = {"
 a
 a
-b
+c
 n
 n
 E
@@ -371,15 +457,15 @@ n
 E
 n
 n
-b
+i
 a
 a
 "}
 (15,1,1) = {"
 a
 a
-b
-b
+u
+u
 n
 n
 R
@@ -391,8 +477,8 @@ R
 n
 n
 n
-b
-b
+u
+u
 a
 a
 "}
@@ -400,8 +486,8 @@ a
 a
 a
 a
-b
-b
+u
+u
 n
 M
 n
@@ -411,8 +497,8 @@ n
 n
 n
 M
-b
-b
+u
+u
 a
 a
 a
@@ -422,17 +508,17 @@ a
 a
 a
 a
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
+u
+B
+K
+P
+u
+W
+u
+B
+K
+P
+u
 a
 a
 a
@@ -447,9 +533,9 @@ a
 a
 a
 a
-a
-a
-a
+u
+J
+u
 a
 a
 a

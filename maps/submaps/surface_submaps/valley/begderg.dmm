@@ -72,7 +72,7 @@
 /area/submap/begderg)
 "U" = (
 /mob/living/simple_mob/vore/bigdragon,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "X" = (
 /obj/item/weapon/pickaxe/gold{
