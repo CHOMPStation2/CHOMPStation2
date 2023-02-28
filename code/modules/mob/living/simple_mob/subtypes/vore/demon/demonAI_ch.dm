@@ -136,27 +136,21 @@
 /mob/living/simple_mob/vore/demonAI/break_cloak()
 	uncloak()
 
-
 /mob/living/simple_mob/vore/demonAI/is_cloaked()
 	return cloaked
-
 
 // Cloaks the spider automatically, if possible.
 /mob/living/simple_mob/vore/demonAI/handle_special()
 	if(!cloaked && can_cloak())
 		cloak()
 
-
 // Applies bonus base damage if cloaked.
 /mob/living/simple_mob/vore/demonAI/apply_bonus_melee_damage(atom/A, damage_amount)
-	var/turf/T = get_turf(src)
 	if(cloaked)
-		new /obj/effect/gibspawner/generic(T)
 		playsound(src.loc, 'sound/effects/blobattack.ogg', 50, 1)
 		uncloak()
 		return damage_amount + cloaked_bonus_damage
 	return ..()
-
 
 // Force uncloaking if attacked.
 /mob/living/simple_mob/vore/demonAI/bullet_act(obj/item/projectile/P)
@@ -200,3 +194,11 @@
 /mob/living/simple_mob/vore/demonAI/attackby()
     playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
     ..()
+    
+/mob/living/simple_mob/vore/demonAI/gibspam
+
+/mob/living/simple_mob/vore/demonAI/gibspam/apply_bonus_melee_damage(atom/A, damage_amount)
+	var/turf/T = get_turf(src)
+	if(cloaked)
+		new /obj/effect/gibspawner/generic(T)
+	return ..()
