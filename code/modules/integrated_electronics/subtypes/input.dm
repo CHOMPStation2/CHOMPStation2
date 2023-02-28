@@ -617,8 +617,6 @@
 		if(speaking)
 			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG))||speaking.name == LANGUAGE_ECHOSONG) //CHOMPEDIT: ignore echo song too
 				return //CHOMPEDIT: dont spam the chat with scrambled text
-				translated = TRUE
-				text = speaking.scramble(text, my_langs)
 		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 2, text)
 
