@@ -5,21 +5,8 @@ var/list/shell_module_blacklist = list(
 var/list/latejoin_gatewaystation = list()
 var/list/latejoin_plainspath = list()
 
-var/list/talk_sounds = list(
-		"beep-boop",
-		"goon speak 1",
-		"goon speak 2",
-		"goon speak 3",
-		"goon speak 4",
-		"goon speak blub",
-		"goon speak bottalk",
-		"goon speak buwoo",
-		"goon speak cow",
-		"goon speak lizard",
-		"goon speak pug",
-		"goon speak pugg",
-		"goon speak roach",
-		"goon speak skelly")
+var/list/talk_sounds = list()
+
 var/list/talk_sound_map = list(
 		"beep-boop" = talk_sound,
 		"goon speak 1" = goon_speak_one_sound,
@@ -35,6 +22,11 @@ var/list/talk_sound_map = list(
 		"goon speak pugg"=goon_speak_pugg_sound,
 		"goon speak roach"=goon_speak_roach_sound,
 		"goon speak skelly"=goon_speak_skelly_sound,)
+
+/hook/startup/proc/Init_talk_sounds()
+	for(var/i in talk_sound_map)
+		talk_sounds |= talk_sound_map[i] //Thank you BM absolute legend
+	return 1
 
 proc/get_talk_sound(var/voice_sound)
 	return talk_sound_map[voice_sound]
