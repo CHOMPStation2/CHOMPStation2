@@ -4,10 +4,14 @@
 	if(H.get_gender() == FEMALE)
 		return list(
 			"sound" = H.species.female_scream_sound,
-			"vol" = emote_volume
+			"vol" = 60,
+			"exr" = 20,
+			"volchannel" = VOLUME_CHANNEL_INJ_DEATH
 		)
 	else
 		return list(
 			"sound" = H.species.male_scream_sound,
-			"vol" = emote_volume
+			"vol" = 60,
+			"exr" = 20,
+			"volchannel" = VOLUME_CHANNEL_INJ_DEATH
 		)

@@ -29,6 +29,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	min_age = 18
 	max_age = 130

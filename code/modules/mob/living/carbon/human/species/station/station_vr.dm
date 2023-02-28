@@ -23,6 +23,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "There are two subspecies of Sergal; Southern and Northern. Northern sergals are a highly aggressive race \
 	that lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; \
@@ -33,7 +41,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
@@ -93,6 +101,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -102,7 +118,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
@@ -149,6 +165,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -199,6 +223,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
@@ -255,27 +287,38 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	male_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	female_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// CHOMPEdit Start: Add Pain/Gasp/Death sounds
+	male_pain_sound = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg')
+	female_pain_sound = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg')
+	male_gasp_sound = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg')
+	female_gasp_sound = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg')
+	male_death_sound = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg')
+	female_death_sound = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg')
+	pain_verb_1p = list("yelp", "growl")
+	pain_verb_3p = list("yelps", "growls")
+
+	// CHOMPEdit End
 
 //CHOMPStation Removal
 //	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
-	
+
 	//Furry fox-like animals shouldn't start freezing at 5 degrees celsius.
 	//Minor cold is resisted, but not severe frost.
-	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans. 
-	
+	cold_discomfort_level = 263 //Not as good at surviving the frost as tajara, but still better than humans.
+
 	cold_level_1 = 243 //Default 260, other values remain at default. Starts taking damage at -30 celsius. Default tier 2 is -70 and tier 3 is -150
-	
-	
-	breath_cold_level_1 = 220 // Default 240, lower is better.	
-	
+
+
+	breath_cold_level_1 = 220 // Default 240, lower is better.
+
 	//While foxes can survive in deserts, that's handled by zorren. It's a good contrast that our vulp find heat a little uncomfortable.
-	
+
 	heat_discomfort_level = 295 //Just above standard 20 C to avoid heat message spam, same as Taj
-	
+
 	heat_level_1 = 345 //Default 360
 	heat_level_2 = 390 //Default 400
 	heat_level_3 = 900 //Default 1000
@@ -296,7 +339,7 @@
 
 	min_age = 18
 	max_age = 110
-	
+
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
@@ -380,7 +423,7 @@
 	min_age = 18
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona" //CHOMPedit
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	
+
 //CHOMPedit start
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
@@ -417,7 +460,7 @@
 	tail_animation = 'icons/mob/species/vox/tail.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
 	color_mult = 1
-	
+
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
@@ -450,13 +493,21 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "An Avian species, coming from a distant planet, the Rapalas are the very proud race.\
 	Sol researchers have commented on them having a very close resemblance to the mythical race called 'Harpies',\
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
@@ -486,7 +537,7 @@
 	documented in the Virgo system, following a mining bombardment of Virgo 3. The crew of NSB Adephagia have \
 	taken to calling these creatures 'Shadekin', and the name has generally stuck and spread. "		//TODO: Something more fitting for black-eyes
 
-//CHOMPStation Removal 
+//CHOMPStation Removal
 //	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
 
@@ -604,6 +655,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -638,6 +697,14 @@
 
 	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit Scree
 	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
 	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \

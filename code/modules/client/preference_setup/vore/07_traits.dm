@@ -257,6 +257,9 @@
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
 
+	if(pref.species_sound && new_S.selects_bodytype && pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds. Don't try to do this if it doesn't exist, we aren't a custom species, and we don't have a custom base.
+		new_S.copy_species_sounds(new_S, pref.species_sound, pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds
+
 	if(pref.species == SPECIES_CUSTOM)
 		//Statistics for this would be nice
 		var/english_traits = english_list(new_S.traits, and_text = ";", comma_text = ";")

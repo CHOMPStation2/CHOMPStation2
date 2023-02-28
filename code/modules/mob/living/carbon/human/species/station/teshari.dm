@@ -27,6 +27,14 @@
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 	center_offset = 0 //CHOMPEdit
 	//CHOMPStation Add End
 

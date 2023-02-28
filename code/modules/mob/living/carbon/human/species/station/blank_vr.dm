@@ -18,6 +18,14 @@
 
 	male_scream_sound = null //CHOMPedit These are going to be a hassle for custom species if not null
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	min_age = 18

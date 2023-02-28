@@ -87,8 +87,21 @@
 			if(O.client && O.client.is_preference_enabled(/datum/client_preference/show_dsay))
 				to_chat(O, "<span class='deadsay'><b>[src]</b> has died in <b>[get_area(src)]</b>. [ghost_follow_link(src, O)] </span>")
 
+	/* // CHOMPEdit Start: Replacing this with our own death sounds. :3
 	if(!gibbed && species.death_sound)
 		playsound(src, species.death_sound, 80, 1, 1)
+	*/
+	if(!gibbed && (species.male_death_sound || species.female_death_sound) && !isbelly(loc))
+		var/gender = src.gender
+		if(gender == FEMALE)
+			playsound(src, pick(species.female_death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
+		else // Until we get more, sorry. :c
+			playsound(src, pick(species.male_death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
+		/*
+		if(HERM) // TBD if we ever get sounds for non male/female. Not a focus rn.
+			playsound(src, species.male_death_sound, 80, 1, 20)
+		*/
+	// CHOMPEdit End
 
 	if(ticker && ticker.mode)
 		sql_report_death(src)

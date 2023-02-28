@@ -77,9 +77,12 @@
 	max_age = 260
 
 	economic_modifier = 10
-	
+
 	male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit added unathi scream
 	female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit
+
+	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
+	pain_verb_3p = list("hisses", "growls") // CHOMPEdit: Pain emotes
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
@@ -206,8 +209,19 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	male_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	female_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// CHOMPEdit Start: Gasp/Pain/Death Sounds
+	male_gasp_sound = list('modular_chomp/sound/voice/gasp/feline/feline_gasp.ogg')
+	female_gasp_sound = list('modular_chomp/sound/voice/gasp/feline/feline_gasp.ogg')
+	male_pain_sound = list('modular_chomp/sound/voice/pain/feline/feline_pain.ogg')
+	female_pain_sound = list('modular_chomp/sound/voice/pain/feline/feline_pain.ogg')
+	male_death_sound = list('modular_chomp/sound/voice/death/feline/feline_death.ogg')
+	female_death_sound = list('modular_chomp/sound/voice/death/feline/feline_death.ogg')
+
+	pain_verb_1p = list("hiss", "growl", "yowl") // CHOMPEdit: Unathi pain emotes
+	pain_verb_3p = list("hisses", "growls", "yowls") // CHOMPEdit: Pain emotes
+	// CHOMPEdit End
 
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
@@ -317,6 +331,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	darksight = 4
 	flash_mod = 1.2
@@ -422,6 +444,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
 	the high-pressure and post-apocalyptic world of Xohok, Zaddat require an environmental suit called a Shroud \
@@ -543,6 +573,14 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Missing Sounds, so none for this race.
+	male_gasp_sound = null
+	female_gasp_sound = null
+	male_pain_sound = null
+	female_pain_sound = null
+	male_death_sound = null
+	female_death_sound = null
+	// CHOMPEdit End
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \

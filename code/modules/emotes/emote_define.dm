@@ -29,8 +29,8 @@ var/global/list/emotes_by_key
 	var/emote_message_radio_synthetic                   // As above, but for synthetics.
 	var/emote_message_muffled                           // A message to show if the emote is audible and the user is muzzled.
 
-	var/list/emote_sound                                // A sound for the emote to play. 
-	                                                    // Can either be a single sound, a list of sounds to pick from, or an 
+	var/list/emote_sound                                // A sound for the emote to play.
+	                                                    // Can either be a single sound, a list of sounds to pick from, or an
 	                                                    // associative array of gender to single sounds/a list of sounds.
 	var/list/emote_sound_synthetic                      // As above, but used when check_synthetic() is true.
 	var/emote_volume = 50                               // Volume of sound to play.
@@ -42,7 +42,7 @@ var/global/list/emotes_by_key
 	var/check_range                                     // falsy, or a range outside which the emote will not work
 	var/conscious = TRUE                                // Do we need to be awake to emote this?
 	var/emote_range = 0                                 // If >0, restricts emote visibility to viewers within range.
-	
+
 	var/sound_preferences = list(/datum/client_preference/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
 	var/sound_vary = FALSE
 
@@ -187,12 +187,12 @@ var/global/list/emotes_by_key
 		if(islist(sound_to_play) && length(sound_to_play))
 			sound_to_play = pick(sound_to_play)
 	if(sound_to_play)
-		//CHOMPEdit Add - Preference for variable pitch
+		//CHOMPEdit Add - Preference for variable pitch + Extra range argument
 		if(istype(user, /mob))
 			var/mob/u = user
-			playsound(user.loc, sound_to_play, use_sound["vol"], u.is_preference_enabled(/datum/client_preference/random_emote_pitch) && sound_vary, frequency = u.voice_freq, preference = sound_preferences) //CHOMPEdit
+			playsound(user.loc, sound_to_play, use_sound["vol"], u.is_preference_enabled(/datum/client_preference/random_emote_pitch) && sound_vary, extrarange = use_sound["exr"], frequency = u.voice_freq, preference = sound_preferences, volume_channel = use_sound["volchannel"]) //CHOMPEdit
 		else
-			playsound(user.loc, sound_to_play, use_sound["vol"], sound_vary, frequency = null, preference = sound_preferences) //VOREStation Add - Preference
+			playsound(user.loc, sound_to_play, use_sound["vol"], sound_vary, extrarange = use_sound["exr"], frequency = null, preference = sound_preferences, volume_channel = use_sound["volchannel"]) //VOREStation Add - Preference // CHOMPEdit: volume channel + range
 		//CHOMPEdit End - Previous line used to be outside an if/else before the edit.
 
 /decl/emote/proc/mob_can_use(var/mob/user)

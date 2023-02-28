@@ -439,6 +439,7 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define VOLUME_CHANNEL_DOORS "Doors"
 #define VOLUME_CHANNEL_INSTRUMENTS "Instruments"
 #define VOLUME_CHANNEL_WEATHER "Weather"
+#define VOLUME_CHANNEL_INJ_DEATH "Mob Injury Sounds"
 
 // Make sure you update this or clients won't be able to adjust the channel
 GLOBAL_LIST_INIT(all_volume_channels, list(
@@ -448,7 +449,8 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 	VOLUME_CHANNEL_VORE,
 	VOLUME_CHANNEL_DOORS,
 	VOLUME_CHANNEL_INSTRUMENTS,
-	VOLUME_CHANNEL_WEATHER
+	VOLUME_CHANNEL_WEATHER,
+	VOLUME_CHANNEL_INJ_DEATH
 ))
 
 #define APPEARANCECHANGER_CHANGED_RACE "Race"

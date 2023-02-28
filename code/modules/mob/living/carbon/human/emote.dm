@@ -173,7 +173,8 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/croak_skrell,
 	//VOREStation Add End
 	//CHOMP Add start
-	/decl/emote/audible/prbt2
+	/decl/emote/audible/prbt2,
+	/decl/emote/audible/pain
 	//CHOMP Add end
 )
 

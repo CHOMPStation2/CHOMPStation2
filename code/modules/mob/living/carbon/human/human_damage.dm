@@ -614,6 +614,20 @@ This function restores all organs.
 			if(organ.take_damage(0, damage, sharp, edge, used_weapon))
 				UpdateDamageIcon()
 
+	// CHOMPEdit: Pain Emotes!
+	var/pain_noise = (damage * species.pain_mod) // Halve the incoming, then multiply it by our mod. 50 damage becomes 25 x 0.6 on highest strength, meaning prob 15. 50 x 1.4 means prob 35, etc.
+	switch(damage)
+		if(0 to 25)
+			if(prob(pain_noise) && !isbelly(loc)) // No pain noises inside bellies.
+				emote("pain")
+		if(26 to 50)
+			if(prob(pain_noise * 1.5) && !isbelly(loc)) // No pain noises inside bellies.
+				emote("pain")
+		if(51 to INFINITY)
+			if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
+				emote("pain")
+	// CHOMPEdit End
+
 	// Will set our damageoverlay icon to the next level, which will then be set back to the normal level the next mob.Life().
 	updatehealth()
 	BITSET(hud_updateflag, HEALTH_HUD)
