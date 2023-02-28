@@ -109,8 +109,8 @@
 	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
 	. += "<b>Custom Speech Bubble:</b> <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
-	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>" // CHOMPEdit: Enables testing voices
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -215,7 +215,7 @@
 		else
 			pref.custom_speech_bubble = choice
 		return TOPIC_REFRESH
-	// CHOMPEdit: Enable testing voice sounds
+
 	else if(href_list["voice_test"])
 		var/sound/S = pick(pref.voice_sound)
 		switch(pref.voice_sound)
@@ -250,5 +250,5 @@
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 50
 		SEND_SOUND(user, S)
-	// CHOMPEdit End
+
 	return ..();
