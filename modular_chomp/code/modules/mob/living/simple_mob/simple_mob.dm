@@ -98,6 +98,31 @@
 	// This from original living.dm update_transforms too
 	handle_status_indicators()
 
+/mob/living/simple_mob/proc/use_headset()
+	set name = "Use Headset"
+	set desc = "Opens your headset's GUI, if you have one."
+	set category = "IC"
+
+	if(istype(mob_radio, /obj/item/device/radio/headset))
+		mob_radio.tgui_interact(src)
+	else
+		to_chat(src, "<span class='warning'>Your mob does not have a radio in its radio slot.</span>")
+
+/mob/living/simple_mob/proc/use_pda()
+	set name = "Use PDA"
+	set desc = "Opens your PDA's GUI, if you have one."
+	set category = "IC"
+
+	if(istype(myid, /obj/item/device/pda))
+		myid.tgui_interact(src)
+	else
+		to_chat(src, "<span class='warning'>Your mob does not have a PDA in its ID slot.</span>")
+
+/mob/living/simple_mob/New(var/newloc)
+	..()
+	verbs |= /mob/living/simple_mob/proc/use_headset
+	verbs |= /mob/living/simple_mob/proc/use_pda
+
 /mob/living/simple_mob/update_icon()
 	. = ..()
 	for(var/belly_class in vore_fullness_ex)

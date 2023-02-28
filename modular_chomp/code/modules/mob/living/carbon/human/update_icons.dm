@@ -105,6 +105,57 @@
 			struggle_anim_taur = FALSE
 			update_vore_tail_sprite()
 
+/mob/living/carbon/human/proc/GetAppearanceFromPrefs(var/flavourtext, var/oocnotes)
+	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
+	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
+	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
+	if(client.prefs)
+		client.prefs.copy_to(Dummy)
+		//Important, since some sprites only work for specific species
+		/*	Probably not needed anymore since impersonate_bodytype no longer exists
+		if(Dummy.species.base_species == "Promethean")
+			impersonate_bodytype = "Human"
+		else
+			impersonate_bodytype = Dummy.species.base_species
+		*/
+		custom_species = Dummy.custom_species
+		var/list/traits = dna.species_traits.Copy()
+		dna = Dummy.dna.Clone()
+		dna.species_traits.Cut()
+		dna.species_traits = traits.Copy()
+		UpdateAppearance()
+		icon = Dummy.icon
+		if(flavourtext)
+			flavor_texts = client.prefs.flavor_texts.Copy()
+		if(oocnotes)
+			ooc_notes = client.prefs.metadata
+	qdel(Dummy)
+
+/*	Alternative version of the above proc, incase it turns out cloning our dummy mob's DNA is an awful, terrible bad idea.
+Would need to fix this proc up to work as smoothly as the above proc, though.
+/mob/living/carbon/human/proc/GetAppearanceFromPrefs()
+	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
+	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
+	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
+	if(client.prefs)
+		client.prefs.copy_to(Dummy)
+		//Important, since some sprites only work for specific species
+		if(Dummy.species.base_species == "Promethean")
+			impersonate_bodytype = "Human"
+		else
+			impersonate_bodytype = Dummy.species.base_species
+		custom_species = Dummy.custom_species
+		for(var/tag in Dummy.dna.body_markings)
+			var/obj/item/organ/external/E = organs_by_name[tag]
+			if(E)
+				E.markings.Cut()
+				var/list/marklist = Dummy.dna.body_markings[tag]
+				E.markings = marklist.Copy()
+		UpdateAppearance(Dummy.dna.UI.Copy())
+		icon = Dummy.icon
+	qdel(Dummy)
+*/
+
 /mob/living/carbon/human/update_tail_showing()
 	. = ..()
 	update_vore_tail_sprite()
