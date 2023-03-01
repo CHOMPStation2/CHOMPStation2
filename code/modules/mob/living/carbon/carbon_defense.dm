@@ -153,3 +153,38 @@
 	damage = damage * damage_mod
 
 	return damage
+
+/*
+ * CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+ * The reason we're doing this here is to enable carbons to handle pain differently if they need to - in this case, we're going to check if we're synthetic here, anyways. Essentially a dupe of human_damage.dm's updatehealth()
+ * Human updatehealth() doesn't call parent, so we can safely ignore human checks, but we're going to put sanity in anyways
+*/
+/mob/living/carbon/updatehealth()
+	if(status_flags & GODMODE)
+		health = 100
+		set_stat(CONSCIOUS)
+	else
+		var/initialhealth = health // CHOMPEdit: Getting our health before this check
+		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
+		if(!((ishuman(src)) || (issilicon(src))) && can_feel_pain() || ((src.isSynthetic() && synth_cosmetic_pain))) // Only run this if we're non-human/non-silicon + can feel pain, bc humans already do this. human_damage doesn't call parent, but sanity is better here.
+			if(health < initialhealth) // Did we lose health?
+				// Yes. How much by?
+				var/damage = initialhealth - health // Get our damage (say, 200 - 180 = 20, etc etc)
+				var/pain_noise
+				if(species)
+					pain_noise = (damage * species.pain_mod) // Multiply the incoming damage by our mod. 50 damage becomes 25 x 0.6 on highest strength, meaning prob 15. 50 x 1.4 means prob 35, etc.
+				else // Sanity, in case we don't have a species
+					pain_noise = (damage * rand(0.5, 1.5)) // Multiply damage by our rand mod. 50 damage becomes 50 x 0.5, means prob 25. 50 x 1.5 means prob 75, etc.
+				switch(damage)
+					if(-INFINITY to 0)
+						return
+					if(1 to 25)
+						if(prob(pain_noise) && !isbelly(loc)) // No pain noises inside bellies.
+							emote("pain")
+					if(26 to 50)
+						if(prob(pain_noise * 1.5) && !isbelly(loc)) // No pain noises inside bellies.
+							emote("pain")
+					if(51 to INFINITY)
+						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
+							emote("pain")
+	// CHOMPEdit End: Pain

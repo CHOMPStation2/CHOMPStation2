@@ -15,3 +15,24 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	..()
 	verbs |= /mob/living/proc/click_self
 */
+
+/mob/living
+	/* TL;DR - the following is a lot of copypasta, but allows us to give simplemobs pain and death sounds.
+	 * Different from carbons, where we check species, here we just check on the mob itself.
+	 * TBD: Maybe port over from species to mob?
+	*/
+	var/can_pain_emote = TRUE
+	var/pain_sound = null
+	var/female_pain_sound = null
+	var/male_pain_sound = null
+	var/pain_emote_1p = null
+	var/pain_emote_3p = null
+	/* // Not sure if needed, screams aren't a carbon thing rn.
+	var/scream_sound = null
+	var/female_scream_sound = null
+	var/male_scream_sound = null
+	var/scream_emote = null
+	*/
+	var/death_sound = null
+	var/male_death_sound = null
+	var/female_death_sound = null

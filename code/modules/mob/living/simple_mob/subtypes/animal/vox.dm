@@ -8,6 +8,12 @@
 	min_n2 = 0 //breathe N2
 	max_n2 = 0
 
+	// CHOMPAdd: Pain sounds
+	pain_sound = list('sound/voice/shriek1.ogg')
+	pain_emote_1p = list("shriek")
+	pain_emote_3p = list("shrieks")
+	// CHOMPAdd End
+
 /mob/living/simple_mob/vox/armalis
 	name = "serpentine alien"
 	real_name = "serpentine alien"

@@ -15,7 +15,30 @@
 		total_brute += O.brute_dam
 		total_burn  += O.burn_dam
 
+	// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+	var/initialhealth = health // CHOMPEdit: Getting our health before this check
 	health = getMaxHealth() - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute
+	if(can_feel_pain() || ((isSynthetic() && synth_cosmetic_pain))) // Are we capable of feeling pain?
+		if(health < initialhealth) // Did we lose health?
+			// Yes. How much by?
+			var/damage = initialhealth - health // Get our damage (say, 200 - 180 = 20, etc etc)
+			var/pain_noise = (damage * species.pain_mod) // Multiply the incoming damage by our mod. 50 damage becomes 25 x 0.6 on highest strength, meaning prob 15. 50 x 1.4 means prob 35, etc.
+			switch(damage)
+				if(-INFINITY to 0)
+					//TODO: fix husking
+					if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+						ChangeToHusk()
+					return
+				if(1 to 25)
+					if(prob(pain_noise) && !isbelly(loc)) // No pain noises inside bellies.
+						emote("pain")
+				if(26 to 50)
+					if(prob(pain_noise * 1.5) && !isbelly(loc)) // No pain noises inside bellies.
+						emote("pain")
+				if(51 to INFINITY)
+					if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
+						emote("pain")
+	// CHOMPEdit End: Pain
 
 	//TODO: fix husking
 	if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)

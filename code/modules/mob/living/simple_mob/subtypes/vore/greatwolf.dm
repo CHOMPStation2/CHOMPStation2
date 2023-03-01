@@ -39,8 +39,18 @@
 	can_buckle = TRUE
 	buckle_movable = TRUE
 	buckle_lying = FALSE
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+
+/mob/living/simple_mob/vore/greatwolf/Initialize()
+	pain_sound = get_species_sound(canine_sounds["pain"])
+	death_sound = get_species_sound(canine_sounds["death"])
+
+	. = ..()
+// CHOMPAdd End
 
 /mob/living/simple_mob/vore/greatwolf
 

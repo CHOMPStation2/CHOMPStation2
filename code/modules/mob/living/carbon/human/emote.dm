@@ -317,7 +317,8 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/purr,
 	/decl/emote/audible/purrlong,
 	//CHOMP Add start
-	/decl/emote/audible/prbt2
+	/decl/emote/audible/prbt2,
+	/decl/emote/audible/pain
 	//CHOMP Add end
 	)
 	//VOREStation Add End

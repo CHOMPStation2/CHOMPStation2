@@ -62,6 +62,8 @@
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
 
+	can_pain_emote = FALSE
+
 /mob/living/simple_mob/vore/demonAI/init_vore()
 	if(!voremob_loaded)
 		return

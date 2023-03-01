@@ -4,6 +4,9 @@
 	icon = 'icons/mob/horror_show/GHPS.dmi'
 	icon_gib = "generic_gib"
 
+	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
+	death_sound = null // CHOMPEdit: Shouldn't trigger death sounds
+
 /datum/ai_holder/simple_mob/horror
 	hostile = TRUE // The majority of simplemobs are hostile, gaslamps are nice.
 	cooperative = FALSE

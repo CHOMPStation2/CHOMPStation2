@@ -41,13 +41,18 @@
 	say_list_type = /datum/say_list/mouse
 
 	var/body_color //brown, gray and white, leave blank for random
-	
+
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
 
+	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
+	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
+
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
+
+	pain_sound = get_species_sound(mouse_sounds["pain"]) // CHOMP Addition: Pain/etc sounds
 
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
@@ -177,7 +182,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
-	
+
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 //The names Cheese... Agent Cheese

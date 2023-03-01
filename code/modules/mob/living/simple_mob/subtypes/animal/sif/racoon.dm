@@ -69,6 +69,12 @@
 	var/list/friend_loot_list = list(/obj/item/weapon/coin)	// What will make this animal non-hostile if held?
 	var/randomize_size = TRUE
 	can_be_drop_prey = TRUE //CHOMP Add
+	// CHOMPAdd: Pain/Death Sounds
+	pain_sound = list('sound/voice/raccoon.ogg')
+	pain_emote_1p = list("chitter")
+	pain_emote_3p = list("chitters")
+	death_sound = list('sound/voice/raccoon.ogg')
+
 
 /mob/living/simple_mob/animal/sif/sakimm/verb/remove_hat()
 	set name = "Remove Hat"

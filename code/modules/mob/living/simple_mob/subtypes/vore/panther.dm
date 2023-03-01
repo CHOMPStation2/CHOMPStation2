@@ -41,8 +41,19 @@
 
 	say_list_type = /datum/say_list/panther
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	pain_emote_1p = list("yowl", "growl")
+	pain_emote_3p = list("yowls", "growls")
+
+/mob/living/simple_mob/vore/aggressive/panther/Initialize()
+	pain_sound = get_species_sound(feline_sounds["pain"])
+	death_sound = get_species_sound(feline_sounds["death"])
+
+	. = ..()
+// CHOMPAdd End
+
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/panther

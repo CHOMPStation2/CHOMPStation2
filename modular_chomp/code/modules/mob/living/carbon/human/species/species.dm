@@ -19,14 +19,16 @@
 	var/digi_allowed = FALSE
 	var/vanity_base_fit //when shapeshifting using vanity_copy_to, this allows you to have add something so they can go back to their original species fit
 
-	male_scream_sound = list('modular_chomp/sound/voice/scream/generic/male/male_scream_1.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_2.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_3.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_4.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_5.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_6.ogg')
-	female_scream_sound = list('modular_chomp/sound/voice/scream/generic/female/female_scream_1.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_2.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_3.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_4.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_5.ogg')
-	var/male_gasp_sound = list('modular_chomp/sound/voice/gasp/generic/male/male_gasp1.ogg', 'modular_chomp/sound/voice/gasp/generic/male/male_gasp2.ogg', 'modular_chomp/sound/voice/gasp/generic/male/male_gasp3.ogg')
-	var/female_gasp_sound = list('modular_chomp/sound/voice/gasp/generic/female/female_gasp1.ogg', 'modular_chomp/sound/voice/gasp/generic/female/female_gasp2.ogg')
-	var/male_pain_sound = list('modular_chomp/sound/voice/pain/generic/male/male_pain_1.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_2.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_3.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_4.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_5.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_6.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_7.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_8.ogg')
-	var/female_pain_sound = list('modular_chomp/sound/voice/pain/generic/female/female_pain_1.ogg', 'modular_chomp/sound/voice/pain/generic/female/female_pain_2.ogg', 'modular_chomp/sound/voice/pain/generic/female/female_pain_3.ogg')
-	var/male_death_sound = list('modular_chomp/sound/voice/death/generic/male/male_death_1.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_2.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_3.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_4.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_5.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_6.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_7.ogg')
-	var/female_death_sound = list('modular_chomp/sound/voice/death/generic/female/female_death_1.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_2.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_3.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_4.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_5.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_6.ogg')
+	var/species_sounds
+
+	male_scream_sound = null
+	female_scream_sound = null
+	var/male_gasp_sound = null
+	var/female_gasp_sound = null
+	var/male_pain_sound = null
+	var/female_pain_sound = null
+	var/male_death_sound = null
+	var/female_death_sound = null
 
 // Handles non-standard eyes when using a species that utilizes a custom base icon set.
 // Eye data is stored in the head organ, and this needs to be handled specially.
@@ -59,3 +61,14 @@
 	for(var/datum/trait/env_trait in env_traits)
 		env_trait.handle_environment_special(H)
 	return
+
+/datum/species/New()
+	male_scream_sound = get_species_sound(male_generic_sounds["scream"])
+	female_scream_sound = get_species_sound(female_generic_sounds["scream"])
+	male_gasp_sound = get_species_sound(male_generic_sounds["gasp"])
+	female_gasp_sound = get_species_sound(female_generic_sounds["gasp"])
+	male_pain_sound = get_species_sound(male_generic_sounds["pain"])
+	female_pain_sound = get_species_sound(female_generic_sounds["pain"])
+	male_death_sound = get_species_sound(male_generic_sounds["death"])
+	female_death_sound = get_species_sound(female_generic_sounds["death"])
+	..()

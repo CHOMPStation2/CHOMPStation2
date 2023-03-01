@@ -9,6 +9,7 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "brain1"
 	no_vore = TRUE //VOREStation Edit - PLEASE. lol.
+	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety
 
 /mob/living/carbon/brain/Initialize()
 	. = ..()

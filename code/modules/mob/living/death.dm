@@ -26,4 +26,15 @@
 	for(var/datum/soul_link/S as anything in shared_soul_links)
 		S.sharer_died(gibbed)
 
+	// CHOMPStation Add: All mobs can play a death_sound if set. On carbons, this is going to be handled by species.
+	if(!gibbed && (male_death_sound || female_death_sound) && !isbelly(loc))
+		var/gender = src.gender
+		if(gender == FEMALE)
+			playsound(src, pick(female_death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
+		else // Until we get more, sorry. :c
+			playsound(src, pick(male_death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
+	else if(!gibbed && death_sound && !isbelly(loc))
+		playsound(src, pick(death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
+	// CHOMPStation Add End
+
 	. = ..()

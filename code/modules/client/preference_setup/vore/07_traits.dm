@@ -257,8 +257,12 @@
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
 
-	if(pref.species_sound && new_S.selects_bodytype && pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds. Don't try to do this if it doesn't exist, we aren't a custom species, and we don't have a custom base.
+	/*
+	if(pref.species_sound) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds. Don't try to do this if it doesn't exist. //  && new_S.selects_bodytype && pref.custom_base) // we aren't a custom species, and we don't have a custom base.
 		new_S.copy_species_sounds(new_S, pref.species_sound, pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds
+	*/
+	// CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds.
+	new_S.species_sounds = coalesce(pref.species_sound, pref.custom_base, pref.species)
 
 	if(pref.species == SPECIES_CUSTOM)
 		//Statistics for this would be nice

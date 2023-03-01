@@ -81,8 +81,14 @@ var/list/_slime_default_emotes = list(
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
 	can_enter_vent_with = list(/obj/item/clothing/head)
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+
+	// CHOMPAdd: Pain Sounds
+	pain_sound = 'sound/effects/slime_squish.ogg'
+	pain_emote_1p = list("squish", "squelch")
+	pain_emote_3p = list("squishes", "squelches")
+	// CHOMPAdd End
 
 /mob/living/simple_mob/slime/get_available_emotes()
 	return global._slime_default_emotes.Copy()
