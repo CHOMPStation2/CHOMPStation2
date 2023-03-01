@@ -14,7 +14,7 @@
 
 	var/mat_efficiency = 1
 	var/speed = 1
-
+	var/list/LockedDesigns = list() //CHOMPADDITION: FOR VR mainly.
 	//VOREStation Edit - Broke this into lines
 	materials = list(
 		MAT_STEEL = 0,
@@ -191,6 +191,11 @@
 	return
 
 /obj/machinery/r_n_d/protolathe/proc/canBuild(var/datum/design/D)
+	//CHOMPADDITION: LOCKED designs
+	for(var/datum/design/X in LockedDesigns)
+		if(X == D)
+			return 0
+	//CHOMPADDITION: LOCKED designs
 	for(var/M in D.materials)
 		if(materials[M] < (D.materials[M] * mat_efficiency))
 			return 0
