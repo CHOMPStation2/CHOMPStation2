@@ -152,7 +152,8 @@
 	return S.get_icobase(H, get_deform)
 
 /datum/species/protean/get_valid_shapeshifter_forms(var/mob/living/carbon/human/H)
-	return GLOB.playable_species
+	var/static/list/protean_shapeshifting_forms = GLOB.playable_species.Copy() -= SPECIES_PROMETHEAN
+	return protean_shapeshifting_forms
 
 /datum/species/protean/get_tail(var/mob/living/carbon/human/H)
 	if(!H || base_species == name) return ..()
