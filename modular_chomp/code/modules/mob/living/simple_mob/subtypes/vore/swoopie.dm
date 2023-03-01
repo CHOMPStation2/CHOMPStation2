@@ -20,6 +20,13 @@
 	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
+	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
+											/mob/living/simple_mob/slime/promethean)
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
+	. = ..()
+	if(!.) // Outside the faction and not in friends, are they crew
+		return L?.type in crew_creatures
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
 	if(!voremob_loaded)

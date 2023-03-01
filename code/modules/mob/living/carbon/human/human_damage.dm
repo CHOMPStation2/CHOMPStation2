@@ -10,7 +10,7 @@
 	var/total_burn  = 0
 	var/total_brute = 0
 	for(var/obj/item/organ/external/O in organs)	//hardcoded to streamline things a bit
-		if((O.robotic >= ORGAN_ROBOT) && !O.vital)
+		if((O.robotic >= ORGAN_ROBOT) && !O.vital && !(O.robotic ==ORGAN_NANOFORM))	//CHOMPEdit - Protean changes
 			continue //*non-vital* robot limbs don't count towards shock and crit
 		total_brute += O.brute_dam
 		total_burn  += O.burn_dam
@@ -68,7 +68,7 @@
 /mob/living/carbon/human/getBruteLoss()
 	var/amount = 0
 	for(var/obj/item/organ/external/O in organs)
-		if(O.robotic >= ORGAN_ROBOT && !O.vital)
+		if(O.robotic >= ORGAN_ROBOT && !O.vital && !(O.robotic ==ORGAN_NANOFORM))	//CHOMPEdit - Protean changes
 			continue //*non-vital*robot limbs don't count towards death, or show up when scanned
 		amount += O.brute_dam
 	return amount
@@ -90,7 +90,7 @@
 /mob/living/carbon/human/getFireLoss()
 	var/amount = 0
 	for(var/obj/item/organ/external/O in organs)
-		if(O.robotic >= ORGAN_ROBOT && !O.vital)
+		if(O.robotic >= ORGAN_ROBOT && !O.vital && !(O.robotic ==ORGAN_NANOFORM))	//CHOMPEdit - Protean changes
 			continue //*non-vital*robot limbs don't count towards death, or show up when scanned
 		amount += O.burn_dam
 	return amount
@@ -318,7 +318,7 @@
 		halloss = 0
 	else
 		..()
-		
+
 /mob/living/carbon/human/Stun(var/amount)
 	if(amount > 0)	//only multiply it by the mod if it's positive, or else it takes longer to fade too!
 		amount = amount*species.stun_mod
@@ -326,12 +326,12 @@
 
 /mob/living/carbon/human/SetStunned(var/amount)
 	..()
-	
+
 /mob/living/carbon/human/AdjustStunned(var/amount)
 	if(amount > 0) // Only multiply it if positive.
 		amount = amount*species.stun_mod
 	..(amount)
-	
+
 /mob/living/carbon/human/Weaken(var/amount)
 	if(amount > 0)	//only multiply it by the mod if it's positive, or else it takes longer to fade too!
 		amount = amount*species.weaken_mod
@@ -339,7 +339,7 @@
 
 /mob/living/carbon/human/SetWeakened(var/amount)
 	..()
-	
+
 /mob/living/carbon/human/AdjustWeakened(var/amount)
 	if(amount > 0) // Only multiply it if positive.
 		amount = amount*species.weaken_mod

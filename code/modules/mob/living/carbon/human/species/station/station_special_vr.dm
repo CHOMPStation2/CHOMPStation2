@@ -27,8 +27,9 @@
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
-		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
-		// CHOMPEdit: Lick Wounds Verb
+		/mob/living/carbon/human/proc/lick_wounds,
+		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
+		// CHOMPEdit: Lick Wounds Verb, reform verb
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
@@ -445,7 +446,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
-	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken. ChompEdit;renable 
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken. ChompEdit;renable
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"

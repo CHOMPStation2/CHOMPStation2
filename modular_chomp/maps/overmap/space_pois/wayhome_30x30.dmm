@@ -1,0 +1,39 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/mineral/vacuum,/area/submap/way_home)
+"c" = (/obj/item/instrument/trombone/spectral,/obj/item/clothing/suit/skeleton,/turf/simulated/mineral/floor/vacuum,/area/submap/way_home)
+"e" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/mineral/floor/vacuum,/area/submap/way_home)
+"s" = (/turf/simulated/mineral/floor/vacuum,/area/submap/way_home)
+"E" = (/obj/item/clothing/mask/smokable/pipe/bonepipe,/turf/simulated/mineral/floor/vacuum,/area/submap/way_home)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaabaaaaaaaaaaaaaaa
+aaaaaaaaaaaaabbbaaaaaaaaaaaaaa
+aaaaaaaaaabbbbbbbbbaaaaaaaaaaa
+aaaaaaaaaaabbbbbbbbaaaaaaaaaaa
+aaaaaaaaaabbbbbbbbaaaaaaaaaaaa
+aaaaaaaaabbbbbbbbbaaaaaaaaaaaa
+aaaaaaaaabbbbbbbbbbaaaaaaaaaaa
+aaaaaaaabbbbbbbbbbbbaaaaaaaaaa
+aaaaaaabbbbbbbbcbbbaaaaaaaaaaa
+aaaaaaabbbbbbbsssaaaaaaaaaaaaa
+aaaaaabbbbbbbbssaaaaaaaaaaaaaa
+aaaaaabbbbbbsssaaaaaaaaaaaaaaa
+aaaaaaabbbsssssaaaaaaaaaaaaaaa
+aaaaaaabbaasssssaaaaaaaaaaaaaa
+aaaaaaaaaaaaassssaaaaaaaaaaaaa
+aaaaaaaaaaaaasssssaaaaaaaaaaaa
+aaaaaaaaaaaaasEesssaaaaaaaaaaa
+aaaaaaaaaaaaaassssssaaaaaaaaaa
+aaaaaaaaaaaaaasssbssaaaaaaaaaa
+aaaaaaaaaaaaaaassbbssaaaaaaaaa
+aaaaaaaaaaaaaaasbbbbbaaaaaaaaa
+aaaaaaaaaaaaaaasbbbbbbaaaaaaaa
+aabbaaaaaaaaaaaabbbbbbbaaaaaaa
+aabbbaaaaaaaaaabbbbbbbbbaaaaaa
+aaabaaaaaaaaaabbaaabbbabaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

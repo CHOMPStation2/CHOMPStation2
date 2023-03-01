@@ -12,6 +12,7 @@
 			message_admins("Admin logout: [key_name(src)]")
 			if(admins_number == 0) //Apparently the admin logging out is no longer an admin at this point, so we have to check this towards 0 and not towards 1. Awell.
 				send2adminirc("[key_name(src)] logged out - no more admins online.")
+	set_listening(NON_LISTENING_ATOM) //maybe remove this, even if it will cause a teensy bit more lag
 	..()
 
 	return 1
