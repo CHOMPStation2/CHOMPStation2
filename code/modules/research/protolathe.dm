@@ -120,15 +120,10 @@
 		icon_state = "[icon_state]_work"
 
 /obj/machinery/r_n_d/protolathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	//CHOMPADDITION Locked lathes are hard coded
-	if(LAZYLEN(LockedDesigns))
-		to_chat(user, "<span class='notice'>\The [src] is can not be deconstructed.</span>")
-		return 1
-	//CHOMPADDITION Locked lathes are hard coded
 	if(busy)
 		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
 		return 1
-	if(default_deconstruction_screwdriver(user, O))
+	if(!LAZYLEN(LockedDesigns) && default_deconstruction_screwdriver(user, O))//CHOMPADDITION Locked lathes are hard coded
 		if(linked_console)
 			linked_console.linked_lathe = null
 			linked_console = null
