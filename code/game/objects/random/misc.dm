@@ -753,8 +753,13 @@
 				/obj/item/toy/plushie/nukeplushie,
 				/obj/item/toy/plushie/otter,
 				/obj/item/toy/plushie/vox,
-				/obj/item/toy/plushie/borgplushie/drakiesec,
-				/obj/item/toy/plushie/borgplushie/drakiemed,
+				pick(list(/obj/item/toy/plushie/borgplushie/drake/sec,
+							/obj/item/toy/plushie/borgplushie/drake/med,
+							/obj/item/toy/plushie/borgplushie/drake/sci,
+							/obj/item/toy/plushie/borgplushie/drake/jani,
+							/obj/item/toy/plushie/borgplushie/drake/eng,
+							/obj/item/toy/plushie/borgplushie/drake/mine,
+							/obj/item/toy/plushie/borgplushie/drake/trauma)),
 				//VOREStation Add End
 				//YawnWider Add Start
 				/obj/item/toy/plushie/teshari/_yw,

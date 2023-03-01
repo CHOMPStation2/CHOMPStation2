@@ -108,6 +108,7 @@
 	return TRUE
 
 /obj/structure/biowaste_tank/Entered(atom/movable/thing, atom/OldLoc)
+	. = ..()
 	if(istype(thing, /obj/item/weapon/reagent_containers/food))
 		qdel(thing)
 		return

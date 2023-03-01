@@ -35,8 +35,9 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	maxbodytemp = INFINITY
+	maxbodytemp = 1100
 	movement_cooldown = 2
+	hunger_rate = 0
 
 	var/mob/living/carbon/human/humanform
 	var/obj/item/organ/internal/nano/refactory/refactory
@@ -55,6 +56,9 @@
 	shock_resist = 1
 	nameset = 1
 	holder_type = /obj/item/weapon/holder/protoblob
+	var/hiding = 0
+	vore_icons = 1
+	vore_active = 1
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")
@@ -71,9 +75,11 @@
 		verbs |= /mob/living/proc/usehardsuit
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_partswap
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_regenerate
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_metalnom
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_blobform
 		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_rig_transform
 		verbs |= /mob/living/simple_mob/protean_blob/proc/appearance_switch
+		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_latch
 		verbs -= /mob/living/simple_mob/proc/nutrition_heal
 	else
 		update_icon()
@@ -103,6 +109,13 @@
 	set hidden = 1
 	humanform.nano_blobform()
 
+/mob/living/simple_mob/protean_blob/proc/nano_metalnom()
+	set name = "Ref - Store Metals"
+	set desc = "If you're holding a stack of material, you can consume some and store it for later."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_metalnom()
+
 /mob/living/simple_mob/protean_blob/proc/nano_rig_transform()
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
@@ -116,6 +129,13 @@
 	set category = "Abilities"
 	set hidden = 1
 	humanform.appearance_switch()
+
+/mob/living/simple_mob/protean_blob/proc/nano_latch()
+	set name = "Latch/Unlatch host"
+	set desc = "Allows a protean to forcibly latch or unlatch from a host."
+	set category = "Abilities"
+	set hidden = 1
+	humanform.nano_latch()
 
 /mob/living/simple_mob/protean_blob/Login()
 	..()
@@ -154,14 +174,16 @@
 /mob/living/simple_mob/protean_blob/speech_bubble_appearance()
 	return "synthetic"
 
-/mob/living/simple_mob/protean_blob/get_available_emotes()
-	return global._robot_default_emotes.Copy()
-
 /mob/living/simple_mob/protean_blob/init_vore()
 	return //Don't make a random belly, don't waste your time
 
 /mob/living/simple_mob/protean_blob/isSynthetic()
 	return TRUE // yup
+
+/mob/living/simple_mob/protean_blob/get_available_emotes()
+	var/list/fulllist = global._robot_default_emotes.Copy()
+	fulllist |= global._human_default_emotes //they're living nanites, they can make whatever sounds they want
+	return fulllist
 
 /mob/living/simple_mob/protean_blob/Stat()
 	..()
@@ -169,6 +191,8 @@
 		humanform.species.Stat(humanform)
 
 /mob/living/simple_mob/protean_blob/updatehealth()
+	if(humanform.nano_dead_check(src))
+		return
 	if(!humanform)
 		return ..()
 
@@ -180,7 +204,7 @@
 
 	//Alive, becoming dead
 	if((stat < DEAD) && (health <= 0))
-		death()
+		humanform.death()
 
 	nutrition = humanform.nutrition
 
@@ -253,6 +277,12 @@
 	else
 		return ..()
 
+/mob/living/simple_mob/protean_blob/adjust_nutrition(amount)
+	if(humanform)
+		return humanform.adjust_nutrition(amount)
+	else
+		return ..()
+
 /mob/living/simple_mob/protean_blob/emp_act(severity)
 	if(humanform)
 		return humanform.emp_act(severity)
@@ -266,6 +296,8 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/rad_act(severity)
+	if(istype(loc, /obj/item/weapon/rig))
+		return	//Don't irradiate us while we're in rig mode
 	if(humanform)
 		return humanform.rad_act(severity)
 	else
@@ -277,36 +309,52 @@
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/death(gibbed, deathmessage = "dissolves away, leaving only a few spare parts!")
+/mob/living/simple_mob/protean_blob/death(gibbed, deathmessage = "Coalesces inwards, retreating into their core componants")
 	if(humanform)
 		humanform.death(gibbed, deathmessage)
 	else
 		animate(src, alpha = 0, time = 2 SECONDS)
 		sleep(2 SECONDS)
 
-	if(!QDELETED(src)) // Human's handle death should have taken us, but maybe we were adminspawned or something without a human counterpart
-		qdel(src)
-
 /mob/living/simple_mob/protean_blob/Life()
 	. = ..()
-	if(. && istype(refactory) && humanform)
-		if(!healing && (human_brute || human_burn) && refactory.get_stored_material(MAT_STEEL) >= 100)
-			healing = humanform.add_modifier(/datum/modifier/protean/steel, origin = refactory)
-		else if(healing && !(human_brute || human_burn))
+	if(!humanform.nano_dead_check(src))
+		if(. && istype(refactory) && humanform)
+			if(!healing && (human_brute || human_burn) && refactory.get_stored_material(MAT_STEEL) >= 100)
+				healing = humanform.add_modifier(/datum/modifier/protean/steel, origin = refactory)
+			else if(healing && !(human_brute || human_burn))
+				healing.expire()
+				healing = null
+	else
+		if(healing)
 			healing.expire()
 			healing = null
 
 /mob/living/simple_mob/protean_blob/lay_down()
+	var/obj/item/weapon/rig/rig = src.get_rig()
+	if(rig)
+		rig.force_rest(src)
+		return
 	..()
-	if(resting)
+
+/mob/living/simple_mob/protean_blob/verb/prot_hide()
+	set name = "Hide Self"
+	set desc = "Disperses your mass into a thin viel, making a trap to snatch prey with, or simply hide."
+	set category = "Abilities"
+
+	if(!hiding)
+		icon_state = "hide"
+		sleep(7)
 		mouse_opacity = 0
 		plane = ABOVE_OBJ_PLANE
+		hiding = 1
 	else
 		mouse_opacity = 1
 		icon_state = "wake"
 		plane = MOB_PLANE
 		sleep(7)
 		update_icon()
+		hiding = 0
 		//Potential glob noms
 		if(can_be_drop_pred) //Toggleable in vore panel
 			var/list/potentials = living_mobs(0)
@@ -317,7 +365,17 @@
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+	update_canmove()
 
+/mob/living/simple_mob/protean_blob/update_canmove()
+	if(hiding)
+		canmove = 0
+		return canmove
+	else
+		..()
+
+
+/*	Don't need this block anymore since our Prots have hands
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
 	if(refactory && istype(A,/obj/item/stack/material))
 		var/obj/item/stack/material/S = A
@@ -347,6 +405,7 @@
 		I.forceMove(vore_selected)
 	else
 		return ..()
+*/
 
 /mob/living/simple_mob/protean_blob/attackby(var/obj/item/O, var/mob/user)
 	if(refactory && istype(O,/obj/item/stack/material))
@@ -380,94 +439,99 @@
 		return
 	..()
 
-var/global/list/disallowed_protean_accessories = list(
-	/obj/item/clothing/accessory/holster,
-	/obj/item/clothing/accessory/storage,
-	/obj/item/clothing/accessory/armor
-	)
+/mob/living/simple_mob/protean_blob/character_directory_species()
+	if (humanform)
+		return "[humanform.custom_species ? humanform.custom_species : (humanform.species ? humanform.species.name : "Protean")]"
+	return "Protean"
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(loc == /obj/item/weapon/rig/protean)
-		return
-	if(!force && !isturf(loc))
+	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
+	to_chat(src, "<span class='notice'>You rapidly disassociate your form</span>")
+	if(force || do_after(src,20,exclusive = TASK_ALL_EXCLUSIVE))
+		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
+		remove_micros(src, src) //Living things don't fare well in roblobs.
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(LAZYLEN(buckled_mobs))
+			for(var/buckledmob in buckled_mobs)
+				riding_datum.force_dismount(buckledmob)
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
 
-	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
-	remove_micros(src, src) //Living things don't fare well in roblobs.
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(LAZYLEN(buckled_mobs))
-		for(var/buckledmob in buckled_mobs)
-			riding_datum.force_dismount(buckledmob)
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
+		var/client/C = client
 
-	var/client/C = client
+		//Record where they should go
+		var/atom/creation_spot = drop_location()
 
-	//Record where they should go
-	var/atom/creation_spot = drop_location()
+		//Create our new blob
+		var/mob/living/simple_mob/protean_blob/blob = new(creation_spot,src)
 
-	//Create our new blob
-	var/mob/living/simple_mob/protean_blob/blob = new(creation_spot,src)
+		//Size update
+		blob.transform = matrix()*size_multiplier
+		blob.size_multiplier = size_multiplier
 
-	//Size update
-	blob.transform = matrix()*size_multiplier
-	blob.size_multiplier = size_multiplier
+		//dir update
+		blob.dir = dir
 
-	if(l_hand) drop_from_inventory(l_hand)
-	if(r_hand) drop_from_inventory(r_hand)
+		if(l_hand) drop_l_hand()
+		if(r_hand) drop_r_hand()
 
-	//Put our owner in it (don't transfer var/mind)
-	blob.ckey = ckey
-	blob.ooc_notes = ooc_notes
-	temporary_form = blob
-	var/obj/item/device/radio/R = null
-	if(isradio(l_ear))
-		R = l_ear
-	if(isradio(r_ear))
-		R = r_ear
-	if(R)
-		blob.mob_radio = R
-		R.forceMove(blob)
-	if(wear_id)
-		blob.myid = wear_id
-		wear_id.forceMove(blob)
+		//Put our owner in it (don't transfer var/mind)
+		blob.ckey = ckey
+		blob.ooc_notes = ooc_notes
+		temporary_form = blob
+		var/obj/item/device/radio/R = null
+		if(isradio(l_ear))
+			R = l_ear
+		if(isradio(r_ear))
+			R = r_ear
+		if(R)
+			blob.mob_radio = R
+			R.forceMove(blob)
+		if(wear_id)
+			blob.myid = wear_id
+			wear_id.forceMove(blob)
 
-	//Mail them to nullspace
-	moveToNullspace()
+		//Mail them to nullspace
+		moveToNullspace()
 
-	//Message
-	blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
+		//Message
+		blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
 
-	//Duration of the to_puddle iconstate that the blob starts with
-	sleep(13)
-	blob.update_icon() //Will remove the collapse anim
+		//Duration of the to_puddle iconstate that the blob starts with
+		sleep(13)
+		blob.update_icon() //Will remove the collapse anim
 
-	//Transfer vore organs
-	blob.vore_organs = vore_organs.Copy()
-	blob.vore_selected = vore_selected
-	for(var/obj/belly/B as anything in vore_organs)
-		B.forceMove(blob)
-		B.owner = blob
-	vore_organs.Cut()
+		//Transfer vore organs
+		blob.vore_organs = vore_organs.Copy()
+		blob.vore_selected = vore_selected
+		for(var/obj/belly/B as anything in vore_organs)
+			B.forceMove(blob)
+			B.owner = blob
+		vore_organs.Cut()
 
-	//We can still speak our languages!
-	blob.languages = languages.Copy()
-	blob.name = real_name
-	blob.voice_name = name
-	var/datum/species/protean/S = src.species
-	blob.icon_living = S.blob_appearance
-	blob.item_state = S.blob_appearance
-	blob.update_icon()
+		//We can still speak our languages!
+		blob.languages = languages.Copy()
+		blob.name = real_name
+		blob.real_name = real_name
+		blob.voice_name = name
+		var/datum/species/protean/S = src.species
+		blob.icon_living = S.blob_appearance
+		blob.item_state = S.blob_appearance
+		blob.icon_rest = S.blob_appearance + "_rest"
+		blob.update_icon()
 
-	//Flip them to the protean panel
-	addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
+		//Flip them to the protean panel
+		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
 
-	//Return our blob in case someone wants it
-	return blob
+		//Return our blob in case someone wants it
+		return blob
+	else
+		to_chat(src, "<span class='warning'>You must remain still to blobform!</span>")
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
 /proc/remove_micros(var/src, var/mob/root)
@@ -484,87 +548,128 @@ var/global/list/disallowed_protean_accessories = list(
 	if(istype(loc, /obj/item/weapon/rig/protean))
 		var/obj/item/weapon/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
-		prig.ui_interact(src, interactive_state)
+		prig.tgui_interact(src)
 	else
 		to_chat(src, "You are not in RIG form.")
-//CHOMP Add end
 
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-	if(blob.loc == /obj/item/weapon/rig/protean) //CHOMP Add
-		return //CHOMP Add
+	if(blob.loc == /obj/item/weapon/rig/protean)
+		return
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
+	to_chat(src, "<span class='notice'>You rapidly reassemble your form</span>")
+	if(force || do_after(blob,20,exclusive = TASK_ALL_EXCLUSIVE))
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(LAZYLEN(buckled_mobs))
+			for(var/buckledmob in buckled_mobs)
+				riding_datum.force_dismount(buckledmob)
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
 
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(LAZYLEN(buckled_mobs))
-		for(var/buckledmob in buckled_mobs)
-			riding_datum.force_dismount(buckledmob)
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
+		var/client/C = blob.client
 
-	var/client/C = blob.client
+		//Stop healing if we are
+		if(blob.healing)
+			blob.healing.expire()
 
-	//Stop healing if we are
-	if(blob.healing)
-		blob.healing.expire()
+		if(blob.mob_radio)
+			blob.mob_radio.forceMove(src)
+			blob.mob_radio = null
+		if(blob.myid)
+			blob.myid.forceMove(src)
+			blob.myid = null
 
-	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
-	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
+		//Play the animation
+		blob.icon_state = "from_puddle"
 
-	if(blob.mob_radio)
-		blob.mob_radio.forceMove(src)
-		blob.mob_radio = null
-	if(blob.myid)
-		blob.myid.forceMove(src)
-		blob.myid = null
+		//Message
+		blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
 
-	//Play the animation
-	blob.icon_state = "from_puddle"
+		//Size update
+		resize(blob.size_multiplier, FALSE, TRUE, ignore_prefs = TRUE)
 
-	//Message
-	blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
+		//Duration of above animation
+		sleep(8)
 
-	//Duration of above animation
-	sleep(8)
+		//Record where they should go
+		var/atom/reform_spot = blob.drop_location()
 
-	//Record where they should go
-	var/atom/reform_spot = blob.drop_location()
+		//dir update
+		dir = blob.dir
 
-	//Size update
-	resize(blob.size_multiplier, FALSE, ignore_prefs = TRUE)
+		//Move them back where the blob was
+		forceMove(reform_spot)
 
-	//Move them back where the blob was
-	forceMove(reform_spot)
+		if(blob.l_hand) blob.drop_l_hand()
+		if(blob.r_hand) blob.drop_r_hand()
 
-	//Put our owner in it (don't transfer var/mind)
-	ckey = blob.ckey
-	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
-	temporary_form = null
+		//Put our owner in it (don't transfer var/mind)
+		ckey = blob.ckey
+		ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
+		temporary_form = null
 
-	//Transfer vore organs
-	vore_organs = blob.vore_organs.Copy()
-	vore_selected = blob.vore_selected
-	for(var/obj/belly/B as anything in blob.vore_organs)
-		B.forceMove(src)
-		B.owner = src
-	languages = blob.languages.Copy()
+		//Transfer vore organs
+		vore_organs = blob.vore_organs.Copy()
+		vore_selected = blob.vore_selected
+		for(var/obj/belly/B as anything in blob.vore_organs)
+			B.forceMove(src)
+			B.owner = src
+		languages = blob.languages.Copy()
 
-	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
+		Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
-	//Get rid of friend blob
-	qdel(blob)
+		//Get rid of friend blob
+		qdel(blob)
 
-	//Flip them to the protean panel
-	addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
+		//Flip them to the protean panel
+		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
 
-	//Return ourselves in case someone wants it
-	return src
+		//Return ourselves in case someone wants it
+		return src
+	else
+		to_chat(src, "<span class='warning'>You must remain still to reshape yourself!</span>")
 
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)
 		C.statpanel = "Protean"
+
+/mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, var/params)
+	if(istype(loc, /obj/item/weapon/rig/protean))
+		HardsuitClickOn(A)
+	..()
+
+/mob/living/simple_mob/protean_blob/can_use_rig()
+	return 1
+
+/mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
+	if(istype(loc, /obj/item/weapon/rig/protean))
+		var/obj/item/weapon/rig/protean/prig = loc
+		if(istype(prig) && !prig.offline && prig.selected_module)
+			if(!prig.ai_can_move_suit(src))
+				return 0
+			prig.selected_module.engage(A, alert_ai)
+			if(ismob(A)) // No instant mob attacking - though modules have their own cooldowns
+				setClickCooldown(get_attack_speed())
+			return 1
+	return 0
+
+//Don't eat yourself, idiot
+/mob/living/simple_mob/protean_blob/CanStumbleVore(mob/living/target)
+	if(target == humanform)
+		return FALSE
+	return ..()
+
+/mob/living/carbon/human/CanStumbleVore(mob/living/target)
+	if(istype(target, /mob/living/simple_mob/protean_blob))
+		var/mob/living/simple_mob/protean_blob/PB = target
+		if(PB.humanform == src)
+			return FALSE
+	return ..()
+
+/mob/living/simple_mob/protean_blob/handle_mutations_and_radiation()
+	humanform.handle_mutations_and_radiation()

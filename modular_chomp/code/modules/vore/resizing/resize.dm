@@ -6,9 +6,8 @@
 		// And optionally, this could be gated behind another preference, to prevent stunlock being abused.
 		if((mob_always_swap || (a_intent == I_HELP || src.restrained()) && (target.a_intent == I_HELP || target.restrained())) && target.canmove && target.handle_micro_bump_helping(src))
 			return
-		else if(!(target.a_intent == I_HELP || target.restrained()) && target.handle_micro_bump_other(src))
+		if(!(target.a_intent == I_HELP || target.restrained()))
 			if(src.step_mechanics_pref && target.step_mechanics_pref)
 				target.handle_micro_bump_other(src)
 			else
 				target.handle_micro_bump_other(src, 1)
-			return

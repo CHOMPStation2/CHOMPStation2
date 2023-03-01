@@ -84,6 +84,9 @@
 
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
 
+	var/datum/looping_sound/alarm/decompression_alarm/soundloop // CHOMPEdit: Looping Alarms
+	var/atmoswarn = FALSE // CHOMPEdit: Looping Alarms
+
 /obj/machinery/alarm/nobreach
 	breach_detection = 0
 
@@ -128,6 +131,7 @@
 	if(alarm_area && alarm_area.master_air_alarm == src)
 		alarm_area.master_air_alarm = null
 		elect_master(exclude_self = TRUE)
+	QDEL_NULL(soundloop)  // CHOMPEdit: Looping Alarms
 	return ..()
 
 /obj/machinery/alarm/proc/offset_airalarm()
@@ -165,6 +169,7 @@
 	set_frequency(frequency)
 	if(!master_is_operating())
 		elect_master()
+	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/process()
 	if((stat & (NOPOWER|BROKEN)) || shorted)
@@ -193,6 +198,13 @@
 	if(mode == AALARM_MODE_CYCLE && environment.return_pressure() < ONE_ATMOSPHERE * 0.05)
 		mode = AALARM_MODE_FILL
 		apply_mode()
+
+	if(alarm_area?.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
+		soundloop.start()  // CHOMPEdit: Looping Alarms
+		atmoswarn = TRUE // CHOMPEdit: Looping Alarms
+	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
+		soundloop.stop()  // CHOMPEdit: Looping Alarms
+		atmoswarn = FALSE // CHOMPEdit: Looping Alarms
 
 	//atmos computer remote controll stuff
 	switch(rcon_setting)
@@ -831,6 +843,12 @@
 	..()
 	spawn(rand(0,15))
 		update_icon()
+		// CHOMPEdit Start: Looping Alarms
+		if(stat & (NOPOWER | BROKEN))
+			soundloop.stop()
+		else if(atmoswarn)
+			soundloop.start()
+		// CHOMPEdit End
 
 // VOREStation Edit Start
 /obj/machinery/alarm/freezer
@@ -845,10 +863,10 @@
 /obj/machinery/alarm/sifwilderness
 	breach_detection = 0
 	report_danger_level = 0
-	
+
 /obj/machinery/alarm/sifwilderness/first_run()
 	. = ..()
-	
+
 	TLV["oxygen"] =			list(16, 17, 135, 140)
 	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.50,ONE_ATMOSPHERE*1.60)
 	TLV["temperature"] =	list(T0C - 40, T0C - 31, T0C + 40, T0C + 120)

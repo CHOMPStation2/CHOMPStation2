@@ -8,7 +8,7 @@
 "lobby": false,
 "jukebox": true,
 "genre": "Jazz"
-}, 
+},
 {
 "url": "https://files.catbox.moe/b24m07.mp3",
 "title": "Robocop Theme (Title Two)",
@@ -18,7 +18,7 @@
 "lobby": false,
 "jukebox": true,
 "genre": "Electronic"
-}, 
+},
 {
 "url": "https://files.catbox.moe/qn5tdv.mp3",
 "title": "Tin Tin on the Moon (Remix)",
@@ -28,7 +28,7 @@
 "lobby": false,
 "jukebox": true,
 "genre": "Electronic"
-}, 
+},
 {
 "url": "https://files.catbox.moe/uk3pr2.mp3",
 "title": "Phoron Will Make Us Rich",
@@ -3670,7 +3670,7 @@
 "jukebox": true,
 "genre": "Ambience"
 },
-{ 
+{
 "duration" : 2850,
 "url" : "https://cdn.discordapp.com/attachments/528973352728264714/613807206047154217/TERRORBYTE_-_HELIOS.mp3",
 "title" : "Helios",
@@ -4364,7 +4364,7 @@
 "artist": "Network Music Ensemble",
 "genre": "Rock",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4424,7 +4424,7 @@
 "artist": "Fiona Apple",
 "genre": "Electronic",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4434,7 +4434,7 @@
 "artist": "Kamil Hala, Slovak Philharmonic Orchestra, Libor Pešek",
 "genre": "Classical and Orchestral",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4574,7 +4574,7 @@
 "artist": "Julia Ecklar & Anne Prather",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4624,7 +4624,7 @@
 "artist": "Free Fall & Other Delights",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4644,7 +4644,7 @@
 "artist": "Duane Elms",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4654,7 +4654,7 @@
 "artist": "Duane Elms",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4664,7 +4664,7 @@
 "artist": "Duane Elms",
 "genre": "Folk and Indie",
 "secret": false,
-"lobby": true,
+"lobby": false,
 "jukebox": true
 },
 {
@@ -4682,6 +4682,175 @@
 "title": "Hymn to Breaking Strain",
 "duration": 2710,
 "artist": "Julia Ecklar & Leslie Fish",
+"genre": "Folk and Indie",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/5pwnw3.m4a",
+"title": "Eristocrats (Discordia Pt.II)",
+"duration": 1690,
+"artist": "That Handsome Devil",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Rock"
+},
+{
+"url": "https://files.catbox.moe/2ozzmg.m4a",
+"title": "Charlie's Inferno",
+"duration": 2250,
+"artist": "That Handsome Devil",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Rock"
+},
+{
+"url": "https://files.catbox.moe/w8x8qb.m4a",
+"title": "Monster Mash",
+"duration": 1930,
+"artist": "Bobby Pickett",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Pop"
+},
+{
+"url": "https://files.catbox.moe/rjvm4j.mp3",
+"title": "What's New Pussycat",
+"duration": 1290,
+"artist": "Tom Jones",
+"secret": false,
+"lobby": false,
+"jukebox": true,
+"genre": "Pop"
+},
+{
+"url": "https://files.catbox.moe/t19nip.m4a",
+"title": "It's Not Unusual",
+"duration": 1200,
+"artist": "Tom Jones",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/n10l5v.mp3",
+"title": "Sucklet's Song",
+"duration": 1840,
+"artist": "emamouse",
+"genre": "Folk and Indie",
+"secret": true,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/6m88w6.mp3",
+"title": "King Sucklet",
+"duration": 1370,
+"artist": "emamouse",
+"genre": "Folk and Indie",
+"secret": true,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/dgloyl.mp3",
+"title": "Bomb-Sniffing Pomeranian",
+"duration": 2600,
+"artist": "Stinkbug & Coda",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/mrgdre.mp3",
+"title": "Nuclear",
+"duration": 3050,
+"artist": "Mike Oldfield",
+"genre": "Rock",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/mjt2ll.mp3",
+"title": "Brain Power",
+"duration": 3700,
+"artist": "NOMA",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/l91mps.mp3",
+"title": "Fungal Funk",
+"duration": 1610,
+"artist": "Danny Baranowsky",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/hwv7lf.mp3",
+"title": "Heart Transplant",
+"duration": 2700,
+"artist": "Surgeon Simulator",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/dowdad.mp3",
+"title": "Distant Duet",
+"duration": 1920,
+"artist": "Rhythm Doctor",
+"genre": "Classical and Orchestral",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/8drrgl.mp3",
+"title": "All the Times",
+"duration": 2150,
+"artist": "Rhythm Doctor",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/c6bjxg.mp3",
+"title": "Lo-fi Hip-Hop Beats To Treat Patients To",
+"duration": 1250,
+"artist": "Rhythm Doctor",
+"genre": "Hip-Hop and Rap",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/s5a2mp.mp3",
+"title": "We All Lift Together",
+"duration": 1520,
+"artist": "Warframe",
+"genre": "Folk and Indie",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://files.catbox.moe/i9b6ew.mp3",
+"title": "Sleeping In The Cold Below",
+"duration": 2110,
+"artist": "Warframe",
 "genre": "Folk and Indie",
 "secret": false,
 "lobby": false,

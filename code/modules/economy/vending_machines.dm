@@ -284,7 +284,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/fruitbar = 16,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 8,
 					/obj/item/weapon/reagent_containers/pill/diet = 8,
-					///obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal, //CHOMPedit nah
 					/obj/item/weapon/towel/random = 8,
 					/obj/item/toy/tennis = 4)
 
@@ -296,7 +296,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/fruitbar = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 5,
 					/obj/item/weapon/reagent_containers/pill/diet = 25,
-					///obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //CHOMPedit nah
 					/obj/item/weapon/towel/random = 20,
 					/obj/item/toy/tennis = 15)
 	//VOREStation Edit End
@@ -1229,6 +1229,7 @@
 		/obj/item/clothing/under/rank/security = 5,
 		/obj/item/clothing/under/rank/security2 = 5,
 		/obj/item/clothing/under/rank/security/turtleneck = 5,
+		/obj/item/clothing/under/rank/security/modern = 5,
 		/obj/item/clothing/under/rank/security/skirt = 5,
 		/obj/item/clothing/shoes/boots/jackboots = 5,
 		/obj/item/clothing/head/soft/sec = 5,

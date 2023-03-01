@@ -2,9 +2,9 @@
 // For some reason, suit and uniform already has this funcitonality, but shoes do not.
 
 //Duplicate defines so the code below can compile. See non-modular update_icons.dm for proper placement.
-#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
-#define SHOES_LAYER				12		//Shoe-slot item
-#define VORE_BELLY_LAYER		32		//Should be the same that it is in update_icons.dm
+#define SHOES_LAYER_ALT			10		//Shoe-slot item (when set to be under uniform via verb)
+#define SHOES_LAYER				13		//Shoe-slot item
+#define VORE_BELLY_LAYER		33		//Should be the same that it is in update_icons.dm
 
 /mob/living/carbon/human/update_inv_shoes()
 	//. = ..()
@@ -16,7 +16,7 @@
 
 	for(var/f in list(BP_L_FOOT, BP_R_FOOT))
 		var/obj/item/organ/external/foot/foot = get_organ(f)
-		if(istype(foot) && foot.is_hidden_by_tail()) //If either foot is hidden by the tail, don't render footwear.
+		if(istype(foot) && foot.is_hidden_by_sprite_accessory()) //If either foot is hidden by the tail, don't render footwear.
 			return
 
 	var/obj/item/clothing/shoes/shoe = shoes
@@ -87,7 +87,8 @@
 /mob/living/carbon/human/proc/get_vore_tail_image()
 	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][struggle_anim_taur ? "" : " idle"]")
+		var/loaf_alt = lying && tail_style:belly_variant_when_loaf
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
 		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16
@@ -103,3 +104,58 @@
 		spawn(12)
 			struggle_anim_taur = FALSE
 			update_vore_tail_sprite()
+
+/mob/living/carbon/human/proc/GetAppearanceFromPrefs(var/flavourtext, var/oocnotes)
+	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
+	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
+	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
+	if(client.prefs)
+		client.prefs.copy_to(Dummy)
+		//Important, since some sprites only work for specific species
+		/*	Probably not needed anymore since impersonate_bodytype no longer exists
+		if(Dummy.species.base_species == "Promethean")
+			impersonate_bodytype = "Human"
+		else
+			impersonate_bodytype = Dummy.species.base_species
+		*/
+		custom_species = Dummy.custom_species
+		var/list/traits = dna.species_traits.Copy()
+		dna = Dummy.dna.Clone()
+		dna.species_traits.Cut()
+		dna.species_traits = traits.Copy()
+		UpdateAppearance()
+		icon = Dummy.icon
+		if(flavourtext)
+			flavor_texts = client.prefs.flavor_texts.Copy()
+		if(oocnotes)
+			ooc_notes = client.prefs.metadata
+	qdel(Dummy)
+
+/*	Alternative version of the above proc, incase it turns out cloning our dummy mob's DNA is an awful, terrible bad idea.
+Would need to fix this proc up to work as smoothly as the above proc, though.
+/mob/living/carbon/human/proc/GetAppearanceFromPrefs()
+	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
+	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
+	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
+	if(client.prefs)
+		client.prefs.copy_to(Dummy)
+		//Important, since some sprites only work for specific species
+		if(Dummy.species.base_species == "Promethean")
+			impersonate_bodytype = "Human"
+		else
+			impersonate_bodytype = Dummy.species.base_species
+		custom_species = Dummy.custom_species
+		for(var/tag in Dummy.dna.body_markings)
+			var/obj/item/organ/external/E = organs_by_name[tag]
+			if(E)
+				E.markings.Cut()
+				var/list/marklist = Dummy.dna.body_markings[tag]
+				E.markings = marklist.Copy()
+		UpdateAppearance(Dummy.dna.UI.Copy())
+		icon = Dummy.icon
+	qdel(Dummy)
+*/
+
+/mob/living/carbon/human/update_tail_showing()
+	. = ..()
+	update_vore_tail_sprite()

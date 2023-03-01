@@ -160,8 +160,9 @@
 	origin_tech = list(TECH_POWER = 4, TECH_BIO = 5)
 	icon = 'icons/mob/slimes.dmi' //'icons/obj/harvest.dmi'
 	icon_state = "yellow slime extract" //"potato_battery"
-	description_info = "This 'cell' holds a max charge of 10k and self recharges over time."
-	maxcharge = 10000
+	description_info = "This 'cell' holds a max charge of 20k and self recharges over time."
+	maxcharge = 20000
+	charge_amount = 1000 // 5%.
 	matter = null
 	self_recharge = TRUE
 	standard_overlays = FALSE

@@ -307,9 +307,7 @@
 /area/submap/Manor1)
 "bi" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken0"
-	},
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bj" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -328,10 +326,6 @@
 /obj/item/clothing/accessory/sweater/blue,
 /turf/simulated/floor/carpet/blucarpet,
 /area/submap/Manor1)
-"bn" = (
-/obj/structure/window/reinforced/full,
-/turf/template_noop,
-/area/submap/Manor1)
 "bo" = (
 /obj/item/weapon/material/twohanded/baseballbat/metal,
 /turf/simulated/floor/carpet/blucarpet,
@@ -343,15 +337,6 @@
 "bq" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"br" = (
-/obj/structure/bed/chair/comfy/purp{
-	dir = 4;
-	icon_state = "comfychair_preview"
-	},
-/turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken5"
-	},
 /area/submap/Manor1)
 "bs" = (
 /obj/structure/table,
@@ -396,6 +381,11 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
 /obj/item/clothing/head/hood/winter,
 /obj/item/clothing/shoes/boots/winter/climbing,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bz" = (
@@ -455,13 +445,18 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/pottedplant/drooping,
 /obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/pottedplant/dead,
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/material/sword,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bJ" = (
@@ -566,7 +561,7 @@
 /obj/structure/closet/cabinet,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/storage/firstaid/combat,
+/obj/random/energy,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cd" = (
@@ -605,9 +600,7 @@
 /obj/random/contraband,
 /obj/random/contraband/nofail,
 /obj/random/cash/huge,
-/obj/item/stack/material/durasteel{
-	amount = 18
-	},
+/obj/item/weapon/material/sword,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cj" = (
@@ -641,6 +634,7 @@
 /obj/item/stack/material/tritium{
 	amount = 20
 	},
+/obj/item/weapon/cell/super,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "co" = (
@@ -800,6 +794,15 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
+"dH" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/obj/effect/spider/stickyweb/dark,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
 "eq" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
@@ -900,6 +903,11 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
+"iX" = (
+/obj/structure/table/woodentable,
+/obj/random/projectile/shotgun,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
 "ja" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
@@ -924,6 +932,7 @@
 "jr" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/sandwich,
+/obj/item/weapon/storage/firstaid/combat,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "jD" = (
@@ -938,6 +947,14 @@
 	icon_state = "wooden_chair"
 	},
 /obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
+"jJ" = (
+/obj/structure/flora/pottedplant/dead,
+/obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "jK" = (
@@ -1237,6 +1254,9 @@
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/spider/stickyweb,
 /obj/item/weapon/gun/projectile/gyropistol,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "GM" = (
@@ -1316,6 +1336,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
+"Lv" = (
+/obj/structure/table/woodentable,
+/obj/random/drinksoft,
+/obj/effect/spider/stickyweb,
+/obj/item/stack/material/durasteel{
+	amount = 3
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
 "LR" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked,
@@ -1357,7 +1386,7 @@
 "ND" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/material/sharpeningkit,
+/obj/item/weapon/whetstone,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Oo" = (
@@ -1477,6 +1506,11 @@
 "VY" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/hydro,
+/area/submap/Manor1)
+"WG" = (
+/obj/structure/table/woodentable,
+/obj/random/medical,
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "WS" = (
 /obj/effect/spider/stickyweb,
@@ -1737,8 +1771,8 @@ aa
 aa
 aa
 ab
-bn
-bn
+ac
+ac
 ab
 aa
 aa
@@ -2442,7 +2476,7 @@ ar
 ar
 an
 ab
-aI
+jJ
 aK
 ag
 ag
@@ -2536,7 +2570,7 @@ DL
 Sx
 Sy
 RI
-jr
+eI
 al
 bh
 aA
@@ -2574,7 +2608,7 @@ aV
 al
 kb
 sD
-Jn
+dH
 jd
 xH
 al
@@ -2784,7 +2818,7 @@ HJ
 gY
 LR
 RI
-Sy
+Lv
 fx
 jc
 sD
@@ -2830,7 +2864,7 @@ kb
 al
 SC
 al
-eI
+jr
 jd
 bD
 aA
@@ -2904,7 +2938,7 @@ aq
 aq
 ag
 ab
-aI
+jJ
 aK
 aK
 ag
@@ -3509,7 +3543,7 @@ ab
 RX
 eT
 ab
-al
+iX
 bl
 bp
 bw
@@ -3593,7 +3627,7 @@ eA
 KN
 an
 ab
-al
+WG
 ag
 ag
 ag
@@ -3627,7 +3661,7 @@ ab
 ab
 ab
 ag
-br
+bx
 ML
 bC
 ab

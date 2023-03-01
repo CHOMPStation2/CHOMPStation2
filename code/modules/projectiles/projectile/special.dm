@@ -48,7 +48,7 @@
 	hud_state = "rocket_fire"
 
 /obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
-	explosion(target, -1, 0, 2)
+	explosion(target, -1, 0, 2, 0, 0) //CHOMPEdit - Don't spam admins
 	..()
 
 /obj/item/projectile/temp

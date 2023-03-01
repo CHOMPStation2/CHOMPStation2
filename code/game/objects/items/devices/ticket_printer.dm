@@ -3,8 +3,10 @@
 	desc = "It prints security citations!"
 	icon = 'icons/obj/device_vr.dmi'
 	icon_state = "sec_ticket_printer"
+	slot_flags = SLOT_BELT | SLOT_HOLSTER
 	var/print_cooldown = 1 MINUTE
 	var/last_print
+	w_class = ITEMSIZE_SMALL //CHOMP Add because something so small, trivial, and used for silly RP should not be practically gigantic.
 
 /obj/item/device/ticket_printer/attack_self(mob/user)
 	. = ..()

@@ -91,15 +91,15 @@
 	icon_state = "pilot_headset_alt"
 
 /obj/item/device/radio/headset/explorer
-	name = "explorer's headset"
-	desc = "Headset used by explorers for exploring. Access to the explorer channel."
+	name = "explorer's headset" //CHOMP explo keep
+	desc = "Headset used by explorers for exploring. Access to the explorer channel." //CHOMP explo keep
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/explorer
 
 /obj/item/device/radio/headset/explorer/alt
-	name = "explorer's bowman headset"
-	desc = "Bowman headset used by explorers for exploring. Access to the explorer channel."
+	name = "explorer's bowman headset" //CHOMP explo keep
+	desc = "Bowman headset used by explorers for exploring. Access to the explorer channel." //CHOMP explo keep
 	icon_state = "exp_headset_alt"
 
 /obj/item/device/radio/headset/sar
@@ -114,12 +114,14 @@
 	desc = "A bowman headset for field medics."
 	icon_state = "sar_headset_alt"
 
+ //CHOMP explo removed wide comment field
 /obj/item/device/radio/headset/volunteer
 	name = "volunteer's headset"
-	desc = "A headset used by volunteers to expedition teams, has access to the exploration channel."
+	desc = "A headset used by volunteers to expedition teams, has access to the exploration channel." //CHOMP explo keep
 	icon_state = "pilot_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/explorer
+ //CHOMP explo keep removed wide comment field end
 
 /obj/item/device/radio/headset/talon
 	name = "talon headset"

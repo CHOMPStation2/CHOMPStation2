@@ -1,6 +1,3 @@
-/datum/sprite_accessory/marking
-	var/hide_body_parts = list()
-
 /datum/sprite_accessory/marking/ch/anthrovirus_ra
 	name = "Anthro Virus (Right Arm)"
 	icon_state = "anthrovirus"

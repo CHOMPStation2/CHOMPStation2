@@ -291,7 +291,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/device/camera,

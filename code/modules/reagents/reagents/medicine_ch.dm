@@ -194,3 +194,21 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(12 * removed * chem_effective, 0)
+
+/datum/reagent/nutriment/glucose/galactose
+	name = "Galactose"
+	id = "galactose"
+	description = "A clear sweet tasting fluid derived from lactose that is not as dense as glucose for IV application"
+	nutriment_factor = 5 //1/6 of glucose
+	taste_description = "sweetness"
+	color = "#ffffff"
+	overdose = 45
+
+/datum/reagent/nutriment/glucose/galactose/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	M.eye_blurry = min(20, max(0, M.eye_blurry + 10))
+	if(prob(10)) // 1 in 10 per tick
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/internal/brain/br = H.internal_organs_by_name[O_BRAIN] //Give brain damage spaceman, AKA no change at all
+		br?.take_damage(1)
+		to_chat(M, "<span class='warning'>You feel extremely jittery!</span>")

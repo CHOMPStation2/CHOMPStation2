@@ -153,6 +153,7 @@
 	containertype = /obj/structure/closet/crate/thinktronic
 	containername = "Holoplant crate"
 
+/* CHOMPedit, moved to medical.dm in modular folder
 /datum/supply_pack/misc/glucose_hypos
 	name = "Glucose Hypoinjectors"
 	contains = list(
@@ -161,7 +162,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/zenghu
 	containername = "Glucose Hypo Crate"
-
+*/
 /datum/supply_pack/misc/mre_rations
 	num_contained = 6
 	name = "Emergency - MREs"

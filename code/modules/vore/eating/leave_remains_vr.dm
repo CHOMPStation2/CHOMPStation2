@@ -24,6 +24,24 @@
 	skull_type = /obj/item/weapon/digestion_remains/skull/teshari
 /datum/species/vox
 	skull_type = /obj/item/weapon/digestion_remains/skull/vox
+//CHOMPadd start
+/datum/species/monkey
+	skull_type = /obj/item/weapon/digestion_remains/skull
+/datum/species/monkey/tajaran
+	skull_type = /obj/item/weapon/digestion_remains/skull/tajaran
+/datum/species/monkey/unathi
+	skull_type = /obj/item/weapon/digestion_remains/skull/unathi
+/datum/species/monkey/skrell
+	skull_type = /obj/item/weapon/digestion_remains/skull/skrell
+/datum/species/monkey/shark
+	skull_type = /obj/item/weapon/digestion_remains/skull/akula
+/datum/species/monkey/sparra
+	skull_type = /obj/item/weapon/digestion_remains/skull/rapala
+/datum/species/monkey/vulpkanin
+	skull_type = /obj/item/weapon/digestion_remains/skull/vulpkanin
+/datum/species/monkey/sergal
+	skull_type = /obj/item/weapon/digestion_remains/skull/sergal
+//CHOMPadd end.
 
 /obj/belly/proc/handle_remains_leaving(var/mob/living/M)
 	if(!ishuman(M))	//Are we even humanoid?
@@ -35,27 +53,27 @@
 
 	var/bones_amount = rand(2,3) //some random variety in amount of bones left
 	if(prob(20))	//ribcage surviving whole is some luck
-		new /obj/item/weapon/digestion_remains/ribcage(src,owner)
+		new /obj/item/weapon/digestion_remains/ribcage(src, owner, H) //CHOMPEdit
 		bones_amount--
 
 	while(bones_amount)	//throw in the rest
-		new /obj/item/weapon/digestion_remains(src,owner)
+		new /obj/item/weapon/digestion_remains(src, owner, H) //CHOMPEdit
 		bones_amount--
 
 	var/skull_amount = 1
 	if(H.species.skull_type)
-		new H.species.skull_type(src, owner)
+		new H.species.skull_type(src, owner, H) //CHOMPEdit
 		skull_amount--
-	
+
 	if(skull_amount && H.species.selects_bodytype)
 		// We still haven't found correct skull...
 		if(H.species.base_species == SPECIES_HUMAN)
-			new /obj/item/weapon/digestion_remains/skull/unknown(src,owner)
+			new /obj/item/weapon/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
 		else
-			new /obj/item/weapon/digestion_remains/skull/unknown/anthro(src,owner)
+			new /obj/item/weapon/digestion_remains/skull/unknown/anthro(src, owner, H) //CHOMPEdit
 	else if(skull_amount)
 		// Something entirely different...
-		new /obj/item/weapon/digestion_remains/skull/unknown(src,owner)
+		new /obj/item/weapon/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
 
 
 /obj/item/weapon/digestion_remains
@@ -70,11 +88,15 @@
 	var/pred_ckey
 	var/pred_name
 
-/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred)
+/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey
 		pred_name = pred?.name
+		if(prey && isliving(prey) && prey.size_multiplier != 1) //CHOMPAdd
+			icon_scale_x = prey.size_multiplier
+			icon_scale_y = prey.size_multiplier
+			update_transform()
 
 /obj/item/weapon/digestion_remains/attack_self(var/mob/user)
 	if(user.a_intent == I_HURT)

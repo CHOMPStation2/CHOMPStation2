@@ -91,6 +91,7 @@
 	adjustFireLoss(-0.2)
 	adjustCloneLoss(-0.2)
 	adjustBruteLoss(-0.2)
+	adjustHalLoss(-6) // HalLoss ticks down FAST
 //ChompAdd Ends
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
@@ -403,6 +404,7 @@
 	blob.ooc_notes = ooc_notes
 	blob.transforming = FALSE
 	blob.name = name
+	blob.real_name = real_name //CHOMPEdit
 	blob.nutrition = nutrition
 	blob.color = rgb(r_skin, g_skin, b_skin)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
@@ -513,9 +515,9 @@
 		B.owner = src
 
 	//vore_organs.Cut()
-	
+
 //ChompEdit begin.  And let's drop them again.
-//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) 
+//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand)
 //	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
 
 	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)

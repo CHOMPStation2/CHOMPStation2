@@ -96,6 +96,7 @@
 /datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.pass_flags = PASSTABLE
+	H.verbs |= /mob/living/proc/toggle_pass_table
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"

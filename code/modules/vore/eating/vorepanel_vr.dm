@@ -181,6 +181,7 @@
 			// "messages" // TODO
 			"can_taste" = selected.can_taste,
 			"egg_type" = selected.egg_type,
+			"egg_name" = selected.egg_name, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -238,6 +239,7 @@
 		//CHOMPEdit END
 
 		selected_list["egg_type"] = selected.egg_type
+		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
 		selected_list["contaminate_color"] = null
@@ -1093,7 +1095,9 @@
 							var/mob/living/carbon/human/h = l
 							thismuch = thismuch * h.species.digestion_nutrition_modifier
 						l.adjust_nutrition(thismuch)
-					b.handle_digestion_death(ourtarget)
+					ourtarget.death()		// To make sure all on-death procs get properly called
+					if(ourtarget)
+						b.handle_digestion_death(ourtarget)
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
 						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your absorb attempt.</span>")
@@ -1198,6 +1202,13 @@
 				return FALSE
 			host.vore_selected.egg_type = new_egg_type
 			. = TRUE
+		if("b_egg_name") //CHOMPAdd Start
+			var/new_egg_name = html_encode(tgui_input_text(usr,"Custom Egg Name (Leave empty for default egg name)","New Egg Name"))
+			if(length(new_egg_name) > BELLIES_NAME_MAX)
+				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
+				return FALSE
+			host.vore_selected.egg_name = new_egg_name
+			. = TRUE //CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
 

@@ -1,3 +1,7 @@
+/obj/item/organ/external
+	var/skip_robo_icon = FALSE //CHOMPStation edit - to force it to use the normal species icon
+	var/digi_prosthetic = FALSE //is it a prosthetic that can be digitigrade
+
 //new function to check for markings
 /obj/item/organ/external/proc/is_hidden_by_markings()
 	//code that checked all limbs.
