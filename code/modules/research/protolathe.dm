@@ -123,7 +123,7 @@
 	if(busy)
 		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
 		return 1
-	if(!LAZYLEN(LockedDesigns) && default_deconstruction_screwdriver(user, O))//CHOMPADDITION Locked lathes are hard coded
+	if(!LAZYLEN(LockedDesigns) && default_deconstruction_screwdriver(user, O))//CHOMPADDITION Locked lathes are hard coded 
 		if(linked_console)
 			linked_console.linked_lathe = null
 			linked_console = null
