@@ -166,9 +166,9 @@
 	var/disable_hud = FALSE
 	var/colorization_enabled = TRUE //CHOMPedit
 	var/belly_fullscreen_color = "#823232"
-	var/belly_fullscreen_color2 = "#823232"
+	var/belly_fullscreen_color2 = "#FFFFFF"
 	var/belly_fullscreen_color3 = "#823232"
-	var/belly_fullscreen_color4 = "#823232"
+	var/belly_fullscreen_color4 = "#FFFFFF"
 	var/belly_fullscreen_alpha = 255
 
 
