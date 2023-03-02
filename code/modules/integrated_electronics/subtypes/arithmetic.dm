@@ -336,7 +336,7 @@
 	pull_data()
 	var/incoming = get_pin_data(IC_INPUT, 1)
 	if(!isnull(incoming))
-		result = result + i
+		result = incoming + i
 	else if(!incoming)
 		result = result
 
