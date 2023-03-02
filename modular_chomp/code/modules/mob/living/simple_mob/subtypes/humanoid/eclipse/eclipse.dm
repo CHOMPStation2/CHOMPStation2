@@ -10,7 +10,7 @@
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "syndicate"
 	icon_living = "syndicate"
-	icon_dead = "statis_gem"
+	icon_dead = "statisgem"
 	icon_gib = "syndicate_gib"
 
 	faction = "eclipse"
@@ -48,8 +48,6 @@
 	max_n2 = 0
 	minbodytemp = 0
 	heat_damage_per_tick = 0
-
-	corpse = /obj/effect/landmark/mobcorpse/syndicatesoldier
 
 	projectiletype = /obj/item/projectile/bullet/pistol/medium.
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
@@ -131,6 +129,7 @@
 	armor_soak = list(melee = 0, bullet = 0, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
+	name = "Solar Eclipse Tesla Serpent"
 	health = 125
 	maxHealth = 125
 	icon_state = "eclipse_tesla"
@@ -140,6 +139,7 @@
 	projectiletype = /obj/item/projectile/energy/electrode/eclipse
 
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff
+	name = "Solar Eclipse Inferno Moth"
 	health = 90
 	maxHealth = 90
 	icon_state = "eclipse_moth"
@@ -192,6 +192,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
+	name = "Solar Eclipse Sniper"
 	health = 75
 	maxHealth = 75
 	movement_cooldown = 1
@@ -248,6 +249,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation
+	name = "Solar Eclipse Irradiator"
 	health = 150
 	maxHealth = 150
 	glow_toggle = TRUE
@@ -258,7 +260,6 @@
 
 	projectiletype = /obj/item/projectile/energy/declone/burn
 	var/rads = 25
-	/obj/item/weapon/grenade/empgrenade
 
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation/handle_special()
 	if(stat != DEAD)
@@ -278,6 +279,7 @@
 	armor_soak = list(melee = 15, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
+	name = "Lunar Eclipse Silver Serpent"
 	health = 125
 	maxHealth = 125
 	reload_max = 15
@@ -311,6 +313,7 @@
 		..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
+	name = "Lunar Eclipse Shotgunner"
 	health = 90
 	maxHealth = 90
 	reload_max = 2
@@ -323,6 +326,7 @@
 	ranged_attack_delay = 0.5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
+	name = "Lunar Eclipse Judge"
 	health = 75
 	maxHealth = 75
 	icon_state = "eclipse_shottesh"
@@ -337,6 +341,7 @@
 	base_attack_cooldown = 0
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
+	name = "Lunar Eclipse Ravanger"
 	health = 150
 	maxHealth = 150
 	icon_state = "eclipse_ravanger"
@@ -394,6 +399,7 @@
 /////////////////////////////////////////////
 
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound
+	name = "Solar Eclipse Hound"
 	health = 200
 	maxHealth = 200
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
@@ -405,12 +411,14 @@
 	reload_max = 5
 	icon_state = "eclipse_hound"
 	icon_living = "eclipse_hound"
+	size_multiplier = 1.25
 	var/poison_chance = 100
 	var/poison_per_bite = 8
 	var/poison_type = "stoxin"
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel
+	name = "Lunar Eclipse Wheel"
 	health = 200
 	maxHealth = 200
 	melee_damage_lower = 15
@@ -507,6 +515,7 @@
 //Mecha Killers//
 /////////////////
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian
+	name = "Solar Eclipse Guardian"
 	projectiletype = /obj/item/projectile/ion
 	icon_state = "eclipse_guardian"
 	icon_living = "eclipse_guardian"
@@ -525,6 +534,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
+	name = "Lunar Eclipse Punnler"
 	projectiletype = /obj/item/projectile/bullet/shotgun/ion/eclipse
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 20
@@ -534,6 +544,7 @@
 	icon_state = "eclipse_pummler"
 	icon_living = "eclipse_pummler"
 	reload_max = 25
+	size_multiplier = 1.5
 	var/poison_per_bite = 5
 	var/poison_type = "shredding_nanites"
 	var/poison_chance = 50
