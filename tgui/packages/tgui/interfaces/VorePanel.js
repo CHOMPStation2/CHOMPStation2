@@ -796,6 +796,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
     belly_fullscreen_color,
     belly_fullscreen_color2,
     belly_fullscreen_color3,
+    belly_fullscreen_color4,
     belly_fullscreen_alpha,
     mapRef,
     colorization_enabled,
@@ -955,6 +956,12 @@ const VoreSelectedBellyVisuals = (props, context) => {
             icon="eye-dropper"
             onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color3', val: null })}>
             Select Color 3
+          </Button>
+          <Box backgroundColor={belly_fullscreen_color4} width="20px" height="20px" />
+          <Button
+            icon="eye-dropper"
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color4', val: null })}>
+            Select Color 4
           </Button>
           <Button
             icon="eye-dropper"

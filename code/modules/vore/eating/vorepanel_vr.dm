@@ -202,6 +202,7 @@
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
 			"belly_fullscreen_color3" = selected.belly_fullscreen_color3,
+			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
@@ -276,6 +277,7 @@
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
 		selected_list["belly_fullscreen_color2"] = selected.belly_fullscreen_color2
 		selected_list["belly_fullscreen_color3"] = selected.belly_fullscreen_color3
+		selected_list["belly_fullscreen_color4"] = selected.belly_fullscreen_color4
 		selected_list["belly_fullscreen_alpha"] = selected.belly_fullscreen_alpha
 
 		if(selected.colorization_enabled)
@@ -1686,6 +1688,12 @@
 			var/newcolor3 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3) as color|null
 			if(newcolor3)
 				host.vore_selected.belly_fullscreen_color3 = newcolor3
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_fullscreen_color4")
+			var/newcolor4 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color4) as color|null
+			if(newcolor4)
+				host.vore_selected.belly_fullscreen_color4 = newcolor4
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_alpha")

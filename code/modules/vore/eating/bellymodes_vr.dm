@@ -214,7 +214,7 @@
 				L.Weaken(5)
 
 			// Fullscreen overlays
-			//vore_fx(L)	//Don't update this every single process tick, damn.
+			//vore_fx(L)	//CHOMPEdit - Don't update this every single process tick, damn.
 
 			//Handle 'human'
 			if(ishuman(L))
