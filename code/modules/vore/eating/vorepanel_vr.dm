@@ -1697,7 +1697,7 @@
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Protean Armor",0,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Vore Alpha",255,255,0,0,1)
 			if(newalpha)
 				host.vore_selected.belly_fullscreen_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
