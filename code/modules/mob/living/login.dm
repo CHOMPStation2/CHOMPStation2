@@ -66,7 +66,7 @@
 					voice_sounds_list = goon_speak_roach_sound
 				if("goon speak skelly")
 					voice_sounds_list = goon_speak_skelly_sound
-		*/CHOMPRemval, redundant voice selector
+		*/ //CHOMPRemval, redundant voice selector
 		else
 			voice_sounds_list = talk_sound
 	//VOREStation Add End
