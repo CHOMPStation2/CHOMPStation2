@@ -216,11 +216,11 @@
 	inputs = list(	"target ref",
 					"size" = IC_PINTYPE_NUMBER)
 	outputs = list()
-	activators = list("set size" = IC_PINTYPE_PULSE_IN,"size set" = IC_PINTYPE_PULSE_OUT)
+	activators = list("set size" = IC_PINTYPE_PULSE_IN,"on size set" = IC_PINTYPE_PULSE_OUT)
 	spawn_flags = IC_SPAWN_RESEARCH
 	power_draw_per_use = 100
 
-/obj/item/integrated_circuit/manipulation/Size/do_work()
+/obj/item/integrated_circuit/manipulation/size/do_work()
 	pull_data()
 	var/mob/living/target = get_pin_data(IC_INPUT, 1)
 	var/size = get_pin_data(IC_INPUT, 2)
