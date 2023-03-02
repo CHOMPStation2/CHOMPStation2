@@ -315,8 +315,8 @@
 	maxHealth = 90
 	reload_max = 2
 
-	icon_state = "eclipse_shottesh"
-	icon_living = "eclipse_shottesh"
+	icon_state = "eclipse_shotwuff"
+	icon_living = "eclipse_shotwuff"
 
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun/eclipse
 
@@ -325,8 +325,9 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
 	health = 75
 	maxHealth = 75
-	icon_state = "eclipse_shotwuff"
-	icon_living = "eclipse_shotwuff"
+	icon_state = "eclipse_shottesh"
+	icon_living = "eclipse_shottesh"
+
 
 	projectiletype = /obj/item/projectile/bullet/shotgun
 	reload_max = 6
