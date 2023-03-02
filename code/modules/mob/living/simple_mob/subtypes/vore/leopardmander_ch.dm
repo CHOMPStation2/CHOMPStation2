@@ -50,15 +50,10 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	// CHOMPAdd: :c
+	species_sounds = "Canine" // Argue about whether it should have canine or feline later
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-
-/mob/living/simple_mob/vore/leopardmander/Initialize()
-	pain_sound = get_species_sound(canine_sounds["pain"])
-	death_sound = get_species_sound(canine_sounds["death"])
-
-	. = ..()
-// CHOMPAdd End
+	// CHOMPAdd End
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"

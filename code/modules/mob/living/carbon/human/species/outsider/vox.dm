@@ -28,19 +28,16 @@
 
 	scream_verb_1p = "shriek"
 	scream_verb_3p = "shrieks"
-	male_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
-	female_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
-	male_cough_sounds = list('sound/voice/shriekcough.ogg')
-	female_cough_sounds = list('sound/voice/shriekcough.ogg')
-	male_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
-	female_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
-	// CHOMPEdit Start: Missing Sounds, so limited/substitutes for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = list('sound/voice/shriek1.ogg')
-	female_pain_sound = list('sound/voice/shriek1.ogg')
-	male_death_sound = null
-	female_death_sound = null
+	pain_verb_1p = "shriek"
+	pain_verb_3p = "shrieks"
+	species_sounds = "Vox"
+	// CHOMPedit: Species Sounds Standardization
+	// male_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
+	// female_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
+	// male_cough_sounds = list('sound/voice/shriekcough.ogg')
+	// female_cough_sounds = list('sound/voice/shriekcough.ogg')
+	// male_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
+	// female_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
 	// CHOMPEdit End
 
 	warning_low_pressure = 50

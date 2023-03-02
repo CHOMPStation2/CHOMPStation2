@@ -33,10 +33,9 @@
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 	center_offset = 0
 
-	pain_sound = list('sound/voice/raccoon.ogg')
+	species_sounds = "Raccoon"
 	pain_emote_1p = list("chitter")
 	pain_emote_3p = list("chitters")
-	death_sound = list('sound/voice/raccoon.ogg')
 
 /mob/living/simple_mob/animal/passive/raccoon_ch/Initialize()
 	. = ..()

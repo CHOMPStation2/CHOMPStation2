@@ -25,7 +25,6 @@
 	var/realistic = FALSE // If true, things like bullets and weapons will hit it, to be a bit more convincing from a distance.
 
 	can_pain_emote = FALSE // CHOMPEdit: Hallucinations can't feel pain and shouldn't take damage anyways, but, sanity
-	death_sound = null // CHOMPEdit: Hallucinations shouldn't trigger death sounds anyways, but, sanity
 
 /mob/living/simple_mob/illusion/update_icon() // We don't want the appearance changing AT ALL unless by copy_appearance().
 	return

@@ -28,16 +28,10 @@
 	var/obj/item/inventory_back
 
 	// CHOMPAdd: :c
+	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 
-// CHOMPAdd: Has to be done on Init or New, bc we can't set a var to a non-constant
-/mob/living/simple_mob/animal/passive/dog/Initialize()
-	pain_sound = get_species_sound(canine_sounds["pain"])
-	death_sound = get_species_sound(canine_sounds["death"])
-
-	. = ..()
-// CHOMPAdd End
 
 /mob/living/simple_mob/animal/passive/dog/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(istype(O, /obj/item/weapon/newspaper))

@@ -21,16 +21,9 @@
 	min_age = 18
 	max_age = 110
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	species_sounds = "Canine" // CHOMPEdit: Species sounds
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "There are two subspecies of Sergal; Southern and Northern. Northern sergals are a highly aggressive race \
 	that lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; \
@@ -99,16 +92,8 @@
 	min_age = 18
 	max_age = 110
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -163,16 +148,9 @@
 	min_age = 18
 	max_age = 110
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -221,16 +199,9 @@
 	min_age = 18
 	max_age = 110
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
+	species_sounds = "Vulpine" // CHOMPEdit: Species Sounds
 
 	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
@@ -287,17 +258,13 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
 
-	male_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	female_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// male_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// female_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
 	// CHOMPEdit Start: Add Pain/Gasp/Death sounds
-	male_pain_sound = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg')
-	female_pain_sound = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg')
-	male_gasp_sound = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg')
-	female_gasp_sound = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg')
-	male_death_sound = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg')
-	female_death_sound = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg')
 	pain_verb_1p = list("yelp", "growl")
 	pain_verb_3p = list("yelps", "growls")
+
+	species_sounds = "Canine"
 
 	// CHOMPEdit End
 
@@ -491,16 +458,6 @@
 
 	base_color = "#EECEB3"
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
 
 	blurb = "An Avian species, coming from a distant planet, the Rapalas are the very proud race.\
 	Sol researchers have commented on them having a very close resemblance to the mythical race called 'Harpies',\
@@ -529,8 +486,8 @@
 	deform = 'icons/mob/human_races/r_shadekin_vr.dmi'
 	tail = "tail"
 	icobase_tail = 1
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 	blurb = "Very little is known about these creatures. They appear to be largely mammalian in appearance. \
 	Seemingly very rare to encounter, there have been widespread myths of these creatures the galaxy over, \
 	but next to no verifiable evidence to their existence. However, they have recently been more verifiably \
@@ -589,10 +546,12 @@
 
 	//has_glowing_eyes = TRUE			// Applicable through traits.
 
+	/* // CHOMPEdit: Not defined
 	male_cough_sounds = null
 	female_cough_sounds = null
 	male_sneeze_sound = null
 	female_sneeze_sound = null
+	*/
 
 	speech_bubble_appearance = "ghost"
 
@@ -653,16 +612,9 @@
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
+	species_sounds = "Vulpine" // CHOMPEdit: Species Sounds
 
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -695,16 +647,9 @@
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit Scree
-	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	species_sounds = "Xeno"
+	// male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit Scree
+	// female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit
 
 	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
 	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \
@@ -753,6 +698,8 @@
 	// wikilink="https://wiki.vore-station.net/Altevian" //CHOMPedit
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/altevian)
+
+	species_sounds = "Mouse" // CHOMPEdit: Species Sounds
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR

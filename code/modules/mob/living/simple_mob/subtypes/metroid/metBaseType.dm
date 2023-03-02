@@ -63,10 +63,9 @@
 	can_be_drop_prey = FALSE //CHOMP Add
 
 	can_pain_emote = TRUE
-	pain_sound = list('sound/metroid/metroidsee.ogg')
+	species_sounds = "Metroid"
 	pain_emote_1p = list("skree")
 	pain_emote_3p = list("skrees")
-	death_sound = list('sound/metroid/metroiddeath.ogg')
 
 /mob/living/simple_mob/metroid/Initialize()
 	nutrition = 100		//Have them start off pretty hungry still.

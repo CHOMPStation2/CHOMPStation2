@@ -118,17 +118,9 @@
 		)
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	species_sounds = "Spider"
 	pain_emote_1p = list("chitter", "click") //CHOMP Add
 	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
-
-// CHOMPAdd: Has to be done on Init or New, bc we can't set a var to a non-constant
-/mob/living/simple_mob/animal/giant_spider/Initialize()
-	pain_sound = get_species_sound(spider_sounds["pain"])
-	death_sound = get_species_sound(spider_sounds["death"])
-
-	. = ..()
-
-// CHOMPAdd End
 
 /mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
 	if(isliving(A))

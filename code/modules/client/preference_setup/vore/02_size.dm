@@ -124,7 +124,9 @@
 	// var/datum/species/selected_species = GLOB.all_species[pref.species]
 	// if(selected_species.selects_bodytype)
 	. += "<br>"
-	. += "<b>Species Injury Sounds:</b> <a href='?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
+	. += "<b>Species Sounds:</b> <a href='?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
+	. += "<a href='?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
+	. += "<a href='?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
 	. += "<a href='?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
 	. += "<a href='?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
 	. += "<a href='?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
@@ -275,256 +277,101 @@
 	// CHOMPEdit Start: Pain/Scream/Death sounds
 	else if(href_list["species_sound_options"]) // You shouldn't be able to see this option if you don't have the option to select a custom icon base, so we don't need to re-check for safety here.
 		var/list/possible_species_sound_types = species_sound_map
-		testing("Loading species sound types for selection.")
-		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's pain, death, gasp, and scream sounds?", "Species Sounds", possible_species_sound_types)
+		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
 		if(!choice)
 			return TOPIC_REFRESH // No choice? Don't reset our selection
 		else
 			pref.species_sound = choice
-			testing("Setting species sound type to [choice].")
 			return TOPIC_REFRESH
-	else if(href_list["scream_test"])
-		var/datum/species/selected_species = GLOB.all_species[pref.species]
-		// if(selected_species.selects_bodytype)
+	else if(href_list["cough_test"])
 		var/sound/S
-		testing("About to test our voice. User is [user]. Our chosen species sound is [pref.species_sound].")
-		testing("Species Sound map returns [get_species_sound(pref.species_sound)].")
-		testing("We are fetching a sound, and will get [pick(species_sound_map[pref.species_sound["scream"]])].")
-		S = sound(pick(species_sound_map[pref.species_sound["scream"]]))
-		//S = sound(pick(get_species_sound(pref.species_sound["scream"])))
-			/*
-			switch(pref.species_sound)
-				if("Canine")
-					S = sound(pick(canine_sounds["scream"]))
-				if("Feline")
-					S = sound(pick(feline_scream_sounds))
-				if("Cervine")
-					S = sound(pick(cervine_scream_sounds))
-				if("Generic/Human")
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(female_generic_scream_sounds))
-					else
-						S = sound(pick(male_generic_scream_sounds))
-				if("Unset")
-					var/datum/species/os
-					if(!pref.custom_base) // Safety
-						os = selected_species
-					else
-						os = GLOB.all_species[pref.custom_base]
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(os.female_scream_sound))
-					else
-						S = sound(pick(os.male_scream_sound))
-				if("Robotic")
-					S = sound(pick(robot_scream_sounds))
-				if("None" || null)
-					to_chat(user, "<span class='warning'>This set does not have scream sounds!</span>")
-					return TOPIC_REFRESH
-			*/
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["cough"]
+		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			S = sound(pick(get_species_sound(coalesce(pref.species_sound, pref.custom_base, pref.species))["scream"]))
-		if(pref.species_sound == "None" || pref.species_sound["scream"] == null || S == null)
+			oursound = get_species_sound(select_default_species_sound(user))["cough"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have cough sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["sneeze_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["sneeze"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(user))["sneeze"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have sneeze sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["scream_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["scream"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(user))["scream"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have scream sounds!</span>")
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
 		SEND_SOUND(user, S)
 		return TOPIC_REFRESH
-		/*
-		else
-			var/sound/S
-			if(pref.identifying_gender == FEMALE)
-				S = sound(pick(selected_species.female_scream_sound))
-			else
-				S = sound(pick(selected_species.male_scream_sound))
-			if(S == null)
-				to_chat(user, "<span class='warning'>This species does not have scream sounds!</span>")
-				return TOPIC_REFRESH
-			S.frequency = pick(pref.voice_freq)
-			S.volume = 20
-			SEND_SOUND(user, S)
-			return TOPIC_REFRESH
-		*/
-
 	else if(href_list["pain_test"])
-		var/datum/species/selected_species = GLOB.all_species[pref.species]
-		//if(selected_species.selects_bodytype)
 		var/sound/S
-		S = sound(pick(species_sound_map[pref.species_sound["pain"]]))
-		//S = sound(pick(get_species_sound(pref.species_sound["pain"])))
-			/*
-			switch(pref.species_sound)
-				if("Canine")
-					S = sound(pick(canine_pain_sounds))
-				if("Feline")
-					S = sound(pick(feline_pain_sounds))
-				if("Cervine")
-					to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
-					return TOPIC_REFRESH
-				if("Generic/Human")
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(female_generic_pain_sounds))
-					else
-						S = sound(pick(male_generic_pain_sounds))
-				if("Unset")
-					var/datum/species/os
-					if(!pref.custom_base) // Safety
-						os = selected_species
-					else
-						os = GLOB.all_species[pref.custom_base]
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(os.female_pain_sound))
-					else
-						S = sound(pick(os.male_pain_sound))
-				if("Robotic")
-					S = sound(pick(robot_pain_sounds))
-				if("None" || null)
-					to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
-					return TOPIC_REFRESH
-			*/
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["pain"]
+		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			S = sound(pick(get_species_sound(coalesce(pref.species_sound, pref.custom_base, pref.species))["pain"]))
-		if(pref.species_sound == "None" || pref.species_sound["pain"] == null || S == null)
+			oursound = get_species_sound(select_default_species_sound(user))["pain"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
 		SEND_SOUND(user, S)
 		return TOPIC_REFRESH
-		/*
-		else
-			var/sound/S
-			if(pref.identifying_gender == FEMALE)
-				S = sound(pick(selected_species.female_pain_sound))
-			else
-				S = sound(pick(selected_species.male_pain_sound))
-			if(S == null)
-				to_chat(user, "<span class='warning'>This species does not have pain sounds!</span>")
-				return TOPIC_REFRESH
-			S.frequency = pick(pref.voice_freq)
-			S.volume = 20
-			SEND_SOUND(user, S)
-			return TOPIC_REFRESH
-		*/
 	else if(href_list["gasp_test"])
-		var/datum/species/selected_species = GLOB.all_species[pref.species]
-		// if(selected_species.selects_bodytype)
 		var/sound/S
-		S = sound(pick(species_sound_map[pref.species_sound["gasp"]]))
-		//S = sound(pick(get_species_sound(pref.species_sound["gasp"])))
-			/*
-			switch(pref.species_sound)
-				if("Canine")
-					S = sound(pick(canine_gasp_sounds))
-				if("Feline")
-					S = sound(pick(feline_gasp_sounds))
-				if("Cervine")
-					to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
-					return TOPIC_REFRESH
-				if("Generic/Human")
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(female_generic_gasp_sounds))
-					else
-						S = sound(pick(male_generic_gasp_sounds))
-				if("Unset")
-					var/datum/species/os
-					if(!pref.custom_base) // Safety
-						os = selected_species
-					else
-						os = GLOB.all_species[pref.custom_base]
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(os.female_gasp_sound))
-					else
-						S = sound(pick(os.male_gasp_sound))
-				if("Robotic")
-					to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
-					return TOPIC_REFRESH
-				if("None" || null)
-					to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
-					return TOPIC_REFRESH
-			*/
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["gasp"]
+		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			S = sound(pick(get_species_sound(coalesce(pref.species_sound, pref.custom_base, pref.species))["gasp"]))
-		if(pref.species_sound == "None" || pref.species_sound["gasp"] == null || S == null)
+			oursound = get_species_sound(select_default_species_sound(user))["gasp"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
 		SEND_SOUND(user, S)
 		return TOPIC_REFRESH
-		/*
-		else
-			var/sound/S
-			if(pref.identifying_gender == FEMALE)
-				S = sound(pick(selected_species.female_gasp_sound))
-			else
-				S = sound(pick(selected_species.male_gasp_sound))
-			if(S == null)
-				to_chat(user, "<span class='warning'>This species does not have gasp sounds!</span>")
-				return TOPIC_REFRESH
-			S.frequency = pick(pref.voice_freq)
-			S.volume = 20
-			SEND_SOUND(user, S)
-			return TOPIC_REFRESH
-		*/
 	else if(href_list["death_test"])
-		var/datum/species/selected_species = GLOB.all_species[pref.species]
-		// if(selected_species.selects_bodytype)
 		var/sound/S
-		S = sound(pick(species_sound_map[pref.species_sound["death"]]))
-		// S = sound(pick(get_species_sound(pref.species_sound["death"])))
-			/*
-			switch(pref.species_sound)
-				if("Canine")
-					S = sound(pick(canine_death_sounds))
-				if("Feline")
-					S = sound(pick(feline_death_sounds))
-				if("Cervine")
-					S = sound(pick(cervine_death_sounds))
-				if("Generic/Human")
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(female_generic_death_sounds))
-					else
-						S = sound(pick(male_generic_death_sounds))
-				if("Unset")
-					var/datum/species/os
-					if(!pref.custom_base) // Safety
-						os = selected_species
-					else
-						os = GLOB.all_species[pref.custom_base]
-					if(pref.identifying_gender == FEMALE)
-						S = sound(pick(os.female_death_sound))
-					else
-						S = sound(pick(os.male_death_sound))
-				if("Robotic")
-					S = sound(pick(robot_death_sounds))
-				if("None" || null)
-					to_chat(user, "<span class='warning'>This set does not have death sounds!</span>")
-					return TOPIC_REFRESH
-			*/
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["death"]
+		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			S = sound(pick(get_species_sound(coalesce(pref.species_sound, pref.custom_base, pref.species))["death"]))
-		if(pref.species_sound == "None" || pref.species_sound["gasp"] == null || S == null)
-			to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
+			oursound = get_species_sound(select_default_species_sound(user))["death"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have death sounds!</span>")
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
 		SEND_SOUND(user, S)
 		return TOPIC_REFRESH
-		/*
-		else
-			var/sound/S
-			if(pref.identifying_gender == FEMALE)
-				S = sound(pick(selected_species.female_death_sound))
-			else
-				S = sound(pick(selected_species.male_death_sound))
-			if(S == null)
-				to_chat(user, "<span class='warning'>This species does not have death sounds!</span>")
-				return TOPIC_REFRESH
-			S.frequency = pick(pref.voice_freq)
-			S.volume = 20
-			SEND_SOUND(user, S)
-			return TOPIC_REFRESH
-		*/
 	// CHOMPEdit End
 	return ..();

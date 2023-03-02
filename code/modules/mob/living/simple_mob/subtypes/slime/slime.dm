@@ -85,7 +85,7 @@ var/list/_slime_default_emotes = list(
 	can_be_drop_prey = FALSE //CHOMP Add
 
 	// CHOMPAdd: Pain Sounds
-	pain_sound = 'sound/effects/slime_squish.ogg'
+	species_sounds = "Slime"
 	pain_emote_1p = list("squish", "squelch")
 	pain_emote_3p = list("squishes", "squelches")
 	// CHOMPAdd End

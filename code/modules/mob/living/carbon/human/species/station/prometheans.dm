@@ -42,24 +42,17 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 	speech_bubble_appearance = "slime"
 
-	male_cough_sounds = list('sound/effects/slime_squish.ogg')
-	female_cough_sounds = list('sound/effects/slime_squish.ogg')
+	// male_cough_sounds = list('sound/effects/slime_squish.ogg')
+	// female_cough_sounds = list('sound/effects/slime_squish.ogg')
+	species_sounds = "Slime"
 
 	min_age =		1
 	max_age =		16
 
 	economic_modifier = 3
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	gluttonous =	1
 	virus_immune =	1

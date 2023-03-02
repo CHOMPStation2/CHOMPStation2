@@ -262,7 +262,11 @@
 		new_S.copy_species_sounds(new_S, pref.species_sound, pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds
 	*/
 	// CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds.
-	new_S.species_sounds = coalesce(pref.species_sound, pref.custom_base, pref.species)
+	var/species_sounds_to_copy = pref.species_sound // What sounds are we using?
+	if(species_sounds_to_copy == "Unset") // Are we unset?
+		species_sounds_to_copy = select_default_species_sound(pref) // This will also grab gendered versions of the sounds, if they exist.
+
+	new_S.species_sounds = species_sounds_to_copy // Now we send our sounds over to the mob
 
 	if(pref.species == SPECIES_CUSTOM)
 		//Statistics for this would be nice

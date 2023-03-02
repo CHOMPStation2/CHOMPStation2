@@ -39,6 +39,13 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
+	// CHOMPEdit: Species Specific Sounds
+	species_sounds = "Human Male"
+	gender_specific_species_sounds = TRUE
+	species_sounds_male = "Human Male"
+	species_sounds_female = "Human Female"
+	// CHOMPEdit End
+
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/tie_hair)
 
@@ -78,8 +85,9 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit added unathi scream
-	female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit
+	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
+	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
 
 	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
 	pain_verb_3p = list("hisses", "growls") // CHOMPEdit: Pain emotes
@@ -209,15 +217,10 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	female_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	// CHOMPEdit Start: Gasp/Pain/Death Sounds
-	male_gasp_sound = list('modular_chomp/sound/voice/gasp/feline/feline_gasp.ogg')
-	female_gasp_sound = list('modular_chomp/sound/voice/gasp/feline/feline_gasp.ogg')
-	male_pain_sound = list('modular_chomp/sound/voice/pain/feline/feline_pain.ogg')
-	female_pain_sound = list('modular_chomp/sound/voice/pain/feline/feline_pain.ogg')
-	male_death_sound = list('modular_chomp/sound/voice/death/feline/feline_death.ogg')
-	female_death_sound = list('modular_chomp/sound/voice/death/feline/feline_death.ogg')
+	// CHOMPEdit Start: Species sounds
+	species_sounds = "Feline"
+	// male_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	//female_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
 
 	pain_verb_1p = list("hiss", "growl", "yowl") // CHOMPEdit: Unathi pain emotes
 	pain_verb_3p = list("hisses", "growls", "yowls") // CHOMPEdit: Pain emotes
@@ -329,16 +332,8 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	darksight = 4
 	flash_mod = 1.2
@@ -442,16 +437,8 @@
 	min_age = 16
 	max_age = 90
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
 	the high-pressure and post-apocalyptic world of Xohok, Zaddat require an environmental suit called a Shroud \
@@ -571,16 +558,9 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	// CHOMPEdit: For shits and giggles, I want someone to give the Diona plant sounds from like, WoW. lmao
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \

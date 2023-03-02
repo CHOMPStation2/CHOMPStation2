@@ -29,6 +29,7 @@
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 	// CHOMPAdd: Don't think its checked, but just in case
+	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 
@@ -55,8 +56,6 @@
 			color = "#ff9f00"
 		if(9)
 			color = "#393939"
-	pain_sound = get_species_sound(canine_sounds["pain"]) // CHOMPAdd: Pain
-	death_sound = get_species_sound(canine_sounds["death"]) // CHOMPAdd: Pain
 
 /mob/living/simple_mob/otie/zorgoia/feral //gets the pet2tame feature. starts out hostile tho so get gamblin'
 	name = "agressive zorgoia"

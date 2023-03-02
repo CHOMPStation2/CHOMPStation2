@@ -30,8 +30,8 @@
 	breath_type = null
 	poison_type = null
 
-	male_scream_sound = null
-	female_scream_sound = null
+	// male_scream_sound = null
+	// female_scream_sound = null
 
 	virus_immune = 1
 	blood_volume = 0
@@ -58,14 +58,7 @@
 
 	rarity_value = 5
 
-	female_scream_sound = list('modular_chomp/sound/voice/scream_silicon.ogg', 'modular_chomp/sound/voice/android_scream.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream1.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream2.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream3.ogg')
-	male_scream_sound = list('modular_chomp/sound/voice/scream_silicon.ogg', 'modular_chomp/sound/voice/android_scream.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream1.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream2.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream3.ogg')
-	male_gasp_sound = null // Missing gasp sounds
-	female_gasp_sound = null // Missing gasp sounds
-	male_pain_sound = list('modular_chomp/sound/voice/pain/robotic/robot_pain1.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain2.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain3.ogg')
-	female_pain_sound = list('modular_chomp/sound/voice/pain/robotic/robot_pain1.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain2.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain3.ogg')
-	male_death_sound = list('modular_chomp/sound/voice/borg_deathsound.ogg')
-	female_death_sound = list('modular_chomp/sound/voice/borg_deathsound.ogg')
+	species_sounds = "Robotic"
 
 	crit_mod = 4	//Unable to go crit
 	var/obj/item/weapon/rig/protean/OurRig

@@ -32,7 +32,6 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-	death_sound = null // CHOMPEdit: Shouldn't trigger death sounds
 
 /mob/living/simple_mob/blob/speech_bubble_appearance()
 	return "slime"

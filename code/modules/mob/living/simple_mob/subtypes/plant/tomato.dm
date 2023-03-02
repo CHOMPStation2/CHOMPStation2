@@ -31,7 +31,6 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain and shouldn't take damage anyways, but, sanity
-	death_sound = null // CHOMPEdit: Shouldn't trigger death sounds anyways, but, sanity
 
 /decl/mob_organ_names/tomato
 	hit_zones = list("flesh", "leaf", "mouth")

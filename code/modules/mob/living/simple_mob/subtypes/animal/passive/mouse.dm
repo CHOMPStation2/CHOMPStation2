@@ -45,14 +45,13 @@
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
+	species_sounds = "Mouse"
 
 	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
-
-	pain_sound = get_species_sound(mouse_sounds["pain"]) // CHOMP Addition: Pain/etc sounds
 
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide

@@ -9,7 +9,7 @@
 	max_n2 = 0
 
 	// CHOMPAdd: Pain sounds
-	pain_sound = list('sound/voice/shriek1.ogg')
+	species_sounds = "Vox"
 	pain_emote_1p = list("shriek")
 	pain_emote_3p = list("shrieks")
 	// CHOMPAdd End

@@ -91,16 +91,8 @@
 	if(!gibbed && species.death_sound)
 		playsound(src, species.death_sound, 80, 1, 1)
 	*/
-	if(!gibbed && (species.male_death_sound || species.female_death_sound) && !isbelly(loc))
-		var/gender = src.gender
-		if(gender == FEMALE)
-			playsound(src, pick(species.female_death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
-		else // Until we get more, sorry. :c
-			playsound(src, pick(species.male_death_sound), 40, 1, 20, volume_channel = VOLUME_CHANNEL_INJ_DEATH)
-		/*
-		if(HERM) // TBD if we ever get sounds for non male/female. Not a focus rn.
-			playsound(src, species.male_death_sound, 80, 1, 20)
-		*/
+	if(!gibbed && !isbelly(loc))
+		playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), src.species.death_volume, 1, 20, volume_channel = VOLUME_CHANNEL_SPECIES_SOUNDS)
 	// CHOMPEdit End
 
 	if(ticker && ticker.mode)

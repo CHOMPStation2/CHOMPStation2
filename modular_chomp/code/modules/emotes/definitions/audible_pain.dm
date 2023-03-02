@@ -27,37 +27,18 @@
 	..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(H.get_gender() == FEMALE)
-			return list(
-				"sound" = H.species.female_pain_sound,
-				"vol" = 60,
-				"exr" = 10,
-				"volchannel" = VOLUME_CHANNEL_INJ_DEATH
-			)
-		else
-			return list(
-				"sound" = H.species.male_pain_sound,
-				"vol" = 60,
-				"exr" = 10,
-				"volchannel" = VOLUME_CHANNEL_INJ_DEATH
+		var/vol = H.species.pain_volume
+		return list(
+				"sound" = get_species_sound(get_gendered_sound(H))["pain"],
+				"vol" = vol,
+				"exr" = 20,
+				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 			)
 	else
 		var/mob/living/M = user
-		if((M.get_gender() == FEMALE) && M.female_pain_sound) // If our mob has custom sounds per-gender defined, most won't.
-			return list(
-				"sound" = M.female_pain_sound,
-				"vol" = 80,
-				"volchannel" = VOLUME_CHANNEL_INJ_DEATH
-			)
-		else if((M.get_gender() == MALE) && M.male_pain_sound) // If our mob has custom sounds per-gender defined, most won't.
-			return list(
-				"sound" = M.male_pain_sound,
-				"vol" = 80,
-				"volchannel" = VOLUME_CHANNEL_INJ_DEATH
-			)
-		else
-			return list(
-				"sound" = M.pain_sound,
-				"vol" = 80,
-				"volchannel" = VOLUME_CHANNEL_INJ_DEATH
+		return list(
+				"sound" = get_species_sound(get_gendered_sound(M))["pain"],
+				"vol" = 50,
+				"exr" = 20,
+				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 			)

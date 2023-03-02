@@ -22,8 +22,8 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/shadekin, /datum/unarmed_attack/bite/sharp/shadekin)
 	rarity_value = 15	//INTERDIMENSIONAL FLUFFERS
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	inherent_verbs = list(/mob/proc/adjust_hive_range)
 
@@ -63,10 +63,10 @@
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
 	death_message = "phases to somewhere far away!"
-	male_cough_sounds = null
-	female_cough_sounds = null
-	male_sneeze_sound = null
-	female_sneeze_sound = null
+	// male_cough_sounds = null
+	// female_cough_sounds = null
+	// male_sneeze_sound = null
+	// female_sneeze_sound = null
 
 	speech_bubble_appearance = "ghost"
 

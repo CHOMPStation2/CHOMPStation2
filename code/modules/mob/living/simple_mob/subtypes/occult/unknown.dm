@@ -43,7 +43,6 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-	death_sound = null // CHOMPEdit: Shouldn't trigger death sounds
 
 /obj/item/projectile/energy/slow_orb
 	name = "TROJAN"
@@ -320,7 +319,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/bossmob_glitch_fake
 
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-	death_sound = null // CHOMPEdit: Shouldn't trigger death sounds
 
 /mob/living/simple_mob/glitch_boss_fake/strong
 	maxHealth = 100

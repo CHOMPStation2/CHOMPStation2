@@ -19,17 +19,6 @@
 	var/digi_allowed = FALSE
 	var/vanity_base_fit //when shapeshifting using vanity_copy_to, this allows you to have add something so they can go back to their original species fit
 
-	var/species_sounds
-
-	male_scream_sound = null
-	female_scream_sound = null
-	var/male_gasp_sound = null
-	var/female_gasp_sound = null
-	var/male_pain_sound = null
-	var/female_pain_sound = null
-	var/male_death_sound = null
-	var/female_death_sound = null
-
 // Handles non-standard eyes when using a species that utilizes a custom base icon set.
 // Eye data is stored in the head organ, and this needs to be handled specially.
 /datum/species/proc/handle_base_eyes(var/mob/living/carbon/human/H, var/custom_base)
@@ -61,14 +50,3 @@
 	for(var/datum/trait/env_trait in env_traits)
 		env_trait.handle_environment_special(H)
 	return
-
-/datum/species/New()
-	male_scream_sound = get_species_sound(male_generic_sounds["scream"])
-	female_scream_sound = get_species_sound(female_generic_sounds["scream"])
-	male_gasp_sound = get_species_sound(male_generic_sounds["gasp"])
-	female_gasp_sound = get_species_sound(female_generic_sounds["gasp"])
-	male_pain_sound = get_species_sound(male_generic_sounds["pain"])
-	female_pain_sound = get_species_sound(female_generic_sounds["pain"])
-	male_death_sound = get_species_sound(male_generic_sounds["death"])
-	female_death_sound = get_species_sound(female_generic_sounds["death"])
-	..()

@@ -53,13 +53,7 @@
 	// CHOMPAdd: :c
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-
-/mob/living/simple_mob/vore/fennec/Initialize()
-	pain_sound = get_species_sound(canine_sounds["pain"])
-	death_sound = get_species_sound(canine_sounds["death"])
-
-	. = ..()
-// CHOMPAdd End
+	species_sounds = "Vulpine"
 
 // Activate Noms!
 /mob/living/simple_mob/vore/fennec

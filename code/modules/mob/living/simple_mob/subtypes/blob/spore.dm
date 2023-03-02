@@ -31,7 +31,6 @@
 	var/is_infesting = FALSE
 
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-	death_sound = null // CHOMPEdit: Shouldn't trigger death sounds
 
 /datum/say_list/spore
 	emote_see = list("sways", "inflates briefly")

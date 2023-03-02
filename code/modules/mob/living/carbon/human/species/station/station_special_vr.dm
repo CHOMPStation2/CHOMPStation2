@@ -35,16 +35,7 @@
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	species_sounds = "Unset" // CHOMPEdit: Chimera get a default/safety of unset, going off their icon base if there's none overriding.
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
@@ -365,16 +356,9 @@
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
-	// CHOMPEdit Start: Missing Sounds, so none for this race.
-	male_gasp_sound = null
-	female_gasp_sound = null
-	male_pain_sound = null
-	female_pain_sound = null
-	male_death_sound = null
-	female_death_sound = null
-	// CHOMPEdit End
+	species_sounds = "Spider"
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "Vasilissans are a tall, lanky, spider like people. \
 	Each having four eyes, an extra four, large legs sprouting from their back, and a chitinous plating on their body, and the ability to spit webs \
@@ -453,15 +437,10 @@
 	min_age = 18
 	max_age = 200
 
-	male_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	female_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg','modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	// CHOMPEdit Start: Add Pain/Gasp/Death sounds
-	male_pain_sound = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg')
-	female_pain_sound = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg')
-	male_gasp_sound = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg')
-	female_gasp_sound = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg')
-	male_death_sound = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg')
-	female_death_sound = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg')
+	// CHOMPEdit Start: Species Sounds
+	species_sounds = "Canine"
+	// male_scream_sound = null
+	// female_scream_sound = null
 	// CHOMPEdit End
 
 	blurb = "Big buff werewolves. These are a limited functionality event species that are not balanced for regular gameplay. Adminspawn only."

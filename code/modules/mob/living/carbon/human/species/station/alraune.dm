@@ -17,8 +17,8 @@
 	base_species = SPECIES_ALRAUNE
 	selects_bodytype = SELECTS_BODYTYPE_CUSTOM //VOREStation edit
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 	wikilink="https://wiki.chompstation13.net/index.php?title=Alraune" //CHOMPedit: add wiki link
 
 	body_temperature = T20C

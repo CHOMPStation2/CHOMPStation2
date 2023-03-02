@@ -12,17 +12,10 @@
 /decl/emote/audible/gasp/get_emote_sound(var/atom/user)
 	..()
 	var/mob/living/carbon/human/H = user
-	if(H.get_gender() == FEMALE)
-		return list(
-			"sound" = H.species.female_gasp_sound,
-			"vol" = 60,
-			"exr" = 10,
-			"volchannel" = VOLUME_CHANNEL_INJ_DEATH
-		)
-	else
-		return list(
-			"sound" = H.species.male_gasp_sound,
-			"vol" = 60,
-			"exr" = 10,
-			"volchannel" = VOLUME_CHANNEL_INJ_DEATH
+	// CHOMPEdit: Standardize Species Sounds Getters
+	var/vol = H.species.gasp_volume
+	return list(
+			"sound" = get_species_sound(get_gendered_sound(H))["gasp"],
+			"vol" = vol,
+			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 		)

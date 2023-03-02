@@ -22,17 +22,13 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	 * TBD: Maybe port over from species to mob?
 	*/
 	var/can_pain_emote = TRUE
-	var/pain_sound = null
-	var/female_pain_sound = null
-	var/male_pain_sound = null
 	var/pain_emote_1p = null
 	var/pain_emote_3p = null
+	var/species_sounds = "None" // By default, we have nothing.
+	var/death_sound_override = null
 	/* // Not sure if needed, screams aren't a carbon thing rn.
 	var/scream_sound = null
 	var/female_scream_sound = null
 	var/male_scream_sound = null
 	var/scream_emote = null
 	*/
-	var/death_sound = null
-	var/male_death_sound = null
-	var/female_death_sound = null

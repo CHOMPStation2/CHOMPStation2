@@ -533,7 +533,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	evo_limit = 2000
 	next = "/mob/living/simple_mob/metroid/juvenile/queen"
 
-	death_sound = list('sound/metroid/metroidomegadeath.ogg')
+	death_sound_override = list('sound/metroid/metroidomegadeath.ogg') // We override the death sound to play our custom here
 
 /mob/living/simple_mob/metroid/juvenile/omega/Initialize()
 	playsound(src, 'sound/metroid/metroidomega.ogg', 100, 1)
@@ -630,7 +630,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	next = null
 	is_queen = TRUE
 
-	death_sound = list('sound/metroid/metroidqueendeath.ogg')
+	death_sound_override = list('sound/metroid/metroidqueendeath.ogg') // We override the death sound to play our custom here
 
 /mob/living/simple_mob/metroid/juvenile/queen/Initialize()
 	playsound(src, 'sound/metroid/metroidqueen.ogg', 100, 1)
