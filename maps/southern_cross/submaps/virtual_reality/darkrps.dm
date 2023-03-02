@@ -263,6 +263,19 @@
 	name = "Secret Tunnel Room"
 	icon_state = "blue"
 	requires_power = 0
+
+/area/awaymission/darkrp/toll
+	name = "Toll Booth"
+	icon_state = "blue"
+	requires_power = 0
+
+/area/awaymission/darkrp/brokehouse
+	name = "Dilapidated House"
+	icon_state = "blue"
+
+/area/awaymission/darkrp/elephantsfoot
+	name = "Radioactive Crater"
+	icon_state = "blue"
 //Sewers,,,
 
 /area/awaymission/darkrp/subway
