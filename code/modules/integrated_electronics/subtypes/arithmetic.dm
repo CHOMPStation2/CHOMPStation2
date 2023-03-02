@@ -314,7 +314,7 @@
 
 //CHOMPADDITION Math iterators
 /obj/item/integrated_circuit/arithmetic/iterator
-	name = "++"
+	name = "iterator"
 	desc = "This circuit adds Y to its input and provides it as an output."
 	extended_desc = "This circuit is equal to an operation performing X+Y but also modifes X to be the result."
 	icon_state = "addition"
