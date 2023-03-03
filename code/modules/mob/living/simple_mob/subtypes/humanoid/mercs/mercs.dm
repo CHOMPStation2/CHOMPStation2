@@ -286,7 +286,8 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper
 
-	ranged_attack_delay = 2.5 SECONDS
+	//ranged_attack_delay = 2.5 SECONDS // CHOMPStation Removal: Ranged attack delay is stupid.
+	ranged_cooldown_time = 2 SECONDS // CHOMPStation Add: Use this for sniper cooldown instead.
 
 	loot_list = list(/obj/item/sniper_rifle_part/barrel = 50,
 		/obj/item/sniper_rifle_part/stock = 50,
@@ -325,6 +326,21 @@
 		if(reload_count >= reload_max)
 			try_reload()
 			return FALSE
+
+	/*
+	 * CHOMP Addition: This section here is (duplicated) special snowflake code because sniper does not call parent. Basically, this is a non-stupid version of the above intended for ranged mobs.
+	 * ranged_attack_delay is stupid because it sleeps the entire mob.
+	 * This new ranged_cooldown_time is smarter in the sense that it is an internalized timer. Try not to confuse the names.
+	*/
+	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
+		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
+			visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>") //Leave notice of shooting.
+			shoot(A) //Perform the shoot action
+			if(casingtype) //If the mob is designated to leave casings...
+				new casingtype(loc) //... leave the casing.
+			ranged_cooldown = world.time + ranged_cooldown_time + ((injury_level / 2) SECONDS) //Special addition here. This is a timer. Keeping updating the time after shooting. Add that ranged cooldown time specified in the mob to the world time.
+		return TRUE	//End these commands here.
+	// CHOMPAddition End
 
 	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
 	shoot(A)
