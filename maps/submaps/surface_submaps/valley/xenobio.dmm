@@ -44,7 +44,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock{
+	locked = 1
+	},
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "dT" = (
@@ -71,7 +73,7 @@
 	},
 /area/submap/xenobio)
 "fH" = (
-/mob/living/simple_mob/slime/xenobio/dark_purple,
+/mob/living/simple_mob/slime/xenobio/cerulean,
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -125,6 +127,14 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/carpet/green,
+/area/submap/xenobio)
+"lb" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
 /area/submap/xenobio)
 "lU" = (
 /obj/structure/cable/yellow{
@@ -297,6 +307,24 @@
 "Ej" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/xenobio)
+"EM" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
 "Gc" = (
@@ -304,6 +332,16 @@
 /obj/structure/cable/yellow{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
@@ -359,7 +397,7 @@
 /area/submap/xenobio)
 "Me" = (
 /obj/structure/table/standard,
-/obj/item/weapon/melee/energy/axe,
+/obj/item/weapon/melee/energy/spear,
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -391,6 +429,7 @@
 /area/submap/xenobio)
 "NN" = (
 /obj/structure/table/standard,
+/obj/item/stack/material/morphium,
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -438,7 +477,7 @@
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "Tn" = (
-/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/monkey,
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "TN" = (
@@ -551,15 +590,15 @@ uu
 uu
 oC
 gK
-gK
+EM
 UR
-gK
+EM
 gK
 GP
 GP
 Cq
-Gh
 Tn
+Gh
 Gh
 Gh
 oC
@@ -591,15 +630,15 @@ uu
 uu
 oC
 gK
-gK
+lb
 lU
-gK
+lb
 gK
 GP
 GP
 Cq
 kl
-Gh
+Tn
 zk
 Gh
 oC

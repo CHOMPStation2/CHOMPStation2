@@ -264,9 +264,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
-"DX" = (
-/turf/simulated/wall/fancy_shuttle,
-/area/submap/piratevox)
 "FN" = (
 /mob/living/simple_mob/humanoid/merc/melee/sword/poi{
 	health = 15;
@@ -822,7 +819,7 @@ SL
 SL
 SL
 SL
-DX
+SL
 Os
 Os
 Os

@@ -32,6 +32,7 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/structure/closet/crate/secure/loot,
 /obj/item/clothing/gloves/regen,
+/obj/item/rig_module/mounted/energy_blade,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "fQ" = (
@@ -199,7 +200,9 @@
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /obj/structure/closet/crate/secure/loot,
-/obj/item/weapon/rig/pathfinder,
+/obj/item/rig_module/mounted/energy_blade,
+/obj/item/rig_module/sprinter,
+/obj/item/rig_module/rescue_pharm,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Jq" = (
