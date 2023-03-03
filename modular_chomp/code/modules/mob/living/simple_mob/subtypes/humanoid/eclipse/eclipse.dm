@@ -104,17 +104,17 @@
 ////////////////////////////////
 /datum/ai_holder/simple_mob/merc/eclipse
 	threaten = FALSE
-	vision_range = 10
+	vision_range = 8
 
 /datum/ai_holder/simple_mob/merc/eclipse/hunter
-	vision_range = 14
+	vision_range = 10
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged
 	pointblank = TRUE		// They get close? Just shoot 'em!
 	firing_lanes = TRUE		// But not your buddies!
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
-	vision_range = 18	// We're a person with a long-ranged gun.
+	vision_range = 15	// We're a person with a long-ranged gun.
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper/max_range(atom/movable/AM)
 	return holder.ICheckRangedAttack(AM) ? 16 : 1
@@ -148,6 +148,10 @@
 
 	var/energy = 100
 	var/max_energy = 100
+
+	special_attack_cooldown = 5 SECONDS
+	special_attack_min_range = 0
+	special_attack_max_range = 4
 
 	projectiletype = /obj/item/projectile/energy/blob/moth
 
@@ -204,15 +208,15 @@
 
 	projectile_accuracy = 75
 
-	reload_max = 3
+	reload_max = 5
 	reload_time = 2.0 SECONDS
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
 
-	ranged_attack_delay = 2.0 SECONDS
+	ranged_attack_delay = 0.5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh/ranged_pre_animation(atom/A)
-	Beam(get_turf(A), icon_state = "sniper_beam", time = 2 SECONDS, maxdistance = 15)
+	Beam(get_turf(A), icon_state = "sniper_beam", time = 1 SECONDS, maxdistance = 15)
 	. = ..()
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh/shoot_target(atom/A)
@@ -362,6 +366,7 @@
 
 
 /obj/item/projectile/energy/blob/moth
+	splatter = TRUE
 	damage = 20
 	armor_penetration = 25
 	my_chems = list("fuel")
