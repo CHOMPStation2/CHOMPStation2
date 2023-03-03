@@ -1857,10 +1857,6 @@
 	if(shock_stage == 40)
 		if(traumatic_shock >= 80)
 			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
-			// CHOMPEdit: Pain
-			if(prob(60) && !isbelly(loc)) // Hopefully not spammy, only 60% of the time will we groan in pain + sanity for in-belly
-				emote("pain")
-			// CHOMPEdit End
 
 	if (shock_stage >= 60)
 		if(shock_stage == 60 && !isbelly(loc)) //VOREStation Edit
@@ -1868,10 +1864,6 @@
 		if (prob(2))
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
-				// CHOMPEdit: Pain
-				if(prob(60) && !isbelly(loc)) // Hopefully not spammy, only 60% of the time will we groan in pain + sanity for in-belly
-					emote("pain")
-				// CHOMPEdit End
 			Weaken(20)
 
 	if(shock_stage >= 80)
@@ -1879,7 +1871,7 @@
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 				// CHOMPEdit: Pain
-				if(prob(60) && !isbelly(loc)) // Hopefully not spammy, only 80% of the time will we groan in pain + sanity for in-belly
+				if(prob(20) && !isbelly(loc)) // Hopefully not spammy, only 20% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
 				// CHOMPEdit End
 			Weaken(20)
@@ -1889,7 +1881,7 @@
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
 				// CHOMPEdit: Pain
-				if(prob(60) && !isbelly(loc)) // Hopefully not spammy, only 60% of the time will we groan in pain + sanity for in-belly
+				if(prob(40) && !isbelly(loc)) // Hopefully not spammy, only 40% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
 				// CHOMPEdit End
 			Paralyse(5)
