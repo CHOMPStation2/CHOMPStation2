@@ -220,7 +220,7 @@
 
 /datum/supply_pack/eng/smbig
 	name = "Supermatter Core"
-	contains = list(/obj/machinery/power/supermatter)
+	contains = list(/obj/machinery/power/supermatter/station) // CHOMPEdit: Station SM for Cargo Orders
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "Supermatter crate (CAUTION)"

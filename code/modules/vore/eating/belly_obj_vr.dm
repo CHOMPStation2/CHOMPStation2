@@ -308,6 +308,7 @@
 
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
+	. = ..()  //CHOMPEdit: radios
 	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
 	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
 		if(desc)
