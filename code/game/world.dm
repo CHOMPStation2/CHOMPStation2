@@ -41,6 +41,13 @@
 	src.update_status()
 	setup_season()	//VOREStation Addition
 
+	// CHOMPStation Addition: Spaceman DMM Debugging
+	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
+	if (debug_server)
+		call(debug_server, "auxtools_init")()
+		enable_debugging()
+	// CHOMPStation Add End
+
 	. = ..()
 
 #if UNIT_TEST
@@ -597,7 +604,7 @@ var/failed_old_db_connections = 0
 		if(num_tries==5)
 			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
 		qdel(query_truncate2)
-	else 
+	else
 		to_world_log("Feedback database connection failed.")
 	//CHOMPEdit End
 	return 1
@@ -775,3 +782,21 @@ var/global/game_id = null
 		game_id = "[c[(t % l) + 1]][game_id]"
 		t = round(t / l)
 	return 1
+
+// CHOMPStation Add: Spaceman DMM Debugger
+/proc/auxtools_stack_trace(msg)
+	CRASH(msg)
+
+/proc/auxtools_expr_stub()
+	CRASH("auxtools not loaded")
+
+/proc/enable_debugging(mode, port)
+	CRASH("auxtools not loaded")
+
+/world/Del()
+	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
+	if (debug_server)
+		call(debug_server, "auxtools_shutdown")()
+	. = ..()
+
+// CHOMPStation Add End: Spaceman DMM Debugger

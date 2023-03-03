@@ -21,7 +21,7 @@ When editing the list, please try and keep similar probabilities near each other
 
 	switch(choice)
 		if("general")
-			var/info = "The following is a general tip to playing on CHOMPStation! \n"
+			var/info = "The following is a general tip to playing on CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 			prob(60); "[info] Got a question about gameplay, roleplay or the setting? Press F1 to Mentorhelp!",
 			prob(60); "[info] We have a wiki that is actively updated! Please check it out at https://wiki.chompstation13.net/index.php/Chomp_Station_Wiki for help!",
@@ -36,7 +36,7 @@ When editing the list, please try and keep similar probabilities near each other
 
 
 		if("gameplay")
-			var/info = "The following is a gameplay-focused tip to playing on CHOMPStation \n"
+			var/info = "The following is a gameplay-focused tip to playing on CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 				prob(50); "[info] To talk to your fellow coworkers, use ';'! You may append it by an exclamation mark, like ';!' to perform an audiable emote. ",
 				prob(50); "[info] Lost on the map? You can find In-Character help by speaking on the Common Radio. You can do this by pressing F3 and typing ' ; ' before your message. Your fellow co-workers will likely help. If OOC help is preferred, press F1 for mentorhelp. ",
@@ -47,11 +47,13 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(25); "[info] Emergency Fire Doors seal breaches and keep active fires out. Please do not open them without good reason. SHIFT + CLICK them to get temperature and atmospheric pressure readings.",
 				prob(25); "[info] The kitchen's Oven can fit multiple ingredients in one slot if you pull the baking tray out first. This is required for most recipes, and the Grille and Deep Frier work the same way!",
 				prob(10); "[info] Not every hostile NPC you encounter while mining or exploring need to be defeated. Sometimes, it's better to avoid or run away from them.",
-				prob(1); "[info] Stay robust, my friends."
+				prob(1); "[info] Stay robust, my friends.",
+				prob(35); "[info] You can insert your I.D into your PDA. This frees up your belt from having to carry your PDA. Furthermore, by clicking and dragging the PDA to game screen, you can use it without holding it!",
+				prob(35); "[info] Your vore-bellies have multiple add-ons! Muffling is excellent to ensure your prey does not accidentally inform everyone about their predicament, and jam suit sensors is a great courtesy to avoid medical being worried about your prey!"
 				)
 
 		if("roleplay")
-			var/info = "The following is a roleplay-focused tip to playing on CHOMPStation \n"
+			var/info = "The following is a roleplay-focused tip to playing on CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 				prob(50); "[info] Having difficulty finding scenes? The number one tip that people should take for finding scenes is to be active! Generally speaking, people are more likely to interact with you if you are moving about and doing things. Don't be afraid to talk to people, you're less likely to be approached if you're sat alone at a table silently. People that are looking for scenes generally like to see how you type and RP before they'll start working towards a scene with you.",
 				prob(50); "[info] Please avoid a character that knows everything. Having only a small set of jobs you are capable of doing can help flesh out your character! It's OK for things to break and fail if nobody is around to fix it - you do not need to do others' jobs.",
@@ -60,11 +62,16 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(25); "[info] It is a good idea to wait a few moments after using mechanics like lick, hug or headpat on another player. They might be typing up a response or wish to reciprocate, and if you run away you might miss out!",
 				prob(25); "[info] Participating in an away mission and see something acting strange? Try emoting or talking to it before resorting to fighting. It may be a GM event!",
 				prob(15); "[info] We are a medium roleplay server. This does not neccessarily mean 'serious' roleplay, levity and light-hearted RP is more than welcome! Please do not ignore people just because it is unlikely you will be able to scene.",
-				prob(10); "[info] Sending faxes to central command, using the 'pray' verb or pressing F1 to ahelp are highly encouraged when exploring the gateway or overmap locations! Letting GMs know something fun is happening allows them to spice things up and make the world feel alive!"
+				prob(10); "[info] Sending faxes to central command, using the 'pray' verb or pressing F1 to ahelp are highly encouraged when exploring the gateway or overmap locations! Letting GMs know something fun is happening allows them to spice things up and make the world feel alive!",
+				prob(40); "[info] Just because you see something doesn't mean your character has to. A courtesy 'missing' of contraband or scene details can go a long way towards preserving everyone's fun!",
+				prob(25); "[info] It is always a good idea to communicate on your department's private channel (whose key you can learn by examining your headset) when responding to an emergency! This lets your coworkers know if they might be needed!",
+				prob(25); "[info] While following the SOP is not mandatory, and you are free to break it (albeit, with potential in-character consequences), departments like security and medical do well to be familiar with them! https://wiki.chompstation13.net/index.php/Standard_Operating_Procedure",
+				prob(25); "[info] Think a player is acting especially antagonistic? It might be better to Ahelp (with F1) rather than try to deal with it icly, staff can make sure it's all okay.",
+				prob(20); "[info] See a minor infraction as Security with a minimal time punishment? Consider using your ticket printer to give a non obtrusive punishment."
 				)
 
 		if("lore")
-			var/info = "The following is tip for understanding the lore of CHOMPStation \n"
+			var/info = "The following is tip for understanding the lore of CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
 				prob(25); "[info] Our lore is somewhat in line with other servers. But not Virgo's. They wrote themselves out of the timeline, lol. The year is 2564 (current year+541).",
 				prob(75); "[info] You can find a short summary of our setting that everyone should know at https://wiki.chompstation13.net/index.php/Lore",

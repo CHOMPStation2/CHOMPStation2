@@ -81,7 +81,7 @@
 "oh" = (/obj/structure/prop/alien/pod/open,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/turf/simulated/floor,/area/survivalpod/superpose/LargeAlienShip)
 "oi" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/power/smes/buildable{icon = 'icons/obj/alien_smes.dmi'; icon_state = "unit"; input_level = 950000; name = "Alien Royal Capacitor"; output_level = 950000},/obj/structure/cable/cyan,/turf/simulated/floor,/area/survivalpod/superpose/LargeAlienShip)
 "op" = (/obj/structure/window/reinforced/survival_pod{dir = 10},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/LargeAlienShip)
-"oI" = (/obj/effect/floor_decal/techfloor,/obj/machinery/vending/deluxe_dinner{req_access = null; req_log_access = null},/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/LargeAlienShip)
+"oI" = (/obj/effect/floor_decal/techfloor,/obj/machinery/vending/fooddessert,/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/LargeAlienShip)
 "oM" = (/obj/effect/floor_decal/techfloor,/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/floor,/area/survivalpod/superpose/LargeAlienShip)
 "oR" = (/obj/structure/table/darkglass,/obj/random/maintenance/security,/obj/random/maintenance/security,/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/LargeAlienShip)
 "ph" = (/obj/machinery/power/generator{anchored = 1; dir = 4},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor,/area/survivalpod/superpose/LargeAlienShip)
@@ -139,7 +139,7 @@
 "AO" = (/obj/structure/grille/cult{name = "Alien grille"},/obj/structure/window/phoronreinforced/full,/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced,/obj/structure/window/phoronreinforced{dir = 1},/obj/machinery/door/blast/regular{dir = 4; id = "ReactorBlastAlien"; layer = 3.3; name = "Reactor Blast Door"},/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/LargeAlienShip)
 "AP" = (/obj/machinery/vending/medical{dir = 4; emagged = 1; pixel_x = 5; req_access = list(777)},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/LargeAlienShip)
 "AS" = (/obj/effect/floor_decal/techfloor{dir = 9},/turf/simulated/shuttle/floor/alienplating,/area/survivalpod/superpose/LargeAlienShip)
-"Bd" = (/obj/machinery/vending/deluxe_boozeomat{req_access = null; req_log_access = null},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/LargeAlienShip)
+"Bd" = (/obj/machinery/vending/hotfood,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/LargeAlienShip)
 "Bf" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/LargeAlienShip)
 "Bh" = (/obj/structure/prop/alien/pod/open,/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/turf/simulated/floor,/area/survivalpod/superpose/LargeAlienShip)
 "BE" = (/obj/structure/prop/alien/pod/hybrid,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/LargeAlienShip)
@@ -214,7 +214,7 @@
 "Tx" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/meter,/turf/simulated/floor,/area/survivalpod/superpose/LargeAlienShip)
 "TK" = (/turf/simulated/floor/carpet/gaycarpet,/area/survivalpod/superpose/LargeAlienShip)
 "TL" = (/obj/effect/floor_decal/techfloor,/turf/simulated/shuttle/floor/alien,/area/survivalpod/superpose/LargeAlienShip)
-"Um" = (/turf/simulated/shuttle/floor/white,/area/template_noop)
+"Um" = (/obj/effect/fusion_em_field,/turf/simulated/floor/reinforced/nitrogen{nitrogen = 82.1472},/area/survivalpod/superpose/LargeAlienShip)
 "Un" = (/obj/structure/closet/alien,/obj/item/clothing/suit/space/void/autolok,/obj/item/clothing/suit/space/void/autolok,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/storage/toolbox/emergency,/obj/effect/floor_decal/techfloor,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/LargeAlienShip)
 "Uu" = (/obj/machinery/atmospherics/unary/engine/biggest{dir = 4},/turf/template_noop,/area/template_noop)
 "UI" = (/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/LargeAlienShip)
@@ -261,14 +261,14 @@ CObiWTGQzIVRNPNPVRNPNPNPNPVRFUgWbmbmbmbmbmbmbmbmbmbmbmbmGQGQgWGQGQGQgWGQGQGQgWGQ
 UubiWTGQzINPVkNPNPNPNPNPVkNPFUGQCSCSCSCSCSCSCSTLTLTLTLSYGQDFqQBEGQUIUIeBGQUIUIeBGQUIUIeBGQbmbmGQbmXvNYGQfmdxPTGQSS
 COGQGQGQzINPNPlpYwGdAOlpNPNPFUjgkVyIyIyIyIcXNPNPNPNPNPFUGQfAyvJDGQqCKcAjGQqCfckSGQqCXvvgGQbmbmGQmGbmbmGQKSjrNmPiGQ
 CObiWTGQZQNPNPdZbcPLbcdbNPVRrLfiBfEpVSexQHQiNPSSSSSSNPrLGQatdSatGQzuKciwGQyifcrIGQyiXvNYGQCSCSfiCSCSCSgWCSCSZQtdfi
-CObiWTGQNPNPNPLhPLgtPLkGNPNPNPPRBfiQbvXAdCQiNPxCbwxCNPNPGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQNPNPPRNPNPDXGQjmNPNPVPPR
+CObiWTGQNPNPNPLhUmgtUmkGNPNPNPPRBfiQbvXAdCQiNPxCbwxCNPNPGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQGQNPNPPRNPNPDXGQjmNPNPVPPR
 UubiWTGQaJVRNPpqbcPLbcaGNPNPASnxBfyYzczcuTQiNPSSSSSSNPASGQXCABALGQJUkqIyGQzuTKWQGQxTKciwGQjrjrnxasasasgWjrjraJtdnx
 COGQGQGQzINPNPlpYwdsAOlpMfNPFUjgKBMdMdMdMdiMNPNPNPNPNPFUGQjhyPmvGQGCeTtxGQvQTKEeGQvQKcAjGQbmbmGQVtWTWTGQpCCSJBnvGQ
 CObiWTGQzINPVkNPNPNPNPNPVkNPFUGQjrjrjrjrjrjrjrFmFmFmFmbpGQIOFmIOGQyMlbtfGQUIUIeBGQUIUIeBGQbmbmGQboWTboGQcByassGQSS
 CObiWTGQzIVRNPNPNPNPVRNPNPVRFUgWbmbmbmbmbmbmbmbmbmbmbmbmGQGQgWGQGQMdMdMdGQGQgWGQGQGQgWGQGQbmbmGQboseboGQGQwDGQSSCO
 UubiWTGQSSjrjrjrjrjrjrjrjrjrSSGQbmbmGQGQIrbHTriyGQGQqQbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmqQGQboWTboGQSSCOCOCOCO
 COGQGQGQGQpiGQvVjWjWjWDJGQCYGQGQbmbmGQSpyIyITiyIUnGQSSHXbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmHXSSGQGQGQGQSSCOCOCOCOCO
-COCOCOSSGQKohVuQuQuQuQuQhVKohVjgbmbmgWdededeUmUmUmDnGQGQgWwDGQGQGQGQgWGQGQGQgWGQGQGQSdGQGQGQGQSSCOCOCOCOCOCOCOCOCO
+COCOCOSSGQKohVuQuQuQuQuQhVKohVjgbmbmgWdedededededeDnGQGQgWwDGQGQGQGQgWGQGQGQgWGQGQGQSdGQGQGQGQSSCOCOCOCOCOCOCOCOCO
 COCOCOWTGQWTWTuUXcXcXcfKWTWTWTgWbmqQGQDAdedededeAPGQSSCOCOCOGQkOkOXkVkYAGQqYVkmTGQnjPBLaFZGQSSCOCOCOCOCOCOCOCOCOCO
 COCOCOWTGQnCrxlJKTlJKTfrzHJtVFGQHXSSGQSSWJpuaHZpGQSSCOCOCOGQGQdBdBTxdBgcGQPFFmjZGQPBPBGHGQGQCOCOCOCOCOCOCOCOCOCOCO
 COUuCOWTGQuIPyqeaophdzoiwrJtVFGQGQSSCOGQGQwDmyGQSSCOCOCOCOWTGQcLcLWTcLcLGQhRqQXgGQQeopVwGQSSCOCOCOCOCOCOCOCOCOCOCO

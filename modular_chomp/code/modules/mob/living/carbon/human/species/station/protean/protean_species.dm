@@ -17,7 +17,7 @@
 	flesh_color = "#505050"
 	base_color = "#FFFFFF" //Color mult, start out with this
 
-	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT
+	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_PAIN
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
 	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	health_hud_intensity = 2
@@ -33,28 +33,33 @@
 	male_scream_sound = null
 	female_scream_sound = null
 
-	virus_immune =	1
-	blood_volume =	0
-	min_age =		18
-	max_age =		200
-	oxy_mod =		0
-	radiation_mod =	0	//Can't be assed with fandangling rad protections while blob formed/suited
+	virus_immune = 1
+	blood_volume = 0
+	min_age = 18
+	max_age = 200
+	oxy_mod = 0
+	//radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
 	darksight = 10
+	siemens_coefficient = 2
+	emp_dmg_mod = 0.8
+	emp_sensitivity = EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG
+	item_slowdown_mod = 1.5	//Gentle encouragement to let others wear you
 
 	hazard_low_pressure = -1 //Space doesn't bother them
-	hazard_high_pressure = INFINITY //consistency
 
-	//Cold/heat does affect them, but it's done in special ways below - //No it isn't?
 	cold_level_1 = -INFINITY
 	cold_level_2 = -INFINITY
 	cold_level_3 = -INFINITY
-	heat_level_1 = INFINITY
-	heat_level_2 = INFINITY
-	heat_level_3 = INFINITY
+	heat_level_1 = 420
+	heat_level_2 = 480
+	heat_level_3 = 1100
 
-	body_temperature =      290
+	body_temperature = 290
 
-	rarity_value =          5
+	rarity_value = 5
+
+	female_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
+	male_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
 
 	crit_mod = 4	//Unable to go crit
 	var/obj/item/weapon/rig/protean/OurRig
@@ -80,7 +85,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable/nano)
 		)
 
-	heat_discomfort_strings = list("You feel too warm.")
+	heat_discomfort_strings = list("WARNING: Temperature exceeding acceptable thresholds!.")
 	cold_discomfort_strings = list("You feel too cool.")
 
 	//These verbs are hidden, for hotkey use only
@@ -90,7 +95,9 @@
 		/mob/living/carbon/human/proc/nano_metalnom,
 		/mob/living/carbon/human/proc/nano_blobform,
 		/mob/living/carbon/human/proc/nano_rig_transform,
+		/mob/living/carbon/human/proc/nano_copy_body,
 		/mob/living/carbon/human/proc/appearance_switch,
+		/mob/living/carbon/human/proc/nano_latch,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/nano_change_fitting, //These verbs are displayed normally,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
@@ -112,6 +119,8 @@
 
 	var/blob_appearance = "puddle2"
 
+	var/pseudodead = 0
+
 /datum/species/protean/New()
 	..()
 	if(!LAZYLEN(abilities))
@@ -128,13 +137,53 @@
 	if(saved_nif)
 		saved_nif.quick_implant(H)
 
+/datum/species/protean/get_race_key()
+	var/datum/species/real = GLOB.all_species[base_species]
+	return real.race_key
+
 /datum/species/protean/get_bodytype(var/mob/living/carbon/human/H)
 	if(!H || base_species == name) return ..()
 	var/datum/species/S = GLOB.all_species[base_species]
 	return S.get_bodytype(H)
 
+/datum/species/protean/get_icobase(var/mob/living/carbon/human/H, var/get_deform)
+	if(!H || base_species == name) return ..(null, get_deform)
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_icobase(H, get_deform)
+
 /datum/species/protean/get_valid_shapeshifter_forms(var/mob/living/carbon/human/H)
-	return GLOB.playable_species
+	var/static/list/protean_shapeshifting_forms = GLOB.playable_species.Copy() - SPECIES_PROMETHEAN
+	return protean_shapeshifting_forms
+
+/datum/species/protean/get_tail(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_tail(H)
+
+/datum/species/protean/get_tail_animation(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_tail_animation(H)
+
+/datum/species/protean/get_tail_hair(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_tail_hair(H)
+
+/datum/species/protean/get_blood_mask(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_blood_mask(H)
+
+/datum/species/protean/get_damage_mask(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_damage_mask(H)
+
+/datum/species/protean/get_damage_overlays(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_damage_overlays(H)
 
 /datum/species/protean/handle_post_spawn(var/mob/living/carbon/human/H)
 	..()
@@ -177,14 +226,22 @@
 
 /datum/species/protean/handle_death(var/mob/living/carbon/human/H)
 	if(!H)
-		return // Iono!
-
+		return //No body?
+	if(OurRig.dead)
+		return
+	OurRig.dead = 1
+	var/mob/temp = H
 	if(H.temporary_form)
-		H.forceMove(H.temporary_form.drop_location())
-		H.ckey = H.temporary_form.ckey
-		QDEL_NULL(H.temporary_form)
-
-	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 5 or 10 minutes before respawning, to represent the time it would take to ship a new-you to the station, depending on how you died.</span>")
+		temp = H.temporary_form
+	playsound(temp, 'modular_chomp/sound/voice/borg_deathsound.ogg', 50, 1)
+	temp.visible_message("<b>[temp.name]</b> shudders and retreats inwards, coalescing into a single core componant!")
+	to_chat(temp, "<span class='warning'>You've died as a Protean! While dead, you will be locked to your core RIG control module until you can be repaired. Instructions to your revival can be found in the Examine tab when examining your module..</span>")
+	if(H.temporary_form)
+		if(!istype(H.temporary_form.loc, /obj/item/weapon/rig/protean))
+			H.nano_rig_transform(1)
+	else
+		H.nano_rig_transform(1)
+	pseudodead = 1
 
 /datum/species/protean/handle_environment_special(var/mob/living/carbon/human/H)
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
@@ -320,17 +377,26 @@ CHOMP Removal end*/
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
-	holder.adjustBruteLoss(-1,include_robo = TRUE) //Modified by species resistances
-	holder.adjustFireLoss(-1,include_robo = TRUE) //Modified by species resistances
-	var/mob/living/carbon/human/H = holder
-	for(var/obj/item/organ/O as anything in H.internal_organs)
-		// Fix internal damage
-		if(O.damage > 0)
-			O.damage = max(0,O.damage-0.1)
-		// If not damaged, but dead, fix it
-		else if(O.status & ORGAN_DEAD)
-			O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
+	//Heal a random damaged limb by 1,1 per tick
+	holder.adjustBruteLoss(-1,include_robo = TRUE)
+	holder.adjustFireLoss(-1,include_robo = TRUE)
+	holder.adjustToxLoss(-1)
 
+	var/mob/living/carbon/human/H
+	if(ishuman(holder))
+		H = holder
+
+	//Then heal every damaged limb by a smaller amount
+	if(H)
+		for(var/obj/item/organ/external/O in H.organs)
+			O.heal_damage(0.5, 0.5, 0, 1)
+
+		//Heal the organs a little bit too, as a treat
+		for(var/obj/item/organ/O as anything in H.internal_organs)
+			if(O.damage > 0)
+				O.damage = max(0,O.damage-0.3)
+			else if(O.status & ORGAN_DEAD)
+				O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
 
 // PAN Card
 /obj/item/clothing/accessory/permit/nanotech

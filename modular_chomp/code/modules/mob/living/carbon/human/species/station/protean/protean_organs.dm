@@ -4,78 +4,81 @@
 	encased = FALSE
 	max_damage = 100 // <-- This is different from the rest
 	min_broken_damage = 1000
-	vital = TRUE // <-- This is different from the rest
+	vital = 1
 	model = "protean"
 /obj/item/organ/external/groin/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100 // <-- This is different from the rest
+	max_damage = 100
 	min_broken_damage = 1000 //Multiple
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/head/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
 	max_damage = 100
 	min_broken_damage = 1000 //Inheritance
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/arm/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000 //Please
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/arm/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/leg/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/leg/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/hand/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/hand/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/foot/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
 /obj/item/organ/external/foot/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 65
 	min_broken_damage = 1000
-	vital = FALSE
+	vital = 0
 	model = "protean"
+
+/obj/item/organ/external/head/unbreakable/nano/disfigure()
+	return //No way to repair disfigured prots
 
 // // // Internal Organs
 /obj/item/organ/internal/nano
@@ -101,7 +104,7 @@
 	organ_tag = O_FACT
 	parent_organ = BP_TORSO
 
-	var/list/materials = list(MAT_STEEL = 0, MAT_GLASS = 0)
+	var/list/materials = list(MAT_STEEL = 0)
 	var/max_storage = 10000
 	organ_verbs = list(
 		/mob/living/carbon/human/proc/reagent_purge
@@ -164,8 +167,10 @@
 	icon = initial(icon)
 	icon_state = "posi1"
 	stored_mmi.icon_state = "posi1"
-
 	stored_mmi.brainmob.languages = owner.languages
+
+/obj/item/organ/internal/mmi_holder/posibrain/nano/emp_act()
+	return	//Proteans handle EMP's differently
 
 // The 'out on the ground' object, not the organ holder
 /obj/item/device/mmi/digital/posibrain/nano
@@ -196,3 +201,16 @@
 
 /obj/item/organ/internal/nano/digest_act(atom/movable/item_storage = null)
 	return FALSE
+
+/datum/design/item/protean_reboot
+	name = "Protean Reboot Programmer"
+	id = "protean_reboot"
+	materials = list(MAT_STEEL = 2000, MAT_GLASS = 1000, MAT_PLASTEEL = 10000)
+	build_path = /obj/item/device/protean_reboot
+	sort_string = "JVAAZ"
+
+/obj/item/device/protean_reboot
+	name = "Protean Reboot Programmer"
+	desc = "A small, highly specialized programmer used to form the basis of a Protean swarm. A necessary component in reconstituting a Protean who has lost total body cohesion."
+	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
+	icon_state = "reboot"

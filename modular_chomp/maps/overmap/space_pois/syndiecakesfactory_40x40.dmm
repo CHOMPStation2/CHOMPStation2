@@ -1,0 +1,2372 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aM" = (
+/obj/item/stack/rods,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"bb" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/phoron{
+	amount = 10
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"bv" = (
+/obj/machinery/computer{
+	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
+	dir = 1;
+	name = "Broken Computer"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"cc" = (
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"dy" = (
+/mob/living/simple_mob/animal/passive/dog/corgi,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"es" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"eY" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"fq" = (
+/obj/machinery/autolathe,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"hc" = (
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"hm" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"ho" = (
+/obj/effect/decal/cleanable/filth,
+/obj/machinery/conveyor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"jf" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"jR" = (
+/obj/structure/table/reinforced,
+/obj/random/cigarettes,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"ke" = (
+/obj/machinery/conveyor{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/dog/corgi,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"kh" = (
+/obj/structure/lattice,
+/obj/item/stack/rods,
+/obj/random/junk,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"ky" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	tag = ""
+	},
+/turf/simulated/wall,
+/area/submap/syndiecakesfactory)
+"ls" = (
+/obj/machinery/conveyor{
+	dir = 4
+	},
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"lK" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/high{
+	pixel_y = -20
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"mc" = (
+/obj/structure/grille/broken,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"mx" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"my" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"nx" = (
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "syndicakes_exterior";
+	locked = 1;
+	name = "SyndiCakes"
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "syndicakes_control";
+	name = "External Access Button";
+	pixel_x = -26
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/syndiecakesfactory)
+"nT" = (
+/obj/random/maintenance,
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"ob" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"om" = (
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"oJ" = (
+/obj/item/stack/rods,
+/obj/random/junk,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"pb" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"pd" = (
+/obj/random/junk,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"pp" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"pR" = (
+/obj/machinery/conveyor{
+	dir = 10;
+	id = "garbage"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"qx" = (
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "spacebar_control";
+	pixel_x = -26;
+	pixel_y = -26;
+	tag_exterior_door = "syndicakes_exterior";
+	tag_interior_door = "syndicakes_interior"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"qS" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "SyndiCakes"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/syndiecakesfactory)
+"rJ" = (
+/obj/structure/lattice,
+/obj/effect/floor_decal/rust,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"rL" = (
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"rU" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"sd" = (
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"sB" = (
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"ub" = (
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"uA" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"uF" = (
+/obj/machinery/gibber/autogibber,
+/obj/structure/plasticflaps,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"vQ" = (
+/obj/structure/lattice,
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"wB" = (
+/obj/item/trash/syndi_cakes,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"xT" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"yU" = (
+/obj/item/stack/material/steel,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"zd" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -20
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"zo" = (
+/turf/simulated/wall,
+/area/submap/syndiecakesfactory)
+"zt" = (
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"zF" = (
+/obj/effect/wingrille_spawn/reinforced/crescent,
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"zP" = (
+/obj/random/tool,
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"zY" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"AH" = (
+/obj/structure/lattice,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"AJ" = (
+/obj/item/trash/syndi_cakes,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"BI" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Cp" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	tag = ""
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"Cu" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"CY" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"Da" = (
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"Dz" = (
+/obj/effect/decal/cleanable/filth,
+/obj/machinery/conveyor{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/dog/corgi,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Ej" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"EJ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Fw" = (
+/obj/item/stack/cable_coil/cut,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"FO" = (
+/obj/machinery/suit_cycler,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Gm" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/random/maintenance,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"GB" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Hx" = (
+/obj/effect/decal/cleanable/filth,
+/obj/machinery/conveyor{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/dog/corgi,
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Hy" = (
+/turf/template_noop,
+/area/template_noop)
+"HQ" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"Ic" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"IB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	tag = ""
+	},
+/obj/effect/floor_decal/rust,
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"IN" = (
+/obj/structure/bed/chair/bay/chair/padded/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"JI" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Ki" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Kr" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"KD" = (
+/turf/simulated/shuttle/plating,
+/area/submap/syndiecakesfactory)
+"KS" = (
+/obj/effect/decal/cleanable/filth,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"Le" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Me" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/syndiecakesfactory)
+"Mi" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"MT" = (
+/obj/effect/floor_decal/rust,
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"Nw" = (
+/obj/machinery/power/smes,
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"NQ" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"OA" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/computer{
+	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
+	dir = 8;
+	name = "Broken Computer"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"OK" = (
+/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"OU" = (
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"PZ" = (
+/obj/random/trash,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Qv" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/trash/syndi_cakes,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"QF" = (
+/obj/machinery/conveyor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"QI" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Ra" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Rg" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "SyndiCakes"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/syndiecakesfactory)
+"Ry" = (
+/obj/item/stack/cable_coil/random,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"RB" = (
+/mob/living/simple_mob/animal/passive/dog/corgi,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Tj" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/toolbox/syndicate,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Tt" = (
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "syndicakes_interior";
+	locked = 1;
+	name = "SyndiCakes"
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "syndicakes_control";
+	name = "Internal Access Button";
+	pixel_x = -24;
+	pixel_y = -5
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/syndiecakesfactory)
+"TM" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"TT" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4";
+	tag = "90Curve"
+	},
+/obj/effect/floor_decal/rust,
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"UC" = (
+/obj/machinery/telecomms/relay/preset/ruskie{
+	network = "SYNDICAKES-FACTORY"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"UR" = (
+/obj/item/trash/syndi_cakes,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"Vf" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/mob/living/simple_mob/animal/passive/dog/corgi,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Vt" = (
+/obj/machinery/conveyor,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"VH" = (
+/obj/structure/lattice,
+/obj/random/tool,
+/turf/template_noop,
+/area/submap/syndiecakesfactory)
+"VR" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"WL" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"Xd" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"XZ" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/dispenser/oxygen,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"YR" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/syndiecakesfactory)
+"YU" = (
+/obj/random/trash,
+/obj/structure/bed/chair/bay/chair/padded/black,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Zs" = (
+/obj/machinery/conveyor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+"Zt" = (
+/obj/effect/decal/cleanable/filth,
+/obj/machinery/conveyor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/syndiecakesfactory)
+
+(1,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(2,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(3,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+NQ
+NQ
+NQ
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(4,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+Le
+EJ
+zd
+rU
+TM
+FO
+zo
+zo
+zo
+sd
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(5,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+JI
+GB
+Vf
+TM
+ob
+zo
+Ra
+GB
+Gm
+jf
+TM
+qx
+Tt
+KD
+nx
+sd
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(6,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+GB
+Hx
+RB
+ke
+TM
+zo
+Nw
+hm
+TT
+GB
+nT
+Ej
+zo
+zo
+zo
+pb
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(7,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+GB
+Dz
+dy
+Dz
+pp
+zo
+UC
+dy
+Ki
+PZ
+GB
+zY
+zo
+Da
+Da
+NQ
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(8,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+GB
+Zs
+jf
+ls
+TM
+zo
+fq
+TM
+Mi
+TM
+YU
+bv
+zo
+Da
+Da
+NQ
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(9,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+dy
+ho
+TM
+Zs
+JI
+zo
+TM
+jf
+QI
+IN
+sB
+TM
+zo
+Da
+Da
+NQ
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(10,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+pR
+Vt
+Vt
+Vt
+Vt
+zo
+XZ
+BI
+VR
+uA
+hc
+jR
+zo
+Da
+Da
+NQ
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(11,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+zo
+Zs
+zo
+zo
+zo
+Rg
+zo
+zo
+zo
+qS
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(12,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+zo
+Zs
+zF
+TM
+Qv
+lK
+zo
+OU
+Ic
+WL
+mx
+mx
+Ry
+Kr
+mx
+mx
+OU
+zo
+Da
+Da
+Da
+OK
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(13,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+zo
+Zs
+zF
+Tj
+zP
+Xd
+ky
+Cp
+IB
+es
+mx
+rJ
+NQ
+Kr
+rL
+eY
+OU
+zo
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+"}
+(14,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+zo
+Zs
+zo
+GB
+wB
+TM
+Rg
+OU
+OU
+mx
+mx
+OU
+OU
+Rg
+OU
+eY
+sd
+zo
+Da
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+Da
+zt
+Da
+Hy
+Hy
+Hy
+"}
+(15,1,1) = {"
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+zo
+Zs
+zF
+TM
+RB
+AJ
+zo
+NQ
+OU
+MT
+KS
+KS
+OU
+zo
+sd
+sd
+NQ
+zo
+Da
+Da
+UR
+Da
+Da
+Da
+Da
+zt
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+"}
+(16,1,1) = {"
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+zo
+Zs
+zF
+bb
+OA
+TM
+zo
+Da
+NQ
+OU
+YR
+HQ
+my
+zo
+mx
+sd
+NQ
+zo
+zt
+ub
+Da
+Da
+Da
+Fw
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+"}
+(17,1,1) = {"
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+zo
+uF
+zo
+zo
+zo
+Rg
+zo
+zo
+zo
+Rg
+zo
+zo
+zo
+zo
+mx
+sd
+OK
+Da
+Da
+Da
+NQ
+zt
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+"}
+(18,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+NQ
+Zs
+OU
+xT
+KS
+xT
+TM
+Da
+mx
+mx
+OU
+OU
+Da
+yU
+sd
+Da
+OK
+OK
+Da
+Da
+NQ
+zo
+Da
+Da
+Da
+Da
+OK
+Da
+Da
+zt
+Da
+Hy
+Hy
+"}
+(19,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+NQ
+NQ
+mx
+NQ
+CY
+NQ
+Da
+Da
+ub
+NQ
+OU
+sd
+NQ
+NQ
+Da
+OK
+yU
+sd
+NQ
+zo
+Da
+OK
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+"}
+(20,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Zs
+xT
+mc
+mx
+mc
+mx
+OU
+Da
+NQ
+Da
+NQ
+Da
+Da
+UR
+ub
+Da
+Da
+Da
+Da
+NQ
+NQ
+Da
+Da
+Da
+zt
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+"}
+(21,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+NQ
+Da
+sd
+Zt
+NQ
+Zt
+QF
+NQ
+Da
+sd
+Da
+Da
+Da
+OK
+Da
+Da
+OK
+OK
+Da
+Da
+NQ
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+Hy
+Hy
+"}
+(22,1,1) = {"
+Hy
+Hy
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+sd
+zo
+Da
+zo
+zo
+NQ
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+ub
+zt
+Da
+Da
+Da
+UR
+Da
+Da
+Da
+Da
+OK
+Da
+Da
+Hy
+Hy
+"}
+(23,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+NQ
+Da
+NQ
+NQ
+Da
+sd
+Da
+Da
+sd
+zt
+sd
+Da
+sd
+MT
+mx
+eY
+NQ
+Da
+Da
+Da
+sd
+Me
+Da
+ub
+Da
+zt
+NQ
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+"}
+(24,1,1) = {"
+Hy
+Hy
+Da
+Da
+NQ
+Da
+Da
+Da
+NQ
+Da
+Da
+ub
+OK
+Da
+Da
+mc
+NQ
+QF
+QF
+QF
+QF
+Cu
+sd
+ub
+Da
+pd
+Da
+cc
+VH
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+Da
+Da
+Hy
+Hy
+"}
+(25,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+OK
+Da
+zo
+NQ
+NQ
+zo
+NQ
+NQ
+Da
+Da
+zt
+NQ
+NQ
+om
+zo
+Da
+OK
+Da
+ub
+Da
+Da
+zt
+Da
+Da
+Hy
+Hy
+"}
+(26,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+NQ
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+NQ
+Da
+Da
+Da
+Da
+Da
+zo
+zo
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+"}
+(27,1,1) = {"
+Hy
+Hy
+ub
+Da
+Da
+Da
+Da
+AH
+ub
+ub
+Da
+zt
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+OK
+Da
+ub
+Da
+UR
+Da
+Da
+OK
+Da
+Da
+Da
+Da
+Da
+Da
+UR
+Hy
+Hy
+"}
+(28,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+OK
+Da
+Da
+aM
+Da
+UR
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+aM
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+"}
+(29,1,1) = {"
+Hy
+Hy
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+Fw
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+OK
+ub
+Da
+vQ
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+zt
+Hy
+Hy
+"}
+(30,1,1) = {"
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+ub
+ub
+Da
+Da
+Da
+Da
+pd
+NQ
+Da
+OK
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+ub
+zt
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+"}
+(31,1,1) = {"
+Hy
+Hy
+Da
+zt
+Da
+Da
+NQ
+Da
+Da
+Da
+NQ
+Da
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+Da
+Da
+ub
+Da
+Da
+aM
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+"}
+(32,1,1) = {"
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+zt
+Da
+Da
+Da
+pd
+kh
+Da
+Da
+zt
+Da
+Da
+NQ
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Fw
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+"}
+(33,1,1) = {"
+Hy
+Hy
+Hy
+Da
+ub
+Da
+ub
+Da
+zt
+Da
+Da
+Da
+Da
+Da
+UR
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+zt
+Da
+Da
+ub
+Da
+zt
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+"}
+(34,1,1) = {"
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+ub
+Da
+zt
+Da
+ub
+Da
+Da
+Da
+oJ
+Da
+Da
+OK
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+"}
+(35,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+NQ
+Da
+Da
+Da
+ub
+ub
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+NQ
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+zt
+Da
+Hy
+Hy
+Hy
+Hy
+"}
+(36,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+ub
+Da
+Da
+Da
+Da
+zt
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(37,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+Fw
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(38,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Da
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(39,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Da
+UR
+Da
+Da
+Da
+Da
+zt
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}
+(40,1,1) = {"
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+"}

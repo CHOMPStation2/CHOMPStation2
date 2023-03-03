@@ -1,3 +1,7 @@
+/datum/sprite_accessory/marking
+	var/digitigrade_acceptance = MARKING_NONDIGI_ONLY
+	var/digitigrade_icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+
 /datum/sprite_accessory/marking/ch
 	icon = 'icons/mob/human_races/markings_ch.dmi'
 
@@ -149,65 +153,167 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
 
+/datum/sprite_accessory/marking/ch/protogen_snout
+	name = "Protogen Snout"
+	icon_state = "protogen_snout"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/hshark_snout
+	name = "HShark Snout"
+	icon_state = "hshark_snout"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/hshark_head
+	name = "HShark Head"
+	icon_state = "hshark"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/ram_horns
+	name = "Ram Horns"
+	icon_state = "ram_horns"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/neckfluff
+	name = "Neck Fluff"
+	icon_state = "neckfluff"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/husky_chest
+	name = "Husky Chest"
+	icon_state = "husky"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/fox_head
+	name = "Fox Head"
+	icon_state = "fox"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/fox_chest
+	name = "Fox Chest"
+	icon_state = "fox"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/fox_hsocks
+	name = "Fox Hand Socks"
+	icon_state = "fox"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_ARM, BP_R_HAND, BP_L_ARM, BP_L_HAND)
+
+/datum/sprite_accessory/marking/ch/fox_lsocks
+	name = "Fox Leg Socks"
+	icon_state = "fox"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT,BP_L_LEG,BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
+
+/datum/sprite_accessory/marking/ch/tiger_head
+	name = "Tiger Head"
+	icon_state = "tiger"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/tiger_chest
+	name = "Tiger Chest"
+	icon_state = "tiger"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/tiger_arms
+	name = "Tiger Arms"
+	icon_state = "tiger"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_ARM, BP_R_HAND, BP_L_ARM, BP_L_HAND)
+
+/datum/sprite_accessory/marking/ch/tiger_legs
+	name = "Tiger Legs"
+	icon_state = "tiger"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT,BP_L_LEG,BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
+
+/datum/sprite_accessory/marking/ch/gradient_arms
+	name = "Gradient Arms"
+	icon_state = "gradient"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_ARM, BP_R_HAND, BP_L_ARM, BP_L_HAND)
+
+/datum/sprite_accessory/marking/ch/gradient_legs
+	name = "Gradient Legs"
+	icon_state = "gradient"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT,BP_L_LEG,BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
+
+/datum/sprite_accessory/marking/ch/hawk_talons
+	name = "Hawk Talons (Legs)"
+	icon_state = "hawktalon"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT,BP_L_LEG,BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
+
+/datum/sprite_accessory/marking/ch/deer_hooves
+	name = "Deer Hooves"
+	icon_state = "deerhoof"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT, BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
+
+/datum/sprite_accessory/marking/ch/frills_simple
+	name = "Frills (Simple)"
+	icon_state = "frills_simple"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/frills_short
+	name = "Frills (Short)"
+	icon_state = "frills_short"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/frills_aquatic
+	name = "Frills (Aquatic)"
+	icon_state = "frills_aqua"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
 /datum/sprite_accessory/marking/ch/guilmonhead
-		name = "Guilmon head"
-		icon_state = "guilmon_head"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_HEAD)
+	name = "Guilmon Head"
+	icon_state = "guilmon_head"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/ch/guilmonchest
-		name = "Guilmon Chest"
-		icon_state = "guilmon_chest"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO)
+	name = "Guilmon Chest"
+	icon_state = "guilmon_chest"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/ch/guilmonchestmarking
-		name = "Guilmon Chest Markings"
-		icon_state = "guilmon_marking"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO)
+	name = "Guilmon Chest Markings"
+	icon_state = "guilmon_marking"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/ch/guilmonarms
-		name = "Guilmon arms"
-		icon_state = "guilmon"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND)
+	name = "Guilmon Arms"
+	icon_state = "guilmon"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND)
 
-/datum/sprite_accessory/marking/ch/guilmonRLeg
-		name = "Guilmon Right leg"
-		icon_state = "guilmon"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmonLleg
-		name = "Guilmon Left leg"
-		icon_state = "guilmon"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiRleg1
-		name = "Guilmon digigrade right leg 1"
-		icon_state = "guilmon_digitigrade_1"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiLleg1
-		name = "Guilmon digigrade left leg 1"
-		icon_state = "guilmon_digitigrade_1"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiRleg2
-		name = "Guilmon digigrade right leg 2"
-		icon_state = "guilmon_digitigrade_2"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiLleg2
-		name = "Guilmon digigrade left leg 2"
-		icon_state = "guilmon_digitigrade_2"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_L_LEG)
+/datum/sprite_accessory/marking/ch/guilmonlegs
+	name = "Guilmon Legs"
+	icon_state = "guilmon"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT,BP_L_LEG,BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
 
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
@@ -332,6 +438,7 @@
 //Digitigrade markings
 /datum/sprite_accessory/marking/digi
 	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
 
 /datum/sprite_accessory/marking/digi/fullleft
 	name = "Digitigrade Full Left Leg(Only works with digitigrade legs)"
