@@ -794,6 +794,10 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const {
     belly_fullscreen,
     belly_fullscreen_color,
+    belly_fullscreen_color2,
+    belly_fullscreen_color3,
+    belly_fullscreen_color4,
+    belly_fullscreen_alpha,
     mapRef,
     colorization_enabled,
     possible_fullscreens,
@@ -939,7 +943,30 @@ const VoreSelectedBellyVisuals = (props, context) => {
           <Button
             icon="eye-dropper"
             onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color', val: null })}>
-            Select Color
+            Select Color 1
+          </Button>
+          <Box backgroundColor={belly_fullscreen_color2} width="20px" height="20px" />
+          <Button
+            icon="eye-dropper"
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color2', val: null })}>
+            Select Color 2
+          </Button>
+          <Box backgroundColor={belly_fullscreen_color3} width="20px" height="20px" />
+          <Button
+            icon="eye-dropper"
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color3', val: null })}>
+            Select Color 3
+          </Button>
+          <Box backgroundColor={belly_fullscreen_color4} width="20px" height="20px" />
+          <Button
+            icon="eye-dropper"
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color4', val: null })}>
+            Select Color 4
+          </Button>
+          <Button
+            icon="eye-dropper"
+            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_alpha', val: null })}>
+            Set Alpha
           </Button>
           <LabeledList.Item label="Enable Coloration">
             <Button

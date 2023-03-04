@@ -166,6 +166,10 @@
 	var/disable_hud = FALSE
 	var/colorization_enabled = TRUE //CHOMPedit
 	var/belly_fullscreen_color = "#823232"
+	var/belly_fullscreen_color2 = "#FFFFFF"
+	var/belly_fullscreen_color3 = "#823232"
+	var/belly_fullscreen_color4 = "#FFFFFF"
+	var/belly_fullscreen_alpha = 255
 
 
 
@@ -230,6 +234,10 @@
 	"disable_hud",
 	"reagent_mode_flags",	//CHOMP start of variables from CHOMP
 	"belly_fullscreen_color",
+	"belly_fullscreen_color2",
+	"belly_fullscreen_color3",
+	"belly_fullscreen_color4",
+	"belly_fullscreen_alpha",
 	"colorization_enabled",
 	"reagentbellymode",
 	"liquid_fullness1_messages",
@@ -415,7 +423,7 @@
 			for(var/count in I.d_mult to 1 step 0.25)
 				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
-/obj/belly/proc/vore_fx(mob/living/L)
+/obj/belly/proc/vore_fx(mob/living/L, var/update)
 	if(!istype(L))
 		return
 	if(!L.client)
@@ -423,22 +431,35 @@
 	if(!L.show_vore_fx)
 		L.clear_fullscreen("belly")
 		return
-
+	if(update)
+		L.clear_fullscreen("belly")
 	if(belly_fullscreen)
 		if(colorization_enabled)
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
-			F.icon_state = belly_fullscreen
-			F.color = belly_fullscreen_color
-			/* //Allows for 'multilayered' stomachs. Currently not implemented.
-			if(b_multilayered)
-				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
-			*/
+			var/image/I = image(F.icon, belly_fullscreen) //Would be cool if I could just include color and alpha in the image define so we don't have to copy paste
+			I.color = belly_fullscreen_color
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
+			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2")
+			I.color = belly_fullscreen_color2
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
+			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3")
+			I.color = belly_fullscreen_color3
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
+			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4")
+			I.color = belly_fullscreen_color4
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
-			F.icon_state = belly_fullscreen
+			F.add_overlay(image(F.icon, belly_fullscreen))
+			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2"))
+			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3"))
+			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4"))
 	else
 		L.clear_fullscreen("belly")
-		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
 
 	if(disable_hud)
 		if(L?.hud_used?.hud_shown)
@@ -454,18 +475,30 @@
 	if(belly_fullscreen)
 		if(colorization_enabled)
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
-			F.icon_state = belly_fullscreen
-			F.color = belly_fullscreen_color
-			/* //Allows for 'multilayered' stomachs. Currently not implemented.
-			if(b_multilayered)
-				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
-			*/
+			var/image/I = image(F.icon, belly_fullscreen)
+			I.color = belly_fullscreen_color
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
+			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2")
+			I.color = belly_fullscreen_color2
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
+			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3")
+			I.color = belly_fullscreen_color3
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
+			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4")
+			I.color = belly_fullscreen_color4
+			I.alpha = belly_fullscreen_alpha
+			F.add_overlay(I)
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
-			F.icon_state = belly_fullscreen
+			F.add_overlay(image(F.icon, belly_fullscreen))
+			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2"))
+			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3"))
+			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4"))
 	else
 		L.clear_fullscreen("belly")
-		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
 
 /obj/belly/proc/clear_preview(mob/living/L)
 	L.clear_fullscreen("belly")
@@ -1354,6 +1387,10 @@
 
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
 	dupe.belly_fullscreen_color = belly_fullscreen_color
+	dupe.belly_fullscreen_color2 = belly_fullscreen_color2
+	dupe.belly_fullscreen_color3 = belly_fullscreen_color3
+	dupe.belly_fullscreen_color4 = belly_fullscreen_color4
+	dupe.belly_fullscreen_alpha = belly_fullscreen_alpha
 	dupe.reagentbellymode = reagentbellymode
 	dupe.vorefootsteps_sounds = vorefootsteps_sounds
 	dupe.liquid_fullness1_messages = liquid_fullness1_messages
@@ -1397,7 +1434,6 @@
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
-	dupe.belly_fullscreen_color = belly_fullscreen_color
 	dupe.colorization_enabled = colorization_enabled
 	dupe.egg_type = egg_type
 	dupe.emote_time = emote_time

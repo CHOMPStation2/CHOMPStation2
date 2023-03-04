@@ -416,3 +416,8 @@
 	if(to_update)
 		updateVRPanels()
 /////////////////////////// CHOMP PCL END ///////////////////////////
+
+/obj/belly/proc/update_internal_overlay()
+	for(var/A in contents)
+		if(isliving(A))
+			vore_fx(A,1)
