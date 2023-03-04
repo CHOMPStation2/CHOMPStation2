@@ -312,3 +312,30 @@
 	push_data()
 	activate_pin(2)
 
+//CHOMPADDITION Math iterators
+/obj/item/integrated_circuit/arithmetic/iterator
+	name = "iterator"
+	desc = "This circuit adds Y to its input and provides it as an output."
+	extended_desc = "This circuit is equal to an operation performing X+Y but also modifes X to be the result."
+	icon_state = "addition"
+	inputs = list(	"input" = IC_PINTYPE_NUMBER,
+					"delta" = IC_PINTYPE_NUMBER)
+	outputs = list("result" = IC_PINTYPE_NUMBER)
+	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
+	complexity = 1
+	power_draw_per_use = 1 // one of the most basic operators there is.
+	var/i = 1
+
+
+/obj/item/integrated_circuit/arithmetic/iterator/do_work()
+	var/result = null
+	pull_data()
+	var/input = get_pin_data(IC_INPUT, 1)
+	var/delta = get_pin_data(IC_INPUT, 2)
+
+	result = input + delta
+
+	set_pin_data(IC_INPUT, 1, result)
+	set_pin_data(IC_OUTPUT, 1, result)
+	push_data()
+	activate_pin(2)
