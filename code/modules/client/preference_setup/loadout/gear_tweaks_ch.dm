@@ -3,8 +3,7 @@ var/datum/gear_tweak/item_tf_spawn/gear_tweak_item_tf_spawn = new()
 /datum/gear_tweak/item_tf_spawn
 
 /datum/gear_tweak/item_tf_spawn/get_contents(var/metadata)
-	if(!islist(metadata))
-	if(metadata["state"] == "Not Enabled")
+	if(!islist(metadata) || metadata["state"] == "Not Enabled")
 		return "Item TF spawnpoint: Not Enabled"
 	else if(metadata["state"] == "Anyone")
 		return "Item TF spawnpoint: Enabled"
