@@ -5,6 +5,7 @@
 /hook/startup/proc/Modular_Borg_init_Exploration()
 	robot_modules["ExploreHound"] = /obj/item/weapon/robot_module/robot/exploration //add to array
 	robot_module_types += "ExploreHound" //Add to global list
+	return 1
 
 //Explo doggos
 /obj/item/weapon/robot_module/robot/exploration
