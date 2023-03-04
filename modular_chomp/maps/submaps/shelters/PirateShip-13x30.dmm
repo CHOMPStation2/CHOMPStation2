@@ -1,108 +1,977 @@
-"ao" = (/turf/simulated/shuttle/wall/dark/hard_corner,/area/survivalpod/superpose/PirateShip)
-"aH" = (/obj/effect/floor_decal/industrial/danger/corner{dir = 1},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"bh" = (/obj/structure/salvageable/console_broken_os{dir = 8},/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"bZ" = (/obj/structure/sign/flag/pirate,/turf/simulated/shuttle/wall/dark/hard_corner,/area/survivalpod/superpose/PirateShip)
-"cc" = (/obj/machinery/light{dir = 8; layer = 3},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"cf" = (/turf/template_noop,/area/template_noop)
-"cB" = (/obj/machinery/power/apc/alarms_hidden{pixel_y = -28},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"dc" = (/obj/effect/floor_decal/steeldecal/steel_decals_central6{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"dr" = (/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/manifold/visible{dir = 4},/obj/machinery/door/airlock/glass_external/public,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"eb" = (/obj/machinery/disperser/middle{dir = 4},/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/PirateShip)
-"fd" = (/obj/structure/bed,/obj/item/weapon/bedsheet/pirate,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"fh" = (/obj/machinery/power/generator,/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"fQ" = (/obj/machinery/light{dir = 8; layer = 3},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"gg" = (/obj/structure/railing/grey,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"gR" = (/obj/machinery/disperser/front{dir = 4},/turf/template_noop,/area/template_noop)
-"ha" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 4},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"hM" = (/obj/machinery/disperser/middle{dir = 8},/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/PirateShip)
-"iP" = (/obj/structure/shuttle/engine/propulsion{dir = 1},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/PirateShip)
-"iY" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"js" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/PirateShip)
-"jW" = (/obj/structure/table/woodentable,/obj/item/clothing/under/pirate,/obj/item/clothing/head/bandana,/obj/item/clothing/glasses/eyepatch,/obj/item/clothing/shoes/boots/duty,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"kJ" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/obj/machinery/door/firedoor,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/PirateShip)
-"kV" = (/obj/machinery/disperser/back{dir = 4},/obj/structure/ship_munition/disperser_charge/explosive,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"lU" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/glass_external/public,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/PirateShip)
-"mv" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/glass_external/public,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"mR" = (/obj/structure/table/woodentable,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"nb" = (/obj/structure/salvageable/console_broken_os{dir = 8},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"op" = (/obj/structure/ship_munition/disperser_charge/explosive,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"oC" = (/obj/structure/sign/flag/pirate{pixel_y = 29},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"pz" = (/obj/item/weapon/storage/backpack/messenger,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/weapon/reagent_containers/pill/dylovene,/obj/item/weapon/reagent_containers/pill/dylovene,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/random/soap,/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,/obj/item/device/fbp_backup_cell,/obj/item/device/pda,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/starcaster_news,/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/obj/item/device/suit_cooling_unit/emergency,/obj/item/device/gps,/obj/structure/closet{name = "Survival closet"},/obj/machinery/light{dir = 4},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"rJ" = (/obj/structure/table/woodentable,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"sh" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/PirateShip)
-"tC" = (/obj/machinery/disperser/back{dir = 4},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"vj" = (/obj/structure/salvageable/console_broken_os{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"vF" = (/obj/structure/bed/chair/bay/chair/padded/red{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"wc" = (/obj/structure/salvageable/console_broken_os{dir = 4},/obj/machinery/light{dir = 8; layer = 3},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"wx" = (/obj/effect/floor_decal/industrial/danger,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"zm" = (/obj/effect/floor_decal/industrial/danger/corner,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"zL" = (/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"zZ" = (/obj/structure/table/woodentable,/obj/item/clothing/head/helmet/space/pirate,/obj/item/clothing/suit/pirate,/obj/item/clothing/shoes/boots/duty,/obj/item/clothing/glasses/eyepatch,/obj/machinery/light{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"Ap" = (/obj/effect/floor_decal/steeldecal/monofloor{dir = 1},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"CZ" = (/obj/machinery/disperser/back{dir = 8},/obj/structure/ship_munition/disperser_charge/mining,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"Dt" = (/obj/structure/table/woodentable,/obj/machinery/light{dir = 8; layer = 3},/obj/random/maintenance,/obj/random/maintenance/cargo,/obj/random/maintenance/engineering,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"DR" = (/obj/machinery/atmospherics/portables_connector,/obj/machinery/portable_atmospherics/canister/empty/nitrogen,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"Ev" = (/obj/structure/sign/flag/pirate{pixel_y = 29},/obj/machinery/door/firedoor,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10},/obj/machinery/door/airlock/glass_external/public,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"Ey" = (/obj/structure/shuttle/engine/heater{dir = 1},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/PirateShip)
-"Fg" = (/obj/effect/floor_decal/industrial/danger{dir = 10},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"Gx" = (/obj/machinery/disperser/back{dir = 8},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"GR" = (/obj/structure/ship_munition/disperser_charge/mining,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"GY" = (/obj/machinery/light{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"Iu" = (/obj/effect/floor_decal/steeldecal/monofloor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"JA" = (/obj/structure/railing/grey,/obj/structure/railing/grey{dir = 8},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"Kc" = (/obj/structure/sign/flag/pirate,/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/PirateShip)
-"Ki" = (/obj/structure/closet/crate/wooden,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"Kk" = (/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"KK" = (/obj/structure/closet/secure_closet/guncabinet,/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped,/obj/item/weapon/gun/projectile/shotgun/pump/rifle,/obj/item/weapon/storage/box/syndie_kit{max_storage_space = 20; name = "box of 7.62mm clips"; starts_with = list(/obj/item/ammo_magazine/clip/c762=10)},/obj/item/weapon/storage/box/syndie_kit{max_storage_space = 20; name = "box of 7.62mm clips"; starts_with = list(/obj/item/ammo_magazine/clip/c762=10)},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"Mn" = (/obj/machinery/atmospherics/portables_connector{dir = 4},/obj/machinery/atmospherics/binary/circulator{anchored = 1; dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"Mr" = (/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"Mv" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/obj/machinery/portable_atmospherics/canister/empty,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"MA" = (/obj/machinery/portable_atmospherics/canister/air/airlock,/obj/machinery/atmospherics/portables_connector{dir = 1},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"NK" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"NN" = (/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/PirateShip)
-"PQ" = (/obj/structure/fans,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"PS" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/piratedouble,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"Qd" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/PirateShip)
-"Qw" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/PirateShip)
-"Rn" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/atmospherics/binary/circulator{anchored = 1; dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/PirateShip)
-"SO" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"Tl" = (/obj/structure/table/woodentable,/obj/machinery/light{dir = 4},/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance/engineering,/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"To" = (/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
-"Ve" = (/obj/machinery/disperser/front{dir = 8},/turf/template_noop,/area/template_noop)
-"Xl" = (/obj/effect/floor_decal/industrial/danger{dir = 6},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"Xy" = (/obj/effect/floor_decal/stairs/dark_stairs,/turf/simulated/floor,/area/survivalpod/superpose/PirateShip)
-"Yi" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/PirateShip)
-"YI" = (/obj/structure/undies_wardrobe,/turf/simulated/floor/wood,/area/survivalpod/superpose/PirateShip)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ao" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/survivalpod/superpose/PirateShip)
+"aH" = (
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"bh" = (
+/obj/structure/salvageable/console_broken_os{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"bZ" = (
+/obj/structure/sign/flag/pirate,
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/survivalpod/superpose/PirateShip)
+"cc" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"cf" = (
+/turf/template_noop,
+/area/template_noop)
+"cB" = (
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -28
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"dc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central6{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"dr" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass_external/public,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"eb" = (
+/obj/machinery/disperser/middle{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/PirateShip)
+"fd" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/pirate,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"fh" = (
+/obj/machinery/power/generator,
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"fQ" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"gg" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"gR" = (
+/obj/machinery/disperser/front{
+	dir = 4
+	},
+/turf/template_noop,
+/area/template_noop)
+"ha" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"hM" = (
+/obj/machinery/disperser/middle{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/PirateShip)
+"iP" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/PirateShip)
+"iY" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	id_tag = "pshiproom2"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"js" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/PirateShip)
+"jW" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/under/pirate,
+/obj/item/clothing/head/bandana,
+/obj/item/clothing/glasses/eyepatch,
+/obj/item/clothing/shoes/boots/duty,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"kJ" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/PirateShip)
+"kM" = (
+/obj/machinery/button/remote/airlock{
+	id = "pshiproom3";
+	name = "Bolt Control";
+	specialfunctions = 4;
+	dir = 1;
+	pixel_x = -4;
+	pixel_y = -29
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"kV" = (
+/obj/machinery/disperser/back{
+	dir = 4
+	},
+/obj/structure/ship_munition/disperser_charge/explosive,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"lU" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_external/public,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/PirateShip)
+"mv" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_external/public,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"mR" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"nb" = (
+/obj/structure/salvageable/console_broken_os{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"op" = (
+/obj/structure/ship_munition/disperser_charge/explosive,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"oC" = (
+/obj/structure/sign/flag/pirate{
+	pixel_y = 29
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"pz" = (
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/random/soap,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/pda,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/starcaster_news,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/gps,
+/obj/structure/closet{
+	name = "Survival closet"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"rJ" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"sh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/PirateShip)
+"tq" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	id_tag = "pshiproom3"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"tC" = (
+/obj/machinery/disperser/back{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"vj" = (
+/obj/structure/salvageable/console_broken_os{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"vF" = (
+/obj/structure/bed/chair/bay/chair/padded/red{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"wc" = (
+/obj/structure/salvageable/console_broken_os{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"wx" = (
+/obj/effect/floor_decal/industrial/danger,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"zm" = (
+/obj/effect/floor_decal/industrial/danger/corner,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"zL" = (
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"zZ" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/head/helmet/space/pirate,
+/obj/item/clothing/suit/pirate,
+/obj/item/clothing/shoes/boots/duty,
+/obj/item/clothing/glasses/eyepatch,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Ap" = (
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"CZ" = (
+/obj/machinery/disperser/back{
+	dir = 8
+	},
+/obj/structure/ship_munition/disperser_charge/mining,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"Dt" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/obj/random/maintenance,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"DR" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/empty/nitrogen,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"Ev" = (
+/obj/structure/sign/flag/pirate{
+	pixel_y = 29
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/door/airlock/glass_external/public,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"Ey" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/PirateShip)
+"Fg" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"Gx" = (
+/obj/machinery/disperser/back{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"GR" = (
+/obj/structure/ship_munition/disperser_charge/mining,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"GY" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"Iu" = (
+/obj/effect/floor_decal/steeldecal/monofloor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"JA" = (
+/obj/structure/railing/grey,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"JF" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/pirate,
+/obj/machinery/button/remote/airlock{
+	id = "pshiproom1";
+	name = "Bolt Control";
+	specialfunctions = 4;
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Kc" = (
+/obj/structure/sign/flag/pirate,
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/PirateShip)
+"Ki" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Kk" = (
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"KK" = (
+/obj/structure/closet/secure_closet/guncabinet{
+	locked = 0
+	},
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped,
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
+/obj/item/weapon/storage/box/syndie_kit{
+	max_storage_space = 20;
+	name = "box of 7.62mm clips";
+	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
+	},
+/obj/item/weapon/storage/box/syndie_kit{
+	max_storage_space = 20;
+	name = "box of 7.62mm clips";
+	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Mn" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/atmospherics/binary/circulator{
+	anchored = 1;
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"Mr" = (
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"Mv" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"MA" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"MH" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/under/pirate,
+/obj/item/clothing/head/bandana,
+/obj/item/clothing/glasses/eyepatch,
+/obj/item/clothing/shoes/boots/duty,
+/obj/machinery/button/remote/airlock{
+	id = "pshiproom2";
+	name = "Bolt Control";
+	specialfunctions = 4;
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -1
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"NK" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"NN" = (
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/PirateShip)
+"PQ" = (
+/obj/structure/fans,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"PS" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/piratedouble,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Qd" = (
+/obj/item/device/gps/computer,
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/PirateShip)
+"Qw" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/PirateShip)
+"Rn" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/atmospherics/binary/circulator{
+	anchored = 1;
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/PirateShip)
+"SO" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Tl" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"To" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"Ve" = (
+/obj/machinery/disperser/front{
+	dir = 8
+	},
+/turf/template_noop,
+/area/template_noop)
+"Xl" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"Xy" = (
+/obj/effect/floor_decal/stairs/dark_stairs,
+/turf/simulated/floor,
+/area/survivalpod/superpose/PirateShip)
+"Yi" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/PirateShip)
+"Ym" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	id_tag = "pshiproom1"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
+"YI" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/PirateShip)
 
 (1,1,1) = {"
-cfcfcfcfiPcfcfcfiPcfcfcfcf
-cfcfcfiPEyNNNNNNEyiPcfcfcf
-cfcfaoEyNNNNPQQdNNEyaocfcf
-cfcfNNNNbZKKToTobZNNNNcfcf
-cfcfNNzZvFToToToTopzNNcfcf
-cfcfNNrJmRcBToToToPSNNcfcf
-aoiPNNNNNNaoiYaoNNNNNNiPao
-NNEyKcjWfdNNToNNjWfdKcEyNN
-NNNNNNSOToiYToiYToNKNNNNNN
-cfcfNNYIKiNNToNNKiYINNcfcf
-cfcfaoNNNNaojsaoNNNNaocfcf
-cfcfmvhaEvQwMrQwoCMrlUcfcf
-cfcfmvhadrMrMrMrMrMrlUcfcf
-cfcfaoNNshXyXyXyJAggaocfcf
-cfVehMCZMAzLzLzLzLtCebgRcf
-cfcfNNwczLzLdczLzLbhNNcfcf
-cfcfkJzLzLzLzLzLzLzLkJcfcf
-cfcfkJzLApTlNNDtApzLkJcfcf
-cfcfkJzLIuopopopIuzLkJcfcf
-cfcfNNfQzLGRGRGRzLYiNNcfcf
-cfVehMGxzLopopopzLkVebgRcf
-cfcfNNvjzmwxNNwxaHnbNNcfcf
-cfcfNNNNXlKkDRKkFgNNNNcfcf
-cfcfcfkJKkKkRnKkKkkJcfcfcf
-cfcfcfNNaoccfhGYaoNNcfcfcf
-cfcfcfcfkJKkMnMvkJcfcfcfcf
-cfcfcfcfNNNNNNNNNNcfcfcfcf
-cfcfcfcfcfNNNNNNcfcfcfcfcf
-cfcfcfcfcfcfNNcfcfcfcfcfcf
-cfcfcfcfcfcfNNcfcfcfcfcfcf
+cf
+cf
+cf
+cf
+cf
+cf
+ao
+NN
+NN
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+"}
+(2,1,1) = {"
+cf
+cf
+cf
+cf
+cf
+cf
+iP
+Ey
+NN
+cf
+cf
+cf
+cf
+cf
+Ve
+cf
+cf
+cf
+cf
+cf
+Ve
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+"}
+(3,1,1) = {"
+cf
+cf
+ao
+NN
+NN
+NN
+NN
+Kc
+NN
+NN
+ao
+mv
+mv
+ao
+hM
+NN
+kJ
+kJ
+kJ
+NN
+hM
+NN
+NN
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+"}
+(4,1,1) = {"
+cf
+iP
+Ey
+NN
+zZ
+rJ
+NN
+jW
+SO
+YI
+NN
+ha
+ha
+NN
+CZ
+wc
+zL
+zL
+zL
+fQ
+Gx
+vj
+NN
+kJ
+NN
+cf
+cf
+cf
+cf
+cf
+"}
+(5,1,1) = {"
+iP
+Ey
+NN
+bZ
+vF
+mR
+NN
+JF
+To
+Ki
+NN
+Ev
+dr
+sh
+MA
+zL
+zL
+Ap
+Iu
+zL
+zL
+zm
+Xl
+Kk
+ao
+kJ
+NN
+cf
+cf
+cf
+"}
+(6,1,1) = {"
+cf
+NN
+NN
+KK
+To
+cB
+ao
+NN
+Ym
+NN
+ao
+Qw
+Mr
+Xy
+zL
+zL
+zL
+Tl
+op
+GR
+op
+wx
+Kk
+Kk
+cc
+Kk
+NN
+NN
+cf
+cf
+"}
+(7,1,1) = {"
+cf
+NN
+PQ
+To
+To
+To
+tq
+To
+To
+To
+js
+Mr
+Mr
+Xy
+zL
+dc
+zL
+NN
+op
+GR
+op
+NN
+DR
+Rn
+fh
+Mn
+NN
+NN
+NN
+NN
+"}
+(8,1,1) = {"
+cf
+NN
+Qd
+To
+To
+kM
+ao
+NN
+iY
+NN
+ao
+Qw
+Mr
+Xy
+zL
+zL
+zL
+Dt
+op
+GR
+op
+wx
+Kk
+Kk
+GY
+Mv
+NN
+NN
+cf
+cf
+"}
+(9,1,1) = {"
+iP
+Ey
+NN
+bZ
+To
+To
+NN
+MH
+To
+Ki
+NN
+oC
+Mr
+JA
+zL
+zL
+zL
+Ap
+Iu
+zL
+zL
+aH
+Fg
+Kk
+ao
+kJ
+NN
+cf
+cf
+cf
+"}
+(10,1,1) = {"
+cf
+iP
+Ey
+NN
+pz
+PS
+NN
+fd
+NK
+YI
+NN
+Mr
+Mr
+gg
+tC
+bh
+zL
+zL
+zL
+Yi
+kV
+nb
+NN
+kJ
+NN
+cf
+cf
+cf
+cf
+cf
+"}
+(11,1,1) = {"
+cf
+cf
+ao
+NN
+NN
+NN
+NN
+Kc
+NN
+NN
+ao
+lU
+lU
+ao
+eb
+NN
+kJ
+kJ
+kJ
+NN
+eb
+NN
+NN
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+"}
+(12,1,1) = {"
+cf
+cf
+cf
+cf
+cf
+cf
+iP
+Ey
+NN
+cf
+cf
+cf
+cf
+cf
+gR
+cf
+cf
+cf
+cf
+cf
+gR
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+"}
+(13,1,1) = {"
+cf
+cf
+cf
+cf
+cf
+cf
+ao
+NN
+NN
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
 "}

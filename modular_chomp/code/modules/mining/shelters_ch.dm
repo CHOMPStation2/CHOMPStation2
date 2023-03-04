@@ -260,10 +260,10 @@
 	name = "Resto-Bar"
 	description = "A large restaurant for food and drink, two overnight rental rooms and a small garden."
 
-/datum/map_template/shelter/superpose/BordcastingPod
-	shelter_id = "BordcastingPod"
-	mappath = "modular_chomp/maps/submaps/shelters/BrodcastingPod-11x9.dmm"
-	name = "Brodcasting Pod"
+/datum/map_template/shelter/superpose/BroadcastingPod
+	shelter_id = "BroadcastingPod"
+	mappath = "modular_chomp/maps/submaps/shelters/BroadcastingPod-11x9.dmm"
+	name = "Broadcasting Pod"
 	description = "A small NanoTransen news pod, everything you need to start live news in the most inhospitable places!"
 
 /datum/map_template/shelter/superpose/DemonPoolV2
