@@ -57,6 +57,9 @@
 /area/survivalpod/superpose/HillOutpost)
 "o" = (
 /obj/structure/ledge/ledge_stairs,
+/obj/structure/railing/grey{
+	dir = 8
+	},
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/HillOutpost)
 "p" = (
@@ -75,6 +78,9 @@
 /area/survivalpod/superpose/HillOutpost)
 "r" = (
 /obj/structure/cliff/automatic{
+	dir = 8
+	},
+/obj/structure/railing/grey{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
@@ -170,9 +176,9 @@
 /area/survivalpod/superpose/HillOutpost)
 "N" = (
 /obj/structure/railing/grey{
-	dir = 4
+	dir = 8
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/HillOutpost)
 "O" = (
 /obj/structure/bed/chair,
@@ -436,12 +442,12 @@ c
 (13,1,1) = {"
 c
 b
-N
-N
-N
-N
-N
-N
+a
+a
+a
+a
+a
+a
 a
 M
 g
@@ -450,8 +456,8 @@ g
 g
 x
 r
-Q
-c
+A
+N
 o
 o
 o
