@@ -1772,7 +1772,8 @@
 	pixel_x = 1;
 	dir = 4;
 	pixel_y = 24;
-	req_one_access = list(886)
+	req_one_access = list(886);
+	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere."
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -3266,6 +3267,11 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/carpet/retro,
 /area/awaymission/darkrp/plazarecroom)
+"kF" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse3)
 "kG" = (
 /obj/structure/simple_door/wood,
 /obj/effect/floor_decal/rust,
@@ -3721,7 +3727,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/tunnels/suburbs)
 "ml" = (
-/obj/machinery/power/rtg,
+/obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
@@ -3860,12 +3866,11 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
 "mK" = (
-/obj/item/weapon/card/id/gateway{
-	access = list(860);
-	name = "PD Access ID"
+/obj/item/weapon/storage/pill_bottle/hyronalin,
+/turf/simulated/floor/outdoors/newdirt{
+	temperature = 293.15
 	},
-/turf/simulated/floor/tiled,
-/area/awaymission/darkrp/pd)
+/area/awaymission/darkrp/outside)
 "mL" = (
 /obj/machinery/light{
 	dir = 4
@@ -3986,6 +3991,10 @@
 /mob/living/simple_mob/humanoid/merc/melee,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"nh" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/outside)
 "nj" = (
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
@@ -4360,7 +4369,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "ox" = (
-/obj/machinery/power/rtg,
+/obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
@@ -5164,6 +5173,16 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"rc" = (
+/obj/item/clothing/suit/radiation,
+/obj/effect/decal/cleanable/blood/gibs{
+	color = "red";
+	icon_state = "gibdown1_flesh"
+	},
+/turf/simulated/floor/outdoors/newdirt{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside)
 "re" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/vehicle/train/trolley{
@@ -5707,6 +5726,13 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"sM" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse1)
 "sN" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
@@ -6306,10 +6332,21 @@
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/rtg/fake_reactor,
-/obj/item/weapon/paper{
-	info = "If you see this, someone forgot to make a powernet";
-	name = "Stained sheet of paper"
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
@@ -6904,10 +6941,21 @@
 /obj/item/weapon/gun/energy/taser,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"wt" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/outside)
 "wu" = (
 /obj/structure/flora/pottedplant/bamboo,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subapartments)
+"wv" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/material/cloth{
+	amount = 25
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/outside)
 "ww" = (
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
@@ -8666,6 +8714,13 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
+"Ca" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/outside)
 "Cb" = (
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -9105,6 +9160,10 @@
 /obj/item/weapon/bone/leg,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/awaymission/darkrp/sewers)
+"Ds" = (
+/obj/structure/bookcase,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/outside)
 "Dt" = (
 /obj/item/weapon/weldingtool/largetank,
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -9115,7 +9174,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
 "Dv" = (
-/obj/machinery/power/rtg,
+/obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
@@ -9339,6 +9398,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/sewers)
+"Ec" = (
+/obj/item/device/geiger,
+/turf/simulated/floor/outdoors/dirt{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside)
 "Ed" = (
 /obj/structure/table/bench/padded,
 /obj/machinery/light/small{
@@ -10300,7 +10365,8 @@
 	pixel_x = 1;
 	dir = 4;
 	pixel_y = 24;
-	req_one_access = list(887)
+	req_one_access = list(887);
+	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere."
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -12924,11 +12990,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
 "OQ" = (
-/obj/structure/table/steel{
-	flipped = 1;
-	icon_state = "metal_flip0";
-	dir = 4
-	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -13037,6 +13099,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/plaza)
+"Pn" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse2)
 "Po" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/cargo,
@@ -13339,6 +13405,28 @@
 "Qq" = (
 /turf/simulated/wall/wood,
 /area/awaymission/darkrp/parkcondo)
+"Qt" = (
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/subpower)
 "Qu" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -13481,7 +13569,7 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/plazahotel)
 "QN" = (
-/obj/machinery/power/rtg,
+/obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
@@ -13883,7 +13971,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
 "Sn" = (
-/obj/machinery/power/rtg,
+/obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -13893,6 +13981,10 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/subpower)
+"So" = (
+/obj/item/weapon/storage/firstaid,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/outside)
 "Sq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/toy/plushie/possum,
@@ -14802,6 +14894,18 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
+"Vj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/subpower)
 "Vk" = (
 /obj/structure/fence{
 	dir = 4
@@ -15152,6 +15256,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
+"Wj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/subpower)
 "Wk" = (
 /obj/item/weapon/tool/screwdriver/brass,
 /turf/simulated/floor/lino,
@@ -15434,6 +15555,18 @@
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"Xd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/subpower)
 "Xe" = (
 /obj/machinery/light{
 	layer = 3
@@ -15785,7 +15918,6 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -15919,6 +16051,13 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/tunnels/park)
+"Yu" = (
+/obj/structure/bonfire/permanent,
+/obj/item/stack/rods,
+/turf/simulated/floor/outdoors/dirt{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside)
 "Yv" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wmarble,
@@ -20000,7 +20139,7 @@ zb
 zb
 zb
 zb
-zb
+Yu
 zb
 zb
 zb
@@ -20321,11 +20460,11 @@ zb
 zb
 zb
 Xa
-zb
-zb
-zb
-zb
-zb
+qQ
+wt
+qQ
+qQ
+qQ
 zb
 zb
 Xa
@@ -20483,11 +20622,11 @@ Xw
 zb
 zb
 zb
-zb
-zb
-zb
-zb
-zb
+qQ
+YR
+ee
+Ds
+qQ
 Xa
 zb
 zb
@@ -20645,11 +20784,11 @@ Xw
 Kh
 Xw
 zb
-zb
-lS
-zb
-zb
-zb
+qQ
+YR
+YR
+ee
+qQ
 zb
 zb
 zb
@@ -20807,11 +20946,11 @@ Xw
 Xw
 Xw
 zb
-zb
-zb
-zb
-zb
-Xa
+qQ
+So
+Ca
+Ca
+SC
 Xa
 zb
 zb
@@ -20969,11 +21108,11 @@ Xw
 Xw
 Xw
 Xw
-zb
-zb
-zb
-zb
-zb
+qQ
+YR
+nh
+wv
+SC
 Xa
 Xa
 zb
@@ -21131,11 +21270,11 @@ Xw
 Cj
 Xw
 Xw
-zb
-zb
-zb
-Xa
-zb
+qQ
+qQ
+qQ
+qQ
+qQ
 zb
 zb
 zb
@@ -23235,14 +23374,14 @@ Xa
 Xa
 Xa
 XH
-Xa
+bh
 Xa
 NM
 zb
 zb
 fb
 Xa
-Xa
+uB
 Xa
 Xa
 Xa
@@ -23398,8 +23537,8 @@ Xa
 Xa
 Xa
 Xa
-Xa
-zb
+rc
+Ec
 zb
 NO
 Xa
@@ -23565,7 +23704,7 @@ Xa
 Ut
 fb
 Xa
-Xa
+mK
 Xa
 Xa
 Xa
@@ -24050,7 +24189,7 @@ Xa
 fb
 Xa
 Xa
-Xa
+NM
 Xa
 Xa
 Xa
@@ -24855,7 +24994,7 @@ NA
 NA
 Xa
 Xa
-Xa
+uB
 Xa
 zb
 zb
@@ -29745,7 +29884,7 @@ PX
 Pt
 Il
 zW
-zW
+sM
 PT
 zW
 lX
@@ -30217,15 +30356,15 @@ EO
 EO
 iz
 hB
-Gx
+kF
 aK
 hB
 iz
 Ua
 vx
 br
-br
-br
+OQ
+OQ
 uS
 lX
 lX
@@ -30548,8 +30687,8 @@ lJ
 uS
 br
 br
-OQ
-OQ
+br
+br
 uS
 kj
 kj
@@ -31853,7 +31992,7 @@ re
 LG
 LG
 St
-WF
+Pn
 nL
 NA
 NA
@@ -34735,7 +34874,7 @@ xc
 IM
 yt
 Tw
-mK
+ZH
 IM
 ZH
 IM
@@ -46512,9 +46651,9 @@ Ta
 Ta
 SO
 Vk
-Hy
+Wj
 kM
-Hy
+Wj
 kM
 ml
 WY
@@ -46674,9 +46813,9 @@ Ta
 Ta
 SO
 Vk
-Hy
+Xd
 OD
-Hy
+Xd
 OD
 Hy
 pl
@@ -46836,9 +46975,9 @@ Ta
 Ta
 SO
 Vk
-Hy
+Wj
 OD
-Hy
+Wj
 OD
 ox
 Lc
@@ -46998,9 +47137,9 @@ Ta
 Ta
 SO
 Vk
-ck
+Xd
 OD
-Hy
+Xd
 jh
 RC
 Yh
@@ -47160,8 +47299,8 @@ Ta
 Ta
 SO
 Vk
-ck
-kM
+Qt
+Km
 uE
 Yf
 ml
@@ -47322,9 +47461,9 @@ Ta
 Ta
 SO
 Vk
-ck
+Xd
 kM
-Hy
+Xd
 Ul
 RC
 EI
@@ -47484,9 +47623,9 @@ Ta
 Ta
 SO
 Vk
-ck
+Vj
 kM
-Hy
+Vj
 OD
 ml
 gJ
