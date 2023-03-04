@@ -58,7 +58,8 @@
 	set desc = "Sets your voice style!"
 	set category = "OOC"
 
-	var/list/possible_voice_types = list(
+	//CHOMPEDIT START, Global Talk Sounds
+	var/list/possible_voice_types = talk_sounds/*list(
 		"beep-boop",
 		"goon speak 1",
 		"goon speak 2",
@@ -73,6 +74,7 @@
 		"goon speak pugg",
 		"goon speak roach",
 		"goon speak skelly")
+	*/ //CHOMPEDIT END, Global Talk Sounds
 	var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 	if(!choice)
 		voice_sounds_list = talk_sound
