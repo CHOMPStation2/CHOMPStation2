@@ -496,7 +496,16 @@
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
 	var/gut = join_props["voreny"]
 	var/mob/living/prey = join_props["prey"]
-	if(prey)
+	//CHOMPEdit Start - Item TF
+	var/obj/item/itemtf = join_props["itemtf"]
+	if(itemtf)
+		itemtf.inhabit_item(character, itemtf.name, character)
+		var/mob/living/possessed_voice = itemtf.possessed_voice
+		itemtf.trash_eatable = character.devourable
+		itemtf.unacidable = !character.digestable
+		character.forceMove(possessed_voice)
+	//CHOMPEdit End
+	else if(prey)
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
 		for(var/obj/belly/B in character.vore_organs)

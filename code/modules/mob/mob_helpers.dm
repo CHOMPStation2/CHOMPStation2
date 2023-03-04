@@ -482,11 +482,11 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			name = (C.holder && C.holder.fakekey) ? C.holder.fakekey : C.key
 		if(joined_ghosts)
 			//say_dead_direct("The ghost of <span class='name'>[name]</span> now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]") //ChompEDIT - Removed for ghost privacy
-			log_and_message_admins("<span class='name'>[name]</span> entered ghost/observe mode") //ChompEDIT
+			log_and_message_admins("<span class='name'>[name]</span> entered ghost/observe mode. [message]") //ChompEDIT
 
 		else
 			//say_dead_direct("<span class='name'>[name]</span> no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]") //ChompEDIT - Removed for ghost privacy
-			log_and_message_admins("<span class='name'>[name]</span> left ghost/observe mode") //ChompEDIT
+			log_and_message_admins("<span class='name'>[name]</span> left ghost/observe mode. [message]") //ChompEDIT
 
 
 /mob/proc/switch_to_camera(var/obj/machinery/camera/C)

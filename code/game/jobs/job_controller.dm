@@ -657,6 +657,7 @@ var/global/datum/controller/occupations/job_master
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
+	var/obj/item/item_to_be
 
 	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
@@ -781,6 +782,91 @@ var/global/datum/controller/occupations/job_master
 			else
 				to_chat(C, "<span class='warning'>No prey were available to accept you.</span>")
 				return
+		//CHOMPEdit - Item TF spawnpoints!
+		else if(C.prefs.spawnpoint == "Item TF spawn")
+			var/list/items = list()
+			var/list/item_names = list()
+			var/list/carriers = list()
+			for(var/obj/item/I in item_tf_spawnpoints)
+				if(LAZYLEN(I.ckeys_allowed_itemspawn))
+					if(!(C.ckey in I.ckeys_allowed_itemspawn))
+						continue
+				var/atom/item_loc = I.loc
+				var/mob/living/carrier
+				while(!isturf(item_loc))
+					if(isliving(item_loc))
+						carrier = item_loc
+						break
+					else
+						item_loc = item_loc.loc
+				if(istype(carrier))
+					if(!(carrier.z in using_map.vorespawn_levels))
+						continue
+					if(carrier.stat == UNCONSCIOUS || carrier.stat == DEAD || carrier.client.is_afk(10 MINUTES))
+						continue
+					carriers += carrier
+				else
+					if(!(item_loc.z in using_map.vorespawn_levels))
+						continue
+					carriers += null
+
+				items += I
+				if(I.name == initial(I.name))
+					if(carrier)
+						item_names += "[carrier]'s [I.name] ([I.loc.name])"
+					else
+						item_names += "[I.name] ([I.loc.name])"
+				else
+					if(carrier)
+						item_names += "[carrier]'s [I.name] (\a [initial(I.name)] at [I.loc.name])"
+					else
+						item_names += "[I.name] (\a [initial(I.name)] at [I.loc.name])"
+			if(LAZYLEN(items))
+				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
+				if(backup == "Yes")
+					backup = 1
+				var/item_name = input(C, "Choose an Item to spawn as.", "Item TF Spawnpoint") as null|anything in item_names
+				if(!item_name)
+					return
+				var/index = item_names.Find(item_name)
+				var/obj/item/item = items[index]
+
+				var/mob/living/carrier = carriers[index]
+				if(istype(carrier))
+					to_chat(C, "<b><span class='warning'>[carrier] has received your spawn request. Please wait.</span></b>")
+					log_and_message_admins("[key_name(C)] has requested to item spawn into [key_name(carrier)]'s possession")
+
+					var/confirm = alert(carrier, "[C.prefs.real_name] is attempting to join as the [item_name] in your possession.", "Confirm", "No", "Yes")
+					if(confirm != "Yes")
+						to_chat(C, "<span class='warning'>[carrier] has declined your spawn request.</span>")
+						var/message = sanitizeSafe(input(carrier,"Do you want to leave them a message?")as text|null)
+						if(message)
+							to_chat(C, "<span class='notice'>[carrier] message : [message]</span>")
+						return
+					if(carrier.stat == UNCONSCIOUS || carrier.stat == DEAD)
+						to_chat(C, "<span class='warning'>[carrier] is not conscious.</span>")
+						to_chat(carrier, "<span class='warning'>You must be conscious to accept.</span>")
+						return
+					if(!(carrier.z in using_map.vorespawn_levels))
+						to_chat(C, "<span class='warning'>[carrier] is no longer in station grounds.</span>")
+						to_chat(carrier, "<span class='warning'>You must be within station grounds to accept.</span>")
+						return
+					log_and_message_admins("[key_name(C)] has item spawned onto [key_name(carrier)]")
+					item_to_be = item
+					if(backup)
+						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+				else
+					var/confirm = alert(C, "\The [item.name] is currently not in any character's possession! Do you still want to spawn as it?", "Confirm", "No", "Yes")
+					if(confirm != "Yes")
+						return
+					log_and_message_admins("[key_name(C)] has item spawned into \a [item.name] that was not held by anyone")
+					item_to_be = item
+					if(backup)
+						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+			else
+				to_chat(C, "<span class='warning'>No items were available to accept you.</span>")
+				return
+		//CHOMPEdit End
 		else
 			if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
 				if(fail_deadly)
@@ -793,11 +879,15 @@ var/global/datum/controller/occupations/job_master
 				spawnpos = spawntypes[C.prefs.spawnpoint]
 
 	//We will return a list key'd by "turf" and "msg"
-	. = list("turf","msg", "voreny", "prey")
+	. = list("turf","msg", "voreny", "prey", "itemtf") //CHOMPEdit - Item TF spawnpoints
 	if(vore_spawn_gut)
 		.["voreny"] = vore_spawn_gut
 	if(prey_to_nomph)
 		.["prey"] = prey_to_nomph	//We pass this on later to reverse the vorespawn in new_player.dm
+	//CHOMPEdit Start - Item TF spawnpoints
+	if(item_to_be)
+		.["itemtf"] = item_to_be
+	//CHOMPEdit End
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
