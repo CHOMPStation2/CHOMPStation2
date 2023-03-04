@@ -62,7 +62,7 @@
 	ask_verb = "intones"
 	exclaim_verb = "chants"
 	colour = "cult"
-	key = "f"
+	key = "6" //CHOMPEdit: never used here, push it to the side for irydian
 	flags = RESTRICTED
 	space_chance = 100
 	machine_understands = 0

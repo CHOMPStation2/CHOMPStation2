@@ -54,28 +54,38 @@
 	var/scrambled_text = ""
 	var/list/words = splittext(input, " ")
 	for(var/w in words)
+		var/nword = w //CHOMPEdit: making partial understanding better and actually work (entire for loop edited basically.)
 		if(prob(understand_chance))
-			scrambled_text += " [w] "
+			if (prob(100-understand_chance)) //CHOMPEdit: chance to be misunderstood partially
+				nword = partial_scramble(w)
+				continue
 		else
-			var/nword = scramble_word(w)
-			var/ending = copytext(scrambled_text, length(scrambled_text)-1)
-			if(findtext(ending,"."))
-				nword = capitalize(nword)
-			else if(findtext(ending,"!"))
-				nword = capitalize(nword)
-			else if(findtext(ending,"?"))
-				nword = capitalize(nword)
-			scrambled_text += nword
-	scrambled_text = replacetext(scrambled_text,"  "," ")
-	scrambled_text = capitalize(scrambled_text)
+			nword = scramble_word(w)
+		var/ending = copytext(scrambled_text, length(scrambled_text)-1)
+		if(findtext(ending,"."))
+			nword = capitalize(nword)
+		else if(findtext(ending,"!"))
+			nword = capitalize(nword)
+		else if(findtext(ending,"?"))
+			nword = capitalize(nword)
+		scrambled_text += nword + " "
+	var/static/regex/multispace = new/regex(@" +", "g")
+	var/static/regex/commadrift = new/regex(@"([\w])\s+([,?!.]+)", "g")
+	scrambled_text = multispace.Replace(scrambled_text, " ")
+	scrambled_text = commadrift.Replace(scrambled_text, "$1$2")
 	scrambled_text = trim(scrambled_text)
+	scrambled_text = capitalize(scrambled_text)
+	/* CHOMPEdit
 	var/ending = copytext(scrambled_text, length(scrambled_text))
 	if(ending == ".")
 		scrambled_text = copytext(scrambled_text,1,length(scrambled_text)-1)
+	*/
 
+	/* CHOMPEdit
 	var/input_ending = copytext(input, length(input))
 	if(input_ending in list("!","?","."))
 		scrambled_text += input_ending
+	*/
 
 	return scrambled_text
 
@@ -83,36 +93,50 @@
 	if(!syllables || !syllables.len)
 		return stars(input)
 
+	var/static/regex/punctuation = new/regex(@"([.,?!-]+)$")
+	var/static/regex/prefixpunct = new/regex(@"^([.,?!-]+)")
+	var/found = punctuation.Find(input)
+	var/input_ending = punctuation.match || ""
+	if (found)
+		input = copytext(input, 1, found)
+	var/foundprefix = prefixpunct.Find(input)
+	var/input_start = prefixpunct.match || ""
+	if (foundprefix)
+		input = copytext(input, length(prefixpunct.match))
+
 	// If the input is cached already, move it to the end of the cache and return it
-	if(input in scramble_cache)
-		var/n = scramble_cache[input]
+	var/k = lowertext(input) //CHOMPEdit: better caching
+	if(k in scramble_cache)
+		var/n = scramble_cache[k]
 		scramble_cache -= input
-		scramble_cache[input] = n
-		return n
+		scramble_cache[k] = n
+		return input_start + n + input_ending //CHOMPEdit
 
 	var/input_size = length(input)
 	var/scrambled_text = ""
 	var/capitalize = 0
 
 	while(length(scrambled_text) < input_size)
+		if(rand(100) <= space_chance)
+			scrambled_text += " "
 		var/next = pick(syllables)
 		if(capitalize)
 			next = capitalize(next)
 			capitalize = 0
 		scrambled_text += next
+		/* CHOMPEDIT
 		var/chance = rand(100)
 		if(chance <= 5)
 			scrambled_text += ". "
 			capitalize = 1
-		else if(chance > 5 && chance <= space_chance)
-			scrambled_text += " "
+		*/
 
 	// Add it to cache, cutting old entries if the list is too long
-	scramble_cache[input] = scrambled_text
+	scramble_cache[k] = scrambled_text
 	if(scramble_cache.len > SCRAMBLE_CACHE_LEN)
 		scramble_cache.Cut(1, scramble_cache.len-SCRAMBLE_CACHE_LEN-1)
 
-	return scrambled_text
+	return input_start + scrambled_text + input_ending
 
 /datum/language/proc/format_message(message, verb)
 	return "<span class='message'><span class='[colour]'>[message]</span></span>"
