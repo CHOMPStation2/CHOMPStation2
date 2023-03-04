@@ -3,6 +3,7 @@ var/datum/gear_tweak/item_tf_spawn/gear_tweak_item_tf_spawn = new()
 /datum/gear_tweak/item_tf_spawn
 
 /datum/gear_tweak/item_tf_spawn/get_contents(var/metadata)
+	if(!islist(metadata))
 	if(metadata["state"] == "Not Enabled")
 		return "Item TF spawnpoint: Not Enabled"
 	else if(metadata["state"] == "Anyone")
@@ -16,7 +17,8 @@ var/datum/gear_tweak/item_tf_spawn/gear_tweak_item_tf_spawn = new()
 	.["valid"] = list()
 
 /datum/gear_tweak/item_tf_spawn/get_metadata(var/user, var/list/metadata)
-	. = list()
+	. = get_default()
+	metadata = islist(metadata) ? metadata : .
 	var/entry = tgui_input_list(user, "Choose an entry.", "Character Preference", list("Not Enabled", "Anyone", "Only Specific Players"), metadata["state"])
 	if(entry)
 		.["state"] = entry
@@ -29,6 +31,8 @@ var/datum/gear_tweak/item_tf_spawn/gear_tweak_item_tf_spawn = new()
 		return metadata
 
 /datum/gear_tweak/item_tf_spawn/tweak_item(var/obj/item/I, var/metadata)
+	if(!islist(metadata))
+		return
 	if(metadata["state"] == "Not Enabled")
 		return
 	else if(metadata["state"] == "Anyone")
