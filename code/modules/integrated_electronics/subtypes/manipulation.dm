@@ -204,3 +204,32 @@
 	pre_attached_grenade_type = /obj/item/weapon/grenade/explosive
 	origin_tech = list(TECH_ENGINEERING = 3, TECH_DATA = 3, TECH_COMBAT = 10)
 	spawn_flags = null			// Used for world initializing, see the #defines above.
+
+//CHOMPADDITION: Size Circuit
+/obj/item/integrated_circuit/manipulation/Size
+	name = "size circuit"
+	desc = "This allows a given target to be resized."
+	icon_state = "locomotion"
+	extended_desc = "The Circuit accepts a reference to a creature and the size toset them to."
+	w_class = ITEMSIZE_NORMAL
+	complexity = 20
+	inputs = list(	"target ref",
+					"size" = IC_PINTYPE_NUMBER)
+	outputs = list()
+	activators = list("set size" = IC_PINTYPE_PULSE_IN,"on size set" = IC_PINTYPE_PULSE_OUT)
+	spawn_flags = IC_SPAWN_RESEARCH
+	power_draw_per_use = 100
+
+/obj/item/integrated_circuit/manipulation/size/do_work()
+	pull_data()
+	var/mob/living/target = get_pin_data(IC_INPUT, 1)
+	var/size = get_pin_data(IC_INPUT, 2)
+	var/turf/tt = get_turf(target)
+	var/turf/st = get_turf(src)
+
+	var/distance = sqrt((st.x - tt.x)**2 + (st.y - tt.y)**2)
+	if (distance >= 6)
+		return
+	if(target && istype(target,/mob/living/))
+		target.resize(size/100)
+	activate_pin(2)
