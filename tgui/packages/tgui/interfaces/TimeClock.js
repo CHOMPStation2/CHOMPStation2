@@ -1,14 +1,14 @@
 import { toFixed } from 'common/math';
 import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, Section, NoticeBox } from '../components';
+import { Box, Button, Flex, LabeledList, Section, NoticeBox, Icon } from '../components';
 import { Window } from '../layouts';
 import { RankIcon } from './common/RankIcon';
 
 export const TimeClock = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { department_hours, user_name, card, assignment, job_datum, allow_change_job, job_choices } = data;
+  const { department_hours, user_name, card, assignment, job_datum, allow_change_job, job_choices, loaded } = data;
 
   return (
     <Window width={500} height={520} resizable>
@@ -38,7 +38,7 @@ export const TimeClock = (props, context) => {
                 {card || 'Insert ID'}
               </Button>
             </LabeledList.Item>
-            {!!job_datum && (
+            {!!loaded && !!job_datum && (
               <Fragment>
                 <LabeledList.Item label="Rank">
                   <Box backgroundColor={job_datum.selection_color} p={0.8}>
@@ -67,6 +67,12 @@ export const TimeClock = (props, context) => {
               </Fragment>
             )}
           </LabeledList>
+          <br />
+          {!loaded && !!card && (
+            <Box align="center">
+              <Icon name="cog" size={5} spin />
+            </Box>
+          )}
         </Section>
         {!!(allow_change_job && job_datum && job_datum.timeoff_factor !== 0 && assignment !== 'Dismissed') && (
           <Section title="Employment Actions">

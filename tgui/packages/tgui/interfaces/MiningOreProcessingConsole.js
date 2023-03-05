@@ -1,14 +1,14 @@
 import { toTitleCase } from 'common/string';
 import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Dropdown, Section, LabeledList, AnimatedNumber } from '../components';
+import { Box, Button, Dropdown, Section, LabeledList, AnimatedNumber, Icon } from '../components';
 import { Window } from '../layouts';
 import { MiningUser } from './common/Mining';
 
 export const MiningOreProcessingConsole = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { unclaimedPoints, ores, showAllOres, power, speed } = data;
+  const { unclaimedPoints, ores, showAllOres, power, speed, loaded, has_id } = data;
 
   return (
     <Window width={400} height={500} resizable>
@@ -23,6 +23,13 @@ export const MiningOreProcessingConsole = (props, context) => {
             </Box>
           }
         />
+        <br />
+        {!loaded &&
+          !!has_id(
+            <Box align="center">
+              <Icon name="cog" size={5} spin />
+            </Box>
+          )}
         <Section
           title="Status"
           buttons={

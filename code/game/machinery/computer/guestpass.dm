@@ -92,7 +92,7 @@
 	density = FALSE
 	circuit = /obj/item/weapon/circuitboard/guestpass
 
-	var/obj/item/weapon/card/id/giver
+	// var/obj/item/weapon/card/id/giver // CHOMPEdit: Login Delay/Card Read
 	var/list/accesses = list()
 	var/giv_name = "NOT SPECIFIED"
 	var/reason = "NOT SPECIFIED"
@@ -111,11 +111,13 @@
 		to_chat(user, "<span class='warning'>The guest pass terminal denies to accept the guest pass.</span>")
 		return
 	if(istype(I, /obj/item/weapon/card/id))
-		if(!giver && user.unEquip(I))
+		if(!card && user.unEquip(I)) // CHOMPEdit: Login Delay/Card Read
 			I.forceMove(src)
-			giver = I
+			card = I // CHOMPEdit: Login Delay/Card Read
+			addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+			playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			SStgui.update_uis(src)
-		else if(giver)
+		else if(card) // CHOMPEdit: Login Delay/Card Read
 			to_chat(user, "<span class='warning'>There is already ID card inside.</span>")
 		return
 	..()
@@ -142,20 +144,21 @@
 	var/list/area_list = list()
 
 	data["access"] = null
-	if(giver && giver.access)
-		data["access"] = giver.access
-		for (var/A in giver.access)
+	if(card && card.access) // CHOMPEdit: Login Delay/Card Read
+		data["access"] = card.access // CHOMPEdit: Login Delay/Card Read
+		for (var/A in card.access) // CHOMPEdit: Login Delay/Card Read
 			if(A in accesses)
 				area_list.Add(list(list("area" = A, "area_name" = get_access_desc(A), "on" = 1)))
 			else
 				area_list.Add(list(list("area" = A, "area_name" = get_access_desc(A), "on" = null)))
 	data["area"] = area_list
 
-	data["giver"] = giver
+	data["giver"] = card // CHOMPEdit: Login Delay/Card Read
 	data["giveName"] = giv_name
 	data["reason"] = reason
 	data["duration"] = duration
 	data["mode"] = mode
+	data["loaded"] = loaded // CHOMPEdit: Login Delay/Card Read
 	data["log"] = internal_log
 	data["uid"] = uid
 
@@ -189,27 +192,33 @@
 			if(A in accesses)
 				accesses.Remove(A)
 			else
-				if(A in giver.access)	//Let's make sure the ID card actually has the access.
+				if(A in card.access)	//Let's make sure the ID card actually has the access. // CHOMPEdit: Login Delay/Card Read
 					accesses.Add(A)
 				else
 					to_chat(usr, "<span class='warning'>Invalid selection, please consult technical support if there are any issues.</span>")
 					log_debug("[key_name_admin(usr)] tried selecting an invalid guest pass terminal option.")
 		if("id")
-			if(giver)
+			if(card) // CHOMPEdit: Login Delay/Card Read
 				if(ishuman(usr))
-					giver.loc = usr.loc
+					card.loc = usr.loc // CHOMPEdit: Login Delay/Card Read
 					if(!usr.get_active_hand())
-						usr.put_in_hands(giver)
-					giver = null
+						usr.put_in_hands(card) // CHOMPEdit: Login Delay/Card Read
+					card = null // CHOMPEdit: Login Delay/Card Read
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 				else
-					giver.loc = src.loc
-					giver = null
+					card.loc = src.loc // CHOMPEdit: Login Delay/Card Read
+					card = null // CHOMPEdit: Login Delay/Card Read
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 				accesses.Cut()
 			else
 				var/obj/item/I = usr.get_active_hand()
 				if(istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
 					I.loc = src
-					giver = I
+					card = I // CHOMPEdit: Login Delay/Card Read
+					addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 
 		if("print")
 			var/dat = "<h3>Activity log of guest pass terminal #[uid]</h3><br>"
@@ -222,9 +231,9 @@
 			P.info = dat
 
 		if("issue")
-			if(giver)
+			if(card) // CHOMPEdit: Login Delay/Card Read
 				var/number = add_zero("[rand(0,9999)]", 4)
-				var/entry = "\[[stationtime2text()]\] Pass #[number] issued by [giver.registered_name] ([giver.assignment]) to [giv_name]. Reason: [reason]. Grants access to following areas: "
+				var/entry = "\[[stationtime2text()]\] Pass #[number] issued by [card.registered_name] ([card.assignment]) to [giv_name]. Reason: [reason]. Grants access to following areas: " // CHOMPEdit: Login Delay/Card Read
 				for (var/i=1 to accesses.len)
 					var/A = accesses[i]
 					if(A)
@@ -244,4 +253,3 @@
 
 	add_fingerprint(usr)
 	return TRUE
-

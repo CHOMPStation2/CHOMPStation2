@@ -13,6 +13,10 @@
 	anchored = TRUE
 
 	var/obj/item/weapon/card/id/inserted_id	// Inserted ID card, for points
+	var/loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+	var/id_insert_sound = 'modular_chomp/sound/effects/insert_id_card.ogg' // CHOMPEdit: Login Delay/Card Read
+	var/id_remove_sound = 'modular_chomp/sound/effects/remove_id_card.ogg' // CHOMPEdit: Login Delay/Card Read
+	var/id_read_delay = 4 SECONDS // CHOMPEdit: Login Delay/Card Read
 
 	var/obj/machinery/mineral/processing_unit/machine = null
 	var/show_all_ores = FALSE
@@ -29,6 +33,7 @@
 /obj/machinery/mineral/processing_unit_console/Destroy()
 	if(inserted_id)
 		inserted_id.forceMove(loc) //Prevents deconstructing from deleting whatever ID was inside it.
+		loaded = FALSE // CHOMPEdit: Login Delay/Card Read
 	. = ..()
 
 /obj/machinery/mineral/processing_unit_console/attack_hand(mob/user)
@@ -46,6 +51,8 @@
 		if(!inserted_id && user.unEquip(I))
 			I.forceMove(src)
 			inserted_id = I
+			addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+			playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			SStgui.update_uis(src)
 		return
 	..()
@@ -59,6 +66,7 @@
 /obj/machinery/mineral/processing_unit_console/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
 	data["unclaimedPoints"] = machine.points
+	data["loaded"] = loaded
 
 	if(inserted_id)
 		data["has_id"] = TRUE
@@ -121,6 +129,8 @@
 				return
 			usr.put_in_hands(inserted_id)
 			inserted_id = null
+			loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+			playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 			. = TRUE
 		if("claim")
 			if(istype(inserted_id))
@@ -136,6 +146,8 @@
 				usr.drop_item()
 				I.forceMove(src)
 				inserted_id = I
+				addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+				playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			else
 				to_chat(usr, "<span class='warning'>No valid ID.</span>")
 			. = TRUE
@@ -144,6 +156,13 @@
 			. = TRUE
 		else
 			return FALSE
+
+// CHOMPAdd: Login Delays;
+/obj/machinery/mineral/processing_unit_console/proc/set_ready()
+	if (inserted_id)
+		loaded = TRUE
+		SStgui.update_uis(src)
+// CHOMPAdd End
 
 /**********************Mineral processing unit**************************/
 
@@ -347,4 +366,3 @@
 #undef PROCESS_SMELT
 #undef PROCESS_COMPRESS
 #undef PROCESS_ALLOY
-

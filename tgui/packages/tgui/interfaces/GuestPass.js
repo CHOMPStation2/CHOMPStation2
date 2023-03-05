@@ -1,13 +1,13 @@
 /* eslint react/no-danger: "off" */
 import { sortBy } from 'common/collections';
 import { useBackend } from '../backend';
-import { Box, Button, LabeledList, Section } from '../components';
+import { Box, Button, LabeledList, Section, Icon } from '../components';
 import { Window } from '../layouts';
 
 export const GuestPass = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { access, area, giver, giveName, reason, duration, mode, log, uid } = data;
+  const { access, area, giver, giveName, reason, duration, mode, log, uid, loaded } = data;
 
   return (
     <Window width={500} height={520} resizable>
@@ -30,7 +30,7 @@ export const GuestPass = (props, context) => {
             buttons={<Button icon="scroll" content="Activity Log" onClick={() => act('mode', { mode: 1 })} />}>
             <LabeledList>
               <LabeledList.Item label="Issuing ID">
-                <Button content={giver || 'Insert ID'} onClick={() => act('id')} />
+                <Button content={(loaded && giver) || 'Insert ID'} onClick={() => act('id')} />
               </LabeledList.Item>
               <LabeledList.Item label="Issued To">
                 <Button content={giveName} onClick={() => act('giv_name')} />
@@ -52,6 +52,12 @@ export const GuestPass = (props, context) => {
                   onClick={() => act('access', { access: a.area })}
                 />
               ))}
+              <br />
+              {!loaded && !!giver && (
+                <Box align="center">
+                  <Icon name="cog" size={5} spin />
+                </Box>
+              )}
             </Section>
           </Section>
         )}

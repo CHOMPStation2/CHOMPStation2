@@ -1,6 +1,6 @@
 import { createSearch } from 'common/string';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Collapsible, Dropdown, Flex, Input, Section } from '../components';
+import { Box, Button, Collapsible, Dropdown, Flex, Input, Section, Icon } from '../components';
 import { Window } from '../layouts';
 import { refocusLayout } from '../layouts';
 import { MiningUser } from './common/Mining';
@@ -16,6 +16,12 @@ export const MiningVendor = (props, context) => {
     <Window width={400} height={450} resizable>
       <Window.Content className="Layout__content--flexColumn" scrollable>
         <MiningUser insertIdText="Please insert an ID in order to make purchases." />
+        <br />
+        {!loaded && !!has_id && (
+          <Box align="center">
+            <Icon name="cog" size={5} spin />
+          </Box>
+        )}
         <MiningVendorSearch />
         <MiningVendorItems />
       </Window.Content>
@@ -25,7 +31,7 @@ export const MiningVendor = (props, context) => {
 
 const MiningVendorItems = (props, context) => {
   const { act, data } = useBackend(context);
-  const { has_id, id, items } = data;
+  const { has_id, id, items, loaded } = data;
   // Search thingies
   const [searchText, _setSearchText] = useLocalState(context, 'search', '');
   const [sortOrder, _setSortOrder] = useLocalState(context, 'sort', 'Alphabetical');

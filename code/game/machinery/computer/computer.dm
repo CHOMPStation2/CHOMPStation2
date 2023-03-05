@@ -18,6 +18,12 @@
 
 	clicksound = "keyboard"
 
+	var/loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+	var/obj/item/weapon/card/id/card // CHOMPEdit: ID Reading
+	var/id_insert_sound = 'modular_chomp/sound/effects/insert_id_card.ogg' // CHOMPEdit: Login Delay/Card Read
+	var/id_remove_sound = 'modular_chomp/sound/effects/remove_id_card.ogg' // CHOMPEdit: Login Delay/Card Read
+	var/id_read_delay = 4 SECONDS // CHOMPEdit: Login Delay/Card Read
+
 /obj/machinery/computer/Initialize()
 	. = ..()
 	power_change()
@@ -64,7 +70,7 @@
 
 /obj/machinery/computer/update_icon()
 	cut_overlays()
-	
+
 	. = list()
 
 	// Connecty
@@ -132,3 +138,10 @@
 			return
 		attack_hand(user)
 		return
+
+// CHOMPAdd: Login Delay/Card Read
+/obj/machinery/computer/proc/set_ready()
+	if(card)
+		loaded = TRUE
+		SStgui.update_uis(src)
+// CHOMPAdd End

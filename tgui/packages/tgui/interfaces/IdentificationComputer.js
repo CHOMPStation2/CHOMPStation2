@@ -1,7 +1,7 @@
 import { sortBy } from 'common/collections';
 import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Input, LabeledList, Section, Table, Tabs } from '../components';
+import { Box, Button, Flex, Input, LabeledList, Section, Table, Tabs, Icon } from '../components';
 import { Window } from '../layouts';
 import { decodeHtmlEntities } from 'common/string';
 import { CrewManifestContent } from './CrewManifest';
@@ -77,6 +77,8 @@ export const IdentificationComputerAccessModification = (props, context) => {
     regions,
     id_rank,
     departments,
+    loaded,
+    loaded2,
   } = data;
 
   return (
@@ -90,13 +92,13 @@ export const IdentificationComputerAccessModification = (props, context) => {
         <LabeledList.Item label="Target Identitity">
           <Button icon="eject" fluid content={target_name} onClick={() => act('modify')} />
         </LabeledList.Item>
-        {!ntos && (
+        {!ntos && !!loaded && (
           <LabeledList.Item label="Authorized Identitity">
             <Button icon="eject" fluid content={scan_name} onClick={() => act('scan')} />
           </LabeledList.Item>
         )}
       </LabeledList>
-      {!!authenticated && !!has_modify && (
+      {!!loaded && !!loaded2 && !!authenticated && !!has_modify && (
         <Fragment>
           <Section title="Details" level={2}>
             <LabeledList>
@@ -171,6 +173,13 @@ export const IdentificationComputerAccessModification = (props, context) => {
           )}
         </Fragment>
       )}
+      <br />
+      {(!loaded && !!scan_name) ||
+        (!loaded2 && !!has_modify && (
+          <Box align="center">
+            <Icon name="cog" size={5} spin />
+          </Box>
+        ))}
     </Section>
   );
 };

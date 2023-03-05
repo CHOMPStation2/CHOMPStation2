@@ -16,7 +16,7 @@
 	req_one_access = list(access_heads)
 	circuit = /obj/item/weapon/circuitboard/skills/pcu
 	density = FALSE
-	var/obj/item/weapon/card/id/scan = null
+	// var/obj/item/weapon/card/id/scan = null // CHOMPEdit: Login Delay/Card Read
 	var/authenticated = null
 	var/rank = null
 	var/screen = null
@@ -51,10 +51,12 @@
 	return ..()
 
 /obj/machinery/computer/skills/attackby(obj/item/O as obj, var/mob/user)
-	if(istype(O, /obj/item/weapon/card/id) && !scan && user.unEquip(O))
+	if(istype(O, /obj/item/weapon/card/id) && !card && user.unEquip(O)) // CHOMPEdit: Login Delay/Card Read
 		O.loc = src
-		scan = O
+		card = O // CHOMPEdit: Login Delay/Card Read
 		to_chat(user, "You insert [O].")
+		addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 		tgui_interact(user)
 	else
 		..()
@@ -81,7 +83,8 @@
 /obj/machinery/computer/skills/tgui_data(mob/user)
 	var/data[0]
 	data["temp"] = temp
-	data["scan"] = scan ? scan.name : null
+	data["card"] = card ? card.name : null
+	data["loaded"] = loaded
 	data["authenticated"] = authenticated
 	data["rank"] = rank
 	data["screen"] = screen
@@ -143,26 +146,30 @@
 		return
 
 	switch(action)
-		if("scan")
-			if(scan)
-				scan.forceMove(loc)
+		if("card") // CHOMPEdit: Login Delay/Card Read
+			if(card) // CHOMPEdit: Login Delay/Card Read
+				card.forceMove(loc) // CHOMPEdit: Login Delay/Card Read
 				if(ishuman(usr) && !usr.get_active_hand())
-					usr.put_in_hands(scan)
-				scan = null
+					usr.put_in_hands(card) // CHOMPEdit: Login Delay/Card Read
+				card = null // CHOMPEdit: Login Delay/Card Read
+				loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+				playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 			else
 				var/obj/item/I = usr.get_active_hand()
 				if(istype(I, /obj/item/weapon/card/id))
 					usr.drop_item()
 					I.forceMove(src)
-					scan = I
+					card = I // CHOMPEdit: Login Delay/Card Read
+					addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 		if("cleartemp")
 			temp = null
 		if("login")
 			var/login_type = text2num(params["login_type"])
-			if(login_type == LOGIN_TYPE_NORMAL && istype(scan))
-				if(check_access(scan))
-					authenticated = scan.registered_name
-					rank = scan.assignment
+			if(login_type == LOGIN_TYPE_NORMAL && istype(card)) // CHOMPEdit: Login Delay/Card Read
+				if(check_access(card)) // CHOMPEdit: Login Delay/Card Read
+					authenticated = card.registered_name // CHOMPEdit: Login Delay/Card Read
+					rank = card.assignment // CHOMPEdit: Login Delay/Card Read
 			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
 				authenticated = usr.name
 				rank = "AI"
@@ -183,11 +190,13 @@
 		. = TRUE
 		switch(action)
 			if("logout")
-				if(scan)
-					scan.forceMove(loc)
+				if(card) // CHOMPEdit: Login Delay/Card Read
+					card.forceMove(loc) // CHOMPEdit: Login Delay/Card Read
 					if(ishuman(usr) && !usr.get_active_hand())
-						usr.put_in_hands(scan)
-					scan = null
+						usr.put_in_hands(card) // CHOMPEdit: Login Delay/Card Read
+					card = null // CHOMPEdit: Login Delay/Card Read
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 				authenticated = null
 				screen = null
 				active1 = null

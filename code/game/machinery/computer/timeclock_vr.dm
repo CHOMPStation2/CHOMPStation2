@@ -18,7 +18,6 @@
 	clicksound = null
 	var/channel = "Common" //Radio channel to announce on
 
-	var/obj/item/weapon/card/id/card // Inserted Id card
 	var/obj/item/device/radio/intercom/announce	// Integreated announcer
 
 
@@ -55,7 +54,7 @@
 		if(!card && user.unEquip(I))
 			I.forceMove(src)
 			card = I
-			playsound(src, 'modular_chomp/sound/effects/insert_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
+			playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			SStgui.update_uis(src)
 			update_icon()
 		else if(card)
@@ -87,6 +86,7 @@
 	data["card"] = null
 	data["assignment"] = null
 	data["job_datum"] = null
+	data["loaded"] = loaded
 	data["allow_change_job"] = null
 	data["job_choices"] = null
 	if(card)
@@ -120,13 +120,15 @@
 			if(card)
 				usr.put_in_hands(card)
 				card = null
-				playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0) // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
+				loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+				playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 			else
 				var/obj/item/I = usr.get_active_hand()
 				if (istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
 					I.forceMove(src)
 					card = I
-					playsound(src, 'modular_chomp/sound/effects/insert_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
+					addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			update_icon()
 			return TRUE
 		if("switch-to-onduty-rank")
@@ -135,7 +137,8 @@
 					makeOnDuty(params["switch-to-onduty-rank"], params["switch-to-onduty-assignment"])
 					usr.put_in_hands(card)
 					card = null
-					playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			update_icon()
 			return TRUE
 		if("switch-to-offduty")
@@ -144,7 +147,8 @@
 					makeOffDuty()
 					usr.put_in_hands(card)
 					card = null
-					playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			update_icon()
 			return TRUE
 

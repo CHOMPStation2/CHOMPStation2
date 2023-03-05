@@ -14,7 +14,7 @@
 	var/icon_success = "restorer_success"
 	var/icon_fail = "restorer_fail"
 
-	var/obj/item/weapon/card/id/inserted
+	// var/obj/item/weapon/card/id/inserted // CHOMPEdit: Login Delay/Card Read
 
 /obj/machinery/computer/id_restorer/attackby(obj/I, mob/user)
 	/*

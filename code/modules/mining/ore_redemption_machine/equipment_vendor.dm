@@ -20,6 +20,11 @@
 	var/list/prize_list // Initialized just below! (if you're wondering why - check CONTRIBUTING.md, look for: "hidden" init proc)
 	var/dirty_items = FALSE // Used to refresh the static/redundant data in case the machine gets VV'd
 
+	var/loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+	var/id_insert_sound = 'modular_chomp/sound/effects/insert_id_card.ogg' // CHOMPEdit: Login Delay/Card Read
+	var/id_remove_sound = 'modular_chomp/sound/effects/remove_id_card.ogg' // CHOMPEdit: Login Delay/Card Read
+	var/id_read_delay = 4 SECONDS // CHOMPEdit: Login Delay/Card Read
+
 /datum/data/mining_equipment
 	var/equipment_name = "generic"
 	var/equipment_path = null
@@ -136,6 +141,8 @@
 	if(inserted_id && !powered())
 		visible_message("<span class='notice'>The ID slot indicator light flickers on \the [src] as it spits out a card before powering down.</span>")
 		inserted_id.forceMove(get_turf(src))
+		loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 
 /obj/machinery/mineral/equipment_vendor/update_icon()
 	if(panel_open)
@@ -160,6 +167,8 @@
 
 /obj/machinery/mineral/equipment_vendor/tgui_data(mob/user)
 	var/list/data = ..()
+
+	data["loaded"] = loaded
 
 	// ID
 	if(inserted_id)
@@ -225,6 +234,8 @@
 				return
 			usr.put_in_hands(inserted_id)
 			inserted_id = null
+			loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+			playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 		if("purchase")
 			if(!inserted_id)
 				flick(icon_deny, src) //VOREStation Add
@@ -277,6 +288,8 @@
 /obj/machinery/mineral/equipment_vendor/dismantle()
 	if(inserted_id)
 		inserted_id.forceMove(loc) //Prevents deconstructing the ORM from deleting whatever ID was inside it.
+		loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 	. = ..()
 
 /**
@@ -321,3 +334,10 @@
 	s.start()
 	if(prob(50 / severity) && severity < 3)
 		qdel(src)
+
+// CHOMPAdd: Login Delay/Card Read
+/obj/machinery/mineral/equipment_vendor/proc/set_ready()
+	if (inserted_id)
+		loaded = TRUE
+		SStgui.update_uis(src)
+// CHOMPAdd End

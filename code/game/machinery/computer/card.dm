@@ -10,6 +10,7 @@
 	circuit = /obj/item/weapon/circuitboard/card
 	var/obj/item/weapon/card/id/scan = null
 	var/obj/item/weapon/card/id/modify = null
+	var/loaded2 = FALSE // CHOMPEdit: Login Delay/Card Read: Have to use a second loaded bc this can have 2 cards loaded at once
 	var/mode = 0.0
 	var/printing = null
 
@@ -45,12 +46,16 @@
 		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
 			usr.put_in_hands(scan)
 		scan = null
+		loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 	else if(modify)
 		to_chat(usr, "You remove \the [modify] from \the [src].")
 		modify.forceMove(get_turf(src))
 		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
 			usr.put_in_hands(modify)
 		modify = null
+		loaded2 = FALSE // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 	else
 		to_chat(usr, "There is nothing to remove from the console.")
 	return
@@ -63,10 +68,16 @@
 		user.drop_item()
 		id_card.forceMove(src)
 		scan = id_card
+		loaded = TRUE // CHOMPEdit: Login Delay/Card Read
+		addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 	else if(!modify)
 		user.drop_item()
 		id_card.forceMove(src)
 		modify = id_card
+		loaded2 = TRUE // CHOMPEdit: Login Delay/Card Read
+		addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+		playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 
 	SStgui.update_uis(src)
 	attack_hand(user)
@@ -109,6 +120,8 @@
 	data["all_centcom_access"] = null
 	data["regions"] = null
 	data["id_rank"] = modify && modify.assignment ? modify.assignment : "Unassigned"
+	data["loaded"] = loaded // CHOMPEdit: Login Delay/Card Read
+	data["loaded2"] = loaded2 // CHOMPEdit: Login Delay/Card Read
 
 	var/list/departments = list()
 	for(var/datum/department/dept as anything in SSjob.get_all_department_datums())
@@ -163,14 +176,21 @@
 					if(!usr.get_active_hand())
 						usr.put_in_hands(modify)
 					modify = null
+					loaded2 = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 				else
 					modify.forceMove(get_turf(src))
 					modify = null
+					loaded2 = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 			else
 				var/obj/item/I = usr.get_active_hand()
 				if(istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
 					I.forceMove(src)
 					modify = I
+					loaded2 = TRUE // CHOMPEdit: Login Delay/Card Read
+					addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			. = TRUE
 
 		if("scan")
@@ -180,15 +200,22 @@
 					if(!usr.get_active_hand())
 						usr.put_in_hands(scan)
 					scan = null
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 				else
 					scan.forceMove(get_turf(src))
 					scan = null
+					loaded = FALSE // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_remove_sound, 75, 0) // CHOMPEdit: Login Delay/Card Read
 			else
 				var/obj/item/I = usr.get_active_hand()
 				if(istype(I, /obj/item/weapon/card/id))
 					usr.drop_item()
 					I.forceMove(src)
 					scan = I
+					loaded = TRUE // CHOMPEdit: Login Delay/Card Read
+					addtimer(CALLBACK(src, .proc/set_ready), id_read_delay) // CHOMPEdit: Login Delay/Card Read
+					playsound(src, id_insert_sound, 75, 0)  // CHOMPEdit: Login Delay/Card Read
 			. = TRUE
 
 		if("access")
