@@ -13,6 +13,8 @@ var/global/list/vore_reagent_sounds = list(
 		'sound/vore/walkslosh10.ogg',
 		"None" = null)
 
+var/global/list/item_tf_spawnpoints = list() // Global variable tracking which items are item tf spawnpoints
+
 /var/global/list/existing_metroids = list() //Global variable for tracking metroids for the event announcement. Needs to go here for load order.
 
 //stuff that only synths can eat

@@ -74,7 +74,13 @@
 	character.offset_override	= pref.offset_override //CHOMPEdit
 	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
+
+	//CHOMPEDIT Global voice lookup
 	if(!pref.voice_sound)
+		character.voice_sounds_list = talk_sound
+	else
+		character.voice_sounds_list = get_talk_sound(pref.voice_sound)
+	/*if(!pref.voice_sound)
 		character.voice_sounds_list = talk_sound
 	else
 		switch(pref.voice_sound)
@@ -106,6 +112,7 @@
 				character.voice_sounds_list = goon_speak_roach_sound
 			if("goon speak skelly")
 				character.voice_sounds_list = goon_speak_skelly_sound
+				*/ //CHOMPEDIT Global voice lookup
 	character.custom_speech_bubble = pref.custom_speech_bubble
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
