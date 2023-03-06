@@ -6,12 +6,15 @@
 "d" = (
 /turf/template_noop,
 /area/template_noop)
+<<<<<<< HEAD
 "e" = (
 /obj/random/mouseray,
 /turf/simulated/floor/snow{
 	oxygen = 20.7263
 	},
 /area/submap/frostlake)
+=======
+>>>>>>> Valley
 "i" = (
 /turf/simulated/floor/outdoors/ice/dark_smooth,
 /area/submap/frostlake)
@@ -33,12 +36,15 @@
 	oxygen = 20.7263
 	},
 /area/submap/frostlake)
+<<<<<<< HEAD
 "w" = (
 /obj/random/mainttoyloot/nofail,
 /turf/simulated/floor/snow{
 	oxygen = 20.7263
 	},
 /area/submap/frostlake)
+=======
+>>>>>>> Valley
 "A" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/snow{
@@ -372,14 +378,22 @@ i
 i
 o
 o
+<<<<<<< HEAD
 w
+=======
+o
+>>>>>>> Valley
 J
 o
 a
 i
 i
 o
+<<<<<<< HEAD
 w
+=======
+o
+>>>>>>> Valley
 o
 o
 O
@@ -402,12 +416,20 @@ i
 D
 A
 o
+<<<<<<< HEAD
 o
+=======
+D
+>>>>>>> Valley
 i
 i
 i
 i
+<<<<<<< HEAD
 o
+=======
+D
+>>>>>>> Valley
 o
 o
 D
@@ -492,7 +514,11 @@ o
 o
 i
 i
+<<<<<<< HEAD
 o
+=======
+D
+>>>>>>> Valley
 o
 o
 o
@@ -547,10 +573,17 @@ i
 v
 J
 o
+<<<<<<< HEAD
 e
 v
 i
 w
+=======
+o
+v
+i
+o
+>>>>>>> Valley
 o
 A
 o
@@ -574,7 +607,11 @@ s
 i
 i
 o
+<<<<<<< HEAD
 o
+=======
+D
+>>>>>>> Valley
 o
 o
 o
