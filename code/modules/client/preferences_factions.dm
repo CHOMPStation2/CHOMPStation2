@@ -14,7 +14,6 @@ var/global/list/seen_religions = list()
 	return
 
 var/global/list/citizenship_choices = list(
-<<<<<<< HEAD
 	"Earth",
 	"Mars",
 	"Sif",
@@ -22,49 +21,19 @@ var/global/list/citizenship_choices = list(
 	"Moghes",
 	"Meralar",
 	"Qerr'balak"
-=======
-	"Greater Human Diaspora",
-	"Commonwealth of Sol-Procyon",
-	"Skrell Consensus",
-	"Moghes Hegemony",
-	"Tajaran Diaspora",
-	"Unitary Alliance of Salthan Fyrds",
-	"Elysian Colonies",
-	"Third Ares Confederation",
-	"Teshari Expeditionary Fleet",
-	"Altevian Hegemony",
-	"Kitsuhana Heavy Industries",
-	"Kosaky Fleets"
->>>>>>> 6fd6b7af0c... Merge pull request #14548 from KillianKirilenko/kk-lore
 	)
 
 var/global/list/home_system_choices = list(
-	"Sol",
-<<<<<<< HEAD
-	"Vir",
-	"Nyx",
-	"Tau Ceti",
-	"Qerr'valis",
-=======
 	"Earth, Sol",
 	"Luna, Sol",
 	"Mars, Sol",
 	"Venus, Sol",
 	"Titan, Sol",
-	"Toledo, New Ohio",
-	"The Pact, Myria",
-	"Kitsuhana Prime",
-	"Kishar, Alpha Centauri",
-	"Anshar, Alpha Centauri",
-	"Heaven Complex, Alpha Centauri",
-	"Procyon",
-	"Altair",
 	"Kara, Vir",
 	"Sif, Vir",
 	"Brinkburn, Nyx",
 	"Binma, Tau Ceti",
 	"Qerr'balak, Qerr'valis",
->>>>>>> 6fd6b7af0c... Merge pull request #14548 from KillianKirilenko/kk-lore
 	"Epsilon Ursae Minoris",
 	"Meralar, Rarkajar",
 	"Tal, Vilous",
@@ -83,11 +52,7 @@ var/global/list/home_system_choices = list(
 	)
 
 var/global/list/faction_choices = list(
-<<<<<<< HEAD
 	"Sol Central",
-	"Vey Med",
-	"Einstein Engines",
-=======
 	"NanoTrasen Incorporated",
 	"Hephaestus Industries",
 	"Vey-Medical",
@@ -96,7 +61,6 @@ var/global/list/faction_choices = list(
 	"Bishop Cybernetics",
 	"Morpheus Cyberkinetics",
 	"Xion Manufacturing Group",
->>>>>>> 6fd6b7af0c... Merge pull request #14548 from KillianKirilenko/kk-lore
 	"Free Trade Union",
 	"Major Bill's Transportation",
 	"Ironcrest Transport Group",
