@@ -1,0 +1,1774 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aR" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"bh" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"cY" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable/green,
+/obj/structure/cable/blue,
+/obj/structure/table/gold,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"dI" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/medical/pillbottle,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"dL" = (
+/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"eT" = (
+/obj/random/mob/merc/all,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"fd" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/heavy,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"fk" = (
+/obj/structure/table/standard,
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/random/ammo,
+/obj/random/contraband/nofail,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"gd" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft,
+/area/submap/carriershuttle)
+"gu" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"hS" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"iO" = (
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/port_gen/pacman/super,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"lR" = (
+/obj/structure/cable/blue,
+/obj/machinery/power/port_gen/pacman/super,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"mM" = (
+/turf/template_noop,
+/area/template_noop)
+"np" = (
+/obj/machinery/door/blast/regular{
+	id = "carrier"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"ok" = (
+/obj/machinery/computer/ship{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"ot" = (
+/obj/random/mob/merc/all,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"pl" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"qv" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"rv" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/table/gold,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"uk" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"uy" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"wc" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft,
+/area/submap/carriershuttle)
+"wt" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"wY" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"xm" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"yb" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/medical/lite,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"ys" = (
+/obj/machinery/door/airlock,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"yy" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/table/gold,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"zu" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/random/mob/merc/all,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"zY" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/fal,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"As" = (
+/mob/living/simple_mob/humanoid/merc/ranged/sniper,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"At" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/firstaid,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Br" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Bz" = (
+/obj/structure/table/standard,
+/obj/machinery/button/remote/blast_door{
+	id = "carrier"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"BN" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/orange,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"BP" = (
+/obj/machinery/computer/ship,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Cz" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"CR" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/grenade/lethal,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Dy" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/table/gold,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"DU" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"EN" = (
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"GH" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Ho" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/table/gold,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"Il" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"KX" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Lq" = (
+/mob/living/simple_mob/vore/sect_queen,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Mh" = (
+/mob/living/simple_mob/vore/solargrub,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"MI" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"MO" = (
+/mob/living/simple_mob/metroid/juvenile/omega,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"NI" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"OF" = (
+/mob/living/simple_mob/animal/synx/ai,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"PM" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/contraband/nofail,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Qm" = (
+/turf/simulated/shuttle/wall/voidcraft,
+/area/submap/carriershuttle)
+"Qn" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"QQ" = (
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Rt" = (
+/mob/living/simple_mob/animal/space/alien/queen/empress,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Se" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/gun/random,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Sy" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Tw" = (
+/obj/machinery/door/blast/regular,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Uq" = (
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"WV" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"YO" = (
+/obj/random/mob/merc/armored,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Zb" = (
+/obj/machinery/computer/ship{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Zk" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"ZO" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/machinery/recharger,
+/turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+
+(1,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(2,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(3,1,1) = {"
+mM
+Qm
+wc
+wc
+wc
+wc
+wc
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+wc
+wc
+wc
+wc
+wc
+Qm
+mM
+"}
+(4,1,1) = {"
+mM
+Qm
+gd
+gd
+gd
+gd
+gd
+Qm
+mM
+mM
+mM
+mM
+mM
+Qm
+Qm
+Se
+PM
+fk
+PM
+Se
+Qm
+Qm
+mM
+mM
+mM
+mM
+mM
+Qm
+gd
+gd
+gd
+gd
+gd
+Qm
+mM
+"}
+(5,1,1) = {"
+mM
+Qm
+Zk
+yy
+rv
+Dy
+lR
+Qm
+mM
+mM
+mM
+mM
+Qm
+Qm
+QQ
+QQ
+WV
+MI
+WV
+QQ
+QQ
+Qm
+Qm
+mM
+mM
+mM
+mM
+Qm
+iO
+Dy
+Ho
+cY
+Zk
+Qm
+mM
+"}
+(6,1,1) = {"
+mM
+Qm
+Uq
+Uq
+zu
+Uq
+Uq
+Qm
+mM
+mM
+mM
+Qm
+Qm
+QQ
+QQ
+QQ
+QQ
+Qn
+QQ
+QQ
+QQ
+QQ
+Qm
+Qm
+mM
+mM
+mM
+Qm
+Uq
+Uq
+zu
+Uq
+Uq
+Qm
+mM
+"}
+(7,1,1) = {"
+mM
+Qm
+ot
+Uq
+Cz
+Uq
+ot
+Qm
+mM
+mM
+mM
+Qm
+QQ
+QQ
+uy
+QQ
+QQ
+MI
+QQ
+QQ
+GH
+QQ
+QQ
+Qm
+mM
+mM
+mM
+Qm
+ot
+Uq
+Cz
+Uq
+ot
+Qm
+mM
+"}
+(8,1,1) = {"
+mM
+Qm
+Uq
+Uq
+Cz
+Uq
+Uq
+Qm
+mM
+mM
+mM
+Qm
+aR
+Sy
+Sy
+Sy
+Sy
+xm
+Sy
+Sy
+Sy
+Sy
+Il
+Qm
+mM
+mM
+mM
+Qm
+Uq
+Uq
+Cz
+Uq
+Uq
+Qm
+mM
+"}
+(9,1,1) = {"
+mM
+Qm
+Qm
+Qm
+wY
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+MI
+QQ
+QQ
+QQ
+Zb
+Qm
+BP
+QQ
+QQ
+QQ
+MI
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+wY
+Qm
+Qm
+Qm
+mM
+"}
+(10,1,1) = {"
+mM
+Qm
+YO
+QQ
+hS
+Sy
+Sy
+Sy
+Sy
+Sy
+Sy
+NI
+qv
+QQ
+QQ
+Zb
+Qm
+Qm
+Qm
+BP
+QQ
+QQ
+hS
+NI
+Sy
+Sy
+Sy
+Sy
+Sy
+Sy
+qv
+QQ
+YO
+Qm
+mM
+"}
+(11,1,1) = {"
+mM
+Qm
+Qm
+Qm
+ys
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+At
+QQ
+QQ
+Zb
+Qm
+Qm
+Qm
+BP
+QQ
+QQ
+At
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+ys
+Qm
+Qm
+Qm
+mM
+"}
+(12,1,1) = {"
+mM
+Qm
+BN
+QQ
+As
+QQ
+BN
+Qm
+mM
+mM
+mM
+Qm
+PM
+WV
+QQ
+Zb
+Qm
+Qm
+Qm
+BP
+QQ
+WV
+PM
+Qm
+mM
+mM
+mM
+Qm
+BN
+QQ
+As
+QQ
+BN
+Qm
+mM
+"}
+(13,1,1) = {"
+mM
+Qm
+BN
+eT
+QQ
+eT
+BN
+Qm
+mM
+mM
+mM
+Qm
+PM
+QQ
+QQ
+Zb
+Qm
+Qm
+Qm
+BP
+QQ
+QQ
+PM
+Qm
+mM
+mM
+mM
+Qm
+BN
+eT
+QQ
+eT
+BN
+Qm
+mM
+"}
+(14,1,1) = {"
+mM
+Qm
+BN
+QQ
+eT
+QQ
+BN
+Qm
+mM
+mM
+mM
+Qm
+PM
+QQ
+QQ
+QQ
+Zb
+Qm
+BP
+QQ
+QQ
+QQ
+PM
+Qm
+mM
+mM
+mM
+Qm
+BN
+QQ
+eT
+QQ
+BN
+Qm
+mM
+"}
+(15,1,1) = {"
+mM
+Qm
+dI
+QQ
+QQ
+QQ
+dI
+Qm
+mM
+mM
+mM
+Qm
+PM
+WV
+QQ
+QQ
+QQ
+Bz
+QQ
+QQ
+QQ
+WV
+PM
+Qm
+mM
+mM
+mM
+Qm
+dI
+QQ
+QQ
+QQ
+dI
+Qm
+mM
+"}
+(16,1,1) = {"
+mM
+Qm
+yb
+QQ
+QQ
+QQ
+yb
+Qm
+mM
+mM
+mM
+Qm
+CR
+QQ
+zY
+QQ
+QQ
+QQ
+QQ
+fd
+QQ
+QQ
+CR
+Qm
+mM
+mM
+mM
+Qm
+yb
+QQ
+QQ
+QQ
+yb
+Qm
+mM
+"}
+(17,1,1) = {"
+mM
+Qm
+ZO
+WV
+QQ
+WV
+ZO
+Qm
+mM
+mM
+mM
+Qm
+Qm
+QQ
+QQ
+QQ
+QQ
+dL
+QQ
+QQ
+QQ
+QQ
+Qm
+Qm
+mM
+mM
+mM
+Qm
+ZO
+WV
+QQ
+WV
+ZO
+Qm
+mM
+"}
+(18,1,1) = {"
+mM
+Br
+uk
+ok
+ok
+ok
+DU
+KX
+mM
+mM
+mM
+Qm
+Qm
+Qm
+QQ
+QQ
+QQ
+QQ
+QQ
+QQ
+QQ
+Qm
+Qm
+Qm
+mM
+mM
+mM
+Br
+uk
+ok
+ok
+ok
+DU
+KX
+mM
+"}
+(19,1,1) = {"
+mM
+mM
+wt
+gu
+gu
+gu
+pl
+mM
+mM
+mM
+mM
+Qm
+Qm
+Qm
+Qm
+QQ
+QQ
+QQ
+QQ
+QQ
+Qm
+Qm
+Qm
+Qm
+mM
+mM
+mM
+mM
+wt
+gu
+gu
+gu
+pl
+mM
+mM
+"}
+(20,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+ys
+Qm
+Qm
+Qm
+Qm
+Qm
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(21,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+QQ
+QQ
+QQ
+Tw
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(22,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+MO
+EN
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+EN
+Rt
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(23,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(24,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+Qm
+Qm
+Qm
+Qm
+QQ
+QQ
+QQ
+Qm
+Qm
+Qm
+Qm
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(25,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(26,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+Lq
+EN
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+EN
+OF
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(27,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(28,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+Qm
+Qm
+Qm
+Qm
+QQ
+QQ
+QQ
+Qm
+Qm
+Qm
+Qm
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(29,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(30,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+bh
+EN
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+EN
+Mh
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(31,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+np
+QQ
+QQ
+QQ
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(32,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+Qm
+Qm
+Qm
+Qm
+Qm
+np
+np
+np
+Qm
+Qm
+Qm
+Qm
+Qm
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(33,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(34,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
+(35,1,1) = {"
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+mM
+"}
