@@ -619,11 +619,13 @@
 			host.show_vore_fx = !host.show_vore_fx
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.show_vore_fx = host.show_vore_fx
-			if(!host.show_vore_fx)
+			if (isbelly(host.loc)) //CHOMPEdit
+				var/obj/belly/B = host.loc
+				B.vore_fx(host, TRUE)
+			else
 				host.clear_fullscreen("belly")
-				//host.clear_fullscreen("belly2") //For multilayered stomachs. Not currently implemented.
-				if(!host.hud_used.hud_shown)
-					host.toggle_hud_vis()
+			if(!host.hud_used.hud_shown)
+				host.toggle_hud_vis()
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_noisy")

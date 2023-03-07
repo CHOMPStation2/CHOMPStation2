@@ -373,7 +373,7 @@
 		var/taste
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
-		vore_fx(M)
+		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
