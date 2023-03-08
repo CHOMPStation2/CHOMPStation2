@@ -6,6 +6,7 @@ However we dont gain special attacks and verbs, for example, if we evicerate a d
 Only physical attributes are copied.
 */
 /mob/living/simple_mob/fleshtaker
+	faction = "Fleshtaker"
 	name = "Fleshtaker"
 	desc = "A strange creature"
 	icon = 'icons/mob/synxmanyvoices.dmi'
