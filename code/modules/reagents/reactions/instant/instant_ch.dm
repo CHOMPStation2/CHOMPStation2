@@ -58,12 +58,11 @@
 	required_reagents = list("unsorbitol" = 1, "phoron" = 1)
 	result_amount = 2
 
-/decl/chemical_reaction/instant/galactose
-	name = "Galactose"
-	id = "galactose"
-	result = "galactose"
-	required_reagents = list("milk" = 1, "sacid" = 1)
-	result_amount = 3
+/decl/chemical_reaction/instant/glucose
+	name = "Glucose"
+	result = "glucose"
+	required_reagents = list("sodiumchloride" = 1, "water" = 1, "sugar" = 1)
+	result_amount = 1
 ///SAP RECIPES//////
 
 /decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.
