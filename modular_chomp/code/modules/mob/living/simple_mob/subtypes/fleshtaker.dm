@@ -27,7 +27,9 @@ Only physical attributes are copied.
 	base_values["icon_dead"] = icon_dead
 	base_values["pixel_x"] = pixel_x
 	base_values["pixel_y"] = pixel_y //record our default y pixel offset for later reversion
-	revert_mimic()
+	base_values["melee_damage_lower"] = melee_damage_lower
+	base_values["melee_damage_upper"] = melee_damage_upper
+	base_values["maxHealth"] = maxHealth
 
 
 	//copy stats from our engulfed target
@@ -39,9 +41,14 @@ Only physical attributes are copied.
 	icon_dead = target.icon_dead
 	pixel_x = target.pixel_x
 	pixel_x = target.pixel_y
+	melee_damage_lower = target.melee_damage_lower
+	melee_damage_upper = target.melee_damage_upper
+	maxHealth = target.maxHealth
+	health = maxHealth
 	//steal base stats
 	//possibly steal vorgans
-	//initial spawn set, or when losing our host, reset
+
+//reset to original values
 /mob/living/simple_mob/fleshtaker/proc/revert_mimic()
 	name = base_values["name"]
 	desc = base_values["desc"]
@@ -50,6 +57,10 @@ Only physical attributes are copied.
 	icon_dead = base_values["icon_dead"]
 	pixel_x = base_values["pixel_x"]
 	pixel_y = base_values["pixel_y"]
+	melee_damage_lower = base_values["melee_damage_lower"]
+	melee_damage_upper = base_values["melee_damage_upper"]
+	maxHealth = base_values["maxHealth"]
+	health = maxHealth
 
 /mob/living/simple_mob/fleshtaker/apply_melee_effects(var/atom/A)
 	if(istype(A,/mob/living/simple_mob) && !flesh_mimic)
