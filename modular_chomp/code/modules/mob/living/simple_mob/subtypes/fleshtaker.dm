@@ -1,0 +1,60 @@
+/*
+Concept: Mind controlling parasite. Hostile to all mobs.
+On attack if our target is a simple mob, and has no mind.
+We simply engulf them, evicerating their body and stealing their form as well as some of their stats.
+However we dont gain special attacks and verbs, for example, if we evicerate a dragon we dont get a breath attack suddnely.
+Only physical attributes are copied.
+*/
+/mob/living/simple_mob/fleshtaker
+	name = "Fleshtaker"
+	desc = "A strange creature"
+	icon = 'icons/mob/synxmanyvoices.dmi'
+	icon_living = "939_living"
+	icon_dead = "939_dead"
+	pixel_x = -15
+	//Lets write down our base stats so we can revert easily
+	var/list/base_values = list()
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob //A pack of these would be absolutely terrifying.
+	var/flesh_mimic = FALSE //are we currently posing as something else?
+
+/mob/living/simple_mob/fleshtaker/New()
+	..()
+	base_values["name"] = name
+	base_values["desc"] = desc
+	base_values["icon"] = icon
+	base_values["icon_living"] = icon_living
+	base_values["icon_dead"] = icon_dead
+	base_values["pixel_x"] = pixel_x
+	base_values["pixel_y"] = pixel_y //record our default y pixel offset for later reversion
+	revert_mimic()
+
+
+	//copy stats from our engulfed target
+/mob/living/simple_mob/fleshtaker/proc/flesh_mimic(var/mob/living/simple_mob/target)
+	name = target.name
+	desc = target.desc
+	icon = target.icon
+	icon_living = target.icon_living
+	icon_dead = target.icon_dead
+	pixel_x = target.pixel_x
+	pixel_x = target.pixel_y
+	//steal base stats
+	//possibly steal vorgans
+	//initial spawn set, or when losing our host, reset
+/mob/living/simple_mob/fleshtaker/proc/revert_mimic()
+	name = base_values["name"]
+	desc = base_values["desc"]
+	icon = base_values["icon"]
+	icon_living = base_values["icon_living"]
+	icon_dead = base_values["icon_dead"]
+	pixel_x = base_values["pixel_x"]
+	pixel_y = base_values["pixel_y"]
+
+/mob/living/simple_mob/fleshtaker/apply_melee_effects(var/atom/A)
+	if(istype(A,/mob/living/simple_mob) && !flesh_mimic)
+		var/mob/living/simple_mob/M = A
+		if(!M.mind)
+			src.flesh_mimic(M)
+			M.gib()
+	..()
