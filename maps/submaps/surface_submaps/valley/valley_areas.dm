@@ -12,6 +12,7 @@
 
 /area/submap/carriershuttle
 	name = "Poi Valley Wall - Carrier Shuttle"
+	requires_power = FALSE
 	ambience = AMBIENCE_RUINS
 
 /area/submap/cliffmanor
@@ -42,18 +43,22 @@
 
 /area/submap/eclipseaqua
 	name = "Poi Valley Wall - Eclipse Aqua"
+	requires_power = FALSE
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/eclipsedigsight
 	name = "Poi Valley Wall - Eclipse Dig"
+	requires_power = FALSE
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/eclipselava
 	name = "Poi Valley Wall - Eclipse Lava"
+	requires_power = FALSE
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/eclipsemountain
 	name = "Poi Valley Wall - Eclipse Mountain"
+	requires_power = FALSE
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/fallenlab
