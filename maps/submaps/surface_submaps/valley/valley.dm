@@ -57,7 +57,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/bloodchurch.dmm'
 	cost = 25
 
-<<<<<<< HEAD
+
 /datum/map_template/surface/valley/walls/carriershuttle
 	name = "Carrier Shuttle"
 	desc = "A parked merc shuttle with a mini zoo"
@@ -70,8 +70,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/cliffmanor.dmm'
 	cost = 25
 
-=======
->>>>>>> Valley
+
 /datum/map_template/surface/valley/walls/clockwork
 	name = "Clockwork Den"
 	desc = "A firey pit with what remains of a nigh fallen church"
@@ -102,7 +101,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/dronelord.dmm'
 	cost = 25
 
-<<<<<<< HEAD
+
 /datum/map_template/surface/valley/inner/eclipseaqua
 	name = "Eclipse Base Aqua"
 	desc = "An island base making a certian chem"
@@ -127,8 +126,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/eclipsemountain.dmm'
 	cost = 25
 
-=======
->>>>>>> Valley
+
 /datum/map_template/surface/valley/walls/fallenlab
 	name = "Fallen Lab"
 	desc = "A lab created to expirment with nanites, long since forgotten"
@@ -147,7 +145,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/frostlake.dmm'
 	cost = 25
 
-<<<<<<< HEAD
+
 /datum/map_template/surface/valley/walls/hydroxeno
 	name = "Aquatic Xenos"
 	desc = "Xenomoprhs in a squish cave"
@@ -160,8 +158,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/leechpond.dmm'
 	cost = 25
 
-=======
->>>>>>> Valley
+
 /datum/map_template/surface/valley/walls/leppy
 	name = "Leppy Den"
 	desc = "A rare leppy with some rare friends."
@@ -180,7 +177,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/metroidmaze.dmm'
 	cost = 25
 
-<<<<<<< HEAD
+
 /datum/map_template/surface/valley/inner/mouseattack
 	name = "Assualt Base"
 	desc = "A base with many mice ready for attack"
@@ -193,8 +190,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/mousehq.dmm'
 	cost = 25
 
-=======
->>>>>>> Valley
+
 /datum/map_template/surface/valley/walls/phorondragon
 	name = "Phoron Den"
 	desc = "A den of several phoron dragons"
@@ -225,22 +221,21 @@
 	mappath = 'maps/submaps/surface_submaps/valley/plontden.dmm'
 	cost = 25
 
-<<<<<<< HEAD
+
 /datum/map_template/surface/valley/walls/puzzledungeon
 	name = "Puzzle Dungeon"
 	desc = "No threats just puzzles"
 	mappath = 'maps/submaps/surface_submaps/valley/puzzledungeon.dmm'
 	cost = 25
 
-=======
->>>>>>> Valley
+
 /datum/map_template/surface/valley/inner/redshuttledown
 	name = "Red Shuttle Down"
 	desc = "The mercanry bringing out some of their best to scout Sif"
 	mappath = 'maps/submaps/surface_submaps/valley/Redshuttledown.dmm'
 	cost = 25
 
-<<<<<<< HEAD
+
 /datum/map_template/surface/valley/inner/settlement
 	name = "Settlement"
 	desc = "An abaondened settlement."
@@ -253,8 +248,7 @@
 	mappath = 'maps/submaps/surface_submaps/valley/siegepoint.dmm'
 	cost = 25
 
-=======
->>>>>>> Valley
+
 /datum/map_template/surface/valley/walls/solarmoff
 	name = "Solar Pond"
 	desc = "A pond with fesh and a small sun"

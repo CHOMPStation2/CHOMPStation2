@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"al" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/eclipsemountain)
 "bN" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
 /turf/simulated/floor/tiled/dark,
@@ -22,6 +28,9 @@
 "do" = (
 /obj/structure/bed/chair/office/dark,
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "dt" = (
@@ -32,6 +41,16 @@
 /area/submap/eclipsemountain)
 "dJ" = (
 /turf/simulated/floor/bluegrid,
+/area/submap/eclipsemountain)
+"ec" = (
+/obj/structure/table/gold,
+/obj/random/ammo,
+/obj/random/maintenance/security,
+/obj/random/maintenance/research,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
 "fX" = (
 /obj/structure/table/darkglass,
@@ -51,8 +70,21 @@
 "iU" = (
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
+"jt" = (
+/obj/structure/table/wooden_reinforced,
+/obj/random/tool/alien,
+/obj/random/contraband,
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/submap/eclipsemountain)
 "ki" = (
 /turf/simulated/floor/tiled/red,
+/area/submap/eclipsemountain)
+"kR" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
 /area/submap/eclipsemountain)
 "kX" = (
 /obj/structure/table/steel,
@@ -106,6 +138,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
+"qn" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipsemountain)
+"qv" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipsemountain)
 "qO" = (
 /obj/machinery/door/blast/puzzle{
 	id = "puzzlemtB"
@@ -121,6 +163,12 @@
 /area/submap/eclipsemountain)
 "rJ" = (
 /obj/machinery/telecomms/relay/preset,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipsemountain)
+"sC" = (
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipsemountain)
 "tI" = (
@@ -258,6 +306,15 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
+"EA" = (
+/obj/structure/table/rack,
+/obj/random/rigsuit,
+/obj/random/weapon,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipsemountain)
 "EG" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/wood,
@@ -267,6 +324,15 @@
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/eclipsemountain)
+"Fg" = (
+/obj/machinery/porta_turret/ai_defense{
+	faction = "eclipse"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "GC" = (
 /obj/machinery/power/apc{
@@ -322,8 +388,26 @@
 /obj/random/material/refined,
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
+"LT" = (
+/obj/structure/table/gold,
+/obj/random/ammo,
+/obj/random/maintenance/security,
+/obj/random/maintenance/research,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/eclipsemountain)
 "LV" = (
 /turf/simulated/floor/tiled/dark,
+/area/submap/eclipsemountain)
+"Mr" = (
+/obj/structure/table/gold,
+/obj/random/ammo,
+/obj/random/maintenance/security,
+/obj/random/maintenance/research,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
 "Ms" = (
 /obj/structure/cliff/automatic/corner{
@@ -335,6 +419,9 @@
 /obj/structure/table/rack,
 /obj/random/rigsuit,
 /obj/random/weapon,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "MK" = (
@@ -361,6 +448,12 @@
 	phoron = 100
 	},
 /area/submap/eclipsemountain)
+"Ov" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/eclipsemountain)
 "OM" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
@@ -372,6 +465,10 @@
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/eclipsemountain)
+"PL" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "PP" = (
 /obj/structure/grille,
@@ -401,6 +498,9 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/tool/alien,
 /obj/random/contraband,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/submap/eclipsemountain)
 "Tp" = (
@@ -463,6 +563,16 @@
 "XK" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/eclipsemountain)
+"XM" = (
+/obj/structure/table/gold,
+/obj/random/ammo,
+/obj/random/maintenance/security,
+/obj/random/maintenance/research,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
 "XQ" = (
 /obj/structure/grille,
@@ -781,7 +891,7 @@ Cz
 MM
 iU
 iU
-iU
+Ov
 iU
 iU
 MM
@@ -909,7 +1019,7 @@ do
 vb
 XQ
 iU
-iU
+PL
 MM
 hw
 Cz
@@ -987,7 +1097,7 @@ Cz
 Cz
 Cz
 Cz
-XK
+Cz
 MM
 MM
 MM
@@ -1029,7 +1139,7 @@ MM
 Tb
 MM
 MM
-hw
+XK
 Cz
 Cz
 Cz
@@ -1061,10 +1171,10 @@ Cz
 Cz
 MM
 iU
-LV
+sC
 iU
 iU
-LV
+sC
 iU
 MM
 iU
@@ -1109,9 +1219,9 @@ kX
 LV
 LV
 MM
+kR
 LV
-LV
-LV
+qn
 MM
 hw
 Cz
@@ -1226,7 +1336,7 @@ qQ
 qQ
 qQ
 qQ
-Tc
+jt
 MM
 iU
 LV
@@ -1277,9 +1387,9 @@ kX
 LV
 LV
 MM
-LV
+kR
 bN
-LV
+qn
 MM
 hw
 Cz
@@ -1313,10 +1423,10 @@ bY
 Tp
 MM
 iU
-LV
+qv
 iU
 iU
-LV
+qv
 iU
 MM
 iU
@@ -1392,7 +1502,7 @@ Cz
 MM
 Vp
 VM
-Vp
+ec
 xO
 Vp
 Yh
@@ -1428,7 +1538,7 @@ Cz
 Cz
 la
 yY
-Cz
+la
 yY
 Cz
 MM
@@ -1445,9 +1555,9 @@ Yh
 Ky
 Ky
 MM
+kR
 LV
-LV
-LV
+qn
 MM
 hw
 Cz
@@ -1474,13 +1584,13 @@ Cz
 yY
 Cz
 MM
-Vp
+XM
 VM
 Vp
 VM
-Vp
+Mr
 Yh
-pm
+Fg
 ki
 ki
 qO
@@ -1560,12 +1670,12 @@ yY
 MM
 Vp
 VM
-Vp
+LT
 xO
 Vp
 Yh
 Yh
-My
+EA
 pm
 Yh
 Od
@@ -1685,10 +1795,10 @@ Cz
 yY
 Cz
 MM
+al
 iU
 iU
-iU
-iU
+PL
 MM
 dJ
 rJ
@@ -1723,7 +1833,7 @@ Cz
 Cz
 yY
 Cz
-Cz
+la
 yY
 Cz
 MM
@@ -1851,7 +1961,7 @@ yY
 Cz
 Cz
 Cz
-Cz
+la
 Cz
 Ms
 Cy
@@ -1937,6 +2047,7 @@ Cz
 Cz
 Cz
 Cz
+la
 Cz
 Cz
 Cz
@@ -1946,8 +2057,7 @@ Cz
 Cz
 Cz
 Cz
-Cz
-Cz
+la
 Cz
 Cz
 Cz
@@ -1975,6 +2085,17 @@ Cz
 Cz
 yY
 Cz
+la
+Cz
+Cz
+Cz
+Cz
+Cz
+la
+Cz
+Cz
+Cz
+la
 Cz
 Cz
 Cz
@@ -1983,18 +2104,7 @@ Cz
 Cz
 Cz
 Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
-Cz
+la
 Cz
 Cz
 MM

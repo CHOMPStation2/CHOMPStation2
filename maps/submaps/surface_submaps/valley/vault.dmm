@@ -61,12 +61,7 @@
 /obj/item/weapon/implantcase/handblade,
 /obj/item/weapon/implantcase/dart,
 /obj/item/clothing/head/technomancer/master,
-<<<<<<< HEAD
-/obj/item/weapon/gun/energy/gun/fluff/gunsword,
-/obj/item/weapon/cell/device/weapon/gunsword,
-/obj/item/weapon/cell/device/weapon/gunsword,
-=======
->>>>>>> Valley
+/obj/item/clothing/suit/armor/alien/tank,
 /turf/space,
 /area/submap/vault)
 "z" = (

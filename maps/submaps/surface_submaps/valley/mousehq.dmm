@@ -83,7 +83,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
 /obj/item/weapon/cell/device/weapon/recharge/alien/omni,
 /obj/structure/table/alien/blue,
-/obj/item/stack/material/void_opal,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "t" = (

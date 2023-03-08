@@ -10,7 +10,6 @@
 	name = "Poi Valley - Blood Church"
 	ambience = AMBIENCE_UNHOLY
 
-<<<<<<< HEAD
 /area/submap/carriershuttle
 	name = "Poi Valley Wall - Carrier Shuttle"
 	ambience = AMBIENCE_RUINS
@@ -19,8 +18,6 @@
 	name = "Poi Valley Wall - Cliff Manor"
 	ambience = AMBIENCE_RUINS
 
-=======
->>>>>>> Valley
 /area/submap/clockwork
 	name = "Poi Valley Wall - Clockwork"
 	ambience = AMBIENCE_RUINS
@@ -42,7 +39,7 @@
 	requires_power = FALSE
 	ambience = AMBIENCE_RUINS
 
-<<<<<<< HEAD
+
 /area/submap/eclipseaqua
 	name = "Poi Valley Wall - Eclipse Aqua"
 	ambience = AMBIENCE_TECH_RUINS
@@ -59,8 +56,6 @@
 	name = "Poi Valley Wall - Eclipse Mountain"
 	ambience = AMBIENCE_TECH_RUINS
 
-=======
->>>>>>> Valley
 /area/submap/fallenlab
 	name = "Poi Valley Wall - Fallen Lab"
 	ambience = AMBIENCE_RUINS
@@ -69,13 +64,12 @@
 	name = "Poi Valley - Failed Portal"
 	ambience = AMBIENCE_RUINS
 
-<<<<<<< HEAD
+
 /area/submap/hydroxeno
 	name = "Poi Valley Wall - Hydro Xeno"
 	ambience = AMBIENCE_RUINS
 
-=======
->>>>>>> Valley
+
 /area/submap/frostlake
 	name = "Poi Valley Wall - Frost Lake"
 	ambience = AMBIENCE_RUINS
@@ -96,7 +90,7 @@
 	name = "Poi Valley Walls - Maze"
 	ambience = AMBIENCE_RUINS
 
-<<<<<<< HEAD
+
 /area/submap/mouseattack
 	name = "Poi Valley Wall - Mouse Attack"
 	ambience = AMBIENCE_RUINS
@@ -105,8 +99,7 @@
 	name = "Poi Valley Wall - Mouse HQ"
 	ambience = AMBIENCE_RUINS
 
-=======
->>>>>>> Valley
+
 /area/submap/phorondragon
 	name = "Poi Valley Walls - Phoron Pack"
 	ambience = AMBIENCE_RUINS
@@ -130,19 +123,18 @@
 	name = "Poi Valley Walls - Plont"
 	ambience = AMBIENCE_RUINS
 
-<<<<<<< HEAD
+
 /area/submap/puzzledungeon
 	name = "Poi Valley Walls - Puzzle Dungeon"
 	ambience = AMBIENCE_RUINS
 
-=======
->>>>>>> Valley
+
 /area/submap/redshuttledown
 	name = "Poi Valley - Red Shuttle"
 	requires_power = FALSE
 	ambience = AMBIENCE_RUINS
 
-<<<<<<< HEAD
+
 /area/submap/settlement
 	name = "Poi Valley Walls - Settlement"
 	ambience = AMBIENCE_RUINS
@@ -151,8 +143,7 @@
 	name = "Poi Valley Walls - Siegepoint"
 	ambience = AMBIENCE_RUINS
 
-=======
->>>>>>> Valley
+
 /area/submap/solarmoff
 	name = "Poi Valley Walls - Solar Moth"
 	ambience = AMBIENCE_RUINS

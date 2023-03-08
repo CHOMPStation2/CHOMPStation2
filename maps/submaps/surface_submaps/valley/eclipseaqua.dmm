@@ -8,10 +8,28 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"aV" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
 "ca" = (
 /obj/structure/table/rack,
 /obj/item/weapon/rig/combat/equipped,
 /obj/item/rig_module/vision/nvg,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"cC" = (
+/obj/item/weapon/stool/padded,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"dm" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/celery,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "eb" = (
@@ -22,12 +40,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"ew" = (
+/obj/machinery/light,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/eclipseaqua)
 "eK" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"fi" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipseaqua)
 "gA" = (
 /obj/structure/railing/grey{
@@ -52,6 +80,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"jw" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"jR" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
 "kd" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
 /turf/simulated/floor/tiled/dark,
@@ -74,6 +116,12 @@
 "nc" = (
 /obj/structure/railing,
 /turf/simulated/floor/water,
+/area/submap/eclipseaqua)
+"nf" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "nz" = (
 /obj/machinery/biogenerator,
@@ -111,6 +159,12 @@
 /area/submap/eclipseaqua)
 "rR" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"sX" = (
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "ta" = (
@@ -165,6 +219,20 @@
 /obj/item/stack/material/void_opal,
 /obj/structure/table/rack,
 /turf/simulated/floor/reinforced/airless,
+/area/submap/eclipseaqua)
+"zo" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/eclipseaqua)
+"zB" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/celery,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Cn" = (
 /obj/structure/railing/grey{
@@ -226,9 +294,23 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"IS" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/security,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
 "IY" = (
 /obj/structure/table/steel,
 /obj/item/weapon/reagent_containers/glass/bottle/left4zed,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "JQ" = (
@@ -326,6 +408,12 @@
 "Ry" = (
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"SE" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/eclipseaqua)
 "TA" = (
 /obj/structure/table/rack,
 /obj/item/weapon/rig/breacher,
@@ -365,6 +453,10 @@
 /obj/structure/window/titanium{
 	dir = 8
 	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"US" = (
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UU" = (
@@ -1050,7 +1142,7 @@ ta
 ta
 vt
 Ry
-Ry
+sX
 Ry
 Ry
 Xm
@@ -1060,7 +1152,7 @@ Pf
 Pf
 Qu
 Dw
-Ry
+sX
 Ry
 Ry
 Ry
@@ -1156,7 +1248,7 @@ Qu
 Ry
 Ry
 Vg
-Vg
+aV
 xO
 Qu
 Ry
@@ -1188,7 +1280,7 @@ ta
 ta
 vt
 Ry
-Ry
+US
 Qu
 uU
 Ho
@@ -1197,16 +1289,16 @@ Ry
 Ry
 ob
 Pf
-Pf
+zo
 Pf
 Qu
 Ry
 Vg
 eK
 eK
-Vg
+cC
 Qu
-Ry
+nf
 Ry
 Cn
 ta
@@ -1241,13 +1333,13 @@ Ry
 Ry
 Ry
 Ry
-Qc
+dm
 Qu
 Qu
 Qu
 Qu
 Qu
-Ry
+nf
 Vg
 eK
 eK
@@ -1291,7 +1383,7 @@ rR
 Qc
 Qu
 Ry
-Ry
+jw
 Ry
 ob
 Ry
@@ -1333,7 +1425,7 @@ Kv
 Qu
 Qc
 Qc
-Qc
+zB
 Ry
 Qu
 Qu
@@ -1343,7 +1435,7 @@ Ry
 Qu
 Qu
 Ry
-Ry
+sX
 Ry
 Ry
 Qu
@@ -1473,9 +1565,9 @@ Pf
 Pf
 Pf
 gR
-Pf
+ew
 Qu
-Ry
+nf
 Ry
 Ry
 xO
@@ -1483,9 +1575,9 @@ yX
 CM
 Ry
 Ry
-Ry
+US
 Qu
-Pf
+fi
 gR
 Pf
 Pf
@@ -1613,7 +1705,7 @@ Qu
 Xm
 LC
 Qu
-Ry
+jw
 Ry
 UJ
 pq
@@ -1625,7 +1717,7 @@ Ry
 Qu
 Qu
 Ry
-Ry
+jw
 Ry
 yn
 Qu
@@ -1667,7 +1759,7 @@ vu
 Ry
 ob
 Ry
-Ry
+sX
 Ry
 Qu
 yn
@@ -1711,13 +1803,13 @@ Ry
 JQ
 Ry
 Ej
-Ry
+US
 Qu
 Qu
 Qu
 Qu
 Qu
-KH
+IS
 Ry
 Ry
 Ry
@@ -1752,7 +1844,7 @@ ta
 ta
 pN
 Ry
-Ry
+US
 Qu
 Oi
 Ry
@@ -1761,16 +1853,16 @@ Zm
 Cv
 Qu
 Pf
-Pf
+SE
 Pf
 ob
 Ry
 Ry
 Ry
 Ho
-yn
+jR
 Qu
-Ry
+nf
 Ry
 UU
 ta
@@ -1896,7 +1988,7 @@ ta
 ta
 pN
 Ry
-Ry
+jw
 Ry
 Ry
 mL
@@ -1908,7 +2000,7 @@ Qu
 UH
 Ry
 Ry
-Ry
+jw
 Ry
 UU
 ta
