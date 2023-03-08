@@ -12,6 +12,7 @@
 	var/identifier = "statue"
 	var/adjective = "hardens"
 	var/material = "stone"
+	var/tint = rgb(255,255,255)
 
 /datum/component/gargoyle/Initialize()
 	if (!ishuman(parent))
@@ -23,6 +24,7 @@
 	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbAdjective
 	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbIdentifier
 	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbMaterial
+	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbColor
 
 	START_PROCESSING(SSprocessing, src)
 
@@ -113,7 +115,7 @@
 		if(type==3)
 			return comp.adjective = namer
 		if(type==4)
-			return
+			return comp.tint = namer
 			//Add color code here in the future
 		if(type==5)
 			return
@@ -128,6 +130,15 @@
 		return
 	Gargoyle_Customizer(user_input,1)
 
+/mob/living/carbon/human/proc/gargoyle_verbMaterial()
+	set name = "Gargoyle - Name Material"
+	set category = "Abilities"
+	set desc = "Renames your statues material to something of your choosing. by default it is (stone)."
+	var/user_input = input("Enter your petrification material")
+	if(!user_input)
+		return
+	Gargoyle_Customizer(user_input,2)
+
 /mob/living/carbon/human/proc/gargoyle_verbAdjective()
 	set name = "Gargoyle - Name Adjective"
 	set category = "Abilities"
@@ -137,11 +148,11 @@
 		return
 	Gargoyle_Customizer(user_input,3)
 
-/mob/living/carbon/human/proc/gargoyle_verbMaterial()
-	set name = "Gargoyle - Name Material"
+/mob/living/carbon/human/proc/gargoyle_verbColor()
+	set name = "Gargoyle - Recolor"
 	set category = "Abilities"
-	set desc = "Renames your statues material to something of your choosing. by default it is (stone)."
-	var/user_input = input("Enter your petrification material")
+	set desc = "Recolor your statue to something of your choosing. by default it is grey."
+	var/user_input = input(src, "Choose a tint color!") as color|null
 	if(!user_input)
 		return
-	Gargoyle_Customizer(user_input,2)
+	Gargoyle_Customizer(user_input,4)
