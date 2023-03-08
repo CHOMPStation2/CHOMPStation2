@@ -187,6 +187,28 @@
 	name = "Wilderness Shelter Utility Room"
 	icon_state = "substation"
 
+//Valley stuffs, chomps Edit by Jasper, for wilds but stranger.
+/area/surface/outpost/unfinished
+	name = "Unfinished"
+	icon_state = "red"
+
+/area/surface/outside/valley/inner
+	name = "Valley Inner"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/walls
+	name = "Valley Walls"
+	icon_state = "yellow"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/valley/edge
+	name = "Valley Edge"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/river
+	name = "Valley River"
+	icon_state = "yellow"
+
 // Main mining outpost
 /area/surface/outpost/mining_main
 	name = "North Mining Outpost"
