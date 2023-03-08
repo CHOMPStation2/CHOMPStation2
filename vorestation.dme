@@ -4590,6 +4590,7 @@
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\species.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\species_shapeshift_ch.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\outsider\vox.dm"
+#include "modular_chomp\code\modules\mob\living\carbon\human\species\station\irydian.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\prommie_blob.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\station.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\station_special_ch.dm"
