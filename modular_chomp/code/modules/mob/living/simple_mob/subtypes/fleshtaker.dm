@@ -48,6 +48,7 @@ Only physical attributes are copied.
 	health = maxHealth
 	//steal base stats
 	//possibly steal vorgans
+	update_icon()
 
 //reset to original values
 /mob/living/simple_mob/fleshtaker/proc/revert_mimic()
@@ -62,11 +63,12 @@ Only physical attributes are copied.
 	melee_damage_upper = base_values["melee_damage_upper"]
 	maxHealth = base_values["maxHealth"]
 	health = maxHealth
+	update_icon()
 
 /mob/living/simple_mob/fleshtaker/apply_melee_effects(var/atom/A)
 	if(istype(A,/mob/living/simple_mob) && !flesh_mimic)
 		var/mob/living/simple_mob/M = A
 		if(!M.mind)
-			src.flesh_mimic(M)
+			flesh_mimic(M)
 			M.gib()
 	..()
