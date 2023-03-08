@@ -8,6 +8,11 @@
 	var/mob/living/carbon/human/gargoyle //easy reference
 	var/obj/structure/gargoyle/statue //another easy ref
 
+	//Adjustable mod
+	var/identifier = "statue"
+	var/adjective = "hardens"
+	var/material = "stone"
+
 /datum/component/gargoyle/Initialize()
 	if (!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -15,6 +20,10 @@
 	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_transformation
 	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_pause
 	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_checkenergy
+	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbAdjective
+	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbIdentifier
+	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_verbMaterial
+
 	START_PROCESSING(SSprocessing, src)
 
 /datum/component/gargoyle/process()
@@ -59,7 +68,7 @@
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
 		if (comp.energy <= 0 && isturf(loc))
-			to_chat(src, "<span class='danger'>You suddenly turn into a statue as you run out of energy!</span>")
+			to_chat(src, "<span class='danger'>You suddenly turn into a [comp.identifier] as you run out of energy!</span>")
 		else if (comp.cooldown > world.time)
 			var/time_to_wait = (comp.cooldown - world.time) / (1 SECONDS)
 			to_chat(src, "<span class='warning'>You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!</span>")
@@ -93,3 +102,46 @@
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
 		to_chat(src, "<span class='notice'>You have [round(comp.energy,0.01)] energy remaining. It is currently [comp.paused ? "stable" : (comp.transformed ? "increasing" : "decreasing")].</span>")
+
+/mob/living/carbon/human/proc/Gargoyle_Customizer(var/namer,var/type)
+	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
+	if (comp)
+		if(type==1)
+			return comp.identifier = namer
+		if(type==2)
+			return comp.material = namer
+		if(type==3)
+			return comp.adjective = namer
+		if(type==4)
+			return
+			//Add color code here in the future
+		if(type==5)
+			return
+			//Placeholder for being able to pick up statues
+
+/mob/living/carbon/human/proc/gargoyle_verbIdentifier()
+	set name = "Gargoyle - Name Identifier"
+	set category = "Abilities"
+	set desc = "Renames your statue to something of your choosing but only the statue part of the name."
+	var/user_input = input("Enter your statue identifier")
+	if(!user_input)
+		return
+	Gargoyle_Customizer(user_input,1)
+
+/mob/living/carbon/human/proc/gargoyle_verbAdjective()
+	set name = "Gargoyle - Name Adjective"
+	set category = "Abilities"
+	set desc = "Renames your petrification adjective to something of your choosing. by default it is (hardens)."
+	var/user_input = input("Enter your petrification adjective")
+	if(!user_input)
+		return
+	Gargoyle_Customizer(user_input,3)
+
+/mob/living/carbon/human/proc/gargoyle_verbMaterial()
+	set name = "Gargoyle - Name Material"
+	set category = "Abilities"
+	set desc = "Renames your statues material to something of your choosing. by default it is (stone)."
+	var/user_input = input("Enter your petrification material")
+	if(!user_input)
+		return
+	Gargoyle_Customizer(user_input,2)
