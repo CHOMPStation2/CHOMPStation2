@@ -117,7 +117,7 @@
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-				stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
+				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
