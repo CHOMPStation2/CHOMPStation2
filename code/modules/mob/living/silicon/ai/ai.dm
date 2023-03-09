@@ -637,79 +637,88 @@ var/list/ai_verbs_default = list(
 					qdel(dummy)
 					holo_icon = new_holo
 
-				else //A premade from the dmi
-					var/icon_list[] = list(
-						"default",
-						"floating face",
-						"singularity",
-						"drone",
-						"carp",
-						"spider",
-						"bear",
-						"slime",
-						"ian",
-						"runtime",
-						"poly",
-						"pun pun",
-						"male human",
-						"female human",
-						"male unathi",
-						"female unathi",
-						"male tajaran",
-						"female tajaran",
-						"male tesharii",
-						"female tesharii",
-						"male skrell",
-						"female skrell"
-					)
-					input = tgui_input_list(usr, "Please select a hologram:", "Hologram Choice", icon_list)
-					if(input)
-						qdel(holo_icon)
-						switch(input)
-							if("default")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
-							if("floating face")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo2"))
-							if("singularity")
-								holo_icon = getHologramIcon(icon('icons/obj/singularity.dmi',"singularity_s1"))
-							if("drone")
-								holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"drone"))
-							if("carp")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo4"))
-							if("spider")
-								holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"nurse"))
-							if("bear")
-								holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"brownbear"))
-							if("slime")
-								holo_icon = getHologramIcon(icon('icons/mob/slimes.dmi',"cerulean adult slime"))
-							if("ian")
-								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"corgi"))
-							if("runtime")
-								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"cat"))
-							if("poly")
-								holo_icon = getHologramIcon(icon('icons/mob/birds.dmi',"poly-flap"))
-							if("pun pun")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"punpun"))
-							if("male human")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holohumm"))
-							if("female human")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holohumf"))
-							if("male unathi")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holounam"))
-							if("female unathi")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holounaf"))
-							if("male tajaran")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotajm"))
-							if("female tajaran")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotajf"))
-							if("male tesharii")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotesm"))
-							if("female tesharii")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotesf"))
-							if("male skrell")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holoskrm"))
-							if("female skrell")
-								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holoskrf"))
+		else //A premade from the dmi
+			var/icon_list[] = list(
+				"default",
+				"floating face",
+				"singularity",
+				"drone",
+				"carp",
+				"spider",
+				"bear",
+				"fox",
+				"fox, alt",
+				"syndifox",
+				"slime",
+				"ian",
+				"runtime",
+				"poly",
+				"pun pun",
+				"male human",
+				"female human",
+				"male unathi",
+				"female unathi",
+				"male tajaran",
+				"female tajaran",
+				"male tesharii",
+				"female tesharii",
+				"male skrell",
+				"female skrell"
+			)
+			input = tgui_input_list(usr, "Please select a hologram:", "Hologram Choice", icon_list)
+			if(input)
+				qdel(holo_icon)
+				switch(input)
+					if("default")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
+					if("floating face")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo2"))
+					if("singularity")
+						holo_icon = getHologramIcon(icon('icons/obj/singularity.dmi',"singularity_s1"))
+					if("drone")
+						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"drone0"))
+					if("carp")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo4"))
+					if("spider")
+						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"nurse"))
+					if("bear")
+						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"brownbear"))
+					if("slime")
+						holo_icon = getHologramIcon(icon('icons/mob/slimes.dmi',"cerulean adult slime"))
+					if("ian")
+						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"corgi"))
+					if("runtime")
+						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"cat"))
+					if("poly")
+						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"parrot_fly"))
+					if("pun pun")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"punpun"))
+					if("male human")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holohumm"))
+					if("female human")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holohumf"))
+					if("male unathi")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holounam"))
+					if("female unathi")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holounaf"))
+					if("male tajaran")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotajm"))
+					if("female tajaran")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotajf"))
+					if("male tesharii")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotesm"))
+					if("female tesharii")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holotesf"))
+					if("male skrell")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holoskrm"))
+					if("female skrell")
+						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holoskrf"))
+					if("fox")
+						holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"fox"))
+					if("syndifox")
+						holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"syndifox"))
+					if("fox, alt")
+						holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"fox2"))
 
 //Toggles the luminosity and applies it by re-entereing the camera.
 /mob/living/silicon/ai/proc/toggle_camera_light()
