@@ -56,6 +56,15 @@ var/list/talk_sound_map = rlist(
 	rlist += i
 	return rlist
 
+/proc/arlist(var/list/altlist)
+	var/list/rlist = list(list(),list(),FALSE,0)
+	var/i = 0
+	for(i = 1, i <= LAZYLEN(altlist), i++)
+		rlist[(i % 2) +1] += altlist[i]
+	rlist += TRUE
+	rlist += i
+	return rlist
+
 
 /*RLIST standard
 /proc/read_rlist(var/list/rlist)
