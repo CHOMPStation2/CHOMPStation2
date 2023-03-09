@@ -194,7 +194,8 @@
 		pref.voice_freq = choice
 		return TOPIC_REFRESH
 	else if(href_list["voice_sounds_list"])
-		var/list/possible_voice_types = list(
+		var/list/possible_voice_types = get_talk_sound()//CHOMEPEDIT GLobal voice getter
+		/*list(
 			"beep-boop",
 			"goon speak 1",
 			"goon speak 2",
@@ -208,7 +209,7 @@
 			"goon speak pug",
 			"goon speak pugg",
 			"goon speak roach",
-			"goon speak skelly")
+			"goon speak skelly")*/ // CHOMPRemval, redundant voice list
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!choice)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound

@@ -59,7 +59,7 @@
 	set category = "OOC"
 
 	//CHOMPEDIT START, Global Talk Sounds
-	var/list/possible_voice_types = talk_sounds/*list(
+	var/list/possible_voice_types = get_talk_sound()/*list(
 		"beep-boop",
 		"goon speak 1",
 		"goon speak 2",
