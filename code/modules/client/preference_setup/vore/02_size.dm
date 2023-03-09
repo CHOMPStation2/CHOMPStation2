@@ -226,6 +226,9 @@
 
 	else if(href_list["voice_test"])
 		var/sound/S = pick(pref.voice_sound)
+		if(pref.voice_sound)
+			S = sound(pick(get_talk_sound(pref.voice_sound))) //CHOMPADD: Global Voicegetter
+		/*CHOMPREMOVAL: redundant list
 		switch(pref.voice_sound)
 			if("beep-boop")
 				S = sound(pick(talk_sound))
@@ -255,6 +258,7 @@
 				S = sound(pick(goon_speak_roach_sound))
 			if("goon speak skelly")
 				S = sound(pick(goon_speak_skelly_sound))
+		*/
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 50
 		SEND_SOUND(user, S)

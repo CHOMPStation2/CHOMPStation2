@@ -51,7 +51,7 @@ var/list/talk_sound_map = rlist(
 	for(i = 1, i <= LAZYLEN(keys), i++)
 		to_chat(world,keys[i])
 		rlist[1] += keys[i]
-		rlist[2] += values[i]
+		rlist[2][keys[i]] = values[i]
 	rlist += TRUE
 	rlist += i
 	return rlist
