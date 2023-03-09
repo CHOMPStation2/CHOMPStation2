@@ -62,7 +62,7 @@ var/list/talk_sound_map = rlist(
 	for(i = 1, i <= LAZYLEN(altlist), i++)
 		rlist[(i % 2) +1] += altlist[i]
 	rlist += TRUE
-	rlist += i
+	rlist += i/2
 	return rlist
 
 
