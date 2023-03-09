@@ -94,6 +94,14 @@
 		msg += "[line]"
 	msg += "</table>"
 	msg += "<b>Total Players: [length(Lines)]</b>"
+<<<<<<< HEAD
 	msg = "<span class='filter_info'>" + msg + "</span>"
 	to_chat(src, msg)
+<<<<<<< HEAD
 YW EDIT STOP*/
+=======
+=======
+	msg = "<span class='filter_notice'>" + msg + "</span>"
+	to_chat(src, msg)
+>>>>>>> 75577bd3ca9... cleans up so many to_chats so they use vchat filters, unsorted chat filter for everything else (#9006)
+>>>>>>> dd1e58acc7... cleans up so many to_chats so they use vchat filters, unsorted chat filter for everything else
