@@ -145,7 +145,7 @@ var/list/flooring_types
 /decl/flooring/grass/sif // Subtype for Sif's grass.
 	name = "growth"
 	desc = "A natural moss that has adapted to the sheer cold climate."
-	flags = 0
+	flags = TURF_REMOVE_SHOVEL //CHOMPedit
 	icon = 'icons/turf/outdoors.dmi'
 	icon_base = "grass_sif"
 	build_type = /obj/item/stack/tile/grass/sif
@@ -164,7 +164,7 @@ var/list/flooring_types
 /decl/flooring/grass/sif/forest
 	name = "thick growth"
 	desc = "A natural moss that has adapted to the sheer cold climate."
-	flags = 0
+	flags = TURF_REMOVE_SHOVEL //CHOMPedit
 	icon = 'icons/turf/outdoors.dmi'
 	icon_base = "grass_sif_dark"
 	build_type = /obj/item/stack/tile/grass/sif/forest

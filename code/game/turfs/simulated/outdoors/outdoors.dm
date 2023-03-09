@@ -41,7 +41,7 @@ var/list/turf_edge_cache = list()
 
 /turf/simulated/floor/outdoors/attackby(obj/item/C, mob/user)
 
-	if(can_dig && istype(C, /obj/item/weapon/shovel))
+	if(can_dig && istype(C, /obj/item/weapon/material/minihoe))//CHOMPedit, replace shovel with plant tool to prevent conflicts with growth building
 		to_chat(user, SPAN_NOTICE("\The [user] begins digging into \the [src] with \the [C]."))
 		var/delay = (3 SECONDS * C.toolspeed)
 		user.setClickCooldown(delay)
