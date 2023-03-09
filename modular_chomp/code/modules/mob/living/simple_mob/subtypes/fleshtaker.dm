@@ -31,6 +31,7 @@ Only physical attributes are copied.
 	base_values["melee_damage_lower"] = melee_damage_lower
 	base_values["melee_damage_upper"] = melee_damage_upper
 	base_values["maxHealth"] = maxHealth
+	base_values["armor"] = armor
 	icon_state = icon_living
 
 
@@ -48,6 +49,7 @@ Only physical attributes are copied.
 	maxHealth = target.maxHealth
 	health = maxHealth
 	icon_state = target.icon_state
+	armor = target.armor
 	//steal base stats
 	//possibly steal vorgans
 	update_icon()
@@ -66,6 +68,7 @@ Only physical attributes are copied.
 	maxHealth = base_values["maxHealth"]
 	health = maxHealth
 	icon_state = icon_living
+	armor = base_values["armor"]
 	update_icon()
 
 /mob/living/simple_mob/fleshtaker/apply_melee_effects(var/atom/A)
