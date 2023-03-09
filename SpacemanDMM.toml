@@ -1,9 +1,14 @@
+environment = "vorestation.dme"
+
 [langserver]
 dreamchecker = true
 
 [code_standards]
 disallow_relative_type_definitions = true
 disallow_relative_proc_definitions = true
+<<<<<<< HEAD
 
 [debugger]
 engine = "auxtools"
+=======
+>>>>>>> ac1782cc4d... Merge pull request #14624 from ItsSelis/selis-sdmm
