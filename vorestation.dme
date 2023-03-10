@@ -4493,9 +4493,12 @@
 #include "maps\atoll\atoll_objs.dm"
 #include "maps\atoll\atoll_turfs.dm"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
 #include "maps\southern_cross\items\headset_sc.dm"
+=======
+>>>>>>> 17063fbb69... Merge pull request #14579 from KillianKirilenko/kk-ships
 #include "maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\items\clothing\sc_under.dm"
