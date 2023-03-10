@@ -15,6 +15,8 @@
 	var/original_int = 100
 	var/max_integrity = 100
 	var/stored_examine
+	var/identifier = "statue"
+	var/material = "stone"
 
 /obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H)
 	. = ..()
@@ -23,18 +25,22 @@
 	if (!istype(H) || !isturf(H.loc))
 		return
 	var/datum/component/gargoyle/comp = H.GetComponent(/datum/component/gargoyle)
+	var/tint = rgb(255,255,255)
 	if (comp)
 		comp.cooldown = world.time + (15 SECONDS)
 		comp.statue = src
 		comp.transformed = TRUE
 		comp.paused = FALSE
+		identifier = comp.identifier
+		material = comp.material
+		tint = comp.tint
 	gargoyle = H
 
 	max_integrity = H.getMaxHealth() + 100
 	obj_integrity = H.health + 100
 	original_int = obj_integrity
-	name = "statue of [H.name]"
-	desc = "A very lifelike statue."
+	name = "[identifier] of [H.name]"
+	desc = "A very lifelike [identifier]."
 	stored_examine = H.examine()
 	description_fluff = H.get_description_fluff()
 
@@ -42,7 +48,32 @@
 		H.buckled.unbuckle_mob(H, TRUE)
 	icon = H.icon
 	copy_overlays(H)
-	color = list(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))
+
+	//calculate our tints
+
+	var/list/RGB = list( hex2num( "[tint[2]][tint[3]]" ),
+						 hex2num( "[tint[4]][tint[5]]" ),
+						 hex2num( "[tint[6]][tint[7]]" )
+						)
+
+	var/colora = rgb( 	RGB[1]*0.299,
+						RGB[2]*0.299,
+						RGB[3]*0.299
+						)
+
+	var/colorb = rgb( 	RGB[1]*0.587,
+						RGB[2]*0.587,
+						RGB[3]*0.587
+						)
+
+	var/colorc = rgb( 	RGB[1]*0.114,
+						RGB[2]*0.114,
+						RGB[3]*0.114
+						)
+
+	color = list( colora, colorb , colorc, rgb(0,0,0))
+
+
 	initial_sleep = H.sleeping
 	initial_blind = H.eye_blind
 	initial_is_shifted = H.is_shifted
@@ -61,7 +92,7 @@
 	flapping = H.flapping
 	H.toggle_tail(FALSE, FALSE)
 	H.toggle_wing(FALSE, FALSE)
-	H.visible_message("<span class='warning'>[H]'s skin rapidly turns to stone!</span>", "<span class='warning'>Your skin abruptly hardens as you turn to stone!</span>")
+	H.visible_message("<span class='warning'>[H]'s skin rapidly turns to [material]!</span>", "<span class='warning'>Your skin abruptly [comp.adjective] as you turn to [material]!</span>")
 	H.forceMove(src)
 	H.SetBlinded(0)
 	H.SetSleeping(0)
@@ -87,7 +118,7 @@
 /obj/structure/gargoyle/examine(mob/user)
 	. = ..()
 	if (gargoyle && stored_examine)
-		. += "The statue seems to have a bit more to them..."
+		. += "The [identifier] seems to have a bit more to them..."
 		. += stored_examine
 	return
 
@@ -121,10 +152,10 @@
 		var/f = (original_int - obj_integrity) / 10
 		for (var/x in 1 to 10)
 			gargoyle.adjustBruteLoss(f)
-		hurtmessage = " <b>You feel your body take the damage that was dealt while being stone!</b>"
+		hurtmessage = " <b>You feel your body take the damage that was dealt while being [material]!</b>"
 	gargoyle.updatehealth()
 	alpha = 0
-	gargoyle.visible_message("<span class='warning'>[gargoyle]'s skin rapidly softens, returning them to normal!</span>", "<span class='warning'>Your skin softens, freeing your movement once more![hurtmessage]</span>")
+	gargoyle.visible_message("<span class='warning'>[gargoyle]'s skin rapidly reverts, returning them to normal!</span>", "<span class='warning'>Your skin reverts, freeing your movement once more![hurtmessage]</span>")
 
 /obj/structure/gargoyle/return_air()
 	return return_air_for_internal_lifeform()
