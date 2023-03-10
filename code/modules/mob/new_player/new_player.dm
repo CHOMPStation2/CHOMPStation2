@@ -494,6 +494,12 @@
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
 		data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
+	if(ishuman(character))
+		if(character.client.prefs.auto_backup_implant)
+			var/obj/item/weapon/implant/backup/imp = new(src)
+
+			if(imp.handle_implant(character,character.zone_sel.selecting))
+				imp.post_implant(character)
 	var/gut = join_props["voreny"]
 	var/mob/living/prey = join_props["prey"]
 	//CHOMPEdit Start - Item TF
@@ -519,7 +525,6 @@
 	else
 		if(gut)
 			character.forceMove(gut)
-
 
 	qdel(src) // Delete new_player mob
 
