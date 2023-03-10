@@ -151,18 +151,6 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/grass/sif
 	has_base_range = 1
 
-/turf/simulated/floor/outdoors/grass/sif/attackby(obj/item/C, mob/user)//CHOMPedit begin, other tiles have ways to build on them, sif grass doesnt. So I put this snowflake on just sif grass
-	if(istype(C, /obj/item/stack/tile/floor))
-		var/obj/item/stack/tile/floor/S = C
-		if (S.get_amount() < 1)
-			return
-		playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-		ChangeTurf(/turf/simulated/floor)
-		S.use(1)
-		return
-//CHOMPedit end
-
-
 /decl/flooring/grass/sif/forest
 	name = "thick growth"
 	desc = "A natural moss that has adapted to the sheer cold climate."
