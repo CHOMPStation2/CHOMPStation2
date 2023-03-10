@@ -4,14 +4,11 @@
 	var/directory_tag
 	var/directory_erptag
 	var/directory_ad
-<<<<<<< HEAD
+	var/vore_prey_eaten = 0
 	//CHOMPEdit additions
 	var/vantag_preference = VANTAG_NONE
 	var/directory_gendertag
 	var/directory_sexualitytag
-=======
-	var/vore_prey_eaten = 0
->>>>>>> 4378bb37ac... Merge pull request #14629 from Heroman3003/vore-goal
 
 /mob/living/mind_initialize()
 	. = ..()
