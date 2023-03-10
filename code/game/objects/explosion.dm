@@ -38,8 +38,9 @@
 				// If inside the blast radius + world.view - 2
 				if(dist <= round(max_range + world.view - 2, 1))
 					M.playsound_local(epicenter, get_sfx("explosion"), 100, 1, frequency, falloff = 5) // get_sfx() is so that everyone gets the same sound
-					if(isliving(M))
-						M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+					var/mob/living/mL = M // CHOMPStation Edit: Ear Ringing/Deaf
+					if(isliving(mL)) // CHOMPStation Edit: Fix
+						mL.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 				else if(dist <= far_dist)
 					var/far_volume = CLAMP(far_dist, 30, 50) // Volume is based on explosion size and dist
 					far_volume += (dist <= far_dist * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
