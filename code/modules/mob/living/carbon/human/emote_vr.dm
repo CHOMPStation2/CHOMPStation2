@@ -60,7 +60,7 @@
 		message = "reveals their wings!"
 	else
 		message = "hides their wings."
-	visible_message("[src] [message]")
+	visible_message("<span class='filter_notice'>[src] [message]</span>")
 
 /mob/living/carbon/human/verb/hide_tail_vr()
 	set name = "Show/Hide tail"
@@ -83,4 +83,8 @@
 		message = "reveals their tail!"
 	else
 		message = "hides their tail."
+<<<<<<< HEAD
 	visible_message("[src] [message]")
+=======
+	visible_message("<span class='filter_notice'>[src] [message]</span>")
+>>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
