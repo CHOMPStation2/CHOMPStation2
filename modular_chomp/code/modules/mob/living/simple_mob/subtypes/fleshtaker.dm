@@ -37,6 +37,7 @@ Only physical attributes are copied.
 
 	//copy stats from our engulfed target
 /mob/living/simple_mob/fleshtaker/proc/flesh_mimic(var/mob/living/simple_mob/target)
+	flesh_mimic = TRUE
 	name = target.name
 	desc = target.desc
 	icon = target.icon
@@ -56,6 +57,7 @@ Only physical attributes are copied.
 
 //reset to original values
 /mob/living/simple_mob/fleshtaker/proc/revert_mimic()
+	flesh_mimic = FALSE
 	name = base_values["name"]
 	desc = base_values["desc"]
 	icon = base_values["icon"]
