@@ -28,5 +28,5 @@ var/list/talk_sound_map = list(
 		talk_sounds |= talk_sound_map[i] //Thank you BM absolute legend
 	return 1
 
-proc/get_talk_sound(var/voice_sound)
+/proc/get_talk_sound(var/voice_sound)
 	return talk_sound_map[voice_sound]

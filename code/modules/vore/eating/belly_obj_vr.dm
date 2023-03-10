@@ -348,7 +348,7 @@
 		if(special_entrance_sound) //CHOMPEdit: Custom sound set by mob's init_vore or ingame varedits.
 			soundfile = special_entrance_sound
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
 	//Messages if it's a mob
@@ -373,7 +373,7 @@
 		var/taste
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
-		vore_fx(M)
+		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
@@ -638,6 +638,8 @@
 
 	if(prey.ckey)
 		GLOB.prey_eaten_roundstat++
+		if(owner.mind)
+			owner.mind.vore_prey_eaten++
 
 // Get the line that should show up in Examine message if the owner of this belly
 // is examined.   By making this a proc, we not only take advantage of polymorphism,

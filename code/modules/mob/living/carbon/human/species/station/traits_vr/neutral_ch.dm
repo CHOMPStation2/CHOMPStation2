@@ -81,8 +81,8 @@
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 
 /datum/trait/neutral/gargoyle
-	name = "Gargoyle"
-	desc = "You turn into a statue at will, but also whenever you run out of energy. Being a statue replenishes your energy slowly."
+	name = "Gargoyle (adjustable)"
+	desc = "You turn into a statue (or similiar) at will, but also whenever you run out of energy. Being a statue replenishes your energy slowly."
 	cost = 0
 	custom_only = FALSE //slimes, xenochimera, diona, proteans, etc, basically anything but custom doesn't make sense (as much as I wanna play a petrifying slime)
 	//Nah makes perfect sense, they could just be gene modded, not to mention we can expand this to have the statue and description of it renameable as well as color adjustable, to support general petrification

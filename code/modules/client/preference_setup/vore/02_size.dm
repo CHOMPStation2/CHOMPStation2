@@ -247,7 +247,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["voice_test"])
-		var/sound/S = pick(pref.voice_sound)
+		var/sound/S
 		switch(pref.voice_sound)
 			if("beep-boop")
 				S = sound(pick(talk_sound))
@@ -277,10 +277,10 @@
 				S = sound(pick(goon_speak_roach_sound))
 			if("goon speak skelly")
 				S = sound(pick(goon_speak_skelly_sound))
-		S.frequency = pick(pref.voice_freq)
-		S.volume = 50
-		SEND_SOUND(user, S)
-		return TOPIC_REFRESH  // CHOMPEdit
+		if(S)
+			S.frequency = pick(pref.voice_freq)
+			S.volume = 50
+			SEND_SOUND(user, S)
 	// CHOMPEdit Start: Pain/Scream/Death sounds
 	else if(href_list["species_sound_options"]) // You shouldn't be able to see this option if you don't have the option to select a custom icon base, so we don't need to re-check for safety here.
 		var/list/possible_species_sound_types = species_sound_map
