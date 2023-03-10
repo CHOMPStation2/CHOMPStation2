@@ -54,8 +54,6 @@
 /mob/living/simple_mob/tomato/space/Process_Spacemove(var/check_drift = 0)
 	return TRUE
 
-<<<<<<< HEAD
-=======
 //Begin tourist ship stuff
 /mob/living/simple_mob/animal/giant_spider/space
 	min_oxy = 0
@@ -159,7 +157,6 @@
 
 // End of Tourist ship stuff
 
->>>>>>> b8733c48ff... Merge pull request #14585 from Runa-Dacino/DebrisPOIFix
 /obj/random/slimecore
 	name = "random slime core"
 	desc = "Random slime core."
