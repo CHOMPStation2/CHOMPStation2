@@ -314,3 +314,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/HillOutpost-15x11.dmm"
 	name = "Hill Outpost"
 	description = "A small camping site on top of a hill, with all the basics for survival."
+
+/datum/map_template/shelter/superpose/AnimalHospital
+	shelter_id = "PizzaParlor"
+	mappath = "modular_chomp/maps/submaps/shelters/PizzaParlor-18x19.dmm"
+	name = "Pizza Parlor"
+	description = "A small locally owned pizza parlor, now with delivery services."
