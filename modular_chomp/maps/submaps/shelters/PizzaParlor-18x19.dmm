@@ -871,6 +871,15 @@
 	temperature = 293.15
 	},
 /area/survivalpod/superpose/PizzaParlor)
+"PH" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/machinery/atm{
+	pixel_x = -28
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/PizzaParlor)
 "PI" = (
 /obj/structure/table/hardwoodtable,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1316,7 +1325,7 @@ jp
 Cr
 wM
 yJ
-UY
+PH
 VK
 oZ
 Ug
