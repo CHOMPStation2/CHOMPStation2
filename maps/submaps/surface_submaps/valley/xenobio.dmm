@@ -106,6 +106,10 @@
 /obj/machinery/door/airlock/external/bolted,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
+"je" = (
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor/reinforced,
+/area/submap/xenobio)
 "kl" = (
 /mob/living/simple_mob/slime/xenobio/ruby,
 /turf/simulated/floor/carpet/green,
@@ -273,6 +277,12 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
+/area/submap/xenobio)
+"Aq" = (
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor/reinforced/phoron{
+	phoron = 100
+	},
 /area/submap/xenobio)
 "AO" = (
 /obj/structure/cable/yellow{
@@ -715,7 +725,7 @@ JZ
 zo
 GP
 HY
-HY
+je
 HY
 GP
 JP
@@ -835,7 +845,7 @@ zo
 zo
 GP
 HY
-HY
+je
 HY
 GP
 HY
@@ -894,7 +904,7 @@ af
 bl
 Ai
 oC
-Mo
+Aq
 Mo
 fz
 oC

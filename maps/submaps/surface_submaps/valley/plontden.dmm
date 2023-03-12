@@ -75,10 +75,6 @@
 /turf/simulated/floor/plating,
 /area/submap/plontden)
 "hS" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenoflora Port";
-	dir = 1
-	},
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/white,
 /area/submap/plontden)
