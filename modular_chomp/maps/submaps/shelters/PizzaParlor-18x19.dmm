@@ -629,10 +629,6 @@
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/PizzaParlor)
 "CS" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Kitchen Cold Room";
-	dir = 1
-	},
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
 /obj/item/device/retail_scanner/civilian,
