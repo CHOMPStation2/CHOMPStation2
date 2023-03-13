@@ -440,6 +440,32 @@
 	spawning = 1
 	close_spawn_windows()
 
+	//CHOMPEdit start - join as mob in crystal...
+	var/obj/item/itemtf = join_props["itemtf"]
+	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
+		var/obj/item/capture_crystal/cryst = itemtf
+		if(cryst.spawn_mob_type)
+			// We want to be a spawned mob instead of a person aaaaa
+			var/mob/living/carrier = join_props["carrier"]
+			var/vorgans = join_props["vorgans"]
+			cryst.bound_mob = new cryst.spawn_mob_type(cryst)
+			cryst.spawn_mob_type = null
+			cryst.bound_mob.ai_holder_type = /datum/ai_holder/simple_mob/inert
+			cryst.bound_mob.key = src.key
+			log_and_message_admins("[key_name_admin(src)] joined [cryst.bound_mob] inside a capture crystal [ADMIN_FLW(cryst.bound_mob)]")
+			if(vorgans)
+				cryst.bound_mob.copy_from_prefs_vr()
+			if(istype(carrier))
+				cryst.capture(cryst.bound_mob, carrier)
+			else
+				//Something went wrong, but lets try to do as much as we can.
+				cryst.bound_mob.capture_caught = TRUE
+				cryst.persist_storable = FALSE
+			cryst.update_icon()
+			qdel(src)
+			return
+	//CHOMPEdit end
+
 	job_master.AssignRole(src, rank, 1)
 
 	var/mob/living/character = create_character(T)	//creates the human and transfers vars and mind
@@ -503,8 +529,14 @@
 	var/gut = join_props["voreny"]
 	var/mob/living/prey = join_props["prey"]
 	//CHOMPEdit Start - Item TF
-	var/obj/item/itemtf = join_props["itemtf"]
-	if(itemtf)
+	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
+		//We want to be in the crystal, not actually possessing the crystal.
+		var/obj/item/capture_crystal/cryst = itemtf
+		var/mob/living/carrier = join_props["carrier"]
+		cryst.capture(character, carrier)
+		character.forceMove(cryst)
+		cryst.update_icon()
+	else if(itemtf)
 		itemtf.inhabit_item(character, itemtf.name, character)
 		var/mob/living/possessed_voice = itemtf.possessed_voice
 		itemtf.trash_eatable = character.devourable

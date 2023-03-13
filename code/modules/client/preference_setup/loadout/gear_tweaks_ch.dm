@@ -39,3 +39,27 @@ var/datum/gear_tweak/item_tf_spawn/gear_tweak_item_tf_spawn = new()
 	else if(metadata["state"] == "Only Specific Players")
 		I.item_tf_spawnpoint_set()
 		I.ckeys_allowed_itemspawn = metadata["valid"]
+
+/datum/gear_tweak/simplemob_picker
+	var/list/simplemob_list
+
+/datum/gear_tweak/simplemob_picker/New(var/list/valid_simplemobs)
+	src.simplemob_list = valid_simplemobs
+	..()
+
+/datum/gear_tweak/simplemob_picker/get_contents(var/metadata)
+	return "Type: [metadata]"
+
+/datum/gear_tweak/simplemob_picker/get_default()
+	return simplemob_list[1]
+
+/datum/gear_tweak/simplemob_picker/get_metadata(var/user, var/metadata)
+	return tgui_input_list(user, "Choose a type.", "Character Preference", simplemob_list, metadata)
+
+/datum/gear_tweak/simplemob_picker/tweak_item(var/obj/item/capture_crystal/I, var/metadata)
+	if(!(metadata in simplemob_list))
+		return
+	if(!istype(I))
+		return
+	I.spawn_mob_type = simplemob_list[metadata]
+	I.spawn_mob_name = metadata
