@@ -79,3 +79,17 @@
 	equip_type = EQUIP_UTILITY
 
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 4, TECH_PHORON = 3, TECH_ILLEGAL = 1)
+<<<<<<< HEAD
+=======
+
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/gamma
+	equip_cooldown = 5
+	name = "\improper GA-X \"Render\" Experimental Gamma Laser"
+	desc = "A experimental suppression laser that fires rapid blasts of radiation charged photons, extremely effective against infantry."
+	icon_state = "mecha_coil"
+	energy_drain = 80
+	projectile = /obj/item/projectile/beam/gamma
+	fire_sound = 'sound/weapons/emitter.ogg'
+
+	origin_tech = list(TECH_MATERIAL = 4, TECH_COMBAT = 4, TECH_PHORON = 4, TECH_POWER = 4, TECH_ILLEGAL = 3)
+>>>>>>> 0be53d50f6... Merge pull request #14618 from MisterGrimm/GA-X
