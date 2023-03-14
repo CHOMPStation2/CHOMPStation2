@@ -235,8 +235,13 @@ MRE Stuff
 	open(user)
 
 /obj/item/weapon/storage/mrebag/open(mob/user)
+<<<<<<< HEAD
 	if(!opened)
 		to_chat(usr, "<span class='notice'>The pouch heats up as you break the vaccum seal.</span>")
+=======
+	if(!opened && !isobserver(user))
+		to_chat(usr, "<span class='notice'>The pouch heats up as you break the vacuum seal.</span>")
+>>>>>>> 2acd96947a... Merge pull request #14684 from VOREStation/upstream-merge-9031
 		opened = 1
 		update_icon()
 	. = ..()
