@@ -126,6 +126,3 @@
 /obj/item/projectile/arc/explosive_rocket/spread/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
 	explosion(T, 0, 0, 5, adminlog = FALSE)
-
-/obj/item/projectile/bullet/shotgun/ion/boss
-	armor_penetration = 15
