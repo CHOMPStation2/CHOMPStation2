@@ -167,7 +167,7 @@
 				turf_move_cost = CLAMP(turf_move_cost + species.snow_movement, HUMAN_LOWEST_SLOWDOWN, 15)
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
-				if(feet.water_speed)
+				if(feet.snow_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.snow_speed, HUMAN_LOWEST_SLOWDOWN, 15)
 			. += turf_move_cost
 		else
