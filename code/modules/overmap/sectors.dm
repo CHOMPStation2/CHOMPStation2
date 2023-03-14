@@ -12,6 +12,8 @@
 	var/known = TRUE
 	/// Name prior to being scanned if !known
 	var/unknown_name = "unknown sector"
+	var/real_name
+	var/real_desc
 	/// Icon_state prior to being scanned if !known
 	var/unknown_state = "field"
 
@@ -36,6 +38,11 @@
 	var/has_distress_beacon
 	var/list/levels_for_distress
 	var/list/unowned_areas // areas we don't own despite them being present on our z
+
+	var/list/possible_descriptors = list() //While only affects sectors for now, initialized here for proc definition convenience.
+	var/visitable_renamed = FALSE //changed if non-default name is assigned.
+
+	var/unique_identifier //Define this for objs that we want to be able to rename. Needed to avoid compiler errors if not included.
 
 /obj/effect/overmap/visitable/Initialize()
 	. = ..()
@@ -68,10 +75,18 @@
 	else
 		real_appearance = image(icon, src, icon_state)
 		real_appearance.override = TRUE
+		real_name = name
 		name = unknown_name
 		icon_state = unknown_state
 		color = null
+		real_desc = desc
 		desc = "Scan this to find out more information."
+<<<<<<< HEAD
+=======
+	//at the moment only used for the OM location renamer. Initializing here in case we want shuttles incl as well in future. Also proc definition convenience.
+	visitable_overmap_object_instances |= src
+
+>>>>>>> ec61e89345... Merge pull request #14616 from Runa-Dacino/OMNameLandmarkTry2
 
 
 // You generally shouldn't destroy these.
@@ -125,10 +140,16 @@
 /obj/effect/overmap/visitable/get_scan_data()
 	if(!known)
 		known = TRUE
-		name = initial(name)
+		if(real_name)
+			name = real_name
+		else
+			name = initial(name)
 		icon_state = initial(icon_state)
 		color = initial(color)
-		desc = initial(desc)
+		if(real_desc)
+			desc = real_desc
+		else
+			desc = initial(desc)
 	return ..()
 
 /obj/effect/overmap/visitable/proc/get_space_zlevels()
