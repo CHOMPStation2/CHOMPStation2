@@ -16,7 +16,6 @@
 /obj/item/device/defib_kit/loaded,
 /obj/structure/closet/walllocker_double/medical/south,
 /obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/combat,
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/item/weapon/storage/firstaid/adv,
 /obj/item/selectable_item/chemistrykit/gender,

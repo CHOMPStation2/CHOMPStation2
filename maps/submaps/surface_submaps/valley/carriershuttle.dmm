@@ -250,7 +250,7 @@
 "At" = (
 /obj/structure/table/standard,
 /obj/random/ammo,
-/obj/random/firstaid,
+/obj/random/handgun/sec,
 /turf/simulated/shuttle/floor/skipjack,
 /area/submap/carriershuttle)
 "Br" = (

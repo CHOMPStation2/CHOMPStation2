@@ -374,8 +374,8 @@
 /area/submap/eclipselava)
 "vN" = (
 /obj/structure/table/steel,
-/obj/random/firstaid,
 /obj/random/maintenance/foodstuff,
+/obj/random/projectile,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "vO" = (
@@ -1173,26 +1173,26 @@ Bm
 Bm
 Bm
 Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -1244,9 +1244,9 @@ ZE
 ZE
 ZE
 nT
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -1298,9 +1298,9 @@ Qh
 sS
 ZE
 nT
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -1352,7 +1352,7 @@ Qh
 sS
 ZE
 nT
-Bm
+Qh
 Bm
 Bm
 Bm
@@ -1404,9 +1404,9 @@ Qh
 Qh
 Qh
 ws
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -1458,7 +1458,7 @@ Qh
 sS
 ZE
 nT
-Bm
+Qh
 Bm
 Bm
 Bm
@@ -1510,7 +1510,7 @@ Qh
 Qh
 Qh
 ws
-Bm
+Qh
 Bm
 Bm
 Bm
@@ -1562,9 +1562,9 @@ Qh
 Qh
 Qh
 ws
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
 Bm
 "}
 (10,1,1) = {"
@@ -1616,7 +1616,7 @@ Qh
 sS
 ZE
 nT
-Bm
+Qh
 Bm
 "}
 (11,1,1) = {"
@@ -1668,7 +1668,7 @@ Qh
 Qh
 Qh
 ws
-Bm
+Qh
 Bm
 "}
 (12,1,1) = {"
@@ -1720,7 +1720,7 @@ bp
 bp
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (13,1,1) = {"
@@ -1772,7 +1772,7 @@ iI
 Gg
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (14,1,1) = {"
@@ -1824,7 +1824,7 @@ MO
 PP
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (15,1,1) = {"
@@ -1876,7 +1876,7 @@ MO
 nk
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (16,1,1) = {"
@@ -1928,7 +1928,7 @@ MO
 nE
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (17,1,1) = {"
@@ -1980,7 +1980,7 @@ MO
 qy
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (18,1,1) = {"
@@ -2032,7 +2032,7 @@ bp
 bp
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (19,1,1) = {"
@@ -2084,7 +2084,7 @@ sq
 sq
 sq
 fW
-Bm
+Qh
 Bm
 "}
 (20,1,1) = {"
@@ -2136,7 +2136,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (21,1,1) = {"
@@ -2188,7 +2188,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (22,1,1) = {"
@@ -2240,7 +2240,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (23,1,1) = {"
@@ -2292,7 +2292,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (24,1,1) = {"
@@ -2344,7 +2344,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (25,1,1) = {"
@@ -2396,7 +2396,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (26,1,1) = {"
@@ -2448,7 +2448,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (27,1,1) = {"
@@ -2500,7 +2500,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (28,1,1) = {"
@@ -2552,7 +2552,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (29,1,1) = {"
@@ -2604,7 +2604,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (30,1,1) = {"
@@ -2656,7 +2656,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (31,1,1) = {"
@@ -2708,7 +2708,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (32,1,1) = {"
@@ -2760,7 +2760,7 @@ Qh
 Qh
 Qh
 Qh
-Bm
+Qh
 Bm
 "}
 (33,1,1) = {"
@@ -2812,7 +2812,7 @@ ZE
 ZE
 ZE
 nT
-Bm
+Qh
 Bm
 "}
 (34,1,1) = {"
@@ -2864,7 +2864,7 @@ bp
 bp
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (35,1,1) = {"
@@ -2916,7 +2916,7 @@ MO
 qy
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (36,1,1) = {"
@@ -2968,7 +2968,7 @@ MO
 yt
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (37,1,1) = {"
@@ -3020,7 +3020,7 @@ MO
 nk
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (38,1,1) = {"
@@ -3072,7 +3072,7 @@ dE
 yt
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (39,1,1) = {"
@@ -3124,7 +3124,7 @@ MO
 Gg
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (40,1,1) = {"
@@ -3176,7 +3176,7 @@ bp
 bp
 bp
 ws
-Bm
+Qh
 Bm
 "}
 (41,1,1) = {"
@@ -3228,7 +3228,7 @@ Qh
 Qh
 dw
 fW
-Bm
+Qh
 Bm
 "}
 (42,1,1) = {"
@@ -3279,8 +3279,8 @@ Qh
 Qh
 dw
 fW
-Bm
-Bm
+Qh
+Qh
 Bm
 "}
 (43,1,1) = {"
@@ -3330,8 +3330,8 @@ Qh
 Qh
 dw
 fW
-Bm
-Bm
+Qh
+Qh
 Bm
 Bm
 "}
@@ -3381,8 +3381,8 @@ Qh
 dw
 sq
 fW
-Bm
-Bm
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -3431,9 +3431,9 @@ Qh
 Qh
 Qh
 ws
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -3483,7 +3483,7 @@ Qh
 Qh
 dw
 fW
-Bm
+Qh
 Bm
 Bm
 Bm
@@ -3534,8 +3534,8 @@ dw
 sq
 sq
 fW
-Bm
-Bm
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -3583,10 +3583,10 @@ bp
 bp
 bp
 ws
-Bm
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm
@@ -3635,7 +3635,7 @@ sq
 sq
 sq
 fW
-Bm
+Qh
 Bm
 Bm
 Bm
@@ -3669,25 +3669,25 @@ Bm
 Bm
 Bm
 Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
-Bm
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
 Bm
 Bm
 Bm

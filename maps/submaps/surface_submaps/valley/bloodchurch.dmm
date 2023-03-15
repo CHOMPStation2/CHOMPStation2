@@ -127,7 +127,7 @@
 /area/submap/bloodchurch)
 "xN" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/firstaid,
+/obj/random/mouseray,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "yn" = (
@@ -247,6 +247,11 @@
 /area/submap/bloodchurch)
 "Pn" = (
 /obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"Qz" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/toolbox,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "RN" = (
@@ -1227,7 +1232,7 @@ fb
 MQ
 hQ
 rQ
-xN
+Qz
 MQ
 yC
 yC

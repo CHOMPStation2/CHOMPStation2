@@ -386,10 +386,10 @@
 /area/submap/fallenlab)
 "KI" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/storage/firstaid/clotting,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "KR" = (

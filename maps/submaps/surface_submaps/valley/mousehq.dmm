@@ -91,7 +91,11 @@
 	dir = 1;
 	state = 1
 	},
-/turf/simulated/floor/bmarble,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
 /area/submap/mousehq)
 "u" = (
 /obj/structure/table/alien/blue,
@@ -122,6 +126,9 @@
 /obj/structure/table/alien/blue,
 /obj/item/device/multitool/alien,
 /turf/simulated/floor/wmarble,
+/area/submap/mousehq)
+"B" = (
+/turf/simulated/floor/plating,
 /area/submap/mousehq)
 "D" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
@@ -168,6 +175,17 @@
 /area/submap/mousehq)
 "O" = (
 /turf/simulated/wall/sandstone,
+/area/submap/mousehq)
+"P" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/submap/mousehq)
+"Q" = (
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
 /area/submap/mousehq)
 "R" = (
 /obj/structure/table/alien/blue,
@@ -815,12 +833,12 @@ K
 K
 K
 K
-K
+P
 O
 y
 p
 y
-p
+Q
 O
 p
 y
@@ -886,7 +904,7 @@ O
 y
 p
 y
-p
+B
 O
 p
 y

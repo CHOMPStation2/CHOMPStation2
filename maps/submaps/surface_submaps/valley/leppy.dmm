@@ -49,7 +49,7 @@
 /area/submap/leppy)
 "J" = (
 /obj/structure/table/gold,
-/obj/random/firstaid,
+/obj/random/maintenance/misc,
 /turf/simulated/mineral/floor/cave,
 /area/submap/leppy)
 "K" = (

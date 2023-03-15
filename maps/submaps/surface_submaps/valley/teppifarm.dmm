@@ -17,10 +17,6 @@
 	},
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/teppifarm)
-"d" = (
-/obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif,
-/area/submap/teppifarm)
 "g" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
@@ -65,7 +61,7 @@
 /area/submap/teppifarm)
 "r" = (
 /obj/structure/table/woodentable,
-/obj/random/firstaid,
+/obj/random/contraband/nofail,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
 "s" = (
@@ -311,7 +307,7 @@ k
 G
 k
 k
-d
+B
 k
 k
 b

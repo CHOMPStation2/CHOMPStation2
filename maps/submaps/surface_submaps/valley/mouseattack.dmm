@@ -18,7 +18,7 @@
 /obj/item/weapon/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/mounted/phase,
-/turf/template_noop,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "j" = (
 /turf/simulated/wall/gold,
@@ -38,7 +38,7 @@
 /obj/item/weapon/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/voice,
-/turf/template_noop,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "q" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
@@ -61,7 +61,7 @@
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
 /obj/item/rig_module/chem_dispenser/injector/advanced,
-/turf/template_noop,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "w" = (
 /obj/structure/table/rack,
@@ -89,7 +89,7 @@
 /obj/item/weapon/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/rad_shield,
-/turf/template_noop,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "D" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
