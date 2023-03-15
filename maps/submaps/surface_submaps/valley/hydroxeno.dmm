@@ -82,10 +82,29 @@
 	outdoors = 0
 	},
 /area/submap/hydroxeno)
+"p" = (
+/obj/effect/alien/weeds,
+/obj/structure/closet/secure_closet/egg/xenomorph,
+/obj/item/stolenpackage,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/misc,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/hydroxeno)
 "q" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/hydroxeno)
+"r" = (
+/obj/effect/alien/weeds,
+/obj/structure/closet/secure_closet/egg/xenomorph,
+/obj/item/stolenpackage,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/misc,
+/obj/item/organ/internal/kidneys/replicant,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/hydroxeno)
 "s" = (
@@ -143,8 +162,27 @@
 /obj/random/maintenance/misc,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/hydroxeno)
+"B" = (
+/obj/effect/alien/weeds,
+/obj/structure/closet/secure_closet/egg/xenomorph,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/obj/item/stolenpackage,
+/obj/item/organ/internal/intestine/xeno,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/hydroxeno)
 "C" = (
 /turf/simulated/mineral,
+/area/submap/hydroxeno)
+"D" = (
+/obj/effect/alien/weeds,
+/obj/structure/closet/secure_closet/egg/xenomorph,
+/obj/item/stolenpackage,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/misc,
+/obj/item/organ/internal/liver/replicant,
+/turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/hydroxeno)
 "E" = (
 /mob/living/simple_mob/animal/space/alien/sentinel,
@@ -207,6 +245,9 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/hydroxeno)
+"P" = (
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/hydroxeno)
 "Q" = (
@@ -565,7 +606,7 @@ C
 J
 W
 R
-N
+P
 I
 I
 I
@@ -579,7 +620,7 @@ J
 J
 J
 Q
-I
+P
 I
 q
 F
@@ -616,7 +657,7 @@ J
 J
 G
 Q
-I
+P
 i
 I
 l
@@ -639,8 +680,8 @@ M
 J
 t
 T
-I
-I
+P
+N
 I
 I
 I
@@ -649,12 +690,12 @@ I
 j
 J
 J
-J
+D
 J
 k
 Q
+P
 h
-I
 I
 t
 g
@@ -676,7 +717,7 @@ y
 J
 J
 Q
-I
+P
 I
 l
 O
@@ -690,7 +731,7 @@ E
 J
 J
 Q
-I
+P
 U
 I
 J
@@ -728,7 +769,7 @@ G
 J
 b
 T
-I
+P
 S
 W
 e
@@ -766,7 +807,7 @@ J
 H
 b
 T
-I
+P
 l
 j
 J
@@ -857,7 +898,7 @@ J
 J
 J
 J
-J
+B
 O
 f
 g
@@ -917,7 +958,7 @@ J
 J
 J
 J
-J
+r
 J
 J
 J
@@ -1130,12 +1171,12 @@ J
 J
 J
 J
-J
+p
 J
 J
 J
 Q
-I
+P
 I
 I
 l
@@ -1172,7 +1213,7 @@ y
 J
 J
 Q
-I
+P
 U
 I
 t
@@ -1197,7 +1238,7 @@ J
 J
 W
 R
-I
+P
 I
 l
 q
@@ -1209,8 +1250,8 @@ M
 Y
 J
 Q
+P
 x
-I
 I
 J
 J
@@ -1246,7 +1287,7 @@ J
 J
 J
 Q
-I
+P
 i
 I
 W
@@ -1271,7 +1312,7 @@ J
 J
 t
 T
-I
+P
 o
 I
 I
@@ -1283,7 +1324,7 @@ J
 J
 J
 Q
-I
+P
 I
 I
 I
@@ -1308,7 +1349,7 @@ J
 E
 J
 Q
-I
+P
 I
 I
 w
@@ -1321,8 +1362,8 @@ J
 J
 b
 T
+P
 l
-I
 N
 j
 J
@@ -1346,7 +1387,7 @@ J
 J
 b
 T
-I
+P
 I
 I
 I
@@ -1383,9 +1424,9 @@ J
 J
 k
 Q
+P
+I
 l
-I
-I
 I
 O
 g

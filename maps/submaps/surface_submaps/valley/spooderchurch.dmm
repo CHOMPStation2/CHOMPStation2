@@ -326,11 +326,6 @@
 /mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
-"Wq" = (
-/obj/structure/curtain,
-/obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif,
-/area/submap/spooderchurch)
 "Xe" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
@@ -629,7 +624,7 @@ Cm
 Cm
 NM
 NM
-Wq
+zv
 YO
 YO
 YO
@@ -667,7 +662,7 @@ Cm
 Cm
 NM
 NM
-Wq
+zv
 YO
 YO
 YO
@@ -1123,7 +1118,7 @@ Cm
 Cm
 NM
 NM
-Wq
+zv
 YO
 YO
 YO
@@ -1161,7 +1156,7 @@ Cm
 Cm
 NM
 NM
-Wq
+zv
 YO
 YO
 YO

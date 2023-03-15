@@ -9,11 +9,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
+"bh" = (
+/obj/structure/table/standard,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/white,
+/area/submap/settlement)
 "bn" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
+/area/submap/settlement)
+"bp" = (
+/obj/random/multiple/corp_crate,
+/turf/simulated/floor/lino,
 /area/submap/settlement)
 "bI" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -93,6 +102,13 @@
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
+"fU" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/random/multiple/gun/projectile,
+/turf/simulated/floor/tiled/white,
+/area/submap/settlement)
 "gf" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
@@ -100,6 +116,13 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
+/turf/simulated/floor/tiled/white,
+/area/submap/settlement)
+"gl" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/random/energy/sec,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "gz" = (
@@ -139,6 +162,7 @@
 /obj/machinery/light{
 	layer = 3
 	},
+/obj/random/multiple/large_corp_crate,
 /turf/simulated/floor/lino,
 /area/submap/settlement)
 "im" = (
@@ -260,7 +284,7 @@
 /turf/simulated/floor/outdoors/mud,
 /area/submap/settlement)
 "pV" = (
-/turf/simulated/floor/snow,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/template_noop)
 "qa" = (
 /obj/structure/table/standard,
@@ -350,6 +374,10 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/red,
 /area/submap/settlement)
+"vY" = (
+/obj/random/multiple/large_corp_crate,
+/turf/simulated/floor/lino,
+/area/submap/settlement)
 "wF" = (
 /obj/structure/constructshell,
 /turf/simulated/floor/cult,
@@ -406,6 +434,9 @@
 /area/submap/settlement)
 "xY" = (
 /obj/structure/closet/crate/freezer,
+/obj/item/weapon/reagent_containers/food/snacks/crabmeat,
+/obj/item/weapon/reagent_containers/food/snacks/crabmeat,
+/obj/item/weapon/reagent_containers/food/snacks/crabmeat,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/settlement)
 "xZ" = (
@@ -433,7 +464,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/snow,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/submap/settlement)
 "yR" = (
 /obj/machinery/appliance/cooker/grill,
@@ -467,6 +498,11 @@
 "BK" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
+/area/submap/settlement)
+"BT" = (
+/obj/structure/table/wooden_reinforced,
+/obj/random/contraband,
+/turf/simulated/floor/carpet/blue2,
 /area/submap/settlement)
 "Cd" = (
 /obj/item/weapon/stool,
@@ -503,14 +539,14 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "FA" = (
-/mob/living/simple_mob/construct/wraith,
+/mob/living/simple_mob/construct/harvester/greater,
 /turf/simulated/floor/cult,
 /area/submap/settlement)
 "FR" = (
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/snow,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/submap/settlement)
 "GS" = (
 /obj/structure/toilet,
@@ -547,12 +583,19 @@
 /area/submap/settlement)
 "HV" = (
 /mob/living/simple_mob/animal/space/bats/cult/strong,
-/turf/simulated/floor/snow,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/submap/settlement)
 "Il" = (
 /obj/item/weapon/bedsheet,
 /obj/structure/bed,
 /turf/simulated/floor/carpet/blue2,
+/area/submap/settlement)
+"Iu" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "ID" = (
 /obj/machinery/door/airlock/vault/bolted,
@@ -622,7 +665,16 @@
 /area/submap/settlement)
 "MI" = (
 /obj/structure/railing,
-/turf/simulated/floor/snow,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/settlement)
+"MN" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/rack,
+/obj/random/cash/huge,
+/obj/random/cash/huge,
+/obj/random/cash/huge,
+/obj/random/rigsuit,
+/turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "MS" = (
 /mob/living/simple_mob/animal/space/bats/cult/strong,
@@ -657,7 +709,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "PG" = (
-/turf/simulated/floor/snow,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/submap/settlement)
 "PP" = (
 /turf/simulated/floor/carpet/blue2,
@@ -746,6 +798,7 @@
 /obj/item/weapon/stool/padded,
 /mob/living/simple_mob/creature/cult/strong,
 /obj/effect/floor_decal/corner/orange/diagonal,
+/obj/item/device/soulstone,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "Vu" = (
@@ -932,7 +985,7 @@ Po
 OI
 sb
 lt
-xQ
+fU
 Vp
 lt
 lt
@@ -968,7 +1021,7 @@ Fn
 OI
 Qe
 DD
-Fv
+bh
 xq
 Mm
 OI
@@ -978,7 +1031,7 @@ xQ
 jZ
 lt
 lt
-xQ
+Iu
 xQ
 rh
 PG
@@ -1058,7 +1111,7 @@ uc
 OI
 sb
 lt
-xQ
+Iu
 jZ
 lt
 lt
@@ -1146,7 +1199,7 @@ xQ
 Vp
 lt
 lt
-xQ
+gl
 xQ
 rh
 PG
@@ -1384,7 +1437,7 @@ nN
 nN
 nN
 nN
-nN
+bp
 OI
 GS
 lX
@@ -1455,7 +1508,7 @@ PP
 PP
 PP
 PP
-Ja
+BT
 PP
 PP
 Fi
@@ -1468,7 +1521,7 @@ jo
 Lj
 nN
 nN
-nN
+vY
 OI
 GS
 lX
@@ -1510,7 +1563,7 @@ HR
 wV
 nN
 nN
-nN
+bp
 OI
 OI
 OI
@@ -1539,7 +1592,7 @@ PP
 PP
 PP
 PP
-Ja
+BT
 PP
 PP
 Fi
@@ -2249,7 +2302,7 @@ Bv
 PG
 PG
 TU
-oa
+MN
 bI
 zh
 TU
