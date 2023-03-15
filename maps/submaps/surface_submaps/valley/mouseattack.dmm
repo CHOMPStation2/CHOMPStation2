@@ -27,10 +27,6 @@
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
 /turf/simulated/floor/tiled/dark,
 /area/submap/mouseattack)
-"m" = (
-/mob/living/simple_mob/animal/space/mouse_army/stealth,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/mouseattack)
 "o" = (
 /obj/structure/table/rack,
 /obj/item/weapon/archaeological_find,
@@ -227,7 +223,7 @@ s
 j
 c
 c
-m
+H
 c
 c
 c
@@ -668,7 +664,7 @@ j
 c
 c
 c
-m
+u
 c
 c
 t

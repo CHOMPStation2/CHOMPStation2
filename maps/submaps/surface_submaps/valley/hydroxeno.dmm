@@ -8,10 +8,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/hydroxeno)
-"c" = (
-/obj/effect/alien/weeds/node,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/submap/hydroxeno)
 "d" = (
 /obj/effect/alien/weeds,
 /obj/structure/bed/nest,
@@ -71,7 +67,7 @@
 	},
 /area/submap/hydroxeno)
 "n" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/alien/weeds,
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/item/organ/internal/lungs/replicant/mending,
 /obj/item/stolenpackage,
@@ -350,7 +346,7 @@ a
 a
 a
 a
-c
+J
 J
 J
 u
@@ -1293,7 +1289,7 @@ I
 I
 j
 J
-c
+J
 a
 a
 a
