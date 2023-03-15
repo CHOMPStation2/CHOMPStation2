@@ -2,81 +2,81 @@
 "a" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "b" = (
 /obj/machinery/firework_launcher,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "c" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/device/soulstone,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "d" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "e" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "f" = (
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "g" = (
 /obj/structure/cliff/automatic{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "h" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood/sif,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "i" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "j" = (
 /obj/structure/cliff/automatic{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "k" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/energy/highend,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "l" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/gun/random,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "m" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/firstaid,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "n" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/clothing/head/psy_crown/wrath,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "p" = (
 /mob/living/simple_mob/vore/alienanimals/space_jellyfish{
 	faction = "cult"
 	},
 /turf/simulated/floor/water,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "q" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/firework_star/weather/storm,
@@ -89,26 +89,26 @@
 /obj/item/weapon/firework_star/weather/blizzard,
 /obj/item/weapon/firework_star/weather/fallout,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "r" = (
 /obj/structure/railing,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "s" = (
 /turf/simulated/wall/log,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "t" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
 /obj/random/firstaid,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "u" = (
 /turf/simulated/floor/water,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "v" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "w" = (
 /turf/template_noop,
 /area/template_noop)
@@ -116,32 +116,32 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/projectile/random,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "y" = (
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "B" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/blue,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "C" = (
 /mob/living/simple_mob/humanoid/cultist/noodle,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "D" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "E" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "F" = (
 /obj/structure/railing{
 	dir = 1
@@ -149,61 +149,61 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "G" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "H" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/random/mainttoyloot/nofail,
 /obj/random/mainttoyloot/nofail,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "I" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "J" = (
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "M" = (
 /obj/structure/cliff/automatic{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "N" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "O" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/clothing/head/psy_crown/gluttony,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "P" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "Q" = (
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "R" = (
 /mob/living/simple_mob/humanoid/cultist/castertesh,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "S" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "T" = (
 /obj/structure/railing{
 	dir = 1
@@ -211,19 +211,19 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/firstaid,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "U" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "V" = (
 /obj/structure/cliff/automatic{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "W" = (
 /obj/structure/railing{
 	dir = 1
@@ -231,23 +231,23 @@
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "X" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "Y" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 "Z" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood,
-/area/submap/carriershuttle)
+/area/submap/cliffmanor)
 
 (1,1,1) = {"
 w

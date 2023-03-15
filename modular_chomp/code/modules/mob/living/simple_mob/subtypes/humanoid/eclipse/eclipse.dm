@@ -539,7 +539,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
-	name = "Lunar Eclipse Punnler"
+	name = "Lunar Eclipse Pummeler"
 	projectiletype = /obj/item/projectile/bullet/shotgun/ion/eclipse
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 20

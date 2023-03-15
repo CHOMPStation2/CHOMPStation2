@@ -89,6 +89,12 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipselava)
+"fi" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 6
+	},
+/turf/simulated/floor/lava,
+/area/submap/eclipselava)
 "fG" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -213,6 +219,12 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/reinforced,
+/area/submap/eclipselava)
+"mI" = (
+/obj/structure/cliff/automatic/corner{
+	dir = 10
+	},
+/turf/simulated/floor/lava,
 /area/submap/eclipselava)
 "mL" = (
 /obj/machinery/door/window/southright{
@@ -506,6 +518,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
+/area/submap/eclipselava)
+"Ad" = (
+/obj/structure/cliff/automatic{
+	dir = 2
+	},
+/turf/simulated/floor/lava,
 /area/submap/eclipselava)
 "Bm" = (
 /turf/template_noop,
@@ -1435,7 +1453,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 Rz
 gu
@@ -1487,7 +1505,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 WP
 bp
@@ -1539,7 +1557,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 dj
 MO
@@ -1591,7 +1609,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 dj
 Ez
@@ -1643,7 +1661,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 dj
 MO
@@ -1695,7 +1713,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 WP
 bp
@@ -1747,7 +1765,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 dj
 MO
@@ -1799,7 +1817,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 dj
 gt
@@ -1851,7 +1869,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 wU
 QN
@@ -1903,7 +1921,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 MO
 qb
@@ -1955,7 +1973,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 MO
 MO
@@ -2007,7 +2025,7 @@ Ke
 Ke
 Ke
 Ke
-eH
+mI
 bp
 bp
 bp
@@ -2839,7 +2857,7 @@ Ke
 Ke
 Ke
 Ke
-ZI
+fi
 bp
 bp
 bp
@@ -2891,7 +2909,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 ZK
 Pq
@@ -2943,7 +2961,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 En
 MO
@@ -2995,7 +3013,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 ph
 Pm
@@ -3047,7 +3065,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 En
 MO
@@ -3099,7 +3117,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 ZK
 Ej
@@ -3151,7 +3169,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 bp
 bp
@@ -3203,7 +3221,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 rs
 MO
@@ -3255,7 +3273,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 Gl
 rs
@@ -3307,7 +3325,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 MO
 rs
@@ -3359,7 +3377,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 MO
 MO
@@ -3411,7 +3429,7 @@ Ke
 Ke
 Ke
 Ke
-jU
+Ad
 bp
 rs
 MO
