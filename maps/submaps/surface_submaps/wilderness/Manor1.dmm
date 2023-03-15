@@ -1285,8 +1285,8 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Hl" = (
-/mob/living/simple_mob/animal/giant_spider/nurse,
-/turf/simulated/floor/carpet/turcarpet,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Hu" = (
 /obj/structure/table/woodentable,
@@ -1314,10 +1314,6 @@
 /obj/effect/spider/stickyweb,
 /mob/living/simple_mob/animal/giant_spider/webslinger,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Manor1)
-"Je" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Jh" = (
 /obj/structure/toilet{
@@ -2801,7 +2797,7 @@ ag
 aK
 ab
 al
-Je
+vI
 ag
 ag
 ag
@@ -3016,7 +3012,7 @@ ag
 ab
 ag
 cl
-Hl
+ck
 cl
 cl
 aK
@@ -3085,7 +3081,7 @@ ag
 ag
 ag
 ag
-aN
+Hl
 ag
 ag
 ag
@@ -3130,7 +3126,7 @@ ag
 ag
 ag
 ag
-ag
+Hl
 bF
 bA
 bE
@@ -3213,7 +3209,7 @@ ag
 cE
 ag
 ag
-aN
+Hl
 ag
 ag
 aK
@@ -3314,7 +3310,7 @@ ab
 ab
 ag
 Bz
-Hl
+ck
 cl
 ag
 ab
