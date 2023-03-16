@@ -66,7 +66,7 @@
 /obj/structure/cliff/automatic{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "dB" = (
 /obj/structure/table/rack/shelf,
@@ -87,7 +87,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "fi" = (
 /obj/structure/cliff/automatic/corner{
@@ -107,7 +107,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "gt" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
@@ -188,7 +188,7 @@
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "la" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
@@ -267,7 +267,7 @@
 /area/submap/eclipselava)
 "nT" = (
 /obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "oc" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
@@ -365,13 +365,13 @@
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "sS" = (
 /obj/structure/cliff/automatic{
 	dir = 5
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "tL" = (
 /obj/machinery/door/window/southright{
@@ -431,7 +431,7 @@
 /area/submap/eclipselava)
 "ws" = (
 /obj/structure/cliff/automatic,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "wt" = (
 /obj/item/weapon/material/barbedwire{
@@ -871,7 +871,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Qh" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "Qr" = (
 /obj/structure/table/steel,
@@ -1099,13 +1099,13 @@
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "ZI" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "ZK" = (
 /obj/structure/table/steel,

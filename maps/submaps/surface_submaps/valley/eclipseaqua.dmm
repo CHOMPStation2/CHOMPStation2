@@ -3,8 +3,12 @@
 /turf/simulated/floor/wood,
 /area/submap/eclipseaqua)
 "au" = (
-/obj/structure/railing/grey{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -58,9 +62,6 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipseaqua)
 "gA" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -142,19 +143,21 @@
 /turf/simulated/floor/water,
 /area/submap/eclipseaqua)
 "pN" = (
-/obj/structure/railing/grey{
-	dir = 4
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/obj/structure/railing/grey{
-	dir = 1
-	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "rH" = (
-/obj/structure/railing/grey{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "rR" = (
@@ -175,11 +178,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "vt" = (
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/railing/grey{
-	dir = 1
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -235,10 +236,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Cn" = (
-/obj/structure/railing/grey{
-	dir = 8
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Cv" = (
@@ -274,8 +275,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Ek" = (
-/obj/structure/railing/grey,
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Ev" = (
@@ -284,12 +288,26 @@
 /obj/item/rig_module/chem_dispenser/combat,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"EE" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
 "Ho" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "HD" = (
-/obj/structure/railing/grey{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -350,6 +368,11 @@
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
+"My" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
 "Ne" = (
 /obj/structure/railing{
 	dir = 8
@@ -382,7 +405,11 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipseaqua)
 "Po" = (
-/obj/structure/railing/grey{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -421,7 +448,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UF" = (
-/obj/structure/railing/grey,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UH" = (
@@ -460,9 +491,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UU" = (
-/obj/structure/railing/grey,
-/obj/structure/railing/grey{
-	dir = 4
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -478,10 +509,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "WS" = (
-/obj/structure/railing/grey{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Xm" = (
@@ -1047,9 +1079,9 @@ ta
 ta
 ta
 ta
-ta
-vt
-rH
+EE
+au
+au
 au
 Qu
 Qu
@@ -1059,9 +1091,9 @@ Pf
 Qu
 Qu
 au
-rH
-Cn
-ta
+au
+au
+pN
 ta
 ta
 ta
@@ -1093,8 +1125,8 @@ ta
 ta
 ta
 ta
-ta
-vt
+rH
+WS
 Ry
 Ry
 Ry
@@ -1108,8 +1140,8 @@ Xm
 Ry
 Ry
 Ry
-Cn
-ta
+HD
+pN
 ta
 ta
 ta
@@ -1139,11 +1171,11 @@ ta
 ta
 ta
 ta
-ta
-vt
+rH
+My
 Ry
 sX
-Ry
+gA
 Ry
 Xm
 Qu
@@ -1153,11 +1185,11 @@ Pf
 Qu
 Dw
 sX
-Ry
+gA
 Ry
 Ry
 Cn
-ta
+pN
 ta
 ta
 ta
@@ -1185,7 +1217,7 @@ ta
 ta
 ta
 ta
-ta
+rH
 vt
 Qu
 Qu
@@ -1204,8 +1236,8 @@ ob
 Qu
 Qu
 Qu
-Cn
-ta
+vt
+pN
 ta
 ta
 ta
@@ -1231,8 +1263,8 @@ ta
 ta
 ta
 ta
-ta
-vt
+rH
+WS
 Ry
 Qu
 lS
@@ -1252,8 +1284,8 @@ aV
 xO
 Qu
 Ry
-Cn
-ta
+HD
+pN
 ta
 ta
 ta
@@ -1278,7 +1310,7 @@ ta
 ta
 ta
 ta
-vt
+Ek
 Ry
 US
 Qu
@@ -1300,7 +1332,7 @@ cC
 Qu
 nf
 Ry
-Cn
+UF
 ta
 ta
 ta
@@ -1325,9 +1357,9 @@ ta
 ta
 ta
 ta
+Ek
+Ry
 gA
-Ry
-Ry
 ob
 Ry
 Ry
@@ -1345,9 +1377,9 @@ eK
 eK
 Vg
 ob
+gA
 Ry
-Ry
-Ek
+UF
 ta
 ta
 ta
@@ -1372,7 +1404,7 @@ ta
 ta
 ta
 ta
-HD
+Ek
 Ry
 Ry
 Qu
@@ -1748,7 +1780,7 @@ ta
 ta
 ta
 ta
-HD
+Ek
 Ry
 Ry
 Qu
@@ -1770,7 +1802,7 @@ KH
 Qu
 Ry
 Ry
-UF
+Ek
 ta
 ta
 ta
@@ -1795,9 +1827,9 @@ ta
 ta
 ta
 ta
+Ek
+Ry
 gA
-Ry
-Ry
 ob
 Ry
 JQ
@@ -1815,7 +1847,7 @@ Ry
 Ry
 Ry
 ob
-Ry
+gA
 Ry
 Ek
 ta
@@ -1842,7 +1874,7 @@ ta
 ta
 ta
 ta
-pN
+Ek
 Ry
 US
 Qu
@@ -1864,7 +1896,7 @@ jR
 Qu
 nf
 Ry
-UU
+Ek
 ta
 ta
 ta
@@ -1889,7 +1921,7 @@ ta
 ta
 ta
 ta
-ta
+Po
 pN
 Ry
 Qu
@@ -1910,8 +1942,8 @@ yn
 UI
 Qu
 Ry
-UU
-ta
+EE
+WS
 ta
 ta
 ta
@@ -1937,8 +1969,8 @@ ta
 ta
 ta
 ta
-ta
-pN
+Po
+UU
 Qu
 Qu
 Qu
@@ -1957,7 +1989,7 @@ Qu
 Qu
 Qu
 UU
-ta
+WS
 ta
 ta
 ta
@@ -1985,11 +2017,11 @@ ta
 ta
 ta
 ta
-ta
-pN
+Po
+My
 Ry
 jw
-Ry
+gA
 Ry
 mL
 Qu
@@ -1999,11 +2031,11 @@ Pf
 Qu
 UH
 Ry
-Ry
+gA
 jw
 Ry
-UU
-ta
+Cn
+WS
 ta
 ta
 ta
@@ -2033,7 +2065,7 @@ ta
 ta
 ta
 ta
-ta
+Po
 pN
 Ry
 Ry
@@ -2048,8 +2080,8 @@ Xm
 Ry
 Ry
 Ry
-UU
-ta
+EE
+WS
 ta
 ta
 ta
@@ -2081,10 +2113,10 @@ ta
 ta
 ta
 ta
-ta
-pN
-WS
 Po
+au
+au
+au
 Qu
 Qu
 Pf
@@ -2092,10 +2124,10 @@ Pf
 Pf
 Qu
 Qu
-Po
+au
+au
+au
 WS
-UU
-ta
 ta
 ta
 ta
