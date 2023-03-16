@@ -47,6 +47,6 @@
 	name = "No Shoes"
 	desc = "shoeless?"
 	icon_state = ""
-	New()
+	/New()
 		..()
 		qdel(src)
