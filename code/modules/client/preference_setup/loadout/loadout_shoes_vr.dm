@@ -36,3 +36,8 @@
 /datum/gear/shoes/flats/alt
 	display_name = "flats, alt"
 	path = /obj/item/clothing/shoes/flats/white/color/alt
+
+//CHOMP ADDITION, trying to make a no shoes shoe option
+/datum/gear/shoes/none
+	display_name = "Adjust - No Shoes"
+	path = null
