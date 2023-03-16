@@ -47,6 +47,5 @@
 	name = "No Shoes"
 	desc = "shoeless?"
 	icon_state = ""
-	/New()
-		..()
-		qdel(src)
+/obj/item/clothing/shoes/none/New()
+	qdel(src)
