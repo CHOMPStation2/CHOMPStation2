@@ -53,3 +53,9 @@ GLOBAL_LIST_INIT(dsi_to_species, list(SPECIES_TAJARAN = "DSI - Tajaran", SPECIES
 	unavailable_to_build = 1
 	skin_tone = 1
 	no_icon = TRUE
+
+/datum/robolimb/hellscout
+	company = "Erebus - Hellscout"
+	desc = "Sleek and lightweight aluminum casings, accented with dark silicone."
+	icon = 'icons/mob/human_races/cyberlimbs/erebus/hellscout.dmi'
+	unavailable_to_build = 0
