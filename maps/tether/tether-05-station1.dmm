@@ -2926,6 +2926,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "afu" = (
@@ -5393,6 +5396,7 @@
 	},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "alN" = (
@@ -5442,6 +5446,11 @@
 	},
 =======
 >>>>>>> a084f9e576... Merge pull request #10384 from Novacat/nova-basicfixes
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+>>>>>>> 7b85dc1c11... Merge pull request #14697 from foopwo/tetherpipefix
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "alR" = (
@@ -7043,6 +7052,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
