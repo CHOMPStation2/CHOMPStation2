@@ -71,6 +71,12 @@
 			contains = JAR_NOTHING
 			update_icon()
 			return
+	for(var/mob/M in src)
+		if(istype(M,/mob/living/voice)) //Don't knock voices out!
+			continue
+		M.forceMove(get_turf(user))
+		to_chat(M, "<span class='warning'>[user] shakes you out of \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
 
 /obj/item/glass_jar/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/weapon/spacecash))
@@ -83,6 +89,22 @@
 		user.drop_from_inventory(S)
 		S.loc = src
 		update_icon()
+	if(istype(W,/obj/item/weapon/holder/micro))
+		var/full = 0
+		for(var/mob/M in src)
+			if(istype(M,/mob/living/voice)) //Don't count voices as people!
+				continue
+			full++
+		if(full >= 2)
+			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
+		else
+			var/obj/item/weapon/holder/micro/holder = I
+			if(holder.held_mob && (holder.held_mob in holder))
+				var/mob/living/M = holder.held_mob
+				holder.dump_mob()
+				to_chat(M, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				M.forceMove(src)
+				to_chat(user, "<span class='notice'>You stuff \the [M] into \the [src]!</span>")
 
 /obj/item/glass_jar/update_icon() // Also updates name and desc
 	underlays.Cut()
