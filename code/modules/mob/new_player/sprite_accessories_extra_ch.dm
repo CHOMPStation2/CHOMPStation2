@@ -590,3 +590,22 @@
     icon_state = "spots_extremities"
     body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
     color_blend_mode = ICON_MULTIPLY
+
+//Hellscout panel markings
+/datum/sprite_accessory/marking/ch/hellscout_panels_body
+	name = "Erebus - Hellscout FBP Panels (upper body)"
+	icon_state = "hellscout_p"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO)
+
+/datum/sprite_accessory/marking/digi/hellscout_panels_legs
+	name = "Erebus - Hellscout FBP Panels (legs)"
+	icon_state = "hellscout_p"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/hellscout_panels_head
+	name = "Erebus - Hellscout FBP Panels (head)"
+	icon_state = "hellscout_p"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
