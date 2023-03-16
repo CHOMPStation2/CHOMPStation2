@@ -3,7 +3,7 @@
 	icon = 'icons/obj/projectiles_yw.dmi' //YWEdit, uses our bullet sprites
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/Gunshot4.ogg'
-	damage = 60
+	damage = 15 //CHOMPEDIT - Some guns are broke and seem to be using the abse bullet.
 	damage_type = BRUTE
 	nodamage = 0
 	check_armour = "bullet"

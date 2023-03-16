@@ -160,36 +160,40 @@ only use the hollow_point and armor_penetration values.*/
 	check_armour = "melee"
 
 /obj/item/projectile/bullet/a10mm
-	fire_sound = 'sound/weapons/gunshot2.ogg'
-	diam = 10.17
-	grains = 180
-	velocity = 400
-	hud_state = "pistol"
+	old_bullet_act = TRUE
+	//fire_sound = 'sound/weapons/gunshot2.ogg'
+	//diam = 10.17
+	//grains = 180
+	//velocity = 400
+	//hud_state = "pistol"
 
 /obj/item/projectile/bullet/a10mm/ap
-	grains = 200
-	energy_add = 435
-	velocity = 440
-	armor_penetration = 15
-	hud_state = "pistol_ap"
+	old_bullet_act = TRUE
+	//grains = 200
+	//energy_add = 435
+	//velocity = 440
+	//armor_penetration = 15
+	//hud_state = "pistol_ap"
 
 /obj/item/projectile/bullet/a10mm/hp
-	grains = 135
-	energy_add = 700.7
-	velocity = 490
-	armor_penetration = -10
-	hollow_point = TRUE
-	hud_state = "pistol_hollow"
+	old_bullet_act = TRUE
+	//grains = 135
+	//energy_add = 700.7
+	//velocity = 490
+	//armor_penetration = -10
+	//hollow_point = TRUE
+	//hud_state = "pistol_hollow"
 
 /obj/item/projectile/bullet/a10mm/rubber
-	armor_penetration = -10
-	grains = 142
-	velocity = 301
-	damage = 10
-	agony = 50
-	embed_chance = 0
-	sharp = FALSE
-	check_armour = "melee"
+	old_bullet_act = TRUE
+	//armor_penetration = -10
+	//grains = 142
+	//velocity = 301
+	//damage = 10
+	//agony = 50
+	//embed_chance = 0
+	//sharp = FALSE
+	//check_armour = "melee"
 
 /obj/item/projectile/bullet/a380
 	fire_sound = 'sound/weapons/gunshot2.ogg'
@@ -555,7 +559,7 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/pistol/medium/ap/suppressor // adminspawn only
 	name = "suppressor bullet" // this guy is Important and also Hates You
 	fire_sound = 'sound/weapons/doompistol.ogg' // converted from .wavs extracted from doom 2
-	damage = 10 // high rof kinda fucked up lets be real
+	damage = 30 // high rof kinda fucked up lets be real
 	agony = 10 // brute easily heals, agony not so much
 	armor_penetration = 30 // reduces shield blockchance
 	accuracy = -20 // he do miss actually
@@ -565,4 +569,5 @@ only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/pistol/medium/ap/suppressor/turbo // spicy boys
 	speed = 0.2 // this is 4x projectile speed
+	agony = 15
 	hud_state = "monkey"
