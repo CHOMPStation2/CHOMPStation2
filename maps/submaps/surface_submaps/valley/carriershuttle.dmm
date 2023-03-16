@@ -5,11 +5,11 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "bh" = (
 /mob/living/simple_mob/animal/space/carp/large,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "cY" = (
 /obj/machinery/power/terminal,
@@ -23,19 +23,21 @@
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /obj/random/medical/pillbottle,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "dL" = (
 /mob/living/simple_mob/humanoid/merc/ranged/deagle,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "eT" = (
 /obj/random/mob/merc/all,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "fd" = (
-/mob/living/simple_mob/humanoid/merc/ranged/space/heavy,
-/turf/simulated/shuttle/floor/skipjack,
+/obj/machinery/door/blast/regular{
+	id = "carrier"
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "fk" = (
 /obj/structure/table/standard,
@@ -49,7 +51,8 @@
 	},
 /obj/random/ammo,
 /obj/random/contraband/nofail,
-/turf/simulated/shuttle/floor/skipjack,
+/obj/item/capture_crystal,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "gd" = (
 /obj/structure/shuttle/engine/heater{
@@ -76,7 +79,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "iO" = (
 /obj/structure/cable/blue{
@@ -104,7 +107,7 @@
 /obj/machinery/computer/ship{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "ot" = (
 /obj/random/mob/merc/all,
@@ -127,7 +130,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "rv" = (
 /obj/structure/cable/green{
@@ -147,6 +150,15 @@
 /obj/random/material/precious,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
+"rE" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "uk" = (
 /obj/structure/grille/cult{
 	name = "Alien grille"
@@ -160,7 +172,7 @@
 /area/submap/carriershuttle)
 "uy" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "wc" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -201,17 +213,17 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "yb" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /obj/random/medical/lite,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "ys" = (
 /obj/machinery/door/airlock,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "yy" = (
 /obj/machinery/power/terminal{
@@ -240,18 +252,18 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
 "zY" = (
-/mob/living/simple_mob/humanoid/merc/ranged/space/fal,
-/turf/simulated/shuttle/floor/skipjack,
+/mob/living/simple_mob/humanoid/merc/melee/sword/space,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "As" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "At" = (
 /obj/structure/table/standard,
 /obj/random/ammo,
 /obj/random/handgun/sec,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Br" = (
 /obj/structure/grille/cult{
@@ -274,16 +286,16 @@
 /obj/machinery/button/remote/blast_door{
 	id = "carrier"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "BN" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/orange,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "BP" = (
 /obj/machinery/computer/ship,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Cz" = (
 /obj/structure/cable/green{
@@ -297,7 +309,7 @@
 /obj/structure/table/standard,
 /obj/random/ammo,
 /obj/random/grenade/lethal,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Dy" = (
 /obj/structure/cable/blue{
@@ -325,11 +337,11 @@
 "EN" = (
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/morestuff,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "GH" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Ho" = (
 /obj/structure/cable/green{
@@ -355,7 +367,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "KX" = (
 /obj/structure/grille/cult{
@@ -373,11 +385,11 @@
 /area/submap/carriershuttle)
 "Lq" = (
 /mob/living/simple_mob/vore/sect_queen,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Mh" = (
 /mob/living/simple_mob/vore/solargrub,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "MI" = (
 /obj/structure/cable/green{
@@ -385,11 +397,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "MO" = (
 /mob/living/simple_mob/metroid/juvenile/omega,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "NI" = (
 /obj/structure/cable/green{
@@ -398,17 +410,17 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "OF" = (
 /mob/living/simple_mob/animal/synx/ai,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "PM" = (
 /obj/structure/table/standard,
 /obj/random/ammo,
 /obj/random/contraband/nofail,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Qm" = (
 /turf/simulated/shuttle/wall/voidcraft,
@@ -420,20 +432,20 @@
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "QQ" = (
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Rt" = (
 /mob/living/simple_mob/animal/space/alien/queen/empress,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Se" = (
 /obj/structure/table/standard,
 /obj/random/ammo,
 /obj/random/gun/random,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Sy" = (
 /obj/structure/cable/green{
@@ -441,11 +453,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Tw" = (
 /obj/machinery/door/blast/regular,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Uq" = (
 /turf/simulated/shuttle/floor/yellow,
@@ -454,17 +466,17 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "YO" = (
 /obj/random/mob/merc/armored,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Zb" = (
 /obj/machinery/computer/ship{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Zk" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -474,7 +486,7 @@
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /obj/machinery/recharger,
-/turf/simulated/shuttle/floor/skipjack,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 
 (1,1,1) = {"
@@ -804,7 +816,7 @@ Qm
 Qm
 Qm
 Qm
-wY
+rE
 Qm
 Qm
 Qm
@@ -1052,7 +1064,7 @@ QQ
 QQ
 QQ
 QQ
-fd
+zY
 QQ
 QQ
 CR
@@ -1237,7 +1249,7 @@ Tw
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
@@ -1270,11 +1282,11 @@ Qm
 MO
 EN
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 EN
 Rt
@@ -1307,11 +1319,11 @@ Qm
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
@@ -1381,11 +1393,11 @@ Qm
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
@@ -1418,11 +1430,11 @@ Qm
 Lq
 EN
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 EN
 OF
@@ -1455,11 +1467,11 @@ Qm
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
@@ -1529,11 +1541,11 @@ Qm
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
@@ -1566,11 +1578,11 @@ Qm
 bh
 EN
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 EN
 Mh
@@ -1603,11 +1615,11 @@ Qm
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
-np
+fd
 QQ
 QQ
 QQ
