@@ -16,8 +16,8 @@
 	direct			(bool)					If true plays directly to provided atoms instead of from them
 	opacity_check	(bool)					If true, things behind walls/opaque things won't hear the sounds.
 	pref_check		(type)					If set to a /datum/client_preference type, will check if the hearer has that preference active before playing it to them.
-	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel
-	exclusive		(bool)					If true, only one of this sound is allowed to play.
+	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel //CHOMPedit
+	exclusive		(bool)					If true, only one of this sound is allowed to play. Relies on if started is true or not. If true, it will not start another loop until it is false.
 */
 /datum/looping_sound
 	var/list/atom/output_atoms
@@ -34,20 +34,20 @@
 	var/extra_range
 	var/opacity_check
 	var/pref_check
-	var/volume_chan
+	var/volume_chan //CHOMPedit
 	var/exclusive
 
 	var/timerid
 	var/started
 
-/datum/looping_sound/New(list/_output_atoms=list(), start_immediately=FALSE, disable_direct=FALSE) // CHOMPEdit: Fixes shitty default _direct forcing all direct sounds to false. Now it is an explicit override
+/datum/looping_sound/New(list/_output_atoms=list(), start_immediately=FALSE, disable_direct=FALSE)
 	if(!mid_sounds)
 		WARNING("A looping sound datum was created without sounds to play.")
 		return
 
 	output_atoms = _output_atoms
-	if(disable_direct) // CHOMPEdit: Fixes shitty default _direct forcing all direct sounds to false. Now it is an explicit override
-		direct = FALSE // CHOMPEdit: Fixes shitty default _direct forcing all direct sounds to false. Now it is an explicit override
+	if(disable_direct)
+		direct = FALSE
 
 	if(start_immediately)
 		start()
@@ -57,15 +57,15 @@
 	output_atoms = null
 	return ..()
 
-/datum/looping_sound/proc/start(atom/add_thing, skip_start_sound = FALSE) // CHOMPStation Edit: Skip start sounds optionally
+/datum/looping_sound/proc/start(atom/add_thing, skip_start_sound = FALSE)
 	if(add_thing)
 		output_atoms |= add_thing
 	if(timerid)
 		return
-	if(skip_start_sound && (!exclusive && !started)) // CHOMPStation Edit: Skip start sounds optionally
-		sound_loop()  // CHOMPStation Edit: Skip start sounds optionally
-		started = TRUE // CHOMPStation Edit: Skip start sounds optionally
-		return  // CHOMPStation Edit: Skip start sounds optionally
+	if(skip_start_sound && (!exclusive && !started)) // Skip start sounds optionally, check if we're exclusive AND started already
+		sound_loop()
+		started = TRUE
+		return
 	if(exclusive && started) // Prevents a sound from starting multiple times
 		return // Don't start this loop.
 	on_start()
@@ -76,8 +76,8 @@
 		output_atoms -= remove_thing
 	if(!timerid)
 		return
-	if(!skip_stop_sound) // CHOMPEdit: Allows skipping the stop sound, should you need to.
-		on_stop() // CHOMPEdit: Allows skipping the stop sound, should you need to.
+	if(!skip_stop_sound)
+		on_stop()
 	deltimer(timerid)
 	timerid = null
 	started = FALSE
@@ -102,7 +102,7 @@
 		if(direct)
 			if(ismob(thing))
 				var/mob/M = thing
-				if(pref_check && !M.is_preference_enabled(pref_check)) // CHOMPEdit: Fixed this broken check, sent upstream
+				if(pref_check && !M.is_preference_enabled(pref_check))
 					continue
 			SEND_SOUND(thing, S)
 		else
