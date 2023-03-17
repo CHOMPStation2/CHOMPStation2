@@ -78,6 +78,7 @@
 	desc = "<i><font face='comic sans ms'>Honk!</i></font>"
 	icon_state = "clown"
 	rolled_sleeves = -1
+	has_sensor = 0 // CHOMPEdit: Fixes sensors issue
 
 /obj/item/clothing/under/rank/head_of_personnel
 	desc = "It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\"."

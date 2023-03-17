@@ -41,6 +41,8 @@
 	//radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
 	darksight = 10
 	siemens_coefficient = 2
+	brute_mod =        0.8
+	burn_mod =        1.5
 	emp_dmg_mod = 0.8
 	emp_sensitivity = EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG
 	item_slowdown_mod = 1.5	//Gentle encouragement to let others wear you

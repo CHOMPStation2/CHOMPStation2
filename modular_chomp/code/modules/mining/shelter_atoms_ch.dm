@@ -85,7 +85,7 @@
 
 /area/survivalpod/superpose/RestaurationBar
 
-/area/survivalpod/superpose/BordcastingPod
+/area/survivalpod/superpose/BroadcastingPod
 
 /area/survivalpod/superpose/DemonPoolV2
 

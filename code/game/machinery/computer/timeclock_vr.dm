@@ -55,6 +55,7 @@
 		if(!card && user.unEquip(I))
 			I.forceMove(src)
 			card = I
+			playsound(src, 'modular_chomp/sound/effects/insert_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
 			SStgui.update_uis(src)
 			update_icon()
 		else if(card)
@@ -119,11 +120,13 @@
 			if(card)
 				usr.put_in_hands(card)
 				card = null
+				playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0) // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
 			else
 				var/obj/item/I = usr.get_active_hand()
 				if (istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
 					I.forceMove(src)
 					card = I
+					playsound(src, 'modular_chomp/sound/effects/insert_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
 			update_icon()
 			return TRUE
 		if("switch-to-onduty-rank")
@@ -132,6 +135,7 @@
 					makeOnDuty(params["switch-to-onduty-rank"], params["switch-to-onduty-assignment"])
 					usr.put_in_hands(card)
 					card = null
+					playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
 			update_icon()
 			return TRUE
 		if("switch-to-offduty")
@@ -140,6 +144,7 @@
 					makeOffDuty()
 					usr.put_in_hands(card)
 					card = null
+					playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
 			update_icon()
 			return TRUE
 

@@ -96,7 +96,7 @@
 	if(!..())
 		return 0
 
-	usr.visible_message("<b>[src]</b> points to [A]")
+	usr.visible_message("<span class='filter_notice'><b>[src]</b> points to [A].</span>")
 	return 1
 
 /mob/living/verb/succumb()
@@ -697,13 +697,13 @@
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
 	if(config.allow_Metadata)
 		if(ooc_notes)
-			to_chat(usr, "[src]'s Metainfo:<br>[ooc_notes]")
+			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[ooc_notes]</span>")
 		else if(client)
-			to_chat(usr, "[src]'s Metainfo:<br>[client.prefs.metadata]")
+			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[client.prefs.metadata]</span>")
 		else
-			to_chat(usr, "[src] does not have any stored infomation!")
+			to_chat(usr, "<span class='filter_notice'>[src] does not have any stored infomation!</span>")
 	else
-		to_chat(usr, "OOC Metadata is not supported by this server!")
+		to_chat(usr, "<span class='filter_notice'>OOC Metadata is not supported by this server!</span>")
 	//VOREStation Edit End - Making it so SSD people have prefs with fallback to original style.
 
 	return
@@ -773,7 +773,7 @@
 	set category = "IC"
 
 	resting = !resting
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
 
 //called when the mob receives a bright flash
@@ -834,6 +834,10 @@
 /mob/living/adjustEarDamage(var/damage, var/deaf)
 	ear_damage = max(0, ear_damage + damage)
 	ear_deaf = max(0, ear_deaf + deaf)
+	if(ear_deaf > 0)
+		deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
+	else if(ear_deaf <= 0)
+		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 
 //pass a negative argument to skip one of the variable
 /mob/living/setEarDamage(var/damage, var/deaf)
@@ -841,6 +845,7 @@
 		ear_damage = damage
 	if(deaf >= 0)
 		ear_deaf = deaf
+		deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 
 /mob/living/proc/vomit(var/skip_wait, var/blood_vomit)
 	if(!check_has_mouth())
@@ -1139,7 +1144,7 @@
 		var/mob/living/carbon/human/H = target
 		if(H.in_throw_mode && H.a_intent == I_HELP && unEquip(I))
 			H.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
-			visible_message("<b>[src]</b> hands \the [H] \a [I].", SPAN_NOTICE("You give \the [target] \a [I]."))
+			visible_message("<span class='filter_notice'><b>[src]</b> hands \the [H] \a [I].</span>", SPAN_NOTICE("You give \the [target] \a [I]."))
 		else
 			to_chat(src, SPAN_NOTICE("You offer \the [I] to \the [target]."))
 			do_give(H)

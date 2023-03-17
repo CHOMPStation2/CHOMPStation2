@@ -4543,8 +4543,6 @@
 	nutriment_factor = 40 //very filling
 	color = "#d169b2"
 
-//ADDITIONS BELOW THIS LINE MADE ON 04/03/2021
-
 /datum/reagent/drink/soda/kompot
 	name = "Kompot"
 	id = "kompot"

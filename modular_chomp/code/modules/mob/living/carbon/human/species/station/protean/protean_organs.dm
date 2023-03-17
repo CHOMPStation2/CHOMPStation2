@@ -2,77 +2,77 @@
 /obj/item/organ/external/chest/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100 // <-- This is different from the rest
+	max_damage = 70 // <-- This is different from the rest
 	min_broken_damage = 1000
 	vital = 1
 	model = "protean"
 /obj/item/organ/external/groin/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 70
 	min_broken_damage = 1000 //Multiple
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/head/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 100
+	max_damage = 70
 	min_broken_damage = 1000 //Inheritance
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/arm/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000 //Please
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/arm/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/leg/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/leg/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/hand/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/hand/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/foot/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"
 /obj/item/organ/external/foot/right/unbreakable/nano
 	robotic = ORGAN_NANOFORM
 	encased = FALSE
-	max_damage = 65
+	max_damage = 40
 	min_broken_damage = 1000
 	vital = 0
 	model = "protean"

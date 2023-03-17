@@ -1,7 +1,7 @@
 import { capitalize } from 'common/string';
 import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider } from '../components';
+import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
 import { Window } from '../layouts';
 import { classes } from 'common/react';
 
@@ -794,6 +794,10 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const {
     belly_fullscreen,
     belly_fullscreen_color,
+    belly_fullscreen_color2,
+    belly_fullscreen_color3,
+    belly_fullscreen_color4,
+    belly_fullscreen_alpha,
     mapRef,
     colorization_enabled,
     possible_fullscreens,
@@ -935,12 +939,31 @@ const VoreSelectedBellyVisuals = (props, context) => {
       </Section>
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
-          <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
-          <Button
-            icon="eye-dropper"
-            onClick={() => act('set_attribute', { attribute: 'b_fullscreen_color', val: null })}>
-            Select Color
-          </Button>
+          <FeatureColorInput
+            action_name="b_fullscreen_color"
+            value_of={null}
+            back_color={belly_fullscreen_color}
+            name_of="1"
+          />
+          <FeatureColorInput
+            action_name="b_fullscreen_color2"
+            value_of={null}
+            back_color={belly_fullscreen_color2}
+            name_of="2"
+          />
+          <FeatureColorInput
+            action_name="b_fullscreen_color3"
+            value_of={null}
+            back_color={belly_fullscreen_color3}
+            name_of="3"
+          />
+          <FeatureColorInput
+            action_name="b_fullscreen_color4"
+            value_of={null}
+            back_color={belly_fullscreen_color4}
+            name_of="4"
+          />
+          <FeatureColorInput action_name="b_fullscreen_alpha" value_of={null} back_color="#FFFFFF" name_of="Alpha" />
           <LabeledList.Item label="Enable Coloration">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_colorization_enabled' })}
@@ -1990,5 +2013,31 @@ const VoreUserPreferenceItem = (props, context) => {
       content={test ? content.enabled : content.disabled}
       {...rest}
     />
+  );
+};
+
+const FeatureColorInput = (props, context) => {
+  const { act } = useBackend(context);
+  const { action_name, value_of, back_color, name_of } = props;
+  return (
+    <Button
+      onClick={() => {
+        act('set_attribute', { attribute: action_name, val: value_of });
+      }}>
+      <Stack align="center" fill>
+        <Stack.Item>
+          <Box
+            style={{
+              background: back_color.startsWith('#') ? back_color : `#${back_color}`,
+              border: '2px solid white',
+              'box-sizing': 'content-box',
+              height: '11px',
+              width: '11px',
+            }}
+          />
+        </Stack.Item>
+        <Stack.Item>Change {name_of}</Stack.Item>
+      </Stack>
+    </Button>
   );
 };

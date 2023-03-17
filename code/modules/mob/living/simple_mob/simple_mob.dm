@@ -275,9 +275,9 @@
 		. *= 1.5
 
 	. += injury_level // CHOMPStation Edit: Adding our injury level delay to our total
-
+  
 	. += config.animal_delay
-
+  
 	. += ..()
 
 

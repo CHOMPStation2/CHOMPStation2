@@ -94,6 +94,6 @@
 		msg += "[line]"
 	msg += "</table>"
 	msg += "<b>Total Players: [length(Lines)]</b>"
-	msg = "<span class='filter_info'>" + msg + "</span>"
+	msg = "<span class='filter_notice'>" + msg + "</span>"
 	to_chat(src, msg)
 YW EDIT STOP*/

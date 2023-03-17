@@ -1,3 +1,17 @@
+/mob/living
+	// var/ear_deaf_loop = FALSE // Are we already playing our deafened loop? Checked for safety so we don't deafen our players. (Not sure if we need this bc looping sounds datums have protection for starts being called repeatedly, commented out)
+	var/datum/looping_sound/mob/deafened/deaf_loop
+
+/mob/living/Initialize()
+	. = ..()
+
+	deaf_loop = new(list(src), FALSE)
+
+/mob/living/Destroy()
+	. = ..()
+
+	QDEL_NULL(deaf_loop)
+
 /mob/living/proc/vs_animate(var/belly_to_animate)
   return
 
