@@ -129,10 +129,6 @@
 			forceMove(T)
 			stop_following()
 		else
-<<<<<<< HEAD
-			to_chat(src, "This ghost pod is not located in the game world.")
-			
-=======
 			to_chat(src, "<span class='filter_notice'>This ghost pod is not located in the game world.</span>")
 
 >>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
@@ -162,8 +158,4 @@
 		to_chat(src, "<span class='warning'>There appears to be something wrong with this auto-resleever, try again.</span>")
 		return
 
-<<<<<<< HEAD
 	forceMove(L)
-=======
-	forceMove(L)
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
