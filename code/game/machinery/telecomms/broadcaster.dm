@@ -512,58 +512,38 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	  	/* --- Process all the mobs that heard a masked voice (understood) --- */
 		if(length(heard_masked))
 			for (var/mob/R in heard_masked)
-<<<<<<< HEAD
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, M, 0, name)
-=======
 				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 0, name)
 				if(R.is_preference_enabled(/datum/client_preference/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 
 		/* --- Process all the mobs that heard the voice normally (understood) --- */
 		if(length(heard_normal))
 			for (var/mob/R in heard_normal)
-<<<<<<< HEAD
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, M, 0, realname)
-=======
 				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 0, realname)
 				if(R.is_preference_enabled(/datum/client_preference/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 
 		/* --- Process all the mobs that heard the voice normally (did not understand) --- */
 		if(length(heard_voice))
 			for (var/mob/R in heard_voice)
-<<<<<<< HEAD
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, M,0, vname)
-=======
 				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M,0, vname)
 				if(R.is_preference_enabled(/datum/client_preference/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 
 		/* --- Process all the mobs that heard a garbled voice (did not understand) --- */
 			// Displays garbled message (ie "f*c* **u, **i*er!")
 		if(length(heard_garbled))
 			for (var/mob/R in heard_garbled)
-<<<<<<< HEAD
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, M, 1, vname)
-=======
 				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 1, vname)
 				if(R.is_preference_enabled(/datum/client_preference/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 
 		/* --- Complete gibberish. Usually happens when there's a compressed message --- */
 		if(length(heard_gibberish))
 			for (var/mob/R in heard_gibberish)
-<<<<<<< HEAD
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, M, 1)
-=======
 				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 1)
 				if(R.is_preference_enabled(/datum/client_preference/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 
 	return 1
 
