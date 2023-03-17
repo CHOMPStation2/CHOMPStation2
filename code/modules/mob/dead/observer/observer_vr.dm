@@ -131,7 +131,6 @@
 		else
 			to_chat(src, "<span class='filter_notice'>This ghost pod is not located in the game world.</span>")
 
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 /mob/observer/dead/verb/findautoresleever()
 	set category = "Ghost"
 	set name = "Find Auto Resleever"
