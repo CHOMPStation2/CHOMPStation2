@@ -72,6 +72,8 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	var/update_ticks = 0
 	var/newsfeed_channel = 0
 
+	var/obj/item/weapon/card/id/id = null //CHOMPADDITION: Making it possible to slot an ID card into the Communicator so it can function as both.
+
 	// If you turn this on, it changes the way communicator video works. User configurable option.
 	var/selfie_mode = FALSE
 
@@ -107,6 +109,89 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 	//This is a pretty terrible way of doing this.
 	addtimer(CALLBACK(src, .proc/register_to_holder), 5 SECONDS)
+
+
+
+
+//CHOMPADDITION START: Ayo communicator are better than PDAs /obj/item/device/communicator
+// Proc: AltClick()
+// Parameters: None
+// Description: Checks if the user is made of silicon and returns if they are. If the user is not made of silicon and can use the communicator,
+//              removes the ID from the communicator if it has one, or sends a chat message indicating that the communicator does not have an ID.
+
+/obj/item/device/communicator/AltClick()
+	if(issilicon(usr))
+		return
+
+	if(id)
+		remove_id()
+	else
+		to_chat(usr, "<span class='notice'>This Communicator does not have an ID in it.</span>")
+// Proc: GetAccess()
+// Parameters: None
+// Description: Returns the access level of the communicator's ID, if it has one. If the communicator does not have an ID, the procedure returns the
+//              access level of the object that contains the communicator.
+/obj/item/device/communicator/GetAccess()
+	if(id)
+		return id.GetAccess()
+	else
+		return ..()
+
+// Proc: GetID()
+// Parameters: None
+// Description: Returns the ID object associated with the communicator. If the communicator does not have an ID, the procedure returns null.
+/obj/item/device/communicator/GetID()
+	return id
+
+// Proc: remove_id()
+// Parameters: None
+// Description: If the communicator has an ID, and it is held by a mob, the ID is placed in the mob's hands, a chat message is sent indicating that
+//              the ID has been removed, and a sound effect is played. If the ID is not held by a mob, it is moved to the turf where the communicator
+//              is located. The "pda-id" overlay is removed, and the communicator's ID is set to null.
+/obj/item/device/communicator/proc/remove_id()
+	if (id)
+		if (ismob(loc))
+			var/mob/M = loc
+			M.put_in_hands(id)
+			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
+			playsound(src, 'sound/machines/id_swipe.ogg', 100, 1)
+		else
+			id.loc = get_turf(src)
+		cut_overlay("pda-id")
+		id = null
+
+// Proc: id_check(mob/user as mob, choice as num)
+// Parameters: mob/user - the user who is attempting to check for an ID
+//             choice - an integer indicating whether the check is for in-pda use (1) or out-of-pda use (2)
+// Description: Checks for an ID in the communicator. If choice is 1 and an ID is present, the ID is removed and the procedure returns 1.
+//              If choice is 1 and no ID is present, the user's active hand is checked for an ID card. If an ID card is found and unequipped
+//              successfully, it is added to the communicator's inventory and the procedure returns 1. If choice is 2 and the user's active hand
+//              contains a valid registered ID card that can be unequipped, the card is moved to the communicator's inventory and replaces the
+//              current ID, which is moved to the user's hands. The procedure returns 1. If no ID card can be found or equipped, the procedure
+//              returns 0.
+/obj/item/device/communicator/proc/id_check(mob/user as mob, choice as num)
+	if(choice == 1)
+		if (id)
+			remove_id()
+			return 1
+		else
+			var/obj/item/I = user.get_active_hand()
+			if (istype(I, /obj/item/weapon/card/id) && user.unEquip(I))
+				I.loc = src
+				id = I
+			return 1
+	else
+		var/obj/item/weapon/card/I = user.get_active_hand()
+		if (istype(I, /obj/item/weapon/card/id) && I:registered_name && user.unEquip(I))
+			var/obj/old_id = id
+			I.loc = src
+			id = I
+			user.put_in_hands(old_id)
+			return 1
+	return 0
+
+
+//CHOMPADDITION END
 
 // Proc: register_to_holder()
 // Parameters: None
@@ -216,6 +301,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 // Proc: attackby()
 // Parameters: 2 (C - what is used on the communicator. user - the mob that has the communicator)
 // Description: When an ID is swiped on the communicator, the communicator reads the job and checks it against the Owner name, if success, the occupation is added.
+//CHOMPADDITION: If the ID has already been scanned it is instead inserted into the communicator
 /obj/item/device/communicator/attackby(obj/item/C as obj, mob/user as mob)
 	..()
 	if(istype(C, /obj/item/weapon/card/id))
@@ -224,10 +310,17 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 			to_chat(user, "<span class='notice'>\The [src] rejects the ID.</span>")
 		else if(!owner)
 			to_chat(user, "<span class='notice'>\The [src] rejects the ID.</span>")
-		else if(owner == idcard.registered_name)
+		else if(owner == idcard.registered_name && occupation != idcard.assignment) //CHMPEDIT only edit assigment if different
 			occupation = idcard.assignment
 			to_chat(user, "<span class='notice'>Occupation updated.</span>")
-
+		//CHOMPADDITION START Communicator ID slotting if we have an ID thats also already scanned
+		else if(((src in user.contents) && (C in user.contents)) || (istype(loc, /turf) && in_range(src, user) && (C in user.contents)) )
+			if(id_check(user, 2))
+				to_chat(user, "<span class='notice'>You put the ID into \the [src]'s slot.</span>")
+				add_overlay("pda-id")
+				updateSelfDialog()//Update self dialog on success.
+				return	//Return in case of failed check or when successful.
+		//CHOMPADDITION END
 	return
 
 // Proc: attack_self()
@@ -299,7 +392,14 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 // Proc: Destroy()
 // Parameters: None
 // Description: Deletes all the voice mobs, disconnects all linked communicators, and cuts lists to allow successful qdel()
+// CHOMPADDITION: Remvovess any slotted in IDs before deleting
 /obj/item/device/communicator/Destroy()
+	//CHOMPADDITION START ID handling
+	if (src.id)
+		src.id.forceMove(get_turf(src.loc))
+	else
+		QDEL_NULL(src.id)
+	//CHOMPADDITION END
 	for(var/mob/living/voice/voice in contents)
 		voice_mobs.Remove(voice)
 		to_chat(voice, "<span class='danger'>\icon[src][bicon(src)] Connection timed out with remote host.</span>")
