@@ -152,7 +152,7 @@
 		if(istype(T, /turf/simulated/floor/water))
 			if(species.water_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15)
-			if(shoes)
+			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.water_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.water_speed, HUMAN_LOWEST_SLOWDOWN, 15)
@@ -160,7 +160,7 @@
 		else if(istype(T, /turf/simulated/floor/outdoors/snow))
 			if(species.snow_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.snow_movement, HUMAN_LOWEST_SLOWDOWN, 15)
-			if(shoes)
+			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.snow_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.snow_speed, HUMAN_LOWEST_SLOWDOWN, 15)
@@ -299,7 +299,7 @@
 
 	playsound(T, S, volume, FALSE)
 	return
-  
+
 /mob/living/carbon/human/set_dir(var/new_dir)
 	. = ..()
 	if(. && (species.tail || tail_style))
