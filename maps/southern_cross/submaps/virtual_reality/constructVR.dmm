@@ -10592,8 +10592,6 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
-"mlM" = (
-/turf/space)
 "mmV" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/department/robo{
@@ -56262,7 +56260,7 @@ ipY
 ipY
 ipY
 ipY
-mlM
+ipY
 ipY
 ipY
 ipY
