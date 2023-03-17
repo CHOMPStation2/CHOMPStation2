@@ -81,12 +81,9 @@
 		color = null
 		real_desc = desc
 		desc = "Scan this to find out more information."
-<<<<<<< HEAD
-=======
 	//at the moment only used for the OM location renamer. Initializing here in case we want shuttles incl as well in future. Also proc definition convenience.
 	visitable_overmap_object_instances |= src
 
->>>>>>> ec61e89345... Merge pull request #14616 from Runa-Dacino/OMNameLandmarkTry2
 
 
 // You generally shouldn't destroy these.
