@@ -1001,9 +1001,15 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "nr" = (
-/obj/structure/table/woodentable,
-/obj/effect/spider/stickyweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb/dark,
 /obj/item/weapon/gun/energy/medigun,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/Manor1)
+"nP" = (
+/mob/living/simple_mob/animal/giant_spider/frost,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "oM" = (
@@ -1279,8 +1285,8 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Hl" = (
-/mob/living/simple_mob/animal/giant_spider/nurse,
-/turf/simulated/floor/carpet/turcarpet,
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Hu" = (
 /obj/structure/table/woodentable,
@@ -1374,12 +1380,12 @@
 /area/submap/Manor1)
 "MZ" = (
 /obj/effect/spider/stickyweb/dark,
-/mob/living/simple_mob/animal/giant_spider/nurse,
+/mob/living/simple_mob/animal/giant_spider/phorogenic,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "Nc" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/nurse,
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1543,6 +1549,11 @@
 /obj/item/weapon/gun/energy/pummeler,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
+"YP" = (
+/mob/living/simple_mob/animal/giant_spider/tunneler/fast,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
 "YY" = (
 /obj/item/weapon/bone,
 /obj/effect/spider/stickyweb,
@@ -1579,7 +1590,7 @@
 /area/submap/Manor1)
 "ZV" = (
 /obj/effect/decal/cleanable/blood/drip,
-/mob/living/simple_mob/animal/giant_spider/nurse,
+/mob/living/simple_mob/animal/giant_spider/webslinger,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1864,7 +1875,7 @@ ab
 ab
 ab
 ab
-aN
+UF
 ag
 XE
 ag
@@ -1899,7 +1910,7 @@ aK
 YY
 ag
 ag
-aN
+UF
 aK
 aK
 aK
@@ -1953,7 +1964,7 @@ xI
 bq
 bQ
 ag
-aN
+UF
 al
 ab
 ab
@@ -2637,7 +2648,7 @@ cN
 (26,1,1) = {"
 cN
 ac
-Md
+nP
 ag
 an
 ar
@@ -2692,7 +2703,7 @@ aQ
 bU
 BE
 ie
-cP
+nr
 cP
 MZ
 cP
@@ -2763,7 +2774,7 @@ cN
 (29,1,1) = {"
 cN
 ac
-Md
+nP
 aK
 an
 ar
@@ -2786,7 +2797,7 @@ ag
 aK
 ab
 al
-aN
+vI
 ag
 ag
 ag
@@ -2856,7 +2867,7 @@ ag
 ab
 aK
 ut
-nr
+RI
 RI
 Sy
 al
@@ -2897,7 +2908,7 @@ ar
 ag
 ab
 aK
-Aq
+YP
 jG
 jG
 af
@@ -3001,7 +3012,7 @@ ag
 ab
 ag
 cl
-Hl
+ck
 cl
 cl
 aK
@@ -3070,7 +3081,7 @@ ag
 ag
 ag
 ag
-aN
+Hl
 ag
 ag
 ag
@@ -3115,7 +3126,7 @@ ag
 ag
 ag
 ag
-ag
+Hl
 bF
 bA
 bE
@@ -3198,7 +3209,7 @@ ag
 cE
 ag
 ag
-aN
+Hl
 ag
 ag
 aK
@@ -3299,7 +3310,7 @@ ab
 ab
 ag
 Bz
-Hl
+ck
 cl
 ag
 ab
@@ -3522,7 +3533,7 @@ aa
 aa
 ab
 ap
-aN
+UF
 hu
 ab
 ag
@@ -3567,13 +3578,13 @@ ab
 ab
 aw
 ab
-aN
+UF
 ag
 as
 ag
 as
 ag
-aN
+aM
 ab
 ag
 bm
