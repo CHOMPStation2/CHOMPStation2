@@ -48,7 +48,7 @@
 
 	var/static/list/overlays_cache = list()
 	var/do_seasons = TRUE
-	var/picked_color = FALSE
+	picked_color = FALSE //CHOMPedit: removed "var/" since we already have this defined for all simple_mobs.
 
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 
