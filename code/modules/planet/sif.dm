@@ -283,16 +283,10 @@ var/datum/planet/sif/planet_sif = null
 	effect_message = "<span class='warning'>Rain falls on you.</span>"
 
 	transition_chances = list(
-<<<<<<< HEAD
-		WEATHER_OVERCAST = 25,
-		WEATHER_LIGHT_SNOW = 10,
-		WEATHER_RAIN = 50,
-=======
 		WEATHER_OVERCAST = 20,
 		WEATHER_LIGHT_SNOW = 5,
 		WEATHER_FOG = 20,
 		WEATHER_RAIN = 40,
->>>>>>> 4994a56160... Merge pull request #14517 from VOREStation/upstream-merge-8940
 		WEATHER_STORM = 10,
 		WEATHER_HAIL = 5
 		)
