@@ -74,7 +74,7 @@
 /datum/trait/negative/blindness
 	name = "Permanently blind"
 	desc = "You are blind. For whatever reason, nothing is able to change this fact, not even surgery. WARNING: YOU WILL NOT BE ABLE TO SEE ANY POSTS USING THE ME VERB, ONLY SUBTLE AND DIALOGUE ARE VIEWABLE TO YOU, YOU HAVE BEEN WARNED."
-	cost = -8
+	cost = -12
 	special_env = TRUE
 	custom_only = FALSE
 
