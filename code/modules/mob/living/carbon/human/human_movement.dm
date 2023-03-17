@@ -128,14 +128,9 @@
 // It is in a seperate place to avoid an infinite loop situation with dragging mobs dragging each other.
 // Also its nice to have these things seperated.
 /mob/living/carbon/human/proc/calculate_item_encumbrance()
-	if(shoes)	//CHOMPEdit - Fixes a runtime
-		if(!buckled) // Shoes can make you go faster.
+	if(shoes)	// Shoes can make you go faster.
+		if(!buckled || (buckled && istype(buckled, /obj/machinery/power/rtg/reg)))
 			. += shoes.slowdown
-
-		//VOREStation Addition Start
-		if(buckled && istype(buckled, /obj/machinery/power/rtg/reg))
-			. += shoes.slowdown
-		//VOREStation Addition End
 
 	// Loop through some slots, and add up their slowdowns.
 	// Includes slots which can provide armor, the back slot, and suit storage.
@@ -159,7 +154,7 @@
 				turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15)
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
-				if(feet.water_speed)
+				if(istype(feet) && feet.water_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.water_speed, HUMAN_LOWEST_SLOWDOWN, 15)
 			. += turf_move_cost
 		else if(istype(T, /turf/simulated/floor/outdoors/snow))
@@ -167,7 +162,7 @@
 				turf_move_cost = CLAMP(turf_move_cost + species.snow_movement, HUMAN_LOWEST_SLOWDOWN, 15)
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
-				if(feet.snow_speed)
+				if(istype(feet) && feet.snow_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.snow_speed, HUMAN_LOWEST_SLOWDOWN, 15)
 			. += turf_move_cost
 		else
