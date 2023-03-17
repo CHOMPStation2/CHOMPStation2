@@ -315,7 +315,7 @@
 	name = "Hill Outpost"
 	description = "A small camping site on top of a hill, with all the basics for survival."
 
-/datum/map_template/shelter/superpose/AnimalHospital
+/datum/map_template/shelter/superpose/pizzaparlor
 	shelter_id = "PizzaParlor"
 	mappath = "modular_chomp/maps/submaps/shelters/PizzaParlor-18x19.dmm"
 	name = "Pizza Parlor"
