@@ -286,13 +286,8 @@ var/list/flooring_types
 	icon_base = "snowyplayingdrift"
 
 /decl/flooring/carpet
-<<<<<<< HEAD
 	name = "red carpet" //CHOMPEDIT renamed to red carpet
-	desc = "Imported and comfy."
-=======
-	name = "carpet"
 	desc = "Lush synthetic carpeting, perfectly engineered for easy cleaning."
->>>>>>> 21acee71bf... Merge pull request #14551 from VOREStation/upstream-merge-8962
 	icon = 'icons/turf/flooring/carpet.dmi'
 	icon_base = "carpet"
 	build_type = /obj/item/stack/tile/carpet
@@ -316,11 +311,7 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/carpet/blucarpet
 
 /decl/flooring/carpet/turcarpet
-<<<<<<< HEAD
-	name = "turquoise carpet"   //CHOMPstation edit: changing name to turquoise
-=======
 	name = "turquoise carpet"
->>>>>>> 21acee71bf... Merge pull request #14551 from VOREStation/upstream-merge-8962
 	icon_base = "turcarpet"
 	build_type = /obj/item/stack/tile/carpet/turcarpet
 
