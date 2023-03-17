@@ -73,11 +73,7 @@
 		switch(href_list["flavour_text_robot"])
 			if("open")
 			if("Default")
-<<<<<<< HEAD
-				var/msg = sanitize(tgui_input_text(usr,"Set the default flavour text for your robot. It will be used for any module without individual setting.  Put in a single space to make blank.","Flavour Text",html_decode(pref.flavour_texts_robot["Default"]), multiline = TRUE, prevent_enter = TRUE), extra = 0)
-=======
 				var/msg = strip_html_simple(tgui_input_text(usr,"Set the default flavour text for your robot. It will be used for any module without individual setting. Put in a single space to make blank.","Flavour Text",html_decode(pref.flavour_texts_robot["Default"]), multiline = TRUE, prevent_enter = TRUE))
->>>>>>> e07a9d6958... Merge pull request #14670 from KillianKirilenko/kk-sanitweak
 				if(CanUseTopic(user) && !isnull(msg))
 					pref.flavour_texts_robot[href_list["flavour_text_robot"]] = msg
 			else
