@@ -7559,7 +7559,8 @@
 /turf/simulated/floor/airless,
 /area/vr/powered)
 "iYE" = (
-/turf/unsimulated/wall)
+/turf/unsimulated/wall,
+/area/vr/space)
 "iYS" = (
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
