@@ -83,8 +83,4 @@
 		message = "reveals their tail!"
 	else
 		message = "hides their tail."
-<<<<<<< HEAD
-	visible_message("[src] [message]")
-=======
 	visible_message("<span class='filter_notice'>[src] [message]</span>")
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
