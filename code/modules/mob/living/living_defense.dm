@@ -266,17 +266,10 @@
 			miss_chance = max(15*(distance-2), 0)
 
 		if (prob(miss_chance))
-<<<<<<< HEAD
-			visible_message("<font color='blue'>\The [O] misses [src] narrowly!</font>")
+			visible_message("<span class='notice'>\The [O] misses [src] narrowly!</span>")
 			return*/
 		//CHOMPEDIT - removing baymiss
-		src.visible_message("<font color='red'>[src] has been hit by [O].</font>")
-=======
-			visible_message("<span class='notice'>\The [O] misses [src] narrowly!</span>")
-			return
-
 		src.visible_message("<span class='filter_warning'><font color='red'>[src] has been hit by [O].</font></span>")
->>>>>>> 0eb2f82d41... Merge pull request #14649 from Seris02/prmirror
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")
 
