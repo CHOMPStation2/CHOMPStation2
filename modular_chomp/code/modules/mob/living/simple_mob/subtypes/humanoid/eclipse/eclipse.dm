@@ -543,17 +543,18 @@
 	projectiletype = /obj/item/projectile/bullet/shotgun/ion/eclipse
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_upper = 40
 	attack_armor_pen = 30
 	movement_cooldown = 1
 	icon_state = "eclipse_pummler"
 	icon_living = "eclipse_pummler"
-	reload_max = 25
+	reload_max = 5
 	size_multiplier = 1.5
 	var/poison_per_bite = 5
 	var/poison_type = "shredding_nanites"
 	var/poison_chance = 50
 	var/shock_chance = 30
+	base_attack_cooldown = 6
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler/apply_melee_effects(var/atom/A)
 	if(isliving(A))
