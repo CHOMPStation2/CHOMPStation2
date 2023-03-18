@@ -2,9 +2,9 @@
 // For some reason, suit and uniform already has this funcitonality, but shoes do not.
 
 //Duplicate defines so the code below can compile. See non-modular update_icons.dm for proper placement.
-#define SHOES_LAYER_ALT			10		//Shoe-slot item (when set to be under uniform via verb)
+/*#define SHOES_LAYER_ALT			10		//Shoe-slot item (when set to be under uniform via verb)
 #define SHOES_LAYER				13		//Shoe-slot item
-#define VORE_BELLY_LAYER		33		//Should be the same that it is in update_icons.dm
+#define VORE_BELLY_LAYER		33		//Should be the same that it is in update_icons.dm*/
 
 /mob/living/carbon/human/update_inv_shoes()
 	//. = ..()
