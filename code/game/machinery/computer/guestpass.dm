@@ -267,7 +267,3 @@
 
 	add_fingerprint(usr)
 	return TRUE
-<<<<<<< HEAD
-
-=======
->>>>>>> 1022f70ce7... Merge pull request #14702 from Runa-Dacino/guestpassbugfix
