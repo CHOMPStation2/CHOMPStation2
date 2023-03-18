@@ -4499,15 +4499,20 @@
 #include "maps\atoll\atoll_objs.dm"
 #include "maps\atoll\atoll_turfs.dm"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
 #include "maps\southern_cross\items\headset_sc.dm"
+=======
+#include "maps\groundbase\groundbase.dm"
+>>>>>>> 69de91951b... Merge pull request #14716 from Very-Soft/backtogb
 #include "maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\items\clothing\sc_under.dm"
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\overmap\shuttles.dm"
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
@@ -4515,6 +4520,8 @@
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
 #include "maps\southern_cross\turfs\outdoors.dm"
+=======
+>>>>>>> 69de91951b... Merge pull request #14716 from Very-Soft/backtogb
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "maps\submaps\engine_submaps\engine.dm"
