@@ -95,7 +95,7 @@
 /mob/living/simple_mob/animal/giant_spider/nurse/proc/spin_cocoon(atom/movable/AM)
 	if(!istype(AM))
 		return FALSE // We can't cocoon walls sadly.
-	if(istype(L, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
+	if(istype(AM, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
 		return FALSE
 	visible_message(span("notice", "\The [src] begins to secrete a sticky substance around \the [AM].") )
 
