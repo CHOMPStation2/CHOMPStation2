@@ -460,7 +460,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	communications across different stations, planets, or even star systems. You can wear this one on your wrist!"
 	icon = 'icons/obj/device.dmi'
 	icon_state = "commwatch"
-	slot_flags = SLOT_GLOVES
+	slot_flags = SLOT_GLOVES | SLOT_ID | SLOT_BELT
 	var/gunshot_residue	//CHOMPEDIT - Fixes a bug where guns cannot be operated while wearing a watch
 
 /obj/item/device/communicator/watch/update_icon()
