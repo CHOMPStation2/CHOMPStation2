@@ -10,13 +10,14 @@
 	var/grenade_timer = 5
 	heat_resist = 1
 	cold_resist = 1
-	movement_cooldown = 1
+	movement_cooldown = 1.5
 	var/leap_warmup = 2 SECOND
 	var/leap_sound = 'sound/weapons/gauss_shoot.ogg'
 	var/jaunt_warning = 1.0 SECONDS	// How long the jaunt telegraphing is.
 	var/jaunt_tile_speed = 15		// How long to wait between each tile. Higher numbers result in an easier to dodge tunnel attack.
 	projectiletype = /obj/item/projectile/energy/plasma/vepr/inversion
-	melee_attack_delay = 2 SECOND
+	melee_attack_delay = 12 SECOND
+	ranged_attack_delay = 1.5 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 	special_attack_cooldown = 7 SECONDS
@@ -266,7 +267,7 @@
 
 /obj/item/projectile/energy/plasma/vepr/inversion
 	name = "inversion bolt"
-	damage = 25
+	damage = 20
 	eyeblur = 0
 	armor_penetration = 50
 	light_range = 2
