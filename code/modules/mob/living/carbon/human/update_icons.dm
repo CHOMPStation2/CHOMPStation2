@@ -103,6 +103,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define TOTAL_LAYERS			39		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
 
+//These two are only used for gargoyles currently
+#define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)
+#define HUMAN_OTHER_LAYERS list(MODIFIER_EFFECTS_LAYER, FIRE_LAYER, MOB_WATER_LAYER, TARGETED_LAYER)
+
 /mob/living/carbon/human
 	var/list/overlays_standing[TOTAL_LAYERS]
 	var/previous_damage_appearance // store what the body last looked like, so we only have to update it if something changed
@@ -1366,6 +1370,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		update_wing_showing()
 
 //Human Overlays Indexes/////////
+/* CHOMPEdit - why are these undefined??
 #undef MUTATIONS_LAYER
 #undef SKIN_LAYER
 #undef MOB_DAM_LAYER
@@ -1399,3 +1404,4 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef WATER_LAYER
 #undef TARGETED_LAYER
 #undef TOTAL_LAYERS
+*/
