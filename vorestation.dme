@@ -4548,6 +4548,7 @@
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"
+#include "modular_chomp\code\game\objects\items\weapons\capture_crystal.dm"
 #include "modular_chomp\code\game\objects\structures\desert_planet_structures.dm"
 #include "modular_chomp\code\game\objects\structures\gargoyle.dm"
 #include "modular_chomp\code\game\objects\structures\loot_pile.dm"
