@@ -161,10 +161,6 @@
 "K" = (
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/mousehq)
-"L" = (
-/mob/living/simple_mob/animal/space/mouse_army/stealth,
-/turf/simulated/floor/bmarble,
-/area/submap/mousehq)
 "M" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
 /turf/simulated/floor/bmarble,
@@ -190,10 +186,6 @@
 "R" = (
 /obj/structure/table/alien/blue,
 /obj/item/clothing/under/psysuit,
-/turf/simulated/floor/wmarble,
-/area/submap/mousehq)
-"S" = (
-/mob/living/simple_mob/animal/space/mouse_army/stealth,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "T" = (
@@ -638,7 +630,7 @@ p
 y
 p
 y
-S
+q
 y
 p
 y
@@ -737,7 +729,7 @@ y
 p
 l
 p
-L
+m
 s
 v
 Y

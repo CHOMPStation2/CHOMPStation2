@@ -70,6 +70,11 @@
 "fe" = (
 /turf/simulated/floor/carpet/purcarpet,
 /area/surface/outpost/unfinished)
+"fo" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/cell/super,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/unfinished)
 "fD" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/structure/window/reinforced{
@@ -190,6 +195,10 @@
 /obj/item/weapon/bedsheet/piratedouble,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
+/area/surface/outpost/unfinished)
+"ot" = (
+/obj/item/frame/apc,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "oI" = (
 /obj/structure/railing{
@@ -397,15 +406,16 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "Ck" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = 22
-	},
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
+/area/surface/outpost/unfinished)
+"CH" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/tiled,
 /area/surface/outpost/unfinished)
 "DA" = (
 /obj/effect/map_effect/portal/line/side_b{
@@ -4668,7 +4678,7 @@ rK
 Fh
 TR
 TR
-TR
+fo
 TR
 Rl
 TR
@@ -5700,14 +5710,14 @@ rK
 Fh
 lR
 lR
-TX
+ot
 cW
 lR
 lR
 lR
 lR
 lR
-TR
+CH
 Zd
 TX
 TX

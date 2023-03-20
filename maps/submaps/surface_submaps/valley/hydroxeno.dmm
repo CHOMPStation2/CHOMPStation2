@@ -288,6 +288,11 @@
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/hydroxeno)
+"X" = (
+/obj/effect/alien/weeds,
+/mob/living/simple_mob/animal/space/alien,
+/turf/simulated/floor/outdoors/rocks/caves,
+/area/submap/hydroxeno)
 "Y" = (
 /mob/living/simple_mob/animal/space/alien/sentinel/praetorian,
 /obj/effect/alien/weeds,
@@ -388,7 +393,7 @@ a
 a
 a
 J
-J
+X
 J
 u
 k
@@ -422,7 +427,7 @@ a
 a
 C
 C
-J
+X
 J
 J
 J
@@ -508,7 +513,7 @@ G
 J
 J
 J
-J
+X
 J
 J
 J
@@ -577,7 +582,7 @@ I
 I
 l
 j
-J
+X
 J
 J
 Y
@@ -736,7 +741,7 @@ U
 I
 J
 J
-J
+X
 J
 J
 v
@@ -760,7 +765,7 @@ f
 g
 J
 J
-J
+X
 J
 M
 J
@@ -784,7 +789,7 @@ a
 a
 C
 C
-J
+X
 J
 G
 J
@@ -934,7 +939,7 @@ C
 v
 M
 y
-J
+X
 J
 j
 u
@@ -944,13 +949,13 @@ L
 J
 J
 J
+X
 J
 J
 J
 J
 J
-J
-J
+X
 J
 J
 J
@@ -978,7 +983,7 @@ d
 J
 z
 J
-J
+X
 J
 J
 J
@@ -1007,7 +1012,7 @@ a
 a
 C
 v
-J
+X
 J
 J
 j
@@ -1017,7 +1022,7 @@ J
 J
 J
 J
-J
+X
 J
 J
 J
@@ -1063,16 +1068,16 @@ J
 V
 W
 J
+X
 J
 J
 J
 J
+X
 J
 J
 J
-J
-J
-J
+X
 v
 a
 "}
@@ -1158,7 +1163,7 @@ a
 C
 J
 J
-J
+X
 J
 G
 J
@@ -1168,7 +1173,7 @@ J
 y
 J
 J
-J
+X
 J
 J
 p
@@ -1272,7 +1277,7 @@ J
 J
 G
 y
-J
+X
 J
 J
 I
@@ -1293,7 +1298,7 @@ I
 W
 e
 J
-J
+X
 a
 a
 a
@@ -1344,7 +1349,7 @@ a
 C
 C
 k
-J
+X
 J
 E
 J
@@ -1435,7 +1440,7 @@ J
 J
 J
 J
-J
+X
 J
 J
 J

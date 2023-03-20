@@ -18,6 +18,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/mounted/phase,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "j" = (
@@ -34,6 +38,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/voice,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "q" = (
@@ -57,6 +65,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
 /obj/item/rig_module/chem_dispenser/injector/advanced,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "w" = (
@@ -65,6 +77,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "y" = (
@@ -85,6 +101,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/rad_shield,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "D" = (
@@ -106,6 +126,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "S" = (
