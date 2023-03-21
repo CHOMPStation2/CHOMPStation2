@@ -30,10 +30,16 @@
 
 	maxHealth = 125
 	health = 125
+<<<<<<< HEAD
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	movement_cooldown = 0.5 SECONDS
 	heat_resist = -0.50
 	cold_resist = 0.75
+=======
+
+	movement_cooldown = -1
+
+>>>>>>> fd7b53831b... Merge pull request #14720 from Very-Soft/speedandstuff
 	melee_damage_lower = 15
 	melee_damage_upper = 35
 	attack_armor_pen = 15

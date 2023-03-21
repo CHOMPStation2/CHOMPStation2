@@ -42,10 +42,16 @@
 				"bio" = 0,
 				"rad" = 0
 				)
+<<<<<<< HEAD
 	heat_resist = -0.50
 	cold_resist = 0.75
 	movement_cooldown = 5
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
+=======
+
+	movement_cooldown = -1
+
+>>>>>>> fd7b53831b... Merge pull request #14720 from Very-Soft/speedandstuff
 	melee_damage_lower = 6
 	melee_damage_upper = 14
 	base_attack_cooldown = 1 SECOND
@@ -110,6 +116,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 	makes_dirt = 0
 	faction = "neutral"
-	
+
 /decl/mob_organ_names/shantak
 	hit_zones = list("head", "torso", "left foreleg", "right foreleg", "left hind leg", "right hind leg", "tail", "mane", "snout")

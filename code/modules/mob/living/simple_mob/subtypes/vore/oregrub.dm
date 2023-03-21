@@ -40,7 +40,7 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 3	//low damage, they prefer to flee
 
-	movement_cooldown = 8
+	movement_cooldown = 3.5
 
 	meat_type = /obj/item/weapon/ore/coal
 
@@ -98,7 +98,7 @@
 	icon_living = "lavagrub"
 	icon_dead = "lavagrub-dead"
 
-	movement_cooldown = 5
+	movement_cooldown = 2
 	maxHealth = 75 //lavagrubs are really hardy
 	health = 75
 	vore_pounce_chance = 80 // Full-grown grubs should pounce. More homf opportunities if you're dumb enough to poke it.
@@ -185,6 +185,7 @@
 		"The incredible heat trapped within the grub helps daze and disorient you, ensuring that its new filling wouldn't interfere in its mineral-hunting.")
 
 	B.emote_lists[DM_DIGEST] = list(
+<<<<<<< HEAD
 		"Every breath taken inside the grub is swelteringly hot, painfully thick, and more than subtly caustic, worsening with every passing moment spent inside!",
 		"As the grub wriggles off somewhere quiet to digest its meal, the resulting undulations help crush you down into a more compact, easier to handle morsel!",
 		"From time to time, minerals crush inwards against your body, helping ensure that the grub's food was thoroughly worked over into a softer, rougher state!",
@@ -198,3 +199,7 @@
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.belly_fullscreen_color = "#cf741e" 		// CHOMPedit - Belly Fullscreen
+=======
+		"PLACEHOLDER!")
+*/
+>>>>>>> fd7b53831b... Merge pull request #14720 from Very-Soft/speedandstuff
