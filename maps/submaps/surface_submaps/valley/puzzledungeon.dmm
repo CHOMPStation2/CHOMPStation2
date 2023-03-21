@@ -13,6 +13,9 @@
 "h" = (
 /turf/simulated/floor/lava,
 /area/submap/puzzledungeon)
+"j" = (
+/turf/simulated/floor/lava/harmless,
+/area/submap/puzzledungeon)
 "k" = (
 /obj/machinery/crystal/ice,
 /turf/simulated/floor/outdoors/ice,
@@ -31,6 +34,9 @@
 "t" = (
 /turf/template_noop,
 /area/template_noop)
+"v" = (
+/turf/simulated/floor/cult,
+/area/submap/puzzledungeon)
 "w" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/archaeological_find,
@@ -193,8 +199,8 @@ z
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
@@ -222,14 +228,14 @@ a
 a
 S
 z
-S
-S
-S
+v
+v
+v
 h
 h
-S
-S
-S
+v
+v
+v
 z
 s
 s
@@ -257,8 +263,8 @@ S
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
@@ -289,8 +295,8 @@ S
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
@@ -318,14 +324,14 @@ a
 a
 S
 z
-S
-S
-S
+v
+v
+v
 h
 h
-S
-S
-S
+v
+v
+v
 z
 s
 s
@@ -353,8 +359,8 @@ z
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
@@ -698,14 +704,14 @@ t
 t
 s
 z
-S
-S
-S
+v
+v
+v
 h
 h
-S
-S
-S
+v
+v
+v
 z
 a
 k
@@ -733,8 +739,8 @@ z
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
@@ -762,14 +768,14 @@ t
 s
 s
 S
-S
-S
-S
+v
+v
+v
 h
 h
-S
-S
-S
+v
+v
+v
 S
 S
 S
@@ -797,8 +803,8 @@ S
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
@@ -826,14 +832,14 @@ t
 t
 s
 z
-S
-S
-S
+v
+v
+v
 h
 h
-S
-S
-S
+v
+v
+v
 z
 S
 a
@@ -861,8 +867,8 @@ z
 S
 S
 S
-h
-h
+j
+j
 S
 S
 S
