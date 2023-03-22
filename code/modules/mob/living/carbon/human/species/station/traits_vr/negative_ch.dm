@@ -385,7 +385,7 @@
 	var_changes = list("total_health" = 25)
 
 /datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/negative/reduced_biocompat_minor
@@ -430,7 +430,7 @@
 	can_take = ORGANICS
 
 /datum/trait/negative/haemophilia_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 
 /datum/trait/negative/pain_intolerance_basic

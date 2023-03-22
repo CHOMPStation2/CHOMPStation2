@@ -4,7 +4,7 @@
 	cost = 0
 
 /datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.verbs |= /mob/living/proc/mobegglaying
 
 /datum/trait/neutral/succubus_bite
@@ -13,7 +13,7 @@
 	cost = 0
 
 /datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.verbs |= /mob/living/proc/succubus_bite
 
 /datum/trait/neutral/nutritiongrow
@@ -93,7 +93,7 @@
 							"pickupable" = list(TRAIT_PREF_TYPE_BOOLEAN, "Can be picked up", TRAIT_NO_VAREDIT_TARGET, FALSE)*/)
 
 /datum/trait/neutral/gargoyle/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
-	..(S,H)
+	..()
 	var/datum/component/gargoyle/G = H.LoadComponent(/datum/component/gargoyle)
 	if (trait_prefs)
 		G.tint = trait_prefs["tint"]
