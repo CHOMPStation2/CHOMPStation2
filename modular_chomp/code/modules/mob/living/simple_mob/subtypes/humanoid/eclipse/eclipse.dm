@@ -14,7 +14,7 @@
 	icon_gib = "syndicate_gib"
 
 	faction = "eclipse"
-	movement_cooldown = 3
+	movement_cooldown = 0
 
 	status_flags = 0
 
@@ -135,6 +135,7 @@
 	icon_state = "eclipse_tesla"
 	icon_living = "eclipse_tesla"
 	reload_max = 5
+	movement_cooldown = 1
 
 	projectiletype = /obj/item/projectile/energy/electrode/eclipse
 
@@ -199,7 +200,7 @@
 	name = "Solar Eclipse Sniper"
 	health = 50
 	maxHealth = 50
-	movement_cooldown = 1
+	movement_cooldown = -1
 
 	icon_state = "eclipse_snipertesh"
 	icon_living = "eclipse_snipertesh"
@@ -287,6 +288,7 @@
 	health = 100
 	maxHealth = 100
 	reload_max = 6
+	movement_cooldown = 1
 
 	icon_state = "eclipse_silver"
 	icon_living = "eclipse_silver"
@@ -335,6 +337,7 @@
 	maxHealth = 50
 	icon_state = "eclipse_shottesh"
 	icon_living = "eclipse_shottesh"
+	movement_cooldown = -1
 
 
 	projectiletype = /obj/item/projectile/bullet/shotgun
@@ -368,7 +371,8 @@
 /obj/item/projectile/energy/blob/moth
 	damage = 20
 	armor_penetration = 25
-	my_chems = list("fuel")
+	my_chems = list("fuel", "mold")
+	flammability = 0.25
 	modifier_type_to_apply = /datum/modifier/fire
 	modifier_duration = 6 SECONDS
 	color = "#38b9ff"
