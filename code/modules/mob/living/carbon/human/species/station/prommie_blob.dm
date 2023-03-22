@@ -8,11 +8,7 @@
 	unity = TRUE
 	water_resist = 100 // Lets not kill the prommies
 	cores = 0
-<<<<<<< HEAD
 	movement_cooldown = 2 //Chompedit to 2 from 3, Bring in line with Protean blob forms.
-=======
-	movement_cooldown = 1
->>>>>>> fd7b53831b... Merge pull request #14720 from Very-Soft/speedandstuff
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
