@@ -413,7 +413,7 @@
 	maxHealth = 150
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	projectiletype = /obj/item/projectile/energy/flash
-	movement_cooldown = 1
+	movement_cooldown = -1
 	melee_damage_lower = 20
 	melee_damage_upper = 35
 	attack_armor_pen = 20
@@ -438,7 +438,7 @@
 	icon_living = "eclipse_wheel"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	projectiletype = /obj/item/projectile/beam/energy_net
-	movement_cooldown = 2
+	movement_cooldown = -0.5
 
 	var/cloaked_alpha = 50			// Lower = Harder to see.
 	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
@@ -549,7 +549,7 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 40
 	attack_armor_pen = 30
-	movement_cooldown = 1
+	movement_cooldown = -0.5
 	icon_state = "eclipse_pummler"
 	icon_living = "eclipse_pummler"
 	reload_max = 5
