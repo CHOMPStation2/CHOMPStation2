@@ -46,8 +46,14 @@
 	var/mob/living/carbon/human/friend
 	var/tamed = 0
 	var/tame_chance = 50 //It's a fiddy-fiddy default you may get a buddy pal or you may get mauled and ate. Win-win!
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	species_sounds = "Canine"
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+	// CHOMPAdd End
+
 
 // Activate Noms!
 

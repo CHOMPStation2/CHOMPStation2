@@ -42,6 +42,8 @@
 	var/frustration = 0
 	var/max_frustration = 0
 
+	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
+
 /mob/living/bot/New()
 	..()
 	update_icons()
@@ -325,7 +327,7 @@
 	if(makeStep(patrol_path))
 		frustration = 0
 	else if(max_frustration)
-		frustration++ 
+		frustration++
 	//CHOMPEdit End
 	return
 

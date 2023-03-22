@@ -30,8 +30,8 @@
 	breath_type = null
 	poison_type = null
 
-	male_scream_sound = null
-	female_scream_sound = null
+	// male_scream_sound = null
+	// female_scream_sound = null
 
 	virus_immune = 1
 	blood_volume = 0
@@ -60,8 +60,7 @@
 
 	rarity_value = 5
 
-	female_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
-	male_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
+	species_sounds = "Robotic"
 
 	crit_mod = 4	//Unable to go crit
 	var/obj/item/weapon/rig/protean/OurRig

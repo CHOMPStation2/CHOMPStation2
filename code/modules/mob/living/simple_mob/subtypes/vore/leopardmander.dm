@@ -48,8 +48,13 @@
 	vore_bump_emote = "tries to snap up"
 
 	nom_mob = TRUE
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	pain_sound = canine_pain_sounds
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+	death_sound = canine_death_sounds
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
