@@ -232,8 +232,8 @@
 			return TRUE
 		if("remote")
 			if (is_valid_target(target) && istext(material) && istext(identifier) && istext(adjective) && istext(tint))
-				if (!QDELETED(remotes[target]))
-					var/obj/item/petrifier/PE = remotes[target]
+				var/obj/item/petrifier/PE = remotes[target]
+				if (!QDELETED(PE))
 					PE.visible_message("<span class='warning'>\The [PE] disappears!</span>")
 					qdel(PE)
 				var/obj/item/petrifier/P = new(loc, src)
