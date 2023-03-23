@@ -361,6 +361,10 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
+"Is" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/turf/simulated/floor/bluegrid,
+/area/submap/eclipsemountain)
 "IQ" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
 /turf/simulated/floor/tiled/steel,
@@ -593,6 +597,10 @@
 /obj/random/mainttoyloot/nofail,
 /obj/random/material/refined,
 /turf/simulated/floor/tiled/steel,
+/area/submap/eclipsemountain)
+"YO" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/simulated/floor/bluegrid,
 /area/submap/eclipsemountain)
 "YQ" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation,
@@ -1804,7 +1812,7 @@ dJ
 rJ
 dJ
 rJ
-dJ
+Is
 rJ
 dJ
 rJ
@@ -1888,7 +1896,7 @@ dJ
 rJ
 dJ
 rJ
-dJ
+YO
 rJ
 dJ
 rJ
