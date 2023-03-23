@@ -22,7 +22,10 @@
 	var/image/tail_image
 	var/tail_alt = TAIL_UPPER_LAYER
 
-/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H)
+	var/can_revert = TRUE
+	var/was_rayed = FALSE
+
+/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H, var/ident_ovr, var/mat_ovr, var/adj_ovr, var/tint_ovr, var/revert = TRUE, var/discard_clothes)
 	. = ..()
 	if (isspace(loc) || isopenspace(loc))
 		anchored = FALSE
@@ -42,6 +45,18 @@
 		if (copytext_char(adjective, -1) != "s")
 			adjective += "s"
 	gargoyle = H
+
+	if (H.get_effective_size(TRUE) < 0.5) // "So small! I can step over it!"
+		density = FALSE
+
+	if (ident_ovr)
+		identifier = ident_ovr
+	if (mat_ovr)
+		material = mat_ovr
+	if (adj_ovr)
+		adjective = adj_ovr
+	if (tint_ovr)
+		tint = tint_ovr
 
 	if (H.tail_style?.clip_mask_state)
 		tail_lower_dirs.Cut()
@@ -75,6 +90,8 @@
 	var/list/other_layers = HUMAN_OTHER_LAYERS
 	for (var/i = 1; i <= length(H.overlays_standing); i++)
 		if (i in other_layers)
+			continue
+		if (discard_clothes && !(i in body_layers))
 			continue
 		if (istype(H.overlays_standing[i], /image) && (i in body_layers))
 			var/image/old_image = H.overlays_standing[i]
@@ -114,9 +131,27 @@
 	H.updatehealth()
 	H.canmove = 0
 
+	can_revert = revert
+
+	START_PROCESSING(SSprocessing, src)
+
 /obj/structure/gargoyle/Destroy()
-	unpetrify()
+	STOP_PROCESSING(SSprocessing, src)
+	if (!gargoyle)
+		return ..()
+	if (can_revert)
+		unpetrify(deleting = TRUE)
+	else
+		visible_message("<span class='warning'>The [identifier] loses shape and crumbles into a pile of [material]!</span>")
+		qdel(gargoyle)
 	. = ..()
+
+/obj/structure/gargoyle/process()
+	if (!gargoyle)
+		qdel(src)
+	if (gargoyle.loc != src)
+		can_revert = TRUE //something's gone wrong, they escaped, lets not qdel them
+		unpetrify(FALSE)
 
 /obj/structure/gargoyle/examine_icon()
 	var/icon/examine_icon = ..()
@@ -136,7 +171,7 @@
 		. += stored_examine
 	return
 
-/obj/structure/gargoyle/proc/unpetrify(var/deal_damage = TRUE)
+/obj/structure/gargoyle/proc/unpetrify(var/deal_damage = TRUE, var/deleting = FALSE)
 	if (!gargoyle)
 		return
 	var/datum/component/gargoyle/comp = gargoyle.GetComponent(/datum/component/gargoyle)
@@ -144,6 +179,9 @@
 		comp.cooldown = world.time + (15 SECONDS)
 		comp.statue = null
 		comp.transformed = FALSE
+	else
+		if (was_rayed)
+			gargoyle.verbs -= /mob/living/carbon/human/proc/gargoyle_transformation
 	if (gargoyle.loc == src)
 		gargoyle.forceMove(loc)
 		gargoyle.transform = transform
@@ -172,6 +210,9 @@
 	gargoyle.updatehealth()
 	alpha = 0
 	gargoyle.visible_message("<span class='warning'>[gargoyle]'s skin rapidly reverts, returning them to normal!</span>", "<span class='warning'>Your skin reverts, freeing your movement once more![hurtmessage]</span>")
+	gargoyle = null
+	if (!deleting)
+		qdel(src)
 
 /obj/structure/gargoyle/return_air()
 	return return_air_for_internal_lifeform()
@@ -184,6 +225,8 @@
 	return air
 
 /obj/structure/gargoyle/proc/damage(var/damage)
+	if (was_rayed)
+		return //gargoyle quick regenerates, the others don't, so let's not have them getting too damaged
 	obj_integrity = min(obj_integrity-damage, max_integrity)
 	if(obj_integrity <= 0)
 		qdel(src)
@@ -219,5 +262,5 @@
 	. = ..()
 	if(. && tail_image)
 		cut_overlay(tail_image)
-		tail_image.layer = (dir in tail_lower_dirs) ? TAIL_LOWER_LAYER : tail_alt
+		tail_image.layer = BODY_LAYER + ((dir in tail_lower_dirs) ? TAIL_LOWER_LAYER : tail_alt)
 		add_overlay(tail_image)

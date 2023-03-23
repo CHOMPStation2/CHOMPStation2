@@ -110,5 +110,17 @@
 	input = lowertext(input)
 	if (pref == "adjective")
 		if (copytext_char(input, -1) != "s")
-			input += "s"
+			switch(copytext_char(input, -2))
+				if ("ss")
+					input += "es"
+				if ("sh")
+					input += "es"
+				if ("ch")
+					input += "es"
+				else
+					switch(copytext_char(input, -1))
+						if("s", "x", "z")
+							input += "es"
+						else
+							input += "s"
 	return input
