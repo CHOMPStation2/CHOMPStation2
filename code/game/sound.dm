@@ -406,10 +406,14 @@ var/list/species_sound_map = list(
 
 /*
  * The following helper proc will select a species' default sounds - useful for if we're set to "Unset"
- * Yes it's a one-line proc, but I wanted to reduce duplicated lines as much as possible.
+ * This is ONLY called by Unset, meaning we haven't chosen a species sound.
 */
 /proc/select_default_species_sound(var/datum/preferences/pref) // Called in character setup. This is similar to check_gendered_sounds, except here we pull from the prefs.
-	var/datum/species/valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref.species])
+	// First, we determine if we're custom-choosing a body or if we're a base game species.
+	var/datum/species/valid = GLOB.all_species[pref.species]
+	if(valid.selects_bodytype == (SELECTS_BODYTYPE_CUSTOM || SELECTS_BODYTYPE_SHAPESHIFTER)) // Custom species or xenochimera handling here
+		valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref.species])
+	// Now we start getting our sounds.
 	if(valid.gender_specific_species_sounds) // Do we have gender-specific sounds?
 		if(pref.identifying_gender == FEMALE && valid.species_sounds_female)
 			return valid.species_sounds_female
