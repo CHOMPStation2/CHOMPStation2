@@ -296,7 +296,7 @@
 		var/oursound = get_species_sound(ourpref)["cough"]
 		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			oursound = get_species_sound(select_default_species_sound(user))["cough"]
+			oursound = get_species_sound(select_default_species_sound(pref))["cough"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have cough sounds!</span>")
@@ -311,7 +311,7 @@
 		var/oursound = get_species_sound(ourpref)["sneeze"]
 		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			oursound = get_species_sound(select_default_species_sound(user))["sneeze"]
+			oursound = get_species_sound(select_default_species_sound(pref))["sneeze"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have sneeze sounds!</span>")
@@ -326,7 +326,7 @@
 		var/oursound = get_species_sound(ourpref)["scream"]
 		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			oursound = get_species_sound(select_default_species_sound(user))["scream"]
+			oursound = get_species_sound(select_default_species_sound(pref))["scream"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have scream sounds!</span>")
@@ -341,7 +341,7 @@
 		var/oursound = get_species_sound(ourpref)["pain"]
 		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			oursound = get_species_sound(select_default_species_sound(user))["pain"]
+			oursound = get_species_sound(select_default_species_sound(pref))["pain"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
@@ -356,7 +356,7 @@
 		var/oursound = get_species_sound(ourpref)["gasp"]
 		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			oursound = get_species_sound(select_default_species_sound(user))["gasp"]
+			oursound = get_species_sound(select_default_species_sound(pref))["gasp"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
@@ -371,7 +371,7 @@
 		var/oursound = get_species_sound(ourpref)["death"]
 		S = sound(pick(oursound))
 		if(pref.species_sound == "Unset")
-			oursound = get_species_sound(select_default_species_sound(user))["death"]
+			oursound = get_species_sound(select_default_species_sound(pref))["death"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
 			to_chat(user, "<span class='warning'>This set does not have death sounds!</span>")
