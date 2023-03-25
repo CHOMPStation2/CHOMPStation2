@@ -4580,6 +4580,7 @@
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"
 #include "modular_chomp\code\modules\food\drinkgglass\metaglass.dm"
 #include "modular_chomp\code\modules\food\food\drinks\bottle.dm"
+#include "modular_chomp\code\modules\living\carbon\human\ai_controlled\ai_controlled.dm"
 #include "modular_chomp\code\modules\materials\materials\gems.dm"
 #include "modular_chomp\code\modules\materials\materials\metals\metals.dm"
 #include "modular_chomp\code\modules\materials\materials\organic\animal_products.dm"
