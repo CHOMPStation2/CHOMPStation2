@@ -4500,9 +4500,12 @@
 #include "maps\atoll\atoll_objs.dm"
 #include "maps\atoll\atoll_turfs.dm"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
 #include "maps\southern_cross\items\headset_sc.dm"
+=======
+>>>>>>> 6d077c7473... Merge pull request #14732 from Very-Soft/backtotether
 #include "maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\items\clothing\sc_under.dm"
@@ -4530,6 +4533,7 @@
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+#include "maps\tether\tether.dm"
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
