@@ -26,15 +26,30 @@
 	var/corpseidjob = null // Needs to be in quotes, such as "Clown" or "Chef." This just determines what the ID reads as, not their access
 	var/corpseidaccess = null //This is for access. See access.dm for which jobs give what access. Again, put in quotes. Use "Captain" if you want it to be all access.
 	var/corpseidicon = null //For setting it to be a gold, silver, CentCom etc ID
+<<<<<<< HEAD
 	var/corpsesensormode = 0	//CHOMPAdd - For setting the suit sensors of a corpse. Default to 0 so we don't annoy medbay.
+=======
+	var/corpsesynthtype = 0			// 0 for organic, 1 for drone, 2 for posibrain
+	var/corpsesynthbrand = "Unbranded"
+>>>>>>> a4f47f02f1... Merge pull request #14730 from Heroman3003/synthmob
 
 /obj/effect/landmark/mobcorpse/New()
 	createCorpse()
 
 /obj/effect/landmark/mobcorpse/proc/createCorpse() //Creates a mob and checks for gear in each slot before attempting to equip it.
 	var/mob/living/carbon/human/M = new /mob/living/carbon/human (src.loc)
-	M.real_name = src.name
+	M.real_name = generateCorpseName()
 	M.set_stat(DEAD) //Kills the new mob
+	if(corpsesynthtype > 0)
+		to_world("Synth")
+		if(!corpsesynthbrand)
+			corpsesynthbrand = "Unbranded"
+		for(var/obj/item/organ/external/O in M.organs)
+			switch(corpsesynthtype)
+				if(1)
+					O.digitize(corpsesynthbrand)
+				if(2)
+					O.robotize(corpsesynthbrand)
 	if(src.corpseuniform)
 		M.equip_to_slot_or_del(new src.corpseuniform(M), slot_w_uniform)
 		if(M.w_uniform)
@@ -84,7 +99,8 @@
 	delete_me = 1
 	qdel(src)
 
-
+/obj/effect/landmark/mobcorpse/proc/generateCorpseName()
+	return name
 
 //List of different corpse types
 
