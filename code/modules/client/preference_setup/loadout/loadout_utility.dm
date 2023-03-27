@@ -30,7 +30,11 @@
 	path = /obj/item/device/camera
 
 /datum/gear/utility/codex
+<<<<<<< HEAD
 	display_name = "the traveler's guide to borealis" //YW Edit
+=======
+	display_name = "the traveler's guide to Virgo-Erigone"
+>>>>>>> 85be7de712... Merge pull request #14729 from Runa-Dacino/master
 	path = /obj/item/weapon/book/codex //VOREStation Edit
 	cost = 0
 
