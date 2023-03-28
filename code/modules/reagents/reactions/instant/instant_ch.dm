@@ -63,6 +63,19 @@
 	result = "glucose"
 	required_reagents = list("sodiumchloride" = 1, "water" = 1, "sugar" = 1)
 	result_amount = 1
+
+/decl/chemical_reaction/instant/souldew
+	name = "Soul Dew"
+	result = "souldew"
+	required_reagents = list("mutagen" = 5, "water" = 5, "cryptobiolin" = 5, "bicaridine" = 5, "kelotane" = 5, "mindbreaker" = 5)
+	result_amount = 1
+
+/decl/chemical_reaction/instant/oasis
+	name = "Oasis"
+	result = "oasis"
+	required_reagents = list("inaprovaline" = 5, "tramadol" = 5, "alkysine" = 5, "stoxin" = 5, "oxygen" = 5, "glucose" = 5)
+	result_amount = 1
+
 ///SAP RECIPES//////
 
 /decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.

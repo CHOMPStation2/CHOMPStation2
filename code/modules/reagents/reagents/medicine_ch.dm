@@ -93,6 +93,43 @@
 	description = "A well respected drug used for treatment of schizophrenia in specific."
 	overdose = REAGENTS_OVERDOSE * 2
 
+//Complex Chems//
+/datum/reagent/souldew
+	name = "Soul Dew"
+	id = "souldew"
+	description = "A strange expirmental chemical that will try and breath life into a dead heart."
+	taste_description = "void"
+	reagent_state = LIQUID
+	color = "#BF0000"
+	overdose = REAGENTS_OVERDOSE
+	overdose_mod = 2.5
+	scannable = 1
+	affects_dead = 1
+
+/datum/reagent/souldew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective2 = M.species.chem_strength_heal * M.species.chem_strength_heal
+	if(alien != IS_DIONA)
+		M.heal_organ_damage(5 * removed * chem_effective2, 5 * removed * chem_effective2)
+
+/datum/reagent/oasis
+	name = "Oasis"
+	id = "oasis"
+	description = "A complex drug that will attempt to put the subject into a form of statis"
+	taste_description = "relief"
+	reagent_state = LIQUID
+	color = "#BF0000"
+	overdose = REAGENTS_OVERDOSE * 1.5
+	overdose_mod = 0.5
+	scannable = 1
+	affects_dead = 1
+
+/datum/reagent/souldew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_DIONA)
+		M.Sleeping(1)
+		M.add_chemical_effect(CE_STABLE, 25)
+		M.add_chemical_effect(CE_PAINKILLER, 15 * M.species.chem_strength_pain)
+
+
 ///SAP REAGENTS////
 //This is all a direct port from aeiou.
 
