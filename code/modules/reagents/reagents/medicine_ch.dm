@@ -107,9 +107,12 @@
 	affects_dead = 1
 
 /datum/reagent/souldew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective = 1 * M.species.chem_strength_heal
 	var/chem_effective2 = M.species.chem_strength_heal * M.species.chem_strength_heal
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(5 * removed * chem_effective2, 5 * removed * chem_effective2)
+		M.heal_organ_damage(3 * removed * chem_effective, 3 * removed * chem_effective)
+	if(M.stat == DEAD)
+		M.heal_organ_damage(8 * removed * chem_effective2, 8 * removed * chem_effective2)
 
 /datum/reagent/oasis
 	name = "Oasis"
@@ -123,7 +126,7 @@
 	scannable = 1
 	affects_dead = 1
 
-/datum/reagent/souldew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/oasis/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		M.Sleeping(1)
 		M.add_chemical_effect(CE_STABLE, 25)
