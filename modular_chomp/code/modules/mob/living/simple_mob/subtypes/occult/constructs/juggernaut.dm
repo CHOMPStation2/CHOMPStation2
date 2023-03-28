@@ -3,13 +3,16 @@
 	real_name = "Behemoth"
 	desc = "The pinnacle of occult technology, Behemoths are nothing shy of both an Immovable Object, and Unstoppable Force."
 	melee_damage_lower = 45
-	melee_damage_upper = 55
+	melee_damage_upper = 65
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	projectiletype = /obj/item/projectile/icicle
+	/obj/item/projectile/energy/electrode/cult
+	movement_cooldown = 1
+
+	loot_list = list(/obj/item/weapon/rig/ch/behemoth = 100)
 
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/unstoppable/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 20 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage)
 	if(prob(reflectchance))
 		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
 						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
@@ -27,3 +30,12 @@
 		return -1 // complete projectile permutation
 
 	return (..(P))
+
+
+/obj/item/projectile/energy/electrode/cult
+	color = "#FFFFFF"
+	agony = 0
+	damage = 15
+	damage_type = BURN
+	check_armour = "laser"
+	armor_penetration = 60
