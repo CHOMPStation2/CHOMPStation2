@@ -20025,6 +20025,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock/gear)
+<<<<<<< HEAD
+=======
+"gbR" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "secbus";
+	name = "secbus"
+	},
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/securiship/engines)
+>>>>>>> 84de2d7fcb... Merge pull request #14737 from foopwo/shitcuriship
 "gcc" = (
 /obj/machinery/status_display/supply_display{
 	pixel_y = -32
