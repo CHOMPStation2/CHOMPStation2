@@ -110,7 +110,7 @@
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	var/chem_effective2 = M.species.chem_strength_heal * M.species.chem_strength_heal
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(1 * removed * chem_effective, 1 * removed * chem_effective)
+		M.heal_organ_damage(0.5 * removed * chem_effective, 0.5 * removed * chem_effective)
 	if(M.stat == DEAD)
 		M.heal_organ_damage(9 * removed * chem_effective2, 9 * removed * chem_effective2)
 
