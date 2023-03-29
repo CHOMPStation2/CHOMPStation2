@@ -402,7 +402,9 @@ var/list/species_sound_map = list(
  * get_species_sound(H.species.species_sounds_male)["emote"] // If we're male, and want an emote sound gendered correctly.
 */
 /proc/get_species_sound(var/sounds)
-	return species_sound_map[sounds]
+	if(!islist(species_sound_map[sounds])) // We check here if this list actually has anything in it, or if we're about to return a null index
+		return null // Shitty failsafe but better than rewriting an entire litany of procs rn when I'm low on time - Rykka // list('modular_chomp/sound/voice/silence.ogg')
+	return species_sound_map[sounds] // Otherwise, successfully return our sound
 
 /*
  * The following helper proc will select a species' default sounds - useful for if we're set to "Unset"
