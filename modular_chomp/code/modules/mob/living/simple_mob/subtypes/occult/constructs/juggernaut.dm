@@ -5,7 +5,7 @@
 	melee_damage_lower = 45
 	melee_damage_upper = 65
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	/obj/item/projectile/energy/electrode/cult
+	projectiletype = /obj/item/projectile/energy/electrode/cult
 	movement_cooldown = 1
 
 	loot_list = list(/obj/item/weapon/rig/ch/behemoth = 100)
