@@ -72223,6 +72223,10 @@
 	pixel_x = -5;
 	pixel_y = 1
 	},
+/obj/item/weapon/reagent_containers/glass/rag{
+	pixel_x = 7;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
 "sCV" = (
