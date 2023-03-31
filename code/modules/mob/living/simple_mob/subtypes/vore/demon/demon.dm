@@ -95,8 +95,5 @@
 		return canmove
 	else
 		return ..()
-<<<<<<< HEAD
 
 */
-=======
->>>>>>> fd7b53831b... Merge pull request #14720 from Very-Soft/speedandstuff
