@@ -226,3 +226,13 @@
 	var_changes = list("trauma_mod" = 0.85)
 	excludes = list(/datum/trait/negative/neural_hypersensitivity)
 	can_take = ORGANICS
+<<<<<<< HEAD
+=======
+
+/datum/trait/positive/throw_resistance
+	name = "Firm Body"
+	desc = "Your body is firm enough that small thrown items can't do anything to you."
+	cost = 1
+	var_changes = list("throwforce_absorb_threshold" = 10)
+
+>>>>>>> ff288fc41b... Merge pull request #14740 from Heroman3003/firmbody
