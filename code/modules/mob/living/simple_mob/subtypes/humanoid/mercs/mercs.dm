@@ -286,8 +286,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper
 
-	//ranged_attack_delay = 2.5 SECONDS // CHOMPStation Removal: Ranged attack delay is stupid.
-	ranged_cooldown_time = 2 SECONDS // CHOMPStation Add: Use this for sniper cooldown instead.
+	ranged_attack_delay = 2.5 SECONDS // CHOMPStation Removal: Ranged attack delay is stupid.//CHOMPStation ReRemoval: Instant kill hitscan is stupid.
 
 	loot_list = list(/obj/item/sniper_rifle_part/barrel = 50,
 		/obj/item/sniper_rifle_part/stock = 50,
