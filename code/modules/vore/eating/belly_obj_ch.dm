@@ -120,7 +120,10 @@
 			if(M.absorbed)
 				fullness_to_add *= absorbed_multiplier
 			if(health_impacts_size)
-				fullness_to_add *= M.health / M.getMaxHealth()
+				if(ishuman(M))
+					fullness_to_add *= (M.health + 100) / (M.getMaxHealth() + 100)
+				else
+					fullness_to_add *= M.health / M.getMaxHealth()
 			if(fullness_to_add > 0)
 				belly_fullness += fullness_to_add
 	if(count_liquid_for_sprite)
