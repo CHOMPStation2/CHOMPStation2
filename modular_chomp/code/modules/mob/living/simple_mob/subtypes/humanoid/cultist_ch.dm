@@ -132,7 +132,7 @@
 /mob/living/simple_mob/humanoid/cultist/noodle/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/humanoid/cultist/noodle/bloodjaunt/fireball/init_vore()
+/mob/living/simple_mob/humanoid/cultist/noodle/init_vore()
 	if(!voremob_loaded)
 		return
 	.=..()

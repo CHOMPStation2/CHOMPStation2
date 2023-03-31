@@ -29,6 +29,7 @@
 	vore_bump_chance = 20
 	size_multiplier = 1.10
 	faction = "demon"
+	damage_fatigue_mult = 0
 
 	armor_soak = list(
 		"melee" = 5,
