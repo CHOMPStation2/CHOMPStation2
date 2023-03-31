@@ -10,7 +10,7 @@
 	var/grenade_timer = 5
 	heat_resist = 1
 	cold_resist = 1
-	movement_cooldown = 1.5
+	movement_cooldown = -1.5
 	var/leap_warmup = 2 SECOND
 	var/leap_sound = 'sound/weapons/gauss_shoot.ogg'
 	var/jaunt_warning = 1.0 SECONDS	// How long the jaunt telegraphing is.
@@ -28,6 +28,8 @@
 	vore_capacity = 6
 	vore_bump_chance = 20
 	size_multiplier = 1.10
+	faction = "demon"
+	damage_fatigue_mult = 0
 
 	armor_soak = list(
 		"melee" = 5,
