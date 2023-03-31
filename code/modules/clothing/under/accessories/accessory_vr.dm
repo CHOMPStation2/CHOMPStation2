@@ -686,8 +686,6 @@
 	name = "research shroud"
 	icon_state = "scishroud"
 	item_state = "scishroud"
-<<<<<<< HEAD
-=======
 
 //Crop Jackets
 /obj/item/clothing/accessory/poncho/roles/cloak/crop_jacket
@@ -743,4 +741,3 @@
 	desc = "A cut down jacket that looks like it's light enough to wear on top of some other clothes. This one's a sort of olive-drab kind of colour."
 	icon_state = "cropjacket_drab"
 	item_state = "cropjacket_drab"
->>>>>>> 90f3ccf13e... Merge pull request #14734 from KillianKirilenko/kk-jackets
