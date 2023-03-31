@@ -18,14 +18,14 @@
 	if (!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
 	gargoyle = parent
-	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_transformation
-	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_pause
-	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_checkenergy
+	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_transformation
+	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_pause
+	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_checkenergy
 
 	START_PROCESSING(SSprocessing, src)
 
 /datum/component/gargoyle/process()
-	if (!gargoyle)
+	if (QDELETED(gargoyle))
 		return
 	if (paused && gargoyle.loc != paused_loc)
 		unpause()
@@ -37,9 +37,6 @@
 	if (transformed)
 		if (!statue)
 			transformed = FALSE
-		else if (gargoyle.loc != statue)
-			statue.unpetrify(FALSE)
-			return
 		statue.damage(-0.5)
 		energy = min(energy+0.3, 100)
 
@@ -75,8 +72,7 @@
 			to_chat(src, "<span class='warning'>You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!</span>")
 			return
 	if (istype(loc, /obj/structure/gargoyle))
-		var/obj/structure/gargoyle/statue = loc
-		qdel(statue)
+		qdel(loc)
 	else if (isturf(loc))
 		new /obj/structure/gargoyle(loc, src)
 
