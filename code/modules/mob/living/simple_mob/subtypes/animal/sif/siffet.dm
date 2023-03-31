@@ -58,7 +58,6 @@
 
 /mob/living/simple_mob/animal/sif/siffet/IIsAlly(mob/living/L)
 	. = ..()
-<<<<<<< HEAD
 	//CHOMPADDIITON: Compatibility with structures
 	if(!. && isnull(L.mob_size))
 		return TRUE
@@ -66,7 +65,3 @@
 	else
 		if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
 			return TRUE
-=======
-	if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
-		return TRUE
->>>>>>> fd7b53831b... Merge pull request #14720 from Very-Soft/speedandstuff
