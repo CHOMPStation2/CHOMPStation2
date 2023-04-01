@@ -2607,9 +2607,10 @@
 
 /datum/reagent/ethanol/beer/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.jitteriness = max(M.jitteriness - 3, 0)
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
+		M.jitteriness = max(M.jitteriness - 3, 0)
 
 /datum/reagent/ethanol/beer/lite
 	name = "Lite Beer"
@@ -2669,7 +2670,8 @@
 	..()
 	if(alien == IS_DIONA)
 		return
-	M.dizziness +=5
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		M.dizziness +=5
 
 /datum/reagent/ethanol/firepunch
 	name = "Fire Punch"
@@ -2701,18 +2703,19 @@
 	allergen_type = ALLERGEN_COFFEE|ALLERGEN_STIMULANT //Contains coffee or is made from coffee
 
 /datum/reagent/ethanol/coffee/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	..()
-	M.dizziness = max(0, M.dizziness - 5)
-	M.drowsyness = max(0, M.drowsyness - 3)
-	M.AdjustSleeping(-2)
-	if(M.bodytemperature > 310)
-		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
+	if(!(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
+		..()
+		M.dizziness = max(0, M.dizziness - 5)
+		M.drowsyness = max(0, M.drowsyness - 3)
+		M.AdjustSleeping(-2)
+		if(M.bodytemperature > 310)
+			M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
 
-	//if(alien == IS_TAJARA)
-		//M.adjustToxLoss(0.5 * removed)
-		//M.make_jittery(4) //extra sensitive to caffine
+		//if(alien == IS_TAJARA)
+			//M.adjustToxLoss(0.5 * removed)
+			//M.make_jittery(4) //extra sensitive to caffine
 
 /datum/reagent/ethanol/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	//if(alien == IS_TAJARA)
@@ -2726,7 +2729,8 @@
 	//if(alien == IS_TAJARA)
 		//M.adjustToxLoss(4 * REM)
 		//M.apply_effect(3, STUTTER) //VOREStation Edit end
-	M.make_jittery(5)
+	if(!(M.isSynthetic()))
+		M.make_jittery(5)
 
 /datum/reagent/ethanol/coffee/kahlua
 	name = "Kahlua"
@@ -2830,12 +2834,14 @@
 
 /datum/reagent/ethanol/thirteenloko/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.drowsyness = max(0, M.drowsyness - 7)
-	if (M.bodytemperature > 310)
-		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
-	M.make_jittery(5)
+
+	if(!(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
+		M.drowsyness = max(0, M.drowsyness - 7)
+		if (M.bodytemperature > 310)
+			M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
+		M.make_jittery(5)
 
 /datum/reagent/ethanol/vermouth
 	name = "Vermouth"
@@ -2865,7 +2871,8 @@
 
 /datum/reagent/ethanol/vodka/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.apply_effect(max(M.radiation - 1 * removed, 0), IRRADIATE, check_protection = 0)
+	if(!(M.isSynthetic()))
+		M.apply_effect(max(M.radiation - 1 * removed, 0), IRRADIATE, check_protection = 0)
 
 /datum/reagent/ethanol/whiskey
 	name = "Whiskey"
@@ -2934,16 +2941,18 @@
 
 /datum/reagent/ethanol/pwine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(dose > 30)
-		M.adjustToxLoss(2 * removed)
-	if(dose > 60 && ishuman(M) && prob(5))
-		var/mob/living/carbon/human/H = M
-		var/obj/item/organ/internal/heart/L = H.internal_organs_by_name[O_HEART]
-		if (L && istype(L))
-			if(dose < 120)
-				L.take_damage(10 * removed, 0)
-			else
-				L.take_damage(100, 0)
+
+	if(!(M.isSynthetic()))
+		if(dose > 30)
+			M.adjustToxLoss(2 * removed)
+		if(dose > 60 && ishuman(M) && prob(5))
+			var/mob/living/carbon/human/H = M
+			var/obj/item/organ/internal/heart/L = H.internal_organs_by_name[O_HEART]
+			if (L && istype(L))
+				if(dose < 120)
+					L.take_damage(10 * removed, 0)
+				else
+					L.take_damage(100, 0)
 
 /datum/reagent/ethanol/wine/champagne
 	name = "Champagne"
@@ -3142,7 +3151,9 @@
 
 /datum/reagent/ethanol/beepsky_smash/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.Stun(2)
+
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		M.Stun(2)
 
 /datum/reagent/ethanol/bilk
 	name = "Bilk"
@@ -3568,7 +3579,9 @@
 
 /datum/reagent/ethanol/neurotoxin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.Weaken(3)
+
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		M.Weaken(3)
 
 /datum/reagent/ethanol/patron
 	name = "Patron"
@@ -3822,16 +3835,18 @@
 
 /datum/reagent/ethanol/unathiliquor/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
 
-	var/drug_strength = 10
-	if(alien == IS_SKRELL)
-		drug_strength = drug_strength * 0.8
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
 
-	M.druggy = max(M.druggy, drug_strength)
-	if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
-		step(M, pick(cardinal))
+		var/drug_strength = 10
+		if(alien == IS_SKRELL)
+			drug_strength = drug_strength * 0.8
+
+		M.druggy = max(M.druggy, drug_strength)
+		if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
+			step(M, pick(cardinal))
 
 /datum/reagent/ethanol/sakebomb
 	name = "Sake Bomb"
@@ -4364,19 +4379,21 @@
 
 /datum/reagent/ethanol/godka/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.apply_effect(max(M.radiation - 5 * removed, 0), IRRADIATE, check_protection = 0)
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(H.species.has_organ[O_LIVER])
-			var/obj/item/organ/L = H.internal_organs_by_name[O_LIVER]
-			if(!L)
-				return
-			var/adjust_liver = rand(-3, 2)
-			if(prob(L.damage))
-				to_chat(M, "<span class='cult'>You feel woozy...</span>")
-			L.damage = max(L.damage + (adjust_liver * removed), 0)
-	var/adjust_tox = rand(-4, 2)
-	M.adjustToxLoss(adjust_tox * removed)
+
+	if(!(M.isSynthetic()))
+		M.apply_effect(max(M.radiation - 5 * removed, 0), IRRADIATE, check_protection = 0)
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(H.species.has_organ[O_LIVER])
+				var/obj/item/organ/L = H.internal_organs_by_name[O_LIVER]
+				if(!L)
+					return
+				var/adjust_liver = rand(-3, 2)
+				if(prob(L.damage))
+					to_chat(M, "<span class='cult'>You feel woozy...</span>")
+				L.damage = max(L.damage + (adjust_liver * removed), 0)
+		var/adjust_tox = rand(-4, 2)
+		M.adjustToxLoss(adjust_tox * removed)
 
 /datum/reagent/ethanol/holywine
 	name = "Angel Ichor"
@@ -4542,8 +4559,6 @@
 	reagent_state = LIQUID
 	nutriment_factor = 40 //very filling
 	color = "#d169b2"
-
-//ADDITIONS BELOW THIS LINE MADE ON 04/03/2021
 
 /datum/reagent/drink/soda/kompot
 	name = "Kompot"

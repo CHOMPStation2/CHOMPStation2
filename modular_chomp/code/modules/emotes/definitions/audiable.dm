@@ -8,3 +8,14 @@
 	emote_message_1p_target = "You prbt at TARGET."
 	emote_message_3p_target = "prbts at TARGET."
 	emote_sound = 'sound/voice/prbt2.ogg'
+
+/decl/emote/audible/gasp/get_emote_sound(var/atom/user)
+	..()
+	var/mob/living/carbon/human/H = user
+	// CHOMPEdit: Standardize Species Sounds Getters
+	var/vol = H.species.gasp_volume
+	return list(
+			"sound" = get_species_sound(get_gendered_sound(H))["gasp"],
+			"vol" = vol,
+			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
+		)

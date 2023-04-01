@@ -6,8 +6,9 @@
 	var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
 	var/vore_footstep_chance = 0
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
-	var/mute_entry = FALSE				//Toggleable vorgan entry logs.
-	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
+	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
+	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
+	var/trash_catching = FALSE				//Toggle for trash throw vore.
 
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
@@ -292,3 +293,11 @@
 	set category = "Preferences"
 	set desc = "Mute the chatlog messages when something enters a vore belly."
 	mute_entry = !mute_entry
+	to_chat(src, "<span class='warning'>Entrance logs [mute_entry ? "enabled" : "disabled"].</span>")
+
+/mob/living/proc/toggle_trash_catching()
+	set name = "Toggle Trash Catching"
+	set category = "Abilities"
+	set desc = "Toggle Trash Eater throw vore abilities."
+	trash_catching = !trash_catching
+	to_chat(src, "<span class='warning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")

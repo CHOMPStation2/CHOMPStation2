@@ -27,10 +27,10 @@
 	set desc = "Sets OOC notes about yourself or your RP preferences or status."
 	set category = "OOC"
 
-	var/new_metadata = sanitize(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently, only for this round.", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE), extra = 0)
+	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently, only for this round.", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(usr))
 		ooc_notes = new_metadata
-		to_chat(usr, "OOC notes updated.")
+		to_chat(usr, "<span class='filter_notice'>OOC notes updated.</span>")
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
 
 /mob/living/verb/set_voice_freq()
@@ -59,7 +59,7 @@
 	set category = "OOC"
 
 	//CHOMPEDIT START, Global Talk Sounds
-	var/list/possible_voice_types = talk_sounds/*list(
+	var/list/possible_voice_types = get_talk_sound()/*list(
 		"beep-boop",
 		"goon speak 1",
 		"goon speak 2",

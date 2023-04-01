@@ -20,8 +20,9 @@
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
-			if((category == TRAIT_TYPE_POSITIVE && ((varchange_type == TRAIT_VARCHANGE_LESS_BETTER && var_changes[V] > S.vars[V]) || (varchange_type == TRAIT_VARCHANGE_MORE_BETTER && var_changes[V] < S.vars[V]))) || (category == TRAIT_TYPE_NEGATIVE && ((varchange_type == TRAIT_VARCHANGE_LESS_BETTER && var_changes[V] < S.vars[V]) || (varchange_type == TRAIT_VARCHANGE_MORE_BETTER && var_changes[V] > S.vars[V]))))
-				continue
+			//CHOMPEdit removal
+			//if((category == TRAIT_TYPE_POSITIVE && ((varchange_type == TRAIT_VARCHANGE_LESS_BETTER && var_changes[V] > S.vars[V]) || (varchange_type == TRAIT_VARCHANGE_MORE_BETTER && var_changes[V] < S.vars[V]))) || (category == TRAIT_TYPE_NEGATIVE && ((varchange_type == TRAIT_VARCHANGE_LESS_BETTER && var_changes[V] < S.vars[V]) || (varchange_type == TRAIT_VARCHANGE_MORE_BETTER && var_changes[V] > S.vars[V]))))
+			//	continue
 			S.vars[V] = var_changes[V]
 	if (trait_prefs)
 		for (var/trait in trait_prefs)
@@ -73,4 +74,14 @@
 			return TRUE
 		if(TRAIT_PREF_TYPE_COLOR) //color
 			return "#ffffff"
+		if(TRAIT_PREF_TYPE_STRING) //CHOMPEdit - string
+			return ""
 	return
+
+/datum/trait/proc/apply_sanitization_to_string(var/pref, var/input) //CHOMPEdit addition
+	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
+		return default_value_for_pref(pref)
+	input = sanitizeSafe(input, MAX_NAME_LEN)
+	if (length(input) <= 0)
+		return default_value_for_pref(pref)
+	return input

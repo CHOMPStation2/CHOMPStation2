@@ -33,7 +33,7 @@
 	maxHealth = 40
 	health = 40
 
-	movement_cooldown = 5	// A bit faster so that they can inject the eggs easier.
+	movement_cooldown = 1.5	// A bit faster so that they can inject the eggs easier.
 
 	melee_damage_lower = 5	// Doesn't do a lot of damage, since the goal is to make more spiders with egg attacks.
 	melee_damage_upper = 10
@@ -95,6 +95,8 @@
 /mob/living/simple_mob/animal/giant_spider/nurse/proc/spin_cocoon(atom/movable/AM)
 	if(!istype(AM))
 		return FALSE // We can't cocoon walls sadly.
+	if(istype(AM, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
+		return FALSE
 	visible_message(span("notice", "\The [src] begins to secrete a sticky substance around \the [AM].") )
 
 	// Get our AI to stay still.
@@ -123,8 +125,8 @@
 	var/obj/effect/spider/cocoon/C = new(AM.loc)
 	var/large_cocoon = FALSE
 	for(var/mob/living/L in C.loc)
-		//if(istype(L, /mob/living/simple_mob/animal/giant_spider)) // Cannibalism is bad. CHOMPEdit BUT IT'S NEEDED TO STOP COCOON BOMBS!
-		//	continue // UNLESS YOU WANT TO FIGURE OUT THE AI TARGETING YOURSELF! TODO TODO TODO.
+		if(istype(L, /mob/living/simple_mob/animal/giant_spider)) // Cannibalism is bad.
+			continue
 		fed++
 		visible_message(span("warning","\The [src] sticks a proboscis into \the [L], and sucks a viscous substance out."))
 		to_chat(src, span("notice", "You've fed upon \the [L], and can now lay [fed] cluster\s of eggs."))
@@ -263,7 +265,11 @@
 /datum/ai_holder/simple_mob/melee/nurse_spider/can_attack(atom/movable/the_target, var/vision_required = TRUE)
 	. = ..()
 	if(!.) // Parent returned FALSE.
-		if(istype(the_target, /obj))
+		if (istype(the_target, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
+			var/mob/living/L = the_target
+			if (L.stat)
+				return FALSE
+		if(istype(the_target, /obj) && (!vision_required || can_see_target(the_target))) //CHOMPEdit - they should be passing the can_see_target check
 			var/obj/O = the_target
 			if(!O.anchored)
 				return TRUE

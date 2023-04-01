@@ -59,8 +59,13 @@
 	var/evo_limit = 0
 	var/next
 	meat_type = /obj/item/toy/figure/bounty_hunter
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+
+	can_pain_emote = TRUE
+	species_sounds = "Metroid"
+	pain_emote_1p = list("skree")
+	pain_emote_3p = list("skrees")
 
 /mob/living/simple_mob/metroid/Initialize()
 	nutrition = 100		//Have them start off pretty hungry still.
@@ -114,5 +119,5 @@
 	)
 
 /mob/living/simple_mob/metroid/death()
-	playsound(src, 'sound/metroid/metroiddeath.ogg', 75, 1)
+	// playsound(src, 'sound/metroid/metroiddeath.ogg', 75, 1)
 	..()

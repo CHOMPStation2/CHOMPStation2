@@ -8,5 +8,6 @@
 		/obj/item/weapon/implanter,
 		/obj/item/weapon/disk/nifsoft/compliance,
 		/obj/item/weapon/handcuffs,
-		/obj/item/toy
+		/obj/item/toy,
+		/obj/item/petrifier
 	)

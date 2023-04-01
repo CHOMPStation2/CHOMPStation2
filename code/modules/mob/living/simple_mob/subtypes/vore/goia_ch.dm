@@ -28,6 +28,11 @@
 	vore_pounce_chance = 35	//More likely to nom
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
+	// CHOMPAdd: Don't think its checked, but just in case
+	species_sounds = "Canine"
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+
 /mob/living/simple_mob/otie/zorgoia/New()
 	..()
 	switch(rand(9))
