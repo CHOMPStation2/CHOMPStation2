@@ -240,15 +240,6 @@
 	damage(damage)
 
 /obj/structure/gargoyle/attackby(var/obj/item/weapon/W as obj, var/mob/living/user as mob)
-	if(gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
-		if(istype(W,/obj/item/weapon/grab || /obj/item/weapon/holder))
-			gargoyle.vore_attackby(W, user)
-			return
-		if(gargoyle.adminbus_trash || is_type_in_list(W,edible_trash) && W.trash_eatable && !is_type_in_list(W,item_vore_blacklist))
-			to_chat(user, "<span class='warning'>You slip [W] into [gargoyle]'s [lowertext(gargoyle.vore_selected.name)] .</span>")
-			user.drop_item()
-			W.forceMove(gargoyle.vore_selected)
-			return
 	if(W.is_wrench())
 		if (isspace(loc) || isopenspace(loc))
 			to_chat(user, "<span class='warning'>You can't anchor that here!</span>")
@@ -258,6 +249,15 @@
 		if (do_after(user, (2 SECONDS) * W.toolspeed, target = src))
 			to_chat("<span class='notice'>You [anchored ? "un" : ""]anchor the [src].</span>")
 			anchored = !anchored
+	else if(gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
+		if(istype(W,/obj/item/weapon/grab || /obj/item/weapon/holder))
+			gargoyle.vore_attackby(W, user)
+			return
+		if(gargoyle.adminbus_trash || is_type_in_list(W,edible_trash) && W.trash_eatable && !is_type_in_list(W,item_vore_blacklist))
+			to_chat(user, "<span class='warning'>You slip [W] into [gargoyle]'s [lowertext(gargoyle.vore_selected.name)] .</span>")
+			user.drop_item()
+			W.forceMove(gargoyle.vore_selected)
+			return
 	else if (!(W.flags & NOBLUDGEON))
 		user.setClickCooldown(user.get_attack_speed(W))
 		if(W.damtype == BRUTE || W.damtype == BURN)
