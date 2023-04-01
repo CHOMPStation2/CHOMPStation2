@@ -21,7 +21,7 @@
 
 	maxHealth = 100000
 	health = 100000
-	movement_cooldown = 50
+	movement_cooldown = 10
 
 	see_in_dark = 10
 
@@ -155,7 +155,7 @@
 		restless = TRUE
 		hazard_pickup_chance *= 1.5
 		hazard_drop_chance *= 1.5
-		movement_cooldown = 1
+		movement_cooldown = -1
 		ai_holder.base_wander_delay = 2
 		ai_holder.wander_delay = 2
 		ai_holder.wander = TRUE
@@ -185,7 +185,7 @@
 	. = ..()
 	var/mob/living/simple_mob/vore/overmap/spacewhale/W = holder
 	if(stance == STANCE_FIGHT)
-		W.movement_cooldown = 0
+		W.movement_cooldown = -2
 		W.child_om_marker.glide_size = 0
 	if(stance == STANCE_IDLE)
 		W.hazard_pickup_chance = initial(W.hazard_pickup_chance)

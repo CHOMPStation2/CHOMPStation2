@@ -11,8 +11,8 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 	siemens_coefficient = 0
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	assisted_langs = list()
 

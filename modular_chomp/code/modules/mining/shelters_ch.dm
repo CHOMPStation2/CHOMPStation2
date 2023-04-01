@@ -70,7 +70,7 @@
 
 /datum/map_template/shelter/superpose/LargeAlienShip
 	shelter_id = "LargeAlienShip"
-	mappath = "modular_chomp/maps/submaps/shelters/LargeAlienShip-60x29.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/LargeAlienShip-57x25"
 	name = "Large alien ship."
 	description = "A large alien ship filled with various alien machines and items."
 
@@ -259,3 +259,64 @@
 	mappath = "modular_chomp/maps/submaps/shelters/RestaurationBar-32x32.dmm"
 	name = "Resto-Bar"
 	description = "A large restaurant for food and drink, two overnight rental rooms and a small garden."
+
+/datum/map_template/shelter/superpose/BroadcastingPod
+	shelter_id = "BroadcastingPod"
+	mappath = "modular_chomp/maps/submaps/shelters/BroadcastingPod-11x9.dmm"
+	name = "Broadcasting Pod"
+	description = "A small NanoTransen news pod, everything you need to start live news in the most inhospitable places!"
+
+/datum/map_template/shelter/superpose/DemonPoolV2
+	shelter_id = "DemonPoolV2"
+	mappath = "modular_chomp/maps/submaps/shelters/DemonPoolV2-43x28.dmm"
+	name = "Demon Pool V2"
+	description = "A large redspace corruption with lava, flesh tiles and a small cultist room in the middle. This one is enclosed in rock!"
+
+/datum/map_template/shelter/superpose/PirateShip
+	shelter_id = "PirateShip"
+	mappath = "modular_chomp/maps/submaps/shelters/PirateShip-13x30.dmm"
+	name = "Pirate Ship"
+	description = "Yarg, a medium size pirate ship filled with loaded canons and empty chest, booty awaits."
+
+/datum/map_template/shelter/superpose/SurvivalHomeV2
+	shelter_id = "SurvivalHomeV2"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalHomeV2-9x9.dmm"
+	name = "Survival Home V2"
+	description = "A medium survival pod that can host a small team, has some basic survival gear."
+
+
+/datum/map_template/shelter/superpose/SurvivalMechFab
+	shelter_id = "SurvivalMechFab"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalMechFab-9x9.dmm"
+	name = "Survival Mech Fab"
+	description = "A medium survival pod with a mech and some basic mech fabrication machinery, fix and retrofit!"
+
+/datum/map_template/shelter/superpose/SurvivalMethLab
+	shelter_id = "SurvivalMethLab"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalMethLab-9x10.dmm"
+	name = "Survival Meth Lab"
+	description = "A medium survival pod, repurposed and locked for the production of illegal chems. Don't get caught."
+
+/datum/map_template/shelter/superpose/SurvivalScienceV2
+	shelter_id = "SurvivalScienceV2"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalScience2-9x9.dmm"
+	name = "Survival Science V2"
+	description = "NT pantented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
+
+/datum/map_template/shelter/superpose/SurvivalSecurityV2
+	shelter_id = "SurvivalSecurityV2"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalSecurity2-9x9.dmm"
+	name = "Survival Security V2"
+	description = "NT pantented security survival pod, a high security brig with and some security equipment."
+
+/datum/map_template/shelter/superpose/HillOutpost
+	shelter_id = "HillOutpost"
+	mappath = "modular_chomp/maps/submaps/shelters/HillOutpost-15x11.dmm"
+	name = "Hill Outpost"
+	description = "A small camping site on top of a hill, with all the basics for survival."
+
+/datum/map_template/shelter/superpose/pizzaparlor
+	shelter_id = "PizzaParlor"
+	mappath = "modular_chomp/maps/submaps/shelters/PizzaParlor-18x19.dmm"
+	name = "Pizza Parlor"
+	description = "A small locally owned pizza parlor, now with delivery services."

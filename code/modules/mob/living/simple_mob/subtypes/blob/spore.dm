@@ -17,7 +17,7 @@
 	maxHealth = 30
 	melee_damage_lower = 2
 	melee_damage_upper = 4
-	movement_cooldown = 0
+	movement_cooldown = -2
 	hovering = TRUE
 
 	attacktext = list("slammed into")
@@ -29,6 +29,8 @@
 	var/mob/living/carbon/human/infested = null // The human this thing is totally not making into a zombie.
 	var/can_infest = FALSE
 	var/is_infesting = FALSE
+
+	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
 
 /datum/say_list/spore
 	emote_see = list("sways", "inflates briefly")

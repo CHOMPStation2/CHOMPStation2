@@ -144,12 +144,12 @@
 		/obj/item/rig_module/vision/meson
 		)
 
-//Chief Engineer's rig. This is sort of a halfway point between the old hardsuits (voidsuits) and the rig class.
+//Chief Engineer's rig. This is sort of a halfway point between the old hardsuits (voidsuits) and the rig class. //CHOMPEDIT: if its a mechanized suit its a hardsuit
 /obj/item/weapon/rig/ce
 
-	name = "advanced voidsuit control module"
-	suit_type = "advanced voidsuit"
-	desc = "An advanced voidsuit that protects against hazardous, low pressure environments. Shines with a high polish."
+	name = "advanced hardsuit control module" //CHOMPEDIT: Hardsuit
+	suit_type = "advanced hardsuit" //CHOMPEDIT: Hardsuit
+	desc = "An advanced hardsuit that protects against hazardous, low pressure environments. Shines with a high polish."//CHOMPEDIT: Hardsuit
 	icon_state = "ce_rig"
 	armor = list(melee = 40, bullet = 10, laser = 30,energy = 25, bomb = 40, bio = 100, rad = 100)
 	slowdown = 0

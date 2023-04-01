@@ -120,8 +120,12 @@
 			if(M.absorbed)
 				fullness_to_add *= absorbed_multiplier
 			if(health_impacts_size)
-				fullness_to_add *= M.health / M.getMaxHealth()
-			belly_fullness += fullness_to_add
+				if(ishuman(M))
+					fullness_to_add *= (M.health + 100) / (M.getMaxHealth() + 100)
+				else
+					fullness_to_add *= M.health / M.getMaxHealth()
+			if(fullness_to_add > 0)
+				belly_fullness += fullness_to_add
 	if(count_liquid_for_sprite)
 		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier
 	if(count_items_for_sprite)
@@ -416,3 +420,8 @@
 	if(to_update)
 		updateVRPanels()
 /////////////////////////// CHOMP PCL END ///////////////////////////
+
+/obj/belly/proc/update_internal_overlay()
+	for(var/A in contents)
+		if(isliving(A))
+			vore_fx(A,1)

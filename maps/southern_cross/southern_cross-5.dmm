@@ -16599,6 +16599,19 @@
 /obj/effect/overlay/snow/floor/edges,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"EV" = (
+/obj/structure/table/steel,
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/main/corridor/right_upper)
 "EW" = (
 /obj/machinery/door/airlock{
 	name = "Unit 1"
@@ -64533,7 +64546,7 @@ wQ
 wQ
 Mm
 pN
-GC
+EV
 tx
 XU
 qT

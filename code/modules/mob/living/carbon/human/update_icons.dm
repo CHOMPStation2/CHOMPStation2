@@ -59,47 +59,53 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 // These are used as the layers for the icons, as well as indexes in a list that holds onto them.
 // Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
+//CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
-#define SKIN_LAYER				2		//Skin things added by a call on species
-#define BLOOD_LAYER				3		//Bloodied hands/feet/anything else
-#define MOB_DAM_LAYER			4		//Injury overlay sprites like open wounds
-#define SURGERY_LAYER			5		//Overlays for open surgical sites
-#define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
-#define TAIL_LOWER_LAYER		7		//Tail as viewed from the south
-#define WING_LOWER_LAYER		8		//Wings as viewed from the south
-#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
-#define UNIFORM_LAYER			10		//Uniform-slot item
-#define ID_LAYER				11		//ID-slot item
-#define SHOES_LAYER				12		//Shoe-slot item
-#define GLOVES_LAYER			13		//Glove-slot item
-#define BELT_LAYER				14		//Belt-slot item
-#define SUIT_LAYER				15		//Suit-slot item
-#define TAIL_UPPER_LAYER		16	//Some species have tails to render (As viewed from the N, E, or W)
-#define GLASSES_LAYER			17		//Eye-slot item
-#define BELT_LAYER_ALT			18		//Belt-slot item (when set to be above suit via verb)
-#define SUIT_STORE_LAYER		19		//Suit storage-slot item
-#define BACK_LAYER				20		//Back-slot item
-#define HAIR_LAYER				21		//The human's hair
-#define HAIR_ACCESSORY_LAYER	22		//VOREStation edit. Simply move this up a number if things are added.
-#define EARS_LAYER				23		//Both ear-slot items (combined image)
-#define EYES_LAYER				24		//Mob's eyes (used for glowing eyes)
-#define FACEMASK_LAYER			25		//Mask-slot item
-#define HEAD_LAYER				26		//Head-slot item
-#define HANDCUFF_LAYER			27		//Handcuffs, if the human is handcuffed, in a secret inv slot
-#define LEGCUFF_LAYER			28		//Same as handcuffs, for legcuffs
-#define L_HAND_LAYER			29		//Left-hand item
-#define R_HAND_LAYER			30		//Right-hand item
-#define WING_LAYER				31		//Wings or protrusions over the suit.
-#define VORE_BELLY_LAYER		32		//CHOMPStation edit - Move this and everything after up if things are added.
-#define VORE_TAIL_LAYER			33		//CHOMPStation edit - Move this and everything after up if things are added.
-#define TAIL_UPPER_LAYER_ALT	34		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	35		//Effects drawn by modifiers
-#define FIRE_LAYER				36		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			37		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			38		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			38		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+#define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
+#define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
+#define BODYPARTS_LAYER			4		//Bodyparts layer - CHOMPStation edit
+#define SKIN_LAYER				5		//Skin things added by a call on species
+#define BLOOD_LAYER				6		//Bloodied hands/feet/anything else
+#define MOB_DAM_LAYER			7		//Injury overlay sprites like open wounds
+#define SURGERY_LAYER			8		//Overlays for open surgical sites
+#define UNDERWEAR_LAYER  		9		//Underwear/bras/etc
+#define SHOES_LAYER_ALT			10		//Shoe-slot item (when set to be under uniform via verb)
+#define UNIFORM_LAYER			11		//Uniform-slot item
+#define ID_LAYER				12		//ID-slot item
+#define SHOES_LAYER				13		//Shoe-slot item
+#define GLOVES_LAYER			14		//Glove-slot item
+#define BELT_LAYER				15		//Belt-slot item
+#define SUIT_LAYER				16		//Suit-slot item
+#define TAIL_UPPER_LAYER		17	//Some species have tails to render (As viewed from the N, E, or W)
+#define GLASSES_LAYER			18		//Eye-slot item
+#define BELT_LAYER_ALT			19		//Belt-slot item (when set to be above suit via verb)
+#define SUIT_STORE_LAYER		20		//Suit storage-slot item
+#define BACK_LAYER				21		//Back-slot item
+#define HAIR_LAYER				22		//The human's hair
+#define HAIR_ACCESSORY_LAYER	23		//VOREStation edit. Simply move this up a number if things are added.
+#define EARS_LAYER				24		//Both ear-slot items (combined image)
+#define EYES_LAYER				25		//Mob's eyes (used for glowing eyes)
+#define FACEMASK_LAYER			26		//Mask-slot item
+#define HEAD_LAYER				27		//Head-slot item
+#define HANDCUFF_LAYER			28		//Handcuffs, if the human is handcuffed, in a secret inv slot
+#define LEGCUFF_LAYER			29		//Same as handcuffs, for legcuffs
+#define L_HAND_LAYER			30		//Left-hand item
+#define R_HAND_LAYER			31		//Right-hand item
+#define WING_LAYER				32		//Wings or protrusions over the suit.
+#define VORE_BELLY_LAYER		33		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			34		//CHOMPStation edit - Move this and everything after up if things are added.
+#define TAIL_UPPER_LAYER_ALT	35		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	36		//Effects drawn by modifiers
+#define FIRE_LAYER				37		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			38		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			39		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			39		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
+
+//These two are only used for gargoyles currently
+#define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)
+#define HUMAN_OTHER_LAYERS list(MODIFIER_EFFECTS_LAYER, FIRE_LAYER, MOB_WATER_LAYER, TARGETED_LAYER)
 
 /mob/living/carbon/human
 	var/list/overlays_standing[TOTAL_LAYERS]
@@ -234,6 +240,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 /mob/living/carbon/human/update_icons_body()
 	if(QDESTROYING(src))
 		return
+
+	remove_layer(BODYPARTS_LAYER)
 
 	var/husk_color_mod = rgb(96,88,80)
 	var/hulk_color_mod = rgb(48,224,40)
@@ -393,6 +401,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//END CACHED ICON GENERATION.
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
+
+	var/image/body = image(stand_icon)
+	if (body)
+		body.layer = BODY_LAYER + BODYPARTS_LAYER
+		overlays_standing[BODYPARTS_LAYER] = body
+		apply_layer(BODYPARTS_LAYER)
+
 	icon = stand_icon
 
 	//tail
@@ -453,7 +468,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(hide_underwear[category])
 				continue
 			var/datum/category_item/underwear/UWI = all_underwear[category]
-			var/image/wear = UWI.generate_image(all_underwear_metadata[category], layer = BODY_LAYER+UNDERWEAR_LAYER)
+			var/image/wear = UWI.generate_image(all_underwear_metadata[category], layer = BODY_LAYER+UNDERWEAR_LAYER, digitigrade = digitigrade) //CHOMPEdit
 			overlays_standing[UNDERWEAR_LAYER] += wear
 
 		apply_layer(UNDERWEAR_LAYER)
@@ -1355,6 +1370,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		update_wing_showing()
 
 //Human Overlays Indexes/////////
+/* CHOMPEdit - why are these undefined??
 #undef MUTATIONS_LAYER
 #undef SKIN_LAYER
 #undef MOB_DAM_LAYER
@@ -1388,3 +1404,4 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef WATER_LAYER
 #undef TARGETED_LAYER
 #undef TOTAL_LAYERS
+*/

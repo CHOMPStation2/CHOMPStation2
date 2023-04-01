@@ -285,7 +285,7 @@
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/ch/guilmonhead
-	name = "Guilmon head"
+	name = "Guilmon Head"
 	icon_state = "guilmon_head"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
@@ -303,46 +303,17 @@
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/ch/guilmonarms
-	name = "Guilmon arms"
+	name = "Guilmon Arms"
 	icon_state = "guilmon"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND)
 
-/datum/sprite_accessory/marking/ch/guilmonRLeg
-	name = "Guilmon Right leg"
+/datum/sprite_accessory/marking/ch/guilmonlegs
+	name = "Guilmon Legs"
 	icon_state = "guilmon"
 	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmonLleg
-	name = "Guilmon Left leg"
-	icon_state = "guilmon"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiRleg1
-	name = "Guilmon digigrade right leg 1"
-	icon_state = "guilmon_digitigrade_1"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiLleg1
-	name = "Guilmon digigrade left leg 1"
-	icon_state = "guilmon_digitigrade_1"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiRleg2
-	name = "Guilmon digigrade right leg 2"
-	icon_state = "guilmon_digitigrade_2"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/guilmondigiLleg2
-	name = "Guilmon digigrade left leg 2"
-	icon_state = "guilmon_digitigrade_2"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_L_LEG)
+	body_parts = list(BP_R_LEG,BP_R_FOOT,BP_L_LEG,BP_L_FOOT)
+	digitigrade_acceptance = MARKING_ALL_LEGS
 
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
@@ -619,3 +590,22 @@
     icon_state = "spots_extremities"
     body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
     color_blend_mode = ICON_MULTIPLY
+
+//Hellscout panel markings
+/datum/sprite_accessory/marking/ch/hellscout_panels_body
+	name = "Erebus - Hellscout FBP Panels (upper body)"
+	icon_state = "hellscout_p"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO)
+
+/datum/sprite_accessory/marking/digi/hellscout_panels_legs
+	name = "Erebus - Hellscout FBP Panels (legs)"
+	icon_state = "hellscout_p"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/hellscout_panels_head
+	name = "Erebus - Hellscout FBP Panels (head)"
+	icon_state = "hellscout_p"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)

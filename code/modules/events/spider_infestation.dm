@@ -6,7 +6,8 @@
 
 
 /datum/event/spider_infestation/setup()
-	if(prob(75) && severity == 3) //CHOMP Add 75% chance of the event to even occur if chosen and is major severity
+	if(prob(25) && severity == 3) //CHOMP Add 25% chance for the event to fail if chosen and is major severity
+		log_debug("Major spider infestation failed successfully.")
 		kill()
 		return
 	announceWhen = rand(announceWhen, announceWhen + 60)

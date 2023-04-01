@@ -47,6 +47,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc
 	say_list_type = /datum/say_list/possessed //Set to Null on silenced.
 
+	can_pain_emote = FALSE
 
 //	corpse = /obj/effect/landmark/mobcorpse/possessed
 // Will eventually leave a full corpse with an activated RIG on it. But not yet.

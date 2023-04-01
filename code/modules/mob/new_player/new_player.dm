@@ -117,7 +117,7 @@
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-				stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
+				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
@@ -494,9 +494,24 @@
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
 		data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
+	if(ishuman(character))
+		if(character.client.prefs.auto_backup_implant)
+			var/obj/item/weapon/implant/backup/imp = new(src)
+
+			if(imp.handle_implant(character,character.zone_sel.selecting))
+				imp.post_implant(character)
 	var/gut = join_props["voreny"]
 	var/mob/living/prey = join_props["prey"]
-	if(prey)
+	//CHOMPEdit Start - Item TF
+	var/obj/item/itemtf = join_props["itemtf"]
+	if(itemtf)
+		itemtf.inhabit_item(character, itemtf.name, character)
+		var/mob/living/possessed_voice = itemtf.possessed_voice
+		itemtf.trash_eatable = character.devourable
+		itemtf.unacidable = !character.digestable
+		character.forceMove(possessed_voice)
+	//CHOMPEdit End
+	else if(prey)
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
 		for(var/obj/belly/B in character.vore_organs)
@@ -510,7 +525,6 @@
 	else
 		if(gut)
 			character.forceMove(gut)
-
 
 	qdel(src) // Delete new_player mob
 
@@ -638,6 +652,12 @@
 			var/datum/language/keylang = GLOB.all_languages[client.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
+	// CHOMPStation Add: Preferred Language Setting;
+	if(client.prefs.preferred_language) // Do we have a preferred language?
+		var/datum/language/def_lang = GLOB.all_languages[client.prefs.preferred_language]
+		if(def_lang)
+			new_character.default_language = def_lang
+	// CHOMPStation Add End
 	// And uncomment this, too.
 	//new_character.dna.UpdateSE()
 

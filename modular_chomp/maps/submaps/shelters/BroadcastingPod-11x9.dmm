@@ -1,0 +1,500 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/shuttle/wall,
+/area/survivalpod/superpose/BroadcastingPod)
+"c" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"e" = (
+/obj/structure/bed/chair/bay/chair/padded/blue,
+/obj/structure/sign/nanotrasen{
+	pixel_y = 27
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"g" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/item/device/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"h" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"i" = (
+/obj/structure/table/alien/blue,
+/obj/item/weapon/folder,
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"k" = (
+/obj/machinery/door/airlock/freezer,
+/turf/simulated/shuttle/plating/skipjack,
+/area/survivalpod/superpose/BroadcastingPod)
+"l" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"m" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"o" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"p" = (
+/obj/structure/table/alien/blue,
+/obj/item/device/radio/intercom/entertainment{
+	pixel_y = 5
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"q" = (
+/obj/machinery/newscaster{
+	pixel_y = 29
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"r" = (
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"u" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"v" = (
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"w" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/BroadcastingPod)
+"x" = (
+/obj/structure/table/glass,
+/obj/item/clothing/suit/storage/vest/press,
+/obj/item/clothing/accessory/badge/press/independent,
+/obj/item/device/camera,
+/obj/item/device/camera_film,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"y" = (
+/obj/structure/table/alien/blue,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/fountain4,
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"z" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/menu9,
+/obj/item/weapon/storage/mre/menu9,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/starcaster_news,
+/obj/item/device/starcaster_news,
+/obj/item/device/threadneedle,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/random/soap,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/weapon/storage/box/flare,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"A" = (
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"C" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"D" = (
+/obj/machinery/telecomms/relay,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/BroadcastingPod)
+"E" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/BroadcastingPod)
+"F" = (
+/obj/structure/table/glass,
+/obj/item/device/camerabug,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"G" = (
+/obj/structure/table/glass,
+/obj/machinery/light,
+/obj/item/device/taperecorder{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/obj/item/device/taperecorder{
+	pixel_y = 0
+	},
+/obj/item/weapon/barcodescanner,
+/obj/item/device/tape/random,
+/obj/item/device/tape/random{
+	pixel_y = -4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"H" = (
+/obj/structure/closet/secure_closet{
+	anchored = 1;
+	desc = "It's an immobile card-locked storage unit. A note on the door reads: It's dangerous to go alone. This should help a little bit.";
+	name = "Press Locker";
+	req_one_access = list(21,37);
+	locked = 0
+	},
+/obj/item/clothing/shoes/boots/combat{
+	desc = "A pair of steel-toed synthleather boots. The tag indicates this pair belongs to the Librarian.";
+	name = "press combat boots"
+	},
+/obj/item/clothing/shoes/boots/combat{
+	desc = "A pair of steel-toed synthleather boots. The tag indicates this pair belongs to the Librarian.";
+	name = "press combat boots"
+	},
+/obj/item/clothing/under/suit_jacket/navy/skirt,
+/obj/item/clothing/under/suit_jacket/navy,
+/obj/item/clothing/gloves/swat{
+	desc = "These tactical gloves are somewhat fire and impact-resistant. The tag within indicates that this pair belongs to the Librarian.";
+	name = "press gloves"
+	},
+/obj/item/clothing/gloves/swat{
+	desc = "These tactical gloves are somewhat fire and impact-resistant. The tag within indicates that this pair belongs to the Librarian.";
+	name = "press gloves"
+	},
+/obj/item/clothing/suit/storage/vest/press,
+/obj/item/clothing/suit/storage/vest/press,
+/obj/item/clothing/head/helmet{
+	desc = "Standard issue gear for frontline press. Protects the head from impacts.";
+	name = "press helmet"
+	},
+/obj/item/clothing/head/helmet{
+	desc = "Standard issue gear for frontline press. Protects the head from impacts.";
+	name = "press helmet"
+	},
+/obj/item/clothing/accessory/armor/helmcover/navy,
+/obj/item/clothing/accessory/armor/helmcover/navy,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"I" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"J" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer_1";
+	power_setting = 20;
+	set_temperature = 73;
+	use_power = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"L" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"M" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/BroadcastingPod)
+"N" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8;
+	icon_state = "map_vent_out";
+	use_power = 1
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/BroadcastingPod)
+"O" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"P" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"Q" = (
+/obj/structure/table/glass,
+/obj/structure/closet/walllocker_double/survival/west,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/clothing/accessory/badge/press/plastic{
+	pixel_y = 0;
+	pixel_x = 1
+	},
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"R" = (
+/obj/structure/table/glass,
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -20
+	},
+/obj/item/device/tvcamera{
+	pixel_y = 0
+	},
+/obj/item/device/tvcamera{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"U" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"W" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "News Channel";
+	dir = 10;
+	network = list("Entertainment");
+	name = "News Channel"
+	},
+/turf/simulated/floor/atoll,
+/area/survivalpod/superpose/BroadcastingPod)
+"Y" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+
+(1,1,1) = {"
+a
+a
+a
+a
+M
+a
+M
+a
+a
+"}
+(2,1,1) = {"
+a
+m
+z
+O
+x
+Q
+o
+o
+a
+"}
+(3,1,1) = {"
+a
+g
+l
+l
+l
+l
+o
+o
+k
+"}
+(4,1,1) = {"
+a
+v
+h
+v
+h
+C
+o
+c
+a
+"}
+(5,1,1) = {"
+a
+A
+p
+v
+v
+a
+Y
+o
+M
+"}
+(6,1,1) = {"
+a
+e
+i
+v
+W
+a
+o
+G
+a
+"}
+(7,1,1) = {"
+a
+r
+y
+v
+v
+a
+q
+F
+M
+"}
+(8,1,1) = {"
+a
+v
+I
+v
+I
+C
+o
+R
+a
+"}
+(9,1,1) = {"
+a
+w
+E
+U
+U
+L
+o
+o
+M
+"}
+(10,1,1) = {"
+a
+D
+N
+o
+J
+u
+P
+H
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+M
+a
+M
+a
+a
+"}

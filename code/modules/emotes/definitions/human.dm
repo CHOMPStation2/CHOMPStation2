@@ -4,12 +4,21 @@
 /decl/emote/human/deathgasp
 	key = "deathgasp"
 
+/decl/emote/human/deathgasp/get_emote_sound(user)
+	var/mob/living/carbon/human/H = user
+	var/vol = H.species.death_volume
+	return list(
+			"sound" = get_species_sound(get_gendered_sound(H))["death"],
+			"vol" = vol,
+			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
+		)
+
 /decl/emote/human/deathgasp/do_emote(mob/living/carbon/human/user)
 	if(istype(user) && user.species.get_death_message(user) == DEATHGASP_NO_MESSAGE)
 		to_chat(user, SPAN_WARNING("Your species has no deathgasp."))
 		return
-	. = ..() 
-	
+	. = ..()
+
 /decl/emote/human/deathgasp/get_emote_message_3p(var/mob/living/carbon/human/user)
 	return "[user.species.get_death_message(user)]"
 

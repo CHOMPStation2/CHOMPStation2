@@ -15,8 +15,9 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = null
 
-	male_scream_sound = null //CHOMPedit Screaming skeletons would be funny, but needs better sounds
-	female_scream_sound = null //CHOMPedit
+	// CHOMPedit: No sounds for this species
+	// male_scream_sound = null //CHOMPedit Screaming skeletons would be funny, but needs better sounds
+	// female_scream_sound = null //CHOMPedit
 
 	show_ssd = null
 

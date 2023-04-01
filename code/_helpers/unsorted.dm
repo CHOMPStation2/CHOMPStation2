@@ -432,28 +432,58 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/sortmobs()
 	var/list/moblist = list()
 	var/list/sortmob = sortAtom(mob_list)
+	var/list/after_simplemob_minded = list() //CHOMPEdit
 	for(var/mob/observer/eye/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/observer/blob/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/ai/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/pai/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/robot/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/human/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/brain/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/alien/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/observer/dead/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/new_player/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/living/simple_mob/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
+	moblist.Add(after_simplemob_minded) //CHOMPEdit
+	after_simplemob_minded.Cut()
 	//VOREStation Addition Start
 	for(var/mob/living/dominated_brain/M in sortmob)
 		moblist.Add(M)
@@ -826,10 +856,22 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	else
 		O=new original.type(locate(0,0,0))
 
+	var/static/list/blacklisted_var_names = list(
+		"ATOM_TOPIC_EXAMINE",
+		"type",
+		"loc",
+		"locs",
+		"vars",
+		"parent",
+		"parent_type",
+		"verbs",
+		"ckey",
+		"key"
+	)
 	if(perfectcopy)
 		if((O) && (original))
 			for(var/V in original.vars)
-				if(!(V in list("type","loc","locs","vars", "parent", "parent_type","verbs","ckey","key")))
+				if(!(V in blacklisted_var_names))
 					O.vars[V] = original.vars[V]
 	return O
 

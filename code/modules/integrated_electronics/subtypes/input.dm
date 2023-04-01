@@ -526,6 +526,7 @@
 	complexity = 8
 	inputs = list()
 	outputs = list(
+	"speaker ref",//CHOMPADDITION: so we can target the speaker with an action
 	"speaker" = IC_PINTYPE_STRING,
 	"message" = IC_PINTYPE_STRING
 	)
@@ -551,8 +552,9 @@
 			// as a translation, when it is not.
 			if(S.speaking && !istype(S.speaking, /datum/language/common))
 				translated = TRUE
-		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
-		set_pin_data(IC_OUTPUT, 2, msg)
+		set_pin_data(IC_OUTPUT , 1, weakref(M))//CHOMPADDITION: so we can target the speaker with an action
+		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
+		set_pin_data(IC_OUTPUT, 3, msg)
 
 	push_data()
 	activate_pin(1)
@@ -570,6 +572,7 @@
 	complexity = 12
 	inputs = list()
 	outputs = list(
+	"speaker ref",//CHOMPADDITION: so we can target the speaker with an action
 	"speaker" = IC_PINTYPE_STRING,
 	"message" = IC_PINTYPE_STRING
 	)
@@ -596,16 +599,15 @@
 /obj/item/integrated_circuit/input/microphone/sign/hear_talk(mob/M, list/message_pieces, verb)
 	var/msg = multilingual_to_message(message_pieces)
 
-	var/translated = FALSE
+	var/translated = TRUE //CHOMPEDIT: There is no common signlanguage so its all translated, pin 1 is basically useless
+	//CHOMPEDIT:making the signlanguage translator actually useful
 	if(M && msg)
 		for(var/datum/multilingual_say_piece/S in message_pieces)
-			if(S.speaking)
-				if(!((S.speaking.flags & NONVERBAL) || (S.speaking.flags & SIGNLANG)))
-					translated = TRUE
-					msg = stars(msg)
-					break
-		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
-		set_pin_data(IC_OUTPUT, 2, msg)
+			if(!((S.speaking.flags & NONVERBAL) || (S.speaking.flags & SIGNLANG))||S.speaking.name == LANGUAGE_ECHOSONG) //Ignore verbal languages
+				return
+		set_pin_data(IC_OUTPUT , 1, weakref(M))//CHOMPADDITION: so we can target the speaker with an action
+		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
+		set_pin_data(IC_OUTPUT, 3, msg)
 
 	push_data()
 	if(!translated)
@@ -614,12 +616,11 @@
 		activate_pin(2)
 
 /obj/item/integrated_circuit/input/microphone/sign/hear_signlang(text, verb, datum/language/speaking, mob/M as mob)
-	var/translated = FALSE
+	var/translated = TRUE //CHOMPEDIT: There is no common signlanguage so its all translated, pin 1 is basically useless
 	if(M && text)
 		if(speaking)
-			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG)))
-				translated = TRUE
-				text = speaking.scramble(text, my_langs)
+			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG))||speaking.name == LANGUAGE_ECHOSONG) //CHOMPEDIT: ignore echo song too
+				return //CHOMPEDIT: dont spam the chat with scrambled text
 		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 2, text)
 

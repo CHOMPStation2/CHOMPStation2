@@ -215,7 +215,8 @@
 			damage = damage / 2
 		take_damage(damage)
 	else
-		visible_message("<b>\The [user]</b> bonks \the [src] harmlessly.")
+		if (user.client) //CHOMPEdit addition - The space jellyfish bonks the window harmlessly.x1762 - they aren't doing any damage to it even, so there's no point in having this here other than showing they're attacking the window - constantly, every half a second. The attack animation can take care of that.
+			visible_message("<b>\The [user]</b> bonks \the [src] harmlessly.")
 	user.do_attack_animation(src)
 	return 1
 

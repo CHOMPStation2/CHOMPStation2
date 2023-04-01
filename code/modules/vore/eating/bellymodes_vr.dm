@@ -185,28 +185,10 @@
 	var/to_update = FALSE
 	var/digestion_noise_chance = 0
 	var/list/touchable_mobs = list()
-	var/touchable_amount = touchable_atoms.len  //CHOMPEdit start
 
 	for(var/A in touchable_atoms)
-		//Handle stray items
-		if(isitem(A))
-			if(item_digest_mode == IM_DIGEST_PARALLEL)
-				did_an_item = handle_digesting_item(A, touchable_amount)
-			else if(!did_an_item)
-				did_an_item = handle_digesting_item(A, 1)
-			if(did_an_item)
-				to_update = TRUE
-
-			//Less often than with normal digestion
-			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL) && prob(25))
-				// This is a little weird, but the point of it is that we don't want to repeat code
-				// but we also want the prob(25) chance to run for -every- item we look at, not just once
-				// More gurgles the better~
-				digestion_noise_chance = 25
-			continue  //CHOMPEdit end
-
 		//Handle eaten mobs
-		else if(isliving(A))
+		if(isliving(A)) //CHOMPEdit Start
 			var/mob/living/L = A
 			touchable_mobs += L
 
@@ -214,7 +196,7 @@
 				L.Weaken(5)
 
 			// Fullscreen overlays
-			vore_fx(L)
+			//vore_fx(L)	//CHOMPEdit - Don't update this every single process tick, damn.
 
 			//Handle 'human'
 			if(ishuman(L))
@@ -246,10 +228,7 @@
 					for(var/slot in slots)
 						var/obj/item/I = H.get_equipped_item(slot = slot)
 						if(I && I.canremove)
-							if(handle_digesting_item(I))
-								digestion_noise_chance = 25
-								to_update = TRUE
-								break
+							touchable_atoms |= I
 
 				//Stripping flag
 				if(mode_flags & DM_FLAG_STRIPPING)
@@ -260,6 +239,25 @@
 							digestion_noise_chance = 25
 							to_update = TRUE
 							break // Digest off one by one, not all at once
+
+	for(var/A in touchable_atoms) //List updated for worn items.
+		//Handle stray items
+		if(isitem(A))
+			if(item_digest_mode == IM_DIGEST_PARALLEL)
+				var/touchable_amount = touchable_atoms.len
+				did_an_item = handle_digesting_item(A, touchable_amount)
+			else if(!did_an_item)
+				did_an_item = handle_digesting_item(A, 1)
+			if(did_an_item)
+				to_update = TRUE
+
+			//Less often than with normal digestion
+			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL) && prob(25))
+				// This is a little weird, but the point of it is that we don't want to repeat code
+				// but we also want the prob(25) chance to run for -every- item we look at, not just once
+				// More gurgles the better~
+				digestion_noise_chance = 25
+			continue  //CHOMPEdit end
 
 		//get rid of things like blood drops and gibs that end up in there
 		else if(istype(A, /obj/effect/decal/cleanable))

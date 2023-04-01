@@ -73,7 +73,7 @@
 	maxHealth = 200
 	health = 200
 	pass_flags = PASSTABLE
-	movement_cooldown = 10
+	movement_cooldown = 3
 	movement_sound = 'sound/effects/spider_loop.ogg'
 	poison_resist = 0.5
 
@@ -118,6 +118,9 @@
 		)
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	species_sounds = "Spider"
+	pain_emote_1p = list("chitter", "click") //CHOMP Add
+	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
 
 /mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
 	if(isliving(A))

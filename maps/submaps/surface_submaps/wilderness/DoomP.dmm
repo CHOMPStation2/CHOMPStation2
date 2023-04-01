@@ -579,7 +579,7 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
-/obj/item/toy/plushie/borgplushie/drakiesec,
+/obj/item/toy/plushie/borgplushie/drake/sec,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "kp" = (

@@ -90,6 +90,16 @@
 				digest_stage = w_class
 		else
 			GLOB.items_digested_roundstat++
+			if(isbelly(item_storage)) //CHOMPEdit Start
+				var/obj/belly/B = item_storage
+				var/soundfile
+				if(w_class >= 4)
+					soundfile = pick('sound/vore/shortgurgles/gurgle_L1.ogg', 'sound/vore/shortgurgles/gurgle_L2.ogg', 'sound/vore/shortgurgles/gurgle_L3.ogg')
+				else if(w_class >= 3)
+					soundfile = pick('sound/vore/shortgurgles/gurgle_M1.ogg', 'sound/vore/shortgurgles/gurgle_M2.ogg', 'sound/vore/shortgurgles/gurgle_M3.ogg')
+				else
+					soundfile = pick('sound/vore/shortgurgles/gurgle_S1.ogg', 'sound/vore/shortgurgles/gurgle_S2.ogg', 'sound/vore/shortgurgles/gurgle_S3.ogg')
+				playsound(src, soundfile, vol = B.sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit End
 			qdel(src)
 	if(g_damage > w_class)
 		return w_class

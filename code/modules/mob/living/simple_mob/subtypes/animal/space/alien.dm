@@ -87,7 +87,7 @@
 	projectilesound = 'sound/weapons/pierce.ogg'
 
 
-	movement_cooldown = 10
+	movement_cooldown = 3
 
 /mob/living/simple_mob/animal/space/alien/queen/empress
 	name = "alien empress"

@@ -8,17 +8,24 @@
 	var/mob/living/carbon/human/gargoyle //easy reference
 	var/obj/structure/gargoyle/statue //another easy ref
 
+	//Adjustable mod
+	var/identifier = "statue"
+	var/adjective = "hardens"
+	var/material = "stone"
+	var/tint = "#FFFFFF"
+
 /datum/component/gargoyle/Initialize()
 	if (!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
 	gargoyle = parent
-	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_transformation
-	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_pause
-	gargoyle.verbs += /mob/living/carbon/human/proc/gargoyle_checkenergy
+	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_transformation
+	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_pause
+	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_checkenergy
+
 	START_PROCESSING(SSprocessing, src)
 
 /datum/component/gargoyle/process()
-	if (!gargoyle)
+	if (QDELETED(gargoyle))
 		return
 	if (paused && gargoyle.loc != paused_loc)
 		unpause()
@@ -59,14 +66,13 @@
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
 		if (comp.energy <= 0 && isturf(loc))
-			to_chat(src, "<span class='danger'>You suddenly turn into a statue as you run out of energy!</span>")
+			to_chat(src, "<span class='danger'>You suddenly turn into a [comp.identifier] as you run out of energy!</span>")
 		else if (comp.cooldown > world.time)
 			var/time_to_wait = (comp.cooldown - world.time) / (1 SECONDS)
 			to_chat(src, "<span class='warning'>You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!</span>")
 			return
 	if (istype(loc, /obj/structure/gargoyle))
-		var/obj/structure/gargoyle/statue = loc
-		qdel(statue)
+		qdel(loc)
 	else if (isturf(loc))
 		new /obj/structure/gargoyle(loc, src)
 
