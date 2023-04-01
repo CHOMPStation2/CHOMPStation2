@@ -96,12 +96,12 @@
 				body {font-size: 13px; font-family: Verdana;}
 				</style>
 				</head>
-				<body>
+				<body>		//CHOMPEdit Start - Updated Supermatter Engine Manual
 				<h1>OPERATING MANUAL FOR MK 1 PROTOTYPE THERMOELECTRIC SUPERMATTER ENGINE 'TOMBOLA'</h1>
 				<br>
 				<h2>OPERATING PRINCIPLES</h2>
 				<br>
-				<li>The supermatter crystal serves as the fundamental power source of the engine. Upon being charged, it begins to emit large amounts of heat and radiation, as well and oxygen and phoron gas. As oxygen accelerates the reaction and reacts with phoron to start a fire, it must be filtered out. It's recommended to filter out all gases besides nitrogen for standard operation. </li>
+				<li>The supermatter crystal serves as the fundamental power source of the engine. Upon being charged, it begins to emit large amounts of heat and radiation, as well as oxygen and phoron gas. As oxygen accelerates the reaction and reacts with phoron to start fires, oxygen must be filtered out. It's recommended to filter out all gases besides phoron for standard operation. </li>
 				<br>
 				<li>Gas in the reactor chamber housing the supermatter is circulated through the reactor loop, which passes through the filters and thermoelectric generators. The thermoelectric generators transfer heat from the reactor loop to the colder radiator loop, thereby generating power. Additional power is generated from internal turbines in the circulators.</li>
 				<br>
@@ -120,13 +120,13 @@
 				<br>
 				<h2>STANDARD STARTUP PROCEDURE</h2>
 				<ol>
-				<li>Fill reactor loop and radiator loop with three (3) standard canisters of nitrogen gas each.</li>
+				<li>Fill reactor loop and radiator loop with two (2) standard canisters of phoron gas each.</li>
 				<li>Fill the waste handling radiator loop with one (1) standard canister of carbon dioxide gas.</li>
 				<li>Enable both the high power gas pumps near the thermo-electric generators and maximize the desired output.</li>
-				<li>Enable both the omni-filters and ensure they are set to filter nitrogen back into the system.</li>
+				<li>Enable both the omni-filters and ensure they are set to filter phoron back into the system.</li>
 				<li>Enable the gas pump from the filters to waste handling and maximize the desired output.</li>
 				<li>Close the monitoring room blast doors and open the reactor blast doors,</li>
-				<li>Fire 8-9 pulses from emitter at supermatter crystal. The expected power output is around a megawatt. NOTE: It will take a few minutes to heat up.</li>
+				<li>Fire 20 pulses (5 rounds) from the emitter at the supermatter crystal. NOTE: It will take a few minutes to heat up.</li>
 				<li>Close the reactor blast doors and keep the monitoring room blast doors closed to prevent radiation leaking.</li>
 				</ol>
 				<br>
@@ -134,7 +134,7 @@
 				<ol>
 				<li>Ensure that radiation protection and meson goggles are worn at all times while working in the engine room.</li>
 				<li>Ensure that reactor and radiator loops are undamaged and unobstructed.</li>
-				<li>Ensure that, in a standard setup, only nitrogen is being filtered back into the system. Do not allow exhaust pressure to exceed 4500 kPa.</li>
+				<li>Ensure that, in a standard setup, only phoron is being filtered back into the system. Do not allow exhaust pressure to exceed 4500 kPa.</li>
 				<li>Ensure that engine room Area Power Controller (APC) and engine Superconducting Magnetic Energy Storage unit (SMES) are properly charged.</li>
 				<li>Ensure that reactor temperature does not exceed 5000K. In event of reactor temperature exceeding 5000K, see EMERGENCY COOLING PROCEDURE.</li>
 				<li>In event of imminent and/or unavoidable delamination, see EJECTION PROCEDURE.</li>
@@ -151,11 +151,11 @@
 				<h2>EJECTION PROCEDURE</h2>
 				<ol>
 				<li>Ensure the engine room has power. The blast doors and ejection platform are unresponsive without power.</li>
-				<li>Press Engine Ventilatory Control button to open engine core blast door to space.</li>
-				<li>Press Emergency Core Eject button to eject supermatter crystal. NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
-				<li>In event of ejection failure, <i>pending</i></li>
+				<li>Press Engine Ventilatory Control button to open engine core blast door to space. (In CE Office and next to the reactor shroud)</li>
+				<li>Press Emergency Core Eject button to eject supermatter crystal. (In CE Office, only) NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
+				<li>In event of ejection failure, <i>good luck.</i></li>
 				</ol>
-				</body>
+				</body>			//CHOMPEdit End - Updated Supermatter Engine Manual
 			</html>"}
 
 // TESLA Engine
