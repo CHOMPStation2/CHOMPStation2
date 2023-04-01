@@ -239,7 +239,16 @@
 	visible_message("<span class='danger'>[user] [attack_message] the [src]!</span>")
 	damage(damage)
 
-/obj/structure/gargoyle/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/structure/gargoyle/attackby(var/obj/item/weapon/W as obj, var/mob/living/user as mob)
+	if(gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
+		if(istype(W,/obj/item/weapon/grab || /obj/item/weapon/holder))
+			gargoyle.vore_attackby(W, user)
+			return
+		if(gargoyle.adminbus_trash || is_type_in_list(W,edible_trash) && W.trash_eatable && !is_type_in_list(W,item_vore_blacklist))
+			to_chat(user, "<span class='warning'>You slip [W] into [gargoyle]'s [lowertext(gargoyle.vore_selected.name)] .</span>")
+			user.drop_item()
+			W.forceMove(gargoyle.vore_selected)
+			return
 	if(W.is_wrench())
 		if (isspace(loc) || isopenspace(loc))
 			to_chat(user, "<span class='warning'>You can't anchor that here!</span>")
@@ -264,3 +273,22 @@
 		cut_overlay(tail_image)
 		tail_image.layer = BODY_LAYER + ((dir in tail_lower_dirs) ? TAIL_LOWER_LAYER : tail_alt)
 		add_overlay(tail_image)
+
+/obj/structure/gargoyle/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)
+	if(istype(AM,/obj/item) && gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
+		var/obj/item/I = AM
+		if(gargoyle.adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
+			gargoyle.hitby(AM, speed)
+			return
+	else if(istype(AM,/mob/living) && gargoyle)
+		var/mob/living/L = AM
+		if(gargoyle.throw_vore && L.throw_vore && gargoyle.can_be_drop_pred && L.can_be_drop_prey)
+			var/drop_prey_temp = FALSE
+			if(gargoyle.can_be_drop_prey)
+				drop_prey_temp = TRUE
+				gargoyle.can_be_drop_prey = FALSE //Making sure the original gargoyle body is not the one getting throwvored instead.
+			gargoyle.hitby(L, speed)
+			if(drop_prey_temp)
+				gargoyle.can_be_drop_prey = TRUE
+			return
+	return ..()
