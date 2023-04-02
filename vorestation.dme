@@ -4509,6 +4509,7 @@
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\overmap\shuttles.dm"
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
@@ -4516,6 +4517,9 @@
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
 #include "maps\southern_cross\turfs\outdoors.dm"
+=======
+#include "maps\stellar_delight\stellar_delight.dm"
+>>>>>>> c65bbfc706... Merge pull request #14753 from Heroman3003/mapswap1
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "maps\submaps\engine_submaps\engine.dm"
