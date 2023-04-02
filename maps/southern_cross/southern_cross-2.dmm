@@ -80062,9 +80062,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/medical/medical_restroom)
 "xpf" = (
-/obj/machinery/transhuman/autoresleever{
-	ghost_spawns = 1
-	},
+/obj/machinery/transhuman/autoresleever,
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
 "xpv" = (
