@@ -84,7 +84,7 @@
 	title = "Supermatter Engine Operating Manual"
 
 /obj/item/weapon/book/manual/supermatter_engine/New()
-	..()
+	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
 	dat = {"<html>
 				<head>
 				<style>
@@ -96,7 +96,7 @@
 				body {font-size: 13px; font-family: Verdana;}
 				</style>
 				</head>
-				<body>		//CHOMPEdit Start - Updated Supermatter Engine Manual
+				<body>
 				<h1>OPERATING MANUAL FOR MK 1 PROTOTYPE THERMOELECTRIC SUPERMATTER ENGINE 'TOMBOLA'</h1>
 				<br>
 				<h2>OPERATING PRINCIPLES</h2>
@@ -155,8 +155,8 @@
 				<li>Press Emergency Core Eject button to eject supermatter crystal. (In CE Office, only) NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
 				<li>In event of ejection failure, <i>good luck.</i></li>
 				</ol>
-				</body>			//CHOMPEdit End - Updated Supermatter Engine Manual
-			</html>"}
+				</body>
+			</html>"}			//CHOMPEdit End - Updated Supermatter Engine Manual
 
 // TESLA Engine
 
