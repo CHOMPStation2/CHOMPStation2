@@ -153,6 +153,7 @@
 //Projectile//
 /obj/item/projectile/energy/inversion
 	name = "inversion blast"
+	icon = 'icons/obj/projectiles_impact.dmi'
 	icon_state = "impact_invert"
 	damage = 15
 	armor_penetration = 60
