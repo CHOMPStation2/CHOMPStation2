@@ -149,8 +149,8 @@
 
 /obj/machinery/recycling/sorter/proc/dispense_if_possible()
 	for(var/mat in materials)
-		while(materials[mat] >= (SHEET_MATERIAL_AMOUNT/10)) //CHOMPEDIT: Lowers the amount needed to make dust
-			materials[mat] -= (SHEET_MATERIAL_AMOUNT/10) //CHOMPEDIT: Lowers the amount needed to make dust
+		while(materials[mat] >= SHEET_MATERIAL_AMOUNT)
+			materials[mat] -= SHEET_MATERIAL_AMOUNT
 			new /obj/item/material_dust(get_step(src, dir), mat)
 			sleep(2 SECONDS)
 
