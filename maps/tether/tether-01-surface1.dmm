@@ -4151,6 +4151,10 @@
 	name = "north bump";
 	pixel_y = 28
 	},
+<<<<<<< HEAD
+=======
+/mob/living/simple_mob/vore/aggressive/rat/pet,
+>>>>>>> cd9eb7c8a8... Merge pull request #14752 from Heroman3003/ratname
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 "agR" = (
