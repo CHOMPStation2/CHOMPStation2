@@ -352,7 +352,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
 "Ii" = (
-/obj/item/weapon/rig/light/ninja,
+/obj/item/weapon/rig/robotics,
 /turf/simulated/floor/bluegrid,
 /area/submap/eclipsemountain)
 "Il" = (

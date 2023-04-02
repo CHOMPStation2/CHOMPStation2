@@ -16,6 +16,7 @@
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical/pillbottle,
+/obj/random/material/refined,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "e" = (
@@ -100,7 +101,7 @@
 "t" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
-/obj/random/firstaid,
+/obj/random/material/precious,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "u" = (
@@ -148,6 +149,7 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical/pillbottle,
+/obj/random/material/refined,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "G" = (
@@ -158,6 +160,7 @@
 /obj/structure/closet/crate/secure/loot,
 /obj/random/mainttoyloot/nofail,
 /obj/random/mainttoyloot/nofail,
+/obj/item/stack/material/mhydrogen,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "I" = (
@@ -209,7 +212,7 @@
 	dir = 1
 	},
 /obj/structure/table/wooden_reinforced,
-/obj/random/firstaid,
+/obj/random/material/precious,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "U" = (
