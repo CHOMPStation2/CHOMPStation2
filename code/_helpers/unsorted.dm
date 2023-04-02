@@ -1141,16 +1141,16 @@ var/global/list/common_tools = list(
 
 // check if mob is lying down on something we can operate him on.
 // The RNG with table/rollerbeds comes into play in do_surgery() so that fail_step() can be used instead.
-//CHOMPEDIT START self surgery
+//CHOMPEDIT START synth self surgery
 /proc/can_operate(mob/living/carbon/M, mob/living/user)
 	. = M.lying
 	if(user && M == user && user.allow_self_surgery && user.a_intent == I_HELP)	// You can, technically, always operate on yourself after standing still. Inadvised, but you can.
 
-		if(M.isSynthetic())
+		if(M.isSynthetic())//Beep Boops only.
 			. = TRUE
 
 	return .
-
+//CHOMPedit end
 // Returns an instance of a valid surgery surface.
 /mob/living/proc/get_surgery_surface(mob/living/user)
 	if(!lying && user != src)
