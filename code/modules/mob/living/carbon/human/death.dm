@@ -48,7 +48,10 @@
 	BITSET(hud_updateflag, LIFE_HUD)
 
 	//Handle species-specific deaths.
-	species.handle_death(src)
+	//CHOMPEdit start - Enable not-actually-dying being a species effect
+	if(species.handle_death(src))
+		return
+	//CHOMPEdit end
 	animate_tail_stop()
 	stop_flying() //VOREStation Edit.
 

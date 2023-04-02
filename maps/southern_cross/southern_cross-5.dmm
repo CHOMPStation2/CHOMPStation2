@@ -5793,6 +5793,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/refinery)
+"kT" = (
+/obj/item/weapon/pickaxe,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outside/plains/mountains)
 "kU" = (
 /obj/machinery/mineral/input,
 /obj/machinery/light/small{
@@ -6976,6 +6980,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/smes)
+"mZ" = (
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outside/plains/mountains)
 "na" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 10
@@ -11193,6 +11200,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/corridor)
+"uz" = (
+/turf/simulated/floor/weird_things/dark{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/surface/outside/plains/mountains)
 "uA" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/floor_decal/borderfloor{
@@ -21672,6 +21686,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/surface/outpost/engineering/reactor_smes)
+"Ol" = (
+/obj/structure/dark_portal/minion,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outside/plains/mountains)
 "Om" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -77452,9 +77470,9 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
+mZ
+mZ
+mZ
 XE
 XE
 XE
@@ -77709,11 +77727,11 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
+mZ
+uz
+uz
+mZ
+mZ
 XE
 XE
 XE
@@ -77966,13 +77984,13 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
-XE
-XE
+mZ
+uz
+mZ
+uz
+uz
+uz
+mZ
 XE
 XE
 XE
@@ -78224,13 +78242,13 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
-XE
-XE
+mZ
+uz
+uz
+Ol
+uz
+mZ
+mZ
 XE
 XE
 XE
@@ -78482,13 +78500,13 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
-XE
-XE
+mZ
+uz
+uz
+uz
+uz
+mZ
+kT
 XE
 XE
 XE
@@ -78741,11 +78759,11 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
+uz
+mZ
+uz
+uz
+mZ
 XE
 XE
 XE
@@ -79000,9 +79018,9 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
+mZ
+mZ
+mZ
 XE
 XE
 XE
