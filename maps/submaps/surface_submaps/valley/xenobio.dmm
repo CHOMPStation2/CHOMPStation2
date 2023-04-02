@@ -31,7 +31,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/mob/living/simple_mob/slime/xenobio/green,
+/mob/living/simple_mob/slime/xenobio/green{
+	unity = 1
+	},
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
 "bY" = (
@@ -50,9 +52,13 @@
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "dT" = (
-/obj/structure/table/standard,
-/obj/item/clothing/glasses/graviton,
-/turf/simulated/floor/plating,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "ee" = (
 /obj/structure/table/standard,
@@ -73,7 +79,9 @@
 	},
 /area/submap/xenobio)
 "fH" = (
-/mob/living/simple_mob/slime/xenobio/cerulean,
+/mob/living/simple_mob/slime/xenobio/yellow{
+	unity = 1
+	},
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -111,7 +119,9 @@
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "kl" = (
-/mob/living/simple_mob/slime/xenobio/ruby,
+/mob/living/simple_mob/slime/xenobio/ruby{
+	unity = 1
+	},
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "kM" = (
@@ -280,6 +290,8 @@
 /area/submap/xenobio)
 "Aq" = (
 /mob/living/carbon/human/monkey,
+/obj/structure/table/standard,
+/obj/item/stack/material/morphium,
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -365,6 +377,7 @@
 /obj/structure/table/standard,
 /obj/item/weapon/melee/baton/slime/loaded,
 /obj/item/weapon/melee/baton/slime/loaded,
+/obj/item/clothing/glasses/graviton,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "HY" = (
@@ -375,11 +388,20 @@
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "JM" = (
-/mob/living/simple_mob/slime/xenobio/oil,
+/mob/living/simple_mob/slime/xenobio/oil{
+	unity = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "JP" = (
-/mob/living/simple_mob/slime/feral/dark_blue,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/mob/living/simple_mob/slime/xenobio/emerald{
+	unity = 1
+	},
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "JZ" = (
@@ -438,11 +460,11 @@
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "NN" = (
-/obj/structure/table/standard,
-/obj/item/stack/material/morphium,
-/turf/simulated/floor/reinforced/phoron{
-	phoron = 100
+/obj/machinery/light/poi{
+	dir = 8
 	},
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "OW" = (
 /obj/structure/cable/yellow{
@@ -453,8 +475,10 @@
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "PM" = (
-/obj/structure/table/standard,
-/turf/simulated/floor/plating,
+/mob/living/simple_mob/slime/xenobio/sapphire{
+	unity = 1
+	},
+/turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "Qq" = (
 /obj/structure/table/standard,
@@ -471,8 +495,11 @@
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "Sc" = (
-/mob/living/simple_mob/slime/feral/dark_blue,
-/turf/simulated/floor/reinforced,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "SD" = (
 /obj/structure/table/woodentable,
@@ -481,6 +508,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/green,
+/area/submap/xenobio)
+"SE" = (
+/mob/living/simple_mob/slime/xenobio/silver{
+	unity = 1
+	},
+/turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "SZ" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -524,7 +557,9 @@
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "WL" = (
-/mob/living/simple_mob/slime/xenobio/bluespace,
+/mob/living/simple_mob/slime/xenobio/bluespace{
+	unity = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "YT" = (
@@ -728,7 +763,7 @@ HY
 je
 HY
 GP
-JP
+zo
 JZ
 zo
 oC
@@ -763,11 +798,11 @@ ee
 zo
 JZ
 zo
-fZ
+NN
+PM
 zo
-zo
-zo
-fZ
+SE
+NN
 zo
 JZ
 zo
@@ -784,8 +819,8 @@ zo
 AO
 Af
 Af
-Af
-Af
+dT
+JP
 Af
 Af
 Af
@@ -800,14 +835,14 @@ uu
 uu
 oC
 nt
-JP
-zo
-zo
-pa
 zo
 zo
 zo
-pa
+Sc
+PM
+zo
+SE
+Sc
 zo
 zo
 zo
@@ -849,7 +884,7 @@ je
 HY
 GP
 HY
-Sc
+HY
 HY
 oC
 uu
@@ -905,10 +940,10 @@ bl
 Ai
 oC
 Aq
-Mo
+rf
 fz
 oC
-dT
+bl
 bl
 Kw
 oC
@@ -928,9 +963,9 @@ Mo
 fH
 Mo
 oC
-Qq
 bl
-Kw
+bl
+Qq
 oC
 uu
 uu
@@ -945,10 +980,10 @@ bl
 Ai
 oC
 Me
-rf
-NN
+Mo
+Mo
 oC
-PM
+bl
 bl
 Kw
 oC
