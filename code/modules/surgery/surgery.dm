@@ -126,8 +126,8 @@
 
 
 /obj/item/proc/can_do_surgery(mob/living/carbon/M, mob/living/user)
-	if(M == user)
-		return 0
+	//if(M == user) CHOMPedit start, allows self surgery
+	//	return 0 CHOMPedit end
 	if(!ishuman(M))
 		return 1
 
