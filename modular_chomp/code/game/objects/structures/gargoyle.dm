@@ -249,7 +249,7 @@
 		if (do_after(user, (2 SECONDS) * W.toolspeed, target = src))
 			to_chat("<span class='notice'>You [anchored ? "un" : ""]anchor the [src].</span>")
 			anchored = !anchored
-	else if(gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
+	else if(!isrobot(user) && gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
 		if(istype(W,/obj/item/weapon/grab || /obj/item/weapon/holder))
 			gargoyle.vore_attackby(W, user)
 			return
