@@ -53,7 +53,7 @@
 		dna.real_name = real_name
 		sync_organ_dna()
 
-	verbs |= /mob/living/proc/toggle_selfsurgery //CHOMPstation Re-Add for synths only, does nothing for organics. If there's a way for this verb to only appear for synths do tell me
+	verbs |= /mob/living/proc/toggle_selfsurgery //CHOMPstation Re-Add for synths/prosthetics only, does nothing for organics. If there's a way for this verb to only appear for synths do tell me
 	AddComponent(/datum/component/personal_crafting)
 
 /mob/living/carbon/human/Destroy()

@@ -1146,11 +1146,13 @@ var/global/list/common_tools = list(
 	. = M.lying
 	if(user && M == user && user.allow_self_surgery && user.a_intent == I_HELP)	// You can, technically, always operate on yourself after standing still. Inadvised, but you can.
 
-		if(M.isSynthetic())//Beep Boops only.
-			. = TRUE
-			if(M.zone_sel.selecting == BP_HEAD)//Cant see your own head to operate on it
-				to_chat(M, "<span class='warning'>You cannot see your own head to operate on it.</span>")
-				. = FALSE
+		if(M.organs_by_name[user.zone_sel.selecting])//Living people with their prosthetics can tinker with them
+			var/obj/item/organ/external/S = M.organs_by_name[user.zone_sel.selecting]
+			if(S.robotic >= ORGAN_ROBOT)
+				. = TRUE
+				if(M.zone_sel.selecting == BP_HEAD)//Cant see your own head to operate on it, mostly applies to FBPs
+					to_chat(M, "<span class='warning'>You cannot see your own head to operate on it.</span>")
+					. = FALSE
 
 	return .
 //CHOMPedit end

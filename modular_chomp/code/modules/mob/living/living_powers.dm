@@ -1,6 +1,6 @@
 /mob/living/proc/toggle_selfsurgery()
-	set name = "Allow Synth Self Surgery"
-	set desc = "Toggles the 'safeties' on self-surgery, allowing you to do so. This only works if your character is a synthetic."
+	set name = "Allow Robotic Self Surgery"
+	set desc = "Toggles the 'safeties' on self-surgery, allowing you to do so. This only works on robotic limbs."
 	set category = "Object"
 
 	allow_self_surgery = !allow_self_surgery
