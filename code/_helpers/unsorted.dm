@@ -1148,6 +1148,9 @@ var/global/list/common_tools = list(
 
 		if(M.isSynthetic())//Beep Boops only.
 			. = TRUE
+			if(M.zone_sel.selecting == BP_HEAD)//Cant see your own head to operate on it
+				to_chat(M, "<span class='warning'>You cannot see your own head to operate on it.</span>")
+				. = FALSE
 
 	return .
 //CHOMPedit end
