@@ -179,7 +179,7 @@
 																										// All of this just to make it so you are forced to do bloodless surgery with a laser scalpel.
 
 	if(M == user)	// Once we determine if we can actually do a step at all, give a slight delay to self-surgery to confirm attempts.
-		to_chat(user, "<span class='critical'>You focus on attempting to perform surgery upon yourself.</span>")
+		to_chat(user, "<span class='critical'>You focus on attempting to operate on yourself.</span>")
 		if(!do_after(user, 3 SECONDS, M))
 			return 0
 
