@@ -304,7 +304,7 @@
 		START_PROCESSING(SSbellies, src)
 
 
-	create_reagents(100)	//CHOMP So we can have some liquids in bellies
+	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
 
