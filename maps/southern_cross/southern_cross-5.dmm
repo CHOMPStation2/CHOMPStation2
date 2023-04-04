@@ -3770,7 +3770,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 8
 	},
-/obj/structure/flora/pottedplant/xmas,
+/obj/structure/flora/pottedplant/bamboo,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
 "hq" = (
@@ -7761,7 +7761,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/left_three)
 "ow" = (
-/obj/structure/flora/pottedplant/xmas,
+/obj/structure/flora/pottedplant/tropical,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
 "ox" = (
@@ -19655,7 +19655,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/flora/pottedplant/xmas,
+/obj/structure/flora/pottedplant/bamboo,
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
 "KA" = (
@@ -26045,7 +26045,7 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
 "WG" = (
-/obj/structure/flora/pottedplant/xmas,
+/obj/structure/flora/pottedplant/tropical,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/sauna)
 "WH" = (
