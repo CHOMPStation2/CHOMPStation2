@@ -309,9 +309,9 @@ var/list/goon_speak_pugg_sound = list('sound/talksounds/goon/pugg.ogg', 'sound/t
 var/list/goon_speak_roach_sound = list('sound/talksounds/goon/roach.ogg', 'sound/talksounds/goon/roach_ask.ogg', 'sound/talksounds/goon/roach_exclaim.ogg')
 var/list/goon_speak_skelly_sound = list('sound/talksounds/goon/skelly.ogg', 'sound/talksounds/goon/skelly_ask.ogg', 'sound/talksounds/goon/skelly_exclaim.ogg')
 var/list/wf_speak_lure_sound = list ('sound/talksounds/wf/lure_1.ogg', 'sound/talksounds/wf/lure_2.ogg', 'sound/talksounds/wf/lure_3.ogg', 'sound/talksounds/wf/lure_4.ogg', 'sound/talksounds/wf/lure_5.ogg')
-var/list/wf_speak_lyst_sound = list ('sound/talksounds/wf/lyst_1.ogg', 'sound/talksounds/wf/lyst_2.ogg', 'sound/talksounds/wf/lyst_3.ogg', 'sound/talksounds/wf/lyst_4.ogg', 'sound/talksounds/wf/lyst_5.ogg', 'sound/talksounds/wf/lyst_6.ogg',
-var/list/wf_speak_void_sound = list ('sound/talksounds/wf/void_1.ogg', 'sound/talksounds/wf/void_2.ogg', 'sound/talksounds/wf/void_3.ogg',
-var/list/wf_speak_vomva_sound = list ('sound/talksounds/wf/vomva_1.ogg', 'sound/talksounds/wf/vomva_2.ogg', 'sound/talksounds/wf/vomva_3.ogg', 'sound/talksounds/wf/vomva_4.ogg',
+var/list/wf_speak_lyst_sound = list ('sound/talksounds/wf/lyst_1.ogg', 'sound/talksounds/wf/lyst_2.ogg', 'sound/talksounds/wf/lyst_3.ogg', 'sound/talksounds/wf/lyst_4.ogg', 'sound/talksounds/wf/lyst_5.ogg', 'sound/talksounds/wf/lyst_6.ogg')
+var/list/wf_speak_void_sound = list ('sound/talksounds/wf/void_1.ogg', 'sound/talksounds/wf/void_2.ogg', 'sound/talksounds/wf/void_3.ogg')
+var/list/wf_speak_vomva_sound = list ('sound/talksounds/wf/vomva_1.ogg', 'sound/talksounds/wf/vomva_2.ogg', 'sound/talksounds/wf/vomva_3.ogg', 'sound/talksounds/wf/vomva_4.ogg')
 
 
 // CHOMPEdit Start: Species sounds. This is probably inefficient, but I'm sure someone will yell at me or just do it better later:tm:
