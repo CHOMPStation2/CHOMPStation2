@@ -232,6 +232,7 @@
 //R-UST port
 /obj/item/weapon/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
 	name = "R-UST Operating Manual"
+	icon = 'icons/obj/library_ch.dmi'
 	icon_state = "bookRusty" 				// Chompedit : Changed this to a new unique R-UST manual icon rather than just re-using the Supermatter book cover sprite
 	item_state = "book15"
 	author = "Central Engineering Division"
