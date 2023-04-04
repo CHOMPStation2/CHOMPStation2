@@ -95,13 +95,16 @@
 
 /obj/machinery/recycling/crusher/take_item(obj/item/O)
 	. = ..()
+	var/trash = 1//CHOMPEDIT: Trash multiplier
 	working = TRUE
 	icon_state = "crusher-process"
 	update_use_power(USE_POWER_ACTIVE)
 	sleep(5 SECONDS)
 	var/list/modified_mats = list()
+	if(istype(O,/obj/item/trash))//CHOMPEDIT: Trash multiplier
+		trash = 5 //CHOMPEDIT: Trash good
 	for(var/mat in O.matter)
-		modified_mats[mat] = O.matter[mat]*effic_factor
+		modified_mats[mat] = O.matter[mat]*effic_factor*trash//CHOMPEDIT: Trash multiplier
 	new /obj/item/debris_pack(get_step(src, dir), modified_mats)
 	update_use_power(USE_POWER_IDLE)
 	icon_state = "crusher"
@@ -149,8 +152,8 @@
 
 /obj/machinery/recycling/sorter/proc/dispense_if_possible()
 	for(var/mat in materials)
-		while(materials[mat] >= (SHEET_MATERIAL_AMOUNT/10)) //CHOMPEDIT: Lowers the amount needed to make dust
-			materials[mat] -= (SHEET_MATERIAL_AMOUNT/10) //CHOMPEDIT: Lowers the amount needed to make dust
+		while(materials[mat] >= (SHEET_MATERIAL_AMOUNT))
+			materials[mat] -= (SHEET_MATERIAL_AMOUNT)
 			new /obj/item/material_dust(get_step(src, dir), mat)
 			sleep(2 SECONDS)
 
