@@ -48,6 +48,8 @@
 		take_item(A)
 
 /obj/machinery/recycling/proc/can_accept_item(obj/item/O)
+	if(!istype(O,/obj/item/trash))//CHOMPEDIT: Trash only
+		return FALSE //CHOMPEDIT: Trash only
 	if(stat & (NOPOWER|BROKEN))
 		return FALSE
 	if(panel_open)
