@@ -97,3 +97,7 @@
 			playsound(src, 'sound/items/poster_being_created.ogg', 50, 1)
 			playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 			playsound(src, 'sound/effects/metalscrape2.ogg', 50, 1)
+
+/obj/machinery/v_garbosystem/emag_act(var/remaining_charges, var/mob/user, var/emag_source)
+	emagged = !emagged
+	update()
