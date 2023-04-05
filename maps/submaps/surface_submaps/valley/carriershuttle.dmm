@@ -5,10 +5,16 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "bh" = (
 /mob/living/simple_mob/animal/space/carp/large,
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "cY" = (
@@ -17,12 +23,18 @@
 /obj/structure/cable/blue,
 /obj/structure/table/gold,
 /obj/random/material/precious,
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
 "dI" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /obj/random/medical/pillbottle,
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "dL" = (
@@ -89,10 +101,29 @@
 /obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
+"ju" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/medical/pillbottle,
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"ln" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/contraband/nofail,
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "lR" = (
 /obj/structure/cable/blue,
 /obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"mp" = (
+/obj/random/mob/merc/armored,
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "mM" = (
 /turf/template_noop,
@@ -159,6 +190,12 @@
 /obj/machinery/door/airlock,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
+"tQ" = (
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "uk" = (
 /obj/structure/grille/cult{
 	name = "Alien grille"
@@ -213,6 +250,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/light/poi{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "yb" = (
@@ -240,6 +280,9 @@
 	},
 /obj/structure/table/gold,
 /obj/random/material/precious,
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
 "zu" = (
@@ -286,6 +329,9 @@
 /obj/machinery/button/remote/blast_door{
 	id = "carrier"
 	},
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "BN" = (
@@ -319,6 +365,9 @@
 	},
 /obj/structure/table/gold,
 /obj/random/material/precious,
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
 "DU" = (
@@ -333,6 +382,15 @@
 	},
 /obj/structure/window/plastitanium/full,
 /turf/simulated/shuttle/floor/skipjack,
+/area/submap/carriershuttle)
+"Er" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/contraband/nofail,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "EN" = (
 /obj/random/maintenance/morestuff,
@@ -367,6 +425,18 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"Ip" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "KX" = (
@@ -385,10 +455,20 @@
 /area/submap/carriershuttle)
 "Lq" = (
 /mob/living/simple_mob/vore/sect_queen,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"LF" = (
+/obj/machinery/light/poi{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Mh" = (
 /mob/living/simple_mob/vore/solargrub,
+/obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "MI" = (
@@ -401,6 +481,18 @@
 /area/submap/carriershuttle)
 "MO" = (
 /mob/living/simple_mob/metroid/juvenile/omega,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"MZ" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/random/contraband/nofail,
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "NI" = (
@@ -414,6 +506,7 @@
 /area/submap/carriershuttle)
 "OF" = (
 /mob/living/simple_mob/animal/synx/ai,
+/obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "PM" = (
@@ -439,6 +532,7 @@
 /area/submap/carriershuttle)
 "Rt" = (
 /mob/living/simple_mob/animal/space/alien/queen/empress,
+/obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Se" = (
@@ -462,6 +556,16 @@
 "Uq" = (
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
+"Vv" = (
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"Wl" = (
+/obj/machinery/light/poi,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "WV" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -470,6 +574,9 @@
 /area/submap/carriershuttle)
 "YO" = (
 /obj/random/mob/merc/armored,
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Zb" = (
@@ -617,9 +724,9 @@ mM
 Qm
 Qm
 Se
-PM
+Er
 fk
-PM
+Er
 Se
 Qm
 Qm
@@ -652,13 +759,13 @@ mM
 mM
 Qm
 Qm
-QQ
+tQ
 QQ
 WV
 MI
 WV
 QQ
-QQ
+tQ
 Qm
 Qm
 mM
@@ -830,7 +937,7 @@ QQ
 hS
 Sy
 Sy
-Sy
+Ip
 Sy
 Sy
 Sy
@@ -850,12 +957,12 @@ NI
 Sy
 Sy
 Sy
-Sy
+Ip
 Sy
 Sy
 qv
 QQ
-YO
+mp
 Qm
 mM
 "}
@@ -1014,13 +1121,13 @@ dI
 QQ
 QQ
 QQ
-dI
+ju
 Qm
 mM
 mM
 mM
 Qm
-PM
+MZ
 WV
 QQ
 QQ
@@ -1030,7 +1137,7 @@ QQ
 QQ
 QQ
 WV
-PM
+ln
 Qm
 mM
 mM
@@ -1040,7 +1147,7 @@ dI
 QQ
 QQ
 QQ
-dI
+ju
 Qm
 mM
 "}
@@ -1171,11 +1278,11 @@ Qm
 Qm
 Qm
 Qm
+LF
 QQ
 QQ
 QQ
-QQ
-QQ
+LF
 Qm
 Qm
 Qm
@@ -1357,9 +1464,9 @@ Qm
 Qm
 Qm
 Qm
+Vv
 QQ
-QQ
-QQ
+Wl
 Qm
 Qm
 Qm
@@ -1505,9 +1612,9 @@ Qm
 Qm
 Qm
 Qm
+Vv
 QQ
-QQ
-QQ
+Wl
 Qm
 Qm
 Qm

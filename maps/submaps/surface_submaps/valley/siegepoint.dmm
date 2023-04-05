@@ -3,6 +3,12 @@
 /mob/living/simple_mob/humanoid/pirate/las/armored,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"cm" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/contraband/nofail,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "cM" = (
 /obj/structure/salvageable/console,
 /turf/simulated/floor/tiled/techfloor,
@@ -25,6 +31,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"gR" = (
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "hs" = (
 /turf/template_noop,
 /area/template_noop)
@@ -37,6 +49,14 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/gun/projectile/SVD,
 /obj/item/clothing/suit/armor/pcarrier/blue/sol,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"jk" = (
+/obj/random/ammo,
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "jH" = (
@@ -65,6 +85,13 @@
 "oW" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"pC" = (
+/mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "pN" = (
 /obj/structure/bed/chair/office{
 	dir = 4
@@ -78,6 +105,13 @@
 /area/submap/siegepoint)
 "rG" = (
 /obj/machinery/telecomms/relay/preset/ruskie,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"sI" = (
+/obj/structure/salvageable/computer,
+/obj/machinery/light/poi{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "ta" = (
@@ -96,6 +130,12 @@
 /mob/living/simple_mob/humanoid/pirate/las/armored,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"ty" = (
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "uC" = (
 /mob/living/simple_mob/humanoid/merc/melee/sword/poi{
 	health = 15;
@@ -105,6 +145,24 @@
 /area/submap/siegepoint)
 "vu" = (
 /obj/structure/salvageable/server,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"wF" = (
+/mob/living/simple_mob/humanoid/pirate/las/armored,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"wV" = (
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"xD" = (
+/obj/structure/salvageable/data,
+/obj/machinery/light/poi{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "xE" = (
@@ -129,6 +187,16 @@
 /obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"zZ" = (
+/mob/living/simple_mob/humanoid/merc/ranged{
+	health = 15;
+	maxHealth = 15
+	},
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "Ap" = (
 /obj/structure/bed/chair/office{
 	dir = 8
@@ -147,6 +215,28 @@
 "BY" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/gun/projectile/revolver/saa,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"Da" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"Ey" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/medical/pillbottle,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"EC" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
+/obj/machinery/light/poi{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "GW" = (
@@ -185,12 +275,49 @@
 /obj/random/medical,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"Lo" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "Lu" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
+"LK" = (
+/obj/structure/salvageable/server,
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"Nv" = (
+/obj/machinery/light/poi,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"NT" = (
+/obj/structure/salvageable/data,
+/obj/machinery/light/poi{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
 "Pm" = (
 /obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"Pw" = (
+/mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
+/obj/machinery/light/poi{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/siegepoint)
+"Qd" = (
+/mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
+/obj/machinery/light/poi{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "QF" = (
@@ -359,7 +486,7 @@ hs
 hs
 hs
 xK
-AO
+jk
 Rz
 oW
 ae
@@ -441,10 +568,10 @@ xK
 oW
 AO
 oW
-Lu
+Da
 oW
 oW
-oW
+ty
 oW
 oW
 xK
@@ -455,7 +582,7 @@ hs
 hs
 hs
 xK
-oW
+wV
 Io
 oW
 Ij
@@ -505,7 +632,7 @@ xK
 oW
 AO
 oW
-Io
+pC
 oW
 oW
 oW
@@ -534,9 +661,9 @@ xK
 xK
 xK
 xK
+wV
 oW
-oW
-oW
+Nv
 xK
 xK
 xK
@@ -560,12 +687,12 @@ oW
 oW
 AO
 oW
-fx
+Lo
 oW
 AO
 oW
 oW
-Io
+Pw
 oW
 oW
 oW
@@ -624,21 +751,21 @@ oW
 oW
 oW
 oW
-Lu
+Qd
 oW
 oW
 AO
 oW
-fx
+EC
 oW
 oW
 oW
 xK
-oW
+wV
 Yc
 Jv
 Yc
-oW
+Nv
 xK
 hs
 hs
@@ -646,11 +773,11 @@ hs
 (13,1,1) = {"
 hs
 xK
-jH
+sI
 AO
 ZG
 oW
-zJ
+cm
 xK
 xK
 xK
@@ -688,7 +815,7 @@ oW
 oW
 oW
 xK
-oW
+wV
 oW
 oW
 gL
@@ -716,9 +843,9 @@ oW
 oW
 Tp
 xK
-ZG
+zZ
 oW
-ae
+wF
 xK
 oW
 Yc
@@ -760,13 +887,13 @@ ji
 xK
 AO
 oW
-oW
+Nv
 xK
-oW
+wV
 Yc
 Jv
 Yc
-oW
+Nv
 xK
 hs
 hs
@@ -782,7 +909,7 @@ nl
 xK
 ZG
 oW
-ae
+wF
 xK
 oW
 Yc
@@ -816,7 +943,7 @@ oW
 oW
 oW
 xK
-oW
+wV
 oW
 oW
 gL
@@ -828,7 +955,7 @@ oW
 xK
 oW
 oW
-oW
+gR
 oW
 AO
 xK
@@ -838,11 +965,11 @@ hs
 (19,1,1) = {"
 hs
 xK
-nl
+Ey
 oW
 oW
 fx
-vu
+LK
 xK
 oW
 AO
@@ -891,7 +1018,7 @@ oW
 AO
 xK
 Lu
-oW
+ty
 oW
 oW
 oW
@@ -908,7 +1035,7 @@ ZG
 oW
 zJ
 xK
-oW
+wV
 oa
 uC
 oW
@@ -920,7 +1047,7 @@ oW
 oW
 oW
 uC
-oW
+Nv
 xK
 oW
 oW
@@ -986,9 +1113,9 @@ xK
 xK
 xK
 xK
+wV
 oW
-oW
-oW
+Nv
 xK
 xK
 xK
@@ -1006,14 +1133,14 @@ oW
 oW
 Lu
 xQ
+xD
 xQ
 xQ
 xQ
 xQ
 xQ
 xQ
-xQ
-xQ
+xD
 xQ
 xQ
 oW
@@ -1097,25 +1224,25 @@ hs
 hs
 xK
 oW
-oW
+gR
 oW
 oW
 fx
 xQ
+NT
 xQ
 xQ
 xQ
 xQ
 xQ
 xQ
-xQ
-xQ
+NT
 xQ
 xQ
 oW
 AO
 oW
-oW
+gR
 fx
 xK
 hs

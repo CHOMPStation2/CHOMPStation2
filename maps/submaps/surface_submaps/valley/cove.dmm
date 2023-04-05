@@ -159,10 +159,6 @@
 	outdoors = 0
 	},
 /area/submap/cove)
-"uy" = (
-/mob/living/simple_mob/mechanical/mecha/ripley/pirate/manned,
-/turf/simulated/floor/wood,
-/area/submap/cove)
 "uM" = (
 /obj/machinery/light/poi{
 	dir = 1
@@ -821,7 +817,7 @@ Gb
 lk
 uM
 Hb
-uy
+Gb
 wO
 Gb
 wO

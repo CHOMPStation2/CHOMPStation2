@@ -36,6 +36,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
+"bU" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/glasses/graviton/medgravpatch,
+/turf/simulated/floor/carpet/green,
+/area/submap/xenobio)
 "bY" = (
 /obj/structure/closet/l3closet/scientist,
 /turf/simulated/floor/plating,
@@ -68,8 +73,10 @@
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "fl" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
+/mob/living/simple_mob/slime/xenobio/gold{
+	unity = 1
+	},
+/obj/item/weapon/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "fz" = (
@@ -79,7 +86,7 @@
 	},
 /area/submap/xenobio)
 "fH" = (
-/mob/living/simple_mob/slime/xenobio/yellow{
+/mob/living/simple_mob/slime/xenobio/dark_blue{
 	unity = 1
 	},
 /turf/simulated/floor/reinforced/phoron{
@@ -179,6 +186,10 @@
 "oC" = (
 /turf/simulated/wall/r_wall,
 /area/submap/xenobio)
+"oD" = (
+/obj/item/stolenpackage,
+/turf/simulated/floor/reinforced,
+/area/submap/xenobio)
 "pa" = (
 /obj/machinery/light/poi{
 	dir = 4
@@ -193,7 +204,9 @@
 /area/submap/xenobio)
 "rf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/stack/material/phoron{
+	amount = 10
+	},
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -305,7 +318,10 @@
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "AS" = (
-/obj/item/weapon/material/shard,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/regular{
+	id = "slimeden"
+	},
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "Co" = (
@@ -322,8 +338,10 @@
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "DG" = (
-/obj/machinery/door/blast/regular,
 /obj/machinery/door/window/brigdoor/westright,
+/obj/machinery/door/blast/regular{
+	id = "slimeden"
+	},
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "Ej" = (
@@ -419,11 +437,13 @@
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
 "KH" = (
-/obj/machinery/door/blast/regular,
 /obj/machinery/door/window/brigdoor/southright{
 	dir = 4;
 	req_access = null;
 	req_one_access = list(1,19)
+	},
+/obj/machinery/door/blast/regular{
+	id = "slimeden"
 	},
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
@@ -449,6 +469,7 @@
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/storage/box/monkeycubes,
+/obj/item/stolenpackage,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "Np" = (
@@ -503,9 +524,11 @@
 /area/submap/xenobio)
 "SD" = (
 /obj/structure/table/woodentable,
-/obj/item/stolenpackage,
 /obj/machinery/light/poi{
 	dir = 8
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "slimeden"
 	},
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
@@ -624,7 +647,7 @@ GP
 MR
 bM
 SD
-bM
+bU
 sl
 oC
 uu
@@ -781,7 +804,7 @@ zo
 GP
 gW
 KH
-gW
+AS
 GP
 zo
 JZ
@@ -859,12 +882,12 @@ zo
 zo
 zo
 GP
-gW
+AS
 DG
-gW
+AS
 GP
 AS
-fl
+DG
 AS
 oC
 uu
@@ -879,12 +902,12 @@ zo
 zo
 zo
 GP
-HY
+oD
 je
 HY
 GP
 HY
-HY
+je
 HY
 oC
 uu
@@ -904,7 +927,7 @@ JM
 VK
 GP
 HY
-HY
+fl
 HY
 oC
 uu
@@ -919,9 +942,9 @@ oC
 iT
 oC
 oC
-GP
-GP
-GP
+oC
+oC
+oC
 oC
 oC
 pP
@@ -945,7 +968,7 @@ fz
 oC
 bl
 bl
-Kw
+bl
 oC
 uu
 uu
@@ -965,7 +988,7 @@ Mo
 oC
 bl
 bl
-Qq
+bl
 oC
 uu
 uu
@@ -983,8 +1006,8 @@ Me
 Mo
 Mo
 oC
-bl
-bl
+Kw
+Qq
 Kw
 oC
 uu

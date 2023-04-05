@@ -111,10 +111,6 @@
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
-"H" = (
-/mob/living/simple_mob/animal/space/mouse_army/pyro,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/mouseattack)
 "J" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
 /turf/simulated/floor/tiled/yellow,
@@ -134,10 +130,6 @@
 /area/submap/mouseattack)
 "S" = (
 /obj/machinery/door/airlock/gold,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/mouseattack)
-"W" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "X" = (
@@ -247,7 +239,7 @@ s
 j
 c
 c
-H
+B
 c
 c
 c
@@ -292,7 +284,7 @@ j
 c
 c
 c
-H
+B
 c
 c
 t
@@ -712,7 +704,7 @@ c
 i
 C
 c
-W
+J
 t
 b
 s

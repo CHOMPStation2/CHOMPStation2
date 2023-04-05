@@ -208,10 +208,6 @@
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/manned,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
-"Y" = (
-/mob/living/simple_mob/animal/space/mouse_army/pyro,
-/turf/simulated/floor/wmarble,
-/area/submap/mousehq)
 "Z" = (
 /obj/structure/closet/alien,
 /obj/item/prop/alien/junk,
@@ -428,7 +424,7 @@ O
 O
 O
 Z
-Y
+N
 y
 H
 y
@@ -436,7 +432,7 @@ D
 y
 H
 y
-Y
+N
 Z
 O
 O
@@ -458,7 +454,7 @@ V
 V
 O
 O
-Y
+D
 O
 x
 y
@@ -536,7 +532,7 @@ p
 y
 p
 y
-Y
+D
 O
 u
 y
@@ -699,7 +695,7 @@ y
 F
 c
 v
-m
+b
 p
 y
 p
@@ -732,7 +728,7 @@ p
 m
 s
 v
-Y
+D
 y
 p
 y
@@ -765,7 +761,7 @@ y
 A
 c
 v
-m
+b
 p
 y
 p
@@ -865,9 +861,9 @@ y
 N
 t
 O
-m
-Y
-m
+y
+p
+y
 O
 Z
 p
@@ -1059,11 +1055,11 @@ K
 K
 O
 p
-m
-Y
+E
+D
 y
 p
-m
+M
 x
 O
 O
@@ -1127,7 +1123,7 @@ O
 p
 w
 H
-m
+M
 x
 O
 O
