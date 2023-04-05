@@ -1528,6 +1528,7 @@
 	var/active = 0
 	var/turf/target	// this will be where the output objects are 'thrown' to.
 	var/mode = 0
+	var/launch_dist = 3 //CHOMPEdit
 
 /obj/structure/disposaloutlet/Initialize()
 	. = ..()
@@ -1559,7 +1560,7 @@
 			AM.pipe_eject(dir)
 			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
 				spawn(5)
-					AM.throw_at(target, 3, 1)
+					AM.throw_at(target, launch_dist, 1) //CHOMPEdit
 		H.vent_gas(src.loc)
 		qdel(H)
 
