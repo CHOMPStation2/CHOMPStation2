@@ -64,6 +64,7 @@
 						if(!emagged && ishuman(L) && L.mind)
 							playsound(src, 'sound/machines/warning-buzzer.ogg', 50, 0, 0)
 							visible_message("<span class='warning'>POSSIBLE CREW MEMBER DETECTED! EMERGENCY STOP ENGAGED!</span>")
+							global_announcer.autosay("Possible crew member detected in grinder feed. Emergency Stop Protocols engaged!", "Recycling Grinder Alert", "Supply")
 							operating = FALSE
 							update()
 							break
