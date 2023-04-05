@@ -89,8 +89,9 @@
 					else
 						A.SpinAnimation(5,3)
 						spawn(15)
-							A.forceMove(src)
-							qdel(A)
+							if(A)
+								A.forceMove(src)
+								qdel(A)
 						items_taken++
 			if(items_taken >= voracity)
 				break
