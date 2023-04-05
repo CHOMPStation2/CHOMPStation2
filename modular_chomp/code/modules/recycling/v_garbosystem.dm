@@ -61,6 +61,12 @@
 				if(A.loc == src.loc) // prevents the object from being affected if it's not currently here.
 					if(isliving(A))
 						var/mob/living/L = A
+						if(!emagged && ishuman(L) && L.mind)
+							playsound(src, 'sound/machines/warning-buzzer.ogg', 50, 0, 0)
+							visible_message("<span class='warning'>POSSIBLE CREW MEMBER DETECTED! EMERGENCY STOP ENGAGED!</span>")
+							operating = FALSE
+							update()
+							break
 						if(L.stat == DEAD)
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
 							L.gib()
