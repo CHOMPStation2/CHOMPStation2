@@ -93,7 +93,6 @@
 	B.desc = "SNAP! You have been sucked up into the big synthbird's beak, the powerful vacuum within the bird roaring somewhere beyond the abyssal deep gullet hungrily gaping before you, eagerly sucking you deeper inside towards a long bulgy ride down the bird's vacuum hose of a neck!"
 	B.autotransferlocation = "vacuum hose"
 	B.autotransfer_max_amount = 0
-	B.autotransferwait = 60
 
 	vore_selected = B
 
@@ -106,7 +105,7 @@
 	item_digest_mode = IM_HOLD
 	autotransfer_enabled = TRUE
 	autotransferchance = 100
-	autotransferwait = 70
+	autotransferwait = 60
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
