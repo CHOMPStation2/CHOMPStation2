@@ -2,7 +2,7 @@
 	icon = 'modular_chomp/icons/obj/machines/other.dmi'
 	icon_state = "cronchy_off"
 	name = "garbage grinder"
-	desc = "Mind your fingers."
+	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within."
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	anchored = TRUE
@@ -58,7 +58,7 @@
 			if(istype(A, /obj/effect/decal/cleanable))
 				qdel(A)
 			if(!A.anchored)
-				if(A.loc == src.loc) // prevents the object from being affected if it's not currently here.
+				if(A.loc == src.loc)
 					if(isliving(A))
 						var/mob/living/L = A
 						if(!emagged && ishuman(L) && L.mind)
@@ -83,7 +83,8 @@
 						spawn(15)
 							if(A.loc == loc)
 								A.forceMove(src)
-								crusher.take_item(A) //Force feed the poor bastard.
+								if(!is_type_in_list(I,item_digestion_blacklist))
+									crusher.take_item(A) //Force feed the poor bastard.
 						items_taken++
 					else
 						A.SpinAnimation(5,3)
@@ -101,3 +102,14 @@
 /obj/machinery/v_garbosystem/emag_act(var/remaining_charges, var/mob/user, var/emag_source)
 	emagged = !emagged
 	update()
+
+/obj/machinery/v_garbosystem/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(W.is_crowbar())
+		if(!operating)
+			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")
+			for(var/atom/movable/A in contents)
+				A.forceMove(loc)
+			return
+		else
+			to_chat(user, "Unable to empty filter while the machine is running.")
+	return ..()
