@@ -12598,7 +12598,8 @@
 /area/storage/emergency_storage/seconddeck/port_emergency)
 "aMP" = (
 /obj/structure/disposaloutlet{
-	pixel_y = -6
+	pixel_y = -6;
+	launch_dist = 1
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -13047,11 +13048,7 @@
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/seconddeck/port_emergency)
 "aOh" = (
-/obj/machinery/conveyor{
-	dir = 10;
-	id = "recycler"
-	},
-/obj/machinery/recycling/crusher,
+/obj/machinery/v_garbosystem,
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
 "aOi" = (
@@ -45038,7 +45035,9 @@
 /obj/machinery/conveyor{
 	id = "recycler"
 	},
-/obj/machinery/recycling/sorter,
+/obj/machinery/recycling/sorter{
+	color = "#BDBCA9"
+	},
 /obj/structure/sign/warning/moving_parts{
 	pixel_x = -32
 	},
@@ -55488,6 +55487,18 @@
 /obj/machinery/computer/transhuman/resleeving,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"jfp" = (
+/obj/machinery/conveyor{
+	id = "recycler"
+	},
+/obj/machinery/recycling/crusher{
+	color = "#BDBCA9"
+	},
+/obj/structure/sign/warning/moving_parts{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/warehouse)
 "jfz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
@@ -57028,10 +57039,6 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 9;
-	name = "Reinforced Window Nugget"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
@@ -80074,6 +80081,9 @@
 /obj/machinery/status_display{
 	pixel_x = -32
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
 "xqf" = (
@@ -100736,7 +100746,7 @@ aJx
 bkW
 bGn
 aOh
-iDz
+jfp
 xpv
 dyX
 gSJ

@@ -24,3 +24,16 @@ var/global/list/edible_tech = list(/obj/item/weapon/cell,
 				/obj/item/broken_device,
 				/obj/item/brokenbug,
 				)
+
+var/global/list/item_digestion_blacklist = list(
+		/obj/item/weapon/hand_tele,
+		/obj/item/weapon/card/id,
+		/obj/item/weapon/gun,
+		/obj/item/weapon/pinpointer,
+		/obj/item/clothing/shoes/magboots,
+		/obj/item/areaeditor/blueprints,
+		/obj/item/weapon/disk/nuclear,
+		/obj/item/device/perfect_tele_beacon,
+		/obj/item/organ/internal/brain/slime,
+		/obj/item/device/mmi/digital/posibrain,
+		/obj/item/weapon/rig/protean)
