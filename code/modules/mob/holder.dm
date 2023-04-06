@@ -332,6 +332,13 @@ var/list/holder_mob_icon_cache = list()
 			L.Stun(2)
 
 /obj/item/weapon/holder/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	//CHOMPADDITION: MicroHandCrush
+	if(W == src && user.a_intent == I_HURT)
+		for(var/mob/M in src.contents)
+			if(user.size_multiplier > M.size_multiplier)
+				var/dam = (user.size_multiplier - M.size_multiplier)*(rand(2,5))
+				M.apply_damage(dam)
+	//CHOMPADDITION: MicroHandCrush END
 	for(var/mob/M in src.contents)
 		M.attackby(W,user)
 
