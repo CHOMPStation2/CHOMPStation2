@@ -91,6 +91,8 @@
 						spawn(15)
 							if(A)
 								A.forceMove(src)
+								if(istype(A, /obj/structure/closet))
+									new /obj/item/stack/material/steel(loc, 2)
 								qdel(A)
 						items_taken++
 			if(items_taken >= voracity)
