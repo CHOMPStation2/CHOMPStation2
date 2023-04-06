@@ -20,6 +20,7 @@
 	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
 
@@ -105,7 +106,7 @@
 	item_digest_mode = IM_HOLD
 	autotransfer_enabled = TRUE
 	autotransferchance = 100
-	autotransferwait = 60
+	autotransferwait = 70
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
