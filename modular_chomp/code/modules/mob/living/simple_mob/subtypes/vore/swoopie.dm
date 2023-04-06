@@ -105,7 +105,7 @@
 	item_digest_mode = IM_HOLD
 	autotransfer_enabled = TRUE
 	autotransferchance = 100
-	autotransferwait = 60
+	autotransferwait = 70
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
