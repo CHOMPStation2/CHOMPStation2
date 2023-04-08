@@ -433,13 +433,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
-"aEx" = (
-/obj/effect/simple_portal/linked{
-	name = "Fast Travel to ???";
-	portal_id = 72
-	},
-/turf/simulated/shuttle/floor/purple,
-/area/vr/outdoors/powered)
 "aEy" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
@@ -659,15 +652,6 @@
 "aRy" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/cult)
-"aRS" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/obj/machinery/door/blast/puzzle{
-	id = "alienroompuzzlevr"
-	},
-/turf/simulated/shuttle/floor/purple,
-/area/vr/outdoors/powered)
 "aRX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/powered/scrubber/huge,
@@ -1857,10 +1841,6 @@
 /obj/item/weapon/silencer,
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
-"cgV" = (
-/obj/effect/map_effect/perma_light/brighter,
-/turf/simulated/floor/wood,
-/area/vr/powered/cafe)
 "cho" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
@@ -2018,6 +1998,15 @@
 /obj/item/clothing/accessory/stethoscope,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
+"cpW" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/door/blast/puzzle{
+	id = "alienroompuzzlevr"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/vr/outdoors/powered)
 "cpX" = (
 /turf/simulated/mineral/alt{
 	temperature = 293.15
@@ -6066,6 +6055,14 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
+"hjH" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/turf/simulated/shuttle/floor/white,
+/area/vr/powered/space/sciship)
 "hkT" = (
 /obj/effect/decal/cleanable/blood/gibs/xeno/body,
 /turf/simulated/floor/tiled/techfloor,
@@ -6686,6 +6683,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered)
+"hYK" = (
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/wood,
+/area/vr/powered/conspawn)
 "hYX" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
@@ -6937,10 +6938,13 @@
 /obj/machinery/oxygen_pump/anesthetic,
 /turf/simulated/wall/titanium,
 /area/vr/powered/dungeon)
-"igJ" = (
-/obj/effect/map_effect/perma_light/brighter,
-/turf/simulated/floor/wood,
-/area/vr/powered/conspawn)
+"igE" = (
+/obj/effect/simple_portal/linked{
+	name = "Fast Travel to ???";
+	portal_id = 72
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/vr/outdoors/powered)
 "ihy" = (
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -6996,8 +7000,14 @@
 /turf/simulated/floor/wood,
 /area/vr/powered)
 "inj" = (
-/obj/machinery/door/blast/puzzle{
-	id = "alienroompuzzlevr"
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/light/poi,
+/obj/machinery/button/remote/blast_door{
+	id = "alienroompuzzlevr";
+	name = "Alien Room Unlocker";
+	dir = 4;
+	pixel_x = 8;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
@@ -7323,6 +7333,10 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"iFg" = (
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/wood,
+/area/vr/powered/cafe)
 "iGA" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 4
@@ -7517,13 +7531,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered)
-"iVC" = (
-/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
-	},
-/area/vr/outdoors/powered)
 "iVL" = (
 /obj/effect/catwalk_plated/dark,
 /obj/item/weapon/banner/blue,
@@ -8547,6 +8554,13 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade,
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
+"jXX" = (
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	temperature = 293.15;
+	movement_cost = 0
+	},
+/area/vr/outdoors/powered)
 "jYM" = (
 /turf/simulated/floor/wood/broken,
 /area/vr/powered/space/whiteship)
@@ -13534,6 +13548,12 @@
 	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
+"ptY" = (
+/obj/machinery/door/blast/puzzle{
+	id = "alienroompuzzlevr"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/dungeon)
 "puf" = (
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
@@ -14197,13 +14217,6 @@
 /obj/item/tape/police,
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
-"qfS" = (
-/obj/effect/simple_portal/linked{
-	name = "Fast Travel to ???";
-	portal_id = 72
-	},
-/turf/simulated/shuttle/floor/purple,
-/area/vr/powered/dungeon)
 "qgv" = (
 /obj/structure/closet/walllocker_double/hydrant/east,
 /obj/effect/floor_decal/industrial/warning,
@@ -14246,6 +14259,18 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/cult)
+"qih" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/table/steel_reinforced,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/turf/simulated/shuttle/floor/yellow,
+/area/vr/powered/space/sciship)
 "qiO" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/lava,
@@ -15830,17 +15855,8 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/vr/powered)
 "rWI" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/structure/table/steel_reinforced,
-/obj/effect/spawner/parts/t5,
-/obj/effect/spawner/parts/t5,
-/obj/effect/spawner/parts/t5,
-/obj/effect/spawner/parts/t5,
-/obj/effect/spawner/parts/t5,
-/turf/simulated/shuttle/floor/yellow,
-/area/vr/powered/space/sciship)
+/turf/simulated/shuttle/floor/purple,
+/area/vr/outdoors/powered)
 "rXL" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 8
@@ -17375,14 +17391,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
-"tQN" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
-/turf/simulated/shuttle/floor/white,
-/area/vr/powered/space/sciship)
 "tSO" = (
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -18065,7 +18073,7 @@
 "uyo" = (
 /obj/effect/map_effect/portal/master/side_b{
 	dir = 4;
-	portal_id = "vrdungeon".
+	portal_id = "vrdungeon"
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
@@ -18754,18 +18762,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
-"vpC" = (
-/obj/effect/floor_decal/techfloor,
-/obj/machinery/light/poi,
-/obj/machinery/button/remote/blast_door{
-	id = "alienroompuzzlevr";
-	name = "Alien Room Unlocker";
-	dir = 4;
-	pixel_x = 8;
-	pixel_y = -24
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/dungeon)
 "vpH" = (
 /obj/mecha/working/hoverpod/combatpod{
 	dir = 8
@@ -19767,6 +19763,13 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
+"wnI" = (
+/obj/effect/simple_portal/linked{
+	name = "Fast Travel to ???";
+	portal_id = 72
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/vr/powered/dungeon)
 "woj" = (
 /turf/simulated/floor/flock{
 	color = "grey"
@@ -20654,9 +20657,6 @@
 "xpd" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered)
-"xpr" = (
-/turf/simulated/shuttle/floor/purple,
-/area/vr/outdoors/powered)
 "xps" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 8
@@ -30003,7 +30003,7 @@ kIl
 tkF
 cwz
 cwz
-iVC
+jXX
 mQQ
 xoh
 sKZ
@@ -31820,7 +31820,7 @@ oph
 oph
 aLK
 nIW
-igJ
+hYK
 kzD
 lpj
 vRo
@@ -37083,7 +37083,7 @@ hhf
 gPK
 cCO
 cCO
-cgV
+iFg
 cCO
 cCO
 wgq
@@ -37569,7 +37569,7 @@ pYq
 paR
 aak
 qmJ
-vpC
+inj
 xAF
 xAF
 xAF
@@ -37828,7 +37828,7 @@ cpA
 aak
 aak
 lhj
-inj
+ptY
 noe
 eOj
 eOj
@@ -37894,9 +37894,9 @@ lTR
 lTR
 lTR
 lTR
-aRS
-xpr
-xpr
+cpW
+rWI
+rWI
 pwc
 oEZ
 fqb
@@ -38086,9 +38086,9 @@ qmJ
 qmJ
 qmJ
 lhj
-inj
+ptY
 noe
-qfS
+wnI
 eOj
 xAF
 fCE
@@ -38152,9 +38152,9 @@ lTR
 lTR
 lTR
 lTR
-aRS
-aEx
-xpr
+cpW
+igE
+rWI
 pwc
 oEZ
 oEZ
@@ -38344,7 +38344,7 @@ qmJ
 cpA
 qmJ
 lhj
-inj
+ptY
 noe
 eOj
 eOj
@@ -38410,9 +38410,9 @@ lTR
 lTR
 lTR
 lTR
-aRS
-xpr
-xpr
+cpW
+rWI
+rWI
 pwc
 oEZ
 oEZ
@@ -73806,7 +73806,7 @@ mIq
 vLT
 vLT
 vLT
-rWI
+qih
 lcF
 fGD
 siU
@@ -74322,7 +74322,7 @@ lSo
 sZe
 sZe
 sZe
-tQN
+hjH
 lcF
 jXf
 siU
