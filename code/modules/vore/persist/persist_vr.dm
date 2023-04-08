@@ -45,7 +45,7 @@
 
 	// Find out of this mob is a proper mob!
 	if (persister.mind && persister.mind.loaded_from_ckey)
-		if(persister.ckey != persister.mind.loaded_from_ckey) //CHOMPAdd
+		if(ckey(persister.mind.key) != persister.mind.loaded_from_ckey) //CHOMPAdd
 			warning("Persist (P4P): [persister.mind] was loaded from ckey [persister.mind.loaded_from_ckey] mismatching the current ckey [persister.ckey].")
 			return //CHOMPAdd End
 		// Okay this mob has a real loaded-from-savefile mind in it!
