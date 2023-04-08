@@ -433,6 +433,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
+"aEx" = (
+/obj/effect/simple_portal/linked{
+	name = "Fast Travel to ???";
+	portal_id = 72
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/vr/outdoors/powered)
 "aEy" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
@@ -652,6 +659,15 @@
 "aRy" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/cult)
+"aRS" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/door/blast/puzzle{
+	id = "alienroompuzzlevr"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/vr/outdoors/powered)
 "aRX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/powered/scrubber/huge,
@@ -775,14 +791,11 @@
 	pixel_x = 24
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/disk/design_disk,
-/obj/item/weapon/disk/design_disk,
-/obj/item/weapon/disk/tech_disk,
-/obj/item/weapon/disk/tech_disk,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
 "aYH" = (
@@ -1844,6 +1857,10 @@
 /obj/item/weapon/silencer,
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
+"cgV" = (
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/wood,
+/area/vr/powered/cafe)
 "cho" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
@@ -5152,6 +5169,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "fWQ" = (
@@ -6916,6 +6937,10 @@
 /obj/machinery/oxygen_pump/anesthetic,
 /turf/simulated/wall/titanium,
 /area/vr/powered/dungeon)
+"igJ" = (
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/wood,
+/area/vr/powered/conspawn)
 "ihy" = (
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -6971,8 +6996,9 @@
 /turf/simulated/floor/wood,
 /area/vr/powered)
 "inj" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/effect/decal/cleanable/blood/gibs/xeno,
+/obj/machinery/door/blast/puzzle{
+	id = "alienroompuzzlevr"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
 "ink" = (
@@ -7491,6 +7517,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered)
+"iVC" = (
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	temperature = 293.15;
+	movement_cost = 0
+	},
+/area/vr/outdoors/powered)
 "iVL" = (
 /obj/effect/catwalk_plated/dark,
 /obj/item/weapon/banner/blue,
@@ -7526,10 +7559,10 @@
 /obj/fiftyspawner/rods,
 /obj/fiftyspawner/rods,
 /obj/item/stack/material/plasteel{
-	amount = 30
+	amount = 50
 	},
 /obj/item/stack/material/plasteel{
-	amount = 30
+	amount = 50
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
@@ -8942,9 +8975,6 @@
 	desc = "Clicking on this as a ghost will spawn you in as a NPC exclusive to the VR world loaded into the station.";
 	ghost_spawns = 1
 	},
-/obj/machinery/light{
-	layer = 3
-	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
 "kzS" = (
@@ -9330,10 +9360,7 @@
 	pixel_x = 21
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
 "kTy" = (
@@ -10147,7 +10174,19 @@
 /obj/item/clothing/accessory/armor/armorplate/blast,
 /obj/item/clothing/accessory/armor/armorplate/ablative,
 /obj/item/clothing/accessory/armor/armorplate/ablative,
-/obj/fiftyspawner/leather,
+/obj/item/stack/material/leather{
+	amount = 50
+	},
+/obj/item/weapon/tool/wirecutters,
+/obj/item/weapon/tool/wirecutters,
+/obj/item/weapon/weldingtool/hugetank,
+/obj/item/weapon/weldingtool/hugetank,
+/obj/item/clothing/head/welding,
+/obj/item/clothing/head/welding,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "lKU" = (
@@ -10954,12 +10993,67 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/structure/table/steel_reinforced,
-/obj/item/device/flash/synthetic,
-/obj/item/device/flash/synthetic{
-	pixel_x = 6;
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "fridge_sci";
+	icon_contents = "chem";
+	icon_state = "fridge_sci";
+	name = "Advanced storage";
 	pixel_y = 0
 	},
+/obj/item/weapon/disk/limb/bishop,
+/obj/item/weapon/disk/limb/cenilimicybernetics,
+/obj/item/weapon/disk/limb/cyber_beast,
+/obj/item/weapon/disk/limb/cybersolutions,
+/obj/item/weapon/disk/limb/dsi_akula,
+/obj/item/weapon/disk/limb/dsi_fennec,
+/obj/item/weapon/disk/limb/dsi_lizard,
+/obj/item/weapon/disk/limb/dsi_nevrean,
+/obj/item/weapon/disk/limb/dsi_sergal,
+/obj/item/weapon/disk/limb/dsi_spider,
+/obj/item/weapon/disk/limb/dsi_tajaran,
+/obj/item/weapon/disk/limb/dsi_teshari,
+/obj/item/weapon/disk/limb/dsi_vulpkanin,
+/obj/item/weapon/disk/limb/dsi_zorren,
+/obj/item/weapon/disk/limb/eggnerdltd,
+/obj/item/weapon/disk/limb/eggnerdltdred,
+/obj/item/weapon/disk/limb/grayson,
+/obj/item/weapon/disk/limb/hephaestus,
+/obj/item/weapon/disk/limb/kitsuhana,
+/obj/item/weapon/disk/limb/morpheus,
+/obj/item/weapon/disk/limb/nanotrasen,
+/obj/item/weapon/disk/limb/talon,
+/obj/item/weapon/disk/limb/veymed,
+/obj/item/weapon/disk/limb/veymed/diona,
+/obj/item/weapon/disk/limb/wardtakahashi,
+/obj/item/weapon/disk/limb/white_kryten,
+/obj/item/weapon/disk/limb/xion,
+/obj/item/weapon/disk/limb/zenghu,
+/obj/item/weapon/disk/limb/zenghu_frost,
+/obj/item/organ/internal/augment/armmounted,
+/obj/item/organ/internal/augment/armmounted,
+/obj/item/organ/internal/augment/armmounted/dartbow,
+/obj/item/organ/internal/augment/armmounted/dartbow,
+/obj/item/organ/internal/augment/armmounted/hand,
+/obj/item/organ/internal/augment/armmounted/hand,
+/obj/item/organ/internal/augment/armmounted/hand/blade,
+/obj/item/organ/internal/augment/armmounted/hand/blade,
+/obj/item/organ/internal/augment/armmounted/hand/sword,
+/obj/item/organ/internal/augment/armmounted/hand/sword,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple,
+/obj/item/organ/internal/augment/armmounted/shoulder/blade,
+/obj/item/organ/internal/augment/armmounted/shoulder/blade,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical,
+/obj/item/organ/internal/augment/armmounted/shoulder/surge,
+/obj/item/organ/internal/augment/armmounted/shoulder/surge,
+/obj/item/organ/internal/augment/armmounted/taser,
+/obj/item/organ/internal/augment/armmounted/taser,
+/obj/item/organ/internal/augment/bioaugment/sprint_enhance,
+/obj/item/organ/internal/augment/bioaugment/sprint_enhance,
+/obj/item/organ/internal/augment/bioaugment/thermalshades,
+/obj/item/organ/internal/augment/bioaugment/thermalshades,
 /turf/simulated/shuttle/floor/yellow,
 /area/vr/powered/space/sciship)
 "mIu" = (
@@ -11132,18 +11226,11 @@
 /area/vr/powered/dungeon)
 "mQQ" = (
 /obj/structure/table/steel,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	temperature = 293.15;
 	movement_cost = 0
@@ -11836,7 +11923,6 @@
 	icon_base = "fridge_sci";
 	icon_contents = "chem";
 	icon_state = "fridge_sci";
-	name = "Advanced storage";
 	pixel_y = 0
 	},
 /obj/item/stack/material/durasteel{
@@ -11844,32 +11930,30 @@
 	amount = 50
 	},
 /obj/item/stack/material/phoron{
-	material = 50
+	amount = 50
 	},
 /obj/item/stack/material/phoron{
-	material = 50
+	amount = 50
 	},
 /obj/item/stack/material/diamond{
-	material = 15
+	amount = 15
 	},
-/obj/item/stack/material/gold{
-	material = 25
-	},
+/obj/item/stack/material/gold,
 /obj/item/stack/material/lead{
-	material = 25
+	amount = 25
 	},
 /obj/item/stack/material/plastic{
-	material = 50;
 	amount = 50
 	},
 /obj/item/stack/material/plastic{
 	material = 50
 	},
 /obj/item/stack/material/platinum{
-	matter = 25
+	matter = 25;
+	amount = 50
 	},
 /obj/item/stack/material/silver{
-	material = 25
+	amount = 25
 	},
 /obj/item/stack/material/steel{
 	amount = 50
@@ -11881,7 +11965,8 @@
 	amount = 50
 	},
 /obj/item/stack/material/uranium{
-	material = 25
+	material = 25;
+	amount = 50
 	},
 /obj/item/stack/rods{
 	amount = 50
@@ -11958,6 +12043,9 @@
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 4
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
 	},
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/sciship)
@@ -12772,6 +12860,12 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -24
 	},
+/obj/machinery/autolathe{
+	hacked = 1;
+	name = "hacked autolathe"
+	},
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "oBi" = (
@@ -13243,6 +13337,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "pgX" = (
@@ -14098,6 +14196,13 @@
 "qft" = (
 /obj/item/tape/police,
 /turf/simulated/floor/tiled,
+/area/vr/powered/dungeon)
+"qfS" = (
+/obj/effect/simple_portal/linked{
+	name = "Fast Travel to ???";
+	portal_id = 72
+	},
+/turf/simulated/shuttle/floor/purple,
 /area/vr/powered/dungeon)
 "qgv" = (
 /obj/structure/closet/walllocker_double/hydrant/east,
@@ -15725,10 +15830,17 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/vr/powered)
 "rWI" = (
-/obj/effect/floor_decal/techfloor,
-/obj/structure/table/rack/shelf/steel,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/dungeon)
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/table/steel_reinforced,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/obj/effect/spawner/parts/t5,
+/turf/simulated/shuttle/floor/yellow,
+/area/vr/powered/space/sciship)
 "rXL" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 8
@@ -16505,6 +16617,10 @@
 /obj/item/weapon/stock_parts/manipulator/hyper,
 /obj/item/weapon/stock_parts/capacitor/adv,
 /obj/item/weapon/stock_parts/capacitor/adv,
+/obj/item/device/radio/headset,
+/obj/item/device/radio/headset,
+/obj/item/device/radio/headset,
+/obj/item/device/radio/headset,
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
 "sPT" = (
@@ -17259,6 +17375,14 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
+"tQN" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/turf/simulated/shuttle/floor/white,
+/area/vr/powered/space/sciship)
 "tSO" = (
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -17444,7 +17568,7 @@
 /obj/structure/closet/crate/large,
 /obj/fiftyspawner/steel,
 /obj/item/stack/material/plasteel{
-	amount = 30
+	amount = 50
 	},
 /obj/item/stack/material/phoron{
 	amount = 25
@@ -17704,6 +17828,12 @@
 	pixel_y = 30
 	},
 /obj/structure/table/steel_reinforced,
+/obj/item/weapon/disk/species/zaddat,
+/obj/item/weapon/disk/species/unathi,
+/obj/item/weapon/disk/species/teshari,
+/obj/item/weapon/disk/species/tajaran,
+/obj/item/weapon/disk/species/skrell,
+/obj/item/weapon/disk/species/diona,
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
 "ujY" = (
@@ -18624,6 +18754,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
+"vpC" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/light/poi,
+/obj/machinery/button/remote/blast_door{
+	id = "alienroompuzzlevr";
+	name = "Alien Room Unlocker";
+	dir = 4;
+	pixel_x = 8;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/dungeon)
 "vpH" = (
 /obj/mecha/working/hoverpod/combatpod{
 	dir = 8
@@ -18664,6 +18806,11 @@
 	pixel_y = 32
 	},
 /obj/structure/table/steel_reinforced,
+/obj/item/device/flash/synthetic,
+/obj/item/device/flash/synthetic{
+	pixel_x = 6;
+	pixel_y = 0
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/vr/powered/space/sciship)
 "vtf" = (
@@ -19386,7 +19533,8 @@
 	},
 /obj/structure/fireplace{
 	dir = 2;
-	pixel_x = 10
+	pixel_x = 10;
+	density = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -20506,6 +20654,9 @@
 "xpd" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered)
+"xpr" = (
+/turf/simulated/shuttle/floor/purple,
+/area/vr/outdoors/powered)
 "xps" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 8
@@ -20858,7 +21009,7 @@
 /area/vr/powered/cult)
 "xKn" = (
 /obj/item/stack/material/plasteel{
-	amount = 30
+	amount = 50
 	},
 /obj/fiftyspawner/plastic,
 /obj/structure/table/darkglass,
@@ -21087,6 +21238,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
+/obj/item/slime_extract/yellow,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "xWh" = (
@@ -29848,7 +30003,7 @@ kIl
 tkF
 cwz
 cwz
-cwz
+iVC
 mQQ
 xoh
 sKZ
@@ -31665,7 +31820,7 @@ oph
 oph
 aLK
 nIW
-nIW
+igJ
 kzD
 lpj
 vRo
@@ -36902,10 +37057,10 @@ cZN
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
+fCE
+fCE
+fCE
+fCE
 uOW
 uOW
 uOW
@@ -36928,7 +37083,7 @@ hhf
 gPK
 cCO
 cCO
-cCO
+cgV
 cCO
 cCO
 wgq
@@ -36966,7 +37121,7 @@ pwc
 pwc
 pwc
 pwc
-kcZ
+pwc
 pwc
 oEZ
 fqb
@@ -37160,10 +37315,10 @@ lhj
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
+fCE
+fCE
+fCE
+fCE
 uOW
 uOW
 uOW
@@ -37224,7 +37379,7 @@ cwz
 cwz
 cwz
 pwc
-kcZ
+pwc
 pwc
 oEZ
 oEZ
@@ -37414,14 +37569,14 @@ pYq
 paR
 aak
 qmJ
-cQR
+vpC
+xAF
+xAF
+xAF
+xAF
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
 uOW
 uOW
 uOW
@@ -37482,9 +37637,9 @@ cwz
 sFk
 cwz
 pwc
-kcZ
 pwc
-oEZ
+pwc
+pwc
 oEZ
 fqb
 fqb
@@ -37671,15 +37826,15 @@ qmJ
 qmJ
 cpA
 aak
+aak
+lhj
 inj
-rWI
+noe
+eOj
+eOj
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
 uOW
 uOW
 uOW
@@ -37739,10 +37894,10 @@ lTR
 lTR
 lTR
 lTR
+aRS
+xpr
+xpr
 pwc
-kcZ
-pwc
-oEZ
 oEZ
 fqb
 fqb
@@ -37931,13 +38086,13 @@ qmJ
 qmJ
 qmJ
 lhj
+inj
+noe
+qfS
+eOj
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
 uOW
 uOW
 uOW
@@ -37997,10 +38152,10 @@ lTR
 lTR
 lTR
 lTR
+aRS
+aEx
+xpr
 pwc
-kcZ
-pwc
-oEZ
 oEZ
 oEZ
 fqb
@@ -38189,13 +38344,13 @@ qmJ
 cpA
 qmJ
 lhj
+inj
+noe
+eOj
+eOj
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
 uOW
 uOW
 uOW
@@ -38252,13 +38407,13 @@ lTR
 lTR
 lTR
 lTR
-xeT
-nPI
-xeT
+lTR
+lTR
+lTR
+aRS
+xpr
+xpr
 pwc
-kcZ
-pwc
-oEZ
 oEZ
 oEZ
 fqb
@@ -38448,12 +38603,12 @@ oGt
 qmJ
 dHj
 xAF
+xAF
+xAF
+xAF
+xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
 uOW
 uOW
 uOW
@@ -38511,12 +38666,12 @@ lTR
 lTR
 hHa
 xeT
-xeT
+nPI
 xeT
 pwc
-kcZ
 pwc
-oEZ
+pwc
+pwc
 oEZ
 oEZ
 fqb
@@ -38708,10 +38863,10 @@ lhj
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
+fCE
+fCE
+fCE
+fCE
 uOW
 uOW
 uOW
@@ -38767,10 +38922,10 @@ lTR
 lTR
 lTR
 lTR
-pwc
-pwc
-pwc
-pwc
+hHa
+xeT
+xeT
+xeT
 pwc
 kcZ
 pwc
@@ -38966,10 +39121,10 @@ dHj
 xAF
 fCE
 fCE
-uOW
-uOW
-uOW
-uOW
+fCE
+fCE
+fCE
+fCE
 uOW
 uOW
 uOW
@@ -39026,10 +39181,10 @@ lTR
 lTR
 lTR
 pwc
-kcZ
-kcZ
-kcZ
-kcZ
+pwc
+pwc
+pwc
+pwc
 kcZ
 pwc
 oEZ
@@ -73651,7 +73806,7 @@ mIq
 vLT
 vLT
 vLT
-vLT
+rWI
 lcF
 fGD
 siU
@@ -74167,7 +74322,7 @@ lSo
 sZe
 sZe
 sZe
-sZe
+tQN
 lcF
 jXf
 siU
