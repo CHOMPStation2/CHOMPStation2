@@ -95,13 +95,13 @@ var/global/list/antag_visiblity_choices = list(
 	)
 
 var/global/list/religion_choices = list(
-	"Unitarianism",
-	"Neopaganism",
-	"Islam",
-	"Christianity",
-	"Judaism",
-	"Hinduism",
-	"Buddhism",
+	//"Unitarianism", //CHOMPEDIT: Commenting out some IRL religions to encourage fictional ones and worldbuilding.
+	//"Neopaganism", //CHOMPEDIT: Commenting out some IRL religions
+	//"Islam",//CHOMPEDIT: Commenting out some IRL religions
+	//"Christianity", //CHOMPEDIT: Commenting out some IRL religions
+	//"Judaism", //CHOMPEDIT: Commenting out some IRL religions
+	//"Hinduism", //CHOMPEDIT: Commenting out some IRL religions
+	//"Buddhism", //CHOMPEDIT: Commenting out some IRL religions. Can still use them via Free text entry
 	"Pleromanism",
 	"Spectralism",
 	"Phact Shintoism",
