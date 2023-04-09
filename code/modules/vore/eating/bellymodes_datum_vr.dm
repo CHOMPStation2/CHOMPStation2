@@ -241,7 +241,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			if(B.egg_type in tf_vore_egg_types)
 				B.egg_path = tf_vore_egg_types[B.egg_type]
 			B.ownegg = new B.egg_path(B)
-			owner.adjust_nutrition(-25)
+			B.owner.adjust_nutrition(-25)
 			if(B.ownegg && B.egg_name)
 				B.ownegg.egg_name = B.egg_name
 				B.ownegg.name = B.egg_name //CHOMPEdit End
