@@ -157,4 +157,4 @@
 		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
 	else
 		return list(access_entertainment, access_tomfoolery, access_mime)
-*/CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
+*/ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
