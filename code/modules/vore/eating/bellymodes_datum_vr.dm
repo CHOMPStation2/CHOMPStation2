@@ -215,10 +215,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.put_in_egg(H, 1)*/
 
 /datum/digest_mode/egg/handle_atoms(obj/belly/B, list/touchable_atoms)
+	if(B.owner.nutrition < 25) //CHOMPEdit Start
+		return
 	var/list/egg_contents = list()
 	for(var/E in touchable_atoms)
 		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
-			var/obj/item/weapon/storage/vore_egg/EG = E //CHOMPEdit Start
+			var/obj/item/weapon/storage/vore_egg/EG = E
 			if(EG.egg_name != B.egg_name)
 				if(!B.egg_name)
 					EG.egg_name = null
@@ -239,6 +241,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			if(B.egg_type in tf_vore_egg_types)
 				B.egg_path = tf_vore_egg_types[B.egg_type]
 			B.ownegg = new B.egg_path(B)
+			owner.adjust_nutrition(-25)
 			if(B.ownegg && B.egg_name)
 				B.ownegg.egg_name = B.egg_name
 				B.ownegg.name = B.egg_name //CHOMPEdit End
