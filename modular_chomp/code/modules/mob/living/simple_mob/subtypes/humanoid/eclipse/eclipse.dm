@@ -123,9 +123,9 @@
 //The solar part of the faction, highly resistant to burns and stuff
 /mob/living/simple_mob/humanoid/eclipse/solar
 	name = "Solar Eclipse Initiate"
-	desc = "A silver cladded, dangerous looking indivual."
+	desc = "A dangerous indivual, a gleaming orange shield surronding them."
 
-	armor = list(melee = 30, bullet = 30, laser = 95, energy = 95, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor = list(melee = 20, bullet = 20, laser = 95, energy = 95, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 	armor_soak = list(melee = 0, bullet = 0, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
@@ -278,9 +278,9 @@
 //The lunar mobs, highly resistant to brute based damage.
 /mob/living/simple_mob/humanoid/eclipse/lunar
 	name = "Lunar Eclipse Initiate"
-	desc = "A silver cladded, dangerous looking indivual."
+	desc = "A dangerous indivual, a gleaming red shield surronding them."
 
-	armor = list(melee = 95, bullet = 95, laser = 30, energy = 30, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor = list(melee = 95, bullet = 95, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 5, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
@@ -422,12 +422,12 @@
 	icon_living = "eclipse_hound"
 	size_multiplier = 1.25
 	var/poison_chance = 100
-	var/poison_per_bite = 8
+	var/poison_per_bite = 4
 	var/poison_type = "stoxin"
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel
-	name = "Lunar Eclipse Wheel"
+	name = "Lunar Eclipse Armadillo"
 	health = 150
 	maxHealth = 150
 	melee_damage_lower = 15
@@ -440,7 +440,7 @@
 	projectiletype = /obj/item/projectile/beam/energy_net
 	movement_cooldown = -0.5
 
-	var/cloaked_alpha = 50			// Lower = Harder to see.
+	var/cloaked_alpha = 60			// Lower = Harder to see.
 	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0			// world.time
 
@@ -546,18 +546,18 @@
 	name = "Lunar Eclipse Pummeler"
 	projectiletype = /obj/item/projectile/bullet/shotgun/ion/eclipse
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	melee_damage_lower = 20
-	melee_damage_upper = 40
+	melee_damage_lower = 10
+	melee_damage_upper = 30
 	attack_armor_pen = 30
-	movement_cooldown = -0.5
+	movement_cooldown = 0
 	icon_state = "eclipse_pummler"
 	icon_living = "eclipse_pummler"
 	reload_max = 5
 	size_multiplier = 1.5
 	var/poison_per_bite = 5
 	var/poison_type = "shredding_nanites"
-	var/poison_chance = 50
-	var/shock_chance = 30
+	var/poison_chance = 10
+	var/shock_chance = 60
 	base_attack_cooldown = 6
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler/apply_melee_effects(var/atom/A)
