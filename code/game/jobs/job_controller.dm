@@ -657,7 +657,9 @@ var/global/datum/controller/occupations/job_master
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
-	var/obj/item/item_to_be
+	var/obj/item/item_to_be //CHOMPEdit - Item TF spawning
+	var/mob/living/item_carrier //CHOMPEdit - Capture crystal spawning
+	var/vorgans = FALSE //CHOMPEdit - capture crystal simplemob spawning
 
 	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
@@ -810,13 +812,22 @@ var/global/datum/controller/occupations/job_master
 						continue
 					carriers += null
 
-				items += I
-				if(I.name == initial(I.name))
+				if(istype(I, /obj/item/capture_crystal))
+					if(carrier)
+						items += I
+						var/obj/item/capture_crystal/cryst = I
+						if(cryst.spawn_mob_type)
+							item_names += "\a [cryst.spawn_mob_name] inside of [carrier]'s [I.name] ([I.loc.name])"
+						else
+							item_names += "Inside of [carrier]'s [I.name] ([I.loc.name])"
+				else if(I.name == initial(I.name))
+					items += I
 					if(carrier)
 						item_names += "[carrier]'s [I.name] ([I.loc.name])"
 					else
 						item_names += "[I.name] ([I.loc.name])"
 				else
+					items += I
 					if(carrier)
 						item_names += "[carrier]'s [I.name] (\a [initial(I.name)] at [I.loc.name])"
 					else
@@ -853,6 +864,7 @@ var/global/datum/controller/occupations/job_master
 						return
 					log_and_message_admins("[key_name(C)] has item spawned onto [key_name(carrier)]")
 					item_to_be = item
+					item_carrier = carrier
 					if(backup)
 						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
 				else
@@ -863,6 +875,12 @@ var/global/datum/controller/occupations/job_master
 					item_to_be = item
 					if(backup)
 						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+				if(istype(item, /obj/item/capture_crystal))
+					var/obj/item/capture_crystal/cryst = item
+					if(cryst.spawn_mob_type)
+						var/confirm = alert(C, "Do you want to spawn with your slot's vore organs and prefs?", "Confirm", "No", "Yes")
+						if(confirm == "Yes")
+							vorgans = TRUE
 			else
 				to_chat(C, "<span class='warning'>No items were available to accept you.</span>")
 				return
@@ -879,13 +897,15 @@ var/global/datum/controller/occupations/job_master
 				spawnpos = spawntypes[C.prefs.spawnpoint]
 
 	//We will return a list key'd by "turf" and "msg"
-	. = list("turf","msg", "voreny", "prey", "itemtf") //CHOMPEdit - Item TF spawnpoints
+	. = list("turf","msg", "voreny", "prey", "itemtf", "vorgans", "carrier") //CHOMPEdit - Item TF spawnpoints, spawn as mob
 	if(vore_spawn_gut)
 		.["voreny"] = vore_spawn_gut
 	if(prey_to_nomph)
 		.["prey"] = prey_to_nomph	//We pass this on later to reverse the vorespawn in new_player.dm
 	//CHOMPEdit Start - Item TF spawnpoints
 	if(item_to_be)
+		.["carrier"] = item_carrier
+		.["vorgans"] = vorgans
 		.["itemtf"] = item_to_be
 	//CHOMPEdit End
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
