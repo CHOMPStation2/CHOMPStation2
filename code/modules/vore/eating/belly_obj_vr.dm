@@ -357,7 +357,7 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
-	if(reagents.total_volume > 0) //CHOMPAdd Start
+	if(reagents.total_volume > 0 && !isliving(thing)) //CHOMPAdd Start
 		if(!istype(thing,/obj/item/weapon/reagent_containers)) //Don't fill containers with free juice. Splashing only.
 			reagents.trans_to(thing, reagents.total_volume, 1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), TRUE) //CHOMPAdd End
 	//Messages if it's a mob
@@ -387,6 +387,8 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+		if(reagents.total_volume > 0 && M.digestable) //CHOMPAdd
+			reagents.trans_to(M, reagents.total_volume, 1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), TRUE) //CHOMPAdd
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
