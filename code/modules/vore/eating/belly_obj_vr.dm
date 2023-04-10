@@ -316,9 +316,16 @@
 
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
-	. = ..()  //CHOMPEdit: radios
-	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
-	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+	. = ..()  //CHOMPEdit Start
+	if(istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
+		var/turf/simulated/T = owner.loc
+		var/list/slosh_sounds = T.vorefootstep_sounds["human"]
+		var/S = pick(slosh_sounds)
+		if(S)
+			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, preference = /datum/client_preference/digestion_noises)
+			cycle_sloshed = TRUE
+	thing.belly_cycles = 0 //reset cycle count
+	if(istype(thing, /mob/observer)) //Silence, spook.
 		if(desc)
 			//Allow ghosts see where they are if they're still getting squished along inside.
 			var/formatted_desc
@@ -329,8 +336,7 @@
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
-	//CHOMPEdit Start - Prevent reforming causing a lot of log spam/sounds
-	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi))
+	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi)) // Prevent reforming causing a lot of log spam/sounds
 		return //Someone getting reformed most likely (And if not, uh... shouldn't happen anyways?)
 	//CHOMPEdit end
 
@@ -351,6 +357,9 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
+	if(reagents.total_volume > 0) //CHOMPAdd Start
+		if(!istype(thing,/obj/item/weapon/reagent_containers)) //Don't fill containers with free juice. Splashing only.
+			reagents.trans_to(thing, reagents.total_volume, 1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), TRUE) //CHOMPAdd End
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
@@ -893,8 +902,12 @@
 			Prey.bloodstr.del_reagent("numbenzyme")
 			Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway
 			Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
+			Prey.touching.del_reagent("stomacid") //CHOMPEdit: Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("cleaner") //CHOMPEdit: Don't need this stuff in our bloodstream.
 			Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
 		else if(M.reagents)
+			M.reagents.del_reagent("stomacid") //CHOMPEdit: Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent("cleaner") //CHOMPEdit: Don't need this stuff in our bloodstream.
 			M.reagents.trans_to_holder(Pred.bloodstr, M.reagents.total_volume, 0.5, TRUE)
 
 	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
