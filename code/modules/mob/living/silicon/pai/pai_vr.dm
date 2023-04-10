@@ -46,7 +46,10 @@
 		"catslug",
 		"car",
 		"typeone",
-		"13"
+		"13",
+		//CHOMPStation Edit Start
+		"pai-raptor"
+		//CHOMPStation Edit End
 		)
 	//These vars keep track of whether you have the related software, used for easily updating the UI
 	var/soft_ut = FALSE	//universal translator
