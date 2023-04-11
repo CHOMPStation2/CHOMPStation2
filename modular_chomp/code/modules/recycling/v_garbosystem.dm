@@ -77,6 +77,8 @@
 							items_taken++
 							break
 					for(var/atom/movable/C in A.contents)
+						if(C.anchored)
+							C.anchored = FALSE
 						C.forceMove(loc)
 					if(isitem(A))
 						A.SpinAnimation(5,3)
