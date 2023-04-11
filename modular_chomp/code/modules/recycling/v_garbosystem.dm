@@ -100,6 +100,7 @@
 			if(items_taken >= voracity)
 				break
 		if(items_taken) //Lazy coder sound design moment.
+			Recycled_Items = Recycled_Items + items_taken
 			playsound(src, 'sound/items/poster_being_created.ogg', 50, 1)
 			playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 			playsound(src, 'sound/effects/metalscrape2.ogg', 50, 1)
@@ -118,3 +119,5 @@
 		else
 			to_chat(user, "Unable to empty filter while the machine is running.")
 	return ..()
+
+var/Recycled_Items = 0
