@@ -152,7 +152,7 @@
 		if(pcard.is_damage_critical())
 			pcard.forceMove(get_turf(src))
 			charging = null
-			pcard.damage_random_component()
+			//pcard.damage_random_component()//CHOMPEDIT: Punishing PAI for charging too soon seems kinda annoying
 			update_icon()
 		else if(pcard.pai.bruteloss)
 			pcard.pai.adjustBruteLoss(-5)
