@@ -373,9 +373,14 @@
 	if(alien == IS_GREY) //ywedit
 		return
 	if(ishuman(M))
+		var/item_digestion = TRUE //CHOMPEdit Start
+		if(isbelly(M.loc))
+			var/obj/belly/B = M.loc
+			if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
+				item_digestion = FALSE
 		var/mob/living/carbon/human/H = M
 		if(H.head)
-			if(H.head.unacidable || is_type_in_list(H.head,item_digestion_blacklist)) //CHOMPEdit
+			if(H.head.unacidable || is_type_in_list(H.head,item_digestion_blacklist) || !item_digestion)
 				to_chat(H, "<span class='danger'>Your [H.head] protects you from the acid.</span>")
 				remove_self(volume)
 				return
@@ -389,7 +394,7 @@
 			return
 
 		if(H.wear_mask)
-			if(H.wear_mask.unacidable || is_type_in_list(H.wear_mask,item_digestion_blacklist)) //CHOMPEdit
+			if(H.wear_mask.unacidable || is_type_in_list(H.wear_mask,item_digestion_blacklist) || !item_digestion)
 				to_chat(H, "<span class='danger'>Your [H.wear_mask] protects you from the acid.</span>")
 				remove_self(volume)
 				return
@@ -403,7 +408,7 @@
 			return
 
 		if(H.glasses)
-			if(H.glasses.unacidable || is_type_in_list(H.glasses,item_digestion_blacklist)) //CHOMPEdit
+			if(H.glasses.unacidable || is_type_in_list(H.glasses,item_digestion_blacklist) || !item_digestion) //CHOMPEdit End
 				to_chat(H, "<span class='danger'>Your [H.glasses] partially protect you from the acid!</span>")
 				removed /= 2
 			else if(removed > meltdose)
@@ -433,7 +438,12 @@
 
 /datum/reagent/acid/touch_obj(var/obj/O)
 	..()
-	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit)
+	var/item_digestion = TRUE //CHOMPEdit Start
+	if(isbelly(O.loc))
+		var/obj/belly/B = O.loc
+		if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
+			item_digestion = FALSE
+	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)  || !item_digestion) //CHOMPEdit End
 		return
 	if((istype(O, /obj/item) || istype(O, /obj/effect/plant)) && (volume > meltdose))
 		var/obj/effect/decal/cleanable/molten_item/I = new/obj/effect/decal/cleanable/molten_item(O.loc)
