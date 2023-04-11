@@ -936,6 +936,8 @@
 			M.forceMove(G)
 		else
 			qdel(M)
+	if(isanimal(owner))
+		owner.update_transform()
 	//CHOMPEdit End
 
 // Handle a mob being absorbed

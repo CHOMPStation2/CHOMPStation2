@@ -10,8 +10,8 @@
 	icon_state = "conveyor0"
 	name = "conveyor belt"
 	desc = "A conveyor belt."
-	plane = TURF_PLANE
-	layer = ABOVE_TURF_LAYER
+	plane = OBJ_PLANE //CHOMPEdit
+	layer = STAIRS_LAYER //CHOMPEdit
 	anchored = TRUE
 	active_power_usage = 100
 	circuit = /obj/item/weapon/circuitboard/conveyor
