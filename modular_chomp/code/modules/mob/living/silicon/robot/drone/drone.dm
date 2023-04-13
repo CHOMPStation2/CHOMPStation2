@@ -50,16 +50,6 @@ var/list/mob_hat_cache = list()
 	updateicon()
 	updatename()
 
-/mob/living/silicon/robot/drone/init()
-	if(!scrambledcodes && !foreign_droid)
-		aiCamera = new/obj/item/device/camera/siliconcam/drone_camera(src)
-	additional_law_channels["Drone"] = ":d"
-	if(!laws) laws = new law_type
-	if(!module) module = new module_type(src)
-
-	flavor_text = "It's a tiny little repair drone. The casing is stamped with an corporate logo and the subscript: '[using_map.company_name] Recursive Repair Systems: Fixing Tomorrow's Problem, Today!'"
-	playsound(src, 'sound/machines/twobeep.ogg', 50, 0)
-
 /mob/living/silicon/robot/drone/updateicon()
 	cut_overlays()
 
@@ -256,7 +246,11 @@ var/list/mob_hat_cache = list()
 	clear_supplied_laws(1)
 	clear_inherent_laws(1)
 	clear_ion_laws(1)
-	laws = new law_type
+	if(faction == "malf_drone")
+		laws = new /datum/ai_laws/nanotrasen/malfunction
+		foreign_droid = TRUE
+	else
+		laws = new law_type
 
 //Reboot procs.
 
@@ -278,9 +272,3 @@ var/list/mob_hat_cache = list()
 		to_chat(src,"<b>Loaded</b>.")
 	spawn(4 SECONDS)
 		welcome_drone()
-
-/mob/living/silicon/robot/drone/proc/welcome_drone()
-	to_chat(src, "<b>You are a maintenance drone, a tiny-brained robotic repair machine</b>.")
-	to_chat(src, "You have no individual will, no personality, and no drives or urges other than your laws.")
-	to_chat(src, "Remember,  you are <b>lawed against interference with the crew</b>. Also remember, <b>you DO NOT take orders from the AI.</b>")
-	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")

@@ -18,7 +18,6 @@
 
 //Triggered by self
 /mob/observer/dead/verb/join_as_drone()
-
 	set category = "Ghost"
 	set name = "Join As Drone"
 	set desc = "If there is a powered, enabled fabricator in the game world with a prepared chassis, join as a maintenance drone."
@@ -81,5 +80,8 @@
 
 	var/choice = tgui_input_list(src, "Which fabricator do you wish to use?", "Fabricator Choice", all_fabricators)
 	if(choice)
+		var/faction
+		if(choice == "Unknown")
+			faction = "malf_drone"
 		var/obj/machinery/drone_fabricator/chosen_fabricator = all_fabricators[choice]
-		chosen_fabricator.create_drone(src.client)
+		chosen_fabricator.create_drone(src.client,faction)

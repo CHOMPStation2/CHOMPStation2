@@ -55,6 +55,22 @@
 	var/can_blitz = FALSE
 	//vore addition
 	mob_size = MOB_SMALL
+/mob/living/silicon/robot/drone/proc/welcome_drone()
+	to_chat(src, "<b>You are a maintenance drone, a tiny-brained robotic repair machine</b>.")
+	to_chat(src, "You have no individual will, no personality, and no drives or urges other than your laws.")
+	to_chat(src, "Remember,  you are <b>lawed against interference with the crew</b>. Also remember, <b>you DO NOT take orders from the AI.</b>")
+	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
+	if(faction == "malf_drone")
+		to_chat(src, "Use <b>Directive 0 in effect.")
+/mob/living/silicon/robot/drone/init()
+	if(!scrambledcodes && !foreign_droid)
+		aiCamera = new/obj/item/device/camera/siliconcam/drone_camera(src)
+	additional_law_channels["Drone"] = ":d"
+	if(!laws) laws = new law_type
+	if(!module) module = new module_type(src)
+
+	flavor_text = "It's a tiny little repair drone. The casing is stamped with an corporate logo and the subscript: '[using_map.company_name] Recursive Repair Systems: Fixing Tomorrow's Problem, Today!'"
+	playsound(src, 'sound/machines/twobeep.ogg', 50, 0)
 //CORE END
 
 //VARIANTS
@@ -73,6 +89,8 @@
 	to_chat(src, "You are assigned to a Sol Central construction project. The name is irrelevant. Your task is to complete construction and subsystem integration as soon as possible.")
 	to_chat(src, "Use <b>:d</b> to talk to other drones and <b>say</b> to speak silently to your nearby fellows.")
 	to_chat(src, "<b>You do not follow orders from anyone; not the AI, not humans, and not other synthetics.</b>.")
+	if(faction == "malf_drone")
+		to_chat(src, "Use <b>Directive 0 in effect.")
 /mob/living/silicon/robot/drone/construction/init()
 	..()
 	flavor_text = "It's a bulky construction drone stamped with a Sol Central glyph."
@@ -87,7 +105,7 @@
 	can_pull_mobs = MOB_PULL_SAME
 	can_pick_shell = FALSE
 	shell_accessories = list("eyes-miningdrone")
-/mob/living/silicon/robot/drone/construction/init()
+/mob/living/silicon/robot/drone/mining/init()
 	..()
 	flavor_text = "It's a bulky mining drone stamped with a Grayson logo."
 
