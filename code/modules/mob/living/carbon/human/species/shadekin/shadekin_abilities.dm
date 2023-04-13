@@ -43,16 +43,37 @@
 	darkness = 1-brightness //Invert
 
 	var/watcher = 0
-	for(var/mob/living/carbon/human/watchers in oview(7,src ))	// If we can see them...
-		if(watchers in oviewers(7,src))	// And they can see us...
-			if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/weapon/holder))	// And they are alive and not being held by someone...
-				watcher++	// They are watching us!
+	//Chompedit start - Nerf to phasing
+	for(var/thing in orange(7, src))
+		if(istype(thing, /mob/living/carbon/human))
+			var/mob/living/carbon/human/watchers = thing
+			if(watchers in oviewers(7,src))	// And they can see us...
+				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/weapon/holder))	// And they are alive and not being held by someone...
+					watcher++	// They are watching us!
+		else if(istype(thing, /mob/living/silicon/robot))
+			var/mob/living/silicon/robot/watchers = thing
+			if(watchers in oviewers(7,src))
+				if(!watchers.stat && !isbelly(watchers.loc))
+					watcher++	//The robot is watching us!
+		else if(istype(thing, /obj/machinery/camera))
+			var/obj/machinery/camera/watchers = thing
+			if(watchers.can_use())
+				if(src in watchers.can_see())
+					watcher++	//The camera is watching us!
+	//CHOMPedit end
+
 
 	ability_cost = CLAMP(ability_cost/(0.01+darkness*2),50, 80)//This allows for 1 watcher in full light
 	if(watcher>0)
 		ability_cost = ability_cost + ( 15 * watcher )
 	if(!(ability_flags & AB_PHASE_SHIFTED))
-		log_debug("[src] attempted to shift with [watcher] visible Carbons with a  cost of [ability_cost] in a darkness level of [darkness]")
+		log_debug("[src] attempted to shift with [watcher] observers with a  cost of [ability_cost] in a darkness level of [darkness]")
+	//CHOMPEdit start - inform about the observers affecting phasing
+	if(darkness<=0.4 && watcher>=2)
+		to_chat(src, "<span class='warning'>You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)</span>")
+	else if(watcher>=3)
+		to_chat(src, "<span class='warning'>You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)</span>")
+	//CHOMPEdit end
 
 
 	var/datum/species/shadekin/SK = species
@@ -149,15 +170,31 @@
 		//Affect nearby lights
 		var/destroy_lights = 0
 
-		for(var/obj/machinery/light/L in machines)
-			if(L.z != z || get_dist(src,L) > 10)
-				continue
+		//CHOMPEdit start - Add back light destruction
+		if(SK.get_shadekin_eyecolor() == RED_EYES)
+			destroy_lights = 80
+		else if(SK.get_shadekin_eyecolor() == PURPLE_EYES)
+			destroy_lights = 25
+		//CHOMPEdit end
 
-			if(prob(destroy_lights))
-				spawn(rand(5,25))
-					L.broken()
-			else
-				L.flicker(10)
+		//CHOMPEdit start - Add gentle phasing
+		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius for 3s. Weaken for 3sec after
+			for(var/obj/machinery/light/L in machines)
+				if(L.z != z || get_dist(src,L) > 4)
+					continue
+				L.flicker(3)
+			src.Stun(3)
+		else
+			//CHOMPEdit end
+			for(var/obj/machinery/light/L in machines)
+				if(L.z != z || get_dist(src,L) > 10)
+					continue
+
+				if(prob(destroy_lights))
+					spawn(rand(5,25))
+						L.broken()
+				else
+					L.flicker(10)
 	//Shifting out
 	else
 		ability_flags |= AB_PHASE_SHIFTED
@@ -199,6 +236,26 @@
 		density = FALSE
 		force_max_speed = TRUE
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
+
+//CHOMPEdit start - gentle phasing for carbonkin
+//toggle proc for toggling gentle/normal phasing
+/mob/living/carbon/human/proc/phase_strength_toggle()
+	set name = "Toggle Phase Strength"
+	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
+	set category = "Shadekin"
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		return FALSE
+
+	if(SK.phase_gentle)
+		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
+		SK.phase_gentle = 0
+	else
+		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
+		SK.phase_gentle = 1
+//CHOMPEdit End
 
 //CHOMPEdit Start - Shadekin probably shouldn't be hit while phasing
 /datum/modifier/shadekin_phase

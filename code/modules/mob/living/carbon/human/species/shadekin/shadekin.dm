@@ -118,6 +118,7 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+	var/phase_gentle = FALSE //CHOMPEdit - Add gentle phasing
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
@@ -283,6 +284,7 @@
 					ability_icon_given = P.ability_icon_state,
 					arguments = list()
 					)
+	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite
