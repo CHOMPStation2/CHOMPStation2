@@ -61,7 +61,7 @@
 	to_chat(src, "Remember,  you are <b>lawed against interference with the crew</b>. Also remember, <b>you DO NOT take orders from the AI.</b>")
 	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
 	if(faction == "malf_drone")
-		to_chat(src, "Use <b>Directive 0 in effect.")
+		to_chat(src, "Use <b>Directive 0 in effect.</b>")
 /mob/living/silicon/robot/drone/init()
 	if(!scrambledcodes && !foreign_droid)
 		aiCamera = new/obj/item/device/camera/siliconcam/drone_camera(src)
@@ -90,7 +90,7 @@
 	to_chat(src, "Use <b>:d</b> to talk to other drones and <b>say</b> to speak silently to your nearby fellows.")
 	to_chat(src, "<b>You do not follow orders from anyone; not the AI, not humans, and not other synthetics.</b>.")
 	if(faction == "malf_drone")
-		to_chat(src, "Use <b>Directive 0 in effect.")
+		to_chat(src, "Use <b>Directive 0 in effect.</b>")
 /mob/living/silicon/robot/drone/construction/init()
 	..()
 	flavor_text = "It's a bulky construction drone stamped with a Sol Central glyph."
