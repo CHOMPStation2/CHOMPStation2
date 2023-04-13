@@ -1,5 +1,63 @@
 //All of the different types of drones
+//CORE TYPE
+/mob/living/silicon/robot/drone
+	name = "maintenance drone"
+	real_name = "drone"
+	icon = 'icons/mob/robots.dmi'
+	icon_state = "repairbot"
+	maxHealth = 35
+	health = 35
+	cell_emp_mult = 1
+	universal_speak = 0
+	universal_understand = 1
+	gender = NEUTER
+	pass_flags = PASSTABLE
+	braintype = "Drone"
+	lawupdate = 0
+	density = TRUE
+	req_access = list(access_engine, access_robotics)
+	integrated_light_power = 3
+	local_transmit = 1
 
+	can_pull_size = ITEMSIZE_NO_CONTAINER
+	can_pull_mobs = MOB_PULL_SMALLER
+	can_enter_vent_with = list(
+		/obj,
+		/atom/movable/emissive_blocker)
+
+	mob_bump_flag = SIMPLE_ANIMAL
+	mob_swap_flags = SIMPLE_ANIMAL
+	mob_push_flags = SIMPLE_ANIMAL
+	mob_always_swap = 1
+
+	mob_size = MOB_LARGE // Small mobs can't open doors, it's a huge pain for drones.
+
+	//Used for self-mailing.
+	var/mail_destination = ""
+	var/obj/machinery/drone_fabricator/master_fabricator
+	var/law_type = /datum/ai_laws/drone
+	var/module_type = /obj/item/weapon/robot_module/drone
+	var/obj/item/hat
+	var/hat_x_offset = 0
+	var/hat_y_offset = -13
+	var/serial_number = 0
+	var/name_override = 0
+
+	var/foreign_droid = FALSE
+
+	holder_type = /obj/item/weapon/holder/drone
+
+	can_be_antagged = FALSE
+
+	var/static/list/shell_types = list("Classic" = "repairbot", "Eris" = "maintbot")
+	var/can_pick_shell = TRUE
+	var/list/shell_accessories
+	var/can_blitz = FALSE
+	//vore addition
+	mob_size = MOB_SMALL
+//CORE END
+
+//VARIANTS
 /mob/living/silicon/robot/drone/construction
 	name = "construction drone"
 	icon_state = "constructiondrone"

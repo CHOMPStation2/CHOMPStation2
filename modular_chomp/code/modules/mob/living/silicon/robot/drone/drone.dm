@@ -1,62 +1,4 @@
 //Modified copy of regula drone folder
-/mob/living/silicon/robot/drone
-	name = "maintenance drone"
-	real_name = "drone"
-	icon = 'icons/mob/robots.dmi'
-	icon_state = "repairbot"
-	maxHealth = 35
-	health = 35
-	cell_emp_mult = 1
-	universal_speak = 0
-	universal_understand = 1
-	gender = NEUTER
-	pass_flags = PASSTABLE
-	braintype = "Drone"
-	lawupdate = 0
-	density = TRUE
-	req_access = list(access_engine, access_robotics)
-	integrated_light_power = 3
-	local_transmit = 1
-
-	can_pull_size = ITEMSIZE_NO_CONTAINER
-	can_pull_mobs = MOB_PULL_SMALLER
-	can_enter_vent_with = list(
-		/obj,
-		/atom/movable/emissive_blocker)
-
-	mob_bump_flag = SIMPLE_ANIMAL
-	mob_swap_flags = SIMPLE_ANIMAL
-	mob_push_flags = SIMPLE_ANIMAL
-	mob_always_swap = 1
-
-	mob_size = MOB_LARGE // Small mobs can't open doors, it's a huge pain for drones.
-
-	//Used for self-mailing.
-	var/mail_destination = ""
-	var/obj/machinery/drone_fabricator/master_fabricator
-	var/law_type = /datum/ai_laws/drone
-	var/module_type = /obj/item/weapon/robot_module/drone
-	var/obj/item/hat
-	var/hat_x_offset = 0
-	var/hat_y_offset = -13
-	var/serial_number = 0
-	var/name_override = 0
-
-	var/foreign_droid = FALSE
-
-	holder_type = /obj/item/weapon/holder/drone
-
-	can_be_antagged = FALSE
-
-	var/static/list/shell_types = list("Classic" = "repairbot", "Eris" = "maintbot")
-	var/can_pick_shell = TRUE
-	var/list/shell_accessories
-	var/can_blitz = FALSE
-	//vore addition
-	mob_size = MOB_SMALL
-
-
-
 var/list/mob_hat_cache = list()
 /proc/get_hat_icon(var/obj/item/hat, var/offset_x = 0, var/offset_y = 0)
 	var/t_state = hat.icon_state
@@ -76,14 +18,6 @@ var/list/mob_hat_cache = list()
 		I.pixel_y = offset_y
 		mob_hat_cache[key] = I
 	return mob_hat_cache[key]
-
-/mob/living/silicon/robot/drone/Destroy()
-	if(hat)
-		hat.loc = get_turf(src)
-	..()
-
-/mob/living/silicon/robot/drone/is_sentient()
-	return FALSE
 
 /mob/living/silicon/robot/drone/New()
 	..()
@@ -126,24 +60,6 @@ var/list/mob_hat_cache = list()
 	flavor_text = "It's a tiny little repair drone. The casing is stamped with an corporate logo and the subscript: '[using_map.company_name] Recursive Repair Systems: Fixing Tomorrow's Problem, Today!'"
 	playsound(src, 'sound/machines/twobeep.ogg', 50, 0)
 
-/mob/living/silicon/robot/drone/Login()
-	. = ..()
-	if(can_pick_shell)
-		to_chat(src, "<b>You can select a shell using the 'Robot Commands' > 'Customize Appearance'</b>")
-
-//Redefining some robot procs...
-/mob/living/silicon/robot/drone/SetName(pickedName as text)
-	// Would prefer to call the grandparent proc but this isn't possible, so..
-	real_name = pickedName
-	name = real_name
-
-/mob/living/silicon/robot/drone/updatename()
-	if(name_override)
-		return
-
-	real_name = "[initial(name)] ([serial_number])"
-	name = real_name
-
 /mob/living/silicon/robot/drone/updateicon()
 	cut_overlays()
 
@@ -185,12 +101,6 @@ var/list/mob_hat_cache = list()
 
 	can_pick_shell = FALSE
 	updateicon()
-
-/mob/living/silicon/robot/drone/choose_icon()
-	return
-
-/mob/living/silicon/robot/drone/pick_module()
-	return
 
 /mob/living/silicon/robot/drone/proc/wear_hat(var/obj/item/new_hat)
 	if(hat)
@@ -322,10 +232,6 @@ var/list/mob_hat_cache = list()
 		return
 	..()
 
-//DRONE MOVEMENT.
-/mob/living/silicon/robot/drone/Process_Spaceslipping(var/prob_slip)
-	return 0
-
 //CONSOLE PROCS
 /mob/living/silicon/robot/drone/proc/law_resync()
 	if(stat == DEAD)
@@ -354,22 +260,7 @@ var/list/mob_hat_cache = list()
 
 //Reboot procs.
 
-/mob/living/silicon/robot/drone/proc/request_player()
-	for(var/mob/observer/dead/O in player_list)
-		if(jobban_isbanned(O, "Cyborg") || !O.client || !(O.client.prefs.be_special & BE_PAI))
-			continue
-		question(O.client)
 
-/mob/living/silicon/robot/drone/proc/question(var/client/C)
-	spawn(0)
-		if(!C || jobban_isbanned(C,"Cyborg"))	return
-		var/response = tgui_alert(C, "Someone is attempting to reboot a maintenance drone. Would you like to play as one?", "Maintenance drone reboot", list("Yes", "No", "Never for this round"))
-		if(!C || ckey)
-			return
-		if(response == "Yes")
-			transfer_personality(C)
-		else if (response == "Never for this round")
-			C.prefs.be_special ^= BE_PAI
 
 /mob/living/silicon/robot/drone/proc/transfer_personality(var/client/player)
 
@@ -393,9 +284,3 @@ var/list/mob_hat_cache = list()
 	to_chat(src, "You have no individual will, no personality, and no drives or urges other than your laws.")
 	to_chat(src, "Remember,  you are <b>lawed against interference with the crew</b>. Also remember, <b>you DO NOT take orders from the AI.</b>")
 	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
-
-/mob/living/silicon/robot/drone/add_robot_verbs()
-	src.verbs |= silicon_subsystems
-
-/mob/living/silicon/robot/drone/remove_robot_verbs()
-	src.verbs -= silicon_subsystems
