@@ -167,6 +167,7 @@
 	var/limb_icon_key
 	var/understands_common = TRUE 		//VOREStation Edit - Makes it so that simplemobs can understand galcomm without being able to speak it.
 	var/heal_countdown = 5				//VOREStation Edit - A cooldown ticker for passive healing
+<<<<<<< HEAD
 	var/obj/item/weapon/card/id/mobcard = null //VOREStation Edit
 	var/list/mobcard_access = list() //VOREStation Edit
 	var/mobcard_provided = FALSE //VOREStation Edit
@@ -175,14 +176,18 @@
 	var/injury_level = 0 				// What our injury level is. Rather than being the flat damage, this is the amount added to various delays to simulate injuries in a manner as lightweight as possible.
 	var/threshold = 0.6					// When we start slowing down. Configure this setting per-mob. Default is 60%
 	// CHOMPStation Add End
+=======
+	var/list/myid_access = list() //VOREStation Edit
+	var/ID_provided = FALSE //VOREStation Edit
+>>>>>>> ea195721df... Merge pull request #14790 from MisterGrimm/miscfixesandchanges
 
 /mob/living/simple_mob/Initialize()
 	verbs -= /mob/verb/observe
 	health = maxHealth
 
-	if(mobcard_provided) //VOREStation Edit
-		mobcard = new /obj/item/weapon/card/id(src)
-		mobcard.access = mobcard_access.Copy()
+	if(ID_provided) //VOREStation Edit
+		myid = new /obj/item/weapon/card/id(src)
+		myid.access = myid_access.Copy()
 
 	for(var/L in has_langs)
 		languages |= GLOB.all_languages[L]
@@ -324,6 +329,7 @@
 
 /decl/mob_organ_names
 	var/list/hit_zones = list("body") //When in doubt, it's probably got a body.
+<<<<<<< HEAD
 
 //VOREStation Add Start 	For allowing mobs with ID's door access
 /mob/living/simple_mob/Bump(var/atom/A)
@@ -352,3 +358,5 @@
 	. = ..() 							// Calling parent here, actually updating our mob on how hurt we are.
 
 // CHOMPStation Add End
+=======
+>>>>>>> ea195721df... Merge pull request #14790 from MisterGrimm/miscfixesandchanges
