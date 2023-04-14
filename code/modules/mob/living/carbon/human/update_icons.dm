@@ -162,7 +162,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		anim_time = 1 //Thud
 
 	if(lying && !species.prone_icon) //Only rotate them if we're not drawing a specific icon for being prone.
+<<<<<<< HEAD
 		// CHOMPEdit Start Loafy Time
+=======
+>>>>>>> 272043a540... Merge pull request #14781 from KillianKirilenko/kk-wolfloaf
 		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
 			update_tail_showing()
 			M.Scale(desired_scale_x, desired_scale_y)
@@ -177,8 +180,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			else
 				M.Translate(1,-6)
 			M.Scale(desired_scale_y, desired_scale_x)
+<<<<<<< HEAD
 		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		// CHOMPEdit End
+=======
+>>>>>>> 272043a540... Merge pull request #14781 from KillianKirilenko/kk-wolfloaf
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
