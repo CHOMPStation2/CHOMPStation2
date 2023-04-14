@@ -1,8 +1,9 @@
-/obj/item/weapon/holder/dropped(mob/user)
+/*/obj/item/weapon/holder/dropped(mob/user) //CHOMPRemoval. Fixes unwanted and broken upstream "feature" (bug)
 	if (held_mob?.loc != src || isturf(loc))
 		var/held = held_mob
 		dump_mob()
 		held_mob = held
+*/
 
 /obj/item/weapon/holder/attack_hand(mob/living/user as mob) //straight up just copypasted from objects/items.dm with a few things changed (doesn't called dropped unless +actually dropped+)
 	if (!user) return
