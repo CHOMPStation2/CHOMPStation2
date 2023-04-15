@@ -14,7 +14,16 @@
 		handle_attack_delay(A, melee_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
 
 	// Cooldown testing is done at click code (for players) and interface code (for AI).
+<<<<<<< HEAD
 	setClickCooldown(get_attack_speed() + ((injury_level / 2) SECONDS)) // CHOMPStation Edit: Delay how fast we can attack by our injury level / 2
+=======
+	// VOREStation Edit Start: Simplemob Injury
+	if(injury_enrages)
+		setClickCooldown(get_attack_speed() - ((injury_level / 2) SECONDS)) // Increase how fast we can attack by our injury level / 2
+	else
+		setClickCooldown(get_attack_speed() + ((injury_level / 2) SECONDS)) // Delay how fast we can attack by our injury level / 2
+	// VOREStation Edit Stop: Simplemob Injury
+>>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 
 	// Returns a value, but will be lost if
 	. = do_attack(A, their_T)
@@ -90,7 +99,16 @@
 	if(!istype(A) || QDELETED(A))
 		return
 
+<<<<<<< HEAD
 	setClickCooldown(get_attack_speed() + ((injury_level / 2) SECONDS)) // CHOMPStation Edit: Delay how fast we can attack by our injury level / 2
+=======
+	// VOREStation Edit Start: Simplemob Injury
+	if(injury_enrages)
+		setClickCooldown(get_attack_speed() - ((injury_level / 2) SECONDS)) // Increase how fast we can attack by our injury level / 2
+	else
+		setClickCooldown(get_attack_speed() + ((injury_level / 2) SECONDS)) // Delay how fast we can attack by our injury level / 2
+	// VOREStation Edit Stop: Simplemob Injury
+>>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 
 	face_atom(A)
 

@@ -28,7 +28,11 @@
 		potential_damage = (melee_damage_lower + melee_damage_upper) / 2
 
 		// Treat potential_damage as estimated DPS. If the enemy attacks twice as fast as usual, it will double the number.
+<<<<<<< HEAD
 		potential_damage *= 1 SECOND / (base_attack_cooldown + melee_attack_delay + injury_level) // CHOMPStation Add: Injury level should affect potential damage, thereby increasing the threat level
+=======
+		potential_damage *= 1 SECOND / (base_attack_cooldown + melee_attack_delay + injury_level) // VOREStation Add: Injury level should affect potential damage, thereby increasing the threat level
+>>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 	else
 		var/obj/item/projectile/P = new projectiletype(src)
 		if(P.nodamage || P.taser_effect) // Tasers are somewhat less scary.
@@ -41,7 +45,11 @@
 			potential_damage += P.agony / 2
 		qdel(P)
 
+<<<<<<< HEAD
 		potential_damage *= 1 SECOND / (base_attack_cooldown + ranged_attack_delay + injury_level) // CHOMPStation Add: Injury level should affect potential damage, thereby increasing the threat level
+=======
+		potential_damage *= 1 SECOND / (base_attack_cooldown + ranged_attack_delay + injury_level) // VOREStation Add: Injury level should affect potential damage, thereby increasing the threat level
+>>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 
 	// Special attacks are ultra-specific to the mob so a generic threat assessment isn't really possible.
 
