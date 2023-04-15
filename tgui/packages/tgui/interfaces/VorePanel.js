@@ -815,6 +815,9 @@ const VoreSelectedBellyVisuals = (props, context) => {
     voresprite_size_factor,
     belly_sprite_option_shown,
     belly_sprite_to_affect,
+    undergarment_chosen,
+    undergarment_if_none,
+    undergarment_color,
     tail_option_shown,
     tail_to_change_to,
     tail_colouration,
@@ -837,7 +840,6 @@ const VoreSelectedBellyVisuals = (props, context) => {
             </LabeledList.Item>
             {affects_voresprite ? (
               <span>
-                {/* Once other options are added in:
                 <LabeledList.Item label="Vore Sprite Mode">
                   {(vore_sprite_flags.length && vore_sprite_flags.join(', ')) || 'None'}
                   <Button
@@ -845,7 +847,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
                     ml={1}
                     icon="plus"
                   />
-                </LabeledList.Item>*/}
+                </LabeledList.Item>
                 <LabeledList.Item label="Count Absorbed prey for vore sprites">
                   <Button
                     onClick={() => act('set_attribute', { attribute: 'b_count_absorbed_prey_for_sprites' })}
@@ -917,6 +919,30 @@ const VoreSelectedBellyVisuals = (props, context) => {
                       content={belly_sprite_to_affect}
                     />
                   </LabeledList.Item>
+                ) : (
+                  ''
+                )}
+                {tail_option_shown && vore_sprite_flags.includes('Undergarment addition') ? (
+                  <div>
+                    <LabeledList.Item label="Undergarment type to affect">
+                      <Button
+                        onClick={() => act('set_attribute', { attribute: 'b_undergarment_choice' })}
+                        content={undergarment_chosen}
+                      />
+                    </LabeledList.Item>
+                    <LabeledList.Item label="Undergarment if none equipped">
+                      <Button
+                        onClick={() => act('set_attribute', { attribute: 'b_undergarment_if_none' })}
+                        content={undergarment_if_none}
+                      />
+                    </LabeledList.Item>
+                    <FeatureColorInput
+                      action_name="b_undergarment_color"
+                      value_of={null}
+                      back_color={undergarment_color}
+                      name_of="Undergarment Color if none"
+                    />
+                  </div>
                 ) : (
                   ''
                 )}

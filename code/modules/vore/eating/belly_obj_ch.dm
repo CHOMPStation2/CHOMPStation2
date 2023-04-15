@@ -77,7 +77,8 @@
 	var/tmp/static/list/vore_sprite_flag_list= list(
 		"Normal belly sprite" = DM_FLAG_VORESPRITE_BELLY,
 		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
-		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
+		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING,
+		"Undergarment addition" = DM_FLAG_VORESPRITE_ARTICLE,
 		)
 
 	var/affects_vore_sprites = FALSE
@@ -91,6 +92,9 @@
 	var/resist_triggers_animation = TRUE
 	var/size_factor_for_sprite = 1
 	var/belly_sprite_to_affect = "stomach"
+	var/undergarment_chosen = "Underwear, bottom"
+	var/undergarment_if_none
+	var/undergarment_color = COLOR_GRAY
 	var/datum/sprite_accessory/tail/tail_to_change_to = FALSE
 	var/tail_colouration = FALSE
 	var/tail_extra_overlay = FALSE
