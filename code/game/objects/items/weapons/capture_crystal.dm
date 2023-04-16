@@ -480,7 +480,9 @@
 
 //IF the crystal somehow ends up in a tummy and digesting with a bound mob who doesn't want to be eaten, let's move them to the ground
 /obj/item/capture_crystal/digest_act(var/atom/movable/item_storage = null)
-	if(bound mob && bound_mob in contents && !bound_mob.devourable) //CHOMPEdit
+	if(!bound_mob) //CHOMPEdit
+		return ..()
+	if(bound_mob in contents && !bound_mob.devourable)
 		bound_mob.forceMove(src.drop_location())
 	return ..()
 
