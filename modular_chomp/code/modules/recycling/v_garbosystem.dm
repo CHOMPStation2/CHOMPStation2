@@ -10,6 +10,7 @@
 	active_power_usage = 100
 	var/operating = FALSE
 	var/obj/machinery/recycling/crusher/crusher //Connects to regular crusher
+	var/obj/machinery/button/garbosystem/button
 	var/list/affecting
 	var/voracity = 5 //How much stuff is swallowed at once.
 
@@ -17,12 +18,19 @@
 	. = ..()
 	for(var/dir in cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
-		if(src.crusher) break
+		src.button = locate(/obj/machinery/button/garbosystem, get_step(src, dir))
+		if(crusher)
+			crusher.hand_fed = FALSE
+		if(button)
+			button.grinder = src
 	return
 
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
 	operating = !operating
 	update()
+
+/obj/machinery/v_garbosystem/attack_ai(mob/user as mob)
+	return attack_hand(user)
 
 /obj/machinery/v_garbosystem/power_change()
 	if((. = ..()))
@@ -118,3 +126,14 @@
 		else
 			to_chat(user, "Unable to empty filter while the machine is running.")
 	return ..()
+
+/obj/machinery/button/garbosystem
+	name = "garbage grinder switch"
+	desc = "A power button for the big grinder."
+	icon = 'icons/obj/machines/doorbell_vr.dmi'
+	icon_state = "doorbell-standby"
+	var/obj/machinery/v_garbosystem/grinder
+
+/obj/machinery/button/garbosystem/attack_hand(mob/living/user as mob)
+	if(grinder)
+		return grinder.attack_hand(user)

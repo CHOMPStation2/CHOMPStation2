@@ -6,6 +6,7 @@
 
 	var/working = FALSE
 	var/negative_dir = null	//VOREStation Addition
+	var/hand_fed = TRUE //CHOMPAdd
 
 /obj/machinery/recycling/process()
 	return PROCESS_KILL // these are all stateful
@@ -33,7 +34,8 @@
 		return
 	if(default_part_replacement(user, O))
 		return
-
+	if(!hand_fed) //CHOMPAdd
+		return
 	var/mob/living/M = user
 	if(can_accept_item(O))
 		M.drop_from_inventory(O)

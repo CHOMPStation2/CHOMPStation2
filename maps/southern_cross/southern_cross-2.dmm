@@ -51254,10 +51254,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/medbay2)
-"gRP" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/quartermaster/delivery)
 "gSn" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -55496,6 +55492,10 @@
 	},
 /obj/structure/sign/warning/moving_parts{
 	pixel_x = -32
+	},
+/obj/machinery/button/garbosystem{
+	pixel_y = 17;
+	pixel_x = 10
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
@@ -77787,6 +77787,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/delivery)
@@ -103066,7 +103069,7 @@ gpI
 gck
 bud
 bud
-gRP
+bud
 bGn
 xlj
 aXQ
