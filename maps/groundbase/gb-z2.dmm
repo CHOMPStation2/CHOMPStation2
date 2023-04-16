@@ -1472,6 +1472,24 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/command/hop)
+"ed" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/dorms)
 "ee" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -4828,6 +4846,16 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/hall)
+"nL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/tagger{
+	dir = 8;
+	name = "package tagger - Resleeving";
+	sort_tag = "Resleeving"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/dorms)
 "nM" = (
 /obj/structure/bed/chair/office/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13500,10 +13528,9 @@ lol bye
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lobby)
 "Mq" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
 "Mr" = (
@@ -18002,6 +18029,20 @@ lol bye
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/command/meeting)
+"Zq" = (
+/obj/machinery/disposal/wall/cleaner{
+	desc = "Automatically cleans and transports items to the local auto-resleeving facilities.";
+	dir = 8;
+	name = "auto-resleeving equipment deposit"
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/dorms)
 "Zr" = (
 /obj/structure/closet/secure_closet/hydroponics{
 	req_access = list(77)
@@ -24494,8 +24535,13 @@ LN
 Xb
 BY
 eC
+<<<<<<< HEAD
 Mm
 Yp
+=======
+ed
+uZ
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 Ie
 aF
 Mm
@@ -24928,7 +24974,7 @@ Wu
 RP
 XK
 As
-Mq
+bE
 IX
 yc
 jW
@@ -25070,7 +25116,7 @@ jr
 iP
 Dw
 Dw
-Yp
+Mq
 Sy
 Cu
 bN
@@ -25212,7 +25258,7 @@ hZ
 iA
 aA
 iA
-iA
+nL
 Ca
 sk
 bN
@@ -25354,7 +25400,7 @@ pK
 Yp
 Ct
 Ai
-Yp
+Zq
 eM
 Sq
 jM
@@ -30243,12 +30289,12 @@ oH
 oH
 oH
 oH
-oH
-oH
-oH
-oH
-oH
-oH
+QD
+QD
+QD
+QD
+QD
+QD
 Bo
 Bo
 Bo
@@ -30385,10 +30431,10 @@ oH
 oH
 oH
 oH
-oH
-oH
-oH
-oH
+QD
+QD
+QD
+QD
 QD
 Bo
 Bo
@@ -30527,10 +30573,10 @@ oH
 oH
 oH
 oH
-oH
-oH
-oH
-oH
+QD
+QD
+QD
+QD
 QD
 Bo
 Bo
@@ -30669,10 +30715,10 @@ oH
 oH
 oH
 oH
-oH
-oH
-oH
-oH
+QD
+QD
+QD
+QD
 Bo
 Bo
 Bo
@@ -30811,10 +30857,10 @@ oH
 oH
 oH
 oH
-oH
+QD
 Bo
-oH
-oH
+QD
+QD
 Bo
 Bo
 Bo

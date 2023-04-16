@@ -404,12 +404,24 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
 "aZ" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/lobby)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock{
+	name = "Men's Restroom"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/side,
+/area/groundbase/civilian/mensrestroom)
 "ba" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/dark,
@@ -954,21 +966,21 @@ lel
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 "cp" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/asteroid_steel,
+=======
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 /area/groundbase/civilian/mensrestroom)
 "cq" = (
 /obj/structure/table/standard,
@@ -1965,11 +1977,11 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/eva)
 "eI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/medical/resleeving)
+/turf/simulated/wall,
+/area/groundbase/medical/autoresleeving)
 "eJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/alarm{
@@ -2644,14 +2656,19 @@ lel
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/northspur)
 "gu" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/machinery/button/remote/airlock{
+	id = "z1stall4";
+	specialfunctions = 4;
+	pixel_y = 26
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
-/area/groundbase/medical/lhallway)
+/area/groundbase/civilian/mensrestroom)
 "gv" = (
 /turf/simulated/wall/r_wall,
 /area/groundbase/security/hos)
@@ -4033,11 +4050,10 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/apparel)
 "jT" = (
-/obj/structure/disposaloutlet,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/disposalpipe/trunk,
+/obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "jU" = (
@@ -4333,10 +4349,10 @@ lel
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/medical/morgue)
 "kB" = (
-/obj/random/vendorall,
 /obj/machinery/alarm{
 	dir = 8
 	},
+/obj/machinery/vending/bepis,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/apparel)
 "kC" = (
@@ -4361,7 +4377,6 @@ lel
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "kF" = (
@@ -4547,10 +4562,10 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/bar)
 "kX" = (
-/obj/random/vendorall,
 /obj/machinery/firealarm{
 	dir = 4
 	},
+/obj/machinery/vending/cigarette,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/apparel)
 "kY" = (
@@ -5725,6 +5740,10 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
 "nO" = (
@@ -5962,6 +5981,7 @@ lel
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/morgue)
 "oq" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -5970,6 +5990,14 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/door/airlock{
+	id_tag = "z1stall4";
+	name = "Men's Restroom Stall"
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "or" = (
 /obj/structure/stairs/spawner/west,
 /obj/structure/railing/grey{
@@ -6308,6 +6336,7 @@ lel
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -6315,6 +6344,9 @@ lel
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "ph" = (
@@ -6514,6 +6546,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/techstorage)
 "pI" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -6523,6 +6556,14 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/black{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk,
+/area/groundbase/level1/centsquare)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "pJ" = (
 /obj/machinery/light{
 	dir = 4
@@ -6966,6 +7007,7 @@ lel
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
 "qP" = (
@@ -7173,6 +7215,7 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/techstorage)
 "rk" = (
+<<<<<<< HEAD
 /obj/machinery/telecomms/receiver/preset_right/groundbase,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -7180,6 +7223,13 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/alarm{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/range)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "rl" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
@@ -7583,25 +7633,10 @@ lel
 /turf/simulated/floor,
 /area/groundbase/engineering/storage)
 "sk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
 	},
-/obj/structure/mirror{
-	icon_state = "mirror_broke";
-	pixel_y = 37
-	},
-/obj/structure/sink/kitchen{
-	pixel_y = 16
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/firealarm{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "sl" = (
 /obj/machinery/camera/network/engineering{
@@ -7903,6 +7938,7 @@ lel
 	},
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/southwestspur)
+<<<<<<< HEAD
 "sT" = (
 /obj/machinery/telecomms/server/presets/science,
 /turf/simulated/floor/tiled/dark{
@@ -7922,6 +7958,17 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+"sU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/outdoors/sidewalk,
+/area/groundbase/level1/centsquare)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "sV" = (
 /turf/simulated/floor/outdoors/newdirt{
 	outdoors = 0
@@ -8193,6 +8240,20 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/storage)
+<<<<<<< HEAD
+=======
+"tA" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/steel,
+/obj/item/weapon/gun/energy/laser/practice,
+/obj/machinery/alarm{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/range)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "tB" = (
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 1
@@ -8375,6 +8436,19 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
+"tZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "ua" = (
 /turf/simulated/wall,
 /area/groundbase/level1/se)
@@ -8398,10 +8472,6 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/detective)
 "ue" = (
-/obj/machinery/door/airlock{
-	name = "Men's Restroom"
-	},
-/obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -8411,7 +8481,15 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/bmarble,
+/obj/structure/disposalpipe/tagger{
+	dir = 4;
+	name = "package tagger - Resleeving";
+	sort_tag = "Resleeving"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "uf" = (
 /obj/structure/table/standard,
@@ -8756,12 +8834,20 @@ lel
 /obj/machinery/alarm{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+=======
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
+	external_pressure_bound = 101.3;
+	external_pressure_bound_default = 101.3;
+	pressure_checks = 1;
+	pressure_checks_default = 1
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
@@ -8879,19 +8965,13 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
 "vl" = (
-/obj/machinery/light/small,
-/obj/structure/toilet/prison{
-	dir = 4
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
 	},
-/obj/machinery/button/remote/airlock{
-	dir = 4;
-	id = "z1stall4";
-	pixel_x = -27;
-	specialfunctions = 4
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
 	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "vm" = (
 /obj/machinery/smartfridge/drinks,
@@ -9100,25 +9180,23 @@ lel
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/security/halls)
 "vI" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 9
 	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8"
+	icon_state = "2-8"
 	},
-/obj/machinery/alarm{
-	pixel_y = 28
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
-/obj/machinery/light_switch{
-	pixel_x = 15;
-	pixel_y = 30
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "vJ" = (
 /obj/effect/landmark/arrivals,
@@ -9750,19 +9828,21 @@ lel
 /turf/simulated/floor/bluegrid,
 /area/groundbase/command/ai/storage)
 "xe" = (
-/obj/machinery/light/small,
-/obj/structure/toilet/prison{
-	dir = 8
-	},
-/obj/machinery/button/remote/airlock{
+/obj/structure/sink/kitchen{
 	dir = 4;
+<<<<<<< HEAD
 	id = "z1stall4";
 	pixel_x = -27;
 	specialfunctions = 4
+=======
+	pixel_x = 12
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/machinery/light/small,
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "xf" = (
 /obj/machinery/power/breakerbox/activated{
@@ -10338,7 +10418,6 @@ lel
 /obj/machinery/firealarm{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "ys" = (
@@ -10407,6 +10486,19 @@ lel
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/medical/or2)
+"yy" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/table/bench/steel,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/range)
 "yz" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
@@ -10425,11 +10517,13 @@ lel
 /obj/effect/floor_decal/corner/pink{
 	dir = 6
 	},
-/obj/machinery/disposal/wall/cleaner{
-	dir = 8
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+	},
+/obj/machinery/disposal/wall/cleaner{
+	desc = "Automatically cleans and transports items to the local auto-resleeving facilities.";
+	dir = 8;
+	name = "auto-resleeving equipment deposit"
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
@@ -10996,6 +11090,7 @@ lel
 	},
 /turf/simulated/floor,
 /area/maintenance/groundbase/trashpit)
+<<<<<<< HEAD
 "zO" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
@@ -11008,6 +11103,11 @@ lel
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/gameroom)
+=======
+"zP" = (
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "zQ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -11103,10 +11203,6 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "Ab" = (
@@ -11333,10 +11429,6 @@ lel
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "AC" = (
@@ -11468,12 +11560,23 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "AU" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/alarm{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "AV" = (
 /obj/machinery/light{
 	dir = 4
@@ -11573,13 +11676,14 @@ lel
 	},
 /area/groundbase/level1/se)
 "Bj" = (
-/obj/machinery/door/airlock{
-	id_tag = "z1stall5";
-	name = "Men's Restroom Stall"
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = 12
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "Bk" = (
 /turf/simulated/floor/outdoors/newdirt_nograss{
@@ -12054,6 +12158,7 @@ lel
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/lobby)
 "Cn" = (
@@ -12561,7 +12666,8 @@ lel
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
@@ -12585,13 +12691,13 @@ lel
 /turf/simulated/floor/outdoors/sidewalk/side,
 /area/groundbase/level1/northspur)
 "DB" = (
-/obj/machinery/door/airlock{
-	id_tag = "z1stall4";
-	name = "Men's Restroom Stall"
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/mensrestroom)
 "DC" = (
 /obj/structure/bookcase,
@@ -12607,6 +12713,13 @@ lel
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/hos)
+"DD" = (
+/obj/machinery/door/airlock{
+	id_tag = "z1stall5";
+	name = "Men's Restroom Stall"
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "DE" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -13270,13 +13383,13 @@ lel
 /turf/simulated/floor,
 /area/groundbase/unexplored/outdoors)
 "Fg" = (
-/obj/random/vendorall,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /obj/machinery/camera/network/civilian{
 	dir = 8
 	},
+/obj/machinery/vending/snack,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/apparel)
 "Fh" = (
@@ -13430,6 +13543,19 @@ lel
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/groundbase/substation/aiciv)
+<<<<<<< HEAD
+=======
+"FA" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/steel,
+/obj/item/weapon/gun/energy/laser/practice,
+/obj/item/clothing/ears/earmuffs,
+/obj/item/clothing/glasses/goggles,
+/turf/simulated/floor/tiled/dark,
+/area/security/range)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "FB" = (
 /obj/item/weapon/stool/baystool/padded{
 	dir = 1
@@ -13507,12 +13633,11 @@ lel
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/command/tcomms)
 "FJ" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/black{
-	dir = 4
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/lobby)
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "FK" = (
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
@@ -13574,6 +13699,20 @@ lel
 /obj/structure/window/reinforced/polarized/full,
 /turf/simulated/floor,
 /area/groundbase/engineering/ce)
+"FT" = (
+/obj/machinery/button/remote/airlock{
+	id = "z1stall5";
+	specialfunctions = 4;
+	pixel_y = 26
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "FU" = (
 /obj/machinery/light{
 	dir = 8
@@ -13617,6 +13756,7 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/armory)
 "FZ" = (
+<<<<<<< HEAD
 /obj/machinery/telecomms/server/presets/security,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -13624,6 +13764,17 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/structure/flora/pottedplant/unusual,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "Ga" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -14132,12 +14283,15 @@ lel
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment,
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/sign/painting/library_secure{
 	pixel_x = -30
@@ -14822,14 +14976,15 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/engine)
 "IP" = (
-/obj/machinery/door/firedoor,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 4
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -28
 	},
-/turf/simulated/floor,
-/area/groundbase/engineering/lobby)
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "IQ" = (
 /obj/structure/bed/chair/comfy/orange{
 	dir = 8
@@ -15166,18 +15321,17 @@ lel
 /area/groundbase/command/ai/chamber)
 "JJ" = (
 /obj/machinery/door/firedoor,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/medical{
 	id_tag = "Resleeving";
 	name = "Resleeving Lab";
 	req_access = list(5);
 	req_one_access = null
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/medical/resleeving)
 "JK" = (
@@ -16660,6 +16814,19 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/iaa1)
+"MY" = (
+/obj/machinery/power/apc{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/flora/pottedplant/unusual,
+/obj/machinery/light/small,
+/obj/effect/floor_decal/corner/paleblue/full,
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "MZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -17567,6 +17734,21 @@ lel
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/engineering/atmos)
+"Pk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/disposal/wall/cleaner{
+	desc = "Automatically cleans and transports items to the local auto-resleeving facilities.";
+	dir = 8;
+	name = "auto-resleeving equipment deposit"
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "Pl" = (
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/warden)
@@ -17698,6 +17880,7 @@ lel
 	},
 /area/maintenance/groundbase/level1/swtunnel)
 "PD" = (
+<<<<<<< HEAD
 /obj/machinery/computer/telecomms/monitor{
 	dir = 8;
 	network = "tcommsat"
@@ -17707,6 +17890,20 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/tcomms)
+=======
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "PE" = (
 /obj/machinery/door/firedoor,
 /obj/structure/table/reinforced,
@@ -18037,6 +18234,13 @@ lel
 	outdoors = 0
 	},
 /area/groundbase/security/lobby)
+"Qw" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/sidewalk,
+/area/groundbase/level1/centsquare)
 "Qx" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -19827,10 +20031,6 @@ lel
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/hologram/holopad,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lhallway)
 "UC" = (
@@ -19851,11 +20051,11 @@ lel
 	},
 /area/maintenance/groundbase/level1/netunnel)
 "UF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 4
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
 	},
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/lobby)
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
 "UG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -20487,6 +20687,15 @@ lel
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/groundbase/engineering/atmos)
+"Wp" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor{
+	edge_blending_priority = -1
+	},
+/area/groundbase/level1/centsquare)
 "Wq" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -20503,7 +20712,6 @@ lel
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/medical/resleeving)
 "Ws" = (
@@ -20632,9 +20840,8 @@ lel
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level1/centsquare)
@@ -20958,6 +21165,24 @@ lel
 /obj/random/tech_supply/component/nofail,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/techstorage)
+<<<<<<< HEAD
+=======
+"Xq" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/steel,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 20
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/range)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "Xr" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "Cell C"
@@ -21061,6 +21286,7 @@ lel
 	name = "Engineering"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/bmarble,
 /area/groundbase/engineering/lobby)
 "XE" = (
@@ -21400,6 +21626,7 @@ lel
 /turf/simulated/floor/outdoors/newdirt,
 /area/groundbase/level1/centsquare)
 "YD" = (
+<<<<<<< HEAD
 /obj/machinery/camera/network/command,
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
@@ -21408,6 +21635,13 @@ lel
 	temperature = 80
 	},
 /area/groundbase/command/tcomms)
+=======
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/civilian/mensrestroom)
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 "YE" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/brigdoor/southleft{
@@ -21937,6 +22171,11 @@ lel
 /turf/simulated/floor,
 /area/groundbase/engineering/storage)
 "ZV" = (
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 /obj/machinery/door/airlock/medical{
 	id_tag = "Resleeving Shower";
 	name = "Resleeving Lab";
@@ -23910,6 +24149,7 @@ dM
 Bk
 Bk
 Bk
+<<<<<<< HEAD
 ce
 ce
 ce
@@ -23918,6 +24158,16 @@ ce
 ce
 ce
 ce
+=======
+Wy
+Qr
+DF
+Qr
+Qr
+Qr
+rk
+Wy
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 ce
 ce
 ce
@@ -24762,6 +25012,7 @@ dM
 ce
 ce
 ce
+<<<<<<< HEAD
 ce
 ce
 ce
@@ -24770,6 +25021,16 @@ ce
 ce
 ce
 ce
+=======
+Wy
+oK
+AO
+Wn
+yy
+JL
+qT
+Wy
+>>>>>>> 9dd6375bf6... Merge pull request #14797 from Enzo-Leon/RP-Adjustments-Small
 ce
 ce
 ce
@@ -32401,8 +32662,8 @@ yd
 Vh
 eR
 eR
-eR
-eR
+pc
+pc
 eR
 eR
 eR
@@ -32543,8 +32804,8 @@ Eb
 Vh
 eR
 eR
-eR
-eR
+pc
+pc
 pc
 eR
 eR
@@ -32949,7 +33210,7 @@ jn
 in
 Nz
 HN
-Dz
+eI
 Is
 Ko
 Mu
@@ -33084,14 +33345,14 @@ jn
 jn
 pP
 wB
-eI
+wB
 wB
 Ap
 jn
 IY
 Dy
 qO
-nb
+Dz
 ZG
 pK
 hM
@@ -33114,8 +33375,8 @@ eR
 pc
 pc
 pc
-eR
-eR
+pc
+pc
 eR
 eR
 eR
@@ -33230,7 +33491,7 @@ Aa
 Wr
 kE
 JJ
-gu
+Fc
 UA
 WS
 ZO
@@ -33679,7 +33940,7 @@ Eb
 wx
 eR
 eR
-eR
+pc
 pc
 pc
 pc
@@ -33687,9 +33948,9 @@ eR
 eR
 pc
 nN
-Bv
-Bv
-Bv
+sU
+sU
+sU
 WH
 Ku
 Gx
@@ -33821,16 +34082,16 @@ Eb
 wx
 eR
 eR
+pc
+pc
+pc
+pc
+pc
 eR
-pc
-pc
-pc
-pc
-eR
+Yt
+Qy
 Eb
-TK
-Eb
-Eb
+Yt
 aD
 GQ
 Mj
@@ -33963,17 +34224,17 @@ Eb
 wx
 eR
 eR
-eR
-eR
-eR
-eR
-eR
-eR
-Yt
-TK
-Lt
-Lt
-ua
+pc
+pc
+tj
+tj
+tj
+tj
+tj
+aZ
+tj
+tj
+tj
 IS
 IS
 bg
@@ -34107,14 +34368,14 @@ eR
 eR
 eR
 eR
-eR
-eR
-eR
-eR
 tj
+FZ
+IP
+AU
+PD
 ue
-tj
-tj
+tZ
+MY
 tj
 ua
 ua
@@ -34249,11 +34510,11 @@ eR
 eR
 eR
 eR
-eR
-eR
-eR
-eR
 tj
+YD
+FJ
+FJ
+Pk
 vI
 DB
 vl
@@ -34391,14 +34652,14 @@ Eb
 Eb
 Eb
 Eb
-Eb
-Eb
-Eb
-Eb
+tj
+oq
+tj
+DD
 tj
 sk
-tj
-tj
+zP
+UF
 tj
 Lt
 Lt
@@ -34533,10 +34794,10 @@ Eb
 Eb
 Eb
 Eb
-Eb
-FE
-lZ
-lZ
+tj
+gu
+tj
+FT
 tj
 cp
 Bj
@@ -34677,8 +34938,8 @@ Eb
 FE
 Wl
 Wl
-IP
-IP
+Wl
+Wl
 Wl
 Wl
 Wl
@@ -34815,12 +35076,12 @@ Eb
 wx
 YC
 Eb
-Eb
-AL
+lZ
+Wp
 Qc
 Tx
-UF
-UF
+BW
+BW
 ld
 Hw
 Xw
@@ -34957,12 +35218,12 @@ YC
 wv
 lT
 lT
-lT
-lT
+Qw
+pI
 XD
 Cm
-aZ
-FJ
+Eu
+Eu
 Eu
 Eu
 yK
