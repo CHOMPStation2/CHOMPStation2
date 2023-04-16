@@ -47,5 +47,6 @@
 	name = "No Shoes"
 	desc = "shoeless?"
 	icon_state = ""
-/obj/item/clothing/shoes/none/New()
-	qdel(src)
+/obj/item/clothing/shoes/none/Initialize()
+	. = INITIALIZE_HINT_QDEL //Fuck them shoes
+	..()

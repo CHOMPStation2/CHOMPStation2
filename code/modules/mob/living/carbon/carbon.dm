@@ -451,6 +451,8 @@
 	return 0
 
 /mob/living/carbon/can_feel_pain(var/check_organ)
+	if(!species) //CHOMPEdit
+		return 0
 	if(isSynthetic())
 		return 0
 	return !(species.flags & NO_PAIN)
