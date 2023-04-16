@@ -113,8 +113,6 @@
 		return
 	if(prob(10)) //Miniscule chance of removing some toxins.
 		M.adjustToxLoss(-10 * removed)
-<<<<<<< HEAD
-=======
 
 /datum/reagent/lipozilase // The anti-nutriment that rapidly removes weight.
 	name = "Lipozilase"
@@ -143,4 +141,3 @@
 	M.adjust_nutrition(-20 * removed)
 	if(M.weight < 500)
 		M.weight += 0.3
->>>>>>> e86b6cdfa7... Merge pull request #14789 from SatinIsle/Lipozine-Plus
