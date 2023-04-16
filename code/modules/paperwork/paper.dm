@@ -373,7 +373,9 @@
 		t = replacetext(t, "\[grid\]", "<table>")
 		t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 		t = replacetext(t, "\[row\]", "</td><tr>")
+		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[cell\]", "<td>")
+		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
 		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
 		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit
 
@@ -389,6 +391,8 @@
 		t = replacetext(t, "\[/table\]", "")
 		t = replacetext(t, "\[row\]", "")
 		t = replacetext(t, "\[cell\]", "")
+		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
+		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 
