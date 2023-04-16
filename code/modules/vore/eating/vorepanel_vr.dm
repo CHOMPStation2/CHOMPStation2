@@ -1903,10 +1903,10 @@
 					return FALSE
 			. = TRUE
 		if("b_liq_reagent_capacity")
-			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 0 to 100.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
+			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 10 to 300.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
 			if(new_custom_vol == null)
 				return FALSE
-			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 100)
+			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 300)
 			host.vore_selected.custom_max_volume = new_new_custom_vol
 			. = TRUE
 		if("b_liq_sloshing")
