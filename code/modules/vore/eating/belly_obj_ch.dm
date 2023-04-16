@@ -72,8 +72,7 @@
 	"Cherry Jelly",
 	"Digestive acid",
 	"Lube",
-	"Biomass",
-	"Fertilizer"
+	"Biomass"
 	)
 
 	//CHOMP - vore sprites
@@ -292,13 +291,6 @@
 			gen_cost = 10
 			reagentid = "biomass"
 			reagentcolor = "#DF9FBF"
-		if("Fertilizer")
-			generated_reagents = list("fertilizer" = 1)
-			reagent_name = "fertilizer"
-			gen_amount = 1
-			gen_cost = 10
-			reagentid = "fertilizer"
-			reagentcolor = "#664330"
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 
