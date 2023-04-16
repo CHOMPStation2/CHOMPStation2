@@ -11,6 +11,12 @@
 "c" = (
 /turf/simulated/wall/uranium,
 /area/submap/mousehq)
+"d" = (
+/obj/structure/table/alien/blue,
+/obj/random/material/refined,
+/obj/item/stack/material/phoron,
+/turf/simulated/floor/bmarble,
+/area/submap/mousehq)
 "e" = (
 /obj/structure/loot_pile/surface/alien/engineering,
 /turf/simulated/floor/wmarble,
@@ -188,6 +194,12 @@
 /obj/item/clothing/under/psysuit,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
+"S" = (
+/obj/structure/table/alien/blue,
+/obj/random/material/refined,
+/obj/item/stack/material/phoron,
+/turf/simulated/floor/wmarble,
+/area/submap/mousehq)
 "T" = (
 /obj/machinery/door/airlock/sandstone,
 /turf/simulated/floor/bmarble,
@@ -206,6 +218,12 @@
 /area/submap/mousehq)
 "X" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/manned,
+/turf/simulated/floor/wmarble,
+/area/submap/mousehq)
+"Y" = (
+/obj/structure/table/alien/blue,
+/obj/item/prop/alien/junk,
+/obj/item/stack/material/phoron,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "Z" = (
@@ -294,7 +312,7 @@ V
 V
 O
 O
-G
+Y
 g
 W
 g
@@ -534,7 +552,7 @@ p
 y
 D
 O
-u
+S
 y
 p
 O
@@ -931,7 +949,7 @@ y
 p
 y
 O
-a
+d
 p
 O
 O

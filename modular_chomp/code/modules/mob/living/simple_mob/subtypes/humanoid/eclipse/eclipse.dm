@@ -123,9 +123,9 @@
 //The solar part of the faction, highly resistant to burns and stuff
 /mob/living/simple_mob/humanoid/eclipse/solar
 	name = "Solar Eclipse Initiate"
-	desc = "A dangerous indivual, a gleaming orange shield surronding them."
+	desc = "A dangerous indivual, a gleaming orange shield surronding them, seeming protected from energy and burns."
 
-	armor = list(melee = 20, bullet = 20, laser = 95, energy = 95, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor = list(melee = 10, bullet = 10, laser = 95, energy = 95, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 	armor_soak = list(melee = 0, bullet = 0, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
@@ -207,7 +207,7 @@
 
 	projectiletype = /obj/item/projectile/beam/sniper/eclipse
 
-	projectile_accuracy = 75
+	projectile_accuracy = 100
 
 	reload_max = 1
 	reload_time = 1.5 SECONDS
@@ -278,7 +278,7 @@
 //The lunar mobs, highly resistant to brute based damage.
 /mob/living/simple_mob/humanoid/eclipse/lunar
 	name = "Lunar Eclipse Initiate"
-	desc = "A dangerous indivual, a gleaming red shield surronding them."
+	desc = "A dangerous indivual, a gleaming red shield surronding them, seemingly protected from blunt force trauma and ballastics."
 
 	armor = list(melee = 95, bullet = 95, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 5, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP

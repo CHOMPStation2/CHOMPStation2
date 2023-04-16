@@ -11,6 +11,11 @@
 "c" = (
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
+"d" = (
+/obj/machinery/door/blast/shutters,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/mouseattack)
 "i" = (
 /obj/structure/table/rack,
 /obj/item/weapon/archaeological_find,
@@ -29,6 +34,7 @@
 /area/submap/mouseattack)
 "l" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/mouseattack)
 "o" = (
@@ -46,9 +52,11 @@
 /area/submap/mouseattack)
 "q" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/mouseattack)
 "s" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/mouseattack)
 "t" = (
@@ -137,6 +145,7 @@
 /area/submap/mouseattack)
 "Y" = (
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/manned,
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/mouseattack)
 
@@ -187,7 +196,7 @@ a
 (3,1,1) = {"
 a
 a
-z
+d
 s
 s
 s
@@ -209,7 +218,7 @@ a
 (4,1,1) = {"
 a
 a
-z
+d
 s
 Y
 s
@@ -231,7 +240,7 @@ a
 (5,1,1) = {"
 a
 a
-z
+d
 s
 s
 s
@@ -253,7 +262,7 @@ a
 (6,1,1) = {"
 a
 a
-z
+d
 s
 s
 s
@@ -275,7 +284,7 @@ a
 (7,1,1) = {"
 a
 a
-z
+d
 s
 s
 s
@@ -297,7 +306,7 @@ a
 (8,1,1) = {"
 a
 a
-z
+d
 s
 Y
 s
@@ -319,7 +328,7 @@ a
 (9,1,1) = {"
 a
 a
-z
+d
 s
 s
 s

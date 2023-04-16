@@ -2,10 +2,6 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
-"d" = (
-/mob/living/simple_mob/construct/wraith,
-/turf/simulated/floor/water,
-/area/submap/leechpond)
 "n" = (
 /turf/template_noop,
 /area/submap/leechpond)
@@ -20,10 +16,6 @@
 /area/submap/leechpond)
 "G" = (
 /turf/simulated/wall/log_sif,
-/area/submap/leechpond)
-"I" = (
-/mob/living/simple_mob/construct/artificer/caster,
-/turf/simulated/floor/water,
 /area/submap/leechpond)
 "T" = (
 /mob/living/simple_mob/faithless/strong,
@@ -139,17 +131,17 @@ a
 a
 u
 C
-T
 C
 C
 C
 C
-T
 C
 C
 C
 C
-I
+C
+C
+C
 C
 C
 C
@@ -216,10 +208,10 @@ C
 C
 C
 C
-I
 C
 C
 C
+T
 C
 C
 G
@@ -251,7 +243,7 @@ U
 G
 C
 C
-T
+C
 C
 C
 C
@@ -298,7 +290,7 @@ C
 C
 y
 C
-C
+T
 C
 C
 C
@@ -320,7 +312,7 @@ C
 C
 C
 C
-d
+C
 y
 y
 C
@@ -345,7 +337,7 @@ C
 C
 G
 y
-C
+T
 C
 C
 G
@@ -365,7 +357,7 @@ a
 u
 C
 C
-T
+C
 C
 C
 G
@@ -377,7 +369,7 @@ C
 C
 C
 C
-I
+C
 C
 C
 u
@@ -442,7 +434,7 @@ C
 C
 C
 C
-I
+C
 C
 C
 C
@@ -473,7 +465,7 @@ C
 C
 C
 C
-T
+C
 C
 C
 u
@@ -489,7 +481,7 @@ a
 u
 C
 C
-T
+C
 C
 C
 C
