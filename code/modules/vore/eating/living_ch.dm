@@ -293,7 +293,7 @@
 	set category = "Preferences"
 	set desc = "Mute the chatlog messages when something enters a vore belly."
 	mute_entry = !mute_entry
-	to_chat(src, "<span class='warning'>Entrance logs [mute_entry ? "enabled" : "disabled"].</span>")
+	to_chat(src, "<span class='warning'>Entrance logs [mute_entry ? "disabled" : "enabled"].</span>")
 
 /mob/living/proc/toggle_trash_catching()
 	set name = "Toggle Trash Catching"
