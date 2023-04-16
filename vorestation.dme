@@ -4569,6 +4569,8 @@
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\defib.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\mounted_gun.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\protean.dm"
+#include "modular_chomp\code\modules\clothing\suits\armor.dm"
+#include "modular_chomp\code\modules\clothing\suits\jobs.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\contraband.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\engineering.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\hydrophonic.dm"
