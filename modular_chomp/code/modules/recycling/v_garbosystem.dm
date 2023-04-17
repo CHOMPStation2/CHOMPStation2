@@ -18,11 +18,14 @@
 	. = ..()
 	for(var/dir in cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
-		src.button = locate(/obj/machinery/button/garbosystem, get_step(src, dir))
-		if(crusher)
+		if(src.crusher)
 			crusher.hand_fed = FALSE
-		if(button)
+			break
+	for(var/dir in cardinal)
+		src.button = locate(/obj/machinery/button/garbosystem, get_step(src, dir))
+		if(src.button)
 			button.grinder = src
+			break
 	return
 
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
