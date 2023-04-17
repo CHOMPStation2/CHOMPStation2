@@ -435,29 +435,31 @@
 		L.clear_fullscreen("belly")
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPEdit Start: preserving save data
+			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			var/image/I = image(F.icon, belly_fullscreen) //Would be cool if I could just include color and alpha in the image define so we don't have to copy paste
 			I.color = belly_fullscreen_color
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2")
+			I = image(F.icon, belly_fullscreen+"-2")
 			I.color = belly_fullscreen_color2
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3")
+			I = image(F.icon, belly_fullscreen+"-3")
 			I.color = belly_fullscreen_color3
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4")
+			I = image(F.icon, belly_fullscreen+"-4")
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
+			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			F.add_overlay(image(F.icon, belly_fullscreen))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-4")) //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
@@ -474,29 +476,30 @@
 
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit Start: preserving save data
+			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			var/image/I = image(F.icon, belly_fullscreen)
 			I.color = belly_fullscreen_color
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2")
+			I = image(F.icon, belly_fullscreen+"-2")
 			I.color = belly_fullscreen_color2
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3")
+			I = image(F.icon, belly_fullscreen+"-3")
 			I.color = belly_fullscreen_color3
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4")
+			I = image(F.icon, belly_fullscreen+"-4")
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
 			F.add_overlay(image(F.icon, belly_fullscreen))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-4")) //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
