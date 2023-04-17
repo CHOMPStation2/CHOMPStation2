@@ -4623,7 +4623,6 @@
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_items.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_laws.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_manufacturer.dm"
-#include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_manufacturer_unify.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_overrides_small.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_say.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_types.dm"
