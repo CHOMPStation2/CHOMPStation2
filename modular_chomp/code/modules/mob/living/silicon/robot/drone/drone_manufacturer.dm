@@ -101,10 +101,9 @@
 
 //UNIFY, sub fabricator that can handle more than one type
 /obj/machinery/drone_fabricator/unify	//Non-Specific dronetype
-	drone_type = null //var filled by drone choice.
-	fabricator_tag = "Unified Drone Fabricator"
 	possible_drones = list("Construction Module" = /mob/living/silicon/robot/drone/construction,
 									"Maintenance Module" = /mob/living/silicon/robot/drone,
+									"Mining Module" = /mob/living/silicon/robot/drone/mining,
 									) //List of drone types to choose from.//Changeable in mapping.
 
 /obj/machinery/drone_fabricator/proc/choose_dronetype(possible_drones)
