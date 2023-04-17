@@ -28107,6 +28107,19 @@
 /turf/simulated/floor,
 /area/maintenance/cargo)
 "bHP" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargo)
+"bHQ" = (
 /obj/structure/table/rack{
 	dir = 1
 	},
@@ -28117,12 +28130,8 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cargo)
-"bHQ" = (
-/obj/random/obstruction,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "bHR" = (
@@ -71835,6 +71844,9 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "ssP" = (
