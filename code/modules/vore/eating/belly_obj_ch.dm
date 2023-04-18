@@ -69,7 +69,10 @@
 	"Milk",
 	"Cream",
 	"Honey",
-	"Cherry Jelly"
+	"Cherry Jelly",
+	"Digestive acid",
+	"Lube",
+	"Biomass"
 	)
 
 	//CHOMP - vore sprites
@@ -102,6 +105,7 @@
 	var/slow_brutal = FALSE					// Gradual corpse digestion: Stumpy's Special
 	var/sound_volume = 100					// Volume knob.
 	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize mob Life() instead of subsystem for 3x speed.
+	var/cycle_sloshed = FALSE				// Has vorgan entrance made a wet slosh this cycle? Soundspam prevention for multiple items entered.
 
 
 /obj/belly/Initialize()
@@ -259,6 +263,34 @@
 			gen_cost = 10
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
+		if("Digestive acid")
+			generated_reagents = list("stomacid" = 1)
+			reagent_name = "digestive acid"
+			gen_amount = 1
+			gen_cost = 5
+			reagentid = "stomacid"
+			reagentcolor = "#664330"
+		if("Space cleaner")
+			generated_reagents = list("cleaner" = 1)
+			reagent_name = "space cleaner"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "cleaner"
+			reagentcolor = "#A5F0EE"
+		if("Lube")
+			generated_reagents = list("lube" = 1)
+			reagent_name = "lube"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "lube"
+			reagentcolor = "#009CA8"
+		if("Biomass")
+			generated_reagents = list("biomass" = 1)
+			reagent_name = "biomass"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "biomass"
+			reagentcolor = "#DF9FBF"
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 
