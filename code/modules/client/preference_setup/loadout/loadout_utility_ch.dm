@@ -53,3 +53,87 @@
 		"sheep" = /mob/living/simple_mob/vore/sheep
 	)
 	gear_tweaks += new/datum/gear_tweak/simplemob_picker(mob_types)
+
+/datum/gear/utility/accordion
+	display_name = "Accordion"
+	description = "It's the intrusment called an accordion"
+	path = /obj/item/instrument/accordion
+	cost = 3
+
+/datum/gear/utility/banjo
+	display_name = "Banjo"
+	description = "It's the intrusment called a banjo"
+	path = /obj/item/instrument/banjo
+	cost = 3
+
+/datum/gear/utility/eguitar
+	display_name = "Electrical Guitar"
+	description = "It's the intrusment called a electrical guitar"
+	path = /obj/item/instrument/eguitar
+	cost = 3
+
+/datum/gear/utility/glockenspiel
+	display_name = "Glockenspei"
+	description = "It's the intrusment called a glockenspiel"
+	path = /obj/item/instrument/glockenspiel
+	cost = 3
+
+/datum/gear/utility/guitar
+	display_name = "Guitar"
+	description = "A normal guitar"
+	path = /obj/item/instrument/eguitar
+	cost = 3
+
+/datum/gear/utility/harmonica
+	display_name = "Harmonica"
+	description = "Serenade folks with this lovely harmonica"
+	path = /obj/item/instrument/harmonica
+	cost = 3
+
+/datum/gear/utility/keytar
+	display_name = "Portable Keyboard"
+	description = "Portable keyboard, whatever that is"
+	path = /obj/item/instrument/keytar
+	cost = 3
+
+/datum/gear/utility/musicalmoth
+	display_name = "Musical Moth"
+	description = "A musical compaion, fun for the whole crew"
+	path = /obj/item/instrument/musicalmoth
+	cost = 4
+
+/datum/gear/utility/recorder
+	display_name = "Recorder"
+	description = "Another lovely intrument to serenade the crew"
+	path = /obj/item/instrument/recorder
+	cost = 3
+
+/datum/gear/utility/saxophone
+	display_name = "Recorder"
+	description = "Another lovely intrument to serenade the crew"
+	path = /obj/item/instrument/saxophone
+	cost = 3
+
+/datum/gear/utility/trombone
+	display_name = "Recorder"
+	description = "A trombone"
+	path = /obj/item/instrument/trombone
+	cost = 3
+
+/datum/gear/utility/trumpet
+	display_name = "Trumpet"
+	description = "Another fancy instrument called a trumpet"
+	path = /obj/item/instrument/trumpet
+	cost = 3
+
+/datum/gear/utility/violin
+	display_name = "Space Violin"
+	description = "A violin with a dash of space, somehow"
+	path = /obj/item/instrument/violin
+	cost = 3
+
+/datum/gear/utility/xylophone
+	display_name = "Xylophone"
+	description = "A musical rainbow"
+	path = /obj/item/instrument/xylophone
+	cost = 3
