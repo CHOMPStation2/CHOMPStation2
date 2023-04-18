@@ -21515,9 +21515,6 @@
 /turf/space,
 /area/space)
 "tIi" = (
-/obj/machinery/recharge_station{
-	pixel_y = 1
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
