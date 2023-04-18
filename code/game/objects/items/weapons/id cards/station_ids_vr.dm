@@ -21,9 +21,9 @@
 		associated_account_number = user.mind.initial_account.account_number
 	if(title_strings.len)
 		var/tempname = pick(title_strings)
-		name = tempname + " ([assignment])"
+		name = tempname + " ([assignment] Contractor)"//Chompedit: Suffix contractor IDs
 	else
-		name = user.name + "'s ID card" + " ([assignment])"
+		name = user.name + "'s ID card" + " ([assignment] Contractor)"//Chompedit: Suffix contractor IDs
 
 	configured = 1
 	to_chat(user, "<span class='notice'>Card settings set.</span>")
