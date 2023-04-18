@@ -135,7 +135,7 @@
 			to_chat(hider,"<span class='warning'>[user] is searching the trash pile you're in!</span>")
 
 		//Do the searching
-		if(do_after(user,rand(4 SECONDS,6 SECONDS),src))
+		if(do_after(user,rand(1 SECONDS,2 SECONDS),src)) //CHOMPedit, previously 4-6 seconds
 
 			//If there was a hider, chance to reveal them
 			if(hider && prob(50))
