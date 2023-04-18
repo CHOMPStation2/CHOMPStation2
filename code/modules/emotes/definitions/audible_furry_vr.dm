@@ -238,3 +238,16 @@
 	key = "coyawoo5"
 	emote_message_3p = "lets out a scraggly, whine-awoo."
 	emote_sound = 'sound/voice/coyoteawoo5.ogg'
+<<<<<<< HEAD
+=======
+
+/decl/emote/audible/roarbark // Upstream port from CHOMP
+	key = "roarbark"
+	emote_message_3p = "lets out a roar-bark!"
+	emote_sound = 'sound/voice/roarbark.ogg'
+
+/decl/emote/audible/dook
+	key = "dook"
+	emote_message_3p = "dooks."
+	emote_sound = 'sound/voice/FerretDook.ogg'
+>>>>>>> 8d85ea8a88... Merge pull request #14800 from Wulfestwulf/ferretdooks

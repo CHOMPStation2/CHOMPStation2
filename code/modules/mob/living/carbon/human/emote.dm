@@ -171,6 +171,12 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/croon,
 	/decl/emote/audible/lwarble,
 	/decl/emote/audible/croak_skrell,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/roarbark,
+	/decl/emote/audible/dook
+
+>>>>>>> 8d85ea8a88... Merge pull request #14800 from Wulfestwulf/ferretdooks
 	//VOREStation Add End
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
@@ -316,10 +322,15 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/vox_shriek,
 	/decl/emote/audible/purr,
 	/decl/emote/audible/purrlong,
+<<<<<<< HEAD
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain
 	//CHOMP Add end
+=======
+	/decl/emote/audible/dook
+
+>>>>>>> 8d85ea8a88... Merge pull request #14800 from Wulfestwulf/ferretdooks
 	)
 	//VOREStation Add End
 
