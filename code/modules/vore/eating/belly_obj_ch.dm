@@ -271,7 +271,7 @@
 			generated_reagents = list("stomacid" = 1)
 			reagent_name = "digestive acid"
 			gen_amount = 1
-			gen_cost = 5
+			gen_cost = 2
 			reagentid = "stomacid"
 			reagentcolor = "#664330"
 		if("Space cleaner")
