@@ -275,6 +275,9 @@
 	"resist_triggers_animation",
 	"size_factor_for_sprite",
 	"belly_sprite_to_affect",
+	"undergarment_chosen",
+	"undergarment_if_none",
+	"undergarment_color",
 	"autotransferchance",
 	"autotransferwait",
 	"autotransferlocation",
@@ -1445,6 +1448,9 @@
 	dupe.resist_triggers_animation = resist_triggers_animation
 	dupe.size_factor_for_sprite = size_factor_for_sprite
 	dupe.belly_sprite_to_affect = belly_sprite_to_affect
+	dupe.undergarment_chosen = undergarment_chosen
+	dupe.undergarment_if_none = undergarment_if_none
+	dupe.undergarment_color = undergarment_color
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation

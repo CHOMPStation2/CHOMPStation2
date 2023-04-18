@@ -192,6 +192,9 @@
 			belly_data["resist_triggers_animation"] = B.resist_triggers_animation
 			belly_data["size_factor_for_sprite"] = B.size_factor_for_sprite
 			belly_data["belly_sprite_to_affect"] = B.belly_sprite_to_affect
+			belly_data["undergarment_chosen"] = B.undergarment_chosen
+			belly_data["undergarment_if_none"] = B.undergarment_if_none
+			belly_data["undergarment_color"] = B.undergarment_color
 
 			// Visuals (Belly Fullscreens Preview and Coloring)
 			belly_data["belly_fullscreen_color"] = B.belly_fullscreen_color
