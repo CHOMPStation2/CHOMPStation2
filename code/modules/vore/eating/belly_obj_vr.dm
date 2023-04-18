@@ -392,6 +392,7 @@
 			M.ai_holder.go_sleep()
 		if(reagents.total_volume > 0 && M.digestable) //CHOMPAdd
 			reagents.trans_to(M, reagents.total_volume, 1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), TRUE) //CHOMPAdd
+			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>") //CHOMPAdd
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
