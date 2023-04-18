@@ -181,3 +181,12 @@
 	extra_overlay = "goatflops_horn"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/shadekin/dualcolor
+	name = "Shadekin Ears (dual colorable)"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "shadekin"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "shadekin-under"
