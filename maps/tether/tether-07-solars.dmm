@@ -7053,8 +7053,7 @@
 	pixel_x = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)
@@ -7213,8 +7212,7 @@
 "nj" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)

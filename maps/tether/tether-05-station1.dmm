@@ -7712,11 +7712,10 @@
 /obj/effect/floor_decal/corner_techfloor_grid,
 /obj/effect/floor_decal/techfloor/corner,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/gravity_gen)
@@ -10615,16 +10614,6 @@
 "aAW" = (
 /turf/simulated/wall,
 /area/crew_quarters/sleep/engi_wash)
-"aBa" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/engineering/gravity_gen)
 "aBe" = (
 /turf/simulated/wall,
 /area/quartermaster/warehouse)
@@ -13874,11 +13863,10 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/gravity_gen)
 "aYF" = (
@@ -15207,6 +15195,40 @@
 	dir = 1;
 	pixel_y = -24
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/table/rack/shelf,
+/obj/item/device/radio/headset/explorer{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_y = 5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_x = 11;
+	pixel_y = 5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_x = 11;
+	pixel_y = -5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/device/radio/headset/explorer{
+	pixel_y = -5
+	},
+>>>>>>> b575968bf0... Merge pull request #14804 from KillianKirilenko/kk-windowcleanup
 /turf/simulated/floor/tiled,
 /area/gateway/prep_room)
 "bHV" = (
@@ -45434,11 +45456,11 @@ aac
 ank
 aox
 arc
-aBa
-aBa
 aHe
-aBa
-aBa
+aHe
+aHe
+aHe
+aHe
 aYA
 bqT
 akA
