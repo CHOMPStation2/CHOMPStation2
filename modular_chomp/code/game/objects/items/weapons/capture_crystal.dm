@@ -23,7 +23,7 @@
 
 /obj/item/capture_crystal/cheap
 	name = "cheap capture crystal"
-	desc = "A silent, unassuming crystal in what appears to be some kind of steel housing. This one seems to be cheapley made and can only handle a willing mind."
+	desc = "A silent, unassuming crystal in what appears to be some kind of steel housing. This one seems to be cheaply made and can only handle a willing mind."
 	icon = 'icons/obj/capture_crystal_vr.dmi'
 
 
@@ -43,7 +43,7 @@
 		bound_mob = M
 		bound_mob.capture_caught = TRUE
 		persist_storable = FALSE
-	desc = "A silent, unassuming crystal in what appears to be some kind of steel housing. This one seems to be cheapley made and can only handle a willing mind."
+	desc = "A silent, unassuming crystal in what appears to be some kind of steel housing. This one seems to be cheaply made and can only handle a willing mind."
 
 
 /obj/item/capture_crystal/cheap/activate(mob/living/user, target)
