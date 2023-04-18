@@ -200,6 +200,7 @@
 	emote_hear = list("squeeks","squeaks","squiks")
 	emote_see = list("runs in a circle", "shakes", "scritches at something")
 
+// CHOMPAdd - Verb for mice colour changing
 /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
 	set name = "Set Mouse Colour"
 	set category = "Abilities"
@@ -215,3 +216,4 @@
 	holder_type = text2path("/obj/item/weapon/holder/mouse/[new_mouse_colour]")
 	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
 	verbs -= /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour
+// CHOMPAdd End
