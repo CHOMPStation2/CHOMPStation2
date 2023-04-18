@@ -30277,7 +30277,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = null;
+	id_tag = "HoSdoor";
 	name = "Head of Security Quarters";
 	req_access = list(58)
 	},
