@@ -199,3 +199,19 @@
 	speak = list("Squeek!","SQUEEK!","Squeek?")
 	emote_hear = list("squeeks","squeaks","squiks")
 	emote_see = list("runs in a circle", "shakes", "scritches at something")
+
+/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
+	set name = "Set Mouse Colour"
+	set category = "Abilities"
+	set desc = "Set the colour of your mouse."
+	var/new_mouse_colour = tgui_input_list(usr, "Set Mouse Colour", "Pick a colour", list("brown","gray","white","black"))
+	if(!new_mouse_colour) return
+	icon_state = resting ? "mouse_[new_mouse_colour]_sleep" : "mouse_[new_mouse_colour]"
+	item_state = "mouse_[new_mouse_colour]"
+	icon_living = "mouse_[new_mouse_colour]"
+	icon_dead = "mouse_[new_mouse_colour]_dead"
+	icon_rest = "mouse_[new_mouse_colour]_sleep"
+	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
+	holder_type = text2path("/obj/item/weapon/holder/mouse/[new_mouse_colour]")
+	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
+	verbs -= /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour
