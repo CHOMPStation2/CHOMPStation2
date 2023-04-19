@@ -108,14 +108,8 @@
 	var/slow_digestion = FALSE				// Gradual corpse digestion
 	var/slow_brutal = FALSE					// Gradual corpse digestion: Stumpy's Special
 	var/sound_volume = 100					// Volume knob.
-	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize mob Life() instead of subsystem for 3x speed.
+	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize SSobj instead of SSbellies 3x speed.
 	var/cycle_sloshed = FALSE				// Has vorgan entrance made a wet slosh this cycle? Soundspam prevention for multiple items entered.
-
-
-/obj/belly/Initialize()
-	. = ..()
-	if(speedy_mob_processing) //Breaking free from subsystem. Can be implemented in mob's Life() proc for example (as seen in swoopie.dm)
-		STOP_PROCESSING(SSbellies, src)
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)

@@ -304,15 +304,19 @@
 	if(isliving(loc))
 		owner = loc
 		owner.vore_organs |= src
-		START_PROCESSING(SSbellies, src)
-
+		if(speedy_mob_processing) //CHOMPEdit Start
+			START_PROCESSING(SSobj, src)
+		else
+			START_PROCESSING(SSbellies, src)
 
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
-
 /obj/belly/Destroy()
-	STOP_PROCESSING(SSbellies, src)
+	if(speedy_mob_processing)
+		STOP_PROCESSING(SSobj, src)
+	else
+		STOP_PROCESSING(SSbellies, src) //CHOMPEdit End
 	owner?.vore_organs?.Remove(src)
 	owner = null
 	return ..()
