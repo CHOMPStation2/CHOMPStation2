@@ -137,3 +137,9 @@
 	description = "A musical rainbow"
 	path = /obj/item/instrument/xylophone
 	cost = 3
+
+/datum/gear/utility/piano_synth
+	display_name = "Synthesizer"
+	description = "Not a portable keyboard"
+	path = /obj/item/instrument/piano_synth
+	cost = 3
