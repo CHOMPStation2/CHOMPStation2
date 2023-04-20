@@ -55,6 +55,7 @@
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
+	var/is_feedable = TRUE					// If this belly shows up in belly selections for others. //CHOMPAdd
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -285,7 +286,8 @@
 	"slow_brutal",
 	"sound_volume",
 	"speedy_mob_processing",
-	"egg_name", //CHOMP end of variables from CHOMP
+	"egg_name",
+	"is_feedable", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -1454,7 +1456,8 @@
 	dupe.slow_digestion = slow_digestion
 	dupe.slow_brutal = slow_brutal
 	dupe.sound_volume = sound_volume
-	dupe.egg_name = egg_name //CHOMP end of variables from CHOMP
+	dupe.egg_name = egg_name
+	dupe.is_feedable = is_feedable //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

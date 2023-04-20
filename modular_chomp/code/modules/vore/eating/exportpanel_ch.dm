@@ -159,6 +159,7 @@
 			belly_data["digest_oxy"] = B.digest_oxy
 
 			belly_data["can_taste"] = B.can_taste
+			belly_data["is_feedable"] = B.is_feedable
 			belly_data["contaminates"] = B.contaminates
 			belly_data["contamination_flavor"] = B.contamination_flavor
 			belly_data["contamination_color"] = B.contamination_color
