@@ -94,7 +94,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		else
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 25*damage_gain //CHOMPedit end
-	if(offset) // If any different than default weight, multiply the % of offset.
+	if(offset && damage_gain > 0) // If any different than default weight, multiply the % of offset.
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit start: digestion producing reagents
 			B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100)*4.5/(B.gen_cost*1.25)*(damage_gain)/difference)) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
 			B.digest_nutri_gain = offset*((B.nutrition_percent / 100)*0.5/(B.gen_cost*1.25)*(damage_gain)/difference) //for transfering nutrition value over to GenerateBellyReagents_digesting()

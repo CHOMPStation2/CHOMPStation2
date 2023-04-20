@@ -69,7 +69,10 @@
 	"Milk",
 	"Cream",
 	"Honey",
-	"Cherry Jelly"
+	"Cherry Jelly",
+	"Digestive acid",
+	"Lube",
+	"Biomass"
 	)
 
 	//CHOMP - vore sprites
@@ -77,7 +80,8 @@
 	var/tmp/static/list/vore_sprite_flag_list= list(
 		"Normal belly sprite" = DM_FLAG_VORESPRITE_BELLY,
 		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
-		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
+		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING,
+		"Undergarment addition" = DM_FLAG_VORESPRITE_ARTICLE,
 		)
 
 	var/affects_vore_sprites = FALSE
@@ -91,6 +95,9 @@
 	var/resist_triggers_animation = TRUE
 	var/size_factor_for_sprite = 1
 	var/belly_sprite_to_affect = "stomach"
+	var/undergarment_chosen = "Underwear, bottom"
+	var/undergarment_if_none
+	var/undergarment_color = COLOR_GRAY
 	var/datum/sprite_accessory/tail/tail_to_change_to = FALSE
 	var/tail_colouration = FALSE
 	var/tail_extra_overlay = FALSE
@@ -102,6 +109,7 @@
 	var/slow_brutal = FALSE					// Gradual corpse digestion: Stumpy's Special
 	var/sound_volume = 100					// Volume knob.
 	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize mob Life() instead of subsystem for 3x speed.
+	var/cycle_sloshed = FALSE				// Has vorgan entrance made a wet slosh this cycle? Soundspam prevention for multiple items entered.
 
 
 /obj/belly/Initialize()
@@ -259,6 +267,34 @@
 			gen_cost = 10
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
+		if("Digestive acid")
+			generated_reagents = list("stomacid" = 1)
+			reagent_name = "digestive acid"
+			gen_amount = 1
+			gen_cost = 5
+			reagentid = "stomacid"
+			reagentcolor = "#664330"
+		if("Space cleaner")
+			generated_reagents = list("cleaner" = 1)
+			reagent_name = "space cleaner"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "cleaner"
+			reagentcolor = "#A5F0EE"
+		if("Lube")
+			generated_reagents = list("lube" = 1)
+			reagent_name = "lube"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "lube"
+			reagentcolor = "#009CA8"
+		if("Biomass")
+			generated_reagents = list("biomass" = 1)
+			reagent_name = "biomass"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "biomass"
+			reagentcolor = "#DF9FBF"
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 

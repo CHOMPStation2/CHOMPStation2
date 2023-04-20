@@ -1,6 +1,7 @@
 // Process the predator's effects upon the contents of its belly (i.e digestion/transformation etc)
 /obj/belly/process(wait) //Passed by controller
 	recent_sound = FALSE
+	cycle_sloshed = FALSE //CHOMPAdd
 
 	if(loc != owner)
 		if(istype(owner))

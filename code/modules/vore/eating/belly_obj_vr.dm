@@ -275,6 +275,9 @@
 	"resist_triggers_animation",
 	"size_factor_for_sprite",
 	"belly_sprite_to_affect",
+	"undergarment_chosen",
+	"undergarment_if_none",
+	"undergarment_color",
 	"autotransferchance",
 	"autotransferwait",
 	"autotransferlocation",
@@ -304,7 +307,7 @@
 		START_PROCESSING(SSbellies, src)
 
 
-	create_reagents(100)	//CHOMP So we can have some liquids in bellies
+	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
 
@@ -316,9 +319,16 @@
 
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
-	. = ..()  //CHOMPEdit: radios
-	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
-	if(istype(thing, /mob/observer)) //CHOMPEdit. Silence, spook.
+	. = ..()  //CHOMPEdit Start
+	if(istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
+		var/turf/simulated/T = owner.loc
+		var/list/slosh_sounds = T.vorefootstep_sounds["human"]
+		var/S = pick(slosh_sounds)
+		if(S)
+			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, preference = /datum/client_preference/digestion_noises)
+			cycle_sloshed = TRUE
+	thing.belly_cycles = 0 //reset cycle count
+	if(istype(thing, /mob/observer)) //Silence, spook.
 		if(desc)
 			//Allow ghosts see where they are if they're still getting squished along inside.
 			var/formatted_desc
@@ -329,8 +339,7 @@
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
-	//CHOMPEdit Start - Prevent reforming causing a lot of log spam/sounds
-	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi))
+	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi)) // Prevent reforming causing a lot of log spam/sounds
 		return //Someone getting reformed most likely (And if not, uh... shouldn't happen anyways?)
 	//CHOMPEdit end
 
@@ -351,6 +360,9 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
+	if(reagents.total_volume > 0 && !isliving(thing)) //CHOMPAdd Start
+		if(!istype(thing,/obj/item/weapon/reagent_containers)) //Don't fill containers with free juice. Splashing only.
+			reagents.trans_to(thing, reagents.total_volume, 1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), TRUE) //CHOMPAdd End
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
@@ -378,6 +390,9 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+		if(reagents.total_volume > 0 && M.digestable) //CHOMPAdd
+			reagents.trans_to(M, reagents.total_volume, 1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), TRUE) //CHOMPAdd
+			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>") //CHOMPAdd
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
@@ -435,29 +450,31 @@
 		L.clear_fullscreen("belly")
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPEdit Start: preserving save data
+			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			var/image/I = image(F.icon, belly_fullscreen) //Would be cool if I could just include color and alpha in the image define so we don't have to copy paste
 			I.color = belly_fullscreen_color
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2")
+			I = image(F.icon, belly_fullscreen+"-2")
 			I.color = belly_fullscreen_color2
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3")
+			I = image(F.icon, belly_fullscreen+"-3")
 			I.color = belly_fullscreen_color3
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4")
+			I = image(F.icon, belly_fullscreen+"-4")
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
+			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			F.add_overlay(image(F.icon, belly_fullscreen))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-4")) //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
@@ -474,29 +491,30 @@
 
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit Start: preserving save data
+			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			var/image/I = image(F.icon, belly_fullscreen)
 			I.color = belly_fullscreen_color
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2")
+			I = image(F.icon, belly_fullscreen+"-2")
 			I.color = belly_fullscreen_color2
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3")
+			I = image(F.icon, belly_fullscreen+"-3")
 			I.color = belly_fullscreen_color3
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			I = image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4")
+			I = image(F.icon, belly_fullscreen+"-4")
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //CHOMPedit: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
 			F.add_overlay(image(F.icon, belly_fullscreen))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-2"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-3"))
-			F.add_overlay(image('modular_chomp/icons/mob/screen_full_vore_ch_overlays.dmi', belly_fullscreen+"-4"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
+			F.add_overlay(image(F.icon, belly_fullscreen+"-4")) //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
@@ -891,11 +909,15 @@
 		if(ishuman(M))
 			var/mob/living/carbon/human/Prey = M
 			Prey.bloodstr.del_reagent("numbenzyme")
-			Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway
-			Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
-			Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
+			Prey.bloodstr.trans_to_holder(Pred.ingested, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway //CHOMPEdit Start
+			Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
+			Prey.touching.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
+			Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
 		else if(M.reagents)
-			M.reagents.trans_to_holder(Pred.bloodstr, M.reagents.total_volume, 0.5, TRUE)
+			M.reagents.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
+			M.reagents.trans_to_holder(Pred.ingested, M.reagents.total_volume, 0.5, TRUE) //CHOMPEdit End
 
 	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//Incase they have the loop going, let's double check to stop it.
@@ -978,6 +1000,8 @@
 		//Reagent sharing for absorbed with pred - Copy so both pred and prey have these reagents.
 		Prey.bloodstr.trans_to_holder(Pred.ingested, Prey.bloodstr.total_volume, copy = TRUE)
 		Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, copy = TRUE)
+		Prey.touching.del_reagent("stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent("cleaner") //CHOMPEdit Don't need this stuff in our bloodstream.
 		Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, copy = TRUE)
 		// TODO - Find a way to make the absorbed prey share the effects with the pred.
 		// Currently this is infeasible because reagent containers are designed to have a single my_atom, and we get
@@ -1425,6 +1449,9 @@
 	dupe.resist_triggers_animation = resist_triggers_animation
 	dupe.size_factor_for_sprite = size_factor_for_sprite
 	dupe.belly_sprite_to_affect = belly_sprite_to_affect
+	dupe.undergarment_chosen = undergarment_chosen
+	dupe.undergarment_if_none = undergarment_if_none
+	dupe.undergarment_color = undergarment_color
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation

@@ -268,7 +268,7 @@
 //If for some reason touch effects are bypassed (e.g. injecting stuff directly into a reagent container or person),
 //call the appropriate trans_to_*() proc.
 /datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0)
-	touch(target) //First, handle mere touch effects
+	touch(target, amount*multiplier) //First, handle mere touch effects //CHOMPEdit
 
 	if(ismob(target))
 		return splash_mob(target, amount, copy)
