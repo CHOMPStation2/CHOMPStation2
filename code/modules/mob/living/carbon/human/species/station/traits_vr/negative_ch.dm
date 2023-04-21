@@ -185,22 +185,28 @@
 
 
 /datum/trait/negative/agoraphobia/proc/handle_loneliness(var/mob/living/carbon/human/H)
-	var/ms = ""
-	if(H.loneliness_stage == escalation_speed)
-		ms = "You notice there's more people than you feel comfortable with around you..."
-	if(H.loneliness_stage >= 50)
-		ms = "You start to feel anxious from the number of people around you."
-	if(H.loneliness_stage >= 250)
-		ms = "[pick("You don't think you can last much longer with this much company!", "You should go find some space!")]"
-		if(H.stuttering < hallucination_cap)
-			H.stuttering += 5
-	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'><b>[pick("Why am I still here? I have to leave and get some space!", "Please, just let me be alone!", "I need to be alone!")]</b></span>"
 	if(world.time < H.next_loneliness_time)
-		return
-	if(ms != "")
+		return //Moved this at the top so we dont waste time assigning vars we will never use
+	var/ms = handle_loneliness_message(H)
+	if(ms)
 		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
+
+/datum/trait/negative/agoraphobia/proc/handle_loneliness_message(var/mob/living/carbon/human/H)
+	if(H.loneliness_stage == escalation_speed)
+		return "You notice there's more people than you feel comfortable with around you..."
+	if(H.loneliness_stage >= 50)
+		return "You start to feel anxious from the number of people around you."
+	if(H.loneliness_stage >= 250)
+		if(H.stuttering < hallucination_cap)
+			H.stuttering += 5
+		return "[pick("You don't think you can last much longer with this much company!", "You should go find some space!")]" //if we add more here make it a list for readability
+	if(H.loneliness_stage >= warning_cap)
+		var/list/panicmessages = list(	"Why am I still here? I have to leave and get some space!",
+						"Please, just let me be alone!",
+						"I need to be alone!")
+		return "<span class='danger'><b>[pick(panicmessages)]</b></span>"
+	return FALSE
 
 /datum/trait/negative/agoraphobia/proc/find_held_by(var/atom/item)
 	if(!item || !istype(item))
