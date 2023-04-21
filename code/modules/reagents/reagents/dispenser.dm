@@ -378,6 +378,7 @@
 		if(isbelly(M.loc))
 			var/obj/belly/B = M.loc
 			if(B.digest_mode != DM_DIGEST)
+				remove_self(volume)
 				return
 			splash_mult = 0.3 //Less spillage inside enclosed vorgan.
 			if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
