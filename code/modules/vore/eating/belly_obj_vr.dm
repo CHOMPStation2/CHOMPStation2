@@ -324,10 +324,9 @@
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	. = ..()  //CHOMPEdit Start
-	if(istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
+	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
 		var/turf/simulated/T = owner.loc
-		var/list/slosh_sounds = T.vorefootstep_sounds["human"]
-		var/S = pick(slosh_sounds)
+		var/S = pick(T.vorefootstep_sounds["human"])
 		if(S)
 			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, preference = /datum/client_preference/digestion_noises)
 			cycle_sloshed = TRUE
