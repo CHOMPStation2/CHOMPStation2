@@ -193,15 +193,16 @@
 	H.next_loneliness_time = world.time+500
 
 /datum/trait/negative/agoraphobia/proc/handle_loneliness_message(var/mob/living/carbon/human/H)
-	if(H.loneliness_stage == escalation_speed)
+	var/Lonely = H.loneliness_stage
+	if(Lonely == escalation_speed)
 		return "You notice there's more people than you feel comfortable with around you..."
-	if(H.loneliness_stage >= 50)
+	else if(Lonely >= 50 && Lonely < 250)
 		return "You start to feel anxious from the number of people around you."
-	if(H.loneliness_stage >= 250)
+	else if(Lonely >= 250 && Lonely < warning_cap)
 		if(H.stuttering < hallucination_cap)
 			H.stuttering += 5
 		return "[pick("You don't think you can last much longer with this much company!", "You should go find some space!")]" //if we add more here make it a list for readability
-	if(H.loneliness_stage >= warning_cap)
+	else if(Lonely >= warning_cap)
 		var/list/panicmessages = list(	"Why am I still here? I have to leave and get some space!",
 						"Please, just let me be alone!",
 						"I need to be alone!")
