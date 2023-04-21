@@ -374,36 +374,38 @@
 		return
 	if(ishuman(M))
 		var/item_digestion = TRUE //CHOMPEdit Start
+		var/splash_mult = 1
 		if(isbelly(M.loc))
 			var/obj/belly/B = M.loc
+			splash_mult = 0.3 //Less spillage inside enclosed vorgan.
 			if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
 				item_digestion = FALSE
 		var/mob/living/carbon/human/H = M
 		if(H.head)
 			if(H.head.unacidable || is_type_in_list(H.head,item_digestion_blacklist) || !item_digestion)
 				to_chat(H, "<span class='danger'>Your [H.head] protects you from the acid.</span>")
-				remove_self(volume)
+				remove_self(volume * splash_mult)
 				return
 			else if(removed > meltdose)
 				to_chat(H, "<span class='danger'>Your [H.head] melts away!</span>")
 				qdel(H.head)
 				H.update_inv_head(1)
 				H.update_hair(1)
-				removed -= meltdose
+				removed -= meltdose * splash_mult
 		if(removed <= 0)
 			return
 
 		if(H.wear_mask)
 			if(H.wear_mask.unacidable || is_type_in_list(H.wear_mask,item_digestion_blacklist) || !item_digestion)
 				to_chat(H, "<span class='danger'>Your [H.wear_mask] protects you from the acid.</span>")
-				remove_self(volume)
+				remove_self(volume * splash_mult)
 				return
 			else if(removed > meltdose)
 				to_chat(H, "<span class='danger'>Your [H.wear_mask] melts away!</span>")
 				qdel(H.wear_mask)
 				H.update_inv_wear_mask(1)
 				H.update_hair(1)
-				removed -= meltdose
+				removed -= meltdose * splash_mult
 		if(removed <= 0)
 			return
 
@@ -438,12 +440,15 @@
 
 /datum/reagent/acid/touch_obj(var/obj/O)
 	..()
-	var/item_digestion = TRUE //CHOMPEdit Start
-	if(isbelly(O.loc))
+	if(isbelly(O.loc)) //CHOMPEdit Start
 		var/obj/belly/B = O.loc
 		if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
-			item_digestion = FALSE
-	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)  || !item_digestion) //CHOMPEdit End
+			return
+		var/obj/item/I = O
+		var/spent_amt = I.digest_act(I.loc, 1, volume)
+		remove_self(spent_amt * meltdose / 3) //10u stomacid per w_class, less if stronger acid.
+		return
+	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End
 		return
 	if((istype(O, /obj/item) || istype(O, /obj/effect/plant)) && (volume > meltdose))
 		var/obj/effect/decal/cleanable/molten_item/I = new/obj/effect/decal/cleanable/molten_item(O.loc)
