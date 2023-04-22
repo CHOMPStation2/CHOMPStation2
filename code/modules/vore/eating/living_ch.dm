@@ -227,6 +227,8 @@
 					update_fullness()
 
 		if("Container")
+			if(RTB.reagentid == "stomacid")
+				return
 			var/list/choices = list()
 			for(var/obj/item/weapon/reagent_containers/rc in view(1,user.loc))
 				choices += rc

@@ -168,6 +168,11 @@
 				gen_interval = 0
 			else
 				gen_interval++
+	for(var/mob/living/L in contents)
+		if(L.digestable && digest_mode == DM_DIGEST)
+			reagents.trans_to(L, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
+	for(var/obj/item/I in contents)
+		reagents.trans_to(I, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
 
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
@@ -178,17 +183,17 @@
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
 	if(count_liquid_for_sprite)
-		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+		owner.update_fullness() //This is run whenever a belly's contents are changed.
 
 //////////////////////////// REAGENT_DIGEST ////////////////////////
 
 /obj/belly/proc/GenerateBellyReagents_digesting()	//The rate isnt based on selected reagent, due to the fact that the price of the reagent is already paid by nutrient not gained.
 	if(reagents.total_volume + (digest_nutri_gain * gen_amount) <= custom_max_volume) //By default a reagent with an amount of 1 should result in pred getting 100 units from a full health prey
 		for(var/reagent in generated_reagents)
-			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain)
+			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain / gen_cost)
 	else
-		for(var/reagent in generated_reagents)
-			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (custom_max_volume - reagents.total_volume))
+		owner.adjust_nutrition((4.5 * digest_nutri_gain) * owner.get_digestion_efficiency_modifier())
+		digest_nutri_gain = 0
 
 /obj/belly/proc/GenerateBellyReagents_digested()
 	if(reagents.total_volume <= custom_max_volume - 25 * gen_amount)
@@ -265,7 +270,7 @@
 			generated_reagents = list("stomacid" = 1)
 			reagent_name = "digestive acid"
 			gen_amount = 1
-			gen_cost = 2
+			gen_cost = 1
 			reagentid = "stomacid"
 			reagentcolor = "#664330"
 		if("Space cleaner")
