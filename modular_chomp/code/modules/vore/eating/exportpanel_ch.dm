@@ -222,6 +222,8 @@
 			belly_data["autotransferwait"] = B.autotransferwait
 			belly_data["autotransferlocation"] = B.autotransferlocation
 			belly_data["autotransfer_enabled"] = B.autotransfer_enabled
+			belly_data["autotransferchance_secondary"] = B.autotransferchance_secondary
+			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
 
