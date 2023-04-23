@@ -71,6 +71,7 @@
 	"Honey",
 	"Cherry Jelly",
 	"Digestive acid",
+	"Diluted digestive acid",
 	"Lube",
 	"Biomass"
 	)
@@ -274,6 +275,13 @@
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "stomacid"
+			reagentcolor = "#664330"
+		if("Diluted digestive acid")
+			generated_reagents = list("diet_stomacid" = 1)
+			reagent_name = "diluted digestive acid"
+			gen_amount = 1
+			gen_cost = 1
+			reagentid = "diet_stomacid"
 			reagentcolor = "#664330"
 		if("Space cleaner")
 			generated_reagents = list("cleaner" = 1)
