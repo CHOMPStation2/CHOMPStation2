@@ -419,12 +419,12 @@
 			remove_self(volume)
 			return
 		if(B.owner)
-			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume)
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 3 * volume)
-				B.digest_nutri_gain = B.nutrition_percent / 100 * 1.5 * volume
+			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 3.5 * removed)
+				B.digest_nutri_gain = B.nutrition_percent / 100 * 1 * removed
 				B.GenerateBellyReagents_digesting()
 			else
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * volume) //CHOMPEdit End
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * removed) //CHOMPEdit End
 
 	if(volume < meltdose) // Not enough to melt anything
 		M.take_organ_damage(0, removed * power * 0.2) //burn damage, since it causes chemical burns. Acid doesn't make bones shatter, like brute trauma would.
@@ -472,9 +472,9 @@
 			remove_self(volume)
 			return
 		if(B.owner)
-			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume)
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 3 * volume)
-				B.digest_nutri_gain = B.nutrition_percent / 100 * 1.5 * volume
+			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 3.5 * volume)
+				B.digest_nutri_gain = B.nutrition_percent / 100 * 1 * volume
 				B.GenerateBellyReagents_digesting()
 			else
 				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * volume)
