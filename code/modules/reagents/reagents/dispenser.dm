@@ -420,11 +420,11 @@
 			return
 		if(B.owner)
 			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 3.5 * removed)
-				B.digest_nutri_gain = B.nutrition_percent / 100 * 1 * removed
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * (power * 0.6) * removed)
+				B.digest_nutri_gain = B.nutrition_percent / 100 * (power * 0.4) * removed
 				B.GenerateBellyReagents_digesting()
 			else
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * removed) //CHOMPEdit End
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * power * removed) //CHOMPEdit End
 
 	if(volume < meltdose) // Not enough to melt anything
 		M.take_organ_damage(0, removed * power * 0.2) //burn damage, since it causes chemical burns. Acid doesn't make bones shatter, like brute trauma would.
@@ -450,10 +450,10 @@
 		if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
 			return
 		var/obj/item/I = O
-		var/spent_amt = I.digest_act(I.loc, 1, amount)
+		var/spent_amt = I.digest_act(I.loc, 1, amount / (meltdose / 3))
 		if(B.owner)
 			B.owner.adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
-		remove_self(spent_amt * meltdose / 3) //10u stomacid per w_class, less if stronger acid.
+		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
 		return
 	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End
 		return
@@ -473,11 +473,11 @@
 			return
 		if(B.owner)
 			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 3.5 * volume)
-				B.digest_nutri_gain = B.nutrition_percent / 100 * 1 * volume
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * (power * 0.6) * volume)
+				B.digest_nutri_gain = B.nutrition_percent / 100 * (power * 0.4) * volume
 				B.GenerateBellyReagents_digesting()
 			else
-				B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * volume)
+				B.owner.adjust_nutrition((B.nutrition_percent / 100) * power * volume)
 	L.adjustFireLoss(volume * power * 0.2)
 	remove_self(volume) //CHOMPAdd End
 

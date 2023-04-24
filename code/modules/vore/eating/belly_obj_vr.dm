@@ -472,10 +472,13 @@
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
 			if(L.liquidbelly_visuals && reagents.total_volume)
-				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
+				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
+				else
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
 				I.color = reagentcolor
-				I.alpha = max(80, custom_max_volume / 1.5) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -480 + ((480 / custom_max_volume) * reagents.total_volume)
+				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
@@ -485,10 +488,14 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
 			if(L.liquidbelly_visuals && reagents.total_volume)
-				var/image/I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
+				var/image/I
+				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
+				else
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
 				I.color = reagentcolor
-				I.alpha = max(80, reagents.maximum_volume / 1.5) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -480 + ((480 / custom_max_volume) * reagents.total_volume)
+				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I) //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
@@ -525,10 +532,13 @@
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
 			if(L.liquidbelly_visuals && reagents.total_volume)
-				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
+				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
+				else
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
 				I.color = reagentcolor
-				I.alpha = max(80, custom_max_volume / 1.5) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -480 + ((480 / custom_max_volume) * reagents.total_volume)
+				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
@@ -537,10 +547,14 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
 			if(L.liquidbelly_visuals && reagents.total_volume)
-				var/image/I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
+				var/image/I
+				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
+				else
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
 				I.color = reagentcolor
-				I.alpha = max(80, custom_max_volume / 1.5) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -480 + ((480 / custom_max_volume) * reagents.total_volume)
+				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I) //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
