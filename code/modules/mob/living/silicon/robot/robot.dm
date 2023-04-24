@@ -341,7 +341,7 @@
 	//Flavour text.
 	if(client)
 		var/module_flavour = client.prefs.flavour_texts_robot[modtype]
-		if(module_flavour)
+		if(module_flavour && (module_flavour != " " || module_flavour != ".")) //CHOMPEDIT: Skip module flavor if " " or "."
 			flavor_text = module_flavour
 		else
 			flavor_text = client.prefs.flavour_texts_robot["Default"]

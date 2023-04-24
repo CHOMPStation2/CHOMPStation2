@@ -219,6 +219,9 @@
 			"resist_animation" = selected.resist_triggers_animation,
 			"voresprite_size_factor" = selected.size_factor_for_sprite,
 			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
+			"undergarment_chosen" = selected.undergarment_chosen,
+			"undergarment_if_none" = selected.undergarment_if_none || "None",
+			"undergarment_color" = selected.undergarment_color,
 			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) > 1 ? TRUE : FALSE,
 			"tail_option_shown" = istype(host, /mob/living/carbon/human),
 			"tail_to_change_to" = selected.tail_to_change_to,
@@ -1807,6 +1810,29 @@
 			var/size_factor_input = input(user, "Set the impact all belly content's collective size has on your vore sprite. 1 means no scaling, 0.5 means content counts half as much, 2 means contents count double. (Range from 0.1 - 3)", "Size Factor") as num|null
 			if(!isnull(size_factor_input))
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
+				host.update_fullness()
+			. = TRUE
+		if("b_undergarment_choice") //CHOMP Addition
+			var/datum/category_group/underwear/undergarment_choice = tgui_input_list(usr, "Which undergarment do you want to enable when your [lowertext(host.vore_selected.name)] is filled?","Select Undergarment Class", global_underwear.categories)
+			if(!undergarment_choice) //They cancelled, no changes
+				return FALSE
+			else
+				host.vore_selected.undergarment_chosen = undergarment_choice.name
+				host.update_fullness()
+			. = TRUE
+		if("b_undergarment_if_none") //CHOMP Addition
+			var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[host.vore_selected.undergarment_chosen]
+			var/datum/category_item/underwear/selected_underwear = tgui_input_list(usr, "If no undergarment is equipped, which undergarment style do you want to use?","Select Underwear Style",UWC.items,host.vore_selected.undergarment_if_none)
+			if(!selected_underwear) //They cancelled, no changes
+				return FALSE
+			else
+				host.vore_selected.undergarment_if_none = selected_underwear
+				host.update_fullness()
+				host.updateVRPanel()
+		if("b_undergarment_color") //CHOMP Addition
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.undergarment_color) as color|null
+			if(newcolor)
+				host.vore_selected.undergarment_color = newcolor
 				host.update_fullness()
 			. = TRUE
 		if("b_tail_to_change_to") //CHOMP Addition
