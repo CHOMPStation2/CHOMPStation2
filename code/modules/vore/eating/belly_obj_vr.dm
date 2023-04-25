@@ -441,7 +441,7 @@
 			for(var/count in I.d_mult to 1 step 0.25)
 				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
-/obj/belly/proc/vore_fx(mob/living/L, var/update)
+/obj/belly/proc/vore_fx(mob/living/L, var/update, var/severity = 0) //CHOMPEdit
 	if(!istype(L))
 		return
 	if(!L.client)
@@ -453,8 +453,9 @@
 		L.clear_fullscreen("belly")
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPEdit Start: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, severity) //CHOMPEdit Start: preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
+			F.cut_overlays()
 			var/image/I = image(F.icon, belly_fullscreen) //Would be cool if I could just include color and alpha in the image define so we don't have to copy paste
 			I.color = belly_fullscreen_color
 			I.alpha = belly_fullscreen_alpha
@@ -480,9 +481,11 @@
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
+			F.update_for_view(owner.client.view)
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed, severity) //preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
+			F.cut_overlays()
 			F.add_overlay(image(F.icon, belly_fullscreen))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
@@ -496,7 +499,9 @@
 				I.color = reagentcolor
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
-				F.add_overlay(I) //CHOMPEdit End
+				F.add_overlay(I)
+			F.update_for_view(owner.client.view)
+			 //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
@@ -513,8 +518,9 @@
 
 	if(belly_fullscreen)
 		if(colorization_enabled)
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly) //CHOMPedit Start: preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, reagents.total_volume) //CHOMPedit Start: preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
+			F.cut_overlays()
 			var/image/I = image(F.icon, belly_fullscreen)
 			I.color = belly_fullscreen_color
 			I.alpha = belly_fullscreen_alpha
@@ -540,8 +546,10 @@
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
+			F.update_for_view(owner.client.view)
 		else
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed) //preserving save data
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed, reagents.total_volume) //preserving save data
+			F.cut_overlays()
 			F.add_overlay(image(F.icon, belly_fullscreen))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
@@ -555,7 +563,8 @@
 				I.color = reagentcolor
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
-				F.add_overlay(I) //CHOMPEdit End
+				F.add_overlay(I)
+			F.update_for_view(owner.client.view)//CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
