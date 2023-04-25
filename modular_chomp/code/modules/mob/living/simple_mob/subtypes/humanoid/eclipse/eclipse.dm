@@ -125,8 +125,8 @@
 	name = "Solar Eclipse Initiate"
 	desc = "A dangerous indivual, a gleaming orange shield surronding them, seeming protected from energy and burns."
 
-	armor = list(melee = 10, bullet = 10, laser = 95, energy = 95, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
-	armor_soak = list(melee = 0, bullet = 0, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = -10, bullet = -10, laser = 75, energy = 75, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor_soak = list(melee = 0, bullet = 0, laser = 15, energy = 15, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
 	name = "Solar Eclipse Tesla Serpent"
@@ -280,8 +280,8 @@
 	name = "Lunar Eclipse Initiate"
 	desc = "A dangerous indivual, a gleaming red shield surronding them, seemingly protected from blunt force trauma and ballastics."
 
-	armor = list(melee = 95, bullet = 95, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
-	armor_soak = list(melee = 5, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
+	armor = list(melee = 75, bullet = 75, laser = -10, energy = -10, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
