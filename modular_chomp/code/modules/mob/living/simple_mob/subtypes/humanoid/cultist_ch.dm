@@ -149,14 +149,3 @@
 		"Your squirming and thrasing only causes the serpent to curl their tail around your frame, squeeze down on it in sync with the muscles, pressing you further into the caustic acids.",
 		"Your body would swish and slosh in the burbling caustic acid as it nips at your armor and flesh.",
 		"The serpent cultist would let out a lazy out, streching, then remebers your exsistance pressing a claw into the you shaped bulge and grumbling." ,)
-
-//Projectile//
-/obj/item/projectile/energy/inversion
-	name = "inversion blast"
-	icon = 'icons/obj/projectiles_impact.dmi'
-	icon_state = "impact_invert"
-	damage = 15
-	armor_penetration = 60
-	damage_type = BURN
-	check_armour = "laser"
-	color = "#ffffff"
