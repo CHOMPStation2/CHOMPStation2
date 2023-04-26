@@ -337,17 +337,6 @@
 			return
 //CHOMPedit End
 /obj/machinery/conveyor_switch/oneway
-	var/convdir = 1 //Set to 1 or -1 depending on which way you want the convayor to go. (In other words keep at 1 and set the proper dir on the belts.)
-	desc = "A conveyor control switch. It appears to only go in one direction."
-
-// attack with hand, switch position
-/obj/machinery/conveyor_switch/oneway/attack_hand(mob/user)
-	if(position == 0)
-		position = convdir
-	else
-		position = 0
-
-/obj/machinery/conveyor_switch/oneway
 	oneway = 1
 
 /obj/machinery/conveyor_switch/examine()
