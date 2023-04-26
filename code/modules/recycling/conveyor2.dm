@@ -315,8 +315,20 @@
 				if(C.id == id)
 					conveyors += C
 			return
+			
+	if(istype(I, /obj/item/weapon/tool/wrench))
+		if(panel_open)
+			if(oneway == 1)
+				to_chat(user, "You set the switch to two way operation.")
+				oneway = 0
+				playsound(src, I.usesound, 50, 1)
+				return
+			else
+				to_chat(user, "You set the switch to one way operation.")
+				oneway = 1
+				playsound(src, I.usesound, 50, 1)
+				return
 
-<<<<<<< HEAD
 //CHOMPedit: Conveyor belts can be fast :)
 	if(istype(I, /obj/item/weapon/tool/wirecutters))
 		if(panel_open)
@@ -334,20 +346,6 @@
 		position = convdir
 	else
 		position = 0
-=======
-	if(istype(I, /obj/item/weapon/tool/wrench))
-		if(panel_open)
-			if(oneway == 1)
-				to_chat(user, "You set the switch to two way operation.")
-				oneway = 0
-				playsound(src, I.usesound, 50, 1)
-				return
-			else
-				to_chat(user, "You set the switch to one way operation.")
-				oneway = 1
-				playsound(src, I.usesound, 50, 1)
-				return
->>>>>>> 326496ce71... Merge pull request #14806 from ReoDaProtovali/master
 
 /obj/machinery/conveyor_switch/oneway
 	oneway = 1
