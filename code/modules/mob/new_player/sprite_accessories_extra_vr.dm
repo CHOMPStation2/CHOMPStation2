@@ -901,9 +901,6 @@
 	icon = 'icons/mob/human_races/markings_vr.dmi'
 	icon_state = "unathi_blocky_head_eyes"
 	color_blend_mode = ICON_MULTIPLY
-<<<<<<< HEAD
-	body_parts = list(BP_HEAD)
-=======
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/vr_manedwolf1
@@ -956,4 +953,3 @@
 	icon_state = "zaprat_cheeks"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
->>>>>>> 5765d6b7c2... Merge pull request #14808 from Heroman3003/zaprat
