@@ -105,6 +105,8 @@
 
 /area/survivalpod/superpose/PizzaParlor
 
+/area/survivalpod/superpose/GrandLibrary
+
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
 	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; use a pen to reach the reset button. There's a license for use printed on the bottom."
