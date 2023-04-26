@@ -17,29 +17,24 @@
 	name = "Altevian Hegemony Security Jacket"
 	icon_state = "altevian-jacket-sec"
 	item_state = "altevian-jacket-sec"
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
-	siemens_coefficient = 0.9
 	overlay_state = "altevian-jacket-sec"
 
 /obj/item/clothing/accessory/jacket/altevian/medical
 	name = "Altevian Hegemony Command Jacket"
 	icon_state = "altevian-jacket-med"
 	item_state = "altevian-jacket-med"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
 	overlay_state = "altevian-jacket-med"
 
 /obj/item/clothing/accessory/jacket/altevian/engineering
 	name = "Altevian Hegemony Engineering Jacket"
 	icon_state = "altevian-jacket-eng"
 	item_state = "altevian-jacket-eng"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10)
 	overlay_state = "altevian-jacket-eng"
 
 /obj/item/clothing/accessory/jacket/altevian/science
 	name = "Altevian Hegemony Science Jacket"
 	icon_state = "altevian-jacket-sci"
 	item_state = "altevian-jacket-sci"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 0)
 	overlay_state = "altevian-jacket-sci"
 
 /obj/item/clothing/accessory/jacket/altevian/cargo
