@@ -6,6 +6,7 @@
 /mob/living/simple_mob/animal/giant_spider/electric //disrupter, old 210
 	maxHealth = 70
 	health = 70
+	projectiletype = /obj/item/projectile/energy/mob/electric_spider
 
 /mob/living/simple_mob/animal/giant_spider/frost //tank, old 175
 	maxHealth = 130

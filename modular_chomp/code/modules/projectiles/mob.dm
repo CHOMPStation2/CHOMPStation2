@@ -42,3 +42,16 @@
 	check_armour = "laser"
 	color = "#ffffff"
 	fire_sound = 'sound/weapons/spiderlunge.ogg'
+
+/obj/item/projectile/energy/mob/electric_spider
+	name = "stun beam"
+	icon_state = "impact_stun"
+	fire_sound = 'sound/weapons/Taser.ogg'
+	nodamage = 1
+	taser_effect = 1
+	damage_type = HALLOSS
+	light_color = "#FFFFFF"
+	hitsound = 'sound/weapons/zapbang.ogg'
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
+	combustion = FALSE
+	agony = 20
