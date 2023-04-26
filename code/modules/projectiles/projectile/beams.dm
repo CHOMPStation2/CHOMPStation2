@@ -84,8 +84,6 @@
 	armor_penetration = 10
 	hud_state = "laser"
 
-<<<<<<< HEAD
-=======
 /obj/item/projectile/beam/midlaser/ion
 	damage_type = ELECTROMAG
 	light_color = "#00CCFF"
@@ -105,7 +103,6 @@
 	tracer_type = /obj/effect/projectile/tracer/emitter
 	impact_type = /obj/effect/projectile/impact/emitter
 
->>>>>>> da8a583936... Merge pull request #14812 from KillianKirilenko/kk-ionbeams
 /obj/item/projectile/beam/heavylaser
 	name = "heavy laser"
 	icon_state = "heavylaser"
