@@ -485,6 +485,16 @@
 	power = 2
 	meltdose = 30
 
+/datum/reagent/acid/diet_digestive //CHOMPAdd
+	name = "Diluted digestive acid"
+	id = "diet_stomacid"
+	description = "Some form of digestive slurry."
+	taste_description = "vomit"
+	reagent_state = LIQUID
+	color = "#664330"
+	power = 0.4
+	meltdose = 150
+
 /datum/reagent/thermite/venom
 	name = "Pyrotoxin"
 	id = "thermite_v"

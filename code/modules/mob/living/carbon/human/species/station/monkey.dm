@@ -74,6 +74,7 @@
 	if(!H.ckey)
 		H.can_be_drop_prey = TRUE
 		H.digest_leave_remains = 1
+		H.low_priority = TRUE
 	return ..()//CHOMPadd end
 
 /datum/species/monkey/tajaran

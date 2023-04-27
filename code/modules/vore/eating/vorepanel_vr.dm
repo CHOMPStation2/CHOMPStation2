@@ -1178,9 +1178,20 @@
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
 			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on
-			host.vore_selected.slow_digestion = FALSE //CHOMPAdd
-			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY) //CHOMPAdd
-				host.vore_selected.slow_digestion = TRUE //CHOMPAdd
+			host.vore_selected.slow_digestion = FALSE //CHOMPAdd Start
+			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY)
+				host.vore_selected.slow_digestion = TRUE
+			if(toggle_addon == "TURBO MODE")
+				STOP_PROCESSING(SSbellies, host.vore_selected)
+				STOP_PROCESSING(SSobj, host.vore_selected)
+				if(host.vore_selected.mode_flags & DM_FLAG_TURBOMODE)
+					host.vore_selected.speedy_mob_processing = TRUE
+					START_PROCESSING(SSobj, host.vore_selected)
+					to_chat(usr, "<span class= 'warning'>TURBO MODE activated! Belly processing speed tripled! This also affects timed settings, such as autotransfer and liquid generation.</span>")
+				else
+					host.vore_selected.speedy_mob_processing = FALSE
+					START_PROCESSING(SSbellies, host.vore_selected)
+					to_chat(usr, "<span class= 'warning'>TURBO MODE deactivated. Belly processing returned to normal speed.</span>")//CHOMPAdd End
 			. = TRUE
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()
@@ -1520,6 +1531,7 @@
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_burn = new_new_damage
+			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_brute_dmg")
 			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0)
@@ -1527,6 +1539,7 @@
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_brute = new_new_damage
+			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_oxy_dmg")
 			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0)

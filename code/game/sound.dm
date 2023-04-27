@@ -287,6 +287,12 @@
 					'sound/items/pickup/generic1.ogg',
 					'sound/items/pickup/generic2.ogg',
 					'sound/items/pickup/generic3.ogg')
+			// CHOMPedit start - Sounds for mech footsteps.
+			if ("powerloaderstep")
+				soundin = pick(
+					'modular_chomp/sound/effects/powerloader_step.ogg',
+					'modular_chomp/sound/effects/powerloader_step2.ogg')
+			// CHOMPedit end.
 	return soundin
 
 //Are these even used? //Yes

@@ -9,6 +9,7 @@
 	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
 	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
 	var/trash_catching = FALSE				//Toggle for trash throw vore.
+	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
@@ -227,6 +228,8 @@
 					update_fullness()
 
 		if("Container")
+			if(RTB.reagentid == "stomacid")
+				return
 			var/list/choices = list()
 			for(var/obj/item/weapon/reagent_containers/rc in view(1,user.loc))
 				choices += rc
@@ -309,3 +312,10 @@
 	set desc = "Toggle Trash Eater throw vore abilities."
 	trash_catching = !trash_catching
 	to_chat(src, "<span class='warning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
+
+/mob/living/proc/liquidbelly_visuals()
+	set name = "Toggle Liquidbelly Visuals"
+	set category = "Preferences"
+	set desc = "Toggle liquidbelly fullscreen visual effect."
+	liquidbelly_visuals = !liquidbelly_visuals
+	to_chat(src, "<span class='warning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")
