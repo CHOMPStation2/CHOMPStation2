@@ -228,6 +228,7 @@
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
 			H.heal_organ_damage(3, 0)
+			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_NORM)
 			for(var/obj/item/organ/I in H.internal_organs)
 				if(I.robotic >= ORGAN_ROBOT)
 					continue
