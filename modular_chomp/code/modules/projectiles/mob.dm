@@ -55,3 +55,14 @@
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	combustion = FALSE
 	agony = 20
+
+/obj/item/projectile/energy/mob/precursor
+	name = "precursor beam"
+	icon = 'icons/obj/projectiles_ch.dmi'
+	icon_state = "impact_prec"
+	fire_sound = 'sound/weapons/MediumLaser.ogg'
+	light_color = "#FF0099"
+
+	hud_state = "plasma_rifle"
+	damage = 48
+	armor_penetration = 10
