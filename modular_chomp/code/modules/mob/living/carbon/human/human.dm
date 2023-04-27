@@ -6,7 +6,7 @@
 	var/list/new_fullness = ..()
 	. = new_fullness
 	for(var/datum/category_group/underwear/undergarment_class in global_underwear.categories)
-		if(new_fullness[undergarment_class.name] == 0)
+		if(!new_fullness[undergarment_class.name])
 			continue
 		new_fullness[undergarment_class.name] = -1 * round(-1 * new_fullness[undergarment_class.name]) // Doing a ceiling the only way BYOND knows how I guess
 		new_fullness[undergarment_class.name] = (min(2, new_fullness[undergarment_class.name]) - 2) * -1 //Complicated stuff to get it correctly aligned with the expected TRUE/FALSE
