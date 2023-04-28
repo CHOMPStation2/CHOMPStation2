@@ -445,6 +445,10 @@
 			unsaved_changes = TRUE
 			return TRUE
 
+		if("importpanel")
+			var/new_name = html_encode(tgui_input_text(usr,"In Progress","In Progress"))
+			return TRUE
+
 		if("bellypick")
 			host.vore_selected = locate(params["bellypick"])
 			return TRUE
