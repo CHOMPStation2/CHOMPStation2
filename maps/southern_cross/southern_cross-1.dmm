@@ -2975,9 +2975,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = -28
 	},
 /obj/item/device/radio/intercom{
@@ -3048,9 +3046,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = -28
 	},
 /obj/item/device/radio/intercom{
@@ -9417,8 +9413,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = -30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod3/station,
@@ -18030,9 +18025,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = -28
 	},
 /turf/simulated/shuttle/floor/white,
@@ -18614,8 +18607,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = 30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod5/station,
@@ -23570,9 +23562,7 @@
 /area/maintenance/firstdeck/forestarboard)
 "poW" = (
 /obj/structure/bed/chair,
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = 28
 	},
 /turf/simulated/shuttle/floor/white,
@@ -27873,8 +27863,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = -30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod4/station,
@@ -28347,8 +28336,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = 30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod6/station,

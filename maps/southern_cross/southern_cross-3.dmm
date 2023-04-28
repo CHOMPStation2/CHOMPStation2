@@ -8983,8 +8983,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = 30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod8/station,
@@ -10597,8 +10596,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = -30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod7/station,
@@ -21526,20 +21524,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/toilet)
-"tIP" = (
-/obj/structure/toilet,
-/obj/structure/toilet,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
@@ -64447,7 +64431,7 @@ sJA
 hCK
 hCK
 tpf
-tIP
+wwo
 uiC
 uFP
 uNJ
