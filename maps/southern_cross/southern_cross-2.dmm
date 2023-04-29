@@ -44004,7 +44004,7 @@
 	},
 /obj/machinery/door/airlock{
 	name = "Coffee Shop";
-	req_one_access = list(25,28)
+	req_one_access = list(25,28,37)
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
@@ -49217,7 +49217,7 @@
 	id = "coffeeshop";
 	name = "Cafe Shutters";
 	pixel_y = -26;
-	req_one_access = list(25,28)
+	req_one_access = list(25,28,37)
 	},
 /obj/machinery/button/neonsign{
 	id = "cafeopen";
@@ -72242,6 +72242,10 @@
 	pixel_x = -5;
 	pixel_y = 1
 	},
+/obj/item/weapon/reagent_containers/glass/rag{
+	pixel_x = 7;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
 "sCV" = (
@@ -72325,7 +72329,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
-	req_one_access = list(25,28)
+	req_one_access = list(25,28,37)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
