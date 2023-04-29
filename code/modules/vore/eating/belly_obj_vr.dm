@@ -1423,7 +1423,7 @@
 			break
 	if(!dest_belly) return
 	transfer_contents(prey, dest_belly)
-	return 1 //CHOMPEdit end
+	return TRUE //CHOMPEdit end
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
