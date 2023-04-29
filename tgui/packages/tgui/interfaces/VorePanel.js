@@ -1137,7 +1137,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
         }>
         {autotransfer_enabled ? (
           <LabeledList>
-			<LabeledList.Item label="Auto-Transfer Time">
+            <LabeledList.Item label="Auto-Transfer Time">
               <Button
                 content={autotransfer.autotransferwait / 10 + 's'}
                 onClick={() => act('set_attribute', { attribute: 'b_autotransferwait' })}
