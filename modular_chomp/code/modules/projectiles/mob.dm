@@ -22,6 +22,16 @@
 	damage_type = BURN
 	check_armour = "laser"
 
+/obj/item/projectile/energy/mob/smalllaser
+	name = "laser"
+	icon_state = "impact_laser"
+	fire_sound = 'sound/weapons/Laser.ogg'
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
+	damage = 30
+	armor_penetration = 0
+	damage_type = BURN
+	check_armour = "laser"
+
 
 /obj/item/projectile/energy/mob/drone
 	name = "laser"
