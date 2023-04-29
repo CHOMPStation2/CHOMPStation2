@@ -444,11 +444,69 @@
 			host.vore_selected = NB
 			unsaved_changes = TRUE
 			return TRUE
-
+		//CHOMPAdd Start
 		if("importpanel")
-			var/new_name = html_encode(tgui_input_text(usr,"In Progress","In Progress"))
-			return TRUE
+			var/list/input_data = json_decode(tgui_input_text(usr,"Paste .VRDB content here: ","Belly Import",multiline = TRUE))
 
+			if(!islist(input_data)) return FALSE
+
+			var/list/valid_names = list()
+			var/list/valid_lists = list()
+
+			for(var/list/raw_list in input_data)
+				if(!islist(raw_list)) continue
+				if(!istext(raw_list["name"])) continue
+				if(length(raw_list["name"]) > BELLIES_NAME_MAX || length(raw_list["name"]) < BELLIES_NAME_MIN) continue
+				if(raw_list["name"] in valid_names) continue
+				valid_names += raw_list["name"]
+				valid_lists += list(raw_list)
+
+			if(valid_names.len == 0) return FALSE
+
+			var/list/new_names = valid_names - host.vore_organs
+			var/confirm = tgui_alert(host, "WARNING: This will add [length(new_names)] new bell[length(new_names) > 1 ? "ies" : "y"][length(valid_names)-length(new_names) > 1 ? " and update [length(valid_names)-length(new_names)] existing ones" : ""]. Are you sure?","Import bellies?",list("Yes","Cancel"))
+			if(confirm != "Yes") return FALSE
+
+			for(var/list/belly_data in valid_lists)
+				var/obj/belly/new_belly
+				for(var/obj/belly/existing_belly in host.vore_organs)
+					if(lowertext(existing_belly.name) == lowertext(belly_data["name"]))
+						new_belly = existing_belly
+						break
+				if(!new_belly && host.vore_organs.len < BELLIES_MAX)
+					new_belly = new(host)
+					new_belly.name = belly_data["name"]
+				if(!new_belly) continue
+
+				// Controls
+				if(islist(belly_data["addons"]))
+					new_belly.mode_flags = 0
+					new_belly.slow_digestion = FALSE
+					new_belly.speedy_mob_processing = FALSE
+					STOP_PROCESSING(SSbellies, new_belly)
+					STOP_PROCESSING(SSobj, new_belly)
+					START_PROCESSING(SSbellies, new_belly)
+					for(var/addon in belly_data["addons"])
+						new_belly.mode_flags += new_belly.mode_flag_list[addon]
+						switch(addon)
+							if("Slow Body Digestion")
+								new_belly.slow_digestion = TRUE
+							if("TURBO MODE")
+								new_belly.speedy_mob_processing = TRUE
+								STOP_PROCESSING(SSbellies, new_belly)
+								START_PROCESSING(SSobj, new_belly)
+
+				// Descriptions
+				if(istext(belly_data["desc"]))
+					var/new_desc = html_encode(belly_data["desc"])
+					if(new_desc)
+						new_desc = readd_quotes(new_desc)
+					if(length(new_desc) > 0 && length(new_desc) <= BELLIES_DESC_MAX)
+						new_belly.desc = new_desc
+
+			unsaved_changes = TRUE
+			return TRUE
+		//CHOMPAdd End
 		if("bellypick")
 			host.vore_selected = locate(params["bellypick"])
 			return TRUE
