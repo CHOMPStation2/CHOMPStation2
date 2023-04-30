@@ -4,6 +4,9 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
+	if((get_area(src).flags & PHASE_SHIELDED))
+		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		return FALSE
 
 	forceMove(T)
 	var/original_canmove = canmove

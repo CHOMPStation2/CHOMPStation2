@@ -38,6 +38,9 @@
 	if(!T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
+	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
+		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		return FALSE
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
