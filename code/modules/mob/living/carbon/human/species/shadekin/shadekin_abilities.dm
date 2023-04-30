@@ -101,13 +101,6 @@
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
 
-	//CHOMPEdit begin - restricting areas where you can phase shift
-	var/area/A = T.loc
-	if(A?.limit_shadekin_phasing)
-		to_chat(src, "<span class='warning'>You can't use that here!</span>")
-		return FALSE
-	//CHOMPEdit end
-
 	if(!(ability_flags & AB_PHASE_SHIFTED))
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
