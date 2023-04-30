@@ -565,6 +565,12 @@
 	else if(tf_mob_holder)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into another mob.")
 		revert_mob_tf()
+	//CHOMPEdit - petrification (again not vore but hey- ooc escape)
+	else if(istype(loc, /obj/structure/gargoyle) && loc:was_rayed)
+		var/obj/structure/gargoyle/G = loc
+		G.can_revert = TRUE
+		qdel(G)
+		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back from being petrified.")
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
@@ -1129,7 +1135,7 @@
 
 // Full screen belly overlays!
 /obj/screen/fullscreen/belly
-	icon = 'modular_chomp/icons/mob/screen_full_vore_ch.dmi' //CHOMPedit
+	icon = 'modular_chomp/icons/mob/vore_fullscreens/screen_full_vore_ch.dmi' //CHOMPedit
 
 /obj/screen/fullscreen/belly/fixed //CHOMPedit: tweaking to preserve save data
 	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit: tweaking to preserve save data

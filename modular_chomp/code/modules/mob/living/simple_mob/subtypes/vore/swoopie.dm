@@ -20,6 +20,7 @@
 	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
 
@@ -37,14 +38,14 @@
 	B.belly_sprite_to_affect = "stomach"
 	B.name = "Churno-Vac"
 	B.desc = "With an abrupt loud WHUMP after a very sucky trip through the hungry bot's vacuum tube, you finally spill out into its waste container, where everything the bot slurps off the floors ends up for swift processing among the caustic sludge, efficiently melting everything down into a thin slurry to fuel its form. More loose dirt and debris occasionally raining in from above as the bot carries on with its duties to keep the station nice and clean."
-	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine&#39;s gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
+	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine's gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
 	B.digest_mode = DM_DIGEST
 	B.item_digest_mode = IM_DIGEST
 	B.digest_burn = 3
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.belly_fullscreen = "anim_belly"
-	B.belly_fullscreen_color = "#3e2f27"
+	B.belly_fullscreen = "VBO_trash"
+	B.belly_fullscreen_color = "#555B34"
 	B.sound_volume = 25
 	B.count_items_for_sprite = TRUE
 
@@ -121,9 +122,6 @@
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Life()
 	. =..()
-	for(var/obj/belly/L in vore_organs) //Speedrun that autotransfer at 2s ticks instead of 6s
-		if(L.speedy_mob_processing)
-			L.process()
 	var/turf/T = get_turf(src)
 	if(istype(T))
 		for(var/obj/O in T)

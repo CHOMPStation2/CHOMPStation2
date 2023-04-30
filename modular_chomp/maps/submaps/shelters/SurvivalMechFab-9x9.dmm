@@ -1,54 +1,456 @@
-"a" = (/obj/machinery/mecha_part_fabricator,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"b" = (/obj/machinery/r_n_d/circuit_imprinter,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"c" = (/obj/machinery/power/apc/alarms_hidden{dir = 4; pixel_x = 24},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"d" = (/obj/structure/bed/chair/bay/chair/padded/purple{dir = 8},/obj/machinery/recharger/wallcharger{pixel_x = 3; pixel_y = -28},/obj/machinery/recharger/wallcharger{pixel_x = 3; pixel_y = -38},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"e" = (/obj/machinery/vending/wallmed1{dir = 1; name = "Emergency NanoMed"; pixel_y = -25},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"f" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/machinery/atmospherics/unary/vent_pump{external_pressure_bound = 0; external_pressure_bound_default = 0; icon_state = "map_vent_in"; initialize_directions = 8; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 0; use_power = 1},/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"g" = (/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMechFab)
-"h" = (/obj/structure/table/rack/shelf,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"i" = (/obj/machinery/mech_recharger,/obj/mecha/working/ripley/mining/old,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"j" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/obj/machinery/door/window/survival_pod{dir = 2},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"k" = (/obj/machinery/door/window/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"l" = (/obj/machinery/newscaster{pixel_y = -28},/obj/structure/filingcabinet,/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"m" = (/obj/structure/closet/walllocker_double/survival/west,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"n" = (/obj/structure/table/rack/shelf,/obj/item/stack/cable_coil,/obj/item/stack/cable_coil,/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"o" = (/obj/machinery/computer/rdconsole/core{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"r" = (/obj/machinery/atmospherics/unary/freezer{dir = 8; icon_state = "freezer_1"; power_setting = 20; set_temperature = 73; use_power = 1},/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"s" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/weapon/storage/box/survival/space,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/machinery/light{dir = 1},/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/starcaster_news,/obj/item/device/starcaster_news,/obj/item/device/threadneedle,/obj/item/device/flashlight,/obj/item/device/flashlight,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/random/soap,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/storage/box/flare,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalMechFab)
-"t" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/reagent_dispensers/fueltank/high,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"u" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille,/obj/structure/curtain/black,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalMechFab)
-"w" = (/obj/machinery/r_n_d/server/core,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"y" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/obj/machinery/meter,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"A" = (/obj/machinery/portable_atmospherics/canister/nitrogen,/obj/machinery/atmospherics/portables_connector,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"B" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMechFab)
-"C" = (/obj/structure/table/reinforced,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"F" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMechFab)
-"G" = (/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"H" = (/obj/structure/sign/mining/survival,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMechFab)
-"I" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"J" = (/obj/item/device/gps/computer,/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"K" = (/obj/structure/table/reinforced,/obj/structure/reagent_dispensers/acid{density = 0; pixel_x = -30},/obj/item/weapon/storage/toolbox/mechanical,/obj/item/weapon/storage/toolbox/electrical,/obj/item/clothing/glasses/welding,/obj/item/device/robotanalyzer,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"M" = (/obj/machinery/optable,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"N" = (/obj/structure/table/rack/shelf,/obj/item/weapon/gun/energy/ionrifle/pistol,/obj/item/weapon/gun/energy/ionrifle,/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"O" = (/obj/machinery/light,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"P" = (/obj/structure/fans,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"Q" = (/obj/machinery/door/airlock/voidcraft/survival_pod{id_tag = "splock"},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"R" = (/obj/machinery/mecha_part_fabricator/pros,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"T" = (/obj/structure/table/reinforced,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"U" = (/obj/machinery/autolathe,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"W" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"X" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMechFab)
-"Y" = (/obj/structure/window/reinforced/survival_pod,/obj/machinery/atmospherics/unary/vent_pump{dir = 8; icon_state = "map_vent_out"; use_power = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
-"Z" = (/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMechFab)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/machinery/mecha_part_fabricator{
+	req_access = null
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"b" = (
+/obj/machinery/r_n_d/circuit_imprinter,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"c" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"d" = (
+/obj/structure/bed/chair/bay/chair/padded/purple{
+	dir = 8
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 3;
+	pixel_y = -28
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 3;
+	pixel_y = -38
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"e" = (
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	name = "Emergency NanoMed";
+	pixel_y = -25
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"f" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 8;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"g" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMechFab)
+"h" = (
+/obj/structure/table/rack/shelf,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"i" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/working/ripley/mining/old,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"j" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"k" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"l" = (
+/obj/machinery/newscaster{
+	pixel_y = -28
+	},
+/obj/structure/filingcabinet,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"m" = (
+/obj/structure/closet/walllocker_double/survival/west,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"n" = (
+/obj/structure/table/rack/shelf,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"o" = (
+/obj/machinery/computer/rdconsole/core{
+	dir = 1;
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"r" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 8;
+	icon_state = "freezer_1";
+	power_setting = 20;
+	set_temperature = 73;
+	use_power = 1
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"s" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/menu9,
+/obj/item/weapon/storage/mre/menu9,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/starcaster_news,
+/obj/item/device/starcaster_news,
+/obj/item/device/threadneedle,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/random/soap,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/weapon/storage/box/flare,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalMechFab)
+"t" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"u" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalMechFab)
+"w" = (
+/obj/machinery/r_n_d/server/core{
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"y" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/machinery/meter,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"A" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"B" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMechFab)
+"C" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"F" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMechFab)
+"G" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"H" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMechFab)
+"I" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"J" = (
+/obj/item/device/gps/computer,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"K" = (
+/obj/structure/table/reinforced,
+/obj/structure/reagent_dispensers/acid{
+	density = 0;
+	pixel_x = -30
+	},
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/clothing/glasses/welding,
+/obj/item/device/robotanalyzer,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"M" = (
+/obj/machinery/optable,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"N" = (
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/gun/energy/ionrifle/pistol,
+/obj/item/weapon/gun/energy/ionrifle,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"O" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"P" = (
+/obj/structure/fans,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"Q" = (
+/obj/machinery/door/airlock/voidcraft/survival_pod{
+	id_tag = "splock"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"R" = (
+/obj/machinery/mecha_part_fabricator/pros{
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"T" = (
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"U" = (
+/obj/machinery/autolathe,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"W" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"X" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMechFab)
+"Y" = (
+/obj/structure/window/reinforced/survival_pod,
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8;
+	icon_state = "map_vent_out";
+	use_power = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
+"Z" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMechFab)
 
 (1,1,1) = {"
-gFggFggFg
-BUaRiAfwX
-uGZZGIjYu
-gKMboWyrg
-BNhntkPJX
-gmGGGGGGu
-uGGGGCGcg
-BsGeOTdlX
-gHQgHuggg
+g
+B
+u
+g
+B
+g
+u
+B
+g
+"}
+(2,1,1) = {"
+F
+U
+G
+K
+N
+m
+G
+s
+H
+"}
+(3,1,1) = {"
+g
+a
+Z
+M
+h
+G
+G
+G
+Q
+"}
+(4,1,1) = {"
+g
+R
+Z
+b
+n
+G
+G
+e
+g
+"}
+(5,1,1) = {"
+F
+i
+G
+o
+t
+G
+G
+O
+H
+"}
+(6,1,1) = {"
+g
+A
+I
+W
+k
+G
+C
+T
+u
+"}
+(7,1,1) = {"
+g
+f
+j
+y
+P
+G
+G
+d
+g
+"}
+(8,1,1) = {"
+F
+w
+Y
+r
+J
+G
+c
+l
+g
+"}
+(9,1,1) = {"
+g
+X
+u
+g
+X
+u
+g
+X
+g
 "}

@@ -65,7 +65,7 @@
 
 /atom/movable/proc/has_large_resize_bounds()
 	var/area/A = get_area(src) //Get the atom's area to check for size limit.
-	return !A.limit_mob_size
+	return A ? !A.limit_mob_size : FALSE //CHOMPEdit
 
 /proc/is_extreme_size(size)
 	return (size < RESIZE_MINIMUM || size > RESIZE_MAXIMUM)
@@ -245,9 +245,9 @@
 				tmob_message = tail.msg_owner_stepunder
 
 		if(src_message)
-			to_chat(src, STEP_TEXT_OWNER(src_message))
+			to_chat(src, "<span class='filter_notice'>[STEP_TEXT_OWNER(src_message)]</span>")
 		if(tmob_message)
-			to_chat(tmob, STEP_TEXT_PREY(tmob_message))
+			to_chat(tmob, "<span class='filter_notice'>[STEP_TEXT_PREY(tmob_message)]</span>")
 		return TRUE
 	return FALSE
 
@@ -409,7 +409,7 @@
 	set category = "IC"
 
 	pickup_active = !pickup_active
-	to_chat(src, "You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.")
+	to_chat(src, "<span class='filter_notice'>You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.</span>")
 
 #undef STEP_TEXT_OWNER
 #undef STEP_TEXT_PREY

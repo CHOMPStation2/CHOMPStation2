@@ -189,14 +189,5 @@
 	species.base_species = new_species
 	wrapped_species_by_ref["\ref[src]"] = new_species
 	if (visible)
-		visible_message("<b>\The [src]</b> shifts and contorts, taking the form of \a [new_species]!")
+		visible_message("<span class='filter_notice'><b>\The [src]</b> shifts and contorts, taking the form of \a [new_species]!</span>")
 		regenerate_icons()
-
-/mob/verb/select_speech_bubble()
-	set name = "Select Speech Bubble"
-	set category = "OOC"
-
-	var/new_speech_bubble = tgui_input_list(src, "Pick new voice!", "Character Preference", selectable_speech_bubbles)
-	if(new_speech_bubble)
-		to_chat(src, "<span class='notice'>Your voice changes.</span>")
-		custom_speech_bubble = new_speech_bubble

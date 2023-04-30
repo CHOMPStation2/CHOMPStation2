@@ -432,28 +432,58 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/sortmobs()
 	var/list/moblist = list()
 	var/list/sortmob = sortAtom(mob_list)
+	var/list/after_simplemob_minded = list() //CHOMPEdit
 	for(var/mob/observer/eye/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/observer/blob/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/ai/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/pai/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/robot/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/human/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/brain/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/alien/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/observer/dead/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/new_player/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/living/simple_mob/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
+	moblist.Add(after_simplemob_minded) //CHOMPEdit
+	after_simplemob_minded.Cut()
 	//VOREStation Addition Start
 	for(var/mob/living/dominated_brain/M in sortmob)
 		moblist.Add(M)

@@ -186,7 +186,7 @@
 		CASINO_PRIZE("Mech:Shuttlecraft", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlecraft, 1, 500, "mechs"),
 		CASINO_PRIZE("Rig: Solgov engineering hardsuit control module", /obj/item/weapon/rig/bayeng, 1, 500, "mechs"),
 		CASINO_PRIZE("Rig: Solgov medical hardsuit control module", /obj/item/weapon/rig/baymed, 1, 500, "mechs"),
-		CASINO_PRIZE("Rig: Advanced voidsuit control module", /obj/item/weapon/rig/ce, 1, 500, "mechs"),
+		CASINO_PRIZE("Rig: Advanced hardsuit control module", /obj/item/weapon/rig/ce, 1, 500, "mechs"),//CHOMPEDIT: Hardsuit
 		CASINO_PRIZE("Rig: Pursuit hardsuit control module", /obj/item/weapon/rig/ch/pursuit, 1, 750, "mechs"),
 		CASINO_PRIZE("Rig: Combat hardsuit control module", /obj/item/weapon/rig/combat, 1, 750, "mechs"),
 		CASINO_PRIZE("Rig: ERT-J suit control module (Elite Janitor NT approved)", /obj/item/weapon/rig/ert/janitor, 1, 250, "mechs"),

@@ -6,7 +6,7 @@
 /hook/startup/proc/Modular_Borg_init_Honk()
 	robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg
 	robot_module_types += "Honk-Hound" //Add ourselves to global
-
+	return 1
 
 /obj/item/weapon/robot_module/robot/clerical/honkborg
 	name = "honk-hound module"

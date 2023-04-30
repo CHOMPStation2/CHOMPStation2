@@ -1933,9 +1933,10 @@ lol bye
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rd)
 "fs" = (
-/obj/machinery/newscaster{
-	layer = 3.3;
-	pixel_x = -27
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
@@ -2778,6 +2779,10 @@ lol bye
 /obj/machinery/seed_storage/garden,
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/requests_console{
+	department = "Service";
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
@@ -5506,8 +5511,17 @@ lol bye
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
 "pM" = (
-/obj/machinery/alarm{
-	dir = 4
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "botgate";
+	name = "Botany shutters";
+	pixel_x = -27;
+	pixel_y = 6
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
@@ -7625,13 +7639,13 @@ lol bye
 	},
 /area/groundbase/level2/nw)
 "vV" = (
-/obj/structure/disposalpipe/sortjunction{
-	dir = 1;
-	name = "Hydroponics";
-	sortType = "Hydroponics"
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/machinery/newscaster{
+	pixel_y = 28
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab,
-/area/groundbase/level2/nw)
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/hydroponics)
 "vW" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start/qm,
@@ -9603,10 +9617,13 @@ lol bye
 /turf/simulated/floor/tiled,
 /area/groundbase/science/xenobot)
 "BS" = (
-/obj/structure/closet/secure_closet/hydroponics,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
 "BT" = (
@@ -10556,10 +10573,7 @@ lol bye
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
 "Ep" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
 "Eq" = (
@@ -11024,6 +11038,25 @@ lol bye
 	},
 /turf/simulated/floor,
 /area/rnd/xenobiology)
+"FQ" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/window/brigdoor/westright{
+	dir = 4;
+	name = "Research Desk";
+	req_access = null;
+	req_one_access = list(35,28)
+	},
+/obj/machinery/door/blast/gate/thin{
+	dir = 8;
+	id = "botgate";
+	layer = 3.3
+	},
+/turf/simulated/floor,
+/area/groundbase/civilian/hydroponics)
 "FR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12578,11 +12611,12 @@ lol bye
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room4)
 "JZ" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -30
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/item/weapon/stool/padded{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
@@ -12597,6 +12631,12 @@ lol bye
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room6)
+"Kb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/side,
+/area/groundbase/level2/nw)
 "Kc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -13969,15 +14009,17 @@ lol bye
 	},
 /area/groundbase/level2/se)
 "NP" = (
-/obj/machinery/door/airlock/glass{
-	name = "Hydroponics";
-	req_one_access = list(35,28)
-	},
+/obj/structure/table/marble,
 /obj/machinery/door/firedoor,
-/obj/structure/disposalpipe/segment{
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/bmarble,
+/obj/machinery/door/blast/gate/thin{
+	dir = 8;
+	id = "botgate";
+	layer = 3.3
+	},
+/turf/simulated/floor,
 /area/groundbase/civilian/hydroponics)
 "NR" = (
 /obj/structure/cable/yellow,
@@ -14058,11 +14100,12 @@ lol bye
 /turf/simulated/floor/tiled/white,
 /area/groundbase/dorms/room4)
 "Oa" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/beehive,
+/obj/machinery/alarm{
+	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side,
-/area/groundbase/level2/nw)
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/hydroponics)
 "Ob" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/yellow{
@@ -14244,11 +14287,11 @@ lol bye
 /turf/simulated/floor/tiled/eris/cafe,
 /area/groundbase/civilian/kitchen)
 "OA" = (
-/obj/structure/closet/secure_closet/hydroponics,
 /obj/machinery/computer/guestpass{
 	dir = 4;
 	pixel_x = -25
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/hydroponics)
 "OB" = (
@@ -16366,18 +16409,13 @@ lol bye
 /turf/simulated/floor/tiled,
 /area/groundbase/science/circuits)
 "UC" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
+/obj/structure/disposalpipe/sortjunction{
+	dir = 1;
+	name = "Hydroponics";
+	sortType = "Hydroponics"
 	},
-/obj/machinery/requests_console{
-	department = "Service";
-	dir = 4;
-	pixel_x = -25
-	},
-/turf/simulated/floor/tiled,
-/area/groundbase/civilian/hydroponics)
+/turf/simulated/floor/outdoors/sidewalk/slab,
+/area/groundbase/level2/nw)
 "UD" = (
 /turf/simulated/floor{
 	edge_blending_priority = -1;
@@ -17655,6 +17693,10 @@ lol bye
 	outdoors = 1
 	},
 /area/groundbase/science/xenobot)
+"Yo" = (
+/obj/structure/closet/secure_closet/hydroponics,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/hydroponics)
 "Yp" = (
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
@@ -24657,8 +24699,8 @@ Hr
 pJ
 sF
 go
+UC
 sF
-vV
 go
 sF
 sF
@@ -24799,8 +24841,8 @@ wl
 sN
 pw
 oG
+Kb
 bY
-Oa
 oG
 bY
 bY
@@ -24940,9 +24982,9 @@ bY
 lM
 sN
 bY
-lM
-bY
-Oa
+EZ
+Kb
+pw
 lM
 wD
 Aq
@@ -25082,8 +25124,8 @@ Wl
 Wl
 gH
 Wl
-Wl
-Wl
+NP
+FQ
 NP
 Wl
 Wl
@@ -25224,7 +25266,7 @@ hQ
 fs
 Wv
 pM
-UC
+Yt
 JZ
 Ep
 OA
@@ -26072,7 +26114,7 @@ iI
 Hi
 HH
 Wl
-WP
+vV
 Yt
 Wv
 Yt
@@ -26506,7 +26548,7 @@ Yt
 Yt
 Yt
 Yt
-Yt
+Yo
 In
 bY
 bY
@@ -26648,7 +26690,7 @@ Ox
 Yt
 Yt
 Yt
-Yt
+Yo
 In
 bY
 bY
@@ -26785,7 +26827,7 @@ Wl
 Kh
 Yt
 Rf
-Rf
+Oa
 HF
 KN
 YS

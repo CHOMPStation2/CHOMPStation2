@@ -19,7 +19,7 @@
 	response_disarm = "bops"
 	response_harm = "hits"
 
-	movement_cooldown = 5
+	movement_cooldown = 1.5
 
 	harm_intent_damage = 5
 	melee_damage_lower = 5
@@ -32,19 +32,25 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 	catalogue_data = list(/datum/category_item/catalogue/fauna/wolf)
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	species_sounds = "Canine"
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+	// CHOMPAdd End
+
 
 // Activate Noms!
 /mob/living/simple_mob/animal/wolf
 	vore_active = 1
 	vore_icons = SA_ICON_LIVING
-	
+
 /mob/living/simple_mob/animal/wolf/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
 	if(!voremob_loaded)
 		return
 	. = ..()
-	
+
 	var/obj/belly/B = vore_selected
 	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
 	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
@@ -60,7 +66,7 @@
 	health = 40
 	maxHealth = 40
 
-	movement_cooldown = 3
+	movement_cooldown = 0
 
 	harm_intent_damage = 5
 	melee_damage_lower = 10
@@ -116,7 +122,7 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 2
+	movement_cooldown = -1
 
 /mob/living/simple_mob/animal/wolf/direwolf/MouseDrop_T(mob/living/M, mob/living/user)
 	return

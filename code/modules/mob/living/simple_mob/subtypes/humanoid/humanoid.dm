@@ -19,13 +19,15 @@
 
 	// Most humans leave a corpse
 	var/corpse = null
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/humanoid/death()
 	..()
 	if(corpse)
-		new corpse (src.loc)
+		var/mob/new_corpse = new corpse(src.loc) //CHOMPEdit
+		if(istype(new_corpse)) //CHOMPEdit
+			new_corpse.low_priority = TRUE //CHOMPEdit
 	qdel(src)
 	return
 

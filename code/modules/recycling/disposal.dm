@@ -652,12 +652,12 @@
 	while(active)
 		sleep(1)		// was 1
 		if(!loc) return // check if we got GC'd
-
+		/*CHOMPREMOVAL: why, this makes no sense to be a randomized 3% chance damage apply
 		if(hasmob && prob(3))
 			for(var/mob/living/H in src)
 				if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
 					H.take_overall_damage(20, 0, "Blunt Trauma")//horribly maim any living creature jumping down disposals.  c'est la vie
-
+		*/
 		var/obj/structure/disposalpipe/curr = loc
 		last = curr
 		curr = curr.transfer(src)
@@ -1528,6 +1528,7 @@
 	var/active = 0
 	var/turf/target	// this will be where the output objects are 'thrown' to.
 	var/mode = 0
+	var/launch_dist = 3 //CHOMPEdit
 
 /obj/structure/disposaloutlet/Initialize()
 	. = ..()
@@ -1559,7 +1560,7 @@
 			AM.pipe_eject(dir)
 			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
 				spawn(5)
-					AM.throw_at(target, 3, 1)
+					AM.throw_at(target, launch_dist, 1) //CHOMPEdit
 		H.vent_gas(src.loc)
 		qdel(H)
 

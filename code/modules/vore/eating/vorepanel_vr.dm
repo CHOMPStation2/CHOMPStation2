@@ -198,11 +198,15 @@
 			"nutrition_ex" = host.nutrition_message_visible,
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
+			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
+			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
+			"belly_fullscreen_color3" = selected.belly_fullscreen_color3,
+			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
+			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
-			"vorespawn_blacklist" = selected.vorespawn_blacklist, //CHOMP Addition: vorespawn blacklist
-			"sound_volume" = selected.sound_volume, //CHOMPAdd
-			//CHOMP add: vore sprite options
+			"vorespawn_blacklist" = selected.vorespawn_blacklist,
+			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
 			"absorbed_multiplier" = selected.absorbed_multiplier,
@@ -214,6 +218,9 @@
 			"resist_animation" = selected.resist_triggers_animation,
 			"voresprite_size_factor" = selected.size_factor_for_sprite,
 			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
+			"undergarment_chosen" = selected.undergarment_chosen,
+			"undergarment_if_none" = selected.undergarment_if_none || "None",
+			"undergarment_color" = selected.undergarment_color,
 			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) > 1 ? TRUE : FALSE,
 			"tail_option_shown" = istype(host, /mob/living/carbon/human),
 			"tail_to_change_to" = selected.tail_to_change_to,
@@ -271,6 +278,10 @@
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
+		selected_list["belly_fullscreen_color2"] = selected.belly_fullscreen_color2
+		selected_list["belly_fullscreen_color3"] = selected.belly_fullscreen_color3
+		selected_list["belly_fullscreen_color4"] = selected.belly_fullscreen_color4
+		selected_list["belly_fullscreen_alpha"] = selected.belly_fullscreen_alpha
 
 		if(selected.colorization_enabled)
 			selected_list["possible_fullscreens"] = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //Makes any icons inside of here selectable. //CHOMPedit
@@ -611,11 +622,13 @@
 			host.show_vore_fx = !host.show_vore_fx
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.show_vore_fx = host.show_vore_fx
-			if(!host.show_vore_fx)
+			if (isbelly(host.loc)) //CHOMPEdit
+				var/obj/belly/B = host.loc
+				B.vore_fx(host, TRUE)
+			else
 				host.clear_fullscreen("belly")
-				//host.clear_fullscreen("belly2") //For multilayered stomachs. Not currently implemented.
-				if(!host.hud_used.hud_shown)
-					host.toggle_hud_vis()
+			if(!host.hud_used.hud_shown)
+				host.toggle_hud_vis()
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_noisy")
@@ -1095,8 +1108,9 @@
 							var/mob/living/carbon/human/h = l
 							thismuch = thismuch * h.species.digestion_nutrition_modifier
 						l.adjust_nutrition(thismuch)
-					ourtarget.death() //CHOMPEdit - Call .death() on process digest to trigger death hooks like nif_soulcatcher or digest_check (setting vore respawn timer)
-					b.handle_digestion_death(ourtarget, instant = TRUE) //CHOMPEdit
+					ourtarget.death()		// To make sure all on-death procs get properly called
+					if(ourtarget)
+						b.handle_digestion_death(ourtarget)
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
 						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your absorb attempt.</span>")
@@ -1162,9 +1176,20 @@
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
 			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on
-			host.vore_selected.slow_digestion = FALSE //CHOMPAdd
-			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY) //CHOMPAdd
-				host.vore_selected.slow_digestion = TRUE //CHOMPAdd
+			host.vore_selected.slow_digestion = FALSE //CHOMPAdd Start
+			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY)
+				host.vore_selected.slow_digestion = TRUE
+			if(toggle_addon == "TURBO MODE")
+				STOP_PROCESSING(SSbellies, host.vore_selected)
+				STOP_PROCESSING(SSobj, host.vore_selected)
+				if(host.vore_selected.mode_flags & DM_FLAG_TURBOMODE)
+					host.vore_selected.speedy_mob_processing = TRUE
+					START_PROCESSING(SSobj, host.vore_selected)
+					to_chat(usr, "<span class= 'warning'>TURBO MODE activated! Belly processing speed tripled! This also affects timed settings, such as autotransfer and liquid generation.</span>")
+				else
+					host.vore_selected.speedy_mob_processing = FALSE
+					START_PROCESSING(SSbellies, host.vore_selected)
+					to_chat(usr, "<span class= 'warning'>TURBO MODE deactivated. Belly processing returned to normal speed.</span>")//CHOMPAdd End
 			. = TRUE
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()
@@ -1504,6 +1529,7 @@
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_burn = new_new_damage
+			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_brute_dmg")
 			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0)
@@ -1511,6 +1537,7 @@
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_brute = new_new_damage
+			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_oxy_dmg")
 			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0)
@@ -1643,6 +1670,7 @@
 			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
+			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_disable_hud")
 			host.vore_selected.disable_hud = !host.vore_selected.disable_hud
@@ -1667,6 +1695,31 @@
 			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_fullscreen_color2")
+			var/newcolor2 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color2) as color|null
+			if(newcolor2)
+				host.vore_selected.belly_fullscreen_color2 = newcolor2
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_fullscreen_color3")
+			var/newcolor3 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3) as color|null
+			if(newcolor3)
+				host.vore_selected.belly_fullscreen_color3 = newcolor3
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_fullscreen_color4")
+			var/newcolor4 = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color4) as color|null
+			if(newcolor4)
+				host.vore_selected.belly_fullscreen_color4 = newcolor4
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_fullscreen_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Vore Alpha",255,255,0,0,1)
+			if(newalpha)
+				host.vore_selected.belly_fullscreen_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
@@ -1768,6 +1821,29 @@
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
 				host.update_fullness()
 			. = TRUE
+		if("b_undergarment_choice") //CHOMP Addition
+			var/datum/category_group/underwear/undergarment_choice = tgui_input_list(usr, "Which undergarment do you want to enable when your [lowertext(host.vore_selected.name)] is filled?","Select Undergarment Class", global_underwear.categories)
+			if(!undergarment_choice) //They cancelled, no changes
+				return FALSE
+			else
+				host.vore_selected.undergarment_chosen = undergarment_choice.name
+				host.update_fullness()
+			. = TRUE
+		if("b_undergarment_if_none") //CHOMP Addition
+			var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[host.vore_selected.undergarment_chosen]
+			var/datum/category_item/underwear/selected_underwear = tgui_input_list(usr, "If no undergarment is equipped, which undergarment style do you want to use?","Select Underwear Style",UWC.items,host.vore_selected.undergarment_if_none)
+			if(!selected_underwear) //They cancelled, no changes
+				return FALSE
+			else
+				host.vore_selected.undergarment_if_none = selected_underwear
+				host.update_fullness()
+				host.updateVRPanel()
+		if("b_undergarment_color") //CHOMP Addition
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.undergarment_color) as color|null
+			if(newcolor)
+				host.vore_selected.undergarment_color = newcolor
+				host.update_fullness()
+			. = TRUE
 		if("b_tail_to_change_to") //CHOMP Addition
 			var/tail_choice = tgui_input_list(usr, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list)
 			if(!tail_choice) //They cancelled, no changes
@@ -1866,10 +1942,10 @@
 					return FALSE
 			. = TRUE
 		if("b_liq_reagent_capacity")
-			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 0 to 100.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
+			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 10 to 300.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
 			if(new_custom_vol == null)
 				return FALSE
-			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 100)
+			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 300)
 			host.vore_selected.custom_max_volume = new_new_custom_vol
 			. = TRUE
 		if("b_liq_sloshing")

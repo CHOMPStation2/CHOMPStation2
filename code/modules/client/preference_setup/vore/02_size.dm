@@ -17,6 +17,8 @@
 	var/offset_override = FALSE //CHOMPEdit
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
+	var/custom_speech_bubble = "default"
+	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size
@@ -32,6 +34,8 @@
 	S["offset_override"]	>> pref.offset_override //CHOMPEdit
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
+	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
+	S["species_sound"]		>> pref.species_sound  // CHOMPEdit
 
 /datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
 	S["size_multiplier"]	<< pref.size_multiplier
@@ -42,6 +46,8 @@
 	S["offset_override"]	<< pref.offset_override //CHOMPEdit
 	S["voice_freq"]			<< pref.voice_freq
 	S["voice_sound"]		<< pref.voice_sound
+	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
+	S["species_sound"]		<< pref.species_sound // CHOMPEdit
 
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
@@ -54,6 +60,11 @@
 		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.fuzzy))
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
 		pref.size_multiplier = initial(pref.size_multiplier)
+	if(!(pref.custom_speech_bubble in selectable_speech_bubbles))
+		pref.custom_speech_bubble = "default"
+	// var/datum/species/selected_species = GLOB.all_species[pref.species] // CHOMPEdit
+	if(!(pref.species_sound)) // CHOMPEdit // && selected_species.selects_bodytype
+		pref.species_sound = "Unset" // CHOMPEdit - otherwise, we leave this as null or w/e the default is
 
 /datum/category_item/player_setup_item/vore/size/copy_to_mob(var/mob/living/carbon/human/character)
 	character.weight			= pref.weight_vr
@@ -63,7 +74,13 @@
 	character.offset_override	= pref.offset_override //CHOMPEdit
 	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
+
+	//CHOMPEDIT Global voice lookup
 	if(!pref.voice_sound)
+		character.voice_sounds_list = talk_sound
+	else
+		character.voice_sounds_list = get_talk_sound(pref.voice_sound)
+	/*if(!pref.voice_sound)
 		character.voice_sounds_list = talk_sound
 	else
 		switch(pref.voice_sound)
@@ -95,15 +112,33 @@
 				character.voice_sounds_list = goon_speak_roach_sound
 			if("goon speak skelly")
 				character.voice_sounds_list = goon_speak_skelly_sound
+				*/ //CHOMPEDIT Global voice lookup
+	character.custom_speech_bubble = pref.custom_speech_bubble
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
 	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
+	. += "<br>" // CHOMPEdit: Fancy:tm:
+	. += "<b>Mob Speech/Noise Customization</b>" // CHOMPEdit: Fancy:tm:
+	. += "<br>"  // CHOMPEdit
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
-	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>" // CHOMPEdit: Enables testing voices
+	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
+	. += "<b>Custom Speech Bubble:</b> <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+	// CHOMPEdit Start: Pain/Scream/Death Custom Sounds
+	// var/datum/species/selected_species = GLOB.all_species[pref.species]
+	// if(selected_species.selects_bodytype)
+	. += "<br>"
+	. += "<b>Species Sounds:</b> <a href='?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
+	. += "<a href='?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
+	. += "<a href='?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
+	. += "<a href='?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
+	. += "<a href='?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
+	. += "<a href='?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
+	. += "<a href='?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
+	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
 	. += "<br>"
 	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -196,13 +231,23 @@
 			"goon speak roach",
 			"goon speak skelly")
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
-		if(!choice)
+		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
+		else if(!choice)
+			return TOPIC_REFRESH  // CHOMPEdit
 		else
 			pref.voice_sound = choice
-	// CHOMPEdit: Enable testing voice sounds
+		return TOPIC_REFRESH
+	else if(href_list["customize_speech_bubble"])
+		var/choice = tgui_input_list(usr, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
+		if(!choice)
+			pref.custom_speech_bubble = "default"
+		else
+			pref.custom_speech_bubble = choice
+		return TOPIC_REFRESH
+
 	else if(href_list["voice_test"])
-		var/sound/S = pick(pref.voice_sound)
+		var/sound/S
 		switch(pref.voice_sound)
 			if("beep-boop")
 				S = sound(pick(talk_sound))
@@ -232,8 +277,108 @@
 				S = sound(pick(goon_speak_roach_sound))
 			if("goon speak skelly")
 				S = sound(pick(goon_speak_skelly_sound))
+		if(S)
+			S.frequency = pick(pref.voice_freq)
+			S.volume = 50
+			SEND_SOUND(user, S)
+	// CHOMPEdit Start: Pain/Scream/Death sounds
+	else if(href_list["species_sound_options"]) // You shouldn't be able to see this option if you don't have the option to select a custom icon base, so we don't need to re-check for safety here.
+		var/list/possible_species_sound_types = species_sound_map
+		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
+		if(!choice)
+			return TOPIC_REFRESH // No choice? Don't reset our selection
+		else
+			pref.species_sound = choice
+			return TOPIC_REFRESH
+	else if(href_list["cough_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["cough"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(pref))["cough"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have cough sounds!</span>")
+			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
-		S.volume = 50
+		S.volume = 20
 		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["sneeze_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["sneeze"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(pref))["sneeze"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have sneeze sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["scream_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["scream"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(pref))["scream"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have scream sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["pain_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["pain"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(pref))["pain"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["gasp_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["gasp"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(pref))["gasp"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
+	else if(href_list["death_test"])
+		var/sound/S
+		var/ourpref = pref.species_sound
+		var/oursound = get_species_sound(ourpref)["death"]
+		S = sound(pick(oursound))
+		if(pref.species_sound == "Unset")
+			oursound = get_species_sound(select_default_species_sound(pref))["death"]
+			S = sound(pick(oursound))
+		if(pref.species_sound == "None" || oursound == null)
+			to_chat(user, "<span class='warning'>This set does not have death sounds!</span>")
+			return TOPIC_REFRESH
+		S.frequency = pick(pref.voice_freq)
+		S.volume = 20
+		SEND_SOUND(user, S)
+		return TOPIC_REFRESH
 	// CHOMPEdit End
 	return ..();

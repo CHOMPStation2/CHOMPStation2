@@ -563,6 +563,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
+	reagents.add_reagent("chocolate", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc/jelly
 	name = "chocolate frosted jelly donut"
@@ -572,6 +573,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("berryjuice", 5)
+	reagents.add_reagent("chocolate", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/blue
 	name = "blue frosted donut"
@@ -656,6 +658,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("sprinkles", 1)
+	reagents.add_reagent("chocolate", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc_sprinkles/jelly
 	name = "chocolate sprinkles jelly donut"
@@ -666,6 +669,7 @@
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("sprinkles", 1)
 	reagents.add_reagent("berryjuice", 5)
+	reagents.add_reagent("chocolate", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/meat
 	name = "meat donut"
@@ -915,6 +919,18 @@
 	desc = "A fillet of sivian fish meat."
 	filling_color = "#2c2cff"
 	color = "#2c2cff"
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/ray
+	desc = "A fillet of space ray meat."
+	toxin_type = "stoxin"
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/gnat
+	desc = "A paltry sample of space-gnat meat. It looks pretty stringy and unpleasant, honestly."
+	toxin_amount = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/shark
+	desc = "A fillet of space shark meat. It looks rather tough and chewy."
+	toxin_amount = 5
 
 /obj/item/weapon/reagent_containers/food/snacks/crab_legs
 	name = "steamed crab legs"
@@ -6439,7 +6455,7 @@
 	name = "\improper Suhariki"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "croutons"
-	desc = "Fried bread cubes. Popular in Terran territories."
+	desc = "Fried bread cubes. Popular in some Solar territories."
 	trash = /obj/item/trash/croutons
 	filling_color = "#c6b17f"
 	center_of_mass = list ("x"=15, "y"=9)
@@ -6613,7 +6629,7 @@
 	.=..()
 	reagents.add_reagent("capsaicin", 5)
 
-/obj/item/weapon/reagent_containers/food/snacks/sun_snax //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/sun_snax
 	name = "\improper Sun Snax!"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "sun_snax"
@@ -6713,7 +6729,7 @@
 	.=..()
 	reagents.add_reagent("capsaicin",1)
 
-/obj/item/weapon/reagent_containers/food/snacks/wasabi_peas //ADDITION 04/14/2021
+/obj/item/weapon/reagent_containers/food/snacks/wasabi_peas
 	name = "\improper Hadokikku Peas"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "wasabi_peas"
@@ -6919,7 +6935,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/canned/maps
 	name = "\improper MAPS"
 	icon_state = "maps"
-	desc = "A re-branding of a classic Terran snack! Contains mostly edible ingredients."
+	desc = "A re-branding of a classic Earth snack! Contains mostly edible ingredients."
 	trash = /obj/item/trash/maps
 	canned_open_state = "maps-open"
 	filling_color = "#330066"
@@ -7047,7 +7063,7 @@
 	description_fluff = "Despite Spacer advertisements consistently portraying their snack cakes as life-saving, \
 	tear-jerking survival food for spacers in all kinds of dramatic scenarios, the Spacer Snack Cake has been \
 	statistically proven to lower survival rates on all missions where it is present."
-	package_trash = /obj/item/trash/spacercake_wrap
+	package_trash = /obj/item/trash/spacer_cake_wrap
 	package_open_state = "spacercake_open"
 	filling_color = "#FFE591"
 	center_of_mass = list("x"=15, "y"=11)

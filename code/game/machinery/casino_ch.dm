@@ -1312,7 +1312,7 @@
 		Mech: Shuttlecraft 500<br>\
 		Rig: Solgov engineering hardsuit control module 500 <br>\
 		Rig: Solgov medical hardsuit control module 500 <br>\
-		Rig: Advanced voidsuit control module 500 <br>\
+		Rig: Advanced hardsuit control module 500 <br>\
 		Rig: Pursuit hardsuit control module 750 <br>\
 		Rig: Combat hardsuit control module 750 <br>\
 		Rig: ERT-J suit control module (Elite Janitor NT approved) 250 <br>\

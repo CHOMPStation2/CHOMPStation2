@@ -1,6 +1,6 @@
 //This is the proc for gibbing a mob. Cannot gib ghosts.
 //added different sort of gibs and animations. N
-/mob/proc/gib(anim="gibbed-m", do_gibs, gib_file = 'icons/mob/mob.dmi')
+/mob/proc/gib(anim="blank", do_gibs, gib_file = 'icons/mob/mob.dmi') //CHOMPEdit
 	if(stat != DEAD)
 		death(1)
 	transforming = 1

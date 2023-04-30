@@ -249,6 +249,13 @@
 	icon_state = "sepulchre_wingsc"
 	do_colouration = 1
 
+/datum/sprite_accessory/wing/sepulchre_c_yw_w
+	name = "demon wings (colorable, whitescale)"
+	desc = ""
+	icon_state = "sepulchre_wingsc_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/wing/cyberdragon
 	name = "Cyber dragon wing (colorable)"
 	desc = ""
@@ -296,3 +303,11 @@
 	desc = ""
 	icon = 'icons/mob/vore/wings_vr.dmi'
 	icon_state = "dragonfly_tesh"
+
+/datum/sprite_accessory/wing/snail_shell
+	name = "snail shell, colorable"
+	desc = ""
+	icon_state = "snail_shell"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "snail_shell_markings"

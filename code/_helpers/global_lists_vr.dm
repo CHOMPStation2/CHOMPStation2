@@ -13,6 +13,10 @@ var/global/list/traits_costs = list()		// Just path = cost list, saves time in c
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 var/global/list/active_ghost_pods = list()
 
+//Global vars for making the overmap_renamer subsystem.
+//Collects all instances by reference of visitable overmap objects of /obj/effect/overmap/visitable like the debris field.
+var/global/list/visitable_overmap_object_instances = list()
+
 var/global/list/sensorpreflist = list("Off", "Binary", "Vitals", "Tracking", "No Preference")
 
 // Used by the ban panel to determine what departments are offmap departments. All these share an 'offmap roles' ban.
@@ -785,6 +789,7 @@ var/global/list/xenobio_gold_mobs_safe = list(
 										/mob/living/simple_mob/vore/rabbit,
 										/mob/living/simple_mob/vore/redpanda,
 										/mob/living/simple_mob/vore/sheep,
+										/mob/living/simple_mob/vore/squirrel,
 										/mob/living/simple_mob/vore/solargrub)
 
 var/global/list/xenobio_gold_mobs_birds = list(/mob/living/simple_mob/animal/passive/bird/black_bird,
@@ -964,7 +969,8 @@ var/global/list/selectable_speech_bubbles = list(
 	"maus",
 	"heart",
 	"textbox",
-	"posessed")
+	"posessed",
+	"square")
 
 
 

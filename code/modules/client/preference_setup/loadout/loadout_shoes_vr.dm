@@ -36,3 +36,17 @@
 /datum/gear/shoes/flats/alt
 	display_name = "flats, alt"
 	path = /obj/item/clothing/shoes/flats/white/color/alt
+
+//CHOMP ADDITION, trying to make a no shoes shoe option
+/datum/gear/shoes/none
+	display_name = "Adjust - No Shoes"
+	path = /obj/item/clothing/shoes/none
+	cost = 0
+	
+/obj/item/clothing/shoes/none
+	name = "No Shoes"
+	desc = "shoeless?"
+	icon_state = ""
+/obj/item/clothing/shoes/none/Initialize()
+	. = INITIALIZE_HINT_QDEL //Fuck them shoes
+	..()

@@ -6,8 +6,10 @@
 	var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
 	var/vore_footstep_chance = 0
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
-	var/mute_entry = FALSE				//Toggleable vorgan entry logs.
-	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
+	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
+	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
+	var/trash_catching = FALSE				//Toggle for trash throw vore.
+	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
@@ -29,7 +31,14 @@
 	for(var/belly_class in vore_icon_bellies)
 		new_fullness[belly_class] = 0
 	for(var/obj/belly/B as anything in vore_organs)
-		new_fullness[B.belly_sprite_to_affect] += B.GetFullnessFromBelly()
+		if(DM_FLAG_VORESPRITE_BELLY & B.vore_sprite_flags)
+			new_fullness[B.belly_sprite_to_affect] += B.GetFullnessFromBelly()
+		if(istype(src, /mob/living/carbon/human) && DM_FLAG_VORESPRITE_ARTICLE & B.vore_sprite_flags)
+			if(!new_fullness[B.undergarment_chosen])
+				new_fullness[B.undergarment_chosen] = 1
+			new_fullness[B.undergarment_chosen] += B.GetFullnessFromBelly()
+			new_fullness[B.undergarment_chosen + "-ifnone"] = B.undergarment_if_none
+			new_fullness[B.undergarment_chosen + "-color"] = B.undergarment_color
 	for(var/belly_class in vore_icon_bellies)
 		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
 		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
@@ -38,6 +47,7 @@
 	if(vore_fullness < 0)
 		vore_fullness = 0
 	vore_fullness = min(vore_capacity, vore_fullness)
+	return new_fullness
 
 
 /mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
@@ -218,6 +228,8 @@
 					update_fullness()
 
 		if("Container")
+			if(RTB.reagentid == "stomacid")
+				return
 			var/list/choices = list()
 			for(var/obj/item/weapon/reagent_containers/rc in view(1,user.loc))
 				choices += rc
@@ -292,3 +304,18 @@
 	set category = "Preferences"
 	set desc = "Mute the chatlog messages when something enters a vore belly."
 	mute_entry = !mute_entry
+	to_chat(src, "<span class='warning'>Entrance logs [mute_entry ? "disabled" : "enabled"].</span>")
+
+/mob/living/proc/toggle_trash_catching()
+	set name = "Toggle Trash Catching"
+	set category = "Abilities"
+	set desc = "Toggle Trash Eater throw vore abilities."
+	trash_catching = !trash_catching
+	to_chat(src, "<span class='warning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
+
+/mob/living/proc/liquidbelly_visuals()
+	set name = "Toggle Liquidbelly Visuals"
+	set category = "Preferences"
+	set desc = "Toggle liquidbelly fullscreen visual effect."
+	liquidbelly_visuals = !liquidbelly_visuals
+	to_chat(src, "<span class='warning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")

@@ -231,6 +231,7 @@
 	if(holder)
 		add_admin_verbs()
 		admin_memo_show()
+		message_admins("Admin login: [key_name(src)]") // CHOMPEdit: Admin Login Notice
 
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
