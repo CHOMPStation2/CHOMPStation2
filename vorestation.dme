@@ -4502,7 +4502,6 @@
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
-#include "maps\southern_cross\overmap\shuttles.dm"
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
 #include "maps\southern_cross\structures\closets\misc.dm"
