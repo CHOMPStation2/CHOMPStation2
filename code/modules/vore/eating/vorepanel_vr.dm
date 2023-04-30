@@ -446,25 +446,35 @@
 			return TRUE
 		//CHOMPAdd Start
 		if("importpanel")
-			var/list/input_data = json_decode(tgui_input_text(usr,"Paste .VRDB content here: ","Belly Import",multiline = TRUE))
+			//var/list/input_data = json_decode(tgui_input_text(usr,"Paste .VRDB content here: ","Belly Import",max_length = INFINITY,multiline = TRUE))
+			var/input_file = input(usr,"Please choose a valid VRDB file to import from.","Belly Import") as file
+			var/input_data = json_decode(file2text(input_file))
 
-			if(!islist(input_data)) return FALSE
+			if(!islist(input_data))
+				tgui_alert_async(usr, "The supplied file was not a valid VRDB file.", "Error!")
+				return FALSE
 
 			var/list/valid_names = list()
 			var/list/valid_lists = list()
+			var/updates = 0
 
 			for(var/list/raw_list in input_data)
 				if(!islist(raw_list)) continue
 				if(!istext(raw_list["name"])) continue
 				if(length(raw_list["name"]) > BELLIES_NAME_MAX || length(raw_list["name"]) < BELLIES_NAME_MIN) continue
 				if(raw_list["name"] in valid_names) continue
+				for(var/obj/belly/B in host.vore_organs)
+					if(lowertext(B.name) == lowertext(raw_list["name"]))
+						updates++
+						break
 				valid_names += raw_list["name"]
 				valid_lists += list(raw_list)
 
-			if(valid_names.len == 0) return FALSE
+			if(valid_names.len == 0)
+				tgui_alert_async(usr, "The supplied VRDB file does not contain any valid bellies.", "Error!")
+				return FALSE
 
-			var/list/new_names = valid_names - host.vore_organs
-			var/confirm = tgui_alert(host, "WARNING: This will add [length(new_names)] new bell[length(new_names) > 1 ? "ies" : "y"][length(valid_names)-length(new_names) > 1 ? " and update [length(valid_names)-length(new_names)] existing ones" : ""]. Are you sure?","Import bellies?",list("Yes","Cancel"))
+			var/confirm = tgui_alert(host, "WARNING: This will add [length(valid_names)-updates] new bell[length(valid_names)-updates == 1 ? "y" : "ies"][updates > 0 ? " and update [updates] existing one[updates > 1 ? "s" : ""]" : ""]. Are you sure?","Import bellies?",list("Yes","Cancel"))
 			if(confirm != "Yes") return FALSE
 
 			for(var/list/belly_data in valid_lists)
@@ -473,12 +483,23 @@
 					if(lowertext(existing_belly.name) == lowertext(belly_data["name"]))
 						new_belly = existing_belly
 						break
-				if(!new_belly && host.vore_organs.len < BELLIES_MAX)
+				if(!new_belly && length(host.vore_organs) < BELLIES_MAX)
 					new_belly = new(host)
 					new_belly.name = belly_data["name"]
 				if(!new_belly) continue
 
 				// Controls
+				if(istext(belly_data["mode"]))
+					var/new_mode = html_encode(belly_data["mode"])
+					if(new_mode in new_belly.digest_modes)
+						new_belly.digest_mode = new_mode
+
+				if(istext(belly_data["item_mode"]))
+					var/new_item_mode = html_encode(belly_data["item_mode"])
+					if(new_item_mode in new_belly.item_digest_modes)
+						new_belly.item_digest_mode = new_item_mode
+						new_belly.items_preserved.Cut()
+
 				if(islist(belly_data["addons"]))
 					new_belly.mode_flags = 0
 					new_belly.slow_digestion = FALSE
@@ -503,6 +524,144 @@
 						new_desc = readd_quotes(new_desc)
 					if(length(new_desc) > 0 && length(new_desc) <= BELLIES_DESC_MAX)
 						new_belly.desc = new_desc
+
+				if(istext(belly_data["absorbed_desc"]))
+					var/new_absorbed_desc = html_encode(belly_data["absorbed_desc"])
+					if(new_absorbed_desc)
+						new_absorbed_desc = readd_quotes(new_absorbed_desc)
+					if(length(new_absorbed_desc) > 0 && length(new_absorbed_desc) <= BELLIES_DESC_MAX)
+						new_belly.absorbed_desc = new_absorbed_desc
+
+				if(istext(belly_data["vore_verb"]))
+					var/new_vore_verb = html_encode(belly_data["vore_verb"])
+					if(new_vore_verb)
+						new_vore_verb = readd_quotes(new_vore_verb)
+					if(length(new_vore_verb) >= BELLIES_NAME_MIN && length(new_vore_verb) <= BELLIES_NAME_MAX)
+						new_belly.vore_verb = new_vore_verb
+
+				if(istext(belly_data["release_verb"]))
+					var/new_release_verb = html_encode(belly_data["release_verb"])
+					if(new_release_verb)
+						new_release_verb = readd_quotes(new_release_verb)
+					if(length(new_release_verb) >= BELLIES_NAME_MIN && length(new_release_verb) <= BELLIES_NAME_MAX)
+						new_belly.release_verb = new_release_verb
+
+				if(islist(belly_data["digest_messages_prey"]))
+					var/new_digest_messages_prey = sanitize(jointext(belly_data["digest_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_messages_prey)
+						new_belly.set_messages(new_digest_messages_prey,"dmp")
+
+				if(islist(belly_data["digest_messages_owner"]))
+					var/new_digest_messages_owner = sanitize(jointext(belly_data["digest_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_messages_owner)
+						new_belly.set_messages(new_digest_messages_owner,"dmo")
+
+				if(islist(belly_data["absorb_messages_prey"]))
+					var/new_absorb_messages_prey = sanitize(jointext(belly_data["absorb_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_messages_prey)
+						new_belly.set_messages(new_absorb_messages_prey,"amp")
+
+				if(islist(belly_data["absorb_messages_owner"]))
+					var/new_absorb_messages_owner = sanitize(jointext(belly_data["absorb_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_messages_owner)
+						new_belly.set_messages(new_absorb_messages_owner,"amo")
+
+				if(islist(belly_data["unabsorb_messages_prey"]))
+					var/new_unabsorb_messages_prey = sanitize(jointext(belly_data["unabsorb_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_unabsorb_messages_prey)
+						new_belly.set_messages(new_unabsorb_messages_prey,"uamp")
+
+				if(islist(belly_data["unabsorb_messages_owner"]))
+					var/new_unabsorb_messages_owner = sanitize(jointext(belly_data["unabsorb_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_unabsorb_messages_owner)
+						new_belly.set_messages(new_unabsorb_messages_owner,"uamo")
+
+				if(islist(belly_data["struggle_messages_outside"]))
+					var/new_struggle_messages_outside = sanitize(jointext(belly_data["struggle_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_struggle_messages_outside)
+						new_belly.set_messages(new_struggle_messages_outside,"smo")
+
+				if(islist(belly_data["struggle_messages_inside"]))
+					var/new_struggle_messages_inside = sanitize(jointext(belly_data["struggle_messages_inside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_struggle_messages_inside)
+						new_belly.set_messages(new_struggle_messages_inside,"smi")
+
+				if(islist(belly_data["absorbed_struggle_messages_outside"]))
+					var/new_absorbed_struggle_messages_outside = sanitize(jointext(belly_data["absorbed_struggle_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorbed_struggle_messages_outside)
+						new_belly.set_messages(new_absorbed_struggle_messages_outside,"asmo")
+
+				if(islist(belly_data["absorbed_struggle_messages_inside"]))
+					var/new_absorbed_struggle_messages_inside = sanitize(jointext(belly_data["absorbed_struggle_messages_inside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorbed_struggle_messages_inside)
+						new_belly.set_messages(new_absorbed_struggle_messages_inside,"asmi")
+
+				if(islist(belly_data["examine_messages"]))
+					var/new_examine_messages = sanitize(jointext(belly_data["examine_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_examine_messages)
+						new_belly.set_messages(new_examine_messages,"em")
+
+				if(islist(belly_data["examine_messages_absorbed"]))
+					var/new_examine_messages_absorbed = sanitize(jointext(belly_data["examine_messages_absorbed"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_examine_messages_absorbed)
+						new_belly.set_messages(new_examine_messages_absorbed,"ema")
+
+				if(islist(belly_data["emotes_digest"]))
+					var/new_emotes_digest = sanitize(jointext(belly_data["emotes_digest"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_digest)
+						new_belly.set_messages(new_emotes_digest,"im_digest")
+
+				if(islist(belly_data["emotes_hold"]))
+					var/new_emotes_hold = sanitize(jointext(belly_data["emotes_hold"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_hold)
+						new_belly.set_messages(new_emotes_hold,"im_hold")
+
+				if(islist(belly_data["emotes_holdabsorbed"]))
+					var/new_emotes_holdabsorbed = sanitize(jointext(belly_data["emotes_holdabsorbed"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_holdabsorbed)
+						new_belly.set_messages(new_emotes_holdabsorbed,"im_holdabsorbed")
+
+				if(islist(belly_data["emotes_absorb"]))
+					var/new_emotes_absorb = sanitize(jointext(belly_data["emotes_absorb"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_absorb)
+						new_belly.set_messages(new_emotes_absorb,"im_absorb")
+
+				if(islist(belly_data["emotes_heal"]))
+					var/new_emotes_heal = sanitize(jointext(belly_data["emotes_heal"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_heal)
+						new_belly.set_messages(new_emotes_heal,"im_heal")
+
+				if(islist(belly_data["emotes_drain"]))
+					var/new_emotes_drain = sanitize(jointext(belly_data["emotes_drain"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_drain)
+						new_belly.set_messages(new_emotes_drain,"im_drain")
+
+				if(islist(belly_data["emotes_steal"]))
+					var/new_emotes_steal = sanitize(jointext(belly_data["emotes_steal"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_steal)
+						new_belly.set_messages(new_emotes_steal,"im_steal")
+
+				if(islist(belly_data["emotes_egg"]))
+					var/new_emotes_egg = sanitize(jointext(belly_data["emotes_egg"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_egg)
+						new_belly.set_messages(new_emotes_egg,"im_egg")
+
+				if(islist(belly_data["emotes_shrink"]))
+					var/new_emotes_shrink = sanitize(jointext(belly_data["emotes_shrink"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_shrink)
+						new_belly.set_messages(new_emotes_shrink,"im_shrink")
+
+				if(islist(belly_data["emotes_grow"]))
+					var/new_emotes_grow = sanitize(jointext(belly_data["emotes_grow"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_grow)
+						new_belly.set_messages(new_emotes_grow,"im_grow")
+
+				if(islist(belly_data["emotes_unabsorb"]))
+					var/new_emotes_unabsorb = sanitize(jointext(belly_data["emotes_unabsorb"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_emotes_unabsorb)
+						new_belly.set_messages(new_emotes_unabsorb,"im_unabsorb")
+
+				// Options
 
 			unsaved_changes = TRUE
 			return TRUE
