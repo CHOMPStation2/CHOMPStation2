@@ -56,7 +56,7 @@
 /obj/effect/map_helper/no_tele/area/LateInitialize()
 	var/area/A = get_area(src)
 	if(A)
-		A.flags += BLUE_SHIELDED
+		A.flags |= BLUE_SHIELDED
 		for(var/turf/T in A.contents)
 			T.block_tele = 1
 	qdel(src)
@@ -68,4 +68,60 @@
 /obj/effect/map_helper/make_indoors/LateInitialize()
 	for(var/turf/simulated/T in Z_TURFS(z))
 		T.make_indoors()
+	qdel(src)
+
+/obj/effect/map_helper/make_indoors/area
+	name = "Area indoors maker"
+	desc = "I forcibly call make_indoors on every turf in this area."
+
+/obj/effect/map_helper/make_indoors/area/LateInitialize()
+	var/area/A = get_area(src)
+	if(A)
+		for(var/turf/simulated/T in A.contents)
+			T.make_indoors()
+	qdel(src)
+
+/obj/effect/map_helper/make_outdoors
+	name = "z-wide outdoors maker"
+	desc = "I forcibly call make_outdoors on every turf on this z-level."
+
+/obj/effect/map_helper/make_outdoors/LateInitialize()
+	for(var/turf/simulated/T in Z_TURFS(z))
+		T.make_outdoors()
+	qdel(src)
+
+/obj/effect/map_helper/make_outdoors/area
+	name = "Area outdoors maker"
+	desc = "I forcibly call make_outdoors on every turf in this area."
+
+/obj/effect/map_helper/make_outdoors/area/LateInitialize()
+	var/area/A = get_area(src)
+	if(A)
+		for(var/turf/simulated/T in A.contents)
+			T.make_outdoors()
+	qdel(src)
+
+/*
+Make this if you can figure out a way to do it for every area in that z level exclusively
+/obj/effect/map_helper/no_phaseshift
+	name = "area-wide teleport block"
+	desc = "I disable the use of all hand tele's/translocators/bluespace harpoons/telescience in my area!"
+
+/obj/effect/map_helper/no_phaseshift/LateInitialize()
+	var/area/A = get_area(src)
+	if(A)
+		A.flags += BLUE_SHIELDED
+		for(var/turf/T in A.contents)
+			T.block_tele = 1
+	qdel(src)
+*/
+
+/obj/effect/map_helper/no_phaseshift/area
+	name = "area-wide phaseshift blocker"
+	desc = "I disable the use of both shadekin and redspace phasing!"
+
+/obj/effect/map_helper/no_phaseshift/area/LateInitialize()
+	var/area/A = get_area(src)
+	if(A)
+		A.flags |= PHASE_SHIELDED
 	qdel(src)
