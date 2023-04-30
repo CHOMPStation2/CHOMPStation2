@@ -10,7 +10,6 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
-#include "_runtimestation.dm"
 #include "code\__spaceman_dmm.dm"
 #include "code\_away_mission_tests.dm"
 #include "code\_macros.dm"
@@ -1549,7 +1548,6 @@
 #include "code\game\objects\random\guns_and_ammo.dm"
 #include "code\game\objects\random\maintenance.dm"
 #include "code\game\objects\random\mapping.dm"
-#include "code\game\objects\random\mapping_ch.dm"
 #include "code\game\objects\random\mapping_vr.dm"
 #include "code\game\objects\random\mechs.dm"
 #include "code\game\objects\random\misc.dm"
@@ -4502,7 +4500,6 @@
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
-#include "maps\southern_cross\overmap\shuttles.dm"
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
 #include "maps\southern_cross\structures\closets\misc.dm"
@@ -4546,6 +4543,7 @@
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"
 #include "modular_chomp\code\game\objects\items\devices\flipper.dm"
 #include "modular_chomp\code\game\objects\items\weapons\capture_crystal.dm"
+#include "modular_chomp\code\game\objects\random\mapping.dm"
 #include "modular_chomp\code\game\objects\structures\desert_planet_structures.dm"
 #include "modular_chomp\code\game\objects\structures\gargoyle.dm"
 #include "modular_chomp\code\game\objects\structures\loot_pile.dm"

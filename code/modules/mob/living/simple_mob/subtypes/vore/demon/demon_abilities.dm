@@ -8,6 +8,10 @@
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
 
+	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
+		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		return FALSE
+
 	if(shift_state && shift_state == AB_SHIFT_ACTIVE)
 		to_chat(src,"<span class='warning'>You can't do a shift while actively shifting!</span>")
 		return FALSE
