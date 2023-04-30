@@ -5,7 +5,7 @@
 /obj/machinery/gear_painter
 	name = "Color Mate"
 	desc = "A machine to give your apparel a fresh new color!"
-	icon = 'icons/obj/vending.dmi'
+	icon = 'icons/obj/vending_vr.dmi'
 	icon_state = "colormate"
 	density = TRUE
 	anchored = TRUE
@@ -71,30 +71,26 @@
 	if(default_unfasten_wrench(user, I, 40))
 		return
 
-	if(allow_mobs && istype(I, /obj/item/weapon/holder))
-		var/obj/item/holder/H = I
-		var/mob/victim = H.held_mob
-		if(!user.attempt_insert_item_for_installation(I, src))
-			return
-		if(!QDELETED(H))
-			H.drop_items()
-
-		insert_mob(victim, user)
-		SStgui.update_uis(src)
-
 	if(is_type_in_list(I, allowed_types) && !inoperable())
-		if(!user.attempt_insert_item_for_installation(I, src))
-			return
-		if(QDELETED(I))
-			return
-		user.visible_message(SPAN_NOTICE("[user] inserts [I] into [src]'s receptable."))
-
+		user.visible_message("<span class='notice'>[user] inserts \the [I] into the Color Mate receptable.</span>")
+		user.drop_from_inventory(I)
+		I.forceMove(src)
 		inserted = I
-		update_icon()
 		SStgui.update_uis(src)
 
 	else
 		return ..()
+
+/obj/machinery/gear_painter/attack_hand(mob/user)
+	if(..())
+		return
+	tgui_interact(user)
+
+/obj/machinery/gear_painter/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "ColorMate", name)
+		ui.open()
 
 /obj/machinery/gear_painter/proc/insert_mob(mob/victim, mob/user)
 	if(inserted)
@@ -137,7 +133,7 @@
 		ui.set_autoupdate(FALSE) //This might be a bit intensive, better to not update it every few ticks
 		ui.open()
 
-/obj/machinery/gear_painter/ui_data(mob/user)
+/obj/machinery/gear_painter/tgui_data(mob/user)
 	. = list()
 	.["activemode"] = active_mode
 	.["matrixcolors"] = list(
@@ -167,7 +163,7 @@
 	else
 		.["item"] = null
 
-/obj/machinery/gear_painter/ui_act(action, params)
+/obj/machinery/gear_painter/tgui_act(action, params)
 	. = ..()
 	if(.)
 		return
