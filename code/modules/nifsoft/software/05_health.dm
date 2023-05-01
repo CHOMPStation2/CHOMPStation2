@@ -90,6 +90,7 @@
 	var/mode = 0
 	health_flags = (NIF_H_SYNTHREPAIR)
 
+
 	//These self-activate on their own, these aren't user-settable to on/off.
 /datum/nifsoft/medichines_syn/activate()
 	if((. = ..()))
@@ -104,6 +105,8 @@
 		var/mob/living/carbon/human/H = nif.human // Chomp Edit
 		var/HP_percent = H.health/H.getMaxHealth() // Chomp Edit
 		//We're good!
+		var/mob/living/carbon/human/S = nif.human
+		var/HP_percent = S.health/S.getMaxHealth()
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
@@ -128,6 +131,7 @@
 				else if(mode == 1)
 					mode = 2
 					nif.notify("Medichines unable to repair all damage. Perform manual repairs.",TRUE)
+<<<<<<< HEAD
 				// Chomp Edit Start //
 				else if(mode == 2 && HP_percent < -0.4)
 					nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
@@ -139,6 +143,17 @@
 						a.autosay("[H.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[H.real_name]'s NIF", "Medical")
 						qdel(a)
 				// Chomp Edit End //
+=======
+		
+		if(mode == 2 && HP_percent < -0.4) //lets inform someone who might be able to help us that we got toasted and roasted
+			nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
+			mode = 3 //this does nothing except stop it from repeating over and over and over and over and over and over and over
+			if(!isbelly(S.loc)) //Not notified in case of vore, for gameplay purposes.
+				var/turf/T = get_turf(S)
+				var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
+				a.autosay("[S.real_name] is in a critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
+				qdel(a)
+>>>>>>> 8d5e25a2c1... Merge pull request #14827 from TankTheBirb/like-this-to-die-instantly
 
 		return TRUE
 
