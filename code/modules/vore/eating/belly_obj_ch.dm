@@ -472,3 +472,12 @@
 	for(var/A in contents)
 		if(isliving(A))
 			vore_fx(A,1)
+
+/obj/belly/deserialize(var/list/data)
+	..()
+	STOP_PROCESSING(SSbellies, src)
+	STOP_PROCESSING(SSobj, src)
+	if(speedy_mob_processing)
+		START_PROCESSING(SSobj, src)
+	else
+		START_PROCESSING(SSbellies, src)
