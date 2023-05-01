@@ -167,9 +167,9 @@
 		var/destroy_lights = 0
 
 		//CHOMPEdit start - Add back light destruction
-		if(SK.get_shadekin_eyecolor() == RED_EYES)
+		if(SK.get_shadekin_eyecolor(src) == RED_EYES)
 			destroy_lights = 80
-		else if(SK.get_shadekin_eyecolor() == PURPLE_EYES)
+		else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
 			destroy_lights = 25
 		//CHOMPEdit end
 
