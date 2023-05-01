@@ -1011,7 +1011,7 @@
 		else
 			qdel(M)
 	if(isanimal(owner))
-		owner.update_transform()
+		owner.update_icon()
 	//CHOMPEdit End
 
 // Handle a mob being absorbed
