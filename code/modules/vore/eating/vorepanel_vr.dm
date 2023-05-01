@@ -662,6 +662,45 @@
 						new_belly.set_messages(new_emotes_unabsorb,"im_unabsorb")
 
 				// Options
+				if(isnum(belly_data["can_taste"]))
+					var/new_can_taste = belly_data["can_taste"]
+					if(new_can_taste == 0)
+						new_belly.can_taste = FALSE
+					if(new_can_taste == 1)
+						new_belly.can_taste = TRUE
+				/*
+				if(isnum(belly_data["is_feedable"]))
+					var/new_is_feedable = belly_data["is_feedable"]
+					if(new_is_feedable == 0)
+						new_belly.is_feedable = FALSE
+					if(new_is_feedable == 1)
+						new_belly.is_feedable = TRUE
+				*/
+				if(isnum(belly_data["contaminates"]))
+					var/new_contaminates = belly_data["contaminates"]
+					if(new_contaminates == 0)
+						new_belly.contaminates = FALSE
+					if(new_contaminates == 1)
+						new_belly.contaminates = TRUE
+
+				if(istext(belly_data["contamination_flavor"]))
+					var/new_contamination_flavor = sanitize(belly_data["contamination_flavor"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_contamination_flavor)
+						if(new_contamination_flavor in contamination_flavors)
+							new_belly.contamination_flavor = new_contamination_flavor
+
+				if(istext(belly_data["contamination_color"]))
+					var/new_contamination_color = sanitize(belly_data["contamination_color"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_contamination_color)
+						if(new_contamination_color in contamination_colors)
+							new_belly.contamination_color = new_contamination_color
+
+				if(isnum(belly_data["bulge_size"]))
+					var/new_bulge_size = belly_data["bulge_size"]
+					if(new_bulge_size == 0)
+						new_belly.bulge_size = 0
+					if(ISINRANGE(new_bulge_size,0.25,2))
+						new_belly.bulge_size = new_bulge_size
 
 			unsaved_changes = TRUE
 			return TRUE
