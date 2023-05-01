@@ -163,3 +163,15 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/head/mob_vr_teshari.dmi'
 		)
+<<<<<<< HEAD
+=======
+
+// tiny tophat
+
+/obj/item/clothing/head/tinytophat
+	name = "tiny tophat"
+	desc = "A tophat that is far too small to properly sit on someone's head!"
+	icon = 'icons/inventory/head/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
+	icon_state = "tiny_tophat"
+>>>>>>> 47d0f998d9... Merge pull request #14823 from SatinIsle/Striped-Clown-Uniform-Set
