@@ -18,8 +18,6 @@
 	var/build_sat = 1
 	var/build_val = 1
 
-	/// Allow holder'd mobs
-	var/allow_mobs = TRUE
 	/// Minimum lightness for normal mode
 	var/minimum_normal_lightness = 50
 	/// Minimum lightness for matrix mode, tested using 4 test colors of full red, green, blue, white.
@@ -35,6 +33,60 @@
 		/obj/item/weapon/storage/belt,
 		/obj/item/toy
 	)
+
+//Effectively so I can just re-use this without copy pasting code elsewhere
+/obj/machinery/gear_painter/always_on
+	name = "Handheld colour mate"
+	desc = "Something must have gone wrong if you can see this"
+
+/obj/machinery/gear_painter/always_on/Initialize(mapload)
+	. = ..()
+	inserted = new/obj/item/paint_card(src)
+
+/obj/machinery/gear_painter/always_on/operable()
+	return 1
+
+/obj/machinery/gear_painter/always_on/inoperable()
+	return 0
+
+/obj/machinery/gear_painter/always_on/do_paint(mob/user, atom/A)
+	var/color_to_use
+	switch(active_mode)
+		if(COLORMATE_TINT)
+			color_to_use = activecolor
+		if(COLORMATE_MATRIX)
+			color_to_use = rgb_construct_color_matrix(
+				text2num(color_matrix_last[1]),
+				text2num(color_matrix_last[2]),
+				text2num(color_matrix_last[3]),
+				text2num(color_matrix_last[4]),
+				text2num(color_matrix_last[5]),
+				text2num(color_matrix_last[6]),
+				text2num(color_matrix_last[7]),
+				text2num(color_matrix_last[8]),
+				text2num(color_matrix_last[9]),
+				text2num(color_matrix_last[10]),
+				text2num(color_matrix_last[11]),
+				text2num(color_matrix_last[12]),
+			)
+		if(COLORMATE_HSV)
+			color_to_use = color_matrix_hsv(build_hue, build_sat, build_val)
+			color_matrix_last = color_to_use
+	if(!color_to_use || !check_valid_color(color_to_use, user))
+		to_chat(user, SPAN_NOTICE("Invalid color."))
+		return FALSE
+	A.add_atom_colour(color_to_use, FIXED_COLOUR_PRIORITY)
+	playsound(src, 'sound/effects/spray3.ogg', 50, 1)
+	return TRUE
+
+/obj/machinery/gear_painter/always_on/tgui_state(mob/user)
+	return GLOB.tgui_deep_inventory_state
+
+/obj/machinery/gear_painter/always_on/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "ColorMateAlways", name)
+		ui.open()
 
 /obj/machinery/gear_painter/Initialize(mapload)
 	. = ..()
