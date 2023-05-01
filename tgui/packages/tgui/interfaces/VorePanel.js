@@ -571,6 +571,7 @@ const VoreSelectedBellyOptions = (props, context) => {
   const { belly } = props;
   const {
     can_taste,
+    is_feedable,
     nutrition_percent,
     digest_brute,
     digest_burn,
@@ -602,6 +603,14 @@ const VoreSelectedBellyOptions = (props, context) => {
               icon={can_taste ? 'toggle-on' : 'toggle-off'}
               selected={can_taste}
               content={can_taste ? 'Yes' : 'No'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Feedable">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_feedable' })}
+              icon={is_feedable ? 'toggle-on' : 'toggle-off'}
+              selected={is_feedable}
+              content={is_feedable ? 'Yes' : 'No'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Contaminates">

@@ -97,6 +97,7 @@ type Belly = {
   digest_oxy: number;
 
   can_taste: BooleanLike;
+  is_feedable: BooleanLike;
   contaminates: BooleanLike;
   contamination_flavor: string;
   contamination_color: string;
@@ -235,6 +236,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_oxy,
 
     can_taste,
+	is_feedable,
     contaminates,
     contamination_flavor,
     contamination_color,
@@ -558,6 +560,7 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<div class="accordion-body">';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Can Taste: ' + (can_taste ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
+  result += '<li class="list-group-item">Feedable: ' + (is_feedable ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '<li class="list-group-item">Contaminates: ' + (contaminates ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '<li class="list-group-item">Contamination Flavor: ' + contamination_flavor + '</li>';
   result += '<li class="list-group-item">Contamination Color: ' + contamination_color + '</li>';

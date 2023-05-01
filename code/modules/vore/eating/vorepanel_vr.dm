@@ -180,6 +180,7 @@
 			"release_sound" = selected.release_sound,
 			// "messages" // TODO
 			"can_taste" = selected.can_taste,
+			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
@@ -1491,6 +1492,9 @@
 			. = TRUE
 		if("b_tastes")
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
+			. = TRUE
+		if("b_feedable") //CHOMPAdd
+			host.vore_selected.is_feedable = !host.vore_selected.is_feedable
 			. = TRUE
 		if("b_bulge_size")
 			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)

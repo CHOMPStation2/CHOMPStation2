@@ -38,6 +38,9 @@
 	if(!T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
+	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
+		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		return FALSE
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
@@ -97,13 +100,6 @@
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
-
-	//CHOMPEdit begin - restricting areas where you can phase shift
-	var/area/A = T.loc
-	if(A?.limit_shadekin_phasing)
-		to_chat(src, "<span class='warning'>You can't use that here!</span>")
-		return FALSE
-	//CHOMPEdit end
 
 	if(!(ability_flags & AB_PHASE_SHIFTED))
 		shadekin_adjust_energy(-ability_cost)
@@ -171,9 +167,9 @@
 		var/destroy_lights = 0
 
 		//CHOMPEdit start - Add back light destruction
-		if(SK.get_shadekin_eyecolor() == RED_EYES)
+		if(SK.get_shadekin_eyecolor(src) == RED_EYES)
 			destroy_lights = 80
-		else if(SK.get_shadekin_eyecolor() == PURPLE_EYES)
+		else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
 			destroy_lights = 25
 		//CHOMPEdit end
 
