@@ -1,3 +1,5 @@
+/* CHOMPStation edit - File overidden. See modular_chomp/code/game/machinery/colormate.dm
+
 // I'm honestly pretty sure that short of stuffing five million things into this
 // there's absolutely no way it could ever have any performance impact
 // Given that all it does is set the color var
@@ -115,3 +117,4 @@
 			. = TRUE
 
 	update_icon()
+/*

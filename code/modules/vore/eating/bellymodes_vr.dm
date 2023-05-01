@@ -366,8 +366,8 @@
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
-	if(!ishuman(owner))
-		owner.update_icons()
+	//if(!ishuman(owner)) CHOMPremoval. Bad.
+	//	owner.update_icons()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
