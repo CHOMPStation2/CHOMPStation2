@@ -324,6 +324,9 @@
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
 	. = ..()  //CHOMPEdit Start
+	if(!owner)
+		thing.forceMove(get_turf(src))
+		return
 	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
 		var/turf/simulated/T = owner.loc
 		var/S = pick(T.vorefootstep_sounds["human"])
@@ -481,7 +484,7 @@
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
-			F.update_for_view(owner.client.view)
+			F.update_for_view(L.client.view)
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed, severity) //preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
@@ -500,7 +503,7 @@
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
-			F.update_for_view(owner.client.view)
+			F.update_for_view(L.client.view)
 			 //CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
@@ -515,7 +518,6 @@
 		return
 	if(!L.client)
 		return
-
 	if(belly_fullscreen)
 		if(colorization_enabled)
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, reagents.total_volume) //CHOMPedit Start: preserving save data
@@ -546,7 +548,7 @@
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
-			F.update_for_view(owner.client.view)
+			F.update_for_view(L.client.view)
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed, reagents.total_volume) //preserving save data
 			F.cut_overlays()
@@ -564,7 +566,7 @@
 				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
 				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
 				F.add_overlay(I)
-			F.update_for_view(owner.client.view)//CHOMPEdit End
+			F.update_for_view(L.client.view)//CHOMPEdit End
 	else
 		L.clear_fullscreen("belly")
 
