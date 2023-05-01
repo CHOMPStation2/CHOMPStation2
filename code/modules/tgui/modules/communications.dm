@@ -274,7 +274,7 @@
 				return
 
 			//CHOMPEdit Start - Add confirmation message
-			var/response = tgui_alert(usr, "OOC: Reminder that if there's an extended-round random event going on and you have the power to call the evac shuttle, don't do it unless you've actually lost the station and people aren't fighting anymore. By calling the shuttle, you are possibly killing the enjoyment for people who are busy working the event or people who are off RPing still because the dorms are protected and/or their involvement is not necessary to the event. I would recommend you ahelp to help read the room. \n\n Are you sure you want to call the shuttle?", "Confirm", list("Yes", "No"))
+			var/response = tgui_alert(usr, "OOC: You are required to Ahelp first before calling the shuttle. Please obtain confirmation from staff before calling the shuttle. \n\n Are you sure you want to call the shuttle?", "Confirm", list("Yes", "No"))
 
 			if(response == "Yes") //CHOMPEdit End
 				call_shuttle_proc(usr)
