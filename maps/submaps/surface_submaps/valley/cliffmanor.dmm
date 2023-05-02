@@ -23,7 +23,10 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "f" = (
 /obj/structure/cliff/automatic{
@@ -55,22 +58,38 @@
 "k" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/energy/highend,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "l" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/gun/random,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "m" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/firstaid,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "n" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/clothing/head/psy_crown/wrath,
 /turf/simulated/floor/wood,
+/area/submap/cliffmanor)
+"o" = (
+/mob/living/simple_mob/humanoid/cultist/tesh,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "p" = (
 /mob/living/simple_mob/vore/alienanimals/space_jellyfish{
@@ -93,7 +112,10 @@
 /area/submap/cliffmanor)
 "r" = (
 /obj/structure/railing,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "s" = (
 /turf/simulated/wall/log,
@@ -116,13 +138,24 @@
 "x" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/projectile/random,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "y" = (
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/cliffmanor)
+"A" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "B" = (
 /obj/structure/bed,
@@ -170,6 +203,19 @@
 "J" = (
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
+"K" = (
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
+/area/submap/cliffmanor)
+"L" = (
+/mob/living/simple_mob/humanoid/cultist/castertesh,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
+/area/submap/cliffmanor)
 "M" = (
 /obj/structure/cliff/automatic{
 	dir = 6
@@ -180,7 +226,10 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "O" = (
 /obj/structure/table/wooden_reinforced,
@@ -191,7 +240,10 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "Q" = (
 /obj/structure/cliff/automatic{
@@ -205,7 +257,10 @@
 /area/submap/cliffmanor)
 "S" = (
 /obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "T" = (
 /obj/structure/railing{
@@ -237,7 +292,10 @@
 /area/submap/cliffmanor)
 "X" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "Y" = (
 /obj/structure/cliff/automatic/corner{
@@ -477,21 +535,21 @@ u
 u
 Q
 e
-J
-J
-J
-R
-J
+K
+K
+K
+L
+K
 s
 O
 i
 c
 s
-J
-R
-J
-J
-J
+K
+L
+K
+K
+K
 r
 G
 v
@@ -508,21 +566,21 @@ u
 u
 Q
 e
-J
-J
-J
-J
-J
+K
+K
+K
+K
+K
 h
 J
 I
 J
 h
-J
-J
-J
-J
-J
+K
+K
+K
+K
+K
 r
 G
 v
@@ -540,9 +598,9 @@ u
 Q
 e
 X
-J
-J
-a
+K
+K
+o
 S
 s
 J
@@ -550,9 +608,9 @@ J
 J
 s
 S
-a
-J
-J
+o
+K
+K
 X
 r
 G
@@ -570,21 +628,21 @@ u
 u
 Q
 e
-J
-J
+K
+K
 S
 l
-i
+A
 s
 J
 J
 J
 s
-i
+A
 x
 S
-J
-J
+K
+K
 r
 G
 v
@@ -1004,21 +1062,21 @@ u
 u
 Q
 e
-J
-J
+K
+K
 S
 m
-i
+A
 s
 J
 J
 J
 s
-i
+A
 k
 S
-J
-J
+K
+K
 r
 G
 v
@@ -1036,9 +1094,9 @@ u
 Q
 e
 X
-J
-J
-a
+K
+K
+o
 S
 s
 J
@@ -1046,9 +1104,9 @@ J
 J
 s
 S
-a
-J
-J
+o
+K
+K
 X
 r
 G
@@ -1066,21 +1124,21 @@ u
 u
 Q
 e
-J
-J
-J
-J
-J
+K
+K
+K
+K
+K
 h
 J
 I
 J
 h
-J
-J
-J
-J
-J
+K
+K
+K
+K
+K
 r
 G
 v
@@ -1097,21 +1155,21 @@ u
 u
 Q
 e
-J
-J
-J
-R
-J
+K
+K
+K
+L
+K
 s
 c
 i
 n
 s
-J
-R
-J
-J
-J
+K
+L
+K
+K
+K
 r
 G
 v

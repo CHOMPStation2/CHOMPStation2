@@ -10,6 +10,10 @@
 /obj/item/weapon/archaeological_find,
 /turf/simulated/floor/dungeon,
 /area/submap/puzzledungeon)
+"g" = (
+/obj/structure/simple_door/cult,
+/turf/simulated/floor/dungeon,
+/area/submap/puzzledungeon)
 "h" = (
 /turf/simulated/floor/lava,
 /area/submap/puzzledungeon)
@@ -268,7 +272,7 @@ j
 S
 S
 S
-S
+g
 s
 s
 t
@@ -300,7 +304,7 @@ j
 S
 S
 S
-S
+g
 s
 s
 t
@@ -767,7 +771,7 @@ t
 t
 s
 s
-S
+g
 v
 v
 v
@@ -799,7 +803,7 @@ t
 t
 s
 s
-S
+g
 S
 S
 S

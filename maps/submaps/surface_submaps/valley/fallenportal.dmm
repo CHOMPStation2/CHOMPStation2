@@ -24,9 +24,27 @@
 /obj/structure/simple_door/cult,
 /turf/simulated/floor/cult,
 /area/submap/fallenportal)
+"g" = (
+/turf/simulated/floor/gorefloor{
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/fallenportal)
 "h" = (
 /mob/living/simple_mob/construct/artificer/caster,
 /turf/simulated/floor/gorefloor2,
+/area/submap/fallenportal)
+"i" = (
+/turf/simulated/floor/gorefloor2{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
+/area/submap/fallenportal)
+"j" = (
+/turf/simulated/floor/cult{
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/fallenportal)
 "k" = (
 /obj/structure/table/borosilicate,
@@ -108,7 +126,10 @@
 /mob/living/simple_mob/vore/demonAI/wendigo{
 	faction = "cult"
 	},
-/turf/simulated/floor/cult,
+/turf/simulated/floor/cult{
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/fallenportal)
 "z" = (
 /obj/structure/closet/crate,
@@ -141,7 +162,10 @@
 /mob/living/simple_mob/vore/demonAI{
 	faction = "cult"
 	},
-/turf/simulated/floor/cult,
+/turf/simulated/floor/cult{
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/fallenportal)
 "F" = (
 /obj/structure/table/borosilicate,
@@ -189,7 +213,10 @@
 /area/template_noop)
 "P" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
-/turf/simulated/floor/cult,
+/turf/simulated/floor/cult{
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/fallenportal)
 "R" = (
 /obj/effect/landmark/loot_spawn,
@@ -301,7 +328,7 @@ O
 O
 O
 O
-H
+g
 G
 G
 G
@@ -350,9 +377,9 @@ h
 X
 J
 J
-X
+j
 E
-X
+j
 l
 l
 y
@@ -377,12 +404,12 @@ X
 X
 o
 J
-D
+i
 l
-X
-X
-X
-X
+j
+j
+j
+j
 G
 K
 t
@@ -404,7 +431,7 @@ H
 X
 X
 f
-H
+g
 l
 l
 l
@@ -434,9 +461,9 @@ J
 J
 l
 l
-X
-X
-X
+j
+j
+j
 G
 G
 A
@@ -459,11 +486,11 @@ X
 X
 x
 J
-X
-X
+j
+j
 P
 l
-D
+i
 G
 v
 v
@@ -516,7 +543,7 @@ J
 R
 l
 l
-H
+g
 l
 A
 t
@@ -540,7 +567,7 @@ X
 m
 r
 J
-H
+g
 l
 l
 l
@@ -567,8 +594,8 @@ D
 X
 x
 J
-X
-X
+j
+j
 P
 l
 l
@@ -596,9 +623,9 @@ J
 J
 l
 l
-X
-X
-X
+j
+j
+j
 G
 G
 A
@@ -625,7 +652,7 @@ l
 l
 l
 l
-D
+i
 G
 k
 t
@@ -648,11 +675,11 @@ X
 o
 J
 l
-H
-X
-X
-X
-X
+g
+j
+j
+j
+j
 G
 K
 t
@@ -674,9 +701,9 @@ x
 H
 J
 J
-X
+j
 y
-X
+j
 l
 l
 E
