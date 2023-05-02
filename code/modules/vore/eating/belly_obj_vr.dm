@@ -61,6 +61,8 @@
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
+	var/autotransferchance_secondary = 0 	// % Chance of prey being autotransferred to secondary transfer location //CHOMPAdd
+	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
 	var/autotransfer_enabled = FALSE		// Player toggle
 	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
@@ -283,6 +285,8 @@
 	"autotransferwait",
 	"autotransferlocation",
 	"autotransfer_enabled",
+	"autotransferchance_secondary",
+	"autotransferlocation_secondary",
 	"autotransfer_min_amount",
 	"autotransfer_max_amount",
 	"slow_digestion",
@@ -1405,23 +1409,25 @@
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
 
-//Autotransfer callback
-/obj/belly/proc/check_autotransfer(var/atom/movable/prey, var/autotransferlocation)
-	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
-		if(prob(autotransferchance))
-			var/obj/belly/dest_belly
-			for(var/obj/belly/B in owner.vore_organs)
-				if(B.name == autotransferlocation)
-					dest_belly = B
-					break
-			if(dest_belly)
-				if(autotransfer_min_amount > 1) //CHOMPEdit start
-					autotransfer_queue += prey
-				else
-					transfer_contents(prey, dest_belly)
-		else
-			// Didn't transfer, so wait before retrying
-			prey.belly_cycles = 0 //CHOMPEdit end
+//Autotransfer callback CHOMPEdit Start
+/obj/belly/proc/check_autotransfer(var/atom/movable/prey)
+	if(!(prey in contents) || !prey.autotransferable) return
+	var/dest_belly_name
+	if(autotransferlocation_secondary && prob(autotransferchance_secondary))
+		dest_belly_name = autotransferlocation_secondary
+	if(autotransferlocation && prob(autotransferchance))
+		dest_belly_name = autotransferlocation
+	if(!dest_belly_name) // Didn't transfer, so wait before retrying
+		prey.belly_cycles = 0
+		return
+	var/obj/belly/dest_belly
+	for(var/obj/belly/B in owner.vore_organs)
+		if(B.name == dest_belly_name)
+			dest_belly = B
+			break
+	if(!dest_belly) return
+	transfer_contents(prey, dest_belly)
+	return TRUE //CHOMPEdit end
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
@@ -1510,6 +1516,8 @@
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation
 	dupe.autotransfer_enabled = autotransfer_enabled
+	dupe.autotransferchance_secondary = autotransferchance_secondary
+	dupe.autotransferlocation_secondary = autotransferlocation_secondary
 	dupe.autotransfer_min_amount = autotransfer_min_amount
 	dupe.autotransfer_max_amount = autotransfer_max_amount
 	dupe.slow_digestion = slow_digestion

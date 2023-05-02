@@ -11,6 +11,7 @@
 	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
+	force = 0 //CHOMPEdit
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse	//This type is what kind of mob it will try to turn people into!
 	var/cooldown = 0											//automatically set when used
 	var/cooldown_time = 15 SECONDS								//the amount of time between shots
