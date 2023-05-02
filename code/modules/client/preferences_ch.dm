@@ -27,3 +27,39 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb", "TSleepMusic")
+
+/datum/preferences/proc/update_character_previews(var/mob/living/carbon/human/mannequin)
+	if(!client)
+		return
+
+	var/obj/screen/setup_preview/pm_helper/PMH = LAZYACCESS(char_render_holders, "PMH")
+	if(!PMH)
+		PMH = new
+		LAZYSET(char_render_holders, "PMH", PMH)
+		client.screen |= PMH
+	PMH.screen_loc = preview_screen_locs["PMH"]
+
+	var/obj/screen/setup_preview/bg/BG = LAZYACCESS(char_render_holders, "BG")
+	if(!BG)
+		BG = new
+		BG.plane = TURF_PLANE
+		BG.icon = 'icons/effects/setup_backgrounds_vr.dmi'
+		BG.pref = src
+		LAZYSET(char_render_holders, "BG", BG)
+		client.screen |= BG
+	BG.icon_state = bgstate
+	BG.screen_loc = preview_screen_locs["BG"]
+
+	for(var/D in global.cardinal)
+		var/obj/screen/setup_preview/O = LAZYACCESS(char_render_holders, "[D]")
+		if(!O)
+			O = new
+			O.pref = src
+			LAZYSET(char_render_holders, "[D]", O)
+			client.screen |= O
+		mannequin.set_dir(D)
+		mannequin.update_tail_showing()
+		mannequin.ImmediateOverlayUpdate()
+		var/mutable_appearance/MA = new(mannequin)
+		O.appearance = MA
+		O.screen_loc = preview_screen_locs["[D]"]

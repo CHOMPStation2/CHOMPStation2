@@ -261,10 +261,10 @@
 	mannequin.update_transform() //VOREStation Edit to update size/shape stuff.
 	mannequin.toggle_tail(setting = animations_toggle)
 	mannequin.toggle_wing(setting = animations_toggle)
-	mannequin.update_tail_showing()
-	mannequin.ImmediateOverlayUpdate()
+	//mannequin.update_tail_showing() //CHOMPEdit. Moved to preferences_ch.dm
+	//mannequin.ImmediateOverlayUpdate() //CHOMPEdit
 
-	update_character_previews(new /mutable_appearance(mannequin))
+	update_character_previews(mannequin) //CHOMPEdit
 
 /datum/preferences/proc/get_highest_job()
 	var/datum/job/highJob
