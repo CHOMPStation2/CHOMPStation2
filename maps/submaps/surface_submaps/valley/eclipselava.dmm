@@ -1,4 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"as" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/eclipselava)
 "at" = (
 /obj/structure/table/steel,
 /obj/random/projectile,
@@ -62,6 +72,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
+"dk" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/eclipselava)
 "dw" = (
 /obj/structure/cliff/automatic{
 	dir = 9
@@ -93,7 +113,11 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "fG" = (
 /obj/structure/cable/green{
@@ -101,13 +125,25 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "fW" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/submap/eclipselava)
+"ge" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "gt" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
@@ -148,9 +184,20 @@
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
+"hm" = (
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/eclipselava)
 "hB" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "il" = (
 /obj/structure/table/steel,
@@ -169,7 +216,11 @@
 /area/submap/eclipselava)
 "iI" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "jo" = (
 /obj/item/stack/material/void_opal,
@@ -218,13 +269,21 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "mI" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "mL" = (
 /obj/machinery/door/window/southright{
@@ -236,19 +295,31 @@
 /mob/living/simple_mob/vore/bigdragon{
 	faction = "eclipse"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "nk" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/security,
 /obj/machinery/recharger,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "np" = (
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "nC" = (
 /obj/structure/table/steel,
@@ -263,7 +334,11 @@
 /obj/structure/table/steel,
 /obj/random/mainttoyloot/nofail,
 /obj/random/maintenance/security,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "nT" = (
 /obj/structure/cliff/automatic/corner,
@@ -285,7 +360,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "ph" = (
 /obj/structure/table/steel,
@@ -327,7 +406,11 @@
 	id = "lavabase"
 	},
 /obj/random/maintenance/security,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "qP" = (
 /obj/structure/table/steel,
@@ -337,7 +420,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "ri" = (
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "rs" = (
 /obj/random/landmine,
@@ -359,7 +446,11 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "sq" = (
 /obj/structure/cliff/automatic{
@@ -392,7 +483,11 @@
 /area/submap/eclipselava)
 "vO" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "vR" = (
 /obj/structure/grille/cult{
@@ -421,7 +516,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "wj" = (
 /obj/machinery/light{
@@ -444,7 +543,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "wA" = (
 /obj/machinery/door/airlock/silver,
@@ -479,7 +582,11 @@
 /area/submap/eclipselava)
 "xY" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "yc" = (
 /obj/structure/table/steel,
@@ -502,7 +609,11 @@
 /obj/random/mainttoyloot/nofail,
 /obj/random/maintenance/security,
 /obj/machinery/light,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "yX" = (
 /obj/machinery/door/airlock/silver,
@@ -513,17 +624,35 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/submap/eclipselava)
+"zn" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/eclipselava)
 "zy" = (
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Ad" = (
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "Bm" = (
 /turf/template_noop,
@@ -563,7 +692,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Dh" = (
 /obj/structure/table/hardwoodtable,
@@ -640,7 +773,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Ez" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation,
@@ -648,18 +785,30 @@
 /area/submap/eclipselava)
 "EH" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "EW" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Gg" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/security,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "Gl" = (
 /obj/random/multiple/large_corp_crate,
@@ -669,7 +818,11 @@
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Gy" = (
 /obj/machinery/light{
@@ -702,7 +855,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Hp" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
@@ -713,7 +870,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Ii" = (
 /obj/machinery/power/terminal,
@@ -791,7 +952,11 @@
 	icon_state = "barbedwire-out"
 	},
 /obj/structure/cable/green,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Ku" = (
 /obj/structure/cable/green{
@@ -799,7 +964,21 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
+/area/submap/eclipselava)
+"KB" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "LC" = (
 /obj/item/weapon/stool/padded,
@@ -850,7 +1029,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Pm" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
@@ -868,7 +1051,11 @@
 /obj/structure/table/steel,
 /obj/random/firstaid,
 /obj/random/maintenance/security,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/eclipselava)
 "Qh" = (
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
@@ -909,7 +1096,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "RT" = (
 /obj/structure/cable/green{
@@ -934,7 +1125,11 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Sn" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
@@ -943,7 +1138,11 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "SC" = (
 /obj/machinery/power/terminal,
@@ -961,7 +1160,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Tb" = (
 /obj/structure/closet/crate,
@@ -1002,7 +1205,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Tq" = (
 /obj/structure/railing/grey{
@@ -1012,7 +1219,11 @@
 /area/submap/eclipselava)
 "TB" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "TD" = (
 /obj/machinery/power/terminal{
@@ -1023,7 +1234,11 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "TO" = (
 /obj/machinery/door/blast/puzzle{
@@ -1043,7 +1258,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "Vg" = (
 /obj/structure/table/steel,
@@ -1059,7 +1278,11 @@
 /area/submap/eclipselava)
 "Wh" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced{
+	temperature = 243.15;
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/eclipselava)
 "WP" = (
 /obj/machinery/door/airlock/silver,
@@ -1115,6 +1338,13 @@
 "ZO" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/tiled/dark,
+/area/submap/eclipselava)
+"ZS" = (
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 
 (1,1,1) = {"
@@ -1227,21 +1457,21 @@ Bm
 Bm
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Qh
 Qh
 Qh
@@ -1278,23 +1508,23 @@ Bm
 Bm
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Qh
 Qh
 jU
@@ -1329,25 +1559,25 @@ Bm
 Bm
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Qh
 jU
 bp
@@ -1380,27 +1610,27 @@ Bm
 (6,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 jU
 bp
 Rz
@@ -1432,27 +1662,27 @@ Bm
 (7,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 Rz
@@ -1484,27 +1714,27 @@ Bm
 (8,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 WP
@@ -1536,27 +1766,27 @@ Bm
 (9,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 dj
@@ -1588,27 +1818,27 @@ Bm
 (10,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 dj
@@ -1640,27 +1870,27 @@ Bm
 (11,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 dj
@@ -1692,27 +1922,27 @@ Bm
 (12,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 WP
@@ -1744,27 +1974,27 @@ Bm
 (13,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 dj
@@ -1779,13 +2009,13 @@ MO
 Pm
 MO
 bp
-MO
+hm
 vO
-wj
-MO
-MO
-MO
-wj
+as
+hm
+hm
+hm
+as
 iI
 Gg
 bp
@@ -1796,27 +2026,27 @@ Bm
 (14,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 dj
@@ -1831,14 +2061,14 @@ MO
 MO
 MO
 bp
-MO
-MO
-MO
-MO
-MO
-MO
-MO
-MO
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 PP
 bp
 ws
@@ -1848,27 +2078,27 @@ Bm
 (15,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 wU
@@ -1883,14 +2113,14 @@ bI
 MO
 MO
 bp
-MO
-MO
-MO
-MO
-MO
-MO
-MO
-MO
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 nk
 bp
 ws
@@ -1900,27 +2130,27 @@ Bm
 (16,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 MO
@@ -1935,14 +2165,14 @@ Ed
 MO
 MO
 wA
-MO
-MO
-MO
-MO
-MO
-MO
-MO
-MO
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 nE
 bp
 ws
@@ -1952,27 +2182,27 @@ Bm
 (17,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 MO
@@ -1987,14 +2217,14 @@ Ux
 iq
 GK
 bp
-MO
-MO
-MO
-MO
+hm
+hm
+hm
+hm
 hB
-MO
+hm
 xY
-MO
+hm
 qy
 bp
 ws
@@ -2004,27 +2234,27 @@ Bm
 (18,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 mI
 bp
 bp
@@ -2056,27 +2286,27 @@ Bm
 (19,1,1) = {"
 Bm
 Bm
+ZS
+ZS
+ZS
 Ke
 Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
 bp
 bp
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2108,27 +2338,27 @@ Bm
 (20,1,1) = {"
 Bm
 Bm
+ZS
+ZS
+ZS
 Ke
 Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
 bp
 GM
 bB
 El
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2160,12 +2390,12 @@ Bm
 (21,1,1) = {"
 Bm
 Bm
+ZS
+ZS
+ZS
 Ke
 Ke
-Ke
-Ke
-Ke
-Ke
+ZS
 bp
 MO
 MO
@@ -2173,14 +2403,14 @@ MO
 MO
 MO
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2212,11 +2442,11 @@ Bm
 (22,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 MO
 MO
@@ -2226,13 +2456,13 @@ xu
 MO
 MO
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2264,11 +2494,11 @@ Bm
 (23,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 xF
 MO
@@ -2278,13 +2508,13 @@ MO
 MO
 MO
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2316,11 +2546,11 @@ Bm
 (24,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 Cc
 tL
@@ -2368,11 +2598,11 @@ Bm
 (25,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 uN
 uN
@@ -2420,11 +2650,11 @@ Bm
 (26,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 uN
 Ov
@@ -2472,11 +2702,11 @@ Bm
 (27,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 uN
 uN
@@ -2524,11 +2754,11 @@ Bm
 (28,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 Cc
 mL
@@ -2576,11 +2806,11 @@ Bm
 (29,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 xF
 MO
@@ -2590,13 +2820,13 @@ MO
 MO
 MO
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2628,11 +2858,11 @@ Bm
 (30,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 MO
 MO
@@ -2642,13 +2872,13 @@ xu
 MO
 MO
 bp
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2680,12 +2910,12 @@ Bm
 (31,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 MO
 MO
@@ -2694,13 +2924,13 @@ MO
 MO
 bp
 Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2732,13 +2962,13 @@ Bm
 (32,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 jS
 dB
@@ -2746,13 +2976,13 @@ El
 bp
 Ke
 Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2784,27 +3014,27 @@ Bm
 (33,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 bp
 bp
 bp
 Ke
 Ke
 Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 TB
 ri
 ri
@@ -2836,27 +3066,27 @@ Bm
 (34,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 fi
 bp
 bp
@@ -2874,10 +3104,10 @@ bp
 bp
 bp
 bp
-Tq
-Tq
-Tq
-Tq
+KB
+KB
+KB
+KB
 bp
 bp
 bp
@@ -2888,27 +3118,27 @@ Bm
 (35,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 ZK
@@ -2924,13 +3154,13 @@ MO
 MO
 MO
 bp
-MO
-MO
-MO
+hm
+hm
+hm
 hB
-MO
+hm
 xY
-MO
+hm
 qy
 bp
 ws
@@ -2940,27 +3170,27 @@ Bm
 (36,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 En
@@ -2976,13 +3206,13 @@ il
 qq
 MO
 bp
-xF
-MO
-MO
-MO
-MO
-MO
-MO
+dk
+hm
+hm
+hm
+hm
+hm
+hm
 yt
 bp
 ws
@@ -2992,27 +3222,27 @@ Bm
 (37,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 ph
@@ -3028,13 +3258,13 @@ RA
 Hp
 MO
 wA
-MO
-MO
-MO
-MO
-MO
-MO
-MO
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 nk
 bp
 ws
@@ -3044,27 +3274,27 @@ Bm
 (38,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 En
@@ -3080,13 +3310,13 @@ RA
 qq
 MO
 bp
-xF
-MO
-MO
-MO
-MO
-MO
-dE
+dk
+hm
+hm
+hm
+hm
+hm
+ge
 yt
 bp
 ws
@@ -3096,27 +3326,27 @@ Bm
 (39,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 ZK
@@ -3133,12 +3363,12 @@ MO
 MO
 bp
 EH
-MO
-Gy
-MO
-MO
-Gy
-MO
+hm
+zn
+hm
+hm
+zn
+hm
 Gg
 bp
 ws
@@ -3148,27 +3378,27 @@ Bm
 (40,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 bp
@@ -3200,27 +3430,27 @@ Bm
 (41,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 rs
@@ -3252,27 +3482,27 @@ Bm
 (42,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 Gl
@@ -3304,27 +3534,27 @@ Bm
 (43,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 MO
@@ -3356,27 +3586,27 @@ Bm
 (44,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 MO
@@ -3408,27 +3638,27 @@ Bm
 (45,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Ad
 bp
 rs
@@ -3460,27 +3690,27 @@ Bm
 (46,1,1) = {"
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 jU
 bp
 MO
@@ -3513,25 +3743,25 @@ Bm
 Bm
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Qh
 jU
 bp
@@ -3566,23 +3796,23 @@ Bm
 Bm
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Qh
 Qh
 jU
@@ -3619,21 +3849,21 @@ Bm
 Bm
 Bm
 Bm
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
-Ke
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 Qh
 Qh
 Qh

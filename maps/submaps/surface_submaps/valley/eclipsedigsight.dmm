@@ -106,7 +106,11 @@
 /area/submap/eclipsedigsight)
 "md" = (
 /obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "mm" = (
 /turf/simulated/wall/r_wall,
@@ -127,7 +131,11 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "nQ" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -227,7 +235,11 @@
 /obj/structure/cliff/automatic{
 	dir = 6
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "wH" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -308,7 +320,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Fc" = (
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "FE" = (
 /obj/effect/floor_decal/borderfloorwhite,
@@ -338,7 +354,11 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "Hx" = (
 /obj/structure/cliff/automatic{
@@ -390,7 +410,11 @@
 /obj/structure/cliff/automatic{
 	dir = 10
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "KQ" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
@@ -473,7 +497,11 @@
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "PW" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
@@ -584,7 +612,11 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "XC" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
@@ -605,7 +637,11 @@
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "Zk" = (
 /obj/structure/window/phoronreinforced,
@@ -650,7 +686,11 @@
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipsedigsight)
 "ZT" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -1718,8 +1758,8 @@ pW
 Qb
 lF
 pW
-Qd
-rA
+Xx
+wm
 pW
 pW
 pW
