@@ -181,10 +181,12 @@ type Belly = {
   digestchance: number;
 
   // Interactions (Auto-Transfer)
-  autotransferchance: number;
   autotransferwait: number;
+  autotransferchance: number;
   autotransferlocation: string;
   autotransfer_enabled: BooleanLike;
+  autotransferchance_secondary: number;
+  autotransferlocation_secondary: string;
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
 
@@ -312,9 +314,11 @@ const generateBellyString = (belly: Belly, index: number) => {
     digestchance,
 
     // Interactions (Auto-Transfer)
+	autotransferwait,
     autotransferchance,
-    autotransferwait,
     autotransferlocation,
+	autotransferchance_secondary,
+    autotransferlocation_secondary,
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
@@ -651,9 +655,11 @@ const generateBellyString = (belly: Belly, index: number) => {
   (autotransfer_enabled ? '<span style="color: green;">Enabled' : '<span style="color: red;">Disabled') +
   '</span>)</b>';
   result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance + '%</li>';
   result += '<li class="list-group-item">Auto-Transfer Time: ' + autotransferwait / 10 + 's</li>';
+  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance + '%</li>';
   result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance_secondary + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation_secondary + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Min Amount: ' + autotransfer_min_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
   result += '</ul>';

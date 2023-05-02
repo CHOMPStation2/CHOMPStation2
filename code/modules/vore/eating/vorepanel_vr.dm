@@ -273,6 +273,8 @@
 			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
 			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
 			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+			selected_list["autotransfer"]["autotransferchance_secondary"] = selected.autotransferchance_secondary		//CHOMPAdd
+			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 
@@ -1918,6 +1920,20 @@
 				host.vore_selected.autotransferlocation = null
 			else
 				host.vore_selected.autotransferlocation = choice.name
+			. = TRUE
+		if("b_autotransferchance_secondary")
+			var/autotransferchance_secondary_input = input(user, "Set secondary belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Secondary Auto-Transfer Chance") as num|null
+			if(!isnull(autotransferchance_secondary_input))
+				host.vore_selected.autotransferchance_secondary = sanitize_integer(autotransferchance_secondary_input, 0, 100, initial(host.vore_selected.autotransferchance_secondary))
+			. = TRUE
+		if("b_autotransferlocation_secondary")
+			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your secondary [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice == "None - Remove")
+				host.vore_selected.autotransferlocation_secondary = null
+			else
+				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
