@@ -157,6 +157,8 @@
 			belly_data["digest_brute"] = B.digest_brute
 			belly_data["digest_burn"] = B.digest_burn
 			belly_data["digest_oxy"] = B.digest_oxy
+			belly_data["digest_tox"] = B.digest_tox
+			belly_data["digest_clone"] = B.digest_clone
 
 			belly_data["can_taste"] = B.can_taste
 			belly_data["is_feedable"] = B.is_feedable
@@ -172,6 +174,7 @@
 			belly_data["shrink_grow_size"] = B.shrink_grow_size
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
 			belly_data["egg_type"] = B.egg_type
+			belly_data["egg_name"] = B.egg_name
 			belly_data["selective_preference"] = B.selective_preference
 
 			// Sounds

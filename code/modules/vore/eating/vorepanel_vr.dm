@@ -451,7 +451,12 @@
 		if("importpanel")
 			//var/list/input_data = json_decode(tgui_input_text(usr,"Paste .VRDB content here: ","Belly Import",max_length = INFINITY,multiline = TRUE))
 			var/input_file = input(usr,"Please choose a valid VRDB file to import from.","Belly Import") as file
-			var/input_data = json_decode(file2text(input_file))
+			var/input_data
+			try
+				input_data = json_decode(file2text(input_file))
+			catch(var/exception/e)
+				tgui_alert_async(usr, "The supplied file contains errors: [e]", "Error!")
+				return FALSE
 
 			if(!islist(input_data))
 				tgui_alert_async(usr, "The supplied file was not a valid VRDB file.", "Error!")
@@ -671,14 +676,14 @@
 						new_belly.can_taste = FALSE
 					if(new_can_taste == 1)
 						new_belly.can_taste = TRUE
-				/*
+
 				if(isnum(belly_data["is_feedable"]))
 					var/new_is_feedable = belly_data["is_feedable"]
 					if(new_is_feedable == 0)
 						new_belly.is_feedable = FALSE
 					if(new_is_feedable == 1)
 						new_belly.is_feedable = TRUE
-				*/
+
 				if(isnum(belly_data["contaminates"]))
 					var/new_contaminates = belly_data["contaminates"]
 					if(new_contaminates == 0)
@@ -698,12 +703,94 @@
 						if(new_contamination_color in contamination_colors)
 							new_belly.contamination_color = new_contamination_color
 
+				if(isnum(belly_data["nutrition_percent"]))
+					var/new_nutrition_percent = belly_data["nutrition_percent"]
+					new_belly.nutrition_percent = CLAMP(new_nutrition_percent,0.01,100)
+
 				if(isnum(belly_data["bulge_size"]))
 					var/new_bulge_size = belly_data["bulge_size"]
 					if(new_bulge_size == 0)
 						new_belly.bulge_size = 0
-					if(ISINRANGE(new_bulge_size,0.25,2))
-						new_belly.bulge_size = new_bulge_size
+					else
+						new_belly.bulge_size = CLAMP(new_bulge_size,0.25,2)
+
+				if(isnum(belly_data["display_absorbed_examine"]))
+					var/new_display_absorbed_examine = belly_data["display_absorbed_examine"]
+					if(new_display_absorbed_examine == 0)
+						new_belly.display_absorbed_examine = FALSE
+					if(new_display_absorbed_examine == 1)
+						new_belly.display_absorbed_examine = TRUE
+
+				if(isnum(belly_data["save_digest_mode"]))
+					var/new_save_digest_mode = belly_data["save_digest_mode"]
+					if(new_save_digest_mode == 0)
+						new_belly.save_digest_mode = FALSE
+					if(new_save_digest_mode == 1)
+						new_belly.save_digest_mode = TRUE
+
+				if(isnum(belly_data["emote_active"]))
+					var/new_emote_active = belly_data["emote_active"]
+					if(new_emote_active == 0)
+						new_belly.emote_active = FALSE
+					if(new_emote_active == 1)
+						new_belly.emote_active = TRUE
+
+				if(isnum(belly_data["emote_time"]))
+					var/new_emote_time = belly_data["emote_time"]
+					new_belly.emote_time = CLAMP(new_emote_time, 60, 600)
+
+				if(isnum(belly_data["digest_brute"]))
+					var/new_digest_brute = belly_data["digest_brute"]
+					new_belly.digest_brute = CLAMP(new_digest_brute, 0, 6)
+					new_belly.items_preserved.Cut()
+
+				if(isnum(belly_data["digest_burn"]))
+					var/new_digest_burn = belly_data["digest_burn"]
+					new_belly.digest_burn = CLAMP(new_digest_burn, 0, 6)
+					new_belly.items_preserved.Cut()
+
+				if(isnum(belly_data["digest_oxy"]))
+					var/new_digest_oxy = belly_data["digest_oxy"]
+					new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, 12)
+
+				if(isnum(belly_data["digest_tox"]))
+					var/new_digest_tox = belly_data["digest_tox"]
+					new_belly.digest_tox = CLAMP(new_digest_tox, 0, 6)
+
+				if(isnum(belly_data["digest_clone"]))
+					var/new_digest_clone = belly_data["digest_clone"]
+					new_belly.digest_clone = CLAMP(new_digest_clone, 0, 6)
+
+				if(isnum(belly_data["shrink_grow_size"]))
+					var/new_shrink_grow_size = belly_data["shrink_grow_size"]
+					new_belly.shrink_grow_size = CLAMP(new_shrink_grow_size, 0.25, 2)
+
+				if(isnum(belly_data["vorespawn_blacklist"]))
+					var/new_vorespawn_blacklist = belly_data["vorespawn_blacklist"]
+					if(new_vorespawn_blacklist == 0)
+						new_belly.vorespawn_blacklist = FALSE
+					if(new_vorespawn_blacklist == 1)
+						new_belly.vorespawn_blacklist = TRUE
+
+				if(istext(belly_data["egg_type"]))
+					var/new_egg_type = sanitize(belly_data["egg_type"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_egg_type)
+						if(new_egg_type in global_vore_egg_types)
+							new_belly.egg_type = new_egg_type
+
+				if(istext(belly_data["egg_name"]))
+					var/new_egg_name = html_encode(belly_data["egg_name"])
+					if(new_egg_name)
+						new_egg_name = readd_quotes(new_egg_name)
+					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
+						new_belly.egg_name = new_egg_name
+
+				if(istext(belly_data["selective_preference"]))
+					var/new_selective_preference = belly_data["selective_preference"]
+					if(new_selective_preference == "Digest")
+						new_belly.selective_preference = DM_DIGEST
+					if(new_selective_preference == "Absorb")
+						new_belly.selective_preference = DM_ABSORB
 
 			unsaved_changes = TRUE
 			return TRUE
