@@ -1,6 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	oxygen = 21.8366;
+	nitrogen = 82.1472
+	},
 /area/submap/puzzledungeon)
 "d" = (
 /obj/structure/table/darkglass,
@@ -22,7 +25,10 @@
 /area/submap/puzzledungeon)
 "k" = (
 /obj/machinery/crystal/ice,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	oxygen = 21.8366;
+	nitrogen = 82.1472
+	},
 /area/submap/puzzledungeon)
 "l" = (
 /obj/structure/table/darkglass,

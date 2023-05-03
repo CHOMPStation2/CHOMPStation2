@@ -17,7 +17,10 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical/pillbottle,
 /obj/random/material/refined,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "e" = (
 /obj/structure/railing{
@@ -124,7 +127,10 @@
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
 /obj/random/material/precious,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "u" = (
 /turf/simulated/floor/water,
@@ -164,7 +170,10 @@
 /area/submap/cliffmanor)
 "C" = (
 /mob/living/simple_mob/humanoid/cultist/noodle,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "D" = (
 /obj/structure/cliff/automatic/corner{
@@ -183,7 +192,10 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical/pillbottle,
 /obj/random/material/refined,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "G" = (
 /obj/structure/cliff/automatic,
@@ -251,10 +263,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/cliffmanor)
-"R" = (
-/mob/living/simple_mob/humanoid/cultist/castertesh,
-/turf/simulated/floor/wood,
-/area/submap/cliffmanor)
 "S" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood{
@@ -268,7 +276,10 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/random/material/precious,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "U" = (
 /obj/structure/cliff/automatic/corner{
@@ -288,7 +299,10 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/flame/candle/everburn,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 "X" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
@@ -307,7 +321,10 @@
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/flame/candle/everburn,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263
+	},
 /area/submap/cliffmanor)
 
 (1,1,1) = {"
@@ -818,13 +835,13 @@ v
 v
 Q
 T
-J
-J
-J
-J
-J
-J
-J
+K
+K
+K
+K
+K
+K
+K
 d
 G
 v
@@ -849,13 +866,13 @@ v
 v
 Q
 W
-R
-J
-J
+L
+K
+K
 C
-J
-J
-R
+K
+K
+L
 Z
 G
 v
@@ -880,13 +897,13 @@ v
 v
 Q
 F
-J
-J
-J
-J
-J
-J
-J
+K
+K
+K
+K
+K
+K
+K
 t
 G
 v
