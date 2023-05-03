@@ -19,7 +19,11 @@
 /obj/random/material/precious,
 /obj/random/material/refined,
 /obj/random/material/refined,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "aM" = (
 /obj/fire,
@@ -31,7 +35,11 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/medical/pillbottle,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "bm" = (
 /obj/structure/cliff/automatic{
@@ -44,7 +52,11 @@
 /obj/random/explorer_shield,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "cb" = (
 /obj/structure/cliff/automatic/ramp,
@@ -52,7 +64,11 @@
 /area/submap/demonranch)
 "cc" = (
 /obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "dg" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
@@ -65,7 +81,11 @@
 "gE" = (
 /obj/item/weapon/flame/candle/everburn,
 /obj/structure/table/sifwoodentable,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "hq" = (
 /turf/simulated/floor/water,
@@ -81,7 +101,11 @@
 /area/submap/demonranch)
 "ie" = (
 /mob/living/simple_mob/humanoid/cultist/castertesh,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "iw" = (
 /obj/effect/landmark/loot_spawn/low,
@@ -95,7 +119,11 @@
 /area/submap/demonranch)
 "kz" = (
 /obj/structure/railing,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "lo" = (
 /obj/structure/cliff/automatic{
@@ -112,14 +140,22 @@
 /obj/random/contraband/nofail,
 /obj/item/weapon/storage/backpack/dufflebag/syndie/med,
 /obj/item/weapon/spellbook/oneuse/charge,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "mC" = (
 /obj/random/projectile/random,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/demonranch)
 "mG" = (
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "nh" = (
 /obj/structure/cliff/automatic{
@@ -137,7 +173,11 @@
 /obj/random/medical/pillbottle,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "nY" = (
 /obj/structure/girder/reinforced,
@@ -157,7 +197,11 @@
 /area/submap/demonranch)
 "qA" = (
 /obj/structure/table/sifwoodentable,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "qC" = (
 /obj/item/clothing/shoes/cult,
@@ -171,7 +215,11 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "su" = (
 /turf/simulated/floor/outdoors/dirt,
@@ -189,7 +237,11 @@
 /area/submap/demonranch)
 "uu" = (
 /obj/structure/girder/reinforced,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "uM" = (
 /obj/structure/cliff/automatic{
@@ -209,17 +261,29 @@
 /area/submap/demonranch)
 "yj" = (
 /mob/living/simple_mob/humanoid/cultist/noodle,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "yT" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "zl" = (
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Ak" = (
 /obj/structure/table/sifwoodentable,
@@ -232,15 +296,27 @@
 /obj/random/medical/pillbottle,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "AI" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Bh" = (
 /obj/item/clothing/head/culthood/alt,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Dw" = (
 /obj/effect/landmark/loot_spawn,
@@ -252,21 +328,37 @@
 /mob/living/simple_mob/humanoid/pirate/mate/ranged/rifle{
 	faction = "cult"
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Gb" = (
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Hj" = (
 /obj/item/clothing/suit/cultrobes,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "In" = (
 /obj/item/clothing/shoes/cult,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "IW" = (
 /obj/structure/table/sifwoodentable,
@@ -280,11 +372,19 @@
 /obj/random/medical/pillbottle,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "JL" = (
 /obj/structure/kitchenspike,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "JR" = (
 /obj/random/projectile/scrapped_shotgun,
@@ -292,7 +392,11 @@
 /area/submap/demonranch)
 "JY" = (
 /obj/item/clothing/suit/cultrobes/magusred,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Kt" = (
 /turf/simulated/wall/log_sif,
@@ -329,14 +433,22 @@
 /area/submap/demonranch)
 "Oz" = (
 /mob/living/simple_mob/humanoid/cultist/lizard,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "QH" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/firstaid,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "QO" = (
 /obj/structure/cliff/automatic/ramp{
@@ -347,7 +459,11 @@
 "Rp" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/everburn,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Si" = (
 /obj/effect/landmark/loot_spawn,
@@ -358,15 +474,27 @@
 /mob/living/simple_mob/humanoid/pirate/las/armored{
 	faction = "cult"
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Tn" = (
 /obj/item/clothing/suit/cultrobes/alt,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "TI" = (
 /obj/item/clothing/head/culthood,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "TL" = (
 /mob/living/simple_mob/vore/demonAI{
@@ -391,15 +519,27 @@
 /area/submap/demonranch)
 "VJ" = (
 /obj/structure/table/bench/sifwooden,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "WY" = (
 /obj/structure/bookcase,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Ye" = (
 /obj/item/clothing/head/culthood/magus,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Zy" = (
 /turf/template_noop,
