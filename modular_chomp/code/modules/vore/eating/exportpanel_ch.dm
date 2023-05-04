@@ -183,6 +183,7 @@
 			belly_data["fancy_vore"] = B.fancy_vore
 			belly_data["vore_sound"] = B.vore_sound
 			belly_data["release_sound"] = B.release_sound
+			belly_data["sound_volume"] = B.sound_volume
 
 			// Visuals
 			belly_data["affects_vore_sprites"] = B.affects_vore_sprites
@@ -202,9 +203,15 @@
 
 			// Visuals (Belly Fullscreens Preview and Coloring)
 			belly_data["belly_fullscreen_color"] = B.belly_fullscreen_color
+			belly_data["belly_fullscreen_color2"] = B.belly_fullscreen_color2
+			belly_data["belly_fullscreen_color3"] = B.belly_fullscreen_color3
+			belly_data["belly_fullscreen_color4"] = B.belly_fullscreen_color4
+			belly_data["belly_fullscreen_alpha"] = B.belly_fullscreen_alpha
+			belly_data["colorization_enabled"] = B.colorization_enabled
 
 			// Visuals (Vore FX)
 			belly_data["disable_hud"] = B.disable_hud
+			belly_data["belly_fullscreen"] = B.belly_fullscreen
 
 			// Interactions
 			belly_data["escapable"] = B.escapable

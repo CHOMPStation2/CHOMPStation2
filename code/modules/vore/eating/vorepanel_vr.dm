@@ -449,7 +449,11 @@
 			return TRUE
 		//CHOMPAdd Start
 		if("importpanel")
-			//var/list/input_data = json_decode(tgui_input_text(usr,"Paste .VRDB content here: ","Belly Import",max_length = INFINITY,multiline = TRUE))
+			var/panel_choice = tgui_input_list(usr, "Belly Import", "Pick an option", list("Import all bellies from VRDB","Import one belly from VRDB"))
+			if(!panel_choice) return
+			var/pickOne = FALSE
+			if(panel_choice == "Import one belly from VRDB")
+				pickOne = TRUE
 			var/input_file = input(usr,"Please choose a valid VRDB file to import from.","Belly Import") as file
 			var/input_data
 			try
@@ -464,7 +468,7 @@
 
 			var/list/valid_names = list()
 			var/list/valid_lists = list()
-			var/updates = 0
+			var/list/updated = list()
 
 			for(var/list/raw_list in input_data)
 				if(!islist(raw_list)) continue
@@ -473,16 +477,30 @@
 				if(raw_list["name"] in valid_names) continue
 				for(var/obj/belly/B in host.vore_organs)
 					if(lowertext(B.name) == lowertext(raw_list["name"]))
-						updates++
+						updated += raw_list["name"]
 						break
+				if(length(host.vore_organs)+length(valid_names)-length(updated) >= BELLIES_MAX) continue
 				valid_names += raw_list["name"]
 				valid_lists += list(raw_list)
 
-			if(valid_names.len == 0)
+			if(length(valid_names) == 0)
 				tgui_alert_async(usr, "The supplied VRDB file does not contain any valid bellies.", "Error!")
 				return FALSE
 
-			var/confirm = tgui_alert(host, "WARNING: This will add [length(valid_names)-updates] new bell[length(valid_names)-updates == 1 ? "y" : "ies"][updates > 0 ? " and update [updates] existing one[updates > 1 ? "s" : ""]" : ""]. Are you sure?","Import bellies?",list("Yes","Cancel"))
+			if(pickOne)
+				var/picked = tgui_input_list(usr, "Belly Import", "Which belly?", valid_names)
+				if(!picked) return
+				for(var/B in valid_lists)
+					if(lowertext(picked) == lowertext(B["name"]))
+						valid_names = list(picked)
+						valid_lists = list(B)
+						break
+				if(picked in updated)
+					updated = list(picked)
+				else
+					updated = list()
+
+			var/confirm = tgui_alert(host, "WARNING: This will add [length(valid_names)-length(updated)] new bell[length(valid_names)-length(updated) == 1 ? "y" : "ies"][length(updated) > 0 ? " and update [length(updated)] existing one[length(updated) > 1 ? "s" : ""]" : ""]. Are you sure?","Import bellies?",list("Yes","Cancel"))
 			if(confirm != "Yes") return FALSE
 
 			for(var/list/belly_data in valid_lists)
@@ -791,6 +809,115 @@
 						new_belly.selective_preference = DM_DIGEST
 					if(new_selective_preference == "Absorb")
 						new_belly.selective_preference = DM_ABSORB
+
+				// Sounds
+				if(isnum(belly_data["is_wet"]))
+					var/new_is_wet = belly_data["is_wet"]
+					if(new_is_wet == 0)
+						new_belly.is_wet = FALSE
+					if(new_is_wet == 1)
+						new_belly.is_wet = TRUE
+
+				if(isnum(belly_data["wet_loop"]))
+					var/new_wet_loop = belly_data["wet_loop"]
+					if(new_wet_loop == 0)
+						new_belly.wet_loop = FALSE
+					if(new_wet_loop == 1)
+						new_belly.wet_loop = TRUE
+
+				if(isnum(belly_data["fancy_vore"]))
+					var/new_fancy_vore = belly_data["fancy_vore"]
+					if(new_fancy_vore == 0)
+						new_belly.fancy_vore = FALSE
+					if(new_fancy_vore == 1)
+						new_belly.fancy_vore = TRUE
+
+				if(new_belly.fancy_vore)
+					if(!(new_belly.vore_sound in fancy_vore_sounds))
+						new_belly.vore_sound = "Gulp"
+					if(!(new_belly.release_sound in fancy_vore_sounds))
+						new_belly.release_sound = "Splatter"
+				else
+					if(!(new_belly.vore_sound in classic_vore_sounds))
+						new_belly.vore_sound = "Gulp"
+					if(!(new_belly.release_sound in classic_vore_sounds))
+						new_belly.release_sound = "Splatter"
+
+				if(istext(belly_data["vore_sound"]))
+					var/new_vore_sound = sanitize(belly_data["vore_sound"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_vore_sound)
+						if (new_belly.fancy_vore && new_vore_sound in fancy_vore_sounds)
+							new_belly.vore_sound = new_vore_sound
+						if (!new_belly.fancy_vore && new_vore_sound in classic_vore_sounds)
+							new_belly.vore_sound = new_vore_sound
+
+				if(istext(belly_data["release_sound"]))
+					var/new_release_sound = sanitize(belly_data["release_sound"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_release_sound)
+						if (new_belly.fancy_vore && new_release_sound in fancy_release_sounds)
+							new_belly.release_sound = new_release_sound
+						if (!new_belly.fancy_vore && new_release_sound in classic_release_sounds)
+							new_belly.release_sound = new_release_sound
+
+				if(isnum(belly_data["sound_volume"]))
+					var/new_sound_volume = belly_data["sound_volume"]
+					new_belly.sound_volume = sanitize_integer(new_sound_volume, 0, 100, initial(new_belly.sound_volume))
+
+				// Visuals
+				if(istext(belly_data["belly_fullscreen_color"]))
+					var/new_belly_fullscreen_color = sanitize_hexcolor(belly_data["belly_fullscreen_color"],new_belly.belly_fullscreen_color) as color
+					new_belly.belly_fullscreen_color = new_belly_fullscreen_color
+					new_belly.update_internal_overlay()
+
+				if(istext(belly_data["belly_fullscreen_color2"]))
+					var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2) as color
+					new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
+					new_belly.update_internal_overlay()
+
+				if(istext(belly_data["belly_fullscreen_color3"]))
+					var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3) as color
+					new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
+					new_belly.update_internal_overlay()
+
+				if(istext(belly_data["belly_fullscreen_color4"]))
+					var/new_belly_fullscreen_color4 = sanitize_hexcolor(belly_data["belly_fullscreen_color4"],new_belly.belly_fullscreen_color4) as color
+					new_belly.belly_fullscreen_color4 = new_belly_fullscreen_color4
+					new_belly.update_internal_overlay()
+
+				if(istext(belly_data["belly_fullscreen_alpha"]))
+					var/new_belly_fullscreen_alpha = sanitize_integer(belly_data["belly_fullscreen_alpha"],0,255,initial(new_belly.belly_fullscreen_alpha))
+					new_belly.belly_fullscreen_alpha = new_belly_fullscreen_alpha
+					new_belly.update_internal_overlay()
+
+				if(isnum(belly_data["colorization_enabled"]))
+					var/new_colorization_enabled = belly_data["colorization_enabled"]
+					if(new_colorization_enabled == 0)
+						new_belly.colorization_enabled = FALSE
+					if(new_colorization_enabled == 1)
+						new_belly.colorization_enabled = TRUE
+
+				if(isnum(belly_data["disable_hud"]))
+					var/new_disable_hud = belly_data["disable_hud"]
+					if(new_disable_hud == 0)
+						new_belly.disable_hud = FALSE
+					if(new_disable_hud == 1)
+						new_belly.disable_hud = TRUE
+
+				var/possible_fullscreens = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi')
+				if(!new_belly.colorization_enabled)
+					possible_fullscreens = icon_states('icons/mob/screen_full_vore.dmi')
+					possible_fullscreens -= "a_synth_flesh_mono"
+					possible_fullscreens -= "a_synth_flesh_mono_hole"
+					possible_fullscreens -= "a_anim_belly"
+				if(!(new_belly.belly_fullscreen in possible_fullscreens))
+					new_belly.belly_fullscreen = ""
+
+				if(istext(belly_data["belly_fullscreen"]))
+					var/new_belly_fullscreen = sanitize(belly_data["belly_fullscreen"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_belly_fullscreen)
+						if (new_belly_fullscreen in possible_fullscreens)
+							new_belly.belly_fullscreen = new_belly_fullscreen
+
 
 			unsaved_changes = TRUE
 			return TRUE
