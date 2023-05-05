@@ -2,7 +2,8 @@
 "a" = (
 /turf/simulated/floor/outdoors/ice{
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	nitrogen = 82.1472;
+	temperature = 293.15
 	},
 /area/submap/puzzledungeon)
 "d" = (
@@ -27,7 +28,8 @@
 /obj/machinery/crystal/ice,
 /turf/simulated/floor/outdoors/ice{
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	nitrogen = 82.1472;
+	temperature = 293.15
 	},
 /area/submap/puzzledungeon)
 "l" = (

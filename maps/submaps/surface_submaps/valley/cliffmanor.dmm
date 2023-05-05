@@ -19,7 +19,8 @@
 /obj/random/material/refined,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "e" = (
@@ -28,7 +29,8 @@
 	},
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "f" = (
@@ -63,7 +65,8 @@
 /obj/random/energy/highend,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "l" = (
@@ -71,7 +74,8 @@
 /obj/random/gun/random,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "m" = (
@@ -79,7 +83,8 @@
 /obj/random/firstaid,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "n" = (
@@ -91,7 +96,8 @@
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "p" = (
@@ -117,7 +123,8 @@
 /obj/structure/railing,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "s" = (
@@ -129,7 +136,8 @@
 /obj/random/material/precious,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "u" = (
@@ -146,7 +154,8 @@
 /obj/random/projectile/random,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "y" = (
@@ -160,7 +169,8 @@
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "B" = (
@@ -172,7 +182,8 @@
 /mob/living/simple_mob/humanoid/cultist/noodle,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "D" = (
@@ -194,7 +205,8 @@
 /obj/random/material/refined,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "G" = (
@@ -218,14 +230,16 @@
 "K" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "L" = (
 /mob/living/simple_mob/humanoid/cultist/castertesh,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "M" = (
@@ -240,7 +254,8 @@
 	},
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "O" = (
@@ -254,7 +269,8 @@
 	},
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "Q" = (
@@ -267,7 +283,8 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "T" = (
@@ -278,7 +295,8 @@
 /obj/random/material/precious,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "U" = (
@@ -301,14 +319,16 @@
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "X" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 "Y" = (
@@ -323,7 +343,8 @@
 /obj/item/weapon/flame/candle/everburn,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/cliffmanor)
 

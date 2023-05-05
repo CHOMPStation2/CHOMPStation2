@@ -534,13 +534,15 @@
 /obj/machinery/porta_turret/alien/destroyed,
 /turf/simulated/shuttle/floor/alienplating{
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	nitrogen = 93.7835;
+	temperature = 243.15
 	},
 /area/submap/cave/crashed_ufo_frigate)
 "xX" = (
 /turf/simulated/shuttle/floor/alienplating{
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	nitrogen = 93.7835;
+	temperature = 243.15
 	},
 /area/submap/cave/crashed_ufo_frigate)
 

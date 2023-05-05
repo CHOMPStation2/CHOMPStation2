@@ -27,7 +27,8 @@
 "g" = (
 /turf/simulated/floor/gorefloor{
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	nitrogen = 93.7835;
+	temperature = 243.15
 	},
 /area/submap/fallenportal)
 "h" = (
@@ -37,7 +38,8 @@
 "i" = (
 /turf/simulated/floor/gorefloor2{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/fallenportal)
 "j" = (

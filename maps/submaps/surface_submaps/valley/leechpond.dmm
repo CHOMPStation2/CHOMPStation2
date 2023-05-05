@@ -11,7 +11,8 @@
 "y" = (
 /turf/simulated/floor/wood/sif{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/leechpond)
 "C" = (
@@ -28,7 +29,8 @@
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/wood/sif{
 	nitrogen = 93.7835;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/submap/leechpond)
 
