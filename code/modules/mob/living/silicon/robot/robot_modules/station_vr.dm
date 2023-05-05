@@ -952,6 +952,7 @@
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	// New Emag gear for the minebots!
 	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
