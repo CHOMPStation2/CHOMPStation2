@@ -187,6 +187,11 @@
 
 			// Visuals
 			belly_data["affects_vore_sprites"] = B.affects_vore_sprites
+			var/list/sprite_flags = list()
+			for(var/flag_name in B.vore_sprite_flag_list)
+				if(B.vore_sprite_flags & B.vore_sprite_flag_list[flag_name])
+					sprite_flags.Add(flag_name)
+			belly_data["vore_sprite_flags"] = sprite_flags
 			belly_data["count_absorbed_prey_for_sprite"] = B.count_absorbed_prey_for_sprite
 			belly_data["absorbed_multiplier"] = B.absorbed_multiplier
 			belly_data["count_liquid_for_sprite"] = B.count_liquid_for_sprite
@@ -200,6 +205,10 @@
 			belly_data["undergarment_chosen"] = B.undergarment_chosen
 			belly_data["undergarment_if_none"] = B.undergarment_if_none
 			belly_data["undergarment_color"] = B.undergarment_color
+			//belly_data["tail_to_change_to"] = B.tail_to_change_to
+			//belly_data["tail_colouration"] = B.tail_colouration
+			//belly_data["tail_extra_overlay"] = B.tail_extra_overlay
+			//belly_data["tail_extra_overlay2"] = B.tail_extra_overlay2
 
 			// Visuals (Belly Fullscreens Preview and Coloring)
 			belly_data["belly_fullscreen_color"] = B.belly_fullscreen_color
@@ -217,7 +226,7 @@
 			belly_data["escapable"] = B.escapable
 
 			belly_data["escapechance"] = B.escapechance
-			belly_data["escapetime"] = B.escapetime
+			belly_data["escapetime"] = B.escapetime/10
 
 			belly_data["transferchance"] = B.transferchance
 			belly_data["transferlocation"] = B.transferlocation
@@ -230,7 +239,7 @@
 
 			// Interactions (Auto-Transfer)
 			belly_data["autotransferchance"] = B.autotransferchance
-			belly_data["autotransferwait"] = B.autotransferwait
+			belly_data["autotransferwait"] = B.autotransferwait/10
 			belly_data["autotransferlocation"] = B.autotransferlocation
 			belly_data["autotransfer_enabled"] = B.autotransfer_enabled
 			belly_data["autotransferchance_secondary"] = B.autotransferchance_secondary
@@ -257,6 +266,7 @@
 			data["bellies"] += list(belly_data)
 
 			// Liquid Messages
+			belly_data["show_fullness_messages"] = B.show_fullness_messages
 			belly_data["liquid_fullness1_messages"] = B.liquid_fullness1_messages
 			belly_data["liquid_fullness2_messages"] = B.liquid_fullness2_messages
 			belly_data["liquid_fullness3_messages"] = B.liquid_fullness3_messages

@@ -471,6 +471,7 @@
 			var/list/updated = list()
 
 			for(var/list/raw_list in input_data)
+				if(length(valid_names) >= BELLIES_MAX) break
 				if(!islist(raw_list)) continue
 				if(!istext(raw_list["name"])) continue
 				if(length(raw_list["name"]) > BELLIES_NAME_MAX || length(raw_list["name"]) < BELLIES_NAME_MIN) continue
@@ -479,7 +480,7 @@
 					if(lowertext(B.name) == lowertext(raw_list["name"]))
 						updated += raw_list["name"]
 						break
-				if(length(host.vore_organs)+length(valid_names)-length(updated) >= BELLIES_MAX) continue
+				if(!pickOne && length(host.vore_organs)+length(valid_names)-length(updated) >= BELLIES_MAX) continue
 				valid_names += raw_list["name"]
 				valid_lists += list(raw_list)
 
@@ -500,7 +501,13 @@
 				else
 					updated = list()
 
-			var/confirm = tgui_alert(host, "WARNING: This will add [length(valid_names)-length(updated)] new bell[length(valid_names)-length(updated) == 1 ? "y" : "ies"][length(updated) > 0 ? " and update [length(updated)] existing one[length(updated) > 1 ? "s" : ""]" : ""]. Are you sure?","Import bellies?",list("Yes","Cancel"))
+			var/list/alert_msg = list()
+			if(length(valid_names)-length(updated) > 0)
+				alert_msg += "add [length(valid_names)-length(updated)] new bell[length(valid_names)-length(updated) == 1 ? "y" : "ies"]"
+			if(length(updated) > 0)
+				alert_msg += "update [length(updated)] existing bell[length(updated) == 1 ? "y" : "ies"]. Please make sure you have saved a copy of your existing bellies"
+
+			var/confirm = tgui_alert(host, "WARNING: This will [jointext(alert_msg," and ")]. You can revert the import by using the Reload Prefs button under Preferences as long as you don't Save Prefs. Are you sure?","Import bellies?",list("Yes","Cancel"))
 			if(confirm != "Yes") return FALSE
 
 			for(var/list/belly_data in valid_lists)
@@ -524,7 +531,6 @@
 					var/new_item_mode = html_encode(belly_data["item_mode"])
 					if(new_item_mode in new_belly.item_digest_modes)
 						new_belly.item_digest_mode = new_item_mode
-						new_belly.items_preserved.Cut()
 
 				if(islist(belly_data["addons"]))
 					new_belly.mode_flags = 0
@@ -760,12 +766,10 @@
 				if(isnum(belly_data["digest_brute"]))
 					var/new_digest_brute = belly_data["digest_brute"]
 					new_belly.digest_brute = CLAMP(new_digest_brute, 0, 6)
-					new_belly.items_preserved.Cut()
 
 				if(isnum(belly_data["digest_burn"]))
 					var/new_digest_burn = belly_data["digest_burn"]
 					new_belly.digest_burn = CLAMP(new_digest_burn, 0, 6)
-					new_belly.items_preserved.Cut()
 
 				if(isnum(belly_data["digest_oxy"]))
 					var/new_digest_oxy = belly_data["digest_oxy"]
@@ -864,30 +868,141 @@
 					new_belly.sound_volume = sanitize_integer(new_sound_volume, 0, 100, initial(new_belly.sound_volume))
 
 				// Visuals
+				if(isnum(belly_data["affects_vore_sprites"]))
+					var/new_affects_vore_sprites = belly_data["affects_vore_sprites"]
+					if(new_affects_vore_sprites == 0)
+						new_belly.affects_vore_sprites = FALSE
+					if(new_affects_vore_sprites == 1)
+						new_belly.affects_vore_sprites = TRUE
+
+				if(islist(belly_data["vore_sprite_flags"]))
+					new_belly.vore_sprite_flags = 0
+					for(var/sprite_flag in belly_data["vore_sprite_flags"])
+						new_belly.vore_sprite_flags += new_belly.vore_sprite_flag_list[sprite_flag]
+
+				if(isnum(belly_data["count_absorbed_prey_for_sprite"]))
+					var/new_count_absorbed_prey_for_sprite = belly_data["count_absorbed_prey_for_sprite"]
+					if(new_count_absorbed_prey_for_sprite == 0)
+						new_belly.count_absorbed_prey_for_sprite = FALSE
+					if(new_count_absorbed_prey_for_sprite == 1)
+						new_belly.count_absorbed_prey_for_sprite = TRUE
+
+				if(isnum(belly_data["absorbed_multiplier"]))
+					var/new_absorbed_multiplier = belly_data["absorbed_multiplier"]
+					new_belly.absorbed_multiplier = CLAMP(new_absorbed_multiplier, 0.1, 3)
+
+				if(isnum(belly_data["count_liquid_for_sprite"]))
+					var/new_count_liquid_for_sprite = belly_data["count_liquid_for_sprite"]
+					if(new_count_liquid_for_sprite == 0)
+						new_belly.count_liquid_for_sprite = FALSE
+					if(new_count_liquid_for_sprite == 1)
+						new_belly.count_liquid_for_sprite = TRUE
+
+				if(isnum(belly_data["liquid_multiplier"]))
+					var/new_liquid_multiplier = belly_data["liquid_multiplier"]
+					new_belly.liquid_multiplier = CLAMP(new_liquid_multiplier, 0.1, 10)
+
+				if(isnum(belly_data["count_items_for_sprite"]))
+					var/new_count_items_for_sprite = belly_data["count_items_for_sprite"]
+					if(new_count_items_for_sprite == 0)
+						new_belly.count_items_for_sprite = FALSE
+					if(new_count_items_for_sprite == 1)
+						new_belly.count_items_for_sprite = TRUE
+
+				if(isnum(belly_data["item_multiplier"]))
+					var/new_item_multiplier = belly_data["item_multiplier"]
+					new_belly.item_multiplier = CLAMP(new_item_multiplier, 0.1, 10)
+
+				if(isnum(belly_data["health_impacts_size"]))
+					var/new_health_impacts_size = belly_data["health_impacts_size"]
+					if(new_health_impacts_size == 0)
+						new_belly.health_impacts_size = FALSE
+					if(new_health_impacts_size == 1)
+						new_belly.health_impacts_size = TRUE
+
+				if(isnum(belly_data["resist_triggers_animation"]))
+					var/new_resist_triggers_animation = belly_data["resist_triggers_animation"]
+					if(new_resist_triggers_animation == 0)
+						new_belly.resist_triggers_animation = FALSE
+					if(new_resist_triggers_animation == 1)
+						new_belly.resist_triggers_animation = TRUE
+
+				if(isnum(belly_data["size_factor_for_sprite"]))
+					var/new_size_factor_for_sprite = belly_data["size_factor_for_sprite"]
+					new_belly.size_factor_for_sprite = CLAMP(new_size_factor_for_sprite, 0.1, 3)
+
+				if(istext(belly_data["belly_sprite_to_affect"]))
+					var/new_belly_sprite_to_affect = sanitize(belly_data["belly_sprite_to_affect"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_belly_sprite_to_affect)
+						if (new_belly_sprite_to_affect in host.vore_icon_bellies)
+							new_belly.belly_sprite_to_affect = new_belly_sprite_to_affect
+
+				if(istext(belly_data["undergarment_chosen"]))
+					var/new_undergarment_chosen = sanitize(belly_data["undergarment_chosen"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_undergarment_chosen)
+						for(var/datum/category_group/underwear/U in global_underwear.categories)
+							if(lowertext(U.name) == lowertext(new_undergarment_chosen))
+								new_belly.undergarment_chosen = U.name
+								break
+
+				var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[new_belly.undergarment_chosen]
+				var/invalid_if_none = TRUE
+				for(var/datum/category_item/underwear/U in UWC.items)
+					if(lowertext(U.name) == lowertext(new_belly.undergarment_if_none))
+						invalid_if_none = FALSE
+						break
+				if(invalid_if_none)
+					new_belly.undergarment_if_none = null
+
+				if(istext(belly_data["undergarment_if_none"]))
+					var/new_undergarment_if_none = sanitize(belly_data["undergarment_if_none"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_undergarment_if_none)
+						for(var/datum/category_item/underwear/U in UWC.items)
+							if(lowertext(U.name) == lowertext(new_undergarment_if_none))
+								new_belly.undergarment_if_none = U.name
+								break
+
+				if(istext(belly_data["undergarment_color"]))
+					var/new_undergarment_color = sanitize_hexcolor(belly_data["undergarment_color"],new_belly.undergarment_color) as color
+					new_belly.undergarment_color = new_undergarment_color
+				/* These don't seem to actually be available yet
+				if(istext(belly_data["tail_to_change_to"]))
+					var/new_tail_to_change_to = sanitize(belly_data["tail_to_change_to"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_tail_to_change_to)
+						if (new_tail_to_change_to in tail_styles_list)
+							new_belly.tail_to_change_to = new_tail_to_change_to
+
+				if(istext(belly_data["tail_colouration"]))
+					var/new_tail_colouration = sanitize_hexcolor(belly_data["tail_colouration"],new_belly.tail_colouration) as color
+					new_belly.tail_colouration = new_tail_colouration
+
+				if(istext(belly_data["tail_extra_overlay"]))
+					var/new_tail_extra_overlay = sanitize_hexcolor(belly_data["tail_extra_overlay"],new_belly.tail_extra_overlay) as color
+					new_belly.tail_extra_overlay = new_tail_extra_overlay
+
+				if(istext(belly_data["tail_extra_overlay2"]))
+					var/new_tail_extra_overlay2 = sanitize_hexcolor(belly_data["tail_extra_overlay2"],new_belly.tail_extra_overlay2) as color
+					new_belly.tail_extra_overlay2 = new_tail_extra_overlay2
+				*/
 				if(istext(belly_data["belly_fullscreen_color"]))
 					var/new_belly_fullscreen_color = sanitize_hexcolor(belly_data["belly_fullscreen_color"],new_belly.belly_fullscreen_color) as color
 					new_belly.belly_fullscreen_color = new_belly_fullscreen_color
-					new_belly.update_internal_overlay()
 
 				if(istext(belly_data["belly_fullscreen_color2"]))
 					var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2) as color
 					new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
-					new_belly.update_internal_overlay()
 
 				if(istext(belly_data["belly_fullscreen_color3"]))
 					var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3) as color
 					new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
-					new_belly.update_internal_overlay()
 
 				if(istext(belly_data["belly_fullscreen_color4"]))
 					var/new_belly_fullscreen_color4 = sanitize_hexcolor(belly_data["belly_fullscreen_color4"],new_belly.belly_fullscreen_color4) as color
 					new_belly.belly_fullscreen_color4 = new_belly_fullscreen_color4
-					new_belly.update_internal_overlay()
 
 				if(istext(belly_data["belly_fullscreen_alpha"]))
 					var/new_belly_fullscreen_alpha = sanitize_integer(belly_data["belly_fullscreen_alpha"],0,255,initial(new_belly.belly_fullscreen_alpha))
 					new_belly.belly_fullscreen_alpha = new_belly_fullscreen_alpha
-					new_belly.update_internal_overlay()
 
 				if(isnum(belly_data["colorization_enabled"]))
 					var/new_colorization_enabled = belly_data["colorization_enabled"]
@@ -915,10 +1030,263 @@
 				if(istext(belly_data["belly_fullscreen"]))
 					var/new_belly_fullscreen = sanitize(belly_data["belly_fullscreen"],MAX_MESSAGE_LEN,0,0,0)
 					if(new_belly_fullscreen)
-						if (new_belly_fullscreen in possible_fullscreens)
+						if(new_belly_fullscreen in possible_fullscreens)
 							new_belly.belly_fullscreen = new_belly_fullscreen
 
+				// Interactions
+				if(isnum(belly_data["escapable"]))
+					var/new_escapable = belly_data["escapable"]
+					if(new_escapable == 0)
+						new_belly.escapable = FALSE
+					if(new_escapable == 1)
+						new_belly.escapable = TRUE
 
+				if(isnum(belly_data["escapechance"]))
+					var/new_escapechance = belly_data["escapechance"]
+					new_belly.escapechance = sanitize_integer(new_escapechance, 0, 100, initial(new_belly.escapechance))
+
+				if(isnum(belly_data["escapetime"]))
+					var/new_escapetime = belly_data["escapetime"]
+					new_belly.escapetime = sanitize_integer(new_escapetime*10, 10, 600, initial(new_belly.escapetime))
+
+				if(isnum(belly_data["transferchance"]))
+					var/new_transferchance = belly_data["transferchance"]
+					new_belly.transferchance = sanitize_integer(new_transferchance, 0, 100, initial(new_belly.transferchance))
+
+				if(istext(belly_data["transferlocation"]))
+					var/new_transferlocation = sanitize(belly_data["transferlocation"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_transferlocation)
+						for(var/obj/belly/existing_belly in host.vore_organs)
+							if(existing_belly.name == new_transferlocation)
+								new_belly.transferlocation = new_transferlocation
+								break
+						if(new_transferlocation in valid_names)
+							new_belly.transferlocation = new_transferlocation
+						if(new_transferlocation == new_belly.name)
+							new_belly.transferlocation = null
+
+				if(isnum(belly_data["transferchance_secondary"]))
+					var/new_transferchance_secondary = belly_data["transferchance_secondary"]
+					new_belly.transferchance_secondary = sanitize_integer(new_transferchance_secondary, 0, 100, initial(new_belly.transferchance_secondary))
+
+				if(istext(belly_data["transferlocation_secondary"]))
+					var/new_transferlocation_secondary = sanitize(belly_data["transferlocation_secondary"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_transferlocation_secondary)
+						for(var/obj/belly/existing_belly in host.vore_organs)
+							if(existing_belly.name == new_transferlocation_secondary)
+								new_belly.transferlocation_secondary = new_transferlocation_secondary
+								break
+						if(new_transferlocation_secondary in valid_names)
+							new_belly.transferlocation_secondary = new_transferlocation_secondary
+						if(new_transferlocation_secondary == new_belly.name)
+							new_belly.transferlocation_secondary = null
+
+				if(isnum(belly_data["absorbchance"]))
+					var/new_absorbchance = belly_data["absorbchance"]
+					new_belly.absorbchance = sanitize_integer(new_absorbchance, 0, 100, initial(new_belly.absorbchance))
+
+				if(isnum(belly_data["digestchance"]))
+					var/new_digestchance = belly_data["digestchance"]
+					new_belly.digestchance = sanitize_integer(new_digestchance, 0, 100, initial(new_belly.digestchance))
+
+				if(isnum(belly_data["autotransfer_enabled"]))
+					var/new_autotransfer_enabled = belly_data["autotransfer_enabled"]
+					if(new_autotransfer_enabled == 0)
+						new_belly.autotransfer_enabled = FALSE
+					if(new_autotransfer_enabled == 1)
+						new_belly.autotransfer_enabled = TRUE
+
+				if(isnum(belly_data["autotransferwait"]))
+					var/new_autotransferwait = belly_data["autotransferwait"]
+					new_belly.autotransferwait = sanitize_integer(new_autotransferwait*10, 10, 18000, initial(new_belly.autotransferwait))
+
+				if(isnum(belly_data["autotransferchance"]))
+					var/new_autotransferchance = belly_data["autotransferchance"]
+					new_belly.autotransferchance = sanitize_integer(new_autotransferchance, 0, 100, initial(new_belly.autotransferchance))
+
+				if(istext(belly_data["autotransferlocation"]))
+					var/new_autotransferlocation = sanitize(belly_data["autotransferlocation"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_autotransferlocation)
+						for(var/obj/belly/existing_belly in host.vore_organs)
+							if(existing_belly.name == new_autotransferlocation)
+								new_belly.autotransferlocation = new_autotransferlocation
+								break
+						if(new_autotransferlocation in valid_names)
+							new_belly.autotransferlocation = new_autotransferlocation
+						if(new_autotransferlocation == new_belly.name)
+							new_belly.autotransferlocation = null
+
+				if(isnum(belly_data["autotransferchance_secondary"]))
+					var/new_autotransferchance_secondary = belly_data["autotransferchance_secondary"]
+					new_belly.autotransferchance_secondary = sanitize_integer(new_autotransferchance_secondary, 0, 100, initial(new_belly.autotransferchance_secondary))
+
+				if(istext(belly_data["autotransferlocation_secondary"]))
+					var/new_autotransferlocation_secondary = sanitize(belly_data["autotransferlocation_secondary"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_autotransferlocation_secondary)
+						for(var/obj/belly/existing_belly in host.vore_organs)
+							if(existing_belly.name == new_autotransferlocation_secondary)
+								new_belly.autotransferlocation_secondary = new_autotransferlocation_secondary
+								break
+						if(new_autotransferlocation_secondary in valid_names)
+							new_belly.autotransferlocation_secondary = new_autotransferlocation_secondary
+						if(new_autotransferlocation_secondary == new_belly.name)
+							new_belly.autotransferlocation_secondary = null
+
+				if(isnum(belly_data["autotransfer_min_amount"]))
+					var/new_autotransfer_min_amount = belly_data["autotransfer_min_amount"]
+					new_belly.autotransfer_min_amount = sanitize_integer(new_autotransfer_min_amount, 0, 100, initial(new_belly.autotransfer_min_amount))
+
+				if(isnum(belly_data["autotransfer_max_amount"]))
+					var/new_autotransfer_max_amount = belly_data["autotransfer_max_amount"]
+					new_belly.autotransfer_max_amount = sanitize_integer(new_autotransfer_max_amount, 0, 100, initial(new_belly.autotransfer_max_amount))
+
+				// Liquid Options
+				if(isnum(belly_data["show_liquids"]))
+					var/new_show_liquids = belly_data["show_liquids"]
+					if(new_show_liquids == 0)
+						new_belly.show_liquids = FALSE
+					if(new_show_liquids == 1)
+						new_belly.show_liquids = TRUE
+
+				if(isnum(belly_data["reagentbellymode"]))
+					var/new_reagentbellymode = belly_data["reagentbellymode"]
+					if(new_reagentbellymode == 0)
+						new_belly.reagentbellymode = FALSE
+					if(new_reagentbellymode == 1)
+						new_belly.reagentbellymode = TRUE
+
+				if(istext(belly_data["reagent_chosen"]))
+					var/new_reagent_chosen = sanitize(belly_data["reagent_chosen"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_reagent_chosen)
+						if(new_reagent_chosen in new_belly.reagent_choices)
+							new_belly.reagent_chosen = new_reagent_chosen
+							new_belly.ReagentSwitch()
+
+				if(istext(belly_data["reagent_name"]))
+					var/new_reagent_name = html_encode(belly_data["reagent_name"])
+					if(new_reagent_name)
+						new_reagent_name = readd_quotes(new_reagent_name)
+					if(length(new_reagent_name) >= BELLIES_NAME_MIN && length(new_reagent_name) <= BELLIES_NAME_MAX)
+						new_belly.reagent_name = new_reagent_name
+
+				if(istext(belly_data["reagent_transfer_verb"]))
+					var/new_reagent_transfer_verb = html_encode(belly_data["reagent_transfer_verb"])
+					if(new_reagent_transfer_verb)
+						new_reagent_transfer_verb = readd_quotes(new_reagent_transfer_verb)
+					if(length(new_reagent_transfer_verb) >= BELLIES_NAME_MIN && length(new_reagent_transfer_verb) <= BELLIES_NAME_MAX)
+						new_belly.reagent_transfer_verb = new_reagent_transfer_verb
+
+				if(istext(belly_data["gen_time_display"]))
+					var/new_gen_time_display = sanitize(belly_data["gen_time_display"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_gen_time_display)
+						if(new_gen_time_display in list("10 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours"))
+							new_belly.gen_time_display = new_gen_time_display
+							switch(new_gen_time_display)
+								if("10 minutes")
+									new_belly.gen_time = 0
+								if("30 minutes")
+									new_belly.gen_time = 2
+								if("1 hour")
+									new_belly.gen_time = 5
+								if("3 hours")
+									new_belly.gen_time = 17
+								if("6 hours")
+									new_belly.gen_time = 35
+								if("12 hours")
+									new_belly.gen_time = 71
+								if("24 hours")
+									new_belly.gen_time = 143
+
+				if(isnum(belly_data["custom_max_volume"]))
+					var/new_custom_max_volume = belly_data["custom_max_volume"]
+					new_belly.custom_max_volume = CLAMP(new_custom_max_volume, 10, 300)
+
+				if(isnum(belly_data["vorefootsteps_sounds"]))
+					var/new_vorefootsteps_sounds = belly_data["vorefootsteps_sounds"]
+					if(new_vorefootsteps_sounds == 0)
+						new_belly.vorefootsteps_sounds = FALSE
+					if(new_vorefootsteps_sounds == 1)
+						new_belly.vorefootsteps_sounds = TRUE
+
+				if(islist(belly_data["reagent_mode_flag_list"]))
+					new_belly.reagent_mode_flags = 0
+					for(var/reagent_flag in belly_data["reagent_mode_flag_list"])
+						new_belly.reagent_mode_flags += new_belly.reagent_mode_flag_list[reagent_flag]
+
+				// Liquid Messages
+				if(isnum(belly_data["show_fullness_messages"]))
+					var/new_show_fullness_messages = belly_data["show_fullness_messages"]
+					if(new_show_fullness_messages == 0)
+						new_belly.show_fullness_messages = FALSE
+					if(new_show_fullness_messages == 1)
+						new_belly.show_fullness_messages = TRUE
+
+				if(isnum(belly_data["liquid_fullness1_messages"]))
+					var/new_liquid_fullness1_messages = belly_data["liquid_fullness1_messages"]
+					if(new_liquid_fullness1_messages == 0)
+						new_belly.liquid_fullness1_messages = FALSE
+					if(new_liquid_fullness1_messages == 1)
+						new_belly.liquid_fullness1_messages = TRUE
+
+				if(isnum(belly_data["liquid_fullness2_messages"]))
+					var/new_liquid_fullness2_messages = belly_data["liquid_fullness2_messages"]
+					if(new_liquid_fullness2_messages == 0)
+						new_belly.liquid_fullness2_messages = FALSE
+					if(new_liquid_fullness2_messages == 1)
+						new_belly.liquid_fullness2_messages = TRUE
+
+				if(isnum(belly_data["liquid_fullness3_messages"]))
+					var/new_liquid_fullness3_messages = belly_data["liquid_fullness3_messages"]
+					if(new_liquid_fullness3_messages == 0)
+						new_belly.liquid_fullness3_messages = FALSE
+					if(new_liquid_fullness3_messages == 1)
+						new_belly.liquid_fullness3_messages = TRUE
+
+				if(isnum(belly_data["liquid_fullness4_messages"]))
+					var/new_liquid_fullness4_messages = belly_data["liquid_fullness4_messages"]
+					if(new_liquid_fullness4_messages == 0)
+						new_belly.liquid_fullness4_messages = FALSE
+					if(new_liquid_fullness4_messages == 1)
+						new_belly.liquid_fullness4_messages = TRUE
+
+				if(isnum(belly_data["liquid_fullness5_messages"]))
+					var/new_liquid_fullness5_messages = belly_data["liquid_fullness5_messages"]
+					if(new_liquid_fullness5_messages == 0)
+						new_belly.liquid_fullness5_messages = FALSE
+					if(new_liquid_fullness5_messages == 1)
+						new_belly.liquid_fullness5_messages = TRUE
+
+				if(islist(belly_data["fullness1_messages"]))
+					var/new_fullness1_messages = sanitize(jointext(belly_data["fullness1_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_fullness1_messages)
+						new_belly.set_reagent_messages(new_fullness1_messages,"full1")
+
+				if(islist(belly_data["fullness2_messages"]))
+					var/new_fullness2_messages = sanitize(jointext(belly_data["fullness2_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_fullness2_messages)
+						new_belly.set_reagent_messages(new_fullness2_messages,"full2")
+
+				if(islist(belly_data["fullness3_messages"]))
+					var/new_fullness3_messages = sanitize(jointext(belly_data["fullness3_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_fullness3_messages)
+						new_belly.set_reagent_messages(new_fullness3_messages,"full3")
+
+				if(islist(belly_data["fullness4_messages"]))
+					var/new_fullness4_messages = sanitize(jointext(belly_data["fullness4_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_fullness4_messages)
+						new_belly.set_reagent_messages(new_fullness4_messages,"full4")
+
+				if(islist(belly_data["fullness5_messages"]))
+					var/new_fullness5_messages = sanitize(jointext(belly_data["fullness5_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_fullness5_messages)
+						new_belly.set_reagent_messages(new_fullness5_messages,"full5")
+
+				// After import updates
+				new_belly.items_preserved.Cut()
+				new_belly.update_internal_overlay()
+
+			host.update_fullness()
+			host.updateVRPanel()
 			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPAdd End
