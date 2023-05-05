@@ -850,17 +850,17 @@
 				if(istext(belly_data["vore_sound"]))
 					var/new_vore_sound = sanitize(belly_data["vore_sound"],MAX_MESSAGE_LEN,0,0,0)
 					if(new_vore_sound)
-						if (new_belly.fancy_vore && new_vore_sound in fancy_vore_sounds)
+						if (new_belly.fancy_vore && (new_vore_sound in fancy_vore_sounds))
 							new_belly.vore_sound = new_vore_sound
-						if (!new_belly.fancy_vore && new_vore_sound in classic_vore_sounds)
+						if (!new_belly.fancy_vore && (new_vore_sound in classic_vore_sounds))
 							new_belly.vore_sound = new_vore_sound
 
 				if(istext(belly_data["release_sound"]))
 					var/new_release_sound = sanitize(belly_data["release_sound"],MAX_MESSAGE_LEN,0,0,0)
 					if(new_release_sound)
-						if (new_belly.fancy_vore && new_release_sound in fancy_release_sounds)
+						if (new_belly.fancy_vore && (new_release_sound in fancy_release_sounds))
 							new_belly.release_sound = new_release_sound
-						if (!new_belly.fancy_vore && new_release_sound in classic_release_sounds)
+						if (!new_belly.fancy_vore && (new_release_sound in classic_release_sounds))
 							new_belly.release_sound = new_release_sound
 
 				if(isnum(belly_data["sound_volume"]))
@@ -963,7 +963,7 @@
 								break
 
 				if(istext(belly_data["undergarment_color"]))
-					var/new_undergarment_color = sanitize_hexcolor(belly_data["undergarment_color"],new_belly.undergarment_color) as color
+					var/new_undergarment_color = sanitize_hexcolor(belly_data["undergarment_color"],new_belly.undergarment_color)
 					new_belly.undergarment_color = new_undergarment_color
 				/* These don't seem to actually be available yet
 				if(istext(belly_data["tail_to_change_to"]))
@@ -973,31 +973,31 @@
 							new_belly.tail_to_change_to = new_tail_to_change_to
 
 				if(istext(belly_data["tail_colouration"]))
-					var/new_tail_colouration = sanitize_hexcolor(belly_data["tail_colouration"],new_belly.tail_colouration) as color
+					var/new_tail_colouration = sanitize_hexcolor(belly_data["tail_colouration"],new_belly.tail_colouration)
 					new_belly.tail_colouration = new_tail_colouration
 
 				if(istext(belly_data["tail_extra_overlay"]))
-					var/new_tail_extra_overlay = sanitize_hexcolor(belly_data["tail_extra_overlay"],new_belly.tail_extra_overlay) as color
+					var/new_tail_extra_overlay = sanitize_hexcolor(belly_data["tail_extra_overlay"],new_belly.tail_extra_overlay)
 					new_belly.tail_extra_overlay = new_tail_extra_overlay
 
 				if(istext(belly_data["tail_extra_overlay2"]))
-					var/new_tail_extra_overlay2 = sanitize_hexcolor(belly_data["tail_extra_overlay2"],new_belly.tail_extra_overlay2) as color
+					var/new_tail_extra_overlay2 = sanitize_hexcolor(belly_data["tail_extra_overlay2"],new_belly.tail_extra_overlay2)
 					new_belly.tail_extra_overlay2 = new_tail_extra_overlay2
 				*/
 				if(istext(belly_data["belly_fullscreen_color"]))
-					var/new_belly_fullscreen_color = sanitize_hexcolor(belly_data["belly_fullscreen_color"],new_belly.belly_fullscreen_color) as color
+					var/new_belly_fullscreen_color = sanitize_hexcolor(belly_data["belly_fullscreen_color"],new_belly.belly_fullscreen_color)
 					new_belly.belly_fullscreen_color = new_belly_fullscreen_color
 
 				if(istext(belly_data["belly_fullscreen_color2"]))
-					var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2) as color
+					var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2)
 					new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
 
 				if(istext(belly_data["belly_fullscreen_color3"]))
-					var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3) as color
+					var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3)
 					new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
 
 				if(istext(belly_data["belly_fullscreen_color4"]))
-					var/new_belly_fullscreen_color4 = sanitize_hexcolor(belly_data["belly_fullscreen_color4"],new_belly.belly_fullscreen_color4) as color
+					var/new_belly_fullscreen_color4 = sanitize_hexcolor(belly_data["belly_fullscreen_color4"],new_belly.belly_fullscreen_color4)
 					new_belly.belly_fullscreen_color4 = new_belly_fullscreen_color4
 
 				if(istext(belly_data["belly_fullscreen_alpha"]))
