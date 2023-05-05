@@ -525,6 +525,7 @@
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/pupscrubber(src)
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
 	//Starts empty. Can only recharge with recycled material.

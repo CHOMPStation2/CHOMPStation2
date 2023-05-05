@@ -611,3 +611,135 @@
 		/obj/item/toy,
 		/obj/item/petrifier
 	)
+
+//Vac attachment
+/obj/item/device/vac_attachment
+	name = "Vac attachment"
+	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings."
+	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
+	icon_state = "sucker"
+	hitsound = 'sound/effects/attackblob.ogg'
+	var/vac_power = 1
+	var/list/vac_settings = list(
+			"dust and grime" = 1,
+			"tiny objects" = 2,
+			"pests and small objects" = 3,
+			"medium objects" = 4,
+			"large objects" = 5,
+			"large pests" = 6
+			)
+
+/obj/item/device/vac_attachment/New()
+	..()
+	flags |= NOBLUDGEON //No more attack messages
+
+/obj/item/device/vac_attachment/attack_self(mob/user)
+	var/set_input = tgui_input_list(user, "Set your vacuum attachment's power level", "Vac Settings", vac_settings)
+	if(set_input)
+		vac_power = vac_settings[set_input]
+
+/obj/item/device/vac_attachment/afterattack(atom/target, mob/living/user, proximity)
+	if(!proximity)
+		return
+	if(!user.vore_selected)
+		return
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(isturf(target))
+		user.visible_message("<span class='filter_notice'>[user] points their [src.name] towards \the [target.name].</span>", "<span class='notice'>You begin vacuuming the mess off \the [target.name]...</span>")
+		var/list/suckables = list()
+		if(vac_power >= 1)
+			for(var/obj/effect/decal/cleanable/C in target)
+				suckables |= C
+		if(vac_power >= 2)
+			for(var/obj/item/I in target)
+				if(I.anchored || I.w_class > 1)
+					continue
+				else
+					suckables |= I
+		if(vac_power >= 3)
+			for(var/obj/item/I in target)
+				if(I.anchored || I.w_class > 2)
+					continue
+				else
+					suckables |= I
+			for(var/mob/living/L in target)
+				if(L.anchored || !L.devourable || L == user)
+					continue
+				if(L.size_multiplier < 0.5)
+					suckables |= L
+				if(istype(L,/mob/living/simple_mob/animal/passive/mouse) || istype(L,/mob/living/simple_mob/animal/passive/lizard) || istype(L,/mob/living/simple_mob/animal/passive/cockroach))
+					suckables |= L
+		if(vac_power >= 4)
+			for(var/obj/item/I in target)
+				if(I.anchored || I.w_class > 3)
+					continue
+				else
+					suckables |= I
+		if(vac_power >= 5)
+			for(var/obj/item/I in target)
+				if(I.anchored || I.w_class > 4)
+					continue
+				else
+					suckables |= I
+		if(vac_power >= 6)
+			for(var/mob/living/L in target)
+				if(L.anchored || !L.devourable || L == user)
+					continue
+				suckables |= L
+		if(LAZYLEN(suckables))
+			playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+			var/vac_conga = 0
+			for(var/atom/movable/F in suckables)
+				if(is_type_in_list(F,item_vore_blacklist))
+					continue
+				if(istype(F,/obj/effect/decal/cleanable))
+					qdel(F)
+					continue
+				if(vac_conga < 100)
+					vac_conga += 2
+				spawn(3 + vac_conga)
+					F.SpinAnimation(5,1)
+					spawn(5)
+						if(F.loc == target)
+							if(isitem(F))
+								var/obj/item/I = F
+								if(I.drop_sound)
+									playsound(src, I.drop_sound, vac_power * 10, preference = /datum/client_preference/drop_sounds)
+							F.forceMove(user.vore_selected)
+			if(istype(target, /turf/simulated))
+				var/turf/simulated/T = target
+				T.dirt = 0
+				T.clean_blood()
+	else if(istype(target,/obj/item))
+		var/obj/item/I = target
+		if(is_type_in_list(I,item_vore_blacklist))
+			return
+		if(vac_power > I.w_class)
+			playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
+			I.SpinAnimation(5,1)
+			spawn(5)
+				if(I.drop_sound)
+					playsound(src, I.drop_sound, vac_power * 10, preference = /datum/client_preference/drop_sounds)
+				I.forceMove(user.vore_selected)
+	else if(istype(target,/obj/effect/decal/cleanable))
+		playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+		user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
+		qdel(target)
+	else if(isliving(target))
+		var/mob/living/L = target
+		var/valid_to_suck = FALSE
+		if(L.anchored || !L.devourable)
+			return
+		if(vac_power >= 3)
+			if(L.size_multiplier > 0.5 || istype(L,/mob/living/simple_mob/animal/passive/mouse) || istype(L,/mob/living/simple_mob/animal/passive/lizard))
+				valid_to_suck = TRUE
+		if(vac_power >= 6)
+			valid_to_suck = TRUE
+		if(valid_to_suck)
+			playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
+			L.SpinAnimation(5,1)
+			spawn(5)
+				L.forceMove(user.vore_selected)
+	return
