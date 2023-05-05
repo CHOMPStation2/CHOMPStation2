@@ -24,7 +24,7 @@
 	base_attack_cooldown = 0 // Extremly rapid fire with rather weak bullets.
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/laser
-	projectiletype = /obj/item/projectile/beam/precursor
+	projectiletype = /obj/item/projectile/energy/mob/precursor
 	projectile_dispersion = 5
 	projectile_accuracy = -30
 
