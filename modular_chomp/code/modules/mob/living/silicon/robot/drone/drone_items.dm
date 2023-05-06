@@ -696,7 +696,7 @@
 			for(var/atom/movable/F in suckables)
 				if(!F.Adjacent(user) || vac_power < 1 || src.loc != user) //Cancel if moved/unpowered/dropped
 					break
-				if(is_type_in_list(F,item_vore_blacklist))
+				if(is_type_in_list(F,item_vore_blacklist) || F.loc != target)
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
 					qdel(F)
