@@ -617,10 +617,11 @@
 	name = "Vac attachment"
 	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings."
 	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
-	icon_state = "sucker"
+	icon_state = "sucker-0"
 	hitsound = 'sound/effects/attackblob.ogg'
-	var/vac_power = 1
+	var/vac_power = 0
 	var/list/vac_settings = list(
+			"power off" = 0,
 			"dust and grime" = 1,
 			"tiny objects" = 2,
 			"pests and small objects" = 3,
@@ -637,15 +638,18 @@
 	var/set_input = tgui_input_list(user, "Set your vacuum attachment's power level", "Vac Settings", vac_settings)
 	if(set_input)
 		vac_power = vac_settings[set_input]
+		icon_state = "sucker-[vac_power]"
 
 /obj/item/device/vac_attachment/afterattack(atom/target, mob/living/user, proximity)
+	if(vac_power < 1)
+		return
 	if(!proximity)
 		return
 	if(!user.vore_selected)
 		return
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(isturf(target))
-		user.visible_message("<span class='filter_notice'>[user] points their [src.name] towards \the [target.name].</span>", "<span class='notice'>You begin vacuuming the mess off \the [target.name]...</span>")
+		user.visible_message("<span class='filter_notice'>[user] begins vacuuming the mess off \the [target.name]...</span>", "<span class='notice'>You begin vacuuming the mess off \the [target.name]...</span>")
 		var/list/suckables = list()
 		if(vac_power >= 1)
 			for(var/obj/effect/decal/cleanable/C in target)
@@ -687,7 +691,7 @@
 					continue
 				suckables |= L
 		if(LAZYLEN(suckables))
-			playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
 			var/vac_conga = 0
 			for(var/atom/movable/F in suckables)
 				if(is_type_in_list(F,item_vore_blacklist))
@@ -696,7 +700,7 @@
 					qdel(F)
 					continue
 				if(vac_conga < 100)
-					vac_conga += 2
+					vac_conga += 3
 				spawn(3 + vac_conga)
 					F.SpinAnimation(5,1)
 					spawn(5)
@@ -704,7 +708,8 @@
 							if(isitem(F))
 								var/obj/item/I = F
 								if(I.drop_sound)
-									playsound(src, I.drop_sound, vac_power * 10, preference = /datum/client_preference/drop_sounds)
+									playsound(src, I.drop_sound, vac_power * 5, 1, -1)
+							playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
 							F.forceMove(user.vore_selected)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
@@ -715,15 +720,16 @@
 		if(is_type_in_list(I,item_vore_blacklist))
 			return
 		if(vac_power > I.w_class)
-			playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
 			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 			I.SpinAnimation(5,1)
 			spawn(5)
 				if(I.drop_sound)
-					playsound(src, I.drop_sound, vac_power * 10, preference = /datum/client_preference/drop_sounds)
+					playsound(src, I.drop_sound, vac_power * 5, 1, -1)
+				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
 				I.forceMove(user.vore_selected)
 	else if(istype(target,/obj/effect/decal/cleanable))
-		playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+		playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
 		user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 		qdel(target)
 	else if(isliving(target))
@@ -737,9 +743,16 @@
 		if(vac_power >= 6)
 			valid_to_suck = TRUE
 		if(valid_to_suck)
-			playsound(src, 'sound/machines/hiss.ogg', vac_power * 10, 1, -1)
+			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
 			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 			L.SpinAnimation(5,1)
 			spawn(5)
+				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
 				L.forceMove(user.vore_selected)
 	return
+
+/obj/item/device/vac_attachment/resolve_attackby(atom/A, mob/user, var/attack_modifier = 1, var/click_parameters)
+	if(istype(A,/obj/structure) && vac_power > 0)
+		afterattack(A.loc, user, click_parameters)
+		return TRUE
+	return ..()
