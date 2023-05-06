@@ -681,7 +681,7 @@
 					suckables |= I
 		if(vac_power >= 5)
 			for(var/obj/item/I in target)
-				if(I.anchored || I.w_class > 4)
+				if(I.anchored)
 					continue
 				else
 					suckables |= I
@@ -694,11 +694,15 @@
 			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
 			var/vac_conga = 0
 			for(var/atom/movable/F in suckables)
+				if(!F.Adjacent(user) || vac_power < 1 || src.loc != user) //Cancel if moved/unpowered/dropped
+					break
 				if(is_type_in_list(F,item_vore_blacklist))
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
 					qdel(F)
 					continue
+				if(vac_power < 2)
+					break
 				if(vac_conga < 100)
 					vac_conga += 3
 				spawn(3 + vac_conga)
