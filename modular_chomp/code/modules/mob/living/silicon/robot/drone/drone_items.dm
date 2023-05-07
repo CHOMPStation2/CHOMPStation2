@@ -615,11 +615,11 @@
 //Vac attachment
 /obj/item/device/vac_attachment
 	name = "Vac attachment"
-	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings."
+	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings. Can be connected to a trash bag or vore belly."
 	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
 	icon_state = "sucker-0"
-	hitsound = 'sound/effects/attackblob.ogg'
 	var/vac_power = 0
+	var/output_dest = null
 	var/list/vac_settings = list(
 			"power off" = 0,
 			"dust and grime" = 1,
@@ -627,26 +627,81 @@
 			"pests and small objects" = 3,
 			"medium objects" = 4,
 			"large objects" = 5,
-			"large pests" = 6
+			"large pests" = 6,
+			"output destination" = 7,
 			)
 
 /obj/item/device/vac_attachment/New()
 	..()
 	flags |= NOBLUDGEON //No more attack messages
 
-/obj/item/device/vac_attachment/attack_self(mob/user)
-	var/set_input = tgui_input_list(user, "Set your vacuum attachment's power level", "Vac Settings", vac_settings)
+/obj/item/device/vac_attachment/attack_self(mob/living/user)
+	var/set_input = null
+	if(!output_dest)
+		set_input = "output destination"
+	if(!set_input)
+		set_input = tgui_input_list(user, "Set your vacuum attachment's power level or output mode.", "Vac Settings", vac_settings)
 	if(set_input)
-		vac_power = vac_settings[set_input]
-		icon_state = "sucker-[vac_power]"
+		if(set_input == "output destination")
+			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", list("Vore Belly", "Borg Belly", "Trash Bag"))
+			if(set_output)
+				if(set_output == "Borg Belly")
+					if(isrobot(user))
+						var/mob/living/silicon/robot/R = user
+						var/obj/item/weapon/robot_module/M = R.module
+						for(var/obj/item/device/dogborg/sleeper/S in M.modules)
+							if(istype(S))
+								output_dest = S
+								return
+					to_chat(user, "<span class='warning'>Borg belly not found.</span>")
+				if(set_output == "Trash Bag")
+					if(isrobot(user))
+						var/mob/living/silicon/robot/R = user
+						var/obj/item/weapon/robot_module/M = R.module
+						for(var/obj/item/weapon/storage/bag/trash/T in M.modules)
+							if(istype(T))
+								output_dest = T
+								return
+					for(var/obj/item/weapon/storage/bag/trash/T in user.contents)
+						if(istype(T))
+							output_dest = T
+							return
+					to_chat(user, "<span class='warning'>Trash bag not found.</span>")
+				if(set_output == "Vore Belly")
+					if(user.vore_selected)
+						output_dest = user.vore_selected
+			return
+		else
+			vac_power = vac_settings[set_input]
+			icon_state = "sucker-[vac_power]"
 
 /obj/item/device/vac_attachment/afterattack(atom/target, mob/living/user, proximity)
 	if(vac_power < 1)
 		return
 	if(!proximity)
 		return
-	if(!user.vore_selected)
+	if(!output_dest)
 		return
+	if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
+		if(get_turf(output_dest) != get_turf(user))
+			vac_power = 0
+			icon_state = "sucker-0"
+			output_dest = null
+			to_chat(user, "<span class='warning'>Trash bag not found. Shutting down.</span>")
+			return
+		var/obj/item/weapon/storage/bag/trash/B = output_dest
+		if(LAZYLEN(B.contents) >= B.max_storage_space) //A bit more lenient than the w_class system to avoid complicated spaghetti.
+			to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
+			return
+	if(istype(output_dest,/obj/item/device/dogborg/sleeper))
+		var/obj/item/device/dogborg/sleeper/B = output_dest
+		if(LAZYLEN(B.contents) >= B.max_item_count)
+			to_chat(user, "<span class='warning'>[B.name] full. Empty or process contents to continue.</span>")
+			return
+		if(B.ore_storage)
+			if(B.current_capacity >= B.max_ore_storage)
+				to_chat(user, "<span class='warning'>Ore storage full. Deposit ore contents to a box continue.</span>")
+				return
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(isturf(target))
 		user.visible_message("<span class='filter_notice'>[user] begins vacuuming the mess off \the [target.name]...</span>", "<span class='notice'>You begin vacuuming the mess off \the [target.name]...</span>")
@@ -714,12 +769,15 @@
 								if(I.drop_sound)
 									playsound(src, I.drop_sound, vac_power * 5, 1, -1)
 							playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
-							F.forceMove(user.vore_selected)
+							F.forceMove(output_dest)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
 				T.dirt = 0
 				T.clean_blood()
-	else if(istype(target,/obj/item))
+		return
+	if(!isturf(target.loc))
+		return
+	if(istype(target,/obj/item))
 		var/obj/item/I = target
 		if(is_type_in_list(I,item_vore_blacklist))
 			return
@@ -731,7 +789,7 @@
 				if(I.drop_sound)
 					playsound(src, I.drop_sound, vac_power * 5, 1, -1)
 				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
-				I.forceMove(user.vore_selected)
+				I.forceMove(output_dest)
 	else if(istype(target,/obj/effect/decal/cleanable))
 		playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
 		user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
@@ -752,7 +810,7 @@
 			L.SpinAnimation(5,1)
 			spawn(5)
 				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
-				L.forceMove(user.vore_selected)
+				L.forceMove(output_dest)
 	return
 
 /obj/item/device/vac_attachment/resolve_attackby(atom/A, mob/user, var/attack_modifier = 1, var/click_parameters)
