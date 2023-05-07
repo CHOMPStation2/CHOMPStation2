@@ -110,7 +110,7 @@
 				else
 					suckables |= I
 			for(var/mob/living/L in target)
-				if(L.anchored || !L.devourable || L == user)
+				if(L.anchored || !L.devourable || L == user || L.buckled)
 					continue
 				if(L.size_multiplier < 0.5)
 					suckables |= L
@@ -130,7 +130,7 @@
 					suckables |= I
 		if(vac_power >= 6)
 			for(var/mob/living/L in target)
-				if(L.anchored || !L.devourable || L == user)
+				if(L.anchored || !L.devourable || L == user || L.buckled)
 					continue
 				suckables |= L
 		if(LAZYLEN(suckables))
@@ -183,7 +183,7 @@
 	else if(isliving(target))
 		var/mob/living/L = target
 		var/valid_to_suck = FALSE
-		if(L.anchored || !L.devourable || L == user)
+		if(L.anchored || !L.devourable || L == user || L.buckled)
 			return
 		if(vac_power >= 3)
 			if(L.size_multiplier > 0.5 || istype(L,/mob/living/simple_mob/animal/passive/mouse) || istype(L,/mob/living/simple_mob/animal/passive/lizard))
