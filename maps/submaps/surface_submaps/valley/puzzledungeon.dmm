@@ -1,6 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/submap/puzzledungeon)
 "d" = (
 /obj/structure/table/darkglass,
@@ -8,6 +12,10 @@
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
 /obj/item/weapon/archaeological_find,
+/turf/simulated/floor/dungeon,
+/area/submap/puzzledungeon)
+"g" = (
+/obj/structure/simple_door/cult,
 /turf/simulated/floor/dungeon,
 /area/submap/puzzledungeon)
 "h" = (
@@ -18,7 +26,11 @@
 /area/submap/puzzledungeon)
 "k" = (
 /obj/machinery/crystal/ice,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/submap/puzzledungeon)
 "l" = (
 /obj/structure/table/darkglass,
@@ -268,7 +280,7 @@ j
 S
 S
 S
-S
+g
 s
 s
 t
@@ -300,7 +312,7 @@ j
 S
 S
 S
-S
+g
 s
 s
 t
@@ -767,7 +779,7 @@ t
 t
 s
 s
-S
+g
 v
 v
 v
@@ -799,7 +811,7 @@ t
 t
 s
 s
-S
+g
 S
 S
 S
