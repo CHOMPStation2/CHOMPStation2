@@ -33,6 +33,8 @@
 	if(!voremob_loaded)
 		return
 	verbs |= /mob/living/proc/eat_trash
+	verbs |= /mob/living/proc/toggle_trash_catching
+	verbs |= /mob/living/proc/restrict_trasheater
 	var/obj/belly/B = new /obj/belly/(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"

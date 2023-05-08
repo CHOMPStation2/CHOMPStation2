@@ -313,6 +313,13 @@
 	trash_catching = !trash_catching
 	to_chat(src, "<span class='warning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
 
+/mob/living/proc/restrict_trasheater()
+	set name = "Restrict Trash Eater"
+	set category = "Abilities"
+	set desc = "Toggle Trash Eater restriction level."
+	adminbus_trash = !adminbus_trash
+	to_chat(src, "<span class='warning'>Trash Eater restriction level set to [adminbus_trash ? "everything not blacklisted" : "only whitelisted items"].</span>")
+
 /mob/living/proc/liquidbelly_visuals()
 	set name = "Toggle Liquidbelly Visuals"
 	set category = "Preferences"
