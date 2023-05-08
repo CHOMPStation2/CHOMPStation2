@@ -157,6 +157,8 @@
 			belly_data["digest_brute"] = B.digest_brute
 			belly_data["digest_burn"] = B.digest_burn
 			belly_data["digest_oxy"] = B.digest_oxy
+			belly_data["digest_tox"] = B.digest_tox
+			belly_data["digest_clone"] = B.digest_clone
 
 			belly_data["can_taste"] = B.can_taste
 			belly_data["is_feedable"] = B.is_feedable
@@ -172,6 +174,7 @@
 			belly_data["shrink_grow_size"] = B.shrink_grow_size
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
 			belly_data["egg_type"] = B.egg_type
+			belly_data["egg_name"] = B.egg_name
 			belly_data["selective_preference"] = B.selective_preference
 
 			// Sounds
@@ -180,9 +183,15 @@
 			belly_data["fancy_vore"] = B.fancy_vore
 			belly_data["vore_sound"] = B.vore_sound
 			belly_data["release_sound"] = B.release_sound
+			belly_data["sound_volume"] = B.sound_volume
 
 			// Visuals
 			belly_data["affects_vore_sprites"] = B.affects_vore_sprites
+			var/list/sprite_flags = list()
+			for(var/flag_name in B.vore_sprite_flag_list)
+				if(B.vore_sprite_flags & B.vore_sprite_flag_list[flag_name])
+					sprite_flags.Add(flag_name)
+			belly_data["vore_sprite_flags"] = sprite_flags
 			belly_data["count_absorbed_prey_for_sprite"] = B.count_absorbed_prey_for_sprite
 			belly_data["absorbed_multiplier"] = B.absorbed_multiplier
 			belly_data["count_liquid_for_sprite"] = B.count_liquid_for_sprite
@@ -196,18 +205,28 @@
 			belly_data["undergarment_chosen"] = B.undergarment_chosen
 			belly_data["undergarment_if_none"] = B.undergarment_if_none
 			belly_data["undergarment_color"] = B.undergarment_color
+			//belly_data["tail_to_change_to"] = B.tail_to_change_to
+			//belly_data["tail_colouration"] = B.tail_colouration
+			//belly_data["tail_extra_overlay"] = B.tail_extra_overlay
+			//belly_data["tail_extra_overlay2"] = B.tail_extra_overlay2
 
 			// Visuals (Belly Fullscreens Preview and Coloring)
 			belly_data["belly_fullscreen_color"] = B.belly_fullscreen_color
+			belly_data["belly_fullscreen_color2"] = B.belly_fullscreen_color2
+			belly_data["belly_fullscreen_color3"] = B.belly_fullscreen_color3
+			belly_data["belly_fullscreen_color4"] = B.belly_fullscreen_color4
+			belly_data["belly_fullscreen_alpha"] = B.belly_fullscreen_alpha
+			belly_data["colorization_enabled"] = B.colorization_enabled
 
 			// Visuals (Vore FX)
 			belly_data["disable_hud"] = B.disable_hud
+			belly_data["belly_fullscreen"] = B.belly_fullscreen
 
 			// Interactions
 			belly_data["escapable"] = B.escapable
 
 			belly_data["escapechance"] = B.escapechance
-			belly_data["escapetime"] = B.escapetime
+			belly_data["escapetime"] = B.escapetime/10
 
 			belly_data["transferchance"] = B.transferchance
 			belly_data["transferlocation"] = B.transferlocation
@@ -220,7 +239,7 @@
 
 			// Interactions (Auto-Transfer)
 			belly_data["autotransferchance"] = B.autotransferchance
-			belly_data["autotransferwait"] = B.autotransferwait
+			belly_data["autotransferwait"] = B.autotransferwait/10
 			belly_data["autotransferlocation"] = B.autotransferlocation
 			belly_data["autotransfer_enabled"] = B.autotransfer_enabled
 			belly_data["autotransferchance_secondary"] = B.autotransferchance_secondary
@@ -247,6 +266,7 @@
 			data["bellies"] += list(belly_data)
 
 			// Liquid Messages
+			belly_data["show_fullness_messages"] = B.show_fullness_messages
 			belly_data["liquid_fullness1_messages"] = B.liquid_fullness1_messages
 			belly_data["liquid_fullness2_messages"] = B.liquid_fullness2_messages
 			belly_data["liquid_fullness3_messages"] = B.liquid_fullness3_messages
