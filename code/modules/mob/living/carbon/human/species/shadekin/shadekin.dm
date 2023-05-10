@@ -175,8 +175,12 @@
 		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
 		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]</span>")
 		H.forceMove(pick(floors))
-		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
-		phaseanim.dir = H.dir
+		if(H.ability_flags & AB_PHASE_SHIFTED)
+			H.phase_shift()
+		else
+			var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
+			phaseanim.dir = H.dir
+		H.invisibility = initial(H.invisibility)
 		respite_activating = FALSE
 		belly.owner.update_fullness()
 		H.clear_fullscreen("belly")
