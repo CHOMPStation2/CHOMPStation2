@@ -185,6 +185,8 @@
 				H.toggle_hud_vis()
 		H.stop_sound_channel(CHANNEL_PREYLOOP)
 		H.add_modifier(/datum/modifier/dark_respite, 10 MINUTES)
+		H.muffled = FALSE
+		H.forced_psay = FALSE
 
 
 		spawn(5 MINUTES)
