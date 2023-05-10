@@ -241,7 +241,7 @@
 //Ensures that code dealing with stacks uses the same logic
 /obj/item/stack/proc/can_use(var/used)
 	if(used < 0 || (used != round(used)))
-		stack_trace("Tried to use a bad stack amount: [used]")
+		stack_trace("Tried to use a bad stack amount: [used]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 	if(get_amount() < used)
 		return 0
