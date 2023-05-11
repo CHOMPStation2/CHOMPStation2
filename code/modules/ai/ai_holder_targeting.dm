@@ -139,6 +139,17 @@
 				//VOREStation Add End
 				else
 					return FALSE
+<<<<<<< HEAD
+=======
+		//VOREStation add start
+		else if(forgive_resting && !isbelly(holder.loc))	//Doing it this way so we only think about the other conditions if the var is actually set
+			if((holder.health == holder.maxHealth) && !hostile && (L.resting || L.weakened || L.stunned))	//If our health is full, no one is fighting us, we can forgive
+				var/mob/living/simple_mob/vore/eater = holder
+				if(!eater.will_eat(L))		//We forgive people we can eat by eating them
+					set_stance(STANCE_IDLE)
+					return FALSE	//Forgiven
+		//VOREStation add end
+>>>>>>> bc7b04943d... Merge pull request #14850 from Very-Soft/waitaminute
 		if(holder.IIsAlly(L))
 			return FALSE
 		return TRUE
