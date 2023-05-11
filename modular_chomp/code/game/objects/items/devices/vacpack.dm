@@ -91,6 +91,13 @@
 			if(B.current_capacity >= B.max_ore_storage)
 				to_chat(user, "<span class='warning'>Ore storage full. Deposit ore contents to a box continue.</span>")
 				return
+	if(isbelly(output_dest))
+		if(output_dest.loc != user && !output_dest.loc.Adjacent(user)) //Can still be used as a feeding tube by another adjacent player.
+			vac_power = 0
+			icon_state = "sucker-0"
+			output_dest = null
+			to_chat(user, "<span class='warning'>Target destination not found. Shutting down.</span>")
+			return
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	var/auto_setting = 1
 	if(isturf(target))
@@ -160,6 +167,11 @@
 				if(istype(F,/obj/effect/decal/cleanable))
 					qdel(F)
 					continue
+				if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
+					var/obj/item/weapon/storage/bag/trash/B = output_dest
+					if(LAZYLEN(B.contents) >= B.max_storage_space)
+						to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
+						return
 				if(vac_conga < 100)
 					vac_conga += 3
 				spawn(3 + vac_conga)
