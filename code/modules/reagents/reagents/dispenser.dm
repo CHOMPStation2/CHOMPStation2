@@ -444,7 +444,6 @@
 			M.take_organ_damage(0, removed * power * 0.1) // Balance. The damage is instant, so it's weaker. 10 units -> 5 damage, double for pacid. 120 units beaker could deal 60, but a) it's burn, which is not as dangerous, b) it's a one-use weapon, c) missing with it will splash it over the ground and d) clothes give some protection, so not everything will hit
 
 /datum/reagent/acid/touch_obj(var/obj/O, var/amount) //CHOMPEdit Start
-	..()
 	if(isbelly(O.loc))
 		var/obj/belly/B = O.loc
 		if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
@@ -455,6 +454,7 @@
 			B.owner.adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
 		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
 		return
+	..()
 	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End
 		return
 	if((istype(O, /obj/item) || istype(O, /obj/effect/plant)) && (volume > meltdose))

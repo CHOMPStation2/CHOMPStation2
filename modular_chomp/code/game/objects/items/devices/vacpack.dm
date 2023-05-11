@@ -110,7 +110,7 @@
 				else
 					suckables |= I
 			for(var/mob/living/L in target)
-				if(L.anchored || !L.devourable || L == user || L.buckled)
+				if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
 					continue
 				if(L.size_multiplier < 0.5)
 					suckables |= L
@@ -130,7 +130,7 @@
 					suckables |= I
 		if(vac_power >= 6)
 			for(var/mob/living/L in target)
-				if(L.anchored || !L.devourable || L == user || L.buckled)
+				if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
 					continue
 				suckables |= L
 		if(LAZYLEN(suckables))
@@ -172,6 +172,8 @@
 			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 			I.SpinAnimation(5,1)
 			spawn(5)
+				if(!I.Adjacent(user) || src.loc != user || vac_power < 2) //Cancel if moved/unpowered/dropped
+					return
 				if(I.drop_sound)
 					playsound(src, I.drop_sound, vac_power * 5, 1, -1)
 				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
@@ -183,7 +185,7 @@
 	else if(isliving(target))
 		var/mob/living/L = target
 		var/valid_to_suck = FALSE
-		if(L.anchored || !L.devourable || L == user || L.buckled)
+		if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
 			return
 		if(vac_power >= 3)
 			if(L.size_multiplier > 0.5 || istype(L,/mob/living/simple_mob/animal/passive/mouse) || istype(L,/mob/living/simple_mob/animal/passive/lizard))
@@ -195,6 +197,8 @@
 			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 			L.SpinAnimation(5,1)
 			spawn(5)
+				if(!L.Adjacent(user) || src.loc != user || vac_power < 2) //Cancel if moved/unpowered/dropped
+					return
 				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
 				L.forceMove(output_dest)
 	return
