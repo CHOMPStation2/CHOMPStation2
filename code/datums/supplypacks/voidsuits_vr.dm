@@ -139,11 +139,8 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
 	name = "Solgov captain voidsuit crate"
-	access = access_captain
-<<<<<<< HEAD
-	
+	access = access_captain	
 // CHOMPStation EDIT End
-=======
 
 /datum/supply_pack/voidsuits/csc_breaker
 	name = "Shipbreaker's Industrial Suit (inc. jetpack)"
@@ -155,4 +152,3 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure
 	name = "Coyote Salvage Corp industrial voidsuit crate"
->>>>>>> 3596f94516... Merge pull request #14842 from KillianKirilenko/kk-coyotesuit
