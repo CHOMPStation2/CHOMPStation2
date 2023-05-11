@@ -92,7 +92,8 @@
 				to_chat(user, "<span class='warning'>Ore storage full. Deposit ore contents to a box continue.</span>")
 				return
 	if(isbelly(output_dest))
-		if(output_dest.loc != user && !output_dest.loc.Adjacent(user)) //Can still be used as a feeding tube by another adjacent player.
+		var/obj/belly/B
+		if(B.loc != user && !B.loc.Adjacent(user)) //Can still be used as a feeding tube by another adjacent player.
 			vac_power = 0
 			icon_state = "sucker-0"
 			output_dest = null
