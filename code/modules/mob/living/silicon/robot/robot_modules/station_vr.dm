@@ -379,7 +379,8 @@
 	sprites = list(
 					"Traumahound" = "traumavale",
 					"Drake" = "draketrauma",
-					"Borgi" = "borgi-trauma"
+					"Borgi" = "borgi-trauma",
+					"Raptor V-4" = "traumaraptor"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/traumahound/New(var/mob/living/silicon/robot/R)
@@ -517,7 +518,8 @@
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
 					"Cat" = "vixjani", //CHOMPEdit
-					"Drake" = "drakejanit"
+					"Drake" = "drakejanit",
+					"Raptor V-4" = "janiraptor"
 					)
 	can_be_pushed = 0
 
@@ -699,7 +701,8 @@
 					"EngiHound" = "engihound",
 					"EngiHoundDark" = "engihounddark",
 					"Cat" = "vixengi", //CHOMPEdit
-					"Drake" = "drakeeng"
+					"Drake" = "drakeeng",
+					"Raptor V-4" = "engiraptor"
 					)
 	can_be_pushed = 0
 
@@ -857,7 +860,9 @@
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
 					"Cat" = "vixserv", //CHOMPEdit
-					"Drake" = "drakemine"
+					"Drake" = "drakemine",
+					"Raptor V-4" = "serviraptor",
+					"Raptor V-4000" = "fancyraptor"
 					)
 	can_be_pushed = 0
 
@@ -937,7 +942,8 @@
 					"CargoHoundDark" = "cargohounddark",
 					"Cat Mining" = "vixmine", //CHOMPEdit
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
-					"Drake" = "drakemine"
+					"Drake" = "drakemine",
+					"Raptor V-4" = "mineraptor"
 					)
 	can_be_pushed = 0
 
