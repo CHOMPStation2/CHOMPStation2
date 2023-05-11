@@ -241,7 +241,7 @@
 //Ensures that code dealing with stacks uses the same logic
 /obj/item/stack/proc/can_use(var/used)
 	if(used < 0 || (used != round(used)))
-		stack_trace("Tried to use a bad stack amount: [used]")
+		stack_trace("Tried to use a bad stack amount: [used]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 	if(get_amount() < used)
 		return 0
@@ -266,7 +266,7 @@
 
 /obj/item/stack/proc/add(var/extra)
 	if(extra < 0 || (extra != round(extra)))
-		stack_trace("Tried to add a bad stack amount: [extra]")
+		stack_trace("Tried to add a bad stack amount: [extra]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 	if(!uses_charge)
 		if(amount + extra > get_max_amount())
@@ -284,7 +284,7 @@
 
 /obj/item/stack/proc/set_amount(var/new_amount, var/no_limits = FALSE)
 	if(new_amount < 0 || (new_amount != round(new_amount)))
-		stack_trace("Tried to set a bad stack amount: [new_amount]")
+		stack_trace("Tried to set a bad stack amount: [new_amount]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 
 	// Clean up the new amount
@@ -322,7 +322,7 @@
 		tamount = src.get_amount()
 
 	if(tamount < 0 || (tamount != round(tamount)))
-		stack_trace("Tried to transfer a bad stack amount: [tamount]")
+		stack_trace("Tried to transfer a bad stack amount: [tamount]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 
 	var/transfer = max(min(tamount, src.get_amount(), (S.get_max_amount() - S.get_amount())), 0)
