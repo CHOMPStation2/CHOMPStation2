@@ -16,7 +16,8 @@
 			"medium objects" = 4,
 			"large objects" = 5,
 			"large pests" = 6,
-			"output destination" = 7,
+			"auto-level" = 7,
+			"output destination" = 8
 			)
 
 /obj/item/device/vac_attachment/New()
@@ -90,7 +91,16 @@
 			if(B.current_capacity >= B.max_ore_storage)
 				to_chat(user, "<span class='warning'>Ore storage full. Deposit ore contents to a box continue.</span>")
 				return
+	if(isbelly(output_dest))
+		var/obj/belly/B
+		if(B.loc != user && !B.loc.Adjacent(user)) //Can still be used as a feeding tube by another adjacent player.
+			vac_power = 0
+			icon_state = "sucker-0"
+			output_dest = null
+			to_chat(user, "<span class='warning'>Target destination not found. Shutting down.</span>")
+			return
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	var/auto_setting = 1
 	if(isturf(target))
 		user.visible_message("<span class='filter_notice'>[user] begins vacuuming the mess off \the [target.name]...</span>", "<span class='notice'>You begin vacuuming the mess off \the [target.name]...</span>")
 		var/list/suckables = list()
@@ -110,7 +120,7 @@
 				else
 					suckables |= I
 			for(var/mob/living/L in target)
-				if(L.anchored || !L.devourable || L == user || L.buckled)
+				if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
 					continue
 				if(L.size_multiplier < 0.5)
 					suckables |= L
@@ -130,11 +140,27 @@
 					suckables |= I
 		if(vac_power >= 6)
 			for(var/mob/living/L in target)
-				if(L.anchored || !L.devourable || L == user || L.buckled)
+				if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
 					continue
 				suckables |= L
 		if(LAZYLEN(suckables))
-			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
+			if(vac_power == 7)
+				for(var/atom/movable/F in suckables)
+					if(isitem(F))
+						auto_setting = max(2, auto_setting)
+						var/obj/item/I = F
+						if(I.w_class > auto_setting)
+							auto_setting = min(I.w_class, 5)
+					if(isliving(F))
+						var/mob/living/L = F
+						if(L.size_multiplier < 0.5 || istype(L,/mob/living/simple_mob/animal/passive/mouse) || istype(L,/mob/living/simple_mob/animal/passive/lizard) || istype(L,/mob/living/simple_mob/animal/passive/cockroach))
+							if(auto_setting < 3)
+								auto_setting = 3
+						else
+							auto_setting = 6
+			else
+				auto_setting = vac_power
+			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
 			var/vac_conga = 0
 			for(var/atom/movable/F in suckables)
 				if(is_type_in_list(F,item_vore_blacklist) || F.loc != target)
@@ -142,6 +168,11 @@
 				if(istype(F,/obj/effect/decal/cleanable))
 					qdel(F)
 					continue
+				if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
+					var/obj/item/weapon/storage/bag/trash/B = output_dest
+					if(LAZYLEN(B.contents) >= B.max_storage_space)
+						to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
+						return
 				if(vac_conga < 100)
 					vac_conga += 3
 				spawn(3 + vac_conga)
@@ -153,8 +184,8 @@
 							if(isitem(F))
 								var/obj/item/I = F
 								if(I.drop_sound)
-									playsound(src, I.drop_sound, vac_power * 5, 1, -1)
-							playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
+									playsound(src, I.drop_sound, auto_setting * 5, 1, -1)
+							playsound(src, 'sound/rakshasa/corrosion3.ogg', auto_setting * 15, 1, -1)
 							F.forceMove(output_dest)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
@@ -168,34 +199,44 @@
 		if(is_type_in_list(I,item_vore_blacklist))
 			return
 		if(vac_power > I.w_class)
-			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
+			if(vac_power == 7)
+				auto_setting = min(I.w_class, 5)
+			else
+				auto_setting = vac_power
+			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
 			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 			I.SpinAnimation(5,1)
 			spawn(5)
+				if(!I.Adjacent(user) || src.loc != user || vac_power < 2) //Cancel if moved/unpowered/dropped
+					return
 				if(I.drop_sound)
 					playsound(src, I.drop_sound, vac_power * 5, 1, -1)
-				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
+				playsound(src, 'sound/rakshasa/corrosion3.ogg', auto_setting * 15, 1, -1)
 				I.forceMove(output_dest)
 	else if(istype(target,/obj/effect/decal/cleanable))
-		playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
+		playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
 		user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 		qdel(target)
 	else if(isliving(target))
 		var/mob/living/L = target
 		var/valid_to_suck = FALSE
-		if(L.anchored || !L.devourable || L == user || L.buckled)
+		if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
 			return
 		if(vac_power >= 3)
 			if(L.size_multiplier > 0.5 || istype(L,/mob/living/simple_mob/animal/passive/mouse) || istype(L,/mob/living/simple_mob/animal/passive/lizard))
 				valid_to_suck = TRUE
+				auto_setting = 3
 		if(vac_power >= 6)
 			valid_to_suck = TRUE
+			auto_setting = 6
 		if(valid_to_suck)
-			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', vac_power * 20, 1, -1)
+			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
 			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
 			L.SpinAnimation(5,1)
 			spawn(5)
-				playsound(src, 'sound/rakshasa/corrosion3.ogg', vac_power * 15, 1, -1)
+				if(!L.Adjacent(user) || src.loc != user || vac_power < 2) //Cancel if moved/unpowered/dropped
+					return
+				playsound(src, 'sound/rakshasa/corrosion3.ogg', auto_setting * 15, 1, -1)
 				L.forceMove(output_dest)
 	return
 
