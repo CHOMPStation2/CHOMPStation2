@@ -4538,6 +4538,7 @@
 #include "modular_chomp\code\datums\interfaces\appearance.dm"
 #include "modular_chomp\code\datums\outfits\jobs\noncrew.dm"
 #include "modular_chomp\code\datums\supplypacks\medical.dm"
+#include "modular_chomp\code\datums\supplypacks\security.dm"
 #include "modular_chomp\code\datums\underwear\socks.dm"
 #include "modular_chomp\code\game\atoms\atoms.dm"
 #include "modular_chomp\code\game\dna\dna2.dm"
