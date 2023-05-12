@@ -9,7 +9,11 @@
 /turf/simulated/floor/outdoors/mud,
 /area/submap/leechpond)
 "y" = (
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leechpond)
 "C" = (
 /turf/simulated/floor/water,
@@ -23,7 +27,11 @@
 /area/submap/leechpond)
 "U" = (
 /obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leechpond)
 
 (1,1,1) = {"
