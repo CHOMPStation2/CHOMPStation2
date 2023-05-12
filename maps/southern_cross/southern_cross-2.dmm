@@ -3553,7 +3553,6 @@
 /obj/structure/table/steel,
 /obj/item/weapon/storage/firstaid/combat,
 /obj/item/device/personal_shield_generator/belt/security/loaded,
-/obj/item/device/personal_shield_generator/belt/security/loaded,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "ait" = (
@@ -15176,6 +15175,7 @@
 	pixel_x = 36;
 	pixel_y = -6
 	},
+/obj/item/device/personal_shield_generator/belt/security/loaded,
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aUB" = (

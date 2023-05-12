@@ -2459,8 +2459,6 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 8
 	},
-/obj/item/device/personal_shield_generator/belt/mining/loaded,
-/obj/item/device/personal_shield_generator/belt/mining/loaded,
 /turf/simulated/floor/tiled,
 /area/quartermaster/mininglockerroom)
 "ake" = (

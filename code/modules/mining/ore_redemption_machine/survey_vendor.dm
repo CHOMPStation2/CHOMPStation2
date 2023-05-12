@@ -83,7 +83,7 @@
 		EQUIPMENT("Survival Equipment - Exploration Riot shield",	/obj/item/weapon/shield/riot/explorer,					75), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/green,				10), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,		25), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD	
+		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -122,6 +122,11 @@
 		EQUIPMENT("Thalers - 100",				/obj/item/weapon/spacecash/c100,									100),
 		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
 		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/device/uav,												40),
+	//CHOMPedit Start
+	    EQUIPMENT("Mining-Grade PSG",			/obj/item/device/personal_shield_generator/belt/mining/loaded,		100),
+	    EQUIPMENT("Security-Grade PSG",			/obj/item/device/personal_shield_generator/belt/security/loaded,	200),
+	    EQUIPMENT("PSG Variant-P",			    /obj/item/device/personal_shield_generator/belt/parry,	            250),
+	//CHOMPedit End
 	)
 	//VOREStation Edit End
 
