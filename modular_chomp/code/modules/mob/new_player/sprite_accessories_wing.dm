@@ -36,7 +36,7 @@
 /datum/sprite_accessory/wing/dragon2
 	name = "Dragon wings, large, colorable"
 	desc = ""
-	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "dragon_2"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
