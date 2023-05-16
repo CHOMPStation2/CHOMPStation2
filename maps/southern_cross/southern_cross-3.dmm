@@ -10367,6 +10367,7 @@
 "jjl" = (
 /obj/structure/closet/emcloset,
 /obj/item/weapon/storage/box/lights/mixed,
+/obj/item/device/personal_shield_generator/belt/parry,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
