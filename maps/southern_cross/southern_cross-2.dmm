@@ -12599,8 +12599,8 @@
 /area/storage/emergency_storage/seconddeck/port_emergency)
 "aMP" = (
 /obj/structure/disposaloutlet{
-	pixel_y = -6;
-	launch_dist = 1
+	launch_dist = 1;
+	pixel_y = -6
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -55505,8 +55505,8 @@
 	pixel_x = -32
 	},
 /obj/machinery/button/garbosystem{
-	pixel_y = 17;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 17
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
@@ -55992,7 +55992,7 @@
 	dir = 1;
 	name = "Hot Loop Waste Gas pressure regulator";
 	regulate_mode = 1;
-	target_pressure = 1500
+	target_pressure = 2500
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -67458,8 +67458,8 @@
 /area/hallway/secondary/entry/D3)
 "pOe" = (
 /obj/machinery/vending/loadout/uniform{
-	pixel_x = 24;
-	density = 0
+	density = 0;
+	pixel_x = 24
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,

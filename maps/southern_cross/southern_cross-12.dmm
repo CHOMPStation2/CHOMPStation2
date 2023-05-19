@@ -177,7 +177,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/obj/machinery/camera/network/exploration{
+/obj/machinery/camera/network/carrier{
 	c_tag = "WILD - Shelter Second Floor Exterior 3";
 	dir = 8
 	},
@@ -288,6 +288,9 @@
 /obj/structure/table/standard,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
 "io" = (
@@ -430,7 +433,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/machinery/camera/network/exploration{
+/obj/machinery/camera/network/carrier{
 	c_tag = "WILD - Shelter Second Floor Utilities"
 	},
 /turf/simulated/open/sif{
@@ -1043,7 +1046,7 @@
 "yJ" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/device/flashlight/lamp/green,
-/obj/machinery/camera/network/exploration{
+/obj/machinery/camera/network/carrier{
 	c_tag = "WILD - Shelter Crew Dorms";
 	dir = 4
 	},
@@ -1121,6 +1124,9 @@
 "Ai" = (
 /obj/structure/ladder,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "Aj" = (
@@ -1182,6 +1188,12 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/wilderness/skylands)
+"Cc" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter/dorms)
 "Ci" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/brflowers,
@@ -1471,7 +1483,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/wilderness/skylands)
 "Kq" = (
-/obj/machinery/camera/network/exploration{
+/obj/machinery/camera/network/carrier{
 	c_tag = "WILD - Shelter Second Floor";
 	dir = 8
 	},
@@ -1868,8 +1880,7 @@
 /area/surface/outside/wilderness/skylands)
 "ST" = (
 /obj/effect/catwalk_plated,
-/obj/machinery/camera/network/exploration{
-	c_tag = "WILD - Shelter Second Floor Exterior 1";
+/obj/machinery/camera/network/carrier{
 	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
@@ -2126,7 +2137,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/obj/machinery/camera/network/exploration{
+/obj/machinery/camera/network/carrier{
 	c_tag = "WILD - Shelter Second Floor Exterior 2";
 	dir = 1
 	},
@@ -42700,7 +42711,7 @@ qK
 lP
 Ii
 Se
-LU
+Cc
 GN
 bj
 aE

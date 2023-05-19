@@ -3011,6 +3011,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
 "ano" = (
@@ -6480,6 +6483,7 @@
 /obj/structure/closet/crate/hydroponics,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/material/minihoe,
+/obj/item/seeds/ambrosiagaiaseed,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aGf" = (
@@ -9904,7 +9908,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Expedition Shuttle";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,11,24,43,67)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/three)
@@ -22199,7 +22203,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "nyV" = (
-/obj/structure/bed/chair/sofa/black{
+/obj/structure/bed/chair/sofa{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/sblucarpet,
@@ -25413,6 +25417,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
