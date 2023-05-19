@@ -2743,8 +2743,20 @@ lol bye
 /obj/machinery/light{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/injector_maker{
 	pixel_x = -29
+=======
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -11;
+	pixel_y = 14
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "chem_room";
+	pixel_x = -25
+>>>>>>> 8998e1468a... Merge pull request #14863 from KillianKirilenko/kk-maptweaks
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/Chemistry)
@@ -5023,6 +5035,7 @@ lol bye
 	pixel_x = -3;
 	pixel_y = 7
 	},
+<<<<<<< HEAD
 /obj/item/device/megaphone,
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
@@ -5032,6 +5045,17 @@ lol bye
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/cargo/qm)
+=======
+/turf/simulated/floor/tiled,
+/area/groundbase/cargo/storage)
+"ou" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled,
+/area/groundbase/cargo/office)
+>>>>>>> 8998e1468a... Merge pull request #14863 from KillianKirilenko/kk-maptweaks
 "ov" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
@@ -7166,6 +7190,19 @@ lol bye
 /obj/structure/bookcase,
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/library)
+<<<<<<< HEAD
+=======
+"uA" = (
+/obj/structure/table/standard,
+/obj/item/clothing/under/pizzaguy,
+/obj/item/clothing/under/pizzaguy,
+/obj/item/clothing/under/pizzaguy,
+/obj/item/clothing/head/pizzaguy,
+/obj/item/clothing/head/pizzaguy,
+/obj/item/clothing/head/pizzaguy,
+/turf/simulated/floor/tiled,
+/area/groundbase/cargo/storage)
+>>>>>>> 8998e1468a... Merge pull request #14863 from KillianKirilenko/kk-maptweaks
 "uC" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -7638,6 +7675,20 @@ lol bye
 	outdoors = 0
 	},
 /area/groundbase/level2/nw)
+<<<<<<< HEAD
+=======
+"vU" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "chem_room";
+	name = "Chemistry Shutters"
+	},
+/turf/simulated/floor,
+/area/groundbase/medical/Chemistry)
+>>>>>>> 8998e1468a... Merge pull request #14863 from KillianKirilenko/kk-maptweaks
 "vV" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/weapon/reagent_containers/glass/bucket,
