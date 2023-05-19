@@ -67,7 +67,7 @@
 	layer = 4;
 	name = "Wilderness Shelter Shutters"
 	},
-/obj/structure/fans/tiny,
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
 "cv" = (

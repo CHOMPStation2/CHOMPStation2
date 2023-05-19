@@ -219,7 +219,7 @@
 	layer = 4;
 	name = "Wilderness Shelter Shutters"
 	},
-/obj/structure/fans/tiny,
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "bd" = (
@@ -793,7 +793,7 @@
 	layer = 3;
 	name = "Wilderness Shelter Shutters"
 	},
-/obj/structure/fans/tiny,
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "BF" = (
@@ -989,7 +989,8 @@
 	},
 /obj/machinery/power/rtg/fake_gen{
 	desc = "A simple power generator, used in small outposts to reliably provide power for decades.";
-	name = "Wilderness Shelter power generator"
+	name = "Wilderness Shelter power generator";
+	power_gen = 9000
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
