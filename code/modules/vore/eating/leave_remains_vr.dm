@@ -44,13 +44,30 @@
 //CHOMPadd end.
 
 /obj/belly/proc/handle_remains_leaving(var/mob/living/M)
-	if(!ishuman(M))	//Are we even humanoid?
+	if(!ishuman(M) && !isrobot(M))	//Are we even humanoid or a borg?
 		return
+	//Moving some vars here for both borgs and carbons to use
+	var/bones_amount = rand(2,4) //some random variety in amount of bones left
+	if(isrobot(M)) //If borg, handle differently
+		//var/mob/living/silicon/robot/R = M // Not Needed at the moment. Uncomment if you need borg stuff
+
+		var/list/borg_bones = list( //Borg bones are the same at this point. might change in the future if borgs or synths get
+			/obj/item/weapon/digestion_remains/synth, // different remains in the future.
+			/obj/item/weapon/digestion_remains/synth/variant1,
+			/obj/item/weapon/digestion_remains/synth/variant2,
+			/obj/item/weapon/digestion_remains/synth/variant3
+		)
+		for(var/i = 1, i <= bones_amount, i++)	//Just fill them with bones. Borgs dont have anything special.
+			var/new_bone = pick(borg_bones)
+			new new_bone(src,owner)
+		return //Dont need to do carbon stuff after this
+
 	var/mob/living/carbon/human/H = M
 
-	if((H.species.name in remainless_species) || H.isSynthetic())	//Don't leave anything if there is nothing to leave
+	if((H.species.name in remainless_species))	//Don't leave anything if there is nothing to leave
 		return
 
+<<<<<<< HEAD
 	var/bones_amount = rand(2,3) //some random variety in amount of bones left
 	if(prob(20))	//ribcage surviving whole is some luck
 		new /obj/item/weapon/digestion_remains/ribcage(src, owner, H) //CHOMPEdit
@@ -60,6 +77,30 @@
 		new /obj/item/weapon/digestion_remains(src, owner, H) //CHOMPEdit
 		bones_amount--
 
+=======
+	if(prob(20) && !H.isSynthetic())	//ribcage surviving whole is some luck //Edit: no robor
+		new /obj/item/weapon/digestion_remains/ribcage(src,owner)
+		bones_amount--
+
+	var/list/organic_bones = list( //Generic bone variation system
+		/obj/item/weapon/digestion_remains,
+		/obj/item/weapon/digestion_remains/variant1,
+		/obj/item/weapon/digestion_remains/variant2,
+		/obj/item/weapon/digestion_remains/variant3
+	)
+	var/list/synthetic_bones = list(
+		/obj/item/weapon/digestion_remains/synth,
+		/obj/item/weapon/digestion_remains/synth/variant1,
+		/obj/item/weapon/digestion_remains/synth/variant2,
+		/obj/item/weapon/digestion_remains/synth/variant3
+	)
+	for(var/i = 1, i <= bones_amount, i++)	//throw in the rest
+		var/new_bone = H.isSynthetic() ? pick(synthetic_bones) : pick(organic_bones)
+		new new_bone(src,owner)
+
+	if(H.isSynthetic()) // Synths dont have skulls, atleast not any that survive digestion.
+		return			// TODO: add synth skulls and remove this.
+>>>>>>> 0c6a56aea0... Merge pull request #14868 from ReoDaProtovali/RATTLEMEBONES
 	var/skull_amount = 1
 	if(H.species.skull_type)
 		new H.species.skull_type(src, owner, H) //CHOMPEdit
@@ -80,7 +121,9 @@
 	name = "bone"
 	desc = "A bleached bone. It's very non-descript and its hard to tell what species or part of the body it came from."
 	icon = 'icons/obj/bones_vr.dmi'
-	icon_state = "generic"
+	icon_state = "generic-1"
+	drop_sound = 'sound/items/drop/wooden.ogg'   //sounds kinda like a bone
+	pickup_sound = 'sound/items/pickup/woodweapon.ogg'
 	force = 0
 	throwforce = 0
 	item_state = "bone"
@@ -88,7 +131,18 @@
 	var/pred_ckey
 	var/pred_name
 
+<<<<<<< HEAD
 /obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
+=======
+/obj/item/weapon/digestion_remains/synth
+	name = "ruined component"
+	desc = "A ruined component. It seems to have come from some sort of robotic entity, but there's no telling what kind."
+	icon_state = "synth-1"
+	drop_sound = 'sound/items/drop/device.ogg'   //not organic bones, so they get different sounds
+	pickup_sound = 'sound/items/pickup/device.ogg'
+
+/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred)
+>>>>>>> 0c6a56aea0... Merge pull request #14868 from ReoDaProtovali/RATTLEMEBONES
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey
@@ -107,6 +161,24 @@
 	name = "ribcage"
 	desc = "A bleached ribcage. It's very white and definitely has seen better times. Hard to tell what it belonged to."
 	icon_state = "ribcage"
+
+/obj/item/weapon/digestion_remains/variant1 //Generic bone variations
+	icon_state = "generic-2"
+
+/obj/item/weapon/digestion_remains/variant2
+	icon_state = "generic-3"
+
+/obj/item/weapon/digestion_remains/variant3
+	icon_state = "generic-4"
+
+/obj/item/weapon/digestion_remains/synth/variant1 //synthbones start
+	icon_state = "synth-2"
+
+/obj/item/weapon/digestion_remains/synth/variant2
+	icon_state = "synth-3"
+
+/obj/item/weapon/digestion_remains/synth/variant3
+	icon_state = "synth-4"
 
 /obj/item/weapon/digestion_remains/skull
 	name = "skull"
