@@ -9345,7 +9345,7 @@
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
-	req_one_access = list(5,17,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangerhall)
@@ -9849,7 +9849,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Briefing Room";
 	req_access = list();
-	req_one_access = list(5,17,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/debriefing)
@@ -9876,7 +9876,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Briefing Room";
 	req_access = list();
-	req_one_access = list(5,17,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/debriefing)
@@ -9967,7 +9967,7 @@
 /area/expoutpost/hangartwo)
 "zd" = (
 /obj/machinery/door/airlock/maintenance{
-	req_one_access = list(5,17,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -10180,7 +10180,7 @@
 /area/expoutpost/gateway)
 "zx" = (
 /obj/machinery/door/airlock/maintenance{
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -11699,7 +11699,7 @@
 	locked = 1;
 	name = "UNDER CONSTRUCTION";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor/plating,
@@ -12104,7 +12104,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Briefing Room";
 	req_access = list();
-	req_one_access = list(5,17,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/shuttle)
@@ -12517,7 +12517,7 @@
 	icon_state = "door_locked";
 	locked = 1;
 	name = "UNDER CONTSTRUCTION";
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /obj/item/tape/engineering,
 /obj/machinery/door/firedoor/border_only,
@@ -15498,7 +15498,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Expedition Shuttle";
 	req_access = list();
-	req_one_access = list(5,17,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -15671,7 +15671,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,11,17,24,43,67)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/expoutpost/atmospherics)
