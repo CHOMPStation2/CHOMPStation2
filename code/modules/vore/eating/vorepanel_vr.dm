@@ -222,7 +222,7 @@
 			"undergarment_chosen" = selected.undergarment_chosen,
 			"undergarment_if_none" = selected.undergarment_if_none || "None",
 			"undergarment_color" = selected.undergarment_color,
-			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) > 1 ? TRUE : FALSE,
+			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) >= 1 ? TRUE : FALSE,
 			"tail_option_shown" = istype(host, /mob/living/carbon/human),
 			"tail_to_change_to" = selected.tail_to_change_to,
 			"tail_colouration" = selected.tail_colouration,
