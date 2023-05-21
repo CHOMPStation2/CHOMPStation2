@@ -206,6 +206,7 @@
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
+<<<<<<< HEAD
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -230,6 +231,9 @@
 			"tail_extra_overlay2" = selected.tail_extra_overlay2
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
+=======
+			"eating_privacy_local" = selected.eating_privacy_local
+>>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 		)
 
 		var/list/addons = list()
@@ -390,10 +394,14 @@
 		"nutrition_messages" = host.nutrition_messages,
 		"weight_message_visible" = host.weight_message_visible,
 		"weight_messages" = host.weight_messages,
+<<<<<<< HEAD
 		//CHOMPEdit start, vore sprites
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply
 		//CHOMPEdit end
+=======
+		"eating_privacy_global" = host.eating_privacy_global
+>>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 	)
 
 	return data
@@ -1409,6 +1417,12 @@
 				host.client.prefs_vr.digestable = host.digestable
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_global_privacy")
+			host.eating_privacy_global = !host.eating_privacy_global
+			if(host.client.prefs_vr)
+				host.eating_privacy_global = host.eating_privacy_global
+			unsaved_changes = TRUE
+			return TRUE
 		if("toggle_devour")
 			host.devourable = !host.devourable
 			if(host.client.prefs_vr)
@@ -2277,6 +2291,12 @@
 				return FALSE
 
 			host.vore_selected.release_verb = new_release_verb
+			. = TRUE
+		if("b_eating_privacy")
+			var/privacy_choice = tgui_input_list(usr, "Choose your belly-specific preference. Default uses global preference!", "Eating message privacy", list("default", "subtle", "loud"), "default")
+			if(privacy_choice == null)
+				return FALSE
+			host.vore_selected.eating_privacy_local = privacy_choice
 			. = TRUE
 		if("b_fancy_sound")
 			host.vore_selected.fancy_vore = !host.vore_selected.fancy_vore

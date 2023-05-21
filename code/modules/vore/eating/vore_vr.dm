@@ -54,6 +54,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/allowmobvore = TRUE
 	var/permit_healbelly = TRUE
 	var/noisy = FALSE
+	var/eating_privacy_global = FALSE //Makes eating attempt/success messages only reach for subtle range if true, overwritten by belly-specific var
 
 	// These are 'modifier' prefs, do nothing on their own but pair with drop_prey/drop_pred settings.
 	var/drop_vore = TRUE
@@ -205,6 +206,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	nutrition_messages = json_from_file["nutrition_messages"]
 	weight_message_visible = json_from_file["weight_message_visible"]
 	weight_messages = json_from_file["weight_messages"]
+	eating_privacy_global = json_from_file["eating_privacy_global"]
 
 
 	//CHOMP stuff
@@ -268,6 +270,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		nutrition_message_visible = TRUE
 	if(isnull(weight_message_visible))
 		weight_message_visible = TRUE
+	if(isnull(eating_privacy_global))
+		eating_privacy_global = FALSE
 	if(isnull(nutrition_messages))
 		nutrition_messages = list(
 							"They are starving! You can hear their stomach snarling from across the room!",
@@ -358,8 +362,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"nutrition_messages"		= nutrition_messages,
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
+<<<<<<< HEAD
 			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
+=======
+			"eating_privacy_global"		= eating_privacy_global,
+>>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 		)
 
 	//List to JSON
