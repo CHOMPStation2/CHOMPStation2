@@ -199,6 +199,7 @@
 			"nutrition_ex" = host.nutrition_message_visible,
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
+			"eating_privacy_local" = selected.eating_privacy_local,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
@@ -206,7 +207,6 @@
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
-<<<<<<< HEAD
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -231,9 +231,6 @@
 			"tail_extra_overlay2" = selected.tail_extra_overlay2
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
-=======
-			"eating_privacy_local" = selected.eating_privacy_local
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 		)
 
 		var/list/addons = list()
@@ -394,14 +391,11 @@
 		"nutrition_messages" = host.nutrition_messages,
 		"weight_message_visible" = host.weight_message_visible,
 		"weight_messages" = host.weight_messages,
-<<<<<<< HEAD
+		"eating_privacy_global" = host.eating_privacy_global,
 		//CHOMPEdit start, vore sprites
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply
 		//CHOMPEdit end
-=======
-		"eating_privacy_global" = host.eating_privacy_global
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 	)
 
 	return data
