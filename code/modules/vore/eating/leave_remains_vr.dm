@@ -67,17 +67,6 @@
 	if((H.species.name in remainless_species))	//Don't leave anything if there is nothing to leave
 		return
 
-<<<<<<< HEAD
-	var/bones_amount = rand(2,3) //some random variety in amount of bones left
-	if(prob(20))	//ribcage surviving whole is some luck
-		new /obj/item/weapon/digestion_remains/ribcage(src, owner, H) //CHOMPEdit
-		bones_amount--
-
-	while(bones_amount)	//throw in the rest
-		new /obj/item/weapon/digestion_remains(src, owner, H) //CHOMPEdit
-		bones_amount--
-
-=======
 	if(prob(20) && !H.isSynthetic())	//ribcage surviving whole is some luck //Edit: no robor
 		new /obj/item/weapon/digestion_remains/ribcage(src,owner)
 		bones_amount--
@@ -100,7 +89,6 @@
 
 	if(H.isSynthetic()) // Synths dont have skulls, atleast not any that survive digestion.
 		return			// TODO: add synth skulls and remove this.
->>>>>>> 0c6a56aea0... Merge pull request #14868 from ReoDaProtovali/RATTLEMEBONES
 	var/skull_amount = 1
 	if(H.species.skull_type)
 		new H.species.skull_type(src, owner, H) //CHOMPEdit
@@ -131,9 +119,6 @@
 	var/pred_ckey
 	var/pred_name
 
-<<<<<<< HEAD
-/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
-=======
 /obj/item/weapon/digestion_remains/synth
 	name = "ruined component"
 	desc = "A ruined component. It seems to have come from some sort of robotic entity, but there's no telling what kind."
@@ -141,8 +126,7 @@
 	drop_sound = 'sound/items/drop/device.ogg'   //not organic bones, so they get different sounds
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
-/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred)
->>>>>>> 0c6a56aea0... Merge pull request #14868 from ReoDaProtovali/RATTLEMEBONES
+/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey
