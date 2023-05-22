@@ -2014,10 +2014,10 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <Button fluid content="Selective Mode Preference" onClick={() => act('switch_selective_mode_pref')} />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={3}>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.eating_privacy_global} />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
         <Flex.Item basis="32%">
