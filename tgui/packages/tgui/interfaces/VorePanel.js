@@ -594,11 +594,8 @@ const VoreSelectedBellyOptions = (props, context) => {
     egg_name,
     selective_preference,
     save_digest_mode,
-<<<<<<< HEAD
-    vorespawn_blacklist,
-=======
     eating_privacy_local,
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
+    vorespawn_blacklist,
   } = belly;
 
   return (
@@ -1882,7 +1879,22 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Examine Weight Messages Inactive',
       },
     },
-<<<<<<< HEAD
+    eating_privacy_global: {
+      action: 'toggle_global_privacy',
+      test: eating_privacy_global,
+      tooltip: {
+        main:
+          'Sets default belly behaviour for vorebellies for announcing' +
+          ' ingesting or expelling prey' +
+          ' Overwritten by belly-specific preferences if set.',
+        enable: ' Click here to turn your messages subtle',
+        disable: ' Click here to turn your  messages loud',
+      },
+      content: {
+        enabled: 'Global Vore Privacy: Subtle',
+        disabled: 'Global Vore Privacy: Loud',
+      },
+    },
     liquid_receive: {
       action: 'toggle_liq_rec',
       test: liq_rec,
@@ -1920,22 +1932,6 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: 'Auto-Transfer Allowed',
         disabled: 'Do Not Allow Auto-Transfer',
-=======
-    eating_privacy_global: {
-      action: 'toggle_global_privacy',
-      test: eating_privacy_global,
-      tooltip: {
-        main:
-          'Sets default belly behaviour for vorebellies for announcing' +
-          ' ingesting or expelling prey' +
-          ' Overwritten by belly-specific preferences if set.',
-        enable: ' Click here to turn your messages subtle',
-        disable: ' Click here to turn your  messages loud',
-      },
-      content: {
-        enabled: 'Global Vore Privacy: Subtle',
-        disabled: 'Global Vore Privacy: Loud',
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
       },
     },
   };
@@ -2018,19 +2014,17 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <Button fluid content="Selective Mode Preference" onClick={() => act('switch_selective_mode_pref')} />
         </Flex.Item>
-<<<<<<< HEAD
+        <Flex.Item basis="32%" grow={3}>
+          <VoreUserPreferenceItem spec={preferences.eating_privacy_global} />
+        </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.autotransferable} />
         </Flex.Item>
-        <Flex.Item basis="49%">
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.liquid_receive} tooltipPosition="top" />
         </Flex.Item>
-        <Flex.Item basis="49%">
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.liquid_give} tooltipPosition="top" />
-=======
-        <Flex.Item basis="32%" grow={3}>
-          <VoreUserPreferenceItem spec={preferences.eating_privacy_global} />
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
         </Flex.Item>
       </Flex>
       <Section title="Aesthetic Preferences">
