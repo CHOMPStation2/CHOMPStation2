@@ -55,11 +55,8 @@
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
-<<<<<<< HEAD
-	var/is_feedable = TRUE					// If this belly shows up in belly selections for others. //CHOMPAdd
-=======
 	var/eating_privacy_local = "default"	//Overrides eating_privacy_global if not "default". Determines if attempt/success messages are subtle/loud
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
+	var/is_feedable = TRUE					// If this belly shows up in belly selections for others. //CHOMPAdd
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -612,15 +609,15 @@
 
 	//Determines privacy
 	var/privacy_range = world.view
-	var/privacy_volume = 100
+	//var/privacy_volume = 100
 	switch(eating_privacy_local) //Third case of if("loud") not defined, as it'd just leave privacy_range and volume untouched
 		if("default")
 			if(owner.eating_privacy_global)
 				privacy_range = 1
-				privacy_volume = 25
+				//privacy_volume = 25
 		if("subtle")
 			privacy_range = 1
-			privacy_volume = 25
+			//privacy_volume = 25
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
@@ -631,11 +628,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-<<<<<<< HEAD
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
-=======
-			playsound(src, soundfile, vol = privacy_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 
 	return count
 
@@ -696,15 +689,15 @@
 
 	//Determines privacy
 	var/privacy_range = world.view
-	var/privacy_volume = 100
+	//var/privacy_volume = 100
 	switch(eating_privacy_local) //Third case of if("loud") not defined, as it'd just leave privacy_range and volume untouched
 		if("default")
 			if(owner.eating_privacy_global)
 				privacy_range = 1
-				privacy_volume = 25
+				//privacy_volume = 25
 		if("subtle")
 			privacy_range = 1
-			privacy_volume = 25
+			//privacy_volume = 25
 
 	//Print notifications/sound if necessary
 	if(istype(M, /mob/observer)) //CHOMPEdit
@@ -717,11 +710,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-<<<<<<< HEAD
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOPEdit
-=======
-			playsound(src, soundfile, vol = privacy_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 	//Should fix your view not following you out of mobs sometimes!
 	if(ismob(M))
 		var/mob/ourmob = M
