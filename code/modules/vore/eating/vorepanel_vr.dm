@@ -199,6 +199,7 @@
 			"nutrition_ex" = host.nutrition_message_visible,
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
+			"eating_privacy_local" = selected.eating_privacy_local,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
@@ -390,6 +391,7 @@
 		"nutrition_messages" = host.nutrition_messages,
 		"weight_message_visible" = host.weight_message_visible,
 		"weight_messages" = host.weight_messages,
+		"eating_privacy_global" = host.eating_privacy_global,
 		//CHOMPEdit start, vore sprites
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply
@@ -1409,6 +1411,12 @@
 				host.client.prefs_vr.digestable = host.digestable
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_global_privacy")
+			host.eating_privacy_global = !host.eating_privacy_global
+			if(host.client.prefs_vr)
+				host.eating_privacy_global = host.eating_privacy_global
+			unsaved_changes = TRUE
+			return TRUE
 		if("toggle_devour")
 			host.devourable = !host.devourable
 			if(host.client.prefs_vr)
@@ -2277,6 +2285,12 @@
 				return FALSE
 
 			host.vore_selected.release_verb = new_release_verb
+			. = TRUE
+		if("b_eating_privacy")
+			var/privacy_choice = tgui_input_list(usr, "Choose your belly-specific preference. Default uses global preference!", "Eating message privacy", list("default", "subtle", "loud"), "default")
+			if(privacy_choice == null)
+				return FALSE
+			host.vore_selected.eating_privacy_local = privacy_choice
 			. = TRUE
 		if("b_fancy_sound")
 			host.vore_selected.fancy_vore = !host.vore_selected.fancy_vore
