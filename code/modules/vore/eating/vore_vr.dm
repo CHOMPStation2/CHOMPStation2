@@ -362,12 +362,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"nutrition_messages"		= nutrition_messages,
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
-<<<<<<< HEAD
+			"eating_privacy_global"		= eating_privacy_global,
 			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
-=======
-			"eating_privacy_global"		= eating_privacy_global,
->>>>>>> b17b584f03... Merge pull request #14874 from Runa-Dacino/subtlenoms
 		)
 
 	//List to JSON
