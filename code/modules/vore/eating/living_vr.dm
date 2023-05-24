@@ -959,7 +959,7 @@
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return
-	to_chat(src, "<span class='notice'>This item is not appropriate for ethical consumption.</span>")
+	to_chat(src, "<span class='notice'>This snack is too powerful to go down that easily.</span>") //CHOMPEdit
 	return
 
 /mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
