@@ -981,8 +981,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon = 'modular_chomp/icons/mob/widerobot_car_ch.dmi'
-	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_car_ch.dmi'
+	R.icon = 'modular_chomp/icons/mob/widerobot_car_ch.dmi' //CHOMPEdit
+	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_car_ch.dmi' //CHOMPEdit
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
