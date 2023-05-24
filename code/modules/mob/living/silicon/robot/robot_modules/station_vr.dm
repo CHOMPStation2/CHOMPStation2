@@ -940,6 +940,7 @@
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark",
+					"Borgi" = "borgi-mine", //CHOMPEdit
 					"Cat Mining" = "vixmine", //CHOMPEdit
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
 					"Drake" = "drakemine",
@@ -980,8 +981,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon = 'icons/mob/widerobot_car_vr.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_car_vr.dmi'
+	R.icon = 'modular_chomp/icons/mob/widerobot_car_ch.dmi'
+	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_car_ch.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
