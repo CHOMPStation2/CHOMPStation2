@@ -144,8 +144,15 @@
 		/obj/item/clothing/under/rank/neo_warden_red,
 		/obj/item/clothing/under/rank/neo_warden_red_skirt,
 		/obj/item/clothing/under/rank/neo_warden_blue,
+<<<<<<< HEAD
 		/obj/item/clothing/suit/neo_armsco_trench,
 		/obj/item/clothing/suit/neo_warden_heavy,
+=======
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_armsco_trench,
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_bluewarden,
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_warden_heavy,
+		/obj/item/clothing/under/rank/neo_sec_gorka,
+>>>>>>> 236fb54ed4... Merge pull request #14893 from KillianKirilenko/kk-nanofix
 		/obj/item/weapon/cartridge/security,
 		/obj/item/device/radio/headset/headset_sec,
 		/obj/item/device/radio/headset/headset_sec/alt,
