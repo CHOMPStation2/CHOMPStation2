@@ -134,6 +134,9 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "az" = (
@@ -1594,6 +1597,10 @@
 /obj/item/device/geiger/wall/south,
 /turf/template_noop,
 /area/template_noop)
+"UW" = (
+/obj/machinery/light,
+/turf/simulated/floor,
+/area/engineering/engine_room)
 
 (1,1,1) = {"
 aa
@@ -1969,7 +1976,7 @@ bQ
 cf
 cq
 cB
-aE
+UW
 cJ
 cY
 cN
