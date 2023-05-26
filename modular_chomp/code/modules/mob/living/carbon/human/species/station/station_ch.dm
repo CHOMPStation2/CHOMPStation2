@@ -8,7 +8,7 @@
 /datum/species/hi_zoxxen //zorrens get wierd chemistry because of their past of expirementing on themselves. Check the cataloguer for deathclaws
 	chem_strength_heal =    1.3
 	chemOD_threshold =		0.5
-	chemOD_mod =		1.3
+	chemOD_mod =		2
 	brute_mod = 1.1
 	burn_mod = 0.9
 
@@ -30,7 +30,7 @@
 
 /datum/species/fl_zorren
 	item_slowdown_mod = 1.2
-	slowdown = 1.2
+	slowdown = -0.2
 	brute_mod = 1.1
 	burn_mod = 0.9
 
