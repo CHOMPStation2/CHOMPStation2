@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 /* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
+=======
+/decl/poster/lewd
+	desc = "You shouldn't see this."
+	listing_name = "N/A"
+
+>>>>>>> f1fbfdd7fb... Merge pull request #14908 from lm40/master
 /decl/poster/vore_1
 	icon_state = "sbsposter1"
 	name = "Best Girl Pip"
 	desc = "A poster of the official NT Best Girl Mascot, Pip"
-/decl/poster/vore_2
+/decl/poster/lewd/vore_2
 	icon_state = "sbsposter2"
 	name = "AroButt"
 	desc = "A lewd view of KHI's cutest fops."
@@ -19,7 +26,7 @@
 	icon_state = "sbsposter5"
 	name = "The Inn"
 	desc = "A poster of a certain black-eyed shadekin."
-/decl/poster/vore_6
+/decl/poster/lewd/vore_6
 	icon_state = "sbsposter6"
 	name = "Mawletta"
 	desc = "The best view in the system."
@@ -104,7 +111,7 @@
 	icon_state = "sbsposter16"
 	name = "Borgar"
 	desc = "What do you want from Space McDonalds?"
-/decl/poster/vore_28
+/decl/poster/lewd/vore_28
 	icon_state = "sbsposter17"
 	name = "DiveIn"
 	desc = "A limited edition holographic poster that seems to feature subliminal suggestions and conditioning."
@@ -399,4 +406,7 @@
 	icon_state = "cafejoanposter"
 	name = "Cafe Risu"
 	desc = "A poster depicting a familiar face readying to slurp a big mug of coffee. The face of addiction is not always unpleasant. Sometimes it takes the form of a pretty squirrel partaking of her morning treat..."
+<<<<<<< HEAD
 */ //CHOMPedit end
+=======
+>>>>>>> f1fbfdd7fb... Merge pull request #14908 from lm40/master
