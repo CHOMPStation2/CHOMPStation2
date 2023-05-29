@@ -88,9 +88,6 @@
 
 /datum/trait/neutral/bloodsucker
 	name = "Bloodsucker, Obligate"
-<<<<<<< HEAD
-	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
-=======
 	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
 	tutorial = "This trait forces you to only consume blood - you cannot have normal food anymore. Vore is, of course, an exception! <br> \
 		You can satisfy this by clicking bloodbags in your hand on harm intent, drinking from glasses, blood tomatoes \
@@ -102,7 +99,6 @@
 		GRAB - Subtle, No Bleeding <br> \
 		HARM - Loud, Causes Bleeding"
 
->>>>>>> fbabdc47cb... Merge pull request #14887 from Runa-Dacino/TraitTutorial
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0, "bloodsucker" = TRUE) //The verb is given in human.dm
