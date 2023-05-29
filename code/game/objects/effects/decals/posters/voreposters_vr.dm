@@ -1,8 +1,8 @@
-/* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
 /decl/poster/lewd
 	desc = "You shouldn't see this."
 	listing_name = "N/A"
 
+/* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
 /decl/poster/vore_1
 	icon_state = "sbsposter1"
 	name = "Best Girl Pip"
