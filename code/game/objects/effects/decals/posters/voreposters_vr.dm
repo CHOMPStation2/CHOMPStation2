@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 /* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
-=======
 /decl/poster/lewd
 	desc = "You shouldn't see this."
 	listing_name = "N/A"
 
->>>>>>> f1fbfdd7fb... Merge pull request #14908 from lm40/master
 /decl/poster/vore_1
 	icon_state = "sbsposter1"
 	name = "Best Girl Pip"
@@ -406,7 +403,4 @@
 	icon_state = "cafejoanposter"
 	name = "Cafe Risu"
 	desc = "A poster depicting a familiar face readying to slurp a big mug of coffee. The face of addiction is not always unpleasant. Sometimes it takes the form of a pretty squirrel partaking of her morning treat..."
-<<<<<<< HEAD
 */ //CHOMPedit end
-=======
->>>>>>> f1fbfdd7fb... Merge pull request #14908 from lm40/master
