@@ -246,38 +246,6 @@
 /obj/item/weapon/storage/bag/ore/open(mob/user as mob) //No opening it for the weird UI of having shit-tons of ore inside it.
 	user.examinate(src)
 
-<<<<<<< HEAD
-/*
-/obj/item/weapon/storage/bag/ore/proc/update_ore_count() //Stolen from ore boxes. OLD way of storing ore.
-
-	stored_ore = list()
-
-	for(var/obj/item/weapon/ore/O in contents)
-		if(stored_ore[O.name])
-			stored_ore[O.name]++
-		else
-			stored_ore[O.name] = 1
-
-//CHOMPstation edit START
-/obj/item/weapon/storage/bag/ore/large
-	name = "large mining satchel"
-	desc = "This little bugger can be used to store and transport ores.  Appears to have upgraded storage space, up to three times your normal satchel!"
-	icon = 'icons/obj/mining_ch.dmi'
-	icon_state = "satchel_large"
-	max_storage_space = ITEMSIZE_COST_NORMAL * 75 // triple storage size of original
-
-/obj/item/weapon/storage/bag/ore/holding
-	name = "satchel of holding"
-	desc = "An ore satchel that opens into a localized pocket of bluespace."
-	icon = 'icons/obj/mining_ch.dmi'
-	icon_state = "satchel_bspace"
-	max_storage_space = ITEMSIZE_COST_NORMAL * 250 // ten times storage size of original
-
-//CHOMPstation edit END
-
-*/
-=======
->>>>>>> 9bb8cb0cc8... Merge pull request #14904 from Youtubeboy139/bags_galore
 // -----------------------------
 //          Plant bag
 // -----------------------------
