@@ -3096,11 +3096,8 @@
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\trait.dm"
-<<<<<<< HEAD
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\trait_ch.dm"
-=======
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\traits_tutorial.dm"
->>>>>>> fbabdc47cb... Merge pull request #14887 from Runa-Dacino/TraitTutorial
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\weaver_objs.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\weaver_recipies.dm"
 #include "code\modules\mob\living\carbon\human\species\virtual_reality\avatar.dm"
