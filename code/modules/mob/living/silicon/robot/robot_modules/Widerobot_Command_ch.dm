@@ -36,7 +36,8 @@
 	name = "Unity Hound Module"
 	sprites = list(
 					"Kcom" = "kcom",
-					"Raptor V-4.1" = "chraptor"
+					"Raptor V-4.1" = "chraptor",
+					"Borgi" = "borgi"
 					)
 	channels = list(
 			"Medical" = 1,
