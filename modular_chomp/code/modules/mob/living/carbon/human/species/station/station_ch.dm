@@ -6,9 +6,8 @@
 //So both of this are based off Fennec foxes I belivive. Those are desert critters, giving them more warm focused levels. And for variety giving them minor brute weakness and minor burn resistant
 //I also want to make a dig because fennec foxes actually make burrows and such, but I can't figure out how to do it in a way that is both flavorful but not abuseable
 /datum/species/hi_zoxxen //zorrens get wierd chemistry because of their past of expirementing on themselves. Check the cataloguer for deathclaws
-	chem_strength_heal =    1.3
-	chemOD_threshold =		0.5
-	chemOD_mod =		2
+	chemOD_threshold =		0.75
+	radiation_mod = 0.5
 	brute_mod = 1.1
 	burn_mod = 0.9
 
