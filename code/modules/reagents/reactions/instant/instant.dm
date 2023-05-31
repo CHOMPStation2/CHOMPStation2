@@ -1217,8 +1217,8 @@
 	name = "Biomass"
 	id = "biomass"
 	result = "biomass"
-	required_reagents = list("protein" = 1, "sugar" = 1, "phoron" = 1)
-	result_amount = 1	// Roughly 20u per phoron sheet
+	required_reagents = list("protein" = 2, "sugar" = 2, "water" = 2)
+	result_amount = 1	//CHOMPedit: No longer using phoron for biomass to streamline resleeving. Consider changing if limb/organ printing becomes an issue.
 
 // Neutralization.
 

@@ -722,3 +722,11 @@
 /obj/item/weapon/paper/manifest
 	name = "supply manifest"
 	var/is_copy = 1
+
+// CHOMPedit start: Paperwork addition.
+
+/obj/item/weapon/paper/biomass
+	name = "Chemistry PSA"
+	info = "To the Nanotrasen medical staff: Astute scientist Flint Lockwood has discovered a process for using water as a substitute to phoron for biomass. The new recipe is now one part animal nutriment, one part sugar and one part water. Happy resleeving!"
+
+// CHOMPedit end
