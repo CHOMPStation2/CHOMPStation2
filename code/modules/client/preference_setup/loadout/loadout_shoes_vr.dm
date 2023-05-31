@@ -37,7 +37,14 @@
 	display_name = "flats, alt"
 	path = /obj/item/clothing/shoes/flats/white/color/alt
 
-<<<<<<< HEAD
+/datum/gear/shoes/sandals_elegant
+	display_name = "sandals, elegant"
+	path = /obj/item/clothing/shoes/sandals_elegant
+
+/datum/gear/shoes/sandals_elegant/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
 //CHOMP ADDITION, trying to make a no shoes shoe option
 /datum/gear/shoes/none
 	display_name = "Adjust - No Shoes"
@@ -51,12 +58,3 @@
 /obj/item/clothing/shoes/none/Initialize()
 	. = INITIALIZE_HINT_QDEL //Fuck them shoes
 	..()
-=======
-/datum/gear/shoes/sandals_elegant
-	display_name = "sandals, elegant"
-	path = /obj/item/clothing/shoes/sandals_elegant
-
-/datum/gear/shoes/sandals_elegant/New()
-	..()
-	gear_tweaks += gear_tweak_free_color_choice
->>>>>>> 29805f0d16... Merge pull request #14922 from Runa-Dacino/fancysandals
