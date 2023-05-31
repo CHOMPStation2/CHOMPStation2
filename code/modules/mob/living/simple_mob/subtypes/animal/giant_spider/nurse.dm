@@ -82,6 +82,12 @@
 		var/mob/living/L = A
 		if(!L.stat)
 			return ..()
+		else //CHOMPStation edit: no infinite spider glitch for buckled mobs
+			if (L.anchored && L.buckled && !(L.pulledby || L.buckled.pulledby)) //don't have them trying to unbuckle someone on something that's being pulled because that's just annoying as fuck esp for a medic or something
+				L.buckled.unbuckle_mob(L)
+			if (!L.anchored)
+				return spin_cocoon(L)
+			return
 
 	if(!istype(A, /atom/movable))
 		return
