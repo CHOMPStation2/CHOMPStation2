@@ -91,7 +91,7 @@
 	icon_state = "meb_m_hi"
 	maxcharge = 10000
 	charge_amount = 20
-	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
+	origin_tech = list(TECH_POWER = 5, TECH_ARCANE = 1)
 
 /obj/item/weapon/cell/device/giga/empty/Initialize()
 	. = ..()
