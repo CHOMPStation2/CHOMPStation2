@@ -31,6 +31,10 @@
 	name = "Poi Valley - Spooder Explorers"
 	ambience = AMBIENCE_RUINS
 
+/area/submap/CultBar
+	name = "POI - Cult Bar"
+	ambience = AMBIENCE_GHOSTLY
+
 /area/submap/demonranch
 	name = "Poi Valley - Demon Ranch"
 	ambience = AMBIENCE_UNHOLY

@@ -55,6 +55,8 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 1
 	},
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/spaceup,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "dE" = (
@@ -753,6 +755,8 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 5
 	},
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/tequila,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/doctorsdelight,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "RL" = (
@@ -830,11 +834,6 @@
 /mob/living/simple_mob/construct/harvester,
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
-/area/submap/settlement)
-"YP" = (
-/mob/living/simple_mob/construct/wraith,
-/obj/effect/floor_decal/corner/red/diagonal,
-/turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "ZR" = (
 /obj/structure/table/wooden_reinforced,
@@ -2138,7 +2137,7 @@ zh
 Xm
 Do
 zh
-YP
+zh
 zh
 zh
 TU
