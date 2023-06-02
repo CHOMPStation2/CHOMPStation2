@@ -228,7 +228,7 @@
 	charge_amount = 90 // 2.5%.
 	maxcharge = 3600
 	charge_delay = 50
-	var/swaps_to = null
+	swaps_to = null
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6, TECH_PHORON = 6, TECH_ARCANE = 1, TECH_PRECURSOR = 1)
 
 /obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty/Initialize()
