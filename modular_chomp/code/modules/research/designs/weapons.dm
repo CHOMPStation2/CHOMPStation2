@@ -39,35 +39,35 @@
 /datum/design/item/weapon/phase/frontier_holdout
 	id = "holdout frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
-	materials = list(MAT_STEEL = 6000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_METALHYDROGEN = 150, MAT_VERDANTIUM = 100, MAT_PHORON = 1000)
+	materials = list(MAT_STEEL = 6000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 100, MAT_PHORON = 1000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/holdout
 	sort_string = "MACAE"
 
 /datum/design/item/weapon/phase/frontier_phaser
 	id = "frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
-	materials = list(MAT_STEEL = 7000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_METALHYDROGEN = 200, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
+	materials = list(MAT_STEEL = 7000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier
 	sort_string = "MACAF"
 
 /datum/design/item/weapon/phase/frontier_carbine
 	id = "carbine frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 8, TECH_MATERIAL = 6, TECH_PHORON = 6)
-	materials = list(MAT_STEEL = 6500, MAT_GLASS = 900, MAT_DURASTEEL = 150, MAT_METALHYDROGEN = 250, MAT_VERDANTIUM = 200, MAT_PHORON = 4000)
+	materials = list(MAT_STEEL = 6500, MAT_GLASS = 900, MAT_DURASTEEL = 150, MAT_VERDANTIUM = 200, MAT_PHORON = 4000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/carbine
 	sort_string = "MACAG"
 
 /datum/design/item/weapon/phase/frontier_rifle
 	id = "marksman rifle frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
-	materials = list(MAT_STEEL = 8000, MAT_GLASS = 900, MAT_DURASTEEL = 200, MAT_METALHYDROGEN = 300, MAT_VERDANTIUM = 250, MAT_PHORON = 2000)
+	materials = list(MAT_STEEL = 8000, MAT_GLASS = 900, MAT_DURASTEEL = 200, MAT_VERDANTIUM = 250, MAT_PHORON = 2000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/rifle
 	sort_string = "MACAH"
 
 /datum/design/item/weapon/phase/frontier_handbow
 	id = "handbow frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
-	materials = list(MAT_STEEL = 5000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_METALHYDROGEN = 200, MAT_VERDANTIUM = 150, MAT_PHORON = 1000)
+	materials = list(MAT_STEEL = 5000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 1000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/handbow
 	sort_string = "MACAI"
 
@@ -79,3 +79,10 @@
 	build_path = /obj/item/weapon/gun/projectile/caseless/prototype
 	sort_string = "MACBA"
 
+/datum/design/item/weapon/energy/lasercannon
+	desc = "The lasing medium of this prototype is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core."
+	id = "lasercannon"
+	req_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 6, TECH_POWER = 5)
+	materials = list(MAT_STEEL = 4000, MAT_GLASS = 1000, MAT_DIAMOND = 2000, MAT_TITANIUM = 4000, MAT_LEAD = 4000, MAT_URANIUM = 5000)
+	build_path = /obj/item/weapon/gun/energy/lasercannon
+	sort_string = "MAAAD"
