@@ -11,6 +11,7 @@
 	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
+	force = 0 //CHOMPEdit
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse	//This type is what kind of mob it will try to turn people into!
 	var/cooldown = 0											//automatically set when used
 	var/cooldown_time = 15 SECONDS								//the amount of time between shots
@@ -84,6 +85,10 @@
 	var/mob/living/M = target
 	if(!istype(M))
 		return
+	//CHOMPADDITION: prevent trding bodies that have no mind and are carbon, mianly fixes VR crash
+	if(istype(M,/mob/living/carbon) && !M.mind)
+		return
+	//CHOMPADDITION: prevent trding bodies that have no mind and are carbon, mianly fixes VR crash
 	if(target != firer)	//If you shot yourself, you probably want to be TFed so don't bother with prefs.
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
@@ -244,6 +249,7 @@
 	new_mob.vore_smell = vore_smell
 	new_mob.nutrition_message_visible = nutrition_message_visible
 	new_mob.allow_spontaneous_tf = allow_spontaneous_tf
+	new_mob.eating_privacy_global = eating_privacy_global
 
 /////SUBTYPES/////
 

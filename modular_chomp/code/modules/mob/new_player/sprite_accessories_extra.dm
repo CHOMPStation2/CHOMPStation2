@@ -117,6 +117,20 @@
 	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
 
+/datum/sprite_accessory/marking/ch/tyranid_head
+	name = "Tyranid Head (Use with Armor)"
+	icon_state = "tyranid"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_HEAD)
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/tyranid_head_armor
+	name = "Tyranid Head (Armor)"
+	icon_state = "tyranidarmor"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_HEAD)
+	body_parts = list(BP_HEAD)
+
 /datum/sprite_accessory/marking/ch/tyranid_legs
 	name = "Tyranid Legs (Use with Armor)"
 	icon_state = "tyranid"

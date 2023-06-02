@@ -37,7 +37,7 @@
 	faction = "carp"
 	maxHealth = 25
 	health = 25
-	movement_cooldown = 0 // Carp go fast
+	movement_cooldown = -2
 	hovering = TRUE
 
 	response_help = "pets the"
@@ -86,7 +86,7 @@
 
 	maxHealth = 50
 	health = 50
-	movement_cooldown = 5 // Slower than the younger carp.
+	movement_cooldown = 1 // Slower than the younger carp.
 	mob_size = MOB_LARGE
 
 	pixel_x = -16
@@ -107,7 +107,7 @@
 
 	maxHealth = 230
 	health = 230
-	movement_cooldown = 10
+	movement_cooldown = 3
 
 	melee_damage_lower = 15 // About 20 DPS.
 	melee_damage_upper = 25
@@ -157,5 +157,3 @@
 /mob/living/simple_mob/animal/space/carp/holographic/death()
 	..()
 	derez()
-
-

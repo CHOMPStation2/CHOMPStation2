@@ -273,10 +273,14 @@
 			if(!is_authenticated(usr))
 				return
 
-			call_shuttle_proc(usr)
-			if(emergency_shuttle.online())
-				post_status(src, "shuttle", user = usr)
-			setMenuState(usr, COMM_SCREEN_MAIN)
+			//CHOMPEdit Start - Add confirmation message
+			var/response = tgui_alert(usr, "OOC: You are required to Ahelp first before calling the shuttle. Please obtain confirmation from staff before calling the shuttle. \n\n Are you sure you want to call the shuttle?", "Confirm", list("Yes", "No"))
+
+			if(response == "Yes") //CHOMPEdit End
+				call_shuttle_proc(usr)
+				if(emergency_shuttle.online())
+					post_status(src, "shuttle", user = usr)
+				setMenuState(usr, COMM_SCREEN_MAIN)
 
 		if("cancelshuttle")
 			if(isAI(usr) || isrobot(usr))

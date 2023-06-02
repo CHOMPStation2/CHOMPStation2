@@ -30,8 +30,8 @@
 	breath_type = null
 	poison_type = null
 
-	male_scream_sound = null
-	female_scream_sound = null
+	// male_scream_sound = null
+	// female_scream_sound = null
 
 	virus_immune = 1
 	blood_volume = 0
@@ -41,6 +41,8 @@
 	//radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
 	darksight = 10
 	siemens_coefficient = 2
+	brute_mod =        0.8
+	burn_mod =        1.5
 	emp_dmg_mod = 0.8
 	emp_sensitivity = EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG
 	item_slowdown_mod = 1.5	//Gentle encouragement to let others wear you
@@ -58,8 +60,7 @@
 
 	rarity_value = 5
 
-	female_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
-	male_scream_sound = 'modular_chomp/sound/voice/scream_silicon.ogg'
+	species_sounds = "Robotic"
 
 	crit_mod = 4	//Unable to go crit
 	var/obj/item/weapon/rig/protean/OurRig

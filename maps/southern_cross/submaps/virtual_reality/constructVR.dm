@@ -5,6 +5,37 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/outdoors/dirt
 	limit_mob_size = FALSE
+	limit_dark_respite = TRUE
+
+/area/vr/space
+	name = "VR Space" //copypasta time
+	icon_state = "space"
+	requires_power = 1
+	always_unpowered = 1
+	dynamic_lighting = 0
+	has_gravity = 0
+	power_light = 0
+	power_equip = 0
+	power_environ = 0
+	ambience = list('sound/ambience/ambispace.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg','sound/music/traitor.ogg','sound/ambience/space/space_serithi.ogg','sound/music/freefallin.mid')
+	base_turf = /turf/space
+	ambience = AMBIENCE_SPACE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/space/atmosalert()
+	return
+
+/area/space/fire_alert()
+	return
+
+/area/space/fire_reset()
+	return
+
+/area/space/readyalert()
+	return
+
+/area/space/partyalert()
+	return
 
 
 /area/vr/outdoors

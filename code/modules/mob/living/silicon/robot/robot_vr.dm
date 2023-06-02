@@ -170,7 +170,7 @@
 			icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
-		else if(icontype == "Raptor V-4") //Added for raptor sprites
+		else if(icontype == "Raptor V-4" || icontype == "Raptor V-4000") //Added for raptor sprites
 			icon = 'icons/mob/raptorborg/raptor.dmi'
 		else if(icontype == "Raptor V-4.1") //CHOMPADDITION: letting us redurect to our raptor dmi
 			icon = 'modular_chomp/icons/mob/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
@@ -196,9 +196,9 @@
 					amount = water.energy
 				water.use_charge(amount)
 				E.reagents.add_reagent("water", amount)
-				to_chat(src, "You refill the extinguisher using your water reserves.")
+				to_chat(src, "<span class='filter_notice'>You refill the extinguisher using your water reserves.</span>")
 			else
-				to_chat(src, "Insufficient water reserves.")
+				to_chat(src, "<span class='filter_notice'>Insufficient water reserves.</span>")
 
 //RIDING
 /datum/riding/dogborg

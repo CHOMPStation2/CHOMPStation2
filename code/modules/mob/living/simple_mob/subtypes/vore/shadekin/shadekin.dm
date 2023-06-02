@@ -13,7 +13,7 @@
 	maxHealth = 200
 	health = 200
 
-	movement_cooldown = 2
+	movement_cooldown = -1.5
 	see_in_dark = 10 //SHADEkin
 	has_hands = TRUE //Pawbs
 	seedarkness = FALSE //SHAAAADEkin
@@ -78,6 +78,8 @@
 	var/list/shadekin_abilities
 	var/check_for_observer = FALSE
 	var/check_timer = 0
+
+	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 
 /mob/living/simple_mob/shadekin/Initialize()
 	//You spawned the prototype, and want a totally random one.
@@ -201,7 +203,7 @@
 		density = FALSE
 
 	//Convert spare nutrition into energy at a certain ratio
-	if(. && nutrition > initial(nutrition) && energy < 100)
+	if(. && nutrition > initial(nutrition) && energy < 100 && !(ability_flags | AB_DARK_RESPITE)) //CHOMPEdit - Dark Respite
 		nutrition = max(0, nutrition-5)
 		energy = min(100,energy+1)
 	if(!client && check_for_observer && check_timer++ > 5)
@@ -237,13 +239,85 @@
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
+	//CHOMPEdit Begin - Dark Respite
+	if(respite_activating)
+		return
+	//CHOMPEdit End
 	cut_overlays()
-	icon_state = ""
 	flick("tp_out",src)
-	spawn(1 SECOND)
-		qdel(src) //Back from whence you came!
 
-	. = ..(FALSE, deathmessage)
+	//CHOMPEdit Begin - Actually phase to the dark on death
+	var/area/current_area = get_area(src)
+	if((ability_flags & AB_DARK_RESPITE) || current_area.limit_dark_respite)
+		icon_state = ""
+		spawn(1 SECOND)
+			qdel(src) //Back from whence you came!
+
+		return ..(FALSE, deathmessage)
+
+
+	var/list/floors = list()
+	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
+		floors.Add(floor)
+	if(!LAZYLEN(floors))
+		log_and_message_admins("[src] died outside of the dark but there were no valid floors to warp to")
+		icon_state = ""
+		spawn(1 SECOND)
+			qdel(src) //Back from whence you came!
+
+		return ..(FALSE, deathmessage)
+
+	src.visible_message("<b>\The [src.name]</b> [deathmessage]")
+	respite_activating = TRUE
+
+	drop_l_hand()
+	drop_r_hand()
+
+	energy = 0
+	ability_flags |= AB_DARK_RESPITE
+	invisibility = INVISIBILITY_LEVEL_TWO
+
+	adjustFireLoss(-(getFireLoss() / 2))
+	adjustBruteLoss(-(getBruteLoss() / 2))
+	adjustToxLoss(-(getToxLoss() / 2))
+	Stun(10)
+	movement_cooldown = 5
+	nutrition = 0
+
+	if(istype(src.loc, /obj/belly))
+		//Yay digestion... presumably...
+		var/obj/belly/belly = src.loc
+		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
+		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]</span>")
+		forceMove(pick(floors))
+		flick("tp_in",src)
+		respite_activating = FALSE
+		belly.owner.update_fullness()
+		clear_fullscreen("belly")
+		if(hud_used)
+			if(!hud_used.hud_shown)
+				toggle_hud_vis()
+		stop_sound_channel(CHANNEL_PREYLOOP)
+
+
+		spawn(10 MINUTES)
+			ability_flags &= ~AB_DARK_RESPITE
+			movement_cooldown = initial(movement_cooldown)
+			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	else
+		spawn(1 SECOND)
+			respite_activating = FALSE
+			forceMove(pick(floors))
+			update_icon()
+			flick("tp_in",src)
+			invisibility = initial(invisibility)
+			respite_activating = FALSE
+
+		spawn(15 MINUTES)
+			ability_flags &= ~AB_DARK_RESPITE
+			movement_cooldown = initial(movement_cooldown)
+			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal
 //Blue-eyes want to nom people to heal them
@@ -321,6 +395,10 @@
 
 	if(energy_adminbuse)
 		energy = 100
+	//CHOMPEdit Begin - Dark Respite
+	if(ability_flags & AB_DARK_RESPITE)
+		energy = 0
+	//CHOMPEdit End
 
 	//Update turf darkness hud
 	if(darkhud)

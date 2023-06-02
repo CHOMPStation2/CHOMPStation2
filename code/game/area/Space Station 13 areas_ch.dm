@@ -118,3 +118,14 @@
 /area/rnd/research/particleaccelerator
 	name = "\improper Particle Accelerator Lab"
 	icon_state = "toxlab"
+
+/area/shadekin
+	name = "\improper Shadekin Retreat"
+	icon_state = "blue"
+	requires_power = 0
+	limit_dark_respite = TRUE
+	ambience = AMBIENCE_OTHERWORLDLY
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED
+
+/area/security/nuke_storage
+	flags = PHASE_SHIELDED

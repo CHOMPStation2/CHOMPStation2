@@ -260,10 +260,10 @@
 	name = "Resto-Bar"
 	description = "A large restaurant for food and drink, two overnight rental rooms and a small garden."
 
-/datum/map_template/shelter/superpose/BordcastingPod
-	shelter_id = "BordcastingPod"
-	mappath = "modular_chomp/maps/submaps/shelters/BrodcastingPod-11x9.dmm"
-	name = "Brodcasting Pod"
+/datum/map_template/shelter/superpose/BroadcastingPod
+	shelter_id = "BroadcastingPod"
+	mappath = "modular_chomp/maps/submaps/shelters/BroadcastingPod-11x9.dmm"
+	name = "Broadcasting Pod"
 	description = "A small NanoTransen news pod, everything you need to start live news in the most inhospitable places!"
 
 /datum/map_template/shelter/superpose/DemonPoolV2
@@ -314,3 +314,15 @@
 	mappath = "modular_chomp/maps/submaps/shelters/HillOutpost-15x11.dmm"
 	name = "Hill Outpost"
 	description = "A small camping site on top of a hill, with all the basics for survival."
+
+/datum/map_template/shelter/superpose/pizzaparlor
+	shelter_id = "PizzaParlor"
+	mappath = "modular_chomp/maps/submaps/shelters/PizzaParlor-18x19.dmm"
+	name = "Pizza Parlor"
+	description = "A small locally owned pizza parlor, now with delivery services."
+
+/datum/map_template/shelter/superpose/GrandLibrary
+	shelter_id = "GrandLibrary"
+	mappath = "modular_chomp/maps/submaps/shelters/GrandLibrary-31x24.dmm"
+	name = "Pizza Parlor"
+	description = "A grand ornate library, more books than you can count."

@@ -48,7 +48,10 @@
 	BITSET(hud_updateflag, LIFE_HUD)
 
 	//Handle species-specific deaths.
-	species.handle_death(src)
+	//CHOMPEdit start - Enable not-actually-dying being a species effect
+	if(species.handle_death(src))
+		return
+	//CHOMPEdit end
 	animate_tail_stop()
 	stop_flying() //VOREStation Edit.
 
@@ -87,8 +90,13 @@
 			if(O.client && O.client.is_preference_enabled(/datum/client_preference/show_dsay))
 				to_chat(O, "<span class='deadsay'><b>[src]</b> has died in <b>[get_area(src)]</b>. [ghost_follow_link(src, O)] </span>")
 
+	/* // CHOMPEdit Start: Replacing this with our own death sounds. :3
 	if(!gibbed && species.death_sound)
 		playsound(src, species.death_sound, 80, 1, 1)
+	*/
+	if(!gibbed && !isbelly(loc))
+		playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), src.species.death_volume, 1, 20, volume_channel = VOLUME_CHANNEL_SPECIES_SOUNDS)
+	// CHOMPEdit End
 
 	if(ticker && ticker.mode)
 		sql_report_death(src)

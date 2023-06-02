@@ -1,7 +1,7 @@
 /datum/job/noncrew
     title = JOB_OUTSIDER
     disallow_jobhop = TRUE
-    total_positions = 3
+    total_positions = 6
     spawn_positions = 6
     supervisors = "nobody, but you fall under NanoTrasen's Unauthorized Personnel SOP while on NT property"
 

@@ -49,10 +49,6 @@
 	name = "POI Wilderness - Acrid Lake"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/CultBar
-	name = "POI - Cult Bar"
-	ambience = AMBIENCE_GHOSTLY
-
 /area/submap/DeathDen
 	name = "POI Wilderness - Death Den"
 	ambience = AMBIENCE_FOREBODING

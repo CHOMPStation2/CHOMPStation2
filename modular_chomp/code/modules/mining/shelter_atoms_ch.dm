@@ -85,7 +85,7 @@
 
 /area/survivalpod/superpose/RestaurationBar
 
-/area/survivalpod/superpose/BordcastingPod
+/area/survivalpod/superpose/BroadcastingPod
 
 /area/survivalpod/superpose/DemonPoolV2
 
@@ -102,6 +102,10 @@
 /area/survivalpod/superpose/SurvivalSecurityV2
 
 /area/survivalpod/superpose/HillOutpost
+
+/area/survivalpod/superpose/PizzaParlor
+
+/area/survivalpod/superpose/GrandLibrary
 
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"

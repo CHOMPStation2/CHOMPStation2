@@ -179,7 +179,7 @@
 			else
 				spawn(0)
 					M.show_message(message, 2)
-					if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(M.Adjacent(src) && M.is_preference_enabled(/datum/client_preference/say_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
 						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
 							M << sound(pick(voice_sounds_list), volume = 25)
 
@@ -474,13 +474,11 @@
 
 	for(var/mob/M as anything in m_viewers)
 		if(M)
-			if(isobserver(M))
-				message = "[message] ([ghost_follow_link(src, M)])"
 			if(isnewplayer(M))
 				continue
 			if(M.stat == UNCONSCIOUS || M.sleeping > 0)
 				continue
-			to_chat(M, message)
+			to_chat(M, "<span class='filter_say'>[isobserver(M) ? "[message] ([ghost_follow_link(src, M)])" : message]</span>")
 	log_emote(message, src)
 
 /mob/verb/select_speech_bubble()

@@ -147,3 +147,7 @@
 	name = "Fat Sect Drone (Taur)"
 	icon_state = "fatsectdrone"
 	extra_overlay = "fatsectdrone_markings"
+
+/datum/sprite_accessory/tail/taur/ch/kitsune
+	name = "Kitsune (Taur)"
+	icon_state = "kitsune"

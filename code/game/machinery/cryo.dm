@@ -273,6 +273,7 @@
 	if(occupant.bodytemperature < 261 && occupant.bodytemperature >= 70) //Patch by Aranclanos to stop people from taking burn damage after being ejected
 		occupant.bodytemperature = 261									  // Changed to 70 from 140 by Zuhayr due to reoccurance of bug.
 	unbuckle_mob(occupant, force = TRUE)
+	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 	occupant = null
 	current_heat_capacity = initial(current_heat_capacity)
 	update_use_power(USE_POWER_IDLE)
@@ -304,6 +305,7 @@
 	if(M.health > -100 && (M.health < 0 || M.sleeping))
 		to_chat(M, "<span class='notice'><b>You feel a cold liquid surround you. Your skin starts to freeze up.</b></span>")
 	occupant = M
+	occupant.cozyloop.start() // CHOMPStation Add: Cozy Music
 	buckle_mob(occupant, forced = TRUE, check_loc = FALSE)
 	vis_contents |= occupant
 	occupant.pixel_y += 19

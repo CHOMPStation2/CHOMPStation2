@@ -24,26 +24,46 @@
 /obj/machinery/conveyor{
 	id = "anolongstorage"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/research/xenoarcheology)
 "ai" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/research/xenoarcheology)
 "aj" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/research/xenoarcheology)
 "ak" = (
 /obj/machinery/conveyor_switch{
 	id = "anolongstorage";
 	req_access = list(65)
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/research/xenoarcheology)
 "al" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/research/xenoarcheology)
 "am" = (
 /turf/simulated/wall/r_wall,
@@ -1796,7 +1816,9 @@
 	dir = 1
 	},
 /obj/machinery/floodlight,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "dE" = (
 /obj/machinery/artifact_scanpad,
@@ -1839,7 +1861,9 @@
 	pixel_x = 2;
 	pixel_y = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "dK" = (
 /obj/machinery/computer/crew{
@@ -1977,7 +2001,9 @@
 	pixel_x = 2;
 	pixel_y = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "dW" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -2227,7 +2253,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "ez" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -3194,7 +3222,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "gq" = (
 /obj/machinery/light/small{
@@ -3203,7 +3233,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "gr" = (
 /obj/item/stack/flag/red{
@@ -3216,13 +3248,17 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "gt" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "gu" = (
 /obj/structure/cable{
@@ -3366,7 +3402,10 @@
 /area/surface/cave/explored/normal)
 "gM" = (
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "gN" = (
@@ -4006,7 +4045,9 @@
 	dir = 8
 	},
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "ij" = (
 /obj/structure/cable/heavyduty{
@@ -4016,7 +4057,10 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "ik" = (
@@ -4027,25 +4071,35 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "il" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "im" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "in" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "io" = (
@@ -4064,21 +4118,29 @@
 /obj/vehicle/train/engine{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "ir" = (
 /obj/machinery/mining/brace,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "is" = (
 /obj/machinery/mining/drill,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "it" = (
 /obj/vehicle/train/trolley{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "iw" = (
 /obj/machinery/power/apc{
@@ -4089,22 +4151,31 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "ix" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "iz" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "iA" = (
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "iB" = (
@@ -4127,7 +4198,10 @@
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "kX" = (
@@ -4158,7 +4232,10 @@
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "ot" = (
@@ -4186,7 +4263,10 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "qC" = (
@@ -4225,13 +4305,19 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "xh" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "zJ" = (
@@ -4239,7 +4325,10 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "zL" = (
@@ -4252,7 +4341,10 @@
 	},
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "Co" = (
@@ -4260,7 +4352,10 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "Cx" = (
@@ -4275,7 +4370,10 @@
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "EC" = (
@@ -4322,7 +4420,10 @@
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "NL" = (
@@ -4350,13 +4451,19 @@
 	starts_with = list(/obj/item/weapon/tool/crowbar/red,/obj/item/weapon/extinguisher/mini,/obj/item/device/radio,/obj/item/weapon/light/bulb)
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "Qy" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "RX" = (
@@ -4368,7 +4475,10 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "Ug" = (
@@ -4380,7 +4490,10 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
 "VP" = (
@@ -4396,7 +4509,10 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "Zo" = (

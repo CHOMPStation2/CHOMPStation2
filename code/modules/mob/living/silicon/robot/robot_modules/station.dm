@@ -593,6 +593,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/mop(src)
 	src.modules += new /obj/item/pupscrubber(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("lube", 250)
 	src.emag.name = "Lube spray"
@@ -766,6 +767,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	// New Emag gear for the minebots!
 	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
@@ -897,6 +899,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/extinguisher(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
+	src.modules += new /obj/item/weapon/pipe_dispenser(src)
 
 	robot.internals = new/obj/item/weapon/tank/jetpack/carbondioxide(src)
 	src.modules += robot.internals

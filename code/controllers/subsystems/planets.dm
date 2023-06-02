@@ -40,7 +40,7 @@ SUBSYSTEM_DEF(planets)
 		var/datum/planet/P = z_to_planet[T.z]
 		if(!istype(P))
 			return
-		if(istype(T, /turf/unsimulated/wall/planetary))	
+		if(istype(T, /turf/unsimulated/wall/planetary))
 			P.planet_walls += T
 		else if(istype(T, /turf/simulated) && T.is_outdoors())
 			P.planet_floors += T
@@ -71,8 +71,8 @@ SUBSYSTEM_DEF(planets)
 		updateSunlight(P)
 		if(MC_TICK_CHECK)
 			return
-	
-	#ifndef UNIT_TEST // Don't be updating temperatures and such during unit tests
+
+	#if !(UNIT_TEST) // Don't be updating temperatures and such during unit tests // CHOMPedit: That's not how ifndef works!
 	var/list/needs_temp_update = src.needs_temp_update
 	while(needs_temp_update.len)
 		var/datum/planet/P = needs_temp_update[needs_temp_update.len]
@@ -105,7 +105,7 @@ SUBSYSTEM_DEF(planets)
 /datum/controller/subsystem/planets/proc/updateSunlight(var/datum/planet/P)
 	var/new_brightness = P.sun["brightness"]
 	P.sun_holder.update_brightness(new_brightness, P.planet_floors)
-	
+
 	var/new_color = P.sun["color"]
 	P.sun_holder.update_color(new_color)
 

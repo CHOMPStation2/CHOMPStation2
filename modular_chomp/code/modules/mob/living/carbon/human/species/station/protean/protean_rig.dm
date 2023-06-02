@@ -357,6 +357,7 @@
 		H.SetBlinded(0)
 		H.eye_blurry = 0
 		H.ear_deaf = 0
+		H.deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness
 		H.ear_damage = 0
 		H.heal_overall_damage(H.getActualBruteLoss(), H.getActualFireLoss(), 1)
 		for(var/I in H.organs_by_name)
