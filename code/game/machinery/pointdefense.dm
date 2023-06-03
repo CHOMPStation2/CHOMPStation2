@@ -138,8 +138,13 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
 	var/last_shot = 0
 	var/kill_range = 18
+<<<<<<< HEAD
 	var/rotation_speed = 4.5 SECONDS  //How quickly we turn to face threats
 	var/weakref/engaging = null // The meteor we're shooting at
+=======
+	var/rotation_speed = 0.25 SECONDS  //How quickly we turn to face threats
+	var/datum/weakref/engaging = null // The meteor we're shooting at
+>>>>>>> b22b9e6e48... Merge pull request #14936 from ItsSelis/selis-weakrefs
 	var/id_tag = null
 
 /obj/machinery/pointdefense/Initialize()
@@ -199,7 +204,11 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			return FALSE
 	return TRUE
 
+<<<<<<< HEAD
 /obj/machinery/pointdefense/proc/Shoot(var/weakref/target)
+=======
+/obj/machinery/power/pointdefense/proc/Shoot(var/datum/weakref/target)
+>>>>>>> b22b9e6e48... Merge pull request #14936 from ItsSelis/selis-weakrefs
 	var/obj/effect/meteor/M = target.resolve()
 	if(!istype(M))
 		engaging = null
@@ -213,7 +222,12 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	set_dir(ATAN2(transform.b, transform.a) > 0 ? NORTH : SOUTH)
 
+<<<<<<< HEAD
 /obj/machinery/pointdefense/proc/finish_shot(var/weakref/target)
+=======
+/obj/machinery/power/pointdefense/proc/finish_shot(var/datum/weakref/target)
+
+>>>>>>> b22b9e6e48... Merge pull request #14936 from ItsSelis/selis-weakrefs
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	engaging = null
 	PC.targets -= target
@@ -255,7 +269,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	// Compile list of known targets
 	var/list/existing_targets = list()
-	for(var/weakref/WR in PC.targets)
+	for(var/datum/weakref/WR in PC.targets)
 		var/obj/effect/meteor/M = WR.resolve()
 		existing_targets += M
 
@@ -263,7 +277,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/list/potential_targets = GLOB.meteor_list.Copy() - existing_targets
 	for(var/obj/effect/meteor/M in potential_targets)
 		if(targeting_check(M))
-			var/weakref/target = weakref(M)
+			var/datum/weakref/target = WEAKREF(M)
 			PC.targets += target
 			engaging = target
 			Shoot(target)
@@ -272,7 +286,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	// Then, focus fire on existing targets
 	for(var/obj/effect/meteor/M in existing_targets)
 		if(targeting_check(M))
-			var/weakref/target = weakref(M)
+			var/datum/weakref/target = WEAKREF(M)
 			engaging = target
 			Shoot(target)
 			return
