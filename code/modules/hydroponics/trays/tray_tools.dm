@@ -3,6 +3,12 @@
 /obj/item/weapon/tool/wirecutters/clippers
 	name = "plant clippers"
 	desc = "A tool used to take samples from plants."
+<<<<<<< HEAD
+=======
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "clippers"
+	random_color = FALSE
+>>>>>>> 78a8ef9563... Merge pull request #14957 from Youtubeboy139/hedge-trimmers
 
 /obj/item/weapon/tool/wirecutters/clippers/trimmers
     name = "hedgetrimmers"
