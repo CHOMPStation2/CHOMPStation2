@@ -10,6 +10,7 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
+#include "code\__byond_version_compat.dm"
 #include "code\__spaceman_dmm.dm"
 #include "code\_away_mission_tests.dm"
 #include "code\_macros.dm"
@@ -19,13 +20,19 @@
 #include "code\global.dm"
 #include "code\global_init.dm"
 #include "code\global_vr.dm"
+<<<<<<< HEAD
 #include "code\global_yw.dm"
 #include "code\hub.dm"
+=======
+>>>>>>> fe3ca800bb... Merge pull request #14937 from ItsSelis/selis-checkboxes
 #include "code\names.dm"
 #include "code\stylesheet.dm"
 #include "code\world.dm"
 #include "code\__datastructures\globals.dm"
+<<<<<<< HEAD
 #include "code\__defines\__513_compatibility.dm"
+=======
+>>>>>>> fe3ca800bb... Merge pull request #14937 from ItsSelis/selis-checkboxes
 #include "code\__defines\_compile_options.dm"
 #include "code\__defines\_lists.dm"
 #include "code\__defines\_planes+layers.dm"
