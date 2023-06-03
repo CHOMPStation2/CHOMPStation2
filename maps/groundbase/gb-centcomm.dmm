@@ -15161,9 +15161,18 @@
 	locked = 1;
 	name = "Shuttle Hatch"
 	},
+<<<<<<< HEAD
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "cargounload"
+=======
+/obj/machinery/smartfridge/virology,
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
+"XE" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+>>>>>>> cbbe6338f7... Merge pull request #14953 from Runa-Dacino/smartfridgefix
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/supply)
