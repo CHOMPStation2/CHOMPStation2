@@ -396,6 +396,37 @@
 	ckeywhitelist = list("flintlockdafox")
 	character_name = list("Flintlock Sharpsman")
 
+<<<<<<< HEAD
+=======
+/datum/gear/fluff/zera_weldmask
+	path = /obj/item/clothing/head/welding/fluff/zera
+	display_name = "Zera's Welding Mask"
+	slot = slot_head
+	ckeywhitelist = list("fuackwit422")
+	character_name = list("Zera Livanne")
+
+/datum/gear/fluff/zera_labcloak
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/fluff/zera
+	display_name = "Zera's Labcloak"
+	slot = slot_wear_suit
+	ckeywhitelist = list("fuackwit422")
+	character_name = list("Zera Livanne")
+
+/datum/gear/fluff/zera_cloak
+	path = /obj/item/clothing/head/fluff/zerahat
+	display_name = "Grand Purple Hat"
+	slot = slot_head
+	ckeywhitelist = list("fuackwit422")
+	character_name = list("Zera Livanne")
+
+/datum/gear/fluff/zera_hat
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/fluff/zeracloak
+	display_name = "Grand Purple Cloak"
+	slot = slot_wear_suit
+	ckeywhitelist = list("fuackwit422")
+	character_name = list("Zera Livanne")
+
+>>>>>>> 4685c095bb... Merge pull request #14942 from SatinIsle/Zeras-Cloak
 
 //  G CKEYS
 
