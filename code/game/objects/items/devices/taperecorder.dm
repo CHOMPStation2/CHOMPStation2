@@ -88,6 +88,7 @@
 
 /obj/item/device/taperecorder/hear_talk(mob/M, list/message_pieces, verb)
 	var/msg = multilingual_to_message(message_pieces, requires_machine_understands = TRUE, with_capitalization = TRUE)
+<<<<<<< HEAD
 	//START OF CHOMPEDIT
 	var/voice = "Unknown"
 	if (M.type == /mob/living/carbon/human)
@@ -100,6 +101,11 @@
 	//END OF CHOMPEDIT
 	if(mytape && recording)
 		mytape.record_speech("[voice] [verb], \"[msg]\"") //CHOMP Edit
+=======
+	var/voice = M.GetVoice() //Defined on living, returns name for normal mobs/
+	if(mytape && recording)
+		mytape.record_speech("[voice] [verb], \"[msg]\"")
+>>>>>>> 13c8f6a7bd... Merge pull request #14725 from VOREStation/upstream-merge-8950
 
 
 /obj/item/device/taperecorder/see_emote(mob/M as mob, text, var/emote_type)
