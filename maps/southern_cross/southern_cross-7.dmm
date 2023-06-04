@@ -8892,8 +8892,8 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
-/obj/structure/bed/roller,
 /obj/structure/window/reinforced,
+/obj/machinery/medical_kiosk,
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/hangaroneprep)
 "xp" = (
@@ -9565,13 +9565,7 @@
 /area/expoutpost/hangaroneprep)
 "yx" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/backup_implanter{
-	pixel_y = -6
-	},
-/obj/item/weapon/backup_implanter,
-/obj/item/weapon/backup_implanter{
-	pixel_y = 6
-	},
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangaroneprep)
 "yy" = (
