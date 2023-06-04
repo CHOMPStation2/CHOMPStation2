@@ -2,7 +2,6 @@ import { createSearch } from 'common/string';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Collapsible, Dropdown, Flex, Input, Section } from '../components';
 import { Window } from '../layouts';
-import { refocusLayout } from '../layouts';
 import { MiningUser } from './common/Mining';
 
 const sortTypes = {
@@ -55,8 +54,17 @@ const MiningVendorItems = (props, context) => {
   });
   return (
     <Flex.Item grow="1" overflow="auto">
+<<<<<<< HEAD
       <Section onClick={(e) => refocusLayout()}>
         {has_contents ? contents : <Box color="label">No items matching your criteria was found!</Box>}
+=======
+      <Section>
+        {has_contents ? (
+          contents
+        ) : (
+          <Box color="label">No items matching your criteria was found!</Box>
+        )}
+>>>>>>> dd49b83167... Merge pull request #14964 from ItsSelis/selis-tgui-patch
       </Section>
     </Flex.Item>
   );
