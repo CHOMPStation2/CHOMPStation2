@@ -4720,5 +4720,6 @@
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
+#include "modular_chomp\maps\overmap\aegis_carrier\aegis_objs.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
 // END_INCLUDE
