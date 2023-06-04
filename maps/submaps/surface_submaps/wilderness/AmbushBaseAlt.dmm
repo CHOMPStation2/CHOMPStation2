@@ -335,7 +335,7 @@
 /area/submap/DugOutMercs)
 "kR" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ld" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
@@ -349,7 +349,7 @@
 "lm" = (
 /obj/random/landmine,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "lN" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
@@ -1078,7 +1078,7 @@
 "SW" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/bag/ore/holding,
+/obj/item/weapon/storage/pouch/holding,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor/tiled/techmaint,
@@ -1725,7 +1725,7 @@ aM
 bu
 VI
 eP
-SG
+VI
 jn
 SG
 bu
@@ -1893,7 +1893,7 @@ aM
 bu
 VI
 eP
-SG
+VI
 EP
 SG
 bu
