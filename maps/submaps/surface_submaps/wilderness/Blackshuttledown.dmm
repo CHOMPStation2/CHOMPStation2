@@ -158,6 +158,7 @@
 /obj/structure/table/steel,
 /obj/item/weapon/gun/projectile/automatic/wt550,
 /obj/item/weapon/gun/projectile/automatic/p90,
+/obj/random/rigsuit/chancetofail,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "ay" = (
@@ -735,6 +736,7 @@
 /obj/structure/table/steel,
 /obj/random/energy/highend,
 /obj/random/energy/highend,
+/obj/random/rigsuit/chancetofail,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "ci" = (
@@ -817,22 +819,6 @@
 "jW" = (
 /obj/item/weapon/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle/poi,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
-"pX" = (
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/white,
-/area/submap/Blackshuttledown)
-"rE" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
-"vW" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "AL" = (
@@ -1312,12 +1298,12 @@ ax
 aJ
 aR
 aj
-rE
+aL
 bl
 bl
 bl
 bl
-vW
+aT
 aj
 bV
 cc
@@ -1422,14 +1408,14 @@ ao
 az
 aK
 aS
-AL
+az
 az
 bt
 bl
 bl
 bt
 bM
-AL
+az
 bW
 aS
 cr
@@ -1680,7 +1666,7 @@ aj
 as
 aD
 aN
-pX
+aE
 be
 bl
 bl
@@ -1689,7 +1675,7 @@ bl
 bl
 bl
 bA
-bn
+bl
 bY
 bY
 cm
@@ -1752,7 +1738,7 @@ ab
 af
 aj
 au
-pX
+aE
 aE
 aY
 aj
