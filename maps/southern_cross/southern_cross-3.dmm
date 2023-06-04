@@ -12377,6 +12377,7 @@
 /obj/item/bodybag/cryobag,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "lwa" = (
@@ -22507,6 +22508,7 @@
 	layer = 4;
 	pixel_y = -32
 	},
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/thirddeck)
 "uEI" = (

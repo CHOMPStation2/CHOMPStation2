@@ -94,7 +94,7 @@
 					prob(3);/obj/item/weapon/storage/pill_bottle/carbon,
 					prob(3);/obj/item/weapon/storage/pill_bottle/iron,
 					prob(4);/obj/item/weapon/storage/pill_bottle/assorted,
-					prob(4);/obj/item/weapon/backup_implanter,
+					prob(4);/obj/item/device/sleevemate,	// Changed backup_implanter to sleevemate.
 					prob(2);/obj/item/toy/plushie/borgplushie/medihound)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)

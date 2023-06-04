@@ -19,10 +19,14 @@
 	contraband += list(/obj/item/weapon/rms = 5)
 	..()
 
+// CHOMPedit start: Changes the backup_implanters in the medical vending machine to sleevemates instead.
+
 /obj/machinery/vending/medical/New()
-	products += list(/obj/item/weapon/storage/box/khcrystal = 4,/obj/item/weapon/backup_implanter = 3,
+	products += list(/obj/item/weapon/storage/box/khcrystal = 4, /obj/item/device/sleevemate = 3,
 					/obj/item/clothing/glasses/omnihud/med = 4, /obj/item/device/glasses_kit = 1,  /obj/item/weapon/storage/quickdraw/syringe_case = 4)
 	..()
+
+// CHOMPedit end
 
 // Food Machines (for event/away maps)
 
@@ -1204,7 +1208,7 @@
 					/obj/item/device/flashlight = 100,
 					/obj/item/device/laser_pointer = 200,
 					/obj/item/clothing/glasses/omnihud = 100,
-					/obj/item/device/walkpod = 300, 
+					/obj/item/device/walkpod = 300,
 					/obj/item/device/juke_remote = 1000,
 					/obj/item/instrument/piano_synth/headphones = 200,
 					/obj/item/instrument/piano_synth/headphones/spacepods = 600,

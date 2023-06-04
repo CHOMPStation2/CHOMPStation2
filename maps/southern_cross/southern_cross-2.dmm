@@ -44621,16 +44621,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/item/weapon/storage/box/nifsofts_medical,
-/obj/item/weapon/backup_implanter{
-	pixel_y = -6
-	},
-/obj/item/weapon/backup_implanter,
-/obj/item/weapon/backup_implanter{
-	pixel_y = 6
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = 12
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "dlP" = (
@@ -60795,7 +60785,7 @@
 	pixel_y = -24
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/backup_kit,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/techfloor,
 /area/assembly/robotics)
 "lYj" = (
@@ -61604,6 +61594,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/seconddeck/port)
 "myq" = (
@@ -63214,10 +63205,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
-/obj/structure/table/glass,
-/obj/structure/backup_implanter_ch{
-	pixel_y = 8
-	},
+/obj/machinery/medical_kiosk,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "nwl" = (

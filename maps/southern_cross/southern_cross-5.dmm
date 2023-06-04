@@ -9930,7 +9930,9 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/search_and_rescue)
 "sx" = (
-/obj/structure/closet/secure_closet/sar,
+/obj/structure/closet/secure_closet/sar{
+	req_access = list(43,67)
+	},
 /obj/item/weapon/storage/pill_bottle/spaceacillin,
 /obj/item/roller/adv,
 /obj/machinery/light,
@@ -14294,10 +14296,6 @@
 /area/surface/outpost/main/corridor/right_lower)
 "Ar" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/backup_kit{
-	pixel_x = 5;
-	pixel_y = 5
-	},
 /obj/item/weapon/storage/box/cdeathalarm_kit,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
@@ -14522,6 +14520,7 @@
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "AK" = (
@@ -16649,6 +16648,7 @@
 /obj/structure/table/standard,
 /obj/random/action_figure,
 /obj/item/weapon/coin/silver,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
 "EZ" = (
@@ -21327,6 +21327,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration)
 "Ny" = (
@@ -26012,7 +26013,9 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/engineering/monitoring)
 "WA" = (
-/obj/structure/closet/secure_closet/sar,
+/obj/structure/closet/secure_closet/sar{
+	req_access = list(43,67)
+	},
 /obj/item/weapon/storage/pill_bottle/spaceacillin,
 /obj/item/roller/adv,
 /turf/simulated/floor/tiled,
@@ -27762,7 +27765,6 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
 "ZR" = (
-/obj/structure/table/glass,
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
@@ -27774,16 +27776,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -6
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = 6
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = 12
-	},
-/obj/item/weapon/backup_implanter,
+/obj/machinery/medical_kiosk,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "ZS" = (

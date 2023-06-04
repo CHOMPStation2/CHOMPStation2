@@ -429,13 +429,16 @@
 	icon_state = "wallmed"
 	layer = ABOVE_WINDOW_LAYER
 	density = FALSE //It is wall-mounted, and thus, not dense. --Superxpdude
+//CHOMPedit start: Added sleevemates to first-aid vendors.
 	products = list(/obj/item/stack/medical/bruise_pack = 2,
 				/obj/item/stack/medical/ointment = 2,
 				/obj/item/weapon/reagent_containers/hypospray/autoinjector = 4,
-				/obj/item/device/healthanalyzer = 1)
+				/obj/item/device/healthanalyzer = 1,
+				/obj/item/device/sleevemate = 1)
 	contraband = list(/obj/item/weapon/reagent_containers/syringe/antitoxin = 4,
 				/obj/item/weapon/reagent_containers/syringe/antiviral = 4,
 				/obj/item/weapon/reagent_containers/pill/tox = 1)
+//CHOMPedit end.
 	req_log_access = access_cmo
 	has_logs = 1
 	can_rotate = 0

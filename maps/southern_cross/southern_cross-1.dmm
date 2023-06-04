@@ -5173,6 +5173,7 @@
 /obj/item/bodybag/cryobag,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/firstdeck)
 "aAq" = (
@@ -22454,6 +22455,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central6,
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomtwo)
 "nVO" = (
