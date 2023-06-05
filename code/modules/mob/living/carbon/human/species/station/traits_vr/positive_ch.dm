@@ -30,17 +30,57 @@
 			organ.min_broken_damage *= 1.5
 			organ.brokenpain *= 2
 
-/datum/trait/positive/lowpressureres
-	name = "Pressure Resistance, Low"
-	desc = "Your body is more resistant to low pressures. Pretty simple."
-	cost = 3
+/datum/trait/positive/lowpressureresminor // Same as original trait with cost reduced, much more useful as filler.
+	name = "Low Pressure Resistance, Minor"
+	desc = "Your body is more resistant to low pressures and you can breathe better in those conditions. Pretty simple."
+	cost = 1
 	var_changes = list("hazard_low_pressure" = HAZARD_LOW_PRESSURE*0.66, "warning_low_pressure" = WARNING_LOW_PRESSURE*0.66, "minimum_breath_pressure" = 16*0.66)
+	excludes = list(/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
 
-/datum/trait/positive/highpressureres
-	name = "Pressure Resistance, High"
+/datum/trait/positive/lowpressureresmajor // Still need an oxygen tank, otherwise you'll suffocate.
+	name = "Low Pressure Resistance, Major"
+	desc = "Your body is immune to low pressures and you can breathe significantly better in low-pressure conditions, though you'll still need an oxygen supply."
+	cost = 2
+	var_changes = list("hazard_low_pressure" = HAZARD_LOW_PRESSURE*0, "warning_low_pressure" = WARNING_LOW_PRESSURE*0, "minimum_breath_pressure" = 16*0.33)
+	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/highpressureresminor // Increased high pressure cap as previous amount was neglible.
+	name = "High Pressure Resistance, Minor"
 	desc = "Your body is more resistant to high pressures. Pretty simple."
+	cost = 1
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*2, "warning_high_pressure" = WARNING_HIGH_PRESSURE*2)
+	excludes = list(/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/highpressureresmajor
+	name = "High Pressure Resistance, Major"
+	desc = "Your body is significantly more resistant to high pressures. Pretty simple."
+	cost = 2
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*4, "warning_high_pressure" = WARNING_HIGH_PRESSURE*4)
+	excludes = list(/datum/trait/positive/highpressureresminor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/pressureres
+	name = "General Pressure Resistance"
+	desc = "Your body is much more resistant to both high and low pressures. Pretty simple."
 	cost = 3
-	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*1.5, "warning_high_pressure" = WARNING_HIGH_PRESSURE*1.5)
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*3,
+					   "warning_high_pressure" = WARNING_HIGH_PRESSURE*3,
+					   "hazard_low_pressure" = HAZARD_LOW_PRESSURE*0.33,
+					   "warning_low_pressure" = WARNING_LOW_PRESSURE*0.33,
+					   "minimum_breath_pressure" = 16*0.33
+					   )
+	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/highpressureresminor,/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/pressureresmajor // If they have the points and want more freedom with atmos, let them.
+	name = "General Pressure Resistance, Major"
+	desc = "Your body is significantly more resistant to high pressures and immune to low pressures, though you'll still need an oxygen supply."
+	cost = 4
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*4,
+					   "warning_high_pressure" = WARNING_HIGH_PRESSURE*4,
+					   "hazard_low_pressure" = HAZARD_LOW_PRESSURE*0,
+					   "warning_low_pressure" = WARNING_LOW_PRESSURE*0,
+					   "minimum_breath_pressure" = 16*0.33
+					   )
+	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/highpressureresminor,/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureres)
 
 /datum/trait/positive/photosynth
 	name = "Photosynthesis"
@@ -81,7 +121,7 @@
 	name = "Heavyweight"
 	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you, and neither players nor mobs can trade places with you or bump you out of the way."
 	cost = 2
-	var_changes = list("stun_mod" = 0.75, "weaken_mod" = 0.75) // Stuns are 75% as effective - a stun of 3 seconds will be 2 seconds after rounding. Set to 0.75 to make a 3 second stun 2 seconds.(Weaken is used alongside stun to prevent aiming.)
+	var_changes = list("stun_mod" = 0.5, "weaken_mod" = 0.5) // Stuns are 50% as effective - a stun of 3 seconds will be 2 seconds due to rounding up. Set to 0.5 to be in-line with the trait's description. (Weaken is used alongside stun to prevent aiming.)
 
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()

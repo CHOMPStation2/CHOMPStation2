@@ -74,6 +74,8 @@
 
 	handle_tf_holder()	//VOREStation Addition
 
+	handle_vr_derez() // CHOMPedit
+
 /mob/living/proc/handle_breathing()
 	return
 

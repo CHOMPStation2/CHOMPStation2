@@ -8,6 +8,7 @@
 #include "clockwork.dmm"
 #include "cove.dmm"
 #include "crashedexplo.dmm"
+#include "CultBar.dmm"
 #include "demonranch.dmm"
 #include "dronelord.dmm"
 #include "fallenportal.dmm"
@@ -87,6 +88,12 @@
 	name = "Spider Explo"
 	desc = "Oh look, some spider explorers"
 	mappath = 'maps/submaps/surface_submaps/valley/crashedexplo.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/cultbar
+	name = "Cult Bar"
+	desc = "A bar surronded by demons, for those of the occult."
+	mappath = 'maps/submaps/surface_submaps/valley/CultBar.dmm'
 	cost = 25
 
 /datum/map_template/surface/valley/inner/demonranch

@@ -3,7 +3,6 @@ import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Collapsible, Dropdown, Flex, Input, Section } from '../components';
 import { Window } from '../layouts';
-import { refocusLayout } from '../layouts';
 
 const sortTypes = {
   'Alphabetical': (a, b) => a - b,
@@ -102,9 +101,6 @@ const CasinoPrizeDispenserChItems = (props, context) => {
     }
 
     has_contents = true;
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/CasinoPrizeDispenserCh.js
-    return <CasinoPrizeDispenserChItemsCategory key={kv[0]} title={kv[0]} items={items_in_cat} />;
-=======
     return (
       <CasinoPrizeDispenserItemsCategory
         key={kv[0]}
@@ -112,11 +108,10 @@ const CasinoPrizeDispenserChItems = (props, context) => {
         items={items_in_cat}
       />
     );
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui:tgui/packages/tgui/interfaces/CasinoPrizeDispenser.js
   });
   return (
     <Flex.Item grow="1" overflow="auto">
-      <Section onClick={(e) => refocusLayout()}>
+      <Section>
         {has_contents ? (
           contents
         ) : (

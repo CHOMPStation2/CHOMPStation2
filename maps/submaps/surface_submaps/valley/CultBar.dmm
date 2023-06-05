@@ -7,6 +7,7 @@
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/anomaly_spectroscopy,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/item/weapon/book/manual/bar_guide,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "aN" = (
@@ -15,9 +16,7 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "bs" = (
-/obj/structure/simple_door/sifwood,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/wall/cult,
 /area/submap/CultBar)
 "bt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -36,11 +35,11 @@
 "cq" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/cook_guide,
+/obj/item/weapon/book/manual/barman_recipes,
+/obj/machinery/light/small/emergency/flicker{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
-/area/submap/CultBar)
-"cv" = (
-/obj/effect/decal/cleanable/blood/gibs,
-/turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "cH" = (
 /obj/structure/table/fancyblack,
@@ -117,14 +116,18 @@
 /area/submap/CultBar)
 "eM" = (
 /obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/humanoid/cultist/hunter,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/cultist/hunter{
+	faction = "demon"
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "eT" = (
-/obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/orange_cola,
-/turf/simulated/floor/wood/sif,
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/humanoid/cultist/hunter{
+	faction = "demon"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "eW" = (
 /obj/structure/table/marble,
@@ -141,7 +144,6 @@
 /area/submap/CultBar)
 "fq" = (
 /obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/humanoid/cultist/caster,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
@@ -158,16 +160,17 @@
 "fD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
+/mob/living/simple_mob/vore/pakkun/snapdragon,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "fF" = (
 /turf/simulated/floor/outdoors/grass,
 /area/submap/CultBar)
 "fR" = (
-/obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/humanoid/cultist/human,
-/turf/simulated/floor/wood/sif,
+/obj/structure/bookcase,
+/obj/item/weapon/book/codex/casino,
+/obj/item/weapon/book/manual/engineering_guide,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "gh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -198,11 +201,12 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "he" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/red/diagonal,
-/mob/living/simple_mob/humanoid/cultist/castertesh,
-/turf/simulated/floor/tiled/asteroid_steel,
+/mob/living/simple_mob/humanoid/cultist/tesh{
+	faction = "demon"
+	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "hm" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -210,13 +214,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/hunter,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "ht" = (
-/obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/revolver/cerberus,
-/obj/item/weapon/gun/projectile/revolver/judge,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "hu" = (
@@ -240,7 +243,9 @@
 /area/submap/CultBar)
 "io" = (
 /obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/humanoid/cultist/castertesh,
+/mob/living/simple_mob/humanoid/cultist/castertesh{
+	faction = "demon"
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "iJ" = (
@@ -257,9 +262,10 @@
 /turf/simulated/floor/outdoors/grass,
 /area/submap/CultBar)
 "jJ" = (
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
+/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball{
+	faction = "demon"
+	},
+/turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "jM" = (
 /obj/machinery/appliance/cooker/oven,
@@ -267,9 +273,10 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "kD" = (
-/mob/living/simple_mob/humanoid/cultist/castertesh,
-/obj/effect/floor_decal/corner/lightgrey/diagonal,
-/turf/simulated/floor/tiled/freezer,
+/obj/structure/bookcase,
+/obj/item/weapon/book/codex/lore/robutt,
+/obj/item/weapon/book/manual/stasis,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "kK" = (
 /obj/effect/rune,
@@ -281,6 +288,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/shield_projector/rectangle/automatic/magus,
 /obj/item/device/soulstone,
+/obj/item/weapon/gun/magic/firestaff,
 /turf/simulated/floor/gorefloor2,
 /area/submap/CultBar)
 "kY" = (
@@ -308,28 +316,33 @@
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/nuclear,
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/weapon/book/manual/detective,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "lV" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cult/pylon,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "ma" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/table/rack,
+/obj/item/stack/material/mhydrogen,
+/obj/item/stack/material/mhydrogen,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/CultBar)
 "mt" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/hunter,
 /turf/simulated/floor/cult,
 /area/submap/CultBar)
 "mz" = (
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cult/pylon,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "mQ" = (
@@ -374,7 +387,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/CultBar)
 "nU" = (
-/mob/living/simple_mob/humanoid/cultist/tesh,
+/mob/living/simple_mob/humanoid/cultist/tesh{
+	faction = "demon"
+	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -384,8 +399,9 @@
 /turf/template_noop,
 /area/template_noop)
 "oo" = (
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
-/turf/simulated/floor/cult,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "or" = (
 /obj/effect/decal/cleanable/dirt,
@@ -405,6 +421,10 @@
 "oZ" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/anomaly_testing,
+/obj/item/weapon/book/manual/atmospipes,
+/obj/machinery/light/small/emergency/flicker{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "pd" = (
@@ -441,15 +461,17 @@
 /area/submap/CultBar)
 "pX" = (
 /obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/vore/demonAI/avarn{
-	faction = "cult"
-	},
+/mob/living/simple_mob/vore/demonAI/avarn,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "qh" = (
 /obj/machinery/appliance/cooker/grill,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
+/area/submap/CultBar)
+"qD" = (
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "qG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -484,10 +506,13 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "tO" = (
-/obj/structure/table/bench/sifwooden,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/lizard,
+/obj/structure/table/rack,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/culthood/alt,
+/obj/item/clothing/head/culthood/alt,
+/obj/item/clothing/shoes/cult,
+/obj/item/clothing/shoes/cult,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "ug" = (
@@ -497,20 +522,17 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "wr" = (
-/mob/living/simple_mob/humanoid/cultist/hunter,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/red/diagonal,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/structure/grille/cult,
+/obj/structure/curtain,
+/turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "wt" = (
 /turf/simulated/floor/outdoors/mud,
 /area/submap/CultBar)
 "wA" = (
-/obj/structure/table/marble,
-/obj/random/meat,
-/obj/item/weapon/reagent_containers/food/snacks/waffles,
-/obj/effect/floor_decal/corner/lightgrey/diagonal,
-/turf/simulated/floor/tiled/freezer,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "xb" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -536,12 +558,10 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "yI" = (
-/obj/structure/table/standard,
-/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
-/obj/item/clothing/shoes/boots/winter/climbing,
-/obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat,
-/obj/item/clothing/shoes/boots/winter/climbing,
-/turf/simulated/floor/wood/sif,
+/mob/living/simple_mob/humanoid/cultist/lizard{
+	faction = "demon"
+	},
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "yP" = (
 /obj/effect/decal/cleanable/blood,
@@ -558,8 +578,8 @@
 /area/submap/CultBar)
 "zy" = (
 /obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/humanoid/cultist/human,
-/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/gibs,
+/mob/living/simple_mob/humanoid/cultist/caster,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "zU" = (
@@ -571,10 +591,10 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Ak" = (
-/mob/living/simple_mob/vore/demonAI{
-	faction = "cult"
-	},
-/turf/simulated/floor/wood/sif,
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/research_and_development,
+/obj/item/weapon/book/manual/tesla_engine,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "AO" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -586,16 +606,18 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/CultBar)
 "Br" = (
-/mob/living/simple_mob/humanoid/cultist/caster,
-/obj/structure/table/bench/sifwooden,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/nuclear,
+/obj/item/weapon/book/manual/engineering_construction,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "BV" = (
-/obj/structure/table/bench/sifwooden,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/lizard,
-/turf/simulated/floor/wood/sif,
+/mob/living/simple_mob/humanoid/cultist/hunter{
+	faction = "demon"
+	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "BW" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -604,7 +626,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Cf" = (
-/mob/living/simple_mob/humanoid/cultist/magus,
+/mob/living/simple_mob/humanoid/cultist/magus/rift,
 /turf/simulated/floor/cult,
 /area/submap/CultBar)
 "Ch" = (
@@ -614,7 +636,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "Co" = (
-/obj/structure/cult/pylon,
+/obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/cult,
 /area/submap/CultBar)
 "Cp" = (
@@ -629,9 +651,9 @@
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "Dm" = (
-/obj/structure/loot_pile/surface/bones,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cult/pylon,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Dp" = (
@@ -644,7 +666,6 @@
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "Dt" = (
-/obj/machinery/light/small/flicker,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/wood/sif,
@@ -703,6 +724,9 @@
 /area/submap/CultBar)
 "Gp" = (
 /obj/effect/gibspawner/human,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Gy" = (
@@ -744,10 +768,11 @@
 /turf/simulated/floor/outdoors/mud,
 /area/template_noop)
 "IU" = (
-/mob/living/simple_mob/vore/demonAI/wendigo{
-	faction = "cult"
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt{
+	faction = "demon"
 	},
-/turf/simulated/floor/outdoors/grass,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "Jj" = (
 /obj/structure/table/standard,
@@ -780,9 +805,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/CultBar)
 "Ki" = (
-/obj/structure/grille/cult,
-/obj/structure/bonfire/permanent,
-/obj/item/weapon/gun/magic/firestaff,
+/obj/structure/table/bench/sifwooden,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/cultist/noodle{
+	faction = "demon"
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Ks" = (
@@ -792,10 +819,9 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "KB" = (
-/obj/structure/table/bench/sifwooden,
-/mob/living/simple_mob/humanoid/cultist/human,
-/obj/effect/decal/cleanable/blood/gibs,
-/turf/simulated/floor/wood/sif,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "KF" = (
 /obj/structure/table/marble,
@@ -818,16 +844,12 @@
 /obj/effect/decal/cleanable/blood,
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/maintenance/misc,
-/obj/random/maintenance/foodstuff,
-/obj/item/clothing/gloves/regen,
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "LD" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/vore/demonAI{
-	faction = "cult"
-	},
+/mob/living/simple_mob/humanoid/cultist/elite,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "LV" = (
@@ -869,14 +891,20 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "MO" = (
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/cult,
+/obj/structure/bookcase,
+/obj/item/weapon/book/codex/lore/vir,
+/obj/item/weapon/book/manual/supermatter_engine,
+/turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "MS" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/firstaid,
+/turf/simulated/floor/wood/sif,
+/area/submap/CultBar)
+"Na" = (
+/obj/structure/table/sifwooden_reinforced,
+/obj/item/clothing/gloves/regen,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Nw" = (
@@ -888,9 +916,10 @@
 /turf/simulated/floor/outdoors/grass,
 /area/submap/CultBar)
 "NZ" = (
-/mob/living/simple_mob/humanoid/cultist/human,
 /obj/structure/table/bench/sifwooden,
-/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball{
+	faction = "demon"
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Om" = (
@@ -908,6 +937,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cult/pylon,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Ot" = (
@@ -924,21 +954,17 @@
 /obj/item/clothing/glasses/meson,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
-"OZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
-/turf/simulated/floor/cult,
-/area/submap/CultBar)
 "Px" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/water/ocean,
 /area/submap/CultBar)
 "QO" = (
-/obj/structure/cult/pylon,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/cult,
+/obj/structure/table/rack,
+/obj/item/clothing/suit/storage/hooded/wintercoat/narsie,
+/obj/item/clothing/suit/storage/hooded/wintercoat/narsie,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/shoes/boots/winter,
+/turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "QX" = (
 /obj/structure/simple_door/sifwood,
@@ -963,8 +989,17 @@
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "Sn" = (
-/obj/structure/grille/cult,
-/obj/structure/bonfire/permanent,
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/ripley_build_and_repair,
+/obj/item/weapon/book/manual/virology,
+/obj/item/weapon/book/manual/engineering_hacking,
+/turf/simulated/floor/carpet,
+/area/submap/CultBar)
+"SN" = (
+/obj/structure/table/bench/sifwooden,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/vore/demonAI/covern,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "ST" = (
@@ -993,11 +1028,19 @@
 /obj/effect/decal/cleanable/blood/gibs/body,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
+"Uc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/wood/sif/broken,
+/area/submap/CultBar)
 "Uy" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/castertesh,
+/mob/living/simple_mob/humanoid/cultist/tesh{
+	faction = "demon"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "UB" = (
@@ -1008,6 +1051,7 @@
 /area/submap/CultBar)
 "UJ" = (
 /obj/structure/table/bench/sifwooden,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
@@ -1022,12 +1066,17 @@
 "Vk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/cultist/elite,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Vr" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/landmark/loot_spawn,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/spaceacillin,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/singulo,
+/obj/item/weapon/melee/cursedblade,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Vs" = (
@@ -1043,6 +1092,7 @@
 /obj/item/clothing/shoes/cult,
 /obj/item/clothing/head/culthood/alt,
 /obj/item/clothing/suit/cultrobes/alt,
+/obj/machinery/light/small/emergency/flicker,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "VJ" = (
@@ -1062,10 +1112,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "Wf" = (
-/mob/living/simple_mob/vore/demonAI/wendigo{
-	faction = "cult"
-	},
-/turf/simulated/floor/outdoors/mud,
+/obj/structure/table/sifwooden_reinforced,
+/obj/random/mainttoyloot/nofail,
+/turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Wq" = (
 /obj/structure/table/marble,
@@ -1079,16 +1128,7 @@
 /obj/machinery/light/small/flicker,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table/standard,
-/obj/item/clothing/head/culthood,
-/obj/item/clothing/suit/cultrobes,
-/obj/item/clothing/shoes/cult,
 /turf/simulated/floor/wood/sif,
-/area/submap/CultBar)
-"WO" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/elite,
-/turf/simulated/floor/cult,
 /area/submap/CultBar)
 "WT" = (
 /obj/structure/table/gamblingtable,
@@ -1126,6 +1166,10 @@
 /obj/random/firstaid,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
+"YT" = (
+/mob/living/simple_mob/vore/demonAI/zellic,
+/turf/simulated/floor/wood/sif/broken,
+/area/submap/CultBar)
 "YU" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/snacks/stew,
@@ -1140,6 +1184,10 @@
 /obj/structure/table/bench/sifwooden,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood/sif,
+/area/submap/CultBar)
+"Zi" = (
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Zl" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -1156,7 +1204,17 @@
 "Zz" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/broken,
+/area/submap/CultBar)
+"ZA" = (
+/obj/structure/table/marble,
+/obj/machinery/light/small/flicker,
+/obj/random/meat,
+/obj/random/meat,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/item/weapon/reagent_containers/food/snacks/waffles,
+/turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "ZG" = (
 /obj/machinery/light/small/emergency/flicker{
@@ -1285,7 +1343,7 @@ ok
 ok
 ok
 Ti
-Wf
+wt
 wt
 wt
 wt
@@ -1308,7 +1366,7 @@ fF
 zk
 fF
 fF
-Wf
+wt
 wt
 Ti
 wt
@@ -1361,25 +1419,25 @@ ok
 wt
 wt
 VZ
-Sn
-dt
-zU
+or
+oo
+or
 Xs
 EJ
 yP
-Sn
+HK
 VZ
 lu
+IU
 JJ
+CY
+CY
 bv
 VZ
 go
-OO
-Lp
-YM
-cL
-pv
-VZ
+at
+zU
+QO
 TV
 VZ
 fF
@@ -1399,24 +1457,24 @@ wt
 fF
 VZ
 EJ
-Ak
+zU
 Gp
-zU
-or
+HK
+HK
 Zz
-zU
+or
 VZ
 cq
-CY
+KB
+kD
+Ak
+JJ
 Dp
 VZ
 Ks
-zU
-or
-or
-dt
+jJ
 ez
-QX
+zU
 zU
 QX
 wt
@@ -1438,22 +1496,22 @@ VZ
 zU
 LV
 or
-iJ
+Uc
 bt
 or
 zU
 QX
 CY
-jJ
+CY
+MO
+Sn
+CY
 RO
 VZ
-dt
-zU
-at
-zU
+YT
 or
 zU
-VZ
+tO
 VC
 VZ
 wt
@@ -1475,21 +1533,21 @@ VZ
 HK
 lV
 Rc
-MO
+Fb
 HK
 mz
-zU
+or
 VZ
 oZ
 CY
+fR
+Br
+mQ
 cH
 VZ
-Ks
-tO
-lm
-xb
-mT
+QO
 zU
+tO
 VZ
 VZ
 VZ
@@ -1513,20 +1571,20 @@ yP
 Fb
 Co
 Fb
-QO
+Yk
 Vk
 EJ
 VZ
 aH
 mQ
+JJ
+CY
+yI
 gh
 VZ
-zU
-or
-qP
-qP
-HK
-iJ
+VZ
+QX
+VZ
 VZ
 CC
 wt
@@ -1546,24 +1604,24 @@ ok
 wt
 fF
 VZ
-dt
+Zi
 Cf
-WO
+Fb
 kK
 mt
-OZ
-zU
+Yk
+qD
 VZ
 VZ
 QX
 VZ
 VZ
+VZ
+VZ
+VZ
+Ks
 zU
-Ah
-GO
-Le
-KB
-zU
+dY
 VZ
 fF
 wt
@@ -1585,21 +1643,21 @@ wt
 VZ
 zU
 bt
-QO
+Yk
 Yk
 Co
-or
+LD
 or
 VZ
 pi
 HP
 HP
-gu
+OO
 Ah
 zU
-qP
-rJ
-HK
+zU
+zU
+at
 zU
 ZZ
 fF
@@ -1623,7 +1681,7 @@ VZ
 Fb
 Oq
 DY
-oo
+EJ
 or
 Dm
 aN
@@ -1633,9 +1691,9 @@ EH
 yV
 qP
 or
-mT
+fq
+lm
 xb
-eT
 mT
 zU
 ZZ
@@ -1660,7 +1718,7 @@ VZ
 Xs
 ov
 or
-or
+wA
 Fb
 bt
 pG
@@ -1670,10 +1728,10 @@ nu
 HP
 pd
 Ah
-cv
-zU
-zU
-zU
+or
+Lp
+Na
+HK
 or
 ZZ
 fF
@@ -1699,18 +1757,18 @@ Fb
 zU
 MH
 DY
-LD
+or
 yP
 VZ
 KV
 HP
-wr
+EH
 qP
 zU
-or
-LD
-pG
-yP
+Ah
+GO
+Le
+zy
 dt
 VZ
 fF
@@ -1731,23 +1789,23 @@ ok
 wt
 fF
 VZ
-Sn
+zU
 Xs
 dt
 zU
 or
 Fb
-Ki
+or
 VZ
 Ch
 HP
-HP
+eT
 gu
-NZ
+Ah
 zU
-or
-iJ
-or
+qP
+rJ
+HK
 dY
 VZ
 jy
@@ -1771,15 +1829,15 @@ VZ
 VZ
 VZ
 VZ
-VZ
-VZ
-VZ
-VZ
-VZ
+bs
+wr
+wr
+wr
+bs
 lg
 EH
 qG
-gu
+cL
 or
 YZ
 MJ
@@ -1803,31 +1861,31 @@ ok
 ok
 ok
 Ti
-Wf
+wt
 VZ
 dO
 Mw
 ma
-VZ
+bs
 ht
-yI
+or
 WL
-VZ
+bs
 Gb
 qG
-he
+qG
 jk
 mT
 zU
-qP
-qP
+xb
+Wf
 zU
 at
 VZ
 fF
 Rk
 fF
-IU
+fF
 cT
 wt
 Om
@@ -1845,8 +1903,8 @@ VZ
 nO
 JE
 Mw
-QX
-or
+bs
+HK
 fD
 or
 bs
@@ -1855,10 +1913,10 @@ yV
 EH
 qP
 yP
-mT
+NZ
 GO
 xX
-Br
+Ah
 or
 ZZ
 fF
@@ -1882,11 +1940,11 @@ VZ
 AO
 EY
 Kb
-VZ
+bs
 Vr
 iJ
 Dt
-VZ
+bs
 xQ
 HP
 EH
@@ -1894,7 +1952,7 @@ VZ
 dt
 or
 qP
-gP
+YM
 iJ
 zU
 ZZ
@@ -1917,22 +1975,22 @@ Ti
 wt
 VZ
 VZ
-VZ
-VZ
-VZ
 QX
 VZ
-VZ
-VZ
+bs
+bs
+bs
+bs
+bs
 Ip
 HP
 tE
 VZ
 Ks
-fR
+mT
 Ot
 Ot
-UJ
+SN
 zU
 ZZ
 fF
@@ -1994,7 +2052,7 @@ Gy
 Gd
 hm
 KF
-oH
+BV
 Gd
 eW
 VZ
@@ -2031,15 +2089,15 @@ hN
 ST
 oH
 fe
-nU
+Hw
 oH
-Wq
+ZA
 VZ
 Vs
 zU
 io
 zU
-or
+HK
 zU
 iJ
 or
@@ -2105,18 +2163,18 @@ Gd
 oH
 oH
 KF
-oH
+he
 kZ
 UT
 VZ
 zU
 HK
 Xa
-zU
+or
 HK
 at
 qP
-qP
+pv
 zU
 or
 ZZ
@@ -2142,16 +2200,16 @@ Mx
 kZ
 oH
 fe
-kD
+Gd
 oH
-wA
-VZ
+Gd
+QX
 or
 eM
 WT
 pX
 HK
-BV
+Ah
 na
 Zl
 Ah
@@ -2225,10 +2283,10 @@ VJ
 cX
 Ah
 dt
-Ah
+Ki
 MS
 BW
-zy
+Ah
 HK
 VZ
 fF
@@ -2259,7 +2317,7 @@ UT
 VZ
 or
 pG
-fR
+io
 Xs
 or
 iJ
@@ -2321,7 +2379,7 @@ ok
 ok
 ok
 Ti
-Wf
+wt
 wt
 wt
 zk
@@ -2342,7 +2400,7 @@ wt
 wt
 wt
 jy
-IU
+fF
 fF
 wt
 Ti

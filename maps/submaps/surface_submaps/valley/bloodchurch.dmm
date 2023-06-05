@@ -10,8 +10,27 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
+"cq" = (
+/mob/living/simple_mob/construct/shade,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"cH" = (
+/obj/structure/closet,
+/obj/random/energy/highend,
+/obj/item/clothing/gloves/regen,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "dF" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"ev" = (
+/mob/living/simple_mob/vore/demonAI/wendigo{
+	faction = "cult"
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "eT" = (
@@ -31,14 +50,17 @@
 "fn" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/structure/closet/crate/secure/loot,
-/obj/item/clothing/gloves/regen,
 /obj/item/rig_module/mounted/energy_blade,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "fQ" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/medical/pillbottle,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"gy" = (
+/turf/simulated/wall/cult,
 /area/submap/bloodchurch)
 "gM" = (
 /obj/structure/bookcase,
@@ -53,6 +75,8 @@
 "il" = (
 /obj/structure/closet,
 /obj/random/energy/highend,
+/obj/item/weapon/storage/belt/holding,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "iT" = (
@@ -62,6 +86,12 @@
 "jP" = (
 /mob/living/simple_mob/construct/artificer/caster,
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/bloodchurch)
+"ke" = (
+/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/structure/table/sifwoodentable,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "kn" = (
 /obj/structure/loot_pile/surface/bones,
@@ -73,25 +103,43 @@
 /area/submap/bloodchurch)
 "mn" = (
 /obj/item/clothing/suit/wizrobe/psypurple,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/spellbook/oneuse/forcewall,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"mG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"or" = (
+/obj/structure/loot_pile/surface/bones,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "oI" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "pJ" = (
 /obj/structure/table/bench/sifwooden/padded,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "pL" = (
 /mob/living/simple_mob/humanoid/cultist/noodle,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "qb" = (
 /obj/structure/bed/double/padded,
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
 /obj/item/weapon/bedsheet/hosdouble,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "rQ" = (
@@ -103,13 +151,24 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/narsie,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
+"sA" = (
+/obj/structure/table/bench/sifwooden/padded,
+/mob/living/simple_mob/humanoid/cultist/tesh,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "tW" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/castertesh,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "wh" = (
 /mob/living/simple_mob/humanoid/cultist/elite,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "wA" = (
@@ -139,6 +198,8 @@
 "yo" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/lizard,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "yC" = (
@@ -147,6 +208,7 @@
 "yD" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/spellbook/oneuse/forcewall,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "zB" = (
@@ -158,11 +220,19 @@
 "zO" = (
 /obj/item/clothing/suit/wizrobe,
 /mob/living/simple_mob/construct/shade,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Ac" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/weapon/flame/candle/everburn,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"Ae" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "AL" = (
@@ -172,9 +242,23 @@
 /obj/item/clothing/suit/wizrobe,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
+"Cf" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
+"Ch" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/weapon/flame/candle/everburn,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "DJ" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/clothing/head/psy_crown/wrath,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "EZ" = (
@@ -191,8 +275,15 @@
 /obj/random/meat,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
+"Gk" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "GX" = (
-/mob/living/simple_mob/construct/juggernaut,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Hn" = (
@@ -203,10 +294,6 @@
 /obj/item/rig_module/mounted/energy_blade,
 /obj/item/rig_module/sprinter,
 /obj/item/rig_module/rescue_pharm,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
-"Jq" = (
-/obj/item/weapon/gun/energy/staff/focus,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Ku" = (
@@ -222,6 +309,12 @@
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
+"MH" = (
+/obj/structure/table/bench/sifwooden/padded,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "MK" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/item/weapon/storage/backpack/holding/duffle,
@@ -230,9 +323,18 @@
 "MQ" = (
 /turf/simulated/wall/log_sif,
 /area/submap/bloodchurch)
+"MX" = (
+/obj/structure/table/sifwoodentable,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "Nn" = (
-/obj/effect/landmark/loot_spawn,
-/obj/item/weapon/storage/belt/holding,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "OC" = (
@@ -252,6 +354,7 @@
 "Qz" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/toolbox,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "RN" = (
@@ -267,9 +370,15 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bloodchurch)
+"Vy" = (
+/mob/living/simple_mob/humanoid/cultist/hunter,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/bloodchurch)
 "WM" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/caster,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Yz" = (
@@ -476,7 +585,6 @@ AL
 AL
 eT
 yC
-jP
 yC
 yC
 yC
@@ -504,7 +612,8 @@ yC
 yC
 yC
 yC
-jP
+yC
+yC
 yC
 KD
 AL
@@ -600,11 +709,11 @@ MQ
 MQ
 MQ
 MQ
-MQ
-MQ
-MQ
-MQ
-MQ
+gy
+gy
+gy
+gy
+gy
 yC
 yC
 yC
@@ -635,13 +744,13 @@ lt
 Pn
 lt
 Yz
-Jq
+rQ
 EZ
-MQ
+gy
 qb
 rQ
 xN
-MQ
+gy
 yC
 yC
 yC
@@ -667,18 +776,18 @@ eT
 MQ
 lt
 zO
-rQ
-rQ
-kn
-Yz
-lt
+Nn
+Nn
+or
+cq
+Gk
 AZ
 Pn
-MQ
-ce
-rQ
-aq
-MQ
+gy
+ev
+Nn
+Cf
+gy
 yC
 yC
 yC
@@ -702,20 +811,20 @@ yC
 yC
 eT
 MQ
+Pn
+Gk
 Nn
-lt
-rQ
-Yz
+cq
 mn
 MK
 wA
 kn
 fn
-MQ
+gy
 il
-rQ
-rQ
-MQ
+Nn
+Nn
+gy
 yC
 yC
 yC
@@ -748,11 +857,11 @@ MQ
 MQ
 MQ
 MQ
-MQ
-MQ
-MQ
+gy
+gy
+gy
 OC
-MQ
+gy
 yC
 yC
 jP
@@ -779,16 +888,16 @@ MQ
 gM
 rQ
 rQ
+Nn
+Nn
 rQ
-rQ
-rQ
-rQ
-rQ
+Nn
+Nn
 rQ
 OC
-rQ
-rQ
-rQ
+Nn
+Nn
+Nn
 MQ
 yC
 yC
@@ -815,11 +924,11 @@ eT
 MQ
 gM
 rQ
-rQ
+mG
 Ac
-rQ
+Nn
 Ac
-rQ
+Nn
 Ac
 rQ
 MQ
@@ -851,14 +960,14 @@ yC
 eT
 MQ
 rQ
-rQ
-rQ
+Nn
+Nn
 WM
-rQ
+mG
 yo
-rQ
+mG
 oI
-rQ
+mG
 MQ
 MQ
 sy
@@ -887,19 +996,19 @@ yC
 yC
 eT
 MQ
-rQ
+Nn
 DJ
-rQ
+Nn
+MH
+mG
 pJ
-rQ
+GX
 pJ
-rQ
-pJ
-rQ
+Nn
 MQ
 MC
-rQ
-rQ
+mG
+Nn
 MC
 MQ
 yC
@@ -926,18 +1035,18 @@ eT
 MQ
 wh
 fQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+mG
+GX
+mG
+GX
+mG
+GX
+Nn
 OC
 pL
 GX
-rQ
-rQ
+GX
+mG
 OC
 yC
 yC
@@ -963,17 +1072,17 @@ eT
 MQ
 rQ
 yD
-rQ
+Nn
+MH
+GX
 pJ
-rQ
-pJ
-rQ
-pJ
-rQ
+mG
+MH
+mG
 MQ
-MC
-rQ
-rQ
+ke
+mG
+mG
 MC
 MQ
 yC
@@ -1000,13 +1109,13 @@ eT
 MQ
 rQ
 rQ
-rQ
-oI
-rQ
+mG
+sA
+mG
 yo
-rQ
+mG
 tW
-rQ
+Nn
 MQ
 MQ
 sy
@@ -1037,11 +1146,11 @@ eT
 MQ
 gM
 rQ
-rQ
+Nn
+Ch
+Nn
 Ac
-rQ
-Ac
-rQ
+Nn
 Ac
 rQ
 MQ
@@ -1074,12 +1183,12 @@ eT
 MQ
 gM
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Nn
+Nn
+Nn
+Nn
+Nn
+Nn
 rQ
 OC
 rQ
@@ -1118,11 +1227,11 @@ MQ
 MQ
 MQ
 MQ
-MQ
-MQ
-MQ
+gy
+gy
+gy
 OC
-MQ
+gy
 yC
 yC
 jP
@@ -1148,18 +1257,18 @@ eT
 MQ
 Hn
 lt
-rQ
-rQ
-rQ
-rQ
-lt
-rQ
+Nn
+mG
+Nn
+Nn
+Gk
+Nn
 RN
-MQ
-il
-rQ
-rQ
-MQ
+gy
+cH
+Nn
+Nn
+gy
 yC
 yC
 yC
@@ -1185,18 +1294,18 @@ eT
 MQ
 rQ
 dF
-rQ
-rQ
+Nn
+mG
+Ae
+mG
+mG
+Vy
 lt
-rQ
-rQ
-dF
-lt
-MQ
+gy
 ce
-rQ
+Nn
 aq
-MQ
+gy
 yC
 yC
 yC
@@ -1226,14 +1335,14 @@ FG
 iT
 iT
 iT
-FG
-FG
+MX
+MX
 fb
-MQ
+gy
 hQ
-rQ
+Nn
 Qz
-MQ
+gy
 yC
 yC
 yC
@@ -1266,11 +1375,11 @@ MQ
 MQ
 MQ
 MQ
-MQ
-MQ
-MQ
-MQ
-MQ
+gy
+gy
+gy
+gy
+gy
 yC
 yC
 yC
@@ -1401,7 +1510,7 @@ AL
 AL
 eT
 yC
-jP
+yC
 yC
 yC
 yC
@@ -1423,7 +1532,7 @@ yC
 yC
 yC
 yC
-jP
+yC
 yC
 yC
 yC

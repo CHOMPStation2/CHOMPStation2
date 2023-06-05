@@ -106,6 +106,7 @@
 #include "code\__defines\tgs.config.dm"
 #include "code\__defines\tgs.dm"
 #include "code\__defines\tgui.dm"
+#include "code\__defines\time.dm"
 #include "code\__defines\tools.dm"
 #include "code\__defines\traits.dm"
 #include "code\__defines\turfs.dm"
@@ -124,7 +125,11 @@
 #include "code\_global_vars\misc.dm"
 #include "code\_global_vars\mobs.dm"
 #include "code\_global_vars\sensitive.dm"
+<<<<<<< HEAD
 #include "code\_global_vars\traits.dm"
+=======
+#include "code\_global_vars\time_vars.dm"
+>>>>>>> dd49b83167... Merge pull request #14964 from ItsSelis/selis-tgui-patch
 #include "code\_global_vars\typecache.dm"
 #include "code\_global_vars\lists\mapping.dm"
 #include "code\_global_vars\lists\misc.dm"
@@ -1035,7 +1040,6 @@
 #include "code\game\machinery\telecomms\telemonitor.dm"
 #include "code\game\machinery\telecomms\traffic_control.dm"
 #include "code\game\machinery\virtual_reality\ar_console.dm"
-#include "code\game\machinery\virtual_reality\vr_console.dm"
 #include "code\game\magic\Uristrunes.dm"
 #include "code\game\mecha\mech_bay.dm"
 #include "code\game\mecha\mech_fabricator.dm"
@@ -2942,7 +2946,6 @@
 #include "code\modules\mob\living\inventory.dm"
 #include "code\modules\mob\living\life.dm"
 #include "code\modules\mob\living\living.dm"
-#include "code\modules\mob\living\living_ch.dm"
 #include "code\modules\mob\living\living_defense.dm"
 #include "code\modules\mob\living\living_defines.dm"
 #include "code\modules\mob\living\living_defines_vr.dm"
@@ -4560,6 +4563,7 @@
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\machinery\colormate.dm"
 #include "modular_chomp\code\game\machinery\petrification.dm"
+#include "modular_chomp\code\game\machinery\virtual_reality\vr_console.dm"
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\items\petrifier.dm"
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"

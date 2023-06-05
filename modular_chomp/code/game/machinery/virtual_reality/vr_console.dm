@@ -1,5 +1,3 @@
-//CHOMPedit: This file has been disabled and moved to the modular_chomp folder. Check that one if you're bug-fixing!
-
 /obj/machinery/vr_sleeper
 	name = "virtual reality sleeper"
 	desc = "A fancy bed with built-in sensory I/O ports and connectors to interface users' minds with their bodies in virtual reality."
@@ -24,6 +22,7 @@
 	idle_power_usage = 15
 	active_power_usage = 200
 	light_color = "#FF0000"
+	//var/global/list/vr_mob_tf_options // Global var located in global_list_ch.dm
 
 
 /obj/machinery/vr_sleeper/Initialize()
@@ -51,6 +50,12 @@
 
 /obj/machinery/vr_sleeper/update_icon()
 	icon_state = "[base_state][occupant ? "1" : "0"]"
+
+// CHOMPedit
+/obj/machinery/vr_sleeper/examine(mob/user)
+	. = ..()
+	if(occupant)
+		. += "<span class='notice'>[occupant] is inside.</span>"
 
 /obj/machinery/vr_sleeper/Topic(href, href_list)
 	if(..())
@@ -238,29 +243,86 @@
 		if(!S)
 			return 0
 
+		//CHOMPedit: mob TF masquerading as mob spawning because that's somehow less spaghetti
+		var/tf = null
+		if(tgui_alert(occupant, "Would you like to play as a different creature?", "Join as a mob?", list("Yes", "No")) == "Yes")
+			var/k = tgui_input_list(occupant, "Please select a creature:", "Mob list", vr_mob_tf_options)
+			if(!k)
+				return 0
+			tf = vr_mob_tf_options[k]
+
 		for(var/obj/effect/landmark/virtual_reality/i in landmarks_list)
 			if(i.name == S)
 				S = i
 				break
 
 		avatar = new(S, "Virtual Reality Avatar")
-		// If the user has a non-default (Human) bodyshape, make it match theirs.
-		if(occupant.species.name != "Promethean" && occupant.species.name != "Human" && mirror_first_occupant)
-			avatar.shapeshifter_change_shape(occupant.species.name)
+		//CHOMPedit start: rewriting this to spawn a copy of the user and allow mob TF.
+		// I know this is a modular file now but perhaps keeping old comments will help with documentation.
+		if(mirror_first_occupant && occupant.client && occupant.client.prefs)
+			occupant.client.prefs.copy_to(avatar)
+
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
-
-//CHOMPedit start VR fix
 		occupant.enter_vr(avatar)
-		//Yes, I am using a aheal just so your markings transfer over, I could not get .prefs.copy_to working. This is very stupid, and I can't be assed to rewrite this.  Too bad!
-		avatar.revive()
+		avatar.regenerate_icons()
+		avatar.update_transform()
 		avatar.species.equip_survival_gear(avatar)
-		avatar.verbs += /mob/living/carbon/human/proc/exit_vr //ahealing removes the prommie verbs and the VR verbs, giving it back
+		avatar.verbs += /mob/living/carbon/human/proc/exit_vr
+		avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
+		avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
+		avatar.virtual_reality_mob = TRUE
 
-//CHOMPedit end
 		// Prompt for username after they've enterred the body.
 		var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
-		if (newname)
+		if(newname)
 			avatar.real_name = newname
+			avatar.name = newname
+
+		if(tf)
+			var/mob/living/new_form = avatar.transform_into_mob(tf, TRUE) // No need to check prefs when the occupant already chose to transform.
+			if(isliving(new_form)) // Make sure the mob spawned properly.
+				new_form.verbs += /mob/living/proc/vr_revert_mob_tf
+				new_form.virtual_reality_mob = TRUE
 
 	else
+		// If TFed, revert TF. Easier than coding mind transfer stuff for edge cases.
+		if(avatar.tfed_into_mob_check())
+			var/mob/living/M = loc
+			if(istype(M)) // Sanity check, though shouldn't be needed since this is already checked by the proc.
+				M.revert_mob_tf()
 		occupant.enter_vr(avatar)
+
+// I am not making a new file just for vr-specific mob procs.
+/mob/living/carbon/human/proc/vr_transform_into_mob()
+	set name = "Transform Into Creature"
+	set category = "Abilities"
+	set desc = "Become a different creature"
+
+	var/tf = null
+	var/k = tgui_input_list(usr, "Please select a creature:", "Mob list", vr_mob_tf_options)
+	if(!k)
+		return 0
+	tf = vr_mob_tf_options[k]
+
+	var/mob/living/new_form = transform_into_mob(tf, TRUE, TRUE)
+	if(isliving(new_form)) // Sanity check
+		new_form.verbs += /mob/living/proc/vr_revert_mob_tf
+		new_form.virtual_reality_mob = TRUE
+
+/mob/living/proc/vr_revert_mob_tf()
+	set name = "Revert Transformation"
+	set category = "Abilities"
+
+	revert_mob_tf()
+
+// Exiting VR but for ghosts
+/mob/living/carbon/human/proc/fake_exit_vr()
+	set name = "Log Out Of Virtual Reality"
+	set category = "Abilities"
+
+	if(tgui_alert(usr, "Would you like to log out of virtual reality?", "Log out?", list("Yes", "No")) == "Yes")
+		release_vore_contents(TRUE)
+		for(var/obj/item/I in src)
+			drop_from_inventory(I)
+		qdel(src)
+//CHOMPedit end

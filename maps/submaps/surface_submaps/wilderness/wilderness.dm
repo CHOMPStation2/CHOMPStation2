@@ -7,10 +7,12 @@
 #include "borglab.dmm"
 #include "butchershack.dmm"
 #include "caveS.dmm"
+#include "caveSAlt.dmm"
 #include "chapel.dmm"
 #include "chasm.dmm"
 #include "Cragzone1.dmm"
 #include "deathden.dmm"
+#include "deathdenAlt.dmm"
 #include "decoupledengine.dmm"
 #include "demonpool.dmm"
 #include "derelictengine.dmm"
@@ -18,7 +20,9 @@
 #include "DJOutpost2.dmm"
 #include "dogbase.dmm"
 #include "doomP.dmm"
+#include "doomPAlt.dmm"
 #include "drgnplateu.dmm"
+#include "drgnplateuAlt.dmm"
 #include "drugden.dmm"
 #include "emptycabin.dmm"
 #include "epod3.dmm"
@@ -33,6 +37,7 @@
 #include "leopardmanderden.dmm"
 #include "lonewolf.dmm"
 #include "manor1.dmm"
+#include "manor1Alt.dmm"
 #include "mcamp1.dmm"
 #include "MHR.dmm"
 #include "mudpit.dmm"
@@ -43,6 +48,7 @@
 #include "rocky3.dmm"
 #include "rocky4.dmm"
 #include "rockybase.dmm"
+#include "rockybaseAlt.dmm"
 #include "shack1.dmm"
 #include "Shelter.dmm"
 #include "smol1.dmm"
@@ -52,7 +58,7 @@
 #include "wolfden.dmm"
 #include "xenohive.dmm"
 #include "AmbushBase.dmm"
-#include "CultBar.dmm"
+#include "AmbushBaseAlt.dmm"
 #include "RaidedMechBunker.dmm"
 #include "AbandonedLab.dmm"
 #endif
@@ -95,6 +101,14 @@
 	desc = "Production of experimental combat robots gone rogue."
 	mappath = 'maps/submaps/surface_submaps/wilderness/borglab.dmm'
 	cost = 30
+	template_group = "Borg Lab"
+
+/datum/map_template/surface/wilderness/deep/borglabAlt
+	name = "Borg Lab"
+	desc = "Production of experimental combat robots gone rogue."
+	mappath = 'maps/submaps/surface_submaps/wilderness/borglabAlt.dmm'
+	cost = 30
+	template_group = "Shuttle Down"
 
 /datum/map_template/surface/wilderness/normal/butchershack
 	name = "Butcher Shack"
@@ -107,6 +121,14 @@
 	desc = "Chitter chitter!"
 	mappath = 'maps/submaps/surface_submaps/wilderness/CaveS.dmm'
 	cost = 20
+	template_group = "CaveS"
+
+/datum/map_template/surface/wilderness/deep/caveAlt
+	name = "CaveS"
+	desc = "Chitter chitter!"
+	mappath = 'maps/submaps/surface_submaps/wilderness/CaveSAlt.dmm'
+	cost = 20
+	template_group = "CaveS"
 
 /datum/map_template/surface/wilderness/deep/chapel
 	name = "Chapel 1"
@@ -132,6 +154,14 @@
 	desc = "Gathering of acolytes gone wrong."
 	mappath = 'maps/submaps/surface_submaps/wilderness/deathden.dmm'
 	cost = 15
+	template_group = "Death Den"
+
+/datum/map_template/surface/wilderness/deep/deathdenAlt
+	name = "Death Den"
+	desc = "Gathering of acolytes gone wrong."
+	mappath = 'maps/submaps/surface_submaps/wilderness/deathdenAlt.dmm'
+	cost = 15
+	template_group = "Death Den"
 
 /datum/map_template/surface/wilderness/normal/decoupledengine
 	name = "Decoupled Engine"
@@ -184,18 +214,42 @@
 	desc = "A highly secured base with hungry trained canines"
 	mappath = 'maps/submaps/surface_submaps/wilderness/dogbase.dmm'
 	cost = 20
+	template_group = "Dog Base"
+
+/datum/map_template/surface/wilderness/deep/dogbaseAlt
+	name = "Dog Base"
+	desc = "A highly secured base with hungry trained canines"
+	mappath = 'maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm'
+	cost = 20
+	template_group = "Dog Base"
 
 /datum/map_template/surface/wilderness/deep/doomP
 	name = "DoomP"
 	desc = "Witty description here."
 	mappath = 'maps/submaps/surface_submaps/wilderness/doomP.dmm'
 	cost = 30
+	template_group = "doomP"
+
+/datum/map_template/surface/wilderness/deep/doomPAlt
+	name = "DoomP"
+	desc = "Witty description here."
+	mappath = 'maps/submaps/surface_submaps/wilderness/doomPAlt.dmm'
+	cost = 30
+	template_group = "doomP"
 
 /datum/map_template/surface/wilderness/deep/drgnplateu
 	name = "Dragon Plateu"
 	desc = "A dangerous plateu of cliffs home to a rampant gold hoarding dragon"
 	mappath = 'maps/submaps/surface_submaps/wilderness/drgnplateu.dmm'
 	cost = 15
+	template_group = "drgnplateu"
+
+/datum/map_template/surface/wilderness/deep/drgnplateuAlt
+	name = "Dragon Plateu"
+	desc = "A dangerous plateu of cliffs home to a rampant gold hoarding dragon"
+	mappath = 'maps/submaps/surface_submaps/wilderness/drgnplateuAlt.dmm'
+	cost = 15
+	template_group = "drgnplateu"
 
 /datum/map_template/surface/wilderness/normal/drugden
 	name = "Drug Den"
@@ -280,6 +334,14 @@
 	desc = "Whodunit"
 	mappath = 'maps/submaps/surface_submaps/wilderness/manor1.dmm'
 	cost = 20
+	template_group = "Manor"
+
+/datum/map_template/surface/wilderness/deep/manor1Alt
+	name = "Manor 1"
+	desc = "Whodunit"
+	mappath = 'maps/submaps/surface_submaps/wilderness/manor1Alt.dmm'
+	cost = 20
+	template_group = "Manor"
 
 /datum/map_template/surface/wilderness/normal/Mcamp1
 	name = "Military Camp 1"
@@ -336,6 +398,14 @@
 	desc = "A guide to upsetting Icarus and the EIO"
 	mappath = 'maps/submaps/surface_submaps/wilderness/rockybase.dmm'
 	cost = 35
+	template_group = "Rocky Base"
+
+/datum/map_template/surface/wilderness/deep/rockybaseAlt
+	name = "Rocky Base"
+	desc = "A guide to upsetting Icarus and the EIO"
+	mappath = 'maps/submaps/surface_submaps/wilderness/rockybaseAlt.dmm'
+	cost = 35
+	template_group = "Rocky Base"
 
 /datum/map_template/surface/wilderness/normal/shack1
 	name = "Shack 1"
@@ -368,11 +438,12 @@
 	allow_duplicates = TRUE
 	cost = 5
 
-/datum/map_template/surface/wilderness/deep/syndisniper
+/datum/map_template/surface/wilderness/deep/syndisniperAlt
 	name = "Syndi Sniper"
 	desc = "Syndicate watch tower, deadly but secluded"
-	mappath = 'maps/submaps/surface_submaps/wilderness/syndisniper.dmm'
+	mappath = 'maps/submaps/surface_submaps/wilderness/syndisniperAlt.dmm'
 	cost = 5
+	template_group = "Sniper"
 
 /datum/map_template/surface/wilderness/normal/wolfden
 	name = "Wolf Den"
@@ -386,24 +457,25 @@
 	mappath = 'maps/submaps/surface_submaps/wilderness/xenohive.dmm'
 	cost = 25
 
-/datum/map_template/surface/wilderness/deep/cultbar
-	name = "Cult Bar"
-	desc = "A bar surronded by demons, for those of the occult."
-	mappath = 'maps/submaps/surface_submaps/wilderness/CultBar.dmm'
-	cost = 20
-
 /datum/map_template/surface/wilderness/deep/cliffbase
 	name = "Cliff Base"
 	desc = "A hideout protected by a lake, and duo of snipers."
 	mappath = 'maps/submaps/surface_submaps/wilderness/AmbushBase.dmm'
 	cost = 30
 
+/datum/map_template/surface/wilderness/deep/cliffbaseAlt
+	name = "Cliff Base"
+	desc = "A hideout protected by a lake, and duo of snipers."
+	mappath = 'maps/submaps/surface_submaps/wilderness/AmbushBaseAlt.dmm'
+	cost = 30
+	template_group = "AmbushBase"
+
 /datum/map_template/surface/wilderness/deep/raideddmechhanger
 	name = "Raided Mech Hanger"
 	desc = "A hanger with mechs far past useabiltiy."
 	mappath = 'maps/submaps/surface_submaps/wilderness/RaidedMechBunker.dmm'
 	cost = 10
-	
+
 /datum/map_template/surface/wilderness/deep/AbandonedLab
 	name = "Abandoned Lab"
 	desc = "Experiments gone wrong! Be wary of the test subjects gone rogue."
