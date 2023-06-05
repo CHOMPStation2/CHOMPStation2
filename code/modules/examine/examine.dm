@@ -120,7 +120,6 @@
 		var/is_antag = ((mind && mind.special_role) || isobserver(src)) //ghosts don't have minds
 		client.update_description_holders(A, is_antag)
 
-
 /mob/verb/mob_examine()
 	set name = "Mob Examine"
 	set desc = "Allows one to examine mobs they can see, even from inside of bellies and objects."
