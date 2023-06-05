@@ -1,7 +1,6 @@
 import { Loader } from './common/Loader';
 import { InputButtons } from './common/InputButtons';
 import { useBackend, useLocalState } from '../backend';
-import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
 import { Box, Section, Stack, TextArea } from '../components';
 import { Window } from '../layouts';
 
@@ -13,23 +12,11 @@ type TextInputData = {
   placeholder: string;
   timeout: number;
   title: string;
-  // CHOMPedit Start
-};
-
-export const sanitizeMultiline = (toSanitize: string) => {
-  return toSanitize.replace(/(\n|\r\n){3,}/, '\n\n');
-};
-
-export const removeAllSkiplines = (toSanitize: string) => {
-  return toSanitize.replace(/[\r\n]+/, '');
+  prevent_enter: boolean;
 };
 
 export const TextInputModal = (props, context) => {
   const { act, data } = useBackend<TextInputData>(context);
-<<<<<<< HEAD
-  const { large_buttons, max_length, message = '', multiline, placeholder, timeout, title } = data;
-  const [input, setInput] = useLocalState<string>(context, 'input', placeholder || '');
-=======
   const {
     large_buttons,
     max_length,
@@ -45,37 +32,30 @@ export const TextInputModal = (props, context) => {
     'input',
     placeholder || ''
   );
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
   const onType = (value: string) => {
     if (value === input) {
       return;
     }
-    const sanitizedInput = multiline ? sanitizeMultiline(value) : removeAllSkiplines(value);
-    setInput(sanitizedInput);
+    setInput(value);
   };
-
-  const visualMultiline = multiline || input.length >= 30;
   // Dynamically changes the window height based on the message.
   const windowHeight =
     135 +
     (message.length > 30 ? Math.ceil(message.length / 4) : 0) +
-    (visualMultiline ? 75 : 0) +
+    (multiline || input.length >= 30 ? 75 : 0) +
     (message.length && large_buttons ? 5 : 0);
 
   return (
     <Window title={title} width={325} height={windowHeight}>
       {timeout && <Loader value={timeout} />}
       <Window.Content
-        onKeyDown={(event) => {
-          const keyCode = window.event ? event.which : event.keyCode;
-          if (keyCode === KEY_ENTER && (!visualMultiline || !event.shiftKey)) {
+        onEscape={() => act('cancel')}
+        onEnter={(event) => {
+          if (!prevent_enter) {
             act('submit', { entry: input });
-          }
-          if (keyCode === KEY_ESCAPE) {
-            act('cancel');
+            event.preventDefault();
           }
         }}>
-        {/* CHOMPedit End */}
         <Section fill>
           <Stack fill vertical>
             <Stack.Item>
@@ -100,10 +80,8 @@ export const TextInputModal = (props, context) => {
 /** Gets the user input and invalidates if there's a constraint. */
 const InputArea = (props, context) => {
   const { act, data } = useBackend<TextInputData>(context);
-  const { max_length, multiline } = data; // CHOMPedit
+  const { max_length, multiline, prevent_enter } = data;
   const { input, onType } = props;
-
-  const visualMultiline = multiline || input.length >= 30; // CHOMPedit
 
   return (
     <TextArea
@@ -113,13 +91,10 @@ const InputArea = (props, context) => {
       maxLength={max_length}
       onEscape={() => act('cancel')}
       onEnter={(event) => {
-        // CHOMPedit Start
-        if (visualMultiline && event.shiftKey) {
-          return;
+        if (!prevent_enter) {
+          act('submit', { entry: input });
+          event.preventDefault();
         }
-        event.preventDefault();
-        act('submit', { entry: input });
-        // CHOMPedit End
       }}
       onInput={(_, value) => onType(value)}
       placeholder="Type something..."

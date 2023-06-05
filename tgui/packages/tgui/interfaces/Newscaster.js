@@ -1,7 +1,7 @@
 import { decodeHtmlEntities } from 'common/string';
 import { Fragment } from 'inferno';
 import { useBackend, useSharedState } from '../backend';
-import { Box, Button, LabeledList, Input, Section } from '../components';
+import { Box, Button, Flex, LabeledList, Input, Section } from '../components';
 import { Window } from '../layouts';
 import { TemporaryNotice } from './common/TemporaryNotice';
 
@@ -198,10 +198,6 @@ const NewscasterNewStory = (props, context) => {
 
   const { setScreen } = props;
 
-  const label_style = { 'white-space': 'nowrap' };
-
-  const break_style = { width: '100%', 'word-break': 'break-all', 'word-wrap': 'break-word' };
-
   return (
     <Section
       title="Creating new Feed Message..."
@@ -210,64 +206,6 @@ const NewscasterNewStory = (props, context) => {
           Back
         </Button>
       }>
-<<<<<<< HEAD
-      <table
-        style={{
-          width: 'calc(100% + 0.5em)',
-          margin: '-0.25em -0.25em 0 -0.25em',
-          padding: 0,
-        }}>
-        <tr>
-          <td style={label_style}>Receiving Channel:</td>
-          <td colspan={2}>
-            <Button fluid onClick={() => act('set_channel_receiving')}>
-              {channel_name || 'Unset'}
-            </Button>
-          </td>
-        </tr>
-        <tr>
-          <td style={label_style}>Message Author:</td>
-          <td className="color-good" colspan={2}>
-            {user}
-          </td>
-        </tr>
-        <tr>
-          <td style={label_style}>Message Title:</td>
-          <td style={break_style}>{title || '(no title yet)'}</td>
-          <td>
-            <Button
-              verticalAlign="top"
-              onClick={() => act('set_new_title')}
-              icon="pen"
-              tooltip="Edit Title"
-              tooltipPosition="left"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td style={label_style}>Message Body:</td>
-          <td style={break_style}>{msg || '(no message yet)'}</td>
-          <td>
-            <Button
-              verticalAlign="top"
-              onClick={() => act('set_new_message')}
-              icon="pen"
-              tooltip="Edit Message"
-              tooltipPosition="left"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td style={label_style}>Attach Photo:</td>
-          <td colspan={2}>
-            <Button fluid icon="image" onClick={() => act('set_attachment')}>
-              {photo_data ? 'Photo Attached' : 'No Photo'}
-            </Button>
-          </td>
-        </tr>
-      </table>
-      <Button fluid color="good" icon="plus" onClick={() => act('submit_new_message')}>
-=======
       <LabeledList>
         <LabeledList.Item label="Receiving Channel">
           <Button fluid onClick={() => act('set_channel_receiving')}>
@@ -324,7 +262,6 @@ const NewscasterNewStory = (props, context) => {
         color="good"
         icon="plus"
         onClick={() => act('submit_new_message')}>
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
         Submit Message
       </Button>
       <Button

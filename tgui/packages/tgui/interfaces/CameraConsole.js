@@ -110,49 +110,6 @@ export const CameraConsoleContent = (props, context) => {
   allNetworks.sort();
   const cameras = selectCameras(data.cameras, searchText, networkFilter);
   return (
-<<<<<<< HEAD
-    <Fragment>
-      <Input
-        fluid
-        mb={1}
-        placeholder="Search for a camera"
-        onInput={(e, value) => setSearchText(value)}
-      />
-      <Dropdown
-        mb={1}
-        width="177px"
-        options={allNetworks}
-        placeholder="No Filter"
-        onSelected={(value) => setNetworkFilter(value)}
-      />
-      <Section>
-        {cameras.map((camera) => (
-          // We're not using the component here because performance
-          // would be absolutely abysmal (50+ ms for each re-render).
-          <div
-            key={camera.name}
-            title={camera.name}
-            className={classes([
-              'Button',
-              'Button--fluid',
-              'Button--color--transparent',
-              'Button--ellipsis',
-              activeCamera &&
-                camera.name === activeCamera.name &&
-                'Button--selected',
-            ])}
-            onClick={() => {
-              refocusLayout();
-              act('switch_camera', {
-                name: camera.name,
-              });
-            }}>
-            {camera.name}
-          </div>
-        ))}
-      </Section>
-    </Fragment>
-=======
     <Flex direction={'column'} height="100%">
       <Flex.Item>
         <Input
@@ -200,6 +157,5 @@ export const CameraConsoleContent = (props, context) => {
         </Section>
       </Flex.Item>
     </Flex>
->>>>>>> 404eebc3f7... Merge pull request #14933 from ItsSelis/selis-tgui
   );
 };

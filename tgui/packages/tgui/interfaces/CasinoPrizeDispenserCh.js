@@ -102,7 +102,7 @@ const CasinoPrizeDispenserChItems = (props, context) => {
 
     has_contents = true;
     return (
-      <CasinoPrizeDispenserItemsCategory
+      <CasinoPrizeDispenserChItemsCategory
         key={kv[0]}
         title={kv[0]}
         items={items_in_cat}

@@ -15,10 +15,6 @@ export class TextArea extends Component {
   constructor(props, context) {
     super(props, context);
     this.textareaRef = props.innerRef || createRef();
-<<<<<<< HEAD
-    // CHOMPedit
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
     this.state = {
       editing: false,
       scrolledAmount: 0,
@@ -56,10 +52,6 @@ export class TextArea extends Component {
     };
     this.handleKeyDown = (e) => {
       const { editing } = this.state;
-<<<<<<< HEAD
-      // CHOMPedit
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
       const { onChange, onInput, onEnter, onKey } = this.props;
       if (e.keyCode === KEY_ENTER) {
         this.setEditing(false);
@@ -94,10 +86,6 @@ export class TextArea extends Component {
       if (!editing) {
         this.setEditing(true);
       }
-<<<<<<< HEAD
-      // CHOMPedit
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
       // Custom key handler
       if (onKey) {
         onKey(e, e.target.value);
@@ -112,10 +100,6 @@ export class TextArea extends Component {
             '\t' +
             value.substring(selectionEnd);
           e.target.selectionEnd = selectionStart + 1;
-<<<<<<< HEAD
-          // CHOMPedit
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
           if (onInput) {
             onInput(e, e.target.value);
           }
@@ -138,10 +122,6 @@ export class TextArea extends Component {
         }
       }
     };
-<<<<<<< HEAD
-    // CHOMPedit Start
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
     this.handleScroll = (e) => {
       const { displayedValue } = this.props;
       const input = this.textareaRef.current;
@@ -167,10 +147,6 @@ export class TextArea extends Component {
           input.select();
         }
       }, 1);
-<<<<<<< HEAD
-      // CHOMPedit End
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
     }
   }
 
@@ -204,10 +180,6 @@ export class TextArea extends Component {
       value,
       maxLength,
       placeholder,
-<<<<<<< HEAD
-      // CHOMPedit Start
-=======
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
       scrollbar,
       noborder,
       displayedValue,
@@ -218,28 +190,20 @@ export class TextArea extends Component {
     const { scrolledAmount } = this.state;
     return (
       <Box
-<<<<<<< HEAD
-        className={classes(['TextArea', fluid && 'TextArea--fluid', noborder && 'TextArea--noborder', className])}
-=======
         className={classes([
           'TextArea',
           fluid && 'TextArea--fluid',
           noborder && 'TextArea--noborder',
           className,
         ])}
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
         {...rest}>
         {!!displayedValue && (
           <Box position="absolute" width="100%" height="100%" overflow="hidden">
             <div
-<<<<<<< HEAD
-              className={classes(['TextArea__textarea', 'TextArea__textarea_custom'])}
-=======
               className={classes([
                 'TextArea__textarea',
                 'TextArea__textarea_custom',
               ])}
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
               style={{
                 'transform': `translateY(-${scrolledAmount}px)`,
               }}>
@@ -267,7 +231,6 @@ export class TextArea extends Component {
             'color': displayedValue ? 'rgba(0, 0, 0, 0)' : 'inherit',
           }}
         />
-        {/* CHOMPedit End */}
       </Box>
     );
   }
