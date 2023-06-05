@@ -348,6 +348,7 @@
 #include "code\controllers\subsystems\processing\fastprocess.dm"
 #include "code\controllers\subsystems\processing\instruments.dm"
 #include "code\controllers\subsystems\processing\obj.dm"
+#include "code\controllers\subsystems\processing\obj_tab_items.dm"
 #include "code\controllers\subsystems\processing\processing.dm"
 #include "code\controllers\subsystems\processing\projectiles.dm"
 #include "code\controllers\subsystems\processing\turfs.dm"
