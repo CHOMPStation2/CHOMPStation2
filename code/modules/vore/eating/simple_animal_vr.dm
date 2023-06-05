@@ -109,7 +109,11 @@
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
 				if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
 					LAZYSET(prey_excludes, L, world.time)
+<<<<<<< HEAD
 					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
+=======
+					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 5 MINUTES)
+>>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 	else if(istype(O, /obj/item/device/healthanalyzer))
 		var/healthpercent = health/maxHealth*100
 		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")

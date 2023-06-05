@@ -215,7 +215,7 @@
 						break
 				layers[current] = current_layer
 
-		//sortTim(layers, /proc/cmp_image_layer_asc)
+		//sortTim(layers, GLOBAL_PROC_REF(cmp_image_layer_asc))
 
 		var/icon/add // Icon of overlay being added
 
@@ -384,7 +384,11 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 /proc/set_cached_examine_icon(var/atom/A, var/icon/I, var/expiry = 12000)
 	GLOB.cached_examine_icons[weakref(A)] = I
 	if(expiry)
+<<<<<<< HEAD
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/uncache_examine_icon, weakref(A)), expiry, TIMER_UNIQUE)
+=======
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(uncache_examine_icon), WEAKREF(A)), expiry, TIMER_UNIQUE)
+>>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 
 /proc/get_cached_examine_icon(var/atom/A)
 	var/weakref/WR = weakref(A)

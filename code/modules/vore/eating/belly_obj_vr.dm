@@ -402,6 +402,7 @@
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
+<<<<<<< HEAD
 			M.ai_holder.go_sleep()
 		if(reagents.total_volume > 0 && M.digestable) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST)
@@ -423,6 +424,13 @@
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
 		addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
 	*/
+=======
+			M.ai_holder.handle_eaten()
+
+	// Intended for simple mobs
+	if(!owner.client && autotransferlocation && autotransferchance > 0)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/belly, check_autotransfer), thing, autotransferlocation), autotransferwait)
+>>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
@@ -1438,6 +1446,7 @@
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
 
+<<<<<<< HEAD
 //Autotransfer callback CHOMPEdit Start
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
 	if(!(prey in contents) || !prey.autotransferable) return
@@ -1457,6 +1466,23 @@
 	if(!dest_belly) return
 	transfer_contents(prey, dest_belly)
 	return TRUE //CHOMPEdit end
+=======
+//Autotransfer callback
+/obj/belly/proc/check_autotransfer(var/prey, var/autotransferlocation)
+	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
+		if(prob(autotransferchance))
+			var/obj/belly/dest_belly
+			for(var/obj/belly/B in owner.vore_organs)
+				if(B.name == autotransferlocation)
+					dest_belly = B
+					break
+			if(dest_belly)
+				transfer_contents(prey, dest_belly)
+		else
+			// Didn't transfer, so wait before retrying
+			// I feel like there's a way to make this timer looping using the normal looping thing, but pass in the ID and cancel it if we aren't looping again
+			addtimer(CALLBACK(src, PROC_REF(check_autotransfer), prey, autotransferlocation), autotransferwait)
+>>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
