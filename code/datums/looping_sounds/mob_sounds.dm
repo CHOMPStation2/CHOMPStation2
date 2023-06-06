@@ -12,7 +12,7 @@
 /datum/looping_sound/mob/deafened
 	start_sound = 'modular_chomp/sound/effects/ear_ring/ear_deaf_in.ogg'
 	start_length = 4 SECONDS // 2 seconds shorter than the actual file ending, bc we want it to overlap
-	mid_sounds = list('modular_chomp/sound/effects/ear_ring/ear_deaf_loop.ogg'=1)
+	mid_sounds = list('modular_chomp/sound/effects/misc/silence.ogg'=1)
 	mid_length = 3 SECONDS
 	end_sound = 'modular_chomp/sound/effects/ear_ring/ear_deaf_out.ogg'
 	volume = 40
