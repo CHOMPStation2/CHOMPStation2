@@ -937,6 +937,9 @@
 	desc = ""
 	icon = 'icons/mob/vore/ears_vr.dmi'
 	icon_state = "kara_horn"
+<<<<<<< HEAD
+	ckeys_allowed = list("satinisle")
+=======
 	ckeys_allowed = list("satinisle")
 
 /datum/sprite_accessory/ears/shark
@@ -998,11 +1001,27 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "shark_fin"
 
-/datum/sprite_accessory/ears/sharklowhboth
+/datum/sprite_accessory/ears/sharkhighbothalt
+	name = "shark upper ears and fin alt style (Colorable)"
+	desc = ""
+	icon_state = "shark_ears_upper"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "shark_fin_alt"
+
+/datum/sprite_accessory/ears/sharklowboth
+	name = "shark lower ears and fin (Colorable)"
+	desc = ""
+	icon_state = "shark_ears_lower"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "shark_fin"
+
+/datum/sprite_accessory/ears/sharklowbothalt
 	name = "shark lower ears and fin alt style (Colorable)"
 	desc = ""
 	icon_state = "shark_ears_lower"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "shark_fin_alt"
-
+>>>>>>> 95f5b3bc90... Merge pull request #14980 from Rick4242/varietypack
