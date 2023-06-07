@@ -81,8 +81,8 @@
 
 /mob/living/carbon/human/Destroy()
 	if(stored_blob)
-		stored_blob.l_hand.forceMove(loc)
-		stored_blob.r_hand.forceMove(loc)
+		stored_blob.l_hand?.forceMove(loc) // CHHOMPedit - Make sure that stored_blob actually has the hand before trying to forceMove.
+		stored_blob.r_hand?.forceMove(loc) // CHHOMPedit - ^
 		stored_blob = null
 		qdel(stored_blob)
 	return ..()
