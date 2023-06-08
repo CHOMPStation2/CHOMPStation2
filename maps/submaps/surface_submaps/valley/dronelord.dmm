@@ -193,12 +193,6 @@
 "yh" = (
 /turf/simulated/wall/durasteel,
 /area/submap/dronelord)
-"yD" = (
-/mob/living/simple_mob/mechanical/mining_drone{
-	faction = "syndicate"
-	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/submap/dronelord)
 "zi" = (
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate"
@@ -418,13 +412,13 @@ RV
 RV
 tK
 tK
-yD
 tK
 tK
 tK
 tK
 tK
-yD
+tK
+tK
 tK
 tK
 RV
@@ -498,7 +492,7 @@ RV
 (7,1,1) = {"
 RV
 tK
-yD
+tK
 tK
 tK
 aj
@@ -512,7 +506,7 @@ aj
 aj
 tK
 tK
-yD
+tK
 tK
 RV
 "}
@@ -624,7 +618,7 @@ RV
 (13,1,1) = {"
 RV
 tK
-yD
+tK
 tK
 tK
 aj
@@ -638,7 +632,7 @@ dq
 aj
 tK
 tK
-yD
+tK
 tK
 RV
 "}
@@ -750,7 +744,7 @@ RV
 (19,1,1) = {"
 RV
 tK
-yD
+tK
 tK
 tK
 aj
@@ -764,7 +758,7 @@ aj
 aj
 tK
 tK
-yD
+tK
 tK
 RV
 "}
@@ -876,7 +870,7 @@ RV
 (25,1,1) = {"
 RV
 tK
-yD
+tK
 tK
 tK
 TX
@@ -890,7 +884,7 @@ TX
 TX
 tK
 tK
-yD
+tK
 tK
 RV
 "}
@@ -964,13 +958,13 @@ RV
 tK
 tK
 tK
-yD
 tK
 tK
 tK
 tK
 tK
-yD
+tK
+tK
 tK
 tK
 tK
