@@ -180,7 +180,7 @@
 	description = "An advancment of kelotane that scars and breaks apart the users flesh to remove the burnt tissue."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
-	color = "#FFA800"
+	color = "#FF6600"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 
@@ -240,7 +240,7 @@
 	description = "A chemical created to bring a body to peak condition except it's highly toxic"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
-	color = "#8040FF"
+	color = "#006666"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
 
@@ -260,7 +260,7 @@
 	description = "An expirmental drug that soley works upon dead bodies"
 	taste_description = "ash"
 	reagent_state = LIQUID
-	color = "#FFFFFF"
+	color = "#666699"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 2
 	affects_dead = TRUE
@@ -278,7 +278,7 @@
 	description = "An expirmental drug that is meant to further enhance tricord"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
-	color = "#FFFFFF"
+	color = "#FF3399"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 2
 /datum/reagent/quadcord/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -298,7 +298,7 @@
 	description = "An expirmental that toughens the body to blows and knockdown"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
-	color = "#FFFFFF"
+	color = "#660066"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.25
 
@@ -313,7 +313,7 @@
 	description = "An expirmental that removes many aligments, such as poison and stiffing of muscles via frost"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
-	color = "#FFFFFF"
+	color = "#660066"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
 
@@ -335,7 +335,7 @@
 	description = "An expirmental that mimics rapid regeneration seen in squishy creatures."
 	taste_description = "sweet"
 	reagent_state = LIQUID
-	color = "#FFFFFF"
+	color = "#00CCFF"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.25
 	modifier_to_add = /datum/modifier/aura/slime_heal
