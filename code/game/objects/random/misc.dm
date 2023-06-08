@@ -238,7 +238,8 @@
 				prob(6);/obj/item/weapon/storage/firstaid/adv,
 				prob(8);/obj/item/weapon/storage/firstaid/fire,
 				prob(1);/obj/item/device/denecrotizer/medical, //VOREStation Add,
-				prob(1);/obj/item/weapon/storage/firstaid/combat)
+				prob(1);/obj/item/weapon/storage/firstaid/combat
+				prob(2);/obj/item/weapon/storage/firstaid/experimental) //CHOMPadd
 
 /obj/random/contraband
 	name = "Random Illegal Item"
