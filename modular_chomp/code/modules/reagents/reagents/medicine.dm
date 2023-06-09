@@ -84,8 +84,6 @@
 		M.adjustToxLoss(-6 * removed * chem_effective)
 		M.radiation = max(M.radiation - 15 * removed * M.species.chem_strength_heal, 0)
 		M.accumulated_rads = max(M.accumulated_rads - 15 * removed * M.species.chem_strength_heal, 0)
-		if(prob(10))
-			M.remove_a_modifier_of_type(/datum/modifier/poisoned)
 
 /datum/reagent/puryfingagent
 	name = "Puryfing Agent"
@@ -289,7 +287,7 @@
 		M.adjustOxyLoss(-0.5 * removed * chem_effective)
 		M.heal_organ_damage(0.5 * removed * chem_effective, 0.5 * removed * chem_effective)
 		M.adjustToxLoss(-0.5 * removed * chem_effective)
-		M.adjustCloneLoss(-0.5 * removed)
+		M.adjustBrainLoss(-1 * removed * chem_effective)
 
 //tier 2
 /datum/reagent/juggernog
