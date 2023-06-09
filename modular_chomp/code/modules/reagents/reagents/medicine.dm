@@ -229,10 +229,10 @@
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
-		M.adjustOxyLoss(-5 * removed * chem_effective)
+		M.adjustOxyLoss(-4 * removed * chem_effective)
 		M.heal_organ_damage(2 * removed, 2 * removed * chem_effective)
-		M.adjustToxLoss(-4 * removed * chem_effective)
-		M.add_chemical_effect(CE_PAINKILLER, -10 * M.species.chem_strength_pain)
+		M.adjustToxLoss(-3 * removed * chem_effective)
+		M.add_chemical_effect(CE_PAINKILLER, -20 * M.species.chem_strength_pain)
 
 /datum/reagent/preformancepeaker
 	name = "Preformance Peaker"
