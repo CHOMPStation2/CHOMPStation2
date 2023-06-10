@@ -2529,9 +2529,6 @@ Departamental Swimsuits, for general use
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	item_state = "perrinrobes_s"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-<<<<<<< HEAD
-End CHOMP Removal*/
-=======
 
 //Fuackwit422: Zera Livanne
 /obj/item/clothing/suit/storage/toggle/labcoat/fluff/zera
@@ -2646,4 +2643,4 @@ End CHOMP Removal*/
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "grand_purple_cloak_hat"
 	item_state = "grand_purple_cloak_hat_onmob"
->>>>>>> 4685c095bb... Merge pull request #14942 from SatinIsle/Zeras-Cloak
+End CHOMP Removal*/
