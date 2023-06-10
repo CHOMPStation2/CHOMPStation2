@@ -153,8 +153,6 @@
 		/obj/item/weapon/anobattery,
 		/obj/item/weapon/pickaxe
 		)
-<<<<<<< HEAD
-=======
 
 /obj/item/weapon/storage/belt/hydro
 	name = "hydroponics belt"
@@ -179,4 +177,3 @@
 		/obj/item/weapon/gun/energy/floragun,
 		/obj/item/seeds
 		)
->>>>>>> 78a8ef9563... Merge pull request #14957 from Youtubeboy139/hedge-trimmers

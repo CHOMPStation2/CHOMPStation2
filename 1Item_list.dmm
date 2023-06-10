@@ -9032,6 +9032,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"cHz" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "cHI" = (
 /obj/machinery/appliance/mixer/cereal,
 /turf/simulated/fitness{
@@ -34767,6 +34773,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"kgC" = (
+/obj/item/weapon/handcuffs/cable,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "kgD" = (
 /obj/item/weapon/pen/blade/fountain,
 /turf/simulated/fitness{
@@ -57661,6 +57673,15 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"qSV" = (
+/obj/machinery/portable_atmospherics/hydroponics{
+	frozen = 1;
+	closed_system = 1
+	},
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "qSX" = (
 /obj/item/clothing/suit/storage/solgov/service/sifguard/security/command,
 /turf/simulated/fitness{
@@ -68393,6 +68414,12 @@
 /area/survivalpod)
 "ucS" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"ucT" = (
+/obj/random/flashlight,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -90410,8 +90437,8 @@ rCA
 vOT
 nvf
 vOT
-cBu
-eyV
+diU
+vOT
 vOT
 iOY
 xVD
@@ -90612,8 +90639,8 @@ aSB
 vOT
 sMv
 vOT
-sbS
-wmi
+vOT
+vOT
 vOT
 qSC
 ltP
@@ -90814,8 +90841,8 @@ tIz
 vOT
 vOT
 vOT
-diU
-sYs
+vOT
+vOT
 vOT
 lMF
 nwN
@@ -91016,8 +91043,8 @@ fTL
 vOT
 nqj
 vOT
-pQt
-vgt
+vOT
+vOT
 vOT
 vOT
 vOT
@@ -91218,8 +91245,8 @@ vOT
 vOT
 tJz
 vOT
-mTF
-btY
+vOT
+vOT
 vOT
 vOT
 vOT
@@ -91420,8 +91447,8 @@ vOT
 vOT
 lic
 vOT
-mOs
-mRa
+vOT
+vOT
 vOT
 vOT
 vOT
@@ -91622,8 +91649,8 @@ rQJ
 vOT
 pKd
 vOT
-hxT
-bPN
+vOT
+vOT
 vOT
 vOT
 vOT
@@ -91824,7 +91851,7 @@ vOT
 vOT
 vOT
 vOT
-nXt
+vOT
 vOT
 vOT
 vOT
@@ -92437,10 +92464,10 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
+pba
+lcr
+sBu
+kmC
 vOT
 vOT
 pnG
@@ -92639,10 +92666,10 @@ dRu
 cup
 iiH
 vOT
-vOT
-vOT
-vOT
-vOT
+gIg
+vwg
+jHt
+xXC
 vOT
 vOT
 cnO
@@ -92841,10 +92868,10 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
+ybx
+gcR
+ybx
+keu
 vOT
 vOT
 stD
@@ -93039,14 +93066,14 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+eRD
+cBu
+mTF
+wmi
+vgt
+bHy
+llu
+ena
 vOT
 vOT
 dQP
@@ -93241,14 +93268,14 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+kaY
+sbS
+mOs
+sYs
+btY
+vvS
+tjP
+eTv
 vOT
 vOT
 wHF
@@ -93443,13 +93470,13 @@ uOC
 tRr
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+fvB
+pQt
+hxT
+nXt
+mRa
+pXn
+csY
 vOT
 vOT
 vOT
@@ -93645,13 +93672,13 @@ vOT
 jwT
 vOT
 vOT
+nXt
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+diU
+eyV
+bPN
+rnH
+yaO
 vOT
 vOT
 vOT
@@ -97495,11 +97522,11 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+bYj
+aCs
+gIc
+cQs
+fQu
 vOT
 vOT
 vOT
@@ -97697,11 +97724,11 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+nql
+gjZ
+nfm
+lxp
+tNZ
 vOT
 vOT
 vOT
@@ -97903,7 +97930,7 @@ vOT
 vOT
 vOT
 vOT
-vOT
+vnI
 vOT
 vOT
 vOT
@@ -98508,11 +98535,11 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+ctd
+pba
+lcr
+sBu
+kmC
 vOT
 vOT
 vOT
@@ -98709,12 +98736,12 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+nHW
+ucT
+gIg
+vwg
+jHt
+xXC
 vOT
 vOT
 vOT
@@ -98910,13 +98937,13 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+kgC
+utN
+mwf
+ybx
+gcR
+ybx
+keu
 vOT
 vOT
 vOT
@@ -99111,14 +99138,14 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+eRD
+cBu
+mTF
+wmi
+vgt
+bHy
+llu
+ena
 vOT
 vOT
 vOT
@@ -99313,14 +99340,14 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+kaY
+sbS
+mOs
+sYs
+btY
+vvS
+tjP
+eTv
 vOT
 vOT
 vOT
@@ -99515,13 +99542,13 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+fvB
+pQt
+hxT
+nXt
+mRa
+pXn
+csY
 vOT
 vOT
 vOT
@@ -99717,13 +99744,13 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
-vOT
+nXt
+iZG
+diU
+eyV
+bPN
+rnH
+yaO
 vOT
 vOT
 vOT
@@ -100121,9 +100148,9 @@ vOT
 vOT
 vOT
 vOT
-vOT
-vOT
-vOT
+qSV
+cHz
+cwi
 vOT
 vOT
 vOT
