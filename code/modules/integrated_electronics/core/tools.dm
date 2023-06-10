@@ -564,7 +564,4 @@
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
-<<<<<<< HEAD
 	. = ..()
-=======
->>>>>>> b22b9e6e48... Merge pull request #14936 from ItsSelis/selis-weakrefs
