@@ -552,7 +552,7 @@
 			// as a translation, when it is not.
 			if(S.speaking && !istype(S.speaking, /datum/language/common))
 				translated = TRUE
-		set_pin_data(IC_OUTPUT , 1, weakref(M))//CHOMPADDITION: so we can target the speaker with an action
+		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))//CHOMPADDITION: so we can target the speaker with an action
 		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 3, msg)
 
@@ -605,7 +605,7 @@
 		for(var/datum/multilingual_say_piece/S in message_pieces)
 			if(!((S.speaking.flags & NONVERBAL) || (S.speaking.flags & SIGNLANG))||S.speaking.name == LANGUAGE_ECHOSONG) //Ignore verbal languages
 				return
-		set_pin_data(IC_OUTPUT , 1, weakref(M))//CHOMPADDITION: so we can target the speaker with an action
+		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))//CHOMPADDITION: so we can target the speaker with an action
 		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 3, msg)
 
