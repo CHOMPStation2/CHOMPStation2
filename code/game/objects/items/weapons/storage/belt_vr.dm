@@ -153,8 +153,6 @@
 		/obj/item/weapon/anobattery,
 		/obj/item/weapon/pickaxe
 		)
-<<<<<<< HEAD
-=======
 
 /obj/item/weapon/storage/belt/hydro
 	name = "hydroponics belt"
@@ -178,4 +176,3 @@
 		/obj/item/weapon/gun/energy/floragun,
 		/obj/item/seeds
 		)
->>>>>>> 935b5c939c... Merge pull request #14931 from Youtubeboy139/hydro_changes
