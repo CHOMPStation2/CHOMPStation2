@@ -1,7 +1,12 @@
 /mob/living/silicon/robot
+<<<<<<< HEAD
 	var/sleeper_g
 	var/sleeper_r
 	var/sleeper_resting = FALSE //CHOMPEdit - Enable resting belly sprites for dogborgs that have the sprites
+=======
+	var/sleeper_g //Set to True only for Medical mechs when patient alive
+	var/sleeper_r //Used in every other case. Currently also for Vorebellies. Ideally vorebellies will use sleeper_o once icons are made
+>>>>>>> 6c66e135b6... Merge pull request #14994 from Runa-Dacino/dogborgbelly
 	var/leaping = 0
 	var/pounce_cooldown = 0
 	var/pounce_cooldown_time = 40
@@ -111,6 +116,7 @@
 	vr_sprite_check()
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
+<<<<<<< HEAD
 		//update_fullness() // CHOMPEdit - Needed so that we can have the vore sprites when only using vore bellies
 		//CHOMPEdit begin - Add multiple belly size support
 		//Add a check when selecting an icon in robot.dm if you add in support for this, to set vore_capacity to 2 or however many states you have.
@@ -122,6 +128,31 @@
 			add_overlay("[module_sprites[icontype]]-sleeper_g")
 		if(sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])) //CHOMPEdit - Also allow normal vore bellies to affect this sprite
 			add_overlay("[module_sprites[icontype]]-sleeper_r[fullness_extension]") //CHOMPEdit - Allow multiple belly sizes...
+=======
+		if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
+			if(sleeper_g == TRUE)
+				add_overlay("[module_sprites[icontype]]-sleeper_g")
+			if(sleeper_r == TRUE)
+				add_overlay("[module_sprites[icontype]]-sleeper_r")
+		else if(vore_selected.silicon_belly_overlay_preference == "Vorebelly")
+			if(LAZYLEN(vore_selected.contents) >= vore_selected.visible_belly_minimum_prey)
+				if(vore_selected.overlay_min_prey_size == 0)	//if min size is 0, we dont check for size
+					add_overlay("[module_sprites[icontype]]-sleeper_r")
+				else
+					var/show_belly = FALSE
+					if(vore_selected.override_min_prey_size && (LAZYLEN(vore_selected.contents) > vore_selected.override_min_prey_num))
+						show_belly = TRUE	//Override regardless of content size
+					else
+						for(var/content in vore_selected.contents)	//If ANY in belly are big enough, we set to true
+							if(!istype(content, /mob/living)) continue
+							var/mob/living/prey = content
+							if(prey.size_multiplier >= vore_selected.overlay_min_prey_size)
+								show_belly = TRUE
+								break
+					if(show_belly)
+						add_overlay("[module_sprites[icontype]]-sleeper_r")
+
+>>>>>>> 6c66e135b6... Merge pull request #14994 from Runa-Dacino/dogborgbelly
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
 			add_overlay("laser")
 		if(istype(module_active,/obj/item/weapon/gun/energy/taser/mounted/cyborg))
