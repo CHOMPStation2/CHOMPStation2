@@ -9049,7 +9049,6 @@
 /area/tether/surfacebase/surface_one_hall)
 "aoR" = (
 /obj/machinery/light/small,
-/obj/machinery/firework_launcher,
 /turf/simulated/floor/tiled,
 /area/rnd/hardstorage)
 "aoS" = (
