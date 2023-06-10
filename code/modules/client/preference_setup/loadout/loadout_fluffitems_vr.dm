@@ -396,8 +396,6 @@
 	ckeywhitelist = list("flintlockdafox")
 	character_name = list("Flintlock Sharpsman")
 
-<<<<<<< HEAD
-=======
 /datum/gear/fluff/zera_weldmask
 	path = /obj/item/clothing/head/welding/fluff/zera
 	display_name = "Zera's Welding Mask"
@@ -426,7 +424,6 @@
 	ckeywhitelist = list("fuackwit422")
 	character_name = list("Zera Livanne")
 
->>>>>>> 4685c095bb... Merge pull request #14942 from SatinIsle/Zeras-Cloak
 
 //  G CKEYS
 
