@@ -18,6 +18,17 @@ hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+=======
+joltze - Black-Eyed Shadekin
+kered2 - Protean
+khanivore - Protean
+killjaden - Protean
+kira72 - Xenochimera
+kitchifox - Black-Eyed Shadekin
+konner1055 - Black-Eyed Shadekin
+konner1055 - Protean
+>>>>>>> 6b7cd46567... Merge pull request #15008 from BonniePandora/Bogen-whitelist-update
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
@@ -27,6 +38,14 @@ natje - Xenochimera
 nerdass - Protean
 ontejbjoav - Diona
 oreganovulgaris - Xenochimera
+<<<<<<< HEAD
+=======
+oscarholmes - Protean
+owwy - Black-Eyed Shadekin
+oxenfree - Protean
+ozyton - Black-Eyed Shadekin
+pandora029 - Protean
+>>>>>>> 6b7cd46567... Merge pull request #15008 from BonniePandora/Bogen-whitelist-update
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
