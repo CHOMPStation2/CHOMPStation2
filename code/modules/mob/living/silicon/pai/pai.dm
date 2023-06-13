@@ -500,7 +500,7 @@
 				if("Cancel")
 					return
 		else if (istype(W, /obj/item/weapon/card/id) && idaccessible == 0)
-			to_chat(user, "<span class='notice'>[src] is not accepting access modifcations at this time.</span>")
+			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")
 			return
 
 /mob/living/silicon/pai/verb/allowmodification()
