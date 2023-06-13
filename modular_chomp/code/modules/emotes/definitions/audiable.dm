@@ -25,3 +25,13 @@
 			"vol" = vol,
 			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 		)
+
+/decl/emote/audible/ass_slap
+	key = "ass_slap"
+	emote_message_1p_target = "You slap TARGET on the ass!"
+	emote_message_1p = "You slap your ass!"
+	emote_message_3p_target = "slaps TARGET on the ass!"
+	emote_message_3p = "slaps themselves on the ass!"
+	emote_sound = 'sound/effects/snap.ogg'
+	check_restraints = TRUE
+	check_range = 1

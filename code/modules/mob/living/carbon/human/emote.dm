@@ -176,7 +176,8 @@ var/list/_human_default_emotes = list(
 	//VOREStation Add End
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
-	/decl/emote/audible/pain
+	/decl/emote/audible/pain,
+	/decl/emote/audible/ass_slap
 	//CHOMP Add end
 )
 
@@ -321,7 +322,8 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/dook,
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
-	/decl/emote/audible/pain
+	/decl/emote/audible/pain,
+	/decl/emote/audible/ass_slap
 	//CHOMP Add end
 	)
 	//VOREStation Add End
