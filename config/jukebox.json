@@ -4698,11 +4698,8 @@
 "artist": "That Handsome Devil",
 "secret": false,
 "lobby": false,
-<<<<<<< HEAD
 "jukebox": true,
 "genre": "Rock"
-=======
-"jukebox": true
 },
 {
 "url": "https://files.catbox.moe/8r5d7q.mp3",
@@ -4713,7 +4710,6 @@
 "secret": true,
 "lobby": false,
 "jukebox": true
->>>>>>> ae542d5642... Merge pull request #14950 from Runa-Dacino/fixjukeboxjson
 },
 {
 "url": "https://files.catbox.moe/2ozzmg.m4a",
