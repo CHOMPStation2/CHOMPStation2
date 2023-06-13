@@ -1,3 +1,10 @@
+/*
+
+CHOMPedit - This file has been excluded from the compilation.
+Reason: Replaced with "Tickets System"
+
+*/
+
 /datum/admin_help/proc/send2adminchat()
 	if(!config.chat_webhook_url)
 		return
