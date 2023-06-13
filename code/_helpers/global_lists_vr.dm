@@ -978,7 +978,7 @@ var/global/list/selectable_speech_bubbles = list(
 	"tentacles",
 	"heart",
 	"textbox",
-	"possessed",
+	"possessed",		// purdev (spelling changed <3)
 	"square",
 	"medical",
 	"medical_square",
