@@ -95,7 +95,7 @@
 		playsound(src, species.death_sound, 80, 1, 1)
 	*/
 	if(!gibbed && !isbelly(loc))
-		playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), src.species.death_volume, 1, 20, volume_channel = VOLUME_CHANNEL_SPECIES_SOUNDS)
+		playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), src.species.death_volume, 1, 20, volume_channel = VOLUME_CHANNEL_DEATH_SOUNDS)
 	// CHOMPEdit End
 
 	if(ticker && ticker.mode)

@@ -36,6 +36,7 @@
 	var/pref_check
 	var/volume_chan //CHOMPedit
 	var/exclusive
+	var/falloff // CHOMPEdit: Add Falloff
 
 	var/timerid
 	var/started
@@ -106,7 +107,7 @@
 					continue
 			SEND_SOUND(thing, S)
 		else
-			playsound(thing, S, volume, vary, extra_range, ignore_walls = !opacity_check, preference = pref_check, volume_channel = volume_chan) // CHOMPEdit - Weather volume channel
+			playsound(thing, S, volume, vary, extra_range, falloff = falloff, ignore_walls = !opacity_check, preference = pref_check, volume_channel = volume_chan) // CHOMPEdit - Weather volume channel CHOMPEdit again: falloff
 
 /datum/looping_sound/proc/get_sound(starttime, _mid_sounds)
 	if(!_mid_sounds)
