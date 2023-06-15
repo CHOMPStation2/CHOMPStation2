@@ -169,6 +169,9 @@ export const RADIO_CHANNELS = [
   },
 ];
 
+/*
+Entries must match /code/defines/gases.dm entries.
+*/
 const GASES = [
   {
     'id': 'oxygen',
@@ -177,13 +180,13 @@ const GASES = [
     'color': 'blue',
   },
   {
-    'id': 'n2',
+    'id': 'nitrogen',
     'name': 'Nitrogen',
     'label': 'N₂',
-    'color': 'red',
+    'color': 'green',
   },
   {
-    'id': 'carbon dioxide',
+    'id': 'carbon_dioxide',
     'name': 'Carbon Dioxide',
     'label': 'CO₂',
     'color': 'grey',
@@ -195,64 +198,16 @@ const GASES = [
     'color': 'pink',
   },
   {
-    'id': 'water_vapor',
-    'name': 'Water Vapor',
-    'label': 'H₂O',
-    'color': 'grey',
-  },
-  {
-    'id': 'nob',
-    'name': 'Hyper-noblium',
-    'label': 'Hyper-nob',
+    'id': 'volatile_fuel',
+    'name': 'Volatile Fuel',
+    'label': 'EXP',
     'color': 'teal',
   },
   {
-    'id': 'n2o',
+    'id': 'nitrous_oxide',
     'name': 'Nitrous Oxide',
     'label': 'N₂O',
     'color': 'red',
-  },
-  {
-    'id': 'no2',
-    'name': 'Nitryl',
-    'label': 'NO₂',
-    'color': 'brown',
-  },
-  {
-    'id': 'tritium',
-    'name': 'Tritium',
-    'label': 'Tritium',
-    'color': 'green',
-  },
-  {
-    'id': 'bz',
-    'name': 'BZ',
-    'label': 'BZ',
-    'color': 'purple',
-  },
-  {
-    'id': 'stim',
-    'name': 'Stimulum',
-    'label': 'Stimulum',
-    'color': 'purple',
-  },
-  {
-    'id': 'pluox',
-    'name': 'Pluoxium',
-    'label': 'Pluoxium',
-    'color': 'blue',
-  },
-  {
-    'id': 'miasma',
-    'name': 'Miasma',
-    'label': 'Miasma',
-    'color': 'olive',
-  },
-  {
-    'id': 'hydrogen',
-    'name': 'Hydrogen',
-    'label': 'H₂',
-    'color': 'white',
   },
   {
     'id': 'other',
@@ -276,6 +231,7 @@ const GASES = [
 
 // VOREStation Edit End
 
+<<<<<<< HEAD:tgui/packages/tgui/constants.js
 export const getGasLabel = (gasId, fallbackValue) => {
   const gasSearchString = String(gasId).toLowerCase();
   const gas = GASES.find((gas) => gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString);
@@ -286,6 +242,64 @@ export const getGasColor = (gasId) => {
   const gasSearchString = String(gasId).toLowerCase();
   const gas = GASES.find((gas) => gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString);
   return gas && gas.color;
+=======
+// Returns gas label based on gasId
+// Checks GASES for both id (all chars lowercase)
+// and name (each word start capitalized, to match standards in code\defines\gases.dm)
+export const getGasLabel = (gasId: string, fallbackValue?: string) => {
+  if (!gasId) return fallbackValue || 'None';
+
+  const gasSearchId = gasId.toLowerCase();
+  const gasSearchName = gasId.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
+      return GASES[idx].label;
+    }
+  }
+
+  return fallbackValue || 'None';
+};
+
+// Returns gas color based on gasId
+// Checks GASES for both id (all chars lowercase)
+// and name (each word start capitalized, to match standards in code\defines\gases.dm)
+export const getGasColor = (gasId: string) => {
+  if (!gasId) return 'black';
+
+  const gasSearchId = gasId.toLowerCase();
+  const gasSearchName = gasId.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
+      return GASES[idx].color;
+    }
+  }
+
+  return 'black';
+};
+
+// Returns gas object based on gasId
+// Checks GASES for both id (all chars lowercase)
+// and name (each word start capitalized, to match standards in code\defines\gases.dm)
+export const getGasFromId = (gasId: string): Gas | undefined => {
+  if (!gasId) return;
+
+  const gasSearchId = gasId.toLowerCase();
+  const gasSearchName = gasId.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
+      return GASES[idx];
+    }
+  }
+>>>>>>> 3fcd2145bb... Merge pull request #15023 from Runa-Dacino/fixairalarms:tgui/packages/tgui/constants.ts
 };
 
 // VOREStation Addition start
