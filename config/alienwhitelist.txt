@@ -18,6 +18,18 @@ hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+=======
+joltze - Black-Eyed Shadekin
+kered2 - Protean
+khanivore - Protean
+killjaden - Protean
+kira72 - Xenochimera
+kira72 - Protean
+kitchifox - Black-Eyed Shadekin
+konner1055 - Black-Eyed Shadekin
+konner1055 - Protean
+>>>>>>> 44c944368d... Merge pull request #15025 from Novacat/nova-basicfixes
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
