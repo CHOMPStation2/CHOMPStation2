@@ -19,7 +19,24 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+lazzar - Black-Eyed Shadekin
+lianvee - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+lizehrd - Xenochimera
+looptyloo - Protean
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Protean
+losstinspess - Xenochimera
+negatist - Protean
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+makkinindorn - Protean
+marcobarko - Protean
+>>>>>>> 87fc0ff54d... Merge pull request #15028 from Runa-Dacino/whitelists
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
