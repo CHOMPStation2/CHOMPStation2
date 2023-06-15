@@ -14,6 +14,7 @@ var/global/list/seen_religions = list()
 	return
 
 var/global/list/citizenship_choices = list(
+<<<<<<< HEAD
 	"Earth",
 	"Mars",
 	"Sif",
@@ -21,6 +22,19 @@ var/global/list/citizenship_choices = list(
 	"Moghes",
 	"Meralar",
 	"Qerr'balak"
+=======
+	"Greater Human Diaspora",
+	"Commonwealth of Sol-Procyon",
+	"Skrell Consensus",
+	"Moghes Hegemony",
+	"Tajaran Diaspora",
+	"Unitary Alliance of Salthan Fyrds",
+	"Elysian Colonies",
+	"Third Ares Confederation",
+	"Teshari Expeditionary Fleet",
+	"Altevian Hegemony",
+	"Kosaky Fleets"
+>>>>>>> fbea6d06be... Merge pull request #15016 from Runa-Dacino/yeetuskhitus
 	)
 
 var/global/list/home_system_choices = list(
@@ -29,6 +43,16 @@ var/global/list/home_system_choices = list(
 	"Mars, Sol",
 	"Venus, Sol",
 	"Titan, Sol",
+<<<<<<< HEAD
+=======
+	"Toledo, New Ohio",
+	"The Pact, Myria",
+	"Kishar, Alpha Centauri",
+	"Anshar, Alpha Centauri",
+	"Heaven Complex, Alpha Centauri",
+	"Procyon",
+	"Altair",
+>>>>>>> fbea6d06be... Merge pull request #15016 from Runa-Dacino/yeetuskhitus
 	"Kara, Vir",
 	"Sif, Vir",
 	"Brinkburn, Nyx",
@@ -77,7 +101,6 @@ var/global/list/faction_choices = list(
 	"Gilthari Exports",
 	"Coyote Salvage Corp.",
 	"Chimera Genetics Corp.",
-	"Kitsuhana Heavy Industries",
 	"Independent Pilots Association",
 	"Local System Defense Force",
 	"United Solar Defense Force",
@@ -112,5 +135,11 @@ var/global/list/religion_choices = list(
 	"Xilar Qall",
 	"Tajr-kii Rarkajar",
 	"Agnosticism",
+<<<<<<< HEAD
 	"Deism"
+=======
+	"Deism",
+	"Neo-Moreauism",
+	"Orthodox Moreauism"
+>>>>>>> fbea6d06be... Merge pull request #15016 from Runa-Dacino/yeetuskhitus
 	)
