@@ -37,7 +37,7 @@
 		return
 	switch(action)
 		if("send_msg")
-			if(params["msg"])
+			if(!params["msg"])
 				return
 
 			usr.client.cmd_admin_pm(usr.client, sanitize(params["msg"]), T)

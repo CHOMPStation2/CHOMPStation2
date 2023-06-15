@@ -1,6 +1,7 @@
 /* eslint react/no-danger: "off" */
-import { useBackend } from '../backend';
-import { Box, Button, LabeledList, Section } from '../components';
+import { KEY_ENTER } from '../../common/keycodes';
+import { useBackend, useLocalState } from '../backend';
+import { Box, Button, Divider, Flex, Input, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
 const Level = {
@@ -30,6 +31,7 @@ type Data = {
   id: number;
   title: string;
   name: string;
+  ticket_ref: string;
   state: string;
   level: number;
   handler: string;
@@ -43,10 +45,12 @@ type Data = {
 
 export const Ticket = (props, context) => {
   const { act, data } = useBackend<Data>(context);
+  const [ticketChat, setTicketChat] = useLocalState(context, 'ticketChat', '');
   const {
     id,
     title,
     name,
+    ticket_ref,
     state,
     level,
     handler,
@@ -95,12 +99,58 @@ export const Ticket = (props, context) => {
             <LabeledList.Item label="Actions">
               <div dangerouslySetInnerHTML={{ __html: actions }} />
             </LabeledList.Item>
-            <LabeledList.Item label="Log">
-              {Object.keys(log).map((L) => (
-                <div dangerouslySetInnerHTML={{ __html: log[L] }} />
-              ))}
-            </LabeledList.Item>
+            <LabeledList.Item label="Log" />
           </LabeledList>
+          <Divider />
+          <Flex direction="column">
+            <Flex.Item>
+              <Flex>
+                <Flex.Item grow>
+                  <Input
+                    autoFocus
+                    autoSelect
+                    fluid
+                    placeholder="Enter a message..."
+                    value={ticketChat}
+                    onInput={(e, value) => setTicketChat(value)}
+                    onKeyDown={(event) => {
+                      const keyCode = window.event
+                        ? event.which
+                        : event.keyCode;
+                      if (keyCode === KEY_ENTER) {
+                        act('send_msg', {
+                          msg: ticketChat,
+                          ticket_ref: ticket_ref,
+                        });
+                        setTicketChat('');
+                      }
+                    }}
+                  />
+                </Flex.Item>
+                <Flex.Item>
+                  <Button
+                    content="Send"
+                    onClick={() => {
+                      act('send_msg', {
+                        msg: ticketChat,
+                        ticket_ref: ticket_ref,
+                      });
+                      setTicketChat('');
+                    }}
+                  />
+                </Flex.Item>
+              </Flex>
+            </Flex.Item>
+            <Divider />
+            <Flex.Item>
+              {Object.keys(log)
+                .slice(0)
+                .reverse()
+                .map((L) => (
+                  <div dangerouslySetInnerHTML={{ __html: log[L] }} />
+                ))}
+            </Flex.Item>
+          </Flex>
         </Section>
       </Window.Content>
     </Window>

@@ -129,11 +129,13 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	if(C.current_ticket)
 		C.current_ticket.AddInteraction("Client reconnected.")
 		C.current_ticket.initiator = C
+		C.current_ticket.initiator.mob.throw_alert("open ticket", /obj/screen/alert/open_ticket)
 
 //Dissasociate ticket
 /datum/tickets/proc/ClientLogout(client/C)
 	if(C.current_ticket)
 		C.current_ticket.AddInteraction("Client disconnected.")
+		C.current_ticket.initiator.mob.clear_alert("open ticket")
 		C.current_ticket.initiator = null
 		C.current_ticket = null
 
@@ -430,7 +432,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	message_admins(msg)
 	log_admin(msg)
 	feedback_inc("ticket_reopen")
-	TicketPanel()	//can only be done from here, so refresh it
+	//TicketPanel()	//can only be done from here, so refresh it
 
 	SSwebhooks.send(
 		WEBHOOK_AHELP_SENT,
@@ -473,7 +475,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 				"color" = COLOR_WEBHOOK_BAD
 			)
 		)
-	initiator.mob.clear_alert("open ticket")
+	initiator?.mob?.clear_alert("open ticket")
 
 //Mark open ticket as resolved/legitimate, returns ahelp verb
 /datum/ticket/proc/Resolve(silent = FALSE)
@@ -504,6 +506,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 					"color" = COLOR_WEBHOOK_GOOD
 				)
 			)
+	initiator?.mob?.clear_alert("open ticket")
 
 //Close and return ahelp verb, use if ticket is incoherent
 /datum/ticket/proc/Reject(key_name = key_name_admin(usr))
@@ -596,7 +599,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 		var/msg = "Ticket [TicketHref("#[id]")] titled [name] by [key_name_admin(usr)]"
 		message_admins(msg)
 		log_admin(msg)
-	TicketPanel()	//we have to be here to do this
+	//TicketPanel()	//we have to be here to do this
 
 //Kick ticket to next level
 /datum/ticket/proc/Escalate()

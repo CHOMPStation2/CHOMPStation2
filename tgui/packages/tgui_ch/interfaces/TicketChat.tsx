@@ -58,6 +58,8 @@ export const TicketChat = (props, context) => {
               <Flex>
                 <Flex.Item grow>
                   <Input
+                    autoFocus
+                    autoSelect
                     fluid
                     placeholder="Enter a message..."
                     value={ticketChat}

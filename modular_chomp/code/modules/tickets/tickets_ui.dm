@@ -104,11 +104,11 @@
 			TicketListLegacy(choice)
 			. = TRUE
 		if("new_ticket")
-			var/list/ckeys
+			var/list/ckeys = list()
 			for(var/client/C in GLOB.clients)
-				ckeys += C.ckey
+				ckeys += C.key
 
-			var/ckey = tgui_input_list(usr, "Please select the ckey of the user.", "Select CKEY", ckeys)
+			var/ckey = lowertext(tgui_input_list(usr, "Please select the ckey of the user.", "Select CKEY", ckeys))
 			if(!ckey)
 				return
 
@@ -121,22 +121,21 @@
 				to_chat(usr, "<span class='warning'>Ckey ([ckey]) not online.</span>")
 				return
 
-			var/msg = tgui_input_text(usr, "What should the initial text be?", "New Ticket")
-			if(!msg)
+			var/ticket_text = tgui_input_text(usr, "What should the initial text be?", "New Ticket")
+			if(!ticket_text)
 				to_chat(usr, "<span class='warning'>Ticket message cannot be empty.</span>")
 				return
 
-			var/level = tgui_input_text(usr, "What level is the ticket? 0 = ADMIN, 1 = MENTOR", "Ticket Level")
-			if(level != "0" && level != "1")
-				to_chat(usr, "<span class='warning'>Invalid ticket level: [level].</span>")
+			var/level = tgui_alert(usr, "Is this ticket Admin-Level or Mentor-Level?", "Ticket Level", list("Admin", "Mentor"))
+			if(!level)
 				return
 
 			feedback_add_details("admin_verb","Admincreatedticket") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 			if(player.current_ticket)
 				if(tgui_alert(usr, "The player already has a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
 					if(player.current_ticket)
-						player.current_ticket.MessageNoRecipient(msg)
-						to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [msg]</span>")
+						player.current_ticket.MessageNoRecipient(ticket_text)
+						to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [ticket_text]</span>")
 						return
 					else
 						to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
@@ -144,7 +143,14 @@
 					player.current_ticket.AddInteraction("[key_name_admin(usr)] opened a new ticket.")
 					player.current_ticket.Close()
 
-			new /datum/ticket(msg, player, TRUE, level)
+			// Create a new ticket and handle it. You created it afterall!
+			var/datum/ticket/T = new /datum/ticket(ticket_text, player, TRUE, level)
+			if(level == "Admin")
+				T.level = 0
+			else
+				T.level = 1
+			T.HandleIssue()
+			usr.client.cmd_admin_pm(player, ticket_text, T)
 			. = TRUE
 		if("pick_ticket")
 			var/datum/ticket/T = ID2Ticket(params["ticket_id"])
@@ -159,6 +165,12 @@
 		if("undock_ticket")
 			usr.client.selected_ticket.tgui_interact(usr)
 			usr.client.selected_ticket = null
+			. = TRUE
+		if("send_msg")
+			if(!params["msg"])
+				return
+
+			usr.client.cmd_admin_pm(usr.client.selected_ticket.initiator, sanitize(params["msg"]), usr.client.selected_ticket)
 			. = TRUE
 
 /datum/tickets/tgui_fallback(payload)
@@ -190,6 +202,7 @@
 	var/ref_src = "\ref[src]"
 	data["title"] = name
 	data["name"] = LinkedReplyName(ref_src)
+	data["ticket_ref"] = ref_src
 
 	switch(state)
 		if(AHELP_ACTIVE)
@@ -228,6 +241,14 @@
 			. = TRUE
 		if("legacy")
 			TicketPanelLegacy()
+			. = TRUE
+		if("send_msg")
+			if(!params["msg"] || !params["ticket_ref"])
+				return
+
+			var/datum/ticket/T = locate(params["ticket_ref"])
+
+			usr.client.cmd_admin_pm(T.initiator, sanitize(params["msg"]), T)
 			. = TRUE
 
 /datum/ticket/tgui_fallback(payload)
