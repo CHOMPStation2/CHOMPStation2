@@ -9613,15 +9613,15 @@
 /obj/item/ammo_magazine/pkm,
 /obj/item/ammo_magazine/pkm/ap,
 /obj/item/clothing/suit/bomb_suit/security{
-	armor = list("melee"=45,"bullet"=70,"laser"=35,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
-	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=20,"bio"=0,"rad"=0);
+	armor = list("melee"=95,"bullet"=80,"laser"=35,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
+	armorsoak = list("melee"=5,"bullet"=10,"laser"=0,"energy"=0,"bomb"=20,"bio"=0,"rad"=0);
 	desc = "You're up against the wall AND I AM THE FUCKING WALL!";
 	name = "EOD-Bullet proof suit";
 	slowdown = 4
 	},
 /obj/item/clothing/head/bomb_hood/security{
-	armor = list("melee"=40,"bullet"=80,"laser"=30,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
-	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
+	armor = list("melee"=60,"bullet"=80,"laser"=45,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
+	armorsoak = list("melee"=0,"bullet"=5,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
 	desc = "I'll kill you, with or without my visor!";
 	name = "EOD-Bullet proof hood"
 	},
@@ -46324,7 +46324,7 @@ hiL
 hiL
 hiL
 hiL
-hiL
+eDy
 hiL
 hiL
 hiL
