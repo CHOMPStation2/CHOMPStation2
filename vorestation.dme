@@ -21,7 +21,6 @@
 #include "code\global_init.dm"
 #include "code\global_vr.dm"
 #include "code\global_yw.dm"
-#include "code\hub.dm"
 #include "code\names.dm"
 #include "code\stylesheet.dm"
 #include "code\world.dm"
