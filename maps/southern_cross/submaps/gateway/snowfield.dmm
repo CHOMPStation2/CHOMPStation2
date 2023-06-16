@@ -8710,6 +8710,7 @@
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "hsn" = (
 /mob/living/simple_mob/vore/demonAI/zellic{
+	devourable = 0;
 	faction = "cult";
 	health = 450
 	},
@@ -10645,6 +10646,7 @@
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/ira{
+	devourable = 0;
 	faction = "cult"
 	},
 /turf/simulated/floor,
@@ -15993,9 +15995,12 @@
 "nsL" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/engorge{
+	devourable = 0;
 	faction = "cult";
-	health = 400;
-	size_multiplier = 1.25
+	health = 550;
+	size_multiplier = 1.5;
+	vore_pounce_chance = 30;
+	vore_pounce_maxhealth = 95
 	},
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/bridge)
@@ -17336,10 +17341,6 @@
 /mob/living/simple_mob/animal/giant_spider/pepper,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
-"oxs" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/medical/surgery)
 "oxR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/ore/glass,
@@ -48338,7 +48339,7 @@ pgd
 mWF
 kCk
 ePu
-oxs
+jKy
 uxq
 bcr
 kFL
