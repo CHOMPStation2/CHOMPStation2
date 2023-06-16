@@ -244,7 +244,7 @@
 	toolspeed = 0.5
 
 /obj/item/weapon/surgical/circular_saw/cyborg
-	icon_state = "cyborg_saw"
+	icon_state = "saw"//CHOMPedit, there isnt even a sprite for it so using normal sprite
 	toolspeed = 0.5
 
 /obj/item/weapon/surgical/bonegel/cyborg
