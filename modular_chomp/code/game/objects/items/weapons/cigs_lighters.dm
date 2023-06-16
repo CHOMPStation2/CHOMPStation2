@@ -30,7 +30,7 @@
 		if(prob(50))
 			user.visible_message("<span class='rose'>[user] safely activates the [src] with a push of a button!</span>")
 		else
-			if(prob(50))
+			if(prob(95))
 				user.visible_message("<span class='notice'>After a few attempts, [user] manages to excite the supermatter within the [src].</span>")
 			else
 				to_chat(user, "<span class='warning'>You hurt yourself on the shielding!</span>")
@@ -101,7 +101,7 @@
 		if(prob(50))
 			user.visible_message("<span class='rose'>[user] safely activates the [src] with a push of a button!</span>")
 		else
-			if(prob(50))
+			if(prob(99))
 				user.visible_message("<span class='notice'>After a few attempts, [user] manages to excite the supermatter within the [src].</span>")
 			else
 				to_chat(user, "<span class='warning'>You singe yourself on the phoron shielding the excited supermatter!</span>")
