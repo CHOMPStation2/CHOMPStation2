@@ -1,4 +1,6 @@
 #define RECOMMENDED_VERSION 513
+
+// CHOMPedit Start - Tracy
 /proc/prof_init()
 	var/lib
 
@@ -9,6 +11,7 @@
 
 	var/init = call(lib, "init")()
 	if("0" != init) CRASH("[lib] init error: [init]")
+// CHOMPedit End
 
 /world/New()
 	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
