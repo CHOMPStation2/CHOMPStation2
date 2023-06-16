@@ -183,14 +183,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/bridge)
-"aiA" = (
-/obj/structure/catwalk,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/vore/demonAI/avarn{
-	faction = "cult"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/security/security_cell)
 "aiX" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -2923,10 +2915,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
-"cCl" = (
-/mob/living/simple_mob/animal/giant_spider/electric,
-/turf/simulated/floor,
-/area/awaymission/snowfield/security/firingrange)
 "cCA" = (
 /obj/machinery/door/blast/gate/open,
 /turf/simulated/floor/outdoors/rocks,
@@ -3158,7 +3146,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/electric,
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/security_cell)
 "cQM" = (
@@ -6121,11 +6108,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
-"fnn" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/ion,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/security/security_cell)
 "fnD" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -6207,11 +6189,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
-"fpL" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
-/turf/simulated/floor,
-/area/awaymission/snowfield/security/firingrange)
 "fqn" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -11124,12 +11101,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
-"jtT" = (
-/obj/structure/lattice,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/awaymission/snowfield/security/security_cell)
 "juu" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -14173,7 +14144,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "lPD" = (
@@ -15764,7 +15734,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "niv" = (
 /obj/effect/floor_decal/industrial/warning,
-/mob/living/simple_mob/animal/giant_spider/pepper,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "niM" = (
@@ -17336,11 +17305,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
-"owE" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/pepper,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/security/security_cell)
 "oxR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/ore/glass,
@@ -18245,11 +18209,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
-"puf" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/pepper,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/awaymission/snowfield/security/hallway2)
 "pun" = (
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
@@ -26839,7 +26798,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "wSz" = (
@@ -47871,7 +47829,7 @@ tvg
 aaw
 xDT
 aBy
-fpL
+xPZ
 nBr
 oGm
 pgb
@@ -48132,7 +48090,7 @@ aBy
 aBy
 rSH
 gWC
-cCl
+rSH
 bZn
 bZn
 bZn
@@ -48643,7 +48601,7 @@ aKI
 iUn
 raJ
 mmT
-puf
+cwI
 mJi
 mJi
 mJi
@@ -49420,7 +49378,7 @@ uDJ
 cTE
 eUs
 tlT
-jtT
+cTE
 uqf
 faB
 uDJ
@@ -50460,7 +50418,7 @@ ocr
 cQM
 bNc
 jje
-aiA
+rIV
 fMy
 ocr
 ocr
@@ -50963,7 +50921,7 @@ byc
 aMr
 mFz
 mFz
-owE
+mFz
 rIV
 rIV
 mfc
@@ -51229,7 +51187,7 @@ mFz
 fcB
 dFg
 mFz
-fnn
+mFz
 ocr
 ocr
 ocr
