@@ -286,6 +286,7 @@
 
 /obj/item/weapon/surgical/circular_saw/alien
 	icon = 'icons/obj/abductor.dmi'
+	icon_state = "saw3"//chompedit
 	toolspeed = 0.25
 
 /obj/item/weapon/surgical/FixOVein/alien
