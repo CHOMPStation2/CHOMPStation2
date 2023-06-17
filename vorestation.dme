@@ -920,13 +920,10 @@
 #include "code\game\machinery\spaceheater.dm"
 #include "code\game\machinery\status_display.dm"
 #include "code\game\machinery\status_display_ai.dm"
-<<<<<<< HEAD
 #include "code\game\machinery\suit_cycler_datums.dm"
 #include "code\game\machinery\suit_storage_unit.dm"
 #include "code\game\machinery\suit_storage_unit_vr.dm"
 #include "code\game\machinery\suit_storage_unit_yw.dm"
-=======
->>>>>>> fe3a6f2dfd... Merge pull request #14995 from Youtubeboy139/Suit-and-Robotic-Storage
 #include "code\game\machinery\supply_display.dm"
 #include "code\game\machinery\supplybeacon.dm"
 #include "code\game\machinery\syndicatebeacon.dm"
