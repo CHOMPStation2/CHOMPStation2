@@ -167,16 +167,6 @@
 	var/limb_icon_key
 	var/understands_common = TRUE 		//VOREStation Edit - Makes it so that simplemobs can understand galcomm without being able to speak it.
 	var/heal_countdown = 5				//VOREStation Edit - A cooldown ticker for passive healing
-<<<<<<< HEAD
-	var/obj/item/weapon/card/id/mobcard = null //VOREStation Edit
-	var/list/mobcard_access = list() //VOREStation Edit
-	var/mobcard_provided = FALSE //VOREStation Edit
-	// CHOMPStation Add: Move/Shoot/Attack delays based on damage
-	var/damage_fatigue_mult = 1			// Our multiplier for how heavily mobs are affected by injury. [UPDATE THIS IF THE FORMULA CHANGES]: Formula = injury_level = round(rand(2,6) * damage_fatigue_mult * clamp(((rand(2,5) * (health / getMaxHealth())) - rand(0,2)), 1, 20))
-	var/injury_level = 0 				// What our injury level is. Rather than being the flat damage, this is the amount added to various delays to simulate injuries in a manner as lightweight as possible.
-	var/threshold = 0.6					// When we start slowing down. Configure this setting per-mob. Default is 60%
-	// CHOMPStation Add End
-=======
 	var/list/myid_access = list() //VOREStation Edit
 	var/ID_provided = FALSE //VOREStation Edit
 	// VOREStation Add: Move/Shoot/Attack delays based on damage
@@ -185,7 +175,6 @@
 	var/threshold = 0.6					// When we start slowing down. Configure this setting per-mob. Default is 60%
 	var/injury_enrages = FALSE				// Do injuries enrage (aka strengthen) our mob? If yes, we'll interpret how hurt we are differently.
 	// VOREStation Add End
->>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 
 /mob/living/simple_mob/Initialize()
 	verbs -= /mob/verb/observe
@@ -285,10 +274,6 @@
 	if(m_intent == "walk")
 		. *= 1.5
 
-<<<<<<< HEAD
-	. += injury_level // CHOMPStation Edit: Adding our injury level delay to our total
-  
-=======
 	// VOREStation Edit Start
 	if(injury_enrages) // If we enrage, then do this, else
 		. -= injury_level
@@ -296,7 +281,6 @@
 		. += injury_level
 	// VOREStation Edit Stop
 
->>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 	. += config.animal_delay
   
 	. += ..()
@@ -346,23 +330,8 @@
 /decl/mob_organ_names
 	var/list/hit_zones = list("body") //When in doubt, it's probably got a body.
 
-<<<<<<< HEAD
-//VOREStation Add Start 	For allowing mobs with ID's door access
-/mob/living/simple_mob/Bump(var/atom/A)
-	if(mobcard && istype(A, /obj/machinery/door))
-		var/obj/machinery/door/D = A
-		if(client && !istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(mobcard))
-			D.open()
-	else
-		..()
-//Vorestation Add End
-
-/*
- * CHOMPStation Add
-=======
 /*
  * VOREStation Add
->>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
  * How injured are we? Returns a number that is then added to movement cooldown and firing/melee delay respectively.
  * Called by movement_delay and our firing/melee delay checks
 */
@@ -370,19 +339,11 @@
 	var/h = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss // We're not updating our actual health here bc we want updatehealth() and other checks to handle that
 	if(h > 0) 												// Safety to prevent division by 0 errors
 		if((h / getMaxHealth()) <= threshold) 				// Essentially, did our health go down? We don't modify want to modify our total slowdown if we didn't actually take damage, and aren't below our threshold %
-<<<<<<< HEAD
-			var/totaldelay = round(rand(2,6) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 20)) 	// totaldelay is how much delay we're going to feed into attacks and movement. Do NOT change this formula unless you know how to math.
-=======
 			var/totaldelay = round(rand(1,3) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 5)) 	// totaldelay is how much delay we're going to feed into attacks and movement. Do NOT change this formula unless you know how to math.
->>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
 			injury_level = totaldelay 						// Adds our returned slowdown to the mob's injury level
 
 /mob/living/simple_mob/updatehealth()	// We don't want to fully override the check, just hook our own code in
 	get_injury_level()					// We check how injured we are, then actually update the mob on how hurt we are.
 	. = ..() 							// Calling parent here, actually updating our mob on how hurt we are.
 
-<<<<<<< HEAD
-// CHOMPStation Add End
-=======
 // VOREStation Add End
->>>>>>> d8483ca49d... Merge pull request #14758 from Rykka-Stormheart/shep-dev-simplemob-injury
