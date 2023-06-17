@@ -139,7 +139,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/last_shot = 0
 	var/kill_range = 18
 	var/rotation_speed = 4.5 SECONDS  //How quickly we turn to face threats
-	var/weakref/engaging = null // The meteor we're shooting at
+	var/datum/weakref/engaging = null // The meteor we're shooting at
 	var/id_tag = null
 
 /obj/machinery/pointdefense/Initialize()
@@ -199,7 +199,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			return FALSE
 	return TRUE
 
-/obj/machinery/pointdefense/proc/Shoot(var/weakref/target)
+/obj/machinery/pointdefense/proc/Shoot(var/datum/weakref/target)
 	var/obj/effect/meteor/M = target.resolve()
 	if(!istype(M))
 		engaging = null
@@ -213,7 +213,8 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	set_dir(ATAN2(transform.b, transform.a) > 0 ? NORTH : SOUTH)
 
-/obj/machinery/pointdefense/proc/finish_shot(var/weakref/target)
+/obj/machinery/pointdefense/proc/finish_shot(var/datum/weakref/target)
+
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	engaging = null
 	PC.targets -= target
@@ -255,7 +256,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	// Compile list of known targets
 	var/list/existing_targets = list()
-	for(var/weakref/WR in PC.targets)
+	for(var/datum/weakref/WR in PC.targets)
 		var/obj/effect/meteor/M = WR.resolve()
 		existing_targets += M
 
@@ -263,7 +264,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/list/potential_targets = GLOB.meteor_list.Copy() - existing_targets
 	for(var/obj/effect/meteor/M in potential_targets)
 		if(targeting_check(M))
-			var/weakref/target = weakref(M)
+			var/datum/weakref/target = WEAKREF(M)
 			PC.targets += target
 			engaging = target
 			Shoot(target)
@@ -272,7 +273,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	// Then, focus fire on existing targets
 	for(var/obj/effect/meteor/M in existing_targets)
 		if(targeting_check(M))
-			var/weakref/target = weakref(M)
+			var/datum/weakref/target = WEAKREF(M)
 			engaging = target
 			Shoot(target)
 			return

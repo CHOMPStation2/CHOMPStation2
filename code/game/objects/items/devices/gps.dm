@@ -140,9 +140,9 @@ var/list/GPS_list = list()
 
 	toggle_tracking()
 	if(tracking)
-		to_chat(user, "[src] is no longer tracking, or visible to other GPS devices.")
-	else
-		to_chat(user, "[src] is now tracking, and visible to other GPS devices.")
+		to_chat(user, "[src] is now tracking, and visible to other GPS devices.")			// CHOMPEDIT : purdev	Fixed an issue where the if/else argument was written backwards
+	else													// CHOMPEDIT : purdev	Fixed an issue where the if/else argument was written backwards
+		to_chat(user, "[src] is no longer tracking, or visible to other GPS devices.")			// CHOMPEDIT : purdev	Fixed an issue where the if/else argument was written backwards
 
 /obj/item/device/gps/proc/toggle_tracking()
 	tracking = !tracking

@@ -76,3 +76,35 @@
 	hud_state = "plasma_rifle"
 	damage = 48
 	armor_penetration = 10
+
+
+//Eclipse mob stuff
+
+/obj/item/projectile/energy/blob/moth
+	damage = 20
+	armor_penetration = 25
+	my_chems = list("fuel", "mold")
+	flammability = 0.25
+	modifier_type_to_apply = /datum/modifier/fire
+	modifier_duration = 6 SECONDS
+	color = "#38b9ff"
+
+/obj/item/projectile/bullet/pistol/medium/ap/eclipse
+	armor_penetration = 20
+	ricochets = 1
+	ricochets_max = 8
+	ricochet_chance = 100
+
+/obj/item/projectile/energy/electrode/eclipse
+	damage = 20
+	damage_type = BURN
+	color = "#38b9ff"
+
+/obj/item/projectile/beam/sniper/eclipse
+	armor_penetration = 50
+	damage = 30
+
+/obj/item/projectile/energy/declone/burn
+	damage = 10
+	armor_penetration = 10
+	nodamage = 0

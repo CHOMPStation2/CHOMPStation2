@@ -127,7 +127,7 @@
 	self_recharge = TRUE
 	charge_amount = 60 //2.5%
 	charge_delay = 75
-	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
+	origin_tech = list(TECH_POWER = 5, TECH_ARCANE = 1)
 
 /*
  * Captain's Self-charging Weapon

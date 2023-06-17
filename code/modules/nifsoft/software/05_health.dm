@@ -90,6 +90,7 @@
 	var/mode = 0
 	health_flags = (NIF_H_SYNTHREPAIR)
 
+
 	//These self-activate on their own, these aren't user-settable to on/off.
 /datum/nifsoft/medichines_syn/activate()
 	if((. = ..()))
@@ -101,9 +102,9 @@
 
 /datum/nifsoft/medichines_syn/life()
 	if((. = ..()))
-		var/mob/living/carbon/human/H = nif.human // Chomp Edit
-		var/HP_percent = H.health/H.getMaxHealth() // Chomp Edit
 		//We're good!
+		var/mob/living/carbon/human/S = nif.human
+		var/HP_percent = S.health/S.getMaxHealth()
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
@@ -131,15 +132,26 @@
 				// Chomp Edit Start //
 				else if(mode == 2 && HP_percent < -0.4)
 					nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
-					H << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
+					S << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
 					mode = 0
-					if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
-						var/turf/T = get_turf(H)
+					if(!isbelly(S.loc)) //Not notified in case of vore, for gameplay purposes.
+						var/turf/T = get_turf(S)
 						var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
-						a.autosay("[H.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[H.real_name]'s NIF", "Medical")
+						a.autosay("[S.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
 						qdel(a)
 				// Chomp Edit End //
 
+		/* //Chomp Comment out, using our solution instead of their backport and edit of our solution.
+		if(mode == 2 && HP_percent < -0.4) //lets inform someone who might be able to help us that we got toasted and roasted
+			nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
+			mode = 3 //this does nothing except stop it from repeating over and over and over and over and over and over and over
+			if(!isbelly(S.loc)) //Not notified in case of vore, for gameplay purposes.
+				var/turf/T = get_turf(S)
+				var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
+				a.autosay("[S.real_name] is in a critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
+				qdel(a)
+		*/ //Chomp comment out END
+		
 		return TRUE
 
 /datum/nifsoft/spare_breath
