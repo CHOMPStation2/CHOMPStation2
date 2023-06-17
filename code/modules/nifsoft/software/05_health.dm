@@ -102,11 +102,9 @@
 
 /datum/nifsoft/medichines_syn/life()
 	if((. = ..()))
-		var/mob/living/carbon/human/H = nif.human // Chomp Edit
-		var/HP_percent = H.health/H.getMaxHealth() // Chomp Edit
 		//We're good!
-		//var/mob/living/carbon/human/S = nif.human //ChompEDIT, unused backport
-		//var/HP_percent = S.health/S.getMaxHealth() //ChompEDIT, unused backport
+		var/mob/living/carbon/human/S = nif.human
+		var/HP_percent = S.health/S.getMaxHealth()
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
@@ -134,12 +132,12 @@
 				// Chomp Edit Start //
 				else if(mode == 2 && HP_percent < -0.4)
 					nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
-					H << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
+					S << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
 					mode = 0
-					if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
-						var/turf/T = get_turf(H)
+					if(!isbelly(S.loc)) //Not notified in case of vore, for gameplay purposes.
+						var/turf/T = get_turf(S)
 						var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
-						a.autosay("[H.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[H.real_name]'s NIF", "Medical")
+						a.autosay("[S.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
 						qdel(a)
 				// Chomp Edit End //
 
