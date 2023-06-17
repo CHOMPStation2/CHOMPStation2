@@ -8,7 +8,11 @@
 	unity = TRUE
 	water_resist = 100 // Lets not kill the prommies
 	cores = 0
+<<<<<<< HEAD
 	movement_cooldown = 0 //Chompedit to 0 from 3. Simplemob movement cooldown fixes.
+=======
+	movement_cooldown = 0	
+>>>>>>> 4a16301097... Merge pull request #15036 from BonniePandora/Speemd
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
