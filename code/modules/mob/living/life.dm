@@ -135,20 +135,16 @@
 	if(stunned)
 		AdjustStunned(-1)
 		throw_alert("stunned", /obj/screen/alert/stunned)
-		stunnedloop.start() // CHOMPAdd: Stunned Loop
 	else
 		clear_alert("stunned")
-		stunnedloop.stop() // CHOMPAdd: Stunned Loop
 	return stunned
 
 /mob/living/proc/handle_weakened()
 	if(weakened)
 		AdjustWeakened(-1)
 		throw_alert("weakened", /obj/screen/alert/weakened)
-		stunnedloop.start() // CHOMPAdd: Stunned Loop
 	else
 		clear_alert("weakened")
-		stunnedloop.stop() // CHOMPAdd: Stunned Loop
 	return weakened
 
 /mob/living/proc/handle_stuttering()
