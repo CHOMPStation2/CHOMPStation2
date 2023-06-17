@@ -10,10 +10,11 @@
 	powered = 1
 	locked = 0
 	move_delay = 0.5
+	charge_use = 3	//CHOMPedit: Reduced from 5 to 3 for more fuel efficiency, being a dedicated transport vehicle.
 
 	//Health stuff
-	health = 100
-	maxhealth = 100
+	health = 200	// CHOMPedit: Cars are usually just a bit tougher than humans.
+	maxhealth = 200	// CHOMPedit: Cars are usually just a bit tougher than humans.
 	fire_dam_coeff = 0.6
 	brute_dam_coeff = 0.5
 
@@ -23,7 +24,9 @@
 	pixel_y = -8
 
 
-	var/car_limit = 0	//how many cars an engine can pull before performance degrades. This should be 0 to prevent trailers from unhitching.
+	var/car_limit = 1	//how many cars an engine can pull before performance degrades. This should be 0 to prevent trailers from unhitching.
+						//CHOMPedit: Set to 1 because the thing slows down to a crawl with even one trailer. Unhitching doesn't occur at regular movement speeds, or even at faster speeds than base.
+	active_engines = 1
 	active_engines = 1
 	var/obj/item/weapon/key/rover/key
 	var/siren = 0 //This is for eventually getting the siren sprite to work.
