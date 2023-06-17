@@ -166,20 +166,12 @@ Please do not abuse this ability.
 			var/datum/language/keylang = GLOB.all_languages[prey.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
-<<<<<<< HEAD
-	// CHOMPStation Add: Preferred Language Setting;
-=======
 	// VOREStation Add: Preferred Language Setting;
->>>>>>> 657ee05f13... Merge pull request #14756 from Rykka-Stormheart/shep-dev-auto-lang-prefs
 	if(prey.prefs.preferred_language) // Do we have a preferred language?
 		var/datum/language/def_lang = GLOB.all_languages[prey.prefs.preferred_language]
 		if(def_lang)
 			new_character.default_language = def_lang
-<<<<<<< HEAD
-	// CHOMPStation Add End
-=======
 	// VOREStation Add End
->>>>>>> 657ee05f13... Merge pull request #14756 from Rykka-Stormheart/shep-dev-auto-lang-prefs
 
 	new_character.regenerate_icons()
 
