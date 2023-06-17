@@ -30,6 +30,7 @@
 /obj/item/weapon/robot_module/robot/exploration
 	sprites = list(
 				"ExploreHound" = "exploration",
+				"ExploreHound V2" = "exploration-v2",
 				)
 	can_be_pushed = 0
 /obj/item/weapon/robot_module/robot/exploration/New(var/mob/living/silicon/robot/R)
@@ -69,6 +70,7 @@
 	R.vore_capacity = 1
 	R.vore_capacity_ex = list("stomach" = 1)
 	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/device/dogborg/sleeper/K9/exploration //The K9 portabrig

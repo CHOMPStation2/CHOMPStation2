@@ -9042,6 +9042,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"tgui_ch@workspace:packages/tgui_ch":
+  version: 0.0.0-use.local
+  resolution: "tgui_ch@workspace:packages/tgui_ch"
+  dependencies:
+    "@popperjs/core": ^2.11.5
+    common: "workspace:*"
+    dateformat: ^5.0.3
+    dompurify: ^2.3.8
+    inferno: ^7.4.11
+    inferno-vnode-flags: ^7.4.11
+    js-yaml: ^4.1.0
+    marked: ^4.0.16
+    tgui-dev-server: "workspace:*"
+    tgui-polyfill: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "throat@npm:^6.0.1":
   version: 6.0.1
   resolution: "throat@npm:6.0.1"

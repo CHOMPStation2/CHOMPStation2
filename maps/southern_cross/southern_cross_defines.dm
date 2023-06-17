@@ -17,11 +17,12 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
 #define Z_LEVEL_SURFACE_SKYLANDS		10
-#define Z_LEVEL_VR_REALM                11
-#define Z_LEVEL_FUELDEPOT				12
-#define Z_LEVEL_AEROSTAT				13
-#define Z_LEVEL_NS_MINE					14
-#define Z_LEVEL_GATEWAY					15
+#define Z_LEVEL_SURFACE_VALLEY 			11
+#define Z_LEVEL_VR_REALM                12
+#define Z_LEVEL_FUELDEPOT				13
+#define Z_LEVEL_AEROSTAT				14
+#define Z_LEVEL_NS_MINE					15
+#define Z_LEVEL_GATEWAY					16
 
 //#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
 //#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
@@ -167,6 +168,8 @@ but they don't actually change anything about the load order
 	// Wilderness is next.
 	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)  //CHOMPEdit bumped up from 60 to 150
 	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //CHOMPEdit bumped up from 60 to 150
+	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/walls, /datum/map_template/surface/valley/walls)
+	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/inner, /datum/map_template/surface/valley/inner)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
@@ -245,6 +248,12 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/open
 
+/datum/map_z_level/southern_cross/surface_valley
+	z = Z_LEVEL_SURFACE_VALLEY
+	name = "Valley"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
 //CHOMPedit - KSC = So Christmas Casino has weather.
 /*/datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
@@ -304,7 +313,8 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD,
-		Z_LEVEL_SURFACE_SKYLANDS
+		Z_LEVEL_SURFACE_SKYLANDS,
+		Z_LEVEL_SURFACE_VALLEY
 	)
 //Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
 
@@ -370,6 +380,13 @@ but they don't actually change anything about the load order
 
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river
 	portal_id = "caves_wilderness-river"
+
+/obj/effect/map_effect/portal/master/side_a/wilderness_to_valley
+	portal_id = "wilderness_valley"
+
+/obj/effect/map_effect/portal/master/side_b/wilderness_to_valley
+	portal_id = "wilderness_valley"
+
 
 /*
 //CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels

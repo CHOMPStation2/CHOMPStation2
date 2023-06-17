@@ -52,6 +52,7 @@
 		#include "southern_cross-9.dmm" //Transit z8
 		#include "southern_cross-10.dmm" //Sif wilds z9
 		#include "southern_cross-12.dmm" //Skylands z10
+		#include "southern_cross-13.dmm" //Valley z11 seemingly. For stranger critters and POIs.
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
@@ -59,6 +60,7 @@
 
 
 //PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets
+	#include "overmap/shuttles.dm"
 	//SIF - Planet
 	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
 	//KARA - Planet

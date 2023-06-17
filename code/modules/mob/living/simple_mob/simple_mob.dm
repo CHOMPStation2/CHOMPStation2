@@ -180,9 +180,9 @@
 	verbs -= /mob/verb/observe
 	health = maxHealth
 
-	if(mobcard_provided) //VOREStation Edit
-		mobcard = new /obj/item/weapon/card/id(src)
-		mobcard.access = mobcard_access.Copy()
+	if(ID_provided) //VOREStation Edit
+		myid = new /obj/item/weapon/card/id(src)
+		myid.access = myid_access.Copy()
 
 	for(var/L in has_langs)
 		languages |= GLOB.all_languages[L]

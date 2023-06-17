@@ -33,19 +33,21 @@
 	if(!voremob_loaded)
 		return
 	verbs |= /mob/living/proc/eat_trash
+	verbs |= /mob/living/proc/toggle_trash_catching
+	verbs |= /mob/living/proc/restrict_trasheater
 	var/obj/belly/B = new /obj/belly/(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"
 	B.name = "Churno-Vac"
 	B.desc = "With an abrupt loud WHUMP after a very sucky trip through the hungry bot's vacuum tube, you finally spill out into its waste container, where everything the bot slurps off the floors ends up for swift processing among the caustic sludge, efficiently melting everything down into a thin slurry to fuel its form. More loose dirt and debris occasionally raining in from above as the bot carries on with its duties to keep the station nice and clean."
-	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine&#39;s gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
+	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine's gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
 	B.digest_mode = DM_DIGEST
 	B.item_digest_mode = IM_DIGEST
 	B.digest_burn = 3
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.belly_fullscreen = "anim_belly"
-	B.belly_fullscreen_color = "#3e2f27"
+	B.belly_fullscreen = "VBO_trash"
+	B.belly_fullscreen_color = "#555B34"
 	B.sound_volume = 25
 	B.count_items_for_sprite = TRUE
 
@@ -94,6 +96,7 @@
 	B.desc = "SNAP! You have been sucked up into the big synthbird's beak, the powerful vacuum within the bird roaring somewhere beyond the abyssal deep gullet hungrily gaping before you, eagerly sucking you deeper inside towards a long bulgy ride down the bird's vacuum hose of a neck!"
 	B.autotransferlocation = "vacuum hose"
 	B.autotransfer_max_amount = 0
+	B.autotransferwait = 60
 
 	vore_selected = B
 
@@ -121,9 +124,6 @@
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Life()
 	. =..()
-	for(var/obj/belly/L in vore_organs) //Speedrun that autotransfer at 2s ticks instead of 6s
-		if(L.speedy_mob_processing)
-			L.process()
 	var/turf/T = get_turf(src)
 	if(istype(T))
 		for(var/obj/O in T)

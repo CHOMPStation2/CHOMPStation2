@@ -50,7 +50,7 @@
 	..()
 
 /mob/living/simple_mob/construct/juggernaut/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 80 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage)
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)
 		var/projectile_dam_type = P.damage_type
@@ -125,7 +125,7 @@
 							)
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 80 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage)
 	if(prob(reflectchance))
 		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
 						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")

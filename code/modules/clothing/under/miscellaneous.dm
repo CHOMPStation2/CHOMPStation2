@@ -239,6 +239,7 @@
 	name = "sleek overalls"
 	desc = "A set of modern pleather reinforced overalls."
 	icon_state = "overalls_sleek"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 /obj/item/clothing/under/pirate
 	name = "pirate outfit"
@@ -1320,12 +1321,13 @@
  */
 
 /obj/item/clothing/under/moderncoat
-	name = "modern wrapped coat"
+	name = "modern wrapped coat (pants)"
 	desc = "The cutting edge of fashion."
-	icon_state = "mod_coat"
-	worn_state = "mod_coat"
+	icon_state = "mod_coat_pants"
+	worn_state = "mod_coat_pants"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+	starting_accessories = list(/obj/item/clothing/accessory/jacket/modwrap)
 
 /obj/item/clothing/under/modjump
 	name = "modern jumpsuit"

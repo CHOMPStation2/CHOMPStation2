@@ -6,13 +6,17 @@
 	icon_state = "precursorhive"
 	icon_living = "precursorhive"
 	attacktext = list("prodded")
-	maxHealth = 5 LASERS_TO_KILL // 150 health
-	health = 5 LASERS_TO_KILL
+	maxHealth = 3 LASERS_TO_KILL // 150 health
+	health = 3 LASERS_TO_KILL
 	movement_cooldown = 4
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 
 	var/obj/item/shield_projector/shields = null
+
+	loot_list = list(/obj/item/prop/alien/junk = 20,
+			/obj/item/prop/alien/junk = 20
+			)
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/Initialize(mapload)
 	shields = new /obj/item/shield_projector/rectangle/automatic/hivebot_drone(src)
@@ -24,7 +28,7 @@
 	base_attack_cooldown = 0 // Extremly rapid fire with rather weak bullets.
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/laser
-	projectiletype = /obj/item/projectile/beam/precursor
+	projectiletype = /obj/item/projectile/energy/mob/precursor
 	projectile_dispersion = 5
 	projectile_accuracy = -30
 

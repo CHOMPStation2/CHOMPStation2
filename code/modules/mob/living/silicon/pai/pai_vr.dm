@@ -10,12 +10,12 @@
 	var/icon/holo_icon_north
 	var/holo_icon_dimension_X = 32
 	var/holo_icon_dimension_Y = 32
-	var/global/list/wide_chassis = list(
+	var/list/wide_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"rat",
 		"panther",
 		"teppi"
 		)
-	var/global/list/flying_chassis = list(
+	var/list/flying_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"pai-parrot",
 		"pai-bat",
 		"pai-butterfly",
@@ -28,7 +28,7 @@
 	//the birds especially! Just naw. If someone else wants to mess with 12x4 frames of animation where
 	//most of the pixels are different kinds of green and tastefully translate that to whitescale
 	//they can have fun with that! I not doing it!
-	var/global/list/allows_eye_color = list(
+	var/list/allows_eye_color = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"pai-repairbot",
 		"pai-typezero",
 		"pai-bat",
@@ -46,7 +46,8 @@
 		"catslug",
 		"car",
 		"typeone",
-		"13"
+		"13",
+		"pai-raptor"
 		)
 	//These vars keep track of whether you have the related software, used for easily updating the UI
 	var/soft_ut = FALSE	//universal translator

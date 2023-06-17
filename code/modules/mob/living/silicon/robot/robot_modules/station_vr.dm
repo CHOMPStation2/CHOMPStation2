@@ -379,7 +379,8 @@
 	sprites = list(
 					"Traumahound" = "traumavale",
 					"Drake" = "draketrauma",
-					"Borgi" = "borgi-trauma"
+					"Borgi" = "borgi-trauma",
+					"Raptor V-4" = "traumaraptor"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/traumahound/New(var/mob/living/silicon/robot/R)
@@ -517,7 +518,8 @@
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
 					"Cat" = "vixjani", //CHOMPEdit
-					"Drake" = "drakejanit"
+					"Drake" = "drakejanit",
+					"Raptor V-4" = "janiraptor"
 					)
 	can_be_pushed = 0
 
@@ -525,6 +527,7 @@
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/pupscrubber(src)
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
 	//Starts empty. Can only recharge with recycled material.
@@ -698,7 +701,8 @@
 					"EngiHound" = "engihound",
 					"EngiHoundDark" = "engihounddark",
 					"Cat" = "vixengi", //CHOMPEdit
-					"Drake" = "drakeeng"
+					"Drake" = "drakeeng",
+					"Raptor V-4" = "engiraptor"
 					)
 	can_be_pushed = 0
 
@@ -856,7 +860,9 @@
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
 					"Cat" = "vixserv", //CHOMPEdit
-					"Drake" = "drakemine"
+					"Drake" = "drakemine",
+					"Raptor V-4" = "serviraptor",
+					"Raptor V-4000" = "fancyraptor"
 					)
 	can_be_pushed = 0
 
@@ -934,9 +940,11 @@
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark",
+					"Borgi" = "borgi-mine", //CHOMPEdit
 					"Cat Mining" = "vixmine", //CHOMPEdit
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
-					"Drake" = "drakemine"
+					"Drake" = "drakemine",
+					"Raptor V-4" = "mineraptor"
 					)
 	can_be_pushed = 0
 
@@ -951,6 +959,7 @@
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	// New Emag gear for the minebots!
 	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
@@ -972,8 +981,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon = 'icons/mob/widerobot_car_vr.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_car_vr.dmi'
+	R.icon = 'modular_chomp/icons/mob/widerobot_car_ch.dmi' //CHOMPEdit
+	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_car_ch.dmi' //CHOMPEdit
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

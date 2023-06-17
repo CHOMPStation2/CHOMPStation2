@@ -124,6 +124,9 @@
 		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								200),
 		EQUIPMENT("Whiskey",					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,		125),
 		EQUIPMENT("Mining PSG Upgrade Disk",	/obj/item/borg/upgrade/shield_upgrade,								2500),
+	//CHOMPedit Start
+		EQUIPMENT("Mining PSG", 				/obj/item/device/personal_shield_generator/belt/mining/loaded,      2000),
+	//CHOMPedit End
 	)
 	prize_list["Extra"] = list() // Used in child vendors
 	//VOREStation Edit End

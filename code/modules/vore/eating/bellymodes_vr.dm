@@ -1,6 +1,7 @@
 // Process the predator's effects upon the contents of its belly (i.e digestion/transformation etc)
 /obj/belly/process(wait) //Passed by controller
 	recent_sound = FALSE
+	cycle_sloshed = FALSE //CHOMPAdd
 
 	if(loc != owner)
 		if(istype(owner))
@@ -14,35 +15,23 @@
 	if(!contents.len)
 		return
 
-	//CHOMPEdit: Autotransfer count moved here.
-	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
-		var/list/autotransferables = contents - autotransfer_queue
-		if(LAZYLEN(autotransfer_queue) >= autotransfer_min_amount)
-			var/obj/belly/dest_belly
-			for(var/obj/belly/B in owner.vore_organs)
-				if(B.name == autotransferlocation)
-					dest_belly = B
-					break
-			if(dest_belly)
-				for(var/atom/movable/M in autotransfer_queue)
-					if(!M || !M.autotransferable)
-						continue
-					transfer_contents(M, dest_belly)
-				autotransfer_queue.Cut()
-		var/tally = 0
-		for(var/atom/movable/M in autotransferables)
-			if(!M || !M.autotransferable)
-				continue
+	//CHOMPEdit Start: Autotransfer count moved here.
+	if(!owner.client || autotransfer_enabled)
+		var/list/autotransferables = list()
+		for(var/atom/movable/M in contents)
+			if(!M || !M.autotransferable) continue
 			if(isliving(M))
 				var/mob/living/L = M
-				if(L.absorbed)
-					continue
+				if(L.absorbed) continue
 			M.belly_cycles++
-			if(M.belly_cycles >= autotransferwait / 60)
-				check_autotransfer(M, autotransferlocation)
-				tally++
-			if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount)
-				break
+			if(M.belly_cycles < autotransferwait / 60) continue
+			autotransferables += M
+		if(LAZYLEN(autotransferables) >= autotransfer_min_amount)
+			var/tally = 0
+			for(var/atom/movable/M in autotransferables)
+				if(check_autotransfer(M))
+					tally++
+				if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount) break //CHOMPEdit End
 
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?
@@ -365,8 +354,8 @@
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
-	if(!ishuman(owner))
-		owner.update_icons()
+	//if(!ishuman(owner)) CHOMPremoval. Bad.
+	//	owner.update_icons()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents

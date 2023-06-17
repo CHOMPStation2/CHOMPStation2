@@ -241,7 +241,7 @@
 
 /obj/item/areaeditor/blueprints/engineers
 	name = "writing blueprints"
-	desc = "A piece of paper that allows for expansion of the station and creaiton of new areas. There is a \"For Official Use Only\" stamp on it. NOT to be mistaken with the staion blueprints."
+	desc = "A piece of paper that allows for expansion of the station and creation of new areas. There is a \"For Official Use Only\" stamp on it. NOT to be mistaken with the station blueprints."		// CHOMPEDIT : purdev (some spelling fixes)
 	station_master = 0
 	uses_charges = 1
 	can_override = 0

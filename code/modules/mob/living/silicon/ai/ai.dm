@@ -646,6 +646,9 @@ var/list/ai_verbs_default = list(
 						"carp",
 						"spider",
 						"bear",
+						"fox",			// CHOMPStation Edit: Fox holograms!
+						"fox, alt",		// CHOMPStation Edit: Fox holograms!
+						"syndifox",		// CHOMPStation Edit: Fox holograms!
 						"slime",
 						"ian",
 						"runtime",
@@ -710,6 +713,12 @@ var/list/ai_verbs_default = list(
 								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holoskrm"))
 							if("female skrell")
 								holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holoskrf"))
+							if("fox")																// CHOMPStation Edit: Fox holograms!
+								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"fox"))		// CHOMPStation Edit: Fox holograms!
+							if("syndifox")															// CHOMPStation Edit: Fox holograms!
+								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"syndifox"))	// CHOMPStation Edit: Fox holograms!
+							if("fox, alt")															// CHOMPStation Edit: Fox holograms!
+								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"fox2"))		// CHOMPStation Edit: Fox holograms!
 
 //Toggles the luminosity and applies it by re-entereing the camera.
 /mob/living/silicon/ai/proc/toggle_camera_light()

@@ -118,6 +118,7 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+	var/phase_gentle = FALSE //CHOMPEdit - Add gentle phasing
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
@@ -174,8 +175,12 @@
 		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
 		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]</span>")
 		H.forceMove(pick(floors))
-		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
-		phaseanim.dir = H.dir
+		if(H.ability_flags & AB_PHASE_SHIFTED)
+			H.phase_shift()
+		else
+			var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
+			phaseanim.dir = H.dir
+		H.invisibility = initial(H.invisibility)
 		respite_activating = FALSE
 		belly.owner.update_fullness()
 		H.clear_fullscreen("belly")
@@ -184,6 +189,8 @@
 				H.toggle_hud_vis()
 		H.stop_sound_channel(CHANNEL_PREYLOOP)
 		H.add_modifier(/datum/modifier/dark_respite, 10 MINUTES)
+		H.muffled = FALSE
+		H.forced_psay = FALSE
 
 
 		spawn(5 MINUTES)
@@ -227,6 +234,7 @@
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
 			H.heal_organ_damage(3, 0)
+			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_NORM)
 			for(var/obj/item/organ/I in H.internal_organs)
 				if(I.robotic >= ORGAN_ROBOT)
 					continue
@@ -283,6 +291,7 @@
 					ability_icon_given = P.ability_icon_state,
 					arguments = list()
 					)
+	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite

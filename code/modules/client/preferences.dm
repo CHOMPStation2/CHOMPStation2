@@ -161,7 +161,7 @@ var/list/preferences_datums = list()
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
 	var/list/volume_channels = list()
-	
+
 	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
 	var/selecting_slots = FALSE
 
@@ -278,7 +278,7 @@ var/list/preferences_datums = list()
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
 
-/datum/preferences/proc/update_character_previews(mutable_appearance/MA)
+/*datum/preferences/proc/update_character_previews(mutable_appearance/MA) //CHOMPEdit _ch override.
 	if(!client)
 		return
 
@@ -309,7 +309,7 @@ var/list/preferences_datums = list()
 			client.screen |= O
 		O.appearance = MA
 		O.dir = D
-		O.screen_loc = preview_screen_locs["[D]"]
+		O.screen_loc = preview_screen_locs["[D]"]*/
 
 /datum/preferences/proc/show_character_previews()
 	if(!client || !char_render_holders)

@@ -187,7 +187,7 @@
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/internal/detatch_organ/
-
+	surgery_name = "Detach Organ"	//CHOMPEdit
 	allowed_tools = list(
 	/obj/item/weapon/surgical/scalpel = 100,		\
 	/obj/item/weapon/material/knife = 75,	\
@@ -408,6 +408,7 @@
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/internal/attach_organ
+	surgery_name = "Attach Organ"	//CHOMPEdit
 	allowed_tools = list(
 	/obj/item/weapon/surgical/FixOVein = 100, \
 	/obj/item/stack/cable_coil = 75
