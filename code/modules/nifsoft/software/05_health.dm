@@ -105,8 +105,8 @@
 		var/mob/living/carbon/human/H = nif.human // Chomp Edit
 		var/HP_percent = H.health/H.getMaxHealth() // Chomp Edit
 		//We're good!
-		var/mob/living/carbon/human/S = nif.human
-		var/HP_percent = S.health/S.getMaxHealth()
+		//var/mob/living/carbon/human/S = nif.human //ChompEDIT, unused backport
+		//var/HP_percent = S.health/S.getMaxHealth() //ChompEDIT, unused backport
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
