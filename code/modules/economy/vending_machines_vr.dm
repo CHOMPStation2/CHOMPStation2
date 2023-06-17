@@ -3617,6 +3617,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackramen = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpacktaco = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 2)
 
 	prices = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 8,
@@ -3625,4 +3627,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackramen = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpacktaco = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 200)
