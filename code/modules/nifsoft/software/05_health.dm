@@ -152,9 +152,9 @@
 				var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
 				a.autosay("[S.real_name] is in a critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
 				qdel(a)
-
+		*/ //Chomp comment out END
+		
 		return TRUE
-		*/ Chomp comment out END
 
 /datum/nifsoft/spare_breath
 	name = "Respirocytes"
