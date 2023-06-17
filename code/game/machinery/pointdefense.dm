@@ -225,10 +225,10 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(!istype(M))
 		return
 	//We throw a laser but it doesnt have to hit for meteor to explode
-	var/obj/item/projectile/beam/pointdefense/beam = new(get_turf(src))
+	var/obj/item/projectile/beam/coildefense/coil = new(get_turf(src))
 	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
 	use_power_oneoff(idle_power_usage * 10)
-	beam.launch_projectile(target = M.loc, user = src)
+	coil.launch_projectile(target = M.loc, user = src) // CHOMPEdit: Changing "beam" var to "coil" for the new coilgun type point defense turrets (to match the coilgun sprite and sfx names)
 	spawn(10)
 		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
 
