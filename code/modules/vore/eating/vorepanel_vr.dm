@@ -8,6 +8,12 @@
 #define BELLIES_DESC_MAX 4096
 #define FLAVOR_MAX 400
 
+//INSERT COLORIZE-ONLY STOMACHS HERE
+var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
+														"a_synth_flesh_mono_hole",
+														"a_anim_belly",
+														"multi_layer_test_tummy")
+
 /mob/living
 	var/datum/vore_look/vorePanel
 
@@ -219,10 +225,15 @@
 			"override_min_prey_num"	= selected.override_min_prey_num,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
+<<<<<<< HEAD
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
 			"belly_fullscreen_color3" = selected.belly_fullscreen_color3,
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
+=======
+			"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary,
+			"belly_fullscreen_color_trinary" = selected.belly_fullscreen_color_trinary,
+>>>>>>> e84eeb62cd... Merge pull request #15037 from Heroman3003/multi_layer_overlays
 			"colorization_enabled" = selected.colorization_enabled,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
@@ -299,10 +310,15 @@
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
+<<<<<<< HEAD
 		selected_list["belly_fullscreen_color2"] = selected.belly_fullscreen_color2
 		selected_list["belly_fullscreen_color3"] = selected.belly_fullscreen_color3
 		selected_list["belly_fullscreen_color4"] = selected.belly_fullscreen_color4
 		selected_list["belly_fullscreen_alpha"] = selected.belly_fullscreen_alpha
+=======
+		selected_list["belly_fullscreen_color_secondary"] = selected.belly_fullscreen_color_secondary
+		selected_list["belly_fullscreen_color_trinary"] = selected.belly_fullscreen_color_trinary
+>>>>>>> e84eeb62cd... Merge pull request #15037 from Heroman3003/multi_layer_overlays
 
 		if(selected.colorization_enabled)
 			selected_list["possible_fullscreens"] = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //Makes any icons inside of here selectable. //CHOMPedit
@@ -314,10 +330,7 @@
 			//Why? I have no flipping clue. As you can see above, vore_colorized is included in the assets but isn't working. It makes no sense.
 			//I can only imagine this is a BYOND/TGUI issue with the cache. If you can figure out how to fix this and make it so you only need to
 			//include things in full_colorized_vore, that would be great. For now, this is the only workaround that I could get to work.
-			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono"
-			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono_hole"
-			selected_list["possible_fullscreens"] -= "a_anim_belly"
-			//INSERT COLORIZE-ONLY STOMACHS HERE
+			selected_list["possible_fullscreens"] -= belly_colorable_only_fullscreens
 
 		var/list/selected_contents = list()
 		for(var/O in selected)
@@ -1495,8 +1508,16 @@
 				B.vore_fx(host, TRUE)
 			else
 				host.clear_fullscreen("belly")
+<<<<<<< HEAD
 			if(!host.hud_used.hud_shown)
 				host.toggle_hud_vis()
+=======
+				host.clear_fullscreen("belly2")
+				host.clear_fullscreen("belly3")
+				host.clear_fullscreen("belly4")
+				if(!host.hud_used.hud_shown)
+					host.toggle_hud_vis()
+>>>>>>> e84eeb62cd... Merge pull request #15037 from Heroman3003/multi_layer_overlays
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_noisy")
@@ -2656,6 +2677,16 @@
 			if(newalpha)
 				host.vore_selected.belly_fullscreen_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_fullscreen_color_secondary")
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			if(newcolor)
+				host.vore_selected.belly_fullscreen_color_secondary = newcolor
+			. = TRUE
+		if("b_fullscreen_color_trinary")
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			if(newcolor)
+				host.vore_selected.belly_fullscreen_color_trinary = newcolor
 			. = TRUE
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
