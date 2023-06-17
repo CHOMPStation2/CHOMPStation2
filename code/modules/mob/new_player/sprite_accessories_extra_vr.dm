@@ -994,4 +994,3 @@
 	icon_state = "teshi_heterochromia_l"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TESHARI)
-
