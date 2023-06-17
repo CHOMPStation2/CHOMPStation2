@@ -1292,12 +1292,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-<<<<<<< HEAD
-		INVOKE_ASYNC(owner, /mob/living/proc/insidePanel, owner) //CHOMPEdit
-=======
-		INVOKE_ASYNC(owner.vorePanel, PROC_REF(tgui_interact), user)
->>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
-
+		INVOKE_ASYNC(owner, TYPE_PROC_REF(/mob/living, insidePanel), owner) //CHOMPEdit
 /**
  * Screen object for vore panel
  */

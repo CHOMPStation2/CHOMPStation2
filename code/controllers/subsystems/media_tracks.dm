@@ -56,31 +56,21 @@ SUBSYSTEM_DEF(media_tracks)
 			T.secret = entry["secret"] ? 1 : 0
 			T.lobby = entry["lobby"] ? 1 : 0
 
-<<<<<<< HEAD
 			/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
 			T.casino = entry["casino"] ? 1 : 0
 			/// CHOMPstation edit end
 
-=======
->>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 			all_tracks += T
 
 /datum/controller/subsystem/media_tracks/proc/sort_tracks()
 	report_progress("Sorting media tracks...")
-<<<<<<< HEAD
-	sortTim(all_tracks, /proc/cmp_media_track_asc)
+	sortTim(all_tracks, GLOBAL_PROC_REF(cmp_media_track_asc))
 
 	jukebox_tracks.Cut()
 	lobby_tracks.Cut()
 	/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
 	casino_tracks.Cut()
 	/// CHOMPstation edit end
-=======
-	sortTim(all_tracks, GLOBAL_PROC_REF(cmp_media_track_asc))
-
-	jukebox_tracks.Cut()
-	lobby_tracks.Cut()
->>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 
 	for(var/datum/track/T in all_tracks)
 		/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
@@ -130,11 +120,7 @@ SUBSYSTEM_DEF(media_tracks)
 			if(!songdata["url"] || !songdata["title"] || !songdata["duration"])
 				to_chat(C, "<span class='warning'>URL, Title, or Duration was missing from a song. Skipping.</span>")
 				continue
-<<<<<<< HEAD
-			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"])
-=======
-			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"])
->>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
+			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"]) //ChompEDIT, included 'casino'
 			all_tracks += T
 
 			report_progress("New media track added by [C]: [T.title]")
@@ -188,12 +174,9 @@ SUBSYSTEM_DEF(media_tracks)
 
 	T.secret = secret
 	T.lobby = lobby
-<<<<<<< HEAD
 	/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
 	T.casino = casino
 	/// CHOMPstation edit end
-=======
->>>>>>> b6b3a1357c... Merge pull request #14976 from ItsSelis/selis-515compat
 
 	all_tracks += T
 
