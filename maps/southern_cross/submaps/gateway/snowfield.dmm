@@ -27143,7 +27143,7 @@
 /area/awaymission/snowfield/command/gateway)
 "xbT" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/autolathe/armory,
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "xcE" = (
