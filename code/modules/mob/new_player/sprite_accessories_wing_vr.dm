@@ -319,3 +319,11 @@
 	icon_state = "sectdrone_wing"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/*/datum/sprite_accessory/wing/kara //SatinIsle Fluff Item //Chomp REMOVE
+	name = "Pterokara wings"
+	desc = ""
+	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon_state = "feathered_kara"
+	ckeys_allowed = list("satinisle")
+*/
