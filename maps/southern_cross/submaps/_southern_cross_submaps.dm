@@ -42,6 +42,20 @@
 	mappath = 'gateway/snowfield.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
+#include "gateway/BaseBlep.dm"
+/datum/map_template/sc_lateload/gateway/baseblep
+	name = "Base Blep"
+	desc = "A brand new but already lost base at the end of a squishy caynon"
+	mappath = 'gateway/BaseBlep.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/maddnesslab.dm"
+/datum/map_template/sc_lateload/gateway/maddnesslab
+	name = "Maddness Lab"
+	desc = "An ancient base brimming with creations of maddness"
+	mappath = 'gateway/maddnesslab.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
 #include "gateway/carpfarm.dm"
 /datum/map_template/sc_lateload/gateway/carpfarm
 	name = "Carp Farm"
