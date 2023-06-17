@@ -170,10 +170,10 @@
 	var/list/myid_access = list() //VOREStation Edit
 	var/ID_provided = FALSE //VOREStation Edit
 	// VOREStation Add: Move/Shoot/Attack delays based on damage
-	var/damage_fatigue_mult = 0			// Our multiplier for how heavily mobs are affected by injury. [UPDATE THIS IF THE FORMULA CHANGES]: Formula = injury_level = round(rand(1,3) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 5))
+	var/damage_fatigue_mult = 1			// Our multiplier for how heavily mobs are affected by injury. [UPDATE THIS IF THE FORMULA CHANGES]: Formula = injury_level = round(rand(1,3) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 5))
 	var/injury_level = 0 				// What our injury level is. Rather than being the flat damage, this is the amount added to various delays to simulate injuries in a manner as lightweight as possible.
 	var/threshold = 0.6					// When we start slowing down. Configure this setting per-mob. Default is 60%
-	var/injury_enrages = FALSE				// Do injuries enrage (aka strengthen) our mob? If yes, we'll interpret how hurt we are differently.
+	var/injury_enrages = FALSE			// Do injuries enrage (aka strengthen) our mob? If yes, we'll interpret how hurt we are differently.
 	// VOREStation Add End
 
 /mob/living/simple_mob/Initialize()
@@ -282,7 +282,7 @@
 	// VOREStation Edit Stop
 
 	. += config.animal_delay
-  
+
 	. += ..()
 
 
@@ -341,6 +341,8 @@
 		if((h / getMaxHealth()) <= threshold) 				// Essentially, did our health go down? We don't modify want to modify our total slowdown if we didn't actually take damage, and aren't below our threshold %
 			var/totaldelay = round(rand(1,3) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 5)) 	// totaldelay is how much delay we're going to feed into attacks and movement. Do NOT change this formula unless you know how to math.
 			injury_level = totaldelay 						// Adds our returned slowdown to the mob's injury level
+		else if((h / getMaxHealth()) >= threshold)			// If our health has gone up somehow, and we're over our threshold percentage now, reset it to full
+			injury_level = 0								// Reset to no slowdown
 
 /mob/living/simple_mob/updatehealth()	// We don't want to fully override the check, just hook our own code in
 	get_injury_level()					// We check how injured we are, then actually update the mob on how hurt we are.
