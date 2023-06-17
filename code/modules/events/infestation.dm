@@ -100,7 +100,7 @@
 	for(var/obj/effect/landmark/C in landmarks_list)
 		if(C.name == "verminstart")
 			spawn_locations.Add(C.loc)
-	*/ Chomp REMOVE END
+	*/ //Chomp REMOVE END
 	
 	spawn(0)
 		var/num = rand(min_number,max_number)
