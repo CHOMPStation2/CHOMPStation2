@@ -116,7 +116,7 @@
 				var/spawn_type = pick(spawn_types)
 				new spawn_type(T)
 		// ChompEDIT End
-
+/* CHOMPedit - Upstream Code, not implmeneted here
 /datum/event/infestation/tick()
 	if(activeFor % 5 != 0)
 		return // Only process every 10 seconds.
@@ -151,6 +151,7 @@
 /datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
 	spawned_vermin -= M
 	GLOB.destroyed_event.unregister(M, src, PROC_REF(on_vermin_destruction))
+*/ // CHOMPedit End
 
 /datum/event/infestation/announce()
 	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
