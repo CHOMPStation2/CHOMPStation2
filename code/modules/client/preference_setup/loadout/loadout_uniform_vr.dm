@@ -11,6 +11,7 @@
 	display_name = "pt uniform, planetside sec"
 	path = /obj/item/clothing/under/solgov/pt/sifguard
 
+<<<<<<< HEAD
 /datum/gear/uniform/job_skirt/sci
 	allowed_roles = list("Research Director","Scientist", "Xenobiologist", "Xenobotanist")
 
@@ -57,6 +58,8 @@
 	display_name = "ge uniform, civ" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/civ
 
+=======
+>>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 //Federation jackets
 /datum/gear/suit/job_fed/sec
 	display_name = "fed uniform, sec"
@@ -72,6 +75,7 @@
 	display_name = "fed uniform, eng"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer")
+<<<<<<< HEAD
 
 // Trekie things
 //TOS
@@ -128,6 +132,8 @@
 
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
+=======
+>>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 //DS9
 
 /datum/gear/suit/job_trek/ds9_coat
@@ -138,6 +144,7 @@
 						"Scientist","Roboticist","Xenobiologist","Xenobotanist","Atmospheric Technician",
 						"Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard","Security Pilot") //YW ADDITIONS  //CHOMP keep explo
 
+<<<<<<< HEAD
 
 /datum/gear/uniform/job_trek/cmd/ds9
 	display_name = "DS9 uniform, cmd"
@@ -174,6 +181,8 @@
 
 //CHOMPEdit: See loadout_uniform_vr_ch.dm for a security-specific variant that has standard armor values.
 
+=======
+>>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 /*
 Swimsuits
 */
@@ -279,26 +288,6 @@ Talon jumpsuit
 		suits[initial(undersuit_type.name)] = undersuit_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(suits))
 
-/datum/gear/uniform/undersuit_haz
-	display_name = "undersuit, hazard (Engineering)"
-	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Engineer")
-	path = /obj/item/clothing/under/undersuit/hazard
-
-/datum/gear/uniform/undersuit_sec
-	display_name = "undersuit, security (Security)"
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
-	path = /obj/item/clothing/under/undersuit/sec
-
-/datum/gear/uniform/undersuit_hos
-	display_name = "undersuit, security command (HoS)"
-	allowed_roles = list("Head of Security")
-	path = /obj/item/clothing/under/undersuit/sec/hos
-
-/datum/gear/uniform/undersuit_com
-	display_name = "undersuit, command (SM/HoP)"
-	allowed_roles = list("Site Manager", "Head of Personnel")
-	path = /obj/item/clothing/under/undersuit/command
-
 //Altevian Uniforms
 /datum/gear/uniform/altevian
 	description = "An extremely comfortable set of clothing that's made to help people handle their day to day work around the fleets with little to no discomfort."
@@ -324,12 +313,6 @@ Talon jumpsuit
 		var/obj/item/clothing/under/color/fjumpsuit/jumpsuit = jumpsuit_style
 		jumpsuits[initial(jumpsuit.name)] = jumpsuit
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(jumpsuits))
-
-//Modernized Sec Jumpsuit
-/datum/gear/uniform/modernsec
-    display_name = "undersuit, security, modernized (Security)"
-    allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
-    path = /obj/item/clothing/under/rank/security/modern
 
 /datum/gear/uniform/singer_blue
 	display_name = "blue singer dress"
