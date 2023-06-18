@@ -4,19 +4,6 @@
  * @license MIT
  */
 
-type Gas = {
-  id: string;
-  // path: string;
-  name: string;
-  label: string;
-  color: string;
-};
-
-// VOREStation Addition start
-/** 0.0 Degrees Celsius in Kelvin */
-export const T0C = 273.15;
-// VOREStation Addition end
-
 // UI states, which are mirrored from the BYOND code.
 export const UI_INTERACTIVE = 2;
 export const UI_UPDATE = 1;
@@ -62,7 +49,7 @@ export const COLORS = {
     acidicbuffer: '#fbc314',
     basicbuffer: '#3853a4',
   },
-} as const;
+};
 
 // Colors defined in CSS
 export const CSS_COLORS = [
@@ -180,7 +167,7 @@ export const RADIO_CHANNELS = [
     'freq': 1485,
     'color': '#008000',
   },
-] as const;
+];
 
 /*
 Entries must match /code/defines/gases.dm entries.
@@ -240,10 +227,22 @@ const GASES = [
     'label': 'Temperature',
     'color': 'yellow',
   },
-] as const;
+];
 
 // VOREStation Edit End
 
+<<<<<<< HEAD:tgui/packages/tgui/constants.js
+export const getGasLabel = (gasId, fallbackValue) => {
+  const gasSearchString = String(gasId).toLowerCase();
+  const gas = GASES.find((gas) => gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString);
+  return (gas && gas.label) || fallbackValue || gasId;
+};
+
+export const getGasColor = (gasId) => {
+  const gasSearchString = String(gasId).toLowerCase();
+  const gas = GASES.find((gas) => gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString);
+  return gas && gas.color;
+=======
 // Returns gas label based on gasId
 // Checks GASES for both id (all chars lowercase)
 // and name (each word start capitalized, to match standards in code\defines\gases.dm)
@@ -300,17 +299,10 @@ export const getGasFromId = (gasId: string): Gas | undefined => {
       return GASES[idx];
     }
   }
+>>>>>>> 3fcd2145bb... Merge pull request #15023 from Runa-Dacino/fixairalarms:tgui/packages/tgui/constants.ts
 };
 
-/*
-// Returns gas object based on gasPath
-export const getGasFromPath = (gasPath: string): Gas | undefined => {
-  if (!gasPath) return;
-
-  for (let idx = 0; idx < GASES.length; idx++) {
-    if (GASES[idx].path === gasPath) {
-      return GASES[idx];
-    }
-  }
-};
-*/
+// VOREStation Addition start
+/** 0.0 Degrees Celsius in Kelvin */
+export const T0C = 273.15;
+// VOREStation Addition end
