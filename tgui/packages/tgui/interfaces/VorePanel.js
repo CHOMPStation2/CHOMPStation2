@@ -780,9 +780,7 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
         <LabeledList>
           <LabeledList.Item label="Toggle Belly Overlay Mode">
             <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_silicon_belly' })
-              }
+              onClick={() => act('set_attribute', { attribute: 'b_silicon_belly' })}
               content={capitalize(silicon_belly_overlay_preference)}
             />
           </LabeledList.Item>
@@ -798,9 +796,7 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Item label="Minimum Prey Size for Vorebelly">
             <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_min_belly_prey_size' })
-              }
+              onClick={() => act('set_attribute', { attribute: 'b_min_belly_prey_size' })}
               content={overlay_min_prey_size * 100 + '%'}
             />
           </LabeledList.Item>
