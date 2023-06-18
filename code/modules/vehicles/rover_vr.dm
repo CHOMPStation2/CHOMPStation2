@@ -2,19 +2,21 @@
 //I don't know what the hell I'm doing right now. Please help. Especially with the update_icons stuff. -Joan Risu
 
 /obj/vehicle/train/rover/engine
-	name = "NT Humvee"
-	desc = "The NT version of the UF T-41LV, a Federation recon vehicle used as a personal transport. Can be latched to a trolly to transport equipment. "
+	name = "\improper NT T-41LV Humvee"
+	desc = "The civilian market model of the UF T-41LV, a SolGov reconnaissance and exploration vehicle, painted in Nanotrasen blue. Trailers can be latched for transporting heavy equipment, though its performance will noticeably degrade with more than one."
 	icon = 'icons/vore/rover_vr.dmi'
 	icon_state = "rover"
+	light_power = 2 // CHOMPedit: 1 to 2, more light range.
+	light_range = 6 // CHOMPedit: 3 to 6, more light range.
 	on = 0
 	powered = 1
 	locked = 0
-	move_delay = 0.5
-	charge_use = 3	//CHOMPedit: Reduced from 5 to 3 for more fuel efficiency, being a dedicated transport vehicle.
+	move_delay = 0.2	//CHOMPedit: Move delay reduced from 0.5 to 0.2.
+	charge_use = 2.5	//CHOMPedit: Reduced from 5 to 2.5 for more fuel efficiency, being a dedicated transport vehicle.
 
 	//Health stuff
-	health = 200	// CHOMPedit: Cars are usually just a bit tougher than humans.
-	maxhealth = 200	// CHOMPedit: Cars are usually just a bit tougher than humans.
+	health = 350	// CHOMPedit: 100 to 350. Cars are usually just a bit tougher than humans.
+	maxhealth = 350	// CHOMPedit: Cars are usually just a bit tougher than humans.
 	fire_dam_coeff = 0.6
 	brute_dam_coeff = 0.5
 
@@ -23,10 +25,8 @@
 	pixel_x = -8
 	pixel_y = -8
 
-
 	var/car_limit = 1	//how many cars an engine can pull before performance degrades. This should be 0 to prevent trailers from unhitching.
 						//CHOMPedit: Set to 1 because the thing slows down to a crawl with even one trailer. Unhitching doesn't occur at regular movement speeds, or even at faster speeds than base.
-	active_engines = 1
 	active_engines = 1
 	var/obj/item/weapon/key/rover/key
 	var/siren = 0 //This is for eventually getting the siren sprite to work.
@@ -392,7 +392,7 @@
 	else
 		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines)	//limits base overweight so you cant overspeed trains
 		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
-		move_delay += config.run_speed 														//base reference speed
+		move_delay += 1 														//base reference speed //CHOMPedit: Move-delay from server config (2) to 1.
 		move_delay *= 1.1																	//makes cargo trains 10% slower than running when not overweight
 
 /obj/vehicle/train/rover/trolley/update_car(var/train_length, var/active_engines)

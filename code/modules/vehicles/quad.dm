@@ -21,7 +21,6 @@
 	var/frame_state = "quad" //Custom-item proofing!
 	var/paint_base = 'icons/obj/vehicles_64x64.dmi'
 	var/custom_frame = FALSE
-	var/datum/looping_sound/vehicle_engine/soundloop
 
 	paint_color = "#ffffff"
 

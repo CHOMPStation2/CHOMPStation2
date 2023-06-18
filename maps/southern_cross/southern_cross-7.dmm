@@ -854,6 +854,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "cc" = (
@@ -1687,6 +1688,12 @@
 /obj/effect/floor_decal/emblem/nt3,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/slingcarrierdock)
+"ec" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/expoutpost/staginghangar)
 "ef" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/cic)
@@ -1894,7 +1901,7 @@
 /obj/effect/floor_decal/stairs{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/staginghangar)
 "eH" = (
 /obj/structure/table/steel_reinforced,
@@ -3140,10 +3147,10 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
 "hT" = (
-/obj/effect/floor_decal/stairs{
+/obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/staginghangar)
 "hU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -3500,6 +3507,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "iO" = (
@@ -3731,10 +3739,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/structure/window/plastitanium,
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "ju" = (
@@ -4336,6 +4341,7 @@
 	dir = 8;
 	layer = 3
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "kJ" = (
@@ -4614,7 +4620,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/stairs,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/staginghangar)
 "ll" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -4741,11 +4747,11 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/ursula)
 "lx" = (
-/obj/structure/window/plastitanium{
-	dir = 4
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 1
 	},
-/turf/simulated/floor/reinforced,
-/area/expoutpost/aicore)
+/turf/simulated/floor/tiled/milspec/raised,
+/area/expoutpost/staginghangar)
 "ly" = (
 /obj/machinery/vending/wallmed1{
 	dir = 8
@@ -6667,6 +6673,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "pY" = (
@@ -7729,6 +7736,10 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
+"sv" = (
+/obj/effect/floor_decal/borderfloorblack/corner,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/expoutpost/staginghangar)
 "sx" = (
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -8280,6 +8291,11 @@
 /obj/random/trash_pile,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
+"tV" = (
+/obj/structure/table/reinforced,
+/obj/item/device/sleevemate,
+/turf/simulated/floor/carpet/blue,
+/area/expoutpost/medicalbay)
 "tW" = (
 /obj/machinery/r_n_d/circuit_imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -8540,6 +8556,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "uG" = (
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "uJ" = (
@@ -8963,6 +8980,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "vM" = (
@@ -9979,6 +9997,7 @@
 "yj" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/green,
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "yk" = (
@@ -11714,6 +11733,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "Cy" = (
@@ -11747,7 +11767,8 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/stargazer)
 "CB" = (
-/turf/simulated/floor/tiled/white,
+/obj/structure/catwalk,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/staginghangar)
 "CC" = (
 /obj/structure/bed/chair,
@@ -12974,6 +12995,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/cic)
 "Fy" = (
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "Fz" = (
@@ -13016,6 +13038,10 @@
 /obj/machinery/sleep_console,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
+"FE" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/expoutpost/staginghangar)
 "FF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13448,9 +13474,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "GJ" = (
@@ -13840,6 +13864,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
 "HO" = (
@@ -15380,11 +15405,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/gateway)
 "Lr" = (
-/obj/effect/floor_decal/stairs{
-	dir = 8
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/expoutpost/staginghangar)
+/turf/space,
+/area/space)
 "Ls" = (
 /obj/machinery/power/smes/buildable{
 	name = "Telecomms SMES"
@@ -17088,6 +17113,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "Px" = (
@@ -18713,7 +18739,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/catwalk_plated/white,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "TF" = (
@@ -19059,7 +19085,7 @@
 /obj/effect/floor_decal/stairs{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/staginghangar)
 "UI" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
@@ -19335,7 +19361,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/catwalk,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/staginghangar)
 "Vo" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
@@ -20844,6 +20871,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "Zp" = (
@@ -53519,7 +53547,7 @@ wA
 wA
 wA
 SR
-hT
+UF
 ST
 wA
 wA
@@ -53786,11 +53814,11 @@ hx
 za
 pg
 OZ
-Dg
+lx
 Dg
 so
 nZ
-Dg
+ec
 OZ
 CB
 CB
@@ -53806,7 +53834,7 @@ Fr
 YX
 YX
 TB
-CT
+tV
 MS
 Pi
 iU
@@ -54043,7 +54071,7 @@ CB
 CB
 CB
 CB
-CB
+FE
 Dg
 Us
 CI
@@ -54302,11 +54330,11 @@ MW
 gs
 Lv
 OZ
-Dg
+hT
 Dg
 so
 fl
-Dg
+sv
 OZ
 CB
 CB
@@ -54551,7 +54579,7 @@ wA
 wA
 wA
 YI
-Lr
+eG
 ST
 wA
 wA
@@ -56955,7 +56983,7 @@ LW
 rk
 RF
 iM
-lx
+uG
 Pv
 RF
 UX
@@ -63320,7 +63348,7 @@ Qv
 Qv
 Qv
 Qv
-Qv
+Lr
 Qv
 Qv
 Qv
