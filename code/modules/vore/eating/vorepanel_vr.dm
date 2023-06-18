@@ -407,13 +407,10 @@
 		"weight_message_visible" = host.weight_message_visible,
 		"weight_messages" = host.weight_messages,
 		"eating_privacy_global" = host.eating_privacy_global,
-<<<<<<< HEAD
 		//CHOMPEdit start, vore sprites
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply
 		//CHOMPEdit end
-=======
->>>>>>> 6c66e135b6... Merge pull request #14994 from Runa-Dacino/dogborgbelly
 	)
 
 	return data
