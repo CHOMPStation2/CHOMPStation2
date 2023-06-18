@@ -597,15 +597,12 @@ const VoreSelectedBellyOptions = (props, context) => {
     selective_preference,
     save_digest_mode,
     eating_privacy_local,
-<<<<<<< HEAD
-    vorespawn_blacklist,
-=======
     silicon_belly_overlay_preference,
     visible_belly_minimum_prey,
     overlay_min_prey_size,
     override_min_prey_size,
     override_min_prey_num,
->>>>>>> 6c66e135b6... Merge pull request #14994 from Runa-Dacino/dogborgbelly
+    vorespawn_blacklist,
   } = belly;
 
   return (

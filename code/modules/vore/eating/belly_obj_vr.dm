@@ -56,15 +56,12 @@
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/selective_preference = DM_DIGEST	// Which type of selective bellymode do we default to?
 	var/eating_privacy_local = "default"	//Overrides eating_privacy_global if not "default". Determines if attempt/success messages are subtle/loud
-<<<<<<< HEAD
 	var/is_feedable = TRUE					// If this belly shows up in belly selections for others. //CHOMPAdd
-=======
 	var/silicon_belly_overlay_preference = "Sleeper" //Selects between placing belly overlay in sleeper or normal vore mode. Exclusive
 	var/visible_belly_minimum_prey = 1 //What LAZYLEN(vore_selected.contents) we require to show the belly. Customizable
 	var/overlay_min_prey_size	= 0 	//Minimum prey size for belly overlay to show. 0 to disable
 	var/override_min_prey_size = FALSE	//If true, exceeding override prey number will override minimum size requirements
 	var/override_min_prey_num	= 1		//We check belly contents against this to override min size
->>>>>>> 6c66e135b6... Merge pull request #14994 from Runa-Dacino/dogborgbelly
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location

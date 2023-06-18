@@ -212,6 +212,11 @@
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"eating_privacy_local" = selected.eating_privacy_local,
+			"silicon_belly_overlay_preference"	= selected.silicon_belly_overlay_preference,
+			"visible_belly_minimum_prey"	= selected.visible_belly_minimum_prey,
+			"overlay_min_prey_size"	= selected.overlay_min_prey_size,
+			"override_min_prey_size" = selected.override_min_prey_size,
+			"override_min_prey_num"	= selected.override_min_prey_num,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
@@ -219,7 +224,6 @@
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
-<<<<<<< HEAD
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -244,15 +248,6 @@
 			"tail_extra_overlay2" = selected.tail_extra_overlay2
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
-=======
-			"eating_privacy_local" = selected.eating_privacy_local,
-			"silicon_belly_overlay_preference"	= selected.silicon_belly_overlay_preference,
-			"visible_belly_minimum_prey"	= selected.visible_belly_minimum_prey,
-			"overlay_min_prey_size"	= selected.overlay_min_prey_size,
-			"override_min_prey_size" = selected.override_min_prey_size,
-			"override_min_prey_num"	= selected.override_min_prey_num,
-
->>>>>>> 6c66e135b6... Merge pull request #14994 from Runa-Dacino/dogborgbelly
 		)
 
 		var/list/addons = list()
