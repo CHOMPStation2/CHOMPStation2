@@ -508,6 +508,12 @@
 "uS" = (
 /turf/simulated/shuttle/floor/alien/blue,
 /area/awaymission/baseblep/finale)
+"uT" = (
+/obj/random/outcrop,
+/turf/simulated/floor/outdoors/rocks{
+	temperature = 300
+	},
+/area/awaymission/baseblep/cavern)
 "vC" = (
 /obj/structure/window/reinforced{
 	health = 1e+006
@@ -580,6 +586,32 @@
 	temperature = 310
 	},
 /area/awaymission/baseblep/base)
+"yq" = (
+/obj/structure/table/steel,
+/obj/item/weapon/gun/projectile/heavysniper/collapsible,
+/obj/item/weapon/gun/projectile/heavysniper/collapsible,
+/obj/item/weapon/gun/projectile/revolvingrifle,
+/obj/item/weapon/gun/projectile/revolvingrifle,
+/obj/item/weapon/gun/projectile/shotgun/semi,
+/obj/item/weapon/gun/projectile/shotgun/semi,
+/obj/item/weapon/gun/energy/monorifle/combat,
+/obj/item/weapon/gun/energy/monorifle/combat,
+/obj/item/weapon/gun/energy/hooklauncher,
+/obj/item/weapon/gun/energy/hooklauncher,
+/obj/item/weapon/gun/energy/laser{
+	icon = 'icons/obj/gun.dmi';
+	icon_state = "pulse";
+	name = "Expirmental Pulse Rifle";
+	firemodes = list(list("mode_name" = "normal", "fire_delay" = 8, "projectile_type" = /obj/item/projectile/beam/midlaser, "charge_cost" = 120),list("mode_name" = "suppressive", "fire_delay" = 5, "projectile_type" = /obj/item/projectile/beam/weaklaser, "charge_cost" = 30))
+	},
+/obj/item/weapon/gun/energy/laser{
+	icon = 'icons/obj/gun.dmi';
+	icon_state = "pulse";
+	name = "Expirmental Pulse Rifle";
+	firemodes = list(list("mode_name" = "normal", "fire_delay" = 8, "projectile_type" = /obj/item/projectile/beam/midlaser, "charge_cost" = 120),list("mode_name" = "suppressive", "fire_delay" = 5, "projectile_type" = /obj/item/projectile/beam/weaklaser, "charge_cost" = 30))
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/awaymission/baseblep/hivebotsphere)
 "yu" = (
 /mob/living/simple_mob/slime/feral/yellow,
 /turf/simulated/floor/outdoors/rocks{
@@ -2913,7 +2945,7 @@ VM
 VM
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -4201,7 +4233,7 @@ mc
 mc
 mc
 VM
-mc
+uT
 mc
 mc
 mc
@@ -4713,7 +4745,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -5245,7 +5277,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -5732,7 +5764,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -5755,7 +5787,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 VS
@@ -6512,7 +6544,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -7282,7 +7314,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -7316,7 +7348,7 @@ mc
 mc
 mc
 PZ
-mc
+uT
 VM
 VM
 VM
@@ -7506,6 +7538,7 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
@@ -7521,13 +7554,12 @@ mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -7792,7 +7824,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -7827,7 +7859,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -8559,7 +8591,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -8812,7 +8844,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -9054,6 +9086,7 @@ mc
 VM
 VM
 VM
+uT
 mc
 mc
 mc
@@ -9066,8 +9099,7 @@ mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
@@ -9563,7 +9595,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -9813,7 +9845,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -10591,7 +10623,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -12490,7 +12522,7 @@ VM
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -13164,7 +13196,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -13217,7 +13249,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -13426,7 +13458,7 @@ VM
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -13465,6 +13497,7 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
@@ -13477,7 +13510,6 @@ mc
 mc
 mc
 mc
-mc
 VM
 VM
 VM
@@ -13516,7 +13548,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -13985,7 +14017,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -14022,7 +14054,7 @@ VM
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -15033,7 +15065,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -15064,7 +15096,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -15819,7 +15851,7 @@ mc
 mc
 VM
 mc
-mc
+uT
 VM
 VM
 VM
@@ -16577,14 +16609,14 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
@@ -17303,7 +17335,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -17392,7 +17424,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -17556,7 +17588,7 @@ mc
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -17793,7 +17825,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -18346,7 +18378,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -18591,7 +18623,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -19131,7 +19163,7 @@ mc
 mc
 mc
 nJ
-mc
+uT
 VM
 VM
 VM
@@ -19157,7 +19189,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -19627,7 +19659,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -19653,7 +19685,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -19854,7 +19886,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -20156,7 +20188,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -20637,7 +20669,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -20681,7 +20713,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -21397,7 +21429,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -21458,7 +21490,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -22434,7 +22466,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -22691,7 +22723,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -23012,7 +23044,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -23197,6 +23229,7 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
@@ -23205,7 +23238,6 @@ mc
 mc
 mc
 mc
-mc
 VM
 VM
 VM
@@ -23280,7 +23312,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -23530,7 +23562,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -24743,7 +24775,7 @@ yj
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -24925,7 +24957,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -25265,7 +25297,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -25857,7 +25889,7 @@ VM
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -26808,7 +26840,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -27840,7 +27872,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -27919,7 +27951,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -28172,7 +28204,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -28360,7 +28392,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -28613,7 +28645,7 @@ yj
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -29071,7 +29103,7 @@ VM
 mc
 mc
 uq
-mc
+uT
 VM
 VM
 VM
@@ -29171,7 +29203,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 VM
 VM
 wx
@@ -29425,9 +29457,9 @@ VM
 VM
 VM
 VM
-mc
+uT
 VM
-mc
+uT
 VM
 mc
 mc
@@ -30242,7 +30274,7 @@ VM
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -30679,45 +30711,45 @@ VM
 VM
 VM
 VM
+uT
+mc
+mc
+mc
+mc
+mc
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
 mc
 mc
 mc
 mc
 mc
 mc
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
 mc
 mc
 mc
 mc
 mc
-mc
-mc
-mc
-mc
-mc
-mc
-mc
+uT
 VM
 VM
 VM
@@ -30880,7 +30912,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -30944,7 +30976,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -31655,7 +31687,7 @@ VM
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -32258,7 +32290,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -32771,7 +32803,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -32947,7 +32979,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -33282,7 +33314,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -33532,7 +33564,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -34234,7 +34266,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -34755,7 +34787,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -35001,7 +35033,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -35262,7 +35294,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 mc
@@ -35850,7 +35882,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -40354,7 +40386,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -40629,7 +40661,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -41026,7 +41058,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -41286,7 +41318,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -41378,7 +41410,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -41386,7 +41418,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -41659,7 +41691,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -42192,7 +42224,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -42572,7 +42604,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -42832,7 +42864,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -43218,6 +43250,7 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
@@ -43226,8 +43259,7 @@ mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
@@ -44551,7 +44583,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -45324,7 +45356,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -47379,7 +47411,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -47438,7 +47470,7 @@ PA
 PA
 PA
 dP
-PA
+yq
 CJ
 PA
 PA
@@ -48138,7 +48170,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -50203,7 +50235,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -50418,7 +50450,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -50729,7 +50761,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -52006,7 +52038,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -52271,7 +52303,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -53303,7 +53335,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -53448,7 +53480,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -53502,7 +53534,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 VS
 mc
@@ -54328,12 +54360,12 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -54835,7 +54867,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -54997,59 +55029,12 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
-mc
 VM
 VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-mc
-mc
-mc
-mc
-mc
 VM
 VM
 VM
@@ -55097,7 +55082,54 @@ mc
 mc
 mc
 mc
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
 mc
+mc
+mc
+mc
+mc
+uT
 VM
 VM
 VM
@@ -55376,7 +55408,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -55519,7 +55551,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -55629,7 +55661,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -56154,7 +56186,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -56374,7 +56406,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -56923,7 +56955,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -57108,7 +57140,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -57144,51 +57176,51 @@ VM
 VM
 VM
 VM
-mc
-mc
-mc
-mc
-mc
-mc
-mc
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
+uT
 mc
 mc
 mc
 mc
 mc
 mc
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
+VM
 mc
+mc
+mc
+mc
+mc
+mc
+uT
 VM
 bP
 hM
@@ -57664,7 +57696,7 @@ mc
 mc
 nJ
 mc
-mc
+uT
 VM
 VM
 VM
@@ -57848,7 +57880,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -58178,7 +58210,7 @@ VS
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -58385,7 +58417,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -58435,7 +58467,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -58476,7 +58508,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -58936,9 +58968,9 @@ VM
 VM
 VM
 VM
-mc
+uT
 VM
-mc
+uT
 mc
 mc
 mc
@@ -59149,16 +59181,17 @@ VM
 VM
 VM
 VM
+uT
 mc
 mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
+uT
 mc
 mc
 mc
@@ -59174,8 +59207,7 @@ mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
@@ -59441,14 +59473,15 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
 VM
 VM
-mc
+uT
 VM
+uT
 mc
 mc
 mc
@@ -59460,8 +59493,7 @@ mc
 mc
 mc
 mc
-mc
-mc
+uT
 VM
 VM
 VM
@@ -59950,7 +59982,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -60214,7 +60246,7 @@ VM
 VM
 VM
 VM
-mc
+uT
 mc
 mc
 mc
@@ -60230,7 +60262,7 @@ Lz
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM
@@ -60742,7 +60774,7 @@ mc
 mc
 mc
 mc
-mc
+uT
 VM
 VM
 VM

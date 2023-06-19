@@ -18,7 +18,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/tesla
 	var/grenade_timer = 10
-	var/grenade_type2 = /obj/item/weapon/grenade/spawnboss/hivebot
+	var/grenade_type2 = /obj/item/weapon/grenade/shooter/rubber
 	size_multiplier = 1.75
 	shock_resist = 3
 	water_resist = 3

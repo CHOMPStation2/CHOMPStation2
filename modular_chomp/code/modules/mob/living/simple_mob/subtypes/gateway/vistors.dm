@@ -3,7 +3,6 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "drone3"
 	icon_living = "drone3"
-	icon_dead = "drone3"
 	maxHealth = 50
 	health = 50
 	movement_cooldown = 0
@@ -64,7 +63,6 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "drone0"
 	icon_living = "drone0"
-	icon_dead = "drone0"
 
 	mob_class = MOB_CLASS_ABERRATION
 
@@ -133,7 +131,6 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "mushroom"
 	icon_living = "mushroom"
-	icon_dead = "mushroom_dead"
 	maxHealth = 200
 	health = 200
 	movement_cooldown = 0
@@ -167,7 +164,6 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "scarybat"
 	icon_living = "scarybat"
-	icon_dead = "scary_dead"
 	maxHealth = 200
 	health = 200
 	movement_cooldown = 0
@@ -192,7 +188,6 @@
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "chick"
 	icon_living = "chick"
-	icon_dead = "chick"
 	maxHealth = 50
 	health = 50
 	movement_cooldown = 0
@@ -214,7 +209,6 @@
 	icon = 'icons/mecha/mecha.dmi'
 	icon_state = "honker"
 	icon_living = "honker"
-	icon_dead = "honker"
 	maxHealth = 300
 	health = 300
 	movement_cooldown = 0

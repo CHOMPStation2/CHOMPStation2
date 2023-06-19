@@ -3,7 +3,6 @@
 	icon = 'icons/mecha/mecha.dmi'
 	icon_state = "imperion"
 	icon_living = "imperion"
-	icon_dead = "imperion"
 	maxHealth = 400
 	health = 400
 	movement_cooldown = -1
@@ -17,6 +16,16 @@
 
 	wreckage = null
 	pilot_type = null
+
+	armor = list(
+				"melee"		= 45,
+				"bullet"	= 45,
+				"laser"		= 45,
+				"energy"	= 45,
+				"bomb"		= 45,
+				"bio"		= 100,
+				"rad"		= 100
+				)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1 //Simple phase that is mostly dodge rockects
 	movement_cooldown = -1
@@ -174,6 +183,16 @@
 	var/grenade_timer = 10
 	var/grenade_type2 = /obj/item/weapon/grenade/shooter/rubber
 	var/grenade_type3 = /obj/item/weapon/grenade/shooter/laserpellet
+
+	armor = list(
+				"melee"		= -150,
+				"bullet"	= 45,
+				"laser"		= 45,
+				"energy"	= 45,
+				"bomb"		= 45,
+				"bio"		= 100,
+				"rad"		= 100
+				)
 
 	//This is a place holder loot list
 	loot_list = list(/obj/item/clothing/suit/armor/alien = 30,
