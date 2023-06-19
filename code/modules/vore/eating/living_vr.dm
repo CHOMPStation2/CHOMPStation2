@@ -574,6 +574,11 @@
 		G.can_revert = TRUE
 		qdel(G)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back from being petrified.")
+	//CHOMPEdit - In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
+	else if(!istype(src, /mob/living/voice) && istype(src.loc, /obj/item/clothing/shoes))
+		var/obj/item/clothing/shoes/S = src.loc
+		forceMove(get_turf(src))
+		log_and_message_admins("[key_name(src)] used the OOC escape button to escape from of a pair of shoes. [ADMIN_FLW(src)] - Shoes [ADMIN_VV(S)]")
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
