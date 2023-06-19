@@ -932,15 +932,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/kara //SatinIsle Fluff Item
+/*/datum/sprite_accessory/ears/kara //SatinIsle Fluff Item //Chomp REMOVE
 	name = "Pterokara horn"
 	desc = ""
 	icon = 'icons/mob/vore/ears_vr.dmi'
 	icon_state = "kara_horn"
-<<<<<<< HEAD
 	ckeys_allowed = list("satinisle")
-=======
-	ckeys_allowed = list("satinisle")
+*/ //Chomp REMOVE End
 
 /datum/sprite_accessory/ears/shark
 	name = "shark ears (Colorable)"
@@ -1024,4 +1022,3 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "shark_fin_alt"
->>>>>>> 95f5b3bc90... Merge pull request #14980 from Rick4242/varietypack
