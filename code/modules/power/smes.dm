@@ -77,7 +77,6 @@ GLOBAL_LIST_EMPTY(smeses)
 	add_nearby_terminals()
 	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 	soundloop.extra_range = -3 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
-	soundloop.opacity_check = TRUE // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one. This is expensive, but we need it to not be annoying.
 	if(!check_terminals())
 		stat |= BROKEN
 		return
