@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/datum/gear/head/cap/med
-	display_name = "cap, medical (Medical)"
-	path = /obj/item/clothing/head/soft/med
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic","Field Medic") //CHOMP keep explo
-
-=======
->>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 /*/datum/gear/head/cap/sol
 	display_name = "cap, sol"
 	path = /obj/item/clothing/head/soft/sol*/

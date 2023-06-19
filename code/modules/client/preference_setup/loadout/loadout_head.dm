@@ -16,14 +16,6 @@
 	display_name = "beret, red"
 	path = /obj/item/clothing/head/beret
 
-<<<<<<< HEAD
-/datum/gear/head/beret/bsec
-	display_name = "beret, navy (officer)"
-	path = /obj/item/clothing/head/beret/sec/navy/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-=======
->>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 /datum/gear/head/beret/bsec_warden
 	display_name = "beret, navy (warden)"
 	path = /obj/item/clothing/head/beret/sec/navy/warden
@@ -34,14 +26,6 @@
 	path = /obj/item/clothing/head/beret/sec/navy/hos
 	allowed_roles = list("Head of Security")
 
-<<<<<<< HEAD
-/datum/gear/head/beret/csec
-	display_name = "beret, corporate (officer)"
-	path = /obj/item/clothing/head/beret/sec/corporate/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-=======
->>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 /datum/gear/head/beret/csec_warden
 	display_name = "beret, corporate (warden)"
 	path = /obj/item/clothing/head/beret/sec/corporate/warden
@@ -60,14 +44,6 @@
 	display_name = "beret, purple"
 	path = /obj/item/clothing/head/beret/purple
 
-<<<<<<< HEAD
-/datum/gear/head/beret/sec
-	display_name = "beret, red (security)"
-	path = /obj/item/clothing/head/beret/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-=======
->>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 /datum/gear/head/cap
 	display_name = "cap, brown-flat"
 	path = /obj/item/clothing/head/flatcap
@@ -96,56 +72,6 @@
 	display_name = "cap, blue station"
 	path = /obj/item/clothing/head/mailman
 
-<<<<<<< HEAD
-/datum/gear/head/cap/flat
-	display_name = "cap, brown-flat"
-	path = /obj/item/clothing/head/flatcap
-
-/datum/gear/head/cap/corp
-	display_name = "cap, corporate (Security)"
-	path = /obj/item/clothing/head/soft/sec/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-/datum/gear/head/cap/green
-	display_name = "cap, green"
-	path = /obj/item/clothing/head/soft/green
-
-/datum/gear/head/cap/grey
-	display_name = "cap, grey"
-	path = /obj/item/clothing/head/soft/grey
-
-/datum/gear/head/cap/med
-	display_name = "cap, medical (Medical)"
-	path = /obj/item/clothing/head/soft/med
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic","Search and Rescue")
-
-/datum/gear/head/cap/orange
-	display_name = "cap, orange"
-	path = /obj/item/clothing/head/soft/orange
-
-/datum/gear/head/cap/purple
-	display_name = "cap, purple"
-	path = /obj/item/clothing/head/soft/purple
-
-/datum/gear/head/cap/rainbow
-	display_name = "cap, rainbow"
-	path = /obj/item/clothing/head/soft/rainbow
-
-/datum/gear/head/cap/red
-	display_name = "cap, red"
-	path = /obj/item/clothing/head/soft/red
-
-/datum/gear/head/cap/sec
-	display_name = "cap, security (Security)"
-	path = /obj/item/clothing/head/soft/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-/datum/gear/head/cap/yellow
-	display_name = "cap, yellow"
-	path = /obj/item/clothing/head/soft/yellow
-
-=======
->>>>>>> ec9eb3a615... Merge pull request #15017 from KillianKirilenko/kk-loadouts
 /datum/gear/head/cap/white
 	display_name = "cap (colorable)"
 	path = /obj/item/clothing/head/soft/mime
