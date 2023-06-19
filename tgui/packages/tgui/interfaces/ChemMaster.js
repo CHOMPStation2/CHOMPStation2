@@ -81,16 +81,12 @@ export const ChemMaster = (props, context) => {
           bufferNonEmpty={buffer_reagents.length > 0}
         />
         <ChemMasterBuffer mode={mode} bufferReagents={buffer_reagents} />
-<<<<<<< HEAD
-        <ChemMasterProduction isCondiment={condi} bufferNonEmpty={buffer_reagents.length > 0} />
-        <ChemMasterCustomization /> {/* CHOMPEdit - Enable customizing pill bottle type */}
-=======
         <ChemMasterProduction
           isCondiment={condi}
           bufferNonEmpty={buffer_reagents.length > 0}
         />
-        {/* <ChemMasterCustomization /> */}
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
+        <ChemMasterCustomization />{' '}
+        {/* CHOMPEdit - Enable customizing pill bottle type */}
       </Window.Content>
     </Window>
   );

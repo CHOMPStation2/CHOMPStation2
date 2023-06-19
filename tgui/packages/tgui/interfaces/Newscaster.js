@@ -200,7 +200,11 @@ const NewscasterNewStory = (props, context) => {
 
   const label_style = { 'white-space': 'nowrap' };
 
-  const break_style = { width: '100%', 'word-break': 'break-all', 'word-wrap': 'break-word' };
+  const break_style = {
+    width: '100%',
+    'word-break': 'break-all',
+    'word-wrap': 'break-word',
+  };
 
   return (
     <Section
@@ -210,7 +214,6 @@ const NewscasterNewStory = (props, context) => {
           Back
         </Button>
       }>
-<<<<<<< HEAD
       <table
         style={{
           width: 'calc(100% + 0.5em)',
@@ -266,65 +269,11 @@ const NewscasterNewStory = (props, context) => {
           </td>
         </tr>
       </table>
-      <Button fluid color="good" icon="plus" onClick={() => act('submit_new_message')}>
-=======
-      <LabeledList>
-        <LabeledList.Item label="Receiving Channel">
-          <Button fluid onClick={() => act('set_channel_receiving')}>
-            {channel_name || 'Unset'}
-          </Button>
-        </LabeledList.Item>
-        <LabeledList.Item label="Message Author" color="good">
-          {user}
-        </LabeledList.Item>
-        <LabeledList.Item label="Message Title" verticalAlign="top">
-          <Flex>
-            <Flex.Item grow={1}>
-              <Section width="99%" inline>
-                {title || '(no title yet)'}
-              </Section>
-            </Flex.Item>
-            <Flex.Item>
-              <Button
-                verticalAlign="top"
-                onClick={() => act('set_new_title')}
-                icon="pen"
-                tooltip="Edit Title"
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-          </Flex>
-        </LabeledList.Item>
-        <LabeledList.Item label="Message Body" verticalAlign="top">
-          <Flex>
-            <Flex.Item grow={1}>
-              <Section width="99%" inline>
-                {msg || '(no message yet)'}
-              </Section>
-            </Flex.Item>
-            <Flex.Item>
-              <Button
-                verticalAlign="top"
-                onClick={() => act('set_new_message')}
-                icon="pen"
-                tooltip="Edit Message"
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-          </Flex>
-        </LabeledList.Item>
-        <LabeledList.Item label="Attach Photo">
-          <Button fluid icon="image" onClick={() => act('set_attachment')}>
-            {photo_data ? 'Photo Attached' : 'No Photo'}
-          </Button>
-        </LabeledList.Item>
-      </LabeledList>
       <Button
         fluid
         color="good"
         icon="plus"
         onClick={() => act('submit_new_message')}>
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
         Submit Message
       </Button>
       <Button

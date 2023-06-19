@@ -244,43 +244,6 @@ const GASES = [
 
 // VOREStation Edit End
 
-<<<<<<< HEAD:tgui/packages/tgui/constants.ts
-// Returns gas label based on gasId
-export const getGasLabel = (gasId: string, fallbackValue?: string) => {
-  if (!gasId) return fallbackValue || 'None';
-
-  const gasSearchString = gasId.toLowerCase();
-
-  for (let idx = 0; idx < GASES.length; idx++) {
-    if (GASES[idx].id === gasSearchString) {
-      return GASES[idx].label;
-    }
-  }
-
-  return fallbackValue || 'None';
-};
-
-// Returns gas color based on gasId
-export const getGasColor = (gasId: string) => {
-  if (!gasId) return 'black';
-
-  const gasSearchString = gasId.toLowerCase();
-
-  for (let idx = 0; idx < GASES.length; idx++) {
-    if (GASES[idx].id === gasSearchString) {
-=======
-<<<<<<< HEAD:tgui/packages/tgui/constants.js
-export const getGasLabel = (gasId, fallbackValue) => {
-  const gasSearchString = String(gasId).toLowerCase();
-  const gas = GASES.find((gas) => gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString);
-  return (gas && gas.label) || fallbackValue || gasId;
-};
-
-export const getGasColor = (gasId) => {
-  const gasSearchString = String(gasId).toLowerCase();
-  const gas = GASES.find((gas) => gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString);
-  return gas && gas.color;
-=======
 // Returns gas label based on gasId
 // Checks GASES for both id (all chars lowercase)
 // and name (each word start capitalized, to match standards in code\defines\gases.dm)
@@ -314,14 +277,11 @@ export const getGasColor = (gasId: string) => {
 
   for (let idx = 0; idx < GASES.length; idx++) {
     if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
->>>>>>> upstream-merge-15023:tgui/packages/tgui/constants.js
       return GASES[idx].color;
     }
   }
 
   return 'black';
-<<<<<<< HEAD:tgui/packages/tgui/constants.ts
-=======
 };
 
 // Returns gas object based on gasId
@@ -337,21 +297,6 @@ export const getGasFromId = (gasId: string): Gas | undefined => {
 
   for (let idx = 0; idx < GASES.length; idx++) {
     if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
-      return GASES[idx];
-    }
-  }
->>>>>>> 3fcd2145bb... Merge pull request #15023 from Runa-Dacino/fixairalarms:tgui/packages/tgui/constants.ts
->>>>>>> upstream-merge-15023:tgui/packages/tgui/constants.js
-};
-
-// Returns gas object based on gasId
-export const getGasFromId = (gasId: string): Gas | undefined => {
-  if (!gasId) return;
-
-  const gasSearchString = gasId.toLowerCase();
-
-  for (let idx = 0; idx < GASES.length; idx++) {
-    if (GASES[idx].id === gasSearchString) {
       return GASES[idx];
     }
   }

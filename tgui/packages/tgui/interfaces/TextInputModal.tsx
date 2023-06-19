@@ -26,10 +26,6 @@ export const removeAllSkiplines = (toSanitize: string) => {
 
 export const TextInputModal = (props, context) => {
   const { act, data } = useBackend<TextInputData>(context);
-<<<<<<< HEAD
-  const { large_buttons, max_length, message = '', multiline, placeholder, timeout, title } = data;
-  const [input, setInput] = useLocalState<string>(context, 'input', placeholder || '');
-=======
   const {
     large_buttons,
     max_length,
@@ -38,19 +34,19 @@ export const TextInputModal = (props, context) => {
     placeholder,
     timeout,
     title,
-    prevent_enter,
   } = data;
   const [input, setInput] = useLocalState<string>(
     context,
     'input',
     placeholder || ''
   );
->>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
   const onType = (value: string) => {
     if (value === input) {
       return;
     }
-    const sanitizedInput = multiline ? sanitizeMultiline(value) : removeAllSkiplines(value);
+    const sanitizedInput = multiline
+      ? sanitizeMultiline(value)
+      : removeAllSkiplines(value);
     setInput(sanitizedInput);
   };
 
