@@ -4,6 +4,19 @@
  * @license MIT
  */
 
+type Gas = {
+  id: string;
+  // path: string;
+  name: string;
+  label: string;
+  color: string;
+};
+
+// VOREStation Addition start
+/** 0.0 Degrees Celsius in Kelvin */
+export const T0C = 273.15;
+// VOREStation Addition end
+
 // UI states, which are mirrored from the BYOND code.
 export const UI_INTERACTIVE = 2;
 export const UI_UPDATE = 1;
@@ -49,7 +62,7 @@ export const COLORS = {
     acidicbuffer: '#fbc314',
     basicbuffer: '#3853a4',
   },
-};
+} as const;
 
 // Colors defined in CSS
 export const CSS_COLORS = [
@@ -167,8 +180,11 @@ export const RADIO_CHANNELS = [
     'freq': 1485,
     'color': '#008000',
   },
-];
+] as const;
 
+/*
+Entries must match /code/defines/gases.dm entries.
+*/
 const GASES = [
   {
     'id': 'oxygen',
@@ -177,13 +193,13 @@ const GASES = [
     'color': 'blue',
   },
   {
-    'id': 'n2',
+    'id': 'nitrogen',
     'name': 'Nitrogen',
     'label': 'N₂',
-    'color': 'red',
+    'color': 'green',
   },
   {
-    'id': 'carbon dioxide',
+    'id': 'carbon_dioxide',
     'name': 'Carbon Dioxide',
     'label': 'CO₂',
     'color': 'grey',
@@ -195,64 +211,16 @@ const GASES = [
     'color': 'pink',
   },
   {
-    'id': 'water_vapor',
-    'name': 'Water Vapor',
-    'label': 'H₂O',
-    'color': 'grey',
-  },
-  {
-    'id': 'nob',
-    'name': 'Hyper-noblium',
-    'label': 'Hyper-nob',
+    'id': 'volatile_fuel',
+    'name': 'Volatile Fuel',
+    'label': 'EXP',
     'color': 'teal',
   },
   {
-    'id': 'n2o',
+    'id': 'nitrous_oxide',
     'name': 'Nitrous Oxide',
     'label': 'N₂O',
     'color': 'red',
-  },
-  {
-    'id': 'no2',
-    'name': 'Nitryl',
-    'label': 'NO₂',
-    'color': 'brown',
-  },
-  {
-    'id': 'tritium',
-    'name': 'Tritium',
-    'label': 'Tritium',
-    'color': 'green',
-  },
-  {
-    'id': 'bz',
-    'name': 'BZ',
-    'label': 'BZ',
-    'color': 'purple',
-  },
-  {
-    'id': 'stim',
-    'name': 'Stimulum',
-    'label': 'Stimulum',
-    'color': 'purple',
-  },
-  {
-    'id': 'pluox',
-    'name': 'Pluoxium',
-    'label': 'Pluoxium',
-    'color': 'blue',
-  },
-  {
-    'id': 'miasma',
-    'name': 'Miasma',
-    'label': 'Miasma',
-    'color': 'olive',
-  },
-  {
-    'id': 'hydrogen',
-    'name': 'Hydrogen',
-    'label': 'H₂',
-    'color': 'white',
   },
   {
     'id': 'other',
@@ -272,29 +240,77 @@ const GASES = [
     'label': 'Temperature',
     'color': 'yellow',
   },
-];
+] as const;
 
 // VOREStation Edit End
 
-export const getGasLabel = (gasId, fallbackValue) => {
-  const gasSearchString = String(gasId).toLowerCase();
-  const gas = GASES.find(
-    (gas) =>
-      gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString
+// Returns gas label based on gasId
+// Checks GASES for both id (all chars lowercase)
+// and name (each word start capitalized, to match standards in code\defines\gases.dm)
+export const getGasLabel = (gasId: string, fallbackValue?: string) => {
+  if (!gasId) return fallbackValue || 'None';
+
+  const gasSearchId = gasId.toLowerCase();
+  const gasSearchName = gasId.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
   );
-  return (gas && gas.label) || fallbackValue || gasId;
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
+      return GASES[idx].label;
+    }
+  }
+
+  return fallbackValue || 'None';
 };
 
-export const getGasColor = (gasId) => {
-  const gasSearchString = String(gasId).toLowerCase();
-  const gas = GASES.find(
-    (gas) =>
-      gas.id === gasSearchString || gas.name.toLowerCase() === gasSearchString
+// Returns gas color based on gasId
+// Checks GASES for both id (all chars lowercase)
+// and name (each word start capitalized, to match standards in code\defines\gases.dm)
+export const getGasColor = (gasId: string) => {
+  if (!gasId) return 'black';
+
+  const gasSearchId = gasId.toLowerCase();
+  const gasSearchName = gasId.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
   );
-  return gas && gas.color;
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
+      return GASES[idx].color;
+    }
+  }
+
+  return 'black';
 };
 
-// VOREStation Addition start
-/** 0.0 Degrees Celsius in Kelvin */
-export const T0C = 273.15;
-// VOREStation Addition end
+// Returns gas object based on gasId
+// Checks GASES for both id (all chars lowercase)
+// and name (each word start capitalized, to match standards in code\defines\gases.dm)
+export const getGasFromId = (gasId: string): Gas | undefined => {
+  if (!gasId) return;
+
+  const gasSearchId = gasId.toLowerCase();
+  const gasSearchName = gasId.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].id === gasSearchId || GASES[idx].name === gasSearchName) {
+      return GASES[idx];
+    }
+  }
+};
+
+/*
+// Returns gas object based on gasPath
+export const getGasFromPath = (gasPath: string): Gas | undefined => {
+  if (!gasPath) return;
+
+  for (let idx = 0; idx < GASES.length; idx++) {
+    if (GASES[idx].path === gasPath) {
+      return GASES[idx];
+    }
+  }
+};
+*/

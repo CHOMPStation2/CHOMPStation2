@@ -24,6 +24,7 @@ export class Popper extends Component<PopperProps> {
     const { additionalStyles, options } = this.props;
 
     this.renderedContent = document.createElement('div');
+
     if (additionalStyles) {
       for (const [attribute, value] of Object.entries(additionalStyles)) {
         this.renderedContent.style[attribute] = value;

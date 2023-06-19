@@ -15,7 +15,6 @@ export class TextArea extends Component {
   constructor(props, context) {
     super(props, context);
     this.textareaRef = props.innerRef || createRef();
-    // CHOMPedit
     this.state = {
       editing: false,
       scrolledAmount: 0,
@@ -53,7 +52,6 @@ export class TextArea extends Component {
     };
     this.handleKeyDown = (e) => {
       const { editing } = this.state;
-      // CHOMPedit
       const { onChange, onInput, onEnter, onKey } = this.props;
       if (e.keyCode === KEY_ENTER) {
         this.setEditing(false);
@@ -88,7 +86,6 @@ export class TextArea extends Component {
       if (!editing) {
         this.setEditing(true);
       }
-      // CHOMPedit
       // Custom key handler
       if (onKey) {
         onKey(e, e.target.value);
@@ -103,7 +100,6 @@ export class TextArea extends Component {
             '\t' +
             value.substring(selectionEnd);
           e.target.selectionEnd = selectionStart + 1;
-          // CHOMPedit
           if (onInput) {
             onInput(e, e.target.value);
           }
@@ -126,7 +122,6 @@ export class TextArea extends Component {
         }
       }
     };
-    // CHOMPedit Start
     this.handleScroll = (e) => {
       const { displayedValue } = this.props;
       const input = this.textareaRef.current;
@@ -152,7 +147,6 @@ export class TextArea extends Component {
           input.select();
         }
       }, 1);
-      // CHOMPedit End
     }
   }
 
@@ -186,7 +180,6 @@ export class TextArea extends Component {
       value,
       maxLength,
       placeholder,
-      // CHOMPedit Start
       scrollbar,
       noborder,
       displayedValue,

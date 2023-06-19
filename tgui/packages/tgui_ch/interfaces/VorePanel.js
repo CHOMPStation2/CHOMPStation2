@@ -2490,7 +2490,7 @@ const VoreUserPreferences = (props, context) => {
             tooltipPosition="top"
           />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.pickuppref}
             tooltipPosition="top"
