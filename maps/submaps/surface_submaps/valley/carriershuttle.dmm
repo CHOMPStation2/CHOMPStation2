@@ -349,11 +349,6 @@
 /obj/effect/floor_decal/corner/lightorange/diagonal,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/carriershuttle)
-"zY" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword/space,
-/obj/effect/floor_decal/corner/red/diagonal,
-/turf/simulated/shuttle/floor/darkred,
-/area/submap/carriershuttle)
 "As" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /obj/effect/floor_decal/corner/lime/diagonal,
@@ -1157,9 +1152,9 @@ mM
 mM
 Qm
 BN
-eT
 VX
-eT
+VX
+VX
 BN
 Qm
 mM
@@ -1183,9 +1178,9 @@ mM
 mM
 Qm
 BN
-eT
 VX
-eT
+VX
+VX
 BN
 Qm
 mM
@@ -1279,12 +1274,12 @@ mM
 Qm
 CR
 QQ
-zY
 QQ
 QQ
 QQ
 QQ
-zY
+QQ
+QQ
 QQ
 QQ
 CR

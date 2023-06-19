@@ -19,10 +19,6 @@
 /obj/item/weapon/implantcase/chem,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
-"h" = (
-/mob/living/simple_mob/mechanical/hivebot/precusor/lobber,
-/turf/simulated/shuttle/floor/alienplating/blue,
-/area/submap/vault)
 "i" = (
 /obj/structure/loot_pile/surface/alien/security,
 /turf/simulated/shuttle/floor/alienplating/blue,
@@ -30,10 +26,6 @@
 "n" = (
 /obj/structure/loot_pile/surface/alien/end,
 /turf/simulated/shuttle/floor/alienplating/blue,
-/area/submap/vault)
-"o" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
-/turf/simulated/shuttle/floor/alien,
 /area/submap/vault)
 "p" = (
 /turf/space,
@@ -153,9 +145,7 @@
 /turf/space,
 /area/submap/vault)
 "X" = (
-/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
-	faction = "hivebot"
-	},
+/mob/living/simple_mob/mechanical/hivebot/precusor/chrono,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "Y" = (
@@ -882,7 +872,7 @@ c
 c
 a
 a
-o
+z
 I
 z
 a
@@ -965,7 +955,7 @@ c
 c
 a
 z
-h
+a
 z
 v
 D
@@ -1046,7 +1036,7 @@ c
 c
 a
 a
-o
+z
 I
 z
 a
