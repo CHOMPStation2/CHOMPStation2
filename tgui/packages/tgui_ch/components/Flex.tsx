@@ -52,7 +52,12 @@ export const computeFlexProps = (props: FlexProps) => {
 
 export const Flex = (props) => {
   const { className, ...rest } = props;
-  return <div className={classes([className, computeFlexClassName(rest)])} {...computeFlexProps(rest)} />;
+  return (
+    <div
+      className={classes([className, computeFlexClassName(rest)])}
+      {...computeFlexProps(rest)}
+    />
+  );
 };
 
 Flex.defaultHooks = pureComponentHooks;
@@ -66,7 +71,11 @@ export type FlexItemProps = BoxProps & {
 };
 
 export const computeFlexItemClassName = (props: FlexItemProps) => {
-  return classes(['Flex__item', Byond.IS_LTE_IE10 && 'Flex__item--iefix', computeBoxClassName(props)]);
+  return classes([
+    'Flex__item',
+    Byond.IS_LTE_IE10 && 'Flex__item--iefix',
+    computeBoxClassName(props),
+  ]);
 };
 
 export const computeFlexItemProps = (props: FlexItemProps) => {
@@ -99,7 +108,11 @@ const FlexItem = (props) => {
   const { className, ...rest } = props;
   return (
     <div
-      className={classes([className, computeFlexItemClassName(props), computeBoxClassName(props)])}
+      className={classes([
+        className,
+        computeFlexItemClassName(props),
+        computeBoxClassName(props),
+      ])}
       {...computeFlexItemProps(rest)}
     />
   );

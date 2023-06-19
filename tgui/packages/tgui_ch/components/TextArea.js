@@ -98,7 +98,10 @@ export class TextArea extends Component {
         if (keyCode === KEY_TAB) {
           e.preventDefault();
           const { value, selectionStart, selectionEnd } = e.target;
-          e.target.value = value.substring(0, selectionStart) + '\t' + value.substring(selectionEnd);
+          e.target.value =
+            value.substring(0, selectionStart) +
+            '\t' +
+            value.substring(selectionEnd);
           e.target.selectionEnd = selectionStart + 1;
           // CHOMPedit
           if (onInput) {
@@ -194,12 +197,20 @@ export class TextArea extends Component {
     const { scrolledAmount } = this.state;
     return (
       <Box
-        className={classes(['TextArea', fluid && 'TextArea--fluid', noborder && 'TextArea--noborder', className])}
+        className={classes([
+          'TextArea',
+          fluid && 'TextArea--fluid',
+          noborder && 'TextArea--noborder',
+          className,
+        ])}
         {...rest}>
         {!!displayedValue && (
           <Box position="absolute" width="100%" height="100%" overflow="hidden">
             <div
-              className={classes(['TextArea__textarea', 'TextArea__textarea_custom'])}
+              className={classes([
+                'TextArea__textarea',
+                'TextArea__textarea_custom',
+              ])}
               style={{
                 'transform': `translateY(-${scrolledAmount}px)`,
               }}>

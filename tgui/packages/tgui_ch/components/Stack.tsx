@@ -35,7 +35,13 @@ type StackItemProps = FlexProps & {
 
 const StackItem = (props: StackItemProps) => {
   const { className, innerRef, ...rest } = props;
-  return <Flex.Item className={classes(['Stack__item', className])} ref={innerRef} {...rest} />;
+  return (
+    <Flex.Item
+      className={classes(['Stack__item', className])}
+      ref={innerRef}
+      {...rest}
+    />
+  );
 };
 
 Stack.Item = StackItem;
@@ -48,7 +54,12 @@ const StackDivider = (props: StackDividerProps) => {
   const { className, hidden, ...rest } = props;
   return (
     <Flex.Item
-      className={classes(['Stack__item', 'Stack__divider', hidden && 'Stack__divider--hidden', className])}
+      className={classes([
+        'Stack__item',
+        'Stack__divider',
+        hidden && 'Stack__divider--hidden',
+        className,
+      ])}
       {...rest}
     />
   );

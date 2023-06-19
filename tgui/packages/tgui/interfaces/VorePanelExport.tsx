@@ -22,7 +22,8 @@ const ItemModeSpan = {
   'Digest (Food Only)':
     '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
   'Digest': '<span class="badge text-bg-danger">Item: Digest</span>',
-  'Digest (Dispersed Damage)': '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
+  'Digest (Dispersed Damage)':
+    '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
 };
 
 const AddonIcon = {
@@ -67,7 +68,11 @@ const GetLiquidAddons = (addons: string[]) => {
 
   addons?.forEach((addon) => {
     result.push(
-      '<span class="badge text-bg-secondary"><i class="' + ReagentAddonIcon[addon] + '"></i>' + addon + '</span>'
+      '<span class="badge text-bg-secondary"><i class="' +
+        ReagentAddonIcon[addon] +
+        '"></i>' +
+        addon +
+        '</span>'
     );
   });
 

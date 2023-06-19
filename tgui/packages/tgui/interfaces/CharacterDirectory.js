@@ -25,8 +25,14 @@ const getTagColor = (tag) => {
 export const CharacterDirectory = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { personalVisibility, personalTag, personalGenderTag, personalSexualityTag, personalErpTag, personalEventTag } =
-    data;
+  const {
+    personalVisibility,
+    personalTag,
+    personalGenderTag,
+    personalSexualityTag,
+    personalErpTag,
+    personalEventTag,
+  } = data;
 
   const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
@@ -79,14 +85,20 @@ export const CharacterDirectory = (props, context) => {
                   <Button
                     fluid
                     content={personalGenderTag}
-                    onClick={() => act('setGenderTag', { overwrite_prefs: overwritePrefs })}
+                    onClick={() =>
+                      act('setGenderTag', { overwrite_prefs: overwritePrefs })
+                    }
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Sexuality">
                   <Button
                     fluid
                     content={personalSexualityTag}
-                    onClick={() => act('setSexualityTag', { overwrite_prefs: overwritePrefs })}
+                    onClick={() =>
+                      act('setSexualityTag', {
+                        overwrite_prefs: overwritePrefs,
+                      })
+                    }
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
@@ -102,7 +114,9 @@ export const CharacterDirectory = (props, context) => {
                   <Button
                     fluid
                     content={personalEventTag}
-                    onClick={() => act('setEventTag', { overwrite_prefs: overwritePrefs })}
+                    onClick={() =>
+                      act('setEventTag', { overwrite_prefs: overwritePrefs })
+                    }
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">

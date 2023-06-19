@@ -124,11 +124,8 @@
 #include "code\_global_vars\misc.dm"
 #include "code\_global_vars\mobs.dm"
 #include "code\_global_vars\sensitive.dm"
-<<<<<<< HEAD
-#include "code\_global_vars\traits.dm"
-=======
 #include "code\_global_vars\time_vars.dm"
->>>>>>> dd49b83167... Merge pull request #14964 from ItsSelis/selis-tgui-patch
+#include "code\_global_vars\traits.dm"
 #include "code\_global_vars\typecache.dm"
 #include "code\_global_vars\lists\mapping.dm"
 #include "code\_global_vars\lists\misc.dm"

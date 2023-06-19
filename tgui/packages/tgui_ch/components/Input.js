@@ -9,7 +9,8 @@ import { Component, createRef } from 'inferno';
 import { Box } from './Box';
 import { KEY_ESCAPE, KEY_ENTER } from 'common/keycodes';
 
-export const toInputValue = (value) => (typeof value !== 'number' && typeof value !== 'string' ? '' : String(value));
+export const toInputValue = (value) =>
+  typeof value !== 'number' && typeof value !== 'string' ? '' : String(value);
 
 export class Input extends Component {
   constructor() {
@@ -117,12 +118,26 @@ export class Input extends Component {
   render() {
     const { props } = this;
     // Input only props
-    const { selfClear, onInput, onChange, onEnter, value, maxLength, placeholder, ...boxProps } = props;
+    const {
+      selfClear,
+      onInput,
+      onChange,
+      onEnter,
+      value,
+      maxLength,
+      placeholder,
+      ...boxProps
+    } = props;
     // Box props
     const { className, fluid, monospace, ...rest } = boxProps;
     return (
       <Box
-        className={classes(['Input', fluid && 'Input--fluid', monospace && 'Input--monospace', className])}
+        className={classes([
+          'Input',
+          fluid && 'Input--fluid',
+          monospace && 'Input--monospace',
+          className,
+        ])}
         {...rest}>
         <div className="Input__baseline">.</div>
         <input

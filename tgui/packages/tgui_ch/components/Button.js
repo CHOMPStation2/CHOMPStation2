@@ -69,7 +69,9 @@ export const Button = (props) => {
         circular && 'Button--circular',
         compact && 'Button--compact',
         iconPosition && 'Button--iconPosition--' + iconPosition,
-        color && typeof color === 'string' ? 'Button--color--' + color : 'Button--color--default',
+        color && typeof color === 'string'
+          ? 'Button--color--' + color
+          : 'Button--color--default',
         className,
         computeBoxClassName(rest),
       ])}
@@ -96,7 +98,12 @@ export const Button = (props) => {
       }}
       {...computeBoxProps(rest)}>
       {icon && iconPosition !== 'right' && (
-        <Icon name={icon} color={iconColor} rotation={iconRotation} spin={iconSpin} />
+        <Icon
+          name={icon}
+          color={iconColor}
+          rotation={iconRotation}
+          spin={iconSpin}
+        />
       )}
       {content}
       {children}
@@ -127,7 +134,14 @@ Button.defaultHooks = pureComponentHooks;
 
 export const ButtonCheckbox = (props) => {
   const { checked, ...rest } = props;
-  return <Button color="transparent" icon={checked ? 'check-square-o' : 'square-o'} selected={checked} {...rest} />;
+  return (
+    <Button
+      color="transparent"
+      icon={checked ? 'check-square-o' : 'square-o'}
+      selected={checked}
+      {...rest}
+    />
+  );
 };
 
 Button.Checkbox = ButtonCheckbox;
@@ -172,7 +186,9 @@ export class ButtonConfirm extends Component {
         content={this.state.clickedOnce ? confirmContent : content}
         icon={this.state.clickedOnce ? confirmIcon : icon}
         color={this.state.clickedOnce ? confirmColor : color}
-        onClick={() => (this.state.clickedOnce ? onClick() : this.setClickedOnce(true))}
+        onClick={() =>
+          this.state.clickedOnce ? onClick() : this.setClickedOnce(true)
+        }
         {...rest}
       />
     );
@@ -239,7 +255,11 @@ export class ButtonInput extends Component {
 
     let buttonContent = (
       <Box
-        className={classes(['Button', fluid && 'Button--fluid', 'Button--color--' + color])}
+        className={classes([
+          'Button',
+          fluid && 'Button--fluid',
+          'Button--color--' + color,
+        ])}
         {...rest}
         onClick={() => this.setInInput(true)}>
         {icon && <Icon name={icon} rotation={iconRotation} spin={iconSpin} />}

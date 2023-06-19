@@ -134,7 +134,10 @@ export class InfinitePlane extends Component {
             />
           </Stack.Item>
           <Stack.Item grow={1}>
-            <ProgressBar minValue={ZOOM_MIN_VAL} value={zoom} maxValue={ZOOM_MAX_VAL}>
+            <ProgressBar
+              minValue={ZOOM_MIN_VAL}
+              value={zoom}
+              maxValue={ZOOM_MAX_VAL}>
               {zoom}x
             </ProgressBar>
           </Stack.Item>

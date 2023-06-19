@@ -105,7 +105,10 @@ export class Dropdown extends Component {
         style={{
           'width': width,
         }}
-        className={classes([(noscroll && 'Dropdown__menu-noscroll') || 'Dropdown__menu', over && 'Dropdown__over'])}>
+        className={classes([
+          (noscroll && 'Dropdown__menu-noscroll') || 'Dropdown__menu',
+          over && 'Dropdown__over',
+        ])}>
         {this.buildMenu()}
       </div>
     ) : null;
@@ -128,9 +131,15 @@ export class Dropdown extends Component {
             }
             this.setOpen(!this.state.open);
           }}>
-          {icon && <Icon name={icon} rotation={iconRotation} spin={iconSpin} mr={1} />}
+          {icon && (
+            <Icon name={icon} rotation={iconRotation} spin={iconSpin} mr={1} />
+          )}
           <span className="Dropdown__selected-text">
-            {displayText ? displayText : this.state.selected || placeholder /* VOREStation Edit */}
+            {
+              displayText
+                ? displayText
+                : this.state.selected || placeholder /* VOREStation Edit */
+            }
           </span>
           {!!nochevron || (
             <span className="Dropdown__arrow-button">
