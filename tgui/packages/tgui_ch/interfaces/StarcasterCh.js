@@ -59,7 +59,9 @@ const ViewArticles = (props, context) => {
     <Section
       title="Articles List"
       buttons={
-        <Button.Checkbox onClick={() => act('PRG_toggle_archived')} checked={showing_archived}>
+        <Button.Checkbox
+          onClick={() => act('PRG_toggle_archived')}
+          checked={showing_archived}>
           Show Archived
         </Button.Checkbox>
       }>
@@ -69,9 +71,18 @@ const ViewArticles = (props, context) => {
             <LabeledList.Item
               label={article.name}
               key={article.uid}
-              buttons={<Button icon="download" onClick={() => act('PRG_openarticle', { uid: article.uid })} />}
+              buttons={
+                <Button
+                  icon="download"
+                  onClick={() => act('PRG_openarticle', { uid: article.uid })}
+                />
+              }
             />
-          ))) || <LabeledList.Item label="Error">Unable to connect to Starfire database.</LabeledList.Item>}
+          ))) || (
+          <LabeledList.Item label="Error">
+            Unable to connect to Starfire database.
+          </LabeledList.Item>
+        )}
       </LabeledList>
     </Section>
   );

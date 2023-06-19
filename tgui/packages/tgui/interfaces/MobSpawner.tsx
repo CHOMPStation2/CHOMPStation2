@@ -1,6 +1,6 @@
 import { BooleanLike } from '../../common/react';
 import { useBackend, useLocalState } from '../backend';
-import { Button, Dropdown, Flex, Input, Knob, LabeledList, NumberInput, Section, Tabs, TextArea } from '../components';
+import { Button, Flex, Input, Knob, LabeledList, NumberInput, Section, Tabs, TextArea } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -11,8 +11,6 @@ type Data = {
   default_flavor_text: string;
 
   default_speak_emotes: string[];
-
-  mob_paths: string[];
 
   loc_lock: BooleanLike;
   loc_x: number;
@@ -55,11 +53,23 @@ const GeneralMobSettings = (props, context) => {
   const { act, data } = useBackend<Data>(context);
 
   const [amount, setAmount] = useLocalState(context, 'amount', 1);
-  const [name, setName] = useLocalState(context, 'name', data.default_path_name);
+  const [name, setName] = useLocalState(
+    context,
+    'name',
+    data.default_path_name
+  );
   const [desc, setDesc] = useLocalState(context, 'desc', data.default_desc);
-  const [flavorText, setFlavorText] = useLocalState(context, 'flavorText', data.default_flavor_text);
+  const [flavorText, setFlavorText] = useLocalState(
+    context,
+    'flavorText',
+    data.default_flavor_text
+  );
 
-  const [sizeMultiplier, setSizeMultiplier] = useLocalState(context, 'sizeMultiplier', 100);
+  const [sizeMultiplier, setSizeMultiplier] = useLocalState(
+    context,
+    'sizeMultiplier',
+    100
+  );
 
   const [x, setX] = useLocalState(context, 'x', data.initial_x);
   const [y, setY] = useLocalState(context, 'y', data.initial_y);
@@ -72,18 +82,26 @@ const GeneralMobSettings = (props, context) => {
       <Section title="General">
         <LabeledList>
           <LabeledList.Item label="Mob Name">
-            <Input fluid value={name || data.default_path_name} onChange={(e, val) => setName(val)} />
+            <Input
+              fluid
+              value={name || data.default_path_name}
+              onChange={(e, val) => setName(val)}
+            />
           </LabeledList.Item>
           <LabeledList.Item label="Mob Path">
-            <Dropdown
+            <Button
               fluid
-              options={data.mob_paths}
-              displayText={data.path || 'No path selected yet.'}
-              onSelected={(val) => act('select_path', { path: val })}
+              content={data.path || 'Select Path'}
+              onClick={(val) => act('select_path')}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Spawn Amount">
-            <NumberInput value={amount} minValue={0} maxValue={256} onChange={(e, val) => setAmount(val)} />
+            <NumberInput
+              value={amount}
+              minValue={0}
+              maxValue={256}
+              onChange={(e, val) => setAmount(val)}
+            />
           </LabeledList.Item>
           <LabeledList.Item label={'Size (' + sizeMultiplier + '%)'}>
             <Knob
@@ -117,10 +135,20 @@ const GeneralMobSettings = (props, context) => {
               maxValue={256}
               onChange={(e, val) => setZ(val)}
             />
-            <Button.Checkbox content="Lock coords to self" checked={data.loc_lock} onClick={() => act('loc_lock')} />
+            <Button.Checkbox
+              content="Lock coords to self"
+              checked={data.loc_lock}
+              onClick={() => act('loc_lock')}
+            />
           </LabeledList.Item>
           <LabeledList.Item label="Spawn Radius (WIP)">
-            <NumberInput value={radius} disabled minValue={0} maxValue={256} onChange={(e, val) => setRadius(val)} />
+            <NumberInput
+              value={radius}
+              disabled
+              minValue={0}
+              maxValue={256}
+              onChange={(e, val) => setRadius(val)}
+            />
           </LabeledList.Item>
         </LabeledList>
       </Section>
@@ -129,7 +157,11 @@ const GeneralMobSettings = (props, context) => {
           <Flex.Item width="50%">
             Description:
             <br />
-            <TextArea height={'18rem'} onChange={(e, val) => setDesc(val)} value={desc || data.default_desc} />
+            <TextArea
+              height={'18rem'}
+              onChange={(e, val) => setDesc(val)}
+              value={desc || data.default_desc}
+            />
           </Flex.Item>
           <Flex.Item width="50%">
             Flavor Text:
@@ -147,9 +179,9 @@ const GeneralMobSettings = (props, context) => {
         onCLick={() =>
           act('start_spawn', {
             amount: amount,
-            name: name,
-            desc: desc,
-            flavor_text: flavorText,
+            name: name || data.default_path_name,
+            desc: desc || data.default_desc,
+            flavor_text: flavorText || data.default_flavor_text,
             size_multiplier: sizeMultiplier * 0.01,
             x: data.loc_lock ? data.loc_x : x,
             y: data.loc_lock ? data.loc_y : y,
