@@ -433,7 +433,6 @@
 /datum/looping_sound/idle_carengine
 	mid_sounds = 'modular_chomp/sound/effects/vehicle/engine_loop.ogg'
 	mid_length = 2.60 SECONDS
-	end_sound = 'modular_chomp/sound/effects/vehicle/engine_loop_finish.ogg'
 	chance = 100
 	volume = 10
 	exclusive = TRUE

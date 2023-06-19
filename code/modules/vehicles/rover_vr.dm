@@ -3,7 +3,7 @@
 
 /obj/vehicle/train/rover/engine
 	name = "\improper NT T-41LV Humvee"
-	desc = "The civilian market model of the UF T-41LV, a SolGov reconnaissance and exploration vehicle, painted in Nanotrasen blue. Trailers can be latched for transporting heavy equipment, though its performance will noticeably degrade with more than one."
+	desc = "The corporate market model of the UF T-41LV, a SolGov reconnaissance and exploration vehicle, painted in Nanotrasen blue. Trailers can be latched for transporting heavy equipment, though its performance will noticeably degrade with more than one."
 	icon = 'icons/vore/rover_vr.dmi'
 	icon_state = "rover"
 	light_power = 2 // CHOMPedit: 1 to 2, more light range.
@@ -15,8 +15,8 @@
 	charge_use = 2.5	//CHOMPedit: Reduced from 5 to 2.5 for more fuel efficiency, being a dedicated transport vehicle.
 
 	//Health stuff
-	health = 350	// CHOMPedit: 100 to 350. Cars are usually just a bit tougher than humans.
-	maxhealth = 350	// CHOMPedit: Cars are usually just a bit tougher than humans.
+	health = 250	// CHOMPedit: 100 to 250. Cars are usually just a bit tougher than humans.
+	maxhealth = 250	// CHOMPedit: Cars are usually just a bit tougher than humans.
 	fire_dam_coeff = 0.6
 	brute_dam_coeff = 0.5
 
@@ -38,8 +38,8 @@
 	icon_state = "dunebug"
 
 /obj/item/weapon/key/rover
-	name = "The Rover key"
-	desc = "The Rover key used to start it."
+	name = "\improper ignition key" //CHOMPedit: Name update
+	desc = "A universal electronic tri-key for starting most Nanotrasen vehicles." //CHOMPedit: Desc update
 	icon = 'icons/obj/vehicles_vr.dmi'
 	icon_state = "securikey"
 	w_class = ITEMSIZE_TINY
