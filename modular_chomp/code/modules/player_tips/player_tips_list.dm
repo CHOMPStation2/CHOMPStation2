@@ -49,7 +49,9 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(10); "[info] Not every hostile NPC you encounter while mining or exploring need to be defeated. Sometimes, it's better to avoid or run away from them.",
 				prob(1); "[info] Stay robust, my friends.",
 				prob(35); "[info] You can insert your I.D into your PDA. This frees up your belt from having to carry your PDA. Furthermore, by clicking and dragging the PDA to game screen, you can use it without holding it!",
-				prob(35); "[info] Your vore-bellies have multiple add-ons! Muffling is excellent to ensure your prey does not accidentally inform everyone about their predicament, and jam suit sensors is a great courtesy to avoid medical being worried about your prey!"
+				prob(35); "[info] Your vore-bellies have multiple add-ons! Muffling is excellent to ensure your prey does not accidentally inform everyone about their predicament, and jam suit sensors is a great courtesy to avoid medical being worried about your prey!",
+				prob(35); "[info] Remember to check your vore panel preferences! There you can find toggles for things other than just vore(tm), such as stepping mechanics and spontaneous transformation.",
+				prob(25); "[info] If you would like to toggle stepping mechanics, head to the vore panel and click on personal preferences! Disabling stepping mechanics will disable stepping descriptions and will prevent your character from taking damage if a bigger character walks over yours with harm intent. Your character will still be stunned, however."
 				)
 
 		if("roleplay")
