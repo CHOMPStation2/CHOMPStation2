@@ -10,7 +10,7 @@
  */
 /obj/effect/alien
 	name = "alien thing"
-	desc = "theres something alien about this"
+	desc = "there's something alien about this"
 	icon = 'icons/mob/alien.dmi'
 
 /*
@@ -289,3 +289,8 @@
 		if(0 to 1)
 			visible_message("<span class='alium'>[src.target] begins to crumble under the acid!</span>")
 	spawn(rand(150, 200)) tick()
+<<<<<<< HEAD
+=======
+
+//Xenomorph Effect egg removed, replaced with Structure Egg.
+>>>>>>> 860fad8a75... Merge pull request #15043 from ItsSelis/spell-fixes-v2

@@ -173,8 +173,12 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/chaoscakeslice
 	name = "The Chaos Cake Slice"
+<<<<<<< HEAD
 	desc = "A slice from The Chaos Cake, it pulses weirdly, as if angry to be seperated from the whole"
 	icon = 'icons/obj/food_ch.dmi' //CHOMP Add to appease runtimes, I think, even thought this damn file is not enabled???
+=======
+	desc = "A slice from The Chaos Cake, it pulses weirdly, as if angry to be separated from the whole"
+>>>>>>> 860fad8a75... Merge pull request #15043 from ItsSelis/spell-fixes-v2
 	icon_state = "chaoscake_slice-1"
 
 	center_of_mass = list("x"=16, "y"=10)
@@ -276,4 +280,4 @@
 			desc = desclist2[stage]
 			icon_state = "chaoscake_unfinished-[stage]"
 		else
-			to_chat(user, "Hmm, doesnt seem like this layer is supposed to be added there?")
+			to_chat(user, "Hmm, doesn't seem like this layer is supposed to be added there?")

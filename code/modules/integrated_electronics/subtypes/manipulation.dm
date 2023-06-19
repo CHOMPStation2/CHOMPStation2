@@ -106,7 +106,7 @@
 	icon_state = "locomotion"
 	extended_desc = "The circuit accepts a 'dir' number as a direction to move towards.<br>\
 	Pulsing the 'step towards dir' activator pin will cause the machine to move a meter in that direction, assuming it is not \
-	being held, or anchored in some way.  It should be noted that the ability to move is dependant on the type of assembly that this circuit inhabits."
+	being held, or anchored in some way.  It should be noted that the ability to move is dependent on the type of assembly that this circuit inhabits."
 	w_class = ITEMSIZE_NORMAL
 	complexity = 20
 //	size = 5
@@ -204,6 +204,7 @@
 	pre_attached_grenade_type = /obj/item/weapon/grenade/explosive
 	origin_tech = list(TECH_ENGINEERING = 3, TECH_DATA = 3, TECH_COMBAT = 10)
 	spawn_flags = null			// Used for world initializing, see the #defines above.
+<<<<<<< HEAD
 
 //CHOMPADDITION: Size Circuit
 /obj/item/integrated_circuit/manipulation/Size
@@ -233,3 +234,5 @@
 	if(target && istype(target,/mob/living/))
 		target.resize(size/100)
 	activate_pin(2)
+=======
+>>>>>>> 860fad8a75... Merge pull request #15043 from ItsSelis/spell-fixes-v2
