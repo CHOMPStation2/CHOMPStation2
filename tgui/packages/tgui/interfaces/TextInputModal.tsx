@@ -26,8 +26,26 @@ export const removeAllSkiplines = (toSanitize: string) => {
 
 export const TextInputModal = (props, context) => {
   const { act, data } = useBackend<TextInputData>(context);
+<<<<<<< HEAD
   const { large_buttons, max_length, message = '', multiline, placeholder, timeout, title } = data;
   const [input, setInput] = useLocalState<string>(context, 'input', placeholder || '');
+=======
+  const {
+    large_buttons,
+    max_length,
+    message = '',
+    multiline,
+    placeholder,
+    timeout,
+    title,
+    prevent_enter,
+  } = data;
+  const [input, setInput] = useLocalState<string>(
+    context,
+    'input',
+    placeholder || ''
+  );
+>>>>>>> b6a52e098f... Merge pull request #14929 from ItsSelis/selis-tgui
   const onType = (value: string) => {
     if (value === input) {
       return;
@@ -67,7 +85,10 @@ export const TextInputModal = (props, context) => {
               <InputArea input={input} onType={onType} />
             </Stack.Item>
             <Stack.Item>
-              <InputButtons input={input} message={`${input.length}/${max_length}`} />
+              <InputButtons
+                input={input}
+                message={`${input.length}/${max_length}`}
+              />
             </Stack.Item>
           </Stack>
         </Section>
