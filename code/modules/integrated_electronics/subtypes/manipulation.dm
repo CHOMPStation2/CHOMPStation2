@@ -204,7 +204,6 @@
 	pre_attached_grenade_type = /obj/item/weapon/grenade/explosive
 	origin_tech = list(TECH_ENGINEERING = 3, TECH_DATA = 3, TECH_COMBAT = 10)
 	spawn_flags = null			// Used for world initializing, see the #defines above.
-<<<<<<< HEAD
 
 //CHOMPADDITION: Size Circuit
 /obj/item/integrated_circuit/manipulation/Size
@@ -234,5 +233,3 @@
 	if(target && istype(target,/mob/living/))
 		target.resize(size/100)
 	activate_pin(2)
-=======
->>>>>>> 860fad8a75... Merge pull request #15043 from ItsSelis/spell-fixes-v2

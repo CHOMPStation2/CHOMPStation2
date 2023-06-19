@@ -400,9 +400,6 @@
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
 	)
-<<<<<<< HEAD
-=======
-
 
 /obj/structure/salvageable/slotmachine1
 	name = "broken slot machine"
@@ -429,4 +426,3 @@
 		/obj/item/weapon/stock_parts/capacitor = 60,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
 	)
->>>>>>> 860fad8a75... Merge pull request #15043 from ItsSelis/spell-fixes-v2
