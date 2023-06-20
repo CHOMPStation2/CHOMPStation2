@@ -229,6 +229,7 @@
 	var/grenade_timer = 10
 	var/grenade_type2 = /obj/item/weapon/grenade/shooter/rubber
 	var/grenade_type3 = /obj/item/weapon/grenade/shooter/laserpellet
+	var/obj/item/shield_projector/shields = null
 
 	armor = list(
 				"melee"		= -175,
