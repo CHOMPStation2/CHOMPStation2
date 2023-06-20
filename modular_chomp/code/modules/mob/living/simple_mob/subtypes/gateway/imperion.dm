@@ -27,6 +27,56 @@
 				"rad"		= 100
 				)
 
+/mob/living/simple_mob/mechanical/mecha/imperion/phase1/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM) // Side gun
+			electric_defense(A)
+		if(I_HURT) // Rockets
+			launch_rockets(A)
+		if(I_GRAB) // Micro-singulo
+			launch_microsingularity(A)
+
+/mob/living/simple_mob/mechanical/mecha/imperion/phase2/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM) // Side gun
+			electric_defense(A)
+		if(I_HURT) // Rockets
+			launch_rockets(A)
+		if(I_GRAB) // Micro-singulo
+			launch_microsingularity(A)
+
+/mob/living/simple_mob/mechanical/mecha/imperion/phase3/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM) // Side gun
+			electric_defense(A)
+		if(I_HURT) // Rockets
+			launch_rockets(A)
+		if(I_GRAB) // Micro-singulo
+			launch_microsingularity(A)
+
+/mob/living/simple_mob/mechanical/mecha/imperion/phase4/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM) // Side gun
+			electric_defense(A)
+		if(I_HURT) // Rockets
+			launch_rockets(A)
+		if(I_GRAB) // Micro-singulo
+			launch_microsingularity(A)
+
+/mob/living/simple_mob/mechanical/mecha/imperion/phase5/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM) // Side gun
+			electric_defense(A)
+		if(I_HURT) // Rockets
+			launch_rockets(A)
+		if(I_GRAB) // Micro-singulo
+			launch_microsingularity(A)
+
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1 //Simple phase that is mostly dodge rockects
 	movement_cooldown = -1
 	projectiletype = /obj/item/projectile/bullet/srmrocket
@@ -37,9 +87,6 @@
 
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase2
-
-	var/pull_radius = 1
-	var/pull_strength = STAGE_THREE
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/electric_defense(atom/target)
 	set waitfor = FALSE
@@ -66,9 +113,8 @@
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_rockets(atom/target)
-	visible_message(span("warning", "\The [src] activates gravity generators!"))
-	for(var/atom/A in range(pull_radius, src))
-		A.singularity_pull(src, pull_strength)
+	var/obj/item/projectile/P = new /obj/item/projectile/energy/dart(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_microsingularity(atom/target)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/pistol/medium/hp(get_turf(src))
@@ -185,11 +231,11 @@
 	var/grenade_type3 = /obj/item/weapon/grenade/shooter/laserpellet
 
 	armor = list(
-				"melee"		= -150,
-				"bullet"	= 45,
-				"laser"		= 45,
-				"energy"	= 45,
-				"bomb"		= 45,
+				"melee"		= -175,
+				"bullet"	= 65,
+				"laser"		= 65,
+				"energy"	= 65,
+				"bomb"		= 65,
 				"bio"		= 100,
 				"rad"		= 100
 				)
@@ -221,6 +267,24 @@
 			/obj/random/tool/alien = 30,
 			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
 			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
+			/obj/item/clothing/suit/armor/reactive/vistor = 50,
+			/obj/item/clothing/suit/armor/reactive/vistor = 50,
+			/obj/item/clothing/suit/armor/protectionbubble = 50,
+			/obj/item/clothing/suit/armor/protectionbubble = 50,
+			/obj/item/clothing/suit/armor/tesla/vistor = 50,
+			/obj/item/clothing/suit/armor/tesla/vistor = 50,
+			/obj/item/shield_projector/rectangle/automatic/orange = 10,
+			/obj/item/shield_projector/rectangle/automatic/imperion = 1,
+			/obj/item/clothing/head/vrwizard = 10,
+			/obj/item/clothing/suit/vrwizard = 10,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 10,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 10,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 10,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 10,
+			/obj/item/clothing/head/psy_crown/candycrown = 30,
+			/obj/item/clothing/gloves/stamina = 30,
+			/obj/item/clothing/suit/armor/buffvest = 30,
+			/obj/item/weapon/melee/cullingcane = 30
 			)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/electric_defense(atom/target)
@@ -258,6 +322,21 @@
 		G.activate(src)
 
 	set_AI_busy(FALSE)
+
+/mob/living/simple_mob/mechanical/mecha/imperion/phase5/Initialize(mapload)
+	shields = new /obj/item/shield_projector/rectangle/automatic/imperion(src)
+	return ..()
+
+/obj/item/shield_projector/rectangle/automatic/imperion
+	shield_health = 500
+	max_shield_health = 500
+	shield_regen_delay = 30 SECONDS
+	shield_regen_amount = 50
+	size_x = 2
+	size_y = 2
+	color = "#631644"
+	high_color = "#631644"
+	low_color = "#631644"
 
 
 //Cool boss visuals, auras, and me saying no to stun.

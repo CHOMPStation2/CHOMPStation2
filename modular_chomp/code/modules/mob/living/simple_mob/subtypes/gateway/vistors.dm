@@ -226,6 +226,8 @@
 	projectiletype = /obj/item/projectile/energy/gaussrifle
 	melee_attack_delay = 4 SECOND
 
+	var/obj/item/shield_projector/shields = null
+
 	armor = list(
 				"melee"		= 30,
 				"bullet"	= 30,
@@ -249,6 +251,21 @@
 			/obj/item/clothing/suit/armor/alien/vistor = 50,
 			/obj/item/clothing/suit/armor/alien/vistor = 50
 			)
+
+/mob/living/simple_mob/mechanical/mecha/vistor/vistororange/Initialize(mapload)
+	shields = new /obj/item/shield_projector/rectangle/automatic/orange(src)
+	return ..()
+
+/obj/item/shield_projector/rectangle/automatic/orange
+	shield_health = 10
+	max_shield_health = 100
+	shield_regen_delay = 1 SECONDS
+	shield_regen_amount = 10
+	size_x = 2
+	size_y = 2
+	color = "#FF6633"
+	high_color = "#FF6633"
+	low_color = "#FF6633"
 
 //obj/item/clothing/suit/armor/alien/vistor
 //obj/item/clothing/suit/armor/tesla/vistor
