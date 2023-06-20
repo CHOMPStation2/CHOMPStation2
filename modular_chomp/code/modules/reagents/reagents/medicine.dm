@@ -143,7 +143,7 @@
 
 /datum/reagent/flamecure
 	name = "Flame Cure"
-	id = "flame"
+	id = "flamecure"
 	description = "Used to rapidly clot internal hemorrhages by burning the wounded areas"
 	reagent_state = LIQUID
 	color = "#4246C7"
