@@ -24,6 +24,9 @@
 	var/datum/wires/smartfridge/wires = null
 	var/persistent = null // Path of persistence datum used to track contents
 
+	var/datum/looping_sound/fridge/soundloop // CHOMPEdit: Fridges hum!
+	var/playing_sound = FALSE // CHOMPEdit: Fridges hum!
+
 /obj/machinery/smartfridge/secure
 	is_secure = 1
 
@@ -35,6 +38,8 @@
 		wires = new/datum/wires/smartfridge/secure(src)
 	else
 		wires = new/datum/wires/smartfridge(src)
+
+	soundloop = new(list(src), FALSE) // CHOMPEdit: Fridge hum!
 	update_icon()
 
 /obj/machinery/smartfridge/Destroy()
@@ -44,6 +49,7 @@
 	wires = null
 	if(persistent)
 		SSpersistence.forget_value(src, persistent)
+	QDEL_NULL(soundloop) // CHOMPEdit: Fridge hum!
 	return ..()
 
 /obj/machinery/smartfridge/proc/accept_check(var/obj/item/O as obj)
@@ -51,7 +57,12 @@
 
 /obj/machinery/smartfridge/process()
 	if(stat & (BROKEN|NOPOWER))
+		soundloop.stop()  // CHOMPEdit: Fridges don't hum while they lack power.
+		playing_sound = FALSE  // CHOMPEdit: Fridges don't hum while they lack power.
 		return
+	if(!playing_sound && !stat) // CHOMPEdit: Fridges hum while they have power.
+		soundloop.start()
+		playing_sound = TRUE
 	if(src.seconds_electrified > 0)
 		src.seconds_electrified--
 	if(src.shoot_inventory && prob(2))
@@ -62,6 +73,14 @@
 	..()
 	if(old_stat != stat)
 		update_icon()
+		// CHOMPEdit Start: Fridge hum
+		if(stat & (NOPOWER | BROKEN))
+			soundloop.stop()
+			playing_sound = FALSE
+		else
+			soundloop.start()
+			playing_sound = TRUE
+		// CHOMPEdit End
 
 /obj/machinery/smartfridge/update_icon()
 	cut_overlays()
@@ -119,7 +138,7 @@
 		user.remove_from_mob(O)
 		stock(O)
 		user.visible_message("<span class='notice'>[user] has added \the [O] to \the [src].</span>", "<span class='notice'>You add \the [O] to \the [src].</span>")
-		sortTim(item_records, /proc/cmp_stored_item_name)
+		sortTim(item_records, GLOBAL_PROC_REF(cmp_stored_item_name))
 
 	else if(istype(O, /obj/item/weapon/storage/bag))
 		var/obj/item/weapon/storage/bag/P = O

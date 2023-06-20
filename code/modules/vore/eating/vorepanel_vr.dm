@@ -151,6 +151,18 @@
 		inside["contents"] = inside_contents
 	data["inside"] = inside
 
+	var/is_dogborg = FALSE
+	var/is_vore_simple_mob = FALSE
+	if(isrobot(host))
+		var/mob/living/silicon/robot/R = host
+		is_dogborg = R.dogborg
+	else if(istype(host, /mob/living/simple_mob/vore))	//So far, this does nothing. But, creating this for future belly work
+		is_vore_simple_mob = TRUE
+	data["host_mobtype"] = list(
+		"is_dogborg" = is_dogborg,
+		"is_vore_simple_mob" = is_vore_simple_mob
+	)
+
 	var/list/our_bellies = list()
 	for(var/obj/belly/B as anything in host.vore_organs)
 		our_bellies.Add(list(list(
@@ -200,6 +212,11 @@
 			"weight_ex" = host.weight_message_visible,
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"eating_privacy_local" = selected.eating_privacy_local,
+			"silicon_belly_overlay_preference"	= selected.silicon_belly_overlay_preference,
+			"visible_belly_minimum_prey"	= selected.visible_belly_minimum_prey,
+			"overlay_min_prey_size"	= selected.overlay_min_prey_size,
+			"override_min_prey_size" = selected.override_min_prey_size,
+			"override_min_prey_num"	= selected.override_min_prey_num,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
@@ -372,8 +389,6 @@
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
 		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
-		"appendage_color" = host.appendage_color,
-		"appendage_alt_setting" = host.appendage_alt_setting,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
 		"noisy" = host.noisy,
@@ -1733,7 +1748,7 @@
 			if(!viable_candidates.len)
 				to_chat(user, "<span class='notice'>There are no viable candidates around you!</span>")
 				return TRUE
-			belly_owner = tgui_input_list(user, "Who do you want to recieve the target?", "Select Predator", viable_candidates)
+			belly_owner = tgui_input_list(user, "Who do you want to receive the target?", "Select Predator", viable_candidates)
 
 			if(!belly_owner || !(belly_owner in range(1, host)))
 				return TRUE
@@ -2292,6 +2307,51 @@
 				return FALSE
 			host.vore_selected.eating_privacy_local = privacy_choice
 			. = TRUE
+		if("b_silicon_belly")
+			var/belly_choice = tgui_alert(usr, "Choose whether you'd like your belly overlay to show from sleepers \
+			or from normal vore bellies. NOTE: This ONLY applies to silicons, not human mobs!", "Belly Overlay Preference",
+			list("Sleeper", "Vorebelly"))
+			if(belly_choice == null)
+				return FALSE
+			host.vore_selected.silicon_belly_overlay_preference = belly_choice
+			host.updateicon()
+			. = TRUE
+		if("b_min_belly_number_flat")
+			var/new_min_belly = tgui_input_number(user, "Choose the amount of prey your belly must contain \
+			at absolute minimum (should be lower or equal to minimum prey override if prey override is ON)",
+			"Set minimum prey amount", host.vore_selected.visible_belly_minimum_prey, max_value = 100, min_value = 1)
+			if(new_min_belly == null)
+				return FALSE
+			var/new_new_min_belly = CLAMP(new_min_belly, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
+			host.vore_selected.visible_belly_minimum_prey = new_new_min_belly
+			host.updateicon()
+			. = TRUE
+		if("b_min_belly_prey_size")
+			var/new_belly_size = tgui_input_number(user, "Choose the required size prey must be to trigger belly overlay, \
+			ranging from 25% to 200%. Set to 0 to disable size checks", "Set Belly Examine Size.", max_value = 200, min_value = 0)
+			if(new_belly_size == null)
+				return FALSE
+			else if(new_belly_size == 0)
+				host.vore_selected.overlay_min_prey_size = 0
+			else
+				var/new_new_belly_size = CLAMP(new_belly_size, 25, 200)
+				host.vore_selected.overlay_min_prey_size = (new_new_belly_size/100)
+			host.updateicon()
+			. = TRUE
+		if("b_override_min_belly_prey_size")
+			host.vore_selected.override_min_prey_size = !host.vore_selected.override_min_prey_size
+			host.updateicon()
+			. = TRUE
+		if("b_min_belly_number_override")
+			var/new_min_prey = tgui_input_number(user, "Choose the amount of prey your belly must contain to override min prey size \
+			to show belly overlay ignoring prey size requirement. Toggle Prey Override MUST be ON to work",
+			"Set minimum prey amount", host.vore_selected.override_min_prey_num, max_value = 100, min_value = 1)
+			if(new_min_prey == null)
+				return FALSE
+			var/new_new_min_prey = CLAMP(new_min_prey, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
+			host.vore_selected.override_min_prey_num = new_new_min_prey
+			host.updateicon()
+			. = TRUE
 		if("b_fancy_sound")
 			host.vore_selected.fancy_vore = !host.vore_selected.fancy_vore
 			host.vore_selected.vore_sound = "Gulp"
@@ -2379,7 +2439,7 @@
 				host.vore_selected.shrink_grow_size = (new_grow*0.01)
 			. = TRUE
 		if("b_nutritionpercent")
-			var/new_nutrition = tgui_input_number(user, "Choose the nutrition gain percentage you will recieve per tick from prey. Ranges from 0.01 to 100.", "Set Nutrition Gain Percentage.", host.vore_selected.nutrition_percent, 100, 0.01)
+			var/new_nutrition = tgui_input_number(user, "Choose the nutrition gain percentage you will receive per tick from prey. Ranges from 0.01 to 100.", "Set Nutrition Gain Percentage.", host.vore_selected.nutrition_percent, 100, 0.01)
 			if(new_nutrition == null)
 				return FALSE
 			var/new_new_nutrition = CLAMP(new_nutrition, 0.01, 100)

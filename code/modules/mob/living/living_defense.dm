@@ -403,6 +403,7 @@
 		new/obj/effect/dummy/lighting_obj/moblight/fire(src)
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
+		firesoundloop.start()
 
 /mob/living/proc/ExtinguishMob()
 	if(on_fire)
@@ -412,6 +413,7 @@
 			qdel(F)
 		clear_alert("fire")
 		update_fire()
+		firesoundloop.stop()
 
 	if(has_modifier_of_type(/datum/modifier/fire))
 		remove_modifiers_of_type(/datum/modifier/fire)

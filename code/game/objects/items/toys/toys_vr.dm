@@ -179,7 +179,7 @@
 		playsound(user, 'sound/voice/shriek1.ogg', 10, 0)
 		src.visible_message("<span class='danger'>Skreee!</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/plushie/vox/proc/cooldownreset()
@@ -229,7 +229,7 @@
 		playsound(user, 'sound/machines/ping.ogg', 10, 0)
 		src.visible_message("<span class='danger'>Ping!</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/plushie/ipc/proc/cooldownreset()
@@ -246,7 +246,7 @@
 		playsound(user, 'sound/machines/ding.ogg', 10, 0)
 		src.visible_message("<span class='danger'>Ding!</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/plushie/snakeplushie
@@ -280,14 +280,14 @@
 			atom_say(pick(responses))
 			playsound(user, 'sound/effects/whistle.ogg', 10, 0)
 			cooldown = 1
-			addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+			addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 		return ..()
 
 /obj/item/toy/plushie/marketable_pip/attack_self(mob/user as mob)
 	if(!cooldown)
 		playsound(user, 'sound/effects/whistle.ogg', 10, 0)
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/plushie/marketable_pip/proc/cooldownreset()
@@ -306,7 +306,7 @@
 		playsound(user, 'sound/voice/moth/scream_moth.ogg', 10, 0)
 		src.visible_message("<span class='danger'>Aaaaaaa.</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/plushie/moth/proc/cooldownreset()
@@ -351,7 +351,7 @@
 		playsound(user, 'sound/weapons/slice.ogg', 10, 0)
 		src.visible_message("<span class='danger'>Stab!</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/plushie/susblue
@@ -477,7 +477,7 @@
 		flick("[initial(icon_state)]2", src)
 		user.visible_message("<span class='disarm'>[user] doesn't blind [M] with the toy flash!</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 		return ..()
 
 /obj/item/toy/flash/proc/cooldownreset()
@@ -546,7 +546,7 @@
 			user.visible_message("<span class='notice'>[user] asks the AI core to state laws.</span>")
 			user.visible_message("<span class='notice'>[src] says \"[answer]\"</span>")
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 		return ..()
 
 /obj/item/toy/AI/proc/cooldownreset()
@@ -826,7 +826,7 @@
 	if(!cooldown)
 		playsound(user, 'sound/weapons/chainsaw_startup.ogg', 10, 0)
 		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
+		addtimer(CALLBACK(src, PROC_REF(cooldownreset)), 50)
 	return ..()
 
 /obj/item/toy/chainsaw/proc/cooldownreset()

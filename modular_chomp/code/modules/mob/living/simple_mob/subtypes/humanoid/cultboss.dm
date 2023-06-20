@@ -29,7 +29,8 @@
 	vore_bump_chance = 20
 	size_multiplier = 1.10
 	faction = "demon"
-	damage_fatigue_mult = 0
+	damage_fatigue_mult = 0.5 // We don't want to give them a flat, huge boost to attack speed, but at the same time, make them fight harder the closer they are to dying.
+	injury_enrages = TRUE
 
 	armor_soak = list(
 		"melee" = 5,

@@ -1,20 +1,26 @@
+/mob/living/simple_mob/mechanical/mecha/combat/phazon
+	projectiletype = /obj/item/projectile/bullet/magnetic/fuelrod
+
+
 /mob/living/simple_mob/mechanical/mecha/combat/phazon/advanced
 	name = "Advanced phazon"
 	movement_cooldown = 1
 	wreckage = /obj/structure/loot_pile/mecha/phazon
+	color = "#ffffff"
 
 	health = 500
 	maxHealth = 500
-	evasion = 30
+	evasion = 10
 
 	special_attack_min_range = 1
 	special_attack_max_range = 9
-	special_attack_cooldown = 15 SECONDS
+	special_attack_cooldown = 30 SECONDS
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	size_multiplier = 1.25
-	shock_resist = 0.9
+	shock_resist = 0.5
 	ranged_attack_delay = 1 SECONDS
 	projectilesound = 'sound/weapons/gauss_shoot.ogg'
+	damage_fatigue_mult = 0
 
 	projectiletype = /obj/item/projectile/bullet/rifle/a545/ap
 
@@ -37,7 +43,7 @@
 	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
 	sleep(0.5 SECONDS)
 
-	for(var/i = 1 to 5)
+	for(var/i = 1 to 2)
 		if(target) // Might get deleted in the meantime.
 			var/turf/T = get_turf(target)
 			if(T)
@@ -59,7 +65,7 @@
 
 /obj/item/projectile/arc/explosive_rocket/big/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 1, 2, 3, adminlog = FALSE)
+	explosion(T, 1, 1, 1, adminlog = FALSE)
 
 /mob/living/simple_mob/mechanical/mecha/combat/phazon/advanced/proc/launch_rockets(atom/target)
 	set waitfor = FALSE
@@ -70,7 +76,7 @@
 	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
 	sleep(0.5 SECONDS)
 
-	for(var/i = 1 to 3)
+	for(var/i = 1 to 2)
 		if(target) // Might get deleted in the meantime.
 			var/turf/T = get_turf(target)
 			if(T)
@@ -125,4 +131,4 @@
 
 /obj/item/projectile/arc/explosive_rocket/spread/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 0, 5, adminlog = FALSE)
+	explosion(T, 0, 0, 2, adminlog = FALSE)

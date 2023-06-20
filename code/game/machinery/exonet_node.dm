@@ -17,6 +17,9 @@
 	var/list/logs = list() // Gets written to by exonet's send_message() function.
 
 	circuit = /obj/item/weapon/circuitboard/telecomms/exonet_node
+
+	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
+	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
@@ -25,6 +28,24 @@
 	default_apply_parts()
 	desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
 	electronically."
+
+	// CHOMPAdd: Exonet Machinery humming
+	soundloop = new(list(src), FALSE)
+	if(prob(60)) // 60% chance to change the midloop
+		if(prob(40))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_02.ogg' = 1)
+			soundloop.mid_length = 40
+		else if(prob(20))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_03.ogg' = 1)
+			soundloop.mid_length = 10
+		else
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
+			soundloop.mid_length = 30
+	// CHOMPAdd End
+	soundloop.start() // CHOMPStation Edit: This starts on
+
+/obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
+	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
 
 // Proc: update_icon()
 // Parameters: None
@@ -48,12 +69,19 @@
 		if(stat & (BROKEN|NOPOWER|EMPED))
 			on = 0
 			update_idle_power_usage(0)
+			soundloop.stop() // CHOMPStation Add: Hummy noises
+			noisy = FALSE // CHOMPStation Add: Hummy noises
 		else
 			on = 1
 			update_idle_power_usage(2500)
 	else
 		on = 0
 		update_idle_power_usage(0)
+		soundloop.stop() // CHOMPStation Add: Hummy noises
+		noisy = FALSE // CHOMPStation Add: Hummy noises
+	if(!noisy && on) // CHOMPStation Add: Hummy noises, safety in case it was already on
+		soundloop.start() // CHOMPStation Add: Hummy noises
+		noisy = TRUE // CHOMPStation Add: Hummy noises
 	update_icon()
 
 // Proc: emp_act()

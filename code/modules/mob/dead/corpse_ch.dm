@@ -15,6 +15,8 @@
 	M.stat = 2 //Kills the new mob
 	if(src.corpseuniform)
 		M.equip_to_slot_or_del(new src.corpseuniform(M), slot_w_uniform)
+		if(M.w_uniform)
+			M.w_uniform?:sensor_mode = corpsesensormode
 	if(src.corpsesuit)
 		M.equip_to_slot_or_del(new src.corpsesuit(M), slot_wear_suit)
 	if(src.corpseshoes)

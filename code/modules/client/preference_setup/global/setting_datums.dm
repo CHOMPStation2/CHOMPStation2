@@ -163,6 +163,12 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
+/datum/client_preference/fridge_hum // CHOMPStation Add: Misc Sounds
+	description ="Fridge Humming"
+	key = "SOUND_FRIDGEHUM"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
