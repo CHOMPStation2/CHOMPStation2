@@ -15,10 +15,28 @@
 	icon_state = "borderfloor_shifted"
 
 /obj/effect/floor_decal/borderfloorblack/shifted
-	icon_state = "borderfloor_shifted"
+	icon_state = "borderfloor_black_shifted"
 
 /obj/effect/floor_decal/borderfloorwhite/shifted
-	icon_state = "borderfloor_shifted"
+	icon_state = "borderfloor_white_shifted"
+
+/obj/effect/floor_decal/borderfloor/shifted/corner2
+	icon_state = "borderfloorcorner2_shifted"
+
+/obj/effect/floor_decal/borderfloorwhite/shifted/corner2
+	icon_state = "borderfloorcorner2_white_shifted"
+
+/obj/effect/floor_decal/borderfloorblack/shifted/corner2
+	icon_state = "borderfloorcorner2_black_shifted"
+
+/obj/effect/floor_decal/borderfloor/shifted/corner
+	icon_state = "borderfloorcorner_shifted"
+
+/obj/effect/floor_decal/borderfloorwhite/shifted/corner
+	icon_state = "borderfloorcorner_white_shifted"
+
+/obj/effect/floor_decal/borderfloorblack/shifted/corner
+	icon_state = "borderfloorcorner_black_shifted"
 
 /obj/effect/floor_decal/corner/beige/border/shifted
 	icon_state = "bordercolor_shifted"
