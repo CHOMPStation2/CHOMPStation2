@@ -29,9 +29,13 @@ const SeedStatus = (props, context) => {
         <>
           <LabeledList.Item label="Name">{seedname}</LabeledList.Item>
           {health < 100 ? (
-            <LabeledList.Item label="Genetic Integrity">{100 - health + '%'}</LabeledList.Item>
+            <LabeledList.Item label="Genetic Integrity">
+              {100 - health + '%'}
+            </LabeledList.Item>
           ) : (
-            <LabeledList.Item label="Genetic Integrity">{'UNVIABLE'}</LabeledList.Item>
+            <LabeledList.Item label="Genetic Integrity">
+              {'UNVIABLE'}
+            </LabeledList.Item>
           )}
 
           <LabeledList.Item label="Plant Color">{plantcolor}</LabeledList.Item>
@@ -47,13 +51,21 @@ const SeedStatus = (props, context) => {
               />
             ))}
           </LabeledList.Item>
-          <Button content="Edit Colors" onClick={() => act('change_focus', { window: 'colors' })} />
-          <Button content="Add Reagents" onClick={() => act('change_focus', { window: 'reagents' })} />
+          <Button
+            content="Edit Colors"
+            onClick={() => act('change_focus', { window: 'colors' })}
+          />
+          <Button
+            content="Add Reagents"
+            onClick={() => act('change_focus', { window: 'reagents' })}
+          />
           <LabeledList.Divider size={2} />
           <Button content="Eject Seed" onClick={() => act('eject')} />
         </>
       ) : (
-        <LabeledList.Item label="Waiting">{'There is currently no seed loaded.'}</LabeledList.Item>
+        <LabeledList.Item label="Waiting">
+          {'There is currently no seed loaded.'}
+        </LabeledList.Item>
       )}
     </LabeledList>
   );
@@ -69,10 +81,19 @@ const ColorEditor = (props, context) => {
       <ColorBox color={plantcolor} />
       <LabeledList.Item label="Fruit Color">{fruitcolor}</LabeledList.Item>
       <ColorBox color={fruitcolor} />
-      <Button content="Change plant color" onClick={() => act('change_color', { option: 0 })} />
-      <Button content="Change fruit color" onClick={() => act('change_color', { option: 1 })} />
+      <Button
+        content="Change plant color"
+        onClick={() => act('change_color', { option: 0 })}
+      />
+      <Button
+        content="Change fruit color"
+        onClick={() => act('change_color', { option: 1 })}
+      />
       <LabeledList.Divider size={2} />
-      <Button content="Return" onClick={() => act('change_focus', { window: 'main' })} />
+      <Button
+        content="Return"
+        onClick={() => act('change_focus', { window: 'main' })}
+      />
     </LabeledList>
   );
 };
@@ -84,13 +105,21 @@ const BiochemEditor = (props, context) => {
   return (
     <LabeledList>
       {health < 100 ? (
-        <LabeledList.Item label="Genetic Integrity">{100 - health + '%'}</LabeledList.Item>
+        <LabeledList.Item label="Genetic Integrity">
+          {100 - health + '%'}
+        </LabeledList.Item>
       ) : (
-        <LabeledList.Item label="Genetic Integrity">{'UNVIABLE'}</LabeledList.Item>
+        <LabeledList.Item label="Genetic Integrity">
+          {'UNVIABLE'}
+        </LabeledList.Item>
       )}
       <NoticeBox info={1} width={19} height={9} ml={1}>
-        {'Available chems to choose are based on the reagents stored in the beaker. '}
-        {' A minimum of 100 units of reagent is required to generate a viable sequence. '}
+        {
+          'Available chems to choose are based on the reagents stored in the beaker. '
+        }
+        {
+          ' A minimum of 100 units of reagent is required to generate a viable sequence. '
+        }
         {'The chosen reagent will be consumed in the process.'}
         <Box bold={1} mt={1}>
           {'This process severely damages genetic integrity.'}
@@ -114,16 +143,23 @@ const BiochemEditor = (props, context) => {
               ))}
             </LabeledList.Item>
           ) : (
-            <NoticeBox warning={1}>{'WARNING: Genetic integrity of seed is too poor to proceed.'}</NoticeBox>
+            <NoticeBox warning={1}>
+              {'WARNING: Genetic integrity of seed is too poor to proceed.'}
+            </NoticeBox>
           )}
 
           <Button content="Eject Beaker" onClick={() => act('eject_beaker')} />
         </>
       ) : (
-        <LabeledList.Item label="Waiting">{'There is currently no beaker loaded.'}</LabeledList.Item>
+        <LabeledList.Item label="Waiting">
+          {'There is currently no beaker loaded.'}
+        </LabeledList.Item>
       )}
 
-      <Button content="Return" onClick={() => act('change_focus', { window: 'main' })} />
+      <Button
+        content="Return"
+        onClick={() => act('change_focus', { window: 'main' })}
+      />
     </LabeledList>
   );
 };

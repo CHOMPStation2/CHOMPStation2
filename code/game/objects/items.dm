@@ -734,7 +734,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 			H.toggle_zoom_hud()	// If the user has already limited their HUD this avoids them having a HUD when they zoom in
 		H.set_viewsize(viewsize)
 		zoom = 1
-		GLOB.moved_event.register(H, src, .proc/zoom)
+		GLOB.moved_event.register(H, src, PROC_REF(zoom))
 
 		var/tilesize = 32
 		var/viewoffset = tilesize * tileoffset
@@ -763,7 +763,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		if(!H.hud_used.hud_shown)
 			H.toggle_zoom_hud()
 		zoom = 0
-		GLOB.moved_event.unregister(H, src, .proc/zoom)
+		GLOB.moved_event.unregister(H, src, PROC_REF(zoom))
 
 		H.client.pixel_x = 0
 		H.client.pixel_y = 0
@@ -944,7 +944,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	. = ..()
 	if(usr.is_preference_enabled(/datum/client_preference/inv_tooltips) && ((src in usr) || isstorage(loc))) // If in inventory or in storage we're looking at
 		var/user = usr
-		tip_timer = addtimer(CALLBACK(src, .proc/openTip, location, control, params, user), 5, TIMER_STOPPABLE)
+		tip_timer = addtimer(CALLBACK(src, PROC_REF(openTip), location, control, params, user), 5, TIMER_STOPPABLE)
 
 /obj/item/MouseExited()
 	. = ..()

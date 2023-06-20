@@ -6,8 +6,12 @@
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "bl" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/radiation,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "cm" = (
@@ -74,8 +78,14 @@
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "gZ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/outdoors/dirt,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/anodevice,
+/obj/item/weapon/melee/baton/loaded,
+/turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "hU" = (
 /turf/template_noop,
@@ -91,13 +101,16 @@
 /area/submap/eclipsedigsight)
 "lk" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /obj/machinery/light,
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "ly" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/obj/machinery/cell_charger,
+/obj/item/weapon/melee/baton/loaded,
+/obj/item/device/geiger,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "lF" = (
@@ -209,26 +222,16 @@
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "vY" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/random/tool/alien,
-/obj/machinery/light,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/solar/radiation,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "wd" = (
-/obj/structure/grille/cult{
-	name = "Alien grille"
-	},
-/obj/structure/window/titanium/full,
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/reinforced,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/item/weapon/archaeological_find,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "wm" = (
@@ -243,12 +246,14 @@
 /area/submap/eclipsedigsight)
 "wH" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/obj/structure/table/reinforced,
+/obj/item/weapon/anodevice,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "xF" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "zN" = (
@@ -259,7 +264,10 @@
 /area/submap/eclipsedigsight)
 "AK" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/weapon/melee/baton/loaded,
+/obj/item/device/geiger,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "CL" = (
@@ -267,12 +275,18 @@
 /area/submap/eclipsedigsight)
 "CQ" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/obj/item/weapon/anodevice,
+/obj/machinery/cell_charger,
+/obj/item/weapon/melee/baton/loaded,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Dp" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
-/turf/simulated/floor/outdoors/dirt,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/item/weapon/anodevice,
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Dq" = (
 /obj/structure/cliff/automatic/corner{
@@ -290,33 +304,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
-"DX" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/submap/eclipsedigsight)
 "EM" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "EY" = (
-/obj/structure/grille/cult{
-	name = "Alien grille"
-	},
-/obj/structure/window/titanium/full,
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Fc" = (
@@ -337,17 +331,9 @@
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "FS" = (
-/obj/structure/grille/cult{
-	name = "Alien grille"
-	},
-/obj/structure/window/titanium/full,
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Gg" = (
@@ -367,12 +353,8 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsedigsight)
 "Is" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/monotile,
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsedigsight)
 "IA" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -417,8 +399,11 @@
 	},
 /area/submap/eclipsedigsight)
 "KQ" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/outdoors/dirt,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Le" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -451,11 +436,6 @@
 /obj/machinery/door/window/southright,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
-"NH" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/turf/simulated/floor/tiled/monotile,
-/area/submap/eclipsedigsight)
 "NS" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
@@ -468,6 +448,7 @@
 /area/submap/eclipsedigsight)
 "ON" = (
 /obj/machinery/light,
+/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "Pb" = (
@@ -539,9 +520,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "TE" = (
-/obj/machinery/door/window/southright{
-	dir = 8
-	},
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "TO" = (
@@ -549,29 +528,19 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
-"Un" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/eclipsedigsight)
 "UD" = (
-/obj/structure/grille/cult{
-	name = "Alien grille"
-	},
-/obj/structure/window/titanium/full,
-/obj/structure/window/phoronreinforced{
+/obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "UV" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Vh" = (
@@ -587,10 +556,10 @@
 /turf/simulated/floor/reinforced,
 /area/submap/eclipsedigsight)
 "VA" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "VS" = (
@@ -605,8 +574,14 @@
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "WX" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/outdoors/dirt,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/anodevice,
+/obj/item/weapon/melee/baton/loaded,
+/turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Xx" = (
 /obj/structure/cliff/automatic/corner{
@@ -618,19 +593,9 @@
 	temperature = 243.15
 	},
 /area/submap/eclipsedigsight)
-"XC" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/eclipsedigsight)
 "Ys" = (
-/obj/structure/grille/cult{
-	name = "Alien grille"
-	},
-/obj/structure/window/titanium/full,
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "YH" = (
@@ -960,32 +925,32 @@ pW
 pW
 pW
 mm
-sH
-Th
-sH
-sH
-sH
-Th
-sH
+FS
+UD
+FS
+FS
+FS
+UD
+FS
 mm
 pW
-XC
 pW
 pW
 pW
-PW
+pW
+pW
 mm
 Oy
 sH
-DX
-sH
-sH
-TO
-JB
-sE
+Th
 Zv
 IA
 sE
+JB
+Dp
+CQ
+ly
+UV
 mm
 pW
 fF
@@ -1002,18 +967,18 @@ pW
 pW
 pW
 es
-sH
-wH
-sH
-TO
-sH
-sH
-sH
+TE
+TE
+TE
+Ys
+TE
+TE
+TE
 mm
 pW
 pW
 pW
-pW
+PW
 pW
 pW
 es
@@ -1022,9 +987,9 @@ sH
 sH
 sH
 sH
-sH
+ZT
 fa
-cB
+KQ
 sH
 sH
 ZT
@@ -1044,29 +1009,29 @@ pW
 pW
 pW
 mm
-sH
-sH
-CQ
-sb
-sH
-sH
-sH
+TE
+wd
+wd
+wd
+wd
+wd
+TE
 mm
 pW
 pW
 pW
-Dp
+pW
 pW
 pW
 es
 sH
 sH
 sH
-sH
-sH
-sH
-Zk
 sE
+cB
+sE
+Zk
+sH
 sH
 sH
 sH
@@ -1086,27 +1051,27 @@ pW
 pW
 pW
 mm
-sH
-AK
+TE
+TE
 vY
-CL
+TE
 EY
 TE
-UD
+TE
 mm
 pW
 pW
 pW
-pW
+Is
 pW
 pW
 mm
 Wc
 sH
-Is
+sb
 sH
 sH
-wH
+sH
 MR
 sH
 sH
@@ -1124,24 +1089,24 @@ hU
 JD
 pW
 pW
-WX
+pW
 pW
 pW
 mm
-sH
-sH
-sE
+TE
 wd
-nQ
-jv
-rn
+wd
+wd
+wd
+wd
+TE
 mm
 pW
-gZ
 pW
 pW
 pW
-Un
+pW
+pW
 mm
 mm
 mm
@@ -1171,12 +1136,12 @@ pW
 pW
 mm
 VA
-sH
-sE
+TE
+TE
 Ys
-zN
-gt
-ed
+TE
+TE
+TE
 mm
 pW
 pW
@@ -1193,8 +1158,8 @@ pW
 pW
 pW
 mm
-ly
-xF
+NS
+sH
 lk
 mm
 pW
@@ -1212,13 +1177,13 @@ pW
 pW
 pW
 mm
-sH
-sb
-Zv
 FS
-Pb
-Le
-Ro
+bl
+FS
+FS
+FS
+bl
+FS
 mm
 pW
 pW
@@ -1307,10 +1272,10 @@ pW
 pW
 pW
 mm
-sH
-Th
-sH
-sH
+wH
+WX
+AK
+xF
 mm
 pW
 pW
@@ -1349,14 +1314,14 @@ pW
 pW
 pW
 mm
-rk
 sH
-NS
+sH
+sH
 sH
 es
 pW
 pW
-XC
+pW
 pW
 pW
 pW
@@ -1476,7 +1441,7 @@ jv
 rn
 Pv
 sH
-sH
+TO
 sH
 IA
 mm
@@ -1517,8 +1482,8 @@ zN
 gt
 ed
 DN
-bl
-TO
+sH
+sH
 sH
 Mk
 mm
@@ -1527,7 +1492,7 @@ pW
 pW
 pW
 pW
-gZ
+pW
 pW
 pW
 pW
@@ -1560,7 +1525,7 @@ Le
 Ro
 Zo
 sH
-sH
+rk
 sH
 Zv
 mm
@@ -1651,7 +1616,7 @@ mm
 pW
 pW
 pW
-KQ
+pW
 pW
 pW
 cm
@@ -1685,9 +1650,9 @@ pW
 pW
 pW
 mm
-UV
 sH
-NH
+sH
+sH
 sH
 es
 pW
@@ -1727,13 +1692,13 @@ pW
 pW
 pW
 mm
-sH
-sb
-sH
-sH
+wH
+gZ
+AK
+xF
 mm
 pW
-PW
+pW
 pW
 pW
 pW

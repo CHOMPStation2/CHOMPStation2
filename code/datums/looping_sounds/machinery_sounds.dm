@@ -115,3 +115,37 @@
 	mid_length = 6
 	end_sound = 'sound/machines/vehicle/engine_end.ogg'
 	volume = 20
+
+// CHOMPAdd: Fridges!
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/fridge
+	mid_sounds = list('sound/machines/kitchen/fridge/fridge_loop.ogg' = 1)
+	mid_length = 60
+	volume = 10
+	extra_range = -1 // Short-range
+	pref_check = /datum/client_preference/fridge_hum
+	volume_chan = VOLUME_CHANNEL_MACHINERY_IDLE
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/tcomms
+	start_sound = 'sound/machines/tcomms/tcomms_pulse.ogg'
+	mid_sounds = list('sound/machines/tcomms/tcomms_01.ogg' = 1)
+	mid_length = 20
+	end_sound = 'sound/machines/tcomms/tcomms_pulse.ogg'
+	volume = 40
+	opacity_check = FALSE // We don't want to drown people with noise outside Tcomms
+	falloff = 0.2 // Harsh
+	volume_chan = VOLUME_CHANNEL_MACHINERY_IDLE
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/shield_generator
+	start_sound = 'modular_chomp/sound/machines/shield_hum/shield_generator_whir.ogg'
+	mid_sounds = list('modular_chomp/sound/machines/shield_hum/shield_generator_hum2.ogg', 'modular_chomp/sound/machines/shield_hum/shield_generator_hum3.ogg')
+	mid_length = 60
+	end_sound = 'modular_chomp/sound/machines/shield_hum/shield_generator_whir.ogg'
+	volume = 40
+	volume_chan = VOLUME_CHANNEL_MACHINERY
+	exclusive = TRUE

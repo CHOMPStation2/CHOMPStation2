@@ -29,10 +29,10 @@
 	// CHOMPStation Edit: All mobs can play a death_sound if set. On carbons, this is going to be handled by species.
 	if(!gibbed && !isbelly(loc))
 		if(src.death_sound_override) // Do we override the death sounds from our species list - used by only a few specific mobs. If we do, do the next one instead
-			playsound(src, death_sound_override, 50, 1, 20, volume_channel = VOLUME_CHANNEL_SPECIES_SOUNDS)
+			playsound(src, death_sound_override, 50, 1, 20, volume_channel = VOLUME_CHANNEL_DEATH_SOUNDS)
 		else
 			if(!ishuman(src)) // Safety, we're not going to double up on death noises if we're not human.
-				playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), 50, 1, 20, volume_channel = VOLUME_CHANNEL_SPECIES_SOUNDS)
+				playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), 50, 1, 20, volume_channel = VOLUME_CHANNEL_DEATH_SOUNDS)
 	// CHOMPStation Add End
 
 	. = ..()

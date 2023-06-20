@@ -1329,12 +1329,21 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/tail/kara //SatinIsle fluff item
+/datum/sprite_accessory/tail/sectdrone_tail
+	name = "Sect Drone Tail (To use with bodytype-marking)"
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "sectdrone_tail"
+	extra_overlay = "sectdrone_tail_mark"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/*/datum/sprite_accessory/tail/kara //SatinIsle fluff item //CHOMP Remove
 	name = "Pterokara Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	icon_state = "kara_tail"
 	ckeys_allowed = list("satinisle")
-
+*/
+	
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
 	name = "You should not see this..."
@@ -1377,3 +1386,32 @@
 	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
 	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
 	extra_overlay = "horse" //I can't believe this works.
+	
+/datum/sprite_accessory/tail/turkey //Would have been a really good thing for Thanksgiving probably but I'm not going to wait that long.
+	name = "turkey"
+	desc = ""
+	icon_state = "turkey"
+
+/datum/sprite_accessory/tail/shark_markings
+	name = "akula tail, colorable, tail and fins"
+	desc = ""
+	icon_state = "sharktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "sharktail_markings"
+
+/datum/sprite_accessory/tail/shark_stripes
+	name = "akula tail, colorable, stripe"
+	desc = ""
+	icon_state = "sharktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "sharktail_stripemarkings"
+
+/datum/sprite_accessory/tail/shark_tips
+	name = "akula tail, colorable, tips"
+	desc = ""
+	icon_state = "sharktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "sharktail_tipmarkings"

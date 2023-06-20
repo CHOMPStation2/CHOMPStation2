@@ -30,11 +30,11 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/wood,
-/area/submap/cove)
-"ds" = (
-/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "eO" = (
 /obj/structure/table/rack,
@@ -87,7 +87,11 @@
 /area/submap/cove)
 "mh" = (
 /obj/random/mob/merc/all,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "nt" = (
 /obj/structure/table/bench/wooden,
@@ -119,7 +123,11 @@
 /area/submap/cove)
 "oM" = (
 /obj/machinery/teleport/hub,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "ps" = (
 /obj/structure/closet/crate/secure/loot,
@@ -227,7 +235,11 @@
 /area/submap/cove)
 "ED" = (
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "Gb" = (
 /turf/simulated/floor/wood,
@@ -259,8 +271,11 @@
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "IP" = (
-/mob/living/simple_mob/humanoid/pirate/mate/ranged/shotgun,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "Kk" = (
 /mob/living/simple_mob/humanoid/pirate/las/armored,
@@ -309,7 +324,11 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "RE" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -338,7 +357,11 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "Wu" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
@@ -359,7 +382,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "XJ" = (
 /obj/structure/bed/double/padded,
@@ -376,7 +403,11 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 
 (1,1,1) = {"
@@ -595,8 +626,8 @@ Tm
 lk
 Ox
 TN
-ds
-IP
+Gb
+Gb
 Ox
 Gb
 lk
@@ -640,9 +671,9 @@ RT
 fq
 fq
 fq
-Gb
-Gb
-Gb
+IP
+IP
+IP
 fq
 fq
 fq
@@ -672,9 +703,9 @@ RT
 fq
 fq
 fq
-Gb
+IP
 oM
-Gb
+IP
 fq
 fq
 fq
@@ -704,9 +735,9 @@ RT
 fq
 fq
 fq
-Gb
-Gb
-Gb
+IP
+IP
+IP
 fq
 fq
 fq
@@ -736,20 +767,20 @@ RT
 fq
 fq
 fq
-Gb
-Gb
-Gb
+IP
+IP
+IP
 mh
 mh
-Gb
-Gb
-Gb
+IP
+IP
+IP
 ED
 Wu
 qI
 qI
 Xl
-Gb
+IP
 lk
 Gb
 wO
@@ -768,20 +799,20 @@ RT
 fq
 fq
 fq
-Gb
-Gb
-Gb
-Gb
+IP
+IP
+IP
+IP
 mh
 mh
-Gb
-Gb
-Gb
+IP
+IP
+IP
 qI
 nN
 qI
-Gb
-Gb
+IP
+IP
 sl
 Gb
 MQ
@@ -800,20 +831,20 @@ RT
 fq
 fq
 fq
-Gb
-Gb
-Gb
+IP
+IP
+IP
 mh
 mh
-Gb
-Gb
-Gb
+IP
+IP
+IP
 ED
 Wu
 qI
 qI
 Xl
-Gb
+IP
 lk
 uM
 Hb
@@ -832,9 +863,9 @@ RT
 RT
 uf
 fq
-Gb
-Gb
-Gb
+IP
+IP
+IP
 fq
 fq
 fq
@@ -864,9 +895,9 @@ RT
 RT
 fq
 fq
-Gb
+IP
 oM
-Gb
+IP
 fq
 fq
 fq
@@ -896,9 +927,9 @@ RT
 RT
 fq
 fq
-Gb
-Gb
-Gb
+IP
+IP
+IP
 fq
 fq
 fq

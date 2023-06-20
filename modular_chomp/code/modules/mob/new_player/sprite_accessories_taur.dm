@@ -117,6 +117,9 @@
 	icon_state = "fox"
 	extra_overlay = "fox_markings"
 	extra_overlay2 = "fox_markings2"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 4
 
 /datum/sprite_accessory/tail/taur/ch/sectdrone
 	name = "Sect Drone (Taur)"
