@@ -10,8 +10,8 @@
 
 	faction = "vr"
 
-	maxHealth = 125
-	health = 125
+	maxHealth = 100
+	health = 100
 	movement_cooldown = 1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard
@@ -74,8 +74,8 @@
 	projectiletype = null
 	melee_attack_delay = 0 SECOND
 
-	melee_damage_lower = 8
-	melee_damage_upper = 8
+	melee_damage_lower = 6
+	melee_damage_upper = 6
 
 /mob/living/simple_mob/vr/glitch/apply_melee_effects(var/atom/A)
 	if(isliving(A))

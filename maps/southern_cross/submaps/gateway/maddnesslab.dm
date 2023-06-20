@@ -12,54 +12,79 @@
 /area/awaymission/mol/entrancetunnel
 
 /area/awaymission/mol/security
+	name = " Delta Vault"
 
 /area/awaymission/mol/medical
+	name = "Delta Checkpoint"
 
 /area/awaymission/mol/vr
+	name = "Delta Checkpoint"
 
 /area/awaymission/mol/vr/observation
+	name = "Delta Checkpoint"
 
 /area/awaymission/mol/vr/shattered
+	name = "Delta Checkpoint"
 
 /area/awaymission/mol/vr/observationroom
+	name = "Vistor Procress"
 
 /area/awaymission/mol/vistortunnel
+	name = "Vistor Procressing"
 
 /area/awaymission/mol/vistortunnel/red
+	name = "Vistor Room Red"
 
 /area/awaymission/mol/vistortunnel/blue
+	name = "Vistor Room Blue"
 
 /area/awaymission/mol/vistortunnel/yellow
+	name = "Vistor Room Yellow"
 
 /area/awaymission/mol/vistortunnel/orange
+	name = "Vistor Room Orange"
 
 /area/awaymission/mol/vistortunnel/green
+	name = "Vistor Room Green"
 
 /area/awaymission/mol/vistortunnel/purple
+	name = "Vistor Purple"
 
 /area/awaymission/mol/scraptunnels
+	name = "Scapery Tunnels"
 
 /area/awaymission/mol/scraptunnels/room1
+	name = "Junk Sorting"
 
 /area/awaymission/mol/scraptunnels/room2
+	name = "Collection Zone"
 
 /area/awaymission/mol/scraptunnels/room3
+	name = "Shuttle Landing Zone"
 
 /area/awaymission/mol/scraptunnels/room4
+	name = "Mech Smeltery"
 
 /area/awaymission/mol/kitchen
+	name = "Kitchen Hallways"
 
 /area/awaymission/mol/kitchen/chamberA
+	name = "Plant Zone"
 
 /area/awaymission/mol/kitchen/chamberB
+	name = "Butchering Zone"
 
 /area/awaymission/mol/kitchen/chamberC
+	name = "Cooking Zone"
 
 /area/awaymission/mol/kitchen/ChamberD
+	name = "Dining Hall"
 
 /area/awaymission/mol/mines
+	name = "Delta Mines"
 
 /area/awaymission/mol/realitycore
+	name = "Realitycore"
 
 /obj/structure/prop/blackbox/maddnesslab
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/maddnesslab)

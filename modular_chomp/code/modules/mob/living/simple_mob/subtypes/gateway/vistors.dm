@@ -79,6 +79,16 @@
 	melee_damage_upper = 25
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
+	armor = list(
+				"melee"		= 20,
+				"bullet"	= 20,
+				"laser"		= 20,
+				"energy"	= 10,
+				"bomb"		= 10,
+				"bio"		= 100,
+				"rad"		= 100
+				)
+
 	wreckage = null
 	pilot_type = null
 
@@ -215,6 +225,16 @@
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle
 	melee_attack_delay = 4 SECOND
+
+	armor = list(
+				"melee"		= 30,
+				"bullet"	= 30,
+				"laser"		= 30,
+				"energy"	= 30,
+				"bomb"		= 30,
+				"bio"		= 100,
+				"rad"		= 100
+				)
 
 	wreckage = null
 	pilot_type = null
