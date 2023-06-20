@@ -1971,7 +1971,7 @@ End Chompstation Edit*/
 	flags = RAD_SHIELDED
 
 /area/expoutpost/commanderroom
-	name = "\improper Security Commander' Ready-Room"
+	name = "\improper Security Commander's Ready-Room"
 	flags = RAD_SHIELDED
 
 /area/expoutpost/portqpadjunction
