@@ -186,8 +186,7 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
-	GLOB.ahelp_tickets.ClientLogin(src)
-	GLOB.mhelp_tickets.ClientLogin(src)
+	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
 
 	//Admin Authorisation
 	holder = admin_datums[ckey]
@@ -280,8 +279,7 @@
 	if (mentorholder)
 		mentorholder.owner = null
 		GLOB.mentors -= src
-	GLOB.ahelp_tickets.ClientLogout(src)
-	GLOB.mhelp_tickets.ClientLogout(src)
+	GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
 	GLOB.directory -= ckey
 	GLOB.clients -= src
 	return ..()
