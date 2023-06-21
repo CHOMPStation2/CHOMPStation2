@@ -1562,14 +1562,14 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/item/weapon/ore/bluespace_crystal/artificial{
+/obj/item/weapon/bluespace_crystal/artificial{
 	pixel_x = 7;
 	pixel_y = 7
 	},
-/obj/item/weapon/ore/bluespace_crystal/artificial{
+/obj/item/weapon/bluespace_crystal/artificial{
 	pixel_y = 7
 	},
-/obj/item/weapon/ore/bluespace_crystal/artificial{
+/obj/item/weapon/bluespace_crystal/artificial{
 	pixel_x = -7;
 	pixel_y = 7
 	},
