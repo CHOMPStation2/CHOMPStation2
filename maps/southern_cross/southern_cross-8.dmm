@@ -1550,6 +1550,13 @@
 	color = "teal"
 	},
 /area/holodeck/source_chess)
+"aUY" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/outdoors/grass{
+	outdoors = 0
+	},
+/area/shadekin)
 "aVy" = (
 /obj/machinery/vending/sovietvend,
 /obj/effect/floor_decal/techfloor/orange{
@@ -4750,6 +4757,12 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/shuttle/merchant)
+"dOI" = (
+/obj/structure/sign/double/barsign{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood/sif/broken,
+/area/shadekin)
 "dOR" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/rd,
@@ -5702,13 +5715,6 @@
 "eLE" = (
 /obj/machinery/vending/event/food/ingredients,
 /turf/simulated/floor/reinforced,
-/area/shadekin)
-"eLX" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass{
-	outdoors = 0
-	},
 /area/shadekin)
 "eMB" = (
 /obj/structure/table/standard,
@@ -7715,16 +7721,8 @@
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
 "gSp" = (
-/obj/effect/floor_decal/milspec/color/black,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty,
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/water/hotspring,
 /area/shadekin)
 "gTd" = (
 /turf/unsimulated/floor{
@@ -8994,8 +8992,16 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/ninja)
 "hUC" = (
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/obj/effect/floor_decal/milspec/color/black,
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
 "hUS" = (
 /obj/effect/landmark{
@@ -9057,15 +9063,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt,
-/area/shadekin)
-"hWQ" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/structure/closet/secure_closet/freezer/kitchen{
-	locked = 0
-	},
-/turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "hXb" = (
 /obj/structure/bed/chair/oldsofa/left{
@@ -10162,6 +10159,12 @@
 	icon_state = "steel"
 	},
 /area/shuttle/trade)
+"iVI" = (
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/outdoors/grass{
+	outdoors = 0
+	},
+/area/shadekin)
 "iVO" = (
 /obj/machinery/door/airlock{
 	name = "Restroom"
@@ -10995,9 +10998,20 @@
 /obj/structure/table/marble{
 	color = "#2b2b2b"
 	},
-/obj/machinery/light{
-	dir = 2;
-	nightshift_enabled = 1
+/obj/structure/sink/countertop{
+	pixel_y = -7;
+	pixel_x = 1;
+	dir = 1
+	},
+/obj/item/trash/plate{
+	pixel_y = -2
+	},
+/obj/item/trash/plate,
+/obj/item/trash/plate{
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
@@ -12263,6 +12277,13 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/centcom/evac)
+"kKf" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/outdoors/grass{
+	outdoors = 0
+	},
+/area/shadekin)
 "kKj" = (
 /obj/machinery/door/airlock/angled_tgmc/wide{
 	name = "Bathroom"
@@ -12942,7 +12963,9 @@
 "luZ" = (
 /obj/structure/prop/statue/phoron,
 /obj/effect/map_effect/interval/effect_emitter/sparks,
-/turf/simulated/floor/outdoors/ice/dark_smooth,
+/turf/simulated/floor/outdoors/ice/dark_smooth{
+	can_atmos_pass = 0
+	},
 /area/shadekin)
 "lvK" = (
 /obj/effect/floor_decal/milspec/color/black,
@@ -14194,11 +14217,8 @@
 /turf/unsimulated/floor/dark,
 /area/shadekin)
 "mFP" = (
-/obj/structure/flora/ausbushes/ywflowers,
 /mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass{
-	outdoors = 0
-	},
+/turf/simulated/floor/outdoors/grass/heavy/atoll,
 /area/shadekin)
 "mGk" = (
 /obj/machinery/door/blast/shutters{
@@ -15583,13 +15603,6 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
-"nZm" = (
-/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
-	dir = 8;
-	name = "Erthj23G"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/shadekin)
 "nZv" = (
 /obj/effect/floor_decal/carpet{
 	dir = 8
@@ -15697,19 +15710,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
-"oda" = (
-/obj/effect/floor_decal/milspec/color/black,
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#DDFFD3";
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
 "odr" = (
 /obj/item/ammo_magazine/ammo_box/b12g/flash,
@@ -15958,6 +15958,14 @@
 /obj/structure/closet/emcloset/legacy,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
+"oqH" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
@@ -16791,28 +16799,6 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"psn" = (
-/obj/effect/floor_decal/techfloor,
-/obj/structure/table/marble{
-	color = "#2b2b2b"
-	},
-/obj/structure/sink/countertop{
-	pixel_y = -7;
-	pixel_x = 1;
-	dir = 1
-	},
-/obj/item/trash/plate{
-	pixel_y = -2
-	},
-/obj/item/trash/plate,
-/obj/item/trash/plate{
-	pixel_y = 2
-	},
-/obj/item/trash/plate{
-	pixel_y = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
 "psv" = (
 /obj/item/weapon/reagent_containers/food/drinks/flask/shiny,
 /obj/structure/table/marble{
@@ -16979,12 +16965,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
-"pBq" = (
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass{
-	outdoors = 0
-	},
 /area/shadekin)
 "pBu" = (
 /obj/structure/table/steel,
@@ -17154,6 +17134,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/shadekin)
+"pIL" = (
+/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
+	dir = 8;
+	name = "Erthj23G"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "pJj" = (
 /obj/structure/flora/ausbushes/brflowers,
@@ -17440,14 +17427,6 @@
 /obj/structure/table/steel,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"pZw" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = -30
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
 "qaR" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor/corner{
@@ -20388,6 +20367,15 @@
 /obj/structure/closet/wardrobe/pjs,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"sVp" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	locked = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "sVu" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -20869,6 +20857,19 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
+"tqX" = (
+/obj/effect/floor_decal/milspec/color/black,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3";
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/shadekin)
 "tre" = (
 /obj/structure/bed/chair/office/dark,
 /turf/unsimulated/floor{
@@ -22354,8 +22355,11 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_basketball)
 "uOk" = (
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/water/hotspring,
+/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
+	dir = 8;
+	name = "Dorms"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "uOw" = (
 /obj/structure/closet/secure_closet/hydroponics{
@@ -22384,12 +22388,6 @@
 "uOX" = (
 /obj/machinery/vending/foodmeat,
 /turf/simulated/floor/reinforced,
-/area/shadekin)
-"uPc" = (
-/obj/structure/sign/double/barsign{
-	pixel_y = -32
-	},
-/turf/simulated/floor/wood/sif/broken,
 /area/shadekin)
 "uPy" = (
 /obj/machinery/light/small{
@@ -22943,7 +22941,9 @@
 /area/shadekin)
 "vne" = (
 /obj/structure/prop/statue/phoron,
-/turf/simulated/floor/outdoors/ice/dark_smooth,
+/turf/simulated/floor/outdoors/ice/dark_smooth{
+	can_atmos_pass = 0
+	},
 /area/shadekin)
 "vny" = (
 /obj/structure/closet/crate/freezer/rations,
@@ -23927,6 +23927,17 @@
 	icon_state = "vault"
 	},
 /area/centcom/terminal)
+"wlV" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/table/marble{
+	color = "#2b2b2b"
+	},
+/obj/machinery/light{
+	dir = 2;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "wmu" = (
 /obj/item/toy/chess/pawn_black,
 /turf/simulated/floor/holofloor/bmarble{
@@ -24066,13 +24077,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"wuw" = (
-/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
-	dir = 8;
-	name = "Dorms"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/shadekin)
 "wuy" = (
 /obj/structure/table/standard,
 /obj/item/weapon/deck/cards,
@@ -48945,7 +48949,7 @@ kyg
 ivs
 vXr
 fuU
-pBq
+iVI
 fuU
 ivs
 fuU
@@ -49209,7 +49213,7 @@ ivs
 fuU
 vXr
 vXr
-mFP
+aUY
 kXp
 rTt
 rTt
@@ -49743,7 +49747,7 @@ bMy
 kyg
 oTO
 fqz
-wuw
+uOk
 avb
 jRn
 nQx
@@ -49764,7 +49768,7 @@ nQx
 avb
 avb
 avb
-wuw
+uOk
 kyg
 oTO
 fqz
@@ -49970,7 +49974,7 @@ rVH
 rVH
 rVH
 rVH
-nZm
+pIL
 sta
 bAY
 kyg
@@ -50008,14 +50012,14 @@ tAp
 ltP
 ltP
 ltP
-oda
+tqX
 ltP
 ltP
 bgS
 ltP
 ltP
 ltP
-oda
+tqX
 ltP
 kPa
 tAp
@@ -50240,7 +50244,7 @@ cus
 ivs
 vXr
 nOe
-hUC
+mFP
 vXr
 vXr
 vXr
@@ -51010,7 +51014,7 @@ oTO
 vXr
 ivs
 rmy
-uOk
+gSp
 hEP
 hEP
 ivs
@@ -51531,7 +51535,7 @@ ivs
 xJn
 vXr
 vXr
-eLX
+kKf
 hGu
 fuU
 jmT
@@ -55161,28 +55165,28 @@ bMy
 kyg
 uCB
 mas
-wuw
+uOk
 avb
 avb
 avb
 avb
 avb
 avb
-gSp
+hUC
 avb
 jRn
 nQx
 avb
 avb
 avb
-gSp
+hUC
 avb
 avb
 avb
 avb
 avb
 avb
-wuw
+uOk
 kyg
 oTO
 rVH
@@ -58270,8 +58274,8 @@ vfM
 ufm
 bMy
 bzh
-hWQ
-hWQ
+sVp
+sVp
 jDl
 bMy
 ydh
@@ -58788,7 +58792,7 @@ nWU
 bcb
 bcb
 ocR
-pZw
+oqH
 bMy
 ydh
 ydh
@@ -61105,7 +61109,7 @@ vTu
 vTu
 vTu
 qzw
-uPc
+dOI
 bMy
 oiI
 jni
@@ -61885,7 +61889,7 @@ psv
 jni
 dpC
 jni
-jJl
+wlV
 bMy
 dMe
 fSV
@@ -62143,7 +62147,7 @@ kzK
 jni
 kzK
 jni
-psn
+jJl
 bMy
 hTV
 bUI
