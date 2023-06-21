@@ -141,10 +141,6 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 //Get a ticket given a ckey
 /datum/tickets/proc/CKey2ActiveTicket(ckey)
-	if(!usr?.client.holder || !has_mentor_powers(usr?.client))
-		message_admins("[usr] has attempted to look up a ticket with CKEY [ckey] without sufficent privileges.")
-		return
-
 	for(var/datum/ticket/T as anything in active_tickets)
 		if(T.initiator_ckey == ckey)
 			return T
