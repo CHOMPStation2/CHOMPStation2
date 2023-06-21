@@ -1550,13 +1550,6 @@
 	color = "teal"
 	},
 /area/holodeck/source_chess)
-"aUY" = (
-/obj/structure/flora/ausbushes/ywflowers,
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass{
-	outdoors = 0
-	},
-/area/shadekin)
 "aVy" = (
 /obj/machinery/vending/sovietvend,
 /obj/effect/floor_decal/techfloor/orange{
@@ -1679,6 +1672,10 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"bbP" = (
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/area/shadekin)
 "bcb" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/disposalpipe/segment{
@@ -4757,12 +4754,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/shuttle/merchant)
-"dOI" = (
-/obj/structure/sign/double/barsign{
-	pixel_y = -32
-	},
-/turf/simulated/floor/wood/sif/broken,
-/area/shadekin)
 "dOR" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/rd,
@@ -6276,6 +6267,7 @@
 /area/centcom/bar)
 "fuU" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
 /turf/simulated/floor/outdoors/grass{
 	outdoors = 0
 	},
@@ -7721,8 +7713,17 @@
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
 "gSp" = (
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/water/hotspring,
+/obj/effect/floor_decal/milspec/color/black,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3";
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
 "gTd" = (
 /turf/unsimulated/floor{
@@ -8135,6 +8136,15 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
+"hjx" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	locked = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "hjU" = (
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -6
@@ -8992,16 +9002,10 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/ninja)
 "hUC" = (
-/obj/effect/floor_decal/milspec/color/black,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass{
+	outdoors = 0
 	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
 "hUS" = (
 /obj/effect/landmark{
@@ -9923,6 +9927,13 @@
 	icon_state = "dark"
 	},
 /area/shuttle/trade)
+"iIH" = (
+/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
+	dir = 8;
+	name = "Greenhouse"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shadekin)
 "iJS" = (
 /turf/simulated/shuttle/wall/no_join{
 	base_state = "orange";
@@ -10159,12 +10170,6 @@
 	icon_state = "steel"
 	},
 /area/shuttle/trade)
-"iVI" = (
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass{
-	outdoors = 0
-	},
-/area/shadekin)
 "iVO" = (
 /obj/machinery/door/airlock{
 	name = "Restroom"
@@ -10998,20 +11003,9 @@
 /obj/structure/table/marble{
 	color = "#2b2b2b"
 	},
-/obj/structure/sink/countertop{
-	pixel_y = -7;
-	pixel_x = 1;
-	dir = 1
-	},
-/obj/item/trash/plate{
-	pixel_y = -2
-	},
-/obj/item/trash/plate,
-/obj/item/trash/plate{
-	pixel_y = 2
-	},
-/obj/item/trash/plate{
-	pixel_y = 4
+/obj/machinery/light{
+	dir = 2;
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
@@ -12277,13 +12271,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/centcom/evac)
-"kKf" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass{
-	outdoors = 0
-	},
-/area/shadekin)
 "kKj" = (
 /obj/machinery/door/airlock/angled_tgmc/wide{
 	name = "Bathroom"
@@ -12574,6 +12561,7 @@
 /area/holodeck/source_meetinghall)
 "kXp" = (
 /obj/structure/flora/ausbushes/ywflowers,
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
 /turf/simulated/floor/outdoors/grass{
 	outdoors = 0
 	},
@@ -12669,6 +12657,12 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
+"laV" = (
+/obj/structure/sign/double/barsign{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood/sif/broken,
+/area/shadekin)
 "lbF" = (
 /turf/simulated/shuttle/plating,
 /area/shuttle/large_escape_pod2/centcom)
@@ -12790,6 +12784,13 @@
 /obj/item/clothing/mask/surgical,
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
+"llo" = (
+/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
+	dir = 8;
+	name = "Erthj23G"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shadekin)
 "llz" = (
 /turf/unsimulated/wall,
 /area/centcom/living)
@@ -12964,7 +12965,10 @@
 /obj/structure/prop/statue/phoron,
 /obj/effect/map_effect/interval/effect_emitter/sparks,
 /turf/simulated/floor/outdoors/ice/dark_smooth{
-	can_atmos_pass = 0
+	can_atmos_pass = 0;
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
 	},
 /area/shadekin)
 "lvK" = (
@@ -13435,7 +13439,7 @@
 "lRH" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
 	dir = 8;
-	name = "Greenhouse"
+	name = "Dorms"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
@@ -13711,6 +13715,18 @@
 /obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/offsite,
 /turf/simulated/shuttle/plating,
 /area/shuttle/large_escape_pod1/centcom)
+"mfT" = (
+/obj/effect/floor_decal/milspec/color/black,
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/shadekin)
 "mgi" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/orange,
@@ -14217,8 +14233,26 @@
 /turf/unsimulated/floor/dark,
 /area/shadekin)
 "mFP" = (
-/mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/obj/effect/floor_decal/techfloor,
+/obj/structure/table/marble{
+	color = "#2b2b2b"
+	},
+/obj/structure/sink/countertop{
+	pixel_y = -7;
+	pixel_x = 1;
+	dir = 1
+	},
+/obj/item/trash/plate{
+	pixel_y = -2
+	},
+/obj/item/trash/plate,
+/obj/item/trash/plate{
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "mGk" = (
 /obj/machinery/door/blast/shutters{
@@ -15290,6 +15324,10 @@
 /obj/machinery/vending/snack,
 /turf/simulated/shuttle/floor/yellow,
 /area/centcom/evac)
+"nId" = (
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/water/hotspring,
+/area/shadekin)
 "nIu" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/material/minihoe,
@@ -15909,6 +15947,12 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
+"omo" = (
+/mob/living/simple_mob/animal/sif/glitterfly/rare,
+/turf/simulated/floor/outdoors/grass{
+	outdoors = 0
+	},
+/area/shadekin)
 "omL" = (
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
@@ -15958,14 +16002,6 @@
 /obj/structure/closet/emcloset/legacy,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
-"oqH" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
@@ -16648,6 +16684,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
+"plX" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "pmn" = (
 /obj/machinery/computer/shuttle_control/multi/administration{
 	dir = 8
@@ -17134,13 +17178,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shadekin)
-"pIL" = (
-/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
-	dir = 8;
-	name = "Erthj23G"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "pJj" = (
 /obj/structure/flora/ausbushes/brflowers,
@@ -20367,15 +20404,6 @@
 /obj/structure/closet/wardrobe/pjs,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"sVp" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/structure/closet/secure_closet/freezer/kitchen{
-	locked = 0
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
 "sVu" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -20857,19 +20885,6 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
-"tqX" = (
-/obj/effect/floor_decal/milspec/color/black,
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#DDFFD3";
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/shadekin)
 "tre" = (
 /obj/structure/bed/chair/office/dark,
 /turf/unsimulated/floor{
@@ -22355,11 +22370,10 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_basketball)
 "uOk" = (
-/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
-	dir = 8;
-	name = "Dorms"
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/grass{
+	outdoors = 0
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "uOw" = (
 /obj/structure/closet/secure_closet/hydroponics{
@@ -22942,7 +22956,10 @@
 "vne" = (
 /obj/structure/prop/statue/phoron,
 /turf/simulated/floor/outdoors/ice/dark_smooth{
-	can_atmos_pass = 0
+	can_atmos_pass = 0;
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
 	},
 /area/shadekin)
 "vny" = (
@@ -23927,17 +23944,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/terminal)
-"wlV" = (
-/obj/effect/floor_decal/techfloor,
-/obj/structure/table/marble{
-	color = "#2b2b2b"
-	},
-/obj/machinery/light{
-	dir = 2;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
 "wmu" = (
 /obj/item/toy/chess/pawn_black,
 /turf/simulated/floor/holofloor/bmarble{
@@ -48185,7 +48191,7 @@ oTO
 oTO
 ivs
 ivs
-kXp
+hUC
 ivs
 utD
 mas
@@ -48434,7 +48440,7 @@ oTO
 vXr
 vXr
 vXr
-fuU
+uOk
 vXr
 vXr
 vXr
@@ -48690,17 +48696,17 @@ bAY
 kyg
 oTO
 ehg
-fuU
+uOk
 jmT
-fuU
+uOk
 hGu
-fuU
+uOk
 vXr
 vXr
 slw
 ehg
 rTt
-kXp
+hUC
 ivs
 vXr
 oTO
@@ -48948,16 +48954,16 @@ bAY
 kyg
 ivs
 vXr
-fuU
-iVI
-fuU
+uOk
+omo
+uOk
 ivs
-fuU
+uOk
 hGu
 slw
 vXr
 rTt
-kXp
+hUC
 hVi
 vXr
 slw
@@ -49206,15 +49212,15 @@ bAY
 kyg
 oTO
 hGu
-fuU
+uOk
 vXr
-fuU
+uOk
 ivs
-fuU
+uOk
 vXr
 vXr
-aUY
 kXp
+hUC
 rTt
 rTt
 vXr
@@ -49464,11 +49470,11 @@ bAY
 kyg
 oTO
 vXr
-fuU
+uOk
 hGu
-fuU
+uOk
 jmT
-fuU
+uOk
 vXr
 vXr
 hVi
@@ -49724,7 +49730,7 @@ ivs
 vXr
 vXr
 vXr
-fuU
+uOk
 slw
 rdD
 vXr
@@ -49747,7 +49753,7 @@ bMy
 kyg
 oTO
 fqz
-uOk
+lRH
 avb
 jRn
 nQx
@@ -49768,7 +49774,7 @@ nQx
 avb
 avb
 avb
-uOk
+lRH
 kyg
 oTO
 fqz
@@ -49974,7 +49980,7 @@ rVH
 rVH
 rVH
 rVH
-pIL
+llo
 sta
 bAY
 kyg
@@ -49997,11 +50003,11 @@ ivs
 mas
 bAY
 tHP
-lRH
+iIH
 pKi
 pKi
 pKi
-lRH
+iIH
 kyg
 oTO
 beU
@@ -50012,14 +50018,14 @@ tAp
 ltP
 ltP
 ltP
-tqX
+gSp
 ltP
 ltP
 bgS
 ltP
 ltP
 ltP
-tqX
+gSp
 ltP
 kPa
 tAp
@@ -50244,7 +50250,7 @@ cus
 ivs
 vXr
 nOe
-mFP
+bbP
 vXr
 vXr
 vXr
@@ -50505,7 +50511,7 @@ vXr
 uXG
 vXr
 vXr
-fuU
+uOk
 vXr
 edw
 vXr
@@ -50761,11 +50767,11 @@ hEP
 hEP
 ivs
 vXr
-fuU
+uOk
 jmT
-fuU
+uOk
 hGu
-fuU
+uOk
 vXr
 ivs
 mas
@@ -51014,16 +51020,16 @@ oTO
 vXr
 ivs
 rmy
-gSp
+nId
 hEP
 hEP
 ivs
 hGu
 sBo
 ivs
-fuU
+uOk
 vXr
-fuU
+uOk
 vXr
 ivs
 mas
@@ -51277,11 +51283,11 @@ hEP
 ivs
 vXr
 nOe
-fuU
+uOk
 vXr
-fuU
+uOk
 ivs
-fuU
+uOk
 hGu
 ivs
 mas
@@ -51535,11 +51541,11 @@ ivs
 xJn
 vXr
 vXr
-kKf
+fuU
 hGu
-fuU
+uOk
 jmT
-fuU
+uOk
 vXr
 ivs
 mas
@@ -51795,7 +51801,7 @@ vXr
 vXr
 ehg
 vXr
-fuU
+uOk
 vXr
 jNr
 vXr
@@ -55165,28 +55171,28 @@ bMy
 kyg
 uCB
 mas
-uOk
+lRH
 avb
 avb
 avb
 avb
 avb
 avb
-hUC
+mfT
 avb
 jRn
 nQx
 avb
 avb
 avb
-hUC
+mfT
 avb
 avb
 avb
 avb
 avb
 avb
-uOk
+lRH
 kyg
 oTO
 rVH
@@ -58274,8 +58280,8 @@ vfM
 ufm
 bMy
 bzh
-sVp
-sVp
+hjx
+hjx
 jDl
 bMy
 ydh
@@ -58792,7 +58798,7 @@ nWU
 bcb
 bcb
 ocR
-oqH
+plX
 bMy
 ydh
 ydh
@@ -61109,7 +61115,7 @@ vTu
 vTu
 vTu
 qzw
-dOI
+laV
 bMy
 oiI
 jni
@@ -61889,7 +61895,7 @@ psv
 jni
 dpC
 jni
-wlV
+jJl
 bMy
 dMe
 fSV
@@ -62147,7 +62153,7 @@ kzK
 jni
 kzK
 jni
-jJl
+mFP
 bMy
 hTV
 bUI
