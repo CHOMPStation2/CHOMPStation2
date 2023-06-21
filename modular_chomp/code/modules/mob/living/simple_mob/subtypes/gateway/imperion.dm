@@ -216,7 +216,7 @@
 	icon_state = "imperion-phase"
 	icon_living = "imperion-phase"
 	icon_dead = "imperion-phase"
-	movement_cooldown = 8
+	movement_cooldown = 45
 	projectiletype = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
 	melee_attack_delay = 4 SECOND
 	ranged_attack_delay = 1.5 SECONDS
@@ -232,7 +232,7 @@
 	var/obj/item/shield_projector/shields = null
 
 	armor = list(
-				"melee"		= -175,
+				"melee"		= -200,
 				"bullet"	= 65,
 				"laser"		= 65,
 				"energy"	= 65,
@@ -390,3 +390,11 @@
 		if(L.stat == DEAD)
 			continue
 		L.add_modifier(/datum/modifier/aura/despair, null, src)
+
+/mob/living/simple_mob/mechanical/mecha/imperion/death()
+	..()
+	new /obj/effect/decal/cleanable/blood/gibs/robot(src.loc)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+	s.set_up(3, 1, src)
+	s.start()
+	qdel(src)
