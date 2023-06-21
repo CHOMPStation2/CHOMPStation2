@@ -2611,8 +2611,9 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock{
-	req_access = list(43,67,5);
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	req_one_access = list(43,67,5);
 	name = "Exploration Ready Room"
 	},
 /turf/simulated/floor,
@@ -3990,21 +3991,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
-"dqS" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/button/remote/airlock{
-	dir = 1;
-	name = "Door Bolt";
-	pixel_y = -24;
-	id = "aeg_toilet1_bolt"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/expoutpost/restrooms)
 "dqW" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -6393,7 +6379,7 @@
 	name = "Medbay Lobby";
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medbaylobby)
 "fil" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -8717,7 +8703,7 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/int{
-	req_access = list(43,67,5)
+	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor,
 /area/expoutpost/explobriefroom)
@@ -9647,11 +9633,7 @@
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "hOP" = (
-/obj/machinery/door/airlock{
-	req_access = list(43,67,5);
-	name = "Exploration Ready Room"
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/explobriefroom)
 "hPB" = (
 /obj/machinery/light,
@@ -11481,6 +11463,15 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/starsternairlock)
+"jpQ" = (
+/obj/machinery/button/remote/airlock{
+	pixel_y = 24;
+	name = "Door Bolt";
+	id = "aeg_pubshower_bolt";
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/expoutpost/washroom)
 "jqf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -11901,8 +11892,7 @@
 	},
 /obj/effect/catwalk_plated/white,
 /obj/machinery/door/airlock/medical{
-	name = "Operating Theatre 1";
-	req_access = list(45)
+	name = "Operating Theatre 1"
 	},
 /turf/simulated/floor,
 /area/expoutpost/surgical1)
@@ -12604,9 +12594,10 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock{
-	name = "Joint Gateway";
-	req_access = list(1,5,43,67)
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	req_one_access = list(1,5,43,67);
+	name = "Joint Gateway Hub"
 	},
 /turf/simulated/floor,
 /area/expoutpost/gatewayeva)
@@ -15588,7 +15579,7 @@
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Medbay Lobby"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medbaylobby)
 "mBu" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -20228,7 +20219,7 @@
 	pixel_y = 28;
 	name = "Gateway Access";
 	id = "aeg_gateway_access";
-	req_access = list(1,5,43,67)
+	req_one_access = list(1,5,43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
@@ -20611,7 +20602,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
 	name = "Joint EVA";
-	req_access = list(1,43,67)
+	req_one_access = list(1,43,67)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
@@ -21757,6 +21748,21 @@
 /obj/machinery/atmospherics/binary/pump/high_power,
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
+"rnG" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	name = "Door Bolt";
+	pixel_y = -24;
+	id = "aeg_toilet1_bolt"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/expoutpost/restrooms)
 "rok" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -25479,7 +25485,7 @@
 	pixel_x = 16;
 	name = "Exploration Armory";
 	id = "aeg_explo_armory";
-	req_access = list(43,67,5)
+	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
@@ -26932,11 +26938,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
 "veB" = (
-/obj/machinery/door/airlock{
-	name = "Joint Gateway";
-	req_access = list(1,5,43,67)
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/gatewayeva)
 "vfb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -29178,7 +29180,7 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/reactorroom)
 "wPO" = (
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medbaylobby)
 "wPQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -30991,15 +30993,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/disposals)
-"yeI" = (
-/obj/machinery/button/remote/airlock{
-	pixel_y = 24;
-	name = "Door Bolt";
-	id = "aeg_pubshower_bolt";
-	pixel_x = 8
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/expoutpost/washroom)
 "yeN" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -61025,7 +61018,7 @@ lfC
 pzQ
 ajq
 bQT
-dqS
+rnG
 bQT
 ldB
 bQT
@@ -61530,7 +61523,7 @@ jyK
 jyK
 xzZ
 kBn
-yeI
+jpQ
 uuQ
 kBn
 fVW
