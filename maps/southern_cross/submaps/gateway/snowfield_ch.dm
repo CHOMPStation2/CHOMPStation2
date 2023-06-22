@@ -587,7 +587,7 @@
 	and this... Whispering voice!<BR><B>It's in my head!</B><BR><BR>Peoples who managed to escape after the initial lockdown \
 	are now trying their damnnest to break back INSIDE the base!<BR><BR>I tried my best to ignore the voice and cornered \
 	in this security outpost, but I'm not sure how long I will maintain sane, unlike those peoples out there...\
-	The voice is now <B>yelling, SCREAMING<B> at me as the time passes by! <BR><BR> I can't take this anymore longer, \
+	The voice is now <B>yelling, SCREAMING</B> at me as the time passes by! <BR><BR> I can't take this anymore longer, \
 	it is madness... Pure madness... <BR>I blew up the fastest way to the command center, so these maniacs won't be able to \
 	get to the command center, where the voice is echoing... But they have guns now... <BR> I'm not sure how long the blockade \
 	will last with that much firepower and manpower... And their pure will of madness... <BR><BR> I don't want to be one of them..."
