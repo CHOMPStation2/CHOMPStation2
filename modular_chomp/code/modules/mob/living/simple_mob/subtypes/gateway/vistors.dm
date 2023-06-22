@@ -258,8 +258,8 @@
 
 /obj/item/shield_projector/rectangle/automatic/orange
 	shield_health = 10
-	max_shield_health = 100
-	shield_regen_delay = 1 SECONDS
+	max_shield_health = 10
+	shield_regen_delay = 3 SECONDS
 	shield_regen_amount = 10
 	size_x = 2
 	size_y = 2

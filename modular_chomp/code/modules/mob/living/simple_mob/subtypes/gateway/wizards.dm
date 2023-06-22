@@ -104,23 +104,23 @@
 
 //Spells
 /obj/item/projectile/energy/homing_bolt/wizard
-	damage = 10
+	damage = 12
 
 /obj/item/projectile/energy/homing_bolt/wizard/fire
 	modifier_type_to_apply = /datum/modifier/wizfire
-	modifier_duration = 6 SECONDS
+	modifier_duration = 8 SECONDS
 
 /obj/item/projectile/energy/homing_bolt/wizard/lighting
 	modifier_type_to_apply = /datum/modifier/wizfire/lighting
-	modifier_duration = 6 SECONDS
+	modifier_duration = 8 SECONDS
 
 /obj/item/projectile/energy/homing_bolt/wizard/poison
 	modifier_type_to_apply = /datum/modifier/wizpoison
-	modifier_duration = 6 SECONDS
+	modifier_duration = 8 SECONDS
 
 /obj/item/projectile/energy/homing_bolt/wizard/frost
 	modifier_type_to_apply = /datum/modifier/wizpoison/frost
-	modifier_duration = 6 SECONDS
+	modifier_duration = 8 SECONDS
 
 /datum/modifier/wizfire
 	name = "wizfire"

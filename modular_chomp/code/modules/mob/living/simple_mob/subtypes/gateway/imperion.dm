@@ -241,7 +241,6 @@
 				"rad"		= 100
 				)
 
-	//This is a place holder loot list
 	loot_list = list(/obj/item/clothing/suit/armor/alien = 30,
 			/obj/item/clothing/suit/armor/alien/tank = 30,
 			/obj/item/prop/alien/junk = 50,
