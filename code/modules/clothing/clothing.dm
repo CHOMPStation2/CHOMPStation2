@@ -627,6 +627,14 @@
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
+	
+	//CHOMPEdit begin
+	if(istype(usr, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = usr
+		if(H.ability_flags & 0x1)
+			to_chat(usr, "<span class='warning'>You cannot do that while phase shifted.</span>")
+			return
+	//CHOMPEdit end
 
 	holding.forceMove(get_turf(usr))
 
@@ -695,6 +703,20 @@
 	update_icon()
 	return ..()
 
+// CHOMPEdit Begin - tweaking handle_movement for inshoes steppies
+/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running, var/mob/living/carbon/human/pred)
+	if(!recent_squish && istype(pred))
+		recent_squish = 1
+		spawn(40) // Cooldown reduced from 100 to 40. Faster, but not that spammy
+			recent_squish = 0
+		for(var/mob/living/M in contents)
+			if(pred.step_mechanics_pref && M.step_mechanics_pref)
+				src.handle_inshoe_stepping(pred, M)
+			else if (prob(1)) // Same old inshoe mechanics
+				var/emote = pick(inside_emotes)
+				to_chat(M,emote)
+	return //CHOMPEDIT End
+	
 /obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running)
 	if(prob(1) && !recent_squish) //VOREStation edit begin
 		recent_squish = 1
