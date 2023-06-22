@@ -109,21 +109,14 @@
 	var/tip_timer // reference to timer id for a tooltip we might open soon
 
 	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
-
-<<<<<<< HEAD
+	
+	var/rock_climbing = FALSE //If true, allows climbing cliffs using click drag for single Z, walls if multiZ
+	var/climbing_delay = 1 //If rock_climbing, lower better.
+	
 /obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
-=======
-	var/protean_drop_whitelist = FALSE
-
-	var/rock_climbing = FALSE //If true, allows climbing cliffs using click drag for single Z, walls if multiZ
-	var/climbing_delay = 1 //If rock_climbing, lower better.
-
-/obj/item/New()
-	..()
->>>>>>> 2b4eb3ffc8... Merge pull request #14989 from Runa-Dacino/climbing
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))

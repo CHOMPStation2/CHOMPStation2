@@ -232,8 +232,6 @@
 	desc = "Your body is firm enough that small thrown items can't do anything to you."
 	cost = 1
 	var_changes = list("throwforce_absorb_threshold" = 10)
-<<<<<<< HEAD
-=======
 
 
 
@@ -285,4 +283,3 @@
 /datum/trait/positive/wall_climber_pro/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	S.can_climb = TRUE
->>>>>>> 2b4eb3ffc8... Merge pull request #14989 from Runa-Dacino/climbing
