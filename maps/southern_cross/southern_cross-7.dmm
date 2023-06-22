@@ -15879,9 +15879,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/slingcarrierdock)
 "mNd" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 1
-	},
 /obj/structure/railing/grey{
 	dir = 1
 	},
@@ -22566,9 +22563,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 1
-	},
 /obj/structure/railing/grey{
 	dir = 1
 	},
@@ -22841,9 +22835,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
-"rWh" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/expoutpost/medicalbay)
 "rWv" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -24153,9 +24144,6 @@
 /area/expoutpost/gatewayeva)
 "taW" = (
 /obj/structure/railing/overhang/waterless/grey{
-	dir = 1
-	},
-/obj/structure/railing/overhang/waterless/grey{
 	dir = 4
 	},
 /obj/structure/railing/grey{
@@ -24531,9 +24519,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "tro" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 1
-	},
 /obj/structure/railing/overhang/waterless/grey{
 	dir = 8
 	},
@@ -26135,6 +26120,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/suite1)
+"uzW" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/expoutpost/medicalbay)
 "uAp" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -27912,9 +27900,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/portbowhallway)
 "vPD" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 1
-	},
 /obj/structure/railing/grey{
 	dir = 1
 	},
@@ -63187,7 +63172,7 @@ oVD
 jib
 sph
 jib
-rWh
+uzW
 vOo
 xbm
 bbO
@@ -65509,7 +65494,7 @@ ddP
 jib
 lIR
 jib
-rWh
+uzW
 pnR
 pnR
 iBp
