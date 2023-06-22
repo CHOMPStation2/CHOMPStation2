@@ -3311,7 +3311,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/starsternairlock)
 "cIM" = (
@@ -6216,6 +6215,7 @@
 	name = "Hangar - Mammoth";
 	dir = 2
 	},
+/obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
 /area/expoutpost/hangartwo)
 "eZe" = (
@@ -8397,6 +8397,15 @@
 /obj/machinery/disposal/wall{
 	pixel_y = 35
 	},
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
 "gSi" = (
@@ -12625,23 +12634,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/gatewayeva)
-"kmq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/expoutpost/washroom)
 "kms" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -15857,7 +15849,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
@@ -17427,6 +17418,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangartwo)
+"nIV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
 "nJl" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -20714,7 +20727,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/firedoor/multi_tile/glass,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/starsternairlock)
@@ -23909,7 +23921,6 @@
 	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/starboardbowairlock)
 "sQK" = (
@@ -25044,7 +25055,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/starsternairlock)
 "tKL" = (
@@ -25503,28 +25513,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
-"uaB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/expoutpost/breakroom)
 "uaO" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -29396,7 +29384,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
-/turf/simulated/wall/rshull,
+/turf/simulated/wall/r_wall,
 /area/expoutpost/starfuelstorage)
 "wWJ" = (
 /obj/structure/cable/green{
@@ -29548,6 +29536,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/starbowhallway)
+"xeC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/expoutpost/washroom)
 "xeN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -31041,7 +31046,7 @@
 /area/expoutpost/starlowermaint)
 "ydq" = (
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/rshull,
+/turf/simulated/wall/r_wall,
 /area/expoutpost/starfuelstorage)
 "ydX" = (
 /obj/structure/catwalk,
@@ -61189,7 +61194,7 @@ oFq
 wzH
 ayz
 bLV
-uaB
+nIV
 frH
 rrG
 nAP
@@ -62366,7 +62371,7 @@ sFB
 sFB
 sFB
 sFB
-kmq
+xeC
 jmh
 rxe
 irI
