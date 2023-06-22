@@ -4231,6 +4231,10 @@
 	name = "east bump";
 	pixel_x = 24
 	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
 "dzZ" = (
@@ -5771,6 +5775,28 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm1)
+"eLJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
 "eLM" = (
 /obj/effect/catwalk_plated/dark,
 /obj/structure/cable/blue{
@@ -6663,6 +6689,7 @@
 	pixel_y = -24;
 	pixel_x = -12
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/breakroom)
 "fse" = (
@@ -6911,6 +6938,23 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
+"fBS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/expoutpost/washroom)
 "fCs" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline,
@@ -14893,7 +14937,8 @@
 /area/expoutpost/staginghangar)
 "lZt" = (
 /obj/machinery/power/smes/buildable{
-	name = "AI Core SMES"
+	name = "AI Core SMES";
+	input_attempt = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
@@ -23160,7 +23205,8 @@
 /area/expoutpost/hangarfive)
 "sky" = (
 /obj/machinery/power/smes/buildable{
-	name = "Telecomms SMES"
+	name = "Telecomms SMES";
+	input_attempt = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
@@ -61131,7 +61177,7 @@ oFq
 wzH
 ayz
 bLV
-cCr
+eLJ
 frH
 rrG
 nAP
@@ -62308,7 +62354,7 @@ sFB
 sFB
 sFB
 sFB
-sFB
+fBS
 jmh
 rxe
 irI
