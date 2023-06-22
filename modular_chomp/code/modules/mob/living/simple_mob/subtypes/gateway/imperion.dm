@@ -88,6 +88,10 @@
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase2
 
+	special_attack_min_range = 1
+	special_attack_max_range = 9
+	special_attack_cooldown = 15 SECONDS
+
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/electric_defense(atom/target)
 	set waitfor = FALSE
 
@@ -130,6 +134,10 @@
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase3
 
+	special_attack_min_range = 1
+	special_attack_max_range = 9
+	special_attack_cooldown = 15 SECONDS
+
 /mob/living/simple_mob/mechanical/mecha/imperion/phase2/proc/electric_defense(atom/target)
 	var/turf/T = get_turf(target)
 	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
@@ -158,6 +166,10 @@
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase4
 
+	special_attack_min_range = 1
+	special_attack_max_range = 9
+	special_attack_cooldown = 15 SECONDS
+
 /mob/living/simple_mob/mechanical/mecha/imperion/phase3/proc/electric_defense(atom/target)
 	var/obj/item/projectile/P = new /obj/item/projectile/forcebolt(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
@@ -179,6 +191,10 @@
 
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase5
+
+	special_attack_min_range = 1
+	special_attack_max_range = 9
+	special_attack_cooldown = 15 SECONDS
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/electric_defense(atom/target)
 	set waitfor = FALSE
@@ -220,6 +236,9 @@
 	projectiletype = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
 	melee_attack_delay = 4 SECOND
 	ranged_attack_delay = 1.5 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 9
+	special_attack_cooldown = 15 SECONDS
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
