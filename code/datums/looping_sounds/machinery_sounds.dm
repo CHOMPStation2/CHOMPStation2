@@ -136,7 +136,8 @@
 	end_sound = 'sound/machines/tcomms/tcomms_pulse.ogg'
 	volume = 40
 	opacity_check = FALSE // We don't want to drown people with noise outside Tcomms
-	falloff = 0.2 // Harsh
+	extra_range = -10 // Short-range
+	falloff = 0.1 // Harsh
 	volume_chan = VOLUME_CHANNEL_MACHINERY_IDLE
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -149,3 +150,4 @@
 	volume = 40
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 	exclusive = TRUE
+	extra_range = 10
