@@ -76,8 +76,8 @@ GLOBAL_LIST_EMPTY(smeses)
 	GLOB.smeses += src
 	add_nearby_terminals()
 	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-	soundloop.extra_range = -12 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
-	soundloop.falloff = 0.1 // CHOMPEdit: Harsher falloff.
+	soundloop.extra_range = -6 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
+	soundloop.falloff = 0.2 // CHOMPEdit: Harsher falloff.
 	if(!check_terminals())
 		stat |= BROKEN
 		return
@@ -207,9 +207,9 @@ GLOBAL_LIST_EMPTY(smeses)
 		soundloop.start()
 		noisy = TRUE
 	if(noisy && outputting)
-		// Capped to 80 volume since higher volumes get annoying and it sounds worse.
+		// Capped to 40 volume since higher volumes get annoying and it sounds worse.
 		// Formula previously was min(round(power/10)+1, 20)
-		soundloop.volume = CLAMP((output_used / 1000), 1, 80)
+		soundloop.volume = CLAMP((output_used / 1000), 1, 40)
 	if(!outputting)
 		soundloop.stop()
 		noisy = FALSE
