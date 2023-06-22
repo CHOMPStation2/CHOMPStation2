@@ -91,12 +91,25 @@
 	var/mob/observer/dead/G = usr
 	G.zMove(DOWN)
 
+// CHOMPedit start
+/obj/screen/ghost/vr
+	name = "Enter VR"
+	desc = "Enter virtual reality."
+	icon = 'modular_chomp/icons/mob/screen_ghost.dmi'
+	icon_state = "entervr"
+
+/obj/screen/ghost/vr/Click()
+	..()
+	var/mob/observer/dead/G = usr
+	G.fake_enter_vr()
+// CHOMPedit end
+
 /mob/observer/dead/create_mob_hud(datum/hud/HUD, apply_to_client = TRUE)
 	..()
 
 	var/list/adding = list()
 	HUD.adding = adding
-	
+
 	var/obj/screen/using
 	using = new /obj/screen/ghost/returntomenu()
 	using.screen_loc = ui_ghost_returntomenu
@@ -137,6 +150,13 @@
 	using.screen_loc = ui_ghost_updown
 	using.hud = src
 	adding += using
+
+	//CHOMPedit start
+	using = new /obj/screen/ghost/vr()
+	using.screen_loc = ui_ghost_vr
+	using.hud = src
+	adding += using
+	//CHOMPedit end
 
 	/*
 	using = new /obj/screen/language_menu

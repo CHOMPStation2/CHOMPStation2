@@ -704,15 +704,19 @@
 	update_icon()
 	return ..()
 
-/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running)
-	if(prob(1) && !recent_squish) //VOREStation edit begin
+// CHOMPEdit Begin - tweaking handle_movement for inshoes steppies
+/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running, var/mob/living/carbon/human/pred)
+	if(!recent_squish && istype(pred))
 		recent_squish = 1
-		spawn(100)
+		spawn(40) // Cooldown reduced from 100 to 40. Faster, but not that spammy
 			recent_squish = 0
 		for(var/mob/living/M in contents)
-			var/emote = pick(inside_emotes)
-			to_chat(M,emote) //VOREStation edit end
-	return
+			if(pred.step_mechanics_pref && M.step_mechanics_pref)
+				src.handle_inshoe_stepping(pred, M)
+			else if (prob(1)) // Same old inshoe mechanics
+				var/emote = pick(inside_emotes)
+				to_chat(M,emote)
+	return //CHOMPEDIT End
 
 /obj/item/clothing/shoes/update_clothing_icon()
 	if (ismob(src.loc))

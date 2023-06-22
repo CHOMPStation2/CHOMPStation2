@@ -34,7 +34,7 @@
 	icon = 'icons/obj/clothing/shoes_ch.dmi'
 	desc = "A pair of grabby boots"
 
-/obj/item/weapon/rig/ch/behemoth/bullet_act(var/obj/item/projectile/P)
+/obj/item/weapon/rig/ch/aegis/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 70 - round(P.damage)
 	if(prob(reflectchance))
 		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \

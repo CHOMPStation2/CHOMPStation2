@@ -8,7 +8,7 @@
 	projectiletype = /obj/item/projectile/energy/electrode/cult
 	movement_cooldown = 1
 
-	loot_list = list(/obj/item/weapon/rig/ch/behemoth = 100)
+	loot_list = list(/obj/item/weapon/rig/ch/aegis = 100)
 
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/unstoppable/bullet_act(var/obj/item/projectile/P)

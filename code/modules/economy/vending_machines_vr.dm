@@ -92,7 +92,7 @@
 
 /obj/machinery/vending/fooditalian
 	name = "Italian Imports"
-	desc = "You wanted some italian food? Well here's some imported from the local pizza place!"
+	desc = "You wanted some Italian food? Well here's some imported from the local pizza place!"
 	icon_state = "hotfood"
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 15,
@@ -1260,6 +1260,7 @@
 					/obj/item/weapon/storage/pill_bottle/dice = 5,
 					/obj/item/weapon/storage/pill_bottle/dice_nerd = 5,
 					/obj/item/weapon/melee/umbrella/random = 10,
+					/obj/item/weapon/picnic_blankets_carried = 10,
 					/obj/item/weapon/deck/schnapsen = 5,
 					/obj/item/weapon/deck/egy = 5)
 	prices = list(/obj/item/weapon/cane = 100,
@@ -1273,6 +1274,7 @@
 					/obj/item/weapon/storage/pill_bottle/dice = 100,
 					/obj/item/weapon/storage/pill_bottle/dice_nerd = 100,
 					/obj/item/weapon/melee/umbrella/random = 100,
+					/obj/item/weapon/picnic_blankets_carried = 100,
 					/obj/item/weapon/deck/schnapsen = 100,
 					/obj/item/weapon/deck/egy = 100)
 	premium = list(/obj/item/toy/bosunwhistle = 1)
@@ -3615,6 +3617,8 @@
 					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackramen = 8,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpacktaco = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 2)
 
 	prices = list(/obj/item/weapon/reagent_containers/food/snacks/ratprotein = 8,
@@ -3623,4 +3627,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/ratfruitcake = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackburger = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackcheese = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpackramen = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/ratpacktaco = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/ratpackturkey = 200)

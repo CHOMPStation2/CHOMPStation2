@@ -115,12 +115,8 @@
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
-"D" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/mouseattack)
 "J" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
+/mob/living/simple_mob/animal/space/mouse_army/pyro,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/mouseattack)
 "N" = (
@@ -210,7 +206,7 @@ s
 s
 s
 s
-q
+s
 s
 X
 a
@@ -249,7 +245,7 @@ j
 c
 c
 B
-c
+B
 c
 c
 t
@@ -268,12 +264,12 @@ s
 s
 s
 j
-J
+c
 c
 N
 w
 c
-J
+c
 t
 b
 s
@@ -292,7 +288,7 @@ s
 j
 c
 c
-c
+B
 B
 c
 c
@@ -342,7 +338,7 @@ s
 s
 s
 s
-q
+s
 s
 X
 a
@@ -430,7 +426,7 @@ s
 s
 s
 s
-Y
+s
 s
 X
 a
@@ -468,8 +464,8 @@ s
 j
 c
 c
-c
-u
+J
+J
 c
 c
 t
@@ -488,12 +484,12 @@ s
 s
 s
 j
-D
+c
 c
 v
 o
 c
-D
+c
 t
 b
 s
@@ -512,8 +508,8 @@ s
 j
 c
 c
-c
-u
+J
+J
 c
 c
 t
@@ -562,7 +558,7 @@ s
 s
 s
 s
-Y
+s
 s
 X
 a
@@ -650,7 +646,7 @@ s
 s
 s
 s
-Y
+s
 s
 X
 a
@@ -688,7 +684,7 @@ s
 j
 c
 c
-c
+u
 u
 c
 c
@@ -708,12 +704,12 @@ s
 s
 s
 j
-J
+c
 c
 i
 C
 c
-J
+c
 t
 b
 s
@@ -732,8 +728,8 @@ s
 j
 c
 c
-B
-c
+u
+u
 c
 c
 t
@@ -748,7 +744,7 @@ a
 a
 z
 s
-l
+q
 s
 s
 j
@@ -782,7 +778,7 @@ s
 s
 s
 s
-q
+s
 s
 X
 a

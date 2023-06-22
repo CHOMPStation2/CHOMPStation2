@@ -30,11 +30,6 @@
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/shuttle/floor/black,
 /area/submap/piratevessel)
-"cO" = (
-/mob/living/simple_mob/humanoid/pirate,
-/obj/effect/floor_decal/corner/purple/diagonal,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
 "dt" = (
 /turf/template_noop,
 /area/template_noop)
@@ -508,11 +503,6 @@
 /obj/random/contraband,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
-"Io" = (
-/mob/living/simple_mob/humanoid/pirate/machete,
-/obj/effect/floor_decal/corner/purple/diagonal,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
 "Jd" = (
 /obj/structure/closet/crate/freezer/nanotrasen,
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -656,11 +646,6 @@
 /obj/structure/janitorialcart,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
-"Rj" = (
-/mob/living/simple_mob/humanoid/pirate/machete,
-/obj/effect/floor_decal/corner/green/diagonal,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
 "RF" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
@@ -720,11 +705,6 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
-"UN" = (
-/mob/living/simple_mob/humanoid/pirate,
-/obj/effect/floor_decal/corner/green/diagonal,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
 "Vb" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/mopbucket,
@@ -762,11 +742,6 @@
 "WX" = (
 /mob/living/simple_mob/humanoid/pirate/ranged,
 /obj/effect/floor_decal/corner/green/diagonal,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
-"Xb" = (
-/mob/living/simple_mob/humanoid/pirate/ranged/shotgun,
-/obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Yl" = (
@@ -1091,7 +1066,7 @@ mq
 pR
 Ev
 Ev
-UN
+Ev
 NO
 mq
 Hf
@@ -1104,7 +1079,7 @@ WG
 qW
 mq
 Wd
-cO
+Wd
 tX
 Wd
 tI
@@ -1194,7 +1169,7 @@ YF
 qW
 mq
 Wd
-Io
+Wd
 tX
 Wd
 Jd
@@ -1211,7 +1186,7 @@ mq
 JU
 Nz
 Ev
-Rj
+Ev
 dO
 mq
 ZA
@@ -1541,7 +1516,7 @@ dt
 dt
 mq
 Tg
-Xb
+Wy
 ML
 mq
 dt
@@ -1554,7 +1529,7 @@ dt
 dt
 mq
 Tg
-Xb
+Wy
 ML
 mq
 dt
