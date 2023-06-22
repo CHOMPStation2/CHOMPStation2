@@ -2036,7 +2036,8 @@
 	input_attempt = 1;
 	charge = 2e+006;
 	RCon_tag = "Reactor Input - Aegis";
-	name = "Reactor SMES - Input"
+	name = "Reactor SMES - Input";
+	cur_coils = 6
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -5775,28 +5776,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm1)
-"eLJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/expoutpost/breakroom)
 "eLM" = (
 /obj/effect/catwalk_plated/dark,
 /obj/structure/cable/blue{
@@ -6760,7 +6739,17 @@
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
 "fvj" = (
-/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/grille,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
 "fvC" = (
@@ -6938,23 +6927,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
-"fBS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/expoutpost/washroom)
 "fCs" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline,
@@ -17634,6 +17606,28 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/botany)
+"nWa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
 "nWS" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -25395,7 +25389,7 @@
 /area/expoutpost/botany)
 "tXk" = (
 /obj/structure/sign/warning/airlock,
-/turf/simulated/wall/rshull,
+/turf/simulated/wall/r_wall,
 /area/expoutpost/portsternairlock)
 "tXN" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -29492,6 +29486,23 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
+"xbQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/expoutpost/washroom)
 "xbV" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
@@ -61177,7 +61188,7 @@ oFq
 wzH
 ayz
 bLV
-eLJ
+nWa
 frH
 rrG
 nAP
@@ -62354,7 +62365,7 @@ sFB
 sFB
 sFB
 sFB
-fBS
+xbQ
 jmh
 rxe
 irI
