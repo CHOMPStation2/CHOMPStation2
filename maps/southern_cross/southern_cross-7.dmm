@@ -12625,6 +12625,23 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/gatewayeva)
+"kmq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/expoutpost/washroom)
 "kms" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -15319,12 +15336,11 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/industrial/outline,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
-	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
@@ -16554,8 +16570,8 @@
 	dir = 8
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangartwo;
-	base_turf = /area/expoutpost/hangarsix;
+	base_area = /area/expoutpost/hangarsix;
+	base_turf = /turf/simulated/floor/reinforced;
 	landmark_tag = "echidna_dock";
 	name = "Echidna Dock"
 	},
@@ -17606,28 +17622,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/botany)
-"nWa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/expoutpost/breakroom)
 "nWS" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -17759,7 +17753,7 @@
 	base_area = /area/expoutpost/hangartwo;
 	base_turf = /turf/simulated/floor/reinforced;
 	landmark_tag = "baby_mammoth_dock";
-	name = "Baby_Mammoth Dock"
+	name = "Baby Mammoth Dock"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -18076,6 +18070,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/machinery/computer/shuttle_control/exploration{
+	dir = 4;
+	name = "Carrier Sling Control Console"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/slingcarrierdock)
@@ -21273,8 +21271,7 @@
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
@@ -22374,11 +22371,10 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
-	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "rIq" = (
@@ -25507,6 +25503,28 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"uaB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
 "uaO" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -29486,23 +29504,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
-"xbQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/expoutpost/washroom)
 "xbV" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
@@ -61188,7 +61189,7 @@ oFq
 wzH
 ayz
 bLV
-nWa
+uaB
 frH
 rrG
 nAP
@@ -62365,7 +62366,7 @@ sFB
 sFB
 sFB
 sFB
-xbQ
+kmq
 jmh
 rxe
 irI
