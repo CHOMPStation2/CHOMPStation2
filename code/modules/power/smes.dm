@@ -76,7 +76,8 @@ GLOBAL_LIST_EMPTY(smeses)
 	GLOB.smeses += src
 	add_nearby_terminals()
 	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-	soundloop.extra_range = -3 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
+	soundloop.extra_range = -12 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
+	soundloop.falloff = 0.1 // CHOMPEdit: Harsher falloff.
 	if(!check_terminals())
 		stat |= BROKEN
 		return
