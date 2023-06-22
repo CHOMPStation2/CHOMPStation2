@@ -3854,7 +3854,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell2;
+	id = "cell2";
 	name = "Cell 2";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -4431,7 +4431,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -10077,7 +10077,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -11997,7 +11997,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "kcv" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell1;
+	id = "cell1";
 	name = "Cell 1";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -12075,7 +12075,7 @@
 	req_one_access = list(1,11)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
@@ -12695,7 +12695,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -16757,7 +16757,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -18101,7 +18101,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -18111,7 +18111,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -19648,7 +19648,7 @@
 "qww" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/remote/blast_door{
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	pixel_x = -5;
 	req_access = null;
@@ -19658,7 +19658,7 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "snowfieldenglockdown";
+	id = "snowfieldengroomlockdown";
 	name = "Engine Room Lockdown";
 	pixel_x = 5;
 	req_one_access = list(1,10)
@@ -21532,7 +21532,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell3;
+	id = "cell3";
 	name = "Cell 3";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -25024,7 +25024,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/engineering/engine)
@@ -26557,7 +26557,7 @@
 	req_one_access = list(1,10)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/monitor_room)
