@@ -21153,7 +21153,7 @@
 /obj/machinery/door/airlock/glass_medical{
 	name = "Medbay Equipment";
 	req_access = null;
-	req_one_access = list1,5)
+	req_one_access = list(1,5)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/storage_room)
