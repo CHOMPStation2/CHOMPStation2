@@ -782,7 +782,8 @@
 /area/expoutpost/staginghangar)
 "aGJ" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/mining{
+/obj/machinery/door/airlock/multi_tile/glass{
+	req_one_access = list(48);
 	name = "Mining Foyer"
 	},
 /turf/simulated/floor/tiled,
@@ -3525,7 +3526,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Mining";
+	name = "Mining Office";
 	dir = 1
 	},
 /turf/simulated/floor,
@@ -4741,7 +4742,8 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineeringatmos{
-	name = "Atmospheric System"
+	name = "Atmospheric System";
+	req_one_access = list(10,24)
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
@@ -5038,8 +5040,11 @@
 /area/expoutpost/slingcarrierdock)
 "elu" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/medical,
-/turf/simulated/floor/tiled/white,
+/obj/machinery/door/airlock/multi_tile/glass{
+	req_one_access = list(5);
+	name = "Triage"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medicalbay)
 "emn" = (
 /obj/effect/floor_decal/techfloor,
@@ -5845,7 +5850,10 @@
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Core Access Hatch";
-	req_one_access = list(11)
+	req_one_access = list(11);
+	locked = 1;
+	icon_state = "door_locked";
+	id_tag = "aeg_reactor_bolt"
 	},
 /obj/machinery/door/blast/radproof{
 	dir = 4;
@@ -6640,7 +6648,10 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/white,
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/multi_tile/glass{
+	req_one_access = list(5);
+	name = "Triage"
+	},
 /turf/simulated/floor,
 /area/expoutpost/medicalbay)
 "frH" = (
@@ -9151,9 +9162,6 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/suite1)
 "hwE" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Office"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/engoffice)
 "hwZ" = (
@@ -19917,9 +19925,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/dark,
-/obj/machinery/door/airlock/mining{
-	name = "Mining Foyer"
-	},
 /turf/simulated/floor,
 /area/expoutpost/miningfoyer)
 "pWz" = (
@@ -22836,6 +22841,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
+"rWh" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/expoutpost/medicalbay)
 "rWv" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -23502,6 +23510,10 @@
 	name = "Core Shielding";
 	id = "Aeg_CoreShroud"
 	},
+/obj/machinery/door/window/northleft{
+	name = "Blast Door Controls";
+	req_one_access = list(10)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
 "sAR" = (
@@ -24082,8 +24094,10 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Office"
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	name = "Engineering Office";
+	req_one_access = list(10)
 	},
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
@@ -24184,7 +24198,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/engineeringatmos{
-	name = "Atmospheric System"
+	name = "Atmospheric System";
+	req_one_access = list(10,24)
 	},
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
@@ -24833,7 +24848,8 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineeringatmos{
-	name = "Atmospheric System"
+	name = "Atmospheric System";
+	req_one_access = list(10,24)
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
@@ -29548,6 +29564,12 @@
 	dir = 1;
 	pixel_y = 24;
 	pixel_x = 12
+	},
+/obj/machinery/button/remote/airlock{
+	pixel_y = 24;
+	pixel_x = -13;
+	name = "Reactor Door Bolt";
+	id = "aeg_reactor_bolt"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
@@ -63165,7 +63187,7 @@ oVD
 jib
 sph
 jib
-rDG
+rWh
 vOo
 xbm
 bbO
@@ -65487,7 +65509,7 @@ ddP
 jib
 lIR
 jib
-rDG
+rWh
 pnR
 pnR
 iBp
